@@ -1,0 +1,359 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:26:19: error: don't know how to synthesize implicit argument `n`
+  @Derivation.logical (GorbowPRNumeralCalculation.Theory p) ?m.138
+    (GorbowPACore.LogicalInstance.reflexive ((Term.numeral ↑index ::ᵥ Term.numeral depth ::ᵥ nil).get 0))
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:26:29: error: don't know how to synthesize implicit argument `n`
+  @GorbowPACore.LogicalInstance.reflexive ?m.138 ((Term.numeral ↑index ::ᵥ Term.numeral depth ::ᵥ nil).get 0)
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:26:40: error: don't know how to synthesize placeholder for argument `t`
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ Term ?m.138
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:22:12: error: don't know how to synthesize implicit argument `ctx`
+  @Logic.callCongruence (GorbowPRNumeralCalculation.Theory p) (Nat.succ 0).succ ?m.138 dtag
+    (Term.numeral ↑index ::ᵥ Term.numeral depth ::ᵥ nil)
+    (Term.numeral ↑index ::ᵥ (Term.numeral ↑index).add (Term.numeral gap).succ ::ᵥ nil) fun i => ?m.113
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:24:3: error: don't know how to synthesize implicit argument `α`
+  @cons (Term ?m.138) 1 (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ ::ᵥ nil)
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ Type
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:24:30: error: don't know how to synthesize implicit argument `α`
+  @cons (Term ?m.138) 0 ((Term.numeral ↑index).add (Term.numeral gap).succ) nil
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ Type
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:24:91: error: don't know how to synthesize implicit argument `α`
+  @nil (Term ?m.138)
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ Type
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:24:30: error: don't know how to synthesize implicit argument `n`
+  @Term.add ?m.138 (Term.numeral ↑index) (Term.numeral gap).succ
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:24:61: error: don't know how to synthesize implicit argument `n`
+  @Term.succ ?m.138 (Term.numeral gap)
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:24:68: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral ?m.138 gap
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:24:36: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral ?m.138 ↑index
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:24:3: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral ?m.138 ↑index
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:23:3: error: don't know how to synthesize implicit argument `α`
+  @cons (Term ?m.138) (Nat.succ 0) (Term.numeral ↑index) (Term.numeral depth ::ᵥ nil)
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ Type
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:23:30: error: don't know how to synthesize implicit argument `α`
+  @cons (Term ?m.138) 0 (Term.numeral depth) nil
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ Type
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:23:53: error: don't know how to synthesize implicit argument `α`
+  @nil (Term ?m.138)
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ Type
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:23:30: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral ?m.138 depth
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:23:3: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral ?m.138 ↑index
+context:
+depth : ℕ
+index : Fin depth
+n ctx : ℕ
+p : Program n
+dtag : ℕ
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+gap : ℕ := ⋯
+hgap : ↑index + gap.succ = depth
+hadd :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal ((Term.numeral ↑index).add (Term.numeral gap.succ)) (Term.numeral depth))
+hcancel :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (HistoryDifference.differenceCall dtag (Term.numeral ↑index) ((Term.numeral ↑index).add (Term.numeral gap).succ))
+      (Term.numeral gap).succ)
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:22:6: error: failed to infer `have` declaration type
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:41:1: error: Type mismatch: After simplification, term
+  have this := Nonempty.intro h;
+  this
+ has type
+  Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      (Formula.equal
+        (GorbowPRDefiningEquations.call ctag (Term.numeral a ::ᵥ Term.numeral (Encodable.encode xs) ::ᵥ nil))
+        (Term.numeral (Nat.pair a (Encodable.encode xs)).succ)))
+but is expected to have type
+  Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      (Formula.equal
+        (GorbowPRDefiningEquations.call ctag (Term.numeral a ::ᵥ Term.numeral (Encodable.encode xs) ::ᵥ nil))
+        (Term.numeral (Nat.pair (Encodable.encode a) (Encodable.encode xs)).succ)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean:44:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FullFormulaInstantiationValidity.BoundVariableArithmeticProof.positiveDifference: forbidden axiom dependency sorryAx

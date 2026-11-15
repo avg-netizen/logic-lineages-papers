@@ -63,7 +63,7 @@ theorem consCore (count tail output index : OTerm alpha)
     obtain ⟨he'⟩ := he
     obtain ⟨hb'⟩ := hb'
     have hsmall := OriginalContextInsertionBelowCoreProof.successorStrict pred (count.relabel j)
-      ⟨orderLeft he' hb'⟩
+      ⟨orderLeft (suc (count.relabel j)) he' hb'⟩
     have hr' := InternalGraphCompositionFunctionalityProof.renameInto (withHyp hr A) j Theta hj
     rw [rowRename] at hr'
     have ht' := InternalGraphCompositionFunctionalityProof.renameInto (withHyp ht A) j Theta hj
