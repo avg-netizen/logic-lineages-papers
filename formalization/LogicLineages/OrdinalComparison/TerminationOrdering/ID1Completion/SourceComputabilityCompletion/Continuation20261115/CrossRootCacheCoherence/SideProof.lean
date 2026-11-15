@@ -24,7 +24,11 @@ attribute [local irreducible] programGraph
 open InternalGraphCompositionEqualityProof
 
 structure Side (body : Positive (Fin 1)) {alpha : Type} (Delta : List (Formula alpha)) (raw param : OTerm alpha) where
-  index seed depth frontier table : OTerm alpha
+  index : OTerm alpha
+  seed : OTerm alpha
+  depth : OTerm alpha
+  frontier : OTerm alpha
+  table : OTerm alpha
   bounded : Nonempty (Derivation body Delta (PrimaryUncoveredCount.bounded index seed))
   subtraction : Nonempty (Derivation body Delta (graph2 InternalEqualityTest.subtract depth index seed))
   front : Nonempty (Derivation body Delta (graph3 (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) frontier depth seed param))
@@ -59,7 +63,7 @@ theorem graphIndexTransport (out index next seed param : OTerm alpha)
     (he : Nonempty (Derivation body Delta (eqn index next)))
     (hg : Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph out index seed param))) :
     Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph out next seed param)) := by
-  apply graphInputTransport body alpha 3 Delta _ out
+  apply graphInputTransport body alpha 3 Delta (OrdinaryArithmetic.graphFormula ArgumentEntriesRecursor.graph) out
     (Fin.cons index (Fin.cons seed (Fin.cons param Fin.elim0)))
     (Fin.cons next (Fin.cons seed (Fin.cons param Fin.elim0))) _ hg
   intro i

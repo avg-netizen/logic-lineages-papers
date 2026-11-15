@@ -23,8 +23,19 @@ attribute [local irreducible] programGraph
 open SideProof PresenceProof
 
 structure Frame (body : Positive (Fin 1)) {alpha : Type} (Delta : List (Formula alpha)) (raw param : OTerm alpha) where
-  s1 s2 : Side body Delta raw param
-  tau head tail pred1 pred2 old1 old2 next1 next2 deps found : OTerm alpha
+  s1 : Side body Delta raw param
+  s2 : Side body Delta raw param
+  tau : OTerm alpha
+  head : OTerm alpha
+  tail : OTerm alpha
+  pred1 : OTerm alpha
+  pred2 : OTerm alpha
+  old1 : OTerm alpha
+  old2 : OTerm alpha
+  next1 : OTerm alpha
+  next2 : OTerm alpha
+  deps : OTerm alpha
+  found : OTerm alpha
   constructor : Nonempty (Derivation body Delta (graph3 OriginalRawSyntaxTransport.consConstructor raw tau head tail))
   index1 : Nonempty (Derivation body Delta (eqn s1.index (suc pred1)))
   index2 : Nonempty (Derivation body Delta (eqn s2.index (suc pred2)))

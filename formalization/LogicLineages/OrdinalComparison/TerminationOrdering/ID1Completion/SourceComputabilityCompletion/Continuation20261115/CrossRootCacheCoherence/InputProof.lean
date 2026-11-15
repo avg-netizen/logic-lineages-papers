@@ -23,7 +23,8 @@ attribute [local irreducible] programGraph
 open SideProof PresenceProof
 
 structure Input (body : Positive (Fin 1)) {alpha : Type} (Delta : List (Formula alpha)) (raw param : OTerm alpha) where
-  s1 s2 : Side body Delta raw param
+  s1 : Side body Delta raw param
+  s2 : Side body Delta raw param
   found : OTerm alpha
   below : Nonempty (Derivation body Delta (InductionDefinitions.BelowRaw raw))
   lookup : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup found s1.table raw))
@@ -43,7 +44,9 @@ def Input.rename {raw param : OTerm alpha} (c : Input body Delta raw param)
 
 structure ConsInput (body : Positive (Fin 1)) {alpha : Type} (Delta : List (Formula alpha)) (raw param : OTerm alpha)
     extends Input body Delta raw param where
-  tau head tail : OTerm alpha
+  tau : OTerm alpha
+  head : OTerm alpha
+  tail : OTerm alpha
   constructor : Nonempty (Derivation body Delta (graph3 OriginalRawSyntaxTransport.consConstructor raw tau head tail))
 
 def ConsInput.rename {raw param : OTerm alpha} (c : ConsInput body Delta raw param)
