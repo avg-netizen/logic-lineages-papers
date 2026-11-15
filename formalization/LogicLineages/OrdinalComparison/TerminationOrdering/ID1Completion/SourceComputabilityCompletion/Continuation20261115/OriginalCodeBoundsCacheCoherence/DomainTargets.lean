@@ -11,9 +11,8 @@ open SourceComputabilityFormulaSupportProof (numeral)
 open TwoSol20261113.CalibratedPrimary.Membership (contains)
 open Continuation20261114
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
-/-- Actual stage coverage for the existing optional head-move layer, for every
-concrete guard AST V. No assumption of layer success, guard calibration or cached
-value correctness. Some0 counts as present, while missing None does not. -/
+/-- Actual stage coverage for the concrete totalized bounds layer.
+No assumption of layer success, guard calibration or cached value correctness. Some0 counts as present, while missing None does not. -/
 def InternalStageDomain : Prop := ∀ (n : Nat)
     (body : Positive (Fin 1)) (alpha : Type) (Delta : List (Formula alpha))
     (frontier old param table node found : OTerm alpha),
@@ -21,7 +20,7 @@ def InternalStageDomain : Prop := ∀ (n : Nat)
   Nonempty (Derivation body Delta (graph2 contains (numeral 1) frontier node)) →
   Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup found table node)) →
   Nonempty (Derivation body Delta (eqn found z).not)
-/-- Domain of the actual decoded-rank successor graph at its actual subtraction
+/-- Domain of the actual raw-code-rank bounds successor graph at its actual subtraction
 frontier. Previous graph and successful layer output witnesses are internal. -/
 def InternalSuccessorDomain : Prop := ∀ (n : Nat)
     (body : Positive (Fin 1)) (alpha : Type) (Delta : List (Formula alpha))
