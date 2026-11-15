@@ -1,0 +1,1088 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:31:44: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 0 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 0 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:31:68: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.term 0)) = Term.numeral 0 ∨
+    Term.numeral (kind (Constructor.term 0)) = Term.numeral 0 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.term 0))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:31:92: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.term 0)) = Term.numeral 0 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.term 0)) = Term.numeral 0 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.term 0))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:37:45: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 1 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 0 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:37:69: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.term 1)) = Term.numeral 1 ∨
+    Term.numeral (kind (Constructor.term 1)) = Term.numeral 0 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.term 1))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:37:93: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.term 1)) = Term.numeral 1 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.term 1)) = Term.numeral 0 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.term 1))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:43:46: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 2 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 0 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:43:70: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.term 2)) = Term.numeral 2 ∨
+    Term.numeral (kind (Constructor.term 2)) = Term.numeral 0 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.term 2))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:43:94: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.term 2)) = Term.numeral 2 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.term 2)) = Term.numeral 0 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.term 2))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:49:47: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 3 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 0 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:49:71: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.term 3)) = Term.numeral 3 ∨
+    Term.numeral (kind (Constructor.term 3)) = Term.numeral 0 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.term 3))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:49:95: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.term 3)) = Term.numeral 3 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.term 3)) = Term.numeral 0 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.term 3))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:55:48: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 4 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 0 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:55:72: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.term 4)) = Term.numeral 4 ∨
+    Term.numeral (kind (Constructor.term 4)) = Term.numeral 0 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.term 4))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:55:96: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.term 4)) = Term.numeral 4 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.term 4)) = Term.numeral 0 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.term 4))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:61:49: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 5 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 0 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:61:73: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.term 5)) = Term.numeral 5 ∨
+    Term.numeral (kind (Constructor.term 5)) = Term.numeral 0 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.term 5))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:61:97: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.term 5)) = Term.numeral 5 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.term 5)) = Term.numeral 0 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.term 5))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:71:373: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+hmem :
+  ∀ (i : Fin 6),
+    (Formula.equal tok (Term.numeral ↑i)).neg ∈
+      [(Formula.equal tok (Term.numeral 5)).neg, (Formula.equal tok (Term.numeral 4)).neg,
+        (Formula.equal tok (Term.numeral 3)).neg, (Formula.equal tok (Term.numeral 2)).neg,
+        (Formula.equal tok (Term.numeral 1)).neg, (Formula.equal tok (Term.numeral 0)).neg,
+        Formula.equal (call l (task ::ᵥ nil)) (Term.numeral 0), S]
+hz :
+  LiteralRawMP.DispatcherSupportProof.Computes p
+    [(Formula.equal tok (Term.numeral 5)).neg, (Formula.equal tok (Term.numeral 4)).neg,
+      (Formula.equal tok (Term.numeral 3)).neg, (Formula.equal tok (Term.numeral 2)).neg,
+      (Formula.equal tok (Term.numeral 1)).neg, (Formula.equal tok (Term.numeral 0)).neg,
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral 0), S]
+    LiteralSyntaxStep.expandCode (task ::ᵥ tok ::ᵥ nil) Term.zero
+⊢ LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 0 ∨
+    Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:78:48: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 0 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 1 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:78:72: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.formula 0)) = Term.numeral 0 ∨
+    Term.numeral (kind (Constructor.formula 0)) = Term.numeral 1 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.formula 0))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:78:96: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.formula 0)) = Term.numeral 0 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.formula 0)) = Term.numeral 1 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.formula 0))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:84:49: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 1 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 1 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:84:73: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.formula 1)) = Term.numeral 1 ∨
+    Term.numeral (kind (Constructor.formula 1)) = Term.numeral 1 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.formula 1))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:84:97: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.formula 1)) = Term.numeral 1 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.formula 1)) = Term.numeral 1 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.formula 1))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:90:50: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 2 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 1 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:90:74: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.formula 2)) = Term.numeral 2 ∨
+    Term.numeral (kind (Constructor.formula 2)) = Term.numeral 1 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.formula 2))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:90:98: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.formula 2)) = Term.numeral 2 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.formula 2)) = Term.numeral 1 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.formula 2))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:96:51: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 3 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 1 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:96:75: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.formula 3)) = Term.numeral 3 ∨
+    Term.numeral (kind (Constructor.formula 3)) = Term.numeral 1 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.formula 3))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:96:99: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.formula 3)) = Term.numeral 3 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.formula 3)) = Term.numeral 1 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.formula 3))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:102:52: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 4 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 1 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:102:76: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.formula 4)) = Term.numeral 4 ∨
+    Term.numeral (kind (Constructor.formula 4)) = Term.numeral 1 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.formula 4))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:102:100: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.formula 4)) = Term.numeral 4 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.formula 4)) = Term.numeral 1 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.formula 4))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:108:53: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 5 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 1 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:108:77: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.formula 5)) = Term.numeral 5 ∨
+    Term.numeral (kind (Constructor.formula 5)) = Term.numeral 1 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.formula 5))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:108:101: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.formula 5)) = Term.numeral 5 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.formula 5)) = Term.numeral 1 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.formula 5))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:114:54: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 6 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 1 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:114:78: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.formula 6)) = Term.numeral 6 ∨
+    Term.numeral (kind (Constructor.formula 6)) = Term.numeral 1 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.formula 6))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:114:102: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.formula 6)) = Term.numeral 6 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.formula 6)) = Term.numeral 1 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.formula 6))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:120:55: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 7 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 1 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:120:79: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.formula 7)) = Term.numeral 7 ∨
+    Term.numeral (kind (Constructor.formula 7)) = Term.numeral 1 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.formula 7))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:120:103: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.formula 7)) = Term.numeral 7 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.formula 7)) = Term.numeral 1 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.formula 7))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:126:56: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 8 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 1 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:126:80: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.formula 8)) = Term.numeral 8 ∨
+    Term.numeral (kind (Constructor.formula 8)) = Term.numeral 1 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.formula 8))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:126:104: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.formula 8)) = Term.numeral 8 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.formula 8)) = Term.numeral 1 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.formula 8))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:132:57: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 9 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 1 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:132:81: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.formula 9)) = Term.numeral 9 ∨
+    Term.numeral (kind (Constructor.formula 9)) = Term.numeral 1 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.formula 9))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:132:105: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.formula 9)) = Term.numeral 9 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.formula 9)) = Term.numeral 1 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.formula 9))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:138:59: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 10 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 1 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:138:83: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.formula 10)) = Term.numeral 10 ∨
+    Term.numeral (kind (Constructor.formula 10)) = Term.numeral 1 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.formula 10))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:138:107: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.formula 10)) = Term.numeral 10 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.formula 10)) = Term.numeral 1 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.formula 10))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:144:60: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = tok ∧ added.succ = Term.numeral 11 ∨
+    LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 1 ∨
+      Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:144:84: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ call l (task ::ᵥ nil) = tok ∧ Term.numeral (kind (Constructor.formula 11)) = Term.numeral 11 ∨
+    Term.numeral (kind (Constructor.formula 11)) = Term.numeral 1 ∨
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral (kind (Constructor.formula 11))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:144:108: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ Term.numeral (token (Constructor.formula 11)) = Term.numeral 11 ∨
+    tok = call l (task ::ᵥ nil) ∧ Term.numeral (token (Constructor.formula 11)) = Term.numeral 1 ∨
+      Formula.equal tok (Term.numeral (token (Constructor.formula 11))) = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:154:668: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+hmem :
+  ∀ (i : Fin 12),
+    (Formula.equal tok (Term.numeral ↑i)).neg ∈
+      [(Formula.equal tok (Term.numeral 11)).neg, (Formula.equal tok (Term.numeral 10)).neg,
+        (Formula.equal tok (Term.numeral 9)).neg, (Formula.equal tok (Term.numeral 8)).neg,
+        (Formula.equal tok (Term.numeral 7)).neg, (Formula.equal tok (Term.numeral 6)).neg,
+        (Formula.equal tok (Term.numeral 5)).neg, (Formula.equal tok (Term.numeral 4)).neg,
+        (Formula.equal tok (Term.numeral 3)).neg, (Formula.equal tok (Term.numeral 2)).neg,
+        (Formula.equal tok (Term.numeral 1)).neg, (Formula.equal tok (Term.numeral 0)).neg,
+        Formula.equal (call l (task ::ᵥ nil)) (Term.numeral 1),
+        (Formula.equal (call l (task ::ᵥ nil)) (Term.numeral 0)).neg, S]
+hz :
+  LiteralRawMP.DispatcherSupportProof.Computes p
+    [(Formula.equal tok (Term.numeral 11)).neg, (Formula.equal tok (Term.numeral 10)).neg,
+      (Formula.equal tok (Term.numeral 9)).neg, (Formula.equal tok (Term.numeral 8)).neg,
+      (Formula.equal tok (Term.numeral 7)).neg, (Formula.equal tok (Term.numeral 6)).neg,
+      (Formula.equal tok (Term.numeral 5)).neg, (Formula.equal tok (Term.numeral 4)).neg,
+      (Formula.equal tok (Term.numeral 3)).neg, (Formula.equal tok (Term.numeral 2)).neg,
+      (Formula.equal tok (Term.numeral 1)).neg, (Formula.equal tok (Term.numeral 0)).neg,
+      Formula.equal (call l (task ::ᵥ nil)) (Term.numeral 1),
+      (Formula.equal (call l (task ::ᵥ nil)) (Term.numeral 0)).neg, S]
+    LiteralSyntaxStep.expandCode (task ::ᵥ tok ::ᵥ nil) Term.zero
+⊢ LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 1 ∨
+    Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:159:20: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+⊢ LiteralSyntaxStep.expandCall etag task tok = call l (task ::ᵥ nil) ∧ added.succ = Term.numeral 2 ∨
+    Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:169:264: error: unsolved goals
+n : ℕ
+p : Program n
+etag ptag ctag dtag l r : ℕ
+he : (nodes p)[etag]? = some ⟨2, LiteralSyntaxStep.expandCode⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+hd : (nodes p)[dtag]? = some ⟨2, HistoryCodec.difference⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+ctx : ℕ
+task tok added : Term ctx
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+S : Formula ctx := Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ
+Q : Formula ctx := casesFormula ptag ctag dtag l r task tok added
+hmem :
+  ∀ (i : Fin 3),
+    (Formula.equal (call l (task ::ᵥ nil)) (Term.numeral ↑i)).neg ∈
+      [(Formula.equal (call l (task ::ᵥ nil)) (Term.numeral 2)).neg,
+        (Formula.equal (call l (task ::ᵥ nil)) (Term.numeral 1)).neg,
+        (Formula.equal (call l (task ::ᵥ nil)) (Term.numeral 0)).neg, S]
+hz :
+  LiteralRawMP.DispatcherSupportProof.Computes p
+    [(Formula.equal (call l (task ::ᵥ nil)) (Term.numeral 2)).neg,
+      (Formula.equal (call l (task ::ᵥ nil)) (Term.numeral 1)).neg,
+      (Formula.equal (call l (task ::ᵥ nil)) (Term.numeral 0)).neg, S]
+    LiteralSyntaxStep.expandCode (task ::ᵥ tok ::ᵥ nil) Term.zero
+⊢ Formula.equal (LiteralSyntaxStep.expandCall etag task tok) added.succ = S
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ExpansionCasesProof.lean:173:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.ExpansionCasesProof.expansionSuccessCases: forbidden axiom dependency sorryAx
