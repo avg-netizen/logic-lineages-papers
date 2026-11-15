@@ -29,7 +29,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
     StructuralExchangeFields.fields (filled n arity V) V := by
   funext i
   fin_cases i
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (0 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (0 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_pos (show (0: Fin 19) = 0 from rfl),
       if_neg (by decide : (0: Fin 19) ≠ 1),
       if_neg (by decide : (0: Fin 19) ≠ 2),
@@ -46,7 +49,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (0: Fin 19) ≠ 13),
       if_neg (by decide : (0: Fin 19) ≠ 17),
       if_neg (by decide : (0: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (1 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (1 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (1: Fin 19) ≠ 0),
       if_pos (show (1: Fin 19) = 1 from rfl),
       if_neg (by decide : (1: Fin 19) ≠ 2),
@@ -63,7 +69,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (1: Fin 19) ≠ 13),
       if_neg (by decide : (1: Fin 19) ≠ 17),
       if_neg (by decide : (1: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (2 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (2 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (2: Fin 19) ≠ 0),
       if_neg (by decide : (2: Fin 19) ≠ 1),
       if_pos (show (2: Fin 19) = 2 from rfl),
@@ -80,7 +89,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (2: Fin 19) ≠ 13),
       if_neg (by decide : (2: Fin 19) ≠ 17),
       if_neg (by decide : (2: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (3 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (3 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (3: Fin 19) ≠ 0),
       if_neg (by decide : (3: Fin 19) ≠ 1),
       if_neg (by decide : (3: Fin 19) ≠ 2),
@@ -97,7 +109,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (3: Fin 19) ≠ 13),
       if_neg (by decide : (3: Fin 19) ≠ 17),
       if_neg (by decide : (3: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (4 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (4 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (4: Fin 19) ≠ 0),
       if_neg (by decide : (4: Fin 19) ≠ 1),
       if_neg (by decide : (4: Fin 19) ≠ 2),
@@ -114,7 +129,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (4: Fin 19) ≠ 13),
       if_neg (by decide : (4: Fin 19) ≠ 17),
       if_neg (by decide : (4: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (5 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (5 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (5: Fin 19) ≠ 0),
       if_neg (by decide : (5: Fin 19) ≠ 1),
       if_neg (by decide : (5: Fin 19) ≠ 2),
@@ -131,7 +149,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (5: Fin 19) ≠ 13),
       if_neg (by decide : (5: Fin 19) ≠ 17),
       if_neg (by decide : (5: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (6 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (6 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (6: Fin 19) ≠ 0),
       if_neg (by decide : (6: Fin 19) ≠ 1),
       if_neg (by decide : (6: Fin 19) ≠ 2),
@@ -148,7 +169,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (6: Fin 19) ≠ 13),
       if_neg (by decide : (6: Fin 19) ≠ 17),
       if_neg (by decide : (6: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (7 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (7 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (7: Fin 19) ≠ 0),
       if_neg (by decide : (7: Fin 19) ≠ 1),
       if_neg (by decide : (7: Fin 19) ≠ 2),
@@ -165,7 +189,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (7: Fin 19) ≠ 13),
       if_neg (by decide : (7: Fin 19) ≠ 17),
       if_neg (by decide : (7: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (8 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (8 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (8: Fin 19) ≠ 0),
       if_neg (by decide : (8: Fin 19) ≠ 1),
       if_neg (by decide : (8: Fin 19) ≠ 2),
@@ -182,7 +209,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (8: Fin 19) ≠ 13),
       if_neg (by decide : (8: Fin 19) ≠ 17),
       if_neg (by decide : (8: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (9 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (9 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (9: Fin 19) ≠ 0),
       if_neg (by decide : (9: Fin 19) ≠ 1),
       if_neg (by decide : (9: Fin 19) ≠ 2),
@@ -199,7 +229,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (9: Fin 19) ≠ 13),
       if_neg (by decide : (9: Fin 19) ≠ 17),
       if_neg (by decide : (9: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (10 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (10 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (10: Fin 19) ≠ 0),
       if_neg (by decide : (10: Fin 19) ≠ 1),
       if_neg (by decide : (10: Fin 19) ≠ 2),
@@ -216,7 +249,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (10: Fin 19) ≠ 13),
       if_neg (by decide : (10: Fin 19) ≠ 17),
       if_neg (by decide : (10: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (11 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (11 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (11: Fin 19) ≠ 0),
       if_neg (by decide : (11: Fin 19) ≠ 1),
       if_neg (by decide : (11: Fin 19) ≠ 2),
@@ -233,7 +269,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (11: Fin 19) ≠ 13),
       if_neg (by decide : (11: Fin 19) ≠ 17),
       if_neg (by decide : (11: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (12 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (12 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (12: Fin 19) ≠ 0),
       if_neg (by decide : (12: Fin 19) ≠ 1),
       if_neg (by decide : (12: Fin 19) ≠ 2),
@@ -250,7 +289,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (12: Fin 19) ≠ 13),
       if_neg (by decide : (12: Fin 19) ≠ 17),
       if_neg (by decide : (12: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (13 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (13 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (13: Fin 19) ≠ 0),
       if_neg (by decide : (13: Fin 19) ≠ 1),
       if_neg (by decide : (13: Fin 19) ≠ 2),
@@ -267,7 +309,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_pos (show (13: Fin 19) = 13 from rfl),
       if_neg (by decide : (13: Fin 19) ≠ 17),
       if_neg (by decide : (13: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (14 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (14 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (14: Fin 19) ≠ 0),
       if_neg (by decide : (14: Fin 19) ≠ 1),
       if_neg (by decide : (14: Fin 19) ≠ 2),
@@ -284,7 +329,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (14: Fin 19) ≠ 13),
       if_neg (by decide : (14: Fin 19) ≠ 17),
       if_neg (by decide : (14: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (15 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (15 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (15: Fin 19) ≠ 0),
       if_neg (by decide : (15: Fin 19) ≠ 1),
       if_neg (by decide : (15: Fin 19) ≠ 2),
@@ -301,7 +349,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (15: Fin 19) ≠ 13),
       if_neg (by decide : (15: Fin 19) ≠ 17),
       if_neg (by decide : (15: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (16 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (16 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (16: Fin 19) ≠ 0),
       if_neg (by decide : (16: Fin 19) ≠ 1),
       if_neg (by decide : (16: Fin 19) ≠ 2),
@@ -318,7 +369,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (16: Fin 19) ≠ 13),
       if_neg (by decide : (16: Fin 19) ≠ 17),
       if_neg (by decide : (16: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (17 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (17 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (17: Fin 19) ≠ 0),
       if_neg (by decide : (17: Fin 19) ≠ 1),
       if_neg (by decide : (17: Fin 19) ≠ 2),
@@ -335,7 +389,10 @@ theorem fieldsIdentity (n : Nat) (arity : Fin n → Nat) (V : Program 3) :
       if_neg (by decide : (17: Fin 19) ≠ 13),
       if_pos (show (17: Fin 19) = 17 from rfl),
       if_neg (by decide : (17: Fin 19) ≠ 18)]
-  · simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
+  · change ResultStructuralFields.fields
+      (HeadMoveFields.suppliers n arity (fun _ => .composition .zero (fun k => Fin.elim0 k)) V) V (18 : Fin 19) =
+        StructuralExchangeFields.fields (filled n arity V) V (18 : Fin 19)
+    simp only [ResultStructuralFields.fields, StructuralExchangeFields.fields, filled,
       if_neg (by decide : (18: Fin 19) ≠ 0),
       if_neg (by decide : (18: Fin 19) ≠ 1),
       if_neg (by decide : (18: Fin 19) ≠ 2),
