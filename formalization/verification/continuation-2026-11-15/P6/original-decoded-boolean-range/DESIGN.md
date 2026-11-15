@@ -1,0 +1,11 @@
+# Actual decoded standalone exchange Boolean range
+
+One exact target: arbitrary actual exchange graph output on every raw node/parameter gives object-language output0 OR output1. No valid-code, constructor, guard, decoded image, answer-list or recursive-answer range premise. Literal OriginalDecodedExchangeEquation.exchange and calibrated layer remain fixed.
+
+Source AST: ExchangeLayer.Definitions.layer dispatches to lambda/application/ordinary/numbered/application or constantZero; all active cases are composed from exact-one conjunction and normalized disjunction. Thus arbitrary field slots (including arbitrary recursive answers) are Boolean-normalized. TransparentExchangeLayer.optional yields Some0=1 on invalid guard, otherwise successor of the Boolean body. The standalone exchange returns that payload, not its option code.
+
+Duplicate inventory: HeadWindowBooleanRange.ProgramRangeProof already checks generic constantRange, compositionRange, branchRange, normalizeRange and conjunctionRange on the actual original Program graphs. Reuse them, do not re-author generic Boolean suppliers. Existing decoded CacheDomain proves only nonzero option output and SuccessShape only necessary acceptance; neither bounds all standalone outputs. No actual decoded exchange range endpoint was found.
+
+Constructive plan: assemble Boolean range of every literal 19-field layer branch using paid generic range helpers; dispatch is then ranged regardless of its control values. Composition with the real fields preserves that fact without calibrating/filling arbitrary slots. Prove optional output is1 or2 by actual branch/composition elimination, preserving defaultSome0 and arbitrary guard inputs. Query actual ordered answers internally, apply the paid exact recursive equation to obtain layer(suc out), then cancel successor in each alternative to derive out0 or1. All witnesses and case splits are object-calculus derivations; no native reflection or presumed Boolean children.
+
+This is not the full source semantic theorem or installed E. It supports converting subsequent internally proved non-success into actual zero-output rejection, without counting generic corollaries as source completion. No proof before independent review/preflight.
