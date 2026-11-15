@@ -1,0 +1,38 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesTableDomain/SupportProof.lean:49:20: error: overloaded, errors 
+  49:27 overloaded, errors 
+    49:33 Unknown identifier `addHyp`
+    
+    49:33 Unknown identifier `addHyp`
+  
+  49:27 overloaded, errors 
+    49:33 Unknown identifier `addHyp`
+    
+    49:33 Unknown identifier `addHyp`
+  
+  49:27 overloaded, errors 
+    49:33 Unknown identifier `addHyp`
+    
+    49:33 Unknown identifier `addHyp`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesTableDomain/SupportProof.lean:44:58: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+frontier old param table node found deps answers inner : OTerm alpha
+ht :
+  Nonempty
+    (Derivation body Delta
+      (graph3 (ExchangeGraphStage.stage ArgumentEntriesRecursor.dependency ArgumentEntriesRecursor.layer) table frontier
+        old param))
+hm : Nonempty (Derivation body Delta (graph2 contains (numeral 1) frontier node))
+hl : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup found table node))
+hd : Nonempty (Derivation body Delta (graph2 ArgumentEntriesRecursor.dependency deps node param))
+ha : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.mapGraph answers deps old))
+hi :
+  Nonempty
+    (Derivation body Delta
+      (graph2 (ArgumentEntriesLayer.step.composition ![ArgumentEntriesLayer.raw, ArgumentEntriesLayer.tailAnswer]) inner
+        node answers))
+hs : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup (suc inner) table node))
+he : Derivation body Delta (eqn found (suc inner))
+⊢ Nonempty (Derivation body Delta (Formula.not (eqn found z)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesTableDomain/SupportProof.lean:53:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesTableDomain.SupportProof.atValues: forbidden axiom dependency sorryAx
