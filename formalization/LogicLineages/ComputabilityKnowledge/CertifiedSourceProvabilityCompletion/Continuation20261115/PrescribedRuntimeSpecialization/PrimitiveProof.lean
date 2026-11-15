@@ -48,6 +48,7 @@ theorem mpNumeral {arity ctx : Nat} (p : Program arity) (mtag : Nat)
  obtain ⟨h⟩ := QuotedVerifierMP.QuotationProof.numeralCalculation p mtag LiteralRawMP.constructor hm
   (0 ::ᵥ Encodable.encode (GorbowFormulaPrefixCode.encode f) ::ᵥ imp ::ᵥ ant ::ᵥ nil) ctx
  rw [LiteralRawMP.StatementChecks.exactNativeEven] at h
- simpa only [LiteralMPRun.certificate,List.Vector.map_cons,List.Vector.map_nil,Term.numeral] using (show Nonempty _ from ⟨h⟩)
+ simpa only [LiteralMPRun.certificate,List.Vector.map_cons,List.Vector.map_nil,Term.numeral,
+  GorbowSortedSyntaxCode.formulaRawNumber,GorbowSortedSyntaxCode.formulaCode,GorbowCodeConstructors.formulaNumber] using (show Nonempty _ from ⟨h⟩)
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeSpecialization.PrimitiveProof
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeSpecialization.PrimitiveProof

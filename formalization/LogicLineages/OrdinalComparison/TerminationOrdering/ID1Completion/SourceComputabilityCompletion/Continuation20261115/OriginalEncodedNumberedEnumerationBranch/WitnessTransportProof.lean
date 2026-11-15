@@ -28,6 +28,6 @@ theorem witnessSubst {alpha beta : Type} (n : Nat)
   rw [InternalSourceIntroductionSyntaxProof.formulaRelabelAsSubst]
   change (InternalFiniteBlocks.block (witnessMatrix n labels heads types bases tuples extras code)).subst (fun a => emb (.var (j a))) = _
   rw [witnessSubst]
-  simp only [← termRelabelAsSubst]
+  simp only [← InternalSourceIntroductionSyntaxProof.termRelabelAsSubst]
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedNumberedEnumerationBranch.WitnessTransportProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedNumberedEnumerationBranch.WitnessTransportProof
