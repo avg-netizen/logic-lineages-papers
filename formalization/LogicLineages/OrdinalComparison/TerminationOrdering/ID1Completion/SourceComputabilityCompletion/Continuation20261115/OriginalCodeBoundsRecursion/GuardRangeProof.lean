@@ -26,15 +26,17 @@ theorem equalityRange : Ranged InternalEqualityTest.equalityTest := by
   · have hv := InternalEqualityTestCompositionProof.equalityOfEqual (xs 0) (xs 1)
       (body := body) (Gamma := eqn (xs 0) (xs 1) :: Delta)
       ⟨Derivation.hypothesis List.mem_cons_self⟩
-    unfold graph2 at hv
+    change Nonempty (Derivation body _ (programGraph InternalEqualityTest.equalityTest _
+      (Fin.cons (xs 0) (Fin.cons (xs 1) Fin.elim0)))) at hv
     rw [hx] at hv
     obtain ⟨he⟩ := valueUnique InternalEqualityTest.equalityTest out (suc z) xs
       (withHyp ho (eqn (xs 0) (xs 1))) hv
     exact ⟨InternalQuotientComparisonProof.orRight he⟩
   · have hv := OriginalVariableDecoderEqualityProof.equalityReject (xs 0) (xs 1)
-      (body := body) (Delta := (eqn (xs 0) (xs 1)).not :: Delta)
+      (body := body) (Gamma := (eqn (xs 0) (xs 1)).not :: Delta)
       ⟨Derivation.hypothesis List.mem_cons_self⟩
-    unfold graph2 at hv
+    change Nonempty (Derivation body _ (programGraph InternalEqualityTest.equalityTest _
+      (Fin.cons (xs 0) (Fin.cons (xs 1) Fin.elim0)))) at hv
     rw [hx] at hv
     obtain ⟨he⟩ := valueUnique InternalEqualityTest.equalityTest out z xs
       (withHyp ho (eqn (xs 0) (xs 1)).not) hv
