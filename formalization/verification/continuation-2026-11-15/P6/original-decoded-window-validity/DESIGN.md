@@ -30,3 +30,17 @@ layer all-input calibration/installation; overall original E/I/C/accessibility.
 This is syntax validity, not HeadInWindow, ArrowClosed, or typed acceptance.
 No proof authored before target/preflight review. Previous standalone exact2 has
 passed native verification, independent acceptance pending at this freeze.
+
+## Pre-authoring instance/totality inspection
+NumberedTypeCodecPrimrecDefinitions.lean defines typeEquiv : Source.Ty ≃ Nat
+and typePrimcodable := Primcodable.ofEquiv Nat typeEquiv. The already checked
+HeadMoveFields.EncodingProof.typeCanonical uses the definitional decoder
+`some (typeEquiv.symm k)` at the exact inferInstance in this import context.
+Mathlib/Logic/Equiv/List.lean defines List.encodable with decodeList 0 = some []
+and successor decoding via element decode and recursive unpair-right tail;
+unpair_right_le gives strict decrease below successor. Thus structural strong
+induction proves totality for List Ty at this exact instance. This is verified
+source-level justification, not an already checked new totality theorem. The
+new native proof must still establish and audit that lemma. No assumption of
+canonical input or nonzero n is introduced. Product uses original unpair for all
+raw inputs, so the projection remains defined at raw0 as well.
