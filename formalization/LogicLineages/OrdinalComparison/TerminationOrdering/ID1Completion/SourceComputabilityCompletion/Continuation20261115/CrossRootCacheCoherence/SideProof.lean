@@ -44,25 +44,26 @@ def Side.rename {raw param : OTerm alpha} (s : Side body Delta raw param)
   frontier := s.frontier.relabel j
   table := s.table.relabel j
   bounded := by
-    have h := renameInto s.bounded j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto s.bounded j Theta hj
     simpa only [PrimaryUncoveredCount.OrderProof.boundedRename] using h
   subtraction := by
-    have h := renameInto s.subtraction j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto s.subtraction j Theta hj
     simpa only [graph2Rename] using h
   front := by
-    have h := renameInto s.front j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto s.front j Theta hj
     simpa only [graph3Rename] using h
   member := by
-    have h := renameInto s.member j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto s.member j Theta hj
     simpa only [graph2Rename,GuardedSourceSyntaxProof.numeralRename] using h
   tableGraph := by
-    have h := renameInto s.tableGraph j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto s.tableGraph j Theta hj
     simpa only [graph3Rename,sucRelabel] using h
 
 theorem graphIndexTransport (out index next seed param : OTerm alpha)
     (he : Nonempty (Derivation body Delta (eqn index next)))
     (hg : Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph out index seed param))) :
     Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph out next seed param)) := by
+  unfold graph3 programGraph at hg ⊢
   apply graphInputTransport body alpha 3 Delta (OrdinaryArithmetic.graphFormula ArgumentEntriesRecursor.graph) out
     (Fin.cons index (Fin.cons seed (Fin.cons param Fin.elim0)))
     (Fin.cons next (Fin.cons seed (Fin.cons param Fin.elim0))) _ hg

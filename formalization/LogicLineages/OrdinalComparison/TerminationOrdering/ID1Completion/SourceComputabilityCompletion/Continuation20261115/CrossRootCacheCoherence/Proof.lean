@@ -55,7 +55,7 @@ theorem rawStep (raw : OTerm alpha)
   have h8 := andLeft (andRight (andRight (andRight (andRight (andRight (andRight (andRight (andRight (hf)))))))))
   have h9 := andLeft (andRight (andRight (andRight (andRight (andRight (andRight (andRight (andRight (andRight (hf))))))))))
   have h10 := andRight (andRight (andRight (andRight (andRight (andRight (andRight (andRight (andRight (andRight (hf))))))))))
-  have hij := renameInto hi (Sum.inl : alpha → alpha ⊕ Fin 12) Theta (by
+  have hij := InternalGraphCompositionFunctionalityProof.renameInto hi (Sum.inl : alpha → alpha ⊕ Fin 12) Theta (by
     intro q hq
     exact List.mem_cons_of_mem _ (List.mem_map.mpr ⟨q,hq,rfl⟩))
   simp only [InductionSyntaxProof.belowRawRename] at hij

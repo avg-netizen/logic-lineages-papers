@@ -60,12 +60,12 @@ theorem nonConsAtOld1 {raw param : OTerm alpha} (c : Input body Delta raw param)
   intro beta j Theta old2 hj ho2
   rw [graph2Rename]
   simp only [consTermRename,emptyRename] at ho2
-  have htj := renameInto ht j Theta hj
+  have htj := InternalGraphCompositionFunctionalityProof.renameInto ht j Theta hj
   rw [graph1Rename] at htj
-  have hnj := renameInto hn j Theta hj
+  have hnj := InternalGraphCompositionFunctionalityProof.renameInto hn j Theta hj
   change Nonempty (Derivation body Theta ((eqn tag (numeral 7)).relabel j).not) at hnj
   simp only [eqnRelabel,GuardedSourceSyntaxProof.numeralRename] at hnj
-  have hoj := renameInto ho1 j Theta hj
+  have hoj := InternalGraphCompositionFunctionalityProof.renameInto ho1 j Theta hj
   rw [graph3Rename] at hoj
   exact nonConsAtOlds (c.rename j Theta hj) (tag.relabel j) (old1.relabel j) old2 htj hnj hoj ho2
 
@@ -77,9 +77,9 @@ theorem nonCons {raw param : OTerm alpha} (c : Input body Delta raw param) (tag 
   intro beta j Theta old1 hj ho1
   rw [graph2Rename]
   simp only [consTermRename,emptyRename] at ho1
-  have htj := renameInto ht j Theta hj
+  have htj := InternalGraphCompositionFunctionalityProof.renameInto ht j Theta hj
   rw [graph1Rename] at htj
-  have hnj := renameInto hn j Theta hj
+  have hnj := InternalGraphCompositionFunctionalityProof.renameInto hn j Theta hj
   change Nonempty (Derivation body Theta ((eqn tag (numeral 7)).relabel j).not) at hnj
   simp only [eqnRelabel,GuardedSourceSyntaxProof.numeralRename] at hnj
   exact nonConsAtOld1 (c.rename j Theta hj) (tag.relabel j) old1 htj hnj ho1

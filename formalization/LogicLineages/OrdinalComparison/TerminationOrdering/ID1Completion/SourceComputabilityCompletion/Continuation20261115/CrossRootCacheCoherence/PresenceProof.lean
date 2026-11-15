@@ -37,7 +37,7 @@ theorem presentCases {raw param : OTerm alpha} (s : Side body Delta raw param) (
     exact ⟨Derivation.explosion (Derivation.implicationElimination (InternalSourceInversionSupportProof.addHyp hn _)
       (Derivation.hypothesis List.mem_cons_self))⟩
   · intro gamma k Xi value hk he
-    have hfr := renameInto hf k Xi hk
+    have hfr := InternalGraphCompositionFunctionalityProof.renameInto hf k Xi hk
     rw [graph2Rename] at hfr
     have hp := outputTransport ExchangeMapGraph.lookup (found.relabel k) (suc value)
       (Fin.cons ((s.table.relabel j).relabel k) (Fin.cons ((raw.relabel j).relabel k) Fin.elim0)) he hfr

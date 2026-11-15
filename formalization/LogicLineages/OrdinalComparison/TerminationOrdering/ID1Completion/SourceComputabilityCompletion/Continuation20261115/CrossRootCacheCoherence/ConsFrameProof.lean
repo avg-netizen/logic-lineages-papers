@@ -66,40 +66,40 @@ def Frame.rename {raw param : OTerm alpha} (f : Frame body Delta raw param)
   deps := f.deps.relabel j
   found := f.found.relabel j
   constructor := by
-    have h := renameInto f.constructor j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto f.constructor j Theta hj
     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   index1 := by
-    have h := renameInto f.index1 j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto f.index1 j Theta hj
     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   index2 := by
-    have h := renameInto f.index2 j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto f.index2 j Theta hj
     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   oldGraph1 := by
-    have h := renameInto f.oldGraph1 j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto f.oldGraph1 j Theta hj
     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   oldGraph2 := by
-    have h := renameInto f.oldGraph2 j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto f.oldGraph2 j Theta hj
     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   nextGraph1 := by
-    have h := renameInto f.nextGraph1 j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto f.nextGraph1 j Theta hj
     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   nextGraph2 := by
-    have h := renameInto f.nextGraph2 j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto f.nextGraph2 j Theta hj
     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   dependency := by
-    have h := renameInto f.dependency j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto f.dependency j Theta hj
     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   headMember := by
-    have h := renameInto f.headMember j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto f.headMember j Theta hj
     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   tailMember := by
-    have h := renameInto f.tailMember j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto f.tailMember j Theta hj
     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   below := by
-    have h := renameInto f.below j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto f.below j Theta hj
     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
   lookup := by
-    have h := renameInto f.lookup j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto f.lookup j Theta hj
     simpa only [graph2Rename,graph3Rename,sucRelabel,eqnRelabel,GuardedSourceSyntaxProof.numeralRename,InductionSyntaxProof.belowRawRename] using h
 
 def Frame.head1 {raw param : OTerm alpha} (f : Frame body Delta raw param) : Side body Delta f.head param :=
@@ -137,8 +137,8 @@ theorem atHeads {raw param : OTerm alpha} (f : Frame body Delta raw param) (left
   apply presentCases f.tail1 _
   intro beta j Theta value hj ht
   rw [graph2Rename]
-  have h1 := renameInto hh1 j Theta hj
-  have h2 := renameInto hh2 j Theta hj
+  have h1 := InternalGraphCompositionFunctionalityProof.renameInto hh1 j Theta hj
+  have h2 := InternalGraphCompositionFunctionalityProof.renameInto hh2 j Theta hj
   simp only [graph2Rename,sucRelabel] at h1 h2
   exact atValues (f.rename j Theta hj) (left1.relabel j) (left2.relabel j) value h1 h2 ht
 
@@ -148,7 +148,7 @@ theorem atHead1 {raw param : OTerm alpha} (f : Frame body Delta raw param) (left
   apply presentCases f.head2 _
   intro beta j Theta left2 hj hh2
   rw [graph2Rename]
-  have h1 := renameInto hh1 j Theta hj
+  have h1 := InternalGraphCompositionFunctionalityProof.renameInto hh1 j Theta hj
   simp only [graph2Rename,sucRelabel] at h1
   exact atHeads (f.rename j Theta hj) (left1.relabel j) left2 h1 hh2
 

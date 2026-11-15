@@ -36,10 +36,10 @@ def Input.rename {raw param : OTerm alpha} (c : Input body Delta raw param)
   s2 := c.s2.rename j Theta hj
   found := c.found.relabel j
   below := by
-    have h := renameInto c.below j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto c.below j Theta hj
     simpa only [InductionSyntaxProof.belowRawRename] using h
   lookup := by
-    have h := renameInto c.lookup j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto c.lookup j Theta hj
     simpa only [graph2Rename] using h
 
 structure ConsInput (body : Positive (Fin 1)) {alpha : Type} (Delta : List (Formula alpha)) (raw param : OTerm alpha)
@@ -57,7 +57,7 @@ def ConsInput.rename {raw param : OTerm alpha} (c : ConsInput body Delta raw par
   head := c.head.relabel j
   tail := c.tail.relabel j
   constructor := by
-    have h := renameInto c.constructor j Theta hj
+    have h := InternalGraphCompositionFunctionalityProof.renameInto c.constructor j Theta hj
     simpa only [graph3Rename] using h
 
 theorem index1Nonzero {raw param : OTerm alpha} (c : ConsInput body Delta raw param) :
