@@ -59,13 +59,13 @@ theorem consCore (raw head tail param out node a b : OTerm alpha)
     (hm : Nonempty (Derivation body Delta (graph2 contains (numeral 1) raw b)))
     (hq : Nonempty (Derivation body Delta (graph1 F node b))) :
     Nonempty (Derivation body Delta (result F raw param out node a b)) := by
-  let qs : Fin 2 → Program 2 := ![.composition F ![.projection 0],
-    .composition (InternalListMap.map F) ![.projection 1] ]
+  let qs : Fin 2 → Program 2 := ![.composition F (fun _ : Fin 1 => .projection 0),
+    .composition (InternalListMap.map F) (fun _ : Fin 1 => .projection 1) ]
   apply OriginalLambdaConstructorGraphSyntaxProof.queryCases qs (Fin.cons head (Fin.cons tail Fin.elim0)) _
   intro beta j ys Theta hj hvals
   simp only [result,graph2Rename,GuardedSourceSyntaxProof.numeralRename]
   simp only [consTermRename,emptyRename] at hvals
-  let xs : Fin 2 → OTerm beta := ![head.relabel j,tail.relabel j]
+  let xs : Fin 2 → OTerm beta := Fin.cons (head.relabel j) (Fin.cons (tail.relabel j) Fin.elim0)
   have hh := unaryRecover F (.projection 0) (ys 0) (head.relabel j) xs (hvals 0) (projectionValue 0 xs)
   have hr := unaryRecover (InternalListMap.map F) (.projection 1) (ys 1) (tail.relabel j) xs (hvals 1) (projectionValue 1 xs)
   have ihj := InternalGraphCompositionFunctionalityProof.renameInto ih j Theta hj
