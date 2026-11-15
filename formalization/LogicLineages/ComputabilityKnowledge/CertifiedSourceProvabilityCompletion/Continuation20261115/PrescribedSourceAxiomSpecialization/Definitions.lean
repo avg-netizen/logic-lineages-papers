@@ -5,7 +5,7 @@ public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCom
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedSourceAxiomSpecialization
 open GorbowSyntax GorbowPRProgram GorbowPublishedDCB
 abbrev verifier (old arithmetic : Program 1) (x : Program 3) : Program 5 :=
- UniformClosedRule13Certificate.verifier old arithmetic (SaturatedAxiomLeaf.saturated x)
+ UniformClosedRule13Certificate.verifier old arithmetic (SixSol20261113.SaturatedAxiomLeaf.saturated x)
 abbrev root (pF pR old arithmetic : Program 1) (x : Program 3) : Program 4 :=
  FiniteRuleFourCertificate.root pF pR (UniformClosedRule13.logicalLeaf old) arithmetic x
 /-- Original rule4 singleton, with its original List Line numeric codec. -/

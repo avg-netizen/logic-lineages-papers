@@ -11,7 +11,7 @@ def InternalSeededSpecialization : Prop :=
  Actual pF pR (verifier old arithmetic x) c →
  (∀ v, evaluate x v = SixSol20261113.HistoryDispatcher.axiomFunction v) →
  ∀ (I : UniformClosedRule13Certificate.Installation (root pF pR old arithmetic x)
-  old arithmetic (SaturatedAxiomLeaf.saturated x)) (mtag : Nat),
+  old arithmetic (SixSol20261113.SaturatedAxiomLeaf.saturated x)) (mtag : Nat),
  (nodes (root pF pR old arithmetic x))[mtag]? = some ⟨4,SixSol20261113.LiteralRawMP.constructor⟩ →
  ∃ seedFuel : Nat, ∀ n (f : Formula n),
  GorbowStandardInduction.universalClosure f ∈ GorbowPRDefiningEquations.axioms (root pF pR old arithmetic x) →
@@ -33,7 +33,7 @@ def InternalSeededTrace : Prop :=
  ∀ (old arithmetic : Program 1) (x : Program 3) (pF pR : Program 1) (c : Code),
  Actual pF pR (verifier old arithmetic x) c →
  ∀ (I : UniformClosedRule13Certificate.Installation (root pF pR old arithmetic x)
-  old arithmetic (SaturatedAxiomLeaf.saturated x)) (mtag : Nat),
+  old arithmetic (SixSol20261113.SaturatedAxiomLeaf.saturated x)) (mtag : Nat),
  (nodes (root pF pR old arithmetic x))[mtag]? = some ⟨4,SixSol20261113.LiteralRawMP.constructor⟩ →
  ∀ n (f : Formula n) (sigma : Fin n → Term 0) ctx,
  Nonempty (Derivation (S pF pR (verifier old arithmetic x))
