@@ -1,0 +1,39 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportTaskProof.lean:21:15: error(lean.unknownIdentifier): Unknown identifier `callCongruence`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportTaskProof.lean:19:80: error: unsolved goals
+n ctx : ℕ
+p : Program n
+G : List (Formula ctx)
+ptag l r k : ℕ
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+task : Term ctx
+hk : Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G (Formula.equal (call l (task ::ᵥ nil)) (Term.numeral k))
+heta : Derivation (GorbowPRNumeralCalculation.Theory p) (ExpansionPairProof.property ptag l r task)
+⊢ Nonempty
+    (Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+      (Formula.equal task (LiteralSyntaxStep.taskCall ptag k (call r (task ::ᵥ nil)))))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportTaskProof.lean:48:12: error(lean.unknownIdentifier): Unknown identifier `callCongruence`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportTaskProof.lean:46:38: error: unsolved goals
+n ctx : ℕ
+p : Program n
+G : List (Formula ctx)
+stag ptag ctag l r : ℕ
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hl : (nodes p)[l]? = some ⟨1, HistoryDecoder.decoder false⟩
+hr : (nodes p)[r]? = some ⟨1, HistoryDecoder.decoder true⟩
+head tail tok : Term ctx
+ctor : Constructor
+hk :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal (call l (head ::ᵥ nil)) (Term.numeral (kind ctor)))
+ht : Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G (Formula.equal tok (Term.numeral (token ctor)))
+hh :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal head (LiteralSyntaxStep.taskCall ptag (kind ctor) (call r (head ::ᵥ nil))))
+⊢ Nonempty
+    (Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+      (Formula.equal (LiteralSyntaxStep.stepCall stag (HistoryLookup.consCall ctag head tail).succ tok)
+        (LiteralSyntaxStep.stepCall stag (input ptag ctag ctor (call r (head ::ᵥ nil)) tail)
+          (Term.numeral (token ctor)))))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportTaskProof.lean:66:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.StepTransportTaskProof.constructorInput: forbidden axiom dependency sorryAx

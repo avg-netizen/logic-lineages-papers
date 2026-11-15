@@ -1,0 +1,11 @@
+--- LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportIndexProof.lean R1
++++ LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportIndexProof.lean R2
+@@ -27,7 +27,7 @@
+  obtain ⟨hstep⟩ := LiteralSyntaxStep.StepProof.internalPrepend n p stag etag ctag atag hs he hc ha ctx head tail tok .zero
+  have hresult := Hilbert.Local.mp (.base hstep) hex
+  obtain ⟨hnil⟩ := HistoryAppend.AppendEquationsProof.internalAppendNil n p atag ha ctx tail
+- have hsucc := localUnary (.succ (.var 0)) _ _ (Hilbert.Local.base (gamma := G) hnil)
++ have hsucc := localUnary (.succ (.var 0)) _ _ (Hilbert.Local.base (Gamma := G) hnil)
+  have hsucc' : Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+   (.equal (.succ (HistoryAppend.appendCall atag .zero tail)) (.succ tail)) := by
+   simpa only [GorbowStandardInstances.instantiate,GorbowSubstitution.substitute,Fin.cases_zero] using hsucc

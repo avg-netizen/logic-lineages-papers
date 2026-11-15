@@ -1,0 +1,11 @@
+--- LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportProof.lean original
++++ LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportProof.lean corrected
+@@ -68,6 +68,8 @@
+  have hconsstep := localTrans _ _ _ (HistoryOrder.StepProof.localSym _ _ hstepEq) hold
+  have hout := Hilbert.Local.mp (.mp (.mp (.base helim) hneww) hex) hconsstep
+  have hb : Derivation T (.imp H (GorbowPACore.weaken (GorbowPACore.weaken (GorbowPACore.weaken Q)))) := by
++  dsimp only [Q]
++  rw [weakenProperty, weakenProperty, weakenProperty]
+   simpa only [Q,weakenProperty,property,OT,NT,TOK,RES,G,R,S] using hout.discharge.discharge.discharge.finish
+  obtain ⟨hadded⟩ := HBQuantifier.existentialElimination T H
+   (GorbowPACore.weaken (GorbowPACore.weaken Q)) ⟨hb⟩

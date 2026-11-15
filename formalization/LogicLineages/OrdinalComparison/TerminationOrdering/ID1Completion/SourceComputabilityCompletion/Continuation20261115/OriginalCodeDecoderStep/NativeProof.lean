@@ -31,9 +31,8 @@ theorem childValue (child : Program 2) (xs : List Nat) (code : Nat) :
   rw [childAt,sameOfEvaluation,constantEvaluation]
   change (if evaluate InternalRawListRecursion.lookup (ofFn ![
     evaluate child (ofFn ![numbersNumber xs,code]),numbersNumber xs]) = 1 then 1 else 0) = _
-  rw [InternalEqualityTestEvaluationProof.vectorTwo]
-  simp only [Matrix.cons_val_zero,Matrix.cons_val_one]
-  rw [ExchangeAnswerSlots.NativeProof.lookupEncoded]
+  simp only [InternalEqualityTestEvaluationProof.vectorTwo,Matrix.cons_val_zero,Matrix.cons_val_one,
+    ExchangeAnswerSlots.NativeProof.lookupEncoded]
   change (if xs.getD (evaluate child (ofFn ![numbersNumber xs,code])) 0 = 1 then 1 else 0) =
     ((xs.map (fun v => v == 1)).getD (evaluate child (ofFn ![numbersNumber xs,code])) false).toNat
   rw [ExchangeAnswerSlots.NativeProof.boolGet,Bool.beq_eq_decide_eq]
