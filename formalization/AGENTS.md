@@ -1,3 +1,23 @@
+# Current release — 15 November public continuation
+
+The user explicitly requests continuing public formalization until further
+notice, with the same source-first commit/non-force push cadence of at least
+every 30 minutes. This supersedes the earlier 02:00 UTC deadline and pause,
+but does not expand mathematical scope or relax verification standards.
+Fresh remote reconciliation finds main 4028a9e34506f4339af2992749464cf2d4d55eb9
+is an ancestor of latest cumulative bf3d85a5793cadbf798ed62e943ddf36302bb86f.
+Continue from the latter on formalization/cumulative-continuation-2026-11-15.
+Preserve accepted/frozen targets, all failed drafts, exact original source/AST
+correspondence, standard-only axioms and fixed serialized native limits.
+The coordinator owns the sole proof compiler queue and Git publication;
+two disjoint proof lanes cover paper06 and paper12, with independent review
+before acceptance. Official pinned toolchain/cache restoration is setup only.
+No main merge, force push, private research, Fable, CI or pin changes.
+Stop promptly upon the user's next stop instruction and preserve all work.
+Historical pause records below remain provenance, not an automatic restart.
+
+---
+
 # Current release — 14 November public continuation
 
 The user explicitly resumes public formalization until 2026-11-15 02:00 UTC
