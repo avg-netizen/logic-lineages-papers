@@ -1,0 +1,11 @@
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedFrontierRank/ExhaustionSupportProof.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedFrontierRank/ExhaustionSupportProof.lean
+@@ -31,7 +31,7 @@
+     (hc : Nonempty (Derivation body Delta (graph2 (OriginalDecodedRank.rank n) childRank child param))) :
+     Nonempty (Derivation body Delta ⊥) := by
+   have hb := BoundProof.rankBound n body alpha Delta (suc seedRank) seed param frontier child seedRank childRank hr hf hm hc
+-  have he := trans (InternalAdditionLawsProof.leftSuccessor seedRank childRank) (symm (addSucc seedRank childRank))
++  have he := trans (body := body) (Gamma := Delta) (InternalAdditionLawsProof.leftSuccessor seedRank childRank) (symm (addSucc seedRank childRank))
+   have hb' := PrimaryUncoveredCount.OrderProof.transport (OrdinaryArithmetic.addTerm (suc seedRank) childRank) seedRank
+     (OrdinaryArithmetic.addTerm seedRank (suc childRank)) seedRank ⟨he⟩ ⟨refl seedRank⟩ hb
+   obtain ⟨hz⟩ := PrimaryFiniteDescent.ArithmeticProof.budgetZero seedRank (suc childRank) hb'
