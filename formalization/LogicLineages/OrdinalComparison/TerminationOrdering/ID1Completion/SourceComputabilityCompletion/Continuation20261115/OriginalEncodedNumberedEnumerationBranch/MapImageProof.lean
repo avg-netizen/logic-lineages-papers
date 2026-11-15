@@ -46,7 +46,7 @@ theorem imageWitness (raw node source : OTerm alpha) :
   unfold imageMatrix InternalCalculus.instantiate
   rw [bindEmbedding]
   simp only [conjunctionSubst,graph1,graph2,InternalComputabilityApplicationSyntaxProof.programSubst,numeral,zSubst,sucSubst,
-    InternalRawListRecursionSyntaxProof.consTermSubst,InternalRawListRecursionSyntaxProof.emptySubst,witnessLift,Term.subst,Sum.elim_inr]
+    InternalRawListRecursionSyntaxProof.consTermSubst,InternalRawListRecursionSyntaxProof.emptySubst,InternalTagArithmeticSyntaxProof.liftBind,InternalTagArithmeticSyntaxProof.varBind]
 
 theorem introduce (raw node source : OTerm alpha)
     (hm : Nonempty (Derivation body Delta (graph2 contains (numeral 1) raw source)))
