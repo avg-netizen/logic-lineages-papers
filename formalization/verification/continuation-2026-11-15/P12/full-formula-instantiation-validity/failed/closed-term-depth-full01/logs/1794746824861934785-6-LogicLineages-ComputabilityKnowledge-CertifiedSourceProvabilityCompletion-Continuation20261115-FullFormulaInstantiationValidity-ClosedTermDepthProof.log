@@ -1,0 +1,13 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ClosedTermDepthProof.lean:27:2: error: Type mismatch: After simplification, term
+  hout.discharge.finish.generalize.generalize
+ has type
+  @Derivation T ctx
+    ((Formula.equal (HistoryLookup.lookupCall q (Term.var 1) Term.zero) (Term.var 0).succ).imp
+          ((Formula.equal (HistoryLookup.lookupCall q (Term.var (Fin.succ 1)) Term.zero) (Term.var 0).succ).conj
+              (taskRelation l r (Term.var (Fin.succ 0)) (Term.var 0))).ex).all.all
+but is expected to have type
+  @Derivation T ctx
+    ((Formula.equal (HistoryLookup.lookupCall q (Term.var (Fin.succ 0)) Term.zero) (Term.var 0).succ).imp
+          ((Formula.equal (HistoryLookup.lookupCall q (Term.var (Fin.succ 0).succ) Term.zero) (Term.var 0).succ).conj
+              (taskRelation l r (Term.var 1) (Term.var 0))).ex).all.all
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ClosedTermDepthProof.lean:50:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FullFormulaInstantiationValidity.ClosedTermDepthProof.closedTermAtAnyDepth: forbidden axiom dependency sorryAx
