@@ -2,6 +2,7 @@ module
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedRule12.NativeProof
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedRule12.LogicalProof
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedRule12.RetentionProof
+public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedRule12.StatementChecks
 theorem exactNativeLine : Targets.NativeLine := NativeLineProof.exactNativeLine
@@ -15,3 +16,4 @@ theorem exactInternalLogical : Targets.InternalLogical := LogicalProof.exactInte
 theorem exactInternalRetainsCase13 : Targets.InternalRetainsCase13 := RetentionProof.exactInternalRetainsCase13
 #print axioms exactInternalRetainsCase13
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedRule12.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedRule12.StatementChecks

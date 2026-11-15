@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedRule12.Targets
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedRule12.Preflight
+#check Targets.NativeLine
+#check Targets.NativeRefinement
+#check Targets.InternalLine
+#check Targets.InternalLogical
+#check Targets.InternalRetainsCase13
+#check UniformClosedCase12.StatementChecks.exactOriginalCase12
+#check UniformClosedRule13.StatementChecks.exactNativeRefinement
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedRule12.Preflight
