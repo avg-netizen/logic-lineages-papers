@@ -24,6 +24,7 @@ open InternalPositiveUnfoldingSupportProof InternalGraphCompositionFunctionality
 open InternalApplicationValidityStackAppendInductionCoreProof (formulaCases)
 theorem nilMembers (n : Nat) : Nonempty (Derivation body Delta (boundedMembers n z)) := by
   apply membersIntro
+  simp only [memberMatrix, InternalTagArithmeticSyntaxProof.zRelabel]
   let key : OTerm (alpha ⊕ Fin 1) := .var (.inr 0)
   let C : List (Formula (alpha ⊕ Fin 1)) := Delta.map (fun q => q.relabel Sum.inl)
   let M := graph2 contains (numeral 1) z key
