@@ -1,0 +1,11 @@
+--- Native01
++++ Native02
+@@ -34,7 +34,7 @@
+ 
+ theorem nativeContext : Targets.NativeContext := by
+   intro n v
+-  rw [contextGuard,conjunctionEvaluation,windowLeft,tableRight,Encodable.decode_prod_val]
++  rw [contextGuard,InternalApplicationStepPeelEvaluationSupportProof.conjunctionEvaluation,windowLeft,tableRight,Encodable.decode_prod_val]
+   cases Encodable.decode (α := Continuation20261114.ExchangeNumericSuppliers.Window n) (Nat.unpair (v.get 0)).1 <;>
+     cases Encodable.decode (α := Fin n → Fin n → Bool) (Nat.unpair (v.get 0)).2 <;> rfl
+ end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedContextValidity.NativeProof
