@@ -1,0 +1,63 @@
+{
+  "status": "Accepted original-code-bounds-recursion exact3",
+  "accepted_at_utc": "2026-11-15T19:00:43.880678+00:00",
+  "new_exact_contracts": 3,
+  "supporting_contracts_total": 675,
+  "cumulative_new_contracts_20261115": 171,
+  "numbered_register": "175 checked,2 inherited,12 pending /189 unchanged",
+  "native_receipt": "1794769002685879149-6",
+  "native_source_matched_modules": 3702,
+  "named_standard_axiom_audits": {
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeBoundsRecursion.StatementChecks.exactNonzero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeBoundsRecursion.StatementChecks.exactBounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeBoundsRecursion.StatementChecks.exactLayer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "source_pins": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/EquationProof.lean": "75d69e3bf23620ce571d1825c07f499249b2a09250c5e587fe0cdca8294f49c0",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/StatementChecks.lean": "5b94b7cb6a7ef0aa0565f043ab2080dd0074dcd4026ab210727b382c2a1d9fc4",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/Targets.lean": "6395744d8bb2e7d8eca28f4b7f0b5ccea989219defd51208eb8a0d3390092102",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/CasesProof.lean": "b2f38987c36089d443b2efbbb9b84cac53cce5dcfef91b12746ae8023b1ce30e",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/GuardRangeProof.lean": "6f0eb7d313c7c684e2af2f35179e6a5aedc677525423815eece023fd236d88f3",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/SupportProof.lean": "f68fcd8f8aa84868b85c94022d854726ba41ff45bde97ebcb2bfa73325385808",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NonzeroProof.lean": "09d647a1a5c7c80db1ed11b441beb7815fb71dbb1c8778fc6107508ddb5af9cd",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeSupportProof.lean": "0c7684282383fda572c260f54a06de7e84fb15c50605e726665d5e028a2a7e1b",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/Definitions.lean": "b99a2846a13f956d8a6ba0c94c425a94aa8300114d97169aef55fbcd24088ff9",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/NativeProof.lean": "233d8155b2d030561af26f2221ec6c172cc428e04ab606d49109290e3cbd7545",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeBoundsRecursion/Preflight.lean": "340e87c2544af108e84468ed5847f63ea6c76ddb969cd849539109d277306443"
+  },
+  "verifier_sha256": "4b0bcf64f83e0912e19dbedba53ed7f9507b73fa5b25f51e81bc3a1652362903",
+  "evidence": [
+    {
+      "path": "verification/continuation-2026-11-15/P6/EVIDENCE-44.json",
+      "sha256": "8e84ede7f2950412c175fe2070486f0b168261fa61e1d35cd927b41a5b922e93",
+      "bytes": 9385185,
+      "remote_bytes_omitted": true
+    },
+    {
+      "path": "verification/continuation-2026-11-15/P6/REVIEW-EVIDENCE-44.json",
+      "sha256": "8e84ede7f2950412c175fe2070486f0b168261fa61e1d35cd927b41a5b922e93",
+      "bytes": 9385185,
+      "remote_bytes_omitted": true
+    }
+  ],
+  "scope": [
+    "All-raw native calibration of literal raw-code-rank bounds recursor to original codeBounds decoder/default-zero value. Exact original immediate children, strict descent, ordered sum/max recombination.",
+    "New layer explicitly totalizes invalid inputs to Some(0,0)=1; accepted recombination is unchanged. Internal layer equation and nonzero output derive Boolean guard range and eliminate actual merge-output witnesses internally.",
+    "No internal full cache coherence, Q enumeration/filterMap, global installation, or numbered-paper completion claim."
+  ],
+  "repairs": [
+    "Verified failed snapshots native-support02/03 (14/20), cases01 (27), full01/02 (34/35); bounded Option/codec/map extensionality and existing namespace/notation repairs only. Frozen target/program AST and resource limits unchanged."
+  ]
+}

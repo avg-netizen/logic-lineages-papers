@@ -22,7 +22,7 @@ theorem traverses {n ctx : Nat} (p : Program n) (I : Installation p)
    (HistoryKernel.pairCall I.ptag (.succ rest)
     (HistoryAppend.appendCall I.atag out
      (FixedFormulaSubstitution.unaryValue I.ctag (token ctor) value))))) := by
- let single := UniformClosedSubstitutionEmit.singletonValue I.ctag (Term.numeral (token ctor))
+ let single : Term ctx := UniformClosedSubstitutionEmit.singletonValue I.ctag (Term.numeral (token ctor))
  let afterOut := HistoryAppend.appendCall I.atag out single
  let childState : Term ctx := .succ (HistoryLookup.consCall I.ctag
   (LiteralSyntaxStep.taskCall I.ptag childKind childBound) rest)
