@@ -27,7 +27,7 @@ theorem evaluated (x : Program 3)
  (c : Code) (fuel : Nat) (sigma : Sentence)
  (h : GorbowEnumeratedProvability.boundedTheory (c,fuel) sigma) :
  evaluate (SaturatedAxiomLeaf.saturated x) (arguments c fuel sigma) = 1 := by
- rw [SaturatedAxiomLeaf.StatementChecks.nativeCalibration x hx]
+ refine (SaturatedAxiomLeaf.StatementChecks.nativeCalibration x hx (arguments c fuel sigma)).trans ?_
  have hh := canonical c fuel sigma h
  simpa [HistoryDispatcher.axiomFunction,HistoryDispatcher.decodedLine,HistoryDispatcher.truth,
   arguments,lineCode,Denumerable.ofNat_encode] using congrArg HistoryDispatcher.truth hh

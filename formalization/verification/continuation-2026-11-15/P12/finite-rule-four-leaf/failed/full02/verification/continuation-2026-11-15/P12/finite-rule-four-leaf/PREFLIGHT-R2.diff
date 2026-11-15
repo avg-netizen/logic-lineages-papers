@@ -1,0 +1,11 @@
+--- LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FiniteRuleFourLeaf/Targets.lean R1
++++ LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FiniteRuleFourLeaf/Targets.lean R2
+@@ -15,7 +15,7 @@
+  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory (sourceRoot pF pR q))
+   (graphEquation tag x c fuel sigma)) ∧
+  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory (sourceRoot pF pR q))
+-  (SaturatedAxiomLeaf.success tag (Term.numeral (Encodable.encode c))
++  (SaturatedAxiomLeaf.success (ctx := 0) tag (Term.numeral (Encodable.encode c))
+    (Term.numeral fuel) (Term.numeral (lineCode sigma)))) ∧
+  (∀ ctx (larger : Term ctx), Nonempty (Derivation (S pF pR q)
+   (.imp (SixSol20261112.Fuel.orderGuard (Term.numeral fuel) larger)
