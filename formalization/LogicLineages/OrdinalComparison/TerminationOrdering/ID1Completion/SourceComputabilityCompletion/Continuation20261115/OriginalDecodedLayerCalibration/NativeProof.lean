@@ -23,6 +23,7 @@ theorem windowValue (n : Nat) (v : List.Vector Nat 3) :
     evaluate (windowAccepted n) v = (Encodable.decode (α := ExchangeNumericSuppliers.Window n) (v.get 2)).isSome.toNat := by
   change evaluate (OriginalDecodedWindowValidity.window n) (ofFn ![v.get 2]) = _
   rw [OriginalDecodedWindowValidity.NativeProof.nativeWindow]
+  rfl
 
 theorem nativeGuard : Targets.NativeGuard := by
   intro n v
