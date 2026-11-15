@@ -1,0 +1,97 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalBoundsRecombination/NativeProof.lean:27:4: error: Tactic `rfl` failed: The left-hand side
+  Nat.pair
+      ((Nat.unpair
+            (![Nat.pair (rootBounds code).1 (rootBounds code).2,
+                Nat.pair
+                  (collectBounds
+                      (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (![v.get 1] 0)).getD []))).1
+                  (collectBounds
+                      (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (![v.get 1] 0)).getD []))).2]
+              0)).1 +
+        (Nat.unpair
+            (![Nat.pair (rootBounds code).1 (rootBounds code).2,
+                Nat.pair
+                  (collectBounds
+                      (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (![v.get 1] 0)).getD []))).1
+                  (collectBounds
+                      (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (![v.get 1] 0)).getD []))).2]
+              1)).1)
+      (max
+        (Nat.unpair
+            (![Nat.pair (rootBounds code).1 (rootBounds code).2,
+                Nat.pair
+                  (collectBounds
+                      (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (![v.get 1] 0)).getD []))).1
+                  (collectBounds
+                      (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (![v.get 1] 0)).getD []))).2]
+              0)).2
+        (Nat.unpair
+            (![Nat.pair (rootBounds code).1 (rootBounds code).2,
+                Nat.pair
+                  (collectBounds
+                      (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (![v.get 1] 0)).getD []))).1
+                  (collectBounds
+                      (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (![v.get 1] 0)).getD []))).2]
+              1)).2) +
+    1
+is not definitionally equal to the right-hand side
+  (Nat.pair
+      ((rootBounds code).1 +
+        (collectBounds (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (v.get 1)).getD []))).1)
+      (max (rootBounds code).2
+        (collectBounds (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (v.get 1)).getD []))).2)).succ
+
+case some
+n : ℕ
+v : List.Vector ℕ 2
+code : NumberedAuxiliaryCoding.Code (Fin n)
+hc : decodeCode n (v.get 0) = some code
+⊢ Nat.pair
+        ((Nat.unpair
+              (![Nat.pair (rootBounds code).1 (rootBounds code).2,
+                  Nat.pair
+                    (collectBounds
+                        (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (![v.get 1] 0)).getD []))).1
+                    (collectBounds
+                        (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (![v.get 1] 0)).getD []))).2]
+                0)).1 +
+          (Nat.unpair
+              (![Nat.pair (rootBounds code).1 (rootBounds code).2,
+                  Nat.pair
+                    (collectBounds
+                        (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (![v.get 1] 0)).getD []))).1
+                    (collectBounds
+                        (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (![v.get 1] 0)).getD []))).2]
+                1)).1)
+        (max
+          (Nat.unpair
+              (![Nat.pair (rootBounds code).1 (rootBounds code).2,
+                  Nat.pair
+                    (collectBounds
+                        (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (![v.get 1] 0)).getD []))).1
+                    (collectBounds
+                        (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (![v.get 1] 0)).getD []))).2]
+                0)).2
+          (Nat.unpair
+              (![Nat.pair (rootBounds code).1 (rootBounds code).2,
+                  Nat.pair
+                    (collectBounds
+                        (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (![v.get 1] 0)).getD []))).1
+                    (collectBounds
+                        (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (![v.get 1] 0)).getD []))).2]
+                1)).2) +
+      1 =
+    (Nat.pair
+        ((rootBounds code).1 +
+          (collectBounds (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (v.get 1)).getD []))).1)
+        (max (rootBounds code).2
+          (collectBounds (List.map Nat.unpair ((NumberedMultisetNumeric.decodeNumbers (v.get 1)).getD []))).2)).succ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalBoundsRecombination/NativeProof.lean:26:57: warning: This simp argument is unused:
+  Nat.unpair_pair
+
+Hint: Omit it from the simp argument list.
+  simp only [NumberedSyntaxBoundsPrimrecSupportProof.recombine, ̲mergeBounds,
+        Encodable.encode_some, ̲ArithmeticProof.pairEncoding,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalBoundsRecombination/NativeProof.lean:29:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalBoundsRecombination.NativeProof.nativeRecombine: forbidden axiom dependency sorryAx

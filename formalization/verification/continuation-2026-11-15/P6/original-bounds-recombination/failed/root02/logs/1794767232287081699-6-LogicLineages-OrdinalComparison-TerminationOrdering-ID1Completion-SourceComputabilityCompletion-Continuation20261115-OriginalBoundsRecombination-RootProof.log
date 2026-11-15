@@ -1,0 +1,68 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalBoundsRecombination/RootProof.lean:25:13: error: unknown tactic
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalBoundsRecombination/RootProof.lean:14:88: error: unsolved goals
+case var
+n index✝ : ℕ
+hg : evaluate (OriginalCodeValidityGuard.check n) (ofFn ![codeNumber (Code.var index✝)]) = 1
+⊢ (if 0 = 6 then 0 else if 0 = 7 then 0 else if 0 = 5 then Nat.pair 1 (Nat.unpair index✝).1 else Nat.pair 1 0) =
+    Nat.pair (Encodable.encode 1) (Encodable.encode 0)
+
+case lam
+n : ℕ
+domain✝ : Source.Ty
+body✝ : Code (Fin n)
+hg : evaluate (OriginalCodeValidityGuard.check n) (ofFn ![codeNumber (Code.lam domain✝ body✝)]) = 1
+⊢ (if 1 = 6 then 0 else if 1 = 7 then 0 else if 1 = 5 then Nat.pair 1 (typeNumber domain✝) else Nat.pair 1 0) =
+    Nat.pair (Encodable.encode 1) (Encodable.encode 0)
+
+case app
+n : ℕ
+domain✝ : Source.Ty
+function✝ argument✝ : Code (Fin n)
+hg : evaluate (OriginalCodeValidityGuard.check n) (ofFn ![codeNumber (Code.app domain✝ function✝ argument✝)]) = 1
+⊢ (if 2 = 6 then 0 else if 2 = 7 then 0 else if 2 = 5 then Nat.pair 1 (typeNumber domain✝) else Nat.pair 1 0) =
+    Nat.pair (Encodable.encode 1) (Encodable.encode 0)
+
+case bottom
+n : ℕ
+result✝ : Source.Ty
+hg : evaluate (OriginalCodeValidityGuard.check n) (ofFn ![codeNumber (Code.bottom result✝)]) = 1
+⊢ (if 3 = 6 then 0
+    else if 3 = 7 then 0 else if 3 = 5 then Nat.pair 1 (Nat.unpair (typeNumber result✝)).1 else Nat.pair 1 0) =
+    Nat.pair (Encodable.encode 1) (Encodable.encode 0)
+
+case ordinary
+n : ℕ
+head✝ : HeadCode (Fin n)
+base✝ : Code (Fin n)
+hg : evaluate (OriginalCodeValidityGuard.check n) (ofFn ![codeNumber (Code.ordinary head✝ base✝)]) = 1
+⊢ (if 4 = 6 then 0 else if 4 = 7 then 0 else if 4 = 5 then Nat.pair 1 (headNumber head✝) else Nat.pair 1 0) =
+    Nat.pair (Encodable.encode 1) (Encodable.encode 0)
+
+case numbered
+n label✝ : ℕ
+head✝ : HeadCode (Fin n)
+result✝ : Source.Ty
+base✝ : Code (Fin n)
+extraTypes✝ : List Source.Ty
+extras✝ : Code (Fin n)
+hg :
+  evaluate (OriginalCodeValidityGuard.check n)
+      (ofFn ![codeNumber (Code.numbered label✝ head✝ result✝ base✝ extraTypes✝ extras✝)]) =
+    1
+⊢ (if 5 = 6 then 0 else if 5 = 7 then 0 else if True then Nat.pair 1 label✝ else Nat.pair 1 0) =
+    Nat.pair (Encodable.encode 1) (Encodable.encode label✝)
+
+case argumentsNil
+n : ℕ
+hg : evaluate (OriginalCodeValidityGuard.check n) (ofFn ![codeNumber Code.argumentsNil]) = 1
+⊢ (if True then 0 else if 6 = 7 then 0 else if 6 = 5 then Nat.pair 1 (Nat.unpair 0).1 else Nat.pair 1 0) =
+    Nat.pair (Encodable.encode 0) (Encodable.encode 0)
+
+case argumentsCons
+n : ℕ
+type✝ : Source.Ty
+head✝ tail✝ : Code (Fin n)
+hg : evaluate (OriginalCodeValidityGuard.check n) (ofFn ![codeNumber (Code.argumentsCons type✝ head✝ tail✝)]) = 1
+⊢ (if 7 = 6 then 0 else if True then 0 else if 7 = 5 then Nat.pair 1 (typeNumber type✝) else Nat.pair 1 0) =
+    Nat.pair (Encodable.encode 0) (Encodable.encode 0)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalBoundsRecombination/RootProof.lean:33:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalBoundsRecombination.RootProof.rootImage: forbidden axiom dependency sorryAx
