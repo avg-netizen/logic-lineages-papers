@@ -27,6 +27,11 @@ theorem consEquation : Targets.InternalConsEquation := by
     apply programCases ArgumentEntriesLayer.step ![raw,tailValue] _
     intro beta j Theta inner hj hi
     rw [graph2Rename]
+    have hxs : (fun i : Fin 2 => ((![raw,tailValue] : Fin 2 → OTerm alpha) i).relabel j) =
+        Fin.cons (raw.relabel j) (Fin.cons (tailValue.relabel j) Fin.elim0) := by
+      funext i
+      refine Fin.cases ?_ (fun k => Fin.cases ?_ (fun q => Fin.elim0 q) k) i <;> rfl
+    rw [hxs] at hi
     change Nonempty (Derivation body Theta (graph2 ArgumentEntriesLayer.step inner (raw.relabel j) (tailValue.relabel j))) at hi
     have hcj := renameInto hc j Theta hj
     rw [graph3Rename] at hcj

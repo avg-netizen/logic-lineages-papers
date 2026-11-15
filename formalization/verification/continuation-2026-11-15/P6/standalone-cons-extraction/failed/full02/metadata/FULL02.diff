@@ -1,0 +1,11 @@
+--- FULL01/Proof.lean
++++ FULL02/Proof.lean
+@@ -27,7 +27,7 @@
+     apply programCases ArgumentEntriesLayer.step ![raw,tailValue] _
+     intro beta j Theta inner hj hi
+     rw [graph2Rename]
+-    simp only [consTermRename,emptyRename] at hi
++    change Nonempty (Derivation body Theta (graph2 ArgumentEntriesLayer.step inner (raw.relabel j) (tailValue.relabel j))) at hi
+     have hcj := renameInto hc j Theta hj
+     rw [graph3Rename] at hcj
+     have htj := renameInto ht j Theta hj
