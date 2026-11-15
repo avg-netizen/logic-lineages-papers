@@ -16,7 +16,7 @@ open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
 open TwoSol20261113.CalibratedPrimary.Membership (contains)
 open TwoSol20261113.CalibratedPrimary.MembershipInternalProof
 open SourceComputabilityFormulaSupportProof (numeral)
-open InternalListCodecSupportProof (consTermRename emptyRename)
+open InternalRecursionGraphStepSyntaxProof (consTermRename)
 open Continuation20261114
 open SyntaxProof SupportProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
