@@ -7,7 +7,7 @@ open GorbowSyntax GorbowTheoryProof GorbowFormulaSubstitution
 open EffectiveNumeral.Family
 /-- The exact singleton witness displayed by original HasCertificates.logical. -/
 theorem singletonEffective {alpha : Type} [Primcodable alpha] {n : Nat}
- (w : alpha → LogicalInstance n)
+ (w : alpha → GorbowPACore.LogicalInstance n)
  (hw : Primrec (fun x => GorbowLogicalAxiomCode.encode (w x))) :
  Primrec (fun x => GorbowNumericCertificate.certificateNumber [GorbowProofChecker.logicalLine (w x)]) := by
  have hcompile := GorbowLogicalAxiomCodeProof.uniformPrograms.2.2.comp

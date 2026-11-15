@@ -16,6 +16,7 @@ open InternalRawListRecursionSyntaxProof InternalBinderTransportProof InternalTe
 open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
 open Targets
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
 
 theorem fieldsSubst {beta : Type} (n : Nat)
     (labels heads types bases tuples extras code k encodedHead rawHead t b ts e : OTerm alpha)
