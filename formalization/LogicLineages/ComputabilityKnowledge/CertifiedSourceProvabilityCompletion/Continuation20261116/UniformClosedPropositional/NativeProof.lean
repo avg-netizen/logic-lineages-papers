@@ -3,7 +3,7 @@ public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCom
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.UniformClosedPropositional.NativeProof
-open GorbowPRProgram SixSol20261113 List.Vector HistoryRuleSuffix.NativeProof NativeLineProof
+open GorbowPRProgram SixSol20261113 List.Vector HistoryRuleSuffix HistoryRuleSuffix.NativeProof NativeLineProof
 open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115
 theorem rawLineAccepted (isS : Bool) (a b c : List Nat)
  (ha : GorbowSyntaxValidation.validFormula 0 a = true)
@@ -34,19 +34,47 @@ theorem recognizedAccepted (isS : Bool) (v : List.Vector Nat 1)
   by_contra hn
   simp only [recognizer,conjunctionEval,twoEval,projectionEval,List.Vector.get_cons_zero,hl,equalEval] at h
   simp [hn] at h
+ have guardsNonzero : evaluate (conjunction (formulaGuard firstArg)
+   (if isS then conjunction (formulaGuard secondArg) (formulaGuard thirdArg)
+    else formulaGuard secondArg)) v ≠ 0 := by
+  intro hz
+  apply h
+  rw [recognizer,conjunctionEval,hz]
+  split <;> rfl
+ have firstNonzero : evaluate (formulaGuard firstArg) v ≠ 0 := by
+  intro hz
+  apply guardsNonzero
+  rw [conjunctionEval,hz,if_pos rfl]
+ have restNonzero : evaluate (if isS then conjunction (formulaGuard secondArg)
+   (formulaGuard thirdArg) else formulaGuard secondArg) v ≠ 0 := by
+  simpa only [conjunctionEval,if_neg firstNonzero] using guardsNonzero
  have hva : GorbowSyntaxValidation.validFormula 0 a = true := by
-  by_contra hn
-  cases isS <;>
-   simp_all [recognizer,conjunctionEval,twoEval,projectionEval,List.Vector.get_zero,equalEval,HistoryDispatcher.truth]
+  rw [hfa] at firstNonzero
+  cases hh : GorbowSyntaxValidation.validFormula 0 a with
+  | false => exact False.elim (firstNonzero (by rw [hh]; rfl))
+  | true => rfl
+ have secondNonzero : evaluate (formulaGuard secondArg) v ≠ 0 := by
+  cases isS with
+  | false => exact restNonzero
+  | true =>
+    intro hz
+    apply restNonzero
+    change evaluate (conjunction (formulaGuard secondArg) (formulaGuard thirdArg)) v = 0
+    rw [conjunctionEval,hz,if_pos rfl]
  have hvb : GorbowSyntaxValidation.validFormula 0 b = true := by
-  by_contra hn
-  cases isS <;>
-   simp_all [recognizer,conjunctionEval,twoEval,projectionEval,List.Vector.get_zero,equalEval,HistoryDispatcher.truth]
+  rw [hfb] at secondNonzero
+  cases hh : GorbowSyntaxValidation.validFormula 0 b with
+  | false => exact False.elim (secondNonzero (by rw [hh]; rfl))
+  | true => rfl
  have hvc : isS = true → GorbowSyntaxValidation.validFormula 0 c = true := by
   intro hs
   subst isS
-  by_contra hn
-  simp_all [recognizer,conjunctionEval,twoEval,projectionEval,List.Vector.get_zero,equalEval,HistoryDispatcher.truth]
+  have thirdNonzero : evaluate (formulaGuard thirdArg) v ≠ 0 := by
+   simpa only [if_true,conjunctionEval,if_neg secondNonzero] using restNonzero
+  rw [hfc] at thirdNonzero
+  cases hh : GorbowSyntaxValidation.validFormula 0 c with
+  | false => exact False.elim (thirdNonzero (by rw [hh]; rfl))
+  | true => rfl
  rw [hv,he]
  exact rawLineAccepted isS a b c hva hvb hvc
 theorem exactNativeRefinement : Targets.NativeRefinement := by

@@ -59,15 +59,15 @@ theorem binary (a b c d : OTerm alpha) (psi : Formula alpha)
   apply next beta j Theta (ys 0) (ys 1) (ys 2) (ys 3) hj
   · exact binaryRecover InternalListCodec.consCode (.projection 1) (OriginalRawSyntaxTransport.constant 4 0)
       (ys 0) (b.relabel j) z ![a.relabel j,b.relabel j,c.relabel j,d.relabel j] (hq 0)
-      (projectionValue 1 _) (constantValue 0 _)
+      (projectionValue 1 ![a.relabel j,b.relabel j,c.relabel j,d.relabel j]) (constantValue 0 ![a.relabel j,b.relabel j,c.relabel j,d.relabel j])
   · exact binaryRecover InternalListCodec.consCode (.projection 0) firstTail
       (ys 1) (a.relabel j) (ys 0) ![a.relabel j,b.relabel j,c.relabel j,d.relabel j] (hq 1)
-      (projectionValue 0 _) (hq 0)
+      (projectionValue 0 ![a.relabel j,b.relabel j,c.relabel j,d.relabel j]) (hq 0)
   · exact binaryRecover InternalListCodec.consCode (.projection 3) (OriginalRawSyntaxTransport.constant 4 0)
       (ys 2) (d.relabel j) z ![a.relabel j,b.relabel j,c.relabel j,d.relabel j] (hq 2)
-      (projectionValue 3 _) (constantValue 0 _)
+      (projectionValue 3 ![a.relabel j,b.relabel j,c.relabel j,d.relabel j]) (constantValue 0 ![a.relabel j,b.relabel j,c.relabel j,d.relabel j])
   · exact binaryRecover InternalListCodec.consCode (.projection 2) secondTail
       (ys 3) (c.relabel j) (ys 2) ![a.relabel j,b.relabel j,c.relabel j,d.relabel j] (hq 3)
-      (projectionValue 2 _) (hq 2)
+      (projectionValue 2 ![a.relabel j,b.relabel j,c.relabel j,d.relabel j]) (hq 2)
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationDepth.ListsProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationDepth.ListsProof

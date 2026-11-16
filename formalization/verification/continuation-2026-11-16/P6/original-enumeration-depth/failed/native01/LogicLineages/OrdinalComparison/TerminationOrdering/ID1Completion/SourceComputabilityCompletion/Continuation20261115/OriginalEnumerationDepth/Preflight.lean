@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationDepth.Targets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationDepth.Preflight
+#check Targets.NativeDepth
+#check Targets.InternalVariable
+#check Targets.InternalLambda
+#check Targets.InternalApplication
+#check Targets.InternalBottom
+#check Targets.InternalOrdinary
+#check Targets.InternalNumbered
+#check Targets.InternalNil
+#check Targets.InternalCons
+#check Targets.InternalMalformed
+#check Continuation20261114.ArgumentEntriesFrontier.Proof.rawDecrease
+#check Continuation20261114.ArgumentEntriesFrontier.Proof.childrenImage
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationDepth.Preflight
