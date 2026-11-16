@@ -6,7 +6,7 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRChildTags GorbowPRDefiningEquations GorbowTheoryProof SixSol20261113 List.Vector
 open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
 open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115
-open PrescribedRuntimeEquality PrescribedRuntimeCallCongruence
+open GorbowRegistryTuple PrescribedRuntimeEquality PrescribedRuntimeCallCongruence
 open SixSol20261112.Fuel NamedArithmeticGraph LiteralRawMP.ConstructorSupportProof
 open CurrentRecursionBaseProgram.GraphPrimitives
 open CurrentRecursionBaseProgram.NativePrimitives CurrentRecursionBaseProgram.TransitivityNativeProof HistoryRuleSuffix.NativeProof
@@ -28,11 +28,32 @@ theorem certificate {arity : Nat} (a b c d hac hbd : Program arity) (v : List.Ve
  have hs := NativeBinary.binaryEval false a b c d hac hbd v av bv cv dv ha hb hc hd
  have hab := NativeScalar.operation false a b v av bv ha hb
  have hcd := NativeScalar.operation false c d v cv dv hc hd
- have hm := NativeBinary.binaryEval true _ _ _ _ _ _ v _ _ _ _ hab hab hcd hcd
- unfold pair
- rw [NativeBinary.binaryEval false _ a _ c _ hac v _ av _ cv
-  (NativeScalar.operation true _ _ v _ _ hab hab) ha (NativeScalar.operation true _ _ v _ _ hcd hcd) hc]
- rw [hm,hs]
+ let ab := FixedFormulaSubstitution.binary 3 a b
+ let cd := FixedFormulaSubstitution.binary 3 c d
+ let hsCode := CurrentCallCongruenceProgram.binary false a b c d hac hbd
+ have hm := NativeBinary.binaryEval true ab ab cd cd hsCode hsCode v
+  (.add av bv) (.add av bv) (.add cv dv) (.add cv dv) hab hab hcd hcd
+ let hmCode := CurrentCallCongruenceProgram.binary true ab ab cd cd hsCode hsCode
+ have hmulAB : evaluate (FixedFormulaSubstitution.binary 4 ab ab) v =
+  Encodable.encode (GorbowTermPrefixCode.encode (Term.mul (.add av bv) (.add av bv))) :=
+  NativeScalar.operation true ab ab v _ _ hab hab
+ have hmulCD : evaluate (FixedFormulaSubstitution.binary 4 cd cd) v =
+  Encodable.encode (GorbowTermPrefixCode.encode (Term.mul (.add cv dv) (.add cv dv))) :=
+  NativeScalar.operation true cd cd v _ _ hcd hcd
+ have hout := NativeBinary.binaryEval false (FixedFormulaSubstitution.binary 4 ab ab) a
+  (FixedFormulaSubstitution.binary 4 cd cd) c hmCode hac v
+  (.mul (.add av bv) (.add av bv)) av (.mul (.add cv dv) (.add cv dv)) cv hmulAB ha hmulCD hc
+ change evaluate (CurrentCallCongruenceProgram.binary false (FixedFormulaSubstitution.binary 4 ab ab) a
+  (FixedFormulaSubstitution.binary 4 cd cd) c hmCode hac) v = _
+ rw [hout]
+ change binaryNumber false (.mul (.add av bv) (.add av bv)) av (.mul (.add cv dv) (.add cv dv)) cv
+  (evaluate (CurrentCallCongruenceProgram.binary true ab ab cd cd hsCode hsCode) v) (evaluate hac v) = _
+ rw [hm]
+ change binaryNumber false (.mul (.add av bv) (.add av bv)) av (.mul (.add cv dv) (.add cv dv)) cv
+  (binaryNumber true (.add av bv) (.add av bv) (.add cv dv) (.add cv dv)
+   (evaluate (CurrentCallCongruenceProgram.binary false a b c d hac hbd) v)
+   (evaluate (CurrentCallCongruenceProgram.binary false a b c d hac hbd) v)) (evaluate hac v) = _
+ rw [hs]
  rfl
 
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentCallCongruenceProgram.NativePair

@@ -1,12 +1,12 @@
 # Current public formalization handoff
 
-Snapshot: 2026-11-16 13:39 UTC. Continuation authorization remains active.
+Snapshot: 2026-11-16 13:44 UTC. Continuation authorization remains active.
 
 ## Verified durable frontier
 
 - Branch: `formalization/cumulative-continuation-2026-11-16`.
-- Verified remote head: `b47a7217ce7642e6f15bf721687a767e24d602cf`, committed 13:34:45 UTC. All 25 intended source/handoff snapshot paths match the remote. Draft checkpoint; accepted total unchanged.
-- Accepted supporting contracts: **814 at the verified remote head above**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
+- Verified remote head: `014087b9a8b0d7e26c46a9beef69b62249640d21`, committed 13:41:51 UTC. All 23 intended source/handoff snapshot paths match the remote. Draft checkpoint; accepted total unchanged.
+- Accepted supporting contracts: **814 at the verified remote head above; 818 now locally accepted pending publication**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
 - Main4028a9e and independent Nov15 branch b51cb999 remain unchanged. Overlapping prior733 are never added twice. No main merge or force push.
 - Acceptance13: one coherent cumulative source exact1,2341 recursively matched modules,total760. Six prior packages/capabilities retained, K/S plus seven helper contracts reconstructed at actual new CORE where needed. No tuple/tag equality shortcut.
 - Acceptance14: original K-lift/S-mpUnder and arbitrary-code literal traces exact3,2351 matched modules,total763. K then one MP; S then two MP in original order. Actual new source/CORE/Fuel, original guards, membership-backed registry coherence.
@@ -70,3 +70,7 @@ Next comparator-only proposals authorized: P6 actual original codeBounds eight c
 Current active packets as of13:29UTC: OriginalCodeBoundsConstructors exact9 frozen14/preflight1794835542049563834-6; Answers/Malformed pass1794835664747522071-5 and Merge pass1794835711562636854-5, no new acceptance. CurrentCallCongruenceProgram exact4 frozen10/preflight1794835616493769622-6; graph support tranche in progress. Global814 accepted/published, numbered register unchanged.
 
 13:39 UTC continuation: 814 accepted/published. Current constructor exact9 and call-congruence exact4 remain unaccepted drafts. P12 TupleGraph/CallGraph passed batch06; NativeScalar quotation transport needs repair. P6 NilValue passed; NilProof rename support needs repair. Single bounded compiler queue continues, no resource or target changes. Next remote checkpoint due by 14:04 UTC.
+
+13:44 UTC: NilProof and ZeroMaximum passed receipt1794836533222784284-5; RootMerge implicit context repair pending. NativeScalar passed receipt1794836388109815378-5; InputProof binder repair pending recheck. No exact packet acceptance. Next checkpoint due by 14:11 UTC.
+
+Acceptance39: CurrentCallCongruenceProgram exact4, final1794837119316135829-5, evidence20 verified 2456 modules, 20 source pins including preflight,10 frozen/provenance pins unchanged. Actual literal tuple/call AST, unrestricted numeric child codes in native calibration; arbitrary-symbolic actual-node graph without correctness premises. Total818 locally accepted; numbered register unchanged. Composition/compiler/source/HB3 remain unpaid.

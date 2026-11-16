@@ -10,7 +10,7 @@ open InternalApplicationCertificateConstructors InternalApplicationCertificateCo
 open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
 open InternalTagArithmeticSyntaxProof (z suc zRelabel sucRelabel eqnRelabel)
 open InternalTagArithmeticSupportProof (symm)
-open InternalRecursionGraphStepSyntaxProof (conjunctionRename emptyRename)
+open InternalRecursionGraphStepSyntaxProof (conjunctionRename)
 open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
 open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
 open InternalQuotientComparisonProof (orLeft orRight)

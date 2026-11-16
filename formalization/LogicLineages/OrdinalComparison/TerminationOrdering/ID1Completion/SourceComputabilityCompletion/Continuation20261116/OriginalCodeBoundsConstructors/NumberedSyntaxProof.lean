@@ -38,7 +38,7 @@ theorem fieldsSubst {beta : Type} (n : Nat) (label left right out : OTerm alpha)
     (fields n label left right out ys).subst (fun a => emb (sub a)) =
       fields n (label.subst sub) (left.subst sub) (right.subst sub) (out.subst sub) (fun i => (ys i).subst sub) := by
   simp only [fields,conjunctionSubst,graph1,graph2,InternalComputabilityApplicationSyntaxProof.programSubst,
-    consTermSubst,emptySubst,sucSubst,addSubst,if_true,if_false]
+    consTermSubst,emptySubst,sucSubst,InternalAdditionLawsProof.addSubst,Bool.false_eq_true,if_true,if_false]
 
 theorem fieldsRename {beta : Type} (n : Nat) (label left right out : OTerm alpha)
     (ys : Fin 8 → OTerm alpha) (j : alpha → beta) :
@@ -76,9 +76,12 @@ theorem blockRename {beta : Type} (n : Nat) (label left right out : OTerm alpha)
 theorem introduce (n : Nat) (label left right out : OTerm alpha) (ys : Fin 8 → OTerm alpha)
     (hf : Nonempty (Derivation body Delta (fields n label left right out ys))) :
     Nonempty (Derivation body Delta (block n label left right out)) := by
-  apply InternalFiniteBlocksProof.introduction body alpha 8 Delta _ (fun i => emb (ys i))
-  rw [matrixWitness]
-  exact hf
+  have hw : Nonempty (Derivation body Delta
+      ((matrix n label left right out).subst (Sum.elim Term.var (fun i => emb (ys i))))) := by
+    rw [matrixWitness]
+    exact hf
+  exact InternalFiniteBlocksProof.introduction body alpha 8 Delta
+    (matrix n label left right out) (fun i => emb (ys i)) hw
 
 theorem cases (n : Nat) (label left right out : OTerm alpha) (psi : Formula alpha)
     (hf : Nonempty (Derivation body Delta (block n label left right out)))

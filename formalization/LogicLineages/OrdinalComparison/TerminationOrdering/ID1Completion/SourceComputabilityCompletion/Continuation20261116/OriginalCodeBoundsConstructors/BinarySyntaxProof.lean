@@ -39,7 +39,7 @@ theorem fieldsSubst {beta : Type} (n : Nat) (cons : Bool) (left right out : OTer
     (fields n cons left right out ys).subst (fun a => emb (sub a)) =
       fields n cons (left.subst sub) (right.subst sub) (out.subst sub) (fun i => (ys i).subst sub) := by
   cases cons <;> simp only [fields,conjunctionSubst,graph1,graph2,InternalComputabilityApplicationSyntaxProof.programSubst,
-    consTermSubst,emptySubst,sucSubst,addSubst,if_true,if_false]
+    consTermSubst,emptySubst,sucSubst,InternalAdditionLawsProof.addSubst,Bool.false_eq_true,if_true,if_false]
 
 theorem fieldsRename {beta : Type} (n : Nat) (cons : Bool) (left right out : OTerm alpha)
     (ys : Fin 7 → OTerm alpha) (j : alpha → beta) :

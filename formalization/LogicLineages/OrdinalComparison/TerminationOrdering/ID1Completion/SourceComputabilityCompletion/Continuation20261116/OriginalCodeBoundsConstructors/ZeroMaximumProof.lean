@@ -21,7 +21,7 @@ theorem secondTransport (p : Program 2) (out a b c : OTerm alpha)
     (hp : Nonempty (Derivation body Delta (graph2 p out a b))) :
     Nonempty (Derivation body Delta (graph2 p out a c)) := by
   unfold graph2 programGraph at hp ⊢
-  apply graphInputTransport body alpha 2 Delta _ out ![a,b] ![a,c] _ hp
+  apply InternalGraphCompositionEqualityProof.graphInputTransport body alpha 2 Delta _ out ![a,b] ![a,c] _ hp
   intro i
   fin_cases i
   · rw [onEquality]

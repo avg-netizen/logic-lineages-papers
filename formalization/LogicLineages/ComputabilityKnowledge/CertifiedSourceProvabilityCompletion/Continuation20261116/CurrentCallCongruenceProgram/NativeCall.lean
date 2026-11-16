@@ -6,7 +6,7 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRChildTags GorbowPRDefiningEquations GorbowTheoryProof SixSol20261113 List.Vector
 open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
 open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115
-open PrescribedRuntimeEquality PrescribedRuntimeCallCongruence
+open GorbowRegistryTuple PrescribedRuntimeEquality PrescribedRuntimeCallCongruence
 open SixSol20261112.Fuel NamedArithmeticGraph LiteralRawMP.ConstructorSupportProof
 open CurrentRecursionBaseProgram.GraphPrimitives
 open CurrentRecursionBaseProgram.NativePrimitives CurrentRecursionBaseProgram.TransitivityNativeProof HistoryRuleSuffix.NativeProof
@@ -28,10 +28,28 @@ theorem certificate {arity n : Nat} (tag : Program arity) (xs ys codes : List.Ve
  have hct := NativeTuple.certificate xs ys codes v xv yv cv hx hy hc
  have htx := NativePair.value _ _ v _ _ ht hxt
  have hty := NativePair.value _ _ v _ _ ht hyt
- have hp := NativePair.certificate _ _ _ _ _ _ v _ _ _ _ ht hxt ht hyt
- have hh := NativePair.certificate _ _ _ _ _ _ v _ _ _ _ hn htx hn hty
+ let tagRaw := HistoryRuleSuffix.applyOne LiteralNumeralPrefix.numeralCode tag
+ let arityRaw := HistoryRuleSuffix.constant arity (Encodable.encode (GorbowTermPrefixCode.encode (Term.numeral n : Term 0)))
+ let xt := tupleCode xs
+ let yt := tupleCode ys
+ let hpCode := pair tagRaw xt tagRaw yt (CurrentRecursionStepProgram.reflexivity tagRaw) (tuple xs ys codes)
+ let hhCode := pair arityRaw (pairCode tagRaw xt) arityRaw (pairCode tagRaw yt)
+  (CurrentRecursionStepProgram.reflexivity arityRaw) hpCode
+ have hp := NativePair.certificate tagRaw xt tagRaw yt
+  (CurrentRecursionStepProgram.reflexivity tagRaw) (tuple xs ys codes) v
+  (Term.numeral target) (tupleTerm xv.toList) (Term.numeral target) (tupleTerm yv.toList) ht hxt ht hyt
+ have hh := NativePair.certificate arityRaw (pairCode tagRaw xt) arityRaw (pairCode tagRaw yt)
+  (CurrentRecursionStepProgram.reflexivity arityRaw) hpCode v
+  (Term.numeral n) (pairTerm (Term.numeral target) (tupleTerm xv.toList))
+  (Term.numeral n) (pairTerm (Term.numeral target) (tupleTerm yv.toList)) hn htx hn hty
  unfold callConstructor
- rw [NativeScalar.simple true _ _ _ v _ _ (NativePair.value _ _ v _ _ hn htx) (NativePair.value _ _ v _ _ hn hty)]
+ have hsimple := NativeScalar.simple true (pairCode arityRaw (pairCode tagRaw xt))
+  (pairCode arityRaw (pairCode tagRaw yt)) hhCode v
+  (pairTerm (Term.numeral n) (pairTerm (Term.numeral target) (tupleTerm xv.toList)))
+  (pairTerm (Term.numeral n) (pairTerm (Term.numeral target) (tupleTerm yv.toList)))
+  (NativePair.value _ _ v _ _ hn htx) (NativePair.value _ _ v _ _ hn hty)
+ simp only [Bool.false_eq_true,ite_false,ite_true] at hsimple
+ rw [hsimple]
  rw [hh,hp,hct,CurrentRecursionStepProgram.NativeOperations.reflexivityEval _ v _ ht,
   CurrentRecursionStepProgram.NativeOperations.reflexivityEval _ v _ hn]
  rfl

@@ -6,7 +6,7 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRChildTags GorbowPRDefiningEquations GorbowTheoryProof SixSol20261113 List.Vector
 open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
 open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115
-open PrescribedRuntimeEquality PrescribedRuntimeCallCongruence
+open GorbowRegistryTuple PrescribedRuntimeEquality PrescribedRuntimeCallCongruence
 open SixSol20261112.Fuel NamedArithmeticGraph LiteralRawMP.ConstructorSupportProof
 open CurrentRecursionBaseProgram.GraphPrimitives
 open CurrentRecursionBaseProgram.NativePrimitives CurrentRecursionBaseProgram.TransitivityNativeProof HistoryRuleSuffix.NativeProof
@@ -55,8 +55,17 @@ theorem certificate {arity n : Nat} (xs ys codes : List.Vector (Program arity) n
   have hyt := value ys.tail v yv.tail (tailValues ys yv v hy)
   have ht := ih xs.tail ys.tail codes.tail xv.tail yv.tail cv.tail (tailValues xs xv v hx) (tailValues ys yv v hy) hct
   unfold tuple tupleNumber
-  rw [NativeScalar.simple false _ _ _ v _ _ (NativePair.value _ _ v _ _ hx0 hxt) (NativePair.value _ _ v _ _ hy0 hyt)]
-  rw [NativePair.certificate _ _ _ _ _ _ v _ _ _ _ hx0 hxt hy0 hyt,hc0,ht]
+  have hsimple := NativeScalar.simple false
+   (pairCode xs.head (tupleCode xs.tail)) (pairCode ys.head (tupleCode ys.tail))
+   (pair xs.head (tupleCode xs.tail) ys.head (tupleCode ys.tail) codes.head (tuple xs.tail ys.tail codes.tail))
+   v (pairTerm xv.head (tupleTerm xv.tail.toList)) (pairTerm yv.head (tupleTerm yv.tail.toList))
+   (NativePair.value _ _ v _ _ hx0 hxt) (NativePair.value _ _ v _ _ hy0 hyt)
+  simp only [Bool.false_eq_true,ite_false,ite_true] at hsimple
+  rw [hsimple]
+  rw [NativePair.certificate _ _ _ _ _ _ v _ _ _ _ hx0 hxt hy0 hyt,hc0]
+  exact congrArg (fun tailCode : Nat => unaryNumber (.succ (.var 0))
+   (pairTerm xv.head (tupleTerm xv.tail.toList)) (pairTerm yv.head (tupleTerm yv.tail.toList))
+   (pairNumber xv.head (tupleTerm xv.tail.toList) yv.head (tupleTerm yv.tail.toList) cv.head tailCode)) ht
 
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentCallCongruenceProgram.NativeTuple
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentCallCongruenceProgram.NativeTuple

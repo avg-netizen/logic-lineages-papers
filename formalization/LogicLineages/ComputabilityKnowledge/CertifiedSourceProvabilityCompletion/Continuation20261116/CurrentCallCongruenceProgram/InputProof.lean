@@ -37,10 +37,14 @@ theorem tail {arity inputs ctx : Nat} (p : Program arity) (q : Program inputs) (
  (args : List.Vector (Term ctx) inputs) (v : Term ctx) (h : Computes p q args v) :
  Computes p (tailProgram q) (target ::ᵥ args) v := by
  intro tag ht
- obtain ⟨he⟩ := Equations.compositionValues p tag q (fun i => .projection i.succ) ht (target ::ᵥ args) args
-  (fun i => by simpa only [List.Vector.get_cons_succ] using
-   LiteralRawMP.ConstructorSupportProof.projection p (target ::ᵥ args) i.succ _
-    (Equations.argumentChild p tag q (fun i => .projection i.succ) ht i))
+ have hargs : ∀ i : Fin inputs, Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
+  (.equal (call (tag + GorbowPRChildTags.argumentTag q (fun j => Program.projection j.succ) i) (target ::ᵥ args)) (args.get i))) := by
+  intro i
+  have hi := LiteralRawMP.ConstructorSupportProof.projection p (target ::ᵥ args) i.succ
+   (tag + GorbowPRChildTags.argumentTag q (fun j => Program.projection j.succ) i)
+   (Equations.argumentChild p tag q (fun j => Program.projection j.succ) ht i)
+  simpa only [List.Vector.get_cons_succ] using hi
+ obtain ⟨he⟩ := Equations.compositionValues p tag q (fun j => .projection j.succ) ht (target ::ᵥ args) args hargs
  obtain ⟨hq⟩ := h (tag+1) (Equations.functionChild p tag q (fun i => .projection i.succ) ht)
  exact ⟨Logic.trans _ _ _ he hq⟩
 

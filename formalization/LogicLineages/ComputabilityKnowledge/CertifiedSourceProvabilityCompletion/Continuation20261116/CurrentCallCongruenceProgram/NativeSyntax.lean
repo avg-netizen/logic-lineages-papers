@@ -26,7 +26,8 @@ theorem openBinary (multiply right : Bool) (t : Term 0) :
  (if right then binaryTerm multiply (GorbowClosedEquality.liftClosedTerm 1 t) (.var 0)
   else binaryTerm multiply (.var 0) (GorbowClosedEquality.liftClosedTerm 1 t)) := by
  cases right <;> cases multiply <;>
-  simp only [binaryTerm,GorbowSubstitution.substitute,FixedFormulaSubstitution.assignment,binaryEnvironment,
+  simp only [Bool.false_eq_true,ite_false,ite_true,binaryTerm,GorbowSubstitution.substitute,FixedFormulaSubstitution.assignment,binaryEnvironment,
+   show (1 : Fin 2) = (0 : Fin 1).succ from rfl,
    Fin.cases_zero,Fin.cases_succ,renamedLift]
 
 theorem closedBinary (multiply right : Bool) (a b : Term 0) :
@@ -35,8 +36,10 @@ theorem closedBinary (multiply right : Bool) (a b : Term 0) :
   (if right then binaryTerm multiply (.var 1) (.var 0) else binaryTerm multiply (.var 0) (.var 1)) =
  (if right then binaryTerm multiply b a else binaryTerm multiply a b) := by
  cases right <;> cases multiply <;>
-  simp [binaryTerm,GorbowSubstitution.substitute,FixedFormulaSubstitution.assignment,binaryEnvironment,
-   UniformRuntimeEnvironmentAgreement.specialize,renamed]
+  simp only [Bool.false_eq_true,ite_false,ite_true,binaryTerm,GorbowSubstitution.substitute,FixedFormulaSubstitution.assignment,binaryEnvironment,
+   UniformRuntimeEnvironmentAgreement.specialize,renamed,
+   Fin.cases_zero,Fin.cases_succ,Fin.val_zero,Nat.not_lt_zero,dite_false,
+   show (1 : Fin 2) = (0 : Fin 1).succ from rfl]
 
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentCallCongruenceProgram.NativeSyntax
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentCallCongruenceProgram.NativeSyntax

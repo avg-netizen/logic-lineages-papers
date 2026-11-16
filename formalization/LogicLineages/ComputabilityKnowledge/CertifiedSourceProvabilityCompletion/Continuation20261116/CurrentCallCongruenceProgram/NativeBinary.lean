@@ -52,7 +52,10 @@ theorem binaryEval {arity : Nat} (multiply : Bool) (a b c d hac hbd : Program ar
   (NativeScalar.operation multiply a b v av bv ha hb)
   (NativeScalar.operation multiply c b v cv bv hc hb)
   (NativeScalar.operation multiply c d v cv dv hc hd)]
- rw [coordinate multiply false b a c hac v bv av cv hb ha hc,coordinate multiply true c b d hbd v cv bv dv hc hb hd]
+ have hp := coordinate multiply false b a c hac v bv av cv hb ha hc
+ have hq := coordinate multiply true c b d hbd v cv bv dv hc hb hd
+ simp only [Bool.false_eq_true,ite_false,ite_true] at hp hq
+ rw [hp,hq]
  rfl
 
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentCallCongruenceProgram.NativeBinary

@@ -26,7 +26,7 @@ theorem termRoot (rootValue value size label out : OTerm alpha)
     (hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing value size label)))
     (hout : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing out (suc size) label))) :
     Nonempty (Derivation body Delta (graph2 merge out rootValue value)) := by
-  have he := trans (InternalAdditionLawsProof.leftSuccessor z size)
+  have he : Derivation body Delta (InternalTagArithmeticSyntaxProof.eqn (OrdinaryArithmetic.addTerm (suc z) size) (suc size)) := trans (InternalAdditionLawsProof.leftSuccessor z size)
     (congSuc (InternalAdditionLawsProof.leftZero size))
   have ho := headTransport InternalPairing.pairing out (suc size) (OrdinaryArithmetic.addTerm (suc z) size)
     (Fin.cons label Fin.elim0) ⟨symm he⟩ hout

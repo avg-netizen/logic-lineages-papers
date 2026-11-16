@@ -14,7 +14,7 @@ open InternalApplicationCertificateConstructors InternalApplicationCertificateCo
 open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
 open InternalTagArithmeticSyntaxProof (z suc zRelabel sucRelabel)
 open InternalTagArithmeticSupportProof (symm)
-open InternalRecursionGraphStepSyntaxProof (consTermRename emptyRename)
+open InternalRecursionGraphStepSyntaxProof (consTermRename)
 open InternalAdditionLawsProof (add)
 open InternalOriginalOrderSyntaxProof (addRelabel)
 open Continuation20261115 OriginalCodeBoundsRecursion OriginalBoundsRecombination
@@ -75,7 +75,7 @@ theorem atCollected (cons : Bool) (n : Nat)
   have hmj := renameInto hm j Theta hj
   have hoj := renameInto ho j Theta hj
   have hcolj := renameInto hcol j Theta hj
-  cases cons <;> simp only [graph1Rename,graph2Rename,graph3Rename,sucRelabel,zRelabel,addRelabel,if_true,if_false] at *
+  cases cons <;> simp only [graph1Rename,graph2Rename,graph3Rename,sucRelabel,zRelabel,addRelabel,Bool.false_eq_true,if_true,if_false] at *
   all_goals exact atLists _ n (raw.relabel j) (typ.relabel j) (left.relabel j) (right.relabel j) (lv.relabel j) (ls.relabel j) (ll.relabel j) (rv.relabel j) (rs.relabel j) (rl.relabel j) (label.relabel j) (collected.relabel j) (out.relabel j) rest deps valueRest values hcj hgj helj herj hlj hrj hmj hcolj hoj hdr hds hvr hvs
 
 theorem value (cons : Bool) (n : Nat)
@@ -95,7 +95,10 @@ theorem value (cons : Bool) (n : Nat)
   have hx : (fun i => (![add ls rs,label] i).relabel j) =
       (![add (ls.relabel j) (rs.relabel j),label.relabel j] : Fin 2 → OTerm beta) := by
     funext i
-    fin_cases i <;> simp only [Matrix.cons_val_zero,Matrix.cons_val_one,addRelabel]
+    fin_cases i
+    · change (add ls rs).relabel j = add (ls.relabel j) (rs.relabel j)
+      exact addRelabel ls rs j
+    · rfl
   rw [hx] at hcol
   have hcj := renameInto hc j Theta hj
   have hgj := renameInto hg j Theta hj
@@ -105,7 +108,7 @@ theorem value (cons : Bool) (n : Nat)
   have hrj := renameInto hr j Theta hj
   have hmj := renameInto hm j Theta hj
   have hoj := renameInto ho j Theta hj
-  cases cons <;> simp only [graph1Rename,graph2Rename,graph3Rename,sucRelabel,zRelabel,addRelabel,if_true,if_false] at *
+  cases cons <;> simp only [graph1Rename,graph2Rename,graph3Rename,sucRelabel,zRelabel,addRelabel,Bool.false_eq_true,if_true,if_false] at *
   all_goals exact atCollected _ n (raw.relabel j) (typ.relabel j) (left.relabel j) (right.relabel j) (lv.relabel j) (ls.relabel j) (ll.relabel j) (rv.relabel j) (rs.relabel j) (rl.relabel j) (label.relabel j) collected (out.relabel j) hcj hgj helj herj hlj hrj hmj hoj hcol
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalCodeBoundsConstructors.BinaryValueProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalCodeBoundsConstructors.BinaryValueProof
