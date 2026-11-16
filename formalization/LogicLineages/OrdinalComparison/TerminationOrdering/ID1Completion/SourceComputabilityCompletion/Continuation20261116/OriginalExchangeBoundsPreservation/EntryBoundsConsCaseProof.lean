@@ -1,0 +1,75 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EntryTailPositiveProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EntryBoundsConsCaseProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
+open InternalControlGraphSupportProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Continuation20261115.OriginalBoundsRecombination (maximum merge)
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+open EntryBounds EntryBoundsSyntaxProof
+open InternalApplicationCertificateConstructorsSyntaxProof
+open InternalGraphCompositionFunctionalityProof (renameInto)
+open InternalTagArithmeticSyntaxProof (z suc eqn sucRelabel zRelabel)
+open Continuation20261114 Continuation20261115
+
+theorem atTail (n : Nat) (raw typ head tail param entries value tailValue : OTerm alpha)
+    (hc : Nonempty (Derivation body Delta (graph3 OriginalRawSyntaxTransport.consConstructor raw typ head tail)))
+    (hg : Nonempty (Derivation body Delta (graph1 (OriginalCodeValidityGuard.check n) (suc z) raw)))
+    (he : Nonempty (Derivation body Delta (graph2 ArgumentEntriesRecursor.extract (suc entries) raw param)))
+    (hf : Nonempty (Derivation body Delta (graph1 (Fold.weighted (Fold.entryWeight n)) value entries)))
+    (ht : Nonempty (Derivation body Delta (graph2 ArgumentEntriesRecursor.extract tailValue tail param)))
+    (ih : Nonempty (Derivation body Delta (BelowRaw n raw))) :
+    Nonempty (Derivation body Delta (graph1 (OriginalCodeBoundsRecursion.bounds n) value raw)) := by
+  have hn := EntryTailPositiveProof.nonzero raw typ head tail param entries tailValue hc he ht
+  apply zeroSuccessorCases Delta tailValue _
+  · obtain ⟨hn⟩ := hn
+    exact ⟨Derivation.explosion (Derivation.implicationElimination (InternalBetaTotalityProof.addHyp hn _)
+      (Derivation.hypothesis List.mem_cons_self))⟩
+  · intro beta j Theta tailEntries hj heq
+    rw [graph1Rename]
+    have hcj := renameInto hc j Theta hj
+    have hgj := renameInto hg j Theta hj
+    have hej := renameInto he j Theta hj
+    have hfj := renameInto hf j Theta hj
+    have htj := renameInto ht j Theta hj
+    have ihj := renameInto ih j Theta hj
+    rw [graph3Rename] at hcj
+    simp only [graph1Rename,sucRelabel,zRelabel] at hgj hfj
+    simp only [graph2Rename,sucRelabel] at hej htj
+    rw [belowRawRename] at ihj
+    have ht' := outputTransport ArgumentEntriesRecursor.extract (tailValue.relabel j) (suc tailEntries)
+      ![tail.relabel j,param.relabel j] heq htj
+    exact EntryBoundsSuccessProof.success n (raw.relabel j) (typ.relabel j) (head.relabel j) (tail.relabel j)
+      (param.relabel j) (entries.relabel j) (value.relabel j) tailEntries hcj hgj hej hfj ht' ihj
+
+theorem cons (n : Nat) (raw typ head tail param entries value : OTerm alpha)
+    (hc : Nonempty (Derivation body Delta (graph3 OriginalRawSyntaxTransport.consConstructor raw typ head tail)))
+    (hg : Nonempty (Derivation body Delta (graph1 (OriginalCodeValidityGuard.check n) (suc z) raw)))
+    (he : Nonempty (Derivation body Delta (graph2 ArgumentEntriesRecursor.extract (suc entries) raw param)))
+    (hf : Nonempty (Derivation body Delta (graph1 (Fold.weighted (Fold.entryWeight n)) value entries)))
+    (ih : Nonempty (Derivation body Delta (BelowRaw n raw))) :
+    Nonempty (Derivation body Delta (graph1 (OriginalCodeBoundsRecursion.bounds n) value raw)) := by
+  apply InternalAcceptanceSupportProof.programCases ArgumentEntriesRecursor.extract ![tail,param] _
+  intro beta j Theta tailValue hj ht
+  have hx : (fun i => (![tail,param] i).relabel j) = ![tail.relabel j,param.relabel j] := by
+    funext i; fin_cases i <;> rfl
+  rw [hx] at ht
+  rw [graph1Rename]
+  have hcj := renameInto hc j Theta hj
+  have hgj := renameInto hg j Theta hj
+  have hej := renameInto he j Theta hj
+  have hfj := renameInto hf j Theta hj
+  have ihj := renameInto ih j Theta hj
+  rw [graph3Rename] at hcj
+  simp only [graph1Rename,sucRelabel,zRelabel] at hgj hfj
+  simp only [graph2Rename,sucRelabel] at hej
+  rw [belowRawRename] at ihj
+  exact atTail n (raw.relabel j) (typ.relabel j) (head.relabel j) (tail.relabel j)
+    (param.relabel j) (entries.relabel j) (value.relabel j) tailValue hcj hgj hej hfj ht ihj
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EntryBoundsConsCaseProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EntryBoundsConsCaseProof

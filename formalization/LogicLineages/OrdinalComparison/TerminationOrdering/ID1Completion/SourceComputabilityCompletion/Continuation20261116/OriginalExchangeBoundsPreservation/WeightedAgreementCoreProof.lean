@@ -65,7 +65,7 @@ theorem atRaw (weight : Program 1) (left right ls rs : OTerm alpha)
       (InternalTagArithmeticSyntaxProof.emb left) (InternalTagArithmeticSyntaxProof.emb z) he'
     simp only [instantiate,InternalTagArithmeticSyntaxProof.bindEmbedding,agreementSubst,
       InternalTagArithmeticSyntaxProof.liftBind,InternalTagArithmeticSyntaxProof.varBind] at d
-    have hl0 := headTransport (Fold.weighted weight) ls left z Fin.elim0 he (withHyp hl _)
+    have hl0 := headTransport (Fold.weighted weight) ls left z Fin.elim0 ⟨he'⟩ (withHyp hl _)
     exact WeightedAgreementNilProof.nil weight right ls rs ⟨d ha'⟩ hl0 (withHyp hr _)
   · exact nonzero weight left right ls rs (withHyp ha _) (withHyp hl _) (withHyp hr _) (withHyp ih _)
       ⟨Derivation.hypothesis List.mem_cons_self⟩
