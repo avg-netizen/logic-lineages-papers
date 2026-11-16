@@ -1,11 +1,11 @@
 # Current public formalization handoff
 
-Snapshot: 2026-11-16 13:25 UTC. Continuation authorization remains active.
+Snapshot: 2026-11-16 13:39 UTC. Continuation authorization remains active.
 
 ## Verified durable frontier
 
 - Branch: `formalization/cumulative-continuation-2026-11-16`.
-- Verified remote head: `1d3f8893a9ca1358b4fb019601654af6b2510746`, committed13:24:18UTC. All20 intended draft/acceptance snapshot paths match the remote; acceptance37 all14 and acceptance38 all6 source hashes independently verified remotely.
+- Verified remote head: `b47a7217ce7642e6f15bf721687a767e24d602cf`, committed 13:34:45 UTC. All 25 intended source/handoff snapshot paths match the remote. Draft checkpoint; accepted total unchanged.
 - Accepted supporting contracts: **814 at the verified remote head above**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
 - Main4028a9e and independent Nov15 branch b51cb999 remain unchanged. Overlapping prior733 are never added twice. No main merge or force push.
 - Acceptance13: one coherent cumulative source exact1,2341 recursively matched modules,total760. Six prior packages/capabilities retained, K/S plus seven helper contracts reconstructed at actual new CORE where needed. No tuple/tag equality shortcut.
@@ -68,3 +68,5 @@ Acceptance38: fixed literal Q strongest retained tuple and admitted internal poo
 Next comparator-only proposals authorized: P6 actual original codeBounds eight constructor laws with literal guard/default-zero semantics before genuine typed coverage; P12 concrete tuple/call-congruence AST exact native+symbolic4 before composition compiler. No proof release before reviewed frozen targets and bounded preflight.
 
 Current active packets as of13:29UTC: OriginalCodeBoundsConstructors exact9 frozen14/preflight1794835542049563834-6; Answers/Malformed pass1794835664747522071-5 and Merge pass1794835711562636854-5, no new acceptance. CurrentCallCongruenceProgram exact4 frozen10/preflight1794835616493769622-6; graph support tranche in progress. Global814 accepted/published, numbered register unchanged.
+
+13:39 UTC continuation: 814 accepted/published. Current constructor exact9 and call-congruence exact4 remain unaccepted drafts. P12 TupleGraph/CallGraph passed batch06; NativeScalar quotation transport needs repair. P6 NilValue passed; NilProof rename support needs repair. Single bounded compiler queue continues, no resource or target changes. Next remote checkpoint due by 14:04 UTC.

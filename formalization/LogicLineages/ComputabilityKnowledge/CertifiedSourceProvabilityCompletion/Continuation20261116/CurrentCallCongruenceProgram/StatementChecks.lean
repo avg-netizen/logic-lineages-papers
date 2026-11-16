@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentCallCongruenceProgram.NativeProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentCallCongruenceProgram.GraphProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentCallCongruenceProgram.StatementChecks
+theorem exactNativeTuple : Targets.NativeTuple := NativeProof.exactTuple
+theorem exactNativeCall : Targets.NativeCall := NativeProof.exactCall
+theorem exactInternalTuple : Targets.InternalTuple := GraphProof.exactTuple
+theorem exactInternalCall : Targets.InternalCall := GraphProof.exactCall
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentCallCongruenceProgram.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentCallCongruenceProgram.StatementChecks

@@ -10,6 +10,14 @@ open PrescribedRuntimeEquality PrescribedRuntimeCallCongruence
 open SixSol20261112.Fuel NamedArithmeticGraph LiteralRawMP.ConstructorSupportProof
 open CurrentRecursionBaseProgram.GraphPrimitives
 
+theorem tailComputes {arity inputs ctx n : Nat} (p : Program arity) (args : List.Vector (Term ctx) inputs)
+ (xs : List.Vector (Program inputs) (n+1)) (xv : List.Vector (Term ctx) (n+1))
+ (hx : ∀ i, Computes p (xs.get i) args (xv.get i)) :
+ ∀ i : Fin n, Computes p (xs.tail.get i) args (xv.tail.get i) := by
+ intro i
+ rw [List.Vector.get_tail_succ,List.Vector.get_tail_succ]
+ exact hx i.succ
+
 theorem value {arity inputs ctx n : Nat} (p : Program arity) (args : List.Vector (Term ctx) inputs)
  (J : Tags) (I : Installation p J) (xs : List.Vector (Program inputs) n) (xv : List.Vector (Term ctx) n)
  (hx : ∀ i, Computes p (xs.get i) args (xv.get i)) :
@@ -20,8 +28,7 @@ theorem value {arity inputs ctx n : Nat} (p : Program arity) (args : List.Vector
   subst xv
   exact constantValue p args _
  | succ n ih =>
-  have ht := ih xs.tail xv.tail (fun (i : Fin n) => by
-   simpa only [List.Vector.get_tail_succ] using hx i.succ)
+  have ht := ih xs.tail xv.tail (tailComputes p args xs xv hx)
   have hh : Computes p xs.head args xv.head := by simpa only [List.Vector.get_zero] using hx 0
   have hp := BinaryGraph.pairValueGraph p args J I xs.head (tupleCode xs.tail) xv.head (tupleValue J xv.tail.toList) hh ht
   have hv : xv.toList = xv.head :: xv.tail.toList := by
@@ -41,15 +48,10 @@ theorem certificate {arity inputs ctx n : Nat} (p : Program arity) (args : List.
   have hx0 : Computes p xs.head args xv.head := by simpa only [List.Vector.get_zero] using hx 0
   have hy0 : Computes p ys.head args yv.head := by simpa only [List.Vector.get_zero] using hy 0
   have hc0 : Computes p codes.head args cv.head := by simpa only [List.Vector.get_zero] using hc 0
-  have hxt := value p args J I xs.tail xv.tail (fun (i : Fin n) => by
-   simpa only [List.Vector.get_tail_succ] using hx i.succ)
-  have hyt := value p args J I ys.tail yv.tail (fun (i : Fin n) => by
-   simpa only [List.Vector.get_tail_succ] using hy i.succ)
+  have hxt := value p args J I xs.tail xv.tail (tailComputes p args xs xv hx)
+  have hyt := value p args J I ys.tail yv.tail (tailComputes p args ys yv hy)
   have hct := ih xs.tail ys.tail codes.tail xv.tail yv.tail cv.tail
-   (fun (i : Fin n) => by
-   simpa only [List.Vector.get_tail_succ] using hx i.succ) (fun (i : Fin n) => by
-   simpa only [List.Vector.get_tail_succ] using hy i.succ) (fun (i : Fin n) => by
-   simpa only [List.Vector.get_tail_succ] using hc i.succ)
+   (tailComputes p args xs xv hx) (tailComputes p args ys yv hy) (tailComputes p args codes cv hc)
   exact UnaryGraph.closed p args J I (.succ (.var 0)) _ _ _ _ _ _
    (BinaryGraph.pairValueGraph p args J I _ _ _ _ hx0 hxt)
    (BinaryGraph.pairValueGraph p args J I _ _ _ _ hy0 hyt)
