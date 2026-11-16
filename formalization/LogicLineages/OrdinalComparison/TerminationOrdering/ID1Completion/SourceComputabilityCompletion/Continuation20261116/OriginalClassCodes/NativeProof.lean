@@ -33,9 +33,10 @@ theorem nativeOriginal : Targets.NativeOriginal := by
       have hp : Nat.pair (Encodable.encode ctx) (Encodable.encode Gamma) = v.get 1 := by
         rw [hctx,hg,Nat.pair_unpair]
       have hv : v = ofFn ![Encodable.encode q,Nat.pair (Encodable.encode ctx) (Encodable.encode Gamma)] := by
+        rw [hq,hp]
         apply List.Vector.ext
         intro i
-        fin_cases i <;> simp only [List.Vector.get_ofFn,Matrix.cons_val_zero,Matrix.cons_val_one,hq,hp]
+        fin_cases i <;> rfl
       simp only [targetValue,classCodesValue,decodedValue,hc,ho,hd,Option.isSome_some,Bool.toNat_true,Nat.one_ne_zero,ite_false,Option.map_some,Option.getD_some]
       rw [hv]
       exact NativeCodecProof.frontendOriginal n arity ctx Gamma q

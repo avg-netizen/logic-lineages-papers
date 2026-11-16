@@ -47,7 +47,7 @@ theorem enumerationValue (n : Nat) (arity : Fin n → Nat) (root table : Nat)
         (NumberedSyntaxBoundsPrimrec.codeBounds code).2 (NumberedSyntaxBoundsPrimrec.codeBounds code).1
         Gamma.length (2*(NumberedSyntaxBoundsPrimrec.codeBounds code).1)) := by
   rw [enumerated,binaryCompositionEvaluation,nodeValue,parameterValue]
-  exact OriginalEnumerationRecursion.NativeProof.nativeOriginal n _ _ _
+  exact OriginalEnumerationRecursion.OriginalProof.nativeOriginal n _ _ _
 
 theorem frontendValue (n : Nat) (arity : Fin n → Nat) (table : Nat)
     (syms : List (Fin n)) (S Gamma : List Source.Ty) (q : NumberedUniformPackedDecoding.RawPacked n) :

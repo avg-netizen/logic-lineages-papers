@@ -37,8 +37,12 @@ theorem rawHead {ctx n : Nat} (raw : List.Vector (Term ctx) (n+1)) (code : Term 
 
 theorem rawTail {ctx n : Nat} (raw : List.Vector (Term ctx) (n+1)) (code : Term ctx) :
  (appendRaw raw code).tail = appendRaw raw.tail code := by
- ext i
- rw [List.Vector.get_tail_succ]
+ have hget (j : Fin (n+1)) : (appendRaw raw.tail code).get j =
+   Fin.lastCases code (fun k : Fin n => raw.tail.get k) j := by
+  exact List.Vector.get_ofFn _ j
+ apply List.Vector.ext (n := n+1)
+ intro i
+ rw [List.Vector.get_tail_succ, hget]
  refine Fin.lastCases ?_ (fun j => ?_) i
  · have hi : (Fin.last n).succ = Fin.last (n+1) := by apply Fin.ext; rfl
    rw [hi]

@@ -61,10 +61,11 @@ theorem axiomCode {arity ctx : Nat} (p : Program arity) (J : CurrentRecursionBas
  obtain ⟨h5⟩ := pair p J.ptag hp .zero _ 0 _ hz h4
  obtain ⟨hcert⟩ := cons p J.ctag hc _ .zero _ 0 h5 hz
  have hnilNat : Encodable.encode ([] : List Nat) = 0 := rfl
+ have hnilArgs : Encodable.encode ([] : List (List Nat)) = 0 := rfl
  have hnilLine : Encodable.encode ([] : List GorbowProofChecker.Line) = 0 := rfl
  simpa only [CurrentRecursionBaseProgram.axiomValue,FiniteRuleFourCertificate.certificateCode,
   GorbowTheoryChecker.axiomLine,FiniteRuleFourCertificate.EncodingProof.closedIdentity,
-  HistoryDispatcher.NativeProof.encodeProd,HistoryDispatcher.NativeProof.encodeNat,HistoryLookup.NativeProof.encodeCons,hnilNat,hnilLine]
+  HistoryDispatcher.NativeProof.encodeProd,HistoryDispatcher.NativeProof.encodeNat,HistoryLookup.NativeProof.encodeCons,hnilNat,hnilArgs,hnilLine]
   using (show Nonempty _ from ⟨hcert⟩)
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.AxiomTrace
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.AxiomTrace

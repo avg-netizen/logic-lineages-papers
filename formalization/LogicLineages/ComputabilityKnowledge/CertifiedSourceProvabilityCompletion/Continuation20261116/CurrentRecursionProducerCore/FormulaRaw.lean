@@ -70,6 +70,7 @@ theorem formula {arity inputs ctx : Nat} (p : Program arity) (c a : Nat)
  | ex f =>
   obtain ⟨hf⟩ := formula p c a hc ha raw other hraw (liftEnvironment e) f
   exact CurrentCompositionCertificate.CodecProof.unary p c c 11 hc hc _ _ hf
-termination_by structural f
+termination_by sizeOf f
+decreasing_by all_goals simp_wf <;> omega
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.FormulaRaw
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.FormulaRaw

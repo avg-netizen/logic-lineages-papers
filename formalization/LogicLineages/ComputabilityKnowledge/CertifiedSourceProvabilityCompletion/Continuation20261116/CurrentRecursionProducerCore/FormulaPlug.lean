@@ -68,7 +68,7 @@ decreasing_by
   rename_i hconstructor
   have he := eq_of_heq hconstructor
   rw [he]
-  simp
+  simp <;> omega
 
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.FormulaPlug
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.FormulaPlug
