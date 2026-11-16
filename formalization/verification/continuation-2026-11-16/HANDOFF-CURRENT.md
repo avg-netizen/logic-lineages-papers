@@ -1,5 +1,18 @@
 # Current public formalization handoff
 
+## LIVE RESUME POINTER — 2026-11-16 19:14 UTC
+
+- Authorization: continue public formalization until further notice; publish inspected sources and nonforce checkpoints at least every30minutes. No main merge, private research or CI/toolchain/checker/pin changes.
+- Sole coordinator owns Git and fixed serialized compiler. Two disjoint author lanes: P6 OrdinalComparison and P12 ComputabilityKnowledge. Use existing `formalization-setup-20261115/activate.sh`; toolchain was intact after restart but PATH needed activation.
+- Current branch `formalization/cumulative-continuation-2026-11-16`; last verified head `b4569cffa161652f654fd3ffd09b6178ae93c8f9` at19:10:49UTC, tree`0eab7addbb6c9bbd2fd49a2bc2aa7df0fd8245ce`. All16 snapshot paths and159 acceptance64/65 pins matched fetched remote. Next hard save19:40:49UTC.
+- Published supporting count864; original numbered register175checked/2inherited/12pending/189 unchanged. Latest acceptance63 named alias exact2;64 original allraw exchange bounds exact1 (4403modules,148sources,12frozen);65 arithmetic header certificate exact1 (2749modules,11sources,6frozen). Raw evidence is local with hashes/sizes in acceptance records, not uploaded payload.
+- P6 concrete head signature exact3 comparator independently reviewed/frozen4pins; preflight1794856139644903496-7 passed. Native/List/Guard proof retry underway; internal factors remain drafts. OriginalExchangeBoundsPreservation full exact1 is accepted; frozen historical correspondence preserved and separate correction withdraws false zero/succ diagnostic.
+- P12 named header transport exact1 comparator independently reviewed/frozen6pins; preflight1794856246941608358-7 passed. TemplateGraph proof repair underway. It normalizes literal named-call header using actual alias+arithmetic certificate+ordinary call congruence+transitivity, not pF evaluation or HB3.
+- Fixed `scripts/check.py`: heap2048/RSS1536/free-floor2048MiB, one thread,90CPU/180wall. No changing limits. Deep Python traversal is avoided by passing dependency-first explicit modules (`/tmp/ordered-fixed-check.py` helper), unchanged checker. Full module log paths in receipts must be read on failures; truncated batch tails can hide errors. New source acceptance requires frozen-type gate, standard-only axioms, recursive source/object/input/log audit and remote-pin verification.
+- Publication is authenticated GitHub connector blob/tree/commit + leased nonforce ref update; normal git fetch retrieves commit for path-hash verification. Update local ref/index only after remote verified, preserving newer worktree drafts. Do not add overlapping counts from independentNov15 branch.
+
+## Historical snapshots and acceptance details
+
 Snapshot: 2026-11-16 13:44 UTC. Continuation authorization remains active.
 
 ## Verified durable frontier
@@ -191,3 +204,7 @@ Acceptance56 verified4550modules,67 source pins including standalone preflight,2
 19:07 UTC Acceptance64: actual original allraw exchange bounds exact1 passes final gate and4403-module recursive evidence,148source/12frozen pins unchanged;863local supporting,862published. Original175/2/12 unchanged. Historical false numbered diagnostic explicitly withdrawn in separate correction, original frozen document retained.
 
 19:09 UTC Acceptance65: actual original arithmetic header certificate exact1 passed native1794855985831410875-6 and2749-module evidence36,11source/6frozen pins unchanged.864local supporting,862published; numbered175/2/12 unchanged. Prior complete named alias conjunction retained with arbitrary original template. New header template chosen in extra before one source registry selection; actual current CORE used, not external derivability. Literal pF computation and HB3 remain unpaid.
+
+19:11 UTC checkpoint verified b4569cffa161652f654fd3ffd09b6178ae93c8f9, committed19:10:49UTC, tree0eab7addbb6c9bbd2fd49a2bc2aa7df0fd8245ce. All16 snapshot paths and159 acceptance64/65 source pins match remote.864 supporting accepted/published, numbered175/2/12 unchanged. ConcreteHeadSignature exact3 frozen4pins preflight1794856139644903496-7 passed, proof authoring released. HeaderTransport exact1 independently reviewed/frozen6pins, preflight active. Neither source-preservation nor HB3 claimed. Next checkpoint deadline19:40:49UTC.
+
+19:13 UTC historical acceptance-pin observation: all1616source pin entries in current Nov16 ACCEPTANCE records match present source bytes; no missing/changed entry. This is a source-persistence check only, not a fresh full-root build or a reproof of earlier acceptance records.
