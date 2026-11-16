@@ -102,3 +102,11 @@ Accepted P6 original-variable Fields exact1 after native gate and independent re
 
 ## 15:08 UTC checkpoint and next acceptance
 Remote c09233c2cb7c54b70bed00931981a19c476b6fc2, committed15:06:56UTC; tree8bda578993ed963d2984ac03566b0bc3bbc58092. All31 captured blobs and Acceptance45(12)/46(9) source pins verified remotely. 835 supporting contracts published. Acceptance47 once-selected retained structural source now locally accepted after native/evidence gate:836 local total, numbered175/2/12 unchanged. Next save by15:36:56UTC.
+
+## 15:10 UTC verified save
+Latest remote/local head af4ab7c8fd6c863242d66a4d3fcf1429d67df49f, committed15:09:20UTC; tree84051df3c00dd0696672d861fba25f78cfca4ba3. All5 captured blobs and Acceptance47 all7 source pins verified remotely. 836 supporting contracts published; numbered175/2/12 unchanged. Next hard save15:39:20UTC. OriginalUniverseDomainCoverage exact3 preflight passed1794841602649401729-6 with15 frozen pins; native proof running. CurrentStructuralProducerCore exact1 comparator reviewed/frozen13pins, awaiting serialized preflight; no proof release yet.
+
+15:11UTC maintenance: main4028a9e34506f4339af2992749464cf2d4d55eb9 and independentNov15 b51cb999d825f2a54160f642dd8c2d70a7a1496a reverified unchanged. All1184 accepted source-pin entries through47 match working sources.
+
+## Universe domain exact3 acceptance
+Acceptance48 accepted after exact native gate and recursive evidence27:839 local supporting contracts, numbered175/2/12 unchanged. Awaiting next publication; prior836 published at af4ab7c.
