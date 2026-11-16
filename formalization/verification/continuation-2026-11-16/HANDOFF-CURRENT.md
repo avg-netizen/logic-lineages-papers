@@ -1,12 +1,12 @@
 # Current public formalization handoff
 
-Snapshot: 2026-11-16 12:15 UTC. Continuation authorization remains active.
+Snapshot: 2026-11-16 12:25 UTC. Continuation authorization remains active.
 
 ## Verified durable frontier
 
 - Branch: `formalization/cumulative-continuation-2026-11-16`.
-- Verified remote head: `f6fec568d22bf6983d791934f9c2f4716802e292`, committed12:15:24UTC. All35 intended snapshot paths and10 acceptance32 source pins match the remote.
-- Accepted supporting contracts: **802 locally;800 at the verified remote head above**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
+- Verified remote head: `4074c3e040cadcd87e565b3d540ea2cea2d1e595`, committed12:24:56UTC. All20 intended snapshot paths and57 acceptance33 source pins match the remote.
+- Accepted supporting contracts: **802 at the verified remote head above**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
 - Main4028a9e and independent Nov15 branch b51cb999 remain unchanged. Overlapping prior733 are never added twice. No main merge or force push.
 - Acceptance13: one coherent cumulative source exact1,2341 recursively matched modules,total760. Six prior packages/capabilities retained, K/S plus seven helper contracts reconstructed at actual new CORE where needed. No tuple/tag equality shortcut.
 - Acceptance14: original K-lift/S-mpUnder and arbitrary-code literal traces exact3,2351 matched modules,total763. K then one MP; S then two MP in original order. Actual new source/CORE/Fuel, original guards, membership-backed registry coherence.
@@ -33,7 +33,7 @@ Snapshot: 2026-11-16 12:15 UTC. Continuation authorization remains active.
 
 ## Active proof boundaries
 
-1. P6 original Fields frozen13 and full enumeration validity accepted. OriginalEnumerationMembership exact2 frozen14pins and preflight passed. Native membership calibration and internal successor depth constructor lemmas pass; positive depth/zero impossibility and actual allraw constructor inversion are in progress. Full actual membership iff Fields and depth≤fuel remains unpaid.
+1. P6 original Fields frozen13, full enumeration validity and unrestricted original enumeration membership iff Fields+depth≤fuel accepted. Membership exact2 uses actual strong fuel induction, allraw parsers, original metadata and prior/opened child bounds. OriginalClassCodes exact2/frozen18 pins passed preflight1794832208696258795-6; proof underway for actual typed-seed frontend, explicit head-code conversion, root pairing and original2*size fuel. Candidate filterMap/concrete H realization/Q reselection remain unpaid; entire context-uniform internal accessibility remains unpaid. Preserve typed term depth2*size versus argument-list depth2*size+1; valid nil rules out an allraw2*size shortcut.
 2. P12 concrete formula/base/ordinary-step ASTs accepted. CurrentRecursionProducerProgram exact3 frozen11pins and accepted31: literal coordinate swaps, concrete full accumulator, raw/original numeric recurrences and symbolic zero/successor graph. CurrentRecursionProducerSource exact1/frozen13 pins accepted32. CurrentRecursionProducerCore exact3/frozen12 pins passed preflight; new-root CORE transformer proof underway. Retained new-root CORE capability bridges, structural child correctness/full producer compiler and HB3 remain unpaid. Conditional node memberships do not establish source realization.
 
 ## Verification and publication discipline
@@ -42,7 +42,7 @@ One coordinator owns a serialized compiler queue and publication; two disjoint a
 
 Batch stdout truncates each module log to its last16000characters. Always inspect receipt.modules[].log: long linter warnings can hide ordinary errors before a sorryAx audit failure. Failed sources, full logs and receipts remain locally preserved.
 
-Source-first publication at least every30minutes; next deadline12:45UTC. Normal git push lacks credentials; authenticated connector publishes inspected mathematical Lean sources and acceptance summaries using immutable blobs and a leased nonforce ref update. Raw reconstructible logs and ancillary metadata remain locally preserved after automated review rejected a broad artifact batch. Sources and acceptance summaries were inspected for credentials/private notes and safely published. Large recursive evidence payloads are local with exact hash/byte counts in acceptance records.
+Source-first publication at least every30minutes; next deadline12:54UTC. Normal git push lacks credentials; authenticated connector publishes inspected mathematical Lean sources and acceptance summaries using immutable blobs and a leased nonforce ref update. Raw reconstructible logs and ancillary metadata remain locally preserved after automated review rejected a broad artifact batch. Sources and acceptance summaries were inspected for credentials/private notes and safely published. Large recursive evidence payloads are local with exact hash/byte counts in acceptance records.
 
 Fetch and verify every intended remote path hash. Update local ref/index only after verification without changing newer worktree drafts. Preserve all failures and unfinished sources; stop promptly on the next stop instruction.
 
