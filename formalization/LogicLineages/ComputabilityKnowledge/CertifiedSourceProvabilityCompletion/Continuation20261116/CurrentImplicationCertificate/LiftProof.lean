@@ -9,7 +9,9 @@ open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.C
 open PrescribedRuntimeEquality
 open SixSol20261112.Fuel NamedArithmeticGraph HistoryCodec.ArithmeticSupport
 theorem exactLift : Targets.InternalLift := by
- intro installed lhs rhs k t old a baseX pF pR I ctx G A B code index fuel hA hB hcode
+ intro installed lhs rhs k t old a baseX pF pR I ctx G A B code index fuel
+ dsimp only
+ intro hA hB hcode
  let p := CumulativePropositionalSource.root installed lhs rhs pF pR old a baseX
  let U := S pF pR (CumulativePropositionalSource.verifier installed lhs rhs old a baseX)
  have hTU := CumulativePropositionalSource.SeedSourceProof.inclusion installed lhs rhs pF pR old a baseX

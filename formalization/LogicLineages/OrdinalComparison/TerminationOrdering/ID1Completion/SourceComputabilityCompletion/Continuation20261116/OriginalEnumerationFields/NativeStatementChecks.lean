@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalEnumerationFields.NativeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalEnumerationFields.NativeStatementChecks
+/-- Exact frozen native Fields comparator, with all original source quantifiers. -/
+theorem exactNativeOriginal : Targets.NativeOriginal := NativeProof.nativeOriginal
+theorem exactNativeBoolean : Targets.NativeBoolean := NativeProof.nativeBoolean
+theorem exactNativeMalformed : Targets.NativeMalformed := NativeProof.nativeMalformed
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalEnumerationFields.NativeStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalEnumerationFields.NativeStatementChecks

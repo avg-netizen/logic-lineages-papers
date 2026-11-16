@@ -28,16 +28,16 @@ def secondTemplate : Template :=
   branch (same (left .input) (constant 5))
     (right (right (right .input))) (right (right (right (right (right (right .input))))))
 
-theorem arityAST {k : Nat} (p : Program k) : instantiate p arityTemplate = OriginalRawSyntaxTransport.arityOf p := by
-  simp only [arityTemplate,instantiateBranch,instantiateSame,instantiateLeft,instantiateConstant,instantiate]
+theorem arityAST {k : Nat} (p : Program k) : QueryTemplateProof.instantiate p arityTemplate = OriginalRawSyntaxTransport.arityOf p := by
+  simp only [arityTemplate,instantiateBranch,instantiateSame,instantiateLeft,instantiateConstant,QueryTemplateProof.instantiate]
   rfl
 
-theorem firstAST {k : Nat} (p : Program k) : instantiate p firstTemplate = OriginalRawSyntaxTransport.firstOf p := by
-  simp only [firstTemplate,instantiateBranch,instantiateSame,instantiateLeft,instantiateRight,instantiateConstant,instantiate]
+theorem firstAST {k : Nat} (p : Program k) : QueryTemplateProof.instantiate p firstTemplate = OriginalRawSyntaxTransport.firstOf p := by
+  simp only [firstTemplate,instantiateBranch,instantiateSame,instantiateLeft,instantiateRight,instantiateConstant,QueryTemplateProof.instantiate]
   rfl
 
-theorem secondAST {k : Nat} (p : Program k) : instantiate p secondTemplate = OriginalRawSyntaxTransport.secondOf p := by
-  simp only [secondTemplate,instantiateBranch,instantiateSame,instantiateLeft,instantiateRight,instantiateConstant,instantiate]
+theorem secondAST {k : Nat} (p : Program k) : QueryTemplateProof.instantiate p secondTemplate = OriginalRawSyntaxTransport.secondOf p := by
+  simp only [secondTemplate,instantiateBranch,instantiateSame,instantiateLeft,instantiateRight,instantiateConstant,QueryTemplateProof.instantiate]
   rfl
 
 theorem arityAt {k : Nat} (p : Program k) (xs : Fin k → OTerm alpha) (raw out : OTerm alpha)

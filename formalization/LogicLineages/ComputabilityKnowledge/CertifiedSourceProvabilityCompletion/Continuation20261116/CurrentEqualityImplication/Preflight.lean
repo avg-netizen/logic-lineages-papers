@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentEqualityImplication.Targets
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentEqualityImplication.Preflight
+theorem comparatorReflexivity : Targets.InternalTraces = Targets.InternalTraces ∧
+ Targets.InternalUnaryRule = Targets.InternalUnaryRule ∧
+ Targets.InternalTransitivityUnder = Targets.InternalTransitivityUnder := ⟨rfl,rfl,rfl⟩
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentEqualityImplication.Preflight
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentEqualityImplication.Preflight

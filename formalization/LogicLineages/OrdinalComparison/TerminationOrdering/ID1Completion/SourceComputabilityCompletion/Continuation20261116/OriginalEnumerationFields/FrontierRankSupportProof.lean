@@ -12,7 +12,8 @@ open InternalApplicationCertificateConstructors InternalApplicationCertificateCo
 open InternalApplicationCertificateConstructorsSupportProof InternalControlGraphSupportProof
 open InternalGraphCompositionFunctionalityProof InternalAcceptanceSupportProof
 open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSupportProof
-open InternalTagArithmeticSyntaxProof (z suc eqn add)
+open InternalTagArithmeticSyntaxProof (z suc eqn)
+open InternalAdditionLawsProof (add)
 open SourceComputabilityFormulaSupportProof (numeral)
 open TwoSol20261113.CalibratedPrimary.Membership (contains)
 open Continuation20261114

@@ -23,7 +23,8 @@ theorem extractValue (n key param : Nat) :
 theorem fieldsValue (n raw b S H labels tupleBound : Nat) :
     evaluate (fields n) (ofFn ![raw,b,S,H,labels,tupleBound]) =
       value n (Nat.pair raw b) (Nat.pair S (Nat.pair H (Nat.pair labels tupleBound))) := by
-  simp [fields,binaryCompositionEvaluation,pairOfEvaluation,projectionEvaluation,extractValue]
+  simp [fields,binaryCompositionEvaluation,pairOfEvaluation,projectionEvaluation]
+  exact extractValue n (Nat.pair raw b) (Nat.pair S (Nat.pair H (Nat.pair labels tupleBound)))
 
 theorem inputSix (v : List.Vector Nat 6) : v = ofFn ![v.get 0,v.get 1,v.get 2,v.get 3,v.get 4,v.get 5] := by
   apply List.Vector.ext
