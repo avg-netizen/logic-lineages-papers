@@ -1,20 +1,20 @@
 # Current public formalization handoff
 
-Snapshot: 2026-11-16 07:40 UTC. User authorization continues until further notice.
+Snapshot: 2026-11-16 07:46 UTC. User authorization continues until further notice.
 
 ## Durable frontier
 
 - Cumulative branch: `formalization/cumulative-continuation-2026-11-16`.
-- Verified remote head: `fbd58524a00bf2014ef262bd9c2c5332f32ce2b6` (07:39:12 UTC).
-- Accepted supporting contracts: **737**. Original numbered register remains **175 checked / 2 inherited / 12 pending / 189**. Supporting helpers are not whole-paper completions.
+- Verified remote head: `ac4562b6a53ed5f4063a8b4039f3fa1a65dd0694` (07:44:55 UTC).
+- Accepted supporting contracts: **738**. Original numbered register remains **175 checked / 2 inherited / 12 pending / 189**. Supporting helpers are not whole-paper completions.
 - Reconciled main `4028a9e34506f4339af2992749464cf2d4d55eb9`; independent Nov15 cumulative `b51cb999d825f2a54160f642dd8c2d70a7a1496a` has overlapping733. Its exact three call-congruence repairs were imported with provenance after preserving our drafts, not merged. Do not add733 again or overwrite that branch.
-- Our additional original-enumeration zero/successor equations and current-source seeded specialization add four beyond that overlapping733.
-- Acceptance records01–04 record exact aliases, source correspondence, native receipts and independent/coordinator recursive hashes. Latest CurrentSourceSeededSpecialization has2189 recursively source-matched native modules. No full-root or CI claim.
+- Our additional original-enumeration zero/successor equations and current-source seeded specialization add four beyond that overlapping733; original type-list membership adds one more.
+- Acceptance records01–05 record exact aliases, source correspondence, native receipts and independent/coordinator recursive hashes. Latest CurrentSourceSeededSpecialization has2189 recursively source-matched native modules. No full-root or CI claim.
 
 ## Active exact targets
 
-1. P6 `Continuation20261115.OriginalTypeListsMembership`, frozen target SHA256 `49c2f390b743d7e2813b9700631d62696ac93a509e54f32cef5b4af33cc4cd1a`: original typeLists internal membership iff actual length bound plus internal all-member condition. Original list cons is NOT numeric pairing. Row/cross/member/induction helpers are private supporting work; arithmetic/base/step/final gates remain to finish. Read current manifests and full logs rather than historical status labels.
-2. P12 `Continuation20261116.CurrentCompositionCertificate`, reviewed target SHA256 `3ff44fc4ea3de63161ae6a5334509b4b3a9baa08a244aee3b3fddaea5f089523`: original root specialization, call congruence and two transitivity steps, actual installed composition node and same current source/checker. Only child/function CORE and fuel-guard premises; numeric trace includes arbitrary certificate numbers. Freeze/preflight then proof; not full producer/HB3.
+1. P6 `Continuation20261115.OriginalEnumerationLayerFields`, reviewed target SHA256 `bc8e0a51d2f5c10ded7798ab045cf6c5fa4e6b86f92955d8d727e1b5e4021cf9`: original layer membership iff eight explicit constructor cases. Preserve lambda opened vs prior, actual type-list length/allMembers, original encoded-head membership plus actual conversion including malformed-to-zero. Original typeLists membership is now accepted (3837 source-matched recursive modules); no full enumeration/Fields-depth coverage yet.
+2. P12 `Continuation20261116.CurrentCompositionCertificate`, reviewed target SHA256 `3ff44fc4ea3de63161ae6a5334509b4b3a9baa08a244aee3b3fddaea5f089523`: original root specialization, call congruence and two transitivity steps, actual installed composition node and same current source/checker. Only child/function CORE and fuel-guard premises; numeric trace includes arbitrary certificate numbers. Frozen/preflight passed; proof supports underway. Not full producer/HB3.
 
 ## Ownership and verification
 
