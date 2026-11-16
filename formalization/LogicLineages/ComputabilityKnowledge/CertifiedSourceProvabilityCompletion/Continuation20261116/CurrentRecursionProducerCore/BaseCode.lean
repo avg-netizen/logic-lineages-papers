@@ -56,8 +56,9 @@ theorem value {arity k m ctx : Nat} (p : Program arity) (installed : Formula 1) 
   R.baseInstallation.hm R.baseInstallation.hc R.baseInstallation.ha R.baseInstallation.h12
   hm hJ.hc hJ.ha I.previous.current.h_constructor
   _ _ _ _ _ _ _ _ _ _ hparent hchild hout hseed hcode
- simpa only [CurrentRecursionBaseProgram.value,CurrentRecursionBaseCertificate.certificate,
+ simp only [CurrentRecursionBaseProgram.value,CurrentRecursionBaseCertificate.certificate,
   CurrentRecursionBaseCertificate.numeralValues,CurrentCompositionCertificate.numeralValues,
-  List.Vector.map_cons,R.baseAddress,C,K,J] using h
+  List.Vector.map_cons,R.baseAddress,C,K,J,CurrentCalculationFormulaProgram.codecTags] at h ⊢
+ exact h
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.BaseCode
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.BaseCode

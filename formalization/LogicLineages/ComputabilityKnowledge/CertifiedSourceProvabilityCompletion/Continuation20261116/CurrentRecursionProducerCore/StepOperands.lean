@@ -43,7 +43,8 @@ theorem left {arity k m ctx : Nat} (p : Program arity) (installed : Formula 1) (
    | succ i => cases i using Fin.cases with
      | zero => exact hmiddle
      | succ i => simpa only [List.Vector.get_cons_succ,List.Vector.get_map] using hnums i)
- simpa only [CurrentRecursionStepProgram.TemplateSyntax.shiftNumeral,R.recursionAddress,C,J] using hcopy
+ simp only [CurrentRecursionStepProgram.TemplateSyntax.shiftNumeral,R.recursionAddress,C,J,CurrentCalculationFormulaProgram.codecTags] at hcopy ⊢
+ exact hcopy
 
 theorem right {arity k m ctx : Nat} (p : Program arity) (installed : Formula 1) (lhs rhs : Term 1) (t : Term k)
  (old a : Program 1) (baseX : Program 3)
@@ -77,7 +78,8 @@ theorem right {arity k m ctx : Nat} (p : Program arity) (installed : Formula 1) 
    | succ i => cases i using Fin.cases with
      | zero => exact hmiddle
      | succ i => simpa only [List.Vector.get_cons_succ,List.Vector.get_map] using hnums i)
- simpa only [CurrentRecursionStepProgram.TemplateSyntax.shiftNumeral,R.recursionAddress,C,J] using hcopy
+ simp only [CurrentRecursionStepProgram.TemplateSyntax.shiftNumeral,R.recursionAddress,C,J,CurrentCalculationFormulaProgram.codecTags] at hcopy ⊢
+ exact hcopy
 
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.StepOperands
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.StepOperands

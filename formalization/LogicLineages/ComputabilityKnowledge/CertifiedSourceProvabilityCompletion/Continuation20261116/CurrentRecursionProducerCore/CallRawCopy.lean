@@ -23,15 +23,17 @@ theorem tuple {arity ctx : Nat} (p : Program arity) (J K : PrescribedRuntimeCall
  | succ n ih =>
   have hh : Derivation (GorbowPRNumeralCalculation.Theory p) (.equal xs.head ys.head) := by
    simpa only [List.Vector.get_zero] using hxy 0
-  have ht : ∀ i, Derivation (GorbowPRNumeralCalculation.Theory p) (.equal (xs.tail.get i) (ys.tail.get i)) := by
+  have ht : ∀ i : Fin n, Derivation (GorbowPRNumeralCalculation.Theory p) (.equal (xs.tail.get i) (ys.tail.get i)) := by
    intro i
-   simpa only [List.Vector.get_tail_succ] using hxy i.succ
+   rw [List.Vector.get_tail_succ,List.Vector.get_tail_succ]
+   exact hxy i.succ
   obtain ⟨htail⟩ := ih xs.tail ys.tail ht
   obtain ⟨hpair⟩ := CodecBridge.pair p J K hJ hK _ _ _ _ hh htail
   have hu := CurrentCompositionCertificate.CodecProof.unary p J.ctag K.ctag 2 hJ.hc hK.hc _ _ hpair
   change Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
    (.equal (tupleValue J (xs.head :: xs.tail.toList)) (tupleValue K (ys.head :: ys.tail.toList)))) at hu
-  simpa only [← List.Vector.toList_cons,List.Vector.cons_head_tail] using hu
+  simp only [← List.Vector.toList_cons,List.Vector.cons_head_tail] at hu
+  exact hu
 
 theorem call {arity ctx n : Nat} (p : Program arity) (J K : PrescribedRuntimeCallCongruence.Tags)
  (hJ : CodecBridge.Nodes p J) (hK : CodecBridge.Nodes p K) (tag : Term ctx)

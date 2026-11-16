@@ -26,6 +26,7 @@ theorem certificate {arity ctx m : Nat} (p : Program arity) (J K : CurrentRecurs
     (CurrentRecursionBaseCertificate.rootFormula m target) other))) := by
  let C := CurrentCalculationFormulaProgram.codecTags J.ctag J.atag J.ntag
  obtain ⟨htag⟩ := ValueTraceProof.numeral (ctx := ctx) p C hn target
+ dsimp only [C,CurrentCalculationFormulaProgram.codecTags] at htag
  obtain ⟨hseed⟩ := SeedTag.seed p J hp hc ha hm hr _ target htag m (CurrentRecursionBaseProgram.rootTemplate m)
   (inputs.map (LiteralNumeralPrefix.numeralCall J.ntag))
  rw [TagRuntime.rawValues,CurrentRecursionBaseProgram.TagSyntax.root] at hseed

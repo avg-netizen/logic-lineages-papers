@@ -52,7 +52,8 @@ theorem certificate {arity k m ctx : Nat} (p : Program arity) (installed : Formu
  obtain ⟨hopen⟩ := OpenStepCode.term p (CurrentRecursionStepProgram.baseTags R.SJ) J.ctag J.atag
   R.stepInstallation.hc R.stepInstallation.ha R.stepInstallation.hn hJ.hc hJ.ha
   (GorbowPRChildTags.stepTag base) R.qTag (counter ::ᵥ inputs) raw (fun i => by
-   simpa only [raw,List.Vector.get_map] using hnums i)
+   simp only [raw,List.Vector.get_map]
+   exact hnums i)
  obtain ⟨hleft⟩ := StepOperands.left p installed lhs rhs t old a baseX I base step B G R counter inputs
  obtain ⟨hright⟩ := StepOperands.right p installed lhs rhs t old a baseX I base step B G R counter inputs
  obtain ⟨hft⟩ := SymbolicProof.stepValue p J hJ.hc hJ.ha hJ.hn (R.qTag+GorbowPRChildTags.stepTag base)
@@ -61,7 +62,8 @@ theorem certificate {arity k m ctx : Nat} (p : Program arity) (installed : Formu
   (LiteralNumeralPrefix.numeralCall J.numeralTag counter) previous' (inputs.map (LiteralNumeralPrefix.numeralCall J.numeralTag))
  have h := UnaryCopy.certificate p installed lhs rhs t old a _ I base step G R.SJ R.stepInstallation
   (stepEnvironment m) (stepTemplate m (R.qTag+GorbowPRChildTags.stepTag base)) raw _ _ _ _ _ prior' previous'
-  hopen hprior hprevious (Logic.trans _ _ _ hleft (Logic.symm _ _ hft)) (Logic.trans _ _ _ hright (Logic.symm _ _ hfu))
- simpa only [R.recursionAddress,raw,prior',previous',List.Vector.map_cons,C,J] using h
+  hopen hprior hprevious (Logic.trans _ _ _ hleft (NamedArithmeticGraph.Support.equalitySymmetry _ _ hft)) (Logic.trans _ _ _ hright (NamedArithmeticGraph.Support.equalitySymmetry _ _ hfu))
+ simp only [R.recursionAddress,raw,prior',previous',List.Vector.map_cons,C,J,CurrentRecursionStepProgram.baseTags,CurrentCalculationFormulaProgram.codecTags] at h ⊢
+ exact h
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.StepUnary
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.StepUnary

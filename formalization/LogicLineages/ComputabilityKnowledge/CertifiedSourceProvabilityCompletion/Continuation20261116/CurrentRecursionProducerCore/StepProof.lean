@@ -33,14 +33,14 @@ theorem exactStep : Targets.StepCore := by
  obtain ⟨hformula⟩ := CurrentCompositionCertificate.CodecProof.binary p J.ctag J.atag J.ctag J.atag 7
   I.previous.current.h_ctag I.previous.current.h_atag I.previous.current.h_ctag I.previous.current.h_atag
   _ _ _ _ hprior hnext
- obtain ⟨hformulaU⟩ := GorbowTheoryProofProof.monotonicity T U hTU ctx _ ⟨Logic.symm _ _ hformula⟩
+ obtain ⟨hformulaU⟩ := GorbowTheoryProofProof.monotonicity T U hTU ctx _ ⟨NamedArithmeticGraph.Support.equalitySymmetry _ _ hformula⟩
  obtain ⟨hformulaCore⟩ := PrescribedRuntimeSpecialization.BaseProof.coreTransport U assumptions I.currentK.coreTag
   (Term.numeral (Encodable.encode c)) fuel _ _ _ (.base hformulaU) hcore
  obtain ⟨hgraph⟩ := CurrentRecursionStepProgram.StatementChecks.exactInternal _ p m base step G R.SJ R.producer.stepTag
   R.stepInstallation R.producer.hstep ctx (Term.numeral R.qTag) counter inputs
  obtain ⟨hvalue⟩ := StepCode.value p installed lhs rhs t old a baseX I base step B G R counter inputs
  have hcode := Logic.trans _ _ _ hgraph hvalue
- obtain ⟨hcodeU⟩ := GorbowTheoryProofProof.monotonicity T U hTU ctx _ ⟨Logic.symm _ _ hcode⟩
+ obtain ⟨hcodeU⟩ := GorbowTheoryProofProof.monotonicity T U hTU ctx _ ⟨NamedArithmeticGraph.Support.equalitySymmetry _ _ hcode⟩
  exact CurrentImplicationCertificate.RebaseProof.coreCode U assumptions I.currentK.coreTag
   (Term.numeral (Encodable.encode c)) fuel _ _ _ (.base hcodeU) hformulaCore
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.StepProof

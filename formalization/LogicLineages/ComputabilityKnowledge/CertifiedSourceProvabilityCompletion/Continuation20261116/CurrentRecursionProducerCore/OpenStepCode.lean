@@ -25,6 +25,7 @@ theorem term {arity ctx m : Nat} (p : Program arity) (J : CurrentRecursionBasePr
     (CurrentRecursionStepCertificate.stepTemplate m (target+offset))))) := by
  let C := CurrentCalculationFormulaProgram.codecTags J.ctag J.atag J.ntag
  obtain ⟨htag⟩ := ValueTraceProof.numeral (ctx := ctx) p C hn target
+ dsimp only [C,CurrentCalculationFormulaProgram.codecTags] at htag
  have hplug := TagPlug.termPlug p J.ctag J.atag hc ha (PrescribedRuntimeSpecialization.headEnvironment (m+1))
   (inputs.map (LiteralNumeralPrefix.numeralCall J.ntag)) _ target htag
   (CurrentRecursionStepProgram.unaryTemplate m offset)

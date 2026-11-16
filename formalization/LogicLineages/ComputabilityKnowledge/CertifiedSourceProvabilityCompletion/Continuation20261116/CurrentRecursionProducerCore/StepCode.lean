@@ -56,7 +56,9 @@ theorem value {arity k m ctx : Nat} (p : Program arity) (installed : Formula 1) 
  obtain ⟨hseed⟩ := StepSeed.certificate p (CurrentRecursionStepProgram.baseTags R.SJ) K
   R.stepInstallation.hp R.stepInstallation.hc R.stepInstallation.ha R.stepInstallation.hm R.stepInstallation.h13 R.stepInstallation.hn
   I.previous.previous.current.h_ctag I.previous.previous.current.h_atag hm I.previous.previous.current.h_constructor
-  base R.qTag (counter ::ᵥ inputs) raw (fun i => by simpa only [raw,List.Vector.get_map] using hnums i)
+  base R.qTag (counter ::ᵥ inputs) raw (fun i => by
+   simp only [raw,List.Vector.get_map]
+   exact hnums i)
  obtain ⟨hunary⟩ := StepUnary.certificate p installed lhs rhs t old a baseX I base step B G R counter inputs
  have hchild : Derivation (GorbowPRNumeralCalculation.Theory p)
   (.equal (call R.SJ.childTag (CurrentRecursionStepProgram.shiftTerm (GorbowPRChildTags.stepTag base) (Term.numeral R.qTag) ::ᵥ
@@ -66,9 +68,10 @@ theorem value {arity k m ctx : Nat} (p : Program arity) (installed : Formula 1) 
   exact .logical (.reflexive _)
  have h := StepAssembly.assemble p installed lhs rhs t old a _ I base step G R.SJ R.stepInstallation
   _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ hP hnext hleft hright houtput hseed hunary hchild
- simpa only [CurrentRecursionStepProgram.value,CurrentRecursionStepCertificate.certificate,
+ simp only [CurrentRecursionStepProgram.value,CurrentRecursionStepCertificate.certificate,
   CurrentCompositionCertificate.numeralValues,CurrentRecursionBaseCertificate.numeralValues,
   R.recursionAddress,R.stepAddress,CurrentRecursionStepProgram.TemplateSyntax.shiftNumeral,
-  stepInputs,List.Vector.map_cons,C,J,K,raw] using h
+  stepInputs,List.Vector.map_cons,C,J,K,raw,CurrentRecursionStepProgram.baseTags,CurrentCalculationFormulaProgram.codecTags] at h ⊢
+ exact h
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.StepCode
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.StepCode
