@@ -55,14 +55,14 @@ theorem exactTrace : Targets.InternalTrace := by
   (hcons counterRaw _ (Term.numeral counter) _ hcounter (hcons priorCall av prior aa hprior hav))
  obtain ⟨hright⟩ := CurrentCompositionCertificate.NativeValuesProof.call p J hc ha hn (tag+GorbowPRChildTags.stepTag f) _ _
   (hcons counterRaw _ (Term.numeral counter) _ hcounter (hcons priorNum av (Term.numeral previous) aa hprevious hav))
- let sigma := Fin.cases (Term.numeral counter) (fun i => (Term.numeral (inputs.get i) : Term 0))
+ let sigma : Fin (m+1) → Term 0 := Fin.cases (Term.numeral counter) (fun i => (Term.numeral (inputs.get i) : Term 0))
  have hseedInputs : ∀ i, Nonempty (Derivation T
   (.equal ((counterRaw ::ᵥ av).get i) ((PrescribedRuntimeSpecialization.numeralInputs (ctx := ctx) sigma).get i))) := by
   intro i
   cases i using Fin.cases with
   | zero => exact ⟨hcounter⟩
   | succ i =>
-   simpa only [sigma,PrescribedRuntimeSpecialization.numeralInputs,Fin.cases_succ,List.Vector.get_ofFn,
+   simpa only [av,T,rawNumeral,sigma,PrescribedRuntimeSpecialization.numeralInputs,Fin.cases_succ,List.Vector.get_ofFn,
     List.Vector.get_cons_succ,GorbowPRNumeralCalculation.numeralArguments,List.Vector.get_map] using hav i
  obtain ⟨hseedEq⟩ := CurrentCompositionCertificate.SeedInputProof.certificateCongruence p J.mtag
   I.previous.previous.current.ctag I.previous.previous.current.atag I.previous.previous.current.constructorTag

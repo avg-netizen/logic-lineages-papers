@@ -48,7 +48,15 @@ theorem assigned {m : Nat} (tag counter : Nat) (inputs : List.Vector Nat m) :
  | zero => rfl
  | succ i => cases i using Fin.cases with
    | zero => rfl
-   | succ i => rfl
+   | succ i =>
+    simp only [List.Vector.get_map,List.Vector.get_cons_succ,List.Vector.get_ofFn,substitute,assignment,Fin.cases_succ,
+     GorbowPRNumeralCalculation.numeralArguments]
+
+theorem numeralEncode (n m k : Nat) :
+ GorbowTermPrefixCode.encode (Term.numeral (n := n) k) = GorbowTermPrefixCode.encode (Term.numeral (n := m) k) := by
+ induction k with
+ | zero => rfl
+ | succ k ih => simp only [Term.numeral,GorbowTermPrefixCode.encode,ih]
 
 theorem openStep {arity m ctx : Nat} (p : Program arity) (J : Tags)
  (hc : (nodes p)[J.ctag]? = some ⟨2,HistoryCodec.cons⟩) (ha : (nodes p)[J.atag]? = some ⟨2,HistoryAppend.append⟩)
@@ -68,11 +76,13 @@ theorem openStep {arity m ctx : Nat} (p : Program arity) (J : Tags)
   cases i using Fin.cases with
   | zero => exact ⟨.logical (.reflexive _)⟩
   | succ i => cases i using Fin.cases with
-    | zero => exact ValueTraceProof.numeral p J hn counter
+    | zero =>
+     simpa only [termValue,stepEnvironment,assignment,Fin.cases_succ,Fin.cases_zero,raw,List.Vector.get_cons_zero,rawNumeral,numeralEncode 1 0 counter] using
+      (ValueTraceProof.numeral (ctx := ctx) p J hn counter)
     | succ i =>
      have h := CurrentCompositionCertificate.NativeValuesProof.numerals (ctx := ctx) p J hn inputs i
      simpa only [termValue,stepEnvironment,assignment,Fin.cases_succ,List.Vector.get_cons_succ,
-      EncodingProof.liftEncode] using h
+      EncodingProof.liftEncode,raw,rawNumeral,GorbowPRNumeralCalculation.numeralArguments,List.Vector.get_map] using h
  obtain ⟨h⟩ := term p J.ctag J.atag hc ha (stepEnvironment m) raw (assignment counter inputs) hs (stepTemplate m tag)
  rw [assigned] at h
  exact ⟨h⟩
@@ -86,7 +96,13 @@ theorem instantiateStep {m : Nat} (tag counter : Nat) (inputs : List.Vector Nat 
   intro i
   simp only [List.Vector.get_map]
   exact GorbowClosedEqualityProof.closedTransport 1 _ _
- simp only [closedStepFunction,GorbowClosedEquality.instantiateTerm,GorbowPRCallCongruence.Proof.callSubstitution,
-  List.Vector.map_cons,GorbowHeaderSubstitutionProof.numerals,substitute,Fin.cases_zero,hl]
+ change substitute (Fin.cases value Fin.elim0)
+  (call tag ((Term.numeral counter : Term 1) ::ᵥ .var 0 ::ᵥ xs.map (GorbowClosedEquality.liftClosedTerm 1))) =
+  call tag (Term.numeral counter ::ᵥ value ::ᵥ xs)
+ rw [GorbowPRCallCongruence.Proof.callSubstitution]
+ rw [List.Vector.map_cons,List.Vector.map_cons,hl]
+ rw [GorbowHeaderSubstitutionProof.numerals]
+ rfl
+
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionStepCertificate.TemplateTraceProof
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionStepCertificate.TemplateTraceProof
