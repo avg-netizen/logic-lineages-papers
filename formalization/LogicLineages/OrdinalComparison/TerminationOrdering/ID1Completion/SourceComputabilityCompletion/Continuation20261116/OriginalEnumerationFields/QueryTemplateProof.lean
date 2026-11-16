@@ -63,7 +63,11 @@ def branch (a b c : Template) : Template := .node 3
 theorem instantiateConstant {k : Nat} (p : Program k) (n : Nat) :
     instantiate p (constant n) = OriginalRawSyntaxTransport.constant k n := by
   induction n with
-  | zero => rfl
+  | zero =>
+    simp only [constant,zero,instantiate,OriginalRawSyntaxTransport.constant,InternalAcceptance.constantZero]
+    congr 1
+    funext i
+    exact Fin.elim0 i
   | succ n ih => simp only [constant,suc,instantiate,ih]; rfl
 
 theorem instantiateLeft {k : Nat} (p : Program k) (t : Template) :
@@ -74,15 +78,15 @@ theorem instantiateRight {k : Nat} (p : Program k) (t : Template) :
 
 theorem instantiateSame {k : Nat} (p : Program k) (a b : Template) :
     instantiate p (same a b) = OriginalRawSyntaxTransport.sameOf (instantiate p a) (instantiate p b) := by
-  unfold same instantiate OriginalRawSyntaxTransport.sameOf InternalApplicationStepPeel.same
+  simp only [same,instantiate,OriginalRawSyntaxTransport.sameOf,InternalApplicationStepPeel.same]
   congr 1
   funext i
-  fin_cases i <;> rfl
+  fin_cases i <;> simp [Fin.cons]
 
 theorem instantiateBranch {k : Nat} (p : Program k) (a b c : Template) :
     instantiate p (branch a b c) = InternalAcceptance.branch
       (instantiate p a) (instantiate p b) (instantiate p c) := by
-  unfold branch instantiate InternalAcceptance.branch
+  simp only [branch,instantiate,InternalAcceptance.branch]
   congr 1
   funext i
   fin_cases i <;> rfl

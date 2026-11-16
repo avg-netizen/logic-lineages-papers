@@ -15,12 +15,27 @@ open SourceProof ListNativeProof LayerSupportProof RecombinationProof
 theorem value (n : Nat) (label : Nat) (head : HeadCode (Fin n)) (typ : Ty) (child : Code (Fin n)) (ts : List Ty) (args : Code (Fin n)) (b param : Nat) (answers : List Nat) :
     evaluate (choose n) (ofFn ![Nat.pair (codeNumber ((.numbered label head typ child ts args) : Code (Fin n))) b,numbersNumber answers,param]) =
       nodeValue (n := n) (rawTypes param) (rawHeads n param) (rawLabels param) (rawTupleBound param) b answers (.numbered label head typ child ts args) := by
+  have hlt (a d : Nat) : evaluate InternalLessThan.ltTest (a ::ᵥ d ::ᵥ nil) = if a < d then 1 else 0 :=
+    InternalLessThanEvaluationProof.exactLessThanEvaluation a d
   have hg (a d c : Nat) : (a ::ᵥ d ::ᵥ c ::ᵥ nil).get 2 = c := rfl
   have hf (key par : Nat) : evaluate firstAnswer (key ::ᵥ numbersNumber answers ::ᵥ par ::ᵥ nil) = answers[0]?.getD 0 :=
     firstAnswerValue key par answers
   have hs (key par : Nat) : evaluate secondAnswer (key ::ᵥ numbersNumber answers ::ᵥ par ::ᵥ nil) = answers[1]?.getD 0 :=
     secondAnswerValue key par answers
-  simp [hg,hf,hs,choose,evalBranch,sameOfEvaluation,constantEvaluation,
+  have hu {k : Nat} (p : Program 1) (q : Program k) (v : List.Vector Nat k) :
+      evaluate (.composition p ![q]) v = evaluate p (ofFn ![evaluate q v]) := by
+    have h : (![q] : Fin 1 → Program k) = fun _ => q := by
+      funext i
+      obtain rfl := Fin.eq_zero i
+      rfl
+    rw [h,unaryCompositionEvaluation]
+  have hl (ts : List Source.Ty) : evaluate OriginalContextInsertion.length (typesNumber ts ::ᵥ nil) = ts.length :=
+    typesLength ts
+  have ht (ts : List Source.Ty) (allowed : Nat) :
+      evaluate allTypes (typesNumber ts ::ᵥ allowed ::ᵥ nil) =
+        (ts.all (fun t => decide (typeNumber t ∈ (decodeNumbers allowed).getD []))).toNat :=
+    typesAll ts allowed
+  simp [hlt,hg,hf,hs,hu,hl,ht,choose,evalBranch,sameOfEvaluation,constantEvaluation,
       tag,raw,keyRaw,payload,bound,keyBound,types,heads,labels,tupleBound,
       leftOfEvaluation,rightOfEvaluation,projectionEvaluation,Nat.unpair_pair,codeNumber,
       variableBranch,lambdaBranch,binaryBranch,bottomBranch,ordinaryBranch,numberedBranch,
