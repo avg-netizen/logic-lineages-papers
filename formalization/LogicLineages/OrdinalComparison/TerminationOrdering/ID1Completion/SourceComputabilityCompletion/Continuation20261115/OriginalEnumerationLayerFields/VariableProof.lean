@@ -26,7 +26,14 @@ theorem mapAt (xs : Fin 7 → OTerm alpha) (out range : OTerm alpha)
     Nonempty (Derivation body Delta (graph1 (InternalListMap.map OriginalRawSyntaxTransport.variableConstructor) out range)) :=
   unaryRecover (InternalListMap.map OriginalRawSyntaxTransport.variableConstructor)
     (.composition OriginalAscendingRange.range ![.projection 4]) out range xs hg
-    (unaryValue OriginalAscendingRange.range (.projection 4) range (xs 4) xs hr (projectionValue 4 xs))
+    (by
+      have hv := unaryValue OriginalAscendingRange.range (.projection 4) range (xs 4) xs hr (projectionValue 4 xs)
+      have he : (fun _ : Fin 1 => (ComputabilityKnowledge.GorbowPRProgram.Program.projection 4 : ComputabilityKnowledge.GorbowPRProgram.Program 7)) = ![.projection 4] := by
+        funext i
+        fin_cases i
+        rfl
+      rw [he] at hv
+      exact hv)
 
 theorem forwardAt (vb out code range : OTerm alpha)
     (hg : Nonempty (Derivation body Delta (graph1 (InternalListMap.map OriginalRawSyntaxTransport.variableConstructor) out range)))

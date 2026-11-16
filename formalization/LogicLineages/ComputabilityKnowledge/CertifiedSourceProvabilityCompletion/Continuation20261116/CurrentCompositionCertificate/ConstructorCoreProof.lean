@@ -42,18 +42,21 @@ theorem assemble {arity k m n ctx : Nat} (p : Program arity) (installed : Formul
  have hav : ∀ i, Nonempty (Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
   (RawReflexivityDispatcher.valid I.current.vtag (av.get i))) := by
   intro i
-  exact PrescribedRuntimeCallCongruence.ValidityProof.numeral p _ _ _ I.current J.numeralTag
-   I.previous.previous.previous.previous.hnumeral G (inputs.get i)
+  simpa only [av,numeralValues,List.Vector.get_map] using
+   (PrescribedRuntimeCallCongruence.ValidityProof.numeral p _ _ _ I.current J.numeralTag
+    I.previous.previous.previous.previous.hnumeral G (inputs.get i))
  have hcv : ∀ i, Nonempty (Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
   (RawReflexivityDispatcher.valid I.current.vtag (cv.get i))) := by
   intro i
-  exact PrescribedRuntimeCallCongruence.ValidityProof.numeral p _ _ _ I.current J.numeralTag
-   I.previous.previous.previous.previous.hnumeral G (values.get i)
+  simpa only [cv,numeralValues,List.Vector.get_map] using
+   (PrescribedRuntimeCallCongruence.ValidityProof.numeral p _ _ _ I.current J.numeralTag
+    I.previous.previous.previous.previous.hnumeral G (values.get i))
  have hbv : ∀ i, Nonempty (Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
   (RawReflexivityDispatcher.valid I.current.vtag (bv.get i))) := by
   intro i
-  exact ValidityProof.call p installed lhs rhs t old a x I G
-   (Term.numeral (tag+GorbowPRChildTags.argumentTag f g i)) av hav
+  simpa only [bv,childValues,List.Vector.get_ofFn] using
+   (ValidityProof.call p installed lhs rhs t old a x I G
+    (Term.numeral (tag+GorbowPRChildTags.argumentTag f g i)) av hav)
  obtain ⟨hparent⟩ := ValidityProof.call p installed lhs rhs t old a x I G (Term.numeral tag) av hav
  obtain ⟨hleft⟩ := ValidityProof.call p installed lhs rhs t old a x I G (Term.numeral (tag+1)) bv hbv
  obtain ⟨hright⟩ := ValidityProof.call p installed lhs rhs t old a x I G (Term.numeral (tag+1)) cv hcv

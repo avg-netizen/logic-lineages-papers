@@ -33,8 +33,9 @@ theorem exactConstructor : Targets.InternalConstructor := by
   (Continuation20261114.RawReflexivityDispatcher.valid I.previous.current.vtag (av.get i))) := by
   intro i
   have h := ValidityProof.previousNumeral p installed lhs rhs t old a (SaturatedAxiomLeaf.saturated baseX) I G (inputs.get i)
-  exact PrescribedSourceAxiomSpecialization.SourceSupportProof.localCut hTU
-   (fun psi hmem => ⟨.hypothesis hmem⟩) h
+  simpa only [av,numeralValues,List.Vector.get_map] using
+   (PrescribedSourceAxiomSpecialization.SourceSupportProof.localCut hTU
+    (fun psi hmem => ⟨.hypothesis hmem⟩) h)
  obtain ⟨hs⟩ := hseed m (rootFormula f g tag) (RootProof.member p f g tag hnode) ctx G av fuel hraw hguard
  have hsCore := Hilbert.Local.mp (.base (.logical (.andLeft _ _))) hs
  have he := RootEncodingProof.root p installed lhs rhs t old a (SaturatedAxiomLeaf.saturated baseX) I f g tag av

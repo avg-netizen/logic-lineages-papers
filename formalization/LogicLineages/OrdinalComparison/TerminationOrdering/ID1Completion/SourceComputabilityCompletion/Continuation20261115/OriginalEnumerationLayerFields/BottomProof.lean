@@ -21,7 +21,13 @@ theorem mapAt (xs : Fin 7 → OTerm alpha) (out : OTerm alpha)
     (hg : Nonempty (Derivation body Delta (programGraph OriginalEnumerationConstructorLayer.bottoms out xs))) :
     Nonempty (Derivation body Delta (graph1 (InternalListMap.map OriginalRawSyntaxTransport.bottomConstructor) out (xs 0))) :=
   unaryRecover (InternalListMap.map OriginalRawSyntaxTransport.bottomConstructor) (.projection 0)
-    out (xs 0) xs hg (projectionValue 0 xs)
+    out (xs 0) xs (by
+      have he : (fun _ : Fin 1 => (ComputabilityKnowledge.GorbowPRProgram.Program.projection 0 : ComputabilityKnowledge.GorbowPRProgram.Program 7)) = ![.projection 0] := by
+        funext i
+        fin_cases i
+        rfl
+      rw [he]
+      exact hg) (projectionValue 0 xs)
 
 theorem forward (xs : Fin 7 → OTerm alpha) (out code : OTerm alpha)
     (hg : Nonempty (Derivation body Delta (programGraph OriginalEnumerationConstructorLayer.bottoms out xs)))
