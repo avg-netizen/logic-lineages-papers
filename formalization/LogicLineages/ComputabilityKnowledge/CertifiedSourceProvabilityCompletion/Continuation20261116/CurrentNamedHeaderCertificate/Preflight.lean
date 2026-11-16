@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentNamedHeaderCertificate.Targets
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentNamedHeaderCertificate.Preflight
+open GorbowSyntax
+theorem literalTemplate : template = GorbowNamedDefiningTheory.headerVariables (2,0) := rfl
+theorem comparatorReflexivity : Targets.OneHeaderSource = Targets.OneHeaderSource := rfl
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentNamedHeaderCertificate.Preflight
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentNamedHeaderCertificate.Preflight

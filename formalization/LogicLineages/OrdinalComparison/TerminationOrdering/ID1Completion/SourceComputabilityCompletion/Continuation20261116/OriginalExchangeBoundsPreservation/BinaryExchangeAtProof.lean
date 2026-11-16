@@ -15,7 +15,7 @@ attribute [local irreducible] programGraph
 open ExchangeInduction ExchangeInductionBindingProof
 open InternalTagArithmeticSyntaxProof (z suc eqn)
 open InternalTagArithmeticSupportProof (symm)
-open InternalApplicationStepPeelSupportProof (andIntro)
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
 open Continuation20261115
 open OriginalCodeBoundsConstructors.BinaryRootProof (constructor)
 
@@ -36,14 +36,14 @@ theorem atValues (cons side : Bool) (n : Nat) (arity : Fin n → Nat)
     (ih : Nonempty (Derivation body Delta (BelowRaw n arity left))) :
     Nonempty (Derivation body Delta (eqn lv rv)) := by
   have hsmall : Nonempty (Derivation body Delta (InternalLessThan.strictLess (if side then ld else lc) left)) := by
-    have hs : Nonempty (Derivation body Delta (InternalLessThan.strictLess lc left)) ∧
-        Nonempty (Derivation body Delta (InternalLessThan.strictLess ld left)) := by
+    have hs : Nonempty (Derivation body Delta
+        (InternalLessThan.strictLess lc left ⊓ InternalLessThan.strictLess ld left)) := by
       cases cons
       · exact OriginalTypedEnumerationDepthBound.DescentProof.application left lm lc ld hlc
       · exact OriginalTypedEnumerationDepthBound.DescentProof.cons left lm lc ld hlc
     cases side
-    · exact hs.1
-    · exact hs.2
+    · exact andLeft hs
+    · exact andRight hs
   obtain ⟨heq⟩ := belowRawApply n arity left (if side then ld else lc) (if side then rd else rc) child window cv dv ih hsmall
     (andIntro hp (andIntro he (andIntro hcv hdv)))
   have hdv' := outputTransport (OriginalCodeBoundsRecursion.bounds n) dv cv ![if side then rd else rc] ⟨symm heq⟩ hdv

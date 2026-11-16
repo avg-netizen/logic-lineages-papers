@@ -62,7 +62,8 @@ theorem graph {arity ctx : Nat} (p : Program arity) (v : List.Vector (Term ctx) 
   UniformRuntimeSpecializationStep.certificate,UniformRuntimeSpecializationStep.body,
   PrescribedRuntimeSpecialization.EnvironmentProof.specializeHead,PrescribedRuntimeSpecialization.value,List.Vector.map_cons,List.Vector.map_nil,
   List.Vector.head_cons,List.Vector.tail_cons] 
- simpa only [List.Vector.map_cons,List.Vector.map_nil,
+ simpa only [CurrentNamedAliasCertificate.program,tailProgram,CurrentRecursionBaseProgram.quote,
+  List.Vector.map_cons,List.Vector.map_nil,
   show (1 : Fin 2) = (0 : Fin 1).succ from rfl,List.Vector.get_cons_zero,List.Vector.get_cons_succ]
   using hout
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentNamedAliasCertificate.GraphProof
