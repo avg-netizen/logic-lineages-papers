@@ -3,7 +3,7 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalEnumerationFields.Equation.Proof
-open OriginalDecodedExchangeEquation
+open Continuation20261115.OriginalDecodedExchangeEquation
 open Continuation20261115
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalApplicationStepPeelSupportProof (andLeft andRight)
