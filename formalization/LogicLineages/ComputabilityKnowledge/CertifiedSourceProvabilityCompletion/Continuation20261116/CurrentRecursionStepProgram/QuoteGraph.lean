@@ -7,7 +7,7 @@ open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRDefiningEquations Gor
 open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115
 open PrescribedRuntimeEquality PrescribedRuntimeCallCongruence FixedFormulaSubstitution GorbowRegistryTuple
 open SixSol20261112.Fuel NamedArithmeticGraph
-open EncodingSupport
+open EncodingSupport LiteralRawMP.ConstructorSupportProof
 
 theorem normalized {arity n inputs ctx : Nat} (p : Program arity) (args : List.Vector (Term ctx) inputs)
  (J : Tags) (hc : (nodes p)[J.ctag]? = some ⟨2,HistoryCodec.cons⟩) (ha : (nodes p)[J.atag]? = some ⟨2,HistoryAppend.append⟩)
@@ -59,12 +59,6 @@ theorem rightTemplateEq (m offset : Nat) :
   (List.Vector.ofFn (fun i : Fin (m+2) => .var i.castSucc)) := by
  unfold rightTemplate
  congr 1
- ext i
- cases i using Fin.cases with
- | zero => rfl
- | succ i => cases i using Fin.cases with
-   | zero => rfl
-   | succ i => rfl
 
 theorem right {arity m ctx : Nat} (p : Program arity) (base : Program m) (step : Program (m+2)) (child : Program (m+3))
  (J : Tags) (I : Installation p base step child J) (target counter : Term ctx) (inputs : List.Vector (Term ctx) m) (offset : Nat) :

@@ -39,7 +39,9 @@ theorem shiftedArguments {arity m ctx : Nat} (p : Program arity) (J : Tags)
  have hmap := CurrentRecursionBaseProgram.CallGraphProof.inputsMap (baseTags J) target inputs
  dsimp only [baseTags] at hmap
  rw [← List.Vector.toList_map] at he
- have heq := he.trans (congrArg (fun v => tupleValue K v.toList) hmap)
+ have hmapped := congrArg (fun v : List.Vector (Term ctx) m => tupleValue K v.toList) hmap
+ dsimp only [K,CurrentCalculationFormulaProgram.codecTags,baseTags] at he hmapped
+ have heq := he.trans hmapped
  exact Eq.mpr (congrArg (fun t => Derivation (GorbowPRNumeralCalculation.Theory p)
   (.equal t (tupleValue K (inputs.map (LiteralNumeralPrefix.numeralCall J.ntag)).toList))) heq)
   (.logical (.reflexive _))
