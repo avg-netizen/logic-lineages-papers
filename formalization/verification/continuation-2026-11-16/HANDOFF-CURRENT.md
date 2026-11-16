@@ -147,3 +147,11 @@ P12 source reconstruction exact1: full old checker conjunction byte-identical re
 
 ## 16:02 UTC conservative source acceptance
 Acceptance55 verified:850 local supporting contracts,847 published; numbered175/2/12 unchanged. Explicit extended old chosen before one registry call; full checker contract reconstructed at same new tuple. Actual singleton CORE comparator frozen12pins, awaiting preflight/proof release. Acceptance54–55 queued for publication.
+
+## 16:08 UTC verified checkpoint
+Remote/local de5219552cc2a360f6ce2c0e5ecee4809d2a53dd, committed16:07:31UTC; tree5b58d27fe4df4d81d6c440a7312f3719f1926451. All49 snapshot1602 blobs and Acceptance54(12)/55(7) source pins verified remotely. 850 supporting contracts published; numbered175/2/12 unchanged. Next hard save16:37:31UTC. P6 full mutual Fields still draft, ordinary/lambda full branches and binary arithmetic checked; application/cons closures queued. P12 actual singleton CORE draft: validity passed1794845116077139573-5, wrapper/dispatcher in check. MachineInterface received an additive helper during active batch; current interface and downstream must be recompiled before final source-pinned acceptance, not merely presumed unchanged.
+
+## 16:22 UTC full source Fields acceptance
+Acceptance56 verified4550modules,67 source pins including standalone preflight,21frozenpins;852 local supporting contracts,850published, numbered175/2/12 unchanged. Genuine raw mutual induction pays all eight original source constructors with no child Fields/default-zero shortcut. Next direct source term→actual enumerated output reuses already-paid same-fuel/checker erasure rather than recounting it.
+
+16:27 UTC: Acceptance57 verifies actual quantifier singleton CORE/Fuel; 853 local accepted supporting contracts, numbered register unchanged. Checkpoint publication follows.
