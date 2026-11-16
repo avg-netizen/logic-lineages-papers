@@ -3,6 +3,6 @@ public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCom
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentAugmentationErasure.Preflight
-example : Prop := Targets.InternalErasure
+theorem comparator : Targets.InternalErasure = Targets.InternalErasure := rfl
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentAugmentationErasure.Preflight
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentAugmentationErasure.Preflight

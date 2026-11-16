@@ -1,0 +1,11 @@
+# Proposal: remaining builtin signatures and ranked-list structure
+
+Exact2 comparator only; no proof authoring before independent review, freeze and preflight.
+
+InternalBuiltinSignatures combines all remaining source head cases in one endpoint: the basic zero/successor heads, case and recursor. Each gives the complete original concrete H output equation, with decoder success derived internally from the actual raw constructor. The result codes are specified using actual nested pair witnesses for the original SourceMarkedSyntax.headResult/Ty.caseType/Ty.recType arrow trees; arguments are empty. No result/head-argument/signature program success is assumed. Zero/successor require the original payload zero. Case/recursor retain arbitrary arithmetic type payloads, since original numeric type decoding is total. Actual type construction witnesses are not source-acceptance oracles.
+
+InternalGroundListStructure is a genuine internal invariant of the literal primitive recursion groundList: the ORIGINAL raw-list fold length is count, and every ORIGINAL lookup yields the ground type code zero. Out-of-range lookup also yields zero by the existing convention; the independent length equation retains the exact number of entries. It quantifies all arithmetic counts, lists and indices, including zero and nonstandard internal values, without native reflection or encoded-image restriction. No new all-ground oracle/program is introduced. This is intended to support the ranked branch's future typed argument permutation transport.
+
+The source expressions are exactly SourceMarkedSyntax.headResult/headArguments: case result ground→tau→tau→tau; recursor result ground→(ground→tau→tau)→tau→tau; ranked arguments replicate(arity(symbol),ground). Existing ConcreteHeadSignature calibration and constructor signature equations stay frozen. This packet groups the remaining builtin equations rather than counting individual wrappers. The list invariant is not inferred from native evaluation.
+
+Together with previous application/ranked equations this would supply full head-case metadata, but it is not typed/source exchange preservation: argument permutation and type constraints, whole original headMove compatibility, tuple installation and final checker preservation remain unpaid. No arbitrary-H refutation and no numbered-register discharge is claimed.

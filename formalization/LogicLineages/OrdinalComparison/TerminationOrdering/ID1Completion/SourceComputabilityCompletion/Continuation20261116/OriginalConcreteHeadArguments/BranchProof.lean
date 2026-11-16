@@ -24,7 +24,7 @@ theorem applicationArguments : Targets.InternalApplicationArguments := by
     ⟨Derivation.conjunctionLeft hi⟩
   have htail := binaryValue InternalListCodec.consCode InternalUnpair.left (constant 1 0)
     tail domain z ![payload] ht hl (constantValue 0 ![payload])
-  have harrow := unaryValue .succ (.projection 0) (suc payload) payload ![payload]
+  have harrow : Nonempty (Derivation body Delta (graph1 (succOf (.projection 0)) (suc payload) payload)) := unaryValue .succ (.projection 0) (suc payload) payload ![payload]
     (successorValue (Fin.cons payload Fin.elim0)) (projectionValue 0 ![payload])
   have hf := TagProof.internalTagFactor n arity body alpha Delta (4 : Fin 6) raw payload out hp
   constructor

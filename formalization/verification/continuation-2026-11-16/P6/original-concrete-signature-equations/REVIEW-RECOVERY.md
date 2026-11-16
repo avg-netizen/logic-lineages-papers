@@ -1,0 +1,3 @@
+# Independent recovery comparator review
+
+Accept renewed comparator review for fresh preflight. Reconstructed Targets, Preflight and correspondence hashes exactly match the three values observed before outage. Application/ranked output equations remain conditioned only on explicit constructor/lookup/list/packing data and original symbol bound. Decoder and signature success are obligations, not premises. Actual application domain and ordered two-element list remain intact. This is not witness existence or full source preservation. Reconstructed proofs require fresh native and recursive evidence; no lost receipts are certified by this review.
