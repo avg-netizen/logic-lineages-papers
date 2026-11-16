@@ -125,3 +125,12 @@ Acceptance50 verified after native exact gate and recursive evidence28;843 local
 
 ## 15:31 UTC checker equation acceptance
 Acceptance51 verified at one retained source and fixed outer bound, with arbitrary symbolic inner checker fuel. Supporting844 local,840 published, numbered175/2/12 unchanged. Certificates of both existential introductions and rho implication remain unpaid. Acceptance50–51 and sources queued for publication.
+
+## 15:34 UTC verified checkpoint
+Remote/local b20812b0843f283d16ab331a7095486320d9d8c5, committed15:33:48UTC; tree0c4ce5689cd26c762a111600202d49c31b2978ed. All19 snapshot1532 blobs and Acceptance50(11)/51(7) source pins verified remotely. 844 supporting contracts published; numbered175/2/12 unchanged. Next hard save16:03:48UTC. P6 actual encoded heads→Fields exact1 native check running. P12 existential recipe audit identified unpaid annotation2 classical contraposition and annotation10 existential-duality singleton families: current opaque old logical fallback native calibration cannot establish their symbolic acceptance. Next comparator-only literal line/singleton ASTs, then conservative recognizer/CORE and source reconstruction retaining checker contract; no existential/HB3 completion claim.
+
+## Actual encoded heads bridge acceptance
+Acceptance52 verified:845 local supporting contracts,844 published, numbered175/2/12 unchanged. Exact existing classCodes heads maps actual valid raw source heads into Fields.headAllowed without a replacement-list assumption.
+
+## 15:45 UTC quantifier producer acceptance
+Acceptance53 verified native+symbolic original annotation2/10 line/singleton ASTs:847 local supporting contracts,844 published, numbered175/2/12 unchanged. No recognizer/CORE or existential acceptance claimed. Acceptance52–53 and current source drafts queued for next save.
