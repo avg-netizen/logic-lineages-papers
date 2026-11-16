@@ -1,5 +1,16 @@
 # Current public formalization handoff
 
+## LIVE RECOVERY POINTER — 2026-11-16 19:45 UTC
+
+- Continue authorized public formalization until further notice. Sole coordinator owns publication and serialized fixed-limit proof checks; no main merge, force push, CI/checker/pin changes or private research.
+- Environment replacement removed the live November15 checkout, toolchain, native artifacts, raw evidence and temporary logs. Fresh checkout restored from verified remote `95483db068f9a8055beee5914db208bc07c2f7f5` (19:28:14 UTC), tree `74552793f9d905fa58e78a6b6dae5a53a7d63e62`. All 1639 source-pin entries in published Nov16 acceptance records match restored bytes.
+- Durable published frontier remains 868 supporting contracts through acceptance67. Original numbered register remains 175 checked / 2 inherited / 12 pending /189. Local acceptance68 previously reached871, but its unpublished record and raw evidence are absent; re-establish verification before restoring that count. Historical acceptance records retain their original provenance; this recovery source audit is not a fresh proof or full-root/CI pass.
+- P6 HeadArguments five source files survived publication. SignatureEquations later sources and SignatureStructure proposal require reconstruction and renewed checking. P12 augmentation Definitions/Targets/Preflight survived; postcheckpoint helper proofs require reconstruction. Preserve historical comparator pins and failed drafts; never label reconstructed source as byte-identical without hash evidence.
+- Exact official compiler4.32.0-rc1 commitb4812ae53eea93439ad5dce5a5c26591c31cb697 restored; archive SHA256ce6e79dd19ea03c0bc17f9d565c3bac20cd2884561e3b431e5b293c1fbb2b5b3 matches prior setup. Pinned sources and targeted official mathlib cache restoration underway; no upstream proof rebuild. Native proof queue paused until setup verified.
+- Fixed checker limits remain heap2048/RSS1536/free-floor2048MiB, one thread,90CPU/180wall. Exact frozen-target checks, standard-only axioms and recursive source/object/input/log validation remain mandatory. No full paper06 source preservation, full selected-pF certificate or HB3 claim.
+
+## Prior resume pointer (historical)
+
 ## LIVE RESUME POINTER — 2026-11-16 19:14 UTC
 
 - Authorization: continue public formalization until further notice; publish inspected sources and nonforce checkpoints at least every30minutes. No main merge, private research or CI/toolchain/checker/pin changes.
