@@ -1,39 +1,36 @@
 # Current public formalization handoff
 
-Snapshot: 2026-11-16 08:53 UTC. User authorization continues until further notice.
+Snapshot: 2026-11-16 09:03 UTC. User authorization continues until further notice.
 
 ## Durable frontier
 
-- Cumulative branch: `formalization/cumulative-continuation-2026-11-16`.
-- Verified remote head: `4555b4c0d1c805e325fa5367c1bd392648199bde` (08:51 UTC).
-- Accepted supporting contracts: **747**. Original numbered register remains **175 checked / 2 inherited / 12 pending / 189**. Supporting helpers are not whole-paper completions.
-- Reconciled main `4028a9e34506f4339af2992749464cf2d4d55eb9`; independent Nov15 cumulative `b51cb999d825f2a54160f642dd8c2d70a7a1496a` has overlapping733. Its exact three call-congruence repairs were imported with provenance after preserving our drafts, not merged. Do not add733 again or overwrite that branch.
-- Our additional original-enumeration zero/successor equations and current-source seeded specialization add four beyond that overlapping733; original type-list membership adds one more; current composition adds two and explicit eight-constructor layer fields adds one, total741.
-- Acceptance records01–07 record exact aliases, source correspondence, native receipts and independent/coordinator recursive hashes. Latest CurrentSourceSeededSpecialization has2189 recursively source-matched native modules. No full-root or CI claim.
+- Cumulative branch `formalization/cumulative-continuation-2026-11-16`.
+- Verified remote head `c997d3a936e353e4235787e5e314e4af389caa67` at09:02:32UTC; all168 intended path Git blob hashes matched the immutable publication snapshot.
+- Accepted supporting contracts **758**. Numbered register unchanged: **175 checked /2 inherited /12 pending /189**. Helpers are not whole paper completions.
+- Reconciled main4028a9e and independent Nov15 branch b51cb999 with overlapping733; never add overlapping histories. Preserve all prior work; no main merge or force push.
+- Acceptance08: original recursion base exact2,2254 recursively matched modules,total743.
+- Acceptance09: K/S propositional exact4,2268 matched modules,total747. All-raw-line construction, conservative native refinement, literal internal line graph, original-validator-guarded logical-leaf acceptance.
+- Acceptance10: original depth exact10,3863 matched modules,total757. Native original typed depth on arbitrary decoder output, eight internal constructor equations with explicit validity split, malformed output zero. This is not a size bound or encoded-image-only claim.
+- Acceptance11: actual nested K/S CORE retention exact1,2289 matched modules,total758. Same certificate/context/formula/index/fuel including zero; no intermediate core installation or simulation oracle. Both nested selectors proved then lifted through original dispatcher/state/iteration.
+- All these final exact/standard-axiom gates and recursive source/object/input/log matches passed. Sources and acceptance records are published. Large recursive evidence payloads stay local with exact hashes/sizes. No full-root/CI claim.
 
-## Current recovery update
+## Active next exact targets
 
-Acceptance08 added original recursion base exact2 (743); acceptance09 adds K/S propositional exact4 (747), with2268 recursively source-matched modules. P6 original depth exact10 passed final gate, recursive audit pending, not yet counted. P12 actual nested K/S CORE retention exact1 is frozen; leaf/dispatcher pass, kernel namespace repair pending. Original CORE/Fuel producer, same-root reinstallation and HB3 remain open.
+1. P6 fresh `Continuation20261116.OriginalEnumerationFields`:13 exact targets. Original raw+variableBound key, raw rank, lambda child bound+1; fresh graph/cache, actual original encoded heads/types, numbered list length/all-members. Coordinator reviewed against literal original Fields and froze8 comparator/provenance pins; preflight running. No successor proof yet.
+2. P12 `Continuation20261116.UniformClosedPropositionalCertificate`: actual K/S singleton run plus CORE/Fuel at same index/fuel/code, numeric encoded-certificate iteration rather than list length, original guards with unused K third coordinate unrestricted. Twelve actual installation memberships, no success oracle. Coordinator froze6 pins; preflight running. Same-new-root capability reinstallation and HB3 remain unpaid.
 
-Coordinator `/root/formalization` now owns sole native compiler queue and Git publication; disjoint `p6` and `p12` authors never compile/publish. Publication4555b4c0 is verified. The prior ownership references below are historical.
+## Ownership and checks
 
-## Active exact targets
+Coordinator `/root/formalization` owns sole compiler and Git publication. Authors `p6` and `p12` own disjoint sources, never compile or publish. Root communicates with user. Previous worker identities are historical.
 
-1. P6 `Continuation20261115.OriginalEnumerationDepth`, reviewed Targets SHA256 `4956bc64b44fe8bb135bd8fee503dd25def7d7797f103155607676f543d10b82`, Definitions `46c9f109dda4909184a161fc1ad35c15cc65be3faa1df6a7577fdc0008724b7b`: independent raw-rank recursion for original enumeration depth. Valid leaf depth1; cons/application/numbered use1+max, not codeBounds size. Invalid decoder output0 is explicit, and constructor equations retain validity splits. Original eight-constructor layer fields is now accepted (3881 source-matched modules); full Fields/depth enumeration remains unpaid.
-2. P12 `Continuation20261116.CurrentRecursionBaseCertificate`, reviewed Targets `fecbb609b6da0d840753e1ac186225c69bef187a6eec26f5db11b710fab7b789`: literal zero recursion equation, tag+1 base child, one transitivity, fixed uniform seedFuel and only actual childCORE+guard. Constructor helper, not whole recursion induction or full producer. CurrentCompositionCertificate exact2 now accepted (2245 source-matched modules). Full HB3 remains unpaid.
+Only existing `scripts/check.py`:2048MiB heap,1536MiB RSS,2048MiB free floor,one thread,90CPU/180wall. No checker/toolchain/dependency/CI changes. Explicit prerequisite-first module order avoids Python traversal depth failures without changing limits: P6 depth LeafProof then NativeProof before new Fields; P12 old UniformClosedInstanceRecognizer.StatementChecks before new gates. All failed drafts/logs/receipts preserved before constructive repair. No sorry/admit/native_decide/new axioms or mathematical weakening. Exact types frozen before authoring.
 
-## Ownership and verification
+Read-only verify_packet.py validates recursive native artifacts. Give the same prerequisite gates first, pinned compiler/prefix, and require exact named audits. Evidence may take minutes for3863 modules.
 
-- Coordinator `continue_paper_formalization` owns the sole native compiler queue. Author lanes do not launch compilers.
-- `review_publish_recovery_20261116` owns independent review and Git publication; no other concurrent publisher. Publish source-first at least every30minutes, sooner at meaningful milestones. No merge or force push.
-- Native checks only via existing scripts/check.py with2048MiB heap,1536MiB RSS,2048MiB minimum free,one thread,90CPU/180wall seconds; no checker/toolchain/CI changes.
-- Nov16 read-only verify_packet.py differs from preserved Nov15 verifier only by adding Continuation20261116 to strict namespace audit coverage; provenance hashes recorded.
-- Freeze exact original targets before proofs; no sorry/admit/native_decide/new axioms. Failed and unrun sources, receipts/full logs/manifests must be preserved before bounded repairs. Standard axioms only.
+## Publication safeguards
 
-## Recovery and publication safeguards
+Publish source-first at least every30minutes; next due09:32UTC or earlier milestone. Normal git push lacks credentials. Use GitHub connector blobs/tree/commit/nonforce leased ref. Capture immutable bytes before upload, compare every returned Git blob SHA, then fetch and verify every expected remote path. Never use truncated batch shell output as source content. On uncertain result inspect ref/blob before retry.
 
-Current proof sources and failed/unrun Lean snapshots are remote at their original paths. Reconstructible large recursive JSON/receipts may remain local with exact hash/size inventories; do not claim all raw evidence remotely published. All-source audits include every Lean path without a100KB cutoff.
+Local repository HEAD/index can advance to verified remote via leased update-ref/read-tree (without changing worktree), preserving any newer author edits. All-source audits have no100KB cutoff; include failed/unrun Lean snapshots. Reconstructible raw evidence can be omitted only with exact hash/size inventory. Explicitly distinguish draft sources from accepted contracts.
 
-Normal git push lacks credentials. Authenticated GitHub connector publishes blobs/tree/commit and nonforce leased ref. Capture immutable local payload copies before uploading so live author edits cannot race the publication. Upload each novel blob separately (small base64 chunks if needed) and compare returned Git blob SHA with expected local bytes before creating the tree. Fetch and verify every intended remote path SHA afterward. A prior batched output transport corrupted a snapshot at26257a15; corrected exact sources are durable at7d4ab680 and later, local originals never lost. Never use a truncated multi-file shell response as source content.
-
-After a tool disconnect, verify the expected blob/ref outcome before retrying; do not duplicate uncertain writes. Preserve local drafts before reconciling any newer remote frontier. Resume from fresh remote inspection, not this timestamp alone. User may stop at any time.
+Stop promptly on user's next stop instruction, preserve all work. Fable/private research remain stopped; no automatic main merge or force push.
