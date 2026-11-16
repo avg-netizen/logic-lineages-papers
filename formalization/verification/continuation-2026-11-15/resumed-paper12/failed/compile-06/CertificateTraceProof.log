@@ -1,0 +1,28 @@
+/workspace/scratch/757cfdf4d288/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeCallCongruence/CertificateTraceProof.lean:59:2: error: Type mismatch: After simplification, term
+  hs
+ has type
+  Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      (Formula.equal
+        (unaryCertificate J (Term.var 0).succ
+          (pairValue J (rawNumeral a) (tupleValue J (List.map rawNumeral as.toList)))
+          (pairValue J (rawNumeral b) (tupleValue J (List.map rawNumeral bs.toList)))
+          (pairCertificate J (rawNumeral a) (tupleValue J (List.map rawNumeral as.toList)) (rawNumeral b)
+            (tupleValue J (List.map rawNumeral bs.toList)) (Term.numeral code)
+            (tupleCertificate J (map rawNumeral as) (map rawNumeral bs) (map Term.numeral cs))))
+        (Term.numeral
+          (unaryNumber (Term.var 0).succ (pairTerm a (tupleTerm as.toList)) (pairTerm b (tupleTerm bs.toList))
+            (pairNumber a (tupleTerm as.toList) b (tupleTerm bs.toList) code (tupleNumber as bs cs))))))
+but is expected to have type
+  Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      (Formula.equal
+        (unaryCertificate J (Term.var 0).succ (pairValue J (rawNumeral a) (tupleValue J (map rawNumeral as).toList))
+          (pairValue J (rawNumeral b) (tupleValue J (map rawNumeral bs).toList))
+          (pairCertificate J (rawNumeral a) (tupleValue J (map rawNumeral as).toList) (rawNumeral b)
+            (tupleValue J (map rawNumeral bs).toList) (Term.numeral code)
+            (tupleCertificate J (map rawNumeral as) (map rawNumeral bs) (map Term.numeral cs))))
+        (Term.numeral
+          (unaryNumber (Term.var 0).succ (pairTerm a (tupleTerm as.toList)) (pairTerm b (tupleTerm bs.toList))
+            (pairNumber a (tupleTerm as.toList) b (tupleTerm bs.toList) code (tupleNumber as bs cs))))))
+/workspace/scratch/757cfdf4d288/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeCallCongruence/CertificateTraceProof.lean:110:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeCallCongruence.CertificateTraceProof.call: forbidden axiom dependency sorryAx

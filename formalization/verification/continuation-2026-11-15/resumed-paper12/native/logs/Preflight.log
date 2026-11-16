@@ -1,0 +1,27 @@
+LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeCallCongruence.Targets.InternalPrescribedTraces :
+  Prop
+LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeCallCongruence.Targets.InternalTupleAndCall :
+  Prop
+LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeEquality.StatementChecks.exactTransitivity :
+  PrescribedRuntimeEquality.Targets.InternalTransitivity
+LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeEquality.StatementChecks.exactUnaryCongruence :
+  PrescribedRuntimeEquality.Targets.InternalUnaryCongruence
+LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.EffectiveNumeral.Family.HasCertificates.callCongruence
+  {alpha : Type} [Primcodable alpha] (axCheck : alpha → List ℕ → Bool) {arity : ℕ} {tag : alpha → ℕ}
+  (htag : Primrec tag) (args others : alpha → List.Vector (GorbowSyntax.Term 0) arity)
+  (ha : ∀ (i : Fin arity), EffectiveNumeral.Family.TermEffective fun x => (args x).get i)
+  (hb : ∀ (i : Fin arity), EffectiveNumeral.Family.TermEffective fun x => (others x).get i)
+  (hc :
+    ∀ (i : Fin arity),
+      EffectiveNumeral.Family.HasCertificates axCheck fun x =>
+        GorbowSyntax.Formula.equal ((args x).get i) ((others x).get i)) :
+  EffectiveNumeral.Family.HasCertificates axCheck fun x =>
+    GorbowSyntax.Formula.equal (GorbowPRDefiningEquations.call (tag x) (args x))
+      (GorbowPRDefiningEquations.call (tag x) (others x))
+LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMulNewestAdditionIteration.InvariantSupport.numeralValid
+  {n ctx : ℕ} (p : GorbowPRProgram.Program n) (old a : GorbowPRProgram.Program 1) (x : GorbowPRProgram.Program 3)
+  (I : Continuation20261114.RawMulNewestAdditionIteration.Installation p old a x) (count : GorbowSyntax.Term ctx) :
+  Nonempty
+    (GorbowTheoryProof.Derivation (GorbowPRNumeralCalculation.Theory p)
+      (Continuation20261114.RawReflexivityDispatcher.valid I.validatorTag
+        (SixSol20261113.LiteralNumeralPrefix.numeralCall I.numeralTag count)))

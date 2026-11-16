@@ -322,5 +322,11 @@
       "byte_identical_to_HEAD": true
     }
   ],
-  "conclusion": "The repair relocates four original proofs and the identical inputs definition into one public helper while preserving all nine complete theorem declarations, their namespace and variable context, all source AST/target pins, and the standard audit mechanism. No theorem assumption, conclusion, proof body, or accepted-contract count changes. Native memory success and all exact candidate gates are still pending."
+  "conclusion": "The repair relocates four original proofs and the identical inputs definition into one public helper while preserving all nine complete theorem declarations, their namespace and variable context, all source AST/target pins, and the standard audit mechanism. No theorem assumption, conclusion, proof body, or accepted-contract count changes. Native memory success and all exact candidate gates are still pending.",
+  "native_audit_observation_correction": {
+    "actual_helper_count": 4,
+    "actual_final_module_count": 5,
+    "actual_union_of_original_theorems": 9,
+    "explanation": "The native logs correct the earlier source-level expected final count of nine. They audit four plus five disjoint original theorems, all nine covered. See RESOURCE-04-NATIVE-REVIEW.json for immutable logs and receipt snapshot."
+  }
 }

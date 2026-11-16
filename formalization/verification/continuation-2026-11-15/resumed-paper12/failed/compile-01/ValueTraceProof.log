@@ -1,0 +1,17 @@
+/workspace/scratch/757cfdf4d288/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeCallCongruence/ValueTraceProof.lean:63:1: error: Type mismatch: After simplification, term
+  have this := Nonempty.intro h;
+  this
+ has type
+  Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      (Formula.equal (GorbowPRDefiningEquations.call J.numeralTag (Term.numeral value ::ᵥ nil))
+        (Term.numeral (Encodable.encode (GorbowTermPrefixCode.encode (Term.numeral value))))))
+but is expected to have type
+  Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      (Formula.equal (GorbowPRDefiningEquations.call J.numeralTag (Term.numeral value ::ᵥ nil))
+        (rawNumeral (Term.numeral value))))
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeCallCongruence.ValueTraceProof.pair: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/757cfdf4d288/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeCallCongruence/ValueTraceProof.lean:93:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeCallCongruence.ValueTraceProof.header: forbidden axiom dependency sorryAx

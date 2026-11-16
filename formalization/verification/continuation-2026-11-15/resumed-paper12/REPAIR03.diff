@@ -1,0 +1,11 @@
+--- failed/compile-03/CertificateTraceProof.lean
++++ CertificateTraceProof.lean
+@@ -53,7 +53,7 @@
+   have hs := ScalarTraceProof.unary p J hc hap hm hq hrc hrq false _ _ _
+    (pairTerm args.head (tupleTerm args.tail.toList)) (pairTerm others.head (tupleTerm others.tail.toList))
+    _ hvpa hvpb hp
+-  simpa only [tupleCertificate,tupleNumber,mapHead,mapTail,List.Vector.toList_map,
++  simpa only [tupleCertificate,tupleNumber,mapHead,mapTail,List.Vector.toList_map,Nat.add_sub_cancel,
+    Bool.false_eq_true,if_false] using hs
+ 
+ /-- The original tag reflexivity, arity reflexivity and final U congruence occur

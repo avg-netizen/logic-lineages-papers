@@ -1,0 +1,29 @@
+/workspace/scratch/757cfdf4d288/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeCallCongruence/ValidityProof.lean:36:45: error: Application type mismatch: The argument
+  hv
+has type
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (RawReflexivityDispatcher.valid I.vtag (FixedFormulaSubstitution.termValue I.ctag I.atag e nil t))
+but is expected to have type
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal
+      (GorbowPRDefiningEquations.call I.vtag
+        (FixedFormulaSubstitution.termValue I.ctag I.atag
+            (FullFormulaInstantiationValidity.FixedTemplateEncodingTargets.boundEnvironment 0) nil t ::ᵥ
+          nil))
+      Term.zero.succ)
+in the application
+  localTrans (TwoSol20261113.ReflexivityRecognizer.leafCall I.vtag (PrescribedRuntimeEquality.rawNumeral t))
+    (GorbowPRDefiningEquations.call I.vtag
+      (FixedFormulaSubstitution.termValue I.ctag I.atag
+          (FullFormulaInstantiationValidity.FixedTemplateEncodingTargets.boundEnvironment 0) nil t ::ᵥ
+        nil))
+    Term.zero.succ
+    (Hilbert.Local.base
+      (Support.equalitySymmetry
+        (GorbowPRDefiningEquations.call I.vtag
+          (FixedFormulaSubstitution.termValue I.ctag I.atag
+              (FullFormulaInstantiationValidity.FixedTemplateEncodingTargets.boundEnvironment 0) nil t ::ᵥ
+            nil))
+        (TwoSol20261113.ReflexivityRecognizer.leafCall I.vtag (PrescribedRuntimeEquality.rawNumeral t)) heq))
+    hv
+/workspace/scratch/757cfdf4d288/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeCallCongruence/ValidityProof.lean:48:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeCallCongruence.ValidityProof.closed: forbidden axiom dependency sorryAx

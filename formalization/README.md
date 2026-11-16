@@ -1,4 +1,20 @@
-# Current checkpoint — two-agent continuation paused
+# Current checkpoint — enumeration recurrence and call certificates
+
+Four additional exact supporting contracts are accepted on the November 15
+cumulative branch: the original Paper 6 previous-answer and enumeration
+equations, and Paper 12 prescribed tuple/call traces and runtime certificate
+correctness. The supporting-contract total is **733**. Both focused native
+gates pass across **6,008 distinct source-matched local modules**, with
+standard-only axiom audits and unchanged verification limits.
+
+Read [the completed handoff](verification/continuation-2026-11-15/resumed-session/FINAL-HANDOFF.md)
+for the exact contracts, independent reviews, preserved failures, and native
+receipts. The numbered register remains **175 checked, 2 inherited, 12 pending
+/189**. Full Paper 6 I/C/accessibility and Paper 12 HB3 remain open.
+
+---
+
+# Previous checkpoint — two-agent continuation paused
 
 Fifteen exact supporting contracts in 29 new source files are checked across
 the two-agent continuation. These cover retained compatibility diagnostics,

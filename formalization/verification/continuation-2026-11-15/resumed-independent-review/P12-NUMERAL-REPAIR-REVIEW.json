@@ -1,0 +1,43 @@
+{
+  "status": "Independent source review passed; repaired native module and exact candidate gates pending.",
+  "reviewer": "branch_review",
+  "review_time_utc": "2026-11-16T06:31:09.010319+00:00",
+  "compiler_run_by_reviewer": false,
+  "native_acceptance_claimed": false,
+  "source": "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeCallCongruence/ValueTraceProof.lean",
+  "old_source_sha256": "2587213e6bef492cd66e52790cfa3b107ffdda3f456916d1fec1b4b2ec262a52",
+  "new_source_sha256": "1a3fb166171521ac38864d7fdb52f743e2f66c3560785d4b55dbc764d418a05e",
+  "failed_snapshot": {
+    "directory": "verification/continuation-2026-11-15/resumed-paper12/failed/compile-01",
+    "verified_source_count": 19,
+    "log_sha256": "c076d8b0ae40eab250888cd90a7fb9ed595f7c1cb63ddefd573ced53bb9a1afc",
+    "uncompressed_receipt_sha256": "b8f6d998585573db6ba1ee9a3b4993df6f5331d37b32220c56a35f9fd3674b80",
+    "failed_native_row": {
+      "module": "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeCallCongruence.ValueTraceProof",
+      "returncode": 1,
+      "seconds": 1.723,
+      "observed_cpu_seconds": 1.67,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 1209384,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "2587213e6bef492cd66e52790cfa3b107ffdda3f456916d1fec1b4b2ec262a52",
+      "log": "build-reports/1794810505598633489-6-LogicLineages-ComputabilityKnowledge-CertifiedSourceProvabilityCompletion-Continuation20261115-PrescribedRuntimeCallCongruence-ValueTraceProof.log"
+    }
+  },
+  "candidate_manifest": {
+    "path": "verification/continuation-2026-11-15/resumed-paper12/FULL02.json",
+    "sha256": "a8eeb2cc55aa617303430f5b75736df1088b27e724fca5b62c3e9538cdef1eca",
+    "verified_source_count": 19
+  },
+  "exact_change": "The sole byte change across the nineteen-source packet is addition of rawNumeral to the existing simpa only list in ValueTraceProof.numeral. Every statement, premise, import and audit directive is unchanged.",
+  "definition_correspondence": {
+    "source": "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeEquality/Definitions.lean",
+    "source_sha256": "e533bbc75a451ef08c8d4d8db87c1afda93e3dc088403cb6d84d60c8b72e7727",
+    "rawNumeral": "Term.numeral (Encodable.encode (GorbowTermPrefixCode.encode t))",
+    "reason": "The failed elaboration differs precisely between the explicit encoded Term.numeral expression and its rawNumeral wrapper. Unfolding the existing alias exposes the expected same expression; it adds no reflection rule, certificate premise, numeral assumption, or source axiom."
+  },
+  "rechecked_frozen_and_provenance_pin_count": 24,
+  "conclusion": "The proposed repair addresses the observed definitional-wrapper mismatch without altering the theorem or its mathematical derivation. Failed draft and log remain preserved. Native acceptance awaits the coordinator retry and frozen exact comparator outputs."
+}

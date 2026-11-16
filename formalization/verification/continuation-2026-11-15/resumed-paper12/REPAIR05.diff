@@ -1,0 +1,16 @@
+--- failed/compile-06/CertificateTraceProof.lean
++++ CertificateTraceProof.lean
+@@ -56,8 +56,11 @@
+   have hs := ScalarTraceProof.unary p J hc hap hm hq hrc hrq false _ _ _
+    (pairTerm a (tupleTerm as.toList)) (pairTerm b (tupleTerm bs.toList))
+    _ hvpa hvpb hp
+-  simpa only [List.Vector.map_cons,tupleCertificate,tupleNumber,List.Vector.head_cons,
+-   List.Vector.tail_cons,List.Vector.toList_map,Bool.false_eq_true,if_false] using hs
++  -- Match the implicit subtraction index carried by Vector.tail by unfolding
++  -- its ordinary definitions, as in the pinned Mathlib Vector.tail_map proof.
++  set_option backward.isDefEq.respectTransparency false in
++   simpa only [List.Vector.map_cons,tupleCertificate,tupleNumber,List.Vector.head_cons,
++    List.Vector.tail_cons,List.Vector.toList_map,Bool.false_eq_true,if_false] using hs
+ 
+ /-- The original tag reflexivity, arity reflexivity and final U congruence occur
+  in their fixed order; all supplied certificate numbers remain unrestricted. -/

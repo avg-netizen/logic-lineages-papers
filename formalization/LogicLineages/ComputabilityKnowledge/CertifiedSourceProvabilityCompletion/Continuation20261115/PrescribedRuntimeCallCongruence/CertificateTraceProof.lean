@@ -38,22 +38,29 @@ theorem tuple {arity ctx : Nat} (p : Program arity) (J : Tags)
   exact TraceCoreProof.reflexive p J hrc hrq zeroValue .zero (.logical (.reflexive _))
  | succ n ih =>
   intro args others codes
-  obtain ⟨ht⟩ := ih args.tail others.tail codes.tail
-  obtain ⟨hva⟩ := ValueTraceProof.tuple (ctx := ctx) p J hc hap args.tail.toList
-  obtain ⟨hvb⟩ := ValueTraceProof.tuple (ctx := ctx) p J hc hap others.tail.toList
+  obtain ⟨a, as, rfl⟩ := List.Vector.exists_eq_cons args
+  obtain ⟨b, bs, rfl⟩ := List.Vector.exists_eq_cons others
+  obtain ⟨code, cs, rfl⟩ := List.Vector.exists_eq_cons codes
+  obtain ⟨ht⟩ := ih as bs cs
+  obtain ⟨hva⟩ := ValueTraceProof.tuple (ctx := ctx) p J hc hap as.toList
+  obtain ⟨hvb⟩ := ValueTraceProof.tuple (ctx := ctx) p J hc hap bs.toList
   obtain ⟨hp⟩ := ScalarTraceProof.pair p J hc hap hm hq hrc hrq
-   (rawNumeral args.head) _ (rawNumeral others.head) _ (Term.numeral codes.head) _
-   args.head (tupleTerm args.tail.toList) others.head (tupleTerm others.tail.toList)
-   codes.head (tupleNumber args.tail others.tail codes.tail)
+   (rawNumeral a) _ (rawNumeral b) _ (Term.numeral code) _
+   a (tupleTerm as.toList) b (tupleTerm bs.toList)
+   code (tupleNumber as bs cs)
    (.logical (.reflexive _)) hva (.logical (.reflexive _)) hvb (.logical (.reflexive _)) ht
-  obtain ⟨hvpa⟩ := ValueTraceProof.pair p J hc hap _ _ args.head (tupleTerm args.tail.toList)
+  obtain ⟨hvpa⟩ := ValueTraceProof.pair p J hc hap _ _ a (tupleTerm as.toList)
    (.logical (.reflexive _)) hva
-  obtain ⟨hvpb⟩ := ValueTraceProof.pair p J hc hap _ _ others.head (tupleTerm others.tail.toList)
+  obtain ⟨hvpb⟩ := ValueTraceProof.pair p J hc hap _ _ b (tupleTerm bs.toList)
    (.logical (.reflexive _)) hvb
   have hs := ScalarTraceProof.unary p J hc hap hm hq hrc hrq false _ _ _
-   (pairTerm args.head (tupleTerm args.tail.toList)) (pairTerm others.head (tupleTerm others.tail.toList))
+   (pairTerm a (tupleTerm as.toList)) (pairTerm b (tupleTerm bs.toList))
    _ hvpa hvpb hp
-  simpa only [tupleCertificate,tupleNumber,mapHead,mapTail] using hs
+  -- Match the implicit subtraction index carried by Vector.tail by unfolding
+  -- its ordinary definitions, as in the pinned Mathlib Vector.tail_map proof.
+  set_option backward.isDefEq.respectTransparency false in
+   simpa only [List.Vector.map_cons,tupleCertificate,tupleNumber,List.Vector.head_cons,
+    List.Vector.tail_cons,List.Vector.toList_map,Bool.false_eq_true,if_false] using hs
 
 /-- The original tag reflexivity, arity reflexivity and final U congruence occur
  in their fixed order; all supplied certificate numbers remain unrestricted. -/

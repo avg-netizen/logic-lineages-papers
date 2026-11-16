@@ -1,0 +1,26 @@
+{
+  "option": "backward.isDefEq.respectTransparency",
+  "value": false,
+  "scope": "Only the final simpa tactic inside CertificateTraceProof.tuple successor case.",
+  "pinned_toolchain": "leanprover/lean4:v4.32.0-rc1",
+  "primary_source_evidence": [
+    {
+      "file": "Lean/Meta/ExprDefEq.lean",
+      "sha256": "512f775b106b4ac0070ef58306d801131b5cf07c2d7e4d25dc7bba109bd80e1c",
+      "registration_excerpt": "register_builtin_option backward.isDefEq.respectTransparency : Bool := {\n  defValue := true\n  descr    := \"if true (the default), do not bump transparency to `.default` \\\n  when checking whether implicit arguments are definitionally equal\"\n}",
+      "implementation_excerpt": "else\n      -- Old behavior\n      unless (\u2190 withInferTypeConfig <| Meta.isExprDefEqAux a\u2081 a\u2082) do return false",
+      "proof_irrelevance_excerpt": "private def withProofIrrelTransparency (k : MetaM \u03b1) : MetaM \u03b1 := do\n  if backward.isDefEq.respectTransparency.get (\u2190 getOptions) then\n    k\n  else\n    withInferTypeConfig k"
+    },
+    {
+      "file": "Lean/Meta/InferType.lean",
+      "sha256": "3e348e9042ddcaa1b74251ab281f1b53ac26c059494f361f2fa59ec76bc9dc2c",
+      "excerpt": "@[inline] def withInferTypeConfig (x : MetaM \u03b1) : MetaM \u03b1 :=\n  withAtLeastTransparency .default do\n    let cfg \u2190 getConfig\n    if cfg.beta && cfg.iota && cfg.zeta && cfg.zetaHave && cfg.zetaDelta && cfg.proj == .yesWithDelta && cfg.etaStruct == .all then\n      x\n    else\n      withConfig (fun cfg => { cfg with beta := true, iota := true, zeta := true, zetaHave := true, zetaDelta := true, proj := .yesWithDelta, etaStruct := .all }) x"
+    },
+    {
+      "file": "Mathlib/Data/Vector/Basic.lean",
+      "sha256": "46191de840eb4cc19cdbcc41f728aa6aa626c8b3e51fcc045db0990621bd5ae2",
+      "excerpt": "set_option backward.isDefEq.respectTransparency false in\n@[simp]\ntheorem tail_map {\u03b2 : Type*} (v : Vector \u03b1 (n + 1)) (f : \u03b1 \u2192 \u03b2) :\n    (v.map f).tail = v.tail.map f := by\n  obtain \u27e8a, v', h\u27e9 := Vector.exists_eq_cons v\n  rw [h, map_cons, tail_cons, tail_cons]"
+    }
+  ],
+  "review_conclusion": "The false branch changes elaborator definitional-equality search to ordinary default transparency, through the same Meta.isExprDefEqAux. It allows unfolding definitions and proof-type comparisons that lower tactic transparency left opaque. It introduces no axiom and bypasses no kernel check. The scoped tactic produces the native kernel-checked proof whose actual audit uses only the permitted foundational axioms; checker, kernel/toolchain binaries, audit implementation, pins and resource caps are not modified."
+}

@@ -1,0 +1,33 @@
+/workspace/scratch/757cfdf4d288/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeCallCongruence/CertificateTraceProof.lean:56:2: error: Type mismatch: After simplification, term
+  hs
+ has type
+  Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      (Formula.equal
+        (unaryCertificate J (if false = true then (Term.var 0).universalFunction else (Term.var 0).succ)
+          (pairValue J (rawNumeral args.head) (tupleValue J (List.map rawNumeral args.tail.toList)))
+          (pairValue J (rawNumeral others.head) (tupleValue J (List.map rawNumeral others.tail.toList)))
+          (pairCertificate J (rawNumeral args.head) (tupleValue J (List.map rawNumeral args.tail.toList))
+            (rawNumeral others.head) (tupleValue J (List.map rawNumeral others.tail.toList)) (Term.numeral codes.head)
+            (tupleCertificate J (map rawNumeral args.tail) (map rawNumeral others.tail) (map Term.numeral codes.tail))))
+        (Term.numeral
+          (unaryNumber (if false = true then (Term.var 0).universalFunction else (Term.var 0).succ)
+            (pairTerm args.head (tupleTerm args.tail.toList)) (pairTerm others.head (tupleTerm others.tail.toList))
+            (pairNumber args.head (tupleTerm args.tail.toList) others.head (tupleTerm others.tail.toList) codes.head
+              (tupleNumber args.tail others.tail codes.tail))))))
+but is expected to have type
+  Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      (Formula.equal
+        (unaryCertificate J (Term.var 0).succ
+          (pairValue J (rawNumeral args.head) (tupleValue J (map rawNumeral args.tail).toList))
+          (pairValue J (rawNumeral others.head) (tupleValue J (map rawNumeral others.tail).toList))
+          (pairCertificate J (rawNumeral args.head) (tupleValue J (map rawNumeral args.tail).toList)
+            (rawNumeral others.head) (tupleValue J (map rawNumeral others.tail).toList) (Term.numeral codes.head)
+            (tupleCertificate J (map rawNumeral args.tail) (map rawNumeral others.tail) (map Term.numeral codes.tail))))
+        (Term.numeral
+          (unaryNumber (Term.var 0).succ (pairTerm args.head (tupleTerm args.tail.toList))
+            (pairTerm others.head (tupleTerm others.tail.toList))
+            (pairNumber args.head (tupleTerm args.tail.toList) others.head (tupleTerm others.tail.toList) codes.head
+              (tupleNumber args.tail others.tail codes.tail))))))
+/workspace/scratch/757cfdf4d288/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/PrescribedRuntimeCallCongruence/CertificateTraceProof.lean:106:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedRuntimeCallCongruence.CertificateTraceProof.call: forbidden axiom dependency sorryAx
