@@ -1,0 +1,1 @@
+Independent read-only review accepted exact original headerVariables(2,0), arithmetic-only header terms, actual three node memberships without correctness oracle, and verbatim prior named-alias source conjunction. Header arithmetic transport only; full computation and HB3 remain unpaid. Six pins verified before freeze.

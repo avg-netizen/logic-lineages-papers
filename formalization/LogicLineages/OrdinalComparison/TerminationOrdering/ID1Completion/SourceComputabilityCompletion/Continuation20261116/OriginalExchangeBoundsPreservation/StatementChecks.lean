@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.Proof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.Targets
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.StatementChecks
+theorem exactBoundsPreserved : Targets.InternalBoundsPreserved := by
+  intro n arity body alpha Delta node window left right lv rv hp he hlv hrv
+  exact Proof.preserved n arity node window left right lv rv hp he hlv hrv
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.StatementChecks

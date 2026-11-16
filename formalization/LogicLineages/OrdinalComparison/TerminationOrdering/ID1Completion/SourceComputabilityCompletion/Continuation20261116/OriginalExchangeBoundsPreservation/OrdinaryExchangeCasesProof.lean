@@ -40,6 +40,8 @@ theorem atValues (n : Nat) (arity : Fin n → Nat)
   have hg := ExchangeGuardProof.accepted n arity node left right window hp he
   have hlg := andLeft hg
   have hrg := andRight hg
+  have hlchild := UnaryGuardProof.child true n left lm lc hlc hlg
+  have hrchild := UnaryGuardProof.child true n right rm rc hrc hrg
   have hr := (OriginalDecodedOrdinaryRecurrence.Proof.ordinaryRecurrence n arity body alpha Delta
     left right lm rm lc rc node child window symbols types hlc hrc hp hchild hw).mp he
   apply OriginalTypedDecoderInternalBranchProof.orCases (andRight hr)
@@ -47,10 +49,8 @@ theorem atValues (n : Nat) (arity : Fin n → Nat)
         graph2 OriginalDecodedOrdinaryRecurrence.resultEqual (suc z) rm lm) :: Delta)
         (programGraph (Continuation20261114.OriginalHeadMove.headMove n arity) (suc z) ![lm,lc,rm,rc,symbols,types] ⊓
         graph2 OriginalDecodedOrdinaryRecurrence.resultEqual (suc z) rm lm)) := ⟨Derivation.hypothesis List.mem_cons_self⟩
-    have hlchild := UnaryGuardProof.child true n left lm lc (withHyp hlc _) (withHyp hlg _)
-    have hrchild := UnaryGuardProof.child true n right rm rc (withHyp hrc _) (withHyp hrg _)
     obtain ⟨hce⟩ := HeadMoveBoundsProof.preserved n arity lm lc rm rc symbols types cv dv
-      (andLeft hb) hlchild hrchild (withHyp hcv _) (withHyp hdv _)
+      (andLeft hb) (withHyp hlchild _) (withHyp hrchild _) (withHyp hcv _) (withHyp hdv _)
     have hdv' := outputTransport (OriginalCodeBoundsRecursion.bounds n) dv cv ![rc] ⟨symm hce⟩ (withHyp hdv _)
     exact UnaryBoundsCongruenceProof.sameChildValue true n left right lm rm lc rc cv lv rv
       (withHyp hlc _) (withHyp hrc _) (withHyp hlg _) (withHyp hrg _) (withHyp hcv _) hdv' (withHyp hlv _) (withHyp hrv _)
