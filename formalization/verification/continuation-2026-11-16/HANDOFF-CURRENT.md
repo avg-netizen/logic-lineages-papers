@@ -5,8 +5,8 @@ Snapshot: 2026-11-16 13:44 UTC. Continuation authorization remains active.
 ## Verified durable frontier
 
 - Branch: `formalization/cumulative-continuation-2026-11-16`.
-- Verified remote head: `014087b9a8b0d7e26c46a9beef69b62249640d21`, committed 13:41:51 UTC. All 23 intended source/handoff snapshot paths match the remote. Draft checkpoint; accepted total unchanged.
-- Accepted supporting contracts: **814 at the verified remote head above; 818 now locally accepted pending publication**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
+- Verified remote head: `117bdd35618a34a273c9c65f161d7e7e2e778eca`, committed 13:56:23 UTC. All 21 snapshot paths and acceptance39 all20 source hashes verified remotely.
+- Accepted supporting contracts: **818 at the verified remote head above; 827 now locally accepted pending publication**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
 - Main4028a9e and independent Nov15 branch b51cb999 remain unchanged. Overlapping prior733 are never added twice. No main merge or force push.
 - Acceptance13: one coherent cumulative source exact1,2341 recursively matched modules,total760. Six prior packages/capabilities retained, K/S plus seven helper contracts reconstructed at actual new CORE where needed. No tuple/tag equality shortcut.
 - Acceptance14: original K-lift/S-mpUnder and arbitrary-code literal traces exact3,2351 matched modules,total763. K then one MP; S then two MP in original order. Actual new source/CORE/Fuel, original guards, membership-backed registry coherence.
@@ -74,3 +74,5 @@ Current active packets as of13:29UTC: OriginalCodeBoundsConstructors exact9 froz
 13:44 UTC: NilProof and ZeroMaximum passed receipt1794836533222784284-5; RootMerge implicit context repair pending. NativeScalar passed receipt1794836388109815378-5; InputProof binder repair pending recheck. No exact packet acceptance. Next checkpoint due by 14:11 UTC.
 
 Acceptance39: CurrentCallCongruenceProgram exact4, final1794837119316135829-5, evidence20 verified 2456 modules, 20 source pins including preflight,10 frozen/provenance pins unchanged. Actual literal tuple/call AST, unrestricted numeric child codes in native calibration; arbitrary-symbolic actual-node graph without correctness premises. Total818 locally accepted; numbered register unchanged. Composition/compiler/source/HB3 remain unpaid.
+
+Acceptance40: OriginalCodeBoundsConstructors exact9, final1794837180795646043-5, evidence24 verified 4207 modules, 32 source pins including preflight,14 frozen pins. All eight original guarded constructor laws plus malformed-zero; actual child observations existential and internally queried. Total827 locally accepted, numbered register unchanged. Typed depth/coverage and full accessibility remain unpaid.
