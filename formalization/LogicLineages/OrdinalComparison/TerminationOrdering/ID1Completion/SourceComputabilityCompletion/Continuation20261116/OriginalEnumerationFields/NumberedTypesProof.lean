@@ -10,6 +10,7 @@ open InternalControlGraphSupportProof
 open InternalTagArithmeticSyntaxProof (z suc)
 open InternalApplicationStepPeelSupportProof (andIntro)
 open InputProof NumberedControlsProof NumberedScalarProof
+open OriginalRawSyntaxTransport
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 attribute [local irreducible] programGraph
 

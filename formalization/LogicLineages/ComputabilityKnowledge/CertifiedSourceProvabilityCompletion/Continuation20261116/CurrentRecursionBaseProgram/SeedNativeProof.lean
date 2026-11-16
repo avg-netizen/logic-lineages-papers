@@ -26,7 +26,7 @@ theorem seed {arity : Nat} (v : List.Vector Nat arity) (tag : Nat) (n : Nat)
  evaluate (seedProgram n f raw) v =
  PrescribedRuntimeSpecialization.produce (substituteFormula (TagSyntax.plug n tag) f) sigma
   (PrescribedSourceAxiomSpecialization.seed (substituteFormula (TagSyntax.plug n tag) f)) := by
- induction n generalizing f raw sigma with
+ induction n with
  | zero =>
   have hs : TagSyntax.join tag sigma = TagSyntax.plug 0 tag := by
    funext i

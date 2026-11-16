@@ -46,7 +46,7 @@ theorem tail {n : Nat} (tag : Nat) (sigma : Fin (n+1) → Term 0) (i : Fin (n+1)
    simp only [join,Fin.lastCases_castSucc]
 theorem head {n : Nat} (tag : Nat) (sigma : Fin (n+1) → Term 0) : join tag sigma 0 = sigma 0 := by
  change join tag sigma (Fin.castSucc (0 : Fin (n+1))) = _
- exact Fin.lastCases_castSucc _ _ _
+ simp only [join,Fin.lastCases_castSucc]
 
 theorem formulaFull {n : Nat} (tag : Nat) (f : Formula (n+1)) (sigma : Fin n → Term 0) :
  substituteFormula sigma (substituteFormula (plug n tag) f) = substituteFormula (join tag sigma) f := by
@@ -63,6 +63,7 @@ theorem root (m tag : Nat) : substituteFormula (plug m tag) (rootTemplate m) = C
  have hx : xs.map (substitute (plug m tag)) = argumentVariables m := by
   ext i
   simp only [xs,List.Vector.get_map,List.Vector.get_ofFn,substitute,plugCast,argumentVariables]
+ dsimp only [xs] at hx
  simp only [rootTemplate,openCall,substituteFormula,substitute,
   CurrentCalculationFormulaProgram.NativeProof.substPair,CurrentCalculationFormulaProgram.NativeProof.substTuple,
   SixSol20261112.Fuel.Logic.substNumeral,plugLast,← List.Vector.toList_map,List.Vector.map_cons,hx,
