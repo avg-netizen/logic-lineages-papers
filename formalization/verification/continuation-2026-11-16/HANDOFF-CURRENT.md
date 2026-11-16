@@ -1,15 +1,21 @@
 # Current public formalization handoff
 
-Snapshot: 2026-11-16 08:18 UTC. User authorization continues until further notice.
+Snapshot: 2026-11-16 08:53 UTC. User authorization continues until further notice.
 
 ## Durable frontier
 
 - Cumulative branch: `formalization/cumulative-continuation-2026-11-16`.
-- Verified remote head: `c388e894d7e5adec02438816bcf26d3560757be3` (08:15:46 UTC).
-- Accepted supporting contracts: **741**. Original numbered register remains **175 checked / 2 inherited / 12 pending / 189**. Supporting helpers are not whole-paper completions.
+- Verified remote head: `4555b4c0d1c805e325fa5367c1bd392648199bde` (08:51 UTC).
+- Accepted supporting contracts: **747**. Original numbered register remains **175 checked / 2 inherited / 12 pending / 189**. Supporting helpers are not whole-paper completions.
 - Reconciled main `4028a9e34506f4339af2992749464cf2d4d55eb9`; independent Nov15 cumulative `b51cb999d825f2a54160f642dd8c2d70a7a1496a` has overlapping733. Its exact three call-congruence repairs were imported with provenance after preserving our drafts, not merged. Do not add733 again or overwrite that branch.
 - Our additional original-enumeration zero/successor equations and current-source seeded specialization add four beyond that overlapping733; original type-list membership adds one more; current composition adds two and explicit eight-constructor layer fields adds one, total741.
 - Acceptance records01–07 record exact aliases, source correspondence, native receipts and independent/coordinator recursive hashes. Latest CurrentSourceSeededSpecialization has2189 recursively source-matched native modules. No full-root or CI claim.
+
+## Current recovery update
+
+Acceptance08 added original recursion base exact2 (743); acceptance09 adds K/S propositional exact4 (747), with2268 recursively source-matched modules. P6 original depth exact10 passed final gate, recursive audit pending, not yet counted. P12 actual nested K/S CORE retention exact1 is frozen; leaf/dispatcher pass, kernel namespace repair pending. Original CORE/Fuel producer, same-root reinstallation and HB3 remain open.
+
+Coordinator `/root/formalization` now owns sole native compiler queue and Git publication; disjoint `p6` and `p12` authors never compile/publish. Publication4555b4c0 is verified. The prior ownership references below are historical.
 
 ## Active exact targets
 

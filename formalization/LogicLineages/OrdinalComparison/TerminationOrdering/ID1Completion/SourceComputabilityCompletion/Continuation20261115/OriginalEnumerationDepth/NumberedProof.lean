@@ -57,7 +57,7 @@ theorem forward (n : Nat) (raw label head typ left types right out : OTerm alpha
       (BinaryValueProof.numbered n ((raw.relabel j).relabel k) ((label.relabel j).relabel k) ((head.relabel j).relabel k) ((typ.relabel j).relabel k)
         ((left.relabel j).relabel k) ((types.relabel j).relabel k) ((right.relabel j).relabel k) dl dr maximum hck hgk hl hr hm)
     have hb := BinarySyntaxProof.introduce n ((left.relabel j).relabel k) ((right.relabel j).relabel k)
-      ((out.relabel j).relabel k) ![dl,dr,maximum] (andIntro hl (andIntro hr (andIntro hm he)))
+      ((out.relabel j).relabel k) ![dl,dr,maximum] (andIntro (andIntro (andIntro hl hr) hm) he)
     obtain ⟨h⟩ := andIntro hgk hb
     exact ⟨orRight h⟩
 
@@ -79,10 +79,10 @@ theorem backward (n : Nat) (raw label head typ left types right out : OTerm alph
     rw [BinaryValueProof.numberedRename] at hcj
     have hgj := renameInto (andLeft hr) j Theta hj
     simp only [graph1Rename,GuardedSourceSyntaxProof.numeralRename] at hgj
-    obtain ⟨he⟩ := andRight (andRight (andRight hf))
+    obtain ⟨he⟩ := andRight hf
     exact outputTransport (depth n) (suc (ys 2)) (out.relabel j) ![raw.relabel j] ⟨symm he⟩
       (BinaryValueProof.numbered n (raw.relabel j) (label.relabel j) (head.relabel j) (typ.relabel j) (left.relabel j) (types.relabel j) (right.relabel j)
-        (ys 0) (ys 1) (ys 2) hcj hgj (andLeft hf) (andLeft (andRight hf)) (andLeft (andRight (andRight hf))))
+        (ys 0) (ys 1) (ys 2) hcj hgj (andLeft (andLeft (andLeft hf))) (andRight (andLeft (andLeft hf))) (andRight (andLeft hf)))
   obtain ⟨vr⟩ := vr
   obtain ⟨hw⟩ := hw
   exact ⟨InternalBetaTotalityProof.disjunctionElimination hw
