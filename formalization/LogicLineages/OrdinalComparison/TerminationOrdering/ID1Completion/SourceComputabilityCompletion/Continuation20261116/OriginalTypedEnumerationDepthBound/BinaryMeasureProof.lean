@@ -20,7 +20,7 @@ attribute [local irreducible] programGraph
 
 theorem atValues (cons : Bool) (n : Nat)
     (raw typ left right pair size label depth lv ls ll dl rv rs rl dr maximum boundLabel canonical : OTerm alpha)
-    (hc : Nonempty (Derivation body Delta (graph3 (OriginalCodeBoundsConstructors.BinaryValueProof.constructor cons) raw typ left right)))
+    (hc : Nonempty (Derivation body Delta (graph3 (OriginalCodeBoundsConstructors.BinaryRootProof.constructor cons) raw typ left right)))
     (hg : Nonempty (Derivation body Delta (graph1 (OriginalCodeValidityGuard.check n) (suc z) raw)))
     (hb : Nonempty (Derivation body Delta (graph1 (OriginalCodeBoundsRecursion.bounds n) pair raw)))
     (hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing pair size label)))
