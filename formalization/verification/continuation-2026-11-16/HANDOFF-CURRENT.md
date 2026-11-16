@@ -1,5 +1,9 @@
 # Current public formalization handoff
 
+## PAUSE REQUEST — 2026-11-16 20:52 UTC
+
+The user requests pause after the next checkpoint. This source/status checkpoint is the final authorized continuation checkpoint. After remote verification, coordinator stops the active fixed-limit cold rebuild and all author lanes; no automatic resumption. Durable supporting frontier868 through acceptance67; numbered175checked/2inherited/12pending/189 unchanged. All reconstructed proof drafts and failed variants are already durable; none is newly accepted. Cold rebuild has727validated cached modules plus414new passes observed (1141partial), but no final gate or recursive evidence for recovered packets. Interrupted historical raw receipts/evidence from before first replacement remain unavailable; no fabricated reconstruction. Source comparisons and official setup validation are not full proof or CI claims. Final stop receipt/status will be recorded after the active process is reaped.
+
 ## LIVE RECOVERY POINTER — 2026-11-16 19:45 UTC
 
 - Continue authorized public formalization until further notice. Sole coordinator owns publication and serialized fixed-limit proof checks; no main merge, force push, CI/checker/pin changes or private research.
