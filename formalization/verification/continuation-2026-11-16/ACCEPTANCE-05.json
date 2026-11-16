@@ -1,0 +1,27 @@
+{
+  "time_utc": "2026-11-16T07:44:44.996565+00:00",
+  "accepted_supporting_contracts": 738,
+  "original_register": {
+    "checked": 175,
+    "inherited": 2,
+    "pending": 12,
+    "total": 189
+  },
+  "packet": "P6 OriginalTypeListsMembership",
+  "exact_contracts": 1,
+  "native_receipt": "1794814819852379940-7",
+  "evidence": [
+    {
+      "path": "formalization/verification/continuation-2026-11-16/P6/EVIDENCE-03.json",
+      "sha256": "755883f4f6b7bfa13941157fe98c1acd58776696316adfbdca4b0937ada9e1b4",
+      "modules": 3837
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-16/P6/REVIEW-EVIDENCE-03.json",
+      "sha256": "755883f4f6b7bfa13941157fe98c1acd58776696316adfbdca4b0937ada9e1b4",
+      "modules": 3837
+    }
+  ],
+  "review": "All-raw internal membership iff actual raw-list length<succ(bound) and internally universally quantified allowed membership. Internal nat induction preserves original typeLists zero[[]]/successor empty-plus-row-cross AST, duplicates and empty/zero codes. Row entries use actual consCode, not numeric pairing; head/tail injectivity and raw nil/cons cases internal. Only actual enumeration/length observations assumed.34final source pins and105failure/unrun pins verified, frozen49c2f390 unchanged.",
+  "limits": "Focused closure only; original full enumeration Fields/depth coverage and Q/source accessibility remain pending. No full-root/CI or numbered statement completion."
+}
