@@ -37,7 +37,7 @@ theorem rangeAt (xs : Fin 7 → OTerm alpha) (range : OTerm alpha)
     · intro i
       fin_cases i
       exact projectionValue 2 xs
-  apply compositionRecover OriginalAscendingRange.range ![.composition .succ ![.projection 2]] range xs ![suc (xs 2)] hr
+  apply compositionRecover OriginalAscendingRange.range ![(.composition .succ ![.projection 2])] range xs ![suc (xs 2)] hr
   intro i
   fin_cases i
   exact hs
@@ -53,7 +53,7 @@ theorem branchAt (n : Nat) (xs : Fin 7 → OTerm alpha) (out range tuples : OTer
     (hr : Nonempty (Derivation body Delta (programGraph OriginalEnumerationConstructorLayer.labelRange range xs)))
     (ht : Nonempty (Derivation body Delta (programGraph OriginalEnumerationConstructorLayer.typeTuples tuples xs))) :
     Nonempty (Derivation body Delta (programGraph (OriginalEncodedNumberedEnumerationBranch.branch n) out
-      ![range,xs 1,xs 0,xs 5,tuples,xs 5]))) := by
+      ![range,xs 1,xs 0,xs 5,tuples,xs 5])) := by
   apply compositionRecover (OriginalEncodedNumberedEnumerationBranch.branch n)
     ![OriginalEnumerationConstructorLayer.labelRange,.projection 1,.projection 0,.projection 5,OriginalEnumerationConstructorLayer.typeTuples,.projection 5]
     out xs ![range,xs 1,xs 0,xs 5,tuples,xs 5] hg
