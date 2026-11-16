@@ -5,8 +5,8 @@ Snapshot: 2026-11-16 11:06 UTC. Continuation authorization remains active.
 ## Verified durable frontier
 
 - Branch: `formalization/cumulative-continuation-2026-11-16`.
-- Verified remote head: `44e1597562b2d2d21dd295a474f44df60dc81d52`, committed11:03:46UTC. All10 intended snapshot paths and141 acceptance26 source pins match the remote.
-- Accepted supporting contracts: **791 locally;789 at the verified remote head above**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
+- Verified remote head: `e8f87db5ac08515f9d648ea2320393566def6295`, committed11:10:51UTC. All13 intended snapshot paths and16 acceptance27 source pins match the remote.
+- Accepted supporting contracts: **793 locally;791 at the verified remote head above**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
 - Main4028a9e and independent Nov15 branch b51cb999 remain unchanged. Overlapping prior733 are never added twice. No main merge or force push.
 - Acceptance13: one coherent cumulative source exact1,2341 recursively matched modules,total760. Six prior packages/capabilities retained, K/S plus seven helper contracts reconstructed at actual new CORE where needed. No tuple/tag equality shortcut.
 - Acceptance14: original K-lift/S-mpUnder and arbitrary-code literal traces exact3,2351 matched modules,total763. K then one MP; S then two MP in original order. Actual new source/CORE/Fuel, original guards, membership-backed registry coherence.
@@ -23,6 +23,7 @@ Snapshot: 2026-11-16 11:06 UTC. Continuation authorization remains active.
 - Acceptance25: internal application/cons exact2,4025 matched modules,total788 locally. Actual ordered child answers; control Boolean obligation discharged by acceptance23.
 - Acceptance26: original numbered constructor exact1 and full frozen13 assembly,4077 matched modules,total789 locally. Prior12 not recounted. Actual six-field signature, encoded-head existential, label/type/length/allMembers obligations, two actual keyed child answers and literal conjunction. Fresh allTypes Boolean raw-list induction discharged.
 - Acceptance27: concrete original base certificate Program exact2, 2412 matched modules,total791 locally. Runtime tag substitution before seed; original tail-first specialization and right-before-left transitivity; actual child at target+1; conditional node memberships, not realized source installation.
+- Acceptance28: allraw converted-head validity exact2, 3954 matched modules,total793 locally; actual original converter/default0 and decoder, no native reflection or image restriction.
 - Exact native gates, standard-axiom closure and recursive source/object/input/log matching passed for these acceptances. No full-root build or CI claim.
 
 ## Active proof boundaries
@@ -36,7 +37,7 @@ One coordinator owns a serialized compiler queue and publication; two disjoint a
 
 Batch stdout truncates each module log to its last16000characters. Always inspect receipt.modules[].log: long linter warnings can hide ordinary errors before a sorryAx audit failure. Failed sources, full logs and receipts remain locally preserved.
 
-Source-first publication at least every30minutes; next deadline11:33UTC. Normal git push lacks credentials; authenticated connector publishes inspected mathematical Lean sources and acceptance summaries using immutable blobs and a leased nonforce ref update. Raw reconstructible logs and ancillary metadata remain locally preserved after automated review rejected a broad artifact batch. Sources and acceptance summaries were inspected for credentials/private notes and safely published. Large recursive evidence payloads are local with exact hash/byte counts in acceptance records.
+Source-first publication at least every30minutes; next deadline11:40UTC. Normal git push lacks credentials; authenticated connector publishes inspected mathematical Lean sources and acceptance summaries using immutable blobs and a leased nonforce ref update. Raw reconstructible logs and ancillary metadata remain locally preserved after automated review rejected a broad artifact batch. Sources and acceptance summaries were inspected for credentials/private notes and safely published. Large recursive evidence payloads are local with exact hash/byte counts in acceptance records.
 
 Fetch and verify every intended remote path hash. Update local ref/index only after verification without changing newer worktree drafts. Preserve all failures and unfinished sources; stop promptly on the next stop instruction.
 

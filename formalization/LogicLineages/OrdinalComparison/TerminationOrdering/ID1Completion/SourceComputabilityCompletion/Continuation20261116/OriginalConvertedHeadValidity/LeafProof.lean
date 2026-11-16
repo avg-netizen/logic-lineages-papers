@@ -12,6 +12,7 @@ open InternalTagArithmeticSyntaxProof (z suc eqn)
 open InternalTagArithmeticSupportProof
 open SourceComputabilityFormulaSupportProof (numeral)
 open OriginalRawSyntaxTransport
+open OriginalRawSyntaxTransportInternalVariableSupportProof (constantValue)
 open InternalQuotientComparisonProof (orLeft orRight)
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open Continuation20261115 OriginalEncodedHeadConversion
@@ -30,7 +31,7 @@ theorem basic (n : Nat) (raw : OTerm alpha) (tag : Fin 2)
 
 theorem zero (n : Nat) {k : Nat} : ValidOutput n (constant k 0) := by
   intro body alpha Delta xs out h
-  have hv := basic n (z : OTerm alpha) 0 InternalApplicationValidityStackAppendTransitionProof.pairZero
+  have hv := basic (body := body) (Delta := Delta) n (z : OTerm alpha) 0 InternalApplicationValidityStackAppendTransitionProof.pairZero
   have he := valueUnique (constant k 0) z out xs (constantValue 0 xs) h
   exact headTransport (OriginalHeadDecoderValidity.check n) (numeral 1) z out Fin.elim0 he hv
 

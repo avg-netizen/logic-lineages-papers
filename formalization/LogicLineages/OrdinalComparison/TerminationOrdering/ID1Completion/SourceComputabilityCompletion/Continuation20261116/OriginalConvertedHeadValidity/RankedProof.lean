@@ -11,6 +11,7 @@ open InternalTagArithmeticSyntaxProof (z suc eqn)
 open InternalTagArithmeticSupportProof InternalAcceptanceBranchProof
 open SourceComputabilityFormulaSupportProof (numeral)
 open OriginalRawSyntaxTransport
+open OriginalRawSyntaxTransportInternalVariableSupportProof (constantValue)
 open InternalQuotientComparisonProof (orLeft orRight)
 open InternalApplicationValidityStackAppendInductionCoreProof (withHyp formulaCases)
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
