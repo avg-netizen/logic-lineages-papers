@@ -1,5 +1,5 @@
 module
-public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentPublishedProvabilityIntroduction.GraphInputs
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentPublishedProvabilityIntroduction.TemplateGraph
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentExistentialIntroductionProgram.GraphSyntax
 public meta import LogicLineages.Audit
 @[expose] public section
@@ -28,9 +28,9 @@ theorem graph {n ctx : Nat} (p : Program n) (v : List.Vector (Term ctx) 7) (J : 
  (ntag etag : Nat) (hn : (nodes p)[ntag]? = some ⟨1,LiteralNumeralPrefix.numeralCode⟩)
  (he : (nodes p)[etag]? = some ⟨3,CurrentExistentialIntroductionProgram.program⟩) :
  Computes p program v (value J ntag etag v) := by
- have hi := quoteGraph p v bodyTemplate innerEnvironment innerArguments (innerInputs ntag v)
+ have hi := TemplateGraph.quoteGraph p v bodyTemplate innerEnvironment innerArguments (innerInputs ntag v)
   J.ctag J.atag I.hc I.ha (GraphInputs.inner p v ntag hn)
- have ho := quoteGraph p v (.ex bodyTemplate) outerEnvironment outerArguments (outerInputs ntag v)
+ have ho := TemplateGraph.quoteGraph p v (.ex bodyTemplate) outerEnvironment outerArguments (outerInputs ntag v)
   J.ctag J.atag I.hc I.ha (GraphInputs.outer p v ntag hn)
  have hfirst := introduction p v etag he _ _ _ _ _ _ hi (GraphInputs.quoted p v ntag hn 3) (projection p v 6)
  have hsecond := introduction p v etag he _ _ _ _ _ _ ho (GraphInputs.quoted p v ntag hn 2) hfirst
