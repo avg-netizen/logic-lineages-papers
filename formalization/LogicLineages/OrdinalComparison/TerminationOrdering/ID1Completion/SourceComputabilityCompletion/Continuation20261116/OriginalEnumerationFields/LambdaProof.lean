@@ -8,7 +8,7 @@ open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalCo
 open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
 open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
-open InternalRecursionGraphStepSyntaxProof (conjunctionRename)
+open InternalRecursionGraphStepSyntaxProof (conjunctionRename consTermRename)
 open InternalTagArithmeticSyntaxProof (z suc zRelabel sucRelabel)
 open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
 open TwoSol20261113.CalibratedPrimary.Membership (contains)
@@ -16,7 +16,7 @@ open InputProof ChildInputProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 attribute [local irreducible] programGraph
 
-@[simp] theorem childInputsRename (xs : Fin 6 → OTerm alpha) (child bound : OTerm alpha)
+theorem childInputsRename (xs : Fin 6 → OTerm alpha) (child bound : OTerm alpha)
     {beta : Type} (j : alpha → beta) :
     (fun i => (childInputs xs child bound i).relabel j) =
       childInputs (fun i => (xs i).relabel j) (child.relabel j) (bound.relabel j) := by
@@ -35,7 +35,7 @@ theorem atInput (n : Nat) (xs : Fin 6 → OTerm alpha) (typ child : OTerm alpha)
     have hcj := renameInto hc j Theta hj
     have hfj := renameInto hf j Theta hj
     rw [graph2Rename] at hcj
-    simp only [conjunctionRename,graph1Rename,graph2Rename,programRename,sucRelabel,zRelabel,childInputsRename] at hfj ⊢
+    simp only [conjunctionRename,graph1Rename,graph2Rename,programRename,sucRelabel,zRelabel,childInputsRename,consTermRename,emptyRename] at hfj ⊢
     apply UnaryWitnessProof.cases n (child.relabel j) (suc ((xs 1).relabel j)) param _
     intro gamma k Xi childKey value deps values hxi hck hv hd hl
     have hck' := hck
@@ -46,7 +46,7 @@ theorem atInput (n : Nat) (xs : Fin 6 → OTerm alpha) (typ child : OTerm alpha)
     have hff := renameInto hfj k Xi hxi
     simp only [programRename] at hkk hpk
     rw [graph2Rename] at hcc
-    simp only [conjunctionRename,graph1Rename,graph2Rename,programRename,sucRelabel,zRelabel,childInputsRename] at hff ⊢
+    simp only [conjunctionRename,graph1Rename,graph2Rename,programRename,sucRelabel,zRelabel,childInputsRename,consTermRename,emptyRename] at hff ⊢
     have hchildren := LambdaWitnessProof.forward n (fun i => ((xs i).relabel j).relabel k)
       (key.relabel k) (param.relabel k) ((typ.relabel j).relabel k) ((child.relabel j).relabel k)
       childKey value deps values hkk hpk hcc hck' hv hd hl hff
@@ -57,7 +57,7 @@ theorem atInput (n : Nat) (xs : Fin 6 → OTerm alpha) (typ child : OTerm alpha)
     have hcj := renameInto hc j Theta hj
     have hfj := renameInto hf j Theta hj
     rw [graph2Rename] at hcj
-    simp only [conjunctionRename,graph1Rename,graph2Rename,programRename,sucRelabel,zRelabel,childInputsRename] at hfj ⊢
+    simp only [conjunctionRename,graph1Rename,graph2Rename,programRename,sucRelabel,zRelabel,childInputsRename,consTermRename,emptyRename] at hfj ⊢
     apply UnaryWitnessProof.cases n (child.relabel j) (suc ((xs 1).relabel j)) param _
     intro gamma k Xi childKey value deps values hxi hck hv hd hl
     have hck' := hck
@@ -68,7 +68,7 @@ theorem atInput (n : Nat) (xs : Fin 6 → OTerm alpha) (typ child : OTerm alpha)
     have hff := renameInto hfj k Xi hxi
     simp only [programRename] at hkk hpk
     rw [graph2Rename] at hcc
-    simp only [conjunctionRename,graph1Rename,graph2Rename,programRename,sucRelabel,zRelabel,childInputsRename] at hff ⊢
+    simp only [conjunctionRename,graph1Rename,graph2Rename,programRename,sucRelabel,zRelabel,childInputsRename,consTermRename,emptyRename] at hff ⊢
     exact LambdaWitnessProof.backward n (fun i => ((xs i).relabel j).relabel k)
       (key.relabel k) (param.relabel k) ((typ.relabel j).relabel k) ((child.relabel j).relabel k)
       childKey value deps values hkk hpk hcc hck' hv hd hl (andLeft hff) (andLeft (andRight hff)) (andRight (andRight hff))

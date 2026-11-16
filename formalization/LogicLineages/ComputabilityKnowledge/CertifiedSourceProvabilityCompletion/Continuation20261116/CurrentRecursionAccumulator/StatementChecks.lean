@@ -1,0 +1,13 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionAccumulator.NumeralProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionAccumulator.AccumulatorProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionAccumulator.StatementChecks
+theorem exactNativeRaw : Targets.NativeRawTrace := NativeProof.raw
+theorem exactNativeOriginal : Targets.NativeOriginalTrace := NativeProof.original
+theorem exactEquations : Targets.InternalEquations := EquationsProof.exactEquations
+theorem exactNumeral : Targets.InternalNumeralTrace := NumeralProof.exactNumeral
+theorem exactAccumulator : Targets.InternalAccumulator := AccumulatorProof.exactAccumulator
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionAccumulator.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionAccumulator.StatementChecks
