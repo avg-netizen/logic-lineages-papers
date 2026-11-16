@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentCallCongruenceProgram.Targets
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentCallCongruenceProgram.Preflight
+theorem comparatorReflexivity : Targets.NativeTuple = Targets.NativeTuple ∧ Targets.NativeCall = Targets.NativeCall ∧ Targets.InternalTuple = Targets.InternalTuple ∧ Targets.InternalCall = Targets.InternalCall := ⟨rfl,rfl,rfl,rfl⟩
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentCallCongruenceProgram.Preflight
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentCallCongruenceProgram.Preflight
