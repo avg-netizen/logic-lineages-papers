@@ -48,6 +48,22 @@ theorem arityAt {k : Nat} (p : Program k) (xs : Fin k → OTerm alpha) (raw out 
   exact forward arityTemplate (.projection 0) p body alpha Delta (Fin.cons raw Fin.elim0) xs raw out
     (projectionValue 0 (Fin.cons raw Fin.elim0)) hp ho
 
+theorem firstAt {k : Nat} (p : Program k) (xs : Fin k → OTerm alpha) (raw out : OTerm alpha)
+    (hp : Nonempty (Derivation body Delta (programGraph p raw xs)))
+    (ho : Nonempty (Derivation body Delta (graph1 (OriginalRawSyntaxTransport.firstOf (.projection 0)) out raw))) :
+    Nonempty (Derivation body Delta (programGraph (OriginalRawSyntaxTransport.firstOf p) out xs)) := by
+  rw [← firstAST] at ho ⊢
+  exact forward firstTemplate (.projection 0) p body alpha Delta (Fin.cons raw Fin.elim0) xs raw out
+    (projectionValue 0 (Fin.cons raw Fin.elim0)) hp ho
+
+theorem secondAt {k : Nat} (p : Program k) (xs : Fin k → OTerm alpha) (raw out : OTerm alpha)
+    (hp : Nonempty (Derivation body Delta (programGraph p raw xs)))
+    (ho : Nonempty (Derivation body Delta (graph1 (OriginalRawSyntaxTransport.secondOf (.projection 0)) out raw))) :
+    Nonempty (Derivation body Delta (programGraph (OriginalRawSyntaxTransport.secondOf p) out xs)) := by
+  rw [← secondAST] at ho ⊢
+  exact forward secondTemplate (.projection 0) p body alpha Delta (Fin.cons raw Fin.elim0) xs raw out
+    (projectionValue 0 (Fin.cons raw Fin.elim0)) hp ho
+
 theorem firstRecover {k : Nat} (p : Program k) (xs : Fin k → OTerm alpha) (raw out : OTerm alpha)
     (hp : Nonempty (Derivation body Delta (programGraph p raw xs)))
     (ho : Nonempty (Derivation body Delta (programGraph (OriginalRawSyntaxTransport.firstOf p) out xs))) :
