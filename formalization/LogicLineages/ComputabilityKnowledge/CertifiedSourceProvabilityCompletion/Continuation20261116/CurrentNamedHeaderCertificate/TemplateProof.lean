@@ -7,7 +7,8 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 open GorbowSyntax GorbowPRProgram GorbowTheoryProof SixSol20261113 List.Vector
 open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
 theorem arithmetic : ArithmeticTemplateEvaluation.Arithmetic template := by
- simp [template,GorbowNamedDefiningTheory.headerVariables,GorbowNamedDefiningTheory.argumentVariables,
+ change ArithmeticTemplateEvaluation.Arithmetic (GorbowRegistryTuple.headerTerm 2 0 [(.var 0 : Term 2),.var 1])
+ simp [template,GorbowNamedDefiningTheory.headerVariables,GorbowPRDefiningEquations.argumentVariables,
   GorbowRegistryTuple.headerTerm,GorbowRegistryTuple.pairTerm,GorbowRegistryTuple.tupleTerm,
   Term.numeral,ArithmeticTemplateEvaluation.Arithmetic]
 theorem value {ctx : Nat} (r s : Term ctx) :

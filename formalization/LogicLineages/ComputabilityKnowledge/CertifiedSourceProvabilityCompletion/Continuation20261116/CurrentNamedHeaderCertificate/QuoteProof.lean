@@ -30,7 +30,7 @@ theorem quote {n ctx : Nat} (p : Program n) (old ar : Program 1) (x : Program 3)
   (v.map (LiteralNumeralPrefix.numeralCall K.numeralTag)) template
  obtain ⟨hh⟩ := CurrentNamedAliasCertificate.EncodingProof.header p K H
   (PrescribedRuntimeSpecialization.runtimeEnvironment 2)
-  (v.map (LiteralNumeralPrefix.numeralCall K.numeralTag)) 0 (GorbowNamedDefiningTheory.argumentVariables 2)
+  (v.map (LiteralNumeralPrefix.numeralCall K.numeralTag)) 0 (GorbowPRDefiningEquations.argumentVariables 2)
  rw [CurrentCompositionCertificate.RootEncodingProof.argumentValues] at hh
  have hh' : Derivation (GorbowPRNumeralCalculation.Theory p)
   (.equal (termValue K.ctag K.atag (PrescribedRuntimeSpecialization.runtimeEnvironment 2)

@@ -1,0 +1,11 @@
+# Proposal only: literal original head-signature program
+
+Exact3 proposed, not frozen, no proof release. This supplies a concrete H AST for the original existing headSignatureValue. The former general primitive-recursive selection supplies native calibration but no usable internal head-case equations. This proposal keeps that exact source meaning and replaces no existing accepted selection or tuple by fiat.
+
+Source head cases: zero and successor, case and recursion heads have no extra arguments; application payload pair(domain,result) has ordered arguments [domain→result,domain]; a ranked symbol s has exactly arity(s) copies of ground. Existing OriginalHeadResult computes the source result type. Existing exact raw head-decoder guard rejects basic tags with nonzero payload, symbols out of finite range, and unsupported tags. Only the local arity list is fixed at compile time; no whole signature is represented by a success oracle.
+
+The H program is fixed once from n/arity before all runtime inputs, including n=0 and malformed numbers. NativeSignature is allraw against the existing OriginalTypedDecoder.HeadSignatureCalibrated, not encoded-image calibration. InternalValidSignature and InternalInvalidSignature express actual original-calculus graph facts and do not invoke native reflection.
+
+This is a prerequisite, not full typed/source exchange preservation. Full internal branch argument equations, calibrated source/headMove compatibility, actual argument-permutation typed preservation, once-selected tuple installation and final source checker preservation remain separate obligations. In particular no success of target source acceptance is introduced as an endpoint premise. No arbitrary-H counterexample/refutation is asserted; previous zero/succ suggestion was withdrawn as false and the separate diagnostic remained unverified.
+
+Original source: NumberedHeadSignaturePrimrecProof.headResultPrimitive and headArgumentsPrimitive; OriginalTypedDecoderValuesDefinitions.headSignatureValue; NumberedNumericDecoding.decodeHeadNumber. Literal helpers reuse OriginalHeadResult, OriginalHeadDecoderValidity, original list codec and fixed table lookup, with primitive recursion [index,previous]. No math/target/provenance from the preceding exchange-bounds packet is changed.

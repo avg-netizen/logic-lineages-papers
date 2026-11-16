@@ -24,7 +24,7 @@ theorem rawValue {n k ctx : Nat} (p : Program n) (J : PrescribedRuntimeCallCongr
     (.equal (LiteralNumeralPrefix.numeralCall J.numeralTag (v.get i))
      (LiteralNumeralPrefix.numeralCall J.numeralTag (v.get i)))) from ⟨.logical (.reflexive _)⟩)
  | zero =>
-  exact BoundVariableArithmeticProof.numeralCons p J.ctag H.hc 1 []
+  exact FullFormulaInstantiationValidity.BoundVariableArithmeticProof.numeralCons p J.ctag H.hc 1 []
  | succ t ih =>
   obtain ⟨h⟩ := ih ht
   exact CurrentCompositionCertificate.CodecProof.unary p J.ctag J.ctag 2 H.hc H.hc _ _ h
