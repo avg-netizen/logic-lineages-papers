@@ -110,3 +110,9 @@ Latest remote/local head af4ab7c8fd6c863242d66a4d3fcf1429d67df49f, committed15:0
 
 ## Universe domain exact3 acceptance
 Acceptance48 accepted after exact native gate and recursive evidence27:839 local supporting contracts, numbered175/2/12 unchanged. Awaiting next publication; prior836 published at af4ab7c.
+
+## 15:22 UTC verified checkpoint
+Remote/local f6d2995ec3265522f91b8756f368d47d76e59c62, committed15:21:24UTC; treeb1a73be21e354afb4de2c33afc51e8891afed90b. All25 captured blobs and Acceptance48 all9 source pins verified remotely. 839 supporting contracts published; numbered175/2/12 unchanged. Next hard save15:51:24UTC. Whole structural CORE exact1 gate passed1794842415243966639-5, evidence26 running before acceptance. Current remote CORE files are explicitly earlier drafts; local checked repairs will publish with acceptance. Guarded-head exact3 preflight1794842464473198185-5 passed,19frozenpins; proof release granted.
+
+## 15:22 UTC whole structural CORE acceptance
+Acceptance49 verified: one fixed-source/I bound precedes all program/runtime choices; actual five-constructor structural induction and recursion lifted IH preserve original calculation/code and same source/index/fuel. Supporting840 local,839 published, numbered175/2/12 unchanged. Current repaired CORE sources and acceptance queued for next nonforce save.

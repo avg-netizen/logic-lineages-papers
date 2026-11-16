@@ -21,7 +21,9 @@ theorem composition (installed : Formula 1) (lhs rhs : Term 1) {k : Nat} (t : Te
  (hf : InductionInterface.Correct installed lhs rhs t old a baseX pF pR c I (lb+cb+rb) f)
  (hg : ∀ i, InductionInterface.Correct installed lhs rhs t old a baseX pF pR c I (lb+cb+rb) (g i)) :
  InductionInterface.Correct installed lhs rhs t old a baseX pF pR c I (lb+cb+rb) (.composition f g) := by
- intro target producerTag hq hp ctx inputs fuel hguard
+ intro target producerTag hq hp ctx inputs fuel
+ dsimp only
+ intro hguard
  let p := CumulativePropositionalSource.root installed lhs rhs pF pR old a baseX
  let U := S pF pR (CumulativePropositionalSource.verifier installed lhs rhs old a baseX)
  obtain ⟨J,hJ,hJf,hJg⟩ := CurrentStructuralProducerInventory.CompositionProof.installed p installed lhs rhs t old a baseX I

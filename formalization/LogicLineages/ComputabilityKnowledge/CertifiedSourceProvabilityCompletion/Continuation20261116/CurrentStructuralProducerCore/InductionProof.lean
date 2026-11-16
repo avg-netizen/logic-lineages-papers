@@ -26,17 +26,23 @@ theorem engine (installed : Formula 1) (lhs rhs : Term 1) {k : Nat} (t : Term k)
  intro m u
  induction u with
  | zero =>
-  intro hu target producerTag hq hp ctx inputs fuel hguard
+  intro hu target producerTag hq hp ctx inputs fuel
+  dsimp only
+  intro hguard
   obtain ⟨J,hJ⟩ := CurrentStructuralProducerInventory.PrimitiveProof.leaf _ installed lhs rhs t old a _ I
   exact LeafProof.leaf installed lhs rhs t old a baseX pF pR c I lb cb rb hL .zero J
    target producerTag hJ hq hp ctx inputs fuel hguard
  | succ =>
-  intro hu target producerTag hq hp ctx inputs fuel hguard
+  intro hu target producerTag hq hp ctx inputs fuel
+  dsimp only
+  intro hguard
   obtain ⟨J,hJ⟩ := CurrentStructuralProducerInventory.PrimitiveProof.leaf _ installed lhs rhs t old a _ I
   exact LeafProof.leaf installed lhs rhs t old a baseX pF pR c I lb cb rb hL .successor J
    target producerTag hJ hq hp ctx inputs fuel hguard
  | projection i =>
-  intro hu target producerTag hq hp ctx inputs fuel hguard
+  intro hu target producerTag hq hp ctx inputs fuel
+  dsimp only
+  intro hguard
   obtain ⟨J,hJ⟩ := CurrentStructuralProducerInventory.PrimitiveProof.leaf _ installed lhs rhs t old a _ I
   exact LeafProof.leaf installed lhs rhs t old a baseX pF pR c I lb cb rb hL (.projection i) J
    target producerTag hJ hq hp ctx inputs fuel hguard
@@ -47,7 +53,9 @@ theorem engine (installed : Formula 1) (lhs rhs : Term 1) {k : Nat} (t : Term k)
   exact CompositionProof.composition installed lhs rhs t old a baseX pF pR c I lb cb rb hC
    q inventoryTag hInventory f g hu hf' hg'
  | recursion f g hf hg =>
-  intro hu target producerTag hq hp ctx inputs fuel hguard
+  intro hu target producerTag hq hp ctx inputs fuel
+  dsimp only
+  intro hguard
   have hf' := hf (CurrentStructuralProducerInventory.OccurrenceProof.trans hu (.recursionBase f g (.here f rfl)))
   have hg' := hg (CurrentStructuralProducerInventory.OccurrenceProof.trans hu (.recursionStep f g (.here g rfl)))
   have h := RecursionProof.recursionAt installed lhs rhs t old a baseX pF pR c I lb cb rb hR
