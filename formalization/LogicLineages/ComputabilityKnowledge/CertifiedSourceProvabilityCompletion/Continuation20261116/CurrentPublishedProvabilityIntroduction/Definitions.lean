@@ -51,7 +51,7 @@ def number (pF : Program 1) (c : Code) (sigma : Sentence) (fuel certificate inpu
    (CurrentExistentialIntroductionProgram.number (innerMatrix pF c sigma fuel) (Term.numeral certificate) inputProof))
 def nativeInputs (pF : Program 1) (c : Code) (sigma : Sentence) (fuel certificate inputProof : Nat) : List.Vector Nat 7 :=
  GorbowNamedInternalProvability.checkerTag pF ::ᵥ Encodable.encode c ::ᵥ fuel ::ᵥ certificate ::ᵥ
- Encodable.encode (GorbowTermPrefixCode.encode (GorbowBooleanTruth.binaryCodeTerm 0
+ Encodable.encode (GorbowTermPrefixCode.encode (GorbowBooleanTruth.binaryCodeTerm (n := 0) 0
   (Term.numeral (GorbowSortedSyntaxCode.formulaCode (rho pF c)))
   (Term.numeral (GorbowSortedSyntaxCode.formulaCode sigma)))) ::ᵥ
  Encodable.encode (GorbowFormulaPrefixCode.encode (rho pF c)) ::ᵥ inputProof ::ᵥ nil
@@ -68,7 +68,7 @@ def checkerEquationCode {ctx : Nat} (J : PrescribedRuntimeCallCongruence.Tags)
    (LiteralNumeralPrefix.numeralCall J.numeralTag (Term.numeral (Encodable.encode c)) ::ᵥ
     LiteralNumeralPrefix.numeralCall J.numeralTag fuel ::ᵥ
     LiteralNumeralPrefix.numeralCall J.numeralTag .zero ::ᵥ
-    Term.numeral (Encodable.encode (GorbowTermPrefixCode.encode (GorbowBooleanTruth.binaryCodeTerm 0
+    Term.numeral (Encodable.encode (GorbowTermPrefixCode.encode (GorbowBooleanTruth.binaryCodeTerm (n := 0) 0
      (Term.numeral (GorbowSortedSyntaxCode.formulaCode (rho pF c)))
      (Term.numeral (GorbowSortedSyntaxCode.formulaCode sigma))))) ::ᵥ
     LiteralNumeralPrefix.numeralCall J.numeralTag certificate ::ᵥ nil))
@@ -77,7 +77,7 @@ def outputCode {ctx : Nat} (tag : Nat) (pF : Program 1) (c : Code) (sigma : Sent
  (fuel certificate inputProof : Term ctx) : Term ctx :=
  call tag (Term.numeral (GorbowNamedInternalProvability.checkerTag pF) ::ᵥ
   Term.numeral (Encodable.encode c) ::ᵥ fuel ::ᵥ certificate ::ᵥ
-  Term.numeral (Encodable.encode (GorbowTermPrefixCode.encode (GorbowBooleanTruth.binaryCodeTerm 0
+  Term.numeral (Encodable.encode (GorbowTermPrefixCode.encode (GorbowBooleanTruth.binaryCodeTerm (n := 0) 0
    (Term.numeral (GorbowSortedSyntaxCode.formulaCode (rho pF c)))
    (Term.numeral (GorbowSortedSyntaxCode.formulaCode sigma))))) ::ᵥ
   Term.numeral (Encodable.encode (GorbowFormulaPrefixCode.encode (rho pF c))) ::ᵥ inputProof ::ᵥ nil)
