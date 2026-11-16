@@ -13,6 +13,8 @@ def childValues {ctx m n : Nat} (f : Program n) (g : Fin n → Program m) (targe
  (inputs : List.Vector (Term ctx) m) : List.Vector (Term ctx) n :=
  List.Vector.ofFn (fun i => call (target+argumentTag f g i) inputs)
 /-- Original calculation formula, using the fixed I codec in Targets. -/
-abbrev calculation := @CurrentRecursionProducerCore.childFormula
-abbrev producerCode := @CurrentRecursionProducerCore.childCode
+abbrev calculation {ctx n : Nat} (J : PrescribedRuntimeCallCongruence.Tags) (tag : Nat)
+ (inputs : List.Vector (Term ctx) n) : Term ctx := CurrentRecursionProducerCore.childFormula J tag inputs
+abbrev producerCode {ctx n : Nat} (producerTag evaluatorTag : Nat) (inputs : List.Vector (Term ctx) n) : Term ctx :=
+ CurrentRecursionProducerCore.childCode producerTag evaluatorTag inputs
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentCompositionProducerCore

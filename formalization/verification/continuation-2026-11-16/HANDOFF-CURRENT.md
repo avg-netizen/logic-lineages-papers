@@ -5,8 +5,8 @@ Snapshot: 2026-11-16 13:44 UTC. Continuation authorization remains active.
 ## Verified durable frontier
 
 - Branch: `formalization/cumulative-continuation-2026-11-16`.
-- Verified remote head: `031a6203b34f9d719d7ac180daa9455080ca2018`, committed 13:58:53 UTC. All 8 snapshot paths and acceptance40 all32 source hashes verified remotely; acceptance39 all20 already verified at parent.
-- Accepted supporting contracts: **827 at the verified remote head above; 829 locally accepted pending publication**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
+- Verified remote head: `011b01b3ad8ad49773d6db8ebb284cd320caf7db`, committed 14:10:37 UTC. All 22 snapshot paths and acceptance41 all13 source hashes verified remotely.
+- Accepted supporting contracts: **829 at the verified remote head above; 830 locally accepted pending publication**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
 - Main4028a9e and independent Nov15 branch b51cb999 remain unchanged. Overlapping prior733 are never added twice. No main merge or force push.
 - Acceptance13: one coherent cumulative source exact1,2341 recursively matched modules,total760. Six prior packages/capabilities retained, K/S plus seven helper contracts reconstructed at actual new CORE where needed. No tuple/tag equality shortcut.
 - Acceptance14: original K-lift/S-mpUnder and arbitrary-code literal traces exact3,2351 matched modules,total763. K then one MP; S then two MP in original order. Actual new source/CORE/Fuel, original guards, membership-backed registry coherence.
@@ -80,3 +80,7 @@ Acceptance40: OriginalCodeBoundsConstructors exact9, final1794837180795646043-5,
 13:59 UTC checkpoint: 827 accepted/published, numbered register unchanged. CurrentCompositionProducerProgram exact2 frozen11, preflight1794837460736266341-6 passed; proofs released. OriginalTypedEnumerationDepthBound exact2 frozen14, preflight running; no proof release until pass. Next checkpoint due by14:28 UTC.
 
 Acceptance41: actual full composition producer exact2, final1794837959902108723-5, evidence21 verified 2469 modules, 13 source pins,11 frozen. Actual g/G/f/F calls, original offsets and LAST-tag root, no supplied certificate inputs or child validity premise. Total829 local; fixed-I CORE next unpaid. Typed-depth malformed and syntax supports pass; mutual guarded induction underway.
+
+14:11 UTC: 829 accepted/published, numbered register unchanged. CurrentCompositionProducerCore exact1 frozen12/preflight1794838240428659100-6 passed; proofs released. Typed-depth malformed, syntax, mutual invariant definition and binder syntax/witness support passed; remaining binding/arithmetic repairs and actual mutual constructor closure underway. Next checkpoint due by14:40 UTC.
+
+Acceptance42: actual composition CORE exact1, final1794838742403697765-5, evidence22 verified 2541 modules, 14 source pins,12 frozen. Original fixed-I bound before all program/runtime choices; actual source-root evaluator coherence and literal code transports discharge original child IHs to actual parent formula/producer CORE+Fuel. Total830 local, numbered register unchanged. Structural compiler/inventory/whole correctness/HB3 remain unpaid.

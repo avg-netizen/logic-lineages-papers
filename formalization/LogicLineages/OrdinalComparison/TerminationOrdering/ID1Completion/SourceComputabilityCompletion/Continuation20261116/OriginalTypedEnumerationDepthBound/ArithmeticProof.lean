@@ -15,9 +15,13 @@ open InternalUnpairReverseBoundsArithmeticProof (weakTrans)
 open InternalSquareRootArithmeticSupportProof (rightSuccessor)
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 
-theorem doubleSuccessor (size : OTerm alpha) :
+def doubleSuccessor (size : OTerm alpha) :
     Derivation body Delta (eqn (twice (suc size)) (suc (suc (twice size)))) :=
   trans (leftSuccessor size (suc size)) (congSuc (InternalTagArithmeticSupportProof.addSucc size size))
+
+theorem doubleSuccessorChecked (size : OTerm alpha) :
+    Nonempty (Derivation body Delta (eqn (twice (suc size)) (suc (suc (twice size))))) :=
+  ⟨doubleSuccessor size⟩
 
 theorem doubleMonotone (s t : OTerm alpha)
     (h : Nonempty (Derivation body Delta (InternalLessThan.strictLess s (suc t)))) :
