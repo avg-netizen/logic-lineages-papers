@@ -52,6 +52,8 @@ theorem predicateLift (n : Nat) : lift (predicate n : Formula (alpha ⊕ Fin 1))
   rw [atFuelRename]
   rfl
 
+attribute [local irreducible] AtFuel
+
 @[simp] theorem belowFuelRename {beta : Type} (n : Nat) (raw : OTerm alpha) (j : alpha → beta) :
     (BelowFuel n raw).relabel j = BelowFuel n (raw.relabel j) := by
   unfold BelowFuel

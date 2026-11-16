@@ -24,7 +24,7 @@ theorem atKnown (n : Nat) (node param out raw bound types heads labels tupleBoun
   constructor
   · intro hm
     have hz := OriginalEnumerationValidity.ZeroProof.outputZero n node param bound out hn he
-    have hm0 := headTransport contains (numeral 1) out z (Fin.cons raw Fin.elim0) hz hm
+    have hm0 := InternalControlGraphSupportProof.headTransport contains (numeral 1) out z (Fin.cons raw Fin.elim0) hz hm
     exact ⟨Derivation.explosion (Classical.choice (OriginalAscendingRange.SupportProof.nilImpossible raw hm0))⟩
   · intro hm
     exact ⟨Derivation.explosion (Classical.choice (ZeroDepthProof.fieldsZeroImpossible n raw bound types heads labels tupleBound (andLeft hm) (andRight hm)))⟩

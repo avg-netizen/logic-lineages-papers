@@ -27,7 +27,11 @@ theorem meaningSubst {beta : Type} (n : Nat) (raw bound fuel types heads labels 
   unfold Meaning.holds OriginalEnumerationFields.Targets.accepted
   simp only [conjunctionSubst,DepthSyntaxProof.boundSubst,programSubst,
     SourceComputabilityFormulaSupportProof.numeral,zSubst,sucSubst]
-  rfl
+  have hx : (fun i => ((![raw,bound,types,heads,labels,tupleBound] : Fin 6 → OTerm alpha) i).subst ts) =
+      ![raw.subst ts,bound.subst ts,types.subst ts,heads.subst ts,labels.subst ts,tupleBound.subst ts] := by
+    funext i
+    fin_cases i <;> rfl
+  rw [hx]
 
 @[simp] theorem meaningRename {beta : Type} (n : Nat) (raw bound fuel types heads labels tupleBound : OTerm alpha) (j : alpha → beta) :
     (Meaning.holds n raw bound fuel types heads labels tupleBound).relabel j =
