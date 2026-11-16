@@ -116,3 +116,12 @@ Remote/local f6d2995ec3265522f91b8756f368d47d76e59c62, committed15:21:24UTC; tre
 
 ## 15:22 UTC whole structural CORE acceptance
 Acceptance49 verified: one fixed-source/I bound precedes all program/runtime choices; actual five-constructor structural induction and recursion lifted IH preserve original calculation/code and same source/index/fuel. Supporting840 local,839 published, numbered175/2/12 unchanged. Current repaired CORE sources and acceptance queued for next nonforce save.
+
+## 15:25 UTC whole CORE published
+Remote/local14b57d6fff71094f9e3cf98a14cd6f961c76175c at15:24:43UTC, tree173823b23bc6a772aee68b855ccecc8d004b3a36. All6 snapshot1524 blobs and Acceptance49 all14 sources verified remotely. 840 supporting contracts published; numbered175/2/12 unchanged. Next hard save15:54:43UTC. P6 allraw guarded-W native passed1794842627734608301-5; internal GuardProof compiling. P12 actual checker-success certificate exact1 comparator reviewed/frozen11pins; awaiting preflight, no proofs released.
+
+## Guarded head exact3 acceptance
+Acceptance50 verified after native exact gate and recursive evidence28;843 local supporting contracts,840 published, numbered175/2/12 unchanged. Actual encoded source-head list bridge is next.
+
+## 15:31 UTC checker equation acceptance
+Acceptance51 verified at one retained source and fixed outer bound, with arbitrary symbolic inner checker fuel. Supporting844 local,840 published, numbered175/2/12 unchanged. Certificates of both existential introductions and rho implication remain unpaid. Acceptance50–51 and sources queued for publication.
