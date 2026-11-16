@@ -1,12 +1,12 @@
 # Current public formalization handoff
 
-Snapshot: 2026-11-16 11:06 UTC. Continuation authorization remains active.
+Snapshot: 2026-11-16 11:16 UTC. Continuation authorization remains active.
 
 ## Verified durable frontier
 
 - Branch: `formalization/cumulative-continuation-2026-11-16`.
-- Verified remote head: `e8f87db5ac08515f9d648ea2320393566def6295`, committed11:10:51UTC. All13 intended snapshot paths and16 acceptance27 source pins match the remote.
-- Accepted supporting contracts: **793 locally;791 at the verified remote head above**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
+- Verified remote head: `21a02f300534654311d4cf8c85e225b42d9cdb02`, committed11:15:17UTC. All7 intended snapshot paths and8 acceptance28 source pins match the remote.
+- Accepted supporting contracts: **793 locally and at the verified remote head above**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
 - Main4028a9e and independent Nov15 branch b51cb999 remain unchanged. Overlapping prior733 are never added twice. No main merge or force push.
 - Acceptance13: one coherent cumulative source exact1,2341 recursively matched modules,total760. Six prior packages/capabilities retained, K/S plus seven helper contracts reconstructed at actual new CORE where needed. No tuple/tag equality shortcut.
 - Acceptance14: original K-lift/S-mpUnder and arbitrary-code literal traces exact3,2351 matched modules,total763. K then one MP; S then two MP in original order. Actual new source/CORE/Fuel, original guards, membership-backed registry coherence.
@@ -37,8 +37,10 @@ One coordinator owns a serialized compiler queue and publication; two disjoint a
 
 Batch stdout truncates each module log to its last16000characters. Always inspect receipt.modules[].log: long linter warnings can hide ordinary errors before a sorryAx audit failure. Failed sources, full logs and receipts remain locally preserved.
 
-Source-first publication at least every30minutes; next deadline11:40UTC. Normal git push lacks credentials; authenticated connector publishes inspected mathematical Lean sources and acceptance summaries using immutable blobs and a leased nonforce ref update. Raw reconstructible logs and ancillary metadata remain locally preserved after automated review rejected a broad artifact batch. Sources and acceptance summaries were inspected for credentials/private notes and safely published. Large recursive evidence payloads are local with exact hash/byte counts in acceptance records.
+Source-first publication at least every30minutes; next deadline11:45UTC. Normal git push lacks credentials; authenticated connector publishes inspected mathematical Lean sources and acceptance summaries using immutable blobs and a leased nonforce ref update. Raw reconstructible logs and ancillary metadata remain locally preserved after automated review rejected a broad artifact batch. Sources and acceptance summaries were inspected for credentials/private notes and safely published. Large recursive evidence payloads are local with exact hash/byte counts in acceptance records.
 
 Fetch and verify every intended remote path hash. Update local ref/index only after verification without changing newer worktree drafts. Preserve all failures and unfinished sources; stop promptly on the next stop instruction.
 
-Next narrow P6 adapter: original converted-head validity, exact2/frozen8 pins. Unchanged converter/check, allraw inputs including malformed encoded Bool/Fin default0 and n=0. This is not yet accepted or a full enumeration theorem. Full enumeration validity should be proved from empty seed and actual layer/fuel induction, not inserted as an assumed guard.
+Next narrow P6 adapter: original converted-head validity, exact2/frozen8 pins. Unchanged converter/check, allraw inputs including malformed encoded Bool/Fin default0 and n=0. This adapter is accepted in acceptance28, not a full enumeration theorem. Full enumeration validity should be proved from empty seed and actual layer/fuel induction, not inserted as an assumed guard.
+
+Current active comparator gates: P6 OriginalEnumerationValidity exact1/frozen11 pins (actual enumeration graph+member implies original code guard; no assumed validity). P12 CurrentRecursionStepProgram exact2/frozen11 pins/preflight passed: actual stepTag base offset, no prior certificate input, actual q/g/child evaluations, original literal implication recipe.
