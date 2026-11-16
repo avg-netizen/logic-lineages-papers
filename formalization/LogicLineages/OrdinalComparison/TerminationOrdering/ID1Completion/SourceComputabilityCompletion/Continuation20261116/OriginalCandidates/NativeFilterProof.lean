@@ -30,7 +30,7 @@ theorem retainedList (n : Nat) (arity : Fin n → Nat) (H : Program 1)
   | cons q xs ih =>
     rw [List.map_cons,List.filter_cons,packedValue n arity H hH]
     cases hd : decodeTerm arity Gamma q.1 q.2 <;>
-      simp [rawStructuralDecode,hd,ih]
+      simp [rawStructuralDecode,hd] at ih ⊢ <;> exact ih
 
 theorem filterOriginal (n : Nat) (arity : Fin n → Nat) (H : Program 1)
     (hH : OriginalTypedDecoder.HeadSignatureCalibrated n arity H)

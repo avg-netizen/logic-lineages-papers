@@ -1,12 +1,12 @@
 # Current public formalization handoff
 
-Snapshot: 2026-11-16 13:09 UTC. Continuation authorization remains active.
+Snapshot: 2026-11-16 13:13 UTC. Continuation authorization remains active.
 
 ## Verified durable frontier
 
 - Branch: `formalization/cumulative-continuation-2026-11-16`.
-- Verified remote head: `07d424b774beff065a7768fbb877fb19362c680a`, committed12:59:55UTC. All27 intended draft/acceptance snapshot paths match the remote; acceptance34 all36 source hashes independently verified remotely.
-- Accepted supporting contracts: **807 locally; 804 at the verified remote head above**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
+- Verified remote head: `c7b2c86b8d0e674591c3c311514703a1e0100062`, committed13:11:52UTC. All39 intended draft/acceptance snapshot paths match the remote; acceptance35 all37 source hashes independently verified remotely.
+- Accepted supporting contracts: **809 locally; 807 at the verified remote head above**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
 - Main4028a9e and independent Nov15 branch b51cb999 remain unchanged. Overlapping prior733 are never added twice. No main merge or force push.
 - Acceptance13: one coherent cumulative source exact1,2341 recursively matched modules,total760. Six prior packages/capabilities retained, K/S plus seven helper contracts reconstructed at actual new CORE where needed. No tuple/tag equality shortcut.
 - Acceptance14: original K-lift/S-mpUnder and arbitrary-code literal traces exact3,2351 matched modules,total763. K then one MP; S then two MP in original order. Actual new source/CORE/Fuel, original guards, membership-backed registry coherence.
@@ -42,7 +42,7 @@ One coordinator owns a serialized compiler queue and publication; two disjoint a
 
 Batch stdout truncates each module log to its last16000characters. Always inspect receipt.modules[].log: long linter warnings can hide ordinary errors before a sorryAx audit failure. Failed sources, full logs and receipts remain locally preserved.
 
-Source-first publication at least every30minutes; next deadline13:29UTC. Normal git push lacks credentials; authenticated connector publishes inspected mathematical Lean sources and acceptance summaries using immutable blobs and a leased nonforce ref update. Raw reconstructible logs and ancillary metadata remain locally preserved after automated review rejected a broad artifact batch. Sources and acceptance summaries were inspected for credentials/private notes and safely published. Large recursive evidence payloads are local with exact hash/byte counts in acceptance records.
+Source-first publication at least every30minutes; next deadline13:41UTC. Normal git push lacks credentials; authenticated connector publishes inspected mathematical Lean sources and acceptance summaries using immutable blobs and a leased nonforce ref update. Raw reconstructible logs and ancillary metadata remain locally preserved after automated review rejected a broad artifact batch. Sources and acceptance summaries were inspected for credentials/private notes and safely published. Large recursive evidence payloads are local with exact hash/byte counts in acceptance records.
 
 Fetch and verify every intended remote path hash. Update local ref/index only after verification without changing newer worktree drafts. Preserve all failures and unfinished sources; stop promptly on the next stop instruction.
 
@@ -54,4 +54,8 @@ Acceptance34: original classCodes exact2, native receipt1794833634227547501-6, r
 
 OriginalCandidates exact2 comparator reviewed/frozen16 pins and preflight1794833968378039956-6 passed; proof authoring released. Actual original filterMap with retain/drop, native existing candidatesValue and arbitrary-H internal membership; tuple reselection/full accessibility unpaid.
 
-Acceptance35: CurrentRecursionProducerCore exact3 locally verified, native1794834427496124198-5, evidence18 2494 modules,37 source pins,12 frozen/provenance pins unchanged. Same-source actual base/ordinary-step/public accumulator CORE with only original child IH, fixed-I bound before runtime parameters, no prior-acceptance input. Structural compiler/child correctness/HB3 remain unpaid. Total807 locally; publication pending.
+Acceptance35: CurrentRecursionProducerCore exact3 locally verified, native1794834427496124198-5, evidence18 2494 modules,37 source pins,12 frozen/provenance pins unchanged. Same-source actual base/ordinary-step/public accumulator CORE with only original child IH, fixed-I bound before runtime parameters, no prior-acceptance input. Structural compiler/child correctness/HB3 remain unpaid. Total807 accepted/published; full exact3 source hashes reverified remotely.
+
+OriginalCandidates final exact2 gate1794834620259615302-5 passed; recursive evidence22 pending. No count added yet. Main4028a9e and independent Nov15b51cb999 independently reverified unchanged13:05UTC.
+
+Acceptance36: OriginalCandidates exact2 locally accepted, receipt1794834620259615302-5, evidence22 4292 modules,23 source pins including preflight,16 frozen/provenance pins. Original ordered retain/drop filterMap and existing candidatesValue allraw; arbitrary-H membership with actual endogenous Gamma/check observations. Q tuple reselection/concrete H/full accessibility unpaid. Total809 locally; publication pending.

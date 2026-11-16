@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentBasicProducerProgram.Targets
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentBasicProducerProgram.Preflight
+theorem comparatorReflexivity : Targets.NativeLeaf = Targets.NativeLeaf ∧ Targets.InternalLeaf = Targets.InternalLeaf ∧ Targets.SourceCore = Targets.SourceCore := ⟨rfl,rfl,rfl⟩
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentBasicProducerProgram.Preflight
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentBasicProducerProgram.Preflight
