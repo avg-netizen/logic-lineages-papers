@@ -7,8 +7,10 @@ namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.Sour
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalControlGraphSupportProof
-open InternalTagArithmeticSupportProof InternalTagArithmeticSyntaxProof
+open InternalTagArithmeticSupportProof
+open InternalTagArithmeticSyntaxProof (eqn)
 open InternalAdditionLawsProof
+open InternalAdditionCancellationProof (commutativity)
 open TwoSol20261113.CalibratedPrimary.Membership (contains)
 open SourceComputabilityFormulaSupportProof (numeral)
 open Continuation20261114 Continuation20261115

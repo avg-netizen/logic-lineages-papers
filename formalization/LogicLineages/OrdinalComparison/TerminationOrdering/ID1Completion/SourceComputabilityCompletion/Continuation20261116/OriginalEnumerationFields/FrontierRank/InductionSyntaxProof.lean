@@ -36,7 +36,7 @@ theorem atCountSubst {alpha beta : Type}
   unfold AtCount matrix
   rw [allBlockSubst,liftedEmbedding]
   simp only [impSubst,resultSubst]
-  simp only [impSubst,conjunctionSubst,equalSubst,fields,graph2,graph3,programSubst,numeral,zSubst,sucSubst,
+  simp only [impSubst,conjunctionSubst,equalSubst,InductionDefinitions.fields,graph2,graph3,programSubst,numeral,zSubst,sucSubst,
     consTermSubst,emptySubst,liftSubst,Term.subst,Sum.elim_inr]
 
 @[simp] theorem atCountRename {alpha beta : Type} 
@@ -49,12 +49,12 @@ theorem atCountSubst {alpha beta : Type}
 
 theorem matrixWitness {alpha : Type} (depth seed param frontier child seedRank childRank : OTerm alpha) :
     (matrix depth).subst (Sum.elim Term.var (fun i => emb (![seed,param,frontier,child,seedRank,childRank] i))) =
-      (fields depth seed param frontier child seedRank childRank).imp (result depth seedRank childRank) := by
+      (InductionDefinitions.fields depth seed param frontier child seedRank childRank).imp (result depth seedRank childRank) := by
   have he : (Sum.elim Term.var (fun i => emb (![seed,param,frontier,child,seedRank,childRank] i))) =
       (fun a => emb (Sum.elim Term.var ![seed,param,frontier,child,seedRank,childRank] a)) := by
     funext a
     cases a <;> rfl
-  unfold matrix fields
+  unfold matrix InductionDefinitions.fields
   rw [he]
   simp only [impSubst,resultSubst]
   simp only [impSubst,conjunctionSubst,graph2,graph3,programSubst,numeral,zSubst,sucSubst,

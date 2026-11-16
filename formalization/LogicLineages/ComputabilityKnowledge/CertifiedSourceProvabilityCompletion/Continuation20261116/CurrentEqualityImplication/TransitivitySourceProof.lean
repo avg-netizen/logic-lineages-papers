@@ -24,22 +24,32 @@ theorem exactTransitivityUnder : Targets.InternalTransitivityUnder := by
  let Gamma := [FP,V left,V middle,V right,H1,H2]
  have hlocal (phi : Formula ctx) (h : phi ∈ Gamma) : Nonempty (Hilbert.Local T ctx Gamma phi) := ⟨.hypothesis h⟩
  have hout := TransitivityInternalProof.internal p installed lhs rhs t old a _ I Gamma P left middle right htu huv index fuel
-  (hlocal FP (by simp only [Gamma,List.mem_cons,List.mem_singleton]; exact Or.inl rfl))
-  (hlocal (V left) (by simp only [Gamma,List.mem_cons,List.mem_singleton]; exact Or.inr (Or.inl rfl)))
-  (hlocal (V middle) (by simp only [Gamma,List.mem_cons,List.mem_singleton]; exact Or.inr (Or.inr (Or.inl rfl))))
-  (hlocal (V right) (by simp only [Gamma,List.mem_cons,List.mem_singleton]; exact Or.inr (Or.inr (Or.inr (Or.inl rfl)))))
-  (hlocal H1 (by simp only [Gamma,List.mem_cons,List.mem_singleton]; exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inl rfl))))))
-  (hlocal H2 (by simp only [Gamma,List.mem_cons,List.mem_singleton]; exact Or.inr (Or.inr (Or.inr (Or.inr (Or.inr rfl))))))
+  (hlocal FP List.mem_cons_self)
+  (hlocal (V left) (List.mem_cons_of_mem _ List.mem_cons_self))
+  (hlocal (V middle) (List.mem_cons_of_mem _ (List.mem_cons_of_mem _ List.mem_cons_self)))
+  (hlocal (V right) (List.mem_cons_of_mem _ (List.mem_cons_of_mem _ (List.mem_cons_of_mem _ List.mem_cons_self))))
+  (hlocal H1 (List.mem_cons_of_mem _ (List.mem_cons_of_mem _ (List.mem_cons_of_mem _ (List.mem_cons_of_mem _ List.mem_cons_self)))))
+  (hlocal H2 (List.mem_cons_of_mem _ (List.mem_cons_of_mem _ (List.mem_cons_of_mem _ (List.mem_cons_of_mem _ (List.mem_cons_of_mem _ List.mem_cons_self))))))
  have hG : ∀ psi, psi ∈ Gamma → Nonempty (Hilbert.Local U ctx G psi) := by
   intro psi hmem
-  simp only [Gamma,List.mem_cons,List.mem_singleton] at hmem
-  rcases hmem with he | he | he | he | he | he
-  · subst psi; exact hP
-  · subst psi; exact hl
-  · subst psi; exact hm
-  · subst psi; exact hr
-  · subst psi; exact htuCore
-  · subst psi; exact huvCore
+  rcases List.mem_cons.mp hmem with he | hmem
+  · subst psi
+    exact hP
+  rcases List.mem_cons.mp hmem with he | hmem
+  · subst psi
+    exact hl
+  rcases List.mem_cons.mp hmem with he | hmem
+  · subst psi
+    exact hm
+  rcases List.mem_cons.mp hmem with he | hmem
+  · subst psi
+    exact hr
+  rcases List.mem_cons.mp hmem with he | hmem
+  · subst psi
+    exact htuCore
+  have he := List.mem_singleton.mp hmem
+  subst psi
+  exact huvCore
  exact PrescribedSourceAxiomSpecialization.SourceSupportProof.localCut
   (CumulativePropositionalSource.SeedSourceProof.inclusion installed lhs rhs pF pR old a baseX) hG hout
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentEqualityImplication.TransitivitySourceProof

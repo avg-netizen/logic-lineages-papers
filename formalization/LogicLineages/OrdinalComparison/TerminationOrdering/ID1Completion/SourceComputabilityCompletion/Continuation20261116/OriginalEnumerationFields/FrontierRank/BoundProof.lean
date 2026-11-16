@@ -36,7 +36,7 @@ theorem rowZero : Nonempty (Derivation body Delta (AtCount z)) := by
   let child : OTerm (alpha ⊕ Fin 6) := .var (.inr 3)
   let seedRank : OTerm (alpha ⊕ Fin 6) := .var (.inr 4)
   let childRank : OTerm (alpha ⊕ Fin 6) := .var (.inr 5)
-  let A := fields (z) seed param frontier child seedRank childRank
+  let A := InductionDefinitions.fields (z) seed param frontier child seedRank childRank
   have hA : Nonempty (Derivation body (A :: Delta.map (fun p => p.relabel Sum.inl)) A) := ⟨Derivation.hypothesis List.mem_cons_self⟩
   have hf := andLeft (andLeft (andLeft hA))
   have hm := andRight (andLeft (andLeft hA))
@@ -55,7 +55,7 @@ theorem rowSuccessor (count : OTerm alpha)
   let child : OTerm (alpha ⊕ Fin 6) := .var (.inr 3)
   let seedRank : OTerm (alpha ⊕ Fin 6) := .var (.inr 4)
   let childRank : OTerm (alpha ⊕ Fin 6) := .var (.inr 5)
-  let A := fields (suc (count.relabel Sum.inl)) seed param frontier child seedRank childRank
+  let A := InductionDefinitions.fields (suc (count.relabel Sum.inl)) seed param frontier child seedRank childRank
   have hr := renameInto hrow (Sum.inl : alpha → alpha ⊕ Fin 6)
     (Delta.map (fun p => p.relabel Sum.inl)) (by intro p hp; exact List.mem_map.mpr ⟨p,hp,rfl⟩)
   rw [atCountRename] at hr
