@@ -19,8 +19,8 @@ theorem mapTail {α β : Type} {n : Nat} (f : α → β) (v : List.Vector α (n+
  rw [← List.Vector.cons_head_tail v]
  rfl
 
-/-- Literal tail recursion, including the internally generated zero-arity proof. -/
 set_option pp.all true in
+/-- Literal tail recursion, including the internally generated zero-arity proof. -/
 theorem tuple {arity ctx : Nat} (p : Program arity) (J : Tags)
  (hc : (nodes p)[J.ctag]? = some ⟨2,HistoryCodec.cons⟩)
  (hap : (nodes p)[J.atag]? = some ⟨2,HistoryAppend.append⟩)
@@ -55,7 +55,7 @@ theorem tuple {arity ctx : Nat} (p : Program arity) (J : Tags)
    (pairTerm args.head (tupleTerm args.tail.toList)) (pairTerm others.head (tupleTerm others.tail.toList))
    _ hvpa hvpb hp
   simpa only [tupleCertificate,tupleNumber,mapHead,mapTail,
-   Bool.false_eq_true,if_false,List.Vector.toList_map] using hs
+   Bool.false_eq_true,if_false,List.Vector.toList_map,Nat.add_sub_cancel] using hs
 
 /-- The original tag reflexivity, arity reflexivity and final U congruence occur
  in their fixed order; all supplied certificate numbers remain unrestricted. -/

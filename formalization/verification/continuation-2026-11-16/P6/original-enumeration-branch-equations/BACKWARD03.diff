@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -29,7 +29,7 @@
+         (a.relabel j) (c.relabel j) (prior.relabel j) (opened.relabel j) := by
+   rw [InternalSourceIntroductionSyntaxProof.formulaRelabelAsSubst]
+   change (WitnessProof.fields n out param vb f ts hs ls tb a c prior opened).subst
+-    (fun a => InternalRecursionClosureSyntaxProof.emb (.var (j a))) = _
++    (fun a => InternalTagArithmeticSyntaxProof.emb (.var (j a))) = _
+   rw [WitnessProof.fieldsSubst]
+   simp only [← InternalSourceIntroductionSyntaxProof.termRelabelAsSubst]
+ 

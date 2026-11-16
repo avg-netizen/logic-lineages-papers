@@ -36,7 +36,7 @@ theorem mapPair (n : Nat) (a c prior opened deps tail values rest param : OTerm 
     (hr : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode rest opened z)))
     (hv : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode values prior rest))) :
     Nonempty (Derivation body Delta (graph2 (OriginalEnumerationEquation.answerMap n) values deps param)) := by
-  have hz := InternalRawListRecursionProof.nilValue (InternalAcceptance.constantZero 1)
+  have hz := InternalRawListRecursionProof.nilValue (body := body) (Gamma := Delta) (InternalAcceptance.constantZero 1)
     (OriginalEnumerationEquation.answerStep n) z (Fin.cons param Fin.elim0)
     (InternalAcceptanceConjunctionProof.constantZeroValue (Fin.cons param Fin.elim0))
   have htail := InternalRawListRecursionProof.consValue (InternalAcceptance.constantZero 1)
