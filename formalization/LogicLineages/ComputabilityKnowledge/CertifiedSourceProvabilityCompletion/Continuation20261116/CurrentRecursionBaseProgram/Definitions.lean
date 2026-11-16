@@ -21,7 +21,7 @@ def headQuote {n arity : Nat} (f : Formula (n+1)) (raw : Fin n → Program arity
 def singleton {arity : Nat} (line : Program arity) : Program arity :=
  applyTwo HistoryCodec.cons line (constant arity 0)
 /-- Literal original rule4 axiom line, including the singleton raw argument. -/
-def axiom {arity : Nat} (raw : Program arity) : Program arity :=
+def axiomProgram {arity : Nat} (raw : Program arity) : Program arity :=
  singleton (applyTwo HistoryCodec.pair (constant arity 0)
   (applyTwo HistoryCodec.pair raw (applyTwo HistoryCodec.pair (constant arity 4)
    (applyTwo HistoryCodec.pair (constant arity 0)
@@ -37,7 +37,7 @@ def replacement {arity : Nat} (matrix left right : Program arity) : Program arit
 /-- Original tail-first binder specialization. The last variable is the tag
 and is never universally closed by this recursion. -/
 def seedProgram {arity : Nat} : (n : Nat) → Formula (n+1) → (Fin (n+1) → Program arity) → Program arity
- | 0, f, raw => axiom (quote f raw)
+ | 0, f, raw => axiomProgram (quote f raw)
  | n+1, f, raw => mp (quote f raw) (allInstance (headQuote f (fun i => raw i.succ)) (raw 0))
    (seedProgram n (.all f) (fun i => raw i.succ))
 def transitivity {arity : Nat} (left middle right first second : Program arity) : Program arity :=
