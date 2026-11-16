@@ -27,7 +27,7 @@ theorem closed {arity ctx : Nat} (p : Program arity) (old arithmetic : Program 1
  (G : List (Formula ctx)) (t : Term 0) :
  Nonempty (Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
   (RawReflexivityDispatcher.valid I.vtag (PrescribedRuntimeEquality.rawNumeral t))) := by
- let e : FixedFormulaSubstitution.Environment 0 0 0 := FullFormulaInstantiationValidity.FixedTemplateEncodingTargets.boundEnvironment 0
+ let e := FullFormulaInstantiationValidity.FixedTemplateEncodingTargets.boundEnvironment 0
  obtain ⟨hv⟩ := term p old arithmetic x I e t G nil (fun i => Fin.elim0 i)
  obtain ⟨he⟩ := FullFormulaInstantiationValidity.FixedTemplateEncodingProof.boundTermEncoding 0 t arity p
   I.ctag I.atag I.h_ctag I.h_atag ctx

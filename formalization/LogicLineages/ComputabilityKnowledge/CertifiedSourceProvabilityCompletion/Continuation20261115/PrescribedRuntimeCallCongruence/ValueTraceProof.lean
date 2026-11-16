@@ -60,7 +60,7 @@ theorem numeral {arity ctx : Nat} (p : Program arity) (J : Tags)
  obtain ⟨h⟩ := QuotedVerifierMP.QuotationProof.numeralCalculation p J.numeralTag
   LiteralNumeralPrefix.numeralCode hn (value ::ᵥ nil) ctx
  rw [LiteralNumeralPrefix.StatementChecks.exactNative] at h
- simpa only [LiteralNumeralPrefix.numeralCall,List.Vector.map_cons,List.Vector.map_nil,rawNumeral] using
+ simpa only [rawNumeral,LiteralNumeralPrefix.numeralCall,List.Vector.map_cons,List.Vector.map_nil] using
   (show Nonempty _ from ⟨h⟩)
 
 theorem header {arity ctx n : Nat} (p : Program arity) (J : Tags)
