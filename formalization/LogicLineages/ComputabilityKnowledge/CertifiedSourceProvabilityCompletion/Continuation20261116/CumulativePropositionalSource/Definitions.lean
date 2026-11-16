@@ -95,6 +95,14 @@ def RetentionCapability {k : Nat} (f : Formula 1) (lhs rhs : Term 1) (t : Term k
  ∀ ctx (index fuel context formula code : Term ctx), Nonempty (Derivation (S pF pR (verifier f lhs rhs old a baseX))
  (.imp (.equal (LiteralCheckerAcceptance.coreCall I.previous.current.coreTag index fuel context formula code) (.succ .zero))
        (.equal (LiteralCheckerAcceptance.coreCall I.currentK.coreTag index fuel context formula code) (.succ .zero))))
+/-- Original prior retention capability, also reinstalled at new CORE. -/
+def PriorRetentionCapability {k : Nat} (f : Formula 1) (lhs rhs : Term 1) (t : Term k)
+ (old a : Program 1) (baseX : Program 3) (pF pR : Program 1)
+ (I : JointInstallation (root f lhs rhs pF pR old a baseX)
+  f lhs rhs t old a (SaturatedAxiomLeaf.saturated baseX)) : Prop :=
+ ∀ ctx (index fuel context formula code : Term ctx), Nonempty (Derivation (S pF pR (verifier f lhs rhs old a baseX))
+ (.imp (.equal (LiteralCheckerAcceptance.coreCall I.previous.previous.current.coreTag index fuel context formula code) (.succ .zero))
+       (.equal (LiteralCheckerAcceptance.coreCall I.currentK.coreTag index fuel context formula code) (.succ .zero))))
 /-- Exact reinstalled interface in this same newly selected source S. -/
 def Uniform13Capability {k : Nat} (f : Formula 1) (lhs rhs : Term 1) (t : Term k)
  (old a : Program 1) (baseX : Program 3) (pF pR : Program 1)
@@ -126,16 +134,16 @@ separate constructor tags, while shared checker/verifier identities are explicit
 def PropositionalCapability {k : Nat} (f : Formula 1) (lhs rhs : Term 1) (t : Term k)
  (old a : Program 1) (baseX : Program 3) (pF pR : Program 1)
  (I : JointInstallation (root f lhs rhs pF pR old a baseX) f lhs rhs t old a (SaturatedAxiomLeaf.saturated baseX)) : Prop :=
- ∀ isS ctx (a b c index fuel : Term ctx),
+ ∀ isS ctx (rawA rawB rawC index fuel : Term ctx),
  let J : UniformClosedPropositionalCertificate.Installation (root f lhs rhs pF pR old a baseX)
   (previousLogical f lhs rhs old) (arithmetic a) (SaturatedAxiomLeaf.saturated baseX) isS :=
   Bool.rec I.currentK I.currentS isS
- let C := UniformClosedPropositional.conclusionValue isS J.ctag J.atag a b c
- let code := UniformClosedPropositionalCertificate.certificate J.ctag J.constructorTag a b c
+ let C := UniformClosedPropositional.conclusionValue isS J.ctag J.atag rawA rawB rawC
+ let code := UniformClosedPropositionalCertificate.certificate J.ctag J.constructorTag rawA rawB rawC
  Nonempty (Derivation (S pF pR (verifier f lhs rhs old a baseX))
-  (.imp (UniformClosedPropositional.guards isS J.fval a b c)
+  (.imp (UniformClosedPropositional.guards isS J.fval rawA rawB rawC)
    (.conj (.equal (LiteralCheckerAcceptance.runCall J.iteratorTag J.ptag index fuel code)
-     (UniformClosedPropositionalCertificate.output isS J.ptag J.ctag J.atag a b c))
+     (UniformClosedPropositionalCertificate.output isS J.ptag J.ctag J.atag rawA rawB rawC))
     (.conj (.equal (LiteralCheckerAcceptance.coreCall J.coreTag index fuel .zero (.add C C) code) (.succ .zero))
      (SixSol20261112.Fuel.success J.verifierTag index fuel .zero (.add C C) code)))))
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CumulativePropositionalSource

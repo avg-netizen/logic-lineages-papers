@@ -39,7 +39,7 @@ theorem sourceLaw (n : Nat) (c : Code (Fin n)) (bound param : Nat) :
       ((KeyProof.sourceChildren bound c).map (fun x => value n (Nat.pair (codeNumber x.1) x.2) param)) c =
         (codeFields (rawTypes param) (rawHeads n param) (rawLabels param) (rawTupleBound param) bound c).toNat := by
   cases c <;> simp only [KeyProof.sourceChildren,List.map_cons,List.map_nil,valueImage,
-    nodeValue,List.getElem?_cons_zero,List.getElem?_cons_succ,Option.getD_some,boolAnd,codeFields,Bool.and_assoc]
+    nodeValue,List.getElem?_cons_zero,List.getElem?_cons_succ,Option.getD_some,boolAnd,codeFields,Bool.and_assoc,Bool.toNat_true]
 
 theorem recursiveLaw (n key param : Nat) :
     recombination n key param ((KeyProof.keys key).map (fun child => value n child param)) =

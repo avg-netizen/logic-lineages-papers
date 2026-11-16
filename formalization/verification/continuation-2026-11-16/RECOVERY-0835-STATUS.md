@@ -4,7 +4,7 @@ Authorization continues until further notice; source-first nonforce publication 
 
 Verified remote checkpoint ae9b82987ffda3ea1699ee836ec5f062c1615a95 on formalization/cumulative-continuation-2026-11-16 preserves twelve interrupted Lean source paths. Each fetched Git blob SHA matches immutable local snapshot bytes. These are drafts, not new accepted contracts. Prior acceptance08 evidence hashes match (2254 recursively source-matched modules); accepted total stays 743 and numbered register 175 checked / 2 inherited / 12 pending.
 
-Current coordinator: /root/formalization, sole compiler and publisher. Disjoint P6 and P12 author workers do not launch compilers or publish. Fixed checker and toolchain are unchanged. Explicit prerequisite-first module order prevents Python dependency traversal depth failures without changing any resource limit.
+One coordinator owns the sole compiler queue and publication. Disjoint P6 and P12 author workers do not launch compilers or publish. Fixed checker and toolchain are unchanged. Explicit prerequisite-first module order prevents Python dependency traversal depth failures without changing any resource limit.
 
 P6 ListsProof unary/binary query helpers repaired by explicit vector arguments; focused compiler and standard axiom audit pass in receipt1794818332968992665-5. P6 UnaryProof draft failed missing programCases namespace, preserved before repair. Unary/binary constructor exact contracts remain pending.
 

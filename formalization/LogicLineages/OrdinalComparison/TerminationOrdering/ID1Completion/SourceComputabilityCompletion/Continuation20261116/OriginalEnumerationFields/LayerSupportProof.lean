@@ -59,7 +59,7 @@ theorem typesNumberList (ts : List Source.Ty) :
 
 theorem typesLength (ts : List Source.Ty) :
     evaluate OriginalContextInsertion.length (ofFn ![NumberedLeastCodeRepresentative.typesNumber ts]) = ts.length := by
-  rw [typesNumberList,vectorOne,OriginalContextInsertionCalibrationProof.lengthNumbers,List.length_map]
+  rw [typesNumberList,vectorOne,Matrix.cons_val_zero,OriginalContextInsertionCalibrationProof.lengthNumbers,List.length_map]
 
 theorem typesAll (ts : List Source.Ty) (allowed : Nat) :
     evaluate allTypes (ofFn ![NumberedLeastCodeRepresentative.typesNumber ts,allowed]) =
