@@ -31,7 +31,7 @@ theorem atRawSubst {alpha beta : Type}
     (AtRaw F raw).subst (fun a => emb (ts a)) = AtRaw F (raw.subst ts) := by
   unfold AtRaw matrix
   rw [allBlockSubst,liftedEmbedding]
-  simp only [impSubst,conjunctionSubst,equalSubst,fields,result,notSubst,eqnSubst,graph1,graph2,graph3,programSubst,numeral,zSubst,sucSubst,
+  simp only [impSubst,conjunctionSubst,fields,result,graph1,graph2,programSubst,numeral,zSubst,sucSubst,
     consTermSubst,emptySubst,liftSubst,Term.subst,Sum.elim_inr]
 
 @[simp] theorem atRawRename {alpha beta : Type} 
@@ -51,7 +51,7 @@ theorem matrixWitness {alpha : Type} (raw param out node sourceChild targetChild
     cases a <;> rfl
   unfold matrix fields result
   rw [he]
-  simp only [impSubst,conjunctionSubst,notSubst,eqnSubst,graph1,graph2,graph3,programSubst,numeral,zSubst,sucSubst,
+  simp only [impSubst,conjunctionSubst,graph1,graph2,programSubst,numeral,zSubst,sucSubst,
     consTermSubst,emptySubst,witnessLift,Term.subst,Sum.elim_inr]
   rfl
 
