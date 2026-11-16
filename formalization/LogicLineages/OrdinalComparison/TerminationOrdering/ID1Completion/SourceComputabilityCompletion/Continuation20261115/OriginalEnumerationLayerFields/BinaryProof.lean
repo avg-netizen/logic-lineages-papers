@@ -68,11 +68,11 @@ theorem backward (tag : Nat) (xs : Fin 7 → OTerm alpha) (out code : OTerm alph
 theorem applicationsForward (xs : Fin 7 → OTerm alpha) (out code : OTerm alpha)
     (hg : Nonempty (Derivation body Delta (programGraph OriginalEnumerationConstructorLayer.applications out xs)))
     (hh : Nonempty (Derivation body Delta (graph2 contains (numeral 1) out code))) :
-    Nonempty (Derivation body Delta (Targets.typedBinaryCase OriginalRawSyntaxTransport.appConstructor (xs 0) (xs 5) code)) := forward 2 xs out code hg hh
+    Nonempty (Derivation body Delta (Targets.typedBinaryCase OriginalRawSyntaxTransport.applicationConstructor (xs 0) (xs 5) code)) := forward 2 xs out code hg hh
 
 theorem applicationsBackward (xs : Fin 7 → OTerm alpha) (out code : OTerm alpha)
     (hg : Nonempty (Derivation body Delta (programGraph OriginalEnumerationConstructorLayer.applications out xs)))
-    (hh : Nonempty (Derivation body Delta (Targets.typedBinaryCase OriginalRawSyntaxTransport.appConstructor (xs 0) (xs 5) code))) :
+    (hh : Nonempty (Derivation body Delta (Targets.typedBinaryCase OriginalRawSyntaxTransport.applicationConstructor (xs 0) (xs 5) code))) :
     Nonempty (Derivation body Delta (graph2 contains (numeral 1) out code)) := backward 2 xs out code hg hh
 
 theorem argumentConsForward (xs : Fin 7 → OTerm alpha) (out code : OTerm alpha)

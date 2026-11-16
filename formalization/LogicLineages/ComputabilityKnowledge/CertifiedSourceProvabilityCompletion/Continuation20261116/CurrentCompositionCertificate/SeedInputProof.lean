@@ -25,7 +25,8 @@ theorem certificateCongruence {arity ctx : Nat} (p : Program arity) (mtag ctag a
   let T := GorbowPRNumeralCalculation.Theory p
   have ht : ∀ i, Nonempty (Derivation T (.equal (a.tail.get i) (b.tail.get i))) := by
    intro i
-   simpa only [List.Vector.get_tail_succ] using h i.succ
+   set_option backward.isDefEq.respectTransparency false in
+    simpa only [T, List.Vector.get_tail_succ] using h i.succ
   have hh : Nonempty (Derivation T (.equal a.head b.head)) := by
    simpa only [List.Vector.get_zero] using h 0
   obtain ⟨hh⟩ := hh
