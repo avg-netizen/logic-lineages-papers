@@ -34,7 +34,7 @@ theorem root {arity k m ctx : Nat} (p : Program arity) (installed : Formula 1)
    ((LiteralNumeralPrefix.numeralCall J.numeralTag (.zero : Term ctx) ::ᵥ raw).get i))) := by
   intro i
   cases i using Fin.cases with
-  | zero => exact ⟨Logic.symm _ _ hz⟩
+  | zero => exact ⟨.mp (Logic.symmetryRule (GorbowPRNumeralCalculation.Theory p) _ _) hz⟩
   | succ i =>
    simp only [List.Vector.map_cons,List.Vector.get_cons_succ]
    rw [CurrentCompositionCertificate.RootEncodingProof.argumentValues]
