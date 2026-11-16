@@ -28,10 +28,12 @@ open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
 open OriginalHeadDecoderValidity.BackwardProof (orCases)
 theorem empty (n : Nat) : Nonempty (Derivation body Delta (AllValid n (z : OTerm alpha))) := by
   apply ListBindingProof.introduce n z
+  unfold Lists.matrix
+  rw [InternalTagArithmeticSyntaxProof.zRelabel]
   apply Nonempty.intro
   apply Derivation.implicationIntroduction
-  exact Derivation.explosion (Classical.choice (OriginalAscendingRange.SupportProof.nilImpossible (.var (.inr (0 : Fin 1)))
-    (show Nonempty (Derivation body _ (graph2 contains (numeral 1) z (.var (.inr (0 : Fin 1))))) from
+  exact Derivation.explosion (Classical.choice (OriginalAscendingRange.SupportProof.nilImpossible (.var (Sum.inr (0 : Fin 1)) : OTerm (alpha ⊕ Fin 1))
+    (show Nonempty (Derivation body _ (graph2 contains (numeral 1) z (.var (Sum.inr (0 : Fin 1)) : OTerm (alpha ⊕ Fin 1)))) from
       ⟨Derivation.hypothesis List.mem_cons_self⟩)))
 
 theorem layer (n : Nat) (xs : Fin 7 → OTerm alpha) (out : OTerm alpha)

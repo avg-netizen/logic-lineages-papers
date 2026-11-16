@@ -49,5 +49,6 @@ theorem counterValue {m ctx : Nat} (J : Tags) (target counter : Term ctx) (input
  LiteralNumeralPrefix.numeralCall J.ntag counter := by
  change (CurrentRecursionBaseProgram.rawValues (baseTags J) target (counter ::ᵥ inputs)).get ((0 : Fin (m+1)).castSucc) = _
  simp only [CurrentRecursionBaseProgram.rawValues,List.Vector.get_ofFn,Fin.lastCases_castSucc,List.Vector.get_zero,baseTags]
+ rfl
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionStepProgram.EncodingSupport
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionStepProgram.EncodingSupport
