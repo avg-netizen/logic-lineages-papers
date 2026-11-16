@@ -47,10 +47,13 @@ theorem childValue {arity m ctx : Nat} (p : Program arity) (J : Tags)
  let K := CurrentCalculationFormulaProgram.codecTags J.ctag J.atag J.ntag
  obtain ⟨hs⟩ := LiteralNumeralPrefix.EquationsProof.successor p J.ntag J.ctag hn hc target
  apply dynamicCall p K hc ha _ _ _ _ _ _
- · simpa only [termValue,lastValue] using Support.equalitySymmetry _ _ hs
+ · simpa only [K,CurrentCalculationFormulaProgram.codecTags,termValue,FixedFormulaSubstitution.unaryValue,
+    PrescribedRuntimeSpecialization.runtimeEnvironment,rawValues,List.Vector.get_ofFn,Fin.lastCases_last]
+    using Support.equalitySymmetry _ _ hs
  · have he := CurrentCompositionCertificate.CallEncodingProof.tupleMap (J := K)
     (PrescribedRuntimeSpecialization.runtimeEnvironment (m+1)) (rawValues J target inputs)
     (List.Vector.ofFn (fun i : Fin m => (Term.var i.castSucc : Term (m+1)))).toList
+   dsimp only [K,CurrentCalculationFormulaProgram.codecTags] at he ⊢
    rw [← List.Vector.toList_map,inputsMap] at he
    rw [he]
    exact .logical (.reflexive _)
@@ -72,11 +75,13 @@ theorem parentValue {arity m ctx : Nat} (p : Program arity) (J : Tags)
  obtain ⟨hp⟩ := hp
  obtain ⟨htuple⟩ := CurrentCompositionCertificate.CodecProof.unary p J.ctag J.ctag 2 hc hc _ _ hp
  apply dynamicCall p K hc ha _ _ _ _ _ _
- · rw [lastValue]
+ · dsimp only [K,CurrentCalculationFormulaProgram.codecTags]
+   rw [lastValue]
    exact .logical (.reflexive _)
  · have he := CurrentCompositionCertificate.CallEncodingProof.tupleMap (J := K)
     (PrescribedRuntimeSpecialization.runtimeEnvironment (m+1)) (rawValues J target inputs)
     (.zero ::ᵥ List.Vector.ofFn (fun i : Fin m => (Term.var i.castSucc : Term (m+1)))).toList
+   dsimp only [K,CurrentCalculationFormulaProgram.codecTags] at he ⊢
    rw [← List.Vector.toList_map,List.Vector.map_cons,inputsMap] at he
    rw [he]
    exact htuple

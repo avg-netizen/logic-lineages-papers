@@ -10,12 +10,7 @@ open SixSol20261112.Fuel NamedArithmeticGraph LiteralRawMP.ConstructorSupportPro
 
 theorem oneEq {arity : Nat} (f : Program 1) (a : Program arity) :
  HistoryRuleSuffix.applyOne f a = .composition f (fun _ => a) := by
- unfold HistoryRuleSuffix.applyOne
- congr 1
- funext i
- cases i using Fin.cases with
- | zero => rfl
- | succ i => exact Fin.elim0 i
+ rfl
 
 theorem rootArgs {arity m ctx : Nat} (p : Program arity) (J : Tags)
  (hn : (nodes p)[J.ntag]? = some ⟨1,LiteralNumeralPrefix.numeralCode⟩)
