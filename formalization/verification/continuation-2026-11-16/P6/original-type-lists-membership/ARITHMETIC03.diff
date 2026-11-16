@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -9,7 +9,8 @@
+ open InternalGraphComposition (OTerm)
+ open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+ open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
+-open InternalTagArithmeticSyntaxProof (z suc eqn emb add mul)
++open InternalTagArithmeticSyntaxProof (z suc eqn emb)
++open InternalMultiplicationLawsProof (mul)
+ open InternalTagArithmeticSupportProof InternalAdditionLawsProof
+ open InternalSourceInversionSupportProof (onEquality)
+ open InternalOriginalOrderSyntaxProof InternalOriginalOrderProof
