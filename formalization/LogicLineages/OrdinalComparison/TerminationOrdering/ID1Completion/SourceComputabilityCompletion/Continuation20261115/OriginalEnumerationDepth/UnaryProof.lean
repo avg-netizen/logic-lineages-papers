@@ -67,7 +67,12 @@ theorem forward (ordinary : Bool) (n : Nat) (raw metadata child out : OTerm alph
     rw [graph1Rename] at hoj
     apply programCases (depth n) ![child.relabel j]
     intro gamma k Xi d hk hd
-    simp only [consTermRename,emptyRename] at hd
+    have hx : (fun i => (![child.relabel j] i).relabel k) =
+        Fin.cons ((child.relabel j).relabel k) Fin.elim0 := by
+      funext i
+      obtain rfl := Fin.eq_zero i
+      rfl
+    rw [hx] at hd
     rw [resultRename]
     have hck := renameInto hcj k Xi hk
     rw [graph2Rename] at hck

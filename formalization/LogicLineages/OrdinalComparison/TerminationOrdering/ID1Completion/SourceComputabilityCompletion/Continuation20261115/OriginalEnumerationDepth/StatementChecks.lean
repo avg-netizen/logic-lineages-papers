@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationDepth.NativeProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationDepth.LeafProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationDepth.UnaryProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationDepth.BinaryProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationDepth.NumberedProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationDepth.StatementChecks
+theorem exactNativeDepth : Targets.NativeDepth := NativeProof.nativeDepth
+theorem exactInternalVariable : Targets.InternalVariable := LeafProof.internalVariable
+theorem exactInternalBottom : Targets.InternalBottom := LeafProof.internalBottom
+theorem exactInternalNil : Targets.InternalNil := LeafProof.internalNil
+theorem exactInternalLambda : Targets.InternalLambda := UnaryProof.internalLambda
+theorem exactInternalOrdinary : Targets.InternalOrdinary := UnaryProof.internalOrdinary
+theorem exactInternalApplication : Targets.InternalApplication := BinaryProof.internalApplication
+theorem exactInternalCons : Targets.InternalCons := BinaryProof.internalCons
+theorem exactInternalNumbered : Targets.InternalNumbered := NumberedProof.internalNumbered
+theorem exactInternalMalformed : Targets.InternalMalformed := ValueProof.internalMalformed
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationDepth.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationDepth.StatementChecks

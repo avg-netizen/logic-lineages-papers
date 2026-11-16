@@ -41,6 +41,16 @@ theorem value (cons : Bool) (n : Nat) (raw typ left right dl dr maximum : OTerm 
     (ChildrenProof.binary cons (raw.relabel j) z (typ.relabel j) (left.relabel j) (right.relabel j) rest deps hcj hdrest hd)
     hdrest hd hvrest hv hlj hrj hmj
 
+theorem numberedRename {beta : Type} (raw label head typ base types extra : OTerm alpha) (j : alpha → beta) :
+    (programGraph OriginalRawSyntaxTransport.numberedConstructor raw ![label,head,typ,base,types,extra]).relabel j =
+      programGraph OriginalRawSyntaxTransport.numberedConstructor (raw.relabel j)
+        ![label.relabel j,head.relabel j,typ.relabel j,base.relabel j,types.relabel j,extra.relabel j] := by
+  have hx : (fun i => (![label,head,typ,base,types,extra] i).relabel j) =
+      ![label.relabel j,head.relabel j,typ.relabel j,base.relabel j,types.relabel j,extra.relabel j] := by
+    funext i
+    fin_cases i <;> rfl
+  rw [programRename,hx]
+
 theorem numbered (n : Nat) (raw label head typ base types extra db de maximum : OTerm alpha)
     (hc : Nonempty (Derivation body Delta (programGraph OriginalRawSyntaxTransport.numberedConstructor raw ![label,head,typ,base,types,extra])))
     (hg : Nonempty (Derivation body Delta (graph1 (OriginalCodeValidityGuard.check n) (suc z) raw)))
@@ -52,7 +62,7 @@ theorem numbered (n : Nat) (raw label head typ base types extra db de maximum : 
   intro beta j Theta rest deps valueRest values hj hdrest hd hvrest hv
   simp only [graph1Rename,sucRelabel]
   have hcj := renameInto hc j Theta hj
-  simp only [programRename,InternalRecursionGraphStepSyntaxProof.consTermRename,emptyRename] at hcj
+  rw [numberedRename] at hcj
   have hgj := renameInto hg j Theta hj
   simp only [graph1Rename,sucRelabel,zRelabel] at hgj
   have hbj := renameInto hb j Theta hj
