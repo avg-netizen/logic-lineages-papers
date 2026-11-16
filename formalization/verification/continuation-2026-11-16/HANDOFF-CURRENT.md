@@ -1,12 +1,12 @@
 # Current public formalization handoff
 
-Snapshot: 2026-11-16 12:04 UTC. Continuation authorization remains active.
+Snapshot: 2026-11-16 12:15 UTC. Continuation authorization remains active.
 
 ## Verified durable frontier
 
 - Branch: `formalization/cumulative-continuation-2026-11-16`.
-- Verified remote head: `539867cfa00e8a129d05cf5925a8e5ae3f90f391`, committed12:03:37UTC. All27 intended snapshot paths and11 acceptance31 source pins match the remote.
-- Accepted supporting contracts: **800 locally;799 at the verified remote head above**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
+- Verified remote head: `f6fec568d22bf6983d791934f9c2f4716802e292`, committed12:15:24UTC. All35 intended snapshot paths and10 acceptance32 source pins match the remote.
+- Accepted supporting contracts: **802 locally;800 at the verified remote head above**. Original numbered register remains **175 checked /2 inherited /12 pending /189**. Helpers do not count as completed numbered claims.
 - Main4028a9e and independent Nov15 branch b51cb999 remain unchanged. Overlapping prior733 are never added twice. No main merge or force push.
 - Acceptance13: one coherent cumulative source exact1,2341 recursively matched modules,total760. Six prior packages/capabilities retained, K/S plus seven helper contracts reconstructed at actual new CORE where needed. No tuple/tag equality shortcut.
 - Acceptance14: original K-lift/S-mpUnder and arbitrary-code literal traces exact3,2351 matched modules,total763. K then one MP; S then two MP in original order. Actual new source/CORE/Fuel, original guards, membership-backed registry coherence.
@@ -28,12 +28,13 @@ Snapshot: 2026-11-16 12:04 UTC. Continuation authorization remains active.
 - Acceptance30: concrete ordinary-step producer Program exact2,2436 matched modules,total796 locally; actual stepTag(base), q-derived previous and actual child, no prior-certificate input; original recipe retained. Actual new joint source and CORE bridges remain unpaid.
 - Acceptance31: concrete full recursion producer exact3, 2447 matched modules,total799 locally. Literal target/counter swaps, raw/original recurrence and symbolic zero/successor equations. Actual once-selected source and structural child correctness remain unpaid.
 - Acceptance32: actual once-selected source with concrete recursion producer exact1, 2457 matched modules,total800 locally. Every prior capability retained in same new source; actual child addresses and same-source equations established. New-root CORE correctness transformer and structural compiler remain unpaid.
+- Acceptance33: original enumeration membership iff Fields and depth≤fuel exact2, 4229 matched modules,total802 locally. Actual strong fuel induction, ordered prior/opened bounds, allraw constructor inversion and exact original Fields/depth. Full paper06 internal accessibility remains unpaid.
 - Exact native gates, standard-axiom closure and recursive source/object/input/log matching passed for these acceptances. No full-root build or CI claim.
 
 ## Active proof boundaries
 
 1. P6 original Fields frozen13 and full enumeration validity accepted. OriginalEnumerationMembership exact2 frozen14pins and preflight passed. Native membership calibration and internal successor depth constructor lemmas pass; positive depth/zero impossibility and actual allraw constructor inversion are in progress. Full actual membership iff Fields and depth≤fuel remains unpaid.
-2. P12 concrete formula/base/ordinary-step ASTs accepted. CurrentRecursionProducerProgram exact3 frozen11pins and accepted31: literal coordinate swaps, concrete full accumulator, raw/original numeric recurrences and symbolic zero/successor graph. CurrentRecursionProducerSource exact1/frozen13 pins passed preflight after explicit Nat annotation; actual once-only source proof underway. Retained new-root CORE capability bridges, structural child correctness/full producer compiler and HB3 remain unpaid. Conditional node memberships do not establish source realization.
+2. P12 concrete formula/base/ordinary-step ASTs accepted. CurrentRecursionProducerProgram exact3 frozen11pins and accepted31: literal coordinate swaps, concrete full accumulator, raw/original numeric recurrences and symbolic zero/successor graph. CurrentRecursionProducerSource exact1/frozen13 pins accepted32. CurrentRecursionProducerCore exact3/frozen12 pins passed preflight; new-root CORE transformer proof underway. Retained new-root CORE capability bridges, structural child correctness/full producer compiler and HB3 remain unpaid. Conditional node memberships do not establish source realization.
 
 ## Verification and publication discipline
 
@@ -41,7 +42,7 @@ One coordinator owns a serialized compiler queue and publication; two disjoint a
 
 Batch stdout truncates each module log to its last16000characters. Always inspect receipt.modules[].log: long linter warnings can hide ordinary errors before a sorryAx audit failure. Failed sources, full logs and receipts remain locally preserved.
 
-Source-first publication at least every30minutes; next deadline12:33UTC. Normal git push lacks credentials; authenticated connector publishes inspected mathematical Lean sources and acceptance summaries using immutable blobs and a leased nonforce ref update. Raw reconstructible logs and ancillary metadata remain locally preserved after automated review rejected a broad artifact batch. Sources and acceptance summaries were inspected for credentials/private notes and safely published. Large recursive evidence payloads are local with exact hash/byte counts in acceptance records.
+Source-first publication at least every30minutes; next deadline12:45UTC. Normal git push lacks credentials; authenticated connector publishes inspected mathematical Lean sources and acceptance summaries using immutable blobs and a leased nonforce ref update. Raw reconstructible logs and ancillary metadata remain locally preserved after automated review rejected a broad artifact batch. Sources and acceptance summaries were inspected for credentials/private notes and safely published. Large recursive evidence payloads are local with exact hash/byte counts in acceptance records.
 
 Fetch and verify every intended remote path hash. Update local ref/index only after verification without changing newer worktree drafts. Preserve all failures and unfinished sources; stop promptly on the next stop instruction.
 
