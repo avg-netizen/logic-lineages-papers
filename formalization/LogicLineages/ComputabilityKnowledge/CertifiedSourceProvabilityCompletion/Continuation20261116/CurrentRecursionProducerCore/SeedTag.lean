@@ -45,16 +45,16 @@ theorem seed {arity ctx : Nat} (p : Program arity) (J : CurrentRecursionBaseProg
  | succ n ih =>
   let sf := substituteFormula (CurrentRecursionBaseProgram.TagSyntax.plug (n+1) tag) f
   obtain ⟨hf⟩ := TagRuntime.formula p J.ctag J.atag hc ha raw code tag hcode f
-  obtain ⟨hmat⟩ := TagRuntime.headFormula p J.ctag J.atag hc ha raw.tail code tag hcode f
+  obtain ⟨hmat⟩ := TagRuntime.headFormula (n := n) p J.ctag J.atag hc ha raw.tail code tag hcode f
   obtain ⟨htail⟩ := ih (.all f) raw.tail
   obtain ⟨hline⟩ := CallTransport.rule13 p J.ctag J.r13 J.ctag J.r13 hc h13 hc h13 _ _ raw.head raw.head
    hmat (.logical (.reflexive _))
   obtain ⟨hmp⟩ := CallTransport.mp p J.mtag J.mtag hm hm _ _ _ _ _ _ hf hline htail
-  simpa only [CurrentRecursionBaseProgram.seedValue,TagRuntime.rawHead,TagRuntime.rawTail,
+  simp only [CurrentRecursionBaseProgram.seedValue,TagRuntime.rawHead,TagRuntime.rawTail,
    PrescribedSourceAxiomSpecialization.certificate,PrescribedRuntimeSpecialization.certificate,
    UniformRuntimeSpecializationStep.certificate,PrescribedRuntimeSpecialization.EnvironmentProof.stepValue,
    PrescribedRuntimeSpecialization.value,substituteFormula,CurrentRecursionBaseProgram.TagSyntax.plug,
-   PrescribedSourceAxiomSpecialization.seed,GorbowStandardInduction.universalClosure]
-   using (show Nonempty _ from ⟨hmp⟩)
+   PrescribedSourceAxiomSpecialization.seed,GorbowStandardInduction.universalClosure] at hmp ⊢
+  exact ⟨hmp⟩
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.SeedTag
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.SeedTag

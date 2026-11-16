@@ -42,14 +42,16 @@ theorem rawTail {ctx n : Nat} (raw : List.Vector (Term ctx) (n+1)) (code : Term 
   exact List.Vector.get_ofFn _ j
  apply List.Vector.ext (n := n+1)
  intro i
- rw [List.Vector.get_tail_succ, hget]
- refine Fin.lastCases ?_ (fun j => ?_) i
- · have hi : (Fin.last n).succ = Fin.last (n+1) := by apply Fin.ext; rfl
-   rw [hi]
-   simp only [appendRaw,List.Vector.get_ofFn,Fin.lastCases_last]
- · have hi : j.castSucc.succ = j.succ.castSucc := by apply Fin.ext; rfl
-   rw [hi]
-   simp only [appendRaw,List.Vector.get_ofFn,Fin.lastCases_castSucc,List.Vector.get_tail_succ]
+ have hmain : (appendRaw raw code).get i.succ = Fin.lastCases code (fun k : Fin n => raw.tail.get k) i := by
+  refine Fin.lastCases ?_ (fun j => ?_) i
+  · have hi : (Fin.last n).succ = Fin.last (n+1) := by apply Fin.ext; rfl
+    rw [hi]
+    simp only [appendRaw,List.Vector.get_ofFn,Fin.lastCases_last]
+  · have hi : j.castSucc.succ = j.succ.castSucc := by apply Fin.ext; rfl
+    rw [hi]
+    simp only [appendRaw,List.Vector.get_ofFn,Fin.lastCases_castSucc]
+    exact (List.Vector.get_tail_succ raw j).symm
+ exact (List.Vector.get_tail_succ (appendRaw raw code) i).trans (hmain.trans (hget i).symm)
 
 theorem formula {arity n ctx : Nat} (p : Program arity) (ctag atag : Nat)
  (hc : (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩) (ha : (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩)

@@ -60,11 +60,15 @@ theorem consCore (raw head tail param out node a b : OTerm alpha)
  :
     Nonempty (Derivation body Delta (result raw param out node a b)) := by
   let qs : Fin 2 → Program 3 := ![.composition InternalPairing.pairing ![.projection 2,.projection 0],
-    .composition pairRoots ![.projection 1,.projection 2]]
+    .composition pairRoots ![.projection 1,.projection 2] ]
   apply OriginalLambdaConstructorGraphSyntaxProof.queryCases qs ![head,tail,param] _
   intro beta j ys Theta hj hvals
   simp only [result,PairImageProof.imageRename,graph2Rename,GuardedSourceSyntaxProof.numeralRename]
   let xs : Fin 3 → OTerm beta := ![head.relabel j,tail.relabel j,param.relabel j]
+  have hx : (fun i => (![head,tail,param] i).relabel j) = xs := by
+    funext i
+    fin_cases i <;> rfl
+  rw [hx] at hvals
   have hh := binaryRecover InternalPairing.pairing (.projection 2) (.projection 0)
     (ys 0) (param.relabel j) (head.relabel j) xs (hvals 0) (projectionValue 2 xs) (projectionValue 0 xs)
   have hr := binaryRecover pairRoots (.projection 1) (.projection 2)

@@ -28,7 +28,7 @@ theorem formula {arity inputs ctx : Nat} (p : Program arity) (c a : Nat)
  {n depth : Nat} (e : Environment n depth inputs) (f : Formula n) :
  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
   (.equal (formulaValue c a raw f e) (formulaValue c a other f e))) := by
- cases f with
+ cases hform : f with
  | equal t u =>
   obtain ⟨ht⟩ := term p c a hc ha raw other hraw e t
   obtain ⟨hu⟩ := term p c a hc ha raw other hraw e u
@@ -71,6 +71,10 @@ theorem formula {arity inputs ctx : Nat} (p : Program arity) (c a : Nat)
   obtain ⟨hf⟩ := formula p c a hc ha raw other hraw (liftEnvironment e) f
   exact CurrentCompositionCertificate.CodecProof.unary p c c 11 hc hc _ _ hf
 termination_by sizeOf f
-decreasing_by all_goals simp_wf <;> omega
+decreasing_by
+ all_goals
+  simp_wf
+  rw [hform]
+  simp <;> omega
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.FormulaRaw
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.FormulaRaw

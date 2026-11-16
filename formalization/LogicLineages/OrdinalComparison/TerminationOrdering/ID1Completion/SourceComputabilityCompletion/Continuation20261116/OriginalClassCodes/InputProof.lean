@@ -35,20 +35,20 @@ theorem middleRecover (n : Nat) (arity : Fin n → Nat) (seed param mid hs tail 
     Nonempty (Derivation body Delta (graph2 InternalPairing.pairing mid hs tail)) :=
   binaryRecover InternalPairing.pairing (heads n arity) (metadataTail n) mid hs tail ![seed,param] hm hh ht
 
-theorem parameterRecover (n : Nat) (arity : Fin n → Nat) (seed param meta ts mid : OTerm alpha)
-    (hm : Nonempty (Derivation body Delta (graph2 (parameter n arity) meta seed param)))
+theorem parameterRecover (n : Nat) (arity : Fin n → Nat) (seed param metadata ts mid : OTerm alpha)
+    (hm : Nonempty (Derivation body Delta (graph2 (parameter n arity) metadata seed param)))
     (ht : Nonempty (Derivation body Delta (graph2 types ts seed param)))
     (hp : Nonempty (Derivation body Delta (graph2 (metadataMiddle n arity) mid seed param))) :
-    Nonempty (Derivation body Delta (graph2 InternalPairing.pairing meta ts mid)) :=
-  binaryRecover InternalPairing.pairing types (metadataMiddle n arity) meta ts mid ![seed,param] hm ht hp
+    Nonempty (Derivation body Delta (graph2 InternalPairing.pairing metadata ts mid)) :=
+  binaryRecover InternalPairing.pairing types (metadataMiddle n arity) metadata ts mid ![seed,param] hm ht hp
 
-theorem enumerationRecover (n : Nat) (arity : Fin n → Nat) (seed param key meta out : OTerm alpha)
+theorem enumerationRecover (n : Nat) (arity : Fin n → Nat) (seed param key metadata out : OTerm alpha)
     (he : Nonempty (Derivation body Delta (graph2 (enumerated n arity) out seed param)))
     (hk : Nonempty (Derivation body Delta (graph2 (node n) key seed param)))
-    (hm : Nonempty (Derivation body Delta (graph2 (parameter n arity) meta seed param))) :
-    Nonempty (Derivation body Delta (graph2 (OriginalEnumerationRecursion.enumeration n) out key meta)) :=
+    (hm : Nonempty (Derivation body Delta (graph2 (parameter n arity) metadata seed param))) :
+    Nonempty (Derivation body Delta (graph2 (OriginalEnumerationRecursion.enumeration n) out key metadata)) :=
   binaryRecover (OriginalEnumerationRecursion.enumeration n) (node n) (parameter n arity)
-    out key meta ![seed,param] he hk hm
+    out key metadata ![seed,param] he hk hm
 
 theorem frontendRecover (n : Nat) (arity : Fin n → Nat) (seed param out en root : OTerm alpha)
     (hf : Nonempty (Derivation body Delta (graph2 (frontend n arity) out seed param)))

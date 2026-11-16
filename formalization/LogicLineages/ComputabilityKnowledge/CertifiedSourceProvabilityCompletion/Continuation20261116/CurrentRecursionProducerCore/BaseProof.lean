@@ -26,14 +26,14 @@ theorem exactBase : Targets.BaseCore := by
   (call (R.qTag+1) inputs) (childCode R.BTag (R.qTag+1) inputs) fuel hguard hchild
  have hcore := Hilbert.Local.mp (.base (.logical (.andLeft _ _))) haccepted
  obtain ⟨hformula⟩ := FormulaBridge.zero p installed lhs rhs t old a baseX I base step B G R inputs
- obtain ⟨hformulaU⟩ := GorbowTheoryProofProof.monotonicity T U hTU ctx _ (Logic.symm _ _ hformula)
+ obtain ⟨hformulaU⟩ := GorbowTheoryProofProof.monotonicity T U hTU ctx _ ⟨Logic.symm _ _ hformula⟩
  obtain ⟨hformulaCore⟩ := PrescribedRuntimeSpecialization.BaseProof.coreTransport U assumptions I.currentK.coreTag
   (Term.numeral (Encodable.encode c)) fuel _ _ _ (.base hformulaU) hcore
  obtain ⟨hgraph⟩ := CurrentRecursionBaseProgram.StatementChecks.exactInternal _ p m base B R.BJ R.producer.baseTag
   R.baseInstallation R.producer.hbase ctx (Term.numeral R.qTag) inputs
  obtain ⟨hvalue⟩ := BaseCode.value p installed lhs rhs t old a baseX I base step B G R inputs
  have hcode := Logic.trans _ _ _ hgraph hvalue
- obtain ⟨hcodeU⟩ := GorbowTheoryProofProof.monotonicity T U hTU ctx _ (Logic.symm _ _ hcode)
+ obtain ⟨hcodeU⟩ := GorbowTheoryProofProof.monotonicity T U hTU ctx _ ⟨Logic.symm _ _ hcode⟩
  exact CurrentImplicationCertificate.RebaseProof.coreCode U assumptions I.currentK.coreTag
   (Term.numeral (Encodable.encode c)) fuel _ _ _ (.base hcodeU) hformulaCore
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.BaseProof

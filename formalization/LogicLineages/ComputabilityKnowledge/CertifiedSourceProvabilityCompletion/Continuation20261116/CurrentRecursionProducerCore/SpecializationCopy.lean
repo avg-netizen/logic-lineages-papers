@@ -31,9 +31,10 @@ theorem certificate {arity ctx : Nat} (p : Program arity) (J K : CurrentRecursio
  induction n with
  | zero => exact ⟨hab⟩
  | succ n ih =>
-  have htail : ∀ i, Derivation (GorbowPRNumeralCalculation.Theory p) (.equal (raw.tail.get i) (other.tail.get i)) := by
+  have htail : ∀ i : Fin n, Derivation (GorbowPRNumeralCalculation.Theory p) (.equal (raw.tail.get i) (other.tail.get i)) := by
    intro i
-   simpa only [List.Vector.get_tail_succ] using hraw i.succ
+   rw [List.Vector.get_tail_succ, List.Vector.get_tail_succ]
+   exact hraw i.succ
   obtain ⟨hcertTail⟩ := ih (.all f) raw.tail other.tail htail
   obtain ⟨hcF⟩ := FormulaCopy.formula p J.ctag J.atag K.ctag K.atag hc ha kc ka raw (PrescribedRuntimeSpecialization.runtimeEnvironment (n+1)) f
   obtain ⟨hrF⟩ := FormulaRaw.formula p K.ctag K.atag kc ka raw other hraw (PrescribedRuntimeSpecialization.runtimeEnvironment (n+1)) f
@@ -45,8 +46,8 @@ theorem certificate {arity ctx : Nat} (p : Program arity) (J K : CurrentRecursio
    simpa only [List.Vector.get_zero] using hraw 0
   obtain ⟨hline⟩ := CallTransport.rule13 p J.ctag J.r13 K.ctag K.r13 hc hr kc kr _ _ _ _ hmat hh
   obtain ⟨hmp⟩ := CallTransport.mp p J.mtag K.mtag hm km _ _ _ _ _ _ hf hline hcertTail
-  simpa only [PrescribedRuntimeSpecialization.certificate,UniformRuntimeSpecializationStep.certificate,
+  simp only [PrescribedRuntimeSpecialization.certificate,UniformRuntimeSpecializationStep.certificate,
    PrescribedRuntimeSpecialization.EnvironmentProof.stepValue,PrescribedRuntimeSpecialization.value]
-   using (show Nonempty _ from ⟨hmp⟩)
+  exact ⟨hmp⟩
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.SpecializationCopy
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.SpecializationCopy

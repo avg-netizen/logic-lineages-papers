@@ -13,7 +13,7 @@ theorem formula {arity inputs ctx : Nat} (p : Program arity) (c a d b : Nat)
  (raw : List.Vector (Term ctx) inputs) {n depth : Nat} (e : Environment n depth inputs) (f : Formula n) :
  Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
   (.equal (formulaValue c a raw f e) (formulaValue d b raw f e))) := by
- cases f with
+ cases hform : f with
  | equal t u =>
   obtain ⟨ht⟩ := CurrentCompositionCertificate.TermCopiesProof.term p c a d b hc ha hd hb e raw t
   obtain ⟨hu⟩ := CurrentCompositionCertificate.TermCopiesProof.term p c a d b hc ha hd hb e raw u
@@ -56,6 +56,10 @@ theorem formula {arity inputs ctx : Nat} (p : Program arity) (c a d b : Nat)
   obtain ⟨hf⟩ := formula p c a d b hc ha hd hb raw (liftEnvironment e) f
   exact CurrentCompositionCertificate.CodecProof.unary p c d 11 hc hd _ _ hf
 termination_by sizeOf f
-decreasing_by all_goals simp_wf <;> omega
+decreasing_by
+ all_goals
+  simp_wf
+  rw [hform]
+  simp <;> omega
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.FormulaCopy
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionProducerCore.FormulaCopy
