@@ -17,7 +17,7 @@ attribute [local irreducible] programGraph
 
 theorem maximumZero (a : OTerm alpha) :
     Nonempty (Derivation body Delta (graph2 OriginalBoundsRecombination.maximum a a z)) := by
-  have hs := InternalEqualityTestSubtractionSupportProof.subTransport z (InternalAdditionLawsProof.add z a) z a z
+  have hs := InternalEqualityTestSubtractionSupportProof.subTransport (body := body) (Gamma := Delta) z (InternalAdditionLawsProof.add z a) z a z
     ⟨InternalAdditionLawsProof.leftZero a⟩ ⟨refl z⟩ (InternalEqualityTestSubtractionProof.absorption z a)
   exact zeroBranchIntro InternalLessThan.ltTest (.projection 0) (.projection 1) a ![a,z]
     (InternalLessThanSupportProof.rejectOfZeroDifference a z hs) (projectionValue 0 ![a,z])
