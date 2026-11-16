@@ -33,7 +33,7 @@ theorem valueGraph {arity ctx : Nat} (p : Program arity) (r s : Term ctx) :
  intro tag ht
  obtain ⟨hv⟩ := ArithmeticTemplateEvaluation.ValueProof.computes header CurrentNamedHeaderCertificate.TemplateProof.arithmetic p (r ::ᵥ s ::ᵥ nil) tag ht
  have hv' := hv.finish
- rw [CurrentNamedHeaderCertificate.TemplateProof.value] at hv'
+ rw [header, CurrentNamedHeaderCertificate.TemplateProof.value] at hv'
  exact ⟨hv'⟩
 
 theorem numeralGraph {arity ctx : Nat} (p : Program arity)

@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalConcreteHeadArguments.BranchProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalConcreteHeadArguments.StatementChecks
+theorem exactTag : Targets.InternalTagFactor := TagProof.internalTagFactor
+theorem exactApplication : Targets.InternalApplicationArguments := BranchProof.applicationArguments
+theorem exactRanked : Targets.InternalRankedArguments := BranchProof.rankedArguments
+#print axioms exactTag
+#print axioms exactApplication
+#print axioms exactRanked
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalConcreteHeadArguments.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalConcreteHeadArguments.StatementChecks

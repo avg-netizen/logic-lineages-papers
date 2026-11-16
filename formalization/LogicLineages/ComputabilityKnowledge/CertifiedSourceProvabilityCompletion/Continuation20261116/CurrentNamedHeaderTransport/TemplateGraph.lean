@@ -16,7 +16,7 @@ theorem quote {arity inputs ctx : Nat} (p : Program arity) (v : List.Vector (Ter
    (v.map (LiteralNumeralPrefix.numeralCall K.numeralTag)) t) := by
  induction t with
  | var i =>
-  simpa only [LiteralTemplateQuote.templateQuote,termValue,PrescribedRuntimeSpecialization.runtimeEnvironment,List.Vector.get_map] using
+  simpa only [LiteralTemplateQuote.templateQuote,termValue,PrescribedRuntimeSpecialization.runtimeEnvironment,List.Vector.get_map,LiteralNumeralPrefix.numeralCall] using
    (LiteralRawMP.ConstructorSupportProof.unary p v LiteralNumeralPrefix.numeralCode K.numeralTag H.hn _ _ (projection p v i))
  | zero =>
   have hg := binary p v HistoryCodec.cons K.ctag H.hc _ _ _ _ (constantValue p v 1) (constantValue p v 0)

@@ -23,7 +23,8 @@ theorem applicationValue (n : Nat) (arity : Fin n → Nat) (a b : Nat) :
 
 theorem rankedValue (n : Nat) (arity : Fin n → Nat) (s : Fin n) :
     evaluate (branchArguments n arity 5) (s.val ::ᵥ nil) = numbersNumber (List.replicate (arity s) 0) := by
-  rw [branchArguments,unaryCompositionEvaluation,ListProof.arityValue,ListProof.groundListValue]
+  rw [branchArguments,unaryCompositionEvaluation,ListProof.arityValue]
+  exact ListProof.groundListValue (arity s)
 
 theorem typesEncoding (xs : List Ty) : typesNumber xs = numbersNumber (xs.map typeNumber) := by
   induction xs with
@@ -37,6 +38,6 @@ theorem nativeArguments (n : Nat) (arity : Fin n → Nat) (h : HeadCode (Fin n))
     simp [arguments,chooseEvaluation,headNumber,Nat.unpair_pair,payloadEvaluation,
       applicationValue,rankedValue,constantEvaluation,
       decodeHead,Source.SourceMarkedSyntax.headArguments,typesEncoding,typeNumber,
-      List.map_replicate]
+      List.map_replicate] <;> rfl
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalConcreteHeadSignature.ArgumentsProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalConcreteHeadSignature.ArgumentsProof

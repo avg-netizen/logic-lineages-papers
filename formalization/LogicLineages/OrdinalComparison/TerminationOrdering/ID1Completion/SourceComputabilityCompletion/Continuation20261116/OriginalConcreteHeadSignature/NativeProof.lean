@@ -11,7 +11,10 @@ open LogicLineages.ComputabilityKnowledge.GorbowPRProgram List.Vector
 
 theorem rawSignature (n : Nat) (arity : Fin n → Nat) (raw : Nat) :
     evaluate (signature n arity) (raw ::ᵥ nil) = OriginalTypedDecoder.headSignatureValue n arity raw := by
-  rw [signature,evalBranch,Continuation20261115.OriginalHeadDecoderValidity.NativeProof.nativeDecoderValidity]
+  have hc : evaluate (Continuation20261115.OriginalHeadDecoderValidity.check n) (raw ::ᵥ nil) =
+      (decodeHeadNumber n raw).isSome.toNat :=
+    Continuation20261115.OriginalHeadDecoderValidity.NativeProof.nativeDecoderValidity n raw
+  rw [signature,evalBranch,hc]
   cases hd : decodeHeadNumber n raw with
   | none => simp [OriginalTypedDecoder.headSignatureValue,hd,constantEvaluation]
   | some h =>
@@ -20,8 +23,10 @@ theorem rawSignature (n : Nat) (arity : Fin n → Nat) (raw : Nat) :
       exact hd
     have hh := NumberedRawParserSoundnessSupportProof.headSound n raw h hp
     simp only [Option.isSome_some,Bool.toNat_true,one_ne_zero,if_false,succOfEvaluation,pairOfEvaluation]
-    rw [← hh,Continuation20261114.OriginalHeadResult.NativeProof.nativeHeadResult,
-      ArgumentsProof.nativeArguments]
+    have hr : evaluate Continuation20261114.OriginalHeadResult.headResult (headNumber h ::ᵥ nil) =
+        Encodable.encode (Source.SourceMarkedSyntax.headResult (decodeHead h)) :=
+      Continuation20261114.OriginalHeadResult.NativeProof.nativeHeadResult n h
+    rw [← hh,hr,ArgumentsProof.nativeArguments]
     rw [OriginalTypedDecoder.headSignatureValue,NumberedNumericDecodingSupportProof.headNumericRoundTrip]
     rw [Continuation20261114.OriginalHeadEncodingBridge.NativeProof.typeEncoding,Nat.add_comm]
 

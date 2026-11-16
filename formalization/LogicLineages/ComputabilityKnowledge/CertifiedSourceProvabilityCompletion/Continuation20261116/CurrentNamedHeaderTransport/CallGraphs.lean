@@ -7,7 +7,7 @@ open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRDefiningEquations Gor
 open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
 open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115
 open SixSol20261112.Fuel NamedArithmeticGraph LiteralRawMP.ConstructorSupportProof FixedFormulaSubstitution
- theorem callEncoding {arity inputs ctx : Nat} (p : Program arity)
+theorem callEncoding {arity inputs ctx : Nat} (p : Program arity)
  (K : PrescribedRuntimeCallCongruence.Tags) (H : CurrentRecursionProducerCore.CodecBridge.Nodes p K)
  (v : List.Vector (Term ctx) inputs) (t : Term inputs) (raw : Term ctx)
  (he : Derivation (GorbowPRNumeralCalculation.Theory p)

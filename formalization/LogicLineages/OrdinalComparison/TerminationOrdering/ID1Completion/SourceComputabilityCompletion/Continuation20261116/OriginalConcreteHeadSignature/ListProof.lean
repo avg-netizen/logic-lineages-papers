@@ -32,7 +32,9 @@ theorem arityValue (n : Nat) (arity : Fin n → Nat) (s : Fin n) :
     evaluate (arityAt n arity) (s.val ::ᵥ nil) = arity s := by
   rw [arityAt,binaryCompositionEvaluation,constantEvaluation]
   change evaluate InternalRawListRecursion.lookup (ofFn ![s.val,numbersNumber (List.ofFn arity)]) = _
-  rw [InternalEqualityTestEvaluationProof.vectorTwo,Continuation20261114.ExchangeAnswerSlots.NativeProof.lookupEncoded,
+  rw [InternalEqualityTestEvaluationProof.vectorTwo]
+  change evaluate InternalRawListRecursion.lookup (s.val ::ᵥ numbersNumber (List.ofFn arity) ::ᵥ nil) = _
+  rw [Continuation20261114.ExchangeAnswerSlots.NativeProof.lookupEncoded,
     List.getD_eq_getElem (List.ofFn arity) 0 (by simpa using s.isLt)]
   simp
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalConcreteHeadSignature.ListProof

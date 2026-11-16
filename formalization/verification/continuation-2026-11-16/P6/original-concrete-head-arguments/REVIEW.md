@@ -1,0 +1,1 @@
+Independent review accepts actual raw dispatch, ordered application [domain→result,domain], and ranked ground-list recursion at actual fixed-table lookup. Input-component graph premises are not success oracles. No class-equality shortcut or tautological target. Three pins verified. Zero-list length/type transport and full typed exchange preservation remain separate.
