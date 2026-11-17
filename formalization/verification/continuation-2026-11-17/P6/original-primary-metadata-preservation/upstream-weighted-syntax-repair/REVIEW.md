@@ -1,0 +1,11 @@
+# Independent final WeightedAgreement syntax review
+
+Approved the four final syntax modules at REVIEWED-PINS.json hashes. This supersedes the earlier unsplit review retained in INITIAL-REVIEW.md. All eight original public theorem headers/attributes and five untouched full declarations match the original snapshot exactly. Only fieldsSubst, atRawSubst and matrixWitness delegate to new helpers. Original WeightedAgreementDefinitions remains byte-identical to HEAD. All helpers and wrappers retain the original namespace and are publicly imported through the original module.
+
+The generic fieldsSchema abstracts both the complete graph program and the polymorphic binary formula A. It keeps A left right and both graph observations in the original order. Generic matrixSchema keeps Fin 3 coordinates [right,ls,rs], lifted left, and conclusion eqn ls rs. allSchema keeps the same allBlock. Every original wrapper instantiates A with the literal OriginalArgumentPermutationClosure.CountAgreement.agreement and the graph program with Fold.weighted weight. Thus exact original fields, matrix and AtRaw are recovered.
+
+The helper parameter hA is explicitly the substitution law for A, required at arbitrary variable types so binder lifting is valid. All three wrappers discharge it with the existing checked agreementSubst theorem; no hA or generic A assumption appears in any old public statement. The generic helpers prove only formula substitution/witness identities, not arbitrary-program output agreement. graphOneSubst is the existing programSubst and finite tuple identity for a fixed unary program. No semantic permutation assumption, preservation oracle, new axiom or native reflection is introduced.
+
+The proof-only split isolates fields substitution, allBlock substitution and witness elimination to avoid accumulating elaboration of the concrete count-agreement/program syntax. Original program ASTs, decoder/default behavior, resource limits and checker are unchanged. This repair alone earns no substantive contribution credit.
+
+Native PASS receipt 1794928878870085417-7 was reported by the implementing parent, not independently rerun here. This review is a source review; final recursive evidence and receipt/hash reconciliation remain separate. No source edits or compiler runs were performed by the reviewer.

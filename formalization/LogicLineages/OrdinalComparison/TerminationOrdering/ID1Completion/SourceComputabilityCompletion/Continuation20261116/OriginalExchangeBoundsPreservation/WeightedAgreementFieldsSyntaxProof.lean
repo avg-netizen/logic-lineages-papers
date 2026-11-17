@@ -1,0 +1,49 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.WeightedAgreementDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationResultFoldTotalitySyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientComparisonSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedDecoderInternalLogicSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryUncoveredCount.CompareSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextInsertionSyntaxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.WeightedAgreementSyntaxProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalApplicationCertificateConstructors
+open SourceComputabilityFormulaSupportProof InternalControlGraphSupportProof
+open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
+open InternalRawListRecursionSyntaxProof InternalGraphCompositionSyntaxProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open InternalBinderTransportProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
+open InternalAdditionLawsProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open WeightedAgreement
+open InternalQuotientComparisonSyntaxProof InternalOriginalOrderSyntaxProof
+open OriginalTypedDecoderInternalLogicSyntaxProof (equalSubst orSubst)
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114
+open PrimaryUncoveredCount.CompareSyntaxProof (boundedSubst)
+open InternalStrongInduction
+open OriginalContextInsertionSyntaxProof (lengthSubst)
+
+open Continuation20261115.OriginalArgumentPermutationClosure.CountAgreementSyntaxProof
+attribute [local irreducible] programGraph
+
+open Continuation20261115.OriginalArgumentPermutationClosure.CountAgreement
+theorem graphOneSubst {alpha beta : Type} (P : Program 1) (out arg : OTerm alpha) (ts : alpha → OTerm beta) :
+    (graph1 P out arg).subst (fun a => emb (ts a)) = graph1 P (out.subst ts) (arg.subst ts) := by
+  simp only [graph1,programSubst,consTermSubst,emptySubst]
+def fieldsSchema {alpha : Type} (A : {gamma : Type} → OTerm gamma → OTerm gamma → Formula gamma) (weight : Program 1) (left right ls rs : OTerm alpha) : Formula alpha :=
+  A left right ⊓ (graph1 weight ls left ⊓ graph1 weight rs right)
+def matrixSchema {alpha : Type} (A : {gamma : Type} → OTerm gamma → OTerm gamma → Formula gamma) (weight : Program 1) (left : OTerm alpha) : Formula (alpha ⊕ Fin 3) :=
+  let x : Fin 3 → OTerm (alpha ⊕ Fin 3) := fun i => .var (.inr i)
+  (fieldsSchema A weight (left.relabel Sum.inl) (x 0) (x 1) (x 2)).imp (eqn (x 1) (x 2))
+def allSchema {alpha : Type} (A : {gamma : Type} → OTerm gamma → OTerm gamma → Formula gamma) (weight : Program 1) (raw : OTerm alpha) : Formula alpha :=
+  InternalClosedPrograms.allBlock (matrixSchema A weight raw)
+theorem fieldsSchemaSubst {alpha beta : Type} (A : {gamma : Type} → OTerm gamma → OTerm gamma → Formula gamma) (weight : Program 1) (hA : ∀ {a b : Type} (l r : OTerm a) (s : a → OTerm b), (A l r).subst (fun x => emb (s x)) = A (l.subst s) (r.subst s)) (left right ls rs : OTerm alpha) (ts : alpha → OTerm beta) :
+    (fieldsSchema A weight left right ls rs).subst (fun a => emb (ts a)) =
+      fieldsSchema A weight (left.subst ts) (right.subst ts) (ls.subst ts) (rs.subst ts) := by
+  simp only [fieldsSchema,conjunctionSubst,hA,graphOneSubst]
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.WeightedAgreementSyntaxProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.WeightedAgreementSyntaxProof

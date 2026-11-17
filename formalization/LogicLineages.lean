@@ -2334,3 +2334,18 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 
 -- Actual original primary output universe closure, with internal count induction.
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryUniverseClosure.StatementChecks
+
+-- Original headMove reversal with explicit source validity and same type closure.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalHeadMoveReversal.StatementChecks
+
+-- P6 actual original primary root type and full bounds preservation.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryMetadataPreservation.StatementChecks
+
+-- P6 actual original candidate seed self-coverage.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCandidateSelfCoverage.StatementChecks
+
+-- P6 literal original candidate-list rerooting.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCandidateRerooting.StatementChecks
+
+-- P6 common original candidates and membership-equivalent seed pools.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCommonCandidatePool.StatementChecks

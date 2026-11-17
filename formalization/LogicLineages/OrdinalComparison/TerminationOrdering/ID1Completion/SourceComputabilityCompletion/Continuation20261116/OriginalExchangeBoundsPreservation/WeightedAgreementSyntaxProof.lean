@@ -1,4 +1,5 @@
 module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.WeightedAgreementGenericSyntaxProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.WeightedAgreementDefinitions
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationResultFoldTotalitySyntaxProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientComparisonSyntaxProof
@@ -32,7 +33,7 @@ attribute [local irreducible] programGraph
 theorem fieldsSubst {alpha beta : Type} (weight : Program 1) (left right ls rs : OTerm alpha) (ts : alpha → OTerm beta) :
     (fields weight left right ls rs).subst (fun a => emb (ts a)) =
       fields weight (left.subst ts) (right.subst ts) (ls.subst ts) (rs.subst ts) := by
-  simp only [fields,conjunctionSubst,agreementSubst,graph1,programSubst,consTermSubst,emptySubst]
+  exact fieldsSchemaSubst Continuation20261115.OriginalArgumentPermutationClosure.CountAgreement.agreement (Fold.weighted weight) (fun l r ts => agreementSubst l r ts) left right ls rs ts
 @[simp] theorem fieldsRename {alpha beta : Type} (weight : Program 1) (left right ls rs : OTerm alpha) (j : alpha → beta) :
     (fields weight left right ls rs).relabel j = fields weight (left.relabel j) (right.relabel j) (ls.relabel j) (rs.relabel j) := by
   rw [formulaRelabelAsSubst]
@@ -42,9 +43,7 @@ theorem fieldsSubst {alpha beta : Type} (weight : Program 1) (left right ls rs :
 
 theorem atRawSubst {alpha beta : Type} (weight : Program 1) (raw : OTerm alpha) (ts : alpha → OTerm beta) :
     (AtRaw weight raw).subst (fun a => emb (ts a)) = AtRaw weight (raw.subst ts) := by
-  unfold AtRaw matrix
-  rw [allBlockSubst,liftedEmbedding]
-  simp only [impSubst,fieldsSubst,eqnSubst,liftSubst,Term.subst,Sum.elim_inr]
+  exact allSchemaSubst Continuation20261115.OriginalArgumentPermutationClosure.CountAgreement.agreement (Fold.weighted weight) (fun l r ts => agreementSubst l r ts) raw ts
 @[simp] theorem atRawRename {alpha beta : Type} (weight : Program 1) (raw : OTerm alpha) (j : alpha → beta) :
     (AtRaw weight raw).relabel j = AtRaw weight (raw.relabel j) := by
   rw [formulaRelabelAsSubst]
@@ -55,13 +54,7 @@ theorem atRawSubst {alpha beta : Type} (weight : Program 1) (raw : OTerm alpha) 
 theorem matrixWitness {alpha : Type} (weight : Program 1) (left right ls rs : OTerm alpha) :
     (matrix weight left).subst (Sum.elim Term.var (fun i => emb (![right,ls,rs] i))) =
       (fields weight left right ls rs).imp (eqn ls rs) := by
-  have he : (Sum.elim Term.var (fun i => emb (![right,ls,rs] i))) =
-      (fun a => emb (Sum.elim Term.var ![right,ls,rs] a)) := by
-    funext a; cases a <;> rfl
-  unfold matrix
-  rw [he]
-  simp only [impSubst,fieldsSubst,eqnSubst,witnessLift,Term.subst,Sum.elim_inr]
-  rfl
+  exact matrixSchemaWitness Continuation20261115.OriginalArgumentPermutationClosure.CountAgreement.agreement (Fold.weighted weight) (fun l r ts => agreementSubst l r ts) left right ls rs
 theorem predicateInstantiate {alpha : Type} (weight : Program 1) (raw : OTerm alpha) :
     instantiate (predicate weight) (emb raw) = AtRaw weight raw := by
   rw [predicate,instantiate,bindEmbedding,atRawSubst]

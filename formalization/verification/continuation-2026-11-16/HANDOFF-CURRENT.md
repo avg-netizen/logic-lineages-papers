@@ -386,3 +386,55 @@ ACCEPTANCE87 verifies the exact actual OriginalPrimaryUniverseClosure endpoint: 
 OriginalPrimaryMetadataPreservation comparator is independently reviewed/frozen and native preflight passed; its actual original type/full-bounds induction remains unaccepted. A cold existing OriginalExchangeBoundsPreservation.ExchangeInductionSyntaxProof exceeds the fixed RSS cap. Original snapshots and independent proof-only generic/split repair review are preserved; original public theorem types and checker/caps unchanged. No memory-repair credit.
 
 OriginalCandidateRerooting comparator independently reviewed/frozen/native1794927860024913440-5. Conditional internal selector transport native1794928286541461874-5 preserves the literal ClassCodes/enumeration/filter pipeline from same root/full bounds and both admissions, but these conditions still must be derived at the actual primary member. Its final caller/query assembly is pending the metadata endpoint; no candidate-list or pool-equivalence result is claimed yet. Source drafts are distinct from accepted87. Stop18:00UTC, checkpoints30minutes, no merge.
+
+### 2026-11-17 15:18:18 UTC verified remote checkpoint
+
+Nonforce leased publication `d04e57cabf80d8b37b11613d4720cbcee628c758`, tree
+`872de54d1b4e6775ef6920d6b22a2f6c7a7634c6`, verified via fetch/ls-remote;
+all 24 Acceptance87 source pins rehashed from remote blobs. Supporting897,
+numbered178 checked/2 inherited/9 pending. Snapshot preserves 131 source/docs
+files including metadata and literal candidate-list rerooting drafts, explicitly
+not accepted. Compiler/profile/checker/toolchain unchanged. Next source checkpoint
+by15:48 UTC; hard stop18:00 UTC. Metadata is clearing upstream bounds syntax RSS
+limits by generic-schema proof-only factoring, exact old theorem headers retained
+and independently reviewed. Those repairs earn no extra supporting credit.
+
+### 2026-11-17 local Acceptance88
+
+OriginalHeadMoveReversal accepted after native1794929256383506702-5,
+independent final source/receipt review, and recursive evidence4242 modules
+zero errors (SHA01370270800bc2c4b8e1cd3872c10b6f263c94511eab8871bcafb87319a90175,
+11150289bytes local-only). Exact original six-input reversal retains explicit
+original source-head validity and same-types ArrowClosed; no target validity or
+window/enumeration oracle. Supporting898; numbered178/2/9 unchanged. NOT installed
+E symmetry. All six observed upstream metadata syntax caps have been repaired
+proof-only, original public headers unchanged, independent review/native passing
+under original caps; full metadata endpoint closure ongoing, no credit yet.
+
+### 2026-11-17 local Acceptances89–91
+
+89 actual primary metadata preserved: same observed root type and complete bounds
+code, no universe assumption, internal arbitrary-count invariant; native
+1794929295554585389-5, independent4594-module evidence/source reconciliation.
+90 original source seed self-coverage in literal Q: retains exact context guard,
+source universe acceptance and actual selected types ArrowClosed; all heads/bounds/
+capacity/admission witnesses derived internally. Native1794929647429687690-15,
+independent4685-module evidence reconciliation. Arbitrary fixed H.
+91 literal original ordered candidate-list rerooting at an actual primary member;
+derives target admission and metadata internally, no universe/equal-Q premise.
+Native1794929710280514415-5, independent4642-module evidence reconciliation.
+Preserves order/duplicates; does NOT imply seed::Q pool code equality.
+Supporting901; numbered178/2/9 unchanged. All sources ready for next remote snapshot.
+CommonCandidatePool native passed, evidence pending; original raw and installed
+edge reversal under explicit same-types ArrowClosed remain separate draft work.
+
+### 2026-11-17 local Acceptance92
+
+OriginalCommonCandidatePool: literal common Q, both roots in Q, pointwise
+membership-equivalent original seed::Q pools. Retains source seed universe,
+context guard and selected-types ArrowClosed; no pool-code/primary equality.
+Native1794929936299594748-6; independent4949-source evidence reconciliation.
+Supporting902, numbered178/2/9 unchanged. One-way primary inclusion draft can
+use existing arbitrary-count stability and iteration monotonicity, no new
+arithmetic induction or edge symmetry needed. Raw/installed edge reversal drafts
+remain separate, with their exact ArrowClosed scope retained.

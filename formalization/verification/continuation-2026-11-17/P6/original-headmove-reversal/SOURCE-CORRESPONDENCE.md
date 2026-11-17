@@ -1,0 +1,7 @@
+# Exact original headMove reversal prerequisite
+
+Proposed one supporting internal contract, not installed edge symmetry. The SAME literal six-input OriginalHeadMove.headMove AST is used, swapping only head/base pairs and preserving symbols/types. Explicit premises: original source-head decoder validity, object-language ArrowClosed of the SAME types, forward actual success. No native evaluation, semantic relation, source enumeration, target window/validity, reverse permutation, metadata equality or IH supplier.
+
+Factor actual forward success with OriginalHeadMove.InternalProof.internalAcceptance. SourceProof.source of OriginalGuardedHeadSourceCoverage derives source enumeration from supplied source validity, recovered window and closure. Existing HeadWindowBooleanRange.SourceProof.sourceWindow derives target window from recovered target enumeration; no target validity is required for that direction. Reverse actual head-class equality by internal queries/equality symmetry, and use existing OriginalArgumentPermutationClosure.Proof.symmetry. Reassemble the same original headMove.
+
+The source validity premise is intended to be discharged later from OriginalCodeValidityGuard ordinary/numbered original Code success at the original head field. ArrowClosed remains a real retained context hypothesis, not inferred from context decoding. No raw exchange, installed E, primary rerooting, numbered theorem or global accessibility is claimed.

@@ -1,4 +1,5 @@
 module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EntryBoundsGenericSyntaxProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EntryBoundsDefinitions
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationResultFoldTotalitySyntaxProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientComparisonSyntaxProof
@@ -31,7 +32,7 @@ attribute [local irreducible] programGraph
 theorem fieldsSubst {alpha beta : Type} (n : Nat) (raw param entries value : OTerm alpha) (ts : alpha → OTerm beta) :
     (fields n raw param entries value).subst (fun a => emb (ts a)) =
       fields n (raw.subst ts) (param.subst ts) (entries.subst ts) (value.subst ts) := by
-  simp only [fields,conjunctionSubst,graph1,graph2,programSubst,consTermSubst,emptySubst,sucSubst,zSubst]
+  exact fieldsSchemaSubst (Continuation20261115.OriginalCodeValidityGuard.check n) (Fold.weighted (Fold.entryWeight n)) Continuation20261114.ArgumentEntriesRecursor.extract raw param entries value ts
 @[simp] theorem fieldsRename {alpha beta : Type} (n : Nat) (raw param entries value : OTerm alpha) (j : alpha → beta) :
     (fields n raw param entries value).relabel j = fields n (raw.relabel j) (param.relabel j) (entries.relabel j) (value.relabel j) := by
   rw [formulaRelabelAsSubst]
@@ -41,9 +42,7 @@ theorem fieldsSubst {alpha beta : Type} (n : Nat) (raw param entries value : OTe
 
 theorem atRawSubst {alpha beta : Type} (n : Nat) (raw : OTerm alpha) (ts : alpha → OTerm beta) :
     (AtRaw n raw).subst (fun a => emb (ts a)) = AtRaw n (raw.subst ts) := by
-  unfold AtRaw matrix
-  rw [allBlockSubst,liftedEmbedding]
-  simp only [impSubst,fieldsSubst,graph1,programSubst,consTermSubst,emptySubst,liftSubst,Term.subst,Sum.elim_inr]
+  exact allSchemaSubst (Continuation20261115.OriginalCodeValidityGuard.check n) (Fold.weighted (Fold.entryWeight n)) (Continuation20261115.OriginalCodeBoundsRecursion.bounds n) Continuation20261114.ArgumentEntriesRecursor.extract raw ts
 @[simp] theorem atRawRename {alpha beta : Type} (n : Nat) (raw : OTerm alpha) (j : alpha → beta) :
     (AtRaw n raw).relabel j = AtRaw n (raw.relabel j) := by
   rw [formulaRelabelAsSubst]
@@ -54,13 +53,7 @@ theorem atRawSubst {alpha beta : Type} (n : Nat) (raw : OTerm alpha) (ts : alpha
 theorem matrixWitness {alpha : Type} (n : Nat) (raw param entries value : OTerm alpha) :
     (matrix n raw).subst (Sum.elim Term.var (fun i => emb (![param,entries,value] i))) =
       (fields n raw param entries value).imp (graph1 (Continuation20261115.OriginalCodeBoundsRecursion.bounds n) value raw) := by
-  have he : (Sum.elim Term.var (fun i => emb (![param,entries,value] i))) =
-      (fun a => emb (Sum.elim Term.var ![param,entries,value] a)) := by
-    funext a; cases a <;> rfl
-  unfold matrix
-  rw [he]
-  simp only [impSubst,fieldsSubst,graph1,programSubst,consTermSubst,emptySubst,witnessLift,Term.subst,Sum.elim_inr]
-  rfl
+  exact matrixSchemaWitness (Continuation20261115.OriginalCodeValidityGuard.check n) (Fold.weighted (Fold.entryWeight n)) (Continuation20261115.OriginalCodeBoundsRecursion.bounds n) Continuation20261114.ArgumentEntriesRecursor.extract raw param entries value
 theorem predicateInstantiate {alpha : Type} (n : Nat) (raw : OTerm alpha) :
     instantiate (predicate n) (emb raw) = AtRaw n raw := by
   rw [predicate,instantiate,bindEmbedding,atRawSubst]

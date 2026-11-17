@@ -1,0 +1,44 @@
+{
+  "time_utc": "2026-11-17T15:42:13.030894+00:00",
+  "packet": "P6 common original candidates and membership-equivalent seed pools",
+  "status": "Accepted exact1 after native, independent final review and recursive evidence",
+  "exact_contracts": 1,
+  "accepted_supporting_contracts": 902,
+  "original_register": {
+    "checked": 178,
+    "inherited": 2,
+    "pending": 9,
+    "total": 189
+  },
+  "native_receipts": [
+    "1794929936299594748-6"
+  ],
+  "source_pins": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261117/OriginalCommonCandidatePool/ComparatorGate.lean": "19e856e10956879c1c71737b18f075726742280fceba9dbfddbceeb2ccc573dd",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261117/OriginalCommonCandidatePool/MembershipProof.lean": "4bdbf86b250991f8c3ba7e3561b1bfc4154f6f82a62c95e8e2df67a2e1dde3a3",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261117/OriginalCommonCandidatePool/Targets.lean": "77646823886722c0911febe15b59d665848a5ebafd31707690d63598a9eb9c40",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261117/OriginalCommonCandidatePool/StatementChecks.lean": "32f4499f0eafb2a1d391d0dfa9d1e451a3798407d63a8963d82198e7403734e9",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261117/OriginalCommonCandidatePool/Proof.lean": "35fc4d1ce6b86f30859914afc368ddf6c011810aa237e877a27e74a371b248f0"
+  },
+  "frozen_pins_verified": 3,
+  "review": {
+    "path": "verification/continuation-2026-11-17/P6/original-common-candidate-pool/REVIEW-FINAL.md",
+    "sha256": "05c21f9802b85852589ee8f2d5c78a78f926e8ab1d989b472e893eb9c28576b1"
+  },
+  "evidence": [
+    {
+      "path": "verification/continuation-2026-11-17/P6/original-common-candidate-pool/EVIDENCE.json",
+      "sha256": "551045322f870297c81a21ead7be63815bb82300c98d2aac6a03b90029db48c9",
+      "bytes": 13343664,
+      "modules": 4949,
+      "payload_local_only": true
+    }
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "scope": "For an actual primary member of an original source-universe seed, proves literal Q-list equality, both roots in the common Q, and pointwise derivability-level membership equivalence of each seed::Q pool with the common Q. Retains actual seed/parameter pairs, original context success, selected types/ArrowClosed, seed source universe acceptance and actual primary/Q/pool outputs. Derives admission, seed self-coverage, member carrier inclusion, candidate-list rerooting and target admission internally. No pool-equality, metadata, capacity or reachability oracle. Does not equate pool list codes/multiplicities or primary lists, and proves neither reverse reachability nor global accessibility.",
+  "limits": "Original checker/toolchain/profile unchanged:2048heap/1536RSS/2048freeMiB,180wall/90CPU,1thread. No numbered/full-root/remote-CI/global-accessibility claim."
+}

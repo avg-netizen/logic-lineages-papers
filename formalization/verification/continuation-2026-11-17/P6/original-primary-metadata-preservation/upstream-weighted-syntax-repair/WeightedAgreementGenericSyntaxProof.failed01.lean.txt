@@ -1,0 +1,61 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.WeightedAgreementDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationResultFoldTotalitySyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientComparisonSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedDecoderInternalLogicSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryUncoveredCount.CompareSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextInsertionSyntaxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.WeightedAgreementSyntaxProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalApplicationCertificateConstructors
+open SourceComputabilityFormulaSupportProof InternalControlGraphSupportProof
+open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
+open InternalRawListRecursionSyntaxProof InternalGraphCompositionSyntaxProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open InternalBinderTransportProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
+open InternalAdditionLawsProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open WeightedAgreement
+open InternalQuotientComparisonSyntaxProof InternalOriginalOrderSyntaxProof
+open OriginalTypedDecoderInternalLogicSyntaxProof (equalSubst orSubst)
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114
+open PrimaryUncoveredCount.CompareSyntaxProof (boundedSubst)
+open InternalStrongInduction
+open OriginalContextInsertionSyntaxProof (lengthSubst)
+
+open Continuation20261115.OriginalArgumentPermutationClosure.CountAgreementSyntaxProof
+attribute [local irreducible] programGraph
+
+open Continuation20261115.OriginalArgumentPermutationClosure.CountAgreement
+def fieldsSchema {alpha : Type} (weight : Program 1) (left right ls rs : OTerm alpha) : Formula alpha :=
+  agreement left right ⊓ (graph1 weight ls left ⊓ graph1 weight rs right)
+def matrixSchema {alpha : Type} (weight : Program 1) (left : OTerm alpha) : Formula (alpha ⊕ Fin 3) :=
+  let x : Fin 3 → OTerm (alpha ⊕ Fin 3) := fun i => .var (.inr i)
+  (fieldsSchema weight (left.relabel Sum.inl) (x 0) (x 1) (x 2)).imp (eqn (x 1) (x 2))
+def allSchema {alpha : Type} (weight : Program 1) (raw : OTerm alpha) : Formula alpha :=
+  InternalClosedPrograms.allBlock (matrixSchema weight raw)
+theorem fieldsSchemaSubst {alpha beta : Type} (weight : Program 1) (left right ls rs : OTerm alpha) (ts : alpha → OTerm beta) :
+    (fieldsSchema weight left right ls rs).subst (fun a => emb (ts a)) =
+      fieldsSchema weight (left.subst ts) (right.subst ts) (ls.subst ts) (rs.subst ts) := by
+  simp only [fieldsSchema,conjunctionSubst,agreementSubst,graph1,programSubst,consTermSubst,emptySubst]
+theorem allSchemaSubst {alpha beta : Type} (weight : Program 1) (raw : OTerm alpha) (ts : alpha → OTerm beta) :
+    (allSchema weight raw).subst (fun a => emb (ts a)) = allSchema weight (raw.subst ts) := by
+  unfold allSchema matrixSchema
+  rw [allBlockSubst,liftedEmbedding]
+  simp only [impSubst,fieldsSchemaSubst,eqnSubst,liftSubst,Term.subst,Sum.elim_inr]
+theorem matrixSchemaWitness {alpha : Type} (weight : Program 1) (left right ls rs : OTerm alpha) :
+    (matrixSchema weight left).subst (Sum.elim Term.var (fun i => emb (![right,ls,rs] i))) =
+      (fieldsSchema weight left right ls rs).imp (eqn ls rs) := by
+  have he : (Sum.elim Term.var (fun i => emb (![right,ls,rs] i))) =
+      (fun a => emb (Sum.elim Term.var ![right,ls,rs] a)) := by
+    funext a; cases a <;> rfl
+  unfold matrixSchema
+  rw [he]
+  simp only [impSubst,fieldsSchemaSubst,eqnSubst,witnessLift,Term.subst,Sum.elim_inr]
+  rfl
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.WeightedAgreementSyntaxProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.WeightedAgreementSyntaxProof

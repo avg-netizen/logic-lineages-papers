@@ -1,5 +1,6 @@
 module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EraseInvariantDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EraseInvariantGenericSyntaxProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationResultFoldTotalitySyntaxProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientComparisonSyntaxProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedDecoderInternalLogicSyntaxProof
@@ -30,19 +31,13 @@ theorem countEffectSubst {alpha beta : Type} (raw needle rest bit : OTerm alpha)
     (ts : alpha → OTerm beta) :
     (countEffect raw needle rest bit).subst (fun a => emb (ts a)) =
       countEffect (raw.subst ts) (needle.subst ts) (rest.subst ts) (bit.subst ts) := by
-  unfold countEffect
-  rw [allBlockSubst,liftedEmbedding]
-  simp only [impSubst,conjunctionSubst,notSubst,eqnSubst,graph2,programSubst,
-    consTermSubst,emptySubst,addSubst,liftSubst,Term.subst,Sum.elim_inr]
+  exact EraseInvariantGenericSyntaxProof.countEffectSubst ArgumentEntryCount.count Erase.state raw needle rest bit ts
 
 @[simp] theorem countEffectRename {alpha beta : Type} (raw needle rest bit : OTerm alpha)
     (j : alpha → beta) :
     (countEffect raw needle rest bit).relabel j =
       countEffect (raw.relabel j) (needle.relabel j) (rest.relabel j) (bit.relabel j) := by
-  rw [formulaRelabelAsSubst]
-  change (countEffect raw needle rest bit).subst (fun a => emb (.var (j a))) = _
-  rw [countEffectSubst]
-  simp only [← termRelabelAsSubst]
+  exact EraseInvariantGenericSyntaxProof.countEffectRename ArgumentEntryCount.count Erase.state raw needle rest bit j
 
 theorem countEffectWitness {alpha : Type} (raw needle rest bit query lc rc : OTerm alpha) :
     ((let j : alpha → alpha ⊕ Fin 3 := Sum.inl
@@ -56,58 +51,32 @@ theorem countEffectWitness {alpha : Type} (raw needle rest bit query lc rc : OTe
     (graph2 ArgumentEntryCount.count lc raw query ⊓ graph2 ArgumentEntryCount.count rc rest query).imp
       (((eqn needle query).imp (eqn lc (OrdinaryArithmetic.addTerm rc bit))) ⊓
         ((eqn needle query).not.imp (eqn lc rc))) := by
-  have he : (Sum.elim Term.var (fun i => emb (![query,lc,rc] i))) =
-      (fun a => emb (Sum.elim Term.var ![query,lc,rc] a)) := by
-    funext a; cases a <;> rfl
-  rw [he]
-  simp only [impSubst,conjunctionSubst,notSubst,eqnSubst,graph2,programSubst,
-    consTermSubst,emptySubst,addSubst,witnessLift,Term.subst,Sum.elim_inr]
-  rfl
+  exact EraseInvariantGenericSyntaxProof.countEffectWitness ArgumentEntryCount.count raw needle rest bit query lc rc
 
 theorem atRawSubst {alpha beta : Type} (raw : OTerm alpha) (ts : alpha → OTerm beta) :
     (AtRaw raw).subst (fun a => emb (ts a)) = AtRaw (raw.subst ts) := by
-  unfold AtRaw matrix
-  rw [allBlockSubst,liftedEmbedding]
-  simp only [impSubst,conjunctionSubst,fields,result,orSubst,countEffectSubst,eqnSubst,
-    graph2,programSubst,zSubst,sucSubst,consTermSubst,emptySubst,liftSubst,Term.subst,Sum.elim_inr]
+  exact EraseInvariantGenericSyntaxProof.atRawSubst ArgumentEntryCount.count Erase.state raw ts
 
 @[simp] theorem atRawRename {alpha beta : Type} (raw : OTerm alpha) (j : alpha → beta) :
     (AtRaw raw).relabel j = AtRaw (raw.relabel j) := by
-  rw [formulaRelabelAsSubst]
-  change (AtRaw raw).subst (fun a => emb (.var (j a))) = _
-  rw [atRawSubst]
-  simp only [← termRelabelAsSubst]
+  exact EraseInvariantGenericSyntaxProof.atRawRename ArgumentEntryCount.count Erase.state raw j
 
 theorem matrixWitness {alpha : Type} (raw needle acc bit rest : OTerm alpha) :
     (matrix raw).subst (Sum.elim Term.var (fun i => emb (![needle,acc,bit,rest] i))) =
       (fields raw needle acc bit rest).imp (result raw needle bit rest) := by
-  have he : (Sum.elim Term.var (fun i => emb (![needle,acc,bit,rest] i))) =
-      (fun a => emb (Sum.elim Term.var ![needle,acc,bit,rest] a)) := by
-    funext a; cases a <;> rfl
-  unfold matrix fields result
-  rw [he]
-  simp only [impSubst,conjunctionSubst,orSubst,countEffectSubst,eqnSubst,graph2,programSubst,
-    zSubst,sucSubst,consTermSubst,emptySubst,witnessLift,Term.subst,Sum.elim_inr]
-  rfl
+  exact EraseInvariantGenericSyntaxProof.matrixWitness ArgumentEntryCount.count Erase.state raw needle acc bit rest
 
 theorem predicateInstantiate {alpha : Type} (raw : OTerm alpha) :
     instantiate (predicate) (emb raw) = AtRaw raw := by
-  rw [predicate,instantiate,bindEmbedding,atRawSubst]
-  simp only [varBind]
+  exact EraseInvariantGenericSyntaxProof.predicateInstantiate ArgumentEntryCount.count Erase.state raw
 
 @[simp] theorem belowRawRename {alpha beta : Type} (raw : OTerm alpha) (j : alpha → beta) :
     (BelowRaw raw).relabel j = BelowRaw (raw.relabel j) := by
-  unfold BelowRaw
-  rw [InternalStrongInductionSyntaxProof.belowRename]
-  unfold predicate
-  rw [atRawRename]
-  rfl
+  exact EraseInvariantGenericSyntaxProof.belowRawRename ArgumentEntryCount.count Erase.state raw j
 
 theorem predicateLift {alpha : Type} :
     lift (predicate (alpha := alpha)) = predicate (alpha := alpha ⊕ Fin 1) := by
-  unfold lift predicate
-  rw [atRawRename]
-  rfl
+  exact EraseInvariantGenericSyntaxProof.predicateLift ArgumentEntryCount.count Erase.state 
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EraseInvariantSyntaxProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EraseInvariantSyntaxProof

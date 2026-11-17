@@ -1,0 +1,28 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCommonCandidatePool.Proof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCommonCandidatePool.ComparatorGate
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCommonCandidatePool.StatementChecks
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
+open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
+open InternalApplicationCertificateConstructorsSyntaxProof
+open InternalTagArithmeticSyntaxProof (eqn)
+open InternalTagArithmeticSupportProof (refl symm)
+open InternalSourceInversionSupportProof (onEquality)
+open SourceComputabilityFormulaSupportProof (numeral)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Continuation20261114 Continuation20261115 Continuation20261116
+open TwoSol20261113.CalibratedPrimary.Membership
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalBetaTotalityProof (disjunctionElimination)
+open InternalQuotientComparisonProof (orRight)
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+theorem exactCommonCandidatePool : Targets.InternalCommonCandidatePool := Proof.commonCandidatePool
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCommonCandidatePool.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCommonCandidatePool.StatementChecks

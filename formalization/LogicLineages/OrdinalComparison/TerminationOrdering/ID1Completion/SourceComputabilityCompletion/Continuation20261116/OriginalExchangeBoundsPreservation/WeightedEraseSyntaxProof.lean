@@ -1,4 +1,5 @@
 module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.WeightedEraseGenericSyntaxProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.WeightedEraseDefinitions
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationResultFoldTotalitySyntaxProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientComparisonSyntaxProof
@@ -32,10 +33,7 @@ theorem effectSubst {alpha beta : Type} (bit total remainingWeight needleWeight 
     (ts : alpha → OTerm beta) :
     (effect bit total remainingWeight needleWeight).subst (fun a => emb (ts a)) =
     effect (bit.subst ts) (total.subst ts) (remainingWeight.subst ts) (needleWeight.subst ts) := by
-  unfold effect
-  simp only [conjunctionSubst,impSubst,eqnSubst,graph2,programSubst,
-    consTermSubst,emptySubst,zSubst,sucSubst]
-
+  exact effectSchemaSubst Continuation20261115.OriginalBoundsRecombination.merge bit total remainingWeight needleWeight ts
 @[simp] theorem effectRename {alpha beta : Type} (bit total remainingWeight needleWeight : OTerm alpha)
     (j : alpha → beta) :
     (effect bit total remainingWeight needleWeight).relabel j =
@@ -51,9 +49,7 @@ theorem fieldsSubst {alpha beta : Type} (weight : Program 1)
     (fields weight raw needle acc bit rest total remainingWeight needleWeight).subst (fun a => emb (ts a)) =
     fields weight (raw.subst ts) (needle.subst ts) (acc.subst ts) (bit.subst ts) (rest.subst ts)
       (total.subst ts) (remainingWeight.subst ts) (needleWeight.subst ts) := by
-  unfold fields EraseInvariant.fields
-  simp only [conjunctionSubst,graph1,graph2,programSubst,consTermSubst,emptySubst]
-
+  exact fieldsSchemaSubst Erase.state InternalPairing.pairing (Fold.weighted weight) weight raw needle acc bit rest total remainingWeight needleWeight ts
 @[simp] theorem fieldsRename {alpha beta : Type} (weight : Program 1)
     (raw needle acc bit rest total remainingWeight needleWeight : OTerm alpha) (j : alpha → beta) :
     (fields weight raw needle acc bit rest total remainingWeight needleWeight).relabel j =
@@ -66,10 +62,7 @@ theorem fieldsSubst {alpha beta : Type} (weight : Program 1)
 
 theorem atRawSubst {alpha beta : Type} (weight : Program 1) (raw : OTerm alpha) (ts : alpha → OTerm beta) :
     (AtRaw weight raw).subst (fun a => emb (ts a)) = AtRaw weight (raw.subst ts) := by
-  unfold AtRaw matrix
-  rw [allBlockSubst,liftedEmbedding]
-  simp only [impSubst,fieldsSubst,effectSubst,liftSubst,Term.subst,Sum.elim_inr]
-
+  exact allSchemaSubst Erase.state InternalPairing.pairing Continuation20261115.OriginalBoundsRecombination.merge (Fold.weighted weight) weight raw ts
 @[simp] theorem atRawRename {alpha beta : Type} (weight : Program 1) (raw : OTerm alpha) (j : alpha → beta) :
     (AtRaw weight raw).relabel j = AtRaw weight (raw.relabel j) := by
   rw [formulaRelabelAsSubst]
@@ -83,14 +76,7 @@ theorem matrixWitness {alpha : Type} (weight : Program 1)
       (Sum.elim Term.var (fun i => emb (![needle,acc,bit,rest,total,remainingWeight,needleWeight] i))) =
     (fields weight raw needle acc bit rest total remainingWeight needleWeight).imp
       (effect bit total remainingWeight needleWeight) := by
-  have he : (Sum.elim Term.var (fun i => emb (![needle,acc,bit,rest,total,remainingWeight,needleWeight] i))) =
-      (fun a => emb (Sum.elim Term.var ![needle,acc,bit,rest,total,remainingWeight,needleWeight] a)) := by
-    funext a; cases a <;> rfl
-  unfold matrix
-  rw [he]
-  simp only [impSubst,fieldsSubst,effectSubst,witnessLift,Term.subst,Sum.elim_inr]
-  rfl
-
+  exact matrixSchemaWitness Erase.state InternalPairing.pairing Continuation20261115.OriginalBoundsRecombination.merge (Fold.weighted weight) weight raw needle acc bit rest total remainingWeight needleWeight
 theorem predicateInstantiate {alpha : Type} (weight : Program 1) (raw : OTerm alpha) :
     instantiate (predicate weight) (emb raw) = AtRaw weight raw := by
   rw [predicate,instantiate,bindEmbedding,atRawSubst]
