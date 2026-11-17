@@ -1,0 +1,11 @@
+# Independent partial recurrence helper review
+
+Six current helper sources reviewed; semantic route approved pending native/repair deltas, not global endpoint acceptance.
+
+BinaryAtChildren uses the actual original binary recurrence and eliminates its two disjunctive branches under local assumptions. Metadata equality is common; each branch supplies unchanged-sibling equality and actual corresponding child exchange. Parent Code guards yield both child guards through the actual children list and membership closure, not typed or domain assumptions. Original constructor descent gives both source-child strict inequalities. Child mode is false for application on either side and cons head, true only for cons tail. Same context/window environment is passed to BelowRaw specialization.
+
+Target constructor transport reverses the proven metadata and sibling equalities, preserves the changed child, and applies exactly the matching conditional structural lift. Equality transport is on actual constructor inputs, never inferred from head class. BinaryChildrenQuery obtains the actual first/last paired nodes from original query recovery (ys0/ys3); wrappers select application versus cons without changing assumptions.
+
+OrdinaryAtChild eliminates actual original ordinary recurrence into head-move and structural-base alternatives. Head leaf supplies the genuine headMove to already reviewed head helper; unused resultEqual is harmless strengthening, not omission of a necessary target premise. Structural alternative uses guarded original head encoded-equality equivalence with both recovered head guards to derive actual head equality, transports target constructor, derives both base Code guards and strict source-base descent, obtains argument-mode Transfer from BelowRaw, and applies parent transfer to original source universe plus target plain. Original root and environment remain fixed. Ordinary query wrapper obtains actual paired base node and renames every premise.
+
+No child primary membership, target universe-success oracle, ground-list shortcut, or new result assumption appears. Original recurrence case decomposition at arbitrary roots, remaining numbered cases, and final induction/endpoint remain separate obligations. No supporting/numbered credit or native success claimed here.

@@ -45,8 +45,8 @@ theorem matrixWitness {alpha : Type} (n : Nat) (arity : Fin n → Nat) (argument
 
 theorem predicateInstantiate {alpha : Type} (n : Nat) (arity : Fin n → Nat) (raw : OTerm alpha) :
     instantiate (predicate n arity) (emb raw) = AtRaw n arity raw := by
-  rw [predicate,instantiate,bindEmbedding,atRawSubst]
-  simp only [varBind]
+  rw [predicate,instantiate,InternalTagArithmeticSyntaxProof.bindEmbedding,atRawSubst]
+  simp only [InternalTagArithmeticSyntaxProof.varBind]
 @[simp] theorem belowRawRename {alpha beta : Type} (n : Nat) (arity : Fin n → Nat) (raw : OTerm alpha) (j : alpha → beta) :
     (BelowRaw n arity raw).relabel j = BelowRaw n arity (raw.relabel j) := by
   unfold BelowRaw

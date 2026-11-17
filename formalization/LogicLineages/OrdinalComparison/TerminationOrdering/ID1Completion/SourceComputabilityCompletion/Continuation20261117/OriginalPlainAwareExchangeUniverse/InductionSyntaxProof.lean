@@ -81,7 +81,7 @@ theorem plainSubst {alpha beta : Type} (n : Nat) (arity : Fin n → Nat) (argume
 theorem rowSubst {alpha beta : Type} (n : Nat) (arity : Fin n → Nat) (arguments : Bool)
     (source typ target gamma context symbols types window node : OTerm alpha) (ts : alpha → OTerm beta) :
     (row n arity arguments source typ target gamma context symbols types window node).subst (fun a => emb (ts a)) = row n arity arguments (source.subst ts) (typ.subst ts) (target.subst ts) (gamma.subst ts) (context.subst ts) (symbols.subst ts) (types.subst ts) (window.subst ts) (node.subst ts) := by
-  simp only [row,impSubst,conjunctionSubst,environmentSubst,edgeSubst,acceptedSubst,plainSubst]
+  simp only [row,InternalAdditionLawsProof.impSubst,conjunctionSubst,environmentSubst,edgeSubst,acceptedSubst,plainSubst]
 @[simp] theorem rowRename {alpha beta : Type} (n : Nat) (arity : Fin n → Nat) (arguments : Bool)
     (source typ target gamma context symbols types window node : OTerm alpha) (j : alpha → beta) :
     (row n arity arguments source typ target gamma context symbols types window node).relabel j = row n arity arguments (source.relabel j) (typ.relabel j) (target.relabel j) (gamma.relabel j) (context.relabel j) (symbols.relabel j) (types.relabel j) (window.relabel j) (node.relabel j) := by

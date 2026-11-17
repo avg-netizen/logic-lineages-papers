@@ -170,7 +170,7 @@ theorem argumentsHead (n : Nat) (arity : Fin n → Nat) (M W : Program 2)
     (ha : Nonempty (Derivation body Delta (Checked n arity M W true typ left gamma context)))
     (hp : Nonempty (Derivation body Delta (Plain n arity true typ right gamma))) :
     Nonempty (Derivation body Delta (Checked n arity M W true typ right gamma context)) := by
-  exact PlainAwareStructuralSelectedFieldsProof.argumentsHead n arity M W left right domain child changed tail typ gamma context hlc hrc ih ha
+  exact PlainAwareStructuralSelectedFieldsProof.argumentsHead n arity M W left right domain child changed tail typ gamma context hlc hrc ih ha hp
 
 theorem argumentsTail (n : Nat) (arity : Fin n → Nat) (M W : Program 2)
     (left right domain head child changed typ gamma context : OTerm alpha)
@@ -180,6 +180,6 @@ theorem argumentsTail (n : Nat) (arity : Fin n → Nat) (M W : Program 2)
     (ha : Nonempty (Derivation body Delta (Checked n arity M W true typ left gamma context)))
     (hp : Nonempty (Derivation body Delta (Plain n arity true typ right gamma))) :
     Nonempty (Derivation body Delta (Checked n arity M W true typ right gamma context)) := by
-  exact PlainAwareStructuralSelectedFieldsProof.argumentsTail n arity M W left right domain head child changed typ gamma context hlc hrc ih ha
+  exact PlainAwareStructuralSelectedFieldsProof.argumentsTail n arity M W left right domain head child changed typ gamma context hlc hrc ih ha hp
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPlainAwareExchangeUniverse.PlainAwareStructuralPointwiseProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPlainAwareExchangeUniverse.PlainAwareStructuralPointwiseProof

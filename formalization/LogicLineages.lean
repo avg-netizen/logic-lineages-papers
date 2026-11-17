@@ -2322,3 +2322,6 @@ public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCom
 
 -- One selected source for all six registered numbered Paper12 scopes.
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceNumberedIntegration.StatementChecks
+
+-- Original filtered ordinary/numbered head-move universe caller.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalFilteredHeadMoveUniverse.StatementChecks
