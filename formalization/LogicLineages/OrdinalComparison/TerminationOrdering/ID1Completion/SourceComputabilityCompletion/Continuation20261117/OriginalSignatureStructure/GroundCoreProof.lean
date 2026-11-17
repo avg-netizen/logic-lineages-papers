@@ -1,0 +1,107 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalSignatureStructure.GroundSupportProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalVariableDecoderDropProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextInsertionLengthProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportInternalVariableSupportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalSignatureStructure.GroundCoreProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalApplicationCertificateConstructorsSupportProof InternalControlGraphSupportProof
+open InternalGraphCompositionFunctionalityProof InternalAcceptanceSupportProof
+open InternalTagArithmeticSyntaxProof (z suc eqn emb zRelabel sucRelabel eqnRelabel)
+open InternalTagArithmeticSupportProof InternalPositiveUnfoldingSupportProof
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalRecursionGraphStepSyntaxProof (consTermRename)
+open InternalRawListRecursionSupportProof
+open OriginalRawSyntaxTransport OriginalRawSyntaxTransportInternalVariableSupportProof
+open Continuation20261116.OriginalConcreteHeadSignature
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+open GroundSyntaxProof GroundSupportProof
+theorem lookupListTransport (index left right : OTerm alpha)
+    (he : Nonempty (Derivation body Delta (eqn left right)))
+    (hl : Nonempty (Derivation body Delta (graph2 InternalRawListRecursion.lookup z index left))) :
+    Nonempty (Derivation body Delta (graph2 InternalRawListRecursion.lookup z index right)) := by
+  unfold graph2 programGraph at hl ⊢
+  apply InternalGraphCompositionEqualityProof.graphInputTransport body alpha 2 Delta
+    (OrdinaryArithmetic.graphFormula InternalRawListRecursion.lookup) z
+    (Fin.cons index (Fin.cons left Fin.elim0)) (Fin.cons index (Fin.cons right Fin.elim0)) _ hl
+  intro i
+  rw [InternalSourceInversionSupportProof.onEquality]
+  exact Fin.cases ⟨refl index⟩ (Fin.cases he (fun q => Fin.elim0 q)) i
+
+theorem zeroCore (out index : OTerm alpha)
+    (hg : Nonempty (Derivation body Delta (graph1 groundList out z))) :
+    Nonempty (Derivation body Delta (result z out index)) := by
+  obtain ⟨he⟩ := valueUnique groundList out z ![z] hg zeroValue
+  exact andIntro
+    (headTransport OriginalContextInsertion.length z z out Fin.elim0 ⟨symm he⟩ OriginalContextInsertionLengthProof.lengthZero)
+    (lookupListTransport index z out ⟨symm he⟩ (lookupNil index))
+
+theorem atCons (bound previous out index : OTerm alpha)
+    (hr : Nonempty (Derivation body Delta (row bound)))
+    (hp : Nonempty (Derivation body Delta (graph1 groundList previous bound)))
+    (hc : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode out z previous))) :
+    Nonempty (Derivation body Delta (result (suc bound) out index)) := by
+  have hi := rowApply bound previous index hr hp
+  have hlen := OriginalContextInsertionLengthProof.lengthCons out z previous bound hc (andLeft hi)
+  apply andIntro hlen
+  apply zeroSuccessorCases Delta index _
+  · obtain ⟨he⟩ := (show Nonempty (Derivation body (eqn index z :: Delta) (eqn index z)) from ⟨Derivation.hypothesis List.mem_cons_self⟩)
+    exact headTransport InternalRawListRecursion.lookup z z index (Fin.cons out Fin.elim0) ⟨symm he⟩
+      (lookupZero out previous (withHyp hc _))
+  · intro beta j Theta k hj he
+    simp only [graph2Rename,zRelabel]
+    have hc' := renameInto hc j Theta hj
+    simp only [graph2Rename,zRelabel] at hc'
+    have hr' := renameInto hr j Theta hj
+    rw [rowRename] at hr'
+    have hp' := renameInto hp j Theta hj
+    rw [graph1Rename] at hp'
+    have hk := andRight (rowApply (bound.relabel j) (previous.relabel j) k hr' hp')
+    obtain ⟨he⟩ := he
+    exact headTransport InternalRawListRecursion.lookup z (suc k) (index.relabel j)
+      (Fin.cons (out.relabel j) Fin.elim0) ⟨symm he⟩
+      (lookupNext (out.relabel j) (previous.relabel j) k hc' hk)
+
+theorem atPrevious (bound previous out index : OTerm alpha)
+    (hr : Nonempty (Derivation body Delta (row bound)))
+    (hp : Nonempty (Derivation body Delta (graph1 groundList previous bound)))
+    (hg : Nonempty (Derivation body Delta (graph1 groundList out (suc bound)))) :
+    Nonempty (Derivation body Delta (result (suc bound) out index)) := by
+  apply programCases InternalListCodec.consCode (Fin.cons z (Fin.cons previous Fin.elim0)) _
+  intro beta j Theta code hj hc
+  rw [resultRename,sucRelabel]
+  simp only [consTermRename,emptyRename,zRelabel] at hc
+  have hr' := renameInto hr j Theta hj
+  rw [rowRename] at hr'
+  have hp' := renameInto hp j Theta hj
+  rw [graph1Rename] at hp'
+  have hg' := renameInto hg j Theta hj
+  simp only [graph1Rename,sucRelabel] at hg'
+  have hv := GroundSupportProof.successorValue (bound.relabel j) (previous.relabel j) code hp' hc
+  obtain ⟨he⟩ := valueUnique groundList (out.relabel j) code ![suc (bound.relabel j)] hg' hv
+  have hc' := outputTransport InternalListCodec.consCode code (out.relabel j) ![z,previous.relabel j] ⟨symm he⟩ hc
+  exact atCons (bound.relabel j) (previous.relabel j) (out.relabel j) (index.relabel j) hr' hp' hc'
+
+theorem succCore (bound out index : OTerm alpha)
+    (hr : Nonempty (Derivation body Delta (row bound)))
+    (hg : Nonempty (Derivation body Delta (graph1 groundList out (suc bound)))) :
+    Nonempty (Derivation body Delta (result (suc bound) out index)) := by
+  apply programCases groundList (Fin.cons bound Fin.elim0) _
+  intro beta j Theta previous hj hp
+  rw [resultRename,sucRelabel]
+  simp only [consTermRename,emptyRename] at hp
+  have hr' := renameInto hr j Theta hj
+  rw [rowRename] at hr'
+  have hg' := renameInto hg j Theta hj
+  simp only [graph1Rename,sucRelabel] at hg'
+  exact atPrevious (bound.relabel j) previous (out.relabel j) (index.relabel j) hr' hp hg'
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalSignatureStructure.GroundCoreProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalSignatureStructure.GroundCoreProof
