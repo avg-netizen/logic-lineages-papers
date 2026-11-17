@@ -1,4 +1,8 @@
-# Independent final static semantic review
+# Independent final review
+
+**FINAL APPROVED.** Final reconciliation below supersedes historical pending notes.
+
+## Historical static review
 
 STATIC SEMANTIC ROUTE APPROVED, pending final native/recursive evidence and
 repair delta reconciliation. Frozen scope hashes unchanged. Current source pins
@@ -52,3 +56,24 @@ no final acceptance before standard-only audits, original-cap native completion,
 all current source deltas and recursive source/receipt/log reconciliation.
 This supports raw exchange rank only, not installed/primary/minimum/postguard or
 Paper 6 completion. Reviewer edited no proof source and ran no compiler.
+
+## Native and delta reconciliation
+
+Receipt 1794933755741916353-6 passes all rows with the original resource caps.
+All 54 current source hashes match receipt rows; inspected namespace/exact alias
+audits are standard-only. Exact preserved old snapshots exist for every changed
+review pin. Their diffs are only twelve entry sibling-namespace opens and four
+fully qualified boundedSubst namespace opens; no semantic/header/definition delta.
+Frozen scope unchanged. Final recursive evidence reconciliation remains pending.
+
+## Final independent reconciliation
+
+FINAL APPROVED for the exact frozen endpoint only. Independently matched all
+4437 current closure source hashes and every referenced native receipt/log
+hash, 8 frozen pins and 54 final reviewed source pins. All recursive
+named audits are standard-only, evidence verified with zero errors, and final
+native 1794933755741916353-6 used original resource caps.
+Evidence SHA256 351c0dba3313fc2ba4e85ac11862e3af1467158a8835392dfc39be67b4a974f1.
+Earlier pending statuses are historical and superseded here. This is source/log/
+receipt reconciliation, not a second compiler run or rerun of every binary-artifact
+validator. No proof source edited. No wider endpoint or Paper 6 completion claim.

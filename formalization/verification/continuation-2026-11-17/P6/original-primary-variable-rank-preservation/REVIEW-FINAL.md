@@ -1,4 +1,8 @@
-# Independent final static review
+# Independent final review
+
+**FINAL APPROVED.** Final reconciliation below supersedes historical pending notes.
+
+## Historical static review
 
 STATIC SEMANTIC ROUTE APPROVED, conditional on the actual raw rank theorem and
 final source-matched native/recursive evidence. No final endpoint acceptance.
@@ -48,3 +52,26 @@ native calibration, accessibility or numbered-theorem claim follows.
 Reviewer edited no proof source and ran no compiler. Final source deltas, all
 native audits/resource caps, raw prerequisite and recursive evidence must be
 reconciled before acceptance.
+
+## Native/delta reconciliation
+
+All packet implementation sources and exact endpoint pass in 1794933892167144916-5
+under original caps with standard-only audits; frozen comparator source matches
+its separate preflight 1794932834543350150-5. The final batch later failed an unrelated
+RankGuardCoherence definitions-only audit, not this endpoint. Three source deltas
+only correct emptyRename namespace in EdgeTransferProof and the two GenericPrimary
+wrappers; reversing exact replacements restores reviewed hashes (saved originals
+also matched the two wrappers). No semantic change. Raw rank prerequisite now
+independently final-approved. Recursive primary evidence remains pending.
+
+## Final independent reconciliation
+
+FINAL APPROVED for the exact frozen endpoint only. Independently matched all
+4940 current closure source hashes and every referenced native receipt/log
+hash, 14 frozen pins and 34 final reviewed source pins. All recursive
+named audits are standard-only, evidence verified with zero errors, and final
+native 1794933892167144916-5 used original resource caps.
+Evidence SHA256 7b3050e0691b8ebcff52d0a869b1106ff5a070fcceae1f1d8a98324ea069de9c.
+Earlier pending statuses are historical and superseded here. This is source/log/
+receipt reconciliation, not a second compiler run or rerun of every binary-artifact
+validator. No proof source edited. No wider endpoint or Paper 6 completion claim.

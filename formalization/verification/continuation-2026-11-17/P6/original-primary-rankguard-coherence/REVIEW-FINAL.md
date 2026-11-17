@@ -1,4 +1,8 @@
-# Independent final static review
+# Independent final review
+
+**FINAL APPROVED.** Final reconciliation below supersedes historical pending notes.
+
+## Historical static review
 
 STATIC SEMANTIC ROUTE APPROVED, not final native acceptance. Current 15 sources
 pinned; all five preflight pins unchanged. Separate helper review retained.
@@ -32,3 +36,23 @@ guarded endpoint yet. Subsequent source deltas, original-cap standard-only nativ
 checks and recursive evidence require reconciliation. No proof-source edits or
 compiler run by reviewer. No whole-tuple/final traversal, accessibility or Paper 6
 completion claim follows.
+
+## Native/delta reconciliation
+
+Final native 1794934099020712470-8 passes all batch rows and this exact endpoint
+at original caps, standard-only audits. Current implementation sources match
+receipt; frozen comparator remains unchanged. Only deltas: remove invalid audit macro from abbrev-only Definitions, remove leading theorem whitespace, explicitly rewrite equalEqn at preminimum equality/goal; exact saved originals matched in the alternate original-primary-rank-guard-coherence packet. No premise/semantic change.
+Raw and primary rank prerequisites now independently final-approved. Final
+recursive evidence remains pending.
+
+## Final independent reconciliation
+
+FINAL APPROVED for the exact frozen endpoint only. Independently matched all
+5332 current closure source hashes and every referenced native receipt/log
+hash, 5 frozen pins and 15 final reviewed source pins. All recursive
+named audits are standard-only, evidence verified with zero errors, and final
+native 1794934099020712470-8 used original resource caps.
+Evidence SHA256 27f49bf135fe1648f5e970a7cb5e2cb08677fedbe895ba32ad158103acd719c0.
+Earlier pending statuses are historical and superseded here. This is source/log/
+receipt reconciliation, not a second compiler run or rerun of every binary-artifact
+validator. No proof source edited. No wider endpoint or Paper 6 completion claim.

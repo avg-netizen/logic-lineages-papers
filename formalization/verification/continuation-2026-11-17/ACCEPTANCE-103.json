@@ -1,0 +1,44 @@
+{
+  "time_utc": "2026-11-17T16:51:57.302376+00:00",
+  "packet": "P6 literal initial-tuple representative coherence",
+  "status": "Accepted exact1 after native, independent final review and recursive evidence",
+  "exact_contracts": 1,
+  "accepted_supporting_contracts": 913,
+  "original_register": {
+    "checked": 178,
+    "inherited": 2,
+    "pending": 9,
+    "total": 189
+  },
+  "native_receipts": [
+    "1794934099020712470-8"
+  ],
+  "source_pins": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261117/OriginalInitialRepresentativeCoherence/ComparatorGate.lean": "e9cf9e1c3a45011185f1f329492b806a3101605eb4282c40383d832ea4230e82",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261117/OriginalInitialRepresentativeCoherence/LiteralProof.lean": "8561755bdf0dbeb6cc9c31786aedc69401eeecf9c0b0d59cad7f34b459dcc23f",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261117/OriginalInitialRepresentativeCoherence/Proof.lean": "5767e4e43ea289a1c643f34529486c3bbf22a7ae1fbb3e1cf6036973726f71f9",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261117/OriginalInitialRepresentativeCoherence/StatementChecks.lean": "6e5a5548b48dafcd32cc73440555b5eb7cc2cfd84a44ed725f7fba22f631cdf2",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261117/OriginalInitialRepresentativeCoherence/Targets.lean": "faf14b313219461fedf1def2747bdcacd7463c919733a93e33c3b63036f9a472"
+  },
+  "frozen_pins_verified": 6,
+  "review": {
+    "path": "verification/continuation-2026-11-17/P6/original-initial-representative-coherence/REVIEW-FINAL.md",
+    "sha256": "bcaf02a20bdfa5596f1c8b444a9cddf58fd8318e346f1d5a893599a8a3f5aa49"
+  },
+  "evidence": [
+    {
+      "path": "verification/continuation-2026-11-17/P6/original-initial-representative-coherence/EVIDENCE.json",
+      "sha256": "d9cd1dc5a74d8005556ac6bd2afd3f6822bd517c4e5a3740edc422d5847e8b0c",
+      "bytes": 14559676,
+      "modules": 5335,
+      "payload_local_only": true
+    }
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "scope": "Actual oldRepresentative graphs of the exact OriginalRankGuardedRepresentative.transparentInputs concreteH concreteG W (Membership.inputs p concreteH concreteG actualL actualD) have equal outputs at source seed and actual primary member under unchanged original source scope. Uses a separately checked literal field identity with original p.window and actual transparent source, then exact guarded-minimum coherence. No native evaluation equality is reflected into a graph derivation, and no opaque replacement tuple or added rank/coherence assumption is used. One substantive initial-tuple consumer; literal field identity is bookkeeping, not additional mathematical credit. Does not equate later sidecar/evaluator/spine final tuples or prove global accessibility.",
+  "limits": "Original checker/toolchain/profile unchanged:2048heap/1536RSS/2048freeMiB,180wall/90CPU,1thread. No numbered/full-root/remote-CI/global-accessibility claim."
+}

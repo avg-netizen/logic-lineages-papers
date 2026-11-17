@@ -2370,3 +2370,18 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 
 -- P6 original pre-rankguard minimum coherence.
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryMinimumCoherence.StatementChecks
+
+-- P6 exact original raw exchange all-variable rank preservation.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.StatementChecks
+
+-- P6 actual original primary all-variable rank preservation.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryVariableRankPreservation.StatementChecks
+
+-- P6 exact original rankguarded minimum coherence.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryRankGuardCoherence.StatementChecks
+
+-- P6 literal initial-tuple representative coherence.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalInitialRepresentativeCoherence.StatementChecks
+
+-- P6 literal concrete initial tuple installation.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalConcreteInitialInstallation.StatementChecks

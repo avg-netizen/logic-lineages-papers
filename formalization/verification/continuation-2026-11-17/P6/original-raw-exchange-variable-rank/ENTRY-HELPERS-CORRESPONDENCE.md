@@ -1,0 +1,11 @@
+# Encoded variable-rank extraction bridge
+
+The generic existing Fold.weighted uses pair(sum,max), not scalar addition. Therefore the helper weight is the frozen rankWeight = rawRankCode after right projection, where rawRankCode encodes pair(original variableRankRaw,0). The original extraction, variable rank, pairing, merge, bounds and exchange ASTs are unchanged.
+
+EntryProof.actualRankCode n raw param entries value assumes actual original Code validity, successful original extraction(suc entries), and the actual weighted fold value; it derives actual rawRankCode(value,raw). It is a reverse fold-to-rank bridge, retaining arbitrary original extraction parameter. Head-move callers specialize parameter0 and independently query actual fold outputs.
+
+EntryDefinitions/EntrySyntaxProof/EntryBindingProof package the exact three-premise invariant under internal raw strong induction. Syntax reuses existing generic EntryBounds schema lemmas. Guard observation/dispatch rejects every non-spine tag via actual extraction failure. Nil uses exact nil extraction, fold0, original rankNil and pair(0,0)=0. The cons step queries actual extracted tail, proves positive tail extraction, derives child validity and strict tail descent, specializes the internal induction hypothesis, and reconstructs actual list extraction. FoldRecover.cons provides the actual merge of head encoded rank and tail encoded rank. RawRankCodeConsProof recovers their rank/zero pairs, uses max(0,0)=0 and original rankSum/cons graph equations to identify the parent rank code. No standard-natural evaluation, semantic list decoding, or oracle is used.
+
+RawRankCodeProof.value and recover expose the two composition directions between actual raw rank graph plus pair(rank,0) and rawRankCode. RankWeightProof.entry identifies the actual packed entry weight by its observed type/raw pairing. These APIs allow actualFold permutation equality to imply scalar rank equality through pairing projection functionality.
+
+Native EntryProof passed receipt1794933590492519057-5 with unchanged resource caps and standard-only audits. This is only the helper bridge; the full raw exchange endpoint was not accepted by that receipt because a later independently owned structural syntax module failed ordinary name resolution.

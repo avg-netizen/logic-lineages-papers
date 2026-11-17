@@ -23,7 +23,7 @@ open ExchangeInduction
 open InternalQuotientComparisonSyntaxProof InternalOriginalOrderSyntaxProof
 open OriginalTypedDecoderInternalLogicSyntaxProof (equalSubst orSubst)
 open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114
-open PrimaryUncoveredCount.CompareSyntaxProof (boundedSubst)
+open Continuation20261114.PrimaryUncoveredCount.CompareSyntaxProof (boundedSubst)
 open InternalStrongInduction
 open OriginalContextInsertionSyntaxProof (lengthSubst)
 

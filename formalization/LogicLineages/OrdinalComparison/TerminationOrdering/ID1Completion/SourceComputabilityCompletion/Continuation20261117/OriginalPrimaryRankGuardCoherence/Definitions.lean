@@ -22,4 +22,3 @@ abbrev P (n : Nat) (arity : Fin n → Nat) : Program 3 := TwoSol20261113.Calibra
 abbrev R (n : Nat) (arity : Fin n → Nat) : Program 2 := OriginalTransparentMinimum.minimum (T n arity) (P n arity)
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryRankGuardCoherence
-#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryRankGuardCoherence

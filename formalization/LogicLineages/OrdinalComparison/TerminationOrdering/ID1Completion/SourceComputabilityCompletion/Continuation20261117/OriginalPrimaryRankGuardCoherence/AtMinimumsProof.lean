@@ -17,7 +17,7 @@ open Continuation20261114 Continuation20261115 Continuation20261116
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 attribute [local irreducible] programGraph
 attribute [local irreducible] OriginalConcreteHeadSignature.signature OriginalCandidates.candidates OriginalDecodedContextValidity.contextGuard OriginalConcreteStructuralEdge.edge SeededPrimaryPool.pool
- theorem coherent (n : Nat) (arity : Fin n → Nat) (source : Program 2) (window : Program 1)
+theorem coherent (n : Nat) (arity : Fin n → Nat) (source : Program 2) (window : Program 1)
  (seed parameter typ raw context gamma types out candidate targetOut guardedOut targetGuardedOut minimumOut targetMinimumOut candidateType candidateRaw : OTerm alpha)
  (q : OriginalPrimaryRerootInclusion.Request n arity body Delta seed parameter typ raw context gamma types out candidate targetOut)
  (hg : Nonempty (Derivation body Delta (graph2 (OriginalRankGuardedRepresentative.representative source (R n arity) window) guardedOut seed parameter)))
@@ -32,6 +32,7 @@ attribute [local irreducible] OriginalConcreteHeadSignature.signature OriginalCa
  have he1 := GuardProof.output source (R n arity) window seed parameter minimumOut guardedOut hm hs hg
  have he2 := GuardProof.output source (R n arity) window candidate parameter targetMinimumOut targetGuardedOut htm ht htg
  have hem := OriginalPrimaryMinimumCoherence.Proof.minimumCoherence n arity body alpha Delta seed parameter typ raw context gamma types out candidate targetOut minimumOut targetMinimumOut q.seedPair q.parameterPair q.guard q.typesGraph q.closed q.accepted q.primary q.member q.targetPrimary hm htm
+ rw [equalEqn] at hem ⊢
  obtain ⟨he1⟩ := he1
  obtain ⟨he2⟩ := he2
  obtain ⟨hem⟩ := hem
