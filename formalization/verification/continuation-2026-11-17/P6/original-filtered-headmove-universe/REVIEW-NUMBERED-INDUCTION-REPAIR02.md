@@ -1,0 +1,3 @@
+# Independent second numbered memory split
+
+Approve for native checking. Public original step type text-identical to preserved first split. New helper callback body, from recover of hlb through previous child helper invocation, is byte-identical to the preserved original callback. Its explicit beta/j/ys/Theta/hj/hq arguments are exactly those supplied by original queryCases after unchanged three-input vector rename normalization. Original step now performs that same query and calls the helper, with all original premises; no public premise, AST, guard, metadata, induction or result change. First child assembly remains unchanged. Three source pins saved. This is uncounted implementation factoring; prior caller RSS failure is not an acceptance.
