@@ -52,7 +52,7 @@ theorem consQuery (H : Program 1) (M W : Program 2)
     have hq' := renameInto (withHyp hq A) j Theta hj
     rw [queryRename] at hq'
     have hv : (fun i => (![tail,needle] i).relabel j) = ![tail.relabel j,needle.relabel j] := by
-      funext i; fin_cases i; rfl
+      funext i; fin_cases i <;> rfl
     rw [hv] at hr
     have hl := ArgumentEntryCount.InternalProof.internalUnequalCons body beta Theta
       (list.relabel j) (entry.relabel j) (tail.relabel j) (needle.relabel j) count hc' hr hn'

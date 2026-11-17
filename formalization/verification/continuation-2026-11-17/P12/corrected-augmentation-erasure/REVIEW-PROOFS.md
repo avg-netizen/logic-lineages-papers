@@ -1,0 +1,11 @@
+# Independent corrected-erasure proof review
+
+The six new proof files support the exact corrected endpoint without the old constructor-address cast. Read receipt1794902135278491755-6: all six proof/check modules report returncode0, and their current source hashes match. SourceProof.exactErasure and StatementChecks.exactErasure logs report only propext, Classical.choice and Quot.sound with passing audits. This is observation of the coordinator's receipt, not a new reviewer compile or a substitute for recursive evidence verification.
+
+SourceProof uses only CurrentPublishedProvabilityIntroduction.RuntimeRebase.shared, with actual memberships for identical primitive codec/validator programs. No constructorTag update is present. That shared rebase preserves current CORE/verifier and both distinct constructor addresses. Both seed instances use R.previous.previous.current.constructorTag, the actual Rule13 occurrence; AlgebraProof's final transitivity uses the Rule12 occurrence via tags R.previous and NewTransitivityProof.
+
+Projection axiom membership is obtained from the actual installed augment node's function child. Root axiom membership likewise comes from the installed composition node. Raw numeral and both unevaluated child syntax validators are derived internally, not assumed. EncodingProof pays formula-code transport between actual codec occurrences by registry coherence and formula-copy proofs. SourceProof obtains one seedFuel before p/q/tag/input, instantiates both seeds at that shared fuel, transports their codes, and cuts these proved CORE premises into AlgebraProof. AlgebraProof's hroot/hproj are local assembly premises, fully discharged by SourceProof, not extra endpoint assumptions. Actual source/index and original base axiom calibration are unchanged.
+
+No child computation, source tuple equality, desired erasure result, or certificate success is silently added. The rejected original constructor replacement remains historical failed provenance. This proves the corrected constructor helper, not an installed producer or HB3. Coordinator owns final acceptance and recursive evidence checks; the producer extension and helper form at most one substantive bridge.
+
+Only these proof-review notes/pins were written. No compiler or Lean-source edits were performed by the reviewer.

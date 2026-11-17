@@ -36,7 +36,7 @@ open EntryFactsSyntaxProof
 theorem domainSubst {alpha beta : Type} (n : Nat) (raw count types entries : OTerm alpha) (ts : alpha → OTerm beta) :
     (domain n raw count types entries).subst (fun a => emb (ts a)) =
       domain n (raw.subst ts) (count.subst ts) (types.subst ts) (entries.subst ts) := by
-  simp only [domain,conjunctionSubst,graph2Subst,sucSubst,zSubst,graph1,programSubst,consTermSubst,emptySubst]
+  simp only [domain,conjunctionSubst,graph2,sucSubst,zSubst,graph1,programSubst,consTermSubst,emptySubst]
 @[simp] theorem domainRename {alpha beta : Type} (n : Nat) (raw count types entries : OTerm alpha) (j : alpha → beta) :
     (domain n raw count types entries).relabel j = domain n (raw.relabel j) (count.relabel j) (types.relabel j) (entries.relabel j) := by
   rw [formulaRelabelAsSubst]
@@ -62,7 +62,7 @@ theorem rowSubst {alpha beta : Type} (n : Nat) (H : Program 1) (M W : Program 2)
     (raw count types entries gamma context : OTerm alpha) (ts : alpha → OTerm beta) :
     (row n H M W raw count types entries gamma context).subst (fun a => emb (ts a)) =
       row n H M W (raw.subst ts) (count.subst ts) (types.subst ts) (entries.subst ts) (gamma.subst ts) (context.subst ts) := by
-  simp only [row,impSubst,conjunctionSubst,domainSubst,invariantSubst,acceptedSubst]
+  simp only [TypedSpineInvariant.row,impSubst,conjunctionSubst,domainSubst,invariantSubst,acceptedSubst]
 @[simp] theorem rowRename {alpha beta : Type} (n : Nat) (H : Program 1) (M W : Program 2)
     (raw count types entries gamma context : OTerm alpha) (j : alpha → beta) :
     (row n H M W raw count types entries gamma context).relabel j =

@@ -41,7 +41,7 @@ theorem agreementLength (left right lc rc : OTerm alpha)
   apply OriginalLambdaConstructorGraphSyntaxProof.queryCases queries ![lc,rc] _
   intro beta j ys Theta hj hq
   have hx : (fun i => (![lc,rc] i).relabel j) = ![lc.relabel j,rc.relabel j] := by
-    funext i; fin_cases i; rfl
+    funext i; fin_cases i <;> rfl
   rw [hx] at hq
   rw [eqnRelabel]
   have ha' := renameInto ha j Theta hj

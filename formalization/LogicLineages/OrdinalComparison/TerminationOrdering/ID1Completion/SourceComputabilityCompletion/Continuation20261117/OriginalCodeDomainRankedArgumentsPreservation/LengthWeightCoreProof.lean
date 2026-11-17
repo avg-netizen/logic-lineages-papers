@@ -38,7 +38,7 @@ theorem nonzero (raw count out : OTerm alpha)
   apply OriginalLambdaConstructorGraphSyntaxProof.queryCases LengthWeightQueriesProof.queries ![raw] _
   intro beta j ys Theta hj hq
   have hx : (fun i => (![raw] i).relabel j) = ![raw.relabel j] := by
-    funext i; fin_cases i; rfl
+    funext i; fin_cases i <;> rfl
   rw [hx] at hq
   rw [resultRename]
   have hlj := renameInto hl j Theta hj
