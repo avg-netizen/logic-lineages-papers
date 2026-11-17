@@ -40,7 +40,7 @@ theorem source (n : Nat) (H : Program 1) (M W : Program 2)
   have he' := renameInto he j Theta hj
   simp only [graph2Rename,sucRelabel,zRelabel] at he'
   have ih' := renameInto ih j Theta hj
-  rw [belowRawRename] at ih'
+  rw [TypedSpineInvariantSyntaxProof.belowRawRename] at ih'
   have ha' := renameInto ha j Theta hj
   rw [acceptedRename] at ha'
   simp only [invariantRename,sucRelabel]
@@ -72,7 +72,7 @@ theorem target (n : Nat) (H : Program 1) (M W : Program 2)
   have he' := renameInto he j Theta hj
   simp only [graph2Rename,sucRelabel,zRelabel] at he'
   have ih' := renameInto ih j Theta hj
-  rw [belowRawRename] at ih'
+  rw [TypedSpineInvariantSyntaxProof.belowRawRename] at ih'
   have ha' := renameInto ha j Theta hj
   simp only [invariantRename,sucRelabel] at ha'
   rw [acceptedRename]

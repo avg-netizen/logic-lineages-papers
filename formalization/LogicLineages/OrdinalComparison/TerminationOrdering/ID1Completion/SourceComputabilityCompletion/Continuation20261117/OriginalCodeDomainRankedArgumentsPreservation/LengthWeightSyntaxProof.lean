@@ -32,7 +32,7 @@ attribute [local irreducible] programGraph
 theorem fieldsSubst {alpha beta : Type} (raw count out : OTerm alpha) (ts : alpha → OTerm beta) :
     (fields raw count out).subst (fun a => emb (ts a)) =
       fields (raw.subst ts) (count.subst ts) (out.subst ts) := by
-  simp only [fields,conjunctionSubst,graph2Subst,zSubst,graph1,programSubst,consTermSubst,emptySubst]
+  simp only [fields,conjunctionSubst,graph2,zSubst,graph1,programSubst,consTermSubst,emptySubst]
 @[simp] theorem fieldsRename {alpha beta : Type} (raw count out : OTerm alpha) (j : alpha → beta) :
     (fields raw count out).relabel j = fields (raw.relabel j) (count.relabel j) (out.relabel j) := by
   rw [formulaRelabelAsSubst]

@@ -56,7 +56,7 @@ theorem source (H : Program 1) (M W : Program 2)
   have he0 := entriesZero raw entries hc he
   obtain ⟨he0'⟩ := he0
   have hle := headTransport OriginalContextInsertion.length count z entries Fin.elim0 ⟨symm he0'⟩ hl0
-  exact andIntro hle (nilGood H M W entries gamma context he0)
+  exact andIntro hle (nilGood H M W entries gamma context ⟨he0'⟩)
 
 theorem target (H : Program 1) (M W : Program 2)
     (raw count types entries gamma context : OTerm alpha)
