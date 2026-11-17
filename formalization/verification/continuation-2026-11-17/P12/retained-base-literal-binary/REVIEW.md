@@ -1,0 +1,11 @@
+# Independent literal-binary comparator review
+
+Approved for fresh freeze/preflight only; all eleven proposed hashes verified. No proof or native acceptance.
+
+Read new Definitions/Targets against original GorbowBooleanTruth.binaryCodeTerm, CurrentNamedAliasCertificate.matrix/headerCode, CurrentNamedHeaderCertificate.template, and lawful RuntimeRebase.shared. binaryCodeTerm0 is literally universalFunction(headerTerm2,0). rawBinary is actual termValue of that syntax with numeral-coded symbolic inputs, and final right endpoint is numeralCall of the actual original binaryCodeTerm0 r s. Neither is a replacement evaluator with merely matching native semantics.
+
+Source selection is exactly the checked noncircular installer specialized to the original header template. Its I already contains that template compiler; no alias-program or header-transport-program node assumption was added. Same Actual/calibration/I and three concrete inventory/producer memberships as the source calculation bridge. Shared rebase returns a lawful installation on the same root, retaining current CORE/verifier, without equating distinct constructor addresses.
+
+Explicit aliasCertificate uses the actual two-variable original named alias matrix and separate actual Rule13 address. Header step consumes the actual template certificate call from I, then ordinary call6 unary congruence and original Rule12 transitivity combine it with retained-base source calculation. The declared certificate initially has output numeralCall(call6(header)); obtaining final numeralCall(binaryCodeTerm0 r s) requires genuine named-alias source axiom instantiation at arbitrary terms and congruence. It is not assumed and cannot be replaced by calibration/native reflection. Likewise rawBinary/header/unary syntax equality and seed validity/source membership are proof obligations, not supplied success facts.
+
+Bound is chosen before arbitrary r/s/fuel, with one original object-language guard derivation. Actual source index and current CORE/Fuel are unchanged. This is a literal syntax/value bridge at tag0, not full Retained/Packages, a new installed composite producer graph, or HB3. Refexive preflight is only elaboration. Old accepted/frozen files unchanged.

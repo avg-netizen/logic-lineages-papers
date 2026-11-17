@@ -1,0 +1,13 @@
+# Independent source-calculation comparator review
+
+Approved for fresh freeze/preflight only. All eleven proposed hashes match inspected bytes. No proof/native acceptance.
+
+Read exact new Definitions/Targets against original CurrentStructuralProducerCore SourceCore, its calculation/code abbreviations and CurrentRecursionProducerCore.childFormula/childCode, plus original equality algebra target. The final target is literally original calculation K6[value]: encoded equality of raw call6 on numeral-coded input and numeralCode(call6(value)). It is not merely a base12 calculation or native evaluation statement.
+
+The explicit certificate first combines actual peel calls6->8 and8->10, then10->12, then the actual compile(pF0) code at12. Each midpoint rawCall is the same original encoded call syntax. The final transitivity code initially concludes numeralCode(call12(value)); the target's call6 output therefore imposes a real symbolic output-transport obligation. That cannot be discharged by native calibration alone. Original augmentation/projection defining equations, same-source inclusion, numeralCall congruence and formula transport must pay it while preserving the certificate term.
+
+Actual and baseX calibration retain original meanings. I is the actual JointInstallation for the explicitly selected source. Concrete carrier, fixed Program3 and compile(pF0) memberships are the checked installer's conclusions; no CORE/Fuel success, compiler correctness or computed equality is a premise. Source AST forces actual augment nodes6/8/10 and primitive node12, which must be derived, not newly assumed. Base carrier coverage and original SourceCore supply symbolic calculation only after satisfying their actual inputs.
+
+One bound precedes all symbolic contexts/value/fuel; original object-language orderGuard derivation is required, matching SourceCore's guard form. The bound is scoped after the fixed installation occurrence choices, sufficient for this declared endpoint; the comparator does not claim the stronger all-program uniformity of the generic SourceCore theorem. Existing generic bounds may of course provide it. Transitivity syntax validators and fuel bookkeeping are proof obligations, not extra success assumptions.
+
+No final-pF compilation, own-size circularity or tag-identification premise occurs. This is a conditional same-selected-source calculation interface ready to instantiate from the checked installer, not a newly asserted existential package, combined installed certificate-program graph, full Retained/Packages, literal binaryCodeTerm transport or HB3. Old accepted/frozen files untouched; only review artifacts written.
