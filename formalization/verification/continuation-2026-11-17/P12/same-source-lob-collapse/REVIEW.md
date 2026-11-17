@@ -1,0 +1,10 @@
+# Independent comparator review
+
+Approved proposed twelve pins for fresh freeze and named native comparator gate. Verified all twelve current source hashes. Machine comparison confirms the entire prior HB3V2 Source body is a literal prefix of the new body, with only a conjunction appended. No retained field, witness, source construction, actual node or uniform bound is dropped or changed.
+
+Read original Retained, Packages, SelectedCertifiedPresentation, CollapseDefinitions/Targets and GorbowPublishedLobReductionTargets. Appended Actual/SyntaxAdequate/chosen CodeProgram/RegistryInstall/FixedPointFor concern the same pF,pR,q,c,tagCK,pCK. HB2 and HB3 are conclusions, not new premises. The source q matches the literal retained verifier and Packages final HB2 package. Transfer S→D must use actual source inclusion. Global Lob is the original rule from a D derivation of Pr_D(theta)→theta to a D derivation of theta. Collapse uses original sourceC=closedInstance tagCK A (selectorTheta A), with the same installed fixed point and every selector quantified after the single tuple.
+
+The named iff gate expands HB2/HB3 to their original prD implications and sourceC to original closedInstance. No alternate knowledge predicate, code equality assumption, selected-source identity assumption, consistency premise or target-success oracle appears. Fresh native gate and actual proof review remain required.
+
+## Eventual numbered boundary
+Read paper12 theorem thm:collapse: D proves c_A↔E_A(b) for every allowed selector. New conclusion directly matches the existing unchanged SourceCollapse contract and can project to it after selecting any f/lhs/rhs witness; likewise the same tuple can project to SelectedCertifiedPresentation. Adoption still needs explicit checked projections, full evidence and register source reconciliation. Do not promote from comparator approval. Corollary 3 (common belief of contradiction), thm:selector (KT classification), and full Paper12 completion are distinct downstream obligations and are not conclusions of this target.

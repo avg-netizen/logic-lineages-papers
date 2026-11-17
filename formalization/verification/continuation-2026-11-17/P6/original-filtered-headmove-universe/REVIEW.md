@@ -1,0 +1,9 @@
+# Independent filtered head-move comparator review
+
+Approved three proposed hashes for fresh freeze/native comparator checking, not mathematical acceptance. Read complete ordinary/numbered targets, named expanded gate, original headMove and guarded-window definitions, and original universe source checker.
+
+Both clauses use actual original constructors, concrete H/G/M/W, source universe termCheck, both original root Code guards, exact headMove and actual original primary output membership. Same packed typ and same parameter-derived context/gamma/symbols/types are explicit. Numbered label/recorded type/extraTypes/extras are shared literally. There is no ranked-tag restriction and no target typing, target universe result or arbitrary transfer oracle premise. The new membership restriction is original filtered-primary membership, not a modified raw relation; carrierV2 can supply plain target admission after source universe-to-plain erasure and seed-target reconstruction are proved.
+
+The six headMove inputs preserve original window/source/class/permutation guards. Target head window and validity must be recovered through actual source-head coverage/root decoding, not assumed equal head signatures. Heterogeneous ordered argument transport remains substantial: source universe facts for typed entries, genuine permutation transfer, target canonical spine/annotation consistency derived from plain typing, then full universe reconstruction. Numbered extra arguments retain their original separate obligations. The comparator does not make these facts automatic, and no proof is claimed.
+
+Scope is two root head-move cases within filtered original endpoints, not all primary candidates' universe admission, general structural recursion, arbitrary M/W transport or Paper6 accessibility. The application-swap diagnostic is not contradicted because the actual filtering premise excludes its malformed positional typing. Frozen prior targets unchanged.
