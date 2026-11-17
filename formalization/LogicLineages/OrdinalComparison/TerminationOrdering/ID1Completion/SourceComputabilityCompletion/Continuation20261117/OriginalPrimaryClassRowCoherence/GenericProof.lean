@@ -11,7 +11,7 @@ open InternalApplicationCertificateConstructors
 open SourceComputabilityFormulaSupportProof (numeral)
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open Continuation20261114
-open TwoSol20261113.CalibratedPrimary (Membership)
+open TwoSol20261113.CalibratedPrimary
 open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 attribute [local irreducible] programGraph

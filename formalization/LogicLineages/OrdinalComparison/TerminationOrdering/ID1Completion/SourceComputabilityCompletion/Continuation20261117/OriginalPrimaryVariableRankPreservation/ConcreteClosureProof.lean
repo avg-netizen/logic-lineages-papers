@@ -1,0 +1,26 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryVariableRankPreservation.EdgeTransferProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryVariableRankPreservation.ForwardProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryVariableRankPreservation.ConcreteClosureProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalApplicationCertificateConstructorsSupportProof InternalControlGraphSupportProof
+open InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (eqn eqnRelabel sucRelabel zRelabel)
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open SourceComputabilityFormulaSupportProof (numeral)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Continuation20261114 Continuation20261115 Continuation20261116
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+theorem closed (n : Nat) (arity : Fin n → Nat) (ref parameter : OTerm alpha) :
+ Nonempty (Derivation body Delta (forwardClosed OriginalRawSyntaxTransport.variableRankPackedRaw (OriginalConcreteStructuralEdge.edge n arity) ref parameter)) := by
+ apply ForwardProof.introduce OriginalRawSyntaxTransport.variableRankPackedRaw (OriginalConcreteStructuralEdge.edge n arity) ref parameter
+ intro beta j Theta source target hj hs he
+ exact EdgeTransferProof.preserved n arity source target (parameter.relabel j) (ref.relabel j) hs he
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryVariableRankPreservation.ConcreteClosureProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryVariableRankPreservation.ConcreteClosureProof

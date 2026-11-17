@@ -1,0 +1,7 @@
+# Exact original rankguard coherence at literal primary minima
+
+Retains the complete existing source/primary-member scope. Changes only the observed output graphs from preguard R to the exact OriginalRankGuardedRepresentative.representative source R window AST. Both source and window activation controls are arbitrary fixed programs, so this robust result includes the literal transparent source/window of Membership.inputs under OriginalRankGuardedRepresentative.transparentInputs. No success premise for those controls is added: if actual minimum preserves original variable rank then both active/nonactive branches keep the same R output. The original rank compares ALL variable occurrences via variableRankPackedRaw, never size or free-variable rank.
+
+Intended internal route: query actual R outputs; actual MinimumLaw + original class normalization yields membership of each minimum in its root primary; exact original primary variable-rank preservation (being built) derives sameRank=1 from queried actual rank graphs. Generic exact branch redundancy recovers R graph for guarded output under arbitrary controls. Functionality and independently proved preguard minimum coherence give output equality. No native calibration/reflection or rank oracle.
+
+This does not claim sidecar/spine/evaluator-key final tuple equivalence, source-calculus stability repair, canonical cancellation or closed global accessibility. Exact transparent tuple field correspondence must use original literal AST identities, not all-vector native equality.

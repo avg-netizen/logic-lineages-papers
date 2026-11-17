@@ -1,7 +1,6 @@
 # Independent full-chain static review
 
-Static semantic route approved; final native/evidence and repair delta checks
-pending. Independently inspected current 31-module generic/concrete proof chain,
+Final source, native and recursive evidence reconciliation approved. Independently inspected current 31-module generic/concrete proof chain,
 including exact target/comparator, internal syntax/induction, query/run recovery
 and concrete back-closure. All 15 frozen pins match current bytes.
 
@@ -45,8 +44,29 @@ are instantiated at exact concrete H/G/T/Q/E; target source acceptance is not
 silently assumed. Public theorem retains only the frozen original source scope.
 No semantic defect, circular supplier or hidden assumption found in this draft.
 
-No compiler or proof-source edits by reviewer. Static approval does not accept
-unfinished native checks or dependency gates; final current-source hashes,
-standard-axiom/receipt profile, recursive evidence and any later repair deltas
-must be reconciled. Reverse root membership only, not primary-code equality,
+No compiler or proof-source edits by reviewer. The native, repair delta and recursive reconciliation below supersedes the
+static-stage pending status. Reverse root membership only, not primary-code equality,
 mutual inclusion by itself, numbered completion, accessibility or full-root/CI.
+
+## Final repair and evidence reconciliation
+
+Final 34-module packet retains all definitions and public statements. Syntax
+was split into generic graph substitution, accepted and allAccepted modules;
+graph2/3/4 substitution abstracts the unchanged Programs to prevent expansion.
+Other changes qualify matrixWitness/natInduction, annotate local binder formulas,
+and add local fixed-supplier opacity to the same pointwise PoolMember/universal
+PoolInclusion proofs. These changes add no assumptions and retain exact invariant
+polarity/binder order. Failed originals remain preserved.
+
+Final receipt 1794932069898724866-7 has zero failing rows at original 2048 MiB
+heap, 1536 MiB RSS, 2048 MiB free, 180 s wall, 90 s CPU and one thread. All 34
+packet sources match native rows; exact endpoint audit is standard-only.
+Independently matched all 5042 evidence source hashes and ALL referenced native
+receipt/log hashes, plus all 15 frozen pins. Evidence verified with zero errors;
+all named axiom lists use only propext, Classical.choice and Quot.sound.
+
+EVIDENCE.json SHA256 1b8a3ad2a42cd7f1f05535c9e38368ec7bf0979ad74540433d8ee4a621c31989;
+13632300 bytes. One reverse-root-membership endpoint is ready for parent
+acceptance. This is independent source/evidence reconciliation, not a second
+compiler run or rerun of all binary artifact validation. Scope exclusions above
+remain; no full-root/CI or numbered theorem completion is asserted.

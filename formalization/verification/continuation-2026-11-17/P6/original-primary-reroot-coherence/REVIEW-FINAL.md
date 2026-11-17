@@ -1,4 +1,8 @@
-# Independent draft final static review
+# Independent final review
+
+**FINAL APPROVED.** Final reconciliation below supersedes historical pending statuses.
+
+## Historical static and repair review
 
 Static assembly route approved, conditional on the exact reverse-membership
 supplier being implemented and accepted. NOT native/final acceptance. Reviewed
@@ -47,3 +51,19 @@ Receipt 1794931664296970300-5 passes zero failing rows under original caps; curr
 conversion/wrapper source hashes match and their audits are standard-only. Failed
 .02/.03 originals remain preserved. This accepts only the repair/helper stage,
 not the full coherence endpoint or missing reverse-membership prerequisites.
+
+## Final independent reconciliation
+
+FINAL APPROVED for the exact frozen endpoint only. The reverse-membership and
+coherence prerequisites are now implemented and accepted; historical pending
+statements above describe the earlier review stage, not the final status.
+Receipt 1794932183618977095-5 passes all rows under unchanged heap/RSS/wall/CPU/free-memory/thread limits.
+The exact endpoint audit and all recursive named audits use only the standard
+axioms propext, Classical.choice and Quot.sound.
+
+Independently matched all 5201 current closure source hashes and every referenced
+native receipt/log hash, all four frozen pins, and all 10 reviewed implementation
+source pins. No further source delta was found. Recursive evidence reports verified
+with zero errors. Evidence SHA256: 0e03978f2cbf231daf582622eeac9f626af9b60f5d01eca26dd443c455dc91d0.
+This is source/log/receipt reconciliation, not a second native run or rerun of
+every binary-artifact validator. No proof source edited and no compiler invoked.

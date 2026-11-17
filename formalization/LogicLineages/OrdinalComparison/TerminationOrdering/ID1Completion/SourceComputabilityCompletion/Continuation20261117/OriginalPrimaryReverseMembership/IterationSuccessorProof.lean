@@ -34,7 +34,7 @@ theorem rowSuccessor (E : Program 3) (count pool reached parameter carrier seed 
  have hj : ∀ p ∈ Delta, p.relabel (Sum.inl : alpha → alpha ⊕ Fin 1) ∈ D := by
   intro p hp; exact List.mem_map.mpr ⟨p,hp,rfl⟩
  let A := graph4 (PrimaryIteration.iterate E) out (suc (count.relabel Sum.inl)) (pool.relabel Sum.inl) (reached.relabel Sum.inl) (parameter.relabel Sum.inl)
- let B := allAccepted (pool.relabel Sum.inl) (carrier.relabel Sum.inl) (seed.relabel Sum.inl) (reached.relabel Sum.inl)
+ let B : Formula (alpha ⊕ Fin 1) := allAccepted (pool.relabel Sum.inl) (carrier.relabel Sum.inl) (seed.relabel Sum.inl) (reached.relabel Sum.inl)
  have hback' := renameInto hback Sum.inl D hj
  rw [backClosedRename] at hback'
  have hrow' := renameInto hrow Sum.inl D hj

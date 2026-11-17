@@ -463,3 +463,31 @@ Supporting905, numbered178/2/9 unchanged. Reverse membership generic invariant
 and exact caller under construction. Final mutual-inclusion coherence frozen and
 statically reviewed; parameter-only type selector helper passed, target-universe
 adapter hit RSS unchanged caps twice and is being factored without theorem changes.
+
+### 2026-11-17 16:13:13 UTC remote checkpoint
+
+Verified3fffb660fb3da80c22377578d62a28d80546aa24, exact tree
+42017c41b585773a82cca6ecfae7de71a3063450. All58 source pins for93–95 rehashed
+from remote blobs;183 source/docs files saved. Supporting905, numbered178/2/9.
+Next checkpoint16:43, hard stop18:00. Reverse membership generic/caller repairs
+continue at original limits. TargetUniverse coherence adapter repaired, native
+1794931664296970300-5 and independently reviewed; parameter-only types helper
+also passed. Full coherence/class-row/minimum targets remain unaccepted drafts.
+
+### 2026-11-17 local Acceptances96–99
+
+96 reverse primary membership, native1794932069898724866-7, independent5042-source
+evidence.97 actual primary membership coherence (internal conjunction of mutual
+inclusions), native1794932183618977095-5, independent5201-source evidence.98 exact
+object-language original class-row implications, same native batch,5204-source
+evidence.99 exact PRE-rankguard minimum equality, native1794932523389398980-6,
+independent5227-source evidence. All source/receipt/log hashes reconciled, original
+caps and frozen targets retained. Supporting909, numbered178/2/9 unchanged.
+
+Current postguard gap: sameRank compares actual variableRankPackedRaw ALL variable
+occurrences, not size/maxLabel/free-variable count. Raw exchange scalar-rank
+preservation is being built via honest constructor laws and pair(rank,0) entry
+fold bridge (bounds weighted fold merges pairs, not scalars). Primary rank lift
+and postguard coherence targets frozen/reviewed; no endpoint claims yet. Own
+RankGuardCoherence has arbitrary fixed activation controls to include exact
+literal representative AST, not later sidecar/evaluator/final tuple equivalence.

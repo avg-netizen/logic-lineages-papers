@@ -1,0 +1,77 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalObservedClassProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentMinimumInternalMinimumProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityStackAppendInductionCoreProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryMinimumCoherence.SupportProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof InternalAcceptanceBranchProof
+open InternalGraphCompositionFunctionalityProof InternalGraphCompositionEqualityProof
+open InternalTagArithmeticSyntaxProof (z suc eqn)
+open InternalTagArithmeticSupportProof (refl symm)
+open InternalBetaTotalityProof
+open InternalPositiveUnfoldingSupportProof InternalOriginalOrderSyntaxProof InternalQuotientComparisonProof
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+theorem casesOrder (x y : OTerm alpha) (F : Formula alpha)
+    (hl : Nonempty (Derivation body (InternalLessThan.strictLess x y :: Delta) F))
+    (he : Nonempty (Derivation body (eqn x y :: Delta) F))
+    (hr : Nonempty (Derivation body (InternalLessThan.strictLess y x :: Delta) F)) :
+    Nonempty (Derivation body Delta F) := by
+  obtain ⟨cmp⟩ := actualOriginalComparison body alpha x y
+  have hc := compareView (weakenClosed cmp Delta)
+  obtain ⟨hl⟩ := hl
+  obtain ⟨he⟩ := he
+  obtain ⟨hr⟩ := hr
+  have rest : Derivation body Delta (((eqn x y) ⊔ InternalLessThan.strictLess y x).imp F) :=
+    Derivation.implicationIntroduction (disjunctionElimination (Derivation.hypothesis List.mem_cons_self)
+      (addHyp (Derivation.implicationIntroduction he) _) (addHyp (Derivation.implicationIntroduction hr) _))
+  exact ⟨disjunctionElimination hc (Derivation.implicationIntroduction hl) rest⟩
+
+theorem probeTransport (P : Program 3) (root before after parameter : OTerm alpha)
+    (he : Nonempty (Derivation body Delta (eqn before after)))
+    (hp : Nonempty (Derivation body Delta (graph3 P (suc z) root before parameter))) :
+    Nonempty (Derivation body Delta (graph3 P (suc z) root after parameter)) := by
+  unfold graph3 programGraph at hp ⊢
+  apply graphInputTransport body alpha 3 Delta _ (suc z) ![root,before,parameter] ![root,after,parameter] _ hp
+  intro i
+  refine Fin.cases ?_ (Fin.cases ?_ (Fin.cases ?_ (fun j => Fin.elim0 j))) i
+  · rw [onEquality]
+    exact ⟨refl root⟩
+  · rw [onEquality]
+    exact he
+  · rw [onEquality]
+    exact ⟨refl parameter⟩
+
+theorem zeroDirection (T : Program 2) (P : Program 3) (root probe parameter : OTerm alpha)
+    (hz : Nonempty (Derivation body Delta (graph2 InternalEqualityTest.equalityTest z probe root))) :
+    (Nonempty (Derivation body Delta (graph3 (OriginalTransparentMinimum.reflexiveClassTest T P) (suc z) root probe parameter)) ↔
+     Nonempty (Derivation body Delta (graph3 P (suc z) root probe parameter))) := by
+  let xs : Fin 3 → OTerm alpha := ![root,probe,parameter]
+  let control : Program 3 := .composition InternalEqualityTest.equalityTest ![.projection 1,.projection 0]
+  let target : Program 3 := .composition T ![.projection 0,.projection 2]
+  have hc := binaryValue InternalEqualityTest.equalityTest (.projection 1) (.projection 0) z probe root xs hz
+    (projectionValue 1 xs) (projectionValue 0 xs)
+  exact ⟨fun h => zeroBranchElim control P target (suc z) xs hc h,
+    fun h => zeroBranchIntro control P target (suc z) xs hc h⟩
+
+theorem equalReflexive (T : Program 2) (P : Program 3) (root probe parameter : OTerm alpha)
+    (he : Nonempty (Derivation body Delta (eqn probe root)))
+    (ht : Nonempty (Derivation body Delta (graph2 T (suc z) root parameter))) :
+    Nonempty (Derivation body Delta (graph3 (OriginalTransparentMinimum.reflexiveClassTest T P) (suc z) root probe parameter)) := by
+  let xs : Fin 3 → OTerm alpha := ![root,probe,parameter]
+  let control : Program 3 := .composition InternalEqualityTest.equalityTest ![.projection 1,.projection 0]
+  let target : Program 3 := .composition T ![.projection 0,.projection 2]
+  have hc := binaryValue InternalEqualityTest.equalityTest (.projection 1) (.projection 0) (suc z) probe root xs
+    (InternalEqualityTestCompositionProof.equalityOfEqual probe root he) (projectionValue 1 xs) (projectionValue 0 xs)
+  have hb := binaryValue T (.projection 0) (.projection 2) (suc z) root parameter xs ht
+    (projectionValue 0 xs) (projectionValue 2 xs)
+  exact successorBranchIntro control P target (suc z) z xs hc hb
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryMinimumCoherence.SupportProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryMinimumCoherence.SupportProof

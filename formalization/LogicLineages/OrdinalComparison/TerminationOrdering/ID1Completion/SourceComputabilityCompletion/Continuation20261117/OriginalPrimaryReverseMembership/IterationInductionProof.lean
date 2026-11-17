@@ -44,7 +44,7 @@ theorem allCounts (E : Program 3) (count pool reached parameter carrier seed : O
   simpa only [theta,k,successorInstance,nextEmbedding,atCountSubst,nextTerm,Term.subst,Sum.elim_inr,nextLift] using h
  obtain ⟨hz⟩ := hz
  obtain ⟨hs⟩ := hs
- have h := Derivation.universalElimination (emb count) (natInduction theta hz hs)
+ have h := Derivation.universalElimination (emb count) (InternalTagArithmeticSupportProof.natInduction theta hz hs)
  simpa only [theta,k,instantiate,bindEmbedding,atCountSubst,varBind,liftBind] using Nonempty.intro h
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.IterationProof

@@ -29,7 +29,7 @@ theorem rowZero (E : Program 3) (pool reached parameter carrier seed : OrdinaryA
  apply introduction body alpha 1 Delta
  let out : OrdinaryArithmetic.Term (alpha ⊕ Fin 1) := .var (.inr 0)
  let A := graph4 (PrimaryIteration.iterate E) out z (pool.relabel Sum.inl) (reached.relabel Sum.inl) (parameter.relabel Sum.inl)
- let B := allAccepted (pool.relabel Sum.inl) (carrier.relabel Sum.inl) (seed.relabel Sum.inl) (reached.relabel Sum.inl)
+ let B : Formula (alpha ⊕ Fin 1) := allAccepted (pool.relabel Sum.inl) (carrier.relabel Sum.inl) (seed.relabel Sum.inl) (reached.relabel Sum.inl)
  obtain ⟨h⟩ := zeroCore (body := body) (Delta := B :: A :: Delta.map (fun p => p.relabel Sum.inl)) E
    (pool.relabel Sum.inl) (reached.relabel Sum.inl) (parameter.relabel Sum.inl) out (carrier.relabel Sum.inl) (seed.relabel Sum.inl)
    ⟨Derivation.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)⟩ ⟨Derivation.hypothesis List.mem_cons_self⟩

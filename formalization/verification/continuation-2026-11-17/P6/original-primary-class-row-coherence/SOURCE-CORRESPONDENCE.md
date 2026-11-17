@@ -8,4 +8,4 @@ The concrete caller obtains both inclusions from OriginalPrimaryRerootCoherence.
 
 No equality of list codes, no equality of minima or final presentations, and no native calibration reflection occurs. Actual original source acceptance, context guard, ArrowClosed types and original observed output graphs remain explicit at this endpoint.
 
-Status: independent scope approved and frozen. Comparator preflight and implementation remain pending. Full native/evidence depends on final checked reroot coherence.
+Status: independent scope approved and frozen; full native exact alias passed1794932183618977095-5 under original caps. Recursive evidence verified5204 source-matched modules, zero errors; final independent evidence reconciliation approved. Coordinator owns acceptance; no numbered status promotion claimed here.

@@ -2358,3 +2358,15 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 
 -- P6 one-way original primary reroot inclusion.
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryRerootInclusion.StatementChecks
+
+-- P6 actual original primary reverse membership.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.StatementChecks
+
+-- P6 actual original primary membership coherence.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryRerootCoherence.StatementChecks
+
+-- P6 literal original primary class-row coherence.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryClassRowCoherence.StatementChecks
+
+-- P6 original pre-rankguard minimum coherence.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryMinimumCoherence.StatementChecks
