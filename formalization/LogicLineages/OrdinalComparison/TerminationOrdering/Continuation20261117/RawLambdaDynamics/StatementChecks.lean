@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.Continuation20261117.RawLambdaDynamics.ComparatorGate
+public import LogicLineages.OrdinalComparison.TerminationOrdering.Continuation20261117.RawLambdaDynamics.Proof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.Continuation20261117.RawLambdaDynamics.StatementChecks
+
+theorem exactRawLambdaPathFactorization : Targets.ActualRawLambdaPathFactorization :=
+  Proof.actualRawLambdaPathFactorization
+
+theorem exactRawLambdaAccessibilityEquivalence : Targets.ActualRawLambdaAccessibilityEquivalence :=
+  Proof.actualRawLambdaAccessibilityEquivalence
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.Continuation20261117.RawLambdaDynamics.StatementChecks
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.Continuation20261117.RawLambdaDynamics.StatementChecks.exactRawLambdaPathFactorization
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.Continuation20261117.RawLambdaDynamics.StatementChecks.exactRawLambdaAccessibilityEquivalence
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.Continuation20261117.RawLambdaDynamics.StatementChecks

@@ -1,5 +1,25 @@
 # Current public formalization handoff
 
+## Latest checkpoint — 17 November focused small targets
+
+The continuation from `73709637` adds two independently verified proof packets:
+original raw lambda path factorization/accessibility equivalence, and chosen
+common-knowledge implication transport with the literal/selector theta bridge.
+Their focused gates contain 18 and 282 local modules respectively; the combined
+source/object/log audit covers 299 modules with zero errors. Peak RSS is
+783.7 and 1065.0 MiB under the unchanged 1536 MiB cap. All five frozen exact
+contracts and standard-axiom audits passed. The root import list includes both
+gates; the full Paper 6/root build was not run.
+
+Read [the scope, evidence and reproduction commands](../continuation-2026-11-17-small-targets/README.md).
+The register remains **178 checked, 2 inherited, 9 pending /189**. Native raw
+lambda dynamics does not discharge internal certificate/quotient accessibility.
+The CK transport retains the existing same-D HB2/HB3 hypotheses; its installed
+same-source specialization and unconditional literal counterexample remain
+separate. Original mathematical suppliers, frozen targets, dependency pins,
+checker and manuscripts are unchanged. All author and native proof jobs for
+this checkpoint have finished. Earlier dated controls below are historical.
+
 ## LATEST STOP CONDITION — three substantive contributions
 
 The user now requests pause after making three substantive contributions, counted from this new instruction, not previous work. Count meaningful distinct verified advances toward original open obligations, not rebuilds, status notes, trivial helpers or raw contract totals. Record separate scope and evidence for each. After the third, promptly checkpoint, verify remote and stop all lanes. The existing2026-11-17T18:00:00Z deadline remains an earlier hard stop if three are not reached. Current substantive-contribution count under this instruction:1 (Nov17 ACCEPTANCE-68; builtin equations and internal ground-list structural bridge). No previously accepted/rechecked fragment is credited merely because its artifacts were rebuilt. Keep30minute nonforce checkpoints.

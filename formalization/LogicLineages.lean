@@ -2388,3 +2388,9 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 
 -- P6 concrete recursive member supplier alignment.
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalConcreteUniverseMemberAlignment.StatementChecks
+
+-- P6 raw lambda path factorization and lambda/body accessibility equivalence.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.Continuation20261117.RawLambdaDynamics.StatementChecks
+
+-- P12 chosen CK implication transport and the literal/selector theta bridge.
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.ChosenCommonKnowledgeTransport.StatementChecks
