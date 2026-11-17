@@ -257,3 +257,5 @@ Acceptance56 verified4550modules,67 source pins including standalone preflight,2
 2026-11-17T04:49:09.372585+00:00 checkpoint: cold frozen-preflight closure2751module passes, no final gate yet.0new substantive contributions under latest instruction; accepted868/numbered175-2-12 unchanged.
 
 2026-11-17T05:13:50.144446+00:00 checkpoint: cold preflight closure3342module passes without observed failure; no final gate. Substantive ledger0/3, accepted868, original175/2/12 unchanged. Rebuild/status work is not a contribution.18:00UTC hard stop remains active.
+
+2026-11-17T05:33:36.281887+00:00 blocker checkpoint: cold P6preflight3765module passes then unchanged accepted CrossIntroInductionSyntaxProof exceeded fixed1536MiB RSS cap (receipt1794885420213782965-6, peak1574972KiB). Identical-limit retry1794893572201133200-6 reproduced the stop. No target/source/checker/limit relaxed; dependency factoring under read-only review. Sole native queue switched to independent P12 CurrentAugmentationErasure.Preflight cold closure. Full P6gate not accepted; ledger0/3,868supporting and175/2/12 unchanged.
