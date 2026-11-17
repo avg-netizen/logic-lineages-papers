@@ -1,5 +1,9 @@
 # Current public formalization handoff
 
+## LATEST STOP CONDITION — three substantive contributions
+
+The user now requests pause after making three substantive contributions, counted from this new instruction, not previous work. Count meaningful distinct verified advances toward original open obligations, not rebuilds, status notes, trivial helpers or raw contract totals. Record separate scope and evidence for each. After the third, promptly checkpoint, verify remote and stop all lanes. The existing2026-11-17T18:00:00Z deadline remains an earlier hard stop if three are not reached. Current substantive-contribution count under this instruction:0. No previously accepted/rechecked fragment is credited merely because its artifacts were rebuilt. Keep30minute nonforce checkpoints.
+
 ## LIVE RELEASE — 2026-11-17 03:15 UTC
 
 User authorizes continuation until **2026-11-17 18:00 UTC** (noon Nov17 UTC-06), superseding the pause below. Stop at that deadline, save and verify final checkpoint, no automatic resume. Keep at least30minute source-first nonforce checkpoints, sole serialized fixed-limit compiler, independent comparator review, original source/AST obligations and standard-only axioms. No main merge, CI/checker/pin changes or private research.
@@ -249,3 +253,5 @@ Acceptance56 verified4550modules,67 source pins including standalone preflight,2
 2026-11-17T04:02:10.924921+00:00 periodic checkpoint: cold fixed-limit HeadArguments preflight closure now1525own-project modules passed; no failures observed and no final gate/evidence acceptance. Mathematical sources unchanged, worktree clean before this status note.868supporting,175/2/12 original register unchanged. Last verifiedb82a5a4d58a983f900a8d3943697ecbd4e9a10e5 at03:40:37UTC; deadlineNov17 18:00UTC active.
 
 2026-11-17T04:27:27.754923+00:00 periodic checkpoint: fixed cold-preflight rebuild at2137module passes without observed failures, full HeadArguments gate still pending. Sources unchanged beyond status.868supporting/175checked2inherited12pending unchanged; hard stopNov17 18:00UTC active.
+
+2026-11-17T04:49:09.372585+00:00 checkpoint: cold frozen-preflight closure2751module passes, no final gate yet.0new substantive contributions under latest instruction; accepted868/numbered175-2-12 unchanged.
