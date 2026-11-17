@@ -62,7 +62,7 @@ theorem projectionSeedEval (tag offset value : Nat) : evaluate projectionSeed (a
   refine Fin.lastCases ?_ (fun j => ?_) i
   · simp only [CurrentRecursionBaseProgram.TagSyntax.join,Fin.lastCases_last]
     change evaluate (applyOne LiteralNumeralPrefix.numeralCode projectionTag) (args tag offset value) = _
-    rw [oneEval,NativeValues.projectionEval,LiteralNumeralPrefix.StatementChecks.exactNative]
+    rw [oneEval,args,NativeValues.projectionEval,LiteralNumeralPrefix.StatementChecks.exactNative]
   · simp only [CurrentRecursionBaseProgram.TagSyntax.join,Fin.lastCases_castSucc]
     refine Fin.cases ?_ (fun l => ?_) j
     · exact first tag offset value

@@ -11,11 +11,25 @@ open PrescribedRuntimeEquality PrescribedRuntimeCallCongruence HistoryRuleSuffix
 open GorbowSubstitution GorbowFormulaSubstitution
 
 theorem root (tag offset : Nat) : FourPlugProof.plugged rootTemplate tag (tag+1) (tag+2) (tag+offset) = SyntaxProof.rootAt tag offset := by
+ have h10 : CurrentRecursionBaseProgram.TagSyntax.plug 1 (tag) (0 : Fin 2) = .var 0 := CurrentRecursionBaseProgram.TagSyntax.plugCast 1 (tag) (0 : Fin 1)
+ have h11 : CurrentRecursionBaseProgram.TagSyntax.plug 1 (tag) (1 : Fin 2) = Term.numeral (tag) := CurrentRecursionBaseProgram.TagSyntax.plugLast 1 (tag)
+ have h20 : CurrentRecursionBaseProgram.TagSyntax.plug 2 (tag+1) (0 : Fin 3) = .var 0 := CurrentRecursionBaseProgram.TagSyntax.plugCast 2 (tag+1) (0 : Fin 2)
+ have h21 : CurrentRecursionBaseProgram.TagSyntax.plug 2 (tag+1) (1 : Fin 3) = .var 1 := CurrentRecursionBaseProgram.TagSyntax.plugCast 2 (tag+1) (1 : Fin 2)
+ have h22 : CurrentRecursionBaseProgram.TagSyntax.plug 2 (tag+1) (2 : Fin 3) = Term.numeral (tag+1) := CurrentRecursionBaseProgram.TagSyntax.plugLast 2 (tag+1)
+ have h30 : CurrentRecursionBaseProgram.TagSyntax.plug 3 (tag+2) (0 : Fin 4) = .var 0 := CurrentRecursionBaseProgram.TagSyntax.plugCast 3 (tag+2) (0 : Fin 3)
+ have h31 : CurrentRecursionBaseProgram.TagSyntax.plug 3 (tag+2) (1 : Fin 4) = .var 1 := CurrentRecursionBaseProgram.TagSyntax.plugCast 3 (tag+2) (1 : Fin 3)
+ have h32 : CurrentRecursionBaseProgram.TagSyntax.plug 3 (tag+2) (2 : Fin 4) = .var 2 := CurrentRecursionBaseProgram.TagSyntax.plugCast 3 (tag+2) (2 : Fin 3)
+ have h33 : CurrentRecursionBaseProgram.TagSyntax.plug 3 (tag+2) (3 : Fin 4) = Term.numeral (tag+2) := CurrentRecursionBaseProgram.TagSyntax.plugLast 3 (tag+2)
+ have h40 : CurrentRecursionBaseProgram.TagSyntax.plug 4 (tag+offset) (0 : Fin 5) = .var 0 := CurrentRecursionBaseProgram.TagSyntax.plugCast 4 (tag+offset) (0 : Fin 4)
+ have h41 : CurrentRecursionBaseProgram.TagSyntax.plug 4 (tag+offset) (1 : Fin 5) = .var 1 := CurrentRecursionBaseProgram.TagSyntax.plugCast 4 (tag+offset) (1 : Fin 4)
+ have h42 : CurrentRecursionBaseProgram.TagSyntax.plug 4 (tag+offset) (2 : Fin 5) = .var 2 := CurrentRecursionBaseProgram.TagSyntax.plugCast 4 (tag+offset) (2 : Fin 4)
+ have h43 : CurrentRecursionBaseProgram.TagSyntax.plug 4 (tag+offset) (3 : Fin 5) = .var 3 := CurrentRecursionBaseProgram.TagSyntax.plugCast 4 (tag+offset) (3 : Fin 4)
+ have h44 : CurrentRecursionBaseProgram.TagSyntax.plug 4 (tag+offset) (4 : Fin 5) = Term.numeral (tag+offset) := CurrentRecursionBaseProgram.TagSyntax.plugLast 4 (tag+offset)
  simp only [FourPlugProof.plugged,rootTemplate,SyntaxProof.rootAt,CurrentRecursionBaseProgram.openCall,
-  substituteFormula,substitute,CurrentRecursionBaseProgram.TagSyntax.plug,liftSubstitute,
+  substituteFormula,substitute,h10,h11,h20,h21,h22,h30,h31,h32,h33,h40,h41,h42,h43,h44,
   CurrentCalculationFormulaProgram.NativeProof.substPair,CurrentCalculationFormulaProgram.NativeProof.substTuple,
   SixSol20261112.Fuel.Logic.substNumeral,← List.Vector.toList_map,List.Vector.map_cons,List.Vector.map_nil,
-  Fin.cases_zero,Fin.cases_succ,SyntaxProof.renameNumeral,call,GorbowRegistryTuple.headerTerm]
+  call,GorbowRegistryTuple.headerTerm]
  all_goals rfl
 
 theorem allRoot (tag offset : Nat) : FourPlugProof.plugged (.all rootTemplate) tag (tag+1) (tag+2) (tag+offset) =

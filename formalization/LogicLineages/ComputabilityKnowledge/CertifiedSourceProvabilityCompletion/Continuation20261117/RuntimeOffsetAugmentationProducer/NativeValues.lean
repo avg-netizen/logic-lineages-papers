@@ -20,7 +20,8 @@ theorem firstEval (tag offset value : Nat) : evaluate firstTag (tag ::ᵥ offset
  exact CurrentRecursionStepProgram.NativeEvaluation.shiftEval 2 target _
 theorem secondEval (tag offset value : Nat) : evaluate secondTag (tag ::ᵥ offset ::ᵥ value ::ᵥ nil) = tag+offset := by
  rw [secondTag,twoEval,tagEval]
- simpa only [secondOffset,evaluate,List.Vector.get_cons_succ,List.Vector.get_cons_zero,Nat.add_comm] using HistoryCodec.NativeProof.evaluateAdd tag offset
+ change evaluate HistoryCodec.add (tag ::ᵥ offset ::ᵥ nil) = tag+offset
+ simpa only [Nat.add_comm] using HistoryCodec.NativeProof.evaluateAdd tag offset
 theorem inputEval (tag offset value : Nat) : evaluate rawInput (tag ::ᵥ offset ::ᵥ value ::ᵥ nil) =
  Encodable.encode (GorbowTermPrefixCode.encode (Term.numeral value : Term 0)) := by
  rw [rawInput,oneEval]

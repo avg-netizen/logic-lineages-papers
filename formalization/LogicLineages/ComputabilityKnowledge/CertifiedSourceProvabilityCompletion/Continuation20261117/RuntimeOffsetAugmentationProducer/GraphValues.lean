@@ -51,8 +51,7 @@ theorem quoteTag {arity ctx : Nat} (p : Program arity) (K : Tags)
   (Term.numeral (Encodable.encode (GorbowTermPrefixCode.encode (Term.numeral number : Term 0)))) := by
  intro addr ht
  obtain ⟨he⟩ := unary p _ LiteralNumeralPrefix.numeralCode K.numeralTag H.hn prog (Term.numeral number) hg addr ht
- have C := CurrentCalculationFormulaProgram.codecTags K.ctag K.atag K.numeralTag
- obtain ⟨hn⟩ := PrescribedRuntimeCallCongruence.ValueTraceProof.numeral (ctx := ctx) p C H.hn number
+ obtain ⟨hn⟩ := PrescribedRuntimeCallCongruence.ValueTraceProof.numeral (ctx := ctx) p K H.hn number
  exact ⟨Logic.trans _ _ _ he hn⟩
 
 theorem tagsGraph {arity ctx : Nat} (p : Program arity) (K : Tags)

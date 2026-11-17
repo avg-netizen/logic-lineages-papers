@@ -27,7 +27,9 @@ theorem exactNative : Targets.Native := by
   · have hj : j = 0 := Fin.eq_zero j
     subst j
     simp only [NativeCalls.calls,List.Vector.get_cons_succ,List.Vector.get_cons_zero,List.Vector.get_ofFn,hoffset]
+    rfl
  have hr := SyntaxProof.actualRoot p q tag offset hoffset
+ simp only [NativeCalls.args] at hleft hmid hright hp
  unfold program
  rw [CurrentRecursionBaseProgram.TransitivityNativeProof.transitivityEval _ _ _ _ _ _ _ _ _ hleft hmid hright,hs,hp]
  rw [hr]

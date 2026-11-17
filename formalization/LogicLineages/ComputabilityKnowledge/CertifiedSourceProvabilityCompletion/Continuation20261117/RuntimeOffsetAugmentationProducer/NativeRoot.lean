@@ -32,8 +32,9 @@ theorem full (tag offset value : Nat) :
  refine Fin.cases ?_ (fun j => ?_) i
  · rfl
  · obtain ⟨n,hn⟩ := addressNumeral tag offset j
-   simp only [List.Vector.get_cons_succ,liftSubstitute,hn,GorbowHeaderSubstitutionProof.numerals,
-    SixSol20261112.Fuel.Logic.substNumeral]
+   change (SyntaxProof.addresses tag offset).get j = substitute (fun _ : Fin 1 => Term.numeral value)
+    (renameTerm Fin.succ ((SyntaxProof.addresses tag offset).get j))
+   rw [hn,SyntaxProof.renameNumeral,SixSol20261112.Fuel.Logic.substNumeral]
 
 theorem rootSeedEval (tag offset value : Nat) :
  evaluate rootSeed (tag ::ᵥ offset ::ᵥ value ::ᵥ nil) =
@@ -66,7 +67,7 @@ theorem rootSeedEval (tag offset value : Nat) :
   rfl
  simp only [PrescribedRuntimeSpecialization.produce,he,SixSol20261112.Fuel.Logic.formulaIdentity,
   PrescribedSourceAxiomSpecialization.seed,GorbowStandardInduction.universalClosure]
- rfl
+ all_goals rfl
 
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.RuntimeOffsetAugmentationProducer.NativeRoot
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.RuntimeOffsetAugmentationProducer.NativeRoot
