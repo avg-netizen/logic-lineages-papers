@@ -1,0 +1,84 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCodeDomainRankedArgumentsPreservation.Auxiliary.WeightedAgreementDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationResultFoldTotalitySyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientComparisonSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedDecoderInternalLogicSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryUncoveredCount.CompareSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextInsertionSyntaxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCodeDomainRankedArgumentsPreservation.Auxiliary.WeightedAgreementSyntaxProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalApplicationCertificateConstructors
+open SourceComputabilityFormulaSupportProof InternalControlGraphSupportProof
+open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
+open InternalRawListRecursionSyntaxProof InternalGraphCompositionSyntaxProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open InternalBinderTransportProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
+open InternalAdditionLawsProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open WeightedAgreement
+open InternalQuotientComparisonSyntaxProof InternalOriginalOrderSyntaxProof
+open OriginalTypedDecoderInternalLogicSyntaxProof (equalSubst orSubst)
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114
+open PrimaryUncoveredCount.CompareSyntaxProof (boundedSubst)
+open InternalStrongInduction
+open OriginalContextInsertionSyntaxProof (lengthSubst)
+
+open Continuation20261115.OriginalArgumentPermutationClosure.CountAgreementSyntaxProof
+attribute [local irreducible] programGraph
+
+theorem fieldsSubst {alpha beta : Type} (weight : Program 1) (left right ls rs : OTerm alpha) (ts : alpha → OTerm beta) :
+    (fields weight left right ls rs).subst (fun a => emb (ts a)) =
+      fields weight (left.subst ts) (right.subst ts) (ls.subst ts) (rs.subst ts) := by
+  simp only [fields,conjunctionSubst,agreementSubst,graph1,programSubst,consTermSubst,emptySubst]
+@[simp] theorem fieldsRename {alpha beta : Type} (weight : Program 1) (left right ls rs : OTerm alpha) (j : alpha → beta) :
+    (fields weight left right ls rs).relabel j = fields weight (left.relabel j) (right.relabel j) (ls.relabel j) (rs.relabel j) := by
+  rw [formulaRelabelAsSubst]
+  change (fields weight left right ls rs).subst (fun a => emb (.var (j a))) = _
+  rw [fieldsSubst]
+  simp only [← termRelabelAsSubst]
+
+theorem atRawSubst {alpha beta : Type} (weight : Program 1) (raw : OTerm alpha) (ts : alpha → OTerm beta) :
+    (AtRaw weight raw).subst (fun a => emb (ts a)) = AtRaw weight (raw.subst ts) := by
+  unfold AtRaw matrix
+  rw [allBlockSubst,liftedEmbedding]
+  simp only [impSubst,fieldsSubst,eqnSubst,liftSubst,Term.subst,Sum.elim_inr]
+@[simp] theorem atRawRename {alpha beta : Type} (weight : Program 1) (raw : OTerm alpha) (j : alpha → beta) :
+    (AtRaw weight raw).relabel j = AtRaw weight (raw.relabel j) := by
+  rw [formulaRelabelAsSubst]
+  change (AtRaw weight raw).subst (fun a => emb (.var (j a))) = _
+  rw [atRawSubst]
+  simp only [← termRelabelAsSubst]
+
+theorem matrixWitness {alpha : Type} (weight : Program 1) (left right ls rs : OTerm alpha) :
+    (matrix weight left).subst (Sum.elim Term.var (fun i => emb (![right,ls,rs] i))) =
+      (fields weight left right ls rs).imp (eqn ls rs) := by
+  have he : (Sum.elim Term.var (fun i => emb (![right,ls,rs] i))) =
+      (fun a => emb (Sum.elim Term.var ![right,ls,rs] a)) := by
+    funext a; cases a <;> rfl
+  unfold matrix
+  rw [he]
+  simp only [impSubst,fieldsSubst,eqnSubst,witnessLift,Term.subst,Sum.elim_inr]
+  rfl
+theorem predicateInstantiate {alpha : Type} (weight : Program 1) (raw : OTerm alpha) :
+    instantiate (predicate weight) (emb raw) = AtRaw weight raw := by
+  rw [predicate,instantiate,bindEmbedding,atRawSubst]
+  simp only [varBind]
+
+@[simp] theorem belowRawRename {alpha beta : Type} (weight : Program 1) (raw : OTerm alpha) (j : alpha → beta) :
+    (BelowRaw weight raw).relabel j = BelowRaw weight (raw.relabel j) := by
+  unfold BelowRaw
+  rw [InternalStrongInductionSyntaxProof.belowRename]
+  unfold predicate
+  rw [atRawRename]
+  rfl
+
+theorem predicateLift {alpha : Type} (weight : Program 1) :
+    lift (predicate (alpha := alpha) weight) = predicate (alpha := alpha ⊕ Fin 1) weight := by
+  unfold lift predicate
+  rw [atRawRename]
+  rfl
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCodeDomainRankedArgumentsPreservation.Auxiliary.WeightedAgreementSyntaxProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCodeDomainRankedArgumentsPreservation.Auxiliary.WeightedAgreementSyntaxProof
