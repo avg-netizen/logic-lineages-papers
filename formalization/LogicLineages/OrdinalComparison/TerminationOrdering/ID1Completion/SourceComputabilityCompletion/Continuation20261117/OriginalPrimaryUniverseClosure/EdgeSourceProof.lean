@@ -34,21 +34,21 @@ theorem fromSource (n : Nat) (arity : Fin n → Nat)
   intro beta j Theta sourceType sourceRaw hj hpair
   rw [acceptedRename]
   have hp' := renameInto hp j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at hp'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at hp'
   have had' := renameInto had j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at had'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at had'
   have hpool' := renameInto hpool j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at hpool'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at hpool'
   have hu' := renameInto hu j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at hu'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at hu'
   have ht' := renameInto ht j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at ht'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at ht'
   have hm' := renameInto hm j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at hm'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at hm'
   have hsource' := renameInto hsource j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at hsource'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at hsource'
   have hedge' := renameInto hedge j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at hedge'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at hedge'
   have hs := InvariantProof.eliminate n arity (reached.relabel j) (source.relabel j)
     sourceType sourceRaw (gamma.relabel j) (context.relabel j) hu' hsource' hpair
   exact OriginalInstalledFilteredEdgeUniverse.Proof.atSource n arity

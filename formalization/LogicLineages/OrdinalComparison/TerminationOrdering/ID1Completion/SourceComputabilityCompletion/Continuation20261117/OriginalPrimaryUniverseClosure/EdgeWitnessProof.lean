@@ -33,17 +33,17 @@ theorem fromWitness (n : Nat) (arity : Fin n → Nat)
   intro beta j Theta source hj hsource hedge
   rw [acceptedRename]
   have hp' := renameInto hp j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at hp'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at hp'
   have had' := renameInto had j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at had'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at had'
   have hpool' := renameInto hpool j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at hpool'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at hpool'
   have hu' := renameInto hu j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at hu'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at hu'
   have ht' := renameInto ht j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at ht'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at ht'
   have hm' := renameInto hm j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at hm'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at hm'
   exact EdgeSourceProof.fromSource n arity (seed.relabel j) (parameter.relabel j)
     (pool.relabel j) (reached.relabel j) source (candidate.relabel j)
     (targetType.relabel j) (targetRaw.relabel j) (context.relabel j) (gamma.relabel j)

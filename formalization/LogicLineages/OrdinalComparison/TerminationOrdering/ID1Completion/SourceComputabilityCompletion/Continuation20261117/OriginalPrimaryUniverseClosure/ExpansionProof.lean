@@ -16,6 +16,7 @@ open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
 open InternalApplicationCertificateConstructorsSyntaxProof
 open InternalTagArithmeticSyntaxProof (sucRelabel zRelabel)
 open SyntaxProof
+open InternalBetaTotalityProof InternalQuotientComparisonProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 attribute [local irreducible] programGraph
 
@@ -30,15 +31,15 @@ theorem preserved (n : Nat) (arity : Fin n → Nat)
   apply InvariantProof.introduce n arity out gamma context
   intro beta j Theta candidate targetType targetRaw hj hm ht
   have hp' := renameInto hp j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at hp'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at hp'
   have had' := renameInto had j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at had'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at had'
   have hpool' := renameInto hpool j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at hpool'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at hpool'
   have he' := renameInto he j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at he'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at he'
   have hu' := renameInto hu j Theta hj
-  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename,PrimaryExpansionSoundness.WitnessProof.witnessRename] at hu'
+  simp only [graph2Rename,graph3Rename,GuardedSourceSyntaxProof.numeralRename,allAcceptedRename,acceptedRename] at hu'
   obtain ⟨hd⟩ := PrimaryExpansionSoundness.Proof.expansionSoundness (OriginalConcreteStructuralEdge.edge n arity)
     (pool.relabel j) (reached.relabel j) (parameter.relabel j) (out.relabel j) candidate he' hm
   let A := graph2 TwoSol20261113.CalibratedPrimary.Membership.contains (numeral 1) (reached.relabel j) candidate

@@ -1,0 +1,212 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryUniverseClosure.IterationSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryUniverseClosure.InvariantProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryUniverseClosure.ExpansionProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryIteration.RecursionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryUniverseClosure.IterationProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors SourceComputabilityFormulaSupportProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Continuation20261114 Continuation20261115 Continuation20261116
+
+open InternalApplicationCertificateConstructorsSyntaxProof InternalApplicationCertificateConstructorsSupportProof
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof InternalGraphCompositionFunctionalityProof
+open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof InternalTagArithmeticSupportProof
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalClosedPrograms InternalClosedProgramsBindingProof
+open InternalBetaTotalityProof InternalQuotientComparisonProof
+open Iteration IterationSyntaxProof SyntaxProof
+open TwoSol20261113.CalibratedPrimary.Membership (contains)
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+theorem rowApply (n : Nat) (arity : Fin n → Nat)
+    (count pool reached parameter out context gamma : OrdinaryArithmetic.Term alpha)
+    (hrow : Nonempty (Derivation body Delta (AtCount n arity count pool reached parameter gamma context)))
+    (hi : Nonempty (Derivation body Delta
+      (graph4 (PrimaryIteration.iterate (OriginalConcreteStructuralEdge.edge n arity)) out count pool reached parameter)))
+    (hu : Nonempty (Derivation body Delta (allAccepted n arity reached gamma context))) :
+    Nonempty (Derivation body Delta (allAccepted n arity out gamma context)) := by
+  obtain ⟨h⟩ := elimination body alpha 1 Delta (matrix n arity count pool reached parameter gamma context)
+    (fun _ => emb out) hrow
+  rw [matrixWitness] at h
+  obtain ⟨hi⟩ := hi
+  obtain ⟨hu⟩ := hu
+  exact ⟨Derivation.implicationElimination (Derivation.implicationElimination h hi) hu⟩
+
+theorem zeroCore (n : Nat) (arity : Fin n → Nat)
+    (pool reached parameter out context gamma : OrdinaryArithmetic.Term alpha)
+    (hi : Nonempty (Derivation body Delta
+      (graph4 (PrimaryIteration.iterate (OriginalConcreteStructuralEdge.edge n arity)) out z pool reached parameter)))
+    (hu : Nonempty (Derivation body Delta (allAccepted n arity reached gamma context))) :
+    Nonempty (Derivation body Delta (allAccepted n arity out gamma context)) := by
+  have he := valueUnique (PrimaryIteration.iterate (OriginalConcreteStructuralEdge.edge n arity))
+    out reached ![z,pool,reached,parameter] hi
+    (PrimaryIteration.RecursionProof.zeroValue (OriginalConcreteStructuralEdge.edge n arity) pool reached parameter)
+  apply InvariantProof.introduce n arity out gamma context
+  intro beta j Theta candidate typ raw hj hm hp
+  have he' := renameInto he j Theta hj
+  rw [eqnRelabel] at he'
+  have hu' := renameInto hu j Theta hj
+  rw [allAcceptedRename] at hu'
+  have hm' := headTransport contains (numeral 1) (out.relabel j) (reached.relabel j)
+    (Fin.cons candidate Fin.elim0) he' hm
+  exact InvariantProof.eliminate n arity (reached.relabel j) candidate typ raw
+    (gamma.relabel j) (context.relabel j) hu' hm' hp
+
+theorem successorCore (n : Nat) (arity : Fin n → Nat)
+    (count seed parameter pool reached out context gamma : OrdinaryArithmetic.Term alpha)
+    (hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing parameter context gamma)))
+    (had : Nonempty (Derivation body Delta
+      (graph2 (OriginalTypedDecoder.target (OriginalConcreteHeadSignature.signature n arity)
+        (OriginalDecodedContextValidity.contextGuard n)) (numeral 1) seed parameter)))
+    (hpool : Nonempty (Derivation body Delta
+      (graph2 (SeededPrimaryPool.pool (OriginalTypedDecoder.target (OriginalConcreteHeadSignature.signature n arity)
+        (OriginalDecodedContextValidity.contextGuard n))
+        (OriginalCandidates.candidates n arity (OriginalConcreteHeadSignature.signature n arity))) pool seed parameter)))
+    (hrow : Nonempty (Derivation body Delta (AtCount n arity count pool reached parameter gamma context)))
+    (hi : Nonempty (Derivation body Delta
+      (graph4 (PrimaryIteration.iterate (OriginalConcreteStructuralEdge.edge n arity)) out (suc count) pool reached parameter)))
+    (hu : Nonempty (Derivation body Delta (allAccepted n arity reached gamma context))) :
+    Nonempty (Derivation body Delta (allAccepted n arity out gamma context)) := by
+  let E := OriginalConcreteStructuralEdge.edge n arity
+  apply programCases (PrimaryIteration.iterate E) ![count,pool,reached,parameter] _
+  intro beta j Theta previous hj hr
+  rw [allAcceptedRename]
+  have hx : (fun i => (![count,pool,reached,parameter] i).relabel j) =
+      ![count.relabel j,pool.relabel j,reached.relabel j,parameter.relabel j] := by
+    funext i; fin_cases i <;> rfl
+  rw [hx] at hr
+  have hp' := renameInto hp j Theta hj
+  rw [graph2Rename] at hp'
+  have had' := renameInto had j Theta hj
+  simp only [graph2Rename,GuardedSourceSyntaxProof.numeralRename] at had'
+  have hpool' := renameInto hpool j Theta hj
+  rw [graph2Rename] at hpool'
+  have hrow' := renameInto hrow j Theta hj
+  rw [atCountRename] at hrow'
+  have hi' := renameInto hi j Theta hj
+  simp only [graph4Rename,sucRelabel] at hi'
+  have hu' := renameInto hu j Theta hj
+  rw [allAcceptedRename] at hu'
+  have hexpand := PrimaryIteration.RecursionProof.successorRecover E (count.relabel j) previous
+    (out.relabel j) (pool.relabel j) (reached.relabel j) (parameter.relabel j) hr hi'
+  have hprevious := rowApply n arity (count.relabel j) (pool.relabel j) (reached.relabel j)
+    (parameter.relabel j) previous (context.relabel j) (gamma.relabel j) hrow' hr hu'
+  exact ExpansionProof.preserved n arity (seed.relabel j) (parameter.relabel j) (pool.relabel j)
+    previous (out.relabel j) (context.relabel j) (gamma.relabel j) hp' had' hpool' hexpand hprevious
+
+theorem rowZero (n : Nat) (arity : Fin n → Nat)
+    (pool reached parameter context gamma : OrdinaryArithmetic.Term alpha) :
+    Nonempty (Derivation body Delta (AtCount n arity z pool reached parameter gamma context)) := by
+  apply introduction body alpha 1 Delta
+  let out : OrdinaryArithmetic.Term (alpha ⊕ Fin 1) := .var (.inr 0)
+  let A := graph4 (PrimaryIteration.iterate (OriginalConcreteStructuralEdge.edge n arity))
+    out z (pool.relabel Sum.inl) (reached.relabel Sum.inl) (parameter.relabel Sum.inl)
+  let B := allAccepted n arity (reached.relabel Sum.inl) (gamma.relabel Sum.inl) (context.relabel Sum.inl)
+  obtain ⟨h⟩ := zeroCore (body := body)
+    (Delta := B :: A :: Delta.map (fun p => p.relabel Sum.inl)) n arity
+    (pool.relabel Sum.inl) (reached.relabel Sum.inl) (parameter.relabel Sum.inl) out
+    (context.relabel Sum.inl) (gamma.relabel Sum.inl)
+    ⟨Derivation.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)⟩
+    ⟨Derivation.hypothesis List.mem_cons_self⟩
+  simpa only [matrix,zRelabel] using
+    Nonempty.intro (Derivation.implicationIntroduction (Derivation.implicationIntroduction h))
+
+theorem rowSuccessor (n : Nat) (arity : Fin n → Nat)
+    (count seed parameter pool reached context gamma : OrdinaryArithmetic.Term alpha)
+    (hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing parameter context gamma)))
+    (had : Nonempty (Derivation body Delta
+      (graph2 (OriginalTypedDecoder.target (OriginalConcreteHeadSignature.signature n arity)
+        (OriginalDecodedContextValidity.contextGuard n)) (numeral 1) seed parameter)))
+    (hpool : Nonempty (Derivation body Delta
+      (graph2 (SeededPrimaryPool.pool (OriginalTypedDecoder.target (OriginalConcreteHeadSignature.signature n arity)
+        (OriginalDecodedContextValidity.contextGuard n))
+        (OriginalCandidates.candidates n arity (OriginalConcreteHeadSignature.signature n arity))) pool seed parameter)))
+    (hrow : Nonempty (Derivation body Delta (AtCount n arity count pool reached parameter gamma context))) :
+    Nonempty (Derivation body Delta (AtCount n arity (suc count) pool reached parameter gamma context)) := by
+  apply introduction body alpha 1 Delta
+  let out : OrdinaryArithmetic.Term (alpha ⊕ Fin 1) := .var (.inr 0)
+  let D := Delta.map (fun p => p.relabel (Sum.inl : alpha → alpha ⊕ Fin 1))
+  have hj : ∀ p ∈ Delta, p.relabel (Sum.inl : alpha → alpha ⊕ Fin 1) ∈ D := by
+    intro p hp; exact List.mem_map.mpr ⟨p,hp,rfl⟩
+  let A := graph4 (PrimaryIteration.iterate (OriginalConcreteStructuralEdge.edge n arity))
+    out (suc (count.relabel Sum.inl)) (pool.relabel Sum.inl)
+    (reached.relabel Sum.inl) (parameter.relabel Sum.inl)
+  let B := allAccepted n arity (reached.relabel Sum.inl) (gamma.relabel Sum.inl) (context.relabel Sum.inl)
+  have hp' := renameInto hp Sum.inl D hj
+  rw [graph2Rename] at hp'
+  have had' := renameInto had Sum.inl D hj
+  simp only [graph2Rename,GuardedSourceSyntaxProof.numeralRename] at had'
+  have hpool' := renameInto hpool Sum.inl D hj
+  rw [graph2Rename] at hpool'
+  have hrow' := renameInto hrow Sum.inl D hj
+  rw [atCountRename] at hrow'
+  obtain ⟨h⟩ := successorCore n arity (count.relabel Sum.inl) (seed.relabel Sum.inl)
+    (parameter.relabel Sum.inl) (pool.relabel Sum.inl) (reached.relabel Sum.inl) out
+    (context.relabel Sum.inl) (gamma.relabel Sum.inl)
+    (withHyp (withHyp hp' A) B) (withHyp (withHyp had' A) B)
+    (withHyp (withHyp hpool' A) B) (withHyp (withHyp hrow' A) B)
+    ⟨Derivation.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)⟩
+    ⟨Derivation.hypothesis List.mem_cons_self⟩
+  simpa only [matrix,sucRelabel] using
+    Nonempty.intro (Derivation.implicationIntroduction (Derivation.implicationIntroduction h))
+
+theorem allCounts (n : Nat) (arity : Fin n → Nat)
+    (count seed parameter pool reached context gamma : OrdinaryArithmetic.Term alpha)
+    (hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing parameter context gamma)))
+    (had : Nonempty (Derivation body Delta
+      (graph2 (OriginalTypedDecoder.target (OriginalConcreteHeadSignature.signature n arity)
+        (OriginalDecodedContextValidity.contextGuard n)) (numeral 1) seed parameter)))
+    (hpool : Nonempty (Derivation body Delta
+      (graph2 (SeededPrimaryPool.pool (OriginalTypedDecoder.target (OriginalConcreteHeadSignature.signature n arity)
+        (OriginalDecodedContextValidity.contextGuard n))
+        (OriginalCandidates.candidates n arity (OriginalConcreteHeadSignature.signature n arity))) pool seed parameter))) :
+    Nonempty (Derivation body Delta (AtCount n arity count pool reached parameter gamma context)) := by
+  let k : OrdinaryArithmetic.Term (alpha ⊕ Fin 1) := .var (.inr 0)
+  let theta := AtCount n arity k (pool.relabel Sum.inl) (reached.relabel Sum.inl)
+    (parameter.relabel Sum.inl) (gamma.relabel Sum.inl) (context.relabel Sum.inl)
+  have hz : Nonempty (Derivation body Delta (instantiate theta (emb z))) := by
+    simpa only [theta,k,instantiate,bindEmbedding,atCountSubst,varBind,liftBind] using
+      (rowZero (body := body) (Delta := Delta) n arity pool reached parameter context gamma)
+  have hs : Nonempty (Derivation body (theta :: Delta.map weaken) (successorInstance theta)) := by
+    let D := theta :: Delta.map weaken
+    have hj : ∀ p ∈ Delta, p.relabel (Sum.inl : alpha → alpha ⊕ Fin 1) ∈ D := by
+      intro p hp; exact List.mem_cons_of_mem _ (List.mem_map.mpr ⟨p,hp,rfl⟩)
+    have hp' := renameInto hp Sum.inl D hj
+    rw [graph2Rename] at hp'
+    have had' := renameInto had Sum.inl D hj
+    simp only [graph2Rename,GuardedSourceSyntaxProof.numeralRename] at had'
+    have hpool' := renameInto hpool Sum.inl D hj
+    rw [graph2Rename] at hpool'
+    have h := rowSuccessor n arity k (seed.relabel Sum.inl) (parameter.relabel Sum.inl)
+      (pool.relabel Sum.inl) (reached.relabel Sum.inl) (context.relabel Sum.inl)
+      (gamma.relabel Sum.inl) hp' had' hpool' ⟨Derivation.hypothesis List.mem_cons_self⟩
+    simpa only [theta,k,successorInstance,nextEmbedding,atCountSubst,nextTerm,
+      Term.subst,Sum.elim_inr,nextLift] using h
+  obtain ⟨hz⟩ := hz
+  obtain ⟨hs⟩ := hs
+  have h := Derivation.universalElimination (emb count) (natInduction theta hz hs)
+  simpa only [theta,k,instantiate,bindEmbedding,atCountSubst,varBind,liftBind] using Nonempty.intro h
+
+theorem preserved (n : Nat) (arity : Fin n → Nat)
+    (count seed parameter pool reached out context gamma : OrdinaryArithmetic.Term alpha)
+    (hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing parameter context gamma)))
+    (had : Nonempty (Derivation body Delta
+      (graph2 (OriginalTypedDecoder.target (OriginalConcreteHeadSignature.signature n arity)
+        (OriginalDecodedContextValidity.contextGuard n)) (numeral 1) seed parameter)))
+    (hpool : Nonempty (Derivation body Delta
+      (graph2 (SeededPrimaryPool.pool (OriginalTypedDecoder.target (OriginalConcreteHeadSignature.signature n arity)
+        (OriginalDecodedContextValidity.contextGuard n))
+        (OriginalCandidates.candidates n arity (OriginalConcreteHeadSignature.signature n arity))) pool seed parameter)))
+    (hi : Nonempty (Derivation body Delta
+      (graph4 (PrimaryIteration.iterate (OriginalConcreteStructuralEdge.edge n arity)) out count pool reached parameter)))
+    (hu : Nonempty (Derivation body Delta (allAccepted n arity reached gamma context))) :
+    Nonempty (Derivation body Delta (allAccepted n arity out gamma context)) :=
+  rowApply n arity count pool reached parameter out context gamma
+    (allCounts n arity count seed parameter pool reached context gamma hp had hpool) hi hu
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryUniverseClosure.IterationProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryUniverseClosure.IterationProof

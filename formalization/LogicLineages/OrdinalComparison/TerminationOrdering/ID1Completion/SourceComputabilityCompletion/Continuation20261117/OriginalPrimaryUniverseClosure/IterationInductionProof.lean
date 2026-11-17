@@ -1,0 +1,61 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryUniverseClosure.IterationRowsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryUniverseClosure.IterationProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors SourceComputabilityFormulaSupportProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Continuation20261114 Continuation20261115 Continuation20261116
+
+open InternalApplicationCertificateConstructorsSyntaxProof InternalApplicationCertificateConstructorsSupportProof
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof InternalGraphCompositionFunctionalityProof
+open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof InternalTagArithmeticSupportProof
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalClosedPrograms InternalClosedProgramsBindingProof
+open InternalBetaTotalityProof InternalQuotientComparisonProof
+open Iteration IterationSyntaxProof SyntaxProof
+open TwoSol20261113.CalibratedPrimary.Membership (contains)
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+theorem allCounts (n : Nat) (arity : Fin n → Nat)
+    (count seed parameter pool reached context gamma : OrdinaryArithmetic.Term alpha)
+    (hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing parameter context gamma)))
+    (had : Nonempty (Derivation body Delta
+      (graph2 (OriginalTypedDecoder.target (OriginalConcreteHeadSignature.signature n arity)
+        (OriginalDecodedContextValidity.contextGuard n)) (numeral 1) seed parameter)))
+    (hpool : Nonempty (Derivation body Delta
+      (graph2 (SeededPrimaryPool.pool (OriginalTypedDecoder.target (OriginalConcreteHeadSignature.signature n arity)
+        (OriginalDecodedContextValidity.contextGuard n))
+        (OriginalCandidates.candidates n arity (OriginalConcreteHeadSignature.signature n arity))) pool seed parameter))) :
+    Nonempty (Derivation body Delta (AtCount n arity count pool reached parameter gamma context)) := by
+  let k : OrdinaryArithmetic.Term (alpha ⊕ Fin 1) := .var (.inr 0)
+  let theta := AtCount n arity k (pool.relabel Sum.inl) (reached.relabel Sum.inl)
+    (parameter.relabel Sum.inl) (gamma.relabel Sum.inl) (context.relabel Sum.inl)
+  have hz : Nonempty (Derivation body Delta (instantiate theta (emb z))) := by
+    simpa only [theta,k,instantiate,bindEmbedding,atCountSubst,varBind,liftBind] using
+      (rowZero (body := body) (Delta := Delta) n arity pool reached parameter context gamma)
+  have hs : Nonempty (Derivation body (theta :: Delta.map weaken) (successorInstance theta)) := by
+    let D := theta :: Delta.map weaken
+    have hj : ∀ p ∈ Delta, p.relabel (Sum.inl : alpha → alpha ⊕ Fin 1) ∈ D := by
+      intro p hp; exact List.mem_cons_of_mem _ (List.mem_map.mpr ⟨p,hp,rfl⟩)
+    have hp' := renameInto hp Sum.inl D hj
+    rw [graph2Rename] at hp'
+    have had' := renameInto had Sum.inl D hj
+    simp only [graph2Rename,GuardedSourceSyntaxProof.numeralRename] at had'
+    have hpool' := renameInto hpool Sum.inl D hj
+    rw [graph2Rename] at hpool'
+    have h := rowSuccessor n arity k (seed.relabel Sum.inl) (parameter.relabel Sum.inl)
+      (pool.relabel Sum.inl) (reached.relabel Sum.inl) (context.relabel Sum.inl)
+      (gamma.relabel Sum.inl) hp' had' hpool' ⟨Derivation.hypothesis List.mem_cons_self⟩
+    simpa only [theta,k,successorInstance,nextEmbedding,atCountSubst,nextTerm,
+      Term.subst,Sum.elim_inr,nextLift] using h
+  obtain ⟨hz⟩ := hz
+  obtain ⟨hs⟩ := hs
+  have h := Derivation.universalElimination (emb count) (natInduction theta hz hs)
+  simpa only [theta,k,instantiate,bindEmbedding,atCountSubst,varBind,liftBind] using Nonempty.intro h
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryUniverseClosure.IterationProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryUniverseClosure.IterationProof

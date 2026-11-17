@@ -2331,3 +2331,6 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 
 -- Actual installed filtered one-edge universe caller, not iteration closure.
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalInstalledFilteredEdgeUniverse.StatementChecks
+
+-- Actual original primary output universe closure, with internal count induction.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryUniverseClosure.StatementChecks

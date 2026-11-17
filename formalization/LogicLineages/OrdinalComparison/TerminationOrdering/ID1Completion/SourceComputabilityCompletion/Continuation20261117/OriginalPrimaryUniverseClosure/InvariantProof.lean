@@ -4,7 +4,6 @@ public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryUniverseClosure.InvariantProof
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
-open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
 open SourceComputabilityFormulaSupportProof InternalControlGraphSupportProof
 open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
@@ -23,7 +22,7 @@ open SyntaxProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 
 theorem eliminate (n : Nat) (arity : Fin n → Nat)
-    (reached candidate typ raw gamma context : OTerm alpha)
+    (reached candidate typ raw gamma context : OrdinaryArithmetic.Term alpha)
     (hi : Nonempty (Derivation body Delta (allAccepted n arity reached gamma context)))
     (hm : Nonempty (Derivation body Delta (graph2 contains (numeral 1) reached candidate)))
     (hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing candidate typ raw))) :
@@ -34,9 +33,9 @@ theorem eliminate (n : Nat) (arity : Fin n → Nat)
   exact ⟨Derivation.implicationElimination h ha⟩
 
 theorem introduce (n : Nat) (arity : Fin n → Nat)
-    (reached gamma context : OTerm alpha)
+    (reached gamma context : OrdinaryArithmetic.Term alpha)
     (next : ∀ (beta : Type) (j : alpha → beta) (Theta : List (Formula beta))
-      (candidate typ raw : OTerm beta),
+      (candidate typ raw : OrdinaryArithmetic.Term beta),
       (∀ q ∈ Delta, q.relabel j ∈ Theta) →
       Nonempty (Derivation body Theta
         (graph2 contains (numeral 1) (reached.relabel j) candidate)) →
@@ -45,9 +44,9 @@ theorem introduce (n : Nat) (arity : Fin n → Nat)
         (accepted n arity typ raw (gamma.relabel j) (context.relabel j)))) :
     Nonempty (Derivation body Delta (allAccepted n arity reached gamma context)) := by
   apply introduction body alpha 3 Delta
-  let candidate : OTerm (alpha ⊕ Fin 3) := .var (.inr 0)
-  let typ : OTerm (alpha ⊕ Fin 3) := .var (.inr 1)
-  let raw : OTerm (alpha ⊕ Fin 3) := .var (.inr 2)
+  let candidate : OrdinaryArithmetic.Term (alpha ⊕ Fin 3) := .var (.inr 0)
+  let typ : OrdinaryArithmetic.Term (alpha ⊕ Fin 3) := .var (.inr 1)
+  let raw : OrdinaryArithmetic.Term (alpha ⊕ Fin 3) := .var (.inr 2)
   let A := graph2 contains (numeral 1) (reached.relabel Sum.inl) candidate ⊓
     graph2 InternalPairing.pairing candidate typ raw
   obtain ⟨h⟩ := next (alpha ⊕ Fin 3) Sum.inl

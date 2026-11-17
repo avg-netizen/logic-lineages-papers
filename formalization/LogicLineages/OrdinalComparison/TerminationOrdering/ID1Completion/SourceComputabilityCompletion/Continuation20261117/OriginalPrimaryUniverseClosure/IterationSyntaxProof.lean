@@ -20,7 +20,7 @@ open InternalRawListRecursionSyntaxProof InternalGraphCompositionSyntaxProof
 open Iteration SyntaxProof
 
 theorem atCountSubst {alpha beta : Type} (n : Nat) (arity : Fin n → Nat)
-    (count pool reached parameter gamma context : OTerm alpha) (ts : alpha → OTerm beta) :
+    (count pool reached parameter gamma context : OrdinaryArithmetic.Term alpha) (ts : alpha → OrdinaryArithmetic.Term beta) :
     (AtCount n arity count pool reached parameter gamma context).subst (fun a => emb (ts a)) =
       AtCount n arity (count.subst ts) (pool.subst ts) (reached.subst ts)
         (parameter.subst ts) (gamma.subst ts) (context.subst ts) := by
@@ -30,7 +30,7 @@ theorem atCountSubst {alpha beta : Type} (n : Nat) (arity : Fin n → Nat)
     liftSubst,Term.subst,Sum.elim_inr]
 
 @[simp] theorem atCountRename {alpha beta : Type} (n : Nat) (arity : Fin n → Nat)
-    (count pool reached parameter gamma context : OTerm alpha) (j : alpha → beta) :
+    (count pool reached parameter gamma context : OrdinaryArithmetic.Term alpha) (j : alpha → beta) :
     (AtCount n arity count pool reached parameter gamma context).relabel j =
       AtCount n arity (count.relabel j) (pool.relabel j) (reached.relabel j)
         (parameter.relabel j) (gamma.relabel j) (context.relabel j) := by
@@ -40,7 +40,7 @@ theorem atCountSubst {alpha beta : Type} (n : Nat) (arity : Fin n → Nat)
   simp only [← termRelabelAsSubst]
 
 theorem matrixWitness {alpha : Type} (n : Nat) (arity : Fin n → Nat)
-    (count pool reached parameter gamma context out : OTerm alpha) :
+    (count pool reached parameter gamma context out : OrdinaryArithmetic.Term alpha) :
     (matrix n arity count pool reached parameter gamma context).subst
       (Sum.elim Term.var (fun _ : Fin 1 => emb out)) =
       (graph4 (PrimaryIteration.iterate (OriginalConcreteStructuralEdge.edge n arity))

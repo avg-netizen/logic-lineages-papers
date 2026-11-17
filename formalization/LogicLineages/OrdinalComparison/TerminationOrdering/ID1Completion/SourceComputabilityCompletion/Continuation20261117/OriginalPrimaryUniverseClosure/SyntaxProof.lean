@@ -6,7 +6,6 @@ public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryUniverseClosure.SyntaxProof
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
-open InternalGraphComposition (OTerm)
 open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
 open SourceComputabilityFormulaSupportProof InternalControlGraphSupportProof
 open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
@@ -22,19 +21,19 @@ open TwoSol20261113.CalibratedPrimary.Membership
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 
 theorem acceptedSubst {alpha beta : Type} (n : Nat) (arity : Fin n → Nat)
-    (typ raw gamma context : OTerm alpha) (ts : alpha → OTerm beta) :
+    (typ raw gamma context : OrdinaryArithmetic.Term alpha) (ts : alpha → OrdinaryArithmetic.Term beta) :
     (accepted n arity typ raw gamma context).subst (fun a => emb (ts a)) =
       accepted n arity (typ.subst ts) (raw.subst ts) (gamma.subst ts) (context.subst ts) := by
   exact OriginalUniverseDecoderTransportSyntaxProof.acceptedSubst _ _ _ false typ raw gamma context ts
 
 @[simp] theorem acceptedRename {alpha beta : Type} (n : Nat) (arity : Fin n → Nat)
-    (typ raw gamma context : OTerm alpha) (j : alpha → beta) :
+    (typ raw gamma context : OrdinaryArithmetic.Term alpha) (j : alpha → beta) :
     (accepted n arity typ raw gamma context).relabel j =
       accepted n arity (typ.relabel j) (raw.relabel j) (gamma.relabel j) (context.relabel j) := by
   exact OriginalUniverseDecoderTransportSyntaxProof.acceptedRename _ _ _ false typ raw gamma context j
 
 theorem memberAcceptedSubst {alpha beta : Type} (n : Nat) (arity : Fin n → Nat)
-    (reached candidate typ raw gamma context : OTerm alpha) (ts : alpha → OTerm beta) :
+    (reached candidate typ raw gamma context : OrdinaryArithmetic.Term alpha) (ts : alpha → OrdinaryArithmetic.Term beta) :
     (memberAccepted n arity reached candidate typ raw gamma context).subst (fun a => emb (ts a)) =
       memberAccepted n arity (reached.subst ts) (candidate.subst ts) (typ.subst ts)
         (raw.subst ts) (gamma.subst ts) (context.subst ts) := by
@@ -43,7 +42,7 @@ theorem memberAcceptedSubst {alpha beta : Type} (n : Nat) (arity : Fin n → Nat
     numeral,zSubst,sucSubst,consTermSubst,emptySubst]
 
 @[simp] theorem memberAcceptedRename {alpha beta : Type} (n : Nat) (arity : Fin n → Nat)
-    (reached candidate typ raw gamma context : OTerm alpha) (j : alpha → beta) :
+    (reached candidate typ raw gamma context : OrdinaryArithmetic.Term alpha) (j : alpha → beta) :
     (memberAccepted n arity reached candidate typ raw gamma context).relabel j =
       memberAccepted n arity (reached.relabel j) (candidate.relabel j) (typ.relabel j)
         (raw.relabel j) (gamma.relabel j) (context.relabel j) := by
@@ -54,7 +53,7 @@ theorem memberAcceptedSubst {alpha beta : Type} (n : Nat) (arity : Fin n → Nat
   simp only [← termRelabelAsSubst]
 
 theorem allAcceptedSubst {alpha beta : Type} (n : Nat) (arity : Fin n → Nat)
-    (reached gamma context : OTerm alpha) (ts : alpha → OTerm beta) :
+    (reached gamma context : OrdinaryArithmetic.Term alpha) (ts : alpha → OrdinaryArithmetic.Term beta) :
     (allAccepted n arity reached gamma context).subst (fun a => emb (ts a)) =
       allAccepted n arity (reached.subst ts) (gamma.subst ts) (context.subst ts) := by
   unfold allAccepted
@@ -62,7 +61,7 @@ theorem allAcceptedSubst {alpha beta : Type} (n : Nat) (arity : Fin n → Nat)
   simp only [memberAcceptedSubst,liftSubst,Term.subst,Sum.elim_inr]
 
 @[simp] theorem allAcceptedRename {alpha beta : Type} (n : Nat) (arity : Fin n → Nat)
-    (reached gamma context : OTerm alpha) (j : alpha → beta) :
+    (reached gamma context : OrdinaryArithmetic.Term alpha) (j : alpha → beta) :
     (allAccepted n arity reached gamma context).relabel j =
       allAccepted n arity (reached.relabel j) (gamma.relabel j) (context.relabel j) := by
   rw [formulaRelabelAsSubst]
@@ -71,7 +70,7 @@ theorem allAcceptedSubst {alpha beta : Type} (n : Nat) (arity : Fin n → Nat)
   simp only [← termRelabelAsSubst]
 
 theorem memberWitness {alpha : Type} (n : Nat) (arity : Fin n → Nat)
-    (reached candidate typ raw gamma context : OTerm alpha) :
+    (reached candidate typ raw gamma context : OrdinaryArithmetic.Term alpha) :
     (memberAccepted n arity (reached.relabel Sum.inl)
       (.var (.inr (0 : Fin 3))) (.var (.inr (1 : Fin 3))) (.var (.inr (2 : Fin 3)))
       (gamma.relabel Sum.inl) (context.relabel Sum.inl)).subst

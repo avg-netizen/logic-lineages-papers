@@ -1,0 +1,50 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCandidateRerooting.DataRenameProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionGraphSuccessorEliminationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCandidateRerooting.CompositionStableProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+open SourceComputabilityFormulaSupportProof (numeral)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Continuation20261114 Continuation20261115 Continuation20261116
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof
+open InternalRecursionGraphSuccessorEliminationProof
+open DataDefinitions
+attribute [local irreducible] programGraph
+
+theorem vector2Rename {alpha beta : Type} (a b : OTerm alpha) (j : alpha → beta) :
+    (fun i => (![a,b] i).relabel j) = (![a.relabel j,b.relabel j] : Fin 2 → OTerm beta) := by
+  funext i
+  exact Fin.cases rfl (fun k => Fin.cases rfl (fun z => Fin.elim0 z) k) i
+
+theorem composition (n : Nat) (arity : Fin n → Nat) {k : Nat}
+    (P : Program k) (gs : Fin k → Program 2) (hg : ∀ i, Stable n arity (gs i)) :
+    Stable n arity (.composition P gs) := by
+  intro body alpha Delta seed candidate parameter out d h
+  apply programCompositionCases P gs out ![seed,parameter] _ h
+  intro beta j ys Theta hj ho hi
+  rw [graph2Rename]
+  have dx := DataRenameProof.rename d j Theta hj
+  rw [vector2Rename] at hi
+  exact compositionValue P gs (out.relabel j) ![candidate.relabel j,parameter.relabel j] ys ho
+    (fun i => hg i body beta Theta (seed.relabel j) (candidate.relabel j) (parameter.relabel j) (ys i) dx (hi i))
+
+theorem unary (n : Nat) (arity : Fin n → Nat) (P : Program 1) (g : Program 2)
+    (hg : Stable n arity g) : Stable n arity (.composition P (fun _ => g)) :=
+  composition n arity P (fun _ => g) (fun _ => hg)
+
+theorem binary (n : Nat) (arity : Fin n → Nat) (P : Program 2) (g h : Program 2)
+    (hg : Stable n arity g) (hh : Stable n arity h) :
+    Stable n arity (.composition P ![g,h]) :=
+  composition n arity P ![g,h] (fun i => Fin.cases hg (fun j => Fin.cases hh (fun z => Fin.elim0 z) j) i)
+
+theorem ternary (n : Nat) (arity : Fin n → Nat) (P : Program 3) (f g h : Program 2)
+    (hf : Stable n arity f) (hg : Stable n arity g) (hh : Stable n arity h) :
+    Stable n arity (.composition P ![f,g,h]) :=
+  composition n arity P ![f,g,h] (fun i => Fin.cases hf (fun j => Fin.cases hg (fun k => Fin.cases hh (fun z => Fin.elim0 z) k) j) i)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCandidateRerooting.CompositionStableProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCandidateRerooting.CompositionStableProof
