@@ -1,0 +1,11 @@
+# Independent six-module spine relocation review
+
+Approved for fresh native support checks only. Independently recomputed all twelve source/destination hashes. Each file's complete region from its first declaration through its last proof is byte-identical to the original, without even qualification normalization inside that region. Full-file diffs after namespace mapping show only the recorded import substitutions and deletion of the unused bounds open. No theorem premise, conclusion, proof body, variable context, local attribute or axiom was changed.
+
+GuardObservation retains actual OriginalCodeValidityGuard.check success and obtains actual field observations plus the original constructor allowed formula using internal query cases. GuardChoice retains the nil tag AND payload-zero condition when eliminating the eight original alternatives; it does not conflate tag6 with canonical nil. GuardPair.nil requires that actual zero-payload fact and constructs the original nilConstructor graph.
+
+EntryFinalQueries recovers the original selected-recursion graph/dependency/map facts using the direct ternaryRecover supplier. EntryNonCons retains the exact non-cons extraction behavior, including tag6 yielding Some-empty without claiming payload validity. EntryNonSpine rules out tags other than6/7 from successful extraction by functionality and internal successor-not-zero contradiction. These helpers therefore keep the critical separation between syntax validity and entry extraction. None assumes target argumentsCheck success or asserts homogeneous preservation.
+
+Static recursive union has3396 import nodes and excludes old OriginalEnumerationMembership.Targets, old OriginalExchangeBoundsPreservation.Targets, and blocked OriginalNumberedEnumerationBranch.CrossIntroInductionSyntaxProof. This is source dependency evidence, not native/RSS evidence. Fresh compiler name-resolution/type checks and standard-axiom audits remain necessary. Snapshot pins are in REVIEW-SPINE-PINS.json.
+
+No compiler was run and no Lean, target, original source, checker, limit, or prior evidence was edited. Only this review and pin record were written. Relocation is uncounted infrastructure; the actual Code-domain preservation endpoint remains pending.
