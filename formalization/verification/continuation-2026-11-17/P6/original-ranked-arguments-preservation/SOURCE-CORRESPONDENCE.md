@@ -1,0 +1,21 @@
+# Proposal: original ranked homogeneous typed-argument preservation
+
+Exact1 proposed, not reviewed/frozen/preflighted. No proof is authored. This is a genuinely new internal transport obligation, not a reproof/alias of the head metadata contracts. It would count as a separate substantive advance only after complete proof, fixed native gates, source/axiom/evidence verification and independent acceptance.
+
+## Exact source and scope
+
+SourceMarkedSyntax.headArguments assigns a ranked head exactly replicate(arity(symbol),ground). The existing concrete groundList AST is calibrated to that list, and the new SignatureStructure contract proves its actual internal original length and all-index ground lookup. The proposed endpoint quantifies every arithmetic count rather than assuming a decoded standard symbol; original ranked signature equations can instantiate count from the actual fixed arity-table lookup. No symbol bound or lookup is dropped from those earlier full-head equations. This packet proves the homogeneous argument-transport step, not the remaining headMove-to-same-count bridge.
+
+The checker is literally OriginalUniverseDecoder.argumentsCheck (OriginalConcreteHeadSignature.signature n arity) M W, with input order [types,raw,Gamma,outerContext]. Both sides keep the SAME concrete H, M/W, types, Gamma and outer Context. Original per-term membership/window guards, original request/worklist codecs, children-before-suffix order, and original raw+1 fuel are retained. M/W are arbitrary fixed programs quantified before runtime; transport cannot assume calibration or their acceptance on newly created terms. This is stronger than requiring particular calibrated M/W and sound because the entry permutation retains each complete type-and-term-code pair. Any proof must actually establish that internal fact and the original bounded checker's completion, not replace the checker by an unguarded evaluator.
+
+The permutation premise is exactly Continuation20261114.OriginalArgumentPermutation.check, including both Option extraction gates and the literal entry-count comparison. It permutes complete (type,code) entries, not merely terms, types or a projected multiset. The source checker succeeds at the supplied groundList. The conclusion is the target checker success; it is NOT a premise, hidden validity oracle or admitted preservation invariant. The target is unrestricted raw arithmetic data subject only to the original permutation acceptance. No target typed success, encoded-image assumption, hidden source membership, relaxed fuel or stronger permutation AST is introduced.
+
+## Why the homogeneous restriction is substantive
+
+Original argument checking is positional. For arbitrary application signatures, permutation of entries can reorder different types; the source-level swapped-application concern remains an unverified diagnostic, not a kernel-verified counterexample. This endpoint does NOT assert unrestricted raw exchange preservation. Homogeneous ground lists avoid that positional mismatch while retaining exact count through the groundList graph. Zero count remains included. The proof must derive equal spine length and ground annotations internally from actual extraction/count and checker facts.
+
+## Required proof obligations, not premises
+
+Recover typed source entry facts and list length from the original guarded arguments checker; transfer each complete typed entry through the actual count-based permutation; reconstruct the target ordered ground arguments and unchanged term-check obligations; close the original target raw+1 bounded execution. Existing internal constructor unfold/fold, extraction/permutation and length/lookup lemmas may be used, but no native semantic reflection or assumed general preservation theorem is permitted. Guard/window/typing success for the target must be derived.
+
+Full application-head transport, original root headMove compatibility, recursive whole-code/source preservation, source tuple installation and numbered register discharge remain unpaid. All old accepted/frozen sources and fixed resource limits are unchanged. No compiler/Git action is performed by this author. Stop at 17 November18:00UTC or3 substantive distinct verified advances, whichever occurs first.
