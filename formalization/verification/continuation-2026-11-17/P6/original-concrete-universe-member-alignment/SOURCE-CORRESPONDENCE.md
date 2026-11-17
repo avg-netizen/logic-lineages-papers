@@ -1,0 +1,7 @@
+# Concrete recursive member alignment
+
+Literal original H=OriginalConcreteHeadSignature.signature, M0=OriginalUniverseDomainCoverage.member, W0=OriginalGuardedHeadSourceCoverage.window. The left membership supplier is contextMember(liftMember M0), not a native-equivalent existential replacement. Right is exact M0. Conclusion is a single internal conjunction of term acceptance iff and arguments acceptance iff, all symbolic typ/raw/gamma/context and all n/arity. No native calibration, Code, source acceptance, pair witness or MemberIncluded oracle premise.
+
+Implementation must derive both internal universally bound MemberIncluded directions from OriginalContextMemberLift.Proof.contextMemberLift at output1 in the actual extended context, then invoke genuine OriginalUniverseMemberTransport.Proof.transport in both directions for terms and arguments. Generic raw recursion is separate proved support, not native reflection. Bundle adapter and generic transport here; do not count them as duplicate mathematical endpoints.
+
+This pays the recursive supplier alignment needed for a NEW p† with member=liftMember M0 and W=W0. It does not construct/calibrate p†, identify p† with old p, change existing frozen tuple/coherence theorems, transport representative coherence to final sidecar/evaluator tuples, or prove all-term accessibility. Generic sourceEquation already exists and is not re-proved here.

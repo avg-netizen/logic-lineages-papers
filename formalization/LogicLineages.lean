@@ -2385,3 +2385,6 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 
 -- P6 literal concrete initial tuple installation.
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalConcreteInitialInstallation.StatementChecks
+
+-- P6 concrete recursive member supplier alignment.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalConcreteUniverseMemberAlignment.StatementChecks

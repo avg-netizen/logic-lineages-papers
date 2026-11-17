@@ -1,0 +1,49 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.InductionProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.Targets
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.Proof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+open SourceComputabilityFormulaSupportProof InternalControlGraphSupportProof
+open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
+open InternalRawListRecursionSyntaxProof InternalGraphCompositionSyntaxProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open InternalBinderTransportProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
+open InternalAdditionLawsProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open OriginalUniverseDecoderTransport (Accepted)
+open OriginalUniverseDecoderTransportSyntaxProof (acceptedSubst acceptedRename)
+open InternalStrongInduction
+open Definitions InductionDefinitions
+
+open BindingProof InductionProof SyntaxProof
+open InternalGraphCompositionFunctionalityProof
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+theorem transport (H : Program 1) (M N W : Program 2) (arguments : Bool)
+    (typ raw gamma c : OTerm alpha)
+    (hi : Nonempty (Derivation body Delta (MemberIncluded M N c)))
+    (ha : Nonempty (Derivation body Delta (Accepted H M W arguments typ raw gamma c))) :
+    Nonempty (Derivation body Delta (Accepted H N W arguments typ raw gamma c)) :=
+  atRawApply H M N W arguments raw typ gamma c (allRaw H M N W raw) hi ha
+
+theorem memberTransport : Targets.InternalMemberTransport := by
+  intro H M N W body alpha Delta typ raw gamma c
+  let I := MemberIncluded M N c
+  have one (arguments : Bool) : Nonempty (Derivation body (I :: Delta)
+      ((Accepted H M W arguments typ raw gamma c).imp (Accepted H N W arguments typ raw gamma c))) := by
+    let A := Accepted H M W arguments typ raw gamma c
+    obtain ⟨out⟩ := transport H M N W arguments typ raw gamma c
+      (Delta := A :: I :: Delta)
+      ⟨Derivation.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)⟩
+      ⟨Derivation.hypothesis List.mem_cons_self⟩
+    exact ⟨Derivation.implicationIntroduction out⟩
+  obtain ⟨ht⟩ := one false
+  obtain ⟨ha⟩ := one true
+  exact ⟨Derivation.implicationIntroduction (Derivation.conjunctionIntroduction ht ha)⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.Proof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.Proof

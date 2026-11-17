@@ -68,11 +68,17 @@ That is the lambda/variable-refinement pipeline, not S1 above by name alone. Mor
 
 Generic existing term acceptance constructor/inversion/transport APIs preserve their supplied H/M/W. The inspected universe targets do not provide a ready all-suppliers replacement theorem that silently discharges this mismatch. A supplier-transport theorem would need actual internal graph contracts and sufficient recurrence coverage; native calibrations are not those contracts.
 
+## Correction from independent novelty review (17:01 UTC)
+
+The proposed small source interface in step2 below is ALREADY paid generically by `OriginalTransparentDecoderValidatorCollapsePackedProof.sourceEquation` (lines162–185), with `sourceFieldsIntro` and `sourceFieldsElim` immediately above. It gives the exact object-language iff under actual `StepPair` observations for packed input and parameter, for arbitrary H/G/M/W. Specializing M=contextMember p.base.member, W=the installed W and using the literal q source field yields the requested interface. This is not a new substantive proof opportunity. The provisional target/comparator was drafted before this discovery; no new proof/compiler/count has been made for it.
+
+The remaining mismatch M0/W0 versus Mp/W is unchanged: the existing theorem precisely exposes actual suppliers, but does not replace them. Reuse this supplier directly; do not reimplement it or count an installed tuple alias as progress.
+
 ## 5. Honest next steps, smallest first
 
 1. **Small exact bookkeeping consumer, if useful:** specialize the existing selection identity + internal sidecar guard-redundancy theorem at b=q with spine leaf refinement. This gives a genuine internal iff from S1.oldRepresentative to the branched sidecar representative, without pretending it is q.oldRepresentative. No M/W bridge is needed for that narrowly stated result.
 
-2. **Smallest unpaid source interface:** prove exact source success introduction/elimination for q.base.oldSource under actual input/parameter pairs, concluding precisely G(context) AND TermAccepted H Mp W. This uses original conjunction/composition/pairing APIs and literal field identity, not new syntax induction. It exposes the real missing supplier contract and prevents later callers from accidentally using M0/W0 acceptance. It is an interface theorem, not a discharge of the mismatch.
+2. **Already available source interface (corrected above):** reuse exact source success introduction/elimination for q.base.oldSource under actual input/parameter pairs, concluding precisely G(context) AND TermAccepted H Mp W. The existing sourceEquation uses original conjunction/composition/pairing APIs; combine with literal field identity, not a new proof. It exposes the real missing supplier contract and prevents callers from accidentally using M0/W0 acceptance. It does not discharge the mismatch.
 
 3. **Before active sidecar coherence, choose an honest source scope.** Either retain explicit actual Mp/W source and p.window success premises in a conditional internal theorem, or identify a concrete initial p/W construction and prove actual internal graph transport from M0/W0 to its Mp/W. A requested whole-source result must eventually pay that transport, not hide it as a new correctness field. Do not replace p by a native-equivalent witness.
 

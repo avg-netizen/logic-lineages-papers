@@ -520,3 +520,44 @@ allTerms accessibility. Native calibration cannot transport internal graphs.
 Registered whole-Paper6 target remains ContextUniformTargets.
 ActualContextUniformInternalAccessibility; immutable local stability discrepancy
 remains. No Paper6 completion, full-root/CI pass, merge or numbered promotion.
+
+### 2026-11-17 approximately 17:00 UTC remote checkpoint
+
+Verified619af0b9ef9e7360b0577f49d134cc4bb714c3e9, exact tree
+8c81171bba796af13e3c2d90edb6305db6d7f1c2.74 source/docs files, all112
+Acceptance100–104 source pins rehashed from remote blobs. Supporting914,
+numbered178/2/9 unchanged. Nonforce leased update, no merge. Next checkpoint
+by17:30 UTC, hard stop18:00 UTC.
+
+Scope-review negative result: proposed source intro/elimination interface is
+already paid by OriginalTransparentDecoderValidatorCollapsePackedProof.sourceEquation
+and sourceFieldsIntro/Elim. No duplicate proof, native run or substantive credit.
+Only provisional unimplemented target and explicit novelty-stop audit preserved.
+Further read-only audits investigate exact concrete supplier alignment and
+positive-path lambda certificate design, not a promised pre-deadline completion.
+
+### 2026-11-17 17:19 UTC local Acceptance105
+
+Concrete recursive member supplier alignment independently final-approved:
+exact original term AND arguments acceptance iff with contextMember(lift M0)
+versus M0 at literal H/M0/W0. Both inclusions internally discharged by actual
+composition/pair lift cancellation; genuine simultaneous raw induction, all
+constructors/malformed cases, fixed outer context through Gamma extension.
+No extra Code/ArrowClosed/native/child/inclusion oracle. Generic transport and
+lift adapter bundled without separate credit. Native1794935817264892283-7;
+4473-source recursive evidence SHA1881a5bfe85f32f64c741aea6266a173aa2452dcd2c6fc52a598cbd337635f80,
+11772808bytes. Supporting915, numbered178/2/9 unchanged.
+
+This justifies supplier alignment for a newly explicit member-lift choice, NOT
+identity of arbitrary prior p or actual independent finite window success.
+Actual q-dagger source-interface companion is being specialized with no extra
+credit. Active sidecar C coherence, positive-path lambda/body compatibility,
+substitution/fundamental/closed allTerms and immutable stability issue remain.
+
+### 2026-11-17 17:25 UTC checked no-credit aligned source companion
+
+Explicit new lifted-member p-dagger with literal W0 and original installed tuple:
+source iff G(context) AND original M0/W0 acceptance under actual pair observations.
+Independent4719-source reconciliation, native1794936087231755145-6.
+Evidence ea6b6679bb657c82895dfb443f24143b5c1f3e39b632d5bdf875bd06c05db816, 12566081 bytes.
+No calibration/old-p identity/window activity assertion, no extra count.

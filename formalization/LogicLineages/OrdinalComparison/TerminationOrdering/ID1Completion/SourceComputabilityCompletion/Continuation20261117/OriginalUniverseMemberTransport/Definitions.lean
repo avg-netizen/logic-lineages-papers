@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalUniverseDecoderInternalAcceptanceDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalUniverseDecoderTransportDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.Definitions
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+open SourceComputabilityFormulaSupportProof (numeral allOne)
+open OriginalUniverseDecoderInternalAcceptance
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+def MemberIncluded {alpha : Type} (M N : Program 2) (c : OTerm alpha) : Formula alpha :=
+  allOne ((graph2 M (numeral 1) (.var (.inr 0)) (c.relabel Sum.inl)).imp
+    (graph2 N (numeral 1) (.var (.inr 0)) (c.relabel Sum.inl)))
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.Definitions

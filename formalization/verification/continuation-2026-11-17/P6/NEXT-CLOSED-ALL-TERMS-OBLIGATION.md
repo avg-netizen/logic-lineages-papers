@@ -173,3 +173,15 @@ not satisfy. No replacement relation, native graph transport, type/constructor
 restriction, changed endpoint or added oracle is suggested here. Whole paper06
 internal accessibility, its subsequent bounds/realization obligations, and any
 source-discrepancy resolution remain separately pending.
+
+### Exact certificate distinction verified
+
+`I/InternalAccessibilityRulesDefinitions.lean` defines `edgeProgram src false`
+as **src.positive**, not oldStep, and `certificate src false context x y w`
+as its four-input accepting Program graph. `edge src false` existentially hides
+that positive-path certificate. `edgeProgram src true` is the direct MULTISET
+checker; changing false to true is not a scalar one-step fix. Thus the bounded
+lambda proposal must either first expose a genuine quotient/one-hop leaf
+checker with its exact existing API, or prove a lambda body PATH extraction
+invariant across the actual positive certificate. Treating oldStep's lam-prefix
+strip as if it directly inverted src.positive would be a concrete error.

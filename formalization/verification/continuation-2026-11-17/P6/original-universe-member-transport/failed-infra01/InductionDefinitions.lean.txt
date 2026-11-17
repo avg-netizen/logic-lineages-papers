@@ -1,0 +1,39 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.Definitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalUniverseDecoderTransportSyntaxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.InductionDefinitions
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+open SourceComputabilityFormulaSupportProof InternalControlGraphSupportProof
+open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
+open InternalRawListRecursionSyntaxProof InternalGraphCompositionSyntaxProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open InternalBinderTransportProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
+open InternalAdditionLawsProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open OriginalUniverseDecoderTransport (Accepted)
+open OriginalUniverseDecoderTransportSyntaxProof (acceptedSubst acceptedRename)
+open InternalStrongInduction
+open Definitions
+
+def Transport {alpha : Type} (H : Program 1) (M N W : Program 2) (arguments : Bool)
+    (typ raw gamma c : OTerm alpha) : Formula alpha :=
+  (MemberIncluded M N c).imp
+    ((Accepted H M W arguments typ raw gamma c).imp (Accepted H N W arguments typ raw gamma c))
+def transportMatrix {alpha : Type} (H : Program 1) (M N W : Program 2) (raw : OTerm alpha) : Formula (alpha ⊕ Fin 3) :=
+  let v : Fin 3 → OTerm (alpha ⊕ Fin 3) := fun i => .var (.inr i)
+  Transport H M N W false (v 0) (raw.relabel Sum.inl) (v 1) (v 2) ⊓
+    Transport H M N W true (v 0) (raw.relabel Sum.inl) (v 1) (v 2)
+def AtRaw {alpha : Type} (H : Program 1) (M N W : Program 2) (raw : OTerm alpha) : Formula alpha :=
+  InternalClosedPrograms.allBlock (transportMatrix H M N W raw)
+def rawPredicate {alpha : Type} (H : Program 1) (M N W : Program 2) : Formula (alpha ⊕ Fin 1) :=
+  AtRaw H M N W (.var (.inr 0))
+def BelowRaw {alpha : Type} (H : Program 1) (M N W : Program 2) (raw : OTerm alpha) : Formula alpha :=
+  InternalStrongInduction.below (rawPredicate H M N W) raw
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.InductionDefinitions
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.InductionDefinitions

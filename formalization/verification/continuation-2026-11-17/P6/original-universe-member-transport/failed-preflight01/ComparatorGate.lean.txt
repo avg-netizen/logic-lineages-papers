@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.Targets
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.ComparatorGate
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open SourceComputabilityFormulaSupportProof (numeral)
+open OriginalUniverseDecoderInternalAcceptance
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+theorem exactMemberTransport : Targets.InternalMemberTransport ↔
+ (∀ (H : Program 1) (M N W : Program 2)
+    (body : Positive (Fin 1)) (alpha : Type) (Delta : List (Formula alpha))
+    (typ raw gamma c : OTerm alpha),
+  Nonempty (Derivation body Delta
+    ((Formula.all ((graph2 M (numeral 1) (.var (.inr 0)) (c.relabel Sum.inl)).imp
+    (graph2 N (numeral 1) (.var (.inr 0)) (c.relabel Sum.inl)))).imp
+      (((TermAccepted H M W typ raw gamma c).imp (TermAccepted H N W typ raw gamma c)) ⊓
+       ((ArgumentsAccepted H M W typ raw gamma c).imp (ArgumentsAccepted H N W typ raw gamma c)))))) := Iff.rfl
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.ComparatorGate
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.ComparatorGate
