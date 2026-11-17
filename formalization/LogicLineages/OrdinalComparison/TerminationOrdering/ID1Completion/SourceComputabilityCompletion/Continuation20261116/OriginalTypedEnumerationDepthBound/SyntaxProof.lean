@@ -41,7 +41,7 @@ theorem observationsSubst {beta : Type} (n : Nat) (H : Program 1) (arguments : B
       observations n H arguments (raw.subst ts) (fun i => (xs i).subst ts) := by
   exact GenericObservationSyntaxProof.observationsSubst
     (Continuation20261115.OriginalCodeValidityGuard.check n)
-    (Continuation20261115.OriginalCodeBoundsRecursion.bounds n) (OriginalEnumerationDepth.depth n)
+    (Continuation20261115.OriginalCodeBoundsRecursion.bounds n) (Continuation20261115.OriginalEnumerationDepth.depth n)
     InternalPairing.pairing raw xs (accepted H arguments (xs 0) raw (xs 1))
     (accepted H arguments ((xs 0).subst ts) (raw.subst ts) ((xs 1).subst ts)) ts
     (acceptedSubst H arguments (xs 0) raw (xs 1) ts)

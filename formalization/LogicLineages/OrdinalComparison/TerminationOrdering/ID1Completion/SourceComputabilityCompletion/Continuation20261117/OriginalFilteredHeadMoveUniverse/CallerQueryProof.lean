@@ -109,8 +109,9 @@ theorem numberedAtsource (n : Nat) (H : Program 1) (M W : Program 2)
   have hw' := renameInto hw j Theta hj
   have ha' := renameInto ha j Theta hj
   have hp' := renameInto hp j Theta hj
+  simp only [InternalControlGraphSupportProof.programRename,tupleSixRename] at hlc' hrc'
   simp only [graph1Rename,graph2Rename,sucRelabel,zRelabel,acceptedRename,
-    OriginalTypedDecoderTransportSyntaxProof.acceptedRename,stepArrowFieldsRename,programRename,tupleSixRename] at hlc' hrc' hbg' htg' hperm' hs' hsf' hw' ha' hp' ⊢
+    OriginalTypedDecoderTransportSyntaxProof.acceptedRename,stepArrowFieldsRename] at hbg' htg' hperm' hs' hsf' hw' ha' hp' ⊢
   exact CallerAtFieldsProof.numbered n H M W (left.relabel j) (right.relabel j) (label.relabel j) (recorded.relabel j) (extraTypes.relabel j) (extras.relabel j) (f.relabel j) (g.relabel j) (base.relabel j) (target.relabel j) (typ.relabel j) (gamma.relabel j) (context.relabel j) (sourceData.relabel j) (sourceResult.relabel j) (sourceTypes.relabel j) data result types
     hlc' hrc' hbg' htg' hperm' hs' hd hsf' hf hw' ha' hp'
 
@@ -135,8 +136,9 @@ theorem numberedComplete (n : Nat) (H : Program 1) (M W : Program 2)
   have hw' := renameInto hw j Theta hj
   have ha' := renameInto ha j Theta hj
   have hp' := renameInto hp j Theta hj
+  simp only [InternalControlGraphSupportProof.programRename,tupleSixRename] at hlc' hrc'
   simp only [graph1Rename,graph2Rename,sucRelabel,zRelabel,acceptedRename,
-    OriginalTypedDecoderTransportSyntaxProof.acceptedRename,stepArrowFieldsRename,programRename,tupleSixRename] at hlc' hrc' hbg' htg' hperm' hw' ha' hp' ⊢
+    OriginalTypedDecoderTransportSyntaxProof.acceptedRename,stepArrowFieldsRename] at hbg' htg' hperm' hw' ha' hp' ⊢
   exact numberedAtsource n H M W (left.relabel j) (right.relabel j) (label.relabel j) (recorded.relabel j) (extraTypes.relabel j) (extras.relabel j) (f.relabel j) (g.relabel j) (base.relabel j) (target.relabel j) (typ.relabel j) (gamma.relabel j) (context.relabel j) data result types
     hlc' hrc' hbg' htg' hperm' hd hf hw' ha' hp'
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalFilteredHeadMoveUniverse.CallerQueryProof

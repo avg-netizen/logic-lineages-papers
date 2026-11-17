@@ -2316,3 +2316,6 @@ public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCom
 
 -- Original printed contradiction corollary on the same chosen source.
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceContradictionCorollaryV2.StatementChecks
+
+-- Original printed selector classification on the same chosen source.
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceSelectorClassification.StatementChecks
