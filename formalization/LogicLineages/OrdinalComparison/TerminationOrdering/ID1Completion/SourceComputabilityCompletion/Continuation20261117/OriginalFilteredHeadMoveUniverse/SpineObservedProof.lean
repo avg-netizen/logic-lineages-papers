@@ -40,7 +40,7 @@ theorem sourceAtEntry (n : Nat) (H : Program 1) (M W : Program 2)
   have hl' := renameInto hl j Theta hj
   have ha' := renameInto ha j Theta hj
   simp only [graph1Rename,graph2Rename,graph3Rename,sucRelabel,zRelabel,
-    belowRawRename,acceptedRename,plainRename,allGoodRename,conjunctionRename] at hc' hex' hg' ih' he' hp' hl' ha'
+    SpineInvariantSyntaxProof.belowRawRename,acceptedRename,plainRename,allGoodRename,conjunctionRename] at hc' hex' hg' ih' he' hp' hl' ha'
   exact SpineConsProof.source n H M W (raw.relabel j) (annotation.relabel j) (head.relabel j) (tail.relabel j) (types.relabel j) requested tailTypes (entry.relabel j) (entries.relabel j) (tailEntries.relabel j) (gamma.relabel j) (context.relabel j)
     hc' hf hp' hl' hg' he' ih' ha'
 
@@ -67,7 +67,7 @@ theorem targetAtEntry (n : Nat) (H : Program 1) (M W : Program 2)
   have hl' := renameInto hl j Theta hj
   have ha' := renameInto ha j Theta hj
   simp only [graph1Rename,graph2Rename,graph3Rename,sucRelabel,zRelabel,
-    belowRawRename,acceptedRename,plainRename,allGoodRename,conjunctionRename] at hc' hex' hg' ih' he' hp' hl' ha'
+    SpineInvariantSyntaxProof.belowRawRename,acceptedRename,plainRename,allGoodRename,conjunctionRename] at hc' hex' hg' ih' he' hp' hl' ha'
   exact SpineConsProof.target n H M W (raw.relabel j) (annotation.relabel j) (head.relabel j) (tail.relabel j) (types.relabel j) requested tailTypes (entry.relabel j) (entries.relabel j) (tailEntries.relabel j) (gamma.relabel j) (context.relabel j)
     hc' hf hp' hl' hg' he' ih' (andLeft ha') (andRight ha')
 
@@ -90,7 +90,7 @@ theorem sourceExtracted (n : Nat) (H : Program 1) (M W : Program 2)
   have he' := renameInto he j Theta hj
   have ha' := renameInto ha j Theta hj
   simp only [graph1Rename,graph2Rename,graph3Rename,sucRelabel,zRelabel,
-    belowRawRename,acceptedRename,plainRename,allGoodRename,conjunctionRename] at hc' hex' hg' ih' he' ha'
+    SpineInvariantSyntaxProof.belowRawRename,acceptedRename,plainRename,allGoodRename,conjunctionRename] at hc' hex' hg' ih' he' ha'
   exact sourceAtEntry n H M W (raw.relabel j) (annotation.relabel j) (head.relabel j) (tail.relabel j) (types.relabel j) (entries.relabel j) (gamma.relabel j) (context.relabel j) (tailEntries.relabel j) entry
     hc' hex' hg' ih' he' hp hl ha'
 
@@ -113,7 +113,7 @@ theorem targetExtracted (n : Nat) (H : Program 1) (M W : Program 2)
   have he' := renameInto he j Theta hj
   have ha' := renameInto ha j Theta hj
   simp only [graph1Rename,graph2Rename,graph3Rename,sucRelabel,zRelabel,
-    belowRawRename,acceptedRename,plainRename,allGoodRename,conjunctionRename] at hc' hex' hg' ih' he' ha'
+    SpineInvariantSyntaxProof.belowRawRename,acceptedRename,plainRename,allGoodRename,conjunctionRename] at hc' hex' hg' ih' he' ha'
   exact targetAtEntry n H M W (raw.relabel j) (annotation.relabel j) (head.relabel j) (tail.relabel j) (types.relabel j) (entries.relabel j) (gamma.relabel j) (context.relabel j) (tailEntries.relabel j) entry
     hc' hex' hg' ih' he' hp hl ha'
 
@@ -134,7 +134,7 @@ theorem sourceCons (n : Nat) (H : Program 1) (M W : Program 2)
   have ih' := renameInto ih j Theta hj
   have ha' := renameInto ha j Theta hj
   simp only [graph1Rename,graph2Rename,graph3Rename,sucRelabel,zRelabel,
-    belowRawRename,acceptedRename,plainRename,allGoodRename,conjunctionRename] at hc' hex' hg' ih' ha'
+    SpineInvariantSyntaxProof.belowRawRename,acceptedRename,plainRename,allGoodRename,conjunctionRename] at hc' hex' hg' ih' ha'
   exact sourceExtracted n H M W (raw.relabel j) (annotation.relabel j) (head.relabel j) (tail.relabel j) (types.relabel j) (entries.relabel j) (gamma.relabel j) (context.relabel j) tailEntries
     hc' hex' hg' ih' he ha'
 
@@ -155,7 +155,7 @@ theorem targetCons (n : Nat) (H : Program 1) (M W : Program 2)
   have ih' := renameInto ih j Theta hj
   have ha' := renameInto ha j Theta hj
   simp only [graph1Rename,graph2Rename,graph3Rename,sucRelabel,zRelabel,
-    belowRawRename,acceptedRename,plainRename,allGoodRename,conjunctionRename] at hc' hex' hg' ih' ha'
+    SpineInvariantSyntaxProof.belowRawRename,acceptedRename,plainRename,allGoodRename,conjunctionRename] at hc' hex' hg' ih' ha'
   exact targetExtracted n H M W (raw.relabel j) (annotation.relabel j) (head.relabel j) (tail.relabel j) (types.relabel j) (entries.relabel j) (gamma.relabel j) (context.relabel j) tailEntries
     hc' hex' hg' ih' he ha'
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalFilteredHeadMoveUniverse.SpineObservedProof

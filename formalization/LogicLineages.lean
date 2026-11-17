@@ -2313,3 +2313,6 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 
 -- Original printed collapse theorem, exact same-source selected presentation.
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalAdoption.StatementChecks
+
+-- Original printed contradiction corollary on the same chosen source.
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceContradictionCorollaryV2.StatementChecks

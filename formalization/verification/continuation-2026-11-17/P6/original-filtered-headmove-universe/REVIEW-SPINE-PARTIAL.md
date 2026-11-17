@@ -1,0 +1,11 @@
+# Partial independent heterogeneous spine review
+
+Read entry invariant/transfer, raw spine invariant/binding/cons/tagged/extraction/dispatch/core/induction and permutation assembly. No groundList substitution or residual induction oracle found. This is support-route review, not final caller acceptance or independent native verification. Pin list is restricted to these read sources; constructor/count helper audits remain part of final full closure review.
+
+Entry predicate checks actual encoded (annotation,term) through pair projections and original universe termCheck, at unchanged gamma/context. allGood quantifies every needle and nonzero occurrence count, not just list length. Exact original permutation yields count agreement; querying source count transfers the same needle's universe fact to target, preserving heterogeneous annotations.
+
+Domain includes actual original Code guard and successful original full entry extraction. Dispatch uses allowed Code cases: nil requires payload zero; cons preserves genuine child guards. Tagged case identifies observed second child with parsed tail by graph functionality before transporting the tail guard. Successful tail extraction follows original extraction positivity, not an assumed success. Induction descends on strict original raw tail size from cons constructor; BelowRaw applies only with that proved descent, and rawInduction discharges the hypothesis inside original strong induction.
+
+Cons source obtains head universe acceptance at actual annotation and recursively allGood tail. Cons target obtains positional requested/annotation agreement and plain typed tail from original plain consIff, combines universe head fact from actual entry and inductive tail, then rebuilds original universe consIff. Target types may differ from source types; no equality or homogeneous assumption.
+
+PermutationProof requires source universe acceptance, both Code guards, actual permutation and TARGET PLAIN acceptance, not target universe acceptance. This is legitimate as a helper only: final frozen endpoint must derive target plain acceptance from accepted carrierV2 and original primary membership, and pay root head/window/signature obligations. Those caller steps are not yet reviewed or accepted.

@@ -27,7 +27,7 @@ theorem step (n : Nat) (H : Program 1) (M W : Program 2) (raw : OTerm alpha)
   have hd : Nonempty (Derivation body Theta D) := ⟨Derivation.hypothesis List.mem_cons_self⟩
   have ihj := renameInto ih Sum.inl Theta
     (fun q hq => List.mem_cons_of_mem _ (List.mem_map.mpr ⟨q,hq,rfl⟩))
-  rw [belowRawRename] at ihj
+  rw [SpineInvariantSyntaxProof.belowRawRename] at ihj
   have hs : Nonempty (Derivation body Theta (A.imp I)) := by
     obtain ⟨h⟩ := SpineCoreProof.source n H M W R (x 0) (x 1) (x 2) (x 3)
       (withHyp hd A) (withHyp ihj A) ⟨Derivation.hypothesis List.mem_cons_self⟩

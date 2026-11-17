@@ -2,6 +2,7 @@ module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalTypedEnumerationDepthBound.InductionDefinitions
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedDecoderInternalAcceptanceSyntaxProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalEnumerationMembership.InductionSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalTypedEnumerationDepthBound.GenericObservationSyntaxProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalTypedEnumerationDepthBound.SyntaxProof
@@ -38,8 +39,12 @@ theorem observationsSubst {beta : Type} (n : Nat) (H : Program 1) (arguments : B
     (raw : OTerm alpha) (xs : Fin 6 → OTerm alpha) (ts : alpha → OTerm beta) :
     (observations n H arguments raw xs).subst (fun a => emb (ts a)) =
       observations n H arguments (raw.subst ts) (fun i => (xs i).subst ts) := by
-  simp only [observations,conjunctionSubst,acceptedSubst,graph1,graph2,
-    InternalComputabilityApplicationSyntaxProof.programSubst,consTermSubst,emptySubst,numeral,sucSubst,zSubst]
+  exact GenericObservationSyntaxProof.observationsSubst
+    (Continuation20261115.OriginalCodeValidityGuard.check n)
+    (Continuation20261115.OriginalCodeBoundsRecursion.bounds n) (OriginalEnumerationDepth.depth n)
+    InternalPairing.pairing raw xs (accepted H arguments (xs 0) raw (xs 1))
+    (accepted H arguments ((xs 0).subst ts) (raw.subst ts) ((xs 1).subst ts)) ts
+    (acceptedSubst H arguments (xs 0) raw (xs 1) ts)
 
 theorem resultRename {beta : Type} (arguments : Bool) (size depth : OTerm alpha) (j : alpha → beta) :
     (result arguments size depth).relabel j = result arguments (size.relabel j) (depth.relabel j) := by
