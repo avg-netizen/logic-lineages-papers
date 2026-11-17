@@ -2,6 +2,7 @@ module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalEnumerationMembership.InductionDefinitions
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.SourceHeadsFilterAdequacy.InductionSyntaxProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalEnumerationMembership.MeaningSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalEnumerationMembership.GenericInductionMatrixSyntaxProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalEnumerationMembership.InductionSyntaxProof
@@ -30,12 +31,26 @@ open Continuation20261114.SourceHeadsFilterAdequacy.InductionSyntaxProof (implic
 
 theorem atFuelSubst {beta : Type} (n : Nat) (raw : OTerm alpha) (ts : alpha → OTerm beta) :
     (AtFuel n raw).subst (fun a => emb (ts a)) = AtFuel n (raw.subst ts) := by
-  unfold AtFuel matrix
-  rw [allBlockSubst,liftedEmbedding]
-  simp only [impSubst,conjunctionSubst,MeaningSyntaxProof.meaningSubst,
-    InternalApplicationValidityStackAppendSyntaxProof.graph2Subst,numeral,zSubst,sucSubst,
-    liftSubst,Term.subst,Sum.elim_inr]
-  all_goals rfl
+  let m : Formula (alpha ⊕ Fin 11) :=
+    Meaning.holds n (.var (.inr 5)) (.var (.inr 6)) (raw.relabel Sum.inl)
+      (.var (.inr 7)) (.var (.inr 8)) (.var (.inr 9)) (.var (.inr 10))
+  let m' : Formula (beta ⊕ Fin 11) :=
+    Meaning.holds n (.var (.inr 5)) (.var (.inr 6)) ((raw.subst ts).relabel Sum.inl)
+      (.var (.inr 7)) (.var (.inr 8)) (.var (.inr 9)) (.var (.inr 10))
+  change (InternalClosedPrograms.allBlock (GenericInductionMatrixSyntaxProof.matrix
+    InternalPairing.pairing (OriginalEnumerationRecursion.enumeration n) contains raw m)).subst
+    (fun a => emb (ts a)) = InternalClosedPrograms.allBlock
+      (GenericInductionMatrixSyntaxProof.matrix InternalPairing.pairing
+        (OriginalEnumerationRecursion.enumeration n) contains (raw.subst ts) m')
+  apply GenericInductionMatrixSyntaxProof.allSubst
+  dsimp only [m, m']
+  rw [MeaningSyntaxProof.meaningSubst]
+  change Meaning.holds n (.var (.inr 5)) (.var (.inr 6))
+    ((raw.relabel (Sum.inl : alpha → alpha ⊕ Fin 11)).subst
+      (Sum.elim (fun a => (ts a).relabel Sum.inl) (fun i : Fin 11 => .var (.inr i))))
+    (.var (.inr 7)) (.var (.inr 8)) (.var (.inr 9)) (.var (.inr 10)) = _
+  rw [InternalRecursionGraphSyntaxProof.liftSubst]
+
 
 @[simp] theorem atFuelRename {beta : Type} (n : Nat) (raw : OTerm alpha) (j : alpha → beta) :
     (AtFuel n raw).relabel j = AtFuel n (raw.relabel j) := by

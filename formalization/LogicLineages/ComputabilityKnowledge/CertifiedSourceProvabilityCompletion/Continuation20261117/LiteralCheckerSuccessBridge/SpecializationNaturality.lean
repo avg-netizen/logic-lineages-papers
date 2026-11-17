@@ -39,6 +39,7 @@ open NaturalityProof
    UniformRuntimeSpecializationStep.body,mpSubst,formulaValueSubst,UniformClosedRule13Certificate.certificate,
    UniformClosedRule13.lineCall,HistoryLookup.consCall,Logic.substCall,List.Vector.map_cons,List.Vector.map_nil,
    substitute,List.Vector.head_map,List.Vector.tail_map,ih]
+  rfl
 
 @[simp] theorem seedSubst {n m ctx : Nat} (sub : Fin m → Term ctx) (mtag ctag atag r13 : Nat)
  (f : Formula n) (raw : List.Vector (Term m) n) :

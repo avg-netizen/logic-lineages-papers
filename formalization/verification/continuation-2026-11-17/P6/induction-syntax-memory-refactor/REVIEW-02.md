@@ -1,0 +1,7 @@
+# Independent candidate02 review
+
+Approved for coordinator native checking. Both current hashes match PROPOSED-PINS-02. Original atFuelSubst header and entire suffix starting atFuelRename (remaining four proofs/attributes/footer) independently byte-compared unchanged. New import and atFuelSubst implementation only.
+
+Generic matrix matches exact original eleven-binder structure: four pairing graphs at (0,6,fuel),(1,7,2),(2,8,3),(3,9,10), enumeration(4,0,1), membership1(4,5), and observations implying both membership-to-Meaning and Meaning-to-membership. It abstracts only three Program2 constants and the Meaning formula, not mathematical premises. allSubst is ordinary syntax normalization via allBlockSubst/liftedEmbedding/graph2Subst and supplied syntactic equality hm; no source admission or result oracle.
+
+Original theorem specializes the helper to actual InternalPairing.pairing, OriginalEnumerationRecursion.enumeration n and contains. m/m' are exact Meaning.holds at raw5/bound6/fuel-lift/types7/heads8/labels9/tupleBound10. The public statement gains no premise: hm is discharged using existing meaningSubst, inr variables fixed under substitution and original liftSubst for the free fuel term. Definitionally identical change is required by native elaboration, not assumed as a new axiom. All original executable definitions/targets/caps remain unchanged. No native or resource guarantee from this source review; failed prior attempt remains preserved.

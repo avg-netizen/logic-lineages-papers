@@ -34,7 +34,7 @@ theorem derive {arity k ctx : Nat} (p : Program arity) (f : Formula 1) (lhs rhs 
    (certificate (tags I.previous) pF c sigma innerFuel innerCert literalProof checkerProof))) := by
  let K := tags I.previous
  let H := CurrentRecursionProducerCore.FormulaBridge.originalNodes p f lhs rhs t old a x I
- obtain ⟨hOne⟩ := PrescribedRuntimeCallCongruence.ValidityProof.numeral p old a x I.previous.current K.numeralTag H.hn G (.succ .zero)
+ obtain ⟨hOne⟩ := PrescribedRuntimeCallCongruence.ValidityProof.numeral p (CumulativeUniformRule12Registry.previousLogical f lhs rhs old) (RawMulNewestAddition.arithmetic a) x I.previous.current K.numeralTag H.hn G (.succ .zero)
  exact FourthCoordinateProof.derive p f lhs rhs t old a x I G
   (Term.numeral (GorbowNamedInternalProvability.checkerTag pF)) index fuel
   (LiteralNumeralPrefix.numeralCall K.numeralTag (.succ .zero)) checkerProof

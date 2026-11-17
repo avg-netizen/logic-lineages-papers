@@ -56,7 +56,7 @@ theorem internalize {ctx : Nat} (U : Sentence → Prop) (bound coreTag verifierT
  have hp : Hilbert.Local U (ctx+1) G P := .hypothesis List.mem_cons_self
  have hh : Hilbert.Local U (ctx+1) G
   (.equal (.add (Term.numeral bound) (.var 0)) (liftTerm outerFuel)) := by
-  simpa only [H,orderBody,liftTerm,renameTerm,Logic.substNumeral] using
+  simpa only [G,H,orderBody,liftTerm,renameTerm,Logic.substNumeral] using
    (Hilbert.Local.hypothesis (T := U) (List.mem_cons_of_mem P (List.mem_cons_self (a := H) (l := []))))
  obtain ⟨hout⟩ := fuelTransport U G coreTag verifierTag (liftTerm index) _ _ (liftTerm formula) (liftTerm code) hh
   (.mp (.base h) hp)

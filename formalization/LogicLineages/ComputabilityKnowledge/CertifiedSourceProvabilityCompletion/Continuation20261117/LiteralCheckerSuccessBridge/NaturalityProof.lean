@@ -79,7 +79,12 @@ open GorbowSubstitution GorbowFormulaSubstitution FixedFormulaSubstitution SixSo
  | succ n ih =>
   simp only [tupleCertificate,unaryCertSubst,pairSubst,tupleValueSubst,pairCertSubst,
    List.Vector.head_map,List.Vector.tail_map,List.Vector.toList_map]
-  rw [ih xs.tail ys.tail cs.tail]
+  exact congrArg (fun z => PrescribedRuntimeCallCongruence.unaryCertificate K (.succ (.var 0))
+   (pairValue K (substitute sub xs.head) (tupleValue K (xs.tail.toList.map (substitute sub))))
+   (pairValue K (substitute sub ys.head) (tupleValue K (ys.tail.toList.map (substitute sub))))
+   (pairCertificate K (substitute sub xs.head) (tupleValue K (xs.tail.toList.map (substitute sub)))
+    (substitute sub ys.head) (tupleValue K (ys.tail.toList.map (substitute sub))) (substitute sub cs.head) z))
+   (ih xs.tail ys.tail cs.tail)
 
 @[simp] theorem callValueSubst {m ctx n : Nat} (sub : Fin m → Term ctx) (K : Tags)
  (tag : Term m) (xs : List.Vector (Term m) n) :

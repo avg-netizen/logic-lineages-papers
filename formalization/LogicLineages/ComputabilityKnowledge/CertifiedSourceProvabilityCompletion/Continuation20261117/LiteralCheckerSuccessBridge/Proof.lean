@@ -28,7 +28,6 @@ theorem exactSource : Targets.Source := by
   carrierTag peelTag baseProducerTag checkerInventoryTag checkerProducerTag hcarrier hpeel hbaseProducer hcheckerInventory hcheckerProducer
  refine ⟨bound,?_⟩
  intro sigma ctx innerFuel innerCert outerFuel
- dsimp only
  let r : Term ctx := Term.numeral (GorbowSortedSyntaxCode.formulaCode (rho pF c))
  let s : Term ctx := Term.numeral (GorbowSortedSyntaxCode.formulaCode sigma)
  let literalProof := RetainedBaseLiteralBinary.certificate K R.previous.previous.current.constructorTag
@@ -51,7 +50,7 @@ theorem exactSource : Targets.Source := by
    CurrentCheckerSuccessCertificate.proofCode,CurrentStructuralProducerCore.code,
    CurrentPublishedProvabilityIntroduction.checkerEquationCode,
    liftTerm,renameTerm,substituteFormula,Logic.substCall,List.Vector.map_cons,List.Vector.map_nil,
-   Logic.substNumeral,substitute,certificateSubst,literalSubst,valueSubst,
+   Logic.substNumeral,substitute,certificateSubst,literalSubst,valueSubst,childCodeSubst,
    PrescribedRuntimeEquality.equalValue,binarySubst,callValueSubst,numeralSubst] using (show Nonempty _ from ⟨hgap⟩)
  exact GuardProof.internalize U bound R.currentK.coreTag R.currentK.verifierTag
   (Term.numeral (Encodable.encode c)) formula output outerFuel premise hnormalized

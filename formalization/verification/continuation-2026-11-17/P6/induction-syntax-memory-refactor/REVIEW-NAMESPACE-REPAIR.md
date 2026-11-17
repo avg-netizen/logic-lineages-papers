@@ -1,0 +1,2 @@
+# Candidate02 namespace repair
+Approved retry. Compared preserved failed/attempt02 helper against current: sole change is open InternalApplicationCertificateConstructors (graph2) after OTerm open. Actual graph2 is precisely the constructor intended and independently reviewed. Helper current SHA79a0cd557d7ba4f705a27cc165089959a4aba6e3482065929ad4ba0294e17a44; original specialization remains456cdd7fa6d89f6d5a1e90df771a46beed37851a9cb9701906844f57ea2f9294. No theorem, premise, matrix or proof step changed. Native retry coordinator-owned; no successful build claimed.

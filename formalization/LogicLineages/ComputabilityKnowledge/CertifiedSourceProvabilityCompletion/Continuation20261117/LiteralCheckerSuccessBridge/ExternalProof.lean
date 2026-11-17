@@ -60,7 +60,6 @@ theorem external : External := by
  obtain ⟨cb,hcompiler⟩ := CurrentStructuralProducerCore.StatementChecks.exactSource f lhs rhs 2 t old a baseX pF pR c hA hbase R
  refine ⟨lb+cb,?_⟩
  intro sigma ctx innerFuel innerCert outerFuel
- dsimp only
  intro hg
  obtain ⟨hg⟩ := hg
  obtain ⟨hlg⟩ := CurrentRecursionProducerCore.GuardBound.lowerAdd U lb cb outerFuel
@@ -109,7 +108,7 @@ theorem external : External := by
   rcases hm with h | h
   · subst psi; exact ⟨hAcore⟩
   · subst psi; exact ⟨hCcore⟩
- obtain ⟨hout⟩ := PrescribedSourceAxiomSpecialization.SourceSupportProof.localCut incl hcut ha
+ obtain ⟨hout⟩ := PrescribedSourceAxiomSpecialization.SourceSupportProof.localCut incl hcut ⟨ha⟩
  exact ⟨hout.discharge.finish⟩
 
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.LiteralCheckerSuccessBridge.ExternalProof
