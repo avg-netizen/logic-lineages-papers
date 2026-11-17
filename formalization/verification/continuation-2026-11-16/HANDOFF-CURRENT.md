@@ -561,3 +561,35 @@ source iff G(context) AND original M0/W0 acceptance under actual pair observatio
 Independent4719-source reconciliation, native1794936087231755145-6.
 Evidence ea6b6679bb657c82895dfb443f24143b5c1f3e39b632d5bdf875bd06c05db816, 12566081 bytes.
 No calibration/old-p identity/window activity assertion, no extra count.
+
+### 2026-11-17 17:27:03 UTC remote checkpoint
+
+Verified6a4c02a7d9861eaf6d06cac9a08ca011f2b36073, tree
+4877dce7dd83a11e5cce0477632d4bae43a25531.113 source/docs files,33 distinct
+Acceptance105/helper/aligned-source companion source pins remotely rehashed.
+Supporting915, numbered178/2/9. Native calibrated p-dagger/q-dagger companion
+proof passed later than this snapshot; saved Targets/Comparator only at this
+checkpoint, full proof/evidence will be in final checkpoint. No further proof
+implementation planned; final snapshot17:50 and hard stop18:00 UTC.
+
+### 2026-11-17 17:31 UTC final proof readiness
+
+Native aligned initial calibration companion independently FINAL APPROVED:
+exact NEW p-dagger member lift and exact installed q-dagger, from original p
+calibration only. Total Object codec/malformedContext handled. Native-only,
+no extra supporting credit, no internal graph reflection or old-p equality.
+Native1794936382372436341-7,4702-source evidence ca1551470a7a9eb112a0b715f91111c29682126fc61ea21d2d6ef4a5197fa5ab,
+12516299 bytes. All authors/checker/verifier sessions reaped.
+No new proof implementation planned; final source snapshot now, remain available
+through18:00 for final stopped-process and remote-head verification.
+
+Latest next-gap audit distinguishes G0 context decoder, W0 binary head window,
+and opaque unary p.window (unchanged in p-dagger). Existing finite-window
+numeral-context success is reusable via checked OriginalNumeralEvaluation at
+original contextCode and external SubtypeClosed S. It does NOT supply symbolic
+ArrowClosed-to-p.window success. Actual normalized originalData validity and
+active/mixed sidecar C coherence remain distinct, followed by positive-path
+lambda/body compatibility, substitution/fundamental and closed allTerms.
+No relation replacement, constructor restriction, stability repair, Paper6
+completion, numbered promotion, full-root/CI claim, merge or force push.
+Supporting915; original register178checked/2inherited/9pending (189 total).
