@@ -1,0 +1,9 @@
+# Plain-aware structural lifts, native pending
+
+Ownership coordinated with P6: this worker authors only PlainAwareStructuralDefinitions/SyntaxProof/BindingProof/AtFieldsProof/SelectedFieldsProof/PointwiseProof/ClosureProof. Frozen endpoint Targets and ComparatorGate unchanged. These are uncounted helpers, not an independently accepted endpoint.
+
+Transfer holds at a FIXED explicit context, matching the exchange edge's fixed window. Only requested type and local gamma are bound by allBlock Fin2. Its matrix is (source universe checker success AND target original plain checker success) implies target universe checker success. No all-context transfer is assumed. BindingProof.transferApply consumes actual source and plain proofs separately; transferIntro discharges their conjunction after all-type/gamma introduction.
+
+Each AtFields constructor proof first inverts the original source-universe acceptance and separately the actual target-parent plain acceptance. Lambda uses codomain/bodyGamma, application-function uses arrow/gamma, application-argument uses domain/gamma, ordinary/numbered-base uses head type-list/gamma, numbered-extras uses extraTypes/gamma, and cons-head/tail use domain/tailTypes respectively. Exact original Typed...Iff projections supply the changed child's plain hypothesis. The source universe supplies unchanged guards and sibling universe membership. The child transfer changes only that child and the original target universe Iff reconstructs the same constructor.
+
+The QueryProof field/cons selections are reused unchanged. Relabeling carries the fixed context along but never quantifies it independently. All eight closure signatures preserve original parent code-guard premises (unused by the constructor-local logical lifting, available to the caller). No exchange induction, root-head proof, validity synthesis or primary-membership claim appears here.

@@ -1,0 +1,11 @@
+# Independent seven-file semantic draft review
+
+Reviewed PlainProof, TypeTransportProof, AtFieldsProof, NodeQueryProof, WindowQueryProof, Proof and StatementChecks. Source route approved; final native completion, dependency acceptance and repair/hash reconciliation remain pending. Snapshot pins are not an acceptance record.
+
+PlainProof obtains target admission from the actual admitted-seed filtered pool and actual target membership. Gamma is recovered from the SAME parameter pair; unpack uses the actual target pair. No target plain success is supplied by a caller.
+
+AtFieldsProof applies the original installed edge equivalence to source, target and parameter observations. Its exact conjunction projections yield sourceType=targetType, context validity, both Code guards and atContext success. The original atContext factor yields actual exchange at the queried node/window. Symbols/types are left/right of that very window. TypeTransport changes only the first coordinate of the original universe checker, using the derived equality in the sourceType-to-targetType direction. It does not alter sourceRaw, gamma or context. The joint Proof.term then uses targetType consistently, the same raw pair and window, source universe transported to targetType, and pool-derived target plain. The joint theorem is an actual proof dependency, not an additional public oracle premise.
+
+Proof queries the context pair, WindowQuery queries the window pair, and NodeQuery queries pairing on the exact sourceRaw,targetRaw. All prior premises, including both independent observed types, source universe, seed admission, pool graph and target membership, are renamed into each continuation via renameInto. acceptedRename transports the conclusion as well. None of these callbacks substitutes another seed, parameter or source; no variable escapes a query scope. Final aliases have precisely the frozen contract.
+
+This establishes only the intended installed single-edge caller once checked. Source may be any invariant-bearing reached value, not necessarily seed; whole primary iteration closure remains separate. No new assumption, child pool premise, target Code/plain premise or universe oracle was found in these seven draft sources.

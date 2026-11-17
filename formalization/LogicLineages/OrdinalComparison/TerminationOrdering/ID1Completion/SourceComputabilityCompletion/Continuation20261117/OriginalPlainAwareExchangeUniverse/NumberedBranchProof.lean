@@ -33,8 +33,8 @@ theorem move (n : Nat) (arity : Fin n → Nat)
     Nonempty (Derivation body Delta (accepted n arity false typ right gamma context)) := by
   have hrc' : Nonempty (Derivation body Delta (programGraph numberedConstructor right ![label,g,recorded,dest,extraTypes,extras])) := by
     apply NumberedInputProof.inputs right ![label,g,recorded,dest,extraTypes,otherExtras] _ hrc
-    intro i
-    fin_cases i
+    apply SixCoordinateProof.coordinate_relation
+      (fun x y : OTerm alpha => Nonempty (Derivation body Delta (eqn x y)))
     · exact ⟨refl _⟩
     · exact ⟨refl _⟩
     · exact ⟨refl _⟩

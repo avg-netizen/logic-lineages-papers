@@ -6,8 +6,7 @@ public meta import LogicLineages.Audit
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalInstalledFilteredEdgeUniverse.TypeTransportProof
 open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
 open InternalGraphComposition (OTerm)
-open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
-open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
+open InternalApplicationCertificateConstructors
 open InternalTagArithmeticSyntaxProof (eqn)
 open SourceComputabilityFormulaSupportProof (numeral)
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
@@ -15,7 +14,7 @@ variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 attribute [local irreducible] programGraph
 
 open InternalTagArithmeticSupportProof (refl)
-theorem universe (H : Program 1) (M W : Program 2)
+theorem transport (H : Program 1) (M W : Program 2)
  (left right raw gamma context : OTerm alpha)
  (he : Nonempty (Derivation body Delta (eqn left right)))
  (ha : Nonempty (Derivation body Delta
@@ -28,15 +27,18 @@ theorem universe (H : Program 1) (M W : Program 2)
  apply InternalGraphCompositionEqualityProof.graphInputTransport body alpha 4 Delta _ (numeral 1)
    ![left,raw,gamma,context] ![right,raw,gamma,context] _ ha
  intro i
- fin_cases i
+ refine Fin.cases ?_ (fun i => ?_) i
  · rw [InternalSourceInversionSupportProof.onEquality]
    exact he
- · rw [InternalSourceInversionSupportProof.onEquality]
-   exact ⟨refl _⟩
- · rw [InternalSourceInversionSupportProof.onEquality]
-   exact ⟨refl _⟩
- · rw [InternalSourceInversionSupportProof.onEquality]
-   exact ⟨refl _⟩
+ · refine Fin.cases ?_ (fun i => ?_) i
+   · rw [InternalSourceInversionSupportProof.onEquality]
+     exact ⟨refl _⟩
+   · refine Fin.cases ?_ (fun i => ?_) i
+     · rw [InternalSourceInversionSupportProof.onEquality]
+       exact ⟨refl _⟩
+     · refine Fin.cases ?_ (fun i => Fin.elim0 i) i
+       rw [InternalSourceInversionSupportProof.onEquality]
+       exact ⟨refl _⟩
 
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalInstalledFilteredEdgeUniverse.TypeTransportProof
 #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalInstalledFilteredEdgeUniverse.TypeTransportProof

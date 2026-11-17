@@ -2325,3 +2325,9 @@ public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCom
 
 -- Original filtered ordinary/numbered head-move universe caller.
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalFilteredHeadMoveUniverse.StatementChecks
+
+-- Original plain-aware recursive exchange, exact simultaneous universe bridge.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPlainAwareExchangeUniverse.StatementChecks
+
+-- Actual installed filtered one-edge universe caller, not iteration closure.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalInstalledFilteredEdgeUniverse.StatementChecks

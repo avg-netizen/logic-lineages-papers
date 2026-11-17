@@ -37,8 +37,8 @@ theorem atChildren (n : Nat) (arity : Fin n → Nat)
   have hm := andLeft (andRight hr)
   have hrc' : Nonempty (Derivation body Delta (programGraph numberedConstructor right ![k,g,tau,dest,ts,otherExtras])) := by
     apply NumberedInputProof.inputs right ![l,g,upsilon,dest,us,otherExtras] _ hrc
-    intro i
-    fin_cases i
+    apply SixCoordinateProof.coordinate_relation
+      (fun x y : OTerm alpha => Nonempty (Derivation body Delta (InternalTagArithmeticSyntaxProof.eqn x y)))
     · exact andLeft hm
     · exact ⟨refl _⟩
     · exact andLeft (andRight hm)

@@ -17,3 +17,12 @@ Derive parameter selectors from its pair; select actual context window and symbo
 
 ## Explicit exclusions
 No child pool membership, target Code, target plain/universe success, arbitrary-B preservation, native calibration or external evaluation premise. No claim of primary-output universe closure: actual count induction using PrimaryExpansionSoundness.expansionCharacterization and existential reached-edge elimination remains separate. No numbered-registry promotion or support-count claim from this comparator.
+
+## Candidate proof assembly (unaccepted until full gate)
+PlainProof.filtered invokes actual PoolProof.accepted, obtains gamma from the same parameter pair, then unpacks the admitted target. TypeTransportProof.transport is congruence for the exact original universe termCheck graph. AtFieldsProof.preserved applies the actual installed-edge iff, derives type equality and both Code guards, extracts atContext exchange through its literal composition, and rebuilds symbols/types from the chosen context/window pairs. It transports source universe to the observed target type and invokes actual OriginalPlainAwareExchangeUniverse.Proof.term.
+
+NodeQueryProof, WindowQueryProof, and Proof.atSource eliminate only genuine total-program/pair observations. Every original hypothesis is renamed through the query binder map and context inclusion. The conclusion is rewritten by checked acceptedRename. Source/target/seed/pool/parameter are never reselected; no bound variable escapes. StatementChecks.exactInstalledFilteredEdgeUniverse has the frozen full target. Pending native dependencies remain pending; these drafts do not claim acceptance.
+
+## Final native source assembly
+
+The candidate described above now passes the exact frozen StatementChecks gate in receipt 1794926520729456150-6. TypeTransport's unused namespace open was removed; the final Proof alias was eta-expanded to introduce the frozen target's explicit binders. Neither repair changes a theorem statement or proof premise. Independent REVIEW-FINAL.md reconciles the final source hashes and verifies all ten frozen comparison pins. The earlier pending-native wording records the draft stage; final recursive evidence is recorded separately in EVIDENCE.json. Scope exclusions remain unchanged.
