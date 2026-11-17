@@ -1,0 +1,5 @@
+# Independent V2 comparator delta review
+
+Approved fresh V2 freeze/preflight only. Independently compared all three actual V2 sources to V1 after namespace/import rename. Targets and ComparatorGate are byte-identical modulo namespace. Definitions sole additional delta: `abbrev inputCode {ctx : Nat} := SameSourcePublishedWitness.inputCode (ctx := ctx)` instead of inferred ctx alias. This preserves exact context-polymorphic original recipe and corrects inference only. No premise, quantifier, certificate, source selection or HB3 formula changes.
+
+All ten proposed V2 hashes match current files; all ten V1 frozen hashes still match, including failed alias source, preserving prior history. V1 failure gives no acceptance to V2; fresh gate/audit required. Full semantic review and unpaid proof obligations in V1 REVIEW remain applicable: entire same-source witness/Retained/Packages conjunction plus literal original HB3, actual checker occurrence coherence, doubled code alignment and capture-free existential assembly. Reviewer ran no compiler; no HB3 proof accepted.

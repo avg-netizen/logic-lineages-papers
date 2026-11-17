@@ -3,6 +3,7 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationSyntaxProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionClosureSyntaxProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextInsertionSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalClassCodes.GenericPairImageSyntaxProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalClassCodes.PairImageProof
@@ -27,10 +28,8 @@ def image (raw param node : OTerm alpha) : Formula alpha := existsOne (imageMatr
 
 theorem imageSubst {beta : Type} (raw param node : OTerm alpha) (ts : alpha → OTerm beta) :
     (image raw param node).subst (fun a => emb (ts a)) = image (raw.subst ts) (param.subst ts) (node.subst ts) := by
-  unfold image imageMatrix
-  rw [existsSubst,liftedEmbedding]
-  simp only [conjunctionSubst,graph1,graph2,InternalComputabilityApplicationSyntaxProof.programSubst,numeral,zSubst,sucSubst,
-    InternalRawListRecursionSyntaxProof.consTermSubst,InternalRawListRecursionSyntaxProof.emptySubst,liftSubst,Term.subst,Sum.elim_inr]
+  exact GenericPairImageSyntaxProof.imageSubst contains InternalPairing.pairing raw param node ts
+
 
 @[simp] theorem imageRename {beta : Type} (raw param node : OTerm alpha) (j : alpha → beta) :
     (image raw param node).relabel j = image (raw.relabel j) (param.relabel j) (node.relabel j) := by
@@ -42,10 +41,8 @@ theorem imageSubst {beta : Type} (raw param node : OTerm alpha) (ts : alpha → 
 theorem imageWitness (raw param node source : OTerm alpha) :
     InternalCalculus.instantiate (imageMatrix raw param node) (emb source) =
       (graph2 contains (numeral 1) raw source ⊓ graph2 InternalPairing.pairing node param source) := by
-  unfold imageMatrix InternalCalculus.instantiate
-  rw [bindEmbedding]
-  simp only [conjunctionSubst,graph1,graph2,InternalComputabilityApplicationSyntaxProof.programSubst,numeral,zSubst,sucSubst,
-    InternalRawListRecursionSyntaxProof.consTermSubst,InternalRawListRecursionSyntaxProof.emptySubst,InternalTagArithmeticSyntaxProof.liftBind,InternalTagArithmeticSyntaxProof.varBind]
+  exact GenericPairImageSyntaxProof.imageWitness contains InternalPairing.pairing raw param node source
+
 
 theorem introduce (raw param node source : OTerm alpha)
     (hm : Nonempty (Derivation body Delta (graph2 contains (numeral 1) raw source)))
