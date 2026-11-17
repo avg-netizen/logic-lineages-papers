@@ -1,6 +1,7 @@
 module
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalEnumerationMembership.MeaningDefinitions
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalEnumerationMembership.DepthSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalEnumerationMembership.SixArgumentSubstitutionProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalEnumerationMembership.MeaningSyntaxProof
@@ -25,13 +26,8 @@ theorem meaningSubst {beta : Type} (n : Nat) (raw bound fuel types heads labels 
       Meaning.holds n (raw.subst ts) (bound.subst ts) (fuel.subst ts) (types.subst ts)
         (heads.subst ts) (labels.subst ts) (tupleBound.subst ts) := by
   unfold Meaning.holds OriginalEnumerationFields.Targets.accepted
-  simp only [conjunctionSubst,DepthSyntaxProof.boundSubst,programSubst,
-    SourceComputabilityFormulaSupportProof.numeral,zSubst,sucSubst]
-  have hx : (fun i => ((![raw,bound,types,heads,labels,tupleBound] : Fin 6 → OTerm alpha) i).subst ts) =
-      ![raw.subst ts,bound.subst ts,types.subst ts,heads.subst ts,labels.subst ts,tupleBound.subst ts] := by
-    funext i
-    fin_cases i <;> rfl
-  rw [hx]
+  rw [conjunctionSubst, SixArgumentSubstitutionProof.acceptedSubst,
+    DepthSyntaxProof.boundSubst]
 
 @[simp] theorem meaningRename {beta : Type} (n : Nat) (raw bound fuel types heads labels tupleBound : OTerm alpha) (j : alpha → beta) :
     (Meaning.holds n raw bound fuel types heads labels tupleBound).relabel j =

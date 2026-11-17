@@ -1,0 +1,5 @@
+# Algebra helper refactor review
+
+Approved for coordinator native checking; no resource improvement guaranteed. Compared archived failed-support02-rss/AlgebraProof against current file. Specialized theorem header is byte-identical, four-reflexivity and coordinate3 construction unchanged. Only import and final composition sequence move behind a generic theorem.
+
+CallTransitivityProof.derive retains every original validity, coordinate CORE and checker CORE input, with arbitrary vector length and same root/I/G/index/fuel. It invokes the same original exactTupleAndCall, projects call CORE, derives both call validities, then exactTransitivity to the same explicit certificate. The caller supplies actual numeral1 validity and unchanged hc/hChecker. No new axiom or success oracle. Generic helper imports original runtime-call and validity providers rather than the concrete box/source packet. No frozen comparator/AST change. Source pins saved separately; no reviewer compiler run. Final native and recursive evidence still required.

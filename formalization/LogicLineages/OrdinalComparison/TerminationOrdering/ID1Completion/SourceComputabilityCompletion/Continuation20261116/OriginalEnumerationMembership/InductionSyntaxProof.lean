@@ -32,8 +32,9 @@ theorem atFuelSubst {beta : Type} (n : Nat) (raw : OTerm alpha) (ts : alpha → 
     (AtFuel n raw).subst (fun a => emb (ts a)) = AtFuel n (raw.subst ts) := by
   unfold AtFuel matrix
   rw [allBlockSubst,liftedEmbedding]
-  simp only [impSubst,conjunctionSubst,MeaningSyntaxProof.meaningSubst,graph2,programSubst,numeral,zSubst,sucSubst,
-    consTermSubst,emptySubst,liftSubst,Term.subst,Sum.elim_inr]
+  simp only [impSubst,conjunctionSubst,MeaningSyntaxProof.meaningSubst,
+    InternalApplicationValidityStackAppendSyntaxProof.graph2Subst,numeral,zSubst,sucSubst,
+    liftSubst,Term.subst,Sum.elim_inr]
   all_goals rfl
 
 @[simp] theorem atFuelRename {beta : Type} (n : Nat) (raw : OTerm alpha) (j : alpha → beta) :
