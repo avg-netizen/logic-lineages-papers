@@ -1,0 +1,19 @@
+# Independent final proof review
+
+APPROVED source/proof review, conditional on coordinator completion of recursive evidence. All fourteen current source hashes match successful module rows in receipt 1794914977026365036-8; all eleven frozen comparator pins remain exact. StatementChecks exactGraph/exactSource audit passes with only propext, Classical.choice, Quot.sound. Reviewed GraphSupport, HeaderGraph, PeelGraph, GraphProof, SelectionProof, BoxNodes, BoxCalculation, BoxLiteral, SourceEndpoint and Proof (the OneSource implementation is Proof.lean).
+
+SelectionProof.registry selects calibrated primitive pF0/pR first, applies arbitrary base-only E pF0, constructs the two finite augmentations, then obtains c from finiteSPresentation. CK, fixed point, pG and extra nodes are actual occurrence/coverage results in that one root. The endpoint calls this once. No old existential tuple is identified with the new source.
+
+Proof derives both members of the new outer bundle, then cumulative extra/carrier/peel members of the retained inner bundle. JointInstallation comes from that actual cumulative node. BoxNodes derives literal 6/8/10/12 by firstChild; exactInstallations uses actual carrier plus .here pF0 and node12 for the compiler. RetentionProof is instantiated with this same hA, syntax, CK/fixed point and pG witnesses. Packages and literal capability use the same root/source tuple. No full-Retained tail is dropped by replacing it with a surrogate.
+
+GraphSupport uses actual compositionValues, functionChild/argumentChild, projections3/4, header value graph, numeral graph and registry-coherent pF0/compiler calls. HeaderGraph constructs the original header recipe from separate Rule13 arity2, actual header compiler and normal call6 congruence; transitivity retains the Rule12 installation. PeelGraph uses runtime slots0/1/2 as actual second-child offsets at6/8/10. GraphProof transports numeral(call12(value)) to numeral(call6(value)) via actual defining-equation peels, not numeric calibration. Both header and calculation codes are joined to the exact frozen recipe.
+
+BoxCalculation is a genuine generic-box proof, not application of a specialized old selected-source theorem under a false equality. It uses actual source peel successes and actual base compiler SourceCore at12, lowers the single pb+sb guard to both bounds, joins6→8→10→12 with base output, and symbolically transports the formula back to original call6. BoxLiteral similarly composes header/source calculation under hb+cb, then actual named alias/raw syntax equality yields both literal binaryCodeTerm sides. Local CORE premises arise from those actual successes, not new endpoint assumptions.
+
+SourceEndpoint takes the uniform BoxLiteral bound before r/s/fuel. It projects CORE, obtains actual installed producer-call equality from GraphProof, lifts it into the same source and reverses it for coreCode transport, then uses acceptedOfCore. It preserves formula, source index, fuel and source tuple. No target-success premise or final-pF compiler is added.
+
+Scope remains installed Program5 with three supplied runtime offsets, full same-source Retained/Packages and accepted literal producer calls. This does not yet supply checker/quantifier compiler installation or HB3, nor a self-size-embedded final source compiler. Final native success is verified above; recursive source-matched evidence remains coordinator-owned, and later source edits require delta review.
+
+## Final repair delta
+
+Compared preserved failed-support01/BoxLiteral.lean against the current successful source: the sole change is `open FixedFormulaSubstitution` immediately before `open HistoryRuleSuffix`. No recipe, premise, theorem statement or proof-body step changed. Current code already includes that name-resolution repair in the semantic review. No compiler was invoked by the reviewer.

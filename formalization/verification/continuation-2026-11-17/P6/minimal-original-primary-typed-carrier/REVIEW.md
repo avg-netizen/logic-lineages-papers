@@ -1,0 +1,9 @@
+# Independent static review: HELD relocation alternative
+
+All ten complete declaration regions independently compared from actual source files, not just the supplied equality flags. Original/new whole-file hashes, region hashes, embedded texts and original start lines match. No declarations omitted. After reversing the explicit namespace map and normalizing qualified sibling references, each entire declaration region is byte-identical. Imports alone select narrower unchanged AST providers or the reviewed fresh siblings. No Program branch, input ordering, defaults, recursion, fuel, type signature or value specification changed.
+
+Targets and ComparatorGate declaration regions are identical to the held original package after only namespace and explicit concrete Candidates reference mapping. H/G, arbitrary unchanged B, seed admission, actual primary graph, output membership and same-parameter target admission remain exact. No generic Q, extra target-success premise or accepted-old/new-equivalence claim. Gate is a literal expanded iff with Iff.rfl and audit.
+
+Independently traversed fresh ComparatorGate imports: 3,718 local source modules, 3,767 module names including external providers. No CrossIntroInductionSyntaxProof module is reachable. All fourteen proposed pins match actual files. This is static source comparison, not successful elaboration or a resource guarantee.
+
+Coordinator has HELD the relocation alternative to prioritize an authorized direct proof implementation refactor of the original memory-heavy helper, preserving frozen comparator statements. Therefore this review does not start or release a native gate, does not claim original target acceptance, and does not authorize the proposed later filter-proof relocation. Any such relocation needs its own full manifest and review. Preserve this packet as the audited alternative; old frozen sources and history unchanged by this review.

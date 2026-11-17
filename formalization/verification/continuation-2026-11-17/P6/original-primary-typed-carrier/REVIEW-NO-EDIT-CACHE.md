@@ -1,0 +1,7 @@
+# Independent no-edit cache plan review
+
+Approved plan: retain the original source and resume the exact original comparator through the normal checker/cache validation. No speculative proof refactor or relocated-Q target is needed to address this already-passed dependency. Relocation alternative remains held. This is not a declaration that the primary gate or endpoint passed.
+
+Independently read the actual receipt row and full module log in build-reports/1794913396237278758-6.json. OriginalNumberedEnumerationBranch.CrossIntroInductionSyntaxProof returned 0 in 2.7 seconds; peak process-tree RSS 1,513,412 KiB, under the unchanged 1,536 MiB cap. Receipt heap cap is 2,048 MiB. Current source SHA256 is 4d14598b204d95324beb542ba1721588b44a74c4d56c964731262752d8514411, exactly matching that successful row. Full log audits all six original theorems with only propext and Quot.sound; a harmless unused graph3 simp argument warning is present. The containing diagnostic run later failed elsewhere; only this successful module row is asserted here.
+
+All three frozen OriginalPrimaryTypedCarrier comparator pins independently match current files. Original statement, proof implementation, limits and acceptance history remain untouched. Resume using normal source-matched artifact validation, not manual unverified artifact substitution or a weakened checker profile. Final endpoint still requires its own successful native gate and recursive evidence. Earlier RSS failures remain historical evidence, not refutations or a reason to erase the successful row.
