@@ -1,0 +1,5 @@
+# Independent PairElim syntax review
+
+Approved for coordinator native. Original archive24208fdd304428915f268a5ab1421f48a040ff29a9548af680e31fda15f6b168 and both current pins verified. All six public headers and four other proof bodies independently compared unchanged. Actual diff only adds generic helper import and replaces atRawSubst/matrixWitness proofs with exact specialization.
+
+Generic five-slot matrix is exactly original: roots(out,raw,param) AND member(1,out,node) implies pair-image(raw,param,node). Keeps original five slots including unused sourceChild/targetChild rather than reducing binder arity. Generic pair-image is previously reviewed exact one-binder membership+pairing schema. Actual programs are pairRoots, original contains, InternalPairing.pairing; no abstract semantic supplier replaces them in public theorem. Substitution/witness lemmas use existing opaque syntax proofs; no new premise/oracle, target/AST/cap change. Native must verify definitional specialization. No performance or full-root claim, no reviewer compiler run.

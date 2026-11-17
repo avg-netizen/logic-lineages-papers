@@ -1,6 +1,7 @@
 module
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalHB3V2.ComparatorGate
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalHB3V2.ExistentialSyntax
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalHB3V2.GenericEliminationProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalHB3V2.EliminationProof
@@ -11,17 +12,23 @@ open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.C
 open SixSol20261112.Fuel NamedArithmeticGraph
 open GorbowSubstitution GorbowFormulaSubstitution
 open CurrentPublishedProvabilityIntroduction.SyntaxSupport
+attribute [local irreducible] GorbowPublishedDCB.rho GorbowPublishedDCB.prD
+ GorbowSortedSyntaxCode.formulaCode GorbowBooleanTruth.binaryCodeTerm
 /-- Closed conclusions do not retain either locally bound input witness. -/
 theorem doubleEliminate (U : Sentence → Prop) (A : Formula 2) (B : Sentence)
  (h : Nonempty (Derivation U (.imp A (GorbowPACore.weaken (GorbowPACore.weaken B))))) :
- Nonempty (Derivation U (.imp (.ex (.ex A)) B)) := by
- obtain ⟨hi⟩ := HBQuantifier.existentialElimination U A (GorbowPACore.weaken B) h
- exact HBQuantifier.existentialElimination U (.ex A) B ⟨hi⟩
+ Nonempty (Derivation U (.imp (.ex (.ex A)) B)) := GenericEliminationProof.doubleEliminate U A B h
 
 theorem closedValue {ctx : Nat} (pF : Program 1) (c : Code) (sigma : Sentence) :
  closed (n := ctx) (CurrentPublishedProvabilityIntroduction.PublishedSyntax.argument pF c sigma) =
  LiteralCheckerSuccessBridge.value pF c sigma := by
- exact LiteralCheckerSuccessBridge.LiteralNaturality.valueSubst Fin.elim0 pF c sigma
+ unfold closed renameTerm
+ have he : (fun i : Fin 0 => (Term.var (Fin.elim0 i) : Term ctx)) = Fin.elim0 := by
+  funext i
+  exact Fin.elim0 i
+ rw [he]
+ simpa only [CurrentPublishedProvabilityIntroduction.PublishedSyntax.argument,LiteralCheckerSuccessBridge.value] using
+  (LiteralCheckerSuccessBridge.LiteralNaturality.valueSubst (m := 0) (ctx := ctx) Fin.elim0 pF c sigma)
 
 theorem inputBody (pF : Program 1) (c : Code) (sigma : Sentence) :
  checkerBody (GorbowNamedInternalProvability.checkerTag pF) (Encodable.encode c)
@@ -34,11 +41,11 @@ theorem inputBody (pF : Program 1) (c : Code) (sigma : Sentence) :
 theorem weakenProv {ctx : Nat} (pF : Program 1) (c : Code) (sigma : Sentence) :
  GorbowPACore.weaken (applyProv pF c (LiteralCheckerSuccessBridge.value (ctx := ctx) pF c sigma)) =
  applyProv pF c (LiteralCheckerSuccessBridge.value (ctx := ctx+1) pF c sigma) := by
- unfold GorbowPACore.weaken applyProv
- rw [GorbowFormulaCompositionProof.composition]
- congr 1
- funext i
- exact LiteralCheckerSuccessBridge.LiteralNaturality.valueSubst _ pF c sigma
+ rw [GenericEliminationProof.weakenApply,LiteralCheckerSuccessBridge.LiteralNaturality.valueSubst]
+
+theorem originalValue (pF : Program 1) (c : Code) (sigma : Sentence) :
+ prD pF c sigma = applyProv pF c (LiteralCheckerSuccessBridge.value (ctx := 0) pF c sigma) := by
+ simp only [prD,LiteralCheckerSuccessBridge.value]
 
 theorem assemble (U : Sentence → Prop) (pF : Program 1) (c : Code) (sigma : Sentence)
  (h : Nonempty (Derivation U (.imp
@@ -52,8 +59,7 @@ theorem assemble (U : Sentence → Prop) (pF : Program 1) (c : Code) (sigma : Se
   (prD pF c (prD pF c sigma)) ?_
  · simpa only [← SameSourcePublishedWitness.AlignmentProof.originalSyntax pF c sigma,
     GorbowPublishedLobReduction.hb3] using hd
- · change Nonempty (Derivation U (.imp _ (GorbowPACore.weaken (GorbowPACore.weaken
-    (applyProv pF c (LiteralCheckerSuccessBridge.value (ctx := 0) pF c (prD pF c sigma)))))))
+ · rw [originalValue pF c (prD pF c sigma)]
    rw [weakenProv,weakenProv,inputBody]
    exact h
 

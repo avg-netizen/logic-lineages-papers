@@ -3,6 +3,7 @@ public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCom
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalHB3V2.ExistentialSyntax
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalHB3V2.CoherenceProof
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalHB3V2.GenericTransportProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalHB3V2.GenericAlignmentProof
 public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalHB3V2.TransportProof
@@ -13,6 +14,8 @@ open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.C
 open SixSol20261112.Fuel NamedArithmeticGraph
 open GorbowSubstitution GorbowFormulaSubstitution
 open PrescribedRuntimeEquality HistoryCodec.ArithmeticSupport
+attribute [local irreducible] LiteralCheckerSuccessBridge.value GorbowPublishedDCB.prD GorbowPublishedDCB.rho
+
 /-- Use the verifier half only, with genuine equality of its calls and the
 closed sorted/raw alignment lifted to this context. -/
 theorem acceptedToProv {ctx : Nat} (U : Sentence → Prop) (pF : Program 1) (c : Code)
@@ -41,9 +44,10 @@ theorem liftAlignment (U : Sentence → Prop) (pF : Program 1) (c : Code) (sigma
   (LiteralCheckerSuccessBridge.value (ctx := ctx) pF c (prD pF c sigma))
   (.add (Term.numeral (Encodable.encode (GorbowFormulaPrefixCode.encode (.imp (rho pF c) (prD pF c sigma)))))
    (Term.numeral (Encodable.encode (GorbowFormulaPrefixCode.encode (.imp (rho pF c) (prD pF c sigma)))))))) := by
- obtain ⟨hh⟩ := GorbowDerivationSubstitution.Proof.derivationSubstitution U 0 ctx _ Fin.elim0 h
- simpa only [substituteFormula,substitute,Logic.substNumeral,
-  LiteralCheckerSuccessBridge.LiteralNaturality.valueSubst] using (show Nonempty _ from ⟨hh⟩)
+ have hh := GenericAlignmentProof.lift U (LiteralCheckerSuccessBridge.value (ctx := 0) pF c (prD pF c sigma))
+  (Encodable.encode (GorbowFormulaPrefixCode.encode (.imp (rho pF c) (prD pF c sigma)))) ctx h
+ rw [LiteralCheckerSuccessBridge.LiteralNaturality.valueSubst] at hh
+ exact hh
 
 end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalHB3V2.TransportProof
 #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalHB3V2.TransportProof
