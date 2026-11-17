@@ -1,0 +1,3 @@
+# Numbered structural child factoring review
+
+Approved source-only split. Public branch statement exactly text-identical to archived failed draft. Guard extraction, both child edge cases and strict-less selection block byte-identical in extracted helper; final ChildTransfer invocation unchanged except returning it directly. Caller supplies all identical constructors, guards, pair/edge/environment/BelowRaw premises. Actual head equality, sibling transport and parent reconstruction remain in original branch. No new premise, target change or weakened source obligation. Two current pins recorded, native acceptance separate.

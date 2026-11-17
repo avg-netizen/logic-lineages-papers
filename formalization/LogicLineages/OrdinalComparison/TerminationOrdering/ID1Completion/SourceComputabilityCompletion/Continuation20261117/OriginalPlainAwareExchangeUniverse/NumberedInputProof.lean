@@ -18,9 +18,10 @@ theorem inputs (raw : OTerm alpha) (xs ys : Fin 6 → OTerm alpha)
     (hc : Nonempty (Derivation body Delta (programGraph numberedConstructor raw xs)))
     (he : ∀ i, Nonempty (Derivation body Delta (eqn (ys i) (xs i)))) :
     Nonempty (Derivation body Delta (programGraph numberedConstructor raw ys)) := by
+  unfold programGraph at hc ⊢
   apply graphInputTransport body alpha 6 Delta _ raw xs ys _ hc
   intro i
-  rw [onEquality]
+  rw [InternalSourceInversionSupportProof.onEquality]
   obtain ⟨h⟩ := he i
   exact ⟨symm h⟩
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPlainAwareExchangeUniverse.NumberedInputProof

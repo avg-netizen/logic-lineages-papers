@@ -92,19 +92,20 @@ theorem branch (cons side : Bool) (n : Nat) (arity : Fin n → Nat)
   left (if side then ld else lc) (if side then rd else rc) child window context symbols types henv hchildedge ih hless
  have hrc' : Nonempty (Derivation body Delta (graph3 (constructor cons) right lm
   (if side then lc else rc) (if side then rd else ld))) := by
-  apply graphInputTransport body alpha 3 Delta _ right ![rm,rc,rd]
+  unfold graph3 programGraph at hrc ⊢
+  apply InternalGraphCompositionEqualityProof.graphInputTransport body alpha 3 Delta _ right ![rm,rc,rd]
    ![lm,if side then lc else rc,if side then rd else ld] _ hrc
   intro i
   fin_cases i
-  · rw [onEquality]
+  · rw [InternalSourceInversionSupportProof.onEquality]
     obtain ⟨h⟩ := hmeta
     exact ⟨symm h⟩
-  · rw [onEquality]
+  · rw [InternalSourceInversionSupportProof.onEquality]
     cases side
     · exact ⟨refl _⟩
     · obtain ⟨h⟩ := hsibling
       exact ⟨symm h⟩
-  · rw [onEquality]
+  · rw [InternalSourceInversionSupportProof.onEquality]
     cases side
     · obtain ⟨h⟩ := hsibling
       exact ⟨symm h⟩
