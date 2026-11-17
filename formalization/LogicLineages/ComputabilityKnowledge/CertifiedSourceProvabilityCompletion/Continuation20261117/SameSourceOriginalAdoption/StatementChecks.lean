@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalAdoption.Proof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalAdoption.StatementChecks
+theorem exactTogether : Targets.Together := Proof.together
+theorem exactOriginalSelected : SourceBaseCompletion.SelectedVerifierTargets.SelectedCertifiedPresentation := Proof.originalSelected
+theorem exactOriginalCollapse : CollapseTargets.SourceCollapse := Proof.originalCollapse
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalAdoption.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalAdoption.StatementChecks

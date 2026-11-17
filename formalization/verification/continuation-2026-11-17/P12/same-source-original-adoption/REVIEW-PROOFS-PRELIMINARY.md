@@ -1,0 +1,7 @@
+# Independent exact-original projection proof review
+
+Read complete Proof and StatementChecks. Approved current draft source for native checking. together invokes accepted SameSourceLobCollapse.exactSource exactly once at fixed harmless f=(0=0) : Formula1 and lhs=rhs=0. The explicit pF/q aliases use those exact template parameters and selected underlying witnesses. Both existential results explicitly use identical pF,pR,q,c,tagCK,pCK and identical Actual/Syntax/CodeProgram/RegistryInstall/FixedPointFor witnesses, adding respectively actual D HB2/HB3 or actual selector-uniform collapse. There is no re-selection, no inference of shared witnesses from two unrelated existentials and no local hypothesis promoted to an axiom.
+
+Named originalSelected/originalCollapse and exactOriginalSelected/exactOriginalCollapse explicitly state the unchanged original SelectedCertifiedPresentation and SourceCollapse types. Together is only a convenience conjunction; stronger common provenance is visible in its constructive proof. Original collapse uses actual sourceC installed at chosen tagCK and every selector bound after presentation.
+
+This is the appropriate original-target projection toward paper thm:collapse, pending successful native/axiom gates, recursive source-matched evidence and independent numbered-register reconciliation. It does not project corollary3, selector classification or entire Paper12. No source/target/register modifications by reviewer.
