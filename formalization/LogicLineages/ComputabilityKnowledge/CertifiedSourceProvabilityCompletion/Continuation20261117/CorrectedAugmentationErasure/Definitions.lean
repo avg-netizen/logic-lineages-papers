@@ -6,6 +6,7 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRDefiningEquations GorbowPRChildTags GorbowTheoryProof GorbowPublishedDCB SixSol20261113 List.Vector
 open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
 open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116
 open PrescribedRuntimeCallCongruence PrescribedRuntimeEquality
 /-- Literal two-branch augmentation; no compiler for either child is assumed. -/
 def branches {n : Nat} (p : Program 1) (q : Program n) : Fin 2 → Program 1 :=

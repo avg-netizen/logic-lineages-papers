@@ -44,7 +44,7 @@ theorem consQuery (H : Program 1) (M W : Program 2)
     intro beta j Theta count hj hr
     simp only [graph3Rename,sucRelabel,zRelabel]
     have hn' := renameInto hn j Theta hj
-    simp only [OriginalTypedDecoderTransportLogicalProof.notRename,eqnRelabel] at hn'
+    simp only [A,OriginalTypedDecoderTransportLogicalProof.notRename,eqnRelabel] at hn'
     have hc' := renameInto (withHyp hc A) j Theta hj
     rw [graph2Rename] at hc'
     have ht' := renameInto (withHyp ht A) j Theta hj

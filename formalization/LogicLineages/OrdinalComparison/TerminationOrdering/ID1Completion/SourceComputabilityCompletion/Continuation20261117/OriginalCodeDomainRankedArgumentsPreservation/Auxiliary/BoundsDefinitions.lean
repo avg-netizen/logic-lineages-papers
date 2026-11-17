@@ -17,6 +17,5 @@ def merge : Program 2 := pairOf
   (.composition maximum ![rightOf (.projection 0),rightOf (.projection 1)])
 /-- Original ordered foldr, with encoded (0,0) base. -/
 def collect : Program 1 := InternalRawListRecursion.listRec (constant 0 0) merge
-/-- Root contribution: list constructors contribute zero, numbered contributes
-(1,k), all other admitted constructors (1,0). Actual decoder failure returns0. -/
+
 end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCodeDomainRankedArgumentsPreservation.Auxiliary.BoundsRecombination

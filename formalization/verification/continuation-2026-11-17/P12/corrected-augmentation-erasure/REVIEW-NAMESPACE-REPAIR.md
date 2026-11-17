@@ -1,0 +1,1 @@
+Independent reviewer approved exactly one open Continuation20261116 line added to each Definitions and Targets. All remaining bytes and recipe unchanged. Old source and frozen pins preserved in failed-preflight01. Coordinator verified all twelve refrozen pins before retry.

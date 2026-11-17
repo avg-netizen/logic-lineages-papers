@@ -5,6 +5,7 @@ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityComplet
 open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRDefiningEquations GorbowPRChildTags GorbowTheoryProof GorbowPublishedDCB SixSol20261113 List.Vector
 open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
 open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116
 open PrescribedRuntimeCallCongruence PrescribedRuntimeEquality
 /-- Actual same-source current CORE/Fuel erasure at every installed augment.
 No computation certificate, raw validator, or computed-result equation is a premise.
