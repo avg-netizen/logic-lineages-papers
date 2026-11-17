@@ -1,5 +1,11 @@
 # Current public formalization handoff
 
+## LIVE RELEASE — 2026-11-17 03:15 UTC
+
+User authorizes continuation until **2026-11-17 18:00 UTC** (noon Nov17 UTC-06), superseding the pause below. Stop at that deadline, save and verify final checkpoint, no automatic resume. Keep at least30minute source-first nonforce checkpoints, sole serialized fixed-limit compiler, independent comparator review, original source/AST obligations and standard-only axioms. No main merge, CI/checker/pin changes or private research.
+
+Fresh environment again lacks previous native artifacts/setup. Exact remote pause checkpointabb467e431fad7b5914fa1fda3e5dd4bba2fc2b5 restored; all1639 acceptance-source entries and17 current frozen comparator pins match. Durable supporting868 through acceptance67 and numbered175/2/12 unchanged. Previously interrupted cold rebuild did not finish and is not accepted. All reconstructed mathematical drafts survived in remote. Official pinned setup/cache restoration underway; new checks required. Local checker cutoff explicitly set18:00UTC.
+
 ## PAUSE REQUEST — 2026-11-16 20:52 UTC
 
 The user requests pause after the next checkpoint. This source/status checkpoint is the final authorized continuation checkpoint. After remote verification, coordinator stops the active fixed-limit cold rebuild and all author lanes; no automatic resumption. Durable supporting frontier868 through acceptance67; numbered175checked/2inherited/12pending/189 unchanged. All reconstructed proof drafts and failed variants are already durable; none is newly accepted. Cold rebuild has727validated cached modules plus414new passes observed (1141partial), but no final gate or recursive evidence for recovered packets. Interrupted historical raw receipts/evidence from before first replacement remain unavailable; no fabricated reconstruction. Source comparisons and official setup validation are not full proof or CI claims. Final stop receipt/status will be recorded after the active process is reaped.
