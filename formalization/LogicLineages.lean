@@ -2349,3 +2349,12 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 
 -- P6 common original candidates and membership-equivalent seed pools.
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCommonCandidatePool.StatementChecks
+
+-- P6 exact original raw exchange reversal.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeSymmetry.StatementChecks
+
+-- P6 exact installed original structural edge reversal.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalInstalledEdgeReversal.StatementChecks
+
+-- P6 one-way original primary reroot inclusion.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryRerootInclusion.StatementChecks

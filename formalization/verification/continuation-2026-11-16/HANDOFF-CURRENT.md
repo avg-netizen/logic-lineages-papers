@@ -438,3 +438,28 @@ Supporting902, numbered178/2/9 unchanged. One-way primary inclusion draft can
 use existing arbitrary-count stability and iteration monotonicity, no new
 arithmetic induction or edge symmetry needed. Raw/installed edge reversal drafts
 remain separate, with their exact ArrowClosed scope retained.
+
+### 2026-11-17 15:44:45 UTC remote checkpoint
+
+Verified nonforce leased branch update8d3c7381ab7d35a5d04f99ac0971fc13343e5269,
+treee0b8fbf6005b941ecdc2614aa95aa0ef4565ccae. All71 source pins in Acceptances88–92
+rehash from remote blobs.147 files preserved; no merge/force, raw evidence remains
+local with size/hash records. Next checkpoint by16:14 UTC, hard stop18:00UTC.
+Current next lane: actual original one-way primary reroot inclusion using existing
+iteration stability/monotonicity (no new induction); raw/installed E reversal
+retaining same selected-types ArrowClosed. No completion claims for those drafts.
+
+### 2026-11-17 local Acceptances93–95
+
+93 actual standalone raw exchange reversal with exact both-Code guards and same
+window ArrowClosed. Native1794930732357968774-5, independent4306-source evidence.
+94 actual installed E reversal with only original parameter/context-types graphs,
+ArrowClosed and forward E success; guards/type equality queried/derived internally.
+Native1794930834015596528-5, independent4317-source evidence.
+95 one-way actual primary reroot inclusion, no symmetry/count-equality premise;
+actual pool inclusion and closed expansion, existing symbolic-count monotonicity
+and stability. Native1794931036197409189-5, independent4978-source evidence.
+Supporting905, numbered178/2/9 unchanged. Reverse membership generic invariant
+and exact caller under construction. Final mutual-inclusion coherence frozen and
+statically reviewed; parameter-only type selector helper passed, target-universe
+adapter hit RSS unchanged caps twice and is being factored without theorem changes.

@@ -1,0 +1,55 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.IterationSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.InvariantProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryIteration.RecursionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.IterationProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open SourceComputabilityFormulaSupportProof InternalControlGraphSupportProof
+open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
+open InternalRawListRecursionSyntaxProof InternalGraphCompositionSyntaxProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open InternalBinderTransportProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
+open InternalAdditionLawsProof InternalGraphCompositionFunctionalityProof
+open InternalApplicationCertificateConstructorsSupportProof InternalAcceptanceSupportProof
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalClosedPrograms InternalClosedProgramsBindingProof
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalBetaTotalityProof InternalQuotientComparisonProof
+open TwoSol20261113.CalibratedPrimary.Membership (contains)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Continuation20261114
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+open Iteration IterationSyntaxProof SyntaxProof
+theorem rowApply (E : Program 3) (count pool reached parameter out carrier seed : OrdinaryArithmetic.Term alpha)
+ (hrow : Nonempty (Derivation body Delta (AtCount E count pool reached parameter carrier seed)))
+ (hi : Nonempty (Derivation body Delta (graph4 (PrimaryIteration.iterate E) out count pool reached parameter)))
+ (hall : Nonempty (Derivation body Delta (allAccepted pool carrier seed reached))) :
+ Nonempty (Derivation body Delta (allAccepted pool carrier seed out)) := by
+ obtain ⟨h⟩ := elimination body alpha 1 Delta (matrix E count pool reached parameter carrier seed) (fun _ => emb out) hrow
+ rw [IterationSyntaxProof.matrixWitness] at h
+ obtain ⟨hi⟩ := hi
+ obtain ⟨hall⟩ := hall
+ exact ⟨Derivation.implicationElimination (Derivation.implicationElimination h hi) hall⟩
+theorem zeroCore (E : Program 3) (pool reached parameter out carrier seed : OrdinaryArithmetic.Term alpha)
+ (hi : Nonempty (Derivation body Delta (graph4 (PrimaryIteration.iterate E) out z pool reached parameter)))
+ (hall : Nonempty (Derivation body Delta (allAccepted pool carrier seed reached))) :
+ Nonempty (Derivation body Delta (allAccepted pool carrier seed out)) := by
+ have he := valueUnique (PrimaryIteration.iterate E) out reached ![z,pool,reached,parameter] hi
+   (PrimaryIteration.RecursionProof.zeroValue E pool reached parameter)
+ apply InvariantProof.introduce pool carrier seed out
+ intro beta j Theta x hj hm
+ have he' := renameInto he j Theta hj
+ rw [eqnRelabel] at he'
+ have hall' := renameInto hall j Theta hj
+ rw [allAcceptedRename] at hall'
+ have hm' := headTransport contains (numeral 1) (out.relabel j) (reached.relabel j) (Fin.cons x Fin.elim0) he' hm
+ exact InvariantProof.eliminate (pool.relabel j) (carrier.relabel j) (seed.relabel j) (reached.relabel j) x hall' hm'
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.IterationProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.IterationProof

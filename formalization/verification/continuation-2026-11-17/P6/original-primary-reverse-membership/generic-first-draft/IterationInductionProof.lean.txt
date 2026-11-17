@@ -1,0 +1,52 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.IterationRowsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.IterationProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open SourceComputabilityFormulaSupportProof InternalControlGraphSupportProof
+open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
+open InternalRawListRecursionSyntaxProof InternalGraphCompositionSyntaxProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open InternalBinderTransportProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
+open InternalAdditionLawsProof InternalGraphCompositionFunctionalityProof
+open InternalApplicationCertificateConstructorsSupportProof InternalAcceptanceSupportProof
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalClosedPrograms InternalClosedProgramsBindingProof
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalBetaTotalityProof InternalQuotientComparisonProof
+open TwoSol20261113.CalibratedPrimary.Membership (contains)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Continuation20261114
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+open Iteration IterationSyntaxProof SyntaxProof
+theorem allCounts (E : Program 3) (count pool reached parameter carrier seed : OTerm alpha)
+ (hback : Nonempty (Derivation body Delta (backClosed E pool carrier parameter))) :
+ Nonempty (Derivation body Delta (AtCount E count pool reached parameter carrier seed)) := by
+ let k : OTerm (alpha ⊕ Fin 1) := .var (.inr 0)
+ let theta := AtCount E k (pool.relabel Sum.inl) (reached.relabel Sum.inl)
+   (parameter.relabel Sum.inl) (carrier.relabel Sum.inl) (seed.relabel Sum.inl)
+ have hz : Nonempty (Derivation body Delta (instantiate theta (emb z))) := by
+  simpa only [theta,k,instantiate,bindEmbedding,atCountSubst,varBind,liftBind] using
+   (rowZero (body := body) (Delta := Delta) E pool reached parameter carrier seed)
+ have hs : Nonempty (Derivation body (theta :: Delta.map weaken) (successorInstance theta)) := by
+  let D := theta :: Delta.map weaken
+  have hj : ∀ p ∈ Delta, p.relabel (Sum.inl : alpha → alpha ⊕ Fin 1) ∈ D := by
+   intro p hp; exact List.mem_cons_of_mem _ (List.mem_map.mpr ⟨p,hp,rfl⟩)
+  have hback' := renameInto hback Sum.inl D hj
+  rw [backClosedRename] at hback'
+  have h := rowSuccessor E k (pool.relabel Sum.inl) (reached.relabel Sum.inl)
+    (parameter.relabel Sum.inl) (carrier.relabel Sum.inl) (seed.relabel Sum.inl) hback' ⟨Derivation.hypothesis List.mem_cons_self⟩
+  simpa only [theta,k,successorInstance,nextEmbedding,atCountSubst,nextTerm,Term.subst,Sum.elim_inr,nextLift] using h
+ obtain ⟨hz⟩ := hz
+ obtain ⟨hs⟩ := hs
+ have h := Derivation.universalElimination (emb count) (natInduction theta hz hs)
+ simpa only [theta,k,instantiate,bindEmbedding,atCountSubst,varBind,liftBind] using Nonempty.intro h
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.IterationProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.IterationProof

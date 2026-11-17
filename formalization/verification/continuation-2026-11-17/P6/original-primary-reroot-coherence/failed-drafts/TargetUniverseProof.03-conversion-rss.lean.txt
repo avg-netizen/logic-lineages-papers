@@ -1,0 +1,40 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryRerootCoherence.Targets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryRerootInclusion.AdmissionProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryUniverseClosure.Proof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryRerootCoherence.UniverseConversionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryRerootCoherence.TargetUniverseProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalApplicationCertificateConstructorsSupportProof
+open InternalControlGraphSupportProof
+open SourceComputabilityFormulaSupportProof (numeral)
+open Continuation20261114 Continuation20261115 Continuation20261116
+open InternalApplicationStepPeelSupportProof (andIntro)
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+attribute [local irreducible] OriginalConcreteHeadSignature.signature OriginalCandidates.candidates OriginalDecodedContextValidity.contextGuard SeededPrimaryPool.pool
+theorem accepted (n : Nat) (arity : Fin n → Nat)
+    (seed parameter typ raw context gamma types out candidate targetOut targetType targetRaw : OTerm alpha)
+    (q : OriginalPrimaryRerootInclusion.Request n arity body Delta seed parameter typ raw context gamma types out candidate targetOut)
+    (hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing candidate targetType targetRaw))) :
+    Nonempty (Derivation body Delta
+      (OriginalUniverseDecoderInternalAcceptance.TermAccepted (OriginalConcreteHeadSignature.signature n arity)
+        (OriginalUniverseDomainCoverage.member n) (OriginalGuardedHeadSourceCoverage.window n arity)
+        targetType targetRaw gamma context)) := by
+  have had := (OriginalPrimaryRerootInclusion.AdmissionProof.both n arity seed parameter typ raw context gamma types out candidate targetOut q).1
+  have hsource := UniverseConversionProof.toTransport (OriginalConcreteHeadSignature.signature n arity)
+    (OriginalUniverseDomainCoverage.member n) (OriginalGuardedHeadSourceCoverage.window n arity)
+    typ raw gamma context q.accepted
+  have htarget := OriginalPrimaryUniverseClosure.Proof.primaryUniverseClosure n arity body alpha Delta
+    seed parameter out candidate typ raw targetType targetRaw context gamma
+    q.seedPair hp q.parameterPair had q.primary q.member hsource
+  exact UniverseConversionProof.toInternal (OriginalConcreteHeadSignature.signature n arity)
+    (OriginalUniverseDomainCoverage.member n) (OriginalGuardedHeadSourceCoverage.window n arity)
+    targetType targetRaw gamma context htarget
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryRerootCoherence.TargetUniverseProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryRerootCoherence.TargetUniverseProof

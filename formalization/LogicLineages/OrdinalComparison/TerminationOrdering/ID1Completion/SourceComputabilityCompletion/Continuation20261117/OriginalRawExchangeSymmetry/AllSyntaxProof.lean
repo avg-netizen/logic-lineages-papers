@@ -15,6 +15,7 @@ open Continuation20261114 Continuation20261115 Continuation20261116
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
 attribute [local irreducible] programGraph
 open Definitions
+open InternalAdditionLawsProof (impSubst)
 open OriginalExchangeBoundsPreservation.ExchangeInductionSyntaxProof (graphOneSubst graphTwoSubst)
 open InternalBinderTransportProof InternalTermSubstitutionProof
 open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof

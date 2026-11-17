@@ -28,7 +28,7 @@ theorem predicateInstantiate (n : Nat) (arity : Fin n → Nat) (raw : OTerm alph
   rw [predicate,instantiate,bindEmbedding]
   change (allSchema _ _ _).subst (fun a => emb (Sum.elim Term.var (fun _ => raw) a)) = _
   rw [allSubst]
-  simp only [varBind]
+  rfl
 @[simp] theorem belowRawRename (n : Nat) (arity : Fin n → Nat) (raw : OTerm alpha) {beta : Type} (j : alpha → beta) :
     (BelowRaw n arity raw).relabel j = BelowRaw n arity (raw.relabel j) := by
   unfold BelowRaw
