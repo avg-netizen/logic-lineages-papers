@@ -76,3 +76,68 @@ Its source map and 34-file freeze are under paper16 as
 `LANE-A-OPERATOR-SOURCE-MAP.md` and `LANE-A-OPERATOR-FROZEN.json`.
 Next are actual family encoding, endomap coherence and stabilized bottom
 iteration at the literal ordinary-input inventory.
+
+## 2026-11-18 20:09 UTC — Paper16 lem:operator numbered gate passed
+
+`MarkedConstructorOperatorChecks.exact_Operator` passed core gate
+`1795032562986279741-56`. The 170-module recursive evidence, five
+exact axiom audits and 37 frozen hashes are in [OPERATOR-EVIDENCE.json](OPERATOR-EVIDENCE.json),
+SHA-256 `3b1ca4f7653940f81d955fce090e436d0c6b2cb608efa8c4a961667afcb70f3e`.
+The numbered operator uses the literal ordinary-input inventory, discharges
+prefix closure, encodes the actual new marked value at every valid family
+coordinate, preserves the coherent carrier, and is monotone on all retained
+families. Bottom iteration stabilizes at the explicit finite bound and
+is below every retained fixed point.
+
+The source lookup calibration companion is frozen in
+`LANE-A-OPERATOR-LOOKUP-FROZEN.json` and is undergoing its own gate. It
+checks concrete source-inventory lookup and validity for Select and Copy/Stat,
+and the real canonical observation extension, opened observation and output
+lookup for FAbs. It uses the same operator definitions and source inventory.
+
+## 2026-11-18 20:12 UTC — Paper16 lem:operator READY-FOR-ROOT-REVIEW
+
+Final core union receipt `1795032756929340478-76` passed the numbered
+`exact_Operator`, `exact_SourceLookup`, and all twelve frozen constructor
+aliases. [OPERATOR-FINAL-EVIDENCE.json](OPERATOR-FINAL-EVIDENCE.json) reconciles
+197 current source-matched modules, 14 standard-only axiom audits and 37
+frozen hashes. Its SHA-256 is
+`3e6cdf3774a9dc306c5845133619d70c6cd1a8c50bb8a26d3f292c85a6a61f20`.
+
+The complete operator packet consists of the frozen
+`MarkedConstructorOperator` and `MarkedConstructorOperatorTargets`, the leaf
+modules `MarkedConstructorInventoryProof`, `MarkedConstructorEncodingProof`,
+`MarkedConstructorEndomapProof`, `MarkedConstructorIterationProof`,
+`MarkedConstructorStabilizationProof` and `MarkedConstructorOperatorChecks`,
+and the source-lookup companion. The companion is
+`MarkedConstructorSourceLookupTargets`, `MarkedConstructorSourceTupleProof`,
+`MarkedConstructorCanonicalOpeningProof`, `MarkedConstructorSourceOpeningProof`
+and `MarkedConstructorSourceLookupChecks`. It derives same-owner retyped
+full tuples from the literal head/type inventory, retained owner lookup for
+every observed target head argument, and the canonical FAbs port extension
+and actual opened observation with a retained output. All preservation and
+stabilization laws range over the full retained coherent family carrier.
+
+The compiled packet awaits independent root review. Failed draft sources are
+preserved under receipt-named paths in `paper16/failed/` and in their original
+locations for the inherited drafts. Register adoption remains with root.
+
+The next target is `lem:structural-interpretation`. First freeze the actual
+ordinary-head, lambda, and protected original-spine helper equations with
+the constructor-first builder. Prove the mutual Expr/Args/nonempty helper
+recursion on original syntax, including protection reset at an empty residual
+and the one full application on an unprotected supplied value. Then prove value
+validity, weakening, capture-avoiding substitution and concrete full-call
+correspondence, including original undefined cases.
+
+## 2026-11-18 20:14 UTC — Operator acceptance-schema evidence
+
+[LANE-A-OPERATOR-EVIDENCE.json](../../new-paper-set-2026-11-18/paper16/LANE-A-OPERATOR-EVIDENCE.json)
+is the acceptance-schema export for receipt `1795032756929340478-76`.
+SHA-256 `3be74618feb6ce254ed4518b68e552b52123ff35f64a4483667d9a9adf4c1a33`.
+It uses top-level `modules` records with `source_sha256` and `outputs`, and
+also pins each native receipt and proof log. This export covers all twelve
+builder aliases, so it supersedes separate acceptance-schema exports of the
+constructor tests, validity, and monotonicity. The original A/ evidence files
+are retained. Future ready packets will include this export beside the
+original evidence and will continue directly to the next proof.

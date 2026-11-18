@@ -1,0 +1,133 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerTypedProof.lean:24:25: error: unsolved goals
+case equation
+Γ✝ Γ : List Ty
+a b : Input Γ Ty.ground
+q : Plan Γ
+ih :
+  runState (List.map SyntaxCode.typeCode Γ) (encodePlan q) =
+    some (List.map SyntaxCode.typeCode Γ, encodeResult (compile q))
+⊢ ((CheckedRenaming.rename (List.map SyntaxCode.typeCode (compile q).context)
+          (Operations.renamingCode fun {σ} => (compile q).embedding) (encode ⟨Γ, ⟨Ty.ground, a⟩⟩)).bind
+      fun a' =>
+      (CheckedRenaming.rename (List.map SyntaxCode.typeCode (compile q).context)
+            (Operations.renamingCode fun {σ} => (compile q).embedding) (encode ⟨Γ, ⟨Ty.ground, b⟩⟩)).bind
+        fun b' =>
+        some
+          (List.map SyntaxCode.typeCode Γ, List.map SyntaxCode.typeCode (compile q).context,
+            Operations.renamingCode fun {σ} => (compile q).embedding,
+            (a', b') ::
+              List.map
+                (fun e =>
+                  (encode ⟨(compile q).context, ⟨Ty.ground, e.1⟩⟩, encode ⟨(compile q).context, ⟨Ty.ground, e.2⟩⟩))
+                (compile q).forest)) =
+    some
+      (List.map SyntaxCode.typeCode Γ, List.map SyntaxCode.typeCode (compile q).context,
+        Operations.renamingCode fun {σ} => (compile q).embedding,
+        (encode ⟨(compile q).context, ⟨Ty.ground, ScopedDAG.renameInput (fun {σ} => (compile q).embedding) a⟩⟩,
+            encode ⟨(compile q).context, ⟨Ty.ground, ScopedDAG.renameInput (fun {σ} => (compile q).embedding) b⟩⟩) ::
+          List.map
+            (fun e => (encode ⟨(compile q).context, ⟨Ty.ground, e.1⟩⟩, encode ⟨(compile q).context, ⟨Ty.ground, e.2⟩⟩))
+            (compile q).forest)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerTypedProof.lean:28:19: error: unsolved goals
+case gate
+Γ✝ Γ : List Ty
+g : PrimitiveLowering.Gate Γ
+q : Plan Γ
+ih :
+  runState (List.map SyntaxCode.typeCode Γ) (encodePlan q) =
+    some (List.map SyntaxCode.typeCode Γ, encodeResult (compile q))
+hg : PrimitiveGate.gateGuard (List.map SyntaxCode.typeCode Γ) (PrimitiveGate.encodeGate g) = true
+⊢ ((PrimitiveGate.compile (List.map SyntaxCode.typeCode (compile q).context)
+          (PrimitiveGate.encodeGate (gateRename (fun {σ} => (compile q).embedding) g))).bind
+      fun fresh =>
+      some
+        (List.map SyntaxCode.typeCode Γ, PrimitiveGate.blockContext (List.map SyntaxCode.typeCode (compile q).context),
+          List.map (fun i => i + 9) (Operations.renamingCode fun {σ} => (compile q).embedding),
+          fresh ++
+            shiftForest (List.map SyntaxCode.typeCode (compile q).context)
+              (List.map
+                (fun e =>
+                  (encode ⟨(compile q).context, ⟨Ty.ground, e.1⟩⟩, encode ⟨(compile q).context, ⟨Ty.ground, e.2⟩⟩))
+                (compile q).forest))) =
+    some
+      (List.map SyntaxCode.typeCode Γ,
+        SyntaxCode.typeCode Ty.ground ::
+          SyntaxCode.typeCode Ty.ground ::
+            SyntaxCode.typeCode Ty.ground ::
+              SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode (compile q).context,
+        List.map (fun i => i + 9) (Operations.renamingCode fun {σ} => (compile q).embedding),
+        List.map
+          (fun e =>
+            (encode ⟨PrimitiveLowering.Block (compile q).context, ⟨Ty.ground, e.1⟩⟩,
+              encode ⟨PrimitiveLowering.Block (compile q).context, ⟨Ty.ground, e.2⟩⟩))
+          (PrimitiveLowering.forest (gateRename (fun {σ} => (compile q).embedding) g) ++
+            List.map
+              (fun e =>
+                (ScopedDAG.renameInput (fun {σ} => PrimitiveLowering.shift 9) e.1,
+                  ScopedDAG.renameInput (fun {σ} => PrimitiveLowering.shift 9) e.2))
+              (compile q).forest))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerTypedProof.lean:34:25: error: unsolved goals
+case existsGround
+Γ✝ Γ : List Ty
+q : Plan (Ty.ground :: Γ)
+ih :
+  runState (List.map SyntaxCode.typeCode (Ty.ground :: Γ)) (encodePlan q) =
+    some (List.map SyntaxCode.typeCode (Ty.ground :: Γ), encodeResult (compile q))
+⊢ ((runState (0 :: List.map SyntaxCode.typeCode Γ) (encodePlan q)).bind fun a =>
+      match a.1 with
+      | 0 :: tail => some (tail, a.2.1, a.2.2.1.tail, a.2.2.2)
+      | x => none) =
+    some
+      (List.map SyntaxCode.typeCode Γ, List.map SyntaxCode.typeCode (compile q).context,
+        Operations.renamingCode fun {σ} x => (compile q).embedding x.there, encodeForest (compile q).forest)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerTypedProof.lean:26:61: warning: This simp argument is unused:
+  CheckedRenaming.typed_exactness
+
+Hint: Omit it from the simp argument list.
+  simp [compileStep, encodeResult, equation_guard_typed, C̵h̵e̵c̵k̵e̵d̵R̵e̵n̵a̵m̵i̵n̵g̵.̵t̵y̵p̵e̵d̵_̵e̵x̵a̵c̵t̵n̵e̵s̵s̵,̵compile, encodeForest]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerTypedProof.lean:31:61: warning: This simp argument is unused:
+  PrimitiveGate.forest_exactness
+
+Hint: Omit it from the simp argument list.
+  simp [compileStep, encodeResult, hg, rename_gate_code, P̵r̵i̵m̵i̵t̵i̵v̵e̵G̵a̵t̵e̵.̵f̵o̵r̵e̵s̵t̵_̵e̵x̵a̵c̵t̵n̵e̵s̵s̵,̵compile,
+          PrimitiveGate.block_context_code, shifted_embedding, shift_forest_code, encodeForest]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerTypedProof.lean:32:17: warning: This simp argument is unused:
+  PrimitiveGate.block_context_code
+
+Hint: Omit it from the simp argument list.
+  simp [compileStep, encodeResult, hg, rename_gate_code, PrimitiveGate.forest_exactness,
+          compile, P̵r̵i̵m̵i̵t̵i̵v̵e̵G̵a̵t̵e̵.̵b̵l̵o̵c̵k̵_̵c̵o̵n̵t̵e̵x̵t̵_̵c̵o̵d̵e̵,̵ ̵shifted_embedding, shift_forest_code, encodeForest]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerTypedProof.lean:32:70: warning: This simp argument is unused:
+  shift_forest_code
+
+Hint: Omit it from the simp argument list.
+  simp [compileStep, encodeResult, hg, rename_gate_code, PrimitiveGate.forest_exactness,
+          compile, PrimitiveGate.block_context_code, shifted_embedding, s̵h̵i̵f̵t̵_̵f̵o̵r̵es̵t̵_̵c̵o̵d̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵e̵ncodeForest]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerTypedProof.lean:37:12: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp [i̵h̵,̵ ̵compileStep, encodeResult, compile, renaming_tail, SyntaxCode.typeCode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerTypedProof.lean:37:52: warning: This simp argument is unused:
+  renaming_tail
+
+Hint: Omit it from the simp argument list.
+  simp [ih, compileStep, encodeResult, compile, r̵e̵n̵a̵m̵i̵n̵g̵_̵t̵a̵i̵l̵,̵ ̵SyntaxCode.typeCode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

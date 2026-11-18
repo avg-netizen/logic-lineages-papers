@@ -36,9 +36,9 @@ theorem shifted_embedding {Γ Θ : List Ty} (r : Renaming Γ Θ) :
 
 theorem shift_table (Γ : List Ty) :
     shiftTable (Γ.map SyntaxCode.typeCode) = renamingCode (shift 9 (Γ := Γ)) := by
-  rw [show shift 9 (Γ := Γ) = (fun x => shift 9 ((fun y => y) x)) from rfl, shifted_embedding,
-    identity_table]
-  simp [shiftTable]
+  have hs := shifted_embedding (fun {τ} (x : Variable Γ τ) => x)
+  rw [identity_table] at hs
+  simpa only [shiftTable, List.length_map] using hs.symm
 
 theorem renaming_tail {Γ Θ : List Ty} (r : Renaming (.ground :: Γ) Θ) :
     (renamingCode r).tail = renamingCode (fun x => r (Variable.there x)) := rfl
@@ -48,11 +48,12 @@ theorem rename_port_code {Γ Θ : List Ty} (r : Renaming Γ Θ) (p : Port Γ) :
   cases p with
   | zero => rfl
   | var x =>
-      simp [renamePortRaw, encodePort, portRename, Operations.renaming_lookup]
+      simp only [renamePortRaw, encodePort, portRename, Nat.add_one_ne_zero, if_false,
+        Nat.add_sub_cancel, Operations.renaming_lookup]
 
 theorem rename_gate_code {Γ Θ : List Ty} (r : Renaming Γ Θ) (g : Gate Γ) :
     renameGateRaw (renamingCode r) (encodeGate g) = encodeGate (gateRename r g) := by
-  cases g <;> simp [renameGateRaw, encodeGate, gateRename, rename_port_code, renamePortRaw]
+  cases g <;> simp only [renameGateRaw, encodeGate, gateRename, rename_port_code] <;> rfl
 
 theorem shift_forest_code {Γ : List Ty} (es : List (Input Γ .ground × Input Γ .ground)) :
     shiftForest (Γ.map SyntaxCode.typeCode) (RawPrimitiveGateTargets.encodeForest es) =

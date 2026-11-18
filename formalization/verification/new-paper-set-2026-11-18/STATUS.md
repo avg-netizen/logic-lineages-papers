@@ -1,10 +1,16 @@
 # Current comparison formalization status
 
-New-paper register: **122 checked, 45 pending / 167**. Historical register:
+New-paper register: **123 checked, 44 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper16 `lem:operator`: complete monotone endomap of the retained coherent
+  families at the literal ordinary-input inventory, explicit finite
+  stabilization from bottom and leastness among retained fixed points
+  (packet383, local continuation; all twelve builder contracts and the
+  source-lookup companion in the same 197-module gate).
 
 - Paper18 `u:thm:adjacent`: complete cross-mass strict-input separation
   with exact threshold and actual packed-state/norm accounting.
@@ -516,3 +522,15 @@ Current19 `lem:sort` is checked after fresh 246-module evidence and independent 
 ### Complete ranked row cancellation (269)
 
 Current18 `m:lem:row` is checked after fresh 548-module evidence and independent final. Actual stack/rank termination, current-item sign bounds, numeric domains and shared-valuation family correlations are preserved. QE and decision remain separate. Composite eraser270 is generic-control/all-policy supporting work only.
+
+Local three-party continuation (18 November, from 19:40 UTC; see
+../local-two-sol-2026-11-18/WORKLOG.md). Paper19: derived detectors/aggregate/
+wrappers (packet381, 156 modules) and checked renaming with exact finite table
+acceptance (packet382, 147 modules) are checked supporting shared-DAG
+operations; the full Plan compiler and `thm:compiler` remain pending. Paper16:
+`lem:operator` is checked (packet383). Paper17: unverified drafts of the
+unchanged-control seeded compiler, seeded system, single query and
+`cor:standard-functional-hardness` comparator exist; none is accepted. Packets
+381-383 were compiled on the local host, so their evidence paths are local;
+reconcile_current_acceptance.py is host-bound and was not rerun over the 380
+earlier remote-compiled packets.

@@ -9,3 +9,8 @@
   - Lane B paper19: 01a1f031-ceb1-7dd2-bba6-f8072b983d68 (logs/B-session-01.out)
   - Resume: codex exec resume <id> -m gpt-6.2-sol -c model_reasoning_effort=high -c sandbox_mode='"workspace-write"' "<msg>" < /dev/null
 - Lane C (root): papers 17/18/20.
+- 20:13 UTC: user approved removing /tmp/apks-transfer-20261115.tar (2.9 GB in RAM-backed /tmp); available memory 5.0 -> 6.6 GB, 2.2 GB of zram swap freed.
+- 20:14 UTC: Lane A session 01 returned (lem:operator gate). Resumed same session (logs/A-session-02.out) toward lem:structural-interpretation and thm:adequacy; told to keep going past numbered gates and to write accepted-schema evidence under paper16/.
+- Root reviews: packets 381 (paper19 derived composition), 382 (paper19 checked renaming), 383 (paper16 lem:operator, numbered). Each: pins recomputed, compiler-free evidence reproduced JSON-identical, comparator read against source. Register 123 checked / 44 pending.
+- reconcile_current_acceptance.py NOT rerun: it checks object hashes at the remote sandbox's absolute paths for packets 1-380 and would report drift on this host.
+- Push to origin was denied by the session permission layer; commits are local only until the user approves a push.

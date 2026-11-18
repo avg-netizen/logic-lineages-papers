@@ -54,14 +54,25 @@ theorem selectSuccess (S : Signature) (s t : Expr) (σ τ : Ty)
   obtain ⟨xs,hxs,hv⟩ := ownerTupleSuccess E heads M p hm hp ds (hc a.1 htype ds υ hpre).2
   exact ⟨xs,hxs,hv,StructuralFullActionProof.sound E a.1 p.2.2.1 a.2 ds υ xs hp.2.2.1 hac hpre hv⟩
 
+theorem rootSupport (q : Expr) : q.type ∈ auxiliarySupport q := by
+  cases q with
+  | free σ x => exact DecisionSourceBasicProof.subtypeSelf σ
+  | bound σ i => exact DecisionSourceBasicProof.subtypeSelf σ
+  | lam σ body => exact List.mem_append_left _ (List.mem_append_left _
+      (DecisionSourceBasicProof.subtypeSelf (.arrow σ body.type)))
+  | head f bs => exact List.mem_append_left _ (List.mem_append_left _
+      (DecisionSourceBasicProof.subtypeSelf f.result))
+  | marked f τ bs es => exact List.mem_append_left _ (List.mem_append_left _
+      (List.mem_append_right _ (DecisionSourceBasicProof.subtypeSelf τ)))
+
 theorem argumentSupport (ts : Args) (u : Expr) (hu : u ∈ MarkedConstructorTests.terms ts) :
     u.type ∈ auxiliaryArgs ts := by
-  induction ts with
+  cases ts with
   | nil => cases hu
-  | cons q ts ih =>
+  | cons q ts =>
     rw [MarkedConstructorTests.terms,List.mem_cons] at hu
     rcases hu with rfl | hu
-    · exact List.mem_append_left _ (DecisionSourceBasicProof.rootType _ _ _ _ _ (fun α hα => hα, by simp, by simp))
-    · exact List.mem_append_right _ (ih hu)
+    · exact List.mem_append_left _ (rootSupport _)
+    · exact List.mem_append_right _ (argumentSupport ts u hu)
 
 end LogicLineages.PersistentMarking.MarkedConstructorSourceTupleProof

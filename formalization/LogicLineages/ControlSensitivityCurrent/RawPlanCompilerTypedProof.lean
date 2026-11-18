@@ -23,17 +23,23 @@ theorem typed_exactness : RawPlanCompilerTargets.TypedExactness := by
       simp [encodePlan, runState, endContext, compile, encodeResult, identity_table, encodeForest]
   | @equation Γ a b q ih =>
       simp only [encodePlan, run_state_cons, pushContext, ih, Option.bind_some]
-      simp [compileStep, encodeResult, equation_guard_typed, CheckedRenaming.typed_exactness,
-        compile, encodeForest]
+      have ha := CheckedRenaming.typed_exactness Γ (compile q).context .ground (compile q).embedding a
+      have hb := CheckedRenaming.typed_exactness Γ (compile q).context .ground (compile q).embedding b
+      simp only [compileStep, encodeResult, equation_guard_typed, Bool.not_true, Bool.false_eq_true,
+        ite_false, ha, hb]
+      rfl
   | @gate Γ g q ih =>
       have hg := (PrimitiveGate.gate_exactness Γ _).mpr ⟨g,rfl⟩
       simp only [encodePlan, run_state_cons, pushContext, ih, Option.bind_some]
-      simp [compileStep, encodeResult, hg, rename_gate_code, PrimitiveGate.forest_exactness,
-        compile, PrimitiveGate.block_context_code, shifted_embedding, shift_forest_code,
-        encodeForest]
+      have hw := PrimitiveGate.forest_exactness (compile q).context (gateRename (compile q).embedding g)
+      simp only [compileStep, encodeResult, hg, Bool.not_true, Bool.false_eq_true, ite_false,
+        rename_gate_code, hw, shift_forest_code, compile,
+        PrimitiveGate.block_context_code, shifted_embedding]
+      simp only [encodeForest, List.map_append] <;> rfl
   | @existsGround Γ q ih =>
       simp only [encodePlan, run_state_cons, pushContext]
       change (runState ((Ty.ground :: Γ).map SyntaxCode.typeCode) (encodePlan q)).bind _ = _
-      simp [ih, compileStep, encodeResult, compile, renaming_tail, SyntaxCode.typeCode]
+      rw [ih]
+      rfl
 
 end LogicLineages.ControlSensitivityCurrent.RawSourceDAG.PlanCompiler

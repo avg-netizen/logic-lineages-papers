@@ -1,0 +1,70 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerTypedProof.lean:31:19: error: unsolved goals
+case gate
+Γ✝ Γ : List Ty
+g : PrimitiveLowering.Gate Γ
+q : Plan Γ
+ih :
+  runState (List.map SyntaxCode.typeCode Γ) (encodePlan q) =
+    some (List.map SyntaxCode.typeCode Γ, encodeResult (compile q))
+hg : PrimitiveGate.gateGuard (List.map SyntaxCode.typeCode Γ) (PrimitiveGate.encodeGate g) = true
+hw :
+  PrimitiveGate.compile (List.map SyntaxCode.typeCode (compile q).context)
+      (PrimitiveGate.encodeGate (gateRename (fun {σ} => (compile q).embedding) g)) =
+    some (encodeForest (PrimitiveLowering.forest (gateRename (fun {σ} => (compile q).embedding) g)))
+⊢ (do
+      let fresh ←
+        some
+            (List.map
+              (fun e =>
+                (encode ⟨PrimitiveLowering.Block (compile q).context, ⟨Ty.ground, e.1⟩⟩,
+                  encode ⟨PrimitiveLowering.Block (compile q).context, ⟨Ty.ground, e.2⟩⟩))
+              (PrimitiveLowering.forest (gateRename (fun {σ} => (compile q).embedding) g)))
+      pure
+          (List.map SyntaxCode.typeCode Γ,
+            PrimitiveGate.blockContext (List.map SyntaxCode.typeCode (compile q).context),
+            List.map (fun i => i + 9) (Operations.renamingCode fun {σ} => (compile q).embedding),
+            fresh ++
+              List.map
+                (fun e =>
+                  (encode ⟨List.replicate 9 Ty.ground ++ (compile q).context, ⟨Ty.ground, e.1⟩⟩,
+                    encode ⟨List.replicate 9 Ty.ground ++ (compile q).context, ⟨Ty.ground, e.2⟩⟩))
+                (List.map
+                  (fun e =>
+                    (ScopedDAG.renameInput (fun {σ} => PrimitiveLowering.shift 9) e.1,
+                      ScopedDAG.renameInput (fun {σ} => PrimitiveLowering.shift 9) e.2))
+                  (compile q).forest))) =
+    some
+      (List.map SyntaxCode.typeCode Γ, PrimitiveGate.blockContext (List.map SyntaxCode.typeCode (compile q).context),
+        List.map (fun i => i + 9) (Operations.renamingCode fun {σ} => (compile q).embedding),
+        List.map
+            (fun e =>
+              (encode ⟨PrimitiveLowering.Block (compile q).context, ⟨Ty.ground, e.1⟩⟩,
+                encode ⟨PrimitiveLowering.Block (compile q).context, ⟨Ty.ground, e.2⟩⟩))
+            (PrimitiveLowering.forest (gateRename (fun {σ} => (compile q).embedding) g)) ++
+          List.map
+            (fun e =>
+              (encode ⟨PrimitiveLowering.Block (compile q).context, ⟨Ty.ground, e.1⟩⟩,
+                encode ⟨PrimitiveLowering.Block (compile q).context, ⟨Ty.ground, e.2⟩⟩))
+            (List.map
+              (fun e =>
+                (ScopedDAG.renameInput (fun {σ} => PrimitiveLowering.shift 9) e.1,
+                  ScopedDAG.renameInput (fun {σ} => PrimitiveLowering.shift 9) e.2))
+              (compile q).forest))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerTypedProof.lean:29:27: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only [compileStep, encodeResult, equation_guard_typed, Bool.not_true, Bool.false_eq_true,
+          ite_false, ha, hb,̵ ̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerTypedProof.lean:36:30: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only [compileStep, encodeResult, hg, Bool.not_true, Bool.false_eq_true, ite_false,
+          rename_gate_code, hw, O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵so̵m̵e̵,̵ ̵s̵hift_forest_code, compile,
+  ̵  ̵ ̵ ̵ ̵ ̵ ̵ ̵PrimitiveGate.block_context_code,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲shifted_embedding]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

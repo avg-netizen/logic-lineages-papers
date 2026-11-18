@@ -1,0 +1,13 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.RawPlanRenamingProof
+public import LogicLineages.ControlSensitivityCurrent.RawPlanRenamingPrimitiveProof
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.RawSourceDAG.PlanRenaming.StatementChecks
+
+theorem fixed_typed_exactness : RawPlanRenamingTargets.TypedExactness := typed_exactness
+theorem fixed_primitive : RawPlanRenamingTargets.Primitive := primitive
+
+#print axioms fixed_typed_exactness
+#print axioms fixed_primitive
+
+end LogicLineages.ControlSensitivityCurrent.RawSourceDAG.PlanRenaming.StatementChecks

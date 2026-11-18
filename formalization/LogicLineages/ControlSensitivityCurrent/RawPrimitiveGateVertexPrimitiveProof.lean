@@ -28,12 +28,14 @@ theorem port_node_primitive : Primrec (fun p : List Nat × Nat => portNode p.1 p
     (Primrec.fst.pair ((Primrec.const 0).pair ((Primrec.const 0).pair hargs)))
 
 theorem port_raw_primitive : Primrec (fun p : List Nat × Nat => portRaw p.1 p.2) := by
-  have hnode := port_node_primitive.comp ((Primrec.const ([] : List Nat)).pair Primrec.snd)
+  have hnode := port_node_primitive.comp ((Primrec.const ([] : List Nat)).pair
+    (Primrec.snd : Primrec (fun p : List Nat × Nat => p.2)))
   exact Primrec.fst.pair
     ((Primrec.list_cons.comp hnode (Primrec.const ([] : List Node))).pair (Primrec.const (0,0)))
 
 theorem successor_raw_primitive : Primrec (fun p : List Nat × Nat => successorRaw p.1 p.2) := by
-  have hnode := port_node_primitive.comp ((Primrec.const ([] : List Nat)).pair Primrec.snd)
+  have hnode := port_node_primitive.comp ((Primrec.const ([] : List Nat)).pair
+    (Primrec.snd : Primrec (fun p : List Nat × Nat => p.2)))
   have htail := Primrec.list_cons.comp hnode (Primrec.const ([] : List Node))
   have htable := Primrec.list_cons.comp (Primrec.const (rawNode 0 1 [0,0,1]))
     (Primrec.list_cons.comp (Primrec.const (rawNode (SyntaxCode.arrowCode 0 0) 4 [])) htail)
