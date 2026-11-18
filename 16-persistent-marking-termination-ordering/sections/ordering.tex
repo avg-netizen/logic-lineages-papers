@@ -1,0 +1,324 @@
+\section{Persistent marking and recursive comparison}\label{sec:comparison}
+
+The ordinary syntax is enlarged only for the purpose of defining comparison.
+An ordinary head $f$ retains its declared base arguments
+$\vec s=(s_1,\ldots,s_r)$. A marked head has the form
+\[
+ P_\tau=f^\star_\tau(\vec s;\vec e).
+\]
+Its base arguments still have their declared types. Its finite list of
+extras $\vec e$ has arbitrary recorded types, and its output annotation
+$\tau$ can differ from the original result type of $f$. A retyping $P_\rho$
+changes only that output annotation. Variables and lambdas are retained,
+and their subterms may contain marks. An \emph{ordinary} term has no marked
+node anywhere. Every judgment below compares terms of equal outer type.
+
+\begin{definition}[Persistent partial marking]
+Define $\mk(x)$ to be undefined,
+$\mk(\lambda x.s)=\lambda x.\mk(s)$ when the body mark exists, and
+\[
+ \mk(f(\vec s))=f^\star(\vec s;\varnothing),\qquad
+ \mk(f^\star_\tau(\vec s;\vec e))=f^\star_\tau(\vec s;\vec e).
+\]
+Write $\headmark(s)$ for total top marking, which leaves a lambda spine
+ending in a variable unchanged and otherwise agrees with $\mk$.
+Thus $(\headmark)^2=\headmark$.
+\end{definition}
+
+\begin{definition}[Original-spine application]\label{def:application}
+For $q:\rho_1\to\cdots\to\rho_n\to\tau$, the partial expression
+$\ap q{a_1,\ldots,a_n}$ is defined as follows. An empty tuple returns $q$.
+Consume its original initial lambdas, assigning the supplied arguments
+simultaneously to their bound variables. If all arguments are consumed,
+return the substituted residual term. If arguments remain, inspect the
+original residual head. An ordinary or marked functional head is retained,
+marked if necessary, its old arguments are substituted, and all remaining
+arguments are appended to its extras at once. An original variable head
+blocks the operation, even when its substituted value is functional.
+\end{definition}
+
+This last qualification is essential. With $\theta=o\to o$, a functional
+head $h:\theta$, and $y:o$, the full call
+$\ap{(\lambda x:\theta.x)}{h,y}$ is undefined, whereas the two successive
+unary calls return $h^\star(;y)$. A successful full call does commute
+with capture-avoiding substitution. This follows by following its original
+lambda spine: the only branch that could inspect a substituted variable
+is excluded by the success assumption.
+
+\begin{definition}[Occurrence multiset extension]\label{def:multiset}
+For a weak relation $W$ and a strict relation $S$, write
+$A>_{\mathrm{mul}}^{W,S}B$ when the source occurrences split into
+$A_0\uplus A_1$ with $A_1\ne\varnothing$, the target occurrences split
+into $B_0\uplus B_1$, $A_0$ and $B_0$ are bijectively matched by
+equal-typed $W$ judgments, and every occurrence of $B_1$ is $S$-below
+some occurrence of $A_1$. A source occurrence may supply several new
+occurrences; it may also supply none. Equal terms remain distinct
+occurrences.
+\end{definition}
+
+Define $\succeq_\star,\succ_\star$ simultaneously as the least relations
+closed under the following clauses. Every derivation is finite. In the
+clauses concerning a marked owner, $P=f^\star(\vec s;\vec e)$; all copies
+are retyped to their indicated types. Equivalent heads are denoted by
+$f\approx g$, and strict head precedence by $f>g$.
+\begin{enumerate}[label=\textsc{\arabic*.}]
+\item[\textsc{Var}] $\W{x}{x}$.
+\item[\textsc{Abs}] From $\W{s}{t}$ derive
+$\W{\lambda x.s}{\lambda x.t}$, opening both binders with the same fresh name.
+\item[\textsc{Fun}] $\W{f(\vec s)}{g(\vec t)}$ if the heads are equivalent,
+their result types agree, and a permutation of $\vec t$ is pointwise
+weakly matched with $\vec s$.
+\item[\textsc{Put}] From $\W{f^\star(\vec s;\varnothing)}{t}$ derive
+$\W{f(\vec s)}{t}$.
+\item[\textsc{Select}] If $q$ is a base or extra argument of $P$, has type
+$\rho_1\to\cdots\to\rho_n\to\tau$, and
+\[
+ \ap q{P_{\rho_1},\ldots,P_{\rho_n}}=r,\qquad \W r t,
+\]
+then $\W{P_\tau}{t}$. The tuple must succeed as one full call.
+\item[\textsc{FAbs}] If
+$\W{f^\star_\tau(\vec s;\vec e,x)}{t}$ after fresh opening at
+$x:\sigma$, then
+$\W{P_{\sigma\to\tau}}{\lambda x:\sigma.t}$.
+\item[\textsc{Copy}] If $f>g$ and $\W{P_{\operatorname{type}(t_i)}}{t_i}$
+for every target base argument, then $\W{P_{\operatorname{res}(g)}}{g(\vec t)}$.
+\item[\textsc{Stat}] The same conclusion holds if $f\approx g$,
+$\vec s>_{\mathrm{mul}}^{\succeq_\star,\succ_\star}\vec t$, and
+all the same whole-source weak premises hold.
+\end{enumerate}
+The strict rule is
+\[
+ \frac{\mk(s)=s'\qquad \W{s'}{t}}{\St{s}{t}}.
+ \tag{Strict}
+\]
+The base list, including its multiplicities, is used in \textsc{Stat}.
+Extras are selectable but are absent from that multiset test.
+
+\begin{remark}[Why persistence is material]
+Let $Z<H<K<F$ be ground ranked heads of arities $0,0,1,2$, let $k=K(H)$,
+and put
+\[
+ P=(\lambda x.F(x,Z))k,\qquad T=F(k,Z),\qquad U=F(H,H).
+\]
+Marking $P$ gives $q=@^\star(\lambda x.F(x,Z),k)$. Selection gives
+$\W q H$, and persistence therefore gives $\St q H$. In
+$F^\star(q,Z)$ remove both base occurrences and replace them by two
+$H$ occurrences, each supplied strictly by $q$. The whole-source premises
+to $H$ follow by selection of $q$. Thus \textsc{Stat} and \textsc{Put}
+give $\W{F(q,Z)}U$. Selecting the lambda argument of $q$ with one
+self-copy gives this very term, so $\St P U$.
+This derivation uses an already-marked source in a strict multiset premise.
+A definition that makes such a source unmarkable cannot use this derivation.
+Our proofs below are for the persistent definition just given.
+\end{remark}
+
+\section{Structural laws, confinement and original reductions}
+\label{sec:stability}
+
+\begin{lemma}[Targets, inclusion and reflexivity]\label{lem:elementary}
+Every target of $\succeq_\star$ or $\succ_\star$ is ordinary.
+Strict comparison implies weak comparison. Every ordinary term is
+weakly reflexive.
+\end{lemma}
+\begin{proof}
+For the first assertion induct jointly over weak, strict and occurrence
+list derivations. The variable target is ordinary. \textsc{Abs} and
+\textsc{Fun} use their child targets; \textsc{Put} and \textsc{Select}
+retain a premise target. \textsc{Copy} and \textsc{Stat} have an ordinary
+target head and weak premises to every target argument. \textsc{FAbs}
+binds its ordinary body target. The strict rule inherits its weak target.
+
+If $\mk(s)=s'$ and $\W{s'}t$, peel the common initial lambdas.
+At an ordinary head \textsc{Put} yields $\W s t$; at a marked head
+$s'=s$. A variable cannot be marked. Lifting by \textsc{Abs} gives
+strict inclusion. Finally structural induction on an ordinary term,
+using \textsc{Var}, \textsc{Abs}, and identity matching in \textsc{Fun},
+proves reflexivity.
+\end{proof}
+
+\begin{lemma}[Substitution and contexts]\label{lem:structural-stability}
+The pair on ordinary endpoints is preserved by ordinary type-preserving
+substitution and by every original well-typed context.
+\end{lemma}
+\begin{proof}
+A successful mark commutes with substitution, including its marked case:
+$\mk(s\theta)=\mk(s)\theta$. The equality follows by induction down
+the initial lambda spine; substitution changes neither an ordinary head
+nor a marked head. Successful full application also commutes with
+substitution, by Definition~\ref{def:application}.
+
+Induct simultaneously over weak, strict, weak-list matching and strict
+replacement derivations. \textsc{Var} uses ordinary reflexivity of
+$\theta x$. Under a binder use the lifted substitution. Head rules
+transport their argument witnesses. \textsc{Select} uses the successful
+application identity and the identity between substituted self-copies
+and self-copies of the substituted owner. \textsc{FAbs} uses fresh
+opening. \textsc{Strict} uses mark covariance. Applying a substitution
+to a removed list preserves its nonempty set of occurrences even when
+different terms acquire identical substituted values.
+
+Weak context closure follows by induction on the context, using
+\textsc{Abs} and \textsc{Fun}. For a strict hole under an ordinary head,
+mark that head and use \textsc{Stat}: retain every unchanged occurrence
+and replace the distinguished source argument strictly. Select the
+corresponding source argument to supply each whole-source side premise,
+using reflexivity or strict inclusion as appropriate. Under a lambda
+lift the successful mark and its weak proof. Literal application is
+one of these ordinary heads, so both of its argument positions are covered.
+\end{proof}
+
+\begin{lemma}[Free-variable containment]\label{lem:fv}
+If $\W s t$ or $\St s t$, then $\FV(t)\subseteq\FV(s)$.
+\end{lemma}
+\begin{proof}
+Use the same mutual derivation induction. Head matching distributes target
+variables among source arguments. Copy and Stat have whole-source premises
+to every target argument. A Select result uses only variables of the
+selected argument and its owner copies, all already in the owner.
+Opening adds one fresh variable, and the target abstraction binds it.
+Marking changes no free variable. These observations give each rule case.
+\end{proof}
+
+Composition requires more than the preceding structural inductions.
+Appendix~\ref{app:composition} gives a conservative auxiliary relation
+on marked targets and proves its ordinary-final cut. Its proof preserves
+the genuine failure of unrestricted associativity of full application.
+
+\begin{theorem}[Ordinary composition]\label{thm:composition}
+On ordinary endpoints, weak comparison is transitive, and
+\[
+ \succeq_\star\,;\,\succ_\star\ \subseteq\ \succ_\star,\qquad
+ \succ_\star\,;\,\succeq_\star\ \subseteq\ \succ_\star.
+\]
+Consequently strict comparison is transitive.
+\end{theorem}
+\begin{proof}
+Embed both weak proofs in the auxiliary relation of
+Appendix~\ref{app:composition} and apply Theorem~\ref{thm:cut}.
+For strict-then-weak use $\mk(s)$ as the initial source in the same cut.
+For weak-then-strict, Lemma~\ref{lem:extended-marking} transports the
+first weak proof to the successfully marked endpoints; markability of
+the intermediate term reflects to the source. Cut with the weak witness
+for the second strict judgment and apply \textsc{Strict}.
+Strict inclusion then gives strict transitivity.
+\end{proof}
+
+\begin{definition}[Confined pair]\label{def:confined}
+For ordinary terms of equal type define
+\[
+ s\cw t\iff \W s t\ \land\ \Ty(t)\subseteq\Ty(s),\qquad
+ s\cs t\iff \St s t\ \land\ \Ty(t)\subseteq\Ty(s).
+\]
+\end{definition}
+
+\begin{theorem}[Stable pair]\label{thm:stable}
+The weak confined relation is reflexive and transitive, its strict part
+is included in it and transitive, and both mixed composition laws hold.
+Both parts are stable under original typed contexts and ordinary
+capture-avoiding substitutions.
+\end{theorem}
+\begin{proof}
+Support inclusions compose. The relational assertions therefore follow
+from Lemma~\ref{lem:elementary} and Theorem~\ref{thm:composition}.
+For substitution use Lemma~\ref{lem:fv} and
+Corollary~\ref{cor:typesupport-stability}; every image type introduced
+on the target is also introduced at a source occurrence. A fixed context
+adds the same types to both sides. Combine these facts with
+Lemma~\ref{lem:structural-stability}. Well-foundedness is proved separately
+in Section~\ref{sec:upper}, without assuming this composition theorem.
+\end{proof}
+
+\begin{theorem}[Exact ranked restriction]\label{thm:rpo}
+On first-order $\mathcal F$-terms, including patterns with ground-type
+variables, $\cs$ is exactly multiset recursive path ordering. Its weak
+part consists of that strict ordering together with recursive multiset
+equality.
+\end{theorem}
+\begin{proof}
+Every type support is $\{o\}$. An unmarked first-order source uses only
+\textsc{Var}, \textsc{Fun}, or \textsc{Put}; a marked one uses only
+\textsc{Select}, \textsc{Copy}, or \textsc{Stat}. Every selectable argument
+has ground type, so its tuple is empty. No extras, lambdas, or marks
+inside base arguments are generated. In particular, strict multiset
+premises always have ordinary source arguments.
+
+Induct on a weak derivation, interpreting an ordinary source comparison
+as weak RPO and a root-marked source comparison as strict RPO.
+\textsc{Var} is equality. In \textsc{Fun}, either every matched pair
+is recursively equal or at least one is strict, giving a strict multiset
+decrease. \textsc{Put} includes strictness into weakness. Selection is
+the subterm clause, Copy the strict-precedence clause, and Stat the
+multiset clause. The whole-source side premises are precisely the usual
+domination requirements.
+
+Conversely use \textsc{Var}/\textsc{Fun} for recursive multiset equality
+and induct on an RPO derivation. The subterm clause is empty-tuple
+Select. Strict precedence uses Copy, and the same-head clause uses Stat.
+Each target argument is reached from its weakly matched or strictly
+dominating source occurrence by selection, using strict inclusion.
+Thus every side premise is available. The two inductions take place
+entirely in the ranked fragment.
+\end{proof}
+
+\begin{lemma}[Ordinary template grafting]\label{lem:grafting}
+If $A$ is an ordinary template and $\W p q$, then
+$\W{A[x:=p]}{A[x:=q]}$, even when $p$ contains marks.
+\end{lemma}
+\begin{proof}
+Induct on the ordinary template. At its distinguished variable use the
+given comparison; other variables use Var. Abstraction uses fresh
+opening, and every ordinary head uses Fun with identity argument
+matching. The target image $q$ is ordinary by
+Lemma~\ref{lem:elementary}, so the target remains ordinary.
+\end{proof}
+
+\begin{theorem}[Original reduction orientation]\label{thm:orient}
+Every beta, $D0$, $DS$, $R0$, and $RS$ reduction, including its context
+and substitution instances, strictly decreases under $\cs$.
+\end{theorem}
+\begin{proof}
+For a beta redex $(\lambda x:\sigma.A)B:\tau$, put
+$P_\rho=@^\star_\rho(\lambda x.A,B)$. Select its second base argument
+to obtain $\W{P_\sigma}B$. Grafting gives
+$\W{A[x:=P_\sigma]}{A[x:=B]}$. Selecting the first base argument
+with its one self-copy produces exactly the former term. This gives
+the required marked weak proof and hence strictness.
+
+For $D^\tau uAB$, the outer second argument is $B$, so Select reaches
+$B$. To reach $A$, select the outer first argument with one self-copy;
+the resulting marked inner application still has $A$ as its second
+base argument, selected with an empty tuple. These comparisons work
+for every $u$, hence in particular for the two case rules. The $R0$
+rule similarly selects the outer base argument.
+
+For the successor recursor put $H=o\to\tau\to\tau$,
+$U_1=R^\tau(Sn)$, $U_2=U_1A$, $L=U_2B$ and $L'=R^\tau nAB$.
+Use the marked families
+\[
+\begin{aligned}
+ P_\rho&=@^\star_\rho(U_2,B),\\
+ C_{2,\rho}&=@^\star_\rho(U_1,A;P_\tau),\\
+ C_{1,\rho}&=@^\star_\rho(R^\tau,Sn;C_{2,H},C_{2,\tau}),\\
+ C_{0,\rho}&=(R^\tau)^\star_\rho(;C_{1,o},C_{1,H},C_{1,\tau}).
+\end{aligned}
+\]
+Three Select prefixes carry a weak proof from $C_{0,\tau}$ back to
+$P_\tau$, selecting $U_2,U_1,R^\tau$ with respectively one, two and
+three simultaneous self-copies at their actual types.
+The extra chain from $C_{0,H}$ reaches $A$. The chain from $C_{0,o}$
+reaches $Sn$ and then $n$. Here $\St{Sn}n$ is itself outer Select.
+Context closure of this strict comparison gives $\St L{L'}$, whose
+weak witness is $\W{P_\tau}{L'}$. Prefixing the extra chain therefore
+gives $\W{C_{0,\tau}}{L'}$.
+
+Two Copy clauses, using the native head precedence $R^\tau>@$, now
+construct first $An$ at type $\tau\to\tau$ and then $AnL'$ at type
+$\tau$. Prefixing the three outer selections gives
+$\W{P_\tau}{AnL'}$, as required. No native recursor has been treated
+as a ranked ternary symbol.
+
+Each contractum uses only node, binder and application-suffix types
+already in its redex. Hence every displayed strict comparison is
+confined. The stable-pair theorem gives all context and substitution
+instances.
+\end{proof}

@@ -1,0 +1,184 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[OT1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype,booktabs,longtable,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\setlength{\parskip}{3pt plus 1pt}
+\setcounter{tocdepth}{1}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\N}{\mathbb N}
+\newcommand{\NN}{\mathbb N_{>0}}
+\newcommand{\norm}{N}
+\newcommand{\can}[1]{\mathopen{[\![}#1\mathclose{]\!]}}
+\newcommand{\mle}{\preccurlyeq}
+\newcommand{\mslt}{\prec}
+\newcommand{\lv}{\operatorname{lv}}
+\newcommand{\sz}{\operatorname{sz}}
+\newcommand{\FV}{\operatorname{FV}}
+\newcommand{\Ty}{\operatorname{Ty}}
+\title{Decidable Ground Comparison for\\Norm-Controlled Ordinal Assignments}
+\author{}
+\date{17 November 2026\\Research manuscript}
+\begin{document}
+\maketitle
+\begin{abstract}
+Wilken and Weiermann's ordinal assignment for G\"odel's T uses a rapidly
+growing primitive recursive control and comparison under all admissible
+substitutions. We give explicit permitted controls for which universal
+comparison of canonical assignments is decidable whenever all free term
+variables have ground type, without restrictions on internal types,
+recursors, or finite nesting. One control preserves any prescribed finite
+prefix of the published example and changes its later values by less than
+twice the input factorial. The main arithmetic observation is a modular
+potential that decreases by one at every norm-controlled descent event.
+A final passage through \(\omega^2\) then determines complete descent
+counts modulo every integer at every fixed ordinal head. We prove the
+entry comparison and finite elimination arguments needed to turn these
+tables into a decision procedure. For the same controls, weak and strict
+comparison become undecidable with free variables of type \(o\to o\).
+The proofs use a literal canonical assignment and corrected scalar and
+norm estimates. The all-ground problem for the unchanged published
+control is not decided here.
+\end{abstract}
+\tableofcontents
+
+\section{The result and its scope}\label{sec:introduction}
+
+A termination argument need not give an algorithm for comparing the
+measures it assigns. In the analysis of G\"odel's system T by Wilken and
+Weiermann \cite{ww}, ordinal expressions are compared under every
+admissible substitution for their variables. Definition~2.8 of that
+paper asks whether these relations can be made effective. Its collapse
+construction permits a choice of sufficiently fast primitive recursive
+control, subject to an eventual bound at a fixed finite hierarchy level.
+The displayed example is \(G(n)=F_5(n+100)\), with
+\(F_0(n)=2^n\) and \(F_{j+1}(n)=F_j^{n+1}(n)\).
+
+We fix the \emph{canonical} assignment, which uses a history of length
+zero at each abstraction. Its literal syntax matters: rebracketing an
+existing coordinate expression can change a later syntactic partial
+operator. A computable admissible parsing policy therefore forms part of
+the definition. It preserves the input subtrees at each macro site and
+commutes with substitution. Section~\ref{sec:source} specifies that
+definition and the repaired inequalities it needs.
+
+For vectors \(a,b\), weak comparison means universal coordinatewise
+inequality under all admissible valuations. Wilken--Weiermann strict
+comparison means universal strict inequality in coordinate zero and
+universal weak inequality in every positive coordinate. Equality is
+universal coordinatewise equality. These are comparisons of assigned
+vectors, not beta equivalence of the underlying terms.
+
+\begin{theorem}[Comparison classification]\label{thm:main}
+There is an explicit permitted primitive recursive control \(f_*\) for
+which the following hold, uniformly in a supplied computable admissible
+literal parsing policy.
+\begin{enumerate}[label=(\roman*)]
+\item Universal canonical weak comparison, strict comparison and equality
+are decidable for original T terms all of whose free variables have ground
+type. Bound variables, result types, internal types, and recursors are
+unrestricted.
+\item Universal canonical weak and strict comparison are undecidable for
+ground-output terms with free-variable levels at most one and internal
+type levels at most two, by a finite-query reduction.
+\item The negative result has a single-query reduction when internal
+type levels at most three are allowed.
+\end{enumerate}
+For every supplied \(b\), the same assertions hold for an explicit
+control \(f_b\) equal to \(G\) on \([0,b]\) and satisfying
+\(0\le f_b(n)-G(n)<2\operatorname{lcm}(1,\ldots,n)\) thereafter.
+\end{theorem}
+
+The controls are given in \eqref{eq:factorial-control} and
+\eqref{eq:near-control}. The positive assertion is
+Theorem~\ref{thm:ground}; the negative assertions are
+Theorem~\ref{thm:functional-hardness}. Allowing functional inputs
+introduces positive ordinal coordinates which carry polynomial-semiring
+information. In contrast, with ground free inputs all positive coordinates
+are closed, leaving a finite circuit of numerical collapses to compare.
+
+The main new arithmetic mechanism is elementary to state. For
+\(p(n)=\lfloor n/2\rfloor\), the controls satisfy
+\[
+ p(f(n))\equiv p(n)-1\pmod m
+\]
+on an explicit tail for each \(m\). The greedy collapse evaluator updates
+its total norm by \(f\) at every nonfinite event. Every descent beginning
+at a head at least \(\omega^2\) must pass through that limit part,
+where the remaining event count has a closed formula. The unknown number
+of earlier events cancels in the congruence. This yields one uniform
+complete-count residue table at every fixed head, however high its
+Cantor normal form.
+
+Turning those tables into a decision theorem requires more than
+periodicity. Sections~\ref{sec:entry-comparison} and
+\ref{sec:arithmetic} prove exact entry comparison, collision identities,
+and a finite normalization of signed count rows. The last projection is
+ordinary Presburger arithmetic. Closed existential blocks suffice:
+failure of a universal comparison is one such block after the finite
+assignment circuit is flattened.
+
+The question for the exact control \(G\), or for the exact factorial
+control \(G!\), remains separate. Nor is the numerical comparison a
+syntactic termination ordering of Bachmann--Howard height: its strict
+scalar component at any fixed admissible valuation gives a finite upper
+bound on each descending rank. The structural ordering question has a
+different proof and is treated in a separate manuscript.
+
+\input{sections/foundations}
+\input{sections/source}
+\input{sections/controls}
+\input{sections/entries}
+\input{sections/arithmetic}
+\input{sections/consequences}
+\input{sections/hardness}
+
+\section{Consequences and remaining questions}
+
+The positive and negative halves use the same chosen control. Thus the
+ground/function distinction is a decision-theoretic boundary in the
+canonical source language, rather than a comparison between unrelated
+assignments. The positive theorem also covers equality; no equality
+undecidability assertion for functional inputs is needed or proved.
+
+The prefix-preserving control shows that any prescribed finite set of
+initial values of the published example is compatible with the explicit
+residue construction and the positive decision theorem.
+It supplies an existence result within the original permitted control
+framework. It does not evaluate a previously unknown residue for the
+unchanged example, and it does not identify the two resulting assignments.
+
+The proof does not need the separate special-case algorithms for one
+input, polynomial heads, balanced layers, or low internal type levels.
+Those may remain useful for sharper bounds or for the unchanged control.
+The present proof uses the all-head entry calculus and one finite count
+normalization. An implementation, useful complexity bounds, a classification
+at the unchanged control, and a full alternating first-order theory are
+additional questions.
+
+\section*{Preparation and verification status}
+
+This manuscript was prepared through AI-assisted research directed by the
+repository owner. No individual is assigned mathematical authorship by
+this preparation record. The arguments printed here are hand proofs.
+Earlier formal work checked several scalar, domain, and source-translation
+lemmas and exposed the strict-inequality defects discussed in the text;
+it does not constitute a proof-assistant verification of the new control,
+entry comparison, or complete decision theorem. Build checks and separate
+AI review are not independent human verification or a historical priority
+assessment. All mathematical dependencies needed beyond the cited
+published background are stated and proved in this manuscript.
+
+\input{references}
+\end{document}

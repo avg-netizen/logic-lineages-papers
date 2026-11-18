@@ -1,0 +1,77 @@
+\section{The canonical comparison theorem}\label{sec:consequences}
+
+Fix one computable admissible literal parsing policy \(\rho\). A
+canonical assignment below means the zero-history assignment of the
+literal input term under that policy, not the assignment of a normalized
+term and not an arbitrary history-dependent assignment. Write
+\(\can A_{f,\rho}\) for this vector.
+
+\begin{theorem}[All ground free variables]\label{thm:ground}
+For either \(f_*\) or a fixed \(f_b\), universal weak comparison,
+Wilken--Weiermann strict comparison, and universal equality of canonical
+assignments are decidable for original G\"odel T terms whose free variables
+all have ground type. There is no bound on internal types, bound-variable
+types, result types, recursor instances, or finite nesting.
+\end{theorem}
+\begin{proof}
+The generated-source theorem gives, for the two supplied terms,
+\[
+ \can A_i=a_i,\quad\can B_i=b_i\quad(i>0),\qquad
+ \can A_0=E_A(\mathbf x),\quad\can B_0=E_B(\mathbf x),
+\]
+where the positive coordinates are closed computable ordinals and the
+scalar expressions are finite circuits built from positive natural inputs,
+constants, sums, fixed natural multiples, and
+\(u\mapsto\psi_f(\lambda+u)\) with fixed nonzero limit heads
+\(\lambda<\varepsilon_0\). Repeated names have one shared coordinate.
+Every positive integer is an admissible ground value, represented by a
+finite sum of ones, so these inputs range independently over
+\(\N_{>0}\).
+
+First compute the finite positive-coordinate comparisons, using zero
+padding beyond the assigned level. If any required one fails, the
+vector comparison fails. Otherwise universal weak comparison is exactly
+the absence of a solution to
+\[
+ \exists\mathbf x\in\N_{>0}^{\,r}\quad E_A(\mathbf x)>E_B(\mathbf x).
+\]
+For strict comparison the counterexample relation is \(\ge\), and
+for equality it is \(\ne\). Flatten the scalar circuits using their
+unique graph coordinates and true norm guards. Every graph coordinate
+and every original input belongs to the same existential block.
+Theorem~\ref{thm:arithmetic} decides this closed sentence. Internal
+abstractions have already been handled by the finite assignment recursion;
+they do not create external quantifier alternation. This proves all
+three claims.
+\end{proof}
+
+The result is a forward translation theorem. It does not require a typed
+source realizing every auxiliary interval created by arithmetic
+elimination. Those intervals are legitimate arithmetic objects with the
+explicit definitions proved above.
+
+\begin{lemma}[Fixed-head tail growth]\label{lem:tail-growth}
+For a nonzero limit \(\lambda\), let
+\(h_\lambda(u)=\psi_f(\lambda+u)\). Then
+\[
+ h_\lambda(u+1)>2^{h_\lambda(u)}.
+\]
+\end{lemma}
+\begin{proof}
+Increasing the initial norm by one cannot shorten its nonfinite descent:
+monotonicity of maximal predecessors, followed by taking limit parts,
+propagates the weak comparison. Write the smaller terminal state as
+\(Z=f^D(t)\). The larger terminal state is at least \(f^D(t+1)\).
+At the last iterate, the preceding integer arguments differ by at least
+one, so \eqref{eq:growth} gives \(f^D(t+1)\ge2^{2^Z}\).
+Since \(D<Z\), the smaller collapse is \(Z+D<2Z\le2^Z\).
+The terminal decomposition proves the claimed inequality.
+\end{proof}
+
+As an actual-source instance, with the native recursor argument order put
+\(H=R^o0(D^o0):o\to o\). Its first positive coordinate is
+\(\omega\cdot2\). Thus the application \(HX\) invokes the head
+\(\omega^2\cdot2\) at the genuine raw norm
+\(N(\omega^2\cdot2)+c_H+x_0\), where \(c_H\) is its actual closed
+scalar. The complete-count table applies along this input ray without
+replacing the source by an arbitrary ordinal-valued primitive.

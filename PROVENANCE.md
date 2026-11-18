@@ -36,3 +36,23 @@ full unchanged-control, all-ground canonical comparison problem remains open.
 These are AI-assisted hand-proof manuscripts; their clean builds and
 collaborative reviews are not proof-assistant or independent human verification.
 See [the collection guide](COMPARISON-COLLECTION.md) and its verification record.
+
+
+## 17 November 2026: two completed explanatory II5 manuscripts
+
+At the owner's request, OpenAI Codex consolidated the new structural and
+numerical results into [two companion papers](COMPARISON-RESOLUTION-GUIDE.md),
+29 and 30 pages respectively. They supply their local proofs in full and use
+ordinary published references. The six earlier sources, their checked
+counterexamples, and their formalization targets are preserved. The new
+structural definition uses persistent marking, and the numerical theorem
+uses explicitly permitted controls; neither change is silently attributed
+to the earlier formalized objects.
+
+The edition includes the repaired weak scalar and unchanged-multiplier norm
+proof, exact entry-domain and arithmetic-cancellation arguments, native
+structural rank calibration, standalone LaTeX builds, PDF inspection and
+per-bundle hashes. All 59 pages were visually reviewed. These checks are
+AI-assisted hand review and document preparation, not independent human
+verification, a completed formal port, or a historical priority assessment.
+The existing formal target counts are unchanged.
