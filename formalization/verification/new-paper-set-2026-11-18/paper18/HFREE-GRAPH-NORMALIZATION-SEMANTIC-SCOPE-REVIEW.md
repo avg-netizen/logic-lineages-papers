@@ -1,0 +1,7 @@
+# Authored bounded semantic root scope
+
+Approved HFreeGraphNormalizationSemanticProof as a bounded prerequisite under unchanged 11 pins. Read its four exact target assemblies plus actual ExpandedBooleanGraphSemanticProof and WholeBoundInitializationSemanticProof interfaces/arguments. TermGraphs and MatrixGraphs expose the entire previously frozen graph obligations, including total realization/allocated uniqueness, not just one-way soundness. AllowedWholeBlock derives disjoint original/aux names, full block Nodup, actual zero-shift allowedness, parameter independence and H-free initialization. Prefix equivalence applies the initializer at every updated valuation and the actual total Boolean graph theorem under the same original binder update. Support follows initializer exact name support and original graph freshness.
+
+The graph sits outside arbitrary negation/conjunction/disjunction; total graph realization plus freshness preserves the original parameter valuation. Zero-divisor predicate has explicit equality behavior. Initializer converts signed free parameters pointwise and proves semantics uniformly before iterating existential updates. No projection/PlainBlock solver correctness is claimed or consumed as a semantic oracle by this root.
+
+This is scope approval, not final supplier mathematical acceptance. Fresh source closure and detailed term realization/inverse/uniqueness review remain mandatory at final; raw calibration/programs are separate pending obligations. No one-binder elimination or general decision credit.

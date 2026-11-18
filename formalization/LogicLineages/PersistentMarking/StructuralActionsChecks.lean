@@ -1,0 +1,22 @@
+import LogicLineages.PersistentMarking.StructuralFullActionProof
+import LogicLineages.PersistentMarking.StructuralWholeBottomProof
+import LogicLineages.PersistentMarking.StructuralMarkedActionProof
+import LogicLineages.PersistentMarking.StructuralExtraInsertionProof
+namespace LogicLineages.PersistentMarking.StructuralActionsChecks
+theorem exact_FullActionSound : StructuralActionTargets.FullActionSound := StructuralFullActionProof.sound
+theorem exact_FullActionMonotone : StructuralActionTargets.FullActionMonotone := StructuralFullActionProof.monotone
+theorem exact_FullActionNatural : StructuralActionTargets.FullActionNatural := StructuralFullActionProof.natural
+#print axioms exact_FullActionSound
+#print axioms exact_FullActionMonotone
+#print axioms exact_FullActionNatural
+ theorem exact_WholeBottom : StructuralActionTargets.WholeBottom := StructuralWholeBottomProof.wholeBottom
+#print axioms exact_WholeBottom
+theorem exact_MarkedActionSound : StructuralActionTargets.MarkedActionSound := StructuralMarkedActionProof.sound
+theorem exact_MarkedActionLaws : StructuralActionTargets.MarkedActionLaws := StructuralMarkedActionProof.laws
+#print axioms exact_MarkedActionSound
+#print axioms exact_MarkedActionLaws
+ theorem exact_ExtraInsertionValid : StructuralActionTargets.ExtraInsertionValid := StructuralExtraInsertionProof.valid
+ theorem exact_ExtraInsertionNatural : StructuralActionTargets.ExtraInsertionNatural := StructuralExtraInsertionProof.natural
+#print axioms exact_ExtraInsertionValid
+#print axioms exact_ExtraInsertionNatural
+end LogicLineages.PersistentMarking.StructuralActionsChecks

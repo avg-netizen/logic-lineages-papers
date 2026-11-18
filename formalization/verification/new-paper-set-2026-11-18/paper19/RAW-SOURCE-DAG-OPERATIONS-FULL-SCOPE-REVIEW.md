@@ -1,0 +1,3 @@
+# Exact full operations gate scope
+
+Read RawSourceDAGOperationsStatementChecks: imports the checked structural and primitive roots and exposes exactly fixed_references, fixed_append, fixed_rename, fixed_insert, fixed_primitive at the original five Targets types, with all five axiom prints. Approved for fresh parent-controlled full gate under unchanged seven pins. Actual typed refs/sharing/packed renaming and graph insertion remain distinct from unchecked total raw structural routines. All bounded checkpoints are reviewed; full source-matched recursive evidence and exact named standard-axiom audits remain required before acceptance. No source compiler, checked wrapper or polynomial-size claim.

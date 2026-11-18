@@ -1,0 +1,3 @@
+# Independent whole-bottom subset scope
+
+Read actual StructuralWholeBottomProof. Approve exact original WholeBottom supporting gate: literal empty join is instantiated through actual hereditary lattice closure, with all lower lattice obligations supplied by the proved global size-induction result. Its full ValueEq at every well-formed extension identifies empty aggregate availability/weak/strict and all typed full-prefix application outputs, including actual residual join[]. No generic bottom-fields oracle or extra final premise. Fresh gate must verify the claimed definitional reduction; no proof acceptance yet. No interpreter/operator promotion or native execution by reviewer.

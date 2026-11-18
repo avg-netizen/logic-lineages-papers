@@ -1,0 +1,9 @@
+# Actual-Phi aggregation conceptual review
+
+Approved to freeze the four-family supporting packet, not a system/query reduction. Read the plan, actual GroundResult/AllEqual/AggregateAt contracts, prior aggregation target and numeric collision/coefficient-one supplier interfaces.
+
+The proposed semantic boundary is correct: SelectedAggregationCollisionProof's selected-control semantics cannot be instantiated at Phi without admission. Reconstruct actual six eraser source values from the accepted all-policy Phi application/eraser and source-success facts. The numerical PolicyCollision theorems are control-generic and may be used after the actual SourceGrowth Phi proof; they do not transfer Paper19's source valuation domain. GenericCoefficientOne explicitly requires StrictMono and inflation, both to be discharged from actual Phi facts, and yields the needed exact coefficient-one arithmetic rather than an unsupported general collapse-order assertion.
+
+Exact freeze should retain all contexts, policies and unrestricted Phi-admissible substitutions, with one shared valuation through every leaf and fold. GroundResult must witness actual successful finite positive coordinates. The literal ordered fold and six-eraser re-detection, both empty outputs1, right<=left, equality iff all entries equal, and strict gap2 when any differs are mandatory. Weak conversion is the actual K(right)/I(left) pair, exact offsets5/3, with equivalence right+2<=left. For an empty aggregate both strict and weak queries must be false. No caller scalar/norm/growth budget should replace a derived fact.
+
+Later shared-system witnesses/reverse pullback, zero masks/projections, empty/n=0 conventions, malformed total query truth, closed-seed level3 and the complete unchanged-G corollary remain separately owed. No selected reduction status or parked threshold result is inherited.

@@ -1,0 +1,7 @@
+# StandardAggregation exact supporting pre-scope
+
+Approved the four-family/six-pin comparator before proofs. All six frozen hashes verified. Read actual Targets and GroundResult/AllEqual/AggregateAt definitions against the approved plan and literal source weak-wrapper equation.
+
+All four families quantify actual Phi-admissible functional ordinal substitutions in every original context and every policy. They use one shared valuation and no selected-control, growth, success or norm premise. GroundResult witnesses the genuine assignment and finite positive scalar calibration, not merely fallback wrapper values. SixEraserCollision includes actual both outputs, right<=left, equality iff original inputs equal, and gap2. ActualAggregation includes the full arbitrary ordered fold and explicit empty values1. WeakConversion retains actual successful K(right)/I(left), exact omega-tail offsets5/3, and iff right+2<=left. Both aggregate query orientations are exactly NOT AllEqual, so the empty queries are false.
+
+Final proof must freshly derive actual Phi source eraser/fold/wrapper semantics. Numeric-only PolicyCollision may be reused only after actual Phi SourceGrowth; it cannot substitute its Nat-only source-domain semantics. Generic coefficient-one monotonicity must discharge its actual control hypotheses. No system/mask/query program or complete unchanged-G corollary acceptance follows from this supporting scope.

@@ -1,0 +1,5 @@
+# Structural extra insertion: authored subset scope
+
+Approved StructuralExtraInsertionProof/Checks for a fresh parent-controlled bounded gate, exactly ExtraInsertionValid and ExtraInsertionNatural from the unchanged StructuralActions eight-endpoint/25-pin packet. Read both proofs and exact aliases; all current frozen pins verified by the contemporaneous WholeBottom independent reconciliation.
+
+Validity splits actual append membership and derives old extra membership from canonicality. Naturality proves equality of canonical downsets by both inclusions. Forward witnesses transport order with actual restriction monotonicity; reverse witnesses come from original generators in es or xs, reflexive original downclosure membership and target transitivity. No inverse-image lifting, omitted tagged coordinate, additional premise or staged application is used. Empty lists and duplicates are covered by literal append/map/downclosure. Native success and recursive evidence remain required; no interpreter/operator credit.

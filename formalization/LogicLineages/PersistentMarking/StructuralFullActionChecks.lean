@@ -1,0 +1,9 @@
+import LogicLineages.PersistentMarking.StructuralFullActionProof
+namespace LogicLineages.PersistentMarking.StructuralFullActionChecks
+theorem exact_FullActionSound : StructuralActionTargets.FullActionSound := StructuralFullActionProof.sound
+theorem exact_FullActionMonotone : StructuralActionTargets.FullActionMonotone := StructuralFullActionProof.monotone
+theorem exact_FullActionNatural : StructuralActionTargets.FullActionNatural := StructuralFullActionProof.natural
+#print axioms exact_FullActionSound
+#print axioms exact_FullActionMonotone
+#print axioms exact_FullActionNatural
+end LogicLineages.PersistentMarking.StructuralFullActionChecks

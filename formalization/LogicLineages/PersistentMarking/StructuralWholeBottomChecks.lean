@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.StructuralWholeBottomProof
+namespace LogicLineages.PersistentMarking.StructuralWholeBottomChecks
+ theorem exact_WholeBottom : StructuralActionTargets.WholeBottom := StructuralWholeBottomProof.wholeBottom
+#print axioms exact_WholeBottom
+end LogicLineages.PersistentMarking.StructuralWholeBottomChecks

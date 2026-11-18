@@ -1,0 +1,5 @@
+# Primitive routines authored scope
+
+Approved RawSourceDAGOperationsPrimitiveProof for a fresh parent-controlled bounded gate within the unchanged five-family/seven-pin packet. Read the proof and exact executable definitions. rename_index uses comparison, truncated subtraction, list_getD0 and addition; insert_index preserves local positions and shifts free positions. Node routines reproduce the exact tag0/singleton-payload guard, retain other payloads, and insertion always appends the literal ground prefix. Table routines use genuine parameterized foldr and prove equality to the literal map; append is newest-first b++a. Packed rename preserves the root/type suffix while replacing context and table. All functions are on arbitrary raw data, including missing-index/default cases, without typed acceptance assumptions.
+
+The target is the exact conjunction of four concrete Primrec routines, not a computability oracle or uniqueness argument. No malformed-input rejection/checked external wrapper, compiler coverage, graph semantic theorem or full packet acceptance follows here. Native completion and full named-alias recursive audit remain separate.
