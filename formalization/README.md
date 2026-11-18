@@ -1,4 +1,23 @@
-# Current checkpoint — two-agent continuation paused
+# Current release — new comparison collection, 18 November 2026
+
+Formalization of papers16–20 is active through 19 November2026 at18:00UTC.
+Read the [current status](verification/new-paper-set-2026-11-18/STATUS.md),
+[source-exact register](CURRENT-COMPARISON-TARGETS.json), and
+[plan](verification/new-paper-set-2026-11-18/PLAN.md). The new167-statement
+register is separate from the historical189-statement register, which remains
+178 checked,2 inherited,9 pending. Those counts are not additive, and historical
+statuses do not automatically transfer to replacement manuscripts.
+
+Old comparison editions05–10 are preserved in the
+[recoverable archive](../archive/comparison-editions-pre-2026-11-17/README.md).
+Only current acceptance records designate verified endpoints; pending draft
+files and focused checks do not imply a complete main proof or full-root/CI pass.
+The pause notices and counts below are retained historical checkpoints, not
+instructions to stop this currently authorized continuation.
+
+---
+
+# Historical checkpoint — two-agent continuation paused
 
 Fifteen exact supporting contracts in 29 new source files are checked across
 the two-agent continuation. These cover retained compatibility diagnostics,

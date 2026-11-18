@@ -161,3 +161,34 @@ count equality, all-input totality including invalid codes, actual Computable
 output and denotation agreement. Generic per-function computability is not
 higher-order index uniformity; joint-b computability must be specified if
 claimed. No effective evaluator theorem is obtained from this semantic gate.
+
+## Genuine effective evaluator native milestone
+
+`EvaluatorStatementChecks` passed receipt `1794978194757150683-2`.
+Current-source recursive evidence validates 93 modules and both exact aliases
+with only standard foundations. This is not a semantic-only result: arbitrary
+per-function Computable f with source numerical hypotheses yields a concrete
+Partrec search program, all-input totality, Computable total output, membership
+of the actual first-finite event count in the least search, actual endpoint
+agreement and independent collapseWith denotation. Both selected controls are
+instantiated with no remaining admissibility or computational premise.
+Actual terminal identities include the norm orbit and 0<D<Z.
+
+One initial failed draft/receipt is preserved. Repair added definitional rfl
+after unfolding the well-founded recursion and explicit pair projections;
+frozen definitions/targets unchanged. Independent final review requested for
+cor:closed-evaluation promotion. No higher-order index uniformity, joint-b
+computability, optimized M/L recursion or later residue theorem is asserted.
+
+## Count/entry route: earliest finite-coefficient dependency
+
+The next frozen packet is the complete printed cor:finite-coefficient and
+supporting exact terminal count/endpoint on omega*k+n, all k,n including0.
+ActualFiniteHeadNorm and ActualFiniteHeadMaximum are control-independent.
+SmallKernelSuppliers proves actualControlledCount g (omega*k+n)=k for every
+expansive g, with the literal limit-part maximum step and actual well-founded
+count. Prove its equality to the second projection of terminalWith f by actual
+ordinal induction; do not identify it by name alone. Then the checked terminal
+norm orbit and collapse decomposition give the complete printed identity.
+Concrete factorial and near-control clauses have no remaining law premise.
+This pays no high-head residue, funnel, entry or comparison obligation yet.

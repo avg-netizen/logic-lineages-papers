@@ -678,8 +678,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/foundations.tex",
           "line": 228,
           "statement_latex": "[Closed evaluation and its norm orbit]\n\\label{cor:closed-evaluation}\nA closed collapse value is computable by the following deterministic\ndescent.  At a nonfinite state $\\alpha=\\lambda+n$, replace it by\n$M(\\lambda,f(N(\\alpha)))$ and add one to an event counter.\nOn reaching a finite state $Z$, return $Z$ plus that counter.\nIf the initial norm is $t$ and the number of events is $D$, then\n\\[\n Z=f^D(t),\\qquad \\psi_f(\\alpha)=Z+D.\n\\]\nFor a nonfinite initial state one also has $0<D<Z$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.Targets.ComputableEvaluation",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_computableEvaluation",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/020-closed-evaluation.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:cor:finite-coefficient",
@@ -688,8 +691,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/foundations.tex",
           "line": 251,
           "statement_latex": "[Finite coefficient identity]\\label{cor:finite-coefficient}\nFor all $k,n\\in\\N$,\n\\[\n \\psi_f(\\omega k+n)=f^k(2k+n)+k.\n\\]",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.Targets.FiniteCoefficient",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_finiteCoefficient",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/023-finite-coefficient.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:lem:pair-compiler",
@@ -1149,8 +1155,11 @@
           "file": "18-standard-control-comparison/sections/polynomial-arithmetic.tex",
           "line": 569,
           "statement_latex": "[Polynomial collapse graphs]\\label{m:thm:graphs}\nFor each fixed nonzero polynomial limit $\\lambda<\\omega^\\omega$, the graph\n$y=h_\\lambda(n)$ is effectively expressible as a finite disjunction of\nword-linear equations in $n,y$, with explicit domains and exact finite\nexceptions. One finite degree bound suffices for each finite collection of\nsuch graphs. Arbitrary fixed nesting and addition of these functions admit\na total functional existential graph translation.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.PolynomialGraphTargets.PolynomialCollapseGraphs",
+          "verified_alias": "LogicLineages.StandardControlCurrent.PolynomialGraphStatementChecks.fixed_polynomialCollapseGraphs",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/021-polynomial-graphs.json"
         },
         {
           "id": "18-standard-control-comparison:m:lem:graph-domains",
@@ -1252,8 +1261,11 @@
           "file": "18-standard-control-comparison/sections/unary-decision.tex",
           "line": 182,
           "statement_latex": "[One-input quantified comparison]\\label{u:cor:boolean}\nFor any finite Boolean combination of equality, weak-order and strict-order\natoms between expressions of $\\mathcal P_1$, each of its existential and\nuniversal closures over $x\\in\\NN$ is decidable.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.OneInputTargets.OneInputQuantifiedComparison",
+          "verified_alias": "LogicLineages.StandardControlCurrent.OneInputStatementChecks.fixed_oneInputQuantifiedComparison",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/018-one-input-booleans.json"
         },
         {
           "id": "18-standard-control-comparison:u:lem:prefix",
@@ -1918,7 +1930,7 @@
     }
   ],
   "status_counts": {
-    "pending": 158,
-    "checked": 9
+    "pending": 154,
+    "checked": 13
   }
 }

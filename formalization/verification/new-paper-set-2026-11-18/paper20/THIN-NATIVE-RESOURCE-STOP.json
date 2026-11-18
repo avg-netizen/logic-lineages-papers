@@ -1,0 +1,78 @@
+{
+  "requested": [
+    "LogicLineages.CartierObserverCurrent.ThinStatementChecks"
+  ],
+  "heap_cap_mib": 2048,
+  "rss_cap_mib": 1536,
+  "wall_seconds": 180,
+  "cpu_seconds": 90,
+  "minimum_free_mib": 2048,
+  "core_only_profile": false,
+  "single_thread": true,
+  "threads": 1,
+  "upstream_cache_only": true,
+  "calculator_objects_borrowed": true,
+  "modules": [
+    {
+      "module": "LogicLineages.CartierObserverCurrent.ThinPolynomialDefinitions",
+      "returncode": 0,
+      "seconds": 2.544,
+      "observed_cpu_seconds": 1.79,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 1286136,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "3dc55192c8ea349f06e55767d96e3d0cc2f4c610de5b11fbc0b4aa7663086caa",
+      "log": "build-reports/1794978270737441690-2-LogicLineages-CartierObserverCurrent-ThinPolynomialDefinitions.log"
+    },
+    {
+      "module": "LogicLineages.CartierObserverCurrent.ThinRationalDefinitions",
+      "returncode": 0,
+      "seconds": 2.439,
+      "observed_cpu_seconds": 1.77,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 1549804,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "147ad2c8e04a3c5ec1c648fff73a2a047ef3a0bea6173fdc92ea7205b2b0e27e",
+      "log": "build-reports/1794978270737441690-2-LogicLineages-CartierObserverCurrent-ThinRationalDefinitions.log"
+    },
+    {
+      "module": "LogicLineages.CartierObserverCurrent.ThinTargets",
+      "returncode": 77,
+      "seconds": 1.73,
+      "observed_cpu_seconds": 1.67,
+      "last_wait_channel": "__futex_wait",
+      "stopped_threads": [
+        {
+          "tid": 13,
+          "state": "S",
+          "cpu_seconds": 0.02,
+          "wait_channel": "__futex_wait"
+        },
+        {
+          "tid": 14,
+          "state": "S",
+          "cpu_seconds": 0.0,
+          "wait_channel": "do_epoll_wait"
+        },
+        {
+          "tid": 15,
+          "state": "R",
+          "cpu_seconds": 1.64,
+          "wait_channel": "0"
+        }
+      ],
+      "peak_process_tree_rss_kib": 1574880,
+      "memory_observation_failure": {
+        "status": "Name:\tlean\nUmask:\t0022\nState:\tS (sleeping)\nTgid:\t13\nNgid:\t0\nPid:\t13\nPPid:\t2\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t \nNStgid:\t13\nNSpid:\t13\nNSpgid:\t13\nNSsid:\t13\nKthread:\t0\nVmPeak:\t 6358036 kB\nVmSize:\t 6333452 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t 1574880 kB\nVmRSS:\t 1574880 kB\nRssAnon:\t  197524 kB\nRssFile:\t 1377356 kB\nRssShmem:\t       0 kB\nVmData:\t 6045528 kB\nVmStk:\t     136 kB\nVmExe:\t       4 kB\nVmLib:\t  101816 kB\nVmPTE:\t   54428 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t3\nSigQ:\t0/39792\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000000001000\nSigCgt:\t0000000100000440\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t0000000000000000\nCapAmb:\t0000000000000000\nNoNewPrivs:\t1\nSeccomp:\t2\nSeccomp_filters:\t1\nSpeculation_Store_Bypass:\tvulnerable\nSpeculationIndirectBranch:\talways enabled\nCpus_allowed:\t1ff\nCpus_allowed_list:\t0-8\nMems_allowed:\t00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t163\nnonvoluntary_ctxt_switches:\t0\n",
+        "statm": "1583363 393720 344339 1 0 1511416 0\n"
+      },
+      "discarded_failed_outputs": [],
+      "source_sha256": "95dd66cec47b0936b87b373590050cb905f13bdc2415888e3554ea59b20ff6c3",
+      "log": "build-reports/1794978270737441690-2-LogicLineages-CartierObserverCurrent-ThinTargets.log"
+    }
+  ]
+}

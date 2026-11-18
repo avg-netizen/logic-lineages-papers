@@ -1,0 +1,27 @@
+--- a/formalization/LogicLineages/OrdinalComparison/PolynomialDigitDefinitions.lean
++++ b/formalization/LogicLineages/OrdinalComparison/PolynomialDigitDefinitions.lean
+@@ -1,5 +1,5 @@
+ module
+-public import LogicLineages.OrdinalComparison.SeriesContinuationDefinitions
++public import Mathlib.Algebra.Polynomial.Degree.Operations
+ 
+ @[expose] public section
+ 
+--- a/formalization/LogicLineages/OrdinalComparison/PolynomialDigitTargets.lean
++++ b/formalization/LogicLineages/OrdinalComparison/PolynomialDigitTargets.lean
+@@ -1,5 +1,6 @@
+ module
+ public import LogicLineages.OrdinalComparison.PolynomialDigitDefinitions
++public import LogicLineages.OrdinalComparison.SeriesContinuationDefinitions
+ 
+ @[expose] public section
+ 
+--- a/formalization/LogicLineages/OrdinalComparison/BinaryQuotientTargets.lean
++++ b/formalization/LogicLineages/OrdinalComparison/BinaryQuotientTargets.lean
+@@ -1,5 +1,6 @@
+ module
+ public import LogicLineages.OrdinalComparison.PolynomialDigitDefinitions
++public import LogicLineages.OrdinalComparison.SeriesContinuationDefinitions
+ public import Mathlib.Algebra.Field.ZMod
+ 
+ @[expose] public section
