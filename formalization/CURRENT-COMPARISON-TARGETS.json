@@ -899,8 +899,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/source.tex",
           "line": 463,
           "statement_latex": "[Well-defined canonical source assignment]\n\\label{prop:canonical-domain}\nEvery literal original T term has an effectively constructed canonical\nvector of the level of its type.  It belongs to $C$ and has bounded\nnorm.  A body to which $\\delta^{\\mathbf x}$ is applied belongs\nto $C^{\\mathbf x}$.  All these assertions allow arbitrary finite\ninternal and bound-variable types and arbitrary recursor instances.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.SelectedCanonicalDomainTargets.FullSelectedCanonicalDomain",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullSelectedCanonicalDomain",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/257-selected-canonical-domain.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:thm:generated-source",
@@ -909,8 +912,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/source.tex",
           "line": 505,
           "statement_latex": "[Fixed-head arithmetic image of actual sources]\n\\label{thm:generated-source}\nLet $A$ be an original T term whose free variables all have ground\ntype.  For every positive coordinate, $\\can A_i$ is a closed\neffectively computable ordinal.  Its scalar is an effectively obtained\nfinite circuit in the ground component inputs, positive integer\nconstants, addition, fixed positive integer multiples, and functions\n\\[\n h_\\lambda(u)=\\psi_f(\\lambda+u)\n\\]\nwith fixed nonzero limit heads $\\lambda<\\varepsilon_0$.\nRepeated occurrences of one source variable give one shared input;\nshared subcircuits may also be retained.  The theorem imposes no bound\non internal types, bound-variable types, result type, recursors, or\nfinite nesting, and is uniform in the supplied computable policy.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.SelectedGeneratedSourceTargets.FullSelectedGeneratedSource",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullSelectedGeneratedSource",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/261-selected-generated-source.json"
         }
       ]
     },
@@ -1258,8 +1264,11 @@
           "file": "18-standard-control-comparison/sections/polynomial-arithmetic.tex",
           "line": 257,
           "statement_latex": "[Counter expansion and collision]\\label{m:lem:counter}\nOn an effective tail,\n\\begin{equation}\\label{m:eq:counter-expand}\n E^r_c(t)=\\frac H2+1-\\lceil c/2\\rceil\n                  +\\sum_{h=3}^r E^h_{c+h}(A_h),\n \\qquad \\frac H2<E^r_c(t)<\\frac{3H}{4}.\n\\end{equation}\nSuppose counters of ranks $r\\ge s\\ge3$ have equal leaders. Then they\nhave the same prefix index $c$. If $r=s$ their whole values are equal;\nif $r>s$ the smaller-rank input is the corresponding $A_s$, and\n\\begin{equation}\\label{m:eq:collision}\n E^r_c(t)-E^s_c(A_s)=\\sum_{h=s+1}^r E^h_{c+h}(A_h).\n\\end{equation}\nEvery counter introduced on the right has rank strictly greater than $s$.\nFor distinct leaders, counter order agrees with leader order. Equal\nleaders are ordered by counter rank, with equality at equal rank.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.CounterExpansionTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.CounterExpansionStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/255-counter-expansion.json"
         },
         {
           "id": "18-standard-control-comparison:m:lem:kernel-residues",
@@ -1268,8 +1277,11 @@
           "file": "18-standard-control-comparison/sections/polynomial-arithmetic.tex",
           "line": 301,
           "statement_latex": "[Effective residues of kernels and counters]\\label{m:lem:kernel-residues}\nFor each fixed $d\\ge1$, $c\\ge0$ and $m\\ge1$, the counter $E^d_c$\nhas an effectively computable constant residue modulo $m$ on a computable\ntail. For every admissible signed pair $(d,j)$, the same holds for\n$X^d_{c,j}$ on its positive-depth tail. The $X$\nresidue is $r_m$. A valid counter residue is\n\\begin{equation}\\label{m:eq:E-residue}\n E^d_c(t)\\equiv\n p_d\\bigl((r_{Q_d}-c)\\bmod Q_d\\bigr)\\pmod m,\n \\qquad Q_d=d!m^{d-1},\n\\end{equation}\nwhere $p_d(n)$ counts partitions of $n$ into parts at most $d$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.KernelResiduesTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.KernelResiduesStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/259-kernel-residues.json"
         },
         {
           "id": "18-standard-control-comparison:m:lem:guards",
@@ -1642,8 +1654,11 @@
           "file": "19-source-expressivity-and-control-sensitivity/sections/compiler.tex",
           "line": 39,
           "statement_latex": "[Addition and small constants]\\label{lem:addition}\nNatural addition $n_a+n_b=n_c$, denoted $\\operatorname{Plus}(a,b,c)$\non its raw representatives, is defined by the two source equations\n\\[\n e(b,0)=e(0,d),\\qquad e(a,d)=e(c,0),\n\\]\nwith one fresh positive raw witness $d$.  Arithmetic one has a constant-size\nsource-equation definition.  Every binary literal $k$ has an addition DAG\nof size $O(\\log(k+1))$ once zero and one are available.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.ControlSensitivityCurrent.FullAddition.Targets.CompleteAddition",
+          "verified_alias": "LogicLineages.ControlSensitivityCurrent.FullAddition.StatementChecks.fixed_completeAddition",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/260-full-addition.json"
         },
         {
           "id": "19-source-expressivity-and-control-sensitivity:lem:sort",
@@ -2215,7 +2230,7 @@
     }
   ],
   "status_counts": {
-    "pending": 59,
-    "checked": 108
+    "pending": 54,
+    "checked": 113
   }
 }

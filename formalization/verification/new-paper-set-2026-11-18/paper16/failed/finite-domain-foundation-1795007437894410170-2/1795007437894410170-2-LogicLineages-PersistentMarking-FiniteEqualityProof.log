@@ -1,0 +1,81 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteEqualityProof.lean:8:19: error: simp_all made no progress
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteEqualityProof.lean:4:0: error: failed to prove termination, possible solutions:
+  - Use `have`-expressions to prove the remaining goals
+  - Use `termination_by` to specify a different well-founded relation
+  - Use `decreasing_by` to specify your own tactic for discharging this kind of goal
+q✝ r✝ : Expr
+a✝ :
+  ∀ (y : (_ : Expr) ×' Expr ⊕' (_ : Args) ×' Args),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x =>
+          PSum.casesOn x (fun _x => PSigma.casesOn _x fun q r => sizeOf q + sizeOf r) fun _x =>
+            PSigma.casesOn _x fun qs rs => sizeOf qs + sizeOf rs)
+        y (PSum.inl ⟨q✝, r✝⟩) →
+      PSum.casesOn y (fun _x => exprEq _x.1 _x.2 = true ↔ _x.1 = _x.2) fun _x => argsEq _x.1 _x.2 = true ↔ _x.1 = _x.2
+domain✝¹ : Ty
+body✝¹ : Expr
+x✝¹ :
+  ∀ (y : (_ : Expr) ×' Expr ⊕' (_ : Args) ×' Args),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x =>
+          PSum.casesOn x (fun _x => PSigma.casesOn _x fun q r => sizeOf q + sizeOf r) fun _x =>
+            PSigma.casesOn _x fun qs rs => sizeOf qs + sizeOf rs)
+        y (PSum.inl ⟨Expr.lam domain✝¹ body✝¹, r✝⟩) →
+      PSum.casesOn y (fun _x => exprEq _x.1 _x.2 = true ↔ _x.1 = _x.2) fun _x => argsEq _x.1 _x.2 = true ↔ _x.1 = _x.2
+h✝¹ : q✝ = Expr.lam domain✝¹ body✝¹
+domain✝ : Ty
+body✝ : Expr
+x✝ :
+  ∀ (y : (_ : Expr) ×' Expr ⊕' (_ : Args) ×' Args),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x =>
+          PSum.casesOn x (fun _x => PSigma.casesOn _x fun q r => sizeOf q + sizeOf r) fun _x =>
+            PSigma.casesOn _x fun qs rs => sizeOf qs + sizeOf rs)
+        y (PSum.inl ⟨Expr.lam domain✝¹ body✝¹, Expr.lam domain✝ body✝⟩) →
+      PSum.casesOn y (fun _x => exprEq _x.1 _x.2 = true ↔ _x.1 = _x.2) fun _x => argsEq _x.1 _x.2 = true ↔ _x.1 = _x.2
+h✝ : r✝ = Expr.lam domain✝ body✝
+q r : Expr
+⊢ sizeOf q + sizeOf r < 1 + sizeOf domain✝¹ + sizeOf body✝¹ + (1 + sizeOf domain✝ + sizeOf body✝)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteEqualityProof.lean:26:4: error: unsolved goals
+case neg
+α : Type u_1
+same : α → α → Bool
+he : ∀ (x y : α), same x y = true ↔ x = y
+q x : α
+xs : List α
+ih : q ∈ dedupBy same xs ↔ q ∈ xs
+h : ¬xs.any (same x) = true
+⊢ (q ∈ if false = true then dedupBy same xs else x :: dedupBy same xs) ↔ q = x ∨ q ∈ xs
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteEqualityProof.lean:26:27: warning: This simp argument is unused:
+  ite_false
+
+Hint: Omit it from the simp argument list.
+  simp only [̵d̵e̵d̵u̵p̵B̵y̵,̵h̵,̵i̵t̵e̵_̵f̵a̵l̵s̵e̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵c̵o̵n̵s̵,̵i̵h̵]̵[̲d̲e̲d̲u̲p̲B̲y̲,̲ ̲h̲,̲ ̲L̲i̲s̲t̲.̲m̲e̲m̲_̲c̲o̲n̲s̲,̲ ̲i̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteEqualityProof.lean:26:51: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp only [dedupBy, ̲h, ̲ite_false, ̲List.mem_cons,̵i̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteEqualityProof.lean:35:27: warning: This simp argument is unused:
+  ite_false
+
+Hint: Omit it from the simp argument list.
+  simp only [̵d̵e̵d̵u̵p̵B̵y̵,̵h̵,̵i̵t̵e̵_̵f̵a̵l̵s̵e̵]̵[̲d̲e̲d̲u̲p̲B̲y̲,̲ ̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteEqualityProof.lean:44:26: error: Type mismatch
+  decide_eq_true_eq
+has type
+  (decide ?m.8 = true) = ?m.8
+but is expected to have type
+  ?m.5 x✝¹ x✝ = true ↔ x✝¹ = x✝
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteEqualityProof.lean:44:76: error: Type mismatch
+  decide_eq_true_eq
+has type
+  (decide ?m.14 = true) = ?m.14
+but is expected to have type
+  ?m.11 x✝¹ x✝ = true ↔ x✝¹ = x✝

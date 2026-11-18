@@ -1,0 +1,15 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FinitePrefixProof.lean:66:32: error: Application type mismatch: The argument
+  ihb
+has type
+  List.Pairwise (fun x1 x2 => x1 ≠ x2) (fullPrefixes β)
+but is expected to have type
+  ∀ (a b : ?m.127), ?m.128 a b → ?m.130 (?m.131 a) (?m.131 b)
+in the application
+  List.Pairwise.map ?m.131 ihb
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FinitePrefixProof.lean:67:12: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case arrow.a
+α β : Ty
+iha : List.Pairwise (fun x1 x2 => x1 ≠ x2) (fullPrefixes α)
+ihb : List.Pairwise (fun x1 x2 => x1 ≠ x2) (fullPrefixes β)
+⊢ List.Pairwise ?m.128 (fullPrefixes β)

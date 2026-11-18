@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.BinaryGeneratorProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.BinaryGenerator.StatementChecks
+theorem fixed_exactTerminalTrace : BinaryGeneratorTargets.ExactTerminalTrace := exactTerminalTrace
+theorem fixed_exactReconstruction : BinaryGeneratorTargets.ExactReconstruction := exactReconstruction
+theorem fixed_uniformPrimitiveRecursive : BinaryGeneratorTargets.UniformPrimitiveRecursive := uniformPrimitiveRecursive
+#audit_namespace LogicLineages.ControlSensitivityCurrent.BinaryGenerator.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.BinaryGenerator.StatementChecks

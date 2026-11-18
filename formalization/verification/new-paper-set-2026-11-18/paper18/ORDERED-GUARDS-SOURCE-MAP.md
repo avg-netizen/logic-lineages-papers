@@ -1,0 +1,7 @@
+# Complete current ordered maximum-variable guards
+
+Current m:lem:guards. Fresh word interpreter/domain uses NumericalKernel count/depth/signed at every dynamic interior input. WordCalibration derives domain iff and actual value equality to the independently scheduled source-word interpreter for every allowed finite word, without a padded-domain restriction. Signed shift nontruncation and positive signed depth are literal domains.
+
+Full expanded target includes total malformed-code behavior and least completed trace, finite emitted row/guard syntax and maximum-variable linearity, all original/generated/prepared word domains on the computed common tail, all three exact comparisons under y<=x and computed same-variable constant. All occurrence domains are retained, including zero-coefficient row terms; row semantics remains the pinned original shared-name interpreter, tied to current words by WordCalibration. CompilerProgram and bounded PR subprograms require genuine effective construction.
+
+Existing FullWordGuardCompletion supplies actual finite recursion/termination, gap/normalization and syntax; these require fresh full recursive evidence, not inherited status. In particular counter fixed-shift/divergence suppliers are separate genuine proofs, not inferred from the accepted narrower counter endpoint. Same-variable output is fixed computed sign, never a false residual x<W(x) linear atom. No row cancellation or QE claim.

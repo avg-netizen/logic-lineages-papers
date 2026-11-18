@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.FullAdditionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.FullAddition.StatementChecks
+theorem fixed_completeAddition : Targets.CompleteAddition := completeAddition
+#audit_namespace LogicLineages.ControlSensitivityCurrent.FullAddition.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.FullAddition.StatementChecks

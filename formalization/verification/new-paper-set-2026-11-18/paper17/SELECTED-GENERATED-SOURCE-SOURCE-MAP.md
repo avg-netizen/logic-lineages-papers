@@ -1,0 +1,11 @@
+# Complete selected generated-source comparator
+
+Paper17 sections/source.tex theorem `thm:generated-source`, lines505–551.
+
+`TypedImage` quantifies every actual original typed term and arbitrary policy with ground-only free context, no internal type/result/binder/recursor bound. Actual assignment and refusing `compileVector` success and numerical compile output are conclusions. Positive coordinates have empty literal support, actual extracted closed-positive normal notation, positive value and effective raw evaluator equality. Fresh ctrl-valued semantic equality holds for every input valuation, not the legacy fixed G interpretation. Same `Scalar` syntax retains exact component identities; numeric compiler uses original variableIndex, so repeated names share an input. Finite tree expansion of fixed repeats is allowed by the printed optional sharing convention.
+
+`ClosedSound` and `ScalarSound` independently calibrate existing literal extraction against actual parametric denotation. They do not assume generatedness, and cannot substitute the old fixed-G semantic theorem. `FixedHeads` derives the actual fixed omega-natural-product head is positive, limit and below epsilon0, plus genuine selected-collapse Computable. `CircuitComputable` gives actual positive shared-tuple evaluation for every finite constructed tree, not a higher-order uniform control-index promise.
+
+`Programs` carries genuine all-raw computation of the actual source-assignment-plus-compiler under merely Effective policy and PR closed-positive evaluator. `RawInterface` proves exact refusing program correspondence on all codes; it is literal and independent of control. Together these make the circuit description effectively obtained, not just a semantic existence. A uniform numerical selected circuit evaluator across all raw circuit codes is not required by the printed description theorem and is not claimed; each constructed finite circuit's actual evaluation is Computable.
+
+Reuse restricted to accepted syntax, normal arithmetic and code suppliers; fresh selected semantic bridges mandatory. No history-dependent decrease, universal realization of auxiliary ordinal primitives, inverse-threshold (parked), elimination or main comparison claim.

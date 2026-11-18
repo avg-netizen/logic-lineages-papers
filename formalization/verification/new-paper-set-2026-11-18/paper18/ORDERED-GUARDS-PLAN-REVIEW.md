@@ -1,0 +1,7 @@
+# Independent conceptual review
+
+Approved to freeze an exact comparator, not proof acceptance. Read the plan against polynomial-arithmetic.tex m:lem:guards and its word/domain and termination discussion.
+
+The proposed full-word compiler, completed finite trace, precomputed common tail, linear-in-maximum row and three sign guards match the printed result. A finite sign disjunction on one exact row is an allowed Boolean combination. Same-variable output must be a computed constant, not a comparison containing the same variable on both sides. All original and generated word occurrences, including zero coefficients, retain domain obligations under Boolean negation.
+
+The mandatory correspondence with current NumericalKernel must recurse through actual dynamic interior arguments using lower offsets and broad scheduled calibration, never assume the padded suffix domain or treat interior arguments as independent raw inputs. Signed shifts need nontruncation and signed kernels positive-depth payments. Final recursive supplier audit must pay mixed-rank expansion, counter preimage comparisons, fixed-shift gap and exact ties, and an actual decreasing well-founded measure or equivalent total implementation with correct finite trace. Accepted counter source statements alone do not establish extra divergence claims used in this guard proof. No row cancellation, QE or decision credit follows. Exact target review remains required.

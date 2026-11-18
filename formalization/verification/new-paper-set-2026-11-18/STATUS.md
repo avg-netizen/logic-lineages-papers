@@ -1,6 +1,6 @@
 # Current comparison formalization status
 
-New-paper register: **108 checked, 59 pending / 167**. Historical register:
+New-paper register: **113 checked, 54 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
@@ -488,3 +488,19 @@ Current16 `lem:observation-closure` is checked after fresh 102-module evidence a
 ### Both source box clauses (254)
 
 Current17 `lem:source-box` is checked after fresh 243-module evidence and independent final. Actual ambient and independently constructed tracked-head grades, level-zero tail and universal original F2 guard are retained. Canonical assignment, generated-source and threshold remain separate.
+
+### Exact counter expansion and collision (255)
+
+Current18 `m:lem:counter` is checked after fresh 254-module evidence and independent final. Actual numerical dynamic inputs are calibrated only after their affordability is derived. Full signed expansion, strict bands, collision/rank characterizations and effective common tails are retained. Residue and general comparison remain separate.
+
+### Complete selected canonical domain (257)
+
+Current17 `prop:canonical-domain` is checked after fresh 302-module evidence and independent final. Actual selected assignments retain all recursor/binder/internal types, generated-to-head grammar and true retained abstraction, with merely-effective code construction. Generated arithmetic image and comparison remain separate.
+
+### Kernel residues and actual source addition (259–260)
+
+Current18 `m:lem:kernel-residues` is checked with fresh 207-module evidence, preserving actual budget transfer, signed domains and genuine partition DP/residue programs. Current19 `lem:addition` is checked with fresh 241-module evidence, all-policy typed gadgets, actual source-growth discharge and a primitive-recursive shared DAG generator. Both received independent final review; general Boolean compiler/hardness remain separate.
+
+### Actual selected generated source image (261)
+
+Current17 `thm:generated-source` is checked after fresh 545-module evidence and independent final. Actual selected scalar circuits, closed positive coordinates, fixed-head shifts and effective literal source descriptions are retained for unrestricted internal syntax. No fixed-control semantic transfer or main comparison claim follows.

@@ -1,0 +1,5 @@
+# Actual literal binary generator: three supporting contracts
+
+Supports the literal-DAG clause of current19 lem:addition. The explicit finite numeric code is `trace k : Nat × List Nat`, computed by k iterations of actual quotient/remainder advance. Terminal base is <2, bits are <2, and base=0 iff k=0. Bits are inner-to-outer; reconstruct uses foldl of exact double/doubleOne constructors, preserving one occurrence of the child DAG. ExactReconstruction equals the very `binaryDAG k` already interpreted by PolicyAddition.Run under arbitrary p/f. UniformPrimitiveRecursive supplies real Mathlib Primrec advance and trace, not existence of a generator.
+
+No new policy/control semantics is introduced: the syntax generation is independent of p/f. It does not claim the larger arbitrary Boolean formula/serialized source-forest compiler. Fresh target bodies preserve actual old semantic propositions in the new namespace; no inherited acceptance. All five pins, fresh native/recursive evidence and independent final required before full addition assembly.

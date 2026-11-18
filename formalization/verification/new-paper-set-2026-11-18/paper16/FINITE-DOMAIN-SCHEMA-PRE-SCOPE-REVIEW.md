@@ -1,0 +1,7 @@
+# Independent exact pre-scope review
+
+Approved for supporting proof development, not finite-lattice acceptance. Read both frozen Lean files and decision.tex natural finite domains; independently reconciled all seven source hashes.
+
+The ten endpoints describe the literal coordinate schema: executable slot extension agrees with actual Extends, complete well-formed extensions including zero/exhausted contexts; actual Expr observations deduplicated extensionally; distinct availability/weak/strict tags; every nonempty full prefix with ordered entire input tuples; actual lower-list cardinalities at every argument position; exact raw Cartesian codes and key inclusion under extension. LowerCarrier calls have actual strict type-size witnesses for both arguments and functional residual results. No comparison-success premise or silent monotonicity/coherence restriction is present.
+
+RestrictionKeys is only inclusion for the SAME callback, not semantic restriction or naturality. Arbitrary callbacks may supply duplicate lower codes or empty output carriers; this is legitimate supporting scope but does not identify actual hereditary domains or establish bottom/top. Future canonical construction must prove lower carrier identity independent of parent/callback stage, exact encoding/decoding, lower restriction reindexing, executable monotone/natural retention, and joins/meets including empty families. Proof irrelevance of the size witness alone cannot discharge parent independence. No numbered source promotion or native execution in this review.

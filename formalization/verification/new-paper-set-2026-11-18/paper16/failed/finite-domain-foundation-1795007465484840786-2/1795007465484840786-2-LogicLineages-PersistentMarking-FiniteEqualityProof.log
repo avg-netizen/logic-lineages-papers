@@ -1,0 +1,42 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteEqualityProof.lean:7:23: error: unsolved goals
+σ : Ty
+q : Expr
+τ : Ty
+r : Expr
+⊢ σ = τ ∧ q = r ↔ Expr.lam σ q = Expr.lam τ r
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteEqualityProof.lean:8:27: error: unsolved goals
+f : Head
+qs : Args
+g : Head
+rs : Args
+⊢ f = g ∧ qs = rs ↔ Expr.head f qs = Expr.head g rs
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteEqualityProof.lean:9:41: error: unsolved goals
+f : Head
+σ : Ty
+qs es : Args
+g : Head
+τ : Ty
+rs fs : Args
+⊢ f = g ∧ σ = τ ∧ qs = rs ∧ es = fs ↔ Expr.marked f σ qs es = Expr.marked g τ rs fs
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteEqualityProof.lean:5:56: error: unsolved goals
+case free.free
+type✝¹ : Ty
+name✝¹ : Nat
+type✝ : Ty
+name✝ : Nat
+⊢ type✝¹ = type✝ ∧ name✝¹ = name✝ ↔ Expr.free type✝¹ name✝¹ = Expr.free type✝ name✝
+
+case bound.bound
+type✝¹ : Ty
+index✝¹ : Nat
+type✝ : Ty
+index✝ : Nat
+⊢ type✝¹ = type✝ ∧ index✝¹ = index✝ ↔ Expr.bound type✝¹ index✝¹ = Expr.bound type✝ index✝
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteEqualityProof.lean:13:27: error: unsolved goals
+q : Expr
+qs : Args
+r : Expr
+rs : Args
+⊢ q = r ∧ qs = rs ↔ Args.cons q qs = Args.cons r rs
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteEqualityProof.lean:10:1: warning: unused `termination_by`, function is not recursive
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteEqualityProof.lean:14:1: warning: unused `termination_by`, function is not recursive

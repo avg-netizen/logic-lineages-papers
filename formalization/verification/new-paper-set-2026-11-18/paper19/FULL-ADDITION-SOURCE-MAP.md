@@ -1,0 +1,9 @@
+# Complete current19 lem:addition
+
+Complete comparator freezes all printed mathematical/effectivity clauses. Source G is literally Phi=fastControl5(n+100), not a free symbol. SourceGrowth retains Phi<=f and the printed adjacent double exponent; proof must derive strict increase/inflation. Dropping the source PR/eventual upper hierarchy restrictions strengthens this finite-gadget result and does not assert arbitrary-f evaluation computability.
+
+For every structural policy (hence each source computable policy), actual typed AddWitness/Formula preserve one fresh positive raw witness d+1, exact unique d=3*n_b and both directions natural addition. Terms are genuine OriginalTerm Γ ground with actual assignment p/denoteWith f and shared old valuations; not caller-supplied gadget correctness. OneFormula is the literal fixed typed template S v=I0 plus Plus(u,u,v): one S/I equation and exactly two eraser equations, constant footprint independent of the numeric input or control. Ground binders are fresh typed weakening, no normalization of sources.
+
+All k, including zero, have the literal shared binaryDAG with explicit <=2(log2 k+1) addition gates and actual same-p/f source-equation Run iff y=k. Zero/one bases are supplied as the source clause states, with actual one defined separately. Its actual code is PR trace k=(base,bits); terminal base/bit validity and exact reconstruction into THIS binaryDAG are conjunctions, so effective existence is not inferred from a noncomputable choice. Child sharing and inner-to-outer bit order are preserved.
+
+This completes only lem:addition under the independently reviewed printed scope. General serialized typed forest/Boolean compilation, polynomial overhead of arbitrary source leaves, coRE and hardness are not claimed. Fresh full union native/evidence/final required, despite all suppliers already checked. Ten pins.
