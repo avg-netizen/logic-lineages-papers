@@ -5,6 +5,7 @@ public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.Syste
 namespace LogicLineages.PermittedControl.StandardSystemMask.Proof
 open OrdinalComparison Source SelectedSourceDomain SelectedFunctionalDetector
 open Source.AdmissibleSum
+open SelectedSystemReduction
 open Source.FunctionalHardnessCompletion (System compileSystem strictSystemPair weakSystemPair)
 
  theorem systemEquality : StandardSystemMask.SystemEquality := by

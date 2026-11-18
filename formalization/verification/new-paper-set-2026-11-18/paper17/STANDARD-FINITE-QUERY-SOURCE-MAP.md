@@ -1,0 +1,4 @@
+# Actual-G finite-query supporting endpoint
+Three families: actual literal all-raw Primrec reduceCode; exact decoded semantic query list with matching raw outputs, queryBounds2 and actual Phi ALL-query UNSAT iff; both strict and weak finite-query reductions for every same policy.
+Existing SelectedFiniteQuery definitions are arbitrary-control public predicates, not selected-admission assertions. At Phi the public domain remains unrestricted printed ground sources/context<=1/internal2, not generated images. Strict query order is the reversed aggregate pair; weak order uses literal K(right)/I(left).
+Fresh proof must pay valid decode, invalid and decode-none branches with actual impossible fallback1=0 and literal raw list calibration. Empty systems/n0/all masks retained. No supplied reduction oracle or selected semantic endpoint transfer. No no-decider/level3/full corollary credit; threshold parked.

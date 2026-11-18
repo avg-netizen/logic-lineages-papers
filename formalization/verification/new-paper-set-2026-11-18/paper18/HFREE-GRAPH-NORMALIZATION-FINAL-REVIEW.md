@@ -1,0 +1,13 @@
+# Independent final: H-free graph normalization
+
+Approved the complete six-family supporting endpoint HFreeGraphNormalizationTargets.Full. Fresh full union receipt 1795024439538270519-5 is reported reaped/released in the native handoff. Independent compiler-free recursive verification reproduces the author's JSON exactly: 695 source-matched modules, zero errors, exact StatementChecks.fixed_hFreeGraphNormalization alias with only propext, Classical.choice and Quot.sound. All eleven current frozen hashes were independently recomputed and match. No native/compiler process was started by this reviewer.
+
+The full assembly was read: it concludes termGraphs, matrixGraphs, allowedWholeBlock, originalSupport, literalCode and programs without an external semantic oracle. Incorporate HFREE-GRAPH-NORMALIZATION-SUPPLIER-MATHEMATICAL-REVIEW.md and the detailed supplier read notes as the substantive mathematical audit, not merely an axiom check.
+
+The actual graph handles truncated subtraction, division including zero, and the true inverse floor graph including below-range zero. Constructive postorder finite valuation updates and disjoint allocated intervals prove realization and uniqueness of all allocated nodes. Total Boolean forests lie outside negation and preserve shared original parameters. The initializer derives the allowed unshifted-Phi row class, full-block parameter independence, H-free output and shared-valuation existential equivalence; these are not supplied premises. Original support is retained.
+
+Literal code calibration covers actual term/matrix constructors, variable/forest order, shifted right allocations, predicate branches and initialized output. The fresh numerical programs use concrete decreasing raw-code children, explicit assemblers and actual list/arithmetic composition, including deterministic malformed defaults. Growing allocation starts do not invalidate the strictly decreasing code rank. Semantic admission remains H-free; broader typed/raw calibration does not claim semantics for H.
+
+The handoff preserves ordinary proof-only namespace/annotation failures and reports all prerequisite receipts. No frozen definition or target was repaired and no resource cap change is attributed to this packet.
+
+Boundary: this accepts the complete H-free graph/whole-block initialization interface and its genuine raw computation. It does not accept PlainBlockSplit projection correctness/effectivity, returned-language closure for elimination, general tag3 progress, arbitrary quantifier-alternation decision, or expanded Phi/H quantifier elimination. Those require separate exact source and proof-chain review.

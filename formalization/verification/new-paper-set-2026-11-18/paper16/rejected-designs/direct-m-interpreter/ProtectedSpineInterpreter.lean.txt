@@ -1,0 +1,139 @@
+import LogicLineages.PersistentMarking.ProtectedSpineEnvironment
+namespace LogicLineages.PersistentMarking.ProtectedSpineInterpreter
+open Spine NameBridge DecisionPorts HereditaryDomainCode HereditaryDomainSemantics ProtectedSpineEnvironment
+
+def targetTerms : Args → List Expr
+  | .nil => []
+  | .cons q qs => q :: targetTerms qs
+
+def removals : List Expr → List (Expr × List Expr)
+  | [] => []
+  | q::qs => (q,qs) :: (removals qs).map (fun p => (p.1,q::p.2))
+
+/-- Literal positional occurrence matching: each chosen target is removed once. -/
+def matching (E : Environment) (Γ : Context) : BoundValues → List Expr → Bool
+  | [], ts => ts.isEmpty
+  | (σ,c)::bs, ts => (removals ts).any fun p =>
+      decide (σ=p.1.type) && (HereditaryDomainSemantics.decode E σ Γ c).weak Γ p.1 &&
+      matching E Γ bs p.2
+
+def equivalent (S : Signature) (f g : Head) : Bool :=
+  match classRank S f,classRank S g with
+  | some a,some b => decide (a=b)
+  | _,_ => false
+
+mutual
+ def interpret (S : Signature) (E : Environment) (heads : List Head) (M : Code)
+     (q : Expr) (Γ : Context) (free : FreeValues) (bound : BoundValues) : Value :=
+   match q with
+   | .free σ x => HereditaryDomainSemantics.decode E σ Γ (freeCode E Γ free σ x)
+   | .bound σ i => HereditaryDomainSemantics.decode E σ Γ (boundCode E Γ bound σ i)
+   | .head f bs =>
+     let base := interpretArgs S E heads M bs Γ free bound
+     let marked := (StructuralActions.markedAction E heads M
+       (f,f.result,Γ,base.map Prod.snd,MarkedExtras.down E Γ [])).getD
+         (StructuralActions.bottom E f.result Γ)
+     { available := fun _ => true
+       weak := fun Δ t =>
+         (match t with
+          | .head g ts => equivalent S f g && decide (f.result=g.result) &&
+              matching E Δ (weakenBound E Γ Δ base) (targetTerms ts)
+          | _ => false) || (HereditaryDomainSemantics.decode E f.result Γ marked).weak Δ t
+       strict := fun Δ t => (HereditaryDomainSemantics.decode E f.result Γ marked).weak Δ t
+       application := fun Δ ds τ xs => originalHeadCall E heads M Δ f f.result
+         ((weakenBound E Γ Δ base).map Prod.snd) (MarkedExtras.down E Δ []) ds xs τ }
+   | .marked f τ bs es =>
+     let base := interpretArgs S E heads M bs Γ free bound
+     let extras := MarkedExtras.down E Γ (interpretArgs S E heads M es Γ free bound)
+     let c := (StructuralActions.markedAction E heads M (f,τ,Γ,base.map Prod.snd,extras)).getD
+       (StructuralActions.bottom E τ Γ)
+     HereditaryDomainSemantics.decode E τ Γ c
+   | .lam σ body =>
+     let field := fun (strict : Bool) (Δ : Context) (t : Expr) =>
+       match t with
+       | .lam ρ target =>
+         if σ=ρ then
+           match openingSlot Δ with
+           | none => false
+           | some i =>
+             let Θ := openingContext Δ σ i
+             let x := portName E.names i
+             let value := literalCode E Θ σ x
+             let v := interpret S E heads M body Θ (weakenFree E Γ Θ free)
+               ((σ,value)::weakenBound E Γ Θ bound)
+             if strict then v.strict Θ (openBody σ x target)
+             else v.weak Θ (openBody σ x target)
+         else false
+       | _ => false
+     { available := fun _ => true
+       weak := field false
+       strict := field true
+       application := fun Δ ds τ xs =>
+         match ds,xs with
+         | d::rest,x::ys =>
+           if d=σ then
+             let fre := weakenFree E Γ Δ free
+             let ben := (σ,x)::weakenBound E Γ Δ bound
+             match rest,ys with
+             | [],[] => if body.type=τ then
+                 HereditaryDomainSemantics.encode E τ Δ (interpret S E heads M body Δ fre ben)
+                 else StructuralActions.bottom E τ Δ
+             | e::tail,y::zs => callNonempty S E heads M body Δ fre ben 1 e y tail zs τ
+             | _,_ => StructuralActions.bottom E τ Δ
+           else StructuralActions.bottom E τ Δ
+         | _,_ => StructuralActions.bottom E τ Δ }
+ termination_by sizeOf q
+
+ def interpretArgs (S : Signature) (E : Environment) (heads : List Head) (M : Code)
+     (qs : Args) (Γ : Context) (free : FreeValues) (bound : BoundValues) : BoundValues :=
+   match qs with
+   | .nil => []
+   | .cons q rest =>
+       (q.type,HereditaryDomainSemantics.encode E q.type Γ (interpret S E heads M q Γ free bound)) ::
+       interpretArgs S E heads M rest Γ free bound
+ termination_by sizeOf qs
+
+ /-- Nonempty original call. Only newly consumed original slots are protected. -/
+ def callNonempty (S : Signature) (E : Environment) (heads : List Head) (M : Code)
+     (q : Expr) (Γ : Context) (free : FreeValues) (bound : BoundValues) (consumed : Nat)
+     (d : Ty) (x : Code) (ds : List Ty) (xs : List Code) (τ : Ty) : Code :=
+   match q with
+   | .free σ n =>
+       if residualType σ (d::ds)=some τ ∧ ds.length=xs.length then
+         StructuralActions.fullAction E σ Γ (freeCode E Γ free σ n) (d::ds) τ (x::xs)
+       else StructuralActions.bottom E τ Γ
+   | .bound σ i =>
+       if protectedLookup consumed i then StructuralActions.bottom E τ Γ
+       else if residualType σ (d::ds)=some τ ∧ ds.length=xs.length then
+         StructuralActions.fullAction E σ Γ (boundCode E Γ bound σ i) (d::ds) τ (x::xs)
+       else StructuralActions.bottom E τ Γ
+   | .head f bs => originalHeadCall E heads M Γ f f.result
+       ((interpretArgs S E heads M bs Γ free bound).map Prod.snd)
+       (MarkedExtras.down E Γ []) (d::ds) (x::xs) τ
+   | .marked f υ bs es => originalHeadCall E heads M Γ f υ
+       ((interpretArgs S E heads M bs Γ free bound).map Prod.snd)
+       (MarkedExtras.down E Γ (interpretArgs S E heads M es Γ free bound)) (d::ds) (x::xs) τ
+   | .lam σ body =>
+       if d=σ then
+         let ben := (σ,x)::bound
+         match ds,xs with
+         | [],[] => if body.type=τ then
+             HereditaryDomainSemantics.encode E τ Γ (interpret S E heads M body Γ free ben)
+             else StructuralActions.bottom E τ Γ
+         | e::rest,y::ys => callNonempty S E heads M body Γ free ben (consumed+1) e y rest ys τ
+         | _,_ => StructuralActions.bottom E τ Γ
+       else StructuralActions.bottom E τ Γ
+ termination_by sizeOf q
+end
+
+/-- An independent call begins with no protected origin; an empty call resets. -/
+def call (S : Signature) (E : Environment) (heads : List Head) (M : Code)
+    (q : Expr) (Γ : Context) (free : FreeValues) (bound : BoundValues)
+    (domains : List Ty) (values : List Code) (τ : Ty) : Code :=
+  match domains,values with
+  | [],[] => if q.type=τ then
+      HereditaryDomainSemantics.encode E τ Γ (interpret S E heads M q Γ free bound)
+      else StructuralActions.bottom E τ Γ
+  | d::ds,x::xs => callNonempty S E heads M q Γ free bound 0 d x ds xs τ
+  | _,_ => StructuralActions.bottom E τ Γ
+end LogicLineages.PersistentMarking.ProtectedSpineInterpreter

@@ -1,0 +1,3 @@
+# Authored typed composition scope
+
+Approved RawCheckedCompositionTypedProof bounded root for exact TypedExactness under unchanged seven pins. Read actual raw identities and guard proofs. Literal graph encoding is reconciled using append/insert/front/back/map and actual graph length, including lambda/app root shifts; typedAccepted supplies real validity and encoded types/context satisfy exact guards. No denotational substitute or erased/duplicated vertices. This typed direction does not pay arbitrary-raw success reconstruction, rejection/count/output obligations or computation; separate gates/final required.

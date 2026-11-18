@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.HFreeGraphNormalizationProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.StatementChecks
+ theorem fixed_hFreeGraphNormalization : HFreeGraphNormalizationTargets.Full := HFreeGraphNormalizationProof.full
+#print axioms fixed_hFreeGraphNormalization
+end LogicLineages.StandardControlCurrent.StatementChecks
