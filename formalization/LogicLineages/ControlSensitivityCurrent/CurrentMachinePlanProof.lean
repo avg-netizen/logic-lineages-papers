@@ -17,14 +17,14 @@ theorem gamma_growth (b : Nat) : FullAddition.Targets.SourceGrowth (SourceMachin
 theorem graph_policy (b : Nat) (p : AdmissibleSum.Policy) {Γ : List Ty}
     (ρ : Variable Γ .ground → Nat) (x y : Variable Γ .ground) :
     PolicyAddition.Equation p (SourceMachineControlNonperiodicity.gamma b) (inputs ρ)
-        (SourceSortCompletion.successorProbe x) (.var y) ↔
+        (successorProbe x) (.var y) ↔
       ParametricSourceAddition.Equation (SourceMachineControlNonperiodicity.gamma b) (inputs ρ)
-        (SourceSortCompletion.successorProbe x) (.var y) := by
+        (successorProbe x) (.var y) := by
   have hg := ParametricCoefficientOne.Proof.actualGammaCoefficientOne b
   have hp := PolicyLowering.equation_iff p _ hg.1 hg.2.1 (inputs ρ)
     (.successor (.var x)) (.port (.var y))
   have he := SourceMachineConjunctionPlan.Proof.successor_equation _ hg.1 hg.2.1 (inputs ρ) x y
-  change PolicyAddition.Equation p _ (inputs ρ) (SourceSortCompletion.successorProbe x) (.var y) ↔
+  change PolicyAddition.Equation p _ (inputs ρ) (successorProbe x) (.var y) ↔
     SourceMachineControlNonperiodicity.gamma b (ρ x+4) = ρ y at hp
   exact hp.trans ((eq_comm : SourceMachineControlNonperiodicity.gamma b (ρ x+4) = ρ y ↔
     ρ y = SourceMachineControlNonperiodicity.gamma b (ρ x+4)).trans he.symm)

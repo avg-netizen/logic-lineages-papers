@@ -38,7 +38,7 @@ theorem coverageCons {S : Signature} (F : Inputs S) (M : Code)
   intro hj u hu
   rcases List.mem_cons.mp hu with he | hu
   · subst u
-  · have hhead := DecisionClosureStepProof.step S F _ _ (.coverageHead hAt) hj
+    have hhead := DecisionClosureStepProof.step S F _ _ (.coverageHead hAt) hj
     have hty := ProtectedSpineAdequacyTypingProof.strict S F.data.types F.data.names Γ q t hqt
     have hbit := ProtectedSpineAdequacyTypingProof.taggedBit S F M Γ q t hm hhead.1
       hhead.2.1 hhead.2.2 hty true (ih hhead)

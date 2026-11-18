@@ -11,7 +11,7 @@ open ExistentialPlan BinaryPlan PrimitiveLowering GroundEquivalence
 open CurrentMachinePlanTargets (SuccessorEquations)
 
 theorem successor_rename {Γ Δ : List Ty} (r : Renaming Γ Δ) (x : Variable Γ .ground) :
-    (SourceSortCompletion.successorProbe x).rename r = SourceSortCompletion.successorProbe (r x) :=
+    (successorProbe x).rename r = successorProbe (r x) :=
   rfl
 
 theorem rename_shape {Γ : List Ty} (q : Plan Γ) (hq : SuccessorEquations q)

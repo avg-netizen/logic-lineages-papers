@@ -21,3 +21,35 @@
 - 21:05 UTC: root accepted 389-391 (supporting) and 392 (paper19 thm:compiler, numbered). Register 124 checked / 43 pending.
 - 21:08 UTC: lane C: paper18 WholeBlockProjector full gate (718 modules) passed unchanged; accepted as supporting packet 393 (root reproduced; proofs and scope reviews are the previous coordinator's).
 - 21:10 UTC: root accepted 394-398 (paper16 interpreter packets; 396 carries the checked same-family application gap, lem:structural-interpretation NOT promoted) and 399 (paper19 cor:ground-equivalence, numbered). Register 125 checked / 42 pending.
+
+## Root stop, 2026-11-18 about 21:30 UTC (Claude usage limit)
+
+State: register 125 checked / 42 pending; accepted packets 381-399; six local
+commits ahead of origin (push was denied by the session permission layer, not
+attempted again). Compiler policy still open until 2026-11-19T18:00Z.
+
+Still running, unattended: lane A (logs/A-session-02.out) and lane B
+(logs/B-session-02.out). They append to A/LEDGER.md and B/LEDGER.md and stop
+by themselves after about three hours or when blocked. Nobody is reviewing
+their READY-FOR-ROOT-REVIEW packets until root resumes. To stop them early:
+kill the two `codex exec resume` processes; no Lean job survives its gate.
+
+Open root items, in order:
+1. Review whatever lanes A and B marked READY since 21:10 UTC
+   (root_review.py for paper19, root_review_core.py for paper16).
+2. Lane C paper17 chain (five gates, cor:standard-functional-hardness) is
+   gated with evidence but NOT accepted: it needs a review by someone other
+   than root. Ask lane B at its next resume (C/LEDGER.md has the table).
+3. Source decision for the user: lem:structural-interpretation's application
+   clause is false in the literal same-family reading (packet 396) and true
+   at fixed points (packet 398).
+4. Lane C next packet, not started: effective decision for paper18
+   m:thm:snyatkov. Typed elimination already compiles
+   (OriginalSourceEliminationStatementChecks, 252 modules). Missing: raw
+   eliminateCode on SourceFormula.encode by code recursion
+   (FiniteGraph.Proof.exactDecreasingGraph pattern, as in
+   HFreeGraphNormalizationMatrixProgramsProof), one-binder raw code =
+   WholeBoundProjectionCode.project (Code.names i c) (Code.graphFormula i c),
+   a zero-valuation evaluator for closed H-free Matrix codes (Phi_computable
+   exists; phiInverse computability to be checked), and the closed-sentence
+   decision statement. m:thm:common and m:thm:balanced appear to wait on it.

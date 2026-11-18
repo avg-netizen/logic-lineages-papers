@@ -12,7 +12,7 @@ open ExistentialPlan PrimitiveLowering
 def SuccessorEquations {Γ : List Ty} : Plan Γ → Prop
   | .done => True
   | .equation a b q =>
-    (∃ x y : Variable Γ .ground, a.term = SourceSortCompletion.successorProbe x ∧ b.term = .var y) ∧
+    (∃ x y : Variable Γ .ground, a.term = successorProbe x ∧ b.term = .var y) ∧
       SuccessorEquations q
   | .gate _ q => SuccessorEquations q
   | .existsGround q => SuccessorEquations q
