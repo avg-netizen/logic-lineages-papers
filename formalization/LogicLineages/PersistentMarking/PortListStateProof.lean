@@ -24,7 +24,7 @@ theorem observedSplit (S : Signature) (F : Inputs S) (Γ) {qs left right : Args}
     (hs : Split qs left right) (h : ObservedArgs F Γ qs) :
     ObservedArgs F Γ left ∧ ObservedArgs F Γ right := by
   induction hs with
-  | nil => exact ⟨fun _ _ ha => nomatch ha,fun _ _ ha => nomatch ha⟩
+  | nil => exact ⟨(fun _ _ ha => nomatch ha),(fun _ _ ha => nomatch ha)⟩
   | left hs ih =>
     obtain ⟨hx,ht⟩ := observedCons S F Γ _ _ h
     obtain ⟨hl,hr⟩ := ih ht

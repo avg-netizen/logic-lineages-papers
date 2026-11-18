@@ -1,6 +1,6 @@
 # Current comparison formalization status
 
-New-paper register: **103 checked, 64 pending / 167**. Historical register:
+New-paper register: **108 checked, 59 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
@@ -468,3 +468,23 @@ Current18 `m:lem:kernel-recursion` is checked after fresh 185-module evidence an
 ### Selected-control weak scalar (245)
 
 Current17 `lem:weak-scalar` is checked after fresh 203-module evidence and independent final. All three source clauses retain actual occurring-vector admissibility, literal partial success and grades, derived collapse guard and genuine naked-delta grades/freeness. Output norm bounds, box and parked threshold remain separate.
+
+### Exact first-free subtree bound (247)
+
+Current17 `lem:first-free-subtree` is checked after fresh 222-module evidence and independent final. Actual selected child norms and grade-budget path retain the original exact multiplier, with genuine all-one bounded-root calibration and already-free high roots. Delta output norm and box are still separate.
+
+### Exact uniform separation (249)
+
+Current18 `m:lem:uniform` is checked after fresh 185-module evidence and independent final. The full broad numerical domain, literal constants, signed depths, arbitrary separation parameter and effective equality tail are retained. Actual scheduled-count calibration and quantitative block proofs discharge the statement; arithmetic decision remains separate.
+
+### Exact bounded delta norm (251)
+
+Current17 `thm:delta-bounded-norm` is checked after fresh 233-module evidence and independent final. Actual partial budgets follow from first-free bounds, naked delta retains all original branches and occurring-vector support, and the original scalar multiplier norm identity is exact. Box and source-assignment results remain separate.
+
+### Every-request observation closure (252)
+
+Current16 `lem:observation-closure` is checked after fresh 102-module evidence and independent final. Seven request sorts and eighteen local edges cover failed and pending attempts independently of comparison success; both original weak/strict roots retain actual type, source and observation invariants. Finite-domain construction, fixedpoint adequacy and decision remain separate.
+
+### Both source box clauses (254)
+
+Current17 `lem:source-box` is checked after fresh 243-module evidence and independent final. Actual ambient and independently constructed tracked-head grades, level-zero tail and universal original F2 guard are retained. Canonical assignment, generated-source and threshold remain separate.

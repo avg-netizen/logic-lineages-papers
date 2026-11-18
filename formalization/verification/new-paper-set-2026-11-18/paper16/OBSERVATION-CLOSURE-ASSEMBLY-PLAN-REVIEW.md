@@ -1,0 +1,9 @@
+# Independent conceptual review: recursive observation closure
+
+Direction approved for concrete definitions/targets, with a mandatory scope distinction at the exact-contract review.
+
+Read the source finite-closure lemma and the plan. A six-sort tagged request, actual context, literal rule-child edges, derived one-step invariant and finite reachability induction are the right explicit assembly. Preserve both children of all list/Stat rules, selected domain and suffix requests, original simultaneous owner calls and original owner output annotations. Initial Source/Observed/WellFormed state must be derived from the actual two ordinary typed inputs, root occurrence and empty assignment; normalization plus erasure supplies faithful initial comparison.
+
+Important: define what 'recursive request' means independently of success. If child edges require successful companion comparison proofs, the resulting theorem covers only children of successful derivations, not every attempted request in recursive comparison/search. Do not silently identify those two scopes. For the printed algorithmic closure reading, failed/pending recursive premise requests should still be covered whenever local syntactic/typing/selection conditions justify generating them; comparison premises may be carried as rule data only if they do not exclude relevant requested children. Exact edge constructors must be reviewed before claiming the whole source lemma.
+
+Invariant content must explicitly imply every auxiliary/requested type in K, source heads from s, free names in V/occupied typed ports, genuine target observations and residual depth budget. Whole output annotations must come from actual targets; no assertion arbitrary unrequested types lie in K. No finite-source bound, cutoff, semantic lattice, fixed-point adequacy or decidability follows from this packet.

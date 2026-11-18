@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.DecisionClosureProof
+namespace LogicLineages.PersistentMarking.DecisionClosureChecks
+ theorem exact_FullClosure : DecisionClosureTargets.FullClosure := DecisionClosureProof.full
+#print axioms exact_FullClosure
+end LogicLineages.PersistentMarking.DecisionClosureChecks

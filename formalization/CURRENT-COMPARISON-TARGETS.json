@@ -184,8 +184,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/decision.tex",
           "line": 22,
           "statement_latex": "[Finite closure]\\label{lem:observation-closure}\nIn a recursive comparison originating at $(s,t)$, every requested type\nbelongs to $K$, every source head occurs in $s$, every target belongs to\nthe corresponding observation family, and every free source name belongs\nto $V\\cup\\Gamma$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.DecisionClosureTargets.FullClosure",
+          "verified_alias": "LogicLineages.PersistentMarking.DecisionClosureChecks.exact_FullClosure",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/252-observation-closure.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:finite-lattices",
@@ -831,8 +834,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/source.tex",
           "line": 176,
           "statement_latex": "[Box domain and bounded norm]\\label{lem:source-box}\nIf $a,b\\in C$ have bounded norm and $\\lv(a)>\\lv(b)=n$, then\n$a\\square b$ belongs to $C$ and has bounded norm.  The same statement\nholds with $C^{\\mathbf x}$ in place of $C$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.SelectedBoxTargets.FullSelectedBox",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullSelectedBox",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/254-selected-box.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:lem:source-finiteness",
@@ -867,8 +873,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/source.tex",
           "line": 356,
           "statement_latex": "[First free positive subtree]\n\\label{lem:first-free-subtree}\nLet $h\\in C^{\\mathbf x}$ have bounded norm.  Fix an admissible\nvaluation for its other names and put\n$B=h_0\\{\\mathbf x:=\\mathbf1\\}$ at that valuation.\nIn a partial recursion beginning at any actual $h_i$, every first\nwholly $\\mathbf x$-free subtree $a$ encountered at a positive\ngrade satisfies\n\\[\n N(a)\\le2^{n-1}B.\n\\]",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.SelectedFirstFreeTargets.FullSelectedFirstFree",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullSelectedFirstFree",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/247-selected-first-free.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:thm:delta-bounded-norm",
@@ -877,8 +886,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/source.tex",
           "line": 396,
           "statement_latex": "[Bounded norm with the original multiplier]\n\\label{thm:delta-bounded-norm}\nIf $h\\in C^{\\mathbf x}$ has bounded norm, then\n$\\delta^{\\mathbf x}h$ has bounded norm, with exactly the multiplier\n$S_{\\mathbf x}(h)=2^n\\sum_i s_{\\mathbf x}(h_i)$ in\n\\eqref{eq:source-delta}, for every admissible policy.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.SelectedBoundedDeltaTargets.FullSelectedBoundedDelta",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullSelectedBoundedDelta",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/251-selected-delta-norm.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:prop:canonical-domain",
@@ -1233,8 +1245,11 @@
           "file": "18-standard-control-comparison/sections/polynomial-arithmetic.tex",
           "line": 114,
           "statement_latex": "[Uniform kernel separation]\\label{m:lem:uniform}\nPut $C_d=1000d^2$, $T_3=16$, and for $d\\ge4$ put\n$T_d=\\max(T_{d-1},100C_{d-1}+100d)$. For $d\\ge3$, $c,e\\ge0$, signed\n$j,k$, and $R\\ge0$, suppose\n\\begin{equation}\\label{m:eq:region}\n t\\ge T_d,\\qquad\n f(t)\\ge C_d(c+e+|j|+|k|+R+1).\n\\end{equation}\nThen the depths are defined and at least $f(t)$, and\n\\begin{align*}\n X^d_{c,j}(t+1)&>f^R(X^d_{e,k}(t)),\\\\\n c<e\\quad&\\Longrightarrow\\quad\n X^d_{c,j}(t)>f^R(X^d_{e,k}(t)).\n\\end{align*}\nAt equal input and equal $c$, exact order is order of $j$. On a common\ncomputed tail, equality of two rank-$d$ values occurs exactly when input,\n$c$, and $j$ are identical.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.UniformSeparationTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.UniformSeparationStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/249-uniform-separation.json"
         },
         {
           "id": "18-standard-control-comparison:m:lem:counter",
@@ -2200,7 +2215,7 @@
     }
   ],
   "status_counts": {
-    "pending": 64,
-    "checked": 103
+    "pending": 59,
+    "checked": 108
   }
 }

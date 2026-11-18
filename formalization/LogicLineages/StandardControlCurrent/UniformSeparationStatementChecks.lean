@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.UniformSeparationProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.UniformSeparationStatementChecks
+theorem full : UniformSeparationTargets.Full := UniformSeparationProof.full
+#print axioms full
+end LogicLineages.StandardControlCurrent.UniformSeparationStatementChecks

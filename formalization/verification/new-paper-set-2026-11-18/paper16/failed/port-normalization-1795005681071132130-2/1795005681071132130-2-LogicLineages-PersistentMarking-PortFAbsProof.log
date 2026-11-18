@@ -1,0 +1,59 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PortFAbsProof.lean:38:76: error: Ambiguous term
+  renameFree
+Possible interpretations:
+  RefinementRenameSupport.renameFree : ∀ (π : NameRenaming) (σ : Ty) (x : Nat),
+    rename π (Expr.free σ x) = Expr.free σ (π σ x)
+  
+  NameBridge.renameFree : Name → Name → Term → Term
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PortFAbsProof.lean:40:44: error: Application type mismatch: The argument
+  hus
+has type
+  Source F (fillSlot Γ i σ)
+    (Expr.marked f τ (renameArgs π ss)
+      ((renameArgs π es).append (Args.cons (Expr.free σ (portName F.data.names i)) Args.nil)))
+but is expected to have type
+  Source F (fillSlot Γ i σ)
+    (Expr.marked f τ
+      (renameArgs (PortRenameProof.compose (RefinementOpeningProof.swap σ (π σ x) (portName F.data.names i)) π) ss)
+      ((renameArgs (PortRenameProof.compose (RefinementOpeningProof.swap σ (π σ x) (portName F.data.names i)) π)
+            es).append
+        (Args.cons
+          (rename (PortRenameProof.compose (RefinementOpeningProof.swap σ (π σ x) (portName F.data.names i)) π)
+            (Expr.free σ x))
+          Args.nil)))
+in the application
+  hchild hus
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PortFAbsProof.lean:38:87: warning: This simp argument is unused:
+  hbs
+
+Hint: Omit it from the simp argument list.
+  simp only [renameMarked, ̲ExtendedRenameSupport.append, ̲renameCons, ̲renameNil, ̲renameFree, ̲hb̵s̵,̵h̵es,
+      PortRenameProof.adjusted, ̲PortRenameProof.compose, ̲RefinementOpeningProof.swapName] at hchild
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PortFAbsProof.lean:38:91: warning: This simp argument is unused:
+  hes
+
+Hint: Omit it from the simp argument list.
+  simp only [renameMarked, ̲ExtendedRenameSupport.append, ̲renameCons, ̲renameNil, ̲renameFree, ̲hbs,h̵e̵s̵,̵
+      PortRenameProof.adjusted, ̲PortRenameProof.compose, ̲RefinementOpeningProof.swapName] at hchild
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PortFAbsProof.lean:39:29: warning: This simp argument is unused:
+  PortRenameProof.compose
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵e̵n̵a̵m̵e̵M̵a̵r̵k̵e̵d̵,̵E̵x̵t̵e̵n̵d̵e̵d̵R̵e̵n̵a̵m̵e̵S̵u̵p̵p̵o̵r̵t̵.̵a̵p̵p̵e̵n̵d̵,̵r̵e̵n̵a̵m̵e̵C̵o̵n̵s̵,̵r̵e̵n̵a̵m̵e̵N̵i̵l̵,̵r̵e̵n̵a̵m̵e̵F̵r̵e̵e̵,̵h̵b̵s̵,̵h̵e̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵P̵o̵r̵t̵R̵e̵n̵a̵m̵e̵P̵r̵o̵o̵f̵.̵a̵d̵j̵u̵s̵t̵e̵d̵,̵P̵o̵r̵t̵R̵e̵n̵a̵m̵e̵P̵r̵o̵o̵f̵.̵c̵o̵m̵p̵o̵s̵e̵,̵R̵e̵f̵i̵n̵e̵m̵e̵n̵t̵O̵p̵e̵n̵i̵n̵g̵P̵r̵o̵o̵f̵.̵s̵w̵a̵p̵N̵a̵m̵e̵]̵[̲r̲e̲n̲a̲m̲e̲M̲a̲r̲k̲e̲d̲,̲ ̲E̲x̲t̲e̲n̲d̲e̲d̲R̲e̲n̲a̲m̲e̲S̲u̲p̲p̲o̲r̲t̲.̲a̲p̲p̲e̲n̲d̲,̲ ̲r̲e̲n̲a̲m̲e̲C̲o̲n̲s̲,̲ ̲r̲e̲n̲a̲m̲e̲N̲i̲l̲,̲ ̲r̲e̲n̲a̲m̲e̲F̲r̲e̲e̲,̲ ̲h̲b̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲h̲e̲s̲,̲ ̲P̲o̲r̲t̲R̲e̲n̲a̲m̲e̲P̲r̲o̲o̲f̲.̲a̲d̲j̲u̲s̲t̲e̲d̲,̲ ̲R̲e̲f̲i̲n̲e̲m̲e̲n̲t̲O̲p̲e̲n̲i̲n̲g̲P̲r̲o̲o̲f̲.̲s̲w̲a̲p̲N̲a̲m̲e̲]̲ at hchild
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PortFAbsProof.lean:39:53: warning: This simp argument is unused:
+  RefinementOpeningProof.swapName
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵e̵n̵a̵m̵e̵M̵a̵r̵k̵e̵d̵,̵E̵x̵t̵e̵n̵d̵e̵d̵R̵e̵n̵a̵m̵e̵S̵u̵p̵p̵o̵r̵t̵.̵a̵p̵p̵e̵n̵d̵,̵r̵e̵n̵a̵m̵e̵C̵o̵n̵s̵,̵r̵e̵n̵a̵m̵e̵N̵i̵l̵,̵r̵e̵n̵a̵m̵e̵F̵r̵e̵e̵,̵h̵b̵s̵,̵h̵e̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵P̵o̵r̵t̵R̵e̵n̵a̵m̵e̵P̵r̵o̵o̵f̵.̵a̵d̵j̵u̵s̵t̵e̵d̵,̵P̵o̵r̵t̵R̵e̵n̵a̵m̵e̵P̵r̵o̵o̵f̵.̵c̵o̵m̵p̵o̵s̵e̵,̵R̵e̵f̵i̵n̵e̵m̵e̵n̵t̵O̵p̵e̵n̵i̵n̵g̵P̵r̵o̵o̵f̵.̵s̵w̵a̵p̵N̵a̵m̵e̵]̵[̲r̲e̲n̲a̲m̲e̲M̲a̲r̲k̲e̲d̲,̲ ̲E̲x̲t̲e̲n̲d̲e̲d̲R̲e̲n̲a̲m̲e̲S̲u̲p̲p̲o̲r̲t̲.̲a̲p̲p̲e̲n̲d̲,̲ ̲r̲e̲n̲a̲m̲e̲C̲o̲n̲s̲,̲ ̲r̲e̲n̲a̲m̲e̲N̲i̲l̲,̲ ̲r̲e̲n̲a̲m̲e̲F̲r̲e̲e̲,̲ ̲h̲b̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲h̲e̲s̲,̲ ̲P̲o̲r̲t̲R̲e̲n̲a̲m̲e̲P̲r̲o̲o̲f̲.̲a̲d̲j̲u̲s̲t̲e̲d̲,̲ ̲P̲o̲r̲t̲R̲e̲n̲a̲m̲e̲P̲r̲o̲o̲f̲.̲c̲o̲m̲p̲o̲s̲e̲]̲ at hchild
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

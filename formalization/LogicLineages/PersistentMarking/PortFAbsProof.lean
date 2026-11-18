@@ -35,7 +35,7 @@ theorem fabsCase (S : Signature) (F : Inputs S) (σ τ : Ty) (x : Nat)
   have hchild := ih (PortRenameProof.adjusted π σ x (portName F.data.names i))
     (fillSlot Γ i σ) (PortRenameProof.adjustedInjective π σ x _ hp) hwi
   rw [PortRenameProof.adjustedOpening π σ x _ t hpxt hyt] at hchild
-  simp only [renameMarked,ExtendedRenameSupport.append,renameCons,renameNil,renameFree,hbs,hes,
-    PortRenameProof.adjusted,PortRenameProof.compose,RefinementOpeningProof.swapName] at hchild
+  simp only [renameMarked,ExtendedRenameSupport.append,renameCons,renameNil,RefinementRenameSupport.renameFree,hbs,hes] at hchild
+  simp only [PortRenameProof.adjusted,PortRenameProof.compose,RefinementOpeningProof.swapName] at hchild
   exact .fabs hsp htp hσ hi hys hyt (hchild hus hot)
 end LogicLineages.PersistentMarking.PortFAbsProof

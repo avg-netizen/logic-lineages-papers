@@ -1,0 +1,77 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/CounterExpansionCalibrationProof.lean:35:6: error: Tactic `assumption` failed
+
+case succ.left
+c n : ℕ
+ih :
+  ∀ (t : ℕ),
+    c + 2 * (n + 3) + 1 ≤ t →
+      entries n c t = CounterLeaderExpansion.entries n c t ∧
+        bottomInput n c t = CounterLeaderExpansion.bottomInput n c t
+t : ℕ
+ht : c + 2 * (n + 1 + 3) + 1 ≤ t
+hs : t ≤ value (n + 4) (c + n + 4) t
+h :
+  entries n c (value (n + 4) (c + n + 4) t) = CounterLeaderExpansion.entries n c (value (n + 4) (c + n + 4) t) ∧
+    bottomInput n c (value (n + 4) (c + n + 4) t) = CounterLeaderExpansion.bottomInput n c (value (n + 4) (c + n + 4) t)
+he : value (n + 4) (c + n + 4) t = CounterLeaderExpansion.kernel (n + 4) (c + n + 4) t
+⊢ (n + 4, t) :: entries n c (CounterLeaderExpansion.kernel (n + 4) (c + n + 4) t) =
+    (n + 4, t) :: CounterLeaderExpansion.entries n c (CounterLeaderExpansion.kernel (n + 4) (c + n + 4) t)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/CounterExpansionCalibrationProof.lean:36:6: error: Tactic `assumption` failed
+
+case succ.right
+c n : ℕ
+ih :
+  ∀ (t : ℕ),
+    c + 2 * (n + 3) + 1 ≤ t →
+      entries n c t = CounterLeaderExpansion.entries n c t ∧
+        bottomInput n c t = CounterLeaderExpansion.bottomInput n c t
+t : ℕ
+ht : c + 2 * (n + 1 + 3) + 1 ≤ t
+hs : t ≤ value (n + 4) (c + n + 4) t
+h :
+  entries n c (value (n + 4) (c + n + 4) t) = CounterLeaderExpansion.entries n c (value (n + 4) (c + n + 4) t) ∧
+    bottomInput n c (value (n + 4) (c + n + 4) t) = CounterLeaderExpansion.bottomInput n c (value (n + 4) (c + n + 4) t)
+he : value (n + 4) (c + n + 4) t = CounterLeaderExpansion.kernel (n + 4) (c + n + 4) t
+⊢ bottomInput n c (CounterLeaderExpansion.kernel (n + 4) (c + n + 4) t) =
+    CounterLeaderExpansion.bottomInput n c (CounterLeaderExpansion.kernel (n + 4) (c + n + 4) t)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/CounterExpansionCalibrationProof.lean:85:6: error: Tactic `assumption` failed
+
+case succ.left
+m c k : ℕ
+ih :
+  ∀ (t : ℕ),
+    c + 2 * (m + k + 3) + 1 ≤ t →
+      alignedInput k m c t = CounterLeaderCollision.alignedInput k m c t ∧
+        upperEntries k m c t = CounterLeaderCollision.upperEntries k m c t
+t : ℕ
+ht : c + 2 * (m + (k + 1) + 3) + 1 ≤ t
+hs : t ≤ value (m + k + 4) (c + m + k + 4) t
+h :
+  alignedInput k m c (value (m + k + 4) (c + m + k + 4) t) =
+      CounterLeaderCollision.alignedInput k m c (value (m + k + 4) (c + m + k + 4) t) ∧
+    upperEntries k m c (value (m + k + 4) (c + m + k + 4) t) =
+      CounterLeaderCollision.upperEntries k m c (value (m + k + 4) (c + m + k + 4) t)
+he : value (m + k + 4) (c + m + k + 4) t = CounterLeaderExpansion.kernel (m + k + 4) (c + m + k + 4) t
+⊢ alignedInput k m c (CounterLeaderExpansion.kernel (m + k + 4) (c + m + k + 4) t) =
+    CounterLeaderCollision.alignedInput k m c (CounterLeaderExpansion.kernel (m + k + 4) (c + m + k + 4) t)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/CounterExpansionCalibrationProof.lean:86:6: error: Tactic `assumption` failed
+
+case succ.right
+m c k : ℕ
+ih :
+  ∀ (t : ℕ),
+    c + 2 * (m + k + 3) + 1 ≤ t →
+      alignedInput k m c t = CounterLeaderCollision.alignedInput k m c t ∧
+        upperEntries k m c t = CounterLeaderCollision.upperEntries k m c t
+t : ℕ
+ht : c + 2 * (m + (k + 1) + 3) + 1 ≤ t
+hs : t ≤ value (m + k + 4) (c + m + k + 4) t
+h :
+  alignedInput k m c (value (m + k + 4) (c + m + k + 4) t) =
+      CounterLeaderCollision.alignedInput k m c (value (m + k + 4) (c + m + k + 4) t) ∧
+    upperEntries k m c (value (m + k + 4) (c + m + k + 4) t) =
+      CounterLeaderCollision.upperEntries k m c (value (m + k + 4) (c + m + k + 4) t)
+he : value (m + k + 4) (c + m + k + 4) t = CounterLeaderExpansion.kernel (m + k + 4) (c + m + k + 4) t
+⊢ (m + k + 4, t) :: upperEntries k m c (CounterLeaderExpansion.kernel (m + k + 4) (c + m + k + 4) t) =
+    (m + k + 4, t) ::
+      CounterLeaderCollision.upperEntries k m c (CounterLeaderExpansion.kernel (m + k + 4) (c + m + k + 4) t)

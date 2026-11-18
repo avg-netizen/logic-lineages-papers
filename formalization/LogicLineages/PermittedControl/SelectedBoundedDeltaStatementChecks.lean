@@ -1,0 +1,11 @@
+module
+public import LogicLineages.PermittedControl.SelectedDeltaScalarProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_fullSelectedBoundedDelta : SelectedBoundedDeltaTargets.FullSelectedBoundedDelta :=
+  SelectedDeltaScalarProof.fullSelectedBoundedDelta
+#print axioms fixed_fullSelectedBoundedDelta
+
+end LogicLineages.PermittedControl.StatementChecks

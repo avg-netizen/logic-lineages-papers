@@ -1,0 +1,9 @@
+# Next complete source counter expansion/collision
+
+Current m:lem:counter follows uniform separation. Freeze a fresh actual NumericalKernel-based descending ladder: entries from rank n+3 down to3, next input NumericalKernel.value h (c+h) at current input; bottom preimage value3(c+3); leader Phi(preimage); residuals actual NumericalKernel.count h(c+h) at every stored entry. Similarly define alignedInput/upper residual lists by the actual ladder, not an assumed old semantic correspondence.
+
+Full comparator must retain exact signed expansion H/2+1-ceil(c/2)+sum residuals, strict half/three-quarter bounds, equal-leader mass recovery, equal-rank equality, unequal-rank actual aligned input and exact upper residual difference with every residual rank greater than smaller rank, and full lexicographic counter ordering/equality by leader then rank. Include genuine effective common-tail program. Printed proof also states residual difference tends to infinity and arbitrary fixed outer shifts become ordered on a computed tail; include existing complete divergence/fixed-shift clauses if claiming the proof's strengthened conclusion rather than silently omit them.
+
+Legitimate supplier CounterSourceTheorem/KernelSourceCompletion full counter package is in padded kernels. A fresh mandatory ladder calibration must derive every dynamically reached input >= original t, each actual rank/mass affordability and then equality of entries/preimage/leader/residuals via NumericalKernel.padded. Original common tail must pay all those conditions; no caller-supplied correspondence. The new full conclusions should use the new numerical ladder, not merely opaque old aliases.
+
+No residue/guard/row/arithmetic decision follows automatically. Review the exact source scope and supplier map before fresh freeze and proof.

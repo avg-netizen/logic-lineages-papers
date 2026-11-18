@@ -1,0 +1,18 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionClosureInitialProof.lean:12:43: error: Application type mismatch: The argument
+  renameIdentity q
+has type
+  rename (fun x x_1 => x_1) q = q
+but is expected to have type
+  freeSub (fun σ x => Expr.free σ ((fun x x_1 => x_1) σ x)) (0 + 1) q = q
+in the application
+  congrArg (Expr.lam σ) (renameIdentity q)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionClosureInitialProof.lean:19:29: error: Application type mismatch: The argument
+  congrArg Args.cons (renameIdentity q)
+has type
+  Args.cons (rename (fun x x_1 => x_1) q) = Args.cons q
+but is expected to have type
+  (renameArgs fun x x_1 => x_1) = Args.cons q
+in the application
+  congr (congrArg Args.cons (renameIdentity q))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionClosureInitialProof.lean:20:1: warning: unused `termination_by`, function is not recursive
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionClosureInitialProof.lean:15:1: warning: unused `termination_by`, function is not recursive
