@@ -1,0 +1,8 @@
+# Independent final: StandardApplicationEraser
+Accepted receipt 1795020370311647967-8: exact compiler-free evidence reproduction, 556 source-matched modules, standard-only fixed_standardApplicationEraser alias, zero errors, six revised pins unchanged.
+
+Actual proof/alias and repair delta inspected. All-policy StandardSourceFacts supplies actual successful ground outputs and positivity, and child vectors for application/eraser. Direct arbitrary-control unary_app_value derives literal collapse from box syntax, not selected-only semantics. Child scalar/head equalities calibrate the actual application assignment; natural sum with finite right operand is explicitly converted to the ordinary ordinal tail. ZeroC literal one-vector gives value one.
+
+Eraser uses actual unused-binder assignment, singleton positive-shape uniqueness for head one, and the actual repeated scalar plus retained addend: 2*(A+1)+A=3*A+2. The final genuine application adds B, with pure omega natural-product-one identity and actual finite-value calibration. GroundOutput success/positive finite scalar remains a conclusion for arbitrary contexts/policies/admitted Phi valuations; no default-zero wrapper, bounded-input or selected-admission premise supplies it.
+
+Frozen target failure 1795020178067952931-5 was repaired by exactly two independently verified typed zeroC references and one pin. Later proof failure 1795020355957253500-5 differs only by replacing rfl with explicit one-value/Nat.cast_one normalization. Originals retained. No caps relaxed. Supporting three-family result only: no full detector, alignment, query, or unchanged-G hardness acceptance. No native run by reviewer.

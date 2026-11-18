@@ -1,0 +1,10 @@
+# Independent exact pre-scope: conditional MixedCancellation
+Approved seven-family supporting scope under all six verified frozen hashes. Read literal Definitions/Targets/source map and NormalForm row/atom/guard compilation.
+
+Masks enumerate positional Boolean lists of exact length; selected/retained zip preserves order and multiplicity, with length premises excluding truncation in Partition/Cancellation. ClassCoverage is a genuine existential mask for each actual equal-value class, including the anchor and literal equality guard; it does not assume zero coefficient sum. This is semantic finite class coverage, not a valuation-free classifier or complete syntactic guard dispatcher.
+
+Enabled requires exact length, computed signed zero sum and an actual selected nonzero nonlinear occurrence. Step otherwise returns the identical guarded state. Cancellation must prove actual signed row equality under the common equal-value guard. GuardedSemantics ranges over arbitrary one-hole Boolean Matrix contexts, retaining the original full domainFormula at the same hole even for removed occurrences and under negation. Both before and rewritten include the same outer equality guard.
+
+Progress measures every actual Matrix/Term constructor, including equality guards and original domains. Inspected actual NormalForm compilation: row summands appear as real multiply/add syntax in positive and negative parts (including zero multipliers), and divisibility retains both differences. Thus strict syntactic decrease must be proved from removing a nonempty selected list; it is not a claim about nonlinear live-count alone. Disabled branches have exact identity and no decrease claim. No assertion compares a newly guarded branch with the original unguarded state.
+
+Support is for actual compiled Matrix variables. No all-raw PR/code compiler is claimed in this packet; future branch construction, coverage, guarded-state introduction and global termination remain separate. No complete tag3, mixed inverse-boundary/residue/same-name elimination, arbitrary normalization or QE acceptance. Target-only preflight recommended before proofs; no native executed by reviewer.

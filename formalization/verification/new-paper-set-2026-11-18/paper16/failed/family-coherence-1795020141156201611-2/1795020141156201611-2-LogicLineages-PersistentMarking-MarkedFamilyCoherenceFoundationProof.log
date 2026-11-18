@@ -1,0 +1,26 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyCoherenceFoundationProof.lean:17:4: error: Tactic `subst` failed: did not find equation for eliminating 'g'
+
+case mpr
+E : Environment
+heads : List Head
+f : Head
+τ : Ty
+Γ : Context
+bs : List Code
+es : List MarkedExtras.Tagged
+hp : MarkedFamilyParameters.Valid E heads (f, τ, Γ, bs, es)
+g : Head
+υ : Ty
+Δ : Context
+cs : List Code
+fs : List MarkedExtras.Tagged
+hq : MarkedFamilyParameters.Valid E heads (g, υ, Δ, cs, fs)
+hfg : (f, τ, Γ, bs, es).fst = (g, υ, Δ, cs, fs).fst
+htu : (f, τ, Γ, bs, es).snd.fst = (g, υ, Δ, cs, fs).snd.fst
+hgd : (f, τ, Γ, bs, es).snd.snd.fst = (g, υ, Δ, cs, fs).snd.snd.fst
+hb :
+  ValuesLE E (f, τ, Γ, bs, es).snd.snd.fst (f, τ, Γ, bs, es).fst.arguments (f, τ, Γ, bs, es).snd.snd.snd.fst
+    (g, υ, Δ, cs, fs).snd.snd.snd.fst
+he : ∀ (a : MarkedExtras.Tagged), a ∈ (f, τ, Γ, bs, es).snd.snd.snd.snd → a ∈ (g, υ, Δ, cs, fs).snd.snd.snd.snd
+⊢ (((f = g ∧ τ = υ) ∧ Γ = Δ) ∧ MarkedBaseTuples.tupleLe E Γ f.arguments bs cs = true) ∧
+    ∀ (x : MarkedExtras.Tagged), x ∈ es → x ∈ fs

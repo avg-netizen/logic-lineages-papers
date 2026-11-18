@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.StandardCombinatorCoordinatesProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_standardCombinatorCoordinates : StandardCombinatorCoordinates.StandardCombinatorCoordinates :=
+  StandardCombinatorCoordinates.Proof.standardCombinatorCoordinates
+#print axioms fixed_standardCombinatorCoordinates
+end LogicLineages.PermittedControl.StatementChecks

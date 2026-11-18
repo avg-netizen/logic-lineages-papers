@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.StandardDetectorNumericProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_standardDetectorNumeric : StandardDetectorNumeric.StandardDetectorNumeric :=
+  StandardDetectorNumeric.Proof.standardDetectorNumeric
+#print axioms fixed_standardDetectorNumeric
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.MarkedFamilyCoherenceFoundationProof
+namespace LogicLineages.PersistentMarking.MarkedFamilyCoherenceFoundationChecks
+theorem exact_InputOrderExact : MarkedFamilyCoherenceTargets.InputOrderExact := MarkedFamilyCoherenceFoundationProof.inputOrderExact
+theorem exact_DestinationValid : MarkedFamilyCoherenceTargets.DestinationValid := MarkedFamilyCoherenceFoundationProof.destinationValid
+#print axioms exact_InputOrderExact
+#print axioms exact_DestinationValid
+end LogicLineages.PersistentMarking.MarkedFamilyCoherenceFoundationChecks

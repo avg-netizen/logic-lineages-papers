@@ -8,22 +8,22 @@ theorem traversalExact (ps : List Parameter) (car : Parameter → List Code) (v 
     ps.mapM (fun p => HereditaryDomainCode.indexOf (car p) (v p)) = some c ∧
     Fits (ps.map (fun p => (car p).length)) c := by
   induction ps with
-  | nil => simp [List.mapM,Fits]
+  | nil => simp [List.mapM_nil,Fits]
   | cons p ps ih =>
     constructor
     · intro h
       obtain ⟨i,hi⟩ := HereditaryLookupProof.indexExists (car p) (v p) (h p (by simp))
       have hb : i < (car p).length := (List.getElem?_eq_some_iff.mp (HereditaryLookupProof.indexSound _ _ _ hi)).1
       obtain ⟨cs,hcs,hf⟩ := ih.mp (fun q hq => h q (List.mem_cons_of_mem p hq))
-      exact ⟨i::cs,by simp [List.mapM,hi,hcs],⟨hb,hf⟩⟩
+      exact ⟨i::cs,by simp [List.mapM_cons,hi,hcs],⟨hb,hf⟩⟩
     · rintro ⟨c,hc,hf⟩
       cases hi : HereditaryDomainCode.indexOf (car p) (v p) with
-      | none => simp [List.mapM,hi] at hc
+      | none => simp [List.mapM_cons,hi] at hc
       | some i =>
         cases ht : ps.mapM (fun q => HereditaryDomainCode.indexOf (car q) (v q)) with
-        | none => simp [List.mapM,hi,ht] at hc
+        | none => simp [List.mapM_cons,hi,ht] at hc
         | some cs =>
-          have he : i::cs=c := by simpa [List.mapM,hi,ht] using hc
+          have he : i::cs=c := by simpa [List.mapM_cons,hi,ht] using hc
           subst c
           have tail := ih.mpr ⟨cs,ht,hf.2⟩
           intro q hq

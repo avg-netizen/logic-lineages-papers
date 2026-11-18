@@ -1,0 +1,17 @@
+import LogicLineages.PersistentMarking.MarkedFamilyCoherenceFoundationProof
+import LogicLineages.PersistentMarking.MarkedFamilyFilterProof
+import LogicLineages.PersistentMarking.MarkedFamilyRetentionProof
+namespace LogicLineages.PersistentMarking.MarkedFamilyCoherenceChecks
+theorem exact_InputOrderExact : MarkedFamilyCoherenceTargets.InputOrderExact := MarkedFamilyCoherenceFoundationProof.inputOrderExact
+theorem exact_DestinationValid : MarkedFamilyCoherenceTargets.DestinationValid := MarkedFamilyCoherenceFoundationProof.destinationValid
+theorem exact_MonotoneExact : MarkedFamilyCoherenceTargets.MonotoneExact := MarkedFamilyFilterProof.monotoneExact
+theorem exact_CoherentExact : MarkedFamilyCoherenceTargets.CoherentExact := MarkedFamilyFilterProof.coherentExact
+theorem exact_RetentionExact : MarkedFamilyCoherenceTargets.RetentionExact := MarkedFamilyRetentionProof.retentionExact
+theorem exact_EncodingComplete : MarkedFamilyCoherenceTargets.EncodingComplete := MarkedFamilyRetentionProof.encodingComplete
+#print axioms exact_InputOrderExact
+#print axioms exact_DestinationValid
+#print axioms exact_MonotoneExact
+#print axioms exact_CoherentExact
+#print axioms exact_RetentionExact
+#print axioms exact_EncodingComplete
+end LogicLineages.PersistentMarking.MarkedFamilyCoherenceChecks

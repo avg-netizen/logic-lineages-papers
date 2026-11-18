@@ -1,0 +1,7 @@
+# Independent exact pre-scope: CompilerComposition
+
+Approved four-contract/eight-pin supporting scope; all hashes independently match. Read actual targets, map, AST Sentence/prefix and shared Input normalization/cost definitions.
+
+ASTCorrect retains the exact explicit ground existential prefix/QF Boolean matrix and actual fixed strict/weak output functions. SharedCorrect instead consumes the interleaved shared input directly with no AST expansion; zero initial wire environment is literal Fin.elim0. Retention quantifies each original valuation and requires actual forest extension agreeing on every original coordinate plus a ground-only context. OutputBudgets separately bounds each of the four actual tables for AST and shared inputs. Shared cost charges Boolean nodes once, logarithmic binary literals, and supplied sourceMax; AST occurrence cost is not advertised as shared-DAG cost.
+
+Full same-policy/SourceGrowth semantics and positive-natural source conventions remain unchanged. Additional magnification is a legitimate alternative construction, not the printed pair identity. No implicit arbitrary quantifier prenexing or larger input grammar coverage follows. Exact compilation reconstruction and genuine joint computability still need separate proof; polynomial encoded-bit complexity is neither claimed nor a source requirement. Supporting composition only until those debts and full source coverage close.
