@@ -1,0 +1,11 @@
+module
+public import LogicLineages.PermittedControl.SelectedGradedPositivityProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_fullSelectedPositivity : SelectedPositivityTargets.FullSelectedPositivity :=
+  SelectedGradedPositivityProof.fullSelectedPositivity
+#print axioms fixed_fullSelectedPositivity
+
+end LogicLineages.PermittedControl.StatementChecks

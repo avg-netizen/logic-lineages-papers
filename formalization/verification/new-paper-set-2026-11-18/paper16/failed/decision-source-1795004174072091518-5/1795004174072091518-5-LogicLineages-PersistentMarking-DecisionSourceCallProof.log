@@ -1,0 +1,105 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceCallProof.lean:18:20: error: Dependent elimination failed: Failed to solve equation
+  some r = applyAux (Expr.free υ x) (Args.cons a rest) vs
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceCallProof.lean:19:21: error: Dependent elimination failed: Failed to solve equation
+  some r = applyAux (Expr.bound υ i) (Args.cons a rest) vs
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceCallProof.lean:47:34: error(lean.unknownIdentifier): Unknown identifier `υ`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceCallProof.lean:48:17: error: unsolved goals
+case cons.cons.marked.marked.none
+K : List Ty
+V : List Name
+H : List Head
+Γ : Context
+types : List Ty
+vs : Args
+σ : Ty
+r : Expr
+hk : Closed K
+hv : BaseTyped EmptyContext vs types
+hvu : ArgsUniverse K V H Γ vs
+a : Expr
+rest : Args
+hau : ArgsUniverse K V H Γ (Args.cons a rest)
+σ✝ : Ty
+hat : Typed EmptyContext a σ✝
+hrest : ExtrasTyped EmptyContext rest
+f : Head
+bs es : Args
+hb : BaseTyped (BoundContext.prefix types EmptyContext) bs f.arguments
+he : ExtrasTyped (BoundContext.prefix types EmptyContext) es
+hu : Universe K V H Γ (Expr.marked f σ bs es)
+hc : consumeTypes sorry (Args.cons a rest) = none
+hcall :
+  ∃ a_1,
+    consumeTypes σ (Args.cons a rest) = some a_1 ∧
+      Expr.marked f a_1 (substituteArgs vs 0 bs) ((substituteArgs vs 0 es).append (Args.cons a rest)) = r
+⊢ Universe K V H Γ r
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceCallProof.lean:50:80: error: Tactic `subst` failed: did not find equation for eliminating 'r'
+
+case cons.cons.marked.marked.some
+K : List Ty
+V : List Name
+H : List Head
+Γ : Context
+types : List Ty
+vs : Args
+σ : Ty
+r : Expr
+hk : Closed K
+hv : BaseTyped EmptyContext vs types
+hvu : ArgsUniverse K V H Γ vs
+a : Expr
+rest : Args
+hau : ArgsUniverse K V H Γ (Args.cons a rest)
+σ✝ : Ty
+hat : Typed EmptyContext a σ✝
+hrest : ExtrasTyped EmptyContext rest
+f : Head
+bs es : Args
+hb : BaseTyped (BoundContext.prefix types EmptyContext) bs f.arguments
+he : ExtrasTyped (BoundContext.prefix types EmptyContext) es
+hu : Universe K V H Γ (Expr.marked f σ bs es)
+τ : Ty
+hc : consumeTypes sorry (Args.cons a rest) = some τ
+hcall :
+  Option.map (fun τ => Expr.marked f τ (substituteArgs vs 0 bs) ((substituteArgs vs 0 es).append (Args.cons a rest)))
+      (consumeTypes σ (Args.cons a rest)) =
+    some r
+⊢ Universe K V H Γ r
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceCallProof.lean:48:35: warning: This simp argument is unused:
+  hc
+
+Hint: Omit it from the simp argument list.
+  simp [applyAux,̵h̵c̵] at hcall
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceCallProof.lean:50:32: warning: This simp argument is unused:
+  hc
+
+Hint: Omit it from the simp argument list.
+  simp only [applyAux,h̵c̵,̵ ̲Option.map_some, ̲Option.some.injEq] at hcall
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceCallProof.lean:50:35: warning: This simp argument is unused:
+  Option.map_some
+
+Hint: Omit it from the simp argument list.
+  simp only [̵a̵p̵p̵l̵y̵A̵u̵x̵,̵h̵c̵,̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵,̵O̵p̵t̵i̵o̵n̵.̵s̵o̵m̵e̵.̵i̵n̵j̵E̵q̵]̵[̲a̲p̲p̲l̲y̲A̲u̲x̲,̲ ̲h̲c̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲s̲o̲m̲e̲.̲i̲n̲j̲E̲q̲]̲ at hcall
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceCallProof.lean:50:51: warning: This simp argument is unused:
+  Option.some.injEq
+
+Hint: Omit it from the simp argument list.
+  simp only [̵a̵p̵p̵l̵y̵A̵u̵x̵,̵h̵c̵,̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵,̵O̵p̵t̵i̵o̵n̵.̵s̵o̵m̵e̵.̵i̵n̵j̵E̵q̵]̵[̲a̲p̲p̲l̲y̲A̲u̲x̲,̲ ̲h̲c̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲m̲a̲p̲_̲s̲o̲m̲e̲]̲ at hcall
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceCallProof.lean:65:19: error: Type mismatch
+  auxiliary K V H Γ [] Args.nil q σ (Args.cons a rest) r hk hq BaseTyped.nil
+has type
+  ExtrasTyped EmptyContext (Args.cons a rest) →
+    Universe K V H Γ q →
+      ArgsUniverse K V H Γ Args.nil →
+        ArgsUniverse K V H Γ (Args.cons a rest) → applyAux q (Args.cons a rest) Args.nil = some r → Universe K V H Γ r
+but is expected to have type
+  Universe K V H Γ r
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceCallProof.lean:66:6: error: unexpected token '('; expected command

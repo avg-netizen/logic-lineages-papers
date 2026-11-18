@@ -1,0 +1,9 @@
+# Independent final: source-universe foundation seven
+
+Approved as seven supporting endpoints only. Compiler-free independent verifier reproduces author evidence exactly: 35 source/artifact/receipt-matched modules, seven exact standard-only aliases, zero errors, all eight source freeze pins and checked inherited freezes unchanged. First-pass native receipt 1795003354597993719-5. Reviewer ran no native compiler.
+
+Read actual Basic/Mark proofs and all seven check aliases. InitialUniverse derives subtype closure through typed ordinary auxiliary/literal support correspondence, actual initial heads and free-name inventory. RootType uses actual root support containment. ArgsFacts is a structural conjunction equivalence over the literal list, SourceAt inducts over actual positional membership, and SourceOccurrence uses the actual mutual occurrence derivation with list motive, including marked bases and extras and lambda children.
+
+Raw markFacts directly inspects all constructors, rejects impossible variable marking, preserves marked reuse, retains original declaration support on head marking, and recursively retains lambda root typing annotations. It supplies actual support inclusion/head equality/name equality, without hidden typing or closure premises. Retype uses Closed K only for new output subtypes and preserves original declarations/base/extras. UniverseWeakening transports the actual occupied matching port witness through literal extension, preserving old names/types.
+
+These establish InitialUniverse, RootType, SourceOccurrence, SourceAt, SourceMark, SourceRetype and UniverseWeakening exactly. SourceBoundSubstitution, SourceFullCall, SourceOwnerTuple and ObservedTypes remain unpaid by this packet, as do full recursive closure, renamed-state normalization, finite domains, adequacy and decision. No numbered finite-closure promotion.

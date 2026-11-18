@@ -1,6 +1,6 @@
 # Current comparison formalization status
 
-New-paper register: **95 checked, 72 pending / 167**. Historical register:
+New-paper register: **101 checked, 66 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
@@ -440,3 +440,23 @@ context coverage are checked in the full four-way theorem (packet165).
 Full paper17 threshold remains UNACCEPTED and its route is PARKED after
 repeated unchanged RSS stops, including the materially reduced Guard root.
 Valid numerical/Partrec/tail-bridge supports do not substitute for its full gate.
+
+### Source finite definition and covariance (225)
+
+Current17 `lem:source-finiteness` is checked after a fresh 207-module gate and independent final. Actual selected-control semantic grades, scalar calibration, successful literal programs and full tracked-free covariance are proved. Output bounds, weak-scalar and the parked threshold remain separate.
+
+### Limit-exponent mass separation (226)
+
+Current18 `u:thm:limitmass` is checked with fresh 185-module evidence and independent final. The exact threshold, independent masses, actual cut/count transport and effective lexicographic consequence are discharged. Later global ordering and decision claims remain separate.
+
+### Standard residues and source universe (227–228)
+
+Current19 `lem:standard-residues` is checked after a fresh 14-module gate and independent final, preserving the exact all-level and shifted-threshold clauses. Seven actual source-universe foundation endpoints are accepted separately as supporting only; full closure and decision remain pending.
+
+### Successor cocycle and small kernels (230–231)
+
+Current18 `u:lem:successor` and `u:lem:small` are checked by a fresh 112-module gate and independent final. Exact genuine domains, real retained-prefix cut/count, all-input evenness and exact ceiling mass classes are proved. Higher-degree mass ordering and global comparison remain separate.
+
+### Higher-degree strict mass order (236)
+
+Current18 `u:thm:mass` is checked after a fresh 215-module gate and independent final. Actual predecessor induction and genuine residual cuts establish strictness for every genuine mass pair under the exact printed executable thresholds. Complete principal word order and general comparison remain separate.

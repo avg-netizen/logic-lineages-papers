@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.StrictMassTargets
+public import LogicLineages.OrdinalComparison.StrictMassProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.StrictMassProof
+theorem full : StrictMassTargets.Full := OrdinalComparison.fullActualPrincipalStrictMass
+end LogicLineages.StandardControlCurrent.StrictMassProof

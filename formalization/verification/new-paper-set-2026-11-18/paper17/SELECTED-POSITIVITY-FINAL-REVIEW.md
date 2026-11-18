@@ -1,0 +1,7 @@
+# Independent final: selected positivity support
+
+Approved supporting full conjunction. Independent compiler-free evidence exactly reproduces 189 modules, zero errors and standard-only fixed_fullSelectedPositivity; all four original pins match. Fresh receipt 1795003660655284888-8 under unchanged caps. No reviewer native run.
+
+Read new ValueClosure and GradedPositivity proofs. Epsilon closure is actual arbitrary-f syntax induction: natural sum/product via genuine normal representations, ordinal exponent bound, finite actual collapse output; variables use actual closed-vector valuation. No fixed-control semantic transfer. Positivity is separately restricted to actual selected controls. Natural-sum/product positivity uses qualified control-independent ordinal facts; collapse positivity uses actual selected finite-tail collapse estimate on omega natural-product a plus positive finite b, with finiteness derived from true scalar grade. Closed and ambient grading inductions retain real admissible substitutions; HeadGrade becomes AmbientGrade by actual structural induction. Positive scalar witnesses combine that positivity with independently checked finite/card/norm calibration.
+
+Preserved Empty valuation and qualified-name/argument-order failures are proof-only; no target/cap changes. Supporting source-domain assertions only: no output partial grade/norm, weak-scalar, box, main arithmetic or parked threshold credit.

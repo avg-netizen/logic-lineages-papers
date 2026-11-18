@@ -1,0 +1,8 @@
+import LogicLineages.PersistentMarking.DecisionSourceOwnerProof
+import LogicLineages.PersistentMarking.DecisionObservedTypesProof
+namespace LogicLineages.PersistentMarking.DecisionSourceOwnerObservedChecks
+theorem exact_SourceOwnerTuple : DecisionSourceTargets.SourceOwnerTuple := DecisionSourceOwnerProof.ownerTuple
+theorem exact_ObservedTypes : DecisionSourceTargets.ObservedTypes := DecisionObservedTypesProof.observedTypes
+#print axioms exact_SourceOwnerTuple
+#print axioms exact_ObservedTypes
+end LogicLineages.PersistentMarking.DecisionSourceOwnerObservedChecks

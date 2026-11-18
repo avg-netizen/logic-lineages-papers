@@ -1,0 +1,11 @@
+# Independent conceptual review: actual machine staging
+
+Approved direction before exact freezes, not supplier acceptance. Read current control-sensitivity.tex actual H/gamma and parity argument, SourceBlankMachineSimulation definitions/targets/proof and actual PredictionFiniteAlphabet definitions.
+
+Stage one is genuinely non-oracular: decodeTable is total with explicit malformed default; machine is the literal finite transition lookup; bounded executes actual steps; Run counts transitions; Halts is independently actual TM0 evaluation domain. Fuel t+1 includes a final halt observation, exactly n<=t transitions, including immediate zero-step halting. Fresh proof must retain exact evaluation/Run correspondence, PR total decoder/simulator, surjectivity, monotone bounded tests and true eventual halting. Instantiate growth with this exact H and literal gamma equality, not a separately chosen predicate.
+
+Terminology correction for the subsequent freeze: the actual work alphabet is Fin(width p), width p=p.1+3, with binary input symbols, NOT a two-symbol work-alphabet table. Stage-two translator must land in this same literal table enumeration or prove its exact effective simulation bridge into it. Binary input is not itself binary work alphabet. This does not weaken the printed source, which only fixes an effective program enumeration.
+
+Stage two must actually establish total effective translation/input hardwiring and blank halting equivalence from genuine Partrec evaluation, including terminal-output validation details where used; do not assume undecidability or universality. Stage three must use the same H, actual valuationTwo progression, real eventual halting and genuine gamma parity. Hardwiring hypothetical N,p in the contradictory decider is legitimate; no period-finding algorithm is required.
+
+No numbered hardness acceptance follows from these supports. Restricted typed source compiler, original canonical semantics, co-r.e. membership, all-source fragment restrictions and any polynomial DAG size obligations remain separate. Fresh native/current recursive evidence is required; no legacy inheritance or parked period retry. Exact stage-one contracts should be reviewed before proofs.

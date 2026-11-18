@@ -841,8 +841,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/source.tex",
           "line": 272,
           "statement_latex": "[Finite definition and substitution covariance]\n\\label{lem:source-finiteness}\nFor a supplied policy these definitions produce unique finite trees\neffectively.  The partials and $\\delta^{\\mathbf x}$ commute with\nsubstitutions for other variable vectors by $\\mathbf x$-free vectors,\nwhenever the displayed operations have their graded domains.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.SourceFinitenessTargets.FullSourceFiniteness",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullSourceFiniteness",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/225-source-finiteness.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:lem:weak-scalar",
@@ -1521,8 +1524,11 @@
           "file": "18-standard-control-comparison/sections/unary-kernels.tex",
           "line": 267,
           "statement_latex": "[Limit-exponent mass separation]\\label{u:thm:limitmass}\nLet $L=\\omega^\\beta$ with $\\beta$ a nonzero limit. For a fixed lower\nprofile $P$ and data \\eqref{u:display:5-2}, put\n\\begin{equation}\n           T=\\max(4,R+4,z_0,\\norm L+1,H).            \\label{u:display:6-5}\n\\end{equation}\nFor $t\\ge T$ and $0\\le c<e\\le t-\\norm L$,\n\\begin{equation}\n                \\KK Lc(t)>P(\\KK Le(t)+\\EE Le(t)).    \\label{u:display:6-6}\n\\end{equation}\nConsequently the lexicographically larger pair $(\\text{input},-\\text{mass})$\ngives domination against every fixed lower profile, on an effective\ngenuine tail. Equal pairs give equal values.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.LimitMassTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.LimitMassStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/226-limit-mass.json"
         },
         {
           "id": "18-standard-control-comparison:u:lem:successor",
@@ -1531,8 +1537,11 @@
           "file": "18-standard-control-comparison/sections/unary-kernels.tex",
           "line": 326,
           "statement_latex": "[Exact successor cut and count cocycle]\\label{u:lem:successor}\nLet $\\theta=\\omega^\\gamma\\ge\\omega$, $L=\\theta\\omega$, and\n$w=\\norm\\theta$. On the common genuine domain $t\\ge c+w+\\norm L$,\n\\begin{align}\n \\KK Lc(t)&=\\KK\\theta c(\\KK L{c+w}(t)),              \\label{u:eq:cut}\\\\\n \\EE Lc(t)&=\\EE L{c+w}(t)\n        +\\EE\\theta c(\\KK L{c+w}(t)).                \\label{u:eq:cocycle}\n\\end{align}",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.SuccessorSmallTargets.FullActualSuccessorCutCocycle",
+          "verified_alias": "LogicLineages.StandardControlCurrent.SuccessorSmallStatementChecks.successor",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/230-successor-small-successor.json"
         },
         {
           "id": "18-standard-control-comparison:u:lem:small",
@@ -1541,8 +1550,11 @@
           "file": "18-standard-control-comparison/sections/unary-kernels.tex",
           "line": 352,
           "statement_latex": "[Small principal kernels]\\label{u:lem:small}\nOn their genuine domains,\n\\begin{equation}\n \\KK\\omega c(t)=f(t),\\quad\\EE\\omega c(t)=1,\\qquad\n \\EE{\\omega^2}c(t)=f(t)/2-\\lceil c/2\\rceil+1.         \\label{u:display:7-4}\n\\end{equation}\nThus $\\omega^2$ kernels at the same input have exactly the mass classes\n$\\lceil c/2\\rceil$, ordered in reverse. The control has even values.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.SuccessorSmallTargets.FullActualSmallPrincipalKernels",
+          "verified_alias": "LogicLineages.StandardControlCurrent.SuccessorSmallStatementChecks.small",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/231-successor-small-small.json"
         },
         {
           "id": "18-standard-control-comparison:u:thm:mass",
@@ -1551,8 +1563,11 @@
           "file": "18-standard-control-comparison/sections/unary-kernels.tex",
           "line": 370,
           "statement_latex": "[Strict mass order above degree two]\\label{u:thm:mass}\nFor every fixed principal $L\\ge\\omega^3$, a computable $T_L$ satisfies\n\\begin{equation}\n t\\ge T_L,\\quad0\\le c<e\\le t-\\norm L\n                 \\quad\\Longrightarrow\\quad\\KK Lc(t)>\\KK Le(t). \\label{u:display:7-5}\n\\end{equation}\nFor a nonzero limit exponent take $T_L=\\max(7,\\norm L+1)$.\nFor $L=\\theta\\omega$, $\\theta\\ge\\omega^2$, $w=\\norm\\theta$, take\n\\begin{equation}\n T_L=\\max(4,\\norm L,2w,\\max(8,w),S_\\theta),          \\label{u:display:7-6}\n\\end{equation}\nwhere $S_\\theta=0$ at $\\theta=\\omega^2$ and otherwise $S_\\theta=T_\\theta$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.StrictMassTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.StrictMassStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/236-strict-mass.json"
         }
       ]
     },
@@ -1699,8 +1714,11 @@
           "file": "19-source-expressivity-and-control-sensitivity/sections/decision-boundaries.tex",
           "line": 39,
           "statement_latex": "[Standard-control residues]\\label{lem:standard-residues}\nFor every $m\\ge1$ one can compute $r_m\\in\\{0,\\ldots,m-1\\}$\nsuch that\n\\[\n F_j(n)\\equiv r_m\\pmod m\\quad(j\\ge1, n\\ge m).\n\\]\nConsequently $G(t)\\equiv r_m\\pmod m$ for\n$t\\ge\\max(0,m-100)$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.ControlSensitivityCurrent.FullStandardResidues.Targets.CompleteResidues",
+          "verified_alias": "LogicLineages.ControlSensitivityCurrent.FullStandardResidues.StatementChecks.fixed_completeResidues",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/227-standard-residues.json"
         },
         {
           "id": "19-source-expressivity-and-control-sensitivity:prop:actual-attainment",
@@ -2176,7 +2194,7 @@
     }
   ],
   "status_counts": {
-    "pending": 72,
-    "checked": 95
+    "pending": 66,
+    "checked": 101
   }
 }

@@ -11,12 +11,13 @@ def ArgsFacts (K : List Ty) (V : List Name) (H : List Head) (Γ : Context) (qs :
 
 theorem argsFacts (K : List Ty) (V : List Name) (H : List Head) (Γ : Context) (qs : Args) :
     ArgsUniverse K V H Γ qs ↔ ArgsFacts K V H Γ qs := by
-  induction qs with
+  cases qs with
   | nil =>
     constructor
     · intro _; exact ⟨fun _ h => False.elim (List.not_mem_nil h),fun _ h => False.elim (List.not_mem_nil h),fun _ h => Bool.noConfusion h⟩
     · intro _; trivial
-  | cons q qs ih =>
+  | cons q qs =>
+    have ih := argsFacts K V H Γ qs
     constructor
     · rintro ⟨hq,hqs⟩; have hr := ih.mp hqs
       refine ⟨?_,?_,?_⟩
@@ -32,6 +33,8 @@ theorem argsFacts (K : List Ty) (V : List Name) (H : List Head) (Γ : Context) (
       · intro σ hσ; exact h.1 σ (List.mem_append_right _ hσ)
       · intro f hf; exact h.2.1 f (List.mem_append_right _ hf)
       · intro n hn; exact h.2.2 n (by simp only [freeOccursArgs,hn,Bool.or_true])
+
+termination_by sizeOf qs
 
 theorem lamChild (K V H Γ σ q) (h : Universe K V H Γ (.lam σ q)) : Universe K V H Γ q :=
   ⟨fun τ hτ => h.1 τ (List.mem_append_right _ hτ),h.2.1,h.2.2⟩

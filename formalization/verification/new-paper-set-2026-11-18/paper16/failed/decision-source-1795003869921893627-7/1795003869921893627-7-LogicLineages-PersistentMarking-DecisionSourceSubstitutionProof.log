@@ -1,0 +1,32 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceSubstitutionProof.lean:20:61: error: Application type mismatch: The argument
+  σ
+has type
+  Nat
+but is expected to have type
+  Ty
+in the application
+  boundLeaf K V H Γ vs d σ
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceSubstitutionProof.lean:22:31: error: Application type mismatch: The argument
+  Ξ
+has type
+  Expr
+but is expected to have type
+  BoundContext
+in the application
+  lambdaStep K V H Γ Ξ
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceSubstitutionProof.lean:23:29: error: Application type mismatch: The argument
+  SpineSubstitutionProof.compatiblePush vs d body Ω hc σ
+has type
+  SubCompatible vs (d + 1) (body.push σ) (Ω.push σ)
+but is expected to have type
+  SubCompatible vs (d + 1) (body.push τ) (Ω.push σ)
+in the application
+  ih (Ω.push σ) (d + 1) (SpineSubstitutionProof.compatiblePush vs d body Ω hc σ)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceSubstitutionProof.lean:27:31: error: Application type mismatch: The argument
+  f
+has type
+  Args
+but is expected to have type
+  Head
+in the application
+  markedStep K V H Γ f

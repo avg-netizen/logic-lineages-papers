@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.DecisionSourceCallProof
+namespace LogicLineages.PersistentMarking.DecisionSourceCallChecks
+theorem exact_SourceFullCall : DecisionSourceTargets.SourceFullCall := DecisionSourceCallProof.fullCall
+#print axioms exact_SourceFullCall
+end LogicLineages.PersistentMarking.DecisionSourceCallChecks

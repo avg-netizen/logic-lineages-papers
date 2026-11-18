@@ -1,0 +1,11 @@
+module
+public import LogicLineages.StandardControlCurrent.SuccessorSmallTargets
+public import LogicLineages.OrdinalComparison.SuccessorKernelsProof
+public import LogicLineages.OrdinalComparison.SmallKernelsProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.SuccessorSmallProof
+theorem successor : SuccessorSmallTargets.FullActualSuccessorCutCocycle :=
+  OrdinalComparison.fullActualSuccessorCutCocycle
+theorem small : SuccessorSmallTargets.FullActualSmallPrincipalKernels :=
+  OrdinalComparison.fullActualSmallPrincipalKernels
+end LogicLineages.StandardControlCurrent.SuccessorSmallProof
