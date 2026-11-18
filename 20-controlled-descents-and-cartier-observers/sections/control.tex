@@ -1,0 +1,88 @@
+\section{The modular information supplied by the control}
+\label{sec:control}
+
+For the remaining concrete applications fix $f=G$, where
+\begin{equation}\label{eq:control}
+ F_0(n)=2^n,\qquad F_{j+1}(n)=F_j^{\,n+1}(n),\qquad
+ G(n)=F_5(n+100).
+\end{equation}
+The budget-transfer result in the next section remains a theorem for
+arbitrary schedules satisfying its own premises.
+
+\begin{lemma}[Hierarchy growth]\label{lem:growth}
+Every $F_j$ is strictly increasing and $F_j(n)>n$. For $n\ge1$,
+$F_j(n)\ge2^n$. The values of $G$ are powers of two, and
+\begin{equation}\label{eq:growth}
+ G(n)\ge2^{n+100},\qquad G(n+1)\ge2^{G(n)+1}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The assertions of strict increase and inflation follow simultaneously
+by induction on $j$: increasing the seed increases every common
+iterate, and the larger iteration count supplies another inflationary
+step. The bound by $2^n$ follows from the first lower-level call.
+Every final call ultimately ends with $F_0$, giving a power of two.
+
+Put $x=n+100$ and $A=F_5(x)=F_4^{x+1}(x)$. Then
+$F_4^{x+1}(x+1)\ge A+1$, and
+\[
+ G(n+1)=F_4\bigl(F_4^{x+1}(x+1)\bigr)
+       \ge F_4(A+1)\ge2^{A+1}.
+\]
+The other bound is the finite-level domination already proved.
+\end{proof}
+
+We state the arithmetic input in a form that can be applied when a
+modulus itself depends on a source parameter.
+
+\begin{theorem}[Uniform residue envelopes]\label{thm:envelope}
+There is an effective function $m\mapsto r_m\in\{0,\ldots,m-1\}$ such
+that:
+\begin{enumerate}
+\item $f(x)\equiv r_m\pmod m$ for $x\ge m$;
+\item for $s\ge1$, $j\ge2$ and $m\le2^{2^s}$,
+      $F_j(s)\equiv r_m\pmod m$;
+\item if $B=f(u)$, then
+      $f(u+1)\equiv r_m\pmod m$ for every $m\le2^{2^B}$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+We recall the construction to make the envelopes precise. Put $r_1=0$.
+For $m>1$, write $m=2^a b$, $b$ odd, and set
+$q=\varphi(b)$ if $b>1$, otherwise $q=1$. Then $q<m$.
+Define $r_m$ by
+$r_m\equiv0\pmod {2^a}$ and
+$r_m\equiv2^{r_q}\pmod b$. This is a terminating recursion using
+Euler's theorem and the Chinese remainder theorem.
+
+Let $E_0(n)=n$, $E_{h+1}(n)=2^{E_h(n)}$.
+Induction on $m$ proves that $E_h(n)\equiv r_m\pmod m$ whenever
+$h,n\ge m$. The exponent is large enough for the $2$-part; its residue
+modulo $q$ is supplied by the induction hypothesis, since $h-1\ge q$.
+As $F_1(n)=E_{n+1}(n)$, every $F_j(n)$ with $j\ge1$ has residue
+$r_m$ for $n\ge m$: in a higher-level iterate every argument is at
+least $n$. This proves the first assertion.
+
+For the stronger bound, the final $F_1$ call in
+$F_2(s)=F_1^{s+1}(s)$ has argument at least
+$F_1(s)\ge2^{2^s}$ when $s\ge1$. Its tower seed and height are both
+at least $m$, proving the second assertion for $j=2$.
+The induction to higher $j$ uses its last lower-level call, whose
+argument is at least $s$.
+
+Finally put $n=u+100$. In
+$F_5(n+1)=F_4^{n+2}(n+1)$ the argument of the final $F_4$ is
+$v=F_4^{n+1}(n+1)>F_4^{n+1}(n)=B$. The second assertion at $v$
+therefore gives the third.
+\end{proof}
+
+The theorem does not say that an arbitrary computable sequence of
+moduli may be stabilized at an arbitrary input. Each use must pay the
+displayed bound. In particular, a lower bound on $f(x)$ by itself is
+not the first assertion's lower bound on its \emph{argument}.
+
+The residues are compatible under divisibility: if $a\mid b$, evaluate
+$G(x)$ at any $x\ge b$ to obtain $r_b\equiv r_a\pmod a$.
+For the concrete entry calculation below, $r_2=0$ and
+$r_3=2^{r_2}\bmod3=1$.
+

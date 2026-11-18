@@ -10,6 +10,8 @@ Internal types, bound-variable types, result types, recursors and finite
 nesting are unrestricted. The same controls give undecidability of weak and
 strict comparison with functional free inputs, with the stated low internal
 type bounds.
+The unchanged standard control also has this functional-input weak/strict
+hardness, stated explicitly in Corollary 9.4.
 
 The modular potential determines complete descent-count residues at every
 fixed ordinal head. Exact entry comparisons and a terminating arithmetic
@@ -25,9 +27,15 @@ the same all-ground problem for the unchanged displayed control or for its
 unchanged factorial. It also does not prove equality hardness for functional
 inputs or a full alternating first-order arithmetic theory.
 
-The [structural companion](../16-persistent-marking-termination-ordering/README.md) proves the separate
-termination-ordering result. The [consolidation guide](../COMPARISON-RESOLUTION-GUIDE.md)
-explains which parts of the earlier six-paper collection remain necessary.
+The [structural companion](../16-persistent-marking-termination-ordering/README.md)
+proves the separate termination-ordering result. Three retained companions
+treat [the unchanged standard control](../18-standard-control-comparison/README.md),
+[source expressivity and control sensitivity](../19-source-expressivity-and-control-sensitivity/README.md),
+and [modular descent arithmetic](../20-controlled-descents-and-cartier-observers/README.md).
+The final discussion and bibliography now locate these results. The
+[consolidation guide](../COMPARISON-RESOLUTION-GUIDE.md) maps the earlier
+six-paper collection to the five current accounts and explains their exact
+dependencies.
 
 ## Build and review
 

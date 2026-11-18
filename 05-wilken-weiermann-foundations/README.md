@@ -1,5 +1,12 @@
 # The Wilken–Weiermann Comparison Problem
 
+**Historical edition.** Its canonical foundations are consolidated in the main numerical paper; retained source classes, diagnostics and the policy example are placed as recorded in the guide.
+The [current collection guide](../COMPARISON-RESOLUTION-GUIDE.md) maps all retained
+material and distinguishes the unchanged-control results from the selected-control
+theorem. The source, PDF and formalization links below preserve the earlier
+edition; their historical status statements are not a status report for the
+new collection.
+
 [Read the paper](paper.pdf) · [TeX source](paper.tex) · [Shared foundations](foundations.tex)
 
 This is the entry paper for six manuscripts about termination orderings and
@@ -47,3 +54,4 @@ the sibling directories; none of its new proofs depends on a private repository.
 This is an AI-assisted hand-proof working manuscript for mathematical review.
 Build and reference checks are documented in [VERIFICATION.md](VERIFICATION.md).
 They do not constitute proof-assistant verification or independent human review.
+

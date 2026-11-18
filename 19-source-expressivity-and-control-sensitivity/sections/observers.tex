@@ -1,0 +1,125 @@
+\section{Functional outputs and absolute observation}\label{sec:absolute}
+
+The positive-coordinate invariant and ground-substitution covariance
+were stated in Section~\ref{sec:setting}. They permit matching fixed
+heads without replacing a source scalar by an invented value.
+
+\begin{lemma}[Absolute observer]\label{lem:absolute}
+Let $T:\rho$ have only ground free names $\mathbf z$.  Its entire raw scalar
+graph $v=\can{T(\mathbf z)}_0$ is existentially definable by actual ground-source
+observations, addition and constants, with all shared names preserved.
+\end{lemma}
+\begin{proof}
+Close the ground names to literal zero, obtaining $T^*$, and evaluate the
+closed scalar $C=\can{T^*}_0$.  Put $m=\lv(\rho)$ and $p=2(m+1)+1$.
+For a fresh unused ground $u$, the full vector size multiplier gives
+\[
+ \can{\lambda u:o.T}_0=p\can T_0+p-1.
+\]
+The positive profiles agree for $T$ and $T^*$.  With fresh positive ground
+inputs $x,y$, form the actual ground sources
+\[
+ G(\mathbf z,x)=(\lambda Y:\rho.0)((\lambda u:o.T)x),\qquad
+ G^*(y)=(\lambda Y:\rho.0)((\lambda u:o.T^*)y).
+\]
+The inner applications and outer erasers use matching fixed heads on the two
+sides.  Twice cancelling their injective fixed-tail collapses yields
+\[
+ G_0=G^*_0\quad\Longleftrightarrow\quad
+ p\can T_0+x_0=pC+y_0.
+\]
+Add $pv+x_0=pC+y_0$.  These two equations force $v=\can T_0$;
+conversely raw witnesses $x_0=pC+1$, $y_0=pv+1$ work.  All raw values are
+encoded by naturals plus one.  The anchor $C$ is effectively computed by the
+closed evaluator; that cost is charged, with no feasible-size claim.
+\end{proof}
+
+\begin{theorem}[Exact decision equivalence]\label{thm:decision-equivalence}
+Universal weak/strict canonical comparison on the full all-ground-free-variable
+domain, its ground-output restriction, and unsatisfiability in $\Esrc$ are
+computably equivalent.  Satisfiability uses answer complementation.
+\end{theorem}
+\begin{proof}
+For a general-output comparison first decide its closed positive-coordinate
+tests.  If they pass, a countervaluation is an existential inequality between
+the scalar observations defined by Lemma~\ref{lem:absolute}.  The Boolean
+compiler handles that sentence.  Conversely it reduces arbitrary source
+arithmetic unsatisfiability to ground-output comparison.  The ground-output
+domain is a special case of the general domain.  The closed-anchor evaluations
+in the general-output direction justify computability, not a uniform
+polynomial bound.
+\end{proof}
+
+This equivalence transfers a decision theorem when one is available.
+For example, the ground-input decision theorem for the permitted controls
+of \cite{groundcomparison} decides this actual-source arithmetic at those
+controls. The equivalence alone does not supply a decision procedure
+for the unchanged standard control.
+
+
+\subsection{Eliminating common functional unit observations}\label{sec:units}
+
+A unit observation substitutes the number one in every coordinate of a free
+functional variable.  It is an observation of the assignment, not a claim
+that a closed term has the all-one vector.  We first show how to eliminate
+such observations without requiring that inhabitant.
+
+\begin{lemma}[One-name scalar elimination]\label{lem:one-unit}
+Let $A:\tau$ be an actual source, $h=\can A$, $m=\lv(\tau)$, and let
+$X:\sigma$ be one of its free functional names.  Put
+\[
+ n=\lv(\sigma)+1,\quad d=2^n\sum_{i=0}^ms_X(h_i),\quad
+ P=(\partial^X_0h_0)_0,\quad R=h_0\{X:=\mathbf1\},\quad L=\lambda X.A.
+\]
+The graph of the desired scalar $R$ has a finite positive-coefficient linear
+definition using scalar observations of actual sources without free $X$.
+\end{lemma}
+\begin{proof}
+The original abstraction clause gives $L_0=dP+R$.  If the whole $h_0$ is
+$X$-free, the stopping rule gives $P=R+1$, hence
+$L_0=(d+1)R+d$.  The positive coefficient uniquely determines $R$.
+
+Suppose $h_0$ is active.  Introduce a fresh unused ground $u$ and put
+$V=\lambda u:o.A$, $k=2(m+1)$, $p=k+1$, $h'=\can V$,
+$d'=2^n\sum_js_X(h'_j)$ and $L'=\lambda X.V$.
+The literal scalar is $h'_0=k(h_0+1)+h_0$, where the multiplication means
+the original finite sum of copies, before any collecting.  Its partial is
+$pP+4k$: a copy of $h_0+1$ contributes $P+3$, and the $k$ sum nodes
+joining the copies and retained $h_0$ contribute $k$ more.  The retained
+unit value is $pR+k$.  The scalar size is
+$ps_X(h_0)+3k>s_X(h_0)$.
+
+No positive-coordinate size decreases.  For $m\ge1$ the new first field
+has two copies of $h_1$ and finite constants, and higher fields have two
+copies of their old field.  An entire $X$-free field has size one on both
+sides; an active field has at least its original size.  For $m=0$ the new
+positive field is one.  Therefore $d'>d$.  With $c=4kd'+k$ we obtain
+\[
+ L'_0=pd'P+pR+c,\qquad
+ pd'L_0+dc=dL'_0+p(d'-d)R.
+\]
+The coefficient of $R$ is positive.  These two sources have no free $X$,
+and every other functional name can still receive its common unit observation.
+The intended $R$ satisfies the equation and is its unique solution once the
+other observations are fixed.  All coefficients are finite syntactic integers.
+\end{proof}
+
+\begin{theorem}[Finite unit-observation elimination]\label{thm:unit-elimination}
+For an actual source $A$ and a finite set of all its free functional names,
+the absolute scalar after their common unit observation is existentially
+definable in $\Esrc$, retaining all original shared ground inputs.
+\end{theorem}
+\begin{proof}
+Apply Lemma~\ref{lem:one-unit} to one name, then recursively to the actual
+sources $L,L'$ on the remaining set.  Each branch removes a name; the new
+$u$ is ground.  Induction on the number of functional names terminates.
+Leaves have only ground free names.  Lemma~\ref{lem:absolute} supplies their
+absolute scalar graphs, including leaves of functional output type.
+
+For each fixed ground valuation the intended values supply positive witnesses.
+Reverse induction through the positive-coefficient equations proves uniqueness
+of every internal scalar.  Encoding raw values as naturals plus one merely
+changes fixed additive constants.  The Boolean compiler consumes the resulting
+finite system.  No repeated original name has acquired an independent value.
+\end{proof}
+

@@ -3,7 +3,8 @@
 The same controls that give the ground-input decision theorem support
 an undecidable comparison problem once free variables of type $o\to o$
 are allowed. The reduction uses the growth estimates, not any modular
-property of the control.
+property of the control. The final corollary records the same negative
+result for the unchanged standard control.
 
 The published undecidable problem used here is solvability of a finite
 system of linear equations
@@ -238,5 +239,28 @@ Compile the one transformed system and apply the same alignment and detector.
 The closed $R^\tau$ raises the internal level bound to three, while every
 free variable still has level at most one.  This is the promised single-query
 reduction.
+\end{proof}
+
+\begin{corollary}[Functional inputs at the unchanged standard control]
+\label{cor:standard-functional-hardness}
+The weak and strict undecidability statements of
+Theorem~\ref{thm:functional-hardness} also hold for the unchanged control
+\(G(n)=F_5(n+100)\), with the same finite-query internal level bound two
+and single-query internal level bound three.
+\end{corollary}
+\begin{proof}
+The canonical-source interface requires a strictly increasing control
+majorizing \(G\), and the numerical separation used in the detector
+requires the adjacent growth estimate \eqref{eq:growth}. The standard
+control meets these premises. Indeed, with \(A=G(n)\), the hierarchy
+calculation in Lemma~\ref{lem:control} gives
+\[
+ G(n+1)\ge F_4(A+1)\ge F_1(A+1)
+             \ge 2^{2^{A+1}}\ge2^{2^{G(n)}}.
+\]
+It is primitive recursive and has the same eventual finite-level bound.
+No count-residue or modular-potential statement occurs in the source
+compiler, alignment, detector or undecidability reduction. Their literal
+constructions and proofs therefore apply with \(f=G\) throughout.
 \end{proof}
 

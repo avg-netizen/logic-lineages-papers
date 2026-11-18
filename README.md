@@ -1,13 +1,19 @@
 # Logic lineages papers
 
-**New explanatory papers, 17 November 2026:**
-[Decidable path ordering and Bachmann–Howard descending height](16-persistent-marking-termination-ordering/README.md)
-([29-page PDF](16-persistent-marking-termination-ordering/paper.pdf)) and
-[canonical ground comparison for permitted controls](17-permitted-control-canonical-comparison/README.md)
-([30-page PDF](17-permitted-control-canonical-comparison/paper.pdf)). The
-[consolidation guide](COMPARISON-RESOLUTION-GUIDE.md) explains the two-paper
-organization, retained corrections, and required formalization update.
-These new hand-proof papers do not change the checked-target counts below.
+**Current comparison collection, 17 November 2026:** two core explanatory
+papers and three retained companions. The older identity and multivariate
+papers are combined; source expressivity and modular descent have revised
+standalone accounts. The [collection guide](COMPARISON-RESOLUTION-GUIDE.md)
+maps the earlier material, proof dependencies, corrections and formalization
+boundary. These hand-proof papers do not change the checked-target counts below.
+
+| Current paper | Length | Main subject |
+| --- | --- | --- |
+| [A Decidable Path Ordering for Gödel's T with Bachmann–Howard Descending Height](16-persistent-marking-termination-ordering/README.md) · [PDF](16-persistent-marking-termination-ordering/paper.pdf) | 29 pages | Persistent marking, decidable comparison, reduction orientation and descending height. |
+| [Decidable Ground Comparison for Norm-Controlled Ordinal Assignments](17-permitted-control-canonical-comparison/README.md) · [PDF](17-permitted-control-canonical-comparison/paper.pdf) | 30 pages | Ground comparison for permitted controls; functional-input hardness for those controls and the unchanged standard control. |
+| [Identities and Comparison for the Standard Ordinal Collapse](18-standard-control-comparison/README.md) · [PDF](18-standard-control-comparison/paper.pdf) | 37 pages | Unchanged-control identity, one-input order, polynomial heads, certified multivariate fragments and source consequences. |
+| [Source Expressivity and Control Sensitivity of Ordinal Assignments](19-source-expressivity-and-control-sensitivity/README.md) · [PDF](19-source-expressivity-and-control-sensitivity/paper.pdf) | 18 pages | Actual-source arithmetic, observers, head construction, and ground hardness after an additive-one control change. |
+| [Controlled Ordinal Descents, Restricted Partitions, and Finite Cartier Observers](20-controlled-descents-and-cartier-observers/README.md) · [PDF](20-controlled-descents-and-cartier-observers/paper.pdf) | 14 pages | Growing-budget count transfer, complete finite observers and residue-tuple periods. |
 
 **Current formalization: 170 checked, 2 inherited, 17 pending out of 189.**
 The [branch reconciliation](formalization/RECONCILIATION-2026-11-09.md) combines
@@ -23,7 +29,7 @@ The proof lanes are stopped.
 Working manuscripts and a standalone calculator/formalization project from a research programme in mathematical logic. Their source questions were posed by the authors identified below. Each manuscript is independently buildable; the earlier comparison collection cites its included companions for shared proofs. No argument or build requires private vault documents or project conventions.
 
 An incomplete [Lean formalization programme](FORMALIZATION.md) covers the fifteen earlier
-papers. The two new explanatory manuscripts have not been fully ported. Its target register and component statuses distinguish the existing
+papers. The five current explanatory manuscripts have not been fully ported. Its target register and component statuses distinguish the existing
 checked calculator from the many full paper targets still pending. Every
 dependency absent from the standard libraries remains an explicit obligation.
 
@@ -35,8 +41,8 @@ dependency absent from the standard libraries remains an explicit obligation.
 | [Pure R1 ordinal and pattern calculator](04-pure-r1-calculator/README.md) · [Paper PDF](04-pure-r1-calculator/paper.pdf) | Carlson's pure first-order resemblance; Wilken's endpoint recursion | Standalone Python calculator/CLI, finite-pattern maps and enumeration, sharp expanded-tree output-size bound, and checked Lean semantic endpoint, arithmetic, finite-pattern and sharp norm proofs. |
 
 The earlier six-paper [Wilken–Weiermann comparison collection](COMPARISON-COLLECTION.md)
-is preserved with its source and formalization history. For the new completed
-hand-proof exposition, start with the two papers above and the consolidation
+is preserved with its source and formalization history. For the current
+hand-proof exposition, start with the five papers above and the collection
 guide. The full unchanged-standard-control comparison problem with several
 ground inputs remains separate from the new permitted-control theorem.
 
@@ -44,10 +50,10 @@ ground inputs remains separate from the new permitted-control theorem.
 |---|---|
 | [Foundations and guide](05-wilken-weiermann-foundations/README.md) · [PDF](05-wilken-weiermann-foundations/paper.pdf) | Original questions, canonical clauses, maximal predecessor, closed evaluator, complete counts and source translation. |
 | [Gödel-T termination ordering](06-godel-t-termination-ordering/README.md) · [PDF](06-godel-t-termination-ordering/paper.pdf) | Earlier structural presentation; its [checked composition obstruction](06-godel-t-termination-ordering/STATUS.md) is retained. The repaired relation and full proof are in entry 16. |
-| [Collapse equality and one-variable comparison](07-collapse-equality-and-one-variable/README.md) · [PDF](07-collapse-equality-and-one-variable/paper.pdf) | Multivariate identity normal form; complete one-variable eventual-sign and finite-exception algorithms. |
-| [Multivariate decidable fragments](08-multivariate-collapse-comparison/README.md) · [PDF](08-multivariate-collapse-comparison/paper.pdf) | Exact arithmetic hypotheses, finite and polynomial heads, internal-level-two source comparison, common-head, balanced and single-core classes. |
-| [Actual-source expressivity](09-canonical-source-expressivity/README.md) · [PDF](09-canonical-source-expressivity/paper.pdf) | Boolean compiler, absolute and unit observations, ground-binder construction, entire head graphs, functional-input and perturbed-control hardness. |
-| [Controlled descents and modular counts](10-collapse-descent-and-modular-counts/README.md) · [PDF](10-collapse-descent-and-modular-counts/paper.pdf) | Growing-budget partition transfer, linked source parameters, complete Cartier observer and exact actual residue-tuple period. |
+| [Collapse equality and one-variable comparison](07-collapse-equality-and-one-variable/README.md) · [PDF](07-collapse-equality-and-one-variable/paper.pdf) | Historical edition; combined with entry 08 in the current standard-control paper, entry 18. |
+| [Multivariate decidable fragments](08-multivariate-collapse-comparison/README.md) · [PDF](08-multivariate-collapse-comparison/paper.pdf) | Historical edition; combined with entry 07 in entry 18, retaining the exact domain and arithmetic hypotheses. |
+| [Actual-source expressivity](09-canonical-source-expressivity/README.md) · [PDF](09-canonical-source-expressivity/paper.pdf) | Historical edition; functional-input hardness is retained in entry 17, with the other source results revised in entry 19. |
+| [Controlled descents and modular counts](10-collapse-descent-and-modular-counts/README.md) · [PDF](10-collapse-descent-and-modular-counts/paper.pdf) | Historical edition; rewritten in entry 20 with complete profile closure and explicit ordinal/source and state/output distinctions. |
 
 The calculator project includes its own implementation, tests, explanatory paper,
 public Lake configuration and [formalization coverage](04-pure-r1-calculator/FORMALIZATION.md).
@@ -69,9 +75,9 @@ local proof it uses.
 | [The exact computability of two prediction measures](14-complexity-of-prediction-measures/README.md) · [PDF](14-complexity-of-prediction-measures/paper.pdf) | Exact third-jump degree for the original Hibbard measure and a specified canonical all-total-function variant. |
 | [Explicit differential-field constraint decisions](15-differential-field-constraint-decisions/README.md) · [PDF](15-differential-field-constraint-decisions/paper.pdf) | First-order and independent-spectrum decisions over Q; the full predicate and historical novelty remain outside the claims. |
 
-Each bundle contains the canonical `paper.tex`, its PDF, `build_pdf.py`, a source/dependency guide and a verification record. Earlier bundles factor their style into a local `preamble.tex`; the new pair keeps it in `paper.tex`. Published mathematical theorems are cited normally; their proofs and copyrighted source PDFs are not bundled. The papers give their local arguments in full, with introductions and examples.
+Each bundle contains the canonical `paper.tex`, its PDF, `build_pdf.py`, a source/dependency guide and a verification record. Earlier bundles factor their style into a local `preamble.tex`; the current comparison papers keep it in `paper.tex`. Published mathematical theorems are cited normally; their proofs and copyrighted source PDFs are not bundled. The papers give their local arguments in full, with introductions and examples.
 
-Use `python3 build_pdf.py` inside a paper directory. Entries 16–17 use standard pdfLaTeX (and BibTeX when needed), with no downloads; their local `SHA256SUMS` files identify each edition. Earlier bundles use Tectonic in cached-resource mode, or pdfLaTeX if Tectonic is unavailable. For a first Tectonic build on a new machine, `python3 build_pdf.py --online` permits missing TeX resources to be downloaded. Python uses only its standard library. Computer Modern is selected explicitly; the preparation checks inspect the actual embedded fonts.
+Use `python3 build_pdf.py` inside a paper directory. Entries 16–20 use standard pdfLaTeX (and BibTeX when needed), with no downloads; their local `SHA256SUMS` files identify each edition. Earlier bundles use Tectonic in cached-resource mode, or pdfLaTeX if Tectonic is unavailable. For a first Tectonic build on a new machine, `python3 build_pdf.py --online` permits missing TeX resources to be downloaded. Python uses only its standard library. Computer Modern or Latin Modern is selected explicitly; the preparation checks inspect the actual embedded fonts.
 
 The papers are AI-assisted hand-proof manuscripts for review; the calculator and the formalization register document their specifically checked Lean components. Their existence here does not establish historical priority, independent mathematical verification or journal publication. The forest decision proof imports effective tree-ideal decomposition and Parikh theorems; general Scott-complexity exclusions belong to the cited literature. See the individual source guides for the division of work.
 

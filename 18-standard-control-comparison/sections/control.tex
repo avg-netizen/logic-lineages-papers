@@ -1,0 +1,107 @@
+\section{The standard control and its first-order arithmetic}
+\label{m:sec:control}
+Define, literally,
+\begin{equation}\label{m:eq:f}
+ F_0(n)=2^n,\qquad F_{j+1}(n)=F_j^{\,n+1}(n),\qquad
+ f(n)=F_5(n+100).
+\end{equation}
+A superscript on a function denotes a finite iterate. The starting argument
+in $F_{j+1}$ varies with $n$. This convention will not be replaced by
+iteration from a fixed seed.
+
+\begin{lemma}[Growth]\label{m:lem:growth}
+Each $F_j$ is recursive and strictly increasing, with $F_j(n)\ge2^n$.
+For $j\ge0$,
+\[
+ F_{j+1}(n+1)\ge2^{F_{j+1}(n)+1}.
+\]
+Consequently $f(z+1)\ge(A+2)f(z)$ whenever $z\ge A\ge0$.
+\end{lemma}
+\begin{proof}
+Finite iteration preserves recursiveness, strict increase, and domination
+of $2^n$. Increasing the input from $n$ to $n+1$ makes the first $n+1$
+iterates at least one larger, and the definition then supplies one further
+application of $F_j$. Thus
+$F_{j+1}(n+1)\ge F_j(F_{j+1}(n)+1)\ge2^{F_{j+1}(n)+1}$.
+For $v\ge1$, $2^{v+1}\ge(v+2)v$, by direct checking at $v=1,2,3$ and
+induction. Apply this with $v=f(z)>z\ge A$.
+\end{proof}
+
+\begin{lemma}[Effective constant residues]\label{m:lem:residues}
+For every $m\ge1$ one can compute $r_m\in[0,m)$ such that
+\[
+ F_j(n)\equiv r_m\pmod m\quad(j\ge1,\ n\ge m).
+\]
+In particular $f(n)\equiv r_m\pmod m$ for $n\ge\max(0,m-100)$.
+For $s\ge1$, $j\ge2$, this can be strengthened to
+\begin{equation}\label{m:eq:envelope}
+ m\le 2^{2^s}\quad\Longrightarrow\quad F_j(s)\equiv r_m\pmod m.
+\end{equation}
+If $B=f(u)$ and $m\le2^{2^B}$, then also $f(u+1)\equiv r_m\pmod m$.
+\end{lemma}
+\begin{proof}
+Set $r_1=0$. For $m>1$, write $m=2^a b$ with $b$ odd, and put
+$q=\varphi(b)$ if $b>1$, $q=1$ otherwise. Since $q<m$, recursively
+compute $r_q$, then use the Chinese remainder theorem to define
+\[
+ r_m\equiv0\pmod{2^a},\qquad r_m\equiv2^{r_q}\pmod b.
+\]
+The recursion strictly lowers the integer modulus.
+For towers $T_0(n)=n$, $T_{h+1}(n)=2^{T_h(n)}$, induction on $m$ shows
+$T_h(n)\equiv r_m\pmod m$ whenever $h,n\ge m$. Indeed, the last exponent
+is at least $n\ge a$, while its residue modulo $q$ is $r_q$ by induction;
+Euler's theorem handles the odd factor. This proves the assertion for
+$F_1(n)=T_{n+1}(n)$. At every higher level, all intermediate arguments are
+at least $n$, so the last application of the preceding level proves the
+same residue assertion.
+
+For the stronger bound, $F_1(s)\ge2^{2^s}$. In $F_2(s)$ there are at
+least two $F_1$ applications; the final one has input at least $F_1(s)$,
+so its input is at least $m$. The same argument propagates through every
+$j\ge2$. Finally put $n=u+100$. The last $F_4$ call in
+$F_5(n+1)=F_4^{n+2}(n+1)$ has input
+$F_4^{n+1}(n+1)>F_4^{n+1}(n)=B$. Apply the stronger bound to that call.
+\end{proof}
+
+\begin{theorem}[Snyatkov's arithmetic supplier]\label{m:thm:snyatkov}
+The first-order theory $\operatorname{Th}(\N;0,1,+,<,f)$, with the exact
+function in \eqref{m:eq:f}, is decidable.
+\end{theorem}
+\begin{proof}
+We use Theorem~2 and effective Corollary~2 of Snyatkov~\cite{snyatkov},
+pp.~50--51. Its definitions on p.~40 require an increasing recursive
+function effectively compatible with addition: effective eventual periodicity
+modulo every integer, and an effective shifted sign separation for each
+unbounded integer combination of fixed translates. It also requires effective
+eventual periodicity of the \emph{fixed-seed} hyperfunction
+$H(0)=1$, $H(n+1)=f(H(n))$. The cited theorem and effective corollary
+give effective quantifier elimination after adjoining the specified
+divisibility and floor-inverse symbols for $f$ and $H$.  Both functions
+are recursive, strictly increasing and unbounded.  Their floor inverses
+are computable by finite search, with value zero below the initial
+function value.  The remaining atomic predicates are decidable.
+Quantifier elimination therefore decides closed sentences in the
+expanded language and in its $f$-only reduct.
+
+The residue condition follows from Lemma~\ref{m:lem:residues}. For the second
+condition combine equal shifts in $S(x)=\sum_b a_b f(x+b)$. If every
+combined coefficient is zero the sum is zero. Otherwise let $B$ be the
+largest shift with nonzero coefficient, and set
+\[
+ A=\sum_{b<B}|a_b|,\qquad
+ \delta=\max(0,-\min b,A+1-B).
+\]
+Every argument at $x+\delta$ is nonnegative. With
+$z=x+\delta+B-1\ge x+A$, Lemma~\ref{m:lem:growth} gives, if $a_B>0$,
+\[
+ S(x+\delta)\ge f(z+1)-Af(z)\ge2f(z)>f(x).
+\]
+For $a_B<0$, apply the same calculation to $-S$. This proves unboundedness,
+its sign, and a suitable shift by finite arithmetic on the input data.
+Lastly $H(n)\ge n+1$; for $n\ge m$, the last application of $f$ in
+$H(n)$ has input at least $m$, so $H(n)\equiv r_m\pmod m$.
+All published hypotheses are therefore paid. No identification of $H$ with
+a diagonal $F_j$, and no decision result for variable-seed iteration, is
+being imported.
+\end{proof}
+

@@ -1,0 +1,189 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype,booktabs,longtable,array,tabularx,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\setlength{\parskip}{3pt plus 1pt}
+\setcounter{tocdepth}{1}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\N}{\mathbb N}
+\newcommand{\NN}{\mathbb N_{>0}}
+\newcommand{\norm}{\operatorname{N}}
+\newcommand{\lv}{\operatorname{lv}}
+\newcommand{\NF}{\operatorname{NF}}
+\newcommand{\sgn}{\operatorname{sign}}
+\newcommand{\can}[1]{\mathopen{[\![}#1\mathclose{]\!]}}
+\newcommand{\KK}[2]{K_{#1,#2}}
+\newcommand{\EE}[2]{E_{#1,#2}}
+\numberwithin{equation}{section}
+\title{Identities and Comparison for the Standard Ordinal Collapse}
+\author{}
+\date{17 November 2026}
+\hypersetup{pdftitle={Identities and Comparison for the Standard Ordinal Collapse}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Fix the Wilken--Weiermann collapse below $\varepsilon_0$ with the
+unchanged standard control $f(n)=F_5(n+100)$, where $F_0(n)=2^n$ and
+$F_{j+1}(n)=F_j^{n+1}(n)$.  We study positive expressions obtained from
+natural constants, positive natural inputs, addition, and the functions
+$h_\lambda(u)=\psi(\lambda+u)$ for fixed nonzero limit heads.
+Universal identities have complete recursive normal forms in any finite
+number of inputs.  With one input, every nonidentity has an effectively
+bounded finite equality set and a computable eventual sign.  For arbitrary
+arrangements of polynomial heads, exact descent kernels and their complete
+counts give a closed existential decision procedure.  Separate
+parameter-preserving translations handle common-head and balanced layers
+with arbitrary fixed heads; they use a published first-order arithmetic
+theorem whose hypotheses are verified for this exact control.  A row
+depending on one arbitrary positive core instead has a direct Presburger
+description.  The corresponding source consequences include equality for
+all ground-open canonical assignments, comparison with one ground free
+name, all recursor-free sources, and all sources whose internal types have
+level at most two.  These results concern the fixed standard assignment;
+they complement the all-ground comparison theorem obtained by choosing a
+different admissible control.
+\end{abstract}
+\tableofcontents
+
+\section{Introduction}
+
+An ordinal assignment can be effective to evaluate at a closed input and
+still be difficult to compare at all open inputs.  In the assignment of
+Wilken and Weiermann for G\"odel's $T$ \cite{ww}, the scalar coordinate
+contains a norm-controlled collapse.  Its values grow by enormous jumps,
+but this growth alone does not decide a signed comparison.  Two terms may
+share a leading value and cancel it exactly, leaving a descent count or a
+smaller correlated expression to determine the answer.
+
+We fix the standard control throughout.  The distinction matters because
+the definition permits other admissible controls.  The theorem that all
+ground-open canonical comparisons are decidable for explicitly chosen
+controls \cite{wwcomparison} does not replace the standard assignment by
+an equal function.  The present results retain the original
+$F_5(n+100)$ and address its finer algebraic and decision properties.
+
+Three mechanisms will be used.  First, a collapse value is an exact sum
+of a sparse terminal value and its complete descent count.  On suitable
+inputs, distinct positive atoms have distinct terminal values; the largest
+one separates their signed sum.  This gives free identity normal forms
+and finite equality sets.  Second, retained-prefix kernels compare
+arbitrary fixed ordinal heads in one input.  Their proof requires a
+reserve large enough for an entire lower expression, and a comparison
+algorithm whose separation certificates terminate with it.  Third,
+finite-degree kernels admit exact counter expansions and constant
+residues.  A ranked cancellation procedure then reduces a closed
+multivariate problem to Presburger elimination, keeping all shared input
+names and every finite exception.
+
+Some multivariate expressions admit a simpler comparison.  At a common
+head, input order also orders the sparse terminal values.  With different
+heads, the same conclusion holds in a strict control interval.
+Common-head and balanced certificates make these numerical facts into
+formulas with the original free variables.  Unlike the general
+finite-degree procedure, these translations can be placed under arbitrary
+Boolean connectives and quantifiers.  Their final arithmetic decision is
+supplied by Snyatkov's theorem \cite{snyatkov}; the exact hypotheses are
+proved in Section~\ref{m:sec:control}.
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{.27\textwidth}
+ >{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+Input class & Effective conclusion & Essential restriction\\
+\midrule
+Positive expressions, any finite arity
+& Complete universal identity normal form
+& Fixed heads and positive inner syntax\\
+Positive expressions, one input
+& Finite equality set and eventual sign
+& One shared raw input across the whole query\\
+Arbitrary polynomial heads
+& Closed existential and universal comparison
+& One quantifier block; no claimed free-parameter elimination\\
+Common-head or balanced layers
+& Exact formulas and arbitrary quantified decisions
+& One supplied finite certificate per comparison atom\\
+One arbitrary positive core
+& Finite Presburger sign formula
+& All open dependence occurs through that core\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The main results are statements about numerical expressions, so they do
+not depend on every auxiliary expression having a source term.  The final
+section applies them in the forward direction to literal canonical
+assignments.  It states the source interface and distinguishes internal
+type bounds from bounds on free variables.  All decision procedures are
+mathematical termination results; no practical running-time bound is
+asserted.
+
+\input{sections/foundations}
+\input{sections/control}
+\input{sections/identities}
+\input{sections/unary-kernels}
+\input{sections/unary-decision}
+\input{sections/polynomial-arithmetic}
+\input{sections/certified-fragments}
+\input{sections/source-applications}
+
+\section{The remaining standard-control boundary}
+
+The normal form decides universal identity at arbitrary fixed heads and
+in arbitrary finite arity.  It does not decide whether a nonidentity has
+some multivariate zero.  The one-input algorithm does decide every
+one-block Boolean comparison, because its truth is constant beyond a
+computed bound.  Its proof uses a common growing input: a peak depending
+only on a small coordinate need not dominate an affine term in a different
+large coordinate.
+
+Polynomial heads permit independent raw inputs through their exact
+finite-degree kernels and counts.  The elimination proved here is a
+closed-sentence induction on the number of quantified raw variables.
+It does not preserve arbitrary free parameters through that induction,
+and therefore does not establish the full alternating first-order theory
+of polynomial-collapse functions.  The common-head and balanced theorems
+have a different scope: their actual parameter-preserving formulas allow
+arbitrary quantifier nesting by reduction to the standard-control base
+theory.
+
+Unrestricted order comparison of multivariate positive expressions with
+arbitrary nonpolynomial heads and no such certificate is not decided by
+these methods.  This is a question about the unchanged standard control,
+separate from the all-ground decision theorem for the permitted controls
+constructed in \cite{wwcomparison}.  The exact kernels and sparse
+normal forms remain useful for that standard-control question and for
+the structure of the resulting numerical functions.  Source realization
+and the effects of varying a control are studied further in
+\cite{wwsource}.
+
+\section*{Preparation and verification status}
+
+This manuscript consolidates earlier work on positive identities,
+one-input comparison, and multivariate fragments.  It was prepared through
+AI-assisted research directed by the repository owner; this preparation
+record assigns no individual human mathematical authorship.  The paper
+contains hand proofs.  Earlier formalization checked many exact source
+interfaces and exposed a predecessor-convention error that is corrected
+in the kernel definition here.  The complete closed existential assembly,
+its source consumers, and the published first-order arithmetic supplier
+are not claimed to have been verified together as one proof-assistant
+development.  Build checks and separate AI review do not constitute
+independent human verification or a historical priority assessment.
+
+\input{references}
+\end{document}

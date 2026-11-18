@@ -50,7 +50,17 @@ Earlier entries 05 and 07–10 were read at public commit
 formalization records. Useful foundations and the actual-source compiler
 are consolidated into this paper. Separate one-variable, polynomial-head,
 balanced-layer and low-type algorithms are not prerequisites of the new
-chosen-control theorem; their other scopes are retained in the older papers.
+chosen-control theorem. Their unchanged-control results now appear in
+*Identities and Comparison for the Standard Ordinal Collapse*. Source
+observation, head-construction and additive-one control-sensitivity results
+appear in *Source Expressivity and Control Sensitivity of Ordinal Assignments*.
+The restricted-partition and complete-observer results appear in
+*Controlled Ordinal Descents, Restricted Partitions, and Finite Cartier Observers*.
+The final discussion and bibliography name these companions; none is a new
+premise of this paper's positive theorem or functional-input reduction.
+Corollary 9.4 records that the same functional-input weak/strict reduction
+works for the unchanged standard control: its source constructions require
+the standing growth bounds, without the selected controls' residue tables.
 
 Preparation and cross-checks were performed by OpenAI Codex under the
 repository owner's direction. The manuscript is a complete hand-proof

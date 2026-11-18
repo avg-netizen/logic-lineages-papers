@@ -1,0 +1,110 @@
+\section{An exact period on the actual linked inputs}
+
+Retain $u,B,C,e,d$ from \eqref{eq:delta}, and write
+\[
+ B=2^K,\qquad r=K-1,\qquad q=2^r+1=B/2+1,\qquad
+ m_0=u-2,\qquad \Delta=m_0(m_0+1)/2.
+\]
+The integer $q$ need not be prime. All primitive $q$-th roots
+in an algebraic closure of $\Ftwo$ will be used.
+
+\begin{lemma}[The actual residue formula]\label{lem:residue}
+The form $\omega_e=z^{e-1}A_d(z)^{-1}\,dz$ has a simple nonzero
+residue at each primitive $q$-th root $\zeta$, given by
+\[
+ b_\zeta=\frac{\zeta^e}{A_{d-q}(\zeta)}
+                 =\zeta^{e-\Delta}A_{m_0}(\zeta).
+\]
+\end{lemma}
+\begin{proof}
+The hierarchy bounds give $d/2<q\le d<2q$ and $m_0<q$.
+Thus only $1+z^q$ among the factors of $A_d$ vanishes at
+$\zeta$, and its derivative there is $\zeta^{-1}$.
+The product $\prod_{i=1}^{q-1}(1+\zeta^i)$ is one: it is
+the derivative at one of $X^q-1$, whose value is $q=1$ in
+characteristic two. It follows that the residue is the first
+displayed expression.
+
+Now $d-q=q-1-m_0$. The last $m_0$ terms in that complete
+product equal
+$\prod_{j=1}^{m_0}(1+\zeta^{-j})
+  =\zeta^{-\Delta}A_{m_0}(\zeta)$.
+Taking the complementary product proves the second expression.
+None of $1+\zeta^j$ for $1\le j\le m_0$ vanishes.
+\end{proof}
+
+\begin{lemma}[The bounds needed for the root count]\label{lem:bounds}
+For the actual linked inputs, $r\ge96$, $\Delta<r$, and
+\[
+ 0<\Delta-2e<q,\qquad
+ \varphi(q)>\frac{2^r}{r+1}>2^{2r/3}\Delta.
+\]
+\end{lemma}
+\begin{proof}
+For $s=u+100$, $F_5(s)\ge F_1(s)\ge2^{2^s}$, so
+$K\ge2^{u+100}$ and $r\ge2^{u+100}-1$.
+These inequalities imply $r\ge96$ and
+$\Delta=(u-2)(u-1)/2<r$.
+As $e=u-4=m_0-2$,
+$\Delta-2e=(m_0^2-3m_0+8)/2$ is positive and smaller
+than $q$ by the same growth bound.
+
+If an odd integer $q$ has $k$ distinct prime factors
+$p_1<\cdots<p_k$, then $p_i\ge i+2$, hence
+$q/\varphi(q)=\prod p_i/(p_i-1)\le k+1$.
+Here $3^k\le q=2^r+1$ implies $k\le r$, so
+$\varphi(q)\ge q/(r+1)>2^r/(r+1)$.
+Finally $2^{r/3}>r^3$ at $r=96$ and thereafter:
+the ratio of the exponential to $r^3$ increases for $r\ge96$.
+Since $\Delta<r$ and $r(r+1)<r^3$, this gives
+$2^r/(r+1)>2^{2r/3}\Delta$.
+\end{proof}
+
+\begin{theorem}[Exact actual residue-tuple period]\label{thm:actual-period}
+The tuple $(b_\zeta)_{\zeta\ {\rm primitive}\ q}$ has exact
+Frobenius period $2r$. Every eventual period of the complete
+rational differential Cartier orbit of $\omega_e$ is divisible
+by $2r=2(\log_2 B-1)$.
+\end{theorem}
+\begin{proof}
+The order of two modulo $q=2^r+1$ is $2r$.
+It divides $2r$ because $2^r\equiv-1\pmod q$.
+Any proper divisor of $2r$ is at most $r$, and for
+$s\le r$ the positive integer $2^s-1$ is smaller than $q$.
+Thus no smaller order is possible. The primitive roots and their
+residues belong to $\mathbb F_{2^{2r}}$, so the tuple period
+divides $2r$.
+
+Reciprocity gives
+$A_{m_0}(\zeta^{-1})=\zeta^{-\Delta}A_{m_0}(\zeta)$.
+If Frobenius power $r$ fixed the tuple,
+Lemma~\ref{lem:residue} would give
+$\zeta^{\Delta-2e}=1$ at a primitive root, contrary to
+$0<\Delta-2e<q$.
+
+Any other proper divisor $s$ of $2r$ is at most $2r/3$:
+the integer quotient $(2r)/s$ is then at least three.
+Fixedness at all primitive roots would make every such root a zero of
+\[
+ P_s(X)=A_{m_0}(X)^{2^s}
+       +X^{(\Delta-e)(2^s-1)}A_{m_0}(X).
+\]
+This polynomial has constant coefficient one and degree exactly
+$2^s\Delta$, since $e>0$ makes the second summand's degree
+strictly smaller. It cannot have all $\varphi(q)$ primitive roots
+as zeros, by Lemma~\ref{lem:bounds}. Thus no proper divisor is a
+tuple period.
+
+The chosen finite poles were already simple initially.
+By Lemma~\ref{lem:local}, the tuple in the $j$-th Cartier state is
+$(b_\zeta^{\,2^{-j}})_\zeta$ with poles fixed. If states at
+$j$ and $j+p$ agree, these tuples agree. Inverse Frobenius is
+bijective and its tuple orbit has period $2r$, so $2r\mid p$.
+This applies also after the higher-pole transient.
+\end{proof}
+
+The proof is a tuple argument. It does not assert that every individual
+residue has degree $2r$, and it does not calculate the selected
+constant coefficient. In particular, the growing tuple period does
+not prove that the sequence $v\mapsto\delta_4(v)$ is nonperiodic.
+

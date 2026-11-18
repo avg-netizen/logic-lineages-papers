@@ -1,5 +1,12 @@
 # Actual-Source Arithmetic and Undecidability Boundaries
 
+**Historical edition.** The retained source-observation and construction results are in [Source Expressivity and Control Sensitivity of Ordinal Assignments](../19-source-expressivity-and-control-sensitivity/README.md); functional-input hardness for the selected controls and the unchanged standard control is in [the main numerical paper](../17-permitted-control-canonical-comparison/README.md).
+The [current collection guide](../COMPARISON-RESOLUTION-GUIDE.md) maps all retained
+material and distinguishes the unchanged-control results from the selected-control
+theorem. The source, PDF and formalization links below preserve the earlier
+edition; their historical status statements are not a status report for the
+new collection.
+
 [Read the paper](paper.pdf) · [TeX source](paper.tex)
 
 The paper turns existential arithmetic of supplied actual Gödel-T sources into
@@ -41,3 +48,4 @@ supported; `--online` permits first-time Tectonic downloads. Fonts are
 Computer Modern and AMS. This is an AI-assisted hand-proof working manuscript,
 with [document verification](VERIFICATION.md), not proof-assistant certification
 or a claim of independent human review or historical priority.
+

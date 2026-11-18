@@ -1,5 +1,12 @@
 # Multivariate decidable fragments of canonical comparison
 
+**Historical edition.** Its results are combined with the identity and one-input development in [Identities and Comparison for the Standard Ordinal Collapse](../18-standard-control-comparison/README.md).
+The [current collection guide](../COMPARISON-RESOLUTION-GUIDE.md) maps all retained
+material and distinguishes the unchanged-control results from the selected-control
+theorem. The source, PDF and formalization links below preserve the earlier
+edition; their historical status statements are not a status report for the
+new collection.
+
 [Paper PDF](paper.pdf) · [TeX](paper.tex) · [Source guide](SOURCES.md)
 
 The paper gives exact decision procedures for finite-coefficient canonical
@@ -20,3 +27,4 @@ are ordinary published sources and included companion manuscripts.
 ## Formalization
 
 The finite-coefficient source comparison theorem (`thm:finite-source`) is checked in Lean, including genuine WW admissible substitutions, weak/WW-strict/equality decisions, exact computable source admission and recursor-free inclusion without internal-type bounds. The paper remains in progress; full first-order BASE and unrestricted canonical comparison are separate. See the [accepted checkpoint](../formalization/verification/cumulative-continuation-2026-11-05/finite-source-comparison/STATUS.md) and [source completion audit](../formalization/audits/FINITE-SOURCE-COMPLETION-2026-11-05.md).
+

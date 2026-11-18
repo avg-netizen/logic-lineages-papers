@@ -1,23 +1,17 @@
 {
   "pdf": "paper.pdf",
   "pages": 30,
-  "pdf_bytes": 429479,
-  "pdf_sha256": "5b3e0a782f684af9504a823be42511533ebc46d96283fbb39bcdd0c5c81d47e1",
+  "pdf_bytes": 433966,
+  "pdf_sha256": "77e73a2df46d70372c03fe8b4538ccbcdaa16087b2404bbefa0b797f8ea4a711",
   "warnings": [],
-  "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nQENFPB+CMR17                         Type 1            Builtin          yes yes yes     59  0\nALFYXD+CMR12                         Type 1            Builtin          yes yes yes     60  0\nAUPSQS+CMBX10                        Type 1            Builtin          yes yes yes     61  0\nKRPWWA+CMR10                         Type 1            Builtin          yes yes yes     62  0\nBWHEAS+CMMI10                        Type 1            Builtin          yes yes yes     63  0\nRKDUWA+CMR7                          Type 1            Builtin          yes yes yes     64  0\nCIMFJO+CMSY10                        Type 1            Builtin          yes yes yes     65  0\nCUFWRN+CMBX12                        Type 1            Builtin          yes yes yes     67  0\nRXZZNR+CMR8                          Type 1            Builtin          yes yes yes     80  0\nEOXSPH+CMMI8                         Type 1            Builtin          yes yes yes     81  0\nNFJMKW+CMTI10                        Type 1            Builtin          yes yes yes     82  0\nGQAKXW+CMSY8                         Type 1            Builtin          yes yes yes     84  0\nTAZMOV+CMEX10                        Type 1            Builtin          yes yes yes     99  0\nGZGJRC+CMMI6                         Type 1            Builtin          yes yes yes    100  0\nMWVEPL+MSBM10                        Type 1            Builtin          yes yes yes    109  0\nDSZXXK+MSAM10                        Type 1            Builtin          yes yes yes    145  0\nNWZNSW+CMBX8                         Type 1            Builtin          yes yes yes    146  0\nTGVGUJ+CMR6                          Type 1            Builtin          yes yes yes    216  0\nHGUFYO+CMMI7                         Type 1            Builtin          yes yes yes    235  0\nCVCHPP+CMEX8                         Type 1            Builtin          yes yes yes    281  0\nJKSUUE+CMSY6                         Type 1            Builtin          yes yes yes    301  0\nDQGBAO+CMSS10                        Type 1            Builtin          yes yes yes    340  0\nQPRKJJ+CMTT10                        Type 1            Builtin          yes yes yes    373  0\n",
+  "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nQENFPB+CMR17                         Type 1            Builtin          yes yes yes     59  0\nALFYXD+CMR12                         Type 1            Builtin          yes yes yes     60  0\nAUPSQS+CMBX10                        Type 1            Builtin          yes yes yes     61  0\nAXCXCH+CMR10                         Type 1            Builtin          yes yes yes     62  0\nBWHEAS+CMMI10                        Type 1            Builtin          yes yes yes     63  0\nRKDUWA+CMR7                          Type 1            Builtin          yes yes yes     64  0\nCIMFJO+CMSY10                        Type 1            Builtin          yes yes yes     65  0\nCUFWRN+CMBX12                        Type 1            Builtin          yes yes yes     67  0\nRXZZNR+CMR8                          Type 1            Builtin          yes yes yes     80  0\nEOXSPH+CMMI8                         Type 1            Builtin          yes yes yes     81  0\nELPTZW+CMTI10                        Type 1            Builtin          yes yes yes     82  0\nGQAKXW+CMSY8                         Type 1            Builtin          yes yes yes     84  0\nTAZMOV+CMEX10                        Type 1            Builtin          yes yes yes     99  0\nMMRMLE+CMMI6                         Type 1            Builtin          yes yes yes    100  0\nMWVEPL+MSBM10                        Type 1            Builtin          yes yes yes    109  0\nDSZXXK+MSAM10                        Type 1            Builtin          yes yes yes    145  0\nNWZNSW+CMBX8                         Type 1            Builtin          yes yes yes    146  0\nNXQWPE+CMR6                          Type 1            Builtin          yes yes yes    216  0\nHGUFYO+CMMI7                         Type 1            Builtin          yes yes yes    235  0\nCVCHPP+CMEX8                         Type 1            Builtin          yes yes yes    281  0\nJKSUUE+CMSY6                         Type 1            Builtin          yes yes yes    301  0\nDQGBAO+CMSS10                        Type 1            Builtin          yes yes yes    340  0\nQPRKJJ+CMTT10                        Type 1            Builtin          yes yes yes    383  0\n",
   "build": "pdfLaTeX, three passes; BibTeX when required",
   "edition_date": "2026-11-17",
   "formal_verification": false,
   "review_kind": "AI-assisted mathematical hand review and document inspection",
   "scope": "Build and document checks are not proof-assistant verification or independent human review.",
-  "standalone_rebuild": {
-    "command": "python3 build_pdf.py",
-    "inputs": "Only the bundled TeX, bibliography and build script in an isolated directory",
-    "network_downloads": false,
-    "pdf_text_identical": true,
-    "result": "pass"
-  },
   "visual_review": {
+    "pdf_sha256": "77e73a2df46d70372c03fe8b4538ccbcdaa16087b2404bbefa0b797f8ea4a711",
     "pages_inspected": [
       1,
       2,
@@ -50,8 +44,16 @@
       29,
       30
     ],
-    "method": "Poppler page rendering, contact-sheet inspection, individual page checks and reinspection after corrections",
+    "method": "All 30 pages inspected through Poppler renders: pages 1\u201325 are pixel-identical to the fully reviewed contextual edition, pages 26\u201329 are pixel-identical to the inspected corollary edition, and the final page 30 was inspected after bibliography compaction.",
     "result": "pass",
     "outstanding_document_defects": []
+  },
+  "edition_note": "Context and bibliography updated for the three retained companions. Corollary 9.4 explicitly preserves functional-input hardness at unchanged standard G; the reduction proof is unchanged.",
+  "standalone_rebuild": {
+    "command": "python3 build_pdf.py",
+    "inputs": "Only the bundled TeX, bibliography and build script in an isolated directory",
+    "network_downloads": false,
+    "pdf_text_identical": true,
+    "result": "pass"
   }
 }

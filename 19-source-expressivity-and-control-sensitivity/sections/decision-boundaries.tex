@@ -1,0 +1,123 @@
+\section{Countervaluations and complete-count attainment}
+\label{sec:boundaries}
+
+The graph constructions distinguish three tasks: evaluating one supplied
+tuple, finding a witness, and certifying that no witness exists. Two
+precise consequences express the remaining distinction at a fixed control.
+
+\begin{proposition}[A finite-box characterization]
+\label{prop:counter-bound}
+Fix the control and parsing policy. Universal weak and strict canonical
+comparison on terms with ground free names, of arbitrary result type,
+are co-recursively-enumerable. This comparison problem is decidable if
+and only if there is a total computable function $b(Q)$ such that
+every false query $Q$ has a countervaluation with every raw ground
+coordinate at most $b(Q)$.
+\end{proposition}
+\begin{proof}
+Enumerate finite tuples of positive integers and evaluate the supplied
+query at each tuple. The closed positive coordinates and all scalar
+values are computable, so failure is semidecidable. If the bound is
+supplied, search the finite positive box through $b(Q)$ and decide the
+query. Conversely, given a decider, return zero on a true query. On a
+false query enumerate until a countervaluation is found and return its
+largest coordinate. This latter search is entered only when its
+termination is known. With no free names there is one empty valuation,
+whose largest coordinate is taken to be zero.
+\end{proof}
+
+The bound concerns the location of a countertuple, not the time required
+to evaluate a given tuple. At the controls of
+Theorem~\ref{thm:control-hardness} no such computable bound exists,
+even for its restricted fragment. At a control with a proved comparison
+decider the proposition supplies a computable bound, without a useful
+size estimate.
+
+For the next result specialize to the unchanged standard control $G$.
+We give the short residue argument required by the reduction.
+
+\begin{lemma}[Standard-control residues]\label{lem:standard-residues}
+For every $m\ge1$ one can compute $r_m\in\{0,\ldots,m-1\}$
+such that
+\[
+ F_j(n)\equiv r_m\pmod m\quad(j\ge1, n\ge m).
+\]
+Consequently $G(t)\equiv r_m\pmod m$ for
+$t\ge\max(0,m-100)$.
+\end{lemma}
+\begin{proof}
+Put $r_1=0$. For $m>1$ write $m=2^a b$ with $b$ odd, and set
+$q=\varphi(b)$ if $b>1$, and $q=1$ otherwise. Since $q<m$,
+recursively compute $r_q$ and use the Chinese remainder theorem to set
+\[
+ r_m\equiv0\pmod{2^a},\qquad r_m\equiv2^{r_q}\pmod b.
+\]
+For the towers $T_0(n)=n$ and $T_{h+1}(n)=2^{T_h(n)}$,
+induction on $m$ gives $T_h(n)\equiv r_m\pmod m$ whenever
+$h,n\ge m$. The last exponent is at least $n\ge a$, giving
+the power-of-two congruence, and has residue $r_q$ modulo $q$ by
+the smaller-modulus induction, giving the odd congruence by Euler's
+theorem. Apply this to $F_1(n)=T_{n+1}(n)$. At every higher level
+all intermediate arguments are at least $n$; the final application
+of the preceding level proves the same assertion. The shift by 100
+gives the statement for $G$.
+\end{proof}
+
+\begin{proposition}[Attainment for a supplied actual unary source]
+\label{prop:actual-attainment}
+Let $H:o\to o$ be a supplied closed original source at control $G$,
+with its actual canonical vector $(c_H,a_H)$. Put
+\[
+ \lambda=\omega\otimes a_H,\qquad
+ C_H=N(\lambda)+c_H+1.
+\]
+Given $p,m\ge1$ and residues $a,r$, deciding whether there is a
+genuine input $t\ge N(\lambda)$ such that
+\[
+ t\equiv a\pmod p,\qquad D_\lambda(t)\equiv r\pmod m
+\]
+reduces effectively to actual-source arithmetic satisfiability, and
+hence to one universal ground comparison with its answer complemented.
+\end{proposition}
+\begin{proof}
+The literal application identity is
+\[
+ F_H(n)=\can{HX}_0-1=J_\lambda(C_H+n)-1,
+ \qquad x_0=n+1.
+\]
+Choose an effective $b\ge C_H$ above the threshold in
+Lemma~\ref{lem:standard-residues}, with $b\equiv a\pmod p$.
+Every terminal state on that tail is a positive iterate of $G$, so
+$Z_\lambda(t)\equiv r_m\pmod m$. The complete-count identity
+therefore gives
+\[
+ F_H(t-C_H)\equiv D_\lambda(t)+r_m-1\pmod m.
+\]
+Let $s$ be the least nonnegative residue of $r+r_m-1$ modulo $m$.
+The desired tail query is exactly
+\[
+ \exists k,y\in\N\quad
+       F_H(b-C_H+pk)=my+s.
+\]
+It is a formula in actual-source arithmetic with one supplied $H$
+graph and fixed integer coefficients. Its two independent witnesses
+remain shared wherever they occur. The Boolean compiler gives the
+stated comparison reduction.
+
+For every genuine $t<b$, compute the exact descent and its complete
+event count and test the two congruences. There are finitely many such
+inputs. If one succeeds, the whole attainment question has a positive
+answer; otherwise the tail sentence decides it. Thus no part of the
+genuine finite prefix is omitted.
+\end{proof}
+
+The count is complete: it includes every nonfinite event after any
+intermediate ordinal cut. The actual scalar $c_H$ and the norm offset
+$N(\lambda)$ remain in its observable input ray. This is a necessary
+subproblem for a full standard-control comparison decider. It is not
+an assertion that every ordinal head has a supplied source, that every
+isolated intermediate counter can be observed, or that such attainment
+queries are equivalent to effective periodic tables at all auxiliary
+heads. The carrier certificates of Section~\ref{sec:head-graph}
+enlarge the class of justified graph observations through a separate
+construction, with their own stated premises.

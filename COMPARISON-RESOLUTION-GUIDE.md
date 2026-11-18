@@ -1,85 +1,132 @@
-# The completed II5 exposition: two companion papers
+# The comparison papers: core results and retained developments
 
 17 November 2026.
 
-The current exposition consists of two independently readable papers:
+The current exposition consists of two core papers and three retained
+companions. Each has a separate mathematical question and an ordinary
+bibliography. The earlier six-paper organization is preserved as history,
+with current-reading links at its entry points.
 
-| Paper | Length | Main theorem |
+| Paper | Length | Purpose |
 | --- | --- | --- |
-| [A Decidable Path Ordering for Gödel's T with Bachmann–Howard Descending Height](16-persistent-marking-termination-ordering/paper.pdf) | 29 pages | A decidable confined stable ordering, native reduction orientation, exact ranked multiset-RPO restriction, and exact descending height. |
-| [Decidable Ground Comparison for Norm-Controlled Ordinal Assignments](17-permitted-control-canonical-comparison/paper.pdf) | 30 pages | All-ground canonical weak/strict/equality decisions for explicit permitted controls, with functional-input weak/strict hardness for those same controls. |
+| [A Decidable Path Ordering for Gödel's T with Bachmann–Howard Descending Height](16-persistent-marking-termination-ordering/paper.pdf) | 29 pages | The persistent-mark structural ordering, reduction orientation and Bachmann–Howard descending height. |
+| [Decidable Ground Comparison for Norm-Controlled Ordinal Assignments](17-permitted-control-canonical-comparison/paper.pdf) | 30 pages | Ground weak/strict/equality decisions for explicitly permitted controls; functional-input weak/strict hardness for those controls and the unchanged standard control. |
+| [Identities and Comparison for the Standard Ordinal Collapse](18-standard-control-comparison/paper.pdf) | 37 pages | Identities, one-input order, polynomial heads and certified multivariate fragments for the unchanged standard control. |
+| [Source Expressivity and Control Sensitivity of Ordinal Assignments](19-source-expressivity-and-control-sensitivity/paper.pdf) | 18 pages | Arithmetic of actual sources, scalar and unit observers, original-budget head construction, and ground hardness under an additive-one control change. |
+| [Controlled Ordinal Descents, Restricted Partitions, and Finite Cartier Observers](20-controlled-descents-and-cartier-observers/paper.pdf) | 14 pages | Restricted-partition transfer, complete finite Cartier observers and exact residue-tuple periods for linked standard-control descent inputs. |
 
-The first paper does not depend on any numerical collapse-control or
-arithmetic-elimination result. The second does not use the structural
-ordering's cut, finite observer, or Bachmann–Howard rank analysis. Their
-common motivation and native syntax do not justify joining two different
-proof developments into a roughly 60-page paper. Conversely, the earlier
-six-paper organization no longer reflects six necessary proof dependencies.
+## Why this organization?
 
-Both papers state their local definitions and proofs in full and cite the
-published literature normally. They do not require the reader to reconstruct
-a proof from research-note names or source repository paths.
+The structural ordering has no numerical-control or arithmetic-elimination
+dependency. The permitted-control comparison theorem has its own complete
+source, residue and elimination development. Joining those two unrelated
+proofs would make a long paper without shortening either argument.
 
-## What happens to the earlier six papers?
+The remaining identity, one-variable and multivariate-fragment results
+share a control, a numerical language and most foundational mechanisms.
+They are combined into one standard-control comparison paper, with one
+foundation and one source-applications section. They remain useful because
+the chosen-control theorem does not identify its assignments with those
+of the original control.
 
-The earlier sources, PDFs, correction records and formalization targets are
-preserved. The following table describes their role in the new exposition,
-not a claim that all their independent results are superseded.
+The source remainder has a separate organizing question: what arithmetic
+can actual typed sources observe or construct? Its Boolean compiler,
+absolute and unit observers, head certificates and control-sensitivity
+theorem fit together. Keeping them in a focused paper avoids a large
+appendix to the main decision proof and avoids repeating its functional-input
+hardness reduction.
 
-| Earlier entry | Role in the new papers |
+The modular material is a coherent count-and-coefficient paper. Its
+partition transfer feeds one standard-control comparison result, while
+the complete observer and residue-period analysis retain an independent
+scope. The new permitted-control proof does not need that route to obtain
+its residue tables.
+
+## The actual proof dependencies
+
+The structural paper is independent of the other four. The permitted-control
+paper proves its numerical and source foundations locally. The standard-control
+paper also proves its central numerical foundations locally; its final source
+applications cite the repaired canonical-source interface of the permitted-control
+paper, and its polynomial count residues cite the modular paper's transfer theorem.
+The source-expressivity paper states and cites that same repaired source interface
+and closed evaluator, then proves its own constructions. The modular paper is
+self-contained beyond its ordinary published background.
+
+The contextual references in the main numerical paper to the retained results
+are not premises of its positive theorem. There is no circular proof dependency.
+An independently downloaded PDF identifies its companion references by title
+and public link, without requiring a private research-note name.
+
+## Where the earlier material went
+
+| Earlier entry | Current home and disposition |
 | --- | --- |
-| 05 — Wilken–Weiermann foundations | The needed literal canonical clauses, greedy predecessor, collapse evaluator and repaired norm bridge are included directly in the numerical paper. Its structural definitions are supplied independently in the ordering paper. |
-| 06 — Gödel-T termination ordering | Replaced as the current structural exposition by a newly defined persistent-mark relation and complete proofs for that relation. The checked obstruction to the older local composition theorem remains recorded. |
-| 07 — Collapse equality and one-variable comparison | Its separate normal-form and one-input algorithms are not prerequisites of the new all-ground theorem. Their independent control scopes remain in the older account. |
-| 08 — Multivariate decidable fragments | Finite-head, polynomial-head, balanced-layer and low-type routes are unnecessary for the new permitted-control proof. Results about the unchanged control retain their separate value. |
-| 09 — Actual-source expressivity | The source-level polynomial compiler, alignment, detector and low-type hardness arguments are included in the numerical paper for the same controls as its positive theorem. Separate perturbed-control diversions are not needed. |
-| 10 — Controlled descents and modular counts | Exact descent and entry analysis remain essential. The explicit modular potential supplies every fixed head's residue table directly, so the older Cartier/spectral route is not a prerequisite. |
+| 05 — Foundations and guide | Needed canonical clauses and repaired norm proof are in the main numerical paper. The standard-control paper retains the recursor-free and internal-level-two source classes. Countervaluation bounds, supplied-source complete-count attainment and the concrete policy witness are in the source-expressivity paper. Numerical predecessor/count lemmas are repeated where needed for independent reading. |
+| 06 — Earlier termination ordering | The current structural exposition is the persistent-mark paper. The earlier checked composition obstruction and its status record remain attached to the older definition. |
+| 07 — Equality and one variable | Combined with entry 08 into the standard-control paper: normal forms, finite zeros, principal kernels, reserve estimates and the simultaneous sign/certificate algorithm. |
+| 08 — Multivariate fragments | Combined with entry 07: exact arithmetic hypotheses, finite-degree kernels, complete word arithmetic, graph assembly, common-head/balanced/single-core fragments and source consequences. |
+| 09 — Source expressivity | Functional-input weak/strict hardness, including the unchanged-standard-control case, is in the main numerical paper. Its other useful content is consolidated in the source-expressivity paper, with the source diagnostics from entry 05. |
+| 10 — Descent and modular counts | Rewritten as the modular paper, including local foundations and a full proof of the complete residue-profile observer. |
 
-## Repairs retained explicitly
+Repeated surveys, obsolete statements of what the selected-control proof still
+needs, and a motivational analogy with a separate binary counting problem are
+not promoted into new mathematical dependencies. They remain accessible in
+the historical editions. No earlier PDF, mathematical TeX source, repair
+certificate, checked counterexample or formalization file is deleted.
 
-The numerical paper keeps the original abstraction multiplier. It replaces
-the false strict scalar/free-subtree inequalities with a weak scalar lemma
-and a first-free-positive-subtree norm argument. It specifies literal parsing
-before abstraction and proves the generated-source theorem without an
-internal-type bound.
+## Corrections and scope clarifications
 
-The structural paper changes the already-marked strict case. Its ordinary-final
-cut is proved through a conservative auxiliary relation; that auxiliary
-relation is never substituted into the accessibility proof. The numerical
-simulation of a reused mark strictly lowers a finite label. The finite type
-window retains the original declarations of retyped heads. The native lower
-bound uses the confined relation's own ranks and the exact Veblen-collapse
-calibration needed for the upper bound.
+The repaired scalar partial inequality is weak, and the bounded-norm proof
+uses the original abstraction multiplier. Literal parsing is a parameter of
+the canonical object. The source companion preserves these repairs and
+corrects its ground-transport reserve argument for arbitrary admitted
+bracketing policies. Its appendix exhibits the positive coordinate 204
+under one policy and 184 under another.
 
-## Exact scope of completion
+The merged standard-control paper corrects a strict range bound to a
+nonstrict one, and states the finite graph-case split that establishes the
+word theorem's domain premises. Its closed existential theorem does not
+silently become quantifier elimination with free parameters. The full
+published arithmetic theorem is used only where its precise hypotheses
+have been verified.
 
-The numerical theorem uses the freedom to select a permitted control. A
-second construction agrees with the published example on any prescribed
-finite prefix. This does not identify the resulting assignments with those
-of the unchanged example, and it does not settle that unchanged-control
-all-ground question. Functional-input equality hardness and a general
-alternating arithmetic theory are also outside the conclusions.
+The modular paper distinguishes an adjacent-input surrogate from the actual
+norm orbit, includes the finite coefficient in its transfer notation, and
+makes finite-field coefficients explicit in its cycle claims. The complete
+residue profile contains every pole and both transitions. An unbounded
+residue-tuple period gives a full-state obstruction, not a scalar
+nonperiodicity theorem.
 
-The structural ordinal is descending height of a partial ordering. The
-first-order restriction uses an actual ranked signature and multiset status;
-the statement is not an uncurrying theorem for every native encoding or a
-claim about every linear extension.
+## Exact decision boundaries
 
-## Formalization update
+The main positive theorem chooses an admissible control and can preserve any
+prescribed finite prefix of the original example. The source companion
+constructs other admissible controls, also preserving any finite prefix and
+differing from the example by at most one, for which ground weak/strict
+comparison is Pi^0_1-complete. These statements concern different functions.
 
-These are completed hand-proof expositions. The existing register remains
-170 checked, 2 inherited and 17 pending out of 189 for the earlier programme.
-No new paper is assigned a checked status by this editorial addition.
+The unrestricted all-ground order problem for the unchanged displayed control
+remains separate. Universal identity, one shared ground input, polynomial
+heads and the stated certified fragments have their own positive results.
+Functional free inputs already give weak/strict undecidability for the
+unchanged standard control, as stated explicitly in the main paper's
+Corollary 9.4; that reduction does not use the selected controls' residue tables.
+Functional-input equality hardness and a general alternating polynomial-collapse
+arithmetic theory are not asserted. The modular first-block coefficient is
+not proved equivalent to complete canonical comparison.
 
-A faithful port must first define the new persistent mutual comparison and
-its original-spine application without silently replacing the old objects.
-Its cut, finite observer, numbered positive simulation and native rank
-calibration then need proofs against those exact definitions. On the numerical
-side, the repaired literal source map must be linked to the selected control,
-complete residue tables, entry calculus, finite count normalization and final
-canonical comparison theorem. Existing checked lemmas can be reused only
-after their hypotheses and literal source objects are matched.
+## Formalization and document verification
 
-The new bundles' source guides identify published dependencies and the
-verification boundary. Their build records and page inspections certify
-document preparation, not the mathematical claims themselves.
+The existing register remains 170 checked, 2 inherited and 17 pending out
+of 189 for the earlier programme. This reorganization changes none of those
+statuses. Selected literal interfaces were inspected, but no fresh Lean build
+or completed formal port is claimed. A checked supplier must be matched to
+the exact definitions, domain and control before reuse.
+
+The new papers are hand-proof expositions prepared with AI assistance.
+The new standard-control closed assembly, source-policy exposition and
+complete-profile additions are not certified merely by their editorial
+integration. Each bundle records its own standalone build, embedded fonts,
+page inspection and hashes. Those checks establish document preparation,
+not independent human mathematical verification or historical priority.
