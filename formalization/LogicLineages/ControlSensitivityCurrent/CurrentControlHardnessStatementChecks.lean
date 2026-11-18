@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.CurrentControlHardnessUpperProof
+public import LogicLineages.ControlSensitivityCurrent.ActualParityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.CurrentControlHardness.StatementChecks
+theorem fixed_control_hardness : CurrentControlHardnessTargets.Full :=
+  ⟨exactLowering, actualDAGBound, completeness, ActualParity.nonEventualPeriodicity⟩
+#audit_namespace LogicLineages.ControlSensitivityCurrent.CurrentControlHardness.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.CurrentControlHardness.StatementChecks

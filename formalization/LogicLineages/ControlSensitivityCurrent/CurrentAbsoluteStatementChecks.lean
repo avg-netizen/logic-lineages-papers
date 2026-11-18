@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.CurrentAbsoluteProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.CurrentAbsolute.StatementChecks
+theorem fixed_absolute : CurrentAbsoluteTargets.Full := full
+#audit_namespace LogicLineages.ControlSensitivityCurrent.CurrentAbsolute.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.CurrentAbsolute.StatementChecks

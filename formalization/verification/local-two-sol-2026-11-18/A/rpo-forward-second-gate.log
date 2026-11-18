@@ -1,0 +1,87 @@
+CACHE_HIT LogicLineages.PersistentMarking.Syntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineSyntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineTyping
+CACHE_HIT LogicLineages.PersistentMarking.Signature
+CACHE_HIT LogicLineages.PersistentMarking.Occurrences
+CACHE_HIT LogicLineages.PersistentMarking.NameBridge
+CACHE_HIT LogicLineages.PersistentMarking.FreeSubstitution
+CACHE_HIT LogicLineages.PersistentMarking.SpineMarking
+CACHE_HIT LogicLineages.PersistentMarking.Comparison
+CACHE_HIT LogicLineages.PersistentMarking.StructuralContext
+CACHE_HIT LogicLineages.PersistentMarking.StructuralStabilityTargets
+CACHE_HIT LogicLineages.PersistentMarking.StructuralCoverageTargets
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupport
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupportTargets
+CACHE_HIT LogicLineages.PersistentMarking.ConfinedPair
+CACHE_HIT LogicLineages.PersistentMarking.RankedRestrictionTargets
+CACHE_HIT LogicLineages.PersistentMarking.DecisionInventory
+CACHE_HIT LogicLineages.PersistentMarking.DecisionPorts
+CACHE_HIT LogicLineages.PersistentMarking.DecisionObservations
+CACHE_HIT LogicLineages.PersistentMarking.DecisionObservationTargets
+CACHE_HIT LogicLineages.PersistentMarking.DecisionOccurrenceEnumerationProof
+CACHE_HIT LogicLineages.PersistentMarking.SpineTypingTargets
+CACHE_HIT LogicLineages.PersistentMarking.SpineShiftProof
+CACHE_HIT LogicLineages.PersistentMarking.DecisionOccurrenceTypingProof
+CACHE_HIT LogicLineages.PersistentMarking.DecisionOccurrenceOrdinaryProof
+CACHE_HIT LogicLineages.PersistentMarking.DecisionOccurrenceValidityProof
+CACHE_HIT LogicLineages.PersistentMarking.DecisionOccurrenceProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeCovarianceTargets
+CACHE_HIT LogicLineages.PersistentMarking.SubstitutionTargets
+CACHE_HIT LogicLineages.PersistentMarking.SubstitutionProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeShiftProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeCompositionProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeCallProof
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupportFoundationProof
+CACHE_HIT LogicLineages.PersistentMarking.ObservationLambda
+CACHE_HIT LogicLineages.PersistentMarking.PortComparison
+CACHE_HIT LogicLineages.PersistentMarking.DecisionSourceUniverse
+CACHE_HIT LogicLineages.PersistentMarking.AuxiliaryWitnesses
+CACHE_HIT LogicLineages.PersistentMarking.Refinement
+CACHE_HIT LogicLineages.PersistentMarking.RefinementMeasure
+CACHE_HIT LogicLineages.PersistentMarking.ExtendedComparison
+CACHE_HIT LogicLineages.PersistentMarking.AuxiliaryTargets
+CACHE_HIT LogicLineages.PersistentMarking.RefinementSyntaxTargets
+CACHE_HIT LogicLineages.PersistentMarking.RefinementRenamingTargets
+CACHE_HIT LogicLineages.PersistentMarking.PortNormalization
+CACHE_HIT LogicLineages.PersistentMarking.PortNormalizationTargets
+CACHE_HIT LogicLineages.PersistentMarking.ObservationLambdaTargets
+CACHE_HIT LogicLineages.PersistentMarking.DecisionPortsTargets
+CACHE_HIT LogicLineages.PersistentMarking.DecisionPortsProof
+CACHE_HIT LogicLineages.PersistentMarking.ObservationPortUpdateProof
+CACHE_HIT LogicLineages.PersistentMarking.InsertionTargets
+CACHE_HIT LogicLineages.PersistentMarking.InsertionProof
+CACHE_HIT LogicLineages.PersistentMarking.ObservationOpeningProof
+CACHE_HIT LogicLineages.PersistentMarking.SpineSubstitutionProof
+CACHE_HIT LogicLineages.PersistentMarking.DecisionAssignmentProof
+CACHE_HIT LogicLineages.PersistentMarking.DecisionObservationProof
+CACHE_HIT LogicLineages.PersistentMarking.ObservationLambdaProof
+CACHE_HIT LogicLineages.PersistentMarking.PortHeadObservationProof
+CACHE_HIT LogicLineages.PersistentMarking.ComparisonTargets
+CACHE_HIT LogicLineages.PersistentMarking.BridgeTargets
+CACHE_HIT LogicLineages.PersistentMarking.OpeningFoundationProof
+CACHE_HIT LogicLineages.PersistentMarking.SpineMarkingTargets
+CACHE_HIT LogicLineages.PersistentMarking.SpineMarkingProof
+CACHE_HIT LogicLineages.PersistentMarking.ElementarySupportProof
+CACHE_HIT LogicLineages.PersistentMarking.RefinementMarkProof
+CACHE_HIT LogicLineages.PersistentMarking.RankedRestrictionSyntaxProof
+Compiling LogicLineages.PersistentMarking.RankedRestrictionSplitProof
+COMPILE_PASS LogicLineages.PersistentMarking.RankedRestrictionSplitProof
+Compiling LogicLineages.PersistentMarking.RankedRestrictionCoverageProof
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/RankedRestrictionCoverageProof.lean:6:8: error: (kernel) application type mismatch
+  x✝ ⟨ts✝, hRest⟩
+argument has type
+  (ts : Args) ×' RPOCoverage S xs ts
+but function has type
+  ∀ (y : (ts : Args) ×' RPOCoverage S removed✝ ts),
+    InvImage (fun x1 x2 => x1 < x2) (fun x => PSigma.casesOn x fun ts h => sizeOf ts) y ⟨Args.cons t✝ ts✝, ⋯⟩ →
+      RPOCoverage S ys y.1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/RankedRestrictionCoverageProof.lean:23:41: error: Application type mismatch: The argument
+  ih hc
+has type
+  RPO S q q✝¹ → RPOCoverage S xs qs✝
+but is expected to have type
+  RPOCoverage S xs qs✝
+in the application
+  RPOCoverage.cons ha hb (ih hc)
+COMPILE_FAILED LogicLineages.PersistentMarking.RankedRestrictionCoverageProof: 1
+BUILD_RECEIPT build-reports/1795038914866952761-13.json

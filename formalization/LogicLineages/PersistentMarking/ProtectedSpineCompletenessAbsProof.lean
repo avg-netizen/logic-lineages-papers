@@ -42,7 +42,9 @@ theorem abs {S : Signature} (F : Inputs S) (M : Code) (Γ : Context) (σ τ : Ty
     change openBody σ x t ∈ DecisionObservations.observations E.names E.ports (fillSlot Γ i σ)
       E.target (openBody σ x t).type at hO
     rw [hType] at hO
-    exact hEq.symm ▸ hO
+    change openBody σ x t ∈ DecisionObservations.observations E.names E.ports (openingContext Γ σ i) E.target τ
+    rw [hEq]
+    exact hO
   have hField := ((hv Θ hW (DecisionPortsProof.extensionRefl Θ)).2.1 (openBody σ x t) hObs).1
   have hVal : (unfoldedValue S F M Θ (openBody σ x s)).weak Θ (openBody σ x t) = true := by
     change (unfoldedValue S F M (openingContext Γ σ i) (openBody σ x s)).weak

@@ -1,0 +1,1548 @@
+{
+  "status": "source-matched",
+  "gate": "build-reports/1795039135337979246-17.json",
+  "gate_sha256": "124d1ee7c53ef7d9010e133cf7b9aa26803021d336f7bc762e2d6dd8d3d76d28",
+  "profile": {
+    "heap_cap_mib": 1536,
+    "rss_cap_mib": 512,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 768,
+    "core_only_profile": true,
+    "single_thread": true,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "compiler": {
+    "compiler": "/home/other/.elan/bin/lean",
+    "compiler_sha256": "840179e70803ef373c2ec53342d6a45ea7d022533e4145489fc1278b4f716385",
+    "selected_compiler": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "lean_path": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization:/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/04-pure-r1-calculator/lean/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    "pins": {
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/lake-manifest.json": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/lakefile.toml": "c05684bc8b1905ebc2f1ccaa33f57fd5cb769350165dbd9614c18be7a63227a5",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/lakefile.lean": null,
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/04-pure-r1-calculator/lean/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/04-pure-r1-calculator/lean/lake-manifest.json": "28ee3c8d1f319b5da6b53636261d9f8a3048b057f6e1739824feefbc38968672",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/04-pure-r1-calculator/lean/lakefile.toml": "a5ae5498a1a8d2920079ce4e652af4b39c41d87b49a2ec3f80e50f27f348a697",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/04-pure-r1-calculator/lean/lakefile.lean": null
+    }
+  },
+  "frozen_sources": {
+    "formalization/LogicLineages/PersistentMarking/HereditaryDomainCode.lean": "892f60d07e0f7cf4e42ff6a207c92c5e2a6d1c749f32acb608e30bf5b999889a",
+    "formalization/LogicLineages/PersistentMarking/HereditaryDomainSemantics.lean": "a65823d03b34b0ea06dc5d8eb6661ff764a8d63106a5f1c9cf05526817eed989",
+    "formalization/LogicLineages/PersistentMarking/HereditaryDomainTargets.lean": "e10fd423ac22138b7c7c7a052c31aea1eb97d2695f2a097e64092527e5fa0756",
+    "formalization/LogicLineages/PersistentMarking/FiniteDomainSchema.lean": "d6d49d1fdad40845222f185a9a83ace8b1aa3e113d8199faf4b3b6ec9d08c0eb",
+    "formalization/LogicLineages/PersistentMarking/FiniteDomainSchemaTargets.lean": "d4b5692c77dcc87de719fe2b960379dbee4688ed07f698a401002a209240f57d",
+    "formalization/LogicLineages/PersistentMarking/FiniteDomainFoundation.lean": "3c0e372f4649993f90d393746d42bddb15dce7695f4305dbba7bde214af24fef",
+    "formalization/LogicLineages/PersistentMarking/DecisionPorts.lean": "59388051207a3576af058cd0ffd780a231b84aa3c4e18c57e8165cc6e4f092a2",
+    "formalization/LogicLineages/PersistentMarking/DecisionObservations.lean": "816d9ab5fb99246c7343c5973086984314d0e62a55ebfe5c7a16ce42dd940f98",
+    "16-persistent-marking-termination-ordering/sections/decision.tex": "2dcac539d8d6466fa8baa87f88cc3841f17c64e4481bd860bb6f67690eada275",
+    "formalization/LogicLineages/PersistentMarking/HereditaryOrderTargets.lean": "6ebaf742bf64be265731c272983f399b3552e5250607a9596c8b6e31dfcae52c",
+    "formalization/LogicLineages/PersistentMarking/HereditaryLatticeTargets.lean": "22620c9668da728788b395c3d1d033b9813ac12c2a84182d64a8aa1a71e5a6e1",
+    "formalization/LogicLineages/PersistentMarking/MarkedExtras.lean": "ad9bc79ae86dd0cdbe26695a3f9b60398b243101d9f84a47066058bf49b4d9eb",
+    "formalization/LogicLineages/PersistentMarking/MarkedExtrasTargets.lean": "65113494b6d8802f7b06188838b55587a730f4b8cdc2f6a48385585adc1e6c0a",
+    "formalization/LogicLineages/PersistentMarking/MarkedBaseTuples.lean": "f0806aa4fb84f311bcae8d45a64c987b903abe77cf5c20a8176337c129694e8d",
+    "formalization/LogicLineages/PersistentMarking/MarkedBaseTupleTargets.lean": "c80b2641c34c01b1b95eb7eacbfece4e6e9c2916eaa5d055cdffe94bfe6d21e4",
+    "formalization/LogicLineages/PersistentMarking/MarkedFamilyParameters.lean": "8d892d1fd35d113a3ee9ca2f996d62fdb66cf5e74f344298a737ae29ec94b139",
+    "formalization/LogicLineages/PersistentMarking/MarkedFamilyParameterTargets.lean": "0b324b9118210ec76abf2fdc2ff1fb8406653359a80d0d67771858232041aee3",
+    "formalization/LogicLineages/PersistentMarking/MarkedFamilyCoding.lean": "44a7c7b0178764d74575248fdcef4f242d25fa5e96ebbb22e71dae9ddb76ff1c",
+    "formalization/LogicLineages/PersistentMarking/MarkedFamilyCodingTargets.lean": "ef15bd218351be0aa35e838225aa7641e114dc970853b354cb918093b95279c2",
+    "formalization/LogicLineages/PersistentMarking/MarkedFamilyCoherence.lean": "1a4375b0cf5465365f4a8fecbda2e911850abb7c5a4737c73968ed53a0d5dd1a",
+    "formalization/LogicLineages/PersistentMarking/MarkedFamilyCoherenceTargets.lean": "179f03b3c0e5e7ff9fa1dc000bc4d89eeb2606ee96e653170b7cf155eb07a6ad",
+    "formalization/LogicLineages/PersistentMarking/MarkedFamilyLattice.lean": "120308259b083b6e27985bf1aef9da0e10556f349cca1d669c2993d0d9265205",
+    "formalization/LogicLineages/PersistentMarking/MarkedFamilyLatticeTargets.lean": "bf281a607dd50194755edd3e0b0f44813ad7ad8bf6ddad4e6a11a758027e241f",
+    "formalization/LogicLineages/PersistentMarking/StructuralActions.lean": "8d977b504cd8c45c6931d91370fe504fda250a8d2f60dd2902dc166916d621a1",
+    "formalization/LogicLineages/PersistentMarking/StructuralActionTargets.lean": "2107179f142519bf015f3f247e8413d6359767ef4192597bea4a2e7361f1c621",
+    "formalization/LogicLineages/PersistentMarking/ProtectedSpineEnvironment.lean": "caca81eb05d97affa235c9d64bf38ca711d63c0ef25f4212a2afe5672166ec57",
+    "formalization/LogicLineages/PersistentMarking/MarkedConstructorTests.lean": "132ec9f543265ddf1b476d76b480a9eddde57f4f1bc3a39a1413c6db4bf5ba22",
+    "formalization/LogicLineages/PersistentMarking/MarkedConstructorValue.lean": "f13c5cfeb59c03774ceee76a994d0295c62dcf4e03126d809bedefca727bd606",
+    "formalization/LogicLineages/PersistentMarking/MarkedConstructorTargets.lean": "2cc360d61a4ee2d2b1c417801fc2c433b7261e34987470f827aa451fc76d4353",
+    "formalization/LogicLineages/PersistentMarking/Signature.lean": "2b12e1dfe0accf226fd7d7636f239247a65ce9a67f11fd653ddad800188bcd04",
+    "formalization/LogicLineages/PersistentMarking/RankedRestrictionTargets.lean": "4722be4ab09f41b7fefafee53db351ec344245f7f8c462e1325d8e77d0b160f6",
+    "formalization/LogicLineages/PersistentMarking/SpineSyntax.lean": "38b4597e658c431a4fd766599782589943f5d1cc5e63dd438842409cee4086de",
+    "formalization/LogicLineages/PersistentMarking/SpineTyping.lean": "b47f70848c23b10081a3f4ba9920006d91f0ce6b6638a44dacf4e6e897e371f2",
+    "formalization/LogicLineages/PersistentMarking/Comparison.lean": "e04508ddad8ba862a98c40bfef3019ad5621ba08c2878f5b9bd11ea9bd3375a6",
+    "formalization/LogicLineages/PersistentMarking/Occurrences.lean": "d148c40a5d53b310654255f1e8e51f1208f9cd37ef8c323f8125b814a5aedafb",
+    "formalization/LogicLineages/PersistentMarking/ConfinedPair.lean": "09b5b2ace504c3cc234fe13c7c1561804c09dca22f7b8874a4c80f7c19c21e9e",
+    "formalization/LogicLineages/PersistentMarking/TypeSupport.lean": "7798b490ceb307eae9e4b34597cc22271edd4e5f86bb3a08ad15c108bae6155e",
+    "16-persistent-marking-termination-ordering/sections/ordering.tex": "cc31c9a5b3b677ed7c3e5d41bb525b06e4424f2d5006ee5880249efc18e58253"
+  },
+  "exact_aliases": {
+    "LogicLineages.PersistentMarking.RankedRestrictionChecks.exact_ExactRankedRestriction": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "recursive_modules": {
+    "LogicLineages.PersistentMarking.Syntax": {
+      "source_sha256": "e3bbad01fc8790c0c0375c3a78667d27a0ba79e9b005239888c0c1cb18a98d70",
+      "input_key": "79c1d79b05bb6fdbe9d7800525cd12aee054d75f382e1f6b1ad39aa6755e18d2",
+      "local_dependencies": [],
+      "external_objects": {
+        "Init": {
+          "/home/other/.elan/toolchains/leanprover--lean4---v4.32.0-rc1/lib/lean/Init.olean": "2184f658899f2aea99a4fecaa6f3192e7b631f2da1b9fe25a34780fd4972c633",
+          "/home/other/.elan/toolchains/leanprover--lean4---v4.32.0-rc1/lib/lean/Init.olean.private": "2fd9a702893fdba2d5234fca23978bdee40c9a3016020279f02cc94166c70c25",
+          "/home/other/.elan/toolchains/leanprover--lean4---v4.32.0-rc1/lib/lean/Init.olean.server": "92d5525ee307011fab6c0e55fa2c6d67555694dd401d1da99c2542c942f6242e",
+          "/home/other/.elan/toolchains/leanprover--lean4---v4.32.0-rc1/lib/lean/Init.ir": "fc94c27ef6b901c94f633b8cd80a72467cff0b37879f873700683404eeb266a6"
+        }
+      },
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Syntax.olean": "86f08f12c0aff96293de8310909fd0e13f7912793bc5d4fe23b4ad5428c8cf23",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Syntax.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Syntax.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Syntax.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-Syntax.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 458484
+    },
+    "LogicLineages.PersistentMarking.SpineSyntax": {
+      "source_sha256": "38b4597e658c431a4fd766599782589943f5d1cc5e63dd438842409cee4086de",
+      "input_key": "7fcb63bd80cd02d75ef02749a5343776f6271a2a6acac307bb1b9c9b4366744e",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/Syntax.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineSyntax.olean": "7ac485a7b4af338eb1cc46b6f0483b0996d92fb6ec17fbec5ec04711767f4df1",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineSyntax.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineSyntax.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineSyntax.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-SpineSyntax.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 464288
+    },
+    "LogicLineages.PersistentMarking.SpineTyping": {
+      "source_sha256": "b47f70848c23b10081a3f4ba9920006d91f0ce6b6638a44dacf4e6e897e371f2",
+      "input_key": "b73674c7e5b1dad8d9cf8d5c35b5aa75fca115cdbb80752ca458d20d8d17b09c",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SpineSyntax.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineTyping.olean": "9b115a9c4feb88b1d9a0ef4994ed4bafda98968be678c7c3666d932bde753104",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineTyping.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineTyping.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineTyping.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-SpineTyping.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 466368
+    },
+    "LogicLineages.PersistentMarking.Signature": {
+      "source_sha256": "2b12e1dfe0accf226fd7d7636f239247a65ce9a67f11fd653ddad800188bcd04",
+      "input_key": "16238dfa86436665cccdd64bebbfc05611d89b4a8b2effd56136cb3ea466e341",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SpineTyping.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Signature.olean": "fc16010576c7f93a337acf352b6f75ff7193c87b22458e829abaee2b783efcd8",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Signature.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Signature.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Signature.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-Signature.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 460236
+    },
+    "LogicLineages.PersistentMarking.Occurrences": {
+      "source_sha256": "d148c40a5d53b310654255f1e8e51f1208f9cd37ef8c323f8125b814a5aedafb",
+      "input_key": "9a83a8cf114571ce673a14a5e574006433e57b47b03694a35db04e80e0d77375",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SpineSyntax.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Occurrences.olean": "66227392a01333b4e60f810bf14f82d56b4d13611a1c3f88667d3d7982d64368",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Occurrences.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Occurrences.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Occurrences.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-Occurrences.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 464864
+    },
+    "LogicLineages.PersistentMarking.NameBridge": {
+      "source_sha256": "d20d8098dee13aa6da728d1d8232176d01db414081f8a494781e7ad01378d5b0",
+      "input_key": "6a60dd1ad4c19a91cb9c73f42507085e63c8f33ccba9cf49148035bfd8ee2361",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/Signature.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NameBridge.olean": "eaa5399b39067cb210a29e71c97f6c1f640d0e4df9662ecde58c577877372159",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NameBridge.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NameBridge.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NameBridge.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-NameBridge.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 472488
+    },
+    "LogicLineages.PersistentMarking.FreeSubstitution": {
+      "source_sha256": "1c94f21bfd2bd65f75bda6e6d8d760e6c7e11ec68be450b95067889ec53ba27d",
+      "input_key": "a27905590efd6da7ebb251540d7a9df43a5dd44257b0be43a2b20610c3bd4022",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SpineTyping.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeSubstitution.olean": "2bf5cb114af66d6e4a79cb14d8155101fd8656cc318971a60013980bfa6af122",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeSubstitution.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeSubstitution.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeSubstitution.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-FreeSubstitution.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 446060
+    },
+    "LogicLineages.PersistentMarking.SpineMarking": {
+      "source_sha256": "cbbc4789130000486861730a6cb011ff684b8809c88e7647923f40e9c5d24b27",
+      "input_key": "d99ac0cc4039c4a3717339eca7bacb91f5ca4e2a4d303c4d31b151d12f3fada7",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/FreeSubstitution.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineMarking.olean": "db08842f60e71f0ca6ce5024ad58770482bfe2e824c92571af9e142c8e1c1a12",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineMarking.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineMarking.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineMarking.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-SpineMarking.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 452672
+    },
+    "LogicLineages.PersistentMarking.Comparison": {
+      "source_sha256": "e04508ddad8ba862a98c40bfef3019ad5621ba08c2878f5b9bd11ea9bd3375a6",
+      "input_key": "cafeca3861a2790057ef12f7df3d5df14c757da5b7ed0870f8e9e21200505bd9",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/Signature.olean",
+        "LogicLineages/PersistentMarking/Occurrences.olean",
+        "LogicLineages/PersistentMarking/NameBridge.olean",
+        "LogicLineages/PersistentMarking/SpineMarking.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Comparison.olean": "b81e272f7ae44e0a591032ed400a7b9235460d58e105ace9ec3222fcce3cf207",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Comparison.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Comparison.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Comparison.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-Comparison.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 472756
+    },
+    "LogicLineages.PersistentMarking.StructuralContext": {
+      "source_sha256": "4e5d5ac357e9b22556b8f43905208160283bac9e80f0faab630e22fd25d3fd24",
+      "input_key": "a5d38302cef345925cedf3986f0f44b4c1e62d6b9f06a6dc891f0adf5672ceb7",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NameBridge.olean",
+        "LogicLineages/PersistentMarking/FreeSubstitution.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralContext.olean": "64a25abb2710c38599fa01c139472f9196f113792f0ead42cd54795f33b8229e",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralContext.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralContext.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralContext.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-StructuralContext.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 461784
+    },
+    "LogicLineages.PersistentMarking.StructuralStabilityTargets": {
+      "source_sha256": "d477922839cfb8066cfb416fdf4c1f80ea9fd5f9e377d7d2664d9987961da39b",
+      "input_key": "098ac308f48bc391e8b881227f04ac11764b3883bd523a77b40255e2fb18b611",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/StructuralContext.olean",
+        "LogicLineages/PersistentMarking/Comparison.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralStabilityTargets.olean": "4de07e85369b40bb9a11276f351894626241f9c65e4d325a7ab2637f1f3240d0",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralStabilityTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralStabilityTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralStabilityTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-StructuralStabilityTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 453280
+    },
+    "LogicLineages.PersistentMarking.StructuralCoverageTargets": {
+      "source_sha256": "9ecd4136249c2e2cabf2b81c7662cadd6f7ab9b86b6eea676301ea043898b4ab",
+      "input_key": "d98a129e598492fe1748e6cfa474f18d2d2864f17d0e5f6c9d78ae611bc9e9dc",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/StructuralStabilityTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralCoverageTargets.olean": "674aab81f3b350bd781e8fa2b14f466373d1766e322bdab6f86345591d5e5db9",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralCoverageTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralCoverageTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralCoverageTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-StructuralCoverageTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 465072
+    },
+    "LogicLineages.PersistentMarking.TypeSupport": {
+      "source_sha256": "7798b490ceb307eae9e4b34597cc22271edd4e5f86bb3a08ad15c108bae6155e",
+      "input_key": "15c307b5b6b71fc6cf83c9b8ae00c307ebc7fde955450fba0bfe471e7cb00f5f",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/StructuralCoverageTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/TypeSupport.olean": "3095b683fe73eed572cfeeb733b32abe4c5bec9328d7a70254d68e8077ae8d75",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/TypeSupport.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/TypeSupport.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/TypeSupport.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-TypeSupport.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 456992
+    },
+    "LogicLineages.PersistentMarking.TypeSupportTargets": {
+      "source_sha256": "19a03fae35c56eb9761502f93687c4c229d5e88fb51d94ed50903eb59c580156",
+      "input_key": "ab5886642d6c757468a90c77de6123899c6be1860e098f081323cc516be507b4",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/TypeSupport.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/TypeSupportTargets.olean": "c21edfe212c8d3ec9a760c04a4836c401a38f674b7c18343084977896f5aeb07",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/TypeSupportTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/TypeSupportTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/TypeSupportTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795031623099406671-1979389.json",
+      "log": "build-reports/1795031623099406671-1979389-LogicLineages-PersistentMarking-TypeSupportTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 456716
+    },
+    "LogicLineages.PersistentMarking.ConfinedPair": {
+      "source_sha256": "09b5b2ace504c3cc234fe13c7c1561804c09dca22f7b8874a4c80f7c19c21e9e",
+      "input_key": "2c6eed5e766a08912b8e0aa4077e4eebe203d20773f766e1a1789e081368e624",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/TypeSupportTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ConfinedPair.olean": "d9cedbf7ce293bdd7f5ccd089822c056e0cc5f3303491d4849ce66e9b448b6dd",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ConfinedPair.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ConfinedPair.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ConfinedPair.ir": null
+      },
+      "native_receipt": "build-reports/1795031696937249350-1980114.json",
+      "log": "build-reports/1795031696937249350-1980114-LogicLineages-PersistentMarking-ConfinedPair.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 448952
+    },
+    "LogicLineages.PersistentMarking.RankedRestrictionTargets": {
+      "source_sha256": "4722be4ab09f41b7fefafee53db351ec344245f7f8c462e1325d8e77d0b160f6",
+      "input_key": "5830c8a214213dacdaea40f7a4bd7c553b2b034005d4ee61a85028b6442d3a50",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/Comparison.olean",
+        "LogicLineages/PersistentMarking/ConfinedPair.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionTargets.olean": "2184f763f3fbf8732f193baafb071ff9fa73a3e31274cda140336b7fb3a5c62a",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795038714428556305-38.json",
+      "log": "build-reports/1795038714428556305-38-LogicLineages-PersistentMarking-RankedRestrictionTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 469188
+    },
+    "LogicLineages.PersistentMarking.DecisionInventory": {
+      "source_sha256": "37a00a35c38d09836d0ce0369e3d837835b87ac49582cab252da7103c6997cdd",
+      "input_key": "dcc39b7c7d236652f00026e9694f06af0fcfe8f1129357bccde52d853b6f7afe",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/TypeSupport.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionInventory.olean": "70ce49da13b509c76535d40d4ba487759c4fc95fa7f556c357a33bb6ec460e8a",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionInventory.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionInventory.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionInventory.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-DecisionInventory.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 463548
+    },
+    "LogicLineages.PersistentMarking.DecisionPorts": {
+      "source_sha256": "59388051207a3576af058cd0ffd780a231b84aa3c4e18c57e8165cc6e4f092a2",
+      "input_key": "cece52a82a3cac1697e1e07237ded436bbe800f25366703e060ea9e5ad7e5544",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionInventory.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionPorts.olean": "3b65e5147863a57007711f21d43941e52c0b80243a31063e41ab6605bd758156",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionPorts.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionPorts.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionPorts.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-DecisionPorts.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 463520
+    },
+    "LogicLineages.PersistentMarking.DecisionObservations": {
+      "source_sha256": "816d9ab5fb99246c7343c5973086984314d0e62a55ebfe5c7a16ce42dd940f98",
+      "input_key": "a47928fa9bc2c4beccf91679a5f17ccd19a31ab0bbcc700570fafa223ff87783",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionPorts.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionObservations.olean": "b74244cd5a11353618aad9ca146fcb744310b2280d800ebe3e02cb001759d5b4",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionObservations.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionObservations.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionObservations.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-DecisionObservations.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 461692
+    },
+    "LogicLineages.PersistentMarking.DecisionObservationTargets": {
+      "source_sha256": "b3e02512f34da4e1842574f54a818c75fd14f7cb6634f724c845701d57888422",
+      "input_key": "43485378d16cc9873d8988d7749c056f40f5846f8aa14d4b2eff95dad2fd00fb",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionObservations.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionObservationTargets.olean": "a9786cb28953730da237da30c7d27453469917ee54fab9f0674053e96ccf31c9",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionObservationTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionObservationTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionObservationTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795031976227654523-1983864.json",
+      "log": "build-reports/1795031976227654523-1983864-LogicLineages-PersistentMarking-DecisionObservationTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 464704
+    },
+    "LogicLineages.PersistentMarking.DecisionOccurrenceEnumerationProof": {
+      "source_sha256": "0282f0e696bfbcb8f287785d56b15636a8bdd490867e2379661bfabdae8ecceb",
+      "input_key": "2db00fe4048e0cc7dba883a2b9489c96f9be489c309d2676da85909201ace780",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionObservationTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceEnumerationProof.olean": "2c9c41ec7ce2e5413124e44a5999694fb8cae623a45984c43d1f3e0821a7a2a5",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceEnumerationProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceEnumerationProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceEnumerationProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031983705864905-1983960.json",
+      "log": "build-reports/1795031983705864905-1983960-LogicLineages-PersistentMarking-DecisionOccurrenceEnumerationProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 478388
+    },
+    "LogicLineages.PersistentMarking.SpineTypingTargets": {
+      "source_sha256": "7677b9371586375977858fedd04c9d7ad109e5c25c9d6ee8d59369255bac2571",
+      "input_key": "1d10639959240cdba814c5fb49c15ce53a16f48eb3856eae864ce8e1fe31c67b",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SpineTyping.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineTypingTargets.olean": "3639dc5c270dba9f782175b64bcbf155002f8ae8dc89bcbf8c135de0f8c034b4",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineTypingTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineTypingTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineTypingTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795031144372484544-1973658.json",
+      "log": "build-reports/1795031144372484544-1973658-LogicLineages-PersistentMarking-SpineTypingTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 451624
+    },
+    "LogicLineages.PersistentMarking.SpineShiftProof": {
+      "source_sha256": "b42ad46e065ae7ebde1211b3d90a0fc319fc4016b8c6e74f95678ea6374d05af",
+      "input_key": "56b398f86d248238f92930cccd4f613cfe13340aaa49d5f38487dc64e7458e92",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SpineTypingTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineShiftProof.olean": "cff4ebb6f0f317988986aec605e8e3f55ee022db843f231cd55e35542e3a2b09",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineShiftProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineShiftProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineShiftProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031144372484544-1973658.json",
+      "log": "build-reports/1795031144372484544-1973658-LogicLineages-PersistentMarking-SpineShiftProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 485756
+    },
+    "LogicLineages.PersistentMarking.DecisionOccurrenceTypingProof": {
+      "source_sha256": "0bd0ccb1c564f7c585148b9bac6f97d374ac5b113d89a59dd62d4a18e3cc16c1",
+      "input_key": "47d984d73e0a69c2df9784a6c9641d8cdf1435fa736153a2bc30a7d91fc34dfb",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionObservationTargets.olean",
+        "LogicLineages/PersistentMarking/SpineShiftProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceTypingProof.olean": "fcc85195611520f7d5a43c44d001addf31636ea011145b6302643af15490d127",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceTypingProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceTypingProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceTypingProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031983705864905-1983960.json",
+      "log": "build-reports/1795031983705864905-1983960-LogicLineages-PersistentMarking-DecisionOccurrenceTypingProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 468252
+    },
+    "LogicLineages.PersistentMarking.DecisionOccurrenceOrdinaryProof": {
+      "source_sha256": "2bd7151972e6d219fb88de36a09e1e8fc7ed9f686a8b286071d82488fe22490b",
+      "input_key": "942c1914e641011881c4a38e916d07aadff4e4dc5413586f01cc407b994846e1",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionObservationTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceOrdinaryProof.olean": "8e85a1d2261824db9977b52266cf289224ab40b27cee83cf8e126656263ec553",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceOrdinaryProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceOrdinaryProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceOrdinaryProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031983705864905-1983960.json",
+      "log": "build-reports/1795031983705864905-1983960-LogicLineages-PersistentMarking-DecisionOccurrenceOrdinaryProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 483584
+    },
+    "LogicLineages.PersistentMarking.DecisionOccurrenceValidityProof": {
+      "source_sha256": "ed8b903d1cf121faa5657bcb9b330f8a8272fd92ad13a5366e10a16f4175ffc6",
+      "input_key": "9f4115d459629580979272b257a3d10937acc8368b076dca5a0b19433353c86e",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionObservationTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceValidityProof.olean": "7c3a3cd238a471086fa17cc56708d45b7b1f3125e35f7b31b3888016455c19ce",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceValidityProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceValidityProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceValidityProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031983705864905-1983960.json",
+      "log": "build-reports/1795031983705864905-1983960-LogicLineages-PersistentMarking-DecisionOccurrenceValidityProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 495484
+    },
+    "LogicLineages.PersistentMarking.DecisionOccurrenceProof": {
+      "source_sha256": "24fb7fbd2608dcdff31aa40bc5338b299e3113d7bab5c64bee6dc6b64f7edb1f",
+      "input_key": "c439d8fec9bc144970f8f8bb9d3f056f82c05fd335c8926148c17d56a6efad38",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionOccurrenceEnumerationProof.olean",
+        "LogicLineages/PersistentMarking/DecisionOccurrenceTypingProof.olean",
+        "LogicLineages/PersistentMarking/DecisionOccurrenceOrdinaryProof.olean",
+        "LogicLineages/PersistentMarking/DecisionOccurrenceValidityProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceProof.olean": "7ae30e994b1fbd67dab94de25de50fd5f5a69ceadad4d787a877a44c7a337e59",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionOccurrenceProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031983705864905-1983960.json",
+      "log": "build-reports/1795031983705864905-1983960-LogicLineages-PersistentMarking-DecisionOccurrenceProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 462520
+    },
+    "LogicLineages.PersistentMarking.FreeCovarianceTargets": {
+      "source_sha256": "9c0380c1aa8045fc35a6a9aaf65df14e5d388be60540577e4c94cc8d1f6773d4",
+      "input_key": "e2ac50bb63217db5c21656a8b5c3f6f9544b0d457b2cbdbcc3315a286042c747",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/FreeSubstitution.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeCovarianceTargets.olean": "b40e99e16c1dc40b5a3e241e9a7741ed9cb2b05fed87b05acec1d492fe28bebc",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeCovarianceTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeCovarianceTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeCovarianceTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795031165034325823-1974188.json",
+      "log": "build-reports/1795031165034325823-1974188-LogicLineages-PersistentMarking-FreeCovarianceTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 452872
+    },
+    "LogicLineages.PersistentMarking.SubstitutionTargets": {
+      "source_sha256": "a4b9609bbef9539bb837df7f61e9989ebaa1e05687924e5dae3f54b376107243",
+      "input_key": "06087e28f05036a84eeb93bace7723005f01722ce1507327c337207c923fe414",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SpineSyntax.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionTargets.olean": "9137bd6371206545235f3a234e2d1e9ac63e906e838651e3de65fc2cb240f1ed",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795031144372484544-1973658.json",
+      "log": "build-reports/1795031144372484544-1973658-LogicLineages-PersistentMarking-SubstitutionTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 451388
+    },
+    "LogicLineages.PersistentMarking.SubstitutionProof": {
+      "source_sha256": "652fef1163ded917ac3f887aa16ebaa8fc56971dedf0f40f14a98a19918cc812",
+      "input_key": "cedd901e1ee7d1e0ee50b49cd875f79289f5d9b5c93c3f592e9d20ce5ddf627a",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SubstitutionTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionProof.olean": "9efbf1e86b61732bcf55c3ececa478e477a92e3d84dc06ecb260e4aba19f84be",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031144372484544-1973658.json",
+      "log": "build-reports/1795031144372484544-1973658-LogicLineages-PersistentMarking-SubstitutionProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 468792
+    },
+    "LogicLineages.PersistentMarking.FreeShiftProof": {
+      "source_sha256": "7a14d25f07afb48b71f9d779c0ee44baa8637159417ad56a7547d7234b0c8f36",
+      "input_key": "925dd52c22f7b49c32d26df8c2e2a1e74c2fc6abc12e48f842fcafba3e1719c5",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/FreeCovarianceTargets.olean",
+        "LogicLineages/PersistentMarking/SubstitutionProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeShiftProof.olean": "093fe7b91e4797d9929d6f07bc791f9241bca4fbbebeb817ecd79bbe38831782",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeShiftProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeShiftProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeShiftProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031175592426700-1974336.json",
+      "log": "build-reports/1795031175592426700-1974336-LogicLineages-PersistentMarking-FreeShiftProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 481968
+    },
+    "LogicLineages.PersistentMarking.FreeCompositionProof": {
+      "source_sha256": "b4faf0888e360b69acbe215c6e07cf8af34bcfe84afbe3b80b4bafa3af2b669b",
+      "input_key": "39ea0786bf3f6a28f48337aed4f10d160bedfa8a143c7073cfbee858651bbcc2",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/FreeShiftProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeCompositionProof.olean": "b8b941252e091814146e3027478edaf5dc788307d3eedcc4e679fcf05e33cc44",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeCompositionProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeCompositionProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeCompositionProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031175592426700-1974336.json",
+      "log": "build-reports/1795031175592426700-1974336-LogicLineages-PersistentMarking-FreeCompositionProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 468996
+    },
+    "LogicLineages.PersistentMarking.FreeCallProof": {
+      "source_sha256": "2c309ed6c1bf1e4f19be1f573d8a222f2edbd22b31e6e5b09fa6f23f8b3e4acb",
+      "input_key": "3b78b86129d13f1ac626d27e8dca22afc2ee09ffbe1f7893a98f09848bc71375",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/FreeCompositionProof.olean",
+        "LogicLineages/PersistentMarking/SpineShiftProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeCallProof.olean": "49d41f2b9324910264b49e58002f855024e0340e48d23c420a1887da810a3297",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeCallProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeCallProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeCallProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031189354384581-1974558.json",
+      "log": "build-reports/1795031189354384581-1974558-LogicLineages-PersistentMarking-FreeCallProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 467932
+    },
+    "LogicLineages.PersistentMarking.TypeSupportFoundationProof": {
+      "source_sha256": "502c0b6cd131b08e0df1a094d02ad57e648bddec60b96425d448192f693b48d0",
+      "input_key": "5ffadbf8d4675ff91a588844a780cb04261d93d156b3eab1452b8c152bcc411c",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/TypeSupportTargets.olean",
+        "LogicLineages/PersistentMarking/FreeCallProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/TypeSupportFoundationProof.olean": "eb5c09435e48747a61e83caa9948178621363a68633c8d578036e065e89c1983",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/TypeSupportFoundationProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/TypeSupportFoundationProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/TypeSupportFoundationProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031795547505928-33.json",
+      "log": "build-reports/1795031795547505928-33-LogicLineages-PersistentMarking-TypeSupportFoundationProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 483000
+    },
+    "LogicLineages.PersistentMarking.ObservationLambda": {
+      "source_sha256": "1d814a06dbc208c010cb91b18a61fe2406c83e1c9109bce0565e4ed9d39a54dd",
+      "input_key": "d82e3730a2d18a120f39076ad78153b1be1e112720036a973e63d83175aae562",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionObservations.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationLambda.olean": "4a6c169092d147f0a122fd578b47571fb053bdb800ffb36b86619764ecb93e41",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationLambda.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationLambda.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationLambda.ir": null
+      },
+      "native_receipt": "build-reports/1795031976227654523-1983864.json",
+      "log": "build-reports/1795031976227654523-1983864-LogicLineages-PersistentMarking-ObservationLambda.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 461240
+    },
+    "LogicLineages.PersistentMarking.PortComparison": {
+      "source_sha256": "56b210db3912a2292b1aac46f43e54fae0fda51ff7b085d5e883c14cd78109f8",
+      "input_key": "bd62fe6bde3868b01be9a10b2539a75d05be4b13521d510d4004330e0fff6c0f",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/ObservationLambda.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/PortComparison.olean": "0104a640779fbd592dfe36d5eb24b2fcf44a7b639afe3bcffffbf7d51f382f3c",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/PortComparison.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/PortComparison.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/PortComparison.ir": null
+      },
+      "native_receipt": "build-reports/1795031976227654523-1983864.json",
+      "log": "build-reports/1795031976227654523-1983864-LogicLineages-PersistentMarking-PortComparison.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 484052
+    },
+    "LogicLineages.PersistentMarking.DecisionSourceUniverse": {
+      "source_sha256": "7b26274cddbb0ee765e7a490a0d30b44d45a3385ff31bbb1d0a8ac4ac3d8065e",
+      "input_key": "46f846814bf9fa0ea7daf046f4590e34620c2561f9a4d81dc32810e6fda853a0",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionObservations.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionSourceUniverse.olean": "4e55b341d7d97e4551a727e4568f56e1dbb7e86ab0301625a9be3a6f5c24b688",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionSourceUniverse.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionSourceUniverse.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionSourceUniverse.ir": null
+      },
+      "native_receipt": "build-reports/1795030988645065179-1972881.json",
+      "log": "build-reports/1795030988645065179-1972881-LogicLineages-PersistentMarking-DecisionSourceUniverse.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 453580
+    },
+    "LogicLineages.PersistentMarking.AuxiliaryWitnesses": {
+      "source_sha256": "529409fca20f05e7117f861dcf25f86d6caf7a50506d46b60f4901bc5114ba3b",
+      "input_key": "039378abb7169bdc730334560ef936b17e63d1ecdbcc96b79d3966adbd13bed7",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/Comparison.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/AuxiliaryWitnesses.olean": "de2eaaacf2969f22d2cd72c39867f6a1146674af8459bacebbf2c6bdf5b003ec",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/AuxiliaryWitnesses.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/AuxiliaryWitnesses.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/AuxiliaryWitnesses.ir": null
+      },
+      "native_receipt": "build-reports/1795031165034325823-1974188.json",
+      "log": "build-reports/1795031165034325823-1974188-LogicLineages-PersistentMarking-AuxiliaryWitnesses.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 453544
+    },
+    "LogicLineages.PersistentMarking.Refinement": {
+      "source_sha256": "d0001f6d4fc6e5273348ac32bc3ae9f82dc94c4af84b42b28a9bbb8ca40c9c6b",
+      "input_key": "93c89068df6211903260811b9014e1f9f245d5c87683f692f57ddb332ad8f964",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/AuxiliaryWitnesses.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Refinement.olean": "1d3944c8662095151894ea87d9bd57e9f308f21c50c0971fbbf063fb2476a17f",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Refinement.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Refinement.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Refinement.ir": null
+      },
+      "native_receipt": "build-reports/1795031165034325823-1974188.json",
+      "log": "build-reports/1795031165034325823-1974188-LogicLineages-PersistentMarking-Refinement.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 478212
+    },
+    "LogicLineages.PersistentMarking.RefinementMeasure": {
+      "source_sha256": "9ce5fa60e3d962546e17de3cc8a0b0b76f4345e0cc9888b268639e1a149d75bc",
+      "input_key": "af8a00b23d19d5eea9dcdb2533abd54332c34c80bd8b4da06cea30b58276b4d5",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/Refinement.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RefinementMeasure.olean": "7f8fbe214e77f25d8b7e73058b1facd66468bb9cb68fe0aa07303b8bb8619409",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RefinementMeasure.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RefinementMeasure.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RefinementMeasure.ir": null
+      },
+      "native_receipt": "build-reports/1795031165034325823-1974188.json",
+      "log": "build-reports/1795031165034325823-1974188-LogicLineages-PersistentMarking-RefinementMeasure.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 459884
+    },
+    "LogicLineages.PersistentMarking.ExtendedComparison": {
+      "source_sha256": "b56cc544eb4525b6226dde462c263c6afb140d81f557186e8cf43c624491dd95",
+      "input_key": "a085c0cbfaea8495e408c3d1ba457f15da5c557d9acfe505034d00ecac194dac",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/AuxiliaryWitnesses.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ExtendedComparison.olean": "4d80b1cc44b5f6c422c425243139d23c73475da0a0e1aa99b6364326c5b40680",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ExtendedComparison.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ExtendedComparison.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ExtendedComparison.ir": null
+      },
+      "native_receipt": "build-reports/1795031165034325823-1974188.json",
+      "log": "build-reports/1795031165034325823-1974188-LogicLineages-PersistentMarking-ExtendedComparison.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 493220
+    },
+    "LogicLineages.PersistentMarking.AuxiliaryTargets": {
+      "source_sha256": "774a524f7f15403d6323050f19087e2d99703ec4c03a8ad5307ef1e4d363e941",
+      "input_key": "79f83005c0cc03ac1f54c0516f56059b09cf6013d213b8dad972a677dc9dc615",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/Refinement.olean",
+        "LogicLineages/PersistentMarking/ExtendedComparison.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/AuxiliaryTargets.olean": "1b05765ea817713adf03220f1e2484547a0da72e87a5027a0c7f25c39f685dc4",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/AuxiliaryTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/AuxiliaryTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/AuxiliaryTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795031175592426700-1974336.json",
+      "log": "build-reports/1795031175592426700-1974336-LogicLineages-PersistentMarking-AuxiliaryTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 450196
+    },
+    "LogicLineages.PersistentMarking.RefinementSyntaxTargets": {
+      "source_sha256": "6f13289f3398a2b3c25eff7caf261c1f1b80a76996d87bbeeb8bc03d06a5cf7b",
+      "input_key": "a28c1b38cecb43c9b7a22d3930e0b370c7c36eed5c8c80ae7c527c88eaaeaaf5",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/AuxiliaryTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RefinementSyntaxTargets.olean": "4d94c6f668137a1803c906b4b179c9d0488aa1c90b64cc304509d22d78cb981f",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RefinementSyntaxTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RefinementSyntaxTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RefinementSyntaxTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795031175592426700-1974336.json",
+      "log": "build-reports/1795031175592426700-1974336-LogicLineages-PersistentMarking-RefinementSyntaxTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 450232
+    },
+    "LogicLineages.PersistentMarking.RefinementRenamingTargets": {
+      "source_sha256": "27d1562fb0fa031ec2fb0c9da420ec2f2630b475dab3fa793ec4b9d7e89cd429",
+      "input_key": "a61af6b67b538ee9d4721260f8be16e24d68eeaadee5fedb5df2587581174db0",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/RefinementMeasure.olean",
+        "LogicLineages/PersistentMarking/RefinementSyntaxTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RefinementRenamingTargets.olean": "c39a790915e056792e5092e3df53da68349b41b9f3e78b849fc9e64f11e4e248",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RefinementRenamingTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RefinementRenamingTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RefinementRenamingTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795031175592426700-1974336.json",
+      "log": "build-reports/1795031175592426700-1974336-LogicLineages-PersistentMarking-RefinementRenamingTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 463260
+    },
+    "LogicLineages.PersistentMarking.PortNormalization": {
+      "source_sha256": "59de67cc28603f0fabf9183f28540cbb5909545145c9f94aebac0781a3937f8f",
+      "input_key": "3ae1ea4811fa4fa535b26561d71f26e0c7b83f090b245d3b3bb3b30b6da20a60",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/PortComparison.olean",
+        "LogicLineages/PersistentMarking/DecisionSourceUniverse.olean",
+        "LogicLineages/PersistentMarking/RefinementRenamingTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/PortNormalization.olean": "3a1f42903d6dddcdad0a6677d49effe88c80c298fed3e0445a08e14878af6a03",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/PortNormalization.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/PortNormalization.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/PortNormalization.ir": null
+      },
+      "native_receipt": "build-reports/1795031976227654523-1983864.json",
+      "log": "build-reports/1795031976227654523-1983864-LogicLineages-PersistentMarking-PortNormalization.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 470032
+    },
+    "LogicLineages.PersistentMarking.PortNormalizationTargets": {
+      "source_sha256": "028b9141e1b9b7b6d170f4e83b6600c97bf98ec0a0270dad6a4d34718bbd16a3",
+      "input_key": "fafbaa11dc0dd81bc9dbf066c1bbaaacf0dfe6ef95c009573a1c8fea67512a69",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/PortNormalization.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/PortNormalizationTargets.olean": "831148124b8f2df238cbcc89e26859bff3361dd830f364b259866f3dd973f4aa",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/PortNormalizationTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/PortNormalizationTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/PortNormalizationTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795031983705864905-1983960.json",
+      "log": "build-reports/1795031983705864905-1983960-LogicLineages-PersistentMarking-PortNormalizationTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 458132
+    },
+    "LogicLineages.PersistentMarking.ObservationLambdaTargets": {
+      "source_sha256": "8e6cf63123f1f82607143e4c7f3965e9e14f3486b38d1cc8586322a8a31c02d8",
+      "input_key": "a110e4d4976bb5f06dbb0bb46b460a63a0d54cf88a34b45f8d2a7eea03fad4b3",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/ObservationLambda.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationLambdaTargets.olean": "0970727168930daa8a7c6bdd2a6e3a4bb3db6244c0f84db11e45c13b072a756b",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationLambdaTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationLambdaTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationLambdaTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795032067175789357-1984688.json",
+      "log": "build-reports/1795032067175789357-1984688-LogicLineages-PersistentMarking-ObservationLambdaTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 458508
+    },
+    "LogicLineages.PersistentMarking.DecisionPortsTargets": {
+      "source_sha256": "4fc70a3bb583d06636611f353f2cb29d8fbdb9ed536dd9fce6b19dbfaa034f05",
+      "input_key": "a91ae44233220b29ee3ea977eaeda0c9bed887b1ac915ae364bc4b0beeb62bdf",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionPorts.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionPortsTargets.olean": "84e84affe7c4021e17b0080cc660b5f6244596ff66a2e59a52165fdf4091a93f",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionPortsTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionPortsTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionPortsTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795031795547505928-33.json",
+      "log": "build-reports/1795031795547505928-33-LogicLineages-PersistentMarking-DecisionPortsTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 464068
+    },
+    "LogicLineages.PersistentMarking.DecisionPortsProof": {
+      "source_sha256": "7df08de94814acaf8cc64636770f2c24c2bff32f5e3447e20d6f9e9a296892b9",
+      "input_key": "790d3d3c95562a7691e68df51297dd088ccf3ab4a42df4cc6dea60fd3ba71025",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionPortsTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionPortsProof.olean": "fffedee4c4c85432ee90d63b0bbc12029291485935d450643f73a9c1a4620fd7",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionPortsProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionPortsProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionPortsProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031795547505928-33.json",
+      "log": "build-reports/1795031795547505928-33-LogicLineages-PersistentMarking-DecisionPortsProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 471220
+    },
+    "LogicLineages.PersistentMarking.ObservationPortUpdateProof": {
+      "source_sha256": "680d070ce665dc2efc88d24a63a58e473dc447dae619145d0660eb01b4857136",
+      "input_key": "13a11aee556f4f0191c5a9c1d9fe7a1205c9c2424e3c4e039e182c9d424bb0a4",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/ObservationLambdaTargets.olean",
+        "LogicLineages/PersistentMarking/DecisionPortsProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationPortUpdateProof.olean": "41a74798cf8c25c288a611917ae9f66f9f7ca08aa4e26706401784a53466060f",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationPortUpdateProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationPortUpdateProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationPortUpdateProof.ir": null
+      },
+      "native_receipt": "build-reports/1795032067175789357-1984688.json",
+      "log": "build-reports/1795032067175789357-1984688-LogicLineages-PersistentMarking-ObservationPortUpdateProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 470948
+    },
+    "LogicLineages.PersistentMarking.InsertionTargets": {
+      "source_sha256": "e946c29efd00574cc72d0a67bc9bc5a8665c8ae88a85e7decd296c4748ed1af3",
+      "input_key": "6010e9bc98a1047cc9a7c98d0837bd62dda13312049fb89b58f442f4df5db1e8",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SubstitutionTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionTargets.olean": "ca5ee9850d52acc5ac63c6d11572008d632e5c5a801c268c44f863b8882fb1b5",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795031144372484544-1973658.json",
+      "log": "build-reports/1795031144372484544-1973658-LogicLineages-PersistentMarking-InsertionTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 451200
+    },
+    "LogicLineages.PersistentMarking.InsertionProof": {
+      "source_sha256": "a3fb805b21cedd8ce2c46c2188ec14086914fe2138b8c0f8e66c5097d4d75873",
+      "input_key": "176ebce87e9b84ec0df321e41e5501500b2ec9d4ad8eadb01138a9fef123b419",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/InsertionTargets.olean",
+        "LogicLineages/PersistentMarking/SubstitutionProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionProof.olean": "74a908f335314ed1dfdd5537f21bb3294a694f5ee4a22cab6cd093bdc46186f1",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031144372484544-1973658.json",
+      "log": "build-reports/1795031144372484544-1973658-LogicLineages-PersistentMarking-InsertionProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 464764
+    },
+    "LogicLineages.PersistentMarking.ObservationOpeningProof": {
+      "source_sha256": "37cedbe52651c6f910958f406c2c371befa951e14938057f6db4204f84f9f571",
+      "input_key": "f53fb8496887d1ed6be3c8b1c057d758eb28c6f34975ed54ae58c4c56c969e95",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/ObservationLambdaTargets.olean",
+        "LogicLineages/PersistentMarking/InsertionProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationOpeningProof.olean": "6d78631b680e4f07c49d09c255dc3d7a2db7338fc93d48b8a8d41cbefdce4fde",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationOpeningProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationOpeningProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationOpeningProof.ir": null
+      },
+      "native_receipt": "build-reports/1795032067175789357-1984688.json",
+      "log": "build-reports/1795032067175789357-1984688-LogicLineages-PersistentMarking-ObservationOpeningProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 478860
+    },
+    "LogicLineages.PersistentMarking.SpineSubstitutionProof": {
+      "source_sha256": "e9aa5cf23a76e7701b27a9115b09b5fc2c1eb892a65c251de8c7e6f9f8931329",
+      "input_key": "2596c763230f2c60ee7421c31bc4d445175e497c1c62c3b847547648a8b76973",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SpineShiftProof.olean",
+        "LogicLineages/PersistentMarking/InsertionProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineSubstitutionProof.olean": "9070365d727e2d91904ef557f342cbd4b66099e00ee95b78c824e2073da95a16",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineSubstitutionProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineSubstitutionProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineSubstitutionProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031144372484544-1973658.json",
+      "log": "build-reports/1795031144372484544-1973658-LogicLineages-PersistentMarking-SpineSubstitutionProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 481580
+    },
+    "LogicLineages.PersistentMarking.DecisionAssignmentProof": {
+      "source_sha256": "257724773bb3f9b5a7423ffb18a1c928401d7faef4aa7343f28cfefbc8ea5c24",
+      "input_key": "ecbdd29be8ac2b573fb45e517fcc43fa4d8af2a4ca7196ba182b667aba874cd6",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionObservationTargets.olean",
+        "LogicLineages/PersistentMarking/DecisionPortsProof.olean",
+        "LogicLineages/PersistentMarking/SpineSubstitutionProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionAssignmentProof.olean": "3660be69815e2de0bccde23f67bbc3cd1adf133d9d62f1bc4bbc317b5bd7b66f",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionAssignmentProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionAssignmentProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionAssignmentProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031976227654523-1983864.json",
+      "log": "build-reports/1795031976227654523-1983864-LogicLineages-PersistentMarking-DecisionAssignmentProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 485368
+    },
+    "LogicLineages.PersistentMarking.DecisionObservationProof": {
+      "source_sha256": "ef0a878a82406666d8e30d3c5e66f256227c7d9fc9381cefd20357def761ca16",
+      "input_key": "6d5460808119f4a9c83d132bff84b40012f613f94361e03c315cebb8fb9bf5d0",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionOccurrenceProof.olean",
+        "LogicLineages/PersistentMarking/DecisionAssignmentProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionObservationProof.olean": "a2000496043e42075d8ecda36d9c6f7a72dc271135ef5bc881c5ef84fff6a15f",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionObservationProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionObservationProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionObservationProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031983705864905-1983960.json",
+      "log": "build-reports/1795031983705864905-1983960-LogicLineages-PersistentMarking-DecisionObservationProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 466048
+    },
+    "LogicLineages.PersistentMarking.ObservationLambdaProof": {
+      "source_sha256": "f1a8fe5b472dcca0332f2ff3d6d7757a3ced703cb52f980e999d32488b45a87d",
+      "input_key": "3781326dcc74e87bd243b253b61560c6686d94a45519d71ee6ed61518c31d7c2",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/ObservationPortUpdateProof.olean",
+        "LogicLineages/PersistentMarking/ObservationOpeningProof.olean",
+        "LogicLineages/PersistentMarking/DecisionObservationProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationLambdaProof.olean": "60bc823808ce7570da770a8ad25190cb87c876eebff5a02c98f6aa9510479c10",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationLambdaProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationLambdaProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ObservationLambdaProof.ir": null
+      },
+      "native_receipt": "build-reports/1795032067175789357-1984688.json",
+      "log": "build-reports/1795032067175789357-1984688-LogicLineages-PersistentMarking-ObservationLambdaProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 470352
+    },
+    "LogicLineages.PersistentMarking.PortHeadObservationProof": {
+      "source_sha256": "4109dc613d2082f94446cf948ba77378b04de189bedb1854ab512602814785ca",
+      "input_key": "2adb19c454070c3667197c3c84838afb18b4dda29041bb9abcc57d157d982838",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/PortNormalizationTargets.olean",
+        "LogicLineages/PersistentMarking/ObservationLambdaProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/PortHeadObservationProof.olean": "d8d665e1ad84dee3e0e910ed5cc10991c29cff3c0c9ba8c1e9e68cabcf4828ee",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/PortHeadObservationProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/PortHeadObservationProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/PortHeadObservationProof.ir": null
+      },
+      "native_receipt": "build-reports/1795032214640403252-1987156.json",
+      "log": "build-reports/1795032214640403252-1987156-LogicLineages-PersistentMarking-PortHeadObservationProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 476980
+    },
+    "LogicLineages.PersistentMarking.ComparisonTargets": {
+      "source_sha256": "4620b7f47985dfecb42c73b9665608d46befc4c5220a85e665bedd9c1ecf5728",
+      "input_key": "46c8c6b59adce3177b57957f9f2b2d6f217568637114ca2f6f07be8f990e87d3",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/Comparison.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ComparisonTargets.olean": "33968440c0efb769cd716bdc3c95fae77bb29114a4361319ca2fd1c237988afc",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ComparisonTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ComparisonTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ComparisonTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795031175592426700-1974336.json",
+      "log": "build-reports/1795031175592426700-1974336-LogicLineages-PersistentMarking-ComparisonTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 453540
+    },
+    "LogicLineages.PersistentMarking.BridgeTargets": {
+      "source_sha256": "3ffe77d17884b266b3887bed7bfec0e595349a45bde49951dd97047f45168dc5",
+      "input_key": "49675b9df2c2953654d389943265bda1d1584fde1e63dfaa3aa1d8ac8b903f29",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NameBridge.olean",
+        "LogicLineages/PersistentMarking/Signature.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/BridgeTargets.olean": "ccb24f1229f8ce9a38c4479c8347ab4a28b2f27f754b06bdfbf4f3c45a2c1d29",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/BridgeTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/BridgeTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/BridgeTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795031144372484544-1973658.json",
+      "log": "build-reports/1795031144372484544-1973658-LogicLineages-PersistentMarking-BridgeTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 447516
+    },
+    "LogicLineages.PersistentMarking.OpeningFoundationProof": {
+      "source_sha256": "7b4f83cc52504a8131bc2ccb779f470187957dd3797ee89217aeffdb5f751422",
+      "input_key": "86b5bb86f5d008a4e668d72cb5890ddc80be39178d84fb6db82f38edda058ba2",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/BridgeTargets.olean",
+        "LogicLineages/PersistentMarking/SpineSubstitutionProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/OpeningFoundationProof.olean": "09473a45244ab8aa2cd73b6ad463c19745c432213ff1e48ddc9e8b344b0023b0",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/OpeningFoundationProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/OpeningFoundationProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/OpeningFoundationProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031144372484544-1973658.json",
+      "log": "build-reports/1795031144372484544-1973658-LogicLineages-PersistentMarking-OpeningFoundationProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 481780
+    },
+    "LogicLineages.PersistentMarking.SpineMarkingTargets": {
+      "source_sha256": "4a6d106fe8048be656ebc2235887eca8426b86bcd4130e4921e72749981812ac",
+      "input_key": "b37a98506267a3e6a35a8d8ad50d6193059716eee3c63655bd67a9a4a0b87285",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SpineMarking.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineMarkingTargets.olean": "fbbb7cd52fea72ec0d6d32a7fefce8fc3970632d0168dd00eb5d4534de2ae6b1",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineMarkingTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineMarkingTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineMarkingTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795031175592426700-1974336.json",
+      "log": "build-reports/1795031175592426700-1974336-LogicLineages-PersistentMarking-SpineMarkingTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 443356
+    },
+    "LogicLineages.PersistentMarking.SpineMarkingProof": {
+      "source_sha256": "840244b8e3b8d6b29e640fad78591bf88d9af3f1df1d9bd54ceb7636ddea29e6",
+      "input_key": "3cf74a49c4da5486b8c9ebdd43be589433e4e23f7025204bd106700081289b34",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SpineMarkingTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineMarkingProof.olean": "be4c534a52b5cf438f25d8726c90e471201f4a86d6bd007ee175508619bcdecd",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineMarkingProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineMarkingProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineMarkingProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031189354384581-1974558.json",
+      "log": "build-reports/1795031189354384581-1974558-LogicLineages-PersistentMarking-SpineMarkingProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 467252
+    },
+    "LogicLineages.PersistentMarking.ElementarySupportProof": {
+      "source_sha256": "80eb9fb7c02d4bdddbf8e18e5ea6823895304b1a7a7d4c3e6cf501ba4bf63531",
+      "input_key": "d77369e0d5bcda1af79761764b280ea8733a2b01e5d38788a734cf91ac3addd6",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/ComparisonTargets.olean",
+        "LogicLineages/PersistentMarking/OpeningFoundationProof.olean",
+        "LogicLineages/PersistentMarking/SpineMarkingProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ElementarySupportProof.olean": "fa4b77ef4a1feec6f14d952fdb6c5df899a01ff1863ad23aa0fdbb28ee91a22d",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ElementarySupportProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ElementarySupportProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ElementarySupportProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031189354384581-1974558.json",
+      "log": "build-reports/1795031189354384581-1974558-LogicLineages-PersistentMarking-ElementarySupportProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 490136
+    },
+    "LogicLineages.PersistentMarking.RefinementMarkProof": {
+      "source_sha256": "1bed446e09e6f1743872f127c178bc13eacca99051f6880ef0bbda861396dbce",
+      "input_key": "f6209d1a6703d3dcc7d5413b30ffceaa9f81622c9d06ccaece7a5e66cbfe9956",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/AuxiliaryTargets.olean",
+        "LogicLineages/PersistentMarking/ElementarySupportProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RefinementMarkProof.olean": "59519f3f04c4fe4b8d144c6c6007f942ff1e50752e5afb74a98399007401967d",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RefinementMarkProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RefinementMarkProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RefinementMarkProof.ir": null
+      },
+      "native_receipt": "build-reports/1795031544596925265-1978591.json",
+      "log": "build-reports/1795031544596925265-1978591-LogicLineages-PersistentMarking-RefinementMarkProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 472612
+    },
+    "LogicLineages.PersistentMarking.RankedRestrictionSyntaxProof": {
+      "source_sha256": "606583e2cf49041beaf85e4b6a1361a77f9c5755c879e6f31fc86bbed19e0a42",
+      "input_key": "7c3df7beb86c2d26e671d559a655642b7d8065ca65773a1bfefc38d70b4640a7",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/RankedRestrictionTargets.olean",
+        "LogicLineages/PersistentMarking/DecisionOccurrenceProof.olean",
+        "LogicLineages/PersistentMarking/TypeSupportFoundationProof.olean",
+        "LogicLineages/PersistentMarking/PortHeadObservationProof.olean",
+        "LogicLineages/PersistentMarking/RefinementMarkProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionSyntaxProof.olean": "14b4bbd3218b3ee16ac3237de11bb0cffeebba0783f42ec65bd95e1cd97dbeac",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionSyntaxProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionSyntaxProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionSyntaxProof.ir": null
+      },
+      "native_receipt": "build-reports/1795038859078667108-13.json",
+      "log": "build-reports/1795038859078667108-13-LogicLineages-PersistentMarking-RankedRestrictionSyntaxProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 486588
+    },
+    "LogicLineages.PersistentMarking.RankedRestrictionSplitProof": {
+      "source_sha256": "c6e4387181c85bfca477b17dcb4bab4f27b5248385c1a82e5c079e401fcc8331",
+      "input_key": "9d7a69cf52922e3c409d62301291b90407b70844681e7dea3161d93214501dc1",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/RankedRestrictionTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionSplitProof.olean": "05dbded66e713b5bc6e021252da9c715977511ebb9978ef94e97331391fff08d",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionSplitProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionSplitProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionSplitProof.ir": null
+      },
+      "native_receipt": "build-reports/1795038914866952761-13.json",
+      "log": "build-reports/1795038914866952761-13-LogicLineages-PersistentMarking-RankedRestrictionSplitProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 471220
+    },
+    "LogicLineages.PersistentMarking.RankedRestrictionCoverageProof": {
+      "source_sha256": "23d32f64aa4f43cb316ab0c66145ec32c90dd21520a1ea53f661281136cc6b42",
+      "input_key": "630464d8a282c96f03319a5430a327163ce16bbf0d76582b2e6d1d7bb2703d52",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/RankedRestrictionSplitProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionCoverageProof.olean": "1ca3b79bce12e958e080879f5ce398217434ee93ba897257811ed5e1bb2e0d50",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionCoverageProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionCoverageProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionCoverageProof.ir": null
+      },
+      "native_receipt": "build-reports/1795039015269253850-14.json",
+      "log": "build-reports/1795039015269253850-14-LogicLineages-PersistentMarking-RankedRestrictionCoverageProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 466416
+    },
+    "LogicLineages.PersistentMarking.RankedRestrictionMatchingProof": {
+      "source_sha256": "44f7fc0560e5f0945b4e6581f1d1dfe6b36c9bfadf67efaf8dd656923c246bea",
+      "input_key": "e3b5f07d4089587bd54c148c58dc6979081fcce4df9dd0af7503825f9a8ea4e4",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/RankedRestrictionCoverageProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionMatchingProof.olean": "52eb22a19fd92bdebd1cba6ed7fd6afcbb76e96829fade64b3076785e9e1546a",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionMatchingProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionMatchingProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionMatchingProof.ir": null
+      },
+      "native_receipt": "build-reports/1795039068577190081-12.json",
+      "log": "build-reports/1795039068577190081-12-LogicLineages-PersistentMarking-RankedRestrictionMatchingProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 470404
+    },
+    "LogicLineages.PersistentMarking.RankedRestrictionForwardTargets": {
+      "source_sha256": "687d8c0c5d16df5cb1f70be5478d0de65b141b4ce27ba397f51cf47b41c1bb23",
+      "input_key": "e8d22fb0eef76200d6b8fcb4fd5cf35b5be46242714c83b91dbdb778e04964c9",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/RankedRestrictionSyntaxProof.olean",
+        "LogicLineages/PersistentMarking/RankedRestrictionMatchingProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionForwardTargets.olean": "7fb65c09c97d4fcc706e6f19d47b98f8aeab323702038d84199bff3bd9611dcc",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionForwardTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionForwardTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionForwardTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795039068577190081-12.json",
+      "log": "build-reports/1795039068577190081-12-LogicLineages-PersistentMarking-RankedRestrictionForwardTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 468272
+    },
+    "LogicLineages.PersistentMarking.RankedRestrictionPrecedenceProof": {
+      "source_sha256": "92cf8ca13a70db1f39dde5cba509bf164a2c63533323dfb299bcbb08be8e8e2c",
+      "input_key": "d0facb937d890adafee70398738752a8b8452d99d6abde8cd8084c6121649a2d",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/RankedRestrictionTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionPrecedenceProof.olean": "53f7f4b9639b172c37067ab7fe70e43cc6d81927823fa9c304f3bcbb0fdcaf20",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionPrecedenceProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionPrecedenceProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionPrecedenceProof.ir": null
+      },
+      "native_receipt": "build-reports/1795039135337979246-17.json",
+      "log": "build-reports/1795039135337979246-17-LogicLineages-PersistentMarking-RankedRestrictionPrecedenceProof.log",
+      "log_sha256": "eb59efd8f209df59d9b27f83c18ca6f6d58242bb1ae3a05d737bb18bb06bdce7",
+      "peak_rss_kib": 469968
+    },
+    "LogicLineages.PersistentMarking.RankedRestrictionForwardHeadProof": {
+      "source_sha256": "618c8c7f55ae4c366e562b29ca8ea84ed3ad73ed4f6f9aeb42c0f2706da32654",
+      "input_key": "38b90d57ec3f2b5d4f73e4eba6d01e7bcd81d33cadbdb70cf0f7b3091b87110c",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/RankedRestrictionForwardTargets.olean",
+        "LogicLineages/PersistentMarking/RankedRestrictionPrecedenceProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionForwardHeadProof.olean": "341a9ef6d4639ca42092eee0a0b08b25bce4cb2a4ea2036c66bc34681f9aa45e",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionForwardHeadProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionForwardHeadProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionForwardHeadProof.ir": null
+      },
+      "native_receipt": "build-reports/1795039135337979246-17.json",
+      "log": "build-reports/1795039135337979246-17-LogicLineages-PersistentMarking-RankedRestrictionForwardHeadProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 479496
+    },
+    "LogicLineages.PersistentMarking.RankedRestrictionForwardListProof": {
+      "source_sha256": "51eb5a434c5b0052ff194df7225638583d71bec7ce8092a6c97ef4a2a24c4033",
+      "input_key": "1bbb20618098907aaadd3408413e4063ed45eb630f1b31b3866c7df6bedd156b",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/RankedRestrictionForwardTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionForwardListProof.olean": "597847f2916b29376901ea2bf046dfd55903149c00a89ba6b7203779c4957da5",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionForwardListProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionForwardListProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionForwardListProof.ir": null
+      },
+      "native_receipt": "build-reports/1795039135337979246-17.json",
+      "log": "build-reports/1795039135337979246-17-LogicLineages-PersistentMarking-RankedRestrictionForwardListProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 475804
+    },
+    "LogicLineages.PersistentMarking.RankedRestrictionForwardProof": {
+      "source_sha256": "41837e955e37cfdb5770884b61e4d38e9135bb7b32fd0eb4dfb2f1a0650aed1a",
+      "input_key": "fa203973ef3a35f416a36a360b112370fbdb1f15860cce902c9b3844599997d0",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/RankedRestrictionForwardHeadProof.olean",
+        "LogicLineages/PersistentMarking/RankedRestrictionForwardListProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionForwardProof.olean": "0f7ca478a945da4dfad19f67166f773e49fd53446801d801531dc02601feaeb9",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionForwardProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionForwardProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionForwardProof.ir": null
+      },
+      "native_receipt": "build-reports/1795039135337979246-17.json",
+      "log": "build-reports/1795039135337979246-17-LogicLineages-PersistentMarking-RankedRestrictionForwardProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 475372
+    },
+    "LogicLineages.PersistentMarking.RankedRestrictionEqualityProof": {
+      "source_sha256": "0c47a170de0734c7d22a4be4c2afdfb8c621a86df36dfb46ffee26d99fc9d27f",
+      "input_key": "1fef6977fe8429d2b6828c37041bb936e7b5cdd523b69273fd1175af743c9b02",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/RankedRestrictionSyntaxProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionEqualityProof.olean": "e9817a5e5dff853856a2020adb5261f0480075127509ea4e0ba34a796be233eb",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionEqualityProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionEqualityProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionEqualityProof.ir": null
+      },
+      "native_receipt": "build-reports/1795039135337979246-17.json",
+      "log": "build-reports/1795039135337979246-17-LogicLineages-PersistentMarking-RankedRestrictionEqualityProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 478212
+    },
+    "LogicLineages.PersistentMarking.ElementaryProof": {
+      "source_sha256": "5173b3e602317fef0ca4ba67d9fc2e9e613bea3773d43ebc3dfc8e712afe8052",
+      "input_key": "4e938dd2f1bbb2be671ff8ec1d326a538927d56b535231aae34e80d19dcad306",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/ElementarySupportProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ElementaryProof.olean": "1bc08b2fa9fd7e17354ffebee7a8ad64bafe2a8a1c21c8ef984c2d108fa6ecba",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ElementaryProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ElementaryProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/ElementaryProof.ir": null
+      },
+      "native_receipt": "build-reports/1795032429441052885-1989113.json",
+      "log": "build-reports/1795032429441052885-1989113-LogicLineages-PersistentMarking-ElementaryProof.log",
+      "log_sha256": "658c33a866951f7b656b2f9d86a059b7e9bad7050a48dd7fa2b317ca05fc9019",
+      "peak_rss_kib": 481904
+    },
+    "LogicLineages.PersistentMarking.RankedRestrictionBackwardCases": {
+      "source_sha256": "6ccfe8c89a1b51bdd6d7e941cbc44606649e1f4af574c9e87b72fac73777a46b",
+      "input_key": "aff391d75905988a4c6a1544bd7250e54b58d6670a264087a50f26e27bc0bef4",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/RankedRestrictionEqualityProof.olean",
+        "LogicLineages/PersistentMarking/ElementaryProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionBackwardCases.olean": "9bdd8790c6693df2b3df85d013994f42d47923ba7941587ef263cf9d8441f974",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionBackwardCases.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionBackwardCases.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionBackwardCases.ir": null
+      },
+      "native_receipt": "build-reports/1795039135337979246-17.json",
+      "log": "build-reports/1795039135337979246-17-LogicLineages-PersistentMarking-RankedRestrictionBackwardCases.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 477896
+    },
+    "LogicLineages.PersistentMarking.RankedRestrictionBackwardProof": {
+      "source_sha256": "094dff8010addfb6537de28ff635df596eb6a791693a44e3dc01ea0df9548872",
+      "input_key": "2607872f9717015438b4a8deff3ebb8d2f0e6036790627cdf66599951da43a89",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/RankedRestrictionBackwardCases.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionBackwardProof.olean": "43887f9bfbc7caa3101f778f7c15ea897facc3b340079b2db58b0d5c3ea4d2d6",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionBackwardProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionBackwardProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionBackwardProof.ir": null
+      },
+      "native_receipt": "build-reports/1795039135337979246-17.json",
+      "log": "build-reports/1795039135337979246-17-LogicLineages-PersistentMarking-RankedRestrictionBackwardProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 472404
+    },
+    "LogicLineages.PersistentMarking.RankedRestrictionChecks": {
+      "source_sha256": "fd9e29523be0a70b9f44ff2a4ceffbc87f25b7dda7f8005353c776ebbba79829",
+      "input_key": "bcf69a5d3724cc33c04ecc0f3055c9043c3ceb09ad0315bdc1c15cea341cfd5b",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/RankedRestrictionForwardProof.olean",
+        "LogicLineages/PersistentMarking/RankedRestrictionBackwardProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionChecks.olean": "e06af8944e0c29258126c03d4f7188b710ec9a6f5d7571d523cfb47c4ef922a3",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionChecks.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionChecks.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/RankedRestrictionChecks.ir": null
+      },
+      "native_receipt": "build-reports/1795039135337979246-17.json",
+      "log": "build-reports/1795039135337979246-17-LogicLineages-PersistentMarking-RankedRestrictionChecks.log",
+      "log_sha256": "665ff3e0af454c9e33d56f6c2e3c3b21c78d9e679d8f5d0de69cf102a1174c3e",
+      "peak_rss_kib": 473648
+    }
+  }
+}

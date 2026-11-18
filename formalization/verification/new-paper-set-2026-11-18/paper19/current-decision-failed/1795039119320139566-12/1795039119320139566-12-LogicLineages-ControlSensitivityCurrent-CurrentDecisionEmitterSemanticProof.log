@@ -1,0 +1,2236 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionEmitterSemanticProof.lean:67:30: error: Ambiguous term
+  extend
+Possible interpretations:
+  PrimitiveLowering.extend : (OrdinalComponent ?m.229 → ℕ) →
+    (n : ℕ) → (Fin n → ℕ) → OrdinalComponent (List.replicate n Ty.ground ++ ?m.229) → ℕ
+  
+  ExistentialPlan.extend : (Variable ?m.229 Ty.ground → ℕ) → ℕ → Variable (Ty.ground :: ?m.229) Ty.ground → ℕ
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionEmitterSemanticProof.lean:67:4: error: Type mismatch: After simplification, term
+  hsum
+ has type
+  @Eq ℕ (ν sum)
+    (ExistentialPlan.extend
+        (ExistentialPlan.extend (ExistentialPlan.extend ρ (sourceValue p f ρ a)) (sourceValue p f ρ b))
+        (SourceSortCompletion.input
+          (inputs (ExistentialPlan.extend (ExistentialPlan.extend ρ (sourceValue p f ρ a)) (sourceValue p f ρ b)))
+          x.there.there)
+        Variable.here +
+      factor *
+        ExistentialPlan.extend
+          (ExistentialPlan.extend (ExistentialPlan.extend ρ (sourceValue p f ρ a)) (sourceValue p f ρ b))
+          (SourceSortCompletion.input
+            (inputs (ExistentialPlan.extend (ExistentialPlan.extend ρ (sourceValue p f ρ a)) (sourceValue p f ρ b)))
+            x.there.there)
+          v.there.there.there)
+but is expected to have type
+  @Eq ℕ
+    (ExistentialPlan.extend (ExistentialPlan.extend ν (factor * anchor)) (factor * anchor + ν (r y.there.there.there))
+      sum.there.there)
+    (ρ x + factor * ρ v)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionEmitterSemanticProof.lean:78:51: error: unsolved goals
+case false
+p : AdmissibleSum.Policy
+f : ℕ → ℕ
+Γ : List Ty
+a b : Ports Γ
+v w : Variable Γ Ty.ground
+ρ : Variable Γ Ty.ground → ℕ
+⊢ ((Fin.induction
+              (Fin.induction
+                  (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                  (fun i x =>
+                    Fin.induction
+                      (decide
+                        (SourceSortCompletion.input (inputs ρ) b.2.2.1 = SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                  SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.1))
+                                  (fun i x => i.elim0) i)
+                              i)
+                          i)
+                      i)
+                  3 &&
+                Fin.induction
+                  (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                  (fun i x =>
+                    Fin.induction
+                      (decide
+                        (SourceSortCompletion.input (inputs ρ) b.2.2.1 = SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                  SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.1))
+                                  (fun i x => i.elim0) i)
+                              i)
+                          i)
+                      i)
+                  4)
+              (fun i x =>
+                Fin.induction
+                  (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                  (fun i x =>
+                    Fin.induction
+                      (decide
+                        (SourceSortCompletion.input (inputs ρ) b.2.2.1 = SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                  SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.1))
+                                  (fun i x => i.elim0) i)
+                              i)
+                          i)
+                      i)
+                  i)
+              2 =
+            true ∧
+          Fin.induction
+              (Fin.induction
+                  (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                  (fun i x =>
+                    Fin.induction
+                      (decide
+                        (SourceSortCompletion.input (inputs ρ) b.2.2.1 = SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                  SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.1))
+                                  (fun i x => i.elim0) i)
+                              i)
+                          i)
+                      i)
+                  3 &&
+                Fin.induction
+                  (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                  (fun i x =>
+                    Fin.induction
+                      (decide
+                        (SourceSortCompletion.input (inputs ρ) b.2.2.1 = SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                  SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.1))
+                                  (fun i x => i.elim0) i)
+                              i)
+                          i)
+                      i)
+                  4)
+              (fun i x =>
+                Fin.induction
+                  (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                  (fun i x =>
+                    Fin.induction
+                      (decide
+                        (SourceSortCompletion.input (inputs ρ) b.2.2.1 = SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                  SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.1))
+                                  (fun i x => i.elim0) i)
+                              i)
+                          i)
+                      i)
+                  i)
+              3 =
+            true) ∧
+        Fin.induction
+            (Fin.induction
+                (Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    3 &&
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    4)
+                (fun i x =>
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    i)
+                2 &&
+              Fin.induction
+                (Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    3 &&
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    4)
+                (fun i x =>
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    i)
+                3)
+            (fun i x =>
+              Fin.induction
+                (Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    3 &&
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    4)
+                (fun i x =>
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    i)
+                i)
+            1 =
+          true) ∧
+      Fin.induction
+          (Fin.induction
+                (Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    3 &&
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    4)
+                (fun i x =>
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    i)
+                2 &&
+              Fin.induction
+                (Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    3 &&
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    4)
+                (fun i x =>
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    i)
+                3 &&
+            Fin.induction
+              (Fin.induction
+                  (Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      3 &&
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      4)
+                  (fun i x =>
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      i)
+                  2 &&
+                Fin.induction
+                  (Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      3 &&
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      4)
+                  (fun i x =>
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      i)
+                  3)
+              (fun i x =>
+                Fin.induction
+                  (Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      3 &&
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      4)
+                  (fun i x =>
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      i)
+                  i)
+              1)
+          (fun i x =>
+            Fin.induction
+              (Fin.induction
+                  (Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      3 &&
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      4)
+                  (fun i x =>
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      i)
+                  2 &&
+                Fin.induction
+                  (Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      3 &&
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      4)
+                  (fun i x =>
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      i)
+                  3)
+              (fun i x =>
+                Fin.induction
+                  (Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      3 &&
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      4)
+                  (fun i x =>
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w < SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      i)
+                  i)
+              i)
+          3 =
+        true ↔
+    (ρ a.1 = ρ a.2.1 ∧ ρ a.2.2.1 = ρ a.2.2.2) ∧ (ρ b.1 = ρ b.2.1 ∧ ρ b.2.2.1 = ρ b.2.2.2) ∧ ρ w < ρ v
+
+case true
+p : AdmissibleSum.Policy
+f : ℕ → ℕ
+Γ : List Ty
+a b : Ports Γ
+v w : Variable Γ Ty.ground
+ρ : Variable Γ Ty.ground → ℕ
+⊢ ((Fin.induction
+              (Fin.induction
+                  (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                  (fun i x =>
+                    Fin.induction
+                      (decide
+                        (SourceSortCompletion.input (inputs ρ) b.2.2.1 = SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                  SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.1))
+                                  (fun i x => i.elim0) i)
+                              i)
+                          i)
+                      i)
+                  3 &&
+                Fin.induction
+                  (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                  (fun i x =>
+                    Fin.induction
+                      (decide
+                        (SourceSortCompletion.input (inputs ρ) b.2.2.1 = SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                  SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.1))
+                                  (fun i x => i.elim0) i)
+                              i)
+                          i)
+                      i)
+                  4)
+              (fun i x =>
+                Fin.induction
+                  (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                  (fun i x =>
+                    Fin.induction
+                      (decide
+                        (SourceSortCompletion.input (inputs ρ) b.2.2.1 = SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                  SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.1))
+                                  (fun i x => i.elim0) i)
+                              i)
+                          i)
+                      i)
+                  i)
+              2 =
+            true ∧
+          Fin.induction
+              (Fin.induction
+                  (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                  (fun i x =>
+                    Fin.induction
+                      (decide
+                        (SourceSortCompletion.input (inputs ρ) b.2.2.1 = SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                  SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.1))
+                                  (fun i x => i.elim0) i)
+                              i)
+                          i)
+                      i)
+                  3 &&
+                Fin.induction
+                  (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                  (fun i x =>
+                    Fin.induction
+                      (decide
+                        (SourceSortCompletion.input (inputs ρ) b.2.2.1 = SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                  SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.1))
+                                  (fun i x => i.elim0) i)
+                              i)
+                          i)
+                      i)
+                  4)
+              (fun i x =>
+                Fin.induction
+                  (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                  (fun i x =>
+                    Fin.induction
+                      (decide
+                        (SourceSortCompletion.input (inputs ρ) b.2.2.1 = SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                  SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.1))
+                                  (fun i x => i.elim0) i)
+                              i)
+                          i)
+                      i)
+                  i)
+              3 =
+            true) ∧
+        Fin.induction
+            (Fin.induction
+                (Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    3 &&
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    4)
+                (fun i x =>
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    i)
+                2 &&
+              Fin.induction
+                (Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    3 &&
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    4)
+                (fun i x =>
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    i)
+                3)
+            (fun i x =>
+              Fin.induction
+                (Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    3 &&
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    4)
+                (fun i x =>
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    i)
+                i)
+            1 =
+          true) ∧
+      Fin.induction
+          (Fin.induction
+                (Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    3 &&
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    4)
+                (fun i x =>
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    i)
+                2 &&
+              Fin.induction
+                (Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    3 &&
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    4)
+                (fun i x =>
+                  Fin.induction
+                    (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                    (fun i x =>
+                      Fin.induction
+                        (decide
+                          (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                            SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                        (fun i x =>
+                          Fin.induction
+                            (decide
+                              (SourceSortCompletion.input (inputs ρ) b.1 = SourceSortCompletion.input (inputs ρ) b.2.1))
+                            (fun i x =>
+                              Fin.induction
+                                (decide
+                                  (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                    SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                (fun i x =>
+                                  Fin.induction
+                                    (decide
+                                      (SourceSortCompletion.input (inputs ρ) a.1 =
+                                        SourceSortCompletion.input (inputs ρ) a.2.1))
+                                    (fun i x => i.elim0) i)
+                                i)
+                            i)
+                        i)
+                    i)
+                3 &&
+            Fin.induction
+              (Fin.induction
+                  (Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      3 &&
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      4)
+                  (fun i x =>
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      i)
+                  2 &&
+                Fin.induction
+                  (Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      3 &&
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      4)
+                  (fun i x =>
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      i)
+                  3)
+              (fun i x =>
+                Fin.induction
+                  (Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      3 &&
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      4)
+                  (fun i x =>
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      i)
+                  i)
+              1)
+          (fun i x =>
+            Fin.induction
+              (Fin.induction
+                  (Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      3 &&
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      4)
+                  (fun i x =>
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      i)
+                  2 &&
+                Fin.induction
+                  (Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      3 &&
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      4)
+                  (fun i x =>
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      i)
+                  3)
+              (fun i x =>
+                Fin.induction
+                  (Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      3 &&
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      4)
+                  (fun i x =>
+                    Fin.induction
+                      (decide (SourceSortCompletion.input (inputs ρ) w ≤ SourceSortCompletion.input (inputs ρ) v))
+                      (fun i x =>
+                        Fin.induction
+                          (decide
+                            (SourceSortCompletion.input (inputs ρ) b.2.2.1 =
+                              SourceSortCompletion.input (inputs ρ) b.2.2.2))
+                          (fun i x =>
+                            Fin.induction
+                              (decide
+                                (SourceSortCompletion.input (inputs ρ) b.1 =
+                                  SourceSortCompletion.input (inputs ρ) b.2.1))
+                              (fun i x =>
+                                Fin.induction
+                                  (decide
+                                    (SourceSortCompletion.input (inputs ρ) a.2.2.1 =
+                                      SourceSortCompletion.input (inputs ρ) a.2.2.2))
+                                  (fun i x =>
+                                    Fin.induction
+                                      (decide
+                                        (SourceSortCompletion.input (inputs ρ) a.1 =
+                                          SourceSortCompletion.input (inputs ρ) a.2.1))
+                                      (fun i x => i.elim0) i)
+                                  i)
+                              i)
+                          i)
+                      i)
+                  i)
+              i)
+          3 =
+        true ↔
+    (ρ a.1 = ρ a.2.1 ∧ ρ a.2.2.1 = ρ a.2.2.2) ∧ (ρ b.1 = ρ b.2.1 ∧ ρ b.2.2.1 = ρ b.2.2.2) ∧ ρ w ≤ ρ v
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionEmitterSemanticProof.lean:80:112: warning: This simp argument is unused:
+  inputs
+
+Hint: Omit it from the simp argument list.
+  simp [finalRows, InputNormalization.Input.eval, InputNormalization.Node.eval,
+  ̲  ̲ ̲ ̲ ̲ ̲PrimitiveLowering.Port.value, i̵n̵p̵u̵t̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵Fin.cases, Bool.and_eq_true, and_comm, and_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionEmitterSemanticProof.lean:81:35: warning: This simp argument is unused:
+  and_comm
+
+Hint: Omit it from the simp argument list.
+  simp [finalRows, InputNormalization.Input.eval, InputNormalization.Node.eval,
+  ̲  ̲ ̲ ̲ ̲ ̲PrimitiveLowering.Port.value, inputs,
+  ̵  ̵ ̵ ̵ ̵ ̵Fin.cases, Bool.and_eq_true, and_c̵o̵m̵m̵,̵ ̵a̵n̵d̵_̵left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionEmitterSemanticProof.lean:81:45: warning: This simp argument is unused:
+  and_left_comm
+
+Hint: Omit it from the simp argument list.
+  simp [finalRows, InputNormalization.Input.eval, InputNormalization.Node.eval,
+  ̲  ̲ ̲ ̲ ̲ ̲PrimitiveLowering.Port.value, inputs,
+  ̵  ̵ ̵ ̵ ̵ ̵Fin.cases, Bool.and_eq_true, and_comm,̵ ̵a̵n̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

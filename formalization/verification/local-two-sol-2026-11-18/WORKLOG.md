@@ -53,3 +53,4 @@ Open root items, in order:
    a zero-valuation evaluator for closed H-free Matrix codes (Phi_computable
    exists; phiInverse computability to be checked), and the closed-sentence
    decision statement. m:thm:common and m:thm:balanced appear to wait on it.
+- 22:19 UTC: both lane sessions (A-session-02, B-session-02) were killed by Claude Code's low-memory reaper while root was idle. Not restarted. Their last ledger entries and drafts are committed as-is; resume the same codex session ids when memory allows.

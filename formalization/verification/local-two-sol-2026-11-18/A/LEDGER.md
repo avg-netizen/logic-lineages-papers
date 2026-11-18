@@ -279,3 +279,51 @@ remains the boundary for the numbered structural statement.
 
 The next packet calibrates the actual strict bit against successful marking
 and translates the existing canonical-port derivations into fixed-point bits.
+
+## 2026-11-18 21:20 UTC — adequacy completeness READY-FOR-ROOT-REVIEW
+
+- Frozen `paper16/LANE-A-COMPLETENESS-FROZEN.json` SHA-256 `4e94909589c020b9a6acacea1dd01af29de7497566388355137abfdd764affef`. The full adequacy comparator is separately frozen in `paper16/LANE-A-ADEQUACY-FROZEN.json`.
+- Exact `ProtectedSpineCompletenessChecks.exact_CompleteObservation` gives both true decoded least-fixed-point bits from finite original judgments at every permitted context and actual typed observation. It uses canonical-port transport with identity renaming, the six original finite induction sorts, literal Select occurrences and actual full calls at the fixed point. Exact `ProtectedSpineStrictMarkProof.exact_MarkingFields` identifies the actual strict field with successful original marking followed by the weak field, or false on failed marking, through the entire initial lambda spine.
+- Serialized union receipt `1795036823200258689-144`, `A/adequacy-completeness-final-gate.log`. 303 recursively source-matched native modules, two exact aliases, 58 frozen source hashes, standard axioms only. A original `A/COMPLETENESS-EVIDENCE.json` SHA-256 `feb476710b142200f1db4ce7d01b8974a021bdd6f7df0366967448f7839363fa`. Root schema `paper16/LANE-A-COMPLETENESS-EVIDENCE.json` SHA-256 `c1e44b39d4fc463aa79111c4965b0fdad4cc864a783d493c2942b4d2a31df18f`.
+- Supporting half only. `thm:adequacy` still needs the converse. Active target is the actual hereditary relation and stage soundness.
+
+## 2026-11-18 21:27 UTC — hereditary soundness relation READY-FOR-ROOT-REVIEW
+
+- Frozen `paper16/LANE-A-SOUND-RELATION-FROZEN.json` SHA-256 `4168992c59f233c1b3db17c7118701872c383af279a725257630b5fd7515d5e2`. Actual decoded fields over all extensions, actual whole prefixes and position-related concrete argument spines, original partial application result. The undefined branch requires literal whole-bottom code.
+- `ProtectedSpineSoundRelationProof.exact_Bottom`, `exact_Downward`, `exact_Restriction` pass receipt `1795036911869441700-16` and standard-only axiom audit. 119 recursively matched native modules and 59 frozen source hashes. A original `A/SOUND-RELATION-EVIDENCE.json` SHA-256 `21c1b0cc957c9b26f439b53d50dd433c98ee09b5f72158b8ad9295ccc1a2adde`. Root schema `paper16/LANE-A-SOUND-RELATION-EVIDENCE.json` SHA-256 `3bc5d6514b6808b0237d7792e033643759cca5f371716919cf0e11e736c9a016`.
+- Next, preservation by the original constructor stage, then the scoped interpreter and the converse at the stable stage.
+
+## 2026-11-18 21:34 UTC — constructor stage soundness READY-FOR-ROOT-REVIEW
+
+- Frozen `paper16/LANE-A-SOUND-STAGE-FROZEN.json` SHA-256 `edf0f443bcd69e9e3947bd3347b07354d4ae469632e8290fac8dcb249266f1fa`. Exact `ProtectedSpineSoundStageProof.exact_StagePreservation` and `exact_IterationSound` establish the concrete hereditary relation for every actual finite bottom stage, with positional related base arguments and extras below literal original occurrences.
+- Covers all four original tests. Select recovers the literal occurrence, actual same-owner copies and original partial full call. Stat reconstructs the concrete split and strict premises. FAbs uses the actual canonical fresh port. Strict derives from the same marked weak proof. Full tables pass the original appended owner to the previous family.
+- Serialized receipt `1795037625891233452-14`, 286 recursively source-matched native modules, two exact aliases, 60 frozen hashes, standard-only axioms. A original `A/SOUND-STAGE-EVIDENCE.json` SHA-256 `36bf1327c4e69cb380b8e02351cda043974f3c6e6c9f41e1d68df7a72cc89703`. Root schema `paper16/LANE-A-SOUND-STAGE-EVIDENCE.json` SHA-256 `2a46ebd691dadaff4d99ee156a7ea12f85985ff27b79ff103e49ef0b4b501e47`.
+- Next is scoped interpreter soundness, combining these stage facts with the genuine original bound-environment and protected-prefix behavior. This packet alone does not close numbered adequacy.
+
+## 2026-11-18 21:47 UTC — numbered thm:adequacy READY-FOR-ROOT-REVIEW
+
+- Exact `ProtectedSpineAdequacyChecks.exact_ExactObservation` proves both directions for the actual decoded least fixed point, at every permitted context and same-typed source/target observation. Soundness uses the concrete hereditary relation at the actual finite iteration, with exact protected-prefix helpers, original bound-block substitution and actual fresh-port opening. Completeness uses canonical-port normalization and all six original derivation sorts. The earlier arbitrary-stage structural equality obstruction is separate.
+- Serialized full receipt `1795038434615341512-12`, `A/adequacy-full-final-gate.log`. 339 recursively source-matched native modules, ten original exact aliases, 61 frozen source hashes, standard axioms only. `paper16/LANE-A-ADEQUACY-FROZEN.json` SHA-256 `4851134adc14e16588df46c0df2c1b2b9ea4997faf235f27f7f884c981d2fe32`. Scoped supplier manifest `paper16/LANE-A-SOUND-INTERPRETER-FROZEN.json` SHA-256 `339cc1ba8a2ba05168bac7b64e19a95d890035e9e55cd8b43bce262756c37ac5`.
+- A original `A/ADEQUACY-EVIDENCE.json` SHA-256 `10555b4c4f945e19ad7efc164ce914972b343c5808d4183c0d8520cc365ccee4`. Root schema `paper16/LANE-A-ADEQUACY-EVIDENCE.json` SHA-256 `b246b3c3aed40840b07949fdf35b729bdb300a15d6b6db487932bd27ec9e64db`.
+- Moved to executable `thm:decide` and original ranked restriction `thm:rpo`. Frozen ranked comparator `paper16/LANE-A-RPO-FROZEN.json` SHA-256 `22a2dbc4245c74ac1251e31c27dc582e921a0adcc8b2d9880c3e4f81f46d38d3`.
+
+## 2026-11-18 21:49 UTC — numbered thm:decide READY-FOR-ROOT-REVIEW
+
+- Exact `ProtectedSpineDecisionProof.exact_Decidability` checks executable weak, strict and both confined Booleans on all well-typed ordinary original input pairs, including unequal endpoint types. The procedure reads actual least-fixed-point observation bits at the blank port context. Confinement checks literal finite type support.
+- Frozen `paper16/LANE-A-DECISION-FROZEN.json` SHA-256 `3b895933a4c917e2fbc7d46f5413826e7bf90c2a7cedb57da3f43d3679402278`. Serialized receipt `1795038575414388282-13`, `A/decision-final-gate.log`. 344 recursively source-matched native modules, two exact aliases including adequacy, 64 frozen hashes, standard axioms only.
+- A original `A/DECISION-EVIDENCE.json` SHA-256 `9776e6edb1f420397504959d60fc2d3dc5d1b076774ac9481584d95c7bcf0ae6`. Root schema `paper16/LANE-A-DECISION-EVIDENCE.json` SHA-256 `28e39567877a1c09c1b209be91e7633a0ed7e3d8c76a761f729d83c53ed5e939`.
+- Active successor is the frozen `thm:rpo` comparator on the literal first-order ranked fragment.
+
+## 2026-11-18 22:00 UTC — numbered thm:rpo READY-FOR-ROOT-REVIEW
+
+- Exact `RankedRestrictionChecks.exact_ExactRankedRestriction` identifies original confined strict comparison with multiset RPO and confined weak comparison with multiset RPO or recursive multiset equality. Retains typed first-order ranked terms with ground-type variables, literal occurrence deletion/replacement, and target argument domination. The two directions use the original rules, including actual empty-tuple Select.
+- Frozen `paper16/LANE-A-RPO-FROZEN.json` SHA-256 `22a2dbc4245c74ac1251e31c27dc582e921a0adcc8b2d9880c3e4f81f46d38d3`. Serialized receipt `1795039135337979246-17`, `A/rpo-full-third-gate.log`. 79 recursively source-matched native modules, one exact alias, 38 frozen hashes. Exact axioms are only `propext` and `Quot.sound`.
+- A original `A/RPO-EVIDENCE.json` SHA-256 `90fdf837e07016caa01973130064caaca72513ee0cc6e138ad1c9d681126d73c`. Root schema `paper16/LANE-A-RPO-EVIDENCE.json` SHA-256 `110b564b9d163400fdf1c888f40066be917a2680f494b9d3d51278249f93974e`.
+- Active successor is `lem:carrier`, the literal zero-recursion native carrier and its two direct positive comparison contracts. It has existing recursor typing and full-Select suppliers.
+
+## 2026-11-18 22:03 UTC — numbered lem:carrier READY-FOR-ROOT-REVIEW
+
+- Exact `NativeCarrierChecks.exact_Carrier` constructs both original strict confined comparisons for the literal zero-recursion native carrier. It gives the three full outer Select calls, the three same-extra selections to the inherited target, and the scoped unused-binder selection of `K` supplying `P` to Copy. Confinement comes from the original support guards.
+- Frozen `paper16/LANE-A-NATIVE-CARRIER-FROZEN.json` SHA-256 `8c8e849c3c5c2f3a8b3b1a7045812a7807ec04ac2608d962bf46b1ed1c142e90`. Serialized receipt `1795039354222837109-12`, `A/native-carrier-second-gate.log`. 225 recursively source-matched native modules, one exact alias, 39 frozen hashes. Exact axioms `propext` and `Quot.sound`.
+- A original `A/NATIVE-CARRIER-EVIDENCE.json` SHA-256 `2ef37294ad3ecf461cf39bed50f8c16b4df12a7521ec43314f89cb909e8647d2`. Root schema `paper16/LANE-A-NATIVE-CARRIER-EVIDENCE.json` SHA-256 `38b543a4e32549e83c8ec99f7a6a70264cf538f8c5b16c7dd4086c4bc07b8b6f`.
+- Active successor `lem:indexed-carrier` uses its exact semantic-type erasure template and original context stability.

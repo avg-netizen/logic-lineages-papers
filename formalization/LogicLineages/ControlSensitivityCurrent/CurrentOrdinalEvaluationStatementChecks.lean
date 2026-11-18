@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.CurrentOrdinalEvaluationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.CurrentOrdinalEvaluation.StatementChecks
+theorem fixed_calibration : CurrentOrdinalEvaluationTargets.Calibration := calibration
+theorem fixed_effective : CurrentOrdinalEvaluationTargets.Effective := effective
+#audit_namespace LogicLineages.ControlSensitivityCurrent.CurrentOrdinalEvaluation.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.CurrentOrdinalEvaluation.StatementChecks

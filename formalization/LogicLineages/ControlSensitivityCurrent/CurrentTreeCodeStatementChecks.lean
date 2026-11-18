@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.CurrentTreeCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.CurrentTreeCode.StatementChecks
+theorem fixed_expansion : CurrentTreeCodeTargets.Exact := exactExpansion
+theorem fixed_effective : CurrentTreeCodeTargets.Effective := effective
+#audit_namespace LogicLineages.ControlSensitivityCurrent.CurrentTreeCode.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.CurrentTreeCode.StatementChecks

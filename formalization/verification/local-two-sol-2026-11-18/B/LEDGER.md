@@ -180,3 +180,45 @@ Evidence SHA-256 `a0fed43312ac850f396a06301002f71df821749ed26102fc086bc1b0fffee7
 handoff are under `paper19/CURRENT-GROUND-EQUIVALENCE-*`. Both source-exact
 computable reductions, input valuation calibration and selected actual
 DAG budgets are checked. The next target is `thm:control-hardness`.
+
+## 2026-11-18 21:26 UTC — CURRENT-MACHINE-PLAN
+
+**READY-FOR-ROOT-REVIEW** supporting packet. All machine conjunction equations are literal successor equations. Exact evaluation transports the conjunction and the compiled halting equivalence to every admissible policy. Frozen target namespace repair is preserved in the failure directory.
+Preflight `1795036253365948236-13`, exact gate `1795036253365948236-13`. Evidence `paper19/CURRENT-MACHINE-PLAN-EVIDENCE.json`
+SHA-256 `aac235a1e9630ab8402e6589afaf4b891f901ffca2fb0834cdef9d20c67eaeb6`. Next are the numbered hardness and finite-box gates.
+
+## 2026-11-18 21:26 UTC — CURRENT-ORDINAL-EVALUATION
+
+**READY-FOR-ROOT-REVIEW** supporting packet. The seven-case original ordinal AST fold returns the literal normal-note encoding and its selected-control ordinal denotation, uniformly at a supplied finite valuation. The program is total computable for computable source controls.
+Preflight `1795036433015039306-9`, exact gate `1795036587669733876-12`. Evidence `paper19/CURRENT-ORDINAL-EVALUATION-EVIDENCE.json`
+SHA-256 `bed13fa763b336ed6ba227c352cdfde4afb454bbe6a074d1a5a8f2a86a439f73`. Next are the numbered hardness and finite-box gates.
+
+## 2026-11-18 21:32 UTC — thm:control-hardness
+
+**READY-FOR-ROOT-REVIEW** `thm:control-hardness`. The same literal machine programs reduce nonhalting to strict and to direct K/I weak comparison under every policy. The independent restricted syntax class, exact output DAG bound, co-RE upper bound under effective parsing, many-one completeness and nonperiodicity are checked.
+Preflight `1795036638809151364-13`, exact confirmation `1795037497550972209-12`, 893 source-matched modules. Evidence `paper19/CURRENT-CONTROL-HARDNESS-EVIDENCE.json`
+SHA-256 `e55c89fb2a64fbd23acac62ed600ba85161f75abdecbd0dc1023c5bc36540333`. The next numbered target is `prop:actual-attainment`.
+
+## 2026-11-18 21:32 UTC — prop:counter-bound
+
+**READY-FOR-ROOT-REVIEW** `prop:counter-bound`. Both comparison modes on arbitrary result types have co-RE complements and are decidable exactly when countertuples have a total computable raw-coordinate bound. The actual typed assignments, both order tests and the zero-coordinate singleton box are used.
+Preflight `1795036895215165053-12`, exact confirmation `1795037497550972209-12`, 394 source-matched modules. Evidence `paper19/CURRENT-COUNTER-BOUND-EVIDENCE.json`
+SHA-256 `a3affbba8f0c160e583bed46b5a6b3621aea42a26abdbdc66c51b74d0f93ea29`. The next numbered target is `prop:actual-attainment`.
+
+## 2026-11-18 21:44 UTC — literal tree-code bridge
+
+**READY-FOR-ROOT-REVIEW** `literal tree-code bridge`. The actual shared source DAG is folded to the exact expanded term code used by the policy evaluator. The primitive recursive program reads the original root and the original references. This is a supporting packet.
+Preflight `1795037386363984413-12`, exact gate `1795037657779811245-14`, 131 source-matched modules. Evidence `paper19/CURRENT-TREE-CODE-EVIDENCE.json`
+SHA-256 `5049900cf49ba539e1a084639bae1c818179491b2df57a509a08193f1074034e`. The next numbered target is `lem:absolute`.
+
+## 2026-11-18 21:44 UTC — prop:actual-attainment
+
+**READY-FOR-ROOT-REVIEW** `prop:actual-attainment`. The supplied standard-control unary source yields its actual canonical vector, head and norm offset. The genuine finite prefix uses the complete descent count. The tail expression uses the same two natural witnesses and the original H call. The total numerical reduction returns literal strict and weak DAG pairs with answer complementation. Non-normal numerical notation codes use the documented guarded total extension.
+Preflight `1795037657779811245-14`, exact gate `1795038132370971714-12`, 592 source-matched modules. Evidence `paper19/CURRENT-ATTAINMENT-EVIDENCE.json`
+SHA-256 `35bed1c79b6dfcd6bc051868c80ae0fabb5de8a9a551445f18ca843e5683f538`. The next numbered target is `lem:absolute`.
+
+## 2026-11-18 21:58 UTC — lem:absolute
+
+**READY-FOR-ROOT-REVIEW** `lem:absolute`. The effective closed anchor is the actual selected-policy scalar of the literal ground-zero closing. The two unchanged probe DAGs have matching positive heads, and their two fixed-tail cancellations yield the exact shared scalar equation. The arithmetic witnesses define the original raw scalar for every result type.
+Preflight `1795038249016636208-13`, exact confirmation `1795038841698598195-12`, 633 source-matched modules. Evidence `paper19/CURRENT-ABSOLUTE-EVIDENCE.json`
+SHA-256 `675800ba949abeb7191461b60b41102ea2f3b663cfb1a95cbfeeee9a51c91f38`. The next numbered target is `thm:decision-equivalence`.
