@@ -1,4 +1,12 @@
-# The Wilken–Weiermann comparison collection
+# The earlier six-paper comparison collection
+
+**Historical organization.** Start with the [current five-paper guide](COMPARISON-RESOLUTION-GUIDE.md).
+The identity and multivariate papers are now combined; source expressivity and
+modular descent have revised accounts; the two core papers give the current
+structural and permitted-control results. This page preserves the earlier
+reading map and its version-specific scope. In particular, entry 06 has a
+[checked composition obstruction](06-godel-t-termination-ordering/STATUS.md);
+its older claims must not be treated as the current structural proof.
 
 These six working manuscripts explain and prove the established parts of a
 research programme around Wilken–Weiermann's ordinal assignments to Gödel's T.
@@ -74,3 +82,4 @@ no independent human audit, established novelty or journal acceptance is
 claimed. The separate formalization register records checked components;
 these six complete manuscripts and the source repair are not claimed to be
 fully Lean verified.
+

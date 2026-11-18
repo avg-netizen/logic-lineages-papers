@@ -1,0 +1,227 @@
+\section{A control with a one-step modular potential}\label{sec:controls}
+
+The freedom to choose the numerical control is decisive.  We use the
+finite hierarchy
+\[
+ F_0(n)=2^n,\qquad F_{j+1}(n)=F_j^{\,n+1}(n),\qquad
+ G(n)=F_5(n+100).
+\]
+The superscript on a function denotes iteration.  Put
+\(p(n)=\lfloor n/2\rfloor\) and
+\(L(n)=\operatorname{lcm}(1,\ldots,n)\), with \(L(0)=1\).
+For a prescribed integer \(b\ge0\), define
+\begin{align}
+ f_*(n)&=G(n)!+2p(n)-2,\label{eq:factorial-control}\\
+ f_b(n)&=\begin{cases}
+ G(n),&n\le b,\\
+ G(n)+((2p(n)-2-G(n))\bmod 2L(n)),&n>b.
+ \end{cases}\label{eq:near-control}
+\end{align}
+All remainders are least nonnegative remainders.  The first definition
+makes the divisibility transparent.  The second preserves an arbitrary
+finite prefix of the published example and satisfies
+\begin{equation}\label{eq:control-distance}
+ 0\le f_b(n)-G(n)<2L(n)\le2n!\quad(n>b).
+\end{equation}
+Below, \(f\) is either of these controls, and
+\(B_f=0\) for \(f_*\), \(B_f=b+1\) for \(f_b\).
+
+\begin{lemma}[Growth and modular decrement]\label{lem:control}
+The functions \(f_*\) and \(f_b\) are even-valued primitive recursive
+functions, majorize \(G\), and satisfy
+\begin{equation}\label{eq:growth}
+ f(n+1)\ge2^{2^{f(n)}},\qquad f(n)<G(n+1).
+\end{equation}
+They are eventually bounded by one fixed finite level of the hierarchy.
+For every \(m\ge1\),
+\begin{equation}\label{eq:potential}
+ p(f(n))\equiv p(n)-1\pmod m
+ \qquad(n\ge\max\{m,B_f\}).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Factorial, least common multiple, and bounded remainder are primitive
+recursive.  Every value of \(G\) is even.  The defining congruence for
+\(f_b\) is even, so \(f_b\) is even too.  Write \(A=G(n)\).
+Monotonicity of the iterates defining \(F_5\), including the extra iterate
+at the larger argument, gives
+\[
+ G(n+1)\ge F_4(G(n)+1).
+\]
+For \(A\ge16\),
+\[
+ 2A!\le2A^A<2^{A^2}<2^{2^A}.
+\]
+The fixed shift by 100 ensures this range at every input.  Also
+\(G(n)\ge2n!\) and \(G(n)\ge2n+2\).  Consequently
+\[
+ G(n)\le f_b(n)<2G(n),\qquad
+ G(n)\le f_*(n)\le2G(n)!.
+\]
+The latter lower bound holds also at \(n=0,1\), where subtracting two
+from \(G(n)!\) still leaves a number above \(G(n)\).
+The function \(F_4(A+1)\) dominates four successive exponentiations of
+two beginning at \(A\).  The preceding estimates therefore imply
+\eqref{eq:growth}, including the transition from the preserved prefix
+to the corrected tail in \(f_b\).  For all sufficiently large \(n\),
+\(G(n+1)=F_5(n+101)\le F_5(F_5(n))\le F_6(n)\), which is the
+required eventual finite-level bound.
+
+For \(f_*\) one has
+\[
+ p(f_*(n))=G(n)!/2+p(n)-1.
+\]
+If \(m\le n\), the integer \(2m\) is at most \(G(n)\), and hence
+\(m\mid G(n)!/2\).  For \(f_b\), its definition gives
+\(f_b(n)\equiv2p(n)-2\pmod{2L(n)}\) on the corrected tail.
+Divide this congruence by two and use \(m\mid L(n)\).  This proves
+\eqref{eq:potential}.
+\end{proof}
+
+The estimate \eqref{eq:growth} supplies the norm and separation margins
+used in the canonical assignment.  Equation \eqref{eq:potential} has a
+different purpose: it records the number of descent events without
+computing that number.  Since the norm orbit is strictly increasing,
+ordinary induction gives
+\begin{equation}\label{eq:orbit-potential}
+ p(f^i(t))\equiv p(t)-i\pmod m
+ \quad\text{for every }i\ge0,
+ \quad t\ge\max\{m,B_f\}.
+\end{equation}
+There is no bound on \(i\) in this identity.
+
+\section{Complete descent counts and entry residues}\label{sec:residues}
+
+For a nonzero limit \(\lambda<\varepsilon_0\), define
+\[
+ J_\lambda(t)=\psi_f(\lambda+t-N(\lambda)),
+ \qquad t\ge N(\lambda).
+\]
+The greedy evaluation starts at \(\lambda+t-N(\lambda)\).  At a
+nonfinite state \(h+k\), where \(h\) is its nonzero limit part, it
+moves to \(M(h,f(N(h+k)))\).  Let \(D_\lambda(t)\) be the number
+of such moves and \(Z_\lambda(t)\) the first finite state.  Thus the
+finite predecessor chain after that state is not included in \(D\).
+The maximal-predecessor and single-path lemmas give
+\begin{equation}\label{eq:terminal-decomposition}
+ u_i=f^i(t),\qquad Z_\lambda(t)=f^{D_\lambda(t)}(t),\qquad
+ J_\lambda(t)=Z_\lambda(t)+D_\lambda(t).
+\end{equation}
+The use of the limit part in the predecessor call is essential.
+
+\begin{theorem}[Uniform complete-count residues]\label{thm:counts}
+For every \(m\ge1\) and every nonzero limit \(\lambda\), put
+\(T=\max\{N(\lambda),m,B_f\}\).  For all \(t\ge T\),
+\begin{align*}
+ \lambda\ge\omega^2:\quad&
+ D_\lambda(t)\equiv p(t)\pmod m,\quad
+ Z_\lambda(t)\equiv0\pmod{2m},\quad
+ J_\lambda(t)\equiv p(t)\pmod m;\\
+ \lambda=\omega k:\quad&
+ D_\lambda(t)=k,\quad
+ Z_\lambda(t)\equiv2p(t)-2k\pmod{2m},\quad
+ J_\lambda(t)\equiv2p(t)-k\pmod m.
+\end{align*}
+In particular, the first line gives a period \(2m\) and the explicit
+table \(r\mapsto\lfloor r/2\rfloor\bmod m\) for every head
+\(\lambda\ge\omega^2\).
+\end{theorem}
+\begin{proof}
+Suppose \(\lambda\ge\omega^2\).  As long as the current limit part
+is above \(\omega^2\), the ordinal \(\omega^2\), of norm three,
+is an affordable predecessor.  The next limit part cannot fall below it.
+Strict descent of limit parts therefore forces a visit to
+\(\omega^2\).  Suppose this visit occurs at step \(i\), with norm
+\(v=f^i(t)\).  Evenness of the next budget gives the exact predecessor
+\[
+ M(\omega^2,f(v))=\omega\cdot f(v)/2.
+\]
+An \(\omega\)-coefficient decreases by exactly one at each subsequent
+nonfinite move, regardless of the finite tail.  Hence
+\begin{equation}\label{eq:funnel-count}
+ D_\lambda(t)=i+1+f(v)/2=i+1+p(f(v)).
+\end{equation}
+Equation \eqref{eq:orbit-potential} cancels the unknown \(i\), giving
+\(D_\lambda(t)\equiv p(t)\).  Apply that equation once more at the
+terminal event.  Since the terminal state is even,
+\(p(Z_\lambda(t))\equiv0\pmod m\) implies
+\(Z_\lambda(t)\equiv0\pmod{2m}\).  Now use
+\eqref{eq:terminal-decomposition}.
+
+For \(\lambda=\omega k\), exactly \(k\) nonfinite moves are made.
+The same orbit identity and terminal decomposition give the second line.
+These two cases exhaust the nonzero limits below \(\varepsilon_0\).
+\end{proof}
+
+The theorem uses one final passage through \(\omega^2\), rather than
+an induction computing the count at each higher ordinal.  The actual
+count can be enormous; its residue depends only on the original input.
+
+For \(\lambda>\nu\), with \(\lambda\) a nonzero limit and
+\(\nu\) a limit or zero, write \(E_{\lambda,\nu}(t)\) for the norm
+at the first entry into \([\nu,\nu+\omega)\), and
+\(\tau_{\lambda,\nu}(t)\) for its event count.  These functions
+are defined only when that entry occurs.  On an affordable tail,
+\begin{equation}\label{eq:entry-orbit}
+ E_{\lambda,\nu}(t)=f^{\tau_{\lambda,\nu}(t)}(t).
+\end{equation}
+The case \(\nu=0\) is the terminal pair \((Z_\lambda,D_\lambda)\).
+An identity interval is a separate convention with \(E(t)=t\) and
+\(\tau(t)=0\).
+
+\begin{proposition}[Entry tables]\label{prop:entry-residues}
+Put \(c_\nu=\lceil N(\nu)/2\rceil\).  On a computable tail,
+an interval of the form \(\lambda=\nu+\omega k\), \(k\ge1\),
+has \(\tau(t)=k\) and \(E(t)=f^k(t)\).  Every other proper interval
+has
+\begin{equation}\label{eq:long-entry-residues}
+ \tau(t)\equiv p(t)-c_\nu\pmod m,\qquad
+ E(t)\equiv2c_\nu\pmod{2m}.
+\end{equation}
+A sufficient tail for these formulas is
+\(t\ge\max\{N(\lambda),N(\nu)+3,m,B_f\}\).
+\end{proposition}
+\begin{proof}
+Write \(\nu=P+\omega j\), where every exponent in \(P\), if any,
+is at least two.  A proper interval is either the displayed finite
+\(\omega\)-tail or has \(\lambda\ge P+\omega^2\).
+In the latter case require
+\[
+ f(t)\ge N(P)+\max\{3,2j\}.
+\]
+This covers the norm bounds of the intermediate limit \(P+\omega^2\)
+and the true target.
+The stated tail implies this condition.  If the funnel is reached after
+\(i\) events at norm \(v=f^i(t)\), its next \(\omega\)-coefficient
+is \(f(v)/2-\lceil N(P)/2\rceil\).  Therefore
+\[
+ \tau(t)=i+1+p(f(v))-\lceil N(P)/2\rceil-j.
+\]
+Since \(N(\nu)=N(P)+2j\), the potential identity gives the first
+congruence.  Applying it at the entry event gives the second.
+For a finite \(\omega\)-tail the coefficient decreases by one at every
+event, giving the exact formulas directly.
+\end{proof}
+
+For use in arithmetic elimination, the complete tables are as follows.
+Here \(a\ge0\), and every displayed value residue has modulus \(2m\)
+except in the last row, whose modulus is \(m\).
+\begin{center}\small
+\begin{tabular}{@{}lll@{}}\toprule
+Field & \(k\)-event interval & Other proper interval\\\midrule
+\(\tau(t)\pmod m\) & \(k\) & \(p(t)-c_\nu\)\\
+\(E(t)\pmod{2m}\) & \(2p(t)-2k\) & \(2c_\nu\)\\
+\(f^a(E(t))\pmod{2m}\) & \(2p(t)-2(k+a)\) & \(2c_\nu-2a\)\\
+\(f(E(t))/2\pmod m\) & \(p(t)-k-1\) & \(c_\nu-1\)\\\bottomrule
+\end{tabular}
+\end{center}
+For a bare iterate \(f^a(t)\) with \(a\ge1\), the residue modulo
+\(2m\) is \(2p(t)-2a\).  The identity field remains \(t\), not
+\(2p(t)\); in particular its odd bit must be retained.
+
+The finite prefix cannot be discarded.  If \(b\ge3\), then at
+\(t=3\) the preserved control gives
+\(D_{\omega^2}(3)=G(3)/2+1\equiv0\pmod3\), whereas
+\(p(3)=1\).  The value \(G(3)\) is a power of four, which proves
+the displayed congruence without evaluating it.  Small inputs will be
+handled by the exact evaluator, not by extending the tail tables.

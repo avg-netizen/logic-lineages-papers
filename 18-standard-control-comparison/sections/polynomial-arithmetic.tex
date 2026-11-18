@@ -1,0 +1,661 @@
+\section{Finite-degree kernels and exact counters}
+\label{m:sec:polynomial-kernels}
+The next class requires counters as well as terminal norms. A dominant
+approximation would lose cancellations needed for multivariate comparison.
+For a fixed nonzero limit put
+\begin{equation}\label{m:eq:J}
+ J_\lambda(t)=\psi\bigl(\lambda+t-N(\lambda)\bigr),
+ \qquad t\ge N(\lambda),\qquad J_0(t)=t.
+\end{equation}
+Thus $h_\lambda(n)=J_\lambda(N(\lambda)+n)$, and $t$ is the
+whole ordinal norm.  Corollary~\ref{f:cor:closed-evaluation} gives
+$J_\lambda(t)=f^\tau(t)+\tau$, where $\tau$ is the complete
+replacement count.  The offset $N(\lambda)$ is retained throughout.
+
+For integer $d\ge1$, retained numerical norm $c\ge0$, and initial control
+input $t$ with $c\le f(t)$, start with suffix $\omega^d$.
+At step $i\ge1$ use total norm $f^i(t)$. If the nonfinite suffix is $\eta+n$, with nonzero limit
+part $\eta$ and finite $n$, replace it by $M(\eta,f^i(t)-c)$: the greatest
+suffix below its \emph{limit part} of norm at most $f^i(t)-c$.
+This is the limit-part convention of the principal-kernel definition; taking
+the predecessor below the whole current suffix defines a different process.
+Stop as soon as the suffix is finite. Let $E^d_c(t)$ be the number of
+steps and
+\[
+ X^d_c(t)=f^{E^d_c(t)}(t).
+\]
+Each replacement strictly decreases an ordinal, so the process terminates.
+Theorem~\ref{f:thm:maximum-predecessor} supplies the
+finite algorithm and full-budget saturation. The numerical definition makes
+sense even for $c$ not realized by any actual ordinal prefix.
+It also permits $c>t$: the initial $t$ records the control input, rather
+than the norm $c+N(\omega^d)$ of the unpadded principal and numerical mass.
+The first replacement has suffix norm $f(t)-c$ by limit-part saturation,
+so its total norm is exactly $f(t)$; subsequent total norms are $f^i(t)$.
+Writing $Q=M(\omega^d,f(t)-c)$, the complete count is one plus the
+compensated controlled count starting at $Q$.
+
+When $t\ge c+d+1$, the numerical process agrees, from its first replacement
+through the first finite exit, with the principal kernel's norm-padded startup
+$\omega^d+(t-c-N(\omega^d))$. This stronger condition is required for
+correspondence with the principal kernels and the genuine-prefix interpretation; it is not
+imposed on the broader numerical process.
+
+For a genuine prefix $\mu$ whose least CNF exponent is at least $d$, and
+$c=N(\mu)$, splitting the controlled history gives
+\begin{equation}\label{m:eq:prefix}
+ J_{\mu+\omega^d}(t)=J_\mu(X^d_c(t))+E^d_c(t),
+       \qquad t\ge c+d+1.
+\end{equation}
+The output of $X$ is still the \emph{total} norm, so the prefix mass is not
+subtracted again. An admissible signed pair $(d,j)$ has $d\ge2$ and
+$j\in\mathbb Z$, or $d=1$ and $j\ge0$. For each such fixed pair, put
+$X^d_{c,j}(t)=f^{E^d_c(t)+j}(t)$ on a tail where the exponent is positive.
+For $d=1$, the depth is $1+j$, so a negative $j$ has no positive-depth tail.
+These are coherent depths: $f(X^d_{c,j})=X^d_{c,j+1}$. A negative $j$ is a
+fixed number of already available predecessors under $f$; it is not a new
+variable-iteration graph.
+
+\begin{lemma}[Exact block recursion]\label{m:lem:kernel-recursion}
+One has
+\[
+ E^1_c=1,\quad X^1_c=f,\qquad
+ E^2_c(t)=f(t)/2-\lceil c/2\rceil+1.
+\]
+Define
+\begin{equation}\label{m:eq:V}
+ V_j(t)=f^{\,f(t)/2+j+1}(t).
+\end{equation}
+Then $X^2_{c,j}=V_{j-\lceil c/2\rceil}$ for every fixed signed $j$ on
+its positive-depth tail. For $d\ge2$, the unsigned identity
+$X^d_c=X^{d-1}_c\circ X^d_{c+d}$ and the count identity
+\eqref{m:eq:Erec} hold on a computable tail. The signed identity
+\eqref{m:eq:Xrec} holds when $d\ge3$ or $j\ge0$:
+\begin{align}
+ X^d_{c,j}&=X^{d-1}_{c,j}\circ X^d_{c+d},\label{m:eq:Xrec}\\
+ E^d_c&=E^{d-1}_c\circ X^d_{c+d}+E^d_{c+d}.\label{m:eq:Erec}
+\end{align}
+\end{lemma}
+\begin{proof}
+For $d=1$ the first predecessor is finite. For $d=2$, the first
+predecessor has $\lfloor(f(t)-c)/2\rfloor$ copies of $\omega$ and a finite
+remainder; each $\omega$ copy then costs one replacement. The function $f$
+is even, which gives the displayed formula.
+For general $d$ write $B=f(t)$ and $B-c=dq+\rho$, $0\le\rho<d$. The first
+predecessor has leading part $\omega^{d-1}q$. Its remainder is zero if
+$\rho=0$, finite one if $\rho=1$, and $\omega^{\rho-1}$ if $\rho\ge2$.
+This is the largest remainder \emph{below $\omega^{d-1}$} under the norm
+budget, not a maximum with no ordinal bound. Removing it leaves norm $B$
+with spent count one in the first two cases, or norm
+$X^{\rho-1}_{B-\rho}(B)$ with count $1+E^{\rho-1}_{B-\rho}(B)$ otherwise.
+The remaining $q$ degree-$(d-1)$ blocks have retained masses
+$c+d(k-1)$, for $k=q,q-1,\ldots,1$. Their $X$ maps compose and their $E$
+counts add. Replacing $c$ by $c+d$ preserves the initial remainder and
+initial entry but stops one block earlier. This proves both recurrences,
+including the coherent final depth $j$ whenever its degree-$(d-1)$
+child is admissible. For $d=2$ and negative $j$, the child has no positive
+depth; the exact quadratic $V$ formula applies instead. This is also a
+rank-recursive exact evaluator for every displayed kernel and counter.
+\end{proof}
+
+\begin{example}[The first counter that must be retained]
+For $\lambda=\omega^3$, formula \eqref{m:eq:prefix} gives
+$J_\lambda(t)=X^3_0(t)+E^3_0(t)$. For $\lambda=2\omega^3$, it gives
+$J_\lambda(t)=J_{\omega^3}(X^3_4(t))+E^3_4(t)$, since
+$N(\omega^3)=4$. Replacing either expression by its outer $X$ alone would
+change exact graph equations and could change the result of cancellation.
+\end{example}
+
+\subsection{Separation with indices allowed to grow}
+We need a uniform estimate, because the block recursion creates retained
+masses comparable with $f(t)$. Merely proving a tail for each fixed mass
+would not license the induction.
+
+\begin{lemma}[Uniform kernel separation]\label{m:lem:uniform}
+Put $C_d=1000d^2$, $T_3=16$, and for $d\ge4$ put
+$T_d=\max(T_{d-1},100C_{d-1}+100d)$. For $d\ge3$, $c,e\ge0$, signed
+$j,k$, and $R\ge0$, suppose
+\begin{equation}\label{m:eq:region}
+ t\ge T_d,\qquad
+ f(t)\ge C_d(c+e+|j|+|k|+R+1).
+\end{equation}
+Then the depths are defined and at least $f(t)$, and
+\begin{align*}
+ X^d_{c,j}(t+1)&>f^R(X^d_{e,k}(t)),\\
+ c<e\quad&\Longrightarrow\quad
+ X^d_{c,j}(t)>f^R(X^d_{e,k}(t)).
+\end{align*}
+At equal input and equal $c$, exact order is order of $j$. On a common
+computed tail, equality of two rank-$d$ values occurs exactly when input,
+$c$, and $j$ are identical.
+\end{lemma}
+\begin{proof}
+We first record the elementary degree-two estimate. If
+$A=f(w)/2\ge |j|+|k|+R+4$, then
+\[
+ V_j(w+1)>f^R(V_k(w)).
+\]
+Indeed $f(w+1)/2-A\ge A$, so the left iterate starts at a larger seed and
+has more iterations than the right one plus $R$. At equal input, the $V$
+values are ordered exactly by their indices. This argument permits indices
+and required depth varying with a later induction parameter, provided the
+displayed numerical bound is paid.
+
+For $d=3$, Lemma~\ref{m:lem:residues} at moduli two and three gives
+that $B=f(t)$ is even and $B\equiv1\pmod3$; write
+$a=(B-1)/3$, which is odd. The three initial entries for prefix classes
+$\delta=0,1,2$ are
+\[
+\begin{array}{c|ccc}
+\delta&\text{initial }c&\text{entry norm}&\text{spent count}\\ \hline
+0&B-1=3a&B&1\\
+1&B=3a+1&B&1\\
+2&B-2=3(a-1)+2&f(B)&2.
+\end{array}
+\]
+Descending $c$ by three applies $V_{-\lceil(c-3)/2\rceil}$ to the preceding
+entry and adds its displayed iteration length to the counter. Write
+$Y^\delta_r=X^3_{3r+\delta}(t)$. At the first common entry $r=a-1$,
+$Y^0_r=f(Y^1_r)$, since the two subtracted ceilings differ by one. One
+further aligned block amplifies this integer input gap to any fixed
+$f$-depth by the degree-two estimate. Subsequent indices are favourable:
+the class-zero index is no smaller than the class-one index. Next,
+$Y^2_{a-1}=f(B)$ whereas
+\[
+ Y^1_{a-1}=f^\ell(B),\qquad
+ \ell=f(B)/2-\lceil(3(a-1)+1)/2\rceil+1.
+\]
+For $a$ larger than the desired depth by ten, $\ell$ exceeds that depth
+plus one. Finally align class two at entry $r-1$ with class zero at entry
+$r$. The initial seeds satisfy $f(B)>B$, and
+$\lceil(3r-4)/2\rceil\le\lceil(3r-3)/2\rceil$, so the degree-two
+estimate again applies in the favourable direction. Consequently
+\[
+ Y^0_r>f^L(Y^1_r),\quad
+ Y^1_r>f^L(Y^2_r),\quad
+ Y^2_r>f^L(Y^0_{r+1})
+\]
+at all required target entries, after paying the fixed depth $L$.
+All smaller block entries are at least $B$, and the absolute degree-two
+indices are at most $\lceil3a/2\rceil+2$ plus fixed alignment shifts;
+$f(B)/2$ pays their sum and $L$. Condition \eqref{m:eq:region}, with
+$C_3=9000$, gives $c,e\le B/9000$ and
+$L=R+|j|+|k|+1\le B/9000$.  Each target coefficient index is at
+most $B/27000$, whereas $a=(B-1)/3$.  Thus there are more than
+$L+10$ blocks between the starting classes and every required target.
+The displayed quadratic estimate pays the signed depth offsets as well
+as $R$.  This proves the same-input statement by chaining the three
+adjacent classes.
+
+For cross-input cubic comparison, $B'=f(t+1)>2^B$ supplies more than one
+extra leading block. At the smaller process's starting coefficient,
+the larger process has completed a quadratic block and has seed at least
+$f(B')>f(B)$, exceeding either possible smaller seed. Align the remaining
+blocks, shifting the coefficient alignment by at most
+$\max(\lfloor c/3\rfloor-\lfloor e/3\rfloor,0)$. Their indices are bounded
+by $\lceil3a/2\rceil+2$ plus this shift, and their differences are bounded
+by twice the shift plus three. The same degree-two estimate at smaller
+entry at least $B$ pays each comparison. Extra remaining blocks only
+increase the final norm. This proves the cubic cross-input statement.
+
+For the induction $d\ge4$ set $L=R+|j|+|k|+1$, $B=f(t)$.
+Condition \eqref{m:eq:region} leaves at least $B/(2d)>L+2$ leading
+blocks. Every aligned lower-rank mass is at most $2B$, and both its pair
+sum and each self-pair sum, together with $L+1$, are at most $5B$.
+All smaller aligned entry norms are at least $B$. Since
+$B\ge T_d\ge100C_{d-1}$,
+\[
+ f(B)\ge2^B>5C_{d-1}B.
+\]
+Thus the induction hypothesis is valid at the \emph{smaller} entry norm
+even though the new masses may be comparable with $B$.
+
+At equal $t$ and $c<e$, align the two descents at the initial leading
+coefficient of the $e$ process. If no extra leading block was needed,
+the $c$ process's remainder is at least as large, with smaller retained
+mass. If extra blocks were needed, its last extra full block exceeds the
+other initial remainder. These facts order their aligned seeds weakly.
+To justify this seed comparison explicitly, maximal predecessors are
+monotone in both ordinal bound and norm budget. If entry norms $v\ge w$
+and masses $a,b$ satisfy
+$f^i(v)-a\ge f^i(w)-b$ at every step, the first process stays above the
+second at simultaneous steps, so takes at least as many steps and has at
+least as large a terminal norm. Decreasing mass at equal entry is therefore
+favourable. A larger entry also pays an adverse mass difference whenever
+$f(v)-f(w)\ge a-b$, since successive iterate gaps do not decrease.
+At aligned block $k$ the lower masses are $c+d(k-1)<e+d(k-1)$.
+Equal seeds use lower-rank same-input separation; distinct seeds use
+lower-rank cross-input separation. The estimates just proved pay both,
+including lower self-pairs. One such block gives depth $L$, and the rest
+preserve it.
+
+At $t+1$, its first budget $B'>2^B$ gives an extra full leading block
+before alignment. Its entry is at least $B'$ and retained mass at most
+$B'$. The smaller initial remainder is below that block, has entry $B$,
+and retained mass at most $B$. The inequality
+$f(B')-f(B)>B'$ pays even an adverse retained mass; hence the larger seed
+is strict. At subsequent aligned blocks the mass pair is bounded by
+$4B$; lower-rank cross-input separation, including its self-pair bounds,
+applies as before. This proves the cross-input statement. Monotonicity
+at fixed mass extends adjacent comparison to arbitrary larger inputs.
+
+Finally the number of remaining blocks exceeds $|j|+|k|+1$, so signed
+depths leave a positive iterate and output at least $f(t)$. Taking the
+maximum of the cross-pair and the two self-pair thresholds excludes every
+unequal-input or unequal-mass equality. The coherent identity settles the
+remaining equal-input, equal-mass case.
+\end{proof}
+
+\subsection{Counter leaders, exact ties, and residues}
+For $r\ge3$ define $A_r=t$ and successively
+\[
+ A_{h-1}=X^h_{c+h}(A_h)\quad(h=r,r-1,\ldots,4),\qquad
+ u=X^3_{c+3}(A_3),\qquad H=f(u).
+\]
+We call $H$ the counter's \emph{leader}; $u$ is its leader preimage.
+
+\begin{lemma}[Counter expansion and collision]\label{m:lem:counter}
+On an effective tail,
+\begin{equation}\label{m:eq:counter-expand}
+ E^r_c(t)=\frac H2+1-\lceil c/2\rceil
+                  +\sum_{h=3}^r E^h_{c+h}(A_h),
+ \qquad \frac H2<E^r_c(t)<\frac{3H}{4}.
+\end{equation}
+Suppose counters of ranks $r\ge s\ge3$ have equal leaders. Then they
+have the same prefix index $c$. If $r=s$ their whole values are equal;
+if $r>s$ the smaller-rank input is the corresponding $A_s$, and
+\begin{equation}\label{m:eq:collision}
+ E^r_c(t)-E^s_c(A_s)=\sum_{h=s+1}^r E^h_{c+h}(A_h).
+\end{equation}
+Every counter introduced on the right has rank strictly greater than $s$.
+For distinct leaders, counter order agrees with leader order. Equal
+leaders are ordered by counter rank, with equality at equal rank.
+\end{lemma}
+\begin{proof}
+Iterate \eqref{m:eq:Erec} until the cubic term; its bottom quadratic count
+is $f(X^3_{c+3}(A_3))/2+1-\lceil c/2\rceil$. This proves the exact
+identity. A descent with initial norm $w$ and $L$ steps satisfies
+$L\le f^L(w)-w$, since each iterate increases its integer argument.
+Thus each residual above rank three is less than its next entry norm,
+hence less than $u$. The cubic residual plus the fixed correction is also
+less than $u$, since it is at most $u-A_3+1-\lceil c/2\rceil$.
+It is positive on a computed tail: the number of cubic blocks tends to
+infinity. Therefore
+\[
+ H/2<E^r_c(t)<H/2+(r-2)u<3H/4
+\]
+once $f(u)>4(r-2)u$ and the finite correction bound is paid.
+
+Equality of leaders first cancels $f$, then compares the two outer cubic
+kernels $X^3_{c+3}$. Lemma~\ref{m:lem:uniform} forces equality of their
+prefix indices and arguments. Cancel the equal rank-four kernels next,
+then rank five, up to rank $s$. If $r=s$ the original inputs are equal.
+If $r>s$ the rank-$s$ input is precisely $A_s$. Subtraction of the exact
+recursions gives \eqref{m:eq:collision}. Its right side is positive and tends
+to infinity. For different leaders $H_1<H_2$, their being distinct values
+of $f$ gives $H_2\ge2^{H_1+1}$; the half-core bounds make the order strict.
+This also proves the assertions with arbitrary fixed outer shifts after
+raising the computed tail.
+\end{proof}
+
+\begin{lemma}[Effective residues of kernels and counters]\label{m:lem:kernel-residues}
+For each fixed $d\ge1$, $c\ge0$ and $m\ge1$, the counter $E^d_c$
+has an effectively computable constant residue modulo $m$ on a computable
+tail. For every admissible signed pair $(d,j)$, the same holds for
+$X^d_{c,j}$ on its positive-depth tail. The $X$
+residue is $r_m$. A valid counter residue is
+\begin{equation}\label{m:eq:E-residue}
+ E^d_c(t)\equiv
+ p_d\bigl((r_{Q_d}-c)\bmod Q_d\bigr)\pmod m,
+ \qquad Q_d=d!m^{d-1},
+\end{equation}
+where $p_d(n)$ counts partitions of $n$ into parts at most $d$.
+\end{lemma}
+\begin{proof}
+A coherent $X$ lies in the range of $f$ with preimage at least $t$ on a
+computed tail. Apply Lemma~\ref{m:lem:residues}.
+For the counter we use the restricted-partition and congruent-budget
+theorems of \cite{wwcounts}, with the following exact contract.  The
+integer $Q_d=d!m^{d-1}$ is a period of $p_d(n)$ modulo $m$.  A
+norm-padded $\omega^d$ block of initial total norm $t\ge c+d+1$,
+retaining numerical mass $c$, has complete count congruent to
+$p_d(S-c)$ modulo $m$ if every subsequent total budget is at least
+the current total norm and congruent to one $S\ge c$ modulo $Q_d$.
+The predecessor is taken below the current limit part and the segment
+ends at the first finite suffix.  The budgets need not be equal.
+
+Take
+\[
+ t\ge\max\{c+d+1,Q_d\},\qquad
+ S=c+((r_{Q_d}-c)\bmod Q_d).
+\]
+The numerical kernel agrees with the genuine norm-padded block on this
+tail.  Every actual budget $f^i(t)$, $i\ge1$, exceeds the preceding
+total norm and is congruent to $r_{Q_d}$, by
+Lemma~\ref{m:lem:residues}.  The cited transfer theorem therefore applies.
+The partition period gives \eqref{m:eq:E-residue}.  Finite dynamic
+programming computes $p_d(n)$ for $n<Q_d$; all smaller valid inputs
+can be evaluated exactly.  This proves an explicit residue tail without
+using comparison or an existential decision procedure.
+\end{proof}
+
+\section{Closed existential word arithmetic}
+\label{m:sec:word-arithmetic}
+Fix a finite maximum degree $D\ge3$. A \emph{word} in one raw variable
+is a finite composition of signed constant shifts and the functions
+\[
+ f,\quad V_j,\quad X^r_{c,j},\quad E^r_c\quad(3\le r\le D),
+\]
+with fixed integer indices satisfying the preceding conventions. A
+word-linear row is an integer linear combination of finitely many such
+words, evaluated in possibly different raw variables, plus a constant.
+We allow arbitrary Boolean combinations of row comparisons with zero and
+fixed-modulus congruences. Each raw variable has an explicit individual
+lower bound ensuring that all its words are defined.
+These bounds concern every displayed occurrence, including an occurrence
+whose coefficient is zero.  The domain of the whole query is the
+conjunction $\bigwedge_i x_i\ge b_i$ of those individual bounds;
+it is not changed by a Boolean negation inside the matrix.
+
+Every word has a computable domain tail and a lower offset $M$ with
+$W(n)\ge n-M$. This follows structurally: shifts add to the offset;
+$f$, $V$, and coherent $X$ dominate their input on their stated tails;
+counters do so as well. For the latter, a sufficiently large degree-three
+block contains two quadratic blocks, and a quadratic block entered at
+least at $f(t)$ already spends more than $f(t)$ steps. Higher-degree blocks
+contain one of these. These structural bounds also pay every threshold at
+an interior argument of a composition. They are not obtained by treating
+the interior argument as a raw variable.
+
+\begin{lemma}[Ordered maximum-variable guards]\label{m:lem:guards}
+For two words $A(x),B(y)$ and the guard $x\ge y$, an effective common
+tail permits their three-way comparison to be rewritten as a finite Boolean
+combination in which $x$ occurs only linearly and words are applied only
+to the remaining variable $y$. For two words at the \emph{same} raw
+variable the corresponding tail comparison is effectively decided.
+All thresholds and newly generated words are computed before the tail is
+used.
+\end{lemma}
+\begin{proof}
+Peel fixed outer shifts. Unequal range values have gaps eventually larger
+than a fixed shift. Lemma~\ref{m:lem:counter} gives the same fact for two
+counter values, including equal-leader unequal-rank values whose exact
+residual difference tends to infinity. For a counter with preimage $u$
+and range value $f(v)$, its half-core bounds give
+\[
+ E^r_c<f(v)\ \Longleftrightarrow\ u\le v,
+ \qquad E^r_c>f(v)\ \Longleftrightarrow\ u>v;
+\]
+the gaps again tend to infinity. Thus fixed shifts are kept for exact-core
+ties and otherwise cannot close the gap.
+
+For $f/f$ strip the two $f$ nodes. For $f$ against a coherent range
+kernel, move one fixed depth to its index and strip $f$; for example
+$V_j=f\circ V_{j-1}$. Two $V$ heads compare lexicographically by argument,
+then by index, using the elementary estimate in the proof of
+Lemma~\ref{m:lem:uniform}. Two equal-rank $X$ heads compare by argument,
+then by $(-c,j)$, using that lemma and retaining the exact equal-input
+branch.
+
+For $X^r$ against $X^s$ with $r>s\ge3$, expand only the higher-rank head
+by \eqref{m:eq:Xrec} until its outer rank is $s$, and immediately compare
+and strip that head against the opposite rank-$s$ head. If $s=2$,
+the exposed quadratic head is $V_{j-\lceil c/2\rceil}$ and the same
+procedure uses its index comparison. No inverse counter is introduced.
+For counter/range comparison use the displayed preimage rule. For
+counter/counter comparison use their leader preimages followed by the
+rank and exact-tie rule of Lemma~\ref{m:lem:counter}.
+
+Here is a termination measure, needed because mixed-rank expansion can
+increase the written expression. First count all $E$ nodes in the two
+words. Replacing a counter by its leader-preimage composition removes
+its outer $E$ node and retains its argument once. For the range part,
+assign each rank-$s$ occurrence weight $\omega^{D-s}$, where $f$ has
+rank one and $V$ rank two, and naturally sum these weights. A mixed
+comparison deletes the opposite rank-$s$ occurrence and introduces only
+finitely many occurrences of ranks strictly above $s$, retaining the
+original higher-rank occurrence. Its ordinal weight decreases. Equal-rank
+stripping and $f$ cancellation decrease weight as well. The lexicographic
+pair (number of $E$ nodes, range weight) is therefore well-founded along
+every recursive child. There are finitely many branches at each step.
+
+Ultimately the $x$ side is a shifted leaf, so its comparison with a word
+at $y$ is linear in $x$; or the $y$ side is a shifted leaf and the $x$
+side is nonlinear. In the latter case the nonlinear value is at least
+$2^{x-M}$ for a computed $M$, so eventually exceeds $y$ plus any fixed
+shift, since $y\le x$. When both words have the same raw variable,
+continue stripping until leaves or leaf/nonlinear growth decides the
+comparison; do not create a purported linear atom $x<W(x)$.
+Take the finite maximum of all local bounds using the structural offsets
+of interior arguments. The finite recursion tree, rather than a guessed
+fixed envelope of indices, computes that maximum.
+\end{proof}
+
+The guards compare individual word values. A linear row can still cancel
+its largest values, so it requires a different induction.
+
+\begin{lemma}[Ranked cancellation]\label{m:lem:row}
+For a finite collection of word-linear rows and a chosen maximal raw
+variable $x$, one can compute a tail and finite guarded cases in which
+each row either has a known strict sign or is exactly linear in $x$.
+The guards can themselves be made linear in $x$ by
+Lemma~\ref{m:lem:guards}. No correlation between word values is discarded.
+\end{lemma}
+\begin{proof}
+Absorb fixed outer shifts into the constant and keep raw-linear terms
+separate. The other top-level atoms are ordinary range values (rank zero
+for this row argument) and counters of ranks $3,\ldots,D$. Partition their
+ordinary values and counter leaders into ordered equality classes, retaining
+every equality and order guard. Merge equal-rank counters in a class as
+\emph{whole counters}, justified by Lemma~\ref{m:lem:counter}. Prefer a
+representative actually involving $x$ when one remains in the current
+class. A class now has ordinary coefficient $a$ and at most one coefficient
+$b_r$ for each counter rank. Its leading coefficient is
+\[
+ a+\tfrac12\sum_r b_r.
+\]
+If it vanishes, pay its residuals before deciding any sign. When $a\ne0$,
+expand the counters by \eqref{m:eq:counter-expand}; the common half-leader
+cancels the ordinary atom, leaving only residual counters and constants.
+When $a=0$, let $s$ be the least surviving counter rank. Rewrite each
+higher counter by \eqref{m:eq:collision} as the common rank-$s$ counter plus
+higher-rank residuals. Since $\sum b_r=0$, the common term cancels. Remove
+an entirely zero class. Repartition after every rewrite, since its newly
+exposed leaders may coincide with leaders elsewhere in the row.
+
+Count \emph{top-level} row atoms, assigning the ordinary rank-zero atom
+weight $\omega^D$ and a rank-$r$ counter weight $\omega^{D-r}$.
+Natural sum is a well-founded measure. The first rewrite loses a rank-zero
+atom and adds only positive-rank atoms. The second loses the least rank
+$s$ and adds only ranks strictly greater than $s$. Existing higher-rank
+atoms can proliferate, but cannot offset that ordinal decrease. Nested
+nodes inside their arguments are not included in this measure; their
+comparisons terminate by the separate guard measure. Every branching row
+rewrite therefore strictly decreases weight. The tree is finitely
+branching and has no infinite branch, so it is finite. Enumerating it to
+completion computes all generated words, coefficients, prefix indices,
+and guard thresholds before any finite-prefix case is split off.
+
+After the rewrites every surviving leading coefficient has absolute value
+at least $1/2$. Let $P=f(u)$ be the greatest surviving leader, $S$ the
+current absolute nonlinear coefficient mass, and $A,B$ bounds for the
+absolute raw-linear coefficients and constant. The exact counter
+corrections have total size at most $DSu$. Every smaller leader $Q$
+satisfies $Q<\log_2 P$, so its total contribution is at most
+$S\log_2P$. For $u\ge8DS+16$ each of these two errors is less than $P/16$.
+
+If a current nonlinear $x$ occurrence survives, the greatest leader is
+at least its leader. Structural offsets therefore give $u\ge x-M$ for a
+computed $M$. Require $x\ge2M+16$ and $x\ge8(A+B+1)$. The elementary
+inequality $2^{x-M}\ge x^2$ on this range, proved at the initial value
+and then by doubling, gives $Ax+B<P/8$. Total error is less than $P/4$,
+while the leading magnitude is at least $P/2$. Hence its coefficient
+strictly determines the sign. If no current nonlinear $x$ occurrence
+remains, keep the exact row, which is linear in $x$.
+
+Growth provenance refers only to current occurrences. A deleted leader
+passes no $x$ label to a residual which does not actually contain $x$.
+This prevents an invalid sign decision after cancellation has removed all
+nonlinear dependence on $x$. Take maxima of these explicit bounds over the
+finite row and guard trees. Ordered partitions retain the original shared
+arguments throughout, even when an inconsistent branch is later discarded.
+\end{proof}
+
+\begin{theorem}[Closed existential word arithmetic]\label{m:thm:existential}
+The existential closure of every Boolean combination of word-linear row
+comparisons and fixed-modulus congruences in the finite-degree language
+above is decidable, on its explicit word domains.
+\end{theorem}
+\begin{proof}
+First remove a variable which occurs only linearly, if any, by ordinary
+Presburger quantifier elimination \cite{cooper}, including its explicit
+lower bound in the matrix. Words in other variables are parameters
+in this step; the eliminated variable occurs in none of them.  The
+Presburger equivalence is valid for every assignment of its parameter
+symbols, hence for their actual correlated word values.  Its output
+uses only integer-linear rows and fixed-modulus congruences in those
+same parameters.  Substituting the words back therefore stays in the
+stated syntax and does not apply any word to a new sum. Repeat or
+evaluate the closed matrix if no variables remain.
+
+Otherwise branch on a maximal raw variable $x$, retaining $x\ge x_i$.
+Compute the complete finite guard and row trees of
+Lemmas~\ref{m:lem:guards}--\ref{m:lem:row}. Compute residue thresholds for each
+congruence as well: Lemma~\ref{m:lem:kernel-residues}, composed with interior
+lower-offset bounds, makes every nonlinear word's residue constant.
+Collect shifts in its fixed residue. On that tail, congruences are thus
+congruences in raw variables only. Take a common $N$ paying all original
+and generated domains, sign estimates, guards, and residue bounds.
+
+Before executing any tail transformation, split the \emph{original current
+matrix} into the all-raw-inputs-$\ge N$ branch and finitely many branches
+fixing some raw $x_i=c<N$ above its original lower bound. In a finite
+branch substitute $c$ into its original words and evaluate them exactly.
+Do not evaluate a newly introduced coherent negative-depth word below the
+tail on which it was introduced. Exact kernel evaluation is finite by the
+block recursion. Each such branch removes a quantified variable.
+
+On the all-large branch, use the guarded row and congruence transformations.
+Everything now contains $x$ only linearly. Presburger elimination of
+$\exists x$, treating words in the remaining variables as parameters,
+again produces word-linear rows and congruences with one fewer variable.
+Preserve all Boolean connectives and every equality/order guard. No word
+has been applied to a sum, and no auxiliary derived value has been made
+an independent witness.
+
+The output retains the lower bounds of the remaining variables.  Each
+new word introduced in the finite normalization tree has already had
+its genuine domain paid by the chosen common $N$.  Thus the recursive
+call has the same explicit individual-domain contract as the input.
+Any new congruence modulus created by Presburger elimination is dealt
+with in that smaller-variable call, not by restarting the present
+dimension in search of a stable cutoff.
+
+The induction measure for the whole algorithm is the number of raw
+existential variables. It strictly decreases in every finite-prefix,
+pure-linear, and all-large branch. The subsidiary guard and row trees are
+finite by their own measures. Consequently this is a terminating effective
+procedure. No feasible complexity estimate follows: finite exception values
+and arithmetic thresholds can be extremely large.
+\end{proof}
+
+This theorem is deliberately about \emph{closed existential} sentences.
+In a formula with a free parameter, that parameter could be the largest raw
+argument and could not be removed by the stated induction. We have proved
+neither free-parameter quantifier elimination nor the full first-order
+theory of arbitrary polynomial-collapse functions.
+
+\subsection{Exact polynomial graphs}
+\begin{theorem}[Polynomial collapse graphs]\label{m:thm:graphs}
+For each fixed nonzero polynomial limit $\lambda<\omega^\omega$, the graph
+$y=h_\lambda(n)$ is effectively expressible as a finite disjunction of
+word-linear equations in $n,y$, with explicit domains and exact finite
+exceptions. One finite degree bound suffices for each finite collection of
+such graphs. Arbitrary fixed nesting and addition of these functions admit
+a total functional existential graph translation.
+\end{theorem}
+\begin{proof}
+Remove one unit at the least positive degree of $\lambda$, writing
+$\lambda=\mu+\omega^d$, and put $c=N(\mu)$. There are finitely many
+monomial units. Starting with $2J_0(t)=2t$, compile \eqref{m:eq:prefix}
+recursively: substitute the unary word $X^d_c(t)$ for the input in the
+already compiled expression for $2J_\mu$, and add $2E^d_c(t)$. For $d=1$
+use $X=f$, $2E=2$; for $d=2$ use
+\[
+ X=V_{-\lceil c/2\rceil},\qquad
+ 2E=f(t)-2\lceil c/2\rceil+2;
+\]
+for $d\ge3$ retain the $X$ and $E$ heads. This substitution composes unary
+words only. It never applies a function to a sum of compiled values.
+
+Finally replace $t$ by $n+N(\lambda)$. On a computed tail this yields
+$2y=P_\lambda(n)$ with an integer word-linear $P_\lambda$. The finitely
+many excluded $n\ge0$ are evaluated by the total closed predecessor
+algorithm and included as disjuncts $n=k$, $y=h_\lambda(k)$. The graph is
+therefore total and functional on the original natural domain.
+To flatten a nested expression, introduce a fresh natural variable for
+each arithmetic node: addition and fixed multiples have linear equations;
+a collapse node has the graph just constructed, with its original argument
+variable. Preserve all repeated original variable names and quantify every
+new node variable. This creates no independence assumption: the graph
+equations enforce precisely the original correlations.
+\end{proof}
+
+\begin{lemma}[From finite graph exceptions to word domains]
+\label{m:lem:graph-domains}
+Let finitely many total functional graph clauses be obtained from
+Theorem~\ref{m:thm:graphs}, together with linear arithmetic graph
+equations and a Boolean combination of linear comparisons between graph
+wires.  Their closed
+existential conjunction is decidable by
+Theorem~\ref{m:thm:existential}, with original positive inputs and
+fresh natural graph variables.
+\end{lemma}
+\begin{proof}
+Every collapse graph is a finite disjunction of its tail equation,
+guarded by a computed input lower bound, and finitely many exact
+small-input point clauses.  Distribute only these finitely many
+positive graph disjunctions.  In a resulting case, a small-input
+clause fixes its input and output to known integers.  Substitute such
+equalities into the case.  If a retained tail guard on the same input
+fails at the substituted integer, discard the inconsistent case;
+otherwise any word in that fixed input is defined and can be evaluated
+exactly.  Repeat the finite substitutions if desired.
+
+All remaining word occurrences come from tail clauses with their
+explicit bounds.  Take, for each shared raw variable, the maximum of
+the bounds required by its remaining words, together with its original
+natural or positive domain.  The accompanying guards assert exactly
+these bounds.  The case is now a closed existential Boolean combination
+of word-linear rows and congruences on the individual word domains, so
+Theorem~\ref{m:thm:existential} applies.  The disjunction is finite.
+
+This argument does not replace a correlated node value by a free
+parameter.  All linear graph equations and original names remain in
+each case.  It also does not negate a graph: the output test may contain
+negations, but the functional graph constraints remain positively
+conjoined.  Their uniqueness on the original domains gives the intended
+source semantics.
+\end{proof}
+
+\begin{corollary}[Polynomial-head Boolean comparison]
+\label{m:cor:polynomial-booleans}
+For positive expressions in any finite number of raw inputs, using only
+fixed polynomial limit heads below $\omega^\omega$, the existential
+and universal closures of every finite Boolean combination of equality
+and order atoms are decidable.  Arbitrary fixed nesting and addition
+are permitted.
+\end{corollary}
+\begin{proof}
+Flatten all the finitely many input circuits together, assigning one
+fresh natural wire to each node and one shared input to each repeated
+raw name.  Conjoin their total functional graphs positively and append
+the Boolean output test.  The graph constraints have a unique extension
+at every original positive valuation, so existence of this full
+conjunction is equivalent to the original existential query.
+Lemma~\ref{m:lem:graph-domains} decides it.  For a universal query,
+negate only the Boolean output test and decide the resulting existential
+counterexample; the graph conjunction remains positive.  All fresh
+wires and original inputs belong to the same existential block.
+\end{proof}
+

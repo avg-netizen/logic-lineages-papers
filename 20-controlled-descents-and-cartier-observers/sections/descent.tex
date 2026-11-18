@@ -1,0 +1,179 @@
+\section{Norms, maximum predecessors and exact counts}
+\label{sec:descent}
+
+All ordinals lie below $\varepsilon_0$ and are represented by hereditary
+Cantor normal forms. Addition and multiplication by finite coefficients
+have their ordinary ordinal meanings. For strictly decreasing exponents
+and positive finite coefficients define
+\[
+ \norm(0)=0,\qquad
+ \norm\!\left(\sum_{i<r}\omega^{\alpha_i}c_i\right)
+       =\sum_{i<r}c_i(1+\norm(\alpha_i)).
+\]
+Thus $\norm(n)=n$, $\norm(\omega^d)=d+1$ for finite $d$,
+$\norm(\omega^\omega)=3$, and
+$\norm(\omega^{\omega+1})=4$. This is the additive norm used
+in the relevant norm-controlled hierarchy framework
+\cite{bcw,ww}.
+
+\begin{lemma}[Effective norm balls]\label{lem:norm-balls}
+Each norm ball is finite and effectively enumerable.
+Cantor comparison and the norm are computable.
+\end{lemma}
+\begin{proof}
+For budget zero there is only zero. In a nonzero ordinal of norm at
+most $b$, every exponent has norm at most $b-1$. Inductively enumerate
+those exponents, order them by recursive Cantor comparison, and enumerate
+the finite coefficient lists whose total charge is at most $b$.
+This produces every candidate and terminates. The same recursion
+computes the norm and compares the resulting forms.
+\end{proof}
+
+Fix for now a computable strictly increasing $f:\N\to\N$ with
+$f(n)>n$. Define
+\[
+ \psi_f(\alpha)=\max\bigl(\{0\}\cup
+   \{\psi_f(\beta)+1:\beta<\alpha,\ 
+                    \norm(\beta)\le f(\norm(\alpha))\}\bigr).
+ \tag{2.1}
+\]
+Ordinal recursion is legitimate because the maximum is finite.
+Its defining controlled implication is
+\[
+ \beta<\alpha,\quad \norm(\beta)\le f(\norm(\alpha))
+ \quad\Longrightarrow\quad
+ \psi_f(\beta)+1\le\psi_f(\alpha).
+ \tag{2.2}
+\]
+Induction gives $\psi_f(n)=n$ for finite $n$.
+No unrestricted monotonicity of $\psi_f$ is assumed.
+
+\subsection{The exact maximum predecessor}
+For $\alpha>0$ and $b\in\N$ put
+\[
+ M(\alpha,b)=\max\{\beta<\alpha:\norm(\beta)\le b\},
+ \qquad L(e,b)=M(\omega^e,b).
+\]
+The candidate set contains zero. Put $M(0,b)=0$ as a convention.
+
+\begin{theorem}[Greedy predecessor]\label{thm:greedy}
+The following simultaneous recursion computes $M,L$ exactly.
+Write $\alpha=\omega^e c+r$ with $c>0$, $r<\omega^e$, and
+$w=1+\norm(e)$.
+\begin{enumerate}[label=(\roman*)]
+\item $M(\alpha,0)=0$ and $L(0,b)=L(e,0)=0$.
+\item If $r>0$ and $cw\le b$, then
+\[
+ M(\alpha,b)=\omega^e c+M(r,b-cw).
+\]
+\item Otherwise, put
+\[
+ a=\begin{cases}
+ \min(c-1,\lfloor b/w\rfloor),&r=0,\\
+ \min(c,\lfloor b/w\rfloor),&r>0.
+ \end{cases}
+\]
+Then $M(\alpha,b)=\omega^e a+L(e,b-aw)$.
+\item If $e,b>0$, put $\eta=M(e,b-1)$,
+$v=1+\norm(\eta)$ and $(q,s)=\operatorname{divmod}(b,v)$.
+Then $L(e,b)=\omega^\eta q+L(\eta,s)$.
+\end{enumerate}
+Zero blocks are omitted.
+\end{theorem}
+\begin{proof}
+When the whole leading block and a nonzero tail bound are affordable,
+retaining that block and lowering the tail dominates every predecessor
+with a smaller leading block. This proves (ii). Otherwise (iii) chooses
+the largest affordable coefficient compatible with being below
+$\alpha$; its remainder is strictly below $\omega^e$.
+
+A nonzero ordinal below $\omega^e$ with budget $b$ has a leading
+exponent $\eta'<e$ of norm at most $b-1$. Its largest possible
+exponent is therefore $M(e,b-1)$. Cantor order next maximizes its
+coefficient and then its lower tail, proving (iv).
+
+The lexicographic measure (budget, phase), with $M$ above $L$,
+proves termination. Clause (ii) lowers the budget. Clause (iii)
+either lowers it or changes phase from $M$ to $L$. In (iv) the
+first call uses $b-1$; also $v\le b$, so $q\ge1$ and $s<b$
+for the second call. The value returned in each terminating case
+is the greatest candidate just characterized.
+\end{proof}
+
+\begin{lemma}[Saturation]\label{lem:saturation}
+For every nonzero limit $\lambda$ and every budget $b$,
+$\norm(M(\lambda,b))=b$. The maximum is strictly increasing
+with $b$.
+\end{lemma}
+\begin{proof}
+If $\eta=M(\lambda,b)$ left unused budget
+$a=b-\norm(\eta)>0$, the larger ordinal $\eta+a$ would still
+be below the limit $\lambda$ and would have norm $b$, a
+contradiction. If $b<c$, the ordinal $M(\lambda,b)+1$
+is below $\lambda$ and has norm at most $c$, proving strict
+increase.
+\end{proof}
+
+\begin{theorem}[Single-predecessor recurrence]\label{thm:predecessor}
+For every nonzero limit $\lambda$ and $n\in\N$,
+\[
+ \psi_f(\lambda+n)
+ =\psi_f\bigl(M(\lambda,f(\norm(\lambda)+n))\bigr)+1.
+\]
+\end{theorem}
+\begin{proof}
+Induct on $n$. Put $b=f(\norm(\lambda)+n)$ and
+$\eta=M(\lambda,b)$. Saturation shows that $\eta$ is an admitted
+predecessor of norm $b$, so it gives the lower inequality.
+Every admitted $\beta<\lambda$ satisfies $\beta\le\eta$.
+If $\beta<\eta$, then
+$\norm(\beta)\le b=\norm(\eta)<f(\norm(\eta))$,
+and controlled strictness bounds its contribution by
+$\psi_f(\eta)$.
+
+The other possible predecessors are $\lambda+j$ with $j<n$.
+Put $b_j=f(\norm(\lambda)+j)$ and
+$\eta_j=M(\lambda,b_j)$. Strict increase of $f$ and saturation
+give $\eta_j<\eta$ and $\norm(\eta_j)=b_j<b$.
+The induction hypothesis and controlled strictness yield
+$\psi_f(\lambda+j)=\psi_f(\eta_j)+1\le\psi_f(\eta)$.
+Thus each contribution to the defining maximum is at most
+$\psi_f(\eta)+1$, proving the reverse inequality.
+\end{proof}
+
+\subsection{The complete event count}
+For a nonfinite ordinal $\alpha$, write
+$\alpha=\headpart(\alpha)+n$, where the first summand is a
+nonzero limit and $n$ is finite. At each event replace
+\[
+ \alpha\longmapsto M(\headpart(\alpha),f(\norm(\alpha))).
+ \tag{2.3}
+\]
+In particular the predecessor bound is the limit part, not the
+original ordinal with its finite tail.
+
+For a fixed limit $\lambda$ and total input norm
+$t\ge\norm(\lambda)$, start at $\lambda+t-\norm(\lambda)$.
+Let $\tau_\lambda(t)$ count events until the first finite
+ordinal $Z_\lambda(t)$, and put
+$J_\lambda(t)=\psi_f(\lambda+t-\norm(\lambda))$.
+
+\begin{proposition}[Complete-count identity]\label{prop:complete}
+The descent terminates and
+\[
+ Z_\lambda(t)=f^{\,\tau_\lambda(t)}(t),\qquad
+ J_\lambda(t)=Z_\lambda(t)+\tau_\lambda(t).
+\]
+\end{proposition}
+\begin{proof}
+Every event strictly decreases the ordinal. Well-foundedness below
+$\varepsilon_0$ therefore proves termination. Saturation gives the
+successive norms $t,f(t),f^2(t),\ldots$; the finite endpoint equals
+its own norm. Theorem~\ref{thm:predecessor} adds one for each
+event, and finite evaluation returns $Z_\lambda(t)$.
+\end{proof}
+
+There is no further event count through finite successors below the
+endpoint. A count stopped at an earlier nonfinite boundary is a
+different segment count. The block calculations below always specify
+which prefix remains and when their suffix first becomes finite.

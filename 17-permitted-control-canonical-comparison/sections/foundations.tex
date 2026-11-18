@@ -1,0 +1,268 @@
+\section{Ordinal norms and effective collapse evaluation}
+\label{sec:foundations}
+
+The numerical assignment uses ordinals below $\varepsilon_0$, represented
+by hereditary Cantor normal forms.  The ordinal $\varepsilon_0$ is the
+least fixed point of $\alpha\mapsto\omega^\alpha$.  We distinguish
+ordinary ordinal addition and multiplication from their natural
+counterparts $\oplus$ and $\otimes$.  Natural addition collects the
+Cantor monomials of its operands; natural multiplication distributes over
+those monomials and naturally adds their exponents.  In particular both
+natural operations are commutative.  All finite tails displayed as
+$\lambda+n$ use ordinary addition.  If $\lambda$ is a limit and $n$ is
+finite, then $\lambda\oplus n=\lambda+n$.
+
+\begin{definition}[Additive hereditary norm]\label{def:additive-norm}
+For decreasing exponents and positive integer coefficients put
+\[
+ N(0)=0,\qquad
+ N\left(\sum_{i<r}\omega^{\alpha_i}c_i\right)
+       =\sum_{i<r}c_i\bigl(1+N(\alpha_i)\bigr).
+\]
+Thus $N(n)=n$, $N(\omega)=2$ and $N(\omega^2)=3$.
+Coefficients are charged with their full multiplicity.
+\end{definition}
+
+\begin{lemma}[Effective ordinal operations and norm bounds]
+\label{lem:norm-arithmetic}
+Every norm ball is finite and effectively enumerable.  Cantor-normal-form
+comparison, $\oplus$, $\otimes$, and ordinal exponentiation $2^\alpha$
+are effective.  Moreover
+\begin{align*}
+ N(\alpha\oplus\beta)&=N(\alpha)+N(\beta),\\
+ N(\alpha)+N(\beta)-1
+ &\le N(\alpha\otimes\beta)\le N(\alpha)N(\beta)
+       &&(\alpha,\beta>0),\\
+ N(\alpha)&\le2N(2^\alpha),\qquad
+ N(2^\alpha)\le2^{N(\alpha)}.
+\end{align*}
+\end{lemma}
+\begin{proof}
+An exponent in a nonzero ordinal of norm at most $b$ has norm at most
+$b-1$.  Induction on $b$ therefore enumerates the finite set of possible
+exponents and the finite lists of coefficients whose total charge is at
+most $b$.  Recursive lexicographic comparison decides their order.
+The definitions of natural sum and product give finite algorithms.
+
+For the norm bounds, expand coefficients into repeated monomials.
+Suppose the two operands have respectively $r,s$ monomials, and let
+$A,B$ be the sums of the norms of their exponents.  Their norms are
+$r+A$ and $s+B$, while the product has norm $rs+sA+rB$.
+Collecting equal monomials preserves these totals.  The upper product
+bound follows by expanding $(r+A)(s+B)$; for the lower bound the
+difference is
+\[
+ (r-1)(s-1)+(s-1)A+(r-1)B\ge0.
+\]
+Norm additivity for natural sum follows in the same way.
+
+Write $\alpha=\omega\xi+n$, $n<\omega$, using ordinary
+multiplication.  Then
+\[
+ 2^\alpha=\omega^\xi 2^n,\qquad
+ N(2^\alpha)=2^n(1+N(\xi)).
+\]
+Multiplication on the left by $\omega$ changes the exponent of each
+monomial from $\gamma$ to $1+\gamma$.  Its norm stays the same or
+increases by one, so
+$N(\xi)\le N(\omega\xi)\le2N(\xi)$.
+The last two asserted bounds now follow from
+$1+a\le2^a$ for $a\in\N$ and
+$2N(\xi)+n\le2^{n+1}(1+N(\xi))$.
+These are the norm estimates of \cite[Proposition~2.2]{ww}, with the
+additive convention made explicit.
+\end{proof}
+
+For reference, the finite hierarchy used throughout is
+\[
+ F_0(n)=2^n,\qquad F_{j+1}(n)=F_j^{\,n+1}(n),\qquad
+ G(n)=F_5(n+100).
+\]
+Iteration is denoted by a superscript.  The proofs below apply to any
+computable strictly increasing $f:\N\to\N$ with $f\ge G$.
+The controls constructed in Section~\ref{sec:controls} are also primitive
+recursive, satisfy the stronger separation estimate
+\eqref{eq:growth}, and have an eventual upper bound at a fixed finite
+hierarchy level.  These are sufficient conditions within the freedom of
+control described in \cite[Section~2.1]{ww}; no assertion that the
+resulting assignments equal the assignment for $G$ is intended.
+
+\begin{definition}[Norm-controlled collapse]\label{def:collapse}
+For $\alpha<\varepsilon_0$ set
+\[
+ \psi_f(\alpha)=\max\bigl(\{0\}\cup
+   \{\psi_f(\beta)+1:\beta<\alpha,
+                    \ N(\beta)\le f(N(\alpha))\}\bigr).
+\]
+Ordinal recursion defines this function, since each displayed maximum
+is finite.
+\end{definition}
+
+\begin{lemma}[Basic collapse estimates]\label{lem:collapse-estimates}
+If $\beta<\alpha$ and $N(\beta)\le f(N(\alpha))$, then
+$\psi_f(\beta)+1\le\psi_f(\alpha)$.  For $n,k\in\N$,
+\[
+ \psi_f(n)=n,\qquad N(\alpha)\le\psi_f(\alpha),\qquad
+ \psi_f(\alpha)+k\le\psi_f(\alpha+k).
+\]
+If $\alpha\ge\omega$, then $\psi_f(\alpha)>f(N(\alpha))$.
+\end{lemma}
+\begin{proof}
+The first assertion is a term of the defining maximum.  Induction on
+$n$ gives the finite values: every predecessor of $n$ is finite and
+its norm is below $n\le f(n)$.  If $\alpha\ge\omega$, the finite
+ordinal $f(N(\alpha))$ is an admitted predecessor, which proves the
+strict estimate and hence the norm bound.  The finite case of the norm
+bound has already been proved.  Finally $N(\alpha+k)=N(\alpha)+k$,
+so $\alpha+k$ is an admitted predecessor of $\alpha+k+1$.
+Induction on $k$ proves the finite-tail inequality.
+\end{proof}
+
+In particular a fixed-head collapse is increasing in its finite tail.
+The lemma does not assert monotonicity of $\psi_f$ on arbitrary ordinal
+arguments.  The norm premise must be verified whenever an ordinal
+inequality is passed through the collapse.
+
+\subsection{An exact maximum-predecessor algorithm}
+
+For $\alpha>0$ and $b\in\N$ define
+\[
+ M(\alpha,b)=\max\{\beta<\alpha:N(\beta)\le b\},\qquad
+ L(e,b)=M(\omega^e,b).
+\]
+The defining set for $M$ contains zero and is finite.  We also put
+$M(0,b)=0$ as a convention; it is not a predecessor assertion at zero.
+
+\begin{theorem}[Greedy maximum]\label{thm:maximum-predecessor}
+The following simultaneous recursion computes $M$ and $L$ exactly.
+Write $\alpha=\omega^e c+r$, where $c>0$ and $r<\omega^e$, and
+put $w=1+N(e)$.
+\begin{enumerate}[label=(\roman*)]
+\item $M(\alpha,0)=0$ and $L(0,b)=L(e,0)=0$.
+\item If $r>0$ and $cw\le b$, then
+\[
+ M(\alpha,b)=\omega^e c+M(r,b-cw).
+\]
+\item Otherwise set
+\[
+ d=\begin{cases}
+ \min\{c-1,\lfloor b/w\rfloor\},&r=0,\\
+ \min\{c,\lfloor b/w\rfloor\},&r>0.
+ \end{cases}
+\]
+Then $M(\alpha,b)=\omega^e d+L(e,b-dw)$, with a zero block
+omitted.
+\item If $e,b>0$, put $a=M(e,b-1)$, $v=1+N(a)$ and
+$(q,s)=\operatorname{divmod}(b,v)$.  Then
+\[
+ L(e,b)=\omega^a q+L(a,s).
+\]
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+If an affordable nonzero tail is present, retaining the entire leading
+block and decreasing the tail dominates every predecessor with a smaller
+leading block.  This proves (ii).  Otherwise the coefficient in (iii)
+is the largest affordable coefficient compatible with the strict upper
+bound.  Its remaining tail is less than $\omega^e$ and has precisely
+the remaining norm budget.
+
+For (iv), a nonzero candidate below $\omega^e$ with budget $b$ has
+a leading exponent $a'<e$ satisfying $N(a')\le b-1$.
+The largest possible leading exponent is therefore $a=M(e,b-1)$.
+Cantor comparison then maximizes its coefficient and the smaller tail
+in that order, yielding $q$ and $L(a,s)$.
+
+Termination follows from the lexicographic measure (budget, phase),
+with $M$ above $L$ at equal budget.  Clause (ii) lowers the budget;
+(iii) either lowers it or passes from $M$ to $L$.  In (iv) the first
+recursive call uses $b-1$, while $v\le b$ and $q\ge1$ give $s<b$
+for the second.  This proves both effectiveness and exactness.
+\end{proof}
+
+\begin{lemma}[Limit saturation and monotonicity]\label{lem:limit-saturation}
+For every nonzero limit $\lambda$ and every $b\in\N$,
+\[
+ N(M(\lambda,b))=b.
+\]
+For fixed $\lambda$ this maximum is strictly increasing in $b$.
+For arbitrary bounds the function $M$ is weakly increasing in each
+argument wherever the predecessor interpretation is defined.
+\end{lemma}
+\begin{proof}
+If $\eta=M(\lambda,b)$ has unused budget $d=b-N(\eta)>0$,
+then $\eta+d<\lambda$ and $N(\eta+d)=b$, contradicting
+maximality.  For $b<c$, the predecessor $M(\lambda,b)+1$ is
+below $\lambda$ and has norm at most $c$, proving strict increase.
+The last assertion follows by inclusion of the defining candidate sets.
+\end{proof}
+
+\begin{theorem}[Single-predecessor collapse recurrence]
+\label{thm:single-predecessor}
+For every nonzero limit $\lambda$ and $n\in\N$,
+\[
+ \psi_f(\lambda+n)
+   =\psi_f\bigl(M(\lambda,f(N(\lambda)+n))\bigr)+1.
+\]
+\end{theorem}
+\begin{proof}
+Induct on $n$.  Put $b=f(N(\lambda)+n)$ and
+$\eta=M(\lambda,b)$.  It is an admitted predecessor, of norm $b$,
+so it supplies the lower inequality.  Any other admitted $\beta<\lambda$
+satisfies $\beta\le\eta$.  If $\beta<\eta$, then
+$N(\beta)\le b=N(\eta)\le f(N(\eta))$; controlled strictness
+therefore gives $\psi_f(\beta)+1\le\psi_f(\eta)$.
+
+The remaining predecessors are $\lambda+j$, $j<n$.  For such a $j$
+put $b_j=f(N(\lambda)+j)$ and $\eta_j=M(\lambda,b_j)$.
+Strict growth of $f$ and limit saturation give
+$\eta_j<\eta$ and $N(\eta_j)=b_j<b$.
+The induction hypothesis and controlled strictness imply
+\[
+ \psi_f(\lambda+j)=\psi_f(\eta_j)+1\le\psi_f(\eta).
+\]
+Thus every contribution to the original maximum is at most
+$\psi_f(\eta)+1$, which proves the reverse inequality.
+\end{proof}
+
+\begin{corollary}[Closed evaluation and its norm orbit]
+\label{cor:closed-evaluation}
+A closed collapse value is computable by the following deterministic
+descent.  At a nonfinite state $\alpha=\lambda+n$, replace it by
+$M(\lambda,f(N(\alpha)))$ and add one to an event counter.
+On reaching a finite state $Z$, return $Z$ plus that counter.
+If the initial norm is $t$ and the number of events is $D$, then
+\[
+ Z=f^D(t),\qquad \psi_f(\alpha)=Z+D.
+\]
+For a nonfinite initial state one also has $0<D<Z$.
+\end{corollary}
+\begin{proof}
+Each step strictly lowers the ordinal, so well-foundedness below
+$\varepsilon_0$ proves termination.  The preceding theorem preserves
+the value after adding the event count, and finite evaluation gives the
+last value.  Limit saturation makes the norm of each new state exactly
+$f$ of the preceding norm, including the transition to the finite state.
+There is no further event count along the finite predecessor chain.
+A nonfinite start has $t\ge2$, and $f(n)>n$ gives
+$Z\ge t+D>D$.
+\end{proof}
+
+\begin{corollary}[Finite coefficient identity]\label{cor:finite-coefficient}
+For all $k,n\in\N$,
+\[
+ \psi_f(\omega k+n)=f^k(2k+n)+k.
+\]
+\end{corollary}
+\begin{proof}
+The case $k=0$ is finite evaluation.  If $k>0$ and
+$b=f(2k+n)$, the exact maximum is
+$M(\omega k,b)=\omega(k-1)+(b-2(k-1))$.
+It has total norm $b$.  The single-predecessor recurrence and induction
+on $k$ give the formula.
+\end{proof}
+
+The evaluator always calls $M$ with the \emph{limit part} of its
+current ordinal.  Calling it with $\lambda+n$ instead would retain
+finite predecessors that have already been accounted for in the maximum
+argument and would not give the stated norm orbit.

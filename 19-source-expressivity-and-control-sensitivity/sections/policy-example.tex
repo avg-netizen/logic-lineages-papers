@@ -1,0 +1,72 @@
+\section{A closed source distinguishes two parsing policies}
+\label{app:policy}
+
+The distinction between expression values and literal input trees is
+visible in one small original source. Let policies L and R agree at
+every site except the active three-operand sum partial: L chooses
+$(a+b)+1$ and R chooses $a+(b+1)$. Repeats in both are left combs.
+Consider
+\[
+ A=\lambda z:o.\lambda x:o.((\lambda w:o.z)x):o\to o\to o.
+\]
+This source is closed, recursor-free and has internal type level at
+most one. No beta normalization is performed.
+
+Inside assignment trees write $z,x$ for the scalar components $z_0,x_0$.
+The assignment of $\lambda w.z$ is $(\ell(z),1)$, with literal tree
+\[
+ \ell(z)=((z+1)+(z+1))+z,\qquad s_z(\ell)=9.
+\]
+The body of the $x$ abstraction has scalar
+$g=\operatorname{Psi}(1,\ell(z)+x)$, of $x$-size five, so its
+abstraction multiplier is ten. Put
+\[
+ u=\ell+1,\quad T_L=(u+1)+1,\quad T_R=u+(1+1),\quad
+ K_\rho=\operatorname{Psi}(1,T_\rho),\quad
+ B_* =\operatorname{Psi}(1,u).
+\]
+The $x$ abstraction has
+\[
+ h_0=\operatorname{Repeat}_{10}(K_\rho)+B_*,\qquad
+ h_1=(1+1)+\operatorname{Sum3}_{\rho}(1,1,1).
+\]
+The latter is wholly $z$-free and has value five. Direct use of the
+size clauses gives
+\[
+\begin{array}{c|rrrrrrr}
+ &\ell&u&T_\rho&K_\rho&\operatorname{Repeat}_{10}(K_\rho)&B_*&h_0\\\hline
+ s_z\text{ under L}&9&11&15&17&179&13&193\\
+ s_z\text{ under R}&9&11&13&15&159&13&173.
+\end{array}
+\]
+At each scalar tree in this table the first positive output of its
+$z$ partial has the corresponding size as its finite value.
+Whole-free scalar inputs and a tracked variable both contribute one;
+active sums add the child outputs and one; a collapse with head one
+adds two to the tail output. This proves the assertion by induction
+through the displayed trees, rather than by a numerical evaluation of
+the collapse.
+
+The positive output of $\partial_0^zh_0$ is therefore 193 or 173.
+The diagonal $(\partial_1^zh_1)_1$ is six, and the retained field
+$h_1$ is five. The outer abstraction gives
+\[
+ \can A_{1,L}=193+6+5=204,\qquad
+ \can A_{1,R}=173+6+5=184.
+\]
+Thus the assigned ordinal values differ, not just their trees.
+
+The scalars differ too. Write $H(t)=\psi_f(\omega+t)$ and
+$P_0q=(\partial_0^zq)_0$. The scalar clauses give
+$P_0\ell=11$, $P_0u=14$, $P_0T_L=20$ and $P_0T_R=18$.
+The two outer size multipliers are 388 and 348; the common retained
+scalar is $10H(8)+H(6)$. Consequently
+\begin{align*}
+ \can A_{0,L}&=388(10H(20)+H(14)+10)+10H(8)+H(6),\\
+ \can A_{0,R}&=348(10H(18)+H(14)+10)+10H(8)+H(6).
+\end{align*}
+Fixed-tail strict increase gives $H(20)>H(18)$, so the L scalar is
+strictly larger. This example works for every control in
+Section~\ref{sec:setting}. The paper's uniformity in a supplied policy
+therefore concerns valid constructions for each policy, not equality
+of the resulting assignments across policies.

@@ -1,0 +1,214 @@
+\section{Consequences for literal canonical assignments}
+\label{sec:source-applications}
+
+The numerical results apply to original, undecorated G\"odel-$T$ terms.
+Fix one computable admissible policy for expanding the finite sums and
+repetitions in the assignment clauses.  The canonical assignment here is
+the resulting zero-history assignment of the literal input term.
+Normalizing the term first would define a different object.  The type
+level is
+\[
+ \lv(o)=0,\qquad
+ \lv(\sigma\to\tau)=\max\{\lv(\sigma)+1,\lv(\tau)\}.
+\]
+Vectors are padded by zeros when their levels differ.  At any admissible
+valuation, weak comparison means weakness in every coordinate;
+Wilken--Weiermann strict comparison means strictness in coordinate zero
+and weakness in every positive coordinate.  Equality means equality in
+every coordinate.  The strict relation is not a lexicographic order.
+
+We use the following exact source interface.  Its domain and construction
+are established from the original assignment clauses in
+\cite[the canonical-source section]{wwcomparison}; the source notation
+and original bounded-norm conditions are those of \cite{ww}.
+
+\begin{proposition}[Canonical forward interface]
+\label{prop:source-interface}
+Let $A$ be an original well-typed term all of whose free variables have
+ground type.  Its literal canonical vector is computable.  Every positive
+coordinate is a closed computable ordinal, and its scalar has an
+effectively constructed, valuation-preserving expression in
+$\mathcal P_d$, where the $d$ inputs are the distinct ground free names.
+Repeated names remain one input.  Arbitrary finite internal and bound
+types, result types, recursor instances, and nesting are allowed.
+Every positive integer is an admissible value of a ground component,
+independently for distinct ground names.
+\end{proposition}
+
+The relevant invariant explains the interface's scope.  An actual positive
+coordinate is generated from $1,\omega$, positive-index component
+variables, natural sums, and graded terms
+$2^a\otimes b$, where the exponent comes from the next coordinate.
+It contains no promotion of a scalar collapse to a positive coordinate.
+The box operation, partials and abstraction preserve this invariant
+simultaneously.  Abstraction removes its bound component variables;
+ground free names have no positive components.  Hence positive outputs
+are closed.  An actual scalar contains only its scalar variables,
+positive constants, addition, fixed finite repetitions and
+\[
+ \operatorname{Psi}(c,u)=\psi(\omega\otimes c+u).
+\]
+Its positive head $c$ is closed, and $\omega\otimes c$ is a fixed
+nonzero limit.  The syntactic abstraction multiplier is fixed before
+valuation.  These facts give precisely the stated positive expression
+and preserve correlations.  The longer domain proof, including the
+correct weak scalar partial estimate and the original abstraction
+budget, is the cited source theorem; membership in an unrestricted
+ambient ordinal-expression grammar would not suffice.
+
+\subsection{Equality and one shared ground name}
+
+\begin{corollary}[Universal source equality]
+\label{cor:source-equality}
+Universal equality of literal canonical vectors is decidable for every
+original source pair with ground free variables, with no bound on its
+internal types.
+\end{corollary}
+\begin{proof}
+Compute the two vectors and compare their finitely many closed positive
+coordinates.  If they agree, apply the complete normal form of
+Theorem~\ref{u:thm:identity} to the two scalar expressions.
+Different forms give the computed positive countervaluation from that
+theorem.  The comparison substitutes admissible ground coordinates;
+it does not substitute source numerals and recompute a different
+canonical assignment.
+\end{proof}
+
+\begin{corollary}[One-name Boolean comparison]
+\label{cor:source-one-name}
+Take a finite Boolean combination of pointwise canonical equality, weak
+comparison, and Wilken--Weiermann strict comparison atoms.  If the union
+of its free names is contained in one ground name $X:o$, either its
+existential or universal closure over the admissible component of $X$
+is decidable.  Internal types and result levels are unrestricted.
+\end{corollary}
+\begin{proof}
+For an atom comparing $A$ and $B$, compute its positive-coordinate guard
+\[
+ U_{\le}=\bigwedge_{i>0}\can A_i\le\can B_i,
+ \qquad
+ U_=\bigwedge_{i>0}\can A_i=\can B_i,
+\]
+using zero padding.  The three pointwise atoms are respectively
+\[
+ U_=\wedge(E_A=E_B),\qquad
+ U_{\le}\wedge(E_A\le E_B),\qquad
+ U_{\le}\wedge(E_A<E_B).
+\]
+Place each computed guard inside its original Boolean atom and apply
+Corollary~\ref{u:cor:boolean}.  In particular a false guard is not
+removed from beneath a negation.  The admissible ground domain is exactly
+$\NN$ by Proposition~\ref{prop:source-interface}.
+\end{proof}
+
+One name in each term is not sufficient if the two names differ: the
+one-input hypothesis concerns the whole query's shared input set.
+
+\subsection{Finite coefficients and recursor-free terms}
+
+\begin{theorem}[The finite-coefficient class]
+\label{thm:source-finite}
+For a ground-open source pair, suppose every literal scalar collapse
+$\psi(\omega\otimes c+g)$ in the generated assignments has a finite
+closed coefficient $c$.  Universal weak comparison, Wilken--Weiermann
+strict comparison, and equality are decidable for the exact standard
+control.  Every recursor-free ground-open source satisfies this condition,
+regardless of its internal type levels.
+\end{theorem}
+\begin{proof}
+The hypothesis is decidable by finite traversal of the actual scalar
+trees and closed ordinal comparison with $\omega$.  For $c=k<\omega$,
+Corollary~\ref{f:cor:finite-coefficient} replaces the call exactly by
+\[
+          g\longmapsto f^k(g+2k)+k.
+\]
+The iterate length is a closed integer determined from the source.  Its
+expansion is therefore a finite expression in $(\N;0,1,+,<,f)$,
+not a variable-iteration primitive.  Retain every original name and apply
+Theorem~\ref{m:thm:snyatkov} to the required universal scalar formula,
+with $x_i\ge1$.  The closed positive-coordinate tests complete the
+corresponding vector comparison.
+
+For the recursor-free assertion, inspect the strengthened positive
+coordinate invariant in Proposition~\ref{prop:source-interface} before
+erasing the bound components.  The only source constant introducing
+$\omega$ into a positive coordinate is a recursor.  Without recursors,
+the positive construction uses $1$, component variables, natural sums
+and products, and $2^a$.  After the ground-free restriction, all bound
+components have been replaced or removed by the literal partials and
+all-ones substitutions.  Induction through those same operations leaves
+finite positive values: sums, products, and $2^n$ preserve finiteness.
+This holds at every coordinate and every internal type.  Thus every
+direct scalar coefficient is finite.
+\end{proof}
+
+A recursor is not itself a certificate of failure.  For example the
+canonical vector of $R^oX$ is $(f(x+4)+1,1,\omega)$; its displayed
+scalar collapse has coefficient one.  The theorem checks the actual
+coefficient condition rather than a syntactic ban on all recursors.
+
+\subsection{Polynomial heads and internal type level two}
+
+\begin{lemma}[Polynomial direct heads]
+\label{lem:source-polynomial}
+If every internal type and subtype in a ground-open source has level at
+most two, all its direct scalar heads are polynomial limits below
+$\omega^\omega$.
+\end{lemma}
+\begin{proof}
+Follow the same generated positive-coordinate invariant.  There is no
+coordinate three available.  At coordinate two an exponent constructor
+would require such a coordinate, so its closed values are natural linear
+combinations of $1$ and $\omega$.  The positive box and abstraction
+clauses only add such values and take fixed natural multiples there.
+At coordinate one the exponential factors therefore have the form
+\[
+                  2^{a\omega+b}=\omega^a2^b,
+                  \qquad a,b<\omega.
+\]
+Natural sums and products of these factors are polynomials in $\omega$.
+Whole-free partial copies and fixed repetitions preserve this property;
+temporary component variables disappear in abstraction.  It follows
+that every closed coefficient $c$ of a direct scalar collapse is a
+polynomial in $\omega$, so $\omega\otimes c$ is a polynomial limit
+below $\omega^\omega$.
+
+The hypothesis includes the full types of recursor constants and of
+temporary binders, not just the result type or the free context.  A
+higher-level recursor could introduce a coordinate above two and would
+invalidate this induction even if the final result were ground.
+\end{proof}
+
+\begin{theorem}[Comparison through internal level two]
+\label{thm:source-leveltwo}
+Universal weak comparison, Wilken--Weiermann strict comparison, and
+equality of literal canonical assignments are decidable for ground-open
+sources whose maximum internal type level is at most two.
+\end{theorem}
+\begin{proof}
+Compute the closed positive-coordinate tests and the scalar circuit from
+Proposition~\ref{prop:source-interface}.  Its heads are polynomial by
+Lemma~\ref{lem:source-polynomial}.  Translate all circuit nodes by the
+functional graphs in Theorem~\ref{m:thm:graphs}.  Quantify the fresh
+natural graph variables together with the original positive inputs and
+conjoin the graph equations positively.  The counterexample output test
+is $E_A>E_B$ for weak comparison, $E_A\ge E_B$ for strict comparison,
+and $E_A\ne E_B$ for equality.  Thus no graph equation is negated when
+the requested relation is negated.
+
+Lemma~\ref{m:lem:graph-domains} splits the finite graph exceptions and
+puts each remaining case on its individual word domains.
+Theorem~\ref{m:thm:existential} decides the resulting closed existential
+sentences.  A counterexample exists exactly when the corresponding
+universal scalar relation fails.  The needed degree bound is finite and
+computed from the input pair; there is no fixed degree bound across all
+terms of internal level two.
+\end{proof}
+
+At arbitrary internal levels the common-head, balanced, or single-core
+theorems can still apply to a scalar residual carrying the corresponding
+finite certificate.  One first computes the literal assignment and then
+checks the certificate.  Failure of a proposed certificate is not a
+negative answer to comparison.  No reverse source-realization theorem
+for every auxiliary numerical expression is needed in any of these
+applications.

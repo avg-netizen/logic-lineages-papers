@@ -1,0 +1,266 @@
+\section{An exact finite comparison procedure}\label{sec:decision}
+
+Selection can insert copies of an owner into one of its arguments. Neither
+the size of the generated source nor the length of its extra list has an
+evident bound. The procedure below instead bounds the information that a
+fixed target can observe. The full tuple operations are part of that
+information; replacing them by iterated unary application would be unsound.
+
+Fix ordinary inputs $s,t$. Let $K$ be the subtype closure of their literal
+types, let $V$ be their free-name set, and let $B$ be the maximum lambda
+nesting depth in $t$. Use $B$ fresh port slots, each with a type in $K$.
+A context $\Gamma$ is a finite assignment of types to used slots. Its
+extensions add unused slots without changing old types.
+
+For each $\Gamma,\sigma$, let $O_\sigma^\Gamma$ consist of all opened
+subterms of $t$ of type $\sigma$ whose externally bound variables are
+assigned to appropriately typed ports and whose remaining lambda depth is
+at most $B-|\Gamma|$. This is a finite effectively constructed family.
+Opening a target lambda consumes one unused port and descends to one of
+these observations.
+
+\begin{lemma}[Finite closure]\label{lem:observation-closure}
+In a recursive comparison originating at $(s,t)$, every requested type
+belongs to $K$, every source head occurs in $s$, every target belongs to
+the corresponding observation family, and every free source name belongs
+to $V\cup\Gamma$.
+\end{lemma}
+\begin{proof}
+Select requests domain and suffix types of a selected argument; these
+are subtypes of its existing type. Its owner copies change only their
+output annotation. Copy and Stat request types of target arguments.
+FAbs uses the domain and codomain of the observed lambda. Substitution
+keeps body-node types. No rule creates a new source head: in particular
+the target head introduced by Copy is not a new recursive source.
+Only descent through a target lambda introduces a port, so used ports
+plus remaining target depth never exceeds $B$. Mark reuse introduces
+no node or name. Joint induction over the comparison and list rules
+proves the assertions.
+\end{proof}
+
+\subsection{Natural finite domains}
+At each type $\sigma$ and context $\Gamma$ construct a finite domain
+$D_\sigma^\Gamma$. A value contains, for each extension $\Delta$ of
+$\Gamma$, an availability bit and weak and strict subsets of
+$O_\sigma^\Delta$. If $\sigma$ is an arrow type, it additionally contains
+a full tuple table for every nonempty suffix decomposition
+$\sigma=\rho_1\to\cdots\to\rho_n\to\tau$:
+\[
+ \operatorname{App}_\Delta:
+ D_{\rho_1}^\Delta\times\cdots\times D_{\rho_n}^\Delta
+ \longrightarrow D_\tau^\Delta .
+\]
+Every argument and result type here is a proper type subexpression, so
+this is a recursion on type size. Tables are monotone. Order all data
+pointwise, and let weakening $a\mapsto a|_\Theta$ retain precisely the
+components indexed by extensions of $\Theta$. Retain only values satisfying
+\[
+ \operatorname{App}_\Delta(a,\vec v)|_\Theta
+ =\operatorname{App}_\Theta(a|_\Theta,\vec v|_\Theta)
+ \quad(\Delta\subseteq\Theta).
+ \tag{N}
+\]
+The domains are hereditary: the values in the table entries already belong
+to the natural lower-type domains. The bottom value has false availability,
+empty observation sets, and constantly bottom tuple tables.
+
+\begin{lemma}\label{lem:finite-lattices}
+These domains are effective finite complete lattices. Weakening preserves
+joins and meets.
+\end{lemma}
+\begin{proof}
+At base type use finite products of bits and powersets. At an arrow, the
+lower-type domains are already available. Enumerate all finite tables and
+retain the monotone natural ones. Pointwise joins and meets preserve
+monotonicity and (N), since weakening is a coordinate projection and
+preserves lower-type joins and meets. The all-bottom and all-top families
+satisfy the same equations. This proves both the inductive construction
+and the lattice assertions.
+\end{proof}
+
+For each possible source head $f$, output type $\tau\in K$, and context
+$\Gamma$, use a monotone marked-constructor table
+\[
+ M_{f,\tau}^\Gamma(\vec b,E)\in D_\tau^\Gamma.
+\]
+The base tuple has $f$'s original declared types. The extra argument $E$
+is a down-set of the finite disjoint union of the typed domains at
+$\Gamma$. Require coherence
+\[
+ M_{f,\tau}^\Gamma(\vec b,E)|_\Delta
+ =M_{f,\tau}^\Delta
+   \bigl(\vec b|_\Delta,\downarrow\{a|_\Delta:a\in E\}\bigr).
+ \tag{C}
+\]
+The coherent monotone families form another finite complete lattice by
+the pointwise argument. Base positions and multiplicities are retained.
+Extras use a down-set because the rules select from them but never count
+their occurrences or use their order in a status test.
+
+For clarity, permutation or repetition of extras already preserves
+derivability syntactically. Induct on a finite derivation: Select finds
+the corresponding occurrence, FAbs appends the same fresh variable,
+and Copy/Stat inspect only the unchanged base list. The remaining rules
+transport child proofs. This observation explains the set representation;
+the adequacy proof below also proves that taking downward closure loses
+no comparison.
+
+\subsection{Structural interpretation and the operator}
+At a constructor family $M$, interpret a finite source term in an
+environment of abstract values. An undefined result is interpreted by
+the entire bottom value, including availability and tuple tables.
+For a marked state $(f,\vec b,E)$ compute its weak observation set by
+the following four positive tests, first weakening to the observation's
+context.
+\begin{enumerate}
+\item Select a base value or an element of $E$, choose a compatible
+suffix decomposition, and apply its one full tuple table to retyped
+$M$-values of the same owner. Inspect the resulting weak target bit.
+\item For Copy, test the strict head precedence and the weak bits of
+the retyped whole owner against all target arguments.
+\item For Stat, test equivalent heads, the finite occurrence multiset
+witness on $\vec b$, and the same whole-owner weak bits.
+\item For FAbs, open the observed lambda at a fresh port, weaken the
+base and extras, and add the port value to the extra down-set.
+\end{enumerate}
+Set availability to true and set \emph{both} the weak and strict fields
+equal to this newly computed weak set. The strict equality records
+$\mk(P)=P$; no strict bit is created without a weak rule witness from
+the previous approximation. The full tuple table appends the entire
+tuple to $E$ and consults $M$ at the resulting output type.
+
+For an ordinary head, weak bits arise from Fun or from its marked
+counterpart; strict bits are the weak bits of that counterpart. Nonempty
+tuple tables mark its head and append all arguments simultaneously.
+A literal variable has its matching weak bits, no strict bits and
+undefined nonempty tuple tables.
+
+A lambda has weak and strict bits against lambda observations given by
+the corresponding opened body fields. To calculate a tuple table, scan
+its \emph{original} lambda spine and record consumed binders as protected.
+When arguments remain at a protected-variable head, return bottom.
+At a functional head append every remaining argument at once.
+An unprotected free variable supplied by the abstract environment uses
+its recorded full tuple table. If no argument remains, interpret the
+residual term under the updated environment. Bound renaming uses fresh
+names outside the finite free-name and port sets; it introduces no new
+observation context.
+
+\begin{lemma}[Structural interpretation]\label{lem:structural-interpretation}
+Interpretation and this original-spine helper are monotone and commute
+with weakening. Interpretation respects capture-avoiding substitution.
+For environments interpreting concrete substitutions, the helper
+interprets full application of the resulting substituted source,
+including its undefined cases. This is not a claim that a previously
+undefined application remains undefined under free substitution.
+\end{lemma}
+\begin{proof}
+Induct simultaneously on the source and its original-spine helper.
+A variable uses its assigned natural value; a protected-variable call
+with remaining arguments is constantly bottom. At a head use
+monotonicity and (C). At a lambda, fresh renaming and the extended
+environment reduce the claim to its original body. Matching bits
+against lambda observations remain independent of tuple behavior.
+
+If a tuple ends within the original lambda spine, the two calculations
+are ordinary simultaneous substitution. Otherwise a protected bound
+variable blocks both calculations; an unchanged functional head gives
+the same mark, retyping and appended tuple. An unprotected free variable
+is first replaced by its substitution image, whose full table records
+that image's original spine. Thus this case may succeed even when the
+unsubstituted variable's call would fail. Naturality is (N) in that
+variable case and (C) at a constructor. All uses of function tables are
+on the entire remaining tuple; no unconditional currying equation is used.
+\end{proof}
+
+The preceding equations define an operator $\mathcal F$ on the finite
+constructor lattice.
+
+\begin{lemma}\label{lem:operator}
+$\mathcal F$ is a monotone endomap of the coherent natural families.
+Its iteration from bottom reaches the least fixed point in finitely
+many steps.
+\end{lemma}
+\begin{proof}
+Every rule test is positive in weak and strict bits. A multiset test
+asks for a finite occurrence assignment with positive premises, so
+adding bits preserves an existing witness. Monotone tuple application,
+weakening and downward closure preserve this property. Copying a
+computed weak set into the strict field is also monotone.
+
+At an extension $\Delta$, the observation equations consult only
+weakened inputs and $M^\Delta$. Tuple outputs respect coherence because
+\[
+ \downarrow(E\cup\{v_i\})|_\Delta
+ =\downarrow\bigl(E|_\Delta\cup\{v_i|_\Delta\}\bigr),
+\]
+where weakening of a down-set means downward closure of its image.
+Both inclusions follow from monotonicity of weakening and the presence
+of the original image generators. This proves (N) and (C) for the
+new family. Finiteness now gives effective stabilization of the
+ascending bottom iteration.
+\end{proof}
+
+\subsection{Adequacy}
+\begin{theorem}[Exact observation semantics]\label{thm:adequacy}
+At the least fixed point, a weak or strict observation bit is true
+exactly when its corresponding finite recursive judgment is derivable.
+\end{theorem}
+\begin{proof}
+For soundness relate an abstract value $a$ at $\Gamma$ to a concrete
+typed source $q$ with $\FV(q)\subseteq V\cup\Gamma$. At every extension,
+all weak and strict bits must be genuine finite proofs from $q$.
+Every full tuple table must send related concrete arguments to a value
+related to their exact special-application result. Only bottom relates
+to an undefined result. By type induction this relation is downward
+closed; bottom relates to every permitted defined term.
+
+Prove by stage induction that each constructor approximation preserves
+this relation on related base arguments and extra down-sets. At bottom
+there are no bits. For a new Select bit, a selected base value has its
+given concrete argument. A selected extra value lies below the abstract
+value of an actual extra and therefore relates to that same concrete
+extra. The full tuple property supplies the literal Select premise.
+The head clauses use their displayed concrete premises; in particular
+Stat's strict bits are genuine proofs of the present strict relation.
+FAbs uses the fresh port and the opened source in the enlarged context.
+The tuple output is a concrete marked owner with all arguments appended.
+The joint structural induction of
+Lemma~\ref{lem:structural-interpretation} supplies interpretation of
+ordinary heads, lambdas, and substitution environments.
+
+The new marked strict bit is justified by the same already constructed
+weak proof $\W P u$ as its weak bit and the equation $\mk(P)=P$.
+One application of Strict therefore supplies it. This reasoning also
+lifts through every initial lambda. It uses no composition or
+well-foundedness premise. Thus every finite stage, and hence the stable
+stage, is sound.
+
+For completeness induct jointly on finite weak, strict and list
+derivations. Var, Abs and Fun are the structural equations. Put inserts
+the marked weak bit into the ordinary weak field. Copy, Stat and FAbs
+are exactly their positive equations. Select uses the exact full tuple
+table; every actual extra occurs in its downward closure.
+Lemma~\ref{lem:observation-closure} retains every requested observation.
+For Strict, its shorter weak premise appears by induction. At the fixed
+point the strict field of $q$ is exactly the weak field of $\mk(q)$
+when marking succeeds, and is empty otherwise: verify this down the
+initial lambda spine, using the ordinary-head equation, the persistent
+marked equation, and the empty variable case. This supplies the strict
+bit, including when its source already contains marks.
+\end{proof}
+
+\begin{theorem}[Decidability]\label{thm:decide}
+Both $\succeq_\star$ and $\succ_\star$, and therefore $\cw,\cs$, are
+decidable on all ordinary finite inputs.
+\end{theorem}
+\begin{proof}
+Construct the finite domains and coherent constructor lattice, iterate
+to its least fixed point, interpret the source at the empty port context,
+and inspect the target's weak or strict bit. Theorem~\ref{thm:adequacy}
+gives both directions of correctness, and Lemma~\ref{lem:operator} gives
+termination. Add the finite literal-support inclusion test for confinement.
+The algorithm allows functional free variables and arbitrarily high
+finite types. It requires no generated-source size bound, search for an
+ordinary intermediate term, or transitive-closure oracle.
+\end{proof}

@@ -1,0 +1,151 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[OT1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype,booktabs,longtable,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\setlength{\parskip}{3pt plus 1pt}
+\setcounter{tocdepth}{1}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\N}{\mathbb N}
+\newcommand{\NN}{\mathbb N_{>0}}
+\newcommand{\lv}{\operatorname{lv}}
+\newcommand{\norm}{N}
+\newcommand{\sz}{s}
+\newcommand{\can}[1]{\mathopen{[\![}#1\mathclose{]\!]}}
+\newcommand{\mle}{\preccurlyeq}
+\newcommand{\mslt}{\prec}
+\newcommand{\Esrc}{\mathcal E_f}
+\newcommand{\limpart}{\operatorname{lim}}
+\title{Source Expressivity and Control Sensitivity\\of Ordinal Assignments}
+\author{}
+\date{17 November 2026\\Research manuscript}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study the arithmetic expressible by literal canonical
+Wilken--Weiermann assignments of original G\"odel T terms. Finite
+Boolean systems of actual source observations compile into one
+unconditional ground comparison, with polynomial overhead in a shared
+syntax graph. Absolute scalar observers remove restrictions on the
+result type, and finite systems of source equations eliminate common
+all-one observations of functional variables without an all-one term
+inhabitant. For a grammar with arbitrary nested ground binders and
+opaque higher-type blocks, we construct exact head certificates at the
+original abstraction budget and recover the entire genuine collapse
+graph, including its finite prefix. An active functional-argument
+example delineates that grammar. Finally, an additive-one perturbation
+of the usual control makes ground comparison co-recursively-enumerable
+complete, even with only zero, successor, ground binders and ground
+inputs. The proofs retain the literal parsing policy and the actual
+scalar seeds of their sources. They complement the permitted-control
+decision theorem without deciding all-ground comparison for the
+unchanged standard control.
+\end{abstract}
+\tableofcontents
+
+\section{Introduction}
+
+Wilken and Weiermann's ordinal assignment for G\"odel's T compares
+expressions under every admissible substitution \cite{ww}. Its
+canonical instance assigns a finite vector to each literal typed term.
+The zeroth component has a natural-number value, while positive
+components record ordinal structure. A source program and its
+beta-normal form need not receive the same canonical vector.
+
+The companion \emph{Decidable Ground Comparison for Norm-Controlled
+Ordinal Assignments} \cite{groundcomparison} proves a decision theorem
+for ground free inputs at particular permitted controls. It also proves
+functional-input undecidability. The present paper concerns a different
+interface: which arithmetic observations can be represented by actual
+source terms, and how much the decision problem can change when the
+control changes.
+
+Three results organize the paper. First, arbitrary finite Boolean
+combinations of source observations reduce to one universal strict or
+weak comparison of ground-output sources. This includes arbitrary
+supplied source leaves and preserves their shared inputs. The converse
+reduction also handles functional outputs, through an absolute scalar
+observer. These are exact representation theorems; a compiler by itself
+does not decide whether its existential witnesses exist.
+
+Second, functional variables can be observed at the all-one vector
+without assuming that a closed source realizes that vector. Two actual
+abstractions give a positive-coefficient linear equation for the desired
+scalar observation. We then construct unary head carriers through an
+entire grammar of ground applications and ground binders. A finite
+reserve calculation pays their cost with the original box coefficient.
+The resulting certificate defines the whole collapse graph, rather than
+only a sparse observable ray.
+
+Third, for every prescribed finite prefix there is a fixed primitive
+recursive control differing from the usual example by at most one at
+every input for which even a small ground-source fragment has a
+$\Pi^0_1$-complete comparison problem. Bounded simulation is placed in
+the parity of the control. The source compiler exposes it through the
+actual successor graph. Thus growth estimates and close numerical
+approximation do not determine comparison decidability.
+
+The source constructions use no arbitrary ordinal-valued primitive.
+Every observed head has an actual source or an explicitly stated and
+proved carrier certificate. The scalar attached to such a carrier is
+retained. The boundary examples and finite-prefix arguments make these
+requirements explicit.
+
+\input{sections/setting}
+\input{sections/compiler}
+\input{sections/observers}
+\input{sections/realization}
+\input{sections/control-sensitivity}
+\input{sections/decision-boundaries}
+
+\section{Relation to the decision results}
+
+The compiler applies both to the standard control and to the permitted
+controls for which the companion proves ground decidability. In the
+latter case existential actual-source arithmetic is therefore decidable.
+For the additive-one controls of this paper the same arithmetic is
+undecidable. These statements concern different fixed functions.
+
+The carrier theorem does not require a certificate for every child of
+the source grammar, and it does not enlarge the original scale. Its
+restriction to ground arguments is nevertheless substantive. The
+functional-argument example changes an infinite coefficient of a
+positive partial, which a finite reserve cannot repair. It leaves open
+other construction methods for a larger source class.
+
+At the unchanged standard control the full all-ground problem remains
+unclassified by these results. A faster closed evaluator, a compiler
+for Boolean constraints, or an additional head graph does not settle
+their simultaneous existential satisfiability. The countervaluation and
+complete-count statements in Section~\ref{sec:boundaries} locate precise
+remaining obligations without identifying them with periodic tables at
+arbitrary auxiliary heads.
+
+\appendix
+\input{sections/policy-example}
+
+\section*{Preparation and verification status}
+
+This manuscript was prepared through AI-assisted research directed by
+the repository owner. No individual is assigned mathematical authorship
+by this preparation record. The arguments printed here are hand proofs.
+The repaired canonical-domain theorem is imported at the exact scope
+stated in Section~\ref{sec:setting}; earlier formal work on its component
+lemmas does not constitute verification of this assembled manuscript.
+Compilation checks and AI review do not establish independent human
+verification or historical priority.
+
+\clearpage
+\input{references}
+\end{document}

@@ -1,0 +1,645 @@
+\section{A numerical simulation and the individual upper bound}
+\label{sec:upper}
+
+Persistent symbolic marking must not become a numerical identity step.
+We simulate each reuse by decreasing a finite label. The argument follows
+the computability architecture of numbered higher-order path orderings
+\cite[Section~5.3]{kop}, with that additional decrease made explicit.
+It proves well-foundedness independently of the composition theorem.
+
+\subsection{One finite arithmetic universe}
+Fix a finite subtype-closed set $S$ and the ranked signature $\mathcal F$.
+The auxiliary syntax has variables, lambdas, bottom $\bot_\tau$, ordinary
+heads, numbered heads $f^k_\tau(\vec b;\vec e)$ for $k\in\N$, and a
+separate ordinary auxiliary application $QU$. An ordinary head has label
+$\omega$. Auxiliary application is distinct from the literal original
+binary head $@_{\sigma,\tau}$.
+
+Every node and binder type lies in $S$. In addition, every head's
+\emph{original} result type and all original base-argument types lie in
+$S$, even when a numbered head has been retyped. These restrictions give
+finitely many possible native and application heads. Ranked heads belong
+to the fixed finite signature. An ordinary term is in this universe
+whenever its literal support is contained in $S$.
+
+Use de Bruijn bound syntax and globally typed free names $(\tau,i)$,
+where $\tau\in S$ and $i\in\N$. All finite contexts and their extensions
+are represented in this one arithmetic carrier. Fresh opening chooses
+a name outside a finite set. There is no application of a theorem about
+one fixed context to unrepresented later context extensions.
+
+Write $P^k_\rho=f^k_\rho(\vec b;\vec e)$. The raw auxiliary reduction
+$\leadsto$ has the following root rules, always with the displayed
+types and head-window conditions.
+\begin{enumerate}
+\item An ordinary $f(\vec b)$ reduces to $f^k(\vec b;\varnothing)$
+for any finite $k$.
+\item $P^{k+1}_\tau\leadsto P^k_\tau$.
+\item If a base or extra argument $q$ has type
+$\rho_1\to\cdots\to\rho_n\to\tau$, then
+\[
+ P^{k+1}_\tau\leadsto qP^k_{\rho_1}\cdots P^k_{\rho_n}.
+\]
+The right side uses ordinary auxiliary application.
+\item If $f>g$ and $g$ belongs to the fixed head window, then
+$P^{k+1}_{\operatorname{res}(g)}$ reduces to the ordinary $g$-head
+whose base arguments are the appropriately retyped copies $P^k$.
+\item If $f\approx g$, $g$ lies in the same window, and the base list
+of $g(\vec c)$ is a primitive strict replacement of $\vec b$ as defined
+below, then $P^{k+1}_{\operatorname{res}(g)}\leadsto g(\vec c)$.
+\item $P^{k+1}_{\sigma\to\tau}$ reduces to
+$\lambda x:\sigma.f^k_\tau(\vec b;\vec e,x)$ with fresh opening.
+\item $(\lambda x.Q)U\leadsto Q[x:=U]$, and every nonbottom $Q:\tau$
+reduces to $\bot_\tau$.
+\end{enumerate}
+Close these rules under lambda bodies and under each base and extra
+argument of an ordinary or numbered head. Auxiliary application has
+\emph{function-side closure only}: $Q\leadsto Q'$ gives
+$QU\leadsto Q'U$. It has no argument-side closure.
+
+For primitive replacement, a \emph{mark decrease} passes through a
+common initial lambda spine and either changes an ordinary head's label
+$\omega$ to a finite label, or changes a finite leading label $k$ to
+$l<k$. It leaves the head, arguments, extras and output type fixed.
+Variables, bottoms and auxiliary applications cannot be marked this way.
+Every mark decrease is a nonempty raw path. A primitive multiset
+replacement retains identical occurrences, removes a nonempty source
+part, and inserts finitely many mark decreases of removed occurrences.
+Deletion is allowed. In particular label zero cannot be marked again.
+
+Quotient by the congruence that replaces equivalent heads and permutes
+their permitted base arguments, preserving types, labels, lambda shape
+and extra order. Its classes are finite and effectively enumerable in
+the fixed head window. We may use least-code representatives. Let
+$R_S$ be the positive-path relation induced by $\leadsto$ on these
+classes. Both relations are arithmetic: finite raw paths and finite
+equivalence witnesses are numerical certificates.
+
+\subsection{Accessibility in one positive inductive definition}
+\begin{lemma}[Arithmetic accessibility]\label{lem:arithmetic-accessibility}
+For each fixed $S,\mathcal F$, the theory $\ID$ proves accessibility
+of every well-typed auxiliary term under $R_S$.
+\end{lemma}
+\begin{proof}
+Use two positive arithmetic operators, with typedness included:
+\[
+ I(Q)\ \longleftrightarrow\
+   \forall Q'\,(Q R_S Q'\Rightarrow I(Q')),
+ \qquad
+ J(M)\ \longleftrightarrow\
+   \forall M'\,(M\DM(R_S)M'\Rightarrow J(M')).
+ \tag{A}
+\]
+Here $\DM(R_S)$ is ordinary strict finite multiset replacement, retaining
+identical occurrences and replacing removed ones by $R_S$ descendants.
+Neither clause refers to the other's inductive predicate. Disjoint
+numerical tags combine them into one positive arithmetic definition.
+The $I$-stages of that definition equal the standalone accessibility
+stages, since its clause never consults the $J$ tag.
+
+For each of the finitely many types in $S$ define, by external recursion
+on type,
+\[
+ C_o(Q)=I(Q),\qquad
+ C_{\sigma\to\tau}(Q)\iff
+       \forall U\,(C_\sigma(U)\Rightarrow C_\tau(QU)).
+ \tag{T}
+\]
+Each is a first-order formula in the language with $I$; no further
+inductive definition is introduced at an arrow. Quantification over
+computable typed arguments abbreviates a finite disjunction over $S$.
+
+We give the computability facts used in the constructor induction.
+Joint induction on type proves that a non-lambda is computable whenever
+all its direct reducts are computable; that variables and bottoms are
+computable; that computability is preserved by $\leadsto$ and $R_S$;
+and that computability implies $I$. At base type, closure of (A) and
+transitivity of positive paths give the assertions. At an arrow, $QU$
+has no top beta step when $Q$ is not a lambda. Apart from bottom its
+reducts reduce the function $Q$, so codomain induction applies. Bottom
+and variable applications are handled by this same neutral argument.
+Function-side closure gives downward closure of (T).
+
+For the implication from computability to $I$ at an arrow, apply the
+term to a fresh computable variable $x$. Every positive path
+$Q R_S Q'$ gives $Qx R_S Q'x$. Induction on $I(Qx)$ therefore proves
+$I(Q)$: all descendants $Q'$ inherit the corresponding strictly
+smaller accessibility premise.
+
+The lambda fact is also needed. Suppose every computable instance
+$V[x:=U]$ is computable. Substituting a fresh variable first gives
+$I(V)$. Induct on this accessibility while retaining the universal
+instance premise. The direct reducts of $(\lambda x.V)U$ are its given
+beta instance, a function-side body reduct, or bottom. For a body
+reduct, substitution takes a raw step to a raw path or equality; the
+only possible loss of a step is harmless, as when a variable-to-bottom
+step becomes bottom-to-bottom. Mark decreases commute with substitution
+because their leading labels remain unchanged. Downward closure and the
+induction hypothesis therefore make every reduct computable. The
+neutral argument gives the application and hence the lambda.
+All statements respect the finite equivalence quotient.
+
+Next prove that accessibility of finitely many members implies $J$ of
+their multiset. First prove closure of $J$ under multiset union by outer
+$J$-induction on one component and inner $J$-induction on the other.
+Label removed occurrences by their component of origin and assign each
+new occurrence to a removed dominator. The target splits into two
+components, each unchanged or decreased, with at least one decreased.
+The nested induction and downward closure supply its $J$-membership.
+Now $I$-induction on $Q$ gives $J(\{Q\})$: any replacement consists of
+finitely many descendants $Q_i$, the induction hypothesis gives each
+$J(\{Q_i\})$, and finite union gives the replacement's membership.
+Another finite union proves the assertion for arbitrary accessible
+member multisets.
+
+Finally prove that a constructor with computable arguments is computable
+by the lexicographic induction
+\[
+ (\text{head class},\ \text{base multiset},\
+    \text{label in }\N\cup\{\omega\},\ \text{extra multiset}).
+ \tag{L}
+\]
+Use finite induction on head classes, $J$-induction on the base list,
+ordinary induction on finite labels followed by the $\omega$ case,
+and $J$-induction on extras. Every earlier invariant quantifies all
+later parameters, including the output type and the finite typed extra
+list. These are first-order formulas in the language of $\ID$.
+
+The neutral lemma reduces this assertion to its direct reducts.
+Ordinary marking decreases $\omega$ to a finite label, and the added
+lowering rule strictly decreases a finite label. Select applies a
+computable selected argument to computable lower-label self-copies.
+Copy first obtains those copies and then uses a smaller head class;
+its target label may reset to $\omega$ because the first component
+has decreased. In the multiset rule, every inserted argument is a
+positive mark-decrease descendant of a removed one. Downward closure
+makes it computable, and the base multiset decreases under $\DM(R_S)$.
+This earlier decrease again permits the outer label to reset to
+$\omega$. Abstraction creation decreases the label before adding a
+fresh extra, and the lambda fact applies to every computable
+substituted extra. A base or extra argument reduction decreases its
+corresponding multiset. Bottom is computable. These exhaust the rules.
+
+Structural induction under a computable substitution now makes every
+auxiliary term computable and hence accessible. All syntax, typing,
+paths, multiset assignments and invariants used above are arithmetic
+in the one fixed universe, so this is an $\ID$ proof of the stated
+individual memberships.
+\end{proof}
+
+\subsection{Finite budgets and preservation of the universe}
+A symbolic marked term is $S$-admissible if its node and binder types
+and every head's original declaration lie in $S$. Ordinary endpoints
+are admissible for $S=\Ty(s)\cup\Ty(t)$.
+
+\begin{lemma}[Locality]\label{lem:window-locality}
+Every term in a finite weak or strict derivation with $S$-admissible
+endpoints, and every numerical intermediate constructed below, is
+$S$-admissible.
+\end{lemma}
+\begin{proof}
+Induct over the actual comparison and occurrence-list derivations.
+Var and matching introduce no type. Abs opens at the given binder
+type. Put and Strict change only the mark. FAbs appends the domain
+of the existing outer arrow and uses its codomain.
+
+For Select, each supplied domain and every successive arrow suffix is
+a subtype of the selected argument's type. A self-copy retains its
+original head declaration. The full application consumes original
+lambdas, substitutes admissible copies, and possibly marks a residual
+head and appends those copies. Induction on that literal operation
+introduces no new type or head. This establishes admissibility of the
+continuation source before its derivation induction is applied.
+
+Copy and Stat retype only to actual target-argument types. Their new
+target head is present in the endpoint and therefore satisfies the
+head-window guard. Their occurrence witnesses use actual endpoint
+arguments. This proves the symbolic assertion.
+
+Numerical realization retains this typed shape. Lowering and mark
+decrease change no declaration. Copy and multiset reset use the
+already admissible target head. Auxiliary Select applications and the
+lambdas created by the full-tuple helper have the domain and suffix
+types already checked above. Beta substitution, contexts and equivalent
+head permutations preserve the same window. Thus every constructed
+raw edge belongs to this single $R_S$ universe.
+\end{proof}
+
+Write $q\sim_n Q$ when $Q$ realizes the symbolic source $q$ with the
+same typed shape, ordinary heads at label $\omega$, and every marked
+head at some finite label at least $n$. The realization preserves base
+and extra lists, commutes with simultaneous substitution, and weakens
+to every smaller threshold. For an ordinary $q$ there is a unique
+$\tr(q)$, available at every threshold.
+
+\begin{lemma}[Full-tuple simulation]\label{lem:tuple-simulation}
+If $\ap q{a_1,\ldots,a_l}$ is defined, sufficiently high realizations
+of $q,a_i$ reduce by a finite auxiliary path to a realization of that
+exact result at any prescribed lower threshold $n$. The helper spends
+at most $l+1$ units beyond that threshold.
+\end{lemma}
+\begin{proof}
+Consume the same original lambda spine by beta steps, with the supplied
+arguments substituted in their common environment. If the tuple ends,
+this is the required result. Otherwise source definedness says that
+the original residual head is functional. Mark an ordinary head to
+a sufficiently large finite label, or retain its available finite
+label. For each remaining argument, create an abstraction and
+beta-contract it, thereby appending that argument while decreasing
+the label by one. There are at most $l$ such decreases. Substituted
+old arguments retain their own thresholds. A protected-variable
+overapplication is undefined in the source and is never a premise.
+All helper types remain in the window by Lemma~\ref{lem:window-locality}.
+\end{proof}
+
+\begin{lemma}[Positive simulation]\label{lem:positive-simulation}
+For every finite weak derivation $\W q t$ in a fixed window there is
+a computable finite budget $b$ such that every $q\sim_b Q$ reduces,
+possibly by an empty path and modulo finite equivalence, to $\tr(t)$.
+For a strict derivation the budget can be chosen so that the path is
+positive. Consequently, for ordinary confined endpoints,
+\[
+ s\cs t\quad\Longrightarrow\quad
+ \tr(s)R_{\Ty(s)}\tr(t).
+\]
+\end{lemma}
+\begin{proof}
+All original targets are ordinary by Lemma~\ref{lem:elementary}.
+Induct jointly on the finite comparison and list witnesses, taking
+maxima of their finitely many required budgets.
+
+Var requires no step. Abs lifts a body path; Fun performs child paths
+inside base arguments and uses the finite head/permutation equivalence.
+Put chooses a finite leading label above its child's budget.
+Select reserves one unit for the Select rule, the full-tuple cost
+of Lemma~\ref{lem:tuple-simulation}, and the continuation budget.
+FAbs reserves one unit and lifts its body path. Copy reserves one
+unit, builds its ordinary target from lower-label self-copies, and
+performs the finite child paths in its arguments.
+
+For Stat retain the specified source occurrences unchanged in the
+intermediate target. Each inserted occurrence has a strict premise,
+hence a defined mark and a shorter weak derivation from that mark.
+If its numerical source argument is ordinary, choose an
+$\omega$-to-finite mark above the child budget. If it is already
+numbered, reserve an additional unit and strictly lower the finite
+label. Under initial lambdas use the same context step. These are
+exactly the permitted primitive replacements. The numerical multiset
+rule builds an ordinary target whose retained arguments then follow
+their weak paths and whose inserted arguments follow their marked
+weak paths.
+
+For Strict itself perform this same nonempty mark decrease on its
+source before following its weak premise. At a symbolically
+already-marked source the symbol stays the same but its finite
+numerical label strictly decreases. This makes the simulated path positive. Label zero
+is never reused because the budget reserves the needed unit.
+
+All choices depend only on the finite proof certificate. Locality
+keeps every intermediate in the original endpoint window. For
+ordinary $s$, $\tr(s)$ has only $\omega$ labels and meets every
+finite budget. Confinement makes that window precisely $\Ty(s)$.
+The marked-target auxiliary relation of Appendix~\ref{app:composition}
+is not part of this simulation; its reflexive marked strict judgments
+are never interpreted as positive paths.
+\end{proof}
+
+We use the following published ordinal-analysis input. For a positive
+arithmetic inductive operator, every individual membership atom provable
+in $\ID$ has inductive norm strictly below the Bachmann--Howard ordinal.
+With stages beginning at the operator applied to the empty set, the
+norm for the accessibility operator is exactly descending rank
+\cite[Definitions~6.3.1, 6.3.5 and 9.1.2,
+Lemma~6.5.2, Theorems~9.5.5--9.5.6]{pohlers}.
+
+\begin{theorem}[Well-foundedness and individual bound]\label{thm:upper}
+The confined strict relation is well founded, and
+$\rk_{\cs}(s)<\BH$ for every ordinary term $s$.
+\end{theorem}
+\begin{proof}
+Every descendant of $s$ remains in $S=\Ty(s)$.
+Lemmas~\ref{lem:arithmetic-accessibility} and
+\ref{lem:positive-simulation} exclude an infinite strict chain.
+Their positive-edge simulation gives
+\[
+ \rk_{\cs}(s)\le \rk_{R_S}(\tr(s)).
+\]
+The arithmetic accessibility proof supplies an $\ID$ proof of the
+individual $I$-membership of $\tr(s)$ in this fixed window. The tagged
+$I$ component has its standalone accessibility norm. Applying the
+published norm theorem yields
+$\rk_{R_S}(\tr(s))<\BH$, as required. No transitivity assumption
+about the symbolic comparison is needed in this argument.
+\end{proof}
+
+\section{Native terms with cofinal lower ranks}\label{sec:lower}
+
+For a closed native term $t:A$, let $r_A(t)$ be its rank in the
+restriction of $\cs$ to closed native terms of that same type.
+These ranks are countable by well-foundedness and countability of
+syntax. Restriction cannot increase rank. The lower construction
+uses these ranks themselves, without a rank borrowed from the
+auxiliary numerical system.
+
+\subsection{A carrier inside literal T}
+Fix closed native terms $P,K:B\to B$ and $U:B$ with $\W K P$
+and $\Ty(P)\subseteq\Ty(K)$. Put
+$H=o\to B\to B$, $F=\lambda n:o.K$ and
+\[
+ W=R^B0FU,\qquad U_1=R^B0,\quad U_2=U_1F.
+\]
+For any required result type $\rho$ define proof intermediates
+\[
+\begin{aligned}
+ Q_\rho&=@^\star_\rho(U_2,U),\\
+ C_{2,\rho}&=@^\star_\rho(U_1,F;Q_B),\\
+ C_{1,\rho}&=@^\star_\rho(R^B,0;C_{2,H},C_{2,B}),\\
+ C_{0,\rho}&=(R^B)^\star_\rho(;C_{1,o},C_{1,H},C_{1,B}).
+\end{aligned}
+\]
+They are marked comparison terms, not additional native constructors.
+
+\begin{lemma}[Native carrier]\label{lem:carrier}
+$W\cs U$, and $W\cs T$ implies $W\cs PT$ for every ordinary
+closed $T:B$ carrying the stated support guard.
+\end{lemma}
+\begin{proof}
+Select the second base argument of $Q_B=\mk(W)$ to obtain $U$.
+For the second assertion, the hypothesis is a weak proof from $Q_B$
+to $T$. Select the extras $C_{1,B},C_{2,B},Q_B$ in turn to prefix
+that proof by a derivation from $C_{0,B}$.
+
+To derive the other Copy premise, start from $C_{0,B\to B}$.
+Select its extra $C_{1,H}$ with one self-copy of type $o$; this
+appends that copy to the marked $C_1$ owner. Select its original
+$C_{2,H}$ extra with one further self-copy, and then its original
+base argument $F=\lambda n.K$ with one self-copy. The result is
+literally $K$, since $n$ is unused. Append the given weak proof
+from $K$ to $P$. Copy at $R^B>@$ now constructs $PT$ from these
+two whole-source premises.
+
+Three outer Select prefixes carry this proof back to $Q_B$.
+They select $U_2,U_1,R^B$ with respectively one, two and three
+simultaneous copies at their displayed types. Strict marking gives
+$W\cs PT$. The support of $T$ is contained in that of $W$ by
+hypothesis; the support of $P$ occurs through $K$, and the final
+application adds only $B,B\to B$, already present. Thus every
+comparison is confined. No composition theorem is used.
+\end{proof}
+
+Let the semantic base type be $\iota$, interpreted as the countable
+ordinals, and translate it to the actual type $\sigma=o\to o$.
+Translate arrows homomorphically. Define erasable templates
+\[
+ E_\iota(i)=i,\qquad E_{A\to D}(i)=\lambda x:|A|.E_D(i).
+\]
+For $B=|A|$, $\eta=B\to B$, and fixed $P:\eta,U:B$, put
+\[
+ K_i=((\lambda a:\eta.\lambda b:\eta.a)P)E_{A\to A}(i),
+ \qquad
+ W_i=R^B0(\lambda n:o.K_i)U.
+\]
+
+\begin{lemma}[Indexed carrier]\label{lem:indexed-carrier}
+$W_i\cs U$, and $i\cs j$ implies both
+$W_i\cs W_j$ and $W_i\cs PW_j$.
+\end{lemma}
+\begin{proof}
+First $K_i\cs P$ has a direct proof. Mark the outer application and
+select its first base argument with one self-copy. The result is the
+marked inner application retaining $P$ as its second base argument.
+Select $P$ with an empty tuple. Since $P$ is a subterm, confinement
+also holds. Strict inclusion supplies the weak hypothesis of
+Lemma~\ref{lem:carrier}.
+
+The context defining $W_i$ contains $i$ in its erasable argument.
+Context stability therefore gives $W_i\cs W_j$ from $i\cs j$.
+Apply the carrier lemma to that target to get $W_i\cs PW_j$.
+The common context contributes the same types; the support of $j$
+is contained in that of $i$. The final application uses only types
+already present. The selector proof did not compose beta reductions.
+\end{proof}
+
+\subsection{Rank realization and full-prefix iteration}
+Semantic arrow types contain all set functions of the indicated types,
+not only monotone ones. Countable suprema are pointwise at arrows.
+For closed actual terms define
+\[
+ t\models_\iota\alpha\iff r_\sigma(t)\ge\alpha,
+\]
+and let $t\models_{A\to D}f$ mean that for every semantic $x:A$
+and every closed $u\models_A x$, the ordinary application $tu$
+realizes $f(x)$.
+
+\begin{lemma}[Realization closure]\label{lem:realization}
+Realization is preserved when a term is replaced by a strict predecessor.
+It is downward closed in its semantic value, with pointwise order at
+arrows. If one fixed term realizes every member of a nonempty countable
+family, it realizes their pointwise supremum. The typed lambda
+fundamental lemma holds for these realizers.
+\end{lemma}
+\begin{proof}
+Induct on the semantic type. At $\iota$, use the rank inequality
+for a strict edge and the defining property of ordinal supremum.
+At an arrow, apply the induction hypotheses to each realizing
+argument; context stability gives $tv\cs uv$ from $t\cs u$.
+The other assertions are pointwise. For the lambda lemma, its
+application beta-reduces strictly to the substituted body, so strict
+predecessor closure transports the body's realization backward.
+An induction on the number of beta steps permits any finite sequence.
+\end{proof}
+
+The closed native iterator is
+\[
+ \It_A=\lambda i:\sigma.\lambda p:\eta.\lambda u:B.\
+ R^B0\bigl(\lambda n:o.((\lambda a:\eta.\lambda b:\eta.a)p)
+                   E_{A\to A}(i)\bigr)u.
+\]
+For an arbitrary semantic $f:A\to A$ define
+\[
+ f^0(x)=x,\qquad
+ f^{\beta+1}(x)=f(f^\beta(x)),\qquad
+ f^\lambda(x)=\sup_{\xi<\lambda} f^\xi(x)
+ \quad(\lambda>0\text{ limit}).
+ \tag{I}
+\]
+
+\begin{theorem}[Native finite-type iteration]\label{thm:iteration}
+$\It_A$ realizes $(\alpha,f,x)\mapsto f^\alpha(x)$ with convention
+\textup{(I)}, even when $f$ is not monotone.
+\end{theorem}
+\begin{proof}
+Fix closed realizers $P\models f$ and $U\models x$. For each closed
+index $i:\sigma$, prove that the single term $W_i$ realizes every
+orbit value $x_\beta=f^\beta(x)$ for $\beta\le r_\sigma(i)$.
+Use outer well-founded induction on $r_\sigma(i)$ and inner induction
+on $\beta$.
+
+At zero, $W_i\cs U$ supplies the conclusion. If
+$\beta=\gamma+1\le r_\sigma(i)$, the rank equation gives a closed
+native $j$ with $i\cs j$ and $r_\sigma(j)\ge\gamma$.
+Otherwise all successor ranks would be at most $\gamma$, contrary
+to $r_\sigma(i)\ge\gamma+1$. The outer induction makes $W_j$
+realize $x_\gamma$. Hence $PW_j$ realizes $f(x_\gamma)$, and
+$W_i\cs PW_j$ transports that realization to $W_i$.
+
+At a nonzero limit the same $W_i$ realizes every earlier $x_\xi$.
+There are countably many earlier stages. The supremum clause of
+Lemma~\ref{lem:realization} gives $x_\beta$. This uses the entire
+prefix; a cofinal subsequence would not suffice for an arbitrary
+nonmonotone orbit.
+
+If $i\models\alpha$ then $\alpha\le r_\sigma(i)$.
+Finally transport the realization backward through the finitely
+many beta steps from $\It_A iPU$ to this carrier. All ranks and
+edges are those of the closed native confined relation.
+\end{proof}
+
+\subsection{Explicit ordinal operations and published calibration}
+Let $Z=\lambda z:o.z:\sigma$ and define
+\[
+ s=\lambda a:\sigma.((\lambda u:\sigma.\lambda v:\sigma.u)Z)a.
+\]
+$Z$ realizes zero. The body of $sa$ lies strictly above $a$ by
+outer-argument Select, so beta transport makes $s$ realize right
+successor. Put
+\[
+ \operatorname{Cap}(P,U)=R^B0(\lambda n:o.P)U.
+\]
+The same carrier is strictly above every finite $P^kU$, by induction
+using Lemma~\ref{lem:carrier}. Consequently
+$w=\operatorname{Cap}(s,Z)$ realizes $\omega$.
+
+Writing $\It=\It_\iota$, define the following closed abbreviations:
+\[
+\begin{aligned}
+ \mathrm{add}&=\lambda a\,b.\It\,b\,s\,a,\\
+ \mathrm{mul}&=\lambda a\,b.\It\,b\,(\lambda x.\mathrm{add}\,x\,a)\,Z,\\
+ \mathrm{one}&=sZ,\\
+ \mathrm{pow}&=\lambda a.\It\,a\,(\lambda x.\mathrm{mul}\,x\,w)\,\mathrm{one},\\
+ \mathrm{fix}&=\lambda f\,z.\It\,w\,f\,(s z).
+\end{aligned}
+\]
+Their variables have the unique indicated ordinal-realizer types.
+They realize, respectively, $\alpha+\beta$, $\alpha\beta$,
+$1$, $\omega^\alpha$, and $f^\omega(\zeta+1)$.
+The formulas specify the order of the noncommutative operations:
+multiplication iterates addition on the right, and exponentiation
+iterates right multiplication by $\omega$.
+Let $\mathrm{Next}=\mathrm{fix}\,\mathrm{pow}$, realizing the
+function that takes $\zeta$ to the least epsilon number above it.
+
+Put $A_0=\iota$ and $A_{l+1}=A_l\to A_l$. The finite-type
+extractors of Simmons \cite[Defs.~2.10--2.14]{simmons2004}
+are
+\[
+ B_l h h_l\cdots h_1
+   =\Fix\bigl(\lambda\alpha.\ h^\alpha h_l\cdots h_1\,0\bigr),
+ \qquad B_l:A_{l+2}.
+ \tag{B}
+\]
+They have actual closed native realizers. For $l=0$, the inner body
+is $\It_\iota\,\alpha\,h\,Z$. For $l\ge1$, it is
+\[
+ (\It_{A_l}\,\alpha\,h\,h_l)h_{l-1}\cdots h_1Z.
+ \tag{B$_T$}
+\]
+Prefix the corresponding typed lambdas and use $\mathrm{fix}$ for
+$\Fix$. The terminal $Z$ is present in every case. The iterator
+theorem and the lambda fundamental lemma verify the realization
+of (B). All names here abbreviate finite expressions in the original
+native constants, lambdas and applications.
+
+We state the published calibration precisely. Let $\Omega$ be the first
+uncountable ordinal, set $a_0=0$ and $a_{n+1}=\Omega^{a_n}$, and let
+$\Lambda=\sup_n a_n=\varepsilon_{\Omega+1}$.
+Simmons's finite-type iteration uses exactly the full-prefix pointwise
+convention (I), on the full function spaces. His helpfulness theorem
+for every $B_l$ is supplied in
+\cite[Theorem~5.10]{simmons2008}, completing the hypotheses used
+in \cite[Theorem~6.1 and Corollary~6.2]{simmons2004}.
+For the Veblen base pair put
+\[
+ N_B=B_1B_0\mathrm{Next},\qquad \epsilon_B=\Gamma_0=N_B(\omega).
+\]
+The displayed identity following
+\cite[Lemma~6.6]{simmons2008} gives the last equality.
+The resulting sequence
+\[
+ \Delta_0=\Gamma_0,\quad
+ \Delta_1=N_B\Gamma_0,\quad
+ \Delta_{l+2}=B_lB_{l-1}\cdots B_0N_B\Gamma_0
+ \tag{D}
+\]
+satisfies $\Delta_n=\psi_B(a_n)$ by the cited calibration.
+Here $\psi_B$ is the Veblen-hull collapse, not the arithmetic-hull
+collapse attached to $(\mathrm{Next},\varepsilon_0)$.
+
+For completeness, the hypothesis called tameness in that calibration
+holds for the displayed towers: their recursive coefficient norms are
+at most one, whereas every value in the critical base sequence is at
+least $\Gamma_0>1$. This is the actual inequality needed in the proof;
+no assertion that a critical ordinal is finite is used.
+
+Replace the operations in (D) by their native realizers and call the
+resulting closed terms $t_n$. Each has actual outer type $\sigma=o\to o$,
+and
+\[
+ r_\sigma(t_n)\ge\psi_B(a_n).
+ \tag{R}
+\]
+The native syntax alone supplies these witnesses.
+
+\subsection{The endpoint is the same Bachmann--Howard ordinal}
+We record why the tower values are cofinal at the endpoint used for the
+upper bound. In the Veblen convention, an $N_B$-critical ordinal is an
+orbit value $N_B^\alpha(\Gamma_0)$, not a fixed point of the strictly
+inflationary function $N_B$. These criticals are closed under countable
+increasing suprema. Section~5 of \cite{simmons2004} characterizes
+$\psi_B(\xi)$ as the least such critical $\theta$ for which
+\[
+ \eta<\xi,\quad |\eta|<\theta
+       \quad\Longrightarrow\quad \psi_B(\eta)<\theta .
+ \tag{P}
+\]
+The coefficient norm is recursively the maximum of the countable
+coefficients in the base-$\Omega$ representation and of the norms
+of its exponents. In particular $|a_n|\le1$.
+The Veblen-hull endpoint $\psi_B(\varepsilon_{\Omega+1})$ is the
+$\BH$ of the inductive-norm calibration
+\cite[Sections~9.4--9.5]{pohlers}.
+
+\begin{lemma}[Tower cofinality]\label{lem:tower-cofinality}
+$\sup_n\psi_B(a_n)=\psi_B(\Lambda)=\BH$.
+\end{lemma}
+\begin{proof}
+Let $\theta=\sup_n\psi_B(a_n)$. For $n<m$, the norm bound
+$|a_n|\le1<\psi_B(a_m)$ and (P) give
+$\psi_B(a_n)<\psi_B(a_m)$. The countable supremum is therefore
+an $N_B$-critical ordinal.
+
+If $\eta<\Lambda$ and $|\eta|<\theta$, choose $n$ large enough
+that both $\eta<a_n$ and $|\eta|<\psi_B(a_n)$. Such a common
+index exists by the two increasing cofinal sequences. Applying
+(P) at $a_n$ gives $\psi_B(\eta)<\psi_B(a_n)\le\theta$.
+Thus $\theta$ satisfies the endpoint clause, and its least
+critical solution obeys $\psi_B(\Lambda)\le\theta$.
+Conversely (P) at $\Lambda$ applies to each $a_n$, since
+$|a_n|\le1<\psi_B(\Lambda)$, and gives
+$\psi_B(a_n)<\psi_B(\Lambda)$. Take their supremum.
+This uses the defining clause of this particular collapse; it
+does not assume monotonicity for some different collapse convention.
+\end{proof}
+
+\begin{theorem}[Exact descending height]\label{thm:height}
+The descending height of $\cs$ is $\BH$, already cofinally witnessed
+by closed native T terms of outer type $o\to o$.
+\end{theorem}
+\begin{proof}
+The realizers (R) and Lemma~\ref{lem:tower-cofinality} give the
+lower bound for the restriction to closed native terms. Its ranks
+are bounded by the ranks in the full ordering.
+Theorem~\ref{thm:upper} bounds each individual full rank below
+$\BH$. Taking the supremum of ranks plus one gives equality.
+No individual term has been assigned rank $\BH$.
+\end{proof}

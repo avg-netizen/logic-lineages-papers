@@ -1,0 +1,679 @@
+\section{Composition through marked intermediate terms}
+\label{app:composition}
+
+This appendix proves composition for the relation actually defined in
+Section~\ref{sec:comparison}. Auxiliary comparisons may have marked
+targets; they will be eliminated when the final target is ordinary.
+They are not used as a well-founded relation. In particular, an
+already-marked term is strictly comparable to itself in this auxiliary
+relation, so its strict part must not be substituted for the numbered
+relation of Section~\ref{sec:upper}.
+
+\subsection{The auxiliary rules}
+
+A \emph{prefix copy} of
+$P_\tau=f^\star_\tau(\vec b;\vec e)$ is
+$f^\star_\rho(\vec b;\vec e_{\le j})$, where
+$0\le j\le|\vec e|$ and $\rho$ is its required output type.
+The prefix is literal, including order and types. Write $P+\vec a$
+for the same marked owner with $\vec a$ appended to its extras.
+
+The least finite-derivation pair $\succeq_e,\succ_e$ has all eight
+rules of Section~\ref{sec:comparison}, with the subscript $e$ in
+every premise, and the same persistent strict rule. It also has
+the following seven weak rules. The base matching in \textsc{In}
+allows a permutation; its extra matching does not.
+\begin{enumerate}
+\item[\textsc{In}]
+From $f\approx g$, a weak matching of the base occurrences, and
+an ordered, equal-typed weak matching of the extras, infer
+\[
+ \EW{f^\star_\tau(\vec b;\vec e)}
+    {g^\star_\tau(\vec c;\vec d)}.
+\]
+\item[\textsc{Marked1}]
+If $f>g$ and $P$, retyped as necessary, weakly dominates every
+base and extra argument of $g^\star_\tau(\vec c;\vec d)$,
+infer $\EW{P_\tau}{g^\star_\tau(\vec c;\vec d)}$.
+\item[\textsc{Marked2}]
+Use the same conclusion and whole-source premises when
+$f\approx g$ and
+$\vec b>_{\mathrm{mul}}^{\succeq_e,\succ_e}\vec c$.
+\item[\textsc{Drop}]
+From $\EW P t$ infer $\EW{P+\vec a}t$, for any typed extra list.
+\item[\textsc{Perm}]
+The source extras may be permuted, with each type attached to
+its term.
+\item[\textsc{Copies}]
+If every entry of $\vec p$ is a prefix copy of $P$, then
+$\EW{P+\vec p}t$ implies $\EW P t$.
+\item[\textsc{PSelect}]
+The \textsc{Select} rule may use a tuple of prefix copies of its
+owner in place of the tuple of whole-owner copies. The selected
+term remains an actual base or extra argument, and its full
+original-spine call must succeed.
+\end{enumerate}
+Every original derivation embeds in this pair. Structural
+induction using \textsc{Var}, \textsc{Abs}, \textsc{Fun}, and
+\textsc{In} proves $\EW q q$ for every marked or ordinary term.
+
+\subsection{A syntactic refinement relation}
+
+We give explicitly the syntax relation needed to eliminate the
+extra rules. It is useful because a staged special application
+can expose one of the copies substituted at an earlier stage.
+This situation is a syntactic refinement of the owner even
+when it is not one full application of the initially selected
+term.
+
+Define $q\sharpens s$ by the following mutually inductive clauses.
+They are finite trees, not a greatest fixed point.
+Variables refine only themselves; lambdas refine componentwise;
+ordinary heads have exactly the same symbol and positionwise
+refining base lists. At a marked head,
+\[
+ f^\star_\tau(\vec b;\vec e)
+       \sharpens f^\star_\tau(\vec c;\vec d)
+ \tag{S}
+\]
+holds if $\vec b\sharpens\vec c$ positionwise and every typed
+occurrence $d$ in $\vec d$ has one of two finite witnesses:
+\begin{enumerate}[label=(\roman*)]
+\item an actual occurrence $e$ of the same type in $\vec e$
+with $e\sharpens d$;
+\item $f^\star_{\operatorname{type}(d)}(\vec b;\vec e)
+\sharpens d$.
+\end{enumerate}
+The second alternative is a premise tree of smaller height in
+this mutual definition. No order or multiplicity matching of
+extras is required. Head equivalence is insufficient in (S):
+the symbol itself is preserved.
+
+\begin{lemma}[Refinement syntax]\label{lem:sharp-syntax}
+The relation $\sharpens$ is reflexive and transitive. It commutes
+with renaming, opening, and simultaneous substitution by
+pointwise refining environments. It preserves retyping of a
+marked root and reflects a successful partial mark:
+\[
+ q\sharpens s,\quad \mk(s)=s'
+ \quad\Longrightarrow\quad
+ \mk(q)=q'\text{ and }q'\sharpens s'
+ \quad\text{for some }q'.
+ \tag{M}
+\]
+Suppose $q\sharpens s$ and $a_i\sharpens b_i$ in corresponding
+types. If $\ap s{\vec b}$ succeeds, then $\ap q{\vec a}$ succeeds
+and its result refines the result on the right.
+\end{lemma}
+\begin{proof}
+Reflexivity is induction on the term; a marked extra uses its
+own occurrence and the induction hypothesis. Transitivity is
+mutual induction on the right refinement tree, simultaneously
+for bases and the two kinds of extra witness. In the existing
+extra case, invert the matching extra of the first refinement.
+If it was supplied by an existing occurrence, compose the two
+smaller refinements. If it was supplied by the whole owner,
+compose that smaller witness with the right extra witness.
+In the whole-owner case, apply the marked induction hypothesis
+at the requested retyping. The resulting extra witness again
+has exactly one of the two forms (i)--(ii). The variable,
+lambda, and ordinary-head cases just compose their components.
+This proves transitivity without any comparison judgment.
+
+For two-environment substitution, induct over the same mutual
+syntax tree. A variable uses its environment witness; bound
+variables use a common fresh variable. Ordinary heads and
+marked bases retain their positions. An existing extra remains
+an existing substituted occurrence. A whole-owner witness is
+the corresponding smaller refinement after substitution; the
+substituted owner is precisely the owner of the substituted
+extra list. Renaming and opening are instances of this proof.
+Retyping leaves every base and extra premise unchanged.
+
+For (M), refinement has the same root constructors on both
+sides. Descend through their common lambdas. An ordinary head
+is changed into the same marked head on both sides, with empty
+extras. Marked heads are unchanged by both marks. A variable
+on the right cannot have a successful mark.
+
+For full application, follow the common original lambda
+spines. If the tuple stops within the spine, the two-environment
+substitution result applies. If it proceeds to a head, success
+on the right excludes a variable head. Corresponding ordinary
+or marked heads therefore remain, and the unconsumed arguments
+are appended on both sides. Their positionwise refinements
+supply existing-extra witnesses. Old existing-extra witnesses
+remain valid after appending. In an old whole-owner witness,
+the enlarged source refines the old source by retaining only
+the old extras; compose this with that witness. All substitutions
+within old bases and extras have already been covered.
+\end{proof}
+
+Several useful instances deserve to be stated. A marked owner
+refines itself with any extras omitted or permuted. It refines
+itself with any finite list of its prefix copies appended:
+the old extras use (i), and each appended prefix uses (ii)
+followed by the preceding omission instance. Conversely, an
+owner with more extras refines the original owner. These
+statements allow arbitrary typed multiplicities.
+
+\begin{lemma}[Two-stage prefix calls]\label{lem:prefix-escape}
+Let $\vec a,\vec b$ be lists of prefix copies of one marked
+owner $P$. Suppose
+\[
+ \ap q{\vec a}=r,\qquad \ap r{\vec b}=w.
+\]
+Then either $\ap q{\vec a,\vec b}=w$, or $P\sharpens w$,
+at the output type of $w$.
+\end{lemma}
+\begin{proof}
+Follow the original initial lambda spine of $q$. When the
+combined tuple does not pass its end, ordinary simultaneous
+substitution composition gives the asserted equality. When
+it passes that end and the original residual head is
+functional, all remaining arguments are appended to that
+same head, again giving the equality.
+
+The only remaining case is that the combined call exposes an
+original variable. A free variable cannot account for two
+successful stages: a still-unconsumed argument at such a
+variable would block the second stage. A bound variable can
+have received an argument from the first batch. Its value is
+a prefix copy of $P$, hence a marked functional owner.
+The second call can act on that value. Its result is the
+chosen prefix copy, retyped, with a suffix of the later
+prefix-copy arguments appended. Every retained old extra is
+an existing extra of $P$; every appended copy is refined by a
+whole $P$. Clause (S) therefore proves $P\sharpens w$.
+This is precisely the case in which full and iterated unary
+application would disagree.
+\end{proof}
+
+\subsection{Eliminating the auxiliary rules}
+
+\begin{lemma}[Ordinary-target elimination]\label{lem:conservative}
+If $q\sharpens s$, $\EW s t$, and $t$ is entirely ordinary,
+then $\W q t$. The corresponding statements hold for the
+strict judgment, weak matching, strict multiset replacement,
+and replacement suppliers.
+\end{lemma}
+\begin{proof}
+Use mutual induction over the five finite comparison and
+list-judgment trees. Keep the refinement witness arbitrary.
+In \textsc{Var} and \textsc{Abs}, inversion of refinement
+gives the same variable or the two body witnesses.
+\textsc{Fun} uses the component induction hypotheses.
+\textsc{Put} uses (M). For \textsc{Copy}, retype the whole
+source witness and apply the induction hypothesis to each
+target argument; the head is unchanged. \textsc{Stat} also
+uses the multiset induction hypothesis. Opening commutes
+with refinement, so \textsc{FAbs} follows from its body
+induction hypothesis and the same rule.
+
+For either selection rule, let $a$ be the selected argument
+of $s$. If it is a base, refinement supplies an actual
+corresponding base $b$ of $q$ with $b\sharpens a$. If it is
+an extra, its witness either supplies such an actual extra
+$b$ or says that the retyped whole $q$ refines $a$.
+Every whole $q$ copy refines the corresponding prefix copy
+of $s$: use $q\sharpens s$, then omit the unwanted extras.
+In the actual-argument case, Lemma~\ref{lem:sharp-syntax}
+gives a successful full call on $b$ with whole $q$ copies
+whose result refines the given selected result. Apply the
+continuation induction hypothesis and the original
+\textsc{Select} rule.
+In the whole-owner case, the same application lemma gives
+an owner with whole copies appended, refining the selected
+result. The original owner refines this expanded owner by
+the instances following Lemma~\ref{lem:sharp-syntax}.
+Transitivity of refinement therefore lets the continuation
+induction hypothesis finish directly.
+
+In \textsc{Drop}, the enlarged owner refines the owner in
+the premise by omitting its appended extras. In \textsc{Perm}
+it refines the owner with the premise order. In \textsc{Copies},
+the unexpanded owner refines the expanded one by the prefix
+copy instance. Compose the supplied refinement with this
+syntactic witness and use the smaller premise induction
+hypothesis.
+The conclusions of \textsc{In}, \textsc{Marked1}, and
+\textsc{Marked2} are marked and so cannot occur at this
+ordinary-target weak judgment.
+
+For a strict judgment, (M) gives the successful mark on the
+refining source, and its weak premise is smaller. In the
+list judgments, keep the very same partitions and
+occurrence maps, apply the weak or strict induction
+hypothesis at each occurrence, and retain nonemptiness of
+the removed list. These cases complete the mutual induction.
+\end{proof}
+
+\begin{lemma}[Compression of extras]\label{lem:extra-compression}
+Let $P=f^\star(\vec b;\vec e)$ and
+$T=g^\star(\vec c;\vec d)$ have the same output type.
+Suppose $f\approx g$, the base lists have an auxiliary weak
+matching, and $\EW{P_{\operatorname{type}(d)}}d$ for every
+target extra $d$. Then $\EW P T$.
+\end{lemma}
+\begin{proof}
+Let $\vec p$ have, in the order of $\vec d$, one whole
+$P_{\operatorname{type}(d)}$ for each occurrence $d$.
+\textsc{In} first compares
+$f^\star(\vec b;\vec p)$ with $T$.
+\textsc{Drop} appends $\vec e$ to this source;
+\textsc{Perm} moves $\vec e$ in front of $\vec p$.
+Every entry of $\vec p$ is a full-prefix copy of
+$f^\star(\vec b;\vec e)$, so \textsc{Copies} discharges
+them and gives the assertion. No comparison composition
+is used.
+\end{proof}
+
+\begin{lemma}[Refinement admissibility]\label{lem:sharp-admissible}
+For arbitrary targets,
+\[
+ q\sharpens s,\quad \EW s t\quad\Longrightarrow\quad\EW q t.
+ \tag{A}
+\]
+The strict and three list-judgment analogues also hold.
+\end{lemma}
+\begin{proof}
+Repeat the mutual derivation induction of
+Lemma~\ref{lem:conservative}, returning auxiliary judgments.
+All its original-rule, macro, selection, and strict
+constructions remain valid with a marked final target.
+There are now three additional root cases.
+
+For \textsc{In}, the source refinement preserves the
+head and refines each base, so the base matching follows
+from the induction hypotheses. A source extra matched
+with a target extra $d$ has either an actual-extra
+refinement witness $e_q\sharpens e_s$, or a whole-$q$
+witness. In the first case the smaller matching
+induction hypothesis gives $\EW{e_q}d$; zero-argument
+\textsc{Select} then gives $\EW q d$. In the second case
+the smaller hypothesis already gives $\EW q d$.
+Lemma~\ref{lem:extra-compression} reconstructs the full
+marked target with precisely its original extras.
+
+For \textsc{Marked1}, transport each whole-source
+premise by the weak induction hypothesis, at its stated
+type, and reapply the rule. For \textsc{Marked2}, do
+the same and transport its strict multiset by the list
+induction hypothesis. This exhausts the extra cases.
+Persistence matters in the strict induction: a marked
+source is returned by its mark, so (M) applies there
+without requiring a fresh syntactic mark.
+\end{proof}
+
+\begin{lemma}[Marking transport]\label{lem:extended-marking}
+For all auxiliary terms,
+\[
+ \EW s t\Longrightarrow\EW{\headmark(s)}{\headmark(t)},\qquad
+ \EW{\headmark(s)}t\Longrightarrow\EW s t.
+ \tag{T}
+\]
+If $\EW s t$ and $\mk(t)$ is defined, then $\mk(s)$ is defined.
+\end{lemma}
+\begin{proof}
+For the second implication descend through a common
+initial lambda spine. At an ordinary head use
+\textsc{Put}; at a marked head or a variable spine
+the total mark is unchanged. A comparison whose source
+is a lambda can use only \textsc{Abs}; a comparison
+whose source is a variable is its \textsc{Var}
+comparison. This inversion justifies the descent and
+also proves reflection of markability.
+
+Prove the first implication by mutual derivation
+induction. \textsc{Fun} becomes \textsc{In} with empty
+extras. \textsc{Copy} and \textsc{Stat} become,
+respectively, \textsc{Marked1} and \textsc{Marked2},
+with the same premises. Already-marked target rules
+retain their conclusions. \textsc{Put} uses
+idempotence. For either selection rule, its smaller
+continuation gives the marked selected result above
+the marked target. The second implication of (T)
+removes the mark from that selected result, so the
+same selection applies. \textsc{Abs} and
+\textsc{FAbs} use the body hypotheses; the extra-list
+macros lift their premise hypotheses. The strict and
+multiset cases use the same occurrence witnesses
+and $(\headmark)^2=\headmark$.
+\end{proof}
+
+\subsection{Covariance of actual full applications}
+
+\begin{lemma}[Two environments]\label{lem:two-environments}
+If $\EW s t$ and type-preserving environments $\gamma,\delta$
+satisfy $\EW{\gamma(x)}{\delta(x)}$ for every variable,
+then $\EW{s\gamma}{t\delta}$. The strict and list-judgment
+versions hold as well.
+\end{lemma}
+\begin{proof}
+Induct simultaneously over those judgments, with the
+environments arbitrary. A variable uses the supplied
+comparison; a binder extends both environments by
+the same fresh variable. Head rules preserve all
+their finite occurrence maps and use the corresponding
+induction hypotheses.
+
+In a selection rule the successful source application,
+after $\gamma$, is exactly the original application
+result after $\gamma$. This is the one-way
+successful-application substitution identity from
+Definition~\ref{def:application}. Whole and prefix
+copies become literal copies of the substituted owner.
+The continuation induction hypothesis has target
+$t\delta$, so the same selection rule applies.
+\textsc{FAbs} uses lifted environments. The extra-list
+macros retain their list and prefix witnesses under
+$\gamma$. Finally, a successful mark commutes with
+substitution, including its identity case on a marked
+root. It supplies the strict induction step. Equal
+substituted terms do not collapse indexed occurrences.
+\end{proof}
+
+\begin{lemma}[Application covariance]\label{lem:application-covariance}
+Suppose $\EW q s$ and $\EW{a_i}{b_i}$ in the respective
+argument types. If $\ap s{\vec b}$ succeeds, then
+$\ap q{\vec a}$ succeeds and
+\[
+ \EW{\ap q{\vec a}}{\ap s{\vec b}}.
+ \tag{C}
+\]
+\end{lemma}
+\begin{proof}
+First check the domains, before decomposing a full call.
+Failure is possible precisely when the tuple passes
+the original lambda spine and exposes an original
+variable. If a source has this form, inversion of its
+auxiliary comparison forces the identical lambda
+spine and variable on the target: only \textsc{Abs}
+and then \textsc{Var} are available. Thus right-hand
+full-call success implies left-hand full-call success,
+independently of the actual well-typed argument values.
+
+We next prove the one-argument assertion by induction
+on $\EW q s$. The \textsc{Var} case is impossible.
+For \textsc{Abs}, apply
+Lemma~\ref{lem:two-environments} to the body with
+$a,b$ assigned to the consumed variable.
+\textsc{Fun} and \textsc{In} append $a,b$ to their
+respective extra lists and use \textsc{In}.
+\textsc{Put} has the same applied source as its
+smaller marked-source premise.
+\textsc{FAbs} substitutes $a,b$ for the fresh
+variable in its premise, again by the two-environment
+lemma.
+
+In \textsc{Copy} or \textsc{Marked1}, the left
+application appends $a$. The old whole-source
+premises survive by \textsc{Drop}, and the new
+target extra $b$ is dominated by selecting the new
+extra $a$ and using $\EW a b$. \textsc{Marked1}
+reconstructs the applied target. For \textsc{Stat}
+or \textsc{Marked2}, use \textsc{Marked2} with
+the unchanged base multiset. In \textsc{Drop}
+and \textsc{Perm}, apply the induction hypothesis
+and move the new argument past the old finite extra
+list using \textsc{Perm}. In \textsc{Copies}, apply
+the hypothesis to the expanded owner, move its
+copies after the new argument, and discharge them:
+each old prefix is still a prefix of the owner
+with the new argument appended.
+
+It remains to check selection. Let $P$ be its owner,
+$v$ the selected argument, $\vec p$ its tuple of
+prefix copies, and
+$\ap v{\vec p}=r$ its result, with $\EW r s$.
+Put $Q=P+a$, retyped as necessary. Selecting the
+new extra gives $\EW Q b$. Apply the induction
+hypothesis to the smaller continuation $\EW r s$,
+using the whole $Q$ as left argument and $b$ on
+the right. It gives
+$\ap r Q=r'$ and $\EW{r'}{\ap s b}$.
+Both $\vec p$ and the final whole $Q$ are prefix
+copies of $Q$. Lemma~\ref{lem:prefix-escape} gives
+either a successful full call $\ap v{\vec p,Q}=r'$
+or $Q\sharpens r'$.
+In the first case \textsc{PSelect} for the actual
+argument $v$ of $Q$ gives the desired comparison.
+In the second case
+Lemma~\ref{lem:sharp-admissible} gives it directly.
+This step uses no comparison cut.
+
+Finally, a successful full call agrees with its
+sequence of unary calls. Within the original
+lambda spine this is ordinary substitution
+composition; beyond a functional head it is
+concatenation of extras. The blocked-variable
+case has already been excluded for both full
+calls. Repeatedly apply the unary result and
+use these two identities to obtain (C).
+\end{proof}
+
+\subsection{Target transformations and the cut induction}
+
+\begin{lemma}[Target extras]\label{lem:target-macros}
+If $\EW s P$ for a marked target $P$, the conclusion
+remains true when a suffix of its extras is removed,
+when its extras are permuted, or when a finite list
+of prefix copies of $P$ is appended.
+\end{lemma}
+\begin{proof}
+For each assertion induct on the comparison derivation.
+Only \textsc{In}, \textsc{Marked1}, and
+\textsc{Marked2} create the marked target;
+the other possible root rules retain their target
+and lift the shorter induction conclusion.
+
+For suffix removal in \textsc{In}, remove the
+matching source suffix, apply \textsc{In}, and
+restore that source suffix by \textsc{Drop}.
+For a permutation, permute the matching source
+extras, apply \textsc{In}, and restore the source
+order by \textsc{Perm}. In either marked precedence
+rule, keep just the needed target-extra premises
+or reorder their indexing.
+
+For copy addition in \textsc{In}, append to the
+source the corresponding source-prefix copies.
+Each such source prefix compares with the
+requested target prefix by \textsc{In}, using
+the restricted old matching. The complete
+expanded lists therefore compare by
+\textsc{In}; \textsc{Copies} discharges the
+added source copies.
+For \textsc{Marked1} or \textsc{Marked2}, the
+same root rule, with a truncated target extra
+list, compares the whole source with each
+requested target prefix. These are exactly the
+new whole-source premises needed to append
+the target copies. No transitivity is invoked.
+\end{proof}
+
+\begin{theorem}[Ordinary-final cut]\label{thm:cut}
+If $\EW s t$, $\EW t u$, and $u$ is entirely ordinary,
+then $\W s u$. The source and intermediate term
+may contain arbitrary marks.
+\end{theorem}
+\begin{proof}
+We first derive $\EW s u$. Induct lexicographically
+on the size of the right derivation and then that
+of the left derivation. Sizes include all five
+mutual judgments and every whole-source premise.
+Thus a weak premise contained in a right strict
+or multiset witness has smaller first coordinate.
+When that coordinate decreases, the newly
+constructed left proof may have any finite size.
+
+If the left root is \textsc{Put}, either selection
+rule, or an extra-list macro, apply the induction
+hypothesis to its smaller continuation with the
+right derivation fixed, and lift the result by
+the same rule. After these cases have been
+removed, inspect the right root.
+
+\paragraph{Var, Abs, and Fun.}
+For \textsc{Var}, $t=u$, so keep the left proof.
+For \textsc{Abs}, the remaining left root is
+\textsc{Abs} or \textsc{FAbs}. Cut their opened
+body premises using the smaller right body
+derivation and reapply that root.
+For \textsc{Fun}, a remaining left
+\textsc{Fun} composes the two occurrence
+matchings by smaller-right cuts. A left
+\textsc{Copy} keeps its strict head comparison,
+which respects head equivalence, and transports
+each whole-source premise by those cuts.
+A left \textsc{Stat} transports both its strict
+multiset and its whole-source premises through
+the right weak matching. The precise multiset
+transport is given below.
+
+\paragraph{Put.}
+The marking lemma gives
+$\EW{\headmark(s)}{\headmark(t)}$.
+The right premise compares $\headmark(t)$ with $u$
+and is smaller than its \textsc{Put} conclusion.
+Cut, and then remove the left total mark by
+Lemma~\ref{lem:extended-marking}.
+
+\paragraph{Copy and Stat.}
+The intermediate term is marked, so the remaining
+left root is \textsc{In}, \textsc{Marked1},
+or \textsc{Marked2}. Each such comparison may
+be retyped at the root without altering its
+premises. Cut it against each smaller right
+whole-source premise. Transitivity of head
+precedence, and its compatibility with head
+equivalence, give \textsc{Copy} when the right
+rule is \textsc{Copy}.
+
+If the right rule is \textsc{Stat}, a left
+\textsc{Marked1} likewise yields \textsc{Copy}.
+A left \textsc{In} transports its weak base
+matching into the right strict multiset.
+A left \textsc{Marked2} composes its strict
+multiset with the right one. The whole-source
+premises have already been transported;
+\textsc{Stat} then gives the conclusion.
+
+\paragraph{FAbs and target macros.}
+A remaining \textsc{In}, \textsc{Marked1}, or
+\textsc{Marked2} comparison survives opening
+both owners with the same fresh extra variable.
+In \textsc{In} append its reflexive comparison.
+In the two precedence rules keep old
+whole-source premises by \textsc{Drop} and
+select the fresh extra for its own premise.
+Cut with the smaller right body derivation,
+then use \textsc{FAbs}.
+For a right \textsc{Drop}, \textsc{Perm},
+or \textsc{Copies}, transform the target of
+the left comparison by
+Lemma~\ref{lem:target-macros} and cut with
+the smaller right premise.
+The right root cannot be \textsc{In},
+\textsc{Marked1}, or \textsc{Marked2},
+because $u$ is ordinary.
+
+\paragraph{Transport of strict multiset occurrences.}
+Each final target occurrence is an ordinary
+subterm of $u$. Consider an element path
+$\EW a b$ followed by $\ES b c$.
+Write $\mk(b)=b'$. Markability reflection
+supplies $\mk(a)=a'$, and marking transport
+gives $\EW{a'}{b'}$. Its cut against the
+smaller right weak witness $\EW{b'}c$ gives
+$\ES a c$. For a strict-then-weak path,
+retain the original successful mark of $a$
+and cut its weak witness. For a
+strict-then-strict path, marking transports
+$\EW{\mk(a)}b$ to
+$\EW{\mk(a)}{\mk(b)}$, since the first
+marked term is fixed by total marking.
+The smaller right strict witness then
+gives the composite strict edge.
+
+To compose the occurrence partitions, keep
+exactly those originally kept occurrences
+whose intermediate images are kept again.
+Remove every other source occurrence.
+This removed set contains the first
+removed set and is nonempty when the
+first multiset is strict. Each target
+occurrence is traced backwards through
+the two supplier maps. A path that is
+not the unique path between kept
+occurrences has a strict edge, so the
+element transport just proved supplies
+its strict witness. If only the second
+factor is strict, its nonempty removed
+set has a nonempty inverse image under
+the first weak bijection. The
+strict-then-weak case is the same
+construction with the second removed
+set empty. Unused removed occurrences
+are allowed. This verifies all strict,
+weak--strict, and strict--weak cases,
+including deletion without insertion.
+
+\paragraph{The selection continuation.}
+Let the right rule select an actual
+argument $q$ of a marked owner $Q$,
+apply it to prefix copies $Q_j$, obtain
+$r$, and continue by $\EW r u$.
+This continuation has smaller right
+size. Let $P$ be the source of the
+remaining left comparison with $Q$.
+
+If that comparison is \textsc{In},
+the selected base or extra has an
+actual matching occurrence $p$ of $P$
+with $\EW p q$. For each target prefix
+$Q_j$, \textsc{In} compares the
+corresponding source prefix with it,
+and \textsc{Drop} restores the
+remaining source extras. A whole $P$
+copy at the required type therefore
+dominates $Q_j$.
+Lemma~\ref{lem:application-covariance}
+gives a successful full call on $p$
+with whole $P$ copies and compares
+its result with $r$. Cut with the
+smaller continuation $\EW r u$,
+then use the original \textsc{Select}
+rule at the actual argument $p$.
+
+If the left comparison is
+\textsc{Marked1} or \textsc{Marked2},
+its whole-source premises give
+$\EW{P_{\operatorname{type}(q)}}q$.
+Here the type is the \emph{full
+function type} of $q$.
+The same root clause with truncated
+target extras compares a whole $P$
+with every requested $Q_j$.
+Application covariance now gives
+\[
+ \EW{\ap{P_{\operatorname{type}(q)}}
+                 {\text{whole }P\text{ copies}}}{r}.
+\]
+For an empty tuple the left result is
+$P$ itself; otherwise it is exactly
+$P$ with those copies appended.
+Cut with $\EW r u$ and discharge
+the appended full-prefix copies by
+\textsc{Copies}. This finishes the
+selection case.
+
+Every root has been covered, and
+every invocation used the stated
+lexicographic decrease. We have
+obtained $\EW s u$.
+Apply Lemma~\ref{lem:conservative}
+with the reflexive refinement of $s$
+to obtain the required original
+judgment $\W s u$.
+\end{proof}

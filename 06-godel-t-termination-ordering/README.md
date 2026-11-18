@@ -1,5 +1,12 @@
 # A type-confined termination ordering for Gödel's T
 
+**Historical edition.** The current structural account is [the persistent-mark ordering paper](../16-persistent-marking-termination-ordering/README.md). The checked obstruction to the older relation remains in [STATUS.md](STATUS.md).
+The [current collection guide](../COMPARISON-RESOLUTION-GUIDE.md) maps all retained
+material and distinguishes the unchanged-control results from the selected-control
+theorem. The source, PDF and formalization links below preserve the earlier
+edition; their historical status statements are not a status report for the
+new collection.
+
 **Status:** a checked finite counterexample obstructs the local stable-pair/transitivity claim. Read [the mathematical status](STATUS.md) before relying on the ordering or height conclusions.
 
 Read [paper.pdf](paper.pdf). The canonical source is [paper.tex](paper.tex).
@@ -31,3 +38,4 @@ mathematical fonts.
 origins. [VALIDATION.md](VALIDATION.md) records the build and document checks.
 This is a hand-proof working manuscript, not a Lean formalization or a claim
 of independent mathematical certification.
+

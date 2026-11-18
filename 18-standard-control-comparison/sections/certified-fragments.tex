@@ -1,0 +1,332 @@
+\section{Parameter-preserving fragments with arbitrary heads}
+\label{m:sec:certificates}
+Polynomial graphs were needed for completely unrestricted arrangements of
+polynomial heads. Different arrangements permit arbitrary fixed heads
+without constructing their graphs. This section isolates the spacing fact
+used by all of them.
+
+\begin{lemma}[Sparse endpoint comparison]\label{m:lem:endpoints}
+For a fixed nonzero limit $\lambda$, $J_\lambda$ is strictly increasing.
+Its distinct norm inputs have distinct terminal endpoints, ordered in the
+same way. For any two distinct endpoints $Z<W$ one has
+\begin{equation}\label{m:eq:sparse}
+ W\ge2^{Z+1}.
+\end{equation}
+Every value with endpoint $Z$ lies strictly between $Z$ and $2Z$ and below
+the next value of $f$.
+\end{lemma}
+\begin{proof}
+Strict increase is controlled strictness from Lemma~\ref{f:lem:collapse-estimates}: when $t<u$, the smaller ordinal has norm
+$t\le f(u)$, so the controlled comparison premise holds. Write
+$J_\lambda(t)=f^L(t)+L$ and $J_\lambda(u)=f^M(u)+M$.
+If their endpoints were equal, injectivity of $f$ would force $L>M$;
+otherwise cancelling $L$ iterates would give $t\ge u$. The equal endpoints
+and $L>M$ would imply $J_\lambda(t)>J_\lambda(u)$, a contradiction.
+Put $s=f^{L-1}(t)$. Since $t\ge N(\lambda)\ge2$, one has $L\le s-1$,
+so $f(s)<J_\lambda(t)<2f(s)<f(s+1)$ by Lemma~\ref{m:lem:growth}.
+These intervals are disjoint and preserve order. If $W>Z=f(s)$ is another
+endpoint, then $W\ge f(s+1)\ge2^{Z+1}$.
+\end{proof}
+
+\subsection{Nested common-head sums}
+Fix any finite list of fixed nonzero limits $\lambda_1,\ldots,\lambda_l$.
+Let $\mathcal A_0$ consist of natural constants, positive raw variables,
+addition, and $f$, with arbitrary fixed nesting. Recursively set
+\begin{equation}\label{m:eq:common-class}
+ \mathcal A_r=\left\{c+\sum_i a_i h_{\lambda_r}(B_i):
+ c\ge0,\ a_i>0,\ B_i\in\mathcal A_{r-1}\right\}.
+\end{equation}
+The sum can be empty. Each input supplies this finite level certificate.
+There is no open remainder outside the head sum at a positive level.
+For example $x+h_\lambda(y)$ does not pass that positive-level certificate
+merely because both $x,y$ are allowed at level zero. Heads at different
+levels may be completely different, and may exceed $\omega^\omega$.
+
+\begin{theorem}[Common-head layers]\label{m:thm:common}
+For $E,F\in\mathcal A_r$, each pointwise relation $E<F$, $E=F$, $E>F$
+has an effectively constructed formula in $(\N;0,1,+,<,f)$ with the same
+raw free variables and exactly the same truth at every positive valuation.
+Hence arbitrary Boolean and quantified combinations of certified comparisons
+are decidable.
+\end{theorem}
+\begin{proof}
+Subtract the two expressions and write the row as
+\[
+ Q=K+\sum_{i<m}a_i J_{\lambda_r}(t_i),\qquad
+ t_i=N(\lambda_r)+B_i.
+\]
+Coefficients and $K$ are signed integers. With no remaining atoms the sign
+is the computable sign of $K$. Otherwise set
+$C=\sum_i|a_i|$ and $L=\max(4,2C,4|K|+4)$.
+On the branch with all $t_i\ge L$, partition the inputs by equal values,
+combine coefficients, and delete zero blocks. If every block cancels,
+$Q=K$. Otherwise its sign is the coefficient of the greatest surviving
+input. Indeed let $W$ be its endpoint and $Z$ the greatest lower endpoint,
+if any. Lemma~\ref{m:lem:endpoints} gives
+$W\ge2^{Z+1}\ge2Z^2\ge4CZ$, since $Z\ge L\ge\max(4,2C)$.
+All lower contributions have total absolute value less than
+$2CZ\le W/2$. Also $|K|<W/4$, whereas the leading contribution has
+absolute value greater than $W$. Its sign cannot change. Larger canceled
+blocks play no part in this estimate. Enumerating the finitely many total
+preorders of the labeled inputs produces a finite formula, guarded by
+$t_i=t_j$, $t_i<t_j$, and $t_i\ge L$.
+
+For the other branch choose a small remaining index, enumerate
+$N(\lambda_r)\le c<L$, retain its exact guard $t_i=c$, evaluate the
+closed $J_{\lambda_r}(c)$, fold $a_iJ_{\lambda_r}(c)$ into $K$, and
+remove that occurrence. Recompute $L$ and repeat. Each small call removes
+one occurrence; its possibly enormous updated constant is still a fixed
+computable integer. Overlapping branches are harmless in a disjunction.
+No open value is folded into a constant before its whole argument is fixed.
+
+Induct now on $r$. At level zero comparisons are base-language atoms.
+At higher levels every guard compares preceding-level expressions with
+each other or with constants; a proposed constant below $N(\lambda_r)$
+gives a constant truth value. Thus every generated predicate is covered
+by the induction hypothesis. The lexicographic pair (level, remaining
+head occurrences) proves termination: small folding decreases the second,
+guard translation the first. Shared variables remain shared throughout.
+The result is an exact base formula, to which
+Theorem~\ref{m:thm:snyatkov} applies after any desired raw quantifiers are
+added.
+If cancellation removed a free name syntactically, conjoin the tautology
+$x=x$ for that original name.  This gives exactly the original free-name
+set without changing the predicate.
+\end{proof}
+
+For quantified combinations, translate the comparison atoms in place and
+preserve the original Boolean structure.  A positive existential binder
+becomes $\exists x\,(x\ge1\wedge\varphi)$, and a positive universal
+binder becomes $\forall x\,(x\ge1\mathbin{\to}\varphi)$.  Bound names
+can first be renamed to avoid capture.  Each atom may have its own
+genuine finite certificate; its translation creates no independent raw
+name for a derived value.  This is a parameter-preserving reduction to
+the full base theory, so alternating binders are allowed here.
+
+\begin{example}[Cancellation changes the controlling input]
+Consider $2h_\lambda(x)+h_\lambda(y)-3h_\lambda(z)$. On the computed
+large-input branch, a unique largest argument determines the sign by its
+coefficient. But on the guard $x=z$, the row becomes exactly
+$h_\lambda(y)-h_\lambda(x)$, whose sign is that of $y-x$; when all three
+arguments agree the row is zero. The algorithm retains those guards rather
+than treating three head values as independent large numbers. Small inputs
+are evaluated by the finite folding procedure, so this is an exact
+comparison theorem rather than only an eventual rule.
+\end{example}
+
+\subsection{Different heads in one control interval}
+\begin{lemma}[Head order in a strict interval]\label{m:lem:head-window}
+Let $\lambda>\mu$ be nonzero fixed limits. If
+$t\ge\max(N(\lambda),N(\mu)+2)$ and
+$N(\mu)\le u<f(t)$, then $J_\lambda(t)>J_\mu(u)$ and their endpoints
+differ. Consequently, if finitely many norm inputs $t_i$ have minimum
+$s\ge\max_iN(\lambda_i)+2$ and $\max_i t_i<f(s)$, their outputs are
+ordered lexicographically by (ordinal head, norm input). Equality requires
+equality of both, and different output blocks have distinct sparse endpoints.
+\end{lemma}
+\begin{proof}
+The least limit above $\mu$ is $\mu+\omega$, of norm $N(\mu)+2$.
+Controlled strictness at common norm $t$, or equality of the two heads,
+gives
+\[
+ J_\lambda(t)\ge J_{\mu+\omega}(t)
+       =J_\mu(f(t))+1>J_\mu(u).
+\]
+The exact middle identity follows by removing the final $\omega$ block:
+its first predecessor retains $\mu$, assigns the remaining full budget
+to its finite tail, and has total norm $f(t)$. If the two displayed
+outputs had equal endpoints, their complete counts would satisfy
+$L>M$; canceling the common $f$ iterates would give
+$u=f^{L-M}(t)\ge f(t)$, a contradiction. For the finite collection, the
+lower input is below $f(s)\le f(t)$ for every higher-head input $t$.
+Apply this argument to different heads and
+Lemma~\ref{m:lem:endpoints} within the same head.
+\end{proof}
+
+The interval inequality is strict for a reason. At $u=f(t)$,
+\[
+ J_{2\omega}(t)=f^2(t)+2,\qquad
+ J_\omega(u)=f^2(t)+1.
+\]
+Their endpoints coincide, and
+$J_{2\omega}(t)-2J_\omega(u)=-f^2(t)<0$ despite the positive coefficient
+of the greatest ordinal head. An algorithm using head order at that
+boundary would therefore be incorrect.
+
+\subsection{Balanced heterogeneous layers}
+The next certificate permits different sibling heads and an open lower-level
+remainder. At level zero use the same $\mathcal A_0$ as before.  Define a
+certificate recursively.  At a positive level it consists of one
+preceding certificate $C$ and a finite ordered basis
+$B_1,\ldots,B_k$, all certified by that same $C$.  The basis may have
+repeated or dependent entries.  Expressions with the new certificate
+are nonnegative affine combinations of the $B_j$ and atoms
+\begin{equation}\label{m:eq:balanced-atoms}
+ h_\lambda\!\left(c+\sum_j a_jB_j\right),
+       \qquad c\ge0,\quad a_j\ge1.
+\end{equation}
+Each atom may have its own arbitrary fixed head and coefficients. The
+essential condition is that \emph{every head argument includes every
+common basis entry positively}. The basis is checked on the whole pair
+being compared, including its outside remainder. A variable appearing
+only in that remainder is not admitted by ignoring it while choosing the
+basis. Zero multiples are discarded when computing actual supports.
+For each fixed certificate its expression family is closed under
+nonnegative affine combinations: collect constants, outside coefficients,
+and atom lists.  Induction gives the same closure at the preceding
+certificate.  Consequently the lower affine guards used below really do
+belong to one preceding comparison problem; separate certificates are
+not silently combined into an independent basis.
+
+\begin{theorem}[Balanced comparison]\label{m:thm:balanced}
+For two expressions with one finite balanced certificate, their three-way
+pointwise comparison has an effectively constructed base formula in
+$(\N;0,1,+,<,f)$ with exactly the same free variables. Arbitrary Boolean
+and quantified combinations of such comparisons are decidable.
+\end{theorem}
+\begin{proof}
+A signed comparison row has the form
+\begin{equation}\label{m:eq:balanced-row}
+ Q=K+\sum_jr_jB_j+\sum_{i<m}q_iJ_{\lambda_i}(t_i),\qquad
+ t_i=b_i+\sum_j a_{ij}B_j,\quad b_i=N(\lambda_i)+c_i.
+\end{equation}
+The head-free case is already a signed affine comparison at the preceding
+level. Otherwise put
+\[
+ S=\sum_jB_j,\quad C=\sum_i|q_i|,\quad C_0=\max_j|r_j|,
+ \quad A=\max_{i,j}a_{ij},\quad B=\max_i b_i,
+\]
+with $C_0=0$ for an absent remainder and $A=1$ for an empty basis. Set
+\begin{equation}\label{m:eq:balanced-L}
+ L=\max\{16,2C,4C_0+4|K|+4,A+B+2,\max_iN(\lambda_i)+2\}.
+\end{equation}
+On the branch $s=\min_i t_i\ge L$ one has
+\[
+ S\le t_i\le AS+B,\qquad
+ \max_i t_i\le As+B<s^2\le2^s\le f(s).
+\]
+Thus Lemma~\ref{m:lem:head-window} orders all head outputs by head and then
+input. Partition the inputs within each equal head, combine coefficients,
+and discard zero blocks. If all cancel, the remaining row is exactly the
+preceding-level $K+\sum r_jB_j$.
+
+If a block survives, let $W$ be the endpoint of the last one and $v$ its
+norm input. Its coefficient has absolute value at least one, so its
+contribution has magnitude greater than $W$. The sparse-endpoint estimate
+bounds all lower head contributions by $W/2$, exactly as in the proof of
+Theorem~\ref{m:thm:common}. The outside remainder is bounded using this
+\emph{surviving} input, not a possibly canceled maximum:
+\[
+ \left|K+\sum_jr_jB_j\right|\le |K|+C_0v
+          <v^2/4\le f(v)/4\le W/4.
+\]
+The surviving last coefficient therefore determines the strict sign.
+The finitely many guarded preorders within equal heads express this rule
+by comparisons of affine preceding-level expressions.
+
+We must retain every small exception. Every positive expression in the
+certificate satisfies $B(\vec x)\ge x$ for each raw variable in its
+actual support. Induct through addition and $f$, and at a head use
+$h_\lambda(e)>e$: the finite ordinal $e$ is below $\lambda+e$ and has
+norm $e\le f(N(\lambda)+e)$, so controlled strictness and $\psi(e)=e$
+apply. Fixed positive multiples preserve the property. If some $t_i<L$,
+positivity of every $a_{ij}$ implies $S<L$. Therefore every raw variable
+anywhere in the basis, including the outside remainder, is less than $L$.
+Enumerate the finite box $[1,L-1]^V$ on its \emph{actual} support $V$;
+evaluate each closed row and its inputs exactly, retaining precisely
+points where some $t_i<L$ and the requested sign holds. Variables outside
+$V$ remain unrestricted; empty support gives a single empty valuation.
+
+All large-branch guards, and the all-canceled remainder, are affine
+comparisons of the $B_j$ and thus have their preceding-level certificate.
+The finite-point exception formula is already in the base language.
+Induction on certificate level proves the claimed translation and
+termination. Theorem~\ref{m:thm:snyatkov} supplies its arithmetic decision.
+Repeated basis entries and shared variables never become independent
+parameters in this construction.
+Conjoining $x=x$ for any canceled original name makes the free-name
+set exact.  The in-place Boolean and positive-binder translation following
+Theorem~\ref{m:thm:common} then gives arbitrary quantified decisions.
+\end{proof}
+
+\begin{example}[A lower-head argument may be larger]
+Let $E,F$ have a common preceding-level certificate and $\lambda>\mu$.
+The row
+\[
+ 3h_\lambda(E+F+2)-2h_\mu(2E+F+1)-F
+\]
+is balanced on basis $(E,F)$. Its two norm arguments need not have the
+same order as their ordinal heads, and $F$ remains open outside them.
+Nevertheless, once both norms exceed \eqref{m:eq:balanced-L}, the row is
+positive by the higher-head coefficient. Its exact comparison is completed
+by the finite support box. Omitting $F$ from one head argument would
+remove the inference that a small input bounds the entire open remainder.
+\end{example}
+
+\subsection{One arbitrary core: direct Presburger comparison}
+An especially useful specialization no longer requires a certificate for the
+interior core. Let $E$ be any expression made from natural constants,
+positive raw variables, addition, fixed nonnegative multiples, and arbitrary
+fixed nonzero-limit functions $h_\lambda$, with arbitrary finite nesting.
+No subtraction or exposed $f$ constructor occurs inside this stated grammar.
+The only property needed below is $E\ge x$ for every variable in its actual
+support, proved by the positive-source induction just given. It need not
+have a balanced-level certificate, nor range independently over all naturals.
+
+\begin{theorem}[Arbitrary single-core rows]\label{m:thm:single-core}
+For the signed row
+\begin{equation}\label{m:eq:single-core}
+ Q(\vec x)=K+rE(\vec x)+
+       \sum_i q_i h_{\lambda_i}(a_iE(\vec x)+c_i),
+ \quad a_i\ge1,\ c_i\ge0,
+\end{equation}
+with fixed integer $K,r,q_i$ and fixed nonzero limit heads, each sign
+predicate $Q<0$, $Q=0$, $Q>0$ has an effectively computable finite
+Presburger formula in the original raw variables. Thus universal comparison
+of these rows needs no arithmetic decision theorem about $f$.
+\end{theorem}
+\begin{proof}
+Collect identical triples $(\lambda_i,a_i,c_i)$ and discard their zero
+coefficients. If any heads remain, use \eqref{m:eq:balanced-L} with the
+single formal basis $E$, $C_0=|r|$, and $b_i=N(\lambda_i)+c_i$. Increase
+that bound to
+\[
+ T=\max\bigl(L,1+\max_{i,j}|b_i-b_j|\bigr).
+\]
+For $E\ge T$, the norms lie in one strict $f$ interval. Within equal
+heads their affine inputs are ordered lexicographically by $(a_i,b_i)$:
+a difference of integer slopes dominates the fixed offset difference.
+Equal triples have already been collected. Lemma~\ref{m:lem:head-window}
+and the remainder estimate in the balanced proof therefore show that
+the sign is the coefficient of the greatest triple
+$(\lambda_i,a_i,b_i)$. This use of the balanced \emph{numerical estimate}
+requires no certificate or comparison algorithm for $E$ itself.
+If no heads remain, use $T=\max(1,|K|+1)$; the final sign of $rE+K$ is
+$\sgn(r)$ when $r\ne0$, otherwise $\sgn(K)$. Denote the computed final
+sign by $\sigma$.
+
+Let $V$ be the actual raw support of $E$. Empty support is handled by one
+closed evaluation. Otherwise, outside $[1,T-1]^V$ there is an $x\ge T$,
+and positivity gives $E\ge T$. Evaluate every row in the finite box exactly
+and record its sign. For a desired sign $s$ the exact formula is
+\[
+ \left(\bigvee_{x\in V}x\ge T\right)\wedge[\sigma=s]
+ \quad\vee\quad
+ \bigvee_{\substack{v\in[1,T-1]^V\\\sgn Q(v)=s}}
+       \bigwedge_{x\in V}x=v(x).
+\]
+It is a finite Presburger formula on the original variables. The box is
+effective and each closed evaluation terminates. If the tail falsifies a
+universal comparison, a concrete admissible countervaluation sets one
+supported variable to $T$ and all others to one; the dominance property
+certifies it without evaluating a giant collapse value.
+\end{proof}
+
+For example, even a core $E=h_\alpha(x)+h_\beta(h_\gamma(y)+z)$ outside
+a proposed balanced certificate may be used in
+$3h_\lambda(E+c)-2h_\mu(2E+d)-E$. Its support is still $(x,y,z)$.
+This result is a comparison theorem for that row, not a graph definition
+or a general entry-map algorithm for the core. An unrelated open term
+outside $E$, a variable ordinal head, or a nonlinear dependence on $E$
+is outside the statement.
+

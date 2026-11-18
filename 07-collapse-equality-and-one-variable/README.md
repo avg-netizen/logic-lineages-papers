@@ -1,5 +1,12 @@
 # Equality and one-variable comparison for positive collapse expressions
 
+**Historical edition.** Its results are combined with the multivariate fragments in [Identities and Comparison for the Standard Ordinal Collapse](../18-standard-control-comparison/README.md).
+The [current collection guide](../COMPARISON-RESOLUTION-GUIDE.md) maps all retained
+material and distinguishes the unchanged-control results from the selected-control
+theorem. The source, PDF and formalization links below preserve the earlier
+edition; their historical status statements are not a status report for the
+new collection.
+
 Read [paper.pdf](paper.pdf). The canonical source is [paper.tex](paper.tex).
 
 The input language uses the actual fixed-standard-control functions
@@ -36,3 +43,4 @@ pdfLaTeX). The local preamble uses Computer Modern and AMS mathematical fonts.
 [VALIDATION.md](VALIDATION.md) supply editorial provenance and document checks.
 The manuscript is a hand proof, with no practical running-time or formal
 verification claim.
+
