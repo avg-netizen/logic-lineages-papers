@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.HereditaryAggregateValidityProof
+namespace LogicLineages.PersistentMarking.HereditaryAggregateValidityChecks
+theorem exact_AggregateValid : HereditaryLatticeTargets.AggregateValid := HereditaryAggregateValidityProof.valid
+#print axioms exact_AggregateValid
+end LogicLineages.PersistentMarking.HereditaryAggregateValidityChecks

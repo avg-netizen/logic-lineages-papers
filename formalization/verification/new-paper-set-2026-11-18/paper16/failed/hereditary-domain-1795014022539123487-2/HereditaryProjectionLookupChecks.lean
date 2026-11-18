@@ -1,0 +1,9 @@
+import LogicLineages.PersistentMarking.HereditaryProjectionLookupProof
+namespace LogicLineages.PersistentMarking.HereditaryProjectionLookupChecks
+theorem exact_ProjectionFits : HereditaryProjectionTargets.ProjectionFits := HereditaryProjectionLookupProof.fits
+theorem exact_LookupProjection : HereditaryProjectionTargets.LookupProjection := HereditaryProjectionLookupProof.lookup
+theorem exact_OutputProjection : HereditaryProjectionTargets.OutputProjection := HereditaryProjectionLookupProof.output
+#print axioms exact_ProjectionFits
+#print axioms exact_LookupProjection
+#print axioms exact_OutputProjection
+end LogicLineages.PersistentMarking.HereditaryProjectionLookupChecks

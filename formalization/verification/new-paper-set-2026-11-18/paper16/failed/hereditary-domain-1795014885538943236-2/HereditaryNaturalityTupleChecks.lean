@@ -1,0 +1,8 @@
+import LogicLineages.PersistentMarking.HereditaryTupleOrderProof
+import LogicLineages.PersistentMarking.HereditaryTupleRestrictionProof
+namespace LogicLineages.PersistentMarking.HereditaryNaturalityTupleChecks
+theorem exact_TupleLeExact : HereditaryNaturalityBridgeTargets.TupleLeExact := HereditaryTupleOrderProof.exactOrder
+theorem exact_TupleRestrictionExact : HereditaryNaturalityBridgeTargets.TupleRestrictionExact := HereditaryTupleRestrictionProof.exactRestriction
+#print axioms exact_TupleLeExact
+#print axioms exact_TupleRestrictionExact
+end LogicLineages.PersistentMarking.HereditaryNaturalityTupleChecks

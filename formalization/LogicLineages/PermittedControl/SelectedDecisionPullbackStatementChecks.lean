@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.SelectedDecisionPullbackProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_selectedDecisionPullback : SelectedDecisionPullbackTargets.FiniteQueryPullback :=
+  SelectedDecisionPullback.Proof.finiteQueryPullback
+#print axioms fixed_selectedDecisionPullback
+end LogicLineages.PermittedControl.StatementChecks

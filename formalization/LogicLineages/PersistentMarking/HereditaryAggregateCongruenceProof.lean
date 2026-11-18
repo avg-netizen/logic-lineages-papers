@@ -4,18 +4,18 @@ namespace LogicLineages.PersistentMarking.HereditaryAggregateCongruenceProof
 open Spine NameBridge DecisionPorts FiniteDomainFoundation FiniteDomainSchema HereditaryDomainCode HereditaryDomainSemantics HereditaryLatticeTargets
 
 theorem mapsEqual {α β γ : Type} (R : α → β → Prop) (f : α → γ) (g : β → γ)
-    (hfg : ∀ a b, R a b → f a = g b) {xs : List α} {ys : List β} (h : List.Forall₂ R xs ys) :
+    (hfg : ∀ a b, R a b → f a = g b) {xs : List α} {ys : List β} (h : Pointwise R xs ys) :
     xs.map f = ys.map g := by
   induction h with
   | nil => rfl
   | cons hab ht ih => simp only [List.map_cons,hfg _ _ hab,ih]
 
 theorem bitsEqual {α β : Type} (R : α → β → Prop) (f : α → Bool) (g : β → Bool)
-    (hfg : ∀ a b, R a b → f a = g b) {xs : List α} {ys : List β} (h : List.Forall₂ R xs ys) :
+    (hfg : ∀ a b, R a b → f a = g b) {xs : List α} {ys : List β} (h : Pointwise R xs ys) :
     xs.all f = ys.all g ∧ xs.any f = ys.any g := by
   induction h with
   | nil => exact ⟨rfl,rfl⟩
-  | cons hab ht ih => simp only [List.all_cons,List.any_cons,hfg _ _ hab,ih.1,ih.2]; exact ⟨rfl,rfl⟩
+  | cons hab ht ih => simp only [List.all_cons,List.any_cons,hfg _ _ hab,ih.1,ih.2]; trivial
 
 theorem congruence : AggregateCongruence := by
   intro E σ Γ meet xs ys h Δ hw he
@@ -29,7 +29,7 @@ theorem congruence : AggregateCongruence := by
     have hstrict := bitsEqual (ValueEq E σ Γ) (fun v => v.strict Δ t) (fun v => v.strict Δ t)
       (fun a b hab => ((hab Δ hw he).2.1 t ht).2) h
     simp only [aggregate,hweak.1,hweak.2,hstrict.1,hstrict.2]
-    exact ⟨rfl,rfl⟩
+    trivial
   · intro ds τ hp vs hv
     have hm := mapsEqual (ValueEq E σ Γ) (fun v => v.application Δ ds τ vs)
       (fun v => v.application Δ ds τ vs) (fun a b hab => (hab Δ hw he).2.2 ds τ hp vs hv) h
@@ -37,13 +37,13 @@ theorem congruence : AggregateCongruence := by
 
 theorem restriction : AggregateRestriction := by
   intro E σ Γ Θ meet cs hΓ hΘ he hc
-  have hp : List.Forall₂ (ValueEq E σ Θ)
+  have hp : Pointwise (ValueEq E σ Θ)
       (cs.map (HereditaryDomainSemantics.decode E σ Γ))
       ((cs.map ((descriptor E σ).restrict Γ Θ)).map (HereditaryDomainSemantics.decode E σ Θ)) := by
     induction cs with
     | nil => exact .nil
     | cons c cs ih =>
-      apply List.Forall₂.cons
+      apply Pointwise.cons
       · have h := (HereditaryRestrictionProof.restriction E σ Γ Θ hΓ hΘ he c (hc c List.mem_cons_self)).2
         intro Δ hw hd
         have h := h Δ hw hd

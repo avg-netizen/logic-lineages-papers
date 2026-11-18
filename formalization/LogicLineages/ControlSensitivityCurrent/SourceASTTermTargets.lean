@@ -13,7 +13,7 @@ def Semantic : Prop := ∀ (p : AdmissibleSum.Policy) (f : Nat → Nat)
   (∀ (Ξ : List Ty) (s : Renaming Δ Ξ) (μ : Variable Ξ .ground → Nat),
     (∀ x, μ (s x)=ν x) → ∀ a : Port Ξ,
     (k s a).eval p f μ v ↔ P (a.value (ExistentialPlan.inputs μ))) →
-  (e.emit r k).eval p f ν v ↔ P (e.eval p f ρ)
+  ((e.emit r k).eval p f ν v ↔ P (e.eval p f ρ))
 /-- Uniform continuation budget; literal emitted Input.cost, not a semantic size. -/
 def Cost : Prop := ∀ (Γ Δ : List Ty) (m : Nat) (r : Renaming Γ Δ)
   (e : Term Γ) (k : Continuation Δ m) (K : Nat),

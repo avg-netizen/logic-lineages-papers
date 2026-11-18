@@ -1,0 +1,10 @@
+module
+public import LogicLineages.PermittedControl.PolynomialUndecidabilitySupplierTargets
+public import LogicLineages.OrdinalComparison.FunctionalHardnessCompletion.SystemUndecidabilityProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.PolynomialUndecidabilitySupplier.Proof
+open OrdinalComparison.Source.FunctionalHardnessCompletion
+ theorem polynomialUndecidabilitySupplier :
+    PolynomialUndecidabilitySupplierTargets.PolynomialUndecidabilitySupplier :=
+  ⟨SystemUndecidability.H10Export.bridge,SystemUndecidability.Proof.polynomialSystemUndecidable⟩
+end LogicLineages.PermittedControl.PolynomialUndecidabilitySupplier.Proof

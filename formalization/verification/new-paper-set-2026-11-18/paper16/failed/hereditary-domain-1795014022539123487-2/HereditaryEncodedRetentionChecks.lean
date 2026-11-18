@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.HereditaryEncodedRetentionProof
+namespace LogicLineages.PersistentMarking.HereditaryEncodedRetentionChecks
+theorem exact_EncodedRetained : HereditaryEncodingTargets.EncodedRetained := HereditaryEncodedRetentionProof.retained
+#print axioms exact_EncodedRetained
+end LogicLineages.PersistentMarking.HereditaryEncodedRetentionChecks

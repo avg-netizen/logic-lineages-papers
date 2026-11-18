@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.HereditaryEncodeDecodeProof
+namespace LogicLineages.PersistentMarking.HereditaryEncodeDecodeChecks
+theorem exact_EncodeDecode : HereditaryDomainTargets.EncodeDecode := HereditaryEncodeDecodeProof.encodeDecode
+#print axioms exact_EncodeDecode
+end LogicLineages.PersistentMarking.HereditaryEncodeDecodeChecks

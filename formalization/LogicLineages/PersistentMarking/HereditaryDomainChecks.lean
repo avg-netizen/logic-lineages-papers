@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.HereditaryDomainProof
+namespace LogicLineages.PersistentMarking.HereditaryDomainChecks
+theorem exact_FullFiniteLattices : HereditaryDomainTargets.FullFiniteLattices := HereditaryDomainProof.full
+#print axioms exact_FullFiniteLattices
+end LogicLineages.PersistentMarking.HereditaryDomainChecks

@@ -1,0 +1,7 @@
+# Independent final: CombineEncoding
+
+Accepted exact supporting endpoint. Compiler-free reconciliation reproduces 55 source-matched modules, one standard-only alias, zero errors; independent JSON equals author evidence. Revised eleven lattice pins/inherited freezes remain verified. Receipt1795014915062823803-2. No native execution by reviewer.
+
+Read actual Bit/Output/Coordinate/Encoding proofs. Empty Boolean min/max folds have correct true/false seeds. Retained Fits and distinct schema produce actual bit lookup bounds and inverse coding. Every legal full-prefix vector decodes; actual outputExists and tuple index/value roundtrip prove each filterMap output succeeds, hence filterMap equals the whole decoded map without dropping elements. Application coordinates use literal actual lower join/meet and same indexOf expression; all contexts are actual enumerated well-formed extensions. FlatMap layout concatenation proves the exact raw combine=encode aggregate equation.
+
+Important boundary: equality alone can share the same indexOf/getD default on both sides. This packet does not separately prove aggregate result membership or combined-code retention. Those are paid later by AggregateValid and unconditional EncodeDecode, with LowerLattice discharged in final size induction. No full lattice/operation acceptance from this supporting equality alone. Preserved ordinary proof failures do not alter targets.

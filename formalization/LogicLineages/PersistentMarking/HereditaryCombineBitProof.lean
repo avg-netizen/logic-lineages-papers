@@ -19,7 +19,7 @@ theorem folds (xs : List Bool) (b : Bool) :
     simp only [List.map_cons,List.foldl_cons,minBits,maxBits,List.all_cons,List.any_cons]
     rw [(ih (b && a)).1,(ih (b || a)).2]
     simp only [Bool.and_assoc,Bool.or_assoc,id_eq]
-    exact ⟨rfl,rfl⟩
+    trivial
 
 theorem combine (meet : Bool) (xs : List Bool) :
     bitCombine meet (xs.map number) = number (if meet then xs.all id else xs.any id) := by

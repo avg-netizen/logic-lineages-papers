@@ -62,11 +62,17 @@ def AggregateOrder : Prop := ∀ E σ Γ xs,
   (∀ b, Valid E σ Γ b → (∀ v, v ∈ xs → SemanticLE E σ Γ b v) →
     SemanticLE E σ Γ b (aggregate E true xs))
 
+/- Literal paired-list relation, with no truncation or permutation. -/
+inductive Pointwise {α β : Type} (R : α → β → Prop) : List α → List β → Prop where
+  | nil : Pointwise R [] []
+  | cons {a : α} {b : β} {xs : List α} {ys : List β} :
+      R a b → Pointwise R xs ys → Pointwise R (a::xs) (b::ys)
+
 def AggregateCongruence : Prop := ∀ E σ Γ meet xs ys,
-  List.Forall₂ (ValueEq E σ Γ) xs ys →
+  Pointwise (ValueEq E σ Γ) xs ys →
   ValueEq E σ Γ (aggregate E meet xs) (aggregate E meet ys)
 
-def AggregateRestriction : Prop := ∀ E σ Γ Θ meet cs,
+def AggregateRestriction : Prop := ∀ E σ Γ Θ meet (cs : List Code),
   WellFormed E.types E.ports Γ → WellFormed E.types E.ports Θ → Extends Γ Θ →
   (∀ c, c ∈ cs → c ∈ (descriptor E σ).carriers Γ) →
   ValueEq E σ Θ (aggregate E meet (cs.map (HereditaryDomainSemantics.decode E σ Γ)))

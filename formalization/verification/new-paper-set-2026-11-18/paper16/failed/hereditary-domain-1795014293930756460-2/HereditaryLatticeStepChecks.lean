@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.HereditaryLatticeStepProof
+namespace LogicLineages.PersistentMarking.HereditaryLatticeStepChecks
+theorem exact_LatticeStep : HereditaryLatticeTargets.LatticeStep := HereditaryLatticeStepProof.step
+#print axioms exact_LatticeStep
+end LogicLineages.PersistentMarking.HereditaryLatticeStepChecks

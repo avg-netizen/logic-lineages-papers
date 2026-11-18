@@ -2,6 +2,7 @@ module
 public import LogicLineages.ControlSensitivityCurrent.SourceASTTermTargets
 public import LogicLineages.ControlSensitivityCurrent.PolicyObservationProof
 public import LogicLineages.OrdinalComparison.WWScopedSourceDAGProof
+public import LogicLineages.OrdinalComparison.SourceStructural
 @[expose] public section
 namespace LogicLineages.ControlSensitivityCurrent.SourceAST
 open LogicLineages.OrdinalComparison LogicLineages.OrdinalComparison.Source
@@ -37,7 +38,7 @@ theorem call_value (p : AdmissibleSum.Policy) (f : Nat → Nat) {Γ}
     (ρ : Variable Γ .ground → Nat) (h : Input [] (.arrow .ground .ground))
     (x : Variable Γ .ground) :
     InputNormalization.sourceValue p f ρ (BooleanCompiler.call h x) = callValue p f h (ρ x) := by
-  let r := singletonRename x
+  let r : Renaming [.ground] Γ := singletonRename x
   let ν := ExistentialPlan.extend (fun y : Variable [] .ground => nomatch y) (ρ x)
   have hc : ∀ y, ρ (r y)=ν y := by
     intro y
@@ -49,7 +50,7 @@ theorem call_value (p : AdmissibleSum.Policy) (f : Nat → Nat) {Γ}
     rw [(ScopedDAG.Proof.«renaming» [.ground] Γ .ground r _).1,call_term,call_term]
     simp only [Source.Term.rename,Source.Term.rename_composition]
     have he : (fun {τ} (y : Variable [] τ) => r (BooleanCompiler.emptyRename [.ground] y)) =
-        BooleanCompiler.emptyRename Γ := by
+        (fun {τ} (y : Variable [] τ) => BooleanCompiler.emptyRename Γ y) := by
       funext τ y
       nomatch y
     rw [he]
