@@ -1,0 +1,7 @@
+# Independent standard-domain calibration final
+
+Accepted full five-family supporting calibration, receipt1795018560055421020-8. Compiler-free independent evidence matches author JSON exactly:138 source-matched modules, zero errors, exact standard-only full alias. Seven original frozen pins match.
+
+Read actual Targets/Proof/Checks and preserved-repair handoff. Actual denote_phi/closed-value equality supports both ClosedGrade inductive directions, including collapse bounds. toOriginal/fromOriginal preserve every literal vector and transport actual graded/bounded proofs; explicit inverse laws yield onto domain equivalence, not merely inclusion. Expression valuation equality is pointwise on these same fields. Both universal collapse-guard directions use the two inverse domain maps; actual finiteValue definitions are unfolded rather than equated by assumption. Ambient and Head grade inductions retain all constructors, including freeness. Every-policy/type assignment calibration maps the same literal Option assignment through equal evaluations, retaining failures too.
+
+No SelectedWithThreshold Phi premise, generic selected-control theorem application at an inadmissible control, default-policy transfer or generated-only valuation restriction is used. This proves actual standard-domain calibration only. It does not assert assignment success, positivity, norm estimates, growth, unchanged-G hardness or the separate source corollary. Preserved proof-only finiteValue unfolding repair changes no frozen contract.

@@ -1,0 +1,9 @@
+import LogicLineages.PersistentMarking.MarkedFamilyLookupProof
+namespace LogicLineages.PersistentMarking.MarkedFamilyLookupChecks
+theorem exact_RawEnumeration : MarkedFamilyCodingTargets.RawEnumeration := MarkedFamilyLookupProof.rawEnumeration
+theorem exact_CoordinateSuccess : MarkedFamilyCodingTargets.CoordinateSuccess := MarkedFamilyLookupProof.coordinateSuccess
+theorem exact_OutputSuccess : MarkedFamilyCodingTargets.OutputSuccess := MarkedFamilyLookupProof.outputSuccess
+#print axioms exact_RawEnumeration
+#print axioms exact_CoordinateSuccess
+#print axioms exact_OutputSuccess
+end LogicLineages.PersistentMarking.MarkedFamilyLookupChecks

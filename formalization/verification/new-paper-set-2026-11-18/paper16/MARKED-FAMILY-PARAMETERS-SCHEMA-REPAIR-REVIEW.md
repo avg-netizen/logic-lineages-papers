@@ -1,0 +1,3 @@
+# Schema qualification repair approval
+
+Read preserved target failure1795018272523189385-2 and current target/definition. Log explicitly lists both MarkedFamilyParameters.schema (actual List(Parameter×Nat)) and FiniteDomainSchema.schema (unrelated hereditary layout function); intended frozen source contract is the former. Approve solely qualifying the two schema E heads occurrences in SchemaExact/SchemaDistinct as MarkedFamilyParameters.schema E heads. Preserve all other target text and previous failure; refresh only target pin among17. Proof-local corresponding qualifications permitted. Applied exact diff/all-pin confirmation required before fresh retry. No contract/domain change or proof acceptance.

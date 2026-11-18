@@ -1,0 +1,3 @@
+# Applied structural comparator repair confirmation
+
+Exact comparison against preserved1795018016657807232-2 confirms only named five-field parameterEq insertion and parameters dedup comparator replacement. Full literal head/type/context/ordered bases/ordered extras equality retained. SHA256 8d892d1fd35d113a3ee9ca2f996d62fdb66cf5e74f344298a737ae29ec94b139. Only corresponding definition freeze entry changed among seventeen; all current hashes verified. Read proof-local parameterEqExact: product decomposition converts Bool conjunction into literal full equality, feeding dedup membership/distinctness. No frozen target change/classical oracle/cap change. Approved fresh parent-controlled bounded retry; native success/proof final still required.

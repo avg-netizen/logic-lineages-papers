@@ -5,10 +5,20 @@ import LogicLineages.PersistentMarking.MarkedExtrasEnumerationProof
 namespace LogicLineages.PersistentMarking.MarkedFamilyParameterProof
 open Spine NameBridge DecisionPorts FiniteDomainFoundation FiniteDomainSchema HereditaryDomainCode HereditaryDomainSemantics MarkedFamilyParameters
 
+theorem parameterEqExact (a b : Parameter) : parameterEq a b = true ↔ a=b := by
+  rcases a with ⟨f,τ,Γ,bs,es⟩
+  rcases b with ⟨g,υ,Θ,cs,fs⟩
+  simp only [parameterEq,Bool.and_eq_true,decide_eq_true_eq,Prod.mk.injEq]
+  constructor
+  · rintro ⟨⟨⟨⟨hf,ht⟩,hg⟩,hb⟩,he⟩
+    exact ⟨hf,ht,hg,hb,he⟩
+  · rintro ⟨hf,ht,hg,hb,he⟩
+    exact ⟨⟨⟨⟨hf,ht⟩,hg⟩,hb⟩,he⟩
+
 theorem enumeration : MarkedFamilyParameterTargets.Enumeration := by
   intro E heads p
   unfold parameters
-  rw [FiniteEqualityProof.dedupMem _ (fun a b => by simp)]
+  rw [FiniteEqualityProof.dedupMem _ parameterEqExact]
   constructor
   · intro h
     obtain ⟨f,hf,h⟩ := List.mem_flatMap.mp h
@@ -29,7 +39,7 @@ theorem enumeration : MarkedFamilyParameterTargets.Enumeration := by
 
 theorem distinct : MarkedFamilyParameterTargets.Distinct := by
   intro E heads
-  exact FiniteEqualityProof.dedupDistinct _ (fun a b => by simp) _
+  exact FiniteEqualityProof.dedupDistinct _ parameterEqExact _
 
 theorem schemaExact : MarkedFamilyParameterTargets.SchemaExact := by
   intro E heads p n
@@ -37,13 +47,13 @@ theorem schemaExact : MarkedFamilyParameterTargets.SchemaExact := by
   · intro h
     obtain ⟨q,hq,h⟩ := List.mem_map.mp h
     cases h
-    exact ⟨(enumeration E heads q).mp hq,rfl⟩
+    exact ⟨(enumeration E heads p).mp hq,rfl⟩
   · rintro ⟨hp,rfl⟩
     exact List.mem_map.mpr ⟨p,(enumeration E heads p).mpr hp,rfl⟩
 
 theorem schemaDistinct : MarkedFamilyParameterTargets.SchemaDistinct := by
   intro E heads
-  have he : (schema E heads).map Prod.fst = parameters E heads := by
+  have he : (MarkedFamilyParameters.schema E heads).map Prod.fst = parameters E heads := by
     change ((parameters E heads).map (fun p => (p,bound E p))).map Prod.fst = _
     rw [List.map_map]
     exact List.map_id (parameters E heads)

@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.InactiveEliminationProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.InactiveEliminationStatementChecks
+ theorem full : InactiveEliminationTargets.Full := InactiveEliminationProof.full
+#print axioms full
+end LogicLineages.StandardControlCurrent.InactiveEliminationStatementChecks

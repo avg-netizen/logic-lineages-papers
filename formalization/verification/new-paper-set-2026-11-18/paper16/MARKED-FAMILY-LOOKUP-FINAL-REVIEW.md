@@ -1,0 +1,6 @@
+# Independent final: FamilyLookup first three supporting contracts
+Accepted receipt 1795019191936929926-2: compiler-free independent reconciliation exactly matches author evidence, 89 modules, three exact standard-only aliases, zero errors. All nineteen revised frozen pins and inherited freezes match. No native run by reviewer.
+
+Read actual MarkedFamilyLookupProof and Checks. RawEnumeration is actual vector enumeration iff Fits. Bounded lookup is structural on parameter/code lists and uses full parameterEqExact; equal keys use the same actual bound function, so no final distinctness premise is required. Public coordinate success obtains membership from actual parameter enumeration and aligns Fits with actual schema cardinalities. Output success derives actual getElem? success and carrier membership from that bound; no missing-index fallback or supplied output oracle. The final output reference is explicitly qualified after preserved proof-only ambiguity failure 1795019184201715447-2; no target change.
+
+Accepted only RawEnumeration, CoordinateSuccess and OutputSuccess. Optional encoding, roundtrips, valid-coordinate congruence, coherence, family lattice, operator and adequacy remain separate.

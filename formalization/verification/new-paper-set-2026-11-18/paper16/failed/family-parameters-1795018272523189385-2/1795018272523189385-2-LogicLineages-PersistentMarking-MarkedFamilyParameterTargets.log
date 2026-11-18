@@ -1,0 +1,57 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyParameterTargets.lean:10:10: error: Ambiguous term
+  schema
+Possible interpretations:
+  MarkedFamilyParameters.schema E heads : List (Parameter × Nat)
+  
+  FiniteDomainSchema.schema E heads : List Ty → List Name → Nat → Expr → Context → List (Key × Nat)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyParameterTargets.lean:10:2: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Membership (?m.3 × ?m.4) (List Ty → List Name → Nat → Expr → Context → List (Key × Nat))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyParameterTargets.lean:10:27: error: overloaded, errors 
+  10:33 Application type mismatch: The argument
+    E
+  has type
+    Ty
+  but is expected to have type
+    Environment
+  in the application
+    MarkedFamilyParameters.Valid E
+  
+  10:33 Application type mismatch: The argument
+    E
+  has type
+    Ty
+  but is expected to have type
+    Environment
+  in the application
+    HereditaryDomainSemantics.Valid E
+  
+  10:33 Application type mismatch: The argument
+    E
+  has type
+    Ty
+  but is expected to have type
+    Signature
+  in the application
+    Spine.Valid E
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyParameterTargets.lean:10:62: error: Application type mismatch: The argument
+  E
+has type
+  Ty
+but is expected to have type
+  Environment
+in the application
+  descriptor E
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyParameterTargets.lean:10:64: error: Invalid projection: Type of
+  p
+is not known; cannot resolve projection `2`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyParameterTargets.lean:10:80: error: Invalid projection: Type of
+  p
+is not known; cannot resolve projection `2`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyParameterTargets.lean:12:42: error: Ambiguous term
+  schema
+Possible interpretations:
+  MarkedFamilyParameters.schema E heads : List (Parameter × Nat)
+  
+  FiniteDomainSchema.schema E heads : List Ty → List Name → Nat → Expr → Context → List (Key × Nat)

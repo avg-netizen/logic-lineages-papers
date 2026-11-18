@@ -7,9 +7,9 @@ def Enumeration : Prop := ∀ E heads p, p ∈ parameters E heads ↔ Valid E he
 def Distinct : Prop := ∀ E heads, (parameters E heads).Pairwise (· ≠ ·)
 
 def SchemaExact : Prop := ∀ E heads p n,
-  (p,n) ∈ schema E heads ↔ Valid E heads p ∧ n = ((descriptor E p.2.1).carriers p.2.2.1).length
+  (p,n) ∈ MarkedFamilyParameters.schema E heads ↔ Valid E heads p ∧ n = ((descriptor E p.2.1).carriers p.2.2.1).length
 
-def SchemaDistinct : Prop := ∀ E heads, ((schema E heads).map Prod.fst).Pairwise (· ≠ ·)
+def SchemaDistinct : Prop := ∀ E heads, ((MarkedFamilyParameters.schema E heads).map Prod.fst).Pairwise (· ≠ ·)
 
 /- No caller-provided declaration coverage: derive K coverage from actual inputs. -/
 def SourceCoverage : Prop := ∀ s t σ τ,

@@ -11,8 +11,13 @@ def raw (E : Environment) (heads : List Head) : List Parameter :=
       (MarkedBaseTuples.headTuples E Γ f).flatMap fun bs =>
         (MarkedExtras.extras E Γ).map fun es => (f,τ,Γ,bs,es)
 
+def parameterEq (a b : Parameter) : Bool :=
+  decide (a.1=b.1) && decide (a.2.1=b.2.1) &&
+  decide (a.2.2.1=b.2.2.1) && decide (a.2.2.2.1=b.2.2.2.1) &&
+  decide (a.2.2.2.2=b.2.2.2.2)
+
 def parameters (E : Environment) (heads : List Head) : List Parameter :=
-  dedupBy (fun (a b : Parameter) => decide (a=b)) (raw E heads)
+  dedupBy parameterEq (raw E heads)
 
 def Valid (E : Environment) (heads : List Head) (p : Parameter) : Prop :=
   p.1 ∈ heads ∧ p.2.1 ∈ E.types ∧ WellFormed E.types E.ports p.2.2.1 ∧

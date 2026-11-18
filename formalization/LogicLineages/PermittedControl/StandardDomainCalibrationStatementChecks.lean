@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.StandardDomainCalibrationProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_standardDomainCalibration : StandardDomainCalibrationTargets.StandardDomainCalibration :=
+  StandardDomainCalibration.Proof.standardDomainCalibration
+#print axioms fixed_standardDomainCalibration
+end LogicLineages.PermittedControl.StatementChecks

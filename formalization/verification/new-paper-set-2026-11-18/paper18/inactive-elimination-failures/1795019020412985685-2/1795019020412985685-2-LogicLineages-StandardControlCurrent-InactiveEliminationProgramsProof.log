@@ -1,0 +1,9 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InactiveEliminationProgramsProof.lean:25:17: error: unsolved goals
+case cons
+hs : Primrec fun q => bif q.2.1.1 != 0 then q.2.1 :: q.2.2 else q.2.2
+hf : Primrec fun as => List.foldr (fun b bs => bif b.1 != 0 then b :: bs else bs) [] as
+a : Item
+as : List Item
+ih : List.foldr (fun b bs => bif b.1 != 0 then b :: bs else bs) [] as = List.filter (fun a => a.1 != 0) as
+⊢ (bif a.1 != 0 then a :: List.filter (fun a => a.1 != 0) as else List.filter (fun a => a.1 != 0) as) =
+    if (a.1 != 0) = true then a :: List.filter (fun a => a.1 != 0) as else List.filter (fun a => a.1 != 0) as
