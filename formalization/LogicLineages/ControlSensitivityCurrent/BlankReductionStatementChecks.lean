@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.BlankReductionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.BlankReduction.StatementChecks
+theorem fixed_exactNormalization : BlankReductionTargets.ExactNormalization := exactNormalization
+theorem fixed_validatedTerminalBridge : BlankReductionTargets.ValidatedTerminalBridge := validatedTerminalBridge
+theorem fixed_effectiveBlankReduction : BlankReductionTargets.EffectiveBlankReduction := effectiveBlankReduction
+theorem fixed_blankHaltingUndecidable : BlankReductionTargets.BlankHaltingUndecidable := blankHaltingUndecidable
+#audit_namespace LogicLineages.ControlSensitivityCurrent.BlankReduction.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.BlankReduction.StatementChecks

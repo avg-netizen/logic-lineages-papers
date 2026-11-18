@@ -1,0 +1,14 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.BlankUniversalityTargets
+public import LogicLineages.OrdinalComparison.SourceBlankHaltingUniversalityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.BlankUniversality
+theorem exactSpecialization : BlankUniversalityTargets.ExactSpecialization :=
+  LogicLineages.OrdinalComparison.Source.SourceBlankHaltingUniversality.Proof.exactSpecialization
+theorem uniformTranslator : BlankUniversalityTargets.UniformTranslator :=
+  LogicLineages.OrdinalComparison.Source.SourceBlankHaltingUniversality.Proof.uniformTranslator
+theorem reUniversality : BlankUniversalityTargets.REUniversality :=
+  LogicLineages.OrdinalComparison.Source.SourceBlankHaltingUniversality.Proof.reUniversality
+#audit_namespace LogicLineages.ControlSensitivityCurrent.BlankUniversality
+end LogicLineages.ControlSensitivityCurrent.BlankUniversality

@@ -1,0 +1,132 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NumericalKernelProcessProof.lean:42:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  c + actualOrdinalNorm (actualSuffixKernelInitial (Ordinal.omega0 ^ ↑d) c t)
+in the target expression
+  actualMaximumPredecessor (Ordinal.omega0 ^ ↑d)
+      (Phi (c + actualOrdinalNorm (Ordinal.omega0 ^ ↑d + ↑(t - c - actualOrdinalNorm (Ordinal.omega0 ^ ↑d)))) - c) =
+    first d c t
+
+d c t : ℕ
+hd : 1 ≤ d
+ht : c + d + 1 ≤ t
+he : Ordinal.omega0 ^ ↑d < epsilonZero
+hp : 0 < ↑d
+hdom : c + actualOrdinalNorm (Ordinal.omega0 ^ ↑d) ≤ t
+hi :
+  actualSuffixKernelInitial (Ordinal.omega0 ^ ↑d) c t < epsilonZero ∧
+    Ordinal.omega0 ≤ actualSuffixKernelInitial (Ordinal.omega0 ^ ↑d) c t ∧
+      c + actualOrdinalNorm (actualSuffixKernelInitial (Ordinal.omega0 ^ ↑d) c t) = t
+⊢ actualMaximumPredecessor (Ordinal.omega0 ^ ↑d)
+      (Phi (c + actualOrdinalNorm (Ordinal.omega0 ^ ↑d + ↑(t - c - actualOrdinalNorm (Ordinal.omega0 ^ ↑d)))) - c) =
+    first d c t
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NumericalKernelProcessProof.lean:70:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  actualOrdinalNorm (actualControlledStep g (actualControlledStateAfter g Q i))
+in the target expression
+  c + actualOrdinalNorm (actualControlledStep g ((actualControlledStep g)^[i] Q)) = Phi^[i + 1 + 1] t
+
+case succ
+d c t : ℕ
+hd : 1 ≤ d
+hc : c ≤ Phi t
+hf : first d c t < Ordinal.omega0 ^ ↑d ∧ first d c t < epsilonZero ∧ actualOrdinalNorm (first d c t) = Phi t - c
+g : ℕ → ℕ := compensatedPrefixControl c
+Q : Ordinal.{0} := first d c t
+C : ℕ := actualControlledCount g Q
+htr :
+  actualControlledStateAfter g Q (actualControlledCount g Q) < Ordinal.omega0 ∧
+    ∀ i ≤ actualControlledCount g Q,
+      actualControlledStateAfter g Q i < epsilonZero ∧
+        actualControlledStateAfter g Q i ≤ Q ∧
+          (i < actualControlledCount g Q → Ordinal.omega0 ≤ actualControlledStateAfter g Q i)
+i : ℕ
+ih : i ≤ C → c + actualOrdinalNorm (actualControlledStateAfter g Q i) = Phi^[i + 1] t
+hi : i + 1 ≤ C
+hsi :
+  actualControlledStateAfter g Q i < epsilonZero ∧
+    actualControlledStateAfter g Q i ≤ Q ∧
+      (i < actualControlledCount g Q → Ordinal.omega0 ≤ actualControlledStateAfter g Q i)
+hstep :
+  actualOrdinalNorm (actualControlledStep g (actualControlledStateAfter g Q i)) =
+    g (actualOrdinalNorm (actualControlledStateAfter g Q i))
+hb : c ≤ Phi (c + actualOrdinalNorm (actualControlledStateAfter g Q i))
+⊢ c + actualOrdinalNorm (actualControlledStep g ((actualControlledStep g)^[i] Q)) = Phi^[i + 1 + 1] t
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NumericalKernelProcessProof.lean:73:54: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  h ≥ 0
+  f ≥ 0
+  f - h ≥ 1
+  e ≥ 0
+  b ≥ 0
+  b + e ≥ 0
+  a ≥ 1
+where
+ a := ↑d
+ b := ↑c
+ e := ↑(Phi t - c)
+ f := ↑(actualControlledCount g Q)
+ h := ↑(actualControlledCount (compensatedPrefixControl c) (first d c t))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NumericalKernelProcessProof.lean:91:6: error: Tactic `rfl` failed: The left-hand side
+  first d c t
+is not definitionally equal to the right-hand side
+  actualMaximumPredecessor (actualLimitPart (actualLimitPart (Ordinal.omega0 ^ ↑d))) (Phi^[0 + 1] t - c)
+
+case pos
+d c t : ℕ
+hd : 1 ≤ d
+hc : c ≤ Phi t
+hf : first d c t < Ordinal.omega0 ^ ↑d ∧ first d c t < epsilonZero ∧ actualOrdinalNorm (first d c t) = Phi t - c
+g : ℕ → ℕ := compensatedPrefixControl c
+Q : Ordinal.{0} := first d c t
+C : ℕ := actualControlledCount g Q
+htr :
+  actualControlledStateAfter g Q (actualControlledCount g Q) < Ordinal.omega0 ∧
+    ∀ i ≤ actualControlledCount g Q,
+      actualControlledStateAfter g Q i < epsilonZero ∧
+        actualControlledStateAfter g Q i ≤ Q ∧
+          (i < actualControlledCount g Q → Ordinal.omega0 ≤ actualControlledStateAfter g Q i)
+hn : ∀ i ≤ C, c + actualOrdinalNorm (actualControlledStateAfter g Q i) = Phi^[i + 1] t
+hcount : count d c t = C + 1
+hi : 0 < count d c t
+⊢ first d c t = actualMaximumPredecessor (actualLimitPart (actualLimitPart (Ordinal.omega0 ^ ↑d))) (Phi^[0 + 1] t - c)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NumericalKernelProcessProof.lean:97:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  c + actualOrdinalNorm (actualControlledStateAfter g Q (i - 1))
+in the target expression
+  actualMaximumPredecessor (actualLimitPart ((actualControlledStep (compensatedPrefixControl c))^[i - 1] (first d c t)))
+      (Phi (c + actualOrdinalNorm ((actualControlledStep (compensatedPrefixControl c))^[i - 1] (first d c t))) - c) =
+    actualMaximumPredecessor
+      (actualLimitPart (actualControlledStateAfter (compensatedPrefixControl c) (first d c t) (i - 1 + 1 - 1)))
+      (Phi^[i - 1 + 1 + 1] t - c)
+
+case neg
+d c t : ℕ
+hd : 1 ≤ d
+hc : c ≤ Phi t
+hf : first d c t < Ordinal.omega0 ^ ↑d ∧ first d c t < epsilonZero ∧ actualOrdinalNorm (first d c t) = Phi t - c
+g : ℕ → ℕ := compensatedPrefixControl c
+Q : Ordinal.{0} := first d c t
+C : ℕ := actualControlledCount g Q
+htr :
+  actualControlledStateAfter g Q (actualControlledCount g Q) < Ordinal.omega0 ∧
+    ∀ i ≤ actualControlledCount g Q,
+      actualControlledStateAfter g Q i < epsilonZero ∧
+        actualControlledStateAfter g Q i ≤ Q ∧
+          (i < actualControlledCount g Q → Ordinal.omega0 ≤ actualControlledStateAfter g Q i)
+hn : ∀ i ≤ C, c + actualOrdinalNorm (actualControlledStateAfter g Q i) = Phi^[i + 1] t
+hcount : count d c t = C + 1
+i : ℕ
+hi : i < count d c t
+hz : ¬i = 0
+heq : i - 1 + 1 = i
+norm : c + actualOrdinalNorm (actualControlledStateAfter g Q (i - 1)) = Phi^[i - 1 + 1] t
+⊢ actualMaximumPredecessor (actualLimitPart ((actualControlledStep (compensatedPrefixControl c))^[i - 1] (first d c t)))
+      (Phi (c + actualOrdinalNorm ((actualControlledStep (compensatedPrefixControl c))^[i - 1] (first d c t))) - c) =
+    actualMaximumPredecessor
+      (actualLimitPart (actualControlledStateAfter (compensatedPrefixControl c) (first d c t) (i - 1 + 1 - 1)))
+      (Phi^[i - 1 + 1 + 1] t - c)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NumericalKernelProcessProof.lean:88:73: warning: This simp argument is unused:
+  Function.iterate_one
+
+Hint: Omit it from the simp argument list.
+  simp only [state, ̲ite_true, ̲show (1 : Nat) ≠ 0 by decide, ̲ite_false, ̲Nat.sub_self,
+          actualControlledStateAfter, ̲Function.iterate_zero, ̲Function.id_def,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵i̵t̵e̵r̵a̵t̵e̵_̵o̵n̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,9 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PortLambdaStateProof.lean:15:29: error: Application type mismatch: The argument
+  List.mem_append_left ?m.33 (DecisionSourceBasicProof.subtypeSelf σ)
+has type
+  σ ∈ subtypes σ ++ ?m.33
+but is expected to have type
+  σ ∈ auxiliarySupport body
+in the application
+  List.mem_append_right (subtypes (σ.arrow body.type) ++ subtypes σ)
+    (List.mem_append_left ?m.33 (DecisionSourceBasicProof.subtypeSelf σ))

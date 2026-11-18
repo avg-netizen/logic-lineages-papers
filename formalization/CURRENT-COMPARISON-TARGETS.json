@@ -854,8 +854,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/source.tex",
           "line": 307,
           "statement_latex": "[Weak scalar estimate and the graded domain]\n\\label{lem:weak-scalar}\nFor $h\\in C_0^{\\mathbf x}$,\n\\[\n h\\{\\mathbf x:=\\mathbf1\\}\\mle\n             (\\partial_0^{\\mathbf x}h)_0.\n\\]\nEvery $\\partial_i^{\\mathbf x}h$, for $h\\in C_i^{\\mathbf x}$,\nis an $\\mathbf x$-free $C$-vector of level $n$.\nFor $h\\in C^{\\mathbf x}$, the vector $\\delta^{\\mathbf x}h$\nis also valid and $\\mathbf x$-free.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.SelectedWeakScalarTargets.FullSelectedWeakScalar",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullSelectedWeakScalar",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/245-selected-weak-scalar.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:lem:first-free-subtree",
@@ -1217,8 +1220,11 @@
           "file": "18-standard-control-comparison/sections/polynomial-arithmetic.tex",
           "line": 59,
           "statement_latex": "[Exact block recursion]\\label{m:lem:kernel-recursion}\nOne has\n\\[\n E^1_c=1,\\quad X^1_c=f,\\qquad\n E^2_c(t)=f(t)/2-\\lceil c/2\\rceil+1.\n\\]\nDefine\n\\begin{equation}\\label{m:eq:V}\n V_j(t)=f^{\\,f(t)/2+j+1}(t).\n\\end{equation}\nThen $X^2_{c,j}=V_{j-\\lceil c/2\\rceil}$ for every fixed signed $j$ on\nits positive-depth tail. For $d\\ge2$, the unsigned identity\n$X^d_c=X^{d-1}_c\\circ X^d_{c+d}$ and the count identity\n\\eqref{m:eq:Erec} hold on a computable tail. The signed identity\n\\eqref{m:eq:Xrec} holds when $d\\ge3$ or $j\\ge0$:\n\\begin{align}\n X^d_{c,j}&=X^{d-1}_{c,j}\\circ X^d_{c+d},\\label{m:eq:Xrec}\\\\\n E^d_c&=E^{d-1}_c\\circ X^d_{c+d}+E^d_{c+d}.\\label{m:eq:Erec}\n\\end{align}",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.NumericalKernelTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.NumericalKernelStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/244-numerical-kernel.json"
         },
         {
           "id": "18-standard-control-comparison:m:lem:uniform",
@@ -2194,7 +2200,7 @@
     }
   ],
   "status_counts": {
-    "pending": 66,
-    "checked": 101
+    "pending": 64,
+    "checked": 103
   }
 }

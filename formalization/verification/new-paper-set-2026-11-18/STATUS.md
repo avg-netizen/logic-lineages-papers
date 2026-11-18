@@ -1,6 +1,6 @@
 # Current comparison formalization status
 
-New-paper register: **101 checked, 66 pending / 167**. Historical register:
+New-paper register: **103 checked, 64 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
@@ -460,3 +460,11 @@ Current18 `u:lem:successor` and `u:lem:small` are checked by a fresh 112-module 
 ### Higher-degree strict mass order (236)
 
 Current18 `u:thm:mass` is checked after a fresh 215-module gate and independent final. Actual predecessor induction and genuine residual cuts establish strictness for every genuine mass pair under the exact printed executable thresholds. Complete principal word order and general comparison remain separate.
+
+### Broad numerical kernel recursion (244)
+
+Current18 `m:lem:kernel-recursion` is checked after fresh 185-module evidence and independent final. The actual numerical domain permits masses above the initial input and the zero-suffix boundary. New process/base proofs and a separately proved padded-domain bridge discharge the full source scope; numerical maximum/count programs are genuinely computable. No global comparison promotion follows.
+
+### Selected-control weak scalar (245)
+
+Current17 `lem:weak-scalar` is checked after fresh 203-module evidence and independent final. All three source clauses retain actual occurring-vector admissibility, literal partial success and grades, derived collapse guard and genuine naked-delta grades/freeness. Output norm bounds, box and parked threshold remain separate.

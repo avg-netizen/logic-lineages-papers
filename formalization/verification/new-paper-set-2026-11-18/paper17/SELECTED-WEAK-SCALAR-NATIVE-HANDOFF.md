@@ -1,0 +1,7 @@
+# Complete source lem:weak-scalar native handoff
+
+Gate SelectedWeakScalarStatementChecks; exact alias StatementChecks.fixed_fullSelectedWeakScalar. Full receipt build-reports/1795005416586595705-5.json passed first attempt under original 2048/1536/2048 caps; WEAKFULL-1238 released and process reaped. Earlier two-root prerequisite receipt 1795005318325525700-5 also passed first attempt. Six original frozen pins unchanged. Recursive source/axiom audit SELECTED-WEAK-SCALAR-EVIDENCE.json.
+
+Proof files: SelectedSumValueProof (actual f policy sum interpretation), SelectedSupportProof (actual supported extension/restriction/evaluation independence and bidirectional coverage), SelectedWeakPartialProof (simultaneous actual selected partial success/output grade/weak scalar, genuine new Psi universal norm guard and selected finite-tail monotonicity), SelectedWeakDeltaProof (actual collected partials and inner-only scalar/positive/high delta grades), SelectedWeakScalarProof (all three printed clauses with exact occurring-vector scalar comparison and literal weakened freeness).
+
+All source semantics use SelectedSourceDomain and actual f-collapse, not fixed-G domain suppliers. Structural syntax helpers and control-independent ordinal arithmetic are reused where matched. Inner delta contains no retained abstraction addend. No numerical tail/bounded-input premise added. No output norm, box, delta bounded-norm, generated-source/main arithmetic or parked threshold claim.

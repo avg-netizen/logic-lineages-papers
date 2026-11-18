@@ -1,0 +1,10 @@
+import LogicLineages.PersistentMarking.PortErasureProof
+import LogicLineages.PersistentMarking.PortStateProof
+namespace LogicLineages.PersistentMarking.PortErasureStateChecks
+theorem exact_Erasure : PortNormalizationTargets.Erasure := PortErasureProof.erasure
+theorem exact_ObservedUniverse : PortNormalizationTargets.ObservedUniverse := PortStateProof.observedUniverse
+theorem exact_UnusedAbsent : PortNormalizationTargets.UnusedAbsent := PortStateProof.unusedAbsent
+#print axioms exact_Erasure
+#print axioms exact_ObservedUniverse
+#print axioms exact_UnusedAbsent
+end LogicLineages.PersistentMarking.PortErasureStateChecks

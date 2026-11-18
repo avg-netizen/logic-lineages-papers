@@ -1,0 +1,7 @@
+# Independent exact pre-scope: blank reduction and universality
+
+Approved seven exact supporting contracts in the proposed four/three groups before bounded target-only preflight and proofs. Independently verified all eight frozen hashes. Fresh target bodies preserve the previously inspected independent normalization, terminal bridge, actual blank reduction/undecidability, specialization, uniform translator and RE universality contracts; namespace relocation adds no premise.
+
+Exact normalization is Part evaluation at every input, including divergence. Terminal bridge universally validates actual machine terminal symbols and proves raw evaluation Dom iff binary readout Dom. The existential fixed universal translator is genuinely PR into the accepted decodeTable enumeration, with actual TM0 Halts iff real code evaluation. Undecidability is a conclusion. Specialization is PR on code/input and exact at every ignored input. One actual U handles all pairs, and RE reduction must extract its code through actual Partrec representation, not assume one or invoke an abstract undecidable predicate.
+
+All semantics use the same accepted variable-work-alphabet table enumeration and blank machine as boundedH. Fresh supplier native/recursive evidence and final inspection required; no inherited acceptance. No parity, restricted typed comparison compiler, co-r.e. source membership, DAG complexity or numbered hardness credit. Reviewer ran no native.
