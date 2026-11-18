@@ -1,0 +1,7 @@
+# Independent final review: full ordinary-addition relative norm
+
+Approved two supporting endpoints only. All three frozen pins match. Independent recursive evidence exactly reproduces author report: 60 source-matched modules, two exact standard-only aliases, zero errors; receipt 1794981189487204709-2 and source/input/output/compiler/profile evidence reconcile. No compiler invoked by reviewer.
+
+Read full RelativeNormProof and exact definitions/targets against source eq:relative-norm. The prefix is the literal actual CNF filter at exponent>=e, reconstructed with ordinary ordinal addition. Normal-notation induction proves its CNF is exactly the retained list; actual norm CNF weights then prove the norm expression and bound, including empty filtered lists. The arbitrary-addition theorem separately proves absorption: all prefix terms below the leading exponent of nonzero y vanish in mu+y, while surviving terms retain ordinary addition and equal-exponent coefficient contributions. Only after this proved reduction does the existing compatible-prefix norm supplier apply. Thus no unabsorbed-prefix restriction is smuggled into the target. The y=0 branch retains all N(mu), explicitly proving norm zero.
+
+This is the full displayed relative norm identity and bounds for every mu,y below epsilon0, including complete/partial absorption and zero. It is supporting-only: no relative maximum recursion, propagation, gap/input, effective comparison, arithmetic or main theorem is accepted. Proof-only failed draft remains preserved; no root build/upstream rebuild/CI claim.

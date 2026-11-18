@@ -1,0 +1,22 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/BridgeTypingProof.lean:14:6: error: Tactic `subst` failed: did not find equation for eliminating 'i'
+
+case pos
+i : Nat
+y : Name
+ys : List Name
+h : (if True then some 0 else Option.map Nat.succ (nameLookup ys y)) = some i
+⊢ BoundContext.prefix (List.map Prod.fst (y :: ys)) EmptyContext i = some y.fst
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/BridgeTypingProof.lean:13:29: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [nameLookup, i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵ ̵Option.some.injEq] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/BridgeTypingProof.lean:13:41: warning: This simp argument is unused:
+  Option.some.injEq
+
+Hint: Omit it from the simp argument list.
+  simp only [nameLookup, if_pos rfl,̵ ̵O̵p̵t̵i̵o̵n̵.̵s̵o̵m̵e̵.̵i̵n̵j̵E̵q̵] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

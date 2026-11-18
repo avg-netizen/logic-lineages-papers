@@ -1,0 +1,69 @@
+module
+public import LogicLineages.CartierObserverCurrent.MixedProperTargets
+public import LogicLineages.CartierObserverCurrent.BasicLocalProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+universe u
+namespace LogicLineages.CartierObserverCurrent.MixedProper
+
+theorem fractionProper : Targets.FractionProper.{u} := by
+  intro K _ P Q hPQ
+  have hQ : Q ≠ 0 := by intro h; subst Q; simpa using hPQ
+  by_cases hP : P = 0
+  · simp [hP, proper]
+  let f : RatFunc K := algebraMap (Polynomial K) (RatFunc K) P /
+    algebraMap (Polynomial K) (RatFunc K) Q
+  have hf : f ≠ 0 := div_ne_zero (RatFunc.algebraMap_ne_zero hP) (RatFunc.algebraMap_ne_zero hQ)
+  have he : f.num * Q = P * f.denom := (RatFunc.num_mul_eq_mul_denom_iff hQ).mpr rfl
+  have hd := congrArg Polynomial.natDegree he
+  rw [Polynomial.natDegree_mul (RatFunc.num_ne_zero hf) hQ,
+    Polynomial.natDegree_mul hP f.denom_ne_zero] at hd
+  rw [Polynomial.degree_eq_natDegree hP, Polynomial.degree_eq_natDegree hQ] at hPQ
+  have hpq : P.natDegree < Q.natDegree := by exact_mod_cast hPQ
+  change f.num.degree < f.denom.degree
+  rw [Polynomial.degree_eq_natDegree (RatFunc.num_ne_zero hf),
+    Polynomial.degree_eq_natDegree f.denom_ne_zero]
+  exact_mod_cast (show f.num.natDegree < f.denom.natDegree by omega)
+
+theorem digitDegree : Targets.DigitDegree.{u} := by
+  intro K _ _ _ P Q hPQ b
+  have hQ : Q ≠ 0 := by intro h; subst Q; simpa using hPQ
+  rw [Polynomial.degree_eq_natDegree hQ] at hPQ ⊢
+  apply (Polynomial.degree_lt_iff_coeff_zero _ Q.natDegree).mpr
+  intro n hn
+  rw [Basic.actualPolynomialSquareRootDigit, Polynomial.coeff_map,
+    Basic.actualBinaryPolynomialDigitCoefficient]
+  have hz : (P * Q).coeff (Nat.bit b n) = 0 := by
+    rw [Polynomial.coeff_mul]
+    apply Finset.sum_eq_zero
+    rintro ⟨i, j⟩ hij
+    have hindex : i + j = Nat.bit b n := Finset.mem_antidiagonal.mp hij
+    by_cases hi : i < Q.natDegree
+    · have hj : Q.natDegree < j := by rw [Nat.bit_val] at hindex; omega
+      have hzero := Polynomial.coeff_eq_zero_of_degree_lt
+        ((Polynomial.degree_le_natDegree Q).trans_lt (WithBot.coe_lt_coe.mpr hj))
+      rw [hzero, mul_zero]
+    · have hzero := Polynomial.coeff_eq_zero_of_degree_lt
+        (hPQ.trans_le (WithBot.coe_le_coe.mpr (Nat.le_of_not_gt hi)))
+      rw [hzero, zero_mul]
+  rw [hz, map_zero]
+
+theorem stepDigitIdentity : Targets.StepDigitIdentity.{u} := by
+  intro K _ _ _ b f
+  cases b
+  · exact Basic.evenSelectorIdentity K f
+  · rfl
+
+theorem stepProper : Targets.StepProper.{u} := by
+  intro K _ _ _ b f hf
+  rw [stepDigitIdentity]
+  exact fractionProper K _ _ (digitDegree K f.num f.denom hf b)
+
+theorem stepDenominatorDivides : Targets.StepDenominatorDivides.{u} := by
+  intro K _ _ _ b f
+  rw [stepDigitIdentity]
+  exact RatFunc.denom_div_dvd _ _
+
+#audit_namespace LogicLineages.CartierObserverCurrent.MixedProper
+end LogicLineages.CartierObserverCurrent.MixedProper

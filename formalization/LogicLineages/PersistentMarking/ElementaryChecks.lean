@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.ElementaryProof
+namespace LogicLineages.PersistentMarking.ElementaryChecks
+theorem strictIncluded : ComparisonTargets.StrictIncluded := ElementaryProof.strictIncluded
+theorem ordinaryReflexive : ComparisonTargets.OrdinaryReflexive := ElementaryProof.ordinaryReflexive
+#print axioms strictIncluded
+#print axioms ordinaryReflexive
+end LogicLineages.PersistentMarking.ElementaryChecks

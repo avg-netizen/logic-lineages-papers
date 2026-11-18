@@ -10,7 +10,7 @@ theorem lookupType (env : List Name) (n : Name) (i : Nat)
   | cons y ys =>
     by_cases he : n = y
     · subst n
-      simp only [nameLookup, if_pos rfl, Option.some.injEq] at h
+      simp [nameLookup] at h
       subst i
       rfl
     · cases hl : nameLookup ys n with

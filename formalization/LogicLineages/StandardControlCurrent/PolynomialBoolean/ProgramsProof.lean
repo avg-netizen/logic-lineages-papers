@@ -1,13 +1,19 @@
 module
 public import LogicLineages.StandardControlCurrent.PolynomialBoolean.Targets
+public import LogicLineages.OrdinalComparison.LayeredComparison.IntegerAlgorithmsProof
+public import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.HeadProgramsProof
 public import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.ExpressionCodeProgramsProof
-public import LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.MachineProgramsProof
 
 @[expose] public section
 namespace LogicLineages.StandardControlCurrent.PolynomialBoolean.ProgramsProof
 open OrdinalComparison PolynomialGraphCompletion
 open LayeredComparison.IntegerAlgorithms.Proof
 attribute [local irreducible] Nat.sqrt Nat.unpair
+
+theorem head_primitive (n : Nat) : Primrec (fun xs : List Nat => xs.headD n) := by
+  apply (Primrec.option_getD.comp Primrec.list_head? (Primrec.const n)).of_eq
+  intro xs
+  cases xs <;> rfl
 
 /-- Numeric constructors retain the literal formula encoding. -/
 theorem nonnegative_primitive : Primrec Code.nonnegative :=
@@ -62,7 +68,7 @@ theorem test_primitive : Primrec (fun p : Nat × Nat × Nat => Code.test p.1 p.2
     (equal_primitive.comp rowFalse) (nonnegative_primitive.comp rowStrict)
 
 theorem positive_primitive : Primrec Code.positive := by
-  have hr : Primrec (fun i : Nat => ((-1 : Int),[(1,i,([] : Word))])) :=
+  have hr : Primrec (fun i : Nat => ((-1 : Int),[((1 : Int),i,([] : Word))])) :=
     (Primrec.const (-1 : Int)).pair (Primrec.list_cons.comp
       ((Primrec.const (1 : Int)).pair (Primrec.id.pair (Primrec.const []))) (Primrec.const []))
   exact Primrec.list_foldr Primrec.list_range (Primrec.const 0)
@@ -78,7 +84,7 @@ theorem step_primitive : Primrec₂ Code.step := by
   have hleft : Primrec (fun p : A => p.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
   have hright : Primrec (fun p : A => p.2.2.2) := Primrec.snd.comp (Primrec.snd.comp Primrec.snd)
   have htop : Primrec (fun p : A => p.1.2.2.headD 1) :=
-    (Primrec.list_getD (1 : Nat)).comp ht (Primrec.const 0)
+    (head_primitive 1).comp ht
   have hnext : Primrec (fun p : A => p.1.2.2.getD 1 1) :=
     (Primrec.list_getD (1 : Nat)).comp ht (Primrec.const 1)
   have hdrop : Primrec (fun p : A => p.1.2.2.drop 2) :=
@@ -96,9 +102,9 @@ theorem step_primitive : Primrec₂ Code.step := by
     (ExpressionCodeProgramsProof.instructions_primitive.comp hright)
     ((Primrec.fst.comp ha).pair ((Primrec.const []).pair (Primrec.const [])))
   have hatop : Primrec (fun p : A => (first p).2.1.headD 0) :=
-    (Primrec.list_getD (0 : Nat)).comp (Primrec.fst.comp (Primrec.snd.comp ha)) (Primrec.const 0)
+    (head_primitive 0).comp (Primrec.fst.comp (Primrec.snd.comp ha))
   have hbtop : Primrec (fun p : A => (second p).2.1.headD 0) :=
-    (Primrec.list_getD (0 : Nat)).comp (Primrec.fst.comp (Primrec.snd.comp hb)) (Primrec.const 0)
+    (head_primitive 0).comp (Primrec.fst.comp (Primrec.snd.comp hb))
   have hatom : Primrec (fun p : A =>
       ((second p).1,p.1.2.1++(first p).2.2++(second p).2.2,
        Code.test (p.2.1-2) ((first p).2.1.headD 0) ((second p).2.1.headD 0)::p.1.2.2)) :=
@@ -120,5 +126,47 @@ theorem step_primitive : Primrec₂ Code.step := by
     (Primrec.ite (Primrec.nat_le.comp htag (Primrec.const 4)) hatom
       (Primrec.ite (Primrec.eq.comp htag (Primrec.const 5)) hneg
         (Primrec.ite (Primrec.eq.comp htag (Primrec.const 6)) hconj hdisj)))
+
+theorem decode_primitive : Primrec Code.decode :=
+  Primrec.option_getD.comp Primrec.decode (Primrec.const [])
+
+theorem heads_primitive : Primrec Code.heads := by
+  let A := List Instruction × Instruction
+  have htag : Primrec (fun p : A => p.2.1) := Primrec.fst.comp Primrec.snd
+  have ha : Primrec (fun p : A => p.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
+  have hb : Primrec (fun p : A => p.2.2.2) := Primrec.snd.comp (Primrec.snd.comp Primrec.snd)
+  exact Primrec.list_flatMap Primrec.id
+    (Primrec.ite ((Primrec.nat_le.comp (Primrec.const 2) htag).and
+        (Primrec.nat_le.comp htag (Primrec.const 4)))
+      (Primrec.list_append.comp
+        (ExpressionCodeProgramsProof.headNames_primitive.comp
+          (ExpressionCodeProgramsProof.instructions_primitive.comp ha))
+        (ExpressionCodeProgramsProof.headNames_primitive.comp
+          (ExpressionCodeProgramsProof.instructions_primitive.comp hb)))
+      (Primrec.const [])).to₂
+
+theorem run_primitive : Primrec (fun p : Nat × List Instruction =>
+    p.2.foldl Code.step (p.1,[],[])) :=
+  Primrec.list_foldl Primrec.snd
+    (Primrec.fst.pair ((Primrec.const []).pair (Primrec.const [])))
+    (step_primitive.comp (Primrec.fst.comp Primrec.snd)
+      (Primrec.snd.comp Primrec.snd)).to₂
+
+theorem package_primitive : Primrec (fun p : Nat × Nat => Code.package p.1 p.2) := by
+  have hops : Primrec (fun p : Nat × Nat => Code.decode p.2) := decode_primitive.comp Primrec.snd
+  have hs : Primrec (fun p : Nat × Nat => (Code.decode p.2).foldl Code.step (p.1,[],[])) :=
+    run_primitive.comp (Primrec.fst.pair hops)
+  have hd : Primrec (fun p : Nat × Nat => familyDegree (Code.heads (Code.decode p.2))) :=
+    HeadProgramsProof.familyDegree_primitive.comp (heads_primitive.comp hops)
+  have hp : Primrec (fun p : Nat × Nat => Code.positive p.1) := positive_primitive.comp Primrec.fst
+  have hg : Primrec (fun p : Nat × Nat =>
+      Code.graph ((Code.decode p.2).foldl Code.step (p.1,[],[])).2.1) :=
+    graph_primitive.comp (Primrec.fst.comp (Primrec.snd.comp hs))
+  have ho : Primrec (fun p : Nat × Nat =>
+      ((Code.decode p.2).foldl Code.step (p.1,[],[])).2.2.headD 1) :=
+    (head_primitive 1).comp (Primrec.snd.comp (Primrec.snd.comp hs))
+  exact hd.pair ((Primrec.fst.comp hs).pair
+    ((conj_primitive.comp hp (conj_primitive.comp hg ho)).pair
+      (conj_primitive.comp hp (conj_primitive.comp hg (neg_primitive.comp ho)))))
 
 end LogicLineages.StandardControlCurrent.PolynomialBoolean.ProgramsProof

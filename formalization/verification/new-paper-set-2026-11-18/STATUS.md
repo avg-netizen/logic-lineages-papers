@@ -1,6 +1,6 @@
 # Current comparison formalization status
 
-New-paper register: **14 checked, 153 pending / 167**. Historical register:
+New-paper register: **16 checked, 151 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
@@ -17,6 +17,8 @@ to this replacement collection. Old statuses do not transfer automatically.
   for all natural k,n, with actual terminal count and selected controls.
 - Paper17 `thm:counts`: actual high-head funnel and finite-head counts,
   exact selected-control thresholds and complete signed residue tables.
+- Paper17 `prop:entry-residues`: genuine first-entry computation and both
+  interval cases at exact thresholds, retaining odd-prefix ceiling correction.
 - Paper18 `u:thm:identity` and `u:thm:sign`: effective literal normal forms
   with countervaluation, and full two-sort eventual signs on genuine domains.
 - Paper18 `u:lem:sparse`: actual-ordinal sparse peaks and full inequalities.
@@ -28,6 +30,9 @@ to this replacement collection. Old statuses do not transfer automatically.
   translation with actual word domains and source-expression coverage.
 - Paper19 `lem:perturbed-control`: full control lemma over the stipulated
   primitive-recursive bounded simulation, including double-exponential growth.
+
+- Paper20 `lem:local`: actual rational pole identities, unrestricted ordinary
+  series coefficient rule and genuine regular rational expansion compatibility.
 
 Each has an exact current-source comparator, native gate, source-matched
 recursive evidence and independent final review. The acceptance records under
@@ -45,16 +50,26 @@ Actual successful-call free-substitution covariance and finite simultaneous
 composition are also checked (13 modules, eight exact supporting aliases).
 Same-carrier locally nameless marking/covariance and concrete retained-binder
 free-substitution typing are checked (11 modules, eight supporting aliases).
-Alpha correspondence and the actual comparison/accessibility/height proofs
-remain open.
+Thirteen independent named/DB signature, typing, validity, scoped-roundtrip
+and fresh-opening foundation endpoints are checked (23 modules).
+Actual Weak/Strict target ordinariness is checked (12 modules, two aliases).
+All-environment Alpha-to-encoding preservation is checked (eight modules),
+as is the genuine finite-environment/named opening bridge (nine modules).
+Full independently generated Alpha characterization and named roundtrip
+are checked (20 modules, two aliases). Comparison operation/clause
+correspondence, full elementary lemma and accessibility/height remain open.
 
 Paper17: near-control modular/orbit, full numerical growth and joint primitive
 recursion; factorial laws/orbit and a shared explicit finite-level bound.
 Basic actual selected-control collapse estimates and the exact limit-part
 predecessor recurrence, effective evaluation and high-head count arithmetic
 are checked. Actual partial entry-search and affordable entry/orbit support
-is checked (142 modules, two aliases). Full entry residues and ground
-comparison remain separate unpaid obligations.
+is checked (142 modules, two aliases). Full first-entry residues are checked
+(150 modules). All displayed derived entry-field/bare-iterate/identity tables
+are checked supporting results (151 modules), as is the literal CNF
+relative-cost/arbitrary ordinary-addition absorption identity (60 modules).
+Relative maximum/propagation/gap arithmetic decision and
+ground comparison remain separate unpaid obligations.
 
 Archive/migration is remotely verified. All80 archived-file hashes and local
 compatibility paths pass, and all167 statement-source records reproduce from
@@ -79,5 +94,9 @@ editions remain preserved and unaccepted. No legacy supplier was edited.
 Unrestricted formal-series decomposition/uniqueness and coefficient support
 is checked (five modules, five aliases). Actual regular rational/series
 compatibility and presentation independence are checked (13 modules, three
-aliases). The full source local-lemma assembly, mixed transient and complete
-residue-profile/observer remain separate unpaid obligations.
+aliases). The full source ordinary-power-series local lemma is checked
+(18 modules). Both-selector properness and canonical denominator divisibility
+are checked supporting results (11 modules, five aliases), as is actual
+ceil-half pole contraction/no-new-pole (14 modules, four aliases). Scalar
+extension/source multiplicity, mixed transient and complete residue-profile/observer remain
+separate unpaid obligations. No arbitrary Laurent-coefficient claim is made.

@@ -1,0 +1,7 @@
+# Independent final review: actual fresh-name opening correspondence
+
+Approved one supporting endpoint only. Independent evidence exactly reproduces author report: nine modules, one exact standard-only alias, zero errors. Frozen pins, original core profile and native source/input/output bundles reconcile to receipt 1794980914243461661-2. Independent verifier uses direct compiler/Init hashing without invoking the compiler; local closure and forbidden-token scan also checked.
+
+Read full actual proof. Lookup correctness supplies the exact typed-name occurrence and index bound. freeNamesGet supplies the actual substitution value, and openEncoding proves capture-avoiding finite-environment removal at locals.length for arbitrary local and outer environments. The local binder branch preserves its index; the outer binder branch becomes the exact typed free name, with shifting harmless on a free variable. Lambda recursion increases the local binder prefix rather than assuming a renaming/opening law. The final theorem combines this proved finite-environment opening with previously checked actual fresh renameEncode; no alpha-converse or source presentation oracle is imported.
+
+This establishes the frozen fresh typed-name OpeningBridge. AlphaExact converse, named decode/encode alpha roundtrip, comparison derivation transport and full numbered elementary/stability claims remain outstanding. No root build or CI claim.

@@ -1,0 +1,199 @@
+@LogicLineages.PersistentMarking.Spine.Weak.rec : ∀ {S : LogicLineages.PersistentMarking.Spine.Signature}
+  {motive_1 :
+    (a a_1 : LogicLineages.PersistentMarking.Spine.Expr) → LogicLineages.PersistentMarking.Spine.Weak S a a_1 → Prop}
+  {motive_2 :
+    (a a_1 : LogicLineages.PersistentMarking.Spine.Expr) → LogicLineages.PersistentMarking.Spine.Strict S a a_1 → Prop}
+  {motive_3 :
+    (a a_1 : LogicLineages.PersistentMarking.Spine.Args) →
+      LogicLineages.PersistentMarking.Spine.Matching S a a_1 → Prop}
+  {motive_4 :
+    (a a_1 : LogicLineages.PersistentMarking.Spine.Args) →
+      LogicLineages.PersistentMarking.Spine.Multiset S a a_1 → Prop}
+  {motive_5 :
+    (a a_1 : LogicLineages.PersistentMarking.Spine.Args) →
+      LogicLineages.PersistentMarking.Spine.Coverage S a a_1 → Prop}
+  {motive_6 :
+    (a : LogicLineages.PersistentMarking.Head) →
+      (a_1 a_2 a_3 : LogicLineages.PersistentMarking.Spine.Args) →
+        LogicLineages.PersistentMarking.Spine.Whole S a a_1 a_2 a_3 → Prop},
+  (∀ {σ : LogicLineages.PersistentMarking.Ty} {x : Nat},
+      motive_1 (LogicLineages.PersistentMarking.Spine.Expr.free σ x)
+        (LogicLineages.PersistentMarking.Spine.Expr.free σ x) ⋯) →
+    (∀ {σ : LogicLineages.PersistentMarking.Ty} {s : LogicLineages.PersistentMarking.Spine.Expr}
+        {τ : LogicLineages.PersistentMarking.Ty} {t : LogicLineages.PersistentMarking.Spine.Expr} {x : Nat}
+        (a :
+          LogicLineages.PersistentMarking.Spine.PaperTerm S (LogicLineages.PersistentMarking.Spine.Expr.lam σ s)
+            (σ.arrow τ))
+        (a_1 :
+          LogicLineages.PersistentMarking.Spine.PaperTerm S (LogicLineages.PersistentMarking.Spine.Expr.lam σ t)
+            (σ.arrow τ))
+        (a_2 : LogicLineages.PersistentMarking.NameBridge.freeOccurs (σ, x) s = false)
+        (a_3 : LogicLineages.PersistentMarking.NameBridge.freeOccurs (σ, x) t = false)
+        (a_4 :
+          LogicLineages.PersistentMarking.Spine.Weak S (LogicLineages.PersistentMarking.NameBridge.openBody σ x s)
+            (LogicLineages.PersistentMarking.NameBridge.openBody σ x t)),
+        motive_1 (LogicLineages.PersistentMarking.NameBridge.openBody σ x s)
+            (LogicLineages.PersistentMarking.NameBridge.openBody σ x t) a_4 →
+          motive_1 (LogicLineages.PersistentMarking.Spine.Expr.lam σ s)
+            (LogicLineages.PersistentMarking.Spine.Expr.lam σ t) ⋯) →
+      (∀ {f : LogicLineages.PersistentMarking.Head} {ss : LogicLineages.PersistentMarking.Spine.Args}
+          {g : LogicLineages.PersistentMarking.Head} {ts : LogicLineages.PersistentMarking.Spine.Args}
+          (a :
+            LogicLineages.PersistentMarking.Spine.PaperTerm S (LogicLineages.PersistentMarking.Spine.Expr.head f ss)
+              f.result)
+          (a_1 :
+            LogicLineages.PersistentMarking.Spine.PaperTerm S (LogicLineages.PersistentMarking.Spine.Expr.head g ts)
+              g.result)
+          (a_2 : LogicLineages.PersistentMarking.Spine.Equivalent S f g) (a_3 : f.result = g.result)
+          (a_4 : LogicLineages.PersistentMarking.Spine.Matching S ss ts),
+          motive_3 ss ts a_4 →
+            motive_1 (LogicLineages.PersistentMarking.Spine.Expr.head f ss)
+              (LogicLineages.PersistentMarking.Spine.Expr.head g ts) ⋯) →
+        (∀ {f : LogicLineages.PersistentMarking.Head} {ss : LogicLineages.PersistentMarking.Spine.Args}
+            {t : LogicLineages.PersistentMarking.Spine.Expr}
+            (a :
+              LogicLineages.PersistentMarking.Spine.PaperTerm S (LogicLineages.PersistentMarking.Spine.Expr.head f ss)
+                f.result)
+            (a_1 : LogicLineages.PersistentMarking.Spine.PaperTerm S t f.result)
+            (a_2 :
+              LogicLineages.PersistentMarking.Spine.Weak S
+                (LogicLineages.PersistentMarking.Spine.Expr.marked f f.result ss
+                  LogicLineages.PersistentMarking.Spine.Args.nil)
+                t),
+            motive_1
+                (LogicLineages.PersistentMarking.Spine.Expr.marked f f.result ss
+                  LogicLineages.PersistentMarking.Spine.Args.nil)
+                t a_2 →
+              motive_1 (LogicLineages.PersistentMarking.Spine.Expr.head f ss) t ⋯) →
+          (∀ {f : LogicLineages.PersistentMarking.Head} {τ : LogicLineages.PersistentMarking.Ty}
+              {ss es : LogicLineages.PersistentMarking.Spine.Args} {t : LogicLineages.PersistentMarking.Spine.Expr}
+              {i : Nat} {q : LogicLineages.PersistentMarking.Spine.Expr}
+              {domains : List LogicLineages.PersistentMarking.Ty} {r : LogicLineages.PersistentMarking.Spine.Expr}
+              (a :
+                LogicLineages.PersistentMarking.Spine.PaperTerm S
+                  (LogicLineages.PersistentMarking.Spine.Expr.marked f τ ss es) τ)
+              (a_1 : LogicLineages.PersistentMarking.Spine.PaperTerm S t τ)
+              (a_2 : LogicLineages.PersistentMarking.Spine.At ss i q ∨ LogicLineages.PersistentMarking.Spine.At es i q)
+              (a_3 :
+                LogicLineages.PersistentMarking.Spine.Typed LogicLineages.PersistentMarking.Spine.EmptyContext q
+                  (LogicLineages.PersistentMarking.Spine.ArrowPrefix domains τ))
+              (a_4 :
+                LogicLineages.PersistentMarking.Spine.apply q
+                    (LogicLineages.PersistentMarking.Spine.ownerCopies f ss es domains) =
+                  some r)
+              (a_5 : LogicLineages.PersistentMarking.Spine.Weak S r t),
+              motive_1 r t a_5 → motive_1 (LogicLineages.PersistentMarking.Spine.Expr.marked f τ ss es) t ⋯) →
+            (∀ {f : LogicLineages.PersistentMarking.Head} {σ τ : LogicLineages.PersistentMarking.Ty}
+                {ss es : LogicLineages.PersistentMarking.Spine.Args} {body : LogicLineages.PersistentMarking.Spine.Expr}
+                {x : Nat}
+                (a :
+                  LogicLineages.PersistentMarking.Spine.PaperTerm S
+                    (LogicLineages.PersistentMarking.Spine.Expr.marked f (σ.arrow τ) ss es) (σ.arrow τ))
+                (a_1 :
+                  LogicLineages.PersistentMarking.Spine.PaperTerm S
+                    (LogicLineages.PersistentMarking.Spine.Expr.lam σ body) (σ.arrow τ))
+                (a_2 :
+                  LogicLineages.PersistentMarking.NameBridge.freeOccurs (σ, x)
+                      (LogicLineages.PersistentMarking.Spine.Expr.marked f (σ.arrow τ) ss es) =
+                    false)
+                (a_3 : LogicLineages.PersistentMarking.NameBridge.freeOccurs (σ, x) body = false)
+                (a_4 :
+                  LogicLineages.PersistentMarking.Spine.Weak S
+                    (LogicLineages.PersistentMarking.Spine.Expr.marked f τ ss
+                      (es.append
+                        (LogicLineages.PersistentMarking.Spine.Args.cons
+                          (LogicLineages.PersistentMarking.Spine.Expr.free σ x)
+                          LogicLineages.PersistentMarking.Spine.Args.nil)))
+                    (LogicLineages.PersistentMarking.NameBridge.openBody σ x body)),
+                motive_1
+                    (LogicLineages.PersistentMarking.Spine.Expr.marked f τ ss
+                      (es.append
+                        (LogicLineages.PersistentMarking.Spine.Args.cons
+                          (LogicLineages.PersistentMarking.Spine.Expr.free σ x)
+                          LogicLineages.PersistentMarking.Spine.Args.nil)))
+                    (LogicLineages.PersistentMarking.NameBridge.openBody σ x body) a_4 →
+                  motive_1 (LogicLineages.PersistentMarking.Spine.Expr.marked f (σ.arrow τ) ss es)
+                    (LogicLineages.PersistentMarking.Spine.Expr.lam σ body) ⋯) →
+              (∀ {f : LogicLineages.PersistentMarking.Head} {ss es : LogicLineages.PersistentMarking.Spine.Args}
+                  {g : LogicLineages.PersistentMarking.Head} {ts : LogicLineages.PersistentMarking.Spine.Args}
+                  (a :
+                    LogicLineages.PersistentMarking.Spine.PaperTerm S
+                      (LogicLineages.PersistentMarking.Spine.Expr.marked f g.result ss es) g.result)
+                  (a_1 :
+                    LogicLineages.PersistentMarking.Spine.PaperTerm S
+                      (LogicLineages.PersistentMarking.Spine.Expr.head g ts) g.result)
+                  (a_2 : LogicLineages.PersistentMarking.Spine.Precedes S f g)
+                  (a_3 : LogicLineages.PersistentMarking.Spine.Whole S f ss es ts),
+                  motive_6 f ss es ts a_3 →
+                    motive_1 (LogicLineages.PersistentMarking.Spine.Expr.marked f g.result ss es)
+                      (LogicLineages.PersistentMarking.Spine.Expr.head g ts) ⋯) →
+                (∀ {f : LogicLineages.PersistentMarking.Head} {ss es : LogicLineages.PersistentMarking.Spine.Args}
+                    {g : LogicLineages.PersistentMarking.Head} {ts : LogicLineages.PersistentMarking.Spine.Args}
+                    (a :
+                      LogicLineages.PersistentMarking.Spine.PaperTerm S
+                        (LogicLineages.PersistentMarking.Spine.Expr.marked f g.result ss es) g.result)
+                    (a_1 :
+                      LogicLineages.PersistentMarking.Spine.PaperTerm S
+                        (LogicLineages.PersistentMarking.Spine.Expr.head g ts) g.result)
+                    (a_2 : LogicLineages.PersistentMarking.Spine.Equivalent S f g)
+                    (a_3 : LogicLineages.PersistentMarking.Spine.Multiset S ss ts)
+                    (a_4 : LogicLineages.PersistentMarking.Spine.Whole S f ss es ts),
+                    motive_4 ss ts a_3 →
+                      motive_6 f ss es ts a_4 →
+                        motive_1 (LogicLineages.PersistentMarking.Spine.Expr.marked f g.result ss es)
+                          (LogicLineages.PersistentMarking.Spine.Expr.head g ts) ⋯) →
+                  (∀ {q : LogicLineages.PersistentMarking.Spine.Expr} {σ : LogicLineages.PersistentMarking.Ty}
+                      {t r : LogicLineages.PersistentMarking.Spine.Expr}
+                      (a : LogicLineages.PersistentMarking.Spine.PaperTerm S q σ)
+                      (a_1 : LogicLineages.PersistentMarking.Spine.PaperTerm S t σ)
+                      (a_2 : LogicLineages.PersistentMarking.Spine.mark q = some r)
+                      (a_3 : LogicLineages.PersistentMarking.Spine.Weak S r t), motive_1 r t a_3 → motive_2 q t ⋯) →
+                    motive_3 LogicLineages.PersistentMarking.Spine.Args.nil
+                        LogicLineages.PersistentMarking.Spine.Args.nil ⋯ →
+                      (∀ {targets : LogicLineages.PersistentMarking.Spine.Args}
+                          {y : LogicLineages.PersistentMarking.Spine.Expr}
+                          {rest : LogicLineages.PersistentMarking.Spine.Args}
+                          {x : LogicLineages.PersistentMarking.Spine.Expr}
+                          {xs : LogicLineages.PersistentMarking.Spine.Args}
+                          (a : LogicLineages.PersistentMarking.Spine.Remove targets y rest)
+                          (a_1 : LogicLineages.PersistentMarking.Spine.Weak S x y)
+                          (a_2 : LogicLineages.PersistentMarking.Spine.Matching S xs rest),
+                          motive_1 x y a_1 →
+                            motive_3 xs rest a_2 →
+                              motive_3 (LogicLineages.PersistentMarking.Spine.Args.cons x xs) targets ⋯) →
+                        (∀ {source kept removed target matched added : LogicLineages.PersistentMarking.Spine.Args}
+                            (a : LogicLineages.PersistentMarking.Spine.Split source kept removed)
+                            (a_1 : LogicLineages.PersistentMarking.Spine.Split target matched added)
+                            (a_2 : LogicLineages.PersistentMarking.Spine.Nonempty removed)
+                            (a_3 : LogicLineages.PersistentMarking.Spine.Matching S kept matched)
+                            (a_4 : LogicLineages.PersistentMarking.Spine.Coverage S removed added),
+                            motive_3 kept matched a_3 → motive_5 removed added a_4 → motive_4 source target ⋯) →
+                          (∀ {owners : LogicLineages.PersistentMarking.Spine.Args},
+                              motive_5 owners LogicLineages.PersistentMarking.Spine.Args.nil ⋯) →
+                            (∀ {owners : LogicLineages.PersistentMarking.Spine.Args} {i : Nat}
+                                {q x : LogicLineages.PersistentMarking.Spine.Expr}
+                                {xs : LogicLineages.PersistentMarking.Spine.Args}
+                                (a : LogicLineages.PersistentMarking.Spine.At owners i q)
+                                (a_1 : LogicLineages.PersistentMarking.Spine.Strict S q x)
+                                (a_2 : LogicLineages.PersistentMarking.Spine.Coverage S owners xs),
+                                motive_2 q x a_1 →
+                                  motive_5 owners xs a_2 →
+                                    motive_5 owners (LogicLineages.PersistentMarking.Spine.Args.cons x xs) ⋯) →
+                              (∀ {f : LogicLineages.PersistentMarking.Head}
+                                  {base extras : LogicLineages.PersistentMarking.Spine.Args},
+                                  motive_6 f base extras LogicLineages.PersistentMarking.Spine.Args.nil ⋯) →
+                                (∀ {f : LogicLineages.PersistentMarking.Head}
+                                    {base extras : LogicLineages.PersistentMarking.Spine.Args}
+                                    {q : LogicLineages.PersistentMarking.Spine.Expr}
+                                    {qs : LogicLineages.PersistentMarking.Spine.Args}
+                                    (a :
+                                      LogicLineages.PersistentMarking.Spine.Weak S
+                                        (LogicLineages.PersistentMarking.Spine.Expr.marked f q.type base extras) q)
+                                    (a_1 : LogicLineages.PersistentMarking.Spine.Whole S f base extras qs),
+                                    motive_1 (LogicLineages.PersistentMarking.Spine.Expr.marked f q.type base extras) q
+                                        a →
+                                      motive_6 f base extras qs a_1 →
+                                        motive_6 f base extras (LogicLineages.PersistentMarking.Spine.Args.cons q qs)
+                                          ⋯) →
+                                  ∀ {a a_1 : LogicLineages.PersistentMarking.Spine.Expr}
+                                    (t : LogicLineages.PersistentMarking.Spine.Weak S a a_1), motive_1 a a_1 t

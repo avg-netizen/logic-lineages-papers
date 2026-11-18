@@ -565,8 +565,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/controls.tex",
           "line": 172,
           "statement_latex": "[Entry tables]\\label{prop:entry-residues}\nPut \\(c_\\nu=\\lceil N(\\nu)/2\\rceil\\).  On a computable tail,\nan interval of the form \\(\\lambda=\\nu+\\omega k\\), \\(k\\ge1\\),\nhas \\(\\tau(t)=k\\) and \\(E(t)=f^k(t)\\).  Every other proper interval\nhas\n\\begin{equation}\\label{eq:long-entry-residues}\n \\tau(t)\\equiv p(t)-c_\\nu\\pmod m,\\qquad\n E(t)\\equiv2c_\\nu\\pmod{2m}.\n\\end{equation}\nA sufficient tail for these formulas is\n\\(t\\ge\\max\\{N(\\lambda),N(\\nu)+3,m,B_f\\}\\).",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.Targets.EntryResidues",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_entryResidues",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/030-entry-residues.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:lem:propagation",
@@ -1716,8 +1719,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/cartier.tex",
           "line": 13,
           "statement_latex": "[Local rule]\\label{lem:local}\nFor a fixed pole $\\zeta$ and $b\\in K$,\n\\[\n \\mathcal C\\!\\left(\\frac{b\\,dz}{(z-\\zeta)^{2j}}\\right)=0,\\qquad\n \\mathcal C\\!\\left(\\frac{b\\,dz}{(z-\\zeta)^{2j+1}}\\right)\n       =\\frac{b^{1/2}\\,dz}{(z-\\zeta)^{j+1}}.\n\\]\nThe same definition gives\n$\\mathcal C(\\sum a_nz^n\\,dz)=\\sum a_{2n+1}^{1/2}z^n\\,dz$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullLocal.Targets.LocalRule",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullLocal.StatementChecks.fixed_localRule",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/031-local-cartier-lemma.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:lem:poles",
@@ -1933,7 +1939,7 @@
     }
   ],
   "status_counts": {
-    "pending": 153,
-    "checked": 14
+    "pending": 151,
+    "checked": 16
   }
 }

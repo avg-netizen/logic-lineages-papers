@@ -48,7 +48,7 @@ theorem target_prefix_decomposition (nu : Ordinal.{0}) (hnu : nu = 0 ∨ Order.I
   have hnorm := actualDivisiblePrefixNormAddition P (Ordinal.omega0 * (j : Ordinal))
     (hP.trans_lt heps) (by simpa using finiteCoefficient_below j 0) 1
     (by simpa only [Ordinal.opow_one] using square_dvd_omega hdiv)
-    (by simpa only [← hj] using hr)
+    (by simpa only [← hj, show (1 : Ordinal.{0})+1 = 2 by norm_num] using hr)
   refine ⟨P,j,hP.trans_lt heps,hdiv,by rw [heq,hj],?_⟩
   rw [heq,hj,hnorm.2]
   have h := actualFiniteHeadNorm j 0

@@ -1,0 +1,9 @@
+# First mixed-selector supplier packet
+
+Five exact supporting targets: canonical properness of every actual displayed proper fraction; degree bound for both actual polynomial sqrt digits of P*Q; literal L0/L1 identification with actual canonical digits; both-step canonical properness; canonical output-denominator divisibility by the canonical input denominator. Degree/properness includes the zero rational numerator; degree hypothesis itself forces nonzero Q, no extra excluded case. The denominator-divisibility target has no properness hypothesis and covers zero f.
+
+Source: lem:binary-transient's properness/no-new-pole clauses. Actual step(true,f)=C(f), step(false,f)=C(X*f); no abstract selector correctness assumption. All predicates use actual canonical RatFunc numerator/denominator. No root-index set or partial-fraction representation is assumed.
+
+Field and geometric scope: all targets quantify arbitrary perfect characteristic-two K (fraction properness even arbitrary field), so they apply directly in any such extension field, including a splitting/algebraically closed field. They do NOT assert an unproved naturality of base-field canonical denominators under scalar extension, nor treat absence of base-field roots as absence of geometric poles. The eventual source transient must instantiate the actual mapped source fraction in the selected extension and pay any needed commutation with the base rational selector. This five-target packet alone does not establish the geometric no-new-pole statement, quantitative root multiplicity contraction, all-word transient or full residue-profile theorem. Scalar extension construction/compatibility remains explicit subsequent scope.
+
+All previously accepted Basic/Series/FractionSeries sources remain unchanged. Frozen pins include literal mathematical source and inherited actual definitions. No full numbered promotion from these supporting suppliers.

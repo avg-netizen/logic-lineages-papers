@@ -35,7 +35,7 @@ theorem long_entry_state (f : Nat → Nat) (B : Nat) (hf : SelectedWithThreshold
         ((potential (actualOrdinalNorm a) : Int)-(((actualOrdinalNorm nu+1)/2 : Nat) : Int)) := by
   have had := selected_threshold_admissible f B hf
   have hpow : Ordinal.omega0 ^ (2 : Ordinal.{0}) < Ordinal.omega0 ^ ((2 : Ordinal)+1) :=
-    (Ordinal.opow_lt_opow_iff_right Ordinal.one_lt_omega0).mpr (by norm_num)
+    (Ordinal.opow_lt_opow_iff_right Ordinal.one_lt_omega0).mpr (Order.lt_add_one_iff.mpr le_rfl)
   have hsigma := actualDivisiblePrefixNormAddition P (Ordinal.omega0 ^ (2 : Ordinal))
     hP square_facts.1 2 hdiv hpow
   have hsigNorm : actualOrdinalNorm (P+Ordinal.omega0 ^ (2 : Ordinal.{0})) = actualOrdinalNorm P+3 := by
@@ -75,8 +75,7 @@ theorem long_entry_state (f : Nat → Nat) (B : Nat) (hf : SelectedWithThreshold
       have hq : j ≤ q := by dsimp [q,b]; omega
       have hstate : descentWith f a = nu+(Ordinal.omega0*((q-j : Nat) : Ordinal)+(r : Ordinal)) := by
         rw [hstep,hnuEq,add_assoc,← add_assoc (Ordinal.omega0 * (j : Ordinal)),← mul_add]
-        congr 2
-        exact_mod_cast (Nat.add_sub_of_le hq).symm
+        simp only [← Nat.cast_add, Nat.add_sub_of_le hq]
       have hentry := linear_entry f had.2 nu hnu hnuEps (q-j) r
       rw [← hstate] at hentry
       refine ⟨q-j+1,by omega,firstEntry_step f a nu (q-j) hno hentry,?_⟩
@@ -107,6 +106,6 @@ theorem long_entry_state (f : Nat → Nat) (B : Nat) (hf : SelectedWithThreshold
       refine ⟨i+1,by omega,firstEntry_step f a nu i hno hi,?_⟩
       rw [hn] at hres
       have h := (hres.trans (hp.sub_right (((actualOrdinalNorm nu+1)/2 : Nat) : Int))).add_right 1
-      convert h using 1 <;> simp only [Int.natCast_add,Int.natCast_one] <;> omega
+      convert h using 1 <;> (try simp only [Int.natCast_add,Int.natCast_one]) <;> omega
 
 end LogicLineages.PermittedControl

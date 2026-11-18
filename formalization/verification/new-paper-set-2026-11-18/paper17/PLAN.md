@@ -225,3 +225,56 @@ barrier is affordable; the one-step potential transports the induction.
 The exact norm residue then follows from the already-proved actual entry
 orbit, not from a supplied entry-residue oracle. Full candidate awaits native
 checks and independent final review; no further source status is claimed yet.
+
+## Full actual entry residue native milestone
+
+EntryStatementChecks passed receipt1794980191164335688-2; current recursive
+evidence validates150 modules and three standard-only exact aliases. The full
+source entry proposition is now proved in Lean for both selected controls,
+including exact finite-tail count, complementary long-interval signed residues,
+ceil(Nnu/2) for odd prefixes, explicit source threshold, real first-hit witness
+and norm orbit. The genuine partial computability/first-hit iff and affordable
+existence gates are included. Actual prefix decomposition and shifted-barrier
+induction provide the mathematics; no entry residue or suffix-kernel oracle
+is supplied. Two native-failure drafts/receipts retained, with proof-only
+ordinal numeral/cast simplification repairs. Frozen target/definitions remain
+unchanged. Independent final review requested before numbered promotion.
+Subsequent full table families, relative comparison and arithmetic/main theorem
+are separate obligations.
+
+## Displayed table native milestone
+
+EntryTableStatementChecks passed receipt1794980637989197722-2; recursive
+current-source evidence validates151 modules and three standard-only aliases.
+All four table rows, both interval classes, positive bare iterates, and the
+actual zero-event identity interval with its literal odd input are included.
+The single failed draft/receipt is retained; two max-tail omega proof terms
+were replaced with direct order-transitivity proofs. Frozen pins unchanged.
+Independent final review requested; this is supporting-only, not an arithmetic
+or comparison solver result.
+
+## Next comparison dependency
+
+Prove the actual ordinary-addition relative norm identity and concrete CNF
+prefix-cost bounds before defining relative maxima or claiming propagation.
+Natural-sum additivity and existing compatible-prefix norm addition do not
+cover arbitrary absorbed suffixes. The source shift retains all prefix terms
+whose exponents are at least the incoming leading exponent, including equal
+boundary exponents; zero relative state uses full N(mu) separately. Actual
+relative max/evaluator bridging must use this exact cost, not a supplied
+profile oracle or assumed equality with an unchanged-G assignment.
+
+## Ordinary relative norm milestone
+
+RelativeNormStatementChecks passed native receipt1794981189487204709-2 under
+unchanged standard caps. Both exact aliases have standard-only axiom closures;
+recursive current-source evidence covers60 modules. Independent final review
+approved supporting scope only. Complete filtered actual CNF prefix, retained
+norm/bounds, zero convention and unrestricted ordinary-addition absorption
+identity are paid. No source profile compatibility assumption is left open.
+One failed proof draft and receipt preserved; frozen targets unchanged.
+
+Next: RelativeDescent definitions/targets/source map frozen before proof, exact
+pre-scope requested. Actual maximum subtraction and literal relative entry
+recursion (including selected controls, genuine hit existence and first finite)
+remain pending. Propagation and all later comparison/arithmetic remain pending.

@@ -1,0 +1,7 @@
+# Independent final review
+
+Approved one supporting endpoint only, zero numbered promotions. Read AlphaEncodingProof in full against the independently generated Alpha/AlphaArgs relation and all-environment frozen EncodeRespectsAlpha target. Independent evidence exactly reproduces eight-module/one-exact-alias author report with zero errors and standard-only axioms; receipt 1794980720522192424-2 and unchanged core profile/source/input/output/frozen pins reconcile. The independent verifier uses direct compiler-prefix hashing, not a compiler subprocess.
+
+Lookup append/slot/different-name laws are proved concretely. renameEncode treats the shadowing binder by actual encodeAgree, while the nonshadowing branch maintains typed-name freshness for both old/new names. Absence of the new typed name includes binder names, preventing capture. The proof quantifies arbitrary outer environments without an unstated freshness or distinctness restriction. The full actual Alpha recursor handles reflexivity, symmetry, transitivity, lambda/head/marked congruence and fresh renaming; no encoding-equality alpha definition or assumed alpha law is used.
+
+This establishes only alpha-to-encoding equality. Converse AlphaExact, named decode/encode alpha roundtrip, OpeningBridge, comparison derivation transport and numbered source theorem remain pending. Failed draft/diagnostic receipts remain preserved; no root build or CI claim.
