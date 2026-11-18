@@ -1,0 +1,10 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerTargets.lean:10:0: error: declaration `LogicLineages.ControlSensitivityCurrent.RawPlanCompilerTargets.TypedExactness` contains universe level metavariables at the expression
+  runState.{?u.10} (List.map SyntaxCode.typeCode Γ) (encodePlan.{?u.10} q)
+in the declaration body
+  ∀ (Γ : List Ty) (q : Plan Γ),
+    runState.{?u.10} (List.map SyntaxCode.typeCode Γ) (encodePlan.{?u.10} q) =
+      some (List.map SyntaxCode.typeCode Γ, encodeResult (compile q))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerTargets.lean:16:26: error: Failed to infer universe levels in type of binder `code`
+  List.{?u.6} Instruction.{?u.6}
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerTargets.lean:22:18: error: Failed to infer universe levels in type of binder `p`
+  Prod.{0, ?u.9} (List ℕ) (List.{?u.9} Instruction.{?u.9})

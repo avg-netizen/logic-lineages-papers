@@ -49,8 +49,13 @@ theorem aggregate_guard_typed {Γ} (es : List (Input Γ .ground × Input Γ .gro
   induction es with
   | nil => rfl
   | cons p es ih =>
-      simp only [List.map_cons,aggregateGuard,List.foldr_cons,eraser_guard_typed]
-      simpa [encode] using ih
+      rw [List.map_cons]
+      change (eraserGuard (encode ⟨Γ,.ground,p.1⟩) (encode ⟨Γ,.ground,p.2⟩) &&
+        decide ((encode ⟨Γ,.ground,p.1⟩).1 = Γ.map SyntaxCode.typeCode) &&
+        aggregateGuard (Γ.map SyntaxCode.typeCode)
+          (es.map (fun q => (encode ⟨Γ,.ground,q.1⟩,encode ⟨Γ,.ground,q.2⟩)))) = true
+      rw [eraser_guard_typed, ih]
+      simp [encode]
 
 theorem aggregate_typed {Γ} (es : List (Input Γ .ground × Input Γ .ground)) :
     aggregate (Γ.map SyntaxCode.typeCode)
@@ -61,18 +66,19 @@ theorem aggregate_typed {Γ} (es : List (Input Γ .ground × Input Γ .ground)) 
 
 theorem magnify_raw {Γ} (a : Input Γ .ground) :
     magnifyRaw (encode ⟨Γ,.ground,a⟩) = encode ⟨Γ,.ground,magnifyInput a⟩ := by
-  simp [magnifyRaw,magnifyInput,encode,encodeGraph,node,rawNode,
-    insert_graph,map_index,referenceIndex,SyntaxCode.typeCode]
+  simp [magnifyRaw,magnifyInput,encode,encodeGraph,node,CheckedComposition.rawNode,
+    insert_graph,referenceIndex,SyntaxCode.typeCode]
+  exact (map_index a.root).symm
 
 theorem identity_raw {Γ} (a : Input Γ .ground) :
     identityRaw (encode ⟨Γ,.ground,a⟩) = encode ⟨Γ,.ground,identityInput a⟩ := by
-  simp [identityRaw,identityInput,encode,encodeGraph,node,rawNode,
-    referenceIndex,variableIndex,SyntaxCode.typeCode,Nat.add_comm]
+  simp [identityRaw,identityInput,encode,encodeGraph,node,CheckedComposition.rawNode,
+    referenceIndex,variableIndex,SyntaxCode.typeCode] <;> omega
 
 theorem constant_raw {Γ} (a : Input Γ .ground) :
     constantRaw (encode ⟨Γ,.ground,a⟩) = encode ⟨Γ,.ground,constantInput a⟩ := by
-  simp [constantRaw,constantInput,encode,encodeGraph,node,rawNode,
-    referenceIndex,SyntaxCode.typeCode,Nat.add_comm]
+  simp [constantRaw,constantInput,encode,encodeGraph,node,CheckedComposition.rawNode,
+    referenceIndex,SyntaxCode.typeCode] <;> omega
 
 theorem wrapper_raw {Γ} (a : Input Γ .ground) (upper : Bool) :
     wrapperRaw upper (encode ⟨Γ,.ground,a⟩) =
@@ -84,7 +90,8 @@ theorem wrap_typed {Γ} (a : Input Γ .ground) (upper : Bool) :
     wrap upper (encode ⟨Γ,.ground,a⟩) = some
       (encode ⟨Γ,.ground,if upper then upperInput a else lowerInput a⟩) := by
   have hg : wrapperGuard (encode ⟨Γ,.ground,a⟩) = true := by
-    simp [wrapperGuard,typedAccepted,encode,SyntaxCode.typeCode]
+    simp only [wrapperGuard,typedAccepted]
+    rfl
   simp only [wrap,hg,ite_true,wrapper_raw]
 
 theorem typedExactness : RawDerivedCompositionTargets.TypedExactness :=

@@ -1,0 +1,19 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.RawCheckedRenamingProof
+public import LogicLineages.ControlSensitivityCurrent.RawCheckedRenamingPrimitiveProof
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.RawSourceDAG.CheckedRenaming.StatementChecks
+
+theorem fixed_table_exactness : RawCheckedRenamingTargets.TableExactness := table_exactness
+theorem fixed_typed_exactness : RawCheckedRenamingTargets.TypedExactness := typed_exactness
+theorem fixed_success_reconstruction : RawCheckedRenamingTargets.SuccessReconstruction := success_reconstruction
+theorem fixed_rejection_counts : RawCheckedRenamingTargets.RejectionAndCounts := rejection_and_counts
+theorem fixed_effective : RawCheckedRenamingTargets.Effective := effective
+
+#print axioms fixed_table_exactness
+#print axioms fixed_typed_exactness
+#print axioms fixed_success_reconstruction
+#print axioms fixed_rejection_counts
+#print axioms fixed_effective
+
+end LogicLineages.ControlSensitivityCurrent.RawSourceDAG.CheckedRenaming.StatementChecks

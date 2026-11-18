@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.StandardSeededCompilerProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_standardSeededCompiler : StandardSeededCompiler.StandardSeededCompiler :=
+  StandardSeededCompiler.Proof.standardSeededCompiler
+#print axioms fixed_standardSeededCompiler
+end LogicLineages.PermittedControl.StatementChecks

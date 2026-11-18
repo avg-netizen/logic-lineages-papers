@@ -1,0 +1,129 @@
+COMPILER_BUSY: another serialized Lean job owns the lock.
+COMPILER_BUSY: another serialized Lean job owns the lock.
+CACHE_HIT LogicLineages.PersistentMarking.Syntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineSyntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineTyping
+CACHE_HIT LogicLineages.PersistentMarking.Signature
+CACHE_HIT LogicLineages.PersistentMarking.NameBridge
+CACHE_HIT LogicLineages.PersistentMarking.FreeSubstitution
+CACHE_HIT LogicLineages.PersistentMarking.StructuralContext
+CACHE_HIT LogicLineages.PersistentMarking.Occurrences
+CACHE_HIT LogicLineages.PersistentMarking.SpineMarking
+CACHE_HIT LogicLineages.PersistentMarking.Comparison
+CACHE_HIT LogicLineages.PersistentMarking.StructuralStabilityTargets
+CACHE_HIT LogicLineages.PersistentMarking.StructuralCoverageTargets
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupport
+CACHE_HIT LogicLineages.PersistentMarking.DecisionInventory
+CACHE_HIT LogicLineages.PersistentMarking.DecisionPorts
+CACHE_HIT LogicLineages.PersistentMarking.DecisionObservations
+CACHE_HIT LogicLineages.PersistentMarking.FiniteDomainFoundation
+CACHE_HIT LogicLineages.PersistentMarking.FiniteDomainFoundationTargets
+CACHE_HIT LogicLineages.PersistentMarking.FinitePrefixProof
+CACHE_HIT LogicLineages.PersistentMarking.FiniteDomainSchema
+CACHE_HIT LogicLineages.PersistentMarking.HereditaryDomainCode
+CACHE_HIT LogicLineages.PersistentMarking.HereditaryDomainSemantics
+CACHE_HIT LogicLineages.PersistentMarking.HereditaryDomainTargets
+CACHE_HIT LogicLineages.PersistentMarking.MarkedExtras
+CACHE_HIT LogicLineages.PersistentMarking.DecisionSourceUniverse
+CACHE_HIT LogicLineages.PersistentMarking.MarkedBaseTuples
+CACHE_HIT LogicLineages.PersistentMarking.MarkedFamilyParameters
+CACHE_HIT LogicLineages.PersistentMarking.MarkedFamilyCoding
+CACHE_HIT LogicLineages.PersistentMarking.MarkedFamilyCoherence
+CACHE_HIT LogicLineages.PersistentMarking.MarkedFamilyLattice
+CACHE_HIT LogicLineages.PersistentMarking.StructuralActions
+CACHE_HIT LogicLineages.PersistentMarking.ProtectedSpineEnvironment
+CACHE_HIT LogicLineages.PersistentMarking.MarkedConstructorTests
+CACHE_HIT LogicLineages.PersistentMarking.MarkedConstructorValue
+CACHE_HIT LogicLineages.PersistentMarking.HereditaryOrderTargets
+CACHE_HIT LogicLineages.PersistentMarking.MarkedConstructorTargets
+CACHE_HIT LogicLineages.PersistentMarking.MarkedConstructorOccurrenceProof
+CACHE_HIT LogicLineages.PersistentMarking.MarkedConstructorOccurrenceChecks
+Compiling LogicLineages.PersistentMarking.MarkedConstructorHeadExactProof
+'LogicLineages.PersistentMarking.MarkedConstructorHeadExactProof.exact_CopyExact' depends on axioms: [propext,
+ Quot.sound]
+'LogicLineages.PersistentMarking.MarkedConstructorHeadExactProof.exact_StatExact' depends on axioms: [propext,
+ Quot.sound]
+COMPILE_PASS LogicLineages.PersistentMarking.MarkedConstructorHeadExactProof
+Compiling LogicLineages.PersistentMarking.MarkedConstructorSelectProof
+COMPILE_PASS LogicLineages.PersistentMarking.MarkedConstructorSelectProof
+Compiling LogicLineages.PersistentMarking.MarkedConstructorFAbsProof
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/MarkedConstructorFAbsProof.lean:24:19: error: unsolved goals
+case pos.some.some
+E : Environment
+heads : List Head
+M : FiniteDomainSchema.Code
+p : MarkedFamilyParameters.Parameter
+σ τ : Ty
+ht : p.snd.fst = σ.arrow τ
+body : Expr
+i : Nat
+hi : ProtectedSpineEnvironment.openingSlot p.snd.snd.fst = some i
+c : FiniteDomainSchema.Code
+hc : StructuralActions.markedAction E heads M (MarkedConstructorTests.fabsParameter E p σ τ i) = some c
+⊢ (match
+        StructuralActions.markedAction E heads M
+          (p.fst, τ, ProtectedSpineEnvironment.openingContext p.snd.snd.fst σ i,
+            (MarkedFamilyCoherence.weakenParameter E p
+                      (ProtectedSpineEnvironment.openingContext p.snd.snd.fst σ i)).snd.snd.snd.fst,
+            StructuralActions.insertExtras E (ProtectedSpineEnvironment.openingContext p.snd.snd.fst σ i)
+              (MarkedFamilyCoherence.weakenParameter E p
+                        (ProtectedSpineEnvironment.openingContext p.snd.snd.fst σ i)).snd.snd.snd.snd
+              [(σ,
+                  ProtectedSpineEnvironment.literalCode E (ProtectedSpineEnvironment.openingContext p.snd.snd.fst σ i) σ
+                    (portName E.names i))]) with
+      | none => false
+      | some c =>
+        (HereditaryDomainSemantics.decode E τ (ProtectedSpineEnvironment.openingContext p.snd.snd.fst σ i) c).weak
+          (ProtectedSpineEnvironment.openingContext p.snd.snd.fst σ i) (openBody σ (portName E.names i) body)) =
+      true ↔
+    ∃ σ_1 τ_1,
+      (σ = σ_1 ∧ τ = τ_1) ∧
+        ∃ x,
+          (σ = σ_1 ∧ body = x) ∧
+            ∃ x_1,
+              StructuralActions.markedAction E heads M
+                    (p.fst, τ_1, ProtectedSpineEnvironment.openingContext p.snd.snd.fst σ_1 i,
+                      (MarkedFamilyCoherence.weakenParameter E p
+                                (ProtectedSpineEnvironment.openingContext p.snd.snd.fst σ_1 i)).snd.snd.snd.fst,
+                      StructuralActions.insertExtras E (ProtectedSpineEnvironment.openingContext p.snd.snd.fst σ_1 i)
+                        (MarkedFamilyCoherence.weakenParameter E p
+                                  (ProtectedSpineEnvironment.openingContext p.snd.snd.fst σ_1 i)).snd.snd.snd.snd
+                        [(σ_1,
+                            ProtectedSpineEnvironment.literalCode E
+                              (ProtectedSpineEnvironment.openingContext p.snd.snd.fst σ_1 i) σ_1
+                              (portName E.names i))]) =
+                  some x_1 ∧
+                (HereditaryDomainSemantics.decode E τ_1 (ProtectedSpineEnvironment.openingContext p.snd.snd.fst σ_1 i)
+                        x_1).weak
+                    (ProtectedSpineEnvironment.openingContext p.snd.snd.fst σ_1 i)
+                    (openBody σ_1 (portName E.names i) x) =
+                  true
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/MarkedConstructorFAbsProof.lean:27:6: error: unsolved goals
+case neg
+E : Environment
+heads : List Head
+M : FiniteDomainSchema.Code
+p : MarkedFamilyParameters.Parameter
+σ τ : Ty
+ht : p.snd.fst = σ.arrow τ
+ρ : Ty
+body : Expr
+he : ¬σ = ρ
+⊢ ρ = σ →
+    ∀ (x : Nat),
+      ProtectedSpineEnvironment.openingSlot p.snd.snd.fst = some x →
+        ∀ (x_1 : FiniteDomainSchema.Code),
+          StructuralActions.markedAction E heads M (MarkedConstructorTests.fabsParameter E p σ τ x) = some x_1 →
+            (HereditaryDomainSemantics.decode E τ (ProtectedSpineEnvironment.openingContext p.snd.snd.fst σ x) x_1).weak
+                (ProtectedSpineEnvironment.openingContext p.snd.snd.fst σ x) (openBody σ (portName E.names x) body) =
+              false
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/MarkedConstructorFAbsProof.lean:25:68: warning: This simp argument is unused:
+  hc
+
+Hint: Omit it from the simp argument list.
+  simp [MarkedConstructorTests.fabsTest, ̲FAbsWitness, ̲ht, ̲hi,h̵c̵,̵
+                MarkedConstructorTests.fabsParameter]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+COMPILE_FAILED LogicLineages.PersistentMarking.MarkedConstructorFAbsProof: 1
+BUILD_RECEIPT build-reports/1795031381691650016-20.json

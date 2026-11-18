@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.StandardSeededCompilerActualProof
+public import LogicLineages.PermittedControl.StandardSeededSolvabilityProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StandardSeededCompiler.Proof
+theorem standardSeededCompiler : StandardSeededCompiler.StandardSeededCompiler :=
+  ⟨actualCompiler,seedSubstitution,sharedSeededFamily,simultaneousSolvability⟩
+end LogicLineages.PermittedControl.StandardSeededCompiler.Proof

@@ -19,6 +19,14 @@ args = sys.argv[1:]; batch = 12
 if args[:1] == ['--batch']: batch = int(args[1]); args = args[2:]
 mods = [m for a in args for m in g.modules_under(a)]
 order = g.closure(mods)
+# A core-only module imported by a Mathlib-closure module is compiled under the
+# Mathlib profile, so one gate over that closure sees a single profile.
+mathlib_set = set()
+for m in order:
+    if not g.is_core(m) and m not in mathlib_set:
+        mathlib_set.update(g.closure([m]))
+def core(m):
+    return m not in mathlib_set
 log = (HERE / 'logs' / 'warm.log').open('a')
 def say(*a):
     print(time.strftime('%H:%M:%S'), *a, file=log, flush=True)
@@ -38,11 +46,11 @@ while i < len(todo):
         m = todo[i]; i += 1
         if cached(m) or m in bad: continue
         if any(d in bad for d in g.closure([m])): bad.add(m); continue
-        if chunk and g.is_core(m) != g.is_core(chunk[0]): i -= 1; break
+        if chunk and core(m) != core(chunk[0]): i -= 1; break
         chunk.append(m)
     if not chunk: continue
     while waiting(): time.sleep(2)
-    prof = 'core' if g.is_core(chunk[0]) else 'mathlib'
+    prof = 'core' if core(chunk[0]) else 'mathlib'
     while True:
         r = subprocess.run([sys.executable, 'scripts/check.py', *PROFILE[prof], *chunk],
                            cwd=ROOT, capture_output=True, text=True)

@@ -1,0 +1,30 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawCheckedRenamingPrimitiveProof.lean:26:4: error: Tactic `apply` failed: could not unify the conclusion of `@Primrec.to₂`
+  Primrec₂ fun a b => ?f (a, b)
+with the goal
+  Primrec₂ fun p xs =>
+    match xs with
+    | [] => none
+    | i :: rest => if RawValidator.variable p.1 p.2.2 i = true then some rest else none
+
+Note: The full type of `@Primrec.to₂` is
+  ∀ {α : Type ?u.168} {β : Type ?u.167} {σ : Type ?u.166} [inst : Primcodable α] [inst_1 : Primcodable β]
+    [inst_2 : Primcodable σ] {f : α × β → σ}, Primrec f → Primrec₂ fun a b => f (a, b)
+
+A : Type := List ℕ × Option (List ℕ) × ℕ
+B : Type := A × List ℕ
+C : Type := B × ℕ × List ℕ
+htarget : Primrec fun p => p.1.1.1
+htype : Primrec fun p => p.1.1.2.2
+hindex : Primrec fun p => p.2.1
+htail : Primrec fun p => p.2.2
+hcons :
+  Primrec fun a =>
+    bif
+        RawValidator.variable (a.1.1.1, a.1.1.2.2, a.2.1).1 (a.1.1.1, a.1.1.2.2, a.2.1).2.1
+          (a.1.1.1, a.1.1.2.2, a.2.1).2.2 then
+      some a.2.2
+    else none
+⊢ Primrec₂ fun p xs =>
+    match xs with
+    | [] => none
+    | i :: rest => if RawValidator.variable p.1 p.2.2 i = true then some rest else none

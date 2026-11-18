@@ -67,8 +67,7 @@ theorem aggregate_success (context : List Nat) (raw : List (Code × Code))
     next hg => exact hg
     next hg => simp at h
   let Γ := context.map SyntaxCode.decodeType
-  have hc : Γ.map SyntaxCode.typeCode=context := by
-    simp [Γ,List.map_map,encode_type]
+  have hc : Γ.map SyntaxCode.typeCode=context := encode_types context
   obtain ⟨es,hes⟩ := aggregate_guard_list Γ raw (by simpa only [hc] using hg)
   have he := aggregate_typed es
   rw [hc,hes] at he

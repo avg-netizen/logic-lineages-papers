@@ -1,0 +1,659 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPrimitiveGateForestProof.lean:20:68: error: unsolved goals
+case inl
+Γ : List Ty
+hfin : List.finRange 9 = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+hrange : List.range 9 = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+⊢ (portRaw
+          (SyntaxCode.typeCode Ty.ground ::
+            SyntaxCode.typeCode Ty.ground ::
+              SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+          (match aux 0 with
+          | SourceAdditionCompletion.Atom.zero => 0
+          | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+        portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 1 ∧
+      portRaw
+          (SyntaxCode.typeCode Ty.ground ::
+            SyntaxCode.typeCode Ty.ground ::
+              SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+          0 =
+        portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+    (portRaw
+            (SyntaxCode.typeCode Ty.ground ::
+              SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+            (match aux 1 with
+            | SourceAdditionCompletion.Atom.zero => 0
+            | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+          portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 2 ∧
+        portRaw
+            (SyntaxCode.typeCode Ty.ground ::
+              SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+            0 =
+          portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+      (portRaw
+              (SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+              (match aux 2 with
+              | SourceAdditionCompletion.Atom.zero => 0
+              | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+            portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 3 ∧
+          portRaw
+              (SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+              0 =
+            portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+        (portRaw
+                (SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                (match aux 3 with
+                | SourceAdditionCompletion.Atom.zero => 0
+                | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+              portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 4 ∧
+            portRaw
+                (SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                0 =
+              portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+          (portRaw
+                  (SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                  (match aux 4 with
+                  | SourceAdditionCompletion.Atom.zero => 0
+                  | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+                portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 5 ∧
+              portRaw
+                  (SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                  0 =
+                portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+            (portRaw
+                    (SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                    (match aux 5 with
+                    | SourceAdditionCompletion.Atom.zero => 0
+                    | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+                  portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 6 ∧
+                portRaw
+                    (SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                    0 =
+                  portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+              (portRaw
+                      (SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground ::
+                                      SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                      (match aux 6 with
+                      | SourceAdditionCompletion.Atom.zero => 0
+                      | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+                    portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 7 ∧
+                  portRaw
+                      (SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground ::
+                                      SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                      0 =
+                    portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+                (portRaw
+                        (SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground ::
+                                      SyntaxCode.typeCode Ty.ground ::
+                                        SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                        (match aux 7 with
+                        | SourceAdditionCompletion.Atom.zero => 0
+                        | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+                      portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 8 ∧
+                    portRaw
+                        (SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground ::
+                                      SyntaxCode.typeCode Ty.ground ::
+                                        SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                        0 =
+                      portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+                  portRaw
+                        (SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground ::
+                                      SyntaxCode.typeCode Ty.ground ::
+                                        SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                        (match aux 8 with
+                        | SourceAdditionCompletion.Atom.zero => 0
+                        | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+                      portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 9 ∧
+                    portRaw
+                        (SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground ::
+                                      SyntaxCode.typeCode Ty.ground ::
+                                        SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                        0 =
+                      portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0
+
+case inr.inl
+Γ : List Ty
+hfin : List.finRange 9 = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+hrange : List.range 9 = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+⊢ (portRaw
+          (SyntaxCode.typeCode Ty.ground ::
+            SyntaxCode.typeCode Ty.ground ::
+              SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+          (match aux 1 with
+          | SourceAdditionCompletion.Atom.zero => 0
+          | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+        portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 2 ∧
+      portRaw
+          (SyntaxCode.typeCode Ty.ground ::
+            SyntaxCode.typeCode Ty.ground ::
+              SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+          0 =
+        portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+    (portRaw
+            (SyntaxCode.typeCode Ty.ground ::
+              SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+            (match aux 2 with
+            | SourceAdditionCompletion.Atom.zero => 0
+            | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+          portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 3 ∧
+        portRaw
+            (SyntaxCode.typeCode Ty.ground ::
+              SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+            0 =
+          portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+      (portRaw
+              (SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+              (match aux 3 with
+              | SourceAdditionCompletion.Atom.zero => 0
+              | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+            portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 4 ∧
+          portRaw
+              (SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+              0 =
+            portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+        (portRaw
+                (SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                (match aux 4 with
+                | SourceAdditionCompletion.Atom.zero => 0
+                | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+              portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 5 ∧
+            portRaw
+                (SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                0 =
+              portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+          (portRaw
+                  (SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                  (match aux 5 with
+                  | SourceAdditionCompletion.Atom.zero => 0
+                  | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+                portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 6 ∧
+              portRaw
+                  (SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                  0 =
+                portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+            (portRaw
+                    (SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                    (match aux 6 with
+                    | SourceAdditionCompletion.Atom.zero => 0
+                    | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+                  portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 7 ∧
+                portRaw
+                    (SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                    0 =
+                  portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+              (portRaw
+                      (SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground ::
+                                      SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                      (match aux 7 with
+                      | SourceAdditionCompletion.Atom.zero => 0
+                      | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+                    portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 8 ∧
+                  portRaw
+                      (SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground ::
+                                      SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                      0 =
+                    portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+                portRaw
+                      (SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground ::
+                                      SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                      (match aux 8 with
+                      | SourceAdditionCompletion.Atom.zero => 0
+                      | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+                    portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 9 ∧
+                  portRaw
+                      (SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground ::
+                                      SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                      0 =
+                    portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0
+
+case inr.inr
+Γ : List Ty
+hfin : List.finRange 9 = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+hrange : List.range 9 = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+⊢ (portRaw
+          (SyntaxCode.typeCode Ty.ground ::
+            SyntaxCode.typeCode Ty.ground ::
+              SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+          (match aux 2 with
+          | SourceAdditionCompletion.Atom.zero => 0
+          | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+        portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 3 ∧
+      portRaw
+          (SyntaxCode.typeCode Ty.ground ::
+            SyntaxCode.typeCode Ty.ground ::
+              SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+          0 =
+        portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+    (portRaw
+            (SyntaxCode.typeCode Ty.ground ::
+              SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+            (match aux 3 with
+            | SourceAdditionCompletion.Atom.zero => 0
+            | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+          portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 4 ∧
+        portRaw
+            (SyntaxCode.typeCode Ty.ground ::
+              SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+            0 =
+          portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+      (portRaw
+              (SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+              (match aux 4 with
+              | SourceAdditionCompletion.Atom.zero => 0
+              | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+            portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 5 ∧
+          portRaw
+              (SyntaxCode.typeCode Ty.ground ::
+                SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+              0 =
+            portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+        (portRaw
+                (SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                (match aux 5 with
+                | SourceAdditionCompletion.Atom.zero => 0
+                | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+              portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 6 ∧
+            portRaw
+                (SyntaxCode.typeCode Ty.ground ::
+                  SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                0 =
+              portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+          (portRaw
+                  (SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                  (match aux 6 with
+                  | SourceAdditionCompletion.Atom.zero => 0
+                  | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+                portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 7 ∧
+              portRaw
+                  (SyntaxCode.typeCode Ty.ground ::
+                    SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                  0 =
+                portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+            (portRaw
+                    (SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                    (match aux 7 with
+                    | SourceAdditionCompletion.Atom.zero => 0
+                    | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+                  portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 8 ∧
+                portRaw
+                    (SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                    0 =
+                  portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0) ∧
+              portRaw
+                    (SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                    (match aux 8 with
+                    | SourceAdditionCompletion.Atom.zero => 0
+                    | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+                  portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 9 ∧
+                portRaw
+                    (SyntaxCode.typeCode Ty.ground ::
+                      SyntaxCode.typeCode Ty.ground ::
+                        SyntaxCode.typeCode Ty.ground ::
+                          SyntaxCode.typeCode Ty.ground ::
+                            SyntaxCode.typeCode Ty.ground ::
+                              SyntaxCode.typeCode Ty.ground ::
+                                SyntaxCode.typeCode Ty.ground ::
+                                  SyntaxCode.typeCode Ty.ground ::
+                                    SyntaxCode.typeCode Ty.ground :: List.map SyntaxCode.typeCode Γ)
+                    0 =
+                  portRaw (blockContext (List.map SyntaxCode.typeCode Γ)) 0
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPrimitiveGateForestProof.lean:24:70: warning: This simp argument is unused:
+  block_context_code
+
+Hint: Omit it from the simp argument list.
+  simp [unused, hfin, unusedRaw, hrange, exprPairCode, port_vertex, b̵l̵o̵c̵k̵_̵c̵o̵n̵t̵e̵x̵t̵_̵c̵o̵d̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵aux_code, encodePort]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPrimitiveGateForestProof.lean:25:6: warning: This simp argument is unused:
+  aux_code
+
+Hint: Omit it from the simp argument list.
+  simp [unused, hfin, unusedRaw, hrange, exprPairCode, port_vertex, block_context_code,
+        a̵u̵x̵_̵c̵o̵d̵e,̵ ̵e̵ncodePort]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPrimitiveGateForestProof.lean:32:2: error: 'change' tactic failed, pattern
+  forestRaw (List.map SyntaxCode.typeCode Γ) (encodeGate g) = List.map exprPairCode (PrimitiveLowering.lower g)
+is not definitionally equal to target
+  forestRaw (List.map SyntaxCode.typeCode Γ) (encodeGate g) = encodeForest (forest g)

@@ -1,0 +1,19 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.RawPrimitiveGateSuccessProof
+public import LogicLineages.ControlSensitivityCurrent.RawPrimitiveGateEffectiveProof
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.RawSourceDAG.PrimitiveGate.StatementChecks
+
+theorem fixed_gate_exactness : RawPrimitiveGateTargets.GateExactness := gate_exactness
+theorem fixed_forest_exactness : RawPrimitiveGateTargets.ForestExactness := forest_exactness
+theorem fixed_success_reconstruction : RawPrimitiveGateTargets.SuccessReconstruction := success_reconstruction
+theorem fixed_rejection_counts : RawPrimitiveGateTargets.RejectionAndCounts := rejection_and_counts
+theorem fixed_effective : RawPrimitiveGateTargets.Effective := effective
+
+#print axioms fixed_gate_exactness
+#print axioms fixed_forest_exactness
+#print axioms fixed_success_reconstruction
+#print axioms fixed_rejection_counts
+#print axioms fixed_effective
+
+end LogicLineages.ControlSensitivityCurrent.RawSourceDAG.PrimitiveGate.StatementChecks

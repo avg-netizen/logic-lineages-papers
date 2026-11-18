@@ -21,7 +21,7 @@ theorem aggregate_sizes (context : List Nat) (es : List (Code × Code)) :
       rcases p with ⟨a,b⟩
       have h := detector_sizes a b
       simp only [aggregateRaw,eraser_size,h.1,h.2,ih.1,ih.2]
-      simp [rawWeight,Nat.add_assoc]
+      simp [rawWeight,Nat.add_assoc] <;> omega
 
 theorem magnify_size (c : Code) : (magnifyRaw c).2.1.length=c.2.1.length+3 := by
   simp [magnifyRaw,insertTable,Nat.add_comm,Nat.add_left_comm,Nat.add_assoc]

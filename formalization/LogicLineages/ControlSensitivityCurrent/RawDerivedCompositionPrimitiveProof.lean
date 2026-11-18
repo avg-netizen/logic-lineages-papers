@@ -111,13 +111,13 @@ theorem effective : RawDerivedCompositionTargets.Effective := by
       (Computable.option_some.comp (detector_left_primitive.pair detector_right_primitive).to_comp)
       (Computable.const none)).of_eq
     intro p
-    cases eraserGuard p.1 p.2 <;> rfl
+    cases h : eraserGuard p.1 p.2 <;> simp [detectors, h]
   · apply (Computable.cond aggregate_guard_primitive.to_comp
       (Computable.option_some.comp aggregate_raw_primitive.to_comp) (Computable.const none)).of_eq
     intro p
-    cases aggregateGuard p.1 p.2 <;> rfl
+    cases h : aggregateGuard p.1 p.2 <;> simp [aggregate, h]
   · apply (Computable.cond (wrapper_guard_primitive.comp Primrec.snd).to_comp
       (Computable.option_some.comp wrapper_primitive.to_comp) (Computable.const none)).of_eq
     intro p
-    cases wrapperGuard p.2 <;> rfl
+    cases h : wrapperGuard p.2 <;> simp [wrap, h]
 end LogicLineages.ControlSensitivityCurrent.RawSourceDAG.DerivedComposition

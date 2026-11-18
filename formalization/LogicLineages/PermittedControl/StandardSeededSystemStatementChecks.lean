@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.StandardSeededSystemEmptyProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_standardSeededSystem : StandardSeededSystem.StandardSeededSystem :=
+  StandardSeededSystem.Proof.standardSeededSystem
+#print axioms fixed_standardSeededSystem
+end LogicLineages.PermittedControl.StatementChecks
