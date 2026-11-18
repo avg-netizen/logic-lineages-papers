@@ -1,0 +1,351 @@
+\section{Effective comparison of entry maps}\label{sec:entry-comparison}
+
+Residues alone do not decide inequalities between sums of collapse values.
+The order argument also needs exact comparisons and collision conditions
+for entry norms. This section supplies them for the chosen controls.
+All ordinal additions in interval endpoints and relative states are ordinary
+ordinal additions. Natural sum and product remain explicitly marked.
+
+For a proper interval \(P=(\lambda,\mu)\), let \(\delta_P\) be the
+unique nonzero limit with \(\mu+\delta_P=\lambda\). Put
+\(E_P=E_{\lambda,\mu}\) and \(\tau_P=\tau_{\lambda,\mu}\).
+An effective sufficient domain for entry is
+\begin{equation}\label{eq:affordable-tail}
+ t\ge\max\{2,N(\lambda),N(\mu)\}.
+\end{equation}
+Indeed, before a hit the target is an affordable predecessor, so the
+descent cannot skip below it; strict ordinal descent forces a hit.
+This argument also covers \(\mu=0\). A smaller genuine input may
+skip a positive target and is not assigned an invented entry value.
+
+\subsection{Relative descent and the two comparison rules}
+
+For \(y>0\), let \(e(y)\) be its leading Cantor exponent. Define
+\[
+ s_\mu(e)=N(\mu_{\ge e}),\qquad s_\mu(e(0))=N(\mu).
+\]
+The subscript means restriction to Cantor terms of exponent at least
+\(e\); the convention at zero is separate. Directly from Cantor
+normal form,
+\begin{equation}\label{eq:relative-norm}
+ N(\mu+y)=N(y)+s_\mu(e(y)),\qquad 0\le s_\mu(e(y))\le N(\mu).
+\end{equation}
+The terms of \(\mu\) below the leading exponent of \(y\) are absorbed;
+the contributions at equal exponents add. Before entry, write the actual
+state uniquely as \(\mu+y_i\). With \(b_i=f^i(t)\), its exact recursion is
+\begin{equation}\label{eq:relative-descent}
+ y_0=\delta_P+t-N(\lambda),\qquad
+ y_{i+1}=\max\{y<\operatorname{lim}(y_i):
+          N(y)+s_\mu(e(y))\le b_{i+1}\}.
+\end{equation}
+Here \(\operatorname{lim}\) removes the finite tail. The first finite
+\(y_i\) is the entry event, and \(N(y_i)\le b_i\).
+
+Consider two recursions of this form with profiles \(s,s'\) bounded by
+\(S\), budgets \(b,b'\), and limit parts \(U_i,V_i\).
+Two distinct budget comparisons are needed.
+
+\begin{lemma}[Propagation]\label{lem:propagation}
+If \(V_{i+k}>U_i=\rho>0\) and
+\(b'_{i+k+1}\ge b_i+S\), then
+\(V_{i+k+1}\ge\rho>U_{i+1}\).
+If instead \(V_{i+k}=U_i\) and
+\(b'_{i+k+1}\ge b_{i+1}+S\), then
+\(V_{i+k+1}\ge U_{i+1}\).
+For equal next budgets the latter conclusion also follows from
+\(s'\le s\) on all eligible candidates.
+\end{lemma}
+\begin{proof}
+In the strict case, \(\rho\) is below the upper limit part and
+\(N(\rho)+s'(e(\rho))\le N(y_i)+S\le b_i+S\).
+It is therefore an upper candidate. The lower next state is strictly
+below \(\rho\). In the equal-limit case every lower candidate costs
+at most \(b_{i+1}+S\) under the upper profile. Candidate inclusion
+also proves the equal-budget alternative.
+\end{proof}
+
+If the strict rule persists until the lower process stops at \(n\), the
+upper process stops no earlier than \(n+k+1\): at the last lower event
+its upper limit part is still positive. The weak rule gives the bound
+\(n+k\). Notice that the strict rule compares the next upper budget
+with the current lower budget. Using the equal-limit budget condition
+for two identical budget orbits would lose the required slack.
+
+\begin{lemma}[Gap and input comparison]\label{lem:gap-input}
+For two fixed intervals \(P,Q\), put
+\(S=\max\{1,N(\mu_P),N(\mu_Q)\}\). On effective tails:
+\begin{enumerate}[label=(\roman*)]
+\item If \(\delta_P>\delta_Q\), then
+\(\tau_P(t)>\tau_Q(t)\) and \(E_P(t)>E_Q(t)\).
+\item If \(\delta_P\ge\delta_Q\) and \(t>u\), then
+\(\tau_P(t)\ge\tau_Q(u)\) and \(E_P(t)>E_Q(u)\).
+\item For fixed \(k\ge1\), if
+\(\delta_P\ge\delta_Q+\omega k\) and \(u+S\le f^k(t)\), then
+\(\tau_P(t)\ge\tau_Q(u)+k\) and \(E_P(t)>E_Q(u)\).
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+Take initially
+\(T\ge\max\{2,S,N(\lambda_P),N(\lambda_Q)\}\).
+The estimate \(f(v)\ge v+S\) for \(v\ge T\) propagates the strict
+initial gap in (i). For (ii), adjacent growth gives
+\(f(t)\ge f(u)+S\); monotonicity and noncontraction preserve this
+gap at every later iterate. The weak rule propagates the initial weak
+limit comparison. The larger starting input then makes the terminal
+norm strictly larger.
+
+For (iii) enlarge the tail by \(2k\). During its first \(k\) events
+the upper process retains the successive reserves
+\(\delta_Q+\omega(k-j)\). At event \(j<k\) the next reserve costs
+at most \(N(\delta_Q)+2(k-j-1)+S\), below the next norm budget.
+At lag \(k\), compare with the lower process using the weak rule and
+\(f^k(t)\ge u+S\). This yields the count bound. Since \(S\ge1\),
+the terminal inequality is strict. The positive unit is necessary when
+both targets are zero: with \(P=(\omega\cdot2,0)\), \(Q=(\omega,0)\),
+and \(u=f(t)\), the terminal norms coincide.
+\end{proof}
+
+Distinct limit gaps differ by at least an \(\omega\)-tail. Thus fixed
+input translations do not change their eventual order, by (iii) with
+\(k=1\). For equal gaps, unequal fixed input translations are ordered
+by (ii). It remains to compare equal gaps at one common input.
+
+\subsection{Equal gaps: a finite phase calculation}
+
+Suppose \(\delta_P=\delta_Q=\delta\). Set
+\[
+ R=20+N(\delta)+N(\mu_P)+N(\mu_Q),\qquad
+ M=\operatorname{lcm}(1,\ldots,R+1).
+\]
+Choose the input tail above \(100(R+2)^4\), \(M\), and \(B_f\),
+and above the finitely many affordability bounds used below. In
+particular every next tail budget exceeds the current prefix cost and
+all fixed shifts by more than \((R+3)^3\).
+All fixed exponents and breakpoints occurring in this argument have
+norm at most \(R+1\). Write \(s=s_{\mu_P}\), \(s'=s_{\mu_Q}\),
+and \(d=s'-s\).
+
+Suppose two still equal limit parts have leading exponent \(E\), and
+write a prefix-retaining step as
+\(\rho=P_0+\omega^a\), with \(P_0\ne0\) retaining that leading
+exponent. The exact next tail is
+\begin{equation}\label{eq:local-phase}
+ P_0+M(\omega^a,X),\qquad X=b_{i+1}-s(E)-N(P_0).
+\end{equation}
+The growth margin covers the retained prefix and a positive remainder;
+any state below the prefix is inferior, and a tail at least
+\(\omega^a\) is outside the interval. This proves the formula.
+
+For \(a=1\) the new tail is finite, so a change of \(X\) does not
+change the limit part. If \(a\) is a nonzero limit, the leading
+exponent of the new tail is \(M(a,X-1)\), strictly increasing with
+\(X\) by saturation. For \(a=a_0+1\), the exact recursion is
+\begin{equation}\label{eq:successor-tail}
+ M(\omega^a,X)=\omega^{a_0}q+M(\omega^{a_0},r),
+ \quad q=\lfloor X/v\rfloor,\quad r=X\bmod v,
+ \quad v=1+N(a_0).
+\end{equation}
+In particular, at \(a=2\) two different budgets have the same limit
+part precisely when their difference is one and the larger budget is odd.
+
+\begin{lemma}[A retained thick block forces separation]\label{lem:thick}
+Suppose two undiverged relative descents process a common block
+\(\omega^a q\), where \(a\ge2\) is fixed, \(N(a)\le R\), and
+\(q>R+2\), while their whole-state leading exponent, and hence their
+two distinct shifts \(c<c'\), remain fixed. Their limit parts diverge
+before this block is processed.
+\end{lemma}
+\begin{proof}
+If a lower remainder already creates a divergence, the conclusion holds.
+Otherwise inspect the common next top visit
+\(\rho=P_0+\omega^a(q-1)\). In each absolute descent the preceding
+top visit lies at least \(\omega^2\) above this target. Both target
+funnels are affordable. The long-entry residue formula, applied modulo
+\(2M\) at the common preceding norm, gives
+\[
+ \left\lceil\frac{c+N(\rho)}2\right\rceil
+ \equiv
+ \left\lceil\frac{c'+N(\rho)}2\right\rceil\pmod M.
+\]
+The difference of these rounded quantities is smaller than \(M\),
+so they are equal. It follows that \(c'=c+1\) and
+\(c+N(\rho)\) is odd. At the next event the common budget \(u\)
+satisfies, by the modular decrement,
+\[
+ u\equiv c+N(\rho)-1\pmod{2M}.
+\]
+Peel one unit, leaving \(P^-=P_0+\omega^a(q-2)\). The large
+coefficient ensures that this prefix retains the original leading
+exponent and hence the fixed shifts. The two local tail budgets are
+\(X=u-c-N(P^-)\) and \(X-1\), with
+\[
+ X\equiv N(a)\pmod{2M}.
+\]
+If \(a\) is a limit, saturation makes the next leading exponents
+different. If \(a=a_0+1\), then \(N(a)=1+N(a_0)=v\), and
+\(v\mid M\). Thus \(v\mid X\). Formula
+\eqref{eq:successor-tail} gives coefficients \(X/v\) and \(X/v-1\)
+of the infinite \(\omega^{a_0}\)-block. The limit parts differ.
+\end{proof}
+
+This proof uses the moving residue of our control. A proof assuming that
+every updated budget has one fixed residue would not apply to
+\eqref{eq:factorial-control} or \eqref{eq:near-control}.
+
+\begin{proposition}[An effective equal-gap certificate]\label{prop:equal-gap}
+For two fixed equal-gap intervals one can compute a threshold and decide
+whether their entry maps are identical on that tail or have one fixed
+strict order there.
+\end{proposition}
+\begin{proof}
+Here is the complete finite calculation. Let \(E=e(\delta)\).
+During the initial phase, each nonleading term of \(\delta\) is
+peeled one unit at a time, followed by all but one unit of its leading
+term. The generated smaller blocks are processed before the next
+original unit is peeled. Call a peeled unit sensitive if its exponent
+is at least two.
+
+If \(d(E)=0\), all prefix-retaining steps agree exactly. If
+\(d(E)\ne0\), a sensitive limit exponent gives immediate divergence
+by \eqref{eq:local-phase}. A successor exponent at least three either
+gives immediate divergence or creates a common thick block, to which
+Lemma~\ref{lem:thick} applies. Only exponent two can fail to separate.
+Its coincidence condition is a shift difference of one and an odd larger
+local budget. Consecutive original \(\omega^2\)-units have prefix
+norms differing by three, whereas all updated budgets are even. Their
+coincidence parities alternate, so two such units cannot both fail.
+Thus the only nonempty sensitive initial phases which can fail to
+separate have shapes
+\[
+ \delta=\omega^E+\omega^2+\omega c\quad(E\ge3),\qquad
+ \delta=\omega^2\cdot2+\omega c,
+\]
+and their exact exception is
+\[
+ |d(E)|=1,\qquad \min\{s(E),s'(E)\}+N(P_0)\text{ odd},
+\]
+where \(P_0\) is the retained prefix at that one sensitive step.
+If there is no sensitive step, the initial phase also fails to separate.
+Every initial divergence has sign \(d(E)\) for \(E_P-E_Q\), by
+candidate inclusion and Lemma~\ref{lem:propagation}.
+
+If the initial phase has not separated, refine jointly the finitely many
+breakpoint partitions of \(s\) and \(s'\). Search for the highest
+piece on \(2\le e<E\) on which \(d(e)\ne0\). This is a finite
+Cantor-normal-form calculation. An untruncated piece is right-closed,
+so use its included right endpoint below \(E\). Only the top piece
+clipped by the excluded endpoint \(E\) needs a different choice:
+if \(E\) is a successor, use its predecessor when this lies in the piece;
+if \(E\) is a limit and \(a\) is the lower edge, use the fixed exponent
+\(a+1<E\). Discard an empty clipped piece and continue with the next one.
+
+To justify that this finite piece determines the descent, note first
+that phase exponents strictly decrease. A successor exponent drops to
+its predecessor. A jump from a limit exponent cannot skip a fixed
+\(\zeta\) of norm at most \(R+1\), since
+\(\omega^{\zeta+1}\) is an affordable candidate. If the highest
+nonzero piece has a maximum \(\beta\), the two descents agree until
+that piece is reached. They enter it by a drop from \(\beta+1\):
+a jump to the bounded \(\beta\) would have the larger affordable
+candidate \(\omega^{\beta+1}\). The drop produces a common block
+\(\omega^\beta q\) with \(q>R+2\), unless it has already diverged.
+Lemma~\ref{lem:thick} then gives sign \(d(\beta)\).
+
+A highest piece without a maximum is necessarily the top truncated
+piece \((a,E)\), where \(E\) is a limit. On leaving the initial
+pure \(\omega^E\)-state, a fixed exponent above \(a\) is affordable,
+so both winning exponents lie within that piece. There the shifts are
+constant, and the two exponents are
+\(M(E,b_{i+1}-c-1)\) and \(M(E,b_{i+1}-c'-1)\).
+Saturation separates them, with sign determined by the smaller shift.
+
+If no such piece exists, all phases at exponents at least two finish
+with identical limit parts and common budget index. For \(E\ge2\)
+the final pure \(\omega^2\)-phase has next coefficients
+\[
+ b_{i+1}/2-\lceil s(1)/2\rceil,\qquad
+ b_{i+1}/2-\lceil s'(1)/2\rceil.
+\]
+Their difference decides the order. Equal coefficients give simultaneous
+termination. For \(E=1\), the original \(\omega\)-coefficient
+already gives the same exact count in both descents.
+
+The algorithm therefore uses, in order: the nonexceptional initial
+phase; the highest nonzero profile piece on \([2,E)\); the difference
+\(\lceil s'(1)/2\rceil-\lceil s(1)/2\rceil\); and otherwise
+identity. All margins used above are covered by the common
+tail. Equal stopping times give equal entry norms by
+\eqref{eq:entry-orbit}; first limit-part divergence gives strict order
+by propagation. This proves both completeness and effectiveness.
+\end{proof}
+
+\subsection{Cocycles, inverse thresholds, and collisions}
+
+For fixed \(0\le\mu<\kappa<\lambda\), entry through \(\kappa\) requires
+its affordability. On a tail satisfying all three endpoint norm bounds,
+literal continuation gives
+\begin{equation}\label{eq:cocycle}
+ \begin{split}
+ E_{\lambda,\mu}(t)&=
+ E_{\kappa,\mu}(E_{\lambda,\kappa}(t)),\\
+ \tau_{\lambda,\mu}(t)&=\tau_{\lambda,\kappa}(t)+
+ \tau_{\kappa,\mu}(E_{\lambda,\kappa}(t)).
+ \end{split}
+\end{equation}
+Genuine definedness of an exit alone is insufficient: at \(\lambda=\omega^2\),
+\(t=3\), and \(B=f(3)\), the first predecessor is
+\(\omega\cdot(B/2)\), which skips the fixed target
+\(\kappa=\omega\cdot(B/2+1)\). A uniform sufficient guard for the
+cocycle is \(t\ge\max\{2,N(\lambda),N(\kappa),N(\mu)\}\).
+
+\begin{proposition}[Exact inverse-threshold table]\label{prop:threshold}
+Given proper intervals \(P,Q\), comparisons of \(E_P(x)\) and
+\(E_Q(y)\) have effective finite descriptions using comparisons of raw
+inputs with fixed entry maps on the other input. Equality cases are
+decided by the same description.
+\end{proposition}
+\begin{proof}
+For equal gaps, Lemma~\ref{lem:gap-input} handles unequal inputs and
+Proposition~\ref{prop:equal-gap} handles equal inputs. Suppose
+\(\delta_Q<\delta_P\). Put
+\[
+ \kappa=\mu_P+\delta_Q,\quad
+ \widetilde Q=(\kappa,\mu_P),\quad
+ H=(\lambda_P,\kappa),\quad h=E_H(x).
+\]
+All these endpoints are effective fixed Cantor normal forms, and
+\(\mu_P<\kappa<\lambda_P\). Impose their norm bounds and the relevant
+comparison thresholds. The cocycle gives
+\(E_P(x)=E_{\widetilde Q}(h)\).
+Let \(\sigma\) be the eventual sign of
+\(E_{\widetilde Q}-E_Q\) at a common input, supplied by the equal-gap
+certificate. Input comparison brackets
+\[
+ E_Q(h-1)<E_{\widetilde Q}(h)<E_Q(h+1).
+\]
+Enlarge the tail so \(h-1\) is within all required domains. The exact
+comparison of \(E_Q(y)\) with \(E_P(x)\) is consequently
+\begin{center}\small
+\begin{tabular}{@{}llll@{}}\toprule
+\(\sigma\)& smaller & equal & larger\\\midrule
+\(0\)&\(y<h\)&\(y=h\)&\(y>h\)\\
+\(1\)&\(y\le h\)&never&\(y\ge h+1\)\\
+\(-1\)&\(y\le h-1\)&never&\(y\ge h\)\\\bottomrule
+\end{tabular}
+\end{center}
+Swap roles for the other gap order. If both original targets are zero,
+\(\widetilde Q=Q\), so the middle certificate is identity.
+Fixed input translations remain explicit in this table.
+
+Every proper entry value belongs to the range of \(f\). Two distinct
+such values \(U<V\) satisfy \(V\ge2^{U+1}\), by adjacent growth.
+On a larger effective tail any fixed output offsets are therefore
+irrelevant except at a collision, where their comparison is an ordinary
+integer test. This also supplies the asserted descriptions with fixed
+output offsets.
+\end{proof}
+
+The construction introduces the interval \(H\) and also the certificate
+partner \(\widetilde Q\). Both must be retained when computing the
+finite collection of source norms and thresholds. No inverse function
+is added as a new primitive.

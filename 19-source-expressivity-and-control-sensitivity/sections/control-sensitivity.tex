@@ -1,0 +1,132 @@
+\section{Ground undecidability within additive distance one}
+\label{sec:control-hardness}
+
+The preceding constructions require growth and literal source identities.
+They do not require any periodicity of the control. This permits a sharp
+contrast with the ground-decision controls of \cite{groundcomparison}.
+
+Fix an effective enumeration of programs and a primitive recursive
+bounded simulation predicate $H(e,t)$, equal to one exactly when the
+blank-input program with index $e$ has halted within $t$ steps.
+Blank-input halting is undecidable: a decision procedure would also
+decide whether a program halts on its own index, by hardwiring that
+input. Define a program $D(e)$ which halts exactly when this procedure
+says that program $e$ does not halt on input $e$. Evaluating $D$ at
+its own index gives the diagonal contradiction. The
+computability background originates with Turing \cite{turing}.
+
+For a fixed $b\in\N$ define
+\[
+ \epsilon_b(0)=0,\qquad
+ \epsilon_b(n)=\begin{cases}
+ 0,&0<n\le b,\\ H(v_2(n),n),&n>b,
+ \end{cases}
+ \qquad \Gamma_b(n)=G(n)+\epsilon_b(n),
+\]
+where $v_2(n)$ is the exponent of two dividing $n>0$.
+The single function $\Gamma_b$ is fixed before a program index is
+supplied to a comparison query.
+
+\begin{lemma}[Permitted growth and a bounded perturbation]
+\label{lem:perturbed-control}
+The control $\Gamma_b$ is primitive recursive and agrees with $G$
+on $[0,b]$. It satisfies
+\[
+ 0\le\Gamma_b(n)-G(n)\le1,\qquad
+ G(n)\le\Gamma_b(n)<G(n+1),\qquad
+ \Gamma_b(n+1)\ge2^{2^{\Gamma_b(n)}}.
+\]
+It is eventually bounded by $F_6$, has the additive margin
+$\Gamma_b(v+a)\ge\Gamma_b(v)+2a$ for $a\ge1$, and
+$\Gamma_b(n)/G(n)\longrightarrow1$.
+\end{lemma}
+\begin{proof}
+Bounded simulation, $v_2$ on positive integers and each fixed $F_j$
+are primitive recursive. The prefix and additive-distance assertions
+are immediate. Put $u=G(n)$ and $s=n+100$. Strict increase of the
+iterates gives
+\[
+ G(n+1)=F_4^{s+2}(s+1)
+       \ge F_4(G(n)+1)\ge2^{2^{u+1}}.
+\]
+The last bound follows from $F_4(x)\ge F_1(x)$ and
+$F_1(x)=F_0^{x+1}(x)\ge F_0^2(x)$ at these positive inputs.
+Since $\Gamma_b(n)\le u+1$ and $\Gamma_b(n+1)\ge G(n+1)$,
+this proves the required adjacent estimate. It also proves
+$G(n)+1<G(n+1)$ and an increment greater than two; summing those
+increments gives the additive margin.
+
+For $n\ge101$, $F_5(n)\ge n+101$, so
+\[
+ \Gamma_b(n)<F_5(n+101)\le F_5(F_5(n))\le F_6(n).
+\]
+Finally the relative error is between zero and $1/G(n)$, which
+tends to zero.
+\end{proof}
+
+In particular the entire source interface and the eraser construction
+apply at $f=\Gamma_b$. Its successor graph is
+$F_S(z)=\Gamma_b(z+4)$. The strong growth estimate also gives the
+fourfold separation of $g(n)=\Gamma_b(n+2)+1$, including its added
+unit. No residue theorem for $G$ is transferred to $\Gamma_b$.
+
+\begin{theorem}[Ground hardness at one fixed control]
+\label{thm:control-hardness}
+For every fixed $b$, universal canonical weak and strict comparison at
+$\Gamma_b$ are $\Pi^0_1$-complete already for ground-output terms
+with only ground free variables and ground binders, prime constants
+$0,S$, and internal type levels at most one.
+Moreover $\Gamma_b(n)\bmod2$ is not eventually periodic.
+\end{theorem}
+\begin{proof}
+Every $G(n)$ is a positive power of two and is even, by its
+definition through positive iterations of $F_0$. Thus, for $n>b$,
+$\Gamma_b(n)$ is odd exactly when $H(v_2(n),n)=1$.
+
+Fix the odd integer $C=2b+5$. For a program index $e$ form the
+existential conjunction over natural variables
+\[
+ z+4=2^e(2t+C),\qquad y=F_S(z),\qquad y=w+w+1.
+\]
+The coefficient $2^e$ is a fixed integer computed from the index;
+there is no variable exponentiation operation. Set
+$n=2^e(2t+C)$. Then $n\ge5$, $n>b$ and $v_2(n)=e$.
+At each $t$ the conjunction is solvable exactly when $H(e,n)=1$.
+If the program halts, choose $t$ so that $n$ exceeds the halting
+time. Then $z=n-4\ge0$ and $w=(\Gamma_b(n)-1)/2\ge0$
+give witnesses. Conversely every solution certifies a halting event.
+
+Flatten using the source addition, constant and actual $S$ graph
+gadgets, and apply the collision detector and conjunction construction.
+Unsatisfiability is one universal strict comparison and, by $KR\mle IL$,
+one weak comparison. All newly introduced binders and variables are
+ground, and the only prime constants are $0,S$. Their types have
+level at most one. This is a many-one reduction of nonhalting. Its
+arithmetic graph has $O(e+\log(b+2))$ nodes, a bound in the numerical
+index $e$, not in its binary length.
+
+For membership, enumerate finite tuples of positive raw ground
+values. Each source value is computable. Indeed in this restricted
+grammar its positive fields are finite, and each scalar collapse is
+a fixed finite iterate of the primitive recursive control, by the
+finite-coefficient formula. A failed universal comparison is therefore
+semidecidable. Nonhalting is $\Pi^0_1$-complete: for a computable
+predicate $R(e,t)$, a program can search for the first failure of
+$R(e,t)$, so its nonhalting expresses $\forall t\,R(e,t)$.
+This proves the stated completeness.
+
+Suppose, finally, that parity had period $p\ge1$ after $N$.
+For each $e$ effectively choose $n_e>\max(N,b)$ with $v_2(n_e)=e$.
+All integers $n_e+kp2^{e+1}$ have the same residue modulo $p$ and
+the same valuation $e$. The bounded tests
+$H(e,n_e+kp2^{e+1})$ would therefore be constant. They are always
+zero when $e$ never halts and eventually one when it halts.
+Computing $\Gamma_b(n_e)\bmod2$ would decide halting. The alleged
+finite $N,p$ may be hardwired; a uniform procedure finding them is
+not required for the contradiction. No eventual parity period exists.
+\end{proof}
+
+The theorem changes the control and keeps the source fragment small.
+It is distinct from functional-input hardness at the unchanged standard
+control $G$, proved in \cite{groundcomparison}. Neither theorem settles the
+all-ground problem for the exact standard function $G$.

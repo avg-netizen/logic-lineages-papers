@@ -1,0 +1,137 @@
+\section{Constant budgets and restricted partitions}
+
+For $d\ge1$, define
+\[
+ p_d(n)=\#\{(a_1,\ldots,a_d)\in\N^d:
+                         a_1+2a_2+\cdots+da_d=n\}.
+\]
+The independent choices of multiplicities give
+\begin{equation}\label{eq:partition-series}
+ \sum_{n\ge0}p_d(n)z^n=\prod_{i=1}^d(1-z^i)^{-1}.
+\end{equation}
+The relation to ordinals preserves every part, including the finite tail.
+
+\begin{lemma}[A fixed-budget count]\label{lem:fixed}
+Fix a nonnegative retained mass $c$ and take $S\ge c+d+1$.
+Start the suffix at $\omega^d$ with any finite tail of total norm
+(including $c$) at most $S$. At every replacement spend the constant
+suffix budget $S-c$ and stop when the suffix is finite. The number of
+replacements is $p_d(S-c)$. When $c=\norm(\pi)$ for a retained
+CNF prefix $\pi$ of least exponent at least $d$, this is precisely
+the corresponding segment starting at $\pi+\omega^d$ plus that tail.
+\end{lemma}
+\begin{proof}
+The ordinals of suffix norm exactly $S-c$ below $\omega^d$ are
+precisely
+\[
+ \omega^{d-1}a_d+\cdots+\omega a_2+a_1,\qquad
+             \sum_{i=1}^d i a_i=S-c.
+ \tag{*}
+\]
+Their number is $p_d(S-c)$. The first predecessor is the largest
+such ordinal. In any later state of (*), the nonfinite coefficients
+determine $a_1$ uniquely. Thus no second state of (*) has the same
+nonfinite part. Removing the finite tail and taking the largest
+predecessor of suffix norm $S-c$ selects exactly the next state of
+(*) in decreasing ordinal order. All states are visited, ending at
+the finite suffix $S-c$. There is one replacement into each state
+and none after the last, proving the count. For $d=1$ there is one
+state and one replacement.
+\end{proof}
+
+\begin{lemma}[A sufficient partition period]\label{lem:period}
+For every $d,m\ge1$, put $Q_d=d!m^{d-1}$. Then
+\[
+             p_d(n+Q_d)\equiv p_d(n)\pmod m\quad(n\ge0).
+\]
+\end{lemma}
+\begin{proof}
+For $d=1$, $p_1(n)=1$. For $d>1$, splitting by the number
+of parts of size $d$ gives
+$p_d(n)=\sum_{j=0}^{\lfloor n/d\rfloor}p_{d-1}(n-dj)$.
+Here $Q_d/d=mQ_{d-1}$. In the sum for $n+Q_d$, shifting the
+index by $mQ_{d-1}$ recovers the old sum. The additional
+$mQ_{d-1}$ summands form $m$ groups of $Q_{d-1}$ consecutive
+indices in the periodic sequence
+$j\mapsto p_{d-1}(n+Q_d-dj)\pmod m$.
+Its period divides $Q_{d-1}$ by induction, so the extra sum is zero
+modulo $m$.
+\end{proof}
+
+The period is deliberately a sufficient bound, not an optimal one.
+For $d=2$ the count is $\lfloor n/2\rfloor+1$, and $2m$
+is the period supplied by the lemma.
+
+\section{A transfer theorem for congruent growing budgets}
+
+For the numerical statement, a retained mass $c\ge0$ means that a
+suffix of norm $n$ has total norm $c+n$, and a total budget $b$ leaves
+suffix budget $b-c$. It need not be the norm of an ordinal prefix.
+If it is realized by an actual retained CNF prefix, the numerical
+process agrees with that source segment. A budget schedule may increase
+with the current total norm; it must always afford that norm.
+
+\begin{theorem}[Congruent-budget transfer]\label{thm:transfer}
+Consider deletion of one suffix block $\omega^d$, with retained
+numerical mass $c\ge0$ and initial total norm at least $c+d+1$,
+under budgets at least the current total norm. Suppose
+every budget used in this segment is congruent to one integer $S$
+modulo $Q_d=d!m^{d-1}$, where $S\ge c$. Then its complete segment
+count is congruent to $p_d(S-c)$ modulo $m$.
+\end{theorem}
+\begin{proof}
+Induct on $d$. A degree-one block takes one replacement, as does
+$p_1(S-c)$. For the induction step let $b$ be the first actual
+total budget. The suffix of its greatest predecessor is the greedy
+Cantor polynomial of norm $b-c$ and degree less than $d$.
+Write its coefficients as $a_{d-1},\ldots,a_0$, with the final
+finite coefficient included.
+
+Thereafter each of its nonfinite monomial units is deleted by a
+lower-degree block. For a degree-$i$ unit the retained prefix norm
+has the form
+\[
+ c_i=c+\sum_{j>i}(j+1)a_j+(i+1)a,\qquad 0\le a<a_i.
+ \tag{**}
+\]
+The order of those units is fixed by the Cantor order; growing
+budgets affect their lower suffixes and durations, not the number
+of these fixed higher monomial units. Since $Q_i\mid Q_d$, every
+budget in a child segment has the residue of $b$ modulo $Q_i$.
+Induction makes its count congruent to $p_i(b-c_i)$.
+These arguments are nonnegative: each $c_i$ consists of $c$ plus
+the norm of a prefix of the first suffix polynomial and is at most $b$.
+
+Consequently the whole count, including its initial replacement,
+has the same residue as the constant-$b$ process with exactly that
+initial polynomial and those prefixes (**). By
+Lemma~\ref{lem:fixed} this is $p_d(b-c)$.
+Since $b\equiv S\pmod {Q_d}$, Lemma~\ref{lem:period} gives
+$p_d(b-c)\equiv p_d(S-c)\pmod m$. If $b-c<S-c$,
+apply the period lemma in the reverse direction by adding the
+appropriate nonnegative multiple; no negative partition index is used.
+\end{proof}
+
+The proof covers the whole count, not just its leading contribution.
+It does not replace the increasing operational budgets by a constant
+control: the latter is only a device for computing one residue.
+
+\begin{corollary}[A fixed polynomial block under the standard control]
+\label{cor:fixed-polynomial-residue}
+Fix $c,d,m$ and put $Q_d=d!m^{d-1}$. Under the control $G$,
+the complete count $E_c^d(t)$ of one $\omega^d$ block with retained
+mass $c$ and total input norm $t$ satisfies
+\[
+ E_c^d(t)\equiv
+ p_d\bigl((r_{Q_d}-c)\bmod Q_d\bigr)\pmod m
+ \quad\text{if }t\ge\max(c+d+1,Q_d).
+\]
+The finitely many smaller valid inputs can be evaluated exactly.
+\end{corollary}
+\begin{proof}
+All later norms are at least $t$, so every budget has residue
+$r_{Q_d}$ by Theorem~\ref{thm:envelope}. Apply the transfer theorem
+with $S=c+((r_{Q_d}-c)\bmod Q_d)\ge c$.
+Exact evaluation handles the remaining finite set.
+\end{proof}
+

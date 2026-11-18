@@ -1,0 +1,554 @@
+\section{Literal canonical assignments and the repaired norm proof}
+\label{sec:source}
+
+\subsection{Typed terms and ordinal expression trees}
+
+The ground type is $o$, and arrows associate to the right.  Put
+\[
+ \lv(o)=0,\qquad
+ \lv(\sigma\to\tau)=\max\{\lv(\sigma)+1,\lv(\tau)\}.
+\]
+Terms of the original system T are variables, applications and
+abstractions, together with
+\[
+ 0:o,\quad S:o\to o,\quad
+ D^\tau:o\to\tau\to\tau\to\tau,\quad
+ R^\tau:o\to(o\to\tau\to\tau)\to\tau\to\tau.
+\]
+The defining reductions, in arbitrary well-typed contexts, are
+\begin{align*}
+ (\lambda X.A)B&\longrightarrow A[X:=B],\\
+ D^\tau0AB&\longrightarrow A,&
+ D^\tau(Sn)AB&\longrightarrow B,\\
+ R^\tau0AB&\longrightarrow B,&
+ R^\tau(Sn)AB&\longrightarrow A\,n\,(R^\tau nAB).
+\end{align*}
+Substitution is capture avoiding.  The assignment below reads the
+literal typed term; it does not first normalize it or identify
+extensionally equal terms.  The annotated recursor constructor used
+temporarily in the reduction analysis of \cite{ww} is not a source
+constructor here.
+
+For each typed variable $X:\sigma$ introduce a vector
+$\mathbf x=(x_0,\ldots,x_{\lv(\sigma)})$ of distinct ordinal
+variables.  The ambient expression grammar has leaves $0,1,\omega$
+and these component variables, and three binary constructors
+\[
+ \operatorname{Add}(a,b),\qquad
+ \operatorname{ExpProd}(a,b),\qquad
+ \operatorname{Psi}(a,b).
+\]
+Their values are respectively
+\[
+ a\oplus b,\qquad 2^a\otimes b,\qquad
+ \psi_f(\omega\otimes a\oplus b).
+\]
+An exponential product or collapse is one primitive binary constructor,
+not an arbitrary multiplication tree.  We often write $a+b$ for the
+literal binary constructor $\operatorname{Add}(a,b)$; this shorthand
+does not authorize reassociation.  Interpretation always uses natural
+sum.  An expression is $\mathbf x$-free when no component of
+$\mathbf x$ occurs in its tree.
+
+A vector of level $m$ records exactly $m+1$ actual coordinate trees.
+An out-of-range coordinate is absent and is interpreted as zero in a
+comparison.  When vectors are added, two actual coordinates are joined
+by one Add node, and a single actual coordinate is retained unchanged.
+Thus addition does not insert actual Zero nodes to represent absent
+coordinates.  All actual coordinates in the graded classes and in the
+source assignment are zero-free and have positive values.
+
+\subsection{The substitution domain and comparisons}
+
+The closed classes $B_i$ are the least simultaneous classes satisfying
+the following rules, which are those of \cite[Definition~2.6]{ww}.
+\begin{enumerate}[label=(\roman*)]
+\item $1\in B_i$ for every $i$, and $\omega\in B_i$ for $i\ge1$.
+\item If $a,b\in B_i$, then $\operatorname{Add}(a,b)\in B_i$.
+\item If $i\ge1$, $a\in B_{i+1}$ and $b\in B_i$, then
+$\operatorname{ExpProd}(a,b)\in B_i$.
+\item If $a\in B_1$, $b\in B_0$ and $N(a)\le F_2(b)$, then
+$\operatorname{Psi}(a,b)\in B_0$.
+\item Every member of $B_0$ is a member of $B_i$ for $i\ge1$.
+\end{enumerate}
+All expressions in $B_0$ have positive finite values.  A closed vector
+$h$ belongs to $B$ when $h_i\in B_i$ at every actual coordinate.
+It has \emph{bounded norm} when
+\[
+ N(h_i)\le N(h_0)=h_0\quad\text{for every }i.
+\]
+
+An admissible valuation replaces each occurring variable vector by one
+whole vector in $B$ of the same level and of bounded norm.  If even one
+component of a vector occurs in either expression being compared, all
+components of that vector belong to the domain of the valuation.
+Thus the components of a functional variable cannot be varied as
+independent unconstrained ordinal parameters.
+
+Scalar relations $a\mle b$, $a\mslt b$ and $a=b$ mean that their
+values satisfy $\le$, $<$ and $=$ under every admissible valuation.
+The same convention applies to norm inequalities.  For vectors use
+the zero padding just specified and set
+\[
+ a\mle b\ \Longleftrightarrow\ (\forall i)\ a_i\mle b_i,
+ \qquad
+ a\mslt b\ \Longleftrightarrow\
+ a_0\mslt b_0\ \text{ and }\ (\forall i>0)\ a_i\mle b_i.
+\]
+Equality is universal coordinatewise equality.  These are precisely the
+comparison conventions of \cite[Definitions~2.7--2.8]{ww}.
+For a ground variable the admissible values are exactly the positive
+integers: every such integer is represented by a finite sum of ones,
+and every $B_0$ expression has a positive integer value.
+
+To describe the operators, define open classes $C_i$ by the same rules
+as $B_i$, with the additional leaf $y_i\in C_i$ whenever
+$i\le\lv(Y)$.  The collapse guard is now universal under admissible
+valuations.  For a fixed $\mathbf x$, define $C_i^{\mathbf x}$ in
+the same way, except that promotion from grade zero to a positive
+grade is permitted only for a wholly $\mathbf x$-free expression.
+Write $C$ and $C^{\mathbf x}$ for coordinatewise graded vectors.
+Their closed instances are exactly $B$.  These classes do not include
+a bounded-norm requirement; it is a separate property of a vector.
+
+Induction on this grammar shows that an expression in
+$C_i^{\mathbf x}$ contains no $x_j$ with $j<i$.
+In particular, if $n=\lv(X)+1$, an expression of grade at least
+$n$ is already $\mathbf x$-free.  This stopping property will pay
+the norm budget in abstraction.
+
+\subsection{A finite literal parsing policy}
+
+Finite sums and repetitions in \cite[Definitions~2.10 and 2.18]{ww}
+need an association convention to determine actual expression trees.
+This choice matters when a later abstraction examines those trees.
+For example the syntactic size defined below gives
+\[
+ s_{\mathbf x}(x_0+(1+1))=3,\qquad
+ s_{\mathbf x}((x_0+1)+1)=5,
+\]
+although the two ordinal-valued expressions are equal.
+
+\begin{definition}[Admissible literal policy]\label{def:literal-policy}
+A policy $\rho$ is a computable choice of an ordered full binary
+addition tree for every nonempty finite-sum macro site and arity.
+It uses every operand once, in order and as an unchanged subtree.
+Its choice depends on the site and arity, not on operand names,
+values, internal trees or free-variable status.  A positive $k$-fold
+repeat contains exactly $k$ unchanged copies; a one-fold repeat is
+the operand itself.  Existing trees are never flattened or reassociated.
+\end{definition}
+
+The sites are positive numerals, positive repetitions, the active
+three-operand sum partial, the active exponential partial, positive
+coordinate aggregation in abstraction, its scalar repeat, and the
+three-operand box tail when its finite contribution is nonzero.
+In the exponential partial the first operand is the already formed
+two-fold repeat of the head partial; it is not flattened into the
+outer sum.  All expressly binary clauses remain binary.
+
+One possible default uses left combs for the unspecified sum and repeat
+sites, with box tail $a_0+(b_0+n)$ for $n>0$ and $a_0+b_0$ for
+$n=0$.  The theorem allows any supplied policy in Definition~\ref{def:literal-policy}.
+It neither requires nor asserts independence of the final assignment
+from that policy.  A zero finite contribution in the box is absent;
+this convention does not simplify any actual Zero tree.  The source
+constant $0$ will be assigned the positive scalar $1$.
+
+\subsection{Application and its domain estimate}
+
+Let $a,b$ have levels $m>n$, and define $c=a\mathbin\square b$
+downwards by
+\begin{align*}
+ c_i&=a_i&& (n<i\le m),\\
+ c_i&=\operatorname{ExpProd}(c_{i+1},\operatorname{Add}(a_i,b_i))
+                                      &&(1\le i\le n),\\
+ c_0&=\begin{cases}
+ \operatorname{Psi}(c_1,a_0+(b_0+n)),&n>0,\\
+ \operatorname{Psi}(c_1,a_0+b_0),&n=0.
+ \end{cases}
+\end{align*}
+The positive numeral $n$ and any optional association of the three
+tail operands are expanded by $\rho$; their value is always
+$a_0+b_0+n$.  Restriction $c\upharpoonright_r$ keeps the actual
+coordinates $0,\ldots,r$.
+
+\begin{lemma}[Box domain and bounded norm]\label{lem:source-box}
+If $a,b\in C$ have bounded norm and $\lv(a)>\lv(b)=n$, then
+$a\square b$ belongs to $C$ and has bounded norm.  The same statement
+holds with $C^{\mathbf x}$ in place of $C$.
+\end{lemma}
+\begin{proof}
+Fix an admissible valuation and put $u=a_0+b_0+n\ge n+2$.
+All positive input-coordinate norms are at most $u$.
+The product and exponential bounds in Lemma~\ref{lem:norm-arithmetic}
+show that, at one downward step, a bound $x\ge u$ is replaced by
+at most $u2^x$.  Since $u2^x\le2^{2^x}$ for $x\ge u\ge2$,
+after at most $n$ steps every positive output norm is at most
+$F_0^{2n}(u)$.  Directly from the iteration definitions,
+\[
+ F_0^{2n}(u)\le F_0^{2(u+1)}(u)\le F_1^2(u)\le F_2(u).
+\]
+For the middle inequality, expand both successive evaluations of
+$F_1(v)=F_0^{v+1}(v)$; each contributes at least $u+1$
+iterations beginning at a value at least $u$.
+
+Consequently $N(c_1)\le F_2(u)$, which is the actual grammar guard
+for $c_0=\operatorname{Psi}(c_1,u)$.  The positive coordinates
+have their required grades by downward induction.  Put
+$\alpha=\omega\otimes c_1\oplus u$.  It is nonfinite and
+$N(\alpha)\ge u$, whence
+\[
+ c_0=\psi_f(\alpha)>f(N(\alpha))\ge G(u)\ge F_2(u).
+\]
+This bounds the norms of every positive output by its scalar output.
+All estimates hold at every admissible valuation.  No promotion clause
+is added in this construction, so the same reasoning proves the
+$C^{\mathbf x}$ assertion.
+\end{proof}
+
+\subsection{The partials and the unchanged abstraction budget}
+
+Fix $\mathbf x$ and put $n=\lv(X)+1$.  The syntactic size tests
+whole-freeness first:
+\[
+ s_{\mathbf x}(h)=
+ \begin{cases}
+ 1,&h\text{ is wholly }\mathbf x\text{-free, or }h=x_i,\\
+ s_{\mathbf x}(a)+s_{\mathbf x}(b)+1,
+    &h=\operatorname{Add}(a,b)\text{ or }\operatorname{Psi}(a,b),\\
+ 2s_{\mathbf x}(a)+s_{\mathbf x}(b)+1,
+    &h=\operatorname{ExpProd}(a,b).
+ \end{cases}
+\]
+The last two clauses apply only if the first does not.
+For $h\in C_i^{\mathbf x}$, the vector $\partial_i^{\mathbf x}h$
+has level $n$.  If $h$ is wholly $\mathbf x$-free, set
+\[
+ (\partial_i^{\mathbf x}h)_j=
+ \begin{cases}h+1,&j=i\le n,\\1,&j\ne i\text{ or }i>n.
+ \end{cases}
+\]
+For active expressions the clauses are
+\begin{align*}
+ \partial_i^{\mathbf x}x_i&=\mathbf1,\\
+ \partial_i^{\mathbf x}\operatorname{Add}(a,b)
+   &=\partial_i^{\mathbf x}a+\partial_i^{\mathbf x}b+\mathbf1,\\
+ \partial_i^{\mathbf x}\operatorname{ExpProd}(a,b)
+   &=2\partial_{i+1}^{\mathbf x}a+\partial_i^{\mathbf x}b+\mathbf1
+       \qquad(i\ge1).
+\end{align*}
+All displayed vectors $\mathbf1$ have level $n$.  Multiples and
+three-operand sums use the policy, including the nested two-fold head
+repeat in the last clause.  For an active scalar collapse, put
+\begin{align*}
+ (\partial_0^{\mathbf x}\operatorname{Psi}(a,b))_0
+   &=\operatorname{Psi}(a\{\mathbf x:=\mathbf1\},
+                              (\partial_0^{\mathbf x}b)_0),\\
+ (\partial_0^{\mathbf x}\operatorname{Psi}(a,b))_j
+   &=(\partial_1^{\mathbf x}a)_j+(\partial_0^{\mathbf x}b)_j
+                                      \qquad(1\le j\le n).
+\end{align*}
+
+For $h\in C^{\mathbf x}$ of level $m$, let
+\[
+ S_{\mathbf x}(h)=2^n\sum_{i=0}^m s_{\mathbf x}(h_i).
+\]
+This is a natural number computed from the fixed input trees.
+The vector $\delta^{\mathbf x}h$ has level $\max\{n,m\}$ and
+coordinates
+\begin{equation}\label{eq:source-delta}
+ (\delta^{\mathbf x}h)_j=
+ \begin{cases}
+ S_{\mathbf x}(h)\,(\partial_0^{\mathbf x}h_0)_0,&j=0,\\
+ \displaystyle\sum_{i=0}^m(\partial_i^{\mathbf x}h_i)_j,&0<j\le n,\\
+ h_j,&n<j\le m.
+ \end{cases}
+\end{equation}
+The scalar multiplication is the literal positive repetition at its
+designated policy site.  The natural number $S_{\mathbf x}(h)$ is
+not recomputed after reassociating any input tree.
+
+\begin{lemma}[Finite definition and substitution covariance]
+\label{lem:source-finiteness}
+For a supplied policy these definitions produce unique finite trees
+effectively.  The partials and $\delta^{\mathbf x}$ commute with
+substitutions for other variable vectors by $\mathbf x$-free vectors,
+whenever the displayed operations have their graded domains.
+\end{lemma}
+\begin{proof}
+Each partial is defined by structural recursion on its input tree.
+For an explicit finite bound, let $|h|$ be its node count.  Give a leaf
+weight one, Add and Psi weight $w(a)+w(b)+1$, and ExpProd weight
+$2w(a)+w(b)+1$.  Induction gives
+$s_{\mathbf x}(h)\le w(h)\le2^{|h|}-1$.
+Every coordinate of a partial has at most $6\cdot3^{|h|}$ nodes:
+the active Add, ExpProd, scalar Psi and positive Psi clauses have
+bounds respectively
+\[
+ E(a)+E(b)+3,\quad2E(a)+E(b)+4,\quad
+ |a|+E(b)+1,\quad E(a)+E(b)+1,
+\]
+where $E(a)=6\cdot3^{|a|}$, and the whole-free diagonal has
+$|h|+2$ nodes.  Each fits the asserted recursive bound.
+The finite sums and repeats in \eqref{eq:source-delta} therefore
+have computable sizes.  This construction never has to decide a
+universal comparison in order to construct a tree.
+
+A substitution by $\mathbf x$-free vectors preserves whether a
+subtree contains a component of $\mathbf x$.  Whole-free subtrees
+still contribute size one, while the active constructor pattern is
+unchanged.  Hence it preserves $s_{\mathbf x}$ and
+$S_{\mathbf x}$.  Induction on each partial clause proves literal
+commutation: the policy depends only on the unchanged macro site and
+arity.  The finite sums in $\delta^{\mathbf x}$ then commute too.
+\end{proof}
+
+\begin{lemma}[Weak scalar estimate and the graded domain]
+\label{lem:weak-scalar}
+For $h\in C_0^{\mathbf x}$,
+\[
+ h\{\mathbf x:=\mathbf1\}\mle
+             (\partial_0^{\mathbf x}h)_0.
+\]
+Every $\partial_i^{\mathbf x}h$, for $h\in C_i^{\mathbf x}$,
+is an $\mathbf x$-free $C$-vector of level $n$.
+For $h\in C^{\mathbf x}$, the vector $\delta^{\mathbf x}h$
+is also valid and $\mathbf x$-free.
+\end{lemma}
+\begin{proof}
+Induct simultaneously on the grammar and the partial recursion.
+A whole-free scalar has diagonal $h+1$; the tracked scalar variable
+has diagonal one; an active Add has the two scalar partials plus one.
+For an active Psi the two heads after replacing $\mathbf x$ by ones
+are identical, and the induction hypothesis compares their finite tails.
+Lemma~\ref{lem:collapse-estimates} supplies the required weak
+finite-tail monotonicity.
+
+That new Psi has its grammar guard: the old guard and the weak
+induction hypothesis give
+\[
+ N(a\{\mathbf x:=\mathbf1\})
+ \mle F_2(b\{\mathbf x:=\mathbf1\})
+ \mle F_2((\partial_0^{\mathbf x}b)_0).
+\]
+The head has the correct positive grade.  Whole-free diagonal outputs
+are $h+1$ at their original grade; all off-diagonal and tracked-variable
+outputs are one.  The other positive outputs only add correctly graded
+partials, with the displayed fixed multiplicities.  Every output is
+$\mathbf x$-free.  Sums and positive scalar repetitions preserve
+these properties.  Above grade $n$, the retained $h_j$ is already
+$\mathbf x$-free by the stopping property of the grammar.
+\end{proof}
+
+\begin{remark}[Two strict inequalities that are unnecessary]
+The strict form printed in \cite[Lemma~2.19]{ww} fails at $h=x_0$:
+both scalar sides are one.  Its appendix estimate (A.5) also has an
+equality case: take $\lv(X)=0$, $h=(x_0,1)$, the coordinate
+$i=1$, and its free subtree $1$.  The asserted strict estimate becomes
+$1<1$.  The weak scalar lemma just proved is sufficient for the
+collapse guard.  The next two results replace the strict free-subtree
+estimate while preserving the multiplier in \eqref{eq:source-delta}.
+These observations do not refute the separate beta estimate involving
+both $\delta$ and $\square$ in \cite[Lemma~2.22]{ww}.
+\end{remark}
+
+\begin{lemma}[First free positive subtree]
+\label{lem:first-free-subtree}
+Let $h\in C^{\mathbf x}$ have bounded norm.  Fix an admissible
+valuation for its other names and put
+$B=h_0\{\mathbf x:=\mathbf1\}$ at that valuation.
+In a partial recursion beginning at any actual $h_i$, every first
+wholly $\mathbf x$-free subtree $a$ encountered at a positive
+grade satisfies
+\[
+ N(a)\le2^{n-1}B.
+\]
+\end{lemma}
+\begin{proof}
+Measure norms after replacing $\mathbf x$ by ones.  The free
+subtree is unchanged, and every initial coordinate then has norm at
+most $B$.  A step into an Add child cannot increase norm.  A step
+into an exponential tail cannot increase it either, by positivity and
+the lower product bound.  A step into an exponential head costs at
+most a factor two, since
+\[
+ N(a)\le2N(2^a)\le2N(2^a\otimes b).
+\]
+It also raises the grade by one.  At grade $n$ a subtree is already
+wholly $\mathbf x$-free and recursion stops.  A path beginning
+at positive grade thus makes at most $n-1$ such head steps.
+
+A scalar path enters a positive grade only through a collapse head.
+This step costs no factor two:
+\[
+ N(a)\le N(\omega\otimes a\oplus b)
+       \le\psi_f(\omega\otimes a\oplus b).
+\]
+Its scalar tail is bounded by the same collapse value, so scalar
+tail steps also cost no factor.  The head enters grade one, leaving
+at most $n-1$ active exponential-head steps.  A scalar promoted to
+positive grade is already wholly free, so it cannot begin another
+active scalar descent.  Multiplication of the possible factors two
+proves the bound.
+\end{proof}
+
+\begin{theorem}[Bounded norm with the original multiplier]
+\label{thm:delta-bounded-norm}
+If $h\in C^{\mathbf x}$ has bounded norm, then
+$\delta^{\mathbf x}h$ has bounded norm, with exactly the multiplier
+$S_{\mathbf x}(h)=2^n\sum_i s_{\mathbf x}(h_i)$ in
+\eqref{eq:source-delta}, for every admissible policy.
+\end{theorem}
+\begin{proof}
+Fix the other names as in Lemma~\ref{lem:first-free-subtree} and put
+$H=(\partial_0^{\mathbf x}h_0)_0$ and $v=2^nH$.
+The weak scalar estimate gives $1\le B\le H$.
+Whenever a free positive-grade subtree can be copied into a positive
+diagonal output, the preceding lemma gives
+\[
+ N(a)+1\le2^{n-1}B+1\le2^nH=v.
+\]
+A free \emph{scalar} subtree is not copied into a positive output;
+those outputs are one.  This distinction supplies the extra unit in
+the whole-free diagonal clause without a strict free-subtree bound.
+
+Induct through the actual partial recursion, using those bounds at
+each first free leaf.  For $0<j\le n$ the result is
+\[
+ N((\partial_i^{\mathbf x}h_i)_j)
+           \le s_{\mathbf x}(h_i)v.
+\]
+Tracked-variable outputs have norm one.  An active Add contributes
+the two child bounds and one, bounded by
+$(s_{\mathbf x}(a)+s_{\mathbf x}(b)+1)v$.
+An active ExpProd partial has two copies of its head output, one
+tail output and one, bounded by
+$(2s_{\mathbf x}(a)+s_{\mathbf x}(b)+1)v$.
+A positive Psi output only adds its head and tail partials, so its
+size allowance also suffices.  Norm additivity makes every allowed
+association of these sums satisfy the same estimate.
+
+Summing over $i$ gives
+\[
+ N((\delta^{\mathbf x}h)_j)
+ \le\left(\sum_i s_{\mathbf x}(h_i)\right)2^nH
+   =(\delta^{\mathbf x}h)_0\qquad(0<j\le n).
+\]
+For $j>n$ the retained $h_j$ is $\mathbf x$-free and its norm
+is at most $B\le H\le(\delta^{\mathbf x}h)_0$.
+Since the valuation was arbitrary, this proves bounded norm.
+\end{proof}
+
+\subsection{The canonical assignment and its arithmetic image}
+
+The following is the zero-history instance of
+\cite[Definition~3.1]{ww}, with literal expansions fixed by $\rho$:
+\begin{align*}
+ \can{X:\sigma}&=\mathbf x,\qquad
+ \can0=(1),\qquad \can S=(1,1),\\
+ \can{D^\tau}&=(1,\ldots,1)
+                &&\text{of level }\lv(\tau)+1,\\
+ \can{R^\tau}&=(2,1,\ldots,1,\omega)
+                &&\text{of level }\lv(\tau)+2,\\
+ \can{AB}&=(\can A\square\can B)\upharpoonright_{\lv(\tau)}
+                &&(A:\sigma\to\tau, B:\sigma),\\
+ \can{\lambda X.G}&=\delta^{\mathbf x}\can G+
+                        \can G\{\mathbf x:=\mathbf1\}.
+\end{align*}
+The numeral $2$ is the literal $1+1$.  The vector of ones in a
+substitution has the level of the variable being replaced.  When useful
+we write $\can A_{f,\rho}$ to display the two fixed choices.
+
+\begin{proposition}[Well-defined canonical source assignment]
+\label{prop:canonical-domain}
+Every literal original T term has an effectively constructed canonical
+vector of the level of its type.  It belongs to $C$ and has bounded
+norm.  A body to which $\delta^{\mathbf x}$ is applied belongs
+to $C^{\mathbf x}$.  All these assertions allow arbitrary finite
+internal and bound-variable types and arbitrary recursor instances.
+\end{proposition}
+\begin{proof}
+The construction is structural recursion on the source term and the
+finite recursions of Lemma~\ref{lem:source-finiteness}.  If
+$A:\sigma\to\tau$, then
+$\lv(A)\ge\lv(\sigma)+1>\lv(\sigma)$, which is exactly the
+level premise for the box.  Restriction leaves level $\lv(\tau)$;
+the abstraction has level $\max\{\lv(X)+1,\lv(G)\}$ as required.
+
+For its domain, keep the following strengthened invariant: a positive
+coordinate is generated from $1,\omega$, appropriate positive-index
+component variables, Add and graded ExpProd, without any scalar
+promotion or Psi.  The constants and variables have this property.
+The positive box clauses preserve it.  In a scalar partial a whole-free
+subtree contributes only ones to positive outputs, an active variable
+contributes ones, and Add joins partials; an active Psi joins the
+positive partials of its positive head and scalar tail.  In a partial
+of a positive input, whole-free copies, variables, Add and ExpProd
+also preserve the invariant.  The sums and retained coordinates in
+abstraction do so as well.  This proves the invariant simultaneously
+with source construction.  In particular every positive coordinate
+has the grammar required for $C_i^{\mathbf x}$ for each tracked
+binder, and its scalar collapse guards follow from
+Lemmas~\ref{lem:source-box} and \ref{lem:weak-scalar}.
+
+Variables have bounded norm by the valuation domain.  The constants
+do too; for the recursor its top norm is $N(\omega)=2$, equal to
+its scalar.  The box preserves bounded norm by
+Lemma~\ref{lem:source-box}, as does restriction.  At an abstraction
+the first summand has bounded norm by
+Theorem~\ref{thm:delta-bounded-norm}; the second does because the
+all-ones vector is admissible.  Coordinatewise natural addition
+preserves the bound by norm additivity.  This completes the induction.
+\end{proof}
+
+\begin{theorem}[Fixed-head arithmetic image of actual sources]
+\label{thm:generated-source}
+Let $A$ be an original T term whose free variables all have ground
+type.  For every positive coordinate, $\can A_i$ is a closed
+effectively computable ordinal.  Its scalar is an effectively obtained
+finite circuit in the ground component inputs, positive integer
+constants, addition, fixed positive integer multiples, and functions
+\[
+ h_\lambda(u)=\psi_f(\lambda+u)
+\]
+with fixed nonzero limit heads $\lambda<\varepsilon_0$.
+Repeated occurrences of one source variable give one shared input;
+shared subcircuits may also be retained.  The theorem imposes no bound
+on internal types, bound-variable types, result type, recursors, or
+finite nesting, and is uniform in the supplied computable policy.
+\end{theorem}
+\begin{proof}
+The positive-coordinate invariant in the preceding proof contains
+only positive-index components of variables that remain free.
+Every bound component is removed by the partials or by the simultaneous
+all-ones substitution at its abstraction.  Ground free variables have
+no positive-index components.  All positive output coordinates are
+therefore closed, and their values are computable by the finite ordinal
+operations of Lemma~\ref{lem:norm-arithmetic}.
+
+The same induction shows that an actual scalar coordinate is formed
+only from scalar component variables, positive constants, Add,
+fixed repeats and Psi.  Every head of a scalar Psi is a positive
+expression in the invariant just proved.  After the ground-free
+restriction its value is a fixed closed ordinal $c>0$.
+Set $\lambda=\omega\otimes c$.  Every monomial of this ordinal
+has positive exponent, so $\lambda$ is a nonzero limit, and its
+finite scalar tail $u$ gives
+$\operatorname{Psi}(c,u)=\psi_f(\lambda+u)$.
+The syntactic multiplier $S_{\mathbf x}(h)$ is a fixed integer
+computed before valuations, so it adds no new variable or quantifier.
+Translate this finite tree recursively, retaining names and shared
+wires.  This is the required circuit.
+
+Its head is the one produced by the literal source assignment.
+The argument does not replace a generated head by an arbitrary ordinal
+primitive or require a source term for every auxiliary head later used
+by arithmetic elimination.
+\end{proof}
+
+The zero-history assignment is the object of comparison here.  The
+normalization theorem in \cite{ww} permits history-dependent assignment
+derivations at abstractions in order to follow reductions.  No claim
+that this single fixed canonical map decreases at every reduction is
+needed for the comparison theorem.

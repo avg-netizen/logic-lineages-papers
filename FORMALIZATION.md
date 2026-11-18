@@ -1,3 +1,17 @@
+# Current programme — new five-paper comparison set, 18 November 2026
+
+The owner requested archiving the superseded comparison editions and continuing
+formalization against papers 16–20. The [migration plan](formalization/verification/new-paper-set-2026-11-18/PLAN.md)
+and [current comparison register](formalization/CURRENT-COMPARISON-TARGETS.json)
+control this work. All 167 new-paper statements initially remain pending exact
+verification; historical source matches must be demonstrated, not assumed.
+Old proof sources and the 178/2/9 earlier register remain intact.
+The numbered results for unaffected papers are not revoked.
+
+The historical checkpoint summaries below do not describe the new set.
+
+---
+
 # Current checkpoint — two-agent continuation paused
 
 Fifteen exact supporting contracts in 29 new source files are checked across

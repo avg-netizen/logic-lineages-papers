@@ -1,3 +1,17 @@
+# Current release — new comparison set, 18 November 2026
+
+Owner requests archive of superseded editions05–10 and formalization of new
+papers16–20 through 2026-11-19T18:00:00Z (noon UTC-06). Work from
+formalization/new-paper-set-2026-11-18 and verification/new-paper-set-2026-11-18/PLAN.md.
+Preserve old Lean sources/register/counterexamples. CURRENT-COMPARISON-TARGETS.json
+is the separate current-paper statement inventory, initially all pending.
+Maintain original source-exact comparator, native/axiom/evidence/review gates,
+serialized compiler limits, no main merge/force/CI/pin changes, and source-first
+nonforce remote checkpoints at least every30 minutes. Historical ownership and
+pause records below are superseded for this request only.
+
+---
+
 # Current release — 15 November public continuation
 
 The user explicitly requests continuing public formalization until further

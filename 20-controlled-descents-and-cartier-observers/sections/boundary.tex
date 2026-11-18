@@ -1,0 +1,91 @@
+\section{A retained prefix and its linked partition coefficient}
+\label{sec:boundary}
+
+\begin{proposition}[An actual $\omega^\omega$ block]\label{prop:omega-block}
+Let $\Omega=\omega^\omega$. At a real suffix state $\pi+\Omega+n$, with $\pi$ a retained CNF
+prefix (zero or of least exponent at least $\omega$), and total norm $u$,
+assume $c=\norm(\pi)$, $c+3\le u$, and
+$B=f(u)\ge\max(16,m)$. Put $C=f(u+1)$ and $d=B-c-1$.
+If $H_c(u)$ counts the complete deletion of this $\Omega$ copy,
+then
+\begin{equation}\label{eq:omega-block}
+ H_c(u)\equiv1+p_{B-c-1}(C-c)\pmod m.
+\end{equation}
+Its output norm is still exactly $f^{H_c(u)}(u)$.
+\end{proposition}
+\begin{proof}
+The first predecessor is $\pi+\omega^d$, of total norm $B$.
+Indeed the greatest exponent of norm at most $B-c-1$ is the
+finite exponent $d$ in this particular bound below $\omega$;
+this is the predecessor of $\omega^\omega$ under the suffix budget.
+All subsequent norms $x$ are at least $B$. Their budgets
+$G(x)=F_5(x+100)$ have residue $r_{Q_d}$ by the second part of
+Theorem~\ref{thm:envelope}, because
+\[
+ Q_d=d!m^{d-1}\le B^{2B}\le2^{2^B}.
+\]
+The last inequality holds for $B\ge16$; it follows from
+$2B\log_2 B\le2^B$, first at $16$ and then by the increasing
+ratio of the right side to the left side.
+The adjacent value $C=f(u+1)$ has the same residue modulo $Q_d$
+by the third part of Theorem~\ref{thm:envelope}.
+Apply Theorem~\ref{thm:transfer} to the remaining $\omega^d$ block
+with $S=C$, then include its preceding $\Omega$ replacement.
+Norm saturation proves the final assertion independently of the
+modular calculation.
+\end{proof}
+
+\subsection{The first moving-prefix boundary}
+
+Write $\Theta=\omega^{\omega+1}$, whose norm is four.
+For each $v\ge4$, begin an actual descent at $\Theta+(v-4)$,
+of total norm $v$. The same calculation applies whenever a larger
+descent genuinely reaches this limit part at that norm; it does not
+posit independent entry values inside a larger source.
+Put $u=G(v)$. The residue recursion gives $u\equiv1\pmod3$.
+
+\begin{lemma}[The retained prefix at first entry]\label{lem:entry}
+The predecessor of this $\Theta$ state is
+\[
+ \Omega q+1,\qquad q=(u-1)/3.
+\]
+The first $\Omega$ copy deleted in this polynomial has retained
+prefix norm $e=u-4$ and total input norm $u$.
+\end{lemma}
+\begin{proof}
+A copy of $\Omega$ has norm three. The maximal affordable exponent
+below $\omega+1$ is $\omega$, so the greedy predecessor takes as
+many copies of $\Omega$ as possible. Since $u\equiv1\pmod3$,
+exactly one norm unit remains, whose largest affordable ordinal
+is the finite ordinal one. Before deleting the last displayed $\Omega$ in the
+ordinary sum $\Omega(q-1)+(\Omega+1)$, the retained prefix is
+$\Omega(q-1)$ and has norm $3(q-1)=u-4$.
+\end{proof}
+
+With $B=f(u)$, $C=f(u+1)$, $e=u-4$ and $d=B-u+3$, the
+first block parity is consequently
+\begin{equation}\label{eq:delta}
+ \delta_4(v):=H_{u-4}(u)\bmod2
+       =1+p_d(C-e)\pmod2.
+\end{equation}
+The subscript records the norm four of its suffix $\Omega+1$.
+The initial $\Theta$ replacement lies outside $H_{u-4}(u)$;
+the displayed $1$ instead counts the $\Omega$ replacement.
+
+The value $C=G(u+1)$ is a modular surrogate. It is not the next
+operational norm $G(B)$. The transfer theorem permits it because
+its residue modulo the required partition period agrees with every
+later budget. All four parameters $B,C,e,d$ are determined by the
+single entry norm $v$.
+
+This quantity is inside a larger correlated computation. Before its
+remaining limit part has become exactly $\Omega$, the $\Theta$ segment
+deletes $q-1$ copies with prefix masses $3(q-1),3(q-2),\ldots,3$. Their inputs
+are successive points on the \emph{same} $f$ orbit. Observing the
+sum of all these counts does not automatically define the graph of
+the first summand. Thus \eqref{eq:delta} is a concrete benchmark for
+a proposed arithmetic method, not a proved necessary subproblem of
+every possible comparison procedure. The family
+$\Theta+(v-4)$ proves genuine ordinal-descent realization for every
+$v\ge4$; no stronger typed-source grammar realization is used here.
+

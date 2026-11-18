@@ -1,0 +1,304 @@
+\section{Deciding closed blocks of collapse arithmetic}\label{sec:arithmetic}
+
+We now combine order comparison with the modular tables. A finite circuit
+may use natural inputs, natural-valued affine gates, fixed iterates of
+\(f\), entry norms, interval counts, and fixed-head collapses. Each gate
+and call carries its true domain; in particular an affine gate's output
+is required to be natural. Signed linear combinations remain unrestricted
+in the final inequalities, equalities and congruences. The total shifted function
+\(n\mapsto J_\lambda(N(\lambda)+n)\) is a convenient way to avoid
+partial raw inputs. Alternatively, an explicitly specified computable
+finite extension below \(N(\lambda)\) can be handled as finite cases.
+
+\begin{theorem}[Closed-block decision]\label{thm:arithmetic}
+For either control of Section~\ref{sec:controls}, closed existential
+and closed universal Boolean combinations of linear inequalities,
+equalities and congruences over finite circuits of fixed-head collapses
+are decidable. The procedure preserves shared inputs and shared circuit
+nodes. The fixed heads may be arbitrary ordinals below \(\varepsilon_0\).
+\end{theorem}
+
+The descent notation below uses nonzero limit heads. This loses no fixed
+head in the theorem: write any infinite \(\alpha\) uniquely as
+\(\lambda+k\), with \(\lambda\) a nonzero limit and \(k<\omega\),
+and absorb \(k\) into the finite input of
+\(\psi_f(\alpha+u)=\psi_f(\lambda+(k+u))\).
+For finite \(\alpha\), the value is simply \(\alpha+u\).
+
+The proof is constructive, but makes no useful running-time claim. Its
+two termination measures are the number of raw coordinates and a finite
+charge on the active count occurrences.
+
+\subsection{The finite matrix language}
+
+Flatten a finite circuit once, assigning one natural coordinate to each
+node and conjoining its exact graph equation. A collapse gate is
+\[
+ y=Z_\lambda(t)+D_\lambda(t),\qquad t\ge N(\lambda).
+\]
+Affine gates give affine equalities. Every valuation in the circuit's
+original domain has exactly one extension to these graph coordinates.
+This remains true when the
+original output test is negated. All graph equations stay conjoined
+outside that test.
+
+After flattening, every nonlinear function has one raw coordinate as its
+argument. Fixed argument shifts are represented by affine aliases. The
+ordinary nonlinear value fields are
+\[
+ E_P(x),\quad f^a(E_P(x))\ (a\ge1),\quad f^a(x)\ (a\ge1),
+\]
+and the count fields are \(\tau_P(x)\). Coefficients in rows and
+congruences are fixed integers. An uniterated raw coordinate is linear,
+not a separated value field. The inner normalization introduces no new
+quantified coordinates and no function of a newly constructed linear
+combination.
+
+\subsection{Comparison of compound values}
+
+For \(P=(\lambda,\mu)\), put \(\nu=\mu+\omega\). On a tail
+satisfying the bound \(x\ge N(\nu)\), define \(K_P(x)=x\) if \(\lambda=\nu\),
+and \(K_P(x)=E_{\lambda,\nu}(x)\) otherwise. The last interval
+has exactly one event, so the cocycle gives
+\begin{equation}\label{eq:final-peel}
+ E_P(x)=f(K_P(x)).
+\end{equation}
+
+\begin{lemma}[Comparison preserving input order]\label{lem:field-comparison}
+On each fixed order of the raw coordinates, every comparison of ordinary
+value fields has an effective finite Boolean form in which the greatest
+raw coordinate occurs only linearly. Nonlinear parameters in that form
+are fields on strictly smaller coordinates.
+\end{lemma}
+\begin{proof}
+Cancel common outer applications of \(f\) by injectivity. If an explicit
+iterate remains on one side and a primitive entry on the other, peel one
+last \(f\) from the latter by \eqref{eq:final-peel} and cancel again.
+Each such step decreases the remaining fixed iterate count. If a primitive
+becomes the identity convention, retain the resulting comparison with a
+raw coordinate. Thus finitely many steps leave two primitive entries, or
+a field compared with a raw coordinate. Only finitely many endpoint
+advances \(\mu+\omega j\) occur.
+
+Identify equal raw coordinates in the chosen order branch. For primitive
+entries at \(x<y\), Lemma~\ref{lem:gap-input} fixes the answer if the
+larger-input map has at least the larger gap. Otherwise the inverse
+threshold table makes it a comparison of \(y\) with an entry at \(x\),
+with its exact equality condition. At equal inputs use the gap and
+equal-gap certificates. A field at the larger input is greater than that
+input and hence greater than a smaller bare coordinate. A larger bare
+coordinate compared with a lower-input field is already linear in the
+larger coordinate. Identity versus identity is raw order. These cases
+are exhaustive, and all new source and certificate domains are retained.
+\end{proof}
+
+\subsection{Annotating a count by its full leading value}
+
+A short interval \(\lambda=\mu+\omega k\) has constant count \(k\).
+For every other proper interval, put
+\(\eta=\mu+\omega^2\). Let \(P'=(\lambda,\eta)\), using the
+identity convention if \(\lambda=\eta\). Its actual count satisfies
+\begin{equation}\label{eq:count-core}
+ \tau_P(x)=\tfrac12 C_P(x)+\tau_{P'}(x)+\kappa_\mu,
+ \quad C_P(x)=f(E_{P'}(x)),\quad
+ \kappa_\mu=1-\lceil N(\mu)/2\rceil.
+\end{equation}
+This is the exact \(\omega^2\)-funnel formula, including the
+\(\omega\)-tail of \(\mu\) absorbed by \(\eta\).
+For \(\mu=0\) it reads \(D_{\omega^2}(q)=f(q)/2+1\), after the
+preceding entry prefix. In every case, if \(q=E_{P'}(x)\) and
+\(r=\tau_{P'}(x)\), then on the genuine tail
+\begin{equation}\label{eq:core-error}
+ q\ge x,\qquad C_P(x)\ge f(x),\qquad
+ 0\le r\le q\le\log_2 C_P(x).
+\end{equation}
+
+We attach \((C_P,P',\kappa_\mu)\) as an annotation to the whole count
+occurrence. We do not expand it into a new independent half-value and
+an active prefix count. In a class sharing the full value \(C\), ordinary
+coefficient \(b\) and count coefficients \(a_i\) have combined leading
+coefficient \(b+\frac12\sum_i a_i\). Its zero test is the integer test
+\(2b+\sum_i a_i=0\). Treating \(C\) and \(C/2\) as separated
+scales would give an incorrect test.
+
+\begin{lemma}[Exact cancellation and transfer]\label{lem:count-transfer}
+A class with zero combined leading coefficient can be replaced exactly by
+its prefix counts and constants. Equal-input prefixes merge. Prefixes on
+distinct inputs can be transferred to smaller input ranks whenever their
+cores coincide.
+\end{lemma}
+\begin{proof}
+For a zero class, \eqref{eq:count-core} gives the exact replacement
+\begin{equation}\label{eq:zero-replacement}
+ bC+\sum_i a_i\tau_{P_i}(x_i)
+   =\sum_i a_i\tau_{P_i'}(x_i)+\sum_i a_i\kappa_i.
+\end{equation}
+All ordinary value occurrences in the class disappear. Identity and
+short prefixes become constants. If two remaining prefixes have the
+same input \(x\), equality of their cores gives equality of their entry
+norms. These are \(f^r(x)\) and \(f^s(x)\); strict increase above the
+identity gives \(r=s\). Their counts therefore merge on this guard.
+
+Now take two remaining prefixes at \(x<y\), with
+\(E_{P'}(y)=E_{Q'}(x)\). They are proper after the preceding removals.
+Input comparison forbids \(\delta_{P'}\ge\delta_{Q'}\).
+The complete collision table therefore forces its equality certificate
+and
+\[
+ y=E_H(x),\qquad
+ H=(\lambda_{Q'},\mu_{Q'}+\delta_{P'}).
+\]
+The actual \(Q'\)-cocycle factors through \(H\). At \(y\) its
+remaining same-gap entry has the same terminal norm as \(P'\), hence
+the same count by injectivity of iteration. Consequently
+\begin{equation}\label{eq:rank-transfer}
+ \tau_{P'}(y)=\tau_{Q'}(x)-\tau_H(x).
+\end{equation}
+This is an integer identity on the actual collision guard, even with
+signed coefficients. A nonequality certificate makes the collision
+branch impossible. Both terms on the right have smaller raw input rank.
+Choose the smallest surviving input and transfer every higher one to it.
+All intermediate target norm bounds and comparison domains are imposed.
+\end{proof}
+
+\subsection{A finite charge and the order normalization loop}
+
+Fix a strict order of the \(r\) distinct raw coordinates, giving ranks
+\(0,\ldots,r-1\). For one row put
+\begin{equation}\label{eq:finite-charge}
+ \mathcal M=\sum_{\text{active count occurrences}}3^{\operatorname{rank}(x)},
+ \qquad
+ \mathcal V=\#\{\text{ordinary nonlinear value occurrences}\}.
+\end{equation}
+Combine identical syntactic fields and remove zero coefficients.
+Annotations add no ordinary occurrences. Pattern guards are kept
+separately; Lemma~\ref{lem:field-comparison} already makes them linear
+in the greatest coordinate.
+
+\begin{lemma}[Finite inner normalization]\label{lem:inner-termination}
+Every exact zero-class replacement strictly decreases
+\(\mathcal M+\mathcal V\), and neither summand increases.
+\end{lemma}
+\begin{proof}
+An ended prefix removes a count occurrence. Merging two prefixes at
+one input replaces at least two equal-rank occurrences by at most one.
+A transferred occurrence of rank \(j\) creates at most two lower-rank
+occurrences, of total charge at most
+\(2\cdot3^{j-1}<3^j\). If there is just one surviving prefix and
+its count charge has not decreased, the equation \(2b+a=0\) with
+\(a\ne0\) forces \(b\ne0\); an ordinary value occurrence has
+been consumed. A class consisting only of ordinary values also decreases
+\(\mathcal V\). Every zero class with two or more count occurrences
+has a repeated input, distinct inputs, or an ended prefix, so one of
+the preceding cases applies. Formula \eqref{eq:zero-replacement} creates
+no ordinary values. This proves the assertion.
+\end{proof}
+
+Let \(z\) be the greatest raw coordinate. Normalize an order atom by
+the following finite procedure. Remove short counts and zero coefficients.
+If \(z\) has no remaining nonlinear occurrence, retain the entire row
+as a linear row in \(z\), with its correlated lower-input fields as
+parameters, and stop. Otherwise annotate all remaining counts, branch on
+the weak order of their full cores and the ordinary nonlinear fields,
+and retain every exact pattern guard. Process the largest current class.
+A zero combined coefficient is canceled by Lemma~\ref{lem:count-transfer},
+after which the procedure repeats. At a nonzero coefficient it stops by
+the following domination argument.
+
+Because the initial exit check failed, a nonlinear field at \(z\)
+remains, so the largest current full value \(C\) satisfies \(C\ge f(z)\).
+Every raw coordinate is at most \(z\le\log_2 C\). Distinct ordinary
+full values are separated by adjacent growth; every smaller one is at
+most \(\log_2 C\). Count errors satisfy \eqref{eq:core-error}.
+The entire row is consequently
+\[
+ \beta C+E,\qquad 0\ne\beta\in\tfrac12\mathbb Z,
+ \qquad |E|\le K\log_2 C+K_0,
+\]
+for effective fixed integers \(K,K_0\). An elementary cutoff makes
+\(|E|<C/2\), so its sign is the sign of \(\beta\), and equality is
+false. Previously canceled errors have not been dropped: they were
+replaced exactly by active prefixes before this new largest class was
+chosen. If those cancellations removed all nonlinear occurrences of
+\(z\), the exit check instead retained its exact linear row.
+
+The charge lemma bounds the depth of every inner branch by the initial
+\(\mathcal M+\mathcal V\). Each node has finite branching. Thus the
+entire symbolic normalization tree can be generated before numerical
+tails are chosen. It contains finitely many interval, certificate,
+peeling and transfer labels, and finitely many coefficient bounds.
+
+\subsection{Residues, finite strips, and one-variable projection}
+
+Proposition~\ref{prop:entry-residues} converts every current field
+congruence modulo \(m\) into a finite Presburger condition on its
+original raw input modulo \(2m\). For example a long count has residue
+\(p(x)-c_\mu\), while a short entry has residue \(2p(x)-2k\).
+These are tables in \(x\bmod2m\). All occurrences of the same \(x\)
+use one shared residue. An optional explicit half-field can either use
+the corresponding table or its exact natural graph \(2h=f(q)\).
+The count annotations themselves introduce no such half-field atom.
+
+For a matrix in \(n\) coordinates, first generate all finite inner
+normalization trees and all current modular tables. Choose a common
+cutoff \(B\) above their source norms, affordability and comparison
+thresholds, prefix cutoffs, and domination margins. This maximum is
+effective because the symbolic closure is finite. It does not require
+finding an unknown first divergence or computing a descent length.
+
+If some coordinate is below \(B\), branch over each of its finitely
+many permitted values and substitute that same value throughout the
+matrix. All fields on it are now closed exact calculations, with their
+true definedness flags. The other coordinates stay unbounded: these
+branches cover whole infinite strips, not merely a finite cube. Each
+has one fewer coordinate and retains every earlier domain guard.
+
+On the all-large branch, identify equal coordinates or choose a strict
+base order. The order normalization and every pattern guard are linear
+in the greatest coordinate \(z\). Current congruences are ordinary
+Presburger congruences in the raw coordinates. Apply effective Presburger
+elimination to \(\exists z\), treating all lower-input fields as
+parameters \cite{cooper}. Its equivalence holds for every parameter
+assignment; substituting the actual correlated values preserves it.
+The resulting formula is in the same matrix language on \(n-1\)
+coordinates: coefficients and moduli may change, but arguments of fields
+do not change.
+
+New moduli are handled at the next, smaller-dimensional stage, with its
+own finite tails and complete small-input strips. There is no loop
+raising cutoffs at the same dimension. At zero coordinates use the
+exact closed evaluator. Induction on \(n\), together with the inner
+charge, proves termination and exactness. A universal block is the
+absence of an existential counterexample on the same original domain.
+Unique circuit extensions justify the initial flattening. This proves
+Theorem~\ref{thm:arithmetic}.
+
+\subsection{Two checks on the arithmetic mechanism}
+
+The identities
+\[
+ D_{\omega^2}(t)=f(t)/2+1,\qquad
+ 2D_{\omega^2}(t)-f(t)-1=1
+\]
+illustrate why full values, rather than literal half-values, must be
+grouped. The leading coefficient cancels, leaving the exact constant.
+For a transfer between distinct input ranks, put
+\(\mu=\omega^2\), \(\lambda=\omega^2\cdot2\), and \(y=f(x)\).
+The first move from \(\lambda+\omega\) reaches the \(\lambda\)-cut,
+so
+\[
+ D_{\lambda+\omega}(x)=1+D_\lambda(y).
+\]
+The two long-count prefixes have equal cores. Their collision transfers
+the higher-input count to the lower input with an exact difference of
+one. These are symbolic identities for the genuine control; no smaller
+numerical surrogate is used.
+
+The theorem concerns closed blocks. It does not establish quantifier
+elimination with retained free parameters in the same forward language.
+Indeed the unary quantifier-free formulas of the retained matrix language
+are eventually periodic, by the same order normalization and residue tables. The projection
+\(\exists z\,[x=f(z)]\) is an infinite set with unbounded gaps and
+is not eventually periodic. Thus a general projection theorem would
+need a richer output language. This distinction does not obstruct the
+closed counterexample sentences used for canonical comparison.
