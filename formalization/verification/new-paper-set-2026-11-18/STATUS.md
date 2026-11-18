@@ -1,10 +1,14 @@
 # Current comparison formalization status
 
-New-paper register: **43 checked, 124 pending / 167**. Historical register:
+New-paper register: **44 checked, 123 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper20 `cor:scalar-profile`: genuine initial simple residues, actual repeated
+  Cartier and original base-series constant formula at every permitted iterate.
+
 
 - Paper16 `lem:two-environments`: complete seven-family actual auxiliary-tree
   covariance, with typed pointwise related maps and finite-image fresh binders.
@@ -12,7 +16,6 @@ to this replacement collection. Old statuses do not transfer automatically.
 
 - Paper18 `f:lem:norm-arithmetic`: actual finite ordinal norm-ball enumeration,
   effective calibrated operations and all printed original-domain norm bounds.
-
 
 - Paper16 `lem:elementary`: actual ordinary targets, strict-to-weak inclusion
   and reflexivity for every typed signature-valid ordinary term.
@@ -156,6 +159,11 @@ prefix omission/permutation/expansion/refined-copy prerequisites are checked
 refinement admissibility is checked (82 modules), including In/Marked1/
 Marked2 reconstruction without ordinary-target contradiction or cut. Full
 marking transport/removal/markability reflection is checked (34 modules).
+Complete seven-family two-environment covariance is checked (60 modules).
+Arbitrary bound-block algebra and typed empty-context closedness are checked
+(56 modules), as is actual auxiliary splicing with explicit blocked-original
+call escape (58 modules). The complete prefix-escape endpoint still awaits
+its own staged assembly and exact gate.
 
 Paper17: near-control modular/orbit, full numerical growth and joint primitive
 recursion; factorial laws/orbit and a shared explicit finite-level bound.
@@ -183,7 +191,9 @@ and the actual total primitive-recursive highest-piece selector with complete
 none/some/max-piece/source-sign correctness is checked (86 modules). Actual
 Non-leading sensitive-unit oriented separation and arbitrary quadratic
 admission are checked (188 modules), deriving actual visits, resets, budgets
-and exceptions. Initial peeling, global phase visitation and the full equal-gap
+and exceptions. The complete initial original-unit phase is checked (210 modules), including
+actual synchronized first hits or oriented divergence and both exact quadratic
+exceptions. Global lower-phase visitation and the full effective equal-gap
 certificate remain pending. Actual linear-tail k-first-hit/norm-clock/
 terminal-relative-limit return, including k=0, is checked (186 modules).
 
@@ -237,5 +247,9 @@ numbered results. No arbitrary Laurent-coefficient or full-root/CI claim is made
 
 Initial higher principal-parts coverage is checked as supporting packet103
 (30 modules): full polynomial-part uniqueness, proper degree elimination and
-actual initial source coverage. Repeated Cartier higher-pole vanishing and
-the scalar-profile corollary remain pending.
+actual initial source coverage. Repeated Cartier higher-pole vanishing,
+simple-pole iteration, finite sums and initial principal reduction are checked
+as supporting packet106 (20 modules). The complete scalar-profile corollary
+is now checked by a fresh 56-module gate, genuine initial coefficient selection,
+source threshold and output assembly (packet108). Its trace-grouping and
+algorithmic prose are not credited by that numbered result.

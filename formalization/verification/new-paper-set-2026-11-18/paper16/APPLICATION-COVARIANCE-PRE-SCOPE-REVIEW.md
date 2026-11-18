@@ -1,0 +1,9 @@
+# Independent application-covariance pre-scope review
+
+Approved for proof development; all six frozen pins match. Read the complete printed application-covariance lemma/proof, actual original apply/applyAux syntax, separately defined unaryCalls, all five target predicates and dependency plan. No proof acceptance yet.
+
+FullApplication retains actual auxiliary weak source and positionwise occurrence-ordered argument comparisons, concrete common result typing and only right ORIGINAL full success. Its conclusion requires left ORIGINAL full success and actual auxiliary output comparison. There is no output-validity oracle, comparison cut or ordinary-target restriction.
+
+SourceSuccess must be proved by genuine source variable-spine inversion and typed domain checking before using unary staging. SuccessfulAuxPlugging is correctly one-way from a successful original aux call with newer++older accumulator to the substituted call; it does not assert the false converse when substitution exposes a functional value. SuccessfulUnaryStages similarly only goes from actual full success to unary fold equality. The separate unaryCalls definition preserves the semantic distinction, including the known blocked-full/staged-success example.
+
+The unary comparison proof must pay all actual E cases, including occurrence suppliers, fresh binder substitution and macro permutation. Selection's whole new owner Q argument, actual prefix escape and unrestricted sharp-admissibility form a legitimate non-cut dependency route; neither may be replaced with generic composition. The final fold requires both independently obtained original successes and concrete typed suffix/ordered-list transport. These exact source obligations match all printed assertions. Original caps and independent supplier/full final gates remain mandatory; no general associativity or staged-success converse is approved.

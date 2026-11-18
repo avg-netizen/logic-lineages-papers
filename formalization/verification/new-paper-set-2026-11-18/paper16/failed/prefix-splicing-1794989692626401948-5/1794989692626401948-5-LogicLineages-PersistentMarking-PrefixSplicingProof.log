@@ -1,0 +1,79 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PrefixSplicingProof.lean:15:4: error: Type mismatch: After simplification, term
+  hc
+ has type
+  some (substitute newer 0 (substitute older newer.length q)) = some w
+but is expected to have type
+  some (substitute (newer.append older) 0 q) = some w
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PrefixSplicingProof.lean:28:24: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.187 = ?m.187
+but is expected to have type
+  applyAux (Expr.bound σ i) (Args.cons a rest) (newer.append older) = none
+in the application
+  And.intro rfl
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PrefixSplicingProof.lean:31:47: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.cons` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `BitVec.cons`
+  [apply] `List.cons`
+  [apply] `List.Lex.cons`
+  [apply] `List.Pairwise.cons`
+  [apply] `List.Perm.cons`
+  [apply] `List.Sublist.cons`
+  [apply] `List.Lex.below.cons`
+  [apply] `List.Pairwise.below.cons`
+  [apply] `List.Perm.below.cons`
+  [apply] `List.Sublist.below.cons`
+  [apply] `Lean.Grind.AC.Seq.cons`
+  [apply] `NameBridge.AlphaArgs.cons`
+  [apply] `NameBridge.NamedBase.cons`
+  [apply] `NameBridge.NamedExtras.cons`
+  [apply] `Args.cons`
+  [apply] `BaseTyped.cons`
+  [apply] `CallTyped.cons`
+  [apply] `Coverage.cons`
+  [apply] `ExtrasTyped.cons`
+  [apply] `Matching.cons`
+  [apply] `Permutation.cons`
+  [apply] `Prefix.cons`
+  [apply] `PrefixCopies.cons`
+  [apply] `PrefixTuple.cons`
+  [apply] `RefinementBasesTree.cons`
+  [apply] `RefinementExtrasTree.cons`
+  [apply] `Whole.cons`
+  [apply] `NameBridge.AlphaArgs.below.cons`
+  [apply] `NameBridge.NamedBase.below.cons`
+  [apply] `NameBridge.NamedExtras.below.cons`
+  [apply] `BaseTyped.below.cons`
+  [apply] `CallTyped.below.cons`
+  [apply] `Coverage.below.cons`
+  [apply] `ExtrasTyped.below.cons`
+  [apply] `Matching.below.cons`
+  [apply] `Permutation.below.cons`
+  [apply] `Prefix.below.cons`
+  [apply] `PrefixCopies.below.cons`
+  [apply] `PrefixTuple.below.cons`
+  [apply] `Whole.below.cons`
+  [apply] `String.Slice.Pattern.Model.IsLongestMatchAtChain.cons`
+  [apply] `String.Slice.Pattern.Model.IsLongestRevMatchAtChain.cons`
+  [apply] `String.Slice.Pattern.Model.IsLongestMatchAtChain.below.cons`
+  [apply] `String.Slice.Pattern.Model.IsLongestRevMatchAtChain.below.cons`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PrefixSplicingProof.lean:44:8: error: Type mismatch: After simplification, term
+  hc
+ has type
+  some (Expr.marked g υ (substituteArgs newer 0 (substituteArgs older newer.length bs)) (Args.cons a rest)) = some w
+but is expected to have type
+  some (Expr.marked g υ (substituteArgs (newer.append older) 0 bs) (Args.cons a rest)) = some w
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PrefixSplicingProof.lean:52:8: error: Type mismatch: After simplification, term
+  hc
+ has type
+  some
+      (Expr.marked g υ (substituteArgs newer 0 (substituteArgs older newer.length bs))
+        ((substituteArgs newer 0 (substituteArgs older newer.length es)).append (Args.cons a rest))) =
+    some w
+but is expected to have type
+  some
+      (Expr.marked g υ (substituteArgs (newer.append older) 0 bs)
+        ((substituteArgs (newer.append older) 0 es).append (Args.cons a rest))) =
+    some w

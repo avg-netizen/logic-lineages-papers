@@ -1,0 +1,9 @@
+# Independent closed existential pre-scope review
+
+Approved as the complete current m:thm:existential comparator for proof development. All six frozen pins match. Read both new definition/target files, the source map and printed word-language/domain paragraphs and full theorem. No proof acceptance yet.
+
+The bound table is literal raw-name/natural lower-bound syntax; its empty-word atoms are conjoined outside the original Boolean tree. Exact syntax/code, original meaningfulness, conjunction truth and degree calibration are obligations, not assumed. Duplicate bounds and absent names are valid. Programs requires the actual PR adapter and joint computable concrete numeric solver, not pointwise oracle existence.
+
+GeneralizedDecision explicitly retains all original syntactic occurrence domains as well as bounds and matrix truth. SourceDecision separately removes those domain conjuncts under Adequate, which states exactly that every bounded valuation defines every original occurrence. This matches the printed requirement that individual bounds ensure all words are defined, including zero-coefficient and negated occurrences; it does not assume matrix truth or decidability. Thus the final source query has precisely the bound-only domain, unaffected by Boolean negation. The generalized interface additionally permits inadequate bounds without falsely calling their domain bound-only.
+
+The inherited literal finite-degree syntax includes signed shifts, actual f/V/coherent X/E compositions, shared raw names, signed rows and fixed congruences; no independent interior-word parameters are introduced. Final review must reconcile the actual total Machine solver and its recursive correctness suppliers. No parameter QE, arbitrary arithmetic, source-assignment frontend or computable bound-synthesis theorem is thereby claimed.

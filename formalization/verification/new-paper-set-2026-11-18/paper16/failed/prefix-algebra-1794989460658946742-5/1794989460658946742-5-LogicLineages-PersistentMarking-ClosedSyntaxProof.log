@@ -1,0 +1,55 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ClosedSyntaxProof.lean:23:51: error(lean.unknownIdentifier): Unknown identifier `τ`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ClosedSyntaxProof.lean:23:77: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.135 = ?m.135
+but is expected to have type
+  (if i < d then Expr.bound σ i
+    else
+      match vs.get (i - d) with
+      | some v => shift d 0 v
+      | none => Expr.bound σ (i - vs.length)) =
+    Expr.bound σ i
+in the application
+  ⟨?m.133, rfl⟩
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ClosedSyntaxProof.lean:39:44: error(lean.unknownIdentifier): Unknown identifier `τ`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ClosedSyntaxProof.lean:39:89: error(lean.unknownIdentifier): Unknown identifier `τ`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ClosedSyntaxProof.lean:50:19: error: Application type mismatch: The argument
+  congrArg Args.cons hh.left
+has type
+  Args.cons (shift k d q) = Args.cons q
+but is expected to have type
+  shiftArgs k d = Args.cons q
+in the application
+  congr (congrArg Args.cons hh.left)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ClosedSyntaxProof.lean:50:56: error: Application type mismatch: The argument
+  congrArg Args.cons hh.right
+has type
+  Args.cons (substitute vs d q) = Args.cons q
+but is expected to have type
+  substituteArgs vs d = Args.cons q
+in the application
+  congr (congrArg Args.cons hh.right)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ClosedSyntaxProof.lean:61:19: error: Application type mismatch: The argument
+  congrArg Args.cons hh.left
+has type
+  Args.cons (shift k d q) = Args.cons q
+but is expected to have type
+  shiftArgs k d = Args.cons q
+in the application
+  congr (congrArg Args.cons hh.left)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ClosedSyntaxProof.lean:61:56: error: Application type mismatch: The argument
+  congrArg Args.cons hh.right
+has type
+  Args.cons (substitute vs d q) = Args.cons q
+but is expected to have type
+  substituteArgs vs d = Args.cons q
+in the application
+  congr (congrArg Args.cons hh.right)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ClosedSyntaxProof.lean:23:56: warning: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵s̵h̵i̵f̵t̵,̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵,̵h̵b̵[̲s̲h̲i̲f̲t̲,̲ ̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲,̲ ̲h̲b̲ i τ h̵i̵,̵i̵f̵_̵t̵r̵u̵e̵]̵h̲i̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

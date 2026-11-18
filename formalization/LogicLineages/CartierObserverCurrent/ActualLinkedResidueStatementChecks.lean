@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.ActualLinkedResidueProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.ActualLinkedResidue.StatementChecks
+theorem fixed_completeActualResidue : Targets.CompleteActualResidue := completeActualResidue
+#audit_namespace LogicLineages.CartierObserverCurrent.ActualLinkedResidue.StatementChecks
+end LogicLineages.CartierObserverCurrent.ActualLinkedResidue.StatementChecks

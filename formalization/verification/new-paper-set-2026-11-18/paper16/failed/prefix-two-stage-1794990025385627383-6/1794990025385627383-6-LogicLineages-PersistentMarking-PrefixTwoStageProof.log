@@ -1,0 +1,58 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PrefixTwoStageProof.lean:15:26: error: Application type mismatch: The argument
+  hsecond
+has type
+  apply (substitute values 0 q) Args.nil = some w
+but is expected to have type
+  applyAux q (Args.nil.append Args.nil) values = some w
+in the application
+  Or.inl hsecond
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PrefixTwoStageProof.lean:40:8: error: Type mismatch
+  congrArg some (Eq.symm hout)
+has type
+  some (Expr.marked g ξ (substituteArgs values 0 bs) (Args.nil.append ((Args.cons a rest).append second))) = some w
+but is expected to have type
+  Option.map (fun τ => Expr.marked g τ (substituteArgs values 0 bs) (Args.cons a (rest.append second)))
+      (consumeTypes g.result (Args.cons a (rest.append second))) =
+    some w
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PrefixTwoStageProof.lean:50:8: error: Type mismatch
+  congrArg some (Eq.symm hout)
+has type
+  some
+      (Expr.marked g ξ (substituteArgs values 0 bs)
+        ((substituteArgs values 0 es).append ((Args.cons a rest).append second))) =
+    some w
+but is expected to have type
+  Option.map
+      (fun τ =>
+        Expr.marked g τ (substituteArgs values 0 bs)
+          ((substituteArgs values 0 es).append (Args.cons a (rest.append second))))
+      (consumeTypes σ (Args.cons a (rest.append second))) =
+    some w
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PrefixTwoStageProof.lean:39:40: warning: This simp argument is unused:
+  hconsume
+
+Hint: Omit it from the simp argument list.
+  simp only [̵A̵r̵g̵s̵.̵a̵p̵p̵e̵n̵d̵,̵a̵p̵p̵l̵y̵A̵u̵x̵,̵h̵c̵o̵n̵s̵u̵m̵e̵,̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵]̵[̲A̲r̲g̲s̲.̲a̲p̲p̲e̲n̲d̲,̲ ̲a̲p̲p̲l̲y̲A̲u̲x̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲m̲a̲p̲_̲s̲o̲m̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PrefixTwoStageProof.lean:39:49: warning: This simp argument is unused:
+  Option.map_some
+
+Hint: Omit it from the simp argument list.
+  simp only [̵A̵r̵g̵s̵.̵a̵p̵p̵e̵n̵d̵,̵a̵p̵p̵l̵y̵A̵u̵x̵,̵h̵c̵o̵n̵s̵u̵m̵e̵,̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵]̵[̲A̲r̲g̲s̲.̲a̲p̲p̲e̲n̲d̲,̲ ̲a̲p̲p̲l̲y̲A̲u̲x̲,̲ ̲h̲c̲o̲n̲s̲u̲m̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PrefixTwoStageProof.lean:49:40: warning: This simp argument is unused:
+  hconsume
+
+Hint: Omit it from the simp argument list.
+  simp only [̵A̵r̵g̵s̵.̵a̵p̵p̵e̵n̵d̵,̵a̵p̵p̵l̵y̵A̵u̵x̵,̵h̵c̵o̵n̵s̵u̵m̵e̵,̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵]̵[̲A̲r̲g̲s̲.̲a̲p̲p̲e̲n̲d̲,̲ ̲a̲p̲p̲l̲y̲A̲u̲x̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲m̲a̲p̲_̲s̲o̲m̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PrefixTwoStageProof.lean:49:49: warning: This simp argument is unused:
+  Option.map_some
+
+Hint: Omit it from the simp argument list.
+  simp only [̵A̵r̵g̵s̵.̵a̵p̵p̵e̵n̵d̵,̵a̵p̵p̵l̵y̵A̵u̵x̵,̵h̵c̵o̵n̵s̵u̵m̵e̵,̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵]̵[̲A̲r̲g̲s̲.̲a̲p̲p̲e̲n̲d̲,̲ ̲a̲p̲p̲l̲y̲A̲u̲x̲,̲ ̲h̲c̲o̲n̲s̲u̲m̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

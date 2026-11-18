@@ -1,0 +1,9 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/PrefixStageSupport.lean:20:11: error: Tactic `rfl` failed: The left-hand side
+  consumeTypes σ (Args.nil.append ys)
+is not definitionally equal to the right-hand side
+  (consumeTypes σ Args.nil).bind fun ρ => consumeTypes ρ ys
+
+case nil
+σ : Ty
+ys : Args
+⊢ consumeTypes σ (Args.nil.append ys) = (consumeTypes σ Args.nil).bind fun ρ => consumeTypes ρ ys

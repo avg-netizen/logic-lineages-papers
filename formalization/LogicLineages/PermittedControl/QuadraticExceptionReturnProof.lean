@@ -32,12 +32,12 @@ linear tail, with a genuine common return time. -/
     exact limitPart_tail _ (Ordinal.isSuccLimit_add P
       (Ordinal.isSuccLimit_mul_left Ordinal.isSuccLimit_omega0 hq)) _
   have hform' := heq.symm.trans hform
-  have hnext := descent_below f A hA
-  have hnext' := descent_below f A' hA'
+  have hnext : descentWith f A < epsilonZero := (descent_le f A hA).trans_lt hA
+  have hnext' : descentWith f A' < epsilonZero := (descent_le f A' hA').trans_lt hA'
   have hnon : Ordinal.omega0 ≤ P+Ordinal.omega0*((X/2 : Nat) : Ordinal) :=
     (Ordinal.omega0_le_of_isSuccLimit hPl).trans le_self_add
-  have hpartnext := absolute_limit_of_relative mu (descentWith f A) hnext (by rwa [hform])
-  have hpartnext' := absolute_limit_of_relative nu (descentWith f A') hnext' (by rwa [hform'])
+  have hpartnext := absolute_limit_of_relative mu (descentWith f A) hnext ((by rwa [hform] : Ordinal.omega0 ≤ actualLimitPart (descentWith f A-mu)).trans (Ordinal.mul_div_le _ _))
+  have hpartnext' := absolute_limit_of_relative nu (descentWith f A') hnext' ((by rwa [hform'] : Ordinal.omega0 ≤ actualLimitPart (descentWith f A'-nu)).trans (Ordinal.mul_div_le _ _))
   rw [hform] at hpartnext
   rw [hform'] at hpartnext'
   have hgenl : Order.IsSuccLimit (P+Ordinal.omega0*((X/2 : Nat) : Ordinal)) :=
@@ -59,12 +59,16 @@ linear tail, with a genuine common return time. -/
     have h := (Ordinal.mul_div_le A Ordinal.omega0)
     change actualLimitPart A ≤ A at h
     rw [hpart,add_zero] at h
-    exact (by simpa only [add_assoc] using (add_le_add_iff_left (mu+P)).mpr hw).trans h
+    have hx : (mu+P)+Ordinal.omega0 ≤ mu+(P+Ordinal.omega0^(2 : Ordinal)) := by
+      simpa only [add_assoc] using (add_le_add_iff_left (mu+P)).mpr hw
+    exact hx.trans h
   have hskip' : (nu+P)+Ordinal.omega0 ≤ A' := by
     have h := (Ordinal.mul_div_le A' Ordinal.omega0)
     change actualLimitPart A' ≤ A' at h
     rw [hpart',add_zero] at h
-    exact (by simpa only [add_assoc] using (add_le_add_iff_left (nu+P)).mpr hw).trans h
+    have hx : (nu+P)+Ordinal.omega0 ≤ nu+(P+Ordinal.omega0^(2 : Ordinal)) := by
+      simpa only [add_assoc] using (add_le_add_iff_left (nu+P)).mpr hw
+    exact hx.trans h
   refine ⟨1+X/2,firstEntry_prepend f A (mu+P) _ hskip hret.1,
     firstEntry_prepend f A' (nu+P) _ hskip' hret.2.1,?_,?_⟩
   · simpa only [Nat.add_comm 1,Function.iterate_succ_apply] using hret.2.2.1

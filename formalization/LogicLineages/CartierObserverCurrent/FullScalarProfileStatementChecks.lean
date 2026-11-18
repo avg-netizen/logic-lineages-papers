@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullScalarProfileProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullScalarProfile.StatementChecks
+theorem fixed_completeScalarProfile : Targets.CompleteScalarProfile := completeScalarProfile
+#audit_namespace LogicLineages.CartierObserverCurrent.FullScalarProfile.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullScalarProfile.StatementChecks

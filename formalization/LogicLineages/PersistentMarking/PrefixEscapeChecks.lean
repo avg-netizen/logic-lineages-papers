@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.PrefixEscapeProof
+namespace LogicLineages.PersistentMarking.PrefixEscapeChecks
+theorem exact_prefixEscape : AuxiliaryTargets.PrefixEscape := PrefixEscapeProof.prefixEscape
+#print axioms exact_prefixEscape
+end LogicLineages.PersistentMarking.PrefixEscapeChecks

@@ -1,0 +1,15 @@
+import LogicLineages.PersistentMarking.BoundBlockProof
+import LogicLineages.PersistentMarking.ClosedSyntaxProof
+import LogicLineages.PersistentMarking.PrefixResultProof
+namespace LogicLineages.PersistentMarking.PrefixAlgebraChecks
+theorem exact_blockComposition : PrefixEscapeSupportTargets.BlockComposition := BoundBlockProof.blockComposition
+theorem exact_blockArgsComposition : PrefixEscapeSupportTargets.BlockArgsComposition := BoundBlockProof.blockArgsComposition
+theorem exact_closedShift : PrefixEscapeSupportTargets.ClosedShift := ClosedSyntaxProof.closedShift
+theorem exact_closedSubstitute : PrefixEscapeSupportTargets.ClosedSubstitute := ClosedSyntaxProof.closedSubstitute
+theorem exact_prefixResult : PrefixEscapeSupportTargets.PrefixResult := PrefixResultProof.prefixResult
+#print axioms exact_blockComposition
+#print axioms exact_blockArgsComposition
+#print axioms exact_closedShift
+#print axioms exact_closedSubstitute
+#print axioms exact_prefixResult
+end LogicLineages.PersistentMarking.PrefixAlgebraChecks
