@@ -1,0 +1,7 @@
+# Independent aggregate/combine subset scope
+
+Read MarkedFamilyAggregateProof/Checks and MarkedFamilyCombineProof/Checks. All twenty-three original lattice pins match. Approve exact AggregateValid gate, followed by contingent exact CombineSuccess gate after its supplier passes; no final acceptance yet.
+
+Members derives every decoded output carrier membership from retained validity. mapMono uses actual hereditary join/meet upper/lower and least/greatest properties together with carrier transitivity, not a postulated family monotonicity law. Input-order same type/context equalities reconcile the actual coordinate domains; all input families supply semantic monotonicity. For (C), actual hereditary restriction preservation applies to the concrete list of source outputs, and each retained family's original coherence identifies the mapped restricted list with the weakened-parameter output list. No destination or family-law oracle is introduced. Both Bool branches and empty input lists remain covered by those universal properties.
+
+CombineSuccess invokes actual encodingComplete on the newly established valid aggregate, obtaining a successful some code, retention and valid-coordinate equality. Rewriting the literal getD expression with that success proves it is exactly this code, so the fallback is excluded internally. No whole-family lattice, arbitrary-subset completeness, operator or adequacy claim follows yet. No native execution by reviewer.

@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.MarkedFamilyCombineProof
+namespace LogicLineages.PersistentMarking.MarkedFamilyCombineChecks
+theorem exact_CombineSuccess : MarkedFamilyLatticeTargets.CombineSuccess := MarkedFamilyCombineProof.combineSuccess
+#print axioms exact_CombineSuccess
+end LogicLineages.PersistentMarking.MarkedFamilyCombineChecks

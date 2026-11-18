@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.MarkedFamilyLatticeProof
+namespace LogicLineages.PersistentMarking.MarkedFamilyLatticeChecks
+theorem exact_FullFamilyLattice : MarkedFamilyLatticeTargets.FullFamilyLattice := MarkedFamilyLatticeProof.full
+#print axioms exact_FullFamilyLattice
+end LogicLineages.PersistentMarking.MarkedFamilyLatticeChecks

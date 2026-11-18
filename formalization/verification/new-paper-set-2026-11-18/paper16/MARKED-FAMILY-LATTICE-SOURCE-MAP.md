@@ -1,0 +1,9 @@
+# Actual coherent-family finite complete lattice: eight families / twenty-three pins
+
+Source decision.tex81–97 explicitly asserts the complete finite lattice of monotone families satisfying(C). Prior exact parameter/coding/coherence packets pay literal actual source-head inventory coverage, original positional base types, canonical extras, all well-formed contexts/extensions and valid-coordinate extensional equality. No declaration or observation constraints added.
+
+This freeze uses the actual retained list from executable filtering, actual optional outputs for the order, and actual global hereditary output joins/meets at every coordinate. AggregateValid must prove carrier membership, monotonicity via actual output-domain universal properties, and(C) via already proved output restriction preserving arbitrary finite joins/meets. No same-type family-law premise or generic oracle. CombineSuccess explicitly excludes the optional encoding fallback before claiming retention/semantic identity. Empty input lists are mandatory, giving genuine coordinatewise bottom/top; empty parameter spaces remain literal one empty vector.
+
+Order antisymmetry uses valid-coordinate actual carrier antisymmetry and exact coding reconstruction, not off-schema equality. Join/Meet are complete universal properties on every finite input list. FiniteNonempty pays actual distinct retained enumeration and join[]. Complete quantifies arbitrary predicates on the actual finite carrier; classical finite filtering may be used only for this mathematical existential, not the executable builder or operations.
+
+FullFamilyLattice assembles all eight exactly. Final source gate must reconcile the actual source-head/input bridge with retained family parameters and independent(C); no constructor interpretation/operator/fixedpoint/adequacy or decidability credit follows. Independent exact review and target-only preflight precede proofs.

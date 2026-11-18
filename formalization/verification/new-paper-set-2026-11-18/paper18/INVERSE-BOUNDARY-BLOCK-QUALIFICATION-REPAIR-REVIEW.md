@@ -1,0 +1,3 @@
+# Independent proposed target qualification repair
+
+Inspected target Programs and both opened namespaces. The intended raw descriptor is explicitly defined as InverseBoundaryBlock.program; the unqualified program is ambiguous with the opened HyperCloseBlock namespace. Approve sole target `Computable program` → `Computable InverseBoundaryBlock.program`, matching LiteralCode and the source map. Preserve original failed target/freeze/receipt1795021543833386647-2 and change only this target pin. Applied exact-diff and full-pin confirmation required before retry. No semantic strengthening/narrowing or cap change; no native execution by reviewer.

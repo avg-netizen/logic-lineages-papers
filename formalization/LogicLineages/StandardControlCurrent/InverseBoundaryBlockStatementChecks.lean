@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.InverseBoundaryBlockProgramsProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.InverseBoundaryBlock.StatementChecks
+theorem full : InverseBoundaryBlockTargets.Full := InverseBoundaryBlockProof.full
+#print axioms full
+end LogicLineages.StandardControlCurrent.InverseBoundaryBlock.StatementChecks

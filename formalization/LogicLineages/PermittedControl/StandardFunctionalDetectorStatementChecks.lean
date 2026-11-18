@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.StandardFunctionalDetectorProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_standardFunctionalDetector : StandardFunctionalDetector.StandardFunctionalDetector :=
+  StandardFunctionalDetector.Proof.standardFunctionalDetector
+#print axioms fixed_standardFunctionalDetector
+end LogicLineages.PermittedControl.StatementChecks

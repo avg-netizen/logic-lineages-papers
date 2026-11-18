@@ -54,6 +54,11 @@ theorem graph_roundtrip {Γ ss} (g : DAG Γ ss) :
     rw [decode_type σ,decode_type τ]
     simp [reference_roundtrip]
 
+  case case ss Δ d τ ih =>
+    rw [decode_type τ]
+  case recursor ss Δ d τ ih =>
+    rw [decode_type τ]
+
 theorem input_roundtrip (d : Packed) : decode (encode d) = some d := by
   rcases d with ⟨Γ,τ,⟨ss,g,r⟩⟩
   unfold encode decode

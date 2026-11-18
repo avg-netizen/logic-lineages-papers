@@ -1,0 +1,7 @@
+# Independent authored full four-contract gate scope
+
+Read Targets, EffectiveProof and four exact StatementChecks aliases; inspected actual node_status/graph_status/check_eq_valid and primitive checker composition. All six frozen pins match. Approve fresh full supporting gate after the reported prerequisite passes, not final acceptance.
+
+The concrete seven-tag numeric checker checks payload arity, encoded types and bounded earlier references. node_status connects each actual constructor and malformed branch to dependent reconstruction success. graph_status respects tail-first newest-first table order; failed tails cannot recover success. check_eq_valid includes the actual packed root spec and type. Therefore valid_computable follows the real primitive checker by pointwise operational equality, not uniqueness or classical reification. reify_computable uses the proved literal decode-encode converse to compute exactly some original raw code on valid input, none otherwise. References and TypedRoundtrip preserve actual dependent nodes, sharing, repeated/unused references and roots, not merely unfolded denotation; exact graph length remains included.
+
+Full aliases are precisely References, TypedRoundtrip, Validation and Effective. Fresh final must reconcile complete roundtrip/converse/lookup/primitive/equivalence chains and preserved failures. This is raw DAG codec infrastructure, not full source compiler coverage or a polynomial complexity claim. No native execution by reviewer.

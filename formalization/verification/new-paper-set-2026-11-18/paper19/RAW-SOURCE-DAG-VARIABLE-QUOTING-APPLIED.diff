@@ -1,0 +1,63 @@
+--- RawSourceDAGRawValidatorDefinitions.lean
++++ RawSourceDAGRawValidatorDefinitions.lean
+@@ -7,7 +7,7 @@
+ /-- Bounds are checked separately: a default element never legitimizes an invalid index. -/
+ def lookup (ss : List RawSpec) (s : RawSpec) (i : Nat) : Bool :=
+   decide (i < ss.length) && decide (ss.getD i ([],0) = s)
+-def variable (Γ : List Nat) (t i : Nat) : Bool :=
++def «variable» (Γ : List Nat) (t i : Nat) : Bool :=
+   decide (i < Γ.length) && decide (Γ.getD i 0 = t)
+ /-- Literal seven-constructor checker; neither type decoding nor a semantic oracle occurs here. -/
+ def nodeValid (Γ : List Nat) (a : Node) (ss : List RawSpec) : Bool :=
+@@ -18,7 +18,7 @@
+   let y := args.getD 1 0
+   let z := args.getD 2 0
+   let tag := a.2.2.1
+-  if tag = 0 then decide (args.length = 1) && variable (Δ++Γ) t x
++  if tag = 0 then decide (args.length = 1) && «variable» (Δ++Γ) t x
+   else if tag = 1 then decide (args.length = 3) &&
+     lookup ss (Δ,SyntaxCode.arrowCode x t) y && lookup ss (Δ,x) z
+   else if tag = 2 then decide (args.length = 3) &&
+--- RawSourceDAGRawValidatorPrimitiveProof.lean
++++ RawSourceDAGRawValidatorPrimitiveProof.lean
+@@ -21,7 +21,7 @@
+   exact Primrec.and.comp (Primrec.nat_lt.comp hi (Primrec.list_length.comp hs)).decide
+     (Primrec.eq.comp ((Primrec.list_getD ([],0)).comp hs hi) ht).decide
+ 
+-theorem variable_primitive : Primrec (fun p : List Nat × Nat × Nat => variable p.1 p.2.1 p.2.2) := by
++theorem variable_primitive : Primrec (fun p : List Nat × Nat × Nat => «variable» p.1 p.2.1 p.2.2) := by
+   have hs : Primrec (fun p : List Nat × Nat × Nat => p.1) := Primrec.fst
+   have ht : Primrec (fun p : List Nat × Nat × Nat => p.2.1) := Primrec.fst.comp Primrec.snd
+   have hi : Primrec (fun p : List Nat × Nat × Nat => p.2.2) := Primrec.snd.comp Primrec.snd
+--- RawSourceDAGRawValidatorLookupProof.lean
++++ RawSourceDAGRawValidatorLookupProof.lean
+@@ -33,16 +33,16 @@
+ 
+ /-- Numeric acceptance is exactly success of the genuine dependent variable lookup. -/
+ theorem variable_status (Γ : List Ty) (τ : Ty) (i : Nat) :
+-    variable (Γ.map SyntaxCode.typeCode) (SyntaxCode.typeCode τ) i =
++    «variable» (Γ.map SyntaxCode.typeCode) (SyntaxCode.typeCode τ) i =
+       (getVariable Γ τ i).isSome := by
+   induction Γ generalizing i with
+-  | nil => simp [variable,getVariable]
++  | nil => simp [«variable»,getVariable]
+   | cons σ Γ ih =>
+       cases i with
+       | zero =>
+-          by_cases he : σ=τ <;> simp [variable,getVariable,he]
++          by_cases he : σ=τ <;> simp [«variable»,getVariable,he]
+       | succ i =>
+-          simpa [variable,getVariable] using ih i
++          simpa [«variable»,getVariable] using ih i
+ 
+ /-- Numeric acceptance is exactly success of the genuine dependent reference lookup. -/
+ theorem reference_status (ss : List Spec) (s : Spec) (i : Nat) :
+@@ -79,7 +79,7 @@
+   induction d <;> simp_all [encodeGraph,node,specCode]
+ 
+ @[simp] theorem variable_raw_status (Γ : List Ty) (Δ : List Nat) (t i : Nat) :
+-    variable (Δ ++ Γ.map SyntaxCode.typeCode) t i =
++    «variable» (Δ ++ Γ.map SyntaxCode.typeCode) t i =
+       (getVariable (Δ.map SyntaxCode.decodeType ++ Γ) (SyntaxCode.decodeType t) i).isSome := by
+   have h := variable_status (Δ.map SyntaxCode.decodeType ++ Γ) (SyntaxCode.decodeType t) i
+   simpa only [List.map_append,encode_types,encode_type] using h
