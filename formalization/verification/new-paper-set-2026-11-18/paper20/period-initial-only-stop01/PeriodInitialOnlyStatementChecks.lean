@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.PeriodInitialOnlyProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.PeriodInitialOnly.StatementChecks
+theorem fixed_initialResidue : Targets.InitialResidue := initialResidue
+#audit_namespace LogicLineages.CartierObserverCurrent.PeriodInitialOnly.StatementChecks
+end LogicLineages.CartierObserverCurrent.PeriodInitialOnly.StatementChecks

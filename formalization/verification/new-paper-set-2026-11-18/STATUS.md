@@ -1,10 +1,18 @@
 # Current comparison formalization status
 
-New-paper register: **50 checked, 117 pending / 167**. Historical register:
+New-paper register: **52 checked, 115 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper16 `thm:composition`: all four ordinary-endpoint weak/mixed/strict
+  composition laws, via actual cut and genuine successful marking transport.
+
+
+- Paper16 `thm:cut`: complete original ordinary-final cut, with arbitrary marks
+  in source/intermediate terms and both actual-count induction hypotheses paid.
+
 
 - Paper16 `lem:target-macros`: unrestricted target suffix removal, actual
   positional permutation and original-prefix-copy addition, without cut.
@@ -172,8 +180,7 @@ actual count preservation is checked (34 modules, one supporting alias).
 Actual Abs/FAbs fresh-name synchronization with equal auxiliary-tree count
 is checked (38 modules, two supporting aliases). Complete five-family
 conservative elimination is checked (77 modules), after proof-only splitting
-resolved the original memory-cap stops. Comparison cut,
-decision and height remain open. Actual owner
+resolved the original memory-cap stops. Decision and height remain open. Actual owner
 prefix omission/permutation/expansion/refined-copy prerequisites are checked
 (50 modules, four supporting aliases). Complete unrestricted-target
 refinement admissibility is checked (82 modules), including In/Marked1/
@@ -283,7 +290,9 @@ algorithmic prose are not credited by that numbered result.
 
 Latest supporting work: bounded ordinary-final cut edge/matching and
 weak-strict occurrence transports are checked; their actual right-witness
-size-bounded induction hypotheses are explicit, so full cut is not credited.
+size-bounded induction hypotheses are explicit. The complete original
+ordinary-final cut is now checked by a fresh177-module gate and independent
+review, discharging both hypotheses internally (packet142).
 The default-policy original-domain/source equality program is checked, as
 are arbitrary-computable-policy literal shape and constant/application
 constructor programs. Partial/abstraction and full policy-parametric source
@@ -291,7 +300,16 @@ assignment remain separate. Pure successor/limit, highest-piece geometry,
 terminal phase and actual divergence-to-first-entry order are checked; the
 complete effective equal-gap assembly remains pending.
 
-The actual-period theorem remains pending. A source-equivalent import-only
-target isolation passed the unchanged cap, but genuine generic Laurent proof
-load still hit that cap. Failed editions are preserved; further proof-only
-interface isolation requires review, with no legacy or resource-limit edits.
+The actual-period theorem remains pending. Reviewed removal of genuinely
+unused import branches allowed the generic Laurent and initial-residue proofs,
+then their original four-endpoint union, to pass unchanged caps (packet143).
+A separate full-period attempt stopped at the legacy tuple least-period proof;
+a source-faithful arithmetic/tuple proof split is under review. Every failed
+edition is preserved, with no legacy or resource-limit edits.
+
+The complete pure-phase effective comparison certificate is checked
+(242 modules, packet144): literal sign/tail programs and actual first-hit
+clocks/orbits are proved. Executable original-unit initial-pass classification
+and global equal-gap assembly remain pending. Genuine merely-Computable ranked
+recursion is checked (packet140); literal policy partial calibration has only
+development passes, so full policy-parametric source assignment is unclaimed.

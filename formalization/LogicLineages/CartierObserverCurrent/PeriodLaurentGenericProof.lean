@@ -1,8 +1,7 @@
 module
 public import LogicLineages.CartierObserverCurrent.PeriodLaurentGenericTargets
-public import LogicLineages.OrdinalComparison.TranslatedRationalProof
 public import LogicLineages.OrdinalComparison.HahnSquareProof
-public import LogicLineages.CartierObserverCurrent.BasicRationalProof
+public import LogicLineages.CartierObserverCurrent.PeriodDecompositionProof
 public meta import LogicLineages.Audit
 
 @[expose] public section
@@ -19,9 +18,12 @@ theorem laurentCoefficient : Targets.LaurentCoefficient.{u} := by
   let H := actualTranslatedRationalEmbedding z
   let a := Basic.actualRationalSquareRootDigit false f
   let b := Basic.actualRationalSquareRootDigit true f
+  have hpoly (P : Polynomial K) : H (algebraMap (Polynomial K) (RatFunc K) P) =
+      actualTranslatedPolynomialEmbedding z P :=
+    IsFractionRing.lift_algebraMap (actualTranslatedPolynomialInjective K z) P
   have hx : H Basic.rationalX = HahnSeries.single (1 : Int) 1 + HahnSeries.single (0 : Int) z := by
-    rw [Basic.rationalX, actualTranslatedRationalPolynomial, actualTranslatedPolynomialVariable]
-  have hf := congrArg H (Basic.actualRationalSquareRootDecomposition K f)
+    rw [Basic.rationalX, hpoly, actualTranslatedPolynomialVariable]
+  have hf := congrArg H (PeriodDecomposition.actualDecomposition K f)
   simp only [map_add, map_mul, map_pow] at hf
   change H f = (H a) ^ 2 + H Basic.rationalX * (H b) ^ 2 at hf
   rw [hx, add_mul] at hf

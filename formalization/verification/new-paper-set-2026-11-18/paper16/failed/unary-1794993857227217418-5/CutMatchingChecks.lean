@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.CutMatchingProof
+namespace LogicLineages.PersistentMarking.CutMatchingChecks
+theorem exact_weakWeak : CutOccurrenceTargets.WeakWeak := CutMatchingProof.weakWeak
+#print axioms exact_weakWeak
+end LogicLineages.PersistentMarking.CutMatchingChecks

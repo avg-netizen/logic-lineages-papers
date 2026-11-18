@@ -1,7 +1,8 @@
 module
 public import LogicLineages.CartierObserverCurrent.PeriodInitialOnlyTargets
 public import LogicLineages.OrdinalComparison.TranslatedRationalProof
-public import LogicLineages.OrdinalComparison.LinkedResidueLaurentProof
+public import LogicLineages.OrdinalComparison.LinkedResidueProof
+public import LogicLineages.OrdinalComparison.PrimitiveRootDerivativeProof
 public meta import LogicLineages.Audit
 
 @[expose] public section

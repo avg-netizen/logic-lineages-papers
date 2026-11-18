@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.OrdinaryCompositionProof
+namespace LogicLineages.PersistentMarking.OrdinaryCompositionChecks
+theorem exact_fullComposition : OrdinaryCompositionTargets.FullComposition := OrdinaryCompositionProof.fullComposition
+#print axioms exact_fullComposition
+end LogicLineages.PersistentMarking.OrdinaryCompositionChecks

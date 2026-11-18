@@ -1,0 +1,108 @@
+{
+  "gates": [
+    "LogicLineages.StandardControlCurrent.ComputableRecursionStatementChecks"
+  ],
+  "status": "verified",
+  "native_source_matched_modules": 4,
+  "errors": [],
+  "new_named_standard_axioms": {
+    "LogicLineages.StandardControlCurrent.ComputableRecursionStatementChecks.full": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "compiler_context": {
+    "compiler": "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/bin/lean",
+    "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "lean_path": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    "pins": {
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lake-manifest.json": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lakefile.toml": "c05684bc8b1905ebc2f1ccaa33f57fd5cb769350165dbd9614c18be7a63227a5",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lakefile.lean": null,
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lake-manifest.json": "28ee3c8d1f319b5da6b53636261d9f8a3048b057f6e1739824feefbc38968672",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lakefile.toml": "a5ae5498a1a8d2920079ce4e652af4b39c41d87b49a2ec3f80e50f27f348a697",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lakefile.lean": null
+    },
+    "external_objects": {
+      "Mathlib.Computability.Partrec": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/Partrec.olean": "33ec9c04fe2f6a894802ce234e8b700236f7fa75163825e0a8ccffe59cf4af0b",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/Partrec.olean.private": "43b94d551131a6df06a68759485fbbdf83cabb29e65af4e16ed696219e72f06f",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/Partrec.olean.server": "dd96c4fecfa1928b15c6a2a3a3df821ea3afa21e3b70581b7d393f455cc596d3",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/Partrec.ir": "c0d79ff08b0ea991ccfe18a7dd146ed6dad06ccb1197263195f94bf8576c7619"
+      },
+      "Mathlib.Computability.Primrec.List": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/Primrec/List.olean": "674d407df4643b6d4578c888f3d3ce2cde90441427a27e15ace33aabcf2fb464",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/Primrec/List.olean.private": "a246b2dba80542c1980291b6b02da3e28cd8a86a5828099ae8b20b9a4e5e9c78",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/Primrec/List.olean.server": "225114021d512e7020f2438de92a4a9f6b4995a009ad281659421ad117940ae2",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/Primrec/List.ir": "a006a4a18aedff002b550f265a6c5b15aa85847dcbdf5a199ac7ba644eea878d"
+      }
+    },
+    "selected_compiler": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550"
+  },
+  "modules": {
+    "LogicLineages.StandardControlCurrent.ComputableRecursionTargets": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/ComputableRecursionTargets.lean",
+      "source_sha256": "b3432d7f7167114d6ba7737f86ca9b0db30ef30ff7135f7f2296b6bc8c99d3f1",
+      "input_key": "c6354e3bfa13d9f4a065199cbfd51d5ce8833581c681ccb9caae36ea4508b1cb",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/StandardControlCurrent/ComputableRecursionTargets.ir": "f5a11e30f628b1007bf9fac52970d2f4d2a05cd92c85e929e778cd52109fd726",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/StandardControlCurrent/ComputableRecursionTargets.olean": "254fa2f4f7a5190bfc3ec895257530ff97bfc64b8038a3b990473da0f0921679",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/StandardControlCurrent/ComputableRecursionTargets.olean.private": "0fbb63630e4a1002707e6aa868aa8ea2dd093d6209527c871d15c9dfad8bcc56",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/StandardControlCurrent/ComputableRecursionTargets.olean.server": "b3bc1f283d4cab6e41dd06ce618134bf615d62ee7b8b1f6ef76a70f457ec7bf0"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794993293156815332-2.json",
+      "receipt_sha256": "9f733afb8f3e3af3b84487b4fd6cfe77c9f1680055992f75e1a5895fe8502ac9",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794993293156815332-2-LogicLineages-StandardControlCurrent-ComputableRecursionTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.StandardControlCurrent.ComputableFoldProof": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/ComputableFoldProof.lean",
+      "source_sha256": "66adc92db9335684df67bfffe435fcb90b7faad8153e2b04f580b8ec119137e0",
+      "input_key": "531256a59544dde006d2d72856f9c17dabf9368334e74f51c1cfe8c851653104",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/StandardControlCurrent/ComputableFoldProof.ir": "a04a26c61ded9ed7558414091cffe9ae6e116ed26b7dbd34f5314c967c3fdaff",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/StandardControlCurrent/ComputableFoldProof.olean": "c3c92bbebb7f8a7dc2493437e5bb7fe0969b394e5e2a123c2f2cf7af4b9e302c",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/StandardControlCurrent/ComputableFoldProof.olean.private": "8b180273019ecc70e013bf5fd990db18cc92faeb694fa191631578622ce3129a",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/StandardControlCurrent/ComputableFoldProof.olean.server": "a56205399ea0d7aa72bd7dd65d194a57c6b5f52ce7b05c64340a2c97fc9ab50d"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794993293156815332-2.json",
+      "receipt_sha256": "9f733afb8f3e3af3b84487b4fd6cfe77c9f1680055992f75e1a5895fe8502ac9",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794993293156815332-2-LogicLineages-StandardControlCurrent-ComputableFoldProof.log",
+      "log_sha256": "642c399dbdfee18e0ffa640d788d1e0e90d3ddfbeabfd0ebea3890d36bfa6ede"
+    },
+    "LogicLineages.StandardControlCurrent.ComputableRankedProof": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/ComputableRankedProof.lean",
+      "source_sha256": "cfa9d482ac8e2d38a832cf86ac1e3e2e631615fcd8fd9ddb2398d936477fa86d",
+      "input_key": "c978fb70b961b0b00c4710cd2079b89d758f2fb97016f5f289ca850b0a06d579",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/StandardControlCurrent/ComputableRankedProof.ir": "e97e92166709115abbe0c34b4b7656502bc208c48a6338d1dcd5036d440ee217",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/StandardControlCurrent/ComputableRankedProof.olean": "76f37b45a74c46a115ae27789cf4106861dc15fb8216df359b8e9107823ffce9",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/StandardControlCurrent/ComputableRankedProof.olean.private": "5a766bd202d51d3097dd35241900e4defa4fcd242c9dbc465c531d91bd636612",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/StandardControlCurrent/ComputableRankedProof.olean.server": "4a1f771a1fb3aea6423b530471410b80ced6950e85037f6a19cdbd42ba92935c"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794993499916306756-2.json",
+      "receipt_sha256": "03f5ffabbf412e9dd1cc1094a71d7921ed3f2851b7c4cef76dd16aeae38fa846",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794993499916306756-2-LogicLineages-StandardControlCurrent-ComputableRankedProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.StandardControlCurrent.ComputableRecursionStatementChecks": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/ComputableRecursionStatementChecks.lean",
+      "source_sha256": "c9943e99eee6bf5ff24e9bbc4e4223863399b405255bae43977facdd51028a89",
+      "input_key": "543bf16abdb5d6786e451eea274b738ed2299072ceb8a49394b5d733d31acf65",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/StandardControlCurrent/ComputableRecursionStatementChecks.ir": "aa9b1924ba8120cc8cc88f88a2eab9478a16e2686f233fe3ab5a6b96dd5c100d",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/StandardControlCurrent/ComputableRecursionStatementChecks.olean": "30d987b564ac58fb805e48a16e9808d7ee1750d0bcee7b115ec69bcc22daa479",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/StandardControlCurrent/ComputableRecursionStatementChecks.olean.private": "7ea4504d046e00b8fc3401bb1427774de1512248bab858a4a89331485f6b32dd",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/StandardControlCurrent/ComputableRecursionStatementChecks.olean.server": "a442f5b0b0056d724629d1823982490abc26eff749028e2db85a50a482722aea"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794993499916306756-2.json",
+      "receipt_sha256": "03f5ffabbf412e9dd1cc1094a71d7921ed3f2851b7c4cef76dd16aeae38fa846",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794993499916306756-2-LogicLineages-StandardControlCurrent-ComputableRecursionStatementChecks.log",
+      "log_sha256": "a7c3a0027b940f9baabe3d1f7548a5656f50367437402d8fd11d66a728a94eb5"
+    }
+  },
+  "limits": "Focused closure only. Does not certify paper correspondence or a full-root build. Imported axioms are certified through actual new named declaration closures."
+}

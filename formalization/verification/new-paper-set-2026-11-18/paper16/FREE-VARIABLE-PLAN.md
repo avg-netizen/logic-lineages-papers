@@ -1,0 +1,9 @@
+# Free-variable containment exact source scope
+
+Source ordering.tex lem:fv, lines170–181. Full endpoint is both original Weak and Strict target-to-source containment of typed free names, expressed using existing freeOccurs=true. Source may be marked, matching the printed unqualified lemma; no substitution/context/confined claim is bundled.
+
+Proof route: internally establish absence preservation by original simultaneous weak/strict/matching/multiset/coverage/whole induction, then Boolean contrapositive yields exact containment. Raw bound substitution preserves absence when input and inserted values omit the name, and reflects absence in the original term (it does not replace free variables). Successful original-spine application creates no free name outside original source and supplied tuple; prove directly by applyAux recursion with explicit accumulated values, not any associativity law. Owner copies retain exactly source base/extras names. Actual At/Remove/Split witnesses transport absence and multiplicity; strict removed lists may be empty only where the original rules permit it.
+
+For Abs/FAbs, if observed name is the fresh opening name, original target freshness pays the claim. Otherwise source absence plus distinct opening name gives opened-source absence; the real child IH gives opened-target absence, and raw substitution reflection gives body absence. FAbs includes its actual appended fresh variable. Marking preserves free names by already checked markNames. Selection uses the actual selected occurrence and successful raw full-call absence result. No free-variable-containment oracle, no name substitution conflation, no ordinary-source restriction.
+
+Raw helper targets are frozen as supporting laws; the full source gate will check both original relation endpoints together. Structural-stability context handling, especially named binder capture versus locally nameless closing, remains separately scoped rather than silently restricted.
