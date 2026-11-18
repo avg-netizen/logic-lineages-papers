@@ -1,0 +1,10 @@
+import LogicLineages.PersistentMarking.HereditaryEncodingCongruenceProof
+import LogicLineages.PersistentMarking.HereditarySemanticOrderProof
+namespace LogicLineages.PersistentMarking.HereditaryOrderFoundationChecks
+theorem exact_EncodingCongruence : HereditaryOrderTargets.EncodingCongruence := HereditaryEncodingCongruenceProof.congruence
+theorem exact_CodeInjective : HereditaryOrderTargets.CodeInjective := HereditaryEncodingCongruenceProof.injective
+theorem exact_SemanticOrderLaws : HereditaryOrderTargets.SemanticOrderLaws := HereditarySemanticOrderProof.laws
+#print axioms exact_EncodingCongruence
+#print axioms exact_CodeInjective
+#print axioms exact_SemanticOrderLaws
+end LogicLineages.PersistentMarking.HereditaryOrderFoundationChecks

@@ -1,0 +1,10 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/MixedRunnerBlockProof.lean:107:3: error: Application type mismatch: The argument
+  ActiveHyperProof.actualCoefficientCollisionBound
+has type
+  ActiveHyperTargets.ActualCoefficientCollisionBound
+but is expected to have type
+  ∀ (e h k : ℤ) (a : ℕ) (n : ℤ),
+    LayeredComparison.SnyatkovHyperCollision.translatedValue (n + e).toNat h ≤ a * Phi (n + k).toNat →
+      n < ↑(ActiveHyper.bound e h k a)
+in the application
+  And.intro ActiveHyperProof.actualCoefficientCollisionBound

@@ -1,0 +1,9 @@
+# Selected level-two contradiction and fresh polynomial-undecidability supplier gate
+
+Next two staged packets, neither alone completes full thm:functional-hardness (level3 single query still absent).
+
+First supporting generic selected finite-query pullback: any fixed ctrl/policy, actual SelectedFiniteQuery.FiniteQueryReduction strict and HasComparisonDecider ctrl policy2 strict imply ComputablePred encodedPolynomialSolvable. These are explicitly hypothetical reduction/decider premises of a generic helper, not a hardness endpoint. Reuse only literal HardnessDecision.allAnswers and pure conjunctionMeaning/conjunctionComputable (actual recursive Boolean fold). Every supplied query is genuine/level bounded before hypothetical algorithm use. All answers true means UNSAT, complement once to SAT. No quantifier switch or independent query policies.
+
+Second exact fresh source supplier: freeze current source polynomial-system domain plus actual UndecidabilityDefinitions/Targets, H10ReductionTargets, Diophantine target and actual encoded polynomial language. Fresh alias to genuine SystemUndecidabilityProof.polynomialSystemUndecidable must rebuild/verify entire transitive source closure under original caps and get independent final mathematical/domain review, not only standard-axiom scan. Existing statement-domain audit is preliminary only; preserve invalid decode/out-of-range refs, zero polynomial unknowns, arbitrary integer coefficients and exact finite-system/H10 coding. No new theorem premise.
+
+After both and actual selected FiniteQuery are independently final, assemble no HasComparisonDecider for strict and weak for EVERY selected control and every fixed policy, plus exact computable finite-query reductions. This is the full printed level2 clause but remains supporting to whole thm:functional-hardness until level3 is paid. No unchangedG inference from SelectedWithThreshold. No parked threshold dependency.

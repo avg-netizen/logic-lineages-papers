@@ -1,0 +1,5 @@
+# Exact pre-scope review
+Approved eleven-family supporting conjunction / eight frozen pins; all pins checked. Read actual Definitions/Targets and source map.
+Reverse requires actual low-end reconstruction and x-free anchor only, with original signed guard and arbitrary full Matrix. Linear retains i!=j; Active includes i=j. Actual guards carry nonlinear occurrence hypotheses, not hidden source-wide eligibility. Source strict upper comparison is explicitly strengthened to nonstrict supplier comparison.
+Reduction binds the literal shared-update existsNames semantics, requires Nodup and eliminated-name membership, and concludes exact erase length, strict decrease, Nodup and external support. Residual bound-name correlations are retained. LiteralCode covers erased list plus complete resulting matrix; Programs covers raw constructors jointly and actual numerical PR bounds.
+Proof must pay actual supplier closure and all raw code calibration. No exhaustive partition, same-name linear coverage, normalized grammar closure, modular elimination or arbitrary-alternation decision credit. Fresh proof/native/final required.

@@ -1,0 +1,1 @@
+Applied diff independently confirmed: precisely the approved single qualifier addition, target SHA808c190ffee0524b1808413cbe313082b7473bfb10c7514f310b856091d55abd. All eight current pins verified. No mathematical target change. Fresh parent-authorized retry permitted; no native run by reviewer.

@@ -1,0 +1,2 @@
+# Annotation-only repair approval
+Current SourceASTDefinitions matches preserved original exactly. Read callValue: expected valuation domain is Variable [] .ground. Approve sole annotation of its empty valuation binder from fun x => nomatch x to fun x : Variable [] .ground => nomatch x. No constructor, RHS operation, source-call context, semantics or target edit. Refresh only Definitions source pin among five after preserving original. Applied exact diff/hash confirmation required before fresh parent retry. No proof acceptance/native by reviewer.

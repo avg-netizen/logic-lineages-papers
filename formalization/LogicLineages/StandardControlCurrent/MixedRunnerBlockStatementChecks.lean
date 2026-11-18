@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.MixedRunnerBlockProgramsProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.MixedRunnerBlockStatementChecks
+theorem full : MixedRunnerBlockTargets.Full := MixedRunnerBlockProof.full
+#print axioms full
+end LogicLineages.StandardControlCurrent.MixedRunnerBlockStatementChecks

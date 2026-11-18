@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.SelectedPolynomialPatternsProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_selectedPolynomialPatterns : SelectedPolynomialPatternsTargets.SelectedPolynomialPatterns :=
+  SelectedPolynomialPatterns.Proof.selectedPolynomialPatterns
+#print axioms fixed_selectedPolynomialPatterns
+end LogicLineages.PermittedControl.StatementChecks

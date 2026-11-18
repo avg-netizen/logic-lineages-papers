@@ -1,0 +1,7 @@
+# Actual hereditary lattice support contracts
+
+Source: Paper16 decision.tex, finite-lattices lemma and hereditary domains. Original thirteen-family target unchanged. Six supporting targets: AggregateValid, CombineEncoding, AggregateOrder, AggregateCongruence, AggregateRestriction, LatticeStep.
+
+aggregate uses actual descriptor residual join/meet on every full tuple and literal finite any/all bits, including empty lists. LowerLattice is strictly proper-type and actual global descriptor, not a generic lattice callback. Actual PartialOrder is already separately proved. AggregateValid must pay full tuple monotonicity and restriction naturality from proper-result lattice laws; CombineEncoding must pay real layout order, filterMap completeness and valid output indices. AggregateRestriction has no lower hypothesis: original global restriction gives pointwise ValueEq, then list congruence suffices. LatticeStep proves current join/meet closure and universal properties before current restriction preservation, preventing same-type circularity. Final actual type-size induction discharges every lower premise. CarrierNonempty from join []; arbitrary Complete via finite carrier predicate filtering is a mathematical existence conclusion, not an executable classical oracle.
+
+No new availability/observation coherence, no lost full prefix or off-schema equality, no marked-family or algorithm adequacy credit.

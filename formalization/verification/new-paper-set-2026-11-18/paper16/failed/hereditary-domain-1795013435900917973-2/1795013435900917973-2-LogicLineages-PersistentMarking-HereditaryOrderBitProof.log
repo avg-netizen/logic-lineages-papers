@@ -1,0 +1,44 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryOrderBitProof.lean:61:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  lookup (schema σ (lowerCodes σ (canonicalLower E σ)) E.types E.names E.ports E.target Γ) a { context := Δ, kind := k }
+in the target expression
+  (match lookup (layout E σ (canonicalLower E σ) Γ) a { context := Δ, kind := k },
+        lookup (layout E σ (canonicalLower E σ) Γ) b { context := Δ, kind := k } with
+      | some i, some j => decide (i ≤ j)
+      | x, x_1 => false) =
+      true ↔
+    bit (HereditaryDomainSemantics.decode E σ Γ a) Δ k = true →
+      bit (HereditaryDomainSemantics.decode E σ Γ b) Δ k = true
+
+E : Environment
+σ : Ty
+Γ Δ : Context
+a b : Code
+hw : WellFormed E.types E.ports Δ
+he : Extends Γ Δ
+ha : a ∈ (descriptor E σ).carriers Γ
+hb : b ∈ (descriptor E σ).carriers Γ
+k : Kind
+hk : k ∈ bits E σ Δ
+hm : ({ context := Δ, kind := k }, 2) ∈ layout E σ (canonicalLower E σ) Γ
+hd :
+  List.Pairwise (fun x1 x2 => x1 ≠ x2)
+    (List.map Prod.fst (schema σ (lowerCodes σ (canonicalLower E σ)) E.types E.names E.ports E.target Γ))
+i : Nat
+hi :
+  lookup (schema σ (lowerCodes σ (canonicalLower E σ)) E.types E.names E.ports E.target Γ) a
+      { context := Δ, kind := k } =
+    some i
+hib : i < 2
+j : Nat
+hj :
+  lookup (schema σ (lowerCodes σ (canonicalLower E σ)) E.types E.names E.ports E.target Γ) b
+      { context := Δ, kind := k } =
+    some j
+hjb : j < 2
+⊢ (match lookup (layout E σ (canonicalLower E σ) Γ) a { context := Δ, kind := k },
+        lookup (layout E σ (canonicalLower E σ) Γ) b { context := Δ, kind := k } with
+      | some i, some j => decide (i ≤ j)
+      | x, x_1 => false) =
+      true ↔
+    bit (HereditaryDomainSemantics.decode E σ Γ a) Δ k = true →
+      bit (HereditaryDomainSemantics.decode E σ Γ b) Δ k = true

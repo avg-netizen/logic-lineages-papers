@@ -1,0 +1,6 @@
+# Exact supporting pre-scope
+Approved three contracts / five verified frozen pins. Read actual Term constructors, eval, CPS emit and Targets. Arithmetic is nonflattened with unary actual supplied closed sources on general recursively compiled expressions; source leaves retain actual typed Input and shared free-name renaming. Addition compiles both arguments once, composes typed embeddings and renames the first returned port through the second context. Unary explicitly adds zero into a fresh slot then calls the actual source; the four-unit cost accounts for it.
+
+Semantic is honestly conditional on a continuation specification for every compatible typed extension, not arbitrary selected continuation truth. Later real Boolean/formula continuation must instantiate that premise. Same p/f, arbitrary original valuation and rawScalar-minus-one convention retained. Actual observation/call renaming and source-table preservation must be proved, not assumed. Cost and SourceTables also retain explicit uniform continuation bounds; they concern AST occurrence measures, not shared DAG or serialized complexity.
+
+No Boolean AST/prefix coverage, full source grammar theorem, raw encoded computation/reconstruction or final compiler promotion. Fresh proofs/native/final required.
