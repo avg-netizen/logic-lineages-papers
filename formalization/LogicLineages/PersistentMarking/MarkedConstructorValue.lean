@@ -4,7 +4,7 @@ open Spine NameBridge DecisionPorts HereditaryDomainCode HereditaryDomainSemanti
 open MarkedFamilyParameters (Parameter)
 
 /-- New observation fields; all premises and tuple outputs read only previous M. -/
-def build (S : Signature) (E : Environment) (heads : List Head) (M : Code) (p : Parameter) : Value where
+def build (S : Signature) (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) : Value where
   available _ := true
   weak Δ t := MarkedConstructorTests.weakTest S E heads M (MarkedFamilyCoherence.weakenParameter E p Δ) t
   strict Δ t := MarkedConstructorTests.weakTest S E heads M (MarkedFamilyCoherence.weakenParameter E p Δ) t

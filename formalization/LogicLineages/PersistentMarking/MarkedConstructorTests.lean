@@ -31,18 +31,18 @@ def multiset (E : Environment) (Γ : Context) (bs : List MarkedExtras.Tagged) (t
   (splits bs).any fun source => !source.2.isEmpty &&
     (splits ts).any fun target => matching E Γ source.1 target.1 && coverage E Γ source.2 target.2
 
-def owner (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (τ : Ty) : Option Code :=
+def owner (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (τ : Ty) : Option FiniteDomainSchema.Code :=
   StructuralActions.markedAction E heads M (p.1,τ,p.2.2.1,p.2.2.2.1,p.2.2.2.2)
 
-def ownerTuple (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (ds : List Ty) : Option (List Code) :=
+def ownerTuple (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (ds : List Ty) : Option (List FiniteDomainSchema.Code) :=
   ds.mapM (owner E heads M p)
 
-def whole (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (ts : List Expr) : Bool :=
+def whole (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (ts : List Expr) : Bool :=
   ts.all fun t => match owner E heads M p t.type with
     | none => false
     | some c => (HereditaryDomainSemantics.decode E t.type p.2.2.1 c).weak p.2.2.1 t
 
-def selected (E : Environment) (heads : List Head) (M : Code) (p : Parameter)
+def selected (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter)
     (a : MarkedExtras.Tagged) (ds : List Ty) (t : Expr) : Bool :=
   match ds with
   | [] => bit false E p.2.2.1 a t
@@ -52,7 +52,7 @@ def selected (E : Environment) (heads : List Head) (M : Code) (p : Parameter)
       let c := StructuralActions.fullAction E a.1 p.2.2.1 a.2 ds p.2.1 xs
       (HereditaryDomainSemantics.decode E p.2.1 p.2.2.1 c).weak p.2.2.1 t
 
-def selectTest (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (t : Expr) : Bool :=
+def selectTest (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (t : Expr) : Bool :=
   (p.1.arguments.zip p.2.2.2.1 ++ p.2.2.2.2).any fun a =>
     (([],a.1)::fullPrefixes a.1).any fun suffix =>
       decide (suffix.2=p.2.1) && selected E heads M p a suffix.1 t
@@ -67,12 +67,12 @@ def precedes (S : Signature) (f g : Head) : Bool :=
   | some a,some b => decide (b<a)
   | _,_ => false
 
-def copyTest (S : Signature) (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (t : Expr) : Bool :=
+def copyTest (S : Signature) (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (t : Expr) : Bool :=
   match t with
   | .head g ts => decide (g.result=p.2.1) && precedes S p.1 g && whole E heads M p (terms ts)
   | _ => false
 
-def statTest (S : Signature) (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (t : Expr) : Bool :=
+def statTest (S : Signature) (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (t : Expr) : Bool :=
   match t with
   | .head g ts => decide (g.result=p.2.1) && equivalent S p.1 g &&
       multiset E p.2.2.1 (p.1.arguments.zip p.2.2.2.1) (terms ts) && whole E heads M p (terms ts)
@@ -84,7 +84,7 @@ def fabsParameter (E : Environment) (p : Parameter) (σ τ : Ty) (i : Nat) : Par
   let v := ProtectedSpineEnvironment.literalCode E Θ σ (portName E.names i)
   (p.1,τ,Θ,w.2.2.2.1,StructuralActions.insertExtras E Θ w.2.2.2.2 [(σ,v)])
 
-def fabsTest (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (t : Expr) : Bool :=
+def fabsTest (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (t : Expr) : Bool :=
   match p.2.1,t with
   | .arrow σ τ,.lam ρ body =>
     if σ=ρ then match ProtectedSpineEnvironment.openingSlot p.2.2.1 with
@@ -98,6 +98,6 @@ def fabsTest (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (t
     else false
   | _,_ => false
 
-def weakTest (S : Signature) (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (t : Expr) : Bool :=
+def weakTest (S : Signature) (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (t : Expr) : Bool :=
   selectTest E heads M p t || copyTest S E heads M p t || statTest S E heads M p t || fabsTest E heads M p t
 end LogicLineages.PersistentMarking.MarkedConstructorTests

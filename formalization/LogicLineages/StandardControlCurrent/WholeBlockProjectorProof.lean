@@ -1,0 +1,9 @@
+module
+public import LogicLineages.StandardControlCurrent.WholeBlockProjectorSemanticProof
+public import LogicLineages.StandardControlCurrent.WholeBlockProjectorDispatchProof
+public import LogicLineages.StandardControlCurrent.WholeBlockProjectorProjectionProof
+public import LogicLineages.StandardControlCurrent.WholeBlockProjectorInitializedProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.WholeBlockProjectorProof
+theorem full : WholeBlockProjectorTargets.Full := ⟨semantics,dispatch,projection,initialized⟩
+end LogicLineages.StandardControlCurrent.WholeBlockProjectorProof

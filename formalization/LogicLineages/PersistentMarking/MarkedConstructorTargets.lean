@@ -21,11 +21,11 @@ def Replaces (E : Environment) (Γ : Context) (bs : List MarkedExtras.Tagged) (t
     removed ≠ [] ∧ Matches E Γ kept matched ∧
     ∀ t, t ∈ added → ∃ a, a ∈ removed ∧ MarkedConstructorTests.bit true E Γ a t = true
 
-def WholeWitness (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (ts : List Expr) : Prop :=
+def WholeWitness (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (ts : List Expr) : Prop :=
   ∀ t, t ∈ ts → ∃ c, MarkedConstructorTests.owner E heads M p t.type = some c ∧
     (HereditaryDomainSemantics.decode E t.type p.2.2.1 c).weak p.2.2.1 t = true
 
-def SelectWitness (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (t : Expr) : Prop :=
+def SelectWitness (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (t : Expr) : Prop :=
   ∃ a, a ∈ p.1.arguments.zip p.2.2.2.1 ++ p.2.2.2.2 ∧
     ((a.1=p.2.1 ∧ MarkedConstructorTests.bit false E p.2.2.1 a t = true) ∨
      ∃ ds xs, (ds,p.2.1) ∈ fullPrefixes a.1 ∧
@@ -33,7 +33,7 @@ def SelectWitness (E : Environment) (heads : List Head) (M : Code) (p : Paramete
        (HereditaryDomainSemantics.decode E p.2.1 p.2.2.1
          (StructuralActions.fullAction E a.1 p.2.2.1 a.2 ds p.2.1 xs)).weak p.2.2.1 t = true)
 
-def FAbsWitness (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (t : Expr) : Prop :=
+def FAbsWitness (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (t : Expr) : Prop :=
   ∃ σ τ body i c, p.2.1 = .arrow σ τ ∧ t = .lam σ body ∧
     ProtectedSpineEnvironment.openingSlot p.2.2.1 = some i ∧
     StructuralActions.markedAction E heads M (MarkedConstructorTests.fabsParameter E p σ τ i) = some c ∧

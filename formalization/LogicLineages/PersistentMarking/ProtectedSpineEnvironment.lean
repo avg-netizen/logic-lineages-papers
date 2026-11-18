@@ -3,14 +3,14 @@ namespace LogicLineages.PersistentMarking.ProtectedSpineEnvironment
 open Spine NameBridge DecisionPorts HereditaryDomainCode HereditaryDomainSemantics
 
 /-- Codes are rooted at the ambient context supplied to the interpreter. -/
-abbrev FreeValues := List (Name × Code)
-abbrev BoundValues := List (Ty × Code)
+abbrev FreeValues := List (Name × FiniteDomainSchema.Code)
+abbrev BoundValues := List (Ty × FiniteDomainSchema.Code)
 
-def lookupFree : FreeValues → Name → Option Code
+def lookupFree : FreeValues → Name → Option FiniteDomainSchema.Code
   | [], _ => none
   | (a,c)::rest, b => if a=b then some c else lookupFree rest b
 
-def lookupBound (values : BoundValues) (σ : Ty) (i : Nat) : Option Code := do
+def lookupBound (values : BoundValues) (σ : Ty) (i : Nat) : Option FiniteDomainSchema.Code := do
   let p ← values[i]?
   if p.1=σ then some p.2 else none
 
@@ -36,13 +36,13 @@ def literal (E : Environment) (σ : Ty) (x : Nat) : Value where
   strict _ _ := false
   application Δ _ τ _ := StructuralActions.bottom E τ Δ
 
-def literalCode (E : Environment) (Γ : Context) (σ : Ty) (x : Nat) : Code :=
+def literalCode (E : Environment) (Γ : Context) (σ : Ty) (x : Nat) : FiniteDomainSchema.Code :=
   HereditaryDomainSemantics.encode E σ Γ (literal E σ x)
 
-def freeCode (E : Environment) (Γ : Context) (values : FreeValues) (σ : Ty) (x : Nat) : Code :=
+def freeCode (E : Environment) (Γ : Context) (values : FreeValues) (σ : Ty) (x : Nat) : FiniteDomainSchema.Code :=
   (lookupFree values (σ,x)).getD (literalCode E Γ σ x)
 
-def boundCode (E : Environment) (Γ : Context) (values : BoundValues) (σ : Ty) (i : Nat) : Code :=
+def boundCode (E : Environment) (Γ : Context) (values : BoundValues) (σ : Ty) (i : Nat) : FiniteDomainSchema.Code :=
   (lookupBound values σ i).getD (StructuralActions.bottom E σ Γ)
 
 /-- Consume the literal full type tuple, not successive semantic calls. -/
@@ -51,9 +51,9 @@ def residualType : Ty → List Ty → Option Ty
   | .ground, _::_ => none
   | .arrow σ τ, ρ::ds => if σ=ρ then residualType τ ds else none
 
-def originalHeadCall (E : Environment) (heads : List Head) (M : Code) (Γ : Context)
-    (f : Head) (σ : Ty) (base : List Code) (extras : List MarkedExtras.Tagged)
-    (domains : List Ty) (values : List Code) (τ : Ty) : Code :=
+def originalHeadCall (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (Γ : Context)
+    (f : Head) (σ : Ty) (base : List FiniteDomainSchema.Code) (extras : List MarkedExtras.Tagged)
+    (domains : List Ty) (values : List FiniteDomainSchema.Code) (τ : Ty) : FiniteDomainSchema.Code :=
   if residualType σ domains = some τ ∧ domains.length=values.length then
     (StructuralActions.markedAction E heads M
       (f,τ,Γ,base,StructuralActions.insertExtras E Γ extras (domains.zip values))).getD
