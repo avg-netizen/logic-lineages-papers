@@ -1,0 +1,60 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TypedMarkingProof.lean:29:20: error: Application type mismatch: The argument
+  body
+has type
+  Ty
+but is expected to have type
+  Term
+in the application
+  mark body
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TypedMarkingProof.lean:30:11: error: unsolved goals
+case lam.none
+Γ✝ : Context
+t Γ : Term
+x body : Ty
+τ : Nat
+hb : Typed (Γ✝.bind τ body) Γ x
+hx : sorry.mark = none
+hm : ∃ a, Γ.mark = some a ∧ lam body τ a = t
+⊢ Typed Γ✝ t (body.arrow x)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TypedMarkingProof.lean:34:6: error: Tactic `subst` failed: did not find equation for eliminating 't'
+
+case lam.some
+Γ✝ : Context
+t Γ : Term
+x body : Ty
+τ : Nat
+hb : Typed (Γ✝.bind τ body) Γ x
+hm : Option.map (lam body τ) Γ.mark = some t
+b : Term
+hx : sorry.mark = some b
+ht : Typed (Γ✝.bind τ body) b x
+⊢ Typed Γ✝ t (body.arrow x)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TypedMarkingProof.lean:36:0: warning: unused `termination_by`, function is not recursive
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TypedMarkingProof.lean:30:26: warning: This simp argument is unused:
+  hx
+
+Hint: Omit it from the simp argument list.
+  simp [mark,̵ ̵h̵x̵] at hm
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TypedMarkingProof.lean:33:23: warning: This simp argument is unused:
+  hx
+
+Hint: Omit it from the simp argument list.
+  simp only [mark, h̵x̵,̵ ̵Option.map_some, Option.some.injEq] at hm
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TypedMarkingProof.lean:33:27: warning: This simp argument is unused:
+  Option.map_some
+
+Hint: Omit it from the simp argument list.
+  simp only [mark, hx, O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵,̵ ̵Option.some.injEq] at hm
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TypedMarkingProof.lean:33:44: warning: This simp argument is unused:
+  Option.some.injEq
+
+Hint: Omit it from the simp argument list.
+  simp only [mark, hx, Option.map_some,̵ ̵O̵p̵t̵i̵o̵n̵.̵s̵o̵m̵e̵.̵i̵n̵j̵E̵q̵] at hm
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

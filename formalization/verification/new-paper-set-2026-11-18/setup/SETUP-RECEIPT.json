@@ -1,0 +1,91 @@
+{
+  "at_utc": "2026-11-18T04:23:45.699237+00:00",
+  "status": "official pinned compiler and 3108-module external cache ready",
+  "compiler_version": "Lean (version 4.32.0-rc1, x86_64-unknown-linux-gnu, commit b4812ae53eea93439ad5dce5a5c26591c31cb697, Release)",
+  "compiler_archive_sha256": "ce6e79dd19ea03c0bc17f9d565c3bac20cd2884561e3b431e5b293c1fbb2b5b3",
+  "official_release_digest_verified": true,
+  "release_metadata_url": "https://api.github.com/repos/leanprover/lean4/releases/tags/v4.32.0-rc1",
+  "packages": [
+    {
+      "name": "mathlib",
+      "url": "https://github.com/leanprover-community/mathlib4",
+      "revision": "360da6fa66c1273b76b6b2d8c5666fd5ac2e3b56"
+    },
+    {
+      "name": "plausible",
+      "url": "https://github.com/leanprover-community/plausible",
+      "revision": "f3f26cc72646205ca167117487c008ee1dafe816"
+    },
+    {
+      "name": "LeanSearchClient",
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843"
+    },
+    {
+      "name": "importGraph",
+      "url": "https://github.com/leanprover-community/import-graph",
+      "revision": "41f407a8e85b0fdc00910633a8f14754139b63f4"
+    },
+    {
+      "name": "proofwidgets",
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "revision": "e6518a674e62de322b8f79eebeda7bcae2a36bc3"
+    },
+    {
+      "name": "aesop",
+      "url": "https://github.com/leanprover-community/aesop",
+      "revision": "b5b9e2bb45ce91e4bc44eaa738c3a8910404ab82"
+    },
+    {
+      "name": "Qq",
+      "url": "https://github.com/leanprover-community/quote4",
+      "revision": "7a62bd13860cd39ac98da16ffc8c24d601353f69"
+    },
+    {
+      "name": "batteries",
+      "url": "https://github.com/leanprover-community/batteries",
+      "revision": "954dbc9873f3b4534dc9896604593406d0383520"
+    },
+    {
+      "name": "Cli",
+      "url": "https://github.com/leanprover/lean4-cli",
+      "revision": "406ebb8c8e2f7e852a1b47764b42494022ce652c"
+    }
+  ],
+  "immutable_control_sha256": {
+    "scripts/check.py": "fefa8d645edc1c7bd1e4abc750cfaa6556adfc6cc80d6aecaff952192322a144",
+    "lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+    "lake-manifest.json": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+    "lakefile.toml": "c05684bc8b1905ebc2f1ccaa33f57fd5cb769350165dbd9614c18be7a63227a5"
+  },
+  "profile": {
+    "heap_mib": 2048,
+    "rss_mib": 1536,
+    "threads": 1,
+    "cpu_seconds": 90,
+    "wall_seconds_per_module": 180,
+    "min_free_mib": 2048
+  },
+  "setup_only": true,
+  "project_proofs_compiled": false,
+  "pins_or_checker_changed": false,
+  "notes": [
+    "Official Cache bootstrap only; eleven modules compiled sequentially.",
+    "Original mathlib_imports.py whole-root scanner hit Python recursion limit; unchanged. Cache roots collected as union of literal Mathlib imports instead.",
+    "Official artifacts from master container; no upstream mathematical proof rebuild."
+  ],
+  "completed_at_utc": "2026-11-18T04:26:46.007553+00:00",
+  "cache_files": 3108,
+  "dependency_cache_placement": [
+    "plausible",
+    "Qq",
+    "aesop",
+    "batteries",
+    "LeanSearchClient",
+    "importGraph",
+    "proofwidgets"
+  ],
+  "cache_get_returncode": 0,
+  "cache_log_sha256": "52cf8897f89d3c571f2a9a7556bbe8f1645596be192c55d79fc65a3b9b6f2cff",
+  "cache_download_retry": "HTTP429 recovered after backoff and concurrency2/rate5 per second curl retry; all final cache downloads/extraction succeeded"
+}

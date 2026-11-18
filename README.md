@@ -26,7 +26,7 @@ The new paper set requires a separate source-matched register; no new-paper
 statement is certified by the historical count. All old checked proof sources
 are preserved.
 
-**Known earlier source issue:** the termination-ordering manuscript in entry 06 has a checked local transitivity obstruction; see its [mathematical status](06-godel-t-termination-ordering/STATUS.md). Its full stable-pair and ordinal package is not established by the partial formalization.
+**Known earlier source issue:** the termination-ordering manuscript in entry 06 has a checked local transitivity obstruction; see its [mathematical status](archive/comparison-editions-pre-2026-11-17/06-godel-t-termination-ordering/STATUS.md). Its full stable-pair and ordinal package is not established by the partial formalization.
 
 [![Pure R1 Lean verification](https://github.com/avg-netizen/logic-lineages-papers/actions/workflows/pure-r1-lean.yml/badge.svg?branch=main)](https://github.com/avg-netizen/logic-lineages-papers/actions/workflows/pure-r1-lean.yml)
 
@@ -52,12 +52,12 @@ ground inputs remains separate from the new permitted-control theorem.
 
 | Manuscript | Contents |
 |---|---|
-| [Foundations and guide](05-wilken-weiermann-foundations/README.md) · [PDF](05-wilken-weiermann-foundations/paper.pdf) | Original questions, canonical clauses, maximal predecessor, closed evaluator, complete counts and source translation. |
-| [Gödel-T termination ordering](06-godel-t-termination-ordering/README.md) · [PDF](06-godel-t-termination-ordering/paper.pdf) | Earlier structural presentation; its [checked composition obstruction](06-godel-t-termination-ordering/STATUS.md) is retained. The repaired relation and full proof are in entry 16. |
-| [Collapse equality and one-variable comparison](07-collapse-equality-and-one-variable/README.md) · [PDF](07-collapse-equality-and-one-variable/paper.pdf) | Historical edition; combined with entry 08 in the current standard-control paper, entry 18. |
-| [Multivariate decidable fragments](08-multivariate-collapse-comparison/README.md) · [PDF](08-multivariate-collapse-comparison/paper.pdf) | Historical edition; combined with entry 07 in entry 18, retaining the exact domain and arithmetic hypotheses. |
-| [Actual-source expressivity](09-canonical-source-expressivity/README.md) · [PDF](09-canonical-source-expressivity/paper.pdf) | Historical edition; functional-input hardness is retained in entry 17, with the other source results revised in entry 19. |
-| [Controlled descents and modular counts](10-collapse-descent-and-modular-counts/README.md) · [PDF](10-collapse-descent-and-modular-counts/paper.pdf) | Historical edition; rewritten in entry 20 with complete profile closure and explicit ordinal/source and state/output distinctions. |
+| [Foundations and guide](archive/comparison-editions-pre-2026-11-17/05-wilken-weiermann-foundations/README.md) · [PDF](archive/comparison-editions-pre-2026-11-17/05-wilken-weiermann-foundations/paper.pdf) | Original questions, canonical clauses, maximal predecessor, closed evaluator, complete counts and source translation. |
+| [Gödel-T termination ordering](archive/comparison-editions-pre-2026-11-17/06-godel-t-termination-ordering/README.md) · [PDF](archive/comparison-editions-pre-2026-11-17/06-godel-t-termination-ordering/paper.pdf) | Earlier structural presentation; its [checked composition obstruction](archive/comparison-editions-pre-2026-11-17/06-godel-t-termination-ordering/STATUS.md) is retained. The repaired relation and full proof are in entry 16. |
+| [Collapse equality and one-variable comparison](archive/comparison-editions-pre-2026-11-17/07-collapse-equality-and-one-variable/README.md) · [PDF](archive/comparison-editions-pre-2026-11-17/07-collapse-equality-and-one-variable/paper.pdf) | Historical edition; combined with entry 08 in the current standard-control paper, entry 18. |
+| [Multivariate decidable fragments](archive/comparison-editions-pre-2026-11-17/08-multivariate-collapse-comparison/README.md) · [PDF](archive/comparison-editions-pre-2026-11-17/08-multivariate-collapse-comparison/paper.pdf) | Historical edition; combined with entry 07 in entry 18, retaining the exact domain and arithmetic hypotheses. |
+| [Actual-source expressivity](archive/comparison-editions-pre-2026-11-17/09-canonical-source-expressivity/README.md) · [PDF](archive/comparison-editions-pre-2026-11-17/09-canonical-source-expressivity/paper.pdf) | Historical edition; functional-input hardness is retained in entry 17, with the other source results revised in entry 19. |
+| [Controlled descents and modular counts](archive/comparison-editions-pre-2026-11-17/10-collapse-descent-and-modular-counts/README.md) · [PDF](archive/comparison-editions-pre-2026-11-17/10-collapse-descent-and-modular-counts/paper.pdf) | Historical edition; rewritten in entry 20 with complete profile closure and explicit ordinal/source and state/output distinctions. |
 
 The calculator project includes its own implementation, tests, explanatory paper,
 public Lake configuration and [formalization coverage](04-pure-r1-calculator/FORMALIZATION.md).
