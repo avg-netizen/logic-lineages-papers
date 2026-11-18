@@ -1,0 +1,9 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/Signature.lean:9:4: error: typeclass instance problem is stuck
+  GetElem? (List (Nat × Nat)) ?m.25 (?m.26 i j × ?m.27 i j name) (?m.29 i j name a b)
+
+Note: Lean will not try to resolve this typeclass instance problem because the second type argument to `GetElem?` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/Signature.lean:22:21: error(lean.invalidField): Invalid field notation: Field projection operates on types of the form `C ...` where C is a constant. The expression
+  S
+has type `Signature` which does not have the necessary form.

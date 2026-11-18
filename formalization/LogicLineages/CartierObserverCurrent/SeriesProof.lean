@@ -1,0 +1,93 @@
+module
+public import LogicLineages.CartierObserverCurrent.SeriesTargets
+public import Mathlib.RingTheory.PowerSeries.Trunc
+public import Mathlib.Algebra.Polynomial.Expand
+public import Lean.Elab.Tactic.Omega
+public meta import LogicLineages.Audit
+
+@[expose] public section
+universe u
+namespace LogicLineages.CartierObserverCurrent.Series
+
+private theorem polynomial_square_coefficient {K : Type u} [Field K] [CharP K 2]
+    (P : Polynomial K) (n : Nat) :
+    (P ^ 2).coeff n = if 2 ∣ n then (P.coeff (n / 2)) ^ 2 else 0 := by
+  rw [← Polynomial.map_frobenius_expand 2 P, Polynomial.coeff_map,
+    Polynomial.coeff_expand (by decide)]
+  split_ifs <;> simp [frobenius_def]
+
+theorem squareCoefficient : Targets.SquareCoefficient.{u} := by
+  intro K _ _ _ F n
+  have ht := congrArg (fun P : Polynomial K => P.coeff n)
+    (PowerSeries.trunc_trunc_pow F (n + 1) 2)
+  simp only [PowerSeries.coeff_trunc, Nat.lt_succ_self, if_true] at ht
+  rw [← Polynomial.coe_pow, Polynomial.coeff_coe] at ht
+  rw [← ht, polynomial_square_coefficient, PowerSeries.coeff_trunc,
+    if_pos (show n / 2 < n + 1 by omega)]
+
+private theorem coeff_X_mul {K : Type u} [Field K] (F : PowerSeries K) (n : Nat) :
+    PowerSeries.coeff n (PowerSeries.X * F) =
+      if 1 ≤ n then PowerSeries.coeff (n - 1) F else 0 := by
+  simpa only [pow_one] using PowerSeries.coeff_X_pow_mul' F 1 n
+
+private theorem even_sum (K : Type u) [Field K] [CharP K 2] [PerfectRing K 2]
+    (A B : PowerSeries K) (n : Nat) :
+    PowerSeries.coeff (2 * n) (A ^ 2 + PowerSeries.X * B ^ 2) =
+      (PowerSeries.coeff n A) ^ 2 := by
+  rw [map_add, squareCoefficient K, if_pos (by omega),
+    show 2 * n / 2 = n by omega, coeff_X_mul]
+  cases n with
+  | zero => simp
+  | succ n => rw [if_pos (by omega), squareCoefficient K, if_neg (by omega), add_zero]
+
+private theorem odd_sum (K : Type u) [Field K] [CharP K 2] [PerfectRing K 2]
+    (A B : PowerSeries K) (n : Nat) :
+    PowerSeries.coeff (2 * n + 1) (A ^ 2 + PowerSeries.X * B ^ 2) =
+      (PowerSeries.coeff n B) ^ 2 := by
+  rw [map_add, squareCoefficient K, if_neg (by omega), zero_add, coeff_X_mul,
+    if_pos (by omega), show 2 * n + 1 - 1 = 2 * n by omega,
+    squareCoefficient K, if_pos (by omega), show 2 * n / 2 = n by omega]
+
+private theorem digit_square (K : Type u) [Field K] [CharP K 2] [PerfectRing K 2]
+    (b : Bool) (F : PowerSeries K) (n : Nat) :
+    (PowerSeries.coeff n (squareRootDigit b F)) ^ 2 = PowerSeries.coeff (Nat.bit b n) F := by
+  simp only [squareRootDigit, PowerSeries.coeff_mk]
+  exact (frobeniusEquiv K 2).apply_symm_apply _
+
+theorem squareDecomposition : Targets.SquareDecomposition.{u} := by
+  intro K _ _ _ F
+  apply PowerSeries.ext
+  intro n
+  by_cases h : 2 ∣ n
+  · have hn : n = 2 * (n / 2) := by omega
+    rw [hn, even_sum, digit_square]
+    rfl
+  · have hn : n = 2 * (n / 2) + 1 := by omega
+    rw [hn, odd_sum, digit_square]
+    rfl
+
+theorem squareUniqueness : Targets.SquareUniqueness.{u} := by
+  intro K _ _ _ A B C D h
+  constructor
+  · apply PowerSeries.ext
+    intro n
+    have he := congrArg (PowerSeries.coeff (2 * n)) h
+    rw [even_sum, even_sum] at he
+    exact (frobeniusEquiv K 2).injective he
+  · apply PowerSeries.ext
+    intro n
+    have he := congrArg (PowerSeries.coeff (2 * n + 1)) h
+    rw [odd_sum, odd_sum] at he
+    exact (frobeniusEquiv K 2).injective he
+
+theorem cartierCharacterization : Targets.CartierCharacterization.{u} := by
+  intro K _ _ _ A B
+  have h := squareDecomposition K (A ^ 2 + PowerSeries.X * B ^ 2)
+  exact (squareUniqueness K _ _ _ _ h.symm).2
+
+theorem cartierCoefficient : Targets.CartierCoefficient.{u} := by
+  intro K _ _ _ F n
+  simp only [differentialCartier, squareRootDigit, PowerSeries.coeff_mk, Nat.bit_true]
+
+#audit_namespace LogicLineages.CartierObserverCurrent.Series
+end LogicLineages.CartierObserverCurrent.Series

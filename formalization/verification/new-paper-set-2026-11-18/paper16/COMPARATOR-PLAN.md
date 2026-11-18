@@ -102,3 +102,18 @@ Only then approach the printed finite-support saturation/decidability argument.
 
 Definitions/endpoint freezes follow review, not this plan alone. No compiler
 queue is requested until concrete reviewed proof packets are ready.
+
+## Reviewed refinements implemented
+
+Select uses ArrowPrefix domains τ with arbitrary finite domains, including []
+and functional τ. Endpoint PaperTerm uses the empty outer bound context: paper
+ambient variables are typed free names, and Abs/FAbs open actual binders with
+common fresh names. This neither treats the output as a ground-only suffix nor
+introduces unrelated outer bound variables at the comparison boundary.
+
+The initial bridge reuses only the raw named Term syntax, whose names are
+interpreted as (Ty,Nat). It does not reuse the earlier Nat-only named typing.
+Alpha is generated independently by actual fresh binder renaming, equivalence
+closure and structural congruence. Encoding equality is a target theorem, not
+the definition of Alpha. The decoder selects names above both the outside
+binder environment and every free numeric name in the residual term.

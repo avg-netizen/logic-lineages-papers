@@ -1,6 +1,6 @@
 # Current comparison formalization status
 
-New-paper register: **13 checked, 154 pending / 167**. Historical register:
+New-paper register: **14 checked, 153 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
@@ -15,6 +15,8 @@ to this replacement collection. Old statuses do not transfer automatically.
   literal selected-control instances.
 - Paper17 `cor:finite-coefficient`: exact finite coefficient collapse identity
   for all natural k,n, with actual terminal count and selected controls.
+- Paper17 `thm:counts`: actual high-head funnel and finite-head counts,
+  exact selected-control thresholds and complete signed residue tables.
 - Paper18 `u:thm:identity` and `u:thm:sign`: effective literal normal forms
   with countervaluation, and full two-sort eventual signs on genuine domains.
 - Paper18 `u:lem:sparse`: actual-ordinal sparse peaks and full inequalities.
@@ -49,8 +51,10 @@ remain open.
 Paper17: near-control modular/orbit, full numerical growth and joint primitive
 recursion; factorial laws/orbit and a shared explicit finite-level bound.
 Basic actual selected-control collapse estimates and the exact limit-part
-predecessor recurrence and effective evaluation are checked. High-head count
-arithmetic, entries and ground comparison remain separate unpaid obligations.
+predecessor recurrence, effective evaluation and high-head count arithmetic
+are checked. Actual partial entry-search and affordable entry/orbit support
+is checked (142 modules, two aliases). Full entry residues and ground
+comparison remain separate unpaid obligations.
 
 Archive/migration is remotely verified. All80 archived-file hashes and local
 compatibility paths pass, and all167 statement-source records reproduce from
@@ -69,7 +73,11 @@ also enforces the exact register/acceptance bijection and evidence-file hashes.
 Paper20 Basic-only actual Cartier support is checked (eight modules, nine
 aliases; peak RSS1345368 KiB under the unchanged1536 MiB cap). Canonical
 rational decomposition and uniqueness characterize the source operation,
-with integer local laws and the even selector. Earlier resource-blocked
+with integer local laws and the even selector. Actual inverse-pole and
+embedded-polynomial Cartier support is also checked (ten modules). Earlier resource-blocked
 editions remain preserved and unaccepted. No legacy supplier was edited.
-The full formal-series coefficient clause, mixed transient and complete
+Unrestricted formal-series decomposition/uniqueness and coefficient support
+is checked (five modules, five aliases). Actual regular rational/series
+compatibility and presentation independence are checked (13 modules, three
+aliases). The full source local-lemma assembly, mixed transient and complete
 residue-profile/observer remain separate unpaid obligations.

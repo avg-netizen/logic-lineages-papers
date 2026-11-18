@@ -1,0 +1,119 @@
+module
+public import LogicLineages.PermittedControl.EntryBasicsProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl
+open OrdinalComparison
+
+theorem split_code_eq (a nu : NONote) :
+    (rawSplitCode (rawNoteEncode a.1)).unpair.1 = rawNoteEncode nu.1 ↔
+      actualLimitPart a.1.repr = nu.1.repr := by
+  let c := (rawSplitCode (rawNoteEncode a.1)).unpair.1
+  have hc : ONote.NF (rawNoteDecode c) := rawSplitNormal a
+  constructor
+  · intro h
+    have he := (rawSplitActualCorrect a).1
+    rw [h, rawNoteDecodeEncode] at he
+    exact he.symm
+  · intro h
+    have he : (rawNoteDecode c).repr = nu.1.repr := (rawSplitActualCorrect a).1.trans h
+    letI : ONote.NF (rawNoteDecode c) := hc
+    letI : ONote.NF nu.1 := nu.2
+    have heq : rawNoteDecode c = nu.1 := ONote.repr_inj.mp he
+    have hcode := congrArg rawNoteEncode heq
+    rw [rawNoteEncodeDecode c] at hcode
+    exact hcode
+
+theorem entry_test_iff (f : Nat → Nat) (a nu : NONote)
+    (hnu : nu.1.repr = 0 ∨ Order.IsSuccLimit nu.1.repr) (i : Nat) :
+    (rawSplitCode (encodedStatesWith f (rawNoteEncode a.1) i)).unpair.1 = rawNoteEncode nu.1 ↔
+      (nu.1.repr ≤ (descentWith f)^[i] a.1.repr ∧
+       (descentWith f)^[i] a.1.repr < nu.1.repr + Ordinal.omega0) := by
+  have hb : ∀ k, k ≤ (terminalWith f a.1.repr).2 →
+      ((rawSplitCode (encodedStatesWith f (rawNoteEncode a.1) k)).unpair.1 = rawNoteEncode nu.1 ↔
+       actualLimitPart ((descentWith f)^[k] a.1.repr) = nu.1.repr) := by
+    intro k hk
+    have ht := trajectory_correct f a k hk
+    let r : NONote := ⟨rawNoteDecode (encodedStatesWith f (rawNoteEncode a.1) k), ht.1⟩
+    have h := split_code_eq r nu
+    rw [rawNoteEncodeDecode] at h
+    simpa only [r, ht.2] using h
+  rw [interval_iff_limitPart _ _ hnu]
+  by_cases hi : i ≤ (terminalWith f a.1.repr).2
+  · exact hb i hi
+  · rw [encoded_after_terminal_fixed f a i (by omega)]
+    rw [hb _ le_rfl]
+    obtain ⟨n, hn⟩ := Ordinal.lt_omega0.mp
+      (actual_after_terminal_finite f a.1.repr (normalRepresentationSound a) i (by omega))
+    rw [hn, limitPart_finite, (terminal_firstFinite f a.1.repr (normalRepresentationSound a)).1,
+      limitPart_finite]
+
+theorem entry_search_iff (f : Nat → Nat) (a nu : NONote)
+    (hnu : nu.1.repr = 0 ∨ Order.IsSuccLimit nu.1.repr) (i : Nat) :
+    i ∈ entrySearchWith f (rawNoteEncode a.1, rawNoteEncode nu.1) ↔ FirstEntry f a.1.repr nu.1.repr i := by
+  rw [entrySearchWith, Nat.mem_rfind]
+  constructor
+  · rintro ⟨hi, hbefore⟩
+    have hh := (entry_test_iff f a nu hnu i).mp (of_decide_eq_true (Part.mem_some_iff.mp hi).symm)
+    refine ⟨hh.1, hh.2, ?_⟩
+    intro j hj hhit
+    have hjtrue := (entry_test_iff f a nu hnu j).mpr hhit
+    have hfalse := Part.mem_some_iff.mp (hbefore hj)
+    simp [hjtrue] at hfalse
+  · intro h
+    constructor
+    · apply Part.mem_some_iff.mpr
+      symm
+      exact decide_eq_true ((entry_test_iff f a nu hnu i).mpr ⟨h.1,h.2.1⟩)
+    · intro j hj
+      apply Part.mem_some_iff.mpr
+      symm
+      apply decide_eq_false
+      intro htest
+      exact h.2.2 j hj ((entry_test_iff f a nu hnu j).mp htest)
+
+theorem entry_partial_partrec (f : Nat → Nat) (hf : Computable f) : Partrec (entryPartialWith f) := by
+  have hi := encodedStates_computable f hf
+  have hs : Computable rawSplitCode := (Primrec.nat_iff.mpr rawSplitPrimitiveRecursive).to_comp
+  have hl := (Primrec.fst.comp Primrec.unpair).to_comp.comp hs
+  have hstate : Computable (fun p : (Nat × Nat) × Nat => encodedStatesWith f p.1.1 p.2) :=
+    hi.comp (Computable.fst.comp Computable.fst) Computable.snd
+  have hpred : Computable (fun p : (Nat × Nat) × Nat =>
+      decide ((rawSplitCode (encodedStatesWith f p.1.1 p.2)).unpair.1 = p.1.2)) :=
+    Primrec.eq.decide.to_comp.comp (hl.comp hstate) (Computable.snd.comp Computable.fst)
+  have hsearch : Partrec (entrySearchWith f) := Partrec.rfind hpred.partrec.to₂
+  have hn : Computable rawNormCode := (Primrec.nat_iff.mpr rawNormCodePrimitiveRecursive).to_comp
+  have hout : Computable (fun p : (Nat × Nat) × Nat => (rawNormCode (encodedStatesWith f p.1.1 p.2),p.2)) :=
+    (hn.comp hstate).pair Computable.snd
+  exact hsearch.map hout.to₂
+
+theorem entryEffectivity : Targets.EntryEffectivity := by
+  intro f hf
+  refine ⟨entry_partial_partrec f hf, ?_⟩
+  intro a nu hnu E i
+  rw [entryPartialWith, Part.mem_map_iff]
+  constructor
+  · rintro ⟨j, hj, heq⟩
+    have hji : j = i := congrArg Prod.snd heq
+    subst j
+    have hhit := (entry_search_iff f a nu hnu i).mp hj
+    have hbound := firstEntry_le_terminal f a.1.repr nu.1.repr (normalRepresentationSound a) hnu i hhit
+    have htraj := trajectory_correct f a i hbound
+    let r : NONote := ⟨rawNoteDecode (encodedStatesWith f (rawNoteEncode a.1) i),htraj.1⟩
+    have hn : rawNormCode (encodedStatesWith f (rawNoteEncode a.1) i) = entryNormAt f a.1.repr i := by
+      have h := rawNormCodeCorrect r.1
+      rw [rawNoteEncodeDecode, ← actualOrdinalNorm_notationCorrespondence r] at h
+      simpa only [entryNormAt, r, htraj.2] using h
+    exact ⟨hhit, (congrArg Prod.fst heq).symm.trans hn⟩
+  · rintro ⟨hhit, rfl⟩
+    have hbound := firstEntry_le_terminal f a.1.repr nu.1.repr (normalRepresentationSound a) hnu i hhit
+    have htraj := trajectory_correct f a i hbound
+    let r : NONote := ⟨rawNoteDecode (encodedStatesWith f (rawNoteEncode a.1) i),htraj.1⟩
+    refine ⟨i, (entry_search_iff f a nu hnu i).mpr hhit, ?_⟩
+    apply Prod.ext
+    · have h := rawNormCodeCorrect r.1
+      rw [rawNoteEncodeDecode, ← actualOrdinalNorm_notationCorrespondence r] at h
+      simpa only [entryNormAt, r, htraj.2] using h
+    · rfl
+
+end LogicLineages.PermittedControl

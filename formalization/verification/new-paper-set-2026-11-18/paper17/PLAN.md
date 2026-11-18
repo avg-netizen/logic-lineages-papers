@@ -192,3 +192,36 @@ ordinal induction; do not identify it by name alone. Then the checked terminal
 norm orbit and collapse decomposition give the complete printed identity.
 Concrete factorial and near-control clauses have no remaining law premise.
 This pays no high-head residue, funnel, entry or comparison obligation yet.
+
+## Complete count residue native milestone
+
+CountStatementChecks passed receipt1794978972810649548-2. Recursive evidence
+validates120 current-source local modules and three standard-only exact aliases.
+The actual ordinal induction proves the omega-squared limit-part visit and
+exact funnel count; no funnel premise is supplied. The actual terminal orbit
+then proves both high-head and linear-head D/Z/J residues at the exact source
+threshold, plus the literal period-2m residue table for every selected control.
+Two failed drafts/receipts are retained. Repairs concern ordinal power
+normalization, cast-zero normalization and explicit universe0 annotations in
+proofs only; frozen target/definition pins unchanged. Independent final review
+requested before thm:counts promotion. Entries/main comparison remain unpaid.
+
+## Actual first-entry foundation verified, long-residue candidate drafted
+
+EntryFoundationStatementChecks passed receipt1794979790319015497-2, with
+142-module recursive evidence and independent supporting-only final approval.
+It proves the genuine partial first-hit iff/Partrec contract including skipped
+positive targets and the finite-absorption distinction, plus source-exact
+affordable-tail existence and norm orbit. No full entry-residue promotion from
+that foundation alone. Failed proof drafts/receipts are preserved.
+
+The subsequent full residue candidate uses the true ordinary-ordinal split
+nu=P+omega*j with omega² dividing P and Nnu=NP+2j. Generic actual prefix trace
+proves finite-omega-tail first-entry count k. In the long case, an actual
+ordinal induction at barrier P+omega² forces the first-hit count residue:
+the barrier maximum is P+omega*floor((b-NP)/2)+(b-NP)%2. Evenness of b retains
+the odd-prefix correction through ceil(Nnu/2). Above the barrier, the target
+barrier is affordable; the one-step potential transports the induction.
+The exact norm residue then follows from the already-proved actual entry
+orbit, not from a supplied entry-residue oracle. Full candidate awaits native
+checks and independent final review; no further source status is claimed yet.
