@@ -7,15 +7,15 @@ def ShiftPreserves : Prop := ∀ Γ Δ q σ amount cutoff,
   Typed Γ q σ → ShiftCompatible amount cutoff Γ Δ → Typed Δ (shift amount cutoff q) σ
 
 def ParallelPreserves : Prop := ∀ Γ types values q σ,
-  BaseTyped Γ values types → Typed (BoundContext.prefix types Γ) q σ →
+  BaseTyped Γ values types → Typed (BoundContext.«prefix» types Γ) q σ →
     Typed Γ (substitute values 0 q) σ
 
 def ParallelBasePreserves : Prop := ∀ Γ types values qs τs,
-  BaseTyped Γ values types → BaseTyped (BoundContext.prefix types Γ) qs τs →
+  BaseTyped Γ values types → BaseTyped (BoundContext.«prefix» types Γ) qs τs →
     BaseTyped Γ (substituteArgs values 0 qs) τs
 
 def ParallelExtrasPreserves : Prop := ∀ Γ types values qs,
-  BaseTyped Γ values types → ExtrasTyped (BoundContext.prefix types Γ) qs →
+  BaseTyped Γ values types → ExtrasTyped (BoundContext.«prefix» types Γ) qs →
     ExtrasTyped Γ (substituteArgs values 0 qs)
 
 def ConsumeExact : Prop := ∀ Γ σ args τ, CallTyped Γ σ args τ → consumeTypes σ args = some τ

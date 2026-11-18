@@ -125,3 +125,20 @@ the factorial branch's frozen proof obligation. The final assembly may be
 accepted as lem:control only after the factorial native/evidence/final review
 and full assembly source correspondence all pass. No comparison theorem or
 complete descent/entry residue result follows merely from these numerical laws.
+
+## Factorial and complete numerical lemma native milestone
+
+Native receipt `1794976902194327090-2` passes both FactorialStatementChecks
+and ControlStatementChecks. The combined recursive evidence report validates
+19 local modules and four exact aliases with standard-only foundations.
+One failed draft and receipt are preserved: the sole failure was a missing
+Int namespace on dvd_add; repair also made addition association explicit.
+Frozen definitions, targets, and source pins remain unchanged.
+
+The full actual two-control numerical lemma is now native-proved, including
+joint near-control primitive recursion, source-exact factorial subtraction,
+all-input evenness/majorization/growth/strict upper bounds, literal potential
+thresholds, and a uniform level-6 eventual bound. Both arbitrary-orbit
+identities are proved without assumptions about orbit invariance. Independent
+final review is requested before any numbered register promotion. Complete
+ordinal descent counts and all later comparison statements remain pending.

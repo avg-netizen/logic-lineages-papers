@@ -10,9 +10,9 @@ def push (Γ : BoundContext) (σ : Ty) : BoundContext
   | 0 => some σ
   | n+1 => Γ n
 
-def prefix : List Ty → BoundContext → BoundContext
+def «prefix» : List Ty → BoundContext → BoundContext
   | [], Γ => Γ
-  | σ :: rest, Γ => (prefix rest Γ).push σ
+  | σ :: rest, Γ => («prefix» rest Γ).push σ
 end BoundContext
 
 mutual

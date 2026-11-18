@@ -1,4 +1,5 @@
 module
+public meta import LogicLineages.Audit
 public import LogicLineages.ControlSensitivityCurrent.Targets
 public import LogicLineages.OrdinalComparison.SourcePerturbedControlProof
 @[expose] public section
@@ -28,4 +29,5 @@ theorem fullPerturbedControl : Targets.FullPerturbedControl := by
     fun v a _ => PerturbedControl.Proof.margin_all b H v a,
     PerturbedControl.Proof.upper_level b H,
     PerturbedControl.Proof.ratio_limit b H⟩
+#audit_namespace LogicLineages.ControlSensitivityCurrent.Proof
 end LogicLineages.ControlSensitivityCurrent.Proof

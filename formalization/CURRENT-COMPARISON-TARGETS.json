@@ -539,8 +539,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/controls.tex",
           "line": 29,
           "statement_latex": "[Growth and modular decrement]\\label{lem:control}\nThe functions \\(f_*\\) and \\(f_b\\) are even-valued primitive recursive\nfunctions, majorize \\(G\\), and satisfy\n\\begin{equation}\\label{eq:growth}\n f(n+1)\\ge2^{2^{f(n)}},\\qquad f(n)<G(n+1).\n\\end{equation}\nThey are eventually bounded by one fixed finite level of the hierarchy.\nFor every \\(m\\ge1\\),\n\\begin{equation}\\label{eq:potential}\n p(f(n))\\equiv p(n)-1\\pmod m\n \\qquad(n\\ge\\max\\{m,B_f\\}).\n\\end{equation}",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.Targets.FullControl",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullControl",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/010-full-control.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:thm:counts",
@@ -1011,8 +1014,11 @@
           "file": "18-standard-control-comparison/sections/identities.tex",
           "line": 81,
           "statement_latex": "[Orbit cancellation at roots]\\label{u:lem:roots}\nCall a natural number an $f$-root if it is outside $\\operatorname{range}(f)$.\nIf infinite inputs $\\alpha,\\beta$ have root norms $t,u$ and equal peaks,\nthen $\\alpha=\\beta$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.IdentityTailTargets.RootPeakInjectivity",
+          "verified_alias": "LogicLineages.StandardControlCurrent.IdentityTailStatementChecks.fixed_rootPeakInjectivity",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/008-current-root-peaks.json"
         },
         {
           "id": "18-standard-control-comparison:u:thm:identity",
@@ -1041,8 +1047,11 @@
           "file": "18-standard-control-comparison/sections/identities.tex",
           "line": 213,
           "statement_latex": "[Effective finite zeros]\\label{u:thm:zeros}\nGiven $E,F\\in\\mathcal P_1$, one computes $N\\ge1$ such that either their\nnormal forms agree, or $E(x)\\ne F(x)$ for every $x\\ge N$. In the latter\ncase their equality set is the computable finite set obtained by exact\nevaluation at $1,\\ldots,N-1$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.IdentityTailTargets.EffectiveFiniteZeros",
+          "verified_alias": "LogicLineages.StandardControlCurrent.IdentityTailStatementChecks.fixed_effectiveFiniteZeros",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/009-current-finite-zeros.json"
         },
         {
           "id": "18-standard-control-comparison:u:lem:cells",
@@ -1456,8 +1465,11 @@
           "file": "19-source-expressivity-and-control-sensitivity/sections/control-sensitivity.tex",
           "line": 30,
           "statement_latex": "[Permitted growth and a bounded perturbation]\n\\label{lem:perturbed-control}\nThe control $\\Gamma_b$ is primitive recursive and agrees with $G$\non $[0,b]$. It satisfies\n\\[\n 0\\le\\Gamma_b(n)-G(n)\\le1,\\qquad\n G(n)\\le\\Gamma_b(n)<G(n+1),\\qquad\n \\Gamma_b(n+1)\\ge2^{2^{\\Gamma_b(n)}}.\n\\]\nIt is eventually bounded by $F_6$, has the additive margin\n$\\Gamma_b(v+a)\\ge\\Gamma_b(v)+2a$ for $a\\ge1$, and\n$\\Gamma_b(n)/G(n)\\longrightarrow1$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.ControlSensitivityCurrent.Targets.FullPerturbedControl",
+          "verified_alias": "LogicLineages.ControlSensitivityCurrent.StatementChecks.fixed_fullPerturbedControl",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/012-perturbed-control.json"
         },
         {
           "id": "19-source-expressivity-and-control-sensitivity:thm:control-hardness",
@@ -1894,7 +1906,7 @@
     }
   ],
   "status_counts": {
-    "checked": 1,
-    "pending": 166
+    "pending": 162,
+    "checked": 5
   }
 }

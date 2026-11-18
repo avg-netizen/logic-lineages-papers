@@ -1,0 +1,55 @@
+module
+public import LogicLineages.PermittedControl.FactorialDefinitions
+public import LogicLineages.OrdinalComparison.ParametricActualCollapseDefinitions
+public import LogicLineages.OrdinalComparison.ActualMaximumPredecessorDefinitions
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.Targets
+open OrdinalComparison
+open OrdinalComparison.ParametricActualCollapse
+
+/-- Full printed lem:collapse-estimates on actual ordinals below epsilon zero.
+The source assumes computability too, but none is needed for these estimates. -/
+def CollapseEstimates : Prop := ∀ (f : Nat → Nat), StrictMono f → (∀ n, G n ≤ f n) →
+  (∀ (a b : Ordinal.{0}), a < epsilonZero → b < a →
+    actualOrdinalNorm b ≤ f (actualOrdinalNorm a) → collapseWith f b + 1 ≤ collapseWith f a) ∧
+  (∀ (n : Nat), collapseWith f (n : Ordinal.{0}) = n) ∧
+  (∀ (a : Ordinal.{0}), a < epsilonZero → actualOrdinalNorm a ≤ collapseWith f a) ∧
+  (∀ (a : Ordinal.{0}) (k : Nat), a < epsilonZero →
+    collapseWith f a + k ≤ collapseWith f (a + (k : Ordinal.{0}))) ∧
+  (∀ (a : Ordinal.{0}), a < epsilonZero → Ordinal.omega0 ≤ a →
+    f (actualOrdinalNorm a) < collapseWith f a)
+
+/-- Full thm:single-predecessor; call M on the limit part, not a+n. -/
+def SinglePredecessor : Prop := ∀ (f : Nat → Nat), StrictMono f → (∀ n, G n ≤ f n) →
+  ∀ (a : Ordinal.{0}), a < epsilonZero → Order.IsSuccLimit a → ∀ (n : Nat),
+    collapseWith f (a + (n : Ordinal.{0})) =
+      collapseWith f (actualMaximumPredecessor a (f (actualOrdinalNorm a + n))) + 1
+
+/-- Concrete laws used to instantiate the generic actual-collapse statements. -/
+def SelectedControlAdmissibility : Prop :=
+  (StrictMono factorialControl ∧ ∀ n, G n ≤ factorialControl n) ∧
+  ∀ (b : Nat), StrictMono (nearControl b) ∧ ∀ n, G n ≤ nearControl b n
+
+/-- Full estimates specialized to the actual two controls, without any
+remaining law or control-class hypothesis. -/
+def SelectedCollapseEstimates : Prop := ∀ (f : Nat → Nat),
+  (f = factorialControl ∨ ∃ b : Nat, f = nearControl b) →
+(∀ (a b : Ordinal.{0}), a < epsilonZero → b < a →
+    actualOrdinalNorm b ≤ f (actualOrdinalNorm a) → collapseWith f b + 1 ≤ collapseWith f a) ∧
+  (∀ (n : Nat), collapseWith f (n : Ordinal.{0}) = n) ∧
+  (∀ (a : Ordinal.{0}), a < epsilonZero → actualOrdinalNorm a ≤ collapseWith f a) ∧
+  (∀ (a : Ordinal.{0}) (k : Nat), a < epsilonZero →
+    collapseWith f a + k ≤ collapseWith f (a + (k : Ordinal.{0}))) ∧
+  (∀ (a : Ordinal.{0}), a < epsilonZero → Ordinal.omega0 ≤ a →
+    f (actualOrdinalNorm a) < collapseWith f a)
+
+/-- Actual selected-control single-predecessor recurrence, not a supplied
+control oracle and not an equality with the unchanged G assignment. -/
+def SelectedSinglePredecessor : Prop := ∀ (f : Nat → Nat),
+  (f = factorialControl ∨ ∃ b : Nat, f = nearControl b) →
+  ∀ (a : Ordinal.{0}), a < epsilonZero → Order.IsSuccLimit a → ∀ (n : Nat),
+    collapseWith f (a + (n : Ordinal.{0})) =
+      collapseWith f (actualMaximumPredecessor a (f (actualOrdinalNorm a + n))) + 1
+
+end LogicLineages.PermittedControl.Targets

@@ -71,8 +71,11 @@ namespace LogicLineages.PermittedControl
   have hd : 2 ∣ Nat.factorial (G n) := Nat.dvd_factorial (by decide) (by omega)
   have hdi : (2 : Int) ∣ (Nat.factorial (G n) : Int) := Int.natCast_dvd_natCast.mpr hd
   have he : (2 : Int) ∣ 2 * (potential n : Int) - 2 := ⟨(potential n : Int) - 1, by omega⟩
-  have h := dvd_add hdi he
-  rw [← factorialControl_cast] at h
+  have h := Int.dvd_add hdi he
+  have heq : (Nat.factorial (G n) : Int) + (2 * (potential n : Int) - 2) = (factorialControl n : Int) := by
+    rw [factorialControl_cast]
+    omega
+  rw [heq] at h
   exact Int.natCast_dvd_natCast.mp h
 
  theorem factorialControl_potential (m n : Nat) (hm : 0 < m) (hn : max m 0 ≤ n) :
