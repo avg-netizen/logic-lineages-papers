@@ -1,0 +1,9 @@
+module
+public import LogicLineages.PermittedControl.SelectedPolynomialLiftProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_selectedPolynomialLift : SelectedPolynomialLiftTargets.SelectedPolynomialLift :=
+  SelectedPolynomialLift.Proof.selectedPolynomialLift
+#print axioms fixed_selectedPolynomialLift
+end LogicLineages.PermittedControl.StatementChecks

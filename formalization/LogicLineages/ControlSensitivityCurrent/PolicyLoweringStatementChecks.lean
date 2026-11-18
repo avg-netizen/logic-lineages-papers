@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.PolicyLoweringProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.PolicyLowering.StatementChecks
+theorem fixed_expressionCalibration : PolicyLoweringTargets.ExpressionCalibration := expressionCalibration
+theorem fixed_sharedInputsAndSyntax : PolicyLoweringTargets.SharedInputsAndSyntax := sharedInputsAndSyntax
+theorem fixed_allGateExact : PolicyLoweringTargets.AllGateExact := allGateExact
+theorem fixed_actualFixedSize : PolicyLoweringTargets.ActualFixedSize := actualFixedSize
+#audit_namespace LogicLineages.ControlSensitivityCurrent.PolicyLowering.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.PolicyLowering.StatementChecks

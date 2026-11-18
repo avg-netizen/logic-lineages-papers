@@ -1,0 +1,7 @@
+# Generic policy Boolean compiler conceptual review
+
+Approved staging direction, not whole compiler acceptance. Read actual BooleanWire constructors/constraints, Program syntax/default Eval, GlobalFlatten targets and printed compiler requirement. Pure six-node Boolean DAG correctness can be isolated first with actual backward references, exact unique auxiliaries and counts. Existing default-policy source semantics must be replaced by fresh generic-policy/control evaluation, preserving raw-positive minus-one calibration and shared context embeddings.
+
+Important boundary: inspected GlobalFlatten is Boolean DAG to global arithmetic gates, not by itself normalization of every existential source expression/formula into Program. A-normal Program completeness for the full printed input language must be separately constructed/calibrated; do not label GlobalExact as that theorem. Negation/root bit and shared actual source calls/witnesses remain mandatory.
+
+Later actual K/I weak bridge and all-policy gate lowering must use real syntax and selected f laws. Effectivity needs actual encoded reconstruction; source DAG node counts/backward contexts/shared supplied leaves/binary constants must be proved against literal input sizes. Tree codes and budget formulas alone do not prove polynomial DAG compilation. General supplied-source domain is distinct from later restricted hardness syntax. No native execution performed.

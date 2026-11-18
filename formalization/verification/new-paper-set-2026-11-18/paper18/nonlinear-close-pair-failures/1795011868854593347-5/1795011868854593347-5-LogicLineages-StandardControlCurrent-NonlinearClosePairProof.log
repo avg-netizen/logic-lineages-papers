@@ -1,0 +1,46 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NonlinearClosePairProof.lean:21:8: error: Invalid simp theorem: Expected a proposition, but found
+  ℕ → ℕ → ℕ → Term → Matrix
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NonlinearClosePairProof.lean:21:2: error: `simp` made no progress
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NonlinearClosePairProof.lean:74:19: error: Invalid simp theorem: Expected a proposition, but found
+  ℕ → ℕ → ℕ → Term → Matrix
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NonlinearClosePairProof.lean:74:8: error: `simp` made no progress
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NonlinearClosePairProof.lean:97:19: error: Invalid simp theorem: Expected a proposition, but found
+  ℕ → ℕ → ℕ → Term → Matrix
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NonlinearClosePairProof.lean:96:99: error: unsolved goals
+x k C : ℕ
+v : Term
+⊢ 8 *
+        Nat.pair (8 * (8 * Nat.pair (10 * (10 * Nat.pair (10 * x + 1) (10 * k) + 2) + 6) (10 * v.encode + 6) + 3) + 5)
+          (8 * Nat.pair (10 * (10 * Nat.pair (10 * x + 1) (10 * k) + 2) + 6) (10 * Nat.pair C (10 * v.encode + 6) + 4) +
+            3) +
+      6 =
+    (NonlinearClosePair.guard x k C v).encode
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NonlinearClosePairProof.lean:97:26: warning: This simp argument is unused:
+  InverseCutSyntax.le
+
+Hint: Omit it from the simp argument list.
+  simp [guardCode, guard, I̵n̵v̵e̵r̵s̵e̵C̵u̵t̵S̵y̵n̵t̵a̵x̵.̵l̵e̵,̵ ̵WindowCode.conjunction, WindowCode.atMost,
+  ̵  ̵ ̵ ̵WindowCode.negative,
+  ̲  ̲ ̲ ̲WindowCode.less, WindowCode.phi, WindowCode.add, WindowCode.var,
+  ̵  ̵ ̵ ̵WindowCode.numeral,
+  ̲  ̲ ̲ ̲WindowCode.multiply, Matrix.encode, Term.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NonlinearClosePairProof.lean:99:45: warning: This simp argument is unused:
+  Matrix.encode
+
+Hint: Omit it from the simp argument list.
+  simp [guardCode, guard, InverseCutSyntax.le, WindowCode.conjunction, WindowCode.atMost,
+      WindowCode.negative, WindowCode.less, WindowCode.phi, WindowCode.add, WindowCode.var,
+      WindowCode.numeral, WindowCode.multiply, M̵a̵t̵r̵i̵x̵.̵e̵n̵c̵o̵d̵e̵,̵ ̵Term.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NonlinearClosePairProof.lean:99:60: warning: This simp argument is unused:
+  Term.encode
+
+Hint: Omit it from the simp argument list.
+  simp [guardCode, guard, InverseCutSyntax.le, WindowCode.conjunction, WindowCode.atMost,
+      WindowCode.negative, WindowCode.less, WindowCode.phi, WindowCode.add, WindowCode.var,
+      WindowCode.numeral, WindowCode.multiply, Matrix.encode,̵ ̵T̵e̵r̵m̵.̵e̵n̵c̵o̵d̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

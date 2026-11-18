@@ -1,0 +1,9 @@
+# Exact pre-scope: direct hereditary projection
+
+Approved five supporting contracts, ten frozen hashes verified. Read actual targets and source map against literal global project/layout/output and original Restriction. No LowerRestriction, EncodeDecode, lattice law or same-type retention premise is present.
+
+ProjectionFits uses ancestor extension plus original Fits and must transfer actual key-and-bound inclusion, not only key equality. LookupProjection is deliberately stronger: original successful lookup and new-root extension to the key context suffice, without retained code, root comparability or WF assumptions. Success must supply original schema membership; the local coordinate specification must then reconstruct descendant membership with the same bound. This is plausible because exact coordinates depend on the literal descendant context and global canonical lower descriptors, not ancestor roots. Do not add an application-tuple validity premise to repair this endpoint.
+
+OutputProjection keeps the same actual lower result carrier and derives success without destination tuple assumptions. ProjectionRetained must extract original naturality's successful destination output and use that strengthened lookup law. No lower restriction membership is needed or permitted as an extra premise. Stronger missing-WF formulations are acceptable: any enumerated descendant itself carries WF evidence; invalid-root cases must remain covered by literal finite layout semantics.
+
+ProjectionSemantics compares only exact ValueEq coordinates at descendants, with retained source success eliminating defaults. A later fresh assembly may pair retention and semantics after unfolding the descriptor restriction equation to prove original Restriction. That theorem, once independently checked, can discharge local LowerRestriction globally. The five contracts do not themselves establish order, joins/meets or full finite lattices.

@@ -1,0 +1,9 @@
+# Independent conceptual review: hyper close branch and block reduction
+
+Approved direction before exact freeze. Read plan and actual HyperWindow definitions/targets, signed equality substitution and two-variable proof, and raw-code target. The existing suppliers describe real fixed-seed H, not an independent transformed input; fresh evidence is required.
+
+Keep both signed domains at each occurrence, actual computed collision bounds plus index margins, coefficient zero, and the whole original arbitrary Matrix in every branch. The equal-index replacement must retain the original index equality/domains so truncated signed arithmetic cannot create a witness. i!=j remains necessary; same-name pairs require a separate route. Existing closeMatrix uses a non-strict upper bound; state this explicitly in the frozen comparator. It can strengthen the printed strict-close case but must not silently change branch semantics.
+
+The new block layer is valuable and genuinely additional. Define iterated updates explicitly and prove permutation equivalence for Nodup blocks using actual update commutation. Move i,j to the required positions only through that proved bridge; other bound names and external parameters must remain shared. Distribute finite disjunction over existential blocks, erase exactly i or j, and prove strict length decrease from membership and Nodup. Empty residual blocks and original two-name blocks are required. Support should compare free names after subtracting the corresponding bound lists, not merely matrix support in isolation.
+
+Literal branch descriptors must carry the exact remaining name lists and matrix codes, with all-raw total computation and encode calibration. No width/domain/independent-valuation oracle and no assumption that every block has the close guard. Alpha normalization into Nodup blocks, exhaustive case coverage, other nonlinear cases, normalization preservation and full alternating QE remain explicitly unpaid.

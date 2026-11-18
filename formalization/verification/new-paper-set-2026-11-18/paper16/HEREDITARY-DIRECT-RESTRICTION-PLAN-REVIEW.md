@@ -1,0 +1,9 @@
+# Conceptual review: direct global projection restriction
+
+Approved direction before exact helper scope/proofs. Read actual project/layout/output/monotone/natural/build definitions and original Restriction target. This is a credible way to discharge the local LowerRestriction contract without a circular retention/encoding argument.
+
+The canonical lower descriptor is global and independent of the ancestor base context. For every descendant context, its actual key, tuple bounds and result-carrier indices are therefore identical in the two layouts; only ancestor coordinate availability is dropped. Prove pair membership (including bound) inclusion under extension transitivity and actual distinct-key lookupProject equality. Derive successful source lookup/bounds from retained Fits, so getD 0 never silently supplies a valid coordinate.
+
+Monotone and natural loops at the new base run over a subset of original descendant contexts. Transfer their actual outputs using lookupProject; tupleDecode, tupleLe and tupleRestrict at the same descendant contexts remain literally the same. For naturality, destination lookup equality must cover every tuple returned by actual successful tupleRestrict, not just an assumed bounded destination tuple. Use original retained natural success or its derived actual destination indices/bounds to establish the needed coordinate membership. Do not assume lower restriction closure to get that membership: that would recreate the circularity.
+
+Decode projection ValueEq likewise compares actual descendant observed coordinates, not arbitrary off-layout fields. A direct proof of original global Restriction with no LowerRestriction/EncodeDecode/lattice premise discharges LowerRestriction for all proper types as a corollary. Type-size induction may still be needed for order/join/meet laws; this plan itself grants no lattice acceptance. Freeze exact contracts before proofs and preserve original thirteen targets.

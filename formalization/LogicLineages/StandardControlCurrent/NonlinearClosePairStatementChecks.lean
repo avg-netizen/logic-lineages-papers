@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.NonlinearClosePairProgramsProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.NonlinearClosePairStatementChecks
+theorem full : NonlinearClosePairTargets.Full := NonlinearClosePairProof.full
+#print axioms full
+end LogicLineages.StandardControlCurrent.NonlinearClosePairStatementChecks

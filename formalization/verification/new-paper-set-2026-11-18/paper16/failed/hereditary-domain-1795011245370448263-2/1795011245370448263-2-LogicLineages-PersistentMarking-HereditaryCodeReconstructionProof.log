@@ -1,0 +1,130 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryCodeReconstructionProof.lean:36:98: error: unsolved goals
+E : Environment
+σ : Ty
+Γ : Context
+c : Code
+v : Nat
+Δ : Context
+hw : WellFormed E.types E.ports Δ
+he : Extends Γ Δ
+ds : List Ty
+τ : Ty
+hp : (ds, τ) ∈ fullPrefixes σ
+is : List Nat
+hfit : Fits (argumentBounds σ (lowerCodes σ (canonicalLower E σ)) Δ ds τ hp) is
+hl : lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.application ds τ is } = some v
+hm :
+  ({ context := Δ, kind := Kind.application ds τ is }, outputBound σ (lowerCodes σ (canonicalLower E σ)) Δ ds τ hp) ∈
+    layout E σ (canonicalLower E σ) Γ
+p : Prefix σ := ⟨(ds, τ), hp⟩
+hvector : is ∈ vectors (tupleBounds σ (canonicalLower E σ) Δ p)
+vs : List Code
+hvs : HereditaryDomainSemantics.values E Δ ds is = some vs
+hind : indices E Δ ds vs = some is
+hv : v < ((descriptor E τ).carriers Δ).length
+value : Code := ((descriptor E τ).carriers Δ)[v]
+hget : ((descriptor E τ).carriers Δ)[v]? = some value
+hindex : indexOf ((descriptor E τ).carriers Δ) value = some v
+⊢ (do
+          let tuple ← some is
+          let i ← lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.application ds τ tuple }
+          ((descriptor E τ).carriers Δ)[i]?).getD
+      [] =
+    value
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryCodeReconstructionProof.lean:23:4: error: unsolved goals
+case mk.inr.inr.inr.refl
+E : Environment
+σ : Ty
+Γ : Context
+c : Code
+v : Nat
+Δ : Context
+hw : WellFormed E.types E.ports Δ
+he : Extends Γ Δ
+ds : List Ty
+τ : Ty
+hp : (ds, τ) ∈ fullPrefixes σ
+is : List Nat
+hfit : Fits (argumentBounds σ (lowerCodes σ (canonicalLower E σ)) Δ ds τ hp) is
+hl : lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.application ds τ is } = some v
+hm :
+  ({ context := Δ, kind := Kind.application ds τ is }, outputBound σ (lowerCodes σ (canonicalLower E σ)) Δ ds τ hp) ∈
+    layout E σ (canonicalLower E σ) Γ
+p : Prefix σ := ⟨(ds, τ), hp⟩
+hvector : is ∈ vectors (tupleBounds σ (canonicalLower E σ) Δ p)
+vs : List Code
+hvs : HereditaryDomainSemantics.values E Δ ds is = some vs
+hind : indices E Δ ds vs = some is
+hv : v < ((descriptor E τ).carriers Δ).length
+value : Code := ((descriptor E τ).carriers Δ)[v]
+hget : ((descriptor E τ).carriers Δ)[v]? = some value
+hindex : indexOf ((descriptor E τ).carriers Δ) value = some v
+hdecoded : (HereditaryDomainSemantics.decode E σ Γ c).application Δ ds τ vs = value
+⊢ (do
+          let xs ← some vs
+          indexOf ((descriptor E τ).carriers Δ) ((HereditaryDomainSemantics.decode E σ Γ c).application Δ ds τ xs)).getD
+      0 =
+    v
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryCodeReconstructionProof.lean:14:15: warning: This simp argument is unused:
+  Key.context
+
+Hint: Omit it from the simp argument list.
+  simp only [̵K̵e̵y̵.̵c̵o̵n̵t̵e̵x̵t̵]̵ ̵at hctx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryCodeReconstructionProof.lean:37:57: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only [̵H̵e̵r̵e̵d̵i̵t̵a̵r̵y̵D̵o̵m̵a̵i̵n̵S̵e̵m̵a̵n̵t̵i̵c̵s̵.̵d̵e̵c̵o̵d̵e̵,̵h̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵h̵l̵,̵h̵g̵e̵t̵,̵O̵p̵t̵i̵o̵n̵.̵g̵e̵t̵D̵_̵s̵o̵m̵e̵]̵[̲H̲e̲r̲e̲d̲i̲t̲a̲r̲y̲D̲o̲m̲a̲i̲n̲S̲e̲m̲a̲n̲t̲i̲c̲s̲.̲d̲e̲c̲o̲d̲e̲,̲ ̲h̲i̲n̲d̲,̲ ̲h̲l̲,̲ ̲h̲g̲e̲t̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲g̲e̲t̲D̲_̲s̲o̲m̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryCodeReconstructionProof.lean:37:74: warning: This simp argument is unused:
+  hl
+
+Hint: Omit it from the simp argument list.
+  simp only [HereditaryDomainSemantics.decode, ̲hind, ̲Option.bind_some, ̲hl̵,̵h̵get, ̲Option.getD_some]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryCodeReconstructionProof.lean:37:77: warning: This simp argument is unused:
+  hget
+
+Hint: Omit it from the simp argument list.
+  simp only [HereditaryDomainSemantics.decode, ̲hind, ̲Option.bind_some, ̲hl,h̵g̵e̵t̵,̵ ̲Option.getD_some]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryCodeReconstructionProof.lean:37:82: warning: This simp argument is unused:
+  Option.getD_some
+
+Hint: Omit it from the simp argument list.
+  simp only [̵H̵e̵r̵e̵d̵i̵t̵a̵r̵y̵D̵o̵m̵a̵i̵n̵S̵e̵m̵a̵n̵t̵i̵c̵s̵.̵d̵e̵c̵o̵d̵e̵,̵h̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵h̵l̵,̵h̵g̵e̵t̵,̵O̵p̵t̵i̵o̵n̵.̵g̵e̵t̵D̵_̵s̵o̵m̵e̵]̵[̲H̲e̲r̲e̲d̲i̲t̲a̲r̲y̲D̲o̲m̲a̲i̲n̲S̲e̲m̲a̲n̲t̲i̲c̲s̲.̲d̲e̲c̲o̲d̲e̲,̲ ̲h̲i̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲h̲l̲,̲ ̲h̲g̲e̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryCodeReconstructionProof.lean:38:32: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵o̵r̵d̵i̵n̵a̵t̵e̵,̵h̵v̵s̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵h̵d̵e̵c̵o̵d̵e̵d̵,̵h̵i̵n̵d̵e̵x̵,̵O̵p̵t̵i̵o̵n̵.̵g̵e̵t̵D̵_̵s̵o̵m̵e̵]̵[̲c̲o̲o̲r̲d̲i̲n̲a̲t̲e̲,̲ ̲h̲v̲s̲,̲ ̲h̲d̲e̲c̲o̲d̲e̲d̲,̲ ̲h̲i̲n̲d̲e̲x̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲g̲e̲t̲D̲_̲s̲o̲m̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryCodeReconstructionProof.lean:38:49: warning: This simp argument is unused:
+  hdecoded
+
+Hint: Omit it from the simp argument list.
+  simp only [coordinate, ̲hvs, ̲Option.bind_some, ̲hd̵e̵c̵o̵d̵e̵d̵,̵h̵index, ̲Option.getD_some]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryCodeReconstructionProof.lean:38:58: warning: This simp argument is unused:
+  hindex
+
+Hint: Omit it from the simp argument list.
+  simp only [coordinate, ̲hvs, ̲Option.bind_some, ̲hdecoded,h̵i̵n̵d̵e̵x̵,̵ ̲Option.getD_some]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryCodeReconstructionProof.lean:38:65: warning: This simp argument is unused:
+  Option.getD_some
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵o̵r̵d̵i̵n̵a̵t̵e̵,̵h̵v̵s̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵h̵d̵e̵c̵o̵d̵e̵d̵,̵h̵i̵n̵d̵e̵x̵,̵O̵p̵t̵i̵o̵n̵.̵g̵e̵t̵D̵_̵s̵o̵m̵e̵]̵[̲c̲o̲o̲r̲d̲i̲n̲a̲t̲e̲,̲ ̲h̲v̲s̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲h̲d̲e̲c̲o̲d̲e̲d̲,̲ ̲h̲i̲n̲d̲e̲x̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

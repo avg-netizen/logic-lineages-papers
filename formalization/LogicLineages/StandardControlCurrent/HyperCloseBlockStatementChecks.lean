@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.HyperCloseBlockProgramsProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.HyperCloseBlockStatementChecks
+theorem full : HyperCloseBlockTargets.Full := HyperCloseBlockProof.full
+#print axioms full
+end LogicLineages.StandardControlCurrent.HyperCloseBlockStatementChecks

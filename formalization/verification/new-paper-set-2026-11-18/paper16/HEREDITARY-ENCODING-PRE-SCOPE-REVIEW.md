@@ -1,0 +1,7 @@
+# Exact pre-scope: converse hereditary encoding
+
+Approved three supporting contracts, ten pins verified. Read all definitions/source map and current semantic reconstruction draft. SemanticRoundtrip and EncodedFits require actual Valid only, without WF or smaller-law assumptions. ValueEq is the actual observed-coordinate relation, not equality of off-domain arbitrary fields. The draft reconstructs availability/weak/strict bits through actual layout membership and full-tuple outputs via concrete indices, lookup and Valid output membership.
+
+EncodedRetained explicitly conditions on WF and LowerRestriction of the actual global descriptors at strictly smaller typeSize. This is a legitimate local induction contract, not final source acceptance or an arbitrary lower callback oracle. Prove actual prefix argument types are smaller, preserve WF and extension premises, and derive destination tuple index existence from that concrete law. No across-context index equality may be assumed.
+
+Final EncodeDecode/FullFiniteLattices MUST eliminate LowerRestriction through genuine well-founded type-size induction. Check the simultaneous dependency graph when assembling: a same-type restriction/retention cycle is not discharged by naming this hypothesis. All three support endpoints must remain labeled appropriately until that induction is proved. Original thirteen-family target unchanged. Current semantic reconstruction draft is in scope for bounded development.
