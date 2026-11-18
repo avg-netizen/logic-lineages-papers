@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.TwoEnvironmentProof
+namespace LogicLineages.PersistentMarking.TwoEnvironmentChecks
+theorem exact_fullTwoEnvironments : TwoEnvironmentTargets.FullTwoEnvironments := TwoEnvironmentProof.fullTwoEnvironments
+#print axioms exact_fullTwoEnvironments
+end LogicLineages.PersistentMarking.TwoEnvironmentChecks

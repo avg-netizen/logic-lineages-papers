@@ -1,10 +1,18 @@
 # Current comparison formalization status
 
-New-paper register: **39 checked, 128 pending / 167**. Historical register:
+New-paper register: **43 checked, 124 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper16 `lem:two-environments`: complete seven-family actual auxiliary-tree
+  covariance, with typed pointwise related maps and finite-image fresh binders.
+
+
+- Paper18 `f:lem:norm-arithmetic`: actual finite ordinal norm-ball enumeration,
+  effective calibrated operations and all printed original-domain norm bounds.
+
 
 - Paper16 `lem:elementary`: actual ordinary targets, strict-to-weak inclusion
   and reflexivity for every typed signature-valid ordinary term.
@@ -21,6 +29,9 @@ to this replacement collection. Old statuses do not transfer automatically.
 
 - Paper16 `lem:sharp-admissible`: full five-family unrestricted-target
   refinement admissibility, with genuine marked-target reconstruction.
+
+- Paper16 `lem:extended-marking`: both-end marking transport, source-mark
+  removal and actual partial-markability reflection without cut/covariance.
 
 - Paper17 `lem:control`: both literal permitted controls, primitive recursion,
   full numerical growth/finite-hierarchy bounds and exact modular potential.
@@ -76,6 +87,8 @@ to this replacement collection. Old statuses do not transfer automatically.
   nonfinite input.
 - Paper18 `f:thm:maximum-predecessor`: all four actual maximum/lower-power
   recurrences and the literal optimized terminating computable interpreter.
+- Paper18 `f:cor:finite-coefficient`: full actual ordinal finite-coefficient
+  identity for every k,n, including zero.
 - Paper19 `lem:perturbed-control`: full control lemma over the stipulated
   primitive-recursive bounded simulation, including double-exponential growth.
 
@@ -141,7 +154,8 @@ decision and height remain open. Actual owner
 prefix omission/permutation/expansion/refined-copy prerequisites are checked
 (50 modules, four supporting aliases). Complete unrestricted-target
 refinement admissibility is checked (82 modules), including In/Marked1/
-Marked2 reconstruction without ordinary-target contradiction or cut.
+Marked2 reconstruction without ordinary-target contradiction or cut. Full
+marking transport/removal/markability reflection is checked (34 modules).
 
 Paper17: near-control modular/orbit, full numerical growth and joint primitive
 recursion; factorial laws/orbit and a shared explicit finite-level bound.
@@ -220,3 +234,8 @@ independent final review. This is not whole-paper completion. Separate prose
 assertions about F2-linearity, exact squarefree cardinality/model and executable
 field/root/matrix/PF conversion remain unclaimed, as do unrelated later
 numbered results. No arbitrary Laurent-coefficient or full-root/CI claim is made.
+
+Initial higher principal-parts coverage is checked as supporting packet103
+(30 modules): full polynomial-part uniqueness, proper degree elimination and
+actual initial source coverage. Repeated Cartier higher-pole vanishing and
+the scalar-profile corollary remain pending.

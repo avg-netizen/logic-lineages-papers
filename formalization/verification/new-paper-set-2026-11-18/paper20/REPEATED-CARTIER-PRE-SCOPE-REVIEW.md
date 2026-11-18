@@ -1,0 +1,5 @@
+# Independent pre-scope: RepeatedCartier4
+
+Approved supporting four-target scope; five frozen pins match. Actual arbitrary perfect characteristic-two fields, literal RatFunc poles and actual Cartier iteration are retained. SimpleIteration is exactly iterated inverse Frobenius at the fixed pole; HigherVanishing requires the real quantitative 1<k<=2^ell and includes the vacuous ell0 boundary. FiniteAdditivity is genuine rational finite-sum iteration, not K-linearity. PrincipalReduction uses all original higher-principal coefficients and selects initial index0 only after M>0 makes it meaningful; source positivity must later discharge that premise.
+
+All roots, zero coefficients and empty root families remain intact. No post-transient coefficient redefinition, supplied vanishing oracle or generic contraction-as-vanishing shortcut is allowed. This pays repeated odd Cartier support only; actual source beta choice/coverage, original series constant and complete scalar corollary assembly remain separate. Native/final evidence required before acceptance.

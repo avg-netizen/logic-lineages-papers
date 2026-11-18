@@ -1,0 +1,9 @@
+# Independent final: complete extended marking transport
+
+Approved full current lem:extended-marking on the exact three-assertion conjunction. Read-only independent evidence exactly reproduces the author report:34 source-matched modules, one full standard-only alias, zero errors. Actual import traversal equals recorded closure. Native1794988493422567379-6; five pins and inherited verifier freezes unchanged. No compiler invocation.
+
+Read syntax support, independent source-unmark and markability proofs, and actual25-case forward proof. Source removal uses real source-node recursion; opened bodies preserve nodes and are strictly smaller than the original lambda. Lambda-source inversion permits only Abs. Ordinary head removal reconstructs typing and target annotation from actual endpoint facts and applies Put; variable/marked cases are literally unchanged. Reflection similarly recurses on the actual source spine, uses genuine partial mark/open correspondence, and excludes variable-source successful target marking.
+
+Forward preserves actual root headmark semantics: Fun becomes In with empty extras; Copy/Stat become Marked1/2 retaining actual original list/whole witnesses. Marked-target rules retain their existing witnesses. Abs/FAbs use proved literal opening and free-occurrence preservation. Select/PSelect use the independent removal theorem on the smaller marked continuation, preserving the original full call. Macros lift their actual premise. Internal list motives are trivial because only roots/initial lambda spines are marked and those list premises are reused unchanged, not deleted. No comparison cut, covariance or general application associativity is assumed.
+
+The explicit target-type cast repair is proof-only and its failed edition retained. All three stated source conclusions are covered; no additional strict/list marking theorem, prefix escape or cut is claimed from the proof's methodological prose.

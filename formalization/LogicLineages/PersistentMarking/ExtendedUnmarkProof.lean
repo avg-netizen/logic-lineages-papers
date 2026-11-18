@@ -10,7 +10,8 @@ theorem remove (S : Signature) (s t : Expr) (h : ExtendedWeakTree S (headmark s)
   | head f base =>
     have hf := ExtendedEndpointProof.weakFacts h
     have hp : PaperTerm S (.head f base) f.result := paperBack S _ _ hf.1
-    have ht : PaperTerm S t f.result := hf.2.2.symm ▸ hf.2.1
+    have he : t.type = f.result := hf.2.2.symm
+    have ht : PaperTerm S t f.result := he ▸ hf.2.1
     exact ⟨.put hp ht h⟩
   | lam σ body =>
     cases h with

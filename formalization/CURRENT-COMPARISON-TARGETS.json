@@ -116,8 +116,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/composition.tex",
           "line": 308,
           "statement_latex": "[Marking transport]\\label{lem:extended-marking}\nFor all auxiliary terms,\n\\[\n \\EW s t\\Longrightarrow\\EW{\\headmark(s)}{\\headmark(t)},\\qquad\n \\EW{\\headmark(s)}t\\Longrightarrow\\EW s t.\n \\tag{T}\n\\]\nIf $\\EW s t$ and $\\mk(t)$ is defined, then $\\mk(s)$ is defined.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.ExtendedMarkingTargets.FullMarking",
+          "verified_alias": "LogicLineages.PersistentMarking.ExtendedMarkingChecks.exact_fullMarking",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/102-extended-marking.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:two-environments",
@@ -126,8 +129,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/composition.tex",
           "line": 346,
           "statement_latex": "[Two environments]\\label{lem:two-environments}\nIf $\\EW s t$ and type-preserving environments $\\gamma,\\delta$\nsatisfy $\\EW{\\gamma(x)}{\\delta(x)}$ for every variable,\nthen $\\EW{s\\gamma}{t\\delta}$. The strict and list-judgment\nversions hold as well.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.TwoEnvironmentTargets.FullTwoEnvironments",
+          "verified_alias": "LogicLineages.PersistentMarking.TwoEnvironmentChecks.exact_fullTwoEnvironments",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/105-two-environments.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:application-covariance",
@@ -988,8 +994,11 @@
           "file": "18-standard-control-comparison/sections/foundations.tex",
           "line": 26,
           "statement_latex": "[Effective ordinal operations and norm bounds]\n\\label{f:lem:norm-arithmetic}\nEvery norm ball is finite and effectively enumerable.  Cantor-normal-form\ncomparison, $\\oplus$, $\\otimes$, and ordinal exponentiation $2^\\alpha$\nare effective.  Moreover\n\\begin{align*}\n N(\\alpha\\oplus\\beta)&=N(\\alpha)+N(\\beta),\\\\\n N(\\alpha)+N(\\beta)-1\n &\\le N(\\alpha\\otimes\\beta)\\le N(\\alpha)N(\\beta)\n       &&(\\alpha,\\beta>0),\\\\\n N(\\alpha)&\\le2N(2^\\alpha),\\qquad\n N(2^\\alpha)\\le2^{N(\\alpha)}.\n\\end{align*}",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.NormArithmeticTargets.FullNormArithmetic",
+          "verified_alias": "LogicLineages.StandardControlCurrent.NormArithmeticStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/104-standard-norm-arithmetic.json"
         },
         {
           "id": "18-standard-control-comparison:f:lem:collapse-estimates",
@@ -1063,8 +1072,11 @@
           "file": "18-standard-control-comparison/sections/foundations.tex",
           "line": 247,
           "statement_latex": "[Finite coefficient identity]\\label{f:cor:finite-coefficient}\nFor all $k,n\\in\\N$,\n\\[\n \\psi(\\omega k+n)=f^k(2k+n)+k.\n\\]",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.FiniteCoefficientTargets.FiniteCoefficient",
+          "verified_alias": "LogicLineages.StandardControlCurrent.FiniteCoefficientStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/101-standard-finite-coefficient.json"
         },
         {
           "id": "18-standard-control-comparison:u:lem:sparse",
@@ -2008,7 +2020,7 @@
     }
   ],
   "status_counts": {
-    "pending": 128,
-    "checked": 39
+    "pending": 124,
+    "checked": 43
   }
 }
