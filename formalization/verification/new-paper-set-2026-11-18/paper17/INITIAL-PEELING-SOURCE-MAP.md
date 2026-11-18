@@ -1,0 +1,9 @@
+# Complete initial original-unit phase supporting comparator
+
+Source entries.tex prop:equal-gap proof through initial phase, including the printed two exception shapes. ActualInitialPeeling represents this entire phase, not only a local sensitive unit. The original unit list expands actual CNF finite coefficients, drops exactly one leading unit, then reverses to the actual low-to-high processing order. Generated blocks never enter this list. Because delta is a positive limit, original exponents are >=1; this fact must be proved. The final leading unit and P=0 case are excluded from this phase, not silently reused.
+
+Pass criterion is literal: equal leading costs, no sensitive original exponent, or exactly the two printed single-quadratic exception shapes with adjacent costs and odd retained P0 charge. Min(c,d) handles both orientations. Sensitive leading-unit subtraction is automatically correct because the single dropped unit has its actual exponent; E=1 has no sensitive units. Pure one-unit gaps have an empty original phase.
+
+Pass requires actual simultaneous FirstEntry at the remaining pure omega^E, not only common limit parts. Fail requires actual unequal relative limits with the exact source sign and both still above that remaining unit. Threshold is the literal existing thickBlockTail at source R=20+Ndelta+Nmu+Nnu; its adequacy for all fixed original prefixes and generated-tail return guards must be proved.
+
+The packet deliberately does not claim its semantic CNF pass predicate is an executable decision procedure yet, nor that a first divergence already proves final entry order. Effective raw-code compilation, divergence-to-entry strictness, leading/lower phase traversal, highest-piece visits, terminal coefficients and full prop:equal-gap remain open. No phase enumerator, synchronization, affordable-prefix or norm-monotonicity assumption is added.

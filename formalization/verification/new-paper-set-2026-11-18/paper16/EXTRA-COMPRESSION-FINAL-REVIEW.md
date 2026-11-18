@@ -1,0 +1,7 @@
+# Independent final: complete extra compression
+
+Approved complete current lem:extra-compression on its exact full alias. Independent read-only verifier reproduces author evidence exactly:63 source-matched modules, one exact alias using only standard axioms, zero errors. Actual import traversal equals recorded closure. Native1794987826677627935-5, first pass; five frozen pins and inherited verifier freezes unchanged. No compilation performed.
+
+Read exact target, actual Support/Proof and printed source. copies builds one whole original owner at each target-extra occurrence's precise annotation, retaining order and duplicates. Whole witness is recursively converted to an actual ordered comparison. copiesPrefix uses full original extras as prefix; copiesPaper derives intermediate typing/validity from checked owner-copy refinement facts. Actual Remove witnesses prove the append-block permutation, not set commutativity.
+
+The proof constructs In at copied extras, Drop at copies++original extras, Perm at original extras++copies, and Copies back at the original owner. All intermediate PaperTerm facts are proved internally, with the original base matching and every target-extra whole witness retained. Same output type and head equivalence are explicit. No ordinary-target assumption, comparison composition, cut or synthetic owner-oracle is used. This is full marked-target compression, but not unrestricted sharp admissibility or cut itself.

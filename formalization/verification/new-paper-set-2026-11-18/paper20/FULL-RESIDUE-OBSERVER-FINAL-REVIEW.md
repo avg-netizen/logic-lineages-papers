@@ -1,0 +1,11 @@
+# Independent final: complete numbered residue-profile observer
+
+Approved current20 thm:residue-observer as the exact printed mathematical numbered theorem, on fixed_completeResidueObserver. Independent read-only recursive verifier reproduces author evidence exactly: 77 source-matched modules, zero errors, full fourteen-conjunct exact alias with standard axioms only. Fresh native1794987771432360606-2, first pass, unchanged resource profile. All21 frozen pins unchanged. No compiler invocation.
+
+Read fresh assembly and exact target against cartier.tex121–144 and all separately reviewed constituents. It includes actual algebraic-closure geometric proper F2 states, an actual Equiv with the full compatible root-tuple subtype and literal PF reconstruction, and mathematical finiteness of both types. Both pinned literal inverse-Frobenius transition formulas intertwine actual rational operations and preserve compatibility; actual base commuting square is retained. Literal all-root sum descends uniquely to F2 and agrees with genuine canonical series constant coefficient, with regularity derived.
+
+Actual every-word reconstruction/execution, compatibility and observation are included, not only repeated odd Cartier. Literal source P/A_d canonical/presented-series bridge and unique full compatible initialization after every prefix at least the actual transient are included. Every remaining mixed continuation reads the original presented coefficient at offset(prefix)+2^length(prefix)*offset(continuation). No pole/tuple coordinate or cancellation is suppressed, no caller supplies splitting/PF coverage/profile/termination, and finite/zero/empty cases retain their constituent scopes.
+
+All supplier finals, including genuine geometry, finite geometric Equiv and source observation, are independently approved. The complete fourteen fields are supplied directly by those checked proofs; this is not a subset promotion.
+
+Acceptance excludes the proof-text F2-linearity aside, exact squarefree/cardinality model, executable field/root construction, numerator-matrix/PF conversion prose, and subsequent scalar-profile corollary. These stronger or separate assertions are not claimed. Mathematical finite/classical existence is not an algorithm, and this numbered theorem does not imply completion of the entire paper or II5 formalization.

@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.SharpAdmissibleProof
+namespace LogicLineages.PersistentMarking.SharpAdmissibleChecks
+theorem exact_fullAdmissible : SharpAdmissibleTargets.FullAdmissible := SharpAdmissibleProof.fullAdmissible
+#print axioms exact_fullAdmissible
+end LogicLineages.PersistentMarking.SharpAdmissibleChecks

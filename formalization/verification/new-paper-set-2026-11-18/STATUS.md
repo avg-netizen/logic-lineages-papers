@@ -1,6 +1,6 @@
 # Current comparison formalization status
 
-New-paper register: **33 checked, 134 pending / 167**. Historical register:
+New-paper register: **39 checked, 128 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
@@ -12,6 +12,15 @@ to this replacement collection. Old statuses do not transfer automatically.
 - Paper16 `lem:sharp-syntax`: all eight actual refinement syntax families,
   including two-environment substitution and successful full-call reflection,
   without assuming general application associativity or comparison cut.
+
+- Paper16 `lem:conservative`: complete five-family ordinary-target
+  elimination through actual refinement and the auxiliary comparison trees.
+
+- Paper16 `lem:extra-compression`: actual occurrence/owner-copy compression
+  for unrestricted marked targets, with no composition premise.
+
+- Paper16 `lem:sharp-admissible`: full five-family unrestricted-target
+  refinement admissibility, with genuine marked-target reconstruction.
 
 - Paper17 `lem:control`: both literal permitted controls, primitive recursion,
   full numerical growth/finite-hierarchy bounds and exact modular potential.
@@ -62,6 +71,11 @@ to this replacement collection. Old statuses do not transfer automatically.
 - Paper18 `f:lem:collapse-estimates`, `f:lem:limit-saturation` and
   `f:thm:single-predecessor`: full finite-tail/nonfinite estimates, actual
   saturation/joint monotonicity and independently defined max recurrence.
+- Paper18 `f:cor:closed-evaluation`: concrete total computable evaluation,
+  genuine first-finite path/norm orbit and strict count bound for every
+  nonfinite input.
+- Paper18 `f:thm:maximum-predecessor`: all four actual maximum/lower-power
+  recurrences and the literal optimized terminating computable interpreter.
 - Paper19 `lem:perturbed-control`: full control lemma over the stipulated
   primitive-recursive bounded simulation, including double-exponential growth.
 
@@ -70,6 +84,10 @@ to this replacement collection. Old statuses do not transfer automatically.
 
 - Paper20 `lem:binary-transient`: every mixed word at the literal source
   threshold preserves properness and leaves only simple geometric poles.
+
+- Paper20 `thm:residue-observer`: complete geometric residue-profile
+  bijection, finite actual state/profile types, both literal maps/output and
+  every source-prefix continuation with genuine presented-series indexing.
 
 Each has an exact current-source comparator, native gate, source-matched
 recursive evidence and independent final review. The acceptance records under
@@ -116,10 +134,14 @@ three aliases) are checked without asserting general call associativity.
 All25-constructor/all7-judgment auxiliary-tree injective equivariance with
 actual count preservation is checked (34 modules, one supporting alias).
 Actual Abs/FAbs fresh-name synchronization with equal auxiliary-tree count
-is checked (38 modules, two supporting aliases). Conservative elimination,
-prefix escape, comparison cut, decision and height remain open. Actual owner
+is checked (38 modules, two supporting aliases). Complete five-family
+conservative elimination is checked (77 modules), after proof-only splitting
+resolved the original memory-cap stops. Prefix escape, comparison cut,
+decision and height remain open. Actual owner
 prefix omission/permutation/expansion/refined-copy prerequisites are checked
-(50 modules, four supporting aliases).
+(50 modules, four supporting aliases). Complete unrestricted-target
+refinement admissibility is checked (82 modules), including In/Marked1/
+Marked2 reconstruction without ordinary-target contradiction or cut.
 
 Paper17: near-control modular/orbit, full numerical growth and joint primitive
 recursion; factorial laws/orbit and a shared explicit finite-level bound.
@@ -145,7 +167,11 @@ comparison remain separate unpaid obligations. The actual primitive-recursive
 CNF profile and semantic finite joint-piece coverage are checked (73 modules),
 and the actual total primitive-recursive highest-piece selector with complete
 none/some/max-piece/source-sign correctness is checked (86 modules). Actual
-phase visitation and the global equal-gap certificate remain pending.
+Non-leading sensitive-unit oriented separation and arbitrary quadratic
+admission are checked (188 modules), deriving actual visits, resets, budgets
+and exceptions. Initial peeling, global phase visitation and the full equal-gap
+certificate remain pending. Actual linear-tail k-first-hit/norm-clock/
+terminal-relative-limit return, including k=0, is checked (186 modules).
 
 Archive/migration is remotely verified. All80 archived-file hashes and local
 compatibility paths pass, and all167 statement-source records reproduce from
@@ -161,59 +187,36 @@ packets may discharge a gap noted in an earlier record; the numbered register
 and this status page describe current coverage. The read-only migration check
 also enforces the exact register/acceptance bijection and evidence-file hashes.
 
-Paper20 Basic-only actual Cartier support is checked (eight modules, nine
-aliases; peak RSS1345368 KiB under the unchanged1536 MiB cap). Canonical
-rational decomposition and uniqueness characterize the source operation,
-with integer local laws and the even selector. Actual inverse-pole and
-embedded-polynomial Cartier support is also checked (ten modules). Earlier resource-blocked
-editions remain preserved and unaccepted. No legacy supplier was edited.
-Unrestricted formal-series decomposition/uniqueness and coefficient support
-is checked (five modules, five aliases). Actual regular rational/series
-compatibility and presentation independence are checked (13 modules, three
-aliases). The full source ordinary-power-series local lemma is checked
-(18 modules). Both-selector properness and canonical denominator divisibility
-are checked supporting results (11 modules, five aliases), as is actual
-ceil-half pole contraction/no-new-pole (14 modules, four aliases). Scalar
-extension and arbitrary mixed-word bounds are checked (23 modules). Literal
-source denominator/multiplicity/clog and mapped-input budget are checked
-(18 modules, six aliases). Complete source mixed transient is checked
-(27 modules). The complete residue-profile/bijection and observer remain
-separate unpaid obligations. No arbitrary Laurent-coefficient claim is made.
+Paper20: actual Basic-only rational Cartier decomposition and local pole rules,
+unrestricted formal-series coefficient selection and canonical regular rational
+presentation compatibility are checked. Original resource-stopped editions are
+preserved; no legacy supplier or resource cap was changed. Both-selector
+properness/denominator divisibility, actual geometric pole contraction, scalar
+extension/mixed words, literal source multiplicity/clog budget and the complete
+mixed transient are checked.
 
-Actual source splitting-field/all-root/Frobenius facts are checked (nine modules,
-seven supporting aliases), including the exact F2 fixed field. Mathematical
-finiteness is not executable field construction/root enumeration or a complete
-profile theorem.
+The actual finite source splitting field/all roots/Frobenius facts, exact F2
+fixed field, full-root product interpolation and complete arbitrary-tuple
+partial fractions are checked. States are independently defined by canonical
+properness and denominator divisibility, not as a reconstruction range. Actual
+canonical scalar extension and genuine algebraic-closure root multiplicity/
+divisibility reflection prove the geometric-state equivalence; finite-field
+root membership alone is not used. Unique F2 polynomial/rational descent,
+all-root Frobenius transport and both independent-state coverage directions
+are checked.
 
-Actual full-root product/omitted-factor interpolation is checked for every
-degree-bounded polynomial, including empty roots (ten modules, six supporting
-aliases).
+Both literal profile maps, actual rational/base-state commuting squares, the
+literal output sum and genuine canonical series coefficient equality are
+checked. Arbitrary regular F2 rational series satisfy both digit selectors at
+every coefficient index; word induction proves the exact low-bit stride and
+prefix concatenation law. Literal source P/A_d regularity, post-transient state
+membership, unique initial profile and every continuation's original presented
+coefficient are checked.
 
-Complete actual partial-fraction coverage of independent canonical proper
-rational states over the source splitting field is checked (19 modules, six
-supporting aliases), including every all-root tuple and zero/empty cases.
-Geometric support equivalence and F2 descent remain separate.
-
-Actual split-polynomial simple-support/divisibility characterization and
-source-divisor splitting are checked (14 modules, three supporting aliases).
-Actual canonical numerator/denominator scalar extension and properness are
-checked (17 modules), and every actual mixed-word source run after the literal
-transient belongs to the independent state space (41 modules). Arbitrary
-geometric-state equivalence is still not inferred from finite-field root
-membership alone.
-
-Actual unique F2 descent of Frobenius-fixed polynomials and rational functions
-is checked (23 modules, two supporting aliases). This is mathematical
-existence, not executable initial-profile conversion or a complete observer.
-
-Actual Frobenius tuple transport and both unique independent F2 divisor-state
-correspondence directions are checked (32 modules, four supporting aliases).
-Both literal transitions, actual all-tuple rational intertwining and base-state
-commuting square are checked (37 modules, four aliases). The literal complete
-output sum equals the actual regular base-series constant coefficient with
-unique F2 value (37 modules, five aliases). Unrestricted geometric equivalence
-and every-continuation observer remain separate obligations.
-
-Both selectors preserve actual canonical regular F2 rational expansions and
-select every series coefficient (20 modules, two aliases), with false=2n and
-true=2n+1. No finite-series or properness restriction is imposed.
+The actual geometric-state/profile Equiv with literal PF image equality and
+finiteness of both types is checked. The complete printed residue-observer
+theorem has a fresh fourteen-conjunct gate, 77-module recursive evidence and an
+independent final review. This is not whole-paper completion. Separate prose
+assertions about F2-linearity, exact squarefree cardinality/model and executable
+field/root/matrix/PF conversion remain unclaimed, as do unrelated later
+numbered results. No arbitrary Laurent-coefficient or full-root/CI claim is made.

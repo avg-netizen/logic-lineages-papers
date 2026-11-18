@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.ConservativeProof
+namespace LogicLineages.PersistentMarking.ConservativeChecks
+theorem exact_fullConservative : ConservativeTargets.FullConservative := ConservativeProof.fullConservative
+#print axioms exact_fullConservative
+end LogicLineages.PersistentMarking.ConservativeChecks

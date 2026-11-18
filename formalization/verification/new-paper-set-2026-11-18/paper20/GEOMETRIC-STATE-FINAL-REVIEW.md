@@ -1,0 +1,7 @@
+# Independent final: GeometricState2
+
+Approved supporting geometric equivalences. Independently reproduced recursive evidence exactly: 30 source-matched modules, two exact standard-only aliases, zero errors; receipt 1794987371408590645-2. Six frozen pins unchanged. No compiler invocation.
+
+Read actual proof. The actual root product maps to the product over the injective image of the complete root set; its root multiset is exactly that nodup image. For the actual mapped nonzero canonical denominator Q, algebraic closedness supplies splitting. Injective field-map divisibility reflection plus monic canonical denominator turns original divisibility into roots-multiset containment. Explicit count reasoning proves this equivalent to every positive geometric pole being supported and every multiplicity at most one. Actual canonical denominator normalization identifies these counts with the extended rational's true poles. No irrelevant irreducible factor can disappear from a finite-field-only root test.
+
+Both K-state and independent F2-base-state iff statements follow. The base predicate already uses base-field properness, so its final and_congr preserves that exact condition; no unproved properness-transport assumption is inserted. Zero and empty roots are included by nonzero canonical denominator/root product and general multiset reasoning. Preserved elaboration failures do not change semantic pins. No full observer/finiteness/effective conversion claim is made here.

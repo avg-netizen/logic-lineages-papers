@@ -1,0 +1,9 @@
+# Independent complete numbered observer pre-scope
+
+Approved source-exact CompleteResidueObserver comparator before assembly proof. All 21 frozen pins independently match. Re-read fourteen conjuncts, constituent target definitions and current cartier.tex121–144 against the prior assembly scope assessment.
+
+The genuine geometric proper F2 state subtype and actual Equiv with every-image PF reconstruction pay the complete bijection, including every profile by surjectivity. Actual finite profile/state types are required. ActualIntertwining plus CompatiblePreservation and ActualBaseSquare retain both literal maps and actual rational semantics; no K-linearity or transition oracle is assumed. OutputDescent and ActualBaseOutput give the literal all-root sum's unique F2 value and genuine constant-series meaning. Every-word execution/compatibility/base observation are explicit. PresentedExpansion plus ExactSourceContinuations pay actual P/A initialization at each sufficiently long prefix and every subsequent mixed word's original presented-series index with correct low-bit scaling.
+
+This covers the numbered statement's printed mathematical clauses, not merely a subset or a reconstruction-range model. FiniteProfile native evidence and independent final approval remain prerequisite to acceptance of the fresh full alias. Zero/empty cases of general states remain included; d>=1 is explicit for the source transient domain.
+
+The documented exclusions are accurate: F2-linearity is a proof aside, and executable field/root construction, squarefree cardinality/model and matrix/PF conversion are stronger surrounding prose. They remain unclaimed, without being added as unprinted requirements for this numbered comparator. No scalar-profile corollary or entire-paper completion is inferred. Fresh full native gate, recursive evidence and independent final review are still mandatory.

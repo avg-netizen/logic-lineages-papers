@@ -1,0 +1,15 @@
+module
+public import LogicLineages.CartierObserverCurrent.SourceObserverProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.SourceObserver.StatementChecks
+
+theorem fixed_presentedExpansion : Targets.PresentedExpansion :=
+  LogicLineages.CartierObserverCurrent.SourceObserver.presentedExpansion
+
+theorem fixed_exactSourceContinuations : Targets.ExactSourceContinuations :=
+  LogicLineages.CartierObserverCurrent.SourceObserver.exactSourceContinuations
+
+#audit_namespace LogicLineages.CartierObserverCurrent.SourceObserver.StatementChecks
+end LogicLineages.CartierObserverCurrent.SourceObserver.StatementChecks

@@ -77,8 +77,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/composition.tex",
           "line": 194,
           "statement_latex": "[Ordinary-target elimination]\\label{lem:conservative}\nIf $q\\sharpens s$, $\\EW s t$, and $t$ is entirely ordinary,\nthen $\\W q t$. The corresponding statements hold for the\nstrict judgment, weak matching, strict multiset replacement,\nand replacement suppliers.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.ConservativeTargets.FullConservative",
+          "verified_alias": "LogicLineages.PersistentMarking.ConservativeChecks.exact_fullConservative",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/093-conservative-elimination.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:extra-compression",
@@ -87,8 +90,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/composition.tex",
           "line": 251,
           "statement_latex": "[Compression of extras]\\label{lem:extra-compression}\nLet $P=f^\\star(\\vec b;\\vec e)$ and\n$T=g^\\star(\\vec c;\\vec d)$ have the same output type.\nSuppose $f\\approx g$, the base lists have an auxiliary weak\nmatching, and $\\EW{P_{\\operatorname{type}(d)}}d$ for every\ntarget extra $d$. Then $\\EW P T$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.ExtraCompressionTargets.ExtraCompression",
+          "verified_alias": "LogicLineages.PersistentMarking.ExtraCompressionChecks.exact_extraCompression",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/096-extra-compression.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:sharp-admissible",
@@ -97,8 +103,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/composition.tex",
           "line": 271,
           "statement_latex": "[Refinement admissibility]\\label{lem:sharp-admissible}\nFor arbitrary targets,\n\\[\n q\\sharpens s,\\quad \\EW s t\\quad\\Longrightarrow\\quad\\EW q t.\n \\tag{A}\n\\]\nThe strict and three list-judgment analogues also hold.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.SharpAdmissibleTargets.FullAdmissible",
+          "verified_alias": "LogicLineages.PersistentMarking.SharpAdmissibleChecks.exact_fullAdmissible",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/099-unrestricted-refinement-admissibility.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:extended-marking",
@@ -1002,8 +1011,11 @@
           "file": "18-standard-control-comparison/sections/foundations.tex",
           "line": 132,
           "statement_latex": "[Greedy maximum]\\label{f:thm:maximum-predecessor}\nThe following simultaneous recursion computes $M$ and $L$ exactly.\nWrite $\\alpha=\\omega^e c+r$, where $c>0$ and $r<\\omega^e$, and\nput $w=1+N(e)$.\n\\begin{enumerate}[label=(\\roman*)]\n\\item $M(\\alpha,0)=0$ and $L(0,b)=L(e,0)=0$.\n\\item If $r>0$ and $cw\\le b$, then\n\\[\n M(\\alpha,b)=\\omega^e c+M(r,b-cw).\n\\]\n\\item Otherwise set\n\\[\n d=\\begin{cases}\n \\min\\{c-1,\\lfloor b/w\\rfloor\\},&r=0,\\\\\n \\min\\{c,\\lfloor b/w\\rfloor\\},&r>0.\n \\end{cases}\n\\]\nThen $M(\\alpha,b)=\\omega^e d+L(e,b-dw)$, with a zero block\nomitted.\n\\item If $e,b>0$, put $a=M(e,b-1)$, $v=1+N(a)$ and\n$(q,s)=\\operatorname{divmod}(b,v)$.  Then\n\\[\n L(e,b)=\\omega^a q+L(a,s).\n\\]\n\\end{enumerate}",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.MaximumAlgorithmTargets.FullOptimizedMaximumAlgorithm",
+          "verified_alias": "LogicLineages.StandardControlCurrent.MaximumAlgorithmStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/098-standard-maximum-algorithm.json"
         },
         {
           "id": "18-standard-control-comparison:f:lem:limit-saturation",
@@ -1038,8 +1050,11 @@
           "file": "18-standard-control-comparison/sections/foundations.tex",
           "line": 224,
           "statement_latex": "[Closed evaluation and its norm orbit]\n\\label{f:cor:closed-evaluation}\nA closed collapse value is computable by the following deterministic\ndescent.  At a nonfinite state $\\alpha=\\lambda+n$, replace it by\n$M(\\lambda,f(N(\\alpha)))$ and add one to an event counter.\nOn reaching a finite state $Z$, return $Z$ plus that counter.\nIf the initial norm is $t$ and the number of events is $D$, then\n\\[\n Z=f^D(t),\\qquad \\psi(\\alpha)=Z+D.\n\\]\nFor a nonfinite initial state one also has $0<D<Z$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.ClosedEvaluationTargets.FullClosedEvaluation",
+          "verified_alias": "LogicLineages.StandardControlCurrent.ClosedEvaluationStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/090-standard-closed-evaluation.json"
         },
         {
           "id": "18-standard-control-comparison:f:cor:finite-coefficient",
@@ -1803,8 +1818,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/cartier.tex",
           "line": 121,
           "statement_latex": "[A complete residue-profile observer]\n\\label{thm:residue-observer}\nProper rational differentials over $\\Ftwo$ with simple poles\nin $\\mathcal R_d$ correspond bijectively to $\\mathcal P_d$ by\n\\[\n R(z)\\,dz=\\sum_{\\zeta\\in\\mathcal R_d}\n                 \\frac{b_\\zeta}{z-\\zeta}\\,dz.\n \\tag{PF}\n\\]\nThe profile space is finite and is closed under both binary\ntransitions. At each fixed pole their updates and the output are\n\\[\n \\mathcal L_1:\\ b_\\zeta\\longmapsto b_\\zeta^{1/2},\n \\qquad\n \\mathcal L_0:\\ b_\\zeta\\longmapsto(\\zeta b_\\zeta)^{1/2},\n \\qquad\n \\operatorname{out}(b)=\\sum_{\\zeta\\in\\mathcal R_d}\n                             \\frac{b_\\zeta}{\\zeta}\\in\\Ftwo.\n \\tag{U}\n\\]\nAfter the finite transient of\nLemma~\\ref{lem:binary-transient}, this is an exact observer\nfor every remaining binary continuation.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullResidueObserver.Targets.CompleteResidueObserver",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullResidueObserver.StatementChecks.fixed_completeResidueObserver",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/095-complete-residue-observer.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:cor:scalar-profile",
@@ -1990,7 +2008,7 @@
     }
   ],
   "status_counts": {
-    "pending": 134,
-    "checked": 33
+    "pending": 128,
+    "checked": 39
   }
 }

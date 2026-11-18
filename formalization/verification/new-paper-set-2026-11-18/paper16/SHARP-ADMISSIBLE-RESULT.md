@@ -1,0 +1,9 @@
+# Complete arbitrary-target refinement admissibility candidate
+
+First-pass native exact full-conjunction gate: `1794988028384168036-5`. `SharpAdmissibleChecks.exact_fullAdmissible` has only standard `propext`, `Classical.choice`, `Quot.sound` axiom dependencies. Read-only recursive evidence and unchanged source pins are recorded by `verify_sharp_admissible.py` and `SHARP-ADMISSIBLE-EVIDENCE.json`. Original core resource limits were retained.
+
+All five source families are proved for unrestricted final targets: weak, strict, occurrence matching, strict multiset and coverage. There is no ordinary-target premise or comparison-composition/cut assumption. The actual 25-constructor induction retains every child count; existential tree witnesses avoid extracting computable data from arbitrary propositions.
+
+The internal ordered-list motive takes genuine refinement-extra suppliers and builds a Whole witness. Existing-extra suppliers use the smaller actual weak comparison and a literal zero-argument Select, with endpoint typing derived from that actual comparison. Whole-owner suppliers use the smaller comparison and exact endpoint annotation equality. In then applies the complete checked extra-compression lemma. Marked1 and Marked2 rebuild their actual whole/list premises. Abs/FAbs use checked count-preserving fresh-name synchronization excluding refining-source extra names. Other selections use checked original full-spine reflection, not staged application associativity. Remove/Split/At and nonempty removed parts are retained literally.
+
+The complete source `lem:sharp-admissible` awaits independent final evidence/scope review before numbered promotion. No marking transport, prefix escape, two-environment comparison covariance, ordinary-final cut, full-root build or CI claim follows from this packet alone.
