@@ -23,8 +23,10 @@ open OrdinalComparison
 
  theorem reverseComparisonCode_correct (a b : Nat) :
     reverseComparisonCode (numericalComparison a b)=numericalComparison b a := by
-  simp only [reverseComparisonCode,numericalComparison]
-  split_ifs <;> omega
+  rcases lt_trichotomy a b with h | h | h
+  · simp [numericalComparison,reverseComparisonCode,h,show ¬b<a by omega,show b≠a by omega]
+  · subst b; simp [numericalComparison,reverseComparisonCode]
+  · simp [numericalComparison,reverseComparisonCode,h,show ¬a<b by omega,show a≠b by omega]
 
  theorem inverseTableDecisionCode_correct (sign y h E F : Nat) (hs : sign≤2) (hh : 0<h)
     (hr : InverseTableRows sign y h F E) : inverseTableDecisionCode sign y h=numericalComparison E F := by
@@ -40,7 +42,8 @@ open OrdinalComparison
     split_ifs <;> omega
 
  theorem integerComparison_nat (a b : Nat) : integerComparison (a:Int) (b:Int)=numericalComparison a b := by
-  simp only [integerComparison,numericalComparison,Int.natCast_lt,Int.natCast_inj]
+  unfold integerComparison numericalComparison
+  split_ifs <;> omega
 
  theorem translated_input_margin (p : IntervalPairCodes) (s : SignedShiftCodes) (B x y : Nat)
     (hx : translatedThresholdTailCode p s B≤x) (hy : translatedThresholdTailCode p s B≤y) :

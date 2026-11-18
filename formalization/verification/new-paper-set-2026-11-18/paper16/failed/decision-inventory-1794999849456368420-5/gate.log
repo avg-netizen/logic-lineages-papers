@@ -1,0 +1,56 @@
+CACHE_HIT LogicLineages.PersistentMarking.Syntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineSyntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineTyping
+CACHE_HIT LogicLineages.PersistentMarking.Signature
+CACHE_HIT LogicLineages.PersistentMarking.NameBridge
+CACHE_HIT LogicLineages.PersistentMarking.FreeSubstitution
+CACHE_HIT LogicLineages.PersistentMarking.StructuralContext
+CACHE_HIT LogicLineages.PersistentMarking.Occurrences
+CACHE_HIT LogicLineages.PersistentMarking.SpineMarking
+CACHE_HIT LogicLineages.PersistentMarking.Comparison
+CACHE_HIT LogicLineages.PersistentMarking.StructuralStabilityTargets
+CACHE_HIT LogicLineages.PersistentMarking.StructuralCoverageTargets
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupport
+Compiling LogicLineages.PersistentMarking.DecisionInventory
+COMPILE_PASS LogicLineages.PersistentMarking.DecisionInventory
+Compiling LogicLineages.PersistentMarking.DecisionInventoryTargets
+COMPILE_PASS LogicLineages.PersistentMarking.DecisionInventoryTargets
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupportTargets
+CACHE_HIT LogicLineages.PersistentMarking.FreeCovarianceTargets
+CACHE_HIT LogicLineages.PersistentMarking.SubstitutionTargets
+CACHE_HIT LogicLineages.PersistentMarking.SubstitutionProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeShiftProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeCompositionProof
+CACHE_HIT LogicLineages.PersistentMarking.SpineTypingTargets
+CACHE_HIT LogicLineages.PersistentMarking.SpineShiftProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeCallProof
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupportFoundationProof
+Compiling LogicLineages.PersistentMarking.DecisionInventoryProof
+COMPILE_PASS LogicLineages.PersistentMarking.DecisionInventoryProof
+Compiling LogicLineages.PersistentMarking.DecisionDepthProof
+COMPILE_PASS LogicLineages.PersistentMarking.DecisionDepthProof
+Compiling LogicLineages.PersistentMarking.DecisionInventoryChecks
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionInventoryChecks.lean:11:72: error: Type mismatch
+  DecisionInventoryProof.auxiliaryClosed
+has type
+  ∀ (q : Expr), DecisionInventoryProof.Closed (auxiliarySupport q)
+but is expected to have type
+  DecisionInventoryTargets.SubtypeClosed
+'LogicLineages.PersistentMarking.DecisionInventoryChecks.exact_freeInventoryExact' depends on axioms: [propext,
+ Quot.sound]
+'LogicLineages.PersistentMarking.DecisionInventoryChecks.exact_auxiliaryContainsLiteral' depends on axioms: [propext,
+ Quot.sound]
+'LogicLineages.PersistentMarking.DecisionInventoryChecks.exact_auxiliaryContainsDeclarations' depends on axioms: [propext,
+ Quot.sound]
+'LogicLineages.PersistentMarking.DecisionInventoryChecks.exact_ordinaryAuxiliaryExact' depends on axioms: [propext,
+ Quot.sound]
+'LogicLineages.PersistentMarking.DecisionInventoryChecks.exact_rankedDeclarationExact' depends on axioms: [propext,
+ Quot.sound]
+'LogicLineages.PersistentMarking.DecisionInventoryChecks.exact_subtypeClosed' depends on axioms: [propext, sorryAx]
+'LogicLineages.PersistentMarking.DecisionInventoryChecks.exact_depthExact' depends on axioms: [propext, Quot.sound]
+'LogicLineages.PersistentMarking.DecisionInventoryChecks.exact_depthAttained' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.DecisionInventoryChecks.exact_inputTypesExact' depends on axioms: [propext, Quot.sound]
+COMPILE_FAILED LogicLineages.PersistentMarking.DecisionInventoryChecks: 1
+BUILD_RECEIPT build-reports/1794999849456368420-5.json

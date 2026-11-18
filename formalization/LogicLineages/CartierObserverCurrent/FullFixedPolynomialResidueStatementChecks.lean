@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullFixedPolynomialResidueProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullFixedPolynomialResidue.StatementChecks
+theorem fixed_completeFixedPolynomialResidue : Targets.CompleteFixedPolynomialResidue := completeFixedPolynomialResidue
+#audit_namespace LogicLineages.CartierObserverCurrent.FullFixedPolynomialResidue.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullFixedPolynomialResidue.StatementChecks

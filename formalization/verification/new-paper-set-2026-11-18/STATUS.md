@@ -1,10 +1,34 @@
 # Current comparison formalization status
 
-New-paper register: **69 checked, 98 pending / 167**. Historical register:
+New-paper register: **77 checked, 90 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper18 `u:lem:cells`: complete effective nonlinear range cells and
+  signed-row orientation after actual cancellation and finite-height separation.
+
+- Paper20 `cor:fixed-polynomial-residue`: actual residue formula with
+  correct integer subtraction and computed evaluation of every valid small input.
+
+- Paper17 `lem:norm-arithmetic`: fresh complete source alias for actual
+  norm-ball operations/effectivity and all printed bounds.
+
+- Paper18 `thm:source-finite`: full actual finite-coefficient source class
+  decision and unrestricted-level recursor-free inclusion, arbitrary policy.
+
+- Paper16 `thm:orient`: all five genuine native reduction orientations and
+  their complete capturing-context/ordinary-substitution closure.
+
+- Paper20 `thm:transfer`: full actual growing-budget transfer and retained
+  prefix trace, with hypotheses only on budgets used before the real cut.
+
+- Paper20 `lem:period`: full elementary partition period via actual
+  weighted-state cardinalities and the literal factorial-period formula.
+
+- Paper18 `thm:source-leveltwo`: full arbitrary-policy source comparison
+  at genuine internal/subtype level two, via actual correlated graph packages.
 
 - Paper20 `lem:fixed`: actual constant-budget ordinal/partition count,
   including every-state retained-prefix trace through the first finite cut.
@@ -367,3 +391,7 @@ the original admissible-substitution equality frontend is checked (packet166).
 Typed closing and close/open identity are checked supporting endpoints
 (packets152,154); genuine capturing-context stability and complete original
 context coverage are checked in the full four-way theorem (packet165).
+
+Full paper17 threshold remains UNACCEPTED and its route is PARKED after
+repeated unchanged RSS stops, including the materially reduced Guard root.
+Valid numerical/Partrec/tail-bridge supports do not substitute for its full gate.

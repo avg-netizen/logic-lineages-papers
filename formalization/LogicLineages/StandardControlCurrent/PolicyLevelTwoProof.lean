@@ -12,7 +12,7 @@ theorem typed : PolicyLevelTwoTargets.TypedDecision := by
   let q : SourceCode.Input := (Γ.length,mode,SyntaxCode.encodeTerm a,SyntaxCode.encodeTerm b)
   have hpackage := LevelTwoDecisionCompletion.DecisionProof.actualPackageDecision pack hcert
   have hd : PolicyLevelTwo.decision policy q=some (!LevelTwoDecisionCompletion.packageCounterexample pack) := by
-    simp only [PolicyLevelTwo.decision,hc,Option.map_some]
+    simp only [PolicyLevelTwo.decision,q,hc,Option.map_some]
   have hs : PolicyLevelTwo.solve policy q=(!LevelTwoDecisionCompletion.packageCounterexample pack) := by
     simp only [PolicyLevelTwo.solve,hd,Option.getD_some]
   refine ⟨av,bv,ha,hb,?_,?_⟩

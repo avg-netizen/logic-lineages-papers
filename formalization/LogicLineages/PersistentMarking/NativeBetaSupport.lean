@@ -6,9 +6,10 @@ open Spine NameBridge TypeSupport Grafting
 theorem realize (σ : Ty) (x : Nat) (a body : Expr) (hf : freeOccurs (σ,x) body = false) :
     freeSub (singleMap σ x a) 0 (openBody σ x body) = substitute (.cons a .nil) 0 body := by
   have hc := FreeCompositionProof.composition (singleMap σ x a) (.cons (.free σ x) .nil) 0 body
-  have ha := RefinementCallMapProof.absent σ x a 1 body hf
-  simpa only [openBody,freeSubArgs,freeSub,singleMap,ite_true,SubstitutionProof.shiftZero,
-    Args.length,Nat.zero_add,ha] using hc
+  have ha : freeSub (singleMap σ x a) 1 body = body := RefinementCallMapProof.absent σ x a 1 body hf
+  have hm : freeSubArgs (singleMap σ x a) 0 (.cons (.free σ x) .nil) = .cons a .nil := by
+    simp [freeSubArgs,freeSub,singleMap,SubstitutionProof.shiftZero]
+  simpa only [openBody,hm,Args.length,Nat.zero_add,Nat.add_zero,ha] using hc
 
 def Slot (Γ : BoundContext) (d : Nat) (σ : Ty) : Prop := ∀ i δ, Γ i = some δ → i ≤ d ∧ (i = d → δ = σ)
 
@@ -32,18 +33,18 @@ mutual
     | bound hi =>
       have hh := hc i _ hi
       by_cases hl : i < d
-      · simp only [substitute,hl,if_true]; exact ⟨rfl,rfl⟩
+      · simp only [substitute,hl,if_true]; trivial
       · have he : i = d := by omega
         have hδ := hh.2 he
         subst i
-        subst δ
+        cases hδ
         simp [substitute,Args.get,shift,Expr.type,support]
   | lam δ q =>
     cases ht with
     | lam hq =>
       have hh := openingSupport (Γ.push δ) (d+1) σ x (slotPush hc δ) q _ hq
       simp only [substitute,Expr.type,support,hh.1,hh.2]
-      exact ⟨rfl,rfl⟩
+      trivial
   | head f qs =>
     cases ht with
     | head hqs =>
@@ -52,7 +53,7 @@ mutual
     cases ht with
     | marked hqs hes =>
       simp only [substitute,Expr.type,support,openingBaseSupport Γ d σ x hc qs _ hqs,openingExtrasSupport Γ d σ x hc es hes]
-      exact ⟨rfl,rfl⟩
+      trivial
  termination_by sizeOf q
  theorem openingBaseSupport (Γ : BoundContext) (d : Nat) (σ : Ty) (x : Nat) (hc : Slot Γ d σ)
     (qs : Args) (types : List Ty) (ht : BaseTyped Γ qs types) :

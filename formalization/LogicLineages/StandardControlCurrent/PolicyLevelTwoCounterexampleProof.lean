@@ -1,5 +1,6 @@
 module
 public import LogicLineages.StandardControlCurrent.PolicyLevelTwoTargets
+public import LogicLineages.OrdinalComparison.WWSourceClassesFullProof
 public import LogicLineages.StandardControlCurrent.PolicySourceInterfaceProof
 public import LogicLineages.OrdinalComparison.LevelTwoCounterexample.SourceProof
 public import LogicLineages.OrdinalComparison.LevelTwoDecisionCompletion.SourceMetadataProof

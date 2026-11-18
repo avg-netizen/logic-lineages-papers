@@ -1,0 +1,7 @@
+# Independent exact pre-scope: Paper17 norm arithmetic
+
+Approved for fresh full comparator gate, not automatic numbered acceptance. All four freeze hashes independently verified; the two printed lemma bodies after their labels and before end{lemma} compare byte-for-byte equal. The two Lean target files differ only in namespace/end namespace and source-label comment. Their imported definitions, domains, operation meanings and all proposition bodies are identical.
+
+The fresh target covers actual semantic norm balls below epsilonZero, finite-set existence and exact decoded image for every ordinal plus a genuine primitive-recursive enumeration. Operations retain total raw PR programs, actual strict/equal/reverse comparison codes, normality and natural sum/product semantics, and ordinary ordinal base-two exponentiation. Normal representations cover the source epsilonZero domain. Bounds include exact natural-sum additivity, both positive-operand product bounds and both power norm bounds. The lower product subtraction is equivalent to the printed subtraction on positive operands, not an unqualified claim of norm monotonicity.
+
+Reuse of the existing current18 supplier is legitimate because the complete proposition is unchanged and contains no standard-control-specific premise. Require a fresh current17 full alias and complete recursive source-matched native evidence under unchanged caps; merely referring to accepted packet104 is not enough. No parked threshold, inverse algorithm, or main arithmetic credit.

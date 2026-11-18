@@ -8,8 +8,9 @@ mutual
   cases q with
   | free δ y =>
     have he : (σ,x) = (δ,y) := by simpa only [freeOccurs,decide_eq_true_eq] using hf
-    have ht := congrArg Prod.fst he
-    simpa only [support,← ht] using hρ
+    have ht : σ = δ := congrArg Prod.fst he
+    subst δ
+    exact hρ
   | bound δ i => simp [freeOccurs] at hf
   | lam δ q =>
     simp only [support,List.mem_append]
@@ -18,7 +19,8 @@ mutual
     simp only [support,List.mem_append]
     exact Or.inr (freeArgsSupport σ x qs hf ρ hρ)
   | marked f τ qs es =>
-    have hh := Bool.or_eq_true.mp hf
+    have hh : freeOccursArgs (σ,x) qs = true ∨ freeOccursArgs (σ,x) es = true := by
+      simpa only [freeOccurs,Bool.or_eq_true] using hf
     simp only [support,List.mem_append]
     rcases hh with hh | hh
     · exact Or.inl (Or.inr (freeArgsSupport σ x qs hh ρ hρ))
@@ -29,7 +31,8 @@ mutual
   cases qs with
   | nil => simp [freeOccursArgs] at hf
   | cons q qs =>
-    have hh := Bool.or_eq_true.mp hf
+    have hh : freeOccurs (σ,x) q = true ∨ freeOccursArgs (σ,x) qs = true := by
+      simpa only [freeOccursArgs,Bool.or_eq_true] using hf
     simp only [supportArgs,List.mem_append]
     rcases hh with hh | hh
     · exact Or.inl (freeSupport σ x q hh ρ hρ)

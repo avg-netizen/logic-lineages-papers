@@ -358,8 +358,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/ordering.tex",
           "line": 275,
           "statement_latex": "[Original reduction orientation]\\label{thm:orient}\nEvery beta, $D0$, $DS$, $R0$, and $RS$ reduction, including its context\nand substitution instances, strictly decreases under $\\cs$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.NativeOrientationTargets.FullOrientation",
+          "verified_alias": "LogicLineages.PersistentMarking.NativeOrientationChecks.exact_fullOrientation",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/193-native-orientation.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:arithmetic-accessibility",
@@ -694,8 +697,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/foundations.tex",
           "line": 26,
           "statement_latex": "[Effective ordinal operations and norm bounds]\n\\label{lem:norm-arithmetic}\nEvery norm ball is finite and effectively enumerable.  Cantor-normal-form\ncomparison, $\\oplus$, $\\otimes$, and ordinal exponentiation $2^\\alpha$\nare effective.  Moreover\n\\begin{align*}\n N(\\alpha\\oplus\\beta)&=N(\\alpha)+N(\\beta),\\\\\n N(\\alpha)+N(\\beta)-1\n &\\le N(\\alpha\\otimes\\beta)\\le N(\\alpha)N(\\beta)\n       &&(\\alpha,\\beta>0),\\\\\n N(\\alpha)&\\le2N(2^\\alpha),\\qquad\n N(2^\\alpha)\\le2^{N(\\alpha)}.\n\\end{align*}",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.NormArithmeticTargets.FullNormArithmetic",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullNormArithmetic",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/196-norm-arithmetic-paper17.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:lem:collapse-estimates",
@@ -1183,8 +1189,11 @@
           "file": "18-standard-control-comparison/sections/identities.tex",
           "line": 231,
           "statement_latex": "[Range cells and signed rows]\\label{u:lem:cells}\nThe following assertions have effective tail bounds.\nFor a nonlinear positive expression $E$, let $Z_i$ be its displayed open\ntag peaks, and $Y=\\max_i Z_i=f(s)$. Then\n\\begin{equation}\n              Y<E<f(s+1),\\qquad E<h_\\omega(Y).        \\label{u:display:3-1}\n\\end{equation}\nFor a value $V\\in\\operatorname{range}(f)$ on that tail,\n\\begin{equation}\n V<E\\ \\Longleftrightarrow\\ (\\exists i\\ Z_i\\ge V),\\qquad\n V>E\\ \\Longleftrightarrow\\ (\\forall i\\ Z_i<V).       \\label{u:display:3-2}\n\\end{equation}\nAfter cancellation of identical tags in a signed row, its eventual\npointwise sign is the coefficient sign of its greatest remaining peak,\nonce those peaks have been ordered. If no tags remain, the row is affine.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.CellsTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.CellsStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/198-cells.json"
         },
         {
           "id": "18-standard-control-comparison:m:lem:kernel-recursion",
@@ -1344,8 +1353,11 @@
           "file": "18-standard-control-comparison/sections/source-applications.tex",
           "line": 109,
           "statement_latex": "[The finite-coefficient class]\n\\label{thm:source-finite}\nFor a ground-open source pair, suppose every literal scalar collapse\n$\\psi(\\omega\\otimes c+g)$ in the generated assignments has a finite\nclosed coefficient $c$.  Universal weak comparison, Wilken--Weiermann\nstrict comparison, and equality are decidable for the exact standard\ncontrol.  Every recursor-free ground-open source satisfies this condition,\nregardless of its internal type levels.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.PolicyFiniteTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.PolicyFiniteStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/194-policy-finite.json"
         },
         {
           "id": "18-standard-control-comparison:lem:source-polynomial",
@@ -1367,8 +1379,11 @@
           "file": "18-standard-control-comparison/sections/source-applications.tex",
           "line": 182,
           "statement_latex": "[Comparison through internal level two]\n\\label{thm:source-leveltwo}\nUniversal weak comparison, Wilken--Weiermann strict comparison, and\nequality of literal canonical assignments are decidable for ground-open\nsources whose maximum internal type level is at most two.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.PolicyLevelTwoTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.PolicyLevelTwoStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/188-policy-level-two.json"
         },
         {
           "id": "18-standard-control-comparison:u:thm:sign",
@@ -2035,8 +2050,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/partitions.tex",
           "line": 42,
           "statement_latex": "[A sufficient partition period]\\label{lem:period}\nFor every $d,m\\ge1$, put $Q_d=d!m^{d-1}$. Then\n\\[\n             p_d(n+Q_d)\\equiv p_d(n)\\pmod m\\quad(n\\ge0).\n\\]",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullPartitionPeriod.Targets.CompletePartitionPeriod",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullPartitionPeriod.StatementChecks.fixed_completePartitionPeriod",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/189-partition-period.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:thm:transfer",
@@ -2045,8 +2063,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/partitions.tex",
           "line": 74,
           "statement_latex": "[Congruent-budget transfer]\\label{thm:transfer}\nConsider deletion of one suffix block $\\omega^d$, with retained\nnumerical mass $c\\ge0$ and initial total norm at least $c+d+1$,\nunder budgets at least the current total norm. Suppose\nevery budget used in this segment is congruent to one integer $S$\nmodulo $Q_d=d!m^{d-1}$, where $S\\ge c$. Then its complete segment\ncount is congruent to $p_d(S-c)$ modulo $m$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullBudgetTransfer.Targets.CompleteTransfer",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullBudgetTransfer.StatementChecks.fixed_completeTransfer",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/192-budget-transfer.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:cor:fixed-polynomial-residue",
@@ -2055,8 +2076,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/partitions.tex",
           "line": 119,
           "statement_latex": "[A fixed polynomial block under the standard control]\n\\label{cor:fixed-polynomial-residue}\nFix $c,d,m$ and put $Q_d=d!m^{d-1}$. Under the control $G$,\nthe complete count $E_c^d(t)$ of one $\\omega^d$ block with retained\nmass $c$ and total input norm $t$ satisfies\n\\[\n E_c^d(t)\\equiv\n p_d\\bigl((r_{Q_d}-c)\\bmod Q_d\\bigr)\\pmod m\n \\quad\\text{if }t\\ge\\max(c+d+1,Q_d).\n\\]\nThe finitely many smaller valid inputs can be evaluated exactly.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullFixedPolynomialResidue.Targets.CompleteFixedPolynomialResidue",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullFixedPolynomialResidue.StatementChecks.fixed_completeFixedPolynomialResidue",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/197-fixed-polynomial-residue.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:lem:residue",
@@ -2098,7 +2122,7 @@
     }
   ],
   "status_counts": {
-    "pending": 98,
-    "checked": 69
+    "pending": 90,
+    "checked": 77
   }
 }

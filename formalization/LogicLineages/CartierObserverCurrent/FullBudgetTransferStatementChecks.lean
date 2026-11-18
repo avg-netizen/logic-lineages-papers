@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullBudgetTransferProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullBudgetTransfer.StatementChecks
+theorem fixed_completeTransfer : Targets.CompleteTransfer := completeTransfer
+#audit_namespace LogicLineages.CartierObserverCurrent.FullBudgetTransfer.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullBudgetTransfer.StatementChecks

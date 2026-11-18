@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.NativeOrientationProof
+namespace LogicLineages.PersistentMarking.NativeOrientationChecks
+theorem exact_fullOrientation : NativeOrientationTargets.FullOrientation := NativeOrientationProof.fullOrientation
+#print axioms exact_fullOrientation
+end LogicLineages.PersistentMarking.NativeOrientationChecks
