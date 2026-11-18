@@ -1,6 +1,7 @@
 module
 public import LogicLineages.ControlSensitivityCurrent.RawPlanRenamingTargets
 public import LogicLineages.ControlSensitivityCurrent.RawPlanCompilerOperationPrimitiveProof
+public import LogicLineages.ControlSensitivityCurrent.RawPlanCompilerPrimcodable
 @[expose] public section
 namespace LogicLineages.ControlSensitivityCurrent.RawSourceDAG.PlanRenaming
 
@@ -14,9 +15,9 @@ theorem rename_step_primitive :
     Primrec (fun p : RenameState × Instruction => renameStep p.1 p.2) := by
   let A := RenameState × Instruction
   let B := A × (Code × Code)
-  let C := A × (PrimitiveGate.GateCode ⊕ PUnit)
+  let C : Type := A × (PrimitiveGate.GateCode ⊕ PUnit)
   let D := C × PrimitiveGate.GateCode
-  let E := C × PUnit
+  let E : Type := C × PUnit
   have hctx : Primrec (fun p : A => p.1.1) := Primrec.fst.comp Primrec.fst
   have htable : Primrec (fun p : A => p.1.2.1) :=
     Primrec.fst.comp (Primrec.snd.comp Primrec.fst)

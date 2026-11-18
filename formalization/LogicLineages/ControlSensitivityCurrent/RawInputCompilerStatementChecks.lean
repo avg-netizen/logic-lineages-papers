@@ -1,0 +1,15 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.RawInputCompilerSuccessProof
+public import LogicLineages.ControlSensitivityCurrent.RawInputCompilerEffectiveProof
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.RawSourceDAG.InputCompiler.StatementChecks
+
+theorem fixed_typed_exactness : RawInputCompilerTargets.TypedExactness := typed_exactness
+theorem fixed_success_reconstruction : RawInputCompilerTargets.SuccessReconstruction := success_reconstruction
+theorem fixed_effective : RawInputCompilerTargets.Effective := effective
+
+#print axioms fixed_typed_exactness
+#print axioms fixed_success_reconstruction
+#print axioms fixed_effective
+
+end LogicLineages.ControlSensitivityCurrent.RawSourceDAG.InputCompiler.StatementChecks

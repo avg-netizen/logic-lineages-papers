@@ -30,9 +30,15 @@ private theorem equation_step_inputs (Γ : List Ty) (r : Result Γ) (a b : Code)
   cases hg : equationGuard (Γ.map SyntaxCode.typeCode) a b with
   | false => simp [compileStep, encodeResult, hg] at h
   | true =>
-      simp only [compileStep, encodeResult, hg, Bool.not_true, Bool.false_eq_true, ite_false,
-        Option.bind_eq_some_iff] at h
-      obtain ⟨a',ha,b',hb,_⟩ := h
+      simp only [compileStep, encodeResult, hg, Bool.not_true, Bool.false_eq_true, ite_false] at h
+      let context := r.context.map SyntaxCode.typeCode
+      let table := Operations.renamingCode r.embedding
+      change ((CheckedRenaming.rename context table a).bind fun a' =>
+        (CheckedRenaming.rename context table b).bind fun b' =>
+          some (Γ.map SyntaxCode.typeCode, context, table,
+            (a',b') :: RawPrimitiveGateTargets.encodeForest r.forest)) = some out at h
+      obtain ⟨a',ha,h⟩ := Option.bind_eq_some_iff.mp h
+      obtain ⟨b',hb,_⟩ := Option.bind_eq_some_iff.mp h
       simp only [equationGuard, decide_eq_true_eq] at hg
       obtain ⟨p,hp⟩ := typed_ground_input Γ a hg.1 hg.2.2.1 (rename_input_valid _ _ _ a' ha)
       obtain ⟨q,hq⟩ := typed_ground_input Γ b hg.2.1 hg.2.2.2 (rename_input_valid _ _ _ b' hb)

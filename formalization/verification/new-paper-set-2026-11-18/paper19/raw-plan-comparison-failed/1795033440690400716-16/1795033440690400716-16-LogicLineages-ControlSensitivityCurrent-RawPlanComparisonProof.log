@@ -1,0 +1,11 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanComparisonProof.lean:14:98: error: unsolved goals
+Γ : List Ty
+q : Plan Γ
+⊢ ∃ a, runState (List.map SyntaxCode.typeCode Γ) (encodePlan q) = some (a, encodeResult (compile q))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanComparisonProof.lean:15:15: warning: This simp argument is unused:
+  PlanCompiler.typed_exactness
+
+Hint: Omit it from the simp argument list.
+  simp [run,̵ ̵P̵l̵a̵n̵C̵o̵m̵p̵i̵l̵e̵r̵.̵t̵y̵p̵e̵d̵_̵e̵x̵a̵c̵t̵n̵e̵s̵s̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

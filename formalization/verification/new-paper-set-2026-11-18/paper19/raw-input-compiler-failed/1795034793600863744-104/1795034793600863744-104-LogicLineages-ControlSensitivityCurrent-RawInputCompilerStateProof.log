@@ -1,0 +1,63 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawInputCompilerStateProof.lean:46:92: error: unsolved goals
+Γ : List Ty
+m : ℕ
+d : Dag Γ m
+row : InputNormalization.Node Γ m
+pending : List Lowering
+⊢ encodeRow row.wire :: encodeRows (InputNormalization.mapDag (Fin.castAdd 2) d.wires) =
+    encodeRow row.wire :: encodeRows d.wires
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawInputCompilerStateProof.lean:45:87: error: unsolved goals
+case eq
+Γ : List Ty
+m : ℕ
+d : Dag Γ m
+pending : List Lowering
+a✝ b✝ : Port Γ
+hr :
+  encodeRows (d.snoc (InputNormalization.Node.eq a✝ b✝)).wires =
+    encodeRow (InputNormalization.Node.eq a✝ b✝).wire :: encodeRows d.wires
+⊢ (match b✝ with
+    | SourceAdditionCompletion.Atom.zero => 0
+    | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+    match Fin.cases a✝ (fun x => b✝) 1 with
+    | SourceAdditionCompletion.Atom.zero => 0
+    | SourceAdditionCompletion.Atom.var x => variableIndex x + 1
+
+case le
+Γ : List Ty
+m : ℕ
+d : Dag Γ m
+pending : List Lowering
+a✝ b✝ : Port Γ
+hr :
+  encodeRows (d.snoc (InputNormalization.Node.le a✝ b✝)).wires =
+    encodeRow (InputNormalization.Node.le a✝ b✝).wire :: encodeRows d.wires
+⊢ (match b✝ with
+    | SourceAdditionCompletion.Atom.zero => 0
+    | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+    match Fin.cases a✝ (fun x => b✝) 1 with
+    | SourceAdditionCompletion.Atom.zero => 0
+    | SourceAdditionCompletion.Atom.var x => variableIndex x + 1
+
+case lt
+Γ : List Ty
+m : ℕ
+d : Dag Γ m
+pending : List Lowering
+a✝ b✝ : Port Γ
+hr :
+  encodeRows (d.snoc (InputNormalization.Node.lt a✝ b✝)).wires =
+    encodeRow (InputNormalization.Node.lt a✝ b✝).wire :: encodeRows d.wires
+⊢ (match b✝ with
+    | SourceAdditionCompletion.Atom.zero => 0
+    | SourceAdditionCompletion.Atom.var x => variableIndex x + 1) =
+    match Fin.cases a✝ (fun x => b✝) 1 with
+    | SourceAdditionCompletion.Atom.zero => 0
+    | SourceAdditionCompletion.Atom.var x => variableIndex x + 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawInputCompilerStateProof.lean:47:38: warning: This simp argument is unused:
+  encode_map_wires (Fin.castAdd 2) (fun _ => rfl)
+
+Hint: Omit it from the simp argument list.
+  simp only [Dag.wires, encodeRows,̵ ̵e̵n̵c̵o̵d̵e̵_̵m̵a̵p̵_̵w̵i̵r̵e̵s̵ ̵(̵F̵i̵n̵.̵c̵a̵s̵t̵A̵d̵d̵ ̵2̵)̵ ̵(̵f̵u̵n̵ ̵_̵ ̵=̵>̵ ̵r̵f̵l̵)̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

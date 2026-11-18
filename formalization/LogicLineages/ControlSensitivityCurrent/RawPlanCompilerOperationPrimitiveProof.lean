@@ -12,7 +12,8 @@ theorem checked_rename_primitive :
   have htable : Primrec (fun p : A => p.2.1) := Primrec.fst.comp Primrec.snd
   have hcode : Primrec (fun p : A => p.2.2) := Primrec.snd.comp Primrec.snd
   have hv := RawValidator.check_primitive.of_eq RawValidator.check_eq_valid
-  have hg := Primrec.and.comp (hv.comp hcode)
+  have hg : Primrec (fun p : A => CheckedRenaming.guard p.1 p.2.1 p.2.2) :=
+    Primrec.and.comp (hv.comp hcode)
     (CheckedRenaming.table_guard_primitive.comp ((Primrec.fst.comp hcode).pair (htarget.pair htable)))
   apply (Primrec.cond hg (Primrec.option_some.comp Operations.rename_code_primitive)
     (Primrec.const none)).of_eq

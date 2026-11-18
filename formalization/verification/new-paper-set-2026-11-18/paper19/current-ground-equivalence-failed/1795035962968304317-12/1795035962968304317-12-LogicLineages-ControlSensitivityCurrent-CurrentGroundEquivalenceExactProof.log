@@ -1,0 +1,71 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundEquivalenceExactProof.lean:24:65: error: Tactic `rfl` failed: The left-hand side
+  ([((8, 0, 0), some (encode ⟨List.replicate n Ty.ground, ⟨Ty.ground, a⟩⟩)),
+      ((8, 0, 0),
+        some
+          (Operations.renameCode (0 :: List.replicate n 0)
+            (Operations.renamingCode fun {σ} => PrimitiveLowering.shift 1)
+            (encode ⟨List.replicate n Ty.ground, ⟨Ty.ground, b⟩⟩))),
+      ((if false = true then 2 else 1, 1, 2), none)],
+    0)
+is not definitionally equal to the right-hand side
+  InputCompiler.encodeInput (counterexample false a b)
+
+case false
+n : ℕ
+a b : Input (List.replicate n Ty.ground) Ty.ground
+Γ : List Ty := List.replicate n Ty.ground
+hc : List.map SyntaxCode.typeCode Γ = List.replicate n 0
+ht :
+  BinaryPlanCompiler.prefixTable 1 (List.replicate n 0) = Operations.renamingCode fun {σ} => PrimitiveLowering.shift 1
+hr :
+  Operations.renameCode (0 :: List.replicate n 0) (Operations.renamingCode fun {σ} => PrimitiveLowering.shift 1)
+      (encode ⟨Γ, ⟨Ty.ground, b⟩⟩) =
+    encode ⟨Ty.ground :: Γ, ⟨Ty.ground, ScopedDAG.renameInput (fun {σ} => Renaming.weaken Γ Ty.ground) b⟩⟩
+⊢ ([((8, 0, 0), some (encode ⟨List.replicate n Ty.ground, ⟨Ty.ground, a⟩⟩)),
+        ((8, 0, 0),
+          some
+            (Operations.renameCode (0 :: List.replicate n 0)
+              (Operations.renamingCode fun {σ} => PrimitiveLowering.shift 1)
+              (encode ⟨List.replicate n Ty.ground, ⟨Ty.ground, b⟩⟩))),
+        ((if false = true then 2 else 1, 1, 2), none)],
+      0) =
+    InputCompiler.encodeInput (counterexample false a b)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundEquivalenceExactProof.lean:24:65: error: Tactic `rfl` failed: The left-hand side
+  ([((8, 0, 0), some (encode ⟨List.replicate n Ty.ground, ⟨Ty.ground, a⟩⟩)),
+      ((8, 0, 0),
+        some
+          (Operations.renameCode (0 :: List.replicate n 0)
+            (Operations.renamingCode fun {σ} => PrimitiveLowering.shift 1)
+            (encode ⟨List.replicate n Ty.ground, ⟨Ty.ground, b⟩⟩))),
+      ((if True then 2 else 1, 1, 2), none)],
+    0)
+is not definitionally equal to the right-hand side
+  InputCompiler.encodeInput (counterexample true a b)
+
+case true
+n : ℕ
+a b : Input (List.replicate n Ty.ground) Ty.ground
+Γ : List Ty := List.replicate n Ty.ground
+hc : List.map SyntaxCode.typeCode Γ = List.replicate n 0
+ht :
+  BinaryPlanCompiler.prefixTable 1 (List.replicate n 0) = Operations.renamingCode fun {σ} => PrimitiveLowering.shift 1
+hr :
+  Operations.renameCode (0 :: List.replicate n 0) (Operations.renamingCode fun {σ} => PrimitiveLowering.shift 1)
+      (encode ⟨Γ, ⟨Ty.ground, b⟩⟩) =
+    encode ⟨Ty.ground :: Γ, ⟨Ty.ground, ScopedDAG.renameInput (fun {σ} => Renaming.weaken Γ Ty.ground) b⟩⟩
+⊢ ([((8, 0, 0), some (encode ⟨List.replicate n Ty.ground, ⟨Ty.ground, a⟩⟩)),
+        ((8, 0, 0),
+          some
+            (Operations.renameCode (0 :: List.replicate n 0)
+              (Operations.renamingCode fun {σ} => PrimitiveLowering.shift 1)
+              (encode ⟨List.replicate n Ty.ground, ⟨Ty.ground, b⟩⟩))),
+        ((if True then 2 else 1, 1, 2), none)],
+      0) =
+    InputCompiler.encodeInput (counterexample true a b)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundEquivalenceExactProof.lean:24:57: warning: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  simp only [counterexampleCode, ht,̵ ̵h̵r̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

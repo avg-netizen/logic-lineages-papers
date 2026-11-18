@@ -1,0 +1,32 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerOperationPrimitiveProof.lean:9:94: error: unsolved goals
+case false
+A : Type := List ℕ × List ℕ × Code
+htarget : Primrec fun p => p.1
+htable : Primrec fun p => p.2.1
+hcode : Primrec fun p => p.2.2
+hv : Primrec valid
+hg :
+  Primrec fun a =>
+    valid a.2.2 &&
+      CheckedRenaming.tableGuard (a.2.2.1, a.1, a.2.1).1 (a.2.2.1, a.1, a.2.1).2.1 (a.2.2.1, a.1, a.2.1).2.2
+p : A
+h : CheckedRenaming.guard p.1 p.2.1 p.2.2 = false
+⊢ (bif valid p.2.2 && CheckedRenaming.tableGuard p.2.2.1 p.1 p.2.1 then some (Operations.renameCode p.1 p.2.1 p.2.2)
+    else none) =
+    none
+
+case true
+A : Type := List ℕ × List ℕ × Code
+htarget : Primrec fun p => p.1
+htable : Primrec fun p => p.2.1
+hcode : Primrec fun p => p.2.2
+hv : Primrec valid
+hg :
+  Primrec fun a =>
+    valid a.2.2 &&
+      CheckedRenaming.tableGuard (a.2.2.1, a.1, a.2.1).1 (a.2.2.1, a.1, a.2.1).2.1 (a.2.2.1, a.1, a.2.1).2.2
+p : A
+h : CheckedRenaming.guard p.1 p.2.1 p.2.2 = true
+⊢ (bif valid p.2.2 && CheckedRenaming.tableGuard p.2.2.1 p.1 p.2.1 then some (Operations.renameCode p.1 p.2.1 p.2.2)
+    else none) =
+    some (Operations.renameCode p.1 p.2.1 p.2.2)

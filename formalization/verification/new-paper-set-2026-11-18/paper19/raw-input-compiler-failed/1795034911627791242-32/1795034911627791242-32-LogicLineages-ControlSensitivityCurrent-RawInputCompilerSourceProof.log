@@ -1,0 +1,41 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawInputCompilerSourceProof.lean:15:70: warning: This simp argument is unused:
+  Fin.isLt
+
+Hint: Omit it from the simp argument list.
+  simp [booleanGuard, encodeInputRow, port_guard_typed,̵ ̵F̵i̵n̵.̵i̵s̵L̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawInputCompilerSourceProof.lean:34:2: error: Tactic `rfl` failed: The left-hand side
+  [binder,
+      Sum.inl
+        (Operations.renameCode (List.map SyntaxCode.typeCode (Ty.ground :: Γ))
+            (Operations.renamingCode fun {σ} => shift 1) (encode ⟨Γ, ⟨Ty.ground, d⟩⟩),
+          portRaw (List.map SyntaxCode.typeCode (Ty.ground :: Γ)) 1)] ++
+    encodePlan tail
+is not definitionally equal to the right-hand side
+  encodePlan
+    (Plan.equation (ScopedDAG.renameInput (fun {σ} => Renaming.weaken Γ Ty.ground) d)
+        (ScopedDAG.variableInput Variable.here) tail).existsGround
+
+Γ : List Ty
+d : Input Γ Ty.ground
+tail : Plan (Ty.ground :: Γ)
+hc : 0 :: List.map SyntaxCode.typeCode Γ = List.map SyntaxCode.typeCode (Ty.ground :: Γ)
+⊢ [binder,
+        Sum.inl
+          (Operations.renameCode (List.map SyntaxCode.typeCode (Ty.ground :: Γ))
+              (Operations.renamingCode fun {σ} => shift 1) (encode ⟨Γ, ⟨Ty.ground, d⟩⟩),
+            portRaw (List.map SyntaxCode.typeCode (Ty.ground :: Γ)) 1)] ++
+      encodePlan tail =
+    encodePlan
+      (Plan.equation (ScopedDAG.renameInput (fun {σ} => Renaming.weaken Γ Ty.ground) d)
+          (ScopedDAG.variableInput Variable.here) tail).existsGround
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawInputCompilerSourceProof.lean:33:51: warning: This simp argument is unused:
+  ← Operations.rename_input
+
+Hint: Omit it from the simp argument list.
+  simp only [equationChunk, prefix_table_code, hc,̵ ̵←̵ ̵O̵p̵e̵r̵a̵t̵i̵o̵n̵s̵.̵r̵e̵n̵a̵m̵e̵_̵i̵n̵p̵u̵t̵]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

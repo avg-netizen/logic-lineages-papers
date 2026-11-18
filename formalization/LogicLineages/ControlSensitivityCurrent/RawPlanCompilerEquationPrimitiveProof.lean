@@ -17,7 +17,8 @@ theorem equation_step_primitive :
   have hb : Primrec (fun p : A => p.2.2) := Primrec.snd.comp Primrec.snd
   have hat := Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp ha))
   have hbt := Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp hb))
-  have hg := ((Primrec.eq.comp (Primrec.fst.comp ha) hsource).and
+  have hg : Primrec (fun p : A => equationGuard p.1.1 p.2.1 p.2.2) :=
+    ((Primrec.eq.comp (Primrec.fst.comp ha) hsource).and
     ((Primrec.eq.comp (Primrec.fst.comp hb) hsource).and
       ((Primrec.eq.comp hat (Primrec.const 0)).and (Primrec.eq.comp hbt (Primrec.const 0))))).decide
   have hleft := checked_rename_primitive.comp (hctx.pair (htable.pair ha))
@@ -32,10 +33,10 @@ theorem equation_step_primitive :
   apply (Primrec.cond hg hbody (Primrec.const none)).of_eq
   rintro ⟨⟨source, context, table, fs⟩, a, b⟩
   cases h : equationGuard source a b with
-  | false => simp [compileStep, equationGuard] at *
+  | false => simp [compileStep, h]
   | true =>
       cases ha' : CheckedRenaming.rename context table a <;>
         cases hb' : CheckedRenaming.rename context table b <;>
-        simp [compileStep, h, ha', hb', ← equationGuard]
+        simp [compileStep, h, ha', hb']
 
 end LogicLineages.ControlSensitivityCurrent.RawSourceDAG.PlanCompiler

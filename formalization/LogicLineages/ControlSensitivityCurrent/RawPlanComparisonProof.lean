@@ -12,7 +12,7 @@ open PlanCompiler
 theorem typed_exactness : RawPlanComparisonTargets.TypedExactness := by
   intro Γ q
   have hrun : run (Γ.map SyntaxCode.typeCode) (encodePlan q) = some (encodeResult (compile q)) := by
-    simp [run, PlanCompiler.typed_exactness]
+    simp [run, PlanCompiler.typed_exactness Γ q]
   simp [compileComparisons, hrun, compareResult, encodeResult, RawPrimitiveGateTargets.encodeForest,
     DerivedComposition.aggregate_typed, DerivedComposition.wrap_typed,
     encodeComparison, strictPair, weakPair]

@@ -1,0 +1,42 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBinaryPlanProof.lean:47:6: error: unsolved goals
+case pos
+base : ℕ
+bits : List ℕ
+bit : ℕ
+ih :
+  ∀ (Γ : List Ty) (out : Port Γ) (q : Plan Γ) (pending : ℕ),
+    lowerTrace (base, bits) (List.map SyntaxCode.typeCode Γ, encodePort out, encodePlan q, pending) =
+      List.replicate pending binder ++ encodePlan (BinaryPlan.binaryPlan (reconstruct (base, bits)) out q)
+Γ : List Ty
+out : Port Γ
+q : Plan Γ
+pending : ℕ
+hb : bit = 0
+stepTail : Plan (Ty.ground :: Γ) :=
+  Plan.gate (Gate.add (Atom.var Variable.here) (Atom.var Variable.here) (portRename (fun {σ} => shift 1) out))
+    (BinaryPlan.renamePlan (fun {σ} => shift 1) q)
+hr :
+  PlanRenaming.renamePlanRaw (List.map SyntaxCode.typeCode (Ty.ground :: Γ)) (renamingCode fun {σ} => shift 1)
+      (encodePlan q) =
+    encodePlan (BinaryPlan.renamePlan (fun {σ} => shift 1) q)
+hstep :
+  binaryStep (List.map SyntaxCode.typeCode Γ, encodePort out, encodePlan q, pending) bit =
+    (List.map SyntaxCode.typeCode (Ty.ground :: Γ), 1, encodePlan stepTail, pending + 1)
+⊢ encodePlan
+      (BinaryPlan.binaryPlan (reconstruct (base, bits)) (Atom.var Variable.here)
+        (Plan.gate (Gate.add (Atom.var Variable.here) (Atom.var Variable.here) (portRename (fun {σ} x => x.there) out))
+          (BinaryPlan.renamePlan (fun {σ} x => x.there) q))) =
+    encodePlan
+      (BinaryPlan.binaryPlan (reconstruct (base, bits)) (Atom.var Variable.here)
+        (Plan.gate
+          (Gate.add (Atom.var Variable.here) (Atom.var Variable.here)
+            (portRename (fun {σ} => Renaming.weaken Γ Ty.ground) out))
+          (BinaryPlan.renamePlan (fun {σ} => Renaming.weaken Γ Ty.ground) q)))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBinaryPlanProof.lean:62:20: warning: This simp argument is unused:
+  Renaming.weaken
+
+Hint: Omit it from the simp argument list.
+  simp [wrap, hb, BinaryPlan.binaryPlan, encodePlan, binder, List.replicate_add, stepTail,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲R̵e̵n̵a̵m̵i̵n̵g̵.̵w̵e̵a̵k̵e̵n̵,̵ ̵shift, List.append_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

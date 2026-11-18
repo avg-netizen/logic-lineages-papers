@@ -1,0 +1,13 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.RawBooleanMatrixProof
+public import LogicLineages.ControlSensitivityCurrent.RawBooleanMatrixPrimitiveProof
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.RawSourceDAG.BooleanMatrix.StatementChecks
+
+theorem fixed_typed_exactness : RawBooleanMatrixTargets.TypedExactness := typed_exactness
+theorem fixed_primitive : RawBooleanMatrixTargets.Primitive := primitive
+
+#print axioms fixed_typed_exactness
+#print axioms fixed_primitive
+
+end LogicLineages.ControlSensitivityCurrent.RawSourceDAG.BooleanMatrix.StatementChecks

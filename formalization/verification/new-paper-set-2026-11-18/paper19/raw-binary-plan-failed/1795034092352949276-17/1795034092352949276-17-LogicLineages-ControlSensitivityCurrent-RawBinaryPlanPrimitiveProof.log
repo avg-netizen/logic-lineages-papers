@@ -1,0 +1,13 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBinaryPlanPrimitiveProof.lean:17:14: error: unsolved goals
+case succ
+hcons : Primrec₂ fun x xs => binder :: xs
+n : ℕ
+ih : (fun xs => binder :: xs)^[id n] [] = List.replicate n binder
+⊢ (fun xs => binder :: xs)^[n] [] = List.replicate n binder
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBinaryPlanPrimitiveProof.lean:17:74: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp [Function.iterate_succ_apply', List.replicate_succ,̵ ̵i̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,24 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawInputCompilerStateProof.lean:48:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  encodeRows (InputNormalization.mapDag (Fin.castAdd 2) d.wires)
+in the target expression
+  encodeRow row.wire :: encodeRows (InputNormalization.mapDag (Fin.castAdd 2) d.wires) =
+    encodeRow row.wire :: encodeRows d.wires
+
+Γ : List Ty
+m : ℕ
+d : Dag Γ m
+row : InputNormalization.Node Γ m
+pending : List Lowering
+⊢ encodeRow row.wire :: encodeRows (InputNormalization.mapDag (Fin.castAdd 2) d.wires) =
+    encodeRow row.wire :: encodeRows d.wires
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    row.wire
+  has type
+    BooleanWire.Node (arity m + 2) m
+  but is expected to have type
+    BooleanWire.Node (arity (m + 1)) m
+  in the application
+    encodeRow row.wire

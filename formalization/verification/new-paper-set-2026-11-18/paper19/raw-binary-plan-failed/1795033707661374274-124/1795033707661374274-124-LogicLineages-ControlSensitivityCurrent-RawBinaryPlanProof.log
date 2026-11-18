@@ -1,0 +1,32 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBinaryPlanProof.lean:42:8: error: unsolved goals
+case pos
+base : ℕ
+Γ : List Ty
+out : Port Γ
+q : Plan Γ
+pending : ℕ
+hb : base = 0
+⊢ 0 = encodePort Atom.zero
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBinaryPlanProof.lean:58:8: error: 'change' tactic failed, pattern
+  lowerTrace (base, bits)
+      (List.map SyntaxCode.typeCode (Ty.ground :: Γ), encodePort (Atom.var Variable.here), encodePlan stepTail,
+        pending + 1) =
+    ?m.162
+is not definitionally equal to target
+  lowerTrace (base, bits) (List.map SyntaxCode.typeCode (Ty.ground :: Γ), 1, encodePlan stepTail, pending + 1) =
+    List.replicate pending binder ++ encodePlan (BinaryPlan.binaryPlan (wrap (reconstruct (base, bits)) bit) out q)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBinaryPlanProof.lean:76:8: error: 'change' tactic failed, pattern
+  lowerTrace (base, bits)
+      (List.map SyntaxCode.typeCode (Ty.ground :: Ty.ground :: Ty.ground :: Γ),
+        encodePort (Atom.var Variable.here.there.there), encodePlan stepTail, pending + 3) =
+    ?m.303
+is not definitionally equal to target
+  lowerTrace (base, bits)
+      (List.map SyntaxCode.typeCode (Ty.ground :: Ty.ground :: Ty.ground :: Γ), 3, encodePlan stepTail, pending + 3) =
+    List.replicate pending binder ++ encodePlan (BinaryPlan.binaryPlan (wrap (reconstruct (base, bits)) bit) out q)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBinaryPlanProof.lean:84:2: error: 'change' tactic failed, pattern
+  lowerTrace (trace k)
+      (List.map SyntaxCode.typeCode (Ty.ground :: Γ), encodePort (Atom.var Variable.here), encodePlan q, 1) =
+    ?m.25
+is not definitionally equal to target
+  constantRaw (List.map SyntaxCode.typeCode Γ) k (encodePlan q) = encodePlan (BinaryPlan.constantPlan k q)

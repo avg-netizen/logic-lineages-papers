@@ -1,6 +1,7 @@
 module
 public import LogicLineages.ControlSensitivityCurrent.RawPlanCompilerEquationPrimitiveProof
 public import LogicLineages.ControlSensitivityCurrent.RawPlanCompilerGatePrimitiveProof
+public import LogicLineages.ControlSensitivityCurrent.RawPlanCompilerPrimcodable
 @[expose] public section
 namespace LogicLineages.ControlSensitivityCurrent.RawSourceDAG.PlanCompiler
 
@@ -24,9 +25,9 @@ theorem binder_step_primitive :
 theorem compile_step_primitive :
     Primrec (fun p : Instruction × State => compileStep p.1 p.2) := by
   let A := Instruction × State
-  let B := A × (PrimitiveGate.GateCode ⊕ PUnit)
+  let B : Type := A × (PrimitiveGate.GateCode ⊕ PUnit)
   let C := B × PrimitiveGate.GateCode
-  let D := B × PUnit
+  let D : Type := B × PUnit
   have hgate : Primrec (fun p : C => compileStep (.inr (.inl p.2)) p.1.1.2) :=
     gate_step_primitive.comp ((Primrec.snd.comp (Primrec.fst.comp Primrec.fst)).pair Primrec.snd)
   have hbinder : Primrec (fun p : D => compileStep (.inr (.inr PUnit.unit)) p.1.1.2) :=

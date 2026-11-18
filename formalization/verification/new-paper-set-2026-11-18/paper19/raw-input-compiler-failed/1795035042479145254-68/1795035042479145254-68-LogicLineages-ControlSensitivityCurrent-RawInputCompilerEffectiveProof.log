@@ -1,0 +1,24 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawInputCompilerEffectiveProof.lean:35:2: error: Type mismatch
+  Primrec.option_casesOn hn hnil (Primrec.to₂ hsome)
+has type
+  Primrec fun a =>
+    Option.casesOn a.2.2.2 (a.2.1 ++ a.1) fun b =>
+      BinaryPlanCompiler.constantRaw ((a, b).1.2.2.1, (a, b).2, (a, b).1.1).1 ((a, b).1.2.2.1, (a, b).2, (a, b).1.1).2.1
+        ((a, b).1.2.2.1, (a, b).2, (a, b).1.1).2.2
+but is expected to have type
+  Primrec fun p => lower p.1 p.2
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawInputCompilerEffectiveProof.lean:68:50: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Primcodable B
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawInputCompilerEffectiveProof.lean:68:5: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Primcodable (A × Option InputState × InputStep)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawInputCompilerEffectiveProof.lean:60:67: error: unsolved goals
+A : Type := InputState × InputCode
+B : Type := A × Option InputState × InputStep
+hs : Primrec fun p => p.1
+hi : Primrec fun p => p.2.1
+hroot : Primrec fun p => p.1.2.2
+⊢ Primrec fun p => runFrom p.1 p.2

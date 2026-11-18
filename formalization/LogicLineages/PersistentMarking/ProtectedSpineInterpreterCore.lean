@@ -21,8 +21,9 @@ def funTest (S : Signature) (E : Environment) (p : Parameter) (t : Expr) : Bool 
 
 def ordinaryHead (S : Signature) (E : Environment) (heads : List Head) (M : Code) (p : Parameter) : Value :=
   let marked := MarkedConstructorValue.build S E heads M p
-  { marked with weak := fun Δ t =>
-      funTest S E (MarkedFamilyCoherence.weakenParameter E p Δ) t || marked.weak Δ t }
+  let weak := fun Δ t =>
+    funTest S E (MarkedFamilyCoherence.weakenParameter E p Δ) t || marked.weak Δ t
+  { marked with weak := weak }
 
 def variableCall (E : Environment) (σ : Ty) (Γ : Context) (c : Code)
     (domains : List Ty) (values : List Code) (τ : Ty) : Code :=

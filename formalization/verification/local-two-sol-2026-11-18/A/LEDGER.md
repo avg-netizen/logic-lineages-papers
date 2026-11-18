@@ -141,3 +141,141 @@ builder aliases, so it supersedes separate acceptance-schema exports of the
 constructor tests, validity, and monotonicity. The original A/ evidence files
 are retained. Future ready packets will include this export beside the
 original evidence and will continue directly to the next proof.
+
+## 2026-11-18 20:19 UTC — Interpreter environments READY-FOR-ROOT-REVIEW
+
+The frozen environment targets `Weakening`, `EnvironmentComposition`,
+`CodeLookup` and `LookupWeakening` passed core receipt
+`1795033114927873028-61`. The acceptance-schema evidence at
+[LANE-A-INTERPRETER-ENVIRONMENT-EVIDENCE.json](../../new-paper-set-2026-11-18/paper16/LANE-A-INTERPRETER-ENVIRONMENT-EVIDENCE.json)
+has SHA-256 `bd34b77f53a46063adcfadc250adbf3edb77cf115821287152932bc5eccff9ab`.
+The [original evidence](INTERPRETER-ENVIRONMENT-EVIDENCE.json) has SHA-256
+`787b6f20256179ac995d3e6c06211785a5efc3dbf63f94074a64d1525a5f8806`.
+Both cover 104 modules, four exact aliases and 31 frozen hashes.
+
+`ProtectedSpineEnvironmentTargets` specifies the typed finite environment
+laws, with proofs in `ProtectedSpineEnvironmentWeakeningProof`,
+`ProtectedSpineEnvironmentLookupProof` and `ProtectedSpineEnvironmentNaturalProof`.
+Actual literal-variable and whole-bottom fallback codes remain retained and
+restrict correctly. The original-syntax interpreter definitions also compiled.
+The next gate preflights the frozen `ProtectedSpineLaws` comparator and
+the next proof combines the variable, constructor, and lambda cases.
+
+## 2026-11-18 20:41 UTC — Interpreter and helper laws READY-FOR-ROOT-REVIEW
+
+The exact `InterpretationLaws` supporting comparator passed together with
+the four environment aliases in core receipt `1795034452188903357-21`.
+The acceptance-schema
+[LANE-A-INTERPRETER-LAWS-EVIDENCE.json](../../new-paper-set-2026-11-18/paper16/LANE-A-INTERPRETER-LAWS-EVIDENCE.json)
+has SHA-256 `01008f06df4dea30bb7bed2c564ae1b7ce5d4d754acb8fcc0ce1f54e1130e668`.
+The [A/ evidence](INTERPRETER-LAWS-EVIDENCE.json) has SHA-256
+`914a04091fefed1441b614a62c5aba6348aa592e8bf43ecfdfcf99ba1dcaab20`.
+There are 204 source-matched modules, five standard-only audits and 46
+frozen hashes. The qualified freeze adds an import for the unchanged
+comparator; the first target draft is preserved.
+
+The proof uses the original mutual Expr/Args recursors after the attempted
+well-founded proof reached the resident-memory cap. The actual evaluator
+and protected helper are unchanged. For every typed covered expression and
+valid environment, value and call outputs are hereditary, monotone and
+natural. The lambda proof uses the same descendant port choice and proves
+membership of the actual opened observation. Its two tuple branches preserve
+the consumed index count on continuation and reset the call on an empty
+residual. Ordinary and marked heads use the same actual constructor tables.
+The numbered `lem:structural-interpretation` still needs capture-avoiding
+substitution and concrete application correspondence. The next packet is
+scoped environment/protection agreement and substitution of concrete images.
+
+## 2026-11-18 20:42 UTC — Scoped evaluator agreement READY-FOR-ROOT-REVIEW
+
+Frozen `ScopeAgreement` passed core receipt `1795034545832105513-58`.
+The acceptance-schema
+[LANE-A-INTERPRETER-SCOPE-EVIDENCE.json](../../new-paper-set-2026-11-18/paper16/LANE-A-INTERPRETER-SCOPE-EVIDENCE.json)
+has SHA-256 `83bc53afc903f7dd61773d70223c79ae8b0cbf2d394a1825939c9674aeb92939`.
+The [A/ evidence](INTERPRETER-SCOPE-EVIDENCE.json) has SHA-256
+`bafdcd43566de3957917aa5e15689b02cc4783213db46c1d018def8d730bc10c`.
+The gate reconciles 212 modules, one standard-only exact audit and 48
+frozen hashes.
+
+`ProtectedSpineScopeAgreementProof` proves agreement of the actual interpreter
+and helper whenever free lookups, well-scoped bound lookups and the relevant
+original protection tests agree. The bound-tail independence for a closed
+concrete image follows from the empty bound context. The next packet uses
+this result for full-table use of a substituted free variable and carries
+capture-avoiding substitution through the actual original source syntax.
+
+## 2026-11-18 20:50 UTC — Free substitution and application counterexample READY-FOR-ROOT-REVIEW
+
+Core receipt `1795034969148656801-17` passed `exact_FreeSubstitution`,
+`exact_AvailabilityGap`, `exact_ScopeAgreement` and
+`exact_InterpretationLaws`. The acceptance-schema
+[LANE-A-INTERPRETER-FREE-AND-GAP-EVIDENCE.json](../../new-paper-set-2026-11-18/paper16/LANE-A-INTERPRETER-FREE-AND-GAP-EVIDENCE.json)
+has SHA-256 `1d0e9852122554920e812296f0e8712957459a9e76b7639510ad9e9790b04e76`.
+The [A/ evidence](INTERPRETER-FREE-AND-GAP-EVIDENCE.json) has SHA-256
+`dc70754fc868d5bd1adba99162fb283b0d59673822f329549ebfe4590e2a8e35`.
+The union covers 232 modules, four standard-only audits and 50 frozen hashes.
+
+`ProtectedSpineSubstitutionTargets` and the free-input, free-variable,
+free-case and free-substitution proof modules compare the actual capture-
+avoiding `freeSub` with interpreted images across all descendant contexts.
+The free-variable case derives equality with the concrete image's original
+full table, including the image's own original protection behavior.
+
+The complete same-family application-equality reading of the numbered
+structural interpretation statement is obstructed. The frozen
+`ProtectedSpineApplicationCounterexampleTargets` and
+`ProtectedSpineApplicationGapChecks` prove the gap for ordinary successor
+applied to a covered ground variable. Both query inputs are ordinary and
+signature-valid at the same arrow type. At their actual bottom constructor
+family and valid root context, the helper has false availability. The
+literal syntactic call succeeds and its marked result has true availability
+when interpreted at that same family. This is a code inequality witnessed
+by the decoded availability bit. The operator and support laws still pass.
+
+Next, prove bound substitution and a genuine fixed-point application supplier
+for adequacy. The numbered structural statement's arbitrary-family
+correspondence remains open for source review.
+
+## 2026-11-18 20:54 UTC — Bound substitution READY-FOR-ROOT-REVIEW
+
+The frozen `BoundSubstitution` target passed core receipt
+`1795035232891684905-37`. The acceptance-schema
+[LANE-A-INTERPRETER-BOUND-EVIDENCE.json](../../new-paper-set-2026-11-18/paper16/LANE-A-INTERPRETER-BOUND-EVIDENCE.json)
+has SHA-256 `12ded5b77ecded9973242470b0121dcbf9bd1f50b469a5c7cbc36de9a49f2239`.
+The [A/ evidence](INTERPRETER-BOUND-EVIDENCE.json) has SHA-256
+`f9ae3e59af52b64ea3e54ed7d1702e49e5a46b888558a01b7312029e85ef80f2`.
+The report reconciles 227 modules, the standard-only exact alias and 50
+frozen hashes.
+
+The bound-input, bound-variable, bound-case and bound-substitution proof
+modules use the literal simultaneous `substitute` operation. The
+environment relation preserves the retained binder prefix and reads
+concrete codes for the removed slots. Helper agreement keeps both protection
+counts inside the retained prefix, so replacement of a removed slot uses
+its genuine full table. This supplies the concrete empty-residual and
+functional-argument interpretation needed for the fixed-point application
+proof. The latter has a separately frozen comparator and passed preflight.
+
+## 2026-11-18 21:00 UTC — Fixed-point concrete application READY-FOR-ROOT-REVIEW
+
+Core receipt `1795035582102039377-12` passed
+`exact_FixedApplication`, `exact_FixedApplicationAux` and
+`exact_BoundSubstitution`. The acceptance-schema
+[LANE-A-FIXED-APPLICATION-EVIDENCE.json](../../new-paper-set-2026-11-18/paper16/LANE-A-FIXED-APPLICATION-EVIDENCE.json)
+has SHA-256 `8be54cba8e91a213e5bfbd9dc492e12d3383b2d40bc3af0f2e8ea5903c073619`.
+The [A/ evidence](FIXED-APPLICATION-EVIDENCE.json) has SHA-256
+`462dc915d73f9316e3859b1a08af9d9f554b6bf98e9962070dc5b2f8be3e1a8b`.
+The report reconciles 237 modules, three standard-only exact aliases and
+50 frozen hashes.
+
+`ProtectedSpineFixedApplicationTargets` fixes the actual typing, bound
+images, full tuple and `applyAux` result. The proofs preserve the original
+consumed prefix, use the entire bottom when the original call fails, and
+encode the actual substituted syntax when it succeeds. The successful
+functional branch uses equality of the previous family and the checked
+operator output at a fixed point. This supplies the successful full-call
+lookup for fixed-point adequacy. The same-family counterexample at bottom
+remains the boundary for the numbered structural statement.
+
+The next packet calibrates the actual strict bit against successful marking
+and translates the existing canonical-port derivations into fixed-point bits.

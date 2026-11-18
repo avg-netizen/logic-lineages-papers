@@ -1,10 +1,15 @@
 # Current comparison formalization status
 
-New-paper register: **123 checked, 44 pending / 167**. Historical register:
+New-paper register: **124 checked, 43 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper19 `thm:compiler`: complete computable strict and weak comparison
+  construction with literal output calibration, exact code domain, both iff
+  clauses at every source-growth control and policy, valuation retention,
+  ground context and explicit polynomial budgets (packet392, 458 modules).
 
 - Paper16 `lem:operator`: complete monotone endomap of the retained coherent
   families at the literal ordinary-input inventory, explicit finite
@@ -534,3 +539,11 @@ unchanged-control seeded compiler, seeded system, single query and
 381-383 were compiled on the local host, so their evidence paths are local;
 reconcile_current_acceptance.py is host-bound and was not rerun over the 380
 earlier remote-compiled packets.
+Later the same evening: paper19 primitive gates, Plan compiler, comparison
+outputs, continuation renaming, binary lowering, Boolean matrix and the
+interleaved input compiler are checked supporting packets (384-387, 389-391),
+paper16 interpreter environments is packet388, and paper19 `thm:compiler` is
+checked (packet392). Paper17's five unchanged-control gates, including the
+`cor:standard-functional-hardness` comparator, passed natively with
+standard-only axioms and evidence; they await a review independent of their
+author (root) and are not accepted.

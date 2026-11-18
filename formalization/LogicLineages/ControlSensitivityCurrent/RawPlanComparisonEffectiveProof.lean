@@ -27,8 +27,8 @@ theorem compare_result_effective : Computable compareResult := by
     (Computable.option_bind hwrapRight (Computable.option_bind hwrapLeft hfinish.to₂).to₂).to₂).of_eq
   intro r
   cases h : DerivedComposition.aggregate r.1 r.2.2 with
-  | none => rfl
-  | some p => cases p <;> rfl
+  | none => simp [compareResult, h]
+  | some p => cases p <;> simp [compareResult, h]
 
 theorem effective : RawPlanComparisonTargets.Effective :=
   Computable.option_bind PlanCompiler.effective (compare_result_effective.comp Computable.snd).to₂

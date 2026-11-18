@@ -1,0 +1,26 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawInputCompilerTypedProof.lean:15:21: error: unsolved goals
+case finish
+Γ✝ : List Ty
+m✝ : ℕ
+Γ : List Ty
+m : ℕ
+root : Fin m
+d : Dag Γ m
+pending : List Lowering
+h :
+  BooleanMatrix.matrixRaw (List.ofFn fun j => PrimitiveGate.encodePort (d.ports j)) (BooleanMatrix.encodeRows d.wires)
+      ↑root =
+    encodePlan (BooleanPlan.matrixPlan d.wires d.ports root)
+rootBound : ↑root < (stateOf d pending).2.1.length
+⊢ (if ↑root < (BooleanMatrix.encodeRows d.wires).length then
+      some (List.foldl lower (encodePlan (BooleanPlan.matrixPlan d.wires d.ports root)) pending)
+    else none) =
+    some (List.foldl lower (encodePlan (BooleanPlan.matrixPlan d.wires d.ports root)) pending)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawInputCompilerTypedProof.lean:20:8: warning: This simp argument is unused:
+  if_pos rootBound
+
+Hint: Omit it from the simp argument list.
+  simp only [encodeInput, runFrom, List.foldl_nil, Option.bind_some, finishInput,
+          i̵f̵_̵p̵o̵s̵ ̵r̵o̵o̵t̵B̵o̵u̵n̵d̵,̵ ̵InputNormalization.normalize, BooleanCompiler.lower, stateOf, encodedPorts, h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
