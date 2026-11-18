@@ -1,0 +1,21 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementAppendProof.lean:30:2: error: The `induction` tactic does not support the type `LogicLineages.PersistentMarking.Spine.ExtrasTyped` because it is mutually inductive
+
+Hint: Consider using the `cases` tactic instead
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementAppendProof.lean:66:8: error: (kernel) application type mismatch
+  x✝ ⟨qs✝, hs⟩
+argument has type
+  (qs : Args) ×' RefinementExtrasTree S f base extras qs
+but function has type
+  ∀ (y : (qs : Args) ×' RefinementExtrasTree S f✝ base✝ extras✝ qs),
+    InvImage (fun x1 x2 => x1 < x2) (fun x => PSigma.casesOn x fun qs h => sizeOf qs) y
+        ⟨Args.cons q✝ qs✝, RefinementExtrasTree.cons h✝⁸ hs✝²⟩ →
+      _root_.Nonempty (RefinementExtrasTree S f✝ base✝ (extras✝.append tail) y.1)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementAppendProof.lean:89:8: error: (kernel) application type mismatch
+  x✝ ⟨qs✝, hs⟩
+argument has type
+  (xs : Args) ×' RefinementExtrasTree S f base full xs
+but function has type
+  ∀ (y : (xs : Args) ×' RefinementExtrasTree S f✝ base✝ extras✝ xs),
+    InvImage (fun x1 x2 => x1 < x2) (fun x => PSigma.casesOn x fun xs hx => sizeOf xs) y
+        ⟨Args.cons q✝ qs✝, RefinementExtrasTree.cons h✝⁷ hs✝²⟩ →
+      _root_.Nonempty (RefinementExtrasTree S f✝ base✝ extras✝ (y.1.append ys))

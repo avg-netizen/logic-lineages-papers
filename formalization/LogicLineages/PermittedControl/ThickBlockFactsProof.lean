@@ -51,7 +51,7 @@ open OrdinalComparison
  theorem thick_block_limit (P a : Ordinal.{0}) (q : Nat) (ha : 0 < a) (hq : 0 < q) :
     Order.IsSuccLimit (thickBlock P a q) := by
   have hpow : Order.IsSuccLimit (Ordinal.omega0^a) :=
-    Ordinal.isSuccLimit_opow Ordinal.isSuccLimit_omega0 ha.ne'
+    Ordinal.isSuccLimit_opow_left Ordinal.isSuccLimit_omega0 ha.ne'
   exact Ordinal.isSuccLimit_add P
     (Ordinal.isSuccLimit_mul_left hpow (by exact_mod_cast hq))
 
@@ -65,6 +65,7 @@ open OrdinalComparison
     simp only [thickBlock,zero_add,if_pos rfl]
     rw [Ordinal.log_opow_mul Ordinal.one_lt_omega0 a hc,
       Ordinal.log_eq_zero (Ordinal.natCast_lt_omega0 q),add_zero]
+    simp
   · rw [if_neg hP]
     have hae := Ordinal.le_log_of_opow_le Ordinal.one_lt_omega0 (Ordinal.le_of_dvd hP hd)
     have hPb : P < Ordinal.omega0^(Ordinal.log Ordinal.omega0 P+1) :=
@@ -118,8 +119,54 @@ open OrdinalComparison
  theorem thickBlockTailEffective : Targets.ThickBlockTailEffective := by
   have hR : Primrec (fun z : Nat×Nat => z.1) := Primrec.fst
   have hB : Primrec (fun z : Nat×Nat => z.2) := Primrec.snd
-  have hpow := Primrec.nat_pow.comp (Primrec.nat_add.comp hR (Primrec.const 2)) (Primrec.const 4)
+  have hp : Primrec₂ (fun x y : Nat => x^y) := Primrec₂.unpaired'.1 Nat.Primrec.pow
+  have hpow := hp.comp (Primrec.nat_add.comp hR (Primrec.const 2)) (Primrec.const 4)
   exact Primrec.nat_max.comp (Primrec.nat_mul.comp (Primrec.const 100) hpow)
     (Primrec.nat_max.comp (initialLcm_primrec.comp (Primrec.nat_add.comp hR (Primrec.const 1))) hB)
+
+ theorem thick_block_succ (P a : Ordinal.{0}) (q : Nat) :
+    thickBlock P a (q+1)=thickBlock P a q+Ordinal.omega0^a := by
+  simp [thickBlock,Nat.cast_add,mul_add,add_assoc]
+
+ theorem thick_block_mono (P a : Ordinal.{0}) : Monotone (thickBlock P a) := by
+  intro i j hij
+  exact (add_le_add_iff_left P).mpr
+    ((Ordinal.isNormal_mul_right (Ordinal.opow_pos a Ordinal.omega0_pos)).monotone (by exact_mod_cast hij))
+
+ theorem thick_block_strict (P a : Ordinal.{0}) : StrictMono (thickBlock P a) := by
+  intro i j hij
+  exact (add_lt_add_iff_left P).mpr
+    ((Ordinal.isNormal_mul_right (Ordinal.opow_pos a Ordinal.omega0_pos)).strictMono (by exact_mod_cast hij))
+
+ theorem thick_head_drop (mu P a : Ordinal.{0}) (q : Nat) (hmu : mu < epsilonZero)
+    (hP : P < epsilonZero) (ha : a < epsilonZero) (hq : 0 < q) (hd : Ordinal.omega0^a ∣ P) :
+    actualOrdinalNorm (mu+thickBlock P a (q+1)) =
+      actualOrdinalNorm (mu+thickBlock P a q)+(1+actualOrdinalNorm a) := by
+  rw [thick_head_norm mu P a (q+1) hmu hP ha (by omega) hd,
+    thick_head_norm mu P a q hmu hP ha hq hd]
+  simp only [Nat.add_mul,one_mul]
+  omega
+
+ theorem entry_norm_ge_target (f : Nat → Nat) (A target : Ordinal.{0}) (i E : Nat)
+    (ht : target < epsilonZero) (hi : FirstEntry f A target i) (hE : entryNormAt f A i=E) :
+    actualOrdinalNorm target ≤ E := by
+  obtain ⟨n,hn⟩ := interval_tail ((descentWith f)^[i] A) target hi.1 hi.2.1
+  have hf := (actualFiniteTailClosureNorm target ht n).2
+  change actualOrdinalNorm ((descentWith f)^[i] A)=E at hE
+  rw [hn,hf] at hE
+  omega
+
+ theorem target_next_relative (f : Nat → Nat) (A mu rho : Ordinal.{0}) (i E : Nat)
+    (hr : Order.IsSuccLimit rho) (hi : FirstEntry f A (mu+rho) i) (hE : entryNormAt f A i=E) :
+    (descentWith f)^[i+1] A-mu = relativeMaximum mu rho (f E) := by
+  have hp := (interval_iff_limitPart ((descentWith f)^[i] A) (mu+rho)
+    (Or.inr (Ordinal.isSuccLimit_add mu hr))).mp ⟨hi.1,hi.2.1⟩
+  rw [Function.iterate_succ_apply']
+  change actualMaximumPredecessor (actualLimitPart ((descentWith f)^[i] A))
+    (f (actualOrdinalNorm ((descentWith f)^[i] A)))-mu = _
+  rw [hp]
+  change actualMaximumPredecessor (mu+rho) (f (entryNormAt f A i))-mu = _
+  rw [hE]
+  rfl
 
 end LogicLineages.PermittedControl

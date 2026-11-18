@@ -1,0 +1,13 @@
+import LogicLineages.PersistentMarking.RefinementFreeCallProof
+namespace LogicLineages.PersistentMarking.RefinementFreeCallChecks
+theorem exact_accumulatorSuccess : RefinementFullCallTargets.AccumulatorSuccess := RefinementFreeCallProof.accumulatorSuccess
+theorem exact_freeOuterBlock : RefinementFullCallTargets.FreeOuterBlock := RefinementFreeBlockProof.freeOuterBlock
+theorem exact_freeOuterBlockArgs : RefinementFullCallTargets.FreeOuterBlockArgs := RefinementFreeBlockProof.freeOuterBlockArgs
+theorem exact_freeOpeningAux : RefinementFullCallTargets.FreeOpeningAux := RefinementFreeCallProof.freeOpeningAux
+theorem exact_freeOpeningCall : RefinementFullCallTargets.FreeOpeningCall := RefinementFreeCallProof.freeOpeningCall
+#print axioms exact_accumulatorSuccess
+#print axioms exact_freeOuterBlock
+#print axioms exact_freeOuterBlockArgs
+#print axioms exact_freeOpeningAux
+#print axioms exact_freeOpeningCall
+end LogicLineages.PersistentMarking.RefinementFreeCallChecks

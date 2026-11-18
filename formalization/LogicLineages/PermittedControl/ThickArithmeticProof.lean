@@ -35,7 +35,8 @@ open OrdinalComparison
     have hm := Nat.mod_eq_zero_of_dvd heven
     unfold potential
     omega
-  simpa only [Function.iterate_one, Int.natCast_one, mul_one, ← Int.natCast_mul, ← he] using h
+  have heInt : (E : Int)=2*(potential E : Int) := by exact_mod_cast he
+  simpa only [Function.iterate_one, Int.natCast_one, mul_one, ← heInt] using h
 
  theorem moving_local_residue (f : Nat → Nat) (B : Nat) (hf : SelectedWithThreshold f B)
     (M E c n w : Nat) (hM : 0 < M) (ht : max M B ≤ E) (heven : 2 ∣ E)

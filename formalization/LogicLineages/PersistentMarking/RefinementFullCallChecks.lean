@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.RefinementFullCallProof
+namespace LogicLineages.PersistentMarking.RefinementFullCallChecks
+theorem exact_fullApplication : RefinementSyntaxTargets.FullApplication := RefinementFullCallProof.fullApplication
+#print axioms exact_fullApplication
+end LogicLineages.PersistentMarking.RefinementFullCallChecks

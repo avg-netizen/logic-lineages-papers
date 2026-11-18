@@ -1,6 +1,6 @@
 # Current comparison formalization status
 
-New-paper register: **22 checked, 145 pending / 167**. Historical register:
+New-paper register: **27 checked, 140 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
@@ -26,6 +26,9 @@ to this replacement collection. Old statuses do not transfer automatically.
   with exact limit/affordability/current-versus-next-budget distinctions.
 - Paper17 `lem:gap-input`: computed explicit tails and all three genuine
   entry/count/strict endpoint comparisons, with actual budgets discharged.
+- Paper17 `lem:thick`: full actual retained-block separation for arbitrary
+  phase states/lower remainders, with primitive-recursive tail, actual
+  shared-clock admission and moving-residue successor/limit separation.
 - Paper18 `u:thm:identity` and `u:thm:sign`: effective literal normal forms
   with countervaluation, and full two-sort eventual signs on genuine domains.
 - Paper18 `u:lem:sparse`: actual-ordinal sparse peaks and full inequalities.
@@ -40,6 +43,15 @@ to this replacement collection. Old statuses do not transfer automatically.
 - Paper18 `m:lem:graph-domains`: effective full canonical graph-network
   compilation and existential decision, with common-valuation domains, actual
   programs and fresh independent high-level block coverage.
+- Paper18 `m:thm:single-core`: effective finite Presburger sign formulas and
+  universal comparison for arbitrary nested positive cores, with original
+  shared-variable correlations and genuine joint compiler/decision programs.
+- Paper18 `m:lem:endpoints` and `m:lem:head-window`: full actual sparse
+  endpoint comparison and strict head windows, including the finite-family
+  lexicographic/equality consequences.
+- Paper18 `lem:source-polynomial`: every actual direct scalar head of
+  literal ground-open original sources with all internal types/subtypes at
+  level at most two is a polynomial limit.
 - Paper19 `lem:perturbed-control`: full control lemma over the stipulated
   primitive-recursive bounded simulation, including double-exponential growth.
 
@@ -83,7 +95,13 @@ Actual fresh-opening synchronization preserving the refinement witness count
 is checked (30 modules, one supporting alias).
 Full refinement transitivity is checked (41 modules, one supporting alias),
 using the actual right-witness constructor count and synchronized fresh openings.
-Broader substitution/context closure, prefix escape, comparison cut, decision
+Full two-environment substitution, arbitrary renaming and fresh opening
+constituents are checked (45 modules, three aliases), with finite image
+freshness and genuine depth-one composition. Actual full-call reflection
+remains before the full syntax lemma. Its literal-free raw call helpers
+(22 modules, five aliases) and actual append/omission helpers (47 modules,
+three aliases) are checked without asserting general call associativity.
+Prefix escape, comparison cut, decision
 and height remain open.
 
 Paper17: near-control modular/orbit, full numerical growth and joint primitive
@@ -103,7 +121,9 @@ Actual retained local phase, successor/positive-limit local tails and symmetric
 quadratic coincidence are checked (170 modules, four supporting aliases).
 Actual arbitrary lower-limit target admission/no-skip/shared-clock reset or
 minimum-clock divergence is checked (165 modules, one supporting alias).
-Thick/equal-gap/threshold certificates, arithmetic decision and ground
+Full source-general thick-block separation and computed sufficient tail
+are checked (180 modules). Equal-gap/threshold certificates, arithmetic
+decision and ground
 comparison remain separate unpaid obligations.
 
 Archive/migration is remotely verified. All80 archived-file hashes and local
@@ -146,4 +166,17 @@ profile theorem.
 
 Actual full-root product/omitted-factor interpolation is checked for every
 degree-bounded polynomial, including empty roots (ten modules, six supporting
-aliases). Independent rational-state coverage and descent remain separate.
+aliases).
+
+Complete actual partial-fraction coverage of independent canonical proper
+rational states over the source splitting field is checked (19 modules, six
+supporting aliases), including every all-root tuple and zero/empty cases.
+Geometric support equivalence and F2 descent remain separate.
+
+Actual split-polynomial simple-support/divisibility characterization and
+source-divisor splitting are checked (14 modules, three supporting aliases).
+Actual canonical numerator/denominator scalar extension and properness are
+checked (17 modules), and every actual mixed-word source run after the literal
+transient belongs to the independent state space (41 modules). Arbitrary
+geometric-state equivalence is still not inferred from finite-field root
+membership alone.

@@ -1,0 +1,9 @@
+import LogicLineages.PersistentMarking.RefinementAppendProof
+namespace LogicLineages.PersistentMarking.RefinementAppendChecks
+theorem exact_omitSuffix : RefinementAppendTargets.OmitSuffix := RefinementAppendProof.omitSuffix
+theorem exact_markedAppend : RefinementAppendTargets.MarkedAppend := RefinementAppendProof.markedAppend
+theorem exact_headAppend : RefinementAppendTargets.HeadAppend := RefinementAppendProof.headAppend
+#print axioms exact_omitSuffix
+#print axioms exact_markedAppend
+#print axioms exact_headAppend
+end LogicLineages.PersistentMarking.RefinementAppendChecks

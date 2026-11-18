@@ -607,8 +607,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/entries.tex",
           "line": 151,
           "statement_latex": "[A retained thick block forces separation]\\label{lem:thick}\nSuppose two undiverged relative descents process a common block\n\\(\\omega^a q\\), where \\(a\\ge2\\) is fixed, \\(N(a)\\le R\\), and\n\\(q>R+2\\), while their whole-state leading exponent, and hence their\ntwo distinct shifts \\(c<c'\\), remain fixed. Their limit parts diverge\nbefore this block is processed.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.Targets.FullThickBlock",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullThickBlock",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/066-thick-block.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:prop:equal-gap",
@@ -878,8 +881,11 @@
           "file": "18-standard-control-comparison/sections/certified-fragments.tex",
           "line": 8,
           "statement_latex": "[Sparse endpoint comparison]\\label{m:lem:endpoints}\nFor a fixed nonzero limit $\\lambda$, $J_\\lambda$ is strictly increasing.\nIts distinct norm inputs have distinct terminal endpoints, ordered in the\nsame way. For any two distinct endpoints $Z<W$ one has\n\\begin{equation}\\label{m:eq:sparse}\n W\\ge2^{Z+1}.\n\\end{equation}\nEvery value with endpoint $Z$ lies strictly between $Z$ and $2Z$ and below\nthe next value of $f$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.EndpointWindowTargets.FullActualSparseEndpointComparison",
+          "verified_alias": "LogicLineages.StandardControlCurrent.EndpointWindowStatementChecks.endpoints",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/064-sparse-endpoints.json"
         },
         {
           "id": "18-standard-control-comparison:m:thm:common",
@@ -898,8 +904,11 @@
           "file": "18-standard-control-comparison/sections/certified-fragments.tex",
           "line": 118,
           "statement_latex": "[Head order in a strict interval]\\label{m:lem:head-window}\nLet $\\lambda>\\mu$ be nonzero fixed limits. If\n$t\\ge\\max(N(\\lambda),N(\\mu)+2)$ and\n$N(\\mu)\\le u<f(t)$, then $J_\\lambda(t)>J_\\mu(u)$ and their endpoints\ndiffer. Consequently, if finitely many norm inputs $t_i$ have minimum\n$s\\ge\\max_iN(\\lambda_i)+2$ and $\\max_i t_i<f(s)$, their outputs are\nordered lexicographically by (ordinal head, norm input). Equality requires\nequality of both, and different output blocks have distinct sparse endpoints.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.EndpointWindowTargets.FullActualDifferentHeadWindow",
+          "verified_alias": "LogicLineages.StandardControlCurrent.EndpointWindowStatementChecks.headWindow",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/065-strict-head-window.json"
         },
         {
           "id": "18-standard-control-comparison:m:thm:balanced",
@@ -918,8 +927,11 @@
           "file": "18-standard-control-comparison/sections/certified-fragments.tex",
           "line": 276,
           "statement_latex": "[Arbitrary single-core rows]\\label{m:thm:single-core}\nFor the signed row\n\\begin{equation}\\label{m:eq:single-core}\n Q(\\vec x)=K+rE(\\vec x)+\n       \\sum_i q_i h_{\\lambda_i}(a_iE(\\vec x)+c_i),\n \\quad a_i\\ge1,\\ c_i\\ge0,\n\\end{equation}\nwith fixed integer $K,r,q_i$ and fixed nonzero limit heads, each sign\npredicate $Q<0$, $Q=0$, $Q>0$ has an effectively computable finite\nPresburger formula in the original raw variables. Thus universal comparison\nof these rows needs no arithmetic decision theorem about $f$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.SingleCoreTargets.FullSingleCore",
+          "verified_alias": "LogicLineages.StandardControlCurrent.SingleCoreStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/062-single-core.json"
         },
         {
           "id": "18-standard-control-comparison:m:lem:growth",
@@ -1249,8 +1261,11 @@
           "file": "18-standard-control-comparison/sections/source-applications.tex",
           "line": 152,
           "statement_latex": "[Polynomial direct heads]\n\\label{lem:source-polynomial}\nIf every internal type and subtype in a ground-open source has level at\nmost two, all its direct scalar heads are polynomial limits below\n$\\omega^\\omega$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.SourcePolynomialTargets.PolynomialDirectHeads",
+          "verified_alias": "LogicLineages.StandardControlCurrent.SourcePolynomialStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/071-source-polynomial.json"
         },
         {
           "id": "18-standard-control-comparison:thm:source-leveltwo",
@@ -1957,7 +1972,7 @@
     }
   ],
   "status_counts": {
-    "pending": 145,
-    "checked": 22
+    "pending": 140,
+    "checked": 27
   }
 }

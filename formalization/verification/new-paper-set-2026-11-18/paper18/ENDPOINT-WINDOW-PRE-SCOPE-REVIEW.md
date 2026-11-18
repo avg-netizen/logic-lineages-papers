@@ -1,0 +1,8 @@
+# Independent pre-scope: endpoint and strict-window lemmas
+Approved expanded comparators for complete current m:lem:endpoints and m:lem:head-window, contingent on fresh native and recursive evidence. All ten frozen pins independently match.
+
+Compared actual certified-fragments.tex statements and proof context with the expanded targets and actual head definitions. Fixed heads remain genuine nonzero limits below epsilonZero and actualHeadInitial=lambda+(t-Nlambda), with valid norm bounds. Strict value AND terminal-endpoint order, distinct-endpoint exponential spacing, and the actual predecessor index band Z=Phi(s)<collapse<2Z<Phi(s+1) cover every endpoint clause, with stronger all-nonfinite band/gap statements.
+
+The different-head interval retains u<Phi(t), not a non-strict endpoint. The actual next-limit first deletion/count/value facts are conclusions rather than supplied oracles. Finite-family key order and both output/endpoint equality iff both head and input agree cover repeated heads and inputs; choosing the minimum input as s gives the printed nonempty case. Empty families are harmless strengthening. Sparse spacing is supplied by the companion full endpoint theorem, not silently inferred from mere endpoint inequality.
+
+Existing actual Phi, ordinal norm, terminal replacement count and collapse semantics are unchanged. The old proof suppliers require current recursive receipt/source validation before acceptance. No common-head/balanced decision promotion, full arithmetic supplier, arbitrary quantified decision, or main comparison conclusion follows here. No compiler run or source edits.

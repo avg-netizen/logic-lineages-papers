@@ -1,0 +1,7 @@
+# Independent final review: FREECALL
+
+Approved 5 supporting exact endpoints only. Read-only independent verifier reproduced the author evidence exactly: 22 modules, 5 aliases, zero errors. Independently traversed actual imports and confirmed exact closure equality. All 5 frozen pins match, native receipt 1794985365908656764-2; standard-only axioms. Direct pinned compiler-context reconstruction avoids invoking Lean. No compilation or mathematical source edit.
+
+Read the full actual bound-slot proof: retained indices below depth, inner block lookup, exact outer slot and beyond-block decrement all handled, including arbitrary nonclosed accumulator values. Lambda recursion advances both cutoffs; free values are invariant under lifting. Actual accumulator success follows original spine/argument type tests, not output equality. The auxiliary equality checks free and bound failure for nonempty arguments; replacing the outer bound slot by a literal free value preserves blocking. Consumed inner arguments prepend to the accumulator, the original free outer argument remains last. Empty calls and exact original lambda call equality are handled separately. This proves only the frozen literal-free identities, not arbitrary staged associativity or successful-call reflection under nonfree substitution.
+
+FullApplication and complete lem:sharp-syntax remain pending their own exact gate and source review. No numbered promotion from these helpers. Preserved failed drafts/receipts remain intact.

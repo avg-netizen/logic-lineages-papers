@@ -1,0 +1,9 @@
+# Independent refinement substitution/renaming/opening final
+
+Approved three complete frozen constituent endpoints, not full lem:sharp-syntax. Native 1794984496473688348-2; independent read-only report exactly equals author evidence: 45 modules, three standard-only aliases, zero errors. Actual import traversal confirms exact full 45-module local closure; all verifier-checked frozen pins unchanged. No compiler invoked.
+
+Read complete support/proof/FreshOpening modules. imageBound traverses only actual free leaves and bounds their actual map images, with shiftOccurs proving shifts preserve free names; no global fresh name for infinitely many images is assumed. Lambda chooses a name fresh for both literal bodies and their respective finite transformed images, synchronizes the actual child with exactly preserved count, and invokes smaller-right-witness IH with both masked typed maps. Pointwise mask refinement is derived; actual maskedOpening uses the existing full composition identity and retains depth-one transformed bodies. It does not silently identify depth-one substitution with depth zero. Image validity is extracted from actual refinement endpoints; typedness and validity reassemble genuine PaperTerm endpoints.
+
+Every positional base/extra witness is mapped. Existing extras retain actual At index; whole-owner mapping aligns the changed target type via concrete annotation preservation and actual equality transport. Central strict bounds cover all recursively stored witnesses. ArbitraryRenaming specializes to two identical free-variable maps with NO injectivity restriction. Fresh Opening follows actual lambda inversion and proven synchronization, not an assumed covariance oracle. The only parser repair renames a reserved proof identifier; propositions unchanged and failure preserved.
+
+Full application remains pending, so no complete refinement syntax/cut/main theorem promotion. No numbered/full-root/CI claim.
