@@ -1,0 +1,24 @@
+import LogicLineages.PersistentMarking.MarkedBaseTupleFoundationProof
+import LogicLineages.PersistentMarking.MarkedBaseHeadCoverageProof
+import LogicLineages.PersistentMarking.MarkedBaseTupleOrderProof
+import LogicLineages.PersistentMarking.MarkedBaseTupleRestrictionProof
+namespace LogicLineages.PersistentMarking.MarkedBaseTupleChecks
+theorem exact_TupleEnumeration : MarkedBaseTupleTargets.TupleEnumeration := MarkedBaseTupleFoundationProof.enumeration
+theorem exact_TupleDistinct : MarkedBaseTupleTargets.TupleDistinct := MarkedBaseTupleFoundationProof.distinct
+theorem exact_TupleOrderExact : MarkedBaseTupleTargets.TupleOrderExact := MarkedBaseTupleFoundationProof.orderExact
+theorem exact_HeadDeclaration : MarkedBaseTupleTargets.HeadDeclaration := MarkedBaseHeadCoverageProof.declaration
+theorem exact_SourceHeadCoverage : MarkedBaseTupleTargets.SourceHeadCoverage := MarkedBaseHeadCoverageProof.coverage
+theorem exact_TupleOrder : MarkedBaseTupleTargets.TupleOrder := MarkedBaseTupleOrderProof.order
+theorem exact_TupleRestriction : MarkedBaseTupleTargets.TupleRestriction := MarkedBaseTupleRestrictionProof.restriction
+theorem exact_TupleRestrictionMonotone : MarkedBaseTupleTargets.TupleRestrictionMonotone := MarkedBaseTupleRestrictionProof.monotone
+theorem exact_TupleRestrictionAlgebra : MarkedBaseTupleTargets.TupleRestrictionAlgebra := MarkedBaseTupleRestrictionProof.algebra
+#print axioms exact_TupleEnumeration
+#print axioms exact_TupleDistinct
+#print axioms exact_TupleOrderExact
+#print axioms exact_HeadDeclaration
+#print axioms exact_SourceHeadCoverage
+#print axioms exact_TupleOrder
+#print axioms exact_TupleRestriction
+#print axioms exact_TupleRestrictionMonotone
+#print axioms exact_TupleRestrictionAlgebra
+end LogicLineages.PersistentMarking.MarkedBaseTupleChecks

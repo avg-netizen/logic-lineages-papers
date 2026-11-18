@@ -1,0 +1,18 @@
+# Independent complete current thm:functional-hardness final
+
+Accepted COMPLETE numbered Paper17 thm:functional-hardness for permitted selected controls, not merely a supporting clause. First-pass receipt 1795017936858612335-5. Compiler-free independent full recursive evidence exactly reproduces 918 current-source modules, zero errors and exact standard-only full alias fixed_selectedFunctionalHardness. All seven frozen pins match. No edits/failures at this full gate.
+
+## Source and public domain
+Re-read the literal theorem/proof in current hardness.tex and exact eight-clause target. Both weak and strict ground-output canonical comparisons are covered for every actual selected ctrl/K and every admissible policy. The public potential decider must answer ALL actual sources satisfying free-type levels at most one/internal-level bounds two or three, over ALL selected admissible substitutions. It is not restricted to compiler images or generated valuations. The same fixed control and policy appear on both reduction and decider sides. Level two is a genuine finite-query reduction, not misclaimed many-one; level three is exactly one actual packed query. Both levels include closed no-decider conclusions, with level-three no-deciders stronger immediate consequences of the printed single-query clause.
+
+## Mathematical and source-chain audit
+The source language is finite fixed-coefficient linear Z[X] equations with unknowns in N[X], including zero polynomials, not arbitrary products of unknowns. The independently substantive closed-supplier review (POLYNOMIAL-UNDECIDABILITY-SUPPLIER-FINAL-REVIEW.md) inspected actual Nat.Partrec/Diophantine recursion, minimization/cipher, polynomial specialization, total validity/domain-shift/circuit allocation, and actual fixed-coefficient N[X] gadgets. That closed supplier is in this fresh recursive closure, not an external undecidability premise. This final does not rest on an axiom scan or literature citation alone.
+
+Actual selected syntax/grade/output chains were independently reviewed in their completed packet finals: all-policy combinators, signed pair compiler, successful detector, shared-context alignment/aggregation, zero-pattern polynomial realization and finite queries. Level-two query ALL means UNSAT; actual code/bounds allow the same-policy decider on every emitted query, and one complement gives polynomial solvability. No old fixed-G semantic compiler is transferred.
+
+For level three the actual closed omega seed, zero-inclusive graded norm-padded shared family, finite-part reverse projection and seeded simultaneous-system induction are paid. The original valuation is fixed, all earlier components preserved, arbitrary admitted reverse valuations allowed. Exact source query packing/PR handles all natural codes, malformed/invalid cases through an actually impossible unit=0 fallback, and empty systems through the proved empty-fold/source-augmentation correspondence. No free seed, mask list, hidden tail or assumed successful assignment survives in the final target.
+
+Re-read current LevelTwoProof, DecisionPullbackProof and FunctionalHardnessProof/Checks. The new singleQueryPullback composes the actual computable map and hypothetical same-policy bounded-source decider, uses exact pack and context/internal bounds, computes UNSAT, complements once, then contradicts the same closed polynomial supplier. Both strictness choices are separately instantiated; eight clauses are assembled exactly.
+
+## Boundary
+Complete theorem acceptance is limited to this selected-control functional-hardness statement. The following unchanged-standard-G corollary is NOT included. No threshold, ground-arithmetic decision theorem, general main theorem or parked-route claim is promoted.

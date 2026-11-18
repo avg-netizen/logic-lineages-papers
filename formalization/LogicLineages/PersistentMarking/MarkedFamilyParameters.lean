@@ -12,7 +12,7 @@ def raw (E : Environment) (heads : List Head) : List Parameter :=
         (MarkedExtras.extras E Γ).map fun es => (f,τ,Γ,bs,es)
 
 def parameters (E : Environment) (heads : List Head) : List Parameter :=
-  dedupBy (fun a b => decide (a=b)) (raw E heads)
+  dedupBy (fun (a b : Parameter) => decide (a=b)) (raw E heads)
 
 def Valid (E : Environment) (heads : List Head) (p : Parameter) : Prop :=
   p.1 ∈ heads ∧ p.2.1 ∈ E.types ∧ WellFormed E.types E.ports p.2.2.1 ∧

@@ -1,0 +1,3 @@
+# Nine-alias union readiness
+
+Read MarkedBaseTupleChecks. Approved fresh parent-controlled full supporting gate for exactly nine original aliases: TupleEnumeration, TupleDistinct, TupleOrderExact, HeadDeclaration, SourceHeadCoverage, TupleOrder, TupleRestriction, TupleRestrictionMonotone, TupleRestrictionAlgebra. Each directly names the independently reviewed actual supplier and frozen target; no new premise or semantic expansion. This is nine separate checks, not a new conjunction theorem. All fifteen semantic pins/inherited closures remain required. Fresh union evidence and independent final required; no marked-family/equation(C)/operator/decision promotion.

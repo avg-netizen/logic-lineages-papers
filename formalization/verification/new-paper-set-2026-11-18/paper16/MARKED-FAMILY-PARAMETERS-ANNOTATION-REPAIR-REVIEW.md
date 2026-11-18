@@ -1,0 +1,3 @@
+# Comparator annotation repair approval
+
+Read preserved failure 1795017836876965601-2: Decidable (a=b) could not be synthesized at the polymorphic dedup comparator. Current intended raw product is List Parameter. Approve sole definition edit `fun a b => decide (a=b)` to `fun (a b : Parameter) => decide (a=b)` at parameters. This exposes exactly the intended equality type without changing raw product, dedup procedure, relation or target. Preserve original edition and refresh only the definition pin among seventeen after applying; independent exact applied diff/pin confirmation required before retry. No proof acceptance/cap change.

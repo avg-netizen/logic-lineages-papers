@@ -1,0 +1,5 @@
+# Independent tuple restriction supporting final
+
+Accepted exact three original endpoints TupleRestriction, TupleRestrictionMonotone and TupleRestrictionAlgebra. First-pass receipt 1795017609920215328-2. Compiler-free independent evidence equals author JSON: 78 modules, three standard-only aliases, zero errors, all fifteen and inherited pins intact.
+
+Actual structural type/value list induction uses TupleValues nil/cons and lengths, so malformed lists are excluded rather than truncated. Each result membership comes from actual global descriptor Restriction; each order comparison from independently derived code monotonicity. Identity and composition use actual original restriction algebra at each coordinate, with the same ordered type list and repeated positions preserved. Empty tuples are literal base cases. No lower law, inverse lifting or caller-supplied output membership premise is introduced. Scope remains three supporting tuple endpoints, not family coherence/lattice/operator/decision.

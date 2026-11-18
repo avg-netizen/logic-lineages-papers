@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.SelectedFunctionalHardnessProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_selectedFunctionalHardness : SelectedFunctionalHardnessTargets.SelectedFunctionalHardness :=
+  SelectedFunctionalHardness.Proof.selectedFunctionalHardness
+#print axioms fixed_selectedFunctionalHardness
+end LogicLineages.PermittedControl.StatementChecks

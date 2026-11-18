@@ -1,0 +1,7 @@
+# Complete current Paper17 functional-hardness handoff
+
+Full SelectedFunctionalHardnessStatementChecks passed first attempt1795017936858612335-5, no edits/failures. Seven frozen pins unchanged. StatementChecks.fixed_selectedFunctionalHardness : SelectedFunctionalHardnessTargets.SelectedFunctionalHardness is the complete eight-clause source endpoint, standard-only. FUNCTIONALHARDNESSFULL-1606 explicitly released and all processes reaped. Fresh current-source recursive report SELECTED-FUNCTIONAL-HARDNESS-EVIDENCE.json.
+
+Full numbered thm:functional-hardness, not supporting-only: actual selected controls/every policy; full unrestricted ground-output canonical weak and strict universal comparisons at context levels<=1/internal2 undecidable; genuine total finite-query reductions. Actual internal3 single-query reductions plus both no-decider consequences included. Literal numeric maps, zero/malformed cases, source empty convention, successful actual source outputs and real admissible contexts have been proved in reviewed suppliers. Fresh assembly explicitly composes single-query map with same-policy actual bounded-source decider, exact pack/type proofs, complements once, and invokes accepted closed polynomial-system undecidability with no external hypothesis. Full recursive final should include the substantive chain, not only standard axiom check.
+
+Unchanged standard G corollary not included; requires separate source/domain/generic-control work. No threshold/ground-arithmetic/main promotion. Threshold route remains parked.

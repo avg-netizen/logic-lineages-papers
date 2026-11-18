@@ -1,6 +1,6 @@
 # Current comparison formalization status
 
-New-paper register: **121 checked, 46 pending / 167**. Historical register:
+New-paper register: **122 checked, 45 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
