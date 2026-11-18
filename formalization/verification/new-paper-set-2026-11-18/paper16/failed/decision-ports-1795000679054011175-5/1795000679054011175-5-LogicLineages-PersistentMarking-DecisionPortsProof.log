@@ -1,0 +1,15 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionPortsProof.lean:11:37: error(lean.unknownIdentifier): Unknown constant `List.length_eq_zero.mp`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionPortsProof.lean:18:30: error: Application type mismatch: The argument
+  hr
+has type
+  entry :: rest ∈ List.map (fun x => entry :: x) (contexts K B)
+but is expected to have type
+  rest ∈ contexts K B
+in the application
+  (ih rest).mp hr
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionPortsProof.lean:70:46: error: Type mismatch: After simplification, term
+  h
+ has type
+  1 + used rest < rest.length + 1
+but is expected to have type
+  used rest < rest.length

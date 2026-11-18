@@ -1,0 +1,5 @@
+# Observation proof resource split
+
+Original receipt 1795001113319615746-5 stopped at 526844 KiB RSS after 2.971 seconds in DecisionOccurrenceProof. Definition/target modules passed. Original full sources and freeze retained in failed/decision-observations-1795001113319615746-5. No caps changed, no retry yet.
+
+Proposed proof-only split: extract the four original independent mutual proof blocks verbatim into DecisionOccurrenceEnumerationProof, DecisionOccurrenceTypingProof, DecisionOccurrenceOrdinaryProof and DecisionOccurrenceValidityProof. Keep their original namespace/declaration names/statements/recursive bodies. Original DecisionOccurrenceProof becomes an import-only aggregator. Only typing needs SpineShiftProof, so other three import just frozen targets. The exact eleven-target checks and seven semantic pins remain unchanged. This reduces per-process elaboration accumulation and irrelevant imports, without changing the occurrence representation or structural recursion. If the enumeration block alone still stops, stop and review a further explicit one-direction-per-module split instead of retrying unchanged code.

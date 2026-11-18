@@ -1,0 +1,15 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/FullThetaEntryProof.lean:22:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Ordinal.omega0 ^ (Ordinal.omega0 + 1)
+in the target expression
+  Ordinal.omega0 * ((Θ + ↑(v - 4)) / Ordinal.omega0) = Θ
+
+v : ℕ
+hv : 4 ≤ v
+Θ : Ordinal.{0} := Ordinal.omega0 ^ (Ordinal.omega0 + 1)
+a : Ordinal.{0} := Θ + ↑(v - 4)
+hf : Θ + ↑(v - 4) < epsilonZero ∧ actualOrdinalNorm (Θ + ↑(v - 4)) = actualOrdinalNorm Θ + (v - 4)
+hn : actualOrdinalNorm a = v
+q : Ordinal.{0}
+hq : Ordinal.omega0 ^ (Ordinal.omega0 + 1) = Ordinal.omega0 * q
+⊢ Ordinal.omega0 * ((Θ + ↑(v - 4)) / Ordinal.omega0) = Θ
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/FullThetaEntryProof.lean:34:0: error: LogicLineages.CartierObserverCurrent.FullThetaEntry.completeEntry: forbidden axiom dependency sorryAx

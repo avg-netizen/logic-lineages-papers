@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.LinkedBoundaryParityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.LinkedBoundaryParity.StatementChecks
+theorem fixed_actualBoundaryParity : Targets.ActualBoundaryParity := actualBoundaryParity
+#audit_namespace LogicLineages.CartierObserverCurrent.LinkedBoundaryParity.StatementChecks
+end LogicLineages.CartierObserverCurrent.LinkedBoundaryParity.StatementChecks

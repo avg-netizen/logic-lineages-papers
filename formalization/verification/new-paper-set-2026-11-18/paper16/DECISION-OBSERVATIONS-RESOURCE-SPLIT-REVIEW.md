@@ -1,0 +1,5 @@
+# Independent resource extraction review
+
+Approved proof-only extraction for a fresh parent-controlled bounded attempt, not proof acceptance. Compared all four mutual blocks byte-for-byte with the preserved stopped edition 1795001113319615746-5: Enumeration, Typing, Ordinary and Validity bodies, statements, namespaces and recursion are unchanged. The old module is now exactly a four-import aggregator. Only Typing retains SpineShiftProof; other roots import the frozen observation targets directly. All seven semantic freeze pins independently match.
+
+This materially reduces irrelevant imports for three roots and per-process elaboration accumulation. It does not eliminate the transitive union required by final checks and does not establish feasibility. No relation, occurrence order, ambient typing, actual subtree coverage or target domain has changed. No caps are changed and this reviewer ran no compiler. A fresh full gate and recursive final review remain mandatory. If the isolated enumeration root itself exceeds the unchanged cap, stop and preserve rather than retrying unchanged code; any directional split requires separate review.

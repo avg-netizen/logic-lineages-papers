@@ -586,8 +586,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/consequences.tex",
           "line": 53,
           "statement_latex": "[Fixed-head tail growth]\\label{lem:tail-growth}\nFor a nonzero limit \\(\\lambda\\), let\n\\(h_\\lambda(u)=\\psi_f(\\lambda+u)\\). Then\n\\[\n h_\\lambda(u+1)>2^{h_\\lambda(u)}.\n\\]",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.Targets.FullTailGrowth",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullTailGrowth",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/207-tail-growth.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:lem:control",
@@ -723,8 +726,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/foundations.tex",
           "line": 136,
           "statement_latex": "[Greedy maximum]\\label{thm:maximum-predecessor}\nThe following simultaneous recursion computes $M$ and $L$ exactly.\nWrite $\\alpha=\\omega^e c+r$, where $c>0$ and $r<\\omega^e$, and\nput $w=1+N(e)$.\n\\begin{enumerate}[label=(\\roman*)]\n\\item $M(\\alpha,0)=0$ and $L(0,b)=L(e,0)=0$.\n\\item If $r>0$ and $cw\\le b$, then\n\\[\n M(\\alpha,b)=\\omega^e c+M(r,b-cw).\n\\]\n\\item Otherwise set\n\\[\n d=\\begin{cases}\n \\min\\{c-1,\\lfloor b/w\\rfloor\\},&r=0,\\\\\n \\min\\{c,\\lfloor b/w\\rfloor\\},&r>0.\n \\end{cases}\n\\]\nThen $M(\\alpha,b)=\\omega^e d+L(e,b-dw)$, with a zero block\nomitted.\n\\item If $e,b>0$, put $a=M(e,b-1)$, $v=1+N(a)$ and\n$(q,s)=\\operatorname{divmod}(b,v)$.  Then\n\\[\n L(e,b)=\\omega^a q+L(a,s).\n\\]\n\\end{enumerate}",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.MaximumAlgorithmTargets.FullOptimizedMaximumAlgorithm",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullMaximumAlgorithm",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/199-maximum-paper17.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:lem:limit-saturation",
@@ -733,8 +739,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/foundations.tex",
           "line": 183,
           "statement_latex": "[Limit saturation and monotonicity]\\label{lem:limit-saturation}\nFor every nonzero limit $\\lambda$ and every $b\\in\\N$,\n\\[\n N(M(\\lambda,b))=b.\n\\]\nFor fixed $\\lambda$ this maximum is strictly increasing in $b$.\nFor arbitrary bounds the function $M$ is weakly increasing in each\nargument wherever the predecessor interpretation is defined.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.LimitSaturationTargets.LimitSaturation",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullLimitSaturation",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/200-saturation-paper17.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:thm:single-predecessor",
@@ -1166,8 +1175,11 @@
           "file": "18-standard-control-comparison/sections/identities.tex",
           "line": 187,
           "statement_latex": "[Common-band or root separation]\\label{u:lem:oneinput}\nFor any finite collection of normal forms in $\\mathcal P_1$, a computable\n$N$ has the following properties for every $x\\ge N$.\nEvery affine open atom input lies in $[x,f(x))$. Every nonlinear atom input\nis a root strictly greater than $f(x)$. Equal peaks of two tags force equal\nindices and equal argument values.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.CommonBandTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.CommonBandStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/202-common-band.json"
         },
         {
           "id": "18-standard-control-comparison:u:thm:zeros",
@@ -1418,8 +1430,11 @@
           "file": "18-standard-control-comparison/sections/unary-kernels.tex",
           "line": 24,
           "statement_latex": "[Exact prefix splitting]\\label{u:lem:prefix}\nLet $\\kappa$ be a fixed Cantor prefix and let $\\eta$ be a nonzero limit\nwhose leading monomial is at most the least monomial of $\\kappa$;\nthe zero prefix is also allowed. In particular one may take\n$\\kappa=\\pi k$ and $\\operatorname{lead}(\\eta)\\le\\pi$.\nFor $b\\ge c=\\norm(\\kappa)$,\n\\begin{equation}\n M(\\kappa+\\eta,b)=\\kappa+M(\\eta,b-c).                \\label{u:display:4-2}\n\\end{equation}\nA descent above $\\kappa$ reaches a state $\\kappa+n$ with finite remainder\nbefore passing below $\\kappa$. During that segment the remainder's exact\nnorm control is\n\\begin{equation}\n                   G_c(v)=f(c+v)-c\\ge f(v)>v.         \\label{u:display:4-3}\n\\end{equation}",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.PrefixCountsTargets.FullPrefix",
+          "verified_alias": "LogicLineages.StandardControlCurrent.PrefixCountsStatementChecks.prefixSplitting",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/205-prefix-splitting.json"
         },
         {
           "id": "18-standard-control-comparison:u:lem:counts",
@@ -1428,8 +1443,11 @@
           "file": "18-standard-control-comparison/sections/unary-kernels.tex",
           "line": 52,
           "statement_latex": "[Ordered controls and counts]\\label{u:lem:counts}\nFor increasing integer controls $g\\le h$, both strictly exceeding their\ninput, let $L_g,L_h$ be the respective norm-maximal descent counts.\nThen\n\\begin{equation}\n \\alpha\\le\\beta,\\quad\\norm(\\alpha)\\le\\norm(\\beta)\n       \\quad\\Longrightarrow\\quad L_g(\\alpha)\\le L_h(\\beta). \\label{u:display:4-4}\n\\end{equation}",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.PrefixCountsTargets.FullCounts",
+          "verified_alias": "LogicLineages.StandardControlCurrent.PrefixCountsStatementChecks.counts",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/206-ordered-control-counts.json"
         },
         {
           "id": "18-standard-control-comparison:u:lem:peakword",
@@ -1438,8 +1456,11 @@
           "file": "18-standard-control-comparison/sections/unary-kernels.tex",
           "line": 78,
           "statement_latex": "[Exact peak word]\\label{u:lem:peakword}\nFor each fixed limit $\\lambda$, one computes a finite word $W_\\lambda$ of\nprincipal kernels such that the peak of $h_\\lambda(A)$ is exactly\n\\begin{equation}\n             Z_{\\lambda,A}=W_\\lambda(\\norm(\\lambda)+A). \\label{u:display:4-5}\n\\end{equation}\nThe omitted count is positive: $h_\\lambda(A)=Z_{\\lambda,A}+D_{\\lambda,A}$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.PeakWordTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.PeakWordStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/209-peak-word.json"
         },
         {
           "id": "18-standard-control-comparison:u:lem:stage",
@@ -1448,8 +1469,11 @@
           "file": "18-standard-control-comparison/sections/unary-kernels.tex",
           "line": 104,
           "statement_latex": "[One-stage reserve consumer]\\label{u:lem:stage}\nLet $\\rho<\\pi m$ be a fixed nonzero limit, $m\\ge1$, and begin an ordinary\ndescent at $A=\\pi(k+m)+n$, of norm $X\\ge x\\ge\\norm(\\rho)$.\nAt its first cut $\\pi k+n'$ with finite remainder,\n\\begin{equation}\n        n'>J_\\rho(x):=f^{D_\\rho(x)}(x)+D_\\rho(x),    \\label{u:display:5-1}\n\\end{equation}\nwhere $D_\\rho(x)$ is the count from\n$\\rho+(x-\\norm(\\rho))$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.ReserveStageTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.ReserveStageStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/211-reserve-stage.json"
         },
         {
           "id": "18-standard-control-comparison:u:lem:reserve",
@@ -1837,8 +1861,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/boundary.tex",
           "line": 4,
           "statement_latex": "[An actual $\\omega^\\omega$ block]\\label{prop:omega-block}\nLet $\\Omega=\\omega^\\omega$. At a real suffix state $\\pi+\\Omega+n$, with $\\pi$ a retained CNF\nprefix (zero or of least exponent at least $\\omega$), and total norm $u$,\nassume $c=\\norm(\\pi)$, $c+3\\le u$, and\n$B=f(u)\\ge\\max(16,m)$. Put $C=f(u+1)$ and $d=B-c-1$.\nIf $H_c(u)$ counts the complete deletion of this $\\Omega$ copy,\nthen\n\\begin{equation}\\label{eq:omega-block}\n H_c(u)\\equiv1+p_{B-c-1}(C-c)\\pmod m.\n\\end{equation}\nIts output norm is still exactly $f^{H_c(u)}(u)$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullOmegaBlock.Targets.CompleteOmegaBlock",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullOmegaBlock.StatementChecks.fixed_completeOmegaBlock",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/203-omega-block.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:lem:entry",
@@ -1847,8 +1874,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/boundary.tex",
           "line": 47,
           "statement_latex": "[The retained prefix at first entry]\\label{lem:entry}\nThe predecessor of this $\\Theta$ state is\n\\[\n \\Omega q+1,\\qquad q=(u-1)/3.\n\\]\nThe first $\\Omega$ copy deleted in this polynomial has retained\nprefix norm $e=u-4$ and total input norm $u$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullThetaEntry.Targets.CompleteEntry",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullThetaEntry.StatementChecks.fixed_completeEntry",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/208-theta-entry.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:lem:local",
@@ -1948,8 +1978,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/descent.tex",
           "line": 19,
           "statement_latex": "[Effective norm balls]\\label{lem:norm-balls}\nEach norm ball is finite and effectively enumerable.\nCantor comparison and the norm are computable.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullNormBalls.Targets.CompleteNormBalls",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullNormBalls.StatementChecks.fixed_completeNormBalls",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/201-norm-balls.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:thm:greedy",
@@ -2122,7 +2155,7 @@
     }
   ],
   "status_counts": {
-    "pending": 90,
-    "checked": 77
+    "pending": 79,
+    "checked": 88
   }
 }

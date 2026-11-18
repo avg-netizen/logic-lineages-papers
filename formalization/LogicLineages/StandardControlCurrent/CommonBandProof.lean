@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.CommonBandTargets
+public import LogicLineages.OrdinalComparison.CollectedOneInputProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.CommonBandProof
+theorem full : CommonBandTargets.Full := OrdinalComparison.fullActualCollectedOneInput
+end LogicLineages.StandardControlCurrent.CommonBandProof

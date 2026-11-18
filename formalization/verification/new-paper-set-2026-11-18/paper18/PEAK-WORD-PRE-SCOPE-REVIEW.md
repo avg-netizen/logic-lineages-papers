@@ -1,0 +1,9 @@
+# Independent pre-scope: complete exact peak word
+
+Approved for development against current u:lem:peakword; all eight frozen hashes independently match. Read the printed lemma/proof, fresh expanded targets, literal principal block/word compiler and actual word/domain/suffix definitions.
+
+The source's effective claim is computation of the finite kernel word from the fixed normal ordinal notation. principalExponentBlocks is a total structural coefficient-one expansion and principalKernelWord a terminating finite-list compiler. CompilerOrder fixes actual right-to-left order and the sum of hereditary weights of the earlier retained blocks. This is a genuine executable syntax compiler, not a noncomputable choice of a word. It does not assert executable evaluation of semantic ordinal kernels or a PR complexity bound, neither of which is required by this lemma's wording.
+
+ActualPeakWord covers every NONote positive limit and every natural argument at the genuine norm input. It requires nonempty word, actual terminal endpoint AND literal replacement count equality, every dynamically encountered genuine kernel domain, positive count and actual collapse=endpoint+count. These are conclusions, not supplied success/calibration promises. The faithful normal-notation domain represents the source ordinals; the final proof must reconcile treeWeight with actual norm and use actual CNF/prefix trace semantics for every deleted block, including equal-exponent coefficients and zero final prefix. The action is explicitly semantic/noncomputable and is not misidentified with the executable compiler.
+
+Approval is scope only. Fresh native recursive evidence and proof inspection remain required. No peak-order procedure, optimized kernel evaluator, arithmetic decision, QE, or unrelated theorem is promoted.

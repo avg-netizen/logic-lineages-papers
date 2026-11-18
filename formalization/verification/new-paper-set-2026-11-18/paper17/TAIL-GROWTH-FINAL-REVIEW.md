@@ -1,0 +1,9 @@
+# Independent final review: complete fixed-head tail growth
+
+Approved for complete current Paper17 lem:tail-growth. Read the printed statement/proof, frozen targets, actual TailGrowthProof and exact statement alias. The conclusion quantifies every natural tail including zero at every positive limit below epsilon-zero, for each selected literal control; both factorialControl and every nearControl prefix are explicitly instantiated. No eventual-input or affordability premise was added.
+
+The proof identifies the actual terminal first-finite count with FirstEntry at target zero, including no earlier hit. Its count monotonicity applies genuine CountLag with zero target/offset and derives the next-budget inequalities from actual control monotonicity. Initial norms are internally calibrated to N(lambda)+u. Actual terminal semantics supplies positive D, D<Z and Z=f^[D](t); the larger actual count is at least D. Strict iterate monotonicity followed by the actual adjacent double-exponential control law supplies 2^(2^Z)<=Z'. The integer estimate Z+D<2Z<=2^Z and terminal collapse decomposition yield the printed strict inequality. No norm-monotonicity shortcut or assumed count-order oracle occurs.
+
+Compiler-free independent recursive verification reproduced TAIL-GROWTH-EVIDENCE.json exactly: 169 current-source modules, zero errors, exact full alias LogicLineages.PermittedControl.StatementChecks.fixed_fullTailGrowth with only propext, Classical.choice, Quot.sound. Native receipt 1795000969932888205-2 records the passed original-cap gate. All four revised frozen hashes independently match. Previously approved sole namespace-open repair and prior frozen edition are preserved; later proof-only failed editions are documented in the handoff. No compiler was invoked by this review.
+
+This is complete tail-growth credit only. The full threshold route remains parked and receives no credit.

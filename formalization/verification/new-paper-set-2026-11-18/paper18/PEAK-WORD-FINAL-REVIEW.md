@@ -1,0 +1,9 @@
+# Independent final: complete exact peak word
+
+Approved for current18 u:lem:peakword. Read printed source, literal structural block and kernel-word compiler, fresh targets/assembly, PrincipalWordActionProof and PeakWordProof. Scope is the complete fixed-limit word and literal count identity, not an executable evaluator for semantic kernels.
+
+The finite executable compiler expands coefficient-one CNF blocks and fixes right-to-left order with actual earlier-prefix weight. For normal inputs the proof derives denotation, normal decreasing exponent order, positive-limit block domain and nonempty word. It explicitly bridges principalBlocksWeight to actual ordinal norm and notation treeWeight. The central word calibration uses actual retained-prefix count decomposition with internally proved boundary, minimum exponent and affordability. It derives the true intermediate residual m, the nontruncated kernel initial state and domain, sums actual counts using the genuine segment decomposition, and composes actual norm iterates. No segment count is erased or supplied as an oracle. Prefix zero is calibrated to Phi, actual controlled count to replacement count, and true terminal identities yield the final endpoint and collapse. Positive count comes from actual nonfinite terminal decomposition for every natural tail.
+
+Compiler-free independent recursive evidence exactly matches the author report: 105 current-source modules, zero errors, full exact alias LogicLineages.StandardControlCurrent.PeakWordStatementChecks.full, only propext/Classical.choice/Quot.sound. All eight pins independently match. First full native receipt 1795001156634601414-2 passed unchanged caps with no repairs. No native compiler invoked by this review.
+
+This pays the printed computation of the finite word and its complete semantic peak/count action. No optimized numeric kernel evaluation, PR complexity, peak-order decision, arithmetic decision or QE is inferred.

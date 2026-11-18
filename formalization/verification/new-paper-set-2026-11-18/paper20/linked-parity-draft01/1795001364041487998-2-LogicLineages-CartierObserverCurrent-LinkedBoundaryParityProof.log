@@ -1,0 +1,26 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/LinkedBoundaryParityProof.lean:34:28: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  l ≥ 0
+  k ≥ 0
+  k - l ≥ 1
+  i ≥ 0
+  -1 ≤ i - 2*j ≤ 0
+  2*g + i - 2*j ≥ 0
+  f ≥ 0
+  f - k ≥ 0
+  c ≥ 4
+  c + k ≥ 15
+  b ≥ 0
+  b - k ≥ 5
+  a ≥ 4
+where
+ a := ↑v
+ b := ↑(Phi (u + 1))
+ c := ↑(Phi u - (e + 1))
+ f := ↑(Phi^[actualOmegaCopyCount e u] u)
+ g := ↑(actualOmegaCopyCount e u) / 2
+ i := ↑(restrictedPartitionCount d (C - e))
+ j := ↑(1 + restrictedPartitionCount d (C - e)) / 2
+ k := ↑(Phi v - 4)
+ l := ↑(Phi (Phi v + 1))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/LinkedBoundaryParityProof.lean:39:0: error: LogicLineages.CartierObserverCurrent.LinkedBoundaryParity.actualBoundaryParity: forbidden axiom dependency sorryAx

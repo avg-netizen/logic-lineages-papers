@@ -1,0 +1,25 @@
+import LogicLineages.PersistentMarking.DecisionObservationProof
+namespace LogicLineages.PersistentMarking.DecisionObservationChecks
+theorem exact_OccurrenceEnumeration : DecisionObservationTargets.OccurrenceEnumeration := DecisionOccurrenceProof.enumeration
+#print axioms exact_OccurrenceEnumeration
+theorem exact_OccurrenceTyped : DecisionObservationTargets.OccurrenceTyped := DecisionOccurrenceProof.typed
+#print axioms exact_OccurrenceTyped
+theorem exact_OccurrenceOrdinary : DecisionObservationTargets.OccurrenceOrdinary := DecisionOccurrenceProof.ordinary
+#print axioms exact_OccurrenceOrdinary
+theorem exact_OccurrenceValid : DecisionObservationTargets.OccurrenceValid := DecisionOccurrenceProof.valid
+#print axioms exact_OccurrenceValid
+theorem exact_AssignmentEnumeration : DecisionObservationTargets.AssignmentEnumeration := DecisionAssignmentProof.enumeration
+#print axioms exact_AssignmentEnumeration
+theorem exact_AssignmentTyped : DecisionObservationTargets.AssignmentTyped := DecisionAssignmentProof.typed
+#print axioms exact_AssignmentTyped
+theorem exact_AssignmentLength : DecisionObservationTargets.AssignmentLength := DecisionAssignmentProof.length
+#print axioms exact_AssignmentLength
+theorem exact_OpeningTyped : DecisionObservationTargets.OpeningTyped := DecisionAssignmentProof.openingTyped
+#print axioms exact_OpeningTyped
+theorem exact_OpeningDepth : DecisionObservationTargets.OpeningDepth := DecisionAssignmentProof.openingDepth
+#print axioms exact_OpeningDepth
+theorem exact_ObservationEnumeration : DecisionObservationTargets.ObservationEnumeration := DecisionObservationProof.enumeration
+#print axioms exact_ObservationEnumeration
+theorem exact_ObservationPaper : DecisionObservationTargets.ObservationPaper := DecisionObservationProof.paper
+#print axioms exact_ObservationPaper
+end LogicLineages.PersistentMarking.DecisionObservationChecks

@@ -1,0 +1,9 @@
+module
+public import LogicLineages.StandardControlCurrent.PeakWordProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.PeakWordStatementChecks
+theorem full : PeakWordTargets.Full := PeakWordProof.full
+end LogicLineages.StandardControlCurrent.PeakWordStatementChecks
+#audit_namespace LogicLineages.StandardControlCurrent.PeakWordStatementChecks
+#print axioms LogicLineages.StandardControlCurrent.PeakWordStatementChecks.full

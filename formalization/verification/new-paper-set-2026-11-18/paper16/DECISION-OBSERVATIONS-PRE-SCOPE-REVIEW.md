@@ -1,0 +1,7 @@
+# Independent exact pre-scope: DecisionObservations11
+
+Approved supporting development; all seven pins match. Read actual occurrence/assignment/observation syntax and eleven contracts against reviewed plan/source. Occurrences retain ordered subterms and nearest-first binder stacks, including bases/extras, with explicit root EmptyContext. OccurrenceTyped correctly carries arbitrary supplied stack into prefix stack EmptyContext rather than discarding ambient binders. All occupied matching ports are enumerated by finite products; reuse and unused occupied slots remain unrestricted. Assignment typing/length and actual simultaneous substitute at depth zero are explicit, not full application.
+
+OpeningTyped must discharge all external bound slots using the exact stack and assignment tuple, preserving internal binders. OpeningDepth states the genuine syntactic equality for free-port insertion. Observation enumeration is iff the independent occurrence/assignment specification, with actual annotation and lambdaDepth+used budget, not stack-length=used. ObservationPaper derives actual paper typing/validity/ordinary and budget from original ordinary PaperTerm, without assuming filled-result typing. Empty root/stack/B and exhausted/reused slot cases remain covered.
+
+These contracts establish finite effective enumeration and its semantic interpretation only; canonical fresh-name normalization, lambda extension coherence and joint recursive comparison/list closure remain separate. No observation-closure theorem, finite lattice or decision credit yet.

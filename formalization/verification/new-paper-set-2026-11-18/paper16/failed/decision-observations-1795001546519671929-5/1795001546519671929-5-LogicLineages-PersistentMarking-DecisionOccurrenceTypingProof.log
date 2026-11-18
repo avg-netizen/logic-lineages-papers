@@ -1,0 +1,46 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionOccurrenceTypingProof.lean:23:67: error: Application type mismatch: The argument
+  hb
+has type
+  Typed ((BoundContext.prefix stack✝ EmptyContext).push σ✝) body✝ τ✝
+of sort `Prop` but is expected to have type
+  Ty
+of sort `Type` in the application
+  ih ?m.132 hb
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionOccurrenceTypingProof.lean:27:25: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case here
+stack : List Ty
+t : Expr
+τ : Ty
+locals : List Ty
+q : Expr
+stack✝ : List Ty
+q✝ : Expr
+locals✝ : List Ty
+r✝ : Expr
+qs✝ : Args
+h : Occurs stack✝ q✝ locals✝ r✝
+ih :
+  Typed (BoundContext.prefix stack✝ EmptyContext) q✝ τ →
+    ∀ (υ : Ty),
+      Typed (BoundContext.prefix stack✝ EmptyContext) q✝ υ → Typed (BoundContext.prefix locals✝ EmptyContext) r✝ r✝.type
+a✝ : ExtrasTyped (BoundContext.prefix stack✝ EmptyContext) (Args.cons q✝ qs✝)
+⊢ Typed (BoundContext.prefix locals✝ EmptyContext) r✝ r✝.type
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionOccurrenceTypingProof.lean:28:26: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case there
+stack : List Ty
+t : Expr
+τ : Ty
+locals : List Ty
+q : Expr
+stack✝ : List Ty
+qs✝ : Args
+locals✝ : List Ty
+r✝ q✝ : Expr
+h : OccursArgs stack✝ qs✝ locals✝ r✝
+ih :
+  ExtrasTyped (BoundContext.prefix stack✝ EmptyContext) qs✝ →
+    Typed (BoundContext.prefix locals✝ EmptyContext) r✝ r✝.type
+a✝ : ExtrasTyped (BoundContext.prefix stack✝ EmptyContext) (Args.cons q✝ qs✝)
+⊢ Typed (BoundContext.prefix locals✝ EmptyContext) r✝ r✝.type

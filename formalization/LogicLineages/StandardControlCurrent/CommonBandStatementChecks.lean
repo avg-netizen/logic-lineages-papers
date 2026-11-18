@@ -1,0 +1,9 @@
+module
+public import LogicLineages.StandardControlCurrent.CommonBandProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.CommonBandStatementChecks
+theorem full : CommonBandTargets.Full := CommonBandProof.full
+end LogicLineages.StandardControlCurrent.CommonBandStatementChecks
+#audit_namespace LogicLineages.StandardControlCurrent.CommonBandStatementChecks
+#print axioms LogicLineages.StandardControlCurrent.CommonBandStatementChecks.full

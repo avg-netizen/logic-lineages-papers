@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullSinglePredecessorProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullSinglePredecessor.StatementChecks
+theorem fixed_completePredecessor : Targets.CompletePredecessor := completePredecessor
+#audit_namespace LogicLineages.CartierObserverCurrent.FullSinglePredecessor.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullSinglePredecessor.StatementChecks

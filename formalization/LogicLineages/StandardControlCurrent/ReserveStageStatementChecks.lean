@@ -1,0 +1,9 @@
+module
+public import LogicLineages.StandardControlCurrent.ReserveStageProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.ReserveStageStatementChecks
+theorem full : ReserveStageTargets.Full := ReserveStageProof.full
+end LogicLineages.StandardControlCurrent.ReserveStageStatementChecks
+#audit_namespace LogicLineages.StandardControlCurrent.ReserveStageStatementChecks
+#print axioms LogicLineages.StandardControlCurrent.ReserveStageStatementChecks.full

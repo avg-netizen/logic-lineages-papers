@@ -7,9 +7,9 @@ def used : Context → Nat
   | none::rest => used rest
   | some _::rest => 1 + used rest
 def Extends (Γ Δ : Context) : Prop := Γ.length = Δ.length ∧
-  ∀ i σ, Γ[i]? = some (some σ) → Δ[i]? = some (some σ)
+  ∀ (i : Nat) (σ : Ty), Γ[i]? = some (some σ) → Δ[i]? = some (some σ)
 def WellFormed (K : List Ty) (B : Nat) (Γ : Context) : Prop :=
-  Γ.length = B ∧ ∀ i σ, Γ[i]? = some (some σ) → σ ∈ K
+  Γ.length = B ∧ ∀ (i : Nat) (σ : Ty), Γ[i]? = some (some σ) → σ ∈ K
 
 def contexts (K : List Ty) : Nat → List Context
   | 0 => [[]]

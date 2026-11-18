@@ -1,0 +1,9 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionOccurrenceEnumerationProof.lean:5:9: error: (kernel) application type mismatch
+  failed to pretty print expression (use 'set_option pp.rawOnError true' for raw representation)
+argument has type
+  PSum.casesOn (PSum.inl ⟨σ :: stack, t⟩)
+    (fun _x => (locals✝, q✝) ∈ occurrences _x.1 _x.2 ↔ Occurs _x.1 _x.2 locals✝ q✝) fun _x =>
+    (locals✝, q✝) ∈ occurrencesArgs _x.1 _x.2 ↔ OccursArgs _x.1 _x.2 locals✝ q✝
+but function has type
+  ((locals, q) ∈ occurrences (σ :: stack) t ↔ Occurs (σ :: stack) t locals q) →
+    Occurs (σ :: stack) t locals q → (locals, q) ∈ occurrences (σ :: stack) t

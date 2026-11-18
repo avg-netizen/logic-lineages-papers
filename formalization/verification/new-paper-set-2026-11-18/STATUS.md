@@ -1,10 +1,37 @@
 # Current comparison formalization status
 
-New-paper register: **77 checked, 90 pending / 167**. Historical register:
+New-paper register: **88 checked, 79 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper18 `u:lem:stage`: actual one-stage reserve, full first-cut trace
+  and strict bound without an extra prefix-mass restriction.
+
+- Paper18 `u:lem:peakword`: actual coefficient-one word compiler and
+  genuine principal-kernel word domains/endpoints/count decomposition.
+
+- Paper20 `lem:entry`: actual theta entry/prefix/output norms, including
+  a genuine concrete state for every permitted input norm.
+
+- Paper17 `lem:tail-growth`: complete all-input selected-control growth
+  with actual first-hit/count ordering and both literal permitted controls.
+
+- Paper18 `u:lem:prefix` and `u:lem:counts`: actual compatible-prefix
+  splitting/first-finite control and arbitrary ordered-control count monotonicity.
+
+- Paper20 `prop:omega-block`: genuine firststep and complete first-finite
+  count/output/retained-prefix trace under the unchanged displayed control.
+
+- Paper18 `u:lem:oneinput`: full effective common-band/root separation
+  for finite families, with actual norm/orbit/count and exact peak recovery.
+
+- Paper20 `lem:norm-balls`: actual finite ordinal balls and effective
+  enumeration, faithful comparison and norm computation, including zero.
+
+- Paper17 `thm:maximum-predecessor` and `lem:limit-saturation`: fresh
+  complete source gates for the optimized greedy algorithm and actual saturation.
 
 - Paper18 `u:lem:cells`: complete effective nonlinear range cells and
   signed-row orientation after actual cancellation and finite-height separation.
