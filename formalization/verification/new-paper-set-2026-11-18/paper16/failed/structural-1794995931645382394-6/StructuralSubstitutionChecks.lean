@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.StructuralSubstitutionProof
+namespace LogicLineages.PersistentMarking.StructuralSubstitutionChecks
+theorem exact_weakSubstitution : StructuralStabilityTargets.WeakSubstitution := StructuralSubstitutionProof.weakSubstitution
+theorem exact_strictSubstitution : StructuralStabilityTargets.StrictSubstitution := StructuralSubstitutionProof.strictSubstitution
+#print axioms exact_weakSubstitution
+#print axioms exact_strictSubstitution
+end LogicLineages.PersistentMarking.StructuralSubstitutionChecks

@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.ClosingOpeningProof
+namespace LogicLineages.PersistentMarking.ClosingOpeningChecks
+theorem exact_closeOpen : StructuralStabilityTargets.CloseOpen := ClosingOpeningProof.closeOpen
+#print axioms exact_closeOpen
+end LogicLineages.PersistentMarking.ClosingOpeningChecks

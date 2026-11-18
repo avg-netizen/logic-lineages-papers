@@ -1,0 +1,3 @@
+# Independent structural fill/substitution subgate scope
+
+All original eight frozen pins match. StructuralFillChecks aliases exactly frozen FillPaper and FillOrdinary; StructuralSubstitutionChecks aliases exactly frozen WeakSubstitution and StrictSubstitution. No new predicate, source domain or premise is introduced. Sequential supporting gates are approved for these exact endpoints, not full source stability promotion. Fill must derive valid typed result from ContextTyped/source PaperTerm, and substitution must use genuinely typed ordinary images with actual successful-mark transport; neither may leave an auxiliary covariance premise. Closing/named bridges independently finalized; weak/strict context comparisons and complete four-family assembly remain separate.

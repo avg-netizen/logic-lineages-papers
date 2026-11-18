@@ -11,8 +11,10 @@ mutual
     cases hl : nameLookup locals (σ,x) with
     | some i => simp [encode,AlphaEncodingProof.lookupAppend,hl,freeSub]
     | none =>
-      by_cases he : (σ,x) = name <;>
-        simp [encode,AlphaEncodingProof.lookupAppend,hl,nameLookup,freeSub,closingMap,he,shift]
+      by_cases he : (σ,x) = name
+      · subst name
+        simp [encode,AlphaEncodingProof.lookupAppend,hl,nameLookup,freeSub,closingMap,shift]
+      · simp [encode,AlphaEncodingProof.lookupAppend,hl,nameLookup,freeSub,closingMap,he,shift]
   | lam σ x q =>
     have hh := encodeClosing name ((σ,x)::locals) q
     simpa only [List.cons_append,encode,freeSub,List.length_cons] using congrArg (Expr.lam σ) hh
@@ -47,5 +49,7 @@ theorem namedFill : StructuralStabilityTargets.NamedFill := by
     simp only [StructuralContext.namedFill,encode,encodeAppend,encodeArgs,
       encodeContext,fill,ih]
   | bind name inside ih =>
-    simp only [StructuralContext.namedFill,encode,encodeContext,fill,namedClosing,ih]
+    change Expr.lam name.1 (encode [name] (StructuralContext.namedFill inside q)) = _
+    rw [namedClosing name (StructuralContext.namedFill inside q),ih]
+    rfl
 end LogicLineages.PersistentMarking.ClosingNamedProof

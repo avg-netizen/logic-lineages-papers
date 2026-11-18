@@ -1,0 +1,7 @@
+# Original context coverage
+
+The source ordinary original terms have three constructor forms: typed free variable, named abstraction, ordinary head with its fixed literal base arguments; literal application is Head.app with both positions. One-hole contexts therefore have exactly hole, abstraction around context, or an ordinary head with a distinguished literal argument slot and ordinary fixed siblings. NamedContext and NamedContextTyped spell out these source constructors and typing, without imposing freshness of any binder for the hole. A variable cannot contain a proper hole; no marked owner/extras context is an original ordinary context.
+
+NamedOrdinary is the literal original named syntax predicate. OrdinaryEncoding pays its correspondence, including raw bound/free lookup alternatives. ContextCoverage internally derives the DB ContextTyped judgment from actual named typing/validity of all fixed siblings. NamedWeakContext and NamedStrictContext then use exact checked NamedFill plus actual comparison-context closure, retaining every capturing binder. None of these definitions assumes the final filled typing, comparison transport or alpha equivalence. Existing source permits the typed de Bruijn presentation with already checked alpha exactness; this packet explicitly covers all its original named contexts instead of asserting only preservation inside a chosen restricted DB grammar.
+
+Request independent scope review before proof. Six pins, original structural eight pins unchanged.

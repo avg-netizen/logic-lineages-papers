@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.StructuralContextProof
+namespace LogicLineages.PersistentMarking.StructuralContextChecks
+theorem exact_weakContext : StructuralStabilityTargets.WeakContext := StructuralContextProof.weakContext
+theorem exact_strictContext : StructuralStabilityTargets.StrictContext := StructuralContextProof.strictContext
+#print axioms exact_weakContext
+#print axioms exact_strictContext
+end LogicLineages.PersistentMarking.StructuralContextChecks

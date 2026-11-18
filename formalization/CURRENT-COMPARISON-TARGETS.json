@@ -277,8 +277,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/ordering.tex",
           "line": 139,
           "statement_latex": "[Substitution and contexts]\\label{lem:structural-stability}\nThe pair on ordinary endpoints is preserved by ordinary type-preserving\nsubstitution and by every original well-typed context.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.StructuralStabilityTargets.FullStability",
+          "verified_alias": "LogicLineages.PersistentMarking.StructuralStabilityChecks.exact_fullStability",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/165-structural-stability.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:fv",
@@ -656,8 +659,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/entries.tex",
           "line": 195,
           "statement_latex": "[An effective equal-gap certificate]\\label{prop:equal-gap}\nFor two fixed equal-gap intervals one can compute a threshold and decide\nwhether their entry maps are identical on that tail or have one fixed\nstrict order there.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.Targets.FullEqualGapCertificate",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullEqualGapCertificate",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/155-equal-gap-certificate.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:prop:threshold",
@@ -1297,8 +1303,11 @@
           "file": "18-standard-control-comparison/sections/source-applications.tex",
           "line": 61,
           "statement_latex": "[Universal source equality]\n\\label{cor:source-equality}\nUniversal equality of literal canonical vectors is decidable for every\noriginal source pair with ground free variables, with no bound on its\ninternal types.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.PolicySourceEqualityTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.PolicySourceEqualityStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/166-policy-source-equality.json"
         },
         {
           "id": "18-standard-control-comparison:cor:source-one-name",
@@ -1960,8 +1969,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/observers.tex",
           "line": 30,
           "statement_latex": "[Complete selected coefficient]\\label{thm:observer}\nIf $n=\\sum_{i<L}b_i2^i$, with bits read least significant first,\nthen\n\\[\n p_d(n)\\bmod2=e_0^{T}T_{b_{L-1}}\\cdots T_{b_0}e_0.\n\\]",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullSelectedCoefficient.Targets.CompleteSelectedCoefficient",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullSelectedCoefficient.StatementChecks.fixed_completeSelectedCoefficient",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/157-selected-coefficient.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:lem:observable",
@@ -1970,8 +1982,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/observers.tex",
           "line": 49,
           "statement_latex": "[All-continuation observability]\\label{lem:observable}\nFor any field $K$, polynomial $A$ with $A(0)=1$ and $\\deg A=D$,\nthe first $D$ coefficients of $U/A$ determine every $U$ of degree\nless than $D$. For the binary observer above, distinct numerator\nstates are distinguished by some continuation of length at most\n$\\lceil\\log_2 D\\rceil$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullObservability.Targets.CompleteObservability",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullObservability.StatementChecks.fixed_completeObservability",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/161-observability.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:lem:fixed",
@@ -2053,7 +2068,7 @@
     }
   ],
   "status_counts": {
-    "pending": 113,
-    "checked": 54
+    "pending": 108,
+    "checked": 59
   }
 }

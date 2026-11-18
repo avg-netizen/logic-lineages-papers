@@ -1,0 +1,11 @@
+import LogicLineages.PersistentMarking.TypeSupportFoundationProof
+namespace LogicLineages.PersistentMarking.TypeSupportFoundationChecks
+theorem exact_rootSupport : TypeSupportTargets.RootSupport := TypeSupportFoundationProof.rootSupport
+theorem exact_shiftSupport : TypeSupportTargets.ShiftSupport := TypeSupportFoundationProof.shiftSupport
+theorem exact_closingSupport : TypeSupportTargets.ClosingSupport := TypeSupportFoundationProof.closingSupport
+theorem exact_encodingSupport : TypeSupportTargets.EncodingSupport := TypeSupportFoundationProof.encodingSupport
+#print axioms exact_rootSupport
+#print axioms exact_shiftSupport
+#print axioms exact_closingSupport
+#print axioms exact_encodingSupport
+end LogicLineages.PersistentMarking.TypeSupportFoundationChecks

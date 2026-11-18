@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.CocycleProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_actualAffordableCocycle : Targets.ActualAffordableCocycle := actualAffordableCocycle
+#print axioms fixed_actualAffordableCocycle
+end LogicLineages.PermittedControl.StatementChecks

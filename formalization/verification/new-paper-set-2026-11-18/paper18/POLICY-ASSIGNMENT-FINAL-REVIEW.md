@@ -1,0 +1,5 @@
+# Independent final review
+
+Approved supporting full assignment compiler. Receipt 1794996059926369640-8; independent read-only verification exactly reproduces author evidence: 186 current-source modules, zero errors, standard-only full alias. All seven frozen pins verified.
+Read actual SyntaxProof, RunPrograms and exact statement assembly. typedCheckExact supplies both raw checker soundness and completeness; successful raw assignment yields an actual original typed term and actual assignment output, with converse proved by literal calibration. Structural generated-assignment supplier derives typed success and grades. Context-changing lambda children carry the extended context while the actual raw term code strictly decreases; all raw child lists/ranks are PR and assembly is genuinely Computable under merely Effective policy. Nested Option failures remain calibrated. No primitive-recursive policy strengthening or assumed compiler success.
+No arbitrary-policy equality, norm admissibility or complete source frontend promotion. Failed proof editions are retained; no frozen edits. No compiler invoked by reviewer.

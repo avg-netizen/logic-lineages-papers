@@ -1,0 +1,40 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ClosingNamedProof.lean:13:11: error: unsolved goals
+case pos
+name : Name
+locals : List Name
+σ : Ty
+x : Nat
+hl : nameLookup locals (σ, x) = none
+he : (σ, x) = name
+⊢ (match
+      match nameLookup locals name with
+      | some i => some i
+      | none => some locals.length with
+    | some i => Expr.bound σ i
+    | none => Expr.free σ x) =
+    freeSub (closingMap name) locals.length
+      (match nameLookup locals name with
+      | some i => Expr.bound σ i
+      | none => Expr.free σ x)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ClosingNamedProof.lean:49:24: error: unsolved goals
+case bind
+q : Term
+name : Name
+inside : NamedContext
+ih : encode [] (StructuralContext.namedFill inside q) = fill (encodeContext inside) (encode [] q)
+⊢ Expr.lam name.fst (encode [(name.fst, name.snd)] (StructuralContext.namedFill inside q)) =
+    Expr.lam name.fst (close name (fill (encodeContext inside) (encode [] q)))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ClosingNamedProof.lean:50:69: warning: This simp argument is unused:
+  namedClosing
+
+Hint: Omit it from the simp argument list.
+  simp only [̵S̵t̵r̵u̵c̵t̵u̵r̵a̵l̵C̵o̵n̵t̵e̵x̵t̵.̵n̵a̵m̵e̵d̵F̵i̵l̵l̵,̵e̵n̵c̵o̵d̵e̵,̵e̵n̵c̵o̵d̵e̵C̵o̵n̵t̵e̵x̵t̵,̵f̵i̵l̵l̵,̵n̵a̵m̵e̵d̵C̵l̵o̵s̵i̵n̵g̵,̵i̵h̵]̵[̲S̲t̲r̲u̲c̲t̲u̲r̲a̲l̲C̲o̲n̲t̲e̲x̲t̲.̲n̲a̲m̲e̲d̲F̲i̲l̲l̲,̲ ̲e̲n̲c̲o̲d̲e̲,̲ ̲e̲n̲c̲o̲d̲e̲C̲o̲n̲t̲e̲x̲t̲,̲ ̲f̲i̲l̲l̲,̲ ̲i̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ClosingNamedProof.lean:50:82: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp only [StructuralContext.namedFill, ̲encode, ̲encodeContext, ̲fill, ̲namedClosing,̵i̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -53,7 +53,7 @@ theorem weakMarked (S : Signature) (s t : Expr) (θ : FreeMap)
   obtain ⟨tree⟩ := he
   have hp := (ExtendedEndpointProof.weakFacts tree).1
   exact ConservativeProof.weak S _ _ _
-    ⟨AuxiliaryReflexivityProof.refinementRefl S _ _ hp⟩ ⟨tree⟩
+    (AuxiliaryReflexivityProof.refinementRefl S _ _ hp) ⟨tree⟩
     (ordinary θ (fun σ x => (hθ σ x).2) 0 t ho)
 
 theorem weakSubstitution : WeakSubstitution := by

@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.StructuralStabilityProof
+namespace LogicLineages.PersistentMarking.StructuralStabilityChecks
+theorem exact_fullStability : StructuralStabilityTargets.FullStability := StructuralStabilityProof.fullStability
+#print axioms exact_fullStability
+end LogicLineages.PersistentMarking.StructuralStabilityChecks

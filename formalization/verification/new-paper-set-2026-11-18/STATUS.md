@@ -1,10 +1,24 @@
 # Current comparison formalization status
 
-New-paper register: **54 checked, 113 pending / 167**. Historical register:
+New-paper register: **59 checked, 108 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper16 `lem:structural-stability`: all four original substitution/context
+  families, with complete original named-context coverage and actual capture.
+- Paper18 `cor:source-equality`: arbitrary computable policy and original
+  admissible substitutions, exact raw-source iff and genuine total program.
+
+- Paper20 `lem:observable`: genuine quotient reconstruction and bounded
+  polynomial/matrix distinguishing continuations, including empty words.
+
+- Paper20 `thm:observer`: genuine partition-count parity selected by the
+  literal initial/output coordinates and reversed matrix product.
+
+- Paper17 `prop:equal-gap`: complete effective selected-control tail trichotomy,
+  actual original first-hit comparison and literal total sign/threshold programs.
 
 - Paper20 `lem:matrix`: full literal source matrix update, genuine series
   quotient selection and proper numerator degree, including zero dimensions.
@@ -223,9 +237,8 @@ quadratic coincidence are checked (170 modules, four supporting aliases).
 Actual arbitrary lower-limit target admission/no-skip/shared-clock reset or
 minimum-clock divergence is checked (165 modules, one supporting alias).
 Full source-general thick-block separation and computed sufficient tail
-are checked (180 modules). Equal-gap/threshold certificates, arithmetic
-decision and ground
-comparison remain separate unpaid obligations. The actual primitive-recursive
+are checked (180 modules). The full equal-gap certificate is checked (packet155); threshold certificates,
+arithmetic decision and ground comparison remain separate unpaid obligations. The actual primitive-recursive
 CNF profile and semantic finite joint-piece coverage are checked (73 modules),
 and the actual total primitive-recursive highest-piece selector with complete
 none/some/max-piece/source-sign correctness is checked (86 modules). Actual
@@ -234,7 +247,7 @@ admission are checked (188 modules), deriving actual visits, resets, budgets
 and exceptions. The complete initial original-unit phase is checked (210 modules), including
 actual synchronized first hits or oriented divergence and both exact quadratic
 exceptions. Global lower-phase visitation and the full effective equal-gap
-certificate remain pending. Actual profile-band coupling to genuine shared
+certificate are now checked through packets144 and155. Actual profile-band coupling to genuine shared
 first-entry/norm clocks is checked (213 modules), retaining unequal upper
 charge and different initial finite tails. Actual linear-tail k-first-hit/norm-clock/
 terminal-relative-limit return, including k=0, is checked (186 modules).
@@ -304,9 +317,10 @@ review, discharging both hypotheses internally (packet142).
 The default-policy original-domain/source equality program is checked, as
 are arbitrary-computable-policy literal shape and constant/application
 constructor programs. Complete literal partial and abstraction calibration/programs are now checked;
-full policy-parametric source assignment remains separate. Pure successor/limit, highest-piece geometry,
+full policy-parametric source assignment is checked (packet160), with genuine
+original admissible-substitution equality frontend checked (packet166). Pure successor/limit, highest-piece geometry,
 terminal phase and actual divergence-to-first-entry order are checked; the
-complete effective equal-gap assembly remains pending.
+complete effective equal-gap assembly is checked (packet155).
 
 The actual-period theorem remains pending. Reviewed removal of genuinely
 unused import branches allowed the generic Laurent and initial-residue proofs,
@@ -319,8 +333,10 @@ failed edition is preserved, with no legacy or resource-limit edits.
 The complete pure-phase effective comparison certificate is checked
 (242 modules, packet144): literal sign/tail programs and actual first-hit
 clocks/orbits are proved. Executable original-unit initial-pass classification is checked (packet150);
-global equal-gap assembly remains pending. Genuine merely-Computable ranked
+global equal-gap assembly is checked (packet155). Genuine merely-Computable ranked
 recursion, literal policy partial and complete abstraction are checked
-(packets140,146,153), while full policy-parametric source assignment is unclaimed.
+(packets140,146,153), and full policy-parametric source assignment is checked (packet160);
+the original admissible-substitution equality frontend is checked (packet166).
 Typed closing and close/open identity are checked supporting endpoints
-(packets152,154); genuine capturing-context stability remains pending.
+(packets152,154); genuine capturing-context stability and complete original
+context coverage are checked in the full four-way theorem (packet165).

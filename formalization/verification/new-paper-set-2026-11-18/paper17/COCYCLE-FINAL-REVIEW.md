@@ -1,0 +1,4 @@
+# Independent final review
+Approved supporting exact affordable cocycle. Receipt 1794996142403190866-5; independent read-only evidence exactly matches 240 modules, zero errors, standard-only alias; three frozen pins verified.
+Read actual target and proof. Printed max 2/Nlambda/Nkappa/Nmu alone pays original countInitial and both entry existences; no B-tail added. First entry norm orbit and selected-control growth pay reset affordability. Actual limit interval separation proves mu+omega <= kappa, enabling genuine firstEntry_compose with no earlier target hit. Literal reset continuation gives count addition and exact norm continuation. Both intermediate and original-clock iterates are proved, including mu=0 without misusing a nonfinite norm rule. No supplied definedness, reset, hit or orbit premise. No inverse-threshold or full arithmetic promotion.
+No native compiler invoked by reviewer.

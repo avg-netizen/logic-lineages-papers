@@ -1,0 +1,11 @@
+import LogicLineages.PersistentMarking.StructuralCoverageProof
+namespace LogicLineages.PersistentMarking.StructuralCoverageChecks
+theorem exact_ordinaryEncoding : StructuralCoverageTargets.OrdinaryEncoding := StructuralCoverageProof.ordinaryEncoding
+theorem exact_contextCoverage : StructuralCoverageTargets.ContextCoverage := StructuralCoverageProof.contextCoverage
+theorem exact_namedWeakContext : StructuralCoverageTargets.NamedWeakContext := StructuralCoverageProof.namedWeakContext
+theorem exact_namedStrictContext : StructuralCoverageTargets.NamedStrictContext := StructuralCoverageProof.namedStrictContext
+#print axioms exact_ordinaryEncoding
+#print axioms exact_contextCoverage
+#print axioms exact_namedWeakContext
+#print axioms exact_namedStrictContext
+end LogicLineages.PersistentMarking.StructuralCoverageChecks
