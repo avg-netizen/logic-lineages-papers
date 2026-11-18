@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.PeriodDynamicsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.PeriodDynamics.StatementChecks
+theorem fixed_exactPeriodFromExclusions : Targets.ExactPeriodFromExclusions := exactPeriodFromExclusions
+#audit_namespace LogicLineages.CartierObserverCurrent.PeriodDynamics.StatementChecks
+end LogicLineages.CartierObserverCurrent.PeriodDynamics.StatementChecks

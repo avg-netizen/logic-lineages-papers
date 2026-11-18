@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.FreeVariableProof
+namespace LogicLineages.PersistentMarking.FreeVariableChecks
+theorem exact_fullContainment : FreeVariableTargets.FullContainment := FreeVariableProof.fullContainment
+#print axioms exact_fullContainment
+end LogicLineages.PersistentMarking.FreeVariableChecks

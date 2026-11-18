@@ -1,0 +1,7 @@
+# Independent complete free-variable containment final
+
+Approved complete current lem:fv. Independent read-only verifier exactly reproduces28-module recursive evidence, zero errors, exact full Weak/Strict conjunction alias using only propext/Quot.sound. Actual import traversal equals all28 modules, five approved pins/inherited freezes match. First-pass native1794994889506673415-5.
+
+Read genuine six-motive original Weak recursor: both relation motives and matching/multiset/coverage/whole-source motives transport absence. Actual At/Remove/Split witnesses distribute names; whole-source premises supply every target base term. Select derives absence of actual selected occurrence and literal owner-copy tuple, then uses checked original full-call absence, not staged application. Abs explicitly distinguishes queried fresh opening name from other names; target freshness handles former, real opened-child IH and bound-substitution reflection handle latter. FAbs retains actual appended fresh variable with the same case split. Successful marking preserves names in Strict. Boolean contraposition yields the stated true-valued containment without ordinary-source restriction or comparison oracle.
+
+Source and intermediate syntax may contain marks as allowed by original relations. This is free-variable containment only; structural context capture/stability/confinement and whole-paper termination/decision remain separate. No compiler invoked by reviewer.

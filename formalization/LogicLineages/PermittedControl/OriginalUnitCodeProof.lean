@@ -23,7 +23,7 @@ def syntaxUnitCodes : ONote → List Nat
     intro k hk
     have : k=0 := by omega
     subst k
-    rfl
+    simp [originalUnitCodeTable,rawNoteDecode,syntaxUnitCodes]
   | succ n ih =>
     intro k hk
     by_cases hkn : k ≤ n

@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.ClosingNamedProof
+namespace LogicLineages.PersistentMarking.ClosingNamedChecks
+theorem exact_namedClosing : StructuralStabilityTargets.NamedClosing := ClosingNamedProof.namedClosing
+theorem exact_namedFill : StructuralStabilityTargets.NamedFill := ClosingNamedProof.namedFill
+#print axioms exact_namedClosing
+#print axioms exact_namedFill
+end LogicLineages.PersistentMarking.ClosingNamedChecks

@@ -54,7 +54,9 @@ theorem remainingOperands (p : Policy) (hp : PolicyShape.Effective p) : Computab
 theorem coordinate (p : Policy) (hp : PolicyShape.Effective p) :
     Computable (fun x : Nat × Nat × Nat => PolicyPartial.mergeCoordinate p x.1 x.2.1 x.2.2) := by
   unfold PolicyPartial.mergeCoordinate
-  exact Computable.option_bind (firstOperand p hp) (remainingOperands p hp).to₂
+  apply (Computable.option_bind (firstOperand p hp) (remainingOperands p hp).to₂).of_eq
+  intro x
+  by_cases h : x.1=5 <;> simp only [h,if_true,if_false,bind]
 
 theorem merge (p : Policy) (hp : PolicyShape.Effective p) :
     Computable (fun x : Nat × Nat × List Nat × List Nat =>
@@ -84,8 +86,10 @@ theorem merge (p : Policy) (hp : PolicyShape.Effective p) :
         (Computable.fst.comp Computable.snd) (Computable.snd.comp Computable.snd)))
   exact ComputableFoldProof.listFold A Nat (Option (List Nat))
     (fun x => List.range (x.1+2)) (fun _ => some [])
-    (fun x acc j => do let xs ← acc; let v ← PolicyPartial.mergeCoordinate p x.2.1
-      (x.2.2.1.getD j 0) (x.2.2.2.getD j 0); pure (xs++[v]))
+    (fun x acc j => do
+      let xs ← acc
+      let v ← PolicyPartial.mergeCoordinate p x.2.1 (x.2.2.1.getD j 0) (x.2.2.2.getD j 0)
+      pure (xs++[v]))
     (Primrec.list_range.to_comp.comp
       (Primrec.nat_add.to_comp.comp Computable.fst (Computable.const 2)))
     (Computable.const (some [])) hstep

@@ -1,10 +1,18 @@
 # Current comparison formalization status
 
-New-paper register: **52 checked, 115 pending / 167**. Historical register:
+New-paper register: **54 checked, 113 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper20 `lem:matrix`: full literal source matrix update, genuine series
+  quotient selection and proper numerator degree, including zero dimensions.
+
+
+- Paper16 `lem:fv`: complete original weak/strict free-variable containment,
+  including arbitrary source marks and genuine full-call/binder support.
+
 
 - Paper16 `thm:composition`: all four ordinary-endpoint weak/mixed/strict
   composition laws, via actual cut and genuine successful marking transport.
@@ -295,8 +303,8 @@ ordinary-final cut is now checked by a fresh177-module gate and independent
 review, discharging both hypotheses internally (packet142).
 The default-policy original-domain/source equality program is checked, as
 are arbitrary-computable-policy literal shape and constant/application
-constructor programs. Partial/abstraction and full policy-parametric source
-assignment remain separate. Pure successor/limit, highest-piece geometry,
+constructor programs. Complete literal partial and abstraction calibration/programs are now checked;
+full policy-parametric source assignment remains separate. Pure successor/limit, highest-piece geometry,
 terminal phase and actual divergence-to-first-entry order are checked; the
 complete effective equal-gap assembly remains pending.
 
@@ -304,12 +312,15 @@ The actual-period theorem remains pending. Reviewed removal of genuinely
 unused import branches allowed the generic Laurent and initial-residue proofs,
 then their original four-endpoint union, to pass unchanged caps (packet143).
 A separate full-period attempt stopped at the legacy tuple least-period proof;
-a source-faithful arithmetic/tuple proof split is under review. Every failed
-edition is preserved, with no legacy or resource-limit edits.
+the separated genuine tuple-existence proof also exceeded the original cap.
+The period route is now PARKED with no further period native attempts. Every
+failed edition is preserved, with no legacy or resource-limit edits.
 
 The complete pure-phase effective comparison certificate is checked
 (242 modules, packet144): literal sign/tail programs and actual first-hit
-clocks/orbits are proved. Executable original-unit initial-pass classification
-and global equal-gap assembly remain pending. Genuine merely-Computable ranked
-recursion is checked (packet140); literal policy partial calibration has only
-development passes, so full policy-parametric source assignment is unclaimed.
+clocks/orbits are proved. Executable original-unit initial-pass classification is checked (packet150);
+global equal-gap assembly remains pending. Genuine merely-Computable ranked
+recursion, literal policy partial and complete abstraction are checked
+(packets140,146,153), while full policy-parametric source assignment is unclaimed.
+Typed closing and close/open identity are checked supporting endpoints
+(packets152,154); genuine capturing-context stability remains pending.

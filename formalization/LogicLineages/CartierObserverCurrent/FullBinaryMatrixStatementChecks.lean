@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullBinaryMatrixProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullBinaryMatrix.StatementChecks
+theorem fixed_completeStateUpdate : Targets.CompleteStateUpdate := completeStateUpdate
+#audit_namespace LogicLineages.CartierObserverCurrent.FullBinaryMatrix.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullBinaryMatrix.StatementChecks

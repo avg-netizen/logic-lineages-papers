@@ -1,0 +1,137 @@
+{
+  "gates": [
+    "LogicLineages.CartierObserverCurrent.PeriodDynamicsStatementChecks"
+  ],
+  "status": "verified",
+  "native_source_matched_modules": 4,
+  "errors": [],
+  "new_named_standard_axioms": {
+    "LogicLineages.CartierObserverCurrent.PeriodDynamics.exactPeriodFromExclusions": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.CartierObserverCurrent.PeriodDynamics.StatementChecks.fixed_exactPeriodFromExclusions": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "compiler_context": {
+    "compiler": "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/bin/lean",
+    "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "lean_path": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    "pins": {
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lake-manifest.json": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lakefile.toml": "c05684bc8b1905ebc2f1ccaa33f57fd5cb769350165dbd9614c18be7a63227a5",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lakefile.lean": null,
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lake-manifest.json": "28ee3c8d1f319b5da6b53636261d9f8a3048b057f6e1739824feefbc38968672",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lakefile.toml": "a5ae5498a1a8d2920079ce4e652af4b39c41d87b49a2ec3f80e50f27f348a697",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lakefile.lean": null
+    },
+    "external_objects": {
+      "Lean.Elab.Command": {
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Elab/Command.olean": "efad9985ccc485678f6fdb74805a353e2d8f80ff1dae20bb5d3aa3a82126db84",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Elab/Command.olean.private": "fd7cead0fc97509b0e1caab27f03bb2f99bfacda214a63eeba5a74d1879c7534",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Elab/Command.olean.server": "d6f7e8bebea3efbe54a75fa2d17e4b1ff1261dbf91eec40049bcc76ac1c955ef",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Elab/Command.ir": "cbbab80f7c8e03c0bfd11e9af2e3e3b4ab1986412139dcb0f4a71f940e765729"
+      },
+      "Lean.Elab.Tactic.Omega": {
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Elab/Tactic/Omega.olean": "cadce834cd1e7ce0aee7bec71c3e2dd49c548127186113b8839b7dc8b4df8ec7",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Elab/Tactic/Omega.olean.private": "4475db3db199bf217e4bbe6e73a8e5466d10afb0038dd1ebe3aed5f2fd1a278e",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Elab/Tactic/Omega.olean.server": "edecd1187694f6142974631c9171e3459d786b792dab5eea8c7613a00187e82d",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Elab/Tactic/Omega.ir": "bd034fb1f0662b0f64334ed3baf700288a82319d6995f7c25d9848dbee3d1776"
+      },
+      "Lean.Util.CollectAxioms": {
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Util/CollectAxioms.olean": "5b8bd2f4503659076c18144e201bef617ab7de2179333b933d74d7f42305b93e",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Util/CollectAxioms.olean.private": "16bf850027782f7001dee44e8f266661f62a3724b661bf8911ef76e6b3920fac",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Util/CollectAxioms.olean.server": "32eadd1502377a8fa8fe662fe40c616816807691f37d44d957fbba6397dd0f0f",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Util/CollectAxioms.ir": "0a2b859f1adefcf672ca0f2a567ff55d6687c16c1cd6958c321e815a2598fa64"
+      },
+      "Mathlib.Dynamics.PeriodicPts.Lemmas": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Dynamics/PeriodicPts/Lemmas.olean": "39170919d9b1caf6087101661130e0f38adda7fa5e71932cc0f00cf227fa560c",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Dynamics/PeriodicPts/Lemmas.olean.private": "11c2fdb18ec4017dc2792daf8001b8f066f77bc8e9df63905e1c8de3e419b358",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Dynamics/PeriodicPts/Lemmas.olean.server": "99bc4cf9a984be52ed675a3eec34617e9edab65f61b5297cf417b66586de2629",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Dynamics/PeriodicPts/Lemmas.ir": "0797100e082f0d126a724760fc6e7e8ed2026dc42735229c01b5c7e728b2624d"
+      },
+      "Mathlib.Tactic.IntervalCases": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/IntervalCases.olean": "9c0b5e89c15c989c9b1c8a2bc50652b9966b9b6584127d7df6f9494c2f99965e",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/IntervalCases.olean.private": "0405f0f4c00213780554784bd297ff7adc5a19c130669546936223033d80b4ec",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/IntervalCases.olean.server": "8e68ac5d5e2825f766a25a68c0b014be66fdc8bf00ff20b9192e92686bd617c4",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/IntervalCases.ir": "bb90aab16cd385e51055d19e788e34dc17cd39c78091ceb6705f521e3203a77d"
+      },
+      "Mathlib.Tactic.Linarith": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith.olean": "a6ade8e9df92aebd47310c7a20334c15307364c0c108db430fac6c8ccf0f21e9",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith.olean.private": "8d7b4f23eeab86b4a65cbca125bddff040e726092f537e9f147df60a924c66e8",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith.olean.server": "994021891b9166abb6e4120205854b8302b33804d513e9336acc910b15c766f7",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith.ir": "e7d4b7530f673cf1783a0e4f16285f8a435fe13a95910433debf5e039f1f04eb"
+      }
+    },
+    "selected_compiler": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550"
+  },
+  "modules": {
+    "LogicLineages.CartierObserverCurrent.PeriodDynamicsTargets": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/PeriodDynamicsTargets.lean",
+      "source_sha256": "92e50f28bd29c6d65fb972e69e15ba5993c201a8a10f945d8d5dab3ad5fce955",
+      "input_key": "716ed45ceed6e912b201d3859007b841858ac7f9acbbadd92134e04ae01ec955",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/PeriodDynamicsTargets.ir": "2d7c7b5ac238df1cd2a2ca589cb4dabbc93a90e9819a61b1e6a16ecb95ebbfe9",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/PeriodDynamicsTargets.olean": "75cd21abfedc4338b2a395de4c8e2d2742be33b4571037adfe29dec674b491ba",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/PeriodDynamicsTargets.olean.private": "2ea0520a668a7ecc567794b9f771904cd516afe8bad476f78a4929af5dc00627",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/PeriodDynamicsTargets.olean.server": "367ecd8d90b2b99c9e427db4ddd79fe7aaee22c4115767c338d6975dde5bc8cd"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794994506434091126-5.json",
+      "receipt_sha256": "ae36028688713c4d814202c322392df8db990762b6cd429ab64df19690ed56b8",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794994506434091126-5-LogicLineages-CartierObserverCurrent-PeriodDynamicsTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.Audit": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/Audit.lean",
+      "source_sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d",
+      "input_key": "f9d6feed9105d5ab8ac072dd6e0698408f46bda1851216ba3618a5c5ceb08a71",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/Audit.ir": "93fef5ee8917ddcf2c9b104e0c6259a02de1f0d0f8bea763b723d70e0c842d47",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/Audit.olean": "ec5371e46904258c9c47793c0f4b27fccc561f09d04bb83855987335b51b3f5a",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/Audit.olean.private": "430d18b4d41902bd10c6e77a092b8dd2237a5e428d132511b63f03afc6f9739e",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/Audit.olean.server": "2805b5e0ebf4ae3fa9c99700cfc389c9afc76ea95c2a0973b01ae2bc6aa21b33"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977137448913798-2.json",
+      "receipt_sha256": "64182e733b499847846e82b80a928e5fee7b5a8c4d9434b2a3cbd29f5fa1b88a",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977137448913798-2-LogicLineages-Audit.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.CartierObserverCurrent.PeriodDynamicsProof": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/PeriodDynamicsProof.lean",
+      "source_sha256": "86ca3511641c9851689eb4323a8d24bdc13b991223ca68f520bca7828211bdcb",
+      "input_key": "af8922042f4fbfc6af1b460038e0d1b3dfe56a899a812cd74988542dd0115b87",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/PeriodDynamicsProof.ir": "ca01bdb3c63023be211568ab18837c6c4bf12297d9150928926399588c90eca9",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/PeriodDynamicsProof.olean": "6ebbca7d16b154467033ad4cf97d3332912aa418808eedfeb033c035446bf4df",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/PeriodDynamicsProof.olean.private": "ccb62a7d27f780406101d2a6e9fa46de20222d8d07ee387b8263a7d6c52f9214",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/PeriodDynamicsProof.olean.server": "7131236d6e7b6a0c224c9e34ffd8bccfd04df35cceae33f9d17d54cfba333d9e"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794994644223893158-2.json",
+      "receipt_sha256": "4e3d03fc1148fc2fa57eec9608c6aeba56894739e967f5e81887432eb9fd335f",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794994644223893158-2-LogicLineages-CartierObserverCurrent-PeriodDynamicsProof.log",
+      "log_sha256": "65f838b64b8edcb85625dffc34e38fc99be824bdf60a001b5862c465a83c22b8"
+    },
+    "LogicLineages.CartierObserverCurrent.PeriodDynamicsStatementChecks": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/PeriodDynamicsStatementChecks.lean",
+      "source_sha256": "83dd57253b2cadc8cebbfb4b4f8d165932fe5abfc92de1a6cfcfc49e40eab7d3",
+      "input_key": "76a21db5f20e1fc5bacc4df2b5a84f40b42e0c3d7e68495ac83fe994979eb415",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/PeriodDynamicsStatementChecks.ir": "f5b7f1da11637b5cedaeb426d6eba2ec1a48f619bb4c75eca20ff8eee2290b60",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/PeriodDynamicsStatementChecks.olean": "345586740398796d168a6fd540abcd21981675034213a355063843a22a2530dd",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/PeriodDynamicsStatementChecks.olean.private": "8576a9c54dee03a2064ac6702e552c4c491f884030896fea392c4cb4704ac05e",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/PeriodDynamicsStatementChecks.olean.server": "32c4b00f67086cf4a1d8a63d66ead3be901c7c8d4959f8454a822a4852ecbca4"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794994644223893158-2.json",
+      "receipt_sha256": "4e3d03fc1148fc2fa57eec9608c6aeba56894739e967f5e81887432eb9fd335f",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794994644223893158-2-LogicLineages-CartierObserverCurrent-PeriodDynamicsStatementChecks.log",
+      "log_sha256": "bf10300b4fc779893702263adeb01a829b4923c702cd5fc209770f3aab48c5bc"
+    }
+  },
+  "limits": "Focused closure only. Does not certify paper correspondence or a full-root build. Imported axioms are certified through actual new named declaration closures."
+}

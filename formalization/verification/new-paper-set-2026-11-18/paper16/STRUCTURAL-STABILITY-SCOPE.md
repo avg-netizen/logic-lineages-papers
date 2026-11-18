@@ -1,0 +1,9 @@
+# Exact structural stability scope
+
+ordering.tex lines139–168: FullStability retains all four original ordinary endpoint conclusions, with arbitrary typed ordinary free maps (stronger than finite substitution). No injectivity requirement. WeakContext and StrictContext range over ContextTyped, whose literal head slots include before/after ordered argument tuples and original fixed arity; sibling typing, validity and ordinariness are explicit, while filled-result validity is a proved prerequisite FillPaper, not an input. Native application is included as Head.app.
+
+StructuralContext.bind name captures that typed free name anywhere in the filled inner context using depth-aware closing, even when it appears freely in the hole. No fresh-hole condition. Nested binders shadow by actual free-name closure. NamedClosing compares the literal singleton-environment encoder with closing an empty-environment encoding; NamedFill compares actual recursively capturing named fill with DB fill. These equalities are raw named syntax equalities (named terms encode scoped indices automatically). No alpha/original-context identification is assumed.
+
+CloseTyped has an EmptyContext source and pushed-context target. Its proof must derive weakening internally. CloseOpen requires actual source typing/closedness and permits any opening name: under these premises no preexisting external bound0 can be confused with the inserted occurrence. CloseValidity, CloseOrdinary and CloseAbsence are structural support. No transported comparison with an untyped bound0 image is assumed. FullStability contains only four final source assertions; supporting bridge/typing gates are separately required before source acceptance.
+
+Frozen definitions and exact statements only, no compiler or proof invoked. Request independent clause-by-clause pre-scope review before proofs.

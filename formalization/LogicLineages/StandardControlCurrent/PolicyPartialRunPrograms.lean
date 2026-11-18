@@ -96,7 +96,10 @@ theorem run (pol : Policy) (hp : PolicyShape.Effective pol) :
         let a ← x.2.getD 0 none; let b ← x.2.getD 1 none
         PolicyPartial.mergeCode pol x.1.1 k a b) :=
       PolicyPartialMergePrograms.bindTwo (hget 0) (hget 1)
-        ((PolicyPartialMergePrograms.merge pol hp).comp
+        (Computable.comp
+          (f := fun q : Nat × Nat × List Nat × List Nat => PolicyPartial.mergeCode pol q.1 q.2.1 q.2.2.1 q.2.2.2)
+          (g := fun q : A × List Nat × List Nat => (q.1.1.1,k,q.2.1,q.2.2))
+          (PolicyPartialMergePrograms.merge pol hp)
           ((Computable.fst.comp (Computable.fst.comp Computable.fst)).pair
             ((Computable.const k).pair
               ((Computable.fst.comp Computable.snd).pair (Computable.snd.comp Computable.snd)))))

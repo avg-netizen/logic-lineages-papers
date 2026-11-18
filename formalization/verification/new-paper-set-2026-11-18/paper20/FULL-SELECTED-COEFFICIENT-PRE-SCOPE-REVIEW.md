@@ -1,0 +1,7 @@
+# Independent selected coefficient pre-scope
+
+Approved complete current thm:observer mathematical scope; all ten frozen pins match. InitialVector is literal polynomial1 coefficient vector=e0, ProductOrder explicitly pays reversed noncommutative matrix multiplication for low-bit-first iteration, and SelectedCoefficient equates actual zeroth output Nat value with genuine restrictedPartitionCount modulo2. Complete A_d and triangular D remain fixed. Every finite bit representation is allowed, including empty and redundant zeros.
+
+Positive d is necessary to make printed e0 coordinate meaningful; no d0 dimension-zero formula can have that coordinate. InitialVector/ProductOrder themselves retain all D including0. Fresh final review must inspect actual partition-count definition and coefficient recurrence/product calibration, not accept an unrelated series coefficient definition as partition counting. Field cancellations and actual matrix action must be retained, not Boolean graph reachability. No caller coefficient identity or initial-state premise permitted.
+
+Printed finite matrix formula does not require separate executable field extraction, but this scope grants no unproved executable conversion/enumeration claims. Observability/kernel, period/scalar nonperiodicity remain separate; period route remains parked. Preflight and fresh full gate/recursive evidence still required. No compiler invoked.

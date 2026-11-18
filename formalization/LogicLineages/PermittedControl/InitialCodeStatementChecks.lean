@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.InitialCodeProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_initialCodeFoundation : Targets.InitialCodeFoundation := initialCodeFoundation
+#print axioms fixed_initialCodeFoundation
+end LogicLineages.PermittedControl.StatementChecks
