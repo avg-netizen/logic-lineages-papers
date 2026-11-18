@@ -1,0 +1,11 @@
+# Next actual conjunction aggregation
+
+Current lem:aggregate quantifies a finite conjunction of actual ground-source equations and constructs ground L,R with pointwise weak inequality, equality iff every equation, otherwise gap>=2. Reuse literal SourceAggregateCompletion.aggregate (right-fold identically shaped eraser trees, empty pair zeroC/zeroC); internal sources and variable names stay unchanged except actual fresh-binder weakening. No reassociation of a source sum is used. Balanced shape is unnecessary for the numbered statement; right-fold adds linear gadget count but depth is linear.
+
+Fresh generic/all-policy semantics will use PolicyCollision.rawScalar, same shared rho, and full source collision plus CompositeEraser. At each fold, outer g is strictly increasing, both child differences nonnegative; weighted sum equality iff both child equalities. If either child unequal, strict outer growth gives gap>=2. Empty conjunction uses equal literal zeros. No signed cancellation or scalar-oracle premise.
+
+Effective construction: existing SourceGammaAggregateCode is actually control/policy-independent syntax, despite its historical name. Revalidate ExactLiteralCodes, ExactAggregateCode and UniformPrimitiveRecursive against literal aggregate and actual radix-eight source encoding; no gamma-domain transfer. Include exact reconstruction and Primrec in fresh comparator, so 'can be transformed' is an actual uniform algorithm, not just existence. This produces tree codes and does not by itself prove a polynomial code-bit length or shared-DAG overhead claim.
+
+Keep literal DAG efficiency honest: arbitrary supplied source nodes must be references shared by a later typed forest compiler. No source tree size bound will be relabeled DAG bound. Full Boolean compiler requires actual shared source-leaf inputs, correct bits/unique witnesses under negation, literal weak-wrapper K/I, restricted ground names/types and PR/Computable code reconstruction, with a real node-count bound. Plan these after aggregate; do not infer them from numeric gate counts or existing default-policy compiler.
+
+Request conceptual review, then exact full aggregate freeze before proofs. Generic current19 SourceGrowth and every policy preserved, same-H machine stack unaffected.

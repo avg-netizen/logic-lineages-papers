@@ -1,0 +1,3 @@
+# Prefix coding bounded scope
+
+Read complete current boundsCanonical/decodeExact draft. Bounded development confirmed contingent on successful prerequisite roots: actual canonical lower descriptor cardinalities erase attached membership proofs only; exact checked vector enumeration and both actual tuple-bounds directions yield vector membership iff genuine tupleDecode success. All Prefix values remain, including functional residuals and repeated argument types. No inherited index identity across contexts or arbitrary cardinality callback. This is coding infrastructure, not full semantic/lattice acceptance. No native execution performed.

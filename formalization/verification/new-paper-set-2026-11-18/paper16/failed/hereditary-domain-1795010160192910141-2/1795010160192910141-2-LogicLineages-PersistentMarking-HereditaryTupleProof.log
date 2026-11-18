@@ -1,0 +1,72 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryTupleProof.lean:14:24: error: unexpected identifier; expected ':=', 'where' or '|'
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryTupleProof.lean:14:6: error: Invalid pattern: Expected a constructor or constant marked with `[match_pattern]`
+
+Hint: Using one of these would be valid:
+  [apply] `DoResultPR.pure`
+  [apply] `DoResultPRBC.pure`
+  [apply] `Task.pure`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryTupleProof.lean:22:24: error: unexpected identifier; expected ':=', 'where' or '|'
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryTupleProof.lean:22:6: error: Invalid pattern: Expected a constructor or constant marked with `[match_pattern]`
+
+Hint: Using one of these would be valid:
+  [apply] `DoResultPR.pure`
+  [apply] `DoResultPRBC.pure`
+  [apply] `Task.pure`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryTupleProof.lean:34:9: error: ambiguous term, use fully qualified name, possible interpretations [HereditaryDomainSemantics.values,
+ DecisionPorts.values]
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryTupleProof.lean:63:8: warning: declaration uses `sorry`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryTupleProof.lean:96:13: error: unsolved goals
+case cons.cons.none
+E : Environment
+Δ : Context
+ρ : Ty
+ds : List Ty
+ih :
+  ∀ (vs : List Code) (is : List Nat),
+    indices E Δ ds vs = some is → ds.length = is.length ∧ HereditaryDomainSemantics.values E Δ ds is = some vs
+is : List Nat
+v : Code
+vs : List Code
+h : sorry () = some is
+hl : ds.length = vs.length
+hi : indexOf ((descriptor E ρ).carriers Δ) v = none
+⊢ (ρ :: ds).length = is.length ∧ HereditaryDomainSemantics.values E Δ (ρ :: ds) is = some (v :: vs)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryTupleProof.lean:99:15: error: unsolved goals
+case cons.cons.some.none
+E : Environment
+Δ : Context
+ρ : Ty
+ds : List Ty
+ih :
+  ∀ (vs : List Code) (is : List Nat),
+    indices E Δ ds vs = some is → ds.length = is.length ∧ HereditaryDomainSemantics.values E Δ ds is = some vs
+is : List Nat
+v : Code
+vs : List Code
+h : sorry () = some is
+hl : ds.length = vs.length
+i : Nat
+hi : indexOf ((descriptor E ρ).carriers Δ) v = some i
+his : indices E Δ ds vs = none
+⊢ (ρ :: ds).length = is.length ∧ HereditaryDomainSemantics.values E Δ (ρ :: ds) is = some (v :: vs)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryTupleProof.lean:96:22: warning: This simp argument is unused:
+  hi
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵i̵]̵ ̵at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryTupleProof.lean:99:24: warning: This simp argument is unused:
+  hi
+
+Hint: Omit it from the simp argument list.
+  simp [hi,̵h̵i̵s] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryTupleProof.lean:99:27: warning: This simp argument is unused:
+  his
+
+Hint: Omit it from the simp argument list.
+  simp [hi,̵h̵i̵s̵] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

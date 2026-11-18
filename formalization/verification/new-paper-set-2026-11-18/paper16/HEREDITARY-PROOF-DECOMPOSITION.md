@@ -1,0 +1,12 @@
+# Actual hereditary domain proof decomposition
+
+The thirteen frozen targets and global `descriptor E σ` remain unchanged. This is a proof plan, not evidence of the finite-lattice theorem.
+
+1. Construction/effectivity/distinctness: unfold the actual type-size recursion once, use exact schema vector enumeration, then retain the literal monotonicity/naturality predicate. Three exact existing targets form the first supporting gate.
+2. Coordinate lookup: prove actual key equality, aligned lookup correctness/bounds and first-index roundtrips on the checked distinct global lower carriers. These are proof-local helpers, not new carrier assumptions. Recover every index used by decode/encode; reject paths cannot be silently skipped.
+3. Tuple coding: prove simultaneous domain/value index traversal agrees with attached full-prefix traversal. Include empty lists, repeated argument types and every nonempty prefix with functional residual. Derive `TupleValues` and vector membership in both directions from actual global lower carriers.
+4. Semantic coding: express literal boolean retention as the uncoded `Valid` predicate using actual tuple coding. Prove code reconstruction coordinate by coordinate, and semantic reconstruction only on `ValueEq` coordinates. Off-schema defaults are not semantic coordinates.
+5. Hereditary induction: at type σ assume the complete lower-type laws only for strictly smaller types. These are discharged by the global type-size induction, not exported as premises of any frozen endpoint. Lift pointwise order, joins/meets, restriction and naturality through exact semantic coding. Empty families require genuine lower bottom/top and their restriction laws.
+6. Restriction: actual projection onto identical descendant keys. Prove the source lookup succeeds for each descendant coordinate, then identity/composition and preservation of joins/meets. Tuple reindexing uses actual lower restrictions and successful first-index lookup, never the same indices by fiat.
+7. Arbitrary subsets: filter the explicit finite carrier by the subset predicate to obtain a finite family; apply the already-proved actual join/meet algorithms and their universal properties. Classical predicate decidability here does not replace executable carrier construction.
+8. Assemble the exact thirteen-family conjunction only after constituent evidence and independent review, with a fresh full gate. No generic callback lattice or finite oracle substitutes for canonical lower carriers.

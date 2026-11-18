@@ -1,0 +1,42 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryOutputProof.lean:28:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  lookup (schema σ (lowerCodes σ (canonicalLower E σ)) E.types E.names E.ports E.target Γ) c
+    { context := Δ, kind := Kind.application p.val.fst p.val.snd tuple }
+in the target expression
+  (do
+      let i ←
+        lookup (layout E σ (canonicalLower E σ) Γ) c
+            { context := Δ, kind := Kind.application p.val.fst p.val.snd tuple }
+      ((resultDescriptor σ (canonicalLower E σ) p).carriers Δ)[i]?) =
+    some v
+
+E : Environment
+σ : Ty
+Γ Δ : Context
+p : Prefix σ
+tuple : List Nat
+c : Code
+hw : WellFormed E.types E.ports Δ
+he : Extends Γ Δ
+hc : c ∈ (descriptor E σ).carriers Γ
+ht : tuple ∈ vectors (tupleBounds σ (canonicalLower E σ) Δ p)
+hf : Fits (List.map Prod.snd (layout E σ (canonicalLower E σ) Γ)) c
+hd :
+  List.Pairwise (fun x1 x2 => x1 ≠ x2)
+    (List.map Prod.fst (schema σ (lowerCodes σ (canonicalLower E σ)) E.types E.names E.ports E.target Γ))
+hm :
+  ({ context := Δ, kind := Kind.application p.val.fst p.val.snd tuple }, ((descriptor E p.val.snd).carriers Δ).length) ∈
+    layout E σ (canonicalLower E σ) Γ
+i : Nat
+hi :
+  lookup (schema σ (lowerCodes σ (canonicalLower E σ)) E.types E.names E.ports E.target Γ) c
+      { context := Δ, kind := Kind.application p.val.fst p.val.snd tuple } =
+    some i
+hbound : i < ((descriptor E p.val.snd).carriers Δ).length
+v : Code := ((descriptor E p.val.snd).carriers Δ)[i]
+hv : ((descriptor E p.val.snd).carriers Δ)[i]? = some v
+⊢ (do
+      let i ←
+        lookup (layout E σ (canonicalLower E σ) Γ) c
+            { context := Δ, kind := Kind.application p.val.fst p.val.snd tuple }
+      ((resultDescriptor σ (canonicalLower E σ) p).carriers Δ)[i]?) =
+    some v

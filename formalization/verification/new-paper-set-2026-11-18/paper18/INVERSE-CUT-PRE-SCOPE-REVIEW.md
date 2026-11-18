@@ -1,0 +1,3 @@
+# InverseCut exact supporting scope
+
+Approved before proofs; all five pins verified. Read complete definitions/targets. Right-associated Input coordinates are exactly a,b,lo,hi,m,r in both Cut and candidate/answer. Concrete Phi and actual fixed-seed H endpoints prove least lower index, residue witness minimality, exact all-parameter existential elimination with explicit valid-modulus conjunction, and joint raw PR programs. Below-range inverse convention and m=1/empty intervals retained; total invalid inputs return false. No inverse oracle, supplied solution or tail hypothesis. This remains arithmetic supporting work, not syntax substitution or general QE. No native execution performed.

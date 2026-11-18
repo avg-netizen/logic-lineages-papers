@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.GenericScalarProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.GenericScalar.StatementChecks
+theorem fixed_belowEpsilon : GenericScalarTargets.BelowEpsilon := belowEpsilon
+theorem fixed_generatedPositiveFinite : GenericScalarTargets.GeneratedPositiveFinite := generatedPositiveFinite
+theorem fixed_actualSourceTotality : GenericScalarTargets.ActualSourceTotality := actualSourceTotality
+#audit_namespace LogicLineages.ControlSensitivityCurrent.GenericScalar.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.GenericScalar.StatementChecks

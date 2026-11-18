@@ -1,0 +1,5 @@
+# Inverse cut syntax conceptual review
+
+Approved for exact supporting freeze. Inspected actual expanded Term/Matrix signature: fixed multiplication/division, natural subtraction, Phi/H and inverses, Boolean guards suffice for proposed residue and max/conditional case expansion. Do not add max/if primitives or evaluate terms during compilation. Four arbitrary parameter terms share one valuation and may repeat names or contain nested functions. Explicit absence of eliminated x plus evaluation-under-update theorem must justify existential equivalence; all guards include relevant lower-range and max branch boundaries.
+
+Require exact raw code calibration and joint PR constructor composition, invalid m/r falsity, output free-name inclusion/no x, and pointwise formula correctness. Equivalence transports under negation/outer updates only within the proved freshness assumptions; do not silently capture parameter names during substitution. This pays one syntactic elimination rule, not complete branch normalization or terminating arbitrary alternation QE. No native execution performed.

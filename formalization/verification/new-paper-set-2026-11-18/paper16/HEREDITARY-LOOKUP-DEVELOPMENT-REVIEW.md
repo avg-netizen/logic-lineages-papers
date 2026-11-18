@@ -1,0 +1,3 @@
+# Lookup development scope review
+
+Read complete HereditaryLookupProof draft. Approved bounded development scope under existing nine-pin targets, not final proof acceptance. Helpers prove actual Kind/Key equality, first-index soundness/existence, distinct-list inverse, aligned schema/code lookup and Fits-derived bounds. Distinctness and positional premises here are local lemma inputs to be discharged by accepted carrier/schema facts, not new full-target assumptions. Actual absence cases are not silently defaulted. This is appropriate prerequisite work for exact tuple and semantic roundtrips; no valid-code failure impossibility or lattice result is presumed established by the draft. No native execution performed.

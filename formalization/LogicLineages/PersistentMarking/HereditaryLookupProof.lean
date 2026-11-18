@@ -20,7 +20,7 @@ theorem indexSound (codes : List Code) (v : Code) (i : Nat) (h : indexOf codes v
     · subst c
       simp only [indexOf,decide_true,if_true,Option.some.injEq] at h
       subst i; rfl
-    · simp only [indexOf,decide_eq_false_iff_not.mpr he,if_false] at h
+    · simp only [indexOf,decide_eq_false_iff_not.mpr he,Bool.false_eq_true,if_false] at h
       cases hh : indexOf cs v with
       | none => simp [hh] at h
       | some j =>

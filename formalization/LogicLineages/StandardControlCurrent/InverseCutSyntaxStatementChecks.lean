@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.InverseCutSyntaxProgramsProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.InverseCutSyntaxStatementChecks
+theorem full : InverseCutSyntaxTargets.Full := InverseCutSyntaxProof.fullSyntax
+#print axioms full
+end LogicLineages.StandardControlCurrent.InverseCutSyntaxStatementChecks

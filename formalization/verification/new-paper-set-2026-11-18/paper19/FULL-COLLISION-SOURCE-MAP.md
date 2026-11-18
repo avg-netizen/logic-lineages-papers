@@ -1,0 +1,5 @@
+# Complete current19 lem:collision
+
+Literal source compiler.tex six-eraser terms are reused unchanged, including real fresh-binder weakening. All-policy selected-f rawScalar uses actual canonical assignment and actual denoteWith; zero fallback must be eliminated by proved generic source totality. CompleteCollision concludes positive actual Scalar for EVERY ground-output source at a shared positive raw valuation, exact left/right numeric calibration, L>=R, equality iff input raw scalars equal, unequal gap>=2. No successful-assignment or input-scalar oracle premise. Arbitrary internal typed sources retained.
+
+NumericCollision is a separately gated supporting clause: positivity and fourfold g-growth derived from actual SourceGrowth, then exact two-case detector inequalities. f is not fixed to Phi/gamma or selected17 controls. Omitting source PR/upper-level restrictions strengthens the mathematical claim, not computation. GenericScalar final supplier must be accepted before complete gate. CompositeEraser pays all-policy composite syntax, not atomic substitution. Full actual effective Boolean forest/coRE/hardness remain separate; same machine/H results untouched.

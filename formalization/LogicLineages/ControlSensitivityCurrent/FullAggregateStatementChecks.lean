@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.FullAggregateProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.FullAggregate.StatementChecks
+theorem fixed_completeAggregate : Targets.CompleteAggregate := completeAggregate
+#audit_namespace LogicLineages.ControlSensitivityCurrent.FullAggregate.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.FullAggregate.StatementChecks

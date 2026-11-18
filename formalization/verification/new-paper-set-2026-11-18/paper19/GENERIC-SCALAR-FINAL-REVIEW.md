@@ -1,0 +1,7 @@
+# Independent final: GenericScalar3
+
+Accepted supporting packet, receipt 1795010088167409660-6. Compiler-free verification exactly reproduced author evidence: 223 source-matched modules, three exact standard-only endpoint aliases, zero errors. Seven frozen hashes match. No native execution performed.
+
+Read full fresh proof. Below-epsilon closure uses genuine normal representation sum/product laws and ordinal power bound; collapse output is a natural cast for arbitrary f. Positive generated collapse argument follows from positive right operand and actual norm additivity; real arbitrary-control maximum equation admits predecessor zero at every budget and yields strict positivity. No inflation/selected17 premise appears. Generated-grade induction excludes omega/emul at grade zero, proves finite natural sum and literal finite collapse, retaining positivity at all grades. Actual all-policy assignment-generated theorem supplies successful vector and grade proof for every typed ground-output term; actual finite positive scalar follows and uniqueness uses assignment determinism. Shared positive finite coordinate valuation is retained, not arbitrary ordinal higher inputs.
+
+This pays mathematical generic scalar totality, not arbitrary-f computability or comparison admissibility. Full collision still requires exact source-growth and six-eraser/formula semantics. Initial namespace-only proof failure remains preserved.

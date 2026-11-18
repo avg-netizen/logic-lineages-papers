@@ -1,0 +1,26 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryLookupProof.lean:28:8: error: Tactic `subst` failed: did not find equation for eliminating 'i'
+
+case neg.some
+v c : Code
+cs : List Code
+ih : ∀ (i : Nat), indexOf cs v = some i → cs[i]? = some v
+i : Nat
+he : ¬c = v
+j : Nat
+hh : indexOf cs v = some j
+h : (if false = true then some 0 else some j.succ) = some i
+⊢ (c :: cs)[i]? = some v
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryLookupProof.lean:23:56: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [indexOf, ̲decide_eq_false_iff_not.mpr he,̵i̵f̵_̵f̵a̵l̵s̵e̵] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryLookupProof.lean:27:38: warning: This simp argument is unused:
+  Option.some.injEq
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵h̵,̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵,̵O̵p̵t̵i̵o̵n̵.̵s̵o̵m̵e̵.̵i̵n̵j̵E̵q̵]̵[̲h̲h̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲m̲a̲p̲_̲s̲o̲m̲e̲]̲ at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.FullCollisionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.FullCollision.StatementChecks
+theorem fixed_completeCollision : Targets.CompleteCollision := completeCollision
+#audit_namespace LogicLineages.ControlSensitivityCurrent.FullCollision.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.FullCollision.StatementChecks
