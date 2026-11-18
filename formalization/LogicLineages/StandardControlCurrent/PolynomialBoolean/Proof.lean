@@ -6,6 +6,8 @@ public import LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.Machi
 @[expose] public section
 namespace LogicLineages.StandardControlCurrent.PolynomialBoolean.Proof
 open OrdinalComparison
+attribute [local irreducible] Computable Partrec Nat.sqrt Nat.unpair Code.package
+  ClosedWordDecisionCompletion.Machine.solve
 
 theorem compilerPrograms : Targets.CompilerPrograms := by
   have hp := ProgramsProof.package_primitive.to_comp

@@ -20,15 +20,15 @@ theorem flags (d : Nat) (p : Source) (hv : p.Valid d) :
     p.degree (matrix d p true) (hd.2 true).1
   have ex := he.trans (ExistentialProof.full d p hv).1
   have counter := hc.trans (ExistentialProof.full d p hv).2
-  simp only [Code.flags, CalibrationProof.full]
+  have hp := CalibrationProof.full d p
+  simp only [Code.flags, hp]
   constructor
   · exact ex
-  · rw [Bool.not_eq_true]
-    constructor
+  · constructor
     · intro h ρ hp
       by_contra hn
       have ht := counter.mpr ⟨ρ,hp,hn⟩
-      rw [h] at ht
+      rw [ht] at h
       contradiction
     · intro h
       cases hb : ClosedWordDecisionCompletion.Machine.solve p.degree

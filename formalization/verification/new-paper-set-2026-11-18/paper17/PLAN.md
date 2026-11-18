@@ -278,3 +278,41 @@ Next: RelativeDescent definitions/targets/source map frozen before proof, exact
 pre-scope requested. Actual maximum subtraction and literal relative entry
 recursion (including selected controls, genuine hit existence and first finite)
 remain pending. Propagation and all later comparison/arithmetic remain pending.
+
+## Relative descent and propagation native milestone
+
+RelativeDescentStatementChecks passed receipt1794981763261932739-9 with150
+current-source modules and3 exact standard-only aliases. Actual maximum/greatest,
+step conjugacy and selected affordable trajectory (including hit existence and
+first-finite equivalence) are proved. One explicit-iterate rewrite failure saved.
+PropagationStatementChecks passed receipt1794981775529460158-6 with152 modules
+and exact full3-rule conjunction. Strict current-budget and weak next-budget
+semantics retained. All frozen source/definition/target pins unchanged.
+Queue released; independent final review requested for both packets. No numbered
+promotion before review. Count-lag consequences and full gap/input remain next.
+
+Independent final reviews now approve RelativeDescent3 supporting and full
+lem:propagation. Parent notified by reviewer; count-lag target frozen separately
+before proof. Count-lag retains explicit conditional budget hypotheses and no
+initial/later survival premise. Full gap/input still must derive those budgets.
+
+CountLagStatementChecks passed receipt1794982191269433940-8,164module recursive
+closure and exact standard-only alias. Two private subtraction-lemma name failures
+preserved; public Ordinal.sub_le supplies the post-entry finite bound. No frozen
+change, no extra survival hypothesis. Queue released, independent final requested.
+Full GapInput definitions/targets now frozen5pins with separate genuine computed
+explicit tail, pending pre-scope before proof. Conditional lag is not full gap.
+
+GapInputStatementChecks passed receipt1794982682452103090-8 with169module evidence
+and both exact standard-only endpoints. Proposed explicit tail T_k is paid,
+including actual k reserves and all three strict terminal inequalities; separate
+encoded tail computability/normal-code equality is paid. One proof-only rewrite,
+indentation and explicit norm-correspondence failure saved. Queue released;
+independent full final review requested. Local-phase supplier plan is next, not
+an equal-gap/main proof claim.
+
+Whole-source FullGapInput conjunction separately frozen/reviewed and passed
+receipt1794982856995178512-7,171module recursive evidence, single standard-only
+fixed_fullGapInput alias. Independent full final approved numbered lem:gap-input.
+Original constituent gate/evidence preserved. Parent controls register adoption.
+LocalPhase four exact supporting targets now frozen5pins pending pre-scope.

@@ -37,3 +37,9 @@ Refreshed exact inventory selected `RankedWordDecisionCompletion.AlgorithmSyntax
 ## Bounded solver closure checkpoint 4
 
 Refreshed inventory: `RankedWordDecisionCompletion.OutcomeTransportProgramsProof`, 511 recursive modules/50 misses. Receipt `1794981230904294559-9` passed, compiling exactly 50 modules under unchanged caps. Printed audits use standard axioms only. No supplier source edits; queue released/reaped. Still no full Boolean promotion.
+
+## Bounded decision checkpoint 5
+
+Refreshed inventory selected actual Boolean `DecisionProof`, 651 recursive modules/50 misses. Initial receipt `1794981439333374657-9` completed the 49 unchanged old suppliers then rejected proof-only rewriting in the new flag theorem. Failed proof/receipt retained. Applied the explicitly instantiated literal-calibration theorem and Boolean case reasoning; no target/source change.
+
+Retry `1794981573576965794-8` passed the full 651-module closure and `DecisionProof.flags`. Both actual literal solver flags are now proved equivalent to the positive-input existential/universal source statements. The final joint-computability/assembly gate and recursive exact-alias evidence remain pending. Queue released/reaped.

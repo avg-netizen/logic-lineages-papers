@@ -1,0 +1,9 @@
+# Independent final review: six literal source budget suppliers
+
+Approved six supporting endpoints only. Seven frozen pins match. Independent recursive evidence exactly reproduces the author report: 18 source-matched modules, six exact standard-only aliases, zero errors. Receipt 1794982047214573429-2, source/input/output/compiler context and original bounded profile reconcile. No reviewer compiler invocation.
+
+Read full proof against actual source product and budget. Constant coefficient one and arbitrary-field mapping are proved for the literal full finite product. For every positive exponent n, the proof factors off exactly 2^padicValNat(2,n), proves the remaining exponent odd using maximal valuation, applies actual separability of the odd binomial, and uses Frobenius polynomial expansion root multiplicity to derive the precise factor bound. Actual product multiplicities add after proving each factor nonzero, yielding the literal sum mu rather than a degree substitute. Positive d supplies an actual positive summand; the exact Nat.clog power bound is proved without interpreting log zero.
+
+MappedProperInput uses injective coefficient-map degree preservation, actual field-fraction map on the numerator and literal source denominator, and the previously checked reduced proper-fraction transfer. No input properness under extension or source-root bound is assumed. Zero numerator and empty product cases remain in applicable claims. One proof-only eval_prod simplification repair changes no frozen semantics.
+
+Full geometric binary-transient assembly still must combine this source budget with actual canonical denominator divisibility, all-word contraction/properness and mapped execution naturality. No higher-pole theorem, scalar tail or complete residue profile is accepted here. No root-wide build, upstream rebuild or CI claim.

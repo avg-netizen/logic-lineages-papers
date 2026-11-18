@@ -1,0 +1,7 @@
+# Independent CountLag final review
+
+Approved supporting-only. The independent read-only recursive verifier reconciles 164 current-source local modules with native receipts, artifact/input bundles and logs, zero errors; report exactly equals author evidence. Receipt 1794982191269433940-8, fixed_countLag uses only propext, Classical.choice, Quot.sound. All four frozen pins match. No compiler invoked for this review.
+
+Read CountLagTargets, CountLagTrajectoryProof and CountLagProof. Actual first-hit trajectory data is obtained from checked relative recursion and firstEntry uniqueness. Crucially, post-entry relative states are proved finite for every later index by absolute trajectory antitonicity and ordinal subtraction, including descent below the prefix. Thus positive relative limit iff index precedes the hit holds globally, not merely conditional on survival. Initial upper survival follows from positive initial lower limit and comparison; neither lag survival nor desired count inequality is assumed. Strict induction uses current lower budget and proves upper survival through the terminal step; weak induction uses next lower budget, separates strict/equal limit cases, and yields nonstrict count bound. Frozen affordability, selected controls, actual norms and exact indices are retained.
+
+Explicit helper budget hypotheses are still hypotheses. This is not the full gap-input theorem or a new numbered promotion. Failed proof-only drafts and receipts remain preserved. No root-wide build or upstream rebuild claim.

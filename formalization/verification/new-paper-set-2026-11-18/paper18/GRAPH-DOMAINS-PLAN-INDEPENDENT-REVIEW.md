@@ -1,0 +1,7 @@
+# Independent graph-domains plan review
+
+Approved direction before concrete frozen targets; no proof acceptance. Read printed m:lem:graph-domains and GRAPH-DOMAINS-PLAN.md.
+
+Finite Cartesian enumeration of positive graph alternatives with a separate actual solver invocation per branch correctly avoids global meaningfulness of inactive tail words. Retaining the original point equalities and shared names rather than substituting is a legitimate equivalent proof: each retained tail guard must imply every tail-word domain, and incompatible equalities/guards make that branch unsatisfiable. All graph constraints stay positive; only the linear output test has Boolean negation. Every repeated input/output name and cross-clause coincidence must be retained. Empty graph list must enumerate one branch; nonempty arbitrary point tables must genuinely be handled, not specialized to cutoff zero.
+
+Concrete endpoint must include common-valuation source equivalence, positive original/natural fresh scopes, actual finite encoded branch enumeration/calibration/effectivity and finite OR of concrete total Machine.solve flags. Prove both plain branch truth and guarded meaningful solver truth equivalent; do not infer word domains merely from graph functionality. Domain/degree certificates for supplied presentations are legitimate checked properties, not a decision oracle. Explain specialization to graph-theorem outputs. This can cover full generic lemma without free-parameter QE or main comparison; await actual definitions/targets to verify scope.

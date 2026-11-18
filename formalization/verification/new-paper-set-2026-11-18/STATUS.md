@@ -1,10 +1,13 @@
 # Current comparison formalization status
 
-New-paper register: **16 checked, 151 pending / 167**. Historical register:
+New-paper register: **21 checked, 146 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper16 `lem:elementary`: actual ordinary targets, strict-to-weak inclusion
+  and reflexivity for every typed signature-valid ordinary term.
 
 - Paper17 `lem:control`: both literal permitted controls, primitive recursion,
   full numerical growth/finite-hierarchy bounds and exact modular potential.
@@ -19,6 +22,10 @@ to this replacement collection. Old statuses do not transfer automatically.
   exact selected-control thresholds and complete signed residue tables.
 - Paper17 `prop:entry-residues`: genuine first-entry computation and both
   interval cases at exact thresholds, retaining odd-prefix ceiling correction.
+- Paper17 `lem:propagation`: all three actual relative-max propagation rules
+  with exact limit/affordability/current-versus-next-budget distinctions.
+- Paper17 `lem:gap-input`: computed explicit tails and all three genuine
+  entry/count/strict endpoint comparisons, with actual budgets discharged.
 - Paper18 `u:thm:identity` and `u:thm:sign`: effective literal normal forms
   with countervaluation, and full two-sort eventual signs on genuine domains.
 - Paper18 `u:lem:sparse`: actual-ordinal sparse peaks and full inequalities.
@@ -28,11 +35,16 @@ to this replacement collection. Old statuses do not transfer automatically.
   existential and universal decisions on the same positive input.
 - Paper18 `m:thm:graphs`: effective correlated polynomial-collapse graph
   translation with actual word domains and source-expression coverage.
+- Paper18 `m:cor:polynomial-booleans`: actual effective correlated compiler
+  and complete existential/universal Boolean decision on positive originals.
 - Paper19 `lem:perturbed-control`: full control lemma over the stipulated
   primitive-recursive bounded simulation, including double-exponential growth.
 
 - Paper20 `lem:local`: actual rational pole identities, unrestricted ordinary
   series coefficient rule and genuine regular rational expansion compatibility.
+
+- Paper20 `lem:binary-transient`: every mixed word at the literal source
+  threshold preserves properness and leaves only simple geometric poles.
 
 Each has an exact current-source comparator, native gate, source-matched
 recursive evidence and independent final review. The acceptance records under
@@ -57,7 +69,12 @@ All-environment Alpha-to-encoding preservation is checked (eight modules),
 as is the genuine finite-environment/named opening bridge (nine modules).
 Full independently generated Alpha characterization and named roundtrip
 are checked (20 modules, two aliases). Comparison operation/clause
-correspondence, full elementary lemma and accessibility/height remain open.
+correspondence sufficient for the source-permitted DB elementary lemma
+is independently reviewed, and the complete elementary lemma is checked.
+Initial literal auxiliary/refinement tree endpoints are checked (29 modules,
+six aliases), using a reviewed tagged representation under unchanged core caps.
+Broader refinement/context closure, prefix escape, cut/composition, decision
+and height remain open.
 
 Paper17: near-control modular/orbit, full numerical growth and joint primitive
 recursion; factorial laws/orbit and a shared explicit finite-level bound.
@@ -68,8 +85,12 @@ is checked (142 modules, two aliases). Full first-entry residues are checked
 (150 modules). All displayed derived entry-field/bare-iterate/identity tables
 are checked supporting results (151 modules), as is the literal CNF
 relative-cost/arbitrary ordinary-addition absorption identity (60 modules).
-Relative maximum/propagation/gap arithmetic decision and
-ground comparison remain separate unpaid obligations.
+Actual relative maximum/trajectory support (150 modules) and source
+propagation (152 modules) are checked. Actual conditional count-lag support
+is checked (164 modules), deriving survival rather than assuming it. Full
+gap/input computed-tail and budget discharge is checked (171 modules).
+Thick/equal-gap/threshold certificates, arithmetic decision and ground
+comparison remain separate unpaid obligations.
 
 Archive/migration is remotely verified. All80 archived-file hashes and local
 compatibility paths pass, and all167 statement-source records reproduce from
@@ -98,5 +119,8 @@ aliases). The full source ordinary-power-series local lemma is checked
 (18 modules). Both-selector properness and canonical denominator divisibility
 are checked supporting results (11 modules, five aliases), as is actual
 ceil-half pole contraction/no-new-pole (14 modules, four aliases). Scalar
-extension/source multiplicity, mixed transient and complete residue-profile/observer remain
+extension and arbitrary mixed-word bounds are checked (23 modules). Literal
+source denominator/multiplicity/clog and mapped-input budget are checked
+(18 modules, six aliases). Complete source mixed transient is checked
+(27 modules). The complete residue-profile/bijection and observer remain
 separate unpaid obligations. No arbitrary Laurent-coefficient claim is made.

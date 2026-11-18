@@ -234,8 +234,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/ordering.tex",
           "line": 118,
           "statement_latex": "[Targets, inclusion and reflexivity]\\label{lem:elementary}\nEvery target of $\\succeq_\\star$ or $\\succ_\\star$ is ordinary.\nStrict comparison implies weak comparison. Every ordinary term is\nweakly reflexive.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.Paper16Targets.Elementary",
+          "verified_alias": "LogicLineages.PersistentMarking.Paper16StatementChecks.elementary",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/044-elementary-ordering.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:structural-stability",
@@ -578,8 +581,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/entries.tex",
           "line": 48,
           "statement_latex": "[Propagation]\\label{lem:propagation}\nIf \\(V_{i+k}>U_i=\\rho>0\\) and\n\\(b'_{i+k+1}\\ge b_i+S\\), then\n\\(V_{i+k+1}\\ge\\rho>U_{i+1}\\).\nIf instead \\(V_{i+k}=U_i\\) and\n\\(b'_{i+k+1}\\ge b_{i+1}+S\\), then\n\\(V_{i+k+1}\\ge U_{i+1}\\).\nFor equal next budgets the latter conclusion also follows from\n\\(s'\\le s\\) on all eligible candidates.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.Targets.Propagation",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_propagation",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/043-propagation.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:lem:gap-input",
@@ -588,8 +594,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/entries.tex",
           "line": 74,
           "statement_latex": "[Gap and input comparison]\\label{lem:gap-input}\nFor two fixed intervals \\(P,Q\\), put\n\\(S=\\max\\{1,N(\\mu_P),N(\\mu_Q)\\}\\). On effective tails:\n\\begin{enumerate}[label=(\\roman*)]\n\\item If \\(\\delta_P>\\delta_Q\\), then\n\\(\\tau_P(t)>\\tau_Q(t)\\) and \\(E_P(t)>E_Q(t)\\).\n\\item If \\(\\delta_P\\ge\\delta_Q\\) and \\(t>u\\), then\n\\(\\tau_P(t)\\ge\\tau_Q(u)\\) and \\(E_P(t)>E_Q(u)\\).\n\\item For fixed \\(k\\ge1\\), if\n\\(\\delta_P\\ge\\delta_Q+\\omega k\\) and \\(u+S\\le f^k(t)\\), then\n\\(\\tau_P(t)\\ge\\tau_Q(u)+k\\) and \\(E_P(t)>E_Q(u)\\).\n\\end{enumerate}",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.Targets.FullGapInput",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullGapInput",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/050-gap-input.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:lem:thick",
@@ -1184,8 +1193,11 @@
           "file": "18-standard-control-comparison/sections/polynomial-arithmetic.tex",
           "line": 641,
           "statement_latex": "[Polynomial-head Boolean comparison]\n\\label{m:cor:polynomial-booleans}\nFor positive expressions in any finite number of raw inputs, using only\nfixed polynomial limit heads below $\\omega^\\omega$, the existential\nand universal closures of every finite Boolean combination of equality\nand order atoms are decidable.  Arbitrary fixed nesting and addition\nare permitted.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.PolynomialBoolean.Targets.PolynomialBooleanComparison",
+          "verified_alias": "LogicLineages.StandardControlCurrent.PolynomialBooleanStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/045-polynomial-boolean.json"
         },
         {
           "id": "18-standard-control-comparison:prop:source-interface",
@@ -1742,8 +1754,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/cartier.tex",
           "line": 81,
           "statement_latex": "[A uniform pole-order transient]\\label{lem:binary-transient}\nFor a proper rational differential with denominator $A_d$,\neach $\\mathcal L_b$ preserves properness and introduces no\nnew finite pole. A pole of order $k$ acquires order at most\n$\\lceil k/2\\rceil$. Consequently every binary word of length\n$a=\\lceil\\log_2\\mu\\rceil$ reaches a proper differential\nwith only simple poles.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullTransient.Targets.BinaryTransient",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullTransient.StatementChecks.fixed_binaryTransient",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/048-binary-transient.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:thm:residue-observer",
@@ -1939,7 +1954,7 @@
     }
   ],
   "status_counts": {
-    "pending": 151,
-    "checked": 16
+    "pending": 146,
+    "checked": 21
   }
 }
