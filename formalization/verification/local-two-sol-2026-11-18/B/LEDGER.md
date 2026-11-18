@@ -169,3 +169,14 @@ The numbered target is `thm:compiler`. Independent root review and
 the coordinator's acceptance/register/publication decision are next.
 All Lane B compiler sessions are reaped. Failed intermediate editions
 are retained in their named packet failure directories.
+
+## 2026-11-18 21:06 UTC — ground equivalence ready
+
+**READY-FOR-ROOT-REVIEW** `cor:ground-equivalence`. The numbered comparator
+and four proof/check files are `CurrentGroundEquivalence*`. Preflight
+`1795035862328169696-93`, complete native gate `1795036028399836249-12`,
+463 recursively matched modules and zero errors.
+Evidence SHA-256 `a0fed43312ac850f396a06301002f71df821749ed26102fc086bc1b0fffee71b`. The source map, pins, receipt and
+handoff are under `paper19/CURRENT-GROUND-EQUIVALENCE-*`. Both source-exact
+computable reductions, input valuation calibration and selected actual
+DAG budgets are checked. The next target is `thm:control-hardness`.

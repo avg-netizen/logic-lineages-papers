@@ -36,7 +36,8 @@ theorem coverageCons {S : Signature} (F : Inputs S) (M : Code)
     (ih : StrictGoal F M Γ q t) (ihTail : CoverageGoal F M Γ owners ts) :
     CoverageGoal F M Γ owners (.cons t ts) := by
   intro hj u hu
-  rcases List.mem_cons.mp hu with rfl | hu
+  rcases List.mem_cons.mp hu with he | hu
+  · subst u
   · have hhead := DecisionClosureStepProof.step S F _ _ (.coverageHead hAt) hj
     have hty := ProtectedSpineAdequacyTypingProof.strict S F.data.types F.data.names Γ q t hqt
     have hbit := ProtectedSpineAdequacyTypingProof.taggedBit S F M Γ q t hm hhead.1
