@@ -1,0 +1,138 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteSchemaDistinctProof.lean:61:42: error(lean.unknownIdentifier): Unknown identifier `he`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteSchemaDistinctProof.lean:56:4: error: unsolved goals
+case refine_1.refine_1.refl
+σ : Ty
+lower : LowerCarrier σ
+V : List Name
+B : Nat
+target : Expr
+Δ : Context
+obs : List Expr := distinctObservations (observations V B Δ target σ)
+ho : List.Pairwise (fun x1 x2 => x1 ≠ x2) obs
+t : Expr
+ht : t ∈ obs
+hb : { context := Δ, kind := Kind.weak t } ∈ List.map (fun t => { context := Δ, kind := Kind.weak t }) obs
+ha✝ : { context := Δ, kind := Kind.weak t } ∈ [{ context := Δ, kind := Kind.available }]
+ha : { context := Δ, kind := Kind.weak t } = { context := Δ, kind := Kind.available }
+⊢ False
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteSchemaDistinctProof.lean:67:35: error(lean.unknownIdentifier): Unknown identifier `he`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteSchemaDistinctProof.lean:66:6: error: unsolved goals
+case refine_1.refine_2.inl.refl
+σ : Ty
+lower : LowerCarrier σ
+V : List Name
+B : Nat
+target : Expr
+Δ : Context
+obs : List Expr := distinctObservations (observations V B Δ target σ)
+ho : List.Pairwise (fun x1 x2 => x1 ≠ x2) obs
+t : Expr
+ht : t ∈ obs
+ha✝¹ :
+  { context := Δ, kind := Kind.strict t } ∈
+    [{ context := Δ, kind := Kind.available }] ++ List.map (fun t => { context := Δ, kind := Kind.weak t }) obs
+hb : { context := Δ, kind := Kind.strict t } ∈ List.map (fun t => { context := Δ, kind := Kind.strict t }) obs
+ha✝ : { context := Δ, kind := Kind.strict t } ∈ [{ context := Δ, kind := Kind.available }]
+ha : { context := Δ, kind := Kind.strict t } = { context := Δ, kind := Kind.available }
+⊢ False
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteSchemaDistinctProof.lean:69:35: error(lean.unknownIdentifier): Unknown identifier `he`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteSchemaDistinctProof.lean:68:6: error: unsolved goals
+case refine_1.refine_2.inr.refl
+σ : Ty
+lower : LowerCarrier σ
+V : List Name
+B : Nat
+target : Expr
+Δ : Context
+obs : List Expr := distinctObservations (observations V B Δ target σ)
+ho : List.Pairwise (fun x1 x2 => x1 ≠ x2) obs
+t : Expr
+ht : t ∈ obs
+r : Expr
+hr : r ∈ obs
+ha✝¹ :
+  { context := Δ, kind := Kind.strict t } ∈
+    [{ context := Δ, kind := Kind.available }] ++ List.map (fun t => { context := Δ, kind := Kind.weak t }) obs
+hb : { context := Δ, kind := Kind.strict t } ∈ List.map (fun t => { context := Δ, kind := Kind.strict t }) obs
+ha✝ : { context := Δ, kind := Kind.strict t } ∈ List.map (fun t => { context := Δ, kind := Kind.weak t }) obs
+ha : { context := Δ, kind := Kind.weak r } = { context := Δ, kind := Kind.strict t }
+⊢ False
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteSchemaDistinctProof.lean:76:35: error(lean.unknownIdentifier): Unknown identifier `he`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteSchemaDistinctProof.lean:75:6: error: unsolved goals
+case refine_2.inl.inl.refl
+σ : Ty
+lower : LowerCarrier σ
+V : List Name
+B : Nat
+target : Expr
+Δ : Context
+obs : List Expr := distinctObservations (observations V B Δ target σ)
+ho : List.Pairwise (fun x1 x2 => x1 ≠ x2) obs
+ds : List Ty
+τ : Ty
+tuple : List Nat
+ha✝² :
+  { context := Δ, kind := Kind.application ds τ tuple } ∈
+    [{ context := Δ, kind := Kind.available }] ++ List.map (fun t => { context := Δ, kind := Kind.weak t }) obs ++
+      List.map (fun t => { context := Δ, kind := Kind.strict t }) obs
+hb : { context := Δ, kind := Kind.application ds τ tuple } ∈ appKeys σ lower Δ
+ha✝¹ :
+  { context := Δ, kind := Kind.application ds τ tuple } ∈
+    [{ context := Δ, kind := Kind.available }] ++ List.map (fun t => { context := Δ, kind := Kind.weak t }) obs
+ha✝ : { context := Δ, kind := Kind.application ds τ tuple } ∈ [{ context := Δ, kind := Kind.available }]
+ha : { context := Δ, kind := Kind.application ds τ tuple } = { context := Δ, kind := Kind.available }
+⊢ False
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteSchemaDistinctProof.lean:78:35: error(lean.unknownIdentifier): Unknown identifier `he`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteSchemaDistinctProof.lean:77:6: error: unsolved goals
+case refine_2.inl.inr.refl
+σ : Ty
+lower : LowerCarrier σ
+V : List Name
+B : Nat
+target : Expr
+Δ : Context
+obs : List Expr := distinctObservations (observations V B Δ target σ)
+ho : List.Pairwise (fun x1 x2 => x1 ≠ x2) obs
+ds : List Ty
+τ : Ty
+tuple : List Nat
+r : Expr
+hr : r ∈ obs
+ha✝² :
+  { context := Δ, kind := Kind.application ds τ tuple } ∈
+    [{ context := Δ, kind := Kind.available }] ++ List.map (fun t => { context := Δ, kind := Kind.weak t }) obs ++
+      List.map (fun t => { context := Δ, kind := Kind.strict t }) obs
+hb : { context := Δ, kind := Kind.application ds τ tuple } ∈ appKeys σ lower Δ
+ha✝¹ :
+  { context := Δ, kind := Kind.application ds τ tuple } ∈
+    [{ context := Δ, kind := Kind.available }] ++ List.map (fun t => { context := Δ, kind := Kind.weak t }) obs
+ha✝ :
+  { context := Δ, kind := Kind.application ds τ tuple } ∈ List.map (fun t => { context := Δ, kind := Kind.weak t }) obs
+ha : { context := Δ, kind := Kind.weak r } = { context := Δ, kind := Kind.application ds τ tuple }
+⊢ False
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteSchemaDistinctProof.lean:80:33: error(lean.unknownIdentifier): Unknown identifier `he`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FiniteSchemaDistinctProof.lean:79:4: error: unsolved goals
+case refine_2.inr.refl
+σ : Ty
+lower : LowerCarrier σ
+V : List Name
+B : Nat
+target : Expr
+Δ : Context
+obs : List Expr := distinctObservations (observations V B Δ target σ)
+ho : List.Pairwise (fun x1 x2 => x1 ≠ x2) obs
+ds : List Ty
+τ : Ty
+tuple : List Nat
+r : Expr
+hr : r ∈ obs
+ha✝¹ :
+  { context := Δ, kind := Kind.application ds τ tuple } ∈
+    [{ context := Δ, kind := Kind.available }] ++ List.map (fun t => { context := Δ, kind := Kind.weak t }) obs ++
+      List.map (fun t => { context := Δ, kind := Kind.strict t }) obs
+hb : { context := Δ, kind := Kind.application ds τ tuple } ∈ appKeys σ lower Δ
+ha✝ :
+  { context := Δ, kind := Kind.application ds τ tuple } ∈
+    List.map (fun t => { context := Δ, kind := Kind.strict t }) obs
+ha : { context := Δ, kind := Kind.strict r } = { context := Δ, kind := Kind.application ds τ tuple }
+⊢ False

@@ -1,6 +1,6 @@
 # Current comparison formalization status
 
-New-paper register: **113 checked, 54 pending / 167**. Historical register:
+New-paper register: **116 checked, 51 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
@@ -504,3 +504,15 @@ Current18 `m:lem:kernel-residues` is checked with fresh 207-module evidence, pre
 ### Actual selected generated source image (261)
 
 Current17 `thm:generated-source` is checked after fresh 545-module evidence and independent final. Actual selected scalar circuits, closed positive coordinates, fixed-head shifts and effective literal source descriptions are retained for unrestricted internal syntax. No fixed-control semantic transfer or main comparison claim follows.
+
+### Complete ordered maximum-variable guards (265)
+
+Current18 `m:lem:guards` is checked after fresh 420-module evidence and independent final. Actual dynamic word calibration, well-founded finite compiler termination, accumulated domains and genuine quantitative gaps give exact three-way guards and same-variable decisions. Row cancellation and QE remain separate.
+
+### Actual source sorting (266)
+
+Current19 `lem:sort` is checked after fresh 246-module evidence and independent final. Actual all-policy S graphs share one valuation and source growth supplies the numeric pair coding. Composite eraser collision and Boolean compilation remain separate. The ten-contract finite-coordinate schema union267 is supporting only, not hereditary-lattice acceptance.
+
+### Complete ranked row cancellation (269)
+
+Current18 `m:lem:row` is checked after fresh 548-module evidence and independent final. Actual stack/rank termination, current-item sign bounds, numeric domains and shared-valuation family correlations are preserved. QE and decision remain separate. Composite eraser270 is generic-control/all-policy supporting work only.

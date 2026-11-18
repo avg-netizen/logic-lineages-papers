@@ -1,0 +1,9 @@
+# Independent full selected pair compiler plan review
+
+Approved direction to exact freeze for printed lem:pair-compiler, not proof acceptance. Read actual hardness.tex lines59–92, existing SelectedHardnessTargets, literal SignedPair grammar and PlainSystemCode ExactPlainCompiler.
+
+Fresh selected/all-policy semantic induction is mandatory: actual first coordinates remain positive ordinals while differences alone live in CantorGroup. Use unchanged compile and its actual scale exponent, all original unary free names and arbitrary ordinal first-field inputs permitted by the actual admissible domain. No replacement by finite/natural input values or a polynomial-head fragment. Include explicit monomial adapter correctness for every finite list with signed integer coefficients and omega powers so the source Z[omega]-linear syntax is covered, not merely an unexplained abstract Expression grammar.
+
+The16-leaf seed and variable construction scales, negative swapping, omegaShift, and scale alignment by3u+4v must come from actual new all-policy combinator equations. Reusing pure structural compiler_bound is legitimate, provided it bounds every internal type and both outputs in the unchanged unary context. Pure numeric SeededSourceCode.compiler_pr together with ExactPlainCompiler legitimately supplies effectivity of the PLAIN n-variable compiler: freeze equality to both actual encoded output trees plus scale, not a seeded expression or extra input. Total malformed numerical behavior can be arbitrary but the all-input PR claim and typed code calibration must be genuine.
+
+Full signed compiler only. No detector, fresh-ground existential alignment, solvability reduction, products of unknowns, stronger completeness classification or unchanged-G semantic transfer. Exact declarations/source map must be independently reviewed before proof.

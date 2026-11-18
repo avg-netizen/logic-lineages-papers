@@ -1,0 +1,9 @@
+# Independent composite collision plan review
+
+Approved staged direction to an exact supporting freeze, not full collision acceptance. Read plan against compiler.tex lem:collision: arbitrary actual ground P,Q, same valuation, six literal erasers, nonnegative scalar difference, equality iff, unequal gap>=2.
+
+First prove arbitrary-policy composite eraser assignment closure conditional on actual input assignments, retaining the actual weakened expression, free partial size one, two-leaf policy sum and final retained original summand. Atomic gadget invariance cannot substitute; Shape2 uniqueness may be used only at the genuinely derived two-leaf requests. No global reassociation or default-policy transfer. Define finite Scalar through actual assignment and denoteWith f; finite conditional closure must calibrate f(3*x+y+4)+1 with the exact raw/natural conventions and uniqueness.
+
+Before a complete lemma, pay actual assignment totality and positive finite scalar semantics on the ENTIRE current19 source domain at its generic admissible control. Do not narrow to Paper17's selected near/factorial controls or to existing default/Phi semantics. If unrestricted internal types demand an additional generic semantic theorem, freeze and prove that debt; do not hide it as a caller-supplied witness in full collision. Conditional supporting packets are honest but not numbered completion.
+
+Derive numeric g growth/injectivity from literal current19 SourceGrowth and then both order cases of the six actual erasers, including unequal gap two. All P/Q repetitions must retain one joint source valuation, no independent scalar oracles. Aggregation, arbitrary Boolean DAG/typed forest reconstruction, shared names, required restricted output syntax, effective size/evaluation/coRE and hardness remain separate. No native execution here.

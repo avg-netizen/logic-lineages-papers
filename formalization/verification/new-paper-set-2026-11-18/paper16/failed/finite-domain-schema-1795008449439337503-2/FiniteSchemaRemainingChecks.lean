@@ -1,0 +1,8 @@
+import LogicLineages.PersistentMarking.FiniteSchemaDistinctProof
+import LogicLineages.PersistentMarking.FiniteArgumentBoundsProof
+namespace LogicLineages.PersistentMarking.FiniteSchemaRemainingChecks
+ theorem exact_SchemaKeysDistinct : FiniteDomainSchemaTargets.SchemaKeysDistinct := FiniteSchemaDistinctProof.full
+ theorem exact_ArgumentBoundCoordinates : FiniteDomainSchemaTargets.ArgumentBoundCoordinates := FiniteArgumentBoundsProof.coordinates
+#print axioms exact_SchemaKeysDistinct
+#print axioms exact_ArgumentBoundCoordinates
+end LogicLineages.PersistentMarking.FiniteSchemaRemainingChecks

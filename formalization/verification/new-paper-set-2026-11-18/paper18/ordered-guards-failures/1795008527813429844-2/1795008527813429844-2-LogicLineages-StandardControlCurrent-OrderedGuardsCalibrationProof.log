@@ -1,0 +1,65 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedGuardsCalibrationProof.lean:26:80: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 1
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  b ≥ 3
+where
+ b := ↑a.2.1
+ c := ↑(Phi t)
+ d := ↑a.2.2.1
+ e := NumericalKernel.depth a.2.1 a.2.2.1 a.2.2.2 t
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedGuardsCalibrationProof.lean:26:21: error: Type mismatch: After simplification, term
+  hpos
+ has type
+  0 < NumericalKernel.depth a.2.1 a.2.2.1 a.2.2.2 t
+but is expected to have type
+  0 < KernelSourceCompletion.UniformCompletion.sourceSignedDepth a.2.1 a.2.2.1 a.2.2.2 t
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedGuardsCalibrationProof.lean:28:80: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  e ≥ 1
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 0
+  b ≥ 3
+where
+ b := ↑a.2.1
+ c := ↑(Phi t)
+ d := ↑a.2.2.1
+ e := KernelSourceCompletion.UniformCompletion.sourceSignedDepth a.2.1 a.2.2.1 a.2.2.2 t
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedGuardsCalibrationProof.lean:28:21: error: Type mismatch: After simplification, term
+  hpos
+ has type
+  0 < KernelSourceCompletion.UniformCompletion.sourceSignedDepth a.2.1 a.2.2.1 a.2.2.2 t
+but is expected to have type
+  0 < NumericalKernel.depth a.2.1 a.2.2.1 a.2.2.2 t
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedGuardsCalibrationProof.lean:33:11: error: Application type mismatch: The argument
+  Iff.rfl
+has type
+  ?m.194 ↔ ?m.194
+but is expected to have type
+  True
+in the application
+  And.intro Iff.rfl
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedGuardsCalibrationProof.lean:14:88: warning: This simp argument is unused:
+  h0
+
+Hint: Omit it from the simp argument list.
+  simp [OrderedGuards.LetterDomain, ̲LetterDomain, ̲OrderedGuards.letterValue, ̲letterValue, ̲h0̵,̵h̵1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedGuardsCalibrationProof.lean:16:88: warning: This simp argument is unused:
+  h0
+
+Hint: Omit it from the simp argument list.
+  simp [OrderedGuards.LetterDomain, ̲LetterDomain, ̲OrderedGuards.letterValue, ̲letterValue, ̲h0̵,̵h̵1, ̲h2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedGuardsCalibrationProof.lean:16:91: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  simp [OrderedGuards.LetterDomain, ̲LetterDomain, ̲OrderedGuards.letterValue, ̲letterValue, ̲h0, ̲h1̵,̵h̵2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
