@@ -1,10 +1,14 @@
 # Current comparison formalization status
 
-New-paper register: **124 checked, 43 pending / 167**. Historical register:
+New-paper register: **125 checked, 42 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper19 `cor:ground-equivalence`: both computable many-one reductions
+  between universal weak and strict comparison on all actual ground sources,
+  with literal code calibration and an explicit linear DAG budget (packet399).
 
 - Paper19 `thm:compiler`: complete computable strict and weak comparison
   construction with literal output calibration, exact code domain, both iff
@@ -547,3 +551,13 @@ checked (packet392). Paper17's five unchanged-control gates, including the
 `cor:standard-functional-hardness` comparator, passed natively with
 standard-only axioms and evidence; they await a review independent of their
 author (root) and are not accepted.
+Paper16 interpreter work (packets394-398): interpreter/helper monotonicity
+and weakening naturality, scope agreement, free and bound substitution, and
+fixed-point full application are checked supporting results. Packet396 also
+contains a checked obstruction: at the bottom retained family the helper and
+the interpretation of the successful marked call differ, so the literal
+same-family reading of `lem:structural-interpretation`'s application clause is
+false; the clause holds at fixed points (packet398). The numbered lemma stays
+pending until the source states its intended family. Paper18's complete
+whole-block projector is checked supporting packet393 after a fresh local
+718-module gate.

@@ -17,6 +17,7 @@
 - 20:42 UTC: root accepted supporting packets 384-387 (paper19 primitive gates, Plan compiler, comparison outputs, continuation renaming) and 388 (paper16 interpreter environments). Tools: root_review.py (Mathlib lanes), root_review_core.py (paper16), root_verify.py.
 - 20:58 UTC: stopped all three warmers (agent gates were queueing behind warm batches; agents had already compiled their own closures). One core-only supplier (ComputabilityKnowledge.PositiveExpression) was recompiled back and forth between profiles by the first warmer version; warm.py now compiles a whole Mathlib closure under the Mathlib profile.
 - 21:00 UTC: lane B session 01 returned (thm:compiler gate); resumed (logs/B-session-02.out) toward cor:ground-equivalence, thm:control-hardness and the rest.
-- 21:03 UTC: lane C gates passed first attempt (five gates through cor:standard-functional-hardness); evidence written; awaiting review by lane B (root is the author).
-- 21:10 UTC: root accepted 389-391 (supporting) and 392 (paper19 thm:compiler, numbered). Register 124 checked / 43 pending.
+- 21:02 UTC: lane C gates passed first attempt (five gates through cor:standard-functional-hardness); evidence written; awaiting review by lane B (root is the author).
+- 21:05 UTC: root accepted 389-391 (supporting) and 392 (paper19 thm:compiler, numbered). Register 124 checked / 43 pending.
 - 21:08 UTC: lane C: paper18 WholeBlockProjector full gate (718 modules) passed unchanged; accepted as supporting packet 393 (root reproduced; proofs and scope reviews are the previous coordinator's).
+- 21:10 UTC: root accepted 394-398 (paper16 interpreter packets; 396 carries the checked same-family application gap, lem:structural-interpretation NOT promoted) and 399 (paper19 cor:ground-equivalence, numbered). Register 125 checked / 42 pending.
