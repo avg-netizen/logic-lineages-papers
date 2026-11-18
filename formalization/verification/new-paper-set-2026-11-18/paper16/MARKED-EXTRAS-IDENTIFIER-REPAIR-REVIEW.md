@@ -1,0 +1,3 @@
+# Exact parser repair approval
+
+Read MarkedExtras and Targets plus preserved failure1795015688410790326-2. Approve only escaping the reserved identifier `universe` as `«universe»` at declaration and matching references. Intended identifier, type, algorithm and ten propositions remain identical; no universe-level declaration or new logical premise is introduced. Proof-local references may be escaped correspondingly. Preserve original files/freeze/receipt/log; refresh only definitions and targets pins among thirteen, then independently verify applied diff before fresh parent ticket. No proof acceptance.

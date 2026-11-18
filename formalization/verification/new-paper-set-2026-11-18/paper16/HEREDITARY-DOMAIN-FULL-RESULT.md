@@ -1,0 +1,7 @@
+# Complete original finite hereditary lattice source gate
+
+First-attempt full receipt 1795015560195646092-2 passed original core caps. HereditaryDomainChecks.exact_FullFiniteLattices literally assembles all thirteen original frozen families: construction equation, effective carrier, distinctness, nonempty carrier, both semantic coding directions, actual partial order, actual joins/meets, restriction, restriction identity/composition, preservation of joins/meets, arbitrary subset completeness.
+
+No lower-order or lower-lattice assumption survives the actual typeSize inductions. Actual lower carrier identities are global and parent-independent. Every full nonempty prefix including functional residuals remains present. Aggregate retained membership is proved via actual Valid plus unconditional EncodeDecode; combine equality alone is not used as an index-success oracle. Empty join/meet cases and finite-filter mathematical arbitrary subset existence are included. All inherited source pins are verified; only independently approved syntax repairs have occurred, with originals preserved.
+
+This is the candidate complete source lem:finite-lattices, awaiting independent final evidence/source review. No marked-constructor family(C), structural interpretation, operator fixed point, adequacy, or decision theorem is inferred. Process fully reaped and native ticket released. No full-root build or CI claim.

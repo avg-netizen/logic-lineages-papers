@@ -97,7 +97,7 @@ theorem fullCoverage : OrderedOccurrenceTargets.FullCoverage := by
         obtain ⟨j,hj,rfl⟩ := List.mem_map.mp hj
         have hj' : j∈xs ∧ j≠i := by simpa using hj
         have he := ((tieReduction xs p i j hn hi' hj'.1 hj'.2.symm).1 ν).mpr hh
-        exact names_mono xs _ p.compile (fun _ h => h.2) ν he
+        exact names_mono xs (.conjunction (.equal (.variable i) (.variable j)) p.compile) p.compile (fun _ h => h.2) ν he
       · obtain ⟨ys,hy,ho⟩ := List.mem_flatMap.mp ho
         obtain ⟨⟨a,k⟩,ha,rfl⟩ := List.mem_map.mp ho
         obtain ⟨ρ,he,hp⟩ := (names_projection ys _ ν).mp hh
@@ -107,7 +107,7 @@ theorem fullCoverage : OrderedOccurrenceTargets.FullCoverage := by
   · rw [dispatch,if_neg hx,if_neg hi]
     constructor
     · intro hp
-      obtain ⟨i,hi'⟩ := List.exists_mem_of_ne_nil hi
+      obtain ⟨i,hi'⟩ := List.exists_mem_of_ne_nil (inactive xs p) hi
       exact ⟨⟨1,xs,i,0,p.compile⟩,List.mem_map.mpr ⟨i,hi',rfl⟩,hp⟩
     · rintro ⟨o,ho,hh⟩
       obtain ⟨i,hi',rfl⟩ := List.mem_map.mp ho

@@ -12,7 +12,7 @@ open Source.FunctionalHardnessCompletion
  theorem omega_calibration (ctrl : Nat → Nat) : omega ctrl=OmegaSeed.omega := rfl
 
  theorem omega_grade (ctrl : Nat → Nat) : ClosedGrade ctrl 1 OmegaSeed.omegaExpression := by
-  have step_grade (i : Nat) (hi : 0<i) (t : ClosedExpression) (ht : ClosedGrade ctrl i t) :
+  have step_grade (i : Nat) (hi : 0 < i) (t : ClosedExpression) (ht : ClosedGrade ctrl i t) :
       ClosedGrade ctrl i (OmegaSeed.topStep t) :=
     .emul hi (.omega (i+1) (by omega)) (.add (.one i) (.add ht ht))
   exact .emul (by omega)

@@ -6,7 +6,7 @@ open Spine NameBridge DecisionPorts FiniteDomainFoundation FiniteDomainSchema He
 
 theorem universeExact : MarkedExtrasTargets.UniverseExact := by
   intro E Γ σ c
-  unfold universe
+  unfold «universe»
   rw [FiniteEqualityProof.dedupMem _ (fun a b => by simp)]
   constructor
   · intro h
@@ -32,19 +32,19 @@ theorem order : MarkedExtrasTargets.TaggedOrder := by
     apply (orderExact E Γ σ σ a a).mpr
     exact ⟨rfl,(HereditaryPartialOrderProof.partialOrder E σ Γ hw).1 a ((universeExact E Γ σ a).mp ha).2⟩
   · rintro ⟨σ,a⟩ ⟨τ,b⟩ ⟨υ,c⟩ ha hb hc hab hbc
-    obtain ⟨hστ,hab⟩ := (orderExact E Γ σ τ a b).mp hab
-    obtain ⟨hτυ,hbc⟩ := (orderExact E Γ τ υ b c).mp hbc
+    obtain ⟨hστ,habCode⟩ := (orderExact E Γ σ τ a b).mp hab
+    obtain ⟨hτυ,hbcCode⟩ := (orderExact E Γ τ υ b c).mp hbc
     subst τ; subst υ
     exact (orderExact E Γ σ σ a c).mpr ⟨rfl,
       (HereditaryPartialOrderProof.partialOrder E σ Γ hw).2.1 a b c
         ((universeExact E Γ σ a).mp ha).2 ((universeExact E Γ σ b).mp hb).2
-        ((universeExact E Γ σ c).mp hc).2 hab hbc⟩
+        ((universeExact E Γ σ c).mp hc).2 habCode hbcCode⟩
   · rintro ⟨σ,a⟩ ⟨τ,b⟩ ha hb hab hba
-    obtain ⟨he,hab⟩ := (orderExact E Γ σ τ a b).mp hab
+    obtain ⟨he,habCode⟩ := (orderExact E Γ σ τ a b).mp hab
     subst τ
     have hba := ((orderExact E Γ σ σ b a).mp hba).2
     have hab := (HereditaryPartialOrderProof.partialOrder E σ Γ hw).2.2 a b
-      ((universeExact E Γ σ a).mp ha).2 ((universeExact E Γ σ b).mp hb).2 hab hba
+      ((universeExact E Γ σ a).mp ha).2 ((universeExact E Γ σ b).mp hb).2 habCode hba
     cases hab; rfl
 
 theorem downExact : MarkedExtrasTargets.DownExact := by

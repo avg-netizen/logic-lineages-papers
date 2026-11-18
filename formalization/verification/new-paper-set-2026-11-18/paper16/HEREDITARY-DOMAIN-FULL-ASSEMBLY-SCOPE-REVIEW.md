@@ -1,0 +1,3 @@
+# Full thirteen-family assembly scope
+
+Read HereditaryDomainProof/Checks and literal FullFiniteLattices conjunction. Exact original thirteen families, in original order, directly assembled from independently finalized construction/effective/distinct, nonempty, decoded Valid+reconstruct, unconditional encode/decode, PartialOrder, Join/Meet, Restriction, identity/composition, operation preservation and arbitrary-subset completeness. No new premise or weakened interface; decode/reconstruct adapter preserves original well-formedness/retained input. Fresh parent-controlled full gate and recursive union evidence required before source-final acceptance. No marked family/adequacy/decision claim.

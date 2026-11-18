@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.MarkedExtrasDownProof
+namespace LogicLineages.PersistentMarking.MarkedExtrasDownChecks
+theorem exact_DownIsExtra : MarkedExtrasTargets.DownIsExtra := MarkedExtrasDownProof.downExtra
+theorem exact_DownIdentity : MarkedExtrasTargets.DownIdentity := MarkedExtrasDownProof.downIdentity
+#print axioms exact_DownIsExtra
+#print axioms exact_DownIdentity
+end LogicLineages.PersistentMarking.MarkedExtrasDownChecks

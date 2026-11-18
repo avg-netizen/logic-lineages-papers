@@ -22,7 +22,15 @@ theorem identity_assignment (policy : AdmissibleSum.Policy) (Γ : List Ty) :
       ordinalHeadOccurs, ordinalHeadComponentOccurs, ordinalHeadClosure,
       ordinalHeadClosureComponent, substitute, repeated, SelectedHardnessUnusedProof.shape1,
       ControlSensitivityCurrent.PolicyGadget.smallShapes.2.1, AdmissibleSum.expand]
-  all_goals first | rfl | exact ⟨rfl,rfl⟩
+  · exact ⟨rfl, rfl⟩
+  · change (AdmissibleSum.expand (policy.shape .positiveAbstraction 1)
+      _ = Term.add Term.one Term.one) ∧ _
+    constructor
+    · simp [SelectedHardnessUnusedProof.shape1, AdmissibleSum.expand] <;> rfl
+    · rfl
+  · change AdmissibleSum.expand (policy.shape .positiveAbstraction 1)
+      _ = Term.add Term.one Term.one
+    simp [SelectedHardnessUnusedProof.shape1, AdmissibleSum.expand] <;> rfl
 
 def higherVector (policy : AdmissibleSum.Policy) {Γ} (av : OrdinalVector Γ 2) : OrdinalVector Γ 2 :=
   application (σ:=.arrow .ground higherUnary) (τ:=higherUnary) policy
