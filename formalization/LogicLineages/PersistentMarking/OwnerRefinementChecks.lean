@@ -1,0 +1,11 @@
+import LogicLineages.PersistentMarking.OwnerRefinementProof
+namespace LogicLineages.PersistentMarking.OwnerRefinementChecks
+theorem exact_prefixOmission : OwnerRefinementTargets.PrefixOmission := OwnerRefinementProof.prefixOmission
+theorem exact_permutation : OwnerRefinementTargets.Permutation := OwnerRefinementProof.permutation
+theorem exact_prefixExpansion : OwnerRefinementTargets.PrefixExpansion := OwnerRefinementProof.prefixExpansion
+theorem exact_refinedCopies : OwnerRefinementTargets.RefinedCopies := OwnerRefinementProof.refinedCopies
+#print axioms exact_prefixOmission
+#print axioms exact_permutation
+#print axioms exact_prefixExpansion
+#print axioms exact_refinedCopies
+end LogicLineages.PersistentMarking.OwnerRefinementChecks

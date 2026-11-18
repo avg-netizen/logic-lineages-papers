@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.FiniteProfileProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_finiteProfileFoundation : Targets.FiniteProfileFoundation := finiteProfileFoundation
+#print axioms fixed_finiteProfileFoundation
+end LogicLineages.PermittedControl.StatementChecks

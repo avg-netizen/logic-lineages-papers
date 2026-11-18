@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.HighestPieceProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_highestPieceFoundation : Targets.HighestPieceFoundation := highestPieceFoundation
+#print axioms fixed_highestPieceFoundation
+end LogicLineages.PermittedControl.StatementChecks

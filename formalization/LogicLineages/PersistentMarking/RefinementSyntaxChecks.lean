@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.RefinementSyntaxProof
+namespace LogicLineages.PersistentMarking.RefinementSyntaxChecks
+theorem exact_fullSyntax : RefinementSyntaxTargets.FullSyntax := RefinementSyntaxProof.fullSyntax
+#print axioms exact_fullSyntax
+end LogicLineages.PersistentMarking.RefinementSyntaxChecks

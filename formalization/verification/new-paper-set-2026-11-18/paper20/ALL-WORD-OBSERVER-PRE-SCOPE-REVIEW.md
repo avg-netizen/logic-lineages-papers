@@ -1,0 +1,5 @@
+# Independent pre-scope: AllWordObserver6
+
+Approved supporting scope; all seven frozen pins independently match. Read actual definitions and all six targets against the approved plan and source map. execute processes the first list bit first; offset(i::w)=Nat.bit i (offset w), giving the required low-bit-first convention. WordCoefficient retains every n and every regular actual F2 rational, without properness or finite-support restrictions. OffsetAppend has the correct prefix scaling. ProfileExecution is for every tuple, CompatibleExecution preserves the actual Frobenius condition, and BaseObservation uses actual rational extension/reconstruction and literal output, deriving initial regularity rather than requesting it.
+
+RegularSelectors must be natively verified, not taken as an oracle. Source P/A_d prefix initialization/presentation bridge and geometric-state equivalence remain separate; this is not the full residue-observer theorem. Exact cardinality/executable conversion are stronger separate claims, not automatically requirements of the printed numbered observer theorem. No proof or compiler acceptance is made here.

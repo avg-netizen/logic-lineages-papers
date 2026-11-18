@@ -1,0 +1,6 @@
+# Independent pre-scope: actual regular F2 coefficient selectors
+Approved two supporting targets for proof development. All five frozen pins independently match. regular is actual canonical denominator nonzeroness at zero; expansion is the genuine canonical numerator/denominator PowerSeries fraction. Quantifiers cover every regular F2 rational function and all coefficient indices, without properness, finite support or numerator restrictions.
+
+RegularPreservation must derive canonical output regularity for both actual selectors, using denominator divisibility or equivalent genuine normalization. ActualCoefficientSelector uses Nat.bit i n, hence true=2n+1 and false=2n, matching odd Cartier and even C(X*f). The proof must relate actual canonical fractions through representation independence, not only a specially chosen denominator. For even selection actual X multiplication/series shift must be paid; square-root coefficients fix F2 but not arbitrary fields.
+
+This supplier is sufficient for later genuine word-index induction, but no all-word/profile/source prefix theorem is accepted yet. No unrestricted geometry, full observer or executable conversion claim. No compilation or source edits.

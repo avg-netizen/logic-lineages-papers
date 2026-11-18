@@ -54,8 +54,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/composition.tex",
           "line": 92,
           "statement_latex": "[Refinement syntax]\\label{lem:sharp-syntax}\nThe relation $\\sharpens$ is reflexive and transitive. It commutes\nwith renaming, opening, and simultaneous substitution by\npointwise refining environments. It preserves retyping of a\nmarked root and reflects a successful partial mark:\n\\[\n q\\sharpens s,\\quad \\mk(s)=s'\n \\quad\\Longrightarrow\\quad\n \\mk(q)=q'\\text{ and }q'\\sharpens s'\n \\quad\\text{for some }q'.\n \\tag{M}\n\\]\nSuppose $q\\sharpens s$ and $a_i\\sharpens b_i$ in corresponding\ntypes. If $\\ap s{\\vec b}$ succeeds, then $\\ap q{\\vec a}$ succeeds\nand its result refines the result on the right.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.RefinementSyntaxTargets.FullSyntax",
+          "verified_alias": "LogicLineages.PersistentMarking.RefinementSyntaxChecks.exact_fullSyntax",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/074-refinement-syntax.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:prefix-escape",
@@ -940,8 +943,11 @@
           "file": "18-standard-control-comparison/sections/control.tex",
           "line": 12,
           "statement_latex": "[Growth]\\label{m:lem:growth}\nEach $F_j$ is recursive and strictly increasing, with $F_j(n)\\ge2^n$.\nFor $j\\ge0$,\n\\[\n F_{j+1}(n+1)\\ge2^{F_{j+1}(n)+1}.\n\\]\nConsequently $f(z+1)\\ge(A+2)f(z)$ whenever $z\\ge A\\ge0$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.GrowthResidueTargets.FullFastControlHierarchyGrowth",
+          "verified_alias": "LogicLineages.StandardControlCurrent.GrowthResidueStatementChecks.growth",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/077-standard-control-growth.json"
         },
         {
           "id": "18-standard-control-comparison:m:lem:residues",
@@ -950,8 +956,11 @@
           "file": "18-standard-control-comparison/sections/control.tex",
           "line": 30,
           "statement_latex": "[Effective constant residues]\\label{m:lem:residues}\nFor every $m\\ge1$ one can compute $r_m\\in[0,m)$ such that\n\\[\n F_j(n)\\equiv r_m\\pmod m\\quad(j\\ge1,\\ n\\ge m).\n\\]\nIn particular $f(n)\\equiv r_m\\pmod m$ for $n\\ge\\max(0,m-100)$.\nFor $s\\ge1$, $j\\ge2$, this can be strengthened to\n\\begin{equation}\\label{m:eq:envelope}\n m\\le 2^{2^s}\\quad\\Longrightarrow\\quad F_j(s)\\equiv r_m\\pmod m.\n\\end{equation}\nIf $B=f(u)$ and $m\\le2^{2^B}$, then also $f(u+1)\\equiv r_m\\pmod m$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.GrowthResidueTargets.FullFastControlConstantResidues",
+          "verified_alias": "LogicLineages.StandardControlCurrent.GrowthResidueStatementChecks.residues",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/078-standard-control-residues.json"
         },
         {
           "id": "18-standard-control-comparison:m:thm:snyatkov",
@@ -980,8 +989,11 @@
           "file": "18-standard-control-comparison/sections/foundations.tex",
           "line": 97,
           "statement_latex": "[Basic collapse estimates]\\label{f:lem:collapse-estimates}\nIf $\\beta<\\alpha$ and $N(\\beta)\\le f(N(\\alpha))$, then\n$\\psi(\\beta)+1\\le\\psi(\\alpha)$.  For $n,k\\in\\N$,\n\\[\n \\psi(n)=n,\\qquad N(\\alpha)\\le\\psi(\\alpha),\\qquad\n \\psi(\\alpha)+k\\le\\psi(\\alpha+k).\n\\]\nIf $\\alpha\\ge\\omega$, then $\\psi(\\alpha)>f(N(\\alpha))$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.CollapseFoundationTargets.CollapseEstimates",
+          "verified_alias": "LogicLineages.StandardControlCurrent.CollapseFoundationStatementChecks.estimates",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/083-standard-collapse-estimates.json"
         },
         {
           "id": "18-standard-control-comparison:f:thm:maximum-predecessor",
@@ -1000,8 +1012,11 @@
           "file": "18-standard-control-comparison/sections/foundations.tex",
           "line": 179,
           "statement_latex": "[Limit saturation and monotonicity]\\label{f:lem:limit-saturation}\nFor every nonzero limit $\\lambda$ and every $b\\in\\N$,\n\\[\n N(M(\\lambda,b))=b.\n\\]\nFor fixed $\\lambda$ this maximum is strictly increasing in $b$.\nFor arbitrary bounds the function $M$ is weakly increasing in each\nargument wherever the predecessor interpretation is defined.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.CollapseFoundationTargets.LimitSaturation",
+          "verified_alias": "LogicLineages.StandardControlCurrent.CollapseFoundationStatementChecks.saturation",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/084-standard-limit-saturation.json"
         },
         {
           "id": "18-standard-control-comparison:f:thm:single-predecessor",
@@ -1010,8 +1025,11 @@
           "file": "18-standard-control-comparison/sections/foundations.tex",
           "line": 196,
           "statement_latex": "[Single-predecessor collapse recurrence]\n\\label{f:thm:single-predecessor}\nFor every nonzero limit $\\lambda$ and $n\\in\\N$,\n\\[\n \\psi(\\lambda+n)\n   =\\psi\\bigl(M(\\lambda,f(N(\\lambda)+n))\\bigr)+1.\n\\]",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.CollapseFoundationTargets.SinglePredecessor",
+          "verified_alias": "LogicLineages.StandardControlCurrent.CollapseFoundationStatementChecks.recurrence",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/085-standard-single-predecessor.json"
         },
         {
           "id": "18-standard-control-comparison:f:cor:closed-evaluation",
@@ -1972,7 +1990,7 @@
     }
   ],
   "status_counts": {
-    "pending": 140,
-    "checked": 27
+    "pending": 134,
+    "checked": 33
   }
 }

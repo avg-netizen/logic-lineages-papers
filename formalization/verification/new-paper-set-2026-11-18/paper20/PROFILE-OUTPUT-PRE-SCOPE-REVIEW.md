@@ -1,0 +1,6 @@
+# Independent pre-scope: literal profile output
+Approved five supporting targets for proof development. All seven frozen pins match. value is literally the finite full-root sum b_z/z, not an expansion coefficient by definition. ProductRegular, arbitrary-tuple NumeratorRatio and actual PowerSeries fraction coefficient-zero equality together pay the genuine regular-at-zero expansion interpretation. Nonzero roots, product evaluation and characteristic-two minus signs must be derived.
+
+OutputDescent requires actual compatibility and unique embedded F2 output, not fieldwide Frobenius identity. ActualBaseOutput is appropriately stronger: for any actual base rational function and tuple with extension=reconstruction, it concludes canonical denominator regularity and actual canonical series output equality. It does not assume regularity, properness or compatibility merely to bypass the desired bridge. The proof must derive denominator support/regularity, then use actual canonical extension and rational presentation independence (or equivalent actual evaluation cross multiplication).
+
+All d, zero and empty-root cases remain quantified. No all-word observer, unrestricted geometric-state equivalence, exact cardinality or executable profile conversion is asserted. No complete residue-observer promotion from this packet alone. No compilation or source edits.

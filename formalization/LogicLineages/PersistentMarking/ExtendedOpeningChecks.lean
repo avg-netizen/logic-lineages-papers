@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.ExtendedOpeningProof
+namespace LogicLineages.PersistentMarking.ExtendedOpeningChecks
+theorem exact_absSynchronize : ExtendedOpeningTargets.AbsSynchronize := ExtendedOpeningProof.absSynchronize
+theorem exact_fabsSynchronize : ExtendedOpeningTargets.FAbsSynchronize := ExtendedOpeningProof.fabsSynchronize
+#print axioms exact_absSynchronize
+#print axioms exact_fabsSynchronize
+end LogicLineages.PersistentMarking.ExtendedOpeningChecks

@@ -1,6 +1,6 @@
 # Current comparison formalization status
 
-New-paper register: **27 checked, 140 pending / 167**. Historical register:
+New-paper register: **33 checked, 134 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
@@ -8,6 +8,10 @@ to this replacement collection. Old statuses do not transfer automatically.
 
 - Paper16 `lem:elementary`: actual ordinary targets, strict-to-weak inclusion
   and reflexivity for every typed signature-valid ordinary term.
+
+- Paper16 `lem:sharp-syntax`: all eight actual refinement syntax families,
+  including two-environment substitution and successful full-call reflection,
+  without assuming general application associativity or comparison cut.
 
 - Paper17 `lem:control`: both literal permitted controls, primitive recursion,
   full numerical growth/finite-hierarchy bounds and exact modular potential.
@@ -52,6 +56,12 @@ to this replacement collection. Old statuses do not transfer automatically.
 - Paper18 `lem:source-polynomial`: every actual direct scalar head of
   literal ground-open original sources with all internal types/subtypes at
   level at most two is a polynomial limit.
+- Paper18 `m:lem:growth` and `m:lem:residues`: full literal variable-seed
+  hierarchy growth and effective constant residues, including shifted,
+  double-exponential and next-input clauses.
+- Paper18 `f:lem:collapse-estimates`, `f:lem:limit-saturation` and
+  `f:thm:single-predecessor`: full finite-tail/nonfinite estimates, actual
+  saturation/joint monotonicity and independently defined max recurrence.
 - Paper19 `lem:perturbed-control`: full control lemma over the stipulated
   primitive-recursive bounded simulation, including double-exponential growth.
 
@@ -98,11 +108,18 @@ using the actual right-witness constructor count and synchronized fresh openings
 Full two-environment substitution, arbitrary renaming and fresh opening
 constituents are checked (45 modules, three aliases), with finite image
 freshness and genuine depth-one composition. Actual full-call reflection
-remains before the full syntax lemma. Its literal-free raw call helpers
+is checked (53 modules, one alias), and the complete eight-family source
+syntax lemma has a fresh 55-module gate and independent final review.
+Its literal-free raw call helpers
 (22 modules, five aliases) and actual append/omission helpers (47 modules,
 three aliases) are checked without asserting general call associativity.
-Prefix escape, comparison cut, decision
-and height remain open.
+All25-constructor/all7-judgment auxiliary-tree injective equivariance with
+actual count preservation is checked (34 modules, one supporting alias).
+Actual Abs/FAbs fresh-name synchronization with equal auxiliary-tree count
+is checked (38 modules, two supporting aliases). Conservative elimination,
+prefix escape, comparison cut, decision and height remain open. Actual owner
+prefix omission/permutation/expansion/refined-copy prerequisites are checked
+(50 modules, four supporting aliases).
 
 Paper17: near-control modular/orbit, full numerical growth and joint primitive
 recursion; factorial laws/orbit and a shared explicit finite-level bound.
@@ -124,7 +141,11 @@ minimum-clock divergence is checked (165 modules, one supporting alias).
 Full source-general thick-block separation and computed sufficient tail
 are checked (180 modules). Equal-gap/threshold certificates, arithmetic
 decision and ground
-comparison remain separate unpaid obligations.
+comparison remain separate unpaid obligations. The actual primitive-recursive
+CNF profile and semantic finite joint-piece coverage are checked (73 modules),
+and the actual total primitive-recursive highest-piece selector with complete
+none/some/max-piece/source-sign correctness is checked (86 modules). Actual
+phase visitation and the global equal-gap certificate remain pending.
 
 Archive/migration is remotely verified. All80 archived-file hashes and local
 compatibility paths pass, and all167 statement-source records reproduce from
@@ -180,3 +201,19 @@ checked (17 modules), and every actual mixed-word source run after the literal
 transient belongs to the independent state space (41 modules). Arbitrary
 geometric-state equivalence is still not inferred from finite-field root
 membership alone.
+
+Actual unique F2 descent of Frobenius-fixed polynomials and rational functions
+is checked (23 modules, two supporting aliases). This is mathematical
+existence, not executable initial-profile conversion or a complete observer.
+
+Actual Frobenius tuple transport and both unique independent F2 divisor-state
+correspondence directions are checked (32 modules, four supporting aliases).
+Both literal transitions, actual all-tuple rational intertwining and base-state
+commuting square are checked (37 modules, four aliases). The literal complete
+output sum equals the actual regular base-series constant coefficient with
+unique F2 value (37 modules, five aliases). Unrestricted geometric equivalence
+and every-continuation observer remain separate obligations.
+
+Both selectors preserve actual canonical regular F2 rational expansions and
+select every series coefficient (20 modules, two aliases), with false=2n and
+true=2n+1. No finite-series or properness restriction is imposed.

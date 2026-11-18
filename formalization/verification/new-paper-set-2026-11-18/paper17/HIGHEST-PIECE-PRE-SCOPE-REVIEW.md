@@ -1,0 +1,8 @@
+# Independent pre-scope: executable highest exact profile piece
+Approved full supporting comparator for proof development. All four frozen pins match. Read actual code and expanded targets against the approved norm-ball plan.
+
+The literal program filters the checked encoded normal norm ball with raw code comparisons and raw profile inequality, then performs an explicit comparison-based maximum fold. It has a total result on all raw inputs; semantic correctness requires normal input codes. The PR claim must be paid for this actual program, including norm-ball generation and fold, not merely a semantic finite selector.
+
+The conjunction includes actual CNF-weight cover bounds, exact ordered-piece separation, none iff agreement throughout the full clipped domain, and full selected-candidate normality/bound/domain/inequality/maximality. It also includes the crucial highest-piece assertion against every higher unequal-profile ordinal, not only bounded candidates, and exact sign correspondence on the selected piece. The sign uses compare(profile_nu,profile_mu), consistent with the planned first-minus-second entry order. Empty E<=2 cases remain included.
+
+Piece order plus cover-bound/completeness are sufficient to rule out a distinct higher nonzero piece. The final sign correspondence does not assert the selected point equals a particular source endpoint, nor that any actual descent visits it. Those claims are unnecessary for finite sign selection but phase traversal/affordability still must be paid later. No equal-gap certificate, initial-phase exception classification, terminal comparison or effective whole-tail proof is accepted from this freeze. No compiler run or mathematical source edits.
