@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.MarkedExtrasWeakeningProof
+namespace LogicLineages.PersistentMarking.MarkedExtrasWeakeningChecks
+theorem exact_WeakeningAlgebra : MarkedExtrasTargets.WeakeningAlgebra := MarkedExtrasWeakeningProof.algebra
+#print axioms exact_WeakeningAlgebra
+end LogicLineages.PersistentMarking.MarkedExtrasWeakeningChecks

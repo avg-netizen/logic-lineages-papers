@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.MarkedExtrasEnumerationProof
+namespace LogicLineages.PersistentMarking.MarkedExtrasEnumerationChecks
+theorem exact_Enumeration : MarkedExtrasTargets.Enumeration := MarkedExtrasEnumerationProof.enumeration
+#print axioms exact_Enumeration
+end LogicLineages.PersistentMarking.MarkedExtrasEnumerationChecks

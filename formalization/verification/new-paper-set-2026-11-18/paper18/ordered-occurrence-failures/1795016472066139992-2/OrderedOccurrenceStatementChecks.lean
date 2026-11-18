@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.OrderedOccurrenceProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.OrderedOccurrenceStatementChecks
+theorem full : OrderedOccurrenceTargets.Full := OrderedOccurrenceProof.full
+#print axioms full
+end LogicLineages.StandardControlCurrent.OrderedOccurrenceStatementChecks

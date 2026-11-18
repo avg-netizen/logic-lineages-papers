@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.MarkedBaseTupleOrderProof
+namespace LogicLineages.PersistentMarking.MarkedBaseTupleOrderChecks
+theorem exact_TupleOrder : MarkedBaseTupleTargets.TupleOrder := MarkedBaseTupleOrderProof.order
+#print axioms exact_TupleOrder
+end LogicLineages.PersistentMarking.MarkedBaseTupleOrderChecks

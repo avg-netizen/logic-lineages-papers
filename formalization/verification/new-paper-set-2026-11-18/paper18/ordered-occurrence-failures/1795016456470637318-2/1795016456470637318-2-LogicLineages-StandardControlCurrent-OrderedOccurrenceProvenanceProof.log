@@ -1,0 +1,23 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:27:13: error: Application type mismatch: The argument
+  hp
+has type
+  ys.Perm xs
+but is expected to have type
+  ys.Perm xs ∧
+    ∃ a_1,
+      (live xs p)[k]? = some a_1 ∧
+        (summand a).name = (summand a_1).name ∧
+          (strictOrder ys).conjunction ((maximal xs p a).conjunction p.compile) =
+            (strictOrder ys).conjunction ((maximal xs p a_1).conjunction p.compile)
+in the application
+  And.intro hp
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:27:12: error: Invalid `⟨...⟩` notation: The expected type `False ∨ False ∨ False ∨ True` has more than one constructor
+
+Note: This notation can only be used when the expected type is an inductive type with a single constructor
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:26:61: warning: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.reduceEqDiff, ̲false_implies, ̲true_implies,a̵n̵d̵_̵ ̲true,̵t̵r̵u̵e̵_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

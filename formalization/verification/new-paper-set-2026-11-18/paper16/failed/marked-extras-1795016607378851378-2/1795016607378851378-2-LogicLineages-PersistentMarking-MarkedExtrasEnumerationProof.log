@@ -1,0 +1,11 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedExtrasEnumerationProof.lean:58:4: error: Type mismatch
+  sublistCanonical hs (MarkedExtrasFoundationProof.distinct E Γ)
+has type
+  xs =
+    List.filter (fun a => @decide (a ∈ xs) (@List.instDecidableMemOfLawfulBEq Tagged instBEqOfDecidableEq ⋯ a xs))
+      («universe» E Γ)
+but is expected to have type
+  xs =
+    List.filter
+      (fun a => @decide (a ∈ xs) (@List.instDecidableMemOfLawfulBEq Tagged instBEqProd Canonical._proof_1 a xs))
+      («universe» E Γ)

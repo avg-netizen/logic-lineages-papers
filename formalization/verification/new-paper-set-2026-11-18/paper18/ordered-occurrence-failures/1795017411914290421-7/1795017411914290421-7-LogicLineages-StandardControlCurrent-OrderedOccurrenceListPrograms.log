@@ -1,0 +1,22 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceListPrograms.lean:29:6: error: Application type mismatch: The argument
+  Primrec.pair (Primrec.comp Primrec.fst Primrec.snd)
+    (Primrec₂.comp Primrec.nat_add (Primrec.comp Primrec.snd Primrec.snd) (Primrec.const 1))
+has type
+  Primrec fun a => (a.2.1, a.2.2 + 1)
+but is expected to have type
+  Primrec₂ ?m.82
+in the application
+  Primrec.list_map (Primrec.comp Primrec.snd (Primrec.comp Primrec.snd Primrec.snd))
+    (Primrec.pair (Primrec.comp Primrec.fst Primrec.snd)
+      (Primrec₂.comp Primrec.nat_add (Primrec.comp Primrec.snd Primrec.snd) (Primrec.const 1)))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceListPrograms.lean:36:6: error: Type mismatch: After simplification, term
+  congrArg (fun z => (x, 0) :: List.map (fun q => (q.1, q.2 + 1)) z) ih
+ has type
+  @Eq (List (α × ℕ))
+    ((x, 0) ::
+      List.map (fun q => (q.1, q.2 + 1))
+        (List.rec [] (fun b l IH => (b, 0) :: List.map (fun q => (q.1, q.2 + 1)) IH) (id xs)))
+    ((x, 0) :: List.map (fun q => (q.1, q.2 + 1)) xs.zipIdx)
+but is expected to have type
+  @Eq (List (α × ℕ)) (List.rec [] (fun b l IH => (b, 0) :: List.map (fun q => (q.1, q.2 + 1)) IH) (id (x :: xs)))
+    ((x, 0) :: List.map (Prod.map id fun x => x + 1) xs.zipIdx)

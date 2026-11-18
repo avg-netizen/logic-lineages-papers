@@ -1,0 +1,3 @@
+# Exact ten-endpoint union scope
+
+Read MarkedExtrasChecks and original MarkedExtrasTargets. Approved for fresh parent-controlled native gate: exactly ten direct aliases of UniverseExact, UniverseDistinct, TaggedOrder, DownExact, DownIsExtra, DownIdentity, Enumeration, RestrictionMonotone, Weakening and WeakeningAlgebra. Each uses its reviewed concrete supplier; there is no changed statement, new hypothesis, or extra abstraction. This file is ten separate aliases, not a newly defined conjunction theorem. All ten must receive fresh exact evidence. This approval is readiness/scope only, not acceptance of an unrun full gate. Thirteen revised semantic pins remain mandatory. Supporting marked-extra packet only; no head family equation (C), operator or decision promotion.

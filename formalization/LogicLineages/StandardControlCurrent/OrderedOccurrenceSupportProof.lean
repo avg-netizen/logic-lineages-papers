@@ -13,7 +13,7 @@ private theorem all_variables (ps : List Matrix) (i : Nat) :
 
 private theorem summand_variables (s : NormalForm.Summand) : s.term.variables=[s.name] := by
   cases s <;> simp [NormalForm.Summand.term,NormalForm.Summand.name,
-    HyperWindow.valueTerm,HyperWindow.indexTerm,shiftTerm,Term.variables]
+    HyperWindow.valueTerm,HyperWindow.innerTerm,HyperWindow.indexTerm,shiftTerm,Term.variables]
 
 private theorem strict_variables (xs : List Nat) (z : Nat)
     (hz : z∈(strictOrder xs).variables) : z∈xs := by
@@ -35,7 +35,7 @@ private theorem maximal_variables (xs : List Nat) (p : NormalForm.Formula)
   have ha' := (exactLive xs p a).mp ha
   have ho' := (exactLive xs p o).mp ho
   have he : z=(summand a).name ∨ z=(summand o).name := by
-    simpa [atMost,Matrix.variables,summand_variables] using hz
+    simpa [atMost,Matrix.variables,summand_variables,or_comm] using hz
   rcases he with rfl | rfl
   · exact ha'.2.2.2
   · exact ho'.2.2.2
@@ -44,7 +44,7 @@ theorem freeSupport : OrderedOccurrenceTargets.FreeSupport := by
   intro xs p o hn ho z hz hzb
   by_cases hx : xs=[]
   · subst xs
-    simp only [dispatch,if_pos rfl,List.mem_singleton] at ho
+    simp only [dispatch,↓reduceIte,List.mem_singleton] at ho
     subst o
     exact ⟨(NormalFormSemanticProof.exactVariableMembership p z).mp hz,by simp⟩
   by_cases hi : inactive xs p=[]

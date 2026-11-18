@@ -21,6 +21,7 @@ theorem restrictedComposition (E : Environment) (Γ Δ Θ : Context) (a : Tagged
 
 theorem weakeningMember (E : Environment) (Γ Θ : Context) (xs : List Tagged) (b : Tagged) :
     b ∈ weaken E Γ Θ xs ↔ b ∈ «universe» E Θ ∧ ∃ a, a ∈ xs ∧ le E Θ b (restricted E Γ Θ a) = true := by
+  unfold weaken
   rw [MarkedExtrasFoundationProof.downExact]
   constructor
   · rintro ⟨hb,a,ha,hba⟩
@@ -34,10 +35,12 @@ theorem algebra : MarkedExtrasTargets.WeakeningAlgebra := by
   constructor
   · intro Γ xs hw hx
     have hm : xs.map (restricted E Γ Γ) = xs := by
-      rw [←List.map_id xs]
-      apply List.map_congr_left
-      intro a ha
-      exact restrictedIdentity E Γ a hw (MarkedExtrasDownProof.canonicalMember E Γ xs hx.1 a ha)
+      calc
+        xs.map (restricted E Γ Γ) = xs.map id := by
+          apply List.map_congr_left
+          intro a ha
+          exact restrictedIdentity E Γ a hw (MarkedExtrasDownProof.canonicalMember E Γ xs hx.1 a ha)
+        _ = xs := List.map_id xs
     unfold weaken
     rw [hm]
     exact MarkedExtrasDownProof.downIdentity E Γ xs hw hx

@@ -53,7 +53,12 @@ theorem enumeration : MarkedExtrasTargets.Enumeration := by
   simp only [extras,List.mem_filter,subsetsExact,closedExact]
   constructor
   · rintro ⟨hs,hc⟩
-    exact ⟨sublistCanonical hs (MarkedExtrasFoundationProof.distinct E Γ),hc⟩
+    refine ⟨?_,hc⟩
+    unfold Canonical
+    apply Eq.trans (sublistCanonical hs (MarkedExtrasFoundationProof.distinct E Γ))
+    apply List.filter_congr
+    intro a ha
+    exact decide_eq_decide.mpr Iff.rfl
   · rintro ⟨he,hc⟩
     refine ⟨?_,hc⟩
     rw [he]

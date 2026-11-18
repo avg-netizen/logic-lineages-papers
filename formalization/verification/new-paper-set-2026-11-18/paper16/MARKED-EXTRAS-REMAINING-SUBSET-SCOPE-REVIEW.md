@@ -1,0 +1,5 @@
+# Remaining MarkedExtras staged subset scope
+
+Read actual DownProof, RestrictionProof, WeakeningProof and EnumerationProof. Approve their exact original subsets for staged parent-controlled gates: DownIsExtra/DownIdentity; RestrictionMonotone/Weakening; WeakeningAlgebra; Enumeration. No target edits or added premises.
+
+Canonical filtering converts membership equivalence to literal list equality. Downset closure/identity use actual tagged transitivity/reflexivity. Restriction code monotonicity is derived via exact semantic code order, actual Restriction ValueEq and extension transitivity, not assumed. Weakening composition uses two inclusions: intermediate order transports forward, reverse witness is the actual restriction of the original member; no inverse-image lifting/surjectivity. Actual subsets equals subsequences, distinct universe makes subsequences canonical, and closedBool exactly expresses DownClosed, including empty lists. Enumeration has no unnecessary well-formed-context premise; order-dependent endpoints retain theirs. These remain ten-contract supporting infrastructure, no coherent marked-constructor family/lattice/adequacy/decision acceptance.

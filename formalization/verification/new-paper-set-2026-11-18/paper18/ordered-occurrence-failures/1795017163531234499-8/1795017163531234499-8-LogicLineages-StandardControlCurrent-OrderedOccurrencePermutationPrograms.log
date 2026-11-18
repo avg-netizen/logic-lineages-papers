@@ -1,0 +1,17 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:56:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  List.recOn ys [] fun b l IH => sliceStep (q, b, l, IH)
+in the target expression
+  sliceStep (q, y, ys, List.rec [] (fun b l IH => sliceStep (q, b, l, IH)) ys) = insertSlices q.1 q.2.1 (y :: ys)
+
+case cons
+q : ℕ × List ℕ × List ℕ
+y : ℕ
+ys : List ℕ
+ih : (List.recOn ys [] fun b l IH => sliceStep (q, b, l, IH)) = insertSlices q.1 q.2.1 ys
+⊢ sliceStep (q, y, ys, List.rec [] (fun b l IH => sliceStep (q, b, l, IH)) ys) = insertSlices q.1 q.2.1 (y :: ys)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:72:7: warning: Local variable 'left' resembles constructor 'Nat.Primrec.left' - write '.left' (with a dot) or 'Nat.Primrec.left' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:73:7: warning: Local variable 'right' resembles constructor 'Nat.Primrec.right' - write '.right' (with a dot) or 'Nat.Primrec.right' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`

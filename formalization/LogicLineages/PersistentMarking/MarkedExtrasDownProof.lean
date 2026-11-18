@@ -20,7 +20,7 @@ theorem canonicalExt (E : Environment) (Γ : Context) (xs ys : List Tagged)
   rw [hx,hy]
   apply List.filter_congr
   intro a ha
-  exact congrArg decide (propext (h a ha))
+  simp only [h a ha]
 
 theorem downExtra : MarkedExtrasTargets.DownIsExtra := by
   intro E Γ xs hw hxs

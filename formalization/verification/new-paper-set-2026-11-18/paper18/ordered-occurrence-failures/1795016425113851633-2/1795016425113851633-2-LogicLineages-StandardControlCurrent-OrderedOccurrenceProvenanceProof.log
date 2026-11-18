@@ -1,0 +1,114 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:12:4: error: Tactic `subst` failed: did not find equation for eliminating 'o'
+
+case pos
+p : NormalForm.Formula
+o : Outcome
+hn : [].Nodup
+ho :
+  o ∈
+    if True then [{ tag := 0, bound := [], witness := 0, occurrence := 0, matrix := p.compile }]
+    else
+      if inactive [] p = [] then ties [] p ++ ordered [] p
+      else
+        List.map (fun i => { tag := 1, bound := [], witness := i, occurrence := 0, matrix := p.compile })
+          (inactive [] p)
+⊢ (o.tag = 0 → [] = [] ∧ o.bound = [] ∧ o.matrix = p.compile) ∧
+    (o.tag = 1 → o.bound = [] ∧ o.witness ∈ inactive [] p ∧ o.matrix = p.compile) ∧
+      (o.tag = 2 → o.bound.length + 1 = [].length ∧ o.bound.length < [].length) ∧
+        (o.tag = 3 →
+            o.bound.Perm [] ∧
+              ∃ a,
+                (live [] p)[o.occurrence]? = some a ∧
+                  o.witness = (summand a).name ∧
+                    o.matrix = (strictOrder o.bound).conjunction ((maximal [] p a).conjunction p.compile)) ∧
+          (o.tag = 0 ∨ o.tag = 1 ∨ o.tag = 2 ∨ o.tag = 3)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:29:8: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  a ≥ 1
+where
+ a := ↑xs.length
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:35:8: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:36:8: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:37:8: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  b - c ≥ 2
+where
+ b := ↑xs.length
+ c := ↑{ tag := 3, bound := ys, witness := (summand (a, k).1).name, occurrence := (a, k).2,
+        matrix := (strictOrder ys).conjunction ((maximal xs p (a, k).1).conjunction p.compile) }.bound.length
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:39:8: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 4
+where
+ b := ↑{ tag := 3, bound := ys, witness := (summand (a, k).1).name, occurrence := (a, k).2,
+      matrix := (strictOrder ys).conjunction ((maximal xs p (a, k).1).conjunction p.compile) }.tag
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:43:6: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:45:6: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 2
+where
+ a := ↑xs.length
+ b := ↑{ tag := 1, bound := xs, witness := i, occurrence := 0, matrix := p.compile }.bound.length
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:46:6: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:47:6: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  a ≥ 4
+where
+ a := ↑{ tag := 1, bound := xs, witness := i, occurrence := 0, matrix := p.compile }.tag
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:11:24: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [̵d̵i̵s̵p̵a̵t̵c̵h̵,̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵]̵[̲d̲i̲s̲p̲a̲t̲c̲h̲,̲ ̲L̲i̲s̲t̲.̲m̲e̲m̲_̲s̲i̲n̲g̲l̲e̲t̲o̲n̲]̲ at ho
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:11:35: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [̵d̵i̵s̵p̵a̵t̵c̵h̵,̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵]̵[̲d̲i̲s̲p̲a̲t̲c̲h̲,̲ ̲i̲f̲_̲p̲o̲s̲ ̲r̲f̲l̲]̲ at ho
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:20:17: warning: This simp argument is unused:
+  Outcome.tag
+
+Hint: Omit it from the simp argument list.
+  simp only [Outcome.t̵a̵g̵,̵O̵u̵t̵c̵o̵m̵e̵.̵bound, ̲Outcome.witness, ̲Outcome.occurrence, ̲Outcome.matrix]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:20:29: warning: This simp argument is unused:
+  Outcome.bound
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵u̵t̵c̵o̵m̵e̵.̵t̵a̵g̵,̵O̵u̵t̵c̵o̵m̵e̵.̵b̵o̵u̵n̵d̵,̵O̵u̵t̵c̵o̵m̵e̵.̵w̵i̵t̵n̵e̵s̵s̵,̵O̵u̵t̵c̵o̵m̵e̵.̵o̵c̵c̵u̵r̵r̵e̵n̵c̵e̵,̵O̵u̵t̵c̵o̵m̵e̵.̵m̵a̵t̵r̵i̵x̵]̵[̲O̲u̲t̲c̲o̲m̲e̲.̲t̲a̲g̲,̲ ̲O̲u̲t̲c̲o̲m̲e̲.̲w̲i̲t̲n̲e̲s̲s̲,̲ ̲O̲u̲t̲c̲o̲m̲e̲.̲o̲c̲c̲u̲r̲r̲e̲n̲c̲e̲,̲ ̲O̲u̲t̲c̲o̲m̲e̲.̲m̲a̲t̲r̲i̲x̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:20:43: warning: This simp argument is unused:
+  Outcome.witness
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵u̵t̵c̵o̵m̵e̵.̵t̵a̵g̵,̵O̵u̵t̵c̵o̵m̵e̵.̵b̵o̵u̵n̵d̵,̵O̵u̵t̵c̵o̵m̵e̵.̵w̵i̵t̵n̵e̵s̵s̵,̵O̵u̵t̵c̵o̵m̵e̵.̵o̵c̵c̵u̵r̵r̵e̵n̵c̵e̵,̵O̵u̵t̵c̵o̵m̵e̵.̵m̵a̵t̵r̵i̵x̵]̵[̲O̲u̲t̲c̲o̲m̲e̲.̲t̲a̲g̲,̲ ̲O̲u̲t̲c̲o̲m̲e̲.̲b̲o̲u̲n̲d̲,̲ ̲O̲u̲t̲c̲o̲m̲e̲.̲o̲c̲c̲u̲r̲r̲e̲n̲c̲e̲,̲ ̲O̲u̲t̲c̲o̲m̲e̲.̲m̲a̲t̲r̲i̲x̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:20:59: warning: This simp argument is unused:
+  Outcome.occurrence
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵u̵t̵c̵o̵m̵e̵.̵t̵a̵g̵,̵O̵u̵t̵c̵o̵m̵e̵.̵b̵o̵u̵n̵d̵,̵O̵u̵t̵c̵o̵m̵e̵.̵w̵i̵t̵n̵e̵s̵s̵,̵O̵u̵t̵c̵o̵m̵e̵.̵o̵c̵c̵u̵r̵r̵e̵n̵c̵e̵,̵O̵u̵t̵c̵o̵m̵e̵.̵m̵a̵t̵r̵i̵x̵]̵[̲O̲u̲t̲c̲o̲m̲e̲.̲t̲a̲g̲,̲ ̲O̲u̲t̲c̲o̲m̲e̲.̲b̲o̲u̲n̲d̲,̲ ̲O̲u̲t̲c̲o̲m̲e̲.̲w̲i̲t̲n̲e̲s̲s̲,̲ ̲O̲u̲t̲c̲o̲m̲e̲.̲m̲a̲t̲r̲i̲x̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceProvenanceProof.lean:20:78: warning: This simp argument is unused:
+  Outcome.matrix
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵u̵t̵c̵o̵m̵e̵.̵t̵a̵g̵,̵O̵u̵t̵c̵o̵m̵e̵.̵b̵o̵u̵n̵d̵,̵O̵u̵t̵c̵o̵m̵e̵.̵w̵i̵t̵n̵e̵s̵s̵,̵O̵u̵t̵c̵o̵m̵e̵.̵o̵c̵c̵u̵r̵r̵e̵n̵c̵e̵,̵O̵u̵t̵c̵o̵m̵e̵.̵m̵a̵t̵r̵i̵x̵]̵[̲O̲u̲t̲c̲o̲m̲e̲.̲t̲a̲g̲,̲ ̲O̲u̲t̲c̲o̲m̲e̲.̲b̲o̲u̲n̲d̲,̲ ̲O̲u̲t̲c̲o̲m̲e̲.̲w̲i̲t̲n̲e̲s̲s̲,̲ ̲O̲u̲t̲c̲o̲m̲e̲.̲o̲c̲c̲u̲r̲r̲e̲n̲c̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

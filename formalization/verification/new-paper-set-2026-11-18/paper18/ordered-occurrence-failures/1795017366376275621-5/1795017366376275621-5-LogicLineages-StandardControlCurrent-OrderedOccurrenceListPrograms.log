@@ -1,0 +1,34 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceListPrograms.lean:29:44: error: Invalid field notation: Function `Nat.Primrec.add` does not have a usable parameter of type `Nat.Primrec ...` for which to substitute
+  Primrec.comp Primrec.snd Primrec.snd
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceListPrograms.lean:35:17: error: unsolved goals
+case cons
+α : Type
+inst✝ : Primcodable α
+step : Primrec₂ fun x s => (s.1, 0) :: List.map (fun q => (q.1, q.2 + 1)) s.2.2
+x : α
+xs : List α
+ih :
+  (List.recOn (id xs) [] fun b l IH => ((b, l, IH).1, 0) :: List.map (fun q => (q.1, q.2 + 1)) (b, l, IH).2.2) =
+    xs.zipIdx
+⊢ List.rec [] (fun b l IH => (b, 0) :: List.map (fun q => (q.1, q.2 + 1)) IH) (id (x :: xs)) =
+    (x, 0) :: List.map (Prod.map id fun x => x + 1) xs.zipIdx
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceListPrograms.lean:35:49: warning: This simp argument is unused:
+  List.zipIdx_succ
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵s̵t̵.̵z̵i̵p̵I̵d̵x̵_̵c̵o̵n̵s̵'̵,̵L̵i̵s̵t̵.̵z̵i̵p̵I̵d̵x̵_̵s̵u̵c̵c̵,̵i̵h̵]̵[̲L̲i̲s̲t̲.̲z̲i̲p̲I̲d̲x̲_̲c̲o̲n̲s̲'̲,̲ ̲i̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceListPrograms.lean:35:66: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp only [List.zipIdx_cons', ̲List.zipIdx_succ,̵i̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceListPrograms.lean:67:4: error: Invalid field notation: Function `Primrec.or` does not have a usable parameter of type `Primrec ...` for which to substitute
+  Primrec₂.comp hg Primrec.fst (Primrec.comp Primrec.fst Primrec.snd)
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation

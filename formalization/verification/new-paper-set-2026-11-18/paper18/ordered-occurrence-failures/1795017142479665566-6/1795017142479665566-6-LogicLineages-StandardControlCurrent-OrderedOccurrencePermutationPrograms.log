@@ -1,0 +1,38 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:54:17: error: unsolved goals
+case cons
+q : ℕ × List ℕ × List ℕ
+y : ℕ
+ys : List ℕ
+ih : (List.recOn ys [] fun b l IH => sliceStep (q, b, l, IH)) = insertSlices q.1 q.2.1 ys
+⊢ (q.1 :: y :: (ys ++ q.2.1)) ::
+      List.map (fun x => y :: x)
+        (List.rec [] (fun b l IH => (q.1 :: b :: (l ++ q.2.1)) :: List.map (fun x => b :: x) IH) ys) =
+    (q.1 :: y :: (ys ++ q.2.1)) :: List.map (fun x => y :: x) (insertSlices q.1 q.2.1 ys)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:54:44: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp only [insertSlices,i̵h̵,̵ ̲sliceStep, ̲sliceHead, ̲sliceMap]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:69:7: warning: Local variable 'left' resembles constructor 'Nat.Primrec.left' - write '.left' (with a dot) or 'Nat.Primrec.left' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:70:7: warning: Local variable 'right' resembles constructor 'Nat.Primrec.right' - write '.right' (with a dot) or 'Nat.Primrec.right' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:77:2: error: Tactic `apply` failed: could not unify the conclusion of `Primrec.list_casesOn Primrec.fst (Primrec.const [])`
+  Primrec fun a => List.casesOn a.1 [] fun b l => ?m.15 a (b, l)
+with the goal
+  Primrec fun q =>
+    match q.1 with
+    | [] => []
+    | t :: ts => [(ts, t :: q.2), (q.2, [])]
+
+Note: The full type of `Primrec.list_casesOn Primrec.fst (Primrec.const [])` is
+  Primrec₂ ?m.15 → Primrec fun a => List.casesOn a.1 [] fun b l => ?m.15 a (b, l)
+
+⊢ Primrec fun q =>
+    match q.1 with
+    | [] => []
+    | t :: ts => [(ts, t :: q.2), (q.2, [])]

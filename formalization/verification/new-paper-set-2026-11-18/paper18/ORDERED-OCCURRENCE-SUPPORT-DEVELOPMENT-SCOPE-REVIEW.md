@@ -1,0 +1,3 @@
+# Provenance and support bounded development scope
+
+Read current ProvenanceProof and SupportProof. Approve OrderedOccurrenceSupportProof bounded root (including provenance import), within revised seven-pin scope. Provenance distinguishes exact tag0/1/2/3: only tie branch strictly erases one binder; strict permutation and inactive continuation remain nondecreasing. Free support uses actual compiled Formula variable membership and whole-matrix substitution support. Tie replacement name remains bound; strict-order and maximal guards use only original bound names; permutation transports the same bound set. No additional free names, evaluation oracle, all-case termination or program claim. Fresh parent-controlled gate required; scope review is not final acceptance.

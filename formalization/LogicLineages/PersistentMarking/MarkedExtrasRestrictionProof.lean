@@ -27,12 +27,12 @@ theorem monotone : MarkedExtrasTargets.RestrictionMonotone := by
     exact (MarkedExtrasFoundationProof.universeExact E Θ σ _).mpr
       ⟨hσ,(HereditaryRestrictionProof.restriction E σ Γ Θ hw ht he a ha).1⟩
   · rintro ⟨σ,a⟩ ⟨τ,b⟩ ha hb hab
-    obtain ⟨hst,hab⟩ := (MarkedExtrasFoundationProof.orderExact E Γ σ τ a b).mp hab
+    obtain ⟨hst,habCode⟩ := (MarkedExtrasFoundationProof.orderExact E Γ σ τ a b).mp hab
     subst τ
     apply (MarkedExtrasFoundationProof.orderExact E Θ σ σ _ _).mpr
     exact ⟨rfl,codeMonotone E σ Γ Θ hw ht he a b
       ((MarkedExtrasFoundationProof.universeExact E Γ σ a).mp ha).2
-      ((MarkedExtrasFoundationProof.universeExact E Γ σ b).mp hb).2 hab⟩
+      ((MarkedExtrasFoundationProof.universeExact E Γ σ b).mp hb).2 habCode⟩
 
 theorem weakening : MarkedExtrasTargets.Weakening := by
   intro E Γ Θ xs hw ht he hx

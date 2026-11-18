@@ -1,6 +1,7 @@
 module
 public import LogicLineages.StandardControlCurrent.ComputableRankedProof
 public import Mathlib.Data.List.Permutation
+public import Mathlib.Tactic.Linarith
 @[expose] public section
 namespace LogicLineages.StandardControlCurrent.OrderedOccurrencePermutationPrograms
 
@@ -16,23 +17,43 @@ theorem slices_calibration (t : Nat) (tail ys : List Nat) :
     rw [insertSlices,List.permutationsAux2_snd_cons]
     simp only [id_eq]
     rw [←List.map_permutationsAux2,ih]
+    rfl
 
-theorem slices_primitive : Primrec (fun q : Nat × List Nat × List Nat => insertSlices q.1 q.2.1 q.2.2) := by
-  have step : Primrec₂ (fun q : Nat × List Nat × List Nat => fun s : Nat × List Nat × List (List Nat) =>
-      (q.1::s.1::(s.2.1++q.2.1)) :: s.2.2.map (s.1::·)) := by
-    have t := Primrec.fst.comp Primrec.fst
-    have y := Primrec.fst.comp Primrec.snd
-    have ys := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
-    have tail := Primrec.fst.comp (Primrec.snd.comp Primrec.fst)
-    have rest := Primrec.snd.comp (Primrec.snd.comp Primrec.snd)
-    have hhead := Primrec.list_cons.comp t (Primrec.list_cons.comp y (Primrec.list_append.comp ys tail))
-    have hmap := Primrec.list_map rest (Primrec.list_cons.comp (y.comp Primrec.fst) Primrec.snd)
-    exact Primrec.list_cons.comp hhead hmap
-  apply (Primrec.list_rec (Primrec.snd.comp Primrec.snd) (Primrec.const []) step).of_eq
+abbrev SliceInput := Nat × List Nat × List Nat
+abbrev SliceState := Nat × List Nat × List (List Nat)
+abbrev SliceStepInput := SliceInput × SliceState
+
+def sliceHead (a : SliceStepInput) : List Nat := a.1.1::a.2.1::(a.2.2.1++a.1.2.1)
+def sliceMap (a : SliceStepInput) : List (List Nat) := a.2.2.2.map (a.2.1::·)
+def sliceStep (a : SliceStepInput) : List (List Nat) := sliceHead a :: sliceMap a
+
+theorem sliceHead_primitive : Primrec sliceHead := by
+  have t : Primrec (fun a : SliceStepInput => a.1.1) := Primrec.fst.comp Primrec.fst
+  have y : Primrec (fun a : SliceStepInput => a.2.1) := Primrec.fst.comp Primrec.snd
+  have ys : Primrec (fun a : SliceStepInput => a.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
+  have tail : Primrec (fun a : SliceStepInput => a.1.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.fst)
+  exact Primrec.list_cons.comp t (Primrec.list_cons.comp y (Primrec.list_append.comp ys tail))
+
+theorem sliceCons_primitive : Primrec (fun a : SliceStepInput × List Nat => a.1.2.1 :: a.2) := by
+  have y : Primrec (fun a : SliceStepInput × List Nat => a.1.2.1) :=
+    Primrec.fst.comp (Primrec.snd.comp Primrec.fst)
+  exact Primrec.list_cons.comp y Primrec.snd
+
+theorem sliceMap_primitive : Primrec sliceMap := by
+  have rest : Primrec (fun a : SliceStepInput => a.2.2.2) := Primrec.snd.comp (Primrec.snd.comp Primrec.snd)
+  exact Primrec.list_map rest sliceCons_primitive
+
+theorem sliceStep_primitive : Primrec sliceStep :=
+  Primrec.list_cons.comp sliceHead_primitive sliceMap_primitive
+
+theorem slices_primitive : Primrec (fun q : SliceInput => insertSlices q.1 q.2.1 q.2.2) := by
+  apply (Primrec.list_rec (Primrec.snd.comp Primrec.snd) (Primrec.const []) sliceStep_primitive.to₂).of_eq
   intro q
   induction q.2.2 with
   | nil => rfl
-  | cons y ys ih => simp only [insertSlices,ih]
+  | cons y ys ih =>
+      change sliceStep (q,y,ys,_) = _
+      exact congrArg (fun z => sliceStep (q,y,ys,z)) ih
 
 abbrev Input := List Nat × List Nat
 def rank (q : Input) : Nat := (q.1.length+q.2.length+1)^2+q.1.length
@@ -46,25 +67,31 @@ def assemble (q : Input) (answers : List (List (List Nat))) : Option (List (List
   | t::ts => some ((q.2::answers[1]?.getD []).foldr
       (fun y r => insertSlices t ts y ++ r) (answers[0]?.getD []))
 
-theorem rank_primitive : Primrec rank :=
-  ((Primrec.nat_pow.comp ((Primrec.list_length.comp Primrec.fst).add
-    (Primrec.list_length.comp Primrec.snd) |>.add (Primrec.const 1)) (Primrec.const 2)).add
-    (Primrec.list_length.comp Primrec.fst)
+theorem rank_primitive : Primrec rank := by
+  have left : Primrec (fun q : Input => q.1.length) := Primrec.list_length.comp Primrec.fst
+  have right : Primrec (fun q : Input => q.2.length) := Primrec.list_length.comp Primrec.snd
+  have h : Primrec (fun q : Input => q.1.length+q.2.length+1) :=
+    Primrec.nat_add.comp (Primrec.nat_add.comp left right) (Primrec.const 1)
+  exact (Primrec.nat_add.comp (Primrec.nat_mul.comp h h) left).of_eq (fun q => by simp [rank,pow_two])
 
 theorem children_primitive : Primrec children := by
-  apply Primrec.list_casesOn Primrec.fst (Primrec.const [])
-  have ts := Primrec.snd.comp Primrec.snd
-  have t := Primrec.fst.comp Primrec.snd
-  have is := Primrec.snd.comp Primrec.fst
-  exact Primrec.list_cons.comp (ts.pair (Primrec.list_cons.comp t is))
-    (Primrec.list_cons.comp (is.pair (Primrec.const [])) (Primrec.const []))
+  have ts : Primrec (fun a : Input × (Nat × List Nat) => a.2.2) := Primrec.snd.comp Primrec.snd
+  have t : Primrec (fun a : Input × (Nat × List Nat) => a.2.1) := Primrec.fst.comp Primrec.snd
+  have is : Primrec (fun a : Input × (Nat × List Nat) => a.1.2) := Primrec.snd.comp Primrec.fst
+  have step : Primrec (fun a : Input × (Nat × List Nat) => [(a.2.2,a.2.1::a.1.2),(a.1.2,[])]) :=
+    Primrec.list_cons.comp (ts.pair (Primrec.list_cons.comp t is))
+      (Primrec.list_cons.comp (is.pair (Primrec.const [])) (Primrec.const []))
+  apply (Primrec.list_casesOn Primrec.fst (Primrec.const []) step.to₂).of_eq
+  intro q
+  rcases q with ⟨xs,is⟩
+  cases xs <;> rfl
 
 theorem child_rank (q c : Input) (hc : c∈children q) : rank c<rank q := by
   rcases q with ⟨ts,is⟩
   cases ts with
   | nil => simp [children] at hc
   | cons t ts =>
-    simp only [children,List.mem_cons,List.mem_singleton] at hc
+    simp only [children,List.mem_cons,List.mem_nil_iff,or_false] at hc
     rcases hc with rfl | rfl
     · simp only [rank,List.length_cons]
       nlinarith
@@ -81,8 +108,8 @@ theorem assemble_equation (q : Input) :
     simp only [assemble,children,List.map_cons,List.map_nil,List.getElem?_cons_zero,
       List.getElem?_cons_succ,Option.getD_some,List.permutationsAux_cons,List.permutations]
     congr 1
-    apply List.foldr_congr
-    intro y r hy
+    congr 1
+    funext y r
     rw [slices_calibration,List.permutationsAux2_append]
 
 theorem assemble_primitive : Primrec (fun a : Input × List (List (List Nat)) => assemble a.1 a.2) := by
@@ -105,7 +132,8 @@ theorem assemble_primitive : Primrec (fun a : Input × List (List (List Nat)) =>
     (Primrec.const (some ([] : List (List Nat)))) (Primrec.option_some.comp folded)
   apply result.of_eq
   intro a
-  cases a.1.1 <;> simp [assemble,List.head!,List.headI]
+  rcases a with ⟨⟨xs,old⟩,answers⟩
+  cases xs <;> simp [assemble,List.head!]
 
 theorem auxiliary_computable : Computable (fun q : Input => List.permutationsAux q.1 q.2) :=
   ComputableRankedProof.ranked Input (List (List Nat))

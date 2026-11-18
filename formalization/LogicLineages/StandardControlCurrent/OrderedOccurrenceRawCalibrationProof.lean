@@ -45,11 +45,11 @@ theorem term_calibration (o : OrderedOccurrence.Occurrence) : term (occurrenceDa
   NormalFormCodeProof.item_term _
 
 private theorem live_test (xs : List Nat) (o : OrderedOccurrence.Occurrence) :
-    (o.2.2.1 != 0 && (occurrenceData o).2.2.2.1 != 0 && name (occurrenceData o) ∈ xs) =
+    ((occurrenceData o).2.2.1 != 0 && (occurrenceData o).2.2.2.1 != 0 && name (occurrenceData o) ∈ xs) =
     (OrderedOccurrence.coefficient o != 0 && OrderedOccurrence.nonlinear (OrderedOccurrence.summand o) && (OrderedOccurrence.summand o).name ∈ xs) := by
   rcases o with ⟨r,j,c,s⟩
   cases s <;> simp [occurrenceData,name,OrderedOccurrence.coefficient,OrderedOccurrence.summand,
-    OrderedOccurrence.nonlinear,Summand.data,Summand.name]
+    OrderedOccurrence.nonlinear,Summand.data,Summand.name] <;> rfl
 
 theorem live_calibration (xs : List Nat) (p : Formula) :
     live xs p.encode=(OrderedOccurrence.live xs p).map occurrenceData := by
@@ -57,7 +57,7 @@ theorem live_calibration (xs : List Nat) (p : Formula) :
     OrderedOccurrence.live]
 
 theorem inactive_calibration (xs : List Nat) (p : Formula) : inactive xs p.encode=OrderedOccurrence.inactive xs p := by
-  simp [inactive,OrderedOccurrence.inactive,live_calibration,List.any_map,name_calibration]
+  simp [inactive,OrderedOccurrence.inactive,live_calibration,List.any_map,Function.comp_def,name_calibration]
 
 theorem all_calibration (ps : List Matrix) : all (ps.map Matrix.encode)=(OrderedOccurrence.all ps).encode := by
   induction ps with
@@ -82,18 +82,19 @@ theorem dispatch_calibration (xs : List Nat) (p : Formula) :
   · simp only [hx,hi,if_false,if_true,List.map_append,OrderedOccurrence.ties,OrderedOccurrence.ordered,
       List.map_flatMap,List.map_map,Function.comp_def]
     congr 1
-    · apply List.flatMap_congr_left
-      intro i hi
+    · apply congrArg (fun f => xs.flatMap f)
+      funext i
       apply List.map_congr_left
       intro j hj
-      simp [OrderedOccurrence.outputCode,WindowCodeProof.matrix_calibration,Term.encode,WindowCode.var]
-    · apply List.flatMap_congr_left
-      intro ys hy
+      simp only [OrderedOccurrence.outputCode]
+      exact congrArg (fun z => (2,xs.erase i,i,j,z)) (WindowCodeProof.matrix_calibration i (.variable j) p.compile)
+    · apply congrArg (fun f => xs.permutations.flatMap f)
+      funext ys
       rw [live_calibration,List.zipIdx_map,List.map_map]
       apply List.map_congr_left
       intro oi hoi
       simp [Function.comp_def,OrderedOccurrence.outputCode,name_calibration,strict_calibration,
-        ←maximal_calibration,Matrix.encode,WindowCode.conjunction]
+        ←maximal_calibration,Matrix.encode,WindowCode.conjunction,live_calibration]
   · simp [hx,hi,OrderedOccurrence.outputCode,List.map_map,Function.comp_def]
 
 end LogicLineages.StandardControlCurrent.OrderedOccurrenceRaw

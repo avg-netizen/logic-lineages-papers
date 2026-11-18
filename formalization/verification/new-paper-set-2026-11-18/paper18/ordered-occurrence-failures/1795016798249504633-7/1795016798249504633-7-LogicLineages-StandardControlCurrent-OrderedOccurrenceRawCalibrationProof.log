@@ -1,0 +1,16 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawCalibrationProof.lean:90:6: error: Type mismatch
+  WindowCodeProof.matrix_calibration i (Term.variable j) p.compile
+has type
+  WindowCode.matrixSubstitute i (Term.variable j).encode p.compile.encode =
+    (p.compile.substitute i (Term.variable j)).encode
+but is expected to have type
+  (2, xs.erase i, i, j, WindowCode.matrixSubstitute i (WindowCode.var j) p.compile.encode) =
+    (2, xs.erase i, i, j, (p.compile.substitute i (Term.variable j)).encode)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawCalibrationProof.lean:96:12: warning: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  simp [F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵d̵e̵f̵,̵OrderedOccurrence.outputCode, ̲name_calibration, ̲strict_calibration,
+          ← ̲maximal_calibration, ̲Matrix.encode, ̲WindowCode.conjunction, ̲live_calibration]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

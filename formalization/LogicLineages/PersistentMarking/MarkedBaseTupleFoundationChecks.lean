@@ -1,0 +1,9 @@
+import LogicLineages.PersistentMarking.MarkedBaseTupleFoundationProof
+namespace LogicLineages.PersistentMarking.MarkedBaseTupleFoundationChecks
+theorem exact_TupleEnumeration : MarkedBaseTupleTargets.TupleEnumeration := MarkedBaseTupleFoundationProof.enumeration
+theorem exact_TupleDistinct : MarkedBaseTupleTargets.TupleDistinct := MarkedBaseTupleFoundationProof.distinct
+theorem exact_TupleOrderExact : MarkedBaseTupleTargets.TupleOrderExact := MarkedBaseTupleFoundationProof.orderExact
+#print axioms exact_TupleEnumeration
+#print axioms exact_TupleDistinct
+#print axioms exact_TupleOrderExact
+end LogicLineages.PersistentMarking.MarkedBaseTupleFoundationChecks

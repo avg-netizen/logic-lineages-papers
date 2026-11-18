@@ -1,0 +1,25 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedExtrasWeakeningProof.lean:38:7: error: unknown tactic
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedExtrasWeakeningProof.lean:37:48: error: unsolved goals
+E : Environment
+Γ : Context
+xs : List Tagged
+hw : WellFormed E.types E.ports Γ
+hx : Extra E Γ xs
+⊢ List.map (restricted E Γ Γ) xs = xs
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedExtrasWeakeningProof.lean:36:2: error: unsolved goals
+case left
+E : Environment
+Γ : Context
+xs : List Tagged
+hw : WellFormed E.types E.ports Γ
+hx : Extra E Γ xs
+hm : List.map (restricted E Γ Γ) xs = xs
+⊢ weaken E Γ Γ xs = xs
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedExtrasWeakeningProof.lean:33:58: error: unsolved goals
+case right
+E : Environment
+⊢ ∀ (Γ Δ Θ : Context) (xs : List Tagged),
+    WellFormed E.types E.ports Γ →
+      WellFormed E.types E.ports Δ →
+        WellFormed E.types E.ports Θ →
+          Extends Γ Δ → Extends Δ Θ → Extra E Γ xs → weaken E Δ Θ (weaken E Γ Δ xs) = weaken E Γ Θ xs
