@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.LiteralCovarianceDeltaProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+theorem fixed_fullLiteralCovariance : LiteralCovarianceTargets.FullLiteralCovariance :=
+  LiteralCovarianceProof.fullLiteralCovariance
+#print axioms fixed_fullLiteralCovariance
+end LogicLineages.PermittedControl.StatementChecks

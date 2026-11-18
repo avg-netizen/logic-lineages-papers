@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullGenericCountProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullGenericCount.StatementChecks
+theorem fixed_completeCount : Targets.CompleteCount := completeCount
+#audit_namespace LogicLineages.CartierObserverCurrent.FullGenericCount.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullGenericCount.StatementChecks

@@ -15,7 +15,7 @@ private theorem controlledStrictness (f : Nat → Nat) (a : Ordinal.{0})
     (ha : a < epsilonZero) (b : Ordinal.{0}) (hb : b < a)
     (hn : actualOrdinalNorm b ≤ f (actualOrdinalNorm a)) :
     collapseWith f b + 1 ≤ collapseWith f a :=
-  (ParametricActualCollapse.equation f a ha).1 b hb hn
+  (ParametricActualCollapse.Proof.equation f a ha).1 b hb hn
 
 private theorem actual_finite_tail (a : Ordinal) (ha : a < epsilonZero) (n : Nat) :
     a + (n : Ordinal) < epsilonZero ∧
@@ -54,7 +54,7 @@ theorem genericRecurrence : Targets.GenericRecurrence := by
       have ht := actual_finite_tail a ha n
       change collapseWith f (a + (n : Ordinal)) = collapseWith f eta + 1
       apply Nat.le_antisymm
-      · apply (ParametricActualCollapse.equation f _ ht.1).2
+      · apply (ParametricActualCollapse.Proof.equation f _ ht.1).2
         intro x hx hn
         have hnb : actualOrdinalNorm x ≤ b := by
           simpa only [ht.2] using hn
@@ -86,7 +86,7 @@ theorem genericRecurrence : Targets.GenericRecurrence := by
 
 
 theorem completePredecessor : Targets.CompletePredecessor :=
-  ⟨ParametricActualCollapse.exactRecursion, ParametricActualCollapse.exactPhiSpecialization,
+  ⟨ParametricActualCollapse.Proof.exactRecursion, ParametricActualCollapse.Proof.exactPhiSpecialization,
     genericRecurrence⟩
 
 #audit_namespace LogicLineages.CartierObserverCurrent.FullSinglePredecessor

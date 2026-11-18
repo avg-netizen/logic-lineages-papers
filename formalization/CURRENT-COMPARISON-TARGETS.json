@@ -1482,8 +1482,11 @@
           "file": "18-standard-control-comparison/sections/unary-kernels.tex",
           "line": 132,
           "statement_latex": "[Effective profile reserve]\\label{u:lem:reserve}\nFrom a lower profile $P$ below $L>\\omega$ one computes a nonempty word\n\\begin{equation}\n F=h_{\\rho_l}\\circ\\cdots\\circ h_{\\rho_1},\\quad\n F(z)>P(z)\\ (z\\ge z_0),\\quad\n R=\\sum_j(\\norm(\\rho_j)+1),\\quad\n H=\\max_j\\norm(\\operatorname{lead}(\\rho_j)),          \\label{u:display:5-2}\n\\end{equation}\nwith every $\\rho_j<L$. If $\\pi\\ge\\omega$ is principal and at least every\ndisplayed leading monomial, a descent from $\\pi R+n$, $n\\ge z\\ge z_0$,\nhas terminal norm greater than $P(z)$. The same conclusion holds with any\nadditional permanent numerical mass $c$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.ProfileReserveTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.ProfileReserveStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/214-profile-reserve.json"
         },
         {
           "id": "18-standard-control-comparison:u:lem:direct",
@@ -1492,8 +1495,11 @@
           "file": "18-standard-control-comparison/sections/unary-kernels.tex",
           "line": 167,
           "statement_latex": "[Direct kernel growth]\\label{u:lem:direct}\nFor fixed $L>\\omega$ principal and fixed lower profile $P$, one computes\n$T$ such that, for $t\\ge T$ and every genuine mass $0\\le c\\le t-\\norm(L)$,\n\\begin{equation}\n                         \\KK Lc(t)>P(t).             \\label{u:display:5-3}\n\\end{equation}\nAlso, $\\KK\\pi c(t)\\le h_\\pi(t)$ on its genuine domain.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.DirectGrowthTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.DirectGrowthStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/218-direct-growth.json"
         },
         {
           "id": "18-standard-control-comparison:u:thm:adjacent",
@@ -1502,8 +1508,11 @@
           "file": "18-standard-control-comparison/sections/unary-kernels.tex",
           "line": 191,
           "statement_latex": "[Cross-mass strict-input separation]\\label{u:thm:adjacent}\nFor a fixed principal $L>\\omega$ and fixed lower profile $P$ with reserve\ndata \\eqref{u:display:5-2}, put\n\\begin{equation}\n              T=\\max(4,R+5,z_0,\\norm L,H).            \\label{u:display:6-1}\n\\end{equation}\nFor $t\\ge T$, $0\\le c\\le t+1-\\norm L$, and\n$0\\le e\\le t-\\norm L$,\n\\begin{equation}\n       \\KK Lc(t+1)>P(\\KK Le(t)+\\EE Le(t)).            \\label{u:display:6-2}\n\\end{equation}\nThere is no ordering requirement on $c,e$. More generally the same\nconclusion holds with any $u>t$ and any mass genuine at $u$ on the left.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.AdjacentSeparationTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.AdjacentSeparationStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/223-adjacent-separation.json"
         },
         {
           "id": "18-standard-control-comparison:u:thm:limitmass",
@@ -1991,8 +2000,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/descent.tex",
           "line": 59,
           "statement_latex": "[Greedy predecessor]\\label{thm:greedy}\nThe following simultaneous recursion computes $M,L$ exactly.\nWrite $\\alpha=\\omega^e c+r$ with $c>0$, $r<\\omega^e$, and\n$w=1+\\norm(e)$.\n\\begin{enumerate}[label=(\\roman*)]\n\\item $M(\\alpha,0)=0$ and $L(0,b)=L(e,0)=0$.\n\\item If $r>0$ and $cw\\le b$, then\n\\[\n M(\\alpha,b)=\\omega^e c+M(r,b-cw).\n\\]\n\\item Otherwise, put\n\\[\n a=\\begin{cases}\n \\min(c-1,\\lfloor b/w\\rfloor),&r=0,\\\\\n \\min(c,\\lfloor b/w\\rfloor),&r>0.\n \\end{cases}\n\\]\nThen $M(\\alpha,b)=\\omega^e a+L(e,b-aw)$.\n\\item If $e,b>0$, put $\\eta=M(e,b-1)$,\n$v=1+\\norm(\\eta)$ and $(q,s)=\\operatorname{divmod}(b,v)$.\nThen $L(e,b)=\\omega^\\eta q+L(\\eta,s)$.\n\\end{enumerate}\nZero blocks are omitted.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullGreedyTargets.FullOptimizedMaximumAlgorithm",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullGreedy.StatementChecks.fixed_complete",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/220-greedy-paper20.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:lem:saturation",
@@ -2001,8 +2013,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/descent.tex",
           "line": 103,
           "statement_latex": "[Saturation]\\label{lem:saturation}\nFor every nonzero limit $\\lambda$ and every budget $b$,\n$\\norm(M(\\lambda,b))=b$. The maximum is strictly increasing\nwith $b$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullSaturationTargets.FullSaturation",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullSaturation.StatementChecks.fixed_complete",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/221-saturation-paper20.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:thm:predecessor",
@@ -2011,8 +2026,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/descent.tex",
           "line": 117,
           "statement_latex": "[Single-predecessor recurrence]\\label{thm:predecessor}\nFor every nonzero limit $\\lambda$ and $n\\in\\N$,\n\\[\n \\psi_f(\\lambda+n)\n =\\psi_f\\bigl(M(\\lambda,f(\\norm(\\lambda)+n))\\bigr)+1.\n\\]",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullSinglePredecessor.Targets.CompletePredecessor",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullSinglePredecessor.StatementChecks.fixed_completePredecessor",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/213-generic-single-predecessor.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:prop:complete",
@@ -2021,8 +2039,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/descent.tex",
           "line": 161,
           "statement_latex": "[Complete-count identity]\\label{prop:complete}\nThe descent terminates and\n\\[\n Z_\\lambda(t)=f^{\\,\\tau_\\lambda(t)}(t),\\qquad\n J_\\lambda(t)=Z_\\lambda(t)+\\tau_\\lambda(t).\n\\]",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullGenericCount.Targets.CompleteCount",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullGenericCount.StatementChecks.fixed_completeCount",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/217-generic-complete-count.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:lem:matrix",
@@ -2155,7 +2176,7 @@
     }
   ],
   "status_counts": {
-    "pending": 79,
-    "checked": 88
+    "pending": 72,
+    "checked": 95
   }
 }

@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.AdjacentSeparationTargets
+public import LogicLineages.OrdinalComparison.AdjacentProfileProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.AdjacentSeparationProof
+theorem full : AdjacentSeparationTargets.Full := OrdinalComparison.fullActualCrossMassStrictInputSeparation
+end LogicLineages.StandardControlCurrent.AdjacentSeparationProof

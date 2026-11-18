@@ -1,0 +1,19 @@
+# Toward full recursive observation closure and fresh-port normalization
+
+Canonical lambda descent is at independent final review. Next work must pay the full source request invariant and arbitrary original fresh-name normalization, not only add isolated finite inventories.
+
+## Literal source universe suppliers
+
+Define a state invariant from fixed input K,V,H and a concrete port context Γ: every member of declaration-retaining auxiliarySupport q lies in K; every literal source head lies in H; each typed free occurrence is either in V or is the exact typed variable stored at a used Γ slot. For lists require it for every actual occurrence. No size/extras-length bound. Initial ordinary s obtains the invariant from the checked typed ordinary support correspondence, literal heads and free inventory.
+
+Freeze genuine invariant preservation for actual successful marking, retyping to a type in K, selected base/extra occurrences, actual ownerCopies (all finite ArrowPrefix decompositions), fresh port opening, and successful original whole-tuple application. Full-call preservation uses source/argument typing plus subtype-closed K to derive residual output membership; retain blocked original-variable calls and do not infer a converse from substitution. Bound/free substitution support proofs must retain original head declarations, current annotations and all base/extra descendants. Target occurrence support/typed port assignment proves every observed annotation and its arrow domain belongs to K when K is the actual target input universe. This discharges sigma-in-K in the canonical descent support lemma.
+
+## Normalized comparator, preserving original rules
+
+Define a port-indexed presentation of the SAME six original judgments Weak/Strict/Matching/Multiset/Coverage/Whole. Copy all original endpoint typing, occurrence/Remove/Split/nonempty deletion, original full-call and whole-owner premises literally. Only Abs/FAbs choose the concrete firstUnused port and recurse at fillSlot Γ i σ. Ordinary head Fun, Put, Select, Copy, Stat and all list clauses remain exactly original. Prove erasure to original judgments immediately; no decision semantics or extra ordering axiom is built into this relation.
+
+The normalization proof should use the actual original six-mutual-relation recursor with a strengthened motive quantified over a type-preserving injective free-name renaming. At a binder, compose the current renaming with the finite typed swap sending the image of the original fresh binder name to the canonical available port. Source/target parent terms are unchanged by that swap because both names are absent there: original freshness plus injectivity gives one absence, and source universe/target observation invariants plus unused-slot freshness give the other. Apply the actual child IH under the composed renaming, not to an unrelated same-size derivation. This avoids assuming a cut/composition/normalization theorem or duplicating auxiliary 25-rule trees. Actual rename/open and rename/full-call equations must be instantiated; canonical port freshness must cover BOTH source and target.
+
+Joint motives carry target observation membership for term comparisons and membership for every literal target-list occurrence, plus actual source universe invariants. List Remove/Split transfers those memberships; strict marking keeps source inventory; Whole retyping derives its output type from the observed target argument. Source and target same-type premises remain real PaperTerm facts. At each lambda descent use the checked one-slot budget and actual bound-substitution coherence. Bound names are not silently identified with free ports.
+
+Only after these exact contracts are independently frozen/proved should the full printed lem:observation-closure be assembled, retaining original derivability through the normalization equivalence. Effective finite hereditary domains/fixedpoint/adequacy and well-foundedness remain later obligations.

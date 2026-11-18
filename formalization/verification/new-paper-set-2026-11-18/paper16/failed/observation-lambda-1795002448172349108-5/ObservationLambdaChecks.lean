@@ -1,0 +1,21 @@
+import LogicLineages.PersistentMarking.ObservationLambdaProof
+namespace LogicLineages.PersistentMarking.ObservationLambdaChecks
+theorem exact_FirstSound : ObservationLambdaTargets.FirstSound := ObservationPortUpdateProof.firstSound
+#print axioms exact_FirstSound
+theorem exact_FirstComplete : ObservationLambdaTargets.FirstComplete := ObservationPortUpdateProof.firstComplete
+#print axioms exact_FirstComplete
+theorem exact_FillExact : ObservationLambdaTargets.FillExact := ObservationPortUpdateProof.fillExact
+#print axioms exact_FillExact
+theorem exact_FillWellFormed : ObservationLambdaTargets.FillWellFormed := ObservationPortUpdateProof.fillWellFormed
+#print axioms exact_FillWellFormed
+theorem exact_AssignmentWeakening : ObservationLambdaTargets.AssignmentWeakening := ObservationPortUpdateProof.assignmentWeakening
+#print axioms exact_AssignmentWeakening
+theorem exact_AssignmentPrepend : ObservationLambdaTargets.AssignmentPrepend := ObservationPortUpdateProof.assignmentPrepend
+#print axioms exact_AssignmentPrepend
+theorem exact_OpeningCoherence : ObservationLambdaTargets.OpeningCoherence := ObservationOpeningProof.coherence
+#print axioms exact_OpeningCoherence
+theorem exact_LambdaReflection : ObservationLambdaTargets.LambdaReflection := ObservationOpeningProof.reflection
+#print axioms exact_LambdaReflection
+theorem exact_LambdaDescent : ObservationLambdaTargets.LambdaDescent := ObservationLambdaProof.descent
+#print axioms exact_LambdaDescent
+end LogicLineages.PersistentMarking.ObservationLambdaChecks

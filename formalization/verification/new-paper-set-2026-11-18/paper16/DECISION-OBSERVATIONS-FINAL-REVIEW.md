@@ -1,0 +1,9 @@
+# Independent final: eleven observation enumeration supports
+
+Approved full supporting eleven-endpoint packet, not observation closure or decision. Read current occurrence enumeration/typing, assignment/opening and final observation proofs. Enumeration soundness follows actual syntax; completeness uses the actual mutual occurrence derivation including root, lambda, head, marked base/extras and both list paths. The rewritten typing proof genuinely generalizes source type/typing across Occurs recursion, derives BaseTyped-to-ExtrasTyped internally and preserves the nearest-first ambient prefix. Ordinary/valid propagation covers actual occurrences.
+
+Assignments enumerate all compatible occupied ports by finite products, including repeated port choices and extra occupied slots; actual BaseTyped and exact length are derived, not assumed from injectivity or stack=used. Opening uses actual simultaneous bound substitution with checked parallel typing. The depth/ordinary/valid proof covers local bound slots, missing external slots and inserted free values at every binder depth. Final enumeration is exactly the filtered occurrence/assignment image. PaperTerm, ordinary result and residual depth+used<=B follow internally from the original source and genuine occurrence/opening facts.
+
+Independent compiler-free verifier reproduced author evidence exactly: 34 current-source modules, eleven exact standard-only aliases, zero errors. All seven semantic pins and inherited freezes verified. Full receipt 1795001947299864318-6 passed original core caps. Resource stops and directional enumeration/derivation-typing repairs were preserved and reviewed; the last bound-branch simp repair retains the identical subFacts invariant. No cap/target change, no native invocation by reviewer.
+
+No fresh-name normalization, lambda extension closure, recursive comparison/list inventory closure, adequacy or decision theorem credit. Those remain separate obligations.

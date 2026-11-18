@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.DirectGrowthTargets
+public import LogicLineages.OrdinalComparison.ProfileDirectProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.DirectGrowthProof
+theorem full : DirectGrowthTargets.Full := OrdinalComparison.fullActualDirectKernelGrowth
+end LogicLineages.StandardControlCurrent.DirectGrowthProof

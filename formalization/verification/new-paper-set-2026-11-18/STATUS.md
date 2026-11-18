@@ -1,10 +1,28 @@
 # Current comparison formalization status
 
-New-paper register: **88 checked, 79 pending / 167**. Historical register:
+New-paper register: **95 checked, 72 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper18 `u:thm:adjacent`: complete cross-mass strict-input separation
+  with exact threshold and actual packed-state/norm accounting.
+
+- Paper20 `thm:greedy` and `lem:saturation`: fresh complete source
+  optimized greedy algorithm/effectivity and both actual saturation clauses.
+
+- Paper18 `u:lem:direct`: actual uniform direct kernel growth and the
+  complete entire-domain upper bound, with genuine source-domain proofs.
+
+- Paper20 `prop:complete`: actual complete-event count and norm-orbit
+  identities for arbitrary increasing inflationary controls.
+
+- Paper18 `u:lem:reserve`: genuine compiled profile reserve and full
+  word/terminal guarantees for arbitrary permanent numerical mass.
+
+- Paper20 `thm:predecessor`: genuine single-predecessor recursion for
+  every strictly increasing inflationary control, not only the displayed control.
 
 - Paper18 `u:lem:stage`: actual one-stage reserve, full first-cut trace
   and strict bound without an extra prefix-mass restriction.

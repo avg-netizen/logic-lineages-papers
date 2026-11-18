@@ -1,0 +1,10 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullGreedyTargets
+public import LogicLineages.OrdinalComparison.OptimizedAlgorithmProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullGreedy
+theorem complete : FullGreedyTargets.FullOptimizedMaximumAlgorithm :=
+  OrdinalComparison.fullOptimizedMaximumAlgorithm
+#audit_namespace LogicLineages.CartierObserverCurrent.FullGreedy
+end LogicLineages.CartierObserverCurrent.FullGreedy

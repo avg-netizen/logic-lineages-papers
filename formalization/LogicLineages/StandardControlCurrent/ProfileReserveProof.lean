@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.ProfileReserveTargets
+public import LogicLineages.OrdinalComparison.ProfileReserveProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.ProfileReserveProof
+theorem full : ProfileReserveTargets.Full := OrdinalComparison.fullActualEffectiveProfileReserve
+end LogicLineages.StandardControlCurrent.ProfileReserveProof

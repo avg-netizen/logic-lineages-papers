@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.FullStandardResiduesProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.FullStandardResidues.StatementChecks
+theorem fixed_completeResidues : Targets.CompleteResidues := completeResidues
+#audit_namespace LogicLineages.ControlSensitivityCurrent.FullStandardResidues.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.FullStandardResidues.StatementChecks

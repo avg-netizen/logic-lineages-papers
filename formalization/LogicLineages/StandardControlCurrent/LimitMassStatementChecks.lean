@@ -1,0 +1,9 @@
+module
+public import LogicLineages.StandardControlCurrent.LimitMassProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.LimitMassStatementChecks
+theorem full : LimitMassTargets.Full := LimitMassProof.full
+end LogicLineages.StandardControlCurrent.LimitMassStatementChecks
+#audit_namespace LogicLineages.StandardControlCurrent.LimitMassStatementChecks
+#print axioms LogicLineages.StandardControlCurrent.LimitMassStatementChecks.full

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullGreedyProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullGreedy.StatementChecks
+theorem fixed_complete : FullGreedyTargets.FullOptimizedMaximumAlgorithm := complete
+#audit_namespace LogicLineages.CartierObserverCurrent.FullGreedy.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullGreedy.StatementChecks

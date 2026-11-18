@@ -60,13 +60,12 @@ mutual
   | free σ x => exact ⟨rfl,id,fun _ => id⟩
   | bound σ i =>
     by_cases hi : i < d
-    · simp only [substitute,if_pos hi]; exact ⟨rfl,id,fun _ => id⟩
+    · simp [substitute,hi,lambdaDepth,Ordinary,Valid]
     · cases hl : vs.get (i-d) with
-      | none => simp only [substitute,if_neg hi,hl]; exact ⟨rfl,id,fun _ => id⟩
+      | none => simp [substitute,hi,hl,lambdaDepth,Ordinary,Valid]
       | some v =>
         obtain ⟨τ,x,rfl⟩ := hv (i-d) v hl
-        simp only [substitute,if_neg hi,hl,shift]
-        exact ⟨rfl,fun _ => trivial,fun _ _ => trivial⟩
+        simp [substitute,hi,hl,shift,lambdaDepth,Ordinary,Valid]
   | lam σ q =>
     obtain ⟨hd,ho,hvalid⟩ := subFacts vs hv (d+1) q
     exact ⟨by simp only [substitute,lambdaDepth,hd],ho,hvalid⟩

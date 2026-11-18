@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.FullStandardResiduesTargets
+public import LogicLineages.OrdinalComparison.ControlResidueProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.FullStandardResidues
+open LogicLineages.OrdinalComparison
+theorem completeResidues : Targets.CompleteResidues :=
+  ⟨fastControlResidueRange, fastControlResiduePrimitiveRecursive,
+    fastControlConstantResidues, phiShiftedConstantResidues⟩
+#audit_namespace LogicLineages.ControlSensitivityCurrent.FullStandardResidues
+end LogicLineages.ControlSensitivityCurrent.FullStandardResidues

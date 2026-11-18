@@ -1,0 +1,11 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullSaturationTargets
+public import LogicLineages.OrdinalComparison.ActualLimitPredecessor
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullSaturation
+theorem complete : FullSaturationTargets.FullSaturation :=
+  ⟨OrdinalComparison.actualLimitMaximumPredecessorSaturation,
+    OrdinalComparison.actualLimitMaximumPredecessorStrictGrowth⟩
+#audit_namespace LogicLineages.CartierObserverCurrent.FullSaturation
+end LogicLineages.CartierObserverCurrent.FullSaturation

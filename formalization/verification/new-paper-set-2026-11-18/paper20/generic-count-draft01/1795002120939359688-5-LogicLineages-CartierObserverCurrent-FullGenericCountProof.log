@@ -1,0 +1,19 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/FullGenericCountProof.lean:41:13: error(lean.unknownIdentifier): Unknown identifier `actualFiniteTailClosureNorm`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/FullGenericCountProof.lean:37:49: error: unsolved goals
+f : ℕ → ℕ
+hf : StrictMono f
+hi : ∀ (n : ℕ), n < f n
+lam : Ordinal.{0}
+hlam : lam < epsilonZero
+hlim : Order.IsSuccLimit lam
+t : ℕ
+ht : actualOrdinalNorm lam ≤ t
+a : Ordinal.{0} := lam + ↑(t - actualOrdinalNorm lam)
+τ : ℕ := actualControlledCount f a
+⊢ have a := lam + ↑(t - actualOrdinalNorm lam);
+  have τ := actualControlledCount f a;
+  have Z := actualOrdinalNorm (actualControlledStateAfter f a τ);
+  0 < τ ∧
+    actualControlledStateAfter f a τ = ↑Z ∧
+      (∀ i < τ, Ordinal.omega0 ≤ actualControlledStateAfter f a i) ∧ Z = f^[τ] t ∧ collapseWith f a = Z + τ
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/FullGenericCountProof.lean:70:0: error: LogicLineages.CartierObserverCurrent.FullGenericCount.completeCount: forbidden axiom dependency sorryAx
