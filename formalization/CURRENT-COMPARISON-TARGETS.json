@@ -244,8 +244,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/foundations.tex",
           "line": 108,
           "statement_latex": "[Exact support under substitution]\n\\label{lem:typesupport-substitution}\nFor every ordinary term $A$ and finite type-preserving substitution $\\theta$,\n\\[\n \\Ty(A\\theta)=\\Ty(A)\\cup\n       \\bigcup_{x\\in\\operatorname{FV}(A)}\\Ty(\\theta x).\n\\]",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.TypeSupportTargets.NamedExactSubstitution",
+          "verified_alias": "LogicLineages.PersistentMarking.TypeSupportNamedChecks.exact_namedExactSubstitution",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/176-type-support-named.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:cor:typesupport-stability",
@@ -254,8 +257,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/foundations.tex",
           "line": 130,
           "statement_latex": "[Support confinement is stable]\n\\label{cor:typesupport-stability}\nSuppose $A,B$ have the same outer type,\n$\\Ty(B)\\subseteq\\Ty(A)$, and\n$\\operatorname{FV}(B)\\subseteq\\operatorname{FV}(A)$.\nThen $\\Ty(B\\theta)\\subseteq\\Ty(A\\theta)$ for every such $\\theta$.\nMoreover $\\Ty(C[B])\\subseteq\\Ty(C[A])$ for every well-typed one-hole\ncontext $C$ of the appropriate hole type.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.TypeSupportTargets.FullConfinementStability",
+          "verified_alias": "LogicLineages.PersistentMarking.TypeSupportConfinementChecks.exact_fullConfinementStability",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/177-type-support-confinement.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:elementary",
@@ -316,8 +322,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/ordering.tex",
           "line": 214,
           "statement_latex": "[Stable pair]\\label{thm:stable}\nThe weak confined relation is reflexive and transitive, its strict part\nis included in it and transitive, and both mixed composition laws hold.\nBoth parts are stable under original typed contexts and ordinary\ncapture-avoiding substitutions.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.StablePairTargets.FullStablePair",
+          "verified_alias": "LogicLineages.PersistentMarking.StablePairChecks.exact_fullStablePair",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/178-stable-pair.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:thm:rpo",
@@ -336,8 +345,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/ordering.tex",
           "line": 263,
           "statement_latex": "[Ordinary template grafting]\\label{lem:grafting}\nIf $A$ is an ordinary template and $\\W p q$, then\n$\\W{A[x:=p]}{A[x:=q]}$, even when $p$ contains marks.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.GraftingTargets.FullGrafting",
+          "verified_alias": "LogicLineages.PersistentMarking.GraftingChecks.exact_fullGrafting",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/183-grafting.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:thm:orient",
@@ -1293,8 +1305,11 @@
           "file": "18-standard-control-comparison/sections/source-applications.tex",
           "line": 25,
           "statement_latex": "[Canonical forward interface]\n\\label{prop:source-interface}\nLet $A$ be an original well-typed term all of whose free variables have\nground type.  Its literal canonical vector is computable.  Every positive\ncoordinate is a closed computable ordinal, and its scalar has an\neffectively constructed, valuation-preserving expression in\n$\\mathcal P_d$, where the $d$ inputs are the distinct ground free names.\nRepeated names remain one input.  Arbitrary finite internal and bound\ntypes, result types, recursor instances, and nesting are allowed.\nEvery positive integer is an admissible value of a ground component,\nindependently for distinct ground names.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.PolicySourceInterfaceTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.PolicySourceInterfaceStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/173-policy-source-interface.json"
         },
         {
           "id": "18-standard-control-comparison:cor:source-equality",
@@ -1316,8 +1331,11 @@
           "file": "18-standard-control-comparison/sections/source-applications.tex",
           "line": 77,
           "statement_latex": "[One-name Boolean comparison]\n\\label{cor:source-one-name}\nTake a finite Boolean combination of pointwise canonical equality, weak\ncomparison, and Wilken--Weiermann strict comparison atoms.  If the union\nof its free names is contained in one ground name $X:o$, either its\nexistential or universal closure over the admissible component of $X$\nis decidable.  Internal types and result levels are unrestricted.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.PolicyOneNameTargets.Full",
+          "verified_alias": "LogicLineages.StandardControlCurrent.PolicyOneNameStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/181-policy-one-name.json"
         },
         {
           "id": "18-standard-control-comparison:thm:source-finite",
@@ -1837,8 +1855,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/cartier.tex",
           "line": 41,
           "statement_latex": "[Removal of every higher pole]\\label{lem:poles}\nPut $\\mu=\\sum_{i=1}^d2^{\\nu_2(i)}$ and\n$a=\\lceil\\log_2\\mu\\rceil$. After $a$ Cartier applications to\na proper differential with denominator $A_d$, all surviving finite\npoles are simple. Its simple residues subsequently undergo inverse\nFrobenius at their fixed poles. No polynomial part is created.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullHigherPoles.Targets.CompleteHigherPoles",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullHigherPoles.StatementChecks.fixed_completeHigherPoles",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/175-higher-poles.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:lem:binary-transient",
@@ -1886,8 +1907,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/control.tex",
           "line": 12,
           "statement_latex": "[Hierarchy growth]\\label{lem:growth}\nEvery $F_j$ is strictly increasing and $F_j(n)>n$. For $n\\ge1$,\n$F_j(n)\\ge2^n$. The values of $G$ are powers of two, and\n\\begin{equation}\\label{eq:growth}\n G(n)\\ge2^{n+100},\\qquad G(n+1)\\ge2^{G(n)+1}.\n\\end{equation}",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullHierarchyGrowth.Targets.CompleteGrowth",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullHierarchyGrowth.StatementChecks.fixed_completeGrowth",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/180-hierarchy-growth.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:thm:envelope",
@@ -1896,8 +1920,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/control.tex",
           "line": 38,
           "statement_latex": "[Uniform residue envelopes]\\label{thm:envelope}\nThere is an effective function $m\\mapsto r_m\\in\\{0,\\ldots,m-1\\}$ such\nthat:\n\\begin{enumerate}\n\\item $f(x)\\equiv r_m\\pmod m$ for $x\\ge m$;\n\\item for $s\\ge1$, $j\\ge2$ and $m\\le2^{2^s}$,\n      $F_j(s)\\equiv r_m\\pmod m$;\n\\item if $B=f(u)$, then\n      $f(u+1)\\equiv r_m\\pmod m$ for every $m\\le2^{2^B}$.\n\\end{enumerate}",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullResidueEnvelopes.Targets.CompleteEnvelopes",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullResidueEnvelopes.StatementChecks.fixed_completeEnvelopes",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/179-residue-envelopes.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:lem:norm-balls",
@@ -1995,8 +2022,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/partitions.tex",
           "line": 14,
           "statement_latex": "[A fixed-budget count]\\label{lem:fixed}\nFix a nonnegative retained mass $c$ and take $S\\ge c+d+1$.\nStart the suffix at $\\omega^d$ with any finite tail of total norm\n(including $c$) at most $S$. At every replacement spend the constant\nsuffix budget $S-c$ and stop when the suffix is finite. The number of\nreplacements is $p_d(S-c)$. When $c=\\norm(\\pi)$ for a retained\nCNF prefix $\\pi$ of least exponent at least $d$, this is precisely\nthe corresponding segment starting at $\\pi+\\omega^d$ plus that tail.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.FullFixedBudget.Targets.CompleteFixedBudget",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.FullFixedBudget.StatementChecks.fixed_completeFixedBudget",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/186-fixed-budget.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:lem:period",
@@ -2068,7 +2098,7 @@
     }
   ],
   "status_counts": {
-    "pending": 108,
-    "checked": 59
+    "pending": 98,
+    "checked": 69
   }
 }

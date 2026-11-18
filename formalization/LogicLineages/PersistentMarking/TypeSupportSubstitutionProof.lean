@@ -17,12 +17,12 @@ end
 mutual
  theorem imagesExact (θ : FreeMap) (q : Expr) (ρ : Ty) : ρ ∈ images θ q ↔ ImageSupport θ q ρ := by
   cases q with
-  | free σ x => simp [images,ImageSupport,freeOccurs,Prod.mk.injEq]
+  | free σ x => simp [images,ImageSupport,freeOccurs,Prod.mk.injEq,and_assoc]
   | bound σ i => simp [images,ImageSupport,freeOccurs]
   | lam σ q => exact imagesExact θ q ρ
   | head f qs => exact imagesArgsExact θ qs ρ
   | marked f τ qs es =>
-    simp only [images,List.mem_append,imagesArgsExact,ImageSupport,freeOccurs,Bool.or_eq_true]
+    simp only [images,List.mem_append,imagesArgsExact θ qs ρ,imagesArgsExact θ es ρ,ImageSupport,freeOccurs,Bool.or_eq_true]
     simp only [or_and_right,exists_or]
  termination_by sizeOf q
  theorem imagesArgsExact (θ : FreeMap) (qs : Args) (ρ : Ty) :
@@ -30,7 +30,7 @@ mutual
   cases qs with
   | nil => simp [imagesArgs,freeOccursArgs]
   | cons q qs =>
-    simp only [imagesArgs,List.mem_append,imagesExact,imagesArgsExact,ImageSupport,freeOccursArgs,Bool.or_eq_true]
+    simp only [imagesArgs,List.mem_append,imagesExact θ q ρ,imagesArgsExact θ qs ρ,ImageSupport,freeOccursArgs,Bool.or_eq_true]
     simp only [or_and_right,exists_or]
  termination_by sizeOf qs
 end

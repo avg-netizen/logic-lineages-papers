@@ -1,0 +1,9 @@
+import LogicLineages.PersistentMarking.GraftingProof
+namespace LogicLineages.PersistentMarking.GraftingChecks
+theorem exact_singleMapTyping : GraftingTargets.SingleMapTyping := GraftingProof.singleMapTyping
+theorem exact_typedNamedSubstitutionEncoding : GraftingTargets.TypedNamedSubstitutionEncoding := GraftingProof.typedNamedSubstitutionEncoding
+theorem exact_fullGrafting : GraftingTargets.FullGrafting := GraftingProof.fullGrafting
+#print axioms exact_singleMapTyping
+#print axioms exact_typedNamedSubstitutionEncoding
+#print axioms exact_fullGrafting
+end LogicLineages.PersistentMarking.GraftingChecks

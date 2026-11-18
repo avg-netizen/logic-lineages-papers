@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.TypeSupportConfinementProof
+namespace LogicLineages.PersistentMarking.TypeSupportConfinementChecks
+theorem exact_fullConfinementStability : TypeSupportTargets.FullConfinementStability := TypeSupportConfinementProof.fullConfinementStability
+theorem exact_namedContextConfinement : TypeSupportTargets.NamedContextConfinement := TypeSupportConfinementProof.namedContextConfinement
+#print axioms exact_fullConfinementStability
+#print axioms exact_namedContextConfinement
+end LogicLineages.PersistentMarking.TypeSupportConfinementChecks

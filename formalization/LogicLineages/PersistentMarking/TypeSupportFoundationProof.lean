@@ -8,9 +8,9 @@ theorem rootSupport : TypeSupportTargets.RootSupport := by
   cases q with
   | free σ x => exact h
   | bound σ i => exact h
-  | lam σ body => simp only [support,List.mem_append]; exact Or.inl h
+  | lam σ body => simp only [support,List.mem_append]; exact Or.inl (Or.inl h)
   | head f base => simp only [support,List.mem_append]; exact Or.inl h
-  | marked f τ base extras => simp only [support,List.mem_append]; exact Or.inl h
+  | marked f τ base extras => simp only [support,List.mem_append]; exact Or.inl (Or.inl h)
 
 mutual
  theorem shiftSupport (k d : Nat) (q : Expr) : support (shift k d q) = support q := by

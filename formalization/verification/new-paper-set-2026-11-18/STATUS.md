@@ -1,10 +1,37 @@
 # Current comparison formalization status
 
-New-paper register: **59 checked, 108 pending / 167**. Historical register:
+New-paper register: **69 checked, 98 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper20 `lem:fixed`: actual constant-budget ordinal/partition count,
+  including every-state retained-prefix trace through the first finite cut.
+
+- Paper16 `lem:grafting`: complete actual original/named template grafting,
+  marked source images and typed-only named substitution bridge retained.
+
+- Paper18 `cor:source-one-name`: full arbitrary-policy one-name Boolean
+  comparison over original admissible substitutions, both complete closures.
+
+- Paper20 `lem:growth`: all six source hierarchy clauses, including actual
+  variable-seed bounds and every hierarchy value being a power of two.
+
+- Paper20 `thm:envelope`: all three source uniform residue envelopes with
+  genuine explicit primitive-recursive witness and tower modular semantics.
+
+- Paper16 `thm:stable`: complete ten-family confined stable pair, actual
+  free-variable-derived substitution closure and genuine named capture contexts.
+
+- Paper16 `lem:typesupport-substitution` and `cor:typesupport-stability`:
+  exact literal named substitution support and full capturing-context confinement.
+
+- Paper20 `lem:poles`: full geometric higher-pole removal, properness at
+  all iterates and genuine Hahn residue evolution, original limits unchanged.
+
+- Paper18 `prop:source-interface`: genuine arbitrary-policy source interface,
+  positive closed coordinates, nonzero-limit heads and original-domain semantics.
 
 - Paper16 `lem:structural-stability`: all four original substitution/context
   families, with complete original named-context coverage and actual capture.

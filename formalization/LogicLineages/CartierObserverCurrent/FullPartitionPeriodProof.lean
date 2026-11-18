@@ -1,0 +1,12 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullPartitionPeriodTargets
+public import LogicLineages.OrdinalComparison.RestrictedPartitionPeriodProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullPartitionPeriod
+
+theorem completePartitionPeriod : Targets.CompletePartitionPeriod :=
+  LogicLineages.OrdinalComparison.restrictedPartitionSufficientPeriod
+
+#audit_namespace LogicLineages.CartierObserverCurrent.FullPartitionPeriod
+end LogicLineages.CartierObserverCurrent.FullPartitionPeriod

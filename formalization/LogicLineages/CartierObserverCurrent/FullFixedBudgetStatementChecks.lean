@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullFixedBudgetProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullFixedBudget.StatementChecks
+theorem fixed_completeFixedBudget : Targets.CompleteFixedBudget := completeFixedBudget
+#audit_namespace LogicLineages.CartierObserverCurrent.FullFixedBudget.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullFixedBudget.StatementChecks

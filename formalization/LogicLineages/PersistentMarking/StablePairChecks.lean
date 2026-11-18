@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.StablePairProof
+namespace LogicLineages.PersistentMarking.StablePairChecks
+theorem exact_fullStablePair : StablePairTargets.FullStablePair := StablePairProof.fullStablePair
+#print axioms exact_fullStablePair
+end LogicLineages.PersistentMarking.StablePairChecks

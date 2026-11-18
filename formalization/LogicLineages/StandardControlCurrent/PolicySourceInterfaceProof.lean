@@ -85,5 +85,6 @@ theorem raw : PolicySourceInterfaceTargets.RawInterface := by
     exact ⟨τ,t,w,c,ht,hw,hc',(Option.some.inj k).symm⟩
   · rintro ⟨τ,t,v,c,ht,ha,hc,ho⟩
     have h := code hg t v c ha hc
-    simpa only [hl,ht,ho] using h
+    have hfinal := h.trans (congrArg some ho)
+    simpa only [hl,ht] using hfinal
 end LogicLineages.StandardControlCurrent.PolicySourceInterfaceProof

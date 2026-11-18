@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.OutputOffsetProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_outputOffsetFoundation : Targets.OutputOffsetFoundation := outputOffsetFoundation
+#print axioms fixed_outputOffsetFoundation
+end LogicLineages.PermittedControl.StatementChecks

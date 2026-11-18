@@ -1,0 +1,9 @@
+# Policy one-name full final review
+
+APPROVED for complete current cor:source-one-name. Independent read-only verification reconciles 743 modules, zero errors and exact standard-only full alias, native 1794997904180718903-8. Independent evidence exactly equals author evidence; all eight frozen hashes match. Preserved proof-only Fin-zero clarification changes no target.
+
+Read definitions, all four proof modules and full target against the printed corollary. Compilation genuinely calls the arbitrary policy assignment/extraction frontend and proves literal normalized postorder code equality. Actual generated vector compilation is derived, not hypothesized. Positive-coordinate equality/weak guards are inside each scalar atom conjunction, so Boolean negation preserves its intended meaning. All atoms share one singleton ground context; internal and result types are unrestricted and unused input names are allowed.
+
+Independent original-domain semantics compares all zero-padded coordinates, with WW strictness at coordinate zero and weak positive coordinates. Vector calibration uses actual admissible valuation, singleton uniqueness and both previously checked ground-domain directions; existential and universal flags are each transported both ways. No default-policy equality theorem is used as an arbitrary-policy surrogate. The domain helper is policy-independent despite its historical DefaultSource name.
+
+Programs compose genuine merely-Computable policy compilation with the primitive-recursive guard/normalization and computable postorder fold. Value and both closure flags use the actual complete one-input Boolean solver in the recursively verified closure. No source numeral-substitution/recomputation, per-occurrence independent inputs, multiple-name comparison, or QE claim is inferred.

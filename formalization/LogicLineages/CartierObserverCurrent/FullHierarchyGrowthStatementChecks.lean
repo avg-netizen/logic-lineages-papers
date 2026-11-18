@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullHierarchyGrowthProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullHierarchyGrowth.StatementChecks
+theorem fixed_completeGrowth : Targets.CompleteGrowth := completeGrowth
+#audit_namespace LogicLineages.CartierObserverCurrent.FullHierarchyGrowth.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullHierarchyGrowth.StatementChecks

@@ -57,7 +57,7 @@ open OrdinalComparison
             simp [hc,hd,hs,ordinalNodeCode,rawNoteEncode,hea,hta]
           · have hs : a.unpair.2.unpair.1+1-(b.unpair.2.unpair.1+1)=0 := by omega
             simp only [hc,hd,hs,↓reduceIte,PNat.mk_coe]
-            norm_num only
+            simp only [show ¬(1:Nat)=0 by omega, show ¬(1:Nat)=2 by omega, ↓reduceIte]
             split
             · rename_i heq
               have hv := congrArg (fun z => z.val) heq
