@@ -51,7 +51,8 @@ open OrdinalComparison.ParametricActualCollapse
     have ht := actualFiniteTailClosureNorm a ha (k + 1)
     have hk := actualFiniteTailClosureNorm a ha k
     have hlt : a + (k : Ordinal) < a + ((k + 1 : Nat) : Ordinal) := by
-      exact add_lt_add_left (by exact_mod_cast Nat.lt_succ_self k) a
+      apply (add_lt_add_iff_left a).mpr
+      exact_mod_cast Nat.lt_succ_self k
     have hn : actualOrdinalNorm (a + (k : Ordinal)) ≤
         f (actualOrdinalNorm (a + ((k + 1 : Nat) : Ordinal))) := by
       rw [hk.2, ht.2]

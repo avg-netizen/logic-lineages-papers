@@ -1,0 +1,30 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FreeCallProof.lean:74:8: error: Tactic `rfl` failed: The left-hand side
+  some
+    (Expr.marked f τ (substituteArgs (freeSubArgs θ 0 values) 0 (freeSubArgs θ values.length base))
+      ((substituteArgs (freeSubArgs θ 0 values) 0 (freeSubArgs θ values.length extras)).append
+        (Args.cons (freeSub θ 0 a) (freeSubArgs θ 0 rest))))
+is not definitionally equal to the right-hand side
+  some
+    (Expr.marked f τ (substituteArgs (freeSubArgs θ 0 values) 0 (freeSubArgs θ (0 + values.length) base))
+      ((substituteArgs (freeSubArgs θ 0 values) 0 (freeSubArgs θ (0 + values.length) extras)).append
+        (freeSubArgs θ 0 (Args.cons a rest))))
+
+case cons.marked.some
+θ : FreeMap
+ht : ∀ (σ : Ty) (x : Nat), (θ σ x).type = σ
+values : Args
+a : Expr
+rest : Args
+f : Head
+σ : Ty
+base extras : Args
+τ : Ty
+hc : consumeTypes σ (Args.cons a rest) = some τ
+⊢ some
+      (Expr.marked f τ (substituteArgs (freeSubArgs θ 0 values) 0 (freeSubArgs θ values.length base))
+        ((substituteArgs (freeSubArgs θ 0 values) 0 (freeSubArgs θ values.length extras)).append
+          (Args.cons (freeSub θ 0 a) (freeSubArgs θ 0 rest)))) =
+    some
+      (Expr.marked f τ (substituteArgs (freeSubArgs θ 0 values) 0 (freeSubArgs θ (0 + values.length) base))
+        ((substituteArgs (freeSubArgs θ 0 values) 0 (freeSubArgs θ (0 + values.length) extras)).append
+          (freeSubArgs θ 0 (Args.cons a rest))))

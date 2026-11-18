@@ -632,8 +632,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/foundations.tex",
           "line": 101,
           "statement_latex": "[Basic collapse estimates]\\label{lem:collapse-estimates}\nIf $\\beta<\\alpha$ and $N(\\beta)\\le f(N(\\alpha))$, then\n$\\psi_f(\\beta)+1\\le\\psi_f(\\alpha)$.  For $n,k\\in\\N$,\n\\[\n \\psi_f(n)=n,\\qquad N(\\alpha)\\le\\psi_f(\\alpha),\\qquad\n \\psi_f(\\alpha)+k\\le\\psi_f(\\alpha+k).\n\\]\nIf $\\alpha\\ge\\omega$, then $\\psi_f(\\alpha)>f(N(\\alpha))$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.Targets.CollapseEstimates",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_collapseEstimates",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/015-collapse-estimates.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:thm:maximum-predecessor",
@@ -662,8 +665,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/foundations.tex",
           "line": 200,
           "statement_latex": "[Single-predecessor collapse recurrence]\n\\label{thm:single-predecessor}\nFor every nonzero limit $\\lambda$ and $n\\in\\N$,\n\\[\n \\psi_f(\\lambda+n)\n   =\\psi_f\\bigl(M(\\lambda,f(N(\\lambda)+n))\\bigr)+1.\n\\]",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.Targets.SinglePredecessor",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_singlePredecessor",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/016-single-predecessor.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:cor:closed-evaluation",
@@ -1027,8 +1033,11 @@
           "file": "18-standard-control-comparison/sections/identities.tex",
           "line": 96,
           "statement_latex": "[Identity normal form]\\label{u:thm:identity}\nFor $E,F\\in\\mathcal P_d$, the identity $E=F$ holds at every positive\nvaluation exactly when $\\NF(E)=\\NF(F)$. If the forms differ, one can\neffectively specify a positive countervaluation of the form\n\\begin{equation}\n           x_i=w_i(f(k)+1),\\qquad w_i,k\\in\\NN.        \\label{u:display:2-2}\n\\end{equation}\nConsequently universal equality in $\\mathcal P_d$ is decidable.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.IdentitySignTargets.IdentityNormalForm",
+          "verified_alias": "LogicLineages.StandardControlCurrent.IdentitySignStatementChecks.fixed_identityNormalForm",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/013-current-identity.json"
         },
         {
           "id": "18-standard-control-comparison:u:lem:oneinput",
@@ -1230,8 +1239,11 @@
           "file": "18-standard-control-comparison/sections/unary-decision.tex",
           "line": 12,
           "statement_latex": "[Effective eventual signs]\\label{u:thm:sign}\nGiven two expressions in these sorts, one computes a sign\n$\\sigma\\in\\{-1,0,1\\}$ and $N\\ge1$ such that their difference has sign\n$\\sigma$ for every $x\\ge N$. In particular this holds for every pair in\n$\\mathcal P_1$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.IdentitySignTargets.EventualSigns",
+          "verified_alias": "LogicLineages.StandardControlCurrent.IdentitySignStatementChecks.fixed_eventualSigns",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/014-current-signs.json"
         },
         {
           "id": "18-standard-control-comparison:u:cor:boolean",
@@ -1906,7 +1918,7 @@
     }
   ],
   "status_counts": {
-    "pending": 162,
-    "checked": 5
+    "pending": 158,
+    "checked": 9
   }
 }

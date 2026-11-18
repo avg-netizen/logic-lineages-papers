@@ -142,3 +142,22 @@ thresholds, and a uniform level-6 eventual bound. Both arbitrary-orbit
 identities are proved without assumptions about orbit invariance. Independent
 final review is requested before any numbered register promotion. Complete
 ordinal descent counts and all later comparison statements remain pending.
+
+## Actual parametric collapse native milestone
+
+`CollapseStatementChecks` passed receipt `1794977757928919751-2`.
+Recursive evidence validates all 59 current-source local modules and five
+standard-only exact aliases. Full generic estimates and limit-part recurrence
+are instantiated without remaining law premises at both actual selected
+controls. The stronger printed finite-tail lower bound is included.
+The first failed draft/receipt is retained; the only repair replaced a
+commutative-style add-monotonicity lemma with ordinal-specific strict addition
+cancellation. Frozen target/definitions unchanged. Independent final review
+requested before promotion of either printed statement. Queue released.
+
+The next effective-evaluator plan is separately documented and reviewed in
+EFFECTIVE-EVALUATOR-PLAN.md and its review. It requires actual least search
+count equality, all-input totality including invalid codes, actual Computable
+output and denotation agreement. Generic per-function computability is not
+higher-order index uniformity; joint-b computability must be specified if
+claimed. No effective evaluator theorem is obtained from this semantic gate.

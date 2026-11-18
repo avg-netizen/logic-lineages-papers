@@ -31,4 +31,29 @@ assert count==d['numbered_statement_count']
 if 'status_counts' in d:
  from collections import Counter
  assert dict(Counter(x['status'] for p in d['papers'] for x in p['statements']))==d['status_counts']
-print(json.dumps({'archive_files_verified':len(m['files']),'current_source_statements':count,'unique_ids':len(ids),'errors':[]},indent=2))
+# Acceptance/register integrity only. Native recursive verifiers and independent
+# scope reviews remain required; this index check does not replace either.
+verification=Path(__file__).resolve().parent
+accepted={};accepted_ids=set();accepted_total=0
+for f in sorted((verification/'accepted').glob('*.json')):
+ record=json.loads(f.read_text());accepted_total+=1
+ assert record['id'] not in accepted_ids,record['id']
+ accepted_ids.add(record['id'])
+ assert (verification/record['independent_review']).is_file(),str(f)
+ assert digest(verification/record['evidence'])==record['evidence_sha256'],str(f)
+ for source,sha in record.get('source_pins',{}).items():
+  assert digest(ROOT/source)==sha,source
+ if record['kind']=='current numbered statement':
+  key=record['statement'];assert key not in accepted,key
+  accepted[key]=(f,record)
+ else:
+  assert record['kind']=='supporting only',str(f)
+  assert not record.get('numbered_promotions',[]),str(f)
+checked={row['id']:row for paper in d['papers'] for row in paper['statements'] if row['status']=='checked'}
+assert checked.keys()==accepted.keys(),'checked/acceptance bijection'
+for key,row in checked.items():
+ f,record=accepted[key]
+ assert ROOT/'formalization'/row['acceptance']==f,key
+ assert row['formal_target']==record['target'],key
+ assert row['verified_alias']==record['exact_alias'],key
+print(json.dumps({'accepted_packets':accepted_total,'checked_numbered_statements':len(checked),'archive_files_verified' :len(m['files']),'current_source_statements':count,'unique_ids':len(ids),'errors':[]},indent=2))
