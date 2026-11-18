@@ -1,0 +1,20 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TargetExtrasListSupport.lean:39:37: error: Application type mismatch: The argument
+  ht
+has type
+  ExtendedTree S (ExtendedJudgment.ordered qs✝ rest✝)
+but is expected to have type
+  ExtendedWeakTree S a q✝¹
+in the application
+  ih ht
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TargetExtrasListSupport.lean:39:13: error: Tactic `rcases` failed: `x✝ : ∀ (h : ExtendedOrderedTree S ?m.145 rest✝),
+  ∃ source, Remove source a ?m.145 ∧ _root_.Nonempty (ExtendedOrderedTree S source qs✝¹)` is not an inductive datatype
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TargetExtrasListSupport.lean:62:44: error: Application type mismatch: The argument
+  ht
+has type
+  ExtendedTree S (ExtendedJudgment.whole f base extras rest✝)
+but is expected to have type
+  ExtendedWeakTree S (Expr.marked f q✝.type base extras) q✝
+in the application
+  ih ht
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TargetExtrasListSupport.lean:62:32: error: Tactic `rcases` failed: `x✝ : ∀ (h : ExtendedWholeTree S f base extras rest✝),
+  _root_.Nonempty (ExtendedWholeTree S f base extras qs✝)` is not an inductive datatype

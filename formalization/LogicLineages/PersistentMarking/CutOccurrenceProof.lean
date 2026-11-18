@@ -1,0 +1,6 @@
+import LogicLineages.PersistentMarking.CutStrictStrictProof
+import LogicLineages.PersistentMarking.CutStrictWeakProof
+namespace LogicLineages.PersistentMarking.CutOccurrenceProof
+theorem fullOccurrences : CutOccurrenceTargets.FullOccurrences :=
+  ⟨CutMatchingProof.weakWeak,CutWeakStrictProof.weakStrict,CutStrictWeakProof.strictWeak,CutStrictStrictProof.strictStrict⟩
+end LogicLineages.PersistentMarking.CutOccurrenceProof

@@ -1,5 +1,6 @@
 module
 public import LogicLineages.PermittedControl.ProfileBoundaryProof
+public import LogicLineages.OrdinalComparison.ActualFiniteHead
 
 @[expose] public section
 namespace LogicLineages.PermittedControl
@@ -42,7 +43,7 @@ open OrdinalComparison
   · have hUEq : U=E.1.repr := le_antisymm hUE (le_of_not_gt hUlt)
     rcases Ordinal.zero_or_succ_or_isSuccLimit E.1.repr with hzero | ⟨beta,hbeta⟩ | hlim
     · exact False.elim ((not_lt_of_ge (show (0 : Ordinal) ≤ z from bot_le)) (by simpa only [hzero] using hzE))
-    · have hbetaEq : E.1.repr=beta+1 := by simpa only [Order.succ_eq_add_one] using hbeta
+    · have hbetaEq : E.1.repr=beta+1 := by simpa only [Order.succ_eq_add_one] using hbeta.symm
       have hzb : z ≤ beta := Order.lt_add_one_iff.mp (by rwa [← hbetaEq])
       have hbE : beta < E.1.repr := by rw [hbetaEq]; exact Order.lt_add_one_iff.mpr le_rfl
       have hbU : beta ≤ U := by rw [hUEq]; exact hbE.le

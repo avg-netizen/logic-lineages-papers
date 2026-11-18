@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.DivergenceEntryProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_actualDivergenceEntryOrder : Targets.ActualDivergenceEntryOrder := actualDivergenceEntryOrder
+#print axioms fixed_actualDivergenceEntryOrder
+end LogicLineages.PermittedControl.StatementChecks

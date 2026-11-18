@@ -1,0 +1,10 @@
+module
+public import LogicLineages.CartierObserverCurrent.PeriodLaurentGenericProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.PeriodLaurentGeneric.StatementChecks
+theorem fixed_cartierIdentity : Targets.CartierIdentity := cartierIdentity
+theorem fixed_laurentCoefficient : Targets.LaurentCoefficient := laurentCoefficient
+theorem fixed_iteratedResidue : Targets.IteratedResidue := iteratedResidue
+#audit_namespace LogicLineages.CartierObserverCurrent.PeriodLaurentGeneric.StatementChecks
+end LogicLineages.CartierObserverCurrent.PeriodLaurentGeneric.StatementChecks

@@ -36,7 +36,7 @@ theorem orderedInsert {S : Signature} {ys rest xs : Args} {a b : Expr}
   | there hr ih =>
     cases h with
     | orderedCons hh ht =>
-      obtain ⟨source,hs,⟨ht'⟩⟩ := ih ht
+      obtain ⟨source,hs,⟨ht'⟩⟩ := ih he ht
       exact ⟨.cons _ source,.there hs,⟨.orderedCons hh ht'⟩⟩
 
 theorem orderedPermutation {S : Signature} {xs ys zs : Args}
@@ -59,7 +59,7 @@ theorem wholeInsert {S : Signature} {f : Head} {base extras ys rest : Args} {q :
   | here => exact ⟨.wholeCons he h⟩
   | there hr ih =>
     cases h with
-    | wholeCons hh ht => obtain ⟨ht'⟩ := ih ht; exact ⟨.wholeCons hh ht'⟩
+    | wholeCons hh ht => obtain ⟨ht'⟩ := ih he ht; exact ⟨.wholeCons hh ht'⟩
 
 theorem wholePermutation {S : Signature} {f : Head} {base extras ys zs : Args}
     (h : ExtendedWholeTree S f base extras ys) (hp : Permutation ys zs) :

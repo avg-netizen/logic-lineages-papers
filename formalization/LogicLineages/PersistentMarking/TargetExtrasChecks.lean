@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.TargetExtrasProof
+namespace LogicLineages.PersistentMarking.TargetExtrasChecks
+theorem exact_fullTargetExtras : TargetExtrasTargets.FullTargetExtras := TargetExtrasProof.fullTargetExtras
+#print axioms exact_fullTargetExtras
+end LogicLineages.PersistentMarking.TargetExtrasChecks

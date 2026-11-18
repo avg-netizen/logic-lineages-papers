@@ -1,0 +1,7 @@
+# Independent minimal decomposition route review
+
+Approved for a fresh exact single-contract freeze, not an unchanged retry. The proposed reduction eliminates actual unused proof branches: the generic coefficient proof needs the real fraction-field lift equation on polynomial inputs, not the source simple-pole reconstruction theorem, and it needs actual rational square decomposition, not uniqueness/characterization. Locally proving the former from lift_algebraMap and separately proving the latter from actual polynomial decomposition is mathematically faithful.
+
+The decomposition contract must be identical to accepted Basic actual rational decomposition, quantifying all relevant fields and rational inputs including zero. The proof must pay genuine canonical denominator nonzero and embedding/cancellation identities; it may not replace numerator/denominator by an arbitrary supplied representation. Generic Laurent law still uses the same actual embedding and all integer indices, and initial-residue proof still separately pays genuine reconstruction/root hypotheses.
+
+Original fifteen/thirteen/fourteen-pin targets remain unchanged. Concrete new scope review and bounded native proof are required. Removing only direct imports would be insufficient if their closure reappears; inspect actual closure. No legacy edits or cap increases. If this materially narrower generic proof still exceeds the unchanged cap, stop the route and report the blocker rather than continue near-identical resource retries. Combined/initial gate feasibility remains unproved.

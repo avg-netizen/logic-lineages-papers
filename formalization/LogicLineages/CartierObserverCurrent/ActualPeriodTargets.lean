@@ -1,5 +1,5 @@
 module
-public import LogicLineages.OrdinalComparison.ActualCartierPeriodTargets
+public import LogicLineages.OrdinalComparison.CartierOrbitDefinitions
 
 @[expose] public section
 namespace LogicLineages.CartierObserverCurrent.ActualPeriod.Targets

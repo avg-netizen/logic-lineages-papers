@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.CutOwnerProof
+namespace LogicLineages.PersistentMarking.CutOwnerChecks
+theorem exact_fullOwnerSuppliers : CutOwnerTargets.FullOwnerSuppliers := CutOwnerProof.fullOwnerSuppliers
+#print axioms exact_fullOwnerSuppliers
+end LogicLineages.PersistentMarking.CutOwnerChecks

@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.TerminalPhaseProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_terminalPhaseFoundation : Targets.TerminalPhaseFoundation := terminalPhaseFoundation
+#print axioms fixed_terminalPhaseFoundation
+end LogicLineages.PermittedControl.StatementChecks

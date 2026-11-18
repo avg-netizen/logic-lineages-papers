@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.CutStrictWeakProof
+namespace LogicLineages.PersistentMarking.CutStrictWeakChecks
+theorem exact_strictWeak : CutOccurrenceTargets.StrictWeak := CutStrictWeakProof.strictWeak
+#print axioms exact_strictWeak
+end LogicLineages.PersistentMarking.CutStrictWeakChecks

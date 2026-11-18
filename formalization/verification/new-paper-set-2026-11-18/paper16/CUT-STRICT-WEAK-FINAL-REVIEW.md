@@ -1,0 +1,7 @@
+# Independent final: bounded strict–weak occurrence transport
+
+Approved conditional supporting endpoint only. Independent read-only verifier reconciles 71 modules and exact standard-only alias, zero errors; JSON equals author evidence and actual import closure equals its module set. Six occurrence pins/inherited manifests match. Native first pass 1794992779448548097-5. No compiler invoked.
+
+Read matchingSourceSplit, restoreLeft/Right, bounded backAt, coverage and final assembly. The actual first multiset target partition projects the actual right matching into two concrete target sublists with counts bounded by the original right matching. Remove restoration preserves occurrence positions. Kept edges use checked bounded weak matching composition. For each final added occurrence, bounded right backAt recovers its real weak edge and the original coverage supplier supplies the left strict edge; StrictWeak edge transport uses that actual bound and final ordinariness. buildCoverage constructs the actual list witness rather than assuming it.
+
+The original source split and its nonempty removed part are retained unchanged, including deletion without inserted targets. Every new right helper count is at most the original bounded right count, and actual edge counts are strictly smaller. No unbounded cut or intermediate-ordinariness premise. StrictStrict occurrence composition and final cut remain separate.

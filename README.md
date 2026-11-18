@@ -16,7 +16,7 @@ boundary. These hand-proof papers do not change the checked-target counts below.
 | [Controlled Ordinal Descents, Restricted Partitions, and Finite Cartier Observers](20-controlled-descents-and-cartier-observers/README.md) · [PDF](20-controlled-descents-and-cartier-observers/paper.pdf) | 14 pages | Growing-budget count transfer, complete finite observers and residue-tuple periods. |
 
 **Current formalization migration:** the [167-statement register](formalization/CURRENT-COMPARISON-TARGETS.json)
-has **49 checked, 118 pending** after exact source-matched verification of
+has **50 checked, 117 pending** after exact source-matched verification of
 current ordering/refinement, selected-control comparison, unchanged-control
 foundations, control-sensitivity and Cartier-observer results.
 See the [migration and proof plan](formalization/verification/new-paper-set-2026-11-18/PLAN.md).

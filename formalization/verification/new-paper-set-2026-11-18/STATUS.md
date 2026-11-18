@@ -1,10 +1,14 @@
 # Current comparison formalization status
 
-New-paper register: **49 checked, 118 pending / 167**. Historical register:
+New-paper register: **50 checked, 117 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper16 `lem:target-macros`: unrestricted target suffix removal, actual
+  positional permutation and original-prefix-copy addition, without cut.
+
 
 - Paper16 `lem:application-covariance`: genuine original full-call covariance,
   using independently derived success and one-way unary-stage calibration.
@@ -276,3 +280,18 @@ as supporting packet106 (20 modules). The complete scalar-profile corollary
 is now checked by a fresh 56-module gate, genuine initial coefficient selection,
 source threshold and output assembly (packet108). Its trace-grouping and
 algorithmic prose are not credited by that numbered result.
+
+Latest supporting work: bounded ordinary-final cut edge/matching and
+weak-strict occurrence transports are checked; their actual right-witness
+size-bounded induction hypotheses are explicit, so full cut is not credited.
+The default-policy original-domain/source equality program is checked, as
+are arbitrary-computable-policy literal shape and constant/application
+constructor programs. Partial/abstraction and full policy-parametric source
+assignment remain separate. Pure successor/limit, highest-piece geometry,
+terminal phase and actual divergence-to-first-entry order are checked; the
+complete effective equal-gap assembly remains pending.
+
+The actual-period theorem remains pending. A source-equivalent import-only
+target isolation passed the unchanged cap, but genuine generic Laurent proof
+load still hit that cap. Failed editions are preserved; further proof-only
+interface isolation requires review, with no legacy or resource-limit edits.
