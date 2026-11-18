@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.HighestPhaseGeometryProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_highestPhaseGeometry : Targets.HighestPhaseGeometry := highestPhaseGeometry
+#print axioms fixed_highestPhaseGeometry
+end LogicLineages.PermittedControl.StatementChecks

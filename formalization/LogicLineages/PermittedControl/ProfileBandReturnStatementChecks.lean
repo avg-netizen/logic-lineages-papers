@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.ProfileBandReturnProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_actualProfileBandReturn : Targets.ActualProfileBandReturn := actualProfileBandReturn
+#print axioms fixed_actualProfileBandReturn
+end LogicLineages.PermittedControl.StatementChecks

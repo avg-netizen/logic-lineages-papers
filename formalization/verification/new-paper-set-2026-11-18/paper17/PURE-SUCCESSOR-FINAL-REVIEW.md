@@ -1,0 +1,9 @@
+# Independent final review: actual pure-successor foundation
+
+Approved supporting only. Independently reran recursive evidence verification: 217 current-source native modules, zero errors, exact full conjunction alias standard-only. Independent evidence equals author evidence and all four frozen pins match. Receipt 1794991028635506371-9. Read complete PureMaximumBandProof, PureSuccessorStepProof and PureSuccessorSeparationProof against the frozen target/source map. No reviewer compilation.
+
+The maximum calibration compares actual relative and ordinary greatest-candidate specifications on the affordable band beginning at omega^beta. It uses the NEW beta profile cost, not the old beta+1 charge. Actual norm identities and the original source tail pay that candidate, the subtraction, and the large quotient q>R+2. The next-state formula is the genuine successor maximum with its actual remainder bound, leading exponent and limit decomposition; next norm equals f(t).
+
+The paired proof derives candidate-inclusion orientation from strict beta-profile order. If next limits differ, it yields real clock-one oriented divergence. If next limits agree, both actual states are represented using the first state's common block and LOWER LIMIT suffix only. It never equates their finite remainders. ActualThickBlockSeparation applies with P=0 at updated budget f(t), with source tail preserved by control growth. The retained-band orientation proof and literal iterate composition then transfer the resulting divergence to the original clock while both limits retain omega^beta.
+
+No caller supplies an equal next state, thick-block visit, quotient or residue. The retained proof-only failed edition did not change targets/caps. Highest-piece geometry/reachability, terminal behavior, final entry order and full equal-gap remain excluded.

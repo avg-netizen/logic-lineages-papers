@@ -1,10 +1,26 @@
 # Current comparison formalization status
 
-New-paper register: **44 checked, 123 pending / 167**. Historical register:
+New-paper register: **49 checked, 118 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper16 `lem:application-covariance`: genuine original full-call covariance,
+  using independently derived success and one-way unary-stage calibration.
+
+
+- Paper20 `lem:bounds`: actual linked root-count/totient estimates, with
+  genuine real quotient and exponential inequalities.
+
+
+- Paper16 `lem:prefix-escape`: full typed original-call/owner-refinement escape,
+  with actual output typing derived internally.
+- Paper18 `m:thm:existential`: genuine total closed-word decision with all shared
+  occurrence domains and the exact source bound-only specialization.
+- Paper20 `lem:residue`: actual Laurent residue formulas, including true
+  reconstruction and root/derivative hypotheses.
+
 
 - Paper20 `cor:scalar-profile`: genuine initial simple residues, actual repeated
   Cartier and original base-series constant formula at every permitted iterate.
@@ -152,7 +168,7 @@ actual count preservation is checked (34 modules, one supporting alias).
 Actual Abs/FAbs fresh-name synchronization with equal auxiliary-tree count
 is checked (38 modules, two supporting aliases). Complete five-family
 conservative elimination is checked (77 modules), after proof-only splitting
-resolved the original memory-cap stops. Prefix escape, comparison cut,
+resolved the original memory-cap stops. Comparison cut,
 decision and height remain open. Actual owner
 prefix omission/permutation/expansion/refined-copy prerequisites are checked
 (50 modules, four supporting aliases). Complete unrestricted-target
@@ -162,8 +178,13 @@ marking transport/removal/markability reflection is checked (34 modules).
 Complete seven-family two-environment covariance is checked (60 modules).
 Arbitrary bound-block algebra and typed empty-context closedness are checked
 (56 modules), as is actual auxiliary splicing with explicit blocked-original
-call escape (58 modules). The complete prefix-escape endpoint still awaits
-its own staged assembly and exact gate.
+call escape (58 modules). The actual two-stage invariant is checked (60 modules),
+and the complete prefix-escape endpoint has a fresh 69-module exact gate and
+independent final review. Successful original full calls agree with unary
+stages (63 modules, one-way only), and actual variable-spine source-success
+inversion is checked (30 modules). Actual unary transport is checked through
+all25 cases (116 modules); complete application covariance has a fresh
+121-module gate and independent final review, without comparison cut.
 
 Paper17: near-control modular/orbit, full numerical growth and joint primitive
 recursion; factorial laws/orbit and a shared explicit finite-level bound.
@@ -194,7 +215,9 @@ admission are checked (188 modules), deriving actual visits, resets, budgets
 and exceptions. The complete initial original-unit phase is checked (210 modules), including
 actual synchronized first hits or oriented divergence and both exact quadratic
 exceptions. Global lower-phase visitation and the full effective equal-gap
-certificate remain pending. Actual linear-tail k-first-hit/norm-clock/
+certificate remain pending. Actual profile-band coupling to genuine shared
+first-entry/norm clocks is checked (213 modules), retaining unequal upper
+charge and different initial finite tails. Actual linear-tail k-first-hit/norm-clock/
 terminal-relative-limit return, including k=0, is checked (186 modules).
 
 Archive/migration is remotely verified. All80 archived-file hashes and local

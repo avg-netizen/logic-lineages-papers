@@ -1,0 +1,9 @@
+# Independent complete actual linked residue final review
+
+Approved for complete current lem:residue only. Independently reconciled 31 current-source native modules, zero errors, exact complete alias standard-only; independent evidence equals author evidence. All ten frozen pins match. Receipt 1794990306632154818-2; no reviewer compilation or inherited status shortcut.
+
+Read actual linked parameter unrolling, LinkedResidueLaurentProof, SimplePoleLaurentProof and primitive-root complete/partial product, derivative and complement proofs. The true translated Hahn expansion is reconstructed by factoring the translated denominator as X times divX, proving its power-series constant is the nonzero actual derivative, inverting that unit and cancelling the Laurent X^-1 factor. Thus coefficient -1 is genuinely the residue of X^(e-1)/A_d, not a name assigned to the desired formula; support below -1 is proved directly.
+
+Actual linked bounds prove odd q and q<=d<2q, m<q and complementary cutoff. The derivative proof splits the literal product at q, uses the actual primitive-root complete product equal to one, and gives derivative z^-1*A_(d-q)(z). Partial-product nonvanishing pays the simple-pole/unit hypotheses and nonzero residue. The complement proof reindexes the actual factors and uses reciprocity at z^-1; integer z-power subtraction gives the second formula without natural truncation. u=Phi(v), v>=4 pays e>=1 and all linked bounds; Phi is the current literal G. Arbitrary F2-algebra fields cover all closure primitive roots, with no primality restriction on q.
+
+Fresh assembly expands the exact current source parameters and retains both printed formulas, nonzero residue and absence of lower Laurent coefficients. No linked root-count bounds lemma, tuple/orbit period, scalar nonperiodicity or selected scalar coefficient claim is made.

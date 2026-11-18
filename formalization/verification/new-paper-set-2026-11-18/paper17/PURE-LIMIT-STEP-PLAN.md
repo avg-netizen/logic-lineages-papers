@@ -1,0 +1,7 @@
+# Proposed top-clipped limit phase bridge
+
+Source prop:equal-gap highest nonzero piece without maximum, necessarily top truncated (a,E) with E a positive limit. Geometry and executable selection remain a separate supplier; this packet would take the actual fixed admitted witness zeta (2<=zeta<E), real source norm bounds and actual profile constancy on [zeta,E), not an invented arbitrary cost function.
+
+At actual states with limits mu+omega^E and nu+omega^E and common norm t above the unchanged thick tail, derive affordability of omega^zeta for both actual next budgets. The generic real constant-band maximum identity (being proved for PureSuccessor) then identifies each actual next relative maximum as M(omega^E,f(t)-c), where c is the real profile at zeta. Its leading exponent is M(E,f(t)-c-1). Distinct costs and actual limit saturation give distinct ordered leading exponents; pure maxima remain >=omega^zeta, so taking actual limit parts preserves their leading exponents and yields strict orientation at original event1. No finite-tail equality, visited norm-ball point, or generated common block is assumed.
+
+Proposed supporting exact endpoint: actual one-step oriented divergence while both relative limit parts remain >=omega^zeta, with actual next norm f(t) in both states. All budget positivity/lower-band admission and actual exponent comparison are proved. This is not the source geometry assertion that such a zeta exists in the highest clipped piece, nor full equal-gap/final entry order.

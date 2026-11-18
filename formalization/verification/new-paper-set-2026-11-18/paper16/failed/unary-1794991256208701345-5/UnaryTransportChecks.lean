@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.UnaryTransportProof
+namespace LogicLineages.PersistentMarking.UnaryTransportChecks
+theorem exact_unaryTransport : ApplicationCovarianceTargets.UnaryTransport := UnaryTransportProof.unaryTransport
+#print axioms exact_unaryTransport
+end LogicLineages.PersistentMarking.UnaryTransportChecks

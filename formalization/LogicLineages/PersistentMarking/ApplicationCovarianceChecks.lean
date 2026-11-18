@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.ApplicationCovarianceProof
+namespace LogicLineages.PersistentMarking.ApplicationCovarianceChecks
+theorem exact_fullApplication : ApplicationCovarianceTargets.FullApplication := ApplicationCovarianceProof.fullApplication
+#print axioms exact_fullApplication
+end LogicLineages.PersistentMarking.ApplicationCovarianceChecks

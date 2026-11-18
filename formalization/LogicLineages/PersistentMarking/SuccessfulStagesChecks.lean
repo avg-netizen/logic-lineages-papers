@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.SuccessfulStagesProof
+namespace LogicLineages.PersistentMarking.SuccessfulStagesChecks
+theorem exact_successfulAuxPlugging : ApplicationCovarianceTargets.SuccessfulAuxPlugging := SuccessfulPluggingProof.successfulAuxPlugging
+theorem exact_successfulUnaryStages : ApplicationCovarianceTargets.SuccessfulUnaryStages := SuccessfulStagesProof.successfulUnaryStages
+#print axioms exact_successfulAuxPlugging
+#print axioms exact_successfulUnaryStages
+end LogicLineages.PersistentMarking.SuccessfulStagesChecks

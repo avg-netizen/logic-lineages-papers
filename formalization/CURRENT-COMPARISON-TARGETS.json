@@ -67,8 +67,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/composition.tex",
           "line": 160,
           "statement_latex": "[Two-stage prefix calls]\\label{lem:prefix-escape}\nLet $\\vec a,\\vec b$ be lists of prefix copies of one marked\nowner $P$. Suppose\n\\[\n \\ap q{\\vec a}=r,\\qquad \\ap r{\\vec b}=w.\n\\]\nThen either $\\ap q{\\vec a,\\vec b}=w$, or $P\\sharpens w$,\nat the output type of $w$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.AuxiliaryTargets.PrefixEscape",
+          "verified_alias": "LogicLineages.PersistentMarking.PrefixEscapeChecks.exact_prefixEscape",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/112-prefix-escape.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:conservative",
@@ -142,8 +145,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/composition.tex",
           "line": 376,
           "statement_latex": "[Application covariance]\\label{lem:application-covariance}\nSuppose $\\EW q s$ and $\\EW{a_i}{b_i}$ in the respective\nargument types. If $\\ap s{\\vec b}$ succeeds, then\n$\\ap q{\\vec a}$ succeeds and\n\\[\n \\EW{\\ap q{\\vec a}}{\\ap s{\\vec b}}.\n \\tag{C}\n\\]",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.ApplicationCovarianceTargets.FullApplication",
+          "verified_alias": "LogicLineages.PersistentMarking.ApplicationCovarianceChecks.exact_fullApplication",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/123-application-covariance.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:target-macros",
@@ -1217,8 +1223,11 @@
           "file": "18-standard-control-comparison/sections/polynomial-arithmetic.tex",
           "line": 504,
           "statement_latex": "[Closed existential word arithmetic]\\label{m:thm:existential}\nThe existential closure of every Boolean combination of word-linear row\ncomparisons and fixed-modulus congruences in the finite-degree language\nabove is decidable, on its explicit word domains.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.StandardControlCurrent.ClosedWordTargets.FullClosedExistential",
+          "verified_alias": "LogicLineages.StandardControlCurrent.ClosedWordStatementChecks.full",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/113-closed-word-existential.json"
         },
         {
           "id": "18-standard-control-comparison:m:thm:graphs",
@@ -1996,8 +2005,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/period.tex",
           "line": 11,
           "statement_latex": "[The actual residue formula]\\label{lem:residue}\nThe form $\\omega_e=z^{e-1}A_d(z)^{-1}\\,dz$ has a simple nonzero\nresidue at each primitive $q$-th root $\\zeta$, given by\n\\[\n b_\\zeta=\\frac{\\zeta^e}{A_{d-q}(\\zeta)}\n                 =\\zeta^{e-\\Delta}A_{m_0}(\\zeta).\n\\]",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.ActualLinkedResidue.Targets.CompleteActualResidue",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.ActualLinkedResidue.StatementChecks.fixed_completeActualResidue",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/114-actual-linked-residue.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:lem:bounds",
@@ -2006,8 +2018,11 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/period.tex",
           "line": 36,
           "statement_latex": "[The bounds needed for the root count]\\label{lem:bounds}\nFor the actual linked inputs, $r\\ge96$, $\\Delta<r$, and\n\\[\n 0<\\Delta-2e<q,\\qquad\n \\varphi(q)>\\frac{2^r}{r+1}>2^{2r/3}\\Delta.\n\\]",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.ActualRootBounds.Targets.CompleteActualBounds",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.ActualRootBounds.StatementChecks.fixed_completeActualBounds",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/119-actual-root-bounds.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:thm:actual-period",
@@ -2023,7 +2038,7 @@
     }
   ],
   "status_counts": {
-    "pending": 123,
-    "checked": 44
+    "pending": 118,
+    "checked": 49
   }
 }
