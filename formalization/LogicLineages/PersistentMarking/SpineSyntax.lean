@@ -2,7 +2,7 @@ import LogicLineages.PersistentMarking.Syntax
 
 namespace LogicLineages.PersistentMarking.Spine
 
-/-- Locally nameless raw annotated auxiliary terms. Bound index 0 is the
+/- Locally nameless raw annotated auxiliary terms. Bound index 0 is the
 nearest lambda; free typed names are distinct from every bound index. -/
 mutual
 inductive Expr where

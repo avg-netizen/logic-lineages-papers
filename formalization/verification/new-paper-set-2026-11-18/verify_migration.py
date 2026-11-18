@@ -28,4 +28,7 @@ for p in d['papers']:
   assert found[row['id']]==(row['kind'],row['statement_latex'],row['line'],row['file'])
  count+=len(found)
 assert count==d['numbered_statement_count']
+if 'status_counts' in d:
+ from collections import Counter
+ assert dict(Counter(x['status'] for p in d['papers'] for x in p['statements']))==d['status_counts']
 print(json.dumps({'archive_files_verified':len(m['files']),'current_source_statements':count,'unique_ids':len(ids),'errors':[]},indent=2))

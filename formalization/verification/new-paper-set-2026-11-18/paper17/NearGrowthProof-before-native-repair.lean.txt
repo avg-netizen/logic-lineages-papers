@@ -1,0 +1,120 @@
+module
+public import LogicLineages.PermittedControl.GrowthTargets
+public import LogicLineages.PermittedControl.NearControlProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl
+
+ theorem initialLcm_dvd_factorial (n : Nat) : initialLcm n ∣ Nat.factorial n := by
+  induction n with
+  | zero => decide
+  | succ n ih =>
+    exact Nat.lcm_dvd
+      (ih.trans (Nat.factorial_dvd_factorial (Nat.le_succ n)))
+      (Nat.dvd_factorial (Nat.succ_pos n) le_rfl)
+
+ theorem initialLcm_le_factorial (n : Nat) : initialLcm n ≤ Nat.factorial n :=
+  Nat.le_of_dvd (Nat.factorial_pos n) (initialLcm_dvd_factorial n)
+
+ theorem two_factorial_le_double_pow (n : Nat) :
+    2 * Nat.factorial n ≤ 2 ^ (2 ^ (n + 1)) := by
+  induction n with
+  | zero => decide
+  | succ n ih =>
+    have hn : n + 1 ≤ 2 ^ (2 ^ (n + 1)) :=
+      (Nat.lt_two_pow_self (n + 1)).le.trans (Nat.lt_two_pow_self (2 ^ (n + 1))).le
+    calc
+      2 * Nat.factorial (n + 1) = (n + 1) * (2 * Nat.factorial n) := by
+        simp only [Nat.factorial_succ, Nat.mul_assoc, Nat.mul_left_comm, Nat.mul_comm]
+      _ ≤ (2 ^ (2 ^ (n + 1))) * (2 ^ (2 ^ (n + 1))) := Nat.mul_le_mul hn ih
+      _ = 2 ^ (2 ^ (n + 1) + 2 ^ (n + 1)) := (Nat.pow_add _ _ _).symm
+      _ = 2 ^ (2 ^ (n + 1 + 1)) := by
+        congr 1
+        rw [Nat.pow_succ]
+        omega
+
+ theorem two_factorial_le_G (n : Nat) : 2 * Nat.factorial n ≤ G n := by
+  have hshift : 2 ^ (2 ^ (n + 1)) ≤ 2 ^ (2 ^ (n + 100)) :=
+    Nat.pow_le_pow_right (by decide)
+      (Nat.pow_le_pow_right (by decide) (by omega))
+  exact (two_factorial_le_double_pow n).trans
+    (hshift.trans (OrdinalComparison.two_tower_le_fastControl (j := 5)
+      (n := n + 100) (by decide) (by omega)))
+
+ theorem nearControl_lt_twice (b n : Nat) : nearControl b n < 2 * G n := by
+  have hG := OrdinalComparison.self_lt_Phi n
+  by_cases h : n ≤ b
+  · rw [nearControl_prefix b n h]
+    omega
+  · have hd := nearControl_distance b n (by omega)
+    have hl := initialLcm_le_factorial n
+    have hf := two_factorial_le_G n
+    have hg := nearControl_ge b n
+    omega
+
+ theorem triple_tower_le_fastControl {j x : Nat} (hj : 1 ≤ j) (hx : 2 ≤ x) :
+    2 ^ (2 ^ (2 ^ x)) ≤ OrdinalComparison.fastControl j x := by
+  have h := (OrdinalComparison.iterate_index_mono
+    (fun z => (OrdinalComparison.self_lt_fastControl 0 z).le) x)
+    (show 3 ≤ x + 1 by omega)
+  have hfirst : 2 ^ (2 ^ (2 ^ x)) ≤ OrdinalComparison.fastControl 1 x := by
+    simpa [OrdinalComparison.fastControl, Function.iterate_succ_apply'] using h
+  exact hfirst.trans ((OrdinalComparison.fastControl_level_mono x) hj)
+
+ theorem nearControl_separation (b n : Nat) :
+    2 ^ (2 ^ nearControl b n) ≤ nearControl b (n + 1) := by
+  have hn := nearControl_lt_twice b n
+  have hG := OrdinalComparison.self_lt_Phi n
+  have hdouble : 2 * G n ≤ 2 ^ (G n + 1) := by
+    have h := Nat.mul_le_mul_left 2 (Nat.lt_two_pow_self (G n)).le
+    simpa only [Nat.pow_succ, Nat.mul_comm] using h
+  have ht := triple_tower_le_fastControl (j := 4) (x := G n + 1)
+    (by decide) (by omega)
+  have hstep := OrdinalComparison.fastControl_step_growth 4 (n + 100)
+  have hnext : OrdinalComparison.fastControl 4 (G n + 1) ≤ G (n + 1) := by
+    simpa only [G, OrdinalComparison.Phi, Nat.add_assoc, Nat.add_comm, Nat.add_left_comm] using hstep
+  exact (Nat.pow_le_pow_right (by decide)
+    (Nat.pow_le_pow_right (by decide) (hn.le.trans hdouble))).trans
+    (ht.trans (hnext.trans (nearControl_ge b (n + 1))))
+
+ theorem nearControl_lt_nextG (b n : Nat) : nearControl b n < G (n + 1) := by
+  have hn := nearControl_lt_twice b n
+  have hdouble : 2 * G n ≤ 2 ^ (G n + 1) := by
+    have h := Nat.mul_le_mul_left 2 (Nat.lt_two_pow_self (G n)).le
+    simpa only [Nat.pow_succ, Nat.mul_comm] using h
+  have hexp : 2 ^ (G n + 1) ≤ 2 ^ (2 ^ G n) :=
+    Nat.pow_le_pow_right (by decide) (Nat.succ_le_of_lt (Nat.lt_two_pow_self (G n)))
+  exact hn.trans_le (hdouble.trans (hexp.trans (OrdinalComparison.Phi_double_tower_gap n)))
+
+ theorem twice_self_le_two_pow {n : Nat} (hn : 1 ≤ n) : 2 * n ≤ 2 ^ n := by
+  induction n, hn using Nat.le_induction with
+  | base => decide
+  | succ k hk ih =>
+    have h := Nat.mul_le_mul_left 2 ih
+    rw [Nat.pow_succ]
+    omega
+
+ theorem nearControl_eventual (b n : Nat) (hn : 101 ≤ n) :
+    nearControl b n ≤ OrdinalComparison.fastControl 6 n := by
+  have hs : n + 101 ≤ OrdinalComparison.fastControl 5 n := by
+    have h := twice_self_le_two_pow (n := n) (by omega)
+    have h' := OrdinalComparison.two_pow_le_fastControl 5 n
+    omega
+  have hseed := (OrdinalComparison.fastControl_strictMono 5).monotone hs
+  have hi := (OrdinalComparison.iterate_index_mono
+    (fun z => (OrdinalComparison.self_lt_fastControl 5 z).le) n)
+    (show 2 ≤ n + 1 by omega)
+  have hit : OrdinalComparison.fastControl 5 (OrdinalComparison.fastControl 5 n) ≤
+      OrdinalComparison.fastControl 6 n := by
+    change OrdinalComparison.fastControl 5 (OrdinalComparison.fastControl 5 n) ≤
+      ((OrdinalComparison.fastControl 5)^[n + 1]) n
+    simpa only [Function.iterate_succ_apply', Function.iterate_zero, id_eq] using hi
+  have hG : G (n + 1) ≤ OrdinalComparison.fastControl 5 (OrdinalComparison.fastControl 5 n) := by
+    simpa only [G, OrdinalComparison.Phi, Nat.add_assoc] using hseed
+  exact (nearControl_lt_nextG b n).le.trans (hG.trans hit)
+
+ theorem nearControlGrowth : Targets.NearControlGrowth :=
+  ⟨fun n => ⟨initialLcm_le_factorial n, two_factorial_le_G n⟩,
+    nearControl_lt_twice, nearControl_separation, nearControl_lt_nextG, nearControl_eventual⟩
+
+end LogicLineages.PermittedControl
