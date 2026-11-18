@@ -1,0 +1,100 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:82:94: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a - b - c ≥ 1
+where
+ a := ↑(extraSize h✝)
+ b := ↑(extraSize h✝¹)
+ c := ↑(extrasSize hs✝)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:82:94: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  b - c - d ≥ 1
+  a ≥ 0
+where
+ a := ↑(extraSize h✝)
+ b := ↑(extrasSize hs)
+ c := ↑(extraSize h✝¹)
+ d := ↑(extrasSize hs✝)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:70:94: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 1
+where
+ a := ↑(treeSize ht)
+ b := ↑(treeSize ht✝)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:70:37: error: Tactic `simp` failed with a nested error:
+(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:42:61: warning: This simp argument is unused:
+  basesSize
+
+Hint: Omit it from the simp argument list.
+  simp_all only [̵t̵r̵e̵e̵S̵i̵z̵e̵,̵b̵a̵s̵e̵s̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵s̵S̵i̵z̵e̵]̵[̲t̲r̲e̲e̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲s̲S̲i̲z̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:42:71: warning: This simp argument is unused:
+  extraSize
+
+Hint: Omit it from the simp argument list.
+  simp_all only [̵t̵r̵e̵e̵S̵i̵z̵e̵,̵b̵a̵s̵e̵s̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵s̵S̵i̵z̵e̵]̵[̲t̲r̲e̲e̲S̲i̲z̲e̲,̲ ̲b̲a̲s̲e̲s̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲s̲S̲i̲z̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:42:81: warning: This simp argument is unused:
+  extrasSize
+
+Hint: Omit it from the simp argument list.
+  simp_all only [̵t̵r̵e̵e̵S̵i̵z̵e̵,̵b̵a̵s̵e̵s̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵s̵S̵i̵z̵e̵]̵[̲t̲r̲e̲e̲S̲i̲z̲e̲,̲ ̲b̲a̲s̲e̲s̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲S̲i̲z̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:70:52: warning: This simp argument is unused:
+  treeSize
+
+Hint: Omit it from the simp argument list.
+  simp_all only [̵t̵r̵e̵e̵S̵i̵z̵e̵,̵b̵a̵s̵e̵s̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵s̵S̵i̵z̵e̵]̵[̲b̲a̲s̲e̲s̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲s̲S̲i̲z̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:70:61: warning: This simp argument is unused:
+  basesSize
+
+Hint: Omit it from the simp argument list.
+  simp_all only [̵t̵r̵e̵e̵S̵i̵z̵e̵,̵b̵a̵s̵e̵s̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵s̵S̵i̵z̵e̵]̵[̲t̲r̲e̲e̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲s̲S̲i̲z̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:70:81: warning: This simp argument is unused:
+  extrasSize
+
+Hint: Omit it from the simp argument list.
+  simp_all only [̵t̵r̵e̵e̵S̵i̵z̵e̵,̵b̵a̵s̵e̵s̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵s̵S̵i̵z̵e̵]̵[̲t̲r̲e̲e̲S̲i̲z̲e̲,̲ ̲b̲a̲s̲e̲s̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲S̲i̲z̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:82:52: warning: This simp argument is unused:
+  treeSize
+
+Hint: Omit it from the simp argument list.
+  simp_all only [̵t̵r̵e̵e̵S̵i̵z̵e̵,̵b̵a̵s̵e̵s̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵s̵S̵i̵z̵e̵]̵[̲b̲a̲s̲e̲s̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲s̲S̲i̲z̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:82:61: warning: This simp argument is unused:
+  basesSize
+
+Hint: Omit it from the simp argument list.
+  simp_all only [̵t̵r̵e̵e̵S̵i̵z̵e̵,̵b̵a̵s̵e̵s̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵s̵S̵i̵z̵e̵]̵[̲t̲r̲e̲e̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲s̲S̲i̲z̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:82:71: warning: This simp argument is unused:
+  extraSize
+
+Hint: Omit it from the simp argument list.
+  simp_all only [̵t̵r̵e̵e̵S̵i̵z̵e̵,̵b̵a̵s̵e̵s̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵s̵S̵i̵z̵e̵]̵[̲t̲r̲e̲e̲S̲i̲z̲e̲,̲ ̲b̲a̲s̲e̲s̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲s̲S̲i̲z̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:85:59: error(lean.unknownIdentifier): Unknown identifier `tree`

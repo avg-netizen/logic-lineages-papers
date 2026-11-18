@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.TargetVisitProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_synchronizedTargetVisits : Targets.SynchronizedTargetVisits := synchronizedTargetVisits
+#print axioms fixed_synchronizedTargetVisits
+end LogicLineages.PermittedControl.StatementChecks

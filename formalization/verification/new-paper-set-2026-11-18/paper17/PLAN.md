@@ -316,3 +316,11 @@ receipt1794982856995178512-7,171module recursive evidence, single standard-only
 fixed_fullGapInput alias. Independent full final approved numbered lem:gap-input.
 Original constituent gate/evidence preserved. Parent controls register adoption.
 LocalPhase four exact supporting targets now frozen5pins pending pre-scope.
+
+LocalPhase4 passed first native attempt receipt1794983273621776995-5,170modules,
+all exact standard-only aliases; independent final approved supporting-only.
+Source thick remains unpaid. General TargetVisit bridge now frozen5pins before
+proof, with sigma>=rho admission (including arbitrary later lower-suffix instance),
+derived actual visits/no-skip/equal-clock reset or unequal-clock divergence.
+No reset-top-only promotion planned; full block affordability/moving residues and
+source-general suffix wrapper still must be proved.

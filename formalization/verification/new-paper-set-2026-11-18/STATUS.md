@@ -1,6 +1,6 @@
 # Current comparison formalization status
 
-New-paper register: **21 checked, 146 pending / 167**. Historical register:
+New-paper register: **22 checked, 145 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
@@ -37,6 +37,9 @@ to this replacement collection. Old statuses do not transfer automatically.
   translation with actual word domains and source-expression coverage.
 - Paper18 `m:cor:polynomial-booleans`: actual effective correlated compiler
   and complete existential/universal Boolean decision on positive originals.
+- Paper18 `m:lem:graph-domains`: effective full canonical graph-network
+  compilation and existential decision, with common-valuation domains, actual
+  programs and fresh independent high-level block coverage.
 - Paper19 `lem:perturbed-control`: full control lemma over the stipulated
   primitive-recursive bounded simulation, including double-exponential growth.
 
@@ -73,7 +76,14 @@ correspondence sufficient for the source-permitted DB elementary lemma
 is independently reviewed, and the complete elementary lemma is checked.
 Initial literal auxiliary/refinement tree endpoints are checked (29 modules,
 six aliases), using a reviewed tagged representation under unchanged core caps.
-Broader refinement/context closure, prefix escape, cut/composition, decision
+Successful marking reflection is checked (28 modules, one exact alias).
+Injective typed-name refinement renaming with actual witness/count preservation
+is checked (28 modules, one exact supporting alias).
+Actual fresh-opening synchronization preserving the refinement witness count
+is checked (30 modules, one supporting alias).
+Full refinement transitivity is checked (41 modules, one supporting alias),
+using the actual right-witness constructor count and synchronized fresh openings.
+Broader substitution/context closure, prefix escape, comparison cut, decision
 and height remain open.
 
 Paper17: near-control modular/orbit, full numerical growth and joint primitive
@@ -89,6 +99,10 @@ Actual relative maximum/trajectory support (150 modules) and source
 propagation (152 modules) are checked. Actual conditional count-lag support
 is checked (164 modules), deriving survival rather than assuming it. Full
 gap/input computed-tail and budget discharge is checked (171 modules).
+Actual retained local phase, successor/positive-limit local tails and symmetric
+quadratic coincidence are checked (170 modules, four supporting aliases).
+Actual arbitrary lower-limit target admission/no-skip/shared-clock reset or
+minimum-clock divergence is checked (165 modules, one supporting alias).
 Thick/equal-gap/threshold certificates, arithmetic decision and ground
 comparison remain separate unpaid obligations.
 
@@ -124,3 +138,12 @@ source denominator/multiplicity/clog and mapped-input budget are checked
 (18 modules, six aliases). Complete source mixed transient is checked
 (27 modules). The complete residue-profile/bijection and observer remain
 separate unpaid obligations. No arbitrary Laurent-coefficient claim is made.
+
+Actual source splitting-field/all-root/Frobenius facts are checked (nine modules,
+seven supporting aliases), including the exact F2 fixed field. Mathematical
+finiteness is not executable field construction/root enumeration or a complete
+profile theorem.
+
+Actual full-root product/omitted-factor interpolation is checked for every
+degree-bounded polynomial, including empty roots (ten modules, six supporting
+aliases). Independent rational-state coverage and descent remain separate.

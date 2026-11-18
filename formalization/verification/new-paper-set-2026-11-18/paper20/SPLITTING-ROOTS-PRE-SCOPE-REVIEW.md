@@ -1,0 +1,5 @@
+# Independent SplittingRoots7 pre-scope
+
+Approved seven supporting targets for bounded unchanged-cap target-only import preflight and proof development. All four pins match. Actual FieldAt is the splitting field of the complete literal source polynomial over ZMod2; rootSet is all distinct roots of its genuine coefficient image. Targets retain mathematical finiteness, splitting, exact root membership, nonzero roots, coefficient Frobenius fixation, actual root permutation by squaring, and unique embedded F2 characterization of all fixed elements. All d includes d=0 empty-root case; nonzero polynomial follows constant one. No supplied root family or fixed-field oracle.
+
+These targets establish mathematical finite structure only, not effective enumeration/construction, executable conversion, PF coverage, geometric state equivalence or full observer. Perfectness/characteristic instances required downstream must come from actual finite field structure, not be silently postulated. Avoid broad legacy edits/cap changes if the new splitting-field import exceeds budget.

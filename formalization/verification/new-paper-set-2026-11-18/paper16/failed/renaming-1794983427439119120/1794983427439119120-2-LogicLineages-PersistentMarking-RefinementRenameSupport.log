@@ -1,0 +1,17 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenameSupport.lean:15:42: error: Application type mismatch: The argument
+  congrArg (Expr.marked f τ) (depthArgs π d base)
+has type
+  Expr.marked f τ (freeSubArgs (fun σ x => Expr.free σ (π σ x)) d base) = Expr.marked f τ (renameArgs π base)
+but is expected to have type
+  freeSub (fun σ x => Expr.free σ (π σ x)) d = rename π
+in the application
+  congr (congrArg (Expr.marked f τ) (depthArgs π d base))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenameSupport.lean:21:29: error: Application type mismatch: The argument
+  congrArg Args.cons (depth π d q)
+has type
+  Args.cons (freeSub (fun σ x => Expr.free σ (π σ x)) d q) = Args.cons (rename π q)
+but is expected to have type
+  freeSubArgs (fun σ x => Expr.free σ (π σ x)) d = renameArgs π
+in the application
+  congr (congrArg Args.cons (depth π d q))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenameSupport.lean:22:1: warning: unused `termination_by`, function is not recursive

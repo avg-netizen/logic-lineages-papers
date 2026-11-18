@@ -13,7 +13,7 @@ def Block.result (b : Block) := b.2.2
 /-- The designated output wire is linked explicitly; auxiliary nodes are not
 silently identified with it. -/
 def Block.rows (b : Block) : List Row :=
-  rows b.start b.term ++ [variableRow b.result (output b.start b.term)]
+  PolynomialGraphCompletion.rows b.start b.term ++ [variableRow b.result (output b.start b.term)]
 def heads (hs : List HeadClause) (bs : List Block) : List Nat :=
   hs.map Prod.fst ++ bs.flatMap (fun b => b.term.heads)
 def degree (hs : List HeadClause) (bs : List Block) : Nat := familyDegree (heads hs bs)

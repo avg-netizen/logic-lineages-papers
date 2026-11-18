@@ -1,0 +1,7 @@
+# Independent two-environment substitution plan review
+
+Approved route for unchanged frozen FreeSubstitution endpoint, not proof acceptance. Strong induction on actual witness count generalized over both maps handles fresh opening replacement; exact synchronization preserves the smaller child bound. A typed fresh name may be chosen above finitely many occurring image terms, never above all infinitely many map images. Mask both maps only at that typed name, prove pointwise refinement/typing internally, and show masked maps agree on the literal bodies by source-name absence.
+
+The actual depth-one transformed lambda bodies and existing composition identity must be retained. Replacing them by naive depth-zero substitution or assuming images are shift-invariant without proof is not permitted. Prove transformed freshness through actual shift/free-name behavior and concrete finite image bound. Pointwise image refinement must yield real image validity; concrete freeSub typing pays the endpoint typedness. Existing-extra At occurrences and whole-owner source/target types must align under their respective maps, including annotated marked-root retyping.
+
+Arbitrary final renaming is legitimate specialization to free variables and cannot keep the preliminary injectivity restriction. Opening at another fresh name can use synchronization. No comparison/cut, application associativity or substitution supplier may be assumed. Full sharp-syntax still requires all endpoints and a fresh full assembly gate.

@@ -1,0 +1,75 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementMarkProof.lean:69:30: error: failed to prove termination, possible solutions:
+  - Use `have`-expressions to prove the remaining goals
+  - Use `termination_by` to specify a different well-founded relation
+  - Use `decreasing_by` to specify your own tactic for discharging this kind of goal
+S : Signature
+_x : (q : Expr) ×' (s : Expr) ×' (r : Expr) ×' (_ : RefinementTree S q s) ×' mark s = some r
+a✝⁴ :
+  ∀ (y : (q : Expr) ×' (s : Expr) ×' (r : Expr) ×' (_ : RefinementTree S q s) ×' mark s = some r),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x =>
+          PSigma.casesOn x fun q s =>
+            PSigma.casesOn s fun s r => PSigma.casesOn r fun r h => PSigma.casesOn h fun h hm => sizeOf h)
+        y _x →
+      ∃ p, mark y.1 = some p ∧ Refines S p y.2.2.1
+q✝ : Expr
+s✝¹ : (s : Expr) ×' (r : Expr) ×' (_ : RefinementTree S q✝ s) ×' mark s = some r
+a✝³ :
+  ∀ (y : (q : Expr) ×' (s : Expr) ×' (r : Expr) ×' (_ : RefinementTree S q s) ×' mark s = some r),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x =>
+          PSigma.casesOn x fun q s =>
+            PSigma.casesOn s fun s r => PSigma.casesOn r fun r h => PSigma.casesOn h fun h hm => sizeOf h)
+        y ⟨q✝, s✝¹⟩ →
+      ∃ p, mark y.1 = some p ∧ Refines S p y.2.2.1
+s✝ : Expr
+r✝ : (r : Expr) ×' (_ : RefinementTree S q✝ s✝) ×' mark s✝ = some r
+a✝² :
+  ∀ (y : (q : Expr) ×' (s : Expr) ×' (r : Expr) ×' (_ : RefinementTree S q s) ×' mark s = some r),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x =>
+          PSigma.casesOn x fun q s =>
+            PSigma.casesOn s fun s r => PSigma.casesOn r fun r h => PSigma.casesOn h fun h hm => sizeOf h)
+        y ⟨q✝, ⟨s✝, r✝⟩⟩ →
+      ∃ p, mark y.1 = some p ∧ Refines S p y.2.2.1
+r : Expr
+h✝⁵ : (_ : RefinementTree S q✝ s✝) ×' mark s✝ = some r
+a✝¹ :
+  ∀ (y : (q : Expr) ×' (s : Expr) ×' (r : Expr) ×' (_ : RefinementTree S q s) ×' mark s = some r),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x =>
+          PSigma.casesOn x fun q s =>
+            PSigma.casesOn s fun s r => PSigma.casesOn r fun r h => PSigma.casesOn h fun h hm => sizeOf h)
+        y ⟨q✝, ⟨s✝, ⟨r, h✝⁵⟩⟩⟩ →
+      ∃ p, mark y.1 = some p ∧ Refines S p y.2.2.1
+h✝⁴ : RefinementTree S q✝ s✝
+hm✝ : mark s✝ = some r
+a✝ :
+  ∀ (y : (q : Expr) ×' (s : Expr) ×' (r : Expr) ×' (_ : RefinementTree S q s) ×' mark s = some r),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x =>
+          PSigma.casesOn x fun q s =>
+            PSigma.casesOn s fun s r => PSigma.casesOn r fun r h => PSigma.casesOn h fun h hm => sizeOf h)
+        y ⟨q✝, ⟨s✝, ⟨r, ⟨h✝⁴, hm✝⟩⟩⟩⟩ →
+      ∃ p, mark y.1 = some p ∧ Refines S p y.2.2.1
+σ : Ty
+q : Expr
+τ : Ty
+s : Expr
+x : Nat
+hp : PaperTerm S (Expr.lam σ q) (σ.arrow τ)
+hs : PaperTerm S (Expr.lam σ s) (σ.arrow τ)
+hf : freeOccurs (σ, x) q = false
+hg : freeOccurs (σ, x) s = false
+hchild : RefinementTree S (openBody σ x q) (openBody σ x s)
+h✝³ : q✝ = Expr.lam σ q
+h✝² : s✝ = Expr.lam σ s
+hm : mark (Expr.lam σ s) = some r
+h : RefinementTree S (Expr.lam σ q) (Expr.lam σ s)
+h✝¹ : h ≍ RefinementTree.abs hp hs hf hg hchild
+sr : Expr
+h✝ hsm : mark s = some sr
+hopen :
+  mark (substitute (Args.cons (Expr.free σ x) Args.nil) 0 s) =
+    some (substitute (Args.cons (Expr.free σ x) Args.nil) 0 sr)
+⊢ sizeOf hchild < sizeOf h✝⁴

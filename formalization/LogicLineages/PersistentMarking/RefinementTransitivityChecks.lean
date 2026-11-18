@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.RefinementTransitivityProof
+namespace LogicLineages.PersistentMarking.RefinementTransitivityChecks
+theorem exact_transitive : RefinementSyntaxTargets.Transitive := RefinementTransitivityProof.transitive
+#print axioms exact_transitive
+end LogicLineages.PersistentMarking.RefinementTransitivityChecks
