@@ -1,0 +1,36 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowBindingChecks.lean:12:53: error: unsolved goals
+f : Head
+σ τ : Ty
+k : Nat
+bs es : NArgs
+a : NTerm
+hb : substituteArgs (NArgs.cons a NArgs.nil) 0 (shiftArgs 1 0 bs) = bs
+he : substituteArgs (NArgs.cons a NArgs.nil) 0 (shiftArgs 1 0 es) = es
+⊢ NTerm.numbered f τ k bs
+      (es.append
+        (NArgs.cons
+          (if 0 < 0 then NTerm.bound σ 0
+          else
+            match (NArgs.cons a NArgs.nil).get (0 - 0) with
+            | some a => shift 0 0 a
+            | none => NTerm.bound σ (0 - (NArgs.cons a NArgs.nil).length))
+          NArgs.nil)) =
+    NTerm.numbered f τ k bs (es.append (NArgs.cons a NArgs.nil))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowBindingChecks.lean:18:75: warning: This simp argument is unused:
+  substituteBoundZero
+
+Hint: Omit it from the simp argument list.
+  simp only [̵o̵p̵e̵n̵N̵u̵m̵b̵e̵r̵e̵d̵,̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵,̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵A̵p̵p̵e̵n̵d̵,̵h̵b̵,̵h̵e̵,̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵A̵r̵g̵s̵,̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵B̵o̵u̵n̵d̵Z̵e̵r̵o̵]̵[̲o̲p̲e̲n̲N̲u̲m̲b̲e̲r̲e̲d̲,̲ ̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲,̲ ̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲A̲p̲p̲e̲n̲d̲,̲ ̲h̲b̲,̲ ̲h̲e̲,̲ ̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲A̲r̲g̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'LogicLineages.PersistentMarking.NumberedWindowBindingChecks.exact_SingleCancellation' depends on axioms: [propext,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowBindingChecks.exact_SingleArgsCancellation' depends on axioms: [propext,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowBindingChecks.exact_SinglePushBlock' depends on axioms: [propext,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowBindingChecks.exact_SingleArgsPushBlock' depends on axioms: [propext,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowBindingChecks.exact_OpenNumberedBeta' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]

@@ -23,13 +23,17 @@ theorem factor_exact {Γ τ} (d : Input Γ τ) :
 private theorem place_table {Γ} (right : Bool) :
     renamingCode (place (Γ:=Γ) right) =
       (if right then [2,3] else [0,1]) ++ prefixTable 6 (Γ.map SyntaxCode.typeCode) := by
-  cases right
-  · change 0 :: 1 :: renamingCode (shift 6 (Γ:=Γ)) = _
-    rw [prefix_table_code]
-    rfl
-  · change 2 :: 3 :: renamingCode (shift 6 (Γ:=Γ)) = _
-    rw [prefix_table_code]
-    rfl
+  have tail : renamingCode (Γ:=Γ) (fun x => place right (.there (.there x))) =
+      prefixTable 6 (Γ.map SyntaxCode.typeCode) := by
+    have pointwise :
+        (fun {α : Ty} (x : Variable Γ α) => place right (.there (.there x))) =
+        (fun {α : Ty} (x : Variable Γ α) => shift 6 x) := by
+      funext α x
+      cases α <;> cases right <;> first | rfl | (cases x <;> rfl)
+    rw [pointwise]
+    exact (prefix_table_code Γ 6).symm
+  rw [renamingCode, renamingCode, tail]
+  cases right <;> rfl
 
 theorem probes_exact {Γ τ} (right : Bool) (hg : ∀ t ∈ Γ, t = Ty.ground) (d : Input Γ τ) :
     probeCodes right (encode ⟨Γ,τ,d⟩) =
@@ -55,8 +59,9 @@ theorem probes_exact {Γ τ} (right : Bool) (hg : ∀ t ∈ Γ, t = Ty.ground) (
     encode ⟨Γ₂,.ground,AbsoluteProbeDAG.originalInput d⟩ at hl
   change CurrentProbeCode.probeRaw (encode ⟨Γ₂,τ,c₂⟩) 1 =
     encode ⟨Γ₂,.ground,AbsoluteProbeDAG.closedInput hg d⟩ at hr
+  have hctx : (encode ⟨Γ,τ,d⟩).1 = Γ.map SyntaxCode.typeCode := rfl
   rw [hl,hr,rename_input,rename_input,place_table]
-  simp [Extension,SyntaxCode.typeCode,ctx]
+  simp [Extension,SyntaxCode.typeCode,hctx,Γ₂]
 
 private theorem shifted_codes {Γ Δ τ} (r : Renaming Γ Δ) (n : Nat)
     (h : ∀ (τ : Ty) (x : Variable Γ τ), variableIndex (r x) = variableIndex x+n)
@@ -122,7 +127,6 @@ theorem counter_syntax (p : AdmissibleSum.Policy) (f : Nat → Nat) (strict : Bo
   dsimp only
   rw [probes_exact false hg a, probes_exact true hg b, factor_exact, factor_exact,
     ha0,ha1,ha2,ha3,ha4]
-  simp only [i,j,A,B,L,R,G,List.append_assoc]
-  rfl
+  simp only [i,j,A,B,L,R,G,List.append_assoc,Nat.zero_add]
 
 end LogicLineages.ControlSensitivityCurrent.CurrentDecision

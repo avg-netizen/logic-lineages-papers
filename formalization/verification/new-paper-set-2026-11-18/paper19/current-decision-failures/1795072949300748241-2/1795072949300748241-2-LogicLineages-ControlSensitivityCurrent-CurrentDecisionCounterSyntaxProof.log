@@ -1,0 +1,195 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSyntaxProof.lean:27:4: error: 'change' tactic failed, pattern
+  (0 :: 1 :: renamingCode fun {σ} => shift 6) = ?m.71
+is not definitionally equal to target
+  (renamingCode fun {σ} => place false) =
+    (if false = true then [2, 3] else [0, 1]) ++ prefixTable 6 (List.map SyntaxCode.typeCode Γ)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSyntaxProof.lean:30:4: error: 'change' tactic failed, pattern
+  (2 :: 3 :: renamingCode fun {σ} => shift 6) = ?m.85
+is not definitionally equal to target
+  (renamingCode fun {σ} => place true) =
+    (if true = true then [2, 3] else [0, 1]) ++ prefixTable 6 (List.map SyntaxCode.typeCode Γ)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSyntaxProof.lean:37:62: error: unsolved goals
+Γ : List Ty
+τ : Ty
+right : Bool
+hg : ∀ t ∈ Γ, t = Ty.ground
+d : Input Γ τ
+ctx : List ℕ := List.map SyntaxCode.typeCode Γ
+Γ₂ : List Ty := Ty.ground :: Ty.ground :: Γ
+d₂ : Input (Ty.ground :: Ty.ground :: Γ) τ := ScopedDAG.renameInput (fun {σ} => AbsoluteObserver.shiftTwo Γ) d
+c₂ : Input Γ₂ τ := ScopedDAG.renameInput (fun {σ} => AbsoluteObserver.fromEmpty Γ₂) (AbsoluteProbeDAG.closeInput hg d)
+h₂ : liftCode 2 (encode ⟨Γ, ⟨τ, d⟩⟩) = encode ⟨Γ₂, ⟨τ, d₂⟩⟩
+hc₂ : renameCode (0 :: 0 :: ctx) [] (CurrentProbeCode.closeRaw (encode ⟨Γ, ⟨τ, d⟩⟩)) = encode ⟨Γ₂, ⟨τ, c₂⟩⟩
+hl : CurrentProbeCode.probeRaw (encode ⟨Γ₂, ⟨τ, d₂⟩⟩) 0 = encode ⟨Γ₂, ⟨Ty.ground, AbsoluteProbeDAG.originalInput d⟩⟩
+hr : CurrentProbeCode.probeRaw (encode ⟨Γ₂, ⟨τ, c₂⟩⟩) 1 = encode ⟨Γ₂, ⟨Ty.ground, AbsoluteProbeDAG.closedInput hg d⟩⟩
+⊢ renameCode (0 :: 0 :: 0 :: 0 :: 0 :: 0 :: (encode ⟨Γ, ⟨τ, d⟩⟩).1)
+        ((if right = true then [2, 3] else [0, 1]) ++ prefixTable 6 (encode ⟨Γ, ⟨τ, d⟩⟩).1)
+        (encode ⟨Γ₂, ⟨Ty.ground, AbsoluteProbeDAG.originalInput d⟩⟩) =
+      renameCode (0 :: 0 :: 0 :: 0 :: 0 :: 0 :: List.map SyntaxCode.typeCode Γ)
+        ((if right = true then [2, 3] else [0, 1]) ++ prefixTable 6 (List.map SyntaxCode.typeCode Γ))
+        (encode ⟨Ty.ground :: Ty.ground :: Γ, ⟨Ty.ground, AbsoluteProbeDAG.originalInput d⟩⟩) ∧
+    renameCode (0 :: 0 :: 0 :: 0 :: 0 :: 0 :: (encode ⟨Γ, ⟨τ, d⟩⟩).1)
+        ((if right = true then [2, 3] else [0, 1]) ++ prefixTable 6 (encode ⟨Γ, ⟨τ, d⟩⟩).1)
+        (encode ⟨Γ₂, ⟨Ty.ground, AbsoluteProbeDAG.closedInput hg d⟩⟩) =
+      renameCode (0 :: 0 :: 0 :: 0 :: 0 :: 0 :: List.map SyntaxCode.typeCode Γ)
+        ((if right = true then [2, 3] else [0, 1]) ++ prefixTable 6 (List.map SyntaxCode.typeCode Γ))
+        (encode ⟨Ty.ground :: Ty.ground :: Γ, ⟨Ty.ground, AbsoluteProbeDAG.closedInput hg d⟩⟩)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSyntaxProof.lean:59:38: warning: This simp argument is unused:
+  ctx
+
+Hint: Omit it from the simp argument list.
+  simp [Extension, ̲SyntaxCode.typeCode,̵c̵t̵x̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSyntaxProof.lean:126:2: error: Tactic `rfl` failed: The left-hand side
+  (observeSteps (encode ⟨Extension Γ, ⟨Ty.ground, (probes false hg a).1⟩⟩)
+        (encode ⟨Extension Γ, ⟨Ty.ground, (probes false hg a).2⟩⟩) 0 1 4 (AbsoluteObserver.factor σ)
+        (CurrentAbsolute.anchor p f (encode ⟨Γ, ⟨σ, a⟩⟩)) ++
+      (observeSteps (liftCode (AbsoluteObserver.factor σ + 5) (encode ⟨Extension Γ, ⟨Ty.ground, (probes true hg b).1⟩⟩))
+          (liftCode (AbsoluteObserver.factor σ + 5) (encode ⟨Extension Γ, ⟨Ty.ground, (probes true hg b).2⟩⟩))
+          (2 + (AbsoluteObserver.factor σ + 5)) (3 + (AbsoluteObserver.factor σ + 5))
+          (5 + (AbsoluteObserver.factor σ + 5)) (AbsoluteObserver.factor τ)
+          (CurrentAbsolute.anchor p f (encode ⟨Γ, ⟨τ, b⟩⟩)) ++
+        (rowCodes strict
+            (AbsoluteObserver.factor σ + 4 + (AbsoluteObserver.factor τ + 5),
+              AbsoluteObserver.factor σ + 3 + (AbsoluteObserver.factor τ + 5), 2 + (AbsoluteObserver.factor τ + 5),
+              0 + (AbsoluteObserver.factor τ + 5))
+            (AbsoluteObserver.factor τ + 4, AbsoluteObserver.factor τ + 3, 2, 0)
+            (4 + (AbsoluteObserver.factor σ + 5) + (AbsoluteObserver.factor τ + 5))
+            (5 + (AbsoluteObserver.factor σ + 5) + (AbsoluteObserver.factor τ + 5))).1),
+    (rowCodes strict
+        (AbsoluteObserver.factor σ + 4 + (AbsoluteObserver.factor τ + 5),
+          AbsoluteObserver.factor σ + 3 + (AbsoluteObserver.factor τ + 5), 2 + (AbsoluteObserver.factor τ + 5),
+          0 + (AbsoluteObserver.factor τ + 5))
+        (AbsoluteObserver.factor τ + 4, AbsoluteObserver.factor τ + 3, 2, 0)
+        (4 + (AbsoluteObserver.factor σ + 5) + (AbsoluteObserver.factor τ + 5))
+        (5 + (AbsoluteObserver.factor σ + 5) + (AbsoluteObserver.factor τ + 5))).2)
+is not definitionally equal to the right-hand side
+  (observeSteps (encode ⟨Extension Γ, ⟨Ty.ground, (probes false hg a).1⟩⟩)
+        (encode ⟨Extension Γ, ⟨Ty.ground, (probes false hg a).2⟩⟩) 0 1 4 (AbsoluteObserver.factor σ)
+        (CurrentAbsolute.anchor p f (encode ⟨Γ, ⟨σ, a⟩⟩)) ++
+      (observeSteps (liftCode (AbsoluteObserver.factor σ + 5) (encode ⟨Extension Γ, ⟨Ty.ground, (probes true hg b).1⟩⟩))
+          (liftCode (AbsoluteObserver.factor σ + 5) (encode ⟨Extension Γ, ⟨Ty.ground, (probes true hg b).2⟩⟩))
+          (2 + (AbsoluteObserver.factor σ + 5)) (3 + (AbsoluteObserver.factor σ + 5))
+          (5 + (AbsoluteObserver.factor σ + 5)) (AbsoluteObserver.factor τ)
+          (CurrentAbsolute.anchor p f (encode ⟨Γ, ⟨τ, b⟩⟩)) ++
+        (rowCodes strict
+            (AbsoluteObserver.factor σ + 4 + (AbsoluteObserver.factor τ + 5),
+              AbsoluteObserver.factor σ + 3 + (AbsoluteObserver.factor τ + 5), 2 + (AbsoluteObserver.factor τ + 5),
+              AbsoluteObserver.factor τ + 5)
+            (AbsoluteObserver.factor τ + 4, AbsoluteObserver.factor τ + 3, 2, 0)
+            (4 + (AbsoluteObserver.factor σ + 5) + (AbsoluteObserver.factor τ + 5))
+            (5 + (AbsoluteObserver.factor σ + 5) + (AbsoluteObserver.factor τ + 5))).1),
+    (rowCodes strict
+        (AbsoluteObserver.factor σ + 4 + (AbsoluteObserver.factor τ + 5),
+          AbsoluteObserver.factor σ + 3 + (AbsoluteObserver.factor τ + 5), 2 + (AbsoluteObserver.factor τ + 5),
+          AbsoluteObserver.factor τ + 5)
+        (AbsoluteObserver.factor τ + 4, AbsoluteObserver.factor τ + 3, 2, 0)
+        (4 + (AbsoluteObserver.factor σ + 5) + (AbsoluteObserver.factor τ + 5))
+        (5 + (AbsoluteObserver.factor σ + 5) + (AbsoluteObserver.factor τ + 5))).2)
+
+p : AdmissibleSum.Policy
+f : ℕ → ℕ
+strict : Bool
+Γ : List Ty
+σ τ : Ty
+hg : ∀ t ∈ Γ, t = Ty.ground
+a : Input Γ σ
+b : Input Γ τ
+G : List Ty := Extension Γ
+L : Input (Extension Γ) Ty.ground × Input (Extension Γ) Ty.ground := probes false hg a
+R : Input (Extension Γ) Ty.ground × Input (Extension Γ) Ty.ground := probes true hg b
+i : ℕ := AbsoluteObserver.factor σ
+j : ℕ := AbsoluteObserver.factor τ
+A : ℕ := CurrentAbsolute.anchor p f (encode ⟨Γ, ⟨σ, a⟩⟩)
+B : ℕ := CurrentAbsolute.anchor p f (encode ⟨Γ, ⟨τ, b⟩⟩)
+x : Variable G Ty.ground := fresh 0
+y : Variable G Ty.ground := fresh 1
+u : Variable G Ty.ground := fresh 2
+w : Variable G Ty.ground := fresh 3
+av : Variable G Ty.ground := fresh 4
+bv : Variable G Ty.ground := fresh 5
+k : {Δ : List Ty} → Renaming G Δ → Ports Δ → InputNormalization.Input Δ 0 :=
+  fun {Δ} r l =>
+    observe (ScopedDAG.renameInput (fun {σ} => r) R.1) (ScopedDAG.renameInput (fun {σ} => r) R.2) (r u) (r w) (r bv) j B
+      fun {Δ_1} s t => finalRows strict (mapPorts (fun {σ} => s) l) t (s (r av)) (s (r bv))
+Δ : List Ty
+r : Renaming (Extension Γ) Δ
+l : Ports Δ
+ht : List.map SyntaxCode.typeCode Δ = List.replicate (i + 5) 0 ++ List.map SyntaxCode.typeCode (Extension Γ)
+hr : ∀ (τ : Ty) (i_1 : Variable (Extension Γ) τ), variableIndex (r i_1) = variableIndex i_1 + (i + 5)
+hl : portIndices l = (i + 4, i + 3, 2, 0)
+he :
+  encodeInput (observe L.1 L.2 x y av i A fun {Δ} => k) =
+    (observeSteps (encode ⟨Extension Γ, ⟨Ty.ground, L.1⟩⟩) (encode ⟨Extension Γ, ⟨Ty.ground, L.2⟩⟩) (variableIndex x)
+          (variableIndex y) (variableIndex av) i A ++
+        (encodeInput (k (fun {σ} => r) l)).1,
+      (encodeInput (k (fun {σ} => r) l)).2)
+last : {Ξ : List Ty} → Renaming Δ Ξ → Ports Ξ → InputNormalization.Input Ξ 0 :=
+  fun {Ξ} s t => finalRows strict (mapPorts (fun {σ} => s) l) t (s (r av)) (s (r bv))
+Ξ : List Ty
+s : Renaming Δ Ξ
+t : Ports Ξ
+left✝ : List.map SyntaxCode.typeCode Ξ = List.replicate (j + 5) 0 ++ List.map SyntaxCode.typeCode Δ
+hs : ∀ (τ : Ty) (i : Variable Δ τ), variableIndex (s i) = variableIndex i + (j + 5)
+hb : portIndices t = (j + 4, j + 3, 2, 0)
+he' :
+  encodeInput
+      (observe (ScopedDAG.renameInput (fun {σ} => r) R.1) (ScopedDAG.renameInput (fun {σ} => r) R.2) (r u) (r w) (r bv)
+        j B fun {Δ} => last) =
+    (observeSteps (encode ⟨Δ, ⟨Ty.ground, ScopedDAG.renameInput (fun {σ} => r) R.1⟩⟩)
+          (encode ⟨Δ, ⟨Ty.ground, ScopedDAG.renameInput (fun {σ} => r) R.2⟩⟩) (variableIndex (r u))
+          (variableIndex (r w)) (variableIndex (r bv)) j B ++
+        (encodeInput (last (fun {σ} => s) t)).1,
+      (encodeInput (last (fun {σ} => s) t)).2)
+ha0 : variableIndex (r u) = 2 + (i + 5)
+ha1 : variableIndex (r w) = 3 + (i + 5)
+ha2 : variableIndex (r bv) = 5 + (i + 5)
+ha3 : variableIndex (s (r av)) = 4 + (i + 5) + (j + 5)
+ha4 : variableIndex (s (r bv)) = 5 + (i + 5) + (j + 5)
+⊢ (observeSteps (encode ⟨Extension Γ, ⟨Ty.ground, (probes false hg a).1⟩⟩)
+          (encode ⟨Extension Γ, ⟨Ty.ground, (probes false hg a).2⟩⟩) 0 1 4 (AbsoluteObserver.factor σ)
+          (CurrentAbsolute.anchor p f (encode ⟨Γ, ⟨σ, a⟩⟩)) ++
+        (observeSteps
+            (liftCode (AbsoluteObserver.factor σ + 5) (encode ⟨Extension Γ, ⟨Ty.ground, (probes true hg b).1⟩⟩))
+            (liftCode (AbsoluteObserver.factor σ + 5) (encode ⟨Extension Γ, ⟨Ty.ground, (probes true hg b).2⟩⟩))
+            (2 + (AbsoluteObserver.factor σ + 5)) (3 + (AbsoluteObserver.factor σ + 5))
+            (5 + (AbsoluteObserver.factor σ + 5)) (AbsoluteObserver.factor τ)
+            (CurrentAbsolute.anchor p f (encode ⟨Γ, ⟨τ, b⟩⟩)) ++
+          (rowCodes strict
+              (AbsoluteObserver.factor σ + 4 + (AbsoluteObserver.factor τ + 5),
+                AbsoluteObserver.factor σ + 3 + (AbsoluteObserver.factor τ + 5), 2 + (AbsoluteObserver.factor τ + 5),
+                0 + (AbsoluteObserver.factor τ + 5))
+              (AbsoluteObserver.factor τ + 4, AbsoluteObserver.factor τ + 3, 2, 0)
+              (4 + (AbsoluteObserver.factor σ + 5) + (AbsoluteObserver.factor τ + 5))
+              (5 + (AbsoluteObserver.factor σ + 5) + (AbsoluteObserver.factor τ + 5))).1),
+      (rowCodes strict
+          (AbsoluteObserver.factor σ + 4 + (AbsoluteObserver.factor τ + 5),
+            AbsoluteObserver.factor σ + 3 + (AbsoluteObserver.factor τ + 5), 2 + (AbsoluteObserver.factor τ + 5),
+            0 + (AbsoluteObserver.factor τ + 5))
+          (AbsoluteObserver.factor τ + 4, AbsoluteObserver.factor τ + 3, 2, 0)
+          (4 + (AbsoluteObserver.factor σ + 5) + (AbsoluteObserver.factor τ + 5))
+          (5 + (AbsoluteObserver.factor σ + 5) + (AbsoluteObserver.factor τ + 5))).2) =
+    (observeSteps (encode ⟨Extension Γ, ⟨Ty.ground, (probes false hg a).1⟩⟩)
+          (encode ⟨Extension Γ, ⟨Ty.ground, (probes false hg a).2⟩⟩) 0 1 4 (AbsoluteObserver.factor σ)
+          (CurrentAbsolute.anchor p f (encode ⟨Γ, ⟨σ, a⟩⟩)) ++
+        (observeSteps
+            (liftCode (AbsoluteObserver.factor σ + 5) (encode ⟨Extension Γ, ⟨Ty.ground, (probes true hg b).1⟩⟩))
+            (liftCode (AbsoluteObserver.factor σ + 5) (encode ⟨Extension Γ, ⟨Ty.ground, (probes true hg b).2⟩⟩))
+            (2 + (AbsoluteObserver.factor σ + 5)) (3 + (AbsoluteObserver.factor σ + 5))
+            (5 + (AbsoluteObserver.factor σ + 5)) (AbsoluteObserver.factor τ)
+            (CurrentAbsolute.anchor p f (encode ⟨Γ, ⟨τ, b⟩⟩)) ++
+          (rowCodes strict
+              (AbsoluteObserver.factor σ + 4 + (AbsoluteObserver.factor τ + 5),
+                AbsoluteObserver.factor σ + 3 + (AbsoluteObserver.factor τ + 5), 2 + (AbsoluteObserver.factor τ + 5),
+                AbsoluteObserver.factor τ + 5)
+              (AbsoluteObserver.factor τ + 4, AbsoluteObserver.factor τ + 3, 2, 0)
+              (4 + (AbsoluteObserver.factor σ + 5) + (AbsoluteObserver.factor τ + 5))
+              (5 + (AbsoluteObserver.factor σ + 5) + (AbsoluteObserver.factor τ + 5))).1),
+      (rowCodes strict
+          (AbsoluteObserver.factor σ + 4 + (AbsoluteObserver.factor τ + 5),
+            AbsoluteObserver.factor σ + 3 + (AbsoluteObserver.factor τ + 5), 2 + (AbsoluteObserver.factor τ + 5),
+            AbsoluteObserver.factor τ + 5)
+          (AbsoluteObserver.factor τ + 4, AbsoluteObserver.factor τ + 3, 2, 0)
+          (4 + (AbsoluteObserver.factor σ + 5) + (AbsoluteObserver.factor τ + 5))
+          (5 + (AbsoluteObserver.factor σ + 5) + (AbsoluteObserver.factor τ + 5))).2)

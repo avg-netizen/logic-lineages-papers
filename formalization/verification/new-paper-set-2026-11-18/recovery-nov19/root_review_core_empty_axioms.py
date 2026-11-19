@@ -39,7 +39,20 @@ for m in d['modules']:
             axioms[name] = [x.strip() for x in axs.split(',') if x.strip()]
         for name in re.findall(r"'([^']+)' does not depend on any axioms", text):
             axioms[name] = []
-        code = src.read_text()
+        # Strip nested Lean block comments while preserving newline numbers.
+        # Continuation prose such as "partial symbolic" is not a declaration.
+        raw = src.read_text(); out = []; pos = 0; depth = 0
+        while pos < len(raw):
+            if raw.startswith('/-', pos):
+                depth += 1; out.extend('  '); pos += 2
+            elif depth and raw.startswith('-/', pos):
+                depth -= 1; out.extend('  '); pos += 2
+            elif depth:
+                out.append('\n' if raw[pos] == '\n' else ' '); pos += 1
+            else:
+                out.append(raw[pos]); pos += 1
+        assert depth == 0, 'unclosed block comment'
+        code = ''.join(out)
         for i, line in enumerate(code.splitlines(), 1):
             if forb.search(line) and '#print axioms' not in line and not line.lstrip().startswith(('--', '/-')):
                 errs.append(f'forbidden {n}:{i}')

@@ -127,8 +127,7 @@ theorem generalReduction : CurrentDecisionTargets.GeneralReduction := by
   · let r := trueProgram (List.replicate (n+6) Ty.ground)
     refine ⟨r,?_,?_⟩
     · unfold toArithmetic
-      rw [hlen,if_neg hp]
-      rfl
+      rw [hlen,if_neg hp] <;> rfl
     · have hfalse : ¬ Universal p f strict a b := by
         intro hu
         have h := (fixedAssignments p f strict a b av bv ha hb).mp hu (fun _ => 0)

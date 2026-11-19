@@ -551,3 +551,46 @@ and translates the existing canonical-port derivations into fixed-point bits.
   numbered beta result; 14 source pins under
   paper16/recovery-nov19/NUMBERED-WINDOW-BINDING-FROZEN.json.
   No implementation or compiler yet for that separate supplier.
+
+## 2026-11-19 — exact numerical realization and binding suppliers pass
+
+- NUMBERED-SUPPORT-0719 passed the literal binding targets, encountered the
+  reserved helper/case naming error in realization substitution. Exact failed
+  source/log preserved, proof-only rename applied after review.
+- NUMBERED-SUPPORT-0726 passed the exact 38-module realization root and
+  23-module application **target-only** root. The same invocation stopped
+  at binding root's OpenNumberedBeta tactical unfolding order, no theorem
+  acceptance from failed union. Exact failed source/receipt/log preserved,
+  witness rewrite order corrected in proof-only check after review.
+- NUMBERED-CLEAN-0730 clean 43/43 union, receipt
+  `1795073320970999696-6`, all nine exact supporting aliases. Four realization
+  aliases include two axiom-free; all others only propext and Quot.sound.
+  Original core limits observed; peak 506992 KiB. Native program reaped,
+  shared locks free; no frozen source changed.
+- New evidence paper16/recovery-nov19/LANE-A-NUMBERED-REALIZATION-BINDING-CLOUD-EVIDENCE.json
+  SHA `5f2b8820a5c736c3128c9651c0b68e2788f8f0e42adcff07325153f320c3b120`;
+  43 modules, 9 aliases, 43 source pins. READY-FOR-ROOT-REVIEW as supporting
+  realized shape/window/binding only. No whole-tuple or locality promotion.
+- App, path, raw-window shift and numbered append theorem proofs remain in
+  authoring, after independently reviewed target-only pass.
+
+## 2026-11-19 — numbered application first proof gate and original block guard
+
+- Coordinator accepted realization/binding as supporting packet 421 after
+  independent replay; numbered locality/full tuple remain pending. Original
+  checker and all frozen semantics unchanged. The supplemental reviewer
+  handles no-axiom logs and lexically ignores actual block comments.
+- NUMBERED-APPLICATION-0733 reached ArgsProof after 38 passed native
+  entries then ordinary exit 1, receipt `1795073575840839218-6`, peak
+  471608 KiB. The generalized numeric arguments are explicit IH parameters.
+  Preserved all candidate sources, target freeze, receipt and error log.
+  After review, applied only three inferred argument placeholders (one
+  ArgsProof, two PathProof) against archived source. All 15 original
+  application pins remain unchanged. No native retry without ticket.
+- Prepared exact original-block guard term/base/extras comparators in
+  `NumberedWindowSourceGuardTargets`, 16 original pins manifest under
+  recovery-nov19 (SHA `ab19b6ec825e4531a0966cd645272cfa460234355622a5a95dc696c19b8a971e`).
+  The same original actual substitution retains typing, valid signature
+  and declaration-retaining support at arbitrary outside context; no
+  decision-side names/ports/observations added. Scope reviewed for target
+  preflight only; no proof authored yet.

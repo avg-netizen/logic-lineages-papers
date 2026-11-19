@@ -1,0 +1,33 @@
+--- LogicLineages/PersistentMarking/NumberedWindowApplicationArgsProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowApplicationArgsProof.lean
+@@ -17,7 +17,7 @@
+     | cons hRep hReps =>
+       have ha := NumberedWindowRealizationWindowProof.inWindow S K C _ n _ _ hHead hv.1
+         (fun ρ hρ => hu ρ (List.mem_append_left _ hρ)) hRep
+-      obtain ⟨ds,hd,hl,hw⟩ := ih hv.2 (fun ρ hρ => hu ρ (List.mem_append_right _ hρ)) hReps
++      obtain ⟨ds,hd,hl,hw⟩ := ih _ hv.2 (fun ρ hρ => hu ρ (List.mem_append_right _ hρ)) hReps
+       exact ⟨_ :: ds,by simp only [ArrowPrefix,hd],
+         by simp only [List.length_cons,Spine.Args.length,hl,Nat.add_comm],.cons ha hw⟩
+ 
+
+--- LogicLineages/PersistentMarking/NumberedWindowApplicationPathProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowApplicationPathProof.lean
+@@ -26,7 +26,7 @@
+   induction hAs generalizing Q with
+   | nil => exact ⟨_,rfl,hQ⟩
+   | cons hA _ ih =>
+-    obtain ⟨start,hcall,hw⟩ := ih (app S K C _ _ _ _ hk hQ hA)
++    obtain ⟨start,hcall,hw⟩ := ih _ (app S K C _ _ _ _ hk hQ hA)
+     exact ⟨start,(appEq hQ.1 hA.1 _).trans hcall,hw⟩
+ 
+ theorem liftOne : LiftAuxFunction := by
+@@ -43,7 +43,7 @@
+   | nil => exact ⟨_,_,rfl,rfl,hPath⟩
+   | cons hA _ ih =>
+     have hends := endpoints hPath
+-    obtain ⟨start,out,hs,ht,h⟩ := ih (liftOne S K C _ _ _ _ _ hk hPath hA)
++    obtain ⟨start,out,hs,ht,h⟩ := ih _ _ (liftOne S K C _ _ _ _ _ hk hPath hA)
+     exact ⟨start,out,(appEq hends.1.1 hA.1 _).trans hs,(appEq hends.2.1 hA.1 _).trans ht,h⟩
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowApplicationPathProof
+
