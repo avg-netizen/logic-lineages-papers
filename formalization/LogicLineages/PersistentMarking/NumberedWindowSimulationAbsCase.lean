@@ -28,7 +28,7 @@ theorem abs (S : Spine.Signature) (K : List Ty) (hk : DecisionSourceUniverse.Clo
   have hBound : budget d ≤ n := hn
   have hChild : Foot K d := fun ρ hp => h ρ (List.mem_append_right _ hp)
   have hWin := window hs (weakSource h) hQ
-  have hOrd : Spine.Ordinary t := ComparisonOrdinaryProof.weakOrdinary S _ _
+  have hOrd : Spine.Ordinary t := ComparisonOrdinaryProof.weakOrdinary S _ (.lam σ t)
     (.abs hs ht hf hg (LiteralDerivationSoundProof.sound d))
   cases hQ with
   | lam hBody =>
@@ -39,8 +39,7 @@ theorem abs (S : Spine.Signature) (K : List Ty) (hk : DecisionSourceUniverse.Clo
     obtain ⟨out⟩ := lambdaTrace (σ:=σ) (x:=x) path
     have hCloseQ := NumberedWindowClosingAbsThinProof.absBody σ x τ s n _ (bodyTyped hs) hf hBody
     rw [hCloseQ,hCloseT] at out
-    have hWin' : InWindow S K E (.arrow σ τ) _ := by simpa only [paperType hs] using hWin
-    rw [paperType hs]
-    exact weakOfTrace hk hWin' (quoteLambda hU) out
+    rw [paperType hs] at hWin ⊢
+    exact weakOfTrace hk hWin (quoteLambda hU) out
 
 end LogicLineages.PersistentMarking.NumberedWindowSimulationAbsCase

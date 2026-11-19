@@ -1,0 +1,13 @@
+--- LogicLineages/PersistentMarking/NumberedWindowSimulationAbsCase.lean
++++ LogicLineages/PersistentMarking/NumberedWindowSimulationAbsCase.lean
+@@ -39,8 +39,7 @@
+     obtain ⟨out⟩ := lambdaTrace (σ:=σ) (x:=x) path
+     have hCloseQ := NumberedWindowClosingAbsThinProof.absBody σ x τ s n _ (bodyTyped hs) hf hBody
+     rw [hCloseQ,hCloseT] at out
+-    have hWin' : InWindow S K E (.arrow σ τ) _ := by simpa only [paperType hs] using hWin
+-    rw [paperType hs]
+-    exact weakOfTrace hk hWin' (quoteLambda hU) out
++    rw [paperType hs] at hWin ⊢
++    exact weakOfTrace hk hWin (quoteLambda hU) out
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowSimulationAbsCase

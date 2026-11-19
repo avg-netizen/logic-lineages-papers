@@ -1,0 +1,21 @@
+--- LogicLineages/ControlSensitivityCurrent/CurrentReserveTargets.lean
++++ LogicLineages/ControlSensitivityCurrent/CurrentReserveTargets.lean
+@@ -69,7 +69,7 @@
+     @TrackedSource.Generated k (left ++ σ :: right) F n t →
+     ∃ (e : TrackedSource.Expr k (left ++ σ :: right) F n)
+       (u : OrdinalVector (left ++ σ :: right) (Ty.curriedGround n).level),
+-    let r := SelectedBinder.moveToHead left right σ
++    let r : Renaming (left ++ σ :: right) (σ :: (left ++ right)) := SelectedBinder.moveToHead left right σ
+     let u' := SourceRenaming.renameVector r u
+     TrackedSource.erase e = t ∧ AdmissibleAssignment.assignment p t = some u ∧
+     AdmissibleAssignment.assignment p (prepareSource left right σ t) = some u' ∧
+@@ -79,7 +79,8 @@
+       SpawnedAccount p f (u' 0) xs c ∧ Account p f (u' 0) xs c ∧
+       AdmissiblePartial.run p 0 (u' 0) = some v ∧
+       1 ≤ reserve xs c ∧
+-      (TrackedSource.active e = true → t ≠ .var F → 4 ≤ reserve xs c) ∧
++      (TrackedSource.active e = true →
++        ¬ HEq t (show OriginalTerm (left ++ σ :: right) σ from .var F) → 4 ≤ reserve xs c) ∧
+       (∀ (ys : List (Carrier p)) (d : Nat),
+         Account p f (u' 0) ys d → sourceFloor e ≤ reserve ys d) ∧
+       ∀ (μ : Variable (left ++ right) .ground → Nat),

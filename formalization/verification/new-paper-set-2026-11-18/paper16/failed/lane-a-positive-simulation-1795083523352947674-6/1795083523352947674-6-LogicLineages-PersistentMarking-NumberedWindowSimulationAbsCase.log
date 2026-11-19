@@ -1,0 +1,36 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowSimulationAbsCase.lean:42:45: error: don't know how to synthesize placeholder for argument `q`
+context:
+S : Spine.Signature
+K : List Ty
+hk : DecisionSourceUniverse.Closed K
+σ τ : Ty
+s t : Spine.Expr
+x : Nat
+hs : Spine.PaperTerm S (Spine.Expr.lam σ s) (σ.arrow τ)
+ht : Spine.PaperTerm S (Spine.Expr.lam σ t) (σ.arrow τ)
+hf : freeOccurs (σ, x) s = false
+hg : freeOccurs (σ, x) t = false
+d : Tree S (Judgment.weak (openBody σ x s) (openBody σ x t))
+ih : Job S K d
+h : Foot K (Tree.abs σ τ s t x hs ht hf hg d)
+n : Nat
+hn : NumberedWindowSimulationData.budget (Tree.abs σ τ s t x hs ht hf hg d) ≤ n
+hBound : NumberedWindowSimulationData.budget d ≤ n
+hChild : Foot K d
+hOrd : Spine.Ordinary t
+Q✝ : NTerm
+hBody : Realizes n s Q✝
+hWin : InWindow S K E (Spine.Expr.lam σ s).type (NTerm.lam σ Q✝)
+T : NTerm
+hT : NumberedWindowOrdinaryTranslation.tr (openBody σ x t) = some T
+path✝ :
+  TypedTrace S K Spine.EmptyContext (openBody σ x s).type (substitute (NArgs.cons (NTerm.free σ x) NArgs.nil) 0 Q✝) T
+path : TypedTrace S K Spine.EmptyContext τ (substitute (NArgs.cons (NTerm.free σ x) NArgs.nil) 0 Q✝) T
+h✝ : AdmittedTrace path✝
+U : NTerm
+hU : NumberedWindowOrdinaryTranslation.tr t = some U
+hCloseT : closeAt (σ, x) 0 T = U
+hType : (openBody σ x s).type = τ
+out : TypedTrace S K E (σ.arrow τ) (NTerm.lam σ Q✝) (NTerm.lam σ U)
+hCloseQ : closeAt (σ, x) 0 (substitute (NArgs.cons (NTerm.free σ x) NArgs.nil) 0 Q✝) = Q✝
+⊢ NTerm

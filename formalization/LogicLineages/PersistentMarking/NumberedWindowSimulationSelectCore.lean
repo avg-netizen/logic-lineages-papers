@@ -31,7 +31,7 @@ theorem reduction {S K f τ bs es Bs Es q r ds i n k b}
   obtain ⟨Q,hGet,hQ⟩ := hSel
   have hArrow : Q.type = ArrowPrefix ds τ :=
     (termShape hQ).1.trans (SpineShiftProof.annotationExact E q _ hq)
-  have hCopies := ownerRealized hLabel (weakensArgs hInput hb) (weakensArgs hInput he) ds
+  have hCopies := ownerRealized (f:=f) hLabel (weakensArgs hInput hb) (weakensArgs hInput he) ds
   obtain ⟨start,out,hApps,hPath,hOut⟩ :=
     NumberedWindowTupleSplitChecks.exact_WholeTupleSimulation S K [] q r
       (Spine.ownerCopies f bs es ds) (ArrowPrefix ds τ) τ b Q (ownerCopies f k Bs Es ds)

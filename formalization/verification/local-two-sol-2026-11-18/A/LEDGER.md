@@ -941,3 +941,41 @@ and translates the existing canonical-port derivations into fixed-point bits.
   confined consequence. Full candidate remains unbuilt, independently
   unaccepted and not numbered until fresh final gate/replay. No further
   proof edits pending independent scope/native.
+
+- Full POSITIVE-SIMULATION-EXACT-1013 configured original caps and
+  all30 reviewed proof hashes, stopped ordinary expected result inference
+  in Abs target-body projection, receipt `1795083217989946219-6)
+  (100/101). Approved explicit actual lambda in Abs/FAbs only.
+- Full 1018 stopped ordinary unresolved source NTerm placeholder in
+  Abs's window proof, receipt `1795083523352947674-6` (100/101).
+  Approved rewrite of the exact existing source hWin and goal.
+- Full 1023 passed both substantive Abs/FAbs and lookup helpers, then
+  ordinary SelectCore missing original owner f instantiation, receipt
+  `1795083649346090374-6` (132/133). Approved explicit same f only.
+- Full 1024 passed all substantive term constructors including
+  full Select, Fun, Copy, Stat; next ordinary `theorem`/Type declaration
+  issue in exact trace type-cast helper, receipt
+  `1795083771569158371-6` (138/139). Approved same dependent body
+  as `def` only. All stops peak522052 KiB (unchanged <=512MiB caps),
+  reaped and locks free; every complete failed exact edition retained.
+  Current full candidate is not accepted; wait fresh sole ticket.
+
+## 2026-11-19 — full numbered positive simulation native exact pass
+
+- POSITIVE-SIMULATION-EXACT-1027 original core clean exit0, all
+  164/164 rows, unchanged peak522052 KiB (complete direct six-sort fold
+  488892, confined 501972, exact root494708). Receipt
+  `1795083919957405588-6`; compiler reaped, both locks free.
+- Exact frozen weak/strict simulations quantify all actual high
+  realizations and exact ordinary result, retain actual admitted
+  vertices, require raw positivity only for strict. Every literal
+  child including both separate Stat witnesses discharged by
+  `Tree.rec`. Exact positive primary-class path and literal-support(s)
+  confined class consequence also pass. All4 aliases standard-only
+  Lean axioms, no marked-target extension or global arithmetic claim.
+- Complete replay `LANE-A-NUMBERED-WINDOW-POSITIVE-SIMULATION-CLOUD-EVIDENCE.json`
+  763c561cb38451479425ccdae5230d7a46f8c87001fefaba302f8ca8bffd5269,
+  164 current recursive native modules,61 merged pins incl all32
+  own, four exact audits; supplemental replay zero errors. READY for
+  independent numbered acceptance, not self-promoted. All ordinary
+  failed native editions and exact reviewed proof-only diffs retained.

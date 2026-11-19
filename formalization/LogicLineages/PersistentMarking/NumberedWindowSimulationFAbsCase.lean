@@ -34,7 +34,7 @@ private theorem numbered {S K f σ τ bs es body x Bs Es n k}
   let b := NumberedWindowSimulationData.budget d
   have hB : b ≤ n := Nat.le_trans (Nat.le_succ _) hn
   have hChild : Foot K d := fun ρ hp => h ρ (List.mem_append_right _ hp)
-  have hOrd : Spine.Ordinary body := ComparisonOrdinaryProof.weakOrdinary S _ _
+  have hOrd : Spine.Ordinary body := ComparisonOrdinaryProof.weakOrdinary S _ (.lam σ body)
     (.fabs hs ht hf hg (LiteralDerivationSoundProof.sound d))
   cases k with
   | zero => omega

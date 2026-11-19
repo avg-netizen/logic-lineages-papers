@@ -1,0 +1,23 @@
+import LogicLineages.PersistentMarking.NumberedWindowSimulationConfinedProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowPositiveSimulationChecks
+open NumberedWindowPositiveSimulationTargets
+
+theorem exact_BudgetedWeakSimulation : BudgetedWeakSimulation :=
+  NumberedWindowSimulationFinishProof.weak
+
+theorem exact_BudgetedStrictSimulation : BudgetedStrictSimulation :=
+  NumberedWindowSimulationFinishProof.strict
+
+theorem exact_PositiveTraceToClassPath : PositiveTraceToClassPath :=
+  NumberedWindowSimulationQuotientProof.positive
+
+theorem exact_ConfinedOrdinarySimulation : ConfinedOrdinarySimulation :=
+  NumberedWindowSimulationConfinedProof.confined
+
+#print axioms exact_BudgetedWeakSimulation
+#print axioms exact_BudgetedStrictSimulation
+#print axioms exact_PositiveTraceToClassPath
+#print axioms exact_ConfinedOrdinarySimulation
+
+end LogicLineages.PersistentMarking.NumberedWindowPositiveSimulationChecks

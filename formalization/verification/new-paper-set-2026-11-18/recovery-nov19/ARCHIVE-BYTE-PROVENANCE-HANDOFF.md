@@ -1,0 +1,5 @@
+# Exact archive byte provenance
+
+The manifest names base92459c206c0d1fc636062ce7481c6d70871f8857 and paper import17377d6d02d20b26b0cf34ab50bb9d52d7c32305. Against the formalization base,74 of80 archived blobs are byte-identical. The other6 are the paper entry READMEs with historical-edition/current-collection notices added. Removing those notices recovers the prior README bodies (ignoring trailing newline counts); no mathematical content is lost. All80 current archive files match their manifest and root compatibility paths.
+
+Against the paper-import commit78 of80 match; paper06 STATUS and paper08 README additionally retain the formalization-base state or its notice adaptation. Thus there is no single claimed80/80 historical commit match. “Preserved bytes” applies to the74 unchanged substantive/source/status files and manifest verification of the archived snapshot, not to literal pre-notice README identity. Prior README bytes remain in Git at the stated source commit. Archive files are left unchanged. See ARCHIVE-BYTE-PROVENANCE-RECHECK.json for the six exact before/after hashes.

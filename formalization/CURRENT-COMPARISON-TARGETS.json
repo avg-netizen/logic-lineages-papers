@@ -422,8 +422,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/ordinals.tex",
           "line": 255,
           "statement_latex": "[Positive simulation]\\label{lem:positive-simulation}\nFor every finite weak derivation $\\W q t$ in a fixed window there is\na computable finite budget $b$ such that every $q\\sim_b Q$ reduces,\npossibly by an empty path and modulo finite equivalence, to $\\tr(t)$.\nFor a strict derivation the budget can be chosen so that the path is\npositive. Consequently, for ordinary confined endpoints,\n\\[\n s\\cs t\\quad\\Longrightarrow\\quad\n \\tr(s)R_{\\Ty(s)}\\tr(t).\n\\]",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.NumberedWindowPositiveSimulationTargets.ConfinedOrdinarySimulation",
+          "verified_alias": "LogicLineages.PersistentMarking.NumberedWindowPositiveSimulationChecks.exact_ConfinedOrdinarySimulation",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/438-numbered-positive-simulation.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:thm:upper",
@@ -2326,7 +2329,7 @@
     }
   ],
   "status_counts": {
-    "pending": 22,
-    "checked": 145
+    "pending": 21,
+    "checked": 146
   }
 }
