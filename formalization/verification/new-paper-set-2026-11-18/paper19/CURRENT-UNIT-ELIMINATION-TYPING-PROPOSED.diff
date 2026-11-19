@@ -1,0 +1,37 @@
+--- LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationDefinitions.lean
++++ LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationDefinitions.lean
+@@ -26,7 +26,15 @@
+ def groundOnlyContext (Γ : List Ty) : ∀ σ ∈ groundCtx Γ, σ = .ground := by
+   induction Γ with
+   | nil => simp [groundCtx]
+-  | cons σ Γ ih => cases σ <;> simp [groundCtx,ih]
++  | cons σ Γ ih =>
++    cases σ with
++    | ground =>
++      intro t ht
++      change t ∈ .ground :: groundCtx Γ at ht
++      rcases List.mem_cons.mp ht with h | h
++      · exact h
++      · exact ih t h
++    | arrow a b => exact ih
+ 
+ theorem groundCtx_of_ground (Γ : List Ty) (hg : ∀ σ ∈ Γ, σ = .ground) :
+     groundCtx Γ = Γ := by
+@@ -116,7 +124,7 @@
+ theorem wireCtx_add (m n : Nat) (Γ : List Ty) :
+     WireCtx (m+n) Γ = WireCtx m (WireCtx n Γ) := by
+   induction m with
+-  | zero => rfl
++  | zero => simp only [Nat.zero_add,WireCtx]
+   | succ m ih => simp only [Nat.succ_add,WireCtx,ih]
+ 
+ def renameTerm {Γ Δ : List Ty} (r : Renaming Γ Δ) :
+@@ -181,7 +189,7 @@
+   let Γ' := .ground :: WireCtx q.width (.ground :: Γ)
+   let r₀ : Renaming (WireCtx q.width Γ) Γ' :=
+     fun x => .there (under (Renaming.weaken Γ .ground) q.width x)
+-  let r := reroute q.width r₀ .here
++  let r : Renaming (WireCtx q.width (.ground :: Γ)) Γ' := reroute q.width r₀ .here
+   ⟨q.width+1,.conj (renameFormula r q.matrix)
+     (rowFormula row (raw (.here : Variable Γ' .ground)) (.literal 0)
+       (raw (.there (shift q.width .here))))⟩

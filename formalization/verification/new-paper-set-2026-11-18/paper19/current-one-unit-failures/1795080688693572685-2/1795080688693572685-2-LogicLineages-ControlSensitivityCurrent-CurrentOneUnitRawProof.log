@@ -1,0 +1,124 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:62:13: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only [O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵ ̵h.2, movedTable]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:79:76: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:79:76: warning: 'rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:91:2: warning: 'change lambdaCode 0 (SyntaxCode.encodeTerm (d.term.rename _)) = _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:115:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  SyntaxCode.check (List.map SyntaxCode.typeCode (σ :: Γ)) (SyntaxCode.encodeTerm a)
+in the target expression
+  ((SyntaxCode.check (SyntaxCode.typeCode σ :: List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm a)).bind
+      fun τ_1 =>
+      (CurrentTreeInputCoverage.compile (SyntaxCode.typeCode σ :: List.map SyntaxCode.typeCode Γ)
+            (SyntaxCode.encodeTerm a)).bind
+        fun a_1 =>
+        (PolicyAssignment.assignmentCode p (SyntaxCode.typeCode σ :: List.map SyntaxCode.typeCode Γ)
+              (SyntaxCode.encodeTerm a)).bind
+          fun h =>
+          (PolicyAssignment.assignmentCode p (SyntaxCode.typeCode σ :: List.map SyntaxCode.typeCode Γ)
+                (lambdaCode 0 (CurrentTreeCode.expand (CurrentDecisionEmitter.liftCode 1 a_1)))).bind
+            fun h' =>
+            h.head?.bind fun h₀ =>
+              some
+                (lambdaCode (SyntaxCode.typeCode σ) (SyntaxCode.encodeTerm a),
+                  if OrdinalSyntax.headFree h₀ = true then none
+                  else
+                    some
+                      (lambdaCode (SyntaxCode.typeCode σ)
+                        (lambdaCode 0 (CurrentTreeCode.expand (CurrentDecisionEmitter.liftCode 1 a_1)))),
+                  (codedMultiplier (SyntaxCode.typeCode σ) h, codedMultiplier (SyntaxCode.typeCode σ) h',
+                    OrdinalSyntax.headFree h₀),
+                  equation (SyntaxCode.typeLevel τ_1)
+                    (codedMultiplier (SyntaxCode.typeCode σ) h, codedMultiplier (SyntaxCode.typeCode σ) h',
+                      OrdinalSyntax.headFree h₀))) =
+    some (literalPacket a d)
+
+p : AdmissibleSum.Policy
+Γ : List Ty
+σ τ : Ty
+a : OriginalTerm (σ :: Γ) τ
+d : Coefficients
+hσ : 0 < σ.level
+hd : typedCoefficients p a = some d
+h : OrdinalVector (σ :: Γ) τ.level
+h' : OrdinalVector (σ :: Γ) (Ty.ground.arrow τ).level
+w✝ : Coefficients
+ha : AdmissibleAssignment.assignment p a = some h
+hu : AdmissibleAssignment.assignment p (OneUnit.unused a) = some h'
+left✝³ : typedCoefficients p a = some w✝
+left✝² : w✝ = (OneUnit.multiplier h, OneUnit.multiplier h', ordinalHeadFree (h 0))
+left✝¹ : 0 < w✝.1
+left✝ : h' 0 = inflated p τ (h 0)
+right✝ :
+  w✝.2.2 = false →
+    ordinalPartialSize (h' 0) = OneUnit.coefficient τ * ordinalPartialSize (h 0) + 3 * OneUnit.copies τ ∧
+      (∀ (j : Fin (τ.level + 1)), 0 < ↑j → ordinalPartialSize (h j) ≤ ordinalPartialSize (h' ⟨↑j, ⋯⟩)) ∧ w✝.1 < w✝.2.1
+hcoeff : d = (OneUnit.multiplier h, OneUnit.multiplier h', ordinalHeadFree (h 0))
+hτ : SyntaxCode.check (List.map SyntaxCode.typeCode (σ :: Γ)) (SyntaxCode.encodeTerm a) = some (SyntaxCode.typeCode τ)
+hD :
+  CurrentTreeInputCoverage.compile (List.map SyntaxCode.typeCode (σ :: Γ)) (SyntaxCode.encodeTerm a) =
+    some (RawSourceDAG.encode ⟨σ :: Γ, ⟨τ, CurrentTreeInputCoverage.input a⟩⟩)
+hA :
+  PolicyAssignment.assignmentCode p (List.map SyntaxCode.typeCode (σ :: Γ)) (SyntaxCode.encodeTerm a) =
+    some (OrdinalSyntax.vectorCode h)
+hU :
+  PolicyAssignment.assignmentCode p (List.map SyntaxCode.typeCode (σ :: Γ)) (SyntaxCode.encodeTerm (OneUnit.unused a)) =
+    some (OrdinalSyntax.vectorCode h')
+hσcode : SyntaxCode.typeLevel (SyntaxCode.typeCode σ) = σ.level
+hτcode : SyntaxCode.typeLevel (SyntaxCode.typeCode τ) = τ.level
+hfree : OrdinalSyntax.headFree (OrdinalSyntax.typedCode (h 0)) = ordinalHeadFree (h 0)
+⊢ ((SyntaxCode.check (SyntaxCode.typeCode σ :: List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm a)).bind
+      fun τ_1 =>
+      (CurrentTreeInputCoverage.compile (SyntaxCode.typeCode σ :: List.map SyntaxCode.typeCode Γ)
+            (SyntaxCode.encodeTerm a)).bind
+        fun a_1 =>
+        (PolicyAssignment.assignmentCode p (SyntaxCode.typeCode σ :: List.map SyntaxCode.typeCode Γ)
+              (SyntaxCode.encodeTerm a)).bind
+          fun h =>
+          (PolicyAssignment.assignmentCode p (SyntaxCode.typeCode σ :: List.map SyntaxCode.typeCode Γ)
+                (lambdaCode 0 (CurrentTreeCode.expand (CurrentDecisionEmitter.liftCode 1 a_1)))).bind
+            fun h' =>
+            h.head?.bind fun h₀ =>
+              some
+                (lambdaCode (SyntaxCode.typeCode σ) (SyntaxCode.encodeTerm a),
+                  if OrdinalSyntax.headFree h₀ = true then none
+                  else
+                    some
+                      (lambdaCode (SyntaxCode.typeCode σ)
+                        (lambdaCode 0 (CurrentTreeCode.expand (CurrentDecisionEmitter.liftCode 1 a_1)))),
+                  (codedMultiplier (SyntaxCode.typeCode σ) h, codedMultiplier (SyntaxCode.typeCode σ) h',
+                    OrdinalSyntax.headFree h₀),
+                  equation (SyntaxCode.typeLevel τ_1)
+                    (codedMultiplier (SyntaxCode.typeCode σ) h, codedMultiplier (SyntaxCode.typeCode σ) h',
+                      OrdinalSyntax.headFree h₀))) =
+    some (literalPacket a d)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:126:33: error: unsolved goals
+p : AdmissibleSum.Policy
+left right : List Ty
+σ τ : Ty
+a : OriginalTerm (left ++ σ :: right) τ
+d : Coefficients
+b : Term Empty Empty.elim (σ :: (left ++ right)) τ := Term.rename a fun {σ_1} => SelectedBinder.moveToHead left right σ
+hσ : 0 < σ.level
+hd : typedCoefficients p b = some d
+Γ : List Ty := left ++ σ :: right
+Δ : List Ty := σ :: left ++ right
+r : Renaming Γ Δ := fun {σ_1} => SelectedBinder.moveToHead left right σ
+q : Input (left ++ σ :: right) τ := CurrentTreeInputCoverage.input a
+ht :
+  (CurrentTreeInputCoverage.input a).term = a ∧
+    CurrentTreeInputCoverage.compile (List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm a) =
+        some (RawSourceDAG.encode ⟨Γ, ⟨τ, CurrentTreeInputCoverage.input a⟩⟩) ∧
+      CurrentTreeCode.expand (RawSourceDAG.encode ⟨Γ, ⟨τ, CurrentTreeInputCoverage.input a⟩⟩) = SyntaxCode.encodeTerm a
+hq : q.term = a
+⊢ SyntaxCode.encodeTerm (Term.rename a fun {σ} => r) = SyntaxCode.encodeTerm b

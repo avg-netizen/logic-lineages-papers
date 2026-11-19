@@ -26,7 +26,15 @@ def oldGround : {Γ : List Ty} → Variable (groundCtx Γ) .ground → Variable 
 def groundOnlyContext (Γ : List Ty) : ∀ σ ∈ groundCtx Γ, σ = .ground := by
   induction Γ with
   | nil => simp [groundCtx]
-  | cons σ Γ ih => cases σ <;> simp [groundCtx,ih]
+  | cons σ Γ ih =>
+    cases σ with
+    | ground =>
+      intro t ht
+      change t ∈ .ground :: groundCtx Γ at ht
+      rcases List.mem_cons.mp ht with h | h
+      · exact h
+      · exact ih t h
+    | arrow a b => exact ih
 
 theorem groundCtx_of_ground (Γ : List Ty) (hg : ∀ σ ∈ Γ, σ = .ground) :
     groundCtx Γ = Γ := by
@@ -116,7 +124,7 @@ def reroute {Γ Δ : List Ty} :
 theorem wireCtx_add (m n : Nat) (Γ : List Ty) :
     WireCtx (m+n) Γ = WireCtx m (WireCtx n Γ) := by
   induction m with
-  | zero => rfl
+  | zero => simp only [Nat.zero_add,WireCtx]
   | succ m ih => simp only [Nat.succ_add,WireCtx,ih]
 
 def renameTerm {Γ Δ : List Ty} (r : Renaming Γ Δ) :
@@ -181,7 +189,7 @@ def freeGraph {Γ : List Ty} (row : LinearCode) (q : OpenGraph Γ) : OpenGraph �
   let Γ' := .ground :: WireCtx q.width (.ground :: Γ)
   let r₀ : Renaming (WireCtx q.width Γ) Γ' :=
     fun x => .there (under (Renaming.weaken Γ .ground) q.width x)
-  let r := reroute q.width r₀ .here
+  let r : Renaming (WireCtx q.width (.ground :: Γ)) Γ' := reroute q.width r₀ .here
   ⟨q.width+1,.conj (renameFormula r q.matrix)
     (rowFormula row (raw (.here : Variable Γ' .ground)) (.literal 0)
       (raw (.there (shift q.width .here))))⟩
@@ -200,7 +208,7 @@ def activeGraph {Γ : List Ty} (row : LinearCode) (q s : OpenGraph Γ) : OpenGra
   let m := SourceAST.Formula.conj (.conj left right)
     (rowFormula row (raw (.here : Variable Γ' .ground)) (raw (.there .here)) result)
   ⟨(q.width+s.width)+2,
-    renameFormula (fun x => cast (congrArg (fun Γ => Variable (.ground :: .ground :: Γ) _) 
+    renameFormula (fun {τ} x => cast (congrArg (fun Δ => Variable (.ground :: .ground :: Δ) τ)
       (wireCtx_add q.width s.width base).symm) x) m⟩
 
 noncomputable def render (p : AdmissibleSum.Policy) (f : Nat → Nat) :

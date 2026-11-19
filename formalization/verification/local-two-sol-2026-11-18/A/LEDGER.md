@@ -866,3 +866,11 @@ and translates the existing canonical-port derivations into fixed-point bits.
   passed27/27, peak495804 KiB, receipt `1795080435372155053-6`,
   original caps, exit0/reaped/locks free. No proof compiler or further
   proof authoring until preflight acceptance / separate fresh tickets.
+
+- Trace-budget target independently accepted as comparator-only.
+  Authored actual trace/typed context algebra, ordinary-only unique tr,
+  and actual lambda-preserving one-step n+1→n mark, nine new leaves.
+  Exact root NumberedWindowTraceBudgetChecks bf9d61df, 14 frozen aliases,
+  full hash/scope table in `NUMBERED-WINDOW-TRACE-BUDGET-AUTHORED-CANDIDATE.md`.
+  Unbuilt pending independent authored scope/new native ticket. Frame
+  binder/inclusion accepted supporting433, not numbered promotion.

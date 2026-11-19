@@ -1,0 +1,33 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationDefinitions.lean:29:16: error: unsolved goals
+case cons.ground
+Γ : List Ty
+ih : ∀ σ ∈ groundCtx Γ, σ = Ty.ground
+⊢ ∀ a ∈ groundCtx Γ, a = Ty.ground
+
+case cons.arrow
+Γ : List Ty
+ih : ∀ σ ∈ groundCtx Γ, σ = Ty.ground
+domain✝ codomain✝ : Ty
+⊢ ∀ σ ∈ groundCtx Γ, σ = Ty.ground
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationDefinitions.lean:29:47: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp [groundCtx,̵i̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationDefinitions.lean:119:12: error: Tactic `rfl` failed: The left-hand side
+  WireCtx (0 + n) Γ
+is not definitionally equal to the right-hand side
+  WireCtx 0 (WireCtx n Γ)
+
+case zero
+n : ℕ
+Γ : List Ty
+⊢ WireCtx (0 + n) Γ = WireCtx 0 (WireCtx n Γ)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationDefinitions.lean:185:34: error: Type mismatch
+  r
+has type
+  Variable (WireCtx q.width (Ty.ground :: Γ)) ?m.59 → Variable Γ' ?m.59
+but is expected to have type
+  Variable (WireCtx q.width (Ty.ground :: Γ)) σ✝ → Variable (WireCtx (q.width + 1) (Ty.ground :: Γ)) σ✝

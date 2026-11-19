@@ -1,0 +1,116 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:62:13: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only [O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵ ̵h.2, movedTable]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:68:30: error: unsolved goals
+Γ : List Ty
+σ : Ty
+m : ℕ
+h : OrdinalVector (σ :: Γ) m
+⊢ (List.ofFn fun x => OrdinalSyntax.partialSize (OrdinalSyntax.typedCode (h x))) =
+    List.ofFn fun x => ordinalPartialSize (h x)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:73:4: warning: This simp argument is unused:
+  LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxPartialSizeCorrect
+
+Hint: Omit it from the simp argument list.
+  simp only [List.map_ofFn, Function.comp_def,̵
+  ̵ ̵ ̵ ̵ ̵L̵o̵g̵i̵c̵L̵i̵n̵e̵a̵g̵e̵s̵.̵O̵r̵d̵i̵n̵a̵l̵C̵o̵m̵p̵a̵r̵i̵s̵o̵n̵.̵S̵t̵a̵t̵e̵m̵e̵n̵t̵C̵h̵e̵c̵k̵s̵.̵f̵i̵x̵e̵d̵_̵o̵r̵d̵i̵n̵a̵l̵S̵y̵n̵t̵a̵x̵P̵a̵r̵t̵i̵a̵l̵S̵i̵z̵e̵C̵o̵r̵r̵e̵c̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:77:76: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:77:76: warning: 'rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:89:2: warning: 'change lambdaCode 0 (SyntaxCode.encodeTerm (d.term.rename _)) = _' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:110:2: error: 'change' tactic failed, pattern
+  SyntaxCode.check (List.map SyntaxCode.typeCode (σ :: Γ)) (SyntaxCode.encodeTerm a) >>= ?m.190 = ?m.192
+is not definitionally equal to target
+  (do
+      let σ_1 ← some (SyntaxCode.typeCode σ)
+      if 0 < SyntaxCode.typeLevel σ_1 then do
+          let τ_1 ← SyntaxCode.check (SyntaxCode.typeCode σ :: List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm a)
+          let a_1 ←
+            CurrentTreeInputCoverage.compile (SyntaxCode.typeCode σ :: List.map SyntaxCode.typeCode Γ)
+                (SyntaxCode.encodeTerm a)
+          let h ←
+            PolicyAssignment.assignmentCode p (SyntaxCode.typeCode σ :: List.map SyntaxCode.typeCode Γ)
+                (SyntaxCode.encodeTerm a)
+          let h' ←
+            PolicyAssignment.assignmentCode p (SyntaxCode.typeCode σ :: List.map SyntaxCode.typeCode Γ)
+                (lambdaCode 0 (CurrentTreeCode.expand (CurrentDecisionEmitter.liftCode 1 a_1)))
+          let h₀ ← h.head?
+          pure
+              (lambdaCode σ_1 (SyntaxCode.encodeTerm a),
+                if OrdinalSyntax.headFree h₀ = true then none
+                else
+                  some (lambdaCode σ_1 (lambdaCode 0 (CurrentTreeCode.expand (CurrentDecisionEmitter.liftCode 1 a_1)))),
+                (codedMultiplier σ_1 h, codedMultiplier σ_1 h', OrdinalSyntax.headFree h₀),
+                equation (SyntaxCode.typeLevel τ_1)
+                  (codedMultiplier σ_1 h, codedMultiplier σ_1 h', OrdinalSyntax.headFree h₀))
+        else none) =
+    some (literalPacket a d)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:108:45: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only [List.map_cons, List.head?_cons, O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵SyntaxCode.StatementChecks.typeLevelExact, hσ, if_pos]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:109:4: warning: This simp argument is unused:
+  SyntaxCode.StatementChecks.typeLevelExact
+
+Hint: Omit it from the simp argument list.
+  simp only [List.map_cons, List.head?_cons, Option.bind_some, S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵S̵t̵a̵t̵e̵m̵e̵n̵t̵C̵h̵e̵c̵k̵s̵.̵t̵y̵p̵e̵L̵e̵v̵e̵l̵E̵x̵a̵c̵t̵,̵ ̵hσ, if_pos]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:109:47: warning: This simp argument is unused:
+  hσ
+
+Hint: Omit it from the simp argument list.
+  simp only [List.map_cons, List.head?_cons, Option.bind_some,
+      SyntaxCode.StatementChecks.typeLevelExact, h̵σ̵,̵ ̵if_pos]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:109:51: warning: This simp argument is unused:
+  if_pos
+
+Hint: Omit it from the simp argument list.
+  simp only [List.map_cons, List.head?_cons, Option.bind_some,
+      SyntaxCode.StatementChecks.typeLevelExact, hσ,̵ ̵i̵f̵_̵p̵o̵s̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:120:11: error: don't know how to synthesize implicit argument `σ`
+  @SelectedBinder.moveToHead left right σ ?m.37
+context:
+p : AdmissibleSum.Policy
+left right : List Ty
+σ τ : Ty
+a : OriginalTerm (left ++ σ :: right) τ
+d : Coefficients
+hσ : Term Empty Empty.elim (σ :: (left ++ right)) τ := ⋯
+hd : 0 < σ.level
+Γ : List Ty := ⋯
+Δ : List Ty := ⋯
+⊢ Ty
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:120:6: error: failed to infer `let` declaration type
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean:116:73: error: unsolved goals
+p : AdmissibleSum.Policy
+left right : List Ty
+σ τ : Ty
+a : OriginalTerm (left ++ σ :: right) τ
+d : Coefficients
+hσ : Term Empty Empty.elim (σ :: (left ++ right)) τ := Term.rename a fun {σ_1} => SelectedBinder.moveToHead left right σ
+hd : 0 < σ.level
+Γ : List Ty := left ++ σ :: right
+Δ : List Ty := σ :: left ++ right
+⊢ typedCoefficients p hσ = some d →
+    compileSelected p (left.length, List.map SyntaxCode.typeCode (left ++ σ :: right), SyntaxCode.encodeTerm a) =
+      some (literalPacket hσ d)

@@ -84,9 +84,10 @@ private theorem codedSizePrimitive : Primrec₂ codedMultiplier := by
     (addP (SyntaxCode.Proof.typeLevelPrimitiveRecursive.comp hty) (Primrec.const 1))
   have hs := LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxHeadOperationsPrimitiveRecursive.2.2
   have hm := Primrec.list_map hxs (hs.comp (Primrec.snd : Primrec (fun x : Q × Nat => x.2))).to₂
+  have hfold : Primrec (fun x : Q × (Nat × Nat) => x.2) := Primrec.snd
   have htotal : Primrec (fun x : Q => (x.2.map OrdinalSyntax.partialSize).sum) :=
     Primrec.list_foldr hm (Primrec.const 0)
-      (Primrec.nat_add.comp (Primrec.snd : Primrec (fun x : Q × (Nat × Nat) => x.2))).to₂
+      (Primrec.nat_add.comp (Primrec.fst.comp hfold) (Primrec.snd.comp hfold)).to₂
   exact mulP hp htotal
 
 private abbrev Finish := HeadInput × Nat × Nat × Nat × List Nat × List Nat × Nat

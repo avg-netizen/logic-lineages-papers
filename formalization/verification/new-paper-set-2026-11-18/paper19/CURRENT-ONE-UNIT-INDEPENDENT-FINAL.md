@@ -1,0 +1,7 @@
+# Independent acceptance: actual one-name scalar elimination
+
+Full Paper19 lem:one-unit accepted after source-exact comparator review, target-only preflight, complete authored review and focused exact native1795080945620568234-2. Separate compiler-free recursive verification confirms1089 current compiler/source/object/input-key/receipt/log modules, zero errors and all9 expected named exact aliases with only standard axioms. All44 frozen pins and7 current reviewed proof hashes match. Five ordinary proof-only elaboration repairs were independently reviewed/applied/inversechecked and failures preserved; semantics/targets unchanged.
+
+The actual p-selected literal ordered inflation, partial and size are retained before finite collection. Actual shared-unit scalar rows yield the exact free or active positive-coefficient graph, including uniqueness for all natural candidate values. Arbitrary original selected functional slots transport through actual source renaming. Actual original source tree codes, finite coefficient packets, selected raw compiler and effectivity under genuine policy effectivity are checked. Arbitrary-f helper generality is not conflated with a full arbitrary-control source-language decision theorem.
+
+One-name elimination is not complete finite-name existential elimination: the latter must still build and prove the actual E_src graph preserving shared ground inputs and current absolute leaves. No all-one source inhabitant, full expressivity theorem, full-root or CI claim.
