@@ -1,0 +1,89 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphTailProof.lean:21:71: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵h̵a̵i̵n̵T̵a̵p̵e̵,̵l̵t̵_̵i̵r̵r̵e̵f̵l̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]̵[̲c̲h̲a̲i̲n̲T̲a̲p̲e̲,̲ ̲l̲t̲_̲i̲r̲r̲e̲f̲l̲,̲ ̲↓̲r̲e̲d̲u̲c̲e̲I̲t̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphTailProof.lean:42:42: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵h̵a̵i̵n̵T̵a̵p̵e̵,̵h̵0̵,̵h̵1̵,̵h̵2̵,̵l̵t̵_̵i̵r̵r̵e̵f̵l̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]̵[̲c̲h̲a̲i̲n̲T̲a̲p̲e̲,̲ ̲h̲0̲,̲ ̲h̲1̲,̲ ̲h̲2̲,̲ ̲l̲t̲_̲i̲r̲r̲e̲f̲l̲,̲ ̲↓̲r̲e̲d̲u̲c̲e̲I̲t̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphTailProof.lean:70:32: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  chainTape ?m.148 ?m.149 ?m.150 ?m.151 ?m.152 ?m.153 ?m.154
+in the target expression
+  chainTape f a wr δ t (v + δ) (variableIndex x) = ν x
+
+case pos
+p : Policy
+f : ℕ → ℕ
+Γ : List Ty
+r : OpenGraph (Ty.ground :: Γ)
+δ nξ base t v : ℕ
+ht : max nξ base ≤ t
+hz : base ≤ f^[δ] t
+rawOut : ℕ
+hout : rawOut + 1 = v
+ν : Variable (WireCtx r.width (Ty.ground :: Ty.ground :: Γ)) Ty.ground → ℕ
+hρ : ∀ (x : Variable (Ty.ground :: Γ) Ty.ground), ν (shift r.width x.there) = rayInputs (f^[δ] t - base) x
+hn : ν (shift r.width Variable.here) = rawOut
+hm : SourceAST.Formula.eval p f ν r.matrix = true
+wr : ℕ := r.width
+z : Variable (WireCtx wr (Ty.ground :: Ty.ground :: Γ)) Ty.ground := shift wr Variable.here
+a : ℕ → ℕ := fun i => ν (slot z i)
+w : ℕ → ℕ := chainTape f a wr δ t (v + δ)
+x : Variable (WireCtx wr (Ty.ground :: Ty.ground :: Γ)) Ty.ground
+H : variableIndex x ≤ wr + 1
+⊢ chainTape f a wr δ t (v + δ) (variableIndex x) = ν x
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphTailProof.lean:83:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  chainTape ?m.468 ?m.469 ?m.470 ?m.471 ?m.472 ?m.473 ?m.474
+in the target expression
+  chainTape f a wr δ t (v + δ) (wr + 1) = f^[δ] t - base
+
+p : Policy
+f : ℕ → ℕ
+Γ : List Ty
+r : OpenGraph (Ty.ground :: Γ)
+δ nξ base t v : ℕ
+ht : max nξ base ≤ t
+hz : base ≤ f^[δ] t
+rawOut : ℕ
+hout : rawOut + 1 = v
+ν : Variable (WireCtx r.width (Ty.ground :: Ty.ground :: Γ)) Ty.ground → ℕ
+hρ : ∀ (x : Variable (Ty.ground :: Γ) Ty.ground), ν (shift r.width x.there) = rayInputs (f^[δ] t - base) x
+hn : ν (shift r.width Variable.here) = rawOut
+hm : SourceAST.Formula.eval p f ν r.matrix = true
+wr : ℕ := r.width
+z : Variable (WireCtx wr (Ty.ground :: Ty.ground :: Γ)) Ty.ground := shift wr Variable.here
+a : ℕ → ℕ := fun i => ν (slot z i)
+w : ℕ → ℕ := chainTape f a wr δ t (v + δ)
+hRay : (byIndex fun i => w (rayPlacement wr i)) = ν
+⊢ chainTape f a wr δ t (v + δ) (wr + 1) = f^[δ] t - base
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphTailProof.lean:91:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  chainTape ?m.481 ?m.482 ?m.483 ?m.484 ?m.485 ?m.486 ?m.487
+in the target expression
+  chainTape f a wr δ t (v + δ) wr = rawOut
+
+p : Policy
+f : ℕ → ℕ
+Γ : List Ty
+r : OpenGraph (Ty.ground :: Γ)
+δ nξ base t v : ℕ
+ht : max nξ base ≤ t
+hz : base ≤ f^[δ] t
+rawOut : ℕ
+hout : rawOut + 1 = v
+ν : Variable (WireCtx r.width (Ty.ground :: Ty.ground :: Γ)) Ty.ground → ℕ
+hρ : ∀ (x : Variable (Ty.ground :: Γ) Ty.ground), ν (shift r.width x.there) = rayInputs (f^[δ] t - base) x
+hn : ν (shift r.width Variable.here) = rawOut
+hm : SourceAST.Formula.eval p f ν r.matrix = true
+wr : ℕ := r.width
+z : Variable (WireCtx wr (Ty.ground :: Ty.ground :: Γ)) Ty.ground := shift wr Variable.here
+a : ℕ → ℕ := fun i => ν (slot z i)
+w : ℕ → ℕ := chainTape f a wr δ t (v + δ)
+hRay : (byIndex fun i => w (rayPlacement wr i)) = ν
+hz0 : w (wr + 1) = f^[δ] t - base
+⊢ chainTape f a wr δ t (v + δ) wr = rawOut

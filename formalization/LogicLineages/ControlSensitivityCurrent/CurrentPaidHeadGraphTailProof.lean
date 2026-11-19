@@ -67,7 +67,7 @@ theorem realizeTail (p : Policy) (f : Nat→Nat) {Γ : List Ty} (r : OpenGraph (
     funext x
     change chainTape f a wr δ t (v+δ) (rayPlacement wr (variableIndex x))=ν x
     by_cases H : variableIndex x≤wr+1
-    · rw [rayPlacement,if_pos H,tapeLow _ _ _ _ _ _ (by omega)]
+    · rw [rayPlacement,if_pos H,tapeLow f a wr δ t (v+δ) (variableIndex x) (by omega)]
       change ν (slot z (variableIndex x))=ν x
       rw [slotAt]
     · rw [rayPlacement,if_neg H,tapeZero]
@@ -80,15 +80,15 @@ theorem realizeTail (p : Policy) (f : Nat→Nat) {Γ : List Ty} (r : OpenGraph (
         | there u => exact (hρ (.there u)).symm
   have hz0 : w (wr+1)=(f^[δ]) t-base := by
     unfold w
-    rw [tapeLow _ _ _ _ _ _ (by omega)]
-    have hd : variableIndex (shift wr (.there (.here : Variable (.ground::Γ) .ground)))=wr+1 := by
+    rw [tapeLow f a wr δ t (v+δ) (wr+1) (by omega)]
+    have hd : variableIndex (shift wr (Γ:=.ground::.ground::Γ) (.there .here))=wr+1 := by
       simp only [shiftedIndex,variableIndex,Nat.zero_add]
     change ν (slot z (wr+1)) = _
     rw [← hd,slotAt]
     exact hρ .here
   have hv0 : w wr=rawOut := by
     unfold w
-    rw [tapeLow _ _ _ _ _ _ (by omega)]
+    rw [tapeLow f a wr δ t (v+δ) wr (by omega)]
     have hd : variableIndex z=wr := by simp only [z,shiftedIndex,variableIndex,Nat.add_zero]
     change ν (slot z wr)=rawOut
     rw [← hd,slotAt]

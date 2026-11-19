@@ -1,0 +1,53 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:82:49: error: Tactic `rfl` failed: The left-hand side
+  (q.width + 1,
+    MatrixCode.both
+      (MatrixCode.renameFormula (bitCtx (q.width + 1 + 1 + Γ.length))
+        (List.map (fun i => if i = q.width then 0 else i + 1) (List.range (q.width + 1 + Γ.length)))
+        (MatrixCode.formula q.matrix))
+      (rawRow row (MatrixCode.add (MatrixCode.var 0) (MatrixCode.lit 1)) (MatrixCode.lit 0)
+        (MatrixCode.add (MatrixCode.var (q.width + 1)) (MatrixCode.lit 1))))
+is not definitionally equal to the right-hand side
+  (q.width + 1,
+    MatrixCode.both (MatrixCode.formula (renameFormula (fun {σ} => r) q.matrix))
+      (rawRow row (MatrixCode.add (MatrixCode.var 0) (MatrixCode.lit 1)) (MatrixCode.lit 0)
+        (MatrixCode.add (MatrixCode.var (q.width + 1)) (MatrixCode.lit 1))))
+
+Γ : List Ty
+hg : ∀ τ ∈ Γ, τ = Ty.ground
+row : LinearCode
+q : OpenGraph Γ
+w : ℕ := q.width
+Δ : List Ty := Ty.ground :: WireCtx w (Ty.ground :: Γ)
+r₀ : Renaming (WireCtx w Γ) Δ := fun {σ} x => (under (fun {σ} => Renaming.weaken Γ Ty.ground) w x).there
+r : Renaming (WireCtx w (Ty.ground :: Γ)) Δ := fun {σ} => reroute w (fun {σ} => r₀) Variable.here
+hctx : List.map SyntaxCode.typeCode Δ = bitCtx (w + 1 + 1 + Γ.length)
+hform :
+  MatrixCode.renameFormula (bitCtx (q.width + 1 + 1 + Γ.length))
+      (List.map (fun i => if i = q.width then 0 else i + 1) (List.range (q.width + 1 + Γ.length)))
+      (MatrixCode.formula q.matrix) =
+    MatrixCode.formula (renameFormula (fun {σ} => r) q.matrix)
+⊢ (q.width + 1,
+      MatrixCode.both
+        (MatrixCode.renameFormula (bitCtx (q.width + 1 + 1 + Γ.length))
+          (List.map (fun i => if i = q.width then 0 else i + 1) (List.range (q.width + 1 + Γ.length)))
+          (MatrixCode.formula q.matrix))
+        (rawRow row (MatrixCode.add (MatrixCode.var 0) (MatrixCode.lit 1)) (MatrixCode.lit 0)
+          (MatrixCode.add (MatrixCode.var (q.width + 1)) (MatrixCode.lit 1)))) =
+    (q.width + 1,
+      MatrixCode.both (MatrixCode.formula (renameFormula (fun {σ} => r) q.matrix))
+        (rawRow row (MatrixCode.add (MatrixCode.var 0) (MatrixCode.lit 1)) (MatrixCode.lit 0)
+          (MatrixCode.add (MatrixCode.var (q.width + 1)) (MatrixCode.lit 1))))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:81:24: warning: This simp argument is unused:
+  hform
+
+Hint: Omit it from the simp argument list.
+  simp only [typedBlock,h̵f̵o̵r̵m̵,̵ ̲MatrixCode.formula, ̲rowsExact, ̲raw, ̲MatrixCode.term, ̲MatrixCode.raw,
+      variableIndex, ̲shiftedIndex, ̲Nat.add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:169:96: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:169:96: warning: 'rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`

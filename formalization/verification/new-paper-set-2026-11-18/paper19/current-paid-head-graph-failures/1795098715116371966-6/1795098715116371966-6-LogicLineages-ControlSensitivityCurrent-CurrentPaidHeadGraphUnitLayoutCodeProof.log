@@ -1,0 +1,187 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:30:60: error: unexpected token ',*'; expected ']'
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:29:89: error: unsolved goals
+case var
+Γ : List Ty
+ss ss✝ : List Spec
+Δ✝ : List Ty
+τ✝ : Ty
+a✝¹ : DAG Γ ss✝
+a✝ : Variable (Δ✝ ++ Γ) τ✝
+a_ih✝ : ScopedDAG.rename (fun {σ} x => x) a✝¹ = a✝¹
+⊢ (ScopedDAG.rename (fun {σ} x => x) a✝¹).var a✝ = a✝¹.var a✝
+
+case app
+Γ : List Ty
+ss ss✝ : List Spec
+Δ✝ : List Ty
+σ✝ τ✝ : Ty
+a✝² : DAG Γ ss✝
+a✝¹ : Ref ss✝ (Δ✝, σ✝.arrow τ✝)
+a✝ : Ref ss✝ (Δ✝, σ✝)
+a_ih✝ : ScopedDAG.rename (fun {σ} x => x) a✝² = a✝²
+⊢ (ScopedDAG.rename (fun {σ} x => x) a✝²).app a✝¹ a✝ = a✝².app a✝¹ a✝
+
+case lam
+Γ : List Ty
+ss ss✝ : List Spec
+Δ✝ : List Ty
+σ✝ τ✝ : Ty
+a✝¹ : DAG Γ ss✝
+a✝ : Ref ss✝ (σ✝ :: Δ✝, τ✝)
+a_ih✝ : ScopedDAG.rename (fun {σ} x => x) a✝¹ = a✝¹
+⊢ (ScopedDAG.rename (fun {σ} x => x) a✝¹).lam a✝ = a✝¹.lam a✝
+
+case zero
+Γ : List Ty
+ss ss✝ : List Spec
+Δ✝ : List Ty
+a✝ : DAG Γ ss✝
+a_ih✝ : ScopedDAG.rename (fun {σ} x => x) a✝ = a✝
+⊢ (ScopedDAG.rename (fun {σ} x => x) a✝).zero = a✝.zero
+
+case succ
+Γ : List Ty
+ss ss✝ : List Spec
+Δ✝ : List Ty
+a✝ : DAG Γ ss✝
+a_ih✝ : ScopedDAG.rename (fun {σ} x => x) a✝ = a✝
+⊢ (ScopedDAG.rename (fun {σ} x => x) a✝).succ = a✝.succ
+
+case case
+Γ : List Ty
+ss ss✝ : List Spec
+Δ✝ : List Ty
+a✝ : DAG Γ ss✝
+τ✝ : Ty
+a_ih✝ : ScopedDAG.rename (fun {σ} x => x) a✝ = a✝
+⊢ (ScopedDAG.rename (fun {σ} x => x) a✝).case τ✝ = a✝.case τ✝
+
+case recursor
+Γ : List Ty
+ss ss✝ : List Spec
+Δ✝ : List Ty
+a✝ : DAG Γ ss✝
+τ✝ : Ty
+a_ih✝ : ScopedDAG.rename (fun {σ} x => x) a✝ = a✝
+⊢ (ScopedDAG.rename (fun {σ} x => x) a✝).recursor τ✝ = a✝.recursor τ✝
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:37:53: error: unexpected token ',*'; expected ']'
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:36:83: error: unsolved goals
+case add
+Γ : List Ty
+a✝¹ a✝ : SourceAST.Term Γ
+a_ih✝¹ : renameTerm (fun {σ} x => x) a✝¹ = a✝¹
+a_ih✝ : renameTerm (fun {σ} x => x) a✝ = a✝
+⊢ (renameTerm (fun {σ} x => x) a✝¹).add (renameTerm (fun {σ} x => x) a✝) = a✝¹.add a✝
+
+case unary
+Γ : List Ty
+a✝¹ : Input [] (Ty.ground.arrow Ty.ground)
+a✝ : SourceAST.Term Γ
+a_ih✝ : renameTerm (fun {σ} x => x) a✝ = a✝
+⊢ SourceAST.Term.unary a✝¹ (renameTerm (fun {σ} x => x) a✝) = SourceAST.Term.unary a✝¹ a✝
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:40:49: error: unexpected token ',*'; expected ']'
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:39:92: error: unsolved goals
+case neg
+Γ : List Ty
+a✝ : SourceAST.Formula Γ
+a_ih✝ : renameFormula (fun {σ} x => x) a✝ = a✝
+⊢ (renameFormula (fun {σ} x => x) a✝).neg = a✝.neg
+
+case conj
+Γ : List Ty
+a✝¹ a✝ : SourceAST.Formula Γ
+a_ih✝¹ : renameFormula (fun {σ} x => x) a✝¹ = a✝¹
+a_ih✝ : renameFormula (fun {σ} x => x) a✝ = a✝
+⊢ (renameFormula (fun {σ} x => x) a✝¹).conj (renameFormula (fun {σ} x => x) a✝) = a✝¹.conj a✝
+
+case disj
+Γ : List Ty
+a✝¹ a✝ : SourceAST.Formula Γ
+a_ih✝¹ : renameFormula (fun {σ} x => x) a✝¹ = a✝¹
+a_ih✝ : renameFormula (fun {σ} x => x) a✝ = a✝
+⊢ (renameFormula (fun {σ} x => x) a✝¹).disj (renameFormula (fun {σ} x => x) a✝) = a✝¹.disj a✝
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:53:67: error(lean.unknownIdentifier): Unknown constant `Nat.rec_succ`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:53:80: error: Invalid `←` modifier: `MatrixCode.times` is a declaration name to be unfolded
+
+Hint: The simplifier cannot "refold" definitions by name. Use `rw` for this instead,
+                      or use the `←` simp modifier with an equational lemma for `MatrixCode.times`.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:64:12: error: Type mismatch: After simplification, term
+  hr x
+ has type
+  @Eq ℕ (variableIndex (r x)) (k (variableIndex x))
+but is expected to have type
+  @Eq ℕ (variableIndex (r x)) (k (variableIndex x))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:85:6: error: Type mismatch: After simplification, term
+  hr x
+ has type
+  @Eq ℕ (variableIndex (r x)) (k (variableIndex x))
+but is expected to have type
+  @Eq ℕ (variableIndex (r x)) (k (variableIndex x))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:95:49: error: Type mismatch
+  k (j + 1)
+has type
+  ℕ
+of sort `Type` but is expected to have type
+  variableIndex (r j.there) = k (variableIndex j)
+of sort `Prop`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:95:52: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HAdd (Variable (WireCtx n Γ) τ✝) ℕ ℕ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:116:75: error: No goals to be solved
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:119:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:150:13: warning: This simp argument is unused:
+  hl
+
+Hint: Omit it from the simp argument list.
+  simp only [hl̵,̵h̵r, ̲show d̵a̵.̵2̵.̵2̵.̵2̵=̵d̲a̲.̲2̲.̲2̲.̲2̲ ̲=̲ ̲SyntaxCode.typeCode τ from rfl, ̲SyntaxCode.Proof.typeLevelExact,
+      AbsoluteObserver.factor, ̲MatrixCode.formula, ̲MatrixCode.term, ̲timesExact, ̲eraserLift,
+      CurrentUnitElimination.raw, ̲MatrixCode.raw, ̲variableIndex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:150:16: warning: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  simp only [hl,h̵r̵,̵ ̲show d̵a̵.̵2̵.̵2̵.̵2̵=̵d̲a̲.̲2̲.̲2̲.̲2̲ ̲=̲ ̲SyntaxCode.typeCode τ from rfl, ̲SyntaxCode.Proof.typeLevelExact,
+      AbsoluteObserver.factor, ̲MatrixCode.formula, ̲MatrixCode.term, ̲timesExact, ̲eraserLift,
+      CurrentUnitElimination.raw, ̲MatrixCode.raw, ̲variableIndex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:150:19: warning: This simp argument is unused:
+  show da.2.2.2 = SyntaxCode.typeCode τ from rfl
+
+Hint: Omit it from the simp argument list.
+  s̵i̵m̵p̵ ̵o̵n̵l̵y̵ ̵[̵h̵l̵,̵h̵r̵,̵s̵h̵o̵w̵ ̵d̵a̵.̵2̵.̵2̵.̵2̵=̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵t̵y̵p̵e̵C̵o̵d̵e̵ ̵τ̵ ̵f̵r̵o̵m̵ ̵r̵f̵l̵,̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵P̵r̵o̵o̵f̵.̵t̵y̵p̵e̵L̵e̵v̵e̵l̵E̵x̵a̵c̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵A̵b̵s̵o̵l̵u̵t̵e̵O̵b̵s̵e̵r̵v̵e̵r̵.̵f̵a̵c̵t̵o̵r̵,̵M̵a̵t̵r̵i̵x̵C̵o̵d̵e̵.̵f̵o̵r̵m̵u̵l̵a̵,̵M̵a̵t̵r̵i̵x̵C̵o̵d̵e̵.̵t̵e̵r̵m̵,̵t̵i̵m̵e̵s̵E̵x̵a̵c̵t̵,̵e̵r̵a̵s̵e̵r̵L̵i̵f̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵C̵u̵r̵r̵e̵n̵t̵U̵n̵i̵t̵E̵l̵i̵m̵i̵n̵a̵t̵i̵o̵n̵.̵r̵a̵w̵,̵M̵a̵t̵r̵i̵x̵C̵o̵d̵e̵.̵r̵a̵w̵,̵v̵a̵r̵i̵a̵b̵l̵e̵I̵n̵d̵e̵x̵]̵s̲i̲m̲p̲ ̲o̲n̲l̲y̲ ̲[̲h̲l̲,̲ ̲h̲r̲,̲ ̲S̲y̲n̲t̲a̲x̲C̲o̲d̲e̲.̲P̲r̲o̲o̲f̲.̲t̲y̲p̲e̲L̲e̲v̲e̲l̲E̲x̲a̲c̲t̲,̲ ̲A̲b̲s̲o̲l̲u̲t̲e̲O̲b̲s̲e̲r̲v̲e̲r̲.̲f̲a̲c̲t̲o̲r̲,̲ ̲M̲a̲t̲r̲i̲x̲C̲o̲d̲e̲.̲f̲o̲r̲m̲u̲l̲a̲,̲
+  ̲ ̲ ̲ ̲ ̲M̲a̲t̲r̲i̲x̲C̲o̲d̲e̲.̲t̲e̲r̲m̲,̲ ̲t̲i̲m̲e̲s̲E̲x̲a̲c̲t̲,̲ ̲e̲r̲a̲s̲e̲r̲L̲i̲f̲t̲,̲ ̲C̲u̲r̲r̲e̲n̲t̲U̲n̲i̲t̲E̲l̲i̲m̲i̲n̲a̲t̲i̲o̲n̲.̲r̲a̲w̲,̲ ̲M̲a̲t̲r̲i̲x̲C̲o̲d̲e̲.̲r̲a̲w̲,̲
+  ̲ ̲ ̲ ̲ ̲v̲a̲r̲i̲a̲b̲l̲e̲I̲n̲d̲e̲x̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:150:64: warning: This simp argument is unused:
+  SyntaxCode.Proof.typeLevelExact
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵l̵,̵h̵r̵,̵s̵h̵o̵w̵ ̵d̵a̵.̵2̵.̵2̵.̵2̵=̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵t̵y̵p̵e̵C̵o̵d̵e̵[̲h̲l̲,̲ ̲h̲r̲,̲ ̲s̲h̲o̲w̲ ̲d̲a̲.̲2̲.̲2̲.̲2̲ ̲=̲ ̲S̲y̲n̲t̲a̲x̲C̲o̲d̲e̲.̲t̲y̲p̲e̲C̲o̲d̲e̲ τ from r̵f̵l̵,̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵P̵r̵o̵o̵f̵.̵t̵y̵p̵e̵L̵e̵v̵e̵l̵E̵x̵a̵c̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵A̵b̵s̵o̵l̵u̵t̵e̵O̵b̵s̵e̵r̵v̵e̵r̵.̵f̵a̵c̵t̵o̵r̵,̵M̵a̵t̵r̵i̵x̵C̵o̵d̵e̵.̵f̵o̵r̵m̵u̵l̵a̵,̵M̵a̵t̵r̵i̵x̵C̵o̵d̵e̵.̵t̵e̵r̵m̵,̵t̵i̵m̵e̵s̵E̵x̵a̵c̵t̵,̵e̵r̵a̵s̵e̵r̵L̵i̵f̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵C̵u̵r̵r̵e̵n̵t̵U̵n̵i̵t̵E̵l̵i̵m̵i̵n̵a̵t̵i̵o̵n̵.̵r̵a̵w̵,̵M̵a̵t̵r̵i̵x̵C̵o̵d̵e̵.̵r̵a̵w̵,̵v̵a̵r̵i̵a̵b̵l̵e̵I̵n̵d̵e̵x̵]̵r̲f̲l̲,̲ ̲A̲b̲s̲o̲l̲u̲t̲e̲O̲b̲s̲e̲r̲v̲e̲r̲.̲f̲a̲c̲t̲o̲r̲,̲
+  ̲ ̲ ̲ ̲ ̲M̲a̲t̲r̲i̲x̲C̲o̲d̲e̲.̲f̲o̲r̲m̲u̲l̲a̲,̲ ̲M̲a̲t̲r̲i̲x̲C̲o̲d̲e̲.̲t̲e̲r̲m̲,̲ ̲t̲i̲m̲e̲s̲E̲x̲a̲c̲t̲,̲ ̲e̲r̲a̲s̲e̲r̲L̲i̲f̲t̲,̲ ̲C̲u̲r̲r̲e̲n̲t̲U̲n̲i̲t̲E̲l̲i̲m̲i̲n̲a̲t̲i̲o̲n̲.̲r̲a̲w̲,̲
+  ̲ ̲ ̲ ̲ ̲M̲a̲t̲r̲i̲x̲C̲o̲d̲e̲.̲r̲a̲w̲,̲ ̲v̲a̲r̲i̲a̲b̲l̲e̲I̲n̲d̲e̲x̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean:151:74: warning: This simp argument is unused:
+  eraserLift
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵l̵,̵h̵r̵,̵s̵h̵o̵w̵ ̵d̵a̵.̵2̵.̵2̵.̵2̵=̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵t̵y̵p̵e̵C̵o̵d̵e̵[̲h̲l̲,̲ ̲h̲r̲,̲ ̲s̲h̲o̲w̲ ̲d̲a̲.̲2̲.̲2̲.̲2̲ ̲=̲ ̲S̲y̲n̲t̲a̲x̲C̲o̲d̲e̲.̲t̲y̲p̲e̲C̲o̲d̲e̲ τ from r̵f̵l̵,̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵P̵r̵o̵o̵f̵.̵t̵y̵p̵e̵L̵e̵v̵e̵l̵E̵x̵a̵c̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵A̵b̵s̵o̵l̵u̵t̵e̵O̵b̵s̵e̵r̵v̵e̵r̵.̵f̵a̵c̵t̵o̵r̵,̵M̵a̵t̵r̵i̵x̵C̵o̵d̵e̵.̵f̵o̵r̵m̵u̵l̵a̵,̵M̵a̵t̵r̵i̵x̵C̵o̵d̵e̵.̵t̵e̵r̵m̵,̵t̵i̵m̵e̵s̵E̵x̵a̵c̵t̵,̵e̵r̵a̵s̵e̵r̵L̵i̵f̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵C̵u̵r̵r̵e̵n̵t̵U̵n̵i̵t̵E̵l̵i̵m̵i̵n̵a̵t̵i̵o̵n̵.̵r̵a̵w̵,̵M̵a̵t̵r̵i̵x̵C̵o̵d̵e̵.̵r̵a̵w̵,̵v̵a̵r̵i̵a̵b̵l̵e̵I̵n̵d̵e̵x̵]̵r̲f̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲S̲y̲n̲t̲a̲x̲C̲o̲d̲e̲.̲P̲r̲o̲o̲f̲.̲t̲y̲p̲e̲L̲e̲v̲e̲l̲E̲x̲a̲c̲t̲,̲ ̲A̲b̲s̲o̲l̲u̲t̲e̲O̲b̲s̲e̲r̲v̲e̲r̲.̲f̲a̲c̲t̲o̲r̲,̲ ̲M̲a̲t̲r̲i̲x̲C̲o̲d̲e̲.̲f̲o̲r̲m̲u̲l̲a̲,̲ ̲M̲a̲t̲r̲i̲x̲C̲o̲d̲e̲.̲t̲e̲r̲m̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲i̲m̲e̲s̲E̲x̲a̲c̲t̲,̲ ̲C̲u̲r̲r̲e̲n̲t̲U̲n̲i̲t̲E̲l̲i̲m̲i̲n̲a̲t̲i̲o̲n̲.̲r̲a̲w̲,̲ ̲M̲a̲t̲r̲i̲x̲C̲o̲d̲e̲.̲r̲a̲w̲,̲ ̲v̲a̲r̲i̲a̲b̲l̲e̲I̲n̲d̲e̲x̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

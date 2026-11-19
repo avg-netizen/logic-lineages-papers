@@ -1483,3 +1483,46 @@ and translates the existing canonical-port derivations into fixed-point bits.
   SHA63f2415dd2c0a87c23bd9dc0ab882d9fca407096e94ead56a963975c092f49ff,
   178 current/61 pins/5 exact audits, supplemental errors0. READY
   support only.
+
+## 2026-11-19 — genuine strict direct address multiset replacement
+
+- Accepted460 one external all-context numerical scalar carrier after
+  independent178current/61pins/5 audits. No numbered promotion.
+- New source-first direct multiset comparator preserves original
+  typed class occurrence lists, literal permutations, nonempty removed,
+  arbitrary deletion/reused removed original dominator, per-added
+  original positive RS with actual supplied cert. This is not the
+  primitive marking-only raw rule. Independent semantics, both typed
+  domains, actual source-typed target preservation and permutation
+  immunity, no partition search, Nat outer witness/ID1 claim.
+  Freeze b42f7182...,23 pins. Target-only1580 clean134/134
+  receipt1795098932667845485-2 independently verified before proofs.
+- DIRECT-MULTISET-EXACT-1595 clean184/184 first exact
+  receipt1795099157205498333-2, peak519976 inherited/501440 new,
+  root498740KiB under unchanged caps. Reaped/both locks free.
+  Five standard-only exact audits, LANE-A-NUMBERED-WINDOW-ARITHMETIC-
+  DIRECT-MULTISET-CLOUD-EVIDENCE.json
+  SHAddbb9b5a9fb5967e78391c11820c9722af40cd950b008d4d22081aaa075aa7e0,
+  184current/52pins/5audit supplemental errors0. READY support only.
+
+## 2026-11-19 — actual typed direct multiset witnesses fully Nat coded
+
+- Accepted461 actual typed address-list strict multiset replacement
+  after independent184current/52pins/5 exact standard audits.
+- New source-first direct code comparator froze27 pins1c60c8d1...
+  for literal ordered Nat lists, insertion destination/removed
+  dominator/actual positive cert, and all proposed partitions.
+  Exact coded typed list/direct original relation and independent
+  domains, malformed reject, no partition or path search. No I/J
+  stages, object arithmetic, or internal ID1.
+- DIRECT-CODE-PREFLIGHT-1612 clean136/136 target-only
+  receipt1795099360763226825-2 independently verified first.
+- DIRECT-CODE-EXACT-1628 clean189/189 first exact run
+  receipt1795099551316724775-2, inherited519976/new508832/root
+  500088KiB under unchanged original caps. Reaped/both locks free.
+  Seven exact standard-only audits; literal codec audits just
+  propext/Quot.sound. LANE-A-NUMBERED-WINDOW-ARITHMETIC-DIRECT-
+  CODE-CLOUD-EVIDENCE.json SHA9bb7cd3a93ba68de28ef556538f03c285481227961dd162f91c1e84eda0fdd90,
+  189current/56pins/7exact, supplemental review errors0. READY
+  supporting actual coded scalar and multiset relation data ready
+  for separately reviewed typed external operators, not internal ID1.

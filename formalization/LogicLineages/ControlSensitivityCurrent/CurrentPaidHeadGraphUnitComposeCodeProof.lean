@@ -9,12 +9,13 @@ open RawSourceDAG (variableIndex)
 private theorem varGround {Γ} (hg : ∀ τ ∈ Γ, τ = .ground) :
     ∀ {τ} (_ : Variable Γ τ), τ = .ground := by
   intro τ x
-  apply hg
-  induction x with
-  | here => simp
-  | there x ih => exact List.mem_cons_of_mem _ ih
+  have mem {Δ : List Ty} {σ : Ty} (v : Variable Δ σ) : σ ∈ Δ := by
+    induction v with
+    | here => simp
+    | there _ ih => exact List.mem_cons_of_mem _ ih
+  exact hg τ (mem x)
 
-private theorem headGround {Γ} (hg : ∀ τ ∈ Γ, τ = .ground) :
+private theorem headGround {Γ : List Ty} (hg : ∀ τ ∈ Γ, τ = .ground) :
     ∀ τ ∈ .ground :: Γ, τ = .ground := by
   intro τ h
   rcases List.mem_cons.mp h with rfl|h
@@ -63,7 +64,7 @@ theorem freeBlockExact {Γ : List Ty} (hg : ∀ τ ∈ Γ, τ = .ground)
   let w := q.width
   let Δ := .ground :: WireCtx w (.ground :: Γ)
   let r₀ : Renaming (WireCtx w Γ) Δ := fun x => .there (under (Renaming.weaken Γ .ground) w x)
-  let r := reroute w r₀ .here
+  let r : Renaming (WireCtx w (.ground::Γ)) Δ := reroute w r₀ .here
   have hctx : Δ.map SyntaxCode.typeCode = bitCtx (w+1+1+Γ.length) := by
     have hΔ : ∀ τ ∈ Δ, τ = .ground := headGround (groundWireCtx w _ (headGround hg))
     rw [allGroundMap Δ hΔ]
@@ -76,8 +77,11 @@ theorem freeBlockExact {Γ : List Ty} (hg : ∀ τ ∈ Γ, τ = .ground)
   change (w+1,MatrixCode.both _ _) =
     (w+1,MatrixCode.formula (.conj (renameFormula r q.matrix)
       (rowFormula row (raw (.here : Variable Δ .ground)) (.literal 0) (raw (.there (shift w .here))))))
-  simp only [hform,MatrixCode.formula,rowsExact,raw,MatrixCode.term,MatrixCode.raw,
+  dsimp only [w] at hform ⊢
+  simp only [typedBlock,MatrixCode.formula,rowsExact,raw,MatrixCode.term,MatrixCode.raw,
     variableIndex,shiftedIndex,Nat.add_zero]
+  exact congrArg (fun z : Nat => (q.width+1,MatrixCode.both z
+    (rawRow row (MatrixCode.raw 0) (MatrixCode.lit 0) (MatrixCode.raw (q.width+1))))) hform
 
 private theorem activeTable {Γ : List Ty} (b c : Nat) :
     let Δ := .ground::.ground::WireCtx b (WireCtx c (.ground::Γ))
@@ -111,12 +115,12 @@ private theorem activeTable {Γ : List Ty} (b c : Nat) :
     apply tableByIndex
     intro τ x
     symm
-    rw [rerouteIndex b l .here _ (fun x => hL _ x)]
+    rw [rerouteIndex b l .here (fun i => if i<b then i+2 else i+c+3) (fun x => hL _ x)]
     by_cases h : variableIndex x<b
     · have he : variableIndex x ≠ b := by omega
       simp only [h,he,if_true,if_false]
     · by_cases he : variableIndex x=b
-      · simp only [h,he,if_true,if_false,variableIndex]
+      · simp only [he,lt_irrefl,if_true,if_false,variableIndex]
       · have hp : ¬ variableIndex x-1<b := by omega
         simp only [h,he,hp,if_false]
         omega
@@ -124,7 +128,7 @@ private theorem activeTable {Γ : List Ty} (b c : Nat) :
     apply tableByIndex
     intro τ x
     symm
-    rw [rerouteIndex c r (.there .here) _ (fun x => hR _ x)]
+    rw [rerouteIndex c r (.there .here) (fun i => if i<c then i+b+2 else i+b+3) (fun x => hR _ x)]
     by_cases he : variableIndex x=c
     · simp only [he,if_true,variableIndex,Nat.zero_add]
     · by_cases h : variableIndex x<c
@@ -155,10 +159,15 @@ theorem activeBlockExact {Γ : List Ty} (hg : ∀ τ ∈ Γ, τ = .ground)
   have ht := activeTable (Γ:=Γ) b c
   rw [hctx,← ht.1] at hl
   rw [hctx,← ht.2] at hr
-  unfold activeBlock typedBlock activeGraph
-  dsimp only
-  rw [castFrame]
-  simp only [MatrixCode.formula,rowsExact,raw,MatrixCode.raw,MatrixCode.term,variableIndex,
-    shiftedIndex,Nat.add_zero,hl,hr,b,c,l,r,Δ] <;> rfl
+  let M : SourceAST.Formula Δ := .conj
+    (.conj (renameFormula (reroute b l .here) q.matrix)
+      (renameFormula (reroute c r (.there .here)) s.matrix))
+    (rowFormula row (raw .here) (raw (.there .here))
+      (raw (.there (.there (shift b (shift c .here))))))
+  have hCast : MatrixCode.formula (activeGraph row q s).matrix = MatrixCode.formula M :=
+    castFrame (.ground::Γ) b c M
+  have hWidth : (activeGraph row q s).width = b+c+2 := rfl
+  simp only [activeBlock,typedBlock,hWidth,hCast,M,MatrixCode.formula,rowsExact,raw,
+    MatrixCode.raw,MatrixCode.term,variableIndex,shiftedIndex,Nat.add_zero,hl,hr,b,c,l,r,Δ] <;> rfl
 
 end LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph.UnitCode

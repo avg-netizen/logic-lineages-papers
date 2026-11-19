@@ -1,0 +1,11 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphTailProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphTailProof.lean
+@@ -81,7 +81,7 @@
+   have hz0 : w (wr+1)=(f^[δ]) t-base := by
+     unfold w
+     rw [tapeLow f a wr δ t (v+δ) (wr+1) (by omega)]
+-    have hd : variableIndex (shift wr (.there (.here : Variable (.ground::Γ) .ground)))=wr+1 := by
++    have hd : variableIndex (shift wr (Γ:=.ground::.ground::Γ) (.there .here))=wr+1 := by
+       simp only [shiftedIndex,variableIndex,Nat.zero_add]
+     change ν (slot z (wr+1)) = _
+     rw [← hd,slotAt]

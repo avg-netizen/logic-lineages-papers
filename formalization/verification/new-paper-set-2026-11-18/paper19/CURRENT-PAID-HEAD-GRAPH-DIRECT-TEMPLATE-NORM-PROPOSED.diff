@@ -1,0 +1,20 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphDirectProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphDirectProof.lean
+@@ -17,7 +17,8 @@
+   have hn : nums.length=stop-n := exactPointLength f ξ base
+   have hgrowth := (FullAddition.completeAddition.2.2.2 f hf).2.1
+   have hshift := (exactIteration f hf β hε hlim δ).2.2.2
+-  change (direct hg δ n base (smallValues f) nums ray).holds p f (endValues t y) ↔ _
++  change (direct hg δ n base (smallValues f) nums ray).holds p f (endValues t y) ↔
++    n≤t ∧ y=J f ξ t
+   rw [directFiber p f hf hg]
+   constructor
+   · rintro ⟨w,ht,hy,hgraph⟩
+@@ -81,6 +82,6 @@
+       · rw [hwy,hy,(hshift t ht).2]
+       · change (_ || tailBody (evalLayout f w) wr δ n base (smallValues f)
+           (ray.matrix.eval p f (byIndex (fun i => w (rayPlacement wr i)))))=true
+-        exact Bool.or_eq_true.mpr (Or.inr ((tailNumerical f w wr δ n base _).mpr htail))
++        exact Bool.or_eq_true_iff.mpr (Or.inr ((tailNumerical f w wr δ n base _).mpr htail))
+ 
+ end LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph
