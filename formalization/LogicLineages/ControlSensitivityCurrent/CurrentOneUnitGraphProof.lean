@@ -47,6 +47,7 @@ theorem exactHeadGraph : CurrentOneUnitTargets.ExactHeadGraph := by
   | true =>
     refine ⟨d,hd,?_,?_,?_,?_⟩
     · rw [equationFree τ d hf]
+      change 0 < (1 : Nat)
       decide
     · rw [equationFree τ d hf]
       change 0 < d.1+1

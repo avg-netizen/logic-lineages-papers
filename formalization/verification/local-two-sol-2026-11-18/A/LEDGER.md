@@ -822,3 +822,47 @@ and translates the existing canonical-port derivations into fixed-point bits.
   Full proposal and six hashes in
   `NUMBERED-WINDOW-FRAME-TYPED-THIN-PROPOSAL.md`. No unchanged
   retry/flags change; await independent design review/new ticket.
+
+## 2026-11-19 — exact frame/closing support passed
+
+- First typed redesign proof handlers used independently reviewed @
+  elaboration suppression and generated recursor index adapters.
+  FRAME-THIN-0916 ordinary bound constructor index order checkpoint
+  (34/35; receipt `1795079777680436093-6`); exact failed edition
+  retained. Repaired FRAME-THIN-0922 passed typed core477524 KiB,
+  typed admissibility477920 KiB, full primary/trace/realization/
+  freshness/scope. The next old well-founded Abs leaf stopped
+  separately at525948 KiB (43/44, exit77, receipt
+  `1795080087227938028-6`); exact stopped Abs bytes1e6eecc7 and full
+  candidate retained. Both stops reaped with locks free; no unchanged
+  retry or cap adjustment.
+- Second material append-only split checked original ScopeAt, actual
+  fresh name and beta singletons through small direct Typed recursor
+  handlers for exact Abs round-trip. Exact root
+  `NumberedWindowFrameAbsThinChecks` excludes both stopped originals,
+  keeps the original FAbs source byte-identical, and retains all13
+  frozen targets. FRAME-ABS-THIN-0928 clean exit0 49/49, peak508696 KiB
+  (Abs core471740/root482704 KiB), receipt `1795080369778348548-6`;
+  reaped and both locks free. All13 exact aliases standard-only.
+- Current recursive evidence
+  `LANE-A-NUMBERED-WINDOW-FRAME-CLOUD-EVIDENCE.json`
+  f0667fa9265e09c7ac5bb5d50a35f30c5e0bc573c5ceeee4b1cb9f4751c20919,
+  49 recursive modules + 50 merged pins (all21 own), supplemental
+  audit zero errors. Ready for independent supporting review, no
+  full positive simulation or numbered locality claim.
+
+## 2026-11-19 — exact trace, ordinary tr, and reserved mark comparators
+
+- Source-first `NumberedWindowTraceAlgebra`,
+  `NumberedWindowOrdinaryTranslation`, and
+  `NumberedWindowTraceBudgetTargets`: exact typed mixed/ordered-base
+  trace vertices and actual raw counts, lambda/raw-function context,
+  conventional ordinary-only tr and unique realization, one genuine
+  actual mark step plus primitive mark decrease from n+1 to n at
+  fixed head window. No marked-target grammar, whole simulation
+  assumed or claimed. 27 original source/comparator pins and literal
+  source map in `NUMBERED-WINDOW-TRACE-BUDGET-*`.
+- Independent scope approved; target-only TRACE-BUDGET-TARGET-0928
+  passed27/27, peak495804 KiB, receipt `1795080435372155053-6`,
+  original caps, exit0/reaped/locks free. No proof compiler or further
+  proof authoring until preflight acceptance / separate fresh tickets.

@@ -24,7 +24,11 @@ theorem commonUnitValuation {Γ : List Ty} (ρ : Variable Γ .ground → Nat) :
     (fun c => ((ExistentialPlan.inputs ρ c+1 : Nat) : Ordinal)) = commonUnits ρ := by
   funext c
   rcases c with ⟨τ,x,j⟩
-  cases τ <;> rfl
+  cases τ with
+  | ground => rfl
+  | arrow a b =>
+    change ((1 : Nat) : Ordinal) = 1
+    exact Nat.cast_one
 
 private theorem selectedHeadClosure (f : Nat → Nat) {Γ : List Ty} {σ : Ty}
     (ρ : Variable Γ .ground → Nat) (e : OrdinalExpression (σ :: Γ)) :
@@ -36,8 +40,12 @@ private theorem selectedHeadClosure (f : Nat → Nat) {Γ : List Ty} {σ : Ty}
   funext c
   rcases c with ⟨τ,x,j⟩
   cases x with
-  | here => rfl
-  | there x => cases τ <;> rfl
+  | here =>
+    change (1 : Ordinal) = ((1 : Nat) : Ordinal)
+    exact Nat.cast_one.symm
+  | there x =>
+    change commonUnits ρ ⟨τ,x,j⟩ = ((ExistentialPlan.inputs ρ ⟨τ,x,j⟩+1 : Nat) : Ordinal)
+    exact (congrFun (commonUnitValuation ρ) ⟨τ,x,j⟩).symm
 
 private theorem finiteAt (f : Nat → Nat) {Γ : List Ty} (ρ : OrdinalComponent Γ → Nat)
     (e : OrdinalExpression Γ) (hg : GeneratedOrdinalGrade Γ 0 e) :
@@ -125,8 +133,8 @@ private theorem inflatedValue (p : AdmissibleSum.Policy) (f : Nat → Nat)
 theorem actualScalarRows : CurrentOneUnitTargets.ActualScalarRows := by
   intro p f Γ σ τ a d hd
   obtain ⟨h,h',d₀,ha,hu,hd₀,hdata,hposdi,hInfl,hsize⟩ := literalInflation p Γ σ τ a
-  have same : d₀ = d := Option.some.inj (hd₀.symm.trans hd)
-  subst d₀
+  have hdataD : d = (OneUnit.multiplier h,OneUnit.multiplier h',ordinalHeadFree (h 0)) :=
+    (Option.some.inj (hd.symm.trans hd₀)).trans hdata
   have gh := actualVectorGrade p a h ha
   have gh' := actualVectorGrade p (OneUnit.unused a) h' hu
   obtain ⟨v,hv,gv⟩ := AdmissiblePartial.actualAdmissiblePartialGenerated Γ σ p 0 (h 0) (gh 0)
@@ -142,16 +150,16 @@ theorem actualScalarRows : CurrentOneUnitTargets.ActualScalarRows := by
   let L' := d.2.1*P'+R'
   have hL : CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) (OneUnit.first a) L := by
     unfold L
-    rw [hdata]
+    rw [hdataD]
     exact lambdaScalar p f a h ha v hv ρ P R hP hR
   have hL' : CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) (OneUnit.second a) L' := by
     unfold L'
-    rw [hdata]
+    rw [hdataD]
     exact lambdaScalar p f (OneUnit.unused a) h' hu v' hv' ρ P' R' hP' hR'
   refine ⟨P,R,P',R',L,L',hp,hr,hp',hr',by dsimp [L]; omega,by dsimp [L']; omega,
     hP,hP',⟨h,ha,hR⟩,⟨h',hu,hR'⟩,hL,hL',rfl,rfl,?_,?_⟩
   · intro hfree
-    have hfree' : ordinalHeadFree (h 0) = true := by rw [hdata] at hfree; exact hfree
+    have hfree' : ordinalHeadFree (h 0) = true := by rw [hdataD] at hfree; exact hfree
     have he := hP.symm.trans (freePartial p f ρ (h 0) hfree' v hv R hR)
     have he' : P = R+1 := by exact_mod_cast he
     refine ⟨he',?_⟩
@@ -159,7 +167,7 @@ theorem actualScalarRows : CurrentOneUnitTargets.ActualScalarRows := by
     rw [he']
     ring
   · intro hactive
-    have hactive' : ordinalHeadFree (h 0) = false := by rw [hdata] at hactive; exact hactive
+    have hactive' : ordinalHeadFree (h 0) = false := by rw [hdataD] at hactive; exact hactive
     obtain ⟨w,hw,he⟩ := inflatedPartialValue (τ:=τ) p f (commonUnits ρ) (h 0) hactive' v P hv hP
     have eW : w = v' := by
       rw [hInfl] at hv'
