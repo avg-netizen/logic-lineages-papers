@@ -1287,3 +1287,20 @@ and translates the existing canonical-port derivations into fixed-point bits.
   code, exact successful/roundtrip/invalid codes. Does not itself
   classify typed terms, establish least primary reps, prove
   object-level arithmetic/purity or establish internal ID1.
+
+## 2026-11-19 — accepted literal raw codec; least legitimate class code comparator
+
+- Coordinator accepted450 exact raw NTerm/NArgs and field/node code
+  packet after independent27current/53pins/8 standard exact audits,
+  unchanged numbered148/19 at adoption. No typed numeric carrier
+  or least rep assertion yet.
+- Source-first NumberedWindowArithmeticLeastClass/Targets created:
+  literal Nat min of packet447's exact list using packet450 actual code,
+  decode the same code. Specification includes source-only original
+  window, actual same-admitted decoded representative, its code,
+  genuine Primary, leastness over every actual equivalent and literal
+  uniqueness. Same admitted representatives' min/decoded equality iff
+  Primary and existing actual Class quotient equality. Explicit Γ prefix,
+  no arbitrary C code, arithmetic proof, rank or ID1. Freeze26 pins
+  d4fbf0f2..., target static118, pending independent review/preflight,
+  no proofs.
