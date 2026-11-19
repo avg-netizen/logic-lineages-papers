@@ -1,0 +1,152 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:20:4: error: Tactic `tauto` failed
+
+case cons
+r a : Bool
+xs : List Bool
+ih : List.foldr (fun x1 x2 => x1 || x2) r xs = true ↔ (∃ b ∈ xs, b = true) ∨ r = true
+⊢ a = true ∨ (∃ b ∈ xs, b = true) ∨ r = true ↔ (a = true ∨ ∃ b ∈ xs, b = true) ∨ r = true
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:36:12: error: Tactic `cases` failed with a nested error:
+Dependent elimination failed: Failed to solve equation
+  true =
+    match decide (w a = j) with
+    | false => false
+    | true => decide (w b = (smallValues f).getD j 0)
+at case `Eq.refl`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:45:19: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `Eq.refl` does not have explicit fields, but 2 were provided
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:44:53: warning: This simp argument is unused:
+  List.getElem?_map
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵m̵a̵l̵l̵V̵a̵l̵u̵e̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵m̵a̵p̵,̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵r̵a̵n̵g̵e̵,̵h̵j̵]̵[̲s̲m̲a̲l̲l̲V̲a̲l̲u̲e̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲E̲l̲e̲m̲?̲_̲r̲a̲n̲g̲e̲,̲ ̲h̲j̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:44:71: warning: This simp argument is unused:
+  List.getElem?_range
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵m̵a̵l̵l̵V̵a̵l̵u̵e̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵m̵a̵p̵,̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵r̵a̵n̵g̵e̵,̵h̵j̵]̵[̲s̲m̲a̲l̲l̲V̲a̲l̲u̲e̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲E̲l̲e̲m̲?̲_̲m̲a̲p̲,̲ ̲h̲j̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:82:47: warning: This simp argument is unused:
+  List.getElem?_map
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵x̵a̵c̵t̵P̵o̵i̵n̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵m̵a̵p̵,̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵r̵a̵n̵g̵e̵,̵h̵k̵]̵[̲e̲x̲a̲c̲t̲P̲o̲i̲n̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲E̲l̲e̲m̲?̲_̲r̲a̲n̲g̲e̲,̲ ̲h̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:82:65: warning: This simp argument is unused:
+  List.getElem?_range
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵x̵a̵c̵t̵P̵o̵i̵n̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵m̵a̵p̵,̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵r̵a̵n̵g̵e̵,̵h̵k̵]̵[̲e̲x̲a̲c̲t̲P̲o̲i̲n̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲E̲l̲e̲m̲?̲_̲m̲a̲p̲,̲ ̲h̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:97:103: error: unsolved goals
+f w : ℕ → ℕ
+wr δ nξ base : ℕ
+ray : Bool
+⊢ (∀ (b : Bool),
+      b ∈
+            [decide (max nξ base ≤ w (directWidth wr δ)), decide (w (uSlot wr 0) = w (directWidth wr δ)),
+              decide (w (wr + 2) = 0), decide (w (uSlot wr δ) = base + w (wr + 1)), ray,
+              decide (w (directWidth wr δ + 1) = w wr + (δ + 1))] ∨
+          b ∈
+            List.map (fun j => fGate (evalLayout f w) (smallValues f) (uSlot wr j) (uSlot wr (j + 1)) (argSlot wr δ j))
+              (List.range δ) →
+        b = true) ↔
+    max nξ base ≤ w (directWidth wr δ) ∧
+      w (uSlot wr 0) = w (directWidth wr δ) ∧
+        w (wr + 2) = 0 ∧
+          w (uSlot wr δ) = base + w (wr + 1) ∧
+            ray = true ∧
+              w (directWidth wr δ + 1) = w wr + (δ + 1) ∧
+                ∀ j < δ, GateSpec f (w (uSlot wr j)) (w (uSlot wr (j + 1))) (w (argSlot wr δ j))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:105:29: warning: This simp argument is unused:
+  forall_or_left
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_append,f̵o̵r̵a̵l̵l̵_̵o̵r̵_̵l̵e̵f̵t̵,̵ ̲List.forall_mem_cons, ̲decide_eq_true_eq, ̲List.not_mem_nil,
+      false_implies, ̲implies_true, ̲and_true, ̲List.forall_mem_map, ̲List.mem_range, ̲gateSemantics]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:105:44: warning: This simp argument is unused:
+  List.forall_mem_cons
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵s̵t̵.̵m̵e̵m̵_̵a̵p̵p̵e̵n̵d̵,̵f̵o̵r̵a̵l̵l̵_̵o̵r̵_̵l̵e̵f̵t̵,̵L̵i̵s̵t̵.̵f̵o̵r̵a̵l̵l̵_̵m̵e̵m̵_̵c̵o̵n̵s̵,̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵t̵r̵u̵e̵_̵e̵q̵,̵L̵i̵s̵t̵.̵n̵o̵t̵_̵m̵e̵m̵_̵n̵i̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵f̵a̵l̵s̵e̵_̵i̵m̵p̵l̵i̵e̵s̵,̵i̵m̵p̵l̵i̵e̵s̵_̵t̵r̵u̵e̵,̵a̵n̵d̵_̵t̵r̵u̵e̵,̵L̵i̵s̵t̵.̵f̵o̵r̵a̵l̵l̵_̵m̵e̵m̵_̵m̵a̵p̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵r̵a̵n̵g̵e̵,̵g̵a̵t̵e̵S̵e̵m̵a̵n̵t̵i̵c̵s̵]̵[̲L̲i̲s̲t̲.̲m̲e̲m̲_̲a̲p̲p̲e̲n̲d̲,̲ ̲f̲o̲r̲a̲l̲l̲_̲o̲r̲_̲l̲e̲f̲t̲,̲ ̲d̲e̲c̲i̲d̲e̲_̲e̲q̲_̲t̲r̲u̲e̲_̲e̲q̲,̲ ̲L̲i̲s̲t̲.̲n̲o̲t̲_̲m̲e̲m̲_̲n̲i̲l̲,̲ ̲f̲a̲l̲s̲e̲_̲i̲m̲p̲l̲i̲e̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲i̲m̲p̲l̲i̲e̲s̲_̲t̲r̲u̲e̲,̲ ̲a̲n̲d̲_̲t̲r̲u̲e̲,̲ ̲L̲i̲s̲t̲.̲f̲o̲r̲a̲l̲l̲_̲m̲e̲m̲_̲m̲a̲p̲,̲ ̲L̲i̲s̲t̲.̲m̲e̲m̲_̲r̲a̲n̲g̲e̲,̲ ̲g̲a̲t̲e̲S̲e̲m̲a̲n̲t̲i̲c̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:105:65: warning: This simp argument is unused:
+  decide_eq_true_eq
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵s̵t̵.̵m̵e̵m̵_̵a̵p̵p̵e̵n̵d̵,̵f̵o̵r̵a̵l̵l̵_̵o̵r̵_̵l̵e̵f̵t̵,̵L̵i̵s̵t̵.̵f̵o̵r̵a̵l̵l̵_̵m̵e̵m̵_̵c̵o̵n̵s̵,̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵t̵r̵u̵e̵_̵e̵q̵,̵L̵i̵s̵t̵.̵n̵o̵t̵_̵m̵e̵m̵_̵n̵i̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵f̵a̵l̵s̵e̵_̵i̵m̵p̵l̵i̵e̵s̵,̵i̵m̵p̵l̵i̵e̵s̵_̵t̵r̵u̵e̵,̵a̵n̵d̵_̵t̵r̵u̵e̵,̵L̵i̵s̵t̵.̵f̵o̵r̵a̵l̵l̵_̵m̵e̵m̵_̵m̵a̵p̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵r̵a̵n̵g̵e̵,̵g̵a̵t̵e̵S̵e̵m̵a̵n̵t̵i̵c̵s̵]̵[̲L̲i̲s̲t̲.̲m̲e̲m̲_̲a̲p̲p̲e̲n̲d̲,̲ ̲f̲o̲r̲a̲l̲l̲_̲o̲r̲_̲l̲e̲f̲t̲,̲ ̲L̲i̲s̲t̲.̲f̲o̲r̲a̲l̲l̲_̲m̲e̲m̲_̲c̲o̲n̲s̲,̲ ̲L̲i̲s̲t̲.̲n̲o̲t̲_̲m̲e̲m̲_̲n̲i̲l̲,̲ ̲f̲a̲l̲s̲e̲_̲i̲m̲p̲l̲i̲e̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲i̲m̲p̲l̲i̲e̲s̲_̲t̲r̲u̲e̲,̲ ̲a̲n̲d̲_̲t̲r̲u̲e̲,̲ ̲L̲i̲s̲t̲.̲f̲o̲r̲a̲l̲l̲_̲m̲e̲m̲_̲m̲a̲p̲,̲ ̲L̲i̲s̲t̲.̲m̲e̲m̲_̲r̲a̲n̲g̲e̲,̲ ̲g̲a̲t̲e̲S̲e̲m̲a̲n̲t̲i̲c̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:105:83: warning: This simp argument is unused:
+  List.not_mem_nil
+
+Hint: Omit it from the simp argument list.
+  simp only [List.mem_append, ̲forall_or_left, ̲List.forall_mem_cons, ̲decide_eq_true_eq,L̵i̵s̵t̵.̵n̵o̵t̵_̵m̵e̵m̵_̵n̵i̵l̵,̵
+      false_implies, ̲implies_true, ̲and_true, ̲List.forall_mem_map, ̲List.mem_range, ̲gateSemantics]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:106:4: warning: This simp argument is unused:
+  false_implies
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵s̵t̵.̵m̵e̵m̵_̵a̵p̵p̵e̵n̵d̵,̵f̵o̵r̵a̵l̵l̵_̵o̵r̵_̵l̵e̵f̵t̵,̵L̵i̵s̵t̵.̵f̵o̵r̵a̵l̵l̵_̵m̵e̵m̵_̵c̵o̵n̵s̵,̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵t̵r̵u̵e̵_̵e̵q̵,̵L̵i̵s̵t̵.̵n̵o̵t̵_̵m̵e̵m̵_̵n̵i̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵f̵a̵l̵s̵e̵_̵i̵m̵p̵l̵i̵e̵s̵,̵i̵m̵p̵l̵i̵e̵s̵_̵t̵r̵u̵e̵,̵a̵n̵d̵_̵t̵r̵u̵e̵,̵L̵i̵s̵t̵.̵f̵o̵r̵a̵l̵l̵_̵m̵e̵m̵_̵m̵a̵p̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵r̵a̵n̵g̵e̵,̵g̵a̵t̵e̵S̵e̵m̵a̵n̵t̵i̵c̵s̵]̵[̲L̲i̲s̲t̲.̲m̲e̲m̲_̲a̲p̲p̲e̲n̲d̲,̲ ̲f̲o̲r̲a̲l̲l̲_̲o̲r̲_̲l̲e̲f̲t̲,̲ ̲L̲i̲s̲t̲.̲f̲o̲r̲a̲l̲l̲_̲m̲e̲m̲_̲c̲o̲n̲s̲,̲ ̲d̲e̲c̲i̲d̲e̲_̲e̲q̲_̲t̲r̲u̲e̲_̲e̲q̲,̲
+  ̲ ̲ ̲ ̲ ̲L̲i̲s̲t̲.̲n̲o̲t̲_̲m̲e̲m̲_̲n̲i̲l̲,̲ ̲i̲m̲p̲l̲i̲e̲s̲_̲t̲r̲u̲e̲,̲ ̲a̲n̲d̲_̲t̲r̲u̲e̲,̲ ̲L̲i̲s̲t̲.̲f̲o̲r̲a̲l̲l̲_̲m̲e̲m̲_̲m̲a̲p̲,̲ ̲L̲i̲s̲t̲.̲m̲e̲m̲_̲r̲a̲n̲g̲e̲,̲ ̲g̲a̲t̲e̲S̲e̲m̲a̲n̲t̲i̲c̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:106:18: warning: This simp argument is unused:
+  implies_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵s̵t̵.̵m̵e̵m̵_̵a̵p̵p̵e̵n̵d̵,̵f̵o̵r̵a̵l̵l̵_̵o̵r̵_̵l̵e̵f̵t̵,̵L̵i̵s̵t̵.̵f̵o̵r̵a̵l̵l̵_̵m̵e̵m̵_̵c̵o̵n̵s̵,̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵t̵r̵u̵e̵_̵e̵q̵,̵L̵i̵s̵t̵.̵n̵o̵t̵_̵m̵e̵m̵_̵n̵i̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵f̵a̵l̵s̵e̵_̵i̵m̵p̵l̵i̵e̵s̵,̵i̵m̵p̵l̵i̵e̵s̵_̵t̵r̵u̵e̵,̵a̵n̵d̵_̵t̵r̵u̵e̵,̵L̵i̵s̵t̵.̵f̵o̵r̵a̵l̵l̵_̵m̵e̵m̵_̵m̵a̵p̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵r̵a̵n̵g̵e̵,̵g̵a̵t̵e̵S̵e̵m̵a̵n̵t̵i̵c̵s̵]̵[̲L̲i̲s̲t̲.̲m̲e̲m̲_̲a̲p̲p̲e̲n̲d̲,̲ ̲f̲o̲r̲a̲l̲l̲_̲o̲r̲_̲l̲e̲f̲t̲,̲ ̲L̲i̲s̲t̲.̲f̲o̲r̲a̲l̲l̲_̲m̲e̲m̲_̲c̲o̲n̲s̲,̲ ̲d̲e̲c̲i̲d̲e̲_̲e̲q̲_̲t̲r̲u̲e̲_̲e̲q̲,̲
+  ̲ ̲ ̲ ̲ ̲L̲i̲s̲t̲.̲n̲o̲t̲_̲m̲e̲m̲_̲n̲i̲l̲,̲ ̲f̲a̲l̲s̲e̲_̲i̲m̲p̲l̲i̲e̲s̲,̲ ̲a̲n̲d̲_̲t̲r̲u̲e̲,̲ ̲L̲i̲s̲t̲.̲f̲o̲r̲a̲l̲l̲_̲m̲e̲m̲_̲m̲a̲p̲,̲ ̲L̲i̲s̲t̲.̲m̲e̲m̲_̲r̲a̲n̲g̲e̲,̲ ̲g̲a̲t̲e̲S̲e̲m̲a̲n̲t̲i̲c̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:106:31: warning: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵s̵t̵.̵m̵e̵m̵_̵a̵p̵p̵e̵n̵d̵,̵f̵o̵r̵a̵l̵l̵_̵o̵r̵_̵l̵e̵f̵t̵,̵L̵i̵s̵t̵.̵f̵o̵r̵a̵l̵l̵_̵m̵e̵m̵_̵c̵o̵n̵s̵,̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵t̵r̵u̵e̵_̵e̵q̵,̵L̵i̵s̵t̵.̵n̵o̵t̵_̵m̵e̵m̵_̵n̵i̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵f̵a̵l̵s̵e̵_̵i̵m̵p̵l̵i̵e̵s̵,̵i̵m̵p̵l̵i̵e̵s̵_̵t̵r̵u̵e̵,̵a̵n̵d̵_̵t̵r̵u̵e̵,̵L̵i̵s̵t̵.̵f̵o̵r̵a̵l̵l̵_̵m̵e̵m̵_̵m̵a̵p̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵r̵a̵n̵g̵e̵,̵g̵a̵t̵e̵S̵e̵m̵a̵n̵t̵i̵c̵s̵]̵[̲L̲i̲s̲t̲.̲m̲e̲m̲_̲a̲p̲p̲e̲n̲d̲,̲ ̲f̲o̲r̲a̲l̲l̲_̲o̲r̲_̲l̲e̲f̲t̲,̲ ̲L̲i̲s̲t̲.̲f̲o̲r̲a̲l̲l̲_̲m̲e̲m̲_̲c̲o̲n̲s̲,̲ ̲d̲e̲c̲i̲d̲e̲_̲e̲q̲_̲t̲r̲u̲e̲_̲e̲q̲,̲
+  ̲ ̲ ̲ ̲ ̲L̲i̲s̲t̲.̲n̲o̲t̲_̲m̲e̲m̲_̲n̲i̲l̲,̲ ̲f̲a̲l̲s̲e̲_̲i̲m̲p̲l̲i̲e̲s̲,̲ ̲i̲m̲p̲l̲i̲e̲s̲_̲t̲r̲u̲e̲,̲ ̲L̲i̲s̲t̲.̲f̲o̲r̲a̲l̲l̲_̲m̲e̲m̲_̲m̲a̲p̲,̲ ̲L̲i̲s̲t̲.̲m̲e̲m̲_̲r̲a̲n̲g̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲g̲a̲t̲e̲S̲e̲m̲a̲n̲t̲i̲c̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:106:40: warning: This simp argument is unused:
+  List.forall_mem_map
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵s̵t̵.̵m̵e̵m̵_̵a̵p̵p̵e̵n̵d̵,̵f̵o̵r̵a̵l̵l̵_̵o̵r̵_̵l̵e̵f̵t̵,̵L̵i̵s̵t̵.̵f̵o̵r̵a̵l̵l̵_̵m̵e̵m̵_̵c̵o̵n̵s̵,̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵t̵r̵u̵e̵_̵e̵q̵,̵L̵i̵s̵t̵.̵n̵o̵t̵_̵m̵e̵m̵_̵n̵i̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵f̵a̵l̵s̵e̵_̵i̵m̵p̵l̵i̵e̵s̵,̵i̵m̵p̵l̵i̵e̵s̵_̵t̵r̵u̵e̵,̵a̵n̵d̵_̵t̵r̵u̵e̵,̵L̵i̵s̵t̵.̵f̵o̵r̵a̵l̵l̵_̵m̵e̵m̵_̵m̵a̵p̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵r̵a̵n̵g̵e̵,̵g̵a̵t̵e̵S̵e̵m̵a̵n̵t̵i̵c̵s̵]̵[̲L̲i̲s̲t̲.̲m̲e̲m̲_̲a̲p̲p̲e̲n̲d̲,̲ ̲f̲o̲r̲a̲l̲l̲_̲o̲r̲_̲l̲e̲f̲t̲,̲ ̲L̲i̲s̲t̲.̲f̲o̲r̲a̲l̲l̲_̲m̲e̲m̲_̲c̲o̲n̲s̲,̲ ̲d̲e̲c̲i̲d̲e̲_̲e̲q̲_̲t̲r̲u̲e̲_̲e̲q̲,̲
+  ̲ ̲ ̲ ̲ ̲L̲i̲s̲t̲.̲n̲o̲t̲_̲m̲e̲m̲_̲n̲i̲l̲,̲ ̲f̲a̲l̲s̲e̲_̲i̲m̲p̲l̲i̲e̲s̲,̲ ̲i̲m̲p̲l̲i̲e̲s̲_̲t̲r̲u̲e̲,̲ ̲a̲n̲d̲_̲t̲r̲u̲e̲,̲ ̲L̲i̲s̲t̲.̲m̲e̲m̲_̲r̲a̲n̲g̲e̲,̲ ̲g̲a̲t̲e̲S̲e̲m̲a̲n̲t̲i̲c̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:106:60: warning: This simp argument is unused:
+  List.mem_range
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵s̵t̵.̵m̵e̵m̵_̵a̵p̵p̵e̵n̵d̵,̵f̵o̵r̵a̵l̵l̵_̵o̵r̵_̵l̵e̵f̵t̵,̵L̵i̵s̵t̵.̵f̵o̵r̵a̵l̵l̵_̵m̵e̵m̵_̵c̵o̵n̵s̵,̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵t̵r̵u̵e̵_̵e̵q̵,̵L̵i̵s̵t̵.̵n̵o̵t̵_̵m̵e̵m̵_̵n̵i̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵f̵a̵l̵s̵e̵_̵i̵m̵p̵l̵i̵e̵s̵,̵i̵m̵p̵l̵i̵e̵s̵_̵t̵r̵u̵e̵,̵a̵n̵d̵_̵t̵r̵u̵e̵,̵L̵i̵s̵t̵.̵f̵o̵r̵a̵l̵l̵_̵m̵e̵m̵_̵m̵a̵p̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵r̵a̵n̵g̵e̵,̵g̵a̵t̵e̵S̵e̵m̵a̵n̵t̵i̵c̵s̵]̵[̲L̲i̲s̲t̲.̲m̲e̲m̲_̲a̲p̲p̲e̲n̲d̲,̲ ̲f̲o̲r̲a̲l̲l̲_̲o̲r̲_̲l̲e̲f̲t̲,̲ ̲L̲i̲s̲t̲.̲f̲o̲r̲a̲l̲l̲_̲m̲e̲m̲_̲c̲o̲n̲s̲,̲ ̲d̲e̲c̲i̲d̲e̲_̲e̲q̲_̲t̲r̲u̲e̲_̲e̲q̲,̲
+  ̲ ̲ ̲ ̲ ̲L̲i̲s̲t̲.̲n̲o̲t̲_̲m̲e̲m̲_̲n̲i̲l̲,̲ ̲f̲a̲l̲s̲e̲_̲i̲m̲p̲l̲i̲e̲s̲,̲ ̲i̲m̲p̲l̲i̲e̲s̲_̲t̲r̲u̲e̲,̲ ̲a̲n̲d̲_̲t̲r̲u̲e̲,̲ ̲L̲i̲s̲t̲.̲f̲o̲r̲a̲l̲l̲_̲m̲e̲m̲_̲m̲a̲p̲,̲ ̲g̲a̲t̲e̲S̲e̲m̲a̲n̲t̲i̲c̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean:106:75: warning: This simp argument is unused:
+  gateSemantics
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵s̵t̵.̵m̵e̵m̵_̵a̵p̵p̵e̵n̵d̵,̵f̵o̵r̵a̵l̵l̵_̵o̵r̵_̵l̵e̵f̵t̵,̵L̵i̵s̵t̵.̵f̵o̵r̵a̵l̵l̵_̵m̵e̵m̵_̵c̵o̵n̵s̵,̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵t̵r̵u̵e̵_̵e̵q̵,̵L̵i̵s̵t̵.̵n̵o̵t̵_̵m̵e̵m̵_̵n̵i̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵f̵a̵l̵s̵e̵_̵i̵m̵p̵l̵i̵e̵s̵,̵i̵m̵p̵l̵i̵e̵s̵_̵t̵r̵u̵e̵,̵a̵n̵d̵_̵t̵r̵u̵e̵,̵L̵i̵s̵t̵.̵f̵o̵r̵a̵l̵l̵_̵m̵e̵m̵_̵m̵a̵p̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵r̵a̵n̵g̵e̵,̵g̵a̵t̵e̵S̵e̵m̵a̵n̵t̵i̵c̵s̵]̵[̲L̲i̲s̲t̲.̲m̲e̲m̲_̲a̲p̲p̲e̲n̲d̲,̲ ̲f̲o̲r̲a̲l̲l̲_̲o̲r̲_̲l̲e̲f̲t̲,̲ ̲L̲i̲s̲t̲.̲f̲o̲r̲a̲l̲l̲_̲m̲e̲m̲_̲c̲o̲n̲s̲,̲ ̲d̲e̲c̲i̲d̲e̲_̲e̲q̲_̲t̲r̲u̲e̲_̲e̲q̲,̲
+  ̲ ̲ ̲ ̲ ̲L̲i̲s̲t̲.̲n̲o̲t̲_̲m̲e̲m̲_̲n̲i̲l̲,̲ ̲f̲a̲l̲s̲e̲_̲i̲m̲p̲l̲i̲e̲s̲,̲ ̲i̲m̲p̲l̲i̲e̲s̲_̲t̲r̲u̲e̲,̲ ̲a̲n̲d̲_̲t̲r̲u̲e̲,̲ ̲L̲i̲s̲t̲.̲f̲o̲r̲a̲l̲l̲_̲m̲e̲m̲_̲m̲a̲p̲,̲ ̲L̲i̲s̲t̲.̲m̲e̲m̲_̲r̲a̲n̲g̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

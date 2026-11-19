@@ -81,7 +81,7 @@ private abbrev Loaded := P × S
 private abbrev HeadLoaded := Loaded × Nat
 private abbrev WithScalar := HeadLoaded × Nat
 
-private def finishParams (f : Nat → Nat) (q : WithScalar) : Option ParameterCode :=
+private noncomputable def finishParams (f : Nat → Nat) (q : WithScalar) : Option ParameterCode :=
   (UnitHeadCode.positiveCode q.1.2).map fun a =>
     let b := encodedClosedHead a
     (b,shiftCode b q.1.1.1.2.2,encodedFiniteValue (CurrentOrdinalEvaluation.evaluate f [] (UnitHeadCode.unitCode q.2)))
@@ -100,7 +100,7 @@ private theorem finishProgram (f : Nat → Nat) (hc : Computable f) (hf : FullAd
     (scalarCodeProgram f hc hf).comp (Computable.snd.comp Computable.fst)
   exact Computable.option_map a'.to_comp (b.to_comp.pair (sk.to_comp.pair z)).to₂
 
-private def fromVector (f : Nat → Nat) (q : Loaded) : Option ParameterCode :=
+private noncomputable def fromVector (f : Nat → Nat) (q : Loaded) : Option ParameterCode :=
   q.2[1]?.bind fun h => q.2[0]?.bind fun z => finishParams f ((q,h),z)
 
 private theorem vectorProgram (f : Nat → Nat) (hc : Computable f) (hf : FullAddition.Targets.SourceGrowth f) :
@@ -125,7 +125,7 @@ private theorem parameterProgram (p : Policy) (hp : PolicyShape.Effective p) (f 
   apply program.of_eq
   intro q
   unfold parameterCode fromVector finishParams
-  simp only [Option.map_eq_bind,bind,Option.bind_some,pure]
+  simp only [Option.map_eq_bind,Function.comp_def,bind,pure]
 
 theorem valueProgram (f : Nat → Nat) (hc : Computable f) (hf : FullAddition.Targets.SourceGrowth f) :
     Computable (fun q : Nat×Nat => valueCode f q.1 q.2) := by

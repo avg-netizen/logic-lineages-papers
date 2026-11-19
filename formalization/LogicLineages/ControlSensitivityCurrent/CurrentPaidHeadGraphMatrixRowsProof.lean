@@ -50,10 +50,11 @@ private theorem atomicTrace {Γ Δ : List Ty} (r : Renaming Γ Δ) (off : Nat) (
   rw [ha,hb]
   have hp := termPort u t B.2.1 ht
   rw [hu] at hp
-  simp only [encodeInput,InputCompiler.prependStep,hout,hp,hv,← rowsBefore,rowsCompose]
+  simp only [encodeInput,InputCompiler.prependStep,hout,hp,hv,rowsBefore,noneStep,
+    List.append_assoc,List.cons_append,List.nil_append] <;> rfl
 
 private theorem literalTrace (Γ : List Ty) (truth : Bool) :
-    BooleanTrace ([noneStep (if truth then 0 else 2) 0 0],0,1)
+    BooleanTrace (Γ:=Γ) ([noneStep (if truth then 0 else 2) 0 0],0,1)
       (fun m k => .boolean (if truth then .eq .zero .zero else .lt .zero .zero)
         (k (fun x => x) Fin.succ 0)) := by
   intro m
@@ -73,10 +74,14 @@ private theorem unaryTrace {Γ Δ} (r : Renaming Γ Δ) (a : SourceAST.Formula �
   · intro i
     change (e i).val+1=i.val+(A.2.2+1)
     rw [he]
+    dsimp only [A]
     omega
   · intro k
-    rw [SourceAST.Formula.emit,hcode]
-    simp only [encodeInput,encodeInputRow,hroot,InputCompiler.prependStep,← rowsBefore,rowsCompose]
+    change encodeInput (a.emit r (fun s e root =>
+      .boolean (.neg root) (k s (fun i => (e i).succ) 0))) = _
+    rw [hcode]
+    simp only [encodeInput,encodeInputRow,hroot,InputCompiler.prependStep,rowsBefore,noneStep,
+      List.append_assoc,List.cons_append,List.nil_append]
 
 private theorem binaryTrace {Γ Δ} (r : Renaming Γ Δ) (a b : SourceAST.Formula Γ)
     (off : Nat) (hr : PrefixAt r off) (isAnd : Bool)
@@ -98,13 +103,15 @@ private theorem binaryTrace {Γ Δ} (r : Renaming Γ Δ) (a b : SourceAST.Formul
   · intro i
     change (k (e i)).val+1=i.val+(A.2.2+B.2.2+1)
     rw [hk,he]
+    dsimp only [A,B]
     omega
   · intro cont
     have hh : (k left).val=B.2.2 := by rw [hk,hl,Nat.zero_add]
     cases isAnd <;> simp only [Bool.false_eq_true,↓reduceIte,SourceAST.Formula.emit]
     all_goals
       rw [hca,hcb]
-      simp only [encodeInput,encodeInputRow,hh,hright,InputCompiler.prependStep,← rowsBefore,rowsCompose]
+      simp only [encodeInput,encodeInputRow,hh,hright,InputCompiler.prependStep,rowsBefore,noneStep,
+        List.append_assoc,List.cons_append,List.nil_append] <;> rfl
 
 theorem formulaTrace {Γ Δ} (r : Renaming Γ Δ) (a : SourceAST.Formula Γ) (off : Nat)
     (hr : PrefixAt r off) : BooleanTrace (emitFormula off (formula a)) (fun _ k => a.emit r k) := by

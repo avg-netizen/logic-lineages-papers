@@ -1454,3 +1454,32 @@ and translates the existing canonical-port derivations into fixed-point bits.
   171current/59 merged pins/six audits, supplemental errors0.
   READY supporting first concrete Nat witness checks, not arithmetic
   formulas, actual internal accessibility, or ID1.
+
+## 2026-11-19 — one external numeric scalar universe across actual finite contexts
+
+- Accepted458 original typed numeric step/path, class/positive Rs
+  witnesses and exact Primary after independent171/59pins/6 audits.
+- All-context address comparator from literal nearest-first Γ, actual
+  result Ty and successful least original class code; fixed S/K and
+  original independent admitted quotient fibers. Actual positive path
+  explicitly retains same Γ/type and both original admitted domains.
+  No arbitrary functional C, global finite search, multiset/operator,
+  object-level arithmetic or ID1.
+- Target-only1530 ordinary direct ArithmeticFields import/unused open
+  error1795097658480653985-2; target-only1540 ordinary mixed existential
+  parser error1795097824140206251-2. Both exact failed source/freeze/
+  diagnostics preserved; independently reviewed and inverse-verified
+  narrow corrections, only each affected source pin refreshed.
+  Freeze5e9ea707...,32 pins. Target-only1546 clean132/132
+  receipt1795098072740232338-2, independently checked before proofs.
+- Exact1556 ordinary post-simp True vs literal rfl in path proof,
+  1795098297623337630-2; archive and independently narrow proof-only
+  correction, inverse-verified. Frozen comparators unchanged.
+- ALL-CONTEXT-EXACT-1565 clean178/178
+  receipt1795098448845134560-2, peak519976 inherited/502024 new,
+  root492484KiB unchanged caps. Native reaped/locks free. Five
+  standard-only audits (address codec propext/Quot.sound).
+  LANE-A-NUMBERED-WINDOW-ARITHMETIC-ALL-CONTEXT-CLOUD-EVIDENCE.json
+  SHA63f2415dd2c0a87c23bd9dc0ab882d9fca407096e94ead56a963975c092f49ff,
+  178 current/61 pins/5 exact audits, supplemental errors0. READY
+  support only.

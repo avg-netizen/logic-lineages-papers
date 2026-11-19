@@ -1,0 +1,55 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumericProof.lean
+@@ -17,7 +17,7 @@
+   | cons a xs ih =>
+     rw [List.foldr_cons,Bool.or_eq_true,ih]
+     simp only [List.mem_cons,exists_eq_or_imp]
+-    tauto
++    exact or_assoc.symm
+ 
+ /-- Each finite numerical gate uses an actual f(k) for k<4 or the exact S
+ call f(x+4). The high-branch side constraint is separate and local. -/
+@@ -31,20 +31,23 @@
+       decide (w b=(smallValues f).getD j 0))).foldr (· || ·)
+       (decide (w a=w x+4) && decide (w b=f (w x+4))) = true ↔ _
+   rw [orFold]
+-  simp only [Bool.and_eq_true,decide_eq_true_eq,List.mem_map]
+   constructor
+-  · rintro (⟨b,⟨j,hj,rfl⟩,e,l⟩|h)
+-    · have hj' := List.mem_range.mp hj
++  · rintro (⟨q,hq,htrue⟩|h)
++    · obtain ⟨j,hj,rfl⟩ := List.mem_map.mp hq
++      have hj' := List.mem_range.mp hj
+       have hget : (smallValues f).getD j 0=f j := by
+         simp [smallValues,List.getD_eq_getElem?_getD,List.getElem?_map,List.getElem?_range,hj']
+-      exact Or.inl ⟨j,hj',e,l.trans hget⟩
+-    · exact Or.inr h
++      have hpair : w a=j ∧ w b=(smallValues f).getD j 0 := by
++        simpa only [Bool.and_eq_true,decide_eq_true_eq] using htrue
++      exact Or.inl ⟨j,hj',hpair.1,hpair.2.trans hget⟩
++    · exact Or.inr (by simpa only [Bool.and_eq_true,decide_eq_true_eq] using h)
+   · rintro (⟨j,hj,e,l⟩|h)
+     · have hget : (smallValues f).getD j 0=f j := by
+         simp [smallValues,List.getD_eq_getElem?_getD,List.getElem?_map,List.getElem?_range,hj]
+-      exact Or.inl ⟨(decide (w a=j) && decide (w b=(smallValues f).getD j 0)),
+-        ⟨j,List.mem_range.mpr hj,rfl⟩,e,l.trans hget.symm⟩
+-    · exact Or.inr h
++      refine Or.inl ⟨(decide (w a=j) && decide (w b=(smallValues f).getD j 0)),
++        List.mem_map.mpr ⟨j,List.mem_range.mpr hj,rfl⟩,?_⟩
++      simpa only [Bool.and_eq_true,decide_eq_true_eq] using And.intro e (l.trans hget.symm)
++    · exact Or.inr (by simpa only [Bool.and_eq_true,decide_eq_true_eq] using h)
+ 
+ theorem gateFunctional (f : Nat→Nat) {u v a : Nat} (h : GateSpec f u v a) : v=f u := by
+   rcases h with ⟨j,_,rfl,rfl⟩ | ⟨rfl,rfl⟩ <;> rfl
+@@ -102,8 +105,9 @@
+     (List.range δ).map (fun j => fGate (evalLayout f w) (smallValues f) (uSlot wr j)
+       (uSlot wr (j+1)) (argSlot wr δ j))).foldr (· && ·) true) = true ↔ _
+   rw [andFold]
+-  simp only [List.mem_append,forall_or_left,List.forall_mem_cons,decide_eq_true_eq,List.not_mem_nil,
+-    false_implies,implies_true,and_true,List.forall_mem_map,List.mem_range,gateSemantics]
++  simp only [List.forall_mem_append,List.forall_mem_cons,decide_eq_true_eq,List.not_mem_nil,
++    false_implies,implies_true,forall_const,and_true,List.forall_mem_map,List.mem_range,gateSemantics,
++    and_assoc]
+ 
+ private theorem iterateStep (f : Nat→Nat) (n t : Nat) : (f^[n+1]) t=f ((f^[n]) t) := by
+   rw [Function.iterate_succ_apply']

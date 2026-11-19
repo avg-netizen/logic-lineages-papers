@@ -1,0 +1,161 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:40:58: error: unsolved goals
+Γ Δ : List Ty
+r : Renaming Γ Δ
+off : ℕ
+hr : PrefixAt (fun {σ} => r) off
+a b : SourceAST.Term Γ
+tag : ℕ
+node : {Ξ : List Ty} → {n : ℕ} → Port Ξ → Port Ξ → InputNormalization.Node Ξ n
+hout :
+  ∀ {Ξ : List Ty} {n : ℕ} (u v : Port Ξ),
+    encodeInputRow (node u v) = (tag, PrimitiveGate.encodePort u, PrimitiveGate.encodePort v)
+A : Emit := emitTerm off (term a)
+B : Emit := emitTerm (off + A.2.1) (term b)
+Ξ : List Ty
+s : Renaming Δ Ξ
+u : Port Ξ
+hs : PrefixAt (fun {σ} => s) (emitTerm off (term a)).2.1
+hu : PrimitiveGate.encodePort u = (emitTerm off (term a)).2.2
+ha :
+  ∀ (m : ℕ) (k : SourceAST.Continuation Δ m),
+    encodeInput (a.emit (fun {σ} {σ} => r) fun {Δ} => k) =
+      rowsBefore (emitTerm off (term a)).1 (encodeInput (k (fun {σ} => s) u))
+Ω : List Ty
+t : Renaming Ξ Ω
+v : Port Ω
+ht : PrefixAt (fun {σ} => t) (emitTerm (off + A.2.1) (term b)).2.1
+hv : PrimitiveGate.encodePort v = (emitTerm (off + A.2.1) (term b)).2.2
+hb :
+  ∀ (m : ℕ) (k : SourceAST.Continuation Ξ m),
+    encodeInput (b.emit (fun {σ} {σ} x => s (r x)) fun {Δ} => k) =
+      rowsBefore (emitTerm (off + A.2.1) (term b)).1 (encodeInput (k (fun {σ} => t) v))
+m : ℕ
+k : SourceAST.BooleanContinuation Δ m
+hp : PrimitiveGate.encodePort (ExistentialPlan.portRename (fun {σ} => t) u) = liftPort B.2.1 (emitTerm off (term a)).2.2
+⊢ ((emitTerm off (term a)).1 ++
+        ((emitTerm (off + A.2.1) (term b)).1 ++
+          ((tag, liftPort B.2.1 (emitTerm off (term a)).2.2, (emitTerm (off + A.2.1) (term b)).2.2), none) ::
+            (encodeInput (k (fun {σ} x => t (s x)) Fin.succ 0)).1),
+      (encodeInput (k (fun {σ} x => t (s x)) Fin.succ 0)).2) =
+    ((emitTerm off (term a)).1 ++
+        ((emitTerm (off + (emitTerm off (term a)).2.1) (term b)).1 ++
+          ((tag, liftPort (emitTerm (off + (emitTerm off (term a)).2.1) (term b)).2.1 (emitTerm off (term a)).2.2,
+                (emitTerm (off + (emitTerm off (term a)).2.1) (term b)).2.2),
+              none) ::
+            (encodeInput (k (fun {σ} x => t (s x)) Fin.succ 0)).1),
+      (encodeInput (k (fun {σ} x => t (s x)) Fin.succ 0)).2)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:58:11: warning: Variable name `m` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:108:2: error: unsolved goals
+case refine_2.false
+Γ Δ : List Ty
+r : Renaming Γ Δ
+a b : SourceAST.Formula Γ
+off : ℕ
+hr : PrefixAt (fun {σ} => r) off
+ha : BooleanTrace (emitFormula off (formula a)) fun x k => a.emit (fun {σ} => r) fun {Δ} {n} => k
+hb :
+  ∀ (Ξ : List Ty) (s : Renaming Γ Ξ) (o : ℕ),
+    PrefixAt (fun {σ} => s) o →
+      BooleanTrace (emitFormula o (formula b)) fun x k => b.emit (fun {σ} => s) fun {Δ} {n} => k
+A : Emit := emitFormula off (formula a)
+B : Emit := emitFormula (off + A.2.1) (formula b)
+m : ℕ
+Ξ : List Ty
+s : Renaming Δ Ξ
+n : ℕ
+e : Fin m → Fin n
+left : Fin n
+hs : PrefixAt (fun {σ} => s) (emitFormula off (formula a)).2.1
+he : ∀ (i : Fin m), ↑(e i) = ↑i + (emitFormula off (formula a)).2.2
+hl : ↑left = 0
+hca :
+  ∀ (k : SourceAST.BooleanContinuation Δ m),
+    encodeInput ((fun x k => a.emit (fun {σ} => r) fun {Δ} {n} => k) m fun {Δ} {n} => k) =
+      rowsBefore (emitFormula off (formula a)).1 (encodeInput (k (fun {σ} => s) e left))
+Ω : List Ty
+t : Renaming Ξ Ω
+j : ℕ
+k : Fin n → Fin j
+right : Fin j
+ht : PrefixAt (fun {σ} => t) (emitFormula (off + A.2.1) (formula b)).2.1
+hk : ∀ (i : Fin n), ↑(k i) = ↑i + (emitFormula (off + A.2.1) (formula b)).2.2
+hright : ↑right = 0
+hcb :
+  ∀ (k_1 : SourceAST.BooleanContinuation Ξ n),
+    encodeInput ((fun x k => b.emit (fun {σ} x => s (r x)) fun {Δ} {n} => k) n fun {Δ} {n} => k_1) =
+      rowsBefore (emitFormula (off + A.2.1) (formula b)).1 (encodeInput (k_1 (fun {σ} => t) k right))
+cont : SourceAST.BooleanContinuation Δ m
+hh : ↑(k left) = B.2.2
+⊢ ((emitFormula off (formula a)).1 ++
+        ((emitFormula (off + A.2.1) (formula b)).1 ++
+          ((5, B.2.2, 0), none) :: (encodeInput (cont (fun {σ} x => t (s x)) (fun i => (k (e i)).succ) 0)).1),
+      (encodeInput (cont (fun {σ} x => t (s x)) (fun i => (k (e i)).succ) 0)).2) =
+    ((emitFormula off (formula a)).1 ++
+        ((emitFormula (off + (emitFormula off (formula a)).2.1) (formula b)).1 ++
+          ((5, (emitFormula (off + (emitFormula off (formula a)).2.1) (formula b)).2.2, 0), none) ::
+            (encodeInput (cont (fun {σ} x => t (s x)) (fun i => (k (e i)).succ) 0)).1),
+      (encodeInput (cont (fun {σ} x => t (s x)) (fun i => (k (e i)).succ) 0)).2)
+
+case refine_2.true
+Γ Δ : List Ty
+r : Renaming Γ Δ
+a b : SourceAST.Formula Γ
+off : ℕ
+hr : PrefixAt (fun {σ} => r) off
+ha : BooleanTrace (emitFormula off (formula a)) fun x k => a.emit (fun {σ} => r) fun {Δ} {n} => k
+hb :
+  ∀ (Ξ : List Ty) (s : Renaming Γ Ξ) (o : ℕ),
+    PrefixAt (fun {σ} => s) o →
+      BooleanTrace (emitFormula o (formula b)) fun x k => b.emit (fun {σ} => s) fun {Δ} {n} => k
+A : Emit := emitFormula off (formula a)
+B : Emit := emitFormula (off + A.2.1) (formula b)
+m : ℕ
+Ξ : List Ty
+s : Renaming Δ Ξ
+n : ℕ
+e : Fin m → Fin n
+left : Fin n
+hs : PrefixAt (fun {σ} => s) (emitFormula off (formula a)).2.1
+he : ∀ (i : Fin m), ↑(e i) = ↑i + (emitFormula off (formula a)).2.2
+hl : ↑left = 0
+hca :
+  ∀ (k : SourceAST.BooleanContinuation Δ m),
+    encodeInput ((fun x k => a.emit (fun {σ} => r) fun {Δ} {n} => k) m fun {Δ} {n} => k) =
+      rowsBefore (emitFormula off (formula a)).1 (encodeInput (k (fun {σ} => s) e left))
+Ω : List Ty
+t : Renaming Ξ Ω
+j : ℕ
+k : Fin n → Fin j
+right : Fin j
+ht : PrefixAt (fun {σ} => t) (emitFormula (off + A.2.1) (formula b)).2.1
+hk : ∀ (i : Fin n), ↑(k i) = ↑i + (emitFormula (off + A.2.1) (formula b)).2.2
+hright : ↑right = 0
+hcb :
+  ∀ (k_1 : SourceAST.BooleanContinuation Ξ n),
+    encodeInput ((fun x k => b.emit (fun {σ} x => s (r x)) fun {Δ} {n} => k) n fun {Δ} {n} => k_1) =
+      rowsBefore (emitFormula (off + A.2.1) (formula b)).1 (encodeInput (k_1 (fun {σ} => t) k right))
+cont : SourceAST.BooleanContinuation Δ m
+hh : ↑(k left) = B.2.2
+⊢ ((emitFormula off (formula a)).1 ++
+        ((emitFormula (off + A.2.1) (formula b)).1 ++
+          ((4, B.2.2, 0), none) :: (encodeInput (cont (fun {σ} x => t (s x)) (fun i => (k (e i)).succ) 0)).1),
+      (encodeInput (cont (fun {σ} x => t (s x)) (fun i => (k (e i)).succ) 0)).2) =
+    ((emitFormula off (formula a)).1 ++
+        ((emitFormula (off + (emitFormula off (formula a)).2.1) (formula b)).1 ++
+          ((4, (emitFormula (off + (emitFormula off (formula a)).2.1) (formula b)).2.2, 0), none) ::
+            (encodeInput (cont (fun {σ} x => t (s x)) (fun i => (k (e i)).succ) 0)).1),
+      (encodeInput (cont (fun {σ} x => t (s x)) (fun i => (k (e i)).succ) 0)).2)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:142:6: warning: This simp argument is unused:
+  reduceCtorEq
+
+Hint: Omit it from the simp argument list.
+  simp only [both, ̲either, ̲atom, ̲tagMod _ 6 (by decide), ̲tagMod _ 7 (by decide),
+        tagDiv _ 6 (by decide), ̲tagDiv _ 7 (by decide), ̲Nat.unpair_pair, ̲Nat.reduceLeDiff,
+  ̵  ̵ ̵ ̵ ̵ ̵r̵e̵d̵u̵c̵e̵C̵t̵o̵r̵E̵q̵,̵↓reduceIte,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲Nat.reduceSub]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

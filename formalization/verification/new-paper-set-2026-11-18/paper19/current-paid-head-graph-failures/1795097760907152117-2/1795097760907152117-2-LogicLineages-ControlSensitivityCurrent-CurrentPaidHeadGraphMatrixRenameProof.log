@@ -1,0 +1,326 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:13:78: error: unsolved goals
+d : Code
+⊢ (Denumerable.ofNat (List ℕ) (Nat.unpair (Encodable.encode d)).1,
+      Denumerable.ofNat (List Node) (Nat.unpair (Nat.unpair (Encodable.encode d)).2).1,
+      Nat.unpair (Nat.unpair (Nat.unpair (Encodable.encode d)).2).2) =
+    d
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:14:16: warning: This simp argument is unused:
+  Encodable.encodek
+
+Hint: Omit it from the simp argument list.
+  simp [payload,̵E̵n̵c̵o̵d̵a̵b̵l̵e̵.̵e̵n̵c̵o̵d̵e̵k̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:26:14: error: unsolved goals
+case literal
+Γ Ξ : List Ty
+r : Renaming Γ Ξ
+n : ℕ
+⊢ (if h : 1 = 2 ∨ 1 = 4 then
+      if 1 = 2 then
+        add (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (Nat.unpair n).1)
+          (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (Nat.unpair n).2)
+      else
+        unary (payload (Nat.unpair n).1)
+          (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (Nat.unpair n).2)
+    else
+      if 1 = 3 then
+        observe
+          (Operations.renameCode (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (payload n))
+      else 8 * n + 1) =
+    8 * n + 1
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:30:18: error: unsolved goals
+case add
+Γ Ξ : List Ty
+r : Renaming Γ Ξ
+a b : SourceAST.Term Γ
+ha :
+  renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (term a) =
+    term (CurrentUnitElimination.renameTerm (fun {σ} => r) a)
+hb :
+  renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (term b) =
+    term (CurrentUnitElimination.renameTerm (fun {σ} => r) b)
+⊢ (if h : True then
+      8 *
+          Nat.pair (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (term a))
+            (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (term b)) +
+        2
+    else
+      if 2 = 3 then
+        observe
+          (Operations.renameCode (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+            (payload (Nat.pair (term a) (term b))))
+      else lit (Nat.pair (term a) (term b))) =
+    8 *
+        Nat.pair (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (term a))
+          (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (term b)) +
+      2
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:35:17: error: unsolved goals
+case unary
+Γ Ξ : List Ty
+r : Renaming Γ Ξ
+h : GroundEquivalence.Input [] (Ty.ground.arrow Ty.ground)
+a : SourceAST.Term Γ
+ih :
+  renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (term a) =
+    term (CurrentUnitElimination.renameTerm (fun {σ} => r) a)
+⊢ (if h_1 : 4 = 2 ∨ True then
+      if 4 = 2 then
+        add
+          (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+            (Encodable.encode (encode ⟨[], ⟨Ty.ground.arrow Ty.ground, h⟩⟩)))
+          (term (CurrentUnitElimination.renameTerm (fun {σ} => r) a))
+      else
+        8 *
+            Nat.pair (Encodable.encode (encode ⟨[], ⟨Ty.ground.arrow Ty.ground, h⟩⟩))
+              (term (CurrentUnitElimination.renameTerm (fun {σ} => r) a)) +
+          4
+    else
+      if 4 = 3 then
+        observe
+          (Operations.renameCode (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+            (payload (Nat.pair (Encodable.encode (encode ⟨[], ⟨Ty.ground.arrow Ty.ground, h⟩⟩)) (term a))))
+      else lit (Nat.pair (Encodable.encode (encode ⟨[], ⟨Ty.ground.arrow Ty.ground, h⟩⟩)) (term a))) =
+    8 *
+        Nat.pair (Encodable.encode (encode ⟨[], ⟨Ty.ground.arrow Ty.ground, h⟩⟩))
+          (term (CurrentUnitElimination.renameTerm (fun {σ} => r) a)) +
+      4
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:40:18: error: unsolved goals
+case observation
+Γ Ξ : List Ty
+r : Renaming Γ Ξ
+d : GroundEquivalence.Input Γ Ty.ground
+⊢ (if h : 3 = 2 ∨ 3 = 4 then
+      if 3 = 2 then
+        add
+          (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+            (Nat.unpair (Encodable.encode (encode ⟨Γ, ⟨Ty.ground, d⟩⟩))).1)
+          (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+            (Nat.unpair (Encodable.encode (encode ⟨Γ, ⟨Ty.ground, d⟩⟩))).2)
+      else
+        unary (payload (Nat.unpair (Encodable.encode (encode ⟨Γ, ⟨Ty.ground, d⟩⟩))).1)
+          (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+            (Nat.unpair (Encodable.encode (encode ⟨Γ, ⟨Ty.ground, d⟩⟩))).2)
+    else
+      8 *
+          Encodable.encode
+            (Operations.renameCode (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+              (encode ⟨Γ, ⟨Ty.ground, d⟩⟩)) +
+        3) =
+    8 *
+        Encodable.encode
+          (Operations.renameCode (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+            (encode ⟨Γ, ⟨Ty.ground, d⟩⟩)) +
+      3
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:29:6: warning: This simp argument is unused:
+  false_or
+
+Hint: Omit it from the simp argument list.
+  simp only [lit, ̲tagMod _ 1 (by decide), ̲tagDiv _ 1 (by decide), ̲reduceCtorEq,
+  ̵  ̵ ̵ ̵ ̵ ̵f̵a̵l̵s̵e̵_̵o̵r̵,̵↓reduceIte,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲CurrentUnitElimination.renameTerm, ̲term]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:38:19: warning: This simp argument is unused:
+  false_or
+
+Hint: Omit it from the simp argument list.
+  simp only [unary, ̲tagMod _ 4 (by decide), ̲tagDiv _ 4 (by decide), ̲Nat.unpair_pair,
+  ̵  ̵ ̵ ̵ ̵ ̵reduceCtorEq,f̵a̵l̵s̵e̵_̵o̵r̵,̵
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲↓reduceIte, ̲literalPayload, ̲CurrentUnitElimination.renameTerm, ̲term]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:43:6: warning: This simp argument is unused:
+  or_self
+
+Hint: Omit it from the simp argument list.
+  simp only [observe, ̲tagMod _ 3 (by decide), ̲tagDiv _ 3 (by decide), ̲reduceCtorEq,
+  ̵  ̵ ̵ ̵ ̵ ̵o̵r̵_̵s̵e̵l̵f̵,̵↓reduceIte,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲literalPayload, ̲CurrentUnitElimination.renameTerm, ̲term,
+  ̵  ̵ ̵ ̵ ̵ ̵Operations.rename_input]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:50:23: error: Tactic `rfl` failed: The left-hand side
+  renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+    (formula SourceAST.Formula.truth)
+is not definitionally equal to the right-hand side
+  formula (CurrentUnitElimination.renameFormula (fun {σ} => r) SourceAST.Formula.truth)
+
+case truth
+Γ Ξ : List Ty
+r : Renaming Γ Ξ
+⊢ renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+      (formula SourceAST.Formula.truth) =
+    formula (CurrentUnitElimination.renameFormula (fun {σ} => r) SourceAST.Formula.truth)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:50:23: error: Tactic `rfl` failed: The left-hand side
+  renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+    (formula SourceAST.Formula.falsity)
+is not definitionally equal to the right-hand side
+  formula (CurrentUnitElimination.renameFormula (fun {σ} => r) SourceAST.Formula.falsity)
+
+case falsity
+Γ Ξ : List Ty
+r : Renaming Γ Ξ
+⊢ renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+      (formula SourceAST.Formula.falsity) =
+    formula (CurrentUnitElimination.renameFormula (fun {σ} => r) SourceAST.Formula.falsity)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:51:29: error: unsolved goals
+case eq
+Γ Ξ : List Ty
+r : Renaming Γ Ξ
+a b : SourceAST.Term Γ
+⊢ (if h : False then
+      if 2 = 5 then
+        neg
+          (renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+            (Nat.pair (term a) (term b)))
+      else
+        8 *
+            Nat.pair (renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (term a))
+              (renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (term b)) +
+          2
+    else
+      8 *
+          Nat.pair (term (CurrentUnitElimination.renameTerm (fun {σ} => r) a))
+            (term (CurrentUnitElimination.renameTerm (fun {σ} => r) b)) +
+        2) =
+    8 *
+        Nat.pair (term (CurrentUnitElimination.renameTerm (fun {σ} => r) a))
+          (term (CurrentUnitElimination.renameTerm (fun {σ} => r) b)) +
+      2
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:51:29: error: unsolved goals
+case le
+Γ Ξ : List Ty
+r : Renaming Γ Ξ
+a b : SourceAST.Term Γ
+⊢ (if h : False then
+      if 3 = 5 then
+        neg
+          (renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+            (Nat.pair (term a) (term b)))
+      else
+        8 *
+            Nat.pair (renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (term a))
+              (renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (term b)) +
+          3
+    else
+      8 *
+          Nat.pair (term (CurrentUnitElimination.renameTerm (fun {σ} => r) a))
+            (term (CurrentUnitElimination.renameTerm (fun {σ} => r) b)) +
+        3) =
+    8 *
+        Nat.pair (term (CurrentUnitElimination.renameTerm (fun {σ} => r) a))
+          (term (CurrentUnitElimination.renameTerm (fun {σ} => r) b)) +
+      3
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:51:29: error: unsolved goals
+case lt
+Γ Ξ : List Ty
+r : Renaming Γ Ξ
+a b : SourceAST.Term Γ
+⊢ (if h : False then
+      if 4 = 5 then
+        neg
+          (renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+            (Nat.pair (term a) (term b)))
+      else
+        8 *
+            Nat.pair (renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (term a))
+              (renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (term b)) +
+          4
+    else
+      8 *
+          Nat.pair (term (CurrentUnitElimination.renameTerm (fun {σ} => r) a))
+            (term (CurrentUnitElimination.renameTerm (fun {σ} => r) b)) +
+        4) =
+    8 *
+        Nat.pair (term (CurrentUnitElimination.renameTerm (fun {σ} => r) a))
+          (term (CurrentUnitElimination.renameTerm (fun {σ} => r) b)) +
+      4
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:56:13: error: unsolved goals
+case neg
+Γ Ξ : List Ty
+r : Renaming Γ Ξ
+a : SourceAST.Formula Γ
+ih :
+  renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (formula a) =
+    formula (CurrentUnitElimination.renameFormula (fun {σ} => r) a)
+⊢ (if h : True then 8 * formula (CurrentUnitElimination.renameFormula (fun {σ} => r) a) + 5
+    else
+      if 2 ≤ 5 then
+        atom 5
+          (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+            (Nat.unpair (formula a)).1)
+          (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+            (Nat.unpair (formula a)).2)
+      else 5) =
+    8 * formula (CurrentUnitElimination.renameFormula (fun {σ} => r) a) + 5
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:60:36: error: unsolved goals
+case conj
+Γ Ξ : List Ty
+r : Renaming Γ Ξ
+a b : SourceAST.Formula Γ
+ha :
+  renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (formula a) =
+    formula (CurrentUnitElimination.renameFormula (fun {σ} => r) a)
+hb :
+  renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (formula b) =
+    formula (CurrentUnitElimination.renameFormula (fun {σ} => r) b)
+⊢ (if h : True then
+      if 6 = 5 then
+        neg
+          (renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+            (Nat.pair (formula a) (formula b)))
+      else
+        8 *
+            Nat.pair (formula (CurrentUnitElimination.renameFormula (fun {σ} => r) a))
+              (formula (CurrentUnitElimination.renameFormula (fun {σ} => r) b)) +
+          6
+    else
+      8 *
+          Nat.pair (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (formula a))
+            (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (formula b)) +
+        6) =
+    8 *
+        Nat.pair (formula (CurrentUnitElimination.renameFormula (fun {σ} => r) a))
+          (formula (CurrentUnitElimination.renameFormula (fun {σ} => r) b)) +
+      6
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:60:36: error: unsolved goals
+case disj
+Γ Ξ : List Ty
+r : Renaming Γ Ξ
+a b : SourceAST.Formula Γ
+ha :
+  renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (formula a) =
+    formula (CurrentUnitElimination.renameFormula (fun {σ} => r) a)
+hb :
+  renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (formula b) =
+    formula (CurrentUnitElimination.renameFormula (fun {σ} => r) b)
+⊢ (if h : True then
+      if 7 = 5 then
+        neg
+          (renameFormula (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r)
+            (Nat.pair (formula a) (formula b)))
+      else
+        8 *
+            Nat.pair (formula (CurrentUnitElimination.renameFormula (fun {σ} => r) a))
+              (formula (CurrentUnitElimination.renameFormula (fun {σ} => r) b)) +
+          7
+    else
+      8 *
+          Nat.pair (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (formula a))
+            (renameTerm (List.map SyntaxCode.typeCode Ξ) (Operations.renamingCode fun {σ} => r) (formula b)) +
+        7) =
+    8 *
+        Nat.pair (formula (CurrentUnitElimination.renameFormula (fun {σ} => r) a))
+          (formula (CurrentUnitElimination.renameFormula (fun {σ} => r) b)) +
+      7
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProof.lean:64:6: warning: This simp argument is unused:
+  reduceCtorEq
+
+Hint: Omit it from the simp argument list.
+  simp only [both, ̲either, ̲atom, ̲tagMod _ 6 (by decide), ̲tagMod _ 7 (by decide),
+        tagDiv _ 6 (by decide), ̲tagDiv _ 7 (by decide), ̲Nat.unpair_pair, ̲Nat.reduceLeDiff,
+  ̵  ̵ ̵ ̵ ̵ ̵r̵e̵d̵u̵c̵e̵C̵t̵o̵r̵E̵q̵,̵↓reduceIte,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ha, ̲hb, ̲CurrentUnitElimination.renameFormula, ̲formula]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

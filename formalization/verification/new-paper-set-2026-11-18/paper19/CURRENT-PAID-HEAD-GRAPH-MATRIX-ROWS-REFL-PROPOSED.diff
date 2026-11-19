@@ -1,0 +1,20 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean
+@@ -51,7 +51,7 @@
+   have hp := termPort u t B.2.1 ht
+   rw [hu] at hp
+   simp only [encodeInput,InputCompiler.prependStep,hout,hp,hv,rowsBefore,noneStep,
+-    List.append_assoc,List.cons_append,List.nil_append]
++    List.append_assoc,List.cons_append,List.nil_append] <;> rfl
+ 
+ private theorem literalTrace (Γ : List Ty) (truth : Bool) :
+     BooleanTrace (Γ:=Γ) ([noneStep (if truth then 0 else 2) 0 0],0,1)
+@@ -111,7 +111,7 @@
+     all_goals
+       rw [hca,hcb]
+       simp only [encodeInput,encodeInputRow,hh,hright,InputCompiler.prependStep,rowsBefore,noneStep,
+-        List.append_assoc,List.cons_append,List.nil_append]
++        List.append_assoc,List.cons_append,List.nil_append] <;> rfl
+ 
+ theorem formulaTrace {Γ Δ} (r : Renaming Γ Δ) (a : SourceAST.Formula Γ) (off : Nat)
+     (hr : PrefixAt r off) : BooleanTrace (emitFormula off (formula a)) (fun _ k => a.emit r k) := by

@@ -1,0 +1,27 @@
+import LogicLineages.PersistentMarking.NumberedWindowArithmeticAllContextPathProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticAllContextChecks
+open NumberedWindowArithmeticAllContextTargets
+
+theorem exact_ClassAddressCodec : ExactClassAddressCodec :=
+  NumberedWindowArithmeticClassAddressProof.exactCodec
+
+theorem exact_CanonicalAddressBit : ExactCanonicalAddressBit :=
+  NumberedWindowArithmeticAllContextAdmittedProof.canonical
+
+theorem exact_AdmittedAddressBit : ExactAdmittedAddressBit :=
+  NumberedWindowArithmeticAllContextAdmittedProof.admitted
+
+theorem exact_AddressPositivePath : ExactAddressPositivePath :=
+  NumberedWindowArithmeticAllContextPathProof.positive
+
+theorem exact_AddressPathDomain : ActualAddressPathDomain :=
+  NumberedWindowArithmeticAllContextPathProof.domain
+
+#print axioms exact_ClassAddressCodec
+#print axioms exact_CanonicalAddressBit
+#print axioms exact_AdmittedAddressBit
+#print axioms exact_AddressPositivePath
+#print axioms exact_AddressPathDomain
+
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticAllContextChecks

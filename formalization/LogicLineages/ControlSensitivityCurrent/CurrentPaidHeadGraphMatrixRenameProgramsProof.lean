@@ -26,7 +26,8 @@ theorem payloadProgram : Primrec payload := Primrec.option_getD.comp Primrec.dec
 private abbrev R := List Nat × List Nat × Nat
 private abbrev P := R × List Nat
 
-def liftRenameChildren (children : Nat → List Nat) (q : R) : List R :=
+def liftRenameChildren (children : Nat → List Nat)
+    (q : List Nat × List Nat × Nat) : List (List Nat × List Nat × Nat) :=
   (children q.2.2).map (fun n => (q.1,q.2.1,n))
 
 private theorem liftProgram {children : Nat → List Nat} (h : Primrec children) :

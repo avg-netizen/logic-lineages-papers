@@ -1,0 +1,11 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowArithmeticAllContextPathProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowArithmeticAllContextPathProof.lean
+@@ -32,7 +32,7 @@
+       (exact_PositiveClassPathOnCodes S K Γ τ i j hk).mpr ⟨x,y,hx,hy,hxy⟩
+     refine ⟨c,?_⟩
+     simp only [addressRSBit,atCode hs,atCode hd,Bool.and_eq_true,decide_eq_true_eq]
+-    exact ⟨⟨rfl,rfl⟩,h⟩
++    exact ⟨⟨by simp,by simp⟩,h⟩
+ 
+ theorem domain : ActualAddressPathDomain := by
+   intro S K src dst h
