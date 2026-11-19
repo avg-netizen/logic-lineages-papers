@@ -38,7 +38,7 @@ theorem indexType {Γ σ} (x : Variable Γ σ) :
 theorem shiftedIndex {Γ σ} (n : Nat) (x : Variable Γ σ) :
     variableIndex (shift n x) = n+variableIndex x := by
   induction n with
-  | zero => simp [shift]
+  | zero => simp only [shift,Nat.zero_add]; rfl
   | succ n ih => simp only [shift,variableIndex,ih]; omega
 
 theorem widthLength (n : Nat) (Γ : List Ty) : (WireCtx n Γ).length = n+Γ.length := by
@@ -67,7 +67,7 @@ theorem countGround (Γ : List Ty) : groundCount (Γ.map SyntaxCode.typeCode) = 
   | nil => rfl
   | cons σ Γ ih =>
     cases σ with
-    | ground => simpa [groundCount,SyntaxCode.typeCode,groundCtx] using congrArg (·+1) ih
+    | ground => simpa [groundCount,SyntaxCode.typeCode,groundCtx] using ih
     | arrow a b => simpa [groundCount,SyntaxCode.typeCode,SyntaxCode.arrowCode,groundCtx] using ih
 
 theorem groundRankIndex {Γ} (x : Variable Γ .ground) :
@@ -95,7 +95,7 @@ theorem groundRankCount {Γ} (x : Variable Γ .ground) :
       | here => rfl
       | there x =>
         change (groundRank x).val+1=groundCount ((0 :: Γ.map SyntaxCode.typeCode).take (variableIndex x+1))
-        simpa [groundCount] using congrArg (·+1) (ih x)
+        simpa [groundCount] using ih x
     | arrow a b =>
       cases x with
       | there x =>

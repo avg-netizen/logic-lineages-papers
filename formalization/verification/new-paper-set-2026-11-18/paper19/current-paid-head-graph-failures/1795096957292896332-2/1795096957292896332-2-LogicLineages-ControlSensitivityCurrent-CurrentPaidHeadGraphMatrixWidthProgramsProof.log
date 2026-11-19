@@ -1,0 +1,81 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixWidthProgramsProof.lean:145:6: error: unsolved goals
+case pos
+n : ℕ
+ih : ∀ m < n, ∀ (off : ℕ), (emitTerm off m).2.1 = termWidth m
+off : ℕ
+h0 : ¬n % 8 = 0
+h2 : n % 8 = 2
+l : (emitTerm off (Nat.unpair (n / 8)).1).2.1 = termWidth (Nat.unpair (n / 8)).1
+r :
+  (emitTerm (off + (emitTerm off (Nat.unpair (n / 8)).1).2.1) (Nat.unpair (n / 8)).2).2.1 =
+    termWidth (Nat.unpair (n / 8)).2
+⊢ (emitTerm (off + termWidth (Nat.unpair (n / 8)).1) (Nat.unpair (n / 8)).2).2.1 = termWidth (Nat.unpair (n / 8)).2
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixWidthProgramsProof.lean:148:14: warning: This simp argument is unused:
+  h0
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵0̵,̵h̵2̵,̵l̵,̵r̵]̵[̲h̲2̲,̲ ̲l̲,̲ ̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixWidthProgramsProof.lean:148:22: warning: This simp argument is unused:
+  r
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵0̵,̵h̵2̵,̵l̵,̵r̵]̵[̲h̲0̲,̲ ̲h̲2̲,̲ ̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixWidthProgramsProof.lean:150:81: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  simp [childTerm, ̲h2̵,̵h̵4]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixWidthProgramsProof.lean:151:16: warning: This simp argument is unused:
+  h0
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵0̵,̵h̵2̵,̵h̵4̵,̵r̵]̵[̲h̲2̲,̲ ̲h̲4̲,̲ ̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixWidthProgramsProof.lean:151:19: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵0̵,̵h̵2̵,̵h̵4̵,̵r̵]̵[̲h̲0̲,̲ ̲h̲4̲,̲ ̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixWidthProgramsProof.lean:162:6: error: unsolved goals
+case neg
+n : ℕ
+ih : ∀ m < n, ∀ (off : ℕ), (emitFormula off m).2.1 = formulaWidth m
+off : ℕ
+h : 5 ≤ n % 8
+h5 : ¬n % 8 = 5
+e : (emitFormula off (Nat.unpair (n / 8)).1).2.1 = formulaWidth (Nat.unpair (n / 8)).1
+ez :
+  (emitFormula (off + (emitFormula off (Nat.unpair (n / 8)).1).2.1) (Nat.unpair (n / 8)).2).2.1 =
+    formulaWidth (Nat.unpair (n / 8)).2
+⊢ (emitFormula (off + formulaWidth (Nat.unpair (n / 8)).1) (Nat.unpair (n / 8)).2).2.1 =
+    formulaWidth (Nat.unpair (n / 8)).2
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixWidthProgramsProof.lean:160:76: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [childFormula, ̲h,̵h̵5]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixWidthProgramsProof.lean:161:14: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵,̵h̵5̵,̵e̵]̵[̲h̲5̲,̲ ̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixWidthProgramsProof.lean:165:21: warning: This simp argument is unused:
+  ez
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵,̵h̵5̵,̵e̵,̵e̵z̵]̵[̲h̲,̲ ̲h̲5̲,̲ ̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

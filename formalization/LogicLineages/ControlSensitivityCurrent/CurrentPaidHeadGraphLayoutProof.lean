@@ -160,10 +160,11 @@ def evalLayout (f : Nat→Nat) (w : Nat→Nat) : Layout Nat Bool where
 
 theorem evalMap (p : LogicLineages.OrdinalComparison.Source.AdmissibleSum.Policy) (f : Nat→Nat)
     (hf : FullAddition.Targets.SourceGrowth f) {Γ} (z : Variable Γ .ground) (ν : Variable Γ .ground→Nat)
-    (n : Nat) : LayoutMap (typedLayout z) (evalLayout f (fun i => ν (slot z i)))
+    (n : Nat) (w : Nat → Nat) (hw : ∀ i, i < n → ν (slot z i)=w i) :
+    LayoutMap (typedLayout z) (evalLayout f w)
       (SourceAST.Term.eval p f ν) (SourceAST.Formula.eval p f ν) n := by
   constructor
-  · intros; rfl
+  · exact hw
   · intros; rfl
   · intros; rfl
   · intro a

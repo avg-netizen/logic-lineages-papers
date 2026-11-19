@@ -1,0 +1,160 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphRayProof.lean:43:41: error: Invalid rewrite argument: Expected an equality or iff proof or definition name, but `?m.158` is a value of type
+  ?m.157
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphRayProof.lean:43:42: error(lean.unknownIdentifier): Unknown identifier `ScopedDAG.StatementChecks.renaming`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphRayProof.lean:54:4: error: Tactic `rfl` failed: The left-hand side
+  some
+    (0 :: List.map SyntaxCode.typeCode (FreshCtx Γ),
+      8 *
+          Nat.pair
+            (ContextInsertionCode.sourceCode 0 1
+              (GroundCaptureClosingCode.sourceCode (List.map SyntaxCode.typeCode (FreshCtx Γ)) 0
+                (CurrentTreeCode.expand
+                  (RawSourceDAG.Operations.renameCode (List.map SyntaxCode.typeCode (FreshCtx Γ))
+                    (freshTable (List.map SyntaxCode.typeCode Γ))
+                    (encode ⟨Γ, ⟨Ty.curriedGround 1, CurrentTreeInputCoverage.input K⟩⟩)))))
+            0 +
+        5)
+is not definitionally equal to the right-hand side
+  some (List.map SyntaxCode.typeCode (Ty.ground :: FreshCtx Γ), SyntaxCode.encodeTerm (raySource K))
+
+case right
+Γ : List Ty
+K : OriginalTerm Γ (Ty.curriedGround 1)
+d : GroundEquivalence.Input Γ (Ty.curriedGround 1) := CurrentTreeInputCoverage.input K
+h :
+  (CurrentTreeInputCoverage.input K).term = K ∧
+    CurrentTreeInputCoverage.compile (List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm K) =
+        some (encode ⟨Γ, ⟨Ty.curriedGround 1, CurrentTreeInputCoverage.input K⟩⟩) ∧
+      CurrentTreeCode.expand (encode ⟨Γ, ⟨Ty.curriedGround 1, CurrentTreeInputCoverage.input K⟩⟩) =
+        SyntaxCode.encodeTerm K
+hg :
+  RawSourceDAG.Operations.renameCode (freshContext (List.map SyntaxCode.typeCode Γ))
+      (freshTable (List.map SyntaxCode.typeCode Γ)) (encode ⟨Γ, ⟨Ty.curriedGround 1, d⟩⟩) =
+    encode ⟨FreshCtx Γ, ⟨Ty.curriedGround 1, ScopedDAG.renameInput (fun {σ} => freshRename Γ) d⟩⟩
+he :
+  CurrentTreeCode.expand
+      (encode ⟨FreshCtx Γ, ⟨Ty.curriedGround 1, ScopedDAG.renameInput (fun {σ} => freshRename Γ) d⟩⟩) =
+    SyntaxCode.encodeTerm (freshCopy K)
+hc :
+  GroundCaptureClosingCode.sourceCode (List.map SyntaxCode.typeCode (FreshCtx Γ)) 0
+      (SyntaxCode.encodeTerm (freshCopy K)) =
+    SyntaxCode.encodeTerm (zeroCopy K)
+hi :
+  ContextInsertionCode.sourceCode 0 1 (SyntaxCode.encodeTerm (zeroCopy K)) =
+    SyntaxCode.encodeTerm (Term.rename (zeroCopy K) fun {σ} x => x.there)
+⊢ some
+      (0 :: List.map SyntaxCode.typeCode (FreshCtx Γ),
+        8 *
+            Nat.pair
+              (ContextInsertionCode.sourceCode 0 1
+                (GroundCaptureClosingCode.sourceCode (List.map SyntaxCode.typeCode (FreshCtx Γ)) 0
+                  (CurrentTreeCode.expand
+                    (RawSourceDAG.Operations.renameCode (List.map SyntaxCode.typeCode (FreshCtx Γ))
+                      (freshTable (List.map SyntaxCode.typeCode Γ))
+                      (encode ⟨Γ, ⟨Ty.curriedGround 1, CurrentTreeInputCoverage.input K⟩⟩)))))
+              0 +
+          5) =
+    some (List.map SyntaxCode.typeCode (Ty.ground :: FreshCtx Γ), SyntaxCode.encodeTerm (raySource K))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphRayProof.lean:53:48: warning: This simp argument is unused:
+  hg
+
+Hint: Omit it from the simp argument list.
+  simp only [h.2.1, ̲bind, ̲Option.bind_some, ̲pure, ̲hg̵,̵h̵e, ̲freshContextExact, ̲hc, ̲hi]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphRayProof.lean:53:51: warning: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  simp only [h.2.1, ̲bind, ̲Option.bind_some, ̲pure, ̲hg,h̵e̵,̵ ̲freshContextExact, ̲hc, ̲hi]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphRayProof.lean:53:72: warning: This simp argument is unused:
+  hc
+
+Hint: Omit it from the simp argument list.
+  simp only [h.2.1, ̲bind, ̲Option.bind_some, ̲pure, ̲hg, ̲he, ̲freshContextExact, ̲hc̵,̵h̵i]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphRayProof.lean:53:75: warning: This simp argument is unused:
+  hi
+
+Hint: Omit it from the simp argument list.
+  simp only [h.2.1, ̲bind, ̲Option.bind_some, ̲pure, ̲hg, ̲he, ̲freshContextExact, ̲hc,̵h̵i̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphRayProof.lean:104:17: error: Application type mismatch: The argument
+  hc
+has type
+  denoteWith f (fun c => ↑(0 + 1)) (u 0) = ↑c
+but is expected to have type
+  atUnits f (u 0) = ↑c
+in the application
+  And.intro hc
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphRayProof.lean:104:56: error: Application type mismatch: The argument
+  hc
+has type
+  denoteWith f (fun c => ↑(0 + 1)) (u 0) = ↑c
+but is expected to have type
+  atUnits f (u 0) = ↑c
+in the application
+  Eq.trans (hval μ 0) hc
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphRayProof.lean:113:66: error: Tactic `rfl` failed: The left-hand side
+  do
+    let vf ← assignment p (Term.rename (zeroCopy K) fun {σ} x => x.there)
+    let vg ← some fun i => ComputabilityKnowledge.WWOrdinalTermSemantics.Term.var ⟨Ty.ground, (Variable.here, i)⟩
+    pure (application p vf vg)
+is not definitionally equal to the right-hand side
+  some
+    (application p ws fun j => ComputabilityKnowledge.WWOrdinalTermSemantics.Term.var ⟨Ty.ground, (Variable.here, j)⟩)
+
+p : Policy
+f : ℕ → ℕ
+Γ : List Ty
+K : OriginalTerm Γ (Ty.curriedGround 1)
+u : OrdinalVector Γ 1
+hu : assignment p K = some u
+hgen : GeneratedOrdinalGrade Γ (↑0) (u 0)
+c : ℕ
+hc : denoteWith f (fun c => ↑(0 + 1)) (u 0) = ↑c
+X : List Ty := FreshCtx Γ
+w₀ : OrdinalVector X 1 := SourceRenaming.renameVector (fun {σ} => freshRename Γ) u
+w : OrdinalVector X 1 := GroundClosing.vector (fun {σ} => UnaryCarrier.groundMap X) w₀
+hf : assignment p (freshCopy K) = some w₀
+hw : assignment p (zeroCopy K) = some w
+hval : ∀ (μ : Variable X Ty.ground → ℕ) (j : Fin 2), denoteWith f (commonUnits μ) (w j) = atUnits f (u j)
+ρ : Variable (Ty.ground :: FreshCtx Γ) Ty.ground → ℕ
+v : ℕ
+ws : OrdinalVector (Ty.ground :: X) 1 := SourceRenaming.renameVector (fun {σ} x => x.there) w
+z : OrdinalVector (Ty.ground :: X) 0 :=
+  fun j => ComputabilityKnowledge.WWOrdinalTermSemantics.Term.var ⟨Ty.ground, (Variable.here, j)⟩
+a : OrdinalVector (Ty.ground :: X) Ty.ground.level := application p ws z
+hws : assignment p (Term.rename (zeroCopy K) fun {σ} x => x.there) = some ws
+⊢ (do
+      let vf ← assignment p (Term.rename (zeroCopy K) fun {σ} x => x.there)
+      let vg ← some fun i => ComputabilityKnowledge.WWOrdinalTermSemantics.Term.var ⟨Ty.ground, (Variable.here, i)⟩
+      pure (application p vf vg)) =
+    some
+      (application p ws fun j => ComputabilityKnowledge.WWOrdinalTermSemantics.Term.var ⟨Ty.ground, (Variable.here, j)⟩)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphRayProof.lean:117:52: error: Application type mismatch: The argument
+  hc
+has type
+  denoteWith f (fun c => ↑(0 + 1)) (u 0) = ↑c
+but is expected to have type
+  atUnits f (u 0) = ↑c
+in the application
+  Eq.trans (hval (fun x => ρ x.there) 0) hc
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphRayProof.lean:113:36: warning: This simp argument is unused:
+  hws
+
+Hint: Omit it from the simp argument list.
+  simp only [raySource, ̲assignment,h̵w̵s̵,̵ ̲Option.bind_some, ̲a, ̲z]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphRayProof.lean:113:40: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵a̵y̵S̵o̵u̵r̵c̵e̵,̵a̵s̵s̵i̵g̵n̵m̵e̵n̵t̵,̵h̵w̵s̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵a̵,̵z̵]̵[̲r̲a̲y̲S̲o̲u̲r̲c̲e̲,̲ ̲a̲s̲s̲i̲g̲n̲m̲e̲n̲t̲,̲ ̲h̲w̲s̲,̲ ̲a̲,̲ ̲z̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

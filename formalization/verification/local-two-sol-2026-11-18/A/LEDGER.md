@@ -1409,3 +1409,48 @@ and translates the existing canonical-port derivations into fixed-point bits.
   LANE-A-NUMBERED-WINDOW-ARITHMETIC-RAW-WITNESS-CODE-CLOUD-EVIDENCE.json
   SHA41dbaaadff68d37a5ed5f4097310e4427a9484b4ca8d25fd4a699a2f433aa8b0,
   59 current/56pins/6audits, supplemental errors0. READY support only.
+
+## 2026-11-19 — exact numeric data codecs for both actual path lists
+
+- Accepted456 actual raw witness numeric codec after independent
+  59current/56pins/six standard exact audits (select flag axiom-free).
+  No numbered promotion.
+- New literal path codec retains actual RawHop next term and witness,
+  both original ClassEdgeWitness representatives, ClassHop supplied
+  Nat destination class code, and both ordered raw/class list contents
+  including duplicates. Empty encoded data not positivity. Freeze
+  81d8e1bd...,27 pins; no coded semantic evaluation or internal proof.
+- PATH-CODE-PREFLIGHT-1455 clean128/128 target-only
+  receipt1795096264457720078-2 independently verified before proofs.
+- PATH-CODE-EXACT-1500 clean138/138 first exact run
+  receipt1795096611779025009-2, inherited peak519976/new498328/root
+  494028KiB. Native reaped/both locks free. Five standard-only exact
+  audits, LANE-A-NUMBERED-WINDOW-ARITHMETIC-PATH-CODE-CLOUD-EVIDENCE.json
+  SHA804d2ab287b36aa73674ee4888c8938695e4372b11d3bf1c215d4a55b3fbdc85,
+  138current/56 merged pins/5exact, supplemental errors0. READY
+  literal numeric data only.
+
+## 2026-11-19 — original typed raw/class relations checked on supplied Nat certificates
+
+- Accepted457 both exact literal path certificate list codecs after
+  independent138current/56pins/5 audits. No numbered promotion.
+- New coded checks froze30 pins473d96df...: exact original typed
+  WindowStep/Literal WindowPath on true parsed endpoint terms,
+  existing ClassEdge and positive RS on actual successful least code
+  endpoints, actual Primary on two separately admitted literal terms,
+  explicit malformed certificate/term parser rejection. Only supplied
+  certificate acceptance, not search for unknown raw/positive witnesses.
+- PATH-CHECK-PREFLIGHT-1508 clean129/129 target-only
+  receipt1795096852433444813-2 independently verified first.
+- Exact1516 ordinary decoder goal normalization error
+  1795097134916430200-2; preserved exact source/manifests/receipt/log,
+  independently reviewed one proof term replacing three post-cases
+  equations by literal reflexivity, reverse verified. Freeze unchanged.
+- PATH-CHECK-EXACT-1520 clean171/171
+  receipt1795097247953639098-2, peak519976 inherited/501984 new,
+  root494276KiB under unchanged caps. Native reaped/both locks free.
+  All6 audits standard-only; LANE-A-NUMBERED-WINDOW-ARITHMETIC-PATH-
+  CHECK-CLOUD-EVIDENCE.json SHA926c13aec02d3399fb3bb51bb4122f3a68c66877b9847f1398c94cfc33f7151e,
+  171current/59 merged pins/six audits, supplemental errors0.
+  READY supporting first concrete Nat witness checks, not arithmetic
+  formulas, actual internal accessibility, or ID1.

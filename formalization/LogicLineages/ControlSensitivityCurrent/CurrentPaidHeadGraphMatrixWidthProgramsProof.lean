@@ -144,7 +144,7 @@ theorem exactTermWidth (off n : Nat) : (emitTerm off n).2.1=termWidth n := by
     · by_cases h2 : n%8=2
       · have l := ih (n/8).unpair.1 (termChildDecrease _ _ (by simp [childTerm,h2])) off
         have r := ih (n/8).unpair.2 (termChildDecrease _ _ (by simp [childTerm,h2]))
-          (off+(emitTerm off (n/8).unpair.1).2.1)
+          (off+termWidth (n/8).unpair.1)
         simp [h0,h2,l,r]
       · by_cases h4 : n%8=4
         · have r := ih (n/8).unpair.2 (termChildDecrease _ _ (by simp [childTerm,h2,h4])) off
@@ -161,7 +161,7 @@ theorem exactFormulaWidth (off n : Nat) : (emitFormula off n).2.1=formulaWidth n
         simp [h,h5,e]
       · have e := ih (n/8).unpair.1 (formulaChildDecrease _ _ (by simp [childFormula,h,h5])) off
         have ez := ih (n/8).unpair.2 (formulaChildDecrease _ _ (by simp [childFormula,h,h5]))
-          (off+(emitFormula off (n/8).unpair.1).2.1)
+          (off+formulaWidth (n/8).unpair.1)
         simp [h,h5,e,ez]
     · by_cases h2 : 2≤n%8 <;> simp [h,h2,exactTermWidth]
 
