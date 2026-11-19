@@ -1,0 +1,19 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ProtectedSpineStrictFieldLambdaStep.lean:44:13: error: unsolved goals
+case pos.none
+E : Environment
+α : Ty
+body : Evaluation
+Γ Δ : Context
+a : Assignments
+strict : Bool
+target : Expr
+h : ¬∃ target_1 i, Expr.lam α target = Expr.lam α target_1 ∧ openingSlot Δ = some i
+hi : openingSlot Δ = none
+⊢ (if True then false else false) = false
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ProtectedSpineStrictFieldLambdaStep.lean:44:39: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵a̵m̵b̵d̵a̵F̵i̵e̵l̵d̵,̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵,̵h̵i̵]̵[̲l̲a̲m̲b̲d̲a̲F̲i̲e̲l̲d̲,̲ ̲h̲i̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

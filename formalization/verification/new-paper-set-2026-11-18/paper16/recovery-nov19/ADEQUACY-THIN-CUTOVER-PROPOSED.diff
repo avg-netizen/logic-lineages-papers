@@ -1,0 +1,284 @@
+--- LogicLineages/PersistentMarking/ProtectedSpineOpeningCodeProof.lean
++++ LogicLineages/PersistentMarking/ProtectedSpineOpeningCodeThinProof.lean
+@@ -1,9 +1,8 @@
+ import LogicLineages.PersistentMarking.ProtectedSpineCompletenessTargets
+ import LogicLineages.PersistentMarking.PortLambdaStateProof
+ import LogicLineages.PersistentMarking.PortTermStateProof
+-import LogicLineages.PersistentMarking.ProtectedSpineStrictMarkProof
+ 
+-namespace LogicLineages.PersistentMarking.ProtectedSpineOpeningCodeProof
++namespace LogicLineages.PersistentMarking.ProtectedSpineOpeningCodeThinProof
+ open Spine NameBridge DecisionInventory DecisionPorts DecisionObservations FiniteDomainSchema
+ open HereditaryDomainCode HereditaryDomainSemantics PortNormalization
+ open ProtectedSpineEnvironment ProtectedSpineLaws ProtectedSpineInterpreter
+@@ -51,4 +50,4 @@
+     from singletonCode S E H M Γ σ x hw] at h
+   exact h
+ 
+-end LogicLineages.PersistentMarking.ProtectedSpineOpeningCodeProof
++end LogicLineages.PersistentMarking.ProtectedSpineOpeningCodeThinProof
+
+--- LogicLineages/PersistentMarking/ProtectedSpineCompletenessAbsProof.lean
++++ LogicLineages/PersistentMarking/ProtectedSpineCompletenessAbsThinProof.lean
+@@ -1,7 +1,8 @@
+-import LogicLineages.PersistentMarking.ProtectedSpineOpeningCodeProof
++import LogicLineages.PersistentMarking.ProtectedSpineOpeningCodeThinProof
++import LogicLineages.PersistentMarking.ProtectedSpineStrictFieldLambdaStep
+ import LogicLineages.PersistentMarking.DecisionClosureBinderProof
+ 
+-namespace LogicLineages.PersistentMarking.ProtectedSpineCompletenessAbsProof
++namespace LogicLineages.PersistentMarking.ProtectedSpineCompletenessAbsThinProof
+ open Spine NameBridge DecisionPorts DecisionRequests ObservationLambda FiniteDomainSchema HereditaryDomainCode
+ open PortNormalization ProtectedSpineAdequacyTargets ProtectedSpineAdequacyBase ProtectedSpineCompletenessTargets
+ open ProtectedSpineEnvironment ProtectedSpineLaws ProtectedSpineInterpreter
+@@ -34,7 +35,7 @@
+     change WellFormed _ _ (openingContext Γ σ i)
+     rw [hEq]
+     exact hChild.1
+-  have hv := ProtectedSpineOpeningCodeProof.bodyValue S F M Θ σ τ s i hm hW hOccupied hBody hCovered
++  have hv := ProtectedSpineOpeningCodeThinProof.bodyValue S F M Θ σ τ s i hm hW hOccupied hBody hCovered
+   have hTyped := ElementarySupportProof.openingPaper S σ τ x t ht
+   have hType := SpineShiftProof.annotationExact _ _ _ hTyped.1
+   have hObs : openBody σ x t ∈ DecisionObservations.observations E.names E.ports Θ E.target τ := by
+@@ -52,9 +53,9 @@
+     rw [hEq]
+     exact ih hChild
+   change (valueAt (evaluate S E H M (.lam σ s)) Γ ⟨[],[]⟩).weak Γ (.lam σ t) = true
+-  rw [ProtectedSpineStrictMarkProof.lambdaWeak,
++  rw [ProtectedSpineStrictFieldLambdaStep.lambdaWeak,
+     ProtectedSpineLambdaFieldProof.fieldEq E σ (evaluate S E H M s) Γ Γ ⟨[],[]⟩ false t i
+       (MarkedConstructorCanonicalOpeningProof.slotEq Γ i hi)]
+   exact hField.trans hVal
+ 
+-end LogicLineages.PersistentMarking.ProtectedSpineCompletenessAbsProof
++end LogicLineages.PersistentMarking.ProtectedSpineCompletenessAbsThinProof
+
+--- LogicLineages/PersistentMarking/ProtectedSpineCompletenessBasicProof.lean
++++ LogicLineages/PersistentMarking/ProtectedSpineCompletenessBasicThinProof.lean
+@@ -1,8 +1,8 @@
+ import LogicLineages.PersistentMarking.ProtectedSpineAdequacyOwnerProof
+-import LogicLineages.PersistentMarking.ProtectedSpineStrictMarkProof
++import LogicLineages.PersistentMarking.ProtectedSpineStrictMarkThinProof
+ import LogicLineages.PersistentMarking.DecisionClosureStepProof
+ 
+-namespace LogicLineages.PersistentMarking.ProtectedSpineCompletenessBasicProof
++namespace LogicLineages.PersistentMarking.ProtectedSpineCompletenessBasicThinProof
+ open Spine DecisionPorts DecisionRequests FiniteDomainFoundation FiniteDomainSchema HereditaryDomainCode HereditaryDomainSemantics
+ open PortNormalization ProtectedSpineAdequacyTargets ProtectedSpineAdequacyBase
+ open ProtectedSpineCompletenessTargets ProtectedSpineEnvironment ProtectedSpineInterpreterCore
+@@ -96,10 +96,10 @@
+   let E := domain F
+   have he := (ProtectedSpineAdequacyTypingProof.ends S q t σ hq ht).2.2
+   have ho : t ∈ DecisionObservations.observations E.names E.ports Γ E.target q.type := he.symm ▸ h.2.2
+-  have hb := ProtectedSpineStrictMarkProof.marking S E F.data.sourceHeads M Γ Γ ⟨[],[]⟩ q t
++  have hb := ProtectedSpineStrictMarkThinProof.exact_MarkingFields S E F.data.sourceHeads M Γ Γ ⟨[],[]⟩ q t
+     (sourceCovered S F Γ q h.2.1) (ProtectedSpineConcreteInputProof.emptyValid E Γ h.1)
+     (ProtectedSpineStrictInputProof.empty E Γ h.1) h.1 (DecisionPortsProof.extensionRefl Γ) ho
+   rw [hr] at hb
+   exact hb.trans (ih (DecisionClosureStepProof.step S F _ _ (.strict hq ht hr) h))
+ 
+-end LogicLineages.PersistentMarking.ProtectedSpineCompletenessBasicProof
++end LogicLineages.PersistentMarking.ProtectedSpineCompletenessBasicThinProof
+
+--- LogicLineages/PersistentMarking/ProtectedSpineFAbsParameterProof.lean
++++ LogicLineages/PersistentMarking/ProtectedSpineFAbsParameterThinProof.lean
+@@ -1,7 +1,7 @@
+ import LogicLineages.PersistentMarking.ProtectedSpineAdequacyOwnerProof
+-import LogicLineages.PersistentMarking.ProtectedSpineOpeningCodeProof
++import LogicLineages.PersistentMarking.ProtectedSpineOpeningCodeThinProof
+ 
+-namespace LogicLineages.PersistentMarking.ProtectedSpineFAbsParameterProof
++namespace LogicLineages.PersistentMarking.ProtectedSpineFAbsParameterThinProof
+ open Spine DecisionPorts FiniteDomainSchema HereditaryDomainCode
+ open PortNormalization ProtectedSpineAdequacyTargets ProtectedSpineAdequacyBase ProtectedSpineCompletenessTargets
+ open ProtectedSpineEnvironment ProtectedSpineInterpreter ProtectedSpineFixedApplicationTargets
+@@ -58,7 +58,7 @@
+       (f,τ,Θ,(concreteTags S F M Θ bs).map Prod.snd,
+         MarkedExtras.down E Θ (closedCodes S E H M Θ (es.append (.cons (.free σ x) .nil))))
+     rw [hDown,ProtectedSpineConcreteInputProof.append S E H M Θ es (.cons (.free σ x) .nil),
+-      ProtectedSpineOpeningCodeProof.singletonCode S E H M Θ σ x hW]
++      ProtectedSpineOpeningCodeThinProof.singletonCode S E H M Θ σ x hW]
+     rfl
+ 
+-end LogicLineages.PersistentMarking.ProtectedSpineFAbsParameterProof
++end LogicLineages.PersistentMarking.ProtectedSpineFAbsParameterThinProof
+
+--- LogicLineages/PersistentMarking/ProtectedSpineCompletenessFAbsProof.lean
++++ LogicLineages/PersistentMarking/ProtectedSpineCompletenessFAbsThinProof.lean
+@@ -1,7 +1,7 @@
+-import LogicLineages.PersistentMarking.ProtectedSpineFAbsParameterProof
++import LogicLineages.PersistentMarking.ProtectedSpineFAbsParameterThinProof
+ import LogicLineages.PersistentMarking.DecisionClosureBinderProof
+ 
+-namespace LogicLineages.PersistentMarking.ProtectedSpineCompletenessFAbsProof
++namespace LogicLineages.PersistentMarking.ProtectedSpineCompletenessFAbsThinProof
+ open Spine NameBridge DecisionPorts DecisionRequests ObservationLambda FiniteDomainSchema
+ open PortNormalization ProtectedSpineAdequacyTargets ProtectedSpineAdequacyBase ProtectedSpineCompletenessTargets
+ open ProtectedSpineEnvironment ProtectedSpineFixedApplicationTargets
+@@ -42,7 +42,7 @@
+   have hGet := ProtectedSpineAdequacyOwnerProof.previous S F M Θ f τ bs newExtras hm hfix
+     hActual.1 hActual.2.1 hTypes.1.1
+   have hRoot := rootBits S F M Θ r (openBody σ x t) hm hActual.1 hActual.2.1 hTypes.1.1 hActual.2.2 hTypes.2.2
+-  have hParam := ProtectedSpineFAbsParameterProof.openedParameter S F M Γ f σ τ bs es i hm h.1 hσ
++  have hParam := ProtectedSpineFAbsParameterThinProof.openedParameter S F M Γ f σ τ bs es i hm h.1 hσ
+     (ObservationPortUpdateProof.firstSound Γ i hi) h.2.1 hs.1
+   have hSpec : MarkedConstructorTargets.FAbsWitness E H M p (.lam σ t) := by
+     refine ⟨σ,τ,t,i,concreteOutput S E H M Θ τ (some r),rfl,rfl,
+@@ -56,4 +56,4 @@
+   change MarkedConstructorTests.weakTest S E H M p (.lam σ t) = true
+   simp [MarkedConstructorTests.weakTest,hTest]
+ 
+-end LogicLineages.PersistentMarking.ProtectedSpineCompletenessFAbsProof
++end LogicLineages.PersistentMarking.ProtectedSpineCompletenessFAbsThinProof
+
+--- LogicLineages/PersistentMarking/ProtectedSpineCompletenessPortProof.lean
++++ LogicLineages/PersistentMarking/ProtectedSpineCompletenessPortThinProof.lean
+@@ -1,11 +1,11 @@
+ import LogicLineages.PersistentMarking.ProtectedSpineCompletenessListProof
+ import LogicLineages.PersistentMarking.ProtectedSpineCompletenessWholeProof
+-import LogicLineages.PersistentMarking.ProtectedSpineCompletenessBasicProof
+-import LogicLineages.PersistentMarking.ProtectedSpineCompletenessAbsProof
+-import LogicLineages.PersistentMarking.ProtectedSpineCompletenessFAbsProof
++import LogicLineages.PersistentMarking.ProtectedSpineCompletenessBasicThinProof
++import LogicLineages.PersistentMarking.ProtectedSpineCompletenessAbsThinProof
++import LogicLineages.PersistentMarking.ProtectedSpineCompletenessFAbsThinProof
+ import LogicLineages.PersistentMarking.ProtectedSpineCompletenessSelectProof
+ 
+-namespace LogicLineages.PersistentMarking.ProtectedSpineCompletenessPortProof
++namespace LogicLineages.PersistentMarking.ProtectedSpineCompletenessPortThinProof
+ open Spine NameBridge DecisionPorts FiniteDomainSchema HereditaryDomainCode
+ open PortNormalization ProtectedSpineAdequacyTargets ProtectedSpineCompletenessTargets
+ open MarkedConstructorOperator (step)
+@@ -23,31 +23,31 @@
+     (motive_6 := fun Γ f bs es ts _ => WholeGoal F M Γ f bs es ts)
+     ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ h
+   · intros
+-    exact ProtectedSpineCompletenessBasicProof.var S F M _ _ _
++    exact ProtectedSpineCompletenessBasicThinProof.var S F M _ _ _
+   · intros
+     rename_i hs ht hK hi hx hy child ih
+-    exact ProtectedSpineCompletenessAbsProof.abs F M _ _ _ _ _ _ hs ht hm hi ih
++    exact ProtectedSpineCompletenessAbsThinProof.abs F M _ _ _ _ _ _ hs ht hm hi ih
+   · intros
+     rename_i hs ht he hty child ih
+-    exact ProtectedSpineCompletenessBasicProof.funHead F M _ _ _ _ _ hs ht he hty hm ih
++    exact ProtectedSpineCompletenessBasicThinProof.funHead F M _ _ _ _ _ hs ht he hty hm ih
+   · intros
+     rename_i hs ht child ih
+-    exact ProtectedSpineCompletenessBasicProof.headPut F M _ _ _ _ hs ht ih
++    exact ProtectedSpineCompletenessBasicThinProof.headPut F M _ _ _ _ hs ht ih
+   · intros
+     rename_i hs ht hat hty happ child ih
+     exact ProtectedSpineCompletenessSelectProof.select F M _ _ _ _ _ _ _ _ _ _ hm hfix hs ht hat hty happ child ih
+   · intros
+     rename_i hs ht hK hi hx hy child ih
+-    exact ProtectedSpineCompletenessFAbsProof.fabs F M _ _ _ _ _ _ _ _ hs ht hK hm hfix hi child ih
++    exact ProtectedSpineCompletenessFAbsThinProof.fabs F M _ _ _ _ _ _ _ _ hs ht hK hm hfix hi child ih
+   · intros
+     rename_i hs ht hp child ih
+-    exact ProtectedSpineCompletenessBasicProof.copy F M _ _ _ _ _ _ hs ht hp hm ih
++    exact ProtectedSpineCompletenessBasicThinProof.copy F M _ _ _ _ _ _ hs ht hp hm ih
+   · intros
+     rename_i hs ht he hmult hwhole ihm ihw
+-    exact ProtectedSpineCompletenessBasicProof.stat F M _ _ _ _ _ _ hs ht he hm ihm ihw
++    exact ProtectedSpineCompletenessBasicThinProof.stat F M _ _ _ _ _ _ hs ht he hm ihm ihw
+   · intros
+     rename_i hs ht hmark child ih
+-    exact ProtectedSpineCompletenessBasicProof.strict F M _ _ _ _ _ hs ht hmark ih
++    exact ProtectedSpineCompletenessBasicThinProof.strict F M _ _ _ _ _ hs ht hmark ih
+   · intros
+     exact ProtectedSpineCompletenessListProof.matchingNil S F M _
+   · intros
+@@ -73,7 +73,7 @@
+     (h : PortComparison.Strict S F.data.types F.data.names Γ q t) : StrictGoal F M Γ q t := by
+   cases h with
+   | intro hq ht hmark hw =>
+-    exact ProtectedSpineCompletenessBasicProof.strict F M _ _ _ _ _ hq ht hmark
++    exact ProtectedSpineCompletenessBasicThinProof.strict F M _ _ _ _ _ hq ht hmark
+       (weak S F M hm hfix _ _ _ hw)
+ 
+-end LogicLineages.PersistentMarking.ProtectedSpineCompletenessPortProof
++end LogicLineages.PersistentMarking.ProtectedSpineCompletenessPortThinProof
+
+--- LogicLineages/PersistentMarking/ProtectedSpineCompletenessChecks.lean
++++ LogicLineages/PersistentMarking/ProtectedSpineCompletenessThinChecks.lean
+@@ -1,7 +1,7 @@
+-import LogicLineages.PersistentMarking.ProtectedSpineCompletenessPortProof
++import LogicLineages.PersistentMarking.ProtectedSpineCompletenessPortThinProof
+ import LogicLineages.PersistentMarking.PortNormalizationProof
+ 
+-namespace LogicLineages.PersistentMarking.ProtectedSpineCompletenessChecks
++namespace LogicLineages.PersistentMarking.ProtectedSpineCompletenessThinChecks
+ open Spine NameBridge DecisionPorts RefinementRenameSupport
+ open PortNormalization ProtectedSpineAdequacyTargets ProtectedSpineAdequacyBase ProtectedSpineCompletenessTargets
+ open MarkedConstructorOperator (leastFixedPoint)
+@@ -42,14 +42,14 @@
+       (by simpa only [renameIdentity] using hObs)
+     have hp : PortComparison.Weak S F.data.types F.data.names Γ q t := by
+       simpa only [renameIdentity] using hp'
+-    exact hBits.1.trans (ProtectedSpineCompletenessPortProof.weak S F M hm hfix Γ q t hp ⟨hw,hSource,hObs⟩)
++    exact hBits.1.trans (ProtectedSpineCompletenessPortThinProof.weak S F M hm hfix Γ q t hp ⟨hw,hSource,hObs⟩)
+   · intro h
+     have hp' := PortNormalizationProof.strict S F q t h (fun _ x => x) Γ
+       (fun _ _ _ he => he) hw (by simpa only [renameIdentity] using hSource)
+       (by simpa only [renameIdentity] using hObs)
+     have hp : PortComparison.Strict S F.data.types F.data.names Γ q t := by
+       simpa only [renameIdentity] using hp'
+-    exact hBits.2.trans (ProtectedSpineCompletenessPortProof.strict S F M hm hfix Γ q t hp ⟨hw,hSource,hObs⟩)
++    exact hBits.2.trans (ProtectedSpineCompletenessPortThinProof.strict S F M hm hfix Γ q t hp ⟨hw,hSource,hObs⟩)
+ 
+ #print axioms exact_CompleteObservation
+-end LogicLineages.PersistentMarking.ProtectedSpineCompletenessChecks
++end LogicLineages.PersistentMarking.ProtectedSpineCompletenessThinChecks
+
+--- LogicLineages/PersistentMarking/ProtectedSpineAdequacyChecks.lean
++++ LogicLineages/PersistentMarking/ProtectedSpineAdequacyThinChecks.lean
+@@ -1,14 +1,14 @@
+-import LogicLineages.PersistentMarking.ProtectedSpineCompletenessChecks
++import LogicLineages.PersistentMarking.ProtectedSpineCompletenessThinChecks
+ import LogicLineages.PersistentMarking.ProtectedSpineSoundInterpreterProof
+ 
+-namespace LogicLineages.PersistentMarking.ProtectedSpineAdequacyChecks
++namespace LogicLineages.PersistentMarking.ProtectedSpineAdequacyThinChecks
+ open ProtectedSpineAdequacyTargets
+ 
+ theorem exact_ExactObservation : ExactObservation := by
+   intro S F Γ q t σ hw hu ho hq ht
+-  have hc := ProtectedSpineCompletenessChecks.exact_CompleteObservation S F Γ q t σ hw hu ho hq ht
++  have hc := ProtectedSpineCompletenessThinChecks.exact_CompleteObservation S F Γ q t σ hw hu ho hq ht
+   have hs := ProtectedSpineSoundInterpreterProof.exact_SoundObservation S F Γ q t σ hw hu ho hq ht
+   exact ⟨⟨hs.1,hc.1⟩,⟨hs.2,hc.2⟩⟩
+ 
+ #print axioms exact_ExactObservation
+-end LogicLineages.PersistentMarking.ProtectedSpineAdequacyChecks
++end LogicLineages.PersistentMarking.ProtectedSpineAdequacyThinChecks
+
+--- LogicLineages/PersistentMarking/ProtectedSpineDecisionProof.lean
++++ LogicLineages/PersistentMarking/ProtectedSpineDecisionThinProof.lean
+@@ -1,8 +1,8 @@
+ import LogicLineages.PersistentMarking.ProtectedSpineDecisionTargets
+-import LogicLineages.PersistentMarking.ProtectedSpineAdequacyChecks
++import LogicLineages.PersistentMarking.ProtectedSpineAdequacyThinChecks
+ import LogicLineages.PersistentMarking.DecisionClosureInitialProof
+ 
+-namespace LogicLineages.PersistentMarking.ProtectedSpineDecisionProof
++namespace LogicLineages.PersistentMarking.ProtectedSpineDecisionThinProof
+ open Spine DecisionRequests PortNormalization
+ open ProtectedSpineAdequacyTargets ProtectedSpineDecisionTargets
+ 
+@@ -39,7 +39,7 @@
+     let F : Inputs S := ⟨s,t,σ,σ,hS,hT,hOrdS,hOrdT⟩
+     let Γ := blank F.data.ports
+     have hRoot := (DecisionClosureInitialProof.initial S F).1
+-    have hAdequacy := ProtectedSpineAdequacyChecks.exact_ExactObservation S F Γ s t σ
++    have hAdequacy := ProtectedSpineAdequacyThinChecks.exact_ExactObservation S F Γ s t σ
+       hRoot.1 hRoot.2.1 hRoot.2.2 hS hT
+     have hW : (rootBits S s t).1 = true ↔ Weak S s t := by
+       simp only [rootBits,if_pos he]
+@@ -56,4 +56,4 @@
+     simp [rootBits,he,confinedBits,ConfinedPair.Weak,ConfinedPair.Strict,hW,hSt]
+ 
+ #print axioms exact_Decidability
+-end LogicLineages.PersistentMarking.ProtectedSpineDecisionProof
++end LogicLineages.PersistentMarking.ProtectedSpineDecisionThinProof
+

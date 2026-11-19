@@ -41,7 +41,7 @@ private theorem inactive (E : Environment) (α : Ty) (body : Evaluation) (Γ Δ 
     by_cases hαβ : α = β
     · subst β
       cases hi : openingSlot Δ with
-      | none => simp only [lambdaField,if_pos rfl,hi]
+      | none => simp only [lambdaField,hi,if_true]
       | some i => exact (h ⟨target,i,rfl,hi⟩).elim
     · simp only [lambdaField,if_neg hαβ]
 

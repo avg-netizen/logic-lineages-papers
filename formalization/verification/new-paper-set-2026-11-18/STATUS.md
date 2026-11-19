@@ -1,10 +1,19 @@
 # Current comparison formalization status
 
-New-paper register: **126 checked, 41 pending / 167**. Historical register:
+New-paper register: **129 checked, 38 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper16 `thm:rpo` and `lem:carrier`: exact ranked multiset restriction
+  (including ground variables) and literal native carrier, fresh cloud core
+  gates/current-artifact independent review (packets406–407). Packet408
+  adds only the unchanged strict marking-fields supporting law.
+
+- Paper18 `m:thm:snyatkov`: actual computable complete original-source first-order
+  decision at literal Phi, arbitrary quantifier alternation, with fresh six-alias
+  805-module gate and independent current-artifact review (packet405).
 
 - Paper17 `cor:standard-functional-hardness`: complete unchanged-Phi weak/strict
   undecidability, internal2 finite queries and internal3 single query, actual

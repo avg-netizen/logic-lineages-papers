@@ -351,3 +351,59 @@ and translates the existing canonical-port derivations into fixed-point bits.
 - The owner-frozen IndexedCarrier comparator and owner typing/context drafts
   are untouched. New NativeIndexedSelectorProof and NativeIndexedCarrierChecks
   are authored but unchecked pending separate approved exact gate.
+
+## 2026-11-19 — independent RPO pass and native carrier stop
+
+- Coordinator ticket CORE-INDEPENDENT-0631 ran the two existing exact leaves
+  separately, each once at the original core profile. `thm:rpo` passes receipt
+  `1795069725503842259-5`, with `exact_ExactRankedRestriction`, 79 recursively
+  source-matched native modules and 38 matching pins; axioms propext,
+  Quot.sound only. Cloud evidence in
+  paper16/recovery-nov19/LANE-A-RPO-CLOUD-EVIDENCE.json, SHA-256
+  `0545ffd32f2d8ee32173906c768a14ee2e84aa96a911b670a811018122f42af1`.
+  READY-FOR-ROOT-REVIEW; no lane acceptance or register change.
+- Original NativeCarrierChecks stopped at its final root (224/225
+  completed) at observed 529120 KiB, unchanged 524288 KiB cap, exit 77.
+  Receipt `1795069732345141096-54`; the standard axiom line in the last module
+  does not establish a completed native gate. Source, receipt and logs
+  retained; no unchanged retry. Both sessions were reaped and both shared
+  locks observed free. Proposed new exact NativeCarrierThinChecks root keeps
+  original proof and replaces only a definitional app-support import,
+  reducing 225→66 modules. Pending independent design review and ticket.
+- Proposed new thin strict-mark lambda-step and exact root reduce 181→138
+  modules while using the unchanged MarkingFields comparator. Separate
+  design proposal in paper16/recovery-nov19/THIN-STRICT-MARK-PROPOSAL.md.
+  This does not yet rewire any downstream owner module.
+
+## 2026-11-19 — thin carrier passes; strict marking proof-only repair
+
+- THIN-CORE-0637: new NativeCarrierThinChecks exact alias passes 66 modules
+  (receipt `1795070254083136488-12`, 492216 KiB root, propext and Quot.sound).
+  39 frozen source pins. Cloud evidence
+  paper16/recovery-nov19/LANE-A-NATIVE-CARRIER-THIN-CLOUD-EVIDENCE.json, SHA
+  `3e338ab7b226f30a9aa7258c05de71eb8a505efcadc0debc9d7b6fe2e947ee28`.
+  READY-FOR-ROOT-REVIEW against the unchanged numbered native carrier target.
+- THIN-CORE-0637's other gate stopped on exactly one ordinary Lean error:
+  the new LambdaStep no-opening branch did not simplify `if True`.
+  The byte-exact proof, local log and receipt `1795070251838512899-5` are
+  retained under paper16/failed/lane-a-thin-strict-mark-1795070251838512899-5.
+  Changed only that branch to `simp only [lambdaField,hi,if_true]` (new
+  step SHA `e887e08c1ee3aaf2e27a44c6f3c23956feb68fb05905e5ca3ef7c1b7aabaccca`).
+  Target and old owner sources unchanged. Coordinator granted separate
+  THIN-STRICT-0641 admission for this repair only.
+
+## 2026-11-19 — thin strict-mark field exact supplier passes
+
+- THIN-STRICT-0641 completed all 138 closures at the original core profile
+  with exact `ProtectedSpineStrictMarkThinProof.exact_MarkingFields`.
+  Receipt `1795070309088974059-6`; root 489276 KiB, lambda proof 496908 KiB.
+  Standard axioms only: propext, Classical.choice, Quot.sound. 58 frozen
+  pins and native object/log/receipt recursion pass in
+  paper16/recovery-nov19/LANE-A-STRICT-MARK-THIN-CLOUD-EVIDENCE.json,
+  SHA `a9eee75f3cf2d129368be289dca9c02353728b0665bd41e72b6f95f8bb30d0af`.
+  READY-FOR-ROOT-REVIEW as a supporting field theorem, not adequacy.
+- Exact indexed draft now uses the thin original carrier endpoint plus
+  a context assembly with the same inputs and output using structural
+  strict context and support-confinement separately. The complete closure
+  is 130 modules and excludes both old resource-stopped roots. No indexed
+  gate or downstream adequacy cutover was performed in this ticket.
