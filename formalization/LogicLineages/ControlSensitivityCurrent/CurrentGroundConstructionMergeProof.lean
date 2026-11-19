@@ -60,14 +60,14 @@ private theorem erase_rename {Γ Δ τ} (depth count : Nat) (r : Renaming Γ Δ)
     (h : ∀ {σ} (x : Variable Γ σ), SourceTypedPorts.variableIndex (r x) = indexCode depth count (SourceTypedPorts.variableIndex x))
     (t : OriginalTerm Γ τ) : erase (t.rename r) = mapRaw depth count (erase t) := by
   induction t generalizing Δ depth with
-  | var x => simp [Source.Term.rename,erase,mapRaw,h]
+  | var x => simp [LogicLineages.OrdinalComparison.Source.Term.rename,erase,mapRaw,h]
   | zeroC => rfl
   | succC => rfl
   | caseC σ => rfl
   | recC σ => rfl
-  | app f a ihf iha => simp only [Source.Term.rename,erase,mapRaw,ihf _ r h,iha _ r h]
+  | app f a ihf iha => simp only [LogicLineages.OrdinalComparison.Source.Term.rename,erase,mapRaw,ihf _ r h,iha _ r h]
   | lam b ih =>
-    simp only [Source.Term.rename,erase,mapRaw]
+    simp only [LogicLineages.OrdinalComparison.Source.Term.rename,erase,mapRaw]
     rw [ih (depth+1) (Renaming.lift r) (lift_index r h)]
   | ranked s _ => nomatch s
 

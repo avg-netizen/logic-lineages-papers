@@ -1,0 +1,285 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetFloorProof.lean:25:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  dite (↑(UnaryCarrier.headIndex n) < (Ty.curriedGround (n + 1)).level + 1) ?m.90 ?m.91
+in the target expression
+  (if h : 1 < (Ty.curriedGround (n + 1)).level + 1 then u ⟨1, h⟩
+    else ComputabilityKnowledge.WWOrdinalTermSemantics.Term.zero) =
+    u (UnaryCarrier.headIndex n)
+
+case e_a.isFalse
+p : Policy
+Γ : List Ty
+n : ℕ
+u : OrdinalVector Γ (Ty.curriedGround (n + 1)).level
+a : OrdinalVector Γ 0
+h✝ : ¬1 ≤ 0
+⊢ (if h : 1 < (Ty.curriedGround (n + 1)).level + 1 then u ⟨1, h⟩
+    else ComputabilityKnowledge.WWOrdinalTermSemantics.Term.zero) =
+    u (UnaryCarrier.headIndex n)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetFloorProof.lean:32:91: error: unsolved goals
+p : Policy
+Γ : List Ty
+m : ℕ
+h : OrdinalVector (Ty.ground :: Γ) m
+pt : OrdinalPartialVector Γ Ty.ground
+hp : AdmissiblePartial.run p 0 (h 0) = some pt
+ps : Fin (m + 1) → OrdinalPartialVector Γ Ty.ground
+hps : (collect (m + 1) fun i => AdmissiblePartial.run p (↑i) (h i)) = some ps
+hrun : AdmissiblePartial.run p (↑0) (h 0) = some (ps 0)
+he : ps 0 = pt
+⊢ ComputabilityKnowledge.WWOrdinalTermSemantics.Term.add
+      (repeated p MacroSite.scalarRepeat (2 ^ (Ty.ground.level + 1) * (List.map ordinalPartialSize (List.ofFn h)).sum)
+        (pt 0))
+      (ordinalHeadClosure (h 0)) =
+    ComputabilityKnowledge.WWOrdinalTermSemantics.Term.add
+      (repeated p MacroSite.scalarRepeat (2 * (List.map ordinalPartialSize (List.ofFn h)).sum) (pt 0))
+      (ordinalHeadClosure (h 0))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetFloorProof.lean:98:13: error: don't know how to synthesize implicit argument `b`
+  @Iff.mpr
+    (Active Variable.here
+      (ComputabilityKnowledge.WWOrdinalTermSemantics.Term.add (repeated p MacroSite.scalarRepeat factor (ps 0 0))
+        ?m.196))
+    (Active Variable.here (repeated p MacroSite.scalarRepeat factor (ps 0 0)) ∨ Active Variable.here ?m.196)
+    (activeAdd Variable.here (repeated p MacroSite.scalarRepeat factor (ps 0 0)) ?m.196) (Or.inl hrep.left)
+context:
+p : Policy
+k : ℕ
+Γ : List Ty
+m : ℕ
+h : OrdinalVector (Ty.ground :: Ty.curriedGround (k + 1) :: Γ) m
+u : OrdinalVector (Ty.curriedGround (k + 1) :: Γ) (max (Ty.ground.level + 1) m)
+hv : abstraction p h = some u
+ha : Active Variable.here.there (h 0)
+ps : Fin (m + 1) → OrdinalPartialVector (Ty.curriedGround (k + 1) :: Γ) Ty.ground
+hps : (collect (m + 1) fun i => AdmissiblePartial.run p (↑i) (h i)) = some ps
+right✝ :
+  (fun j =>
+      if hm : ↑j < m + 1 then
+        ComputabilityKnowledge.WWOrdinalTermSemantics.Term.add
+          (if ↑j = 0 then
+            repeated p MacroSite.scalarRepeat
+              (2 ^ (Ty.ground.level + 1) * (List.map ordinalPartialSize (List.ofFn h)).sum) (ps 0 0)
+          else
+            if hj : ↑j < Ty.ground.level + 2 then
+              expand (p.shape MacroSite.positiveAbstraction m) fun i => ps i ⟨↑j, hj⟩
+            else ordinalHeadClosure (h ⟨↑j, ⋯⟩))
+          (ordinalHeadClosure (h ⟨↑j, hm⟩))
+      else
+        if ↑j = 0 then
+          repeated p MacroSite.scalarRepeat
+            (2 ^ (Ty.ground.level + 1) * (List.map ordinalPartialSize (List.ofFn h)).sum) (ps 0 0)
+        else
+          if hj : ↑j < Ty.ground.level + 2 then expand (p.shape MacroSite.positiveAbstraction m) fun i => ps i ⟨↑j, hj⟩
+          else ordinalHeadClosure (h ⟨↑j, ⋯⟩)) =
+    u
+hp : AdmissiblePartial.run p (↑0) (h 0) = some (ps 0)
+hp' : AdmissiblePartial.run p 0 (h 0) = some (ps 0)
+hactive : Active Variable.here (ps 0 0)
+factor : ℕ := ⋯
+hfactor : 2 ≤ factor
+hrep :
+  Active Variable.here (repeated p MacroSite.scalarRepeat factor (ps 0 0)) ∧
+    3 ≤ scalarSecond (repeated p MacroSite.scalarRepeat factor (ps 0 0))
+⊢ Prop
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetFloorProof.lean:98:13: error: don't know how to synthesize implicit argument `a`
+  @Iff.mpr
+    (Active Variable.here
+      (ComputabilityKnowledge.WWOrdinalTermSemantics.Term.add (repeated p MacroSite.scalarRepeat factor (ps 0 0))
+        ?m.196))
+    (Active Variable.here (repeated p MacroSite.scalarRepeat factor (ps 0 0)) ∨ Active Variable.here ?m.196)
+    (activeAdd Variable.here (repeated p MacroSite.scalarRepeat factor (ps 0 0)) ?m.196) (Or.inl hrep.left)
+context:
+p : Policy
+k : ℕ
+Γ : List Ty
+m : ℕ
+h : OrdinalVector (Ty.ground :: Ty.curriedGround (k + 1) :: Γ) m
+u : OrdinalVector (Ty.curriedGround (k + 1) :: Γ) (max (Ty.ground.level + 1) m)
+hv : abstraction p h = some u
+ha : Active Variable.here.there (h 0)
+ps : Fin (m + 1) → OrdinalPartialVector (Ty.curriedGround (k + 1) :: Γ) Ty.ground
+hps : (collect (m + 1) fun i => AdmissiblePartial.run p (↑i) (h i)) = some ps
+right✝ :
+  (fun j =>
+      if hm : ↑j < m + 1 then
+        ComputabilityKnowledge.WWOrdinalTermSemantics.Term.add
+          (if ↑j = 0 then
+            repeated p MacroSite.scalarRepeat
+              (2 ^ (Ty.ground.level + 1) * (List.map ordinalPartialSize (List.ofFn h)).sum) (ps 0 0)
+          else
+            if hj : ↑j < Ty.ground.level + 2 then
+              expand (p.shape MacroSite.positiveAbstraction m) fun i => ps i ⟨↑j, hj⟩
+            else ordinalHeadClosure (h ⟨↑j, ⋯⟩))
+          (ordinalHeadClosure (h ⟨↑j, hm⟩))
+      else
+        if ↑j = 0 then
+          repeated p MacroSite.scalarRepeat
+            (2 ^ (Ty.ground.level + 1) * (List.map ordinalPartialSize (List.ofFn h)).sum) (ps 0 0)
+        else
+          if hj : ↑j < Ty.ground.level + 2 then expand (p.shape MacroSite.positiveAbstraction m) fun i => ps i ⟨↑j, hj⟩
+          else ordinalHeadClosure (h ⟨↑j, ⋯⟩)) =
+    u
+hp : AdmissiblePartial.run p (↑0) (h 0) = some (ps 0)
+hp' : AdmissiblePartial.run p 0 (h 0) = some (ps 0)
+hactive : Active Variable.here (ps 0 0)
+factor : ℕ := ⋯
+hfactor : 2 ≤ factor
+hrep :
+  Active Variable.here (repeated p MacroSite.scalarRepeat factor (ps 0 0)) ∧
+    3 ≤ scalarSecond (repeated p MacroSite.scalarRepeat factor (ps 0 0))
+⊢ Prop
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetFloorProof.lean:98:38: error: don't know how to synthesize implicit argument `b`
+  @Or.inl (Active Variable.here (repeated p MacroSite.scalarRepeat factor (ps 0 0))) (Active Variable.here ?m.196)
+    hrep.left
+context:
+p : Policy
+k : ℕ
+Γ : List Ty
+m : ℕ
+h : OrdinalVector (Ty.ground :: Ty.curriedGround (k + 1) :: Γ) m
+u : OrdinalVector (Ty.curriedGround (k + 1) :: Γ) (max (Ty.ground.level + 1) m)
+hv : abstraction p h = some u
+ha : Active Variable.here.there (h 0)
+ps : Fin (m + 1) → OrdinalPartialVector (Ty.curriedGround (k + 1) :: Γ) Ty.ground
+hps : (collect (m + 1) fun i => AdmissiblePartial.run p (↑i) (h i)) = some ps
+right✝ :
+  (fun j =>
+      if hm : ↑j < m + 1 then
+        ComputabilityKnowledge.WWOrdinalTermSemantics.Term.add
+          (if ↑j = 0 then
+            repeated p MacroSite.scalarRepeat
+              (2 ^ (Ty.ground.level + 1) * (List.map ordinalPartialSize (List.ofFn h)).sum) (ps 0 0)
+          else
+            if hj : ↑j < Ty.ground.level + 2 then
+              expand (p.shape MacroSite.positiveAbstraction m) fun i => ps i ⟨↑j, hj⟩
+            else ordinalHeadClosure (h ⟨↑j, ⋯⟩))
+          (ordinalHeadClosure (h ⟨↑j, hm⟩))
+      else
+        if ↑j = 0 then
+          repeated p MacroSite.scalarRepeat
+            (2 ^ (Ty.ground.level + 1) * (List.map ordinalPartialSize (List.ofFn h)).sum) (ps 0 0)
+        else
+          if hj : ↑j < Ty.ground.level + 2 then expand (p.shape MacroSite.positiveAbstraction m) fun i => ps i ⟨↑j, hj⟩
+          else ordinalHeadClosure (h ⟨↑j, ⋯⟩)) =
+    u
+hp : AdmissiblePartial.run p (↑0) (h 0) = some (ps 0)
+hp' : AdmissiblePartial.run p 0 (h 0) = some (ps 0)
+hactive : Active Variable.here (ps 0 0)
+factor : ℕ := ⋯
+hfactor : 2 ≤ factor
+hrep :
+  Active Variable.here (repeated p MacroSite.scalarRepeat factor (ps 0 0)) ∧
+    3 ≤ scalarSecond (repeated p MacroSite.scalarRepeat factor (ps 0 0))
+⊢ Prop
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetFloorProof.lean:98:32: error: don't know how to synthesize placeholder for argument `b`
+context:
+p : Policy
+k : ℕ
+Γ : List Ty
+m : ℕ
+h : OrdinalVector (Ty.ground :: Ty.curriedGround (k + 1) :: Γ) m
+u : OrdinalVector (Ty.curriedGround (k + 1) :: Γ) (max (Ty.ground.level + 1) m)
+hv : abstraction p h = some u
+ha : Active Variable.here.there (h 0)
+ps : Fin (m + 1) → OrdinalPartialVector (Ty.curriedGround (k + 1) :: Γ) Ty.ground
+hps : (collect (m + 1) fun i => AdmissiblePartial.run p (↑i) (h i)) = some ps
+right✝ :
+  (fun j =>
+      if hm : ↑j < m + 1 then
+        ComputabilityKnowledge.WWOrdinalTermSemantics.Term.add
+          (if ↑j = 0 then
+            repeated p MacroSite.scalarRepeat
+              (2 ^ (Ty.ground.level + 1) * (List.map ordinalPartialSize (List.ofFn h)).sum) (ps 0 0)
+          else
+            if hj : ↑j < Ty.ground.level + 2 then
+              expand (p.shape MacroSite.positiveAbstraction m) fun i => ps i ⟨↑j, hj⟩
+            else ordinalHeadClosure (h ⟨↑j, ⋯⟩))
+          (ordinalHeadClosure (h ⟨↑j, hm⟩))
+      else
+        if ↑j = 0 then
+          repeated p MacroSite.scalarRepeat
+            (2 ^ (Ty.ground.level + 1) * (List.map ordinalPartialSize (List.ofFn h)).sum) (ps 0 0)
+        else
+          if hj : ↑j < Ty.ground.level + 2 then expand (p.shape MacroSite.positiveAbstraction m) fun i => ps i ⟨↑j, hj⟩
+          else ordinalHeadClosure (h ⟨↑j, ⋯⟩)) =
+    u
+hp : AdmissiblePartial.run p (↑0) (h 0) = some (ps 0)
+hp' : AdmissiblePartial.run p 0 (h 0) = some (ps 0)
+hactive : Active Variable.here (ps 0 0)
+factor : ℕ := ⋯
+hfactor : 2 ≤ factor
+hrep :
+  Active Variable.here (repeated p MacroSite.scalarRepeat factor (ps 0 0)) ∧
+    3 ≤ scalarSecond (repeated p MacroSite.scalarRepeat factor (ps 0 0))
+⊢ OrdinalExpression (Ty.curriedGround (k + 1) :: Γ)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetFloorProof.lean:98:7: error: failed to infer `have` declaration type
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetFloorProof.lean:86:30: error: unsolved goals
+p : Policy
+k : ℕ
+Γ : List Ty
+m : ℕ
+h : OrdinalVector (Ty.ground :: Ty.curriedGround (k + 1) :: Γ) m
+u : OrdinalVector (Ty.curriedGround (k + 1) :: Γ) (max (Ty.ground.level + 1) m)
+hv : abstraction p h = some u
+ha : Active Variable.here.there (h 0)
+ps : Fin (m + 1) → OrdinalPartialVector (Ty.curriedGround (k + 1) :: Γ) Ty.ground
+hps : (collect (m + 1) fun i => AdmissiblePartial.run p (↑i) (h i)) = some ps
+right✝ :
+  (fun j =>
+      if hm : ↑j < m + 1 then
+        ComputabilityKnowledge.WWOrdinalTermSemantics.Term.add
+          (if ↑j = 0 then
+            repeated p MacroSite.scalarRepeat
+              (2 ^ (Ty.ground.level + 1) * (List.map ordinalPartialSize (List.ofFn h)).sum) (ps 0 0)
+          else
+            if hj : ↑j < Ty.ground.level + 2 then
+              expand (p.shape MacroSite.positiveAbstraction m) fun i => ps i ⟨↑j, hj⟩
+            else ordinalHeadClosure (h ⟨↑j, ⋯⟩))
+          (ordinalHeadClosure (h ⟨↑j, hm⟩))
+      else
+        if ↑j = 0 then
+          repeated p MacroSite.scalarRepeat
+            (2 ^ (Ty.ground.level + 1) * (List.map ordinalPartialSize (List.ofFn h)).sum) (ps 0 0)
+        else
+          if hj : ↑j < Ty.ground.level + 2 then expand (p.shape MacroSite.positiveAbstraction m) fun i => ps i ⟨↑j, hj⟩
+          else ordinalHeadClosure (h ⟨↑j, ⋯⟩)) =
+    u
+hp : AdmissiblePartial.run p (↑0) (h 0) = some (ps 0)
+hp' : AdmissiblePartial.run p 0 (h 0) = some (ps 0)
+hactive : Active Variable.here (ps 0 0)
+factor : ℕ := 2 * (List.map ordinalPartialSize (List.ofFn h)).sum
+hfactor : 2 ≤ factor
+hrep :
+  Active Variable.here (repeated p MacroSite.scalarRepeat factor (ps 0 0)) ∧
+    3 ≤ scalarSecond (repeated p MacroSite.scalarRepeat factor (ps 0 0))
+⊢ 5 ≤
+    scalarSecond
+      (ComputabilityKnowledge.WWOrdinalTermSemantics.Term.add (repeated p MacroSite.scalarRepeat factor (ps 0 0))
+        (ordinalHeadClosure (h 0)))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetFloorProof.lean:110:59: error: mod_cast has type
+  ∀ (q : OrdinalExpression (?m.67 :: ?m.66)), 1 ≤ scalarSecond q
+but is expected to have type
+  1 ≤ scalarSecond (u 0)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetFloorProof.lean:110:2: error: unsolved goals
+case pos
+p : Policy
+k : ℕ
+Γ : List Ty
+n : ℕ
+e : TrackedSource.Expr k (Ty.curriedGround (k + 1) :: Γ) Variable.here n
+u : OrdinalVector (Ty.curriedGround (k + 1) :: Γ) (Ty.curriedGround n).level
+hu : assignment p (TrackedSource.erase e) = some u
+he : TrackedSource.active e = false
+hp : 1 ≤ ↑(scalarSecond (u 0))
+⊢ CurrentReserve.sourceFloor e ≤ ↑(scalarSecond (u 0))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetFloorProof.lean:108:65: error: unsolved goals
+case neg
+p : Policy
+k : ℕ
+Γ : List Ty
+n : ℕ
+e : TrackedSource.Expr k (Ty.curriedGround (k + 1) :: Γ) Variable.here n
+u : OrdinalVector (Ty.curriedGround (k + 1) :: Γ) (Ty.curriedGround n).level
+hu : assignment p (TrackedSource.erase e) = some u
+he : ¬TrackedSource.active e = false
+⊢ CurrentReserve.sourceFloor e ≤ ↑(scalarSecond (u 0))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetFloorProof.lean:111:50: error: unexpected token '('; expected command

@@ -1,0 +1,68 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionChainProof.lean:104:18: error(lean.unknownIdentifier): Unknown identifier `actualNaturalSumFiniteRight`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionChainProof.lean:114:44: warning: This simp argument is unused:
+  ScalarCarrierAccounting.unitValue
+
+Hint: Omit it from the simp argument list.
+  simp only [OriginalDomain.expressionValue,̵S̵c̵a̵l̵a̵r̵C̵a̵r̵r̵i̵e̵r̵A̵c̵c̵o̵u̵n̵t̵i̵n̵g̵.̵u̵n̵i̵t̵V̵a̵l̵u̵e̵] at hv
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionChainProof.lean:134:17: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  StandardControlCurrent.PolicyAssignment.assignmentCode p (List.map SyntaxCode.typeCode (context ops))
+    (SyntaxCode.encodeTerm (SourceUnaryChain.chainSource (terms ops)))
+in the target expression
+  (have ctx := List.map SyntaxCode.typeCode (context ops);
+    have src := SyntaxCode.encodeTerm (SourceUnaryChain.chainSource (terms ops));
+    do
+    let v ← StandardControlCurrent.PolicyAssignment.assignmentCode p ctx src
+    pure (ctx, src, v)) =
+    some
+      (List.map SyntaxCode.typeCode (context ops), SyntaxCode.encodeTerm (SourceUnaryChain.chainSource (terms ops)),
+        OrdinalSyntax.vectorCode v)
+
+case refine_1
+p : Policy
+f : ℕ → ℕ
+Γ : List Ty
+ops : List (Operator Γ)
+ha : ∀ op ∈ ops, Operator.Assigned p op
+hs : CurrentUnaryChain.Assigned p (terms ops) (vectors ops)
+v : OrdinalVector (context ops) 1
+hv : AdmissibleAssignment.assignment p (SourceUnaryChain.chainSource (terms ops)) = some v
+hws : CurrentUnaryChain.Assigned p (terms ops) (vectors ops)
+hhead :
+  ∀ (ρ : Variable (context ops) Ty.ground → ℕ),
+    ParametricSourceSuccessor.denoteWith f (commonUnits ρ) (v 1) = headSum f (commonUnits ρ) (vectors ops)
+hm :
+  NumericUnaryChain.contextCode (List.map SyntaxCode.typeCode Γ) (List.map operatorCode ops) =
+      List.map SyntaxCode.typeCode (context ops) ∧
+    (NumericUnaryChain.mergeData (List.map operatorCode ops)).1 =
+        (List.map (fun op => op.privateContext.length) ops).sum ∧
+      (NumericUnaryChain.mergeData (List.map operatorCode ops)).2 = List.map NumericUnaryChain.pairCode (merged ops)
+hl :
+  NumericUnaryChain.chainCode (List.map SyntaxCode.encodeTerm (terms ops)) =
+    SyntaxCode.encodeTerm (SourceUnaryChain.chainSource (terms ops))
+hv' :
+  StandardControlCurrent.PolicyAssignment.assignmentCode p (List.map SyntaxCode.typeCode (context ops))
+      (SyntaxCode.encodeTerm (SourceUnaryChain.chainSource (terms ops))) =
+    some (OrdinalSyntax.vectorCode v)
+hcode :
+  List.map Prod.fst (List.map NumericUnaryChain.pairCode (merged ops)) = List.map SyntaxCode.encodeTerm (terms ops)
+⊢ (have ctx := List.map SyntaxCode.typeCode (context ops);
+    have src := SyntaxCode.encodeTerm (SourceUnaryChain.chainSource (terms ops));
+    do
+    let v ← StandardControlCurrent.PolicyAssignment.assignmentCode p ctx src
+    pure (ctx, src, v)) =
+    some
+      (List.map SyntaxCode.typeCode (context ops), SyntaxCode.encodeTerm (SourceUnaryChain.chainSource (terms ops)),
+        OrdinalSyntax.vectorCode v)
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    terms ops
+  has type
+    List (OriginalTerm (context ops) (Ty.curriedGround 1))
+  but is expected to have type
+    List (OriginalTerm (context ops) (Ty.ground.arrow Ty.ground))
+  in the application
+    SourceUnaryChain.chainSource (terms ops)

@@ -1,0 +1,131 @@
+--- LogicLineages/PersistentMarking/NumberedWindowPrimarySequenceTermTrace.lean
++++ LogicLineages/PersistentMarking/NumberedWindowPrimarySequenceTermTrace.lean
+@@ -19,19 +19,15 @@
+     TypedExchangeTrace S K C τ Q R :=
+   .next h (.refl h.2.2)
+ 
+-def termAppend {S K C τ Q R T} (p : TypedExchangeTrace S K C τ Q R)
+-    (q : TypedExchangeTrace S K C τ R T) : TypedExchangeTrace S K C τ Q T := by
+-  cases p with
+-  | refl _ => exact q
+-  | next h rest => exact .next h (termAppend rest q)
+-termination_by structural p
++def termAppend {S K C τ Q R T} :
++    TypedExchangeTrace S K C τ Q R → TypedExchangeTrace S K C τ R T →
++      TypedExchangeTrace S K C τ Q T
++  | .refl _, q => q
++  | .next h rest, q => .next h (termAppend rest q)
+ 
+-def termReverse {S K C τ Q R} (p : TypedExchangeTrace S K C τ Q R) :
+-    TypedExchangeTrace S K C τ R Q := by
+-  cases p with
+-  | refl ht => exact .refl ht
+-  | next h rest =>
+-    exact termAppend (termReverse rest) (termOne ⟨termSymm h.1,h.2.2,h.2.1⟩)
+-termination_by structural p
++def termReverse {S K C τ Q R} :
++    TypedExchangeTrace S K C τ Q R → TypedExchangeTrace S K C τ R Q
++  | .refl ht => .refl ht
++  | .next h rest => termAppend (termReverse rest) (termOne ⟨termSymm h.1,h.2.2,h.2.1⟩)
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowPrimarySequenceTermTrace
+--- LogicLineages/PersistentMarking/NumberedWindowPrimarySequenceArgsTrace.lean
++++ LogicLineages/PersistentMarking/NumberedWindowPrimarySequenceArgsTrace.lean
+@@ -15,12 +15,10 @@
+   | refl h => exact h
+   | next _ _ ih => exact ih
+ 
+-def argsAppend {S K C types qs rs ts} (p : TypedArgsExchangeTrace S K C types qs rs)
+-    (q : TypedArgsExchangeTrace S K C types rs ts) :
+-    TypedArgsExchangeTrace S K C types qs ts := by
+-  cases p with
+-  | refl _ => exact q
+-  | next h rest => exact .next h (argsAppend rest q)
+-termination_by structural p
++def argsAppend {S K C types qs rs ts} :
++    TypedArgsExchangeTrace S K C types qs rs → TypedArgsExchangeTrace S K C types rs ts →
++      TypedArgsExchangeTrace S K C types qs ts
++  | .refl _, q => q
++  | .next h rest, q => .next h (argsAppend rest q)
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowPrimarySequenceArgsTrace
+--- LogicLineages/PersistentMarking/NumberedWindowPrimarySequenceTermLift.lean
++++ LogicLineages/PersistentMarking/NumberedWindowPrimarySequenceTermLift.lean
+@@ -7,13 +7,11 @@
+ private def termMap {S K C D τ υ} (F : NTerm → NTerm)
+     (hs : ∀ {Q R}, ExchangeShape S K Q R → ExchangeShape S K (F Q) (F R))
+     (ht : ∀ {Q}, Typed C Q τ → Typed D (F Q) υ)
+-    {Q R} (p : TypedExchangeTrace S K C τ Q R) :
+-    TypedExchangeTrace S K D υ (F Q) (F R) := by
+-  cases p with
+-  | refl h => exact .refl (ht h)
+-  | next h rest =>
+-    exact .next ⟨hs h.1,ht h.2.1,ht h.2.2⟩ (termMap F (@hs) (@ht) rest)
+-termination_by structural p
++    {Q R} : TypedExchangeTrace S K C τ Q R →
++      TypedExchangeTrace S K D υ (F Q) (F R)
++  | .refl h => .refl (ht h)
++  | .next h rest =>
++    .next ⟨hs h.1,ht h.2.1,ht h.2.2⟩ (termMap F (@hs) (@ht) rest)
+ 
+ def underLam {S K C σ τ Q R} (p : TypedExchangeTrace S K (C.push σ) τ Q R) :
+     TypedExchangeTrace S K C (.arrow σ τ) (.lam σ Q) (.lam σ R) :=
+--- LogicLineages/PersistentMarking/NumberedWindowPrimarySequenceBaseLift.lean
++++ LogicLineages/PersistentMarking/NumberedWindowPrimarySequenceBaseLift.lean
+@@ -8,13 +8,11 @@
+ private def fromArgs {S K C types τ} (F : NArgs → NTerm)
+     (hs : ∀ {qs rs}, ArgsExchangeShape S K qs rs → ExchangeShape S K (F qs) (F rs))
+     (ht : ∀ {qs}, BaseTyped C qs types → Typed C (F qs) τ)
+-    {qs rs} (p : TypedArgsExchangeTrace S K C types qs rs) :
+-    TypedExchangeTrace S K C τ (F qs) (F rs) := by
+-  cases p with
+-  | refl h => exact .refl (ht h)
+-  | next h rest =>
+-    exact .next ⟨hs h.1,ht h.2.1,ht h.2.2⟩ (fromArgs F (@hs) (@ht) rest)
+-termination_by structural p
++    {qs rs} : TypedArgsExchangeTrace S K C types qs rs →
++      TypedExchangeTrace S K C τ (F qs) (F rs)
++  | .refl h => .refl (ht h)
++  | .next h rest =>
++    .next ⟨hs h.1,ht h.2.1,ht h.2.2⟩ (fromArgs F (@hs) (@ht) rest)
+ 
+ def underOrdinary {S K C f qs rs}
+     (p : TypedArgsExchangeTrace S K C f.arguments qs rs) :
+--- LogicLineages/PersistentMarking/NumberedWindowPrimarySequenceConsLift.lean
++++ LogicLineages/PersistentMarking/NumberedWindowPrimarySequenceConsLift.lean
+@@ -6,23 +6,19 @@
+ open NumberedWindowPrimarySequence
+ open NumberedWindowPrimarySequenceTermTrace NumberedWindowPrimarySequenceArgsTrace
+ 
+-def argsFirstSite {S K C τ types Q R qs}
+-    (p : TypedExchangeTrace S K C τ Q R) (hs : BaseTyped C qs types) :
+-    TypedArgsExchangeTrace S K C (τ::types) (.cons Q qs) (.cons R qs) := by
+-  cases p with
+-  | refl h => exact .refl (.cons h hs)
+-  | next h rest =>
+-    exact .next ⟨.first h.1,.cons h.2.1 hs,.cons h.2.2 hs⟩ (argsFirstSite rest hs)
+-termination_by structural p
++def argsFirstSite {S K C τ types Q R qs} :
++    TypedExchangeTrace S K C τ Q R → BaseTyped C qs types →
++      TypedArgsExchangeTrace S K C (τ::types) (.cons Q qs) (.cons R qs)
++  | .refl h, hs => .refl (.cons h hs)
++  | .next h rest, hs =>
++    .next ⟨.first h.1,.cons h.2.1 hs,.cons h.2.2 hs⟩ (argsFirstSite rest hs)
+ 
+-def argsLaterSite {S K C τ types Q qs rs}
+-    (hq : Typed C Q τ) (p : TypedArgsExchangeTrace S K C types qs rs) :
+-    TypedArgsExchangeTrace S K C (τ::types) (.cons Q qs) (.cons Q rs) := by
+-  cases p with
+-  | refl h => exact .refl (.cons hq h)
+-  | next h rest =>
+-    exact .next ⟨.later h.1,.cons hq h.2.1,.cons hq h.2.2⟩ (argsLaterSite hq rest)
+-termination_by structural p
++def argsLaterSite {S K C τ types Q qs rs} (hq : Typed C Q τ) :
++    TypedArgsExchangeTrace S K C types qs rs →
++      TypedArgsExchangeTrace S K C (τ::types) (.cons Q qs) (.cons Q rs)
++  | .refl h => .refl (.cons hq h)
++  | .next h rest =>
++    .next ⟨.later h.1,.cons hq h.2.1,.cons hq h.2.2⟩ (argsLaterSite hq rest)
+ 
+ theorem consNonempty {S K C τ types Q R qs rs}
+     (p : Nonempty (TypedExchangeTrace S K C τ Q R))

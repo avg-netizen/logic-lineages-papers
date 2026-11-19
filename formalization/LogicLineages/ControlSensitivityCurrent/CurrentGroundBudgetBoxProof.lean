@@ -58,7 +58,8 @@ theorem fullBoxSecond (p : Policy) (k : Nat) (Γ : List Ty)
   · have := functionalLevelOne k
     omega
   · unfold ordinalVectorAt
-    rw [dif_pos (boxSecond k).isLt]
+    have h2 : 2 < (Ty.arrow (Ty.curriedGround (k+1)) Ty.ground).level+1 := (boxSecond k).isLt
+    rw [dif_pos h2]
     rfl
 
 theorem originalBox : CurrentGroundBudgetTargets.OriginalBox := by

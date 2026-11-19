@@ -34,6 +34,7 @@ private theorem freeAccount (p : Policy) (f : Nat → Nat) {k Γ}
 
 private theorem noFreeActive {k Γ} (q : OrdinalExpression (Ty.curriedGround (k+1) :: Γ))
     (h : ¬ ordinalHeadFree q = true) : Active (.here : Variable _ _) q := by
+  classical
   by_contra hn
   exact h (HeadFiniteSurplus.Proof.headFree_of_inactive q hn)
 

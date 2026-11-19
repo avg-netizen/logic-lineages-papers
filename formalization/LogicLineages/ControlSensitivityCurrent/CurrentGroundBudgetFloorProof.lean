@@ -22,7 +22,8 @@ theorem applicationScalar (p : Policy) {Γ n} (u : OrdinalVector Γ (Ty.curriedG
   split
   · omega
   · unfold ordinalVectorAt
-    rw [dif_pos (UnaryCarrier.headIndex n).isLt]
+    have h1 : 1 < (Ty.curriedGround (n+1)).level+1 := (UnaryCarrier.headIndex n).isLt
+    rw [dif_pos h1]
     rfl
 
 theorem abstractionScalar (p : Policy) {Γ m} (h : OrdinalVector (.ground :: Γ) m)
@@ -36,7 +37,7 @@ theorem abstractionScalar (p : Policy) {Γ m} (h : OrdinalVector (.ground :: Γ)
   have he : ps 0 = pt := Option.some.inj (hrun.symm.trans hp)
   change (.add (repeated p .scalarRepeat _ (ps 0 0))
     (ordinalHeadClosure (h 0)) : OrdinalExpression Γ) = _
-  rw [he]
+  rw [he,show (2 : Nat)^(Ty.ground.level+1) = 2 by decide]
 
 theorem groundPartialActivity (p : Policy) {k Γ}
     (F : Variable Γ (Ty.curriedGround (k+1))) (q : OrdinalExpression (.ground :: Γ))
@@ -95,7 +96,8 @@ private theorem abstractionCount (p : Policy) {k Γ m}
   have hrep := repeatedCount p (ps 0 0) hactive factor hfactor
   rw [abstractionScalar p h u (ps 0) hv hp']
   change 5 ≤ scalarSecond (.add (repeated p .scalarRepeat factor (ps 0 0)) (ordinalHeadClosure (h 0)))
-  have hw := (activeAdd .here _ _).2 (Or.inl hrep.1)
+  have hw := (activeAdd .here (repeated p .scalarRepeat factor (ps 0 0))
+    (ordinalHeadClosure (h 0))).2 (Or.inl hrep.1)
   rw [scalarSecond,if_neg (activeNotHeadFree hw)]
   have hc := hrep.2
   have hd := OriginalSecondBudget.Proof.scalarSecond_pos (ordinalHeadClosure (h 0))
@@ -107,8 +109,8 @@ theorem sourceCountBound (p : Policy) {k Γ n}
     (hu : assignment p (TrackedSource.erase e) = some u) :
     CurrentReserve.sourceFloor e ≤ (scalarSecond (u 0) : Int) := by
   by_cases he : TrackedSource.active e = false
-  · have hp : (1 : Int) ≤ (scalarSecond (u 0) : Int) := by exact_mod_cast
-      OriginalSecondBudget.Proof.scalarSecond_pos (u 0)
+  · have hp : (1 : Int) ≤ (scalarSecond (u 0) : Int) := by
+      exact_mod_cast (OriginalSecondBudget.Proof.scalarSecond_pos (u 0))
     simpa [CurrentReserve.sourceFloor,he] using hp
   have hea : TrackedSource.active e = true := Bool.eq_true_of_not_eq_false he
   have hactive := (sourceActivity p e u hu).2 hea

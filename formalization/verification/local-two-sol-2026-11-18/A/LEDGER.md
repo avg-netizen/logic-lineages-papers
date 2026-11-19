@@ -1125,3 +1125,57 @@ and translates the existing canonical-port derivations into fixed-point bits.
   48current modules/57merged pins (28own)/8 exact audits; supplemental
   zero errors. READY for independent supporting acceptance; no claim of
   finite-sequence completeness or exact finite classes.
+
+## 2026-11-19 — accepted one-site exchange; finite-sequence comparator
+
+- Coordinator accepted supporting445 exact elementary primary exchange
+  after independent recursive/object/receipt/profile and exact audit
+  replay48modules/57pins/eight standard-only aliases. Numbered register
+  unchanged; no finite class or arithmetic theorem.
+- Source-first NumberedWindowPrimarySequence and exact Targets frozen
+  at f52b339c..., 28 pins, static50. Scalar/ordered counterparts preserve
+  same genuine typing and original one-site shapes. Traces use Type
+  data carrying actual visited vertices, distinguish admitted and
+  typed variants; final target pays every supplied visit exactly from
+  INITIAL guard and actual checked primary locality, including final
+  and repeated vertices. Finite saturation, reps, numerical arithmetic,
+  and source ID1 remain unpaid. No proofs/native before independent
+  source/comparator review and target-only preflight.
+
+## 2026-11-19 — exact primary finite-sequence native pass
+
+- PRIMARY-SEQUENCES-TARGET-1139 exact target-only exit0 50/50, receipt
+  1795088316551210352-2, all28 freeze pins independently verified.
+- Exact1145 ordinary indexed-trace tactic structural lowering failure;
+  original14sources/manifests/receipt/log retained. Reviewed direct
+  equation compiler-only repair of seven operations in five new
+  proof/lift files under unchanged typed trace types/constructors;
+  independent inverse patch to same preserved source confirmed. Frozen
+  comparator unchanged, no cap or resource-stop retry.
+- PRIMARY-SEQUENCES-EXACT-1149 clean original-core70/70, receipt
+  1795088939901263968-2; overall519976KiB inherited; new489788 max,
+  root486732. All5 aliases propext/Quot.sound only; reaped/locks free.
+- LANE-A-NUMBERED-WINDOW-PRIMARY-SEQUENCES-CLOUD-EVIDENCE.json
+  82d21bf2977a70825b7580504b0cda365208ccb55a7b9b86e10a28b823c09d24,
+  70current/57pins/5audits, supplemental zero errors. READY supporting
+  actual typed primary/ordered sequences and exact actual supplied
+  visited window from initial only. No bounded saturation,
+  full executable classes, arithmetic coding or ID1.
+
+## 2026-11-19 — accepted exact primary sequences; finite class-list comparator
+
+- Coordinator accepted supporting446 after independent70current/57pins/
+  5 exact standard-only audit replay. Full actual typed/admitted
+  primary-congruence sequence completeness and exact same witness
+  visited-list admission from the initial guard only. No full
+  numbered arithmetic promotion.
+- Next new source-first NumberedWindowFiniteSaturation,
+  NumberedWindowPrimaryClassList/Targets and complete source map;
+  freeze292f012e..., 31 pins, static82. Fixed duplicate-permitting
+  candidate list; true literal identity/checked actual one-site edge,
+  independently defined finite graph paths. Exact length-bound
+  fixed point and original Primary membership with no separate
+  target guard/coverage premise. Concrete finite binder list decision,
+  not effective arbitrary lookup representation. No least representative,
+  Arithmetic certificate graph or ID1 claim. Target only pending
+  independent scope/preflight; no author proofs.

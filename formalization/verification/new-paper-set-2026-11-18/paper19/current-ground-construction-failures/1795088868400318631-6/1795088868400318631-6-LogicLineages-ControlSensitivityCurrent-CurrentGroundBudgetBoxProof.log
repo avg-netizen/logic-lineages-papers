@@ -1,0 +1,31 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetBoxProof.lean:22:60: warning: This simp argument is unused:
+  List.getElem?_ofFn
+
+Hint: Omit it from the simp argument list.
+  simp [̵O̵r̵d̵i̵n̵a̵l̵S̵y̵n̵t̵a̵x̵.̵v̵e̵c̵t̵o̵r̵C̵o̵d̵e̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵o̵f̵F̵n̵]̵[̲O̲r̲d̲i̲n̲a̲l̲S̲y̲n̲t̲a̲x̲.̲v̲e̲c̲t̲o̲r̲C̲o̲d̲e̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetBoxProof.lean:41:37: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵l̵l̵e̵c̵t̵,̵F̵i̵n̵.̵v̵a̵l̵_̵z̵e̵r̵o̵,̵h̵v̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵]̵[̲c̲o̲l̲l̲e̲c̲t̲,̲ ̲F̲i̲n̲.̲v̲a̲l̲_̲z̲e̲r̲o̲,̲ ̲h̲v̲]̲ at hB
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetBoxProof.lean:61:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  dite (↑(boxSecond k) < ((Ty.curriedGround (k + 1)).arrow Ty.ground).level + 1) ?m.73 ?m.74
+in the target expression
+  (if h : 2 < ((Ty.curriedGround (k + 1)).arrow Ty.ground).level + 1 then B ⟨2, h⟩
+    else ComputabilityKnowledge.WWOrdinalTermSemantics.Term.zero) =
+    B (boxSecond k)
+
+case isFalse
+p : Policy
+k : ℕ
+Γ : List Ty
+B : OrdinalVector Γ ((Ty.curriedGround (k + 1)).arrow Ty.ground).level
+caller : OrdinalVector Γ (Ty.curriedGround (k + 1)).level
+h✝ : ¬2 ≤ (Ty.curriedGround (k + 1)).level
+⊢ (if h : 2 < ((Ty.curriedGround (k + 1)).arrow Ty.ground).level + 1 then B ⟨2, h⟩
+    else ComputabilityKnowledge.WWOrdinalTermSemantics.Term.zero) =
+    B (boxSecond k)
