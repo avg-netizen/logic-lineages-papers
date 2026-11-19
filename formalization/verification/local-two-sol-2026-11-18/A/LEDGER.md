@@ -1070,3 +1070,58 @@ and translates the existing canonical-port derivations into fixed-point bits.
   bits including retained declarations, and concrete finite-stack
   instantiation. Arbitrary lookup C is modeled only as a parameter,
   not represented arithmetic code. Pending independent target scope.
+
+## 2026-11-19 — literal equality, finite contexts and typing/window bits native pass
+
+- TYPING-BITS-TARGET-1110 exact current comparator-only exit0,
+  23/23 receipt1795086558470061136-2, 20 frozen pins, closure peak495804
+  KiB. Three separate source definitions unchanged after freeze.
+- Six separately authored proof leaves; known unsupported default
+  induction over mutual NArgs replaced with independently approved
+  structural-tail proof helpers before native, exact pre-edit edition
+  preserved. Three ordinary failed editions preserved exhaustively:
+  1117 secondary argument already introduced, 1119 explicit empty
+  lookup function equality needed, 1120 final aliases require fully
+  explicit instantiation. No resource stops, cap or target changes.
+- TYPING-BITS-EXACT-1122 clean current/original core exit0 36/36,
+  receipt1795087338152511759-2, max495804 (root478308) KiB. All eight
+  exact audits only propext/Quot.sound, native reaped and locks free.
+- Current evidence LANE-A-NUMBERED-WINDOW-TYPING-BITS-CLOUD-EVIDENCE.json
+  SHA5467e2b20b106bc17edd08835b0ea26e1d18b8c7b1229172a7b344cdb7fcff63:
+  36 recursive current modules/49 merged pins (own20)/8 exact audits,
+  supplemental review zero errors. READY supporting only; no exact
+  primary class membership, least representative, numerical coding,
+  arbitrary lookup effectiveness or arithmetic accessibility assertion.
+
+## 2026-11-19 — accepted typing bits and one-site primary exchange draft
+
+- Coordinator accepted supporting444, independently replaying all36
+  current modules/49pins/eight exact standard-only audits, unchanged
+  numbered148/19 at adoption. Literal equality and actual admitted
+  finite binder/typing-window support only.
+- Source-first one-site primary exchange frozen28pins and original-core
+  target-only pass40/40, receipt1795087602828064769-2, peak495804KiB,
+  native reaped/locks free. Separate independent skeleton vs executable
+  test; same actual endpoint window/context; root f/g both admitted and
+  equivalent, exact base permutations, retained labels and extras;
+  both auxApp positions for primary equivalence only (raw still function
+  side only). An actual rooted identity is permitted, no generic
+  zero-site constructor.
+- Independent original comparator preflight released authoring. Eight
+  separate support-only proof leaves now pinned by author manifest
+  7e8caa471963488492dae5513ca915cad21f09511994ca3455cc9de2c6d13977,
+  static48. Pending exact authored review/native. Not yet converse
+  Primary finite-sequence completeness, exact class membership,
+  arithmetic coding or ID1.
+
+## 2026-11-19 — one literal contextual primary exchange clean native pass
+
+- PRIMARY-EXCHANGE-EXACT-1134 first exact original-core gate exit0
+  48/48 receipt1795087986831326457-2. All eight audited aliases
+  standard-only, maximum519976 KiB (reflection), root476228KiB.
+  Fully reaped, both locks free; no failure/cap change.
+- Current supporting evidence LANE-A-NUMBERED-WINDOW-PRIMARY-EXCHANGE-
+  CLOUD-EVIDENCE.json SHA98d569d7eb1904e69e3d1b7ecfeed6319cd16fcaa5147e369ea073a16d0a6175,
+  48current modules/57merged pins (28own)/8 exact audits; supplemental
+  zero errors. READY for independent supporting acceptance; no claim of
+  finite-sequence completeness or exact finite classes.

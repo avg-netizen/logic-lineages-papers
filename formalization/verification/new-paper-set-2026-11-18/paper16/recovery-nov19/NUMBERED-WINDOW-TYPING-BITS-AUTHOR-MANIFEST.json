@@ -5,12 +5,12 @@
   "target_freeze": "NUMBERED-WINDOW-TYPING-BITS-FROZEN.json",
   "target_preflight_receipt": "1795086558470061136-2",
   "author_source_sha256": {
-    "formalization/LogicLineages/PersistentMarking/NumberedWindowLiteralEqualityProof.lean": "4d488fadbed26b5cc2516c0b1d58cbce9f983cc21e4eada3bd537fcb538d4ca6",
-    "formalization/LogicLineages/PersistentMarking/NumberedWindowFiniteBinderProof.lean": "364f05771440bd22c033e3883f6ca49be0752dd35038dbc02e79feffa089ae40",
-    "formalization/LogicLineages/PersistentMarking/NumberedWindowTypingBitsArgsProof.lean": "51531fcfe5979cd82bdf1fdd4e9b0f3b9a19f7195edd7b2a9afb4509256c7470",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowLiteralEqualityProof.lean": "de07a8f138293761cbbeb49a865c58874f74a14af1fb9cae2242e5ea08a5d1a8",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowFiniteBinderProof.lean": "f6ece03394fce4482ecee6cced333add776d997f86f4be03402916aa63df2d64",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowTypingBitsArgsProof.lean": "7331e7a175049d66fb196dffaa2e0111199ecf26315966a0fc6fb32032a660f9",
     "formalization/LogicLineages/PersistentMarking/NumberedWindowTypingBitsCasesProof.lean": "0870eb9ae1109ce820fa439675cee5896f577546f09c059e6e397d503246b7d1",
-    "formalization/LogicLineages/PersistentMarking/NumberedWindowTypingBitsTypingProof.lean": "0300cb710c9a3f6477d81b45af44ab7805be2f345a75c86b81d300fc564e06b2",
-    "formalization/LogicLineages/PersistentMarking/NumberedWindowTypingBitsChecks.lean": "aa9dcf5046a32a0f6fbdc1ce23623dcfc8c87d8b4afdbc64c3d0656393909427"
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowTypingBitsTypingProof.lean": "fea6a106d11fbd5503eead80fed461c60242d75a9cce6470f57e6c313b9d24c0",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowTypingBitsChecks.lean": "8dbaca00d45037b84a5a714e3561c77724f0fac66f575bd6eb13defac2db5339"
   },
   "exact_aliases": [
     "NumberedWindowTypingBitsChecks.exact_LiteralTermEquality",
@@ -22,5 +22,35 @@
     "NumberedWindowTypingBitsChecks.exact_WindowBit",
     "NumberedWindowTypingBitsChecks.exact_FiniteWindowBit"
   ],
-  "claim_scope": "Supporting actual literal equality, finite binder stack representation and structural typing/window reflection. No effective coding of arbitrary C, exact class membership/arithmetic or ID1 claim."
+  "claim_scope": "Supporting actual literal equality, finite binder stack representation and structural typing/window reflection. No effective coding of arbitrary C, exact class membership/arithmetic or ID1 claim.",
+  "pre_admission_repair": {
+    "proposed_diff": "TYPING-BITS-STRUCTURAL-ARGS.proposed.diff",
+    "proposed_diff_sha256": "ed65f3a5f5e1e72a2fd5ca8a6e1007e4318df52ceb4f2239e97d4af4c6f4a555",
+    "original_manifest_path": "TYPING-BITS-STRUCTURAL-ARGS-PRE-ADMISSION/NUMBERED-WINDOW-TYPING-BITS-AUTHOR-MANIFEST.original.json",
+    "original_manifest_sha256": "0a7e22ec0a25f0f7632e2483724f378fd6a4d363ee50f8fa3f7887f23aea5600",
+    "scope": "Replace default induction unsupported for mutual NArgs with explicit structural recursion on existing argument tail; no native failure or frozen/target edits."
+  },
+  "native_proof_repairs": [
+    {
+      "failure_receipt": "1795086961791582323-2",
+      "original_manifest_path": "paper16/failed/TYPING-BITS-EXACT-1117-1795086961791582323-2/NUMBERED-WINDOW-TYPING-BITS-AUTHOR-MANIFEST.json",
+      "original_manifest_sha256": "9d3618abad32a3a5f5e46a5893195cbd494f5c6209e11e30facb0096cbbc1636",
+      "proposed_diff_sha256": "059276f1a559db0d14bcb0227cb76375965a4c7fea6cb375f4ce3acb22f45bb3",
+      "scope": "Two already introduced secondary-motive argument names only."
+    },
+    {
+      "failure_receipt": "1795087110618353898-2",
+      "original_manifest_path": "paper16/failed/TYPING-BITS-EXACT-1119-1795087110618353898-2/NUMBERED-WINDOW-TYPING-BITS-AUTHOR-MANIFEST.json",
+      "original_manifest_sha256": "2dfd433b639fec49caba181fa6e96b3e0b5d373502111a4219c881b99f07ab13",
+      "proposed_diff_sha256": "fdbf69f5c7c0ddf2aef678def3d5d39397bd2bb7efa560dcafe585e0ac0af25a",
+      "scope": "Actual empty finite-list lookup = actual empty BoundContext, explicit pointwise proof."
+    },
+    {
+      "failure_receipt": "1795087218102860434-2",
+      "original_manifest_path": "paper16/failed/TYPING-BITS-EXACT-1120-1795087218102860434-2/NUMBERED-WINDOW-TYPING-BITS-AUTHOR-MANIFEST.json",
+      "original_manifest_sha256": "e84369c59f5522c130f6f9f5a90a7855cb204c38dc6e828a5af66c09ed4501b0",
+      "proposed_diff_sha256": "f09880d5a4a38826208fe855569092ffb91de160181c9c65f1fd1b136460758f",
+      "scope": "Same exact typed/window theorem aliases explicitly instantiated; finite prefix uses the same checked original context lookup."
+    }
+  ]
 }

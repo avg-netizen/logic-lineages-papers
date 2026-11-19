@@ -7,7 +7,8 @@ open LogicLineages.OrdinalComparison.Source
 open LogicLineages.StandardControlCurrent
 open CurrentGroundAccount
 open CurrentReserve (Carrier SpawnedAccount Account reserve carrierSum unitValue)
-open AdmissibleSum ScalarAnnotationData DeterministicAccountData
+open AdmissibleSum ScalarAnnotationData
+open DeterministicAccountData (UnaryRecord)
 open CurrentUnaryChain (commonUnits)
 
 def CurrentHeadClassification : Prop :=

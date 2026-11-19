@@ -19,9 +19,10 @@ private theorem terms (Q : NTerm) : TermGoal Q := by
   | cons Q qs iq ia => exact consCase Q qs iq ia
 
 private theorem args (qs : NArgs) : ArgsGoal qs := by
-  induction qs with
+  cases qs with
   | nil => exact nilCase
-  | cons Q qs ia => exact consCase Q qs (terms Q) ia
+  | cons Q qs => exact consCase Q qs (terms Q) (args qs)
+termination_by structural qs
 
 theorem typed : ExactTypedBit := by
   intro C τ Q

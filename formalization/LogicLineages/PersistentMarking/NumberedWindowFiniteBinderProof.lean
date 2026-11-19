@@ -19,8 +19,12 @@ theorem extend (Γ Δ : List Ty) :
 
 theorem lookup (Γ : List Ty) :
     binderLookup Γ = Spine.BoundContext.«prefix» Γ Spine.EmptyContext := by
+  have he : binderLookup [] = Spine.EmptyContext := by
+    funext i
+    change ([] : List Ty)[i]? = none
+    exact List.getElem?_nil
   have h := (extend [] Γ).symm
-  simpa only [List.append_nil] using h
+  simpa only [List.append_nil,he] using h
 
 theorem all : FiniteBinderLookup := ⟨lookup,push,extend⟩
 

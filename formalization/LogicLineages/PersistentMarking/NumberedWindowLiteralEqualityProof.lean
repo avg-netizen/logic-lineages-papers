@@ -15,9 +15,9 @@ theorem term : LiteralTermEquality := by
     intro R; cases R <;> simp [termEq,ihB,ihE,and_assoc]
   | auxApp σ τ q a ihQ ihA =>
     intro R; cases R <;> simp [termEq,ihQ,ihA,and_assoc]
-  | nil => intro rs; cases rs <;> simp [argsEq]
+  | nil => rename_i rs; cases rs <;> simp [argsEq]
   | cons q qs ihQ ihA =>
-    intro rs; cases rs <;> simp [argsEq,ihQ,ihA]
+    rename_i rs; cases rs <;> simp [argsEq,ihQ,ihA]
 
 theorem args : LiteralArgsEquality := by
   intro qs rs

@@ -1,0 +1,14 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowLiteralEqualityProof.lean:18:17: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case nil
+rs✝ : NArgs
+⊢ argsEq NArgs.nil rs✝ = true ↔ NArgs.nil = rs✝
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowLiteralEqualityProof.lean:20:10: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case cons
+q : NTerm
+qs : NArgs
+ihQ : ∀ (R : NTerm), termEq q R = true ↔ q = R
+ihA : ∀ (rs : NArgs), argsEq qs rs = true ↔ qs = rs
+rs✝ : NArgs
+⊢ argsEq (NArgs.cons q qs) rs✝ = true ↔ NArgs.cons q qs = rs✝

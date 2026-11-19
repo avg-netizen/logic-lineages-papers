@@ -1,0 +1,19 @@
+--- LogicLineages/PersistentMarking/NumberedWindowTypingBitsChecks.lean
++++ LogicLineages/PersistentMarking/NumberedWindowTypingBitsChecks.lean
+@@ -26,12 +26,14 @@
+ 
+ theorem exact_WindowBit : ExactWindowBit := by
+   intro S K C τ Q
+-  simp only [windowBit,Bool.and_eq_true,exact_TypedBit,List.all_eq_true,
++  simp only [windowBit,Bool.and_eq_true,exact_TypedBit C τ Q,List.all_eq_true,
+     decide_eq_true_eq,NumberedWindowHeadEnumerationProof.bit,InWindow,and_assoc]
+ 
+ theorem exact_FiniteWindowBit : ExactFiniteWindowBit := by
+   intro S K Γ τ Q
+-  simp only [finiteWindowBit,exact_WindowBit,NumberedWindowFiniteBinderProof.lookup]
++  unfold finiteWindowBit
++  rw [NumberedWindowFiniteBinderProof.lookup Γ]
++  exact exact_WindowBit S K _ τ Q
+ 
+ #print axioms exact_LiteralTermEquality
+ #print axioms exact_LiteralArgsEquality

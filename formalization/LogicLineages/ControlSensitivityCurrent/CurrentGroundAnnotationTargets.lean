@@ -36,7 +36,8 @@ def ActualGroundPartial : Prop :=
       CurrentGroundAnnotation.groundPartial p d = some e ∧
       erase e = v 0 ∧ Valid p e ∧
       (Active F (erase e) ↔ Active (.there F) (erase d)) ∧
-      CurrentGroundAnnotationCode.groundPartialCode p (SourceTypedPorts.variableIndex (.there F))
+      CurrentGroundAnnotationCode.groundPartialCode p
+        (SourceTypedPorts.variableIndex (Γ := .ground :: Γ) (.there F))
         (SourceAnnotationCode.code d) = some (SourceAnnotationCode.code e)
 
 /-- Neither assignment success nor annotation validity is a premise.
