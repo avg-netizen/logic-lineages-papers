@@ -38,7 +38,7 @@ private theorem term (n : Name) (C : Spine.BoundContext) (d : Nat) (q : NTerm) (
     simp only [substitute,closeAt,hf,if_false]
   | bound σ i =>
     cases ht with
-    | bound hi => exact boundCase n C d i σ hi hs
+    | bound hi => exact boundCase n C d i _ hi hs
   | lam σ q =>
     cases ht with
     | lam hq =>

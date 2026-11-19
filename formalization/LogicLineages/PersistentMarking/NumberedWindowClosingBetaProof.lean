@@ -28,7 +28,7 @@ private theorem boundCase (n : Name) (outer c : Nat) (σ : Ty) (i : Nat) (a : NT
     · have hp : i-c ≠ 0 := by omega
       have hq := singletonPast a _ hp
       have hr := singletonPast (closeAt n outer a) _ hp
-      simp only [substitute,closeAt,hi,if_false,hq,hr]
+      simp only [substitute,closeAt,hi,if_false,hq,hr,NArgs.length]
 
 mutual
 theorem term (n : Name) (outer c : Nat) (q a : NTerm) :

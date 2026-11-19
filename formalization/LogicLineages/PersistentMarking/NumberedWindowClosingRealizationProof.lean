@@ -23,7 +23,7 @@ theorem term (name : Name) {n q Q} (h : Realizes n q Q) :
   | lam _ ih => intro d; exact .lam (ih (d+1))
   | ordinary _ ih => intro d; exact .ordinary (ih d)
   | marked hk _ _ hb he => intro d; exact .marked hk (hb d) (he d)
-  | nil => intro d; exact .nil
-  | cons _ _ hq hs => intro d; exact .cons (hq d) (hs d)
+  | nil => exact .nil
+  | cons _ _ hq hs => rename_i depth; exact .cons (hq depth) (hs depth)
 
 end LogicLineages.PersistentMarking.NumberedWindowClosingRealizationProof

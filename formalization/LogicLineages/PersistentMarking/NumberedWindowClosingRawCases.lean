@@ -29,7 +29,7 @@ theorem replacement (n : Name) (d : Nat) {bs target}
     obtain ⟨q,hq,hm⟩ := hOrigin a' ha'
     exact ⟨op q,List.mem_map.mpr ⟨q,hq,rfl⟩,decrease n hm d⟩
 
-theorem selection (n : Name) (d : Nat) {S K f τ k bs es i q ds r}
+theorem selection (n : Name) (d : Nat) {S K f τ k} {bs es : NArgs} {i : Nat} {q r : NTerm} {ds : List Ty}
     (hg : bs.get i = some q ∨ es.get i = some q)
     (ht : q.type = Spine.ArrowPrefix ds τ)
     (ha : applications q (ownerCopies f k bs es ds) = some r) :
@@ -65,7 +65,7 @@ private theorem nonbottom (n : Name) (d : Nat) (q : NTerm)
   | numbered f τ k bs es => intro e; cases e
   | auxApp σ τ q a => intro e; cases e
 
-theorem toBottom (n : Name) (d : Nat) {S K q} (h : q ≠ .bottom q.type) :
+theorem toBottom (n : Name) (d : Nat) {S K} {q : NTerm} (h : q ≠ .bottom q.type) :
     RawStep S K (closeAt n d q) (closeAt n d (.bottom q.type)) := by
   rw [show closeAt n d (.bottom q.type) = .bottom (closeAt n d q).type by
     simp only [closeAt,annotation]]

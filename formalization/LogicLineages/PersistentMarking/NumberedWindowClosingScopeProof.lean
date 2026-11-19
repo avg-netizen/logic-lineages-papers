@@ -23,7 +23,7 @@ theorem shiftTerm (C : Spine.BoundContext) (q : NTerm) (τ : Ty) (amount d : Nat
   | free σ x => rfl
   | bound σ i =>
     cases h with
-    | bound hi => simp only [shift,hc i σ hi,if_true]
+    | bound hi => simp only [shift,hc i _ hi,if_true]
   | lam σ q =>
     cases h with
     | lam hq => simp only [shift,shiftTerm _ q _ amount (d+1) hq (belowPush hc σ)]

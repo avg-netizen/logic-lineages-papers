@@ -30,7 +30,7 @@ theorem term (n : Name) {S K q r} (h : RawStep S K q r) :
   | numberedBase _ ih => intro d; exact .numberedBase (ih d)
   | numberedExtra _ ih => intro d; exact .numberedExtra (ih d)
   | auxFunction _ ih => intro d; exact .auxFunction (ih d)
-  | first _ ih => intro d; exact .first (ih d)
-  | later _ ih => intro d; exact .later (ih d)
+  | first _ ih => rename_i depth; exact .first (ih depth)
+  | later _ ih => rename_i depth; exact .later (ih depth)
 
 end LogicLineages.PersistentMarking.NumberedWindowClosingRawProof

@@ -780,3 +780,45 @@ and translates the existing canonical-port derivations into fixed-point bits.
   mixed trace vertex image/count. Source map and 21-pin freeze available
   as `NUMBERED-WINDOW-FRAME-*` in paper16/recovery-nov19. No proofs or
   native before independent review/target-only ticket.
+
+- Independent source review approved all21 binder/frame pins.
+  FRAME-TARGET-0849 exact target-only preflight passed25/25,
+  peak495804 KiB, receipt `1795078186371800549-6`; exited/reaped, both
+  locks free. Authored16 new bounded proof leaves, all held unbuilt
+  for independent review; exact root NumberedWindowFrameChecks 90a5a80e,
+  13 aliases, local closure45. Full sources/hashes/design in
+  `NUMBERED-WINDOW-FRAME-AUTHORED-CANDIDATE.md`; no additional
+  numbered status or source/target mutation.
+
+- FRAME-EXACT-0903 ordinary singleton length normalization failure
+  (30/31, peak503796 KiB, receipt `1795078946340762012-5`);
+  exact failed edition preserved and one independently approved
+  `NArgs.length` proof-only simp correction applied, BetaProof 9a3b25be.
+- FRAME-EXACT-0905 compiled exact beta and all individual raw cases,
+  then found two already-introduced depth binders in secondary
+  RawArgsStep motives (32/33, unchanged peak, receipt
+  `1795079104471936898-6`). Full failed edition preserved, reaped,
+  both locks free. Proposed literal bound-name-only repair and same
+  mechanical fix in three equivalent supplied secondary motives;
+  frozen target/old sources untouched, no automatic native retry.
+
+- FRAME-EXACT-0908 passed the corrected complete raw-edge transport,
+  then failed ordinary dependent disappearance of σ in nominal
+  typing branches; receipt `1795079269028953666-6`, 33/34,
+  peak517096 KiB. Failed edition preserved; independent exact
+  inferred-type repair applied without changing any targets.
+- FRAME-EXACT-0910 stopped exit77 at 527376 KiB in the corrected
+  mutually well-founded ClosingTypedProof, receipt
+  `1795079417381409422-6`. No Lean theorem error/no exact pass,
+  reaped/both locks free. Stopped proof e6384b0a and full candidate
+  preserved under paper16/failed/lane-a-window-frame-1795079417381409422-6.
+- Append-only material redesign proposed with 11 short existing
+  typing constructors as direct core recursor handlers; no
+  well-founded sizeOf package and only 24/25 local modules for
+  builders/typed core (former failing leaf 27). Admissibility uses
+  original current inventory proof in another leaf. Same 13 exact
+  frozen claims on new NumberedWindowFrameThinChecks b438f926,
+  closure47 statically excludes stopped leaf/old dependents.
+  Full proposal and six hashes in
+  `NUMBERED-WINDOW-FRAME-TYPED-THIN-PROPOSAL.md`. No unchanged
+  retry/flags change; await independent design review/new ticket.

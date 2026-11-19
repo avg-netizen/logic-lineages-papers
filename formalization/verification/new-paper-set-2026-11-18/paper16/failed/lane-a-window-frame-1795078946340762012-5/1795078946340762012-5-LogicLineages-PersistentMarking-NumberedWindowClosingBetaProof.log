@@ -1,0 +1,14 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowClosingBetaProof.lean:28:4: error: unsolved goals
+case neg
+n : Name
+outer c : Nat
+σ : Ty
+i : Nat
+a : NTerm
+hi : ¬i < c
+he : ¬i = c
+hp : i - c ≠ 0
+hq : (NArgs.cons a NArgs.nil).get (i - c) = none
+hr : (NArgs.cons (closeAt n outer a) NArgs.nil).get (i - c) = none
+⊢ NTerm.bound σ (i - (NArgs.cons a NArgs.nil).length) =
+    NTerm.bound σ (i - (NArgs.cons (closeAt n outer a) NArgs.nil).length)

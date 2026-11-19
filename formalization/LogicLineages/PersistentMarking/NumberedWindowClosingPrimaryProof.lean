@@ -7,7 +7,7 @@ open NumberedWindowClosingOperationsProof (asList)
 open NumberedWindowClosingTypedProof (base extras push)
 open NameBridge (Name)
 
-private theorem perm (n : Name) (d : Nat) {bs cs}
+private theorem perm (n : Name) (d : Nat) {bs cs : NArgs}
     (h : bs.toList.Perm cs.toList) :
     (closeArgsAt n d bs).toList.Perm (closeArgsAt n d cs).toList := by
   simpa only [asList] using h.map (closeAt n d)
@@ -48,7 +48,9 @@ theorem term (n : Name) {S K C τ q r} (h : Primary S K C τ q r) :
   | numberedExtras hb _ ih =>
     intro d D hc
     exact .numberedExtras (base n d _ D _ _ hb hc) (ih d D hc)
-  | nil => intros; exact .nil
-  | cons _ _ iq ir => intro d D hc; exact .cons (iq d D hc) (ir d D hc)
+  | nil => exact .nil
+  | cons _ _ iq ir =>
+    rename_i depth D hEnv
+    exact .cons (iq depth D hEnv) (ir depth D hEnv)
 
 end LogicLineages.PersistentMarking.NumberedWindowClosingPrimaryProof

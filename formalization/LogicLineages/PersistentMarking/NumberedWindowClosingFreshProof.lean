@@ -32,10 +32,10 @@ theorem realized (name : Name) {n q Q} (h : Realizes n q Q) :
     intro hs
     have hp := Bool.or_eq_false_iff.mp hs
     exact ⟨hb hp.1,he hp.2⟩
-  | nil => intro _; trivial
+  | nil => trivial
   | cons _ _ hq hs =>
-    intro h
-    have hp := Bool.or_eq_false_iff.mp h
+    rename_i hFresh
+    have hp := Bool.or_eq_false_iff.mp hFresh
     exact ⟨hq hp.1,hs hp.2⟩
 
 theorem realizedArgs (n : Name) {b qs As} (h : RealizesArgs b qs As) :

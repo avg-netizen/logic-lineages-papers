@@ -26,10 +26,10 @@ theorem term (n : Name) (d : Nat) (C D : Spine.BoundContext) (q : NTerm) (τ : T
   cases q with
   | free σ x =>
     cases h with
-    | free => exact freeCase σ x hc
+    | free => exact freeCase _ x hc
   | bound σ i =>
     cases h with
-    | bound hi => exact .bound (hc.2 i σ hi)
+    | bound hi => exact .bound (hc.2 i _ hi)
   | lam σ q =>
     cases h with
     | lam hq => exact .lam (term n (d+1) _ _ q _ hq (push hc σ))
