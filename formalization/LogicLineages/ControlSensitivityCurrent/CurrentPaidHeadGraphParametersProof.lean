@@ -30,7 +30,10 @@ private theorem unitScalarCode (f : Nat → Nat) (hf : FullAddition.Targets.Sour
   obtain ⟨a,ha,hr⟩ := CurrentOrdinalEvaluation.calibration f hf (OrdinalComponent Γ)
     OrdinalSyntax.componentCode (UnitHeadEvaluation.unitSyntax q) [] (fun _ => 0) (fun _ => rfl)
   rw [unitValue, hc] at hr
-  rw [UnitHeadCode.Proof.unit_exact,ha]
+  rw [UnitHeadCode.Proof.unit_exact]
+  change encodedFiniteValue (CurrentOrdinalEvaluation.evaluate f []
+    (OrdinalSyntax.code OrdinalSyntax.componentCode (UnitHeadEvaluation.unitSyntax q))) = c
+  rw [ha]
   have hfin := (encodedFiniteCorrect a).1.mpr (hr.symm ▸ Ordinal.natCast_lt_omega0 c)
   have he := (encodedFiniteCorrect a).2 hfin
   rw [hr] at he
@@ -43,17 +46,25 @@ private theorem noteShift (a : NONote) (ha : Order.IsSuccLimit a.1.repr) (δ : N
   let n := NONote.ofNat δ
   let p := naturalProduct w n
   let b := naturalSum a p
+  have hw : w.1.repr = Ordinal.omega0 := by simp [w,ClosedPositive.evaluate,ONote.repr]
+  have hn : n.1.repr = (δ : Ordinal) := by
+    change (ONote.ofNat δ).repr = (δ : Ordinal)
+    exact ONote.repr_ofNat δ
   have hp : p.1.repr=Ordinal.omega0*(δ : Ordinal) := by
-    rw [naturalProductDenotation w n]
-    change ordinalNaturalProduct Ordinal.omega0 (ONote.ofNat δ).repr = _
-    rw [ONote.repr_ofNat,ParametricFiniteCollapseArgument.Proof.naturalProduct_omega_finite]
+    rw [naturalProductDenotation w n,hw,hn,ParametricFiniteCollapseArgument.Proof.naturalProduct_omega_finite]
   have hb : b.1.repr=shiftHead a.1.repr δ := by
     rw [naturalSumDenotation a p,hp]
     exact sumOmegaTail a.1.repr (normalRepresentationSound a) ha δ
   refine ⟨b,?_,hb⟩
   unfold shiftCode CurrentOrdinalEvaluation.omegaCode
-  rw [encodedNatNoteCorrect δ,encodedNaturalProductCorrect w.1 n.1,encodedNaturalSumCorrect a.1 p.1]
-  rfl
+  rw [encodedNatNoteCorrect δ]
+  change encodedNaturalSum (rawNoteEncode a.1)
+    (encodedNaturalProduct (rawNoteEncode w.1) (rawNoteEncode n.1)) = rawNoteEncode b.1
+  have hpCode : encodedNaturalProduct (rawNoteEncode w.1) (rawNoteEncode n.1) = rawNoteEncode p.1 :=
+    encodedNaturalProductCorrect w.1 n.1
+  have hbCode : encodedNaturalSum (rawNoteEncode a.1) (rawNoteEncode p.1) = rawNoteEncode b.1 :=
+    encodedNaturalSumCorrect a.1 p.1
+  rw [hpCode,hbCode]
 
 private theorem norm_exact (a : NONote) : rawNormCode (rawNoteEncode a.1)=actualOrdinalNorm a.1.repr := by
   rw [rawNormCodeCorrect,actualOrdinalNorm_notationCorrespondence]
@@ -71,7 +82,9 @@ theorem exactParameters : Targets.ExactParameters := by
   intro p f hc hf Γ K u hu δ
   have hg := generatedAt p K u hu
   obtain ⟨a,_,_,hcode,_,hval,_,_,_⟩ := UnitHeadCode.Proof.actualPositiveClassification Γ 1 (u 1) (hg 1) (by decide)
-  obtain ⟨c,hcval⟩ := (GenericScalar.generatedPositiveFinite f Γ (fun _ => 0) 0 (u 0) (hg 0)).2 rfl
+  obtain ⟨c,hcval₀⟩ := (GenericScalar.generatedPositiveFinite f Γ (fun _ => 0) 0 (u 0) (hg 0)).2 rfl
+  have hcval : atUnits f (u 0) = (c : Ordinal) := by
+    simpa only [atUnits,Nat.zero_add,Nat.cast_one] using hcval₀
   have hv := (CurrentAffineHeads.positiveNoCollapse Γ 1 (u 1) (by decide) (hg 1)).2 f (fun _ => 1)
   have hK : a.evaluate.1.repr=atUnits f (u 1) := hval.trans hv.symm
   let β := scalarHeadNote a
@@ -88,12 +101,13 @@ theorem exactParameters : Targets.ExactParameters := by
     (SyntaxCode.encodeTerm K)).mpr ⟨K,rfl⟩
   have hassign : PolicyAssignment.assignmentCode p (Γ.map SyntaxCode.typeCode) (SyntaxCode.encodeTerm K) =
       some (OrdinalSyntax.vectorCode u) := by
-    rw [PolicyAssignmentSyntaxProof.literal p Γ _ K,hu,Option.map_some]
+    rw [PolicyAssignmentSyntaxProof.literal p Γ _ K,hu] <;> rfl
   have hunit := unitScalarCode f hf (u 0) c hcval
   refine ⟨β,ξ,c,?_,hβv,hξ,hcval,?_,?_,?_⟩
-  · unfold parameterCode
+  · have hindex : (Fin.succ (0 : Fin 1) : Fin 2) = 1 := by decide
+    unfold parameterCode
     simp only [hsyntax,↓reduceIte,hassign,bind,Option.bind_some,OrdinalSyntax.vectorCode,
-      List.ofFn_succ,List.getElem?_cons_zero,List.getElem?_cons_succ,hcode,pure,hunit,hβ.2.1,hshift,β] <;> rfl
+      List.ofFn_succ,List.getElem?_cons_zero,List.getElem?_cons_succ,hindex,hcode,pure,hunit,hβ.2.1,hshift,β] <;> rfl
   · rw [norm_exact,hβv]
   · rw [norm_exact,hξ]
   · intro t ht

@@ -1388,3 +1388,24 @@ and translates the existing canonical-port derivations into fixed-point bits.
   supporting original admitted raw paths and genuine positive original
   class paths at successful Nat endpoint codes; no arithmetic
   formula/reflection, whole witness-code, rank or ID1.
+
+## 2026-11-19 — exact numerical codec of actual supplied raw witnesses
+
+- Accepted455 original finite raw paths and genuine positive quotient
+  path witnesses after independent148current/55pins/four standard
+  exact audits. No numbered promotion.
+- New raw witness codec comparator froze27 pins421f4140...:
+  ordered literal NTerm occurrence lists with duplicates, actual
+  ReplacementWitness triple, exact side flag, all eight RawRootWitness
+  tags including full Select tuple, all actual five recursive context
+  wrappers, and strict actual child-code fuel. No coded path lists,
+  semantic checker from Nat inputs, or arithmetic-language proof.
+- ARITHMETIC-RAW-WITNESS-CODE-TARGET-1417 passed36/36 target-only
+  1795095285585758976-2, independently checked prior to authorship.
+- ARITHMETIC-RAW-WITNESS-CODE-EXACT-1430 passed59/59 first exact
+  run receipt1795095790354800696-2. Peak500016 inherited/494784 new,
+  exact root475336KiB. Reaped, locks free. Six exact audits
+  standard-only, literal side flag is axiom-free. Full evidence
+  LANE-A-NUMBERED-WINDOW-ARITHMETIC-RAW-WITNESS-CODE-CLOUD-EVIDENCE.json
+  SHA41dbaaadff68d37a5ed5f4097310e4427a9484b4ca8d25fd4a699a2f433aa8b0,
+  59 current/56pins/6audits, supplemental errors0. READY support only.

@@ -1,0 +1,19 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraphUnitBuildCodeProof
+public import LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraphUnitBuildProgramsProof
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph.UnitCodeStatementChecks
+
+theorem actual_matrix_codes : Targets.ExactMatrixCodes := MatrixCode.exactMatrixCodes
+theorem actual_current_unit_block : Targets.ExactUnitBlock := UnitCode.exactUnitBlock
+theorem actual_effective_matrix_unit_codes : Targets.EffectiveMatrixUnitCodes := UnitCode.effectiveMatrixUnitCodes
+
+theorem actual_unit_code_support : Targets.UnitCodeSupport :=
+  ⟨actual_matrix_codes,actual_current_unit_block,actual_effective_matrix_unit_codes⟩
+
+#print axioms actual_matrix_codes
+#print axioms actual_current_unit_block
+#print axioms actual_effective_matrix_unit_codes
+#print axioms actual_unit_code_support
+
+end LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph.UnitCodeStatementChecks

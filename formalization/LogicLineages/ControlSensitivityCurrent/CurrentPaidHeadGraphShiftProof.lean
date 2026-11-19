@@ -48,9 +48,8 @@ theorem exactIteration : Targets.ExactIteration := by
   intro f hf β he hl δ
   induction δ with
   | zero =>
-    simp only [shiftHead,Nat.cast_zero,mul_zero,add_zero,Nat.mul_zero,Nat.add_zero,
-      Function.iterate_zero,id_eq]
-    exact ⟨he,hl,rfl,fun t ht => ⟨ht,rfl⟩⟩
+    simp only [shiftHead,Nat.cast_zero,mul_zero,add_zero,Function.iterate_zero,id_eq]
+    exact ⟨he,hl,True.intro,fun t ht => ⟨ht,True.intro⟩⟩
   | succ δ ih =>
     rcases ih with ⟨hε,hlim,hn,hiter⟩
     have h := exactStep f hf (shiftHead β δ) hε hlim

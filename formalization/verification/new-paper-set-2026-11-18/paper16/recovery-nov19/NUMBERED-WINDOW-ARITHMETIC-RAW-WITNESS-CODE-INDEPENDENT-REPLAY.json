@@ -1,0 +1,1171 @@
+{
+  "status": "source-matched",
+  "gate": "build-reports/1795095790354800696-2.json",
+  "gate_sha256": "b66fed9b53ce45669df3082851190b31f5f01cef796311b852b7e2e7cbd3d88a",
+  "profile": {
+    "heap_cap_mib": 1536,
+    "rss_cap_mib": 512,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 768,
+    "core_only_profile": true,
+    "single_thread": true,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "compiler": {
+    "compiler": "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/bin/lean",
+    "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "selected_compiler": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "lean_path": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    "pins": {
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lake-manifest.json": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lakefile.toml": "c05684bc8b1905ebc2f1ccaa33f57fd5cb769350165dbd9614c18be7a63227a5",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lakefile.lean": null,
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lake-manifest.json": "28ee3c8d1f319b5da6b53636261d9f8a3048b057f6e1739824feefbc38968672",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lakefile.toml": "a5ae5498a1a8d2920079ce4e652af4b39c41d87b49a2ec3f80e50f27f348a697",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lakefile.lean": null
+    }
+  },
+  "frozen_sources": {},
+  "exact_aliases": {
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticRawWitnessCodeChecks.exact_TermOccurrenceListCodec": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticRawWitnessCodeChecks.exact_ReplacementWitnessCodec": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticRawWitnessCodeChecks.exact_SelectFlagCodec": [],
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticRawWitnessCodeChecks.exact_RawRootWitnessCodec": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticRawWitnessCodeChecks.exact_RawWitnessFuelCalibration": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticRawWitnessCodeChecks.exact_RawWitnessCodec": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "recursive_modules": {
+    "LogicLineages.PersistentMarking.Syntax": {
+      "source_sha256": "e3bbad01fc8790c0c0375c3a78667d27a0ba79e9b005239888c0c1cb18a98d70",
+      "input_key": "f1c688da49892813b3ac87d9864afa3742478d518291e5b766635c76c89f07ba",
+      "local_dependencies": [],
+      "external_objects": {
+        "Init": {
+          "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Init.olean": "2184f658899f2aea99a4fecaa6f3192e7b631f2da1b9fe25a34780fd4972c633",
+          "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Init.olean.private": "2fd9a702893fdba2d5234fca23978bdee40c9a3016020279f02cc94166c70c25",
+          "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Init.olean.server": "92d5525ee307011fab6c0e55fa2c6d67555694dd401d1da99c2542c942f6242e",
+          "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Init.ir": "fc94c27ef6b901c94f633b8cd80a72467cff0b37879f873700683404eeb266a6"
+        }
+      },
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Syntax.olean": "86f08f12c0aff96293de8310909fd0e13f7912793bc5d4fe23b4ad5428c8cf23",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Syntax.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Syntax.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Syntax.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-Syntax.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 495804
+    },
+    "LogicLineages.PersistentMarking.SpineSyntax": {
+      "source_sha256": "38b4597e658c431a4fd766599782589943f5d1cc5e63dd438842409cee4086de",
+      "input_key": "34488897c2b068d87e6fdd63535d37268091fafc5d0640145c9f0ebf51c94bb3",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/Syntax.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineSyntax.olean": "7ac485a7b4af338eb1cc46b6f0483b0996d92fb6ec17fbec5ec04711767f4df1",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineSyntax.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineSyntax.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineSyntax.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-SpineSyntax.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 487812
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowSyntax": {
+      "source_sha256": "efb972f238bf835b95acf77ad60a87bf1167201cdc74d22e9f2c5cd2f302b8d8",
+      "input_key": "f2ba2d39007fedea30b0e48ff4f280665390f94e5fb7312bdc0bd2f40614ba90",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SpineSyntax.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntax.olean": "d5babcc6a87de7aee20e78df3ffbbccb124cd98919a6c0ae540290ff2b97577c",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntax.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntax.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntax.ir": null
+      },
+      "native_receipt": "build-reports/1795072080041120362-6.json",
+      "log": "build-reports/1795072080041120362-6-LogicLineages-PersistentMarking-NumberedWindowSyntax.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 482576
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticPair": {
+      "source_sha256": "1690c003e9bb422c78efb4b0be4438052d99eeaa8c8bab351a6c3111eb2478fa",
+      "input_key": "e6a70781b832563ab0b6c702e4dee64d69b8227e7a253637cd235d7d92215af7",
+      "local_dependencies": [],
+      "external_objects": {
+        "Init": {
+          "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Init.olean": "2184f658899f2aea99a4fecaa6f3192e7b631f2da1b9fe25a34780fd4972c633",
+          "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Init.olean.private": "2fd9a702893fdba2d5234fca23978bdee40c9a3016020279f02cc94166c70c25",
+          "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Init.olean.server": "92d5525ee307011fab6c0e55fa2c6d67555694dd401d1da99c2542c942f6242e",
+          "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Init.ir": "fc94c27ef6b901c94f633b8cd80a72467cff0b37879f873700683404eeb266a6"
+        }
+      },
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPair.olean": "89c2f306ca9fead4d47b0b41ebf7b374b4665eb26f4fb772749747b24b122864",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPair.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPair.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPair.ir": null
+      },
+      "native_receipt": "build-reports/1795090114373224802-2.json",
+      "log": "build-reports/1795090114373224802-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticPair.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 469228
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticFields": {
+      "source_sha256": "1fe19c5d5e992781269ea2b9cc5b20ab06507a7f5fb39301b03cf9105e199721",
+      "input_key": "d896769662992d659cfa3d98c55da02232f711b6b8e32f0af40cd5c7a2b0bbaf",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticPair.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticFields.olean": "845325913c99d6c943026da542ca6d09878fa71e7127c2f8d4937ad9bede1abc",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticFields.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticFields.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticFields.ir": null
+      },
+      "native_receipt": "build-reports/1795091309150744832-2.json",
+      "log": "build-reports/1795091309150744832-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticFields.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 471568
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticTyCode": {
+      "source_sha256": "ddf4ee7a6f37ef5d09f5a93aac67c40ac955453bd87aa0fab6d1d7945445f596",
+      "input_key": "0970bafca2e245279795c6a032c84a444b1f6ec29e524f84a6c43ed6c9244fe6",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/Syntax.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticPair.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTyCode.olean": "3f888f1910e1c78e60ae9a193494d0b0f4f26222107a76f017284b73621226f5",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTyCode.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTyCode.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTyCode.ir": null
+      },
+      "native_receipt": "build-reports/1795090803563838120-2.json",
+      "log": "build-reports/1795090803563838120-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticTyCode.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 468288
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticHeadCode": {
+      "source_sha256": "48519830d858190877554b19de7e33b745ff290b857669532a34aab95b8b2eb6",
+      "input_key": "ad4019d0c76fa36c8f2ceae4b45324d1496c993fbe30518c74194fbfdba3030a",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticTyCode.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticHeadCode.olean": "84c8053cfb46f9314d048bcf4c0364612aaa6956bef7d0712d65c7872c4adb1f",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticHeadCode.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticHeadCode.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticHeadCode.ir": null
+      },
+      "native_receipt": "build-reports/1795090803563838120-2.json",
+      "log": "build-reports/1795090803563838120-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticHeadCode.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 463696
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticTermCode": {
+      "source_sha256": "a478448cce008c2c7418d5e7598079ea3807dbfec375be3131718a9590f658cf",
+      "input_key": "dd5507c24c5e08dee4cf1f44d36401d9c9a73ae77143e03915bb808021a8c778",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowSyntax.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticFields.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticHeadCode.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCode.olean": "c606ec2c32fbf8dd8d5e6eb10aa6205fbba08926a85e0a72d11adff233980439",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCode.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCode.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCode.ir": null
+      },
+      "native_receipt": "build-reports/1795091309150744832-2.json",
+      "log": "build-reports/1795091309150744832-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticTermCode.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 478820
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticWitnessListCode": {
+      "source_sha256": "7d2aca19b287dbb9f472511d5de6e320a1f66dd2e9aed7d63e5a5c10fa99cca6",
+      "input_key": "9fe0c289b91e51dc0c932584cbd792f6a25349ba83af2fdd56c2f6b68f37ec34",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCode.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticWitnessListCode.olean": "a4855f93d3310f5a400057f08c27ebfc38994236fd339a95ab5d40d855a4e2c7",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticWitnessListCode.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticWitnessListCode.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticWitnessListCode.ir": null
+      },
+      "native_receipt": "build-reports/1795095285585758976-2.json",
+      "log": "build-reports/1795095285585758976-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticWitnessListCode.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 465148
+    },
+    "LogicLineages.PersistentMarking.SpineTyping": {
+      "source_sha256": "b47f70848c23b10081a3f4ba9920006d91f0ce6b6638a44dacf4e6e897e371f2",
+      "input_key": "7dcb53f777f5d3b4cef680d656a09dec7b55fa29775ba81ecf010f58e33d8db5",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SpineSyntax.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineTyping.olean": "9b115a9c4feb88b1d9a0ef4994ed4bafda98968be678c7c3666d932bde753104",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineTyping.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineTyping.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineTyping.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-SpineTyping.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 480108
+    },
+    "LogicLineages.PersistentMarking.Signature": {
+      "source_sha256": "2b12e1dfe0accf226fd7d7636f239247a65ce9a67f11fd653ddad800188bcd04",
+      "input_key": "657f6e43a5a4f80461ea96af7c51fa66043f917bd158e33b9dbdf85e9ce9ecc9",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SpineTyping.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Signature.olean": "fc16010576c7f93a337acf352b6f75ff7193c87b22458e829abaee2b783efcd8",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Signature.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Signature.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Signature.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-Signature.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 479060
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticBinderCode": {
+      "source_sha256": "459443e3f4879f9baa4f728c1da9a07888a4ac710d4efb18585f2c7ed1a3f6fb",
+      "input_key": "777cb2043df55c8199344070f927c229a190afa225de421e0cb2f59ffb931b83",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticTyCode.olean",
+        "LogicLineages/PersistentMarking/Signature.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticBinderCode.olean": "9d2e1140c8d8514d1e678ff986b691fd8babe52ba111501755ec2a265fcdc56f",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticBinderCode.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticBinderCode.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticBinderCode.ir": null
+      },
+      "native_receipt": "build-reports/1795090803563838120-2.json",
+      "log": "build-reports/1795090803563838120-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticBinderCode.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 471068
+    },
+    "LogicLineages.PersistentMarking.NameBridge": {
+      "source_sha256": "d20d8098dee13aa6da728d1d8232176d01db414081f8a494781e7ad01378d5b0",
+      "input_key": "58f1b764d652f207a8eb01b23c103b6950b902e4fc08e8d95f916785d54ed00d",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/Signature.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NameBridge.olean": "eaa5399b39067cb210a29e71c97f6c1f640d0e4df9662ecde58c577877372159",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NameBridge.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NameBridge.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NameBridge.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-NameBridge.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 482632
+    },
+    "LogicLineages.PersistentMarking.FreeSubstitution": {
+      "source_sha256": "1c94f21bfd2bd65f75bda6e6d8d760e6c7e11ec68be450b95067889ec53ba27d",
+      "input_key": "ae2c8d490ab861d09bb6e243e1eab738ca10121d41b50d55801b4596d584374e",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SpineTyping.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeSubstitution.olean": "2bf5cb114af66d6e4a79cb14d8155101fd8656cc318971a60013980bfa6af122",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeSubstitution.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeSubstitution.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/FreeSubstitution.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-FreeSubstitution.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 458100
+    },
+    "LogicLineages.PersistentMarking.StructuralContext": {
+      "source_sha256": "4e5d5ac357e9b22556b8f43905208160283bac9e80f0faab630e22fd25d3fd24",
+      "input_key": "332a266257e4d33163a92122f3c77f4d51c15edf4b359d5ea30a9ae223315bed",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NameBridge.olean",
+        "LogicLineages/PersistentMarking/FreeSubstitution.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralContext.olean": "64a25abb2710c38599fa01c139472f9196f113792f0ead42cd54795f33b8229e",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralContext.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralContext.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralContext.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-StructuralContext.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 490856
+    },
+    "LogicLineages.PersistentMarking.Occurrences": {
+      "source_sha256": "d148c40a5d53b310654255f1e8e51f1208f9cd37ef8c323f8125b814a5aedafb",
+      "input_key": "5ec86661e39b98a73c08d8c20a8cc0fef3b50c64c286976986f147ab78b4178b",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/SpineSyntax.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Occurrences.olean": "66227392a01333b4e60f810bf14f82d56b4d13611a1c3f88667d3d7982d64368",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Occurrences.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Occurrences.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Occurrences.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-Occurrences.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 477264
+    },
+    "LogicLineages.PersistentMarking.SpineMarking": {
+      "source_sha256": "cbbc4789130000486861730a6cb011ff684b8809c88e7647923f40e9c5d24b27",
+      "input_key": "8c70433008f736fad88dc7ae6ca02dbd05bb8a8de7d977f9ce2d802ad5679010",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/FreeSubstitution.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineMarking.olean": "db08842f60e71f0ca6ce5024ad58770482bfe2e824c92571af9e142c8e1c1a12",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineMarking.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineMarking.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/SpineMarking.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-SpineMarking.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 469796
+    },
+    "LogicLineages.PersistentMarking.Comparison": {
+      "source_sha256": "e04508ddad8ba862a98c40bfef3019ad5621ba08c2878f5b9bd11ea9bd3375a6",
+      "input_key": "74a856a5e0ce49df58889558581cb9eae22ab8323d43123ef9ebb7adcd254df7",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/Signature.olean",
+        "LogicLineages/PersistentMarking/Occurrences.olean",
+        "LogicLineages/PersistentMarking/NameBridge.olean",
+        "LogicLineages/PersistentMarking/SpineMarking.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Comparison.olean": "b81e272f7ae44e0a591032ed400a7b9235460d58e105ace9ec3222fcce3cf207",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Comparison.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Comparison.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/Comparison.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-Comparison.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 494044
+    },
+    "LogicLineages.PersistentMarking.StructuralStabilityTargets": {
+      "source_sha256": "d477922839cfb8066cfb416fdf4c1f80ea9fd5f9e377d7d2664d9987961da39b",
+      "input_key": "535263f2b3b37dfd10d3d130df139ae53f1649a44d75375238fe93fa1f5dfabd",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/StructuralContext.olean",
+        "LogicLineages/PersistentMarking/Comparison.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralStabilityTargets.olean": "4de07e85369b40bb9a11276f351894626241f9c65e4d325a7ab2637f1f3240d0",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralStabilityTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralStabilityTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralStabilityTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-StructuralStabilityTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 475752
+    },
+    "LogicLineages.PersistentMarking.StructuralCoverageTargets": {
+      "source_sha256": "9ecd4136249c2e2cabf2b81c7662cadd6f7ab9b86b6eea676301ea043898b4ab",
+      "input_key": "a735283fde5e0a7492ab1fa2dce4a0f3de6fadde1e9837fa18baf4328ec4a910",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/StructuralStabilityTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralCoverageTargets.olean": "674aab81f3b350bd781e8fa2b14f466373d1766e322bdab6f86345591d5e5db9",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralCoverageTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralCoverageTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/StructuralCoverageTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-StructuralCoverageTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 477976
+    },
+    "LogicLineages.PersistentMarking.TypeSupport": {
+      "source_sha256": "7798b490ceb307eae9e4b34597cc22271edd4e5f86bb3a08ad15c108bae6155e",
+      "input_key": "6c9e010bc74c1244f0ed8308725e43ccc8114790509f60d02db01718924a7c05",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/StructuralCoverageTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/TypeSupport.olean": "3095b683fe73eed572cfeeb733b32abe4c5bec9328d7a70254d68e8077ae8d75",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/TypeSupport.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/TypeSupport.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/TypeSupport.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-TypeSupport.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 478112
+    },
+    "LogicLineages.PersistentMarking.DecisionInventory": {
+      "source_sha256": "37a00a35c38d09836d0ce0369e3d837835b87ac49582cab252da7103c6997cdd",
+      "input_key": "826f7841e91164eb64e573eede92f4ffa950ab4b2a9cef708e0581a51b10ef81",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/TypeSupport.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionInventory.olean": "70ce49da13b509c76535d40d4ba487759c4fc95fa7f556c357a33bb6ec460e8a",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionInventory.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionInventory.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionInventory.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-DecisionInventory.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 479308
+    },
+    "LogicLineages.PersistentMarking.DecisionPorts": {
+      "source_sha256": "59388051207a3576af058cd0ffd780a231b84aa3c4e18c57e8165cc6e4f092a2",
+      "input_key": "54cf066f72f18c9946d529e49cf6fe95d11fd6272b86ec4ed8804eafb600c5f1",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionInventory.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionPorts.olean": "3b65e5147863a57007711f21d43941e52c0b80243a31063e41ab6605bd758156",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionPorts.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionPorts.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionPorts.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-DecisionPorts.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 475288
+    },
+    "LogicLineages.PersistentMarking.DecisionObservations": {
+      "source_sha256": "816d9ab5fb99246c7343c5973086984314d0e62a55ebfe5c7a16ce42dd940f98",
+      "input_key": "f17794be17524e29d7ffc11d9c731e0b6996a118dd3a3f42f108682c2b2fba3a",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionPorts.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionObservations.olean": "b74244cd5a11353618aad9ca146fcb744310b2280d800ebe3e02cb001759d5b4",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionObservations.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionObservations.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionObservations.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-DecisionObservations.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 485124
+    },
+    "LogicLineages.PersistentMarking.DecisionSourceUniverse": {
+      "source_sha256": "7b26274cddbb0ee765e7a490a0d30b44d45a3385ff31bbb1d0a8ac4ac3d8065e",
+      "input_key": "5546e0ff3703d348c44b7cf1b437e7a4729e19ef10db37481e05618a04248c25",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/DecisionObservations.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionSourceUniverse.olean": "4e55b341d7d97e4551a727e4568f56e1dbb7e86ab0301625a9be3a6f5c24b688",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionSourceUniverse.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionSourceUniverse.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/DecisionSourceUniverse.ir": null
+      },
+      "native_receipt": "build-reports/1795026203589613935-5.json",
+      "log": "build-reports/1795026203589613935-5-LogicLineages-PersistentMarking-DecisionSourceUniverse.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 462932
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowDomain": {
+      "source_sha256": "9c1896604ee7e0a24b3ee0ae716b02efd9178a2ac36762d1cf2366520e260f0c",
+      "input_key": "9f421895dd6069ae1818494dd60b22bf91604c8845b32d40e87690a6f05bd2c7",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowSyntax.olean",
+        "LogicLineages/PersistentMarking/DecisionSourceUniverse.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowDomain.olean": "a449b25bebe1ca8946a4892dfd5eb6df0c404fe3108307b0f81a9bb82ddb18d9",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowDomain.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowDomain.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowDomain.ir": null
+      },
+      "native_receipt": "build-reports/1795072080041120362-6.json",
+      "log": "build-reports/1795072080041120362-6-LogicLineages-PersistentMarking-NumberedWindowDomain.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 481880
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowRules": {
+      "source_sha256": "e8afe2e4b302ff9a91708f6434118db70826d030bb958f491f4a03d88198836e",
+      "input_key": "4bea5e94c9da7c3be7e9400a7da8516787e2cdb0f7dbf48fe7ccdfceecb81c49",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowDomain.olean",
+        "LogicLineages/PersistentMarking/Occurrences.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRules.olean": "8fe985089efef21654f2f2670d66fea30d740112fec29e56499f170164674f6f",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRules.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRules.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRules.ir": null
+      },
+      "native_receipt": "build-reports/1795072080041120362-6.json",
+      "log": "build-reports/1795072080041120362-6-LogicLineages-PersistentMarking-NumberedWindowRules.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 479884
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowLiteralEquality": {
+      "source_sha256": "bee10e17ed6543b764bccdf3bce4736d7b5f7dd07707dcaff679f1a95c5f7b7e",
+      "input_key": "ccebe9b8cc0fd3e2ad2585eec07a0e0d9a61e34ad0c6196b30b59720ef1ac24e",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowSyntax.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowLiteralEquality.olean": "b22aaf94421454dff96a8035448ddbc6a58a172d58f5f9a13356e218bc29e412",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowLiteralEquality.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowLiteralEquality.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowLiteralEquality.ir": null
+      },
+      "native_receipt": "build-reports/1795086558470061136-2.json",
+      "log": "build-reports/1795086558470061136-2-LogicLineages-PersistentMarking-NumberedWindowLiteralEquality.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 477568
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowPrimitiveWitnessBits": {
+      "source_sha256": "287775b484cfa0d81628efe86ab22323c3314ee99faf5d47791545cb37daef83",
+      "input_key": "acb7353b5684a9c9445e2f30c60ac85e7e164ab50e43a84d1a0f81acd894099d",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowRules.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowLiteralEquality.olean"
+      ],
+      "external_objects": {
+        "Init.Data.List.Perm": {
+          "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Init/Data/List/Perm.olean": "f06bd7d4a5fbf9926c86b90b4a223d90a74d61414c006aad8a68222afbdbe643",
+          "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Init/Data/List/Perm.olean.private": "f0a614be92b83cbc5363dda9127cf4a91b7a9fb0004a8584562e16084076769f",
+          "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Init/Data/List/Perm.olean.server": "98aa58c7750a4f049a8a65a96859c9ca8faf63a88f40f3a73a50b45ab62f9e41",
+          "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Init/Data/List/Perm.ir": "c1b6c49238f2074f0fe5e7732caef93293800b75ef19f602a4d0c483782364f8"
+        }
+      },
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPrimitiveWitnessBits.olean": "1c48581e1f1e649cfd50c2a43ffaff441cbe04906d87ae15cdffa8f74a8f5c84",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPrimitiveWitnessBits.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPrimitiveWitnessBits.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPrimitiveWitnessBits.ir": null
+      },
+      "native_receipt": "build-reports/1795092912326934647-2.json",
+      "log": "build-reports/1795092912326934647-2-LogicLineages-PersistentMarking-NumberedWindowPrimitiveWitnessBits.log",
+      "log_sha256": "d03a0419e93318603baf1313e1dd41dec46a4cfae2cafbc4f6dd92814d14686d",
+      "peak_rss_kib": 490236
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowHeadEnumerationTargets": {
+      "source_sha256": "df5016c0df96915eecc7d3d5a8b67d5121045209074d72ac07ac820756dc673f",
+      "input_key": "b99fd99a9264e80504b1ad49624b2dbaf298208e06faf287fb5c012e9d8863f9",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowDomain.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowHeadEnumerationTargets.olean": "49cd9eee4dc9ab020b74516cad16e2700e8a7ec2de3795fedf4bc673f8bef633",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowHeadEnumerationTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowHeadEnumerationTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowHeadEnumerationTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795085037138351282-2.json",
+      "log": "build-reports/1795085037138351282-2-LogicLineages-PersistentMarking-NumberedWindowHeadEnumerationTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 473092
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowTypingBits": {
+      "source_sha256": "49859cde87f3444b19cb5302b736a60bb497ad794efa227e6eecbb47869bcc06",
+      "input_key": "137ee034bbb7669211fc404d511ed07752928ff345d91a42152684296f6f61a2",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowHeadEnumerationTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowTypingBits.olean": "4ca49229a25516d8764a47711d16985ed1542fcbca679902608312c9cbe53797",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowTypingBits.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowTypingBits.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowTypingBits.ir": null
+      },
+      "native_receipt": "build-reports/1795086558470061136-2.json",
+      "log": "build-reports/1795086558470061136-2-LogicLineages-PersistentMarking-NumberedWindowTypingBits.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 474556
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowRawWitnessRootBits": {
+      "source_sha256": "ec7f8f55e901d3a05d996b17326fc8ca3d3b8dba0b1e643e92066c9253616ce3",
+      "input_key": "8bbd2be995f179fb41fad0ccee673c7bfdbb2773e0d41d711bc4a472fcded954",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowPrimitiveWitnessBits.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowTypingBits.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRawWitnessRootBits.olean": "6c54df1ec6b652bec1cc5c7f806758be0c2c2e2c56fca18c5e05b9199450129d",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRawWitnessRootBits.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRawWitnessRootBits.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRawWitnessRootBits.ir": null
+      },
+      "native_receipt": "build-reports/1795093683734646950-2.json",
+      "log": "build-reports/1795093683734646950-2-LogicLineages-PersistentMarking-NumberedWindowRawWitnessRootBits.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 486568
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticRawRootCode": {
+      "source_sha256": "9e2c82aeb91d87852b9ee054e3ebb603aeef8472a15dbd22138a3eb756934180",
+      "input_key": "04731778863328f51b6d8c65ae727fd2140e624d48710731745c00005cf680e2",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticWitnessListCode.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticBinderCode.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowRawWitnessRootBits.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawRootCode.olean": "e8825063cb7d95666338d536ab885f149213213359759103ce4b1257d5f58ed4",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawRootCode.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawRootCode.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawRootCode.ir": null
+      },
+      "native_receipt": "build-reports/1795095285585758976-2.json",
+      "log": "build-reports/1795095285585758976-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticRawRootCode.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 479152
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowRawWitnessBits": {
+      "source_sha256": "a825c4eb776f7b1c9b70b821a88ec01407ce919a10d85e12dbb20633af583c6d",
+      "input_key": "87dc98138d3859d66da054da6702773b318878c451dc3d317c0b2acea45ac27d",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowRawWitnessRootBits.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRawWitnessBits.olean": "4b50f39e81797e2909783573cd09cc17834b8db1943d49e69c3e88069769ae55",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRawWitnessBits.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRawWitnessBits.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRawWitnessBits.ir": null
+      },
+      "native_receipt": "build-reports/1795093683734646950-2.json",
+      "log": "build-reports/1795093683734646950-2-LogicLineages-PersistentMarking-NumberedWindowRawWitnessBits.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 487124
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticRawWitnessCode": {
+      "source_sha256": "37785e07fd090c9a8147468040d1cb253b3272bed1c45532366597c418a90795",
+      "input_key": "bb892e4e2413ec5f98a892807897c4ddd2d31165752cd99fc6b0d478e7523376",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticRawRootCode.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowRawWitnessBits.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCode.olean": "961825187595951830758da26c3f5676fca27e65363a6bb81a3aa0f6a3ea5adc",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCode.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCode.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCode.ir": null
+      },
+      "native_receipt": "build-reports/1795095285585758976-2.json",
+      "log": "build-reports/1795095285585758976-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticRawWitnessCode.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 480540
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticRawWitnessCodeTargets": {
+      "source_sha256": "f7c8d1f54014181b191f7839c6cc657876146b526cd7d5b3902d7744350d0b82",
+      "input_key": "f1ec42c5a10fc7ccd49a573e261722903dcf28bf7549ce6d43d03725def68234",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCode.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeTargets.olean": "0c498fd785b8199e714803ca061df743c066bc679d23c2cf835e471092685e38",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795095285585758976-2.json",
+      "log": "build-reports/1795095285585758976-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticRawWitnessCodeTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 474660
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticTermCodeTargets": {
+      "source_sha256": "8a6cb72dd87d84381f7067872748e76842d8ef03512afe63d01f7ed01d198cc7",
+      "input_key": "0139c0795a8d5873d6ad1c47474396a804c3a37edb96cfd2ffb8dd132f6d5f74",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCode.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeTargets.olean": "d9c2c91637ed215d35877f518866886bd0f0ba98649041b825065a2f4c48dc6a",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795091309150744832-2.json",
+      "log": "build-reports/1795091309150744832-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticTermCodeTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 468636
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticAtomCodeTargets": {
+      "source_sha256": "94dc3cf1103b37acd31b53f59b1f74c30f201e822e218b2a2f26da8178816adb",
+      "input_key": "65040dafe9fa4ca05bec9c82d8942a11a6e73b58a1a8ead73e628a675ae2c3d1",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticHeadCode.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticBinderCode.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticAtomCodeTargets.olean": "4400bc5c4ec30239a41d0dd48b4a42153b38fa2f414f9cccb4092bb125eb7249",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticAtomCodeTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticAtomCodeTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticAtomCodeTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795090803563838120-2.json",
+      "log": "build-reports/1795090803563838120-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticAtomCodeTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 457476
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticPairTargets": {
+      "source_sha256": "f1944abe454bd67c432fffe99024f887c64fb7bf2bc702035ea02fea4a1541cb",
+      "input_key": "5c9618c4ab3b4cac57b7e274057a328a794c510a7c478f68c90212f261e29edc",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticPair.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairTargets.olean": "1d2b016f9c330e8f57457df05eb964835de774ddb341a400aaaaa3ba00dab52e",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairTargets.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairTargets.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairTargets.ir": null
+      },
+      "native_receipt": "build-reports/1795090114373224802-2.json",
+      "log": "build-reports/1795090114373224802-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticPairTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 456000
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticPairBoundsProof": {
+      "source_sha256": "7021b51bcc3b9fcf0f2b8789ca889821200311ae8c73cc6684ff94c1f5f1926c",
+      "input_key": "c7c09d4e2fdbbab59de26930916c4c02d5d16220449ba07c6d6b66122cb88ccd",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticPairTargets.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairBoundsProof.olean": "e0df5112a29dea197d0f25683147a03f90a6101ee4c5deab0aed676e436b9fce",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairBoundsProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairBoundsProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairBoundsProof.ir": null
+      },
+      "native_receipt": "build-reports/1795090265147458992-2.json",
+      "log": "build-reports/1795090265147458992-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticPairBoundsProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 477268
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticPairDecodeProof": {
+      "source_sha256": "77886bc0d7448d1a2612d16461dd405365a059c3a46bbc39536abe702281e41d",
+      "input_key": "07d10f2ee32ecb22acb8eb24b62a9e11b0b95a44261e028ba45bdb3cd737d3b0",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticPairBoundsProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairDecodeProof.olean": "2205092eac20d5056cf93ab3df92dabf704a9dc07fbbeea2adb3740a55034df1",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairDecodeProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairDecodeProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairDecodeProof.ir": null
+      },
+      "native_receipt": "build-reports/1795090410765540827-2.json",
+      "log": "build-reports/1795090410765540827-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticPairDecodeProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 470292
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticPairChecks": {
+      "source_sha256": "425a80492b2c490e0eec56b889423e49ce6bc4e668fdfbc0ba07b0674c25c820",
+      "input_key": "72e2acd09642ee395205dcbade9fd3ea12240869806e23c44ca0334b8f7cbd05",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticPairDecodeProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairChecks.olean": "13ef9179e34ba45b2c495e56d11b08ea8fe4549be75db807ae27f50e098d492e",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairChecks.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairChecks.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairChecks.ir": null
+      },
+      "native_receipt": "build-reports/1795090410765540827-2.json",
+      "log": "build-reports/1795090410765540827-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticPairChecks.log",
+      "log_sha256": "8856fcb77144aaee3e2c5b7fdcdd26b3a472f0dc5bcda881ee067fb71204b8aa",
+      "peak_rss_kib": 464096
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticCodecLaws": {
+      "source_sha256": "b62db9e8d86b2b1d827cd2768f249e41e4926cb46c13c5f87f11a67648b2214c",
+      "input_key": "ff4b9e28c3cd8d6279cddc2dc6f5f7bf9ea1c4b9d3d46c75b1fb06486e0c4292",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticPairChecks.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticCodecLaws.olean": "d06a192f2be070941d05f8e3f3c802d40d10b615fd2f764c7784ed341bde59b4",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticCodecLaws.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticCodecLaws.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticCodecLaws.ir": null
+      },
+      "native_receipt": "build-reports/1795091052683111750-2.json",
+      "log": "build-reports/1795091052683111750-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticCodecLaws.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 470156
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticTyCodeProof": {
+      "source_sha256": "956b55588d818302a477869b5b42cd2b08ed58dc11f335178388c356fcb66aed",
+      "input_key": "fcac71eda39633397a8ad85e474f371e2fbd67e588c94fa025257fd1117f887d",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticAtomCodeTargets.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticCodecLaws.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTyCodeProof.olean": "e380c2a1b800621167bf10f97bb7e71c560ce569990794e12636cace5f62136b",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTyCodeProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTyCodeProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTyCodeProof.ir": null
+      },
+      "native_receipt": "build-reports/1795091052683111750-2.json",
+      "log": "build-reports/1795091052683111750-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticTyCodeProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 473816
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticHeadCodeProof": {
+      "source_sha256": "85ea00a689fa8591c6a21967708f8d2369db30822baefcf319964038ef825e5a",
+      "input_key": "f147a32e9b6c45e8149172ee58492a8b0d8860a43edfd1b9575e42040b923dfc",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticTyCodeProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticHeadCodeProof.olean": "f81fbbef57385cbddcb1bd297ea10f13cb684dff5ff06629a55a1d11e856f40b",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticHeadCodeProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticHeadCodeProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticHeadCodeProof.ir": null
+      },
+      "native_receipt": "build-reports/1795091052683111750-2.json",
+      "log": "build-reports/1795091052683111750-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticHeadCodeProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 491292
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticAssembleSound": {
+      "source_sha256": "52f46a2e187bd380acece1ce59709b74869a402adf22086ebdbc40c77228b29b",
+      "input_key": "4cad135a70e57e66e27b411809aaf53db45327e8cf8bab3505e5603041e3dc25",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeTargets.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticHeadCodeProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticAssembleSound.olean": "8b848b34838b5d7b9f49b259d667152de2a586c50c54aae588a7947029cf9438",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticAssembleSound.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticAssembleSound.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticAssembleSound.ir": null
+      },
+      "native_receipt": "build-reports/1795091693804527346-2.json",
+      "log": "build-reports/1795091693804527346-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticAssembleSound.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 491664
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticFieldsProof": {
+      "source_sha256": "2d55552b542dc4356a7ba777b77d5053d55e92c6000511dbc1fb9f3848c303a2",
+      "input_key": "fbba165c58014a1a5790b4a74a805610de4b4c698d4a658946f47dc279cf2616",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeTargets.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticCodecLaws.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticFieldsProof.olean": "4574a6d39228d0d523c0200bb782e000d325ac692ee37ad215c3e2029adfd31a",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticFieldsProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticFieldsProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticFieldsProof.ir": null
+      },
+      "native_receipt": "build-reports/1795091693804527346-2.json",
+      "log": "build-reports/1795091693804527346-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticFieldsProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 474640
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticNodeProof": {
+      "source_sha256": "0fe91a800f1d30faaf89e1bf83374bb414500a8c56e9d14f4a8872ed91fb6971",
+      "input_key": "39dbbfb9af2411fbbd0ec5e53d75b4e12c065eb63d01794bf2ec1a93e6c37188",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticFieldsProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticNodeProof.olean": "a22e466c3da700bb21ffe141d754d3c6d842f80a71af84bfbff3b1c83b1d5ff3",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticNodeProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticNodeProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticNodeProof.ir": null
+      },
+      "native_receipt": "build-reports/1795091862323740622-2.json",
+      "log": "build-reports/1795091862323740622-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticNodeProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 475556
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticTermCodeSound": {
+      "source_sha256": "ffed16525fffd3f3632dcc35615101a887f2df23926e749ae6b9f0a69061353b",
+      "input_key": "3387891eccf9b52b89a4ccb41442f03b777129d9e9f5412c79e52b0ca05beeba",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticAssembleSound.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticNodeProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeSound.olean": "e1b615fd5e0b9c36fa21f6de5ab49b3c96cb2363b4c281c66deedd5d76bdf8ee",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeSound.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeSound.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeSound.ir": null
+      },
+      "native_receipt": "build-reports/1795091862323740622-2.json",
+      "log": "build-reports/1795091862323740622-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticTermCodeSound.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 476116
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticTermCodeCases": {
+      "source_sha256": "4ce79bd6163727833e4420342eb5414daf3c05577ecf3df96063b910b953c432",
+      "input_key": "54632a28db9b9d4ec176f9577e039872ab85d88995ff7a5c11abb5413227b718",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticNodeProof.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticHeadCodeProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeCases.olean": "b625e3c6fceca2840aa0788f8e5fde07c44ea72440d2e21b88bea99fc2ffb869",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeCases.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeCases.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeCases.ir": null
+      },
+      "native_receipt": "build-reports/1795091862323740622-2.json",
+      "log": "build-reports/1795091862323740622-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticTermCodeCases.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 500016
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticTermCodeComplete": {
+      "source_sha256": "f67923147e98e592d038011f60890e7914dafa836edac9f4bd915c7b785bf83d",
+      "input_key": "1c87ad34f7fbdb5d63e482370f9e189eda870cbfb1b1e3832b8d900262160e56",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeCases.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeComplete.olean": "bc9a3c958a55a9cc91cb0078ff106db231b5ce3f1bcc590535e2988b1084e5e9",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeComplete.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeComplete.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeComplete.ir": null
+      },
+      "native_receipt": "build-reports/1795091862323740622-2.json",
+      "log": "build-reports/1795091862323740622-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticTermCodeComplete.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 473092
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticTermCodeChecks": {
+      "source_sha256": "70a9c467271f87f77d0a4a1cf722277247278f669e470b4d9b0b8bae136d81ff",
+      "input_key": "fb872abf526be72099885466906901649399a5e28ae71798325b6e0e04a45827",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeSound.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeComplete.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeChecks.olean": "1e1be9fbe77c51c56d1adec885077a93b3783c9381929001135182b7798a380e",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeChecks.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeChecks.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeChecks.ir": null
+      },
+      "native_receipt": "build-reports/1795091862323740622-2.json",
+      "log": "build-reports/1795091862323740622-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticTermCodeChecks.log",
+      "log_sha256": "1b9b3fcefdd24b56f19cef1817ec8a2e5b64b112a66c7480c5b1cf836c57b282",
+      "peak_rss_kib": 470128
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticWitnessListCodeProof": {
+      "source_sha256": "5659b26903e26129720d1d71ac10a10408f4d49ef166fc0645aefaaa99ce5b0b",
+      "input_key": "cb779115f74f51761afef7ddf6a684be6f83d82dfca4f9f90949c64c12d5fbdb",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticWitnessListCode.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeChecks.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticWitnessListCodeProof.olean": "cf3ce170dd2a5db3d4cb9b2d6e5ed8adf7aa41e647997f8a59c29295f71efa40",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticWitnessListCodeProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticWitnessListCodeProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticWitnessListCodeProof.ir": null
+      },
+      "native_receipt": "build-reports/1795095790354800696-2.json",
+      "log": "build-reports/1795095790354800696-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticWitnessListCodeProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 477432
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticReplacementCodeProof": {
+      "source_sha256": "5c27d0a3f220158e3e66cd37f86d87fbed9917303ad770bd28badd7c44206bd4",
+      "input_key": "ea274c077421f19a3a8768ff38d88c849a803940ea7399099dce342ad7b0dce3",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticWitnessListCodeProof.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticRawRootCode.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticReplacementCodeProof.olean": "a66f693a246fb1696d62f19afbfd842e0587ca36cea8e905b14fdbdcca9ebca6",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticReplacementCodeProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticReplacementCodeProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticReplacementCodeProof.ir": null
+      },
+      "native_receipt": "build-reports/1795095790354800696-2.json",
+      "log": "build-reports/1795095790354800696-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticReplacementCodeProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 494784
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticBinderCodeProof": {
+      "source_sha256": "cecbdfcde8ed50b2a6a725c7d3b9638facb258d0245dc700636616aedd997429",
+      "input_key": "ed4e50fea09c8ea7bdd052707f12164c5e7e802aa79ea56fea213760742a69c3",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticTyCodeProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticBinderCodeProof.olean": "0a14198e52c989795911d85cc73f68be5a2265f9e293cd27e6c78f9b3f5e2bba",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticBinderCodeProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticBinderCodeProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticBinderCodeProof.ir": null
+      },
+      "native_receipt": "build-reports/1795091052683111750-2.json",
+      "log": "build-reports/1795091052683111750-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticBinderCodeProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 473972
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticRawRootCodeProof": {
+      "source_sha256": "2e7a803686179c09b78d39d942ce1b29d9d1a91e196c1265b984b29f29ed1f9d",
+      "input_key": "200576b25462b8ea2f500af856c184b660a4bdf34a14b5278d77a191f7ad71ca",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticReplacementCodeProof.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticBinderCodeProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawRootCodeProof.olean": "1d1e630ba2b9d8e6957f048939cf678b4485e85700ca3607112164bf6110a22b",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawRootCodeProof.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawRootCodeProof.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawRootCodeProof.ir": null
+      },
+      "native_receipt": "build-reports/1795095790354800696-2.json",
+      "log": "build-reports/1795095790354800696-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticRawRootCodeProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 489188
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticRawWitnessCodeSound": {
+      "source_sha256": "87d90c06f2083a52ab0478eb3bc53644f9c8d8b4930c82a9de7215e447545f14",
+      "input_key": "4500ca4967f256ff5b73565512785e867ba71c272b38a1c7c946f3b24621666b",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeTargets.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticRawRootCodeProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeSound.olean": "4f273e2a2fb54981bec9a97058e502f0533a539d7163fbf15448d41d58b5b60e",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeSound.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeSound.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeSound.ir": null
+      },
+      "native_receipt": "build-reports/1795095790354800696-2.json",
+      "log": "build-reports/1795095790354800696-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticRawWitnessCodeSound.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 492780
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticRawWitnessCodeComplete": {
+      "source_sha256": "e9ffee96b3ba671465642cf06c21d6418742fd0282824ed783c454a6ca2d3781",
+      "input_key": "be7620be30cace7d39861d6e2b9a4bfbe1d880cc24e0d1893f35a1f36388fd77",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeTargets.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticRawRootCodeProof.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeComplete.olean": "e12c9d93064f029499931b5dd9e0bd8887e7cfbce0808869085e5c89c09afb56",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeComplete.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeComplete.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeComplete.ir": null
+      },
+      "native_receipt": "build-reports/1795095790354800696-2.json",
+      "log": "build-reports/1795095790354800696-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticRawWitnessCodeComplete.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "peak_rss_kib": 491508
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowArithmeticRawWitnessCodeChecks": {
+      "source_sha256": "cc15127cd7ac62bd312ddc0141aecc2a7c805c962e05786f1ba620762e38a5a0",
+      "input_key": "408487e692db7cded4682a30caf42e201ec55662d73a11082ee9833828bc214d",
+      "local_dependencies": [
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeSound.olean",
+        "LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeComplete.olean"
+      ],
+      "external_objects": {},
+      "objects": {
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeChecks.olean": "6e7894c2e9a7950c88a871dcec6fbf592e994d53b036c7df3943dfdda1b527a2",
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeChecks.olean.private": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeChecks.olean.server": null,
+        ".lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawWitnessCodeChecks.ir": null
+      },
+      "native_receipt": "build-reports/1795095790354800696-2.json",
+      "log": "build-reports/1795095790354800696-2-LogicLineages-PersistentMarking-NumberedWindowArithmeticRawWitnessCodeChecks.log",
+      "log_sha256": "00fe1fd78669748da3cd59ed91dc11f8efec080e5b46a6add56313bc313bea73",
+      "peak_rss_kib": 475336
+    }
+  }
+}

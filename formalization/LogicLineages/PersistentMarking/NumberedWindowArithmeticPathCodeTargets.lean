@@ -1,0 +1,17 @@
+import LogicLineages.PersistentMarking.NumberedWindowArithmeticPathCode
+import LogicLineages.PersistentMarking.NumberedWindowArithmeticRawWitnessCodeTargets
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticPathCodeTargets
+open NumberedWindowArithmeticPathCode NumberedWindowArithmeticRawWitnessCodeTargets
+
+def ExactRawHopCodec : Prop := LiteralWitnessCodec encodeRawHop decodeRawHop
+
+def ExactClassEdgeWitnessCodec : Prop := LiteralWitnessCodec encodeClassEdge decodeClassEdge
+
+def ExactClassHopCodec : Prop := LiteralWitnessCodec encodeClassHop decodeClassHop
+
+def ExactRawPathListCodec : Prop := LiteralWitnessCodec encodeRawPath decodeRawPath
+
+def ExactClassPathListCodec : Prop := LiteralWitnessCodec encodeClassPath decodeClassPath
+
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticPathCodeTargets
