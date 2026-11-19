@@ -1,0 +1,55 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean
+@@ -30,31 +30,26 @@
+     ∀ (s : Spec) (a : Ref ss s), r.graph.values (r.keep a) = d.values a := by
+   induction t generalizing Γ Δ ss with
+   | var x =>
+-    rw [castVariable]
+-    simp only [buildIn, DAG.values, extendValues]
+-    exact ⟨rfl,fun _ _ => rfl⟩
++    rw [castVariable h x]
++    simp [buildIn, DAG.values, extendValues]
+   | zeroC =>
+     cases h
+-    simp only [buildIn, DAG.values, extendValues]
+-    exact ⟨rfl,fun _ _ => rfl⟩
++    simp [buildIn, DAG.values, extendValues]
+   | succC =>
+     cases h
+-    simp only [buildIn, DAG.values, extendValues]
+-    exact ⟨rfl,fun _ _ => rfl⟩
++    simp [buildIn, DAG.values, extendValues]
+   | caseC σ =>
+     cases h
+-    simp only [buildIn, DAG.values, extendValues]
+-    exact ⟨rfl,fun _ _ => rfl⟩
++    simp [buildIn, DAG.values, extendValues]
+   | recC σ =>
+     cases h
+-    simp only [buildIn, DAG.values, extendValues]
+-    exact ⟨rfl,fun _ _ => rfl⟩
++    simp [buildIn, DAG.values, extendValues]
+   | app f a ihf iha =>
+     let F := buildIn f Γ Δ h d
+     let A := buildIn a Γ Δ h F.graph
+     have hf := ihf Γ Δ h d
+     have ha := iha Γ Δ h F.graph
+-    rw [castApplication]
++    rw [castApplication h f a]
+     simp only [buildIn, DAG.values, extendValues]
+     constructor
+     · change Term.app (A.graph.values (A.keep .here)) (A.graph.values .here) = _
+@@ -65,11 +60,11 @@
+   | @lam Ξ σ τ b ih =>
+     let B := buildIn b Γ (σ :: Δ) (congrArg (List.cons σ) h) d
+     have hb := ih Γ (σ :: Δ) (congrArg (List.cons σ) h) d
+-    rw [castLambda]
++    rw [castLambda h b]
+     simp only [buildIn, DAG.values, extendValues]
+     constructor
+     · change Term.lam (B.graph.values .here) = _
+-      rw [hb.1]
++      exact congrArg (fun z : OriginalTerm ((σ :: Δ) ++ Γ) τ => Term.lam z) hb.1
+     · intro s r
+       change B.graph.values (B.keep r) = _
+       exact hb.2 s r

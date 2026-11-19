@@ -1,0 +1,1 @@
+Coordinator read exact typed transport/simp correction and independently verified applied SHA25690c936d16f68c7e0199403b160690408b5075b20f10f135db1b408cad0bb5763. Explicit cast identities and lambda congruence preserve literal source trees and all old graph references; existing target/Definitions unchanged. Failed source retained, fresh exact gate required.

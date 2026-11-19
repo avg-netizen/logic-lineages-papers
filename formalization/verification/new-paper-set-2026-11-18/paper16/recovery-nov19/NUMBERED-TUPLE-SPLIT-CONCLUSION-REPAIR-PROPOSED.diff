@@ -1,0 +1,11 @@
+--- LogicLineages/PersistentMarking/NumberedWindowTupleSplitChecks.lean
++++ LogicLineages/PersistentMarking/NumberedWindowTupleSplitChecks.lean
+@@ -26,7 +26,7 @@
+     have h := NumberedWindowTupleAuxFoldProof.run S K C n (budget n (.cons a rest))
+       (.cons a rest) q .nil [] σ τ r Q As .nil hk (Nat.le_refl _) ⟨hQ,hValid,hAdmiss⟩ hEmpty
+       hCall hArgsValid hArgsAdmiss hr hRep hAs .nil
+-    simpa only [emptySubstitute] using h
++    simpa only [emptySubstitute,Conclusion] using h
+ 
+ #print axioms exact_WholeTupleSimulation
+ 

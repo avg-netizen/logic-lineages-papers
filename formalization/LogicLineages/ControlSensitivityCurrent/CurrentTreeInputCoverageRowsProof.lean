@@ -17,13 +17,11 @@ private theorem rowVar (Γ Δ : List Nat) (i : Nat) :
 
 private theorem rowZero (Γ Δ : List Nat) :
     rows Γ Δ 1 = [(Δ,(SyntaxCode.check (Δ++Γ) 1).getD 0,3,[])] := by
-  rw [rows]
-  rfl
+  rw [rows] <;> rfl
 
 private theorem rowSucc (Γ Δ : List Nat) :
     rows Γ Δ 2 = [(Δ,(SyntaxCode.check (Δ++Γ) 2).getD 0,4,[])] := by
-  rw [rows]
-  rfl
+  rw [rows] <;> rfl
 
 private theorem rowCase (Γ Δ : List Nat) (i : Nat) :
     rows Γ Δ (8*i+3) = [(Δ,(SyntaxCode.check (Δ++Γ) (8*i+3)).getD 0,5,[i])] := by
@@ -62,8 +60,7 @@ private theorem typedCheck {Ξ : List Ty} {τ : Ty} (t : OriginalTerm Ξ τ)
   subst Ξ
   have hh := (SyntaxCode.StatementChecks.typedCheckExact (Δ++Γ) τ (SyntaxCode.encodeTerm t)).mpr ⟨t,rfl⟩
   rw [List.map_append] at hh
-  rw [hh]
-  rfl
+  rw [hh] <;> rfl
 
 private theorem indexTransfer {Ξ K : List Ty} {σ : Ty} (h : K = Ξ) (x : Variable Ξ σ) :
     variableIndex (h.symm ▸ x) = SourceTypedPorts.variableIndex x := by
@@ -119,8 +116,8 @@ private theorem rowsIn {Ξ : List Ty} {τ : Ty} (t : OriginalTerm Ξ τ)
       exact congrArg (fun u => ((Δ.map SyntaxCode.typeCode,u,5,[SyntaxCode.typeCode σ]) : Node) ::
         encodeGraph d) hc.symm
     · intro s ref
-      simp [buildIn,referenceIndex,rowsOf,SyntaxCode.encodeTerm,SyntaxCode.erase,SyntaxCode.code,
-        rowCase,Nat.add_comm]
+      simp only [buildIn,referenceIndex,rowsOf,SyntaxCode.encodeTerm,SyntaxCode.erase,SyntaxCode.code,
+        rowCase,List.length_cons,List.length_nil] <;> omega
   | recC σ =>
     have hc := typedCheck (Term.recC σ : OriginalTerm _ σ.recType) Γ Δ h
     constructor
@@ -129,8 +126,8 @@ private theorem rowsIn {Ξ : List Ty} {τ : Ty} (t : OriginalTerm Ξ τ)
       exact congrArg (fun u => ((Δ.map SyntaxCode.typeCode,u,6,[SyntaxCode.typeCode σ]) : Node) ::
         encodeGraph d) hc.symm
     · intro s ref
-      simp [buildIn,referenceIndex,rowsOf,SyntaxCode.encodeTerm,SyntaxCode.erase,SyntaxCode.code,
-        rowRec,Nat.add_comm]
+      simp only [buildIn,referenceIndex,rowsOf,SyntaxCode.encodeTerm,SyntaxCode.erase,SyntaxCode.code,
+        rowRec,List.length_cons,List.length_nil] <;> omega
   | @app Ξ σ τ f a ihf iha =>
     let F := buildIn f Γ Δ h d
     let A := buildIn a Γ Δ h F.graph
@@ -145,7 +142,6 @@ private theorem rowsIn {Ξ : List Ty} {τ : Ty} (t : OriginalTerm Ξ τ)
       unfold rowsOf
       change rows _ _ (8*Nat.pair (SyntaxCode.encodeTerm f) (SyntaxCode.encodeTerm a)+5) = _
       rw [rowApp]
-      change _ = _ at checkR
       rw [show 8*Nat.pair (SyntaxCode.encodeTerm f) (SyntaxCode.encodeTerm a)+5 =
         SyntaxCode.encodeTerm (Term.app f a) from rfl, checkR,checkA]
     constructor
@@ -173,9 +169,8 @@ private theorem rowsIn {Ξ : List Ty} {τ : Ty} (t : OriginalTerm Ξ τ)
       rw [rowLam]
       rw [show 8*Nat.pair (SyntaxCode.typeCode σ) (SyntaxCode.encodeTerm b)+6 =
         SyntaxCode.encodeTerm (Term.lam b) from rfl, checkR]
-      change _ = _ at checkB
-      rw [← checkB]
-      rfl
+      simp only [List.map_cons] at checkB
+      rw [checkB] <;> rfl
     constructor
     · rw [hrows]
       simp only [buildIn,encodeGraph,node,referenceIndex,List.cons_append]

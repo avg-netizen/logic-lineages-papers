@@ -1,0 +1,152 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean:35:11: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.87 = ?m.87
+but is expected to have type
+  True
+in the application
+  And.intro rfl
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean:35:26: error: Type mismatch
+  rfl
+has type
+  ?m.91 = ?m.91
+but is expected to have type
+  True
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean:32:10: error: unsolved goals
+case var.h
+Ξ : List Ty
+τ : Ty
+Γ✝ : List Ty
+σ✝ : Ty
+x : Variable Γ✝ σ✝
+Γ Δ : List Ty
+h : Δ ++ Γ = Γ✝
+ss : List Spec
+d : DAG Γ ss
+⊢ Δ ++ Γ = Γ✝
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean:39:11: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.135 = ?m.135
+but is expected to have type
+  True
+in the application
+  And.intro rfl
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean:39:26: error: Type mismatch
+  rfl
+has type
+  ?m.139 = ?m.139
+but is expected to have type
+  True
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean:43:11: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.183 = ?m.183
+but is expected to have type
+  True
+in the application
+  And.intro rfl
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean:43:26: error: Type mismatch
+  rfl
+has type
+  ?m.187 = ?m.187
+but is expected to have type
+  True
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean:47:11: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.231 = ?m.231
+but is expected to have type
+  True
+in the application
+  And.intro rfl
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean:47:26: error: Type mismatch
+  rfl
+has type
+  ?m.235 = ?m.235
+but is expected to have type
+  True
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean:51:11: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.279 = ?m.279
+but is expected to have type
+  True
+in the application
+  And.intro rfl
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean:51:26: error: Type mismatch
+  rfl
+has type
+  ?m.283 = ?m.283
+but is expected to have type
+  True
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean:52:20: error: unsolved goals
+case app.h
+Ξ : List Ty
+τ : Ty
+Γ✝ : List Ty
+σ✝ τ✝ : Ty
+f : Term Empty Empty.elim Γ✝ (σ✝.arrow τ✝)
+a : Term Empty Empty.elim Γ✝ σ✝
+ihf :
+  ∀ (Γ Δ : List Ty) (h : Δ ++ Γ = Γ✝) {ss : List Spec} (d : DAG Γ ss),
+    let r := buildIn f Γ Δ h d;
+    r.graph.values Ref.here = ⋯ ▸ f ∧ ∀ (s : Spec) (a : Ref ss s), r.graph.values (r.keep a) = d.values a
+iha :
+  ∀ (Γ Δ : List Ty) (h : Δ ++ Γ = Γ✝) {ss : List Spec} (d : DAG Γ ss),
+    let r := buildIn a Γ Δ h d;
+    r.graph.values Ref.here = ⋯ ▸ a ∧ ∀ (s : Spec) (a : Ref ss s), r.graph.values (r.keep a) = d.values a
+Γ Δ : List Ty
+h : Δ ++ Γ = Γ✝
+ss : List Spec
+d : DAG Γ ss
+F : Added Γ ss (Δ, σ✝.arrow τ✝) := buildIn f Γ Δ h d
+A : Added Γ ((Δ, σ✝.arrow τ✝) :: F.tail) (Δ, σ✝) := buildIn a Γ Δ h F.graph
+hf :
+  let r := buildIn f Γ Δ h d;
+  r.graph.values Ref.here = ⋯ ▸ f ∧ ∀ (s : Spec) (a : Ref ss s), r.graph.values (r.keep a) = d.values a
+ha :
+  let r := buildIn a Γ Δ h F.graph;
+  r.graph.values Ref.here = ⋯ ▸ a ∧
+    ∀ (s : Spec) (a : Ref ((Δ, σ✝.arrow τ✝) :: F.tail) s), r.graph.values (r.keep a) = F.graph.values a
+⊢ Δ ++ Γ = Γ✝
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean:71:4: error: unsolved goals
+case lam.left
+Ξ✝ : List Ty
+τ✝ : Ty
+Ξ : List Ty
+σ τ : Ty
+b : Term Empty Empty.elim (σ :: Ξ) τ
+ih :
+  ∀ (Γ Δ : List Ty) (h : Δ ++ Γ = σ :: Ξ) {ss : List Spec} (d : DAG Γ ss),
+    let r := buildIn b Γ Δ h d;
+    r.graph.values Ref.here = ⋯ ▸ b ∧ ∀ (s : Spec) (a : Ref ss s), r.graph.values (r.keep a) = d.values a
+Γ Δ : List Ty
+h : Δ ++ Γ = Ξ
+ss : List Spec
+d : DAG Γ ss
+B : Added Γ ss (σ :: Δ, τ) := buildIn b Γ (σ :: Δ) ⋯ d
+hb :
+  let r := buildIn b Γ (σ :: Δ) ⋯ d;
+  r.graph.values Ref.here = ⋯ ▸ b ∧ ∀ (s : Spec) (a : Ref ss s), r.graph.values (r.keep a) = d.values a
+⊢ Term.lam (⋯ ▸ b) = (⋯ ▸ b).lam
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean:65:20: error: unsolved goals
+case lam.h
+Ξ✝ : List Ty
+τ✝ : Ty
+Ξ : List Ty
+σ τ : Ty
+b : Term Empty Empty.elim (σ :: Ξ) τ
+ih :
+  ∀ (Γ Δ : List Ty) (h : Δ ++ Γ = σ :: Ξ) {ss : List Spec} (d : DAG Γ ss),
+    let r := buildIn b Γ Δ h d;
+    r.graph.values Ref.here = ⋯ ▸ b ∧ ∀ (s : Spec) (a : Ref ss s), r.graph.values (r.keep a) = d.values a
+Γ Δ : List Ty
+h : Δ ++ Γ = Ξ
+ss : List Spec
+d : DAG Γ ss
+B : Added Γ ss (σ :: Δ, τ) := buildIn b Γ (σ :: Δ) ⋯ d
+hb :
+  let r := buildIn b Γ (σ :: Δ) ⋯ d;
+  r.graph.values Ref.here = ⋯ ▸ b ∧ ∀ (s : Spec) (a : Ref ss s), r.graph.values (r.keep a) = d.values a
+⊢ Δ ++ Γ = Ξ

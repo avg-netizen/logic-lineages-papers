@@ -1,0 +1,13 @@
+{
+  "status": "proposal only, active proof and frozen sources unchanged",
+  "only_file": "LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageRowsProof.lean",
+  "before_sha256": "310ac0b0b74c5e1ad0214742ad142bff7d2baa58cf73b8d03c7e17eabf45b45a",
+  "proposed_sha256": "670ef821fa7ef67e9c6291af8cb6844fc4f2d0e6ed3fc16841588e0b0bcf87e2",
+  "failure": "build-reports/1795074971871449340-2.json",
+  "exact_error": [
+    "caseC.right scalar offset goal retained rows length for literal normalized 3+8*i because simp Nat.add_comm rearranged the tree code before rowCase matched",
+    "recC.right same problem for 4+8*i; both literal root/table equations passed"
+  ],
+  "scope": "rewrite rowCase/rowRec with only arithmetic-free constructor and literal erasure simp rules, then use omega for the final scalar old-reference offset. Literal row code, old refs and targets unchanged.",
+  "preserved": "verification/new-paper-set-2026-11-18/paper19/current-tree-input-coverage-failures/1795074971871449340-2"
+}

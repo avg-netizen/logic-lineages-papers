@@ -1,0 +1,67 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageRowsProof.lean:20:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageRowsProof.lean:24:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageRowsProof.lean:63:10: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageRowsProof.lean:118:4: error: unsolved goals
+case caseC.right
+Ξ : List Ty
+τ : Ty
+Γ✝ : List Ty
+σ : Ty
+Γ Δ : List Ty
+h : Δ ++ Γ = Γ✝
+ss : List Spec
+d : DAG Γ ss
+hc :
+  (SyntaxCode.check (List.map SyntaxCode.typeCode Δ ++ List.map SyntaxCode.typeCode Γ)
+          (SyntaxCode.encodeTerm (Term.caseC σ))).getD
+      0 =
+    SyntaxCode.typeCode σ.caseType
+s : Spec
+ref : Ref ss s
+⊢ 1 + referenceIndex ref =
+    referenceIndex ref +
+      (rows (List.map SyntaxCode.typeCode Γ) (List.map SyntaxCode.typeCode Δ) (3 + 8 * SyntaxCode.typeCode σ)).length
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageRowsProof.lean:128:4: error: unsolved goals
+case recC.right
+Ξ : List Ty
+τ : Ty
+Γ✝ : List Ty
+σ : Ty
+Γ Δ : List Ty
+h : Δ ++ Γ = Γ✝
+ss : List Spec
+d : DAG Γ ss
+hc :
+  (SyntaxCode.check (List.map SyntaxCode.typeCode Δ ++ List.map SyntaxCode.typeCode Γ)
+          (SyntaxCode.encodeTerm (Term.recC σ))).getD
+      0 =
+    SyntaxCode.typeCode σ.recType
+s : Spec
+ref : Ref ss s
+⊢ 1 + referenceIndex ref =
+    referenceIndex ref +
+      (rows (List.map SyntaxCode.typeCode Γ) (List.map SyntaxCode.typeCode Δ) (4 + 8 * SyntaxCode.typeCode σ)).length
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageRowsProof.lean:120:8: warning: This simp argument is unused:
+  rowCase
+
+Hint: Omit it from the simp argument list.
+  simp [̵b̵u̵i̵l̵d̵I̵n̵,̵r̵e̵f̵e̵r̵e̵n̵c̵e̵I̵n̵d̵e̵x̵,̵r̵o̵w̵s̵O̵f̵,̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵e̵r̵a̵s̵e̵,̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵c̵o̵d̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵r̵o̵w̵C̵a̵s̵e̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲b̲u̲i̲l̲d̲I̲n̲,̲ ̲r̲e̲f̲e̲r̲e̲n̲c̲e̲I̲n̲d̲e̲x̲,̲ ̲r̲o̲w̲s̲O̲f̲,̲ ̲S̲y̲n̲t̲a̲x̲C̲o̲d̲e̲.̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲S̲y̲n̲t̲a̲x̲C̲o̲d̲e̲.̲e̲r̲a̲s̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲S̲y̲n̲t̲a̲x̲C̲o̲d̲e̲.̲c̲o̲d̲e̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageRowsProof.lean:130:8: warning: This simp argument is unused:
+  rowRec
+
+Hint: Omit it from the simp argument list.
+  simp [̵b̵u̵i̵l̵d̵I̵n̵,̵r̵e̵f̵e̵r̵e̵n̵c̵e̵I̵n̵d̵e̵x̵,̵r̵o̵w̵s̵O̵f̵,̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵e̵r̵a̵s̵e̵,̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵c̵o̵d̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵r̵o̵w̵R̵e̵c̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲b̲u̲i̲l̲d̲I̲n̲,̲ ̲r̲e̲f̲e̲r̲e̲n̲c̲e̲I̲n̲d̲e̲x̲,̲ ̲r̲o̲w̲s̲O̲f̲,̲ ̲S̲y̲n̲t̲a̲x̲C̲o̲d̲e̲.̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲S̲y̲n̲t̲a̲x̲C̲o̲d̲e̲.̲e̲r̲a̲s̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲S̲y̲n̲t̲a̲x̲C̲o̲d̲e̲.̲c̲o̲d̲e̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

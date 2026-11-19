@@ -105,7 +105,7 @@ private theorem rawAssemblePrimitive : Primrec₂ rawAssemble := by
 private theorem decreases (a b : Task) (hb : b ∈ rawChildren a) : measure b < measure a := by
   rcases a with ⟨Γ,Δ,n⟩
   unfold rawChildren at hb
-  dsimp only at hb
+  try dsimp only at hb
   by_cases h5 : n%8 = 5
   · have hp : 0 < n := by omega
     have hd := Nat.div_lt_self hp (by decide : 1 < 8)

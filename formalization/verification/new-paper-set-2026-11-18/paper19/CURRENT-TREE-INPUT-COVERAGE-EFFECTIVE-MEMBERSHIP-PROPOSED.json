@@ -1,0 +1,13 @@
+{
+  "status": "proposal only, active and frozen sources unchanged",
+  "only_file": "LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageEffectiveProof.lean",
+  "before_sha256": "1561a20f2d2ec315d75f7b31284b71fdd5f177f884320cf4ad2ea8e3ba9f79d8",
+  "proposed_sha256": "40434910e220aa94647c8a0d07cf2de48505b484e82f5db1869327a74bd866fc",
+  "failure": "build-reports/1795075107754227509-2.json",
+  "exact_errors": [
+    "116:6 subst b sees e : b = second application child \u2228 b \u2208 []; restrictive simp omitted the impossible nil tail",
+    "122:6 subst b sees b \u2208 if 6 = 5 then application children else singleton lambda body; restrictive simp omitted literal Nat inequality and membership"
+  ],
+  "scope": "normal simp with actual branch h5 or h6 in just the two child-membership hypotheses; retains actual raw children, decreases, cloned malformed behavior, typed target, finiteGraph and computations.",
+  "preserved": "verification/new-paper-set-2026-11-18/paper19/current-tree-input-coverage-failures/1795075107754227509-2"
+}

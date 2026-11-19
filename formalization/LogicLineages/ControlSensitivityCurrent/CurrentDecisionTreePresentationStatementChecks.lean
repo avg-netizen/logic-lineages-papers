@@ -1,0 +1,21 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.CurrentDecisionTreePresentationProof
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.CurrentDecisionTreePresentation.StatementChecks
+
+theorem exact_original_tree_queries : CurrentDecisionTreePresentationTargets.CompileOriginalTrees :=
+  compileOriginalTrees
+theorem original_ground_inclusion : CurrentDecisionTreePresentationTargets.GroundInclusion := groundInclusion
+theorem exact_malformed_rejection : CurrentDecisionTreePresentationTargets.RawRejection := rawRejection
+theorem actual_effective_original_maps : CurrentDecisionTreePresentationTargets.Effective := effective
+
+theorem original_tree_decision_equivalence : CurrentDecisionTreePresentationTargets.Full :=
+  ⟨exact_original_tree_queries,original_ground_inclusion,exact_malformed_rejection,actual_effective_original_maps⟩
+
+#print axioms exact_original_tree_queries
+#print axioms original_ground_inclusion
+#print axioms exact_malformed_rejection
+#print axioms actual_effective_original_maps
+#print axioms original_tree_decision_equivalence
+
+end LogicLineages.ControlSensitivityCurrent.CurrentDecisionTreePresentation.StatementChecks

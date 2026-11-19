@@ -1,0 +1,1 @@
+Coordinator read exact freeExact direction/constructor truth proof repair and independently verified applied SourceInventory cdb6fd56655ecf0140c3fcbbe3829ce447ca8c974da2ce824815c8be49be2086 and SourceBlock b21179332baae13a133b001d01cbe7dcb7cc6685ddd0315fc6a856217a1c8748. Same exact targets and semantics. Fresh source-guard gate pending.

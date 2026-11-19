@@ -42,11 +42,9 @@ private theorem groundCompare (p : AdmissibleSum.Policy) (f : Nat → Nat) (stri
     intro j
     simp only [CurrentCounterBound.coordinate, ordinalVectorAt, dif_neg (show ¬ j+1 < 0+1 by omega)]
     exact le_rfl
-  rw [and_iff_right hpos]
-  change (if strict then
-    ParametricSourceSuccessor.denoteWith f _ (av 0) < ParametricSourceSuccessor.denoteWith f _ (bv 0)
-    else ParametricSourceSuccessor.denoteWith f _ (av 0) ≤ ParametricSourceSuccessor.denoteWith f _ (bv 0)) ↔ _
-  rw [va,vb,hv,hw]
+  have ca : CurrentCounterBound.coordinate f av (fun c => inputs ρ c+1) 0 = (v : Ordinal) := va
+  have cb : CurrentCounterBound.coordinate f bv (fun c => inputs ρ c+1) 0 = (w : Ordinal) := vb
+  rw [and_iff_right hpos,ca,cb,hv,hw]
   cases strict <;> simp
 
 theorem groundSpecialization : CurrentDecisionTargets.GroundSpecialization := by

@@ -1,0 +1,1 @@
+Coordinator read exact calibration/explicit-six-extension proposed diff and independently verified applied CounterSemantic SHA256 e725280a78b81279bb1b2ada6ef9d3f9d31f2cdea379b0cd39d60bc5a20c11ff. Literal bindings and actual positive scalar equality unchanged; current gate required. Original failure preserved.

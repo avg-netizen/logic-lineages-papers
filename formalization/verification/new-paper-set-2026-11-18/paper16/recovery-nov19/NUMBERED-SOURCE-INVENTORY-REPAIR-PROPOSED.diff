@@ -1,0 +1,44 @@
+--- LogicLineages/PersistentMarking/NumberedWindowSourceInventoryProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowSourceInventoryProof.lean
+@@ -18,7 +18,7 @@
+     · intro f h
+       exact hHeads f (List.mem_append_left _ h)
+     · intro n h
+-      exact hNames n (List.mem_append_left _ ((DecisionInventoryProof.freeExact a n).mp h))
++      exact hNames n (List.mem_append_left _ ((DecisionInventoryProof.freeExact a n).mpr h))
+     · intro τ h
+       exact hSupport τ (List.mem_append_right _ h)
+     · intro f h
+@@ -35,8 +35,8 @@
+ 
+ theorem validOfHeads (S : Signature) (q : Expr) : TermAdmitted S q := by
+   apply @Expr.rec (TermAdmitted S) (ArgsAdmitted S)
+-  · intros; trivial
+-  · intros; trivial
++  · intro σ x; exact fun _ => True.intro
++  · intro σ i; exact fun _ => True.intro
+   · intro σ q ih; exact ih
+   · intro f bs ih h
+     exact ⟨h f List.mem_cons_self,ih (fun g hg => h g (List.mem_cons_of_mem _ hg))⟩
+@@ -44,7 +44,7 @@
+     exact ⟨h f List.mem_cons_self,
+       ihb (fun g hg => h g (List.mem_cons_of_mem _ (List.mem_append_left _ hg))),
+       ihe (fun g hg => h g (List.mem_cons_of_mem _ (List.mem_append_right _ hg)))⟩
+-  · intros; trivial
++  · exact fun _ => True.intro
+   · intro q qs ihq ihqs h
+     exact ⟨ihq (fun g hg => h g (List.mem_append_left _ hg)),
+       ihqs (fun g hg => h g (List.mem_append_right _ hg))⟩
+
+--- LogicLineages/PersistentMarking/NumberedWindowSourceBlockProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowSourceBlockProof.lean
+@@ -11,7 +11,7 @@
+   let H := heads q ++ headsArgs values
+   have hu : Universe K V H [] q :=
+     ⟨hQ.2.2,fun f hf => List.mem_append_left _ hf,
+-      fun n hn => Or.inl (List.mem_append_left _ ((DecisionInventoryProof.freeExact q n).mp hn))⟩
++      fun n hn => Or.inl (List.mem_append_left _ ((DecisionInventoryProof.freeExact q n).mpr hn))⟩
+   have hv : ArgsUniverse K V H [] values := supportArgs K V H [] values hV.2.2
+     (fun f hf => List.mem_append_right _ hf) (fun n hn => Or.inl (List.mem_append_right _ hn))
+   have hc := SpineSubstitutionProof.finiteCompatible C values types hV.1
+

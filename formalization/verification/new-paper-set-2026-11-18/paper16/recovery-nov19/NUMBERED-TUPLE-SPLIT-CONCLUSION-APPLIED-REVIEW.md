@@ -1,0 +1,1 @@
+Coordinator read exact one-line proof-only Conclusion unfolding correction and independently verified applied SplitChecks SHA256bb4d35735d71ef489dcd2994c011895ede7cec5c7415185b282d69f3f86fc224. Same frozen WholeTupleSimulation, no hidden premise or weakened result. Prior failed wrapper and resource-stopped monolithic candidate retained. Requires fresh exact native pass.

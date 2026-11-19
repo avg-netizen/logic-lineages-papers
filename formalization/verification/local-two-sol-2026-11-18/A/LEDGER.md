@@ -594,3 +594,73 @@ and translates the existing canonical-port derivations into fixed-point bits.
   and declaration-retaining support at arbitrary outside context; no
   decision-side names/ports/observations added. Scope reviewed for target
   preflight only; no proof authored yet.
+
+## 2026-11-19 — exact numeric application and original block guards pass
+
+- NUMBERED-APP-GUARD-0738 target-only original SourceGuard passed;
+  numbered Domain proof failed two ordinary elaboration/kernel issues.
+  Exact sources and receipt `1795073865905088254-6` preserved. After
+  review, proof only corrected fixed-context structural extra-list
+  recursion and support membership folding; no frozen change.
+- NUMBERED-APP-ONLY-0745 exact eight-alias pass, receipt
+  `1795074295574882872-6`, 49 modules and 44 pins. Propext/Quot.sound only.
+  Fresh evidence LANE-A-NUMBERED-APPLICATION-CLOUD-EVIDENCE.json SHA
+  `55ee4029c769bb8ec95ec3f95fb870500fe48c6a3b9e5a32dcaba627702f3845`.
+  Independently accepted supporting packet 422, no numbered promotion.
+- NUMBERED-APP-SOURCE-0743 hit original source guard proof inventory
+  equivalence direction/constructor simplification errors before app
+  retry. Receipt `1795074199171128541-6` and exact failed proof saved.
+  After review, applied proof-only equivalence inverse and explicit
+  constructor truth. Original source and all four target freezes remain
+  byte identical.
+- NUMBERED-SOURCE-ONLY-0748 exact all three original-block term/base/extra
+  guards pass, 52/52, receipt `1795074434008839759-6`, standard
+  propext/Quot.sound only. Proof reaped, both locks free. Cloud evidence
+  LANE-A-NUMBERED-SOURCE-GUARD-CLOUD-EVIDENCE.json, ready for independent
+  supporting review.
+- Actual whole tuple candidate five new proof modules, exact
+  `NumberedWindowTupleChecks.exact_WholeTupleSimulation`, 71-module
+  closure. Covers zero, impossible variable overapplication, real
+  original lambda prefix with simultaneously accumulated images, and
+  literal ordinary/marked functional suffixes. Uses original 13-pin
+  exact target unchanged. Pending independent authored review and
+  separate native ticket, no numbered claim yet.
+
+## 2026-11-19 — numbered full tuple original proof hit cap; new structural split
+
+- SourceBlock/SourceGuard finished independent supporting packet 423.
+- Coordinator reviewed the complete original exact tuple candidate and
+  approved a private identifier-only `prefix`→`prependBeta` rename before
+  gate. NUMBERED-WHOLE-TUPLE-0752 verified all frozen inputs and the five
+  reviewed proof hashes. Bridge, Head and Beta leaves compiled. At large
+  generalized Aux proof after 69 passing rows, original 512-MiB monitor
+  stopped at 529896 KiB (exit 77), receipt `1795074636197725779-6`.
+  No Lean theorem error, no whole exact pass. Reaped/locks free and
+  original sources, freeze, native records all captured.
+- Added an append-only proof redesign: fixed-argument propositions
+  AtArgs/ForArgs equal the previous generalized theorem, small nil/head/
+  lambda proofs, and actual structural Args.tail fold instead of the
+  simultaneously elaborated well-founded proof. Exact new alias is
+  `NumberedWindowTupleSplitChecks.exact_WholeTupleSimulation`, SHA
+  `7069d9006164e9699048b873be405c45b94348f933209a747120276fcc7a82b2`.
+  74 modules, no old stopped Aux dependency. Complete new-source hash
+  table and exact scope in NUMBERED-WHOLE-TUPLE-SPLIT-PROPOSAL.md. Await
+  independent review/fresh sole native ticket; no source weakening.
+
+## 2026-11-19 — numbered whole tuple exact pass
+
+- NUMBERED-TUPLE-SPLIT-0757 completed all substantive original structural
+  Args-tail fold/branch proofs under the original core limits; only last
+  exact wrapper failed to unfold its support predicate. Receipt
+  `1795074886134709016-6` and source/log fully preserved. Independently
+  approved one-line proof-only Conclusion unfolding, no semantics change.
+- NUMBERED-TUPLE-CLEAN-0800 verified all 13/14/15/16 original frozen pins
+  and reviewed five queue source hashes. Exact alias
+  `NumberedWindowTupleSplitChecks.exact_WholeTupleSimulation` passed,
+  receipt `1795075052128279146-6`, 74/74, root495920/closure513908 KiB,
+  propext/Quot.sound only. All native work reaped, shared locks free.
+- New evidence LANE-A-NUMBERED-WHOLE-TUPLE-CLOUD-EVIDENCE.json, complete
+  actual protected original tuple path and literal result at n from the
+  exact uniform n+length+1 threshold. READY-FOR-ROOT-REVIEW as
+  `lem:tuple-simulation`; no lane promotion. No global locality,
+  positive simulation, or internal ID1 result claimed.

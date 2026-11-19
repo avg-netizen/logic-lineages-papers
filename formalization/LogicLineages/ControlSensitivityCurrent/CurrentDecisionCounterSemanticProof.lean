@@ -85,15 +85,20 @@ private theorem observe_place (p : AdmissibleSum.Policy) (f : Nat → Nat) {Γ �
   dsimp only
   rw [SourceAST.sourceValue_rename p f (place right) ν ρ hv,
     SourceAST.sourceValue_rename p f (place right) ν ρ hv]
-  have hx := (PolicyObservation.observationCalibration p f _ (inputs ν) (AbsoluteProbeDAG.originalInput d).term).1
-  have hy := (PolicyObservation.observationCalibration p f _ (inputs ν) (AbsoluteProbeDAG.closedInput hg d).term).1
+  let l := PolicyCollision.rawScalar p f (inputs ν) (AbsoluteProbeDAG.originalInput d).term
+  let r := PolicyCollision.rawScalar p f (inputs ν) (AbsoluteProbeDAG.closedInput hg d).term
+  have hx : l - 1 + 1 = l :=
+    (PolicyObservation.observationCalibration p f _ (inputs ν) (AbsoluteProbeDAG.originalInput d).term).1
+  have hy : r - 1 + 1 = r :=
+    (PolicyObservation.observationCalibration p f _ (inputs ν) (AbsoluteProbeDAG.closedInput hg d).term).1
   unfold sourceValue
   rw [← hr]
+  change (l - 1 = r - 1 ∧ _) ↔ l = r ∧ _
   constructor
   · rintro ⟨he,hl⟩
-    exact ⟨by omega,by omega⟩
+    exact ⟨hx.symm.trans ((congrArg (·+1) he).trans hy),by omega⟩
   · rintro ⟨he,hl⟩
-    exact ⟨by omega,by omega⟩
+    exact ⟨congrArg (·-1) he,by omega⟩
 
 theorem counter_semantics (p : AdmissibleSum.Policy) (f : Nat → Nat)
     (hf : FullAddition.Targets.SourceGrowth f) (strict : Bool) {Γ σ τ}
@@ -122,8 +127,9 @@ theorem counter_semantics (p : AdmissibleSum.Policy) (f : Nat → Nat)
   · rintro ⟨old,v,w,hv,hw,he⟩
     obtain ⟨xl,yl,hl⟩ := (CurrentAbsolute.formulaExact p f hf Γ σ hg a _ _).mpr hv
     obtain ⟨xr,yr,hr⟩ := (CurrentAbsolute.formulaExact p f hf Γ τ hg b _ _).mpr hw
-    let e := @ExistentialPlan.extend
-    let ρ : Variable (Extension Γ) .ground → Nat := e _ (e _ (e _ (e _ (e _ (e _ old w) v) yr) xr) yl) xl
+    let ρ : Variable (Extension Γ) .ground → Nat :=
+      ExistentialPlan.extend (ExistentialPlan.extend (ExistentialPlan.extend
+        (ExistentialPlan.extend (ExistentialPlan.extend (ExistentialPlan.extend old w) v) yr) xr) yl) xl
     refine ⟨ρ,(counter_point p f strict hg a b A B ρ).mpr ?_⟩
     exact ⟨(observe_place p f false hg a ρ).mpr hl,
       (observe_place p f true hg b ρ).mpr hr,he⟩
