@@ -979,3 +979,33 @@ and translates the existing canonical-port derivations into fixed-point bits.
   own, four exact audits; supplemental replay zero errors. READY for
   independent numbered acceptance, not self-promoted. All ordinary
   failed native editions and exact reviewed proof-only diffs retained.
+
+- Coordinator independently accepted the full exact numbered
+  `lem:positive-simulation` as packet438 (164 recursive modules,
+  61pins, all4 audits). Combined register146/21 at that moment.
+  Prior foundational and typed numeric safety suppliers unchanged.
+- New exact numbered `lem:window-locality` target-only draft:
+  `NumberedWindowPathLocality` indexes actual raw-path visits, including
+  final vertex, and `NumberedWindowFullLocalityTargets` combines actual six-sort
+  symbolic locality, start-only full typed mixed trace admission, and
+  source-tied complete tuple/weak/strict actual path projections. 38 source
+  pins and source map in `NUMBERED-WINDOW-FULL-LOCALITY-*`.
+  No source weakening, proofs or native before independent scope/preflight.
+
+## 2026-11-19 — exact full numbered window-locality native pass
+
+- Independent exact source scope and38 pins; FULL-LOCALITY-TARGET-1031
+  target-only exit0 35/35, peak495804 KiB, receipt
+  `1795084257255830251-6`. Reaped/locks free.
+- Actual supplied raw tuple visit induction and five exact projections
+  conjoined at `NumberedWindowFullLocalityChecks.exact_FullWindowLocality`.
+  No widened K, added intermediate guard or borrowed source truncation.
+- FULL-LOCALITY-EXACT-1034 clean exit0 168/168, peak522052 KiB
+  (exact root500480), receipt `1795084394752103407-6`, all6 audits
+  standard-only. Both native locks free and exact proofs reaped.
+- Full recursive evidence
+  `LANE-A-NUMBERED-WINDOW-FULL-LOCALITY-CLOUD-EVIDENCE.json`
+  e2d828678a254928e2ee4cc46e0e349032888529d3d6ff0cacc683ca2b8b937f,
+  168current modules / 67 merged pins (all38 own)/6 exact audits;
+  supplemental reviewer zero errors. READY for independent numbered
+  acceptance only. No arithmetic accessibility, ID1 or BH assertion.

@@ -1,0 +1,35 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.CurrentReserveSourceFloorProof
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.CurrentReserve.StatementChecks
+
+theorem literal_integer_reserve_rows : CurrentReserveTargets.LiteralReserveRows := literalReserveRows
+theorem literal_annotated_carrier_accounting : CurrentReserveTargets.ExactAnnotatedAccounting := exactAnnotatedAccounting
+theorem actual_carried_account_value : CurrentReserveTargets.ExactAccountValue := exactAccountValue
+theorem typed_renamed_source_floor : CurrentReserveTargets.RenamedSourceFloor := renamedSourceFloor
+theorem actual_generated_source_floor : CurrentReserveTargets.ActualSourceFloor := actualSourceFloor
+theorem same_labels_literal_ground_unit : CurrentReserveTargets.GroundUnitAccountTransport := groundUnitAccountTransport
+theorem actual_ground_unit_source_transport : CurrentReserveTargets.ActualGroundUnitTransport := actualGroundUnitTransport
+theorem same_labels_actual_ground_partial : CurrentReserveTargets.GroundPartialAccountTransport := groundPartialAccountTransport
+theorem actual_ground_partial_source_transport : CurrentReserveTargets.ActualGroundPartialTransport := actualGroundPartialTransport
+
+/-- Paper19 lem:reserve, with actual ordered carrier occurrences, signed
+accounting, exact selected-policy ground unit/partial transport, and the
+unconditional lower floor for actual generated sources. -/
+theorem exact_current_reserve : CurrentReserveTargets.Full :=
+  ⟨literal_integer_reserve_rows,literal_annotated_carrier_accounting,actual_carried_account_value,
+    typed_renamed_source_floor,actual_generated_source_floor,same_labels_literal_ground_unit,
+    actual_ground_unit_source_transport,same_labels_actual_ground_partial,actual_ground_partial_source_transport⟩
+
+#print axioms literal_integer_reserve_rows
+#print axioms literal_annotated_carrier_accounting
+#print axioms actual_carried_account_value
+#print axioms typed_renamed_source_floor
+#print axioms actual_generated_source_floor
+#print axioms same_labels_literal_ground_unit
+#print axioms actual_ground_unit_source_transport
+#print axioms same_labels_actual_ground_partial
+#print axioms actual_ground_partial_source_transport
+#print axioms exact_current_reserve
+
+end LogicLineages.ControlSensitivityCurrent.CurrentReserve.StatementChecks

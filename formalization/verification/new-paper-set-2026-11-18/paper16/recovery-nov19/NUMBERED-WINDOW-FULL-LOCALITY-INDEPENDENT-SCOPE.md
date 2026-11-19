@@ -1,0 +1,5 @@
+# Independent full numbered locality comparator review
+
+Read literal ordinals.tex188–228 and later tuple/positive construction clauses, complete Visits/AllVisitsAdmitted definitions, full new comparator and source map. All38frozen pins match. Original six-sort symbolic footprint is retained. Numerical general half assumes only typed original traces and initial actual window, not intermediate admission. Same original K/signature/context/type and actual declarations throughout. The new Visits has actual start/tail recursion including reflexive final vertex; exact tuple output retains actual complete original partial call and original uniform budget and all literal visits. Weak/strict concrete construction projections retain exact ordinary tr, arbitrary large realizations and positive raw count for strict. No broad assertion about auxiliary argument contexts, no altered quotient or widened endpoint window.
+
+All five components jointly cover the printed full locality lemma rather than merely existing symbolic endpoint preservation. Approved source-exact comparator for target-only native preflight; authored proof and all acceptance gates remain separate.

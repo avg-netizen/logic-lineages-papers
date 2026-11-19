@@ -1,0 +1,35 @@
+import LogicLineages.PersistentMarking.NumberedWindowTupleLocalityProof
+import LogicLineages.PersistentMarking.NumberedWindowPositiveSimulationChecks
+import LogicLineages.PersistentMarking.NumberedWindowPreservationChecks
+import LogicLineages.PersistentMarking.LiteralDerivationLocalityChecks
+
+namespace LogicLineages.PersistentMarking.NumberedWindowFullLocalityChecks
+open NumberedWindowFullLocalityTargets
+
+theorem exact_SymbolicLocality : LiteralDerivationLocalityTargets.SymbolicLocality :=
+  LiteralDerivationLocalityChecks.exact_SymbolicLocality
+
+theorem exact_AllTypedTraceIntermediates : NumberedWindowPreservationTargets.AllTypedTraceIntermediates :=
+  NumberedWindowPreservationChecks.exact_AllTypedTraceIntermediates
+
+theorem exact_ConstructedTupleLocality : ConstructedTupleLocality :=
+  NumberedWindowTupleLocalityProof.constructed
+
+theorem exact_ConstructedWeakLocality : ConstructedWeakLocality :=
+  NumberedWindowPositiveSimulationChecks.exact_BudgetedWeakSimulation
+
+theorem exact_ConstructedStrictLocality : ConstructedStrictLocality :=
+  NumberedWindowPositiveSimulationChecks.exact_BudgetedStrictSimulation
+
+theorem exact_FullWindowLocality : FullWindowLocality :=
+  ⟨exact_SymbolicLocality,exact_AllTypedTraceIntermediates,
+    exact_ConstructedTupleLocality,exact_ConstructedWeakLocality,exact_ConstructedStrictLocality⟩
+
+#print axioms exact_SymbolicLocality
+#print axioms exact_AllTypedTraceIntermediates
+#print axioms exact_ConstructedTupleLocality
+#print axioms exact_ConstructedWeakLocality
+#print axioms exact_ConstructedStrictLocality
+#print axioms exact_FullWindowLocality
+
+end LogicLineages.PersistentMarking.NumberedWindowFullLocalityChecks

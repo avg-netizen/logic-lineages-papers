@@ -1,0 +1,3 @@
+# Independent source/comparator review: arbitrary mark paths
+
+Read exact two-target module, source map and original MarkDecrease/raw adjacent rules against ordinals.tex32–68. All30frozen pins match. Finite chain keeps same actual signature/window/context/output/head/base/extras and exact k−l raw length including empty equality case; primitive arbitrary mark path uses actual unrestricted omega/strict finite/lambda relation, strictly positive raw count, onlyRaw and every actual vertex admitted from initial admission alone. No alternate endpoints, intermediate guard premise, new raw context, equivalence-only progress, or fixed-predecessor restriction. Approved supporting comparator for target-only preflight. This is not full arithmetic accessibility or ID1.
