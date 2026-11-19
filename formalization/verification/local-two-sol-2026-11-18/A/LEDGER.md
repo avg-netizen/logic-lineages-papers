@@ -1321,3 +1321,47 @@ and translates the existing canonical-port derivations into fixed-point bits.
   decoded admitted unique literal representative, iff original Primary
   and existing quotient equality, finite contexts. Not object-level
   arithmetic/ID1, rank, or bare raw-step certificates.
+
+## 2026-11-19 — supplied primitive replacement arithmetic witness support
+
+- Coordinator accepted452 actual least code/representative on original
+  genuine Primary quotient after independent122current/55pins/4 audits.
+- New primitive witness comparator froze exact literal MarkDecrease;
+  literal multiplicity-sensitive permutations; independent actual
+  supplied kept, nonempty removed, arbitrary added lists; and exact
+  existential PrimitiveReplacement calibration. Freeze359830fd...,
+  17 pins. No partition search; no raw-rule or ID1 claim.
+- PRIMITIVE-WITNESS-TARGET-1305 passed23/23 comparator only,
+  receipt1795092912326934647-2; approved scope/preflight before proofs.
+  Kernel warns the explicitly passed BEq class-typed def need not be
+  reducible; there is no global instance and frozen source is unchanged.
+- PRIMITIVE-WITNESS-EXACT-1312 passed30/30 first exact run,
+  receipt1795093284839452299-2, peak497684/root472052KiB. Native
+  reaped, both locks free; 4 standard-only exact aliases (literal
+  mark just propext). LANE-A-NUMBERED-WINDOW-PRIMITIVE-WITNESS-
+  CLOUD-EVIDENCE.json SHA974be5a90181c8338e83ac0a64ac79fec005e6d52160f32d9bc7eb395e6393b0,
+  30current/46 pins/4 audits, supplemental errors0. READY support only.
+
+## 2026-11-19 — all actual raw rule/window certificate scopes native pass
+
+- Coordinator accepted453 literal MarkDecrease plus supplied primitive
+  replacement certificates after independent30/46pins/4 exact audits.
+- New raw witness comparator freezes22 pins cf98d7fd..., genuine
+  actual finite rank tests, all thirteen RawStep shapes and two
+  RawArgsStep constructors, same independent typed endpoint guards.
+  RAW-WITNESS-TARGET-1328 passed27/27 target-only
+  1795093683734646950-2, independently checked prior to authorship.
+- First1345 failed ordinary Bool parser inference in Select builder
+  1795094098986559041-2. Second1348 failed ordinary expected
+  literal bottom nonidentity in sound hunk
+  1795094245788230697-2 after both actual raw completeness recursors
+  passed. Exact failed editions, logs and receipts preserved, focused
+  proof-only fixes independently proposed/applied/inverse-reviewed.
+  All22 comparator pins and native caps unchanged.
+- RAW-WITNESS-EXACT-1352 passed53/53 receipt1795094360936561649-2,
+  peak503064/root485344KiB. Gate reaped, both locks free. All6 exact
+  aliases standard-only; two rank comparisons just propext. Recursive
+  LANE-A-NUMBERED-WINDOW-RAW-WITNESS-CLOUD-EVIDENCE.json SHA49a7566048991fa890f747f7ec6f9b2e0d5f63d7c5a71209370ed1e851f34c8f
+  53current/51 pins/6exact audits, supplemental errors0. READY
+  supporting actual supplied witnesses over 13+2 rules and finiteΓ
+  WindowStep; no path arithmetic or ID1.

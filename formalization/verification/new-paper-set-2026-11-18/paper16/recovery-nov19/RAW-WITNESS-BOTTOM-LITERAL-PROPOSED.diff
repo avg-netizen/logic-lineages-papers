@@ -1,0 +1,10 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowRawWitnessRootSimpleSound.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowRawWitnessRootSimpleSound.lean
+@@ -53,6 +53,6 @@
+   simp only [Bool.and_eq_true,Bool.not_eq_true',Bool.eq_false_iff,termEqTrue] at h
+   obtain ⟨hn,e⟩ := h
+   rw [← e]
+-  exact .bottom hn
++  exact .bottom (fun he => hn ((termEqTrue _ _).mpr he))
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowRawWitnessRootSimpleSound

@@ -7,7 +7,8 @@ namespace LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph.Targets
 open LogicLineages.OrdinalComparison LogicLineages.OrdinalComparison.Source
 open LogicLineages.StandardControlCurrent
 open AdmissibleAssignment AdmissibleSum ForwardTranslation
-open ParametricSourceSuccessor CurrentUnaryChain (commonUnits)
+open ParametricSourceSuccessor
+open CurrentUnaryChain (commonUnits)
 
 /-- The exact current-f norm-affordable maximum, not a fixed-G predecessor
 and not a supplied equality of collapse values. -/
