@@ -1,0 +1,24 @@
+--- LogicLineages/PersistentMarking/NumberedWindowPreservationGuardProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowPreservationGuardProof.lean
+@@ -124,12 +124,18 @@
+   · intro f h
+     exact (List.mem_append.mp h).elim (hq.2 f) (ha.2 f)
+ 
+-theorem toExtras {C qs types} (h : BaseTyped C qs types) : ExtrasTyped C qs := by
+-  cases h with
++private theorem toExtrasFixed (C : Spine.BoundContext) (qs : NArgs) (types : List Ty)
++    (h : BaseTyped C qs types) : ExtrasTyped C qs := by
++  cases qs with
+   | nil => exact .nil
+-  | cons hq hqs => exact .cons hq (toExtras hqs)
++  | cons q tail =>
++    cases h with
++    | cons hq htail => exact .cons hq (toExtrasFixed C tail _ htail)
+ termination_by sizeOf qs
+ 
++theorem toExtras {C qs types} (h : BaseTyped C qs types) : ExtrasTyped C qs :=
++  toExtrasFixed C qs types h
++
+ theorem annotated {S K C τ q} (h : InWindow S K C τ q) : InWindow S K C q.type q := by
+   rw [annotation h.1]
+   exact h

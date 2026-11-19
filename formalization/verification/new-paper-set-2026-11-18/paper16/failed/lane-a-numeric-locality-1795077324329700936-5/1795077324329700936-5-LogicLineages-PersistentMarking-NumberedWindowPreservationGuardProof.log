@@ -1,0 +1,24 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowPreservationGuardProof.lean:59:21: warning: This simp argument is unused:
+  NTerm.type
+
+Hint: Omit it from the simp argument list.
+  simp only [̵s̵u̵p̵p̵o̵r̵t̵,̵N̵T̵e̵r̵m̵.̵t̵y̵p̵e̵,̵a̵n̵n̵o̵t̵a̵t̵i̵o̵n̵ ̵h̵.̵1̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵a̵p̵p̵e̵n̵d̵]̵[̲s̲u̲p̲p̲o̲r̲t̲,̲ ̲a̲n̲n̲o̲t̲a̲t̲i̲o̲n̲ ̲h̲.̲1̲,̲ ̲L̲i̲s̲t̲.̲m̲e̲m̲_̲a̲p̲p̲e̲n̲d̲]̲ at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowPreservationGuardProof.lean:107:21: warning: This simp argument is unused:
+  NTerm.type
+
+Hint: Omit it from the simp argument list.
+  simp only [̵s̵u̵p̵p̵o̵r̵t̵,̵N̵T̵e̵r̵m̵.̵t̵y̵p̵e̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵a̵p̵p̵e̵n̵d̵]̵[̲s̲u̲p̲p̲o̲r̲t̲,̲ ̲L̲i̲s̲t̲.̲m̲e̲m̲_̲a̲p̲p̲e̲n̲d̲]̲ at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowPreservationGuardProof.lean:127:8: error: (kernel) application type mismatch
+  x✝ ⟨rest✝, ⟨types✝, hqs⟩⟩
+argument has type
+  (qs : NArgs) ×' (types : List Ty) ×' BaseTyped C qs types
+but function has type
+  ∀ (y : (qs : NArgs) ×' (types : List Ty) ×' BaseTyped C✝ qs types),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x => PSigma.casesOn x fun qs types => PSigma.casesOn types fun types h => sizeOf qs) y
+        ⟨NArgs.cons a✝ rest✝, ⟨τ✝ :: types✝, ⋯⟩⟩ →
+      ExtrasTyped C✝ y.1

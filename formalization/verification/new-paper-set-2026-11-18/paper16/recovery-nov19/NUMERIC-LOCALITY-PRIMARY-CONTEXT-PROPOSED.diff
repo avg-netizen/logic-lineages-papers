@@ -1,0 +1,11 @@
+--- LogicLineages/PersistentMarking/NumberedWindowPreservationPrimaryCases.lean
++++ LogicLineages/PersistentMarking/NumberedWindowPreservationPrimaryCases.lean
+@@ -6,7 +6,7 @@
+ open NumberedWindowNumberedDomainProof (ArgsGuard)
+ open NumberedWindowApplicationDomainProof (rootInWindow)
+ 
+-theorem lamTransfer {S K C σ τ q r} (hk : DecisionSourceUniverse.Closed K)
++theorem lamTransfer {S K} {C : Spine.BoundContext} {σ τ q r} (hk : DecisionSourceUniverse.Closed K)
+     (hq : Typed (C.push σ) q τ) (hr : Typed (C.push σ) r τ)
+     (hm : TermGuard S K q → TermGuard S K r)
+     (hg : TermGuard S K (.lam σ q)) :

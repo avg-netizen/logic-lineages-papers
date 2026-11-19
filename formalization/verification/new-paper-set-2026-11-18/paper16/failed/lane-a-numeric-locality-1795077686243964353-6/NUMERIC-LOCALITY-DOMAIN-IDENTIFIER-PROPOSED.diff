@@ -1,0 +1,11 @@
+--- LogicLineages/PersistentMarking/NumberedWindowPreservationHeadProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowPreservationHeadProof.lean
+@@ -50,7 +50,7 @@
+   | cons d ds ih =>
+     intro t ht
+     rcases List.mem_cons.mp ht with rfl | ht
+-    · exact arrowLeft hk h d (subtypeSelf _)
++    · exact arrowLeft hk h _ (subtypeSelf _)
+     · exact ih (arrowRight hk h _ (subtypeSelf _)) t ht
+ 
+ theorem select {S K C f τ k bs es i q ds r} (hk : DecisionSourceUniverse.Closed K)

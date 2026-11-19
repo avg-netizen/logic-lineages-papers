@@ -73,4 +73,71 @@ theorem appParts {S K C σ τ q a} (h : InWindow S K C τ (.auxApp σ τ q a)) :
       ⟨ht.2,fun t hp => h.2.1 t (List.mem_append_right _ hp),
         fun f hf => h.2.2 f (List.mem_append_right _ hf)⟩⟩
 
+theorem ordinaryGuard {S K f bs} (hf : HeadInWindow S K f) (hg : ArgsGuard S K bs) :
+    TermGuard S K (.ordinary f bs) :=
+  ⟨fun t ht => (List.mem_append.mp ht).elim (hf.2 t) (hg.1 t),
+    fun g h => by
+      change g ∈ f :: argsHeads bs at h
+      rcases List.mem_cons.mp h with rfl | h
+      · exact hf
+      · exact hg.2 g h⟩
+
+theorem numberedGuard {S K f τ k bs es} (hf : HeadInWindow S K f)
+    (ht : ∀ ρ, ρ ∈ subtypes τ → ρ ∈ K) (hb : ArgsGuard S K bs) (he : ArgsGuard S K es) :
+    TermGuard S K (.numbered f τ k bs es) := by
+  refine ⟨?_,?_⟩
+  · intro t h
+    simp only [support,List.mem_append] at h
+    rcases h with ((hd | hr) | hbs) | hes
+    · exact hf.2 t hd
+    · exact ht t hr
+    · exact hb.1 t hbs
+    · exact he.1 t hes
+  · intro g h
+    simp only [heads,List.mem_cons,List.mem_append] at h
+    rcases h with rfl | hbs | hes
+    · exact hf
+    · exact hb.2 g hbs
+    · exact he.2 g hes
+
+theorem lamGuard {S K σ q} (hRoot : ∀ t, t ∈ subtypes (.arrow σ q.type) → t ∈ K)
+    (h : TermGuard S K q) : TermGuard S K (.lam σ q) := by
+  refine ⟨?_,h.2⟩
+  intro t ht
+  simp only [support,NTerm.type,List.mem_append] at ht
+  rcases ht with (hr | hs) | hq
+  · exact hRoot t hr
+  · exact hRoot t (List.mem_cons_of_mem _ (List.mem_append_left _ hs))
+  · exact h.1 t hq
+
+theorem appGuard {S K σ τ q a} (hk : DecisionSourceUniverse.Closed K)
+    (hArrow : Ty.arrow σ τ ∈ K) (hq : TermGuard S K q) (ha : TermGuard S K a) :
+    TermGuard S K (.auxApp σ τ q a) := by
+  refine ⟨?_,?_⟩
+  · intro ρ h
+    simp only [support,List.mem_append] at h
+    rcases h with ((hτ | hσ) | hq') | ha'
+    · exact NumberedWindowApplicationDomainProof.arrowRight hk hArrow ρ hτ
+    · exact NumberedWindowApplicationDomainProof.arrowLeft hk hArrow ρ hσ
+    · exact hq.1 ρ hq'
+    · exact ha.1 ρ ha'
+  · intro f h
+    exact (List.mem_append.mp h).elim (hq.2 f) (ha.2 f)
+
+private theorem toExtrasFixed (C : Spine.BoundContext) (qs : NArgs) (types : List Ty)
+    (h : BaseTyped C qs types) : ExtrasTyped C qs := by
+  cases qs with
+  | nil => exact .nil
+  | cons q tail =>
+    cases h with
+    | cons hq htail => exact .cons hq (toExtrasFixed C tail _ htail)
+termination_by sizeOf qs
+
+theorem toExtras {C qs types} (h : BaseTyped C qs types) : ExtrasTyped C qs :=
+  toExtrasFixed C qs types h
+
+theorem annotated {S K C τ q} (h : InWindow S K C τ q) : InWindow S K C q.type q := by
+  rw [annotation h.1]
+  exact h
+
 end LogicLineages.PersistentMarking.NumberedWindowPreservationGuardProof

@@ -714,3 +714,43 @@ and translates the existing canonical-port derivations into fixed-point bits.
   paper16/recovery-nov19/NUMBERED-WINDOW-PRESERVATION-{FROZEN.json,SOURCE-MAP.md}.
   Supporting comparator only, no proof or native preflight before
   independent scope review and ticket.
+
+## 2026-11-19 — numeric locality target preflight and first author gate
+
+- Independent comparator scope review accepted all15 frozen pins. Target-only
+  NUMERIC-LOCALITY-TARGET-0824 passed 22/22, peak495804 KiB,
+  receipt `1795076623319733979-6`, reaped. Authored nine bounded leaves
+  from exact numeric guard projection to check root, with source map,
+  scope and per-leaf hashes in
+  `NUMBERED-WINDOW-PRESERVATION-AUTHORED-CANDIDATE.md`.
+- Independently reviewed exact prelaunch one-line arity correction
+  for the existing nine-parameter FAbs helper; no target/source-pin
+  changes. NUMERIC-LOCALITY-0834 hit the first authored leaf at an
+  ordinary dependent-context kernel error in the local BaseTyped
+  to ExtrasTyped recursion; 30/31 rows, peak506992 KiB,
+  receipt `1795077324329700936-5`, no endpoint attempted/passed.
+  Native process reaped, both locks free; complete failed files and
+  records at `paper16/failed/lane-a-numeric-locality-1795077324329700936-5/`.
+- Proof-only correction proposed: hold the identical lexical C as
+  explicit first argument of the structural helper recursing on the
+  actual NArgs tail; public statement and three exact targets unchanged.
+  Await independent applied approval and a fresh sole native ticket.
+
+- Applied independently approved explicit-context GuardProof repair
+  f7dfec9e. Fresh NUMERIC-LOCALITY-0839 compiled that leaf, then stopped
+  ordinary unknown local identifier after the actual `rfl` substitution
+  in the Select arrow-prefix domain proof, receipt
+  `1795077518190807515-6` (32/33, peak506992 KiB). Reaped and preserved
+  complete candidate/source/freeze/receipt/log. Independently reviewed and
+  applied one inferred domain index in the same `arrowLeft` application;
+  HeadProof 3fdac871, literal source/target unchanged. Future gate requires
+  a fresh ticket.
+
+- NUMERIC-LOCALITY-0841 passed revised HeadProof and the complete
+  primitive replacement, bound, beta substitution and raw preservation
+  leaves; then stopped ordinary autoimplicit C type in the PrimaryCases
+  lambda helper (38/39, peak522052 KiB, no resource stop), receipt
+  `1795077686243964353-6`; reaped and entire candidate/freeze/receipt
+  preserved. Applied independently verified type-only explicit
+  lexical C binder annotation, PrimaryCases 2777a1d4,
+  awaiting a clean exact endpoint ticket.
