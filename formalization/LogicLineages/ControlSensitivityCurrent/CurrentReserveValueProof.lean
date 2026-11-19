@@ -46,15 +46,13 @@ theorem exactAccountValue : CurrentReserveTargets.ExactAccountValue := by
     refine ⟨ordinalFreePartialVector 0 q,
       ?_,fun μ => ?_⟩
     · rw [AdmissiblePartial.run.eq_def,if_pos (HeadFiniteSurplus.Proof.headFree_of_inactive q hn)]
-    · change (1 : Ordinal) = 0+(1 : Ordinal)
-      simp
+    · simp [ordinalFreePartialVector,outputOne,denoteWith,carrierSum]
   | tracked =>
     intro _
     refine ⟨fun _ => .one,?_,fun μ => ?_⟩
     · rw [AdmissiblePartial.run.eq_def]
       simp [ordinalHeadFree,ordinalHeadOccurs,ordinalHeadComponentOccurs]
-    · change (1 : Ordinal) = 0+(1 : Ordinal)
-      simp
+    · simp [denoteWith,carrierSum]
   | @add a b xs ys c d ha _ _ iha ihb =>
     intro ht
     cases ht with

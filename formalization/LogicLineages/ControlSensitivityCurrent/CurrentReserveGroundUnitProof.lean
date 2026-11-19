@@ -88,8 +88,7 @@ theorem exactUnitMap (f : Nat → Nat) {Γ Δ : List Ty} (r : GroundMap Γ Δ) (
   rw [groundValue]
   have h : pullGround r (fun _ => 0) = fun _ => 0 := by
     funext x
-    unfold pullGround
-    cases r x <;> rfl
+    cases hr : r x <;> simp [pullGround,hr]
   rw [h]
 
 theorem groundUnitAccountTransport : CurrentReserveTargets.GroundUnitAccountTransport := by

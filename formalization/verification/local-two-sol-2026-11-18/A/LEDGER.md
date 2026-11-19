@@ -1009,3 +1009,21 @@ and translates the existing canonical-port derivations into fixed-point bits.
   168current modules / 67 merged pins (all38 own)/6 exact audits;
   supplemental reviewer zero errors. READY for independent numbered
   acceptance only. No arithmetic accessibility, ID1 or BH assertion.
+
+## 2026-11-19 — accepted locality, arbitrary mark support; finite heads preflight
+
+- Coordinator accepted packet439 whole numbered `lem:window-locality`, on
+  independent current recursive and object/axiom replay. Register147/20 at
+  adoption. Packet440 arbitrary actual MarkDecrease raw path support only,
+  evidence `LANE-A-NUMBERED-WINDOW-ARBITRARY-MARK-PATH-CLOUD-EVIDENCE.json`
+  6db3518c..., 49 modules/59 pins/two standard-only audits. It retains
+  arbitrary omega→finite, any actual finite lowering and common initial
+  lambda prefix, under one admitted context. No numbered arithmetic claim.
+- New finite actual admitted head comparator `NumberedWindowHeadEnumerationTargets`;
+  actual signature declarations, K-induced case/recursor/application
+  parameters, original declarations, literal equality deduplication,
+  original equivalent-rank head filter. Independent scope and11pins verified.
+- HEAD-ENUMERATION-TARGET-1047 target-only native exit0, receipt
+  `1795085037138351282-2`, 20 modules, target RSS473092 KiB,
+  original core; reaped and both locks free. No proof or acceptance from
+  comparator preflight; no finite full term class, coding or ID1 assertion.

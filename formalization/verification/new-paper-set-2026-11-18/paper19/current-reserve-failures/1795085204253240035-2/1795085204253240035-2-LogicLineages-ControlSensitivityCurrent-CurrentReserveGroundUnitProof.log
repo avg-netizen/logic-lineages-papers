@@ -1,0 +1,41 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentReserveGroundUnitProof.lean:92:18: error: Tactic `rfl` failed: The left-hand side
+  match (fun {σ} => r) x with
+  | Image.var y => (fun x => 0) y
+  | Image.zero => 0
+is not definitionally equal to the right-hand side
+  0
+
+case var
+f : ℕ → ℕ
+Γ Δ : List Ty
+r : GroundMap Γ Δ
+q : OrdinalExpression Γ
+x : Variable Γ Ty.ground
+a✝ : Variable Δ Ty.ground
+⊢ (match (fun {σ} => r) x with
+    | Image.var y => (fun x => 0) y
+    | Image.zero => 0) =
+    0
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentReserveGroundUnitProof.lean:92:18: error: Tactic `rfl` failed: The left-hand side
+  match (fun {σ} => r) x with
+  | Image.var y => (fun x => 0) y
+  | Image.zero => 0
+is not definitionally equal to the right-hand side
+  0
+
+case zero
+f : ℕ → ℕ
+Γ Δ : List Ty
+r : GroundMap Γ Δ
+q : OrdinalExpression Γ
+x : Variable Γ Ty.ground
+⊢ (match (fun {σ} => r) x with
+    | Image.var y => (fun x => 0) y
+    | Image.zero => 0) =
+    0
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentReserveGroundUnitProof.lean:117:92: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentReserveGroundUnitProof.lean:119:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

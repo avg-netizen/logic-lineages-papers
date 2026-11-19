@@ -1,0 +1,5 @@
+# Independent final: literal finite admitted head universe
+
+Supporting three-target head enumeration accepted. Exact original candidates/bit/dedup/equivalent filter source comparator11pins independently read and preflight checked. All3proof files fully reviewed, sole ordinary if_true normalization exactdiff/appliedinverse independently verified, failure preserved. Actual table lookup supplies ranked declaration membership; actual result/argument subtype paths recover native/app parameters with no Closed K premise. Literal dedup retains distinct equivalent heads.
+
+Clean originalcore native1795085520352167553-2 passes23modules/max495804KiB/reaped. Independent recursive replay plus object/log/compiler/profile/axiom review matches23currentmodules/40mergedpins/all3standard-only aliases, zeroerrors. Exact bit correctness and duplicate-free admitted and original equivalent-head lists proved. This is head symbols only, not whole-term finite primary equivalence classes or arithmetic accessibility/ID1. No numbered promotion or full-root/CI claim.
