@@ -17,7 +17,7 @@ def budget {S : Spine.Signature} {J : Judgment} (tree : Tree S J) : Nat :=
   | .put _ _ _ _ _ t => budget t + 1
   | .select f _ bs es _ _ _ ds _ _ _ _ _ _ t =>
       budget t + (Spine.ownerCopies f bs es ds).length + 2
-  | .fabs _ _ _ _ _ _ _ _ _ _ t => budget t + 1
+  | .fabs _ _ _ _ _ _ _ _ _ _ _ t => budget t + 1
   | .copy _ _ _ _ _ _ _ _ t => budget t + 1
   | .stat _ _ _ _ _ _ _ _ m w => max (budget m) (budget w) + 1
   | .strictIntro _ _ _ _ _ _ _ t => budget t + 1
@@ -54,7 +54,7 @@ def ClassEdge {S K C τ} (x y : Class S K C τ) : Prop :=
 at the unchanged lexical type. There is no reflexive/empty constructor. -/
 inductive RS (S : Spine.Signature) (K : List Ty) (C : Spine.BoundContext) (τ : Ty) :
     Class S K C τ → Class S K C τ → Prop where
-  | one : ClassEdge x y → RS S K C τ x y
-  | more : ClassEdge x y → RS S K C τ y z → RS S K C τ x z
+  | one {x y : Class S K C τ} : ClassEdge x y → RS S K C τ x y
+  | more {x y z : Class S K C τ} : ClassEdge x y → RS S K C τ y z → RS S K C τ x z
 
 end LogicLineages.PersistentMarking.NumberedWindowSimulationData

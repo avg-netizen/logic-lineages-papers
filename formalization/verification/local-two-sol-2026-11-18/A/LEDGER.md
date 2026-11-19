@@ -874,3 +874,34 @@ and translates the existing canonical-port derivations into fixed-point bits.
   full hash/scope table in `NUMBERED-WINDOW-TRACE-BUDGET-AUTHORED-CANDIDATE.md`.
   Unbuilt pending independent authored scope/new native ticket. Frame
   binder/inclusion accepted supporting433, not numbered promotion.
+
+## 2026-11-19 — trace/ordinary quotation/reserved mark exact support passed
+
+- TRACE-BUDGET-EXACT-0936 clean exit0 52/52, peak522052 KiB
+  (exact endpoint477376), receipt `1795080863224023861-6`,
+  all14 exact aliases with only standard Lean axioms. OneReservedMarkStep
+  includes Classical.choice in audit in addition to propext/Quot.sound.
+  Reaped and both locks free.
+- Complete current recursive evidence
+  `LANE-A-NUMBERED-WINDOW-TRACE-BUDGET-CLOUD-EVIDENCE.json`
+  76db6e0b5c4f3844f289b97b9c49a710f8d2a08d8c438a80ab2b9bb6b36499fc,
+  52 modules, 56 merged pins incl original27, 14 audits; supplemental
+  reviewer zero errors. Independent coordinator accepted supporting434,
+  no numbered increase.
+
+## 2026-11-19 — full numbered positive-simulation comparator staged
+
+- New `NumberedWindowSimulationData` has structural budget over all16
+  actual original Tree constructors, both Stat witness budgets, actual
+  whole Select tuple length+2. Genuine original fixed-window primary
+  classes and nonempty closure of actual raw-edge representatives.
+- Exact `NumberedWindowPositiveSimulationTargets`: all sufficiently
+  high realizations for original weak/strict certificates, canonical
+  ordinary result and actual admitted finite trace; strict only
+  demands positive raw count, weak permits either. Independent
+  positive-trace class path bridge and exact ordinary confined source
+  corollary in `TypeSupport.support s`. No marked-target extension,
+  proof, quotient enumeration or accessibility claim.
+- 32-pin freeze fa5954a2 and source map 457630f3 in
+  `NUMBERED-WINDOW-POSITIVE-SIMULATION-*`. Pending independent exact
+  scope review and target-only preflight. No proof/native admitted yet.

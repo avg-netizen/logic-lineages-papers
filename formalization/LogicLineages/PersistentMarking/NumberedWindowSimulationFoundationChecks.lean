@@ -1,0 +1,15 @@
+import LogicLineages.PersistentMarking.NumberedWindowSimulationBaseCases
+import LogicLineages.PersistentMarking.NumberedWindowSimulationQuotientProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowSimulationFoundationChecks
+open NumberedWindowPositiveSimulationTargets
+
+theorem exact_PositiveTraceToClassPath : PositiveTraceToClassPath :=
+  NumberedWindowSimulationQuotientProof.positive
+
+#print axioms exact_PositiveTraceToClassPath
+#print axioms NumberedWindowSimulationBaseCases.variable
+#print axioms NumberedWindowSimulationBaseCases.put
+#print axioms NumberedWindowSimulationBaseCases.strict
+
+end LogicLineages.PersistentMarking.NumberedWindowSimulationFoundationChecks

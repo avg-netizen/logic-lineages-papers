@@ -1,0 +1,14 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationFiberDefinitions.lean:61:14: error: unsolved goals
+case succ
+Γ : List Ty
+hg : ∀ σ ∈ Γ, σ = Ty.ground
+n : ℕ
+ih : ∀ σ ∈ WireCtx n Γ, σ = Ty.ground
+⊢ ∀ a ∈ WireCtx n Γ, a = Ty.ground
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationFiberDefinitions.lean:61:31: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp [WireCtx,̵i̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

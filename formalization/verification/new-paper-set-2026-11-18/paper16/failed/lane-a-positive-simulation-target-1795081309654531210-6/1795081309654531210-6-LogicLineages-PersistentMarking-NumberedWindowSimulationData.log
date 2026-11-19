@@ -1,0 +1,11 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowSimulationData.lean:20:4: error: Type mismatch
+  Tree.fabs ?m.95 ?m.105 ?m.97 ?m.98 ?m.99 ?m.107 ?m.106 ⋯ ⋯ ⋯ t
+has type
+  Tree ?m.94
+      (Judgment.weak
+        (Spine.Expr.marked ?m.95 ?m.97 ?m.98
+          (?m.99.append (Spine.Args.cons (Spine.Expr.free ?m.105 ?m.106) Spine.Args.nil)))
+        (NameBridge.openBody ?m.105 ?m.106 ?m.107)) →
+    Tree ?m.94 (Judgment.weak (Spine.Expr.marked ?m.95 (?m.105.arrow ?m.97) ?m.98 ?m.99) (Spine.Expr.lam ?m.105 ?m.107))
+but is expected to have type
+  Tree S ?J

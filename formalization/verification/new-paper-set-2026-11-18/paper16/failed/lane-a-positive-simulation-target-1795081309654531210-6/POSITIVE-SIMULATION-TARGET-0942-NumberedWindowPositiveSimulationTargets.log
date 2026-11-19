@@ -1,0 +1,42 @@
+CACHE_HIT LogicLineages.PersistentMarking.Syntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineSyntax
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowSyntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineTyping
+CACHE_HIT LogicLineages.PersistentMarking.Signature
+CACHE_HIT LogicLineages.PersistentMarking.NameBridge
+CACHE_HIT LogicLineages.PersistentMarking.FreeSubstitution
+CACHE_HIT LogicLineages.PersistentMarking.StructuralContext
+CACHE_HIT LogicLineages.PersistentMarking.Occurrences
+CACHE_HIT LogicLineages.PersistentMarking.SpineMarking
+CACHE_HIT LogicLineages.PersistentMarking.Comparison
+CACHE_HIT LogicLineages.PersistentMarking.StructuralStabilityTargets
+CACHE_HIT LogicLineages.PersistentMarking.StructuralCoverageTargets
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupport
+CACHE_HIT LogicLineages.PersistentMarking.DecisionInventory
+CACHE_HIT LogicLineages.PersistentMarking.DecisionPorts
+CACHE_HIT LogicLineages.PersistentMarking.DecisionObservations
+CACHE_HIT LogicLineages.PersistentMarking.DecisionSourceUniverse
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowDomain
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRules
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowPrimary
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowPreservationTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowClosing
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowTraceAlgebra
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowOrdinaryTranslation
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowTupleTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowTraceBudgetTargets
+CACHE_HIT LogicLineages.PersistentMarking.LiteralDerivationTree
+Compiling LogicLineages.PersistentMarking.NumberedWindowSimulationData
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowSimulationData.lean:20:4: error: Type mismatch
+  Tree.fabs ?m.95 ?m.105 ?m.97 ?m.98 ?m.99 ?m.107 ?m.106 ⋯ ⋯ ⋯ t
+has type
+  Tree ?m.94
+      (Judgment.weak
+        (Spine.Expr.marked ?m.95 ?m.97 ?m.98
+          (?m.99.append (Spine.Args.cons (Spine.Expr.free ?m.105 ?m.106) Spine.Args.nil)))
+        (NameBridge.openBody ?m.105 ?m.106 ?m.107)) →
+    Tree ?m.94 (Judgment.weak (Spine.Expr.marked ?m.95 (?m.105.arrow ?m.97) ?m.98 ?m.99) (Spine.Expr.lam ?m.105 ?m.107))
+but is expected to have type
+  Tree S ?J
+COMPILE_FAILED LogicLineages.PersistentMarking.NumberedWindowSimulationData: 1
+BUILD_RECEIPT build-reports/1795081309654531210-6.json

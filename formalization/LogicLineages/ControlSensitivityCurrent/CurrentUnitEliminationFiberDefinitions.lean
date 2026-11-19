@@ -58,7 +58,12 @@ theorem groundWireCtx (n : Nat) (Γ : List Ty) (hg : ∀ σ ∈ Γ, σ = .ground
     ∀ σ ∈ WireCtx n Γ, σ = .ground := by
   induction n with
   | zero => exact hg
-  | succ n ih => simp [WireCtx,ih]
+  | succ n ih =>
+    intro t ht
+    change t ∈ .ground :: WireCtx n Γ at ht
+    rcases List.mem_cons.mp ht with h | h
+    · exact h
+    · exact ih t h
 
 theorem allGroundReplicate (Γ : List Ty) (hg : ∀ σ ∈ Γ, σ = .ground) :
     Γ = List.replicate Γ.length Ty.ground := by
