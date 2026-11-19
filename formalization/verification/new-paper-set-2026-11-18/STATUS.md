@@ -1,10 +1,15 @@
 # Current comparison formalization status
 
-New-paper register: **132 checked, 35 pending / 167**. Historical register:
+New-paper register: **134 checked, 33 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper16 `thm:adequacy` and `thm:decide`: exact least-fixed-point
+  interpretation and executable weak/strict/confined decision (415–416).
+  The independently checked stagewise/fixed-point route does not validate
+  the false arbitrary-family structural-interpretation clause.
 
 - Paper16 `lem:indexed-carrier`: all three literal original carrier
   comparisons (packet411); supporting completeness only in412.

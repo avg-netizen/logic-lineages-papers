@@ -464,3 +464,48 @@ and translates the existing canonical-port derivations into fixed-point bits.
   promoted by the lane. Original owner exact files/frozen target are
   untouched; cloud adequacy reverse direction still awaits a separate
   ticket and completed full gate.
+
+## 2026-11-19 — exact adequacy and separate soundness pass; decision leaf stops
+
+- ADEQUACY-THIN-0652 completed all 340 rows of receipt
+  `1795071072983411834-6` after 61 frozen pins and exact reviewed
+  cloned/original hashes reconciled. Root 509580 KiB at fixed core limits.
+  Both original least fixed point iff fields at every permitted typed
+  observation, plus all distinct exact supporting aliases, are standard-only.
+- Cloud READY-FOR-ROOT-REVIEW evidence under paper16/recovery-nov19:
+  `LANE-A-ADEQUACY-THIN-CLOUD-EVIDENCE.json` (340/10/61; SHA
+  `9e281455d8087336ec956e583743c1667231c3de93b8d1077c11e1ea359cb302`);
+  `LANE-A-SOUND-RELATION-CLOUD-EVIDENCE.json` (119/3/59; SHA
+  `7deb68b9c3d8805ceceb034c33d55f7bd5c64f51c77abe11196ea87116ba6826`);
+  `LANE-A-SOUND-STAGE-CLOUD-EVIDENCE.json` (286/2/60; SHA
+  `0e5ce9020a90a0f046cf67822a2fec89340674efbd4311d833a5a037f1c18b0e`).
+  Independent old source identity and recursive cloud objects/pins replayed.
+- DECISION-THIN-0655 verified 64 frozen pins but stopped at the final
+  `ProtectedSpineDecisionThinProof` after 344 passing rows, exit 77,
+  527056 KiB vs unchanged 524288 KiB cap. Receipt
+  `1795071150044944343-6`; exact source and failed receipt/log archived
+  under paper16/failed/lane-a-decision-thin-1795071150044944343-6/.
+  Both native jobs reaped and shared locks free.
+- Proposed two new material-split leaves for only the decision proof.
+  `ProtectedSpineDecisionLogicProof` factors branch correctness into a
+  63-module proof closure without any adequacy proof objects; the exact
+  `ProtectedSpineDecisionSplitChecks` uses the same original fixed-point
+  adequacy at the same actual blank context, importing the 63-module
+  assembly rather than simplifying in the high-import root. Source
+  comparator and stopped old leaf unchanged. Pending review and ticket.
+
+## 2026-11-19 — exact decidability passes in materially split proof
+
+- DECISION-SPLIT-0656 checked 64 untouched original source pins and both
+  independently reviewed new split leaves, then completed the exact
+  `ProtectedSpineDecisionSplitChecks.exact_Decidability` proof (all four
+  Boolean tests on all ordinary typed input pairs). 346/346 native rows,
+  receipt `1795071334281135003-6`, propext, Classical.choice and Quot.sound
+  only. Logic leaf RSS 486264 KiB; final root 520676 KiB below unchanged
+  524288 KiB cap. Process reaped, shared locks free.
+- READY-FOR-ROOT-REVIEW evidence
+  paper16/recovery-nov19/LANE-A-DECISION-SPLIT-CLOUD-EVIDENCE.json
+  includes both the exact original decision and exact original adequacy
+  aliases. No lane promotion. Original stopped proof and target bytes
+  remain untouched, and literal structural-interpretation obstruction
+  remains separate from numbered adequacy and decidability.
