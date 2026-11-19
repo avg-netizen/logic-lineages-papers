@@ -1,0 +1,44 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentDecisionTreePresentationProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentDecisionTreePresentationProof.lean
+@@ -54,7 +54,18 @@
+   have hb := CurrentTreeInputCoverage.StatementChecks.actual_tree_codes Γ τ b
+   have hg : ∀ t ∈ Γ, t = Ty.ground := fun _ ht => List.eq_of_mem_replicate ht
+   have hD : toDAGs q = some qD := by
+-    simp [toDAGs,q,qD,rawContextExact,ha.2.1,hb.2.1,Γ,da,db]
++    have ha' : CurrentTreeInputCoverage.compile (rawContext n) (SyntaxCode.encodeTerm a) =
++        some (RawSourceDAG.encode ⟨Γ,σ,da⟩) := by
++      rw [rawContextExact n]
++      exact ha.2.1
++    have hb' : CurrentTreeInputCoverage.compile (rawContext n) (SyntaxCode.encodeTerm b) =
++        some (RawSourceDAG.encode ⟨Γ,τ,db⟩) := by
++      rw [rawContextExact n]
++      exact hb.2.1
++    change ((CurrentTreeInputCoverage.compile (rawContext n) (SyntaxCode.encodeTerm a)).bind
++      fun x => (CurrentTreeInputCoverage.compile (rawContext n) (SyntaxCode.encodeTerm b)).bind
++        fun y => some (strict,x,y)) = some qD
++    rw [ha',hb'] <;> rfl
+   have hU : OriginalUniversal p f strict a b ↔ CurrentDecision.Universal p f strict da db := by
+     have h := originalUniversalExact p f strict hg da db
+     rw [show da.term = a from ha.1,show db.term = b from hb.1] at h
+@@ -66,7 +77,8 @@
+   obtain ⟨hC,hS,hW⟩ := CurrentDecision.StatementChecks.arithmetic_reduction p f hf (n+6) r
+   have hSat := hU.trans hU'
+   refine ⟨hD,r,hArith,?_,hSat,?_,?_⟩
+-  · simp [toGround,hArith,hC]
++  · change (toArithmetic p f q).map CurrentCompiler.compile = some (CurrentCompiler.expected r)
++    rw [hArith,Option.map_some,hC]
+   · exact hSat.trans hS.symm
+   · exact hSat.trans hW.symm
+ 
+@@ -117,7 +129,10 @@
+   have htail : Computable₂ (fun (q : Query) (a : Code) =>
+       (CurrentTreeInputCoverage.compile (rawContext q.1) q.2.2.2).map (fun b => (q.2.1,a,b))) :=
+     (Computable.option_map (hb.comp Computable.fst) hm).to₂
+-  have hdag : Computable toDAGs := Computable.option_bind ha htail
++  have hdag : Computable toDAGs := by
++    apply (Computable.option_bind ha htail).of_eq
++    intro q
++    simp only [toDAGs,Option.map_eq_bind,Function.comp_def] <;> rfl
+   refine ⟨hdag,?_⟩
+   intro p hp f hfc hf
+   have h := CurrentDecision.StatementChecks.actual_effective_maps

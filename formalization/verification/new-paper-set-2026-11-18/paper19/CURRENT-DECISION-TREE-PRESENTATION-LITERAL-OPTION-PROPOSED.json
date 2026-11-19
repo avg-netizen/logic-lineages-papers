@@ -1,0 +1,14 @@
+{
+  "status": "proposal only, active and frozen sources unchanged",
+  "only_file": "LogicLineages/ControlSensitivityCurrent/CurrentDecisionTreePresentationProof.lean",
+  "before_sha256": "516c08a7b9690460ecf7c6349b0bb74257dc7f27b6c6775eada039874f396f0a",
+  "proposed_sha256": "3a1251f9e688ae07e5d840eebdba4287d353feaace0bb2f7c211417bf14026b5",
+  "failure": "build-reports/1795075227948471971-2.json",
+  "exact_errors": [
+    "56:34 simp rewrote the typed context to replicate n (typeCode ground) before exact coverage code compilation lemmas could bind",
+    "69:2 simp made an existential over any arithmetic code where local hArith already picks the exact literal code",
+    "120:61 option_bind computable tail uses Option.map, while actual frozen toDAGs inner do is bind/pure, not definitionally equal"
+  ],
+  "scope": "proof-only explicit exact coverage code rewrite in unchanged rawContext; rewrite actual arithmetic option and known artifact compiler; use Option.map_eq_bind for program equality instead of relying on definitional equality. Selected policy/source semantics, literal outputs and target frozen.",
+  "preserved": "verification/new-paper-set-2026-11-18/paper19/current-decision-failures/1795075227948471971-2"
+}

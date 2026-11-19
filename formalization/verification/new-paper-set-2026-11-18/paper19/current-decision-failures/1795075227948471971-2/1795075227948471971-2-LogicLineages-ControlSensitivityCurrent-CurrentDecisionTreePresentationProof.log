@@ -1,0 +1,122 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionTreePresentationProof.lean:56:34: error: unsolved goals
+p : AdmissibleSum.Policy
+f : ℕ → ℕ
+hf : FullAddition.Targets.SourceGrowth f
+n : ℕ
+strict : Bool
+σ τ : Ty
+a : OriginalTerm (List.replicate n Ty.ground) σ
+b : OriginalTerm (List.replicate n Ty.ground) τ
+Γ : List Ty := List.replicate n Ty.ground
+q : Query := (n, strict, SyntaxCode.encodeTerm a, SyntaxCode.encodeTerm b)
+da : Input (List.replicate n Ty.ground) σ := CurrentTreeInputCoverage.input a
+db : Input (List.replicate n Ty.ground) τ := CurrentTreeInputCoverage.input b
+qD : CurrentDecision.QueryCode := (strict, RawSourceDAG.encode ⟨Γ, ⟨σ, da⟩⟩, RawSourceDAG.encode ⟨Γ, ⟨τ, db⟩⟩)
+ha :
+  (CurrentTreeInputCoverage.input a).term = a ∧
+    CurrentTreeInputCoverage.compile (List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm a) =
+        some (RawSourceDAG.encode ⟨Γ, ⟨σ, CurrentTreeInputCoverage.input a⟩⟩) ∧
+      CurrentTreeCode.expand (RawSourceDAG.encode ⟨Γ, ⟨σ, CurrentTreeInputCoverage.input a⟩⟩) = SyntaxCode.encodeTerm a
+hb :
+  (CurrentTreeInputCoverage.input b).term = b ∧
+    CurrentTreeInputCoverage.compile (List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm b) =
+        some (RawSourceDAG.encode ⟨Γ, ⟨τ, CurrentTreeInputCoverage.input b⟩⟩) ∧
+      CurrentTreeCode.expand (RawSourceDAG.encode ⟨Γ, ⟨τ, CurrentTreeInputCoverage.input b⟩⟩) = SyntaxCode.encodeTerm b
+hg : ∀ t ∈ Γ, t = Ty.ground
+⊢ ((CurrentTreeInputCoverage.compile (List.replicate n (SyntaxCode.typeCode Ty.ground)) (SyntaxCode.encodeTerm a)).bind
+      fun a =>
+      (CurrentTreeInputCoverage.compile (List.replicate n (SyntaxCode.typeCode Ty.ground))
+            (SyntaxCode.encodeTerm b)).bind
+        fun b => some (strict, a, b)) =
+    some
+      (strict, RawSourceDAG.encode ⟨List.replicate n Ty.ground, ⟨σ, CurrentTreeInputCoverage.input a⟩⟩,
+        RawSourceDAG.encode ⟨List.replicate n Ty.ground, ⟨τ, CurrentTreeInputCoverage.input b⟩⟩)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionTreePresentationProof.lean:69:2: error: unsolved goals
+case refine_1
+p : AdmissibleSum.Policy
+f : ℕ → ℕ
+hf : FullAddition.Targets.SourceGrowth f
+n : ℕ
+strict : Bool
+σ τ : Ty
+a : OriginalTerm (List.replicate n Ty.ground) σ
+b : OriginalTerm (List.replicate n Ty.ground) τ
+Γ : List Ty := List.replicate n Ty.ground
+q : Query := (n, strict, SyntaxCode.encodeTerm a, SyntaxCode.encodeTerm b)
+da : Input (List.replicate n Ty.ground) σ := CurrentTreeInputCoverage.input a
+db : Input (List.replicate n Ty.ground) τ := CurrentTreeInputCoverage.input b
+qD : CurrentDecision.QueryCode := (strict, RawSourceDAG.encode ⟨Γ, ⟨σ, da⟩⟩, RawSourceDAG.encode ⟨Γ, ⟨τ, db⟩⟩)
+ha :
+  (CurrentTreeInputCoverage.input a).term = a ∧
+    CurrentTreeInputCoverage.compile (List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm a) =
+        some (RawSourceDAG.encode ⟨Γ, ⟨σ, CurrentTreeInputCoverage.input a⟩⟩) ∧
+      CurrentTreeCode.expand (RawSourceDAG.encode ⟨Γ, ⟨σ, CurrentTreeInputCoverage.input a⟩⟩) = SyntaxCode.encodeTerm a
+hb :
+  (CurrentTreeInputCoverage.input b).term = b ∧
+    CurrentTreeInputCoverage.compile (List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm b) =
+        some (RawSourceDAG.encode ⟨Γ, ⟨τ, CurrentTreeInputCoverage.input b⟩⟩) ∧
+      CurrentTreeCode.expand (RawSourceDAG.encode ⟨Γ, ⟨τ, CurrentTreeInputCoverage.input b⟩⟩) = SyntaxCode.encodeTerm b
+hg : ∀ t ∈ Γ, t = Ty.ground
+hD : toDAGs q = some qD
+hU : OriginalUniversal p f strict a b ↔ CurrentDecision.Universal p f strict da db
+r : InputNormalization.Input (List.replicate (n + 6) Ty.ground) 0
+hr :
+  CurrentDecision.toArithmetic p f
+      (strict, RawSourceDAG.encode ⟨List.replicate n Ty.ground, ⟨σ, da⟩⟩,
+        RawSourceDAG.encode ⟨List.replicate n Ty.ground, ⟨τ, db⟩⟩) =
+    (n + 6, encodeInput r)
+hU' : CurrentDecision.Universal p f strict da db ↔ ¬∃ ρ, InputNormalization.Input.eval p f ρ Fin.elim0 r
+hArith : toArithmetic p f q = some (n + 6, encodeInput r)
+hC : CurrentCompiler.compile (n + 6, encodeInput r) = CurrentCompiler.expected r
+hS :
+  CurrentDecision.Ground p f true
+      (BooleanCompiler.strictPair (InputNormalization.normalize InputNormalization.Dag.nil r)).1
+      (BooleanCompiler.strictPair (InputNormalization.normalize InputNormalization.Dag.nil r)).2 ↔
+    ¬∃ ρ, InputNormalization.Input.eval p f ρ Fin.elim0 r
+hW :
+  CurrentDecision.Ground p f false
+      (BooleanCompiler.weakPair (InputNormalization.normalize InputNormalization.Dag.nil r)).1
+      (BooleanCompiler.weakPair (InputNormalization.normalize InputNormalization.Dag.nil r)).2 ↔
+    ¬∃ ρ, InputNormalization.Input.eval p f ρ Fin.elim0 r
+hSat : OriginalUniversal p f strict a b ↔ ¬∃ ρ, InputNormalization.Input.eval p f ρ Fin.elim0 r
+⊢ ∃ a_1 a_2 b_1,
+    toArithmetic p f (n, strict, SyntaxCode.encodeTerm a, SyntaxCode.encodeTerm b) = some (a_1, a_2, b_1) ∧
+      CurrentCompiler.compile (a_1, a_2, b_1) = CurrentCompiler.expected r
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionTreePresentationProof.lean:57:38: warning: This simp argument is unused:
+  ha.2.1
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵o̵D̵A̵G̵s̵,̵q̵,̵q̵D̵,̵r̵a̵w̵C̵o̵n̵t̵e̵x̵t̵E̵x̵a̵c̵t̵,̵h̵a̵.̵2̵.̵1̵,̵h̵b̵.̵2̵.̵1̵,̵Γ̵,̵d̵a̵,̵d̵b̵]̵[̲t̲o̲D̲A̲G̲s̲,̲ ̲q̲,̲ ̲q̲D̲,̲ ̲r̲a̲w̲C̲o̲n̲t̲e̲x̲t̲E̲x̲a̲c̲t̲,̲ ̲h̲b̲.̲2̲.̲1̲,̲ ̲Γ̲,̲ ̲d̲a̲,̲ ̲d̲b̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionTreePresentationProof.lean:57:45: warning: This simp argument is unused:
+  hb.2.1
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵o̵D̵A̵G̵s̵,̵q̵,̵q̵D̵,̵r̵a̵w̵C̵o̵n̵t̵e̵x̵t̵E̵x̵a̵c̵t̵,̵h̵a̵.̵2̵.̵1̵,̵h̵b̵.̵2̵.̵1̵,̵Γ̵,̵d̵a̵,̵d̵b̵]̵[̲t̲o̲D̲A̲G̲s̲,̲ ̲q̲,̲ ̲q̲D̲,̲ ̲r̲a̲w̲C̲o̲n̲t̲e̲x̲t̲E̲x̲a̲c̲t̲,̲ ̲h̲a̲.̲2̲.̲1̲,̲ ̲Γ̲,̲ ̲d̲a̲,̲ ̲d̲b̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionTreePresentationProof.lean:69:19: warning: This simp argument is unused:
+  hArith
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵o̵G̵r̵o̵u̵n̵d̵,̵h̵A̵r̵i̵t̵h̵,̵h̵C̵]̵[̲t̲o̲G̲r̲o̲u̲n̲d̲,̲ ̲h̲C̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionTreePresentationProof.lean:69:26: warning: This simp argument is unused:
+  hC
+
+Hint: Omit it from the simp argument list.
+  simp [toGround, ̲hArith,̵h̵C̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionTreePresentationProof.lean:120:61: error: Application type mismatch: The argument
+  htail
+has type
+  Computable₂ fun q a => Option.map (fun b => (q.2.1, a, b)) (CurrentTreeInputCoverage.compile (rawContext q.1) q.2.2.2)
+but is expected to have type
+  Computable₂ fun a a_1 => do
+    let b ← CurrentTreeInputCoverage.compile (rawContext a.1) a.2.2.2
+    pure (a.2.1, a_1, b)
+in the application
+  Computable.option_bind ha htail

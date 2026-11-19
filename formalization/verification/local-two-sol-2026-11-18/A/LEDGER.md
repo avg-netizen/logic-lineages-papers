@@ -664,3 +664,22 @@ and translates the existing canonical-port derivations into fixed-point bits.
   exact uniform n+length+1 threshold. READY-FOR-ROOT-REVIEW as
   `lem:tuple-simulation`; no lane promotion. No global locality,
   positive simulation, or internal ID1 result claimed.
+
+## 2026-11-19 — whole tuple accepted; symbolic locality target frozen
+
+- Coordinator independently accepted numbered `lem:tuple-simulation`
+  as packet 425 (74 modules/45 pins/key-exact), register 139/28 at
+  that point. The incomplete resource-stopped monolith and ordinary
+  last-wrapper diagnostic are retained together with their source bytes.
+- Next authorized source-first comparator: literal data certificates of
+  the six original judgment sorts and exact `CertificateExact` iff,
+  plus every supplied original certificate's `SymbolicLocality`.
+  `LiteralDerivationTree.lean` and `LiteralDerivationLocalityTargets.lean`
+  retain the actual Select selected argument, entire same-owner tuple
+  and arrow-prefix subtypes even if result erases otherwise observable
+  copies, and no auxiliary marked-target rules. Fixed K is arbitrary
+  subtype-closed finite list, without decision-specific guards.
+- 15-pin source freeze and map in paper16/recovery-nov19/LITERAL-DERIVATION-LOCALITY-*,
+  target-only root19 modules. No proof or native before independent
+  target review. Full numbered locality still needs all numeric
+  simulation intermediates; the target is explicitly supporting only.

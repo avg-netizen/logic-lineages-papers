@@ -109,7 +109,7 @@ private theorem decreases (a b : Task) (hb : b ∈ rawChildren a) : measure b < 
   by_cases h5 : n%8 = 5
   · have hp : 0 < n := by omega
     have hd := Nat.div_lt_self hp (by decide : 1 < 8)
-    simp only [h5,if_true,List.mem_cons,List.mem_singleton] at hb
+    simp [h5] at hb
     rcases hb with e | e
     · subst b
       exact (Nat.unpair_left_le (n/8)).trans_lt hd
@@ -118,7 +118,7 @@ private theorem decreases (a b : Task) (hb : b ∈ rawChildren a) : measure b < 
   · by_cases h6 : n%8 = 6
     · have hp : 0 < n := by omega
       have hd := Nat.div_lt_self hp (by decide : 1 < 8)
-      simp only [h5,h6,if_false,if_true,List.mem_singleton] at hb
+      simp [h6] at hb
       subst b
       exact (Nat.unpair_right_le (n/8)).trans_lt hd
     · simp [h5,h6] at hb
