@@ -683,3 +683,34 @@ and translates the existing canonical-port derivations into fixed-point bits.
   target-only root19 modules. No proof or native before independent
   target review. Full numbered locality still needs all numeric
   simulation intermediates; the target is explicitly supporting only.
+
+## 2026-11-19 — literal symbolic locality exact pass (supporting only)
+
+- Original LITERAL-LOCALITY-0817 ordinary error (implicit generated
+  recursor arguments) and exact old sources are preserved, receipt
+  `1795076194504315528-6`. Reviewed proof-only `@` on the same builder
+  operands; no frozen targets changed. The corrected literal
+  completeness leaf is f7725e46.
+- Fresh LITERAL-LOCALITY-0819 passed both exact original six-sort
+  certificate and actual same-tree symbolic-locality aliases
+  (propext, Quot.sound only), receipt `1795076381645742789-6`.
+  65/65 rows, 476964 KiB on the endpoint, closure cached/compiled
+  maximum 512456 KiB, unchanged caps. All native work reaped, both
+  shared locks free.
+- Current recursive evidence `LANE-A-LITERAL-DERIVATION-LOCALITY-CLOUD-EVIDENCE.json`
+  cda4501d7d78a0da003c8c0620c82d4b897fbb7ba91c86c701b416641073e4e5:
+  65 modules, 44 merged pins including 15 original locality pins,
+  and two exact audits. Supplemental read-only replay clean. Ready
+  for independent supporting review only; not global numbered locality.
+
+## 2026-11-19 — numerical window preservation comparator staged
+
+- New-only `NumberedWindowPrimary.lean` and
+  `NumberedWindowPreservationTargets.lean` define literal typed
+  primary equivalence, independently typed raw successor admission,
+  and all actual vertices of one fixed-window typed raw/equivalence
+  trace. No intermediate support/window premise is assumed.
+- Frozen 15 unique inputs and mapped manuscript lines in
+  paper16/recovery-nov19/NUMBERED-WINDOW-PRESERVATION-{FROZEN.json,SOURCE-MAP.md}.
+  Supporting comparator only, no proof or native preflight before
+  independent scope review and ticket.

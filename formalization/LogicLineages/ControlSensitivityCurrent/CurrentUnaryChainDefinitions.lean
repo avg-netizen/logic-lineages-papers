@@ -4,7 +4,7 @@ public import LogicLineages.OrdinalComparison.ParametricSourceSuccessorDefinitio
 @[expose] public section
 namespace LogicLineages.ControlSensitivityCurrent.CurrentUnaryChain
 
-open LogicLineages.OrdinalComparison.Source
+open LogicLineages.OrdinalComparison LogicLineages.OrdinalComparison.Source
 open LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemantics
 
 abbrev Unary (Γ : List Ty) := OriginalTerm Γ (.arrow .ground .ground)
@@ -42,7 +42,7 @@ noncomputable def headSum (f : Nat → Nat) {Γ} (ν : OrdinalComponent Γ → O
 
 /-- Genuine shared positive ground coordinates, all functional coordinates
 observed at the common unit, with no all-one source inhabitant. -/
-def commonUnits {Γ} (ρ : Variable Γ .ground → Nat) : OrdinalComponent Γ → Ordinal
+noncomputable def commonUnits {Γ} (ρ : Variable Γ .ground → Nat) : OrdinalComponent Γ → Ordinal
   | ⟨.ground,x,_⟩ => ((ρ x+1 : Nat) : Ordinal)
   | ⟨.arrow _ _,_,_⟩ => 1
 

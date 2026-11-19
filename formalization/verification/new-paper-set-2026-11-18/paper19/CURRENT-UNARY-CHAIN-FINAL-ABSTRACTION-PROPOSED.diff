@@ -1,0 +1,11 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentUnaryChainSpineProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentUnaryChainSpineProof.lean
+@@ -96,6 +96,7 @@
+   have he := congrArg (fun v : OrdinalVector Γ 1 => v 1) (Option.some.inj hu)
+   have hs : p.shape .positiveAbstraction 0 = .leaf :=
+     PolicyGadget.smallShapes.2.1 (p.shape .positiveAbstraction 0)
+-  simpa [hs,AdmissibleSum.expand,Fin.cases_zero,Ty.level] using he.symm
++  simp [hs,AdmissibleSum.expand,Fin.cases_zero,Ty.level] at he
++  exact he.symm
+ 
+ end LogicLineages.ControlSensitivityCurrent.CurrentUnaryChain
