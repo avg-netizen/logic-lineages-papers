@@ -1,0 +1,13 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphOmegaProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphOmegaProof.lean
+@@ -98,7 +98,9 @@
+       (0 : Ordinal)+Ordinal.omega0*(m : Nat)
+     rw [rawNaturalSum]
+     change Ordinal.omega0^(rawNaturalSum 1 ONote.zero).repr*(m : Nat)+0 = _
+-    simp only [shiftExponent ONote.zero ONote.NF.zero,ONote.repr_zero,zero_add,Ordinal.opow_one,add_zero]
++    simp only [shiftExponent ONote.zero ONote.NF.zero,add_zero,zero_add]
++    change Ordinal.omega0 ^ ((0 : Ordinal)+1) * (m : Nat) = Ordinal.omega0*(m : Nat)
++    simp only [zero_add,Ordinal.opow_one]
+   | oadd e c t ihe iht =>
+     have hc := @ONote.cmp_compares e .zero ha.fst ONote.NF.zero
+     cases h : ONote.cmp e .zero with

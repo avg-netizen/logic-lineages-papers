@@ -1,0 +1,5 @@
+# Independent exact path scope review
+
+Fully read3 comparator leaves and source map against original NumberedWindowRules, SimulationData Class/ClassEdge/RS and ordinals.tex10–92. All26 frozen pins match. Empty raw paths require literal endpoint identity plus admission, each nonempty raw edge separately pays unchanged finite-context/type/window guards. ActualCodeAt uses admitted representatives of the existing quotient and successful leastCode, independent of the checker. Public class-edge and positive path checkers never pass by two absent Option codes; the positive list is explicitly nonempty. Adjacent raw representatives can differ only through actual successful class-code equality to be proved. Four exact targets retain arbitrary Nat endpoints with full existence/uniqueness fibers, actual ClassEdge and nonreflexive original RS.
+
+Supporting supplied-certificate scope only. No global finite carrier, bare reachability decision, numerical encoding of every certificate yet, arithmetic-language/internal ID1 derivation or numbered promotion. Admitted original core target-only preflight, no proof until independent verification.

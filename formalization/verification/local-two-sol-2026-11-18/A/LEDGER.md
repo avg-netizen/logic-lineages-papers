@@ -1365,3 +1365,26 @@ and translates the existing canonical-port derivations into fixed-point bits.
   53current/51 pins/6exact audits, supplemental errors0. READY
   supporting actual supplied witnesses over 13+2 rules and finiteΓ
   WindowStep; no path arithmetic or ID1.
+
+## 2026-11-19 — exact finite raw path and actual positive quotient certificate native pass
+
+- Accepted454 actual thirteen raw and two ordered args constructor
+  certificates and finite-context typed WindowStep after independent
+  53current/51pins/6 exact aliases. No numbered promotion.
+- Source-first path comparator froze26 pins b1ebfee2... and mapped
+  original same finiteΓ WindowPath, all classes' actual least-code
+  fibers, genuine ClassEdge and positive RS. Raw empty requires
+  literal endpoint equality and typed window admission; class paths
+  require every actual raw edge/source+target, successful some least
+  codes, and a nonempty supplied list. No bare search.
+- PATH-WITNESS-TARGET-1403 clean123/123 target-only,
+  receipt1795094800173546278-2 independently verified before proofs.
+- PATH-WITNESS-EXACT-1410 clean148/148 first exact run,
+  receipt1795095030625064541-2, peak519976 inherited/506196 new,
+  exact root497764KiB. All four exact aliases standard-only;
+  native reaped/both locks free. Fresh LANE-A-NUMBERED-WINDOW-PATH-
+  WITNESS-CLOUD-EVIDENCE.json SHA6976bbd8f322a8335c3b19aa438d31a67841ccc3212281a7d50e9a775f60714f,
+  148current/55 merged pins/4exact, supplemental errors0. READY
+  supporting original admitted raw paths and genuine positive original
+  class paths at successful Nat endpoint codes; no arithmetic
+  formula/reflection, whole witness-code, rank or ID1.
