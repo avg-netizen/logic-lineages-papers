@@ -1,0 +1,44 @@
+--- LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageDefinitions.lean
++++ LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageDefinitions.lean
+@@ -12,6 +12,14 @@
+   tail : List Spec
+   graph : DAG Γ (root :: tail)
+   keep : ∀ {s : Spec}, Ref old s → Ref (root :: tail) s
++
++/-- Context-independent count of actual original term occurrences. It is
++used solely as the termination measure, never by the compiled DAG builder. -/
++def treeNodes {Ξ : List Ty} {α : Ty} : OriginalTerm Ξ α → Nat
++  | .app f a => treeNodes f + treeNodes a + 1
++  | .lam b => treeNodes b + 1
++  | .var _ | .zeroC | .succC | .caseC _ | .recC _ => 1
++  | .ranked s _ => nomatch s
+ 
+ /-- A finite literal source tree is also a scoped source DAG. App first
+ builds the function, then the argument, then the actual application node.
+@@ -32,8 +40,8 @@
+     let bd := build (Δ := α :: Δ) b d
+     ⟨_,.lam bd.graph .here,fun r => .there (bd.keep r)⟩
+   | .ranked s _ => nomatch s
+-termination_by sizeOf t
+-decreasing_by all_goals simp_wf <;> omega
++termination_by treeNodes t
++decreasing_by all_goals simp only [treeNodes] <;> omega
+ 
+ def input {Γ : List Ty} {τ : Ty} (t : OriginalTerm Γ τ) : Input Γ τ :=
+   let r := build (Δ := []) t .nil
+@@ -65,11 +73,13 @@
+ termination_by code
+ decreasing_by
+   all_goals
+-    have hp : 0 < code := by dsimp at *; omega
++    have hp : 0 < code := by
++      try dsimp at *
++      omega
+     have hd := Nat.div_lt_self hp (by decide : 1 < 8)
+     have hl := Nat.unpair_left_le (code / 8)
+     have hr := Nat.unpair_right_le (code / 8)
+-    dsimp at *
++    try dsimp at *
+     omega
+ 
+ /-- Reject ill-typed/malformed original tree codes with their existing

@@ -1,0 +1,1 @@
+Reviewed applied hashes691a7d2e/d0ffb9aa after exact approved three tactic changes, frozen13/14 unchanged. Changes only refer to already introduced mutual-recursion binders, same complete four propositions. Prior failed proof edition preserved. New serialized core gate may run.

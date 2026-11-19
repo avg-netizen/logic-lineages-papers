@@ -528,3 +528,26 @@ and translates the existing canonical-port derivations into fixed-point bits.
   Applied exact reviewed diff under recovery-nov19 and refreshed only the
   three affected manifest pins; all 13 current pins verify. No native
   or proof started again before a fresh target-only ticket.
+
+## 2026-11-19 — numbered tuple target preflight passes; realization drafting
+
+- NUMBERED-TUPLE-TARGET-0708: 21/21 modules at unchanged core caps,
+  receipt `1795072080041120362-6`, closure peak 495804 KiB, all 13
+  corrected source pins match the applied independently reviewed
+  comment-only repair. Target compilation only; no tuple proof or
+  numbered promotion. Checker reaped and shared locks free.
+- Four reviewed supporting realization contracts authored separately:
+  identical shape/typed window admission, threshold weakening, numeric
+  shift, and actual paired block substitution. Proof gate
+  NUMBERED-REALIZATION-0713 reached 21 passing entries then ordinary
+  failure in `shiftTerm` cons: Lean already created inaccessible amount
+  and cutoff when entering the explicit mutual motive. Receipt
+  `1795072410339582780-6`, peak 487972 KiB. Reaped, both locks free.
+  Failed proof drafts, source and diagnostics saved under the matching
+  failed packet directory. Exact proposed proof-only rename changes
+  await independent review; original target pins still untouched.
+- Separate proof-free numerical binding comparator proposes exact
+  singleton cancellation, outside-block composition and actual opened
+  numbered beta result; 14 source pins under
+  paper16/recovery-nov19/NUMBERED-WINDOW-BINDING-FROZEN.json.
+  No implementation or compiler yet for that separate supplier.

@@ -13,27 +13,34 @@ structure Added (Γ : List Ty) (old : List Spec) (root : Spec) where
   graph : DAG Γ (root :: tail)
   keep : ∀ {s : Spec}, Ref old s → Ref (root :: tail) s
 
-/-- A finite literal source tree is also a scoped source DAG. App first
-builds the function, then the argument, then the actual application node.
-No shared source name or lexical scope is changed. -/
-def build {Γ Δ : List Ty} {τ : Ty} (t : OriginalTerm (Δ ++ Γ) τ)
-    {ss : List Spec} (d : DAG Γ ss) : Added Γ ss (Δ,τ) :=
+/-- A finite literal source tree is also a scoped source DAG. The ambient
+context and result are genuine changing term indices; the equality only
+transports an existing variable into the separately stored binder prefix.
+App first builds the function, then the argument, then the application. -/
+def buildIn {Ξ : List Ty} {τ : Ty} (t : OriginalTerm Ξ τ)
+    (Γ Δ : List Ty) (h : Δ ++ Γ = Ξ) {ss : List Spec} (d : DAG Γ ss) :
+    Added Γ ss (Δ,τ) :=
   match t with
-  | .var x => ⟨ss,.var d x,fun r => .there r⟩
+  | .var x => ⟨ss,.var d (h.symm ▸ x),fun r => .there r⟩
   | .zeroC => ⟨ss,.zero d,fun r => .there r⟩
   | .succC => ⟨ss,.succ d,fun r => .there r⟩
   | .caseC α => ⟨ss,.case d α,fun r => .there r⟩
   | .recC α => ⟨ss,.recursor d α,fun r => .there r⟩
   | .app f a =>
-    let fd := build f d
-    let ad := build a fd.graph
+    let fd := buildIn f Γ Δ h d
+    let ad := buildIn a Γ Δ h fd.graph
     ⟨_,.app ad.graph (ad.keep .here) .here,fun r => .there (ad.keep (fd.keep r))⟩
   | @Term.lam _ _ _ α _ b =>
-    let bd := build (Δ := α :: Δ) b d
+    let bd := buildIn b Γ (α :: Δ) (congrArg (List.cons α) h) d
     ⟨_,.lam bd.graph .here,fun r => .there (bd.keep r)⟩
   | .ranked s _ => nomatch s
-termination_by sizeOf t
-decreasing_by all_goals simp_wf <;> omega
+termination_by structural t
+
+/-- Build a source DAG at its exact source context, without changing any
+lexical scope or reference. -/
+def build {Γ Δ : List Ty} {τ : Ty} (t : OriginalTerm (Δ ++ Γ) τ)
+    {ss : List Spec} (d : DAG Γ ss) : Added Γ ss (Δ,τ) :=
+  buildIn t Γ Δ rfl d
 
 def input {Γ : List Ty} {τ : Ty} (t : OriginalTerm Γ τ) : Input Γ τ :=
   let r := build (Δ := []) t .nil
@@ -65,11 +72,13 @@ def rows (Γ Δ : List Nat) (code : Nat) : List Node :=
 termination_by code
 decreasing_by
   all_goals
-    have hp : 0 < code := by dsimp at *; omega
+    have hp : 0 < code := by
+      try dsimp at *
+      omega
     have hd := Nat.div_lt_self hp (by decide : 1 < 8)
     have hl := Nat.unpair_left_le (code / 8)
     have hr := Nat.unpair_right_le (code / 8)
-    dsimp at *
+    try dsimp at *
     omega
 
 /-- Reject ill-typed/malformed original tree codes with their existing

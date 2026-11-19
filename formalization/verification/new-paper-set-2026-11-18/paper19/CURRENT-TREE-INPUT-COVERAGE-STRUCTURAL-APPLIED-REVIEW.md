@@ -1,0 +1,1 @@
+Coordinator independently verifies applied Definitions SHA256 1b05d7086bbc156544d886909adaef56abb9c816bfb9de3309a940b273f90976, exact approved structural correction. All current tree and decision source pins match. Pending target-only preflight; no new theorem acceptance.

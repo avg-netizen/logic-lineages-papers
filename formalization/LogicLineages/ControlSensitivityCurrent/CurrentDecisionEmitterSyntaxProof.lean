@@ -109,7 +109,9 @@ theorem observe_syntax {Γ} (a b : Input Γ .ground)
     change variableIndex i + 1 + 1 + 1 + factor + 1 + 1 = _
     omega
   · simp only [portIndices,z,RawSourceDAG.variableIndex, hr, hsum]
-    exact Prod.ext (by omega) (Prod.ext (by omega) rfl)
+    exact Prod.ext (by omega) (Prod.ext (by
+      change (0 + 1 + factor + 1 + 1 : Nat) = factor + 3
+      omega) rfl)
   · have hcode : liftCode 1 (encode ⟨Γ, .ground,b⟩) =
         encode ⟨.ground :: Γ, .ground,ScopedDAG.renameInput (Renaming.weaken Γ .ground) b⟩ :=
       lift_exact b 1

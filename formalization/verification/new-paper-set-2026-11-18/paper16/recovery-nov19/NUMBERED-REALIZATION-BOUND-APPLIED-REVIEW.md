@@ -1,0 +1,1 @@
+Coordinator reviewed exact two-line private proof correction and independently verified applied SHA256 a8870571b0f5d0e138be6801b8d61a13da98b7a26f1333d84a40f4a99a9042a0. Helper renamed substituteBound and bound constructor arguments inferred; frozen claims untouched. Fresh check still required.
