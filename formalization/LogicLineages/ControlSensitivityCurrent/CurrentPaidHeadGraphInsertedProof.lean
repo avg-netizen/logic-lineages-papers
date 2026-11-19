@@ -56,15 +56,16 @@ private theorem tapeNew (b c g old : Nat→Nat) (wb wc wg vb vc t : Nat) :
     w e=vb ∧ w (e+1)=vc ∧ w (e+2)=t := by
   dsimp only
   unfold spliceTape operandEnd
+  dsimp only
   repeat' apply And.intro
   all_goals
     repeat' first | split | rfl | omega
 private theorem tapeOld (b c g old : Nat→Nat) (wb wc wg vb vc t i : Nat) :
     spliceTape b c g old wb wc wg vb vc t (insertedWidth wb wc wg+i)=old i := by
   unfold spliceTape insertedWidth operandEnd
+  dsimp only
   repeat' first | split | rfl | omega
-  congr 1
-  omega
+  all_goals congr 1 <;> omega
 
 private theorem insertedSound (p : LogicLineages.OrdinalComparison.Source.AdmissibleSum.Policy) (f : Nat→Nat)
     {Γ : List Ty} (hg : ∀ σ ∈ Γ, σ = .ground) (nξ level : Nat) (b c : OpenGraph Γ)
@@ -103,6 +104,7 @@ private theorem insertedSound (p : LogicLineages.OrdinalComparison.Source.Admiss
       simp only [shiftedIndex,variableIndex,Nat.add_zero,gInput]
       change w (e+2) = nξ+B₀+C₀+level
       unfold B₀ C₀
+      change w (e+2)=nξ+level+2+w e+w (e+1) at hsplice
       omega
     | there x =>
       cases x with
@@ -132,7 +134,8 @@ private theorem insertedComplete (p : LogicLineages.OrdinalComparison.Source.Adm
   let rG := fun i => νg (slot (shift gg .here) i)
   let old := fun i => resultValues ρ y (slot .here i)
   let a := spliceTape rB rC rG old bb cc gg nb nc t
-  have hnew := tapeNew rB rC rG old bb cc gg nb nc t
+  have hnew : a e=nb ∧ a (e+1)=nc ∧ a (e+2)=t :=
+    tapeNew rB rC rG old bb cc gg nb nc t
   have hold (i : Nat) : a (w+i)=old i := tapeOld rB rC rG old bb cc gg nb nc t i
   have B : (byIndex (fun j => a (placeB bb cc gg j)) : Variable (WireCtx bb (.ground::Γ)) .ground→Nat)=νb := by
     funext x
@@ -146,7 +149,9 @@ private theorem insertedComplete (p : LogicLineages.OrdinalComparison.Source.Adm
     · obtain ⟨z,rfl⟩ := suffixAddress bb x (by omega)
       rw [shiftedIndex]
       cases z with
-      | here => simpa only [variableIndex,Nat.add_zero,bResult,hb₀] using hnew.1
+      | here =>
+        simp only [variableIndex,Nat.add_zero,bResult]
+        exact hnew.1.trans hb₀.symm
       | there x =>
         rw [variableIndex,show bb+(variableIndex x+1)=bb+variableIndex x+1 by omega,bOld,hold,hrb]
         change resultValues ρ y (slot .here (variableIndex (.there x : Variable (.ground::Γ) .ground))) = _
@@ -164,7 +169,9 @@ private theorem insertedComplete (p : LogicLineages.OrdinalComparison.Source.Adm
     · obtain ⟨z,rfl⟩ := suffixAddress cc x (by omega)
       rw [shiftedIndex]
       cases z with
-      | here => simpa only [variableIndex,Nat.add_zero,cResult,hc₀] using hnew.2.1
+      | here =>
+        simp only [variableIndex,Nat.add_zero,cResult]
+        exact hnew.2.1.trans hc₀.symm
       | there x =>
         rw [variableIndex,show cc+(variableIndex x+1)=cc+variableIndex x+1 by omega,cOld,hold,hrc]
         change resultValues ρ y (slot .here (variableIndex (.there x : Variable (.ground::Γ) .ground))) = _
@@ -182,14 +189,19 @@ private theorem insertedComplete (p : LogicLineages.OrdinalComparison.Source.Adm
     · obtain ⟨z,rfl⟩ := suffixAddress gg x (by omega)
       rw [shiftedIndex]
       cases z with
-      | here => simpa only [variableIndex,Nat.add_zero,gInput,hgg,endValues,t] using hnew.2.2
+      | here =>
+        simp only [variableIndex,Nat.add_zero,gInput]
+        have ht : νg (shift gg (.here : Variable DirectCtx .ground))=t := hgg .here
+        exact hnew.2.2.trans ht.symm
       | there z =>
         cases z with
         | here =>
-          simp only [variableIndex,Nat.zero_add,gOutput,hgg,endValues]
-          change a w=y
-          simpa only [Nat.add_zero,old,slot,RawSourceDAG.getVariable,↓reduceDIte,Option.getD_some,resultValues]
-            using hold 0
+          simp only [variableIndex,Nat.zero_add,gOutput]
+          have hy' : νg (shift gg (.there .here : Variable DirectCtx .ground))=y := hgg (.there .here)
+          have hOld : old 0=y := congrArg (resultValues ρ y)
+            (slotAt (.here : Variable (.ground::Γ) .ground) .here)
+          have hw : a w=old 0 := by simpa only [Nat.add_zero] using hold 0
+          exact hw.trans (hOld.trans hy'.symm)
         | there z => nomatch z
   apply (insertedFiber p f hg nξ level b c g ρ y).mpr
   refine ⟨a,?_,?_,?_,?_,?_⟩

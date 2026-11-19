@@ -1,0 +1,39 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphTemplateCodeProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphTemplateCodeProof.lean
+@@ -83,7 +83,9 @@
+     change placeB wb wc wg (variableIndex x)<Ξ.length
+     rw [lengthWire]
+     unfold placeB w insertedWidth operandEnd
+-    split <;> try split <;> omega
++    split
++    · omega
++    · split <;> omega
+   have htabC : (List.range (wc+1+Γ.length)).map (placeC wb wc wg) =
+       RawSourceDAG.Operations.renamingCode rC := by
+     rw [← lengthWire (Γ:=Γ) wc]
+@@ -96,7 +98,9 @@
+     change placeC wb wc wg (variableIndex x)<Ξ.length
+     rw [lengthWire]
+     unfold placeC w insertedWidth operandEnd
+-    split <;> try split <;> omega
++    split
++    · omega
++    · split <;> omega
+   have htabG : (List.range (wg+2)).map (placeGraph wb wc wg) =
+       RawSourceDAG.Operations.renamingCode rG := by
+     rw [← lengthDirect wg]
+@@ -123,7 +127,13 @@
+       rw [lengthWire]; unfold w insertedWidth; omega)
+     (CurrentUnitElimination.renameFormula rB b.matrix)
+     (CurrentUnitElimination.renameFormula rC c.matrix) (CurrentUnitElimination.renameFormula rG g.matrix)
+-  change (w,insertedBody rawLayout wb wc wg nξ level _ _ _) =
++  change (w,insertedBody rawLayout wb wc wg nξ level
++    (MatrixCode.renameFormula (UnitCode.bitCtx (w+1+Γ.length))
++      ((List.range (wb+1+Γ.length)).map (placeB wb wc wg)) (MatrixCode.formula b.matrix))
++    (MatrixCode.renameFormula (UnitCode.bitCtx (w+1+Γ.length))
++      ((List.range (wc+1+Γ.length)).map (placeC wb wc wg)) (MatrixCode.formula c.matrix))
++    (MatrixCode.renameFormula (UnitCode.bitCtx (w+1+Γ.length))
++      ((List.range (wg+2)).map (placeGraph wb wc wg)) (MatrixCode.formula g.matrix))) =
+     (w,MatrixCode.formula (insertedBody (typedLayout z) wb wc wg nξ level _ _ _))
+   rw [he,hb,hc,hh]
+ 

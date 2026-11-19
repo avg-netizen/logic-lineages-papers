@@ -30,7 +30,7 @@ private theorem directBlockExact {Γ : List Ty} (hg : ∀ σ ∈ Γ, σ = .groun
   let z : Variable Ξ .ground := shift w .here
   let hg' := groundWireCtx w DirectCtx directGround
   let hr := groundWireCtx wr (.ground::.ground::Γ) (groundCons (groundCons hg))
-  let plan := route hr z (rayPlacement wr)
+  let plan : Renaming Γr Ξ := route hr z (rayPlacement wr)
   have htab : (List.range (wr+2+Γ.length)).map (rayPlacement wr) =
       RawSourceDAG.Operations.renamingCode plan := by
     rw [← lengthRay (Γ:=Γ) wr]
@@ -68,9 +68,9 @@ private theorem insertBlockExact {Γ : List Ty} (hg : ∀ σ ∈ Γ, σ = .groun
   let hB := groundWireCtx wb (.ground::Γ) (groundCons hg)
   let hC := groundWireCtx wc (.ground::Γ) (groundCons hg)
   let hG := groundWireCtx wg DirectCtx directGround
-  let rB := route hB z (placeB wb wc wg)
-  let rC := route hC z (placeC wb wc wg)
-  let rG := route hG z (placeGraph wb wc wg)
+  let rB : Renaming (WireCtx wb (.ground::Γ)) Ξ := route hB z (placeB wb wc wg)
+  let rC : Renaming (WireCtx wc (.ground::Γ)) Ξ := route hC z (placeC wb wc wg)
+  let rG : Renaming (WireCtx wg DirectCtx) Ξ := route hG z (placeGraph wb wc wg)
   have htabB : (List.range (wb+1+Γ.length)).map (placeB wb wc wg) =
       RawSourceDAG.Operations.renamingCode rB := by
     rw [← lengthWire (Γ:=Γ) wb]
@@ -83,7 +83,9 @@ private theorem insertBlockExact {Γ : List Ty} (hg : ∀ σ ∈ Γ, σ = .groun
     change placeB wb wc wg (variableIndex x)<Ξ.length
     rw [lengthWire]
     unfold placeB w insertedWidth operandEnd
-    split <;> try split <;> omega
+    split
+    · omega
+    · split <;> omega
   have htabC : (List.range (wc+1+Γ.length)).map (placeC wb wc wg) =
       RawSourceDAG.Operations.renamingCode rC := by
     rw [← lengthWire (Γ:=Γ) wc]
@@ -96,7 +98,9 @@ private theorem insertBlockExact {Γ : List Ty} (hg : ∀ σ ∈ Γ, σ = .groun
     change placeC wb wc wg (variableIndex x)<Ξ.length
     rw [lengthWire]
     unfold placeC w insertedWidth operandEnd
-    split <;> try split <;> omega
+    split
+    · omega
+    · split <;> omega
   have htabG : (List.range (wg+2)).map (placeGraph wb wc wg) =
       RawSourceDAG.Operations.renamingCode rG := by
     rw [← lengthDirect wg]
@@ -123,7 +127,13 @@ private theorem insertBlockExact {Γ : List Ty} (hg : ∀ σ ∈ Γ, σ = .groun
       rw [lengthWire]; unfold w insertedWidth; omega)
     (CurrentUnitElimination.renameFormula rB b.matrix)
     (CurrentUnitElimination.renameFormula rC c.matrix) (CurrentUnitElimination.renameFormula rG g.matrix)
-  change (w,insertedBody rawLayout wb wc wg nξ level _ _ _) =
+  change (w,insertedBody rawLayout wb wc wg nξ level
+    (MatrixCode.renameFormula (UnitCode.bitCtx (w+1+Γ.length))
+      ((List.range (wb+1+Γ.length)).map (placeB wb wc wg)) (MatrixCode.formula b.matrix))
+    (MatrixCode.renameFormula (UnitCode.bitCtx (w+1+Γ.length))
+      ((List.range (wc+1+Γ.length)).map (placeC wb wc wg)) (MatrixCode.formula c.matrix))
+    (MatrixCode.renameFormula (UnitCode.bitCtx (w+1+Γ.length))
+      ((List.range (wg+2)).map (placeGraph wb wc wg)) (MatrixCode.formula g.matrix))) =
     (w,MatrixCode.formula (insertedBody (typedLayout z) wb wc wg nξ level _ _ _))
   rw [he,hb,hc,hh]
 

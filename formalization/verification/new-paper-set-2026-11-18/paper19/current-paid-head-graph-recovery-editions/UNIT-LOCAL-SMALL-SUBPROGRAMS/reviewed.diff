@@ -1,0 +1,112 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLocalProgramsProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLocalProgramsProof.lean
+@@ -134,22 +134,56 @@
+ private def activeRIndex (q : ActiveArgs) (i : Nat) : Nat :=
+   if i=q.2.2.2.1 then 1 else i+q.2.2.1.1+2
+ 
+-private theorem activeOffset {h : ActiveArgs→Nat} (hh : Primrec h) :
+-    Primrec (fun q : ActiveArgs×Nat => q.2+h q.1+2) :=
+-  Primrec.nat_add.comp (Primrec.nat_add.comp Primrec.snd (hh.comp Primrec.fst)) (Primrec.const 2)
+-
++/-- Separate tiny Nat arithmetic from the larger compiler input code. -/
++private abbrev IndexArgs := Nat×Nat×Nat
++private def indexArgs (q : ActiveArgs×Nat) : IndexArgs :=
++  (q.1.2.2.1.1,q.1.2.2.2.1,q.2)
++private def leftIndexSmall (p : IndexArgs) : Nat :=
++  if p.2.2<p.1 then p.2.2+2 else if p.2.2=p.1 then 0 else p.2.2+p.2.1+2
++private def rightIndexSmall (p : IndexArgs) : Nat :=
++  if p.2.2=p.2.1 then 1 else p.2.2+p.1+2
++
++private theorem indexArgsProgram : Primrec indexArgs := by
++  have a : Primrec (fun q : ActiveArgs×Nat => q.1.2.2.1.1) := activeLeftWidth.comp Primrec.fst
++  have b : Primrec (fun q : ActiveArgs×Nat => q.1.2.2.2.1) := activeRightWidth.comp Primrec.fst
++  have i : Primrec (fun q : ActiveArgs×Nat => q.2) := Primrec.snd
++  exact a.pair (b.pair i)
++
++private theorem leftIndexSmallProgram : Primrec leftIndexSmall := by
++  have i : Primrec (fun q : IndexArgs => q.2.2) := Primrec.snd.comp Primrec.snd
++  have a : Primrec (fun q : IndexArgs => q.1) := Primrec.fst
++  have b : Primrec (fun q : IndexArgs => q.2.1) := Primrec.fst.comp Primrec.snd
++  have m : Primrec (fun q : IndexArgs => q.2.2+q.2.1+2) :=
++    Primrec.nat_add.comp (Primrec.nat_add.comp i b) (Primrec.const 2)
++  have lo : Primrec (fun q : IndexArgs => q.2.2+2) := Primrec.nat_add.comp i (Primrec.const 2)
++  have tail : Primrec (fun q : IndexArgs => if q.2.2=q.1 then 0 else q.2.2+q.2.1+2) :=
++    Primrec.ite (Primrec.eq.comp i a) (Primrec.const 0) m
++  exact Primrec.ite (Primrec.nat_lt.comp i a) lo tail
++
++private theorem rightIndexSmallProgram : Primrec rightIndexSmall := by
++  have i : Primrec (fun q : IndexArgs => q.2.2) := Primrec.snd.comp Primrec.snd
++  have a : Primrec (fun q : IndexArgs => q.1) := Primrec.fst
++  have b : Primrec (fun q : IndexArgs => q.2.1) := Primrec.fst.comp Primrec.snd
++  have m : Primrec (fun q : IndexArgs => q.2.2+q.1+2) :=
++    Primrec.nat_add.comp (Primrec.nat_add.comp i a) (Primrec.const 2)
++  exact Primrec.ite (Primrec.eq.comp i b) (Primrec.const 1) m
++
++section
++attribute [local irreducible] indexArgs leftIndexSmall rightIndexSmall activeLIndex activeRIndex
+ private theorem activeLIndexProgram : Primrec₂ activeLIndex := by
+-  let P := ActiveArgs×Nat
+-  have i : Primrec (fun q : P => q.2) := Primrec.snd
+-  have a : Primrec (fun q : P => q.1.2.2.1.1) := activeLeftWidth.comp Primrec.fst
+-  exact Primrec.ite (Primrec.nat_lt.comp i a) (Primrec.nat_add.comp i (Primrec.const 2))
+-    (Primrec.ite (Primrec.eq.comp i a) (Primrec.const 0) (activeOffset activeRightWidth))
++  have h : Primrec (fun q : ActiveArgs×Nat => leftIndexSmall (indexArgs q)) :=
++    leftIndexSmallProgram.comp indexArgsProgram
++  exact (h.of_eq (g:=fun q => activeLIndex q.1 q.2) (fun q => by
++    unfold leftIndexSmall indexArgs activeLIndex
++    rfl)).to₂
+ 
+ private theorem activeRIndexProgram : Primrec₂ activeRIndex := by
+-  let P := ActiveArgs×Nat
+-  have i : Primrec (fun q : P => q.2) := Primrec.snd
+-  have b : Primrec (fun q : P => q.1.2.2.2.1) := activeRightWidth.comp Primrec.fst
+-  exact Primrec.ite (Primrec.eq.comp i b) (Primrec.const 1) (activeOffset activeLeftWidth)
++  have h : Primrec (fun q : ActiveArgs×Nat => rightIndexSmall (indexArgs q)) :=
++    rightIndexSmallProgram.comp indexArgsProgram
++  exact (h.of_eq (g:=fun q => activeRIndex q.1 q.2) (fun q => by
++    unfold rightIndexSmall indexArgs activeRIndex
++    rfl)).to₂
++end
+ 
+ private theorem activeRange {h : ActiveArgs→Nat} (hh : Primrec h) :
+     Primrec (fun q => List.range (h q+1+q.1)) :=
+@@ -178,12 +212,34 @@
+ 
+ private def activeRow (q : ActiveArgs) : Nat :=
+   rawRow q.2.1 (MatrixCode.raw 0) (MatrixCode.raw 1) (MatrixCode.raw (activeW q))
++private def activeRowInput (q : ActiveArgs) : LinearCode×Nat := (q.2.1,activeW q)
++private def activeRowSmall (q : LinearCode×Nat) : Nat :=
++  rawRow q.1 (MatrixCode.raw 0) (MatrixCode.raw 1) (MatrixCode.raw q.2)
++private theorem activeRowInputProgram : Primrec activeRowInput := by
++  have row : Primrec (fun q : ActiveArgs => q.2.1) := Primrec.fst.comp Primrec.snd
++  exact row.pair activeWProgram
++
++section
++attribute [local irreducible] rawRow MatrixCode.raw
++private theorem activeRowSmallProgram : Primrec activeRowSmall := by
++  let P := LinearCode×Nat
++  have row : Primrec (fun q : P => q.1) := Primrec.fst
++  have z : Primrec (fun _ : P => MatrixCode.raw 0) := Primrec.const _
++  have o : Primrec (fun _ : P => MatrixCode.raw 1) := Primrec.const _
++  have w : Primrec (fun q : P => MatrixCode.raw q.2) := rawProgram.comp Primrec.snd
++  have args : Primrec (fun q : P => (q.1,MatrixCode.raw 0,MatrixCode.raw 1,MatrixCode.raw q.2)) :=
++    row.pair (z.pair (o.pair w))
++  unfold activeRowSmall
++  exact rowProgram.comp args
++end
++
++section
++attribute [local irreducible] activeRowInput activeRowSmall activeRow
+ private theorem activeRowProgram : Primrec activeRow := by
+-  have row : Primrec (fun q : ActiveArgs => q.2.1) := Primrec.fst.comp Primrec.snd
+-  have z : Primrec (fun _ : ActiveArgs => MatrixCode.raw 0) := Primrec.const _
+-  have o : Primrec (fun _ : ActiveArgs => MatrixCode.raw 1) := Primrec.const _
+-  have w : Primrec (fun q : ActiveArgs => MatrixCode.raw (activeW q)) := rawProgram.comp activeWProgram
+-  exact rowProgram.comp (row.pair (z.pair (o.pair w)))
++  have h : Primrec (fun q : ActiveArgs => activeRowSmall (activeRowInput q)) :=
++    activeRowSmallProgram.comp activeRowInputProgram
++  exact h.of_eq (fun q => by unfold activeRowSmall activeRowInput activeRow; rfl)
++end
+ 
+ private def activeOutput (q : ActiveArgs) : Block :=
+   (activeW q,MatrixCode.both (MatrixCode.both (activeLeft q) (activeRight q)) (activeRow q))

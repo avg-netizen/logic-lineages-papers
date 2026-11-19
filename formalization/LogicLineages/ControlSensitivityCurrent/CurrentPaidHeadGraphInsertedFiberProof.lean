@@ -21,10 +21,14 @@ private theorem frameLimit (wb wc wg : Nat) (Γ : List Ty) :
   refine ⟨?_,?_,?_⟩
   · intro i hi
     unfold placeB insertedWidth operandEnd
-    split <;> try split <;> omega
+    split
+    · omega
+    · split <;> omega
   · intro i hi
     unfold placeC insertedWidth operandEnd
-    split <;> try split <;> omega
+    split
+    · omega
+    · split <;> omega
   · intro i hi
     unfold placeGraph insertedWidth operandEnd
     split <;> omega
@@ -69,12 +73,12 @@ theorem insertedFiber (p : Policy) (f : Nat→Nat) {Γ : List Ty}
     let C := CurrentUnitElimination.renameFormula (route hC z PC) c.matrix
     let G := CurrentUnitElimination.renameFormula (route hG z PG) g.matrix
     have H₁ : i<Ξ.length := by rw [widthOne]; unfold n insertedWidth; omega
-    have H₂ : i+1<Ξ.length := by omega
+    have H₂ : i+1<Ξ.length := by rw [widthOne]; unfold n insertedWidth; omega
     have H₃ : i+2<Ξ.length := by rw [widthOne]; unfold n insertedWidth; omega
     change (insertedBody (typedLayout z) bb cc gg nξ level B C G).eval p f ν=true ↔ _
     have EB := indexedPull hB hΞ z PB ν w H (fun j hj => by rw [widthOne] at hj; exact HL.1 j hj) p f b.matrix
     have EC := indexedPull hC hΞ z PC ν w H (fun j hj => by rw [widthOne] at hj; exact HL.2.1 j hj) p f c.matrix
-    have EG := indexedPull hG hΞ z PG ν w H (fun j hj =>
+    have EG := indexedPull hG hΞ z PG ν w H (fun j hj => by
       have h : j<gg+2 := by simpa only [widthLength,DirectCtx,List.length_cons,List.length_nil] using hj
       exact HL.2.2 j h) p f g.matrix
     simp only [insertedBody,typedLayout,SourceAST.Formula.eval,SourceAST.Term.eval,Bool.and_eq_true,
@@ -82,12 +86,14 @@ theorem insertedFiber (p : Policy) (f : Nat→Nat) {Γ : List Ty}
     tauto
   constructor
   · rintro ⟨ν,hρ,hM⟩
-    let w := fun j => ν (slot z j)
+    let read : Variable Ξ .ground → Nat := ν
+    let w := fun j => read (slot z j)
     refine ⟨w,?_,(e ν w (fun _ _ => rfl)).mp hM⟩
     intro x
-    change ν (slot z (n+variableIndex x)) = _
-    rw [← shiftedIndex n x,slotAt]
-    exact hρ x
+    have H : slot z (n+variableIndex x)=shift n x :=
+      (congrArg (slot z) (shiftedIndex n x)).symm.trans (slotAt z (shift n x))
+    have h : read (shift n x)=resultValues ρ y x := hρ x
+    exact (congrArg read H).trans h
   · rintro ⟨w,hρ,hM⟩
     let ν : Variable Ξ .ground→Nat := byIndex w
     refine ⟨ν,?_,(e ν w (fun _ hj => congrArg w (indexSlot hΞ z hj))).mpr hM⟩

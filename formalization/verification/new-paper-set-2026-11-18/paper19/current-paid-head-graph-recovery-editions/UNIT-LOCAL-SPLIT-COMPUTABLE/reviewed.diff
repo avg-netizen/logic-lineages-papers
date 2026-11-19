@@ -1,0 +1,165 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLocalProgramsProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLocalProgramsProof.lean
+@@ -21,8 +21,8 @@
+   have x : Primrec (fun q : S => q.2.2) := Primrec.snd.comp Primrec.snd
+   have step : Primrec₂ (fun a (q : Nat×Nat) => MatrixCode.add a q.2) :=
+     (addProgram.comp a x).to₂
+-  have rec := Primrec.nat_rec (Primrec.const (lit 0) : Primrec (fun _ : Nat => lit 0)) step
+-  exact rec.comp Primrec.snd Primrec.fst
++  have recurse := Primrec.nat_rec (Primrec.const (lit 0) : Primrec (fun _ : Nat => lit 0)) step
++  exact recurse.comp Primrec.snd Primrec.fst
+ 
+ theorem rowProgram : Primrec (fun q : LinearCode×Nat×Nat×Nat => rawRow q.1 q.2.1 q.2.2.1 q.2.2.2) := by
+   let P := LinearCode×Nat×Nat×Nat
+@@ -71,7 +71,7 @@
+ private theorem groundOutputProgram : Primrec groundOutput := by
+   let P := Code×Nat
+   have v : Primrec (fun q : P => q.1) := Primrec.fst
+-  have d : Primrec (fun q : P => CurrentDecisionEmitter.factorCode q.1) :=
++  have d : Primrec (fun q : P => CurrentDecision.factorCode q.1) :=
+     CurrentDecision.factorCodePrimitive.comp v
+   have l := (binaryNode 2).comp (observeProgram.comp (originalProgram.comp v)) (observeProgram.comp (closedProgram.comp v))
+   have a := addProgram.comp (timesProgram.comp d (Primrec.const (MatrixCode.raw 2)))
+@@ -79,9 +79,17 @@
+   have b := addProgram.comp (litProgram.comp (Primrec.nat_mul.comp d Primrec.snd)) (Primrec.const (MatrixCode.raw 1))
+   exact (Primrec.const 2).pair ((binaryNode 6).comp l ((binaryNode 2).comp a b))
+ 
++section
++attribute [local irreducible] groundOutput CurrentAbsolute.anchor groundBlock
+ theorem groundBlockProgram (p : Policy) (hp : PolicyShape.Effective p) (f : Nat→Nat)
+-    (hc : Computable f) (hf : FullAddition.Targets.SourceGrowth f) : Computable (groundBlock p f) :=
+-  groundOutputProgram.to_comp.comp (Computable.id.pair (CurrentAbsolute.anchorEffective p hp f hc hf))
++    (hc : Computable f) (hf : FullAddition.Targets.SourceGrowth f) : Computable (groundBlock p f) := by
++  have C : Computable (CurrentAbsolute.anchor p f) := CurrentAbsolute.anchorEffective p hp f hc hf
++  have pack : Computable (fun d : Code => (d,CurrentAbsolute.anchor p f d)) :=
++    (Computable.id : Computable (id : Code→Code)).pair C
++  have H : Computable (fun d : Code => groundOutput (d,CurrentAbsolute.anchor p f d)) :=
++    groundOutputProgram.to_comp.comp pack
++  exact H.of_eq (fun d => by unfold groundOutput groundBlock; rfl)
++end
+ 
+ private theorem renamePart {P : Type} [Primcodable P] {g t : P→List Nat} {n : P→Nat}
+     (hg : Primrec g) (ht : Primrec t) (hn : Primrec n) :
+@@ -105,31 +113,96 @@
+     ((Primrec.const (lit 0)).pair (rawProgram.comp w'))))
+   exact w'.to_comp.pair ((binaryNode 6).to_comp.comp a r.to_comp)
+ 
+-theorem activeBlockProgram : Computable (fun q : Nat×LinearCode×Block×Block => activeBlock q.1 q.2.1 q.2.2.1 q.2.2.2) := by
+-  let P := Nat×LinearCode×Block×Block
+-  have g : Primrec (fun q : P => q.1) := Primrec.fst
+-  have row : Primrec (fun q : P => q.2.1) := Primrec.fst.comp Primrec.snd
+-  have l : Primrec (fun q : P => q.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
+-  have r : Primrec (fun q : P => q.2.2.2) := Primrec.snd.comp (Primrec.snd.comp Primrec.snd)
+-  have a := Primrec.fst.comp l
+-  have b := Primrec.fst.comp r
+-  have w := Primrec.nat_add.comp (Primrec.nat_add.comp a b) (Primrec.const 2)
+-  have ctx := replicateZero.comp (Primrec.nat_add.comp (Primrec.succ.comp w) g)
+-  have plus2 (h : P → Nat) (hh : Primrec h) : Primrec (fun q : P×Nat => q.2+h q.1+2) :=
+-    Primrec.nat_add.comp (Primrec.nat_add.comp Primrec.snd (hh.comp Primrec.fst)) (Primrec.const 2)
+-  have lindex : Primrec (fun q : P×Nat => if q.2<q.1.2.2.1.1 then q.2+2
+-      else if q.2=q.1.2.2.1.1 then 0 else q.2+q.1.2.2.2.1+2) :=
+-    Primrec.ite (Primrec.nat_lt.comp Primrec.snd (a.comp Primrec.fst))
+-      (Primrec.nat_add.comp Primrec.snd (Primrec.const 2))
+-      (Primrec.ite (Primrec.eq.comp Primrec.snd (a.comp Primrec.fst)) (Primrec.const 0) (plus2 _ b))
+-  have rindex : Primrec (fun q : P×Nat => if q.2=q.1.2.2.2.1 then 1 else q.2+q.1.2.2.1.1+2) :=
+-    Primrec.ite (Primrec.eq.comp Primrec.snd (b.comp Primrec.fst)) (Primrec.const 1) (plus2 _ a)
+-  have table {n : P→Nat} (h : Primrec n) :=
+-    Primrec.list_range.comp (Primrec.nat_add.comp (Primrec.succ.comp h) g)
+-  have left := renamePart ctx (Primrec.list_map (table a) lindex.to₂) (Primrec.snd.comp l)
+-  have right := renamePart ctx (Primrec.list_map (table b) rindex.to₂) (Primrec.snd.comp r)
+-  have endRow := rowProgram.comp (row.pair ((Primrec.const (MatrixCode.raw 0)).pair
+-    ((Primrec.const (MatrixCode.raw 1)).pair (rawProgram.comp w))))
+-  exact w.to_comp.pair ((binaryNode 6).to_comp.comp ((binaryNode 6).to_comp.comp left right) endRow.to_comp)
++/-- Exact active frame components are checked independently so the final
++packing proof need not unfold the recursive renamer to infer any type. -/
++private abbrev ActiveArgs := Nat×LinearCode×Block×Block
++
++private def activeW (q : ActiveArgs) := q.2.2.1.1+q.2.2.2.1+2
++private theorem activeLeftWidth : Primrec (fun q : ActiveArgs => q.2.2.1.1) :=
++  Primrec.fst.comp (Primrec.fst.comp (Primrec.snd.comp Primrec.snd))
++private theorem activeRightWidth : Primrec (fun q : ActiveArgs => q.2.2.2.1) :=
++  Primrec.fst.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
++private theorem activeWProgram : Primrec activeW :=
++  Primrec.nat_add.comp (Primrec.nat_add.comp activeLeftWidth activeRightWidth) (Primrec.const 2)
++
++private def activeCtx (q : ActiveArgs) := bitCtx (activeW q+1+q.1)
++private theorem activeCtxProgram : Primrec activeCtx :=
++  replicateZero.comp (Primrec.nat_add.comp (Primrec.succ.comp activeWProgram) Primrec.fst)
++
++private def activeLIndex (q : ActiveArgs) (i : Nat) : Nat :=
++  if i<q.2.2.1.1 then i+2 else if i=q.2.2.1.1 then 0 else i+q.2.2.2.1+2
++private def activeRIndex (q : ActiveArgs) (i : Nat) : Nat :=
++  if i=q.2.2.2.1 then 1 else i+q.2.2.1.1+2
++
++private theorem activeOffset {h : ActiveArgs→Nat} (hh : Primrec h) :
++    Primrec (fun q : ActiveArgs×Nat => q.2+h q.1+2) :=
++  Primrec.nat_add.comp (Primrec.nat_add.comp Primrec.snd (hh.comp Primrec.fst)) (Primrec.const 2)
++
++private theorem activeLIndexProgram : Primrec₂ activeLIndex := by
++  let P := ActiveArgs×Nat
++  have i : Primrec (fun q : P => q.2) := Primrec.snd
++  have a : Primrec (fun q : P => q.1.2.2.1.1) := activeLeftWidth.comp Primrec.fst
++  exact Primrec.ite (Primrec.nat_lt.comp i a) (Primrec.nat_add.comp i (Primrec.const 2))
++    (Primrec.ite (Primrec.eq.comp i a) (Primrec.const 0) (activeOffset activeRightWidth))
++
++private theorem activeRIndexProgram : Primrec₂ activeRIndex := by
++  let P := ActiveArgs×Nat
++  have i : Primrec (fun q : P => q.2) := Primrec.snd
++  have b : Primrec (fun q : P => q.1.2.2.2.1) := activeRightWidth.comp Primrec.fst
++  exact Primrec.ite (Primrec.eq.comp i b) (Primrec.const 1) (activeOffset activeLeftWidth)
++
++private theorem activeRange {h : ActiveArgs→Nat} (hh : Primrec h) :
++    Primrec (fun q => List.range (h q+1+q.1)) :=
++  Primrec.list_range.comp (Primrec.nat_add.comp (Primrec.succ.comp hh) Primrec.fst)
++
++private def activeLeft (q : ActiveArgs) : Nat :=
++  MatrixCode.renameFormula (activeCtx q)
++    ((List.range (q.2.2.1.1+1+q.1)).map (activeLIndex q)) q.2.2.1.2
++private def activeRight (q : ActiveArgs) : Nat :=
++  MatrixCode.renameFormula (activeCtx q)
++    ((List.range (q.2.2.2.1+1+q.1)).map (activeRIndex q)) q.2.2.2.2
++
++private theorem activeLeftProgram : Computable activeLeft := by
++  have src : Primrec (fun q : ActiveArgs => q.2.2.1.2) :=
++    Primrec.snd.comp (Primrec.fst.comp (Primrec.snd.comp Primrec.snd))
++  have table : Primrec (fun q : ActiveArgs => (List.range (q.2.2.1.1+1+q.1)).map (activeLIndex q)) :=
++    Primrec.list_map (activeRange activeLeftWidth) activeLIndexProgram
++  exact renamePart activeCtxProgram table src
++
++private theorem activeRightProgram : Computable activeRight := by
++  have src : Primrec (fun q : ActiveArgs => q.2.2.2.2) :=
++    Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
++  have table : Primrec (fun q : ActiveArgs => (List.range (q.2.2.2.1+1+q.1)).map (activeRIndex q)) :=
++    Primrec.list_map (activeRange activeRightWidth) activeRIndexProgram
++  exact renamePart activeCtxProgram table src
++
++private def activeRow (q : ActiveArgs) : Nat :=
++  rawRow q.2.1 (MatrixCode.raw 0) (MatrixCode.raw 1) (MatrixCode.raw (activeW q))
++private theorem activeRowProgram : Primrec activeRow := by
++  have row : Primrec (fun q : ActiveArgs => q.2.1) := Primrec.fst.comp Primrec.snd
++  have z : Primrec (fun _ : ActiveArgs => MatrixCode.raw 0) := Primrec.const _
++  have o : Primrec (fun _ : ActiveArgs => MatrixCode.raw 1) := Primrec.const _
++  have w : Primrec (fun q : ActiveArgs => MatrixCode.raw (activeW q)) := rawProgram.comp activeWProgram
++  exact rowProgram.comp (row.pair (z.pair (o.pair w)))
++
++private def activeOutput (q : ActiveArgs) : Block :=
++  (activeW q,MatrixCode.both (MatrixCode.both (activeLeft q) (activeRight q)) (activeRow q))
++
++section
++attribute [local irreducible] activeLeft activeRight activeRow activeW activeOutput
++private theorem activeOutputProgram : Computable activeOutput := by
++  have inner : Computable (fun q : ActiveArgs => MatrixCode.both (activeLeft q) (activeRight q)) :=
++    (binaryNode 6).to_comp.comp activeLeftProgram activeRightProgram
++  have outer : Computable (fun q : ActiveArgs =>
++      MatrixCode.both (MatrixCode.both (activeLeft q) (activeRight q)) (activeRow q)) :=
++    (binaryNode 6).to_comp.comp inner activeRowProgram.to_comp
++  unfold activeOutput
++  exact activeWProgram.to_comp.pair outer
++
++theorem activeBlockProgram : Computable (fun q : Nat×LinearCode×Block×Block => activeBlock q.1 q.2.1 q.2.2.1 q.2.2.2) :=
++  activeOutputProgram.of_eq (fun q => by
++    unfold activeOutput activeLeft activeRight activeCtx activeLIndex activeRIndex activeRow activeW activeBlock
++    rfl)
++end
+ 
+ end LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph.UnitCode
