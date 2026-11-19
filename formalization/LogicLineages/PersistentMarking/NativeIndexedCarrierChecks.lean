@@ -3,7 +3,7 @@ import LogicLineages.PersistentMarking.NativeIndexedContextThinProof
 import LogicLineages.PersistentMarking.NativeCarrierThinChecks
 
 namespace LogicLineages.PersistentMarking.NativeIndexedCarrierChecks
-open Spine NativeCarrierTargets NativeIndexedCarrierTargets NativeIndexedTypingProof
+open Spine NativeCarrierTargets NativeIndexedCarrierTargets NativeIndexedTypingThinProof
 
 theorem exact_IndexedCarrier : IndexedCarrier := by
   intro S A P U i hP hU hi

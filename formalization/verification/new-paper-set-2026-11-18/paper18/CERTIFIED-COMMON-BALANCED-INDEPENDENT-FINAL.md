@@ -1,0 +1,11 @@
+# Independent final: current certified comparison theorems
+
+Read current source grammar, both complete current target bundles, all imported contract definitions, complete new proof/audit leaves, actual first-order semantic/variable proofs and balanced certificate representation. Both original domains are retained: common arbitrary finite genuine nonzero-limit head lists below epsilon-zero, including empty sums; balanced one shared preceding certificate for whole-pair ordered basis (duplicates/dependence allowed), positive coefficients in each head argument and actual-support positivity. Neither is arbitrary uncertified comparison.
+
+The common theorem covers all three pointwise signs at the original valuation and exact original free-name membership, with computable literal output and arbitrary Nat/positive Boolean/quantifier closure. Balanced covers the same three signs on its certified positive domain, exact names, and arbitrary positive quantifier closure. Same-certificate affine/canceled descent is a separately audited supporting result, not a substituted endpoint. Source zero-outside support conventions and both original operands remain fixed.
+
+Complete new proofs compose actual numeric translators with packet405 concrete arithmetic answer, deriving translated closure from exact original variable membership. Balanced closes only free-name positivity, retaining actual positive guards and raw-name shadowing under binders. No presumed solver, historical aggregate acceptance, arbitrary expanded-language elimination, or malformed-code semantic claim is used.
+
+Independent fresh read-only verification of current native source/object closures, compiler fingerprint, input keys, receipt/profile and logs: Common975 modules/four exact audited aliases; Balanced1017/five. Zero errors and standard-only axioms. Original33/40 pins independently checked unchanged. Shared successful native receipt1795070542517546255-2 was reaped; original mathlib caps unchanged. Separate independent evidence JSON files record the complete checks.
+
+Accept current numbered m:thm:common and m:thm:balanced. Current Paper18 inventory now has50/50 numbered statements checked. This inventory milestone is not a full-root build/CI, unrestricted comparison theorem beyond paper scopes, or complete II5 collection proof.

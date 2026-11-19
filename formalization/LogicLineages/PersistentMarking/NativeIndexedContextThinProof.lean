@@ -1,10 +1,10 @@
-import LogicLineages.PersistentMarking.NativeIndexedTypingProof
+import LogicLineages.PersistentMarking.NativeIndexedTypingThinProof
 import LogicLineages.PersistentMarking.StructuralContextProof
 import LogicLineages.PersistentMarking.TypeSupportConfinementProof
 
 namespace LogicLineages.PersistentMarking.NativeIndexedContextThinProof
 open Spine NativeReduction NativeCarrierTargets NativeIndexedCarrierTargets
-open NativeIndexedTypingProof StructuralContext
+open NativeIndexedTypingThinProof StructuralContext
 
 def eraseContext : SemanticType → Context
   | .base => .hole

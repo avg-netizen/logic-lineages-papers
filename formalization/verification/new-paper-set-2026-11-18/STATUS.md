@@ -1,10 +1,18 @@
 # Current comparison formalization status
 
-New-paper register: **129 checked, 38 pending / 167**. Historical register:
+New-paper register: **132 checked, 35 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper16 `lem:indexed-carrier`: all three literal original carrier
+  comparisons (packet411); supporting completeness only in412.
+
+- Paper18 `m:thm:common` and `m:thm:balanced`: complete original certified
+  pointwise/quantified comparisons (packets409–410), independently verified
+  975/1017-module gates. Paper18 numbered inventory is now50/50 checked;
+  this does not imply a full-root build or full II5 collection completion.
 
 - Paper16 `thm:rpo` and `lem:carrier`: exact ranked multiset restriction
   (including ground variables) and literal native carrier, fresh cloud core

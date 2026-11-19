@@ -407,3 +407,60 @@ and translates the existing canonical-port derivations into fixed-point bits.
   strict context and support-confinement separately. The complete closure
   is 130 modules and excludes both old resource-stopped roots. No indexed
   gate or downstream adequacy cutover was performed in this ticket.
+
+## 2026-11-19 — indexed owner-draft issue and append-only adequacy proposal
+
+- INDEXED-CORE-0650 verified all 11 frozen target pins, then stopped at the
+  first ordinal/native-index proof leaf `NativeIndexedTypingProof`, owner
+  draft line 16. Compiler reports ambiguous/invalid simp theorem
+  `discard`; actual residual goal names `NativeIndexedCarrierTargets.discard`.
+  Receipt `1795070475944631327-6`, 45 passing rows then ordinary exit 1,
+  no RSS failure. Process reaped and locks released. Source, receipt,
+  compiler error and the attempted leaf drafts preserved under
+  paper16/failed/lane-a-indexed-typing-1795070475944631327-6/.
+- Proposed new `NativeIndexedTypingThinProof` clone qualifies only the
+  literal constant in that simp step and uses its own namespace; three
+  new successor imports/opennames are redirected. Owner proof remains
+  byte-identical, and all eleven old frozen pins still match.
+  Exact diff at paper16/recovery-nov19/INDEXED-CARRIER-TYPING-REPAIR-PROPOSED.diff.
+  Await independent scope review and fresh exact ticket.
+- The authorized nine-module append-only thin adequacy proposal is drafted.
+  Original proof bytes and all three original exact comparator freezes
+  are unchanged. Numbered exact candidates are
+  `ProtectedSpineAdequacyThinChecks.exact_ExactObservation` and
+  `ProtectedSpineDecisionThinProof.exact_Decidability`; separate supporting
+  `ProtectedSpineCompletenessThinChecks.exact_CompleteObservation`.
+  All three new closures exclude stopped old StrictMark and all replaced
+  old dependent modules. The full source diff and per-module validation
+  table are in paper16/recovery-nov19/ADEQUACY-THIN-CUTOVER-PROPOSED.*.
+  Independent design reviewed by coordinator. No adequacy candidate
+  compiled yet; separate serialized ticket required.
+
+## 2026-11-19 — exact indexed carrier, cloud pass
+
+- INDEXED-REPAIR-0650 checked the 11 original frozen pins, then completed
+  receipt `1795070967512172190-6`: all 130 modules, exact
+  `NativeIndexedCarrierChecks.exact_IndexedCarrier`, root peak 498908 KiB,
+  standard axioms propext, Classical.choice, Quot.sound. All native work
+  reaped and shared locks released.
+- New evidence paper16/recovery-nov19/LANE-A-INDEXED-CARRIER-CLOUD-EVIDENCE.json,
+  SHA `a28d6eccb0da406c76bf8f15780bf8516672a85ae67f86b2c4c4e9270b404475`,
+  recursively reconciles exact artifacts and 40 distinct source pins
+  including the original indexed, native carrier, and foundations.
+  READY-FOR-ROOT-REVIEW. No change to owner/frozen source, original
+  proof or failed gate archives; no lane status/register promotion.
+
+## 2026-11-19 — append-only exact completeness passes
+
+- COMPLETENESS-THIN-0651 checked 58 original pins and the original/new
+  dependency-cutover fingerprints, then completed receipt
+  `1795071024443677354-6`, 304 passing modules. Exact original
+  `CompleteObservation` through `ProtectedSpineCompletenessThinChecks`
+  and exact original thin `MarkingFields` have only standard axioms
+  propext, Classical.choice and Quot.sound. Root RSS 517016 KiB under
+  unchanged profile; all native work reaped and locks released.
+- Cloud evidence paper16/recovery-nov19/LANE-A-COMPLETENESS-THIN-CLOUD-EVIDENCE.json
+  is READY-FOR-ROOT-REVIEW as the supporting direction only. No number
+  promoted by the lane. Original owner exact files/frozen target are
+  untouched; cloud adequacy reverse direction still awaits a separate
+  ticket and completed full gate.

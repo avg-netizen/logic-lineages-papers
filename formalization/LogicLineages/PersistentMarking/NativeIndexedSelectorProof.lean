@@ -1,8 +1,8 @@
-import LogicLineages.PersistentMarking.NativeIndexedTypingProof
+import LogicLineages.PersistentMarking.NativeIndexedTypingThinProof
 
 namespace LogicLineages.PersistentMarking.NativeIndexedSelectorProof
 open Spine NativeReduction NativeTypingProof NativeCarrierTargets
-open NativeIndexedCarrierTargets NativeIndexedTypingProof
+open NativeIndexedCarrierTargets NativeIndexedTypingThinProof
 
 private def outerBase (A : SemanticType) (P i : Expr) : Args :=
   let η := Ty.arrow (actualType A) (actualType A)

@@ -1,0 +1,91 @@
+{
+  "status": "native exact gate and author evidence passed; awaits independent final review and numbered adoption",
+  "queue_ticket": "COMMON-BALANCED-FINAL-0644",
+  "exit_code": 0,
+  "native_session_reaped": true,
+  "receipt": "build-reports/1795070542517546255-2.json",
+  "receipt_sha256": "2c1816b61033c1e18d832e86b7f13956daf483e3c6a0d01e2e25dd10f97a33d2",
+  "profile": {
+    "requested": [
+      "LogicLineages.StandardControlCurrent.CertifiedCommonStatementChecks",
+      "LogicLineages.StandardControlCurrent.CertifiedBalancedStatementChecks"
+    ],
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "core_only_profile": false,
+    "single_thread": true,
+    "threads": 1,
+    "upstream_cache_only": true,
+    "calculator_objects_borrowed": true
+  },
+  "evidence": "verification/new-paper-set-2026-11-18/paper18/CERTIFIED-BALANCED-EVIDENCE.json",
+  "evidence_sha256": "fb0b0b3a718fa0a4122153b13fafdc76bf0feef10d1c7a2630d4cf8f0a3883a1",
+  "combined_native_closure_count": 1059,
+  "combined_native_compiles": 189,
+  "this_gate_native_closure_count": 1017,
+  "this_gate_native_compiles_in_combined_invocation": 150,
+  "this_gate_cache_hits": 867,
+  "frozen_pin_count": 40,
+  "named_aliases": {
+    "LogicLineages.StandardControlCurrent.CertifiedBalancedStatementChecks.lowerCertificateClosure": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.StandardControlCurrent.CertifiedBalancedStatementChecks.exactPointwise": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.StandardControlCurrent.CertifiedBalancedStatementChecks.fullBalancedComparison": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.StandardControlCurrent.CertifiedBalancedStatementChecks.exactTranslation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.StandardControlCurrent.CertifiedBalancedStatementChecks.actualClosedAnswer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "current_concrete_arithmetic_gate_present": "LogicLineages.StandardControlCurrent.SnyatkovDecisionStatementChecks",
+  "historical_aggregate_consumer_and_stale_scaffolds_absent": true,
+  "new_native_alias_and_proof_rows": {
+    "LogicLineages.StandardControlCurrent.CertifiedBalancedProof": {
+      "module": "LogicLineages.StandardControlCurrent.CertifiedBalancedProof",
+      "returncode": 0,
+      "seconds": 2.551,
+      "observed_cpu_seconds": 2.35,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 1462740,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "50a83ebf19af0d41b3c5ab0cf698096be82472c3e9bc2f33633bbf36361edb01",
+      "log": "build-reports/1795070542517546255-2-LogicLineages-StandardControlCurrent-CertifiedBalancedProof.log"
+    },
+    "LogicLineages.StandardControlCurrent.CertifiedBalancedStatementChecks": {
+      "module": "LogicLineages.StandardControlCurrent.CertifiedBalancedStatementChecks",
+      "returncode": 0,
+      "seconds": 2.687,
+      "observed_cpu_seconds": 2.61,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 1478996,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "b887b0ac355368b084ac51814f6c67f895f29aa0f59d97d99b5345063b2f6bcd",
+      "log": "build-reports/1795070542517546255-2-LogicLineages-StandardControlCurrent-CertifiedBalancedStatementChecks.log"
+    }
+  },
+  "full_root_build": false,
+  "remote_ci_claim": false
+}
