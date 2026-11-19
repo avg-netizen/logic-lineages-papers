@@ -1,0 +1,18 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountProgramsProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountProgramsProof.lean
+@@ -140,15 +140,6 @@
+     · have ht : s.2%4=0 ∨ s.2%4=1 ∨ s.2%4=2 ∨ s.2%4=3 := by omega
+       rcases ht with h|h|h|h <;>
+         simp [assemble,children,base,addResult,collapseResult,collapseMap,hf,h]
+-      cases hv : UnitHeadCode.classify (SourceAnnotationCode.operatorHead (s.2/4).unpair.1) with
+-      | none => rfl
+-      | some val =>
+-        cases ht : CurrentGroundAccount.accountCode p s.1 (s.2/4).unpair.2 with
+-        | none => rfl
+-        | some t =>
+-          rcases val with ⟨normal,finite,n⟩
+-          rcases t with ⟨xs,c⟩
+-          cases finite <;> rfl
+ 
+ 
+ theorem sourceProgram (p : Policy) (hp : PolicyShape.Effective p) :

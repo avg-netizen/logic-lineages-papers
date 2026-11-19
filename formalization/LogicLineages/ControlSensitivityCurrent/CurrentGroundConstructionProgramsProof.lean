@@ -38,7 +38,7 @@ private theorem callerVectorProgram (pol : Policy) (hp : PolicyShape.Effective p
   simp [Option.map_eq_bind]
 
 theorem callerProgram (pol : Policy) (hp : PolicyShape.Effective pol) :
-    Computable (fun z : P => callerCode pol z.1 z.2.1 z.2.2) := by
+    Computable (fun z : List Nat × Nat × Nat => callerCode pol z.1 z.2.1 z.2.2) := by
   have ha : Computable (fun q : P => (TrackedSourceInspectionCode.arityCode q.2.1).bind (fun r =>
       if r=0 then none else
         let sat := NumericCarrierData.saturateSource (r-1) q.2.2
@@ -59,7 +59,7 @@ theorem callerProgram (pol : Policy) (hp : PolicyShape.Effective pol) :
   simp [callerCode]
 
 theorem chainProgram (pol : Policy) (hp : PolicyShape.Effective pol) :
-    Computable (fun z : S => chainCode pol z.1 z.2) := by
+    Computable (fun z : List Nat × List RawOperator => chainCode pol z.1 z.2) := by
   have hn := NumericUnaryChain.Proof.primitiveRecursiveAlgorithms
   have hctx : Primrec (fun z : S => NumericUnaryChain.contextCode z.1 z.2) := hn.1
   have hterms : Primrec (fun z : S => (NumericUnaryChain.mergeData z.2).2.map Prod.fst) :=
@@ -103,22 +103,67 @@ private theorem finishProgram (pol : Policy) (hp : PolicyShape.Effective pol) : 
   intro q
   simp [finish,Option.map_eq_bind]
 
-theorem compilerProgram (pol : Policy) (hp : PolicyShape.Effective pol) :
-    Computable (fun q : A => compileCode pol q.1 q.2.1 q.2.2.1 q.2.2.2) := by
+attribute [local irreducible] CurrentGroundAccount.sourceCode CurrentGroundBudget.budgetCode
+  callerCode chainCode compileCode finish
+
+/-- Proof-only extensional presentation of the same two actual raw binds. -/
+private def prepareCompiler (pol : Policy) (q : A) : Option O := do
+  let d ← CurrentGroundAccount.sourceCode pol (q.2.1::q.1) q.2.2.1
+  let n ← CurrentGroundBudget.budgetCode pol (q.2.1::q.1) q.2.2.1
+  finish pol (q,d,n)
+
+private theorem preparedCompilerProgram (pol : Policy) (hp : PolicyShape.Effective pol) :
+    Computable (prepareCompiler pol) := by
   have hΓ : Primrec (fun q : A => q.2.1::q.1) :=
     Primrec.list_cons.comp (Primrec.fst.comp Primrec.snd) Primrec.fst
   have hP : Primrec (fun q : A => q.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
-  have hc := SyntaxCode.StatementChecks.checkPrimitiveRecursive.comp (hΓ.pair hP)
-  have hocc := TrackedSourceInspectionCode.Proof.primitiveRecursiveAlgorithms.1.comp (Primrec.const 0) hP
-  have hs := (CurrentGroundAccountPrograms.sourceProgram pol hp).comp (hΓ.pair hP).to_comp
-  have hb := (CurrentGroundBudget.budgetEffective pol hp).comp (hΓ.pair hP).to_comp
-  have h := chooseProgram (Primrec.eq.comp hc (Primrec.const (some 0)))
-    (chooseProgram (Primrec.eq.comp hocc (Primrec.const true))
-      (PolicyPartialMergePrograms.bindTwo hs hb (finishProgram pol hp)) (Computable.const none))
+  have harg : Primrec (fun q : A => (q.2.1::q.1,q.2.2.1)) := hΓ.pair hP
+  have hs : Computable (fun q : A => CurrentGroundAccount.sourceCode pol (q.2.1::q.1) q.2.2.1) :=
+    Computable.comp (f := fun q : List Nat × Nat => CurrentGroundAccount.sourceCode pol q.1 q.2)
+      (g := fun q : A => (q.2.1::q.1,q.2.2.1))
+      (CurrentGroundAccountPrograms.sourceProgram pol hp) harg.to_comp
+  have hb : Computable (fun q : A => CurrentGroundBudget.budgetCode pol (q.2.1::q.1) q.2.2.1) :=
+    Computable.comp (f := fun q : List Nat × Nat => CurrentGroundBudget.budgetCode pol q.1 q.2)
+      (g := fun q : A => (q.2.1::q.1,q.2.2.1))
+      (CurrentGroundBudget.budgetEffective pol hp) harg.to_comp
+  unfold prepareCompiler
+  exact PolicyPartialMergePrograms.bindTwo hs hb (finishProgram pol hp)
+
+private def guardedCompiler (pol : Policy) (q : A) : Option O :=
+  if SyntaxCode.check (q.2.1::q.1) q.2.2.1 = some 0 then
+    if TrackedSourceInspectionCode.occursCode 0 q.2.2.1 = true then prepareCompiler pol q else none
+  else none
+
+private theorem guardedCompilerProgram (pol : Policy) (hp : PolicyShape.Effective pol) :
+    Computable (guardedCompiler pol) := by
+  have hΓ : Primrec (fun q : A => q.2.1::q.1) :=
+    Primrec.list_cons.comp (Primrec.fst.comp Primrec.snd) Primrec.fst
+  have hP : Primrec (fun q : A => q.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
+  have hc : Primrec (fun q : A => SyntaxCode.check (q.2.1::q.1) q.2.2.1) :=
+    SyntaxCode.StatementChecks.checkPrimitiveRecursive.comp (hΓ.pair hP)
+  have ho : Primrec (fun q : A => TrackedSourceInspectionCode.occursCode 0 q.2.2.1) :=
+    TrackedSourceInspectionCode.Proof.primitiveRecursiveAlgorithms.1.comp (Primrec.const 0) hP
+  unfold guardedCompiler
+  exact chooseProgram (Primrec.eq.comp hc (Primrec.const (some 0)))
+    (chooseProgram (Primrec.eq.comp ho (Primrec.const true))
+      (preparedCompilerProgram pol hp) (Computable.const none))
     (Computable.const none)
-  apply h.of_eq
-  intro q
-  simp [compileCode,finish]
+
+private theorem guardedCompiler_eq (pol : Policy) (q : A) :
+    guardedCompiler pol q = compileCode pol q.1 q.2.1 q.2.2.1 q.2.2.2 := by
+  by_cases hc : SyntaxCode.check (q.2.1::q.1) q.2.2.1 = some 0
+  · by_cases ho : TrackedSourceInspectionCode.occursCode 0 q.2.2.1 = true
+    · cases h : CurrentGroundAccount.sourceCode pol (q.2.1::q.1) q.2.2.1 with
+      | none => simp [guardedCompiler,prepareCompiler,compileCode,hc,ho,h]
+      | some d =>
+        rcases d with ⟨u,xs,c⟩
+        simp [guardedCompiler,prepareCompiler,compileCode,finish,hc,ho,h]
+    · simp [guardedCompiler,compileCode,hc,ho]
+  · simp [guardedCompiler,compileCode,hc]
+
+theorem compilerProgram (pol : Policy) (hp : PolicyShape.Effective pol) :
+    Computable (fun q : List Nat × Nat × Nat × Nat => compileCode pol q.1 q.2.1 q.2.2.1 q.2.2.2) :=
+  (guardedCompilerProgram pol hp).of_eq (guardedCompiler_eq pol)
 
 theorem algorithmsEffective : CurrentGroundConstructionTargets.AlgorithmsEffective := by
   intro p hp

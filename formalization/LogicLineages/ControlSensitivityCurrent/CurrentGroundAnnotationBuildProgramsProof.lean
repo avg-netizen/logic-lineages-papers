@@ -43,7 +43,7 @@ private theorem lambdaProgram (p : Policy) (hp : PolicyShape.Effective p) :
   have hv : Primrec (fun z : Q => z.2.1) := Primrec.fst.comp Primrec.snd
   have hfactor := Primrec.nat_mul.comp (Primrec.const 2)
     (sum_prim.comp (Primrec.list_map hv (OrdinalSyntax.ordinalSyntaxHeadOperationsPrimitiveRecursive.2.2.comp Primrec.snd).to₂))
-  have hpart := (partial p hp).comp ((Primrec.succ.comp Primrec.fst).pair hb).to_comp
+  have hpart := (groundPartialProgram p hp).comp ((Primrec.succ.comp Primrec.fst).pair hb).to_comp
   have hrepeat : Computable (fun z : Q × Nat => CurrentGroundAnnotationCode.repeatCode p
       (2*((z.1.2.1.map OrdinalSyntax.partialSize).sum)) z.2) :=
     (repeated p hp).comp (((hfactor.comp Primrec.fst).pair Primrec.snd).to_comp)
@@ -158,7 +158,7 @@ private theorem prepare_program (pol : Policy) (he : PolicyShape.Effective pol) 
         ((Primrec.snd.comp Primrec.fst).pair Primrec.snd))).to_comp).to₂
 
 theorem buildProgram (pol : Policy) (he : PolicyShape.Effective pol) :
-    Computable (fun s : S => CurrentGroundAnnotationCode.buildCode pol s.1 s.2.1 s.2.2) := by
+    Computable (fun s : List Nat × Nat × Nat => CurrentGroundAnnotationCode.buildCode pol s.1 s.2.1 s.2.2) := by
   let children : S → List S := fun s =>
     if s.2.2%8=5 then [(s.1,s.2.1,(s.2.2/8).unpair.1),(s.1,s.2.1,(s.2.2/8).unpair.2)]
     else if s.2.2%8=6 then [(0::s.1,s.2.1+1,(s.2.2/8).unpair.2)] else []
@@ -202,6 +202,6 @@ theorem buildProgram (pol : Policy) (he : PolicyShape.Effective pol) :
 
 theorem algorithmsEffective : CurrentGroundAnnotationTargets.AlgorithmsEffective := by
   intro p hp
-  exact ⟨macro p hp,partial p hp,buildProgram p hp⟩
+  exact ⟨markerProgram p hp,groundPartialProgram p hp,buildProgram p hp⟩
 
 end LogicLineages.ControlSensitivityCurrent.CurrentGroundAnnotationPrograms

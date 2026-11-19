@@ -10,8 +10,11 @@ namespace LogicLineages.ControlSensitivityCurrent.CurrentGroundAnnotationProgram
 open LogicLineages.OrdinalComparison.Source
 open LogicLineages.StandardControlCurrent
 open AdmissibleSum SourceAnnotationCode
+attribute [local irreducible] Nat.sqrt Nat.unpair CurrentGroundAnnotationCode.macroCode
+  OrdinalSyntax.headFree SourceAnnotationCode.eraseCode
+  SourceAnnotationCode.closeCode SourceAnnotationCode.closeOperatorCode
 
-theorem partial (p : Policy) (hp : PolicyShape.Effective p) :
+theorem groundPartialProgram (p : Policy) (hp : PolicyShape.Effective p) :
     Computable (fun s : Nat × Nat => CurrentGroundAnnotationCode.groundPartialCode p s.1 s.2) := by
   let S := Nat × Nat
   let A := S × List (Option Nat)
@@ -37,7 +40,7 @@ theorem partial (p : Policy) (hp : PolicyShape.Effective p) :
       Primrec.list_cons.comp (Primrec.fst.comp Primrec.snd)
         (Primrec.list_cons.comp (Primrec.snd.comp Primrec.snd) (Primrec.const [4]))
     exact PolicyPartialMergePrograms.bindTwo Computable.fst Computable.snd
-      ((macro p hp).comp ((Computable.const (PolicyShape.siteCode .activeAdd)).pair
+      ((markerProgram p hp).comp ((Computable.const (PolicyShape.siteCode .activeAdd)).pair
         ((Computable.const 2).pair hl.to_comp)))
   have hclose := SourceAnnotationCode.Proof.primitiveRecursiveAlgorithms.2.2.1
   have hlam : Primrec₂ collapseAsm := Primrec.option_map Primrec.snd
@@ -67,10 +70,18 @@ theorem partial (p : Policy) (hp : PolicyShape.Effective p) :
   have hasm : Computable (fun z : A => assemble z.1 z.2) := by
     have hg (k : Nat) : Primrec (fun z : A => z.2.getD k none) :=
       (Primrec.list_getD (none : Option Nat)).comp Primrec.snd (Primrec.const k)
-    exact Computable.option_some.comp (chooseProgram (hf.comp Primrec.fst) (hb.comp Computable.fst)
-      (chooseProgram ((ht 2).comp Primrec.fst) (hadd.comp ((hg 0).pair (hg 1)).to_comp)
-      (chooseProgram ((ht 3).comp Primrec.fst)
-        (hlam.to_comp.comp ((hl.comp Primrec.fst).pair (hg 0)).to_comp) (hb.comp Computable.fst))))
+    have hf' : Primrec (fun z : A => z.1) := Primrec.fst
+    have hb' : Computable (fun z : A => base z.1) :=
+      Computable.comp (f := base) (g := fun z : A => z.1) hb hf'.to_comp
+    have ha' : Computable (fun z : A => addAsm (z.2.getD 0 none) (z.2.getD 1 none)) :=
+      Computable.comp (f := fun x : Option Nat × Option Nat => addAsm x.1 x.2)
+        (g := fun z : A => (z.2.getD 0 none,z.2.getD 1 none)) hadd
+        (((hg 0).pair (hg 1)).to_comp)
+    have hc' : Primrec (fun z : A => collapseAsm (z.1.2/4).unpair.1 (z.2.getD 0 none)) :=
+      hlam.comp (hl.comp hf') (hg 0)
+    exact Computable.option_some.comp (chooseProgram (hf.comp hf') hb'
+      (chooseProgram ((ht 2).comp hf') ha'
+      (chooseProgram ((ht 3).comp hf') hc'.to_comp hb')))
   apply ComputableRankedProof.ranked S (Option Nat)
     (fun s => CurrentGroundAnnotationCode.groundPartialCode p s.1 s.2) (fun s => s.2) children assemble Primrec.snd hc hasm
   · intro s t hm

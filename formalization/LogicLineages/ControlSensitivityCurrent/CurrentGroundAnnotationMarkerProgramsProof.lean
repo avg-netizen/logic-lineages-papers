@@ -59,13 +59,20 @@ private theorem markerExpand : Primrec (fun x : List Bool × List Nat =>
     (runProgram.comp (Primrec.fst.pair
       (Primrec.option_some.comp (Primrec.snd.pair (Primrec.const [])))))
 
-theorem macro (p : Policy) (hp : PolicyShape.Effective p) :
+attribute [local irreducible] CurrentGroundAnnotationCode.run
+  CurrentGroundAnnotationCode.macroCode PolicyShape.selector
+
+theorem markerProgram (p : Policy) (hp : PolicyShape.Effective p) :
     Computable (fun x : Nat × Nat × List Nat => macroCode p x.1 x.2.1 x.2.2) := by
   have hs : Computable (fun x : Nat × Nat × List Nat => PolicyShape.selector p x.1 x.2.1) :=
     Computable.comp (f := fun y : Nat × Nat => PolicyShape.selector p y.1 y.2)
       (g := fun x : Nat × Nat × List Nat => (x.1,x.2.1)) hp
       (Computable.fst.pair (Computable.fst.comp Computable.snd))
-  exact markerExpand.to_comp.comp (hs.pair (Computable.snd.comp Computable.snd))
+  unfold CurrentGroundAnnotationCode.macroCode
+  exact Computable.comp
+    (f := fun y : List Bool × List Nat => PolicyShape.finish (run y.1 (some (y.2,[]))))
+    (g := fun x : Nat × Nat × List Nat => (PolicyShape.selector p x.1 x.2.1,x.2.2))
+    markerExpand.to_comp (hs.pair (Computable.snd.comp Computable.snd))
 
 theorem repeated (p : Policy) (hp : PolicyShape.Effective p) :
     Computable (fun x : Nat × Nat => repeatCode p x.1 x.2) := by
@@ -76,9 +83,10 @@ theorem repeated (p : Policy) (hp : PolicyShape.Effective p) :
       (Primrec.snd.comp Primrec.fst).to₂).of_eq
     intro x
     simp
+  unfold CurrentGroundAnnotationCode.repeatCode
   exact chooseProgram (Primrec.eq.comp Primrec.fst (Primrec.const 0))
     (Computable.const (some 0))
-    ((macro p hp).comp ((Computable.const (PolicyShape.siteCode .scalarRepeat)).pair
+    ((markerProgram p hp).comp ((Computable.const (PolicyShape.siteCode .scalarRepeat)).pair
       (hc.pair hrep).to_comp))
 
 end LogicLineages.ControlSensitivityCurrent.CurrentGroundAnnotationPrograms

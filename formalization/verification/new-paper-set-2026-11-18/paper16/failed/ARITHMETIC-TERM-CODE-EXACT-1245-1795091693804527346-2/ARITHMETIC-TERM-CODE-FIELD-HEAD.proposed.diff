@@ -1,0 +1,14 @@
+--- LogicLineages/PersistentMarking/NumberedWindowArithmeticNodeProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowArithmeticNodeProof.lean
+@@ -10,8 +10,9 @@
+   | nil => cases h
+   | cons a xs ih =>
+     change x < pair a (encodeFields xs) + 1
+-    rcases List.mem_cons.mp h with rfl | ht
+-    · exact Nat.lt_succ_of_le (pairBounds a (encodeFields xs)).1
++    rcases List.mem_cons.mp h with he | ht
++    · rw [he]
++      exact Nat.lt_succ_of_le (pairBounds a (encodeFields xs)).1
+     · exact Nat.lt_succ_of_le (Nat.le_trans (Nat.le_of_lt (ih ht))
+         (pairBounds a (encodeFields xs)).2)
+ 

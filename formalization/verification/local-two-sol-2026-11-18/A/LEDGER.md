@@ -1232,3 +1232,58 @@ and translates the existing canonical-port derivations into fixed-point bits.
   current5modules/36merged incl6 own/5 exact audits. Supplemental zero
   errors; READY support only, no internal arithmetic/ID1 or actual
   syntax codec yet.
+
+## 2026-11-19 — accepted concrete pair, atomic syntax codec frozen
+
+- Pair448 independently current5/36pins/five standard-only audits;
+  actual pair polynomial and entire partial inverse accepted supporting,
+  no numbered promotion/arithmetization proof.
+- New source-first actual simple Ty, six distinct literal Head
+  alternatives and nearest-first finite binder-stack numeric codecs,
+  four new definitions/targets, c9b4dfdc... freeze with18pins,
+  static9. Code-bounded exact fuel, successful/roundtrip/rejection,
+  literal original type/ranked fields, actual concrete encoded lookup
+  equals original finite prefix. No NTerm/NArgs, arbitrary C function
+  encoding, least-code class reps, formal arithmetic or ID1.
+- Pending coordinator full source review/target-only native; no
+  author proof yet.
+
+## 2026-11-19 — literal atomic syntax numeric code native pass
+
+- ARITHMETIC-ATOM-CODE-TARGET-1224 exact comparator-only9/9,
+  receipt1795090803563838120-2, all18 frozen pins checked, independently
+  reviewed and proof authoring released.
+- ARITHMETIC-ATOM-CODE-EXACT-1230 clean first exact run38/38,
+  receipt1795091052683111750-2, inherited peak495804, new head proof
+ 491292/root469024KiB. All six exact aliases propext/Quot.sound only.
+  Native processes fully reaped/both locks free.
+- LANE-A-NUMBERED-WINDOW-ARITHMETIC-ATOM-CODE-CLOUD-EVIDENCE.json
+  SHA70f4d291c0c5ffb1035fc29903dc9402f5e2266a8653216bdef87650abef08a7,
+  38current/47merged pins (18own)/six standard exact audits, supplemental
+  zero errors. READY actual Ty, all six nominal Head constructors,
+  finite nearest-first binder list numeric code, sufficient-fuel and
+  malformed rejection and original finite coded lookup. No NTerm/NArgs,
+  least-code primary reps, raw certificate coding, arithmetic or ID1.
+
+## 2026-11-19 — all literal raw NTerm/NArgs numerical code native pass
+
+- Coordinator accepted449 actual Ty/Head/finite binder numeric code,
+  independently replaying38/47pins/six exact aliases; no arithmetic
+  or ID1 asserted. New raw term/args comparator frozen418a40f9...,
+  24pins and target-only1236 clean9/9,
+  receipt1795091309150744832-2.
+- Exact1245 ordinary local list head binder elimination failure after
+  successful assembly/field proof leaves. Exact ten files, manifest,
+  log and receipt1795091693804527346-2 preserved. Independently scoped
+  single local proof rewrite retaining actual head, applied inverse
+  verified. No target/def/cap edits.
+- Exact1249 clean27/27, receipt1795091862323740622-2, peak500016,
+  root470128KiB, reaped/locks free. All8 exact aliases standard-only.
+  Recursive LANE-A-NUMBERED-WINDOW-ARITHMETIC-TERM-CODE-CLOUD-EVIDENCE.json
+  6af0dcffbadeaae3862e813aa7a6e0a2afeb40db269075e7770464ab43a4499c,
+  current27/53pins (24own)/8audit, supplemental errors0.
+- READY exact all original literal raw numerical NTerm/NArgs constructors,
+  distinct typed fields/extras/order, bounded decoder fuel from actual
+  code, exact successful/roundtrip/invalid codes. Does not itself
+  classify typed terms, establish least primary reps, prove
+  object-level arithmetic/purity or establish internal ID1.

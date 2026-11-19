@@ -83,7 +83,7 @@ private theorem collapseProgram (p : Policy) (hp : PolicyShape.Effective p) :
       (head_primitive.comp (Primrec.fst.comp Primrec.snd))).to_comp (collapseMapProgram p hp).to₂
 
 theorem accountProgram (p : Policy) (hp : PolicyShape.Effective p) :
-    Computable (fun z : S => CurrentGroundAccount.accountCode p z.1 z.2) := by
+    Computable (fun z : List Nat × Nat => CurrentGroundAccount.accountCode p z.1 z.2) := by
   let children : S → List S := fun s =>
     if s.2%4=2 then [(s.1,(s.2/4).unpair.1),(s.1,(s.2/4).unpair.2)]
     else if s.2%4=3 then [(s.1,(s.2/4).unpair.2)] else []
@@ -140,19 +140,10 @@ theorem accountProgram (p : Policy) (hp : PolicyShape.Effective p) :
     · have ht : s.2%4=0 ∨ s.2%4=1 ∨ s.2%4=2 ∨ s.2%4=3 := by omega
       rcases ht with h|h|h|h <;>
         simp [assemble,children,base,addResult,collapseResult,collapseMap,hf,h]
-      cases hv : UnitHeadCode.classify (SourceAnnotationCode.operatorHead (s.2/4).unpair.1) with
-      | none => rfl
-      | some val =>
-        cases ht : CurrentGroundAccount.accountCode p s.1 (s.2/4).unpair.2 with
-        | none => rfl
-        | some t =>
-          rcases val with ⟨normal,finite,n⟩
-          rcases t with ⟨xs,c⟩
-          cases finite <;> rfl
 
 
 theorem sourceProgram (p : Policy) (hp : PolicyShape.Effective p) :
-    Computable (fun z : S => CurrentGroundAccount.sourceCode p z.1 z.2) := by
+    Computable (fun z : List Nat × Nat => CurrentGroundAccount.sourceCode p z.1 z.2) := by
   have hb : Computable (fun q : S => CurrentGroundAnnotationCode.buildCode p q.1 0 q.2) :=
     (CurrentGroundAnnotationPrograms.buildProgram p hp).comp
       (Computable.fst.pair ((Computable.const 0).pair Computable.snd))

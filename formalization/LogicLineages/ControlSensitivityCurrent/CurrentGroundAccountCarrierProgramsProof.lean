@@ -38,6 +38,6 @@ theorem carrierProgram (p : Policy) (hp : PolicyShape.Effective p) :
   have h := Computable.option_map hv hout.to_comp.to₂
   apply h.of_eq
   intro z
-  simp [CurrentGroundAccount.carrierCode,Option.map_eq_bind]
+  simp [CurrentGroundAccount.carrierCode,SourceAnnotationCode.operatorArity,Option.map_eq_bind]
 
 end LogicLineages.ControlSensitivityCurrent.CurrentGroundAccountPrograms
