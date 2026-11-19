@@ -1,10 +1,15 @@
 # Current comparison formalization status
 
-New-paper register: **125 checked, 42 pending / 167**. Historical register:
+New-paper register: **126 checked, 41 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper17 `cor:standard-functional-hardness`: complete unchanged-Phi weak/strict
+  undecidability, internal2 finite queries and internal3 single query, actual
+  unrestricted source domains and closed supplier contradiction (packet404,
+  fresh 968-module cloud gate and independent review).
 
 - Paper19 `cor:ground-equivalence`: both computable many-one reductions
   between universal weak and strict comparison on all actual ground sources,

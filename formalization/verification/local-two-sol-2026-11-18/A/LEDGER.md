@@ -327,3 +327,27 @@ and translates the existing canonical-port derivations into fixed-point bits.
 - Frozen `paper16/LANE-A-NATIVE-CARRIER-FROZEN.json` SHA-256 `8c8e849c3c5c2f3a8b3b1a7045812a7807ec04ac2608d962bf46b1ed1c142e90`. Serialized receipt `1795039354222837109-12`, `A/native-carrier-second-gate.log`. 225 recursively source-matched native modules, one exact alias, 39 frozen hashes. Exact axioms `propext` and `Quot.sound`.
 - A original `A/NATIVE-CARRIER-EVIDENCE.json` SHA-256 `2ef37294ad3ecf461cf39bed50f8c16b4df12a7521ec43314f89cb909e8647d2`. Root schema `paper16/LANE-A-NATIVE-CARRIER-EVIDENCE.json` SHA-256 `38b543a4e32549e83c8ec99f7a6a70264cf538f8c5b16c7dd4086c4bc07b8b6f`.
 - Active successor `lem:indexed-carrier` uses its exact semantic-type erasure template and original context stability.
+
+## 2026-11-19 — Cloud continuation, owner gates recovered and first recheck stopped
+
+- Recomputed every source pin and recursive module source SHA-256 for the
+  seven owner READY packets above; all match the reconciled owner checkout.
+  This does not turn the owner's absolute object/receipt paths into cloud
+  evidence. The structural-interpretation false same-family clause and its
+  separation from adequacy were independently checked against the TeX and
+  original proof sources; see paper16/recovery-nov19/SOURCE-AND-OWNER-RECEIPT-AUDIT.md.
+- Coordinator-authorized core gate CORE-REVIEW-0623 requested only
+  ProtectedSpineDecisionProof, RankedRestrictionChecks and NativeCarrierChecks.
+  It completed 288 passing/cache-hit rows before stopping at original
+  ProtectedSpineStrictMarkProof under the 512 MiB RSS cap, observed
+  524580 KiB against 524288 KiB in 0.84 seconds. Exit 77; no Lean error
+  and no successful full requested root. Native session reaped and both
+  shared locks checked free. Preserved union transcript, exact receipt and
+  failed module log in paper16/recovery-nov19; original source untouched.
+- Independent RPO/carrier roots do not import the stopped module. The
+  proposed thin StrictMark supplier would retain the frozen MarkingFields,
+  replace two lambda coverage imports by direct support facts, and avoid
+  the 46 extraneous family/tuple imports. No unchanged retry or cap change.
+- The owner-frozen IndexedCarrier comparator and owner typing/context drafts
+  are untouched. New NativeIndexedSelectorProof and NativeIndexedCarrierChecks
+  are authored but unchecked pending separate approved exact gate.
