@@ -1,0 +1,16 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentAffineHeadsProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentAffineHeadsProof.lean
+@@ -31,7 +31,12 @@
+   have eh := (positiveNoCollapse _ 1 h (by decide) hg).2 f (commonUnits ρ)
+   rw [e₁,e₂,eh]
+   have ho := hEval ρ μ
+-  simp only [OriginalDomain.expressionValue,sameCommonUnits] at ho
++  simp only [OriginalDomain.expressionValue] at ho
++  have hμ : OriginalDomain.valuation (UnitObservation.substitution μ) = commonUnits μ :=
++    sameCommonUnits Γ μ
++  have hρ : OriginalDomain.valuation (UnitObservation.substitution ρ) = commonUnits ρ :=
++    sameCommonUnits (Ty.curriedGround (k+1) :: Γ) ρ
++  rw [hμ,hρ] at ho
+   exact ho
+ 
+ theorem completeSource : CurrentAffineHeadsTargets.CompleteSource := by

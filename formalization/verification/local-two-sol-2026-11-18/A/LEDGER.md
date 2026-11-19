@@ -754,3 +754,29 @@ and translates the existing canonical-port derivations into fixed-point bits.
   preserved. Applied independently verified type-only explicit
   lexical C binder annotation, PrimaryCases 2777a1d4,
   awaiting a clean exact endpoint ticket.
+
+## 2026-11-19 — exact supporting numeric window preservation passed
+
+- Core NUMERIC-LOCALITY-0843 exit0, all 41 rows, 490704 KiB at
+  endpoint and 522052 KiB closure under unchanged original caps,
+  receipt `1795077814441982164-6`. Reaped and both locks free.
+- Three exact supporting aliases: actual raw-to-independently-typed
+  successor admissibility, both directions for actual typed fixed-window
+  primary equivalence, all vertices of the source's typed mixed trace.
+  No successor guard assumption and no assertion that skeletal Stat
+  yields typed successors. All standard propext/Quot.sound only.
+- Evidence `LANE-A-NUMERIC-LOCALITY-CLOUD-EVIDENCE.json`
+  df8249c8100a1d9ae70549c0171ec8021a38182dc38cbfc57a6c09a4bf9c31fc,
+  41 recursive current modules, 44 merged pins including this packet's
+  15 original freeze pins; supplemental audit zero errors.
+  Ready for independent supporting review only.
+
+## 2026-11-19 — binder and extension transport target staged
+
+- Staged two new comparator files only, NumberedWindowClosing and
+  NumberedWindowFrameTargets. Exact concrete opening/closing, existing
+  singleton beta, original Abs/FAbs body identities, unchanged fixed
+  signature including typed primary/actual raw edges, and full literal
+  mixed trace vertex image/count. Source map and 21-pin freeze available
+  as `NUMBERED-WINDOW-FRAME-*` in paper16/recovery-nov19. No proofs or
+  native before independent review/target-only ticket.

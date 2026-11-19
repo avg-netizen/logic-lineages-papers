@@ -33,7 +33,8 @@ def ClosingPrimary : Prop := ∀ S K name d (C D : Spine.BoundContext) τ q r,
 def ClosingTypedTrace : Prop := ∀ S K name d (C D : Spine.BoundContext) τ q r,
   CloseCompatible name d C D →
   ∀ trace : TypedTrace S K C τ q r,
-    ∃ out : TypedTrace S K D τ (closeAt name d q) (closeAt name d r), rawLength out = rawLength trace
+    ∃ out : TypedTrace S K D τ (closeAt name d q) (closeAt name d r),
+      vertices out = (vertices trace).map (closeAt name d) ∧ rawLength out = rawLength trace
 
 /-- Agreement with the literal original symbolic closing map at every
 realization threshold. It does not perform any beta or eta normalization. -/
@@ -74,6 +75,7 @@ def EnlargingPrimary : Prop := ∀ S K L C τ q r,
 def EnlargingTypedTrace : Prop := ∀ S K L C τ q r,
   WindowInclusion K L →
   ∀ trace : TypedTrace S K C τ q r,
-    ∃ out : TypedTrace S L C τ q r, rawLength out = rawLength trace
+    ∃ out : TypedTrace S L C τ q r,
+      vertices out = vertices trace ∧ rawLength out = rawLength trace
 
 end LogicLineages.PersistentMarking.NumberedWindowFrameTargets
