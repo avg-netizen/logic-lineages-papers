@@ -14,7 +14,7 @@ theorem realizedAt {n qs As i q} (hAt : At qs i q) (h : RealizesArgs n qs As) :
   | there _ ih =>
     cases h with
     | cons _ hs =>
-      obtain ⟨Q,hGet,hQ⟩ := ih _ hs
+      obtain ⟨Q,hGet,hQ⟩ := @ih _ hs
       exact ⟨Q,hGet,hQ⟩
 
 theorem getMem (As : NArgs) (i : Nat) (Q : NTerm) (h : As.get i = some Q) :

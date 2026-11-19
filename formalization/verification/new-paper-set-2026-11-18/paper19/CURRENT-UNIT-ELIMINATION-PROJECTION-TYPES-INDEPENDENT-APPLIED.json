@@ -1,0 +1,10 @@
+{
+  "status": "independent current hash and inverse preimage verified",
+  "only_file": "LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationProjectionProof.lean",
+  "prior_sha256": "cb02e3bc07ea88039746aeb3430552287161d102e800947ee66c096034d01d14",
+  "proposed_sha256": "3e4fc4fa2442bb14a1842e4847312aa928ed9ccff83ffd984f3650e9fa20fc5b",
+  "failure": "build-reports/1795082350476319712-2.json",
+  "preserved": "verification/new-paper-set-2026-11-18/paper19/current-unit-elimination-failures/1795082350476319712-2",
+  "exact_errors": "12 implicit selectGround recursively chooses old arrow prefix context; 21\u201337 domino from rejected selectGround; 72/100/103 rw cast congruences at instances transparency fails to identify groundCtx of ground prefix with explicit cons",
+  "scope": "Use actual recursive tail context in proof-only inverse. For existing equal contexts compare casted ground constructors using explicitly typed change/congrArg/trans instead of rewrites across semireducible ctx. No old ground identity changes, no computation or target changes."
+}

@@ -12,7 +12,7 @@ open NumberedWindowSimulationFootProof NumberedWindowSimulationTraceProof
 open NumberedWindowSimulationRealizationProof
 open NumberedWindowRealizationShapeProof (weakensTerm weakensArgs)
 
-theorem variable (S : Spine.Signature) (K : List Ty) (hk : DecisionSourceUniverse.Closed K)
+theorem varCase (S : Spine.Signature) (K : List Ty) (hk : DecisionSourceUniverse.Closed K)
     (σ : Ty) (x : Nat) : Job S K (.var σ x) := by
   intro h n Q hN hQ
   cases hQ with

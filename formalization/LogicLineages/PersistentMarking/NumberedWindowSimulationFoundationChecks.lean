@@ -8,7 +8,7 @@ theorem exact_PositiveTraceToClassPath : PositiveTraceToClassPath :=
   NumberedWindowSimulationQuotientProof.positive
 
 #print axioms exact_PositiveTraceToClassPath
-#print axioms NumberedWindowSimulationBaseCases.variable
+#print axioms NumberedWindowSimulationBaseCases.varCase
 #print axioms NumberedWindowSimulationBaseCases.put
 #print axioms NumberedWindowSimulationBaseCases.strict
 

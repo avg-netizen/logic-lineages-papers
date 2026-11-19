@@ -1,0 +1,22 @@
+--- LogicLineages/PersistentMarking/NumberedWindowSimulationBaseCases.lean
++++ LogicLineages/PersistentMarking/NumberedWindowSimulationBaseCases.lean
+@@ -12,7 +12,7 @@
+ open NumberedWindowSimulationRealizationProof
+ open NumberedWindowRealizationShapeProof (weakensTerm weakensArgs)
+ 
+-theorem variable (S : Spine.Signature) (K : List Ty) (hk : DecisionSourceUniverse.Closed K)
++theorem varCase (S : Spine.Signature) (K : List Ty) (hk : DecisionSourceUniverse.Closed K)
+     (σ : Ty) (x : Nat) : Job S K (.var σ x) := by
+   intro h n Q hN hQ
+   cases hQ with
+--- LogicLineages/PersistentMarking/NumberedWindowSimulationFoundationChecks.lean
++++ LogicLineages/PersistentMarking/NumberedWindowSimulationFoundationChecks.lean
+@@ -8,7 +8,7 @@
+   NumberedWindowSimulationQuotientProof.positive
+ 
+ #print axioms exact_PositiveTraceToClassPath
+-#print axioms NumberedWindowSimulationBaseCases.variable
++#print axioms NumberedWindowSimulationBaseCases.varCase
+ #print axioms NumberedWindowSimulationBaseCases.put
+ #print axioms NumberedWindowSimulationBaseCases.strict
+ 

@@ -9,14 +9,13 @@ theorem localBound {S K J} {d : Tree S J} (h : Foot K d) :
     ∀ ρ, ρ ∈ localTypes d → ρ ∈ K := by
   intro ρ hρ
   apply h
-  rw [footprint]
+  rw [footprint.eq_def]
   exact List.mem_append_left _ hρ
 
 theorem rootBound {S K J} {d : Tree S J} (h : Foot K d) :
     ∀ ρ, ρ ∈ rootTypes J → ρ ∈ K := by
   intro ρ hρ
   apply localBound h
-  rw [localTypes]
   exact List.mem_append_left _ hρ
 
 theorem weakSource {S K q t} {d : Tree S (.weak q t)} (h : Foot K d) :

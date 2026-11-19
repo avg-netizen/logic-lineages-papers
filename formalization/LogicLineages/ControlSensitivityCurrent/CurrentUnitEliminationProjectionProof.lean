@@ -8,8 +8,8 @@ open LogicLineages.OrdinalComparison.Source
 def selectGround : {Γ : List Ty} → Variable Γ .ground → Variable (groundCtx Γ) .ground
   | [],x => nomatch x
   | .ground :: _,.here => .here
-  | .ground :: _,.there x => .there (selectGround x)
-  | .arrow _ _ :: _,.there x => selectGround x
+  | .ground :: Γ,.there x => .there (@selectGround Γ x)
+  | .arrow _ _ :: Γ,.there x => @selectGround Γ x
 
 theorem projectOld (Γ : List Ty) (x : Variable Γ .ground) : oldGround (selectGround x) = x := by
   induction Γ with
@@ -63,14 +63,11 @@ theorem oldGroundAll (Γ : List Ty) (hg : ∀ t ∈ Γ, t = .ground) :
     let e := groundCtx_of_ground Γ ht
     intro x
     change Variable (.ground :: groundCtx Γ) .ground at x
-    have hEq : groundCtx_of_ground (.ground :: Γ) hg = congrArg (List.cons Ty.ground) e :=
-      Subsingleton.elim _ _
-    rw [hEq]
     cases x with
     | here => exact castGround_here e
     | there x =>
-      rw [castGround_there]
-      exact congrArg Variable.there (ih ht x)
+      change castGround (congrArg (List.cons Ty.ground) e) (.there x) = .there (oldGround x)
+      exact (castGround_there (τ:=.ground) e x).trans (congrArg Variable.there (ih ht x))
 
 theorem oldGroundRemove (left right : List Ty) (σ : Ty) (hs : 0 < σ.level) :
     ∀ x : Variable (groundCtx (left ++ right)) .ground,
@@ -92,16 +89,18 @@ theorem oldGroundRemove (left right : List Ty) (σ : Ty) (hs : 0 < σ.level) :
     cases a with
     | ground =>
       change Variable (.ground :: groundCtx (left ++ right)) .ground at x
-      have he : (groundCtx_remove (.ground :: left) right σ hs).symm =
-          congrArg (List.cons Ty.ground) e := Subsingleton.elim _ _
-      rw [he]
       cases x with
       | here =>
-        rw [castGround_here]
-        rfl
+        change @oldGround (.ground :: (left ++ σ :: right))
+          (castGround (congrArg (List.cons Ty.ground) e) (.here : Variable (.ground :: groundCtx (left ++ right)) .ground)) =
+          .here
+        exact congrArg (@oldGround (.ground :: (left ++ σ :: right))) (castGround_here e)
       | there x =>
-        rw [castGround_there]
-        exact congrArg Variable.there (ih x)
+        change @oldGround (.ground :: (left ++ σ :: right))
+          (castGround (congrArg (List.cons Ty.ground) e) (.there x)) =
+            .there (SelectedBinder.moveFromHead left right σ (.there (oldGround x)))
+        exact (congrArg (@oldGround (.ground :: (left ++ σ :: right)))
+          (castGround_there (τ:=.ground) e x)).trans (congrArg Variable.there (ih x))
     | arrow a b =>
       have he : (groundCtx_remove (.arrow a b :: left) right σ hs).symm = e :=
         Subsingleton.elim _ _

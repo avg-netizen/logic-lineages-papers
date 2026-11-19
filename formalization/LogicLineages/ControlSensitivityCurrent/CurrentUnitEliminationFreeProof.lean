@@ -41,10 +41,12 @@ theorem routeHolds (p : AdmissibleSum.Policy) (f : Nat → Nat) {Γ Δ : List Ty
     q.holds p f ρ (ω z) := by
   refine ⟨fun x => ω (reroute q.width r z x),?_,?_,hm⟩
   · intro x
+    change ω (reroute q.width r z (shift q.width (.there x))) = ρ x
     have he := congrFun (reroutePull q.width r z ω) (shift q.width (.there x))
     rw [he,fillShift]
     exact h x
-  · have he := congrFun (reroutePull q.width r z ω) (shift q.width (.here : Variable (.ground :: Γ) .ground))
+  · change ω (reroute q.width r z (shift q.width .here)) = ω z
+    have he := congrFun (reroutePull q.width r z ω) (shift q.width (.here : Variable (.ground :: Γ) .ground))
     rw [he,fillShift] <;> rfl
 
 theorem routeFill {Γ Δ Θ : List Ty} (n : Nat) (r : Renaming (WireCtx n Γ) Δ)
@@ -61,7 +63,7 @@ private def freeBase (Γ : List Ty) (n : Nat) :
     Renaming (WireCtx n Γ) (.ground :: WireCtx n (.ground :: Γ)) :=
   fun x => .there (under (Renaming.weaken Γ .ground) n x)
 
-theorem freeMatrix (p : AdmissibleSum.Policy) (f : Nat → Nat) {Γ : List Ty}
+private theorem freeMatrix (p : AdmissibleSum.Policy) (f : Nat → Nat) {Γ : List Ty}
     (row : LinearCode) (q : OpenGraph Γ)
     (ω : Variable (.ground :: WireCtx q.width (.ground :: Γ)) .ground → Nat) :
     (freeGraph row q).matrix.eval p f ω = true ↔

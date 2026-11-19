@@ -1,0 +1,33 @@
+--- LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationASTProof.lean
++++ LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationASTProof.lean
+@@ -22,7 +22,15 @@
+     {Γ Δ : List Ty} (r : Renaming Γ Δ) (ν : Variable Δ .ground → Nat)
+     (a : SourceAST.Formula Γ) :
+     (renameFormula r a).eval p f ν = a.eval p f (fun x => ν (r x)) := by
+-  induction a <;> simp only [renameFormula,SourceAST.Formula.eval,termEvalRename,*]
++  induction a with
++  | truth => rfl
++  | falsity => rfl
++  | eq a b => simp only [renameFormula,SourceAST.Formula.eval,termEvalRename]
++  | le a b => simp only [renameFormula,SourceAST.Formula.eval,termEvalRename]
++  | lt a b => simp only [renameFormula,SourceAST.Formula.eval,termEvalRename]
++  | neg a ha => simp only [renameFormula,SourceAST.Formula.eval,ha]
++  | conj a b ha hb => simp only [renameFormula,SourceAST.Formula.eval,ha,hb]
++  | disj a b ha hb => simp only [renameFormula,SourceAST.Formula.eval,ha,hb]
+ 
+ theorem evalTimes (p : AdmissibleSum.Policy) (f : Nat → Nat) {Γ : List Ty}
+     (ω : Variable Γ .ground → Nat) (d : Nat) (t : SourceAST.Term Γ) :
+@@ -76,7 +84,12 @@
+     (ρ : Variable Γ .ground → Nat) :
+     (pinGround Γ r ρ).eval p f ω = true ↔ ∀ (x : Variable Γ .ground), ω (r x) = ρ x := by
+   induction Γ with
+-  | nil => exact ⟨fun _ x => nomatch x,fun _ => rfl⟩
++  | nil =>
++    constructor
++    · intro _ x
++      exact nomatch x
++    · intro _
++      rfl
+   | cons σ Γ ih =>
+     cases σ with
+     | ground =>

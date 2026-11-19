@@ -108,7 +108,12 @@ theorem exactActiveNat (p : AdmissibleSum.Policy) (f : Nat → Nat) {Γ : List T
     have hSR := routeFill k (rightBase Γ m k) (.there .here) ω ρ v l' hRight rfl
     refine ⟨η,fun x => hshift (.there x),hshift .here,(activeMatrix p f row q s η).2 ?_⟩
     dsimp only
-    rw [hη]
+    have hpoint (x : Variable (Ambient Γ q.width s.width) .ground) :
+        η (ambientCast Γ q.width s.width x) = ω x := congrFun hη x
+    simp only [hpoint]
+    change (q.matrix.eval p f (fun x => ω (reroute m (leftBase Γ m k) .here x)) = true ∧
+      s.matrix.eval p f (fun x => ω (reroute k (rightBase Γ m k) (.there .here) x)) = true) ∧
+      holds row (ω .here+1) (ω (.there .here)+1) (ω (outputPort Γ m k)+1)
     refine ⟨⟨?_,?_⟩,?_⟩
     · rwa [hQL]
     · rwa [hSR]

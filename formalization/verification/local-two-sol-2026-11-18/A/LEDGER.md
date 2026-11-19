@@ -905,3 +905,39 @@ and translates the existing canonical-port derivations into fixed-point bits.
 - 32-pin freeze fa5954a2 and source map 457630f3 in
   `NUMBERED-WINDOW-POSITIVE-SIMULATION-*`. Pending independent exact
   scope review and target-only preflight. No proof/native admitted yet.
+
+- First POSITIVE-SIMULATION-TARGET-0942 ordinary FAbs pattern arity
+  checkpoint preserved at receipt `1795081309654531210-6`. Independently
+  approved one skipped original guard field only plus one affected own
+  pin. POSITIVE-SIMULATION-TARGET-0944 passed current 32/32, peak495804
+  KiB, receipt `1795081442988122638-13`. Current freeze637099a0, exactly
+  all32 verified, reaped/released, independent target-only accepted.
+
+## 2026-11-19 — simulation foundation passed; complete proof candidate staged
+
+- Foundational support stop records 0953 (indexed footprint eq unfolding)
+  and 0957 (reserved `variable` name) preserve exact proof sources and
+  native logs. Narrow independently approved proof-only corrections.
+- SIMULATION-FOUNDATION-1002 passed 75/75 (522052 KiB max, endpoint
+  475500 KiB), receipt `1795082560327041474-6`, reaped and shared
+  locks free. Actual positive trace to nonempty quotient path exact,
+  Var/omega Put/Strict immediate-child support diagnoses all
+  standard-only. Evidence
+  `LANE-A-NUMBERED-WINDOW-SIMULATION-FOUNDATION-CLOUD-EVIDENCE.json`
+  4e96726d9346cc9bd15e7edc78ff4845a087f0ef29454c98800c18c50d85ca74,
+  75 current modules61 pins and one exact quotient alias. Coordinator
+  independently accepted supporting436; all seven accepted procedures
+  and exact numbered comparator now remain unchanged.
+- Full 16-case original proof candidate authored across 30 current
+  support and assembly sources (includes existing foundation),
+  static closure164 excludes all four previously stopped proof paths.
+  Four exact frozen aliases at `NumberedWindowPositiveSimulationChecks`
+  e2f4fc15; source/proof map and complete hashes
+  `NUMBERED-WINDOW-POSITIVE-SIMULATION-AUTHORED-CANDIDATE.md` aab44c98.
+  Actual source-position lookup and split/permitted permutation, typed
+  target occurrence placement, genuine owner and primitive raw steps,
+  actual opened/closed lambda/FAbs and protected whole Select paths,
+  one six-sort kernel Tree.rec fold, and exact literal-support
+  confined consequence. Full candidate remains unbuilt, independently
+  unaccepted and not numbered until fresh final gate/replay. No further
+  proof edits pending independent scope/native.
