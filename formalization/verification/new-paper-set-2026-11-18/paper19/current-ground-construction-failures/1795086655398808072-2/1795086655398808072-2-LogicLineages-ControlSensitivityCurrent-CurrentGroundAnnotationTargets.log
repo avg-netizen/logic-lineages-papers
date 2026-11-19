@@ -1,0 +1,22 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationTargets.lean:39:55: error: don't know how to synthesize implicit argument `Γ`
+  @SourceTypedPorts.variableIndex (?m.67 p k Γ F d v e :: Γ) (Ty.curriedGround (k + 1)) F.there
+context:
+p : Policy
+k : ℕ
+Γ : List Ty
+F : Variable Γ (Ty.curriedGround (k + 1))
+d : Tree k (Ty.ground :: Γ) F.there
+v : OrdinalPartialVector Γ Ty.ground
+e : Tree k Γ F
+⊢ List Ty
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationTargets.lean:39:87: error: don't know how to synthesize implicit argument `τ`
+  @Variable.there Γ (Ty.curriedGround (k + 1)) (?m.67 p k Γ F d v e) F
+context:
+p : Policy
+k : ℕ
+Γ : List Ty
+F : Variable Γ (Ty.curriedGround (k + 1))
+d : Tree k (Ty.ground :: Γ) F.there
+v : OrdinalPartialVector Γ Ty.ground
+e : Tree k Γ F
+⊢ Ty

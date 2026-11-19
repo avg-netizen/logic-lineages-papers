@@ -1,0 +1,5 @@
+# Independent finite actual primary class cover scope
+
+Read complete Syntax/Targets/source map against actual original numerical constructors and primary congruence scope. All22frozen hashes match. Two actual bounds count term/nonempty-argument constructors and maximum actual free/bound/finite-label numeral, excluding head identifiers governed by exact admitted head enumeration. Executable grammar is a finite superset over original syntax/head/type/numeric alphabets, not a membership decision; arbitrary measured budgets and guarded raw args are stronger helper domains. Structural n budget decreases for every real constructor child; numeric alphabet is source-local, not a new global free-name restriction.
+
+Exact Primary/OrderedPrimary bounds invariance plus initial-window propagation must put all actual equivalents in the source-selected list without target admission/measure hypotheses. Same S/K/C/type, actual declared heads and ordered extras. Not exact class enumeration/least code/arithmetic accessibility/ID1. Approved supporting comparator for target-only preflight, proof and native acceptance unpaid.

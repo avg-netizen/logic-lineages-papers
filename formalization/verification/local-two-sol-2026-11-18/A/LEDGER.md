@@ -1027,3 +1027,46 @@ and translates the existing canonical-port derivations into fixed-point bits.
   `1795085037138351282-2`, 20 modules, target RSS473092 KiB,
   original core; reaped and both locks free. No proof or acceptance from
   comparator preflight; no finite full term class, coding or ID1 assertion.
+
+## 2026-11-19 — accepted finite head universe; actual term class cover draft
+
+- HEAD-ENUMERATION-EXACT-1050 ordinary if-True normalization error
+  receipt1795085378729904285-2, actual failed source/log/receipt and
+  exact winning proof-only one-token review preserved. Corrected 1053
+  current/original core clean23/23 max495804 KiB, receipt
+  1795085520352167553-2; reaped/locks free. All three exact aliases
+  only propext/Quot.sound; evidence
+  LANE-A-NUMBERED-WINDOW-HEAD-ENUMERATION-CLOUD-EVIDENCE.json
+  54c84a2651a4aac3fe8ae3d53d4e7f865d6eb0c5ce8ee39c69659be89b082edc.
+  Independent replay accepted supporting442, register148/19 unchanged:
+  actual admitted heads finite, and exact original equivalent-head
+  sublists executable without requiring Closed K. Not term classes.
+- Source-first NumberedWindowPrimaryCoverSyntax/Targets exact
+  record 22 pins; genuine numerical term/args bounds plus explicit
+  constructor grammar over same actual admitted heads and K, source
+  numeral alphabet. Independent scope and target-only gate
+  PRIMARY-COVER-TARGET-1058 passed24/24, native receipt
+  1795085794267670172-2, max495804 KiB; fully reaped.
+- Seven authored separate proof leaves available after independent
+  comparator preflight, manifest4531f510..., static45. Proof only:
+  actual Primary and OrderedPrimary measures, literal measured grammar,
+  genuine fixed-window typed locality and complete finite cover. Not an
+  exact class decision, least code, all-context coding or ID1 result.
+
+## 2026-11-19 — accepted finite primary cover; literal typing-bit comparator
+
+- PRIMARY-COVER-EXACT-1103 clean original-core45/45, cap peak506992
+  KiB, receipt1795086145517100014-2, all four exact aliases standard
+  axioms only. Native reaped and locks free. Current recursive evidence
+  LANE-A-NUMBERED-WINDOW-PRIMARY-COVER-CLOUD-EVIDENCE.json SHA
+  79732f2e305c78e9583b5ea547b2a91d11430a91e3d95578df0eff1b712e650b
+  (45current/51merged incl22 own) independently reproduced. Coordinator
+  accepted supporting443. It is executable finite COVER only, not exact
+  class member test, least code or proof of arithmetic accessibility.
+- Source-first next support: NumberedWindowLiteralEquality,
+  NumberedWindowTypingBits and exact Targets, frozen20 pins. Actual
+  full literal NTerm/NArgs identity, finite nearest-binder-first lists
+  matching actual prefix/push, exact structural typed/base/extras/window
+  bits including retained declarations, and concrete finite-stack
+  instantiation. Arbitrary lookup C is modeled only as a parameter,
+  not represented arithmetic code. Pending independent target scope.
