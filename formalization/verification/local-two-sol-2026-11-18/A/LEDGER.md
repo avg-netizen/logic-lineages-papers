@@ -1304,3 +1304,20 @@ and translates the existing canonical-port derivations into fixed-point bits.
   no arbitrary C code, arithmetic proof, rank or ID1. Freeze26 pins
   d4fbf0f2..., target static118, pending independent review/preflight,
   no proofs.
+
+## 2026-11-19 — actual least literal primary code native pass
+
+- ARITHMETIC-LEAST-CLASS-TARGET-1256 exact comparator-only 118/118,
+  receipt1795092369231682939-2, all26 frozen pins independently
+  checked and proof authoring released.
+- ARITHMETIC-LEAST-CLASS-EXACT-1301 clean first exact 122/122,
+  receipt1795092672280284427-2, new Spec492272/root476748KiB under
+  the unchanged original profile. All four exact aliases only
+  propext/Classical.choice/Quot.sound. Native reaped, both locks free.
+- LANE-A-NUMBERED-WINDOW-ARITHMETIC-LEAST-CLASS-CLOUD-EVIDENCE.json
+  SHAede97ff1a886fc66fb938213816ff12c6f96de6d785e0b361513cd7444282f30,
+  122current/55merged pins/4 audits, supplemental errors0. READY
+  executable actual Nat minimum of original exact finite class list,
+  decoded admitted unique literal representative, iff original Primary
+  and existing quotient equality, finite contexts. Not object-level
+  arithmetic/ID1, rank, or bare raw-step certificates.

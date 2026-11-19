@@ -1,0 +1,11 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphFoundationDefinitions.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphFoundationDefinitions.lean
+@@ -70,7 +70,7 @@
+   | [],x => nomatch x
+   | .ground :: _,.here => ⟨0,by simp [groundCtx]⟩
+   | .ground :: _,.there x => (groundRank x).succ
+-  | .arrow _ _ :: _,.there x => groundRank x
++  | .arrow _ _ :: Γ,.there x => @groundRank Γ x
+ 
+ def newGround (Γ : List Ty) : {n : Nat} → Fin n → Variable (WireCtx n Γ) .ground
+   | 0,i => Fin.elim0 i
