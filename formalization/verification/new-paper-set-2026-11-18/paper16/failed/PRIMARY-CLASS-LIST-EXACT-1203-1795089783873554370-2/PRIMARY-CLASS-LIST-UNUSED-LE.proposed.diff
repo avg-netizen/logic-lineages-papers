@@ -1,0 +1,20 @@
+--- LogicLineages/PersistentMarking/NumberedWindowFiniteSaturationBasicProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowFiniteSaturationBasicProof.lean
+@@ -73,6 +73,7 @@
+     (he : EqualityTest same) {i j : Nat} (hle : i ≤ j) :
+     rounds V same edge seed i ⊆ rounds V same edge seed j := by
+   obtain ⟨d,rfl⟩ := Nat.exists_eq_add_of_le hle
++  clear hle
+   induction d with
+   | zero => intro _ h; exact h
+   | succ d ih =>
+--- LogicLineages/PersistentMarking/NumberedWindowFiniteSaturationBoundProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowFiniteSaturationBoundProof.lean
+@@ -16,6 +16,7 @@
+     (h : rounds V same edge seed i = rounds V same edge seed (i+1)) :
+     rounds V same edge seed j = rounds V same edge seed (j+1) := by
+   obtain ⟨d,rfl⟩ := Nat.exists_eq_add_of_le hle
++  clear hle
+   induction d with
+   | zero => exact h
+   | succ d ih => exact stableNext V same edge seed (i+d) ih

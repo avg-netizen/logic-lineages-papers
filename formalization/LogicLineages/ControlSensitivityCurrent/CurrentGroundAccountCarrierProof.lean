@@ -48,9 +48,10 @@ theorem literalCarrier : CurrentGroundAccountTargets.LiteralCarrier := by
       SyntaxCode.encodeTerm src :=
       GroundCaptureClosingCode.Proof.exactProtectedSource [] (σ :: σ :: Γ) (Ty.curriedGround 1) _
     have ha := CurrentGroundBudget.assignmentCode p src v hv
+    simp only [List.map_cons,σ] at hClose ha
     unfold carrierCode
     simp only [hcodec.1,hcodec.2.1,List.map_cons,List.getD_cons_zero]
     rw [hFresh,hSat,hClose]
-    simpa only [ha,List.map_cons,bind,Option.bind_some,pure,r,recordCode,σ]
+    simp only [ha,List.map_cons,bind,Option.bind_some,pure,r,recordCode,σ] <;> rfl
 
 end LogicLineages.ControlSensitivityCurrent.CurrentGroundAccount

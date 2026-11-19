@@ -1,0 +1,43 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionGapProof.lean:20:19: warning: This simp argument is unused:
+  OriginalScaleFlatList.Proof.flatten_replicate_length
+
+Hint: Omit it from the simp argument list.
+  simp [paidList,̵O̵r̵i̵g̵i̵n̵a̵l̵S̵c̵a̵l̵e̵F̵l̵a̵t̵L̵i̵s̵t̵.̵P̵r̵o̵o̵f̵.̵f̵l̵a̵t̵t̵e̵n̵_̵r̵e̵p̵l̵i̵c̵a̵t̵e̵_̵l̵e̵n̵g̵t̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionGapProof.lean:44:57: error(lean.unknownIdentifier): Unknown identifier `finiteNorm`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionGapProof.lean:46:55: error(lean.unknownIdentifier): Unknown identifier `finiteNorm`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionGapProof.lean:49:56: error(lean.unknownIdentifier): Unknown identifier `finiteNorm`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionGapProof.lean:53:31: error(lean.unknownIdentifier): Unknown identifier `finiteNorm`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionGapProof.lean:77:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  List.map ?f (List.replicate ?n ?xs).flatten
+in the target expression
+  List.map (fun x => unitValue f (x.vector 1)) (List.replicate (scale b) xs).flatten ++
+      List.replicate (scale b) (unitValue f (caller.vector 1)) =
+    (List.replicate (scale b) (List.map (fun x => unitValue f (x.vector 1)) xs)).flatten ++
+      List.replicate (scale b) (unitValue f (caller.vector 1))
+
+Γ : List Ty
+f : ℕ → ℕ
+b c : ℕ
+xs : List (Operator Γ)
+caller : Operator Γ
+hb : 4 ≤ b
+hc : 3 * xs.length + 4 ≤ c
+hn : 2 ≤ scale b
+hd : 1 ≤ c - 3 * xs.length - 3
+hp : 2 * 1 ≤ scale b * (c - 3 * xs.length - 3)
+hp' : 0 < gap b xs.length c ∧ gap b xs.length c + 1 = scale b * (c - 3 * xs.length - 3)
+vals : List Ordinal.{0} := List.map (fun op => unitValue f (op.vector 1)) xs
+a : Ordinal.{0} := unitValue f (caller.vector 1)
+hvals : ∀ x ∈ vals, x < epsilonZero
+ha : a < epsilonZero
+hc' : 3 * vals.length + 4 ≤ c
+h :
+  ordinalNaturalProduct (↑(scale b)) (ordinalNaturalSum (List.foldr ordinalNaturalSum 0 vals + ↑c) a) =
+    HeterogeneousUnaryAssembly.chargedSum ((List.replicate (scale b) vals).flatten ++ List.replicate (scale b) a) +
+      ↑(scale b * (c - 3 * vals.length - 3) - 1)
+⊢ List.map (fun x => unitValue f (x.vector 1)) (List.replicate (scale b) xs).flatten ++
+      List.replicate (scale b) (unitValue f (caller.vector 1)) =
+    (List.replicate (scale b) (List.map (fun x => unitValue f (x.vector 1)) xs)).flatten ++
+      List.replicate (scale b) (unitValue f (caller.vector 1))

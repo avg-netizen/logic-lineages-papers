@@ -1,0 +1,10 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountCarrierProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountCarrierProof.lean
+@@ -52,6 +52,6 @@
+     unfold carrierCode
+     simp only [hcodec.1,hcodec.2.1,List.map_cons,List.getD_cons_zero]
+     rw [hFresh,hSat,hClose]
+-    simpa only [ha,List.map_cons,bind,Option.bind_some,pure,r,recordCode,σ]
++    simp only [ha,List.map_cons,bind,Option.bind_some,pure,r,recordCode,σ] <;> rfl
+ 
+ end LogicLineages.ControlSensitivityCurrent.CurrentGroundAccount

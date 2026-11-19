@@ -171,6 +171,7 @@ theorem actualAnnotation : CurrentGroundAnnotationTargets.ActualAnnotation := by
           (CurrentGroundAnnotationCode.repeatCode p (2*((OrdinalSyntax.vectorCode ub).map OrdinalSyntax.partialSize).sum) pc).bind
             (fun rc => some (4*Nat.pair rc (SourceAnnotationCode.closeCode (SourceAnnotationCode.code db))+2)))).bind
         (fun dc => some (OrdinalSyntax.vectorCode u,dc)) = _
+      simp only [SourceTypedPorts.variableIndex] at hpr
       rw [hpr,Option.bind_some,vectorSize ub,markerExpansion.2 k Γ F p factor pd,
         Option.bind_some,Option.bind_some,SourceAnnotationCode.Proof.closeTree_correct]
       rfl

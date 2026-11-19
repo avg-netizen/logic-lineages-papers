@@ -1,0 +1,22 @@
+--- LogicLineages/PersistentMarking/NumberedWindowFiniteSaturationBasicProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowFiniteSaturationBasicProof.lean
+@@ -2,6 +2,7 @@
+ 
+ namespace LogicLineages.PersistentMarking.NumberedWindowFiniteSaturationBasicProof
+ open NumberedWindowFiniteSaturation
++open scoped List
+ universe u
+ 
+ theorem seedMem {α : Type u} {V : List α} {same edge : α → α → Bool} {seed v : α}
+@@ -73,8 +74,9 @@
+     rounds V same edge seed i ⊆ rounds V same edge seed j := by
+   obtain ⟨d,rfl⟩ := Nat.exists_eq_add_of_le hle
+   induction d with
+-  | zero => exact fun h => h
++  | zero => intro _ h; exact h
+   | succ d ih =>
+-    exact fun h => (roundsStep V same edge seed he (i+d)).subset (ih h)
++    intro _ h
++    exact (roundsStep V same edge seed he (i+d)).subset (ih h)
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowFiniteSaturationBasicProof

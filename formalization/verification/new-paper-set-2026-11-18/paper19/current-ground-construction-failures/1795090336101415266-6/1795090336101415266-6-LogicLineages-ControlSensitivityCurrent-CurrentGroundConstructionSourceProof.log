@@ -1,0 +1,200 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionSourceProof.lean:69:40: error: Type mismatch
+  List.length_map
+has type
+  ∀ (f : ?m.300 → ?m.301), (List.map f ?m.302).length = List.length ?m.302
+but is expected to have type
+  cs.length = rs.length
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionSourceProof.lean:99:20: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if
+      SyntaxCode.check (SyntaxCode.typeCode σ :: List.map SyntaxCode.typeCode Γ)
+          (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+        some 0 then
+    ?m.623
+  else ?m.624
+in the target expression
+  (if
+        SyntaxCode.check (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ)
+            (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+          some 0 then
+      if TrackedSourceInspectionCode.occursCode 0 (SyntaxCode.encodeTerm (TrackedSource.erase P)) = true then do
+        let __x ←
+          CurrentGroundAccount.sourceCode p
+              (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ)
+              (SyntaxCode.encodeTerm (TrackedSource.erase P))
+        match __x with
+          | (fst, xs, c) => do
+            let b ←
+              budgetCode p (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ)
+                  (SyntaxCode.encodeTerm (TrackedSource.erase P))
+            let a ←
+              callerCode p (List.map SyntaxCode.typeCode Γ) (SyntaxCode.typeCode (Ty.curriedGround (k + 1)))
+                  (SyntaxCode.encodeTerm C)
+            let out ← chainCode p (List.map SyntaxCode.typeCode Γ) (OriginalScaleCompilerCode.paidCode b xs a)
+            pure (out, b, gap b xs.length c)
+      else none
+    else none) =
+    some
+      ((List.map SyntaxCode.typeCode
+            (context (paidList b (List.map carrierOp rs) (callerOp (UnaryCarrier.saturate k C) vC))),
+          SyntaxCode.encodeTerm
+            (SourceUnaryChain.chainSource
+              (terms (paidList b (List.map carrierOp rs) (callerOp (UnaryCarrier.saturate k C) vC)))),
+          OrdinalSyntax.vectorCode w),
+        b, Δ)
+
+case refine_1
+p : Policy
+f : ℕ → ℕ
+k : ℕ
+Γ : List Ty
+P : TrackedSource.Expr k (Ty.curriedGround (k + 1) :: Γ) Variable.here 0
+C : OriginalTerm Γ (Ty.curriedGround (k + 1))
+hAct : TrackedSource.active P = true
+u : OrdinalVector (Ty.curriedGround (k + 1) :: Γ) (Ty.curriedGround 0).level
+rs : List (UnaryRecord (Ty.curriedGround (k + 1) :: Ty.curriedGround (k + 1) :: Γ))
+xs : List (Carrier p)
+c : ℕ
+v : OrdinalPartialVector Γ (Ty.curriedGround (k + 1))
+left✝³ : CurrentGroundAccount.sourceData p P = some (u, rs, c)
+hRaw :
+  CurrentGroundAccount.sourceCode p (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ))
+      (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+    some (OrdinalSyntax.vectorCode u, List.map recordCode rs, c)
+hu : AdmissibleAssignment.assignment p (TrackedSource.erase P) = some u
+hm : List.Forall₂ Matches rs xs
+hSpawn : CurrentReserve.SpawnedAccount p f (u 0) xs c
+left✝² : CurrentReserve.Account p f (u 0) xs c
+hFloor : CurrentReserve.sourceFloor P ≤ reserve xs c
+hv : AdmissiblePartial.run p 0 (u 0) = some v
+hVal :
+  ∀ (μ : Variable Γ Ty.ground → ℕ),
+    ParametricSourceSuccessor.denoteWith f (commonUnits μ) (v (HeadFiniteSurplus.outputOne k)) = carrierSum f xs + ↑c
+B : OrdinalVector Γ ((Ty.curriedGround (k + 1)).arrow Ty.ground).level
+caller : OrdinalVector Γ (Ty.curriedGround (k + 1)).level
+b : ℕ
+hB : AdmissibleAssignment.assignment p (Term.lam (TrackedSource.erase P)) = some B
+hC : AdmissibleAssignment.assignment p C = some caller
+hb4 : 4 ≤ b
+hbox : AdmissibleAssignment.box p B caller (OriginalSecondBudget.boxSecond k) = B (OriginalSecondBudget.boxSecond k)
+hFin :
+  ∀ (f : ℕ → ℕ) (ν : OrdinalComponent Γ → Ordinal.{0}),
+    ParametricSourceSuccessor.denoteWith f ν (B (OriginalSecondBudget.boxSecond k)) = ↑b
+hBudget :
+  budgetCode p (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ))
+      (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+    some b
+hu' : AdmissibleAssignment.assignment p (TrackedSource.erase P) = some u
+hb : b = OriginalSecondBudget.scalarSecond (u 0)
+hB1 : B (boxFirst k) = v (HeadFiniteSurplus.outputOne k)
+hB2 : B (OriginalSecondBudget.boxSecond k) = v (HeadFiniteSurplus.outputTwo k)
+hv' : AdmissiblePartial.run p 0 (u 0) = some v
+hRecords :
+  rs.length = xs.length ∧
+    (∀ op ∈ List.map carrierOp rs, Operator.Assigned p op) ∧
+      List.foldr ordinalNaturalSum 0 (List.map (fun op => unitValue f (op.vector 1)) (List.map carrierOp rs)) =
+        carrierSum f xs
+h4 : 4 ≤ reserve xs c
+cs : List (Operator Γ) := List.map carrierOp rs
+hCLen : cs.length = rs.length
+hPaid : 3 * cs.length + 4 ≤ c
+vC : OrdinalVector Γ 1
+hUC : AdmissibleAssignment.assignment p (UnaryCarrier.saturate k C) = some vC
+hCC : vC 1 = caller (UnaryCarrier.headIndex k)
+hCallerRaw :
+  callerCode p (List.map SyntaxCode.typeCode Γ) (SyntaxCode.typeCode (Ty.curriedGround (k + 1)))
+      (SyntaxCode.encodeTerm C) =
+    some (operatorCode (callerOp (UnaryCarrier.saturate k C) vC))
+opC : Operator Γ := callerOp (UnaryCarrier.saturate k C) vC
+hOpC : Operator.Assigned p opC
+ops : List (Operator Γ) := paidList b cs opC
+K : OriginalTerm (context ops) (Ty.ground.arrow Ty.ground) := SourceUnaryChain.chainSource (terms ops)
+hAssigned : ∀ o ∈ ops, Operator.Assigned p o
+left✝¹ : CurrentUnaryChain.Assigned p (terms ops) (vectors ops)
+w : OrdinalVector (context ops) 1
+hK : AdmissibleAssignment.assignment p (SourceUnaryChain.chainSource (terms ops)) = some w
+hKRaw :
+  chainCode p (List.map SyntaxCode.typeCode Γ) (List.map operatorCode ops) =
+    some
+      (List.map SyntaxCode.typeCode (context ops), SyntaxCode.encodeTerm (SourceUnaryChain.chainSource (terms ops)),
+        OrdinalSyntax.vectorCode w)
+hHead :
+  ∀ (μ : Variable (context ops) Ty.ground → ℕ),
+    ParametricSourceSuccessor.denoteWith f (commonUnits μ) (w 1) = chargedSum f ops
+hGap : 0 < gap b cs.length c
+left✝ : gap b cs.length c + 1 = scale b * (c - 3 * cs.length - 3)
+hBalance :
+  ordinalNaturalProduct (↑(scale b))
+      (ordinalNaturalSum (List.foldr ordinalNaturalSum 0 (List.map (fun op => unitValue f (op.vector 1)) cs) + ↑c)
+        (unitValue f (opC.vector 1))) =
+    chargedSum f (paidList b cs opC) + ↑(gap b cs.length c)
+Δ : ℕ := gap b rs.length c
+hΔ : 0 < Δ
+σ : Ty := Ty.curriedGround (k + 1)
+hInspect :
+  TrackedSourceInspectionCode.occursCode (SourceTypedPorts.variableIndex Variable.here)
+        (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+      TrackedSource.active P ∧
+    SyntaxCode.check (List.map SyntaxCode.typeCode (σ :: Γ)) (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+        some (SyntaxCode.typeCode (Ty.curriedGround 0)) ∧
+      TrackedSourceInspectionCode.arityCode (SyntaxCode.typeCode (Ty.curriedGround 0)) = some 0
+hc :
+  SyntaxCode.check (SyntaxCode.typeCode σ :: List.map SyntaxCode.typeCode Γ)
+      (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+    some 0
+ho : TrackedSourceInspectionCode.occursCode 0 (SyntaxCode.encodeTerm (TrackedSource.erase P)) = true
+hR : List.map recordCode rs = List.map operatorCode cs
+hPay :
+  OriginalScaleCompilerCode.paidCode b (List.map operatorCode cs) (operatorCode opC) =
+    List.map operatorCode (paidList b cs opC)
+hR0 :
+  CurrentGroundAccount.sourceCode p (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ)
+      (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+    some (OrdinalSyntax.vectorCode u, List.map recordCode rs, c)
+hB0 :
+  budgetCode p (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ)
+      (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+    some b
+⊢ (if
+        SyntaxCode.check (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ)
+            (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+          some 0 then
+      if TrackedSourceInspectionCode.occursCode 0 (SyntaxCode.encodeTerm (TrackedSource.erase P)) = true then do
+        let __x ←
+          CurrentGroundAccount.sourceCode p
+              (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ)
+              (SyntaxCode.encodeTerm (TrackedSource.erase P))
+        match __x with
+          | (fst, xs, c) => do
+            let b ←
+              budgetCode p (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ)
+                  (SyntaxCode.encodeTerm (TrackedSource.erase P))
+            let a ←
+              callerCode p (List.map SyntaxCode.typeCode Γ) (SyntaxCode.typeCode (Ty.curriedGround (k + 1)))
+                  (SyntaxCode.encodeTerm C)
+            let out ← chainCode p (List.map SyntaxCode.typeCode Γ) (OriginalScaleCompilerCode.paidCode b xs a)
+            pure (out, b, gap b xs.length c)
+      else none
+    else none) =
+    some
+      ((List.map SyntaxCode.typeCode
+            (context (paidList b (List.map carrierOp rs) (callerOp (UnaryCarrier.saturate k C) vC))),
+          SyntaxCode.encodeTerm
+            (SourceUnaryChain.chainSource
+              (terms (paidList b (List.map carrierOp rs) (callerOp (UnaryCarrier.saturate k C) vC)))),
+          OrdinalSyntax.vectorCode w),
+        b, Δ)
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    TrackedSource.erase P
+  has type
+    OriginalTerm (Ty.curriedGround (k + 1) :: Γ) (Ty.curriedGround 0)
+  but is expected to have type
+    OriginalTerm (Ty.curriedGround (k + 1) :: Γ) Ty.ground
+  in the application
+    SyntaxCode.encodeTerm (TrackedSource.erase P)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionSourceProof.lean:116:72: error: Expected type must not contain free variables
+  0 < ↑(UnaryCarrier.headIndex k)
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables

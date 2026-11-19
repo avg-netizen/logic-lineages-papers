@@ -1,0 +1,11 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionSourceProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionSourceProof.lean
+@@ -101,7 +101,7 @@
+     change compileCode p _ _ body _ = _
+     simp only [compileCode,hc,ho,if_true,hR0,hB0,hCallerRaw,bind,pure,Option.bind_some,Prod.mk.injEq]
+     rw [hR,hPay,hKRaw]
+-    simp [Δ,K,ops,cs]
++    simp [Δ,K,ops,cs,opC]
+   · intro ρ μ
+     have hBody : ParametricSourceSuccessor.denoteWith f (commonUnits ρ) (B (boxFirst k)) =
+         carrierSum f xs + (c : Ordinal) := by

@@ -1,0 +1,12 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairDecodeProof.lean:16:43: error: Application type mismatch: The argument
+  h
+has type
+  List.find? (fun p => decide (pair p.fst p.snd = n)) (pairCandidates n) = some (a, b)
+but is expected to have type
+  List.find? (@decide (pair a b = n)) ?m.13 = some ?m.9
+in the application
+  List.find?_some h
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticPairDecodeProof.lean:14:82: error: unsolved goals
+n a b : Nat
+h : List.find? (fun p => decide (pair p.fst p.snd = n)) (pairCandidates n) = some (a, b)
+⊢ pair a b = n

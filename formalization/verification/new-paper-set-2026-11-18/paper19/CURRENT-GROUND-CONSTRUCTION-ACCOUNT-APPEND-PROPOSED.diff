@@ -1,0 +1,66 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountSemanticProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountSemanticProof.lean
+@@ -54,6 +54,13 @@
+     NumericAccountData.surplusCode (OrdinalSyntax.typedCode q) = HeadFiniteSurplus.surplus q :=
+   congrArg Prod.snd (NumericAccountData.Proof.exactScalarSurplus Γ σ q)
+ 
++private theorem appendMatches {α β : Type} {R : α → β → Prop}
++    {as bs : List α} {xs ys : List β} (h₁ : List.Forall₂ R as xs) (h₂ : List.Forall₂ R bs ys) :
++    List.Forall₂ R (as++bs) (xs++ys) := by
++  induction h₁ with
++  | nil => exact h₂
++  | cons h _ ih => exact .cons h ih
++
+ theorem actualAccount : CurrentGroundAccountTargets.ActualAccount := by
+   intro p f k Γ d
+   induction d with
+@@ -83,7 +90,7 @@
+     obtain ⟨ss,ys,e,hb,hn,hby,_,hcb⟩ := ihb hd.2
+     have world : SpawnedAccount p f (erase d) (xs++ys) (c+e+1) :=
+       .add (noFreeActive (erase d) hf) hax hby
+-    refine ⟨rs++ss,xs++ys,c+e+1,?_,hm.append hn,world,forgetOrigins world,?_⟩
++    refine ⟨rs++ss,xs++ys,c+e+1,?_,appendMatches hm hn,world,forgetOrigins world,?_⟩
+     · change accountData p d = _
+       rw [accountData.eq_def,if_neg hf]
+       simp [d,ha,hb,bind,pure]
+@@ -98,6 +105,7 @@
+       rw [codeFree,if_neg hf]
+       simp only [hm,hdiv,Nat.unpair_pair,show ¬(2:Nat)=0 by decide,show ¬(2:Nat)=1 by decide,
+         true_or,↓reduceIte,↓reduceDIte]
++      simp only [List.map_cons] at hca hcb
+       simp [hca,hcb,List.map_append,bind,pure]
+   | collapse op tail ih =>
+     intro hd
+@@ -105,6 +113,7 @@
+     by_cases hf : ordinalHeadFree (erase d) = true
+     · exact freeCaseResult p f d hf
+     obtain ⟨rs,xs,c,hta,hm,hx,_,hr⟩ := ih hd.2.2.2
++    simp only [List.map_cons] at hr
+     have hgrade := AdditiveHeadTree.Proof.head_grade hd.2.1
+     obtain ⟨normal,finite,value,hclass,_,hnf,hval⟩ :=
+       currentHeadClassification f (Ty.curriedGround (k+1) :: Γ) 1 op.head hgrade (by decide)
+@@ -133,6 +142,7 @@
+     | false =>
+       let sum := c+HeadFiniteSurplus.surplus op.head
+       obtain ⟨r,w,hRec,_,⟨hReal,hmr⟩,hrc⟩ := literalCarrier p f k Γ op hd.1
++      simp only [List.map_cons] at hrc
+       let a := CurrentReserve.carrierFrom hReal
+       have hv := hReal.2.2.2.2.2.2.2 (fun _ => 0) (fun _ => 0)
+       have he : a.head f = unitValue f op.head := hv
+@@ -140,7 +150,7 @@
+         ⟨op.arity,op.source,op.vector,w,r.vector,rfl,hReal,rfl⟩
+       have label : SpawnedAccount p f (erase d) (xs++[a]) sum :=
+         .nonfinite a (noFreeActive (erase d) hf) (hnf.1 hfin) he (fun _ => ho) hx
+-      refine ⟨rs++[r],xs++[a],sum,?_,hm.append (.cons hmr .nil),label,forgetOrigins label,?_⟩
++      refine ⟨rs++[r],xs++[a],sum,?_,appendMatches hm (.cons hmr .nil),label,forgetOrigins label,?_⟩
+       · change accountData p d = _
+         rw [accountData.eq_def,if_neg hf]
+         simp [d,hclass,hfin,hta,hRec,sum,bind,pure]
+@@ -178,6 +188,7 @@
+   · have hcode' : CurrentGroundAnnotationCode.buildCode p ((Ty.curriedGround (k+1) :: Γ).map SyntaxCode.typeCode)
+         0 (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+       some (OrdinalSyntax.vectorCode u,SourceAnnotationCode.code d) := hcode
++    simp only [List.map_cons] at hcode' hRaw
+     simp [sourceCode,hcode',hRaw,bind,pure]
+ 
+ end LogicLineages.ControlSensitivityCurrent.CurrentGroundAccount

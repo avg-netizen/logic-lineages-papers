@@ -10,6 +10,7 @@ namespace LogicLineages.ControlSensitivityCurrent.CurrentGroundConstruction
 open LogicLineages.OrdinalComparison
 open LogicLineages.OrdinalComparison.Source
 open LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemantics
+open LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemanticsProof (finiteNorm)
 open ParametricSourceSuccessor
 open FunctionalDetector.Proof
 open CurrentReserve (unitValue zeroUnits)
@@ -74,7 +75,13 @@ theorem exactPositiveGap : CurrentGroundConstructionTargets.ExactPositiveGap := 
   have hz : ((paidList b xs caller).map (fun x => unitValue f (x.vector 1))) =
       (List.replicate (scale b) vals).flatten ++ List.replicate (scale b) a := by
     simp only [paidList,List.map_append,List.map_replicate,vals,a]
-    rw [OriginalScaleFlatList.Proof.map_flatten_replicate]
+    have hFlat (n : Nat) : ((List.replicate n xs).flatten).map (fun op => unitValue f (op.vector 1)) =
+        (List.replicate n (xs.map (fun op => unitValue f (op.vector 1)))).flatten := by
+      induction n with
+      | zero => rfl
+      | succ n ih => simp only [List.replicate_succ,List.flatten_cons,List.map_append,ih]
+    exact congrArg (fun ys : List Ordinal => ys ++ List.replicate (scale b) (unitValue f (caller.vector 1)))
+      (hFlat (scale b))
   simpa only [chargedSum,hz, gap,vals,List.length_map,a] using h
 
 end LogicLineages.ControlSensitivityCurrent.CurrentGroundConstruction

@@ -1,0 +1,58 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountCarrierProof.lean:55:4: error: Tactic `assumption` failed
+
+case refine_2
+p : Policy
+f : ℕ → ℕ
+k : ℕ
+Γ : List Ty
+op : Operator (Ty.curriedGround (k + 1) :: Γ)
+ho : AdmissibleAssignment.assignment p op.source = some op.vector
+σ : Ty := Ty.curriedGround (k + 1)
+F : Variable (σ :: Γ) σ := Variable.here
+w v : OrdinalVector (Ty.curriedGround (k + 1) :: σ :: Γ) 1
+hA : CurrentSelectedCarriers.Realization p f F op.arity op.source op.vector w v
+src : OriginalTerm (σ :: σ :: Γ) (Ty.curriedGround 1) := CurrentSelectedCarriers.carrierAt F op.arity op.source
+r : UnaryRecord (σ :: σ :: Γ) := { source := src, vector := v }
+hv : AdmissibleAssignment.assignment p src = some v
+hcodec :
+  SourceAnnotationCode.operatorArity (SourceAnnotationCode.operatorCode op) = op.arity ∧
+    SourceAnnotationCode.operatorSource (SourceAnnotationCode.operatorCode op) = SyntaxCode.encodeTerm op.source ∧
+      SourceAnnotationCode.operatorVector (SourceAnnotationCode.operatorCode op) = OrdinalSyntax.vectorCode op.vector ∧
+        SourceAnnotationCode.operatorHead (SourceAnnotationCode.operatorCode op) = OrdinalSyntax.typedCode op.head
+hFresh :
+  SourceCarrierMapCode.mapCode true 0 (SyntaxCode.encodeTerm op.source) =
+    SyntaxCode.encodeTerm (Term.rename op.source fun {σ_1} => UnaryCarrier.renameTracked)
+hSat :
+  NumericCarrierData.saturateSource op.arity
+      (SyntaxCode.encodeTerm (Term.rename op.source fun {σ} => UnaryCarrier.renameTracked)) =
+    SyntaxCode.encodeTerm (UnaryCarrier.saturate op.arity (Term.rename op.source fun {σ} => UnaryCarrier.renameTracked))
+hClose :
+  GroundCaptureClosingCode.sourceCode
+      (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) ::
+        SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ)
+      0
+      (SyntaxCode.encodeTerm
+        (UnaryCarrier.saturate op.arity (Term.rename op.source fun {σ} => UnaryCarrier.renameTracked))) =
+    SyntaxCode.encodeTerm src
+ha :
+  PolicyAssignment.assignmentCode p
+      (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) ::
+        SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ)
+      (SyntaxCode.encodeTerm src) =
+    some (OrdinalSyntax.vectorCode v)
+⊢ some
+      ([SyntaxCode.typeCode (Ty.curriedGround (k + 1)), SyntaxCode.typeCode (Ty.curriedGround (k + 1))],
+        SyntaxCode.encodeTerm src, OrdinalSyntax.vectorCode v) =
+    some
+      ([SyntaxCode.typeCode (Ty.curriedGround (k + 1)), SyntaxCode.typeCode (Ty.curriedGround (k + 1))],
+        SyntaxCode.encodeTerm src, OrdinalSyntax.vectorCode v)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountCarrierProof.lean:40:78: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵a̵r̵r̵i̵e̵r̵R̵e̵c̵o̵r̵d̵,̵s̵h̵o̵w̵[̲c̲a̲r̲r̲i̲e̲r̲R̲e̲c̲o̲r̲d̲,̲
+  ̲ ̲ ̲ ̲ ̲s̲h̲o̲w̲ CurrentSelectedCarriers.carrierAt (.here : Variable (σ :: Γ) σ) op.arity op.source = src
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲from r̵f̵l̵,̵h̵v̵,̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵p̵u̵r̵e̵,̵r̵]̵r̲f̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲h̲v̲,̲ ̲b̲i̲n̲d̲,̲ ̲p̲u̲r̲e̲,̲ ̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

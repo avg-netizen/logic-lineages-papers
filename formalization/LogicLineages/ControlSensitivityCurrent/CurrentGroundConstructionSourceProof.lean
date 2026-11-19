@@ -66,7 +66,7 @@ private theorem literalTypedConstruction (p : Policy) (f : Nat → Nat) (k : Nat
   have hRecords := recordFacts p f rs xs hm
   have h4 := (groundSourceFloor P hAct).trans hFloor
   let cs := rs.map carrierOp
-  have hCLen : cs.length = rs.length := List.length_map
+  have hCLen : cs.length = rs.length := by simp [cs]
   have hPaid : 3*cs.length+4 ≤ c := by
     rw [hCLen,hRecords.1]
     unfold reserve at h4
@@ -83,12 +83,12 @@ private theorem literalTypedConstruction (p : Policy) (f : Nat → Nat) (k : Nat
   have hΔ : 0 < Δ := by simpa only [hCLen,Δ] using hGap
   refine ⟨u,B,caller,v,rs,xs,vC,b,c,hu,hB,hC,hv,hSpawn,hm,h4,hRaw,hB1,hB2,hb,hb4,hbox,
     hFin f,hUC,hCC,w,Δ,hK,?_,rfl,hΔ,?_⟩
-  · let σ := Ty.curriedGround (k+1)
-    have hInspect := TrackedSourceInspectionCode.Proof.actualGrammarInspection k (σ :: Γ) .here 0 P
-    have hc : SyntaxCode.check (SyntaxCode.typeCode σ :: Γ.map SyntaxCode.typeCode)
-        (SyntaxCode.encodeTerm (TrackedSource.erase P)) = some 0 := hInspect.2.1
-    have ho : TrackedSourceInspectionCode.occursCode 0 (SyntaxCode.encodeTerm (TrackedSource.erase P)) = true :=
-      hInspect.1.trans hAct
+  · let body : Nat := SyntaxCode.encodeTerm (τ := .ground) (TrackedSource.erase P)
+    have hInspect := TrackedSourceInspectionCode.Proof.actualGrammarInspection k
+      (Ty.curriedGround (k+1) :: Γ) .here 0 P
+    have hc : SyntaxCode.check (SyntaxCode.typeCode (Ty.curriedGround (k+1)) :: Γ.map SyntaxCode.typeCode)
+        body = some 0 := hInspect.2.1
+    have ho : TrackedSourceInspectionCode.occursCode 0 body = true := hInspect.1.trans hAct
     have hR : rs.map recordCode = cs.map operatorCode := by
       rw [show cs = rs.map carrierOp by rfl,List.map_map]
       rfl
@@ -96,10 +96,12 @@ private theorem literalTypedConstruction (p : Policy) (f : Nat → Nat) (k : Nat
     have hR0 := hRaw
     have hB0 := hBudget
     simp only [List.map_cons] at hR0 hB0
-    rw [compileCode,if_pos hc,if_pos ho]
-    simp only [hR0,hB0,hCallerRaw,bind,pure,Option.bind_some,Prod.mk.injEq]
+    change CurrentGroundAccount.sourceCode p _ body = _ at hR0
+    change budgetCode p _ body = _ at hB0
+    change compileCode p _ _ body _ = _
+    simp only [compileCode,hc,ho,if_true,hR0,hB0,hCallerRaw,bind,pure,Option.bind_some,Prod.mk.injEq]
     rw [hR,hPay,hKRaw]
-    simp [Δ,K,ops,cs]
+    simp [Δ,K,ops,cs,opC]
   · intro ρ μ
     have hBody : ParametricSourceSuccessor.denoteWith f (commonUnits ρ) (B (boxFirst k)) =
         carrierSum f xs + (c : Ordinal) := by
@@ -113,7 +115,7 @@ private theorem literalTypedConstruction (p : Policy) (f : Nat → Nat) (k : Nat
         unitValue f (opC.vector 1) := by
       change _ = unitValue f (vC 1)
       rw [hCC]
-      exact positiveCommonValue f _ (hg (UnaryCarrier.headIndex k)) (by decide) ρ
+      exact positiveCommonValue f _ (hg (UnaryCarrier.headIndex k)) (by change 0 < 1; decide) ρ
     rw [hBody,hCVal,hHead μ,← hRecords.2.2]
     simpa only [hCLen,Δ,ops,cs,List.length_map] using hBalance
 

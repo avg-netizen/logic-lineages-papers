@@ -1,0 +1,18 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionGapProof.lean:21:19: warning: This simp argument is unused:
+  OriginalScaleFlatList.Proof.flatten_replicate_length
+
+Hint: Omit it from the simp argument list.
+  simp [paidList,̵O̵r̵i̵g̵i̵n̵a̵l̵S̵c̵a̵l̵e̵F̵l̵a̵t̵L̵i̵s̵t̵.̵P̵r̵o̵o̵f̵.̵f̵l̵a̵t̵t̵e̵n̵_̵r̵e̵p̵l̵i̵c̵a̵t̵e̵_̵l̵e̵n̵g̵t̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionGapProof.lean:79:6: error: Application type mismatch: The argument
+  OriginalScaleFlatList.Proof.map_flatten_replicate (fun op => ?m.294) (scale b) xs
+has type
+  Eq.{1} (List.map (fun op => ?m.294) (List.replicate (scale b) xs).flatten)
+    (List.replicate (scale b) (List.map (fun op => ?m.294) xs)).flatten
+but is expected to have type
+  Eq.{2} (List.map (fun x => unitValue f (x.vector 1)) (List.replicate (scale b) xs).flatten)
+    (List.replicate (scale b) (List.map (fun x => unitValue f (x.vector 1)) xs)).flatten
+in the application
+  congrArg (fun ys => ys ++ List.replicate (scale b) (unitValue f (caller.vector 1)))
+    (OriginalScaleFlatList.Proof.map_flatten_replicate (fun op => ?m.294) (scale b) xs)

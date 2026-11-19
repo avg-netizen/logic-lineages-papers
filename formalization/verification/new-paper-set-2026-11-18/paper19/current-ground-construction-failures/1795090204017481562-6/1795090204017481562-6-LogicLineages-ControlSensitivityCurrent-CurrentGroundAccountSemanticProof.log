@@ -1,0 +1,281 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountSemanticProof.lean:86:38: error(lean.invalidField): Invalid field `append`: The environment does not contain `List.Forall₂.append`, so it is not possible to project the field `append` from an expression
+  hm
+of type `List.Forall₂ Matches rs xs`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountSemanticProof.lean:90:4: error: unsolved goals
+case neg.refine_2
+p : Policy
+f : ℕ → ℕ
+k : ℕ
+Γ : List Ty
+a b : Tree k (Ty.curriedGround (k + 1) :: Γ) Variable.here
+iha :
+  CurrentGroundAnnotation.Valid p a →
+    ∃ rs xs c,
+      accountData p a = some (rs, c) ∧
+        List.Forall₂ Matches rs xs ∧
+          SpawnedAccount p f (erase a) xs c ∧
+            Account p f (erase a) xs c ∧
+              accountCode p (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ))
+                  (SourceAnnotationCode.code a) =
+                some (List.map recordCode rs, c)
+ihb :
+  CurrentGroundAnnotation.Valid p b →
+    ∃ rs xs c,
+      accountData p b = some (rs, c) ∧
+        List.Forall₂ Matches rs xs ∧
+          SpawnedAccount p f (erase b) xs c ∧
+            Account p f (erase b) xs c ∧
+              accountCode p (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ))
+                  (SourceAnnotationCode.code b) =
+                some (List.map recordCode rs, c)
+hd : CurrentGroundAnnotation.Valid p (a.add b)
+d : Tree k (Ty.curriedGround (k + 1) :: Γ) Variable.here := a.add b
+hf : ¬ordinalHeadFree (erase d) = true
+rs : List (UnaryRecord (Ty.curriedGround (k + 1) :: Ty.curriedGround (k + 1) :: Γ))
+xs : List (Carrier p)
+c : ℕ
+ha : accountData p a = some (rs, c)
+hm✝ : List.Forall₂ Matches rs xs
+hax : SpawnedAccount p f (erase a) xs c
+left✝¹ : Account p f (erase a) xs c
+hca :
+  accountCode p (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ)) (SourceAnnotationCode.code a) =
+    some (List.map recordCode rs, c)
+ss : List (UnaryRecord (Ty.curriedGround (k + 1) :: Ty.curriedGround (k + 1) :: Γ))
+ys : List (Carrier p)
+e : ℕ
+hb : accountData p b = some (ss, e)
+hn : List.Forall₂ Matches ss ys
+hby : SpawnedAccount p f (erase b) ys e
+left✝ : Account p f (erase b) ys e
+hcb :
+  accountCode p (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ)) (SourceAnnotationCode.code b) =
+    some (List.map recordCode ss, e)
+world : SpawnedAccount p f (erase d) (xs ++ ys) (c + e + 1)
+hm : SourceAnnotationCode.code d % 4 = 2
+hdiv : SourceAnnotationCode.code d / 4 = Nat.pair (SourceAnnotationCode.code a) (SourceAnnotationCode.code b)
+⊢ ((accountCode p (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ)
+          (SourceAnnotationCode.code a)).bind
+      fun a =>
+      (accountCode p (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ)
+            (SourceAnnotationCode.code b)).bind
+        fun a_1 => some (a.1 ++ a_1.1, a.2 + a_1.2 + 1)) =
+    some (List.map recordCode rs ++ List.map recordCode ss, c + e + 1)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountSemanticProof.lean:125:6: error: unsolved goals
+case neg.true.refine_2
+p : Policy
+f : ℕ → ℕ
+k : ℕ
+Γ : List Ty
+op : Operator (Ty.curriedGround (k + 1) :: Γ)
+tail : Tree k (Ty.curriedGround (k + 1) :: Γ) Variable.here
+ih :
+  CurrentGroundAnnotation.Valid p tail →
+    ∃ rs xs c,
+      accountData p tail = some (rs, c) ∧
+        List.Forall₂ Matches rs xs ∧
+          SpawnedAccount p f (erase tail) xs c ∧
+            Account p f (erase tail) xs c ∧
+              accountCode p (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ))
+                  (SourceAnnotationCode.code tail) =
+                some (List.map recordCode rs, c)
+hd : CurrentGroundAnnotation.Valid p (Tree.collapse op tail)
+d : Tree k (Ty.curriedGround (k + 1) :: Γ) Variable.here := Tree.collapse op tail
+hf : ¬ordinalHeadFree (erase d) = true
+rs : List (UnaryRecord (Ty.curriedGround (k + 1) :: Ty.curriedGround (k + 1) :: Γ))
+xs : List (Carrier p)
+c : ℕ
+hta : accountData p tail = some (rs, c)
+hm : List.Forall₂ Matches rs xs
+hx : SpawnedAccount p f (erase tail) xs c
+left✝¹ : Account p f (erase tail) xs c
+hr :
+  accountCode p (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ)) (SourceAnnotationCode.code tail) =
+    some (List.map recordCode rs, c)
+hgrade : GeneratedOrdinalGrade (Ty.curriedGround (k + 1) :: Γ) 1 op.head
+normal : ℕ
+finite : Bool
+value : ℕ
+hclass : UnitHeadCode.classify (OrdinalSyntax.typedCode op.head) = some (normal, finite, value)
+left✝ : finite = true ↔ unitValue f op.head < Ordinal.omega0
+hnf : finite = false ↔ Ordinal.omega0 ≤ unitValue f op.head
+hval : finite = true → ↑value = unitValue f op.head
+hcodec : SourceAnnotationCode.operatorHead (SourceAnnotationCode.operatorCode op) = OrdinalSyntax.typedCode op.head
+hmod : SourceAnnotationCode.code d % 4 = 3
+hdiv :
+  SourceAnnotationCode.code d / 4 = Nat.pair (SourceAnnotationCode.operatorCode op) (SourceAnnotationCode.code tail)
+hfin : finite = true
+sum : ℕ := c + value + HeadFiniteSurplus.surplus op.head
+label : SpawnedAccount p f (erase d) xs sum
+⊢ ((accountCode p (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ)
+          (SourceAnnotationCode.code tail)).bind
+      fun a => some (a.1, a.2 + value + HeadFiniteSurplus.surplus op.head)) =
+    some (List.map recordCode rs, c + value + HeadFiniteSurplus.surplus op.head)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountSemanticProof.lean:143:40: error(lean.invalidField): Invalid field `append`: The environment does not contain `List.Forall₂.append`, so it is not possible to project the field `append` from an expression
+  hm
+of type `List.Forall₂ Matches rs xs`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountSemanticProof.lean:147:6: error: unsolved goals
+case neg.false.refine_2
+p : Policy
+f : ℕ → ℕ
+k : ℕ
+Γ : List Ty
+op : Operator (Ty.curriedGround (k + 1) :: Γ)
+tail : Tree k (Ty.curriedGround (k + 1) :: Γ) Variable.here
+ih :
+  CurrentGroundAnnotation.Valid p tail →
+    ∃ rs xs c,
+      accountData p tail = some (rs, c) ∧
+        List.Forall₂ Matches rs xs ∧
+          SpawnedAccount p f (erase tail) xs c ∧
+            Account p f (erase tail) xs c ∧
+              accountCode p (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ))
+                  (SourceAnnotationCode.code tail) =
+                some (List.map recordCode rs, c)
+hd : CurrentGroundAnnotation.Valid p (Tree.collapse op tail)
+d : Tree k (Ty.curriedGround (k + 1) :: Γ) Variable.here := Tree.collapse op tail
+hf : ¬ordinalHeadFree (erase d) = true
+rs : List (UnaryRecord (Ty.curriedGround (k + 1) :: Ty.curriedGround (k + 1) :: Γ))
+xs : List (Carrier p)
+c : ℕ
+hta : accountData p tail = some (rs, c)
+hm : List.Forall₂ Matches rs xs
+hx : SpawnedAccount p f (erase tail) xs c
+left✝² : Account p f (erase tail) xs c
+hr :
+  accountCode p (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ)) (SourceAnnotationCode.code tail) =
+    some (List.map recordCode rs, c)
+hgrade : GeneratedOrdinalGrade (Ty.curriedGround (k + 1) :: Γ) 1 op.head
+normal : ℕ
+finite : Bool
+value : ℕ
+hclass : UnitHeadCode.classify (OrdinalSyntax.typedCode op.head) = some (normal, finite, value)
+left✝¹ : finite = true ↔ unitValue f op.head < Ordinal.omega0
+hnf : finite = false ↔ Ordinal.omega0 ≤ unitValue f op.head
+hval : finite = true → ↑value = unitValue f op.head
+hcodec : SourceAnnotationCode.operatorHead (SourceAnnotationCode.operatorCode op) = OrdinalSyntax.typedCode op.head
+hmod : SourceAnnotationCode.code d % 4 = 3
+hdiv :
+  SourceAnnotationCode.code d / 4 = Nat.pair (SourceAnnotationCode.operatorCode op) (SourceAnnotationCode.code tail)
+hfin : finite = false
+sum : ℕ := c + HeadFiniteSurplus.surplus op.head
+r : UnaryRecord (Ty.curriedGround (k + 1) :: Ty.curriedGround (k + 1) :: Γ)
+w : OrdinalVector (Ty.curriedGround (k + 1) :: Ty.curriedGround (k + 1) :: Γ) 1
+hRec : carrierRecord p op = some r
+left✝ : r.source = CurrentSelectedCarriers.carrierAt Variable.here op.arity op.source
+hrc :
+  carrierCode p (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ)) (SourceAnnotationCode.operatorCode op) =
+    some (recordCode r)
+hReal : CurrentSelectedCarriers.Realization p f Variable.here op.arity op.source op.vector w r.vector
+hmr : Matches r (CurrentReserve.carrierFrom hReal)
+a : Carrier p := CurrentReserve.carrierFrom hReal
+hv :
+  ParametricSourceSuccessor.denoteWith f (CurrentUnaryChain.commonUnits fun x => 0) (r.vector 1) =
+    ParametricSourceSuccessor.denoteWith f (CurrentUnaryChain.commonUnits fun x => 0)
+      (op.vector (UnaryCarrier.headIndex op.arity))
+he : Carrier.head f a = unitValue f op.head
+ho : CurrentReserve.LiteralOrigin p f op.head a
+label : SpawnedAccount p f (erase d) (xs ++ [a]) sum
+⊢ ((accountCode p (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ)
+          (SourceAnnotationCode.code tail)).bind
+      fun a =>
+      (carrierCode p (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ)
+            (SourceAnnotationCode.operatorCode op)).bind
+        fun a_1 => some (a.1 ++ [a_1], a.2 + HeadFiniteSurplus.surplus op.head)) =
+    some (List.map recordCode rs ++ [recordCode r], c + HeadFiniteSurplus.surplus op.head)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountSemanticProof.lean:101:12: warning: This simp argument is unused:
+  hca
+
+Hint: Omit it from the simp argument list.
+  simp [hca̵,̵h̵c̵b, ̲List.map_append, ̲bind, ̲pure]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountSemanticProof.lean:101:16: warning: This simp argument is unused:
+  hcb
+
+Hint: Omit it from the simp argument list.
+  simp [hca,h̵c̵b̵,̵ ̲List.map_append, ̲bind, ̲pure]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountSemanticProof.lean:132:33: warning: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  simp [hcodec, ̲hclass, ̲hfin,h̵r̵,̵ ̲surplusCorrect, ̲sum, ̲bind, ̲pure]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountSemanticProof.lean:154:33: warning: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  simp [hcodec, ̲hclass, ̲hfin, ̲hr,̵h̵r̵c, ̲surplusCorrect, ̲sum, ̲List.map_append, ̲bind, ̲pure]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountSemanticProof.lean:154:36: warning: This simp argument is unused:
+  hrc
+
+Hint: Omit it from the simp argument list.
+  simp [hcodec, ̲hclass, ̲hfin, ̲hr,h̵r̵c̵,̵ ̲surplusCorrect, ̲sum, ̲List.map_append, ̲bind, ̲pure]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountSemanticProof.lean:178:2: error: unsolved goals
+case refine_2
+p : Policy
+f : ℕ → ℕ
+k : ℕ
+Γ : List Ty
+n : ℕ
+P : TrackedSource.Expr k (Ty.curriedGround (k + 1) :: Γ) Variable.here n
+u : OrdinalVector (Ty.curriedGround (k + 1) :: Γ) (Ty.curriedGround n).level
+d : Tree k (Ty.curriedGround (k + 1) :: Γ) Variable.here
+hbuild : CurrentGroundAnnotation.build p P = some (u, d)
+hu : AdmissibleAssignment.assignment p (TrackedSource.erase P) = some u
+hv✝ : CurrentGroundAnnotation.Valid p d
+he : erase d = u 0
+hcode :
+  CurrentGroundAnnotationCode.buildCode p (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ))
+      (SourceTypedPorts.variableIndex Variable.here) (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+    some (OrdinalSyntax.vectorCode u, SourceAnnotationCode.code d)
+rs : List (UnaryRecord (Ty.curriedGround (k + 1) :: Ty.curriedGround (k + 1) :: Γ))
+xs : List (Carrier p)
+c : ℕ
+hd : accountData p d = some (rs, c)
+hm : List.Forall₂ Matches rs xs
+hSpawn : SpawnedAccount p f (u 0) xs c
+hAcc : Account p f (u 0) xs c
+hRaw :
+  accountCode p (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ)) (SourceAnnotationCode.code d) =
+    some (List.map recordCode rs, c)
+hs : ScalarTrees Variable.here (u 0)
+v : OrdinalPartialVector Γ (Ty.curriedGround (k + 1))
+hv : AdmissiblePartial.run p 0 (u 0) = some v
+hval :
+  ∀ (μ : Variable Γ Ty.ground → ℕ),
+    ParametricSourceSuccessor.denoteWith f (CurrentUnaryChain.commonUnits μ) (v (HeadFiniteSurplus.outputOne k)) =
+      CurrentReserve.carrierSum f xs + ↑c
+floor : Account p f (u 0) xs c → CurrentReserve.sourceFloor P ≤ CurrentReserve.reserve xs c
+hcode' :
+  CurrentGroundAnnotationCode.buildCode p (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ)) 0
+      (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+    some (OrdinalSyntax.vectorCode u, SourceAnnotationCode.code d)
+⊢ ((CurrentGroundAnnotationCode.buildCode p
+          (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ) 0
+          (SyntaxCode.encodeTerm (TrackedSource.erase P))).bind
+      fun a =>
+      (accountCode p (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ) a.2).bind
+        fun a_1 => some (a.1, a_1)) =
+    some (OrdinalSyntax.vectorCode u, List.map recordCode rs, c)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountSemanticProof.lean:181:21: warning: This simp argument is unused:
+  hcode'
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵o̵u̵r̵c̵e̵C̵o̵d̵e̵,̵h̵c̵o̵d̵e̵'̵,̵h̵R̵a̵w̵,̵b̵i̵n̵d̵,̵p̵u̵r̵e̵]̵[̲s̲o̲u̲r̲c̲e̲C̲o̲d̲e̲,̲ ̲h̲R̲a̲w̲,̲ ̲b̲i̲n̲d̲,̲ ̲p̲u̲r̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountSemanticProof.lean:181:28: warning: This simp argument is unused:
+  hRaw
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵o̵u̵r̵c̵e̵C̵o̵d̵e̵,̵h̵c̵o̵d̵e̵'̵,̵h̵R̵a̵w̵,̵b̵i̵n̵d̵,̵p̵u̵r̵e̵]̵[̲s̲o̲u̲r̲c̲e̲C̲o̲d̲e̲,̲ ̲h̲c̲o̲d̲e̲'̲,̲ ̲b̲i̲n̲d̲,̲ ̲p̲u̲r̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1179,3 +1179,56 @@ and translates the existing canonical-port derivations into fixed-point bits.
   not effective arbitrary lookup representation. No least representative,
   Arithmetic certificate graph or ID1 claim. Target only pending
   independent scope/preflight; no author proofs.
+
+## 2026-11-19 — exact finite actual Primary class saturation native pass
+
+- PRIMARY-CLASS-LIST-TARGET-1156 clean comparator-only82/82,
+  receipt1795089344282493779-2, 31 frozen pins, scope fully reviewed.
+- Exact1201 ordinary list-notation/member binder issue (receipt
+  1795089630181389431-2); 1203 ordinary dependent unused Nat ≤
+  induction issue (receipt1795089783873554370-2). Both original
+  eight sources, manifests, exact log/receipt and separately approved
+  inverse diffs preserved; frozen comparator unchanged.
+- Exact1206 clean current original-core87/87, receipt
+  1795089906606159710-2, overall inherited519976/new486444/root481260
+  KiB. Five exact audits all only propext/Classical.choice/Quot.sound;
+  native reaped both locks free.
+- LANE-A-NUMBERED-WINDOW-PRIMARY-CLASS-LIST-CLOUD-EVIDENCE.json
+  ae373c28e54983e93bb458f89ea0ec40432f9633477a8062b57d42277dfcf7f7
+  authentic current87 modules/60merged pins (31own)/5 exact audits,
+  supplemental zero errors. READY supporting finite actual class
+  enumeration and finite-context Primary decision, with duplicate-list
+  fixed point at carrier length. No least-code representative, arbitrary
+  lookup coding, raw/RS arithmetic or internal ID1 assertion.
+
+## 2026-11-19 — accepted actual Primary class list; thin numerical pair draft
+
+- Coordinator accepted447 after independent current87/60pins/all5 exact
+  standard audits. Original Primary classes now have exact executable
+  finite list and same-source finite-context decision, not assumed
+  quotient or arithmetic effectivity. Register148checked/19pending at
+  adoption; no new numbered claim.
+- Source-first NumberedWindowArithmeticPair/Targets frozen879d0613...
+  six pins. Pure core polynomial natural pair with bounded exhaustive
+  inverse and exact impossible outputs. Target-only1211 clean2/2,
+  1795090114373224802-2, max469228KiB, reaped/locks free.
+- Three separate authored pair leaves after independent preflight,
+  manifest23f8a09f..., static5. Pending exact independent review/native;
+  no actual Ty/Head/Γ/NTerm code, least class representatives,
+  internal arithmetic certificate translation or ID1.
+
+## 2026-11-19 — concrete polynomial pair partial inverse native pass
+
+- Exact1215 ordinary List.find?_some predicate inference mismatch,
+  preserved receipt1795090265147458992-2, five exact sources,
+  manifests and diagnostic. Bounds/injection leaf compiled unchanged.
+  Independently reviewed one proof hunk explicitly instantiating
+  the exact unchanged find predicate; applied inverse confirmed.
+- ARITHMETIC-PAIR-EXACT-1218 clean5/5,
+  receipt1795090410765540827-2, peak477268/root464096KiB.
+  Native reaped both locks free, five exact aliases only
+  propext/Quot.sound. LANE-A-NUMBERED-WINDOW-ARITHMETIC-PAIR-
+  CLOUD-EVIDENCE.json SHA506a1994b913218f12118b33d3babc95ae8bdf85b44a25ab2857321bf23994ed,
+  current5modules/36merged incl6 own/5 exact audits. Supplemental zero
+  errors; READY support only, no internal arithmetic/ID1 or actual
+  syntax codec yet.

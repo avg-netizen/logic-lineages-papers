@@ -1,0 +1,18 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionGapProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionGapProof.lean
+@@ -75,9 +75,13 @@
+   have hz : ((paidList b xs caller).map (fun x => unitValue f (x.vector 1))) =
+       (List.replicate (scale b) vals).flatten ++ List.replicate (scale b) a := by
+     simp only [paidList,List.map_append,List.map_replicate,vals,a]
++    have hFlat (n : Nat) : ((List.replicate n xs).flatten).map (fun op => unitValue f (op.vector 1)) =
++        (List.replicate n (xs.map (fun op => unitValue f (op.vector 1)))).flatten := by
++      induction n with
++      | zero => rfl
++      | succ n ih => simp only [List.replicate_succ,List.flatten_cons,List.map_append,ih]
+     exact congrArg (fun ys : List Ordinal => ys ++ List.replicate (scale b) (unitValue f (caller.vector 1)))
+-      (OriginalScaleFlatList.Proof.map_flatten_replicate
+-        (fun op : Operator Γ => unitValue f (op.vector 1)) (scale b) xs)
++      (hFlat (scale b))
+   simpa only [chargedSum,hz, gap,vals,List.length_map,a] using h
+ 
+ end LogicLineages.ControlSensitivityCurrent.CurrentGroundConstruction

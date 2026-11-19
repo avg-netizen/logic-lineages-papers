@@ -1,0 +1,13 @@
+--- LogicLineages/PersistentMarking/NumberedWindowArithmeticPairDecodeProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowArithmeticPairDecodeProof.lean
+@@ -13,7 +13,9 @@
+ 
+ private theorem sound {n a b : Nat} (h : decode n = some (a,b)) : pair a b = n := by
+   unfold decode at h
+-  exact of_decide_eq_true (List.find?_some h)
++  have found : decide (pair a b = n) = true :=
++    List.find?_some (p := fun p : Nat × Nat => decide (pair p.1 p.2 = n)) h
++  exact of_decide_eq_true found
+ 
+ private theorem complete {n a b : Nat} (h : pair a b = n) : decode n = some (a,b) := by
+   cases hResult : decode n with
