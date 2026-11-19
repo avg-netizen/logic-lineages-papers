@@ -1793,8 +1793,11 @@
           "file": "19-source-expressivity-and-control-sensitivity/sections/control-sensitivity.tex",
           "line": 73,
           "statement_latex": "[Ground hardness at one fixed control]\n\\label{thm:control-hardness}\nFor every fixed $b$, universal canonical weak and strict comparison at\n$\\Gamma_b$ are $\\Pi^0_1$-complete already for ground-output terms\nwith only ground free variables and ground binders, prime constants\n$0,S$, and internal type levels at most one.\nMoreover $\\Gamma_b(n)\\bmod2$ is not eventually periodic.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.ControlSensitivityCurrent.CurrentControlHardnessTargets.Full",
+          "verified_alias": "LogicLineages.ControlSensitivityCurrent.CurrentControlHardness.StatementChecks.fixed_control_hardness",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/418-control-hardness.json"
         },
         {
           "id": "19-source-expressivity-and-control-sensitivity:prop:counter-bound",
@@ -1803,8 +1806,11 @@
           "file": "19-source-expressivity-and-control-sensitivity/sections/decision-boundaries.tex",
           "line": 8,
           "statement_latex": "[A finite-box characterization]\n\\label{prop:counter-bound}\nFix the control and parsing policy. Universal weak and strict canonical\ncomparison on terms with ground free names, of arbitrary result type,\nare co-recursively-enumerable. This comparison problem is decidable if\nand only if there is a total computable function $b(Q)$ such that\nevery false query $Q$ has a countervaluation with every raw ground\ncoordinate at most $b(Q)$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.ControlSensitivityCurrent.CurrentCounterBoundTargets.Full",
+          "verified_alias": "LogicLineages.ControlSensitivityCurrent.CurrentCounterBound.StatementChecks.fixed_counter_bound",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/417-counter-bound.json"
         },
         {
           "id": "19-source-expressivity-and-control-sensitivity:lem:standard-residues",
@@ -1826,8 +1832,11 @@
           "file": "19-source-expressivity-and-control-sensitivity/sections/decision-boundaries.tex",
           "line": 66,
           "statement_latex": "[Attainment for a supplied actual unary source]\n\\label{prop:actual-attainment}\nLet $H:o\\to o$ be a supplied closed original source at control $G$,\nwith its actual canonical vector $(c_H,a_H)$. Put\n\\[\n \\lambda=\\omega\\otimes a_H,\\qquad\n C_H=N(\\lambda)+c_H+1.\n\\]\nGiven $p,m\\ge1$ and residues $a,r$, deciding whether there is a\ngenuine input $t\\ge N(\\lambda)$ such that\n\\[\n t\\equiv a\\pmod p,\\qquad D_\\lambda(t)\\equiv r\\pmod m\n\\]\nreduces effectively to actual-source arithmetic satisfiability, and\nhence to one universal ground comparison with its answer complemented.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.ControlSensitivityCurrent.CurrentAttainmentTargets.Full",
+          "verified_alias": "LogicLineages.ControlSensitivityCurrent.CurrentAttainment.StatementChecks.fixed_actual_attainment",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/419-actual-attainment.json"
         },
         {
           "id": "19-source-expressivity-and-control-sensitivity:lem:absolute",
@@ -1836,8 +1845,11 @@
           "file": "19-source-expressivity-and-control-sensitivity/sections/observers.tex",
           "line": 7,
           "statement_latex": "[Absolute observer]\\label{lem:absolute}\nLet $T:\\rho$ have only ground free names $\\mathbf z$.  Its entire raw scalar\ngraph $v=\\can{T(\\mathbf z)}_0$ is existentially definable by actual ground-source\nobservations, addition and constants, with all shared names preserved.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.ControlSensitivityCurrent.CurrentAbsoluteTargets.Full",
+          "verified_alias": "LogicLineages.ControlSensitivityCurrent.CurrentAbsolute.StatementChecks.fixed_absolute",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/420-absolute-observer.json"
         },
         {
           "id": "19-source-expressivity-and-control-sensitivity:thm:decision-equivalence",
@@ -2293,7 +2305,7 @@
     }
   ],
   "status_counts": {
-    "pending": 33,
-    "checked": 134
+    "pending": 29,
+    "checked": 138
   }
 }

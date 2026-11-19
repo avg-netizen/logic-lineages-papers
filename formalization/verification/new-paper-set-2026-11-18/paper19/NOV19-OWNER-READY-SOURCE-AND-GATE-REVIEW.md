@@ -52,7 +52,7 @@ restricted problem, not a syntax promise hidden in a reduction.
 `CurrentMachinePlan.compiled_halting` proves exact arithmetic conjunction/
 bounded simulation with actual computed literal 2^e and odd \(2b+5\).
 The two actual DAG weights meet the stated e+log(b+2) type bound with
-explicit constants; no binary-length e^ claim. The independent
+explicit constants; no bound in the binary length of e is claimed. The independent
 `ActualParity.nonEventualPeriodicity` uses eventual periods and the unchanged
 bounded-machine parity definition. Neither membership nor nonperiodicity
 is made a theorem for the unchanged G.

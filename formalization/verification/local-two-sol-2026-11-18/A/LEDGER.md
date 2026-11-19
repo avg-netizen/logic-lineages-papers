@@ -509,3 +509,22 @@ and translates the existing canonical-port derivations into fixed-point bits.
   aliases. No lane promotion. Original stopped proof and target bytes
   remain untouched, and literal structural-interpretation obstruction
   remains separate from numbered adequacy and decidability.
+
+## 2026-11-19 — numbered tuple comparator frozen; doc attachment repair
+
+- Source-first target `NumberedWindowTupleTargets.WholeTupleSimulation`
+  frozen over four new modules (full numeric rules and shape, all typed finite
+  contexts, exact protected-spine call and +length+1 budget).
+  Independent scope map/review under paper16/recovery-nov19. Original
+  symbolic closure and numeric path scopes separated from full locality,
+  strict positive simulation and internal arithmetic accessibility.
+- NUMBERED-TUPLE-TARGET-0706 verified all 13 pins but first new leaf hit
+  ordinary Lean parser rejection attaching a doc comment to `mutual`.
+  Original frozen four files, manifest, receipt `1795071940753901532-6`
+  and module log archived in paper16/failed/lane-a-numbered-tuple-target-1795071940753901532-6/.
+  No resource issue; native program reaped and both locks released.
+- Independent coordinator approval to change exactly three attached
+  comments from `/--` to `/-`, no changes to code or propositions.
+  Applied exact reviewed diff under recovery-nov19 and refreshed only the
+  three affected manifest pins; all 13 current pins verify. No native
+  or proof started again before a fresh target-only ticket.

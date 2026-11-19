@@ -1,10 +1,14 @@
 # Current comparison formalization status
 
-New-paper register: **134 checked, 33 pending / 167**. Historical register:
+New-paper register: **138 checked, 29 pending / 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
 ## Current numbered statements checked
+
+- Paper19 counter-bound characterization, fixed perturbed-control hardness,
+  supplied-source attainment at unchanged Phi and absolute observer
+  (417–420), with separate full fresh gates and independent exact evidence.
 
 - Paper16 `thm:adequacy` and `thm:decide`: exact least-fixed-point
   interpretation and executable weak/strict/confined decision (415–416).
