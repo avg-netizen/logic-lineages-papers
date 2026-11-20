@@ -1,0 +1,59 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowAtomicApplicationAddressProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowAtomicApplicationAddressProof.lean
+@@ -39,31 +39,30 @@
+         | none => simp [hArr] at run
+         | some ar =>
+           rcases ar with ⟨dom,cod⟩
+-          by_cases live : (canonical s (Γ,functionType,fn) && canonical s (argCtx,argTy,argRaw) &&
+-              (Γ == argCtx) && (dom == argTy)) = true
+-          · let rawApp := auxRaw dom cod fn argRaw
+-            have actual :
+-                (least s Γ cod rawApp).map (fun n => packedAddress (pack Γ) cod n) = some value := by
+-              simpa [hArr,live,rawApp,auxRaw,packedAddress] using run
+-            have bits := live
+-            simp only [Bool.and_eq_true,beq_iff_eq,and_assoc] at bits
+-            obtain ⟨_,_,sameCtx,sameType⟩ := bits
+-            subst argCtx
+-            subst argTy
+-            cases hLeast : least s Γ cod rawApp with
+-            | none => simp [hLeast] at actual
+-            | some representative =>
+-              have sameValue : packedAddress (pack Γ) cod representative = value := by
+-                simpa [hLeast] using actual
+-              obtain ⟨argOut,rep,trace⟩ :=
+-                (atomicLeast s Γ cod dom cod fn argRaw representative atom).1 hLeast
+-              have sameContext := contextCode hCtx
+-              have sameArgument := (addressCoordinates hArg).1
+-              refine ⟨dom,cod,argRaw,argOut,?_,?_,?_,trace⟩
+-              · first | exact hArr | rfl
+-              · rw [sameContext]
+-                exact sameArgument
+-              · rw [sameContext,← sameValue,rep]
+-          · simp [hArr,live] at run
++          let guard := canonical s (Γ,functionType,fn) && canonical s (argCtx,argTy,argRaw) &&
++            (Γ == argCtx) && (dom == argTy)
++          let rawApp := auxRaw dom cod fn argRaw
++          have pieces : guard = true ∧
++              (least s Γ cod rawApp).map (fun n => packedAddress (pack Γ) cod n) = some value := by
++            simpa [hArr,guard,rawApp,auxRaw,packedAddress] using run
++          obtain ⟨bits,actual⟩ := pieces
++          simp only [guard,Bool.and_eq_true,beq_iff_eq,and_assoc] at bits
++          obtain ⟨_,_,sameCtx,sameType⟩ := bits
++          subst argCtx
++          subst argTy
++          cases hLeast : least s Γ cod rawApp with
++          | none => simp [hLeast] at actual
++          | some representative =>
++            have sameValue : packedAddress (pack Γ) cod representative = value := by
++              simpa [hLeast] using actual
++            obtain ⟨argOut,rep,trace⟩ :=
++              (atomicLeast s Γ cod dom cod fn argRaw representative atom).1 hLeast
++            have sameContext := contextCode hCtx
++            have sameArgument := (addressCoordinates hArg).1
++            refine ⟨dom,cod,argRaw,argOut,?_,?_,?_,trace⟩
++            · first | exact hArr | rfl
++            · rw [sameContext]
++              exact sameArgument
++            · rw [sameContext,← sameValue,rep]
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowAtomicApplicationAddressProof

@@ -332,3 +332,21 @@ Full df9634ed diff reviewed and existing BindingProof public SuccessorProof impo
 
 ## Atomic-head original application numerical target review, Nov20
 Read full exact5 target/map, actual ExchangeAlgorithm.parts/table/row and AddressApplication.applyAddresses. Nonduplicate of fixed S,K direct-reduct classification: actual raw both row/edge orientations preserve literal domain/codomain/atomic function with oriented argument-row trace; original rounds and conditional Some least, no symmetry/fixedness/least existence. Whole same supplied application returns same packed context and possibly exchanged argument, not unchanged argument. All32pins checked before target-only gate. No new p/r, open graph or higher/neutral C claim.
+
+## Dead encoded-current and leading-gap target review, Nov20
+Read complete exact2/map; actual malformed means nonzero with no leading sparse-cons preimage, distinct from later gap. Literal encoded none0 absorbs full same chosen-fuel finish by actual sparse induction; class0 encoded1 kept distinct. No callback interpretation, positivity shortcut or generalized parse-failure assertion. All35 pins checked before target-only gate.
+
+## Atomic original auxiliary application full source review, Nov20
+Read all5 leaves and exact5 aliases. Genuine sparse field child bounds recover precise earlier original table rows; same raw atomic function has no child exchange in either orientation, actual candidate syntax fixes four fields. Original finite rounds preserve oriented argument trace including stutters; conditional min witness used only after Some. Whole same supplied application parses same raw context and argument then real least, preserves possibly changed argument representative. No typed/lexical output carrier, symmetry or open graph reflection. All37 pins independently checked before first gate.
+
+## Atomic application helper Bool grouping repair, Nov20
+Entire07023703 diff reviewed: parentheses encompass identical complete Bool RHS of unaccepted rowAuxPair helper so equality has intended parse. No frozen exact5 change. Full reversed source bytes and sole-pin author manifest independently reproduce archived first failed edition1795178300321929413-6; all37pins checked before retry, original caps unchanged.
+
+## Original encoded-none0 finish full source review, Nov20
+Read all7 leaves and exact2 root plus separate leading-gap alias. Actual nonzero cert gives successor fuel; true old/dead scratch constructors, real malformed step, nil stability and reverse head shift give exact chosen Finish0. Full no-current uses genuine sparse-field induction at literal original Finish0 graph; all nil/gap/cons branches supplied using actual zero advance and own-code finish recurrence. Class0 remains encoded1, arbitrary callbacks and raw cert including later gaps, no semantic reflection. All42pins checked before first gate.
+
+## Atomic original application actual guard extraction repair, Nov20
+Full dc4736b8 diff reviewed: extract actual normalized guard and same least.map successful result from original accepted run; retain same context/type and output argument trace. Entire source inverse and sole-pin manifest independently match failed edition1795178470081148259-7, both frozen32 and author5 maps separately verified. No target, definitions or caps changes.
+
+## Original positive successful-head exact target review, Nov20
+Read full exact2 target and source map. PositiveFinish retains literal cert≠0 and actual chosen finish S(target); head decomposition binds exact ordered object block [raw head,raw tail,next class], actual sparse cons and advance S(nextClass), same tail finish at own raw fuel. Tail may nil and is not asserted positive, successful head is conclusion not premise. No callback semantics or old body transport. All36 pins independently checked before preflight.

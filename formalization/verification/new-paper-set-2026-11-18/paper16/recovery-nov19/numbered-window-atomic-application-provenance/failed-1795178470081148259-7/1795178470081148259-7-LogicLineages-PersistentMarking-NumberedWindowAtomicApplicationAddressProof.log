@@ -1,0 +1,45 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowAtomicApplicationAddressProof.lean:47:14: error: Type mismatch: After simplification, term
+  run
+ has type
+  (((canonical s (Γ, functionType, fn) = true ∧ canonical s (argCtx, argTy, argRaw) = true) ∧ Γ = argCtx) ∧
+      dom = argTy) ∧
+    ∃ a, least s Γ cod (packNode 6 [dom, cod, fn, argRaw]) = some a ∧ packNode 3 [pack Γ, cod, a] = value
+but is expected to have type
+  ∃ a, least s Γ cod (packNode 6 [dom, cod, fn, argRaw]) = some a ∧ packNode 3 [pack Γ, cod, a] = value
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowAtomicApplicationAddressProof.lean:67:10: error: unsolved goals
+case neg
+s : Settings
+rawCtx functionType fn argument value : ℕ
+atom : AtomHead fn
+h : graph s (packedAddress rawCtx functionType fn) argument value = true
+accepted :
+  (do
+      let q ←
+        (contextView rawCtx).bind fun Γ => if typeBit functionType = true then some (Γ, functionType, fn) else none
+      let u ← addressView argument
+      applyAddresses s q u) =
+    some value
+Γ : List ℕ
+hCtx : contextView rawCtx = some Γ
+hTy : typeBit functionType = true
+argCtx : List ℕ
+argTy argRaw : ℕ
+hArg : addressView argument = some (argCtx, argTy, argRaw)
+dom cod : ℕ
+hArr : arrowView functionType = some (dom, cod)
+live : ¬(canonical s (Γ, functionType, fn) && canonical s (argCtx, argTy, argRaw) && Γ == argCtx && dom == argTy) = true
+run :
+  (((canonical s (Γ, functionType, fn) = true ∧ canonical s (argCtx, argTy, argRaw) = true) ∧ Γ = argCtx) ∧
+      dom = argTy) ∧
+    ∃ a, least s Γ cod (packNode 6 [dom, cod, fn, argRaw]) = some a ∧ packNode 3 [pack Γ, cod, a] = value
+⊢ ∃ dom_1 cod_1 a a',
+    some (dom, cod) = some (dom_1, cod_1) ∧
+      argument = packedAddress rawCtx dom_1 a ∧
+        value = packedAddress rawCtx cod_1 (auxRaw dom_1 cod_1 fn a') ∧ ArgumentMoves s.equivalentHeads a a'
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowAtomicApplicationAddressProof.lean:67:23: warning: This simp argument is unused:
+  live
+
+Hint: Omit it from the simp argument list.
+  simp [hArr,̵l̵i̵v̵e̵] at run
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

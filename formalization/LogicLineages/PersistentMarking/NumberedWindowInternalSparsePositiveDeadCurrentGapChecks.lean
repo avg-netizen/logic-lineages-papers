@@ -1,0 +1,12 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveDeadCurrentGapProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveDeadCurrentGapChecks
+open NumberedWindowInternalSparsePositiveDeadCurrentTargets
+
+theorem exact_OpenMalformedFinishZero : OpenMalformedFinishZero :=
+  NumberedWindowInternalSparsePositiveDeadCurrentGapProof.gapZero
+
+#print axioms exact_OpenMalformedFinishZero
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveDeadCurrentGapChecks

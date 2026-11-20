@@ -1,0 +1,93 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowAtomicApplicationTargets
+import LogicLineages.PersistentMarking.NumberedWindowAtomicRawStepFieldProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserRawPairProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowAtomicApplicationTableProof
+open NumberedWindowAtomicApplicationTargets
+open NumberedWindowFieldAlgorithm (pack packNode unpackNode)
+open NumberedWindowPairAlgorithm (pair)
+open NumberedWindowExchangeAtoms (HeadPairs)
+open NumberedWindowExchangeAlgorithm (Row table next row termNext argsNext parts)
+open NumberedWindowAtomicRawStepFieldProof (nodePacked)
+open NumberedWindowInternalSparseFieldParserRawPairProof (encodedPair tailBound)
+
+private theorem packLt (xs : List Nat) (x : Nat) (member : x ∈ xs) : x < pack xs := by
+  induction xs with
+  | nil => cases member
+  | cons head tail ih =>
+    change x < pair head (pack tail) + 1
+    rcases List.mem_cons.mp member with same | prior
+    · rw [same]
+      unfold pair
+      omega
+    · exact Nat.lt_succ_of_le (Nat.le_trans (Nat.le_of_lt (ih prior)) (tailBound head (pack tail)))
+
+private theorem nodeLt (tag : Nat) (xs : List Nat) (x : Nat) (member : x ∈ xs) :
+    x < packNode tag xs :=
+  Nat.lt_succ_of_le (Nat.le_trans (Nat.le_of_lt (packLt xs x member)) (tailBound tag (pack xs)))
+
+private theorem tableLength (hp : HeadPairs) (n : Nat) : (table hp n).length = n := by
+  induction n with
+  | zero => rfl
+  | succ n ih => simp [table,ih]
+
+private theorem earlier (hp : HeadPairs) {k n : Nat} (hk : k < n) :
+    (table hp n)[k]? = some (next hp (table hp k) k) := by
+  induction n with
+  | zero => omega
+  | succ n ih =>
+    by_cases before : k < n
+    · simp only [table,List.getElem?_append_left (tableLength hp n ▸ before)]
+      exact ih before
+    · obtain rfl : k = n := by omega
+      simpa only [table,tableLength] using
+        (List.getElem?_concat_length (l := table hp k) (a := next hp (table hp k) k))
+
+private theorem keyLt {x y a b : Nat} (hx : x < a) (hy : y ≤ b) :
+    pair x y < pair a b := by
+  have sumLe : x + y ≤ a + b := Nat.add_le_add (Nat.le_of_lt hx) hy
+  exact Nat.add_lt_add_of_le_of_lt (Nat.mul_le_mul sumLe sumLe) hx
+
+/-- The actual table entry at the real smaller child-pair index. -/
+theorem childRow (hp : HeadPairs) (i j : Nat) (xs ys : List Nat) (a b : Nat)
+    (left : a ∈ xs) (right : b ∈ ys) :
+    (table hp (pair (packNode i xs) (packNode j ys))).getD (pair a b) (false,false) =
+      row hp a b := by
+  have hx := nodeLt i xs a left
+  have hy := nodeLt j ys b right
+  rw [List.getD_eq_getElem?_getD,earlier hp (keyLt hx (Nat.le_of_lt hy))]
+  rfl
+
+theorem rowAt (hp : HeadPairs) (a b : Nat) :
+    row hp a b = (termNext hp (table hp (pair a b)) a b,
+      argsNext (table hp (pair a b)) a b) := by
+  simp [row,next,encodedPair]
+
+theorem auxView (dom cod fn arg : Nat) :
+    unpackNode (auxRaw dom cod fn arg) = some (6,[dom,cod,fn,arg]) :=
+  nodePacked 6 [dom,cod,fn,arg]
+
+/-- The exact original tag6 row split at the two actual child rows. -/
+theorem rowAuxPair (hp : HeadPairs) (dom cod fn arg dom' cod' fn' arg' : Nat) :
+    (row hp (auxRaw dom cod fn arg) (auxRaw dom' cod' fn' arg')).1 =
+      (dom == dom') && (cod == cod') &&
+        (((row hp fn fn').1 && (arg == arg')) ||
+          ((fn == fn') && (row hp arg arg').1)) := by
+  let q := auxRaw dom cod fn arg
+  let r := auxRaw dom' cod' fn' arg'
+  let tab := table hp (pair q r)
+  have hfun : tab.getD (pair fn fn') (false,false) = row hp fn fn' :=
+    childRow hp 6 6 [dom,cod,fn,arg] [dom',cod',fn',arg'] fn fn' (by simp) (by simp)
+  have harg : tab.getD (pair arg arg') (false,false) = row hp arg arg' :=
+    childRow hp 6 6 [dom,cod,fn,arg] [dom',cod',fn',arg'] arg arg' (by simp) (by simp)
+  have rhs : (row hp q r).1 = ((dom == dom') && (cod == cod') &&
+      (((tab.getD (pair fn fn') (false,false)).1 && (arg == arg')) ||
+        ((fn == fn') && (tab.getD (pair arg arg') (false,false)).1))) := by
+    rw [rowAt,termNext]
+    simp [q,r,tab,auxView,parts,List.getD_eq_getElem?_getD]
+  change (row hp q r).1 = _
+  rw [rhs,hfun,harg]
+
+end LogicLineages.PersistentMarking.NumberedWindowAtomicApplicationTableProof
