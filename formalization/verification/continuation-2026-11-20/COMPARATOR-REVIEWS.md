@@ -79,3 +79,17 @@ Read both new AST/target modules and map; verified31pins. Raw source codes and t
 ## Narrow original canonical application comparator
 
 Read both new source-only exact target modules and map; verified the new46pin manifest (not the older similarly named15pin manifest). The supplier concerns literal already-canonical same-context/arrow-domain original addresses only; it deliberately does not assert the stopped broad malformed-input decoder theorem. The subsequent target aliases retain full original typed-address equivalence, external FreeAt/fresh-name/application, all-admitted-numeral #613, and the SAME fixed-source ValidWindow proposition. External FreeAt computability is not an arbitrary-open object derivation. Final mixed Program/original wrapper and fresh-variable object computability remain separate. Initial actual target preflight found only missing finiteC namespace, with exact syntax-only repair under review; no proof authoring release yet.
+
+## Narrow original canonical source author review
+
+Read all three first-stage source leaves and exact frozen targets; verified46 comparator and3 authored pins. Literal optional equality keeps matching original context and arrow domain, then actual class graph equivalence uses the original class application theorem. All-raw typed-address equivalence retains malformed rejection through the actual admitted classification. No stopped broad raw decoder import, numeric-to-object derivation transfer, or extra assumption is introduced. Corrected target preflight1795165312182711096-5 passed before author release. Core native exact3 gate now required.
+
+## Original sparse parser numeric author review
+
+Read seven exact numeric proof leaves; verified31 frozen and7 author pins. Actual sparse pair decoding supplies strict tail descent and sufficient-fuel terminal stabilization. The accumulator result retains acc.reverse and ordered concatenation. The frozen parser scratch table uses Nat.pair only internally and proves exact lookup offset i-tail, then actual original nil/malformed/cons recursion for every raw input. The final encode/decode Option statements use that same parser, not replacement by semantic evaluation. Open object graphs remain separate. Exact5 native gate required.
+
+## Original parser open and positive source author review
+
+Read seven open parser leaves and verified7 pins. Generic retained row lookup is instantiated to precisely the frozen scratch B/R, with actual internal strict tail bound and genuine subtraction witness; original sparse cons, malformed rejection, and rejected tail retained. The inverse uses functionality of the same selected parser, not numeric equality to an older source graph. Exact4 requires native/evidence gates.
+
+Read two original fresh/positive leaves and verified2 pins. Actual original free witness, same-context canonical class application and raw all-admitted typing feed the unchanged #613 numerical target and full fixed-source ValidWindow alias. External FreeAt remains separate from object fresh-variable computability. The first literal proof ordinary error is repaired only by exposing the definitional address tuples; all six source aliases still require native/evidence verification.

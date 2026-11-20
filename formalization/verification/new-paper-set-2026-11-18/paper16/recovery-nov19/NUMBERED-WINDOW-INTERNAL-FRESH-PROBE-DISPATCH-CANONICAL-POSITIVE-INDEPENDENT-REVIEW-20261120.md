@@ -1,0 +1,7 @@
+# Independent canonical original source review
+
+Read exact frozen6 targets and complete5 authored source leaves. The literal original application equality is restricted to genuine canonical addresses in the same context with matching arrow domain. Its class graph uses original quotient application and same ActualCodeAt, not a replacement application operation. Full all-raw typed-address equivalence keeps rejection. Original free-address certificate supplies the actual fresh name/carrier and application; original numerical totality and unchanged fixed-source ValidWindow follow. This does not prove object-language fresh-variable computability, generic all-context fiber transport, or full all-terms/BH conclusions.
+
+The older broad malformed-input decoder gate remains preserved resource-stopped; this materially narrower route does not import it. Initial target missing finiteC namespace and ordinary source tuple normalization errors are archived; the latter repair only exposes definitionally equal canonical address tuples. No statement, assumption, semantics or cap changed.
+
+Core gate1795166138945320553-6 passed six exact standard-only aliases at original1536MiB heap/512MiB RSS/free768MiB,90CPU/180wall/one thread. Independent replay verified297 current input/compiler/object/native receipt/log module closures,51 source pins, actual full alias audits and no unexpected local dependency (only original SourceTypes outside PersistentMarking). All referenced native receipts/logs archived. No full-root, CI or numbered promotion.
