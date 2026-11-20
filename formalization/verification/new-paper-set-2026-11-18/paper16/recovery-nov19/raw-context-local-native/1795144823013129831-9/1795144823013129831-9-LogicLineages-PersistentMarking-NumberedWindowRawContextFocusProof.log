@@ -1,0 +1,75 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusProof.lean:70:33: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [h̵,̵skipNone]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusProof.lean:75:9: error: unsolved goals
+case zero.cons.cons
+test : NTerm → NTerm → Bool
+testCode : Nat → Nat → Bool
+h : ∀ (Q R : NTerm), testCode (encodeTerm Q) (encodeTerm R) = test Q R
+term✝¹ : NTerm
+tail✝¹ : NArgs
+term✝ : NTerm
+tail✝ : NArgs
+⊢ (match
+      (NumberedWindowPairAlgorithm.decode
+            (NumberedWindowArithmeticPair.pair (encodeTerm term✝¹) (encodeArgs tail✝¹))).bind
+        fun __x =>
+        (NumberedWindowPairAlgorithm.decode
+              (NumberedWindowArithmeticPair.pair (encodeTerm term✝) (encodeArgs tail✝))).bind
+          fun __x_1 => if __x.snd = __x_1.snd then some (__x.fst, __x_1.fst) else none with
+    | some a => testCode a.fst a.snd
+    | none => false) =
+    (test term✝¹ term✝ && argsEq tail✝¹ tail✝)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusProof.lean:77:29: warning: This simp argument is unused:
+  cellOf
+
+Hint: Omit it from the simp argument list.
+  simp [focus, ̲skipPrefix, ̲cellO̵f̵,c̵ ̲el̵l̵,̵e̵ncodeArgs, ̲h, ̲argsEqCode, ̲argsAtBit, ̲Option.any]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusProof.lean:77:52: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [focus, ̲skipPrefix, ̲cellOf, ̲cell, ̲encodeArgs,h̵,̵ ̲argsEqCode, ̲argsAtBit, ̲Option.any]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusProof.lean:77:54: warning: This simp argument is unused:
+  argsEqCode
+
+Hint: Omit it from the simp argument list.
+  simp [̵f̵o̵c̵u̵s̵,̵s̵k̵i̵p̵P̵r̵e̵f̵i̵x̵,̵c̵e̵l̵l̵O̵f̵,̵c̵e̵l̵l̵,̵e̵n̵c̵o̵d̵e̵A̵r̵g̵s̵,̵h̵,̵a̵r̵g̵s̵E̵q̵C̵o̵d̵e̵,̵a̵r̵g̵s̵A̵t̵B̵i̵t̵,̵O̵p̵t̵i̵o̵n̵.̵a̵n̵y̵]̵[̲f̲o̲c̲u̲s̲,̲ ̲s̲k̲i̲p̲P̲r̲e̲f̲i̲x̲,̲ ̲c̲e̲l̲l̲O̲f̲,̲ ̲c̲e̲l̲l̲,̲ ̲e̲n̲c̲o̲d̲e̲A̲r̲g̲s̲,̲ ̲h̲,̲ ̲a̲r̲g̲s̲A̲t̲B̲i̲t̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲a̲n̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusProof.lean:82:38: warning: This simp argument is unused:
+  cellOf
+
+Hint: Omit it from the simp argument list.
+  simp [focus, ̲skipPrefix, ̲skipPair, ̲cellO̵f̵,c̵ ̲el̵l̵,̵e̵ncodeArgs, ̲skipNone, ̲argsAtBit]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusProof.lean:95:16: error: unsolved goals
+case none.succ.cons.cons
+α : Type u_1
+test : α → NTerm → NTerm → Bool
+i : Nat
+ih :
+  ∀ (qs rs : NArgs),
+    Option.any (fun c => argsAtBit (test c) i qs rs) none =
+      argsAtBit (fun q r => Option.any (fun c => test c q r) none) i qs rs
+term✝¹ : NTerm
+tail✝¹ : NArgs
+term✝ : NTerm
+tail✝ : NArgs
+⊢ termEq term✝¹ term✝ = true → argsAtBit (fun q r => false) i tail✝¹ tail✝ = false
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusProof.lean:95:61: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp [argsAtBit,̵i̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

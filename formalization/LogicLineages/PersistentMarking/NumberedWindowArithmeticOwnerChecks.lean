@@ -1,0 +1,13 @@
+import LogicLineages.PersistentMarking.NumberedWindowArithmeticOwnerProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticOwnerChecks
+open NumberedWindowArithmeticOwnerTargets NumberedWindowArithmeticOwnerProof
+
+theorem exact_ExactOwnerCopies : ExactOwnerCopies := copiesExact
+theorem exact_ExactArrowPrefix : ExactArrowPrefix := arrowExact
+theorem exact_ExactSelectedApplications : ExactSelectedApplications := selectedExact
+
+#print axioms exact_ExactOwnerCopies
+#print axioms exact_ExactArrowPrefix
+#print axioms exact_ExactSelectedApplications
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticOwnerChecks

@@ -1,0 +1,24 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowTypedProbeProgramChecks.lean:28:10: error(lean.unknownIdentifier): Unknown identifier `Proof.primitiveEvaluation`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowTypedProbeProgramChecks.lean:31:2: error: No goals to be solved
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowTypedProbeProgramChecks.lean:35:37: error(lean.unknownIdentifier): Unknown identifier `Proof.unaryCorrespondence`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowTypedProbeProgramChecks.lean:33:64: error: unsolved goals
+case isTrue.e_a
+s : Settings
+arrow : Primrec arrowView
+fresh : Primrec freshName
+X : Type := Address × ℕ × ℕ
+context : Primrec fun row => row.1.1
+dom : Primrec fun row => row.2.1
+n✝ : Primrec fun row => freshName row.1.2.2
+fn : Primrec fun a => Option.map (fun pair => freeAddress a.1 pair.1 (freshName a.2.2)) (arrowView a.2.1)
+n : ℕ
+h✝ : scalar s n = true
+⊢ (fun a => Option.map (fun pair => freeAddress a.1 pair.1 (freshName a.2.2)) (arrowView a.2.1)) = fun a =>
+    (arrowView a.2.1).bind fun __x => pure (freeAddress a.1 __x.1 (freshName a.2.2))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowTypedProbeProgramChecks.lean:58:20: error(lean.unknownIdentifier): Unknown identifier `Proof.allPrimitiveFunctions`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowTypedProbeProgramChecks.lean:58:11: error: Tactic `rcases` failed: `x✝ : ?m.60` is not an inductive datatype
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowTypedProbeProgramChecks.lean:63:11: error(lean.unknownIdentifier): Unknown identifier `Proof.unaryCorrespondence`
+'LogicLineages.PersistentMarking.NumberedWindowTypedProbeProgramChecks.exact_TypedProbePrograms' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

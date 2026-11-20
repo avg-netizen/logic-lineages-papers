@@ -1,0 +1,122 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitBuildProgramsProof.lean:58:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitBuildProgramsProof.lean:61:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitBuildProgramsProof.lean:75:16: error: (kernel) unknown constant '_private.LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraphUnitBuildProgramsProof.0.LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph.UnitCode.emitFreeProgram'
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitBuildProgramsProof.lean:85:61: error: unsolved goals
+case none.none.none
+q : ResultInput
+ht : q.2.2.1 = none
+hl : q.1.2.getD 0 none = none
+hr : q.1.2.getD 1 none = none
+⊢ Option.map (fun x => freeBlock (groundCount q.1.1.2.1) q.2.2.2.2 x) (q.1.2[0]?.getD none) =
+    Option.bind (q.1.2[0]?.getD none) fun l => some (freeBlock (groundCount q.1.1.2.1) q.2.2.2.2 l)
+
+case none.none.some
+q : ResultInput
+ht : q.2.2.1 = none
+hl : q.1.2.getD 0 none = none
+val✝ : Block
+hr : q.1.2.getD 1 none = some val✝
+⊢ Option.map (fun x => freeBlock (groundCount q.1.1.2.1) q.2.2.2.2 x) (q.1.2[0]?.getD none) =
+    Option.bind (q.1.2[0]?.getD none) fun l => some (freeBlock (groundCount q.1.1.2.1) q.2.2.2.2 l)
+
+case none.some.none
+q : ResultInput
+ht : q.2.2.1 = none
+val✝ : Block
+hl : q.1.2.getD 0 none = some val✝
+hr : q.1.2.getD 1 none = none
+⊢ Option.map (fun x => freeBlock (groundCount q.1.1.2.1) q.2.2.2.2 x) (q.1.2[0]?.getD none) =
+    Option.bind (q.1.2[0]?.getD none) fun l => some (freeBlock (groundCount q.1.1.2.1) q.2.2.2.2 l)
+
+case none.some.some
+q : ResultInput
+ht : q.2.2.1 = none
+val✝¹ : Block
+hl : q.1.2.getD 0 none = some val✝¹
+val✝ : Block
+hr : q.1.2.getD 1 none = some val✝
+⊢ Option.map (fun x => freeBlock (groundCount q.1.1.2.1) q.2.2.2.2 x) (q.1.2[0]?.getD none) =
+    Option.bind (q.1.2[0]?.getD none) fun l => some (freeBlock (groundCount q.1.1.2.1) q.2.2.2.2 l)
+
+case some.none.none
+q : ResultInput
+val✝ : ℕ
+ht : q.2.2.1 = some val✝
+hl : q.1.2.getD 0 none = none
+hr : q.1.2.getD 1 none = none
+⊢ (Option.bind (q.1.2[0]?.getD none) fun a =>
+      Option.map ((fun x => activeBlock (groundCount q.1.1.2.1) q.2.2.2.2 x.1 x.2) ∘ fun r => (a, r))
+        (q.1.2[1]?.getD none)) =
+    Option.bind (q.1.2[0]?.getD none) fun l =>
+      Option.bind (q.1.2[1]?.getD none) fun r => some (activeBlock (groundCount q.1.1.2.1) q.2.2.2.2 l r)
+
+case some.none.some
+q : ResultInput
+val✝¹ : ℕ
+ht : q.2.2.1 = some val✝¹
+hl : q.1.2.getD 0 none = none
+val✝ : Block
+hr : q.1.2.getD 1 none = some val✝
+⊢ (Option.bind (q.1.2[0]?.getD none) fun a =>
+      Option.map ((fun x => activeBlock (groundCount q.1.1.2.1) q.2.2.2.2 x.1 x.2) ∘ fun r => (a, r))
+        (q.1.2[1]?.getD none)) =
+    Option.bind (q.1.2[0]?.getD none) fun l =>
+      Option.bind (q.1.2[1]?.getD none) fun r => some (activeBlock (groundCount q.1.1.2.1) q.2.2.2.2 l r)
+
+case some.some.none
+q : ResultInput
+val✝¹ : ℕ
+ht : q.2.2.1 = some val✝¹
+val✝ : Block
+hl : q.1.2.getD 0 none = some val✝
+hr : q.1.2.getD 1 none = none
+⊢ (Option.bind (q.1.2[0]?.getD none) fun a =>
+      Option.map ((fun x => activeBlock (groundCount q.1.1.2.1) q.2.2.2.2 x.1 x.2) ∘ fun r => (a, r))
+        (q.1.2[1]?.getD none)) =
+    Option.bind (q.1.2[0]?.getD none) fun l =>
+      Option.bind (q.1.2[1]?.getD none) fun r => some (activeBlock (groundCount q.1.1.2.1) q.2.2.2.2 l r)
+
+case some.some.some
+q : ResultInput
+val✝² : ℕ
+ht : q.2.2.1 = some val✝²
+val✝¹ : Block
+hl : q.1.2.getD 0 none = some val✝¹
+val✝ : Block
+hr : q.1.2.getD 1 none = some val✝
+⊢ (Option.bind (q.1.2[0]?.getD none) fun a =>
+      Option.map ((fun x => activeBlock (groundCount q.1.1.2.1) q.2.2.2.2 x.1 x.2) ∘ fun r => (a, r))
+        (q.1.2[1]?.getD none)) =
+    Option.bind (q.1.2[0]?.getD none) fun l =>
+      Option.bind (q.1.2[1]?.getD none) fun r => some (activeBlock (groundCount q.1.1.2.1) q.2.2.2.2 l r)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitBuildProgramsProof.lean:89:99: warning: This simp argument is unused:
+  hl
+
+Hint: Omit it from the simp argument list.
+  simp [assembleResult, ̲resultPart, ̲resultAt, ̲mapResult, ̲emitFree, ̲emitActive, ̲rowInput,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲pairResults, ̲ht, ̲hl̵,̵h̵r]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitBuildProgramsProof.lean:89:102: warning: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  simp [assembleResult, ̲resultPart, ̲resultAt, ̲mapResult, ̲emitFree, ̲emitActive, ̲rowInput,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲pairResults, ̲ht, ̲hl,̵h̵r̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitBuildProgramsProof.lean:127:20: warning: This simp argument is unused:
+  children
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵h̵i̵l̵d̵r̵e̵n̵,̵a̵s̵s̵e̵m̵b̵l̵e̵,̵b̵l̵o̵c̵k̵F̵u̵e̵l̵,̵h̵,̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵e̵q̵_̵b̵i̵n̵d̵]̵[̲a̲s̲s̲e̲m̲b̲l̲e̲,̲ ̲b̲l̲o̲c̲k̲F̲u̲e̲l̲,̲ ̲h̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲m̲a̲p̲_̲e̲q̲_̲b̲i̲n̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

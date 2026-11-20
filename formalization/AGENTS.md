@@ -1,3 +1,9 @@
+# Formalization paused after the 20 November 2026 round
+
+The user paused all three formalization lanes and the serialized compiler. The coordinator is authorized to commit and push the completed checkpoint. Further proof work, builds or scheduled continuation require a fresh explicit user release. This pause supersedes the historical release sections below. [Final evidence and resumption handoff](verification/local-three-agent-continuation-2026-11-19/PAUSED-HANDOFF-2026-11-20.md)
+
+---
+
 # Current release — new comparison set, 18 November 2026
 
 Owner requests archive of superseded editions05–10 and formalization of new

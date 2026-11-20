@@ -1,0 +1,13 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowShiftProgramProof
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowShiftProgramChecks
+open NumberedWindowShiftProgramTargets
+
+theorem exact_ShiftProgram : ShiftProgram := NumberedWindowShiftProgramProof.program
+
+#print axioms exact_ShiftProgram
+
+end LogicLineages.PersistentMarking.NumberedWindowShiftProgramChecks

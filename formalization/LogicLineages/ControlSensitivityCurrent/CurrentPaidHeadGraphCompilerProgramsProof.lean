@@ -1,5 +1,6 @@
 module
 public import LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraphTemplateProgramsProof
+public import LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraphTargets
 public import LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraphUnitBuildProgramsProof
 public import LogicLineages.ControlSensitivityCurrent.CurrentCompilerStatementChecks
 public import LogicLineages.StandardControlCurrent.ComputableFoldProof
@@ -13,12 +14,9 @@ private theorem mapProgram {α β γ : Type} [Primcodable α] [Primcodable β] [
     {xs : α→List β} {f : α→β→γ} (h₁ : Computable xs)
     (h₂ : Computable (fun q : α×β => f q.1 q.2)) :
     Computable (fun q => (xs q).map (f q)) := by
-  have h := ComputableFoldProof.filterMapProgram h₁ (Computable.option_some_iff.mpr h₂)
-  apply h.of_eq
-  intro q
-  induction (xs q) with
-  | nil => rfl
-  | cons x xs ih => simpa only [List.filterMap_cons,List.map_cons,ih]
+  have h := ComputableFoldProof.filterMapProgram (g := fun a b => some (f a b)) h₁
+    (Computable.option_some_iff.mpr h₂)
+  simpa only [List.filterMap_eq_map'] using h
 
 private theorem smallProgram (f : Nat→Nat) (hf : Computable f) :
     Computable (fun _ : Nat => smallValues f) := by
@@ -28,6 +26,9 @@ private theorem smallProgram (f : Nat→Nat) (hf : Computable f) :
 
 private theorem normProgram : Primrec rawNormCode := Primrec.nat_iff.mpr rawNormCodePrimitiveRecursive
 
+attribute [local irreducible] rawNormCode valueCode
+
+set_option maxHeartbeats 400000 in
 private theorem pointProgram (f : Nat→Nat) (hc : Computable f) (hf : FullAddition.Targets.SourceGrowth f) :
     Computable (fun q : Nat×Nat => pointValuesCode f q.1 q.2) := by
   let P := Nat×Nat
@@ -38,7 +39,11 @@ private theorem pointProgram (f : Nat→Nat) (hc : Computable f) (hf : FullAddit
   let Q := P×Nat
   have a : Primrec (fun q : Q => q.1.1) := Primrec.fst.comp Primrec.fst
   have b : Primrec (fun q : Q => rawNormCode q.1.1+q.2) := Primrec.nat_add.comp (normProgram.comp a) Primrec.snd
-  exact mapProgram xs.to_comp ((valueProgram f hc hf).comp (a.pair b).to_comp)
+  have callback : Computable (fun q : Q => valueCode f q.1.1 (rawNormCode q.1.1+q.2)) :=
+    (valueProgram f hc hf).comp (a.pair b).to_comp
+  unfold pointValuesCode
+  exact mapProgram (xs := fun q : P => List.range (max (rawNormCode q.1) q.2-rawNormCode q.1))
+    (f := fun (q : P) i => valueCode f q.1 (rawNormCode q.1+i)) xs.to_comp callback
 
 private abbrev FreshInput := List Nat×Nat
 private abbrev Loaded := KInput×ParameterCode
@@ -95,7 +100,7 @@ private theorem directPacketProgram (p : Policy) (hp : PolicyShape.Effective p) 
   apply (Computable.option_bind h (prepareDirectProgram p hp f hc hf).to₂).of_eq
   rintro ⟨Γ,src,δ⟩
   simp only [prepareDirect,fromRay,buildDirect,directPacket,Option.map_eq_bind,bind,pure]
-  split <;> rfl
+  rfl
 
 private abbrev Selected := OriginalInput×Nat
 private abbrev WithB := Selected×Block
@@ -106,6 +111,9 @@ private noncomputable def insertFinish (q : All) : Block :=
   insertedBlock (groundCount q.1.1.1.1.1) q.2.2 (SyntaxCode.typeLevel q.1.1.1.2)
     q.1.1.2 q.1.2 q.2.1
 
+attribute [local irreducible] insertedBlock groundCount UnitCode.block directPacket
+
+set_option maxHeartbeats 400000 in
 private theorem insertFinishProgram : Computable insertFinish := by
   have h : Primrec (fun q : All => q.1.1.1) := Primrec.fst.comp (Primrec.fst.comp Primrec.fst)
   have g := countProgram.comp (Primrec.fst.comp (Primrec.fst.comp h))
@@ -114,13 +122,18 @@ private theorem insertFinishProgram : Computable insertFinish := by
   have B := Primrec.snd.comp (Primrec.fst.comp (Primrec.fst : Primrec (fun q : All => q.1)))
   have C := Primrec.snd.comp (Primrec.fst : Primrec (fun q : All => q.1))
   have G := Primrec.fst.comp (Primrec.snd : Primrec (fun q : All => q.2))
+  unfold insertFinish
   exact insertedBlockProgram.comp (g.pair (n.pair (level.pair (B.pair (C.pair G))))).to_comp
 
+attribute [local irreducible] insertFinish insertCode Computable Primrec
+
+set_option maxHeartbeats 400000 in
 private theorem insertProgram (p : Policy) (hp : PolicyShape.Effective p) (f : Nat→Nat)
     (hc : Computable f) (hf : FullAddition.Targets.SourceGrowth f) : Computable (insertCode p f) := by
   have rawC : Primrec (fun q : OriginalInput => (q.1,q.2.2.1)) :=
     Primrec.fst.pair (Primrec.fst.comp (Primrec.snd.comp Primrec.snd))
-  have hσ := SyntaxCode.StatementChecks.checkPrimitiveRecursive.comp rawC
+  have hσ : Primrec (fun q : OriginalInput => SyntaxCode.check q.1 q.2.2.1) :=
+    SyntaxCode.StatementChecks.checkPrimitiveRecursive.comp rawC
   have hblock := UnitCode.blockProgram p hp f hc hf
   have hB : Computable (fun q : Selected => UnitCode.block p f q.1.1 q.1.2.1) :=
     hblock.comp (((Primrec.fst.comp Primrec.fst).pair
@@ -129,15 +142,14 @@ private theorem insertProgram (p : Policy) (hp : PolicyShape.Effective p) (f : N
     hblock.comp (rawC.comp (Primrec.fst.comp Primrec.fst)).to_comp
   have k : Primrec (fun q : WithBC => q.1.1.1.2.2.2) :=
     Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp (Primrec.fst.comp (Primrec.fst.comp Primrec.fst))))
-  have hG := (directPacketProgram p hp f hc hf).comp k.to_comp
+  have hG : Computable (fun q : WithBC => directPacket p f q.1.1.1.2.2.2) :=
+    (directPacketProgram p hp f hc hf).comp k.to_comp
   have h := Computable.option_bind hσ.to_comp
     (Computable.option_bind hB (Computable.option_bind hC
       (Computable.option_map hG insertFinishProgram.to₂).to₂).to₂).to₂
   apply h.of_eq
-  intro q
-  simp only [insertCode,insertFinish,Option.map_eq_bind,bind,pure]
-  rcases q with ⟨Γ,B,C,k⟩
-  rfl
+  rintro ⟨Γ,B,C,k⟩
+  simp only [insertCode,insertFinish,Option.map_eq_bind,bind,pure] <;> rfl
 
 private theorem compilerFiberProgram : Computable (fun d : Block×List Nat => compiledFiberCode d.1 d.2) := by
   let D := Block×List Nat

@@ -1,0 +1,14 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowAddressApplicationProgramProof
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowAddressApplicationProgramChecks
+open NumberedWindowAddressApplicationProgramTargets
+
+theorem exact_ApplicationPrograms : ApplicationPrograms :=
+  NumberedWindowAddressApplicationProgramProof.programs
+
+#print axioms exact_ApplicationPrograms
+
+end LogicLineages.PersistentMarking.NumberedWindowAddressApplicationProgramChecks

@@ -1,0 +1,201 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAddressAlgorithmProof.lean:43:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  decodeTyFuel m a
+in the target expression
+  ((decodeTy a).isSome && (decodeTy b).isSome) =
+    (do
+        let __x ← some (a, b)
+        let σ ← decodeTyFuel m __x.fst
+        let τ ← decodeTyFuel m __x.snd
+        pure (σ.arrow τ)).isSome
+
+case succ.some
+m a b : Nat
+hd : NumberedWindowArithmeticPair.decode m = some (a, b)
+bounds : a ≤ m ∧ b ≤ m
+⊢ ((decodeTy a).isSome && (decodeTy b).isSome) =
+    (do
+        let __x ← some (a, b)
+        let σ ← decodeTyFuel m __x.fst
+        let τ ← decodeTyFuel m __x.snd
+        pure (σ.arrow τ)).isSome
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAddressAlgorithmProof.lean:75:18: error: Tactic `split` failed: Could not split an `if` or `match` expression in the type `True` of `rest`
+
+Hint: Use `set_option trace.split.failure true` to display additional diagnostic information
+
+case succ.succ.some.none.none.none
+m : Nat
+ih : ∀ (c : Nat), (decodeFieldsFuel m c).bind guardStack = Option.map (List.map encodeTy) (decodeBindersFuel m c)
+n a b : Nat
+hp : NumberedWindowArithmeticPair.decode n = some (a, b)
+hA : decodeTy a = none
+hf : decodeFieldsFuel m b = none
+hb : decodeBindersFuel m b = none
+rest : True
+⊢ ∀ (a_1 : List Nat),
+    ((decodeFieldsFuel m b).bind fun xs => some (a :: xs)) = some a_1 → ∃ x, x ∈ a_1 ∧ typeBit x = false
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAddressAlgorithmProof.lean:75:18: error: Tactic `split` failed: Could not split an `if` or `match` expression in the type
+  ∃ x, x ∈ val✝ ∧ typeBit x = false
+of `rest`
+
+Hint: Use `set_option trace.split.failure true` to display additional diagnostic information
+
+case succ.succ.some.none.some.none
+m : Nat
+ih : ∀ (c : Nat), (decodeFieldsFuel m c).bind guardStack = Option.map (List.map encodeTy) (decodeBindersFuel m c)
+n a b : Nat
+hp : NumberedWindowArithmeticPair.decode n = some (a, b)
+hA : decodeTy a = none
+val✝ : List Nat
+hf : decodeFieldsFuel m b = some val✝
+hb : decodeBindersFuel m b = none
+rest : ∃ x, x ∈ val✝ ∧ typeBit x = false
+⊢ ∀ (a_1 : List Nat),
+    ((decodeFieldsFuel m b).bind fun xs => some (a :: xs)) = some a_1 → ∃ x, x ∈ a_1 ∧ typeBit x = false
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAddressAlgorithmProof.lean:75:18: error: Tactic `split` failed: Could not split an `if` or `match` expression in the type
+  (∀ (x : Nat), x ∈ val✝¹ → typeBit x = true) ∧ val✝¹ = List.map encodeTy val✝
+of `rest`
+
+Hint: If you meant to destruct this conjunction, use the `cases` tactic instead
+
+Hint: Use `set_option trace.split.failure true` to display additional diagnostic information
+
+case succ.succ.some.none.some.some
+m : Nat
+ih : ∀ (c : Nat), (decodeFieldsFuel m c).bind guardStack = Option.map (List.map encodeTy) (decodeBindersFuel m c)
+n a b : Nat
+hp : NumberedWindowArithmeticPair.decode n = some (a, b)
+hA : decodeTy a = none
+val✝¹ : List Nat
+hf : decodeFieldsFuel m b = some val✝¹
+val✝ : List Ty
+hb : decodeBindersFuel m b = some val✝
+rest : (∀ (x : Nat), x ∈ val✝¹ → typeBit x = true) ∧ val✝¹ = List.map encodeTy val✝
+⊢ ∀ (a_1 : List Nat),
+    ((decodeFieldsFuel m b).bind fun xs => some (a :: xs)) = some a_1 → ∃ x, x ∈ a_1 ∧ typeBit x = false
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAddressAlgorithmProof.lean:75:18: error: Tactic `split` failed: Could not split an `if` or `match` expression in the type `True` of `rest`
+
+Hint: Use `set_option trace.split.failure true` to display additional diagnostic information
+
+case succ.succ.some.some.none.none
+m : Nat
+ih : ∀ (c : Nat), (decodeFieldsFuel m c).bind guardStack = Option.map (List.map encodeTy) (decodeBindersFuel m c)
+n a b : Nat
+hp : NumberedWindowArithmeticPair.decode n = some (a, b)
+val✝ : Ty
+hA : decodeTy a = some val✝
+hf : decodeFieldsFuel m b = none
+hb : decodeBindersFuel m b = none
+rest : True
+⊢ ((decodeFieldsFuel m b).bind fun xs => some (a :: xs)).bind guardStack =
+    (decodeBindersFuel m b).bind (Option.map (List.map encodeTy) ∘ fun Γ => some (val✝ :: Γ))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAddressAlgorithmProof.lean:75:18: error: Tactic `split` failed: Could not split an `if` or `match` expression in the type
+  ∃ x, x ∈ val✝ ∧ typeBit x = false
+of `rest`
+
+Hint: Use `set_option trace.split.failure true` to display additional diagnostic information
+
+case succ.succ.some.some.some.none
+m : Nat
+ih : ∀ (c : Nat), (decodeFieldsFuel m c).bind guardStack = Option.map (List.map encodeTy) (decodeBindersFuel m c)
+n a b : Nat
+hp : NumberedWindowArithmeticPair.decode n = some (a, b)
+val✝¹ : Ty
+hA : decodeTy a = some val✝¹
+val✝ : List Nat
+hf : decodeFieldsFuel m b = some val✝
+hb : decodeBindersFuel m b = none
+rest : ∃ x, x ∈ val✝ ∧ typeBit x = false
+⊢ ((decodeFieldsFuel m b).bind fun xs => some (a :: xs)).bind guardStack =
+    (decodeBindersFuel m b).bind (Option.map (List.map encodeTy) ∘ fun Γ => some (val✝¹ :: Γ))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAddressAlgorithmProof.lean:75:18: error: Tactic `split` failed: Could not split an `if` or `match` expression in the type
+  (∀ (x : Nat), x ∈ val✝¹ → typeBit x = true) ∧ val✝¹ = List.map encodeTy val✝
+of `rest`
+
+Hint: If you meant to destruct this conjunction, use the `cases` tactic instead
+
+Hint: Use `set_option trace.split.failure true` to display additional diagnostic information
+
+case succ.succ.some.some.some.some
+m : Nat
+ih : ∀ (c : Nat), (decodeFieldsFuel m c).bind guardStack = Option.map (List.map encodeTy) (decodeBindersFuel m c)
+n a b : Nat
+hp : NumberedWindowArithmeticPair.decode n = some (a, b)
+val✝² : Ty
+hA : decodeTy a = some val✝²
+val✝¹ : List Nat
+hf : decodeFieldsFuel m b = some val✝¹
+val✝ : List Ty
+hb : decodeBindersFuel m b = some val✝
+rest : (∀ (x : Nat), x ∈ val✝¹ → typeBit x = true) ∧ val✝¹ = List.map encodeTy val✝
+⊢ ((decodeFieldsFuel m b).bind fun xs => some (a :: xs)).bind guardStack =
+    (decodeBindersFuel m b).bind (Option.map (List.map encodeTy) ∘ fun Γ => some (val✝² :: Γ))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAddressAlgorithmProof.lean:74:28: warning: This simp argument is unused:
+  typeGuard a
+
+Hint: Omit it from the simp argument list.
+  simp [guardStack, t̵y̵p̵e̵G̵u̵a̵r̵d̵ ̵a̵,̵ ̵hA]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAddressAlgorithmProof.lean:94:100: error: Application type mismatch: The argument
+  ht
+has type
+  decodeTy t = none
+but is expected to have type
+  decodeTy ?m.215 = some ?m.216
+in the application
+  decodeSound ht
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAddressAlgorithmProof.lean:94:100: error: Application type mismatch: The argument
+  ht
+has type
+  decodeTy t = none
+but is expected to have type
+  decodeTy ?m.217 = some ?m.218
+in the application
+  decodeSound ht
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAddressAlgorithmProof.lean:92:23: error: unsolved goals
+case none.none
+n ctx t k : Nat
+hn : decodeNode n = some (3, [ctx, t, k])
+hc : decodeBinders ctx = none
+ht : decodeTy t = none
+⊢ ∀ (a : List Nat), contextView ctx = some a → typeBit t = false
+
+case none.some
+n ctx t k : Nat
+hn : decodeNode n = some (3, [ctx, t, k])
+hc : decodeBinders ctx = none
+val✝ : Ty
+ht : decodeTy t = some val✝
+⊢ ∀ (a : List Nat), contextView ctx = some a → typeBit t = false
+
+case some.none
+n ctx t k : Nat
+hn : decodeNode n = some (3, [ctx, t, k])
+val✝ : List Ty
+hc : decodeBinders ctx = some val✝
+ht : decodeTy t = none
+⊢ ∀ (a : List Nat), contextView ctx = some a → typeBit t = false
+
+case some.some
+n ctx t k : Nat
+hn : decodeNode n = some (3, [ctx, t, k])
+val✝¹ : List Ty
+hc : decodeBinders ctx = some val✝¹
+val✝ : Ty
+ht : decodeTy t = some val✝
+⊢ ((contextView ctx).bind fun stack => if typeBit t = true then some (stack, t, k) else none) =
+    some (List.map encodeTy val✝¹, t, k)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAddressAlgorithmProof.lean:93:34: warning: This simp argument is unused:
+  context
+
+Hint: Omit it from the simp argument list.
+  simp only [assembleAddress, c̵o̵n̵t̵e̵x̵t̵,̵ ̵typeGuard]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAddressAlgorithmProof.lean:93:43: warning: This simp argument is unused:
+  typeGuard
+
+Hint: Omit it from the simp argument list.
+  simp only [assembleAddress, context,̵ ̵t̵y̵p̵e̵G̵u̵a̵r̵d̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

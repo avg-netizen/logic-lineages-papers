@@ -1,0 +1,9 @@
+import LogicLineages.PersistentMarking.NumberedWindowPairAlgorithm
+import LogicLineages.PersistentMarking.NumberedWindowArithmeticPair
+
+namespace LogicLineages.PersistentMarking.NumberedWindowActualPairAlgorithm
+
+theorem pair : NumberedWindowArithmeticPair.pair = NumberedWindowPairAlgorithm.pair := rfl
+theorem decode : NumberedWindowArithmeticPair.decode = NumberedWindowPairAlgorithm.decode := rfl
+
+end LogicLineages.PersistentMarking.NumberedWindowActualPairAlgorithm

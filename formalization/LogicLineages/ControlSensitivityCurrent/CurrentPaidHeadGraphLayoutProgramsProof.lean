@@ -31,7 +31,7 @@ private theorem gateCell : Primrec₂ (fun (q : G) (j : Nat) => MatrixCode.both
   let P := G×Nat
   have u : Primrec (fun q : P => q.1.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.fst)
   have v : Primrec (fun q : P => q.1.2.2.1) := Primrec.fst.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.fst))
-  have y := (Primrec.list_getD 0).comp (Primrec.fst.comp Primrec.fst) Primrec.snd
+  have y : Primrec (fun q : P => q.1.1.getD q.2 0) := (Primrec.list_getD 0).comp (Primrec.fst.comp Primrec.fst) Primrec.snd
   exact andProgram.comp (eqProgram.comp (varProgram.comp u) (litProgram.comp Primrec.snd))
     (eqProgram.comp (varProgram.comp v) (litProgram.comp y))
 
@@ -48,7 +48,7 @@ private theorem gateHigh : Primrec (fun (q : G) => MatrixCode.both
 
 theorem gateProgram : Primrec (fun q : List Nat×Nat×Nat×Nat => fGate rawLayout q.1 q.2.1 q.2.2.1 q.2.2.2) :=
   Primrec.list_foldr (Primrec.list_map (Primrec.const (List.range 4)) gateCell) gateHigh
-    (orProgram.comp Primrec.snd).to₂
+    (orProgram.comp (Primrec.fst.comp Primrec.snd) (Primrec.snd.comp Primrec.snd)).to₂
 
 /-- A reverse literal fold implements the same consecutive-position rows.
 No ordinal evaluation is supplied here; the values already came from J. -/
@@ -108,11 +108,11 @@ private theorem prefixCellProgram : Primrec (fun q : (Nat×Nat)×Nat×Nat×Nat =
 theorem prefixProgram : Primrec (fun q : (Nat×Nat)×Nat×List Nat => prefixBody rawLayout q.1.1 q.1.2 q.2.1 q.2.2) := by
   apply (indexedProgram 1 prefixCell prefixCellProgram).of_eq
   rintro ⟨ends,i,xs⟩
+  change indexedList 1 prefixCell ends i xs = prefixBody rawLayout ends.1 ends.2 i xs
   induction xs generalizing i with
   | nil => rfl
   | cons x xs ih =>
-    simp only [indexedList,prefixBody,prefixCell,rawLayout]
-    rw [ih (i+1)]
+    exact congrArg (prefixCell ends i x) (ih (i+1))
 
 theorem pinProgram : Primrec₂ pinCode := by
   let combine : Nat → Nat → Nat → Nat → Nat := fun _ i x rest =>
@@ -123,8 +123,9 @@ theorem pinProgram : Primrec₂ pinCode := by
       (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
   apply ((indexedProgram 0 combine h).comp ((Primrec.const 0).pair Primrec.id)).of_eq
   rintro ⟨i,xs⟩
+  change indexedList 0 combine 0 i xs = pinCode i xs
   induction xs generalizing i with
   | nil => rfl
-  | cons x xs ih => simp [indexedList,pinCode,combine,ih]
+  | cons x xs ih => exact congrArg (combine 0 i x) (ih (i+1))
 
 end LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph

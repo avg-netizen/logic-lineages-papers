@@ -1,0 +1,11 @@
+import LogicLineages.PersistentMarking.NumberedWindowClassApplicationHopProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowClassApplicationHopChecks
+open NumberedWindowClassApplicationHopTargets
+
+theorem exact_ClassHopLift : ExactClassHopLift :=
+  NumberedWindowClassApplicationHopProof.exactHop
+
+#print axioms exact_ClassHopLift
+
+end LogicLineages.PersistentMarking.NumberedWindowClassApplicationHopChecks

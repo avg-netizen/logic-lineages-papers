@@ -1,0 +1,14 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticClassAlgorithmProof.lean:35:4: error: Type mismatch: After simplification, term
+  everyRound S K Γ τ (cover S K Q) Q (cover S K Q).length
+ has type
+  @Eq (List Nat)
+    (NumberedWindowClassAlgorithm.rounds (codedExchange S K Γ τ) (List.map encodeTerm (cover S K Q)) (encodeTerm Q)
+      (cover S K Q).length)
+    (List.map encodeTerm (rounds (cover S K Q) termEq (finiteExchangeBit S K Γ τ) Q (cover S K Q).length))
+but is expected to have type
+  @Eq (List Nat)
+    (NumberedWindowClassAlgorithm.rounds (codedExchange S K Γ τ) (List.map encodeTerm (cover S K Q)) (encodeTerm Q)
+      (cover S K Q).length)
+    (List.map encodeTerm
+      (rounds (cover S K Q) termEq (windowExchangeBit S K (NumberedWindowTypingBits.binderLookup Γ) τ) Q
+        (cover S K Q).length))

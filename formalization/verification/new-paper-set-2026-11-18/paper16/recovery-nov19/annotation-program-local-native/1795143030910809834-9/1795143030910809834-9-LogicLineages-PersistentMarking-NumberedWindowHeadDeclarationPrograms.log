@@ -1,0 +1,65 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowHeadDeclarationPrograms.lean:27:66: error: Application type mismatch: The argument
+  Primrec.const 0
+has type
+  Primrec fun x => 0
+but is expected to have type
+  Primrec Prod.fst
+in the application
+  Primrec₂.comp Primrec.list_cons (Primrec.const 0)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowHeadDeclarationPrograms.lean:33:54: error: unsolved goals
+case succ.succ.succ.succ.zero
+P : Type := ℕ × ℕ
+tag : Primrec Prod.fst
+t : Primrec Prod.snd
+tt : Primrec fun a => arrow a.2 a.2
+gtt : Primrec fun a => arrow 0 (arrow a.2 a.2)
+c : Primrec fun a => (arrow 0 (arrow a.2 (arrow a.2 a.2)), [])
+recursor : Primrec fun a => (arrow 0 (arrow (arrow 0 (arrow a.2 a.2)) (arrow a.2 a.2)), [])
+p : Primrec fun a => NumberedWindowPairAlgorithm.decode a.2
+l : Primrec fun x => x.2.1
+r : Primrec fun x => x.2.2
+appDecl : Primrec fun a => (a.2.2, [arrow a.2.1 a.2.2, a.2.1])
+rankDecl : Primrec fun a => (0, List.replicate a.2.2 0)
+app :
+  Primrec fun a =>
+    (Option.map (fun b => ((a, b).2.2, [arrow (a, b).2.1 (a, b).2.2, (a, b).2.1]))
+          (NumberedWindowPairAlgorithm.decode a.2)).getD
+      default
+ranked :
+  Primrec fun a =>
+    (Option.map (fun b => (0, List.replicate (a, b).2.2 0)) (NumberedWindowPairAlgorithm.decode a.2)).getD default
+x : ℕ
+⊢ (Option.map (fun b => (b.2, [arrow b.1 b.2, b.1])) (NumberedWindowPairAlgorithm.decode x)).getD default =
+    (Option.map (fun p => (p.2, [arrow p.1 p.2, p.1])) (NumberedWindowPairAlgorithm.decode x)).getD default
+
+case succ.succ.succ.succ.succ.zero
+P : Type := ℕ × ℕ
+tag : Primrec Prod.fst
+t : Primrec Prod.snd
+tt : Primrec fun a => arrow a.2 a.2
+gtt : Primrec fun a => arrow 0 (arrow a.2 a.2)
+c : Primrec fun a => (arrow 0 (arrow a.2 (arrow a.2 a.2)), [])
+recursor : Primrec fun a => (arrow 0 (arrow (arrow 0 (arrow a.2 a.2)) (arrow a.2 a.2)), [])
+p : Primrec fun a => NumberedWindowPairAlgorithm.decode a.2
+l : Primrec fun x => x.2.1
+r : Primrec fun x => x.2.2
+appDecl : Primrec fun a => (a.2.2, [arrow a.2.1 a.2.2, a.2.1])
+rankDecl : Primrec fun a => (0, List.replicate a.2.2 0)
+app :
+  Primrec fun a =>
+    (Option.map (fun b => ((a, b).2.2, [arrow (a, b).2.1 (a, b).2.2, (a, b).2.1]))
+          (NumberedWindowPairAlgorithm.decode a.2)).getD
+      default
+ranked :
+  Primrec fun a =>
+    (Option.map (fun b => (0, List.replicate (a, b).2.2 0)) (NumberedWindowPairAlgorithm.decode a.2)).getD default
+x : ℕ
+⊢ (Option.map (fun b => (0, List.replicate b.2 0)) (NumberedWindowPairAlgorithm.decode x)).getD default =
+    (Option.map (fun p => (0, List.replicate p.2 0)) (NumberedWindowPairAlgorithm.decode x)).getD default
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowHeadDeclarationPrograms.lean:61:41: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

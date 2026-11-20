@@ -1,0 +1,193 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowStatPartitionPrograms.lean:48:2: error: unsolved goals
+case pos.none.none.none
+field : ∀ (i : ℕ), Primrec fun p => termCodes (p.2.getD i 0)
+State : Type := (Node × List ℕ) × List ℕ
+extra : Primrec fun p => termCodes (p.1.1.2.getD 2 0)
+fields : Primrec fun p => (p.1.1.2, p.1.2, p.2)
+next :
+  Primrec fun a =>
+    (termCodes (a.1.2.getD 1 0)).bind fun b =>
+      Option.map (fun b_1 => (((a, b), b_1).1.1.2, ((a, b), b_1).1.2, ((a, b), b_1).2))
+        (termCodes ((a, b).1.1.2.getD 2 0))
+shaped : PrimrecPred fun p => p.1 = 0 ∧ p.2.length = 3
+tag : ℕ
+fs : List ℕ
+h : tag = 0 ∧ fs.length = 3
+hk : termCodes (fs.getD 0 0) = none
+hr : termCodes (fs.getD 1 0) = none
+ha : termCodes (fs.getD 2 0) = none
+⊢ none =
+    (termCodes fs[0]).bind fun ks => (termCodes fs[1]).bind fun rs => (termCodes fs[2]).bind fun as => some (ks, rs, as)
+
+case pos.none.none.some
+field : ∀ (i : ℕ), Primrec fun p => termCodes (p.2.getD i 0)
+State : Type := (Node × List ℕ) × List ℕ
+extra : Primrec fun p => termCodes (p.1.1.2.getD 2 0)
+fields : Primrec fun p => (p.1.1.2, p.1.2, p.2)
+next :
+  Primrec fun a =>
+    (termCodes (a.1.2.getD 1 0)).bind fun b =>
+      Option.map (fun b_1 => (((a, b), b_1).1.1.2, ((a, b), b_1).1.2, ((a, b), b_1).2))
+        (termCodes ((a, b).1.1.2.getD 2 0))
+shaped : PrimrecPred fun p => p.1 = 0 ∧ p.2.length = 3
+tag : ℕ
+fs : List ℕ
+h : tag = 0 ∧ fs.length = 3
+hk : termCodes (fs.getD 0 0) = none
+hr : termCodes (fs.getD 1 0) = none
+val✝ : List ℕ
+ha : termCodes (fs.getD 2 0) = some val✝
+⊢ none =
+    (termCodes fs[0]).bind fun ks => (termCodes fs[1]).bind fun rs => (termCodes fs[2]).bind fun as => some (ks, rs, as)
+
+case pos.none.some.none
+field : ∀ (i : ℕ), Primrec fun p => termCodes (p.2.getD i 0)
+State : Type := (Node × List ℕ) × List ℕ
+extra : Primrec fun p => termCodes (p.1.1.2.getD 2 0)
+fields : Primrec fun p => (p.1.1.2, p.1.2, p.2)
+next :
+  Primrec fun a =>
+    (termCodes (a.1.2.getD 1 0)).bind fun b =>
+      Option.map (fun b_1 => (((a, b), b_1).1.1.2, ((a, b), b_1).1.2, ((a, b), b_1).2))
+        (termCodes ((a, b).1.1.2.getD 2 0))
+shaped : PrimrecPred fun p => p.1 = 0 ∧ p.2.length = 3
+tag : ℕ
+fs : List ℕ
+h : tag = 0 ∧ fs.length = 3
+hk : termCodes (fs.getD 0 0) = none
+val✝ : List ℕ
+hr : termCodes (fs.getD 1 0) = some val✝
+ha : termCodes (fs.getD 2 0) = none
+⊢ none =
+    (termCodes fs[0]).bind fun ks => (termCodes fs[1]).bind fun rs => (termCodes fs[2]).bind fun as => some (ks, rs, as)
+
+case pos.none.some.some
+field : ∀ (i : ℕ), Primrec fun p => termCodes (p.2.getD i 0)
+State : Type := (Node × List ℕ) × List ℕ
+extra : Primrec fun p => termCodes (p.1.1.2.getD 2 0)
+fields : Primrec fun p => (p.1.1.2, p.1.2, p.2)
+next :
+  Primrec fun a =>
+    (termCodes (a.1.2.getD 1 0)).bind fun b =>
+      Option.map (fun b_1 => (((a, b), b_1).1.1.2, ((a, b), b_1).1.2, ((a, b), b_1).2))
+        (termCodes ((a, b).1.1.2.getD 2 0))
+shaped : PrimrecPred fun p => p.1 = 0 ∧ p.2.length = 3
+tag : ℕ
+fs : List ℕ
+h : tag = 0 ∧ fs.length = 3
+hk : termCodes (fs.getD 0 0) = none
+val✝¹ : List ℕ
+hr : termCodes (fs.getD 1 0) = some val✝¹
+val✝ : List ℕ
+ha : termCodes (fs.getD 2 0) = some val✝
+⊢ none =
+    (termCodes fs[0]).bind fun ks => (termCodes fs[1]).bind fun rs => (termCodes fs[2]).bind fun as => some (ks, rs, as)
+
+case pos.some.none.none
+field : ∀ (i : ℕ), Primrec fun p => termCodes (p.2.getD i 0)
+State : Type := (Node × List ℕ) × List ℕ
+extra : Primrec fun p => termCodes (p.1.1.2.getD 2 0)
+fields : Primrec fun p => (p.1.1.2, p.1.2, p.2)
+next :
+  Primrec fun a =>
+    (termCodes (a.1.2.getD 1 0)).bind fun b =>
+      Option.map (fun b_1 => (((a, b), b_1).1.1.2, ((a, b), b_1).1.2, ((a, b), b_1).2))
+        (termCodes ((a, b).1.1.2.getD 2 0))
+shaped : PrimrecPred fun p => p.1 = 0 ∧ p.2.length = 3
+tag : ℕ
+fs : List ℕ
+h : tag = 0 ∧ fs.length = 3
+val✝ : List ℕ
+hk : termCodes (fs.getD 0 0) = some val✝
+hr : termCodes (fs.getD 1 0) = none
+ha : termCodes (fs.getD 2 0) = none
+⊢ ((termCodes fs[1]).bind fun a => Option.map (fun b => (val✝, a, b)) (termCodes fs[2])) =
+    (termCodes fs[0]).bind fun ks => (termCodes fs[1]).bind fun rs => (termCodes fs[2]).bind fun as => some (ks, rs, as)
+
+case pos.some.none.some
+field : ∀ (i : ℕ), Primrec fun p => termCodes (p.2.getD i 0)
+State : Type := (Node × List ℕ) × List ℕ
+extra : Primrec fun p => termCodes (p.1.1.2.getD 2 0)
+fields : Primrec fun p => (p.1.1.2, p.1.2, p.2)
+next :
+  Primrec fun a =>
+    (termCodes (a.1.2.getD 1 0)).bind fun b =>
+      Option.map (fun b_1 => (((a, b), b_1).1.1.2, ((a, b), b_1).1.2, ((a, b), b_1).2))
+        (termCodes ((a, b).1.1.2.getD 2 0))
+shaped : PrimrecPred fun p => p.1 = 0 ∧ p.2.length = 3
+tag : ℕ
+fs : List ℕ
+h : tag = 0 ∧ fs.length = 3
+val✝¹ : List ℕ
+hk : termCodes (fs.getD 0 0) = some val✝¹
+hr : termCodes (fs.getD 1 0) = none
+val✝ : List ℕ
+ha : termCodes (fs.getD 2 0) = some val✝
+⊢ ((termCodes fs[1]).bind fun a => Option.map (fun b => (val✝¹, a, b)) (termCodes fs[2])) =
+    (termCodes fs[0]).bind fun ks => (termCodes fs[1]).bind fun rs => (termCodes fs[2]).bind fun as => some (ks, rs, as)
+
+case pos.some.some.none
+field : ∀ (i : ℕ), Primrec fun p => termCodes (p.2.getD i 0)
+State : Type := (Node × List ℕ) × List ℕ
+extra : Primrec fun p => termCodes (p.1.1.2.getD 2 0)
+fields : Primrec fun p => (p.1.1.2, p.1.2, p.2)
+next :
+  Primrec fun a =>
+    (termCodes (a.1.2.getD 1 0)).bind fun b =>
+      Option.map (fun b_1 => (((a, b), b_1).1.1.2, ((a, b), b_1).1.2, ((a, b), b_1).2))
+        (termCodes ((a, b).1.1.2.getD 2 0))
+shaped : PrimrecPred fun p => p.1 = 0 ∧ p.2.length = 3
+tag : ℕ
+fs : List ℕ
+h : tag = 0 ∧ fs.length = 3
+val✝¹ : List ℕ
+hk : termCodes (fs.getD 0 0) = some val✝¹
+val✝ : List ℕ
+hr : termCodes (fs.getD 1 0) = some val✝
+ha : termCodes (fs.getD 2 0) = none
+⊢ ((termCodes fs[1]).bind fun a => Option.map (fun b => (val✝¹, a, b)) (termCodes fs[2])) =
+    (termCodes fs[0]).bind fun ks => (termCodes fs[1]).bind fun rs => (termCodes fs[2]).bind fun as => some (ks, rs, as)
+
+case pos.some.some.some
+field : ∀ (i : ℕ), Primrec fun p => termCodes (p.2.getD i 0)
+State : Type := (Node × List ℕ) × List ℕ
+extra : Primrec fun p => termCodes (p.1.1.2.getD 2 0)
+fields : Primrec fun p => (p.1.1.2, p.1.2, p.2)
+next :
+  Primrec fun a =>
+    (termCodes (a.1.2.getD 1 0)).bind fun b =>
+      Option.map (fun b_1 => (((a, b), b_1).1.1.2, ((a, b), b_1).1.2, ((a, b), b_1).2))
+        (termCodes ((a, b).1.1.2.getD 2 0))
+shaped : PrimrecPred fun p => p.1 = 0 ∧ p.2.length = 3
+tag : ℕ
+fs : List ℕ
+h : tag = 0 ∧ fs.length = 3
+val✝² : List ℕ
+hk : termCodes (fs.getD 0 0) = some val✝²
+val✝¹ : List ℕ
+hr : termCodes (fs.getD 1 0) = some val✝¹
+val✝ : List ℕ
+ha : termCodes (fs.getD 2 0) = some val✝
+⊢ ((termCodes fs[1]).bind fun a => Option.map (fun b => (val✝², a, b)) (termCodes fs[2])) =
+    (termCodes fs[0]).bind fun ks => (termCodes fs[1]).bind fun rs => (termCodes fs[2]).bind fun as => some (ks, rs, as)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowStatPartitionPrograms.lean:49:62: warning: This simp argument is unused:
+  hk
+
+Hint: Omit it from the simp argument list.
+  simp [̵a̵s̵s̵e̵m̵b̵l̵e̵,̵h̵,̵h̵k̵,̵h̵r̵,̵h̵a̵]̵[̲a̲s̲s̲e̲m̲b̲l̲e̲,̲ ̲h̲,̲ ̲h̲r̲,̲ ̲h̲a̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowStatPartitionPrograms.lean:49:65: warning: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  simp [̵a̵s̵s̵e̵m̵b̵l̵e̵,̵h̵,̵h̵k̵,̵h̵r̵,̵h̵a̵]̵[̲a̲s̲s̲e̲m̲b̲l̲e̲,̲ ̲h̲,̲ ̲h̲k̲,̲ ̲h̲a̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowStatPartitionPrograms.lean:49:68: warning: This simp argument is unused:
+  ha
+
+Hint: Omit it from the simp argument list.
+  simp [̵a̵s̵s̵e̵m̵b̵l̵e̵,̵h̵,̵h̵k̵,̵h̵r̵,̵h̵a̵]̵[̲a̲s̲s̲e̲m̲b̲l̲e̲,̲ ̲h̲,̲ ̲h̲k̲,̲ ̲h̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,12 @@
+import LogicLineages.PersistentMarking.NumberedWindowActualPairAlgorithm
+import LogicLineages.PersistentMarking.NumberedWindowRegistryPairCalibration
+import LogicLineages.PersistentMarking.NumberedWindowArithmeticPairProgramTargets
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticPairProgramCalibration
+open NumberedWindowArithmeticPairProgramTargets
+
+theorem calibration : PairAndDecodeCalibration :=
+  ⟨fun a b => congrFun (congrFun (NumberedWindowActualPairAlgorithm.pair.trans NumberedWindowRegistryPairCalibration.pair) a) b,
+   congrFun (NumberedWindowActualPairAlgorithm.decode.trans NumberedWindowRegistryPairCalibration.decode)⟩
+
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticPairProgramCalibration

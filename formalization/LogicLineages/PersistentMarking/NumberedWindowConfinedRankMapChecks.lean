@@ -1,0 +1,19 @@
+import LogicLineages.PersistentMarking.NumberedWindowConfinedRankMapProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowConfinedRankMapChecks
+open NumberedWindowConfinedRankMapTargets NumberedWindowConfinedRankMapProof
+
+theorem exact_InitialConfinedWindowGuard : InitialConfinedWindowGuard := initialGuard
+
+theorem exact_ConfinedPredecessorInGuard : ConfinedPredecessorInGuard := predecessorGuard
+
+theorem exact_GuardedQuoteLiteral : GuardedQuoteLiteral := quoteLiteral
+
+theorem exact_GuardedQuotePreservesStrict : GuardedQuotePreservesStrict := preservesStrict
+
+#print axioms exact_InitialConfinedWindowGuard
+#print axioms exact_ConfinedPredecessorInGuard
+#print axioms exact_GuardedQuoteLiteral
+#print axioms exact_GuardedQuotePreservesStrict
+
+end LogicLineages.PersistentMarking.NumberedWindowConfinedRankMapChecks

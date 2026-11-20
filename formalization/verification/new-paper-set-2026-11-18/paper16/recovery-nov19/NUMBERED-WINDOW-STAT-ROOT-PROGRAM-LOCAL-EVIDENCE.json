@@ -1,0 +1,1027 @@
+{
+  "gates": [
+    "LogicLineages.PersistentMarking.NumberedWindowStatRootProgramChecks"
+  ],
+  "status": "verified",
+  "native_source_matched_modules": 58,
+  "errors": [],
+  "new_named_standard_axioms": {
+    "LogicLineages.PersistentMarking.NumberedWindowStatRootProgramChecks.exact_StatRootProgram": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "compiler_context": {
+    "compiler": "/home/other/.elan/bin/lean",
+    "compiler_sha256": "840179e70803ef373c2ec53342d6a45ea7d022533e4145489fc1278b4f716385",
+    "lean_path": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization:/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/04-pure-r1-calculator/lean/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    "pins": {
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/lake-manifest.json": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/lakefile.toml": null,
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/lakefile.lean": null,
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/04-pure-r1-calculator/lean/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/04-pure-r1-calculator/lean/lake-manifest.json": "28ee3c8d1f319b5da6b53636261d9f8a3048b057f6e1739824feefbc38968672",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/04-pure-r1-calculator/lean/lakefile.toml": "a5ae5498a1a8d2920079ce4e652af4b39c41d87b49a2ec3f80e50f27f348a697",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/04-pure-r1-calculator/lean/lakefile.lean": null
+    },
+    "external_objects": {
+      "Init": {
+        "/home/other/.elan/toolchains/leanprover--lean4---v4.32.0-rc1/lib/lean/Init.olean": "2184f658899f2aea99a4fecaa6f3192e7b631f2da1b9fe25a34780fd4972c633",
+        "/home/other/.elan/toolchains/leanprover--lean4---v4.32.0-rc1/lib/lean/Init.olean.private": "2fd9a702893fdba2d5234fca23978bdee40c9a3016020279f02cc94166c70c25",
+        "/home/other/.elan/toolchains/leanprover--lean4---v4.32.0-rc1/lib/lean/Init.olean.server": "92d5525ee307011fab6c0e55fa2c6d67555694dd401d1da99c2542c942f6242e",
+        "/home/other/.elan/toolchains/leanprover--lean4---v4.32.0-rc1/lib/lean/Init.ir": "fc94c27ef6b901c94f633b8cd80a72467cff0b37879f873700683404eeb266a6"
+      },
+      "Init.Data.List.Perm": {
+        "/home/other/.elan/toolchains/leanprover--lean4---v4.32.0-rc1/lib/lean/Init/Data/List/Perm.olean": "f06bd7d4a5fbf9926c86b90b4a223d90a74d61414c006aad8a68222afbdbe643",
+        "/home/other/.elan/toolchains/leanprover--lean4---v4.32.0-rc1/lib/lean/Init/Data/List/Perm.olean.private": "f0a614be92b83cbc5363dda9127cf4a91b7a9fb0004a8584562e16084076769f",
+        "/home/other/.elan/toolchains/leanprover--lean4---v4.32.0-rc1/lib/lean/Init/Data/List/Perm.olean.server": "98aa58c7750a4f049a8a65a96859c9ca8faf63a88f40f3a73a50b45ab62f9e41",
+        "/home/other/.elan/toolchains/leanprover--lean4---v4.32.0-rc1/lib/lean/Init/Data/List/Perm.ir": "c1b6c49238f2074f0fe5e7732caef93293800b75ef19f602a4d0c483782364f8"
+      },
+      "Mathlib.Computability.Primrec.List": {
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/Primrec/List.olean": "674d407df4643b6d4578c888f3d3ce2cde90441427a27e15ace33aabcf2fb464",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/Primrec/List.olean.private": "a246b2dba80542c1980291b6b02da3e28cd8a86a5828099ae8b20b9a4e5e9c78",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/Primrec/List.olean.server": "225114021d512e7020f2438de92a4a9f6b4995a009ad281659421ad117940ae2",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/Primrec/List.ir": "a006a4a18aedff002b550f265a6c5b15aa85847dcbdf5a199ac7ba644eea878d"
+      },
+      "Mathlib.Logic.Function.Iterate": {
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Logic/Function/Iterate.olean": "a6765b64e379109d5fe6a9f77493d1ed97681c16822f69ee0efca88457c93951",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Logic/Function/Iterate.olean.private": "1b95475f62cc3b16f6aeac590a880a924f6f64e2489b3adc770d2bfb11a6cf95",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Logic/Function/Iterate.olean.server": "558208f6d58bcbedca51a6ed2c506545fa3beb9e3b8056488a4fd99ab485dd72",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Logic/Function/Iterate.ir": "e195f3afeae010fe347fbb5772085f2a705553176b463c2d06c88d3bfdaf0a24"
+      },
+      "Mathlib.Tactic.Linarith": {
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith.olean": "a6ade8e9df92aebd47310c7a20334c15307364c0c108db430fac6c8ccf0f21e9",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith.olean.private": "8d7b4f23eeab86b4a65cbca125bddff040e726092f537e9f147df60a924c66e8",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith.olean.server": "994021891b9166abb6e4120205854b8302b33804d513e9336acc910b15c766f7",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith.ir": "e7d4b7530f673cf1783a0e4f16285f8a435fe13a95910433debf5e039f1f04eb"
+      }
+    },
+    "selected_compiler": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550"
+  },
+  "modules": {
+    "LogicLineages.PersistentMarking.NumberedWindowPairAlgorithm": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowPairAlgorithm.lean",
+      "source_sha256": "dacacd26f2bd7e934ffc6615f2d0b03fe495108ad68c573a13e3c9b54e4dbfe3",
+      "input_key": "c2c4d626e7d574f3826161da3fa9783f2147b340c88552432e875cf3fbc1ab42",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPairAlgorithm.ir": "9e869d8109f24e1927935bd4984c6442b23ed704d25cbeb4c950630d936a3fb0",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPairAlgorithm.olean": "4193fa2e434c6d32fb33f10bfef5f21b5e5657b2dc720993d8841b7563dfaad7",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPairAlgorithm.olean.private": "fad3fef9035f7f6785077c3a7ed9b5d1f43df1d9aa42f5bd24f32f2e20267bed",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPairAlgorithm.olean.server": "03ae9928b414b3e3522e8023bafb3aaf951cb883f56df0615a711d2eeb32398e"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139538108033152-2.json",
+      "receipt_sha256": "1486a36a65e50a71e2915d07da224caabae237d1ded7d6098c9d7b2f26f09a76",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139538108033152-2-LogicLineages-PersistentMarking-NumberedWindowPairAlgorithm.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowFieldAlgorithm": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowFieldAlgorithm.lean",
+      "source_sha256": "4b44f21f2bbaa6695a65ae0e34afb20b0bad3facf2693f1f7018d633488ba7b4",
+      "input_key": "dfdacf65867368c2d7b0a9d6d55ac1c48b0545904d458226b2f7369cf35b1412",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowFieldAlgorithm.ir": "d63ae877007d0f616b1e4bbf43fd51cfa2abf38a125d9d5717649d30c0bc305a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowFieldAlgorithm.olean": "811b348034b2a5216038f5976706ea50d106d37bda0ff3866982574beb6b46c2",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowFieldAlgorithm.olean.private": "526d78bc2839bbdd88f5520071707cfc23f7025a185f04734b7da64f1689a856",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowFieldAlgorithm.olean.server": "d0fe5981aae3a166851ad8f1871b2c086379c9cac023004316560038ef2571ce"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139538108033152-2.json",
+      "receipt_sha256": "1486a36a65e50a71e2915d07da224caabae237d1ded7d6098c9d7b2f26f09a76",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139538108033152-2-LogicLineages-PersistentMarking-NumberedWindowFieldAlgorithm.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowAddressAlgorithm": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressAlgorithm.lean",
+      "source_sha256": "5267a784fc65547d6cd3e3ca804e02428aafce3ad15eb0aef0f8ada91c84733c",
+      "input_key": "3e3cde00d7579588e4dfe9c35f9ff85cc18ea16313a960521ff554fe1838cbb0",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAddressAlgorithm.ir": "f845fc367c89018405f0951f53d49a4c2098d909a1241ea05ef5555155585ab8",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAddressAlgorithm.olean": "9999fba2d39495c8ff9a3f8a98abd7f63feea7323828b8c3d4ce34945d0c96d2",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAddressAlgorithm.olean.private": "4769ea94afd58449dc909cd9b132ee86e60587117191d60ea734e01805407293",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAddressAlgorithm.olean.server": "04253ec0bdfe6534aa79b49aea9c440a3a7d9f9173c7ba04070068a5cf76c792"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795140761919899503-2.json",
+      "receipt_sha256": "14e902486929a6e57158d2bd3a8f3f2435738bc515b539088751e722122d8b25",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795140761919899503-2-LogicLineages-PersistentMarking-NumberedWindowAddressAlgorithm.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowSyntaxAlgorithm": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowSyntaxAlgorithm.lean",
+      "source_sha256": "372235cb3dadc4d33c724728e1da43fb0752e5eb995d47c9dae75f1127593b52",
+      "input_key": "5157f1bcbde91ba79f4305fd719a1c175f92985b9a8facfff2b136d8288185c1",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntaxAlgorithm.ir": "6698bc676868b80d561c9615ce1c42d93ab802ccdafa7f3d034b0923a0d16354",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntaxAlgorithm.olean": "8aab7cb400d0b3d3f4644f2e136399530577149339c4bf3cf83538a465afd4ac",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntaxAlgorithm.olean.private": "ea3dc71a50ad1721eb460f2a8eaa7e134829a0a692647710cbfab9bb323c178e",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntaxAlgorithm.olean.server": "c9a464716a5da65ee96429c6f8691c340ecf4691e0905aa962665206ba661279"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795141311983776781-2.json",
+      "receipt_sha256": "50ff371323c08c5e30879f816e274ed8bfe6bccab5b9aac2cb5a09c10bb0b3ee",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795141311983776781-2-LogicLineages-PersistentMarking-NumberedWindowSyntaxAlgorithm.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowAnnotationAlgorithm": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowAnnotationAlgorithm.lean",
+      "source_sha256": "b23e7d65e92a395fbaf4e45079dd655dbfe7a53c3ee60a60c775e96409926d2d",
+      "input_key": "3c7fafef595d2be2f4a42709014ab620be7de46216bc3f8fd9ba5562e944bbb9",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAnnotationAlgorithm.ir": "75c6e63d276de37daed28dff831640087da613b64056e90a126c18b13fbc8ac7",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAnnotationAlgorithm.olean": "8f48b6108e9d05bb02a6a50f6ceeb3c2367439dbf996ce8090271d1b7f857daf",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAnnotationAlgorithm.olean.private": "b3ace9088f7d63030ec269bb875c35130793cf513338c0b26b5fb3c002c3e818",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAnnotationAlgorithm.olean.server": "fa61e6b083458d7776088ef590c6e689e05f90a845050e0e0d8a4b04f4fd9ba5"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795142966483579213-9.json",
+      "receipt_sha256": "92f2f5fed04d14d28f5bbc25eac5a061f8e4d33f00d3caab193c3b47f0f96437",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795142966483579213-9-LogicLineages-PersistentMarking-NumberedWindowAnnotationAlgorithm.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowOwnerAlgorithm": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowOwnerAlgorithm.lean",
+      "source_sha256": "e0f6a815f77bf62d4313ee7d52b157c754d74a8487319a07859e6f63eaff1d8c",
+      "input_key": "d1f866958ab7b031309803d5215fa5e8adcd0337fdeda0cdb6d273a35053e7c1",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowOwnerAlgorithm.ir": "7691874356a9dc41fc68457c341cbf2393aab7710c77292abcc230e864e320f2",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowOwnerAlgorithm.olean": "37309bc23e1fb3909a3b07e7217f98e4166bea56c85d22b63582d77271ce96be",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowOwnerAlgorithm.olean.private": "c869f7206ee410db35d8881b5b46572486615153cde166aa0182bef37f91d8de",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowOwnerAlgorithm.olean.server": "d3693b3a6303815a2fed50fdc3cbb4f6ebd1583d4d8e60e87ddb0f4862552ab2"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795145851757462675-9.json",
+      "receipt_sha256": "600fbff990e207403c266d4e3cd5e7ef3ae58b94ae389fcf9c7b38d4d3e539f7",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795145851757462675-9-LogicLineages-PersistentMarking-NumberedWindowOwnerAlgorithm.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowMarkRootAlgorithm": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowMarkRootAlgorithm.lean",
+      "source_sha256": "e1273854d94d4ac43b72b996984cb5c024f6eaf3c6dd39e4da7c08191b8cd8c8",
+      "input_key": "4e44757543a7aaa143b302267a2935abf0edd756d5dca054f48c14cb00d85646",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowMarkRootAlgorithm.ir": "b7e16e33b195140910a70efafa3f8749890f107a6a39801102bac213d083b543",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowMarkRootAlgorithm.olean": "d61d90981606783f7782750ad4c1d89eb90751a734332d9beb048a6559420d53",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowMarkRootAlgorithm.olean.private": "e10e1d5743c97977b9a5fc528da9e5570abb39b787a8bbcc4fa0a7b1e3196e59",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowMarkRootAlgorithm.olean.server": "a4c2f7369ac0dbc8273cdb5a20c62ce46b088f38b9193635847926a1283ddbd3"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795145137134156725-9.json",
+      "receipt_sha256": "9c25b64b4ecd932bbcac6bd99360a2d9faa8c5f357f263cfd3c40864d692264c",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795145137134156725-9-LogicLineages-PersistentMarking-NumberedWindowMarkRootAlgorithm.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowCopyAlgorithm": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowCopyAlgorithm.lean",
+      "source_sha256": "c45dd4fd1770ff127c24730f70fd9a7d356dfe4f470b1679ea11040c682d8228",
+      "input_key": "5d0390434433717c09bf0a8bcc3494908be0ede0fa6cdffbbd727b04d4031e58",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowCopyAlgorithm.ir": "34e1e1c864e850b448c7617cf3ae20919801052b30a64a9f0001c5f5d03fbc32",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowCopyAlgorithm.olean": "28bdf2d992a2755850756e6698b068d0fe036b3b50ba502e2e3533e4e184daed",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowCopyAlgorithm.olean.private": "a2e889a29c87db6f2fa695cfdd6fb96286e396d066d48761f9a2931a1285422c",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowCopyAlgorithm.olean.server": "36d2a28893cd6d7642f29e7235a0503d96b107ca9a958ea2f0a98b135aa8b844"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146176703250024-9.json",
+      "receipt_sha256": "3c9e13a42fbb09cdec2c38fd0d6e3157ceec64ae6d3b127e17f1c071527a3b65",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146176703250024-9-LogicLineages-PersistentMarking-NumberedWindowCopyAlgorithm.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowStatAlgorithm": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowStatAlgorithm.lean",
+      "source_sha256": "67b6d4c56e551801a5ff76bf6b885f2c85acf72c65e1a28455cf0fe4a64eb760",
+      "input_key": "9e75ce43ffcc17cb4a7f84fcd82f4122d2ea7c7831254b525e9fcfe5fcedcb1f",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatAlgorithm.ir": "eeb1222acf82e395d1cfb0e7d72ba3f91fd6b0dd851befb58fc51324089d06b4",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatAlgorithm.olean": "bd2d803039a49bc00df5aaecf35de562c03a6997c3ce3a8014727ad181ea7362",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatAlgorithm.olean.private": "d998ecfd753cf3c69cc1e1aa3570e635c69ac20ac0da2ddb106e4a4d929b95de",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatAlgorithm.olean.server": "7941e8f3992d78b1ae03cb82a38b4f67155328ce7e95e684bac885eac9dc7983"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795145480190841163-9.json",
+      "receipt_sha256": "2ac987bbe7f20adf40e12e4e989fd48165140fbd25798eaed635264ca3c2c363",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795145480190841163-9-LogicLineages-PersistentMarking-NumberedWindowStatAlgorithm.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowStatRootAlgorithm": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowStatRootAlgorithm.lean",
+      "source_sha256": "7bb6e17985d5d2c8e626d18389b95a7a64323c17d5746782ba513492bb8a6283",
+      "input_key": "3070dc35ca7d7edebea2c280fc67eb8e2c24c6fa2dd78253b4bed78b1d33ffd3",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatRootAlgorithm.ir": "1dc470107a7b82c0153b592e552b9a9e059bfc8a544d86ecaadde60c3e0fc739",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatRootAlgorithm.olean": "0fcd0e2d57641cf4416fad456d5670a65660172b74f05cb3817a91ce0907c795",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatRootAlgorithm.olean.private": "c005bbcf518cc066c0d85ee2798620633798449c63abff073fbd94b55883172a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatRootAlgorithm.olean.server": "ef526b075191181f984c36089988e3cc8062f15c9abe4b579b6714a22c3a546e"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146366585517720-9.json",
+      "receipt_sha256": "b477e84a9ae973b09fe48d2269e74882653f7a96269e3380bf56d10a8ed4b866",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146366585517720-9-LogicLineages-PersistentMarking-NumberedWindowStatRootAlgorithm.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowPRProgramDefinitions": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/ComputabilityKnowledge/GorbowPRProgramDefinitions.lean",
+      "source_sha256": "a68d8d24d356258e63e1f0f7cd03c1211175c02f1d1fb37edbf75aa92316b51b",
+      "input_key": "d7212db1a23d74a8f488fabe15344ae051184401d4212875d89e754d545fd024",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramDefinitions.ir": "191112d1bc5450d37290f7676c7fa50ece7685469432d5a7e44817cc1c01bfd3",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramDefinitions.olean": "8bb28d9f8cd0d611f8089535a33308e96035f8c9527c503df6318dd9be71552e",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramDefinitions.olean.private": "abba757cc89cf8bd0d9d6474de02d9953b0cce934017d819a6f1cfc92dbf8625",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramDefinitions.olean.server": "903c73ae403d859933142e36b096376c3b943a89eccd1727b1ea3e3faaf7225a"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139538108033152-2.json",
+      "receipt_sha256": "1486a36a65e50a71e2915d07da224caabae237d1ded7d6098c9d7b2f26f09a76",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139538108033152-2-LogicLineages-ComputabilityKnowledge-GorbowPRProgramDefinitions.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowStatRootProgramTargets": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramTargets.lean",
+      "source_sha256": "abced3269056c2e82f1bc79b2506a110a6b0146dc241796b5dbdbc7420f29146",
+      "input_key": "a4b82b6a3d8484f49c0392b1eab4678b18263618687ea9279fe906bebae1da98",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramTargets.ir": "1c224177e48a6ff64b580930919ec24413386ea2860276227084a60d4c6655f5",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramTargets.olean": "1cd172e998feb25112784c0d6dd6d83e37f5262f4aacde02566542be4a67b040",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramTargets.olean.private": "6e1735e8dc5e8acc95062ffbaad29f791db6923ad179c1a4589182f438ba8064",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramTargets.olean.server": "dab372ae9d8a98c4b7b13116f383d1f909c5ae651289c2a1e7ef48b1fe65bd61"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146366585517720-9.json",
+      "receipt_sha256": "b477e84a9ae973b09fe48d2269e74882653f7a96269e3380bf56d10a8ed4b866",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146366585517720-9-LogicLineages-PersistentMarking-NumberedWindowStatRootProgramTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowSyntaxProgramTargets": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowSyntaxProgramTargets.lean",
+      "source_sha256": "1bb56c23e3311e9c62c04ecea58b2527d821d8eb401c7cb4f06acc18a8fe5a86",
+      "input_key": "52fba33b64626c793d4539c2ef310ce2b83663a16ec6804c746857d550b9febc",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntaxProgramTargets.ir": "2fafd5905e84790a56e89f21252ee560ab965835faf11e8b0ff4d26b040fd1ba",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntaxProgramTargets.olean": "0a5693f48c8cd30be9031aed38ad381a3ef0c0362c649c888c546d99e3710ca9",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntaxProgramTargets.olean.private": "21ca7be606bdb546036005edc57942fa90dd27bc61bd55fa205ef703bcf274b5",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntaxProgramTargets.olean.server": "9cd284f7782afec8d34daddefde23d8ca32ba865735959cb1b3bb898e0c738ad"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795141311983776781-2.json",
+      "receipt_sha256": "50ff371323c08c5e30879f816e274ed8bfe6bccab5b9aac2cb5a09c10bb0b3ee",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795141311983776781-2-LogicLineages-PersistentMarking-NumberedWindowSyntaxProgramTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowAddressProgramTargets": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressProgramTargets.lean",
+      "source_sha256": "cfe12800b0ed76ff8c714bf23e83e28e8c654d11c9635c00442eb82cfd1695a3",
+      "input_key": "605b2210da1580bc056e30de8a4c844e637ccc042a76127026c316e0fe64953f",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAddressProgramTargets.ir": "11ca5242c0667fcca5467d1b9b8e632378cdb7d13c63ca32b12b1afce1f5afe0",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAddressProgramTargets.olean": "3fd9625e8d0d16173d7a38d720a13d282aa1230ae3af6f5b265d7ffe71c35288",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAddressProgramTargets.olean.private": "f89602e3cf23edc913a7ad1ff8076939971c3e57ab51712f77502503fff5acd1",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAddressProgramTargets.olean.server": "36579e7d1bb5146ce9e63ff30b293a3fec690b90bfb039d98e7028398ef35448"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795140920589597045-9.json",
+      "receipt_sha256": "2a975e5b62315d24c5d13abae70a080bbe8547ea39b4e61876516dc59c069517",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795140920589597045-9-LogicLineages-PersistentMarking-NumberedWindowAddressProgramTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/ComputabilityKnowledge/GorbowSyntax.lean",
+      "source_sha256": "705364787a36bc9c409806260a6c1db762d7d4e47f659b6d588ebab124fad7e5",
+      "input_key": "5bc8cadf69f2c5496e406fc800143f52f35ea30a865ed68b766139a881e0f5a6",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowSyntax.ir": "2c88c78600c899688ffd4d34fd71c26309e3c5ec36cea18844ee6d3eef4b16fc",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowSyntax.olean": "870ad73db364bd7c6559649a2127e38896d522fe2022c9621f7f689021fe5e42",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowSyntax.olean.private": "1cb85ce0bcd641b46b566a1eb256a426a7aeecd2aecc9d269d689ee947d4970a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowSyntax.olean.server": "d901ecd90c918321551a63c7390aca9f52e46aec372594efeabe607a19df7e66"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2.json",
+      "receipt_sha256": "e9097f568505a7c20347d481a1e2f502b62c319c9610fb7ef314283e09891493",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2-LogicLineages-ComputabilityKnowledge-GorbowSyntax.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowSubstitution": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/ComputabilityKnowledge/GorbowSubstitution.lean",
+      "source_sha256": "0a95ba2a3f3595c4665feb7a824ad077d5a724f3133503e81657be962c226899",
+      "input_key": "e6fb60c500bc9a83532bbb3a336bb32545821db85c24cbada4214a3d1c94223b",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowSubstitution.ir": "a04dc45f9f23aa3c800ba928e2cd048f69675536be45d985e5ae1c7e0a0a6368",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowSubstitution.olean": "9b26e744ba994438ad9ec5c3408d40ce70bb51770c78df91808b2920d0ac972f",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowSubstitution.olean.private": "cde4f30411e597581a6cf162b07c57b114b5a6da67677b2beebfd361cc0e104a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowSubstitution.olean.server": "e20f4145ac07fb7900da1c26094ce6223dc43ef0dd15c764070e3d6d9269de2a"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2.json",
+      "receipt_sha256": "e9097f568505a7c20347d481a1e2f502b62c319c9610fb7ef314283e09891493",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2-LogicLineages-ComputabilityKnowledge-GorbowSubstitution.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/ComputabilityKnowledge/GorbowFormulaSubstitution.lean",
+      "source_sha256": "d5ca4ab8478a9ed6818d5de25d0aae1b52763e7f98fb7fe49830ab54d1f46915",
+      "input_key": "7f9ee3003874a2949d25f15b82e8bb2687dd878e6e567b77a5e2a90ca53453a3",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowFormulaSubstitution.ir": "0b6f31887c255ab1a778865e88d4823726c64850d693e52febae9be8678a3364",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowFormulaSubstitution.olean": "fd741b054b6054e652e600345021b73147649455230d9c467bd9f9218ec26a3a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowFormulaSubstitution.olean.private": "99784062be22e332102deaa1cd4e8e5c39172056fa26d210eac358f9528c6926",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowFormulaSubstitution.olean.server": "4328d11a0ea3f0e34cc4b2269f176d8862a37a42aa1ee078685c5decd636447c"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2.json",
+      "receipt_sha256": "e9097f568505a7c20347d481a1e2f502b62c319c9610fb7ef314283e09891493",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2-LogicLineages-ComputabilityKnowledge-GorbowFormulaSubstitution.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowStandardInstances": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/ComputabilityKnowledge/GorbowStandardInstances.lean",
+      "source_sha256": "c60ff3d22cdfed04aab59922afe461c4f2f379d8b92df49a37e752e580b97706",
+      "input_key": "d80f30721ffab0d6ef24f0dc05d762897e7838c7503a0b74ef413be00709628e",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowStandardInstances.ir": "b1ed3e84706d70151b3db53147a9cb03a7404ce5abcff7a0dba4ed6164bde94e",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowStandardInstances.olean": "249610bd264cc19aa2eb4f3a9cd907b61e3431881e833c706bc5740ba31b058a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowStandardInstances.olean.private": "51dd6f940968d724b78c40b8e73548bcd67bdb35e0a695cb28eab0d743674334",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowStandardInstances.olean.server": "4ee1ffcd0b064f61d1a20ead764ec09e1e0a810f747d8457739cac604c7f8213"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2.json",
+      "receipt_sha256": "e9097f568505a7c20347d481a1e2f502b62c319c9610fb7ef314283e09891493",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2-LogicLineages-ComputabilityKnowledge-GorbowStandardInstances.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowRegistryTuple": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/ComputabilityKnowledge/GorbowRegistryTuple.lean",
+      "source_sha256": "0fc0fb3c00aebd9a1ea972a687134bfe3ceba76364d4a54ddc0dd272f0bd5ecb",
+      "input_key": "1f01169a58c80661d3cd9d9862234af2def2b054b27501f033349bd1158d7815",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryTuple.ir": "b4608e4ea94f9bbd537cc20bec3944cbd0eeb76917e813a86456fdba223f24a5",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryTuple.olean": "ebeb676094ab8e1a02f46aafbf79438a190d2dec150852830596bbdc56078a0d",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryTuple.olean.private": "d58317fe097c298ba2cf4e00c4b5b16f7bcf7b701b424b6964326952ec35b8bb",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryTuple.olean.server": "c7bc32284dbf8f9dc5856c2fb8f0310d6e7cc015c9fede02e7846861a3f40ed0"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2.json",
+      "receipt_sha256": "e9097f568505a7c20347d481a1e2f502b62c319c9610fb7ef314283e09891493",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2-LogicLineages-ComputabilityKnowledge-GorbowRegistryTuple.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowRegistryDecoder": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoder.lean",
+      "source_sha256": "66573271da7b228714e97a6e8aa6a412456da79cb5fcb472c842a32e47e41498",
+      "input_key": "ae3c1cffd7eae34fd760b3943f198da2f69db3376ee406ffb269559171c1d19c",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoder.ir": "d92616fdd6e82a84e78dbbc5487b7bd20711b4e78d7cda5a3935c59672dd36b2",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoder.olean": "9a247c072c7fb5f43ae3e53c2c43087037af03b5f4719d866d0745721d05fc3c",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoder.olean.private": "845788f429bbbe5564fc6b49ce93cf577c3be95bb295f8cb9ececa951404cdda",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoder.olean.server": "73fe97809ad4159369044b9cdc20265f6a0d5e99b9da2bc8b71e3c4f7ef4b00d"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2.json",
+      "receipt_sha256": "e9097f568505a7c20347d481a1e2f502b62c319c9610fb7ef314283e09891493",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2-LogicLineages-ComputabilityKnowledge-GorbowRegistryDecoder.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowRegistryPairCalibration": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowRegistryPairCalibration.lean",
+      "source_sha256": "5b02525f43c233d14ceb96bdfd6e65351551ed2b630cadd58b0b8f45eb881fc1",
+      "input_key": "a2117a9f70d8c3c17f2eb181ce5be9bdb02ad007042788fc76eaa6fe75d8d13a",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRegistryPairCalibration.ir": "6f131a30a6a0d38511914fb7b67ff4a1e36711789001da6d95216a4f794f2cb3",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRegistryPairCalibration.olean": "217be270d425aa29bd0a5801ae75759b7f94b05edf9319f1c5ade3c990128b25",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRegistryPairCalibration.olean.private": "9340696cd6c4b763e589ec012791c53de6e60e2f0dab5e8e7302a2cf971a30bd",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRegistryPairCalibration.olean.server": "9a19fcb4916f38ce85a620785fa5a3c32dc4d8a8cfcbe895e4ffcd8deb19ccd7"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2.json",
+      "receipt_sha256": "e9097f568505a7c20347d481a1e2f502b62c319c9610fb7ef314283e09891493",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2-LogicLineages-PersistentMarking-NumberedWindowRegistryPairCalibration.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowPRProgramTargets": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/ComputabilityKnowledge/GorbowPRProgramTargets.lean",
+      "source_sha256": "15977343d18b6b20f066ea4ecee98ce62a833a7256cec638dd3aa79eeb119cfb",
+      "input_key": "f8bfd889dc4ebaffbed1bd612e1bea7c719ca6391de82f402f8f27c592be74fe",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramTargets.ir": "c46ed5fe028d3fb393aadfb4d6651098eaf1c9551836eaf7ce740a1a6cf5c8a6",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramTargets.olean": "69d310ac675025c51eaaef04fa31b8bfcbaa4b06bea43ab1fb945bf951b3d044",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramTargets.olean.private": "cf06105d83412b53b33ea1a7a66cc310e91b21e5708f30ef826c1e94c3d8dab8",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramTargets.olean.server": "240150cd80acd7796206a8b4ee70fd0309475c3e7c5f2487e0113e44a6bb40f6"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2.json",
+      "receipt_sha256": "e9097f568505a7c20347d481a1e2f502b62c319c9610fb7ef314283e09891493",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2-LogicLineages-ComputabilityKnowledge-GorbowPRProgramTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowPRProgramProof": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/ComputabilityKnowledge/GorbowPRProgramProof.lean",
+      "source_sha256": "ded708ca4eac2f8e3013962327cb92cf5769a5dcb3d4d949d6c4e4da0ac9da9a",
+      "input_key": "b7af8cb1ed10a358fd5685a675f819581b64bcae4fd7518866081fb78c7dfec2",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramProof.ir": "0b142433de6e2bcd91c397b3effa31924ecddef8fd7666fdc57568560c56f02f",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramProof.olean": "a6f141b76211f02eca6586431fd0c21763957af52e0443b43df21aef3165fa5a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramProof.olean.private": "2ab4170a26f4201b72514bd6b517bbf6653fdbbd53b5c01ec769839d07791ead",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramProof.olean.server": "6fb4ea8b1dfb013000687d2247fcdc1f0c29c2b9a814de4cb525c8e8576008fe"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2.json",
+      "receipt_sha256": "e9097f568505a7c20347d481a1e2f502b62c319c9610fb7ef314283e09891493",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2-LogicLineages-ComputabilityKnowledge-GorbowPRProgramProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.Comparators.GorbowRegistryDecoder": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryDecoder.lean",
+      "source_sha256": "d39803c4268a2b0b6a5837023acc4874aabfff70cbfed9b682098fa9e3fef5ad",
+      "input_key": "6f48f61954553950d2c3e6017f86a3f1ce66ecd7c4aa471e2517631beff95e7a",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryDecoder.ir": "e5e30703dacb0db8b250e73238ff3e932638621dd8efbcaa56bb8004609fa21e",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryDecoder.olean": "1503c3e56d0dc0d6a9e4cf7ad429ef7b8c2d455fb38c753e90753045da97304c",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryDecoder.olean.private": "9c0be6ad8864bcc3020264316a9c36121bfb0d473fbb905a3a28649bfa07a01e",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryDecoder.olean.server": "3ef3b38decd63c5d7b74e42d6ff5e39141965ebddcabe05289414278e21c5a88"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2.json",
+      "receipt_sha256": "e9097f568505a7c20347d481a1e2f502b62c319c9610fb7ef314283e09891493",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2-LogicLineages-ComputabilityKnowledge-Comparators-GorbowRegistryDecoder.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.Comparators.GorbowRegistryTuple": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryTuple.lean",
+      "source_sha256": "eae43b934462003170f111a05c692d19c2d40d5566c1d89f8a7554fa386aa258",
+      "input_key": "31aee0a43a4e6005796735f3a38072d8366d2465a1b3f174a23586d0d3824d23",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryTuple.ir": "4b0ecb7f9eb12dd39abe978d56db2170c7b132545c50e17a2269bef649e485a5",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryTuple.olean": "113010e998e5a3ce74e3eb6664eba293a9e9aee826ee0a94ae9b0394b481c8b6",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryTuple.olean.private": "f899d75c24de3da5ef69abfa0c658d3d52a9e99d12b64744eabc5b07bbae1f04",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryTuple.olean.server": "bdeb45e3e4112ac7e6095dbc85df1ffd70125596dbe20911378cd6dc9d5c8092"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2.json",
+      "receipt_sha256": "e9097f568505a7c20347d481a1e2f502b62c319c9610fb7ef314283e09891493",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2-LogicLineages-ComputabilityKnowledge-Comparators-GorbowRegistryTuple.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.Comparators.GorbowStandardInstances": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/ComputabilityKnowledge/Comparators/GorbowStandardInstances.lean",
+      "source_sha256": "33fb8b792b885644a93e4fb62ab4bad833da3a17ef5d9327b5ba31cb0b6a9435",
+      "input_key": "595cf4cfde3c8933d7889f0b6ff0ec64f700384b0a1d394d76c41e1e685202cd",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowStandardInstances.ir": "95c08bbc9e0b9e8feed8b94a11ad72d72dc5e6e9cd8d87f1752423da64eac6e2",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowStandardInstances.olean": "d147a0346e2a6e99a675df240d505fa04e205e73f8ff4e9b8783c96e530de493",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowStandardInstances.olean.private": "7855bda5664536971c9ca14a8aab2bfbf4250c091f462567aaa9a41fe5879130",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowStandardInstances.olean.server": "32f40ccf334189450d54ead1b8dce8852042233dcd3fd1cfe07ebb65042f89b1"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2.json",
+      "receipt_sha256": "e9097f568505a7c20347d481a1e2f502b62c319c9610fb7ef314283e09891493",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2-LogicLineages-ComputabilityKnowledge-Comparators-GorbowStandardInstances.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowStandardInstancesProof": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/ComputabilityKnowledge/GorbowStandardInstancesProof.lean",
+      "source_sha256": "a19290c276086268f9c2835e8ac7f7e19a9d5b7a8f103b678604b1add276c107",
+      "input_key": "d780a071d031ff4cddc2cae31e7910a67d086a19ad6410927851fb237bc3e2d0",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowStandardInstancesProof.ir": "6a60a92464f03e62688e4375f8cf98b9af56ced30596f20ca24187ef2078fef8",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowStandardInstancesProof.olean": "d3eff7879a30c04c9bd8e021c8a823ae641982827e502d9380caf4827a909a02",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowStandardInstancesProof.olean.private": "432e8958d29af323d4f44e71c5a52157e676bb164a8e6abaf68459c9790be779",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowStandardInstancesProof.olean.server": "618001b2ce0df5d001e88616ba7431693e234f0791406895d34cec95139bb2f6"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2.json",
+      "receipt_sha256": "e9097f568505a7c20347d481a1e2f502b62c319c9610fb7ef314283e09891493",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2-LogicLineages-ComputabilityKnowledge-GorbowStandardInstancesProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowRegistryTupleProof": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/ComputabilityKnowledge/GorbowRegistryTupleProof.lean",
+      "source_sha256": "7e0183cfd546de64234af44ad8db0127e7c7285b98cdcc317582cc8d3b3df106",
+      "input_key": "1437a3b6cb98cdef20e07c1240d798efeb589f6d8217fcdef683287b68b5c9a3",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryTupleProof.ir": "15b8b445568c121383c3fe6537b417bc0ac8a2f7deac56039beaa1ad5c2f73ff",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryTupleProof.olean": "90a09867f17b55e32aee5766e67aee73ce9abdeffba2a97004b1ceef2180081a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryTupleProof.olean.private": "bbff88cce365dd4de95de377db93334f4eaf403d6fd12ff722cad8b8eb7dcc35",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryTupleProof.olean.server": "91b950ff4519bd56827097dda9076933c3c5f1350eaaf4f5db1b827acad6ef38"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2.json",
+      "receipt_sha256": "e9097f568505a7c20347d481a1e2f502b62c319c9610fb7ef314283e09891493",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2-LogicLineages-ComputabilityKnowledge-GorbowRegistryTupleProof.log",
+      "log_sha256": "e2447f49d5698ea2fa58da9b6574c9f339d64d431d5bb7c94e812949d3033608"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowRegistryDecoderProof": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoderProof.lean",
+      "source_sha256": "e0149be79ab3a40b1404498614b4dc12d4335d6bd1d1a4f1d2d823945175bb22",
+      "input_key": "75df8eef4151f01b2ee3e84082786889aa6959f1e7a64ecf1f1bcab6d7de7a0f",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoderProof.ir": "89ea5c1d1ea216ec5d3f9d15686023254371d89d47bc1075952421cfa547b840",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoderProof.olean": "a116a748a10e944bb7e633e3eca4b3e3daf767a2db4934d703053a4060538fc7",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoderProof.olean.private": "36cb6a4402c4bb69f7803175c6f9420751af618e14df88a14ec93b019d4a2e8a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoderProof.olean.server": "8a66ee70ab7d970464fd13cb7fef5c64480fdd930b64db4b0aac1ddb42ab4642"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2.json",
+      "receipt_sha256": "e9097f568505a7c20347d481a1e2f502b62c319c9610fb7ef314283e09891493",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139641132448884-2-LogicLineages-ComputabilityKnowledge-GorbowRegistryDecoderProof.log",
+      "log_sha256": "b6408e1a8c2b969325e1736a57f06563108fd30911de2111f82f2c1a5d03ee59"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowRegistryPairPrograms": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowRegistryPairPrograms.lean",
+      "source_sha256": "0c15a0a276a32cdd2a61d7c34b4dc9ec9452c2d3778f904882a760afc8f0696b",
+      "input_key": "9e201d969986560ec32669e90339f96284d4ad3b78e15d00c7160616afde41d2",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRegistryPairPrograms.ir": "ab2c21f36b81b30bb38b144617f7e1517462d9ac66b53d65c4cf5bff63e69b0b",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRegistryPairPrograms.olean": "765ecd7f0cbdd2ceec7020fb5fedba01b2bf651436b38f9aa0069c96a0bdd55b",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRegistryPairPrograms.olean.private": "dd9027879a91ff1ef5561e5ab05a5f5406949e32634bfc78f1b1c348e17eecab",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRegistryPairPrograms.olean.server": "d4be3af062bc2e898be67a2ec32869ff391b1a79092fa86f5ff940b7ef2a7070"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795140851974413688-9.json",
+      "receipt_sha256": "670b6cd1917ed1e2e47bf7586b848ce180b221c8f5f4295941887a5f50d73730",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795140851974413688-9-LogicLineages-PersistentMarking-NumberedWindowRegistryPairPrograms.log",
+      "log_sha256": "ffa27ba50793ed7544264add9f04784621987bc17389a6fdcde25613b3465bb0"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowProgramKernelChecks": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowProgramKernelChecks.lean",
+      "source_sha256": "af9fcb6e9f04adbe84c0e475a72733a6bd6e34f6e649d94585a2856796b32846",
+      "input_key": "edeabca91d4d2c034146709bddaddeefeac72c7c4c7f06b00816d39a31d45257",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowProgramKernelChecks.ir": "8f9c7aefdd6c2e1576a44765a9dbc75806eaaf8f10062ad3e0535d7511bc79a4",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowProgramKernelChecks.olean": "69cebde17e375e41733aa77ef3da1d39a384bd28c9a010e2c055f8e6b18acb35",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowProgramKernelChecks.olean.private": "57d6e8c7077beccf9ecc8c227322bc1ad131633ddcac7901e0ec54e8c27f506f",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowProgramKernelChecks.olean.server": "c7eedb5dd08ad5d62128c1421b593ac0f2067dd7a58010cb1dc35f84ac279a7e"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795140851974413688-9.json",
+      "receipt_sha256": "670b6cd1917ed1e2e47bf7586b848ce180b221c8f5f4295941887a5f50d73730",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795140851974413688-9-LogicLineages-PersistentMarking-NumberedWindowProgramKernelChecks.log",
+      "log_sha256": "bbe42833dbcd6adf41b6c8129e706c45830a50dbfe96c33e29e125cc412d0e3a"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowFieldProgramTargets": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowFieldProgramTargets.lean",
+      "source_sha256": "532248277592d6efeeac9d5d51e07d37082edccad8f6cd71ca36096497ac686f",
+      "input_key": "6d9e3cc0561984c5751683f8fc09a562154e9515173e4e4fb1a8a4ff0fd53e54",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowFieldProgramTargets.ir": "1fedff2beb92e3674e4cca0795a7f69459175db743884bde1acc8da890986a62",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowFieldProgramTargets.olean": "532382e71461b94a49647787f5ef9d8e9d0d8a80bcf04cd71122f95f988641c7",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowFieldProgramTargets.olean.private": "b543ab14fbcf985a5c95246d227794905038e6943a539c83afefb10b406ef84f",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowFieldProgramTargets.olean.server": "7a99c4fa774bfb41bb2b30a6b01523a6430820b3bceee046bafd749473ccef4a"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139538108033152-2.json",
+      "receipt_sha256": "1486a36a65e50a71e2915d07da224caabae237d1ded7d6098c9d7b2f26f09a76",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139538108033152-2-LogicLineages-PersistentMarking-NumberedWindowFieldProgramTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowFieldProgramProof": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowFieldProgramProof.lean",
+      "source_sha256": "50ca64158441f69cd9ef79de9083915346131fa256b0a04ef5de7e240e8df51d",
+      "input_key": "5cad02a53896f6bb72d3580d59ff10ef9f4f3de55f66973a536ded18d8c99107",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowFieldProgramProof.ir": "da00eeec78d17ddb3c5dfd22eceaf1563ee22a70f19257c864fb572620998e95",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowFieldProgramProof.olean": "0e46608605b73bd4cb9e5350bda7a59299001dbaf31170cdadd873bf8fe8c9d4",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowFieldProgramProof.olean.private": "d5af7184e743a09608e56b3c2cb63e4bf956647e7a6d8cb3daf7431f4ec3dbda",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowFieldProgramProof.olean.server": "d611c72743e63ac10e4587cd8dbe1aa1fddd9d8a5bcca81ad29441bdbcf7ff03"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139746549079251-2.json",
+      "receipt_sha256": "67cc8a9b4299c10b19037133cd17039e455dc4c5757ea474fb57cc40b3a5e26b",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139746549079251-2-LogicLineages-PersistentMarking-NumberedWindowFieldProgramProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowFieldProgramChecks": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowFieldProgramChecks.lean",
+      "source_sha256": "9c65c2cb27a0b63e2dda0c7791f28b68184d43bf3b5dda7c481dd620618d4c81",
+      "input_key": "e7a97e2682904989d393c796a2d45c9f35bc806e4ce2eefde5d7155bf8a11399",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowFieldProgramChecks.ir": "3cfbfa47872eab410c0798efb1fd550477615604278cd5b0573b922e2c864863",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowFieldProgramChecks.olean": "9128d26f06ffe229e02f33c287ba9f3248e3c07c27dc4b892a66cc3080d6c2e6",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowFieldProgramChecks.olean.private": "5da26484753f05fdde3eac02c692c226c7ff0955040adc5ed6a2824d27f0aad4",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowFieldProgramChecks.olean.server": "ca01f4c7006725fe5fda081389591ddd7ffea1c5374e418bfd847971ba5f6457"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139746549079251-2.json",
+      "receipt_sha256": "67cc8a9b4299c10b19037133cd17039e455dc4c5757ea474fb57cc40b3a5e26b",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795139746549079251-2-LogicLineages-PersistentMarking-NumberedWindowFieldProgramChecks.log",
+      "log_sha256": "55867c4d1c948226cfa3a87f73ff8947f3d4d7bb8f282c9a45e6a6ce1094d8f8"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowDirectAlgorithm": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowDirectAlgorithm.lean",
+      "source_sha256": "781ec264d98428a9068e59190f5fbac631bc3bc46470c024f13bf05b206e6e33",
+      "input_key": "3c6aea15c99ad56fa6759a5ea52fb05cb856898722e492dd69bc4fa4e038ade5",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowDirectAlgorithm.ir": "925cae1ebddaa85dad2aa3ecebba34e168b0f37fc5d0ac02b7820ab96c3d4230",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowDirectAlgorithm.olean": "db224328e9c4d879ccccd0c2eb447c38e4b78ff20a71d5d436f5eb8ecdbaa38f",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowDirectAlgorithm.olean.private": "c6557aa8887ecd823cccb0b9444b49534a96f60bf06891f9037391d19708baae",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowDirectAlgorithm.olean.server": "61cd4a0cf489546ccec456ab1c4ecce27a3801fdebb5b99eb6dc7dd09c8912af"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795140143863395166-2.json",
+      "receipt_sha256": "0eba0edd5a634f19c64bfd68e709c4993f108374bca2b51f456d729d488c8a01",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795140143863395166-2-LogicLineages-PersistentMarking-NumberedWindowDirectAlgorithm.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowDirectProgramTargets": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowDirectProgramTargets.lean",
+      "source_sha256": "a86a4dafb7e394637b2ef2d20fa3f16c34c6f6222318b8a130dcdb589503f69c",
+      "input_key": "85cde43e0768485689d6bf05f1b3d853e1c18d8821e269ce5d8f6b45edfdb892",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowDirectProgramTargets.ir": "8d79fb223b6d032b613bf67b73e656a1feec9d6142e349ddc6acbdb14b0a58f5",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowDirectProgramTargets.olean": "a68f8606b22dc9d715e87c98134a2f20080b7caf07784c509db556b94eb2de8c",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowDirectProgramTargets.olean.private": "cf1a759f12aad7dfb9dc425f3ae95d2b3fd77f42f5c46c46fa8603eb890a7e9a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowDirectProgramTargets.olean.server": "914d115e966e357e8961c2ef3495f27f8893f2edd0a7f0100b3dca670d8f54d4"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795140143863395166-2.json",
+      "receipt_sha256": "0eba0edd5a634f19c64bfd68e709c4993f108374bca2b51f456d729d488c8a01",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795140143863395166-2-LogicLineages-PersistentMarking-NumberedWindowDirectProgramTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowDirectListsPrimrec": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowDirectListsPrimrec.lean",
+      "source_sha256": "e7df7f744a5217795ea066761ca45a99cfe7f99a0145984687d21ee50b2e0a8d",
+      "input_key": "1b341a73e7d1fdbb7e7d7e3380c6a364b53e4a5eb285c323ff36469b4aaa3ff7",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowDirectListsPrimrec.ir": "329aff4cf4255bf912562cec04aa1880ee23cacb2dcee417efa02a0f9a2a0855",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowDirectListsPrimrec.olean": "178ebe28e396b20251c94c3abebaf42202fca55d21c23ae4458093df8bddd05e",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowDirectListsPrimrec.olean.private": "9191d35445d8cd2920e86df07d5ce1f7d94de46156d283415a6d9467baf4f506",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowDirectListsPrimrec.olean.server": "ceba1224506a8e5d027bddd202dedd9b8c1cf7211dac2797dbabb9d50482a36c"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795140451275903516-12.json",
+      "receipt_sha256": "83a6045ab9028969d1e3dd237182b563d6a880d72d8d187a2a1c7a1d27b8c3cd",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795140451275903516-12-LogicLineages-PersistentMarking-NumberedWindowDirectListsPrimrec.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowAddressProgramProof": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressProgramProof.lean",
+      "source_sha256": "7ce518bd58406f6718afc087a480b7c1e73c6cc0a375e4b8d94efd0d665a88e5",
+      "input_key": "a996c0b9b496bf63432db43614a50fc4fb70771cc7eaaf8b5454f49696917ad8",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAddressProgramProof.ir": "5817fb9923f7e8f74ab6b118d27a9eb8abba2dad4aff364c9a45c6aba75b0394",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAddressProgramProof.olean": "e2287972fe947bdd0639eeae9cbe812586842c744258685a1fbe2aacf09bb244",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAddressProgramProof.olean.private": "4588d5f19758b651f495f042086ff07ff34663b6c59aab236ff45f44e625bcd2",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAddressProgramProof.olean.server": "02a807311054f3c8803431774690688014282d6394396b38e1b04e35fdba6cdb"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795140920589597045-9.json",
+      "receipt_sha256": "2a975e5b62315d24c5d13abae70a080bbe8547ea39b4e61876516dc59c069517",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795140920589597045-9-LogicLineages-PersistentMarking-NumberedWindowAddressProgramProof.log",
+      "log_sha256": "ca3a4ce09c45265bd9be1b7918f2f75731ee3b903d82cf9b25ff567196f92dca"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowSyntaxShapePrograms": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowSyntaxShapePrograms.lean",
+      "source_sha256": "bccbee5cbe4b52cc3846f3a3dc081455d5aa1656108b59f488e67ff52b8e3062",
+      "input_key": "c164910d706271a071f46ed6949aa45b2544076a025692e1b202c479d6282506",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntaxShapePrograms.ir": "98ca6fae62fdf8b0189e1ccb864a461be71eadb20967e0c289d58ef6c55e20b8",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntaxShapePrograms.olean": "a5bd211dc06d6ce2aa412a5a58c70dea3b30b96e530c7bcf0e13b20f83b520ee",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntaxShapePrograms.olean.private": "c5b2a720840a35d850086fc5a44f2333513c519b3cfee6aa4160f32e79a26a7e",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntaxShapePrograms.olean.server": "74d6e76e3a960c733e7b9db05878687a0e46f409ebc3812ecad4553af76557aa"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795141420951345475-14.json",
+      "receipt_sha256": "8e582965d352e811761d8aeaec1bd312e8a936f293c9f280405b5f36fec6ac05",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795141420951345475-14-LogicLineages-PersistentMarking-NumberedWindowSyntaxShapePrograms.log",
+      "log_sha256": "708a1b6145749300ba6e01bfec867e7a49b50a8e418f21f265c0c0019097d88a"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowPositivePathAlgorithm": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowPositivePathAlgorithm.lean",
+      "source_sha256": "0b14acfea7f96faf20583c88cc12ddcc47f9c0b4a24e1682c144808f6efb0474",
+      "input_key": "5eacf34249e30d3703244cc2ecc1aeb82b70b728e6f34eb63ebf2c7d33b85eba",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPositivePathAlgorithm.ir": "eee843235fc34313f38f75c5e77f09191947937f385fd64250db1abfc26c0013",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPositivePathAlgorithm.olean": "734bdaa3b600d3efb4652193774124e6e75ec4d6bc75f379826e298ded887cf7",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPositivePathAlgorithm.olean.private": "0e2c3311fe9256cfc3d903b9a6f206ecb43a78555346bbd08bb72c51c4e8711f",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPositivePathAlgorithm.olean.server": "fe8063dd80e0f22687583f1b09d4425d1ed91744f99e40e4989eb20949c9fbfd"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795144133771092560-9.json",
+      "receipt_sha256": "97918c2a856875a1c027d40071f800d10120eb1d75110ed72b5bce0bf1615379",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795144133771092560-9-LogicLineages-PersistentMarking-NumberedWindowPositivePathAlgorithm.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowPositivePathProgramTargets": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowPositivePathProgramTargets.lean",
+      "source_sha256": "0dbf7120094e998a7e2842950c41588b6cc355e6a2f8570a2315649721ba7c3b",
+      "input_key": "9a31ff14ca8a1fff68e643c561fa20443f373bc8a6f87af3ec62b8714fa66915",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPositivePathProgramTargets.ir": "a12dd42834ef4c5db5ff6c7df4f440f719d158f483949520aaba1deb4db05d1e",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPositivePathProgramTargets.olean": "c367f4634ddd659cce58a22772423df4417af51d84defea5ea22d48c6fff29d6",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPositivePathProgramTargets.olean.private": "d4fc0f09a57830ba4d28d64a5cb19ccea99360cdcb91ab77f5a5c14f1d091858",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPositivePathProgramTargets.olean.server": "f0546448d6b9f88b805f7375cef9363d3ed9e89bea470a852ba2139abdd72240"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795144133771092560-9.json",
+      "receipt_sha256": "97918c2a856875a1c027d40071f800d10120eb1d75110ed72b5bce0bf1615379",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795144133771092560-9-LogicLineages-PersistentMarking-NumberedWindowPositivePathProgramTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowPositivePathParserPrograms": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowPositivePathParserPrograms.lean",
+      "source_sha256": "073de7da18f5339a1aa98e119e5296b218b819b8d0be2b3f532db70d23475772",
+      "input_key": "7bddb49bc50c52dd5d6b2550fca3fed90581857daabf0a38d0647be9ab927302",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPositivePathParserPrograms.ir": "03127d02b92e5b3aab6f1a62634c34a8532da82959c316706e56f55db30159a5",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPositivePathParserPrograms.olean": "3b485daf5d6eb86ffb7c75bd56585d7c70778b2daf833c4b4abc096bf321015b",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPositivePathParserPrograms.olean.private": "ef026bf409df69f9226efc87a4557c164c7769e626f896558833ad737849baba",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPositivePathParserPrograms.olean.server": "aba83d828e3beeeedd013b72e838832d6f74bad47821e879f28ee5a03a1600ec"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795144556337701382-9.json",
+      "receipt_sha256": "979d6d4bbecf629e35b779c24dd045a80a4aefa3e661ffb84ebcde9aefab7d8b",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795144556337701382-9-LogicLineages-PersistentMarking-NumberedWindowPositivePathParserPrograms.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowAnnotationProgramTargets": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowAnnotationProgramTargets.lean",
+      "source_sha256": "fbd36a27970451b941867e47be9bd9180f26f5a562a989590cfa24bbc26defa0",
+      "input_key": "c6d3d42cce8ff5fa5b1654bea7c8a243b7a9ffa08174efa0f7b97c146fbac1fb",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAnnotationProgramTargets.ir": "18d7badbd042e23ee69e49a39a04830efb6b5b3545c1e172a583dd9944037d7a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAnnotationProgramTargets.olean": "1d2471228d287f4aef743087c3c0773ecbf7d2bae5364d435bfc9b9629061b9f",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAnnotationProgramTargets.olean.private": "9ada973e0fbe13aefcc990e610ef509c5e3165495e047790c95d52fcffc374d1",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAnnotationProgramTargets.olean.server": "fd01b9becb0d4be8beb3bd05afe83f7a3b2f1fc797b541afb9f92baf456fc456"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795142966483579213-9.json",
+      "receipt_sha256": "92f2f5fed04d14d28f5bbc25eac5a061f8e4d33f00d3caab193c3b47f0f96437",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795142966483579213-9-LogicLineages-PersistentMarking-NumberedWindowAnnotationProgramTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowSyntaxProgramProof": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowSyntaxProgramProof.lean",
+      "source_sha256": "2488ea864a0f5347074c6752da9f590bd692b80ff60d28da2b7445ef1e882d46",
+      "input_key": "258b68bd0edabc0fe743e0733b541f48d88f400215043b0236e60d23ea55d9a9",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntaxProgramProof.ir": "0b4ec486da271f5a2e09b6dc0b177e4d174aea1f0711ea4716bf746a3d40a3ba",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntaxProgramProof.olean": "f8a351def4ac45cd72a0d65c7c848203781ac7710fc933c77b355e1dfcf6bf72",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntaxProgramProof.olean.private": "11aea6c4774c974efa2e77ded11d3681e34b8378a5067212a62aa69e269a0c93",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowSyntaxProgramProof.olean.server": "004431979b059b6eb3abf72e40f42b03bd58a29b8706400e73dae86725667af2"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795141446940179618-12.json",
+      "receipt_sha256": "dfe5365fb7a1af52c67528bc0b61d047c5bcf426556a1602b07d910e48d3c1cb",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795141446940179618-12-LogicLineages-PersistentMarking-NumberedWindowSyntaxProgramProof.log",
+      "log_sha256": "82a530cea74f8cc8ac9186dabb1221277b65f977b8ff29792802f218eaa2356f"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowHeadDeclarationPrograms": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowHeadDeclarationPrograms.lean",
+      "source_sha256": "81f75323673a242cc30157d7ec70dba82f7aaf4f49af637cb08a759686573924",
+      "input_key": "adf66397379f6b319eebec8efdf3c864b0c192f8433db2eb5f715e540c80d4b7",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowHeadDeclarationPrograms.ir": "1c6599cd6ed1b353b689ec009f2c5811971d19de81a4e7b949a3640d8e670643",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowHeadDeclarationPrograms.olean": "5abc432f58773ac66983959449f5fb3b8169cd2fd9494599765487ea09d1b1e3",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowHeadDeclarationPrograms.olean.private": "31dc1460f2cac4e51b6263b22feb25da66393a88aca0afe9164904016a6e3ed7",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowHeadDeclarationPrograms.olean.server": "0fd9fb77636c9cda2f0c4c212018dd6e387a1393f4d30defceceb8a8e30228f9"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795143063363716533-9.json",
+      "receipt_sha256": "28ce3cf64a445f33907c58d62e86cb6e67f6e14735e1ed317a8ff08c4ff5d8c9",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795143063363716533-9-LogicLineages-PersistentMarking-NumberedWindowHeadDeclarationPrograms.log",
+      "log_sha256": "ea10b7d275ce53cca98ac91217d59f4d4bf30fd26b21689efbadb33f49cde899"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowRankPrograms": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowRankPrograms.lean",
+      "source_sha256": "2c9efce58bb0b94f013940ca6c70081f1aa5f5f4f6f0f94d505bf0f3f5373d94",
+      "input_key": "3e264bf518c1f9b50513eedcf9d6f77098d348406dc2f8c444c70761c76eea01",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRankPrograms.ir": "87e92d00f913b4d507711def352723fc75e5e738ba98576ec4ff850043e574d9",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRankPrograms.olean": "90e2c92f84a34185acb04e2fb87e87a27ac245e97527719a89403a65942aa087",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRankPrograms.olean.private": "c58a779f1963150b22c50f35774403da347a8484e007b2ddee94861045b8ce38",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRankPrograms.olean.server": "441dd0133ee91c240423aafc8fe5868f028584609b305b706b86081e2e144bcc"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146176703250024-9.json",
+      "receipt_sha256": "3c9e13a42fbb09cdec2c38fd0d6e3157ceec64ae6d3b127e17f1c071527a3b65",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146176703250024-9-LogicLineages-PersistentMarking-NumberedWindowRankPrograms.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowStatProgramTargets": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowStatProgramTargets.lean",
+      "source_sha256": "568dd0e0eb10753da0a91a4aa83436ac7ba62ba487b38385f0c28e71fb355703",
+      "input_key": "177dfa4367ddb3a59c61c293ed28acb676b2dc8431fdaf8567d3adcd01ac83a6",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatProgramTargets.ir": "076cd6c0cbf2cb0b01078754dd843a722e63e57c875cc0cce5acc3e9aecfb048",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatProgramTargets.olean": "6a275bf613faacfdaa37a62ba4c579247551870fab698b96bd3bf67d0e3aa734",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatProgramTargets.olean.private": "dbf7e9c4fe5817a6698667e04623f54c8cfe88cd2f6caada6a340b82e212705d",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatProgramTargets.olean.server": "d0aad8aae2e02baf5455ece405d70ea6b07d7db34ec8ea167ee01c24958e3c77"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795145480190841163-9.json",
+      "receipt_sha256": "2ac987bbe7f20adf40e12e4e989fd48165140fbd25798eaed635264ca3c2c363",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795145480190841163-9-LogicLineages-PersistentMarking-NumberedWindowStatProgramTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowAnnotationProgramProof": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowAnnotationProgramProof.lean",
+      "source_sha256": "eab770f7bbaeee366a235c67c9b72507110ec5d00672482086edbfb2ac047b41",
+      "input_key": "afe2b2cbc5c7f207f71de1a0ae6c1ef35a8ab7e28b499ce366aa3ffc1275247f",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAnnotationProgramProof.ir": "6beaed74e2bd4e3ab34b543fb2af49c1e076a3f8be23d5b292c8c0570cd900ea",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAnnotationProgramProof.olean": "f0f2b6bf6940cd06a7349943b61387d352f58859ab36ea890f87208565ae425c",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAnnotationProgramProof.olean.private": "303523c8505091c1e0636b5a7224e0995617bd5829c746eb6f066e138ee27cc8",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowAnnotationProgramProof.olean.server": "f170dcf1911f02c74f116905d46b90c8bf5469ab18963774e73c7df2abed4bb3"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795143063363716533-9.json",
+      "receipt_sha256": "28ce3cf64a445f33907c58d62e86cb6e67f6e14735e1ed317a8ff08c4ff5d8c9",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795143063363716533-9-LogicLineages-PersistentMarking-NumberedWindowAnnotationProgramProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowStatMarkPrograms": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowStatMarkPrograms.lean",
+      "source_sha256": "7150f6eab387362b4aaaf25abcf1c0f6b1f5b7bd20b33ae7a307f00b5e12c779",
+      "input_key": "7810c5723339bd8e81e163beba3670d3f38908147cdeb2275ba42992af8622cb",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatMarkPrograms.ir": "49a720e4afd0e587db1fb173c45e2c061c6dcb45daf3d4ea4e160728e9a7d11c",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatMarkPrograms.olean": "dbb13cbd7932561d036f75c2ab7b205c26b17159f2f4f39ff10a262ffe723bcd",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatMarkPrograms.olean.private": "85e6242762068c8ef89171ecf3939cc93e9c64b02b6ecc9575eacf1a4af7aa9b",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatMarkPrograms.olean.server": "ff69b615159a01e81ba585fe0a1b11568e06f5a0ad4c4795666b0e07774363a5"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146056023750119-9.json",
+      "receipt_sha256": "bb84d205f4ab3b1bfd0d38885ef28b94fd4db4a7e9400f7e6f34efebdcbc7548",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146056023750119-9-LogicLineages-PersistentMarking-NumberedWindowStatMarkPrograms.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowStatPartitionPrograms": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowStatPartitionPrograms.lean",
+      "source_sha256": "58eabdf609a4fc1151b646c4c16963efa05c6f86cc0ed64e9635781e3fc71a5a",
+      "input_key": "92f9eeed123da34b84c8898f21806aba9adb29dcb4da1a844e0115b3f570938d",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatPartitionPrograms.ir": "87a527d7c9981efb62fe3462b6ef8836a15c621a4e23dd8da6f63c51973c3c66",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatPartitionPrograms.olean": "8446ad3460a003330a8e6b5df593491f878eb3db81f5c09e9fa2b880a4e183e8",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatPartitionPrograms.olean.private": "99c67c696d2f12936a6eb6ed76adebb503c52264cf5583eacfbf61c80d8a4dc4",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatPartitionPrograms.olean.server": "42ceb96cd7b23883a3350b8722ab97dcba56a96bbe3789bcb818011099f0cf67"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146316750229312-9.json",
+      "receipt_sha256": "051263107db55cd5fbce6006898644d53963211249d5d4f556fc734874bc5bd4",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146316750229312-9-LogicLineages-PersistentMarking-NumberedWindowStatPartitionPrograms.log",
+      "log_sha256": "0d504049b6967214f396d635edf577bb76cb80d750df44a41d362983d522219e"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowStatProgramProof": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowStatProgramProof.lean",
+      "source_sha256": "80fee202684f492b5c3a30656d32a3fd0521ee3b7d161a0f8693f15af2e85511",
+      "input_key": "30c8c324c50ef316053d87501a5d1087b71f2373824c02750f81af72c2cb9d9a",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatProgramProof.ir": "59e1366a5b7faf086bd9b0eac2ce7564fb2fb516dabf4ee8cef8b1b64217a166",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatProgramProof.olean": "9b7e77bc7ebf2794c1088a105a2f0d3424aeb1f5131838dc6a1481c147bd0ccd",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatProgramProof.olean.private": "9c7bea89e7fcd34f8cf999f3b1b624b5936b08912fdd39831b4df2856ef3fca0",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatProgramProof.olean.server": "78d300576ce1089ace441be9e32e6f149f41033e4b6cfdd968cf986f9b8ecae6"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146316750229312-9.json",
+      "receipt_sha256": "051263107db55cd5fbce6006898644d53963211249d5d4f556fc734874bc5bd4",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146316750229312-9-LogicLineages-PersistentMarking-NumberedWindowStatProgramProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowMarkRootProgramTargets": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowMarkRootProgramTargets.lean",
+      "source_sha256": "23553c0b9bf9b626c8ba36228a94d62dbe2b99ab7b18a4fec9d34399d0770104",
+      "input_key": "886ee32293eb367d7a4cc77f129545f93385b032583c25ee4a620a25761601e0",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowMarkRootProgramTargets.ir": "94faa41e27e199fe8ccc1d3a7db442a303cc7285a332cc788271e0e9d40ad660",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowMarkRootProgramTargets.olean": "8c307f52f3965689ed8113828fde5ef83c2f0557133b5e6955d709bddcd3871e",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowMarkRootProgramTargets.olean.private": "4287a284ef9869ef28013003f9a8f4014e7b575c0afd787b77fbc93e3efc1f91",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowMarkRootProgramTargets.olean.server": "566162fa6f19b8016778b4fdc2309fedbb4991d548072a23a357a66bef5432e6"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795145137134156725-9.json",
+      "receipt_sha256": "9c25b64b4ecd932bbcac6bd99360a2d9faa8c5f357f263cfd3c40864d692264c",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795145137134156725-9-LogicLineages-PersistentMarking-NumberedWindowMarkRootProgramTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowLexicalAlgorithm": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalAlgorithm.lean",
+      "source_sha256": "6f89f6251f7661c2c9e1c1e9549fb1e5e1863c67a29e58543c08e5471d2d0c82",
+      "input_key": "be4fcbbad0dd381ec3a28b85ef5a29e9abd79cf4d6fecc9cae590f93fadc8a09",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowLexicalAlgorithm.ir": "e72182efc450086da4d02160c96031917397f1a2011e0e2aebd289cdc933c4c5",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowLexicalAlgorithm.olean": "8f0de94bff2f85a9425500e299d420e979d01c3fb5faaf7a0e0b69ca4bbb5a6e",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowLexicalAlgorithm.olean.private": "d55c0373fe7851d1caa49be6fd13281f992b47243f404c9fdaebb43559224cfd",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowLexicalAlgorithm.olean.server": "2a5a3ad70c15edf665d1d250654522e3f94934ed96a2f49a38c9e470ae99d73d"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795143376761439042-9.json",
+      "receipt_sha256": "7576c182a94212022fb82e784ba157aa91b36c9a957fd5f24abfcbaab7719d0a",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795143376761439042-9-LogicLineages-PersistentMarking-NumberedWindowLexicalAlgorithm.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowLexicalProgramTargets": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalProgramTargets.lean",
+      "source_sha256": "741bfbca48b52c35216e0186a58a4767711d7d2eef776341c32db4c77f81ccdf",
+      "input_key": "523ce690f8417eb4491498ee8a9621aba1fa21976dfbf18d6b37c8050e5e2643",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowLexicalProgramTargets.ir": "4855111c64041f296d181597b6796ce63cc0c17fc4cb6381f3a683809e11ac90",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowLexicalProgramTargets.olean": "ed3c2d0aeebdd92f0997850c776988adda42fe02720644f50a950c6ca78d10e9",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowLexicalProgramTargets.olean.private": "6b5cdb02d864214c1e89aa1d885b5883630014ef41e57b61d8d6f2fe82c10601",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowLexicalProgramTargets.olean.server": "657afea8c59e3050328ddb467aada386a2b62c0c3a0bba89cbbea3543b6851f3"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795143376761439042-9.json",
+      "receipt_sha256": "7576c182a94212022fb82e784ba157aa91b36c9a957fd5f24abfcbaab7719d0a",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795143376761439042-9-LogicLineages-PersistentMarking-NumberedWindowLexicalProgramTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowLexicalRequirementPrograms": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalRequirementPrograms.lean",
+      "source_sha256": "c5b86f48abe815e3ade390a40b86c8df4f4b79a5426d283cbc95459a24fb1590",
+      "input_key": "51337c0cfcde96f05108534d8bf84a4898c262484e8dc3b11f10e2eec060ff2b",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowLexicalRequirementPrograms.ir": "55f858f5e50e174ae551a19352a1ff01ad118d4f4170146b80cf8a07b6665a7c",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowLexicalRequirementPrograms.olean": "d14c2b1ebf3603261f08d67d4f1e1468db62ab85f458646a61bc5c0e5de5071a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowLexicalRequirementPrograms.olean.private": "f835628d873f7eab3b44a5298b7ef57038615916213db24537ee60f74bb45bc7",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowLexicalRequirementPrograms.olean.server": "62c7c49e1bdf3a99833a8966b82dfd445a1ca895b25eb78ceb2697bda9618564"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795143443616052497-9.json",
+      "receipt_sha256": "10da958cc4adfd08e9afe8069beb1316b087ebb6e2c45bd3880947e25ae92937",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795143443616052497-9-LogicLineages-PersistentMarking-NumberedWindowLexicalRequirementPrograms.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowMarkRootProgramProof": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowMarkRootProgramProof.lean",
+      "source_sha256": "4524d0e082b89d4fa866b2da5c8ea7a57c208b6f6ed8976a3f4338f7f30b6315",
+      "input_key": "2897ca4a743fb2b2dbc752dbc7ed716cfa863388a98716b8dd7a106439769015",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowMarkRootProgramProof.ir": "946bff6eb516a5b6275ed92420ed03b0cabe23d89516f941be717c6bba40e8a4",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowMarkRootProgramProof.olean": "0c598b9f34b9cc07c629de4ed83577f96d79d46dcca3e72df67fdd4c1e6bf1f8",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowMarkRootProgramProof.olean.private": "5f8d2e7d095b856c0fd6c7c000a429b70815ee463541c2144567c50aa84eaed2",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowMarkRootProgramProof.olean.server": "dcc4cbd5fac0ce14d82d521d88ec7dabfbcb8ae3a91cd4e8c066d1a4df2b31ae"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795145196350678776-9.json",
+      "receipt_sha256": "2cbe83646fc125d014eacb2175dc7ebe4940293e78c66a78c8f0a2c8766f137a",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795145196350678776-9-LogicLineages-PersistentMarking-NumberedWindowMarkRootProgramProof.log",
+      "log_sha256": "3cbc74dad2fbf1ab239024de2713041da86a8d7ce3811de874e291d76cb56f27"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowStatRootProgramProof": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramProof.lean",
+      "source_sha256": "7b6df10d8245681a4b4994af4756c8e8db242ef5bbd2b084a80a5907ea9de9cb",
+      "input_key": "9bae6555c9cce83a9c272513cca8843fea4f379833ac7cdcec58ff3665809045",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramProof.ir": "dedf93394ed207bda9cb46e1e321de9f6b3fffdcc0641c905bf4d332a48b1350",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramProof.olean": "24642a304827a7e5c877f21a7cca5eae373746881a2cc321a70c76178c3ecbb8",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramProof.olean.private": "e7c547106f5a827e3115adf4d97159cb1a136c86bae730f7446e27338a44bcc5",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramProof.olean.server": "0affe9b2ca2e870cf6667a0b04897fcbc63aacc7829d9723b9762e6866f50c83"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146366585517720-9.json",
+      "receipt_sha256": "b477e84a9ae973b09fe48d2269e74882653f7a96269e3380bf56d10a8ed4b866",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146366585517720-9-LogicLineages-PersistentMarking-NumberedWindowStatRootProgramProof.log",
+      "log_sha256": "b4fa782e0d1b7c1e13304e7cf5ea2ed3ca8c1872d01de382113d31062d740c58"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowStatRootProgramChecks": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramChecks.lean",
+      "source_sha256": "6547777985f673ac2f6e6dbd74416a2761d090e99edda9edc069b2ea4da5c13a",
+      "input_key": "633d4e82578fd5eb67345871a0058db2f678773a35368019e74b2a613c026289",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramChecks.ir": "b4943e13f6990ee36e6fe45169d760b8741ca05879156c01ca005c344408f1dc",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramChecks.olean": "297d0fbe75dab9a787b2d3a5778b4a6ed37d1c68d7aeea3964d37b736d418a6c",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramChecks.olean.private": "7a8388e62ff43ea7d483da246a5fe286f41112f6a44b1b96f7f8b971ffb3d30a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramChecks.olean.server": "a8a084e2b61fe1fad4e5330b1165310d92ba63b61b2373ac474b99daee275824"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146366585517720-9.json",
+      "receipt_sha256": "b477e84a9ae973b09fe48d2269e74882653f7a96269e3380bf56d10a8ed4b866",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/build-reports/1795146366585517720-9-LogicLineages-PersistentMarking-NumberedWindowStatRootProgramChecks.log",
+      "log_sha256": "1f27f53b3c55d7cb395de71310a0e8e818582d6341a49233e8df3dd075f6c295"
+    }
+  },
+  "limits": "Focused closure only. Does not certify paper correspondence or a full-root build. Imported axioms are certified through actual new named declaration closures.",
+  "source_pins": {
+    "16-persistent-marking-termination-ordering/sections/ordinals.tex": "526aa249902b4e4bf00f45bee770bdcdc9f9b39c2dc341778834600b7f8bf1b5",
+    "16-persistent-marking-termination-ordering/sections/ordering.tex": "cc31c9a5b3b677ed7c3e5d41bb525b06e4424f2d5006ee5880249efc18e58253",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawRootCode.lean": "9e2c82aeb91d87852b9ee054e3ebb603aeef8472a15dbd22138a3eb756934180",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticRawRootCodeProof.lean": "2e7a803686179c09b78d39d942ce1b29d9d1a91e196c1265b984b29f29ed1f9d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowRawWitnessRootBits.lean": "ec7f8f55e901d3a05d996b17326fc8ca3d3b8dba0b1e643e92066c9253616ce3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticPathCheckBits.lean": "5215e37e520dd906185c2ebdc88a12750329bac76732dffff643d0016be4fa6e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAnnotationChecks.lean": "332c3c0af5e7390ceaf47be693c82f50cfd573f6ebac2a6bdfe273ed1258f2e9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticExchangeAtomsChecks.lean": "0f4870e19d0da7efc1749b64144b2fcdd21bcd10d51a99926de188410d9656f6",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSyntaxAlgorithmChecks.lean": "2e48229c16d90572f784bd1ee9a1ae6a66ac5778bed74cbb1c8b7aa1a9613c0c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticFieldAlgorithmChecks.lean": "db8f4ab97139cade191e13656c0a354863d9d6e5b0449b542f57ccc6cea0b1c8",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCodeChecks.lean": "70a9c467271f87f77d0a4a1cf722277247278f669e470b4d9b0b8bae136d81ff",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowMarkRootAlgorithm.lean": "e1273854d94d4ac43b72b996984cb5c024f6eaf3c6dd39e4da7c08191b8cd8c8",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticMarkRootTargets.lean": "74446cf6017400746427228ebf2227e8f4a28a17a09a09080c1e92425fecacd9",
+    "formalization/LogicLineages/PersistentMarking/Occurrences.lean": "d148c40a5d53b310654255f1e8e51f1208f9cd37ef8c323f8125b814a5aedafb",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowSyntax.lean": "efb972f238bf835b95acf77ad60a87bf1167201cdc74d22e9f2c5cd2f302b8d8",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowOwnerAlgorithm.lean": "e0f6a815f77bf62d4313ee7d52b157c754d74a8487319a07859e6f63eaff1d8c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticOwnerTargets.lean": "8d6e46ce54857f68d4019dfef9eaa9b68340d139f42b62ddb951b3c9a388527a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticTermCode.lean": "a478448cce008c2c7418d5e7598079ea3807dbfec375be3131718a9590f658cf",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticTyCode.lean": "ddf4ee7a6f37ef5d09f5a93aac67c40ac955453bd87aa0fab6d1d7945445f596",
+    "formalization/LogicLineages/PersistentMarking/Signature.lean": "2b12e1dfe0accf226fd7d7636f239247a65ce9a67f11fd653ddad800188bcd04",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowCopyAlgorithm.lean": "c45dd4fd1770ff127c24730f70fd9a7d356dfe4f470b1679ea11040c682d8228",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticCopyTargets.lean": "4951d477a793b1d66e6be3e9ce033905f881668d89df819a49eadf1b285f7b34",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionChecks.lean": "610066b87ded2d62e1cba6da721de302f648347a4c017080ce88e97b9247c16c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticOwnerChecks.lean": "16bd147cda8d526060c78588f2d718adc75a86f06d1021e3f98dea17849146fa",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticRootComparisonProof.lean": "36f2622b98c7ede40d28b2c4c2f5f38e34fe79ce036ee75ea2495915ce6be4ca",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowStatChecks.lean": "70a066cda399e57951a19f433b2b9d51d9632de3440e540be55f7b2c3e51cb45",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowStatRootAlgorithm.lean": "7bb6e17985d5d2c8e626d18389b95a7a64323c17d5746782ba513492bb8a6283",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticStatRootTargets.lean": "8596aa8c13ea6525e2537eb8e422fa6d608c2b02faff0495469d01bfb84cce1f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticReplacementCodeProof.lean": "5c27d0a3f220158e3e66cd37f86d87fbed9917303ad770bd28badd7c44206bd4",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFrameView.lean": "98a3ee702d761592554e5412bc92d42a7305457c0c42d4dc26f8e2488c9187d0",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramTargets.lean": "abced3269056c2e82f1bc79b2506a110a6b0146dc241796b5dbdbc7420f29146",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowCopyProgramTargets.lean": "e275d902e3c5859d57386bc3f0d9e08ee7549e0e7eec539df9c1728143606453",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowRankPrograms.lean": "2c9efce58bb0b94f013940ca6c70081f1aa5f5f4f6f0f94d505bf0f3f5373d94",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowStatProgramTargets.lean": "568dd0e0eb10753da0a91a4aa83436ac7ba62ba487b38385f0c28e71fb355703",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowPairAlgorithm.lean": "dacacd26f2bd7e934ffc6615f2d0b03fe495108ad68c573a13e3c9b54e4dbfe3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowFieldAlgorithm.lean": "4b44f21f2bbaa6695a65ae0e34afb20b0bad3facf2693f1f7018d633488ba7b4",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowAddressAlgorithm.lean": "5267a784fc65547d6cd3e3ca804e02428aafce3ad15eb0aef0f8ada91c84733c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowSyntaxAlgorithm.lean": "372235cb3dadc4d33c724728e1da43fb0752e5eb995d47c9dae75f1127593b52",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowAnnotationAlgorithm.lean": "b23e7d65e92a395fbaf4e45079dd655dbfe7a53c3ee60a60c775e96409926d2d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowStatAlgorithm.lean": "67b6d4c56e551801a5ff76bf6b885f2c85acf72c65e1a28455cf0fe4a64eb760",
+    "formalization/LogicLineages/ComputabilityKnowledge/GorbowPRProgramDefinitions.lean": "a68d8d24d356258e63e1f0f7cd03c1211175c02f1d1fb37edbf75aa92316b51b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowSyntaxProgramTargets.lean": "1bb56c23e3311e9c62c04ecea58b2527d821d8eb401c7cb4f06acc18a8fe5a86",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowAddressProgramTargets.lean": "cfe12800b0ed76ff8c714bf23e83e28e8c654d11c9635c00442eb82cfd1695a3",
+    "formalization/LogicLineages/ComputabilityKnowledge/GorbowSyntax.lean": "705364787a36bc9c409806260a6c1db762d7d4e47f659b6d588ebab124fad7e5",
+    "formalization/LogicLineages/ComputabilityKnowledge/GorbowSubstitution.lean": "0a95ba2a3f3595c4665feb7a824ad077d5a724f3133503e81657be962c226899",
+    "formalization/LogicLineages/ComputabilityKnowledge/GorbowFormulaSubstitution.lean": "d5ca4ab8478a9ed6818d5de25d0aae1b52763e7f98fb7fe49830ab54d1f46915",
+    "formalization/LogicLineages/ComputabilityKnowledge/GorbowStandardInstances.lean": "c60ff3d22cdfed04aab59922afe461c4f2f379d8b92df49a37e752e580b97706",
+    "formalization/LogicLineages/ComputabilityKnowledge/GorbowRegistryTuple.lean": "0fc0fb3c00aebd9a1ea972a687134bfe3ceba76364d4a54ddc0dd272f0bd5ecb",
+    "formalization/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoder.lean": "66573271da7b228714e97a6e8aa6a412456da79cb5fcb472c842a32e47e41498",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowRegistryPairCalibration.lean": "5b02525f43c233d14ceb96bdfd6e65351551ed2b630cadd58b0b8f45eb881fc1",
+    "formalization/LogicLineages/ComputabilityKnowledge/GorbowPRProgramTargets.lean": "15977343d18b6b20f066ea4ecee98ce62a833a7256cec638dd3aa79eeb119cfb",
+    "formalization/LogicLineages/ComputabilityKnowledge/GorbowPRProgramProof.lean": "ded708ca4eac2f8e3013962327cb92cf5769a5dcb3d4d949d6c4e4da0ac9da9a",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryDecoder.lean": "d39803c4268a2b0b6a5837023acc4874aabfff70cbfed9b682098fa9e3fef5ad",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryTuple.lean": "eae43b934462003170f111a05c692d19c2d40d5566c1d89f8a7554fa386aa258",
+    "formalization/LogicLineages/ComputabilityKnowledge/Comparators/GorbowStandardInstances.lean": "33fb8b792b885644a93e4fb62ab4bad833da3a17ef5d9327b5ba31cb0b6a9435",
+    "formalization/LogicLineages/ComputabilityKnowledge/GorbowStandardInstancesProof.lean": "a19290c276086268f9c2835e8ac7f7e19a9d5b7a8f103b678604b1add276c107",
+    "formalization/LogicLineages/ComputabilityKnowledge/GorbowRegistryTupleProof.lean": "7e0183cfd546de64234af44ad8db0127e7c7285b98cdcc317582cc8d3b3df106",
+    "formalization/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoderProof.lean": "e0149be79ab3a40b1404498614b4dc12d4335d6bd1d1a4f1d2d823945175bb22",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowRegistryPairPrograms.lean": "0c15a0a276a32cdd2a61d7c34b4dc9ec9452c2d3778f904882a760afc8f0696b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowProgramKernelChecks.lean": "af9fcb6e9f04adbe84c0e475a72733a6bd6e34f6e649d94585a2856796b32846",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowFieldProgramTargets.lean": "532248277592d6efeeac9d5d51e07d37082edccad8f6cd71ca36096497ac686f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowFieldProgramProof.lean": "50ca64158441f69cd9ef79de9083915346131fa256b0a04ef5de7e240e8df51d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowFieldProgramChecks.lean": "9c65c2cb27a0b63e2dda0c7791f28b68184d43bf3b5dda7c481dd620618d4c81",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowDirectAlgorithm.lean": "781ec264d98428a9068e59190f5fbac631bc3bc46470c024f13bf05b206e6e33",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowDirectProgramTargets.lean": "a86a4dafb7e394637b2ef2d20fa3f16c34c6f6222318b8a130dcdb589503f69c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowDirectListsPrimrec.lean": "e7df7f744a5217795ea066761ca45a99cfe7f99a0145984687d21ee50b2e0a8d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowAddressProgramProof.lean": "7ce518bd58406f6718afc087a480b7c1e73c6cc0a375e4b8d94efd0d665a88e5",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowSyntaxShapePrograms.lean": "bccbee5cbe4b52cc3846f3a3dc081455d5aa1656108b59f488e67ff52b8e3062",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowPositivePathAlgorithm.lean": "0b14acfea7f96faf20583c88cc12ddcc47f9c0b4a24e1682c144808f6efb0474",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowPositivePathProgramTargets.lean": "0dbf7120094e998a7e2842950c41588b6cc355e6a2f8570a2315649721ba7c3b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowPositivePathParserPrograms.lean": "073de7da18f5339a1aa98e119e5296b218b819b8d0be2b3f532db70d23475772",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowAnnotationProgramTargets.lean": "fbd36a27970451b941867e47be9bd9180f26f5a562a989590cfa24bbc26defa0",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowSyntaxProgramProof.lean": "2488ea864a0f5347074c6752da9f590bd692b80ff60d28da2b7445ef1e882d46",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowHeadDeclarationPrograms.lean": "81f75323673a242cc30157d7ec70dba82f7aaf4f49af637cb08a759686573924",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowAnnotationProgramProof.lean": "eab770f7bbaeee366a235c67c9b72507110ec5d00672482086edbfb2ac047b41",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowStatMarkPrograms.lean": "7150f6eab387362b4aaaf25abcf1c0f6b1f5b7bd20b33ae7a307f00b5e12c779",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowStatPartitionPrograms.lean": "58eabdf609a4fc1151b646c4c16963efa05c6f86cc0ed64e9635781e3fc71a5a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowStatProgramProof.lean": "80fee202684f492b5c3a30656d32a3fd0521ee3b7d161a0f8693f15af2e85511",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowMarkRootProgramTargets.lean": "23553c0b9bf9b626c8ba36228a94d62dbe2b99ab7b18a4fec9d34399d0770104",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalAlgorithm.lean": "6f89f6251f7661c2c9e1c1e9549fb1e5e1863c67a29e58543c08e5471d2d0c82",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalProgramTargets.lean": "741bfbca48b52c35216e0186a58a4767711d7d2eef776341c32db4c77f81ccdf",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalRequirementPrograms.lean": "c5b86f48abe815e3ade390a40b86c8df4f4b79a5426d283cbc95459a24fb1590",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowMarkRootProgramProof.lean": "4524d0e082b89d4fa866b2da5c8ea7a57c208b6f6ed8976a3f4338f7f30b6315",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramProof.lean": "7b6df10d8245681a4b4994af4756c8e8db242ef5bbd2b084a80a5907ea9de9cb",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowStatRootProgramChecks.lean": "6547777985f673ac2f6e6dbd74416a2761d090e99edda9edc069b2ea4da5c13a"
+  },
+  "frozen_manifest_sha256": "ee458ead4dd50ac597aa8c3b11f2fd5d7ac2cc6f5c5773da9173458247db718d",
+  "receipt": "1795146366585517720-9",
+  "archive": "verification/new-paper-set-2026-11-18/paper16/recovery-nov19/stat-root-program-local-native/1795146366585517720-9",
+  "companion_original_evidence": "NUMBERED-WINDOW-ARITHMETIC-STAT-ROOT-LOCAL-EVIDENCE.json"
+}

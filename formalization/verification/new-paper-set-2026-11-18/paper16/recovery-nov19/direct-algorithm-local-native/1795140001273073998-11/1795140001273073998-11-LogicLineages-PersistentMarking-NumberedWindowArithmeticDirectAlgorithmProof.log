@@ -1,0 +1,109 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticDirectAlgorithmProof.lean:20:43: error: Tactic `rfl` failed: The left-hand side
+  do
+    let __x ← some (tag, xs)
+    match __x with
+      | (4, [target, dominator, cert]) => pure (target, dominator, cert)
+      | x => none
+is not definitionally equal to the right-hand side
+  Option.map entry ((some (tag, xs)).bind fun p => assembleInsertion p.fst p.snd)
+
+case some.case2
+n tag : Nat
+xs : List Nat
+hn : decodeNode n = some (tag, xs)
+x✝ : ∀ (target dom cert : Nat), tag = 4 → xs = [target, dom, cert] → False
+⊢ (do
+      let __x ← some (tag, xs)
+      match __x with
+        | (4, [target, dominator, cert]) => pure (target, dominator, cert)
+        | x => none) =
+    Option.map entry ((some (tag, xs)).bind fun p => assembleInsertion p.fst p.snd)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticDirectAlgorithmProof.lean:38:21: error: unsolved goals
+case some.some.some
+n k r a : Nat
+hn : decodeNode n = some (5, [k, r, a])
+val✝² : List Nat
+hk : decodeFields k = some val✝²
+val✝¹ : List Nat
+hr : decodeFields r = some val✝¹
+val✝ : List Nat
+ha : decodeFields a = some val✝
+⊢ ((Option.map (List.map entry) (decodeElements decodeInsertion val✝)).bind fun added => some (val✝², val✝¹, added)) =
+    (decodeElements decodeInsertion val✝).bind
+      (Option.map witness ∘ fun inserted => some { kept := val✝², removed := val✝¹, inserted := inserted })
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticDirectAlgorithmProof.lean:41:14: error: Tactic `rfl` failed: The left-hand side
+  do
+    let __x ← some (tag, xs)
+    match __x with
+      | (5, [k, r, a]) => do
+        let kept ← unpack k
+        let removed ← unpack r
+        let inputs ← unpack a
+        let added ← entries inputs
+        pure (kept, removed, added)
+      | x => none
+is not definitionally equal to the right-hand side
+  Option.map witness ((some (tag, xs)).bind fun p => assembleDirectWitness p.fst p.snd)
+
+case some.case2
+n tag : Nat
+xs : List Nat
+hn : decodeNode n = some (tag, xs)
+x✝ : ∀ (k r a : Nat), tag = 5 → xs = [k, r, a] → False
+⊢ (do
+      let __x ← some (tag, xs)
+      match __x with
+        | (5, [k, r, a]) => do
+          let kept ← unpack k
+          let removed ← unpack r
+          let inputs ← unpack a
+          let added ← entries inputs
+          pure (kept, removed, added)
+        | x => none) =
+    Option.map witness ((some (tag, xs)).bind fun p => assembleDirectWitness p.fst p.snd)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticDirectAlgorithmProof.lean:40:122: warning: This simp argument is unused:
+  witness
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵k̵,̵h̵r̵,̵h̵a̵,̵a̵l̵l̵E̵n̵t̵r̵i̵e̵s̵,̵w̵i̵t̵n̵e̵s̵s̵]̵[̲h̲k̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲h̲r̲,̲ ̲h̲a̲,̲ ̲a̲l̲l̲E̲n̲t̲r̲i̲e̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticDirectAlgorithmProof.lean:48:39: error: unsolved goals
+S : Spine.Signature
+K : List Ty
+xs ys : List Nat
+w : DirectMultisetWitness
+⊢ (xs.all (NumberedWindowArithmeticAllContextBits.addressBit S K) &&
+              ys.all (NumberedWindowArithmeticAllContextBits.addressBit S K) &&
+            decide (xs.Perm (w.kept ++ w.removed)) &&
+          decide (ys.Perm (w.kept ++ List.map (fun x => x.target) w.inserted)) &&
+        !w.removed.isEmpty &&
+      w.inserted.all fun x =>
+        decide (x.dominator ∈ w.removed) &&
+          NumberedWindowArithmeticAllContextBits.addressRSBit S K x.dominator x.certificate x.target) =
+    (xs.all (NumberedWindowArithmeticAllContextBits.addressBit S K) &&
+              ys.all (NumberedWindowArithmeticAllContextBits.addressBit S K) &&
+            decide (xs.Perm (w.kept ++ w.removed)) &&
+          decide (ys.Perm (w.kept ++ List.map InsertedOccurrence.target w.inserted)) &&
+        !w.removed.isEmpty &&
+      w.inserted.all (insertionBit S K w.removed))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticDirectAlgorithmProof.lean:49:61: warning: This simp argument is unused:
+  insertionBit
+
+Hint: Omit it from the simp argument list.
+  simp [directLists, directMultisetBit, typedAddressListBit, i̵n̵s̵e̵r̵t̵i̵o̵n̵B̵i̵t̵,̵ ̵witness, entry, ̲List.map_map,
+  ̲ ̲ ̲ ̲ ̲Function.comp_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticDirectAlgorithmProof.lean:53:2: error: unsolved goals
+case left
+S : Spine.Signature
+K : List Ty
+n : Nat
+⊢ (match decodeFields n with
+    | none => false
+    | some xs => xs.all (NumberedWindowArithmeticAllContextBits.addressBit S K)) =
+    match decodeFields n with
+    | none => false
+    | some xs => xs.all (NumberedWindowArithmeticAllContextBits.addressBit S K)

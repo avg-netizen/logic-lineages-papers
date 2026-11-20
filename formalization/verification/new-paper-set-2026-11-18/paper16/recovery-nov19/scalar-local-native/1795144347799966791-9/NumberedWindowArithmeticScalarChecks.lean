@@ -1,0 +1,11 @@
+import LogicLineages.PersistentMarking.NumberedWindowArithmeticScalarProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticScalarChecks
+open NumberedWindowArithmeticScalarTargets NumberedWindowArithmeticScalarProof
+theorem exact_GuardedExchange : ExactGuardedExchange := guarded
+theorem exact_LeastRepresentative : ExactLeastRepresentative := leastEq
+theorem exact_ScalarAddress : ExactScalarAddress := scalarEq
+#print axioms exact_GuardedExchange
+#print axioms exact_LeastRepresentative
+#print axioms exact_ScalarAddress
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticScalarChecks

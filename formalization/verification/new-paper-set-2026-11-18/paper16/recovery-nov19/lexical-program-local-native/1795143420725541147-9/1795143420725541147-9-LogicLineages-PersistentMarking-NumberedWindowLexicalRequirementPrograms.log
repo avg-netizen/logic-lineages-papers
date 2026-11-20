@@ -1,0 +1,44 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalRequirementPrograms.lean:14:9: error: Tactic `rcases` failed: `a✝ : α` is not an inductive datatype
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalRequirementPrograms.lean:42:17: error: unsolved goals
+case cons.zero
+E : Type := ℕ × List (ℕ × ℕ)
+P : Type := E × (ℕ × ℕ) × Requirement
+i : Primrec fun p => p.2.1.1
+u✝ : Primrec fun p => p.2.1.2
+t✝ : Primrec fun p => p.1.1
+r : Primrec fun p => p.2.2
+step : Primrec fun p => dischargeOne p.1.1 p.2.1 p.2.2
+t : ℕ
+rs : List (ℕ × ℕ)
+ih :
+  List.foldr (fun b s => dischargeOne ((t, rs), b, s).1.1 ((t, rs), b, s).2.1 ((t, rs), b, s).2.2) empty (t, rs).2 =
+    discharge (t, rs).1 (t, rs).2
+u : ℕ
+⊢ restrict (u == t)
+      (List.foldr (fun b s => if b.1 = 0 then restrict (b.2 == t) s else join (slot (b.1 - 1) b.2) s) empty rs) =
+    restrict (u == t) (discharge t rs)
+
+case cons.succ
+E : Type := ℕ × List (ℕ × ℕ)
+P : Type := E × (ℕ × ℕ) × Requirement
+i✝ : Primrec fun p => p.2.1.1
+u✝ : Primrec fun p => p.2.1.2
+t✝ : Primrec fun p => p.1.1
+r : Primrec fun p => p.2.2
+step : Primrec fun p => dischargeOne p.1.1 p.2.1 p.2.2
+t : ℕ
+rs : List (ℕ × ℕ)
+ih :
+  List.foldr (fun b s => dischargeOne ((t, rs), b, s).1.1 ((t, rs), b, s).2.1 ((t, rs), b, s).2.2) empty (t, rs).2 =
+    discharge (t, rs).1 (t, rs).2
+u i : ℕ
+⊢ join (slot i u)
+      (List.foldr (fun b s => if b.1 = 0 then restrict (b.2 == t) s else join (slot (b.1 - 1) b.2) s) empty rs) =
+    join (slot i u) (discharge t rs)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalRequirementPrograms.lean:43:61: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp [dischargeOne, ̲discharge,̵i̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

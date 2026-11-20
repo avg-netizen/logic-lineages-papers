@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalPresentationProof
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalPresentationChecks
+open NumberedWindowInternalPresentationTargets
+
+theorem exact_TaggedSemantics : TaggedSemantics := NumberedWindowInternalPresentationProof.tagged
+theorem exact_AllTermsSemantics : AllTermsSemantics := NumberedWindowInternalPresentationProof.allTerms
+
+#print axioms exact_TaggedSemantics
+#print axioms exact_AllTermsSemantics
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalPresentationChecks

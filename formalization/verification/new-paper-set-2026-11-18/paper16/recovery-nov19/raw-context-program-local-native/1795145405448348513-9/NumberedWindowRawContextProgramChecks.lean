@@ -1,0 +1,14 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowRawContextProgramProof
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowRawContextProgramChecks
+open NumberedWindowRawContextProgramTargets
+
+theorem exact_ContextualStepProgram : ContextualStepProgram :=
+  NumberedWindowRawContextProgramProof.program
+
+#print axioms exact_ContextualStepProgram
+
+end LogicLineages.PersistentMarking.NumberedWindowRawContextProgramChecks

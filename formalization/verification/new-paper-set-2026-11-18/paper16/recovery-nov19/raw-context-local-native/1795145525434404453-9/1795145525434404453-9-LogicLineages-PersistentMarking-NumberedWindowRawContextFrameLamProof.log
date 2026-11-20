@@ -1,0 +1,46 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFrameLamProof.lean:26:31: error(lean.unknownIdentifier): Unknown identifier `ih`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFrameLamProof.lean:24:14: error: unsolved goals
+case some
+S : Spine.Signature
+K : List Ty
+root : RawRoot
+fuel w : Nat
+o : Option RawWitness
+Q R : NTerm
+s : Ty
+q : NTerm
+t : Ty
+r : NTerm
+h : NumberedWindowRawContextLamView.args Q R = some (s, q, t, r)
+⊢ follow root fuel (if s = t then some (encodeTerm q, w, encodeTerm r) else none) =
+    match o with
+    | some a => decide (s = t) && rawBit S K a q r
+    | none => false
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFrameLamProof.lean:23:18: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFrameLamProof.lean:26:10: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [h̵,̵followGuard, ̲typeEq, ̲ih, ̲guardAny, ̲Option.any]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFrameLamProof.lean:26:12: warning: This simp argument is unused:
+  followGuard
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵,̵f̵o̵l̵l̵o̵w̵G̵u̵a̵r̵d̵,̵t̵y̵p̵e̵E̵q̵,̵i̵h̵,̵g̵u̵a̵r̵d̵A̵n̵y̵,̵O̵p̵t̵i̵o̵n̵.̵a̵n̵y̵]̵[̲h̲,̲ ̲t̲y̲p̲e̲E̲q̲,̲ ̲i̲h̲,̲ ̲g̲u̲a̲r̲d̲A̲n̲y̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲a̲n̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFrameLamProof.lean:26:34: warning: This simp argument is unused:
+  guardAny
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵,̵f̵o̵l̵l̵o̵w̵G̵u̵a̵r̵d̵,̵t̵y̵p̵e̵E̵q̵,̵i̵h̵,̵g̵u̵a̵r̵d̵A̵n̵y̵,̵O̵p̵t̵i̵o̵n̵.̵a̵n̵y̵]̵[̲h̲,̲ ̲f̲o̲l̲l̲o̲w̲G̲u̲a̲r̲d̲,̲ ̲t̲y̲p̲e̲E̲q̲,̲ ̲i̲h̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲a̲n̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

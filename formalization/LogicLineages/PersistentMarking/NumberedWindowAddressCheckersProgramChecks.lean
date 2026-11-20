@@ -1,0 +1,11 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowAddressCheckersProgramProof
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowAddressCheckersProgramChecks
+open NumberedWindowAddressCheckersProgramTargets
+theorem exact_BothDomains : BothDomains := NumberedWindowAddressCheckersProgramProof.domains
+theorem exact_BothCertificates : BothCertificates := NumberedWindowAddressCheckersProgramProof.certificates
+#print axioms exact_BothDomains
+#print axioms exact_BothCertificates
+end LogicLineages.PersistentMarking.NumberedWindowAddressCheckersProgramChecks

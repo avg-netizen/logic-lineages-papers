@@ -1,0 +1,7 @@
+# Native ordinal integration
+
+The generic ordinal rank, realization and full-prefix carrier proofs passed in the isolated Mathlib build. The actual Lean assembly is drafted against the original closed native subtype, its strict relation, literal application and the three native beta edges of the printed iterator. The native realization, iteration, and unconditional rank comparisons still need their exact combined gates. The general typed fundamental lemma is separate from the drafted abstraction introduction rule. [Rank evidence](NATIVE-RANK-GENERIC-LOCAL-EVIDENCE.json) · [Realization evidence](NATIVE-REALIZATION-GENERIC-LOCAL-EVIDENCE.json) · [Orbit evidence](NATIVE-ITERATION-GENERIC-LOCAL-EVIDENCE.json)
+
+The 23-module legacy rank-order target crossed the fixed 1536 MiB resident-memory cap. Lean v4.32 loads all transitive import data for a legacy root. Its module-system root refuses direct legacy imports. The full original realization source closure contains 536 local modules, 532 already checked with the core profile. The full iteration source closure contains 660 local modules, 649 already checked with the core profile. The respective sums of their recorded earlier per-module compile times are 423.3 and 500.18 seconds. Those sums are existing observations, with no new broad build attempted. [Rank-only stop and frozen edition](native-rank-local-native/1795138515409234140-10/)
+
+The current blocked integration has source-matched proofs at the separate ordinal and native syntax layers. No mixed exact result has been reported as checked.

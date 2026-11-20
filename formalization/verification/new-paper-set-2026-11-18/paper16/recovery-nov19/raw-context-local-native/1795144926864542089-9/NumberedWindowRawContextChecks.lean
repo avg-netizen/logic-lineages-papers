@@ -1,0 +1,14 @@
+import LogicLineages.PersistentMarking.NumberedWindowRawContextProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowRawContextChecks
+open NumberedWindowRawContextTargets
+
+theorem exact_Focus : ExactFocus := NumberedWindowRawContextFocusProof.exactFocus
+theorem exact_WitnessFuel : ExactWitnessFuel := NumberedWindowRawContextProof.fuelExact
+theorem exact_WindowStep : ExactWindowStep := NumberedWindowRawContextProof.windowStepExact
+
+#print axioms exact_Focus
+#print axioms exact_WitnessFuel
+#print axioms exact_WindowStep
+
+end LogicLineages.PersistentMarking.NumberedWindowRawContextChecks

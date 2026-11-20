@@ -1,0 +1,11 @@
+import LogicLineages.PersistentMarking.NumberedWindowApplicationGraphProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowApplicationGraphChecks
+open NumberedWindowApplicationGraphTargets
+
+theorem exact_ClassApplicationGraph : ExactClassApplicationGraph :=
+  NumberedWindowApplicationGraphProof.graphExact
+
+#print axioms exact_ClassApplicationGraph
+
+end LogicLineages.PersistentMarking.NumberedWindowApplicationGraphChecks

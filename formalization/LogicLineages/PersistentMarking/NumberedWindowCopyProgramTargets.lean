@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowCopyAlgorithm
+public import LogicLineages.PersistentMarking.NumberedWindowMarkRootProgramTargets
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowCopyProgramTargets
+open NumberedWindowCopyAlgorithm NumberedWindowMarkRootProgramTargets
+def CopyProgram : Prop := ∀ entries heads, BinaryProgram (copy entries heads)
+end LogicLineages.PersistentMarking.NumberedWindowCopyProgramTargets

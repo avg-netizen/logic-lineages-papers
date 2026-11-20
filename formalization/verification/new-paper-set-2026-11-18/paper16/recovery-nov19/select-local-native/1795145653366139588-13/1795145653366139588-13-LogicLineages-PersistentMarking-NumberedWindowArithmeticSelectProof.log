@@ -1,0 +1,82 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSelectProof.lean:24:56: error: unsolved goals
+case false
+i : Nat
+bs es : NArgs
+⊢ ((NumberedWindowFieldAlgorithm.unpack (encodeArgs bs)).bind fun xs => xs[i]?) = Option.map encodeTerm (bs.get i)
+
+case true
+i : Nat
+bs es : NArgs
+⊢ ((NumberedWindowFieldAlgorithm.unpack (encodeArgs es)).bind fun xs => xs[i]?) = Option.map encodeTerm (es.get i)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSelectProof.lean:25:28: warning: This simp argument is unused:
+  exact_EncodedArguments
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵h̵o̵s̵e̵n̵,̵e̵x̵a̵c̵t̵_̵E̵n̵c̵o̵d̵e̵d̵A̵r̵g̵u̵m̵e̵n̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵m̵a̵p̵,̵s̵l̵o̵t̵]̵[̲c̲h̲o̲s̲e̲n̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲E̲l̲e̲m̲?̲_̲m̲a̲p̲,̲ ̲s̲l̲o̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSelectProof.lean:25:51: warning: This simp argument is unused:
+  List.getElem?_map
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵h̵o̵s̵e̵n̵,̵e̵x̵a̵c̵t̵_̵E̵n̵c̵o̵d̵e̵d̵A̵r̵g̵u̵m̵e̵n̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵m̵a̵p̵,̵s̵l̵o̵t̵]̵[̲c̲h̲o̲s̲e̲n̲,̲ ̲e̲x̲a̲c̲t̲_̲E̲n̲c̲o̲d̲e̲d̲A̲r̲g̲u̲m̲e̲n̲t̲s̲,̲ ̲s̲l̲o̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSelectProof.lean:25:69: warning: This simp argument is unused:
+  slot
+
+Hint: Omit it from the simp argument list.
+  simp [chosen, ̲exact_EncodedArguments, ̲List.getElem?_map,̵s̵l̵o̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSelectProof.lean:55:69: warning: This simp argument is unused:
+  reduceCtorEq
+
+Hint: Omit it from the simp argument list.
+  simp only [encodeTerm, ̲readNode, ̲Option.any_some, ̲body, ̲List.getD_eq_getElem?_getD,
+      List.getElem?_cons_zero, ̲List.getElem?_cons_succ, ̲Option.getD_some,r̵e̵d̵u̵c̵e̵C̵t̵o̵r̵E̵q̵,̵
+  ̵  ̵ ̵ ̵Bool.false_and,
+  ̲ ̲ ̲ ̲ ̲Bool.true_and, ̲rootBit]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSelectProof.lean:56:4: warning: This simp argument is unused:
+  Bool.false_and
+
+Hint: Omit it from the simp argument list.
+  simp only [̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵r̵e̵a̵d̵N̵o̵d̵e̵,̵O̵p̵t̵i̵o̵n̵.̵a̵n̵y̵_̵s̵o̵m̵e̵,̵b̵o̵d̵y̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵
+  ̵ ̵ ̵ ̵ ̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵c̵o̵n̵s̵_̵z̵e̵r̵o̵,̵L̵i̵s̵t̵.̵g̵e̵t̵E̵l̵e̵m̵?̵_̵c̵o̵n̵s̵_̵s̵u̵c̵c̵,̵O̵p̵t̵i̵o̵n̵.̵g̵e̵t̵D̵_̵s̵o̵m̵e̵,̵r̵e̵d̵u̵c̵e̵C̵t̵o̵r̵E̵q̵,̵
+  ̵ ̵ ̵ ̵ ̵B̵o̵o̵l̵.̵f̵a̵l̵s̵e̵_̵a̵n̵d̵,̵B̵o̵o̵l̵.̵t̵r̵u̵e̵_̵a̵n̵d̵,̵r̵o̵o̵t̵B̵i̵t̵]̵[̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲r̲e̲a̲d̲N̲o̲d̲e̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲a̲n̲y̲_̲s̲o̲m̲e̲,̲ ̲b̲o̲d̲y̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲
+  ̲ ̲ ̲ ̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲E̲l̲e̲m̲?̲_̲c̲o̲n̲s̲_̲z̲e̲r̲o̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲E̲l̲e̲m̲?̲_̲c̲o̲n̲s̲_̲s̲u̲c̲c̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲g̲e̲t̲D̲_̲s̲o̲m̲e̲,̲ ̲r̲e̲d̲u̲c̲e̲C̲t̲o̲r̲E̲q̲,̲ ̲B̲o̲o̲l̲.̲t̲r̲u̲e̲_̲a̲n̲d̲,̲
+  ̲ ̲ ̲ ̲ ̲r̲o̲o̲t̲B̲i̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSelectProof.lean:56:19: warning: This simp argument is unused:
+  Bool.true_and
+
+Hint: Omit it from the simp argument list.
+  simp only [encodeTerm, ̲readNode, ̲Option.any_some, ̲body, ̲List.getD_eq_getElem?_getD,
+      List.getElem?_cons_zero, ̲List.getElem?_cons_succ, ̲Option.getD_some, ̲reduceCtorEq,
+      Bool.false_and,B̵o̵o̵l̵.̵t̵ ̲ru̵e̵_̵a̵n̵d̵,̵r̵ootBit]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSelectProof.lean:63:32: warning: This simp argument is unused:
+  Nat.succ_ne_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵r̵o̵m̵O̵w̵n̵e̵r̵,̵c̵h̵o̵o̵s̵e̵,̵N̵a̵t̵.̵s̵u̵c̵c̵_̵n̵e̵_̵z̵e̵r̵o̵,̵n̵e̵_̵e̵q̵,̵O̵p̵t̵i̵o̵n̵.̵a̵n̵y̵,̵r̵o̵o̵t̵B̵i̵t̵]̵[̲f̲r̲o̲m̲O̲w̲n̲e̲r̲,̲ ̲c̲h̲o̲o̲s̲e̲,̲ ̲n̲e̲_̲e̲q̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲a̲n̲y̲,̲ ̲r̲o̲o̲t̲B̲i̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSelectProof.lean:63:49: warning: This simp argument is unused:
+  ne_eq
+
+Hint: Omit it from the simp argument list.
+  simp only [fromOwner, ̲choose, ̲Nat.succ_ne_zero,n̵e̵_̵e̵q̵,̵ ̲Option.any, ̲rootBit]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSelectProof.lean:63:66: warning: This simp argument is unused:
+  rootBit
+
+Hint: Omit it from the simp argument list.
+  simp only [fromOwner, ̲choose, ̲Nat.succ_ne_zero, ̲ne_eq, ̲Option.any,̵r̵o̵o̵t̵B̵i̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

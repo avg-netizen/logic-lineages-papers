@@ -1,5 +1,5 @@
 module
-public import LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraphLayoutProgramsProof
+public import LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraphTailProgramsProof
 public import LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraphUnitLocalProgramsProof
 @[expose] public section
 namespace LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph
@@ -9,39 +9,20 @@ open UnitCode (Block)
 private abbrev Tail := Nat×Nat×Nat×Nat×List Nat×Nat
 private abbrev D := Nat×Nat×Nat×Nat×List Nat×List Nat×Nat
 
-private theorem tailProgram : Primrec (fun q : Tail => tailBody rawLayout q.1 q.2.1 q.2.2.1 q.2.2.2.1 q.2.2.2.2.1 q.2.2.2.2.2) := by
-  have w : Primrec (fun q : Tail => q.1) := Primrec.fst
-  have d : Primrec (fun q : Tail => q.2.1) := Primrec.fst.comp Primrec.snd
-  have n : Primrec (fun q : Tail => q.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
-  have b : Primrec (fun q : Tail => q.2.2.2.1) := Primrec.fst.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
-  have small : Primrec (fun q : Tail => q.2.2.2.2.1) :=
-    Primrec.fst.comp (Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd)))
-  have ray : Primrec (fun q : Tail => q.2.2.2.2.2) :=
-    Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd)))
-  have t := widthProgram.comp w d
-  have i0 := leProgram.comp (litProgram.comp (Primrec.nat_max.comp n b)) (varProgram.comp t)
-  have u0 := uProgram.comp w (Primrec.const 0)
-  have ud := uProgram.comp w d
-  have i1 := eqProgram.comp (varProgram.comp u0) (varProgram.comp t)
-  have i2 := eqProgram.comp (varProgram.comp (Primrec.nat_add.comp w (Primrec.const 2))) (Primrec.const (MatrixCode.lit 0))
-  have i3 := eqProgram.comp (varProgram.comp ud)
-    (addProgram.comp (litProgram.comp b) (varProgram.comp (Primrec.succ.comp w)))
-  have i5 := eqProgram.comp (varProgram.comp (Primrec.succ.comp t))
-    (addProgram.comp (varProgram.comp w) (litProgram.comp (Primrec.succ.comp d)))
-  have rows := Primrec.list_cons.comp i0 (Primrec.list_cons.comp i1 (Primrec.list_cons.comp i2
-    (Primrec.list_cons.comp i3 (Primrec.list_cons.comp ray (MatrixCode.singleProgram i5)))))
-  let P := Tail×Nat
-  have idx : Primrec (fun q : P => q.2) := Primrec.snd
-  have uw := uProgram.comp (w.comp Primrec.fst) idx
-  have uw' := uProgram.comp (w.comp Primrec.fst) (Primrec.succ.comp idx)
-  have ax := argProgram.comp ((w.comp Primrec.fst).pair ((d.comp Primrec.fst).pair idx))
-  have gate := gateProgram.comp ((small.comp Primrec.fst).pair (uw.pair (uw'.pair ax)))
-  have gates := Primrec.list_map (Primrec.list_range.comp d) gate.to₂
-  exact Primrec.list_foldr (Primrec.list_append.comp rows gates) (Primrec.const 0)
-    (andProgram.comp Primrec.snd).to₂
+section
+attribute [local irreducible] MatrixCode.eq MatrixCode.le MatrixCode.both MatrixCode.either
+  MatrixCode.var MatrixCode.lit MatrixCode.add directWidth uSlot argSlot fGate
 
-private theorem directBodyProgram : Primrec (fun q : D => directBody rawLayout q.1 q.2.1 q.2.2.1
-    q.2.2.2.1 q.2.2.2.2.1 q.2.2.2.2.2.1 q.2.2.2.2.2.2) := by
+attribute [local irreducible] tailBody
+
+private def prefixArgs (q : D) : (Nat×Nat)×Nat×List Nat :=
+  let w := directWidth q.1 q.2.1
+  ((w,w+1),q.2.2.1,q.2.2.2.2.2.1)
+
+private def tailArgs (q : D) : TailPrograms.Input :=
+  (q.1,q.2.1,q.2.2.1,q.2.2.2.1,q.2.2.2.2.1,q.2.2.2.2.2.2)
+
+private theorem prefixArgsProgram : Primrec prefixArgs := by
   have a : Primrec (fun q : D => q.1) := Primrec.fst
   have d : Primrec (fun q : D => q.2.1) := Primrec.fst.comp Primrec.snd
   have n : Primrec (fun q : D => q.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
@@ -51,13 +32,34 @@ private theorem directBodyProgram : Primrec (fun q : D => directBody rawLayout q
   have points : Primrec (fun q : D => q.2.2.2.2.2.1) := Primrec.fst.comp (Primrec.snd.comp tail)
   have ray : Primrec (fun q : D => q.2.2.2.2.2.2) := Primrec.snd.comp (Primrec.snd.comp tail)
   have w := widthProgram.comp a d
-  exact orProgram.comp (prefixProgram.comp ((w.pair (Primrec.succ.comp w)).pair (n.pair points)))
-    (tailProgram.comp (a.pair (d.pair (n.pair (base.pair (small.pair ray))))))
+  exact (w.pair (Primrec.succ.comp w)).pair (n.pair points)
+
+private theorem tailArgsProgram : Primrec tailArgs := by
+  have a : Primrec (fun q : D => q.1) := Primrec.fst
+  have d : Primrec (fun q : D => q.2.1) := Primrec.fst.comp Primrec.snd
+  have n : Primrec (fun q : D => q.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
+  have base : Primrec (fun q : D => q.2.2.2.1) := Primrec.fst.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
+  have tail : Primrec (fun q : D => q.2.2.2.2) := Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
+  have small : Primrec (fun q : D => q.2.2.2.2.1) := Primrec.fst.comp tail
+  have points : Primrec (fun q : D => q.2.2.2.2.2.1) := Primrec.fst.comp (Primrec.snd.comp tail)
+  have ray : Primrec (fun q : D => q.2.2.2.2.2.2) := Primrec.snd.comp (Primrec.snd.comp tail)
+  exact a.pair (d.pair (n.pair (base.pair (small.pair ray))))
+
+private theorem directBodyProgram : Primrec (fun q : D => directBody rawLayout q.1 q.2.1 q.2.2.1
+    q.2.2.2.1 q.2.2.2.2.1 q.2.2.2.2.2.1 q.2.2.2.2.2.2) := by
+  exact (orProgram.comp (prefixProgram.comp prefixArgsProgram)
+    (TailPrograms.tailProgram.comp tailArgsProgram)).of_eq (fun q => by rfl)
+
+attribute [local irreducible] directBody rayPlacement
 
 private abbrev DirectIn := Nat×Block×Nat×Nat×Nat×List Nat×List Nat
 
-theorem directBlockProgram : Computable (fun q : Nat×Block×Nat×Nat×Nat×List Nat×List Nat => directBlock q.1 q.2.1 q.2.2.1 q.2.2.2.1
-    q.2.2.2.2.1 q.2.2.2.2.2.1 q.2.2.2.2.2.2) := by
+private def directRay (q : DirectIn) : Nat :=
+  let w := directWidth q.2.1.1 q.2.2.1
+  let table := (List.range (q.2.1.1+2+q.1)).map (rayPlacement q.2.1.1)
+  MatrixCode.renameFormula (UnitCode.bitCtx (w+2)) table q.2.1.2
+
+private theorem directRayProgram : Computable directRay := by
   let P := DirectIn
   have g : Primrec (fun q : P => q.1) := Primrec.fst
   have r : Primrec (fun q : P => q.2.1) := Primrec.fst.comp Primrec.snd
@@ -72,13 +74,37 @@ theorem directBlockProgram : Computable (fun q : Nat×Block×Nat×Nat×Nat×List
   have ix : Primrec (fun q : Y => q.2) := Primrec.snd
   have w := wr.comp (Primrec.fst : Primrec (fun q : Y => q.1))
   have rk : Primrec (fun q : Y => rayPlacement q.1.2.1.1 q.2) :=
-    Primrec.ite (Primrec.nat_le.comp ix (Primrec.succ.comp w)) ix (Primrec.nat_add.comp w (Primrec.const 2))
+    by
+      unfold rayPlacement
+      exact Primrec.ite (Primrec.nat_le.comp ix (Primrec.succ.comp w)) ix (Primrec.nat_add.comp w (Primrec.const 2))
   have tab := Primrec.list_map (Primrec.list_range.comp len) rk.to₂
   have rr := renameFormulaProgram.comp (ctx.pair (tab.pair (Primrec.snd.comp r))).to_comp
-  have arg := wr.to_comp.pair (d.to_comp.pair (n.to_comp.pair
+  unfold directRay
+  exact rr
+
+private def directArgs (q : DirectIn) : D :=
+  (q.2.1.1,q.2.2.1,q.2.2.2.1,q.2.2.2.2.1,q.2.2.2.2.2.1,q.2.2.2.2.2.2,directRay q)
+
+private theorem directArgsProgram : Computable directArgs := by
+  let P := DirectIn
+  have g : Primrec (fun q : P => q.1) := Primrec.fst
+  have r : Primrec (fun q : P => q.2.1) := Primrec.fst.comp Primrec.snd
+  have d : Primrec (fun q : P => q.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
+  have n : Primrec (fun q : P => q.2.2.2.1) := Primrec.fst.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
+  have p : Primrec (fun q : P => q.2.2.2.2) := Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
+  have wr := Primrec.fst.comp r
+  unfold directArgs
+  exact wr.to_comp.pair (d.to_comp.pair (n.to_comp.pair
     ((Primrec.fst.comp p).to_comp.pair ((Primrec.fst.comp (Primrec.snd.comp p)).to_comp.pair
-      ((Primrec.snd.comp (Primrec.snd.comp p)).to_comp.pair rr)))))
-  exact wi.to_comp.pair (directBodyProgram.to_comp.comp arg)
+      ((Primrec.snd.comp (Primrec.snd.comp p)).to_comp.pair directRayProgram)))))
+
+theorem directBlockProgram : Computable (fun q : Nat×Block×Nat×Nat×Nat×List Nat×List Nat => directBlock q.1 q.2.1 q.2.2.1 q.2.2.2.1
+    q.2.2.2.2.1 q.2.2.2.2.2.1 q.2.2.2.2.2.2) := by
+  have d : Primrec (fun q : DirectIn => q.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
+  have wr : Primrec (fun q : DirectIn => q.2.1.1) := Primrec.fst.comp (Primrec.fst.comp Primrec.snd)
+  exact ((widthProgram.comp wr d).to_comp.pair (directBodyProgram.to_comp.comp directArgsProgram)).of_eq
+    (fun q => by rfl)
+end
 
 private abbrev I := Nat×Nat×Nat×Block×Block×Block
 

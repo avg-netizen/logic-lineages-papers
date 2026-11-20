@@ -1,0 +1,20 @@
+import LogicLineages.PersistentMarking.NumberedWindowExternalApplicationPullbackProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowExternalApplicationChecks
+open NumberedWindowExternalApplicationTargets
+
+theorem exact_QuotientApplicationLiteral : QuotientApplicationLiteral :=
+  NumberedWindowExternalApplicationPathProof.literal
+theorem exact_QuotientAppPreservesPositive : QuotientAppPreservesPositive :=
+  NumberedWindowExternalApplicationPathProof.positive
+theorem exact_ScalarClassAccessibility : ScalarClassAccessibility :=
+  NumberedWindowExternalScalarClassProof.scalarClass
+theorem exact_ExternalIApplicationPullback : ExternalIApplicationPullback :=
+  NumberedWindowExternalApplicationPullbackProof.pullback
+
+#print axioms exact_QuotientApplicationLiteral
+#print axioms exact_QuotientAppPreservesPositive
+#print axioms exact_ScalarClassAccessibility
+#print axioms exact_ExternalIApplicationPullback
+
+end LogicLineages.PersistentMarking.NumberedWindowExternalApplicationChecks

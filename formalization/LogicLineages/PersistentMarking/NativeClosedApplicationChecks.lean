@@ -1,0 +1,15 @@
+import LogicLineages.PersistentMarking.NativeClosedApplicationProof
+
+namespace LogicLineages.PersistentMarking.NativeClosedApplicationChecks
+open NativeClosedApplicationTargets
+
+theorem exact_LiteralNativeApplication : LiteralNativeApplication :=
+  NativeClosedApplicationProof.literal
+
+theorem exact_NativeApplicationFunctionStrict : NativeApplicationFunctionStrict :=
+  NativeClosedApplicationProof.functionStrict
+
+#print axioms exact_LiteralNativeApplication
+#print axioms exact_NativeApplicationFunctionStrict
+
+end LogicLineages.PersistentMarking.NativeClosedApplicationChecks

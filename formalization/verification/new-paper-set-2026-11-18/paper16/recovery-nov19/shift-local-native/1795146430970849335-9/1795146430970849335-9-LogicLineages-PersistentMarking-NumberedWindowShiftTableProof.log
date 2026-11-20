@@ -1,0 +1,24 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftTableProof.lean:30:58: error: Type mismatch
+  hm
+has type
+  code < k
+but is expected to have type
+  code < List.length (tab (List.length (tab k)))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftTableProof.lean:39:33: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (tab n)[code]?
+in the target expression
+  (List.getD (tab n) code [])[offset]?.getD (0, 0) = row code offset (tab code)
+
+tab : Nat → Table
+row : Nat → Nat → Table → Row
+bound : Nat
+zero : tab 0 = []
+succ : ∀ (n : Nat), tab (n + 1) = tab n ++ [List.map (fun offset => row n offset (tab n)) (List.range (bound + 1))]
+n code offset : Nat
+codeLt : code < n
+offsetLe : offset ≤ bound
+lengths : ∀ (k : Nat), List.length (tab k) = k
+entry :
+  ∀ (k : Nat),
+    code < k → (tab k)[code]? = some (List.map (fun offset => row code offset (tab code)) (List.range (bound + 1)))
+⊢ (List.getD (tab n) code [])[offset]?.getD (0, 0) = row code offset (tab code)

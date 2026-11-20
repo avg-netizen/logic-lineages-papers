@@ -1,0 +1,11 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProgramProof.lean:96:26: error: Type mismatch: After simplification, term
+  hp (Encodable.encode (w, n))
+ has type
+  GorbowPRProgram.evaluate p (Nat.pair (Encodable.encode w) n ::ᵥ List.Vector.nil) =
+    Encodable.encode
+      (bits
+        (Denumerable.ofNat (List ℕ) (Nat.unpair (Encodable.encode w)).1,
+          Denumerable.ofNat (List ℕ) (Nat.unpair (Encodable.encode w)).2)
+        n)
+but is expected to have type
+  GorbowPRProgram.evaluate p (Nat.pair (Encodable.encode w) n ::ᵥ List.Vector.nil) = Encodable.encode (bits w n)

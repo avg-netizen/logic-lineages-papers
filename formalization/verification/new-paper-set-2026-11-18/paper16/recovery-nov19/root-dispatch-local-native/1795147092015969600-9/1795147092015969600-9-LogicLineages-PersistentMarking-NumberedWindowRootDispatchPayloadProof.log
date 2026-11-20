@@ -1,0 +1,35 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRootDispatchPayloadProof.lean:26:20: warning: This simp argument is unused:
+  hd
+
+Hint: Omit it from the simp argument list.
+  simp [h̵d̵,̵Option.any]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRootDispatchPayloadProof.lean:47:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  decodeRoot (encodeRoot witness)
+in the target expression
+  (match decodeTerm q, decodeRoot cert, decodeTerm r with
+    | some Q, some w, some R => (fun Q w R => NumberedWindowRawWitnessRootBits.rootBit S K w Q R) Q w R
+    | x, x_1, x_2 => false) =
+    Option.any
+      (fun w =>
+        match decodeTerm q, decodeRoot (encodeRoot w), decodeTerm r with
+        | some Q, some w, some R => (fun q v r => NumberedWindowRawWitnessRootBits.rootBit S K v q r) Q w R
+        | x, x_1, x_2 => false)
+      (some witness)
+
+case some
+S : Spine.Signature
+K : List Ty
+q cert r : Nat
+witness : NumberedWindowRawWitnessRootBits.RawRootWitness
+hw : decodeRoot cert = some witness
+⊢ (match decodeTerm q, decodeRoot cert, decodeTerm r with
+    | some Q, some w, some R => (fun Q w R => NumberedWindowRawWitnessRootBits.rootBit S K w Q R) Q w R
+    | x, x_1, x_2 => false) =
+    Option.any
+      (fun w =>
+        match decodeTerm q, decodeRoot (encodeRoot w), decodeTerm r with
+        | some Q, some w, some R => (fun q v r => NumberedWindowRawWitnessRootBits.rootBit S K v q r) Q w R
+        | x, x_1, x_2 => false)
+      (some witness)

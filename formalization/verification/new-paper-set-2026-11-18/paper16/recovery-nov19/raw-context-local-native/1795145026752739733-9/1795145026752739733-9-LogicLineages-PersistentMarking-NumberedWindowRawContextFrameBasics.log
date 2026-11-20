@@ -1,0 +1,34 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFrameBasics.lean:37:2: error: Tactic `apply` failed: could not unify the conclusion of `exactFocus`
+  Option.any (fun x => ExactFocus.match_1 (fun x => Bool) x fun q r => ?testCode q r)
+      (focus ?i (encodeArgs ?qs) (encodeArgs ?rs)) =
+    argsAtBit ?test ?i ?qs ?rs
+with the goal
+  Option.any (fun x => followFocus.match_1 (fun x => Bool) x fun q r => run root fuel q w r)
+      (focus i (encodeArgs qs) (encodeArgs rs)) =
+    argsAtBit (fun Q R => run root fuel (encodeTerm Q) w (encodeTerm R)) i qs rs
+
+Note: The full type of `exactFocus` is
+  ExactFocus
+
+root : RawRoot
+fuel w i : Nat
+qs rs : NArgs
+result :
+  ∀ (p : Option Pair),
+    follow root fuel
+        (Option.map
+          (fun x =>
+            match x with
+            | (q, r) => (q, w, r))
+          p) =
+      Option.any
+        (fun x =>
+          match x with
+          | (q, r) => run root fuel q w r)
+        p
+⊢ Option.any
+      (fun x =>
+        match x with
+        | (q, r) => run root fuel q w r)
+      (focus i (encodeArgs qs) (encodeArgs rs)) =
+    argsAtBit (fun Q R => run root fuel (encodeTerm Q) w (encodeTerm R)) i qs rs

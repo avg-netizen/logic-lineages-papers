@@ -1,0 +1,62 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalDischargeProof.lean:23:4: error: Type mismatch: After simplification, term
+  h'
+ has type
+  List.map (fun x => some x) ss = List.map (fun x => some x) ts
+but is expected to have type
+  ss = ts
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalDischargeProof.lean:38:69: warning: This simp argument is unused:
+  Bool.and_comm
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵o̵l̵d̵s̵,̵j̵o̵i̵n̵,̵L̵i̵s̵t̵.̵a̵l̵l̵_̵a̵p̵p̵e̵n̵d̵,̵B̵o̵o̵l̵.̵a̵n̵d̵_̵a̵s̵s̵o̵c̵,̵B̵o̵o̵l̵.̵a̵n̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵B̵o̵o̵l̵.̵a̵n̵d̵_̵c̵o̵m̵m̵]̵[̲h̲o̲l̲d̲s̲,̲ ̲j̲o̲i̲n̲,̲ ̲L̲i̲s̲t̲.̲a̲l̲l̲_̲a̲p̲p̲e̲n̲d̲,̲ ̲B̲o̲o̲l̲.̲a̲n̲d̲_̲a̲s̲s̲o̲c̲,̲ ̲B̲o̲o̲l̲.̲a̲n̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalDischargeProof.lean:56:48: error(lean.unknownIdentifier): Unknown identifier `beq_comm`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalDischargeProof.lean:56:4: error: unsolved goals
+case cons.zero
+C : Nat → Option Nat
+t : Nat
+rs : List (Nat × Nat)
+ih : holds C (discharge t rs) = rs.all fun p => pushCode C t p.fst == some p.snd
+u : Nat
+⊢ (u == t &&
+      rs.all fun p =>
+        (match p.fst with
+          | 0 => some t
+          | i.succ => C i) ==
+          some p.snd) =
+    (t == u &&
+      rs.all fun p =>
+        (match p.fst with
+          | 0 => some t
+          | i.succ => C i) ==
+          some p.snd)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalDischargeProof.lean:60:86: error: unsolved goals
+C : BoundContext
+σ : Ty
+r : Requirement
+same : pushCode (codeLookup C) (encodeTy σ) = codeLookup (C.push σ)
+⊢ ((restrict r.fst (discharge (encodeTy σ) r.snd)).fst &&
+      (restrict r.fst (discharge (encodeTy σ) r.snd)).snd.all fun p => codeLookup C p.fst == some p.snd) =
+    (r.fst && r.snd.all fun p => codeLookup (C.push σ) p.fst == some p.snd)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalDischargeProof.lean:64:15: warning: This simp argument is unused:
+  holdsRestrict
+
+Hint: Omit it from the simp argument list.
+  simp [̵b̵i̵n̵d̵e̵r̵,̵h̵o̵l̵d̵s̵R̵e̵s̵t̵r̵i̵c̵t̵,̵d̵i̵s̵c̵h̵a̵r̵g̵e̵S̵p̵e̵c̵,̵s̵a̵m̵e̵,̵h̵o̵l̵d̵s̵]̵[̲b̲i̲n̲d̲e̲r̲,̲ ̲d̲i̲s̲c̲h̲a̲r̲g̲e̲S̲p̲e̲c̲,̲ ̲s̲a̲m̲e̲,̲ ̲h̲o̲l̲d̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalDischargeProof.lean:64:29: warning: This simp argument is unused:
+  dischargeSpec
+
+Hint: Omit it from the simp argument list.
+  simp [̵b̵i̵n̵d̵e̵r̵,̵h̵o̵l̵d̵s̵R̵e̵s̵t̵r̵i̵c̵t̵,̵d̵i̵s̵c̵h̵a̵r̵g̵e̵S̵p̵e̵c̵,̵s̵a̵m̵e̵,̵h̵o̵l̵d̵s̵]̵[̲b̲i̲n̲d̲e̲r̲,̲ ̲h̲o̲l̲d̲s̲R̲e̲s̲t̲r̲i̲c̲t̲,̲ ̲s̲a̲m̲e̲,̲ ̲h̲o̲l̲d̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowLexicalDischargeProof.lean:64:43: warning: This simp argument is unused:
+  same
+
+Hint: Omit it from the simp argument list.
+  simp [binder, ̲holdsRestrict, ̲dischargeSpec,s̵a̵m̵e̵,̵ ̲holds]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

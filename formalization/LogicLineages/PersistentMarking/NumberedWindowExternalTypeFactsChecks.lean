@@ -1,0 +1,13 @@
+import LogicLineages.PersistentMarking.NumberedWindowExternalTypeFactsProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowExternalTypeFactsChecks
+open NumberedWindowExternalTypeFactsTargets
+theorem exact_NeutralComputability : NeutralComputability := NumberedWindowExternalTypeFactsProof.neutral
+theorem exact_BottomComputability : BottomComputability := NumberedWindowExternalTypeFactsProof.bottom
+theorem exact_VariableComputability : VariableComputability := NumberedWindowExternalTypeFactsProof.variableCase
+theorem exact_ComputabilityImpliesScalarI : ComputabilityImpliesScalarI := NumberedWindowExternalTypeFactsProof.scalarI
+#print axioms exact_NeutralComputability
+#print axioms exact_BottomComputability
+#print axioms exact_VariableComputability
+#print axioms exact_ComputabilityImpliesScalarI
+end LogicLineages.PersistentMarking.NumberedWindowExternalTypeFactsChecks

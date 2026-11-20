@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowConcreteCheckersProgramTargets
+import LogicLineages.PersistentMarking.NumberedWindowConcreteRulePrograms
+import LogicLineages.PersistentMarking.NumberedWindowRootDispatchProgramProof
+import LogicLineages.PersistentMarking.NumberedWindowRawContextProgramProof
+import LogicLineages.PersistentMarking.NumberedWindowScalarProgramProof
+import LogicLineages.PersistentMarking.NumberedWindowAddressCheckersProgramChecks
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowConcreteCheckersProgramChecks
+open NumberedWindowConcreteCheckersProgramTargets NumberedWindowConcreteCheckers
+open NumberedWindowAddressCheckersProgramChecks
+
+theorem exact_AllFourProgramWitnesses : AllFourProgramWitnesses := by
+  intro xs s
+  have hr := NumberedWindowRootDispatchProgramProof.checkPrim
+    (NumberedWindowConcreteRulePrograms.primitive xs s.window.2)
+  have hs := NumberedWindowRawContextProgramProof.windowStepPrim hr
+    (NumberedWindowScalarProgramProof.admittedPrim s)
+  exact ⟨(exact_BothDomains s).1,(exact_BothDomains s).2,exact_BothCertificates s (step xs s) hs⟩
+#print axioms exact_AllFourProgramWitnesses
+end LogicLineages.PersistentMarking.NumberedWindowConcreteCheckersProgramChecks

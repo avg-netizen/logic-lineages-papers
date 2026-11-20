@@ -1,0 +1,117 @@
+--- recovered/CurrentPaidHeadGraphUnitLocalProgramsProof.lean
++++ candidate/CurrentPaidHeadGraphUnitLocalProgramsProof.lean
+@@ -129,25 +129,12 @@
+ private theorem activeCtxProgram : Primrec activeCtx :=
+   replicateZero.comp (Primrec.nat_add.comp (Primrec.succ.comp activeWProgram) Primrec.fst)
+ 
+-private def activeLIndex (q : ActiveArgs) (i : Nat) : Nat :=
+-  if i<q.2.2.1.1 then i+2 else if i=q.2.2.1.1 then 0 else i+q.2.2.2.1+2
+-private def activeRIndex (q : ActiveArgs) (i : Nat) : Nat :=
+-  if i=q.2.2.2.1 then 1 else i+q.2.2.1.1+2
+-
+ /-- Separate tiny Nat arithmetic from the larger compiler input code. -/
+ private abbrev IndexArgs := Nat×Nat×Nat
+-private def indexArgs (q : ActiveArgs×Nat) : IndexArgs :=
+-  (q.1.2.2.1.1,q.1.2.2.2.1,q.2)
+ private def leftIndexSmall (p : IndexArgs) : Nat :=
+   if p.2.2<p.1 then p.2.2+2 else if p.2.2=p.1 then 0 else p.2.2+p.2.1+2
+ private def rightIndexSmall (p : IndexArgs) : Nat :=
+   if p.2.2=p.2.1 then 1 else p.2.2+p.1+2
+-
+-private theorem indexArgsProgram : Primrec indexArgs := by
+-  have a : Primrec (fun q : ActiveArgs×Nat => q.1.2.2.1.1) := activeLeftWidth.comp Primrec.fst
+-  have b : Primrec (fun q : ActiveArgs×Nat => q.1.2.2.2.1) := activeRightWidth.comp Primrec.fst
+-  have i : Primrec (fun q : ActiveArgs×Nat => q.2) := Primrec.snd
+-  exact a.pair (b.pair i)
+ 
+ private theorem leftIndexSmallProgram : Primrec leftIndexSmall := by
+   have i : Primrec (fun q : IndexArgs => q.2.2) := Primrec.snd.comp Primrec.snd
+@@ -168,47 +155,51 @@
+     Primrec.nat_add.comp (Primrec.nat_add.comp i a) (Primrec.const 2)
+   exact Primrec.ite (Primrec.eq.comp i b) (Primrec.const 1) m
+ 
+-section
+-attribute [local irreducible] indexArgs leftIndexSmall rightIndexSmall activeLIndex activeRIndex
+-private theorem activeLIndexProgram : Primrec₂ activeLIndex := by
+-  have h : Primrec (fun q : ActiveArgs×Nat => leftIndexSmall (indexArgs q)) :=
+-    leftIndexSmallProgram.comp indexArgsProgram
+-  exact (h.of_eq (g:=fun q => activeLIndex q.1 q.2) (fun q => by
+-    unfold leftIndexSmall indexArgs activeLIndex
+-    rfl)).to₂
+-
+-private theorem activeRIndexProgram : Primrec₂ activeRIndex := by
+-  have h : Primrec (fun q : ActiveArgs×Nat => rightIndexSmall (indexArgs q)) :=
+-    rightIndexSmallProgram.comp indexArgsProgram
+-  exact (h.of_eq (g:=fun q => activeRIndex q.1 q.2) (fun q => by
+-    unfold rightIndexSmall indexArgs activeRIndex
+-    rfl)).to₂
+-end
+-
+-private theorem activeRange {h : ActiveArgs→Nat} (hh : Primrec h) :
+-    Primrec (fun q => List.range (h q+1+q.1)) :=
+-  Primrec.list_range.comp (Primrec.nat_add.comp (Primrec.succ.comp hh) Primrec.fst)
++/-- Build the entire renaming table on two widths and its range length. -/
++private def indexTable (f : IndexArgs → Nat) (p : IndexArgs) : List Nat :=
++  (List.range p.2.2).map (fun i => f (p.1,p.2.1,i))
++
++private theorem indexTableProgram {f : IndexArgs → Nat} (hf : Primrec f) :
++    Primrec (indexTable f) := by
++  unfold indexTable
++  have inputs : Primrec (fun q : IndexArgs × Nat => (q.1.1,q.1.2.1,q.2)) :=
++    (Primrec.fst.comp Primrec.fst).pair
++      ((Primrec.fst.comp (Primrec.snd.comp Primrec.fst)).pair Primrec.snd)
++  exact Primrec.list_map (Primrec.list_range.comp (Primrec.snd.comp Primrec.snd))
++    (hf.comp inputs).to₂
++
++private def tableArgs (width : ActiveArgs → Nat) (q : ActiveArgs) : IndexArgs :=
++  (q.2.2.1.1,q.2.2.2.1,width q+1+q.1)
++
++private theorem tableArgsProgram {width : ActiveArgs → Nat} (hw : Primrec width) :
++    Primrec (tableArgs width) :=
++  activeLeftWidth.pair (activeRightWidth.pair (Primrec.nat_add.comp (Primrec.succ.comp hw) Primrec.fst))
+ 
+ private def activeLeft (q : ActiveArgs) : Nat :=
+   MatrixCode.renameFormula (activeCtx q)
+-    ((List.range (q.2.2.1.1+1+q.1)).map (activeLIndex q)) q.2.2.1.2
++    (indexTable leftIndexSmall (tableArgs (fun x => x.2.2.1.1) q)) q.2.2.1.2
+ private def activeRight (q : ActiveArgs) : Nat :=
+   MatrixCode.renameFormula (activeCtx q)
+-    ((List.range (q.2.2.2.1+1+q.1)).map (activeRIndex q)) q.2.2.2.2
++    (indexTable rightIndexSmall (tableArgs (fun x => x.2.2.2.1) q)) q.2.2.2.2
++
++section
++attribute [local irreducible] indexTable tableArgs leftIndexSmall rightIndexSmall
++  activeCtx
+ 
+ private theorem activeLeftProgram : Computable activeLeft := by
+   have src : Primrec (fun q : ActiveArgs => q.2.2.1.2) :=
+     Primrec.snd.comp (Primrec.fst.comp (Primrec.snd.comp Primrec.snd))
+-  have table : Primrec (fun q : ActiveArgs => (List.range (q.2.2.1.1+1+q.1)).map (activeLIndex q)) :=
+-    Primrec.list_map (activeRange activeLeftWidth) activeLIndexProgram
+-  exact renamePart activeCtxProgram table src
++  unfold activeLeft
++  exact renamePart activeCtxProgram
++    ((indexTableProgram leftIndexSmallProgram).comp (tableArgsProgram activeLeftWidth)) src
+ 
+ private theorem activeRightProgram : Computable activeRight := by
+   have src : Primrec (fun q : ActiveArgs => q.2.2.2.2) :=
+     Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
+-  have table : Primrec (fun q : ActiveArgs => (List.range (q.2.2.2.1+1+q.1)).map (activeRIndex q)) :=
+-    Primrec.list_map (activeRange activeRightWidth) activeRIndexProgram
+-  exact renamePart activeCtxProgram table src
++  unfold activeRight
++  exact renamePart activeCtxProgram
++    ((indexTableProgram rightIndexSmallProgram).comp (tableArgsProgram activeRightWidth)) src
++end
+ 
+ private def activeRow (q : ActiveArgs) : Nat :=
+   rawRow q.2.1 (MatrixCode.raw 0) (MatrixCode.raw 1) (MatrixCode.raw (activeW q))
+@@ -257,7 +248,7 @@
+ 
+ theorem activeBlockProgram : Computable (fun q : Nat×LinearCode×Block×Block => activeBlock q.1 q.2.1 q.2.2.1 q.2.2.2) :=
+   activeOutputProgram.of_eq (fun q => by
+-    unfold activeOutput activeLeft activeRight activeCtx activeLIndex activeRIndex activeRow activeW activeBlock
++    unfold activeOutput activeLeft activeRight activeCtx indexTable tableArgs leftIndexSmall rightIndexSmall activeRow activeW activeBlock
+     rfl)
+ end
+ 

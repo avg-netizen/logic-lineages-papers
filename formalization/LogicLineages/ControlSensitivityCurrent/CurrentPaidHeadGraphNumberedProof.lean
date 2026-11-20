@@ -89,18 +89,22 @@ theorem exactNumbered : Targets.ExactNumbered := by
     unfold directPacket k
     simp only [hparams,haux,bind,Option.bind_some,pure,show ray=raySource K from rfl]
     change (UnitCode.block p f (χ.map SyntaxCode.typeCode) (SyntaxCode.encodeTerm ray)).bind _ = _
-    rw [hcp,Option.bind_some,hβn,hξn,hpop,hpoints]
+    rw [hcp,Option.bind_some,hβn,hξn,hpop]
+    change some (directBlock (groundCtx Kctx).length (Targets.blockCode gK) δ nξ base
+      (smallValues f) (pointValuesCode f (rawNoteEncode ξn.1) base),nξ) = _
+    rw [hpoints]
     have hg := exactTemplateCodes.1 (groundCtx Kctx) (groundOnlyContext Kctx) δ nξ base
       (smallValues f) (exactPoints f ξ base) gK
-    rw [hg]
-    rfl
+    exact congrArg (fun z => some (z,nξ)) hg
   have hI : insertCode p f data=some (presentedCode I) := by
     have hs := (SyntaxCode.StatementChecks.typedCheckExact Γ σ (SyntaxCode.encodeTerm C)).mpr ⟨C,rfl⟩
     unfold insertCode data
-    simp only [hs,hcb,hcc,hG,bind,Option.bind_some,pure,SyntaxCode.Proof.typeLevelExact,countGround]
+    simp only [hs,hcb,hcc,hG,bind,Option.bind_some,pure,countGround]
     have hi := exactTemplateCodes.2 (groundCtx Γ) (groundOnlyContext Γ) nξ σ.level gB gC G
-    rw [hi]
-    rfl
+    change some (insertedBlock (groundCtx Γ).length nξ (SyntaxCode.typeLevel (SyntaxCode.typeCode σ))
+      (Targets.blockCode gB) (Targets.blockCode gC) (presentedCode G)) = _
+    rw [SyntaxCode.Proof.typeLevelExact σ]
+    exact congrArg some hi
   have hG' : directCode p f k=some (presentedCode G) := by rw [directCode,hG]; rfl
   refine ⟨G,I,hG',hI,?_,?_,?_⟩
   · intro t y

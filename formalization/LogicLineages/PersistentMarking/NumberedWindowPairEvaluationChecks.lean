@@ -1,0 +1,16 @@
+import LogicLineages.PersistentMarking.NumberedWindowPairEvaluationTargets
+import LogicLineages.PersistentMarking.NumberedWindowActualPairAlgorithm
+import LogicLineages.PersistentMarking.NumberedWindowDirectPairPrograms
+
+namespace LogicLineages.PersistentMarking.NumberedWindowPairEvaluationChecks
+open NumberedWindowPairEvaluationTargets
+
+theorem exact_ActualPairProgram : ActualPairProgram :=
+  NumberedWindowDirectPairPrograms.encoding _ NumberedWindowActualPairAlgorithm.pair
+
+theorem exact_ActualPairDecoderProgram : ActualPairDecoderProgram :=
+  NumberedWindowDirectPairPrograms.decoding _ NumberedWindowActualPairAlgorithm.decode
+
+#print axioms exact_ActualPairProgram
+#print axioms exact_ActualPairDecoderProgram
+end LogicLineages.PersistentMarking.NumberedWindowPairEvaluationChecks

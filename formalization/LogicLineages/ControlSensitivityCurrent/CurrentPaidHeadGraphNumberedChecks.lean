@@ -1,0 +1,13 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraphNumberedProof
+
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph.NumberedChecks
+
+theorem actual_numbered_paid_head_graph : Targets.ExactNumbered := exactNumbered
+theorem actual_ground_boolean_compiler_fibers : Targets.ExactFiberCompiler := exactFiberCompiler
+
+#print axioms actual_numbered_paid_head_graph
+#print axioms actual_ground_boolean_compiler_fibers
+
+end LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph.NumberedChecks

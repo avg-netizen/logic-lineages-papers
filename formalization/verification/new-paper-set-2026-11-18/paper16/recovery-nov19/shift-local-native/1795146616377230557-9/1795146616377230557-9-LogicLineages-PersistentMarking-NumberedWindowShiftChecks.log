@@ -1,0 +1,31 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftChecks.lean:17:4: error: Tactic `generalize` failed: result is not type correct
+  ∀ (x : Option NumberedWindowSyntax.NTerm),
+    (if x.isSome = true then some (computed a c n n 0).fst else none,
+          if (decodeArgs n).isSome = true then some (computed a c n n 0).snd else none).fst =
+      (Option.map (fun q => encodeTerm (NumberedWindowSyntax.shift a c q)) x,
+          Option.map (fun qs => encodeArgs (NumberedWindowSyntax.shiftArgs a c qs)) (decodeArgs n)).fst
+
+case fst
+a c n : Nat
+⊢ (if (decodeTerm n).isSome = true then some (computed a c n n 0).fst else none,
+        if (decodeArgs n).isSome = true then some (computed a c n n 0).snd else none).fst =
+    (Option.map (fun q => encodeTerm (NumberedWindowSyntax.shift a c q)) (decodeTerm n),
+        Option.map (fun qs => encodeArgs (NumberedWindowSyntax.shiftArgs a c qs)) (decodeArgs n)).fst
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftChecks.lean:23:4: error: Tactic `generalize` failed: result is not type correct
+  ∀ (x : Option NumberedWindowSyntax.NArgs),
+    (if (decodeTerm n).isSome = true then some (computed a c n n 0).fst else none,
+          if x.isSome = true then some (computed a c n n 0).snd else none).snd =
+      (Option.map (fun q => encodeTerm (NumberedWindowSyntax.shift a c q)) (decodeTerm n),
+          Option.map (fun qs => encodeArgs (NumberedWindowSyntax.shiftArgs a c qs)) x).snd
+
+case snd
+a c n : Nat
+⊢ (if (decodeTerm n).isSome = true then some (computed a c n n 0).fst else none,
+        if (decodeArgs n).isSome = true then some (computed a c n n 0).snd else none).snd =
+    (Option.map (fun q => encodeTerm (NumberedWindowSyntax.shift a c q)) (decodeTerm n),
+        Option.map (fun qs => encodeArgs (NumberedWindowSyntax.shiftArgs a c qs)) (decodeArgs n)).snd
+'LogicLineages.PersistentMarking.NumberedWindowShiftChecks.exact_ShiftMatrix' depends on axioms: [propext, Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowShiftChecks.exact_ShiftOutput' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

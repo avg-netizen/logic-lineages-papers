@@ -15,7 +15,11 @@ private theorem pinSemantics (p : Policy) (f : Nat→Nat) (Γ : List Ty) {Δ : L
     (pinGround Γ r ρ).eval p f ν=true ↔ ∀ x : Variable Γ .ground, ν (r x)=ρ x := by
   induction Γ with
   | nil =>
-    exact ⟨fun _ x => nomatch x,fun _ => rfl⟩
+    constructor
+    · intro _ x
+      exact nomatch x
+    · intro _
+      rfl
   | cons σ Γ ih =>
     cases σ with
     | ground =>

@@ -1,0 +1,11 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowConstructorOrderProof.lean:108:10: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case intro
+S : Signature
+K : List Ty
+P : Measure → Prop
+step : ∀ (m : Measure), AdmittedMeasure S K m → (∀ (n : Measure), AdmittedMeasure S K n → Earlier S K n m → P n) → P m
+m✝ m : Measure
+h✝ : ∀ (y : Measure), AdmittedEarlier S K y m → Acc (AdmittedEarlier S K) y
+ih : ∀ (y : Measure), AdmittedEarlier S K y m → P y
+⊢ P m

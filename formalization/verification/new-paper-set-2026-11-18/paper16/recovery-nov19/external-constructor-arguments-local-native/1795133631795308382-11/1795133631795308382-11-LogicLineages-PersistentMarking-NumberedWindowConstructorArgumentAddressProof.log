@@ -1,0 +1,65 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowConstructorArgumentAddressProof.lean:33:32: error(lean.invalidField): Invalid field notation: Type of
+  cs
+is not known; cannot resolve field `map`
+
+Hint: Consider replacing the field projection with a call to one of the following:
+  • `Array.map`
+  • `BaseIO.map`
+  • `EIO.map`
+  • `EStateM.map`
+  • `Except.map`
+  • `ExceptT.map`
+  • `Functor.map`
+  • `List.map`
+  • `Option.map`
+  • `Prod.map`
+  • `StateT.map`
+  • `String.map`
+  • `Sum.map`
+  • `Task.map`
+  • `Thunk.map`
+  • `Vector.map`
+  • `Array.mapFinIdxM.map`
+  • `List.IsInfix.map`
+  • `List.IsPrefix.map`
+  • `List.IsSuffix.map`
+  • `List.Pairwise.map`
+  • `List.Perm.map`
+  • `List.Sublist.map`
+  • `Std.Iter.map`
+  • `Std.IterM.map`
+  • `Vector.mapFinIdxM.map`
+  • `Lean.Omega.Coeffs.map`
+  • `Lean.Omega.Constraint.map`
+  • `Std.IterM.InternalCombinators.map`
+  • `Std.Iterators.PostconditionT.map`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowConstructorArgumentAddressProof.lean:35:40: error: Tactic `cases` failed: major premise type is not an inductive type
+  (?m.25 [] h [] c).1 [] c
+
+Explanation: the `cases` tactic is for constructor-based reasoning as well as for applying custom cases principles with a 'using' clause or a registered '@[cases_eliminator]' theorem. The above type neither is an inductive type nor has a registered theorem.
+
+S : Spine.Signature
+K Γ : List Ty
+hk : DecisionSourceUniverse.Closed K
+h : ∀ (q : NTerm), q ∈ [] → ComputableArgument S K Γ hk q
+c : Nat
+hc : c ∈ []
+⊢ Least (scalarStep S K) c
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowConstructorArgumentAddressProof.lean:39:18: error: unsolved goals
+S : Spine.Signature
+K Γ : List Ty
+hk : DecisionSourceUniverse.Closed K
+q : NTerm
+qs : List NTerm
+ih :
+  ∀ (h : ∀ (q : NTerm), q ∈ qs → ComputableArgument S K Γ hk q),
+    ∃ cs, List.map (slot S K Γ) qs = sorry ∧ ∀ (c : Nat), c ∈ cs → Least (scalarStep S K) c
+h : ∀ (q_1 : NTerm), q_1 ∈ q :: qs → ComputableArgument S K Γ hk q_1
+c : Nat
+hc : slot S K Γ q = some c
+ac : Least (scalarStep S K) c
+cs : List sorry
+hs : List.map (slot S K Γ) qs = sorry
+as : ∀ (c : Nat), c ∈ cs → Least (scalarStep S K) c
+⊢ some c :: sorry = sorry
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowConstructorArgumentAddressProof.lean:45:8: warning: declaration uses `sorry`

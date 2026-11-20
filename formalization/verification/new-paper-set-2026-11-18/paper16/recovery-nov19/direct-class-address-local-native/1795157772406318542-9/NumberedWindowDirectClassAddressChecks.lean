@@ -1,0 +1,15 @@
+import LogicLineages.PersistentMarking.NumberedWindowDirectClassAddressProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowDirectClassAddressChecks
+open NumberedWindowDirectClassAddressTargets
+
+theorem exact_DirectAddressBit : ExactDirectAddressBit :=
+  NumberedWindowDirectClassAddressProof.direct
+
+theorem exact_DirectClassAddress : ExactDirectClassAddress :=
+  NumberedWindowDirectClassAddressProof.relation
+
+#print axioms exact_DirectAddressBit
+#print axioms exact_DirectClassAddress
+
+end LogicLineages.PersistentMarking.NumberedWindowDirectClassAddressChecks

@@ -1,0 +1,63 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticCopyRankProof.lean:32:73: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.111 = ?m.111
+but is expected to have type
+  Option.any
+      (fun m =>
+        Option.any (fun n => if false = true then decide (n < m) else decide (m = n)) (rank S.entries (encodeHead g)))
+      (rank S.entries (encodeHead f)) =
+    match none, none with
+    | some m, some n => decide (m = n)
+    | x, x_1 => false
+in the application
+  ⟨?m.109, rfl⟩
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticCopyRankProof.lean:32:73: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.111 = ?m.111
+but is expected to have type
+  Option.any
+      (fun m =>
+        Option.any (fun n => if false = true then decide (n < m) else decide (m = n)) (rank S.entries (encodeHead g)))
+      (rank S.entries (encodeHead f)) =
+    match none, some val✝ with
+    | some m, some n => decide (m = n)
+    | x, x_1 => false
+in the application
+  ⟨?m.109, rfl⟩
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticCopyRankProof.lean:32:73: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.111 = ?m.111
+but is expected to have type
+  Option.any
+      (fun m =>
+        Option.any (fun n => if false = true then decide (n < m) else decide (m = n)) (rank S.entries (encodeHead g)))
+      (rank S.entries (encodeHead f)) =
+    match some val✝, none with
+    | some m, some n => decide (m = n)
+    | x, x_1 => false
+in the application
+  ⟨?m.109, rfl⟩
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticCopyRankProof.lean:32:73: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.111 = ?m.111
+but is expected to have type
+  Option.any
+      (fun m =>
+        Option.any (fun n => if false = true then decide (n < m) else decide (m = n)) (rank S.entries (encodeHead g)))
+      (rank S.entries (encodeHead f)) =
+    match some val✝¹, some val✝ with
+    | some m, some n => decide (m = n)
+    | x, x_1 => false
+in the application
+  ⟨?m.109, rfl⟩
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticCopyRankProof.lean:31:26: warning: This simp argument is unused:
+  rankExact
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵m̵p̵a̵r̵e̵R̵a̵n̵k̵s̵,̵r̵a̵n̵k̵E̵x̵a̵c̵t̵,̵p̵r̵e̵c̵e̵d̵e̵s̵B̵i̵t̵,̵e̵q̵u̵i̵v̵a̵l̵e̵n̵t̵B̵i̵t̵]̵[̲c̲o̲m̲p̲a̲r̲e̲R̲a̲n̲k̲s̲,̲ ̲p̲r̲e̲c̲e̲d̲e̲s̲B̲i̲t̲,̲ ̲e̲q̲u̲i̲v̲a̲l̲e̲n̲t̲B̲i̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

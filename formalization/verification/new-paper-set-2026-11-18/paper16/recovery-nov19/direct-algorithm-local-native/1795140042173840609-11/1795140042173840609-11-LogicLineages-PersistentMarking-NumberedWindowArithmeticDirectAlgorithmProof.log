@@ -1,0 +1,118 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticDirectAlgorithmProof.lean:22:38: error: `grind` failed
+case grind
+n : Nat
+__x : Nat × List Nat
+target dominator cert x : Nat
+x_1 : List Nat
+target_1 dom cert_1 : Nat
+hn : decodeNode n = some (4, [target_1, dom, cert_1])
+heq : (4, [target_1, dom, cert_1]) = (4, [target, dominator, cert])
+h :
+  ¬pure (target, dominator, cert) =
+      Option.map entry (some { target := target_1, dominator := dom, certificate := cert_1 })
+fst : Nat
+snd : List Nat
+h_1 : (fst, snd) = __x
+⊢ False
+[grind] Goal diagnostics
+  [facts] Asserted facts
+    [prop] decodeNode n = some (4, [target_1, dom, cert_1])
+    [prop] (4, [target_1, dom, cert_1]) = (4, [target, dominator, cert])
+    [prop] ¬pure (target, dominator, cert) =
+            Option.map entry (some { target := target_1, dominator := dom, certificate := cert_1 })
+    [prop] pure (target, dominator, cert) = some (target, dominator, cert)
+    [prop] Option.map entry (some { target := target_1, dominator := dom, certificate := cert_1 }) =
+          some (entry { target := target_1, dominator := dom, certificate := cert_1 })
+    [prop] (fst, snd) = __x
+  [eqc] False propositions
+    [prop] pure (target, dominator, cert) =
+          Option.map entry (some { target := target_1, dominator := dom, certificate := cert_1 })
+  [eqc] Equivalence classes
+    [eqc] {__x, (fst, snd), (__x.fst, __x.snd)}
+    [eqc] {target, target_1}
+    [eqc] {dominator, dom}
+    [eqc] {cert, cert_1}
+    [eqc] {fst, __x.fst}
+      [eqc] {(__x.fst, __x.snd).fst}
+    [eqc] {snd, __x.snd}
+      [eqc] {(__x.fst, __x.snd).snd}
+    [eqc] {decodeNode n, some (4, [target_1, dom, cert_1])}
+    [eqc] {[target, dominator, cert], [target_1, dom, cert_1]}
+    [eqc] {[dominator, cert], [dom, cert_1]}
+    [eqc] {[cert], [cert_1]}
+    [eqc] {Option.map entry (some { target := target_1, dominator := dom, certificate := cert_1 }),
+        some (entry { target := target_1, dominator := dom, certificate := cert_1 })}
+    [eqc] {(4, [target, dominator, cert]), (4, [target_1, dom, cert_1])}
+    [eqc] {pure (target, dominator, cert), some (target, dominator, cert)}
+    [eqc] {entry { target := target_1, dominator := dom, certificate := cert_1 },
+        ((entry { target := target_1, dominator := dom, certificate := cert_1 }).fst,
+          (entry { target := target_1, dominator := dom, certificate := cert_1 }).snd)}
+    [eqc] {(entry { target := target_1, dominator := dom, certificate := cert_1 }).snd,
+        ((entry { target := target_1, dominator := dom, certificate := cert_1 }).snd.fst,
+          (entry { target := target_1, dominator := dom, certificate := cert_1 }).snd.snd)}
+      [eqc] {((entry { target := target_1, dominator := dom, certificate := cert_1 }).fst,
+              (entry { target := target_1, dominator := dom, certificate := cert_1 }).snd).snd}
+    [eqc] others
+      [eqc] {(entry { target := target_1, dominator := dom, certificate := cert_1 }).snd.fst,
+          ((entry { target := target_1, dominator := dom, certificate := cert_1 }).snd.fst,
+              (entry { target := target_1, dominator := dom, certificate := cert_1 }).snd.snd).fst}
+      [eqc] {(entry { target := target_1, dominator := dom, certificate := cert_1 }).fst,
+          ((entry { target := target_1, dominator := dom, certificate := cert_1 }).fst,
+              (entry { target := target_1, dominator := dom, certificate := cert_1 }).snd).fst}
+      [eqc] {(entry { target := target_1, dominator := dom, certificate := cert_1 }).snd.snd,
+          ((entry { target := target_1, dominator := dom, certificate := cert_1 }).snd.fst,
+              (entry { target := target_1, dominator := dom, certificate := cert_1 }).snd.snd).snd}
+  [cases] Case analyses
+    [cases] [1/1]: __x
+      [cases] source: Initial goal
+  [ematch] E-matching patterns
+    [thm] Option.pure_apply: [@pure `[Option] `[instAlternativeOption.toPure] #1 #0]
+    [thm] Option.map_some: [@Option.map #3 #2 #0 (@some _ #1)]
+  [cutsat] Assignment satisfying linear constraints
+    [assign] n := 1
+    [assign] target := 3
+    [assign] dominator := 5
+    [assign] cert := 6
+    [assign] x := 7
+    [assign] target_1 := 3
+    [assign] dom := 5
+    [assign] cert_1 := 6
+    [assign] fst := 2
+    [assign] __x.fst := 2
+    [assign] (__x.fst, __x.snd).fst := 2
+    [assign] (entry { target := target_1, dominator := dom, certificate := cert_1 }).snd.fst := 9
+    [assign] ((entry { target := target_1, dominator := dom, certificate := cert_1 }).snd.fst,
+            (entry { target := target_1, dominator := dom, certificate := cert_1 }).snd.snd).fst := 9
+    [assign] (entry { target := target_1, dominator := dom, certificate := cert_1 }).fst := 8
+    [assign] ((entry { target := target_1, dominator := dom, certificate := cert_1 }).fst,
+            (entry { target := target_1, dominator := dom, certificate := cert_1 }).snd).fst := 8
+    [assign] (entry { target := target_1, dominator := dom, certificate := cert_1 }).snd.snd := 10
+    [assign] ((entry { target := target_1, dominator := dom, certificate := cert_1 }).snd.fst,
+            (entry { target := target_1, dominator := dom, certificate := cert_1 }).snd.snd).snd := 10
+[grind] Diagnostics
+  [thm] E-Matching instances
+    [thm] Option.map_some ↦ 1
+    [thm] Option.pure_apply ↦ 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticDirectAlgorithmProof.lean:42:122: warning: This simp argument is unused:
+  witness
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵k̵,̵h̵r̵,̵h̵a̵,̵a̵l̵l̵E̵n̵t̵r̵i̵e̵s̵,̵w̵i̵t̵n̵e̵s̵s̵]̵[̲h̲k̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲h̲r̲,̲ ̲h̲a̲,̲ ̲a̲l̲l̲E̲n̲t̲r̲i̲e̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticDirectAlgorithmProof.lean:44:64: warning: This simp argument is unused:
+  hi
+
+Hint: Omit it from the simp argument list.
+  simp [h̵i̵,̵ ̵witness]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticDirectAlgorithmProof.lean:56:61: warning: This simp argument is unused:
+  insertionBit
+
+Hint: Omit it from the simp argument list.
+  simp [directLists, directMultisetBit, typedAddressListBit, i̵n̵s̵e̵r̵t̵i̵o̵n̵B̵i̵t̵,̵ ̵witness, entry, ̲List.map_map,
+  ̲ ̲ ̲ ̲ ̲Function.comp_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

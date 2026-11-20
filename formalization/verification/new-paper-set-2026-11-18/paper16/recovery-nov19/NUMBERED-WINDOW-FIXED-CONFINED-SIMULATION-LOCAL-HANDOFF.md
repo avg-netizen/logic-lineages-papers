@@ -1,0 +1,7 @@
+# Paper 16 confined simulation in one supplied window
+
+The literal ordinary translation exists and is admitted for every well-typed ordinary source in any supplied window containing its source support. This conclusion applies even when the term has no outgoing strict edge. For a genuine `ConfinedPair.Strict` edge, confinement puts the target's whole literal support in that same window. The original derivation certificate and numerical budget then produce a genuine positive `RS` path at the source's literal result type. [Manuscript, lines 255–264 and 315–325](../../../../../16-persistent-marking-termination-ordering/sections/ordinals.tex)
+
+This supplies the path argument for a chain with the starting window held fixed throughout. The external well-foundedness proof can therefore compare successive terms in one actual quotient, including when a term's own support has decreased. The individual Bachmann–Howard bound still requires the internal accessibility and ordinal-norm argument.
+
+The target preflight `1795134952398323713-9`, exact native gate `1795134953170114500-16`, and independent source and evidence review passed. The recursive verifier matched 166 modules, 47 source pins and both standard-only exact audits. [Exact native receipt](fixed-confined-simulation-local-native/1795134953170114500-16.json) · [Exact audits](fixed-confined-simulation-local-native/1795134953170114500-16-LogicLineages-PersistentMarking-NumberedWindowFixedConfinedSimulationChecks.log) · [Recursive evidence](NUMBERED-WINDOW-FIXED-CONFINED-SIMULATION-LOCAL-EVIDENCE.json)

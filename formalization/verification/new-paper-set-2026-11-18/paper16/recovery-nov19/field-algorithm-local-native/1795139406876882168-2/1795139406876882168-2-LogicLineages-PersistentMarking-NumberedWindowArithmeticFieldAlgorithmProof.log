@@ -1,0 +1,24 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticFieldAlgorithmProof.lean:34:15: error: unsolved goals
+case succ.succ.some.none
+n : Nat
+ih :
+  ∀ (code : Nat) (acc : List Nat),
+    finish (steps n (some (code, acc))) = Option.map (fun xs => acc.reverse ++ xs) (decodeFieldsFuel n code)
+acc : List Nat
+c a b : Nat
+h : NumberedWindowPairAlgorithm.decode c = some (a, b)
+hb : decodeFieldsFuel n b = none
+⊢ none = (decodeFieldsFuel n b).bind ((Option.map fun xs => acc.reverse ++ xs) ∘ fun xs => some (a :: xs))
+
+case succ.succ.some.some
+n : Nat
+ih :
+  ∀ (code : Nat) (acc : List Nat),
+    finish (steps n (some (code, acc))) = Option.map (fun xs => acc.reverse ++ xs) (decodeFieldsFuel n code)
+acc : List Nat
+c a b : Nat
+h : NumberedWindowPairAlgorithm.decode c = some (a, b)
+val✝ : List Nat
+hb : decodeFieldsFuel n b = some val✝
+⊢ some (acc.reverse ++ a :: val✝) =
+    (decodeFieldsFuel n b).bind ((Option.map fun xs => acc.reverse ++ xs) ∘ fun xs => some (a :: xs))

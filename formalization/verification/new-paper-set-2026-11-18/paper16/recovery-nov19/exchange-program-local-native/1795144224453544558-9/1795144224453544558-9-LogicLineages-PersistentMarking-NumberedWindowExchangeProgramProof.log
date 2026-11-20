@@ -1,0 +1,59 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowExchangeProgramProof.lean:12:5: error: unknown namespace `NumberedWindowLexicalRequirementPrograms`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowExchangeProgramProof.lean:42:43: error(lean.unknownIdentifier): Unknown identifier `eqBool.comp`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowExchangeProgramProof.lean:42:80: error(lean.unknownIdentifier): Unknown identifier `eqBool.comp`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowExchangeProgramProof.lean:30:84: error: unsolved goals
+case succ.succ
+P : Type := Input × (ℕ × ℕ) × ℕ × ℕ
+l : Primrec fun p => p.2.1
+r : Primrec fun p => p.2.2
+prev : Primrec fun p => p.1.1.2
+x : Primrec fun a => a.2.1.1
+y : Primrec fun a => a.2.2.1
+u : Primrec fun a => a.2.1.2
+v : Primrec fun a => a.2.2.2
+xy : Primrec fun a => (a.1.1.2.getD (NumberedWindowPairAlgorithm.pair a.2.1.1 a.2.2.1) (false, false)).1
+uv : Primrec fun a => (a.1.1.2.getD (NumberedWindowPairAlgorithm.pair a.2.1.2 a.2.2.2) (false, false)).2
+env : Env
+n✝¹ n✝ : ℕ
+⊢ Option.any
+      (fun a =>
+        Option.any
+          (fun b =>
+            (env.2[NumberedWindowPairAlgorithm.pair a.1 b.1]?.getD (false, false)).1 &&
+                ?m.333 ((env, n✝¹ + 1, n✝ + 1), a, b) ||
+              ?m.343 ((env, n✝¹ + 1, n✝ + 1), a, b) &&
+                (env.2[NumberedWindowPairAlgorithm.pair a.2 b.2]?.getD (false, false)).2)
+          (NumberedWindowPairAlgorithm.decode n✝))
+      (NumberedWindowPairAlgorithm.decode n✝¹) =
+    Option.any
+      (fun p =>
+        Option.any
+          (fun q =>
+            (env.2[NumberedWindowPairAlgorithm.pair p.1 q.1]?.getD (false, false)).1 && p.2 == q.2 ||
+              p.1 == q.1 && (env.2[NumberedWindowPairAlgorithm.pair p.2 q.2]?.getD (false, false)).2)
+          (NumberedWindowPairAlgorithm.decode n✝))
+      (NumberedWindowPairAlgorithm.decode n✝¹)
+
+P : Type := ⋯
+l : Primrec fun p => p.2.1
+r : Primrec fun p => p.2.2
+prev : Primrec fun p => p.1.1.2
+x : Primrec fun a => a.2.1.1
+y : Primrec fun a => a.2.2.1
+u : Primrec fun a => a.2.1.2
+v : Primrec fun a => a.2.2.2
+xy : Primrec fun a => (a.1.1.2.getD (NumberedWindowPairAlgorithm.pair a.2.1.1 a.2.2.1) (false, false)).1
+uv : Primrec fun a => (a.1.1.2.getD (NumberedWindowPairAlgorithm.pair a.2.1.2 a.2.2.2) (false, false)).2
+⊢ (Env × ℕ × ℕ) × (ℕ × ℕ) × ℕ × ℕ → Bool
+
+P : Type := ⋯
+l : Primrec fun p => p.2.1
+r : Primrec fun p => p.2.2
+prev : Primrec fun p => p.1.1.2
+x : Primrec fun a => a.2.1.1
+y : Primrec fun a => a.2.2.1
+u : Primrec fun a => a.2.1.2
+v : Primrec fun a => a.2.2.2
+xy : Primrec fun a => (a.1.1.2.getD (NumberedWindowPairAlgorithm.pair a.2.1.1 a.2.2.1) (false, false)).1
+uv : Primrec fun a => (a.1.1.2.getD (NumberedWindowPairAlgorithm.pair a.2.1.2 a.2.2.2) (false, false)).2
+⊢ (Env × ℕ × ℕ) × (ℕ × ℕ) × ℕ × ℕ → Bool

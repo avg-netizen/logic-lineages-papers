@@ -1,0 +1,261 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:57:42: error: unsolved goals
+S : Spine.Signature
+K : List Ty
+t : Ty
+x : Nat
+⊢ decide (encodeTy t ∈ (window S K).fst) = typesIn K (TypeSupport.subtypes t)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:57:42: error: unsolved goals
+S : Spine.Signature
+K : List Ty
+t : Ty
+x : Nat
+⊢ decide (encodeTy t ∈ (window S K).fst) = typesIn K (TypeSupport.subtypes t)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:57:42: error: unsolved goals
+S : Spine.Signature
+K : List Ty
+t : Ty
+⊢ decide (encodeTy t ∈ (window S K).fst) = typesIn K (TypeSupport.subtypes t)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:59:16: error: unsolved goals
+S : Spine.Signature
+K : List Ty
+t : Ty
+q : NTerm
+⊢ (decide (encodeTy (t.arrow q.type) ∈ (window S K).fst) &&
+      (decide (encodeTy t ∈ (window S K).fst) &&
+        (((support q).all fun τ => decide (τ ∈ K)) && (heads q).all (headBit S K)))) =
+    (((TypeSupport.subtypes (t.arrow q.type)).all fun τ => decide (τ ∈ K)) &&
+      (((TypeSupport.subtypes t).all fun τ => decide (τ ∈ K)) &&
+        (((support q).all fun τ => decide (τ ∈ K)) && (heads q).all (headBit S K))))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:67:12: error: unsolved goals
+case false
+S : Spine.Signature
+K : List Ty
+f : Head
+bs : NArgs
+hf : headBit S K f = false
+⊢ encodeHead f ∈ (window S K).snd → typesIn K (argsSupport bs) = true → ∃ x, x ∈ argsHeads bs ∧ headBit S K x = false
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:70:11: error: unsolved goals
+case true
+S : Spine.Signature
+K : List Ty
+f : Head
+bs : NArgs
+hf : headBit S K f = true
+hd : ((DecisionInventory.declaration f).all fun τ => decide (τ ∈ K)) = true
+⊢ (∀ (x : Ty), x ∈ argsSupport bs → x ∈ K) →
+    (∀ (x : Head), x ∈ argsHeads bs → headBit S K x = true) → encodeHead f ∈ (window S K).snd
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:79:12: error: unsolved goals
+case false
+S : Spine.Signature
+K : List Ty
+f : Head
+t : Ty
+k : Nat
+bs es : NArgs
+hf : headBit S K f = false
+⊢ encodeHead f ∈ (window S K).snd → encodeTy t ∈ (window S K).fst → argsGuard S K bs = true → argsGuard S K es = false
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:82:11: error: unsolved goals
+case true
+S : Spine.Signature
+K : List Ty
+f : Head
+t : Ty
+k : Nat
+bs es : NArgs
+hf : headBit S K f = true
+hd : ((DecisionInventory.declaration f).all fun τ => decide (τ ∈ K)) = true
+⊢ (decide (encodeHead f ∈ (window S K).snd) &&
+      (decide (encodeTy t ∈ (window S K).fst) &&
+        ((argsHeads bs).all (headBit S K) &&
+          ((argsHeads es).all (headBit S K) &&
+            (((argsSupport bs).all fun τ => decide (τ ∈ K)) && (argsSupport es).all fun τ => decide (τ ∈ K)))))) =
+    ((argsHeads bs).all (headBit S K) &&
+      ((argsHeads es).all (headBit S K) &&
+        (((argsSupport bs).all fun τ => decide (τ ∈ K)) &&
+          (((argsSupport es).all fun τ => decide (τ ∈ K)) && (TypeSupport.subtypes t).all fun τ => decide (τ ∈ K)))))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:88:23: error: unsolved goals
+S : Spine.Signature
+K : List Ty
+s t : Ty
+q a : NTerm
+⊢ (decide (encodeTy s ∈ (window S K).fst) &&
+      (decide (encodeTy t ∈ (window S K).fst) &&
+        ((heads q).all (headBit S K) &&
+          ((heads a).all (headBit S K) &&
+            (((support q).all fun τ => decide (τ ∈ K)) && (support a).all fun τ => decide (τ ∈ K)))))) =
+    ((heads q).all (headBit S K) &&
+      ((heads a).all (headBit S K) &&
+        (((support q).all fun τ => decide (τ ∈ K)) &&
+          (((support a).all fun τ => decide (τ ∈ K)) &&
+            (((TypeSupport.subtypes s).all fun τ => decide (τ ∈ K)) &&
+              (TypeSupport.subtypes t).all fun τ => decide (τ ∈ K))))))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:58:40: warning: This simp argument is unused:
+  types
+
+Hint: Omit it from the simp argument list.
+  simp [encodeTerm, ̲nodeTerm, ̲termParts, ̲ty̵p̵es̵,̵t̵e̵rmGuard, ̲support, ̲heads]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:62:66: warning: This simp argument is unused:
+  types
+
+Hint: Omit it from the simp argument list.
+  simp [nodeTerm, ̲termParts, ̲List.getD_eq_getElem?_getD, ̲child,
+        NumberedWindowArithmeticAnnotationProof.term, ̲annotatedArrow, ̲ty̵p̵es̵,̵t̵e̵rm S K q,
+  ̵  ̵ ̵ ̵ ̵ ̵termGuard, ̲support,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲heads, ̲typesIn, ̲List.all_append, ̲Bool.and_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:69:8: warning: This simp argument is unused:
+  NumberedWindowAdmissionConstantsProof.heads
+
+Hint: Omit it from the simp argument list.
+  simp [̵n̵o̵d̵e̵T̵e̵r̵m̵,̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵c̵h̵i̵l̵d̵,̵a̵r̵g̵s̵[̲n̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲c̲h̲i̲l̲d̲,̲ ̲a̲r̲g̲s̲ S K bs, N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵A̵d̵m̵i̵s̵s̵i̵o̵n̵C̵o̵n̵s̵t̵a̵n̵t̵s̵P̵r̵o̵o̵f̵.̵h̵e̵a̵d̵s̵,̵t̵e̵r̵m̵G̵u̵a̵r̵d̵,̵a̵r̵g̵s̵G̵u̵a̵r̵d̵,̵s̵u̵p̵p̵o̵r̵t̵,̵h̵e̵a̵d̵s̵,̵h̵f̵]̵t̲e̲r̲m̲G̲u̲a̲r̲d̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲a̲r̲g̲s̲G̲u̲a̲r̲d̲,̲ ̲s̲u̲p̲p̲o̲r̲t̲,̲ ̲h̲e̲a̲d̲s̲,̲ ̲h̲f̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:74:8: warning: This simp argument is unused:
+  NumberedWindowAdmissionConstantsProof.heads
+
+Hint: Omit it from the simp argument list.
+  simp [̵n̵o̵d̵e̵T̵e̵r̵m̵,̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵c̵h̵i̵l̵d̵,̵a̵r̵g̵s̵[̲n̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲c̲h̲i̲l̲d̲,̲ ̲a̲r̲g̲s̲ S K bs, N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵A̵d̵m̵i̵s̵s̵i̵o̵n̵C̵o̵n̵s̵t̵a̵n̵t̵s̵P̵r̵o̵o̵f̵.̵h̵e̵a̵d̵s̵,̵t̵e̵r̵m̵G̵u̵a̵r̵d̵,̵a̵r̵g̵s̵G̵u̵a̵r̵d̵,̵s̵u̵p̵p̵o̵r̵t̵,̵h̵e̵a̵d̵s̵,̵h̵f̵,̵h̵d̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵L̵i̵s̵t̵.̵a̵l̵l̵_̵a̵p̵p̵e̵n̵d̵,̵t̵y̵p̵e̵s̵I̵n̵]̵t̲e̲r̲m̲G̲u̲a̲r̲d̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲a̲r̲g̲s̲G̲u̲a̲r̲d̲,̲ ̲s̲u̲p̲p̲o̲r̲t̲,̲ ̲h̲e̲a̲d̲s̲,̲ ̲h̲f̲,̲ ̲h̲d̲,̲ ̲L̲i̲s̲t̲.̲a̲l̲l̲_̲a̲p̲p̲e̲n̲d̲,̲ ̲t̲y̲p̲e̲s̲I̲n̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:80:64: warning: This simp argument is unused:
+  types
+
+Hint: Omit it from the simp argument list.
+  simp [nodeTerm, ̲termParts, ̲List.getD_eq_getElem?_getD, ̲child,t̵y̵p̵e̵s̵,̵
+          NumberedWindowAdmissionConstantsProof.heads, ̲args S K bs, ̲args S K es, ̲termGuard, ̲support,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲heads, ̲hf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:81:8: warning: This simp argument is unused:
+  NumberedWindowAdmissionConstantsProof.heads
+
+Hint: Omit it from the simp argument list.
+  simp [̵n̵o̵d̵e̵T̵e̵r̵m̵,̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵c̵h̵i̵l̵d̵,̵t̵y̵p̵e̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵A̵d̵m̵i̵s̵s̵i̵o̵n̵C̵o̵n̵s̵t̵a̵n̵t̵s̵P̵r̵o̵o̵f̵.̵h̵e̵a̵d̵s̵,̵a̵r̵g̵s̵[̲n̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲c̲h̲i̲l̲d̲,̲ ̲t̲y̲p̲e̲s̲,̲ ̲a̲r̲g̲s̲ S K b̵s̵,̵a̵r̵g̵s̵b̲s̲,̲ ̲a̲r̲g̲s̲ S K e̵s̵,̵t̵e̵r̵m̵G̵u̵a̵r̵d̵,̵s̵u̵p̵p̵o̵r̵t̵,̵h̵e̵a̵d̵s̵,̵h̵f̵]̵e̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲t̲e̲r̲m̲G̲u̲a̲r̲d̲,̲ ̲s̲u̲p̲p̲o̲r̲t̲,̲ ̲h̲e̲a̲d̲s̲,̲ ̲h̲f̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:85:64: warning: This simp argument is unused:
+  types
+
+Hint: Omit it from the simp argument list.
+  simp [nodeTerm, ̲termParts, ̲List.getD_eq_getElem?_getD, ̲child,t̵y̵p̵e̵s̵,̵
+          NumberedWindowAdmissionConstantsProof.heads, ̲args S K bs, ̲args S K es, ̲termGuard, ̲argsGuard,
+          support, ̲heads, ̲hf, ̲hd, ̲typesIn, ̲List.all_append, ̲Bool.and_assoc, ̲Bool.and_left_comm,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲Bool.and_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:86:8: warning: This simp argument is unused:
+  NumberedWindowAdmissionConstantsProof.heads
+
+Hint: Omit it from the simp argument list.
+  simp [̵n̵o̵d̵e̵T̵e̵r̵m̵,̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵c̵h̵i̵l̵d̵,̵t̵y̵p̵e̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵A̵d̵m̵i̵s̵s̵i̵o̵n̵C̵o̵n̵s̵t̵a̵n̵t̵s̵P̵r̵o̵o̵f̵.̵h̵e̵a̵d̵s̵,̵a̵r̵g̵s̵[̲n̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲c̲h̲i̲l̲d̲,̲ ̲t̲y̲p̲e̲s̲,̲ ̲a̲r̲g̲s̲ S K b̵s̵,̵a̵r̵g̵s̵b̲s̲,̲ ̲a̲r̲g̲s̲ S K e̵s̵,̵t̵e̵r̵m̵G̵u̵a̵r̵d̵,̵a̵r̵g̵s̵G̵u̵a̵r̵d̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵s̵u̵p̵p̵o̵r̵t̵,̵h̵e̵a̵d̵s̵,̵h̵f̵,̵h̵d̵,̵t̵y̵p̵e̵s̵I̵n̵,̵L̵i̵s̵t̵.̵a̵l̵l̵_̵a̵p̵p̵e̵n̵d̵,̵B̵o̵o̵l̵.̵a̵n̵d̵_̵a̵s̵s̵o̵c̵,̵B̵o̵o̵l̵.̵a̵n̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵B̵o̵o̵l̵.̵a̵n̵d̵_̵c̵o̵m̵m̵]̵e̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲t̲e̲r̲m̲G̲u̲a̲r̲d̲,̲ ̲a̲r̲g̲s̲G̲u̲a̲r̲d̲,̲ ̲s̲u̲p̲p̲o̲r̲t̲,̲ ̲h̲e̲a̲d̲s̲,̲ ̲h̲f̲,̲ ̲h̲d̲,̲ ̲t̲y̲p̲e̲s̲I̲n̲,̲ ̲L̲i̲s̲t̲.̲a̲l̲l̲_̲a̲p̲p̲e̲n̲d̲,̲ ̲B̲o̲o̲l̲.̲a̲n̲d̲_̲a̲s̲s̲o̲c̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲B̲o̲o̲l̲.̲a̲n̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲,̲ ̲B̲o̲o̲l̲.̲a̲n̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:90:62: warning: This simp argument is unused:
+  types
+
+Hint: Omit it from the simp argument list.
+  simp [nodeTerm, ̲termParts, ̲List.getD_eq_getElem?_getD, ̲child, ̲ty̵p̵es̵,̵t̵e̵rm S K q, ̲term S K a,
+  ̵  ̵ ̵ ̵ ̵ ̵termGuard,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲support, ̲heads, ̲typesIn, ̲List.all_append, ̲Bool.and_assoc, ̲Bool.and_left_comm, ̲Bool.and_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:105:4: error: Type mismatch: After simplification, term
+  term S K q
+ has type
+  (rawBits (window S K) (encodeTerm q)).fst = termGuard S K q
+but is expected to have type
+  ((NumberedWindowSyntaxAlgorithm.syntaxBits (encodeTerm q)).fst && (rawBits (window S K) (encodeTerm q)).fst) =
+    termGuard S K q
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:109:4: error: Type mismatch: After simplification, term
+  args S K qs
+ has type
+  (rawBits (window S K) (encodeArgs qs)).snd = argsGuard S K qs
+but is expected to have type
+  ((NumberedWindowSyntaxAlgorithm.syntaxBits (encodeArgs qs)).snd && (rawBits (window S K) (encodeArgs qs)).snd) =
+    argsGuard S K qs
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:117:11: error: unsolved goals
+case fst.none
+S : Spine.Signature
+K : List Ty
+n : Nat
+h : decodeTerm n = none
+⊢ (NumberedWindowSyntaxAlgorithm.syntaxBits n).fst = true → (rawBits (window S K) n).fst = false
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:122:6: error: Type mismatch: After simplification, term
+  literal.left S K q
+ has type
+  @Eq Bool (bits (window S K) n).fst (termGuard S K q)
+but is expected to have type
+  @Eq Bool (bits (window S K) n).fst (Option.any (termGuard S K) (some q))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:124:11: error: unsolved goals
+case snd.none
+S : Spine.Signature
+K : List Ty
+n : Nat
+h : decodeArgs n = none
+⊢ (NumberedWindowSyntaxAlgorithm.syntaxBits n).snd = true → (rawBits (window S K) n).snd = false
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:129:6: error: Type mismatch: After simplification, term
+  literal.right S K qs
+ has type
+  @Eq Bool (bits (window S K) n).snd (argsGuard S K qs)
+but is expected to have type
+  @Eq Bool (bits (window S K) n).snd (Option.any (argsGuard S K) (some qs))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:118:17: warning: This simp argument is unused:
+  NumberedWindowArithmeticSyntaxAlgorithmChecks.exact_ExactTermArgsGuards
+
+Hint: Omit it from the simp argument list.
+  simp [̵b̵i̵t̵s̵,̵N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵S̵y̵n̵t̵a̵x̵A̵l̵g̵o̵r̵i̵t̵h̵m̵C̵h̵e̵c̵k̵s̵.̵e̵x̵a̵c̵t̵_̵E̵x̵a̵c̵t̵T̵e̵r̵m̵A̵r̵g̵s̵G̵u̵a̵r̵d̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵S̵y̵n̵t̵a̵x̵A̵l̵g̵o̵r̵i̵t̵h̵m̵T̵a̵r̵g̵e̵t̵s̵.̵O̵r̵i̵g̵i̵n̵a̵l̵R̵o̵w̵,̵h̵]̵[̲b̲i̲t̲s̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲W̲i̲n̲d̲o̲w̲A̲r̲i̲t̲h̲m̲e̲t̲i̲c̲S̲y̲n̲t̲a̲x̲A̲l̲g̲o̲r̲i̲t̲h̲m̲T̲a̲r̲g̲e̲t̲s̲.̲O̲r̲i̲g̲i̲n̲a̲l̲R̲o̲w̲,̲ ̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:119:8: warning: This simp argument is unused:
+  NumberedWindowArithmeticSyntaxAlgorithmTargets.OriginalRow
+
+Hint: Omit it from the simp argument list.
+  simp [̵b̵i̵t̵s̵,̵N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵S̵y̵n̵t̵a̵x̵A̵l̵g̵o̵r̵i̵t̵h̵m̵C̵h̵e̵c̵k̵s̵.̵e̵x̵a̵c̵t̵_̵E̵x̵a̵c̵t̵T̵e̵r̵m̵A̵r̵g̵s̵G̵u̵a̵r̵d̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵S̵y̵n̵t̵a̵x̵A̵l̵g̵o̵r̵i̵t̵h̵m̵T̵a̵r̵g̵e̵t̵s̵.̵O̵r̵i̵g̵i̵n̵a̵l̵R̵o̵w̵,̵h̵]̵[̲b̲i̲t̲s̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲W̲i̲n̲d̲o̲w̲A̲r̲i̲t̲h̲m̲e̲t̲i̲c̲S̲y̲n̲t̲a̲x̲A̲l̲g̲o̲r̲i̲t̲h̲m̲C̲h̲e̲c̲k̲s̲.̲e̲x̲a̲c̲t̲_̲E̲x̲a̲c̲t̲T̲e̲r̲m̲A̲r̲g̲s̲G̲u̲a̲r̲d̲s̲,̲ ̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:119:67: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [bits, ̲NumberedWindowArithmeticSyntaxAlgorithmChecks.exact_ExactTermArgsGuards,
+          NumberedWindowArithmeticSyntaxAlgorithmTargets.OriginalRow,̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:125:17: warning: This simp argument is unused:
+  NumberedWindowArithmeticSyntaxAlgorithmChecks.exact_ExactTermArgsGuards
+
+Hint: Omit it from the simp argument list.
+  simp [̵b̵i̵t̵s̵,̵N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵S̵y̵n̵t̵a̵x̵A̵l̵g̵o̵r̵i̵t̵h̵m̵C̵h̵e̵c̵k̵s̵.̵e̵x̵a̵c̵t̵_̵E̵x̵a̵c̵t̵T̵e̵r̵m̵A̵r̵g̵s̵G̵u̵a̵r̵d̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵S̵y̵n̵t̵a̵x̵A̵l̵g̵o̵r̵i̵t̵h̵m̵T̵a̵r̵g̵e̵t̵s̵.̵O̵r̵i̵g̵i̵n̵a̵l̵R̵o̵w̵,̵h̵]̵[̲b̲i̲t̲s̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲W̲i̲n̲d̲o̲w̲A̲r̲i̲t̲h̲m̲e̲t̲i̲c̲S̲y̲n̲t̲a̲x̲A̲l̲g̲o̲r̲i̲t̲h̲m̲T̲a̲r̲g̲e̲t̲s̲.̲O̲r̲i̲g̲i̲n̲a̲l̲R̲o̲w̲,̲ ̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:126:8: warning: This simp argument is unused:
+  NumberedWindowArithmeticSyntaxAlgorithmTargets.OriginalRow
+
+Hint: Omit it from the simp argument list.
+  simp [̵b̵i̵t̵s̵,̵N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵S̵y̵n̵t̵a̵x̵A̵l̵g̵o̵r̵i̵t̵h̵m̵C̵h̵e̵c̵k̵s̵.̵e̵x̵a̵c̵t̵_̵E̵x̵a̵c̵t̵T̵e̵r̵m̵A̵r̵g̵s̵G̵u̵a̵r̵d̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵S̵y̵n̵t̵a̵x̵A̵l̵g̵o̵r̵i̵t̵h̵m̵T̵a̵r̵g̵e̵t̵s̵.̵O̵r̵i̵g̵i̵n̵a̵l̵R̵o̵w̵,̵h̵]̵[̲b̲i̲t̲s̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲W̲i̲n̲d̲o̲w̲A̲r̲i̲t̲h̲m̲e̲t̲i̲c̲S̲y̲n̲t̲a̲x̲A̲l̲g̲o̲r̲i̲t̲h̲m̲C̲h̲e̲c̲k̲s̲.̲e̲x̲a̲c̲t̲_̲E̲x̲a̲c̲t̲T̲e̲r̲m̲A̲r̲g̲s̲G̲u̲a̲r̲d̲s̲,̲ ̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAdmissionProof.lean:126:67: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [bits, ̲NumberedWindowArithmeticSyntaxAlgorithmChecks.exact_ExactTermArgsGuards,
+          NumberedWindowArithmeticSyntaxAlgorithmTargets.OriginalRow,̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

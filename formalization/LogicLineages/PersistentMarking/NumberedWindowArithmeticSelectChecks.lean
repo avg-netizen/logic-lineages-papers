@@ -1,0 +1,8 @@
+import LogicLineages.PersistentMarking.NumberedWindowArithmeticSelectProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticSelectChecks
+open NumberedWindowArithmeticSelectTargets
+
+theorem exact_ExactSelectRoot : ExactSelectRoot := NumberedWindowArithmeticSelectProof.selectExact
+#print axioms exact_ExactSelectRoot
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticSelectChecks

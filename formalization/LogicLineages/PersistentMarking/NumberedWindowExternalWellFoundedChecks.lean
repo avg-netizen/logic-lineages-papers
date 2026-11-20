@@ -1,0 +1,10 @@
+import LogicLineages.PersistentMarking.NumberedWindowExternalWellFoundedProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowExternalWellFoundedChecks
+open NumberedWindowExternalWellFoundedProof NumberedWindowExternalWellFoundedTargets
+
+theorem exact_ActualPositiveRelationWellFounded : ActualPositiveRelationWellFounded := positive
+theorem exact_ConfinedStrictWellFounded : ConfinedStrictWellFounded := confined
+#print axioms exact_ActualPositiveRelationWellFounded
+#print axioms exact_ConfinedStrictWellFounded
+end LogicLineages.PersistentMarking.NumberedWindowExternalWellFoundedChecks

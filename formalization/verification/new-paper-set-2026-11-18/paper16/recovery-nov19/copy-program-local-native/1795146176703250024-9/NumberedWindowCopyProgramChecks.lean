@@ -1,0 +1,9 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowCopyProgramTargets
+import LogicLineages.PersistentMarking.NumberedWindowCopyProgramProof
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowCopyProgramChecks
+theorem exact_CopyProgram : NumberedWindowCopyProgramTargets.CopyProgram :=
+  NumberedWindowCopyProgramProof.program
+#print axioms exact_CopyProgram
+end LogicLineages.PersistentMarking.NumberedWindowCopyProgramChecks

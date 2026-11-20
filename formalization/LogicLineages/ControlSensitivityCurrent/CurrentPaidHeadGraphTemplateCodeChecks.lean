@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraphTemplateCodeProof
+
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph.TemplateCodeChecks
+
+theorem literal_graph_source_template_codes : Targets.ExactTemplateCodes :=
+  exactTemplateCodes
+
+#print axioms literal_graph_source_template_codes
+
+end LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph.TemplateCodeChecks

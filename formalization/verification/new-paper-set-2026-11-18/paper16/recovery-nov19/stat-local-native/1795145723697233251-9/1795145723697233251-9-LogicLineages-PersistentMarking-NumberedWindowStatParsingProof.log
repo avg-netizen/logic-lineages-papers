@@ -1,0 +1,191 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatParsingProof.lean:46:16: error: unsolved goals
+case cons.some.some
+c : Nat
+cs : List Nat
+ih :
+  (if (cs.all fun c => (NumberedWindowSyntaxAlgorithm.syntaxBits c).fst) = true then some cs else none) =
+    Option.map (List.map encodeTerm) (decodeElements decodeTerm cs)
+q : NTerm
+hc : decodeTerm c = some q
+he : encodeTerm q = c
+qs : List NTerm
+ht : decodeElements decodeTerm cs = some qs
+hg : (cs.all fun c => (NumberedWindowSyntaxAlgorithm.syntaxBits c).fst) = true
+hcs : cs = List.map encodeTerm qs
+⊢ (if ∀ (x : NTerm), x ∈ qs → (NumberedWindowSyntaxAlgorithm.syntaxBits (encodeTerm x)).fst = true then
+      some (c :: List.map encodeTerm qs)
+    else none) =
+    (decodeElements decodeTerm (List.map encodeTerm qs)).bind
+      (Option.map (List.map encodeTerm) ∘ fun xs => some (q :: xs))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatParsingProof.lean:52:44: warning: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  simp [̵L̵i̵s̵t̵.̵a̵l̵l̵_̵c̵o̵n̵s̵,̵s̵y̵n̵t̵a̵x̵T̵e̵r̵m̵ ̵c̵,̵h̵c̵,̵h̵t̵,̵d̵e̵c̵o̵d̵e̵E̵l̵e̵m̵e̵n̵t̵s̵,̵h̵g̵,̵h̵e̵,̵h̵c̵s̵]̵[̲L̲i̲s̲t̲.̲a̲l̲l̲_̲c̲o̲n̲s̲,̲ ̲s̲y̲n̲t̲a̲x̲T̲e̲r̲m̲ ̲c̲,̲ ̲h̲c̲,̲ ̲d̲e̲c̲o̲d̲e̲E̲l̲e̲m̲e̲n̲t̲s̲,̲ ̲h̲g̲,̲ ̲h̲e̲,̲ ̲h̲c̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatParsingProof.lean:52:62: warning: This simp argument is unused:
+  hg
+
+Hint: Omit it from the simp argument list.
+  simp [̵L̵i̵s̵t̵.̵a̵l̵l̵_̵c̵o̵n̵s̵,̵s̵y̵n̵t̵a̵x̵T̵e̵r̵m̵ ̵c̵,̵h̵c̵,̵h̵t̵,̵d̵e̵c̵o̵d̵e̵E̵l̵e̵m̵e̵n̵t̵s̵,̵h̵g̵,̵h̵e̵,̵h̵c̵s̵]̵[̲L̲i̲s̲t̲.̲a̲l̲l̲_̲c̲o̲n̲s̲,̲ ̲s̲y̲n̲t̲a̲x̲T̲e̲r̲m̲ ̲c̲,̲ ̲h̲c̲,̲ ̲h̲t̲,̲ ̲d̲e̲c̲o̲d̲e̲E̲l̲e̲m̲e̲n̲t̲s̲,̲ ̲h̲e̲,̲ ̲h̲c̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatParsingProof.lean:52:65: warning: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  simp [̵L̵i̵s̵t̵.̵a̵l̵l̵_̵c̵o̵n̵s̵,̵s̵y̵n̵t̵a̵x̵T̵e̵r̵m̵ ̵c̵,̵h̵c̵,̵h̵t̵,̵d̵e̵c̵o̵d̵e̵E̵l̵e̵m̵e̵n̵t̵s̵,̵h̵g̵,̵h̵e̵,̵h̵c̵s̵]̵[̲L̲i̲s̲t̲.̲a̲l̲l̲_̲c̲o̲n̲s̲,̲ ̲s̲y̲n̲t̲a̲x̲T̲e̲r̲m̲ ̲c̲,̲ ̲h̲c̲,̲ ̲h̲t̲,̲ ̲d̲e̲c̲o̲d̲e̲E̲l̲e̲m̲e̲n̲t̲s̲,̲ ̲h̲g̲,̲ ̲h̲c̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatParsingProof.lean:80:6: error: Tactic `rfl` failed: The left-hand side
+  do
+    let ks ← Option.map (List.map encodeTerm) none
+    let rs ← Option.map (List.map encodeTerm) none
+    let as ← Option.map (List.map encodeTerm) none
+    pure (ks, rs, as)
+is not definitionally equal to the right-hand side
+  Option.map encodePartition ((some (0, [k, r, a])).bind fun p => assembleReplacement p.fst p.snd)
+
+case some.zero.cons.cons.cons.nil.none.none.none
+n k r a : Nat
+hn : NumberedWindowArithmeticFields.decodeNode n = some (0, [k, r, a])
+⊢ (do
+      let ks ← Option.map (List.map encodeTerm) none
+      let rs ← Option.map (List.map encodeTerm) none
+      let as ← Option.map (List.map encodeTerm) none
+      pure (ks, rs, as)) =
+    Option.map encodePartition ((some (0, [k, r, a])).bind fun p => assembleReplacement p.fst p.snd)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatParsingProof.lean:80:6: error: Tactic `rfl` failed: The left-hand side
+  do
+    let ks ← Option.map (List.map encodeTerm) none
+    let rs ← Option.map (List.map encodeTerm) none
+    let as ← Option.map (List.map encodeTerm) (some val✝)
+    pure (ks, rs, as)
+is not definitionally equal to the right-hand side
+  Option.map encodePartition ((some (0, [k, r, a])).bind fun p => assembleReplacement p.fst p.snd)
+
+case some.zero.cons.cons.cons.nil.none.none.some
+n k r a : Nat
+hn : NumberedWindowArithmeticFields.decodeNode n = some (0, [k, r, a])
+val✝ : List NTerm
+⊢ (do
+      let ks ← Option.map (List.map encodeTerm) none
+      let rs ← Option.map (List.map encodeTerm) none
+      let as ← Option.map (List.map encodeTerm) (some val✝)
+      pure (ks, rs, as)) =
+    Option.map encodePartition ((some (0, [k, r, a])).bind fun p => assembleReplacement p.fst p.snd)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatParsingProof.lean:80:6: error: Tactic `rfl` failed: The left-hand side
+  do
+    let ks ← Option.map (List.map encodeTerm) none
+    let rs ← Option.map (List.map encodeTerm) (some val✝)
+    let as ← Option.map (List.map encodeTerm) none
+    pure (ks, rs, as)
+is not definitionally equal to the right-hand side
+  Option.map encodePartition ((some (0, [k, r, a])).bind fun p => assembleReplacement p.fst p.snd)
+
+case some.zero.cons.cons.cons.nil.none.some.none
+n k r a : Nat
+hn : NumberedWindowArithmeticFields.decodeNode n = some (0, [k, r, a])
+val✝ : List NTerm
+⊢ (do
+      let ks ← Option.map (List.map encodeTerm) none
+      let rs ← Option.map (List.map encodeTerm) (some val✝)
+      let as ← Option.map (List.map encodeTerm) none
+      pure (ks, rs, as)) =
+    Option.map encodePartition ((some (0, [k, r, a])).bind fun p => assembleReplacement p.fst p.snd)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatParsingProof.lean:80:6: error: Tactic `rfl` failed: The left-hand side
+  do
+    let ks ← Option.map (List.map encodeTerm) none
+    let rs ← Option.map (List.map encodeTerm) (some val✝¹)
+    let as ← Option.map (List.map encodeTerm) (some val✝)
+    pure (ks, rs, as)
+is not definitionally equal to the right-hand side
+  Option.map encodePartition ((some (0, [k, r, a])).bind fun p => assembleReplacement p.fst p.snd)
+
+case some.zero.cons.cons.cons.nil.none.some.some
+n k r a : Nat
+hn : NumberedWindowArithmeticFields.decodeNode n = some (0, [k, r, a])
+val✝¹ val✝ : List NTerm
+⊢ (do
+      let ks ← Option.map (List.map encodeTerm) none
+      let rs ← Option.map (List.map encodeTerm) (some val✝¹)
+      let as ← Option.map (List.map encodeTerm) (some val✝)
+      pure (ks, rs, as)) =
+    Option.map encodePartition ((some (0, [k, r, a])).bind fun p => assembleReplacement p.fst p.snd)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatParsingProof.lean:80:6: error: Tactic `rfl` failed: The left-hand side
+  do
+    let ks ← Option.map (List.map encodeTerm) (some val✝)
+    let rs ← Option.map (List.map encodeTerm) none
+    let as ← Option.map (List.map encodeTerm) none
+    pure (ks, rs, as)
+is not definitionally equal to the right-hand side
+  Option.map encodePartition ((some (0, [k, r, a])).bind fun p => assembleReplacement p.fst p.snd)
+
+case some.zero.cons.cons.cons.nil.some.none.none
+n k r a : Nat
+hn : NumberedWindowArithmeticFields.decodeNode n = some (0, [k, r, a])
+val✝ : List NTerm
+⊢ (do
+      let ks ← Option.map (List.map encodeTerm) (some val✝)
+      let rs ← Option.map (List.map encodeTerm) none
+      let as ← Option.map (List.map encodeTerm) none
+      pure (ks, rs, as)) =
+    Option.map encodePartition ((some (0, [k, r, a])).bind fun p => assembleReplacement p.fst p.snd)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatParsingProof.lean:80:6: error: Tactic `rfl` failed: The left-hand side
+  do
+    let ks ← Option.map (List.map encodeTerm) (some val✝¹)
+    let rs ← Option.map (List.map encodeTerm) none
+    let as ← Option.map (List.map encodeTerm) (some val✝)
+    pure (ks, rs, as)
+is not definitionally equal to the right-hand side
+  Option.map encodePartition ((some (0, [k, r, a])).bind fun p => assembleReplacement p.fst p.snd)
+
+case some.zero.cons.cons.cons.nil.some.none.some
+n k r a : Nat
+hn : NumberedWindowArithmeticFields.decodeNode n = some (0, [k, r, a])
+val✝¹ val✝ : List NTerm
+⊢ (do
+      let ks ← Option.map (List.map encodeTerm) (some val✝¹)
+      let rs ← Option.map (List.map encodeTerm) none
+      let as ← Option.map (List.map encodeTerm) (some val✝)
+      pure (ks, rs, as)) =
+    Option.map encodePartition ((some (0, [k, r, a])).bind fun p => assembleReplacement p.fst p.snd)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatParsingProof.lean:80:6: error: Tactic `rfl` failed: The left-hand side
+  do
+    let ks ← Option.map (List.map encodeTerm) (some val✝¹)
+    let rs ← Option.map (List.map encodeTerm) (some val✝)
+    let as ← Option.map (List.map encodeTerm) none
+    pure (ks, rs, as)
+is not definitionally equal to the right-hand side
+  Option.map encodePartition ((some (0, [k, r, a])).bind fun p => assembleReplacement p.fst p.snd)
+
+case some.zero.cons.cons.cons.nil.some.some.none
+n k r a : Nat
+hn : NumberedWindowArithmeticFields.decodeNode n = some (0, [k, r, a])
+val✝¹ val✝ : List NTerm
+⊢ (do
+      let ks ← Option.map (List.map encodeTerm) (some val✝¹)
+      let rs ← Option.map (List.map encodeTerm) (some val✝)
+      let as ← Option.map (List.map encodeTerm) none
+      pure (ks, rs, as)) =
+    Option.map encodePartition ((some (0, [k, r, a])).bind fun p => assembleReplacement p.fst p.snd)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatParsingProof.lean:80:6: error: Tactic `rfl` failed: The left-hand side
+  do
+    let ks ← Option.map (List.map encodeTerm) (some val✝²)
+    let rs ← Option.map (List.map encodeTerm) (some val✝¹)
+    let as ← Option.map (List.map encodeTerm) (some val✝)
+    pure (ks, rs, as)
+is not definitionally equal to the right-hand side
+  Option.map encodePartition ((some (0, [k, r, a])).bind fun p => assembleReplacement p.fst p.snd)
+
+case some.zero.cons.cons.cons.nil.some.some.some
+n k r a : Nat
+hn : NumberedWindowArithmeticFields.decodeNode n = some (0, [k, r, a])
+val✝² val✝¹ val✝ : List NTerm
+⊢ (do
+      let ks ← Option.map (List.map encodeTerm) (some val✝²)
+      let rs ← Option.map (List.map encodeTerm) (some val✝¹)
+      let as ← Option.map (List.map encodeTerm) (some val✝)
+      pure (ks, rs, as)) =
+    Option.map encodePartition ((some (0, [k, r, a])).bind fun p => assembleReplacement p.fst p.snd)

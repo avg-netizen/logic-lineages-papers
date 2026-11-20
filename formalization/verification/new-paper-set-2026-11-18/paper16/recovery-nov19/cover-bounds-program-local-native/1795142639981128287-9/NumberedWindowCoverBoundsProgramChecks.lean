@@ -1,0 +1,12 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowCoverBoundsProgramProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowCoverBoundsProgramChecks
+open NumberedWindowCoverBoundsProgramTargets
+theorem exact_MeasureProgram : MeasureProgram := NumberedWindowCoverBoundsProgramProof.measureProgram
+theorem exact_SelectedCoverProgram : SelectedCoverProgram := NumberedWindowCoverBoundsProgramProof.selectedProgram
+#print axioms exact_MeasureProgram
+#print axioms exact_SelectedCoverProgram
+end LogicLineages.PersistentMarking.NumberedWindowCoverBoundsProgramChecks

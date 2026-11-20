@@ -1,0 +1,34 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowConstructorHeadProfileProof.lean:15:66: error: Application type mismatch: The argument
+  Quotient.sound
+has type
+  ?m.11 ≈ ?m.12 → Quotient.mk ?m.10 ?m.11 = Quotient.mk ?m.10 ?m.12
+but is expected to have type
+  x✝¹.Perm x✝ → Quotient.mk addressSetoid x✝¹ = Quotient.mk addressSetoid x✝
+in the application
+  { mp := Quotient.exact, mpr := Quotient.sound }
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowConstructorHeadProfileProof.lean:56:11: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case cons
+S : Spine.Signature
+K : List Ty
+C : Spine.BoundContext
+τ : Ty
+q r : NTerm
+hk : DecisionSourceUniverse.Closed K
+C✝ : Spine.BoundContext
+σ✝ : Ty
+q✝ r✝ : NTerm
+types✝ : List Ty
+xs✝ ys✝ : NArgs
+h : Primary S K C✝ σ✝ q✝ r✝
+a✝³ : OrderedPrimary S K C✝ types✝ xs✝ ys✝
+a_ih✝ : ∀ (Γ : List Ty), C✝ = finiteC Γ → InWindow S K C✝ σ✝ q✝ → headProfile S K Γ q✝ = headProfile S K Γ r✝
+ih :
+  ∀ (Γ : List Ty),
+    C✝ = finiteC Γ →
+      BaseTyped C✝ xs✝ types✝ → ArgsGuard S K xs✝ → List.map (slot S K Γ) xs✝.toList = List.map (slot S K Γ) ys✝.toList
+Γ✝ : List Ty
+a✝² : C✝ = finiteC Γ✝
+a✝¹ : BaseTyped C✝ (NArgs.cons q✝ xs✝) (σ✝ :: types✝)
+a✝ : ArgsGuard S K (NArgs.cons q✝ xs✝)
+⊢ List.map (slot S K Γ✝) (NArgs.cons q✝ xs✝).toList = List.map (slot S K Γ✝) (NArgs.cons r✝ ys✝).toList

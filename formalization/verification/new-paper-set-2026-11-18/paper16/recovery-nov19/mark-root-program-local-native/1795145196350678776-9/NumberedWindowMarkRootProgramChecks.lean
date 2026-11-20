@@ -1,0 +1,9 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowMarkRootProgramProof
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowMarkRootProgramChecks
+open NumberedWindowMarkRootProgramTargets
+theorem exact_SimpleRootPrograms : SimpleRootPrograms := NumberedWindowMarkRootProgramProof.programs
+#print axioms exact_SimpleRootPrograms
+end LogicLineages.PersistentMarking.NumberedWindowMarkRootProgramChecks

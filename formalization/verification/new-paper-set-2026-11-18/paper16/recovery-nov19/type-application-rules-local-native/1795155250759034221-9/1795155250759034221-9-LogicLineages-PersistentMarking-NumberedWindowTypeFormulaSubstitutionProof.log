@@ -1,0 +1,18 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowTypeFormulaSubstitutionProof.lean:57:64: error: unsolved goals
+α β : Type
+p : Program 3
+σ τ : Ty
+q u v : OTerm α
+ts : α → OTerm β
+⊢ (accepts p (Term.subst q ts) (Term.subst u ts) (Term.subst v ts) ⟹
+      (BoundedFormula.subst (formula p σ u) fun i => emb (ts i)) ⟹
+        BoundedFormula.subst (formula p τ v) fun i => emb (ts i)) =
+    (accepts p (Term.subst q ts) (Term.subst u ts) (Term.subst v ts)).imp
+      ((formula p σ (Term.subst u ts)).imp (formula p τ (Term.subst v ts)))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowTypeFormulaSubstitutionProof.lean:58:48: warning: This simp argument is unused:
+  substitution
+
+Hint: Omit it from the simp argument list.
+  simp only [condition, impSubst, acceptsSubst,̵ ̵s̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

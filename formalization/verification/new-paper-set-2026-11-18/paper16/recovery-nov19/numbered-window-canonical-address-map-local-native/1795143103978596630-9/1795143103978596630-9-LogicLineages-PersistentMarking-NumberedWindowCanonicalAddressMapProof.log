@@ -1,0 +1,19 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowCanonicalAddressMapProof.lean:31:65: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  { context := Γ, result := τ, least := classCode hk q }.least
+in the target expression
+  ActualCodeAt S K Γ τ (classCode hk q) r
+
+S : Spine.Signature
+K Γ : List Ty
+τ : Ty
+hk : DecisionSourceUniverse.Closed K
+q r : Class S K (finiteC Γ) τ
+equality : classAddress hk q = classAddress hk r
+fieldEq :
+  { context := Γ, result := τ, least := classCode hk q } = { context := Γ, result := τ, least := classCode hk r }
+sameCode :
+  { context := Γ, result := τ, least := classCode hk q }.least =
+    { context := Γ, result := τ, least := classCode hk r }.least
+cq : ActualCodeAt S K Γ τ (classCode hk q) q
+cr : ActualCodeAt S K Γ τ (classCode hk r) r
+⊢ ActualCodeAt S K Γ τ (classCode hk q) r

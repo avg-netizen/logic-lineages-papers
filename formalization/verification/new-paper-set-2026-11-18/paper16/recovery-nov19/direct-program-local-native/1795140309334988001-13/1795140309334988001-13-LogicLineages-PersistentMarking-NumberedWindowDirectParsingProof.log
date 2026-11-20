@@ -1,0 +1,37 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowDirectParsingProof.lean:55:26: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only ̵[̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowDirectParsingProof.lean:58:0: warning: `both`: universes `u_1`, `u_2` only occur together. This usually means there is a `max` expression in the type where none of these universes appear on their own.
+
+Note: This linter can be disabled with `set_option linter.checkUnivs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowDirectParsingProof.lean:87:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  List.foldr (fun b s => addEntry (xs, b, s).2.1 (xs, b, s).2.2) (some []) (id xs)
+in the target expression
+  addEntry n (List.foldr addEntry (some []) xs) = entries (n :: xs)
+
+case cons
+consPrim : Primrec fun p => p.1 :: p.2
+addPrim : Primrec₂ addEntry
+foldPrim : Primrec fun a => List.foldr (fun b s => addEntry (a, b, s).2.1 (a, b, s).2.2) (some []) (id a)
+n : ℕ
+xs : List ℕ
+ih : List.foldr (fun b s => addEntry (xs, b, s).2.1 (xs, b, s).2.2) (some []) (id xs) = entries xs
+⊢ addEntry n (List.foldr addEntry (some []) xs) = entries (n :: xs)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowDirectParsingProof.lean:108:17: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only ̵[̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowDirectParsingProof.lean:118:19: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only [O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵ ̵fromFields, both]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

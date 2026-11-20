@@ -1,0 +1,230 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:19:37: error: unsolved goals
+a c b : Nat
+t : Ty
+x d : Nat
+x✝ : encodeTerm (NTerm.free t x) + d ≤ b
+⊢ (computed a c b (NumberedWindowFieldAlgorithm.packNode 0 [encodeTy t, x]) d).fst =
+    NumberedWindowFieldAlgorithm.packNode 0 [encodeTy t, x]
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:19:37: error: unsolved goals
+a c b : Nat
+t : Ty
+d : Nat
+x✝ : encodeTerm (NTerm.bottom t) + d ≤ b
+⊢ (computed a c b (NumberedWindowFieldAlgorithm.packNode 3 [encodeTy t]) d).fst =
+    NumberedWindowFieldAlgorithm.packNode 3 [encodeTy t]
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:21:22: error: unsolved goals
+a c b : Nat
+t : Ty
+i d : Nat
+x✝ : encodeTerm (NTerm.bound t i) + d ≤ b
+⊢ (computed a c b (NumberedWindowFieldAlgorithm.packNode 1 [encodeTy t, i]) d).fst =
+    NumberedWindowFieldAlgorithm.packNode 1 [encodeTy t, if i < c + d then i else i + a]
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:23:20: error: unsolved goals
+a c b : Nat
+t : Ty
+q : NTerm
+d : Nat
+fs : List Nat := [encodeTy t, encodeTerm q]
+hCode : encodeTerm q < encodeNode 2 fs
+h : encodeNode 2 fs + d ≤ b
+hChild : encodeTerm q + (d + 1) ≤ b
+ec : earlier (table a c b (encodeNode 2 fs)) (encodeTerm q) (d + 1) = computed a c b (encodeTerm q) (d + 1)
+⊢ NumberedWindowFieldAlgorithm.packNode 2
+      [encodeTy t,
+        (earlier (table a c b (NumberedWindowFieldAlgorithm.packNode 2 [encodeTy t, encodeTerm q])) (encodeTerm q)
+            (d + 1)).fst] =
+    NumberedWindowFieldAlgorithm.packNode 2 [encodeTy t, encodeTerm (shift a (c + (d + 1)) q)]
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:33:26: error: unsolved goals
+a c b : Nat
+f : Head
+bs : NArgs
+d : Nat
+fs : List Nat := [encodeHead f, encodeArgs bs]
+hCode : encodeArgs bs < encodeNode 4 fs
+h : encodeNode 4 fs + d ≤ b
+ec : earlier (table a c b (encodeNode 4 fs)) (encodeArgs bs) d = computed a c b (encodeArgs bs) d
+⊢ NumberedWindowFieldAlgorithm.packNode 4
+      [encodeHead f,
+        (earlier (table a c b (NumberedWindowFieldAlgorithm.packNode 4 [encodeHead f, encodeArgs bs])) (encodeArgs bs)
+            d).snd] =
+    NumberedWindowFieldAlgorithm.packNode 4 [encodeHead f, encodeArgs (shiftArgs a (c + d) bs)]
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:42:33: error: unsolved goals
+a c b : Nat
+f : Head
+t : Ty
+k : Nat
+bs es : NArgs
+d : Nat
+fs : List Nat := [encodeHead f, encodeTy t, k, encodeArgs bs, encodeArgs es]
+hBs : encodeArgs bs < encodeNode 5 fs
+hEs : encodeArgs es < encodeNode 5 fs
+h : encodeNode 5 fs + d ≤ b
+eb : earlier (table a c b (encodeNode 5 fs)) (encodeArgs bs) d = computed a c b (encodeArgs bs) d
+ee : earlier (table a c b (encodeNode 5 fs)) (encodeArgs es) d = computed a c b (encodeArgs es) d
+⊢ NumberedWindowFieldAlgorithm.packNode 5
+      [encodeHead f, encodeTy t, k,
+        (earlier
+            (table a c b
+              (NumberedWindowFieldAlgorithm.packNode 5 [encodeHead f, encodeTy t, k, encodeArgs bs, encodeArgs es]))
+            (encodeArgs bs) d).snd,
+        (earlier
+            (table a c b
+              (NumberedWindowFieldAlgorithm.packNode 5 [encodeHead f, encodeTy t, k, encodeArgs bs, encodeArgs es]))
+            (encodeArgs es) d).snd] =
+    NumberedWindowFieldAlgorithm.packNode 5
+      [encodeHead f, encodeTy t, k, encodeArgs (shiftArgs a (c + d) bs), encodeArgs (shiftArgs a (c + d) es)]
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:53:27: error: unsolved goals
+a c b : Nat
+s t : Ty
+q u : NTerm
+d : Nat
+fs : List Nat := [encodeTy s, encodeTy t, encodeTerm q, encodeTerm u]
+hQ : encodeTerm q < encodeNode 6 fs
+hU : encodeTerm u < encodeNode 6 fs
+h : encodeNode 6 fs + d ≤ b
+eq : earlier (table a c b (encodeNode 6 fs)) (encodeTerm q) d = computed a c b (encodeTerm q) d
+eu : earlier (table a c b (encodeNode 6 fs)) (encodeTerm u) d = computed a c b (encodeTerm u) d
+⊢ NumberedWindowFieldAlgorithm.packNode 6
+      [encodeTy s, encodeTy t,
+        (earlier
+            (table a c b (NumberedWindowFieldAlgorithm.packNode 6 [encodeTy s, encodeTy t, encodeTerm q, encodeTerm u]))
+            (encodeTerm q) d).fst,
+        (earlier
+            (table a c b (NumberedWindowFieldAlgorithm.packNode 6 [encodeTy s, encodeTy t, encodeTerm q, encodeTerm u]))
+            (encodeTerm u) d).fst] =
+    NumberedWindowFieldAlgorithm.packNode 6
+      [encodeTy s, encodeTy t, encodeTerm (shift a (c + d) q), encodeTerm (shift a (c + d) u)]
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:20:21: warning: This simp argument is unused:
+  computedNode
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵c̵o̵m̵p̵u̵t̵e̵d̵N̵o̵d̵e̵,̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵s̵h̵i̵f̵t̵,̵e̵n̵c̵o̵d̵e̵P̵a̵c̵k̵]̵[̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲s̲h̲i̲f̲t̲,̲ ̲e̲n̲c̲o̲d̲e̲P̲a̲c̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:20:34: warning: This simp argument is unused:
+  termParts
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵c̵o̵m̵p̵u̵t̵e̵d̵N̵o̵d̵e̵,̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵s̵h̵i̵f̵t̵,̵e̵n̵c̵o̵d̵e̵P̵a̵c̵k̵]̵[̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲c̲o̲m̲p̲u̲t̲e̲d̲N̲o̲d̲e̲,̲ ̲s̲h̲i̲f̲t̲,̲ ̲e̲n̲c̲o̲d̲e̲P̲a̲c̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:22:21: warning: This simp argument is unused:
+  computedNode
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵c̵o̵m̵p̵u̵t̵e̵d̵N̵o̵d̵e̵,̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵s̵h̵i̵f̵t̵,̵e̵n̵c̵o̵d̵e̵P̵a̵c̵k̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵]̵[̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲s̲h̲i̲f̲t̲,̲ ̲e̲n̲c̲o̲d̲e̲P̲a̲c̲k̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:22:34: warning: This simp argument is unused:
+  termParts
+
+Hint: Omit it from the simp argument list.
+  simp [encodeTerm, ̲computedNode,t̵e̵r̵m̵P̵a̵r̵t̵ ̲s,̵s̵hift, ̲encodePack, ̲List.getD_eq_getElem?_getD]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:22:61: warning: This simp argument is unused:
+  List.getD_eq_getElem?_getD
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵c̵o̵m̵p̵u̵t̵e̵d̵N̵o̵d̵e̵,̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵s̵h̵i̵f̵t̵,̵e̵n̵c̵o̵d̵e̵P̵a̵c̵k̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵]̵[̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲c̲o̲m̲p̲u̲t̲e̲d̲N̲o̲d̲e̲,̲ ̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲s̲h̲i̲f̲t̲,̲ ̲e̲n̲c̲o̲d̲e̲P̲a̲c̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:31:50: warning: This simp argument is unused:
+  ec
+
+Hint: Omit it from the simp argument list.
+  simp [termParts, ̲List.getD_eq_getElem?_getD, ̲fs,e̵c̵,̵ ̲term a c b q (d ̲+ ̲1) hChild, ̲shift,
+  ̵  ̵ ̵ ̵ ̵ ̵encodeTerm,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲encodePack, ̲Nat.add_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:31:53: warning: This simp argument is unused:
+  term a c b q (d + 1) hChild
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵f̵s̵,̵e̵c̵,̵t̵e̵r̵m̵ ̵a̵ ̵c̵ ̵b̵ ̵q̵ ̵(̵d̵+̵1̵)̵ ̵h̵C̵h̵i̵l̵d̵,̵s̵h̵i̵f̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵e̵n̵c̵o̵d̵e̵P̵a̵c̵k̵,̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵]̵[̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲f̲s̲,̲ ̲e̲c̲,̲ ̲s̲h̲i̲f̲t̲,̲ ̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲e̲n̲c̲o̲d̲e̲P̲a̲c̲k̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲a̲s̲s̲o̲c̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:40:50: warning: This simp argument is unused:
+  ec
+
+Hint: Omit it from the simp argument list.
+  simp [termParts, ̲List.getD_eq_getElem?_getD, ̲fs,e̵c̵,̵ ̲args a c b bs d (by omega), ̲shift,
+  ̵  ̵ ̵ ̵ ̵ ̵encodeTerm,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲encodePack]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:40:53: warning: This simp argument is unused:
+  args a c b bs d (by omega)
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵f̵s̵,̵e̵c̵,̵a̵r̵g̵s̵ ̵a̵ ̵c̵ ̵b̵ ̵b̵s̵ ̵d̵ ̵(̵b̵y̵ ̵o̵m̵e̵g̵a̵)̵,̵s̵h̵i̵f̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵e̵n̵c̵o̵d̵e̵P̵a̵c̵k̵]̵[̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲f̲s̲,̲ ̲e̲c̲,̲ ̲s̲h̲i̲f̲t̲,̲ ̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲e̲n̲c̲o̲d̲e̲P̲a̲c̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:51:50: warning: This simp argument is unused:
+  eb
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵f̵s̵,̵e̵b̵,̵e̵e̵,̵[̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲f̲s̲,̲ ̲e̲e̲,̲ args a c b b̵s̵ ̵d̵ ̵(̵b̵y̵ ̵o̵m̵e̵g̵a̵)̵,̵a̵r̵g̵s̵ ̵a̵ ̵c̵ ̵b̵b̲s̲ ̲d̲ ̲(̲b̲y̲ ̲o̲m̲e̲g̲a̲)̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲a̲r̲g̲s̲ ̲a̲ ̲c̲ ̲b̲ es d (by o̵m̵e̵g̵a̵)̵,̵s̵h̵i̵f̵t̵,̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵e̵n̵c̵o̵d̵e̵P̵a̵c̵k̵]̵o̲m̲e̲g̲a̲)̲,̲ ̲s̲h̲i̲f̲t̲,̲ ̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲e̲n̲c̲o̲d̲e̲P̲a̲c̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:51:53: warning: This simp argument is unused:
+  ee
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵f̵s̵,̵e̵b̵,̵e̵e̵,̵[̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲f̲s̲,̲ ̲e̲b̲,̲ args a c b b̵s̵ ̵d̵ ̵(̵b̵y̵ ̵o̵m̵e̵g̵a̵)̵,̵a̵r̵g̵s̵ ̵a̵ ̵c̵ ̵b̵b̲s̲ ̲d̲ ̲(̲b̲y̲ ̲o̲m̲e̲g̲a̲)̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲a̲r̲g̲s̲ ̲a̲ ̲c̲ ̲b̲ es d (by o̵m̵e̵g̵a̵)̵,̵s̵h̵i̵f̵t̵,̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵e̵n̵c̵o̵d̵e̵P̵a̵c̵k̵]̵o̲m̲e̲g̲a̲)̲,̲ ̲s̲h̲i̲f̲t̲,̲ ̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲e̲n̲c̲o̲d̲e̲P̲a̲c̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:52:6: warning: This simp argument is unused:
+  args a c b bs d (by omega)
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵f̵s̵,̵e̵b̵,̵e̵e̵,̵[̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲f̲s̲,̲ ̲e̲b̲,̲ ̲e̲e̲,̲ args a c b b̵s̵ ̵d̵ ̵(̵b̵y̵ ̵o̵m̵e̵g̵a̵)̵,̵a̵r̵g̵s̵ ̵a̵ ̵c̵ ̵b̵ ̵es d (by o̵m̵e̵g̵a̵)̵,̵s̵h̵i̵f̵t̵,̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵e̵n̵c̵o̵d̵e̵P̵a̵c̵k̵]̵o̲m̲e̲g̲a̲)̲,̲ ̲s̲h̲i̲f̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲e̲n̲c̲o̲d̲e̲P̲a̲c̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:52:33: warning: This simp argument is unused:
+  args a c b es d (by omega)
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵f̵s̵,̵e̵b̵,̵e̵e̵,̵[̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲f̲s̲,̲ ̲e̲b̲,̲ ̲e̲e̲,̲ args a c b bs d (by o̵m̵e̵g̵a̵)̵,̵a̵r̵g̵s̵ ̵a̵ ̵c̵ ̵b̵ ̵e̵s̵ ̵d̵ ̵(̵b̵y̵ ̵o̵m̵e̵g̵a̵)̵,̵s̵h̵i̵f̵t̵,̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵e̵n̵c̵o̵d̵e̵P̵a̵c̵k̵]̵o̲m̲e̲g̲a̲)̲,̲ ̲s̲h̲i̲f̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲e̲n̲c̲o̲d̲e̲P̲a̲c̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:62:50: warning: This simp argument is unused:
+  eq
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵f̵s̵,̵e̵q̵,̵e̵u̵,̵[̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲f̲s̲,̲ ̲e̲u̲,̲ term a c b q d (by o̵m̵e̵g̵a̵)̵,̵t̵e̵r̵m̵o̲m̲e̲g̲a̲)̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲t̲e̲r̲m̲ a c b u d (by o̵m̵e̵g̵a̵)̵,̵s̵h̵i̵f̵t̵,̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵e̵n̵c̵o̵d̵e̵P̵a̵c̵k̵]̵o̲m̲e̲g̲a̲)̲,̲ ̲s̲h̲i̲f̲t̲,̲ ̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲e̲n̲c̲o̲d̲e̲P̲a̲c̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:62:53: warning: This simp argument is unused:
+  eu
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵f̵s̵,̵e̵q̵,̵e̵u̵,̵[̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲f̲s̲,̲ ̲e̲q̲,̲ term a c b q d (by o̵m̵e̵g̵a̵)̵,̵t̵e̵r̵m̵o̲m̲e̲g̲a̲)̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲t̲e̲r̲m̲ a c b u d (by o̵m̵e̵g̵a̵)̵,̵s̵h̵i̵f̵t̵,̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵e̵n̵c̵o̵d̵e̵P̵a̵c̵k̵]̵o̲m̲e̲g̲a̲)̲,̲ ̲s̲h̲i̲f̲t̲,̲ ̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲e̲n̲c̲o̲d̲e̲P̲a̲c̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:63:6: warning: This simp argument is unused:
+  term a c b q d (by omega)
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵f̵s̵,̵e̵q̵,̵e̵u̵,̵[̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲f̲s̲,̲ ̲e̲q̲,̲ ̲e̲u̲,̲ term a c b q̵ ̵d̵ ̵(̵b̵y̵ ̵o̵m̵e̵g̵a̵)̵,̵t̵e̵r̵m̵ ̵a̵ ̵c̵ ̵b̵ ̵u d (by o̵m̵e̵g̵a̵)̵,̵s̵h̵i̵f̵t̵,̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵e̵n̵c̵o̵d̵e̵P̵a̵c̵k̵]̵o̲m̲e̲g̲a̲)̲,̲ ̲s̲h̲i̲f̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲e̲n̲c̲o̲d̲e̲P̲a̲c̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftProof.lean:63:32: warning: This simp argument is unused:
+  term a c b u d (by omega)
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵L̵i̵s̵t̵.̵g̵e̵t̵D̵_̵e̵q̵_̵g̵e̵t̵E̵l̵e̵m̵?̵_̵g̵e̵t̵D̵,̵f̵s̵,̵e̵q̵,̵e̵u̵,̵[̲t̲e̲r̲m̲P̲a̲r̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲g̲e̲t̲D̲_̲e̲q̲_̲g̲e̲t̲E̲l̲e̲m̲?̲_̲g̲e̲t̲D̲,̲ ̲f̲s̲,̲ ̲e̲q̲,̲ ̲e̲u̲,̲ term a c b q d (by o̵m̵e̵g̵a̵)̵,̵t̵e̵r̵m̵ ̵a̵ ̵c̵ ̵b̵ ̵u̵ ̵d̵ ̵(̵b̵y̵ ̵o̵m̵e̵g̵a̵)̵,̵s̵h̵i̵f̵t̵,̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵e̵n̵c̵o̵d̵e̵P̵a̵c̵k̵]̵o̲m̲e̲g̲a̲)̲,̲ ̲s̲h̲i̲f̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲ ̲e̲n̲c̲o̲d̲e̲P̲a̲c̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,14 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowFieldProgramProof
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowFieldProgramChecks
+open NumberedWindowFieldProgramTargets
+
+theorem exact_OrderedFieldPrograms : OrderedFieldPrograms := NumberedWindowFieldProgramProof.fields
+theorem exact_TaggedNodePrograms : TaggedNodePrograms := NumberedWindowFieldProgramProof.nodes
+
+#print axioms exact_OrderedFieldPrograms
+#print axioms exact_TaggedNodePrograms
+end LogicLineages.PersistentMarking.NumberedWindowFieldProgramChecks

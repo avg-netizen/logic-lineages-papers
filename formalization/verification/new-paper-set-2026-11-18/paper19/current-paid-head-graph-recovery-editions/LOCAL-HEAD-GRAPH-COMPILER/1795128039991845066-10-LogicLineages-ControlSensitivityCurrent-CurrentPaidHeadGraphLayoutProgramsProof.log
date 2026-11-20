@@ -1,0 +1,57 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProgramsProof.lean:34:57: error: typeclass instance problem is stuck
+  Primcodable (List ℕ × ?m.137)
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `Primcodable` contains metavariables. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProgramsProof.lean:51:33: error(lean.invalidField): Invalid field `to₂`: The environment does not contain `Function.to₂`, so it is not possible to project the field `to₂` from an expression
+  Primrec₂.comp orProgram Primrec.snd
+of type
+  Primrec ?m.59 → Primrec fun a => MatrixCode.either a.2 (?m.59 a)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProgramsProof.lean:113:17: error: unsolved goals
+case cons
+ends : ℕ × ℕ
+x : ℕ
+xs : List ℕ
+ih :
+  ∀ (i : ℕ),
+    indexedList 1 prefixCell (ends, i, xs).1 (ends, i, xs).2.1 (ends, i, xs).2.2 =
+      prefixBody rawLayout (ends, i, xs).1.1 (ends, i, xs).1.2 (ends, i, xs).2.1 (ends, i, xs).2.2
+i : ℕ
+⊢ MatrixCode.either
+      (MatrixCode.both (MatrixCode.eq (MatrixCode.var ends.1) (MatrixCode.lit i))
+        (MatrixCode.eq (MatrixCode.var ends.2) (MatrixCode.lit x)))
+      (prefixBody rawLayout (ends, i + 1, xs).1.1 (ends, i + 1, xs).1.2 (ends, i + 1, xs).2.1 (ends, i + 1, xs).2.2) =
+    MatrixCode.either
+      (MatrixCode.both (MatrixCode.eq (MatrixCode.var ends.1) (MatrixCode.lit i))
+        (MatrixCode.eq (MatrixCode.var ends.2) (MatrixCode.lit x)))
+      (prefixBody
+        { var := MatrixCode.var, lit := MatrixCode.lit, add := MatrixCode.add,
+          succCall :=
+            MatrixCode.unary
+              (RawSourceDAG.encode
+                ⟨[], ⟨OrdinalComparison.Source.Ty.ground.arrow OrdinalComparison.Source.Ty.ground, actualS⟩⟩),
+          eq := MatrixCode.eq, le := MatrixCode.le, and := MatrixCode.both, or := MatrixCode.either, yes := 0, no := 1 }
+        ends.1 ends.2 (i + 1) xs)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProgramsProof.lean:128:17: error: unsolved goals
+case cons
+combine : ℕ → ℕ → ℕ → ℕ → ℕ :=
+  fun x i x_1 rest => MatrixCode.both (MatrixCode.eq (MatrixCode.var i) (MatrixCode.lit x_1)) rest
+h : Primrec fun q => combine q.1 q.2.1 q.2.2.1 q.2.2.2
+x : ℕ
+xs : List ℕ
+ih :
+  ∀ (i : ℕ),
+    indexedList 0 combine (0, id (i, xs)).1 (0, id (i, xs)).2.1 (0, id (i, xs)).2.2 = pinCode (i, xs).1 (i, xs).2
+i : ℕ
+⊢ MatrixCode.both (MatrixCode.eq (MatrixCode.var i) (MatrixCode.lit x))
+      (indexedList 0 (fun x i x_1 rest => MatrixCode.both (MatrixCode.eq (MatrixCode.var i) (MatrixCode.lit x_1)) rest)
+        0 (i + 1) xs) =
+    MatrixCode.both (MatrixCode.eq (MatrixCode.var i) (MatrixCode.lit x)) (pinCode (i + 1) xs)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProgramsProof.lean:128:54: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp [indexedList, ̲pinCode, ̲combine,̵i̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

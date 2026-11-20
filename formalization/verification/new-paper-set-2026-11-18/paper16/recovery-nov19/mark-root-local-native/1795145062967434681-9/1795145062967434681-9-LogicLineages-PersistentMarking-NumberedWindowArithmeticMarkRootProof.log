@@ -1,0 +1,10 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticMarkRootProof.lean:38:2: error: Type mismatch
+  NumberedWindowArithmeticExchangeAtomsChecks.exact_LiteralEquality.left ?m.20 ?m.21
+has type
+  @BEq.beq Nat instBEqOfDecidableEq (encodeTerm ?m.20) (encodeTerm ?m.21) =
+    NumberedWindowLiteralEquality.termEq ?m.20 ?m.21
+but is expected to have type
+  @BEq.beq Nat instBEqOfDecidableEq
+      (NumberedWindowFieldAlgorithm.packNode 5 [encodeHead f, encodeTy t, k, encodeArgs bs, encodeArgs es])
+      (encodeTerm r) =
+    NumberedWindowLiteralEquality.termEq (NTerm.numbered f t k bs es) r

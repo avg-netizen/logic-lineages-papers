@@ -1,0 +1,42 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressApplicationDecodeProof.lean:72:10: error: `simp` made no progress
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressApplicationDecodeProof.lean:90:21: error: unsolved goals
+S : Spine.Signature
+K : List Ty
+source argument : Nat
+Γ : List Ty
+i : Nat
+Δ : List Ty
+ty : Ty
+j : Nat
+σ τ : Ty
+invalid :
+  ¬(NumberedWindowScalarAlgorithm.canonical (fixed S K) (List.map encodeTy Γ, encodeTy (σ.arrow τ), i) &&
+            NumberedWindowScalarAlgorithm.canonical (fixed S K) (List.map encodeTy Δ, encodeTy ty, j) &&
+          decide (Γ = Δ) &&
+        decide (σ = ty)) =
+      true
+⊢ canonicalBit S K { context := Γ, result := σ.arrow τ, least := i } = true →
+    canonicalBit S K { context := Δ, result := ty, least := j } = true →
+      Γ = Δ →
+        σ = ty →
+          none =
+            (decodeTerm i).bind fun Q =>
+              (decodeTerm j).bind fun U =>
+                Option.map (fun k => encodeAddress { context := Γ, result := τ, least := k })
+                  (NumberedWindowArithmeticLeastClass.leastCode S K Γ τ (NumberedWindowSyntax.NTerm.auxApp σ τ Q U))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressApplicationDecodeProof.lean:69:10: warning: This simp argument is unused:
+  canonicalView
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵e̵q̵_̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵a̵p̵p̵l̵y̵A̵d̵d̵r̵e̵s̵s̵e̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵c̵a̵n̵o̵n̵i̵c̵a̵l̵V̵i̵e̵w̵,̵a̵d̵d̵r̵e̵s̵s̵,̵a̵r̵r̵o̵w̵,̵t̵y̵p̵e̵E̵q̵,̵c̵o̵n̵t̵e̵x̵t̵E̵q̵]̵[̲O̲p̲t̲i̲o̲n̲.̲m̲a̲p̲_̲s̲o̲m̲e̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲e̲q̲_̲b̲i̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲a̲p̲p̲l̲y̲A̲d̲d̲r̲e̲s̲s̲e̲s̲,̲ ̲a̲d̲d̲r̲e̲s̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲a̲r̲r̲o̲w̲,̲ ̲t̲y̲p̲e̲E̲q̲,̲ ̲c̲o̲n̲t̲e̲x̲t̲E̲q̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressApplicationDecodeProof.lean:90:30: warning: This simp argument is unused:
+  invalid
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵i̵n̵v̵a̵l̵i̵d̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

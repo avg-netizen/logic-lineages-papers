@@ -1,0 +1,91 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSingletonTableProof.lean:5:67: error: unexpected token '('; expected command
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSingletonTableProof.lean:12:13: error: Ambiguous term
+  table
+Possible interpretations:
+  NumberedWindowShiftAlgorithm.table inserted depth bound n : Table
+  
+  NumberedWindowSingletonAlgorithm.table inserted depth bound n : Table
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSingletonTableProof.lean:12:57: error: Ambiguous term
+  computed
+Possible interpretations:
+  NumberedWindowShiftAlgorithm.computed inserted depth bound code offset : Row
+  
+  NumberedWindowSingletonAlgorithm.computed inserted depth bound code offset : Row
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSingletonTableProof.lean:13:52: error: Ambiguous term
+  table
+Possible interpretations:
+  NumberedWindowShiftAlgorithm.table inserted depth bound : Nat → Table
+  
+  NumberedWindowSingletonAlgorithm.table inserted depth bound : Nat → Table
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSingletonTableProof.lean:14:26: error: Ambiguous term
+  next
+Possible interpretations:
+  NumberedWindowShiftAlgorithm.next inserted depth offset code t : Row
+  
+  NumberedWindowSingletonAlgorithm.next inserted depth offset code t : Row
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSingletonTableProof.lean:18:6: error: overloaded, errors 
+  18:17 Ambiguous term
+    table
+  Possible interpretations:
+    NumberedWindowShiftAlgorithm.table a c b (encodeNode tag fs) : Table
+    
+    NumberedWindowSingletonAlgorithm.table a c b (encodeNode tag fs) : Table
+  
+  18:17 Ambiguous term
+    table
+  Possible interpretations:
+    NumberedWindowShiftAlgorithm.table a c b (encodeNode tag fs) : Table
+    
+    NumberedWindowSingletonAlgorithm.table a c b (encodeNode tag fs) : Table
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSingletonTableProof.lean:17:5: error: Ambiguous term
+  computed
+Possible interpretations:
+  NumberedWindowShiftAlgorithm.computed a c b (encodeNode tag fs) d : Row
+  
+  NumberedWindowSingletonAlgorithm.computed a c b (encodeNode tag fs) d : Row
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSingletonTableProof.lean:19:8: error: Ambiguous term
+  computed
+Possible interpretations:
+  NumberedWindowShiftAlgorithm.computed : Nat → Nat → Nat → Nat → Nat → Row
+  
+  NumberedWindowSingletonAlgorithm.computed : Nat → Nat → Nat → Nat → Nat → Row
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSingletonTableProof.lean:19:17: error: Ambiguous term
+  next
+Possible interpretations:
+  NumberedWindowShiftAlgorithm.next : Nat → Nat → Nat → Nat → Table → Row
+  
+  NumberedWindowSingletonAlgorithm.next : Nat → Nat → Nat → Nat → Table → Row
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSingletonTableProof.lean:19:22: warning: This simp argument is unused:
+  ← exact_ExactTaggedNodeCodec.2
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵o̵m̵p̵u̵t̵e̵d̵,̵n̵e̵x̵t̵,̵←̵ ̵e̵x̵a̵c̵t̵_̵E̵x̵a̵c̵t̵T̵a̵g̵g̵e̵d̵N̵o̵d̵e̵C̵o̵d̵e̵c̵.̵2̵,̵n̵o̵d̵e̵R̵o̵u̵n̵d̵]̵[̲c̲o̲m̲p̲u̲t̲e̲d̲,̲ ̲n̲e̲x̲t̲,̲ ̲n̲o̲d̲e̲R̲o̲u̲n̲d̲]̲
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSingletonTableProof.lean:19:53: warning: This simp argument is unused:
+  nodeRound
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵o̵m̵p̵u̵t̵e̵d̵,̵n̵e̵x̵t̵,̵←̵ ̵e̵x̵a̵c̵t̵_̵E̵x̵a̵c̵t̵T̵a̵g̵g̵e̵d̵N̵o̵d̵e̵C̵o̵d̵e̵c̵.̵2̵,̵n̵o̵d̵e̵R̵o̵u̵n̵d̵]̵[̲c̲o̲m̲p̲u̲t̲e̲d̲,̲ ̲n̲e̲x̲t̲,̲ ̲←̲ ̲e̲x̲a̲c̲t̲_̲E̲x̲a̲c̲t̲T̲a̲g̲g̲e̲d̲N̲o̲d̲e̲C̲o̲d̲e̲c̲.̲2̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSingletonTableProof.lean:22:5: error: Ambiguous term
+  computed
+Possible interpretations:
+  NumberedWindowShiftAlgorithm.computed a c b (pair q r + 1) d : Row
+  
+  NumberedWindowSingletonAlgorithm.computed a c b (pair q r + 1) d : Row
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSingletonTableProof.lean:23:12: error: Ambiguous term
+  computed
+Possible interpretations:
+  NumberedWindowShiftAlgorithm.computed a c b q d : Row
+  
+  NumberedWindowSingletonAlgorithm.computed a c b q d : Row
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticSingletonTableProof.lean:23:35: error: Ambiguous term
+  computed
+Possible interpretations:
+  NumberedWindowShiftAlgorithm.computed a c b r d : Row
+  
+  NumberedWindowSingletonAlgorithm.computed a c b r d : Row
