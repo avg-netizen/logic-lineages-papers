@@ -1,0 +1,25 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchObjectTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchArrowProof
+public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchObjectChecks
+open NumberedWindowInternalFreshProbeDispatchObjectTargets
+
+theorem exact_ProbeDispatchGraph : ExactProbeDispatchGraph :=
+  NumberedWindowInternalFreshProbeDispatchObjectGraphProof.dispatchGraph
+
+theorem exact_ProbeDispatchReject : ExactProbeDispatchReject :=
+  NumberedWindowInternalFreshProbeDispatchObjectGraphProof.dispatchReject
+
+theorem exact_ProbeArrowBranch : ExactProbeArrowBranch :=
+  NumberedWindowInternalFreshProbeDispatchArrowProof.arrowBranch
+
+theorem exact_ProbeTypedTotal : ExactProbeTypedTotal :=
+  NumberedWindowInternalFreshProbeDispatchArrowProof.typedTotal
+
+#print axioms exact_ProbeDispatchGraph
+#print axioms exact_ProbeDispatchReject
+#print axioms exact_ProbeArrowBranch
+#print axioms exact_ProbeTypedTotal
+end LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchObjectChecks

@@ -1,0 +1,7 @@
+# Independent original source-window support review
+
+Read the full exact2 target and proof. Successful raw typed tests unpack unchanged scalar/address predicates, canonical least representative and finiteWindowBit to genuine source InWindow root membership. Existing formulaType is related to literal source result encoding by direct source type recursion and actual pair equality. Original Closed yields the mapped right child. No admission premise is added to the all-raw successful-test implication, and window order/duplicates remain unchanged.
+
+The old full exact3 root is preserved resource-stopped in an existing broad address decoder. This materially smaller exact2 root removes the #613 proof dependency and independently proves only the same source support and child closure clauses. Its ordinary Bool proposition-equality rewrite repair is preserved/invertible and changes no statement. Actual core gate1795163827559666075-6 passed original1536MiBheap/512MiBRSS/free768MiB,90CPU/180wall/one thread. Independently replayed214current modules, exact2 standard-only audits,84 source pins and original core input/compiler/object/native receipts. Only foreign local source is the previously pinned SourceTypes module; no mathlib imports or widened resource limit. Full referenced native closure archived.
+
+No full ValidWindow, typed-object totality, fresh-variable computability or numbered promotion. Historical accepted #613 is not a new native import pass in this packet.

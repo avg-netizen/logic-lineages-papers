@@ -2,6 +2,7 @@ module
 public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldBranchesProof
 public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePairChecks
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalStrongInductionProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphChoiceProof
 
 @[expose] public section
 namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldInductionProof

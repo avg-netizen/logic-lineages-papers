@@ -18,8 +18,7 @@ theorem exact_AllInputDecoder : AllInputDecoder := by
   intro n
   rw [← floorAgrees n]
   obtain ⟨left,right⟩ := exact_CandidateValues n
-  unfold chosenDecode floorDecode
-  rw [exact_GuardValue n,left,right]
+  simp only [chosenDecode,floorDecode,exact_GuardValue n,left,right]
   by_cases h : n - Nat.sqrt n * Nat.sqrt n ≤ Nat.sqrt n <;> simp [h]
 
 #print axioms exact_CandidateValues

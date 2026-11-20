@@ -35,7 +35,8 @@ theorem exact_OriginalTypeSupport : ExactOriginalTypeSupport := by
   intro S K t q ht
   change (scalar (fixed S K) q &&
     (NumberedWindowAddressAlgorithm.addressView q).any (fun a => a.2.1 == t)) = true at ht
-  obtain ⟨hs,hv⟩ := Bool.and_eq_true.mp ht
+  simp only [Bool.and_eq_true] at ht
+  obtain ⟨hs,hv⟩ := ht
   rw [exact_ScalarAddress S K] at hs
   rw [exact_ExactAddressView] at hv
   cases ha : decodeAddress q with

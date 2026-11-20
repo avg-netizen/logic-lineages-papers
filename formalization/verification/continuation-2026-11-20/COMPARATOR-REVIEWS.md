@@ -57,3 +57,13 @@ Read all five authored leaves and verified25 current pins. The positive branch e
 ## Material sparse decoder import split
 
 Read four additive thin files and all unchanged seven object proof leaves. The new floor arithmetic lemma proves actual candidate-list search soundness and completeness directly, including bounds on both coordinates and exclusion of every sparse gap. It does not import or copy an old total-pair inverse. Numeric3 and open2 target aliases are unchanged. The stopped nonmodule numeric root remains preserved; separate module-only roots materially reduce its import footprint. Later ordinary sqrt-orientation and extensional unary-tuple syntax repairs preserve these exact statements and were reviewed against full actual errors before application.
+
+## Actual modular object dispatch and selection author review
+
+Read all four object graph/witness/arrow/check leaves and the complete conditional selection proof; rechecked their exact targets and authored pins. Only the closed type numerals are evaluated by the existing numeral graph theorem. q stays arbitrary throughout. Membership transports actual same selected branch/h graph derivations for every output; absence constructs literal zero graph. Arrow acceptance uses original zero/successor case proof, rules out zero by one-versus-zero functionality, and reconstructs actual predecessor outputs u/v for original a/application programs. Original p and same selected h at codomain are retained in two genuine existential witnesses.
+
+The selection wrapper retains #596 i,j,r,d,p and its interpretation/rules/guards, chooses original a and the explicit new dispatch h with separate all-raw numerical calibration. Its ValidWindow premise remains explicit, and does not transport old h0 object proofs by extensional equality. No fresh-variable computability or original fixed-source aggregate conclusion is implicit. Native/axiom/evidence gates still required.
+
+## Outer-field-cell comparator
+
+Read both selected AST/target files and full map against actual FieldAlgorithm.step; verified22pins. Nil0 is not a cell, but its terminal parser state succeeds unchanged. Every successor calls actual sparse predecessor decoding and preserves head/tail/accumulator ordering. Exact5 includes all raw states and genuine open cons/no-preimage graphs. Full unpack/fold calibration and recursive malformed-tail behavior are not claimed by this outer-cell packet. Target gate required before proof authoring.

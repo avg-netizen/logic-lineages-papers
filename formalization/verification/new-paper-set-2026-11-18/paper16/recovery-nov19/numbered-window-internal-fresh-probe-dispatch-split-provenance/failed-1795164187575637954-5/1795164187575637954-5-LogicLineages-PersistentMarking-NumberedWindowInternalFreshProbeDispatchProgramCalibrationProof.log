@@ -1,0 +1,49 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchProgramCalibrationProof.lean:19:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchProgramCalibrationProof.lean:29:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchProgramCalibrationProof.lean:35:90: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchProgramCalibrationProof.lean:41:82: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchProgramCalibrationProof.lean:50:31: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchProgramCalibrationProof.lean:82:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchProgramCalibrationProof.lean:84:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchProgramCalibrationProof.lean:88:42: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchProgramCalibrationProof.lean:112:23: error: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => (if ∃ τ ∈ tail, t = code τ then result else 0) = if _a then result else 0
+Error: Application type mismatch: The argument
+  List.decidableBEx (fun τ => t = code τ) (τ :: tail)
+has type
+  Decidable (∃ x ∈ τ :: tail, t = code x)
+but is expected to have type
+  Decidable _a
+in the application
+  @ite ℕ _a (List.decidableBEx (fun τ => t = code τ) (τ :: tail))
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+case neg
+l : Leaves
+t q result : ℕ
+hv : ∀ (τ : OrdinalComparison.Source.Ty), t = code τ → evaluate (verify l τ) (q ::ᵥ nil) = result
+τ : ProbeTy
+tail : List ProbeTy
+ih : evaluate (dispatch l tail) (t ::ᵥ q ::ᵥ nil) = if ∃ τ ∈ tail, t = code τ then result else 0
+he : ¬t = code τ
+rest : (∃ ρ ∈ τ :: tail, t = code ρ) ↔ ∃ ρ ∈ tail, t = code ρ
+⊢ (if ∃ τ ∈ tail, t = code τ then result else 0) = if ∃ τ_1 ∈ τ :: tail, t = code τ_1 then result else 0

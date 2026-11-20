@@ -1,0 +1,15 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchProgramCalibrationProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchProgramCalibrationProof.lean
+@@ -109,7 +109,11 @@
+           · exact ⟨ρ,htail,hc⟩
+         · rintro ⟨ρ,hρ,hc⟩
+           exact ⟨ρ,List.mem_cons_of_mem _ hρ,hc⟩
+-      rw [if_neg he,ih,rest]
++      rw [if_neg he,ih]
++      by_cases htail : ∃ ρ ∈ tail, t = code ρ
++      · rw [if_pos htail,if_pos (rest.mpr htail)]
++      · have hcons : ¬ ∃ ρ ∈ τ :: tail, t = code ρ := fun h => htail (rest.mp h)
++        rw [if_neg htail,if_neg hcons]
+ 
+ theorem dispatchCalibration : ExactProbeDispatchCalibration := by
+   intro s W hw l hl t q
