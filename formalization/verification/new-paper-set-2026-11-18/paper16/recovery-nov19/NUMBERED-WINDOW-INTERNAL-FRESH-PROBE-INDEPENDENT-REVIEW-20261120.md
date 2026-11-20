@@ -1,0 +1,7 @@
+# Independent current-source review: original fresh output cases
+
+Read the complete frozen target/map and all three authored source leaves. The exact four aliases preserve the original unary program graph and its option representation. Actual total program output yields an eigenvariable, and internal PA zero-or-successor splits it without evaluating the open input. Syntactic relabeling and output equality transport yield precisely the original rejection or successor-address graph. Functionhood and successor arithmetic prove exclusivity and unique payloads. The selected program is the very same one with all-raw original fresh-selector calibration. No model truth is inverted into a derivation; the corrected proof only delays Nonempty packaging, adding no inference rule.
+
+Independently replayed current input keys, compiler and dependency/object hashes, actual receipts/logs, standard named axiom closures for all1062 modules and exact4 declarations. Rehashed all27 frozen/authored source pins. Gate1795161731627008738-6 uses the unchanged 2048MiB heap/1536MiB RSS/2048MiB free floor, CPU90/wall180, one thread. Native files are preserved in the verified zip and the final receipt separately. No full-root build or CI result is claimed.
+
+This is supporting arithmetic only. The rejecting branch is retained. Neither original typed-probe totality, actual fresh-variable computability, arbitrary-term certificate matching, internal all-terms membership nor Bachmann–Howard bound follows from this packet. Numbered register remains150 checked/17 pending.

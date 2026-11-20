@@ -74,25 +74,19 @@ theorem outputCases : FreshProbeOutputCases := by
 
 theorem rejectedExcludes : FreshProbeRejectedExcludes := by
   intro body a α Γ q u
-  apply Nonempty.intro
-  apply Derivation.implicationIntroduction
-  apply Derivation.implicationIntroduction
   have hz : Derivation body (freshAt a q u :: rejectedAt a q :: Γ) (rejectedAt a q) :=
     Derivation.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)
   have hs : Derivation body (freshAt a q u :: rejectedAt a q :: Γ) (freshAt a q u) :=
     Derivation.hypothesis List.mem_cons_self
   obtain ⟨he⟩ := valueUnique a z (suc u) ![q] ⟨hz⟩ ⟨hs⟩
-  exact zeroNeSuc he
+  exact ⟨Derivation.implicationIntroduction (Derivation.implicationIntroduction (zeroNeSuc he))⟩
 
 theorem unique : FreshProbeUnique := by
   intro body a α Γ q u v
   let A := freshAt a q u ⊓ freshAt a q v
-  apply Nonempty.intro
-  apply Derivation.implicationIntroduction
   have h : Derivation body (A :: Γ) A := Derivation.hypothesis List.mem_cons_self
   obtain ⟨he⟩ := valueUnique a (suc u) (suc v) ![q]
     ⟨Derivation.conjunctionLeft h⟩ ⟨Derivation.conjunctionRight h⟩
-  rw [equalEqn]
-  exact cancelSuc he
+  exact ⟨Derivation.implicationIntroduction (by simpa only [equalEqn] using cancelSuc he)⟩
 
 end LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeProof

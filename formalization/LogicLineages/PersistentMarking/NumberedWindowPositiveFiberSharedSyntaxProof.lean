@@ -46,7 +46,8 @@ theorem sharedRename {α β : Type} (a : Program 1) (q v : OTerm α) (j : α →
 private theorem unaryInstantiate {α : Type} (a : Program 1) (n q : OTerm α) :
     instantiate (programGraph a (.var (.inr 0)) ![q.relabel Sum.inl]) (emb n) =
       programGraph a n ![q] := by
-  have arg : (fun i : Fin 1 => (![q] i).relabel Sum.inl) = ![q.relabel Sum.inl] := by
+  have arg : (fun i : Fin 1 => (![q] i).relabel (Sum.inl : α → α ⊕ Fin 1)) =
+      ![q.relabel Sum.inl] := by
     funext i
     obtain rfl := Fin.eq_zero i
     rfl

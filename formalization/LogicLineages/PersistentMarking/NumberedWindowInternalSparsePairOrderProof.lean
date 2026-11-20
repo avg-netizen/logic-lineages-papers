@@ -34,7 +34,7 @@ private theorem exactInterval (x y : OTerm α) :
 
 private theorem coordinateEquality (x y u v : OTerm α)
     (h : Derivation body Γ (eqn (pairTerm x y) (pairTerm u v))) :
-    Derivation body Γ (eqn x u ⊓ eqn y v) := by
+    Nonempty (Derivation body Γ (eqn x u ⊓ eqn y v)) := by
   let s := add x y
   let t := add u v
   obtain ⟨intervalLeft⟩ := exactInterval (body := body) (Γ := Γ) x y
@@ -48,36 +48,32 @@ private theorem coordinateEquality (x y u v : OTerm α)
   have right : Derivation body Γ (eqn y v) :=
     Derivation.implicationElimination (leftCancellation y v x)
       (trans sums (congAddRight v (symm left)))
-  exact Derivation.conjunctionIntroduction left right
+  exact ⟨Derivation.conjunctionIntroduction left right⟩
 
 theorem pairInjective : OpenPairInjective := by
   intro body α out x y u v
   simp only [equalEqn]
-  apply Nonempty.intro
-  apply Derivation.implicationIntroduction
   let g := programGraph NumberedWindowInternalSparsePair.pair out ![x,y] ⊓
     programGraph NumberedWindowInternalSparsePair.pair out ![u,v]
   have both : Derivation body [g] g := Derivation.hypothesis List.mem_cons_self
   obtain ⟨one⟩ := pairEquation out x y ⟨Derivation.conjunctionLeft both⟩
   obtain ⟨two⟩ := pairEquation out u v ⟨Derivation.conjunctionRight both⟩
-  exact coordinateEquality x y u v (trans (symm one) two)
+  obtain ⟨components⟩ := coordinateEquality x y u v (trans (symm one) two)
+  exact ⟨Derivation.implicationIntroduction components⟩
 
 theorem consInjective : OpenFieldConsInjective := by
   intro body α out x y u v
   simp only [equalEqn]
-  apply Nonempty.intro
-  apply Derivation.implicationIntroduction
   let g := programGraph fieldCons out ![x,y] ⊓ programGraph fieldCons out ![u,v]
   have both : Derivation body [g] g := Derivation.hypothesis List.mem_cons_self
   obtain ⟨one⟩ := consEquation out x y ⟨Derivation.conjunctionLeft both⟩
   obtain ⟨two⟩ := consEquation out u v ⟨Derivation.conjunctionRight both⟩
-  exact coordinateEquality x y u v (cancelSuc (trans (symm one) two))
+  obtain ⟨components⟩ := coordinateEquality x y u v (cancelSuc (trans (symm one) two))
+  exact ⟨Derivation.implicationIntroduction components⟩
 
 theorem consTailDecrease : OpenFieldConsTailDecrease := by
   intro body α out x tail
   simp only [equalEqn]
-  apply Nonempty.intro
-  apply Derivation.implicationIntroduction
   let g := programGraph fieldCons out ![x,tail]
   let s := add x tail
   obtain ⟨e⟩ := consEquation (body := body) (Γ := [g]) out x tail
@@ -88,6 +84,7 @@ theorem consTailDecrease : OpenFieldConsTailDecrease := by
   obtain ⟨lt⟩ := weakTrans (body := body) (Gamma := [g]) tail (square s) (pairTerm x tail)
     (weakTrans tail s (square s) (rightWeakAdd x tail) (squareSelfWeak s))
     (leftWeakAdd (square s) x)
-  exact Derivation.conjunctionIntroduction nz (orderRight tail (symm e) lt)
+  exact ⟨Derivation.implicationIntroduction
+    (Derivation.conjunctionIntroduction nz (orderRight tail (symm e) lt))⟩
 
 end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePairOrderProof

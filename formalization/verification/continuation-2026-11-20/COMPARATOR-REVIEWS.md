@@ -21,3 +21,11 @@ Read both sparse-pair modules and source map, checked actual `FieldAlgorithm.pac
 ## First fiber author edition (native still pending)
 
 Read all six authored proof/check leaves and their exact four aliases. Verified30 combined frozen+author pins. Projection existence uses the original address parser and packed ordered fields. The numerical calibration handles accepting and rejecting original checker values separately and extracts the true same-context/type fields from the exact parser. The symbolic proof uses actual original composition component witnesses, equality-test acceptance, output equality transport and existential introduction; its reverse introduces precisely the shared supplied value. Nested original exact-one conjunction gives the identical r graph in both directions. No reflection rule, stronger assumed program correctness, or hidden source relation replacement is introduced. Compiler/exact-axiom/current-evidence gates remain outstanding.
+
+## Additive typed-dispatch resource split
+
+Read all eight new modules and the full split map and verified83 frozen pins. This does not replace the retained eleven original claims. Small original-source window and numerical bridges must prove actual fixed-signature/window support and all-raw calibration. Pure AST copies require literal structural equality with retained control programs, not only equal evaluation. Modular object proofs use the same selected h and original compiler for arbitrary free terms. Generic `ValidWindow` premises are explicitly conditional auxiliary interfaces until proved for the original source and assembled in an actual checked endpoint. The original joint legacy import hit the fixed1536MiB RSS cap; no cap change or identical retry was authorized.
+
+## Sparse decoder comparator
+
+Read both selected decoder modules and full map; verified31 pins. Floor-root residuals are n-s*s and s-(n-s*s); the guard rejects the true sparse gap s<residual. Complete optional equality to the original bounded decoder, actual open success graphs with both coordinates, and genuine two-binder preimage absence on failure are required separately. No total Nat.pair inverse or generated-code-only domain is substituted.
