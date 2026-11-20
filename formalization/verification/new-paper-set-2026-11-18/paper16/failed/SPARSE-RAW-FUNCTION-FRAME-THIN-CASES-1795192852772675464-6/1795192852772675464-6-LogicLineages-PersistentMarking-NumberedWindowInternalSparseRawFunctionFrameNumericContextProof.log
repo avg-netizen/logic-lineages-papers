@@ -1,0 +1,94 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericContextProof.lean:19:28: warning: Try `simp at rows` instead of `simpa using rows`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericContextProof.lean:20:36: error: Type mismatch
+  b
+has type
+  (f✝ == q && s✝ == a && w' == u && t == r) = true
+of sort `Prop` but is expected to have type
+  ℕ
+of sort `Type`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericContextProof.lean:26:35: error: unsolved goals
+w f child g i✝ w✝ f✝ s✝ w' s t q a u v r : ℕ
+b : (f✝ == q && s✝ == a && w' == u && t == r) = true
+tagIs : 3 = 5
+rows : [i✝, w✝] = [w]
+accepted :
+  Option.map
+      (fun x =>
+        match x with
+        | (q, r) => (q, w✝, r))
+      (NumberedWindowRawContextAlgorithm.focus i✝ s v) =
+    some (f, child, g)
+wEq : w' = w
+hs : s = u
+ht : t = v
+ha : sorry
+coords : (q, w', r) = (f, child, g)
+hf : q = f
+hw : w' = child
+hg : r = g
+⊢ (5, [f✝, s✝, w', s, t]) = (6, [s, t, q, a])
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericContextProof.lean:29:11: error: Tactic `unfold` failed to unfold `context` in
+  none = some (f, child, g)
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericContextProof.lean:11:88: error: unsolved goals
+case case7
+w f child g i✝ w✝ f✝ s✝ k✝ bs✝ es✝ g✝ t✝ l✝ bt✝ et✝ : ℕ
+h✝ : (f✝ == g✝ && s✝ == t✝ && k✝ == l✝ && bs✝ == bt✝) = true
+tagIs : 4 = 5
+rows : [i✝, w✝] = [w]
+⊢ Option.map
+        (fun x =>
+          match x with
+          | (q, r) => (q, w✝, r))
+        (NumberedWindowRawContextAlgorithm.focus i✝ es✝ et✝) =
+      some (f, child, g) →
+    child = w ∧
+      ∃ dom cod arg,
+        (5, [f✝, s✝, k✝, bs✝, es✝]) = (6, [dom, cod, f, arg]) ∧ (5, [g✝, t✝, l✝, bt✝, et✝]) = (6, [dom, cod, g, arg])
+
+case case8
+w f child g i✝ w✝ f✝ s✝ k✝ bs✝ es✝ g✝ t✝ l✝ bt✝ et✝ : ℕ
+h✝ : ¬(f✝ == g✝ && s✝ == t✝ && k✝ == l✝ && bs✝ == bt✝) = true
+tagIs : 4 = 5
+rows : [i✝, w✝] = [w]
+⊢ none = some (f, child, g) →
+    child = w ∧
+      ∃ dom cod arg,
+        (5, [f✝, s✝, k✝, bs✝, es✝]) = (6, [dom, cod, f, arg]) ∧ (5, [g✝, t✝, l✝, bt✝, et✝]) = (6, [dom, cod, g, arg])
+
+case case9
+w f child g w✝ s✝ t✝ q✝ a✝ u✝ v✝ r✝ b✝ : ℕ
+h✝ : (s✝ == u✝ && t✝ == v✝ && a✝ == b✝) = true
+tagIs : 5 = 5
+rows : [w✝] = [w]
+⊢ some (q✝, w✝, r✝) = some (f, child, g) →
+    child = w ∧
+      ∃ dom cod arg, (6, [s✝, t✝, q✝, a✝]) = (6, [dom, cod, f, arg]) ∧ (6, [u✝, v✝, r✝, b✝]) = (6, [dom, cod, g, arg])
+
+case case10
+w f child g w✝ s✝ t✝ q✝ a✝ u✝ v✝ r✝ b✝ : ℕ
+h✝ : ¬(s✝ == u✝ && t✝ == v✝ && a✝ == b✝) = true
+tagIs : 5 = 5
+rows : [w✝] = [w]
+⊢ none = some (f, child, g) →
+    child = w ∧
+      ∃ dom cod arg, (6, [s✝, t✝, q✝, a✝]) = (6, [dom, cod, f, arg]) ∧ (6, [u✝, v✝, r✝, b✝]) = (6, [dom, cod, g, arg])
+
+case case11
+tag : ℕ
+ws : List ℕ
+lhs rhs : ℕ × List ℕ
+w f child g : ℕ
+tagIs : tag = 5
+rows : ws = [w]
+x✝⁴ : ∀ (w s q t r : ℕ), tag = 1 → ws = [w] → lhs = (2, [s, q]) → rhs = (2, [t, r]) → False
+x✝³ : ∀ (i w f qs g rs : ℕ), tag = 2 → ws = [i, w] → lhs = (4, [f, qs]) → rhs = (4, [g, rs]) → False
+x✝² :
+  ∀ (i w f s k bs es g t l bt et : ℕ),
+    tag = 3 → ws = [i, w] → lhs = (5, [f, s, k, bs, es]) → rhs = (5, [g, t, l, bt, et]) → False
+x✝¹ :
+  ∀ (i w f s k bs es g t l bt et : ℕ),
+    tag = 4 → ws = [i, w] → lhs = (5, [f, s, k, bs, es]) → rhs = (5, [g, t, l, bt, et]) → False
+x✝ : ∀ (w s t q a u v r b : ℕ), tag = 5 → ws = [w] → lhs = (6, [s, t, q, a]) → rhs = (6, [u, v, r, b]) → False
+⊢ none = some (f, child, g) → child = w ∧ ∃ dom cod arg, lhs = (6, [dom, cod, f, arg]) ∧ rhs = (6, [dom, cod, g, arg])

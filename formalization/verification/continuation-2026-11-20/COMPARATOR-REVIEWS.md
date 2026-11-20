@@ -449,3 +449,11 @@ Read all four field/measure leaves: original find? success, actual polynomial sq
 Independently reversed full e0ba9c63 True-residual simp-only repair and651d4568 complete sole-pin manifest to entire archived bytes. All immutable source/ref maps separately verified before native.
 
 Independently reversed complete080af043 index substitution source and both entire field/full manifests to exact failed-edition bytes. Both distinct frozen29/author4-or8 maps separately verified. Frozen target unchanged before Core field retry.
+
+Read full three new material thin NumericContext/ThinNext/ThinChecks leaves plus retained AST/Parse and source map. Actual source function-cases replaces stopped broad left/right tag enumeration; original stopped cb19d9ba untouched and excluded. Same exact frozen allraw/literal endpoints and actual source context, no cap or heartbeat raise. Independently verified all frozen/proof/accepted/ref maps before materially smaller native route.
+
+Independently reversed complete65cace51 original getD-preserving source repair and both whole field/full author manifests to failed edition. Source unchanged otherwise; both distinct frozen/author sets checked before Core retry.
+
+Read complete remaining raw exchange full leaves: real successful pair decode identified only by actual injectivity, exact original earlier pair indices and getD rows, simultaneous strong induction, term tags2/4/5/6 including literal mark field2 and original bag, actual argument row, both syntax guards then identical ordered cover. No symmetry or typed closure. All37 distinct frozen/author pins verified separately before full Core gate.
+
+Independently reversed complete32547027 actual11 functional cases repair and a5cdd036 whole sole-pin manifest to archived bytes. All immutable source/ref/scope/stopped-original maps separately verified; no capraise/retry of heartbeat-stopped root.
