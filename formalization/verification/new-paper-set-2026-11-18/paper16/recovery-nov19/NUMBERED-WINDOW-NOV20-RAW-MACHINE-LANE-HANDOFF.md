@@ -200,3 +200,58 @@ result while retaining the original input in the recursor's input
 slot. Packet #697 starts at the terminal scratch itself; its helper
 uses the same term in both positions and does not prove this
 extra-fuel transport from an earlier live start.
+
+### Proposed reachable scratch invariant (source route only; unproved)
+
+Let `Good(out)` be the object-language formula
+`∃ f′ F′. Eqn(out,stateTerm f′ F′) ∧ (Eqn(f′,z) ∨ Eqn(F′,z))`.
+A strong one-tick target, without any prior flag invariant, is the
+closed object implication
+`programGraph (chosenTick p other) out ![stateTerm f F] → Good(out)`
+for arbitrary ordinary `f,F,out`, actual callback programs, and body.
+It must retain the explicit pack-shaped input: a terminal selector
+can return arbitrary malformed scratch bytes unchanged.
+
+- `RawTickOpenScratchProof.frameRead` supplies the literal
+  `stateFrame` graph for arbitrary packed `f,F`; unlike `liveRead`,
+  it needs no triple. Apply the arithmetic `zeroSuccessorCases`
+  and `outputTransport` to handle the control as 0 or S(k).
+  `zeroBranchElim`, literal `projectionValue`, and `valueUnique`
+  identify the terminal output as the same scratch with F=0.
+- `successorBranchElim` then `programCompositionCases` on
+  `performLive` exposes the actual row selectors and decoded
+  `q,w,r` as object eigenvariables. Their values may be
+  arbitrary when the nonzero payload is malformed. Do not need
+  their semantic interpretation: `FreshProbeProof.optionGraphCases`
+  already combines actual `programCases` totality with the
+  arithmetic zero/successor split. Use it on `tagFiveTest` and
+  `rootTest`, and use the retained branch eliminators to expose
+  the selected outer emitter. The three possible outer emitters
+  literally fix (flag 0, chosen frame), (flag 0, fallback frame),
+  or (root result, frame 0), independent of callback semantics.
+- The emitter output equality is a **new** supplier. The private
+  `RawTickOpenLiveProof.scratchState` is forward construction,
+  not a reusable backward decoder. A small new supplier can
+  use `programCases` only for the unknown component of the
+  selected emitter, rederive the forward nested cons from
+  `consGraph`, `compositionValue`, and `constantZeroValue`,
+  then use `valueUnique` against the supplied output of the
+  **same** actual emitter on the **same** tape. Introduce the
+  resulting witnesses with the actual finite existential rules.
+  No full backward decoder or numeric reflection is needed.
+
+To lift the shape to `iterateState`, keep its original input as
+a fixed parameter and universally bind the result in the internal
+fuel-induction motive. Otherwise the induction hypothesis is not
+available at the predecessor result's eigenvariable. At zero,
+the literal projection preserves a known good initial scratch.
+At successor, `actualOriginalRecursionSuccessorElimination`
+followed by `InternalRecursionClosureLogicProof.successorCases`
+exposes both the prior run result and the actual step. Apply the
+induction hypothesis to that prior result, recover the tick
+through the step's projection 1 via `compositionRecover`, and
+transport its input to the witnessed `stateTerm` before applying
+the one-tick shape. The actual `initialState` graph at
+`stateTerm z (frameValueTerm q w r)` (that frame is S of the
+original raw triple) is a separate open seed, not paid by #695.
+This shape is not typed raw/least semantics or RawMatching.

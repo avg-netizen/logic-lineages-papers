@@ -1,6 +1,6 @@
 # November 20 continuation handoff
 
-Working handoff, not a claim that the cutoff has already occurred. Hard stop: 2026-11-20 19:30 UTC. No proof or build after that time.
+Final handoff. Work stopped ahead of the hard cutoff of 2026-11-20 19:30 UTC; see the actual timestamp in FINAL-STOP-VERIFICATION.json. No further proof or build is running or authorized by this completed continuation.
 
 ## Authoritative numbered register
 
@@ -61,6 +61,10 @@ Selected admissible-control results and unchanged displayed-control/all-ground r
 
 Current source digest audit covers all 84 supporting records 615–698 and all 963 distinct pinned paths, plus all 42 registered current manuscript source files. Details and evidence archive digests: `FINAL-PIN-AND-ARCHIVE-DIGEST-AUDIT.json`. This is a file-integrity audit, not a whole-root or CI build.
 
+## Source-only next target review
+
+`NEXT-RAW-REACHABLE-INVARIANT-SOURCE-REVIEW.md` records an unproved, bounded next route: one actual tick on arbitrary pack-shaped scratch yields a new state with zero flag or zero frame; then use an internally output-quantified loop invariant and a separate actual initialization graph. It identifies existing object eliminators and the fresh emitter-shape gap, and precisely distinguishes the older fixed-fiber Selection/argumentFiber premises from the new guarded report. No new proof source or gate was created for this review.
+
 ## Stop verification
 
-Pending the actual cutoff: record lane stop acknowledgments, active-process check, final immutable remote SHA, and any substantive local-only files here.
+Verified stop at 2026-11-20T19:09:10.101898+00:00. Both author lanes acknowledged quiescence. No active Lean, lake, checker, or root evidence-verifier process was found; the local proof policy is paused. The final checkpoint includes the doc-only next-target review and all current substantive source/evidence. No current substantive work is deliberately left local-only. Older missing Nov19 local-only material remains unrecovered and is not claimed uploaded. Final immutable checkpoint SHA is reported separately, since this file cannot self-identify its containing commit. See FINAL-STOP-VERIFICATION.json.
