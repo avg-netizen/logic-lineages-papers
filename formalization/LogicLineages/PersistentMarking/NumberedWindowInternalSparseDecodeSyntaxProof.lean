@@ -23,6 +23,12 @@ abbrev unary {α : Type} (p : Program 1) (out x : OTerm α) : Formula α :=
 abbrev binary {α : Type} (p : Program 2) (out x y : OTerm α) : Formula α :=
   programGraph p out (Fin.cons x (Fin.cons y Fin.elim0))
 
+theorem unaryInputsRename {α β : Type} (n : OTerm α) (j : α → β) :
+    (fun i : Fin 1 => (![n] i).relabel j) = Fin.cons (n.relabel j) Fin.elim0 := by
+  funext i
+  obtain rfl := Fin.eq_zero i
+  rfl
+
 @[simp] theorem unaryRename {α β : Type} (p : Program 1) (out x : OTerm α) (j : α → β) :
     (unary p out x).relabel j = unary p (out.relabel j) (x.relabel j) := by
   simp only [unary,programRename,consTermRename,emptyRename]

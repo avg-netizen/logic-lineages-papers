@@ -1,0 +1,15 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldInductionTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldInductionProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldInductionChecks
+open NumberedWindowInternalSparseFieldInductionTargets
+theorem exact_SparseFieldInductionSchema : SparseFieldInductionSchema :=
+  NumberedWindowInternalSparseFieldInductionProof.schema
+theorem exact_SparseFieldInductionAtCode : SparseFieldInductionAtCode :=
+  NumberedWindowInternalSparseFieldInductionProof.atTerm
+
+#print axioms exact_SparseFieldInductionSchema
+#print axioms exact_SparseFieldInductionAtCode
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldInductionChecks

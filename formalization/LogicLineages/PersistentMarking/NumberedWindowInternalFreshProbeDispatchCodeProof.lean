@@ -50,7 +50,7 @@ theorem exact_ProbeCodeInjective : ExactProbeCodeInjective := by
     | arrow ρ υ =>
       change pair (code σ) (code τ) + 1 = pair (code ρ) (code υ) + 1 at h
       obtain ⟨hl,hr⟩ := pairComponents (Nat.add_right_cancel h)
-      rw [ihσ ρ hl,ihτ υ hr]
+      rw [ihσ hl,ihτ hr]
 
 #print axioms exact_ProbeCodeInjective
 end LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchCodeProof

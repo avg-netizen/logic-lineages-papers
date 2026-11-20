@@ -32,7 +32,7 @@ private theorem preimageOfGood (n : OTerm α) (hg : Nonempty (Derivation body Γ
   intro β j Δ x hJ hx
   rw [preimageRename]
   let nn := n.relabel j
-  change Nonempty (Derivation body Δ (unary leftCandidate x nn)) at hx
+  rw [unaryInputsRename] at hx
   have good' := renameInto hg j Δ hJ
   rw [unaryRename,sucRelabel,zRelabel] at good'
   apply programCases rightCandidate ![nn] (hasPreimage nn)
@@ -40,7 +40,7 @@ private theorem preimageOfGood (n : OTerm α) (hg : Nonempty (Derivation body Γ
   rw [preimageRename]
   let m := nn.relabel k
   let a := x.relabel k
-  change Nonempty (Derivation body Θ (unary rightCandidate y m)) at hy
+  rw [unaryInputsRename] at hy
   have left' := renameInto hx k Θ hK
   rw [unaryRename] at left'
   have accepted := renameInto good' k Θ hK

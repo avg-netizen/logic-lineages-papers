@@ -92,10 +92,11 @@ theorem guardBinary (n : OTerm α) : Nonempty (Derivation body Γ (guardCases n)
   apply programCases root ![n] (guardCases n)
   intro β j Δ s _ hs
   rw [guardCasesRename]
-  change Nonempty (Derivation body Δ (unary root s (n.relabel j))) at hs
+  rw [unaryInputsRename] at hs
   apply programCases leftCandidate ![n.relabel j] (guardCases (n.relabel j))
   intro γ k Θ x hk hx
   rw [guardCasesRename]
+  rw [unaryInputsRename] at hx
   have rootFound := renameInto hs k Θ hk
   rw [unaryRename] at rootFound
   exact guardCasesAt ((n.relabel j).relabel k) (s.relabel k) x rootFound hx

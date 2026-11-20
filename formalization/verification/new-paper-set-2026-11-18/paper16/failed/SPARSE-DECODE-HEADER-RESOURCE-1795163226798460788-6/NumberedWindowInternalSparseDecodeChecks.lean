@@ -1,0 +1,24 @@
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeEvaluationProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeFailureProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeChecks
+open NumberedWindowInternalSparseDecodeTargets
+
+theorem exact_CandidateValues : CandidateValues :=
+  NumberedWindowInternalSparseDecodeEvaluationProof.candidates
+theorem exact_GuardValue : GuardValue :=
+  NumberedWindowInternalSparseDecodeEvaluationProof.guardValue
+theorem exact_AllInputDecoder : AllInputDecoder :=
+  NumberedWindowInternalSparseDecodeEvaluationProof.allInputDecoder
+theorem exact_OpenSuccess : OpenSuccess :=
+  NumberedWindowInternalSparseDecodeSuccessProof.openSuccess
+theorem exact_OpenFailure : OpenFailure :=
+  NumberedWindowInternalSparseDecodeFailureProof.openFailure
+
+#print axioms exact_CandidateValues
+#print axioms exact_GuardValue
+#print axioms exact_AllInputDecoder
+#print axioms exact_OpenSuccess
+#print axioms exact_OpenFailure
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeChecks

@@ -37,3 +37,23 @@ Read all nine proof/check leaves and verified40 combined frozen/authored pins. N
 ## Dispatch type-code injectivity author review
 
 Read the entire leaf: polynomial square intervals force equal coordinate sums, cancellation recovers both actual source pair coordinates, then actual simple-type induction proves successor-pair code injectivity. Target is literal Function.Injective code; no older max-square pair convention. First native attempt produced ordinary implicit-IH argument failure, preserved with full failed evidence; syntax-only explicit argument removal reviewed. No acceptance before clean native/axiom/evidence replay.
+
+## Actual source-window and pure dispatch authors
+
+Read the complete original source-window exact3 proof. Successful raw typed tests are unpacked through unchanged scalar/address views and finiteWindowBit to original InWindow root membership. FormulaTypeCoding identifies the actual raw result code. Original Closed supplies the right-child membership; accepted original numerical probe totality supplies the third ValidWindow conjunct. This proves the concrete source interface but is not the blocked mixed-import aggregate Program statement.
+
+Read all three pure-program proof/check leaves. Primitive recursion/control evaluation is rederived for literal selected ASTs; arrow verification uses original numerical probe totality and the exact same calibrated p/a/application leaves. Finite dispatch preserves zero default only because explicit TypeSupport excludes successful types outside W. Both calibration aliases remain conditional on the exact existing numerical/ValidWindow interface, not closed source propositions. No object-language derivation is inferred from numerical equality.
+
+Read complete structural control exact2 proof. Program identity uses reflexivity plus literal numeral recursion, not semantic extensionality; type codes use actual source type induction. Native gates still required for all these new leaves.
+
+## Sparse raw-field induction comparator
+
+Read full source map and exact2 target, checked20 source pins and actual target preflight1795163187242829601-6. The invariant ranges over the retained full first-order language with the existing single inductive predicate. Premises distinguish zero, malformed nonzero without any genuine two-witness cons preimage, and actual sparse cons with invariant at its strictly smaller raw tail. No decode-success restriction, two-case total-pair assumption or external induction premise is inserted. Proof authoring released only after this gate.
+
+## Sparse field induction author review
+
+Read all five authored leaves and verified25 current pins. The positive branch eliminates two genuine cons witnesses, transports caller premises, uses accepted strict raw-tail descent and instantiates the original below-bound induction hypothesis. The nonzero malformed branch directly applies the retained object gap rule. Zero uses equality elimination on the invariant. The final theorem invokes retained object strong induction for precisely the same full-language theta and existing positive body. No semantic decoder, extra induction predicate or omitted malformed branch is inserted. Exact2 native/axiom gates still required.
+
+## Material sparse decoder import split
+
+Read four additive thin files and all unchanged seven object proof leaves. The new floor arithmetic lemma proves actual candidate-list search soundness and completeness directly, including bounds on both coordinates and exclusion of every sparse gap. It does not import or copy an old total-pair inverse. Numeric3 and open2 target aliases are unchanged. The stopped nonmodule numeric root remains preserved; separate module-only roots materially reduce its import footprint. Later ordinary sqrt-orientation and extensional unary-tuple syntax repairs preserve these exact statements and were reviewed against full actual errors before application.

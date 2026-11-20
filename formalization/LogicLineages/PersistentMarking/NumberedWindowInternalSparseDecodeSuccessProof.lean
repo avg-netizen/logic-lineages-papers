@@ -74,7 +74,7 @@ theorem successToPair (n x y : OTerm α)
   let nn := n.relabel j
   let xx := x.relabel j
   let yy := y.relabel j
-  change Nonempty (Derivation body Δ (unary root s nn)) at sGraph
+  rw [unaryInputsRename] at sGraph
   have spec := renameInto h j Δ hJ
   rw [certifiedRename] at spec
   obtain ⟨spec⟩ := spec
