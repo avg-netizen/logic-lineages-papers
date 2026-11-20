@@ -1,0 +1,32 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePairEvaluationProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePairEvaluationProof.lean
+@@ -5,8 +5,7 @@
+ public section
+ namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePairEvaluationProof
+ open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion
+-open InternalArithmeticProgramsEvaluationProof (exactAdditionEvaluation exactMultiplicationEvaluation)
+-open InternalEqualityTestEvaluationProof (vectorOne vectorTwo)
++open InternalArithmeticProgramsEvaluationProof (exactAdditionEvaluation exactMultiplicationEvaluation vectorTwo)
+ open LogicLineages.ComputabilityKnowledge.GorbowPRProgram List.Vector
+ open NumberedWindowInternalSparsePair NumberedWindowInternalSparsePairTargets
+ 
+@@ -25,6 +24,6 @@
+ 
+ theorem consValue : FieldConsValue := by
+   intro x tail
+-  simp only [fieldCons,evaluate,vectorOne,List.Vector.head_cons,pairValue]
+-  rfl
++  change Nat.succ (evaluate NumberedWindowInternalSparsePair.pair (x ::ᵥ tail ::ᵥ nil)) = _
++  exact congrArg Nat.succ (pairValue x tail)
+ end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePairEvaluationProof
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePairOrderProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePairOrderProof.lean
+@@ -12,7 +12,7 @@
+ open ID1Completion.InternalControlGraphSupportProof (equalEqn)
+ open ID1Completion.InternalTagArithmeticSyntaxProof (eqn z suc)
+ open ID1Completion.InternalTagArithmeticSupportProof (symm trans cancelSuc sucNeZeroApply)
+-open ID1Completion.InternalSourceInversionSupportProof (addHyp)
++open ID1Completion.InternalBetaTotalityProof (addHyp)
+ open ID1Completion.InternalAdditionLawsProof (add)
+ open ID1Completion.InternalAdditionCancellationProof (leftCancellation)
+ open ID1Completion.InternalMultiplicationLawsProof (congAddRight)
