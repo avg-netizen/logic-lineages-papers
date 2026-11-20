@@ -14,6 +14,14 @@ The current numbered register remains 150 checked / 17 pending, 167 total. Suppo
 
 Register: `formalization/CURRENT-COMPARISON-TARGETS.json`. The older STATUS.md narrative is not authoritative for these counts.
 
+## Exact pending numbered labels
+
+These remain pending, not failed merely because supporting work continues. Resource stops below are separate local routes, not a relabeling of these statements.
+
+- 16-persistent-marking-termination-ordering: `thm:main`, `lem:structural-interpretation`, `lem:arithmetic-accessibility`, `thm:upper`, `lem:realization`, `thm:iteration`, `lem:tower-cofinality`, `thm:height`.
+- 17-permitted-control-canonical-comparison: `thm:main`, `thm:arithmetic`, `lem:field-comparison`, `lem:count-transfer`, `lem:inner-termination`, `thm:ground`, `prop:threshold`.
+- 20-controlled-descents-and-cartier-observers: `thm:main`, `thm:actual-period`.
+
 ## Saved continuation evidence
 
 Verified checkpoint 6bae6fe353081a6c36441f6ca1a2240922f654a0 (tree 1884c167822f2f4c0dc0c8f461f91e1177ad2cfe) contains supporting records through 692 and their native/evidence archives. Later snapshot status is recorded separately; this immutable checkpoint remains a usable recovery point.
