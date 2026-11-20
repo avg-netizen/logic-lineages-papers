@@ -350,3 +350,18 @@ Full dc4736b8 diff reviewed: extract actual normalized guard and same least.map 
 
 ## Original positive successful-head exact target review, Nov20
 Read full exact2 target and source map. PositiveFinish retains literal cert≠0 and actual chosen finish S(target); head decomposition binds exact ordered object block [raw head,raw tail,next class], actual sparse cons and advance S(nextClass), same tail finish at own raw fuel. Tail may nil and is not asserted positive, successful head is conclusion not premise. No callback semantics or old body transport. All36 pins independently checked before preflight.
+
+## Fixed original source allraw application scalar target review, Nov20
+Read complete exact1 and source/resource map. Genuine allraw same q/u/y graph implication returns scalar at all three only for literal fixed S,K under Closed K; no typed quotient supplied by caller, no arbitrary Settings strengthening. Planned thin legacy suppliers are contained in previously core-passed627 closure and exclude stopped decoder/mixed roots. All29pins checked; current target-only core1536heap/512RSS/768free profile, no historical result substituted for current native.
+
+## Exact original positive-to-finish subgroup full review, Nov20
+Read complete3sources and exact1 wrapper. Forward chooses actual successful terminal scratch via661 and actual original finish branch; reverse uses real chosenWalk, normalized original nonempty/equality/conjunction acceptance. No supplied terminal hypothesis or callback interpretation, no head existential yet. Separate frozen/author and accepted-record pins checked before gate.
+
+## Original positive-finish equality representation repair, Nov20
+Full c13c4f68 diff reviewed: two existing finishedNonempty/equalEqn normalizations at exact native-diagnosed target/premise sites only. Complete source inverse and sole-pin manifest reproduce preserved24-item edition1795179076793222559-6, all39 combined pins individually checked. No target, relation or caps change.
+
+## Atomic application actual supplied reduction target review, Nov20
+Read full exact5/map. Original root bottom and proper function context retain actual supplied raw witness and right argument; accepted hop retains both actual least checks and two directed traces from same raw predecessor argument, never inferred visible-to-visible symmetry. Original nonempty supplied positive witness is exactly one or two hops, bottom terminal, no replacement certificate. All38pins verified; no output scalar, arbitrary-depth neutral, new programs or object graph claim.
+
+## Full successful-head object decomposition source review, Nov20
+Read all8 new and3 immutable Finish sources. Genuine leading gap contradiction yields original cons existential; real graph totality chooses actual advance, exact recurrence preserves tail finish, missing-current contradiction and arithmetic successor case supply actual nextClass. Exact finite3block keeps head/tail/next order, both directions; nil tail allowed. Pure old binder argument reused as syntax only, no old FiberLift compiler or missing semantic bridge imported. Separate all frozen/author/record/shared pins checked before full gate.
