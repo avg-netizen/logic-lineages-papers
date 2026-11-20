@@ -463,3 +463,7 @@ Independently reversed complete14fcd448 TermStep literal rewrite and full author
 Read entire raw tick AST/targets/source-map and checked59 frozen pins. Actual tag5 first followed by exact root0 singleton/fallback; optional private frame and Bool state, terminal identical code. Allraw callback interfaces explicit and concrete fallback owed; genuine open unary actual scratch endpoints have no callback oracle. Full run/own-code fuel and typed/least still unpaid.
 
 Independently reversed complete209234d9 intended normalize-owner namespace correction andd9a1f11f full freeze to archived bytes.59 current pins verified, exact targets unchanged, no accepted source changed.
+
+Read complete original positive endpoints and literal endpoint refinement targets/definitions/map. Same caller witness first/last/prefix fold, genuine step endpoint admission and real leasts, scalar via original address parser. Numeric wrapper same x/w/y normalized even nonbits, actual original calibration only. No arbitrary application seed admission/open/body transport. Immutable maps checked before separate Core/Mathlib preflights.
+
+Read complete fallback exact1 and four numeric tick leaves. Original nodesPrim/nextPrim and actual sparse optional encoder produce genuine executable fallback; numeric branch covers allraw tag5/root0/fallback and full exact encoded states, prior flag ignored only live, terminal identical. Same actual root callback calibrated, no arbitrary-open callback semantics. Independently verified source/freeze/supplier maps before separate original-cap gates.

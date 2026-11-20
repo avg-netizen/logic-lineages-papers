@@ -1,0 +1,16 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawTickTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawTickNumericStateProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawTickNumericChecks
+open NumberedWindowInternalSparseRawTickTargets
+open NumberedWindowInternalSparseRawTickNumericLiveProof (live)
+open NumberedWindowInternalSparseRawTickNumericStateProof (encoded)
+
+theorem exact_OriginalLiveTick : ExactOriginalLiveTick := live
+theorem exact_OriginalEncodedTick : ExactOriginalEncodedTick := encoded
+
+#print axioms exact_OriginalLiveTick
+#print axioms exact_OriginalEncodedTick
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawTickNumericChecks
