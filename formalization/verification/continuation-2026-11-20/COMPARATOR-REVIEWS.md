@@ -431,3 +431,21 @@ Read all four singleton author leaves in full. Actual zero-tail scratch/terminal
 Independently reversed complete1eea63fe dsimp-only/shape-binder repair andade3164e sole author-pin manifest against full archived source and manifest bytes. All frozen/author/helper maps separately verified before object retry. Actual target remains fixed.
 
 Read entire raw-function-frame AST/targets/map: literal tag5/one child and tag6/four exact fields, real original next/tick, shared0/1/3 annotations/argument, original ordered scratch only private output. Actual full run and raw/least integrations explicitly unpaid. Read complete raw-class-saturation targets/map: actual duplicate-preserving ordered rounds, arbitrary missing seed, same-pool directed min self; actual admitted seed pays output admission without vertices equality, own least explicitly requires original edge vertices equality. Verified respective frozen47/27pins. Separate original Mathlib and Core target preflights.
+
+Read complete three raw saturation author leaves. Actual ordered filter sublist monotonicity and no-fixed-stage strict length growth contradiction at original length bound; duplicate-preserving. Actual min member and directed closed old list give same-pool selfleast, no symmetry. Original edge admission pays result, separate actual vertices invariant pays own pool. Verified frozen27/author3 independently; native Core gate retains512RSS/1536heap/768free.
+
+Read all four numeric raw-function-frame leaves. Actual tag/arity and field equality reports include all malformed cases; actual original next branch, unchanged source argument/annotations/witness child. Private scratch exact ordered encoding only. Original literal lift/tick independent of root/status, not full raw semantics. Separately verified47 frozen/4author/supplier/ref maps before numeric native.
+
+Read entire original raw exchange vertices target and source map. Success-only actual pair/field bounds, original args table fold/permutation with duplicates, guarded exchange actual measured node/max including mark field2; final literal same ordered vertices, no typed seed admission or application closure.29 immutable pins checked before Core preflight.
+
+Independently reversed full df595b9b literal vector AST repair and f471e5b7 complete sole-pin manifest to entire archived bytes. All immutable frozen/author/supplier/ref maps verified separately. No AST/target change; serialized retry only.
+
+Read complete four raw-function-frame open leaves. Genuine literal node graphs and actual ordered field reports, same physical source/target shared annotations/right arg, actual equality self and conjunction guard; sparse emitter preserves true child and selected nonzero branch. No numeric reflection, full run, root or least semantics. Separately verified frozen47/author4/supplier/ref before sole native.
+
+Independently reversed complete f8e7814c exact packed projection syntax proof and4e12e4dc sole pin manifest against entire archived files. Every frozen/author/supplier/ref map separately verified before numeric retry.
+
+Read all four field/measure leaves: original find? success, actual polynomial square intervals/component bounds/injectivity, bounded residual/accumulator actual successful steps, exact earlier bounds table and real args recurrence, reverse-accumulator fold and actual bag permutation. No alternate codec/completeness. Verified frozen29/author4 separately before Core native.
+
+Independently reversed full e0ba9c63 True-residual simp-only repair and651d4568 complete sole-pin manifest to entire archived bytes. All immutable source/ref maps separately verified before native.
+
+Independently reversed complete080af043 index substitution source and both entire field/full manifests to exact failed-edition bytes. Both distinct frozen29/author4-or8 maps separately verified. Frozen target unchanged before Core field retry.

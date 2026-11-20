@@ -1,0 +1,150 @@
+--- /dev/null
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericContextProof.lean
+@@ -0,0 +1,37 @@
++module
++public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawFunctionFrameTargets
++
++public section
++namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawFunctionFrameNumericContextProof
++open NumberedWindowRawContextAlgorithm (context Frame)
++
++private theorem contextSuccess (tag : Nat) (ws : List Nat) (lhs rhs : Nat × List Nat)
++    (w f child g : Nat) (tagIs : tag = 5) (rows : ws = [w]) :
++    context tag ws lhs rhs = some (f,child,g) →
++    child = w ∧ ∃ dom cod arg, lhs = (6,[dom,cod,f,arg]) ∧ rhs = (6,[dom,cod,g,arg]) := by
++  fun_cases context tag ws lhs rhs
++  case case1 => simp at tagIs
++  case case2 => simp at tagIs
++  case case3 => simp at tagIs
++  case case4 => simp at tagIs
++  case case5 w' s t q a u v r b =>
++    intro accepted
++    have wEq : w' = w := by simpa using rows
++    have seen : s = u ∧ t = v ∧ a = b ∧ (q,w',r) = (f,child,g) := by
++      simpa [context,Bool.and_eq_true,beq_iff_eq,and_assoc] using accepted
++    obtain ⟨hs,ht,ha,coords⟩ := seen
++    have hf : q = f := congrArg Prod.fst coords
++    have hw : w' = child := congrArg (fun a : Frame => a.2.1) coords
++    have hg : r = g := congrArg (fun a : Frame => a.2.2) coords
++    exact ⟨hw.symm.trans wEq,s,t,a,by rw [← hf],by rw [← hs,← ht,← hg,← ha]⟩
++  case case6 =>
++    intro accepted
++    unfold context at accepted
++    split at accepted <;> simp_all
++
++theorem contextFive (lhs rhs : Nat × List Nat) (w f child g : Nat)
++    (accepted : context 5 [w] lhs rhs = some (f,child,g)) :
++    child = w ∧ ∃ dom cod arg, lhs = (6,[dom,cod,f,arg]) ∧ rhs = (6,[dom,cod,g,arg]) :=
++  contextSuccess 5 [w] lhs rhs w f child g rfl rfl accepted
++
++end LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawFunctionFrameNumericContextProof
+--- /dev/null
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericThinNextProof.lean
+@@ -0,0 +1,60 @@
++module
++public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawFunctionFrameNumericContextProof
++public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawFunctionFrameNumericParseProof
++import LogicLineages.PersistentMarking.NumberedWindowAtomicRawStepFieldProof
++
++public section
++namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawFunctionFrameNumericThinNextProof
++open NumberedWindowFieldAlgorithm (unpackNode)
++open NumberedWindowRawContextAlgorithm (next context tick RawRoot)
++open NumberedWindowRawApplicationLift (lift)
++open NumberedWindowAtomicRawStepFieldProof (nodePacked)
++open NumberedWindowInternalSparseRawFunctionFrame
++open NumberedWindowInternalSparseRawFunctionFrameNumericParseProof (FrameReport)
++open NumberedWindowInternalSparseRawFunctionFrameNumericContextProof (contextFive)
++
++private theorem actualNext (q r w f child g : Nat)
++    (h : next 5 [w] q r = some (f,child,g)) :
++    child = w ∧ ∃ d t a, unpackNode q = some (6,[d,t,f,a]) ∧
++      unpackNode r = some (6,[d,t,g,a]) := by
++  cases hq : unpackNode q with
++  | none => simp [next,hq] at h
++  | some lhs =>
++    cases hr : unpackNode r with
++    | none => simp [next,hq,hr] at h
++    | some rhs =>
++      simp only [next,hq,hr] at h
++      obtain ⟨same,d,t,a,hs,ht⟩ := contextFive lhs rhs w f child g h
++      exact ⟨same,d,t,a,by first | exact congrArg some hs | exact hq.trans (congrArg some hs),
++        by first | exact congrArg some ht | exact hr.trans (congrArg some ht)⟩
++
++theorem nextReports (q w r f child g : Nat) :
++    tagFiveNext q w r = some (f,child,g) ↔ FrameReport q w r f child g := by
++  constructor
++  · intro h
++    cases hw : unpackNode w with
++    | none => simp [tagFiveNext,hw] at h
++    | some node =>
++      rcases node with ⟨tag,fields⟩
++      rcases tag with _ | _ | _ | _ | _ | _ | tag <;>
++        rcases fields with _ | ⟨w',_ | ⟨later,rest⟩⟩ <;>
++        simp [tagFiveNext,hw] at h
++      obtain ⟨same,d,t,a,hq,hr⟩ := actualNext q r w' f child g h
++      rw [same]
++      exact ⟨d,t,a,by first | exact hw | rfl,hq,hr⟩
++  · rintro ⟨d,t,a,hw,hq,hr⟩
++    simp [tagFiveNext,hw,next,hq,hr,context]
++
++theorem literalTick (root : RawRoot) (status : Bool) (dom cod arg src child dst : Nat) :
++    tick root (status,some (lift dom cod arg src child dst)) =
++      (false,some (src,child,dst)) := by
++  simp [lift,tick,next,context,nodePacked]
++
++theorem literalNext (dom cod arg src child dst : Nat) :
++    let out := lift dom cod arg src child dst
++    tagFiveNext out.1 out.2.1 out.2.2 = some (src,child,dst) := by
++  apply (nextReports _ _ _ src child dst).mpr
++  exact ⟨dom,cod,arg,nodePacked 5 [child],nodePacked 6 [dom,cod,src,arg],
++    nodePacked 6 [dom,cod,dst,arg]⟩
++
++end LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawFunctionFrameNumericThinNextProof
+--- /dev/null
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericThinChecks.lean
+@@ -0,0 +1,44 @@
++module
++public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawFunctionFrameTargets
++import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawFunctionFrameNumericThinNextProof
++
++public section
++namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawFunctionFrameNumericThinChecks
++open NumberedWindowInternalSparseRawFunctionFrame
++open NumberedWindowInternalSparseRawFunctionFrameTargets
++open NumberedWindowInternalSparseRawFunctionFrameNumericASTProof (value guardBit tape)
++open NumberedWindowInternalSparseRawFunctionFrameNumericParseProof (guardReports termFields witnessField)
++open NumberedWindowInternalSparseRawFunctionFrameNumericThinNextProof (nextReports literalTick literalNext)
++open NumberedWindowRawApplicationLift (lift)
++
++theorem exact_AllRawFunctionFrame : ExactAllRawFunctionFrame := by
++  intro q w r
++  rw [value]
++  cases h : tagFiveNext q w r with
++  | none =>
++    rcases guardBit (tape q w r) with no | yes
++    · simp only [no,if_pos,encodeFrame]
++    · obtain ⟨f,child,g,fields⟩ := (guardReports q w r).mp yes
++      have impossible := (nextReports q w r f child g).mpr fields
++      rw [h] at impossible
++      cases impossible
++  | some out =>
++    rcases out with ⟨f,child,g⟩
++    have fields := (nextReports q w r f child g).mp h
++    have yes := (guardReports q w r).mpr ⟨f,child,g,fields⟩
++    obtain ⟨d,t,a,hw,hq,hr⟩ := fields
++    have w0 := witnessField hw
++    have q2 := (termFields hq).2.2.1
++    have r2 := (termFields hr).2.2.1
++    simp [yes,w0,q2,r2]
++
++theorem exact_LiteralFunctionFrame : ExactLiteralFunctionFrame := by
++  intro root status dom cod arg src child dst
++  let out := lift dom cod arg src child dst
++  refine ⟨literalTick root status dom cod arg src child dst,?_⟩
++  rw [exact_AllRawFunctionFrame]
++  exact congrArg encodeFrame (literalNext dom cod arg src child dst)
++
++#print axioms exact_AllRawFunctionFrame
++#print axioms exact_LiteralFunctionFrame
++end LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawFunctionFrameNumericThinChecks

@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowRawExchangeVerticesTargets
+import LogicLineages.PersistentMarking.NumberedWindowRawExchangeVerticesCodecProof
+import LogicLineages.PersistentMarking.NumberedWindowRawExchangeVerticesArgumentsProof
+import LogicLineages.PersistentMarking.NumberedWindowRawExchangeVerticesVerticesProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowRawExchangeVerticesChecks
+open NumberedWindowRawExchangeVerticesTargets
+open NumberedWindowRawExchangeVerticesCodecProof (exactBounds)
+open NumberedWindowRawExchangeVerticesArgumentsProof (exactArguments)
+open NumberedWindowRawExchangeVerticesVerticesProof (exactGuarded exactVertices)
+
+theorem exact_OriginalRawFieldBounds : ExactOriginalRawFieldBounds := exactBounds
+theorem exact_OriginalRawArgsBounds : ExactOriginalRawArgsBounds := exactArguments
+theorem exact_OriginalGuardedExchangeBounds : ExactOriginalGuardedExchangeBounds := exactGuarded
+theorem exact_OriginalGuardedEdgeVertices : ExactOriginalGuardedEdgeVertices := exactVertices
+
+#print axioms exact_OriginalRawFieldBounds
+#print axioms exact_OriginalRawArgsBounds
+#print axioms exact_OriginalGuardedExchangeBounds
+#print axioms exact_OriginalGuardedEdgeVertices
+
+end LogicLineages.PersistentMarking.NumberedWindowRawExchangeVerticesChecks

@@ -1,0 +1,11 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericParseProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericParseProof.lean
+@@ -61,7 +61,7 @@
+   have last : run cellHead (pack [a]) = a := (headTailOfCell (cellAt a (pack []))).1
+   change run (field 0) (NumberedWindowPairAlgorithm.pair 6 (pack [d,t,f,a]) + 1) = d ∧ _
+   simp only [field,cursor,applyValue,outer,first.1,first.2,second.1,second.2,third.1,third.2,last,
+-    packNode] <;> exact ⟨rfl,rfl,rfl,rfl⟩
++    packNode] <;> simp
+ 
+ /-- Code-level description of the actual source case, before choosing
+ a scratch output representation. No constraints on the child payload. -/

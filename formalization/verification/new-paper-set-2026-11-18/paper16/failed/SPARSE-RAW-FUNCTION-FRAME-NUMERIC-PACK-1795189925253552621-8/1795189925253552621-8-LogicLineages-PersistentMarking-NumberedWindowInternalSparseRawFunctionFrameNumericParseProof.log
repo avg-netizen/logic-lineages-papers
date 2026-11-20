@@ -1,0 +1,87 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericParseProof.lean:44:31: error: unsolved goals
+w child : ℕ
+h : unpackNode w = some (5, [child])
+t : run cellTail (NumberedWindowPairAlgorithm.pair 5 (pack [child]) + 1) = pack [child]
+c : run cellHead (NumberedWindowPairAlgorithm.pair child (pack []) + 1) = child
+⊢ run cellHead (pack [child]) = child
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericParseProof.lean:49:39: warning: This simp argument is unused:
+  c
+
+Hint: Omit it from the simp argument list.
+  simp only [field, ̲cursor, ̲applyValue, ̲t,̵c̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericParseProof.lean:52:93: error: unsolved goals
+q d t f a : ℕ
+h : unpackNode q = some (6, [d, t, f, a])
+outer : run cellTail (NumberedWindowPairAlgorithm.pair 6 (pack [d, t, f, a]) + 1) = pack [d, t, f, a]
+first :
+  run cellHead (NumberedWindowPairAlgorithm.pair d (pack [t, f, a]) + 1) = d ∧
+    run cellTail (NumberedWindowPairAlgorithm.pair d (pack [t, f, a]) + 1) = pack [t, f, a]
+second :
+  run cellHead (NumberedWindowPairAlgorithm.pair t (pack [f, a]) + 1) = t ∧
+    run cellTail (NumberedWindowPairAlgorithm.pair t (pack [f, a]) + 1) = pack [f, a]
+third :
+  run cellHead (NumberedWindowPairAlgorithm.pair f (pack [a]) + 1) = f ∧
+    run cellTail (NumberedWindowPairAlgorithm.pair f (pack [a]) + 1) = pack [a]
+last : run cellHead (NumberedWindowPairAlgorithm.pair a (pack []) + 1) = a
+⊢ run cellHead (pack [d, t, f, a]) = d ∧
+    run cellHead (run cellTail (pack [d, t, f, a])) = t ∧
+      run cellHead (run cellTail (run cellTail (pack [d, t, f, a]))) = f ∧
+        run cellHead (run cellTail (run cellTail (run cellTail (pack [d, t, f, a])))) = a
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericParseProof.lean:60:43: warning: This simp argument is unused:
+  first.1
+
+Hint: Omit it from the simp argument list.
+  simp only [field, ̲cursor, ̲applyValue, ̲outer, ̲first.1̵,̵f̵i̵r̵s̵t̵.̵2, ̲second.1, ̲second.2, ̲third.1, ̲third.2, ̲last,
+      packNode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericParseProof.lean:60:51: warning: This simp argument is unused:
+  first.2
+
+Hint: Omit it from the simp argument list.
+  simp only [field, ̲cursor, ̲applyValue, ̲outer, ̲first.1,f̵i̵r̵ ̲st̵.̵2̵,̵s̵econd.1, ̲second.2, ̲third.1, ̲third.2, ̲last,
+      packNode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericParseProof.lean:60:59: warning: This simp argument is unused:
+  second.1
+
+Hint: Omit it from the simp argument list.
+  simp only [field, ̲cursor, ̲applyValue, ̲outer, ̲first.1, ̲first.2, ̲second.1̵,̵s̵e̵c̵o̵n̵d̵.̵2, ̲third.1, ̲third.2, ̲last,
+      packNode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericParseProof.lean:60:68: warning: This simp argument is unused:
+  second.2
+
+Hint: Omit it from the simp argument list.
+  simp only [field, ̲cursor, ̲applyValue, ̲outer, ̲first.1, ̲first.2, ̲second.1̵1̲,s̵e̵c̵o̵n̵d̵.̵2̵,̵ ̲third.1, ̲third.2, ̲last,
+      packNode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericParseProof.lean:60:77: warning: This simp argument is unused:
+  third.1
+
+Hint: Omit it from the simp argument list.
+  simp only [field, ̲cursor, ̲applyValue, ̲outer, ̲first.1, ̲first.2, ̲second.1, ̲second.2, ̲third.1̵,̵t̵h̵i̵r̵d̵.̵2, ̲last,
+      packNode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericParseProof.lean:60:85: warning: This simp argument is unused:
+  third.2
+
+Hint: Omit it from the simp argument list.
+  simp only [field, ̲cursor, ̲applyValue, ̲outer, ̲first.1, ̲first.2, ̲second.1, ̲second.2, ̲third.1,t̵h̵i̵r̵d̵.̵2̵,̵ ̲last,
+      packNode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericParseProof.lean:60:93: warning: This simp argument is unused:
+  last
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵i̵e̵l̵d̵,̵c̵u̵r̵s̵o̵r̵,̵a̵p̵p̵l̵y̵V̵a̵l̵u̵e̵,̵o̵u̵t̵e̵r̵,̵f̵i̵r̵s̵t̵.̵1̵,̵f̵i̵r̵s̵t̵.̵2̵,̵s̵e̵c̵o̵n̵d̵.̵1̵,̵s̵e̵c̵o̵n̵d̵.̵2̵,̵t̵h̵i̵r̵d̵.̵1̵,̵t̵h̵i̵r̵d̵.̵2̵,̵l̵a̵s̵t̵,̵[̲f̲i̲e̲l̲d̲,̲ ̲c̲u̲r̲s̲o̲r̲,̲ ̲a̲p̲p̲l̲y̲V̲a̲l̲u̲e̲,̲ ̲o̲u̲t̲e̲r̲,̲ ̲f̲i̲r̲s̲t̲.̲1̲,̲ ̲f̲i̲r̲s̲t̲.̲2̲,̲ ̲s̲e̲c̲o̲n̲d̲.̲1̲,̲ ̲s̲e̲c̲o̲n̲d̲.̲2̲,̲ ̲t̲h̲i̲r̲d̲.̲1̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲h̲i̲r̲d̲.̲2̲,̲ packNode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
