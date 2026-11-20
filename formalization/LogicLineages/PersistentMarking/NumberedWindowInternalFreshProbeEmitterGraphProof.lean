@@ -1,0 +1,96 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeEmitterObjectTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchControlChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePairGraphProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFixedWindowVertexDispatchSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceConjunctionProof
+public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeEmitterGraphProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators SourceComputabilityFormulaSupportProof
+open ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalControlGraphSupportProof
+  (compositionValue projectionValue valueUnique outputTransport equalEqn)
+open ID1Completion.InternalAcceptanceConjunctionProof (constantZeroValue)
+open ID1Completion.InternalFixedWindowVertexDispatchSupportProof (constantValue)
+open ID1Completion.InternalTagArithmeticSyntaxProof (z eqn)
+open ID1Completion.InternalTagArithmeticSupportProof (symm)
+open NumberedWindowInternalProbeTargets (OTerm)
+open NumberedWindowInternalSparsePair (fieldCons)
+open NumberedWindowInternalSparsePairGraphProof (consGraph)
+open NumberedWindowInternalFreshProbeEmitter NumberedWindowInternalFreshProbeEmitterObjectTargets
+open NumberedWindowInternalFreshProbeDispatchProgram (zeroAt literal)
+open NumberedWindowInternalFreshProbeDispatchControlChecks (exact_DispatchControlAST)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+variable {body : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+private theorem consOfGraph {n : Nat} (p q : Program n) (x y : OTerm α)
+    (xs : Fin n → OTerm α)
+    (hp : Nonempty (Derivation body Γ (programGraph p x xs)))
+    (hq : Nonempty (Derivation body Γ (programGraph q y xs))) :
+    Nonempty (Derivation body Γ (programGraph (consOf p q) (consTerm x y) xs)) := by
+  unfold consOf
+  apply compositionValue fieldCons (Fin.cons p (Fin.cons q Fin.elim0))
+    (consTerm x y) xs ![x,y] (consGraph x y)
+  intro i
+  exact Fin.cases hp (Fin.cases hq (fun k => Fin.elim0 k)) i
+
+private theorem literalGraph {m : Nat} (k : Nat) (xs : Fin m → OTerm α) :
+    Nonempty (Derivation body Γ (programGraph (literal m k) (numeral k) xs)) := by
+  rw [exact_DispatchControlAST.2.1]
+  exact constantValue m k xs
+
+private theorem zeroGraph {m : Nat} (xs : Fin m → OTerm α) :
+    Nonempty (Derivation body Γ (programGraph (zeroAt m) z xs)) := by
+  rw [exact_DispatchControlAST.1]
+  exact constantZeroValue xs
+
+/-- Build the actual seven nested cons graphs, using symbolic open terms
+at each of the known outputs and literal projections, with no evaluation
+of the three arbitrary inputs. -/
+theorem packedEmitterGraph (c t n : OTerm α) :
+    Nonempty (Derivation body Γ (programGraph packedEmitter (packedFreeTerm c t n) ![c,t,n])) := by
+  let xs : Fin 3 → OTerm α := ![c,t,n]
+  let pc : Program 3 := .projection 0
+  let pt : Program 3 := .projection 1
+  let pn : Program 3 := .projection 2
+  let pz : Program 3 := zeroAt 3
+  have hc : Nonempty (Derivation body Γ (programGraph pc c xs)) := projectionValue 0 xs
+  have ht : Nonempty (Derivation body Γ (programGraph pt t xs)) := projectionValue 1 xs
+  have hn : Nonempty (Derivation body Γ (programGraph pn n xs)) := projectionValue 2 xs
+  have hz : Nonempty (Derivation body Γ (programGraph pz z xs)) := zeroGraph xs
+  have hv := consOfGraph pz (consOf pt (consOf pn pz)) z (consTerm t (consTerm n z))
+    xs hz (consOfGraph pt (consOf pn pz) t (consTerm n z) xs ht (consOfGraph pn pz n z xs hn hz))
+  let pv := consOf pz (consOf pt (consOf pn pz))
+  let v := consTerm z (consTerm t (consTerm n z))
+  have hvz := consOfGraph pv pz v z xs hv hz
+  have htz := consOfGraph pt (consOf pv pz) t (consTerm v z) xs ht hvz
+  have hcz := consOfGraph pc (consOf pt (consOf pv pz)) c (consTerm t (consTerm v z)) xs hc htz
+  have h := consOfGraph (literal 3 3) (consOf pc (consOf pt (consOf pv pz)))
+    (numeral 3) (consTerm c (consTerm t (consTerm v z))) xs (literalGraph 3 xs) hcz
+  exact h
+
+theorem packedEmitterEquation (u c t n : OTerm α)
+    (h : Nonempty (Derivation body Γ (programGraph packedEmitter u ![c,t,n]))) :
+    Nonempty (Derivation body Γ (eqn u (packedFreeTerm c t n))) :=
+  valueUnique packedEmitter u (packedFreeTerm c t n) ![c,t,n] h (packedEmitterGraph c t n)
+
+theorem packedEmitterGraphExact : ExactPackedFreeEmitterGraph := by
+  intro body α Γ u c t n
+  dsimp only
+  let G := programGraph packedEmitter u ![c,t,n]
+  let E := eqn u (packedFreeTerm c t n)
+  rw [equalEqn]
+  obtain ⟨hf⟩ := packedEmitterEquation (body := body) (Γ := G :: Γ) u c t n
+    ⟨Derivation.hypothesis List.mem_cons_self⟩
+  obtain ⟨hr⟩ := outputTransport (body := body) (Gamma := E :: Γ) packedEmitter
+    (packedFreeTerm c t n) u ![c,t,n] ⟨symm (Derivation.hypothesis List.mem_cons_self)⟩
+    (packedEmitterGraph c t n)
+  exact ⟨Derivation.conjunctionIntroduction (Derivation.implicationIntroduction hf)
+    (Derivation.implicationIntroduction hr)⟩
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeEmitterGraphProof

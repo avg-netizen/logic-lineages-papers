@@ -1,0 +1,87 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean:83:27: error: Dependent elimination failed: Failed to solve equation
+  some [] =
+    match unpack t with
+    | some x => some ((fun xs => h :: xs) x)
+    | none => none
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean:83:27: error: Dependent elimination failed: Failed to solve equation
+  some [] =
+    match unpack t with
+    | some x => some ((fun xs => h :: xs) x)
+    | none => none
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean:94:18: error: Dependent elimination failed: Failed to solve equation
+  some (x :: xs) =
+    match unpack t with
+    | some x => some ((fun xs => h :: xs) x)
+    | none => none
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean:96:57: error: Application type mismatch: The argument
+  unpacked
+has type
+  Option.map (fun xs => h :: xs) (unpack t) = some (x :: xs)
+but is expected to have type
+  some (h :: ys) = some (x :: xs)
+in the application
+  Option.some.inj unpacked
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean:108:14: error: Tactic `rfl` failed: The left-hand side
+  do
+    let __x ← none
+    match __x with
+      | (tag, body) => do
+        let xs ← decodeResult (run parser body)
+        pure (tag, xs)
+is not definitionally equal to the right-hand side
+  match n + 1 with
+  | 0 => none
+  | n.succ => do
+    let __x ← decode n
+    match __x with
+      | (tag, body) => do
+        let xs ← unpack body
+        pure (tag, xs)
+
+case succ.none
+n : ℕ
+decoded : decode n = none
+⊢ (do
+      let __x ← none
+      match __x with
+        | (tag, body) => do
+          let xs ← decodeResult (run parser body)
+          pure (tag, xs)) =
+    match n + 1 with
+    | 0 => none
+    | n.succ => do
+      let __x ← decode n
+      match __x with
+        | (tag, body) => do
+          let xs ← unpack body
+          pure (tag, xs)
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean:111:6: error: 'change' tactic failed, pattern
+  Option.map (fun fs => (tag, fs)) (decodeResult (run parser body)) = Option.map (fun fs => (tag, fs)) (unpack body)
+is not definitionally equal to target
+  (do
+      let __x ← some (tag, body)
+      match __x with
+        | (tag, body) => do
+          let xs ← decodeResult (run parser body)
+          pure (tag, xs)) =
+    match n + 1 with
+    | 0 => none
+    | n.succ => do
+      let __x ← decode n
+      match __x with
+        | (tag, body) => do
+          let xs ← unpack body
+          pure (tag, xs)
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean:119:2: error: 'change' tactic failed, pattern
+  Option.map (fun fs => (h, fs)) (decodeResult (run parser t)) = ?m.26
+is not definitionally equal to target
+  (do
+      let __x ← some (h, t)
+      match __x with
+        | (tag, body) => do
+          let xs ← decodeResult (run parser body)
+          pure (tag, xs)) =
+    Option.map (fun xs => (h, xs)) (unpack t)
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean:124:37: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

@@ -1,0 +1,15 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeOpenHopProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeOpenChecks
+open NumberedWindowInternalSparsePathEnvelopeTargets
+open NumberedWindowInternalSparsePathEnvelopeOpenEdgeProof (openEdge)
+open NumberedWindowInternalSparsePathEnvelopeOpenHopProof (openHop)
+theorem exact_OpenEdgeEnvelope : OpenEdgeEnvelope := openEdge
+theorem exact_OpenHopEnvelope : OpenHopEnvelope := openHop
+
+#print axioms exact_OpenEdgeEnvelope
+#print axioms exact_OpenHopEnvelope
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeOpenChecks

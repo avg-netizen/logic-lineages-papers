@@ -1,0 +1,17 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeEvaluationProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeNumericChecks
+open NumberedWindowInternalSparsePathEnvelopeTargets
+open NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof (node)
+open NumberedWindowInternalSparsePathEnvelopeEvaluationProof (edge hop)
+theorem exact_AllInputTaggedNode : AllInputTaggedNode := node
+theorem exact_AllInputEdgeEnvelope : AllInputEdgeEnvelope := edge
+theorem exact_AllInputHopEnvelope : AllInputHopEnvelope := hop
+
+#print axioms exact_AllInputTaggedNode
+#print axioms exact_AllInputEdgeEnvelope
+#print axioms exact_AllInputHopEnvelope
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeNumericChecks

@@ -1,0 +1,13 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeSelectorEvaluationProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeSelectorEvaluationProof.lean
+@@ -24,8 +24,8 @@
+     | some fs =>
+       rw [got] at found
+       have eq : (h,fs) = (k,xs) := Option.some.inj found
+-      have tag := congrArg Prod.fst eq
+-      have fields := congrArg Prod.snd eq
++      have tag : h = k := congrArg Prod.fst eq
++      have fields : fs = xs := congrArg Prod.snd eq
+       have body := packOfUnpack t got
+       rw [codeOfCell hit, tag, body, fields]
+ 

@@ -113,3 +113,11 @@ Read all three author leaves, verified53 combined pins. Actual sparse cons evalu
 ## Positive-path envelope numeric author review
 
 Read all five numeric leaves and verified35pins. Genuine unpack success determines its unique original sparse pack; literal raw arity is iff successful ordered source list with that exact length. Selected tag1/tag2 guards retain all projections and reject wrong shape/nested rejection, with same source order. Whole unpackNode uses actual selected parser628 rather than an unrelated field codec. Exact3 native/axiom/evidence required; open graph and raw step/least/fold remain separate.
+
+## Fresh emitter open author review
+
+Read all four open author leaves and verified54pins. Actual seven nested cons/projection/constant graphs give known arithmetic output; functionality and output equality transport give exact biconditional. Actual arbitrary guard graph zero/successor cases exclude rejected zero with PA, retain original successor output cancellation and same selected payload. Real composition eigenvariables provide all three coordinate graphs and finite existential block with ordered context/domain/name witnesses, same q/u under capture-avoiding renaming. Neither natural-value reflection nor identification of those fields with q lexical/type data is inferred. Exact2 native/axiom/evidence gate required.
+
+## Positive-path envelope open author review
+
+Read all seven open leaves and verified37pins. Exact arity/selector reports are actual graph derivations, not natural values. Generic finite arity induction cuts original cursor/head/tail witnesses, checks terminal zero and reconstructs the unique same ordered raw sparse list. Tag recovery uses original equality acceptance; edge retains [q,r,w] and witness output order. Hop extracts actual second field, applies entire nested edge reconstruction and transports that graph at the same selected field. Forward and reverse both give independent polynomial shape, not guard-defined semantics. No source-body or previous r substitution. Exact2 native/axiom/evidence required.

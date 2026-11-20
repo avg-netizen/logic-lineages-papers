@@ -1,0 +1,100 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeEmitterObjectTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalObjectFiberCertifiedLiftSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalMultiplicationLawsProof
+public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeEmitterShapeSyntaxProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators
+open ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalControlGraphSupportProof (programRename equalEqn)
+open ID1Completion.InternalFiniteBlocks (block)
+open ID1Completion.InternalFiniteBlocksProof (actualFiniteExistentialIntroduction)
+open ID1Completion.InternalOriginalObjectFiberCertifiedLiftSyntaxProof (blockRename)
+open ID1Completion.InternalOriginalOrderSyntaxProof (addRelabel)
+open ID1Completion.InternalBetaDivisionSyntaxProof (mulRelabel)
+open ID1Completion.InternalAdditionLawsProof (addSubst)
+open ID1Completion.InternalMultiplicationLawsProof (mulSubst)
+open ID1Completion.GuardedSourceSyntaxProof (numeralRename)
+open ID1Completion.InternalComputabilityApplicationSyntaxProof (programSubst numeralSubst)
+open ID1Completion.InternalRecursionClosureSyntaxProof (conjunctionSubst)
+open ID1Completion.InternalRecursionGraphStepSyntaxProof (conjunctionRename)
+open ID1Completion.InternalBinderTransportSyntaxProof (termRelabelSubst termSubstVar)
+open ID1Completion.InternalTagArithmeticSyntaxProof (emb eqn eqnSubst eqnRelabel zRelabel sucRelabel zSubst sucSubst)
+open NumberedWindowInternalProbeTargets (OTerm)
+open NumberedWindowInternalSparsePair (pairTerm)
+open NumberedWindowInternalFreshProbeEmitter (Selectors)
+open NumberedWindowInternalFreshProbeEmitterObjectTargets (shapeAt packedFreeTerm consTerm)
+open NumberedWindowInternalFreshProbeSyntaxProof (unaryRename unarySubst)
+
+private def factors {α : Type} (p : Selectors) (q u c t n : OTerm α) : Formula α :=
+  programGraph p.context c ![q] ⊓ (programGraph p.domain t ![q] ⊓
+    (programGraph p.name n ![q] ⊓ eqn u (packedFreeTerm c t n)))
+
+private def matrix {α : Type} (p : Selectors) (q u : OTerm α) : Formula (α ⊕ Fin 3) :=
+  factors p (q.relabel Sum.inl) (u.relabel Sum.inl) (.var (.inr 0)) (.var (.inr 1)) (.var (.inr 2))
+
+private theorem shapeMatrix {α : Type} (p : Selectors) (q u : OTerm α) :
+    shapeAt p q u = block (matrix p q u) := by
+  simp only [shapeAt,matrix,factors,equalEqn]
+
+private theorem freeTermRename {α β : Type} (c t n : OTerm α) (j : α → β) :
+    (packedFreeTerm c t n).relabel j =
+      packedFreeTerm (c.relabel j) (t.relabel j) (n.relabel j) := by
+  simp only [packedFreeTerm,consTerm,pairTerm,addRelabel,mulRelabel,sucRelabel,zRelabel,numeralRename]
+
+private theorem freeTermSubst {α β : Type} (c t n : OTerm α) (s : α → OTerm β) :
+    (packedFreeTerm c t n).subst s = packedFreeTerm (c.subst s) (t.subst s) (n.subst s) := by
+  simp only [packedFreeTerm,consTerm,pairTerm,addSubst,mulSubst,sucSubst,zSubst,numeralSubst]
+
+private theorem factorsRename {α β : Type} (p : Selectors) (q u c t n : OTerm α) (j : α → β) :
+    (factors p q u c t n).relabel j =
+      factors p (q.relabel j) (u.relabel j) (c.relabel j) (t.relabel j) (n.relabel j) := by
+  simp only [factors,conjunctionRename,programRename,unaryRename,eqnRelabel,freeTermRename]
+
+private theorem factorsSubst {α β : Type} (p : Selectors) (q u c t n : OTerm α) (s : α → OTerm β) :
+    (factors p q u c t n).subst (fun x => emb (s x)) =
+      factors p (q.subst s) (u.subst s) (c.subst s) (t.subst s) (n.subst s) := by
+  simp only [factors,conjunctionSubst,programSubst,unarySubst,eqnSubst,freeTermSubst]
+
+theorem shapeRename {α β : Type} (p : Selectors) (q u : OTerm α) (j : α → β) :
+    (shapeAt p q u).relabel j = shapeAt p (q.relabel j) (u.relabel j) := by
+  simp only [shapeMatrix,blockRename,matrix,factorsRename,Term.relabel_relabel,Term.relabel] <;> rfl
+
+private theorem matrixInstantiate {α : Type} (p : Selectors) (q u : OTerm α) (ys : Fin 3 → OTerm α) :
+    (matrix p q u).subst (Sum.elim Term.var (fun i => emb (ys i))) =
+      factors p q u (ys 0) (ys 1) (ys 2) := by
+  let sub : α ⊕ Fin 3 → OTerm α := Sum.elim Term.var ys
+  have hsub : Sum.elim Term.var (fun i => emb (ys i)) = fun x => emb (sub x) := by
+    funext x
+    cases x <;> rfl
+  have hfree (a : OTerm α) : (a.relabel Sum.inl).subst sub = a := by
+    rw [termRelabelSubst]
+    exact termSubstVar a
+  have hbound (i : Fin 3) : (Term.var (.inr i) : OTerm (α ⊕ Fin 3)).subst sub = ys i := rfl
+  simp only [hsub,matrix,factorsSubst,hfree,hbound]
+
+/-- The exact context/domain/name witnesses bind the three fixed Fin slots,
+using the existing original finite existential-introduction proof. -/
+theorem shapeIntro {body : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+    (p : Selectors) (q u : OTerm α) (ys : Fin 3 → OTerm α)
+    (hc : Nonempty (Derivation body Γ (programGraph p.context (ys 0) ![q])))
+    (ht : Nonempty (Derivation body Γ (programGraph p.domain (ys 1) ![q])))
+    (hn : Nonempty (Derivation body Γ (programGraph p.name (ys 2) ![q])))
+    (he : Nonempty (Derivation body Γ (eqn u (packedFreeTerm (ys 0) (ys 1) (ys 2))))) :
+    Nonempty (Derivation body Γ (shapeAt p q u)) := by
+  rw [shapeMatrix]
+  apply actualFiniteExistentialIntroduction body α 3 Γ (matrix p q u) (fun i => emb (ys i))
+  rw [matrixInstantiate]
+  obtain ⟨dc⟩ := hc
+  obtain ⟨dt⟩ := ht
+  obtain ⟨dn⟩ := hn
+  obtain ⟨de⟩ := he
+  exact ⟨Derivation.conjunctionIntroduction dc
+    (Derivation.conjunctionIntroduction dt (Derivation.conjunctionIntroduction dn de))⟩
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeEmitterShapeSyntaxProof
