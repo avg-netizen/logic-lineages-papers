@@ -15,7 +15,7 @@ open ID1Completion.InternalDerivationRenamingSyntaxProof (existsRename)
 open ID1Completion.InternalRecursionGraphStepSyntaxProof (conjunctionRename)
 open ID1Completion.InternalRecursionClosureSyntaxProof (conjunctionSubst)
 open ID1Completion.InternalComputabilityApplicationSyntaxProof
-  (programSubst numeralSubst liftTermSubst existsEmbeddedSubst)
+  (programSubst numeralSubst liftTerms liftTermSubst existsEmbeddedSubst)
 open ID1Completion.GuardedSourceSyntaxProof (numeralRename)
 open ID1Completion.InternalTagArithmeticSyntaxProof (emb bindEmbedding bindTerm liftBind varBind)
 open NumberedWindowInternalProbeTargets (OTerm typeCode freshAt typedAt witnesses)
@@ -84,8 +84,15 @@ theorem witnessesIntro {body : Positive (Fin 1)} {α : Type} {Γ : List (Formula
   let A : Formula ((α ⊕ Fin 1) ⊕ Fin 1) :=
     factors p h a τ (q'.relabel Sum.inl) (.var (.inl (.inr 0))) (.var (.inr 0))
   let B : Formula (α ⊕ Fin 1) := factors p h a τ q' u' (.var (.inr 0))
+  have firstSlot :
+      (Term.var (.inl (.inr 0)) : OTerm ((α ⊕ Fin 1) ⊕ Fin 1)).subst
+        (liftTerms (bindTerm u)) = u' := rfl
+  have lastSlot :
+      (Term.var (.inr 0) : OTerm ((α ⊕ Fin 1) ⊕ Fin 1)).subst (liftTerms (bindTerm u)) =
+        (Term.var (.inr 0) : OTerm (α ⊕ Fin 1)) := rfl
   have ho : instantiate (existsOne A) (emb u) = existsOne B := by
-    simp only [instantiate,bindEmbedding,existsEmbeddedSubst,A,B,factorsSubst,liftTermSubst,liftBind] <;> rfl
+    simp only [instantiate,bindEmbedding,existsEmbeddedSubst,A,B,factorsSubst,liftTermSubst,
+      q',liftBind,firstSlot,lastSlot]
   have hi : instantiate B (emb v) = factors p h a τ q u v := by
     simp only [instantiate,bindEmbedding,B,q',u',factorsSubst,liftBind,varBind]
   obtain ⟨df⟩ := hf

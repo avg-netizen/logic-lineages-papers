@@ -1,0 +1,25 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldCellTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldCellEvaluationProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldCellFailureProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldCellChecks
+open NumberedWindowInternalSparseFieldCellTargets
+theorem exact_AllInputCell : AllInputCell :=
+  NumberedWindowInternalSparseFieldCellEvaluationProof.allInput
+theorem exact_ActualFieldStep : ActualFieldStep :=
+  NumberedWindowInternalSparseFieldCellEvaluationProof.fieldStep
+theorem exact_OpenCellSuccess : OpenCellSuccess :=
+  NumberedWindowInternalSparseFieldCellSuccessProof.openSuccess
+theorem exact_OpenCellFailure : OpenCellFailure :=
+  NumberedWindowInternalSparseFieldCellFailureProof.openFailure
+theorem exact_OpenNilCell : OpenNilCell :=
+  NumberedWindowInternalSparseFieldCellFailureProof.openNil
+
+#print axioms exact_AllInputCell
+#print axioms exact_ActualFieldStep
+#print axioms exact_OpenCellSuccess
+#print axioms exact_OpenCellFailure
+#print axioms exact_OpenNilCell
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldCellChecks

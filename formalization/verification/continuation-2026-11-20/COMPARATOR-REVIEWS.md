@@ -67,3 +67,15 @@ The selection wrapper retains #596 i,j,r,d,p and its interpretation/rules/guards
 ## Outer-field-cell comparator
 
 Read both selected AST/target files and full map against actual FieldAlgorithm.step; verified22pins. Nil0 is not a cell, but its terminal parser state succeeds unchanged. Every successor calls actual sparse predecessor decoding and preserves head/tail/accumulator ordering. Exact5 includes all raw states and genuine open cons/no-preimage graphs. Full unpack/fold calibration and recursive malformed-tail behavior are not claimed by this outer-cell packet. Target gate required before proof authoring.
+
+## Outer field-cell author review
+
+Read all eight authored proof/check leaves and30 frozen/authored pins. Actual original predecessor and sparse decoder give every cursor/accumulator step including nil success and absorbing failure. Symbolic proofs use actual zero/successor cases, exact decoder and cons graph equations, two genuine witnesses and output/input equality transport. Rejecting a cell means no literal cons preimage, not failure of the nil terminal state. The two ordinary missing body/context inference annotations preserve the very same branches and expressions. Exact5 still needs final native/evidence gate; no unpack conclusion follows from the outer-cell theorem alone.
+
+## Full bounded parser comparator
+
+Read both new AST/target modules and map; verified31pins. Raw source codes and tails remain original sparse polynomial fields; retained Nat.pair list coding is used exclusively for scratch rows and outputs. Checked the explicit lag i-tail for newest-first prior table and unary parser's two fixed zero parameters. Actual bounded steps/fuel/arbitrary accumulator target retains acc.reverse prefix and exact ordered Option list result for every input. Four open graph contracts distinguish nil, malformed raw nonzero, actual cons/tail result in both directions, and rejected-tail propagation. No semantic fact is a rule of the object calculus and no previous parser/body is replaced by numeric equality. This is a source-specific parser packet, not generic memo-table acceptance. Proof release requires target gate.
+
+## Narrow original canonical application comparator
+
+Read both new source-only exact target modules and map; verified the new46pin manifest (not the older similarly named15pin manifest). The supplier concerns literal already-canonical same-context/arrow-domain original addresses only; it deliberately does not assert the stopped broad malformed-input decoder theorem. The subsequent target aliases retain full original typed-address equivalence, external FreeAt/fresh-name/application, all-admitted-numeral #613, and the SAME fixed-source ValidWindow proposition. External FreeAt computability is not an arbitrary-open object derivation. Final mixed Program/original wrapper and fresh-variable object computability remain separate. Initial actual target preflight found only missing finiteC namespace, with exact syntax-only repair under review; no proof authoring release yet.

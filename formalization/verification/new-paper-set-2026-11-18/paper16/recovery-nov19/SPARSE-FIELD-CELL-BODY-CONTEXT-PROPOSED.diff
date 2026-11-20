@@ -1,0 +1,12 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldCellSuccessProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldCellSuccessProof.lean
+@@ -38,7 +38,8 @@
+     Nonempty (Derivation body Γ (certifiedCell n h t)) := by
+   obtain ⟨e⟩ := consEquation n h t d
+   let k := pairTerm h t
+-  have exactCell := contractCell k h t (pairToSuccess k h t (pairGraph h t))
++  have exactCell : Nonempty (Derivation body Γ (certifiedCell (suc k) h t)) :=
++    contractCell k h t (pairToSuccess k h t (pairGraph h t))
+   exact moveCertifiedCell (suc k) n h t ⟨symm e⟩ exactCell
+ 
+ theorem cellToCons (n h t : OTerm α)

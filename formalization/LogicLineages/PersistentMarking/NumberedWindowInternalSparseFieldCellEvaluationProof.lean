@@ -19,13 +19,11 @@ private theorem predecessorValue (p : Program 1) (n : Nat) :
   unfold atPredecessor
   rw [evaluate,vectorOne]
   change evaluate p (evaluate InternalEqualityTest.predecessor ((n+1) ::ᵥ nil) ::ᵥ nil) = _
-  rw [exactPredecessorEvaluation]
-  rfl
+  rw [exactPredecessorEvaluation] <;> rfl
 
 private theorem nilValue : evaluate cellGood (0 ::ᵥ nil) = 0 := by
   unfold cellGood
-  rw [evalBranch]
-  rfl
+  rw [evalBranch] <;> rfl
 
 private theorem succValue (n : Nat) :
     evaluate cellGood ((n+1) ::ᵥ nil) = evaluate good (n ::ᵥ nil) := by
