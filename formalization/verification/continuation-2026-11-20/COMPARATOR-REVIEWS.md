@@ -105,3 +105,11 @@ Read all three selected AST/exact4 comparator files and full source map; verifie
 ## Source-specific path envelope comparator
 
 Read two AST/exact5 target modules and source map; verified30pins. Complete selected unpackNode uses actual sparse outer cell and same source-specific full parser. Fixed arity tests require every actual raw cell and literal zero terminal, rejecting malformed and trailing fields. Tag1 retains [q,r,w] and exports(q,w,r); tag2 retains[target,edge] and complete nested tag1. Independent open biconditional shape uses real polynomial pair terms and zero nil, not guard-defined tautology. No original r/r′ or sourceBody graph is replaced by extensional calibration. Actual step/least/path-fold/matching obligations remain separate. Target native preflight queued before proof.
+
+## Fresh emitter numeric author review
+
+Read all three author leaves, verified53 combined pins. Actual sparse cons evaluation establishes seven-cell exact original address encoding; primitive-recursive correspondence selects actual original scalar/address/arrow/fresh-name coordinate leaves at the same Settings s, with independent success bit. Allraw Option calibration retains malformed rejection and legitimate zero coordinates. This is one explicit original608 witness and no graph equivalence to arbitrary older a. Exact2 native/axiom/evidence gate required.
+
+## Positive-path envelope numeric author review
+
+Read all five numeric leaves and verified35pins. Genuine unpack success determines its unique original sparse pack; literal raw arity is iff successful ordered source list with that exact length. Selected tag1/tag2 guards retain all projections and reject wrong shape/nested rejection, with same source order. Whole unpackNode uses actual selected parser628 rather than an unrelated field codec. Exact3 native/axiom/evidence required; open graph and raw step/least/fold remain separate.
