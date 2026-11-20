@@ -457,3 +457,9 @@ Independently reversed complete65cace51 original getD-preserving source repair a
 Read complete remaining raw exchange full leaves: real successful pair decode identified only by actual injectivity, exact original earlier pair indices and getD rows, simultaneous strong induction, term tags2/4/5/6 including literal mark field2 and original bag, actual argument row, both syntax guards then identical ordered cover. No symmetry or typed closure. All37 distinct frozen/author pins verified separately before full Core gate.
 
 Independently reversed complete32547027 actual11 functional cases repair and a5cdd036 whole sole-pin manifest to archived bytes. All immutable source/ref/scope/stopped-original maps separately verified; no capraise/retry of heartbeat-stopped root.
+
+Independently reversed complete14fcd448 TermStep literal rewrite and full author manifest to exact archived bytes; separately verified37 pins, accepted685 unchanged. Initial coordinator wrong diff filename prevented native, corrected before this gate.
+
+Read entire raw tick AST/targets/source-map and checked59 frozen pins. Actual tag5 first followed by exact root0 singleton/fallback; optional private frame and Bool state, terminal identical code. Allraw callback interfaces explicit and concrete fallback owed; genuine open unary actual scratch endpoints have no callback oracle. Full run/own-code fuel and typed/least still unpaid.
+
+Independently reversed complete209234d9 intended normalize-owner namespace correction andd9a1f11f full freeze to archived bytes.59 current pins verified, exact targets unchanged, no accepted source changed.

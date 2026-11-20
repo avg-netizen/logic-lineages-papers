@@ -1,0 +1,12 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawTickDefinitions.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawTickDefinitions.lean
+@@ -5,7 +5,8 @@
+ namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawTick
+ open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+ open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion
+-open InternalAcceptance (branch normalize constantZero)
++open InternalAcceptance (branch constantZero)
++open LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalization (normalize)
+ open NumberedWindowInternalSparseFieldCell (cellHead cellTail)
+ open NumberedWindowInternalSparsePathEnvelope (applyUnary field nodeGood)
+ open NumberedWindowInternalSparseRawFunctionFrame
