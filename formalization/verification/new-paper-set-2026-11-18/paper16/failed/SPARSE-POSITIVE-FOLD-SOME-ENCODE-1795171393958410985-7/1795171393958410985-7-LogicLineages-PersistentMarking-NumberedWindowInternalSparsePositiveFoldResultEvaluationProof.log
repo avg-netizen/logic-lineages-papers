@@ -1,0 +1,32 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldResultEvaluationProof.lean:27:27: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldResultEvaluationProof.lean:32:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldResultEvaluationProof.lean:78:4: error: unsolved goals
+case pos
+entries : Entries
+s : Settings
+raw : Program 5
+p : Program 3
+done : ActualFuelCalibration entries s raw p
+c ty source cert target : ℕ
+args : List.Vector ℕ (Nat.succ 0).succ.succ.succ.succ := c ::ᵥ ty ::ᵥ source ::ᵥ cert ::ᵥ target ::ᵥ nil
+empty : ¬cert = 0
+compared :
+  evaluate
+      (InternalEqualityTest.equalityTest.composition
+        ![chosenWalk raw p, Program.succ.composition fun x => Program.projection 4])
+      args =
+    if encodeState (originalFold entries s c ty (source + 1) cert) = target + 1 then 1 else 0
+accepts : originalFold entries s c ty (source + 1) cert = some target
+same : encodeState (originalFold entries s c ty (source + 1) cert) = target + 1
+⊢ encodeState (some target) = target + 1
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldResultEvaluationProof.lean:80:35: warning: This simp argument is unused:
+  same
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵o̵m̵p̵a̵r̵e̵d̵,̵e̵m̵p̵t̵y̵,̵a̵c̵c̵e̵p̵t̵s̵,̵s̵a̵m̵e̵]̵[̲c̲o̲m̲p̲a̲r̲e̲d̲,̲ ̲e̲m̲p̲t̲y̲,̲ ̲a̲c̲c̲e̲p̲t̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

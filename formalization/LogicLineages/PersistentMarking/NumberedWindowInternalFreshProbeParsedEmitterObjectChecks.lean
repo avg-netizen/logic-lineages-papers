@@ -45,7 +45,7 @@ private theorem emittedOnReports (scalarProg bound : Program 1) (q u c d n : OTe
     (hn : Nonempty (Derivation body Γ (programGraph (applyUnary bound rawLeast) n ![q]))) :
     Nonempty (Derivation body Γ (equal u (packedFreeTerm c d n))) := by
   let p := selected scalarProg bound
-  let children := Fin.cons p.context (Fin.cons p.domain (Fin.cons p.name Fin.elim0))
+  let children : Fin 3 → Program 1 := Fin.cons p.context (Fin.cons p.domain (Fin.cons p.name Fin.elim0))
   have c0 := gatePreserves scalarProg rawContext q c guard hc
   have c1 := gatePreserves scalarProg rawDomain q d guard hd
   have c2 := gatePreserves scalarProg (applyUnary bound rawLeast) q n guard hn

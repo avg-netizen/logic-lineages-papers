@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveFoldTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveFoldOpenConsProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveFoldOpenMalformedProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveFoldOpenChecks
+open NumberedWindowInternalSparsePositiveFoldTargets
+open NumberedWindowInternalSparsePositiveFoldOpenBaseProof (base nilStep)
+open NumberedWindowInternalSparsePositiveFoldOpenConsProof (consStep)
+open NumberedWindowInternalSparsePositiveFoldOpenMalformedProof (malformedStep)
+
+theorem exact_OpenFoldBase : OpenFoldBase := base
+theorem exact_OpenNilRetention : OpenNilRetention := nilStep
+theorem exact_OpenMalformedCollapse : OpenMalformedCollapse := malformedStep
+theorem exact_OpenConsUpdate : OpenConsUpdate := consStep
+
+#print axioms exact_OpenFoldBase
+#print axioms exact_OpenNilRetention
+#print axioms exact_OpenMalformedCollapse
+#print axioms exact_OpenConsUpdate
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveFoldOpenChecks

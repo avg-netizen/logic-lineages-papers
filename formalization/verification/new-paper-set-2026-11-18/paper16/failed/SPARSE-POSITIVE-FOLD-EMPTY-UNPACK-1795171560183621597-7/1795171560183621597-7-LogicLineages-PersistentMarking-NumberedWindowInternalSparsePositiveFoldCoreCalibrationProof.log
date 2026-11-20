@@ -1,0 +1,54 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldCoreCalibrationProof.lean:29:45: warning: This simp argument is unused:
+  Option.bind_eq_bind
+
+Hint: Omit it from the simp argument list.
+  simp only [̵p̵a̵c̵k̵e̵d̵O̵r̵i̵g̵i̵n̵a̵l̵A̵d̵v̵a̵n̵c̵e̵,̵d̵e̵c̵o̵d̵e̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵e̵q̵_̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵o̵p̵t̵i̵o̵n̵R̵o̵u̵n̵d̵]̵[̲p̲a̲c̲k̲e̲d̲O̲r̲i̲g̲i̲n̲a̲l̲A̲d̲v̲a̲n̲c̲e̲,̲ ̲d̲e̲c̲o̲d̲e̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲o̲p̲t̲i̲o̲n̲R̲o̲u̲n̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldCoreCalibrationProof.lean:37:48: warning: This simp argument is unused:
+  Option.bind_eq_bind
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵n̵,̵p̵a̵c̵k̵e̵d̵O̵r̵i̵g̵i̵n̵a̵l̵A̵d̵v̵a̵n̵c̵e̵,̵d̵e̵c̵o̵d̵e̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵e̵q̵_̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵n̵o̵n̵e̵]̵[̲f̲n̲,̲ ̲p̲a̲c̲k̲e̲d̲O̲r̲i̲g̲i̲n̲a̲l̲A̲d̲v̲a̲n̲c̲e̲,̲ ̲d̲e̲c̲o̲d̲e̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲n̲o̲n̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldCoreCalibrationProof.lean:44:23: warning: This simp argument is unused:
+  found
+
+Hint: Omit it from the simp argument list.
+  simp only [f̵o̵u̵n̵d̵,̵Option.bind_eq_bind, ̲Option.bind_none]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldCoreCalibrationProof.lean:49:17: warning: This simp argument is unused:
+  found
+
+Hint: Omit it from the simp argument list.
+  simp only [f̵o̵u̵n̵d̵,̵Option.bind_eq_bind, ̲Option.bind_some, ̲List.foldl_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldCoreCalibrationProof.lean:73:12: error: unsolved goals
+case some.some.nil
+entries : Entries
+s : Settings
+c ty source cert target : ℕ
+g : List ℕ
+decoded : unpack c = some g
+found : unpack cert = some []
+nilCode : cert = 0
+⊢ Option.any
+      (fun codes =>
+        !codes.isEmpty &&
+          NumberedWindowPositivePathAlgorithm.walk (NumberedWindowConcreteCheckers.step entries s g ty) (least s g ty)
+            source codes target)
+      (unpack 0) =
+    false
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldCoreCalibrationProof.lean:75:82: warning: This simp argument is unused:
+  found
+
+Hint: Omit it from the simp argument list.
+  simp [packedPositive, ̲decoded, ̲NumberedWindowPositivePathAlgorithm.positive,f̵o̵u̵ ̲nd̵,̵n̵ilCode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldCoreCalibrationProof.lean:94:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

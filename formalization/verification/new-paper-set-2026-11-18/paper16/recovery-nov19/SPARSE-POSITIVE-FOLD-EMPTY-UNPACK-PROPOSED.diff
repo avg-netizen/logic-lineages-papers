@@ -1,0 +1,11 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldCoreCalibrationProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldCoreCalibrationProof.lean
+@@ -72,7 +72,7 @@
+       cases hops with
+       | nil =>
+         have nilCode : cert = 0 := packOfUnpack cert found
+-        simp [packedPositive,decoded,NumberedWindowPositivePathAlgorithm.positive,found,nilCode]
++        simp [packedPositive,decoded,NumberedWindowPositivePathAlgorithm.positive,nilCode,emptyUnpack]
+       | cons h hs =>
+         have nz : cert ≠ 0 := by
+           intro nilCode

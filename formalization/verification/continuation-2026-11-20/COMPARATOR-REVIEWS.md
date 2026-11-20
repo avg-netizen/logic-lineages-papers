@@ -152,3 +152,30 @@ Read both positive fold AST/target modules and full map; verified38pins. Scratch
 
 ## Parsed object report binder repair
 Reviewed full fb3642e5 against actual failure1795170631561583944-6 and original programCompositionCases binder order. Only tuple/context bound names swapped; independently reversed exact diff to preserved failed source, verified71 distinct frozen/authored/helper pins. No source AST/target change.
+
+## Parsed object material elaboration repair
+Full82c27d34 reviewed: four explicit literal AST equalities before local graph opacity, typed continuation/actual normalizer argument and precise original disjunction supplier/public syntax import. Avoids large implicit graph expansion; no cap/target/AST change. Independently reversed to full failed1795170742092309017-7 edition and verified71 distinct pins before material retry.
+
+## Parsed typed and positive fold numeric author review
+Read both typed numeric leaves: allraw refined base preserves original positive decoded type field; same chosen a/h calibration uses genuine ValidWindow, without object reflection. Read all six positive fold numeric leaves: actual scratch projection calibration, exact recursive-state iteration, strong induction on original raw certificate with tail bound, complete ordered original fold and malformed-context/empty distinctions; actual original positive and genuine callback witnesses. Verified all combined current source pins before native gates; no full object fold or neutral computability claimed.
+
+## Positive fold local open author review
+Read all five leaves and verified43 frozen/authored pins. Actual initialized scratch pair/base, zero cursor retention, original nonimage malformed collapse and genuine sparse cons update preserve context/type/current and exact selected advance output. Scratch and original raw code never conflated. These are local step graph clauses, not full arithmetic iteration/fold or semantic callback proof. Exact4 gate required.
+
+## Parsed object row visibility repair
+Reviewed9035bf16: expose unchanged proof-local rawPrograms and annotate actual children Fin3→Program1 only. Independently reversed exact patch to both archived1795171112079234879-7 sources, verified71 distinct pins; same real six reports and three emitter children retained.
+
+## Actual typed requested-result author review
+Read entire source-specific result leaf; verified90pins. Actual dispatcher membership/miss and real verify/base conjunction recover the same physical requested result equality; all graph arguments retain same free q and actual requested type numeral. Numerical address calibration never supplies an object premise. Standard exact1 gate required.
+
+## Positive fold dependent conditional repair
+Reviewed full16766aaf: isolate exact same actual comparator evaluation outside dependent outer ite, then explicit successful/failed equality simplification. Independently reversed to archived1795171174054860551-6 source and verified44pins; no AST/target/cap change.
+
+## Literal typed block and same tuple author review
+Read all four object sources (result leaf separately reviewed) and conditional same-tuple selection proof. Actual requested-result ID1 equality is compared against two genuine sparse cell graphs; numerical theorem used solely at closed component numerals. Original six raw slots/body/context/free terms retained in binder elimination/introduction. Same selected h/a/p supplies #611 ChildClosed totality; concrete #596 tuple preserves original checks/Rules/unique/guards and explicit ValidWindow. No mixed fixed-source gate or lexical/neutral inference. Verified current full frozen/author/supplier manifests before gates.
+
+## Original positive iteration target review
+Read full exact5 target and source map; verified29pins. Same frozen iterateState graph, counter/seed coordinate invariance only with same current scratch/context/type, actual supplied prior result for successor inversion, genuine scratch transition for arbitrary-free-fuel head-first shift. Terminal extra fuel uses original arithmetic addition and object induction; nil loop at arbitrary context. No replacement AST, standard-native reflection or claim of internal sufficient-fuel/full matching. Target preflight required.
+
+## Positive fold success constructor repair
+Reviewed761b0ae6: explicitly simplify encodeState at positive some constructor, removing unused pre-rewrite equality. Independently reversed exact patch to failed1795171393958410985-7 source, verified44pins; targets unchanged.

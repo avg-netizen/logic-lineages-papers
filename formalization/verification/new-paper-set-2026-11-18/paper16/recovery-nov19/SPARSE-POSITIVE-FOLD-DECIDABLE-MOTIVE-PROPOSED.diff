@@ -1,0 +1,34 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldResultEvaluationProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldResultEvaluationProof.lean
+@@ -65,16 +65,21 @@
+     then 1 else 0) = _
+   by_cases empty : cert = 0
+   · simp [empty]
+-  · rw [if_neg empty]
+-    rw [evaluate,vectorTwo]
+-    change (if 1 = 1 ∧ evaluate InternalEqualityTest.equalityTest
+-      (evaluate (chosenWalk raw p) args ::ᵥ (target+1) ::ᵥ nil) = 1 then 1 else 0) = _
+-    dsimp only [args]
+-    rw [walkValue entries s raw p done,exactEqualityEvaluation]
++  · have compared : evaluate (.composition InternalEqualityTest.equalityTest
++        ![chosenWalk raw p,.composition .succ (fun _ : Fin 1 => .projection (4 : Fin 5))]) args =
++        if encodeState (originalFold entries s c ty (source+1) cert) = target+1 then 1 else 0 := by
++      dsimp only [args]
++      rw [evaluate,vectorTwo]
++      change evaluate InternalEqualityTest.equalityTest
++        (evaluate (chosenWalk raw p) (c ::ᵥ ty ::ᵥ source ::ᵥ cert ::ᵥ target ::ᵥ nil) ::ᵥ
++          (target+1) ::ᵥ nil) = _
++      rw [walkValue entries s raw p done,exactEqualityEvaluation]
+     by_cases accepts : originalFold entries s c ty (source+1) cert = some target
+-    · rw [if_pos ((successCode _ _).mpr accepts)]
+-      simp [empty,accepts]
+-    · rw [if_neg (fun h => accepts ((successCode _ _).mp h))]
+-      simp [empty,accepts]
++    · have same : encodeState (originalFold entries s c ty (source+1) cert) = target+1 :=
++        (successCode _ _).mpr accepts
++      simp [compared,empty,accepts,same]
++    · have different : encodeState (originalFold entries s c ty (source+1) cert) ≠ target+1 :=
++        fun h => accepts ((successCode _ _).mp h)
++      simp [compared,empty,accepts,different]
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveFoldResultEvaluationProof

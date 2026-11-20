@@ -1,0 +1,13 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldResultEvaluationProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldResultEvaluationProof.lean
+@@ -75,9 +75,7 @@
+           (target+1) ::ᵥ nil) = _
+       rw [walkValue entries s raw p done,exactEqualityEvaluation]
+     by_cases accepts : originalFold entries s c ty (source+1) cert = some target
+-    · have same : encodeState (originalFold entries s c ty (source+1) cert) = target+1 :=
+-        (successCode _ _).mpr accepts
+-      simp [compared,empty,accepts,same]
++    · simp [compared,empty,accepts,encodeState]
+     · have different : encodeState (originalFold entries s c ty (source+1) cert) ≠ target+1 :=
+         fun h => accepts ((successCode _ _).mp h)
+       simp [compared,empty,accepts,different]

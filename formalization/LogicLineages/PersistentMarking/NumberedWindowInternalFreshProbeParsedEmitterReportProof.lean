@@ -18,7 +18,7 @@ open NumberedWindowInternalFreshProbeDispatchProgram (zeroAt)
 open NumberedWindowInternalSparsePathEnvelope (applyUnary)
 open NumberedWindowInternalFreshProbeSyntaxProof (unaryRename)
 
-def rawPrograms (bound : Program 1) : Fin 6 → Program 1 :=
+@[expose] def rawPrograms (bound : Program 1) : Fin 6 → Program 1 :=
   ![rawContext,rawResult,rawDomain,rawCodomain,rawLeast,applyUnary bound rawLeast]
 
 private def reporter (bound : Program 1) : Program 1 :=
