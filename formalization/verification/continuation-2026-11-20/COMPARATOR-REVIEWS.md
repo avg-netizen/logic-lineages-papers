@@ -381,3 +381,21 @@ Full eleven-source Transitivity review: genuine universal motive on actual first
 Atomic p-star numeric ordinary import repair: complete direct-import diff9d22c464 reviewed; full12-file failed edition hashes checked, independent source and sole-manifest inverse recovered archived bytes. Frozen71/author3 pins checked separately; unchanged targets. Native retry allowed under original caps.
 
 Reviewed full actual AddressPositive three-source AST/targets and source map,43 frozen pins. Original addressRS two real typed address parses/decoded-stack equality retained via exact packed context equality with true context validity; literal certificate slot1 and actual same-fiber fold preserved. No extra scalar bit, no old sourceBody transport. Exact new physical checker has explicit allraw and separate arbitrary-open four-witness binder scopes.
+
+Atomic p-star numeric ordinary import repair: complete explicit-name open diffcf0f4921 reviewed; full12-file failed edition hashes checked, independent source and sole-manifest inverse recovered archived bytes. Frozen71/author3 pins checked separately; unchanged targets. Native retry allowed under original caps.
+
+Read all six p-star object proof sources in full: literal constructor graph/equality both ways, real branch elimination and same-body forget, same tape four graph outputs under true object composition/existential rules, actual arrow/arg/output equalities. No native value reflection, old FiberLift reused only finite block syntax, output raw argument remains distinct. Separate frozen71/author6/record pins checked. Potential module public visibility left to exact first native gate, no speculative edits.
+
+Reviewed all five AddressPositive numerical leaves: complete raw shell/typed context/type parse, both directions to literal actual fields; packed-context equality iff decoded stack equality under genuine contextView successes. Original addressRS and original fold agree at every raw triple, both rejection/acceptance. Concrete guard PR witnesses and same raw/least/fuel/fold tuple supplied. Separate frozen43/author5 pins checked; no object semantic reflection.
+
+Object p-star ordinary public-syntax import repair: full78a14002 two-file diff reviewed. Full failed16-file edition hashes verified; independent source inverses remove only each added public import, complete manifest inverse restores exact two old source pins and removes only new helper pin. Frozen71/author6/helpers checked separately. Unchanged exact targets, original caps.
+
+Read all ten AddressPositive open proof leaves. Six genuine selector outputs, real conjunction gates, equality alignment of actual right ctx/type, original certificate projection, true same-fiber fold, exact Fin4 existential introduction/elimination. Reverse recovers both validity occurrences at shared input. Separate frozen43/author10 pins checked. No external semantic assumptions for callbacks or old sourceBody transport.
+
+Atomic p-star object ordinary name repair: complete explicit-name open diffcf017075 reviewed; full12-file failed edition hashes checked, independent source and sole-manifest inverse recovered archived bytes. Frozen71/author6 pins checked separately; unchanged targets. Native retry allowed under original caps.
+
+Atomic p-star object ordinary name repair: complete explicit-name open diffcf017075 reviewed; full12-file failed edition hashes checked, independent source and sole-manifest inverse recovered archived bytes. Frozen71/author6 pins checked separately; unchanged targets. Native retry allowed under original caps.
+
+AddressPositive open ordinary public-signature visibility repair: full one-token private removal diffebe627c1 and sole manifest pin diff4d17e002 reviewed. Complete ten-source failed edition recovered by independent full-source/manifest inverse; frozen43/author10/record pins verified separately before native retry. Exact tuple body and target unchanged.
+
+Reviewed exact shape-refined Inputs reinstall target/map. One field replacement only, BaseAt retains actual same i/j/r/d and given v. Rebuild actual h and typed/total/alignment on new record under same ValidWindow; no requirement of old h or use of numerical equality for object body transport. Frozen43 pins checked before preflight.
