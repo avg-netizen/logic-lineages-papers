@@ -1,0 +1,19 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalGroundFreshTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalGroundFreshMembershipProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalGroundFreshTupleProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalGroundFreshChecks
+open NumberedWindowInternalGroundFreshTargets
+open NumberedWindowInternalGroundFreshMembershipProof (givenFreshMember)
+open NumberedWindowInternalGroundFreshTupleProof (reinstalledGround concreteGround)
+
+theorem exact_GivenPackedFreshMembership : ExactGivenPackedFreshMembership := givenFreshMember
+theorem exact_ReinstalledGroundFresh : ExactReinstalledGroundFresh := reinstalledGround
+theorem exact_ConcreteGroundFreshTuple : ExactConcreteGroundFreshTuple := concreteGround
+
+#print axioms exact_GivenPackedFreshMembership
+#print axioms exact_ReinstalledGroundFresh
+#print axioms exact_ConcreteGroundFreshTuple
+end LogicLineages.PersistentMarking.NumberedWindowInternalGroundFreshChecks

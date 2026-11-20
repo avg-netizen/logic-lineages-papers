@@ -314,3 +314,21 @@ Read complete Syntax/Bottom/Free/Checks and Presentation/Tuple/Checks. Real edge
 
 ## Actual chosen-code recurrence and positive characterization targets, Nov20
 Read complete two target files and both source maps. ChosenState/Finish compare respective actual raw-code fuel under original cell and actual same advance; next=0 and tail=nil permitted. Positive characterization has no supplied terminal premise: only cert≠0 and literal existential genuine loop/success scratch. Both preserve raw/least arbitrary callbacks and physical program AST, not original address-source meaning. All34/25 frozen pins checked before target-only preflight.
+
+## Actual given-u ground-domain C target review, Nov20
+Read full exact3 target/map. First isolates same chosen-a literal existential shape plus explicit scalar(u) at actual refined body; second pays that scalar through same reinstalled alignment and restricts only requested domain to ground, codomain arbitrary; third preserves full old/new same tuple with ValidWindow explicit. No arrow-domain or neutral C/lexical/old-body/ForwardRule claim. All33 pins independently matched before preflight.
+
+## Full original open positive characterization source review, Nov20
+Read complete six-source packet including actual terminal existential eliminator, exact binder substitution/renaming, graph input transport, true terminal acceptance directions, chosen loop totality and exact1 wrapper. Actual returned state/encoded current retained through eigencontexts; cert≠0 remains and target successor excludes equality of failures. No caller supplied terminality or bound, no callback semantic meaning or numerical reflection. All31 source/record/frozen pins checked before first gate.
+
+## Ground given-u C complete source review, Nov20
+Read all3 leaves. Exact original chosen-a shape supplies actual 3-slot matrix, scalar(u) transported by genuine renaming into that same eigencontext/body; original atomic I applies to identical bound u. New-body tuple alignment discharges scalar, ground C definitionally I, codomain arbitrary. All36 pins checked, no higher-C/neutral or old-body transport.
+
+## Actual own-code chosen cons full source review, Nov20
+Read all7 new leaves and shared immutable terminal eliminator. Genuine raw polynomial cons equation determines predecessor; actual strict tail bound and weakOrderCases give additive gap. True chosen tail terminal state stays at extra fuel using actual induction, then original head shift and graph uniqueness compare both own-code outputs. Actual finish uses identical returned scratch and terminal encoded result including0/nil. No extra callback semantics, old-body transfer or numerical reflection. Frozen/source/accepted/shared pins checked before gate.
+
+## Chosen-cons direct import repair, Nov20
+Full df9634ed diff reviewed and existing BindingProof public SuccessorProof import confirmed. Sole direct import makes original same suppliers visible, no theorem change. Complete source inverse plus sole-pin author manifest inverse match preserved18-item native failure1795177675418192575-6. All44 combined pins verified before retry.
+
+## Atomic-head original application numerical target review, Nov20
+Read full exact5 target/map, actual ExchangeAlgorithm.parts/table/row and AddressApplication.applyAddresses. Nonduplicate of fixed S,K direct-reduct classification: actual raw both row/edge orientations preserve literal domain/codomain/atomic function with oriented argument-row trace; original rounds and conditional Some least, no symmetry/fixedness/least existence. Whole same supplied application returns same packed context and possibly exchanged argument, not unchanged argument. All32pins checked before target-only gate. No new p/r, open graph or higher/neutral C claim.

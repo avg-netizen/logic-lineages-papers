@@ -1,0 +1,35 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveChosenConsFuelCompareProof.lean:23:5: error: unknown namespace `NumberedWindowInternalSparsePositiveIterationSuccessorProof`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveChosenConsFuelCompareProof.lean:24:5: error: unknown namespace `NumberedWindowInternalSparsePositiveIterationBindingProof`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveChosenConsFuelCompareProof.lean:42:19: error(lean.unknownIdentifier): Unknown identifier `moveFuel`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveChosenConsFuelCompareProof.lean:37:53: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+raw : Program 5
+least : Program 3
+left right pred ctx ty next tail current extra : OTerm α
+longer : Nonempty (Derivation body Γ (loopGraph raw least left pred ctx ty next tail))
+additive : Nonempty (Derivation body Γ (eqn (add tail extra) pred))
+l : Derivation body Γ (loopGraph raw least right tail ctx ty next tail)
+s : Derivation body Γ (scratchGraph right z current)
+h : Nonempty (Derivation body Γ (loopGraph raw least right (OrdinaryArithmetic.addTerm tail extra) ctx ty next tail))
+⊢ Nonempty (Derivation body Γ (eqn left right))
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveChosenConsFuelCompareProof.lean:55:12: error(lean.unknownIdentifier): Unknown identifier `moveLoop`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveChosenConsFuelCompareProof.lean:51:53: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+raw : Program 5
+least : Program 3
+left right pred ctx ty next tail current : OTerm α
+longer : Nonempty (Derivation body Γ (loopGraph raw least left pred ctx ty next tail))
+shorter : Nonempty (Derivation body Γ (loopGraph raw least right tail ctx ty next tail))
+done : Nonempty (Derivation body Γ (scratchGraph right z current))
+bound : Nonempty (Derivation body Γ (ltF tail (suc pred)))
+β : Type
+j : α → β
+Δ : List (ID1Completion.InternalCalculus.Formula β)
+extra : ID1Completion.InternalTagArithmeticSyntaxProof.OTerm β
+hJ : ∀ p ∈ Γ, Formula.relabel j p ∈ Δ
+eq : Nonempty (Derivation body Δ (eqn (add (Term.relabel j tail) extra) (Term.relabel j pred)))
+⊢ Nonempty (Derivation body Δ (eqn (Term.relabel j left) (Term.relabel j right)))
