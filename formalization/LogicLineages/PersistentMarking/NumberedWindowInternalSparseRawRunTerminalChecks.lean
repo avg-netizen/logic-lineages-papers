@@ -1,0 +1,20 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawRunTerminalTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawRunTerminalInductionProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawTickOpenChecks
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawRunTerminalChecks
+open NumberedWindowInternalSparsePathEnvelopeTargets (z)
+open NumberedWindowInternalSparseRawTickTargets (stateTerm)
+open NumberedWindowInternalSparseRawTickOpenChecks (exact_OpenTerminalTick)
+open NumberedWindowInternalSparseRawRunTerminalTargets
+open NumberedWindowInternalSparseRawRunTerminalInductionProof (deriveTerminalLoop)
+
+theorem exact_OpenRawTerminalLoop : ExactOpenRawTerminalLoop := by
+  intro body p other α flag fuel
+  exact deriveTerminalLoop (body := body) p other (stateTerm flag z) fuel
+    (exact_OpenTerminalTick body p other α flag)
+
+#print axioms exact_OpenRawTerminalLoop
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawRunTerminalChecks

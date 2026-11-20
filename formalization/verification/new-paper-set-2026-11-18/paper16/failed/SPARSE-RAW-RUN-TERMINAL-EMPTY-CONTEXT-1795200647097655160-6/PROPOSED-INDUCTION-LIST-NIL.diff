@@ -1,0 +1,12 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawRunTerminalInductionProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawRunTerminalInductionProof.lean
+@@ -55,7 +55,8 @@
+   obtain ⟨atNext⟩ := nextLoopGraph p other (st.relabel j) v ih moved
+   have stepProof : Derivation body (theta :: ([] : List (Formula α)).map weaken)
+       (successorInstance theta) := by
+-    simpa only [theta,successorInstance,nextEmbedding,loopSubst,j,v,liftNext,varNext] using atNext
++    simp only [theta,successorInstance,nextEmbedding,loopSubst,j,v,liftNext,varNext,List.map_nil]
++    exact atNext
+   have result := Derivation.universalElimination (emb fuel) (natInduction theta base stepProof)
+   simpa only [theta,instantiate,bindEmbedding,loopSubst,j,v,liftBind,varBind] using
+     (Nonempty.intro result)

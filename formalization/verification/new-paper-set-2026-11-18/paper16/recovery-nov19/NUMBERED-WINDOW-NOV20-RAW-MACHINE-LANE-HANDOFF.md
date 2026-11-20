@@ -118,3 +118,85 @@ not changed.
   RawMatching target is not obtained across arbitrary Settings
   from ValidWindow or numeric matching. This is a scope warning,
   not a counterexample to the fixed original source theorem.
+
+## Later accepted numerical run (supersedes the historical one-tick cutoff)
+
+Supporting [695](../../accepted/695-original-raw-run-numeric.json) checks
+the actual scratch initialization, head-first iteration on every original
+encoded state, and physical own-witness run, keeping the same raw w as
+both fuel and stored witness. The all-input comparison is to the original
+RawContextAlgorithm.iterate/run, with the explicit actual root and
+fallback numerical calibration hypotheses retained. Native
+1795200026403090881-6 and independent replay matched 925 modules, 31 pins,
+and all three exact aliases. This extends the numerical one-tick result,
+not the arbitrary-open object arithmetic: terminal identity across
+arbitrary open fuel is a proposed next target, not yet staged or
+checked. In particular neither reachable first-tick/fuel success,
+genuine raw/least callback correctness, nor RawMatching follows.
+
+## Later accepted genuine open terminal loop
+
+Supporting [697](../../accepted/697-original-raw-terminal-loop.json)
+closes the narrow terminal target proposed in the preceding update.
+For arbitrary open flag and fuel, arbitrary object body and actual
+root/fallback programs, at the original literal scratch
+`stateTerm flag z` the actual `iterateState` returns that identical
+scratch in a retained-calculus derivation with no hypotheses. The
+base uses the actual projection; the genuine object induction step
+uses the actual chosenTick terminal graph proved in #689, with no
+caller-supplied identity premise. Final gate 1795200811390899715-10
+and independent replay matched 1,229 modules, 30 pins, and the one
+exact alias. The first ordinary nil-context normalization failure is
+preserved separately; original AST and target were not changed.
+
+Remaining source obligations (read-only plan, not checked here):
+
+1. Prove the reachable scratch shape from the actual encoded false/live
+   initialization: an actual ordered two-field scratch has either
+   flag zero or frame zero. The real root emitter fixes frame zero;
+   the actual tag5 and fallback emitters fix flag zero; a terminal
+   step retains both. Do not impose this disjunction on arbitrary
+   input scratch at fuel zero. Nor strengthen it to a typed/valid frame
+   or a Boolean flag from arbitrary callbacks without the separate
+   actual graph facts. To extract success, connect the physical
+   `ownRun` flag read and genuine nonzero/unit output to terminal frame
+   using the invariant and original guards.
+2. Prove an open first-tick shift for the same recursor/compiled graph,
+   fed by #689's literal tag5 step. The all-input numeric commuting
+   equation in #695 is not a derivation of that open shift. To reuse an
+   accepted child on its own witness fuel, pay the actual object
+   strict sparse-code gap `wrapped = S(child + gap)`, then prove the
+   required open extra-fuel transport at the genuine terminal result.
+   The #697 graph starts terminal; it does not by itself identify an
+   arbitrary live iteration at increased fuel with that terminal run.
+3. Re-establish actual typed raw acceptance and both successful
+   least representatives at the transformed endpoints in the same
+   calibrated signature/window and source body. The identical raw
+   argument in the literal tag6 lifts does not establish equality of
+   the canonical application arguments. Supply the original least
+   class/congruence bridge and real positive certificate, retaining
+   the shared witness in both physical fuel and input slots.
+   Arbitrary-open RawMatching, fixed-window integration, and internal
+   ID1 membership remain unpaid.
+
+### Exact proposed first-tick graph contract (unproved)
+
+For arbitrary ordinary open terms `start`, `next`, `fuel`, and `out`,
+the proposed object derivation uses the supplied genuine graph
+`programGraph (chosenTick p other) next ![start]` as its premise.
+It derives both directions between
+`programGraph (iterateState p other) out ![S fuel,start]` and
+`programGraph (iterateState p other) out ![fuel,next]`, for the
+same literal programs and the same output term, without separate
+scratch-shape or typing assumptions. The actual recursor step
+projects its previous result alone; it ignores the prior fuel and
+original input scratch. The checked positive-iteration head shift
+is a proof template, not a transfer to this different AST.
+
+For extra fuel after reaching a terminal scratch, keep the
+original `start` and reached terminal output distinct. The
+successor proof must feed the reached terminal output as the prior
+result while retaining the original input in the recursor's input
+slot. Packet #697 starts at the terminal scratch itself; its helper
+uses the same term in both positions and does not prove this
+extra-fuel transport from an earlier live start.

@@ -24,20 +24,20 @@ These remain pending, not failed merely because supporting work continues. Resou
 
 ## Saved continuation evidence
 
-Verified checkpoint 6bae6fe353081a6c36441f6ca1a2240922f654a0 (tree 1884c167822f2f4c0dc0c8f461f91e1177ad2cfe) contains supporting records through 692 and their native/evidence archives. Later snapshot status is recorded separately; this immutable checkpoint remains a usable recovery point.
+Verified checkpoint 43ed8251f055f6d3a0c0312aaba23bd7d1690010 (tree 8a5257fa20451d525d3b1430e6c930f29acaf8fe) contains supporting records through 696 and their native/evidence archives. Later snapshot status is recorded separately; this immutable checkpoint remains a usable recovery point.
 
 - 689: genuine open original encoded terminal/first-frame tick, not a full run.
 - 690: allraw actual live/encoded-state one-tick calibration, not arbitrary-open raw semantics.
 - 691: actual original successful positive path supplies both actual scalar endpoints using directed class saturation and unchanged ordered cover.
 - 692: physical endpoint-carrier wrapper preserves the original numerical positive predicate on the same tape; does not transport object derivations.
 
-Supporting 693 subsequently adds genuine open wrapper elimination and both actual scalar carrier formulas at the same new source body. Its remote inclusion is subject to the next verified checkpoint.
+Supporting 693 adds genuine open wrapper elimination and both actual scalar carrier formulas at the same new source body. Supporting 694 proves actual endpoint-refined address-positive transitivity and the original false-tag scalar edge implication. Supporting 695 pays the actual arithmetic numeric loop and original own-code raw run, with the same witness used as fuel and retained in the input frame; this is not an open live-success invariant. Supporting 696 freshly reconstructs the new-body presentation and same-v tuple, retaining original guarded p and physical A/H; it does not transport old raw reports. All four are included in the verified checkpoint above.
 
 The raw machine lane route and precise remaining obligations are in `formalization/verification/new-paper-set-2026-11-18/paper16/recovery-nov19/NUMBERED-WINDOW-NOV20-RAW-MACHINE-LANE-HANDOFF.md`.
 
 ## Proof frontier versus resource barriers
 
-Still-open mathematical obligations include actual source-exact arbitrary-open raw/least application matching, own-code raw run and reachable terminal-fuel reasoning, full internal ID1 accessibility, and the Bachmann–Howard bounds/cofinality. Bare scalar carrier, lexical correctness, typed-at-u, accessibility I, and general computability C are distinct. Literal raw lift arguments and least-selected equivalent arguments need not be equal. ValidWindow is not a replacement for actual fixed-source semantics.
+Still-open mathematical obligations include actual source-exact arbitrary-open raw/least application matching, genuine open own-code raw run and reachable terminal-fuel reasoning, full internal ID1 accessibility, and the Bachmann–Howard bounds/cofinality. Bare scalar carrier, lexical correctness, typed-at-u, accessibility I, and general computability C are distinct. Literal raw lift arguments and least-selected equivalent arguments need not be equal. ValidWindow is not a replacement for actual fixed-source semantics.
 
 The named fixed-source original application-output scalar target separately stopped at the inherited PrimaryExchangeReflectProof under the original Core 512 MiB RSS cap, receipt 1795178907935544055-6. This is a target/import resource barrier, not a checked counterexample. An earlier mixed fixed-window integration target also hit the original 1536 MiB RSS limit. No cap raise or unchanged stopped-source retry occurred. The raw function-frame broad proof hit deterministic heartbeats; its full failed edition remains preserved, and accepted 686 uses a separately reviewed material thin route, not an increased heartbeat limit.
 
@@ -54,6 +54,12 @@ The brief 18:10 workspace restart retained this checkout, pinned toolchain, sour
 ## Scope safeguards
 
 Selected admissible-control results and unchanged displayed-control/all-ground results remain distinct. No full-root or CI build is claimed. No merge, force push, manuscript edit, toolchain/dependency pin change, checker change, or resource cap increase.
+
+## Final additional supporting results
+
+697 proves the actual raw loop terminal identity for arbitrary open flag/fuel, with a genuine retained-calculus induction and actual zero-frame tick theorem. This is not a live-success invariant or a first-tick/fuel extension. 698 freshly proves the actual new guarded address report in both object directions, including explicit actual endpoint scalar graphs; no old body or report is transported. Numerical raw/least calibration still does not yield their original object semantics or old argumentFiber derivations.
+
+Current source digest audit covers all 84 supporting records 615–698 and all 963 distinct pinned paths, plus all 42 registered current manuscript source files. Details and evidence archive digests: `FINAL-PIN-AND-ARCHIVE-DIGEST-AUDIT.json`. This is a file-integrity audit, not a whole-root or CI build.
 
 ## Stop verification
 

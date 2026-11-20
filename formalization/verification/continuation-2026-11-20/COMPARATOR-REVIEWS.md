@@ -478,3 +478,6 @@ Independently reversed f5d66a03 supplied-hop equation and both4c388d04/04388dd6 
 
 ## Raw run target reserved-name repair
 Full Definitions/Targets and entire frozen manifest inverses independently reconstruct archived1795199614884438646-6 bytes. Only reserved initialize→initialState name and two exact pins changed. All archived7files and full current frozen sources verified; no mathematical target change.
+
+## Raw terminal loop nil-context normalization
+Complete source and author-manifest inverse verified against full failed1795200647097655160-6 edition, all11 archived hashes and each current frozen/author/supplier/ref map verified. Only goal-side List.map_nil and exact atNext; no target/semantic/profile change.
