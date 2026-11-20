@@ -1,0 +1,19 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationHeadProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationTerminalProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationInductionChecks
+open NumberedWindowInternalSparsePositiveIterationTargets
+open NumberedWindowInternalSparsePositiveIterationHeadProof (shift)
+open NumberedWindowInternalSparsePositiveIterationTerminalProof (extra zeroLoop)
+
+theorem exact_OpenHeadFirstShift : OpenHeadFirstShift := shift
+theorem exact_OpenTerminalExtraFuel : OpenTerminalExtraFuel := extra
+theorem exact_OpenTerminalNilLoop : OpenTerminalNilLoop := zeroLoop
+
+#print axioms exact_OpenHeadFirstShift
+#print axioms exact_OpenTerminalExtraFuel
+#print axioms exact_OpenTerminalNilLoop
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationInductionChecks

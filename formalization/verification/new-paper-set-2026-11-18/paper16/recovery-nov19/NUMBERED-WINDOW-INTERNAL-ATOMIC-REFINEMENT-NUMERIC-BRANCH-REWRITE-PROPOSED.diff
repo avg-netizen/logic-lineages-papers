@@ -1,0 +1,31 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean
+@@ -18,23 +18,24 @@
+ 
+ theorem originalPreserved : ExactOriginalPositiveRefinement := by
+   intro xs s i r oldScalar oldPositive x w y
++  rw [exactBranches i r x w y]
+   obtain ⟨⟨freeHit,freeBit⟩,⟨bottomHit,bottomBit⟩⟩ := exactRecognizers x
+   rcases freeBit with freeZero | freeOne
+   · rcases bottomBit with bottomZero | bottomOne
+-    · simp [exactBranches,freeZero,bottomZero,oldPositive]
++    · simp [freeZero,bottomZero,oldPositive]
+     · obtain ⟨c,t,shape⟩ := bottomHit.mp bottomOne
+       have rejected : positive xs s x w y = false := by
+         rw [shape]
+         exact exact_ConcreteAtomicAddressPositive.2 xs s c t w y
+-      simp [exactBranches,freeZero,bottomOne,rejected]
++      simp [freeZero,bottomOne,rejected]
+   · by_cases accepted : positive xs s x w y = true
+     · obtain ⟨c,t,n,shape⟩ := freeHit.mp freeOne
+       have actual := exact_ConcreteAtomicAddressPositive.1 xs s c t n w y (shape ▸ accepted)
+       have targetOne : evaluate bottomTarget (x ::ᵥ w ::ᵥ y ::ᵥ nil) = 1 := by
+         rw [shape,freeAddress,exactBottomTarget.2,if_pos actual.1]
+-      simp [exactBranches,freeOne,oldPositive,accepted,targetOne,oldScalar,actual.2]
++      simp [freeOne,oldPositive,accepted,targetOne,oldScalar,actual.2]
+     · cases old : positive xs s x w y with
+-      | false => simp [exactBranches,freeOne,oldPositive,old]
++      | false => simp [freeOne,oldPositive,old]
+       | true => exact False.elim (accepted (by first | exact old | rfl))
+ 
+ theorem refinedEvaluation : ExactOriginalRefinedPresentationEvaluation := by

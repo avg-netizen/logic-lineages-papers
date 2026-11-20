@@ -254,3 +254,30 @@ Full prior4+target/freeze/map/native preserved12file hashes verified. Sole actua
 
 ## Exact explicit coordinate endpoint,20 November2026
 Full final22line leaf read. Fully applied generic closed proof is instantiated at unchanged actual iterateStep with actually proved stepStable; no Stable premise remains. Frozen OpenStepCoordinates unchanged, same scratch/context/type while only ignored fields vary. All41 frozen/chained source pins and four diagnostic manifests verified; all stopped assemblies excluded. Release original-cap exact1 gate, not head-first or full iteration acceptance.
+
+## Genuine head-first induction author review,20 November2026
+Full five proof leaves and sole exact1 wrapper read. Object induction invariant universally compares two genuine selected loop outputs, all parameters remain fixed and actual first scratch transition required. Uses original successor/functionality/renaming and fully discharged accepted650 coordinate cut. Exact a679c4d3 rebase inverse verified against preserved unverified draft; all frozen/author/accepted dependency record+manifest pins checked. No numerical induction reflection, stronger premise or combined stopped gate. Original-cap focused exact1 gate only.
+
+## Actual atomic certificate refinement targets,20 November2026
+Read shared AST, numeric exact5, object exact4 and full source map. Actual source/witness/target tape preserved; purely structural free/bottom detection and exact raw packed-context bottom emitter, old r passthrough elsewhere. Numeric source preservation is a conclusion paid by649, not an assumption; original i/j/d retained. Open derivations independent of numeric truth, current new sourceBody/certificate adapter [context,x,y,w]→[x,w,y] specified, genuine falsum not meta-consistency.31 numeric/46 object pins verified. Target-only separate original-cap preflights, no proof release yet.
+
+## Head unused-open repair,20 November2026
+Entire6author/frozen target/native failure preserved and verified. b76d6255 removes only unused nonexistent arithmeticEmbedding open; full proposed diff independently inverted,83frozen/author/accepted support pins verified. No proof expression/source semantics changed before original-cap retry.
+
+## Refined original certificate numeric author review,20 November2026
+All five proof leaves fully read. Real raw field selectors/6cons emitter/equality control, all-code structural recognition incl malformed branches, original649 path implication supplies exact target+scalar in successful free branch. i/j/d remain physically unchanged; source preservation is derived, no added hypothesis.36pins verified before focused full exact5 gate (short-circuits at first leaf failure). No object graph or body transfer claimed.
+
+## Actual sufficient fuel and output targets,20 November2026
+Both target files and maps fully read against unchanged Fold AST. Exact raw certificate<succ fuel, actual known output existential terminal scratch with rejection current allowed, true internal allBlock invariant; no valid-list-only assumption. Separate chosen-state/finish/walk/terminal-positive/nil graphs preserve actual tape/encoded successors and original raw-code fuel.33terminality/24output pins verified; target-only original-cap preflight. Neither implies primitive callback interpretation or original matching.
+
+## Atomic refinement numeric binder/import repair,20 November2026
+Full initial five-source edition and actual failed recognizer gate preserved. Complete a4890f19 reviewed and exact three-file inverse verified: direct already-used helper imports and explicit same Nat existential binders only, no AST/comparator/cap change.36pins rechecked before retry.
+
+## Terminality target namespace repair,20 November2026
+Ordinary1795175361715417872-6 existsOne name-resolution failure preserved with dual target edition/native. Exact af069372 source namespace open and sole-pin8656fe64 independently inversed; unchanged true existential proposition.33+24pins reverified before target-only retry, no author proof begun.
+
+## Refined atomic literal bottom emitter author review,20 November2026
+Read complete emitter proof and sole exact1 wrapper. Same six actual sparse conses, actual constant AST and original graph composition/functionality; arbitrary open context/type, no numerical reflection or source scalar assumption.48pins verified. Focused emitter only, not all object4 or new-body accessibility acceptance.
+
+## Refined source numerical branch proof repair,20 November2026
+Second ordinary failure full5/current source+native preserved and independently verified. Exact813c5b0e introduces fully applied same-tape branch equation before case split; no new premise or target/data change. Entire diff independently inverted and36pins verified before original-cap retry.

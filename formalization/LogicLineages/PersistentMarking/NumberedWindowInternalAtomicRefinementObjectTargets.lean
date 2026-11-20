@@ -62,8 +62,8 @@ def ExactOpenRefinedAtomicAcceptance : Prop :=
     Nonempty (Derivation body Γ (⊥ : Formula α)))
 
 /-- Same equations for the actual certificate and scalar carrier of
-the NEW body. The supplied witness remains in the third source slot,
-and the original checker adapter maps [context,x,y,w] to [x,w,y].
+the NEW body. The original checker adapter retains its supplied
+witness and maps [context,x,y,w] to [x,w,y].
 No arbitrary old body transport or I/C assertion. -/
 def ExactOpenRefinedAtomicCertificate : Prop :=
   (∀ (i j : Program 1) (r d : Program 3) (context : Nat) (α : Type)

@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationHeadProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationHeadChecks
+open NumberedWindowInternalSparsePositiveIterationTargets
+open NumberedWindowInternalSparsePositiveIterationHeadProof (shift)
+
+theorem exact_OpenHeadFirstShift : OpenHeadFirstShift := shift
+
+#print axioms exact_OpenHeadFirstShift
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationHeadChecks
