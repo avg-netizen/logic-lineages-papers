@@ -90,3 +90,31 @@ the source ID1 arithmetic-accessibility lemma, and the Bachmann–Howard
 bound are not established by this lane note or by these supporting
 packets. Previously reviewed manuscript and numbered endpoints were
 not changed.
+
+## Read-only source-review cautions (no new checked proof)
+
+- An arbitrary scratch can encode (true,some(q,w,r)), and original
+  iterate at fuel zero returns it unchanged. Thus true flag implies
+  terminal frame is **not** an invariant for every starting state.
+  Start the arithmetic induction at the original false/live scratch
+  (or an already-terminal one). A suitable reachable shape is that
+  the result has actual two-field scratch with flag=0 or frame=0:
+  every live context branch has flag zero, the real root branch has
+  frame zero, and terminal identity preserves the bytes. This uses
+  the actual branch emitters, not open semantics of the fallback.
+  To lift an own-code accepted child, the strict child-to-wrapper
+  comparison must supply the genuine object gap witnessing
+  wrapped=S(child+gap) before first-tick shift and terminal extension.
+- The raw function lift shares the identical raw argument **in its
+  two literal lifted inputs**. Do not infer raw argument equality
+  of the later least representatives: original canonical application
+  can replace a term by a class representative, and the checked
+  p-star application-shape contract explicitly does not equate its
+  argument raw fields a and a-prime. Pay the real least/congruence
+  bridge. Also ValidWindow only supplies type support, codomain
+  closure and numeric fresh totality. It is not the fixed-source
+  Settings calibration required by the checked numerical backward
+  matching theorem (fixed S K and closed K). The arbitrary-open
+  RawMatching target is not obtained across arbitrary Settings
+  from ValidWindow or numeric matching. This is a scope warning,
+  not a counterexample to the fixed original source theorem.

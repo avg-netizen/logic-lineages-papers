@@ -475,3 +475,6 @@ Read all three raw tick open leaves fully. Actual sparse zero-frame selector, re
 Independently reversed complete9cd30725 tape.get1 defeq repair and68941ed6 entire author manifest to archived bytes.63 current pins checked independently before queued numeric retry.
 
 Independently reversed f5d66a03 supplied-hop equation and both4c388d04/04388dd6 entire source/cross-author manifests to archived bytes. All independent freeze/source/supplier/prior-author maps verified before endpoint retry; exact target unchanged.
+
+## Raw run target reserved-name repair
+Full Definitions/Targets and entire frozen manifest inverses independently reconstruct archived1795199614884438646-6 bytes. Only reserved initialize→initialState name and two exact pins changed. All archived7files and full current frozen sources verified; no mathematical target change.
