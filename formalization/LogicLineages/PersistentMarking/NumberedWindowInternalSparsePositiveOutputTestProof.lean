@@ -34,7 +34,7 @@ private theorem componentsKnown (raw : Program 5) (least : Program 3)
     (walk : Nonempty (Derivation body Γ
       (programGraph (chosenWalk raw least) current (args5 ctx ty source cert target)))) (i : Fin 2) :
     Nonempty (Derivation body Γ (programGraph (components raw least i)
-      (Fin.cons current (Fin.cons (suc target) Fin.elim0) i) (args5 ctx ty source cert target))) := by
+      ((Fin.cons current (Fin.cons (suc target) Fin.elim0) : Fin 2 → OTerm α) i) (args5 ctx ty source cert target))) := by
   refine Fin.cases ?_ (fun j => Fin.cases ?_ (fun k => Fin.elim0 k) j) i
   · exact walk
   · exact succAtValue (4 : Fin 5) (args5 ctx ty source cert target)

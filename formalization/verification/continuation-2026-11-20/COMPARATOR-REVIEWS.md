@@ -305,3 +305,12 @@ Entire 4318d77 diff reviewed: existing direct helper import and Nonempty elimina
 
 ## Actual sufficient-fuel terminality full13-source review, Nov20
 Read complete ScratchBinding, UniformBinding, Motive, Fuel, Nil, Seed, Shift, Gap, ConsShift, Cons, Rules, Sufficient and exact2 Checks. Actual sparse-field induction generalizes all fuel/current/out at fixed ctx/type; genuine strict tail decrease and predecessor case give smaller sufficient fuel; actual advance totality and scratch constructor witnesses feed accepted same-output head shift. Nil/gap use genuine loop uniqueness/terminal nil. No raw callback meaning, numerical reflection or assumed terminality. Frozen33 plus author13 and accepted5 pins checked before first gate.
+
+## Output acceptance tuple repair, Nov20
+Entire774eeb68 diff reviewed: sole Fin2→OTermα ascription on unchanged literal tuple. Full reversed source and sole-pin manifest independently reproduce preserved19-item edition1795176618803122579-7; all35 current pins checked. No statement or resource change.
+
+## Atomic I and new-body same tuple full source review, Nov20
+Read complete Syntax/Bottom/Free/Checks and Presentation/Tuple/Checks. Real edgeCases produces same original existential certificate, shape syntax carried only by renaming; free successor I is introduced at actual bound y using bottom shape and its explicit carrier. Exact I iff carrier uses original introduction/extraction. Tuple reinstall derives fresh evaluation/interpreter/Rules; only scalar carrier syntax is unchanged, guards were universally quantified over body; typed and alignment supplied anew at new Data, same physical programs. No old-body derivation transfer or neutral/higher C. All35 and37 pins checked before gates.
+
+## Actual chosen-code recurrence and positive characterization targets, Nov20
+Read complete two target files and both source maps. ChosenState/Finish compare respective actual raw-code fuel under original cell and actual same advance; next=0 and tail=nil permitted. Positive characterization has no supplied terminal premise: only cert≠0 and literal existential genuine loop/success scratch. Both preserve raw/least arbitrary callbacks and physical program AST, not original address-source meaning. All34/25 frozen pins checked before target-only preflight.
