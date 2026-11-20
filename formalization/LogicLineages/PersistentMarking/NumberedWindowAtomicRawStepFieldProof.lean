@@ -17,12 +17,10 @@ theorem unpackPacked (xs : List Nat) : unpack (pack xs) = some xs := by
   induction xs with
   | nil => exact casesUnpack.1
   | cons x xs ih =>
-    rw [pack,casesUnpack.2.2,ih]
-    rfl
+    rw [pack,casesUnpack.2.2,ih] <;> rfl
 
 theorem nodePacked (tag : Nat) (xs : List Nat) : unpackNode (packNode tag xs) = some (tag,xs) := by
-  rw [packNode,nodeOfCell (cellAt tag (pack xs)),unpackPacked]
-  rfl
+  rw [packNode,nodeOfCell (cellAt tag (pack xs)),unpackPacked] <;> rfl
 
 theorem codeOfNode {q tag : Nat} {xs : List Nat}
     (h : unpackNode q = some (tag,xs)) : q = packNode tag xs := by

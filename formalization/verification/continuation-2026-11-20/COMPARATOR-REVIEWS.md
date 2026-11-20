@@ -209,3 +209,18 @@ Read31-line new supplier and immutable thin graph/leaves helpers;32pins verified
 
 ## Actual terminal symbolic fuel author review
 Read full Binding/Terminal/wrapper plus unchanged successor;33pins verified. Retained object natInduction on extra fuel with actual addition equations and selected nil step; preserves same terminal scratch witness/context/type/original seed and handles arbitrary symbolic fuel. Nil-loop consequence uses actual base. Does not assert terminality at sufficient fuel or use native induction as object evidence. Root excludes all coordinate modules/stops. Exact2 gate required.
+
+## Isolated actual update/branch coordinate probe
+Read both tiny new modules, explicit same Program6 AST identities and local Stable/graph opacity. Same accepted/rejected/nil branches and current scratch/context/type; immutable previously passed helpers unchanged. Metadata passed_diagnostic_probe_manifest names a passed supplier, not an accepted endpoint. Combined source pins verified; original-cap diagnostic gate before final exact wrapper.
+
+## Atomic raw step author review, 20 November 11:14 UTC
+Read all four proof leaves in full. Original free/bottom raw constructors, root tag7, no-context descent, and same raw context/requested type admission retained; no least/positive or I/C conclusion claimed. Exact frozen aliases unchanged; all29 frozen plus4 author hashes verified before original-cap gate.
+
+## Isolated coordinate endpoint review, 20 November11:16 UTC
+Both tiny transport/audit leaves fully read; pure retained Fin equality and explicit Stable cut preserve actual programGraph/iterateStep and original frozen OpenStepCoordinates. Original stopped assemblies untouched/excluded. All36 union source pins plus two diagnostic manifests verified. Branch/update native1795172910601530974-6 passed; not separately accepted. Release exact endpoint original-cap gate, not head-first or whole iteration acceptance.
+
+## Atomic beta-row repair, 20 November11:18 UTC
+Ordinary1795173171643488144-6 failure source mismatch getD/getElem? only. All four prior author files, manifest, freeze/map, actual native receipt/module/wrapper hashes verified. Full diff01899391 reviewed and independently reproduced against archived edition: actual betaRows false function eliminates incidental option argument spelling; exact source/targets/caps unchanged.33 source pins reverified before retry.
+
+## Atomic least target, 20 November11:20 UTC
+Read entire exact4 comparator and source map against literal ExchangeAlgorithm/ScalarAlgorithm/ClassAlgorithm. Both atom orientations, arbitrary settings/pool/row/fuel, original equality-or-edge rounds and conditional min? retained. No pool existence, total least, quotient symmetry, positive-path or object conclusion.21 source pins verified before target-only original-cap preflight.

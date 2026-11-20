@@ -38,8 +38,10 @@ private theorem atomicParts (xs : Entries) (s : Settings) (q y tag : Nat) (ws : 
     rcases leaf with rfl | rfl <;>
       simp [NumberedWindowBinderRootAlgorithm.fabs,guarded,view,NumberedWindowBinderRootAlgorithm.fabsRow]
   have hbeta : NumberedWindowBinderRootAlgorithm.beta q y = false := by
-    cases hy : unpackNode (sourceFields.getD 2 0) <;> rcases leaf with rfl | rfl <;>
-      simp [NumberedWindowBinderRootAlgorithm.beta,guarded,view,hy,NumberedWindowBinderRootAlgorithm.betaRows]
+    have row : NumberedWindowBinderRootAlgorithm.betaRows y (sourceTag,sourceFields) = fun _ => false := by
+      funext child
+      rcases leaf with rfl | rfl <;> simp [NumberedWindowBinderRootAlgorithm.betaRows]
+    simp [NumberedWindowBinderRootAlgorithm.beta,guarded,view,row]
   rcases tag with _ | _ | _ | _ | _ | _ | _ | _ | tag <;>
     rcases ws with _ | ⟨w,_ | ⟨u,_ | ⟨v,_ | ⟨r,rs⟩⟩⟩⟩ <;>
     simp [parts,fixed,hmark,hlower,hselect,hcopy,hstat,hfabs,hbeta]
