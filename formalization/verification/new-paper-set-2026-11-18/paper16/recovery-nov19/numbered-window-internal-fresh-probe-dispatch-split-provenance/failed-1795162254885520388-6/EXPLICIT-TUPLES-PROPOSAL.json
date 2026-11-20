@@ -1,0 +1,12 @@
+{
+  "actual_log_sha256": "03d76915a9907ea354372ff72b37732d8bf497f11017091de55d5d20dbd4e9cc",
+  "batch_log_sha256": "67b0290bfef1518ec60b6d36cab9b4af252ce8f3f1cae3025c75a78edcc5c904",
+  "diff_sha256": "132d0d913e2fc2f286810eb16adbe5a5fa64ca5473cb2b219bcef37fda4f78e8",
+  "file": "LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchProgramDefinitions.lean",
+  "prior_freeze_sha256": "ef6427a3f7c5dc3796f2a733f0375fdc9f7d85d5ab74329a8aa85905f140c3b9",
+  "prior_sha256": "6b5057daf8d8d7d1d156ea307b88dcd8a8eb26b4d740042035792d9e23ec4e92",
+  "proposed_sha256": "755416cc5448ce8fa06490cf111e24558c4b02aad246eda7b9b5ef79c02ea43f",
+  "reason": "All seven unsupported mathlib Fin-tuple literals were parsed as Bool.not of List. Replace each with the exact nested Fin.cons/Fin.elim0 that Matrix.vecCons/vecEmpty definitionally expand to, same arity/order/projections/AST. No new imports, budget, target or algorithm change.",
+  "receipt_sha256": "a14077da2ae9819e4b347f54621010199df0128d38cf6be4c4a7db0e0b06138a",
+  "status": "proposed_unapplied"
+}

@@ -80,6 +80,7 @@ theorem openSharedTest : OpenSharedTest := by
     apply Nonempty.intro
     unfold shared at h
     apply Derivation.existentialElimination h
+    change Derivation body _ ((one (agree a) q w v).relabel Sum.inl)
     rw [oneRename]
     let y : OTerm (α ⊕ Fin 1) := .var (.inr 0)
     let Q := programGraph a y ![q.relabel Sum.inl]

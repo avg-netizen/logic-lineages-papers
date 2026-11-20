@@ -29,3 +29,11 @@ Read all eight new modules and the full split map and verified83 frozen pins. Th
 ## Sparse decoder comparator
 
 Read both selected decoder modules and full map; verified31 pins. Floor-root residuals are n-s*s and s-(n-s*s); the guard rejects the true sparse gap s<residual. Complete optional equality to the original bounded decoder, actual open success graphs with both coordinates, and genuine two-binder preimage absence on failure are required separately. No total Nat.pair inverse or generated-code-only domain is substituted.
+
+## Sparse decoder author review
+
+Read all nine proof/check leaves and verified40 combined frozen/authored pins. Numerical proof identifies actual floor-root residual and sparse gap, equates complete optional outcome with original bounded search. Object proofs use actual subtraction functionality and nontruncation bounds to reconstruct additive equations; actual graph composition builds selected candidates. Guard binary cases use retained object arithmetic, not natural-model reflection. Success reconstructs the original polynomial pair graph; rejection equivalence uses two genuine existential preimage binders and retained renaming/substitution. No earlier decoder AST is replaced by extensional equality. Native/exact-axiom gates remain required.
+
+## Dispatch type-code injectivity author review
+
+Read the entire leaf: polynomial square intervals force equal coordinate sums, cancellation recovers both actual source pair coordinates, then actual simple-type induction proves successor-pair code injectivity. Target is literal Function.Injective code; no older max-square pair convention. First native attempt produced ordinary implicit-IH argument failure, preserved with full failed evidence; syntax-only explicit argument removal reviewed. No acceptance before clean native/axiom/evidence replay.

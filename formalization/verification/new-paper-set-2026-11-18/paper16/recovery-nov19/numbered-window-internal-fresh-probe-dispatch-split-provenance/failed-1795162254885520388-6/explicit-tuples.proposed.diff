@@ -1,0 +1,44 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchProgramDefinitions.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchProgramDefinitions.lean
+@@ -62,32 +62,34 @@
+   (∀ q u v, evaluate l.applicationGuard (q ::ᵥ u ::ᵥ v ::ᵥ nil) = (graph s q u v).toNat)
+ 
+ def typeLeaf (l : Leaves) (τ : ProbeTy) : Program 1 :=
+-  .composition l.baseTyped ![literal 1 (code τ), .projection 0]
++  .composition l.baseTyped (Fin.cons (literal 1 (code τ)) (Fin.cons (Program.projection (0 : Fin 1)) Fin.elim0))
+ 
+ def afterPredecessor {n : Nat} (a : Program n) : Program n :=
+-  .composition predOne ![a]
++  .composition predOne (Fin.cons a Fin.elim0)
+ 
+ def resultGuard (l : Leaves) (codomain : Program 1) : Program 3 :=
+-  bothOne l.applicationGuard (.composition codomain ![.projection 2])
++  bothOne l.applicationGuard (.composition codomain (Fin.cons (Program.projection (2 : Fin 3)) Fin.elim0))
+ 
+ def applicationPart (l : Leaves) (codomain : Program 1) : Program 2 :=
+   chooseBranch l.applicationCode (zeroAt 2)
+     (.composition (resultGuard l codomain)
+-      ![.projection 0, .projection 1, afterPredecessor l.applicationCode])
++      (Fin.cons (Program.projection (0 : Fin 2))
++        (Fin.cons (Program.projection (1 : Fin 2)) (Fin.cons (afterPredecessor l.applicationCode) Fin.elim0))))
+ 
+ def arrowPart (l : Leaves) (codomain : Program 1) : Program 1 :=
+   chooseBranch l.fresh (zeroAt 1)
+-    (.composition (applicationPart l codomain) ![.projection 0, afterPredecessor l.fresh])
++    (.composition (applicationPart l codomain)
++      (Fin.cons (Program.projection (0 : Fin 1)) (Fin.cons (afterPredecessor l.fresh) Fin.elim0)))
+ 
+ def verify (l : Leaves) : ProbeTy → Program 1
+   | .ground => typeLeaf l .ground
+   | .arrow σ τ => bothOne (typeLeaf l (.arrow σ τ)) (arrowPart l (verify l τ))
+ 
+ def typeTest (τ : ProbeTy) : Program 2 :=
+-  .composition compareNumbers ![.projection 0, literal 2 (code τ)]
++  .composition compareNumbers (Fin.cons (Program.projection (0 : Fin 2)) (Fin.cons (literal 2 (code τ)) Fin.elim0))
+ 
+ def liftBranch (l : Leaves) (τ : ProbeTy) : Program 2 :=
+-  .composition (verify l τ) ![.projection 1]
++  .composition (verify l τ) (Fin.cons (Program.projection (1 : Fin 2)) Fin.elim0)
+ 
+ def dispatch (l : Leaves) : List ProbeTy → Program 2
+   | [] => zeroAt 2
