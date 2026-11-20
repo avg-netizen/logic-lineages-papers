@@ -1,0 +1,18 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalAuxBottomMembershipTupleTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalAuxBottomMembershipTupleProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalAuxBottomMembershipTupleChecks
+open NumberedWindowInternalAuxBottomMembershipTupleTargets
+open NumberedWindowInternalAuxBottomMembershipTupleProof
+
+theorem exact_AugmentedPresentation : ExactAugmentedPresentation := presentation
+theorem exact_ReinstallAugmentedShapeTuple : ExactReinstallAugmentedShapeTuple := reinstall
+theorem exact_ConcreteAugmentedShapeTuple : ExactConcreteAugmentedShapeTuple := concrete
+
+#print axioms exact_AugmentedPresentation
+#print axioms exact_ReinstallAugmentedShapeTuple
+#print axioms exact_ConcreteAugmentedShapeTuple
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalAuxBottomMembershipTupleChecks

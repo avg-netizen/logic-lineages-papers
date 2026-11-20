@@ -80,10 +80,10 @@ private theorem scalarCompose (i j cv tv : Program 1) (d : Program 3) (raw : Pro
   let y := (right.relabel ρ).relabel η
   have res := combine cv tv raw least x (first.relabel η) ((mid.relabel ρ).relabel η) second y aa' bb
   apply consume r x y (edge S false c x y) res
-  intro δ λ' Ξ cert hλ final
+  intro δ renameCert Ξ cert hRenameCert final
   rw [scalarRename]
   exact edgeIntroduction ((exact_CertificateRules i j r d false c body δ Ξ
-    (x.relabel λ') (y.relabel λ') cert).mpr final)
+    (x.relabel renameCert) (y.relabel renameCert) cert).mpr final)
 
 theorem scalar : ExactInstalledScalarEdgeTransitivity := by
   intro i j cv tv d raw least c α left middle right

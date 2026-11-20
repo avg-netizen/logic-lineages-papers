@@ -1,0 +1,139 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalAuxBottomMembershipObjectTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalAuxBottomMembershipCertificateProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicMembershipSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAccessibilityRulesProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityDownwardProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalAuxBottomMembershipObjectProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators
+open ID1Completion.InternalCalculus ID1Completion.InternalControlGraph ID1Completion.InternalAccessibilityRules
+open ID1Completion.SourcePresentation (Data sourceBody)
+open ID1Completion.InternalAccessibilityRulesProof (actualOriginalAccessibilityIntroduction actualOriginalCarrierExtraction)
+open ID1Completion.InternalComputabilityDownwardProof (edgeCases)
+open ID1Completion.InternalControlGraphSupportProof (equalEqn)
+open ID1Completion.InternalTagArithmeticSyntaxProof (eqnRelabel zRelabel)
+open ID1Completion.GuardedSourceSyntaxProof (numeralRename)
+open ID1Completion.InternalGraphCompositionFunctionalityProof (renameInto)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open NumberedWindowInternalProbeTargets (OTerm)
+open NumberedWindowInternalPresentationTargets (data)
+open NumberedWindowInternalAtomicMembershipSyntaxProof (moveBottom underSuccessor membershipRename)
+open NumberedWindowInternalAtomicRefinementObjectTargets (packedBottomTerm)
+open NumberedWindowInternalAtomicApplicationShapeObjectTargets (auxAddressTerm bottomTerm)
+open NumberedWindowInternalAuxBottomRefinementObjectTargets (packedAuxBottomTerm)
+open NumberedWindowInternalFreshProbeParsedEmitterObjectTargets (addressTerm)
+open NumberedWindowInternalFreshProbeEmitterObjectTargets (consTerm)
+open NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof (rawConsRename)
+open NumberedWindowInternalAuxBottomMembership (augmented)
+open NumberedWindowInternalAuxBottomMembershipObjectTargets
+open NumberedWindowInternalAuxBottomMembershipCertificateProof (exactCertificate)
+
+private theorem consRename {α β : Type} (x y : OTerm α) (j : α → β) :
+    (consTerm x y).relabel j = consTerm (x.relabel j) (y.relabel j) :=
+  rawConsRename x y j
+
+private theorem auxRename {α β : Type} (ctx dom cod stored arg : OTerm α) (j : α → β) :
+    (packedAuxBottomTerm ctx dom cod stored arg).relabel j =
+      packedAuxBottomTerm (ctx.relabel j) (dom.relabel j) (cod.relabel j) (stored.relabel j) (arg.relabel j) := by
+  simp only [packedAuxBottomTerm,auxAddressTerm,bottomTerm,addressTerm,consRename,numeralRename,zRelabel]
+
+private theorem moveAux {B : Positive (Fin 1)} {α β : Type}
+    {Γ : List (Formula α)} {Δ : List (Formula β)}
+    (x ctx dom cod stored arg : OTerm α) (j : α → β)
+    (preserves : ∀ p ∈ Γ, p.relabel j ∈ Δ)
+    (h : Nonempty (Derivation B Γ (equal x (packedAuxBottomTerm ctx dom cod stored arg)))) :
+    Nonempty (Derivation B Δ (equal (x.relabel j)
+      (packedAuxBottomTerm (ctx.relabel j) (dom.relabel j) (cod.relabel j) (stored.relabel j) (arg.relabel j)))) := by
+  have h' := renameInto h j Δ preserves
+  simpa only [equalEqn,eqnRelabel,auxRename] using h'
+
+private theorem universalSuccessors (S : Data) (c : Nat) {α : Type} {Γ : List (Formula α)}
+    (x : OTerm α)
+    (next : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (y : OTerm β),
+      (∀ p ∈ Γ, p.relabel j ∈ Δ) →
+      Nonempty (Derivation (sourceBody S c) Δ (edge S false c (x.relabel j) y)) →
+      Nonempty (Derivation (sourceBody S c) Δ (membership false y))) :
+    Nonempty (Derivation (sourceBody S c) Γ (successors S false c x)) := by
+  let β := α ⊕ Fin 1
+  let j : α → β := Sum.inl
+  let y : OTerm β := .var (.inr 0)
+  let H := edge S false c (x.relabel j) y
+  let Δ := H :: Γ.map weaken
+  obtain ⟨result⟩ := next β j Δ y (underSuccessor Γ H) ⟨Derivation.hypothesis List.mem_cons_self⟩
+  exact ⟨Derivation.universalIntroduction (Derivation.implicationIntroduction result)⟩
+
+private theorem bareMembership (i j : Program 1) (r d : Program 3) (c : Nat) (α : Type)
+    (Γ : List (Formula α)) (x ctx t : OTerm α) :
+    let S := data i j (augmented i r) d
+    let B := sourceBody S c
+    Nonempty (Derivation B Γ (equal x (packedBottomTerm ctx t))) →
+    Nonempty (Derivation B Γ (carrier S false c x)) →
+    Nonempty (Derivation B Γ (membership false x)) := by
+  dsimp only
+  intro shape carried
+  let S := data i j (augmented i r) d
+  let B := sourceBody S c
+  apply actualOriginalAccessibilityIntroduction S false c α Γ x carried
+  apply universalSuccessors S c x
+  intro β ρ Δ y pass hEdge
+  let x' := x.relabel ρ
+  let ctx' := ctx.relabel ρ
+  let t' := t.relabel ρ
+  have shaped : Nonempty (Derivation B Δ (equal x' (packedBottomTerm ctx' t'))) :=
+    moveBottom x ctx t ρ pass shape
+  apply edgeCases S c x' y (membership false y) hEdge
+  intro γ k Ω w keeps cert
+  obtain ⟨bad⟩ := exactCertificate.1 i j r d c γ Ω (x'.relabel k) w (y.relabel k)
+    (ctx'.relabel k) (t'.relabel k) (moveBottom x' ctx' t' k keeps shaped) cert
+  exact ⟨Derivation.explosion bad⟩
+
+private theorem auxMembership (i j : Program 1) (r d : Program 3) (c : Nat) (α : Type)
+    (Γ : List (Formula α)) (x ctx dom cod stored arg : OTerm α) :
+    let S := data i j (augmented i r) d
+    let B := sourceBody S c
+    Nonempty (Derivation B Γ (equal x (packedAuxBottomTerm ctx dom cod stored arg))) →
+    Nonempty (Derivation B Γ (carrier S false c x)) →
+    Nonempty (Derivation B Γ (membership false x)) := by
+  dsimp only
+  intro shape carried
+  let S := data i j (augmented i r) d
+  let B := sourceBody S c
+  apply actualOriginalAccessibilityIntroduction S false c α Γ x carried
+  apply universalSuccessors S c x
+  intro β ρ Δ y pass hEdge
+  let x' := x.relabel ρ
+  let ctx' := ctx.relabel ρ
+  let dom' := dom.relabel ρ
+  let cod' := cod.relabel ρ
+  let stored' := stored.relabel ρ
+  let arg' := arg.relabel ρ
+  have shaped : Nonempty (Derivation B Δ (equal x' (packedAuxBottomTerm ctx' dom' cod' stored' arg'))) :=
+    moveAux x ctx dom cod stored arg ρ pass shape
+  apply edgeCases S c x' y (membership false y) hEdge
+  intro γ k Ω w keeps cert
+  rw [membershipRename]
+  obtain ⟨out⟩ := exactCertificate.2 i j r d c γ Ω (x'.relabel k) w (y.relabel k)
+    (ctx'.relabel k) (dom'.relabel k) (cod'.relabel k) (stored'.relabel k) (arg'.relabel k)
+    (moveAux x' ctx' dom' cod' stored' arg' k keeps shaped) cert
+  exact bareMembership i j r d c γ Ω (y.relabel k) (ctx'.relabel k) (cod'.relabel k)
+    ⟨Derivation.conjunctionLeft out⟩ ⟨Derivation.conjunctionRight out⟩
+
+theorem exactMembership : ExactAugmentedBottomMembership := by
+  constructor
+  · intro i j r d c α Γ x ctx t
+    dsimp only
+    intro shape
+    exact ⟨bareMembership i j r d c α Γ x ctx t shape,
+      actualOriginalCarrierExtraction (data i j (augmented i r) d) false c α Γ x⟩
+  · intro i j r d c α Γ x ctx dom cod stored arg
+    dsimp only
+    intro shape
+    exact ⟨auxMembership i j r d c α Γ x ctx dom cod stored arg shape,
+      actualOriginalCarrierExtraction (data i j (augmented i r) d) false c α Γ x⟩
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalAuxBottomMembershipObjectProof
