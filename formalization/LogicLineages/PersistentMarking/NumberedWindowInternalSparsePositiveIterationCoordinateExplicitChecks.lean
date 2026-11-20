@@ -1,0 +1,23 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationCoordinateOpaqueBranchProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationCoordinateExplicitClosedProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationCoordinateExplicitChecks
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraph (programGraph)
+open NumberedWindowInternalSparsePositiveFold (iterateStep)
+open NumberedWindowInternalSparsePositiveIterationCoordinateThinGraphProof (Stable)
+open NumberedWindowInternalSparsePositiveIterationCoordinateOpaqueBranchProof (stepStable)
+open NumberedWindowInternalSparsePositiveIterationCoordinateExplicitClosedProof (closedWithStable)
+open NumberedWindowInternalSparsePositiveIterationTargets
+
+attribute [local irreducible] programGraph iterateStep Stable
+
+theorem exact_OpenStepCoordinates : OpenStepCoordinates :=
+  fun body raw least α out prior ctx ty k initial certificate k' initial' certificate' =>
+    closedWithStable (iterateStep raw least) (stepStable raw least) body α out prior ctx ty
+      k initial certificate k' initial' certificate'
+
+#print axioms exact_OpenStepCoordinates
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationCoordinateExplicitChecks

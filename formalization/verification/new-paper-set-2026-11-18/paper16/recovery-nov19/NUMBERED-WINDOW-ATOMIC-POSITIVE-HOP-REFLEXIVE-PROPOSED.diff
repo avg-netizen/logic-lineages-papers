@@ -1,0 +1,11 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowAtomicPositiveAdvanceProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowAtomicPositiveAdvanceProof.lean
+@@ -28,7 +28,7 @@
+     · rw [if_pos good] at hc
+       have hy := Option.some.inj hc
+       simp only [Bool.and_eq_true,beq_iff_eq,and_assoc] at good
+-      exact ⟨q,w,r,hy ▸ hv,good.1,good.2.1,hy ▸ good.2.2⟩
++      exact ⟨q,w,r,by rw [hy],good.1,good.2.1,hy ▸ good.2.2⟩
+     · rw [if_neg good] at hc
+       cases hc
+ 

@@ -213,14 +213,44 @@ Read full Binding/Terminal/wrapper plus unchanged successor;33pins verified. Ret
 ## Isolated actual update/branch coordinate probe
 Read both tiny new modules, explicit same Program6 AST identities and local Stable/graph opacity. Same accepted/rejected/nil branches and current scratch/context/type; immutable previously passed helpers unchanged. Metadata passed_diagnostic_probe_manifest names a passed supplier, not an accepted endpoint. Combined source pins verified; original-cap diagnostic gate before final exact wrapper.
 
-## Atomic raw step author review, 20 November 11:14 UTC
+## Atomic raw step author review, 20 November2026
 Read all four proof leaves in full. Original free/bottom raw constructors, root tag7, no-context descent, and same raw context/requested type admission retained; no least/positive or I/C conclusion claimed. Exact frozen aliases unchanged; all29 frozen plus4 author hashes verified before original-cap gate.
 
-## Isolated coordinate endpoint review, 20 November11:16 UTC
+## Isolated coordinate endpoint review, 20 November2026
 Both tiny transport/audit leaves fully read; pure retained Fin equality and explicit Stable cut preserve actual programGraph/iterateStep and original frozen OpenStepCoordinates. Original stopped assemblies untouched/excluded. All36 union source pins plus two diagnostic manifests verified. Branch/update native1795172910601530974-6 passed; not separately accepted. Release exact endpoint original-cap gate, not head-first or whole iteration acceptance.
 
-## Atomic beta-row repair, 20 November11:18 UTC
+## Atomic beta-row repair, 20 November2026
 Ordinary1795173171643488144-6 failure source mismatch getD/getElem? only. All four prior author files, manifest, freeze/map, actual native receipt/module/wrapper hashes verified. Full diff01899391 reviewed and independently reproduced against archived edition: actual betaRows false function eliminates incidental option argument spelling; exact source/targets/caps unchanged.33 source pins reverified before retry.
 
-## Atomic least target, 20 November11:20 UTC
+## Atomic least target, 20 November2026
 Read entire exact4 comparator and source map against literal ExchangeAlgorithm/ScalarAlgorithm/ClassAlgorithm. Both atom orientations, arbitrary settings/pool/row/fuel, original equality-or-edge rounds and conditional min? retained. No pool existence, total least, quotient symmetry, positive-path or object conclusion.21 source pins verified before target-only original-cap preflight.
+
+## Abstract coordinate diagnostic,20 November2026
+Read all three new leaves. Pure call6 bookkeeping, generic Program6 Stable graph cut and closed equivalence separately typechecked; no actual AST specialization or source endpoint accepted.32 frozen/author pins verified, all stopped actual assembly excluded. Root releases diagnostic original-cap gate only.
+
+## Atomic least author review,20 November2026
+Read all three proof leaves in full. Actual exchange row/table sparse-pair reduction, both original edge orientations, original finite advance/round induction, and actual min? membership retain requested/stored type separation.24 frozen/author pins verified. No changed runtime, assumed symmetry/totality, positive or object claims. Release original-cap exact4 gate.
+
+## Pure finite tuple diagnostic,20 November2026
+Read both tiny leaves: generic codomain term-level equality transport, actual call6 three positional reflexivities.31 pins verified; no graph/Stable/actual endpoint proof admitted. Materially excludes failed dependent tactic substitution and all stopped imports. Root diagnostic original-cap gate only.
+
+## Atomic original positive target,20 November2026
+Full exact4 comparator/map read against literal PositivePathAlgorithm and AddressAlgorithm. Retains actual original first-hop callbacks, both original least tests, original nonempty raw witness singleton, absorbing failure and bottom suffix impossibility. Same raw packed context requires actual contextView inverse, not merely equal decoded contexts. Original target scalar admitted/least retained;25pins verified. Target-only preflight, no proof or object claim.
+
+## Actual call projections diagnostic,20 November2026
+Read sole18-line leaf: three explicitly typed actual call6 projections by reflexivity, only accepted FoldOpenSyntax import.30pins verified; all Coordinate and stopped dependencies excluded. If this fails, switch to independent final extraction route rather than retry. No endpoint acceptance.
+
+## Atomic original positive author review,20 November2026
+Read all four proof leaves in full. Original raw witness own decoded singleton, first hop and actual least tests retained. Bottom suffix failure absorbing; actual contextCode uses packOfUnpack, target scalar uses same admitted and least.29 frozen/author pins verified before original-cap exact4 gate. No selected new certificate or object claims.
+
+## Explicit call witness diagnostic,20 November2026
+Full new leaf read: explicit codomain, three named positional Eq.trans witnesses, explicit retained Or shape.33pins including immutable passed suppliers verified; no original graph AST expansion, no stopped sources imported. Diagnostic only, exact endpoint still pending.
+
+## Explicit generic transport diagnostic,20 November2026
+Both new leaves fully read; same arbitrary Program6 Stable open/closed cut, all actual positional equality supplied by passed ExplicitCall.35 frozen and chained diagnostic source pins plus manifest verified. No actual step endpoint or acceptance; all stopped abstract editions excluded.
+
+## Atomic positive hop repair,20 November2026
+Full prior4+target/freeze/map/native preserved12file hashes verified. Sole actual error was case-specialized hop equality; reviewed d364edd6 exact inverse verified, original option-bind rewrite was not erroneous.29pins rechecked; no source/target/guard change.
+
+## Exact explicit coordinate endpoint,20 November2026
+Full final22line leaf read. Fully applied generic closed proof is instantiated at unchanged actual iterateStep with actually proved stepStable; no Stable premise remains. Frozen OpenStepCoordinates unchanged, same scratch/context/type while only ignored fields vary. All41 frozen/chained source pins and four diagnostic manifests verified; all stopped assemblies excluded. Release original-cap exact1 gate, not head-first or full iteration acceptance.
