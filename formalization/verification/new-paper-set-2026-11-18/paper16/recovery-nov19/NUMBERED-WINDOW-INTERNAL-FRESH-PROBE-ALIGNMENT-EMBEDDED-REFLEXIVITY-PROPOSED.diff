@@ -1,0 +1,29 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeAlignmentProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeAlignmentProof.lean
+@@ -15,7 +15,9 @@
+ open ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+ open ID1Completion.InternalGraphCompositionEqualityProof (graphInputTransport)
+ open ID1Completion.InternalGraphCompositionFunctionalityProof (renameInto)
+-open ID1Completion.InternalTagArithmeticSyntaxProof (emb suc z)
++open ID1Completion.InternalTagArithmeticSyntaxProof (suc z)
++open ID1Completion.InternalTagArithmeticSupportProof (refl)
++open ID1Completion.InternalControlGraphSupportProof (equalEqn)
+ open ID1Completion.InternalRecursionClosureLogicProof (closedApply)
+ open ID1Completion.SourcePresentation (sourceBody)
+ open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+@@ -33,11 +35,13 @@
+     (he : Nonempty (Derivation body Γ (equal old given)))
+     (ha : Nonempty (Derivation body Γ (accepts p q old v))) :
+     Nonempty (Derivation body Γ (accepts p q given v)) := by
++  have self (t : OTerm α) : Nonempty (Derivation body Γ (equal t t)) := by
++    rw [equalEqn]
++    exact ⟨refl t⟩
+   apply graphInputTransport body α 3 Γ (OrdinaryArithmetic.graphFormula p) (suc z)
+     ![q,old,v] ![q,given,v] _ ha
+   intro k
+-  exact Fin.cases ⟨Derivation.equalityReflexivity (emb q)⟩
+-    (Fin.cases he (Fin.cases ⟨Derivation.equalityReflexivity (emb v)⟩ (fun i => Fin.elim0 i))) k
++  exact Fin.cases (self q) (Fin.cases he (Fin.cases (self v) (fun i => Fin.elim0 i))) k
+ 
+ private theorem carry {α : Type} {body : Positive (Fin 1)} {Γ : List (Formula α)}
+     {A : Formula α} (H : Formula (α ⊕ Fin 1)) (d : Nonempty (Derivation body Γ A)) :

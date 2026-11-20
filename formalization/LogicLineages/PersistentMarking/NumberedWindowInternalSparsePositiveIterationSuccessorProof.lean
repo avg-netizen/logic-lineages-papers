@@ -38,8 +38,7 @@ theorem loopRename {α β : Type} (raw : Program 5) (least : Program 3)
         (start.relabel j) (cert.relabel j) := by
   unfold loopGraph
   change (programGraph (iterateState raw least) out (loopArgs fuel c ty start cert)).relabel j = _
-  rw [programRename,loopArgsRename]
-  rfl
+  rw [programRename,loopArgsRename] <;> rfl
 
 variable {body : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
 

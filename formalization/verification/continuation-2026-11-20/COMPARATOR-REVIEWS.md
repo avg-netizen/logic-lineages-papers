@@ -179,3 +179,33 @@ Read full exact5 target and source map; verified29pins. Same frozen iterateState
 
 ## Positive fold success constructor repair
 Reviewed761b0ae6: explicitly simplify encodeState at positive some constructor, removing unused pre-rewrite equality. Independently reversed exact patch to failed1795171393958410985-7 source, verified44pins; targets unchanged.
+
+## Positive fold nil parser normalization
+Reviewed95abb3bf: explicit accepted emptyUnpack after nilCode rather than prior equation at old term. Independently reversed to archived1795171560183621597-7 source;44pins verified, no targets changed.
+
+## Given-fresh alignment comparator review
+Read both exact3 targets and map, verified48pins. Result-only existential preserves actual given free u/q and same p/h after genuine fresh uniqueness and input equality transport. Original concrete InputGuards derive scalar carriers in same sourceBody/data/c, not typed-at-u or computability. Concrete tuple retains every #642 field and explicit ValidWindow. No old code/body transport; target preflight required.
+
+## Actual iteration core author review
+Read all3 leaves; verified32pins. Private Reads classifier structurally proves actual iterateStep uses only same scratch/context/type; real graph composition transports only unused counter/seeds. Actual recursion successor introduction plus functionality recovers same step at supplied genuine prior result. No native iteration reflected; exact2 current source target only.
+
+## Given-fresh alignment author review
+Read all four leaves, verified52pins. Genuine nested existential witnesses are renamed before same-a uniqueness; actual middle input equality transport retains source q/result v. Result-only existential binds v alone; carrier elimination keeps q/u free and uses same original InputGuards in same data/body/c. Concrete selection adds property to unchanged #642 tuple, no new program or neutral inference. Exact3 native required.
+
+## Material new-only actual iteration coordinate route
+Read all4 new leaves plus unchanged successor; verified34pins. Removes dependent indexed Reads/AST induction entirely: isolated genuine graph composition cut, retained projections, and tiny actual selected expression assembly. Exact same OpenStepCoordinates/RecursorSuccessor targets, no changed AST or caps; stopped1795171925586221108-6 edition remains intact and excluded. Native material-route gate only, not generic transport acceptance.
+
+## Alignment actual embedded reflexivity repair
+Full572e6499 reviewed against1795172160804308694-6. Typed equal self proof uses original equalEqn/refl on unchanged q/v; genuine middle input equality unchanged. Independently reversed to failed source,52pins verified.
+
+## Standalone actual recursion successor
+Full unchanged SuccessorProof previously read plus new exact1 audit wrapper;31pins verified. Root excludes all coordinate proof modules and both stopped combined roots, proves only unchanged actual recursor successor at supplied genuine prior graph. Independent source-specific subclaim, not a retry of stopped coordinate assembly.
+
+## Actual raw atomic callback target review
+Read both definitions/exact4 targets and map;29pins verified. Original free raw term tag0 and bottom3 distinct from outer address3/context wrapper0, root bottom cert7. Actual original root and arbitrary context descent/full bounded window step, all Entries/Settings/raw requested type independent of stored field, accepted implication only plus impossible bottom. No actual least/positive/r-prime/open/C claim. Target preflight required.
+
+## Isolated actual advance-coordinate elaboration probe
+Read31-line new supplier and immutable thin graph/leaves helpers;32pins verified. Explicit exact Program6 AST identity and local Stable/programGraph/advance opacity isolate one actual call before other assembly. Old stopped modules excluded. This is measured resource triage, not accepting generic Stable or full coordinate result. Original caps retained.
+
+## Actual terminal symbolic fuel author review
+Read full Binding/Terminal/wrapper plus unchanged successor;33pins verified. Retained object natInduction on extra fuel with actual addition equations and selected nil step; preserves same terminal scratch witness/context/type/original seed and handles arbitrary symbolic fuel. Nil-loop consequence uses actual base. Does not assert terminality at sufficient fuel or use native induction as object evidence. Root excludes all coordinate modules/stops. Exact2 gate required.
