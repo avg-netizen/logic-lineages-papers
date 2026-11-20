@@ -467,3 +467,11 @@ Independently reversed complete209234d9 intended normalize-owner namespace corre
 Read complete original positive endpoints and literal endpoint refinement targets/definitions/map. Same caller witness first/last/prefix fold, genuine step endpoint admission and real leasts, scalar via original address parser. Numeric wrapper same x/w/y normalized even nonbits, actual original calibration only. No arbitrary application seed admission/open/body transport. Immutable maps checked before separate Core/Mathlib preflights.
 
 Read complete fallback exact1 and four numeric tick leaves. Original nodesPrim/nextPrim and actual sparse optional encoder produce genuine executable fallback; numeric branch covers allraw tag5/root0/fallback and full exact encoded states, prior flag ignored only live, terminal identical. Same actual root callback calibrated, no arbitrary-open callback semantics. Independently verified source/freeze/supplier maps before separate original-cap gates.
+
+Read all four original positive endpoints proof leaves. Actual hopView/callback admission and both least tests, original nonempty decoded witness first/last plus exact prefix fold using none absorption, actual683+687 close both visible least outputs, original addressRS and canonical scalar on original x/y. No assumed carrier or application seed. Separate immutable source/supplier/author pin verification before original Core gate.
+
+Read all three raw tick open leaves fully. Actual sparse zero-frame selector, real predecessor of successor optional frame and ordered child reports, tag5 first branch, genuine684 frame graph and literal scratch emitter. Terminal actual code unchanged, arbitrary flag; live unary consumes actual decoded triple, no callback semantics/numeric reflection. All freeze/author/supplier/ref pins checked independently.
+
+Independently reversed complete9cd30725 tape.get1 defeq repair and68941ed6 entire author manifest to archived bytes.63 current pins checked independently before queued numeric retry.
+
+Independently reversed f5d66a03 supplied-hop equation and both4c388d04/04388dd6 entire source/cross-author manifests to archived bytes. All independent freeze/source/supplier/prior-author maps verified before endpoint retry; exact target unchanged.

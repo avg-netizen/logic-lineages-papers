@@ -1,0 +1,79 @@
+Compiling LogicLineages.PersistentMarking.NumberedWindowPairAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowPairAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowFieldAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowFieldAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowAddressAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowAddressAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowSyntaxAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowSyntaxAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowShiftAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowShiftAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowSingletonAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowSingletonAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowAnnotationAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowAnnotationAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowMarkRootAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowMarkRootAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowBinderRootAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowBinderRootAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowOwnerAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowOwnerAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowSelectAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowSelectAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowCopyAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowCopyAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowStatAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowStatAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowStatRootAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowStatRootAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowRootDispatchAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowRootDispatchAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowRawContextAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowRawContextAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowExchangeAtoms
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowExchangeAtoms
+Compiling LogicLineages.PersistentMarking.NumberedWindowExchangeAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowExchangeAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowLexicalAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowLexicalAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowAdmissionAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowAdmissionAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowCoverAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowCoverAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowCoverBoundsAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowCoverBoundsAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowClassAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowClassAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowScalarAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowScalarAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowPositivePathAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowPositivePathAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowDirectAlgorithm
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowDirectAlgorithm
+Compiling LogicLineages.PersistentMarking.NumberedWindowAddressCheckers
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowAddressCheckers
+Compiling LogicLineages.PersistentMarking.NumberedWindowConcreteCheckers
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowConcreteCheckers
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowConcretePositiveEndpointsTargets
+Compiling LogicLineages.PersistentMarking.NumberedWindowConcretePositiveEndpointsHopProof
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowConcretePositiveEndpointsHopProof.lean:31:26: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  reported
+in the target expression
+  hopView code = some (target, q, w, r)
+
+entries : NumberedWindowCopyAlgorithm.Entries
+s : NumberedWindowScalarAlgorithm.Settings
+ctx : List Nat
+ty source code target : Nat
+ok : advance (step entries s ctx ty) (least s ctx ty) (some source) code = some target
+reported q w r : Nat
+seen : hopView code = some (reported, q, w, r)
+selected : some reported = some target
+same : reported = target
+guards : step entries s ctx ty q w r = true ∧ least s ctx ty q = some source ∧ least s ctx ty r = some reported
+rawGuards :
+  NumberedWindowRawContextAlgorithm.raw (NumberedWindowConcreteCheckers.root entries s) q w r = true ∧
+    admitted s ctx ty q = true ∧ admitted s ctx ty r = true
+⊢ hopView code = some (target, q, w, r)
+COMPILE_FAILED LogicLineages.PersistentMarking.NumberedWindowConcretePositiveEndpointsHopProof: 1
+BUILD_RECEIPT build-reports/1795198511045022923-6.json
