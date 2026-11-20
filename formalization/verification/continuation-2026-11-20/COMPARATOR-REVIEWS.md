@@ -281,3 +281,27 @@ Read complete emitter proof and sole exact1 wrapper. Same six actual sparse cons
 
 ## Refined source numerical branch proof repair,20 November2026
 Second ordinary failure full5/current source+native preserved and independently verified. Exact813c5b0e introduces fully applied same-tape branch equation before case split; no new premise or target/data change. Entire diff independently inverted and36pins verified before original-cap retry.
+
+## Actual chosen output coordinate author review,20 November2026
+Read State/Walk/exact2 wrapper fully. Original Program4 state selects same certificate as fuel and original cursor; Program5 walk retains ignored destination coordinate and encodes only source by successor. Actual graph composition/recovery both directions with literal projections;27pins verified. No terminality/callback matching claim.
+
+## Actual refined atomic object packet author review,20 November2026
+All six proof/check leaves fully read, accepted emitter unchanged. Actual packed-node reports and original tag3-versus0 object contradiction establish structural branch graphs; actual source/witness/target projections retained. Refined branch recovers literal same-context/type bottom and actual i(y); bottom yields object falsum in same arbitrary context. Certificate adapter precisely [context,x,y,w]→[x,w,y], carrier similarly projected, all at new data/sourceBody. No old-body transfer, numerical reflection, consistency assumption or I/C claim.52pins and accepted652/653 record hashes verified; full exact4 original-cap gate short-circuits on failure.
+
+## Actual finish at scratch author review,20 November2026
+Full Scratch/Finish/exact1 wrapper read. Same actual returned state supplies genuine cons head and tail, real conditional zero/nonzero equations select original finish branch. Assumed true loop/pair remains explicit; no terminality or callback meaning inferred.30 frozen/chained source pins verified before original-cap gate.
+
+## Atomic object selector visibility/opacity repair,20 November2026
+Entire six-source failed edition, actual native receipt/module/wrapper preserved and verified. Full31a29682 reviewed and inverted: direct existing public syntax import and local programGraph opacity avoid unnecessary whnf expansion at toFree, identical actual proof/target and unchanged200000heartbeats/resource caps.52pins+2support records verified before retry.
+
+## Actual final positive acceptance author review,20 November2026
+Five new Guard/Test/Positive/Nil/audit leaves fully read, unchanged accepted State/Walk/Scratch/Finish reused. Actual nonempty guard and equalityTest introduction/recovery retain same chosen walk and encoded target; genuine terminal scratch remains explicit. Nil rejection derives zero via real normalized conjunction, no callback interpretation or numeric reflection.35 frozen/chained pins verified before exact2 original-cap gate.
+
+## Atomic membership and new-body reinstall target review, Nov20
+Read both complete targets and shared source map. Atomic successors at same literal shape and membership iff explicit carrier retain genuine new sourceBody; no carrier from shape. Same physical tuple reinstall rebuilds Rules/Interprets and arbitrary-Data typed/alignment hypotheses, never transports object derivations from numerical agreement. ValidWindow explicit. Exact2+exact3 frozen pins independently verified before target-only preflight.
+
+## Output acceptance Guard repair, Nov20
+Entire 4318d77 diff reviewed: existing direct helper import and Nonempty elimination retained at Prop goal, final derivation wrapped only afterward. Full reversed source bytes and sole-pin manifest inverse independently match preserved failed18-item edition1795176308622579959-6; all35 source/freeze/supplier pins verified. No statement or resource change.
+
+## Actual sufficient-fuel terminality full13-source review, Nov20
+Read complete ScratchBinding, UniformBinding, Motive, Fuel, Nil, Seed, Shift, Gap, ConsShift, Cons, Rules, Sufficient and exact2 Checks. Actual sparse-field induction generalizes all fuel/current/out at fixed ctx/type; genuine strict tail decrease and predecessor case give smaller sufficient fuel; actual advance totality and scratch constructor witnesses feed accepted same-output head shift. Nil/gap use genuine loop uniqueness/terminal nil. No raw callback meaning, numerical reflection or assumed terminality. Frozen33 plus author13 and accepted5 pins checked before first gate.

@@ -1,0 +1,24 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveOutputGuardProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveOutputGuardProof.lean
+@@ -1,6 +1,7 @@
+ module
+ public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveOutputTargets
+ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceBranchProof
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLessThanSupportProof
+ 
+ @[expose] public section
+ namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveOutputGuardProof
+@@ -47,12 +48,10 @@
+       (programGraph nonemptyCode (suc z) (args5 ctx ty source cert target)))) :
+     Nonempty (Derivation body Γ (eqn cert z).not) := by
+   obtain ⟨d⟩ := selected
+-  apply Nonempty.intro
+-  apply Derivation.implicationIntroduction
+   have empty := emptyValue (body := body) (Γ := eqn cert z :: Γ) ctx ty source cert target
+     ⟨Derivation.hypothesis List.mem_cons_self⟩
+   obtain ⟨e⟩ := valueUnique nonemptyCode (suc z) z (args5 ctx ty source cert target)
+     ⟨ID1Completion.InternalBetaTotalityProof.addHyp d (eqn cert z)⟩ empty
+-  exact sucNeZeroApply e
++  exact ⟨Derivation.implicationIntroduction (sucNeZeroApply e)⟩
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveOutputGuardProof

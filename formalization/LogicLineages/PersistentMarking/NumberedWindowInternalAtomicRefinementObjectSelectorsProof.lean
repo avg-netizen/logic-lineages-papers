@@ -1,5 +1,6 @@
 module
 public import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementObjectTargets
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
 import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementObjectEmitterProof
 import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchControlChecks
@@ -87,6 +88,9 @@ theorem literalAtom (tag : Nat) (c t : OTerm α) (tail : List (OTerm α)) :
   obtain ⟨b⟩ := ht
   exact ⟨checked,⟨Derivation.conjunctionIntroduction a b⟩⟩
 
+section
+attribute [local irreducible] programGraph
+
 theorem toFree (x c t n : OTerm α)
     (e : Nonempty (Derivation body Γ (equal x (packedFreeTerm c t n)))) :
     Nonempty (Derivation body Γ
@@ -101,5 +105,7 @@ theorem toFree (x c t n : OTerm α)
   obtain ⟨hc⟩ := unaryInput rawContext c atom x back ⟨Derivation.conjunctionLeft fs⟩
   obtain ⟨ht⟩ := unaryInput rawResult t atom x back ⟨Derivation.conjunctionRight fs⟩
   exact ⟨Derivation.conjunctionIntroduction hg (Derivation.conjunctionIntroduction hc ht)⟩
+
+end
 
 end LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementObjectSelectorsProof

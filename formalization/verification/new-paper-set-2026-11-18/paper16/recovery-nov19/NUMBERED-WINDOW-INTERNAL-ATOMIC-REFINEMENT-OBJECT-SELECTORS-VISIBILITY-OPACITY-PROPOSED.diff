@@ -1,0 +1,26 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementObjectSelectorsProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementObjectSelectorsProof.lean
+@@ -1,5 +1,6 @@
+ module
+ public import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementObjectTargets
++public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof
+ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+ import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementObjectEmitterProof
+ import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchControlChecks
+@@ -87,6 +88,9 @@
+   obtain ⟨b⟩ := ht
+   exact ⟨checked,⟨Derivation.conjunctionIntroduction a b⟩⟩
+ 
++section
++attribute [local irreducible] programGraph
++
+ theorem toFree (x c t n : OTerm α)
+     (e : Nonempty (Derivation body Γ (equal x (packedFreeTerm c t n)))) :
+     Nonempty (Derivation body Γ
+@@ -102,4 +106,6 @@
+   obtain ⟨ht⟩ := unaryInput rawResult t atom x back ⟨Derivation.conjunctionRight fs⟩
+   exact ⟨Derivation.conjunctionIntroduction hg (Derivation.conjunctionIntroduction hc ht)⟩
+ 
++end
++
+ end LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementObjectSelectorsProof

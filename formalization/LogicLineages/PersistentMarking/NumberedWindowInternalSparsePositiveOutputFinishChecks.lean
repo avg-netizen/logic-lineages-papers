@@ -1,0 +1,12 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveOutputFinishProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveOutputFinishChecks
+open NumberedWindowInternalSparsePositiveOutputTargets
+
+theorem exact_OpenFinishAtScratch : OpenFinishAtScratch :=
+  NumberedWindowInternalSparsePositiveOutputFinishProof.atScratch
+
+#print axioms exact_OpenFinishAtScratch
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveOutputFinishChecks

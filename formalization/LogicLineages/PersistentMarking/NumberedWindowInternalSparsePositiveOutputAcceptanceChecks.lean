@@ -1,0 +1,16 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveOutputPositiveProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveOutputNilProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveOutputAcceptanceChecks
+open NumberedWindowInternalSparsePositiveOutputTargets
+
+theorem exact_OpenPositiveAtTerminal : OpenPositiveAtTerminal :=
+  NumberedWindowInternalSparsePositiveOutputPositiveProof.atTerminal
+theorem exact_OpenPositiveNilReject : OpenPositiveNilReject :=
+  NumberedWindowInternalSparsePositiveOutputNilProof.rejectNil
+
+#print axioms exact_OpenPositiveAtTerminal
+#print axioms exact_OpenPositiveNilReject
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveOutputAcceptanceChecks
