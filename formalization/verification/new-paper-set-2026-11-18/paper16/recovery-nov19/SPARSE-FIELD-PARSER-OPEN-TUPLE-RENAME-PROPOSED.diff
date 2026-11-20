@@ -1,0 +1,28 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserOpenSyntaxProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserOpenSyntaxProof.lean
+@@ -27,17 +27,22 @@
+ 
+ theorem binaryInputsRename {α β : Type} (x y : OTerm α) (j : α → β) :
+     (fun i : Fin 2 => ((![x,y] : Fin 2 → OTerm α) i).relabel j) = ![x.relabel j,y.relabel j] := by
+-  simp only [consTermRename,emptyRename]
++  funext i
++  refine Fin.cases ?_ (fun k => Fin.cases ?_ (fun u => Fin.elim0 u) k) i <;> rfl
+ 
+ theorem tripleInputsRename {α β : Type} (x y w : OTerm α) (j : α → β) :
+     (fun i : Fin 3 => ((![x,y,w] : Fin 3 → OTerm α) i).relabel j) =
+       ![x.relabel j,y.relabel j,w.relabel j] := by
+-  simp only [consTermRename,emptyRename]
++  funext i
++  refine Fin.cases ?_ (fun k => Fin.cases ?_ (fun l =>
++    Fin.cases ?_ (fun u => Fin.elim0 u) l) k) i <;> rfl
+ 
+ theorem quadInputsRename {α β : Type} (x y w b : OTerm α) (j : α → β) :
+     (fun i : Fin 4 => ((![x,y,w,b] : Fin 4 → OTerm α) i).relabel j) =
+       ![x.relabel j,y.relabel j,w.relabel j,b.relabel j] := by
+-  simp only [consTermRename,emptyRename]
++  funext i
++  refine Fin.cases ?_ (fun k => Fin.cases ?_ (fun l =>
++    Fin.cases ?_ (fun m => Fin.cases ?_ (fun u => Fin.elim0 u) m) l) k) i <;> rfl
+ 
+ theorem parserRename {α β : Type} (o n : OTerm α) (j : α → β) :
+     (parserGraph o n).relabel j = parserGraph (o.relabel j) (n.relabel j) :=

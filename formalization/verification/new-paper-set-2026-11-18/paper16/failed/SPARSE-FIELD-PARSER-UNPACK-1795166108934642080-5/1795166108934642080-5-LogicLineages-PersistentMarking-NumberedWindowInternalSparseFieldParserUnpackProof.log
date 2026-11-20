@@ -1,0 +1,18 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserUnpackProof.lean:30:34: error: Application type mismatch: The argument
+  trivial
+has type
+  True
+but is expected to have type
+  NumberedWindowInternalSparseFieldParserLoopProof.Terminal none
+in the application
+  terminalSteps trivial
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  NumberedWindowInternalSparseFieldParserLoopProof.Terminal ↦ 2
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserUnpackProof.lean:36:4: error: Type mismatch: After simplification, term
+  enough t (pair h t) [h] (tailBound h t)
+ has type
+  @Eq (Option (List ℕ)) (finish (steps (pair h t) (some (t, [h])))) (Option.map (fun xs => h :: xs) (unpack t))
+but is expected to have type
+  @Eq (Option (List ℕ)) (finish (steps (pair h t) (some (t, [h]))))
+    (Option.map (fun xs => h :: xs) (finish (steps t (some (t, [])))))

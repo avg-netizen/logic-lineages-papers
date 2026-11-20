@@ -1,0 +1,18 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserStepEvaluationProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserStepEvaluationProof.lean
+@@ -121,9 +121,11 @@
+       evaluate ((![atRaw cellTail,.projection 0] : Fin 2 → Program 4) j) args) ::ᵥ tab ::ᵥ nil)
+     ::ᵥ nil) = _
+   dsimp only [args]
+-  rw [vectorTwo,atRawValue,atRawValue,hh,ht]
+-  change evaluate prependResult (h ::ᵥ evaluate lookup
+-    (evaluate InternalEqualityTest.subtract (t ::ᵥ i ::ᵥ nil) ::ᵥ tab ::ᵥ nil) ::ᵥ nil) = _
+-  rw [exactSubtractionEvaluation]
++  rw [vectorTwo]
++  change evaluate prependResult (evaluate (atRaw cellHead) (i ::ᵥ tab ::ᵥ params) ::ᵥ
++    evaluate lookup (evaluate InternalEqualityTest.subtract
++      (evaluate (atRaw cellTail) (i ::ᵥ tab ::ᵥ params) ::ᵥ i ::ᵥ nil) ::ᵥ tab ::ᵥ nil)
++    ::ᵥ nil) = _
++  rw [atRawValue,atRawValue,hh,ht,exactSubtractionEvaluation]
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserStepEvaluationProof
