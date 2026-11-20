@@ -97,3 +97,11 @@ Read two original fresh/positive leaves and verified2 pins. Actual original free
 ## Original mixed fixed-source integration comparator
 
 Read exact2 target and full map; verified31 frozen pins. Same given p/a with exact original allraw calibration, one chosen h with calibration and actual open TypedProbeTotal are retained. The concrete clause keeps full original596 i/j/r/d/p checker interpretation, rules and guards at original fixed S,K. Closed K is original assumption; no ValidWindow interface premise is added because actual source627 pays it. Thin definitions-only import route is materially smaller than the retained stopped joint target and does not import broad decoder. Target native gate required before proof. No variable computability or allterms/BH promotion.
+
+## Source-specific fresh emitter comparator
+
+Read all three selected AST/exact4 comparator files and full source map; verified50pins. Literal seven sparse conses implement original freeAddress tag3/context/domain/tag0-variable fields with exact ordered packed context, not Encodable list coding. Four actual selector leaves retain a separate good indicator so empty context/ground zero is not rejection. The chosen a is an explicit new witness to original608, not graph-equivalent to arbitrary old a. Open exact graph and block3 shape targets keep same output and coordinate Programs with capture-avoiding binders; no numeric-to-object transfer or q-context/type/neutral-computability conclusion. Target preflight required before authoring.
+
+## Source-specific path envelope comparator
+
+Read two AST/exact5 target modules and source map; verified30pins. Complete selected unpackNode uses actual sparse outer cell and same source-specific full parser. Fixed arity tests require every actual raw cell and literal zero terminal, rejecting malformed and trailing fields. Tag1 retains [q,r,w] and exports(q,w,r); tag2 retains[target,edge] and complete nested tag1. Independent open biconditional shape uses real polynomial pair terms and zero nil, not guard-defined tautology. No original r/r′ or sourceBody graph is replaced by extensional calibration. Actual step/least/path-fold/matching obligations remain separate. Target native preflight queued before proof.
