@@ -1,0 +1,124 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterAddressProof.lean:30:12: error: unsolved goals
+case some.false
+raw : ℕ
+ctx xs : List ℕ
+hu : unpack raw = some xs
+ht : xs.all typeBit = false
+h : (∀ x ∈ xs, typeBit x = true) ∧ xs = ctx
+⊢ some xs = some ctx
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterAddressProof.lean:32:33: error: Type mismatch: After simplification, term
+  h
+ has type
+  (∀ x ∈ xs, typeBit x = true) ∧ xs = ctx
+but is expected to have type
+  xs = ctx
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterAddressProof.lean:30:24: warning: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  simp [hu,̵h̵t̵] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterAddressProof.lean:96:9: error: unsolved goals
+q : ℕ
+ctx : List ℕ
+r k : ℕ
+h : addressView q = some (ctx, r, k)
+hu : unpackNode q = some (3, [pack ctx, r, k])
+hx : q = packNode 3 [pack ctx, r, k]
+ht : run addressTag q = 3
+hg : run addressGood q = 1
+c : ℕ := pack ctx
+outer : run cellTail (NumberedWindowPairAlgorithm.pair 3 (pack [c, r, k]) + 1) = pack [c, r, k]
+first :
+  run cellHead (NumberedWindowPairAlgorithm.pair c (pack [r, k]) + 1) = c ∧
+    run cellTail (NumberedWindowPairAlgorithm.pair c (pack [r, k]) + 1) = pack [r, k]
+second :
+  run cellHead (NumberedWindowPairAlgorithm.pair r (pack [k]) + 1) = r ∧
+    run cellTail (NumberedWindowPairAlgorithm.pair r (pack [k]) + 1) = pack [k]
+third : run cellHead (NumberedWindowPairAlgorithm.pair k (pack []) + 1) = k
+⊢ run cellHead (pack [c, r, k]) = c
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterAddressProof.lean:97:4: error: unsolved goals
+q : ℕ
+ctx : List ℕ
+r k : ℕ
+h : addressView q = some (ctx, r, k)
+hu : unpackNode q = some (3, [pack ctx, r, k])
+hx : q = packNode 3 [pack ctx, r, k]
+ht : run addressTag q = 3
+hg : run addressGood q = 1
+c : ℕ := pack ctx
+outer : run cellTail (NumberedWindowPairAlgorithm.pair 3 (pack [c, r, k]) + 1) = pack [c, r, k]
+first :
+  run cellHead (NumberedWindowPairAlgorithm.pair c (pack [r, k]) + 1) = c ∧
+    run cellTail (NumberedWindowPairAlgorithm.pair c (pack [r, k]) + 1) = pack [r, k]
+second :
+  run cellHead (NumberedWindowPairAlgorithm.pair r (pack [k]) + 1) = r ∧
+    run cellTail (NumberedWindowPairAlgorithm.pair r (pack [k]) + 1) = pack [k]
+third : run cellHead (NumberedWindowPairAlgorithm.pair k (pack []) + 1) = k
+⊢ run cellHead (run cellTail (pack [c, r, k])) = r
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterAddressProof.lean:98:4: error: unsolved goals
+q : ℕ
+ctx : List ℕ
+r k : ℕ
+h : addressView q = some (ctx, r, k)
+hu : unpackNode q = some (3, [pack ctx, r, k])
+hx : q = packNode 3 [pack ctx, r, k]
+ht : run addressTag q = 3
+hg : run addressGood q = 1
+c : ℕ := pack ctx
+outer : run cellTail (NumberedWindowPairAlgorithm.pair 3 (pack [c, r, k]) + 1) = pack [c, r, k]
+first :
+  run cellHead (NumberedWindowPairAlgorithm.pair c (pack [r, k]) + 1) = c ∧
+    run cellTail (NumberedWindowPairAlgorithm.pair c (pack [r, k]) + 1) = pack [r, k]
+second :
+  run cellHead (NumberedWindowPairAlgorithm.pair r (pack [k]) + 1) = r ∧
+    run cellTail (NumberedWindowPairAlgorithm.pair r (pack [k]) + 1) = pack [k]
+third : run cellHead (NumberedWindowPairAlgorithm.pair k (pack []) + 1) = k
+⊢ run cellHead (run cellTail (run cellTail (pack [c, r, k]))) = k
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterAddressProof.lean:96:64: warning: This simp argument is unused:
+  first.1
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵a̵w̵C̵o̵n̵t̵e̵x̵t̵,̵f̵i̵e̵l̵d̵,̵c̵u̵r̵s̵o̵r̵,̵a̵p̵p̵l̵y̵V̵a̵l̵u̵e̵,̵o̵u̵t̵e̵r̵,̵f̵i̵r̵s̵t̵.̵1̵]̵[̲r̲a̲w̲C̲o̲n̲t̲e̲x̲t̲,̲ ̲f̲i̲e̲l̲d̲,̲ ̲c̲u̲r̲s̲o̲r̲,̲ ̲a̲p̲p̲l̲y̲V̲a̲l̲u̲e̲,̲ ̲o̲u̲t̲e̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterAddressProof.lean:97:58: warning: This simp argument is unused:
+  first.2
+
+Hint: Omit it from the simp argument list.
+  simp only [rawResult, ̲field, ̲cursor, ̲applyValue, ̲outer,f̵i̵r̵ ̲st̵.̵2̵,̵s̵econd.1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterAddressProof.lean:97:66: warning: This simp argument is unused:
+  second.1
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵a̵w̵R̵e̵s̵u̵l̵t̵,̵f̵i̵e̵l̵d̵,̵c̵u̵r̵s̵o̵r̵,̵a̵p̵p̵l̵y̵V̵a̵l̵u̵e̵,̵o̵u̵t̵e̵r̵,̵f̵i̵r̵s̵t̵.̵2̵,̵s̵e̵c̵o̵n̵d̵.̵1̵]̵[̲r̲a̲w̲R̲e̲s̲u̲l̲t̲,̲ ̲f̲i̲e̲l̲d̲,̲ ̲c̲u̲r̲s̲o̲r̲,̲ ̲a̲p̲p̲l̲y̲V̲a̲l̲u̲e̲,̲ ̲o̲u̲t̲e̲r̲,̲ ̲f̲i̲r̲s̲t̲.̲2̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterAddressProof.lean:98:57: warning: This simp argument is unused:
+  first.2
+
+Hint: Omit it from the simp argument list.
+  simp only [rawLeast, ̲field, ̲cursor, ̲applyValue, ̲outer,f̵i̵r̵ ̲st̵.̵2̵,̵s̵econd.2, ̲third]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterAddressProof.lean:98:65: warning: This simp argument is unused:
+  second.2
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵a̵w̵L̵e̵a̵s̵t̵,̵f̵i̵e̵l̵d̵,̵c̵u̵r̵s̵o̵r̵,̵a̵p̵p̵l̵y̵V̵a̵l̵u̵e̵,̵o̵u̵t̵e̵r̵,̵f̵i̵r̵s̵t̵.̵2̵,̵s̵e̵c̵o̵n̵d̵.̵2̵,̵t̵h̵i̵r̵d̵]̵[̲r̲a̲w̲L̲e̲a̲s̲t̲,̲ ̲f̲i̲e̲l̲d̲,̲ ̲c̲u̲r̲s̲o̲r̲,̲ ̲a̲p̲p̲l̲y̲V̲a̲l̲u̲e̲,̲ ̲o̲u̲t̲e̲r̲,̲ ̲f̲i̲r̲s̲t̲.̲2̲,̲ ̲t̲h̲i̲r̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterAddressProof.lean:98:74: warning: This simp argument is unused:
+  third
+
+Hint: Omit it from the simp argument list.
+  simp only [rawLeast, ̲field, ̲cursor, ̲applyValue, ̲outer, ̲first.2, ̲second.2,̵t̵h̵i̵r̵d̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeParsedEmitterAddressProof.exactCoordinates' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

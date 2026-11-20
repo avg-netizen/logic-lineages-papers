@@ -1,0 +1,11 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterReportProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterReportProof.lean
+@@ -38,7 +38,7 @@
+   intro β j Δ y hj hy
+   rw [unaryRename] at hy
+   apply programCompositionCases (zeroAt 6) (rawPrograms bound) y ![q.relabel j] (goal.relabel j) hy
+-  intro γ l Θ ys hl _ reports
++  intro γ l ys Θ hl _ reports
+   rw [formulaRelabelComposition]
+   apply k γ (l ∘ j) Θ ys
+   · intro f hf

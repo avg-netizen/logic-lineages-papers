@@ -1,0 +1,46 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathAdvanceCallbackProof.lean:61:28: error: unsolved goals
+case false
+entries : Entries
+s : Settings
+value : List.Vector ℕ 5 → ℕ :=
+  fun v => if packedRaw entries s (v.get 0) (v.get 1) (v.get 2) (v.get 3) (v.get 4) = true then 1 else 0
+v : List.Vector ℕ 5
+b : packedRaw entries s (v.get 0) (v.get 1) (v.get 2) (v.get 3) (v.get 4) = false
+⊢ packedRaw entries s v.head (v.get 1) (v.get 2) (v.get 3) (v.get 4) = false
+
+case true
+entries : Entries
+s : Settings
+value : List.Vector ℕ 5 → ℕ :=
+  fun v => if packedRaw entries s (v.get 0) (v.get 1) (v.get 2) (v.get 3) (v.get 4) = true then 1 else 0
+v : List.Vector ℕ 5
+b : packedRaw entries s (v.get 0) (v.get 1) (v.get 2) (v.get 3) (v.get 4) = true
+⊢ packedRaw entries s v.head (v.get 1) (v.get 2) (v.get 3) (v.get 4) = true
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathAdvanceCallbackProof.lean:65:18: warning: This simp argument is unused:
+  b
+
+Hint: Omit it from the simp argument list.
+  simp [value,̵b̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathAdvanceCallbackProof.lean:74:58: error: Tactic `rfl` failed: The left-hand side
+  Encodable.encode none
+is not definitionally equal to the right-hand side
+  value v
+
+case none
+s : Settings
+value : List.Vector ℕ 3 → ℕ := fun v => encodeState (packedLeast s (v.get 0) (v.get 1) (v.get 2))
+v : List.Vector ℕ 3
+⊢ Encodable.encode none = value v
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathAdvanceCallbackProof.lean:74:58: error: Tactic `rfl` failed: The left-hand side
+  Encodable.encode (some val✝)
+is not definitionally equal to the right-hand side
+  value v
+
+case some
+s : Settings
+value : List.Vector ℕ 3 → ℕ := fun v => encodeState (packedLeast s (v.get 0) (v.get 1) (v.get 2))
+v : List.Vector ℕ 3
+val✝ : ℕ
+⊢ Encodable.encode (some val✝) = value v

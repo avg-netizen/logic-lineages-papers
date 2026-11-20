@@ -129,3 +129,26 @@ Read all three selected AST/exact5 target modules and full map; verified62pins. 
 ## Actual positive-path one-hop advance comparator
 
 Read both AST/exact5 modules and full source map; verified38pins. Literal packed lexical context, type, current Option0/successor and raw hop are retained. Source callbacks are actual original step5 and least3, with genuine existence required in ConcreteAdvance, not hidden oracle assumptions. Malformed context rejects, absence/absence equality cannot accept because current and target are successors. Exact open guard/actual callback graph biconditionals retain supplied genuine hop and both successful least values. These are not proofs of callbacks internal correctness or actual lifted endpoint transport; full fold/matching/allterms remain unpaid. Target native preflight required before proof.
+
+## Parsed emitter positive address-coordinate author review
+
+Read complete120-line source leaf; verified62 frozen+1 author+3 accepted support pins. Original addressView contextView/typeBit are retained and successful decoded context repacks to the same original stored raw coordinate. Actual sparse envelope/arrow cell yields same raw result/least/domain/codomain fields and validation outputs. This is a positive original numeric decoder correspondence, not internal typing or arbitrary-old graph transfer. Exact1 native/axiom/evidence gate required.
+
+## Advance numeric author review, 10:23 UTC
+Independently read all four authored leaves and frozen comparator. Genuine original raw and least PR witnesses retain actual packed-context rejection; all-code composition distinguishes no-current, malformed hop, failed checks and successful endpoint comparisons. Exact two aliases, no object correctness inference. Verified all 42 frozen/authored source pins before first native gate.
+
+## Parsed numeric full author and repair review
+Read full calibration and numeric aliases, preserving original scalar/name witness existence and all raw failure cases. Approved acef3a00 extracts existing context-validation conjunction and annotates literal pack operands only; independently reversed exact diff to failed archive. All68 combined freeze/author/helper pins verified. Full exact3 numeric root now enters original-cap native gate.
+
+## Advance callback repair
+Reviewed complete9547d660 against actual1795170101297284109-6 errors; only local value lets unfolded before Bool/Option case splits, using definitional reflexivity rather than broad simp. Independently reversed patch to archived failed source and verified42 source pins. Original source functions and exact targets unchanged.
+
+## Open parsed emitter and advance author review
+Independently read complete five-leaf packets of both lanes. Parsed emitter retains original normalized guard ID1 graph and actual six same-q reports, same raw least passed to bound graph; shape assembly preserves original free terms through existential block. It does not infer typed context or neutral computability from numerical calibration. Advance retains zero rejection, actual guarded target, and exact supplied hop reports; raw5/least3 output graph inversion uses genuine composition functionality, not source callback semantic correctness. All71 distinct parsed and43 advance frozen/authored/helper pins verified; native exact gates still required.
+
+## Source-first parsed typed and positive fold comparator review
+Read all four parsed typed AST/target modules and full map; verified89pins. Physical same rawResult compares requested type in actual refined chosen base, then unchanged dispatcher with same a/p. Object targets require genuine same h acceptance and real raw report; literal arrow components remain within same six-slot witness. Conditional ValidWindow remains explicit and old mixed-source resource block is not claimed bypassed. No neutral/argumentFiber transfer.
+Read both positive fold AST/target modules and full map; verified38pins. Scratch Nat.pair representation stores unchanged original polynomial raw cursor/current, not a source recoding. Each head-first step consumes actual raw cell and same advance; sufficient fuel raw≤fuel, nil retention, malformed collapse, nonempty independent guard and successful target encoding are exact. Open base/nil/malformed/cons are local graph clauses, not full internal iteration correctness. Target native preflights required before proof release.
+
+## Parsed object report binder repair
+Reviewed full fb3642e5 against actual failure1795170631561583944-6 and original programCompositionCases binder order. Only tuple/context bound names swapped; independently reversed exact diff to preserved failed source, verified71 distinct frozen/authored/helper pins. No source AST/target change.

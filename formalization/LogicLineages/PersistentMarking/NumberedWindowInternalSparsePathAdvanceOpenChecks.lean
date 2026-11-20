@@ -1,0 +1,18 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathAdvanceTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathAdvanceOpenGateProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathAdvanceOpenCallsProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathAdvanceOpenChecks
+open NumberedWindowInternalSparsePathAdvanceTargets
+open NumberedWindowInternalSparsePathAdvanceOpenGateProof (gate empty)
+open NumberedWindowInternalSparsePathAdvanceOpenCallsProof (calls)
+theorem exact_OpenAdvanceGate : OpenAdvanceGate := gate
+theorem exact_OpenAdvanceCalls : OpenAdvanceCalls := calls
+theorem exact_OpenNoCurrent : OpenNoCurrent := empty
+
+#print axioms exact_OpenAdvanceGate
+#print axioms exact_OpenAdvanceCalls
+#print axioms exact_OpenNoCurrent
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathAdvanceOpenChecks

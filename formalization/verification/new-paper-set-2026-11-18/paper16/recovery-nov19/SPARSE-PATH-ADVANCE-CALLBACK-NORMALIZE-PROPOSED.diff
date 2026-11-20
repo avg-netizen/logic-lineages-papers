@@ -1,0 +1,21 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathAdvanceCallbackProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathAdvanceCallbackProof.lean
+@@ -61,8 +61,8 @@
+   have h : Primrec value := by
+     apply (Primrec.cond (rawPrim entries s) (Primrec.const (1 : Nat)) (Primrec.const 0)).of_eq
+     intro v
+-    cases b : packedRaw entries s (v.get 0) (v.get 1) (v.get 2) (v.get 3) (v.get 4) <;>
+-      simp [value,b]
++    dsimp only [value]
++    cases packedRaw entries s (v.get 0) (v.get 1) (v.get 2) (v.get 3) (v.get 4) <;> rfl
+   obtain ⟨p,hp⟩ := GorbowPRProgram.Proof.allPrimitiveFunctions 5 value h
+   exact ⟨p,fun ctx ty q w r => hp (ctx ::ᵥ ty ::ᵥ q ::ᵥ w ::ᵥ r ::ᵥ nil)⟩
+ 
+@@ -71,6 +71,7 @@
+   have h : Primrec value := by
+     apply (Primrec.encode.comp (leastPrim s)).of_eq
+     intro v
++    dsimp only [value]
+     cases packedLeast s (v.get 0) (v.get 1) (v.get 2) <;> rfl
+   obtain ⟨p,hp⟩ := GorbowPRProgram.Proof.allPrimitiveFunctions 3 value h
+   exact ⟨p,fun ctx ty q => hp (ctx ::ᵥ ty ::ᵥ q ::ᵥ nil)⟩
