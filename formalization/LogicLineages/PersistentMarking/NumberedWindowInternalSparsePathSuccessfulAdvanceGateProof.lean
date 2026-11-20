@@ -58,7 +58,7 @@ theorem obtainCalls (raw : Program 5) (least : Program 3) (ctx ty current hop ta
     (dst : Nonempty (Derivation body Γ (unary hopRawTarget r hop))) :
     Nonempty (Derivation body Γ (hopCalls raw least ctx ty current hop target q w r)) := by
   obtain ⟨gate⟩ := exact_OpenAdvanceGate body raw least α ctx ty (suc current) hop target
-  obtain ⟨g⟩ := closedApply ⟨Derivation.conjunctionLeft gate⟩ accepted
+  obtain ⟨g⟩ := closedApply ⟨Derivation.conjunctionRight gate⟩ accepted
   have stamped : Nonempty (Derivation body Γ (acceptedGuard raw least ctx ty (suc current) hop)) :=
     ⟨Derivation.conjunctionLeft g⟩
   obtain ⟨tag⟩ := readGood raw least ctx ty (suc current) hop stamped

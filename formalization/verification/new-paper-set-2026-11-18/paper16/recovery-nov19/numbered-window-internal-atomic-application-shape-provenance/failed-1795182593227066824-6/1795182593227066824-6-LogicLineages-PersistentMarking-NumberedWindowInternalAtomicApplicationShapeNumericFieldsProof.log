@@ -1,0 +1,80 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:16:5: error: unknown namespace `NumberedWindowInternalFreshProbeDispatchProgramControlProof`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:32:13: error(lean.unknownIdentifier): Unknown identifier `compositeTwo`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:31:75: error: unsolved goals
+n : ℕ
+p q : Program n
+xs : List.Vector ℕ n
+⊢ evaluate (NumberedWindowInternalSparsePair.fieldCons.composition (Fin.cons p (Fin.cons q Fin.elim0))) xs =
+    pair (evaluate p xs) (evaluate q xs) + 1
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:42:47: error(lean.unknownIdentifier): Unknown identifier `zeroEvaluation`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:42:62: error(lean.unknownIdentifier): Unknown identifier `literalEvaluation`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:36:77: error: unsolved goals
+c t k : ℕ
+xs : List.Vector ℕ (Nat.succ 0).succ.succ := c ::ᵥ t ::ᵥ k ::ᵥ nil
+h0 : evaluate (Program.projection 0) xs = c
+h1 : evaluate (Program.projection 1) xs = t
+h2 : evaluate (Program.projection 2) xs = k
+⊢ pair (evaluate (NumberedWindowInternalFreshProbeDispatchProgram.literal 3 3) xs)
+        (pair c (pair t (pair k (evaluate (NumberedWindowInternalFreshProbeDispatchProgram.zeroAt 3) xs) + 1) + 1) +
+          1) +
+      1 =
+    pair 3 (pair c (pair t (pair k 0 + 1) + 1) + 1) + 1
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:54:56: error(lean.unknownIdentifier): Unknown identifier `zeroEvaluation`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:54:71: error(lean.unknownIdentifier): Unknown identifier `literalEvaluation`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:46:44: error: unsolved goals
+c d e k a : ℕ
+xs : List.Vector ℕ (Nat.succ 0).succ.succ.succ.succ := c ::ᵥ d ::ᵥ e ::ᵥ k ::ᵥ a ::ᵥ nil
+h0 : evaluate (Program.projection 0) xs = c
+h1 : evaluate (Program.projection 1) xs = d
+h2 : evaluate (Program.projection 2) xs = e
+h3 : evaluate (Program.projection 3) xs = k
+h4 : evaluate (Program.projection 4) xs = a
+⊢ pair (evaluate (NumberedWindowInternalFreshProbeDispatchProgram.literal 5 3) xs)
+        (pair c
+            (pair e
+                (pair
+                    (pair (evaluate (NumberedWindowInternalFreshProbeDispatchProgram.literal 5 6) xs)
+                        (pair d
+                            (pair e
+                                (pair k
+                                    (pair a (evaluate (NumberedWindowInternalFreshProbeDispatchProgram.zeroAt 5) xs) +
+                                      1) +
+                                  1) +
+                              1) +
+                          1) +
+                      1)
+                    (evaluate (NumberedWindowInternalFreshProbeDispatchProgram.zeroAt 5) xs) +
+                  1) +
+              1) +
+          1) +
+      1 =
+    pair 3 (pair c (pair e (pair (pair 6 (pair d (pair e (pair k (pair a 0 + 1) + 1) + 1) + 1) + 1) 0 + 1) + 1) + 1) + 1
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:65:13: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:66:9: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:67:9: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:68:9: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:70:9: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:65:13: warning: 'rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:77:18: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:83:6: error(lean.unknownIdentifier): Unknown identifier `vectorOne`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:80:67: error: unsolved goals
+p : Program 1
+f u y : ℕ
+⊢ evaluate p (ofFn fun x => evaluate (Program.projection 1) (f ::ᵥ u ::ᵥ y ::ᵥ nil)) = run p u
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:112:24: error(lean.unknownIdentifier): Unknown identifier `compositeThree`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:119:21: error(lean.unknownIdentifier): Unknown identifier `compositeTwo`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean:122:19: error(lean.unknownIdentifier): Unknown identifier `compositeTwo`

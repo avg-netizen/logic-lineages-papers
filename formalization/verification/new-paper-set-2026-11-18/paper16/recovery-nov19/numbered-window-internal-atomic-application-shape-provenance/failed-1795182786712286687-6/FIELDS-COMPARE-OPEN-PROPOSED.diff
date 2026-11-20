@@ -1,0 +1,10 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof.lean
+@@ -14,6 +14,7 @@
+ open NumberedWindowInternalAtomicRefinementNumericFieldsProof (literalFields sourceValue targetValue)
+ open NumberedWindowInternalFreshProbeParsedEmitter (rawContext rawResult rawDomain rawCodomain rawLeast arrowGood)
+ open NumberedWindowInternalFreshProbeParsedEmitterAddressProof (chosenArrow)
++open NumberedWindowInternalFreshProbeDispatchProgram (compareNumbers)
+ open NumberedWindowInternalFreshProbeDispatchProgramControlProof
+   (vectorOne compositeTwo compositeThree literalEvaluation zeroEvaluation compareEvaluation)
+ open NumberedWindowInternalSparsePathEnvelope (run field cursor)

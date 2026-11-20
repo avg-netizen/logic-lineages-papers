@@ -1,0 +1,126 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicApplicationShapeNumericTargets
+import LogicLineages.PersistentMarking.NumberedWindowAtomicApplicationAddressProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericFieldsProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeParsedEmitterAddressProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePairEvaluationProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeArityEvaluationProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram List.Vector
+open NumberedWindowInternalAtomicApplicationShape NumberedWindowInternalAtomicApplicationShapeNumericTargets
+open NumberedWindowInternalAtomicRefinementNumericFieldsProof (literalFields sourceValue targetValue)
+open NumberedWindowInternalFreshProbeParsedEmitter (rawContext rawResult rawDomain rawCodomain rawLeast arrowGood)
+open NumberedWindowInternalFreshProbeParsedEmitterAddressProof (chosenArrow)
+open NumberedWindowInternalFreshProbeDispatchProgramControlProof
+  (vectorOne compositeTwo compositeThree literalEvaluation zeroEvaluation compareEvaluation)
+open NumberedWindowInternalSparsePathEnvelope (run field cursor)
+open NumberedWindowInternalSparsePathEnvelopeArityEvaluationProof (applyValue)
+open NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof (headTailOfCell cellAt flagOfCell)
+open NumberedWindowInternalSparseFieldCell (cellHead cellTail)
+open NumberedWindowInternalFreshProbeEmitter (consOf)
+open NumberedWindowInternalAtomicRefinement (atSource atTarget)
+open NumberedWindowAtomicApplicationTargets (auxRaw)
+open NumberedWindowAtomicApplicationAddressProof (actualApplication)
+open NumberedWindowAtomicPositiveTargets (packedAddress)
+open NumberedWindowFieldAlgorithm (pack packNode)
+open NumberedWindowPairAlgorithm (pair)
+
+private theorem consValue {n : Nat} (p q : Program n) (xs : List.Vector Nat n) :
+    evaluate (consOf p q) xs = pair (evaluate p xs) (evaluate q xs) + 1 := by
+  rw [consOf,compositeTwo]
+  exact NumberedWindowInternalSparsePairEvaluationProof.consValue _ _
+
+private theorem addressValue (c t k : Nat) :
+    evaluate addressEmitter (c ::ᵥ t ::ᵥ k ::ᵥ nil) = packedAddress c t k := by
+  let xs := c ::ᵥ t ::ᵥ k ::ᵥ nil
+  have h0 : evaluate (.projection (0 : Fin 3)) xs = c := rfl
+  have h1 : evaluate (.projection (1 : Fin 3)) xs = t := rfl
+  have h2 : evaluate (.projection (2 : Fin 3)) xs = k := rfl
+  change evaluate addressEmitter xs = _
+  simp only [addressEmitter,consValue,h0,h1,h2,zeroEvaluation,literalEvaluation,packedAddress,packNode,pack]
+
+private theorem auxValue (c d e k a : Nat) :
+    evaluate auxAddressEmitter (c ::ᵥ d ::ᵥ e ::ᵥ k ::ᵥ a ::ᵥ nil) =
+      packedAddress c e (auxRaw d e k a) := by
+  let xs := c ::ᵥ d ::ᵥ e ::ᵥ k ::ᵥ a ::ᵥ nil
+  have h0 : evaluate (.projection (0 : Fin 5)) xs = c := rfl
+  have h1 : evaluate (.projection (1 : Fin 5)) xs = d := rfl
+  have h2 : evaluate (.projection (2 : Fin 5)) xs = e := rfl
+  have h3 : evaluate (.projection (3 : Fin 5)) xs = k := rfl
+  have h4 : evaluate (.projection (4 : Fin 5)) xs = a := rfl
+  change evaluate auxAddressEmitter xs = _
+  simp only [auxAddressEmitter,consValue,h0,h1,h2,h3,h4,zeroEvaluation,literalEvaluation,
+    packedAddress,auxRaw,packNode,pack]
+
+theorem exactEmitters : ExactNumericApplicationEmitters := ⟨addressValue,auxValue⟩
+
+private theorem vectorFive (f : Fin 5 → Nat) :
+    List.Vector.ofFn f = f 0 ::ᵥ f 1 ::ᵥ f 2 ::ᵥ f 3 ::ᵥ f 4 ::ᵥ nil := by
+  apply List.Vector.ext
+  intro i
+  refine Fin.cases ?_ (fun j => Fin.cases ?_ (fun k =>
+    Fin.cases ?_ (fun l => Fin.cases ?_ (fun m => ?_) l) k) j) i
+  · simp <;> rfl
+  · simp <;> rfl
+  · simp <;> rfl
+  · simp <;> rfl
+  · obtain rfl := Fin.eq_zero m
+    simp <;> rfl
+
+private theorem compositeFive {n : Nat} (p : Program 5) (a b c d e : Program n) (xs : List.Vector Nat n) :
+    evaluate (.composition p (Fin.cons a (Fin.cons b (Fin.cons c (Fin.cons d (Fin.cons e Fin.elim0)))))) xs =
+      evaluate p (evaluate a xs ::ᵥ evaluate b xs ::ᵥ evaluate c xs ::ᵥ evaluate d xs ::ᵥ evaluate e xs ::ᵥ nil) := by
+  change evaluate p (List.Vector.ofFn fun i : Fin 5 =>
+    evaluate ((Fin.cons a (Fin.cons b (Fin.cons c (Fin.cons d (Fin.cons e Fin.elim0)))) : Fin 5 → Program n) i) xs) = _
+  rw [vectorFive] <;> rfl
+
+private theorem argumentValue (p : Program 1) (f u y : Nat) :
+    evaluate (fromArgument p) (f ::ᵥ u ::ᵥ y ::ᵥ nil) = run p u := by
+  change evaluate p (List.Vector.ofFn fun _ : Fin 1 =>
+    evaluate (.projection (1 : Fin 3)) (f ::ᵥ u ::ᵥ y ::ᵥ nil)) = _
+  rw [vectorOne] <;> rfl
+
+private theorem lastAuxField (d e k a : Nat) : run (field 3) (auxRaw d e k a) = a := by
+  let raw := pair 6 (pack [d,e,k,a])+1
+  have h0 : run cellTail raw = pack [d,e,k,a] :=
+    (headTailOfCell (cellAt 6 (pack [d,e,k,a]))).2
+  have h1 : run cellTail (pack [d,e,k,a]) = pack [e,k,a] :=
+    (headTailOfCell (cellAt d (pack [e,k,a]))).2
+  have h2 : run cellTail (pack [e,k,a]) = pack [k,a] :=
+    (headTailOfCell (cellAt e (pack [k,a]))).2
+  have h3 : run cellTail (pack [k,a]) = pack [a] :=
+    (headTailOfCell (cellAt k (pack [a]))).2
+  have h4 : run cellHead (pack [a]) = a := (headTailOfCell (cellAt a (pack []))).1
+  change run (field 3) raw = a
+  simp only [field,cursor,applyValue,h0,h1,h2,h3,h4]
+
+theorem exactCoordinates : ExactOriginalAtomTapeCoordinates := by
+  intro s c t k u y atom accepted
+  obtain ⟨d,e,a,a',arrow,hu,hy,_⟩ := actualApplication s c t k u y atom accepted
+  let f := packedAddress c t k
+  have ⟨hc,ht,hk⟩ := literalFields c t k
+  have fArrow := (chosenArrow t).trans arrow
+  have fg : run arrowGood f = 1 := by rw [arrowGood,applyValue,ht,flagOfCell fArrow]
+  have hd : run rawDomain f = d := by rw [rawDomain,applyValue,ht,(headTailOfCell fArrow).1]
+  have he : run rawCodomain f = e := by rw [rawCodomain,applyValue,ht,(headTailOfCell fArrow).2]
+  have ha : run rawLeast u = a := by rw [hu]; exact (literalFields c d a).2.2
+  have ha' : run auxArgument y = a' := by
+    rw [auxArgument,applyValue,hy,(literalFields c e (auxRaw d e k a')).2.2,lastAuxField]
+  have arg : evaluate rebuildArgument (f ::ᵥ u ::ᵥ y ::ᵥ nil) = u := by
+    rw [rebuildArgument,compositeThree,sourceValue,sourceValue,argumentValue,hc,hd,ha,addressValue,← hu]
+  have out : evaluate rebuildResult (f ::ᵥ u ::ᵥ y ::ᵥ nil) = y := by
+    rw [rebuildResult,compositeFive,sourceValue,sourceValue,sourceValue,sourceValue,targetValue,hc,hd,he,hk,ha',auxValue,← hy]
+  dsimp only
+  change evaluate (atSource arrowGood) (f ::ᵥ u ::ᵥ y ::ᵥ nil) = 1 ∧
+    evaluate sameArgument (f ::ᵥ u ::ᵥ y ::ᵥ nil) = 1 ∧ evaluate sameResult (f ::ᵥ u ::ᵥ y ::ᵥ nil) = 1
+  refine ⟨by rw [sourceValue,fg],?_,?_⟩
+  · rw [sameArgument,compositeTwo,arg]
+    change evaluate compareNumbers (u ::ᵥ u ::ᵥ nil) = 1
+    rw [compareEvaluation,if_pos rfl]
+  · rw [sameResult,compositeTwo,out]
+    change evaluate compareNumbers (y ::ᵥ y ::ᵥ nil) = 1
+    rw [compareEvaluation,if_pos rfl]
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalAtomicApplicationShapeNumericFieldsProof
