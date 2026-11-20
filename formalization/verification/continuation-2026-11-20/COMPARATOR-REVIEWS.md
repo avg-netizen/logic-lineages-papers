@@ -121,3 +121,11 @@ Read all four open author leaves and verified54pins. Actual seven nested cons/pr
 ## Positive-path envelope open author review
 
 Read all seven open leaves and verified37pins. Exact arity/selector reports are actual graph derivations, not natural values. Generic finite arity induction cuts original cursor/head/tail witnesses, checks terminal zero and reconstructs the unique same ordered raw sparse list. Tag recovery uses original equality acceptance; edge retains [q,r,w] and witness output order. Hop extracts actual second field, applies entire nested edge reconstruction and transports that graph at the same selected field. Forward and reverse both give independent polynomial shape, not guard-defined semantics. No source-body or previous r substitution. Exact2 native/axiom/evidence required.
+
+## Parsed fresh source-field comparator
+
+Read all three selected AST/exact5 target modules and full map; verified62pins. Same actual tag3/arity3 envelope gives packed context/result/least, and arrow sparse cell on that exact result gives domain/codomain. Actual normalized guard and gated coordinates retain absence versus legitimate zero. Numeric InputCalibrated is only original scalar/name and is discharged by unconditional selection target. Object6-slot block retains raw graphs, same q shell/result arrow, actual bound at least, and exact same output equation. No scalar natural truth becomes internal decoder evidence; no typedσ/neutral/computability claim. Target preflight required before proof.
+
+## Actual positive-path one-hop advance comparator
+
+Read both AST/exact5 modules and full source map; verified38pins. Literal packed lexical context, type, current Option0/successor and raw hop are retained. Source callbacks are actual original step5 and least3, with genuine existence required in ConcreteAdvance, not hidden oracle assumptions. Malformed context rejects, absence/absence equality cannot accept because current and target are successors. Exact open guard/actual callback graph biconditionals retain supplied genuine hop and both successful least values. These are not proofs of callbacks internal correctness or actual lifted endpoint transport; full fold/matching/allterms remain unpaid. Target native preflight required before proof.

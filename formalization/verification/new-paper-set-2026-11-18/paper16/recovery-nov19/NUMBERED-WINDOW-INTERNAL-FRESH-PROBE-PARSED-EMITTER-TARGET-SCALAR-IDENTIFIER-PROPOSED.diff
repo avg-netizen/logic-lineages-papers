@@ -1,0 +1,78 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterDefinitions.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterDefinitions.lean
+@@ -29,21 +29,21 @@
+ 
+ /-- The arbitrary source leaf controls scalar admission only. The
+ actual sparse envelope and arrow tests are additional explicit code. -/
+-def selectedGuard (admit : Program 1) : Program 1 :=
+-  GorbowVerifierNormalization.normalize (bothOne admit parserGuard)
++def selectedGuard (scalarProg : Program 1) : Program 1 :=
++  GorbowVerifierNormalization.normalize (bothOne scalarProg parserGuard)
+ 
+ def gated (g datum : Program 1) : Program 1 := chooseBranch g (zeroAt 1) datum
+ 
+ /-- The same guard zeros all missing fields. A present zero coordinate
+ is still distinguished from failure by the separate indicator. -/
+-def selected (admit bound : Program 1) : Selectors :=
+-  let g := selectedGuard admit
++def selected (scalarProg bound : Program 1) : Selectors :=
++  let g := selectedGuard scalarProg
+   ⟨g, gated g rawContext, gated g rawDomain, gated g (applyUnary bound rawLeast)⟩
+ 
+ /-- Numerical correspondence to the exact original two source leaves.
+ No object formula transport or proof is assumed in this predicate. -/
+-def InputCalibrated (s : Settings) (admit bound : Program 1) : Prop :=
+-  (∀ q, evaluate admit (q ::ᵥ nil) = (scalar s q).toNat) ∧
++def InputCalibrated (s : Settings) (scalarProg bound : Program 1) : Prop :=
++  (∀ q, evaluate scalarProg (q ::ᵥ nil) = (scalar s q).toNat) ∧
+   (∀ q, evaluate bound (q ::ᵥ nil) = freshName q)
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeParsedEmitter
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterNumericTargets.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterNumericTargets.lean
+@@ -28,15 +28,15 @@
+ Option encoding, including rejection or a legitimate numeric zero
+ in one of the successful coordinate fields. -/
+ def ExactParsedFreshCalibration : Prop :=
+-  ∀ (s : Settings) (admit bound : Program 1), InputCalibrated s admit bound →
+-    let p := selected admit bound
++  ∀ (s : Settings) (scalarProg bound : Program 1), InputCalibrated s scalarProg bound →
++    let p := selected scalarProg bound
+     calibrated s p ∧
+     ∀ q, evaluate (chooseFresh p) (q ::ᵥ nil) = Encodable.encode (probe s q)
+ 
+ def ExactOriginalParsedFreshSelection : Prop :=
+-  ∀ s : Settings, ∃ admit bound : Program 1,
+-    InputCalibrated s admit bound ∧
+-    let p := selected admit bound
++  ∀ s : Settings, ∃ scalarProg bound : Program 1,
++    InputCalibrated s scalarProg bound ∧
++    let p := selected scalarProg bound
+     calibrated s p ∧
+     ∀ q, evaluate (chooseFresh p) (q ::ᵥ nil) = Encodable.encode (probe s q)
+ 
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterObjectTargets.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterObjectTargets.lean
+@@ -56,9 +56,9 @@
+ premise is used in this structural theorem, and no arithmetic assertion
+ about an arbitrary formerly selected PR witness is inferred. -/
+ def ExactOpenParsedFresh : Prop :=
+-  ∀ (admit bound : Program 1) (body : Positive (Fin 1)) (α : Type)
++  ∀ (scalarProg bound : Program 1) (body : Positive (Fin 1)) (α : Type)
+     (Γ : List (Formula α)) (q u : OTerm α),
+-    Nonempty (Derivation body Γ (freshAt (chooseFresh (selected admit bound)) q u)) →
++    Nonempty (Derivation body Γ (freshAt (chooseFresh (selected scalarProg bound)) q u)) →
+     Nonempty (Derivation body Γ (parsedFreshAt bound q u))
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeParsedEmitterObjectTargets
+--- a/verification/new-paper-set-2026-11-18/paper16/recovery-nov19/NUMBERED-WINDOW-INTERNAL-FRESH-PROBE-PARSED-EMITTER-SOURCE-MAP.md
++++ b/verification/new-paper-set-2026-11-18/paper16/recovery-nov19/NUMBERED-WINDOW-INTERNAL-FRESH-PROBE-PARSED-EMITTER-SOURCE-MAP.md
+@@ -24,7 +24,7 @@
+ | `ExactParsedFreshCalibration` | At every raw q, exact original scalar+address+arrow acceptance agrees with the new physical guard. The old four `calibrated` constraints and exact original `Encodable.encode (probe s q)` hold for the *same* fresh AST. Rejections and successful zero-valued fields remain separate. The provided `InputCalibrated` covers only the actual original scalar and name leaves and is discharged by the next clause. |
+ | `ExactOriginalParsedFreshSelection` | Every actual Settings s supplies those two actual original PR leaves and consequently one same chosen original a with all-raw calibration. It does not identify the arithmetic graph of an arbitrary older witness in #608/#630. |
+ | `ExactOpenAddressArrowCoordinates` | From actual literal tag3/arity3 and arrow-cell arithmetic acceptances and actual slot graphs, derive the symbolic q shell and result arrow equality inside arbitrary-open ID1. Reuse generic fixed envelope and sparse cell graph equations, never source truth reflection or using an envelope headed by a different program. |
+-| `ExactOpenParsedFresh` | A genuine derivation of the actual selected a at `succ u` yields the literal six-slot block: raw context, raw result, domain, codomain, least term, fresh name. Both shell equations, all actual raw field graphs, actual bound graph at the same least term and the output equation at the same c/domain/name are retained. This is structural for arbitrary literal admit/bound Programs, not an internal theorem about the externally calibrated scalar source predicate. |
++| `ExactOpenParsedFresh` | A genuine derivation of the actual selected a at `succ u` yields the literal six-slot block: raw context, raw result, domain, codomain, least term, fresh name. Both shell equations, all actual raw field graphs, actual bound graph at the same least term and the output equation at the same c/domain/name are retained. This is structural for arbitrary literal scalarProg/bound Programs, not an internal theorem about the externally calibrated scalar source predicate. |
+ 
+ Numeric staging: first gate the original positive address/arrow
+ coordinate leaf. Generic envelope arity uses the actual #628 unpack

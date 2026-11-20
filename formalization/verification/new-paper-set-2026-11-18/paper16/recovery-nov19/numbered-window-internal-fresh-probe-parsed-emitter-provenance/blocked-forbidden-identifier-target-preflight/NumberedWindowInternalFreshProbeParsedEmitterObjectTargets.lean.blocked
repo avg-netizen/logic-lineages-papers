@@ -1,0 +1,64 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeParsedEmitterDefinitions
+public import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeEmitterObjectTargets
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeParsedEmitterObjectTargets
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators SourceComputabilityFormulaSupportProof
+open ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalFiniteBlocks (block)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open NumberedWindowInternalFreshProbeParsedEmitter
+open NumberedWindowInternalFreshProbeEmitter (chooseFresh)
+open NumberedWindowInternalFreshProbeEmitterObjectTargets (consTerm packedFreeTerm)
+open NumberedWindowInternalProbeTargets (OTerm freshAt)
+
+def addressTerm {α : Type} (ctx result least : OTerm α) : OTerm α :=
+  consTerm (numeral 3) (consTerm ctx (consTerm result (consTerm least OrdinaryArithmetic.zeroTerm)))
+
+def addressReports {α : Type} (q c r k : OTerm α) : Formula α :=
+  programGraph rawContext c ![q] ⊓ (programGraph rawResult r ![q] ⊓ programGraph rawLeast k ![q])
+
+def arrowReports {α : Type} (q d e : OTerm α) : Formula α :=
+  programGraph rawDomain d ![q] ⊓ programGraph rawCodomain e ![q]
+
+def sourceShape {α : Type} (q c r d e k : OTerm α) : Formula α :=
+  equal q (addressTerm c r k) ⊓ equal r (consTerm d e)
+
+/-- Recover the genuine raw shell and arrow equation from the actual
+arithmetic guards and actual component graphs, with every output kept. -/
+def ExactOpenAddressArrowCoordinates : Prop :=
+  ∀ (body : Positive (Fin 1)) (α : Type) (Γ : List (Formula α)) (q c r d e k : OTerm α),
+    Nonempty (Derivation body Γ (programGraph addressGood (numeral 1) ![q])) →
+    Nonempty (Derivation body Γ (programGraph arrowGood (numeral 1) ![q])) →
+    Nonempty (Derivation body Γ (addressReports q c r k)) →
+    Nonempty (Derivation body Γ (arrowReports q d e)) →
+    Nonempty (Derivation body Γ (sourceShape q c r d e k))
+
+/-- Bind original raw context, result, domain, codomain, least term and
+fresh name, in that order. The same q and u survive every slot. -/
+def parsedFreshAt {α : Type} (bound : Program 1) (q u : OTerm α) : Formula α :=
+  let q' := q.relabel (Sum.inl : α → α ⊕ Fin 6)
+  let u' := u.relabel (Sum.inl : α → α ⊕ Fin 6)
+  let c : OTerm (α ⊕ Fin 6) := .var (.inr 0)
+  let r : OTerm (α ⊕ Fin 6) := .var (.inr 1)
+  let d : OTerm (α ⊕ Fin 6) := .var (.inr 2)
+  let e : OTerm (α ⊕ Fin 6) := .var (.inr 3)
+  let k : OTerm (α ⊕ Fin 6) := .var (.inr 4)
+  let n : OTerm (α ⊕ Fin 6) := .var (.inr 5)
+  block (addressReports q' c r k ⊓ (arrowReports q' d e ⊓
+    (sourceShape q' c r d e k ⊓
+      (programGraph bound n ![k] ⊓ equal u' (packedFreeTerm c d n)))))
+
+/-- Actual chosen a on its nonfailure branch. No numerical calibration
+premise is used in this structural theorem, and no arithmetic assertion
+about an arbitrary formerly selected PR witness is inferred. -/
+def ExactOpenParsedFresh : Prop :=
+  ∀ (admit bound : Program 1) (body : Positive (Fin 1)) (α : Type)
+    (Γ : List (Formula α)) (q u : OTerm α),
+    Nonempty (Derivation body Γ (freshAt (chooseFresh (selected admit bound)) q u)) →
+    Nonempty (Derivation body Γ (parsedFreshAt bound q u))
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeParsedEmitterObjectTargets
