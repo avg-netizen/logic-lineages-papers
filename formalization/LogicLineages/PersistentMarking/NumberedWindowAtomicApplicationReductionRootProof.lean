@@ -70,8 +70,9 @@ theorem auxRoot : ExactAtomicAuxRootReduction := by
     · have retained : unpackNode cert = some (7,[]) := by rw [hw,valid.1,valid.2]
       have bottom : NumberedWindowMarkRootAlgorithm.bottom (auxRaw dom cod fn arg) y = true :=
         by simpa only [if_pos valid] using tested
-      simp only [NumberedWindowMarkRootAlgorithm.bottom,guarded,annotation,← bottomRaw,
-        Bool.and_eq_true,beq_iff_eq,bne_iff_ne,and_assoc] at bottom
+      unfold NumberedWindowMarkRootAlgorithm.bottom guarded at bottom
+      rw [annotation, ← bottomRaw] at bottom
+      simp only [Bool.and_eq_true,beq_iff_eq,bne_iff_ne,and_assoc] at bottom
       exact ⟨bottom.2.2.2.symm,codeOfNode retained⟩
     · simp [valid] at tested
 
