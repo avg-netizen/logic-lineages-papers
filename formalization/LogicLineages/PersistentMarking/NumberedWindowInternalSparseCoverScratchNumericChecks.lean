@@ -1,0 +1,23 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseCoverScratchTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseCoverScratchNumericCodecProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseCoverScratchNumericProjectionProof
+import LogicLineages.PersistentMarking.NumberedWindowCoverBoundsProgramChecks
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseCoverScratchNumericChecks
+open NumberedWindowInternalSparseCoverScratchTargets
+open NumberedWindowInternalSparseCoverScratchNumericCodecProof (payload)
+open NumberedWindowInternalSparseCoverScratchNumericProjectionProof (coverOptionValue scratchVerticesValue)
+
+theorem exact_CoverOptionPayload : ExactCoverOptionPayload := payload
+
+theorem exact_SelectedCoverToScratch : ExactSelectedCoverToScratch := by
+  obtain ⟨C, hC⟩ := NumberedWindowCoverBoundsProgramChecks.exact_SelectedCoverProgram
+  refine ⟨C, hC, ?_⟩
+  intro s n
+  exact ⟨coverOptionValue C hC s n, scratchVerticesValue C hC s n⟩
+
+#print axioms exact_CoverOptionPayload
+#print axioms exact_SelectedCoverToScratch
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseCoverScratchNumericChecks
