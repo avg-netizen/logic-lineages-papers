@@ -95,11 +95,11 @@ private theorem prependReadPrimitive : Primrec₂ prependRead :=
     (prependOnePrimitive.comp (Primrec.fst.comp Primrec.fst) Primrec.snd)
 private theorem appendPresentPrimitive : Primrec₂ appendPresent :=
   Primrec.option_casesOn Primrec.snd (Primrec.const (some none))
-    (prependReadPrimitive.comp Primrec.snd (Primrec.fst.comp Primrec.fst))
+    (prependReadPrimitive.comp₂ Primrec₂.right (Primrec.fst.comp₂ Primrec₂.left))
 
 private theorem appendPrimitive : Primrec₂ appendResult := by
   apply (Primrec.option_casesOn Primrec.fst (Primrec.const none)
-    (appendPresentPrimitive.comp (Primrec.snd.comp Primrec.fst) Primrec.snd)).of_eq
+    (appendPresentPrimitive.comp₂ (Primrec.snd.comp₂ Primrec₂.left) Primrec₂.right)).of_eq
   intro p
   rcases p with ⟨head,tail⟩
   cases head with
