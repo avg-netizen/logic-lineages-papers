@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PermittedControl.CountCongruenceNamedRowTargets
+import LogicLineages.PermittedControl.CountCongruenceNamedRowCodeProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_countCongruenceNamedRowCodeExact : CountCongruenceNamedRow.CodeExact :=
+  CountCongruenceNamedRow.codeExact
+
+#print axioms fixed_countCongruenceNamedRowCodeExact
+
+end LogicLineages.PermittedControl.StatementChecks

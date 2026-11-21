@@ -1,0 +1,17 @@
+module
+public import LogicLineages.PermittedControl.CountCongruenceNamedRowTargets
+import LogicLineages.PermittedControl.CountCongruenceNamedRowSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_countCongruenceNamedRowShapeAndSupport : CountCongruenceNamedRow.ShapeAndSupport :=
+  CountCongruenceNamedRow.shapeAndSupport
+
+theorem fixed_countCongruenceNamedRowActual : CountCongruenceNamedRow.ActualNamedRow :=
+  CountCongruenceNamedRow.actualNamedRow
+
+#print axioms fixed_countCongruenceNamedRowShapeAndSupport
+#print axioms fixed_countCongruenceNamedRowActual
+
+end LogicLineages.PermittedControl.StatementChecks
