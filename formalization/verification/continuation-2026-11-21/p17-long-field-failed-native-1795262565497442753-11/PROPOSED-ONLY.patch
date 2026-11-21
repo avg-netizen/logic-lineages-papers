@@ -1,0 +1,146 @@
+--- /dev/null
++++ b/formalization/LogicLineages/PermittedControl/LongFieldPeeledValueProof.lean
+@@ -0,0 +1,27 @@
++module
++public import LogicLineages.PermittedControl.LongFieldEffectiveTailTargets
++import LogicLineages.PermittedControl.FieldComparisonPeelProof
++import LogicLineages.OrdinalComparison.OrdinalRepresentationSound
++
++@[expose] public section
++namespace LogicLineages.PermittedControl.FieldComparison
++open OrdinalComparison
++
++/-- Actual old entry-peeling argument at the new exposed literal bound.
++This does not unfold or alter the owner comparison proof's private body. -/
++theorem long_peeled_value (f : Nat → Nat) (B : Nat) (hf : SelectedWithThreshold f B) (a : Nat)
++    (lam mu : NONote) (hL : LongField (.entry a lam mu)) (c x : Nat)
++    (hx : longFieldPeelBound B lam mu c ≤ x) :
++    ∃ i : Nat, FirstEntry f (countInitial lam.1.repr x) (mu + omegaMultiple c).1.repr i ∧
++      x ≤ entryNormAt f (countInitial lam.1.repr x) i ∧
++      FieldValue f (.entry a lam mu) x (f^[a + c] (entryNormAt f (countInitial lam.1.repr x) i)) := by
++  obtain ⟨hll,hmu,hml,hlong⟩ := hL
++  have hlamE := normalRepresentationSound lam
++  have hlt := long_peel_bound lam.1.repr mu.1.repr (hml.trans hlamE) hmu hll hml hlong c
++  obtain ⟨i,k,hi,hk,hnorm,hxe⟩ := entry_peel f B hf lam.1.repr mu.1.repr c x hlamE hll hmu hlt hx
++  refine ⟨i,?_,hxe,k,hk,?_⟩
++  · rw [peeled_repr]
++    exact hi
++  · rw [hnorm,Function.iterate_add_apply]
++
++end LogicLineages.PermittedControl.FieldComparison
+--- a/formalization/LogicLineages/PermittedControl/LongFieldDistinctBoundProof.lean
++++ b/formalization/LogicLineages/PermittedControl/LongFieldDistinctBoundProof.lean
+@@ -1,6 +1,7 @@
+ module
+ public import LogicLineages.PermittedControl.LongFieldEffectiveTailTargets
+ import LogicLineages.PermittedControl.FieldComparisonProof
++import LogicLineages.PermittedControl.LongFieldPeeledValueProof
+ import LogicLineages.PermittedControl.FieldComparisonPeelProof
+ import LogicLineages.PermittedControl.EntryTableProof
+ import LogicLineages.PermittedControl.EntryLinearProof
+@@ -44,8 +45,8 @@
+   have hmono := (selected_threshold_admissible f B hf).1
+   have hinfl : ∀ n, n ≤ f n := control_self_le f (selected_threshold_admissible f B hf).2
+   intro x y hx hxy
+-  change peelTail B lq mq m ≤ x at hx
+-  obtain ⟨i,hi,hye,hval⟩ := peeled_value f B hf b lq mq hG m y (hx.trans hxy.le)
++  change longFieldPeelBound B lq mq m ≤ x at hx
++  obtain ⟨i,hi,hye,hval⟩ := long_peeled_value f B hf b lq mq hG m y (hx.trans hxy.le)
+   refine ⟨f^[m] x,_,rfl,hval,?_⟩
+   rw [distinctForm]
+   apply comparison_lt
+@@ -62,9 +63,9 @@
+         FormHolds f (distinctForm (.entry a lp mp) (.iterate n)) x y vF vG := by
+   have hmono := (selected_threshold_admissible f B hf).1
+   intro x y hx hxy
+-  change max (peelTail B lp mp 0) (peelTail B lp mp (n - a)) ≤ x at hx
++  change max (longFieldPeelBound B lp mp 0) (longFieldPeelBound B lp mp (n - a)) ≤ x at hx
+   by_cases hna : n ≤ a
+-  · obtain ⟨i,-,-,hval⟩ := peeled_value f B hf a lp mp hF 0 x ((le_max_left _ _).trans hx)
++  · obtain ⟨i,-,-,hval⟩ := long_peeled_value f B hf a lp mp hF 0 x ((le_max_left _ _).trans hx)
+     obtain ⟨k,hk,-⟩ := hval
+     refine ⟨f^[a] (entryNormAt f (countInitial lp.1.repr x) k),f^[n] y,⟨k,hk,rfl⟩,rfl,?_⟩
+     rw [distinctForm,if_pos hna]
+@@ -74,7 +75,7 @@
+       rw [← Function.iterate_add_apply,Nat.add_sub_cancel' hna]
+     rw [hv]
+     exact rows_exact (f^[n]) (hmono.iterate n) y _
+-  · obtain ⟨i,hi,-,hval⟩ := peeled_value f B hf a lp mp hF (n - a) x ((le_max_right _ _).trans hx)
++  · obtain ⟨i,hi,-,hval⟩ := long_peeled_value f B hf a lp mp hF (n - a) x ((le_max_right _ _).trans hx)
+     rw [Nat.add_sub_cancel' (Nat.le_of_not_le hna)] at hval
+     refine ⟨_,f^[n] y,hval,rfl,?_⟩
+     rw [distinctForm,if_neg hna]
+@@ -111,15 +112,15 @@
+     rw [hdq]
+     exact Ordinal.isSuccLimit_sub hlql.isSuccPrelimit hQ.2
+   intro x y hbound hxy
+-  have hx : max (max (peelTail B lp mp (b - a)) (peelTail B lq mq (a - b)))
++  have hx : max (max (longFieldPeelBound B lp mp (b - a)) (longFieldPeelBound B lq mq (a - b)))
+     (max (inverseTableTail lp mp' mq' (lq - mq') B)
+       (gapInputTail lq.1.repr mq'.1.repr lp.1.repr mp'.1.repr 0)) ≤ x := by
+     rw [hmp',hmq']
+     exact hbound
+   obtain ⟨hxP,-,hxI,hxG⟩ := tail_four _ _ _ _ x hx
+   obtain ⟨-,hyQ,hyI,hyG⟩ := tail_four _ _ _ _ y (hx.trans hxy.le)
+-  obtain ⟨iP,hiP,-,hvalP⟩ := peeled_value f B hf a lp mp hF (b - a) x hxP
+-  obtain ⟨iQ,hiQ,-,hvalQ⟩ := peeled_value f B hf b lq mq hG (a - b) y hyQ
++  obtain ⟨iP,hiP,-,hvalP⟩ := long_peeled_value f B hf a lp mp hF (b - a) x hxP
++  obtain ⟨iQ,hiQ,-,hvalQ⟩ := long_peeled_value f B hf b lq mq hG (a - b) y hyQ
+   rw [← hmp'] at hiP
+   rw [← hmq'] at hiQ
+   rw [← peel_exponent a b] at hvalQ
+--- a/formalization/LogicLineages/PermittedControl/LongFieldSameBoundProof.lean
++++ b/formalization/LogicLineages/PermittedControl/LongFieldSameBoundProof.lean
+@@ -1,6 +1,7 @@
+ module
+ public import LogicLineages.PermittedControl.LongFieldEffectiveTailTargets
+ import LogicLineages.PermittedControl.FieldComparisonProof
++import LogicLineages.PermittedControl.LongFieldPeeledValueProof
+ import LogicLineages.PermittedControl.FieldComparisonPeelProof
+ import LogicLineages.PermittedControl.EntryTableProof
+ import LogicLineages.PermittedControl.EntryLinearProof
+@@ -21,8 +22,8 @@
+   have hmono := (selected_threshold_admissible f B hf).1
+   have hinfl : ∀ n, n ≤ f n := control_self_le f (selected_threshold_admissible f B hf).2
+   intro x hx
+-  change peelTail B lq mq (m + 1) ≤ x at hx
+-  obtain ⟨i,-,hxe,hval⟩ := peeled_value f B hf b lq mq hG (m + 1) x hx
++  change longFieldPeelBound B lq mq (m + 1) ≤ x at hx
++  obtain ⟨i,-,hxe,hval⟩ := long_peeled_value f B hf b lq mq hG (m + 1) x hx
+   refine ⟨_,hval,?_⟩
+   calc f^[m] x < f^[m + 1] x := iterate_exponent_strict f (selected_strict f B hf) x (Nat.lt_succ_self m)
+     _ ≤ f^[m + 1] (entryNormAt f (countInitial lq.1.repr x) i) := (hmono.iterate (m + 1)).monotone hxe
+@@ -63,7 +64,7 @@
+     rw [hdp]
+     exact Ordinal.isSuccLimit_sub hlpl.isSuccPrelimit hP.2
+   intro x hbound
+-  have hx : max (max (peelTail B lp mp (b - a)) (peelTail B lq mq (a - b)))
++  have hx : max (max (longFieldPeelBound B lp mp (b - a)) (longFieldPeelBound B lq mq (a - b)))
+     (max (max (gapInputTail lq.1.repr mq'.1.repr lp.1.repr mp'.1.repr 0)
+       (gapInputTail lp.1.repr mp'.1.repr lq.1.repr mq'.1.repr 0))
+       (equalGapCertificateTailCode (rawNoteEncode mp'.1) (rawNoteEncode mq'.1)
+@@ -71,8 +72,8 @@
+     rw [hmp',hmq']
+     exact hbound
+   obtain ⟨hxP,hxQ,hxG1,hxG2,hxE⟩ := tail_five _ _ _ _ _ x hx
+-  obtain ⟨iP,hiP,-,hvalP⟩ := peeled_value f B hf a lp mp hF (b - a) x hxP
+-  obtain ⟨iQ,hiQ,-,hvalQ⟩ := peeled_value f B hf b lq mq hG (a - b) x hxQ
++  obtain ⟨iP,hiP,-,hvalP⟩ := long_peeled_value f B hf a lp mp hF (b - a) x hxP
++  obtain ⟨iQ,hiQ,-,hvalQ⟩ := long_peeled_value f B hf b lq mq hG (a - b) x hxQ
+   rw [← hmp'] at hiP
+   rw [← hmq'] at hiQ
+   rw [← peel_exponent a b] at hvalQ
+--- a/formalization/verification/continuation-2026-11-21/PAPER17-LONG-FIELD-EFFECTIVE-TAIL-AUTHOR-MANIFEST.json
++++ b/formalization/verification/continuation-2026-11-21/PAPER17-LONG-FIELD-EFFECTIVE-TAIL-AUTHOR-MANIFEST.json
+@@ -11,8 +11,9 @@
+     "pins_rechecked": 14
+   },
+   "new_source_hashes": {
+-    "formalization/LogicLineages/PermittedControl/LongFieldDistinctBoundProof.lean": "6e09dde3a499f3de8d5ab9bdd61cc3f33fb26e9cd6432b308c1811de3e0f30b1",
+-    "formalization/LogicLineages/PermittedControl/LongFieldSameBoundProof.lean": "50992897b6e55221195ff227fb33f4d5915069920437fb8bec8de12ebcbfb77a",
++    "formalization/LogicLineages/PermittedControl/LongFieldPeeledValueProof.lean": "d0ddd8141a4126a167025d92a315f1dc7afba7740feed64b066f3da17a4a51f9",
++    "formalization/LogicLineages/PermittedControl/LongFieldDistinctBoundProof.lean": "6e6bbb6d701fb55953dd368e6df70c14fffaf2bc4f4d4ed221971a15c5c863ce",
++    "formalization/LogicLineages/PermittedControl/LongFieldSameBoundProof.lean": "4ed59199dc49204c73c428ca2ef5b359613597e4059b2b1b619e0db33bd02289",
+     "formalization/LogicLineages/PermittedControl/LongFieldTailCalibrationProof.lean": "8a33d719e724bd2772a4de9e729a0e3dacd67153f59af018e30f54cea49e03ad",
+     "formalization/LogicLineages/PermittedControl/LongFieldTailPrimitiveProof.lean": "722c42fc38afdb6e4e2460db27453c4ea03a857ecf0ba50fd1e7343b94241362",
+     "formalization/LogicLineages/PermittedControl/LongFieldEffectiveTailProof.lean": "33539ed2604d34311ef044e367cfad6ea1345e4cf004c89ca555742849604551",
