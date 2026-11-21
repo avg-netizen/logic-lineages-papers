@@ -1,0 +1,7 @@
+# Paper 17: guarded actual signed count residue semantics (supporting 749)
+
+The original frozen semantic candidate is retained byte-for-byte, with its exact failed edition and concrete counterexample: without parentheses it scoped valuation agreement only to the left of the iff. The isolated corrected target places the entire iff under valuation agreement; independent exact target preflight 1795299107269607126-6 preceded the new proof. Fresh native 1795300151140581922-2987 and independent 283 module source/object matches certify the exact corrected alias. Only propext, Classical.choice and Quot.sound occur.
+
+On the original proper field and actual same raw rank above the exact tail, the proof obtains a genuine original first-entry count, domain, actual operand and closed reader hit. The literal OR selects the unique raw residue modulo 2m, preserving its odd bit and signed c,u,v. The original count is exact in the short case and its long branch uses the actual general-mu tail residue and floor identity. When name 1 is assigned the original raw value, the emitted literal row agrees with the full original signed weighted divisibility test, not an invented count or an independently varied coordinate.
+
+This is the corrected exact guarded semantic clause only. Literal original code effectivity was separately verified in 746. Neither the old false type, its aggregate, a separate ShapeAndSupport alias, all modular rows, low-strip or branch coverage, printed #704, or numbered promotion is credited.
