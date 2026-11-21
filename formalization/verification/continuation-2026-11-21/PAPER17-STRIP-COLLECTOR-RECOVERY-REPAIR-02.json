@@ -1,0 +1,29 @@
+{
+  "status": "source-only proof repair; fresh native gate pending",
+  "failed_receipt": "1795276144165664897-1913",
+  "failed_archive": "formalization/verification/continuation-2026-11-21/p17-strip-collector-recovery-failed-native-1795276144165664897-1913/exact-failed-edition.zip",
+  "failed_archive_sha256": "c1c3b94bdfa424b931636aa930c7b313b7c7423bf40ce2474ad4d6eea7cc9076",
+  "changed_source": "formalization/LogicLineages/PermittedControl/FiniteStripCollectorRecoveryEffectiveProof.lean",
+  "old_sha256": "4132132341b6b4d8f36f19d9d4afdbefe003e32d01d7031f97f421e112e88f72",
+  "new_sha256": "bc54bf6dedde419921146ba5cceb422a0fd36534accc4e378be4361eb9fe60a4",
+  "patch": "formalization/verification/continuation-2026-11-21/PAPER17-STRIP-COLLECTOR-RECOVERY-REPAIR-02.patch",
+  "patch_sha256": "e13ac9eb953f497beab6b5a922cd7f6d468c4292ef3f8340cd5f393603973db6",
+  "inverse_reconstruction": {
+    "method": "Replace the after block with the before block once. Verified exact bytes against archived failed edition. Zero-context unified reverse patch is equivalent.",
+    "before": "private theorem appendPresentPrimitive : Primrec\u2082 appendPresent :=\n  Primrec.option_casesOn Primrec.snd (Primrec.const (some none))\n    (prependReadPrimitive.comp\u2082 Primrec\u2082.right (Primrec.fst.comp\u2082 Primrec\u2082.left))\n",
+    "after": "private theorem appendPresentPrimitive : Primrec\u2082 appendPresent := by\n  apply (Primrec.option_casesOn Primrec.snd (Primrec.const (some none))\n    (prependReadPrimitive.comp\u2082 Primrec\u2082.right (Primrec.fst.comp\u2082 Primrec\u2082.left))).of_eq\n  rintro \u27e8tail,hs\u27e9\n  cases hs <;> rfl\n",
+    "roundtrip_verified": true
+  },
+  "reason": "Use Primrec.of_eq and exhaust Option constructors to bridge Option.casesOn and appendPresent\u2019s Option.elim. Keep curried branches from repair01 and original theorem statements and definitions unchanged.",
+  "updated_collector_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/FiniteStripCollectorRecoveryEffectiveProof.lean": "bc54bf6dedde419921146ba5cceb422a0fd36534accc4e378be4361eb9fe60a4",
+    "formalization/LogicLineages/PermittedControl/FiniteStripCollectorRecoveryHitProof.lean": "8bff39b00487f15c121c08b0e5bf9f13abbeb788f92a9788c090b0058a969f6e",
+    "formalization/LogicLineages/PermittedControl/FiniteStripCollectorRecoveryReadProof.lean": "94561b0b7111c03be2d2ef52b01dcc65799eb68c0d0d3314700239bb1e0921ed",
+    "formalization/LogicLineages/PermittedControl/FiniteStripCollectorRecoveryStatementChecks.lean": "284e3c12c9d2fd1f4d47eac2cce6c4e1f6e0e16038f6941a1718ffb584f553aa",
+    "formalization/LogicLineages/PermittedControl/FiniteStripCollectorRecoveryTargets.lean": "25652e71df98e01714b1ab84faab136e199f28ec33b31f50959256dd977885be"
+  },
+  "unchanged_author_and_repair01_manifest_sha256": {
+    "formalization/verification/continuation-2026-11-21/PAPER17-STRIP-COLLECTOR-RECOVERY-AUTHOR-MANIFEST.json": "78f9cdc9098094cbb62d33722115ee06094a673fede5301e90571454c0f96187",
+    "formalization/verification/continuation-2026-11-21/PAPER17-STRIP-COLLECTOR-RECOVERY-REPAIR-01.json": "968b5da5497a41e27bf89042350da3d17261a2ef3302e9f0e2a08dab08fcadb6"
+  }
+}

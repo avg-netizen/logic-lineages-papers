@@ -93,9 +93,11 @@ private theorem prependOnePrimitive : Primrec₂ prependOne :=
 private theorem prependReadPrimitive : Primrec₂ prependRead :=
   Primrec.option_map Primrec.snd
     (prependOnePrimitive.comp (Primrec.fst.comp Primrec.fst) Primrec.snd)
-private theorem appendPresentPrimitive : Primrec₂ appendPresent :=
-  Primrec.option_casesOn Primrec.snd (Primrec.const (some none))
-    (prependReadPrimitive.comp₂ Primrec₂.right (Primrec.fst.comp₂ Primrec₂.left))
+private theorem appendPresentPrimitive : Primrec₂ appendPresent := by
+  apply (Primrec.option_casesOn Primrec.snd (Primrec.const (some none))
+    (prependReadPrimitive.comp₂ Primrec₂.right (Primrec.fst.comp₂ Primrec₂.left))).of_eq
+  rintro ⟨tail,hs⟩
+  cases hs <;> rfl
 
 private theorem appendPrimitive : Primrec₂ appendResult := by
   apply (Primrec.option_casesOn Primrec.fst (Primrec.const none)
