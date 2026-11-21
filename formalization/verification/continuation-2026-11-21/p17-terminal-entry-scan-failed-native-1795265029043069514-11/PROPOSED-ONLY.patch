@@ -1,0 +1,42 @@
+--- a/formalization/LogicLineages/PermittedControl/TerminalEntryScanNumericProof.lean
++++ b/formalization/LogicLineages/PermittedControl/TerminalEntryScanNumericProof.lean
+@@ -10,10 +10,11 @@
+ 
+ private theorem terminal_test_computable (f : Nat → Nat) (hf : Computable f) :
+     Computable (fun p : (Nat × Nat) × Nat => terminalScanTest f p.1.1 p.1.2 p.2) := by
+-  have hstate := (encodedStates_computable f hf).comp
+-    (Computable.fst.comp Computable.fst) Computable.snd
++  have hstate : Computable (fun p : (Nat × Nat) × Nat => encodedStatesWith f p.1.1 p.2) :=
++    (encodedStates_computable f hf).comp (Computable.fst.comp Computable.fst) Computable.snd
+   have hsplit : Computable rawSplitCode := (Primrec.nat_iff.mpr rawSplitPrimitiveRecursive).to_comp
+-  have hlimit := (Primrec.fst.comp Primrec.unpair).to_comp.comp hsplit
++  have hlimit : Computable (fun n : Nat => (rawSplitCode n).unpair.1) :=
++    (Primrec.fst.comp Primrec.unpair).to_comp.comp hsplit
+   exact Primrec.eq.decide.to_comp.comp (hlimit.comp hstate) (Computable.snd.comp Computable.fst)
+ 
+ private abbrev PrefixArgs := Nat × Nat × Nat
+@@ -83,6 +84,12 @@
+   have hout : Computable₂ (fun (_p : α) (i : Nat) =>
+       some (some (rawNormCode (encodedStatesWith f _p.1.1 i),i))) :=
+     Computable.option_some.comp (Computable.option_some.comp ((hnorm.comp hstate).pair Computable.snd))
+-  exact Computable.nat_casesOn hidx (Computable.const (some none)) hout
++  refine (Computable.nat_casesOn hidx (Computable.const (some none)) hout).of_eq ?_
++  intro p
++  change Nat.casesOn (boundedTerminalEntryIndex f p.1.1 p.1.2 p.2)
++    (some none) (fun i => some (some (rawNormCode (encodedStatesWith f p.1.1 i),i))) =
++      terminalScanAt f p.1 p.2
++  unfold terminalScanAt
++  cases boundedTerminalEntryIndex f p.1.1 p.1.2 p.2 <;> rfl
+ 
+ end LogicLineages.PermittedControl
+--- a/formalization/verification/continuation-2026-11-21/PAPER17-TERMINAL-ENTRY-SCAN-AUTHOR-MANIFEST.json
++++ b/formalization/verification/continuation-2026-11-21/PAPER17-TERMINAL-ENTRY-SCAN-AUTHOR-MANIFEST.json
+@@ -13,7 +13,7 @@
+   "new_source_hashes": {
+     "formalization/LogicLineages/PermittedControl/TerminalEntryScanGuardProof.lean": "56b758a84b490a8b1981f48cd31fc9a88583ee7496e6cab481233cacdc28d66b",
+     "formalization/LogicLineages/PermittedControl/TerminalEntryScanPrefixProof.lean": "88c0eb0b620e0d947824ae4d298b66cc24ac123c826939d017401e875dba045a",
+-    "formalization/LogicLineages/PermittedControl/TerminalEntryScanNumericProof.lean": "9608b10cb9b97424ce56f2c5f28a13da97772dd10d896c7c2585b8975887f25a",
++    "formalization/LogicLineages/PermittedControl/TerminalEntryScanNumericProof.lean": "ce36d4781aa822f7c78477f9f2c0bf7d552e84e0db49b842453db09b17c7e67d",
+     "formalization/LogicLineages/PermittedControl/TerminalEntryScanProgramProof.lean": "5a7217ee772a4b08fd5ade8c1fa330c126d8410b9aa0e73ed8aa2205a83509dc",
+     "formalization/LogicLineages/PermittedControl/TerminalEntryScanActualProof.lean": "ed02d4b0d06d54a015643c4252ea741ff60922497b02d41bf8496f520511152a",
+     "formalization/LogicLineages/PermittedControl/TerminalEntryScanStatementChecks.lean": "c841628eaf1b16d4fda123193fd57e8b00cec0ac63000d26ed2c7fb6ad070933"
