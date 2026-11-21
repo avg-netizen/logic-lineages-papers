@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.CountCongruenceNamedRowGuardedSemanticTargets
+import LogicLineages.PermittedControl.CountCongruenceNamedRowGuardedSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_countCongruenceNamedRowGuardedActual :
+    CountCongruenceNamedRow.ActualNamedRowGuarded :=
+  CountCongruenceNamedRow.actualNamedRowGuarded
+
+#print axioms fixed_countCongruenceNamedRowGuardedActual
+
+end LogicLineages.PermittedControl.StatementChecks
