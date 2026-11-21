@@ -1,0 +1,22 @@
+--- a/formalization/LogicLineages/PermittedControl/ClosedOrdinaryFieldActualProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ClosedOrdinaryFieldActualProof.lean
+@@ -41,7 +41,7 @@
+     refine ⟨by simp,fun _ => ⟨fun v => by simp [eq_comm],?_⟩⟩
+     constructor
+     · intro h
+-      contradiction
++      cases Option.some.inj h
+     · intro h
+       exact (h (f^[a] x) rfl).elim
+   | entry a lam mu =>
+--- a/formalization/verification/continuation-2026-11-21/PAPER17-CLOSED-ORDINARY-FIELD-AUTHOR-MANIFEST.json
++++ b/formalization/verification/continuation-2026-11-21/PAPER17-CLOSED-ORDINARY-FIELD-AUTHOR-MANIFEST.json
+@@ -14,7 +14,7 @@
+     "formalization/LogicLineages/PermittedControl/ClosedOrdinaryFieldGuardProof.lean": "39f2e1ed7f03f798e24918948a74e3d196edb07dca82706ecb911d4ec9ddb7c6",
+     "formalization/LogicLineages/PermittedControl/ClosedOrdinaryFieldResultProof.lean": "33134f368632de39f507ca518b63855d385b5224a78357c5ad74172a83807d07",
+     "formalization/LogicLineages/PermittedControl/ClosedOrdinaryFieldEffectiveProof.lean": "1c76fb5001b8a1d77ee37c22bc110ccf7753f3fbf5056e07edc43a3add85d16f",
+-    "formalization/LogicLineages/PermittedControl/ClosedOrdinaryFieldActualProof.lean": "2a139632535a6b20fd5819d35d64e4faec0b5a5e4ed08b54420a8adee325a3d1",
++    "formalization/LogicLineages/PermittedControl/ClosedOrdinaryFieldActualProof.lean": "047e25be6b51ddc35a22715d57c6018eb8493fa8409aca32ce003a0f2e0779fb",
+     "formalization/LogicLineages/PermittedControl/ClosedOrdinaryFieldStatementChecks.lean": "e877c95713963f7d24557ab152c1966c819f464a38f18e2b2d69e3a9223675cb"
+   },
+   "dependency_anchors": {

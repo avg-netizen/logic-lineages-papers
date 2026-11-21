@@ -1,0 +1,38 @@
+module
+public import LogicLineages.PermittedControl.ClosedOrdinaryFieldTargets
+import LogicLineages.PermittedControl.ClosedOrdinaryFieldGuardProof
+import LogicLineages.PermittedControl.ClosedOrdinaryFieldEffectiveProof
+import LogicLineages.PermittedControl.ClosedOrdinaryFieldResultProof
+import LogicLineages.PermittedControl.ClosedOrdinaryFieldActualProof
+
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_closedProperEntryDomainExact : FieldComparison.ClosedProperEntryDomainExact :=
+  FieldComparison.closedProperEntryDomainExact
+
+theorem fixed_closedOrdinaryFieldEffective : FieldComparison.ClosedOrdinaryFieldEffective :=
+  FieldComparison.closedOrdinaryFieldEffective
+
+theorem fixed_closedProperEntryResultExact : FieldComparison.ClosedProperEntryResultExact :=
+  FieldComparison.closedProperEntryResultExact
+
+theorem fixed_closedOrdinaryValueActual : FieldComparison.ClosedOrdinaryValueActual :=
+  FieldComparison.closedOrdinaryValueActual
+
+theorem fixed_closedOrdinaryCountActual : FieldComparison.ClosedOrdinaryCountActual :=
+  FieldComparison.closedOrdinaryCountActual
+
+theorem fixed_fullClosedOrdinaryFieldEvaluation : FieldComparison.FullClosedOrdinaryFieldEvaluation :=
+  ⟨FieldComparison.closedProperEntryDomainExact,FieldComparison.closedOrdinaryFieldEffective,
+    FieldComparison.closedProperEntryResultExact,FieldComparison.closedOrdinaryValueActual,
+    FieldComparison.closedOrdinaryCountActual⟩
+
+#print axioms fixed_closedProperEntryDomainExact
+#print axioms fixed_closedOrdinaryFieldEffective
+#print axioms fixed_closedProperEntryResultExact
+#print axioms fixed_closedOrdinaryValueActual
+#print axioms fixed_closedOrdinaryCountActual
+#print axioms fixed_fullClosedOrdinaryFieldEvaluation
+
+end LogicLineages.PermittedControl.StatementChecks

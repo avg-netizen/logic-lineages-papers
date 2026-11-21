@@ -1,0 +1,16 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseApplicationReinstallResultProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseApplicationReinstallResultProof.lean
+@@ -40,8 +40,11 @@
+     exact Fin.cases ⟨refl c⟩ (Fin.cases ⟨refl e⟩ (Fin.cases aligned (fun u => Fin.elim0 u))) i
+   have old : Nonempty (Derivation body Γ (programGraph addressEmitter (addressTerm c e k) before)) :=
+     addressGraph c e k
+-  have moved := graphInputTransport body α 3 Γ (OrdinaryArithmetic.graphFormula addressEmitter)
+-    (addressTerm c e k) before after input old
++  unfold programGraph at old
++  have moved : Nonempty (Derivation body Γ (programGraph addressEmitter (addressTerm c e k) after)) := by
++    unfold programGraph
++    exact graphInputTransport body α 3 Γ (OrdinaryArithmetic.graphFormula addressEmitter)
++      (addressTerm c e k) before after input old
+   exact valueUnique addressEmitter (addressTerm c e k) (addressTerm c e l) after moved (addressGraph c e l)
+ 
+ /-- The same physical least call, at the same original packed context,
