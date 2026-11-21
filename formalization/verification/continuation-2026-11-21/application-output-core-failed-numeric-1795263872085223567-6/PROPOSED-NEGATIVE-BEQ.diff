@@ -1,0 +1,12 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseApplicationOutputCoreNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseApplicationOutputCoreNumericProof.lean
+@@ -98,6 +98,8 @@
+     by_cases picked : y = packNode 3 [ctx,cod,k]
+     · simp [encodeState,picked]
+     · have opposite : packNode 3 [ctx,cod,k] ≠ y := Ne.symm picked
+-      simp [encodeState,picked,opposite]
++      have notEqualBit : (packNode 3 [ctx,cod,k] == y) = false :=
++        Bool.eq_false_iff.mpr (fun checked => opposite (eq_of_beq checked))
++      simp [encodeState,picked,notEqualBit]
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowInternalSparseApplicationOutputCoreNumericProof

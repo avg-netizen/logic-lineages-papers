@@ -1,0 +1,28 @@
+module
+public import LogicLineages.PermittedControl.HighFieldComparisonTargets
+import LogicLineages.PermittedControl.HighFieldComparisonPrimitiveProof
+import LogicLineages.PermittedControl.HighFieldComparisonCalibrationProof
+import LogicLineages.PermittedControl.HighFieldComparisonActualProof
+
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_highFieldComparisonEffective : FieldComparison.HighFieldComparisonEffective :=
+  FieldComparison.highFieldComparisonEffective
+
+theorem fixed_highFieldComparisonCalibration : FieldComparison.HighFieldComparisonCalibration :=
+  FieldComparison.highFieldComparisonCalibration
+
+theorem fixed_highFieldComparisonActual : FieldComparison.HighFieldComparisonActual :=
+  FieldComparison.highFieldComparisonActual
+
+theorem fixed_fullHighFieldComparison : FieldComparison.FullHighFieldComparison :=
+  ⟨FieldComparison.highFieldComparisonEffective,FieldComparison.highFieldComparisonCalibration,
+    FieldComparison.highFieldComparisonActual⟩
+
+#print axioms fixed_highFieldComparisonEffective
+#print axioms fixed_highFieldComparisonCalibration
+#print axioms fixed_highFieldComparisonActual
+#print axioms fixed_fullHighFieldComparison
+
+end LogicLineages.PermittedControl.StatementChecks

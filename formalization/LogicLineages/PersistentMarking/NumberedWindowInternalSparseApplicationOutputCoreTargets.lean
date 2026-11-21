@@ -9,7 +9,8 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseApplicationOutputCoreTargets
 open FirstOrder Language
 open LogicLineages.OrdinalComparison.TerminationOrdering
-open PositiveArithmeticOperators SourceComputabilityFormulaSupportProof (existsOne)
+open PositiveArithmeticOperators
+open SourceComputabilityFormulaSupportProof (existsOne)
 open ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
 open ID1Completion.InternalGraphComposition (OTerm)
 open ID1Completion.InternalTagArithmeticSyntaxProof (eqn)
