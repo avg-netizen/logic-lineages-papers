@@ -1,0 +1,33 @@
+{
+  "classification": "environment-only external-cache precheck failure before any Lean compilation or receipt",
+  "repair": "official same-pinned Mathlib cache download for exact missing roots, with no proof/checker/toolchain/pin changes",
+  "missing_roots": [
+    "Mathlib.Algebra.Field.ZMod",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Algebra.Polynomial.Degree.Operations",
+    "Mathlib.Data.Matrix.Mul",
+    "Mathlib.Data.Nat.Size",
+    "Mathlib.RingTheory.PowerSeries.Inverse",
+    "Mathlib.Tactic.Linarith"
+  ],
+  "pinned_packages": {
+    "mathlib": "360da6fa66c1273b76b6b2d8c5666fd5ac2e3b56",
+    "plausible": "f3f26cc72646205ca167117487c008ee1dafe816",
+    "LeanSearchClient": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+    "importGraph": "41f407a8e85b0fdc00910633a8f14754139b63f4",
+    "proofwidgets": "e6518a674e62de322b8f79eebeda7bcae2a36bc3",
+    "aesop": "b5b9e2bb45ce91e4bc44eaa738c3a8910404ab82",
+    "Qq": "7a62bd13860cd39ac98da16ffc8c24d601353f69",
+    "batteries": "954dbc9873f3b4534dc9896604593406d0383520",
+    "Cli": "406ebb8c8e2f7e852a1b47764b42494022ce652c"
+  },
+  "lake_manifest_sha256": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+  "lean_toolchain_sha256": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+  "author_manifest_sha256": "78f9cdc9098094cbb62d33722115ee06094a673fede5301e90571454c0f96187",
+  "archive_sha256": {
+    "gate-precheck.log": "afab3a2197eb2fa85380f2b6ec1ccc2632bb9098c927875ec7512962b37f3b3c",
+    "missing-external-imports.txt": "d3b991eb4ae1fcdee0c0a65b5c85503e44c29d1aace15b30f30b9604988c463b",
+    "official-cache-download.log": "c6d4e2b0f5d49f3a2b456f3c2af8762f3bebadfcdce0d5b0bf885f9e8f807c98"
+  },
+  "proof_gate": "source-exact fixed-cap retry started, result pending"
+}
