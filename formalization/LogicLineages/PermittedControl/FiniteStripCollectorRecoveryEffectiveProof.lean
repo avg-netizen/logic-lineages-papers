@@ -1,7 +1,7 @@
 module
 public import LogicLineages.PermittedControl.FiniteStripCollectorRecoveryTargets
 public import LogicLineages.PermittedControl.ClosedOrdinaryFieldEffectiveProof
-public import LogicLineages.OrdinalComparison.ComparisonAssemblyListProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxEvaluationGraphProof
 
 @[expose] public section
 namespace LogicLineages.PermittedControl.FiniteStripCollectorRecovery
@@ -116,7 +116,7 @@ private theorem collectComputable (f : Nat → Nat) (hf : Computable f) :
     appendPrimitive.to_comp.comp
       ((readComputable f hf).comp (Computable.fst.comp Computable.fst)
         (Computable.fst.comp Computable.snd)) (Computable.snd.comp Computable.snd)
-  exact ComparisonAssembly.computable_foldr (default : NamedCode)
+  exact LayeredComparison.BalancedBoxEvaluation.Graph.computable_foldr (default : NamedCode)
     Computable.snd (Computable.const (some (some []))) hs
 
 theorem collectorEffective : CollectorEffective := by

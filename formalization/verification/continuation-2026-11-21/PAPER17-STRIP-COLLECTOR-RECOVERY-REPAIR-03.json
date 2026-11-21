@@ -1,0 +1,108 @@
+{
+  "status": "source-only genuine local import re-cut; no native verdict yet",
+  "archive_receipt": "1795281635446877142-34",
+  "archive": "formalization/verification/continuation-2026-11-21/second-recovery-p17-collector02-resource-stop-1795281635446877142-34/exact-resource-stop.zip",
+  "archive_sha256": "dfb584604927285a3f8cfc998cdb0583e599ee46c26bb63e9c71456b0bac5c9d",
+  "old_source_sha256": "bc54bf6dedde419921146ba5cceb422a0fd36534accc4e378be4361eb9fe60a4",
+  "new_source_sha256": "1d91b870f28b4ee5610c852666b6346ead43366ac0ec8cfd63e8832e576aa9d5",
+  "changed_source": "formalization/LogicLineages/PermittedControl/FiniteStripCollectorRecoveryEffectiveProof.lean",
+  "patch": "formalization/verification/continuation-2026-11-21/PAPER17-STRIP-COLLECTOR-RECOVERY-REPAIR-03.patch",
+  "patch_sha256": "f9b5099e49f128938f1b5d2cb53e4b3eda495454d7cea02b14c2da74419b0fb6",
+  "inverse": {
+    "method": "Reverse only the two exact replacements or reverse the zero-context patch; substitutions verified byte-identical to archived source.",
+    "changes": [
+      {
+        "before": "public import LogicLineages.OrdinalComparison.ComparisonAssemblyListProof",
+        "after": "public import LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxEvaluationGraphProof"
+      },
+      {
+        "before": "ComparisonAssembly.computable_foldr",
+        "after": "LayeredComparison.BalancedBoxEvaluation.Graph.computable_foldr"
+      }
+    ]
+  },
+  "closure_measurement": "Static recursive local import scan using check.py import/comment and local/calculator routing rules. Counts include root module, not external package objects.",
+  "local_import_closure": {
+    "LogicLineages.PermittedControl.FiniteStripCollectorRecoveryStatementChecks": {
+      "before": 682,
+      "after": 299,
+      "removed": 387,
+      "added": 4,
+      "linked_residue_path_before": [
+        "LogicLineages.PermittedControl.FiniteStripCollectorRecoveryStatementChecks",
+        "LogicLineages.PermittedControl.FiniteStripCollectorRecoveryEffectiveProof",
+        "LogicLineages.OrdinalComparison.ComparisonAssemblyListProof",
+        "LogicLineages.OrdinalComparison.ComparisonAssemblyNodeProof",
+        "LogicLineages.OrdinalComparison.RangeRangeNodeProof",
+        "LogicLineages.OrdinalComparison.RangeRangeNodeMixedProof",
+        "LogicLineages.OrdinalComparison.RangeRangeNodeSameKernelProof",
+        "LogicLineages.OrdinalComparison.LimitPairCertificateProof",
+        "LogicLineages.OrdinalComparison.KernelInputProgramProof",
+        "LogicLineages.OrdinalComparison.AdjacentProfileProof",
+        "LogicLineages.OrdinalComparison.SmallKernelsProof",
+        "LogicLineages.OrdinalComparison.LinkedResidueProof"
+      ],
+      "linked_residue_path_after": [],
+      "narrow_fold_path_after": [
+        "LogicLineages.PermittedControl.FiniteStripCollectorRecoveryStatementChecks",
+        "LogicLineages.PermittedControl.FiniteStripCollectorRecoveryEffectiveProof",
+        "LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxEvaluationGraphProof"
+      ]
+    },
+    "LogicLineages.PermittedControl.FiniteStripCollectorRecoveryEffectiveProof": {
+      "before": 632,
+      "after": 249,
+      "removed": 387,
+      "added": 4,
+      "linked_residue_path_before": [
+        "LogicLineages.PermittedControl.FiniteStripCollectorRecoveryEffectiveProof",
+        "LogicLineages.OrdinalComparison.ComparisonAssemblyListProof",
+        "LogicLineages.OrdinalComparison.ComparisonAssemblyNodeProof",
+        "LogicLineages.OrdinalComparison.RangeRangeNodeProof",
+        "LogicLineages.OrdinalComparison.RangeRangeNodeMixedProof",
+        "LogicLineages.OrdinalComparison.RangeRangeNodeSameKernelProof",
+        "LogicLineages.OrdinalComparison.LimitPairCertificateProof",
+        "LogicLineages.OrdinalComparison.KernelInputProgramProof",
+        "LogicLineages.OrdinalComparison.AdjacentProfileProof",
+        "LogicLineages.OrdinalComparison.SmallKernelsProof",
+        "LogicLineages.OrdinalComparison.LinkedResidueProof"
+      ],
+      "linked_residue_path_after": [],
+      "narrow_fold_path_after": [
+        "LogicLineages.PermittedControl.FiniteStripCollectorRecoveryEffectiveProof",
+        "LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxEvaluationGraphProof"
+      ]
+    },
+    "direct_fold_supplier": {
+      "before": 508,
+      "after": 4,
+      "narrow_closure_exact": [
+        "LogicLineages.OrdinalComparison.LayeredComparison.BalancedBoxEvaluationGraphProof",
+        "LogicLineages.OrdinalComparison.LayeredComparison.FiniteGraphCorrectnessProof",
+        "LogicLineages.OrdinalComparison.LayeredComparison.FiniteGraphDefinitions",
+        "LogicLineages.OrdinalComparison.LayeredComparison.FiniteGraphTargets"
+      ],
+      "linked_residue_path_before": [
+        "LogicLineages.OrdinalComparison.ComparisonAssemblyListProof",
+        "LogicLineages.OrdinalComparison.ComparisonAssemblyNodeProof",
+        "LogicLineages.OrdinalComparison.RangeRangeNodeProof",
+        "LogicLineages.OrdinalComparison.RangeRangeNodeMixedProof",
+        "LogicLineages.OrdinalComparison.RangeRangeNodeSameKernelProof",
+        "LogicLineages.OrdinalComparison.LimitPairCertificateProof",
+        "LogicLineages.OrdinalComparison.KernelInputProgramProof",
+        "LogicLineages.OrdinalComparison.AdjacentProfileProof",
+        "LogicLineages.OrdinalComparison.SmallKernelsProof",
+        "LogicLineages.OrdinalComparison.LinkedResidueProof"
+      ]
+    }
+  },
+  "identical_supplier_statement": "theorem computable_foldr {\u03b1 \u03b2 \u03c3 : Type} [Primcodable \u03b1] [Primcodable \u03b2] [Primcodable \u03c3]\n    (default : \u03b2) {f : \u03b1 \u2192 List \u03b2} {g : \u03b1 \u2192 \u03c3} {h : \u03b1 \u2192 \u03b2 \u00d7 \u03c3 \u2192 \u03c3}\n    (hf : Computable f) (hg : Computable g) (hh : Computable\u2082 h) :\n    Computable (fun a => (f a).foldr (fun item state => h a (item,state)) (g a))",
+  "unchanged_archive_source_pins": {
+    "formalization/LogicLineages/PermittedControl/FiniteStripCollectorRecoveryHitProof.lean": "8bff39b00487f15c121c08b0e5bf9f13abbeb788f92a9788c090b0058a969f6e",
+    "formalization/LogicLineages/PermittedControl/FiniteStripCollectorRecoveryReadProof.lean": "94561b0b7111c03be2d2ef52b01dcc65799eb68c0d0d3314700239bb1e0921ed",
+    "formalization/LogicLineages/PermittedControl/FiniteStripCollectorRecoveryStatementChecks.lean": "284e3c12c9d2fd1f4d47eac2cce6c4e1f6e0e16038f6941a1718ffb584f553aa",
+    "formalization/LogicLineages/PermittedControl/FiniteStripCollectorRecoveryTargets.lean": "25652e71df98e01714b1ab84faab136e199f28ec33b31f50959256dd977885be",
+    "formalization/LogicLineages/OrdinalComparison/LinkedResidueProof.lean": "1d6e832094a3dbb53b943686062226af7ebaf501daf649e2ddc5b57734ca24fd"
+  },
+  "scope": "Only public import and qualified computable_foldr invocation changed. No target, definition, proof logic, or other packet edited; no Lean/Git."
+}
