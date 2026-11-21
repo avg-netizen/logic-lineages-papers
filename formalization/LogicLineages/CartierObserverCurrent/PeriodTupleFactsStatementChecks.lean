@@ -1,7 +1,11 @@
 module
-public import LogicLineages.CartierObserverCurrent.PeriodTupleExactProof
+public import LogicLineages.CartierObserverCurrent.PeriodTupleFactsTargets
+import LogicLineages.CartierObserverCurrent.PeriodTupleExistenceProof
+import LogicLineages.CartierObserverCurrent.PeriodTupleUpperProof
+import LogicLineages.CartierObserverCurrent.PeriodTupleSmallProof
+import LogicLineages.CartierObserverCurrent.PeriodTupleExactProof
 public meta import LogicLineages.Audit
-@[expose] public section
+public section
 namespace LogicLineages.CartierObserverCurrent.PeriodTupleFacts.StatementChecks
 theorem fixed_rootExists : Targets.RootExists := rootExists
 theorem fixed_actualIterate : Targets.ActualIterate := actualIterate

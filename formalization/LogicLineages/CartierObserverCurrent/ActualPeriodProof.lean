@@ -1,43 +1,64 @@
 module
 public import LogicLineages.CartierObserverCurrent.ActualPeriodTargets
-public import LogicLineages.CartierObserverCurrent.PeriodLaurentBridgeStatementChecks
-public import LogicLineages.OrdinalComparison.ResidueTupleProof
+import LogicLineages.CartierObserverCurrent.PeriodStateTupleProof
+import LogicLineages.CartierObserverCurrent.PeriodTupleExactProof
+import LogicLineages.OrdinalComparison.Control
 public meta import LogicLineages.Audit
 
-@[expose] public section
+public section
 namespace LogicLineages.CartierObserverCurrent.ActualPeriod
 open LogicLineages.OrdinalComparison
 
+/-- The printed half exponent is the linked one, by unfolding names only. -/
+theorem halfExponentPrinted (u : Nat) :
+    actualLinkedHalfExponent u = Nat.log 2 (Phi u) - 1 := by
+  rw [actualLinkedHalfExponent.eq_1, actualLinkedBinaryExponent.eq_1, actualLinkedBudget.eq_1]
+
+theorem linkedSourceBound (v : Nat) (hv : 4 ≤ v) : 5 ≤ Phi v := by
+  have := self_lt_Phi v
+  omega
+
+theorem linkedExactPeriod (v : Nat) (hv : 4 ≤ v) :
+    Function.minimalPeriod (actualResidueTupleFrobenius (Phi v)) (actualResidueTuple (Phi v)) =
+      2 * (Nat.log 2 (Phi (Phi v)) - 1) := by
+  rw [← halfExponentPrinted (Phi v)]
+  exact PeriodTupleFacts.actualExact (Phi v) (linkedSourceBound v hv)
+
 theorem exactTuplePeriod : Targets.ExactTuplePeriod := by
   intro v hv
-  have hu : 5 ≤ Phi v := by have := self_lt_Phi v; omega
-  exact actualResidueTupleExactPeriod (Phi v) hu
+  exact linkedExactPeriod v hv
+
+/-- Coincidence divisibility at the literal printed parameters, without
+the target's local abbreviations. -/
+theorem coincidenceDivides (v : Nat) (hv : 4 ≤ v) (j p : Nat)
+    (hstates :
+      (actualDifferentialCartier (K := ActualResidueField))^[j + p]
+          (actualLinkedDifferential (Phi v)) =
+        (actualDifferentialCartier (K := ActualResidueField))^[j]
+          (actualLinkedDifferential (Phi v))) :
+    2 * (Nat.log 2 (Phi (Phi v)) - 1) ∣ p := by
+  have hper := PeriodStateTuple.statePeriodic (Phi v) (linkedSourceBound v hv) j p hstates
+  have hdvd := hper.minimalPeriod_dvd
+  rw [linkedExactPeriod v hv] at hdvd
+  exact hdvd
+
+theorem eventualDivides (v : Nat) (hv : 4 ≤ v) (p : Nat)
+    (hp : ∃ j : Nat, ∀ k : Nat,
+      (actualDifferentialCartier (K := ActualResidueField))^[j + k + p]
+          (actualLinkedDifferential (Phi v)) =
+        (actualDifferentialCartier (K := ActualResidueField))^[j + k]
+          (actualLinkedDifferential (Phi v))) :
+    2 * (Nat.log 2 (Phi (Phi v)) - 1) ∣ p := by
+  obtain ⟨j, hj⟩ := hp
+  exact coincidenceDivides v hv j p (by simpa only [Nat.add_zero] using hj 0)
 
 theorem actualStateCoincidence : Targets.ActualStateCoincidence := by
-  intro v hv j p hstates
-  let u := Phi v
-  have hu : 5 ≤ u := by have := self_lt_Phi v; dsimp [u]; omega
-  have hper : Function.IsPeriodicPt (actualResidueTupleFrobenius u) p (actualResidueTuple u) := by
-    funext z
-    rw [actualResidueTupleIterate]
-    have h := congrArg (fun f : RatFunc ActualResidueField =>
-      (actualTranslatedRationalEmbedding z.val f).coeff (-1)) hstates
-    rw [PeriodLaurentBridge.StatementChecks.fixed_iteratedResidue,
-      PeriodLaurentBridge.StatementChecks.fixed_iteratedResidue,
-      PeriodLaurentBridge.StatementChecks.fixed_initialResidue u hu z,
-      iterateFrobeniusEquiv_symm_add_apply] at h
-    have hp := (iterateFrobeniusEquiv ActualResidueField 2 j).symm.injective h
-    have hforward := congrArg (iterateFrobeniusEquiv ActualResidueField 2 p) hp
-    simp only [RingEquiv.apply_symm_apply, iterateFrobeniusEquiv_def] at hforward
-    exact hforward.symm
-  rw [← actualResidueTupleExactPeriod u hu]
-  exact hper.minimalPeriod_dvd
+  intro v hv
+  exact coincidenceDivides v hv
 
 theorem eventualPeriodDivisibility : Targets.EventualPeriodDivisibility := by
-  intro v hv p hp
-  obtain ⟨j, hj⟩ := hp
-  apply actualStateCoincidence v hv j p
-  simpa only [Nat.add_zero] using hj 0
+  intro v hv
+  exact eventualDivides v hv
 
 theorem completeActualPeriod : Targets.CompleteActualPeriod :=
   ⟨exactTuplePeriod, actualStateCoincidence, eventualPeriodDivisibility⟩

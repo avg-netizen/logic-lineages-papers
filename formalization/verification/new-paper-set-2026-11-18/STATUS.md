@@ -1,6 +1,6 @@
 # Current comparison formalization status
 
-The new-paper register has **150 checked and 17 pending out of 167**. Historical register:
+The new-paper register has **156 checked and 11 pending out of 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
@@ -626,3 +626,96 @@ false; the clause holds at fixed points (packet398). The numbered lemma stays
 pending until the source states its intended family. Paper18's complete
 whole-block projector is checked supporting packet393 after a fresh local
 718-module gate.
+
+### Exact actual residue-tuple period (699)
+
+Current20 `thm:actual-period` is checked after a fresh local 79-module gate and independent final review
+(21 November). The frozen three-conjunct target and its 14 pins are unchanged since the 18 November
+pre-scope review. The parked resource stops were import footprint, not proof search: a new elementary
+primitive-root lemma replaces the cyclotomic Mathlib instance and the proof modules now import their
+suppliers privately; no target, definition, legacy module, checker or cap changed. Paper 20 stands at
+**24 checked of 25**; `thm:main` remains pending and is not implied by this acceptance. The paragraph above
+that calls the period route parked is historical.
+[Record](accepted/699-actual-period.json) · [Final review](paper20/ACTUAL-PERIOD-FINAL-REVIEW.md) ·
+[Resolution note](paper20/ACTUAL-PERIOD-RESOLUTION-2026-11-21.md)
+
+### Exact inverse-threshold table (700)
+
+Current17 `prop:threshold` is checked after a fresh local 290-module gate (21 November). The frozen
+four-conjunct target `FullThreshold` and its six pins are unchanged since the 18 November pre-scope
+review. The parked Guard stop was elaboration, not import footprint: `omega` was comparing actual
+ordinal-norm terms as atoms. The norm guard now goes through a pure natural-number lemma, and three small
+tactic repairs were needed in the never-before-compiled consumer proofs; no target, definition, checker
+or cap changed. No independent final review was run, on the owner's stated instruction that compilation
+with unchanged targets suffices; the record says so. Paper 17 stands at **27 checked of 33**; `thm:main`,
+`thm:arithmetic`, `thm:ground` and the three arithmetic lemmas remain pending and are not implied by this
+acceptance. Earlier paragraphs that call the threshold route parked are historical.
+[Record](accepted/700-threshold.json) · [Resolution note](paper17/THRESHOLD-RESOLUTION-2026-11-21.md) ·
+[Pre-scope review](paper17/THRESHOLD-PRE-SCOPE-REVIEW.md)
+
+### Paper 20 main theorem (701)
+
+Current20 `thm:main` is checked after a fresh local 324-module gate (21 November). Its target
+`MainTheorem.Targets.CompleteMain` is new: the four printed items as the conjunction of the accepted
+comparators of the statements the paper itself names as their proofs (`thm:transfer`; `lem:matrix`,
+`thm:observer`, `lem:observable`; `lem:binary-transient`, `thm:residue-observer`; `lem:entry`,
+`prop:omega-block`, equation (δ), `thm:actual-period`), plus the observability clause at the actual source
+denominator and one new proved statement, `LinkedFirstBlock`, which places the first ω^ω block and its
+parity inside the actual descent from ω^(ω+1)+(v−4). The target was frozen before proof and is unchanged.
+**Its correspondence with the printed theorem has not been independently reviewed**; the argument is in the
+source map. Paper 20 is now **25 checked of 25**.
+[Record](accepted/701-main-theorem-paper20.json) · [Source map](paper20/MAIN-THEOREM-SOURCE-MAP.md) ·
+[Freeze](paper20/MAIN-THEOREM-FREEZE.json)
+
+### Finite inner normalization (702)
+
+Current17 `lem:inner-termination` is checked after a fresh local three-module gate (21 November). Its
+target `InnerTerminationTargets.FullInnerTermination` is new and self-contained: rows are finitely
+supported integer coefficients on ordinary fields and on count fields (label, input rank); 𝓜 and 𝓥 are the
+printed charge and occurrence count; one zero-class replacement removes a class with `2b + Σaᵢ = 0`, turns
+ended prefixes into constants, merges the prefixes at the surviving input into one field and transfers each
+higher prefix to at most two fields at that input. The theorem is the printed one: neither 𝓜 nor 𝓥
+increases and 𝓜+𝓥 strictly decreases. Labels are abstract and nothing evaluates a field, so this is the
+charge lemma only; exactness of the replacement for the actual counts is `lem:count-transfer`, still
+pending. The target was frozen before proof and is unchanged. **Its correspondence with the printed lemma
+has not been independently reviewed**, and it is Claude-authored rather than a Codex-owned comparator; the
+argument is in the source map. Paper 17 stands at **28 checked of 33**.
+[Record](accepted/702-inner-termination.json) · [Source map](paper17/INNER-TERMINATION-SOURCE-MAP.md) ·
+[Freeze](paper17/INNER-TERMINATION-FREEZE.json)
+
+### Exact cancellation and transfer (703)
+
+Current17 `lem:count-transfer` is checked after a fresh local 266-module gate (21 November). Its target
+`Targets.FullCountTransfer` is new and is stated on the actual descent, for both selected controls:
+equation (count-core) for every long proper interval, with the identity prefix as the case λ = μ + ω²; the
+exact zero-class replacement for any finite class with `2b + Σaᵢ = 0`; merging of equal-input prefixes with
+equal entry norms; the gap order forced by equal entry norms at distinct inputs; and the rank transfer
+`τ_{Q'}(x) = τ_H(x) + τ_{P'}(y)` with `y = E_H(x)` on the effective inverse-table tail. The exact count
+formula was previously available only inside the long-entry residue proof; it is now a statement. Suppliers
+are the accepted entry orbit, affordable cocycle, gap-input comparison, inverse table and certificate
+range. The target was frozen before proof and is unchanged. **Its correspondence with the printed lemma has
+not been independently reviewed**, and it is Claude-authored; the argument is in the source map. The
+iteration of transfers over a class is not restated, and record 702's abstract replacement is not formally
+linked to these identities. Paper 17 stands at **29 checked of 33**; `thm:arithmetic`, `lem:field-comparison`,
+`thm:ground` and `thm:main` remain pending.
+[Record](accepted/703-count-transfer.json) · [Source map](paper17/COUNT-TRANSFER-SOURCE-MAP.md) ·
+[Freeze](paper17/COUNT-TRANSFER-FREEZE.json)
+
+### Comparison preserving input order (704)
+
+Current17 `lem:field-comparison` is checked after a fresh local 278-module gate (21 November). Its target
+`FieldComparison.FullFieldComparison` is new. Fields are `iterate a` (f^a(u)) and `entry a λ μ`
+(f^a(E_{λ,μ}(u))) on normal-form notations, with actual first-entry values. Two explicit computable
+normalizers give the form of a comparison: on the branch x < y either a fixed answer or one accepted
+inverse-table row comparing y with a proper parameter field read at x; on the identified branch always a
+fixed answer. Both are proved correct for both selected controls beyond a tail depending only on the two
+fields, by cancelling common iterates, peeling the remainder off the opposite entry through the endpoint
+μ + ω·c (a new exact statement, from the cocycle and the short-entry count), and then applying gap-input,
+the inverse table or the equal-gap certificate. Limits, all recorded: entry fields must carry long
+intervals (short entries are bare iterates by a separate clause, but the classification is not a program);
+the tail is existential; the normalizer has no `Primrec` theorem on raw codes. The target was frozen
+before proof and is unchanged. **Its correspondence with the printed lemma has not been independently
+reviewed**, it is Claude-authored, and it contains more modelling choices than 702 and 703. Paper 17
+stands at **30 checked of 33**; `thm:arithmetic`, `thm:ground` and `thm:main` remain pending.
+[Record](accepted/704-field-comparison.json) · [Source map](paper17/FIELD-COMPARISON-SOURCE-MAP.md) ·
+[Freeze](paper17/FIELD-COMPARISON-FREEZE.json)

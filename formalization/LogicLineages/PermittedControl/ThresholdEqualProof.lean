@@ -48,7 +48,7 @@ open OrdinalComparison
       have he : y=x := by omega
       subst y
       obtain ⟨i,j,hi,hj,hs0,hs1,hs2⟩ := equalGapSourceTail mp mq (lp-mp) hp.2.1 hq.2.1 hdp.1 f B hf x (by omega)
-      rw [hdp.2,hdq.2] at hi hj hs0 hs1 hs2
+      simp only [hdp.2,hdq.2] at hi hj hs0 hs1 hs2
       have ei := firstEntry_unique f _ _ i ip hi hP
       have ej := firstEntry_unique f _ _ j iq hj hQ
       have hr := equalGapCertificateEffective.2.2 (rawNoteEncode mp.1) (rawNoteEncode mq.1) (rawNoteEncode (lp-mp).1)

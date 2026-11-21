@@ -1,0 +1,93 @@
+{
+  "gates": [
+    "LogicLineages.PermittedControl.InnerTerminationStatementChecks"
+  ],
+  "status": "verified",
+  "native_source_matched_modules": 3,
+  "errors": [],
+  "new_named_standard_axioms": {
+    "LogicLineages.PermittedControl.StatementChecks.fixed_fullInnerTermination": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "compiler_context": {
+    "compiler": "/home/other/.elan/bin/lean",
+    "compiler_sha256": "840179e70803ef373c2ec53342d6a45ea7d022533e4145489fc1278b4f716385",
+    "lean_path": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization:/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/04-pure-r1-calculator/lean/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    "pins": {
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/lake-manifest.json": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/lakefile.toml": "c05684bc8b1905ebc2f1ccaa33f57fd5cb769350165dbd9614c18be7a63227a5",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/lakefile.lean": null,
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/04-pure-r1-calculator/lean/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/04-pure-r1-calculator/lean/lake-manifest.json": "28ee3c8d1f319b5da6b53636261d9f8a3048b057f6e1739824feefbc38968672",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/04-pure-r1-calculator/lean/lakefile.toml": "a5ae5498a1a8d2920079ce4e652af4b39c41d87b49a2ec3f80e50f27f348a697",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/04-pure-r1-calculator/lean/lakefile.lean": null
+    },
+    "external_objects": {
+      "Mathlib.Algebra.Order.BigOperators.Group.Finset": {
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/BigOperators/Group/Finset.olean": "12523280755aac0d886210fc03451d82bd72a51443087a4c95a19b0eacb0dc50",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/BigOperators/Group/Finset.olean.private": "c5daf919bf10cac3ce566fa486da5f65be488c2b4e60c9dccd75188685053ee3",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/BigOperators/Group/Finset.olean.server": "24a9bcd29a4c3a93c66c7b58f1def41141b24cdc8ab5adadc27a1e777eb33f07",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/BigOperators/Group/Finset.ir": "7d879f20d3bcdd92c8615dbd8a8ea4cd4336d7a40644c1dda13a41fccda026e5"
+      },
+      "Mathlib.Data.Finsupp.Basic": {
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Finsupp/Basic.olean": "bbc95a85de8e3d6226413ddd73595a6795e5c4ca39f26fd7e2e6565fe39bb682",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Finsupp/Basic.olean.private": "35241600280028b7a9f0722e2f227d603074ef5bc78e7fb6fed320926a444791",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Finsupp/Basic.olean.server": "953cd1fd63d7652ff2d42110d23961b0b073421acdbb919104da70ea5b01764d",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Finsupp/Basic.ir": "338f6783fdfff948961aa23cfff89b8dd37ccd372c8ecff6beeb18aec34c7205"
+      }
+    },
+    "selected_compiler": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550"
+  },
+  "modules": {
+    "LogicLineages.PermittedControl.InnerTerminationTargets": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/InnerTerminationTargets.lean",
+      "source_sha256": "24751b323a21bd8ab71d9923ba7f318ef94dfd358dc3f9beee0506d6e3d1fe71",
+      "input_key": "7026a1f7fe93554a94980b3a7c789e238c8a02aa4e1f118da780d51bec391be4",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PermittedControl/InnerTerminationTargets.ir": "5ebeef5758419acf309d980cb743a10ae3fa7f6cabc31ad40e691db201d0becd",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PermittedControl/InnerTerminationTargets.olean": "8ee3c6d6a5356d5979597ae3cbf9ab1d0f1b0566f0d2d2400668a05a12916448",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PermittedControl/InnerTerminationTargets.olean.private": "72fb54bb082a50257b08e0dbff3bef1da7dd2f58fb0fc40a3d6c39c1a6ed971f",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PermittedControl/InnerTerminationTargets.olean.server": "9a1635404a5999d00eb4714da9d7f6ff2ff6eba092aeb4226d30f58339fe29f8"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1795237899496991921-2722828.json",
+      "receipt_sha256": "7a667b01f53f5cdae6c28e230dcf939063d611fb0fc6aa1ae7c5518cf7c91afc",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1795237899496991921-2722828-LogicLineages-PermittedControl-InnerTerminationTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PermittedControl.InnerTerminationProof": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/InnerTerminationProof.lean",
+      "source_sha256": "0a14c224d88fdfec8d1f5174db02163a8260aa807994aeb35f6b0578eac20670",
+      "input_key": "0d9b7238f550423118109508bd71d3dbe4989fbd45449264f3db1ee0e227064e",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PermittedControl/InnerTerminationProof.ir": "cba90096a2daabf9a189a4f81798b6e3fc64be134d14b3c2fb01d8934a4a1f58",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PermittedControl/InnerTerminationProof.olean": "98df98fe50778bab0b489ba3ee3ddddb8f3aef7e985939f43987b8d434c3c66d",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PermittedControl/InnerTerminationProof.olean.private": "52e9e700adbd7fbe77fc923fb200770bd8a63eee293e8e45f9c86db3682cc020",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PermittedControl/InnerTerminationProof.olean.server": "158b78fb6d60db87f63f73f82dff2e4c88241333e7436cad3b71f5b76c9cd8d3"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1795237963737260817-2722986.json",
+      "receipt_sha256": "837f67e1f58ffeec55248c1dc3f46db4b6ad3786e09165030b9abc26a1b110f5",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1795237963737260817-2722986-LogicLineages-PermittedControl-InnerTerminationProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PermittedControl.InnerTerminationStatementChecks": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/InnerTerminationStatementChecks.lean",
+      "source_sha256": "197c638fd631c8375e9c31d08df13a01001a5e8d28e7ba873260a41c97b9beb4",
+      "input_key": "964b10d217898e0639f45362ede1f7dae0ed12e28988a9b571053d1484ef398a",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PermittedControl/InnerTerminationStatementChecks.ir": "c72dbc7f113a242e63536834bc4178b1d39a442af427b2a39aaf6e84637649dd",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PermittedControl/InnerTerminationStatementChecks.olean": "19df6632ac283503721ce58315cba716f7f957932ea873b62110e5008f8add39",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PermittedControl/InnerTerminationStatementChecks.olean.private": "0ab05fb9cb0e3647393d6c32149029da6b5b17bba3ef785caa0d30ed65d89f37",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PermittedControl/InnerTerminationStatementChecks.olean.server": "28c10e0e70ab6b7ffe569d8be8f232506158b6f00b6e956837f87a8ca5935dd0"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1795237985721802859-2723078.json",
+      "receipt_sha256": "144468cd3e5936ee9245d16b5d7cca7dec183c957428da5383f772be5bbe3776",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1795237985721802859-2723078-LogicLineages-PermittedControl-InnerTerminationStatementChecks.log",
+      "log_sha256": "371fd4159cc3a0d141e3ad48e321bb8352b6723b40a36136db9e5f9e9fbd5b6c"
+    }
+  },
+  "limits": "Focused closure only. Does not certify paper correspondence or a full-root build. Imported axioms are certified through actual new named declaration closures."
+}

@@ -1,20 +1,21 @@
 module
 public import LogicLineages.CartierObserverCurrent.PeriodTupleFactsTargets
-public import LogicLineages.OrdinalComparison.LinkedResidueProof
-public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
+import LogicLineages.CartierObserverCurrent.PeriodOddRootProof
+import LogicLineages.OrdinalComparison.LinkedResidueProof
 public meta import LogicLineages.Audit
-@[expose] public section
+public section
 namespace LogicLineages.CartierObserverCurrent.PeriodTupleFacts
 open LogicLineages.OrdinalComparison
 
+theorem actualModulusOdd (u : Nat) (hu : 5 ≤ u) : Odd (actualLinkedModulus u) := by
+  have hr : 96 ≤ actualLinkedHalfExponent u := (actualLinkedResidueArithmetic u (by omega)).1
+  have hne : actualLinkedHalfExponent u ≠ 0 := by omega
+  rw [actualLinkedModulus.eq_1]
+  exact Even.add_one (Nat.even_pow.mpr ⟨even_two, hne⟩)
+
 theorem rootExists : Targets.RootExists := by
   intro u hu
-  have hr := (actualLinkedResidueArithmetic u (by omega)).1
-  have hc : (actualLinkedModulus u : ZMod 2) = 1 := by
-    norm_num [actualLinkedModulus, Nat.cast_add, Nat.cast_pow,
-      show actualLinkedHalfExponent u ≠ 0 by omega] <;> decide
-  letI : NeZero (actualLinkedModulus u : ZMod 2) := ⟨by rw [hc]; exact one_ne_zero⟩
-  obtain ⟨z, hz⟩ := HasEnoughRootsOfUnity.exists_primitiveRoot ActualResidueField (actualLinkedModulus u)
+  obtain ⟨z, hz⟩ := PeriodOddRoot.oddPrimitiveRoot (actualLinkedModulus u) (actualModulusOdd u hu)
   exact ⟨⟨z, hz⟩⟩
 
 theorem actualIterate : Targets.ActualIterate := by

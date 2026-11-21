@@ -579,8 +579,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/arithmetic.tex",
           "line": 67,
           "statement_latex": "[Comparison preserving input order]\\label{lem:field-comparison}\nOn each fixed order of the raw coordinates, every comparison of ordinary\nvalue fields has an effective finite Boolean form in which the greatest\nraw coordinate occurs only linearly. Nonlinear parameters in that form\nare fields on strictly smaller coordinates.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.FieldComparison.FullFieldComparison",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullFieldComparison",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/704-field-comparison.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:lem:count-transfer",
@@ -589,8 +592,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/arithmetic.tex",
           "line": 124,
           "statement_latex": "[Exact cancellation and transfer]\\label{lem:count-transfer}\nA class with zero combined leading coefficient can be replaced exactly by\nits prefix counts and constants. Equal-input prefixes merge. Prefixes on\ndistinct inputs can be transferred to smaller input ranks whenever their\ncores coincide.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.Targets.FullCountTransfer",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullCountTransfer",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/703-count-transfer.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:lem:inner-termination",
@@ -599,8 +605,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/arithmetic.tex",
           "line": 178,
           "statement_latex": "[Finite inner normalization]\\label{lem:inner-termination}\nEvery exact zero-class replacement strictly decreases\n\\(\\mathcal M+\\mathcal V\\), and neither summand increases.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.InnerTerminationTargets.FullInnerTermination",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullInnerTermination",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/702-inner-termination.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:thm:ground",
@@ -723,8 +732,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/entries.tex",
           "line": 301,
           "statement_latex": "[Exact inverse-threshold table]\\label{prop:threshold}\nGiven proper intervals \\(P,Q\\), comparisons of \\(E_P(x)\\) and\n\\(E_Q(y)\\) have effective finite descriptions using comparisons of raw\ninputs with fixed entry maps on the other input. Equality cases are\ndecided by the same description.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.Targets.FullThreshold",
+          "verified_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullThreshold",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/700-threshold.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:lem:norm-arithmetic",
@@ -2025,8 +2037,11 @@
           "file": "20-controlled-descents-and-cartier-observers/paper.tex",
           "line": 85,
           "statement_latex": "[Main results]\\label{thm:main}\nThe constructions below have the following properties.\n\\begin{enumerate}\n\\item Let $d,m\\ge1$, let $p_d(n)$ count partitions of $n$ with parts at most $d$, and\nput $Q_d=d!m^{d-1}$. A complete deletion of one $\\omega^d$ suffix\nwith retained mass $c\\ge0$ and initial total norm at least $c+d+1$\nhas event count congruent to $p_d(S-c)$ modulo\n$m$, whenever every operational budget is at least the current norm\nand is congruent to $S\\ge c$ modulo $Q_d$.\n\\item For each fixed $d$, the binary coefficients of\n$\\prod_{i=1}^d(1+z^i)^{-1}$ are computed exactly by two explicit\nlinear maps on a space of dimension $d(d+1)/2$ over $\\Ftwo$.\nDistinct numerator states have distinguishing continuations of length\nat most $\\lceil\\log_2(d(d+1)/2)\\rceil$.\n\\item After an explicit finite transient, the complete residue profile\nis closed under both binary selectors. At a pole $\\zeta$ its two\nupdates are $b_\\zeta\\mapsto b_\\zeta^{1/2}$ and\n$b_\\zeta\\mapsto(\\zeta b_\\zeta)^{1/2}$; the scalar output is\n$\\sum_\\zeta b_\\zeta/\\zeta$.\n\\item For every $v\\ge4$, the descent from\n$\\omega^{\\omega+1}+(v-4)$ has an explicit first\n$\\omega^\\omega$-block parity. On its linked partition parameters,\na primitive-root residue tuple has exact period\n$2(\\log_2 B-1)$, where $B=G(G(v))$.\nEvery eventual period of the complete differential Cartier state\nis divisible by this number.\n\\end{enumerate}",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.MainTheorem.Targets.CompleteMain",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.MainTheorem.StatementChecks.fixed_completeMain",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/701-main-theorem-paper20.json"
         },
         {
           "id": "20-controlled-descents-and-cartier-observers:prop:omega-block",
@@ -2334,14 +2349,17 @@
           "file": "20-controlled-descents-and-cartier-observers/sections/period.tex",
           "line": 63,
           "statement_latex": "[Exact actual residue-tuple period]\\label{thm:actual-period}\nThe tuple $(b_\\zeta)_{\\zeta\\ {\\rm primitive}\\ q}$ has exact\nFrobenius period $2r$. Every eventual period of the complete\nrational differential Cartier orbit of $\\omega_e$ is divisible\nby $2r=2(\\log_2 B-1)$.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.CartierObserverCurrent.ActualPeriod.Targets.CompleteActualPeriod",
+          "verified_alias": "LogicLineages.CartierObserverCurrent.ActualPeriod.StatementChecks.fixed_completeActualPeriod",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/699-actual-period.json"
         }
       ]
     }
   ],
   "status_counts": {
-    "pending": 17,
-    "checked": 150
+    "pending": 11,
+    "checked": 156
   }
 }

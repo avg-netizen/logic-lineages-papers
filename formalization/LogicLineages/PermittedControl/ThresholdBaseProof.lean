@@ -27,7 +27,7 @@ open OrdinalComparison
         rw [hc]
         simp only [show ¬(2:Nat)=1 by omega,show ¬(2:Nat)=0 by omega,↓reduceIte]
         rw [ordinal_sub_note_code]
-        apply Part.mem_map_iff.mpr
+        apply (Part.mem_map_iff _).mpr
         refine ⟨(h,k),hMem,?_⟩
         exact (congrArg reverseComparisonCode hv).trans (reverseComparisonCode_correct F E)
       · unfold Targets.ActualThresholdDescription
@@ -43,7 +43,7 @@ open OrdinalComparison
       · simp only [thresholdProgram,intervalPairCodes]
         rw [hc]
         simp only [↓reduceIte,Part.mem_some_iff]
-        exact hval.symm
+        exact hval
       · unfold Targets.ActualThresholdDescription
         have ha : lp.1.repr-mp.1.repr=lq.1.repr-mq.1.repr := by simpa only [note_sub_repr] using heq
         exact ⟨fun _ => hval,fun h => False.elim (ha.symm.not_lt h),fun h => False.elim (ha.not_lt h)⟩
@@ -57,7 +57,7 @@ open OrdinalComparison
         rw [hc]
         simp only [show ¬(0:Nat)=1 by omega,↓reduceIte]
         rw [ordinal_sub_note_code]
-        exact Part.mem_map_iff.mpr ⟨(h,k),hMem,hv⟩
+        exact (Part.mem_map_iff _).mpr ⟨(h,k),hMem,hv⟩
       · unfold Targets.ActualThresholdDescription
         rw [ordinal_sub_note_code,ordinal_sub_note_code]
         have ha : lq.1.repr-mq.1.repr<lp.1.repr-mp.1.repr := by simpa only [note_sub_repr] using hgt

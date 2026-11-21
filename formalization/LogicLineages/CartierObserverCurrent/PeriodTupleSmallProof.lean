@@ -1,8 +1,9 @@
 module
-public import LogicLineages.CartierObserverCurrent.PeriodTupleExistenceProof
-public import LogicLineages.OrdinalComparison.ResidueRootCountProof
+public import LogicLineages.CartierObserverCurrent.PeriodTupleFactsTargets
+import LogicLineages.CartierObserverCurrent.PeriodTupleExistenceProof
+import LogicLineages.OrdinalComparison.ResidueRootCountProof
 public meta import LogicLineages.Audit
-@[expose] public section
+public section
 namespace LogicLineages.CartierObserverCurrent.PeriodTupleFacts
 open LogicLineages.OrdinalComparison
 

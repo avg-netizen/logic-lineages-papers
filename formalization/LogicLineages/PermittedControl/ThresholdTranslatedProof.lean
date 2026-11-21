@@ -47,7 +47,7 @@ open OrdinalComparison
   have hmem : integerComparison ((E:Int)+signedOffsetValue s.2.1) ((F:Int)+signedOffsetValue s.2.2) ∈
       translatedThresholdProgram f ((intervalPairCodes lp mp lq mq,s),(x,y)) := by
     unfold translatedThresholdProgram
-    apply Part.mem_map_iff.mpr
+    apply (Part.mem_map_iff _).mpr
     exact ⟨numericalComparison E F,(hval _).mpr rfl,hcode⟩
   dsimp only
   simp only [← signedTranslateCode_correct]

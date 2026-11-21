@@ -1,0 +1,32 @@
+{
+  "id": "new-set-704",
+  "statement": "17-permitted-control-canonical-comparison:lem:field-comparison",
+  "kind": "current numbered statement",
+  "target": "LogicLineages.PermittedControl.FieldComparison.FullFieldComparison",
+  "exact_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullFieldComparison",
+  "native_receipt": "1795239476384903099-2726545",
+  "local_modules": 278,
+  "independent_review": "none. The target, including its field syntax, form syntax and normalizer, was written and frozen in this round by the proof author; its correspondence with the printed lemma is argued in paper17/FIELD-COMPARISON-SOURCE-MAP.md and has not been read by an independent reviewer. Owner instruction of 2026-11-21: review is not necessary as long as the Lean compiles and the targets have not been changed; asked twice whether a new target should be reviewed, the owner replied 'Please continue.' and 'Please continue'.",
+  "source_map": "paper17/FIELD-COMPARISON-SOURCE-MAP.md",
+  "freeze": "paper17/FIELD-COMPARISON-FREEZE.json",
+  "evidence": "paper17/FIELD-COMPARISON-EVIDENCE.json",
+  "evidence_sha256": "d3963a0317470320df144a07752909f1d211374c430255694c5d60e637fd3f21",
+  "final_pins": "paper17/FIELD-COMPARISON-FINAL-PINS.json",
+  "accepted_utc": "2026-11-21T05:39:00.062207+00:00",
+  "supplier_statements": [
+    "prop:entry-residues and entry orbit",
+    "affordable cocycle (supporting)",
+    "lem:gap-input",
+    "inverse table (supporting; the semantic core of prop:threshold)",
+    "prop:equal-gap (source tail and certificate range)"
+  ],
+  "limitations": [
+    "Comparison of two ordinary value fields (iterates and entries with long proper intervals) on the branch x<y and on the identified branch: a computable normalizer returns a fixed answer or one accepted table row that is linear in the greater coordinate with a proper parameter field at the smaller coordinate; correctness on actual first-entry semantics for both selected controls",
+    "Entry fields must carry long intervals; a short entry is a bare iterate by the clause ShortEntryIterate, but classifying an interval as short and reading off its length is not a program here",
+    "The tail beyond which the form is correct is asserted to exist (it depends only on the two fields and the control); no computable tail function is stated",
+    "The normalizer is an explicit computable Lean definition on normal-form notations; there is no Primrec or Computable theorem for it on raw codes, unlike the accepted Paper 17 program targets",
+    "Target frozen before proof (9 pins, unchanged at acceptance); the target is the author's own and is unreviewed, and of the round's three targets it contains the most modelling choices. The register's stated acceptance rule asks for a Codex-owned frozen comparator; this one is Claude-authored",
+    "Compiled and verified on the local continuation host; evidence paths are host-specific",
+    "Does not promote paper17 thm:arithmetic, thm:ground or thm:main; no full-root or CI claim"
+  ]
+}

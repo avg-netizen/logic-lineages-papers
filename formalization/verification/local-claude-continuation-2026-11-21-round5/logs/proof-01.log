@@ -1,0 +1,17 @@
+CACHE_HIT LogicLineages.PermittedControl.InnerTerminationTargets
+Compiling LogicLineages.PermittedControl.InnerTerminationProof
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/InnerTerminationProof.lean:17:43: error: Application type mismatch: The argument
+  Nat.pow_succ
+has type
+  ∀ (n m : ℕ), n ^ m.succ = n ^ m * n
+but is expected to have type
+  ?m.33 = 3 ^ a * 3
+in the application
+  pow_step (3 ^ a) ?m.33 (3 ^ b) (Nat.pow_pos ?m.37) Nat.pow_succ
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/InnerTerminationProof.lean:25:25: warning: Variable name `n` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+COMPILE_FAILED LogicLineages.PermittedControl.InnerTerminationProof: 1
+BUILD_RECEIPT build-reports/1795237950332758818-2722959.json
