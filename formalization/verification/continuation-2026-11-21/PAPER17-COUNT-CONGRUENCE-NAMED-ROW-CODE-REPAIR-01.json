@@ -1,0 +1,37 @@
+{
+  "status": "source-only proof namespace repair; fresh native gate pending",
+  "failed_receipt": "1795290616595417055-9684",
+  "failed_archive": "formalization/verification/continuation-2026-11-21/second-recovery-p17-count-congruence-failed-native-1795290616595417055-9684/exact-failed-edition.zip",
+  "failed_archive_sha256": "c71284aa7ab17f5bbdfaa01779cf6faf59d134f98b0fe591fcbe1ba7abc33c8e",
+  "changed_source": "formalization/LogicLineages/PermittedControl/CountCongruenceNamedRowCodeProof.lean",
+  "old_sha256": "1a16296c7d5ad523760019ff086b655328c6927e9e41dce29838e17e973203fa",
+  "new_sha256": "ff8f5cb626ce88d710553dcbfe936d6898ddf0ebac57ee9786b4fa5236ce0219",
+  "zero_context_patch": "formalization/verification/continuation-2026-11-21/PAPER17-COUNT-CONGRUENCE-NAMED-ROW-CODE-REPAIR-01.patch",
+  "patch_sha256": "10a440b9a77ec18e29f1269c0729d0a71a7d317c9801b0faf9331eb513f3c6c8",
+  "inverse": {
+    "before": "Primrec.natPair.comp",
+    "after": "Primrec\u2082.natPair.comp",
+    "archive_bytes_roundtrip_verified": true
+  },
+  "reason": "Pinned binary pairing is Primrec\u2082.natPair : Primrec\u2082 Nat.pair, not Primrec.natPair. Primrec\u2082.comp composes it with the same two unary projections; the other goal depends on this term. No changes to source formulas, definitions, imports, bounds or checks.",
+  "pinned_api": {
+    "path": "Mathlib/Computability/Primrec/Basic.lean",
+    "sha256": "244592f117afc0cd69eee5ba274ffb62acc87a5faa177e38085cbdb1ea2e76c6",
+    "signature": "Primrec\u2082.natPair : Primrec\u2082 Nat.pair"
+  },
+  "unchanged_author_manifest": {
+    "formalization/verification/continuation-2026-11-21/PAPER17-COUNT-CONGRUENCE-NAMED-ROW-AUTHOR-MANIFEST.json": "d529dc937a6e23fe484e6175a244c69bf6791cc45f3629448d669cb3ff846fe0"
+  },
+  "unchanged_target_freeze": {
+    "formalization/verification/continuation-2026-11-21/PAPER17-COUNT-CONGRUENCE-NAMED-ROW-FREEZE.json": "54f7997879f3a19320258751c33d1f99d446b9507e34a80b412c9308602794ca"
+  },
+  "all_original_freeze_and_author_source_pins_checked": true,
+  "updated_proof_sources_sha256": {
+    "formalization/LogicLineages/PermittedControl/CountCongruenceNamedRowCodeProof.lean": "ff8f5cb626ce88d710553dcbfe936d6898ddf0ebac57ee9786b4fa5236ce0219",
+    "formalization/LogicLineages/PermittedControl/CountCongruenceNamedRowSemanticProof.lean": "e938fde271aced9514337da9a3021c0588dc3bddcc6da8c10bd90191c4a51fad",
+    "formalization/LogicLineages/PermittedControl/CountCongruenceNamedRowCodeStatementChecks.lean": "a05241e22ee6457b494ec3756f8440eee9b6f928be383093fcdef275a0ff8c65",
+    "formalization/LogicLineages/PermittedControl/CountCongruenceNamedRowSemanticStatementChecks.lean": "69561d482d363e34d3c4e955f138f82bb5b59d8b06fc573cd2d4e7c554780df3",
+    "formalization/LogicLineages/PermittedControl/CountCongruenceNamedRowStatementChecks.lean": "c7148fc92c3a5678aef4b60edbb1d0a5a45d99268d1206869a83f9d9cbb8f2b1"
+  },
+  "unchanged_static_import_closure": true
+}

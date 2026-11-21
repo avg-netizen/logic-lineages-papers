@@ -71,7 +71,7 @@ private theorem rowPrimitive :
   have hm : Primrec (fun p : A => p.1.1) := Primrec.fst.comp Primrec.fst
   have hkeep := keepPrimitive.comp (Primrec.fst.pair hj)
   have hor := Primrec.nat_add.comp
-    (Primrec.nat_mul.comp (Primrec.const 6) (Primrec.natPair.comp (atomPrimitive.comp hm hj) ht))
+    (Primrec.nat_mul.comp (Primrec.const 6) (Primrec₂.natPair.comp (atomPrimitive.comp hm hj) ht))
     (Primrec.const 5)
   have hstep : Primrec (fun p : A =>
       if keepResidue p.1.1 p.1.2.1 p.1.2.2.1 p.2.1 p.1.2.2.2.1 p.1.2.2.2.2.1 p.1.2.2.2.2.2
