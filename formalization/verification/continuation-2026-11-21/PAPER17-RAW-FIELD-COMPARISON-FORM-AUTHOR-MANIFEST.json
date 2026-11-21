@@ -1,0 +1,41 @@
+{
+  "state": "authored-static-only-pending-independent-review-and-native-proof-gate",
+  "target_preflight": {
+    "module": "LogicLineages.PermittedControl.RawFieldComparisonFormTargets",
+    "receipt": "1795263240338885119-9",
+    "verification": "coordinator-reported PASS; all target freeze pins independently recomputed"
+  },
+  "freeze_manifest": {
+    "path": "formalization/verification/continuation-2026-11-21/PAPER17-RAW-FIELD-COMPARISON-FORM-FREEZE.json",
+    "sha256": "784c2924a5cf73f8aef422bc8f6c8def3eacbc132233a54c1ae40ee78669b914",
+    "pins_rechecked": 16
+  },
+  "new_source_hashes": {
+    "formalization/LogicLineages/PermittedControl/RawFieldComparisonFormPrimitiveProof.lean": "93f245892b36cc8fe86c249a0b19470c0530033d8f7674ae0fdd875cc5ba332f",
+    "formalization/LogicLineages/PermittedControl/RawFieldComparisonFormCalibrationProof.lean": "15e768f8669f09051bb35719c80675f24062b1a0650bd721ff082af3ae40d909",
+    "formalization/LogicLineages/PermittedControl/RawFieldComparisonFormStatementChecks.lean": "84351fd6835d0ba1babf3d32c390d07cf130ca92ec0dff83dd085dc9212bee5f"
+  },
+  "dependencies": {
+    "formalization/LogicLineages/PermittedControl/LongFieldTailPrimitiveProof.lean": "722c42fc38afdb6e4e2460db27453c4ea03a857ecf0ba50fd1e7343b94241362",
+    "formalization/LogicLineages/PermittedControl/LongFieldTailCalibrationProof.lean": "8a33d719e724bd2772a4de9e729a0e3dacd67153f59af018e30f54cea49e03ad",
+    "formalization/LogicLineages/PermittedControl/ThresholdNoteCodeProof.lean": "86a3fe52fea07d67a19ad5db089ccaaecac27c72fde660aaf7d887e4a0293490",
+    "formalization/LogicLineages/PermittedControl/OrdinalEndpointProgramsProof.lean": "72a7b807a3d407d2eccb2a79e985b4c9157f52d22ddda93cc0eec32ffbdf7875",
+    "formalization/LogicLineages/PermittedControl/EqualGapCertificateCodeProof.lean": "bf16725a1356f7ede929a6769c0f2c26c01b133c00dd24ccacb210f42f686e94",
+    "formalization/LogicLineages/PermittedControl/PureCertificateCodeProof.lean": "2d117992e436948fbbec4c2282ee5acd3dd8bfdf011f3a98558b68d90fa68b2a",
+    "formalization/LogicLineages/OrdinalComparison/RawComparisonProof.lean": "ad5fd222dc0e860805c56cdefb7724fac569310816b371ffccd20f0c9406c454",
+    "formalization/LogicLineages/OrdinalComparison/RawNotationCode.lean": "ff0c8b35adf7361440961258dee243352ba3ec860a0da58b1f88fdea71619877"
+  },
+  "requested_native_gate": "LogicLineages.PermittedControl.RawFieldComparisonFormStatementChecks",
+  "expected_exact_aliases": [
+    "LogicLineages.PermittedControl.StatementChecks.fixed_rawFieldComparisonFormEffective",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_rawFieldComparisonFormCalibration",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_fullRawFieldComparisonForm"
+  ],
+  "allowed_standard_axiom_names": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "closure_note": "Allowlist is an upper bound only; exact alias/recursive native verification under original caps required. No native by author.",
+  "scope": "Both Primrec raw routines and literal encode/decode calibration, including original gap orientations and exact parameter syntax. No semantic claim on short input, no all-order wrapper, low strips, or numbered promotion."
+}
