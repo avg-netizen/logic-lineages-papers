@@ -1,0 +1,34 @@
+--- formalization/LogicLineages/PermittedControl/PreparedStripReconstructionCodeProof.lean
++++ formalization/LogicLineages/PermittedControl/PreparedStripReconstructionCodeProof.lean
+@@ -13,0 +14,16 @@
++  have hx : Computable (@Prod.fst Nat (Nat × List NamedCode × Nat)) :=
++    Computable.fst
++  have hrest : Computable (@Prod.snd Nat (Nat × List NamedCode × Nat)) :=
++    Computable.snd
++  have ha' : Computable (@Prod.fst Nat (List NamedCode × Nat)) :=
++    Computable.fst
++  have hrs' : Computable (@Prod.snd Nat (List NamedCode × Nat)) :=
++    Computable.snd
++  have hfirst : Computable (@Prod.fst (List NamedCode) Nat) :=
++    Computable.fst
++  have ha : Computable (fun q : StripCodeArgs => q.2.1) :=
++    Computable.comp ha' hrest
++  have htail : Computable (fun q : StripCodeArgs => q.2.2) :=
++    Computable.comp hrs' hrest
++  have hrs : Computable (fun q : StripCodeArgs => q.2.2.1) :=
++    Computable.comp hfirst htail
+@@ -15,4 +31,10 @@
+-    Computable.fst.pair (Computable.fst.comp Computable.snd)
+-  have hrs : Computable (fun q : StripCodeArgs => q.2.2.1) :=
+-    Computable.fst.comp (Computable.snd.comp Computable.snd)
+-  exact (collectorEffective f hf).2.comp hxa hrs
++    Computable.pair hx ha
++  have hpack : Computable (fun q : StripCodeArgs => ((q.1,q.2.1),q.2.2.1)) :=
++    Computable.pair hxa hrs
++  have hcol₂ : Computable₂ (fun p : Nat × Nat => collectCode f p.1 p.2) :=
++    (collectorEffective f hf).2
++  have hcol : Computable (fun p : (Nat × Nat) × List NamedCode =>
++      collectCode f p.1.1 p.1.2 p.2) := hcol₂
++  exact Computable.comp
++    (f := fun p : (Nat × Nat) × List NamedCode => collectCode f p.1.1 p.1.2 p.2)
++    (g := fun q : StripCodeArgs => ((q.1,q.2.1),q.2.2.1)) hcol hpack

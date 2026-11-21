@@ -1,0 +1,42 @@
+{
+  "status": "source-only ordinary elaboration repair; fresh native gate pending",
+  "failed_receipt": "1795287185176104874-9661",
+  "original_failure": "Deterministic whnf heartbeat failure in collectArgsComputable; no resource guard change. Downstream unknown private theorem is consequential.",
+  "failed_archive": "formalization/verification/continuation-2026-11-21/second-recovery-p17-prepared-code-failed-native-1795287185176104874-9661/exact-failed-edition.zip",
+  "failed_archive_sha256": "34154d9028b2f94181d3b9d7aa610c6001debfb164a364b4c3ad2de557911de2",
+  "changed_source": "formalization/LogicLineages/PermittedControl/PreparedStripReconstructionCodeProof.lean",
+  "old_sha256": "bbab795f93ec2e9b60a7241e63806c9dd7135f8ed48daa1413b9e55b6a4eb145",
+  "new_sha256": "ea036d615471db84187331f1e0fffe648fbd47180d6862bfed55860ebbfb42fa",
+  "patch": "formalization/verification/continuation-2026-11-21/PAPER17-PREPARED-STRIP-RECONSTRUCTION-CODE-REPAIR-01.patch",
+  "patch_sha256": "a19f220eeca6db92a54799fc778e101ebcd3033baca59145e861a6851b81d4f7",
+  "inverse": {
+    "before": "  have hxa : Computable (fun q : StripCodeArgs => (q.1,q.2.1)) :=\n    Computable.fst.pair (Computable.fst.comp Computable.snd)\n  have hrs : Computable (fun q : StripCodeArgs => q.2.2.1) :=\n    Computable.fst.comp (Computable.snd.comp Computable.snd)\n  exact (collectorEffective f hf).2.comp hxa hrs",
+    "after": "  have hx : Computable (@Prod.fst Nat (Nat \u00d7 List NamedCode \u00d7 Nat)) :=\n    Computable.fst\n  have hrest : Computable (@Prod.snd Nat (Nat \u00d7 List NamedCode \u00d7 Nat)) :=\n    Computable.snd\n  have ha' : Computable (@Prod.fst Nat (List NamedCode \u00d7 Nat)) :=\n    Computable.fst\n  have hrs' : Computable (@Prod.snd Nat (List NamedCode \u00d7 Nat)) :=\n    Computable.snd\n  have hfirst : Computable (@Prod.fst (List NamedCode) Nat) :=\n    Computable.fst\n  have ha : Computable (fun q : StripCodeArgs => q.2.1) :=\n    Computable.comp ha' hrest\n  have htail : Computable (fun q : StripCodeArgs => q.2.2) :=\n    Computable.comp hrs' hrest\n  have hrs : Computable (fun q : StripCodeArgs => q.2.2.1) :=\n    Computable.comp hfirst htail\n  have hxa : Computable (fun q : StripCodeArgs => (q.1,q.2.1)) :=\n    Computable.pair hx ha\n  have hpack : Computable (fun q : StripCodeArgs => ((q.1,q.2.1),q.2.2.1)) :=\n    Computable.pair hxa hrs\n  have hcol\u2082 : Computable\u2082 (fun p : Nat \u00d7 Nat => collectCode f p.1 p.2) :=\n    (collectorEffective f hf).2\n  have hcol : Computable (fun p : (Nat \u00d7 Nat) \u00d7 List NamedCode =>\n      collectCode f p.1.1 p.1.2 p.2) := hcol\u2082\n  exact Computable.comp\n    (f := fun p : (Nat \u00d7 Nat) \u00d7 List NamedCode => collectCode f p.1.1 p.1.2 p.2)\n    (g := fun q : StripCodeArgs => ((q.1,q.2.1),q.2.2.1)) hcol hpack",
+    "exact_archive_bytes_roundtrip_verified": true
+  },
+  "reason": "Fully typed each product projection and packed input. Reuse exact accepted Computable\u2082 collector theorem through the definitional packed Computable bridge; explicitly bind both maps in unary composition so elaboration cannot search over the opaque collectCode bodies. No theorem statement, imports, definitions, heartbeat settings or other leaves changed.",
+  "unchanged_dependency_reconciliation03": {
+    "formalization/verification/continuation-2026-11-21/PAPER17-PREPARED-STRIP-RECONSTRUCTION-CODE-DEPENDENCY-RECONCILIATION-03.json": "a1156e218ea39abbd19fc4d92ce1e95da836170176604c0b59d821ae3100c8e5"
+  },
+  "accepted_737": {
+    "record": "formalization/verification/new-paper-set-2026-11-18/accepted/737-actual-finite-strip-collector.json",
+    "record_sha256": "bb0bd2c9210827643da8eb8bab1e2415cc1cb0d37d848c474f782053be20e98f",
+    "evidence": "formalization/verification/continuation-2026-11-21/PAPER17-STRIP-COLLECTOR-RECOVERY-CURRENT-CLOUD-EVIDENCE.json",
+    "evidence_sha256": "664a3cff21010c14b06200f171ca4d36752481475cf6bb5de915b084c863492d",
+    "native_receipt": "1795286851268366353-8729",
+    "exact_collector_source_sha256": "1d91b870f28b4ee5610c852666b6346ead43366ac0ec8cfd63e8832e576aa9d5"
+  },
+  "unchanged_source_pins": {
+    "formalization/LogicLineages/PermittedControl/FiniteStripCollectorRecoveryEffectiveProof.lean": "1d91b870f28b4ee5610c852666b6346ead43366ac0ec8cfd63e8832e576aa9d5",
+    "formalization/LogicLineages/PermittedControl/FiniteStripRecoveryFoldProof.lean": "afeef69c1d2fcaaceb5cacfe8b9b5e70610b0fc08258a5afa204a1479df7d469",
+    "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/ClosedLinearStatementChecks.lean": "0ee26ff02c8a4688b2dbf714a02f7a6d65fc0219f899a65db502fb963b67a58b",
+    "formalization/LogicLineages/PermittedControl/PreparedStripReconstructionCodeStatementChecks.lean": "9a4f8dcc0d1323b2e2c8f397fa5441767d96a2cdd47eda5111ffe6b84b25128e",
+    "formalization/verification/continuation-2026-11-21/PAPER17-PREPARED-STRIP-RECONSTRUCTION-FREEZE.json": "249cf22e7baa3cd6925550f556ec107a08b64823a3743e274cb75bf914d74840",
+    "formalization/LogicLineages/PermittedControl/PreparedStripReconstructionTargets.lean": "ba68db71cbf76f0d7d89a6bfbce6b27637e7ce8bf7d51919028824a3b5330803"
+  },
+  "static_closure": {
+    "unchanged": true,
+    "source_basis": "No import changes; same code alias closure as reconciliation03",
+    "local_modules_including_code_alias": 308
+  }
+}
