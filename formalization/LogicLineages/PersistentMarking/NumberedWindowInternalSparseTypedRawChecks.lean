@@ -1,0 +1,17 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseTypedRawTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseTypedRawNumericProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseTypedRawOpenProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseTypedRawChecks
+open NumberedWindowInternalSparseTypedRawTargets
+
+theorem exact_TypedRaw5Calibration : ExactTypedRaw5Calibration :=
+  NumberedWindowInternalSparseTypedRawNumericProof.calibration
+
+theorem exact_OpenTypedRaw5 : ExactOpenTypedRaw5 := NumberedWindowInternalSparseTypedRawOpenProof.graph
+
+#print axioms exact_TypedRaw5Calibration
+#print axioms exact_OpenTypedRaw5
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseTypedRawChecks

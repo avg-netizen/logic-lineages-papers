@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseTypedRawSelectionTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseTypedRawSelectionProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseTypedRawSelectionChecks
+open NumberedWindowInternalSparseTypedRawSelectionTargets
+
+theorem exact_ConcreteTypedRaw5 : ExactConcreteTypedRaw5 :=
+  NumberedWindowInternalSparseTypedRawSelectionProof.chosen
+
+#print axioms exact_ConcreteTypedRaw5
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseTypedRawSelectionChecks
