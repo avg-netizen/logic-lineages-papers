@@ -43,7 +43,7 @@ private theorem single_hit (f : Nat → Nat) (x a : Nat) (r : NamedOperand)
       | none => simp [expectedRead,hn,hx,hread] at hh
       | some v =>
         have he : [(r.1,v)] = hs := by simpa [expectedRead,hn,hx,hread] using hh
-        exact Or.inr ⟨v,hx,hread,he.symm⟩
+        exact Or.inr ⟨v,hx,rfl,he.symm⟩
   · have he : [] = hs := by simpa [expectedRead,hn,hx] using hh
     exact Or.inl ⟨hx,he.symm⟩
 
