@@ -1,0 +1,29 @@
+{
+  "status": "Source-only dependency narrowing; fresh exact proof native pending",
+  "exact_root": "LogicLineages.PersistentMarking.NumberedWindowInternalSparsePackedLeastNumericChecks",
+  "static_local_import_modules": 936,
+  "unchanged_original_manifest": "formalization/verification/continuation-2026-11-21/INTERNAL-SPARSE-PACKED-LEAST-NUMERIC-AUTHOR-MANIFEST.json",
+  "original_manifest_sha256": "80da8d0782601ac72c5815891aa5d80f70828287784ad5a0f1d52dfbe4ad0a03",
+  "unverified_original_source_sha256": "57722caa5f2d16b87463eaf35f42ed4e96d848a53349fa431084568b14edd6c9",
+  "patch": "formalization/verification/continuation-2026-11-21/INTERNAL-SPARSE-PACKED-LEAST-NUMERIC-DEPENDENCY-RECUT-01.patch",
+  "patch_sha256": "fa0f522f082ce373fdbcd450b43f21748d47f55a303679eef213ebe0da78d03e",
+  "updated_proof_sources": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePackedLeastNumericMinimumProof.lean": "75918fad4fafb947ea47fb8fb087ef7a7c0771a7161e74e3abed93a148d3a3b7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePackedLeastNumericTapeProof.lean": "b72d737ba47c60b92834ed470a5d1cb92fce63fa88f26a2e4000971ef4354a59",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePackedLeastNumericProof.lean": "00fe84d0db78ac8305defce39960afedfe5044826fdbe0243dec5bc9d000f47e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePackedLeastNumericChecks.lean": "8c22d903632291ea335cba949e237ce88e14a3953ff3eb2d5b6d6df9dc66cce4"
+  },
+  "unchanged_pending_cover_projection_sources": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseCoverScratchNumericCodecProof.lean": "8da324d8b387357cc4be9c13d954b0cb85e01a0efc933c90f4802267e57145b2",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseCoverScratchNumericProjectionProof.lean": "5e1fa8d27647c7e4f50ba322a28f200d28b8db7ad1060ca5e1cf3ae86f5e7d67"
+  },
+  "unchanged_frozen": {
+    "formalization/verification/continuation-2026-11-21/INTERNAL-SPARSE-PACKED-LEAST-FROZEN.json": "701cde3c848955117986ade1a379c7888e3ce454c6f7747a41f02cf82328fe3a"
+  },
+  "supplier": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseScalarEdgeNumericProof.lean",
+    "sha256": "53936c404979297f33b66e820ca0fd09ddd841e1498b3ff5ce388cb67467d073",
+    "theorem": "calibration",
+    "reason": "The original exact selected-edge alias imported a selection proof not used by the conditional packed composition. Import the already accepted exact underlying conditional calibration directly, avoiding an unrelated missing Mathlib.Tactic.Linarith artifact. No change to proof logic, target or caps; exact original recoverable via reverse patch."
+  }
+}

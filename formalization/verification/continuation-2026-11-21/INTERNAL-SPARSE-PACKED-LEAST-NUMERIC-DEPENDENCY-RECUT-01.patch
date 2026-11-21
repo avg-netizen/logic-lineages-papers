@@ -1,0 +1,13 @@
+diff --git a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePackedLeastNumericProof.lean b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePackedLeastNumericProof.lean
+index 018a1eae3..1e6ad317d 100644
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePackedLeastNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePackedLeastNumericProof.lean
+@@ -5 +5 @@ import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePackedLeastNu
+-import LogicLineages.PersistentMarking.NumberedWindowInternalSparseScalarEdgeNumericChecks
++import LogicLineages.PersistentMarking.NumberedWindowInternalSparseScalarEdgeNumericProof
+@@ -24 +24 @@ open NumberedWindowInternalSparseScalarEdgeTargets (ActualTermExchange)
+-open NumberedWindowInternalSparseScalarEdgeNumericChecks (exact_PackedScalarEdgeCalibration)
++open NumberedWindowInternalSparseScalarEdgeNumericProof (calibration)
+@@ -39 +39 @@ private theorem edgeFiber (s : Settings) (X : Program 2) (W : Program 3)
+-  rw [exact_PackedScalarEdgeCalibration s X W hX hW ctx ty w v]
++  rw [calibration s X W hX hW ctx ty w v]

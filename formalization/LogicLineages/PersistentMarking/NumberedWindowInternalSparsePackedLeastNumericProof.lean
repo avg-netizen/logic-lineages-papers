@@ -2,7 +2,7 @@ module
 public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePackedLeastTargets
 import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePackedLeastNumericMinimumProof
 import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePackedLeastNumericTapeProof
-import LogicLineages.PersistentMarking.NumberedWindowInternalSparseScalarEdgeNumericChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseScalarEdgeNumericProof
 import LogicLineages.PersistentMarking.NumberedWindowInternalSparseOrderedMinimumNumericStepProof
 import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceCalibrationProof
 import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetNumericSupportProof
@@ -21,7 +21,7 @@ open NumberedWindowInternalSparseCoverScratchTargets (ActualSelectedCoverOutput)
 open NumberedWindowInternalSparseTypedRawTargets (ActualPackedWindow)
 open NumberedWindowInternalSparseScalarEdge (edge4 packedEdge)
 open NumberedWindowInternalSparseScalarEdgeTargets (ActualTermExchange)
-open NumberedWindowInternalSparseScalarEdgeNumericChecks (exact_PackedScalarEdgeCalibration)
+open NumberedWindowInternalSparseScalarEdgeNumericProof (calibration)
 open NumberedWindowInternalSparseDirectedRoundsTargets (exactEdgeBit)
 open NumberedWindowInternalSparseOrderedMinimum (scratchMinimum)
 open NumberedWindowInternalSparseOrderedMinimumNumericStepProof (unaryValue)
@@ -36,7 +36,7 @@ private theorem edgeFiber (s : Settings) (X : Program 2) (W : Program 3)
     exactEdgeBit (edge4 X W) ctx ty = edge s g ty := by
   funext w v
   unfold exactEdgeBit
-  rw [exact_PackedScalarEdgeCalibration s X W hX hW ctx ty w v]
+  rw [calibration s X W hX hW ctx ty w v]
   have bit : packedEdge s ctx ty w v = edge s g ty w v := by
     rw [packedEdge, parsed] <;> rfl
   rw [bit]
