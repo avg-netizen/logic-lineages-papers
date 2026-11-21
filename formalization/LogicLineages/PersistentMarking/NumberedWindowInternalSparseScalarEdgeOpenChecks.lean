@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseScalarEdgeTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseScalarEdgeOpenProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseScalarEdgeOpenChecks
+open NumberedWindowInternalSparseScalarEdgeTargets
+open NumberedWindowInternalSparseScalarEdgeOpenProof (graph)
+
+theorem exact_OpenPackedScalarEdge : ExactOpenPackedScalarEdge := graph
+
+#print axioms exact_OpenPackedScalarEdge
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseScalarEdgeOpenChecks
