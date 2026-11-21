@@ -1,0 +1,7 @@
+# Paper 17 original finite-strip read collector (supporting 737)
+
+The exact target passed before proof authorship. Two ordinary elaboration failures and the later unrelated upstream RSS stop are kept as three distinct archived editions. Repair03 swapped only the two signature-identical fold supplier references in the effectivity proof; the checked 299-module closure excludes the unrelated RSS-stopped module. Frozen target bytes, original other proof leaves, toolchain and native caps are unchanged. The fresh successful receipt is 1795286851268366353-8729, with all 299 modules independently source/object matched and the exact FullCollector alias using only propext, Classical.choice and Quot.sound.
+
+The exact alias pays computability relative to the original computable control, canonical read/status fidelity, and the real signed original fold on an actual successful pack. Raw syntax/name checks precede rank dispatch; actual matched reads use the same unshifted coordinate, and earlier invalid and genuine miss are distinct statuses, neither converted to falsity. Successful substitution keeps the original tree and uses one common raw valuation, distinct positive names with actual support coverage, the original typed operand reads, and unchanged nonmatching slots.
+
+This is not named-table generation, zero-name aliasing, a failure decision, guard/domain completeness, all finite strips, a full matrix, printed #704, or a numbered promotion. Prepared-strip reconstruction is checked separately.
