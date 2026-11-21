@@ -1,0 +1,25 @@
+module
+public import LogicLineages.PermittedControl.ShortFieldPreprocessingTargets
+import LogicLineages.PermittedControl.ShortFieldNormalizationProof
+
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_shortGapRecognition : FieldComparison.ShortGapRecognition :=
+  FieldComparison.shortGapRecognition
+
+theorem fixed_shortFieldPreprocessingEffective : FieldComparison.ShortFieldPreprocessingEffective :=
+  FieldComparison.shortFieldPreprocessingEffective
+
+theorem fixed_shortFieldNormalization : FieldComparison.ShortFieldNormalization :=
+  FieldComparison.shortFieldNormalization
+
+theorem fixed_fullShortFieldPreprocessing : FieldComparison.FullShortFieldPreprocessing :=
+  FieldComparison.fullShortFieldPreprocessing
+
+#print axioms fixed_shortGapRecognition
+#print axioms fixed_shortFieldPreprocessingEffective
+#print axioms fixed_shortFieldNormalization
+#print axioms fixed_fullShortFieldPreprocessing
+
+end LogicLineages.PermittedControl.StatementChecks

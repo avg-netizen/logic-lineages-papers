@@ -1,0 +1,59 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean:9:28: error: no macro or `[quot_precheck]` instance for syntax kind `Lean.Parser.Term.proj` found
+  (NONote.ofNat 1).1
+This means we cannot eagerly check your notation/quotation for unbound identifiers; you can use `set_option quotPrecheck false` to disable this check.
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean:13:2: error: Type mismatch: After simplification, term
+  congrArg rawNoteDecode h
+ has type
+  rawNoteDecode (rawNoteEncode a) = rawNoteDecode (rawNoteEncode b)
+but is expected to have type
+  a = b
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean:16:61: error: elaboration function for `_private.LogicLineages.PermittedControl.ShortFieldGapProof.0.LogicLineages.PermittedControl.FieldComparison.termOneNote` has not been implemented
+  oneNote
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean:26:22: error: elaboration function for `_private.LogicLineages.PermittedControl.ShortFieldGapProof.0.LogicLineages.PermittedControl.FieldComparison.termOneNote` has not been implemented
+  oneNote
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean:31:2: error: unsolved goals
+case mpr
+o : ONote
+k : ℕ
+hk : 0 < k
+h : o = sorry
+⊢ (match rawNoteEncode (sorry ()) with
+    | 0 => 0
+    | n.succ =>
+      if (Nat.unpair n).1 = rawNoteEncode ↑(NONote.ofNat 1) ∧ (Nat.unpair (Nat.unpair n).2).2 = 0 then
+        (Nat.unpair (Nat.unpair n).2).1 + 1
+      else 0) =
+    k
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean:33:10: warning: This simp argument is unused:
+  rawNoteEncode
+
+Hint: Omit it from the simp argument list.
+  simp [rawN̵o̵t̵e̵E̵n̵c̵o̵d̵e̵,̵ ̵r̵a̵w̵ShortGapLength, Nat.unpair_pair, Nat.sub_add_cancel hk]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean:33:44: warning: This simp argument is unused:
+  Nat.unpair_pair
+
+Hint: Omit it from the simp argument list.
+  simp [rawNoteEncode, rawShortGapLength, Nat.u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵ ̵N̵a̵t̵.̵sub_add_cancel hk]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean:33:61: warning: This simp argument is unused:
+  Nat.sub_add_cancel hk
+
+Hint: Omit it from the simp argument list.
+  simp [rawNoteEncode, rawShortGapLength, Nat.unpair_pair,̵ ̵N̵a̵t̵.̵s̵u̵b̵_̵a̵d̵d̵_̵c̵a̵n̵c̵e̵l̵ ̵h̵k̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean:36:16: error: elaboration function for `_private.LogicLineages.PermittedControl.ShortFieldGapProof.0.LogicLineages.PermittedControl.FieldComparison.termOneNote` has not been implemented
+  oneNote
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean:44:30: error: elaboration function for `_private.LogicLineages.PermittedControl.ShortFieldGapProof.0.LogicLineages.PermittedControl.FieldComparison.termOneNote` has not been implemented
+  oneNote
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean:48:39: error: elaboration function for `_private.LogicLineages.PermittedControl.ShortFieldGapProof.0.LogicLineages.PermittedControl.FieldComparison.termOneNote` has not been implemented
+  oneNote
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean:50:32: error: elaboration function for `_private.LogicLineages.PermittedControl.ShortFieldGapProof.0.LogicLineages.PermittedControl.FieldComparison.termOneNote` has not been implemented
+  oneNote
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean:51:46: error: elaboration function for `_private.LogicLineages.PermittedControl.ShortFieldGapProof.0.LogicLineages.PermittedControl.FieldComparison.termOneNote` has not been implemented
+  oneNote
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean:53:57: error: elaboration function for `_private.LogicLineages.PermittedControl.ShortFieldGapProof.0.LogicLineages.PermittedControl.FieldComparison.termOneNote` has not been implemented
+  oneNote

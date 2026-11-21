@@ -1,6 +1,8 @@
 module
 public import LogicLineages.PermittedControl.ShortFieldPreprocessingTargets
 import LogicLineages.PermittedControl.ShortFieldNormalizationProof
+import LogicLineages.PermittedControl.ShortFieldGapProof
+import LogicLineages.PermittedControl.ShortFieldEffectivityProof
 
 public section
 namespace LogicLineages.PermittedControl.StatementChecks

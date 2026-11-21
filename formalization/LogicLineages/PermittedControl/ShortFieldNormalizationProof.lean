@@ -3,6 +3,7 @@ public import LogicLineages.PermittedControl.ShortFieldPreprocessingTargets
 import LogicLineages.PermittedControl.ShortFieldGapProof
 import LogicLineages.PermittedControl.ShortFieldEffectivityProof
 import LogicLineages.PermittedControl.FieldComparisonProof
+import LogicLineages.PermittedControl.EntryLinearProof
 
 @[expose] public section
 namespace LogicLineages.PermittedControl.FieldComparison

@@ -1,0 +1,34 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldEffectivityProof.lean:23:11: error: unsolved goals
+case succ
+hpred : Primrec fun n => n - 1
+hu : Primrec fun a => Nat.unpair (a - 1)
+he : Primrec fun a => (Nat.unpair (a - 1)).1
+hu' : Primrec fun a => Nat.unpair (Nat.unpair (a - 1)).2
+hc : Primrec fun a => (Nat.unpair (Nat.unpair (a - 1)).2).1
+ht : Primrec fun a => (Nat.unpair (Nat.unpair (a - 1)).2).2
+htest :
+  PrimrecPred fun a =>
+    (Nat.unpair (a - 1)).1 = rawNoteEncode ↑(NONote.ofNat 1) ∧ (Nat.unpair (Nat.unpair (a - 1)).2).2 = 0
+n : ℕ
+⊢ (if id (n + 1) = 0 then 0
+    else
+      if (Nat.unpair n).1 = rawNoteEncode ↑(NONote.ofNat 1) ∧ (Nat.unpair (Nat.unpair n).2).2 = 0 then
+        (Nat.unpair (Nat.unpair n).2).1.succ
+      else 0) =
+    if (Nat.unpair n).1 = rawNoteEncode ↑(NONote.ofNat 1) ∧ (Nat.unpair (Nat.unpair n).2).2 = 0 then
+      (Nat.unpair (Nat.unpair n).2).1 + 1
+    else 0
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldEffectivityProof.lean:23:25: warning: This simp argument is unused:
+  Nat.succ_ne_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [N̵a̵t̵.̵s̵u̵c̵c̵_̵n̵e̵_̵z̵e̵r̵o̵,̵ ̵↓reduceIte, Nat.succ_sub_one, rawShortGapLength]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/ShortFieldEffectivityProof.lean:23:43: warning: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.succ_ne_zero, ↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵,̵ ̵Nat.succ_sub_one, rawShortGapLength]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
