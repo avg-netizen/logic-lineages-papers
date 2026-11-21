@@ -1,0 +1,32 @@
+module
+public import LogicLineages.PermittedControl.PreparedParameterProjectionTargets
+import LogicLineages.PermittedControl.PreparedParameterCodeProof
+import LogicLineages.PermittedControl.PreparedParameterOutputProof
+import LogicLineages.PermittedControl.PreparedParameterActualProof
+
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_preparedProjectionCodeExact : PreparedProjection.PreparedProjectionCodeExact :=
+  PreparedProjection.preparedProjectionCodeExact
+
+theorem fixed_preparedProjectionSyntax : PreparedProjection.PreparedProjectionSyntax :=
+  PreparedProjection.preparedProjectionSyntax
+
+theorem fixed_preparedProjectionActual : PreparedProjection.PreparedProjectionActual :=
+  PreparedProjection.preparedProjectionActual
+
+theorem fixed_preparedTiedProjection : PreparedProjection.PreparedTiedProjection :=
+  PreparedProjection.preparedTiedProjection
+
+theorem fixed_fullPreparedParameterProjection : PreparedProjection.FullPreparedParameterProjection :=
+  ⟨PreparedProjection.preparedProjectionCodeExact,PreparedProjection.preparedProjectionSyntax,
+    PreparedProjection.preparedProjectionActual,PreparedProjection.preparedTiedProjection⟩
+
+#print axioms fixed_preparedProjectionCodeExact
+#print axioms fixed_preparedProjectionSyntax
+#print axioms fixed_preparedProjectionActual
+#print axioms fixed_preparedTiedProjection
+#print axioms fixed_fullPreparedParameterProjection
+
+end LogicLineages.PermittedControl.StatementChecks
