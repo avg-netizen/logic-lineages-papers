@@ -1,0 +1,5 @@
+# Paper 17 full prepared-strip contract (supporting 744)
+
+The original frozen prepared target passed before either proof. This new aggregate adds only a literal three-field conjunction of the exact CodeExact, HitReconstruction and ClosedHitDecision leaves, already separately accepted in 738 and 742. No leaf, target, resource profile, original support guard or earlier error archive was changed. The source closure is the exact union of both checked leaves plus the aggregate.
+
+After the third workspace restoration, fresh original-cap native receipt 1795294710887387820-34 and independent 324-module exact-source/object matching certify the aggregate and reverify the three inherited aliases; all use only propext, Classical.choice and Quot.sound. This is the full frozen prepared strip contract, including preservation of invalid/miss, genuine same-rank hit reconstruction with one common original raw valuation and real closed decision once residual support is empty. It is not unprepared liveness, all strips, general normalization, printed #704 or a numbered promotion.
