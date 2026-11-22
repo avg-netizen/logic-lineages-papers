@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualFullLabelPairGuardsLowerProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualFullLabelPairGuardsLowerProof.lean
+@@ -50,2 +50,3 @@
+-  | equal => exact safeAnd ops _ _ (twoAtoms ops 0 1 (-1) 1 2 one two)
+-      (twoAtoms ops 0 1 (-1) 2 1 two one)
++  | equal =>
++      exact safeAnd ops _ _ (twoAtoms ops 0 1 (-1) 1 2 one two)
++        (twoAtoms ops 0 1 (-1) 2 1 two one)

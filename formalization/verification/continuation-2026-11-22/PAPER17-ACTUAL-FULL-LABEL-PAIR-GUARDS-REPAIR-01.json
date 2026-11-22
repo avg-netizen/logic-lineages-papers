@@ -1,0 +1,49 @@
+{
+  "status": "source-only lower pair proof indentation repair, no Lean/Git invoked by author",
+  "failed_source_remote_commit": "e2f55de7f4b2888d0c0cce5bf77b12a2b24355a6",
+  "failed_source_local_commit": "d968940e82a0272398ab5c14f8cd15d6789db01f",
+  "failed_source_tree": "43e611bf0baae8e3d41ef574c874db7092591e1c",
+  "failed_exact_gate_receipt": "1795364987953576376-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualFullLabelPairGuardsStatementChecks",
+  "failed_receipt_sha256": "b5c2e8cd4134e1f0da52d2d42f85714b3c8d5a2ee5da07a7b330161a6cf2c957",
+  "failed_exact_module_log_sha256": "ab35c084f096025104ffb976a9b8b39c1c9cfebfe86308b87f186dc2fd00c45e",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFullLabelPairGuardsLowerProof.lean:50:13: error: Type mismatch\n  safeAnd ops\n    (NormalForm.Formula.atom\n      (NormalForm.Atom.nonnegative (0, [(1, NormalForm.Summand.variable 1), (-1, NormalForm.Summand.variable 2)])))\n    ?m.87 (twoAtoms ops 0 1 (-1) 1 2 one two)\nhas type\n  PreparedInput ops ?m.87 \u2192\n    PreparedInput ops\n      ((NormalForm.Formula.atom\n            (NormalForm.Atom.nonnegative\n              (0, [(1, NormalForm.Summand.variable 1), (-1, NormalForm.Summand.variable 2)]))).conjunction\n        ?m.87)\nbut is expected to have type\n  PreparedInput (lowerPacket p Answer.equal).1 (lowerPacket p Answer.equal).2\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFullLabelPairGuardsLowerProof.lean:48:2: error: Alternative `greater` has not been provided\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFullLabelPairGuardsLowerProof.lean:51:6: error: unexpected token '('; expected command\n",
+  "failed_original_native_log_sha256": "c4c3f1657bf79bcdbe71bb0c67a86767e0bdb8715b8fd9dc3bcd07ffbea150ac",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualFullLabelPairGuardsLowerProof.lean",
+  "failed_proof_sha256": "38c82065ae7ab79cb7e1dc5a3022a0475502894ef303eeff628cd1292c6b5edf",
+  "repaired_proof_sha256": "17dba9f2d3c8b90a8700243ed6f2815996e931286a9a1808a727bd6b4da82bae",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FULL-LABEL-PAIR-GUARDS-REPAIR-01.patch",
+  "patch_sha256": "576916cabc42313d6def933ecc221cdbce9677e1abdc20f23540b162826c45df",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FULL-LABEL-PAIR-GUARDS-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "4795d1da7888a07557e6e6ef0d17e626851e984e3e5c586e98d75806844a59ba",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualFullLabelPairGuardsTargets.lean": "f3d79091327978cb1c50139c2de82b228c6c6dcf28ef7e60cabf749b2bfc6a8b",
+    "formalization/LogicLineages/PermittedControl/ActualFullLabelPairGuardsProof.lean": "36d14a3d2d538165ea35a4d1b5e7006ed9bd9b982c34ea9cbf4a3c00d2f40e7c",
+    "formalization/LogicLineages/PermittedControl/ActualFullLabelPairGuardsStatementChecks.lean": "0654870b0979868ccb899073fa498c0c916ca6e8df827b7bda3763a151738f0d",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FULL-LABEL-PAIR-GUARDS-SOURCE-MAP.md": "57f2933ad1b3ec295c1956ed727b083a579ca1380dc698e62f5959318f550c17"
+  },
+  "static_module_closure_unchanged": {
+    "Targets": {
+      "local": 170,
+      "external": 32,
+      "contains_totient": false
+    },
+    "LowerProof": {
+      "local": 173,
+      "external": 32,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 428,
+      "external": 39,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 429,
+      "external": 39,
+      "contains_totient": false
+    }
+  },
+  "scope": "Only indent existing two-argument safeAnd application inside equal case. No target, rows, formula, order or other module changes."
+}

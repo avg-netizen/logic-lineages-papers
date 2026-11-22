@@ -47,8 +47,9 @@ theorem lowerShape (p : Pair) (a : Answer) :
   have two : 2 ≤ ops.length := by change 2 ≤ 2; decide
   cases a with
   | less => exact twoAtoms ops (-1) 1 (-1) 2 1 two one
-  | equal => exact safeAnd ops _ _ (twoAtoms ops 0 1 (-1) 1 2 one two)
-      (twoAtoms ops 0 1 (-1) 2 1 two one)
+  | equal =>
+      exact safeAnd ops _ _ (twoAtoms ops 0 1 (-1) 1 2 one two)
+        (twoAtoms ops 0 1 (-1) 2 1 two one)
   | greater => exact twoAtoms ops (-1) 1 (-1) 1 2 one two
 
 theorem lowerMeaning (a : Answer) (ν : Nat → Nat) :
