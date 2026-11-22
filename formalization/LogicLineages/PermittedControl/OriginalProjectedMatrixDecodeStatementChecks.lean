@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PermittedControl.OriginalProjectedMatrixDecodeTargets
+import LogicLineages.PermittedControl.OriginalProjectedMatrixDecodeProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalProjectedMatrixDecode : OriginalProjectedMatrixDecode.ExactProjectedMatrixDecode :=
+  OriginalProjectedMatrixDecode.exactProjectedMatrixDecode
+
+#print axioms fixed_exactOriginalProjectedMatrixDecode
+
+end LogicLineages.PermittedControl.StatementChecks
