@@ -1,0 +1,11 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowNumericProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowNumericProof.lean
+@@ -136 +136,2 @@
+-    · simp [bits.mpr success,if_pos (sourceGood.mpr success)]
++    · rw [if_pos (sourceGood.mpr success),if_pos (And.intro (rfl : (1 : Nat) = 1) (bits.mpr success)),
++        if_neg (show (1 : Nat) ≠ 0 from by decide)]
+@@ -141 +142,3 @@
+-      simp [reject,if_neg rejected,constantZero,evaluate]
++      have conjunctionReject : ¬ ((1 : Nat) = 1 ∧
++          evaluate (admittedChildren T) (tape i old ctx) = 1) := fun h => reject h.2
++      rw [if_neg rejected,if_neg conjunctionReject,if_pos (show (0 : Nat) = 0 from rfl)] <;> rfl

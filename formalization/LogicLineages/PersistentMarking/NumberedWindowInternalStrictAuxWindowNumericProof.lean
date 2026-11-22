@@ -133,12 +133,15 @@ theorem exact_StrictAuxWindowStepCalibration : ExactStrictAuxWindowStepCalibrati
     rw [header,if_neg (by decide),strictAuxPositive,evalBranch,actualConjunctionEvaluation,
       shapeEarlier,resultCode,ownType 1 i old ctx cod c,intrinsic]
     by_cases success : good
-    · simp [bits.mpr success,if_pos (sourceGood.mpr success)]
+    · rw [if_pos (sourceGood.mpr success),if_pos (And.intro (rfl : (1 : Nat) = 1) (bits.mpr success)),
+        if_neg (show (1 : Nat) ≠ 0 from by decide)]
     · have reject := fun h : evaluate (admittedChildren T) (tape i old ctx) = 1 => success (bits.mp h)
       have rejected : ¬ (typeGuard s dom && typeGuard s cod &&
           (intrinsicWindow s ctx fn == arrow dom cod+1) && (intrinsicWindow s ctx arg == dom+1)) :=
         fun h => success (sourceGood.mp h)
-      simp [reject,if_neg rejected,constantZero,evaluate]
+      have conjunctionReject : ¬ ((1 : Nat) = 1 ∧
+          evaluate (admittedChildren T) (tape i old ctx) = 1) := fun h => reject h.2
+      rw [if_neg rejected,if_neg conjunctionReject,if_pos (show (0 : Nat) = 0 from rfl)] <;> rfl
   · have absent : evaluate shapeCheck (tape i old ctx) ≠ 1 :=
       fun h => hit ((shape i old ctx).mp h)
     have zero : evaluate shapeCheck (tape i old ctx) = 0 := by

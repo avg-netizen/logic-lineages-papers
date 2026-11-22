@@ -1,0 +1,52 @@
+{
+  "status": "proof-only branch rewriting; native gate pending",
+  "immutable_previous_verified_remote": "2608bb0b6d151b281498a8cd468fbaae2f7da2f4",
+  "previous_source_local_prefix": "ba5e9f1a2",
+  "receipt": {
+    "path": "formalization/build-reports/1795355217742938295-10.json",
+    "sha256": "8a2bf15bfde3ae15bd8d75c1604a225c8669649b596884f70dcd777d09bb7078"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795355217742938295-10-LogicLineages-PersistentMarking-NumberedWindowInternalStrictAuxWindowNumericProof.log",
+    "sha256": "13a0cc7f4a05621f25775fc9f530aeba7922ff6a49bf1f5dc601c9c083c108e8"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/strict-auxiliary-physical-window-numeric-initial-diagnostic.txt",
+    "sha256": "13a0cc7f4a05621f25775fc9f530aeba7922ff6a49bf1f5dc601c9c083c108e8"
+  },
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-STRICT-AUXILIARY-PHYSICAL-WINDOW-NUMERIC-REPAIR-01.patch",
+    "sha256": "856a7163f8b90580afb08f8b6408f4e40a05fc943dab65d31a9d6e7024600ba6"
+  },
+  "archived_failed_source": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalStrictAuxWindowNumericProof-01.lean",
+    "sha256": "1de892d8c4bf88975aa04feeddd4db50a205196fc0aebc49f9014cd69ea7a334"
+  },
+  "repaired_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowNumericProof.lean",
+    "sha256": "7017ec3a789318eebecfb1a15445ff340a61da99dbf9eb4076591279e41917b0"
+  },
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowTargets.lean",
+      "sha256": "815488026dd66c1b0f5c4b03af73ddf9353ec9fc1acb96831405adb59d762b94"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowThinTableProof.lean",
+      "sha256": "b1132a975f9cc007f2baf134a9431c0762aebef63fe52be7c673d28b596d15ec"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowChildProof.lean",
+      "sha256": "07c58437c21c41589ee08765b0973d1f990c5a646e004aa122d89b55663393b8"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowOpenProof.lean",
+      "sha256": "04cf86871d44c172a86dea18361c6399136307b72ef8d2fbdc917930db908424"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-STRICT-AUXILIARY-PHYSICAL-WINDOW-SOURCE-MAP.md",
+      "sha256": "d7f778d5ed82c4e965f4c668e000cb1618e00ea8658836730cf70a301987181e"
+    }
+  ],
+  "diagnosis": "Original broad simp normalized the right-hand Bool-to-Prop condition before if_pos or if_neg could match. Rewrite the actual source Bool branch first, then the separate physical conjunction tests with their proved outcomes; finish the rejected literal zero evaluation by reflexivity. No type, program, dependency, or open proof changed. Failed sorryAx lines are failure evidence only."
+}

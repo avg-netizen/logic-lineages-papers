@@ -1,0 +1,127 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowNumericProof.lean:136:4: error: unsolved goals
+case pos
+s : Settings
+base : Program 2
+T : Program 1
+baseCal : IntrinsicWindowCalibrated s base
+cal : TypeGuardCalibrated s T
+i old ctx : ℕ
+previous : ∀ n < i + 1, evaluate lookup ((i - n) ::ᵥ old ::ᵥ nil) = intrinsicWindow s ctx n
+dom cod fn arg : ℕ
+read : unpackNode (i + 1) = some (6, [dom, cod, fn, arg])
+fs :
+  run (field 0) (i + 1) = dom ∧ run (field 1) (i + 1) = cod ∧ run (field 2) (i + 1) = fn ∧ run (field 3) (i + 1) = arg
+d : evaluate (childAt 0) (tape i old ctx) = dom
+c : evaluate (childAt 1) (tape i old ctx) = cod
+fnCode : evaluate (childAt 2) (tape i old ctx) = fn
+argCode : evaluate (childAt 3) (tape i old ctx) = arg
+smallFn : fn < i + 1
+smallArg : arg < i + 1
+header : evaluate shapeCheck (tape i old ctx) = 1
+shapeEarlier : evaluate certain (tape i old ctx) = 1
+good : Prop :=
+  typeGuard s dom = true ∧
+    typeGuard s cod = true ∧ intrinsicWindow s ctx fn = arrow dom cod + 1 ∧ intrinsicWindow s ctx arg = dom + 1
+bits : evaluate (admittedChildren T) (tape i old ctx) = 1 ↔ good
+sourceGood :
+  (typeGuard s dom && typeGuard s cod && intrinsicWindow s ctx fn == arrow dom cod + 1 &&
+        intrinsicWindow s ctx arg == dom + 1) =
+      true ↔
+    good
+intrinsic :
+  intrinsicWindow s ctx (i + 1) =
+    if
+        (typeGuard s dom && typeGuard s cod && intrinsicWindow s ctx fn == arrow dom cod + 1 &&
+            intrinsicWindow s ctx arg == dom + 1) =
+          true then
+      cod + 1
+    else 0
+success : good
+⊢ typeGuard s dom = true ∧
+    typeGuard s cod = true ∧ intrinsicWindow s ctx fn = arrow dom cod + 1 ∧ intrinsicWindow s ctx arg = dom + 1
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowNumericProof.lean:137:4: error: unsolved goals
+case neg
+s : Settings
+base : Program 2
+T : Program 1
+baseCal : IntrinsicWindowCalibrated s base
+cal : TypeGuardCalibrated s T
+i old ctx : ℕ
+previous : ∀ n < i + 1, evaluate lookup ((i - n) ::ᵥ old ::ᵥ nil) = intrinsicWindow s ctx n
+dom cod fn arg : ℕ
+read : unpackNode (i + 1) = some (6, [dom, cod, fn, arg])
+fs :
+  run (field 0) (i + 1) = dom ∧ run (field 1) (i + 1) = cod ∧ run (field 2) (i + 1) = fn ∧ run (field 3) (i + 1) = arg
+d : evaluate (childAt 0) (tape i old ctx) = dom
+c : evaluate (childAt 1) (tape i old ctx) = cod
+fnCode : evaluate (childAt 2) (tape i old ctx) = fn
+argCode : evaluate (childAt 3) (tape i old ctx) = arg
+smallFn : fn < i + 1
+smallArg : arg < i + 1
+header : evaluate shapeCheck (tape i old ctx) = 1
+shapeEarlier : evaluate certain (tape i old ctx) = 1
+good : Prop :=
+  typeGuard s dom = true ∧
+    typeGuard s cod = true ∧ intrinsicWindow s ctx fn = arrow dom cod + 1 ∧ intrinsicWindow s ctx arg = dom + 1
+bits : evaluate (admittedChildren T) (tape i old ctx) = 1 ↔ good
+sourceGood :
+  (typeGuard s dom && typeGuard s cod && intrinsicWindow s ctx fn == arrow dom cod + 1 &&
+        intrinsicWindow s ctx arg == dom + 1) =
+      true ↔
+    good
+intrinsic :
+  intrinsicWindow s ctx (i + 1) =
+    if
+        (typeGuard s dom && typeGuard s cod && intrinsicWindow s ctx fn == arrow dom cod + 1 &&
+            intrinsicWindow s ctx arg == dom + 1) =
+          true then
+      cod + 1
+    else 0
+success : ¬good
+reject : evaluate (admittedChildren T) (tape i old ctx) = 1 → False
+rejected :
+  ¬(typeGuard s dom && typeGuard s cod && intrinsicWindow s ctx fn == arrow dom cod + 1 &&
+        intrinsicWindow s ctx arg == dom + 1) =
+      true
+⊢ (if evaluate (admittedChildren T) (tape i old ctx) = 1 then cod + 1 else 0) =
+    if
+        ((typeGuard s dom = true ∧ typeGuard s cod = true) ∧ intrinsicWindow s ctx fn = arrow dom cod + 1) ∧
+          intrinsicWindow s ctx arg = dom + 1 then
+      cod + 1
+    else 0
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowNumericProof.lean:136:29: warning: This simp argument is unused:
+  if_pos (sourceGood.mpr success)
+
+Hint: Omit it from the simp argument list.
+  simp [bits.mpr success,̵i̵f̵_̵p̵o̵s̵ ̵(̵s̵o̵u̵r̵c̵e̵G̵o̵o̵d̵.̵m̵p̵r̵ ̵s̵u̵c̵c̵e̵s̵s̵)̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowNumericProof.lean:141:12: warning: This simp argument is unused:
+  reject
+
+Hint: Omit it from the simp argument list.
+  s̵i̵m̵p̵ ̵[̵r̵e̵j̵e̵c̵t̵,̵i̵f̵_̵n̵e̵g̵ ̵r̵e̵j̵e̵c̵t̵e̵d̵,̵c̵o̵n̵s̵t̵a̵n̵t̵Z̵e̵r̵o̵,̵e̵v̵a̵l̵u̵a̵t̵e̵]̵s̲i̲m̲p̲ ̲[̲i̲f̲_̲n̲e̲g̲ ̲r̲e̲j̲e̲c̲t̲e̲d̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲Z̲e̲r̲o̲,̲ ̲e̲v̲a̲l̲u̲a̲t̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowNumericProof.lean:141:19: warning: This simp argument is unused:
+  if_neg rejected
+
+Hint: Omit it from the simp argument list.
+  simp [̵r̵e̵j̵e̵c̵t̵,̵i̵f̵_̵n̵e̵g̵ ̵r̵e̵j̵e̵c̵t̵e̵d̵,̵c̵o̵n̵s̵t̵a̵n̵t̵Z̵e̵r̵o̵,̵e̵v̵a̵l̵u̵a̵t̵e̵]̵[̲r̲e̲j̲e̲c̲t̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲Z̲e̲r̲o̲,̲ ̲e̲v̲a̲l̲u̲a̲t̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowNumericProof.lean:165:35: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'LogicLineages.PersistentMarking.NumberedWindowInternalStrictAuxWindowNumericProof.exact_StrictAuxWindowStepCalibration' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalStrictAuxWindowNumericProof.exact_StrictAuxIntrinsicCalibration' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalStrictAuxWindowNumericProof.exact_StrictAuxWindowCalibration' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
