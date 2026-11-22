@@ -1,0 +1,6 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualBitFamilyHighUniformProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualBitFamilyHighUniformProof.lean
+@@ -87 +87,2 @@
+-      rw [readWithin,if_pos (Finset.mem_toList.mpr used)]
++      have named : k ∈ names family := Finset.mem_toList.mpr used
++      rw [readWithin,if_pos named]

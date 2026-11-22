@@ -84,7 +84,8 @@ theorem exactGenericUniformChartChild : ExactGenericUniformChartChild := by
     have setup := exactGenericHighSetup B family p good lower funded
     have same (k : Nat) (used : k ∈ coordinates family) :
         Function.update lower greatest z (rename p k) = readWithin (names family) p lower outside z k := by
-      rw [readWithin,if_pos (Finset.mem_toList.mpr used)]
+      have named : k ∈ names family := Finset.mem_toList.mpr used
+      rw [readWithin,if_pos named]
     exact (exactRankedLiteralHigh f B chosen p.1 greatest lower (ranked p family)
       setup.1 z (setup.2 z within)).symm.trans
         (exactGenericRankTransport f (readWithin (names family) p lower outside z)
