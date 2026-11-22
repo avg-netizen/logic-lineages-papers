@@ -51,8 +51,10 @@ private theorem sourcePair {q : Nat} (head : run (header 3 1) q = 1) :
   let n := pair q 0
   have split : decode n = some (q,0) := encodedPair q 0
   obtain ⟨_, hq, hz⟩ := decoded split
-  change (argsNext (n+1) (table (n+1))) = _
-  unfold argsNext
+  change ((decode n).map (fun p =>
+    let q' := ((table (n+1)).getD p.1 default).1
+    let r' := ((table (n+1)).getD p.2 default).2
+    (q'.1+1+r'.1,max q'.2 r'.2))).getD default = _
   rw [split]
   change (((table (n+1)).getD q default).1.1+1+((table (n+1)).getD 0 default).2.1,
     max ((table (n+1)).getD q default).1.2 ((table (n+1)).getD 0 default).2.2) = _

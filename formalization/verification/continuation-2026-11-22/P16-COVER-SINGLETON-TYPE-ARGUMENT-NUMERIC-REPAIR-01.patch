@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSingletonTypeArgumentNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSingletonTypeArgumentNumericProof.lean
+@@ -54,2 +54,4 @@
+-  change (argsNext (n+1) (table (n+1))) = _
+-  unfold argsNext
++  change ((decode n).map (fun p =>
++    let q' := ((table (n+1)).getD p.1 default).1
++    let r' := ((table (n+1)).getD p.2 default).2
++    (q'.1+1+r'.1,max q'.2 r'.2))).getD default = _
