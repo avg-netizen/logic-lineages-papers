@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroClassOutputStateTargets
+import LogicLineages.PermittedControl.ActualZeroClassOutputStateProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualZeroClassOutputState :
+    ActualZeroClassOutputState.FullActualZeroClassOutputState :=
+  ActualZeroClassOutputState.fullActualZeroClassOutputState
+
+#print axioms fixed_actualZeroClassOutputState
+
+end LogicLineages.PermittedControl.StatementChecks

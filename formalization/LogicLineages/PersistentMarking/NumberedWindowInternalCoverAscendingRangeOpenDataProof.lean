@@ -131,6 +131,6 @@ theorem afterStep (bound previous out i : OTerm α)
   rw [unaryRename] at prior
   rw [NumberedWindowInternalCoverAscendingRangeSyntaxProof.atRename] at movedIH
   exact endCase (bound.relabel j) (previous.relabel j) (out.relabel j) one
-    (i.relabel j) movedRow actual movedSplit movedIH
+    (i.relabel j) movedRow actual movedSplit movedIH prior
 
 end LogicLineages.PersistentMarking.NumberedWindowInternalCoverAscendingRangeOpenDataProof
