@@ -1,0 +1,41 @@
+module
+public import LogicLineages.PermittedControl.ActualBoundedSignedRouteSemanticsTargets
+import LogicLineages.PermittedControl.ActualBoundedSignedRouteSemanticsLinearProof
+import LogicLineages.PermittedControl.ActualBoundedSignedRouteSemanticsNonlinearProof
+import LogicLineages.PermittedControl.ActualBoundedSignedRouteSemanticsSoundnessProof
+import LogicLineages.PermittedControl.ActualBoundedSignedRouteSemanticsCompletenessProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualReachedLinearRoute : ActualBoundedSignedRouteSemantics.ExactReachedLinearRoute :=
+  ActualBoundedSignedRouteSemantics.exactReachedLinearRoute
+
+theorem fixed_exactActualReachedNonlinearRoute : ActualBoundedSignedRouteSemantics.ExactReachedNonlinearRoute :=
+  ActualBoundedSignedRouteSemantics.exactReachedNonlinearRoute
+
+theorem fixed_exactActualBoundedSignedRouteSoundness :
+    ActualBoundedSignedRouteSemantics.ExactBoundedSignedRouteSoundness :=
+  ActualBoundedSignedRouteSemantics.exactBoundedSignedRouteSoundness
+
+theorem fixed_exactActualBoundedSignedRouteCompleteness :
+    ActualBoundedSignedRouteSemantics.ExactBoundedSignedRouteCompleteness :=
+  ActualBoundedSignedRouteSemantics.exactBoundedSignedRouteCompleteness
+
+theorem fixed_exactActualSufficientSignedRoutes : ActualBoundedSignedRouteSemantics.ExactActualSufficientSignedRoutes :=
+  ActualBoundedSignedRouteSemantics.exactActualSufficientSignedRoutes
+
+theorem fixed_fullActualBoundedSignedRouteSemantics :
+    ActualBoundedSignedRouteSemantics.FullActualBoundedSignedRouteSemantics :=
+  ⟨fixed_exactActualReachedLinearRoute,fixed_exactActualReachedNonlinearRoute,
+    fixed_exactActualBoundedSignedRouteSoundness,fixed_exactActualBoundedSignedRouteCompleteness,
+    fixed_exactActualSufficientSignedRoutes⟩
+
+#print axioms fixed_exactActualReachedLinearRoute
+#print axioms fixed_exactActualReachedNonlinearRoute
+#print axioms fixed_exactActualBoundedSignedRouteSoundness
+#print axioms fixed_exactActualBoundedSignedRouteCompleteness
+#print axioms fixed_exactActualSufficientSignedRoutes
+#print axioms fixed_fullActualBoundedSignedRouteSemantics
+
+end LogicLineages.PermittedControl.StatementChecks
