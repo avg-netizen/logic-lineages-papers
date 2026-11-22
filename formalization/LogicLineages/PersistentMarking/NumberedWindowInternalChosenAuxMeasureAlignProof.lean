@@ -74,10 +74,10 @@ theorem exact_OpenChosenAuxMeasureAlign : ExactOpenChosenAuxMeasureAlign := by
     obtain ⟨guess⟩ := exact_OpenChosenAuxMeasureObserved M body β Δ dom' cod' fn' arg'
       mf' ma' df' da' bf' ba' value f.observed a.observed f.coords a.coords actual
     have agrees := valueUnique P value p' ![key] ⟨Derivation.conjunctionLeft guess⟩ parent'
-    have matches := outputTransport chosenCombine value p' ![mf',ma'] agrees actual
+    have sameOutput := outputTransport chosenCombine value p' ![mf',ma'] agrees actual
     obtain ⟨bounds⟩ := exact_OpenChosenAuxMeasureObserved M body β Δ dom' cod' fn' arg'
-      mf' ma' df' da' bf' ba' p' f.observed a.observed f.coords a.coords matches
-    obtain ⟨combine⟩ := matches
+      mf' ma' df' da' bf' ba' p' f.observed a.observed f.coords a.coords sameOutput
+    obtain ⟨combine⟩ := sameOutput
     exact ⟨Derivation.conjunctionIntroduction combine bounds⟩
   obtain ⟨compiled⟩ := both
   exact ⟨⟨Derivation.conjunctionLeft compiled⟩,⟨Derivation.conjunctionRight compiled⟩⟩

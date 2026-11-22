@@ -1,0 +1,25 @@
+module
+public import LogicLineages.PermittedControl.OriginalMatrixActualReadTapeTargets
+import LogicLineages.PermittedControl.OriginalMatrixActualReadTapeProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalMatrixReadTape : OriginalMatrixActualReadTape.ExactReadTape :=
+  OriginalMatrixActualReadTape.exactReadTape
+
+theorem fixed_exactOriginalMatrixRowState : OriginalMatrixActualReadTape.ExactRowState :=
+  OriginalMatrixActualReadTape.exactRowState
+
+theorem fixed_exactOriginalGuardedMatrixTapes : OriginalMatrixActualReadTape.ExactGuardedMatrixTapes :=
+  OriginalMatrixActualReadTape.exactGuardedMatrixTapes
+
+theorem fixed_fullOriginalMatrixActualReadTape : OriginalMatrixActualReadTape.FullOriginalMatrixActualReadTape :=
+  ⟨fixed_exactOriginalMatrixReadTape,fixed_exactOriginalMatrixRowState,fixed_exactOriginalGuardedMatrixTapes⟩
+
+#print axioms fixed_exactOriginalMatrixReadTape
+#print axioms fixed_exactOriginalMatrixRowState
+#print axioms fixed_exactOriginalGuardedMatrixTapes
+#print axioms fixed_fullOriginalMatrixActualReadTape
+
+end LogicLineages.PermittedControl.StatementChecks

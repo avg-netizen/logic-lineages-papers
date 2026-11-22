@@ -1,0 +1,10 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChosenAuxMeasureAlignProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChosenAuxMeasureAlignProof.lean
+@@ -77 +77 @@
+-    have matches := outputTransport chosenCombine value p' ![mf',ma'] agrees actual
++    have sameOutput := outputTransport chosenCombine value p' ![mf',ma'] agrees actual
+@@ -79,2 +79,2 @@
+-      mf' ma' df' da' bf' ba' p' f.observed a.observed f.coords a.coords matches
+-    obtain ⟨combine⟩ := matches
++      mf' ma' df' da' bf' ba' p' f.observed a.observed f.coords a.coords sameOutput
++    obtain ⟨combine⟩ := sameOutput

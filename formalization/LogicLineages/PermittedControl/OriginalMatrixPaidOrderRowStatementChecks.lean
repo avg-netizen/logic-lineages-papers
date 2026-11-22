@@ -1,0 +1,25 @@
+module
+public import LogicLineages.PermittedControl.OriginalMatrixPaidOrderRowTargets
+import LogicLineages.PermittedControl.OriginalMatrixPaidOrderRowPreparationProof
+import LogicLineages.PermittedControl.OriginalMatrixPaidOrderRowProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalMatrixSourceShortPreparation :
+    OriginalMatrixPaidOrderRow.ExactSourceShortPreparation :=
+  OriginalMatrixPaidOrderRow.exactSourceShortPreparation
+
+theorem fixed_exactOriginalMatrixPaidSourceOrderRow :
+    OriginalMatrixPaidOrderRow.ExactPaidSourceOrderRow :=
+  OriginalMatrixPaidOrderRow.exactPaidSourceOrderRow
+
+theorem fixed_fullOriginalMatrixPaidOrderRow :
+    OriginalMatrixPaidOrderRow.FullOriginalMatrixPaidOrderRow :=
+  ⟨fixed_exactOriginalMatrixSourceShortPreparation,fixed_exactOriginalMatrixPaidSourceOrderRow⟩
+
+#print axioms fixed_exactOriginalMatrixSourceShortPreparation
+#print axioms fixed_exactOriginalMatrixPaidSourceOrderRow
+#print axioms fixed_fullOriginalMatrixPaidOrderRow
+
+end LogicLineages.PermittedControl.StatementChecks

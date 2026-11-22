@@ -1,0 +1,19 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChosenAuxMeasureAlignProof.lean:77:9: error: unexpected token 'matches'; expected '(', ':=', '|' or term
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChosenAuxMeasureAlignProof.lean:77:9: error: Missing cases:
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChosenAuxMeasureAlignProof.lean:49:76: error: unsolved goals
+M : Program 1
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+dom cod fn arg mf ma p df da bf ba : OTerm α
+parent : Nonempty (Derivation body Γ (measureGraph M chosenCombine p (auxiliaryTerm dom cod fn arg)))
+fnData : AuxMeasureChild M body Γ fn mf df bf
+argData : AuxMeasureChild M body Γ arg ma da ba
+P : Program 1 := selectedMeasure (measureUpdate M chosenCombine)
+both :
+  Nonempty
+    (Derivation body Γ (programGraph chosenCombine p ![mf, ma] ⊓ parentMeasureAndBounds M dom cod fn arg p df da bf ba))
+⊢ AuxMeasureParentResult M body Γ dom cod fn arg mf ma p df da bf ba
+'LogicLineages.PersistentMarking.NumberedWindowInternalChosenAuxMeasureAlignProof.exact_OpenChosenAuxMeasureAlign' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]
