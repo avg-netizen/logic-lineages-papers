@@ -39,7 +39,8 @@ theorem exactOriginalChartPrototype : ExactOriginalChartPrototype := by
           fun h => atGreatest h.2
         rw [replay,if_neg inactive]
         change readWithin names branch lower outside (seed C branch lower) name = _
-        simp only [readWithin,if_pos member,Function.update_of_ne atGreatest]
+        have away : rename branch name ≠ top branch := atGreatest
+        simp only [readWithin,if_pos member,Function.update_of_ne away]
     · have inactive : ¬ (name ∈ support (matrix known gates p) ∧ rename branch name = top branch) :=
         fun h => member h.1
       rw [replay,if_neg inactive]

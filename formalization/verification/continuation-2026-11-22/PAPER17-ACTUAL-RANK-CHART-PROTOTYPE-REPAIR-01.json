@@ -1,0 +1,50 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "e638c8b672963675d0d2e9f433dd814db3f3be52",
+  "failed_source_local_commit": "0b910da51b6fa19e0ab14d6854737b75903cf5b1",
+  "failed_source_tree": "1441d58f1436f82139f97bc206714d8ef8210f0b",
+  "failed_exact_gate_receipt": "1795371630001307024-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualRankChartPrototypeStatementChecks",
+  "failed_receipt_sha256": "ce373125b66b53481102695209e25f4a46d53ddc4d77434a61192a0b223b7cc5",
+  "failed_exact_module_log_sha256": "07929ccb4a4d3002c803835d6df0d2c383c7ca56f99eea5d807ab26162120084",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualRankChartPrototypeProof.lean:38:6: error: unsolved goals\ncase neg\nB : \u2115\nknown : List \u2115\ngates : List OriginalPrintedCircuitSequential.Gate\np : OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalForm.Formula\npositive : Bool\nbranch : ActualFiniteOrderBranches.Pattern\nused : branch \u2208 OriginalPrintedPlainMatrixOrderBranches.branches known gates p\nnonempty : 0 < branch.1\nconsistent : Consistent branch\nlower outside : \u2115 \u2192 \u2115\nchart : ActualLowerRankChartRows.LowerChartCondition (cutoff B known gates p positive) (top branch) lower\nnames : List \u2115 := support (matrix known gates p)\nC : \u2115 := cutoff B known gates p positive\n\u03b8 : \u2115 \u2192 \u2115 := prototype C names branch lower outside\ngreatest : \u2115 := top branch\nguard : (ActualFiniteOrderBranches.guard branch).eval (prototype C names branch lower outside)\nfunded : \u2200 name \u2208 names, C \u2264 prototype C names branch lower outside name\nrank :\n  \u2200 i \u2264 top branch,\n    realized (prototype C names branch lower outside) branch i =\n      Function.update lower (top branch) (seed C branch lower) i\nagree : \u2200 i < greatest, realized \u03b8 branch i = lower i\nbound : rankedPredecessor greatest (realized \u03b8 branch) = rankedPredecessor greatest lower\nz name : \u2115\nmember : name \u2208 names\natGreatest : \u00acrename branch name = greatest\ninactive : \u00ac(name \u2208 support (matrix known gates p) \u2227 rename branch name = top branch)\n\u22a2 Function.update lower (top branch) (seed C branch lower) (rename branch name) =\n    Function.update lower (top branch) z (rename branch name)\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualRankChartPrototypeProof.lean:42:44: warning: This simp argument is unused:\n  Function.update_of_ne atGreatest\n\nHint: Omit it from the simp argument list.\n  simp only [\u0335r\u0335e\u0335a\u0335d\u0335W\u0335i\u0335t\u0335h\u0335i\u0335n\u0335,\u0335i\u0335f\u0335_\u0335p\u0335o\u0335s\u0335 \u0335m\u0335e\u0335m\u0335b\u0335e\u0335r\u0335,\u0335F\u0335u\u0335n\u0335c\u0335t\u0335i\u0335o\u0335n\u0335.\u0335u\u0335p\u0335d\u0335a\u0335t\u0335e\u0335_\u0335o\u0335f\u0335_\u0335n\u0335e\u0335 \u0335a\u0335t\u0335G\u0335r\u0335e\u0335a\u0335t\u0335e\u0335s\u0335t\u0335]\u0335[\u0332r\u0332e\u0332a\u0332d\u0332W\u0332i\u0332t\u0332h\u0332i\u0332n\u0332,\u0332 \u0332i\u0332f\u0332_\u0332p\u0332o\u0332s\u0332 \u0332m\u0332e\u0332m\u0332b\u0332e\u0332r\u0332]\u0332\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+  "failed_original_native_log_sha256": "c8cb01376f47224c518f68b69bdfd5e3da0d886a0ce6b4a00c972423aad04395",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualRankChartPrototypeProof.lean",
+  "failed_proof_sha256": "f589cabbc80816c1f1a59d0b91a2000698ea5280deb139c0c6fcdbf8a38cd52b",
+  "repaired_proof_sha256": "071c72d9abbcec0c65092381fdaf1a5eced8ae9aeb25d106ab9c41312895e00c",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RANK-CHART-PROTOTYPE-REPAIR-01.patch",
+  "patch_sha256": "e386daec39d336b38f5e158dd107a34c7b0b743f3067d4ff5c06da6b5f307665",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RANK-CHART-PROTOTYPE-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "a59d5d0e18102780dcdf0d0aa57f45517d25efe8ad65df7d6822db9b02638065",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualRankChartPrototypeReadProof.lean": "491e248dc4a76665e9230e9dad62d77232cf3d9f86b90bcf8b09d2da12af148c",
+    "formalization/LogicLineages/PermittedControl/ActualRankChartPrototypeStatementChecks.lean": "6a1a3e73266dbc301d6204fc0b718174e7480c3406a78cbcfaecb14d56c07391",
+    "formalization/LogicLineages/PermittedControl/ActualRankChartPrototypeTargets.lean": "2b7b134f48cc50cecf964c32a98cbf5c637b951817fcfa733baffb0f3aeec50d",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RANK-CHART-PROTOTYPE-SOURCE-MAP.md": "2b614cd5e18df9f05c649ca26221913c8817c139da42d2aff1dfbb6c71f289bc"
+  },
+  "static_module_closure": {
+    "Proof": {
+      "local": 309,
+      "external": 35,
+      "contains_totient": false
+    },
+    "ReadProof": {
+      "local": 308,
+      "external": 35,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 310,
+      "external": 35,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 303,
+      "external": 35,
+      "contains_totient": false
+    }
+  },
+  "scope": "Expose exact top branch rank in the away-from-greatest case before simplifying the two identical lower reads. Scope, targets, data and imports unchanged."
+}
