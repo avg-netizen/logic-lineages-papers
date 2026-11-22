@@ -74,7 +74,7 @@ private theorem rowCases (F : Program 1) (h a before out : OTerm α) (goal : For
   rw [inputsRename] at head
   apply programCases (scratchRow (constantZero 2) R) ![a.relabel j,z,z] (goal.relabel j)
   intro γ g Ξ mt retain tail
-  simp only [tripleInputsRename,zRelabel] at tail
+  simp only [tripleInputsRename,zRelabel,Term.relabel_relabel] at tail
   let k := g ∘ j
   have both := keepThrough j g keep retain
   have head' := renameInto head g Ξ retain
