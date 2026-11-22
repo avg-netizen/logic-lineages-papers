@@ -1,0 +1,52 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "5715081d61c6eadc5e1c4b92fb5ed4271f0e9157",
+  "failed_source_local_commit": "028e3423b7c8d56df98855b6ddb511dea2fb3f04",
+  "failed_source_tree": "a18f243a648359cf3985db6d51ff6dc6207da7ef",
+  "failed_exact_gate_receipt": "1795379840405031349-101",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualCanonicalFundedTerminalStatementChecks",
+  "failed_receipt_sha256": "706b797d5c70ff80b5da23dd1917e682a8bd9798de7be4d393fa193a50932139",
+  "failed_exact_module_log_sha256": "3adbc49cb9da1f53f174504424dbddb9a970f5d3e1fa5579850dbb654e769b40",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalFundedTerminalTruthProof.lean:53:17: error: Invalid `\u27e8...\u27e9` notation: The expected type of this term could not be determined\n",
+  "failed_original_native_log_sha256": "2da1f578fe1db6033fe34e0f7f763aeba9a370068f0a4628520aee91e352b4dd",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualCanonicalFundedTerminalTruthProof.lean",
+  "failed_proof_sha256": "bd936b0152a1838be1caef0784164c00f84dd8f9862f6ac9e36ab26ed358d2d2",
+  "repaired_proof_sha256": "3cc62c45ff2ce09261b5e8cadb07f9bac81f62364d61272b2f11467ac453674b",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-FUNDED-TERMINAL-REPAIR-02.patch",
+  "patch_sha256": "6340309e5439a7bae9e18113afd8e54bc1c519b74e7bb02be8c2a9f450617c7b",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-FUNDED-TERMINAL-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "b63edc833da932486d6735bc6fe73f80ec7b10cc50f7be0626b9a473685662d4",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-FUNDED-TERMINAL-REPAIR-01.json": "e1a75cc27c280f07f339541277530a2417327f02fb0ac9bc5626748e8e30073f"
+  },
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalFundedTerminalProof.lean": "d6c7bedd7e0590fec40e56f90b7c336217db1731f4422b07e665b2a61aaf7b94",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalFundedTerminalStatementChecks.lean": "fb6db27acd5452025c6c71887f2a363d22dd66981c19a20cb973393c5e649515",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalFundedTerminalTargets.lean": "1a0bc599ae0c4b6a919902b7bdb0e1b9a2257589a66c8f16d51bb250d25c819e",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-FUNDED-TERMINAL-SOURCE-MAP.md": "e62030d679cba7c4f51577fe383140052fb52fb75e629b1ae01e851249b7246b"
+  },
+  "static_module_closure": {
+    "Proof": {
+      "local": 603,
+      "external": 43,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 604,
+      "external": 43,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 226,
+      "external": 34,
+      "contains_totient": false
+    },
+    "TruthProof": {
+      "local": 502,
+      "external": 43,
+      "contains_totient": false
+    }
+  },
+  "scope": "Replace anonymous outer conjunction with explicitly typed And.intro for the exact already-proved NonzeroForward branch. No change to mathematical targets, values, hypotheses, or other proof leaves."
+}

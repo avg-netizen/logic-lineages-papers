@@ -50,6 +50,7 @@ theorem exactFundedForwardTruth : ExactFundedForwardTruth := by
       intro test positive
       rw [value]
       exact tests test positive
-    exact Or.inr ⟨active,verdict⟩
+    exact Or.inr (show ActiveAt top xs ∧ NonzeroForward f B ρ r top initial stopped xs from
+      And.intro active verdict)
 
 end LogicLineages.PermittedControl.ActualCanonicalFundedTerminal

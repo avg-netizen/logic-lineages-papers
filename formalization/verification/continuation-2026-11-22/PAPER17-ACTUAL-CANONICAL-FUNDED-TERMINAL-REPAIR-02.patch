@@ -1,0 +1,6 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualCanonicalFundedTerminalTruthProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualCanonicalFundedTerminalTruthProof.lean
+@@ -53 +53,2 @@
+-    exact Or.inr ⟨active,verdict⟩
++    exact Or.inr (show ActiveAt top xs ∧ NonzeroForward f B ρ r top initial stopped xs from
++      And.intro active verdict)
