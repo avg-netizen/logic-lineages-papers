@@ -69,7 +69,8 @@ private theorem supportRenamed (rename : Nat → Nat) (rows : List Row) :
         simp only [List.map_map]
         apply congrArg (fun h : WeightedOperand → Nat => r.2.2.map h)
         funext t
-        cases t.2 <;> rfl
+        rcases t with ⟨w,operand⟩
+        cases operand <;> rfl
       change ((r.2.2.map (renameTerm rename)).map (fun t => t.2.rank)) ++
           support (rows.map (renameRow rename)) =
         (((r.2.2.map (fun t => t.2.rank)) ++ support rows).map rename)

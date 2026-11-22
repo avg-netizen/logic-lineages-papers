@@ -1,0 +1,54 @@
+{
+  "status": "exact source-only narrow proof repair; native not invoked by author",
+  "failed_source_remote_commit": "5edcc347aef723a48f43f3bad82b7bec19f1e711",
+  "failed_source_local_commit": "30038934c",
+  "failed_exact_gate_receipt": "1795357025998550125-90",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalMatrixDenseRanksStatementChecks",
+  "failed_receipt_sha256": "11704d6d791052446f742b0418ec1cc055a004ccfd30e660472f3b08c4bb7b6d",
+  "failed_exact_module_log_sha256": "ab8cb4a7200dc3c73b15d0e716b9d62da70b08bee51fbc352a591b29a0dcbafc",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalMatrixDenseRanksProof.lean:72:22: error: Tactic `rfl` failed: The left-hand side\n  ((fun t => t.2.rank) \u2218 renameTerm rename) t\nis not definitionally equal to the right-hand side\n  (rename \u2218 fun t => t.2.rank) t\n\ncase coordinate\nrename : \u2115 \u2192 \u2115\nr : Row\nrows : List Row\nih : support (List.map (renameRow rename) rows) = List.map rename (support rows)\nt : WeightedOperand\nrank\u271d : \u2115\n\u22a2 ((fun t => t.2.rank) \u2218 renameTerm rename) t = (rename \u2218 fun t => t.2.rank) t\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalMatrixDenseRanksProof.lean:72:22: error: Tactic `rfl` failed: The left-hand side\n  ((fun t => t.2.rank) \u2218 renameTerm rename) t\nis not definitionally equal to the right-hand side\n  (rename \u2218 fun t => t.2.rank) t\n\ncase ordinary\nrename : \u2115 \u2192 \u2115\nr : Row\nrows : List Row\nih : support (List.map (renameRow rename) rows) = List.map rename (support rows)\nt : WeightedOperand\nrank\u271d : \u2115\nfield\u271d : FieldComparison.ValueField\n\u22a2 ((fun t => t.2.rank) \u2218 renameTerm rename) t = (rename \u2218 fun t => t.2.rank) t\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalMatrixDenseRanksProof.lean:72:22: error: Tactic `rfl` failed: The left-hand side\n  ((fun t => t.2.rank) \u2218 renameTerm rename) t\nis not definitionally equal to the right-hand side\n  (rename \u2218 fun t => t.2.rank) t\n\ncase count\nrename : \u2115 \u2192 \u2115\nr : Row\nrows : List Row\nih : support (List.map (renameRow rename) rows) = List.map rename (support rows)\nt : WeightedOperand\nrank\u271d : \u2115\nlam\u271d mu\u271d : NONote\n\u22a2 ((fun t => t.2.rank) \u2218 renameTerm rename) t = (rename \u2218 fun t => t.2.rank) t",
+  "failed_original_native_log_sha256": "6ebd300d4973516f111bd244b73d94d5186dd1a2fbba6e30beb577aafad248a3",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalMatrixDenseRanksProof.lean",
+  "failed_proof_sha256": "875b57f40f58b912a4349fbee790606577e73d83478c008f3226da008befb40e",
+  "repaired_proof_sha256": "7cad7061de70b409e9d4f4bc8646ad383fb6091c14bb4e2a35deec7b24b2cb18",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-MATRIX-DENSE-RANKS-REPAIR-01.patch",
+  "patch_sha256": "38e159f81d03da32625123acd37a045f9dfc9951b4a7d53ace80f6c3b20c8c30",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-MATRIX-DENSE-RANKS-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "a45a596b47c0d4ca5b8340f56989ed13d5d3d14e3664929dd1b88b21dd2d2c43",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalMatrixDenseRanksTargets.lean": "7e30197ae05bc02302048c0cce0d8d149829e594ee3f6487ce25ed6d7bf99fb6",
+    "formalization/LogicLineages/PermittedControl/OriginalMatrixDenseRanksTapeProof.lean": "f938bfb0f0cfbf90b504f32dac7858bef69fbbe6df8270f00fe3a535a70e7099",
+    "formalization/LogicLineages/PermittedControl/OriginalMatrixDenseRanksStatementChecks.lean": "a9b41caf92c1693500690f1900a2eadf4e8cdfaa066c6767f348ee4016dee793",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-MATRIX-DENSE-RANKS-SOURCE-MAP.md": "e8e7c42c03a0c02f05e541a10ec87646d4e7bb113ec5d10f1a4e89f933e53cda"
+  },
+  "static_closure_unchanged": {
+    "Targets": {
+      "local": 183,
+      "external": 34,
+      "contains_totient": false,
+      "has_finset_sort": true
+    },
+    "TapeProof": {
+      "local": 184,
+      "external": 34,
+      "contains_totient": false,
+      "has_finset_sort": true
+    },
+    "Proof": {
+      "local": 186,
+      "external": 34,
+      "contains_totient": false,
+      "has_finset_sort": true
+    },
+    "StatementChecks": {
+      "local": 187,
+      "external": 34,
+      "contains_totient": false,
+      "has_finset_sort": true
+    }
+  },
+  "downstream_manifest_untouched": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-DENSE-RANKS-AUTHOR-MANIFEST.json",
+  "downstream_original_manifest_sha256": "b19e284adb858cc11a22399aeb84ffd9ba0184feeb0652b9378b5d6bcb058302",
+  "scope": "Expose the original signed pair before splitting the operand, so the original rank computation reduces in the exact composition identity. No target, imports, compiler or semantics changes."
+}
