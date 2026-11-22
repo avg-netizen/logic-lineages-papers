@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualPaidSignedRouteProjectedSourceTargets
+import LogicLineages.PermittedControl.ActualPaidSignedRouteProjectedSourceProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualPaidSignedRouteProjectedSource
+
+theorem fixed_exactActualPaidSignedRouteProjectedSource : ExactActualPaidSignedRouteProjectedSource :=
+  exactActualPaidSignedRouteProjectedSource
+
+#print axioms fixed_exactActualPaidSignedRouteProjectedSource
+
+end LogicLineages.PermittedControl.StatementChecks
