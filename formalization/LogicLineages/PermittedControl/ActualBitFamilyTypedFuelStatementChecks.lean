@@ -1,0 +1,20 @@
+module
+public import LogicLineages.PermittedControl.ActualBitFamilyTypedFuelTargets
+import LogicLineages.PermittedControl.ActualBitFamilyTypedFuelProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualBitFamilyTypedFuel
+
+theorem fixed_exactTypedFuelSound : ExactTypedFuelSound := exactTypedFuelSound
+theorem fixed_exactTypedFuelComplete : ExactTypedFuelComplete := exactTypedFuelComplete
+theorem fixed_exactTypedFamilySolve : ExactTypedFamilySolve := exactTypedFamilySolve
+theorem fixed_fullActualBitFamilyTypedFuel : FullActualBitFamilyTypedFuel :=
+  ⟨fixed_exactTypedFuelSound,fixed_exactTypedFuelComplete,fixed_exactTypedFamilySolve⟩
+
+#print axioms fixed_exactTypedFuelSound
+#print axioms fixed_exactTypedFuelComplete
+#print axioms fixed_exactTypedFamilySolve
+#print axioms fixed_fullActualBitFamilyTypedFuel
+
+end LogicLineages.PermittedControl.StatementChecks
