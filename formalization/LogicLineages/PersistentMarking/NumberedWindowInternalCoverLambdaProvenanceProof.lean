@@ -44,7 +44,7 @@ theorem exact_CoverLambdaSourceProvenance : ExactCoverLambdaSourceProvenance := 
   refine ⟨smaller,?_,?_⟩
   · have atParent : (syntaxBits raw).1 = (typeBit ty && (syntaxBits q).1) := by
       change termNext raw (table raw) = _
-      simp [termNext,read,termParts,readSyntax smaller]
+      simp only [termNext,read,Option.any_some,termParts,readSyntax smaller]
     rw [atParent,Bool.and_eq_true]
   · rw [termBounds read]
     change (((NumberedWindowCoverBoundsAlgorithm.table raw).getD q default).1.1 + 1,
