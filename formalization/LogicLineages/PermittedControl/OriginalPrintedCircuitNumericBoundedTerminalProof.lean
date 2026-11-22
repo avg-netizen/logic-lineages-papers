@@ -19,11 +19,11 @@ open OriginalPrintedCircuitTerminal (observe)
 open OriginalMixedTerminalTest (Test boundedNames)
 
 private theorem finishComputable : Computable finishBounded := by
-  have admit : Computable (fun p : TestArgs => BoundedSourcePrograms.Code.test p.2) :=
+  have admissionCheck : Computable (fun p : TestArgs => BoundedSourcePrograms.Code.test p.2) :=
     BoundedSourceProgramsProof.test_computable.comp Computable.snd
   have availability : Computable (fun p : TestArgs => namesFit (p.1,namesCode p.2)) :=
     namesFitPrimitive.to_comp.comp (Computable.fst.pair (namesComputable.comp Computable.snd))
-  have checked : Computable boundedGuard := Primrec.and.to_comp.comp admit availability
+  have checked : Computable boundedGuard := Primrec.and.to_comp.comp admissionCheck availability
   have present : Computable (fun p : TestArgs => boolCode (BoundedSourcePrograms.Code.answer p.1 p.2)) :=
     boolCodePrimitive.to_comp.comp BoundedSourceProgramsProof.answer_computable
   exact (Computable.cond checked present (Computable.const 0)).of_eq

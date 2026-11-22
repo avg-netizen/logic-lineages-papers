@@ -2,7 +2,7 @@ module
 public import LogicLineages.PermittedControl.OriginalPrintedCircuitNumericPlainTerminalTargets
 import LogicLineages.PermittedControl.OriginalPrintedCircuitNumericPlainTerminalPrimitiveProof
 import LogicLineages.PermittedControl.OriginalMixedTerminalTestReadProof
-import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchProgramsCalibrationProof
+import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsCodeCalibrationProof
 import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedRowsCodeStatementChecks
 import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.BoundedRowsSemanticProof
 import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.ZeroValuationCalibrationProof
@@ -14,6 +14,29 @@ open OrdinalComparison.LayeredComparison.SnyatkovCompletion
 open OriginalPrintedCircuitNumericRead (bank)
 open OriginalMixedTerminalTest (Test exactTerminalTestRead)
 open NormalForm (Formula Atom)
+
+private theorem originalVariablesFromAtoms (p : Formula) :
+    p.variables = (LinearRows.atoms p).flatMap (fun a => NormalForm.rowVariables a.row) := by
+  induction p <;> simp [Formula.variables,LinearRows.atoms,*]
+
+private theorem atomDataRow (a : Atom) : a.data.2.2 = NormalForm.rowData a.row := by
+  cases a <;> rfl
+
+private theorem termDataName (s : NormalForm.Summand) : s.data.2.1 = s.name := by
+  cases s <;> rfl
+
+private theorem decodedAtomData (a : Atom) :
+    LinearRows.Code.decodeAtom (Encodable.encode a.data) = a.data := by
+  simp only [LinearRows.Code.decodeAtom,Encodable.encodek,Option.getD_some]
+
+/-- The same literal name inventory as the original raw program. No
+comparison/cutoff or residue theorem is needed for this syntax fact. -/
+private theorem rawVariablesExact (p : Formula) :
+    MaximalPlainBranchPrograms.Code.variables p.encode = p.variables := by
+  rw [originalVariablesFromAtoms p]
+  simp only [MaximalPlainBranchPrograms.Code.variables,LinearRowsCodeProof.atoms_calibration,
+    List.flatMap_map,Function.comp_def,decodedAtomData,atomDataRow,NormalForm.rowData,
+    NormalForm.rowVariables,List.map_map,termDataName]
 
 private theorem atomVariablesOnlyExact (a : Atom) :
     atomVariablesOnly (Encodable.encode a.data) = true ↔
@@ -43,7 +66,7 @@ private theorem plainGuardExact (values : List Nat) (p : Formula) :
     plainGuard (values,p.encode) = true ↔
       (Test.rows p).Admitted ∧ ∀ n ∈ p.variables, n < values.length := by
   simp only [plainGuard,Bool.and_eq_true_iff,namesFit,List.all_eq_true,decide_eq_true_eq,
-    MaximalPlainBranchProgramsProof.variables_calibration,variablesOnlyExact]
+    rawVariablesExact,variablesOnlyExact]
 
 private def frozen (values : List Nat) (names : List Nat) (p : Formula) : Formula :=
   names.foldr (fun n r => BoundedRows.substitute n (bank values n) r) p
@@ -95,7 +118,7 @@ private theorem plainAnswerExact (values : List Nat) (p : Formula) (hp : (Test.r
     unfold plainAnswer
     change ZeroValuation.Code.evaluate ((MaximalPlainBranchPrograms.Code.variables p.encode).foldr
       (fun n r => BoundedRows.Code.formula n (bank values n) r) p.encode) = true ↔ _
-    rw [MaximalPlainBranchProgramsProof.variables_calibration,freezeCode,
+    rw [rawVariablesExact,freezeCode,
       ZeroValuationProof.literalCodeCalibration.2.2.2]
     exact (ZeroValuationProof.actualZeroEvaluator _).trans
       ((freezeEval values p.variables p (fun _ => 0)).trans

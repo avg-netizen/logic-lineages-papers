@@ -1,0 +1,48 @@
+{
+  "status": "narrow source-equivalent preflight dependency recut; no Lean invoked by author",
+  "blocked_source_remote_commit": "56efb6c83107bdfef2ffd13560869f66cc1723ed",
+  "blocked_native_receipt": null,
+  "blocked_preflight_log_sha256": "4555702ba3a9e8a2fb59f80d86a051043e18c08868d43f21cfc3df3c92d7225c",
+  "blocked_preflight_diagnostic": "Traceback (most recent call last):\n  File \"/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/scripts/check.py\", line 561, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/scripts/check.py\", line 435, in main\n    cache_context = checked_compiler_context(compiler, env, external_imports)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/scripts/check.py\", line 306, in checked_compiler_context\n    raise RuntimeError('Cannot identify external cached import: ' + module)\nRuntimeError: Cannot identify external cached import: Mathlib.Data.Nat.Totient",
+  "blocked_import_chain": [
+    "OriginalPrintedCircuitNumericPlainTerminalCalibrationProof",
+    "MaximalPlainBranchProgramsCalibrationProof",
+    "MaximalPlainBranchContextProof",
+    "MaximalPlainRowsSemanticProof",
+    "MaximalPlainRowsResidueProof",
+    "MaximalPlainRowsControlResidueProof",
+    "Mathlib.Data.Nat.Totient"
+  ],
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-PLAIN-TERMINAL-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "683dcf1a25af3c1a2dfeb3f42c2ae38d32ec2e8f0334651d0c4876f1f9515b00",
+  "blocked_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericPlainTerminalCalibrationProof.lean",
+  "blocked_proof_sha256": "a2d3623761cf4a17144b685efc752ceeee70440376e9b15fdad7f92da6f72841",
+  "recut_proof_sha256": "13c34f19d54d617bf9d90b6b4d5d8ffc4adf4c6cffaa05423cbadac09d9bab85",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-PLAIN-TERMINAL-RECUT-01.patch",
+  "patch_sha256": "c8d93b2a67eb30f17ce1d838c5e6164b5d1c08e31434ba74bde3e950c28ed412",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericPlainTerminalPrimitiveProof.lean": "5ce9602e26b7ac9e9431636adb9f394ff43807930a846b60cf541e23fd5ae84a",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericPlainTerminalRunProof.lean": "261985900266267b02f022ffdbba1daf4a36d900b2e6222b410f2efff73717b2",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericPlainTerminalStatementChecks.lean": "0c0bfc25c315d5b8588c9c6be084ee860574233222bd59981b3de85962ed1ea5",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericPlainTerminalTargets.lean": "4325c4865b40dca3fde4c8a6a4c00f4e412cdeb15a7d95d784b926ffec2411e3",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-PLAIN-TERMINAL-SOURCE-MAP.md": "e19eaec9fbe360f329ccad841a2b4c03cd1cb729b885ca1c9b6f1cb68f21437b"
+  },
+  "static_closure_before": {
+    "local": 407,
+    "external": 47
+  },
+  "static_closure_after": {
+    "local": 375,
+    "external": 41
+  },
+  "removed_external": [
+    "Mathlib.Data.List.Dedup",
+    "Mathlib.Data.List.OfFn",
+    "Mathlib.Data.List.Pairwise",
+    "Mathlib.Data.Nat.Totient",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.Tauto"
+  ],
+  "new_external": [],
+  "scope": "Replace the sole broad calibration import with direct exact raw-variable occurrence calibration from literal atom list and structural original variables. Same MaximalPlainBranchPrograms.Code.variables function, source rows, raw guard, scope, existing source map and all targets. Failure was preflight (no theorem or proof attempt)."
+}

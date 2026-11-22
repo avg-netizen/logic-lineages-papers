@@ -1,0 +1,35 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericPlainTerminalCalibrationProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericPlainTerminalCalibrationProof.lean
+@@ -5 +5 @@
+-import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchProgramsCalibrationProof
++import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsCodeCalibrationProof
+@@ -16,0 +17,23 @@
++
++private theorem originalVariablesFromAtoms (p : Formula) :
++    p.variables = (LinearRows.atoms p).flatMap (fun a => NormalForm.rowVariables a.row) := by
++  induction p <;> simp [Formula.variables,LinearRows.atoms,*]
++
++private theorem atomDataRow (a : Atom) : a.data.2.2 = NormalForm.rowData a.row := by
++  cases a <;> rfl
++
++private theorem termDataName (s : NormalForm.Summand) : s.data.2.1 = s.name := by
++  cases s <;> rfl
++
++private theorem decodedAtomData (a : Atom) :
++    LinearRows.Code.decodeAtom (Encodable.encode a.data) = a.data := by
++  simp only [LinearRows.Code.decodeAtom,Encodable.encodek,Option.getD_some]
++
++/-- The same literal name inventory as the original raw program. No
++comparison/cutoff or residue theorem is needed for this syntax fact. -/
++private theorem rawVariablesExact (p : Formula) :
++    MaximalPlainBranchPrograms.Code.variables p.encode = p.variables := by
++  rw [originalVariablesFromAtoms p]
++  simp only [MaximalPlainBranchPrograms.Code.variables,LinearRowsCodeProof.atoms_calibration,
++    List.flatMap_map,Function.comp_def,decodedAtomData,atomDataRow,NormalForm.rowData,
++    NormalForm.rowVariables,List.map_map,termDataName]
+@@ -46 +69 @@
+-    MaximalPlainBranchProgramsProof.variables_calibration,variablesOnlyExact]
++    rawVariablesExact,variablesOnlyExact]
+@@ -98 +121 @@
+-    rw [MaximalPlainBranchProgramsProof.variables_calibration,freezeCode,
++    rw [rawVariablesExact,freezeCode,

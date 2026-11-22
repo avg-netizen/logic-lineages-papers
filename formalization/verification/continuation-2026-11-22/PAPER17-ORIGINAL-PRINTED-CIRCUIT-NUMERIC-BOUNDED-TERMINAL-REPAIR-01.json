@@ -1,0 +1,30 @@
+{
+  "status": "local binder alpha-rename after preflight, no native invoked by author",
+  "blocked_source_remote_commit": "dcd7da4d4c04c63666e1d9f2e64398f529f31c8a",
+  "blocked_native_receipt": null,
+  "blocked_preflight_log_sha256": "8ac056b1746dbbd36ebd7402480dfce4a796a956192c265f2d705d708146f103",
+  "blocked_preflight_diagnostic": "Traceback (most recent call last):\n  File \"/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/scripts/check.py\", line 561, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/scripts/check.py\", line 402, in main\n    visit(module)\n  File \"/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/scripts/check.py\", line 396, in visit\n    visit(dependency)\n  File \"/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/scripts/check.py\", line 389, in visit\n    raise RuntimeError(\"Forbidden proof placeholder or axiom in \" + module)\nRuntimeError: Forbidden proof placeholder or axiom in LogicLineages.PermittedControl.OriginalPrintedCircuitNumericBoundedTerminalProof",
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-BOUNDED-TERMINAL-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "fe1b2cf4b2613428134ce031c16e5d94bf6a6a7c61d7eb9b9e776166c320b622",
+  "blocked_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericBoundedTerminalProof.lean",
+  "blocked_proof_sha256": "3d3d47c2d360b708722f76afc5a2aae80561301954602c5d6575f6d46c7f7507",
+  "repaired_proof_sha256": "fb4314e11ff2214bd5eb4ef3c6f0032c2e2e16f2600aa88ac41440a0bec3af68",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-BOUNDED-TERMINAL-REPAIR-01.patch",
+  "patch_sha256": "0884258c0474f95734f4c9ebc97a502584a73304766dc8e9c13272f5fb50d06d",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericBoundedTerminalNamesProof.lean": "096a768fa9c93fc13e750d54f1fa5937a53eb04c1c0543470bc0f7a247fa7beb",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericBoundedTerminalStatementChecks.lean": "84458fb08494e96a20152192dcda7c8940a9c568dcb8be9ac994fa9ce9457350",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericBoundedTerminalTargets.lean": "5b0d9a43f94ef484567648e39c0bdb0d22bc101b86709fa818991c9cbdf19fc6",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-BOUNDED-TERMINAL-SOURCE-MAP.md": "94ab531896ae9e2c282f536fbca574e9dca904945b6050a1f3b3bf1393844ad7"
+  },
+  "static_closure_unchanged": {
+    "target_local": 189,
+    "target_external": 32,
+    "gate_local": 400,
+    "gate_external": 40,
+    "excludes": [
+      "Mathlib.Data.Nat.Totient"
+    ]
+  },
+  "scope": "The token admit was the local name of a fully supplied proof for the original computable syntax test. Alpha-rename its binder and use to admissionCheck only. No placeholder, checker changes, theorem change, or reduction of scope."
+}
