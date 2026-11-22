@@ -151,7 +151,7 @@ private theorem topCase (f : Nat → Nat) (B : Nat) (hf : SelectedWithThreshold 
   have maxEq : max p.1.rank p.2.rank = top := greatest
   obtain ⟨shape,⟨ν,tie⟩,point⟩ := compared
   refine ⟨shape,⟨ν,?_⟩,?_⟩
-  · simpa only [maxEq] using tie
+  · simpa only [maxEq,topPacket] using tie
   · intro μ fit z paid
     have paidInput :
         if p.1.rank = p.2.rank then being ≤ z else ρ (min p.1.rank p.2.rank) < z := by
@@ -171,7 +171,7 @@ private theorem topCase (f : Nat → Nat) (B : Nat) (hf : SelectedWithThreshold 
         (topPacket p a).2.eval (Function.update μ 0 z) ↔
           ActualSignedOrdinaryPairHigh.source f (Function.update ρ top z)
             p.1.field p.2.field p.1.rank p.2.rank (topRequest a).1 (topRequest a).2 true := by
-      simpa only [maxEq] using check
+      simpa only [maxEq,topPacket] using check
     exact current.trans (sourceTop f (Function.update ρ top z) p a u v hu hv)
 
 theorem exactFullLabelPairGuard : ExactFullLabelPairGuard := by
