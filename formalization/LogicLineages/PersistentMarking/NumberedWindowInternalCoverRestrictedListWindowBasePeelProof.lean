@@ -105,8 +105,8 @@ theorem peelOrdinarySelectedBase (s : Settings) (B : Program 2) (T : Program 1)
   have shape := exact_OpenCoverHeadShape false body α Γ h [a] rfl
   have head := peelAtomic false s L ctx h result [a] rfl seen
   have tag4 := liftRawReport (header 4 2) ctx raw (suc z) shape.accepted
-  have tag5 := liftRawReport (header 5 5) ctx raw z (numberedRejectOrdinaryKey h a)
-  have tag2 := liftRawReport (header 2 2) ctx raw z (lambdaRejectHeadKey false h [a])
+  have tag5 := liftRawReport (header 5 5) ctx raw z (numberedRejectOrdinaryKey (body := body) (Γ := Γ) h a)
+  have tag2 := liftRawReport (header 2 2) ctx raw z (lambdaRejectHeadKey (body := body) (Γ := Γ) false h [a])
   have guarded := successorBranchElim (onRaw (header 4 2)) C (headPositive s C) (suc result) z xs tag4 head
   have passed := useHeadGuard s C ctx raw result guarded
   have num := zeroBranchElim (onRaw (header 5 5)) N (headPositive s N) (suc result) xs tag5 passed
@@ -128,7 +128,7 @@ theorem peelNumberedSelectedBase (s : Settings) (B : Program 2) (T : Program 1)
   have head := peelAtomic true s L ctx h result [ty,k,l,r] rfl seen
   have tag4 := liftRawReport (header 4 2) ctx raw z (shape.notOrdinary rfl)
   have tag5 := liftRawReport (header 5 5) ctx raw (suc z) shape.accepted
-  have tag2 := liftRawReport (header 2 2) ctx raw z (lambdaRejectHeadKey true h [ty,k,l,r])
+  have tag2 := liftRawReport (header 2 2) ctx raw z (lambdaRejectHeadKey (body := body) (Γ := Γ) true h [ty,k,l,r])
   have checked := zeroBranchElim (onRaw (header 4 2)) C (headPositive s C) (suc result) xs tag4 head
   have guarded := successorBranchElim (onRaw (header 5 5)) N (headPositive s N) (suc result) z xs tag5 checked
   have passed := useHeadGuard s N ctx raw result guarded
