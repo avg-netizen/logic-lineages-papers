@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.ActualRankChartPrototypeTargets
+import LogicLineages.PermittedControl.ActualRankChartPrototypeReadProof
+import LogicLineages.PermittedControl.ActualRankChartPrototypeProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualRankChartPrototype
+
+theorem fixed_exactChartConsistency : ExactChartConsistency := exactChartConsistency
+theorem fixed_exactPrototypeChart : ExactPrototypeChart := exactPrototypeChart
+theorem fixed_exactOriginalChartPrototype : ExactOriginalChartPrototype := exactOriginalChartPrototype
+theorem fixed_fullActualRankChartPrototype : FullActualRankChartPrototype :=
+  ⟨fixed_exactChartConsistency,fixed_exactPrototypeChart,fixed_exactOriginalChartPrototype⟩
+
+#print axioms fixed_exactChartConsistency
+#print axioms fixed_exactPrototypeChart
+#print axioms fixed_exactOriginalChartPrototype
+#print axioms fixed_fullActualRankChartPrototype
+
+end LogicLineages.PermittedControl.StatementChecks
