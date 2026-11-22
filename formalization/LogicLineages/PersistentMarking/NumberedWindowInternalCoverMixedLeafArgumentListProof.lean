@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalCoverMixedLeafArgumentTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverMixedLeafHeadProviderProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverArgumentGrammarInductionProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverMixedLeafArgumentListProof
+open NumberedWindowInternalCoverNamedLeafMeasureTargets (namedSharedMeasure)
+open NumberedWindowInternalCoverMixedLeafHeadProviderProof (exact_OpenCoverMixedLeafHeadProvider)
+open NumberedWindowInternalCoverArgumentGrammarInductionProof (exact_OpenCoverArgumentGrammarInduction)
+open NumberedWindowInternalCoverMixedLeafArgumentTargets
+
+theorem exact_OpenCoverMixedLeafArgumentList : ExactOpenCoverMixedLeafArgumentList := by
+  intro s M body α Γ raw accepted
+  exact exact_OpenCoverArgumentGrammarInduction (namedSharedMeasure M) (mixedLeafHead s)
+    s body α Γ raw (exact_OpenCoverMixedLeafHeadProvider s M body) accepted
+
+#print axioms exact_OpenCoverMixedLeafArgumentList
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalCoverMixedLeafArgumentListProof
