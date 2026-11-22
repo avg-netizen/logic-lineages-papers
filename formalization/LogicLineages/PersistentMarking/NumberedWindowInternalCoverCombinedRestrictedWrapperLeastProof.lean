@@ -1,0 +1,20 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedWrapperTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedWrapperProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedWrapperReportProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedWrapperLeastProof
+open NumberedWindowInternalCoverCombinedRestrictedWrapperProof (exact_OpenCoverCombinedRestrictedWrapper)
+open NumberedWindowInternalCoverCombinedRestrictedWrapperReportProof (exact_OpenCoverThinMatchingWindowReport)
+open NumberedWindowInternalCoverCombinedRestrictedWrapperTargets
+
+theorem exact_OpenCoverCombinedRestrictedOccurrenceLeast : ExactOpenCoverCombinedRestrictedOccurrenceLeast := by
+  intro V TV M M0 B T X s body α Γ ctx ty raw P W valid typed context
+  have actual := exact_OpenCoverCombinedRestrictedWrapper V TV M M0 B T s body α Γ ctx ty raw valid typed context
+  exact exact_OpenCoverThinMatchingWindowReport P.cover P.W P.V X s body α Γ ctx ty raw actual
+
+#print axioms exact_OpenCoverCombinedRestrictedOccurrenceLeast
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedWrapperLeastProof
