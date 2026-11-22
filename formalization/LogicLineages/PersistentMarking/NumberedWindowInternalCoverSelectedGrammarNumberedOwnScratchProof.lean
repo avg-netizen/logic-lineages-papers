@@ -59,7 +59,7 @@ private theorem atSuccessor (V Measure : Program 1) (s : Settings)
   let K := typesTerm s α
   let key := numberedTerm h ty k l r
   have hit := exact_OpenSelectedGrammarNumberedAtBounds body α Γ d H K M dl Ml lState lTerms lArgs dr Mr rState rTerms rArgs
-    prev prevTerms prevArgs next out args h ty k l r paid.prefix paid.suffix
+    prev prevTerms prevArgs next out args h ty k l r paid.«prefix» paid.suffix
     before after paid.headHit paid.typeHit paid.idBound
   have terms := exact_ObservedSelectedTerms (suc d) H K M next out args after
   have installed := exact_OpenSelectedGrammarFactoredScratch V Measure s m (suc d) M out key

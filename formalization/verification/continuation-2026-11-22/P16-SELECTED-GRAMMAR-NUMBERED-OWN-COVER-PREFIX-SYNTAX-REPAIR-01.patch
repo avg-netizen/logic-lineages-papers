@@ -1,0 +1,15 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarNumberedOwnTargets.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarNumberedOwnTargets.lean
+@@ -72 +72 @@
+-  prefix : BoundedNumberedArgs body Γ d (headsTerm s α) (typesTerm s α) M dl Ml lState lTerms lArgs l
++  «prefix» : BoundedNumberedArgs body Γ d (headsTerm s α) (typesTerm s α) M dl Ml lState lTerms lArgs l
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarNumberedOwnInputsRenameProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarNumberedOwnInputsRenameProof.lean
+@@ -61 +61 @@
+-  · have actual := boundedRename d (headsTerm s α) (typesTerm s α) M dl Ml lState lTerms lArgs l j keep paid.prefix
++  · have actual := boundedRename d (headsTerm s α) (typesTerm s α) M dl Ml lState lTerms lArgs l j keep paid.«prefix»
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarNumberedOwnScratchProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarNumberedOwnScratchProof.lean
+@@ -62 +62 @@
+-    prev prevTerms prevArgs next out args h ty k l r paid.prefix paid.suffix
++    prev prevTerms prevArgs next out args h ty k l r paid.«prefix» paid.suffix

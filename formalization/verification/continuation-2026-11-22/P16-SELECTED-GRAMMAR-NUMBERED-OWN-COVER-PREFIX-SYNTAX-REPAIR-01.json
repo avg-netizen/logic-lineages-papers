@@ -1,0 +1,99 @@
+{
+  "status": "pure escaping of a reserved source identifier, pending native proof gate",
+  "immutable_previous_verified_remote": "d813c3e432693cec74761a956e0632c7d1767e87",
+  "previous_source_local_prefix": "5a6aa0cfe",
+  "receipt": {
+    "path": "formalization/build-reports/1795352639028327570-10.json",
+    "sha256": "5f7b6913f309bfb1f0d2d14b66e1760e7ceff375ba8e31631503e7ac2c25fdaa"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-selected-grammar-numbered-own-target-initial-diagnostic.txt",
+    "sha256": "388678647022132e49b378cf7602ca065e8a55505b3d763ce8cc607c689f48b4"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795352639028327570-10-LogicLineages-PersistentMarking-NumberedWindowInternalCoverSelectedGrammarNumberedOwnTargets.log",
+    "sha256": "388678647022132e49b378cf7602ca065e8a55505b3d763ce8cc607c689f48b4"
+  },
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-SELECTED-GRAMMAR-NUMBERED-OWN-COVER-PREFIX-SYNTAX-REPAIR-01.patch",
+    "sha256": "50ee76531f998f03c8f85be21af9d011fede01aa54015ef19dbc886ed975f90f"
+  },
+  "scope": "Escape the original field name prefix in the declaration and its two projections. No renaming, mathematical change, changed field type, or changed program AST. No proof leaf was reached by the failed initial gate.",
+  "sources": [
+    {
+      "old_source": {
+        "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverSelectedGrammarNumberedOwnTargets-01.lean",
+        "sha256": "b6cbda3be746da8e7bc576fb442067ce5f2091efea0e02839d8715a8138fb4d8"
+      },
+      "repaired_source": {
+        "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarNumberedOwnTargets.lean",
+        "sha256": "76845b80526654ed3037710330cdb2749d61f2e9e5a889f1dda08f264e2a289a"
+      },
+      "native_status_initial": "target parse failed",
+      "changed_text": [
+        "  prefix :",
+        "  \u00abprefix\u00bb :"
+      ],
+      "patch_verified_forward_and_reverse": true,
+      "source_after_deescaping_is_byte_exact_previous": true,
+      "canonical_previous_sha256": "b6cbda3be746da8e7bc576fb442067ce5f2091efea0e02839d8715a8138fb4d8",
+      "canonical_repaired_sha256": "b6cbda3be746da8e7bc576fb442067ce5f2091efea0e02839d8715a8138fb4d8"
+    },
+    {
+      "old_source": {
+        "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverSelectedGrammarNumberedOwnInputsRenameProof-01.lean",
+        "sha256": "242cf857a323964e1cced77dac2b56419cc6d49925640d3708d8eb6cf1e321f1"
+      },
+      "repaired_source": {
+        "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarNumberedOwnInputsRenameProof.lean",
+        "sha256": "7cb0ddf3e09999fa02d81da5850ca4af8e0bbc499177f1b25aef53690845240e"
+      },
+      "native_status_initial": "proof not attempted; edit preserves escaped field spelling",
+      "changed_text": [
+        "paid.prefix",
+        "paid.\u00abprefix\u00bb"
+      ],
+      "patch_verified_forward_and_reverse": true,
+      "source_after_deescaping_is_byte_exact_previous": true,
+      "canonical_previous_sha256": "242cf857a323964e1cced77dac2b56419cc6d49925640d3708d8eb6cf1e321f1",
+      "canonical_repaired_sha256": "242cf857a323964e1cced77dac2b56419cc6d49925640d3708d8eb6cf1e321f1"
+    },
+    {
+      "old_source": {
+        "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverSelectedGrammarNumberedOwnScratchProof-01.lean",
+        "sha256": "fa190ea133602720aac599c5f50c02af8453191a359f4f2ddee21e45deabaf10"
+      },
+      "repaired_source": {
+        "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarNumberedOwnScratchProof.lean",
+        "sha256": "25b48e313279bf5d9118392fdbc9a73c59f3dd9f0c4737c1f13d7b605e71fb3d"
+      },
+      "native_status_initial": "proof not attempted; edit preserves escaped field spelling",
+      "changed_text": [
+        "paid.prefix",
+        "paid.\u00abprefix\u00bb"
+      ],
+      "patch_verified_forward_and_reverse": true,
+      "source_after_deescaping_is_byte_exact_previous": true,
+      "canonical_previous_sha256": "fa190ea133602720aac599c5f50c02af8453191a359f4f2ddee21e45deabaf10",
+      "canonical_repaired_sha256": "fa190ea133602720aac599c5f50c02af8453191a359f4f2ddee21e45deabaf10"
+    }
+  ],
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarNumberedOwnTermPartProof.lean",
+      "sha256": "b4c0dd9505be337cf9fd4793565693bcaecde876033c14c3b73d900370bb082f"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarNumberedOwnStageProof.lean",
+      "sha256": "1c7ded7e9e565f820784456e39571e332d316ea934e03a7faca776c71458dac2"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarNumberedOwnBoundsProof.lean",
+      "sha256": "ab01ee6431742aa8f9bddd1e0dc623233acc9fa38685b200dcc2e83858add999"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-SELECTED-GRAMMAR-NUMBERED-OWN-COVER-SOURCE-MAP.md",
+      "sha256": "7064ed4842975916126a23bd93e724e6f7a8dcd564c61f52fcd22c1f20656fbb"
+    }
+  ]
+}

@@ -69,7 +69,7 @@ an assertion of what the numbered evaluator accepts or returns. -/
 structure NumberedOwnInputs (V Measure : Program 1) (s : Settings)
     (body : Positive (Fin 1)) {α : Type} (Γ : List (Formula α))
     (m d M dl Ml lState lTerms lArgs dr Mr rState rTerms rArgs h ty k l r : OTerm α) : Prop where
-  prefix : BoundedNumberedArgs body Γ d (headsTerm s α) (typesTerm s α) M dl Ml lState lTerms lArgs l
+  «prefix» : BoundedNumberedArgs body Γ d (headsTerm s α) (typesTerm s α) M dl Ml lState lTerms lArgs l
   suffix : BoundedNumberedArgs body Γ d (headsTerm s α) (typesTerm s α) M dr Mr rState rTerms rArgs r
   headHit : Nonempty (Derivation body Γ (memberGraph (headsTerm s α) h))
   typeHit : Nonempty (Derivation body Γ (memberGraph (typesTerm s α) ty))

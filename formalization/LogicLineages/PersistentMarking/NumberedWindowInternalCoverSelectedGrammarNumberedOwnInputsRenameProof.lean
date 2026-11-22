@@ -58,7 +58,7 @@ theorem inputsRename (V Measure : Program 1) (s : Settings)
       (dr.relabel j) (Mr.relabel j) (rState.relabel j) (rTerms.relabel j) (rArgs.relabel j)
       (h.relabel j) (ty.relabel j) (k.relabel j) (l.relabel j) (r.relabel j) := by
   constructor
-  · have actual := boundedRename d (headsTerm s α) (typesTerm s α) M dl Ml lState lTerms lArgs l j keep paid.prefix
+  · have actual := boundedRename d (headsTerm s α) (typesTerm s α) M dl Ml lState lTerms lArgs l j keep paid.«prefix»
     simpa only [headsTerm,typesTerm,numeralRename] using actual
   · have actual := boundedRename d (headsTerm s α) (typesTerm s α) M dr Mr rState rTerms rArgs r j keep paid.suffix
     simpa only [headsTerm,typesTerm,numeralRename] using actual
