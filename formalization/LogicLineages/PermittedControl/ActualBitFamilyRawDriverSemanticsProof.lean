@@ -41,10 +41,10 @@ theorem typedAdvanceSound (f : Nat → Nat) (B : Nat) (bound : BoundProgram)
   constructor
   · rintro (done | ⟨child,listed,yes⟩)
     · change (s.1 || s.2.any typedHit) = true at done
-      rcases Bool.or_eq_true.mp done with early | found
+      rcases Bool.or_eq_true_iff.mp done with early | found
       · exact Or.inl early
       · obtain ⟨fs,used,good⟩ := List.any_eq_true.mp found
-        obtain ⟨empty,value⟩ := Bool.and_eq_true.mp good
+        obtain ⟨empty,value⟩ := Bool.and_eq_true_iff.mp good
         exact Or.inr ⟨fs,used,(exactBitFamilyClosed f fs (of_decide_eq_true empty)).mp value⟩
     · change child ∈ s.2.flatMap (typedNext f bound) at listed
       obtain ⟨fs,used,edge⟩ := List.mem_flatMap.mp listed
@@ -57,11 +57,11 @@ theorem typedAdvanceSound (f : Nat → Nat) (B : Nat) (bound : BoundProgram)
         exact Or.inr ⟨fs,used,(exactCommonCutoffNonemptyStep f B (bound (encodeFamily fs))
           chosen fs (names (encodeFamily fs)) (exactDriverNames fs) fund positive).mpr ⟨child,edge,yes⟩⟩
   · rintro (done | ⟨fs,used,yes⟩)
-    · exact Or.inl (Bool.or_eq_true.mpr (Or.inl done))
+    · exact Or.inl (Bool.or_eq_true_iff.mpr (Or.inl done))
     · by_cases empty : dimension fs = 0
       · have found : s.2.any typedHit = true := List.any_eq_true.mpr
-          ⟨fs,used,Bool.and_eq_true.mpr ⟨decide_eq_true empty,(exactBitFamilyClosed f fs empty).mpr yes⟩⟩
-        exact Or.inl (Bool.or_eq_true.mpr (Or.inr found))
+          ⟨fs,used,Bool.and_eq_true_iff.mpr ⟨decide_eq_true empty,(exactBitFamilyClosed f fs empty).mpr yes⟩⟩
+        exact Or.inl (Bool.or_eq_true_iff.mpr (Or.inr found))
       · have positive := Nat.pos_of_ne_zero empty
         have fund := (cal fs positive).1
         obtain ⟨child,listed,live⟩ :=

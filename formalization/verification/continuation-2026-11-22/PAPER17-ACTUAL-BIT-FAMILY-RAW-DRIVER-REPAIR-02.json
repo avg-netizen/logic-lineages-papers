@@ -1,0 +1,32 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "8db5af85db82cd645fee02e38ebd51f5ffee7fa3",
+  "failed_source_local_commit": "35be695ef080e6a23db0bff05709314e47529aa7",
+  "failed_source_tree": "92c058ecac172d80ba7e0e2a41830ff1a1168ec7",
+  "failed_exact_gate_receipt": "1795375096916607405-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualBitFamilyRawDriverStatementChecks",
+  "failed_receipt_sha256": "52af34aadcf7ff68499eeeaa4876b7dc81cde55b9a2096b4feda504d62537960",
+  "failed_exact_module_log_sha256": "5af47fcbd6f6d4d06bbf23a437d443ebf2670fab813f913247f3dbfcb4bae502",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualBitFamilyRawDriverSemanticsProof.lean:44:13: error(lean.unknownIdentifier): Unknown constant `Bool.or_eq_true.mp`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualBitFamilyRawDriverSemanticsProof.lean:44:42: error: Tactic `rcases` failed: `x\u271d : ?m.43` is not an inductive datatype\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualBitFamilyRawDriverSemanticsProof.lean:60:20: error(lean.unknownIdentifier): Unknown constant `Bool.or_eq_true.mpr`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualBitFamilyRawDriverSemanticsProof.lean:63:19: error(lean.unknownIdentifier): Unknown constant `Bool.and_eq_true.mpr`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualBitFamilyRawDriverSemanticsProof.lean:64:22: error(lean.unknownIdentifier): Unknown constant `Bool.or_eq_true.mpr`",
+  "failed_original_native_log_sha256": "acd2697776b14d0df2664062c8ab6923d9c74bfd7e6b962460568398ea9bb559",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualBitFamilyRawDriverSemanticsProof.lean",
+  "failed_proof_sha256": "fc0afe982b333f0f0d2ae5a742e9dead7afd86d7111449bdc1992f16e8a5470a",
+  "repaired_proof_sha256": "b4fa4912207a693c4d1b843cfd842625f0960e2aba67f68401475b4b35cda8e2",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-RAW-DRIVER-REPAIR-02.patch",
+  "patch_sha256": "c6d0a076fd546da59b2e29bdfce6594255f28d9fb6cf0f23e926c29a4835feb7",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-RAW-DRIVER-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "66a8b7b21d479947191a1dab25bf6cc9f789e6f733606384a1d023954bd43a2b",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-RAW-DRIVER-REPAIR-01.json": "0a4149027b435e96d7963701b73054de399f110d28415fa68254feef8b4ef24d",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-RAW-DRIVER-REPAIR-01.patch": "4732da43b145c5e9cb4d3f2a78387f146053037d7685413cc4e89ebc29e22002"
+  },
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyRawDriverCalibrationProof.lean": "3316cdc7195431366df31e0b70213025e0d96f8bdc7a4ca8dda8d746ea602259",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyRawDriverComputableProof.lean": "8c21fa696ec68de02b769a55a178b404e2b5d680816b73bd6e5bafa92cd8e4a5",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyRawDriverStatementChecks.lean": "a1c2f8840514379170e0584968ad721e1ca2f7e3e7e6fe915b1c815ef815f9cb",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyRawDriverTargets.lean": "491a88aaa67ccb727db2efa908230ab50b541997296bca74cfa29da49865f1d9",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-RAW-DRIVER-SOURCE-MAP.md": "77b725c9e6608760d62c9272bb4b8cbcddd0ece179d3ff5009ec7fcbf9c09d45"
+  },
+  "scope": "Use the core Iff-form aliases for actual Boolean conjunction/disjunction decomposition, including the conjunction already masked by the earliest case split diagnostic. No semantic claim, algorithm, hypothesis, or import changed."
+}
