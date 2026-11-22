@@ -51,9 +51,16 @@ private theorem labelsCalibration (ops : List LowerOperand) :
   | cons head tail ih =>
       simp only [alphabetLabels,List.map_cons,List.filterMap_cons,labelCalibration]
       cases h : operandLabel head with
-      | none => simpa only [h,Option.map_none] using ih
+      | none =>
+          simp only [h,Option.map_none]
+          change (tail.map LowerOperand.code).filterMap labelCode =
+            (alphabetLabels tail).map encodeLabel
+          exact ih
       | some label =>
-          simpa only [h,Option.map_some] using congrArg (List.cons (encodeLabel label)) ih
+          simp only [h,Option.map_some]
+          change encodeLabel label :: (tail.map LowerOperand.code).filterMap labelCode =
+            encodeLabel label :: (alphabetLabels tail).map encodeLabel
+          exact congrArg (List.cons (encodeLabel label)) ih
 
 private theorem pairTapeCalibration (ls : List Label) :
     orderedPairs (ls.map encodeLabel) = (pairs ls).map encodePair := by
