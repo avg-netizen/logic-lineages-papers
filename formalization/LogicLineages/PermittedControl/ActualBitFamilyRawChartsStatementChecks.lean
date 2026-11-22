@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.ActualBitFamilyRawChartsTargets
+import LogicLineages.PermittedControl.ActualBitFamilyRawChartsProof
+import LogicLineages.PermittedControl.ActualBitFamilyRawChartsPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualBitFamilyRawCharts
+
+theorem fixed_exactNonemptyPatterns : ExactNonemptyPatterns := exactNonemptyPatterns
+theorem fixed_exactRawChartEnumeration : ExactRawChartEnumeration := exactRawChartEnumeration
+theorem fixed_exactEncodedRawChartCoverage : ExactEncodedRawChartCoverage := exactEncodedRawChartCoverage
+theorem fixed_exactRawChartEffectivity : ExactRawChartEffectivity := exactRawChartEffectivity
+theorem fixed_fullActualBitFamilyRawCharts : FullActualBitFamilyRawCharts :=
+  ⟨fixed_exactNonemptyPatterns,fixed_exactRawChartEnumeration,fixed_exactEncodedRawChartCoverage,
+    fixed_exactRawChartEffectivity⟩
+
+#print axioms fixed_exactNonemptyPatterns
+#print axioms fixed_exactRawChartEnumeration
+#print axioms fixed_exactEncodedRawChartCoverage
+#print axioms fixed_exactRawChartEffectivity
+#print axioms fixed_fullActualBitFamilyRawCharts
+
+end LogicLineages.PermittedControl.StatementChecks
