@@ -29,16 +29,16 @@ theorem exact_OpenCoverThinMatchingWindowInputs : ExactOpenCoverThinMatchingWind
   let rawCall : Program 3 := .composition V (fun _ : Fin 1 => .projection 2)
   let D := conjunction thinContextPresent (thinOwnSeed C s)
   obtain ⟨parts⟩ := conjunctionRecover (thinSyntaxWindow baseW V) D xs actual
-  obtain ⟨syntax⟩ := conjunctionRecover baseW rawCall xs ⟨Derivation.conjunctionLeft parts⟩
+  obtain ⟨syntaxReports⟩ := conjunctionRecover baseW rawCall xs ⟨Derivation.conjunctionLeft parts⟩
   obtain ⟨conditions⟩ := conjunctionRecover thinContextPresent (thinOwnSeed C s) xs
     ⟨Derivation.conjunctionRight parts⟩
   have rawValid : Nonempty (Derivation body Γ (unary V (suc z) raw)) := by
     apply compositionRecover V (fun _ : Fin 1 => .projection 2) (suc z) xs ![raw]
-      ⟨Derivation.conjunctionRight syntax⟩
+      ⟨Derivation.conjunctionRight syntaxReports⟩
     intro i
     obtain rfl := Fin.eq_zero i
     exact projectionValue 2 xs
-  exact ⟨rawValid,⟨Derivation.conjunctionLeft syntax⟩,⟨Derivation.conjunctionLeft conditions⟩⟩
+  exact ⟨rawValid,⟨Derivation.conjunctionLeft syntaxReports⟩,⟨Derivation.conjunctionLeft conditions⟩⟩
 
 #print axioms exact_OpenCoverThinMatchingWindowInputs
 

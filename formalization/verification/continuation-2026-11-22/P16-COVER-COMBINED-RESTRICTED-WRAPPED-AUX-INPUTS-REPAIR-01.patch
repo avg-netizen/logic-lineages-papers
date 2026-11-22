@@ -1,0 +1,11 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedWrappedAuxInputsProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedWrappedAuxInputsProof.lean
+@@ -32 +32 @@
+-  obtain ⟨syntax⟩ := conjunctionRecover baseW rawCall xs ⟨Derivation.conjunctionLeft parts⟩
++  obtain ⟨syntaxReports⟩ := conjunctionRecover baseW rawCall xs ⟨Derivation.conjunctionLeft parts⟩
+@@ -37 +37 @@
+-      ⟨Derivation.conjunctionRight syntax⟩
++      ⟨Derivation.conjunctionRight syntaxReports⟩
+@@ -41 +41 @@
+-  exact ⟨rawValid,⟨Derivation.conjunctionLeft syntax⟩,⟨Derivation.conjunctionLeft conditions⟩⟩
++  exact ⟨rawValid,⟨Derivation.conjunctionLeft syntaxReports⟩,⟨Derivation.conjunctionLeft conditions⟩⟩
