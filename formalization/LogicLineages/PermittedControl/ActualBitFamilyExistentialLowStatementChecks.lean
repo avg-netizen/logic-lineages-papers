@@ -1,0 +1,26 @@
+module
+public import LogicLineages.PermittedControl.ActualBitFamilyExistentialLowTargets
+import LogicLineages.PermittedControl.ActualBitFamilyExistentialLowLocalityProof
+import LogicLineages.PermittedControl.ActualBitFamilyExistentialLowZeroProof
+import LogicLineages.PermittedControl.ActualBitFamilyExistentialLowProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualBitFamilyExistentialLow
+
+theorem fixed_exactBitFamilySupportLocality : ExactBitFamilySupportLocality := exactBitFamilySupportLocality
+theorem fixed_exactBitFamilyClosed : ExactBitFamilyClosed := exactBitFamilyClosed
+theorem fixed_exactBitFamilyExistentialLow : ExactBitFamilyExistentialLow := exactBitFamilyExistentialLow
+theorem fixed_exactBitFamilyExistentialLowDimension : ExactBitFamilyExistentialLowDimension :=
+  exactBitFamilyExistentialLowDimension
+theorem fixed_fullActualBitFamilyExistentialLow : FullActualBitFamilyExistentialLow :=
+  ⟨fixed_exactBitFamilySupportLocality,fixed_exactBitFamilyClosed,fixed_exactBitFamilyExistentialLow,
+    fixed_exactBitFamilyExistentialLowDimension⟩
+
+#print axioms fixed_exactBitFamilySupportLocality
+#print axioms fixed_exactBitFamilyClosed
+#print axioms fixed_exactBitFamilyExistentialLow
+#print axioms fixed_exactBitFamilyExistentialLowDimension
+#print axioms fixed_fullActualBitFamilyExistentialLow
+
+end LogicLineages.PermittedControl.StatementChecks
