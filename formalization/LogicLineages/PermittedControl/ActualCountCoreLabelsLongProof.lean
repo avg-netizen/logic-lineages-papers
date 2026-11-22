@@ -66,7 +66,7 @@ theorem exactPaidLongCountCoreLabel : ExactPaidLongCountCoreLabel := by
   · let F := ValueField.entry 1 lam eta
     have iPositive : 0 < i := Nat.pos_of_ne_zero (fun aiz => (ne_of_lt lt) (identity.mp aiz))
     have classified := classifier.2.2.2.1 proper zero lt
-    have field : fieldLabel lam mu = some F := by simp only [fieldLabel,classified,F]
+    have field : fieldLabel lam mu = some F := by simp only [fieldLabel,classified,F,eta]
     have well : ProperField F := ⟨proper.1,.inr etaLimit,lt⟩
     have fv : LowerOperandActual f ρ (.ordinary rank F) (f q) := by
       refine ⟨⟨well,affordable⟩,i,first,?_⟩
