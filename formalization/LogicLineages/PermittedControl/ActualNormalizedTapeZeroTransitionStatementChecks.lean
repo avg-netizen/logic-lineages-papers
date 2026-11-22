@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.ActualNormalizedTapeZeroTransitionTargets
+import LogicLineages.PermittedControl.ActualNormalizedTapeZeroTransitionAssemblyProof
+import LogicLineages.PermittedControl.ActualNormalizedTapeZeroTransitionRanksProof
+import LogicLineages.PermittedControl.ActualNormalizedTapeZeroTransitionProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualNormalizedTapeZeroTransition
+
+theorem fixed_exactTapeZeroAssembly : ExactTapeZeroAssembly := exactTapeZeroAssembly
+theorem fixed_exactTapeOutputRanks : ExactTapeOutputRanks := exactTapeOutputRanks
+theorem fixed_exactTapeZeroTransition : ExactTapeZeroTransition := exactTapeZeroTransition
+
+theorem fixed_fullActualNormalizedTapeZeroTransition : FullActualNormalizedTapeZeroTransition :=
+  ⟨fixed_exactTapeZeroAssembly,fixed_exactTapeOutputRanks,fixed_exactTapeZeroTransition⟩
+
+#print axioms fixed_exactTapeZeroAssembly
+#print axioms fixed_exactTapeOutputRanks
+#print axioms fixed_exactTapeZeroTransition
+#print axioms fixed_fullActualNormalizedTapeZeroTransition
+
+end LogicLineages.PermittedControl.ActualNormalizedTapeZeroTransition
