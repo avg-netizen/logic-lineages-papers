@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.AffineCollapseTopologicalExtensionTargets
+import LogicLineages.PermittedControl.AffineCollapseTopologicalExtensionProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactAffineCollapseTopologicalExtension :
+    AffineCollapseTopologicalExtension.ExactTopologicalExtension :=
+  AffineCollapseTopologicalExtension.exactTopologicalExtension
+
+theorem fixed_uniqueAffineCollapseTopologicalExtension :
+    AffineCollapseTopologicalExtension.UniqueTopologicalExtension :=
+  AffineCollapseTopologicalExtension.uniqueTopologicalExtension
+
+theorem fixed_fullAffineCollapseTopologicalExtension :
+    AffineCollapseTopologicalExtension.FullAffineCollapseTopologicalExtension :=
+  ⟨fixed_exactAffineCollapseTopologicalExtension,fixed_uniqueAffineCollapseTopologicalExtension⟩
+
+#print axioms fixed_exactAffineCollapseTopologicalExtension
+#print axioms fixed_uniqueAffineCollapseTopologicalExtension
+#print axioms fixed_fullAffineCollapseTopologicalExtension
+
+end LogicLineages.PermittedControl.StatementChecks
