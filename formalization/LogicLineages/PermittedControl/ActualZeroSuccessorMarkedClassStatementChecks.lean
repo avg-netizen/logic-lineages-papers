@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroSuccessorMarkedClassTargets
+import LogicLineages.PermittedControl.ActualZeroSuccessorMarkedClassDomainProof
+import LogicLineages.PermittedControl.ActualZeroSuccessorMarkedClassAlignmentProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualZeroDecorationDomain : ActualZeroSuccessorMarkedClass.ExactDecorationDomain :=
+  ActualZeroSuccessorMarkedClass.exactDecorationDomain
+
+theorem fixed_exactActualZeroDecoration : ActualZeroSuccessorMarkedClass.ExactActualDecoration :=
+  ActualZeroSuccessorMarkedClass.exactActualDecoration
+
+theorem fixed_exactMatchedZeroSuccessorDecoration : ActualZeroSuccessorMarkedClass.ExactMatchedMaximalDecoration :=
+  ActualZeroSuccessorMarkedClass.exactMatchedMaximalDecoration
+
+theorem fixed_fullActualZeroSuccessorMarkedClass : ActualZeroSuccessorMarkedClass.FullActualZeroSuccessorMarkedClass :=
+  ⟨fixed_exactActualZeroDecorationDomain,fixed_exactActualZeroDecoration,
+    fixed_exactMatchedZeroSuccessorDecoration⟩
+
+#print axioms fixed_exactActualZeroDecorationDomain
+#print axioms fixed_exactActualZeroDecoration
+#print axioms fixed_exactMatchedZeroSuccessorDecoration
+#print axioms fixed_fullActualZeroSuccessorMarkedClass
+
+end LogicLineages.PermittedControl.StatementChecks
