@@ -1,0 +1,37 @@
+{
+  "status": "source-only proof repair02; native retry not run by author",
+  "immutable_failed_source_commit": "0e50eaf315b32f22ab3829d966d4479b17c8b833",
+  "receipt": "1795343549356045102-8",
+  "exact_gate": "LogicLineages.PermittedControl.ActualLinearExitStatementChecks",
+  "failed_receipt_sha256": "4237130c4756f154b505503f326e2ba9dfeede0e342d9b439a9daf2f6b2c1f58",
+  "failed_log_sha256": "90d4a3f4fb5247d37774cd20c9020e0b76a5d274d4005b9aa9351d78b1ac903e",
+  "failed_module_record": {
+    "module": "LogicLineages.PermittedControl.ActualLinearExitRowProof",
+    "returncode": 1,
+    "seconds": 1.474,
+    "observed_cpu_seconds": 1.34,
+    "last_wait_channel": "__futex_wait",
+    "stopped_threads": [],
+    "peak_process_tree_rss_kib": 1006808,
+    "memory_observation_failure": {},
+    "discarded_failed_outputs": [],
+    "source_sha256": "e13ebb12bfd8048f28fcd6e5558e6079c444e4d704e100ab4160fcec2e33f6b4",
+    "log": "build-reports/1795343549356045102-8-LogicLineages-PermittedControl-ActualLinearExitRowProof.log"
+  },
+  "diagnostics": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualLinearExitRowProof.lean:59:8: error: Type mismatch: After simplification, term\n  values 0\n    (of_eq_true (Eq.trans (lt_add_iff_pos_left._simp_1 0) (Eq.trans Order.lt_add_one_iff._simp_1 zero_le._simp_1)))\n has type\n  @Eq ℕ (ν n) (rd :: xs)[0].2\nbut is expected to have type\n  @Eq ℕ (ν n) rd.2\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualLinearExitRowProof.lean:102:57: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+  "old_repair01_manifest_sha256": "5b01d8b99aaf0a1bcaf51e65bdd2f968bb4d69b7c875936c30d5272f5ff98f4e",
+  "changed_source": "formalization/LogicLineages/PermittedControl/ActualLinearExitRowProof.lean",
+  "failed_source_sha256": "e13ebb12bfd8048f28fcd6e5558e6079c444e4d704e100ab4160fcec2e33f6b4",
+  "repair_source_sha256": "604340fd77aeb88923896f4268c14f1051ba1ed3ff5325fe37e0652c6c9cb86b",
+  "preserved_sources_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualLinearExitTargets.lean": "da0c5b55836c1cfbbcfd512f636921b1054c480cfe5237e1b449d5151ebc6224",
+    "formalization/LogicLineages/PermittedControl/ActualLinearExitReplayProof.lean": "019614b6ae78838ac538fd7686478aff2c210aa008d259acd0404bfd6a4478dd",
+    "formalization/LogicLineages/PermittedControl/ActualLinearExitProof.lean": "3c08c10295f9f30ae22a69f631556af19f1af96f6d8df5bdd0ac6e7e9c3073fd",
+    "formalization/LogicLineages/PermittedControl/ActualLinearExitStatementChecks.lean": "772239f60ca4f621f6ff1b43d739720fe412b38013029830aed4bc6bab855549"
+  },
+  "zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-LINEAR-EXIT-REPAIR-02.patch",
+  "patch_sha256": "1be7f84e25784f26d796b0253aa24539c0e93e4a4384091876c2c40da9136bf2",
+  "inverse": "Reverse exact patch with fuzz zero to recover unchanged repair01 RowProof bytes.",
+  "change": "Use directly typed List.getElem_cons_zero with the same index proof, then explicit congrArg of second projection and equality transitivity. No target, definitions, other source, imports, or static closure changed.",
+  "pinned_core_signature": "Lean 4.32.0-rc1 Init/GetElem.lean:294, List.getElem_cons_zero (a : α) (as : List α) (h : 0 < (a :: as).length)"
+}

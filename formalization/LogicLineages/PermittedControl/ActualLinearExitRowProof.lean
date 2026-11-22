@@ -56,7 +56,10 @@ private theorem namedSum (ν : Nat → Nat) (n : Nat) (xs : List Read)
   | nil => rfl
   | cons rd xs ih =>
       have head : ν n = rd.2 := by
-        simpa only [Nat.add_zero,List.getElem_cons_zero] using values 0 (by simp)
+        have indexZero : 0 < (rd :: xs).length := Nat.zero_lt_succ _
+        have atZero := values 0 indexZero
+        have item : (rd :: xs)[0]'indexZero = rd := List.getElem_cons_zero rd xs indexZero
+        simpa only [Nat.add_zero] using atZero.trans (congrArg (fun r : Read => r.2) item)
       have later (j : Nat) (hj : j < xs.length) : ν (n+1+j) = xs[j].2 := by
         rw [show n+1+j = n+(j+1) by omega]
         have bound : j+1 < (rd :: xs).length := Nat.succ_lt_succ hj

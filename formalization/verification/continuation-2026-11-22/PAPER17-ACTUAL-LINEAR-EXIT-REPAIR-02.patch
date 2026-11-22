@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualLinearExitRowProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualLinearExitRowProof.lean
+@@ -59 +59,4 @@
+-        simpa only [Nat.add_zero,List.getElem_cons_zero] using values 0 (by simp)
++        have indexZero : 0 < (rd :: xs).length := Nat.zero_lt_succ _
++        have atZero := values 0 indexZero
++        have item : (rd :: xs)[0]'indexZero = rd := List.getElem_cons_zero rd xs indexZero
++        simpa only [Nat.add_zero] using atZero.trans (congrArg (fun r : Read => r.2) item)
