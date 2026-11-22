@@ -31,15 +31,18 @@ private theorem takeHitPrimitive : Primrec takeHit := by
 
 private theorem joinClausePrimitive : Primrec₂ joinClause := by
   let A := Option RawBitRow × Option (List RawBitRow)
-  let P := A × RawBitRow
+  let P := RawBitRow × Option (List RawBitRow)
   let Q := P × List RawBitRow
-  have onTail : Primrec (fun p : P => p.1.2) := Primrec.snd.comp Primrec.fst
-  have row : Primrec (fun p : Q => p.1.2) := Primrec.snd.comp Primrec.fst
-  have rows : Primrec (fun p : Q => p.2) := Primrec.snd
-  have consRows : Primrec (fun p : P => p.1.2.map (List.cons p.2)) :=
-    Primrec.option_map onTail (Primrec.list_cons.comp row rows).to₂
+  have row : Primrec (fun p : Q => p.1.1) := Primrec.fst.comp Primrec.fst
+  have rows : Primrec (Prod.snd : Q → List RawBitRow) := Primrec.snd
+  have consTail : Primrec (fun p : P => p.2.map (List.cons p.1)) :=
+    Primrec.option_map Primrec.snd (Primrec.list_cons.comp row rows).to₂
+  have consRows : Primrec₂ (fun (p : A) (row : RawBitRow) =>
+      p.2.map (List.cons row)) :=
+    (consTail.comp (Primrec.snd.pair (Primrec.snd.comp Primrec.fst)) :
+      Primrec (fun p : A × RawBitRow => p.1.2.map (List.cons p.2))).to₂
   have all : Primrec (fun p : A => joinClause p.1 p.2) :=
-    Primrec.option_bind Primrec.fst consRows.to₂
+    Primrec.option_bind Primrec.fst consRows
   exact all.to₂
 
 private theorem oneComputable (f : Nat → Nat) (hf : Computable f) : Computable (sliceOne f) := by
