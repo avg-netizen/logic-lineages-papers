@@ -1,0 +1,12 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedRawGraphAllocatorProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedRawGraphAllocatorProof.lean
+@@ -40 +40 @@
+-      cases b <;> simp [baseCodes,baseGates,baseGate,encodeGate,ih]
++      cases b <;> (simp [baseCodes,baseGates,baseGate,encodeGate] <;> exact ih)
+@@ -43,3 +43,3 @@
+-      | iterate _ _ _ => simp [baseCodes,baseGates,baseGate,encodeGate,ih]
+-      | entry int _ _ => cases int <;> simp [baseCodes,baseGates,baseGate,encodeGate,ih]
+-      | count int _ _ => cases int <;> simp [baseCodes,baseGates,baseGate,encodeGate,ih]
++      | iterate _ _ _ => (simp [baseCodes,baseGates,baseGate,encodeGate] <;> exact ih)
++      | entry int _ _ => cases int <;> (simp [baseCodes,baseGates,baseGate,encodeGate] <;> exact ih)
++      | count int _ _ => cases int <;> (simp [baseCodes,baseGates,baseGate,encodeGate] <;> exact ih)

@@ -37,12 +37,12 @@ private theorem basesLiteral (gs : List Gate) :
   | cons g gs ih =>
     cases g with
     | base b =>
-      cases b <;> simp [baseCodes,baseGates,baseGate,encodeGate,ih]
+      cases b <;> (simp [baseCodes,baseGates,baseGate,encodeGate] <;> exact ih)
     | field f =>
       cases f with
-      | iterate _ _ _ => simp [baseCodes,baseGates,baseGate,encodeGate,ih]
-      | entry int _ _ => cases int <;> simp [baseCodes,baseGates,baseGate,encodeGate,ih]
-      | count int _ _ => cases int <;> simp [baseCodes,baseGates,baseGate,encodeGate,ih]
+      | iterate _ _ _ => (simp [baseCodes,baseGates,baseGate,encodeGate] <;> exact ih)
+      | entry int _ _ => cases int <;> (simp [baseCodes,baseGates,baseGate,encodeGate] <;> exact ih)
+      | count int _ _ => cases int <;> (simp [baseCodes,baseGates,baseGate,encodeGate] <;> exact ih)
 
 theorem exactOriginalRawGraphNames : ExactOriginalRawGraphNames :=
   ⟨gateLiteral,namesLiteral,basesLiteral⟩
