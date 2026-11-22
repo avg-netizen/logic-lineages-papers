@@ -1,0 +1,5 @@
+# Paper 17 — exact original signed row formula for an already-linear greatest rank
+
+[arithmetic.tex](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex), lines 256–265. Rewrite literal signed row tests using the actual prepared lower tape: equality becomes both sign directions, positivity uses the exact signed decrement, and a positive original modulus stays the same modulus. Under the existing actual read ties, either compiled polarity is equivalent to a fully actual original singleton-row snapshot at the same top update. An invalid modulus is never accepted as a true or false source row.
+
+[Targets](../../LogicLineages/PermittedControl/OriginalMatrixLinearRowFormulaTargets.lean) · [Prepared syntax/bounds](../../LogicLineages/PermittedControl/OriginalMatrixLinearRowFormulaShapeProof.lean) · [Signed evaluation](../../LogicLineages/PermittedControl/OriginalMatrixLinearRowFormulaProof.lean) · [Exact check](../../LogicLineages/PermittedControl/OriginalMatrixLinearRowFormulaStatementChecks.lean). This is uniform only for rows actually already linear in the top raw coordinate, with actual lower tape. No extra code effectivity or decision.
