@@ -74,7 +74,11 @@ theorem familyCalibration (f : Nat → Nat) (name a : Nat) (family : Family) :
       cases h : sliceClause f name a head with
       | none => simpa only [h, Option.map_none] using ht
       | some child =>
-          simpa only [h, Option.map_some] using congrArg (List.cons (child.map encodeBitRow)) ht
+          simp only [h, Option.map_some]
+          change child.map encodeBitRow ::
+            ((encodeFamily tail).filterMap (fun c => clauseCode f (name,a,c))) =
+              child.map encodeBitRow :: encodeFamily (tail.filterMap (sliceClause f name a))
+          exact congrArg (List.cons (child.map encodeBitRow)) ht
 
 theorem exactRawLowCalibration : ExactRawLowCalibration := by
   refine ⟨clauseCalibration,familyCalibration,?_⟩
