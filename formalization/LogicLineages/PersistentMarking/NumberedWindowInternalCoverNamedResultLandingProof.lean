@@ -151,7 +151,8 @@ theorem exact_OpenNamedResultLanding (b : Bool) (s : Settings) (B : Program 2)
   let G := onRaw (leafTypeTest s)
   have guarded := exact_OpenNamedGrammarGuardSelected b s (lexicalBoundBase H) ctx ty i result actual
   cases b
-  · have noBound := liftReport (header 1 2) ctx raw z (actual_FreeKeyRejectsBoundHeader ty i)
+  · have noBound : Nonempty (Derivation body Γ (programGraph (onRaw (header 1 2)) z xs)) :=
+      liftReport (header 1 2) ctx raw z (actual_FreeKeyRejectsBoundHeader ty i)
     have namedOnly := requirePositive G (namedGrammarAt true s (lexicalBoundBase H)) result xs guarded
     have lexical := zeroBranchElim (onRaw (header 1 2)) (lexicalBoundBase H)
       (grammarGuard s (lexicalBoundBase H)) (suc result) xs noBound namedOnly

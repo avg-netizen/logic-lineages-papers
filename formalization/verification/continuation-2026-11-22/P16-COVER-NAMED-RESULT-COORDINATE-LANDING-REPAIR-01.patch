@@ -1,0 +1,6 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedResultLandingProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedResultLandingProof.lean
+@@ -154 +154,2 @@
+-  · have noBound := liftReport (header 1 2) ctx raw z (actual_FreeKeyRejectsBoundHeader ty i)
++  · have noBound : Nonempty (Derivation body Γ (programGraph (onRaw (header 1 2)) z xs)) :=
++      liftReport (header 1 2) ctx raw z (actual_FreeKeyRejectsBoundHeader ty i)
