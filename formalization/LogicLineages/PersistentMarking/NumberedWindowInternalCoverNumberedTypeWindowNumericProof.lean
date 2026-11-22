@@ -73,8 +73,10 @@ private theorem fieldValue {raw h ty : Nat} {tail : List Nat}
     (read : unpackNode raw = some (5,h::ty::tail)) : run (field 1) raw = ty := by
   rw [codeOfNode read]
   have outer := (headTailOfCell (cellAt 5 (pack (h::ty::tail)))).2
-  have middle := (headTailOfCell (cellAt h (pack (ty::tail)))).2
-  have last := (headTailOfCell (cellAt ty (pack tail))).1
+  have middle : run cellTail (pack (h::ty::tail)) = pack (ty::tail) :=
+    (headTailOfCell (cellAt h (pack (ty::tail)))).2
+  have last : run cellHead (pack (ty::tail)) = ty :=
+    (headTailOfCell (cellAt ty (pack tail))).1
   change run (field 1) (NumberedWindowPairAlgorithm.pair 5 (pack (h::ty::tail)) + 1) = ty
   simp only [field,cursor,applyValue,outer,middle,last]
 
