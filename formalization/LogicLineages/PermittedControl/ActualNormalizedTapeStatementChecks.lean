@@ -1,0 +1,30 @@
+module
+public import LogicLineages.PermittedControl.ActualNormalizedTapeTargets
+import LogicLineages.PermittedControl.ActualNormalizedTapeCertificateProof
+import LogicLineages.PermittedControl.ActualNormalizedTapeClassProof
+import LogicLineages.PermittedControl.ActualNormalizedTapeOutsideProof
+import LogicLineages.PermittedControl.ActualNormalizedTapeOutsideColumnsProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualNormalizedTape
+
+theorem fixed_exactLegacyTape : ExactLegacyTape := exactLegacyTape
+theorem fixed_exactTapeWeights : ExactTapeWeights := exactTapeWeights
+theorem fixed_exactTapeRankedMembers : ExactTapeRankedMembers := exactTapeRankedMembers
+theorem fixed_exactTapeRankedClass : ExactTapeRankedClass := exactTapeRankedClass
+theorem fixed_exactTapeOutside : ExactTapeOutside := exactTapeOutside
+theorem fixed_exactTapeOutsideRankedColumns : ExactTapeOutsideRankedColumns := exactTapeOutsideRankedColumns
+
+theorem fixed_fullActualNormalizedTape : FullActualNormalizedTape :=
+  ⟨fixed_exactLegacyTape,fixed_exactTapeWeights,fixed_exactTapeRankedMembers,
+    fixed_exactTapeRankedClass,fixed_exactTapeOutside,fixed_exactTapeOutsideRankedColumns⟩
+
+#print axioms fixed_exactLegacyTape
+#print axioms fixed_exactTapeWeights
+#print axioms fixed_exactTapeRankedMembers
+#print axioms fixed_exactTapeRankedClass
+#print axioms fixed_exactTapeOutside
+#print axioms fixed_exactTapeOutsideRankedColumns
+#print axioms fixed_fullActualNormalizedTape
+
+end LogicLineages.PermittedControl.ActualNormalizedTape
