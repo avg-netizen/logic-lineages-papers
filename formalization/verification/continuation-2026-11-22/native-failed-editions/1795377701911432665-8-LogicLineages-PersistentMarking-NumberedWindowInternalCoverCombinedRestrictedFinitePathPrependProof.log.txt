@@ -1,0 +1,49 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedFinitePathPrependProof.lean:25:5: error: unknown namespace `NumberedWindowInternalSparsePackedLeastOpenSyntaxProof`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedFinitePathPrependProof.lean:101:6: error(lean.unknownIdentifier): Unknown identifier `leastRename`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedFinitePathPrependProof.lean:77:79: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+C : Program 3
+X : Program 2
+W : Program 3
+s : Settings
+raw : Program 5
+ctx cod src wr mid dst a b b' c : OTerm α
+head : Derivation body Γ (thinHopData C X W s raw ctx cod src wr mid a b)
+tail : Derivation body Γ (pathData C X W s raw ctx cod mid dst b' c)
+least : Program 3 := packedLeastProgram C X W s
+code : OTerm α := singletonCertificate b src wr mid
+headLeast : Derivation body Γ (leastGraph C X W s ctx cod src a ⊓ leastGraph C X W s ctx cod mid b)
+tailLeast : Derivation body Γ (leastGraph C X W s ctx cod mid b' ⊓ leastGraph C X W s ctx cod dst c)
+eq : Nonempty (Derivation body Γ (eqn b' b))
+first : Nonempty (Derivation body Γ (positiveAt raw least ctx cod a code b))
+source : Nonempty (Derivation body Γ (leastGraph C X W s ctx cod src a))
+target : Nonempty (Derivation body Γ (leastGraph C X W s ctx cod dst c))
+β : Type
+j : α → β
+Δ : List (ID1Completion.InternalCalculus.Formula β)
+code2 : OTerm β
+keep : ∀ p ∈ Γ, Formula.relabel j p ∈ Δ
+actualTail :
+  Nonempty
+    (Derivation body Δ
+      (positiveAt raw least (Term.relabel j ctx) (Term.relabel j cod) (Term.relabel j b') code2 (Term.relabel j c)))
+first' :
+  Nonempty
+    (Derivation body Δ
+      (positiveAt raw least (Term.relabel j ctx) (Term.relabel j cod) (Term.relabel j a) (Term.relabel j code)
+        (Term.relabel j b)))
+source' : Nonempty (Derivation body Δ (Formula.relabel j (leastGraph C X W s ctx cod src a)))
+target' : Nonempty (Derivation body Δ (Formula.relabel j (leastGraph C X W s ctx cod dst c)))
+eq' : Nonempty (Derivation body Δ (Formula.relabel j (eqn b' b)))
+⊢ Nonempty
+    (Derivation body Δ
+      (suppliedPath C X W s raw (Term.relabel j ctx) (Term.relabel j cod) (Term.relabel j src) (Term.relabel j dst)))
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedFinitePathPrependProof.singletonToSuppliedPath' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedFinitePathPrependProof.prependThinProvided' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
