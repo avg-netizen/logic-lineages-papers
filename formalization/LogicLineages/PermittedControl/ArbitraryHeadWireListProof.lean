@@ -34,7 +34,7 @@ private theorem infiniteAt (f : Nat → Nat) (g : Gate) (ν θ : Valuation) (inf
       θ g.hidden = (ArbitraryFixedHeadCollapse.transported
         (ArbitraryHeadSharedWire.headCode g.head,θ g.source)).2 at h
   rw [hs] at h
-  simpa only [normalizeGate,inf,NormalGate.Holds] using h
+  simpa only [normalizeGate,inf,NormalGate.Holds,limitPair,Gate.shift] using h
 
 private theorem normalizedIff (f : Nat → Nat) (gates : List Gate) (θ : Valuation) :
     NormalizedAt f θ gates ↔ ∀ g ∈ gates, (normalizeGate g).Holds f θ := by

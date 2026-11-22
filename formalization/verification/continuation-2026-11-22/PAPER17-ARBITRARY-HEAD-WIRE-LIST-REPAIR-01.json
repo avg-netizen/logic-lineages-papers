@@ -1,0 +1,27 @@
+{
+  "status": "narrow proof-only source repair, not native checked by author",
+  "failed_source_remote_commit": "560affb1093a0229da126506adb011e5d19699db",
+  "failed_exact_gate_receipt": "1795350965381264316-73",
+  "failed_original_native_log_sha256": "998e34545d3fd9134c5251db8b262ba3eb521ad82d78cff40b7d41a0f3589e1a",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ArbitraryHeadWireListProof.lean:37:2: error: Type mismatch: After simplification, term\n  h\n has type\n  Iff (limitPair f g.head g.source g.hidden g.output \u03b8)\n    (originalGraph f g.head g.source g.output \u03bd \u2227\n      \u03b8 g.hidden = (ArbitraryFixedHeadCollapse.transported (ArbitraryHeadSharedWire.headCode g.head, \u03bd g.source)).2)\nbut is expected to have type\n  Iff\n    (AffineCollapseGraphComposition.graph f (ArbitraryHeadSharedWire.limitCode g.head)\n      (ArbitraryHeadSharedWire.shiftedExpression g.head g.source) g.hidden g.output \u03b8)\n    (originalGraph f g.head g.source g.output \u03bd \u2227 \u03b8 g.hidden = g.shift \u03bd)",
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ARBITRARY-HEAD-WIRE-LIST-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "d192ee7f04901593aec4b0dc96b9df2f9f3033e2bba3131d4ed616c82824740d",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ArbitraryHeadWireListProof.lean",
+  "failed_proof_sha256": "f28838ae29fc757b54ae9970c21e392b58943f1adb678bff23031f0c40435ae1",
+  "repaired_proof_sha256": "b19dc6ef0f6edd0e9cc42fefe2ea89d4ecb0982ff54c64b13083b2c632a16dbc",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ARBITRARY-HEAD-WIRE-LIST-REPAIR-01.patch",
+  "patch_sha256": "8d3d70d443e5ab31a8194baf83e537801aa0a435b486807074bf9b8c3999723a",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ArbitraryHeadWireListAssignmentsProof.lean": "8533eb7021f5be510f11468f7589809809e5ae1e561479eb7663cc0d271c2052",
+    "formalization/LogicLineages/PermittedControl/ArbitraryHeadWireListStatementChecks.lean": "54106cf6d9098d9219d09863f50494890e0499b29e7c45e46edeb86c0644101d",
+    "formalization/LogicLineages/PermittedControl/ArbitraryHeadWireListTargets.lean": "6e530722a9050cee753da755b5679daf07b9f3790c7ee0ef7554921795ef64a4",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ARBITRARY-HEAD-WIRE-LIST-SOURCE-MAP.md": "085e8a9131959d869843b5abb7c856bfb077cd6772e5212c51716a7e682f898f"
+  },
+  "static_closure_unchanged": {
+    "target_local": 140,
+    "target_external": 31,
+    "gate_local": 152,
+    "gate_external": 31
+  },
+  "scope": "Expose the two already-defined wrappers limitPair and Gate.shift only at the exact infinite graph proof simplification. Original target, source map, assignments and other leaves unchanged."
+}

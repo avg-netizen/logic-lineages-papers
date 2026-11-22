@@ -1,0 +1,5 @@
+--- a/formalization/LogicLineages/PermittedControl/ArbitraryHeadWireListProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ArbitraryHeadWireListProof.lean
+@@ -37 +37 @@
+-  simpa only [normalizeGate,inf,NormalGate.Holds] using h
++  simpa only [normalizeGate,inf,NormalGate.Holds,limitPair,Gate.shift] using h
