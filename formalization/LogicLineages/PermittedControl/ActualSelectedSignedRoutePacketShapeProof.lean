@@ -48,9 +48,10 @@ private theorem pairShape (top : Nat) (p : Pair) (a : Answer) :
 private theorem compileShape (top : Nat) (ps : List Pair) (as : List Answer) :
     Shape (ActualFiniteFullValueGuards.compile top ps as) := by
   induction ps generalizing as with
-  | nil => cases as
-             · exact safeTruth []
-             · exact safeFalsity []
+  | nil =>
+    cases as with
+    | nil => exact safeTruth []
+    | cons a as => exact safeFalsity []
   | cons p ps ih =>
     cases as with
     | nil => exact safeFalsity []
@@ -101,7 +102,8 @@ private theorem linearPacketShape (top : Nat) (test : OrderTest) (pos : Bool) (s
 
 private theorem signedPacketShape (test : OrderTest) (pos : Bool) (coef : Int) :
     Shape (terminalPacket test pos (.signed coef)) := by
-  unfold terminalPacket
+  change PreparedInput [] (if (if pos then signedBit test coef else !(signedBit test coef))
+    then .truth else .falsity)
   split
   · exact safeTruth []
   · exact safeFalsity []

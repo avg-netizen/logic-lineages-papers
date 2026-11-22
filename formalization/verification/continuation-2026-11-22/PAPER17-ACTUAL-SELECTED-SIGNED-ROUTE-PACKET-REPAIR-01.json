@@ -1,0 +1,55 @@
+{
+  "status": "narrow source-only ShapeProof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "c80df6f0bb7764759f1c6dce70855b92fec05cbf",
+  "failed_source_local_commit": "0307f25a1b89b7e0cfefeb76f562cf817783e0e1",
+  "failed_source_tree": "7d6fabb4730754e159440fcf2abc1fe2d107c22b",
+  "failed_exact_gate_receipt": "1795367934714741480-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualSelectedSignedRoutePacketStatementChecks",
+  "failed_receipt_sha256": "c0c3f273979397969224df44205bdf8d2ea040e55fb4304246223bc050c84ea6",
+  "failed_exact_module_log_sha256": "27fbfcbfc1208d3597bc4b2515e183745b7298d5d7b651c5b6e9ea528d2e162d",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketShapeProof.lean:51:17: error: Function expected at\n  as\nbut this term has type\n  List Answer\n\nNote: Expected a function because this term is being applied to the argument\n  \u00b7\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketShapeProof.lean:51:11: error: Tactic `cases` failed: major premise type is not an inductive type\n  ?m.15\n\nExplanation: the `cases` tactic is for constructor-based reasoning as well as for applying custom cases principles with a 'using' clause or a registered '@[cases_eliminator]' theorem. The above type neither is an inductive type nor has a registered theorem.\n\ncase nil\ntop : \u2115\nas : List Answer\nx\u271d : ?m.15\n\u22a2 Shape (ActualFiniteFullValueGuards.compile top [] as)\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketShapeProof.lean:96:6: warning: 'change t.2.name \u2264 ops.length' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketShapeProof.lean:106:4: error: Type mismatch\n  safeTruth []\nhas type\n  PreparedInput [] NormalForm.Formula.truth\nbut is expected to have type\n  Shape p\u271d\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketShapeProof.lean:107:4: error: Type mismatch\n  safeFalsity []\nhas type\n  PreparedInput [] NormalForm.Formula.falsity\nbut is expected to have type\n  Shape\n    ([],\n      if (if pos = true then signedBit test c\u271d else !signedBit test c\u271d) = true then NormalForm.Formula.truth\n      else NormalForm.Formula.falsity)\n",
+  "failed_original_native_log_sha256": "31db171b8a562d2ada4dbe43dac862f9af3a7352800f658259a4ecceb3f44eff",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketShapeProof.lean",
+  "failed_proof_sha256": "90eafde9c348f0004296d05f3f7eaada771e137c9aaa0a99d1f7ee783c8050b4",
+  "repaired_proof_sha256": "dfc408aa9dcd5fa2cbaf86d1668832e56ee2c3f0e31cf6b351d9bc4adc76a36b",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-SELECTED-SIGNED-ROUTE-PACKET-REPAIR-01.patch",
+  "patch_sha256": "8858216f0c07838d866151d815cc3bf8b27f7b6e916d99de8a26038100bbba69",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-SELECTED-SIGNED-ROUTE-PACKET-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "67ca1930c51475f9af6af86740458a9c1424665bc976d75a37189bfdc3cd5268",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketFoldProof.lean": "bad8eb8c0678bc0b360041c521cf7db3f78ed16c8aadd56b20b3f908d3529f6c",
+    "formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketProof.lean": "7f64cdd146e052894c256e681745eee0184ca876056f6ea2d077f1d702f59fbe",
+    "formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketStatementChecks.lean": "234a60921ee9a520e9afccc0967e4a0a64b107cb1f086c7382cc68024aa20b70",
+    "formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketTargets.lean": "d7b83a946196138cab5b4a401af15822edfc00e313d31bf2ad70f0a59d9f35c3",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-SELECTED-SIGNED-ROUTE-PACKET-SOURCE-MAP.md": "ce3cf68894bbaeccf22c7549c3d16599848120e2d1a5b6530ab40aec76654bd2"
+  },
+  "static_module_closure_unchanged": {
+    "FoldProof": {
+      "local": 343,
+      "external": 40,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 425,
+      "external": 40,
+      "contains_totient": false
+    },
+    "ShapeProof": {
+      "local": 390,
+      "external": 37,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 426,
+      "external": 40,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 203,
+      "external": 33,
+      "contains_totient": false
+    }
+  },
+  "scope": "Properly separate the nil pair case answer branches; reduce terminalPacket on the known signed constructor by an exact nil-table goal, then split only the terminal Boolean. No targets, compiled packet constructors, scope, imports or siblings changed."
+}
