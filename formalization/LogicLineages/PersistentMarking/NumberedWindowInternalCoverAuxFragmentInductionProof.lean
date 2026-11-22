@@ -75,7 +75,7 @@ private theorem fromStep (P Q : Program 3) (ctx raw result : OTerm α)
     Nonempty (Derivation body Γ (windowAt Q ctx result raw)) := by
   let θ := forwardMotive P Q ctx
   let key : OTerm (α ⊕ Fin 1) := .var (.inr 0)
-  let c := ctx.relabel Sum.inl
+  let c : OTerm (α ⊕ Fin 1) := ctx.relabel Sum.inl
   let H : Formula (α ⊕ Fin 1) := below (lift θ) key
   let D : List (Formula (α ⊕ Fin 1)) := H :: Γ.map weaken
   let A : Formula (α ⊕ Fin 1) := unary fragmentGuard (suc z) key
