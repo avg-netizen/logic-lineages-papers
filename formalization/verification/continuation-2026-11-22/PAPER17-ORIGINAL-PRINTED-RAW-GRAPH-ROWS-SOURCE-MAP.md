@@ -1,0 +1,6 @@
+# Paper 17: literal ordered raw graph row tape
+
+* Source is `OriginalPrintedPlainMatrixInfiniteLow.circuit` and the graph prefix of its `matrix`, via exactly `OriginalPrintedCircuitNormalization.normalizeFrom` and `OriginalNormalizedCircuitMatrix.rowsList`.
+* The dispatch composes the already-gated original affine/fixed-head base step and the five field tags. Every original collapse advances its hidden candidate, including finite heads; no other gate advances it. The list fold appends every row of each singleton emission in the original order and retains an earlier failure as none.
+* Exact gate-list behavior is for genuine lists mapped by `encodeGate`, with arbitrary initial candidate and prior row prefix. The initialized literal graph tape additionally uses the same allocator's exact semantics; primitive recursion of the initialized evaluator uses primitive recursion of that same initializer. Both assumptions are printed, not hidden behind a new initializer.
+* This does not assert authenticity of arbitrary raw graph codes, topological acceptance, assignment evaluation, original query conversion, or implementation of any paid-high compiler. This is an independently checkable source packet, not native evidence.

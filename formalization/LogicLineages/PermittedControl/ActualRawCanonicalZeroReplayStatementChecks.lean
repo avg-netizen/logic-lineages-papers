@@ -1,0 +1,25 @@
+module
+public import LogicLineages.PermittedControl.ActualRawCanonicalZeroReplayTargets
+import LogicLineages.PermittedControl.ActualRawCanonicalZeroReplayProof
+import LogicLineages.PermittedControl.ActualRawCanonicalZeroReplayPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualRawCanonicalZeroReplay
+
+theorem fixed_exactRawCanonicalZeroStep : ExactRawCanonicalZeroStep := exactRawCanonicalZeroStep
+theorem fixed_exactRawCanonicalZeroReplay : ExactRawCanonicalZeroReplay := exactRawCanonicalZeroReplay
+theorem fixed_exactRawReplayActualWitness : ExactRawReplayActualWitness := exactRawReplayActualWitness
+theorem fixed_exactRawCanonicalZeroReplayEffectivity : ExactRawCanonicalZeroReplayEffectivity :=
+  exactRawCanonicalZeroReplayEffectivity
+theorem fixed_fullActualRawCanonicalZeroReplay : FullActualRawCanonicalZeroReplay :=
+  ⟨fixed_exactRawCanonicalZeroStep,fixed_exactRawCanonicalZeroReplay,
+    fixed_exactRawReplayActualWitness,fixed_exactRawCanonicalZeroReplayEffectivity⟩
+
+#print axioms fixed_exactRawCanonicalZeroStep
+#print axioms fixed_exactRawCanonicalZeroReplay
+#print axioms fixed_exactRawReplayActualWitness
+#print axioms fixed_exactRawCanonicalZeroReplayEffectivity
+#print axioms fixed_fullActualRawCanonicalZeroReplay
+
+end LogicLineages.PermittedControl.StatementChecks
