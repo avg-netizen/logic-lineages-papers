@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualFullValueMaximalMetadataProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualFullValueMaximalMetadataProof.lean
+@@ -102,0 +103 @@
++        change 0 = ls.length+1 at size
+@@ -114 +115 @@
+-      exact ⟨C,max,flagsExact,coefficient,by rw [coefficient]⟩
++      exact ⟨C,rfl,flagsExact,coefficient,by rw [coefficient]⟩

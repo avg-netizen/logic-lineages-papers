@@ -100,6 +100,7 @@ theorem exactActualMaximalMetadata : ExactActualMaximalMetadata := by
     | nil => exact nonempty h
     | cons l ls =>
         rw [h] at size
+        change 0 = ls.length+1 at size
         omega
   cases max : actual.max? with
   | none => exact False.elim (active (List.max?_eq_none_iff.mp max))
@@ -111,6 +112,6 @@ theorem exactActualMaximalMetadata : ExactActualMaximalMetadata := by
         unfold maximalCoefficient
         rw [flagsExact]
         exact signedMetadata f B selected ρ C terms vs anns aligned ready
-      exact ⟨C,max,flagsExact,coefficient,by rw [coefficient]⟩
+      exact ⟨C,rfl,flagsExact,coefficient,by rw [coefficient]⟩
 
 end LogicLineages.PermittedControl.ActualFullValueMaximalMetadata
