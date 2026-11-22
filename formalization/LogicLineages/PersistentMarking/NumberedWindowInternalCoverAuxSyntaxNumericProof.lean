@@ -14,7 +14,7 @@ public section
 namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverAuxSyntaxNumericProof
 open LogicLineages.ComputabilityKnowledge GorbowPRProgram List.Vector
 open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion
-open InternalAcceptance (constantZero)
+open InternalAcceptance (constantZero conjunction)
 open InternalAcceptanceCalibrationProof (evalBranch actualConjunctionEvaluation)
 open InternalLessThanEvaluationProof (exactLessThanEvaluation)
 open InternalEqualityTestEvaluationProof (exactSubtractionEvaluation)
@@ -106,10 +106,22 @@ theorem exact_CoverAuxSyntaxStepCalibration : ExactCoverAuxSyntaxStepCalibration
       simp only [certain,conjunctionOne]
       exact ⟨(shape i old).mpr ⟨dom,cod,fn,arg,read⟩,
         earlier 2 i old fn f fnSmall,earlier 3 i old arg a argSmall⟩
-    rw [guard,if_neg (by decide),actual]
-    simp only [auxAccept,actualConjunctionEvaluation,typeAt,unaryValue,d,c,ct dom,ct cod,
-      lookupValue 2 i old fn f,lookupValue 3 i old arg a,previous fn fnSmall,previous arg argSmall]
-    cases typeBit dom <;> cases typeBit cod <;> cases (syntaxBits fn).1 <;> cases (syntaxBits arg).1 <;> decide
+    have domBit : evaluate (typeAt T 0) (args i old) = (typeBit dom).toNat := by
+      rw [typeAt,unaryValue,d]
+      exact ct dom
+    have codBit : evaluate (typeAt T 1) (args i old) = (typeBit cod).toNat := by
+      rw [typeAt,unaryValue,c]
+      exact ct cod
+    rw [guard,if_neg (by decide),actual,auxAccept,
+      actualConjunctionEvaluation 4 (typeAt T 0)
+        (conjunction (typeAt T 1) (conjunction (measureAt 2) (measureAt 3))) (args i old),
+      actualConjunctionEvaluation 4 (typeAt T 1) (conjunction (measureAt 2) (measureAt 3)) (args i old),
+      actualConjunctionEvaluation 4 (measureAt 2) (measureAt 3) (args i old),
+      domBit,codBit,lookupValue 2 i old fn f,lookupValue 3 i old arg a,
+      previous fn fnSmall,previous arg argSmall]
+    cases dBit : typeBit dom <;> cases cBit : typeBit cod <;>
+      cases fBit : (syntaxBits fn).1 <;> cases aBit : (syntaxBits arg).1 <;>
+      simp only [dBit,cBit,fBit,aBit] <;> decide
   · have miss : evaluate shapeCheck (args i old) ≠ 1 := fun pass => aux ((shape i old).mp pass)
     have guard : evaluate certain (args i old) = 0 := by
       rw [certain,actualConjunctionEvaluation]
@@ -143,4 +155,4 @@ theorem exact_CoverAuxSyntaxCalibration : ExactCoverAuxSyntaxCalibration := by
 #print axioms exact_CoverAuxSyntaxStepCalibration
 #print axioms exact_CoverAuxSyntaxCalibration
 
-end LogicLineages.PersistentMarking.NumberedWindowInternalCoverAuxSyntaxRowNumericProof
+end LogicLineages.PersistentMarking.NumberedWindowInternalCoverAuxSyntaxNumericProof
