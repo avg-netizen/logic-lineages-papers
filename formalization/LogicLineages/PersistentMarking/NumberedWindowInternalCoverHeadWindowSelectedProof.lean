@@ -132,6 +132,7 @@ private theorem atUpdate (b : Bool) (s : Settings) (A : Program 2) (T : Program 
   have sameOutput := outputTransport R value (suc result) ![prior,old,ctx,z] agree update
   exact consume α Γ ctx h result old tail len sameOutput
 
+set_option maxHeartbeats 650000 in
 private theorem withTable (b : Bool) (s : Settings) (A : Program 2) (T : Program 1)
     (consume : StepConsumer b s A T body)
     (ctx h result old : OTerm α) (tail : List (OTerm α)) (len : (h::tail).length = headArity b)
@@ -151,6 +152,7 @@ private theorem withTable (b : Bool) (s : Settings) (A : Program 2) (T : Program
   exact atUpdate b s A T consume (ctx.relabel j) (h.relabel j) (result.relabel j) (old.relabel j)
     value (tail.map (fun t => t.relabel j)) (lengthRename b h tail j len) parent' table' update
 
+set_option maxHeartbeats 650000 in
 private theorem fromWindow (b : Bool) (s : Settings) (A : Program 2) (T : Program 1)
     (consume : StepConsumer b s A T body)
     (ctx h result : OTerm α) (tail : List (OTerm α)) (len : (h::tail).length = headArity b)
