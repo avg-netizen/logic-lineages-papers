@@ -35,10 +35,12 @@ theorem planCalibration (lam mu : NONote) :
           change some (1,etaCode (rawNoteEncode mu.1),
             shortGapLengthCode (rawNoteEncode lam.1) (etaCode (rawNoteEncode mu.1))) = _
           rw [etaCalibration]
-          change some (1,rawNoteEncode (prefixTarget mu).1,shortGapLength lam (prefixTarget mu)) = _
+          change some (1,rawNoteEncode (prefixTarget mu).1,shortGapLength lam (prefixTarget mu)) =
+            encodePlan (if shortGapLength lam (prefixTarget mu) = 0 then .survives (prefixTarget mu)
+              else .short (prefixTarget mu) (shortGapLength lam (prefixTarget mu)))
           by_cases zero : shortGapLength lam (prefixTarget mu) = 0
-          · simp only [if_pos zero,encodePlan,zero]
-          · simp only [if_neg zero,encodePlan]
+          · rw [if_pos zero,zero] <;> rfl
+          · rw [if_neg zero] <;> rfl
         | succ tag => rfl
 
 theorem oneShiftCalibration (m : Marked) : shiftOneCode (encodeMark m) = originShift m := by
@@ -89,9 +91,14 @@ theorem onePrefixCalibration (m : Marked) :
           | properPrefix endpoint =>
             by_cases absent : shortGapLength lam endpoint = 0
             · simp [countPlan,shape,absent] at verdict
-            · rw [countPlan,shape,if_neg absent] at verdict
-              cases verdict
-              exact absent
+            · unfold countPlan at verdict
+              rw [shape] at verdict
+              change (if shortGapLength lam endpoint = 0 then CountPlan.survives endpoint
+                else CountPlan.short endpoint (shortGapLength lam endpoint)) =
+                CountPlan.short eta k at verdict
+              rw [if_neg absent] at verdict
+              have sameLength : shortGapLength lam endpoint = k := (CountPlan.short.inj verdict).2
+              exact fun zero => absent (sameLength.trans zero)
         simp [encodePlan,nz]
 
 theorem exactRawMarkedPlan : ExactRawMarkedPlan :=
