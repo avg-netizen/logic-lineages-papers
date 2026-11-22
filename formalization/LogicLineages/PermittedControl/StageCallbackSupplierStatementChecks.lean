@@ -1,0 +1,32 @@
+module
+public import LogicLineages.PermittedControl.StageCallbackSupplierTargets
+import LogicLineages.PermittedControl.StageCallbackSupplierPointProof
+import LogicLineages.PermittedControl.StageCallbackSupplierChartProof
+import LogicLineages.PermittedControl.StageCallbackSupplierContractProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open StageCallbackSupplier
+
+theorem fixed_exactSuppliedPacketShape : ExactSuppliedPacketShape := exactSuppliedPacketShape
+theorem fixed_exactSuppliedRankedPoint : ExactSuppliedRankedPoint := exactSuppliedRankedPoint
+theorem fixed_exactSuppliedUniformChartChild : ExactSuppliedUniformChartChild :=
+  exactSuppliedUniformChartChild
+theorem fixed_exactSuppliedHighExistential : ExactSuppliedHighExistential :=
+  exactSuppliedHighExistential
+theorem fixed_exactSuppliedHighDimension : ExactSuppliedHighDimension := exactSuppliedHighDimension
+theorem fixed_exactSuppliedStageCallback : ExactSuppliedStageCallback := exactSuppliedStageCallback
+theorem fixed_fullStageCallbackSupplier : FullStageCallbackSupplier :=
+  ⟨fixed_exactSuppliedPacketShape,fixed_exactSuppliedRankedPoint,
+    fixed_exactSuppliedUniformChartChild,fixed_exactSuppliedHighExistential,
+    fixed_exactSuppliedHighDimension,fixed_exactSuppliedStageCallback⟩
+
+#print axioms fixed_exactSuppliedPacketShape
+#print axioms fixed_exactSuppliedRankedPoint
+#print axioms fixed_exactSuppliedUniformChartChild
+#print axioms fixed_exactSuppliedHighExistential
+#print axioms fixed_exactSuppliedHighDimension
+#print axioms fixed_exactSuppliedStageCallback
+#print axioms fixed_fullStageCallbackSupplier
+
+end LogicLineages.PermittedControl.StatementChecks

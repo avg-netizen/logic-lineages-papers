@@ -1,0 +1,49 @@
+{
+  "key": "STAGE-CALLBACK-LEGACY",
+  "lane": "fable2",
+  "paper": "paper-17",
+  "kind": "supporting only",
+  "scope": "The accepted typed route alternatives, read as a per-row supplier, satisfy the STAGE-CALLBACK-SUPPLIER interface for every selected control with threshold: shaped packets, row-level exactness under the raw row majorant, literal ordered equality of its packet list with highPackets and of its compiler with ActualNamedBitFamilyHighAbove.compile, and HighAtStage for every raw program meeting the emission equation. This shows the interface is inhabited and specialises exactly to the accepted typed compiler. It exhibits no computable high program and does not close the callback; the legacy list is the old Finset-ordered one.",
+  "statement_scope_check": "verification/local-fable-pair-2026-11-22/fable2/STAGE-CALLBACK-LEGACY-SOURCE-MAP.md",
+  "gate": "bash verification/local-fable-pair-2026-11-22/gate.sh mathlib LogicLineages.PermittedControl.StageCallbackLegacyStatementChecks",
+  "passing_receipt": "1795383385993393338-3140433",
+  "passing_receipt_path": "build-reports/1795383385993393338-3140433.json",
+  "gate_log": "build-reports/1795383385993393338-3140433-LogicLineages-PermittedControl-StageCallbackLegacyStatementChecks.log",
+  "receipt_rows": {
+    "LogicLineages.PermittedControl.StageCallbackLegacyTargets": "returncode 0; verified-cache-hit from receipt 1795382871845342259-3137004 (compiled there)",
+    "LogicLineages.PermittedControl.StageCallbackLegacyProof": "returncode 0; compiled in this receipt",
+    "LogicLineages.PermittedControl.StageCallbackLegacyStatementChecks": "returncode 0; compiled in this receipt"
+  },
+  "failed_gates": [],
+  "pre_gate_edit": "Before its first compile, one helper proof in StageCallbackLegacyProof (rowsEq) was changed from 'rw [List.map_map]; rfl' to a two-case list induction, to avoid depending on whether rw closes the goal by itself. No gate ever ran on the earlier text.",
+  "modules": [
+    "LogicLineages.PermittedControl.StageCallbackLegacyTargets",
+    "LogicLineages.PermittedControl.StageCallbackLegacyProof",
+    "LogicLineages.PermittedControl.StageCallbackLegacyStatementChecks"
+  ],
+  "depends_on_key": "STAGE-CALLBACK-SUPPLIER",
+  "source_sha256": {
+    "formalization/LogicLineages/PermittedControl/StageCallbackLegacyTargets.lean": "e82e875643e97674deaceaad30b0f88e39c63a360b04b8572de0dac73b035dbe",
+    "formalization/LogicLineages/PermittedControl/StageCallbackLegacyProof.lean": "158d245b7c3d48017444ed74251372fc0fb3e80931ef9de0f818bccf023c4489",
+    "formalization/LogicLineages/PermittedControl/StageCallbackLegacyStatementChecks.lean": "4fc297ac8070e67788965154c5b07e0c2ef32ceb59c810cb8ab7614e0b90e1dd",
+    "formalization/verification/local-fable-pair-2026-11-22/fable2/STAGE-CALLBACK-LEGACY-SOURCE-MAP.md": "6b91e2f861f11eaba90ee9733f3e359120aeb3ffedf505735873858eda423d73"
+  },
+  "targets_frozen_sha256": "e82e875643e97674deaceaad30b0f88e39c63a360b04b8572de0dac73b035dbe",
+  "targets_unchanged_since_freeze": true,
+  "exact_aliases": [
+    "LogicLineages.PermittedControl.StatementChecks.fixed_exactLegacySupplierShape",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_exactLegacySupplierExact",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_exactLegacyLiteralCompile",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_exactLegacyStageCallback",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_fullStageCallbackLegacy"
+  ],
+  "print_axioms": [
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_exactLegacySupplierShape' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_exactLegacySupplierExact' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_exactLegacyLiteralCompile' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_exactLegacyStageCallback' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_fullStageCallbackLegacy' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "print_axioms_note": "The gate log wraps each list over three lines; the lines above are the same text joined with single spaces.",
+  "no_sorry_no_axiom_no_native_decide": true
+}

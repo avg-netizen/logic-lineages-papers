@@ -1,0 +1,55 @@
+{
+  "key": "STAGE-CALLBACK-RAW-LEVEL",
+  "lane": "fable2",
+  "paper": "paper-17",
+  "kind": "supporting only",
+  "scope": "Raw per-row level program on encoded data (frontier entries = guard packet codes + raw syntax; children only where the accepted raw activity test at the greatest rank holds; rendered leaf codes collected level by level; congruence rows by header tag), parametric in a record of four rendering programs. For every rendering that is exact on encoder outputs and every literal bit row, the program's output is literally the encoded list of the level-order supplier: rowCode R r top (encodeBitRow row) = (levelOrder r top row).map encodePacket. Also the raw activity test equals the typed one, and the level and signed-row lists are literal encodings. Syntax only. The three rendering programs for guard, linear exit and congruence packet are not constructed; no Primrec or Computable statement; calibration only on encoder outputs; no semantic content; no numbered promotion.",
+  "statement_scope_check": "verification/local-fable-pair-2026-11-22/fable2/STAGE-CALLBACK-RAW-LEVEL-SOURCE-MAP.md",
+  "gate": "bash verification/local-fable-pair-2026-11-22/gate.sh mathlib LogicLineages.PermittedControl.StageCallbackRawLevelStatementChecks",
+  "passing_receipt": "1795385515892315614-3152703",
+  "passing_receipt_path": "build-reports/1795385515892315614-3152703.json",
+  "gate_log": "build-reports/1795385515892315614-3152703-LogicLineages-PermittedControl-StageCallbackRawLevelStatementChecks.log",
+  "receipt_rows": {
+    "LogicLineages.PermittedControl.StageCallbackRawLevelTargets": "verified-cache-hit from receipt 1795385461342556018-3152474 (the second Targets gate; see earlier_receipts)",
+    "LogicLineages.PermittedControl.StageCallbackRawLevelProof": "COMPILE_PASS in this receipt, first attempt",
+    "LogicLineages.PermittedControl.StageCallbackRawLevelStatementChecks": "COMPILE_PASS in this receipt"
+  },
+  "earlier_receipts": {
+    "1795385296653086064-3151882": "fail: first compile of the Targets module, before it was frozen. Inside 'structure Rendering.Exact' the names 'guard' and 'append' resolved to the record's own fields (Rendering.guard, Rendering.append) instead of the typed guard and append. Fixed by qualifying them as StageCallbackCanonicalRoutes.guard and ActualPreparedSlotAppend.append; no statement was changed in meaning. Failed text kept at verification/local-fable-pair-2026-11-22/drafts/fable2/StageCallbackRawLevelTargets.attempt01-field-name-clash.lean.txt",
+    "1795385461342556018-3152474": "pass: Targets module after that fix; frozen at this point"
+  },
+  "modules": [
+    "LogicLineages.PermittedControl.StageCallbackRawLevelTargets",
+    "LogicLineages.PermittedControl.StageCallbackRawLevelProof",
+    "LogicLineages.PermittedControl.StageCallbackRawLevelStatementChecks"
+  ],
+  "depends_on": {
+    "own_keys": ["STAGE-CALLBACK-LEVEL-ORDER"],
+    "other_lane_targets_imported": "LogicLineages.PermittedControl.RawPacketAlgebraJoinTargets (Opus B, frozen sha256 4c8ee91c67c2648f74cb2dc06ace5b610f859a01654122f0fa3098cef2fb04db) for the definition encodePacket only. No proof module of that lane is imported and none of its target statements is assumed."
+  },
+  "source_sha256": {
+    "formalization/LogicLineages/PermittedControl/StageCallbackRawLevelTargets.lean": "f0e9a0a09677bebb868ecec8f15148892ddd197ca6937c93a5cda6c16936ee7c",
+    "formalization/LogicLineages/PermittedControl/StageCallbackRawLevelProof.lean": "923bc6c1ed66fbc6f57ad343743bc221aa68d2803b2f7107bf229e288d79b1f7",
+    "formalization/LogicLineages/PermittedControl/StageCallbackRawLevelStatementChecks.lean": "2f48840c4252544a93f9457fac1e3a2a17b297532052a23003eb31b9633598f0",
+    "formalization/verification/local-fable-pair-2026-11-22/fable2/STAGE-CALLBACK-RAW-LEVEL-SOURCE-MAP.md": "8d720d28a03a994d3302a49c8be376eee79e30839e129792ecdf2be87417ca3e"
+  },
+  "targets_frozen_sha256": "f0e9a0a09677bebb868ecec8f15148892ddd197ca6937c93a5cda6c16936ee7c",
+  "targets_unchanged_since_freeze": true,
+  "exact_aliases": [
+    "LogicLineages.PermittedControl.StatementChecks.fixed_exactRawActivity",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_exactRawLevelEntries",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_exactRawSignedPackets",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_exactRawRowPackets",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_fullStageCallbackRawLevel"
+  ],
+  "print_axioms": [
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_exactRawActivity' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_exactRawLevelEntries' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_exactRawSignedPackets' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_exactRawRowPackets' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_fullStageCallbackRawLevel' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "print_axioms_note": "Read from the gate log file (five entries, each wrapped over three lines); the lines above are the same text joined with single spaces.",
+  "no_sorry_no_axiom_no_native_decide": true,
+  "hypothesis_note": "The main target is conditional on Rendering.Exact, four calibration equations about packet rendering programs. Root should judge at scope check whether that is an acceptable interface hypothesis; it is the point where the three still-unwritten rendering programs and Opus B's appendCode plug in."
+}

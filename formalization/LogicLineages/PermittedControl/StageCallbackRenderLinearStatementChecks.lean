@@ -1,0 +1,19 @@
+module
+public import LogicLineages.PermittedControl.StageCallbackRenderLinearTargets
+import LogicLineages.PermittedControl.StageCallbackRenderLinearCalibrationProof
+import LogicLineages.PermittedControl.StageCallbackRenderLinearEffectivityProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open StageCallbackRender
+
+theorem fixed_exactLinearCode : ExactLinearCode := exactLinearCode
+theorem fixed_linearCodeEffectivity : LinearCodeEffectivity := linearCodeEffectivity
+theorem fixed_fullStageCallbackRenderLinear : FullStageCallbackRenderLinear :=
+  ⟨fixed_exactLinearCode,fixed_linearCodeEffectivity⟩
+
+#print axioms fixed_exactLinearCode
+#print axioms fixed_linearCodeEffectivity
+#print axioms fixed_fullStageCallbackRenderLinear
+
+end LogicLineages.PermittedControl.StatementChecks

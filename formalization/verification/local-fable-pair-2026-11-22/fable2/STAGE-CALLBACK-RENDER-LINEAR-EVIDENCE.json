@@ -1,0 +1,47 @@
+{
+  "key": "STAGE-CALLBACK-RENDER-LINEAR",
+  "lane": "fable2",
+  "paper": "paper-17",
+  "kind": "supporting only",
+  "scope": "Raw rendering program for the canonical linear exit, on encoded data only: group the raw syntax with the accepted groupRaw, keep the terms below the greatest rank as the table, render the one row (constant, slope at name zero, lower slots from name one) under the order test and polarity. Literal calibration linearCode top (encodeSyntax s) (orderCode test) positive = encodePacket (canonicalPacket top s.constant s.terms test.test positive) for every top, typed syntax, order test and polarity, with no hypothesis; and Primrec of every component and of linearCode. This discharges the 'linear' field of Rendering.Exact (#1398) for R.linear := linearCode. No claim outside the encoder image or for order tags above 2; the guard rendering is not included; no semantic content; no numbered promotion.",
+  "statement_scope_check": "verification/local-fable-pair-2026-11-22/fable2/STAGE-CALLBACK-RENDER-LINEAR-SOURCE-MAP.md",
+  "gate": "bash verification/local-fable-pair-2026-11-22/gate.sh mathlib LogicLineages.PermittedControl.StageCallbackRenderLinearStatementChecks",
+  "passing_receipt": "1795385975542327937-3154727",
+  "passing_receipt_path": "build-reports/1795385975542327937-3154727.json",
+  "gate_log": "build-reports/1795385975542327937-3154727-LogicLineages-PermittedControl-StageCallbackRenderLinearStatementChecks.log",
+  "receipt_rows": {
+    "LogicLineages.PermittedControl.StageCallbackRenderLinearTargets": "verified-cache-hit from receipt 1795385775259559477-3153884 (compiled there, as first written)",
+    "LogicLineages.PermittedControl.StageCallbackRenderLinearCalibrationProof": "verified-cache-hit from receipt 1795385934888220158-3154513 (compiled there, first attempt; two linter warnings about an unused simp argument, no error)",
+    "LogicLineages.PermittedControl.StageCallbackRenderLinearEffectivityProof": "COMPILE_PASS in this receipt, first attempt",
+    "LogicLineages.PermittedControl.StageCallbackRenderLinearStatementChecks": "COMPILE_PASS in this receipt"
+  },
+  "failed_gates": [],
+  "modules": [
+    "LogicLineages.PermittedControl.StageCallbackRenderLinearTargets",
+    "LogicLineages.PermittedControl.StageCallbackRenderLinearCalibrationProof",
+    "LogicLineages.PermittedControl.StageCallbackRenderLinearEffectivityProof",
+    "LogicLineages.PermittedControl.StageCallbackRenderLinearStatementChecks"
+  ],
+  "depends_on_records": ["1398"],
+  "source_sha256": {
+    "formalization/LogicLineages/PermittedControl/StageCallbackRenderLinearTargets.lean": "b97ba766d73e097b0ad75a903e0c559f2fb65f2d7cc456092bb37545b0ac1faf",
+    "formalization/LogicLineages/PermittedControl/StageCallbackRenderLinearCalibrationProof.lean": "bcf46c253dc26eef9dc86c7b7ae88b40eca8c7e1ec7e6de42c0e69b92a2d6899",
+    "formalization/LogicLineages/PermittedControl/StageCallbackRenderLinearEffectivityProof.lean": "6165406feb14f1d2e985e8f091dd9cc80115549a0dace6e83c24c50be61cb6fc",
+    "formalization/LogicLineages/PermittedControl/StageCallbackRenderLinearStatementChecks.lean": "00a1a07c892b9b97c4ef7cbf71a450f8269a016c0fcfad183f24ce9b4c2a112b",
+    "formalization/verification/local-fable-pair-2026-11-22/fable2/STAGE-CALLBACK-RENDER-LINEAR-SOURCE-MAP.md": "2533ab2d267aed7d1fa3dc09535e24e8d00ad79d6a3475ccdbdfb32f4fb876e5"
+  },
+  "targets_frozen_sha256": "b97ba766d73e097b0ad75a903e0c559f2fb65f2d7cc456092bb37545b0ac1faf",
+  "targets_unchanged_since_freeze": true,
+  "exact_aliases": [
+    "LogicLineages.PermittedControl.StatementChecks.fixed_exactLinearCode",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_linearCodeEffectivity",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_fullStageCallbackRenderLinear"
+  ],
+  "print_axioms": [
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_exactLinearCode' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_linearCodeEffectivity' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_fullStageCallbackRenderLinear' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "print_axioms_note": "Read from the gate log file (three entries, each wrapped over three lines); the lines above are the same text joined with single spaces.",
+  "no_sorry_no_axiom_no_native_decide": true
+}

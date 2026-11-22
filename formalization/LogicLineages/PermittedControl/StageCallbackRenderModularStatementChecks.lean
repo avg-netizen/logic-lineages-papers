@@ -1,0 +1,19 @@
+module
+public import LogicLineages.PermittedControl.StageCallbackRenderModularTargets
+import LogicLineages.PermittedControl.StageCallbackRenderModularCalibrationProof
+import LogicLineages.PermittedControl.StageCallbackRenderModularEffectivityProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open StageCallbackRender
+
+theorem fixed_exactModularCode : ExactModularCode := exactModularCode
+theorem fixed_modularCodeEffectivity : ModularCodeEffectivity := modularCodeEffectivity
+theorem fixed_fullStageCallbackRenderModular : FullStageCallbackRenderModular :=
+  ⟨fixed_exactModularCode,fixed_modularCodeEffectivity⟩
+
+#print axioms fixed_exactModularCode
+#print axioms fixed_modularCodeEffectivity
+#print axioms fixed_fullStageCallbackRenderModular
+
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,46 @@
+{
+  "key": "JOIN-REGRESSION",
+  "lane": "opusB",
+  "serves": "SESSION-HANDOFF-2026-11-22 Paper 17 Next: join regression (two rows forcing the shared greatest coordinate to be C and C+1; joined packet unsatisfiable, also after projection)",
+  "source_map": "verification/local-fable-pair-2026-11-22/opusB/JOIN-REGRESSION-SOURCE-MAP.md",
+  "modules": [
+    {
+      "module": "LogicLineages.PermittedControl.ActualSignedRouteJoinRegressionTargets",
+      "path": "LogicLineages/PermittedControl/ActualSignedRouteJoinRegressionTargets.lean",
+      "sha256": "3f3c97f6a484f008062cb56b39e29fff459eb649100793a3c24724f0e6a1dbc9",
+      "frozen": "2026-11-22T21:34Z",
+      "first_receipt": "1795383274001853139-3139721"
+    },
+    {
+      "module": "LogicLineages.PermittedControl.ActualSignedRouteJoinRegressionProof",
+      "path": "LogicLineages/PermittedControl/ActualSignedRouteJoinRegressionProof.lean",
+      "sha256": "ed118f1ad4e19aa5a321d397e1c2a238de927f3056a599ad6a58780ce4a87e3e"
+    }
+  ],
+  "passing_receipt": "1795383497904313310-3141177",
+  "receipt_path": "build-reports/1795383497904313310-3141177.json",
+  "profile": "mathlib (--memory-mib 2048 --rss-mib 1536 --min-free-mib 2048), via gate.sh",
+  "peak_rss_kib_proof_module": 965028,
+  "theorems": [
+    "ActualSignedRouteJoinRegression.joinRegression : JoinRegression",
+    "ActualSignedRouteJoinRegression.fullActualSignedRouteJoinRegression : FullActualSignedRouteJoinRegression"
+  ],
+  "print_axioms": [
+    "'LogicLineages.PermittedControl.ActualSignedRouteJoinRegression.joinRegression' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.ActualSignedRouteJoinRegression.fullActualSignedRouteJoinRegression' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "log_warnings": "10 linter warnings, all 'this tactic is never executed' / 'tactic does nothing' on unused fallback branches of two `first | ...` combinators in private lemma singletonFamilyLength (lines 170-177); no errors, no sorry",
+  "accepted_suppliers_used": [
+    "ActualSignedRouteCartesian.exactTupleChoice",
+    "ActualSignedRouteCartesian.exactCartesianPacketEval",
+    "ActualSelectedSignedRouteProjection.exactChosenRouteProjection",
+    "ActualSymbolicPredecessorProjection.exactSymbolicPredecessorAppend",
+    "ActualSymbolicPredecessorProjection.exactSymbolicPredecessorProjection",
+    "ActualGreatestRouteResidual.exactDecodedActualResidual",
+    "ActualGreatestRouteResidual.exactActualLowerRouteFamily",
+    "ActualGreatestRouteResidual.keepMember",
+    "OriginalMatrixLinearRowFormula.safeAtom",
+    "OriginalMatrixLinearRowFormula.safeAnd"
+  ],
+  "outcome": "regression TRUE: projection after the join keeps the shared-coordinate constraint"
+}

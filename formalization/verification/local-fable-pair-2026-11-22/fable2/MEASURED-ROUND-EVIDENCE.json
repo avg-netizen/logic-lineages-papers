@@ -1,0 +1,43 @@
+{
+  "key": "F02-MEASURED-ROUND",
+  "date": "2026-11-22",
+  "status": "PASS",
+  "modules": [
+    "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredRoundTargets",
+    "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredRoundProof"
+  ],
+  "sha256": {
+    "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedMeasuredRoundTargets.lean": "aea17d987c814f1e8c06cea11ee7399604c68603e5786e7043ac62708d3231a1",
+    "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedMeasuredRoundProof.lean": "23c9439807b6c84c49dfc52bf16c837aa7dcde1aa64f0ccd72895a9a95db0101"
+  },
+  "targets_hash_recorded_before_proof_draft": true,
+  "targets_hash_unchanged_after_proof_gate": true,
+  "receipts": {
+    "targets": "build-reports/1795387537346427977-3161633.json",
+    "proof_passing": "build-reports/1795387581939296076-3161890.json"
+  },
+  "passing_receipt_id": "1795387581939296076-3161890",
+  "failed_gates": [],
+  "statements": {
+    "ExactFullyMeasuredApplicationEdgeStepAt": "exact_FullyMeasuredApplicationEdgeStepAt",
+    "ExactFullyMeasuredRoundApplicationLeast": "exact_FullyMeasuredRoundApplicationLeast",
+    "ExactFullyMeasuredLeastRepresentativeApplication": "exact_FullyMeasuredLeastRepresentativeApplication"
+  },
+  "print_axioms": [
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredRoundProof.exact_FullyMeasuredApplicationEdgeStepAt' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredRoundProof.exact_FullyMeasuredRoundApplicationLeast' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredRoundProof.exact_FullyMeasuredLeastRepresentativeApplication' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "warnings": [
+    "line 66: linter suggestion to merge two consecutive `intro` lines; no other diagnostics"
+  ],
+  "suppliers": [
+    "exact_OpenCoverCombinedRestrictedMeasuredPairedCommonLeast (F01, receipt 1795387310118722126-3160624)",
+    "exact_MeasuredExchangePreservesMeasure",
+    "exact_RoundApplicationLeastAt",
+    "exact_LeastRepresentativeApplication",
+    "valueUnique / outputTransport on packedLeastProgram"
+  ],
+  "no_sorry_axiom_native_decide": true,
+  "existing_files_edited": []
+}

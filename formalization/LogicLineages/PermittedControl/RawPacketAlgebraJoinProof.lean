@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PermittedControl.RawPacketAlgebraJoinTargets
+import LogicLineages.PermittedControl.RawPacketAlgebraJoinCalibrationProof
+import LogicLineages.PermittedControl.RawPacketAlgebraJoinEffectivityProof
+
+public section
+namespace LogicLineages.PermittedControl.RawPacketAlgebra
+
+theorem fullRawPacketAlgebraJoin : FullRawPacketAlgebraJoin := ⟨joinCalibration,joinEffectivity⟩
+
+#print axioms fullRawPacketAlgebraJoin
+
+end LogicLineages.PermittedControl.RawPacketAlgebra

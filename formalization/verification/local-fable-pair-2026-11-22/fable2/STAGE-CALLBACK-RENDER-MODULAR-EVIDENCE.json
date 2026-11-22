@@ -1,0 +1,53 @@
+{
+  "key": "STAGE-CALLBACK-RENDER-MODULAR",
+  "lane": "fable2",
+  "paper": "paper-17",
+  "kind": "supporting only",
+  "scope": "Raw rendering program for the accepted congruence packet, on encoded data only: one bare coordinate slot per lower rank of the accepted literal rank support as table bytes, the accepted residue-row formula code on the layout reserving name zero for the greatest rank, then polarity. Literal calibration modularCode top m (encodeSyntax s) positive = encodePacket (ActualGreatestCongruenceRoute.packet top m s positive) for every top, every modulus including zero, typed syntax and polarity, with no hypothesis; and Primrec of lowerRanksCode, of formulaCode and of modularCode. This discharges the 'modular' field of Rendering.Exact (#1398) for R.modular := modularCode. No claim outside the encoder image; no semantic content; no numbered promotion.",
+  "statement_scope_check": "verification/local-fable-pair-2026-11-22/fable2/STAGE-CALLBACK-RENDER-MODULAR-SOURCE-MAP.md",
+  "gate": "bash verification/local-fable-pair-2026-11-22/gate.sh mathlib LogicLineages.PermittedControl.StageCallbackRenderModularStatementChecks",
+  "passing_receipt": "1795386238420603404-3156069",
+  "passing_receipt_path": "build-reports/1795386238420603404-3156069.json",
+  "gate_log": "build-reports/1795386238420603404-3156069-LogicLineages-PermittedControl-StageCallbackRenderModularStatementChecks.log",
+  "receipt_rows": {
+    "LogicLineages.PermittedControl.StageCallbackRenderModularTargets": "verified-cache-hit from receipt 1795386052089463613-3155229 (compiled there, as first written)",
+    "LogicLineages.PermittedControl.StageCallbackRenderModularCalibrationProof": "verified-cache-hit from receipt 1795386142358861068-3155645 (compiled there, first attempt)",
+    "LogicLineages.PermittedControl.StageCallbackRenderModularEffectivityProof": "COMPILE_PASS in this receipt, second attempt",
+    "LogicLineages.PermittedControl.StageCallbackRenderModularStatementChecks": "COMPILE_PASS in this receipt"
+  },
+  "earlier_receipts": {
+    "1795386142358861068-3155645": "CalibrationProof passed; EffectivityProof FAILED: deterministic timeout at whnf (200000 heartbeats) while elaborating the final composite modularPrimitive, which was one long proof over the unfolded definitions. Not a wrong statement: the three component Primrec facts in the same file had already elaborated. Fix: the composite was split into coordinatePrimitive, polarityPrimitive, tableBytesPrimitive, layoutFormulaPrimitive and a short modularPrimitive, with lowerRanksCode, formulaCode, namedSlots, coordinateCode and polarityCode made locally irreducible before the composites so the unifier cannot unfold them. No heartbeat limit was raised. Failed text kept at verification/local-fable-pair-2026-11-22/drafts/fable2/StageCallbackRenderModularEffectivityProof.attempt01-whnf-timeout.lean.txt"
+  },
+  "modules": [
+    "LogicLineages.PermittedControl.StageCallbackRenderModularTargets",
+    "LogicLineages.PermittedControl.StageCallbackRenderModularCalibrationProof",
+    "LogicLineages.PermittedControl.StageCallbackRenderModularEffectivityProof",
+    "LogicLineages.PermittedControl.StageCallbackRenderModularStatementChecks"
+  ],
+  "depends_on": {
+    "own_keys": ["STAGE-CALLBACK-RENDER-LINEAR (polarityCode and its calibration)"],
+    "records": ["1398"]
+  },
+  "restated_private_lemmas": "formulaExact follows SharedRankResidueRowCodeProof.formulaLiteral and formulaStepPrimitive/formulaPrimitive follow the private formulaStepPrimitive and the fold inside preparePrimitive of the same accepted module. They are restated because the accepted public statement (CodeExact) gives the formula code only through prepareCode, which is none at modulus zero. No accepted module is edited.",
+  "source_sha256": {
+    "formalization/LogicLineages/PermittedControl/StageCallbackRenderModularTargets.lean": "8a23a1717de6cef3466b73bbe9e90ae18f6ebb196cdb7864fdd4f327442c2eef",
+    "formalization/LogicLineages/PermittedControl/StageCallbackRenderModularCalibrationProof.lean": "d6640e5f4c2d66b927eb5006a1adb47851262a60b8dbf3b6616d84122bb5718a",
+    "formalization/LogicLineages/PermittedControl/StageCallbackRenderModularEffectivityProof.lean": "4b42ee6e31441a2a7b5e64639843939d303db7c747dda38b6addcdaaaeb66658",
+    "formalization/LogicLineages/PermittedControl/StageCallbackRenderModularStatementChecks.lean": "ab72fa14af2a2f2ba6de1a28b0cf9d322cca0b1dfc06fd62893fe0190d4d2c13",
+    "formalization/verification/local-fable-pair-2026-11-22/fable2/STAGE-CALLBACK-RENDER-MODULAR-SOURCE-MAP.md": "8127d3cefe7ce32a2e2f43e8e60c43e8109de35ee9e59480ad141a1e43929eef"
+  },
+  "targets_frozen_sha256": "8a23a1717de6cef3466b73bbe9e90ae18f6ebb196cdb7864fdd4f327442c2eef",
+  "targets_unchanged_since_freeze": true,
+  "exact_aliases": [
+    "LogicLineages.PermittedControl.StatementChecks.fixed_exactModularCode",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_modularCodeEffectivity",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_fullStageCallbackRenderModular"
+  ],
+  "print_axioms": [
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_exactModularCode' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_modularCodeEffectivity' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_fullStageCallbackRenderModular' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "print_axioms_note": "Read from the gate log file (three entries, each wrapped over three lines); the lines above are the same text joined with single spaces.",
+  "no_sorry_no_axiom_no_native_decide": true
+}

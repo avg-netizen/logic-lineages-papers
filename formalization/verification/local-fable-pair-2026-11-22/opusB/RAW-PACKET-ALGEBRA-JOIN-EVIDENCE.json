@@ -1,0 +1,19 @@
+{
+  "key": "RAW-PACKET-ALGEBRA-JOIN",
+  "lane": "opusB",
+  "serves": "Root Task 4 group 1: raw join (append/shift, tuplePacket, choices) through preparedPacketCode",
+  "source_map": "verification/local-fable-pair-2026-11-22/opusB/RAW-PACKET-ALGEBRA-JOIN-SOURCE-MAP.md",
+  "modules": [
+    {"module": "LogicLineages.PermittedControl.RawPacketAlgebraJoinTargets", "sha256": "4c8ee91c67c2648f74cb2dc06ace5b610f859a01654122f0fa3098cef2fb04db", "frozen": "2026-11-22T22:03Z", "first_receipt": "1795384978040632556-3150351"},
+    {"module": "LogicLineages.PermittedControl.RawPacketAlgebraJoinCalibrationProof", "sha256": "2da761e99228da1a6d9f6444a084a2f237695e260a6f4054482357406dcc30fb", "receipt": "1795385033144432493-3150611"},
+    {"module": "LogicLineages.PermittedControl.RawPacketAlgebraJoinEffectivityProof", "sha256": "41cea109877cb0d3446b17970cc15b78c37756a6045ec3c8c30e06fb99dfb13f", "receipt": "1795385090686262557-3150859"},
+    {"module": "LogicLineages.PermittedControl.RawPacketAlgebraJoinProof", "sha256": "158fbdcaabf72ddc3d6b9e76046e0a558f5a6897212b93a3a0e580e305517eae"}
+  ],
+  "passing_receipt": "1795385120370042416-3151069",
+  "passing_receipt_note": "bundle gate; Targets, CalibrationProof and EffectivityProof verified-cache-hit at the hashes above",
+  "failed_receipts": ["1795385018557364166-3150570 (CalibrationProof v1: `variable` keyword as case alternative; draft kept in drafts/opusB/)"],
+  "theorems": ["RawPacketAlgebra.joinCalibration : JoinCalibration", "RawPacketAlgebra.joinEffectivity : JoinEffectivity", "RawPacketAlgebra.fullRawPacketAlgebraJoin : FullRawPacketAlgebraJoin", "also exactShiftCode, exactAppendCode, exactTupleCode, exactChoicesCode, exactJoinCode"],
+  "print_axioms": ["'LogicLineages.PermittedControl.RawPacketAlgebra.fullRawPacketAlgebraJoin' depends on axioms: [propext, Classical.choice, Quot.sound]"],
+  "reused": ["LinearRows.Code.mapAtoms + LinearRowsCodeProof.mapAtoms_primitive", "LinearRowsCodeProof.decodeAtom_primitive", "LinearRowsCodeProof.conjunction_primitive", "PreparedProjection.preparedPacketCode (#728)"],
+  "new_encoding": "none (encodePacket := preparedPacketCode p.1 p.2)"
+}

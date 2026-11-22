@@ -1,0 +1,33 @@
+{
+  "key": "GROUND-SCALAR-CIRCUIT",
+  "lane": "opusB",
+  "serves": "Root Task 7 = M4 of Paper 17 thm:ground; interface verification/local-fable-pair-2026-11-22/opusA/GROUND-INTERFACE-FOR-M4.md",
+  "source_map": "verification/local-fable-pair-2026-11-22/opusB/GROUND-SCALAR-CIRCUIT-SOURCE-MAP.md",
+  "modules": [
+    {"module": "LogicLineages.PermittedControl.GroundScalarCircuitTargets", "sha256": "bcd325cc3566354e748cd7c6536e0bb7315b7ad155edc8ef63d3d275bb6917af", "frozen_receipt": "1795387859861003022-3163107"},
+    {"module": "LogicLineages.PermittedControl.GroundScalarCircuitShapeProof", "sha256": "c22ed0b1ea66ff53dc8ba161448fa5ed55b84633153b394b1b47f749e3172584", "receipt": "1795388068199463409-3163836"},
+    {"module": "LogicLineages.PermittedControl.GroundScalarCircuitSemanticsProof", "sha256": "f5658ae7df67be6f3e3949c4d090328c03d7c0faafb706c4036dc85b37a2a15c", "receipt": "1795388246572451897-3164572"},
+    {"module": "LogicLineages.PermittedControl.GroundScalarCircuitCodeTargets", "sha256": "2df132edd75e3c5f622f48eea5a050e76c9265ae1ae31ef71e0a4cccba522194", "frozen_receipt": "1795388388019117185-3165046"},
+    {"module": "LogicLineages.PermittedControl.GroundScalarCircuitCalibrationProof", "sha256": "0b5e7fbe43b5b2c203751058eda8ca789a1a43dd9c9210cc3b206b19aa3c86ad", "receipt": "1795388538647725439-3165561"},
+    {"module": "LogicLineages.PermittedControl.GroundScalarCircuitEffectivityProof", "sha256": "8cb56d90aa0a4411db3a1b2da99567818b1ff63ba50f3741c5cde94a2dc834a0", "receipt": "1795388629395778444-3165796"},
+    {"module": "LogicLineages.PermittedControl.GroundScalarCircuitStatementChecks", "sha256": "dc3ca8719e0cfda9f889df3e5a9cc611eaf660d50596f7990bf8f28a166245e8", "receipt": "1795388649799408449-3165892"}
+  ],
+  "passing_receipt": "1795388649799408449-3165892",
+  "theorems": [
+    "StatementChecks.fixed_groundBlockShape : GroundScalarCircuit.BlockShape",
+    "StatementChecks.fixed_groundBlockCorrect : GroundScalarCircuit.BlockCorrect",
+    "StatementChecks.fixed_groundCircuitCalibration : GroundScalarCircuit.CircuitCalibration",
+    "StatementChecks.fixed_groundExactQueryCode : GroundScalarCircuit.ExactQueryCode  (Opus A's interface verbatim)",
+    "StatementChecks.fixed_groundQueryCodeEffectivity : GroundScalarCircuit.QueryCodeEffectivity  (Primrec)",
+    "StatementChecks.fixed_fullGroundScalarCircuit, fixed_fullGroundScalarCircuitCode"
+  ],
+  "print_axioms": "all [propext, Classical.choice, Quot.sound]",
+  "failed_receipts": [
+    "1795388014775487636-3163682 ShapeProof v1",
+    "1795388135210852679-3164073, 1795388179911253951-3164264, 1795388212043310809-3164427, 1795388232521509580-3164481 SemanticsProof drafts",
+    "1795388368698249801-3164973 CodeTargets draft (unfrozen)",
+    "1795388490129572369-3165419, 1795388517926159125-3165512 CalibrationProof drafts"
+  ],
+  "reused": ["StatementChecks.fixed_arbitraryFixedHeadActualGraph", "OrdinalComparison.rawNoteDecodeEncode", "OrdinalComparison.naturalProductDenotation", "Primrec.nat_strong_rec pattern of LinearRowsCodeRecursionProof"],
+  "new_encoding": "none (the code circuit uses the existing RawGate = encodeGate image and Formula.encode)"
+}

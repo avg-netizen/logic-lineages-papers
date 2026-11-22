@@ -1,0 +1,43 @@
+{
+  "status": "checked",
+  "base_commit": "1bd0f9d9ad68addb5bb23e6c6970578c97e5e00d",
+  "base_note": "Sources are new files on top of this commit at gate time; root commits them afterwards.",
+  "native_receipt": "1795384822781080370-3149287",
+  "native_receipt_sha256": "1d3fc513eca6e336e763e3e2e11e445bc89acc573b941e2cc91a5acdc0f8117b",
+  "exact_gate": "LogicLineages.PermittedControl.ClosedBlockDecisionReductionProof",
+  "gate_seconds": 1.329,
+  "gate_cpu_seconds": 1.26,
+  "peak_process_tree_rss_kib": 945988,
+  "named_axiom_output": {
+    "LogicLineages.PermittedControl.ClosedBlockDecision.exactClosedBlockFromEmitter": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PermittedControl.ClosedBlockDecision.exactClosedBlockReduction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PermittedControl.ClosedBlockDecision.fullClosedBlockDecisionReduction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "verification": "One exact bounded Lean gate with focused source correspondence, no duplicate artifact replay.",
+  "profile": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "source_pins": {
+    "formalization/LogicLineages/PermittedControl/ClosedBlockDecisionTargets.lean": "56edf93074550b19ad73ed0c4002dd845aa95a8043340d2570e65989c82c1fb0",
+    "formalization/LogicLineages/PermittedControl/ClosedBlockDecisionReductionProof.lean": "ece232c6f3e17c60ce000cdeaf953fc854f0e1eeeee8aeaf2abd8bff9aa50563",
+    "formalization/verification/local-fable-pair-2026-11-22/root/P17-CLOSED-BLOCK-REDUCTION-SOURCE-MAP.md": "8e607f20aaa414dee79c9a823ea840809ea9f6a14fabeaf154bc6f67579e430b"
+  }
+}

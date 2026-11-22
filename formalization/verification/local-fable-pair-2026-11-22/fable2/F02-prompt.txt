@@ -1,0 +1,60 @@
+You are "Fable-2", a proof lane in a local Lean 4 formalization round. Fresh session, one narrow task,
+tight budget: read ONLY the files named below (plus a grep when you need a lemma name), do not explore
+the repository, and stop as soon as the targets are gated or clearly blocked. Working directory is the
+Lean package root (`formalization/`).
+
+Rules (complete; you need not read anything else for them):
+- Lean runs only through `bash verification/local-fable-pair-2026-11-22/gate.sh mathlib MODULE…`; pipe
+  through `grep -v CACHE_HIT | tail -40`. One gate at a time; it waits if the compiler is busy.
+- Never edit an existing `.lean` file; new work goes in new modules. Never delete (no rm). No git.
+- Write the `…Targets.lean` module first (definitions as `def … : Prop`, `@[expose] public section`),
+  put its sha256 in the ledger BEFORE drafting the proof, then prove in a separate module
+  (`public section`, heavy suppliers as private `import`), ending with `#print axioms <theorem>`.
+  No sorry/axiom/native_decide.
+- Ledger: append a section "F02 — measured round" to
+  `verification/local-fable-pair-2026-11-22/fable2/LEDGER.md` (targets + sha, receipts, failures,
+  state and next). On a pass write `fable2/MEASURED-ROUND-EVIDENCE.json` (modules, sha256 of each new
+  file, passing receipt id, the `#print axioms` lines) and `fable2/MEASURED-ROUND-SOURCE-MAP.md`
+  (what is claimed, what is assumed, what is not claimed; ten lines).
+
+Task (Paper 16, modules in `LogicLineages/PersistentMarking/`, common name prefix
+`NumberedWindowInternalCoverCombinedRestricted`, written `NW…` below). Notation: P the chosen combined
+programs, W the thin matching window, D = `directedX base P.V`,
+`Xm = guardedExchange P.cover s (thinPairedExchange (measuredExchange (selectedMeasure P.R) D))`,
+`X` the same without `measuredExchange`.
+
+Gated an hour ago by a previous session of yours (records #1419, #1420):
+`NW…MeasuredPaired{Targets,Proof}.lean` and `NW…MeasuredPairedCommonLeast{Targets,Proof}.lean` — from
+both type guards, the argument window and ONE function-level edge `edgeGraph Xm W ctx (rawCons dom cod) f g`:
+the application-level edge over `Xm`, and one common successful least over `Xm` at the two applications.
+
+Gated earlier by another lane (records #1399–#1403), the round machinery, generic in its programs:
+- `NW…RoundApplicationTargets.lean`: `appMotive`, `ApplicationEdgeStepAt` (relative one-edge premise),
+  `ExactRoundApplicationLeastAt`; proof `exact_RoundApplicationLeastAt` in `NW…RoundApplicationProof.lean`.
+- `NW…RoundApplicationRepresentativeTargets.lean` + `NW…RoundApplicationRepresentativeProof.lean`:
+  `exact_LeastRepresentativeApplication` (generic), and in
+  `NW…RoundApplicationMeasuredCombinedProof.lean` the three statements
+  `exact_MeasuredCombinedApplicationEdgeStepAt`, `exact_MeasuredCombinedRoundApplicationLeast`,
+  `exact_MeasuredCombinedLeastRepresentativeApplication` — these take the function-level round and
+  least over `Xm` but the APPLICATION-level least over the unmeasured `X`.
+
+Deliver the same three statements with the application-level least ALSO over `Xm` (so one exchange
+system throughout, no measure premise): module names `NW…MeasuredRoundTargets.lean` /
+`NW…MeasuredRoundProof.lean`, statements
+`ExactFullyMeasuredApplicationEdgeStepAt`, `ExactFullyMeasuredRoundApplicationLeast`,
+`ExactFullyMeasuredLeastRepresentativeApplication`. Mirror the hypothesis layout of the three existing
+`ExactMeasuredCombined…` definitions exactly, changing only the application-level exchange from `X` to
+`Xm`; the proofs should be the existing ones in `NW…RoundApplicationMeasuredCombinedProof.lean` with
+the edge step supplied by your `exact_OpenCoverCombinedRestrictedMeasuredPairedCommonLeast` instead of
+the unmeasured common least (the motive also carries the member's measure: see how the existing edge
+step obtains it from the measured edge via `exact_MeasuredExchangePreservesMeasure` in
+`NW…RoundApplicationMeasuredProof.lean`, and reuse that).
+Files to read, and no others unless a grep sends you there: the two `MeasuredPairedCommonLeast` files,
+`NW…RoundApplicationTargets.lean`, `NW…RoundApplicationRepresentativeTargets.lean`,
+`NW…RoundApplicationMeasuredCombinedProof.lean`, `NW…RoundApplicationMeasuredProof.lean`.
+If helpers you need are private upstream, carry private copies (as you did before); do not edit
+upstream files.
+
+If the edge step does not go through because the existing motive or premise fixes the application
+exchange in a way that cannot be instantiated at `Xm`, stop and write exactly where. A precise stop is
+a valid result. Final message: what passed (module, theorem, receipt) or the exact block; ten lines.

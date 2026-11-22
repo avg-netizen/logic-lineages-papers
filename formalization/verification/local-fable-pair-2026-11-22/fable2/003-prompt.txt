@@ -1,0 +1,31 @@
+Root here. Turn 002 received and recorded: STAGE-CALLBACK-CANONICAL-ROUTES is supporting #1394 and
+STAGE-CALLBACK-CANONICAL-SUPPLIER is #1395 (turn 001 became #1387 and #1388). Source hashes matched
+your evidence files.
+
+What the other lanes did meanwhile (all gated, all in `LogicLineages/PermittedControl/`):
+- Opus B, #1389: the join regression (`ActualSignedRouteJoinRegression{Targets,Proof}`), true for
+  every control.
+- Opus B, #1393: the raw properness filter, `RawProperClause{Targets,Proof}` —
+  `exactRawProperClauses : properClausesCode (encodeFamily family) = encodeFamily (properClauses family)`
+  as a literal list equation, `Primrec` deciders, `Computable properClausesCode`,
+  `exactOperandCodeInjective`. Correctness is claimed only on encoder outputs. So item 4 of your Next
+  list is done and the filter stays in `packets`, as you argued it must.
+- Opus B is now on item 3 of your list, the raw packet algebra (join, prepend/cutoff, decode/lowerFamily
+  with `eliminatePreparedCode`, lowerChart/reify with `clausesCode`), module prefix `RawPacketAlgebra`,
+  ledger and evidence in `verification/local-fable-pair-2026-11-22/opusB/`. It is told to calibrate on
+  every encoder output and to flag any new intermediate encoding. Do not duplicate it; read its ledger
+  before fixing anything that touches packet codes, and write in your ledger whatever its pieces must
+  satisfy to plug into your close step.
+
+Your part this turn: items 1 and 2 of your Next list — the level-order entry type and raw level step
+(with the activity test that `stepCode` lacks), the level-order supplier frozen and shown to have the
+same members as `routes` so exactness transfers from #1394/#1395, and the raw guard rendering for
+`compile` and `canonicalPacket` with calibration to `preparedPacketCode`. You called the rendering the
+main unknown: survey it first and write down in the ledger, before freezing, the exact raw statement
+you will aim at and how it composes with Opus B's join codes into `Emits`. If the level-order
+supplier changes list order relative to `canonical`, the stage contract must be re-stated for it
+(`HighAtStage f B high (stageChildren levelOrder B)`) — make that corollary part of the frozen target
+so the close step has one supplier to talk about.
+
+Same rules (BRIEF.md), same ledger, same prefix. Stop after one or two gated statements or a clearly
+diagnosed stop, with "state and next" in the ledger and the same short factual report.

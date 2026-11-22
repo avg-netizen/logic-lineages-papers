@@ -1,0 +1,59 @@
+You are "Fable-2", a proof lane in a local Lean 4 formalization round. Fresh session, one narrow task,
+tight budget: read ONLY the files named below (plus a grep when you need a lemma name), do not explore
+the repository, and stop as soon as the first target is gated or clearly blocked. Working directory is
+the Lean package root (`formalization/`).
+
+Rules (complete; you need not read anything else for them):
+- Lean runs only through `bash verification/local-fable-pair-2026-11-22/gate.sh mathlib MODULE…`; pipe
+  through `grep -v CACHE_HIT | tail -40`. One gate at a time; it waits if the compiler is busy.
+- Never edit an existing `.lean` file; new work goes in new modules. Never delete (no rm). No git.
+- Write the `…Targets.lean` module first (definitions as `def … : Prop`, `@[expose] public section`),
+  record its sha256 in the ledger, then prove in a separate module (`public section`, heavy suppliers as
+  private `import`), ending with `#print axioms <theorem>`. No sorry/axiom/native_decide.
+- Ledger: append a section "F01 — measured paired step" to
+  `verification/local-fable-pair-2026-11-22/fable2/LEDGER.md` (targets + sha, receipts, failures,
+  state and next). On a pass write `fable2/MEASURED-PAIRED-EVIDENCE.json` (modules, sha256 of each new
+  file, passing receipt id, the `#print axioms` lines) and `fable2/MEASURED-PAIRED-SOURCE-MAP.md`
+  (what is claimed, what is assumed, what is not claimed; ten lines).
+
+Task (Paper 16, all modules in `LogicLineages/PersistentMarking/`, common name prefix
+`NumberedWindowInternalCoverCombinedRestricted`, written `NW…` below):
+
+Today the lanes proved that application to a fixed argument is constant on a function's reached pool,
+but the application-level least is over the chosen UNMEASURED exchange
+`X = guardedExchange P.cover s (thinPairedExchange (directedX base P.V))`, while the premise-free
+round theorem needs the function-level exchange to be the MEASURED one
+`Xm = guardedExchange P.cover s (thinPairedExchange (measuredExchange (selectedMeasure P.R) (directedX base P.V)))`.
+Missing: the single-exchange step entirely over the measured exchange — from an accepted
+function-level measured paired edge between f and g (plus the two type guards and the argument window,
+as in the existing statements), the application-level MEASURED paired edge between
+`auxiliaryTerm dom cod f arg` and `auxiliaryTerm dom cod g arg`, i.e. `edgeGraph Xm W ctx cod a b`.
+The route, as the lane that built the neighbours wrote it down:
+  1. unpack the function-level measured edge into the directed edge D(f,g) and `compareMeasurements`
+     (see `pairedParentEdges` and the `conjunctionRecover`/`compareCases` use in
+     `NW…RoundApplicationMeasuredProof.lean`);
+  2. lift the D-edge to the applications by accepted #1370 (`NW…DirectedXTargets.lean`, theorem in
+     `NW…DirectedXProof.lean`) exactly as `NW…PairedAuxProof.lean` / `…PairedAuxKernelProof.lean` do;
+  3. get `compareMeasurements` at the applications from `…PairedSharedMeasureParent`
+     (`NW…PairedSharedMeasureTargets.lean`, proof in `NW…PairedSharedMeasureEqualityProof.lean`) plus
+     `compareShared` (grep it in `NumberedWindowInternalMeasuredAuxExchange*Proof.lean`);
+  4. `conjunctionAccept` to build the measured exchange call at (a,b), both directions for the pair;
+  5. `guardedOfActualPair P.cover s Dm` for the cover-option guard (grep it; it is generic in D).
+Files to read, and no others unless a grep sends you there: the five named above,
+`NW…PairedAuxTargets.lean`, `NW…PairedSharedMeasureProof.lean` (the unmeasured edge statement
+`…PairedSharedMeasureEdge` you are mirroring — copy its header, opens and hypothesis layout),
+`NumberedWindowInternalMeasuredAuxExchangeTargets.lean`, and
+`NW…RoundApplicationCombinedTargets.lean` (for `pairedParentEdges` and the measured statements' shape).
+
+Deliver: frozen `NW…MeasuredPairedTargets.lean` with `ExactOpenCoverCombinedRestrictedMeasuredPairedEdge`
+(hypotheses: both type-guard conjunctions, `windowAt W ctx dom arg`, the function-level measured edge(s)
+at `rawCons dom cod` — state them in whichever form steps 1–5 consume, both directions if needed;
+conclusion: `edgeGraph Xm W ctx cod a b` as a plain derivation), its proof `NW…MeasuredPairedProof.lean`,
+gate, evidence. If and only if that passes with budget to spare, add the common least over `Xm` at the
+two applications by the same argument as `NW…PairedCommonLeastProof.lean` (accepted #818 and #1338 are
+generic in the exchange) as a second statement in a second pair of modules. Do not attempt the round
+theorem.
+
+If a step fails because an accepted supplier is not generic in the exchange (the likely place is step 2
+or step 5), stop and write exactly which lemma and which specialization blocks it. A precise stop is a
+valid result. Final message: what passed (module, theorem, receipt), or the exact block; ten lines.
