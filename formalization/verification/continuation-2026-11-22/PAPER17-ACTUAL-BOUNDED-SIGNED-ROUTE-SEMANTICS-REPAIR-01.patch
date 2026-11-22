@@ -1,0 +1,12 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualBoundedSignedRouteSemanticsNonlinearProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualBoundedSignedRouteSemanticsNonlinearProof.lean
+@@ -43 +43,3 @@
+-        exact sign.2.2.1.trans (by omega)
++        change 0 ≤ R ↔ 0 ≤ coef
++        rw [sign.2.2.1]
++        omega
+@@ -71 +73,3 @@
+-    simpa only [nodeLabels,frames,rootReady.2.1] using paid
++    have atTop : θ top = z := rootReady.2.1
++    rw [atTop] at paid
++    simpa only [nodeLabels,frames] using paid

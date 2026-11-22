@@ -1,0 +1,67 @@
+{
+  "status": "narrow source-only NonlinearProof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "b2bbd5a7c7a7b6244675b4a4a246792792ca250e",
+  "failed_source_local_commit": "6c1e79c8ec217602b495f05235e4925e8fbfa486",
+  "failed_source_tree": "98e53a3f295126368adafa7c77618da4474fff30",
+  "failed_exact_gate_receipt": "1795367611425586991-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualBoundedSignedRouteSemanticsStatementChecks",
+  "failed_receipt_sha256": "35dbc0fd19e935677736e1a9251edf12b5b9b62c260c49ad280c47df2f52aaa7",
+  "failed_exact_module_log_sha256": "a5256187466f98232306d88b39101aebad1a229a747d6e08c02fad687fe12acb",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualBoundedSignedRouteSemanticsNonlinearProof.lean:43:35: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  b \u2265 1\n  a \u2265 1\nwhere\n a := coef\n b := R\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualBoundedSignedRouteSemanticsNonlinearProof.lean:71:4: error: Type mismatch: After simplification, term\n  paid\n has type\n  PaidFamily B baseline top (\u03b8 top) (ActualFullValueLabels.labels (normalizedTerms raw))\nbut is expected to have type\n  PaidFamily B baseline top z (ActualFullValueLabels.labels (normalizedTerms raw))\n",
+  "failed_original_native_log_sha256": "55852febd13cb303412bb8fcb35d8d334995273427395943dba67021733bce25",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualBoundedSignedRouteSemanticsNonlinearProof.lean",
+  "failed_proof_sha256": "cb003a6682cfb9cac7ef8446015983b63f3d806df84f66ead3d0fd07405539d3",
+  "repaired_proof_sha256": "15260975ac935a3b4159d3a50cd7ab2ef13075c208269d98c5bd248c2058bdf6",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BOUNDED-SIGNED-ROUTE-SEMANTICS-REPAIR-01.patch",
+  "patch_sha256": "a96596b396d65796f6fc8a172bb77f30b5d7416dd354e199b69ba6769dc2cd90",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BOUNDED-SIGNED-ROUTE-SEMANTICS-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "93cc9f47d14a1da7aac7fdf5ea3c1296791dc0763e8ed93fb46db5f057484b46",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualBoundedSignedRouteSemanticsTargets.lean": "fbb640ab7ec021f3db79927be6f19bbc56932e15cc1631eeeed81adefd2ee69c",
+    "formalization/LogicLineages/PermittedControl/ActualBoundedSignedRouteSemanticsContextProof.lean": "17524a086df64fa89a5040ada4955139aad26009fa915d4d26ce60a59bc06fca",
+    "formalization/LogicLineages/PermittedControl/ActualBoundedSignedRouteSemanticsLinearProof.lean": "70e6009a3059a3834165151c70cc6f65b55e01ed6bb507701411d8815276bc95",
+    "formalization/LogicLineages/PermittedControl/ActualBoundedSignedRouteSemanticsSoundnessProof.lean": "b2f4dc53128e6a67e2705fc40fd2001057915439e27825cb50638a067bab1e51",
+    "formalization/LogicLineages/PermittedControl/ActualBoundedSignedRouteSemanticsCompletenessProof.lean": "c1523b9a4b196d584a185e0bc33f010f914e1a952742c76891f8bd91c5eaee76",
+    "formalization/LogicLineages/PermittedControl/ActualBoundedSignedRouteSemanticsStatementChecks.lean": "1507f684524aa6949637d9be9f344c31fc5a2c46495a60a5acb177c6ce9f59b5",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BOUNDED-SIGNED-ROUTE-SEMANTICS-SOURCE-MAP.md": "6f87721ed03c5d7510b5b0a30fd0144c567ba340630fc1bd3c21505fa7c9a646"
+  },
+  "static_module_closure_unchanged": {
+    "Targets": {
+      "local": 211,
+      "external": 33,
+      "contains_totient": false
+    },
+    "ContextProof": {
+      "local": 434,
+      "external": 41,
+      "contains_totient": false
+    },
+    "LinearProof": {
+      "local": 444,
+      "external": 41,
+      "contains_totient": false
+    },
+    "NonlinearProof": {
+      "local": 574,
+      "external": 42,
+      "contains_totient": false
+    },
+    "SoundnessProof": {
+      "local": 579,
+      "external": 42,
+      "contains_totient": false
+    },
+    "CompletenessProof": {
+      "local": 580,
+      "external": 42,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 581,
+      "external": 42,
+      "contains_totient": false
+    }
+  },
+  "scope": "Expose exact signed nonnegative branch before using actual signed iff and nonzero coefficient; rewrite the same actual paid family by a typed equality at the extended greatest rank before rewriting normalized frames. No target, definitions, imports, availability, payment or siblings changed."
+}

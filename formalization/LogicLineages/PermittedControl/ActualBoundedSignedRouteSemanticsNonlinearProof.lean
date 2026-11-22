@@ -40,7 +40,9 @@ private theorem sameTest (R coef : Int) (coefNZ : coef ≠ 0)
         exact ⟨fun impossible => False.elim (sign.2.2.2 impossible),
           fun impossible => False.elim (coefNZ impossible)⟩
     | nonnegative =>
-        exact sign.2.2.1.trans (by omega)
+        change 0 ≤ R ↔ 0 ≤ coef
+        rw [sign.2.2.1]
+        omega
     | positive => exact sign.1
   cases positive with
   | false => exact not_congr actual
@@ -68,7 +70,9 @@ theorem exactReachedNonlinearRoute : ExactReachedNonlinearRoute := by
   have readyHere : ReadyFamily B baseline top (nodeLabels raw) := by
     simpa only [nodeLabels,frames] using ready
   have paidHere : PaidFamily B baseline top z (nodeLabels raw) := by
-    simpa only [nodeLabels,frames,rootReady.2.1] using paid
+    have atTop : θ top = z := rootReady.2.1
+    rw [atTop] at paid
+    simpa only [nodeLabels,frames] using paid
   have available := exactFiniteFullValueGuards f B ctx.chosen baseline top (nodeLabels raw) readyHere
   have rawLive : liftedReads f (Function.update baseline top z) s.reads :=
     (readTransport f θ (Function.update baseline top z) top rootReady.2.2
