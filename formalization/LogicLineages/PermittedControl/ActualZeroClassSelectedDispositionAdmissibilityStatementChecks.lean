@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroClassSelectedDispositionAdmissibilityTargets
+import LogicLineages.PermittedControl.ActualZeroClassSelectedDispositionAdmissibilityProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualZeroClassSelectedDispositionAdmissibility :
+    ActualZeroClassSelectedDispositionAdmissibility.ExactSelectedDispositionAdmissibility :=
+  ActualZeroClassSelectedDispositionAdmissibility.exactSelectedDispositionAdmissibility
+
+#print axioms fixed_actualZeroClassSelectedDispositionAdmissibility
+
+end LogicLineages.PermittedControl.StatementChecks
