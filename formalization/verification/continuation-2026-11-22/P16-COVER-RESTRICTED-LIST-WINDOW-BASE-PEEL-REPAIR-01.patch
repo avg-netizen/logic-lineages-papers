@@ -1,0 +1,12 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRestrictedListWindowBasePeelProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRestrictedListWindowBasePeelProof.lean
+@@ -98,2 +98,2 @@
+-      (suc result) ![ctx,headKey false h [a]]))) :
+-    Nonempty (Derivation body Γ (programGraph B (suc result) ![ctx,headKey false h [a]])) := by
++      (suc result) ![ctx,(headKey false h [a])]))) :
++    Nonempty (Derivation body Γ (programGraph B (suc result) ![ctx,(headKey false h [a])])) := by
+@@ -119,2 +119,2 @@
+-      (suc result) ![ctx,headKey true h [ty,k,l,r]]))) :
+-    Nonempty (Derivation body Γ (programGraph B (suc result) ![ctx,headKey true h [ty,k,l,r]])) := by
++      (suc result) ![ctx,(headKey true h [ty,k,l,r])]))) :
++    Nonempty (Derivation body Γ (programGraph B (suc result) ![ctx,(headKey true h [ty,k,l,r])])) := by

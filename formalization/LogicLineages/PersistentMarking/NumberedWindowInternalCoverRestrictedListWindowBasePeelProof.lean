@@ -95,8 +95,8 @@ private theorem useHeadGuard (s : Settings) (B : Program 2) (ctx raw result : OT
 theorem peelOrdinarySelectedBase (s : Settings) (B : Program 2) (T : Program 1)
     (ctx h a result : OTerm α)
     (seen : Nonempty (Derivation body Γ (programGraph (precedingBase s (lambdaLexicalBase s B T))
-      (suc result) ![ctx,headKey false h [a]]))) :
-    Nonempty (Derivation body Γ (programGraph B (suc result) ![ctx,headKey false h [a]])) := by
+      (suc result) ![ctx,(headKey false h [a])]))) :
+    Nonempty (Derivation body Γ (programGraph B (suc result) ![ctx,(headKey false h [a])])) := by
   let raw := headKey false h [a]
   let xs : Fin 2 → OTerm α := ![ctx,raw]
   let L := lambdaLexicalBase s B T
@@ -116,8 +116,8 @@ theorem peelOrdinarySelectedBase (s : Settings) (B : Program 2) (T : Program 1)
 theorem peelNumberedSelectedBase (s : Settings) (B : Program 2) (T : Program 1)
     (ctx h ty k l r result : OTerm α)
     (seen : Nonempty (Derivation body Γ (programGraph (precedingBase s (lambdaLexicalBase s B T))
-      (suc result) ![ctx,headKey true h [ty,k,l,r]]))) :
-    Nonempty (Derivation body Γ (programGraph B (suc result) ![ctx,headKey true h [ty,k,l,r]])) := by
+      (suc result) ![ctx,(headKey true h [ty,k,l,r])]))) :
+    Nonempty (Derivation body Γ (programGraph B (suc result) ![ctx,(headKey true h [ty,k,l,r])])) := by
   let raw := headKey true h [ty,k,l,r]
   let xs : Fin 2 → OTerm α := ![ctx,raw]
   let L := lambdaLexicalBase s B T
