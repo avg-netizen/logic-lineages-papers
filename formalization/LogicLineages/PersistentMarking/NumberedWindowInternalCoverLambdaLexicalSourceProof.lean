@@ -32,7 +32,10 @@ private theorem previous {X : Type} (tab : Nat → List X) (row : Nat → X)
   | zero => omega
   | succ n ih =>
     by_cases before : i < n
-    · rw [step,List.getElem?_append_left (length n ▸ before)]
+    · have within : i < (tab n).length := by
+        rw [length n]
+        exact before
+      rw [step n,List.getElem?_append_left (l₁ := tab n) (l₂ := [row n]) within]
       exact ih before
     · have last : i = n := by omega
       subst i
