@@ -20,6 +20,7 @@ open ID1Completion.InternalListInduction (atCode atIndex)
 open ID1Completion.InternalTagArithmeticSyntaxProof
   (emb bindEmbedding liftBind varBind sucRelabel zRelabel sucSubst zSubst)
 open NumberedWindowInternalSparseFieldParserOpenSyntaxProof (binaryInputsRename tripleInputsRename)
+open NumberedWindowInternalSparseScratchMembershipTargets (memberGraph)
 open NumberedWindowInternalSparseScratchMembershipOpenSyntaxProof (graphRename)
 open NumberedWindowInternalSparsePassWindowSyntaxProof (memberSubst)
 open NumberedWindowInternalScratchAppendOpenTargets

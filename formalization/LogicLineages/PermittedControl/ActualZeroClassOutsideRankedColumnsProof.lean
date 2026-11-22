@@ -32,7 +32,7 @@ private theorem groupedUnique (xs : List Read) (op : LowerOperand) (rd : Read)
       rcases List.mem_cons.mp member with same | among
       · subst rd
         have absent : op ∉ originalKeys tail := by rw [← key]; exact fresh
-        simp only [groupedWeights,Finsupp.add_apply,Finsupp.single_apply,key,if_pos rfl,
+        simp only [groupedWeights,Finsupp.add_apply,Finsupp.single_apply,if_pos key,
           groupedAbsent tail op absent,add_zero]
       · have notSame : first.1.2 ≠ op := by
           intro h

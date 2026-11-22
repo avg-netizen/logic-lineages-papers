@@ -1,0 +1,23 @@
+{
+  "status": "source-only proof repair; exact native/axiom gate pending",
+  "immutable_failed_source_commit": "daa37067e9bcc19d1a6b6461d0175ba8e6a7abb4",
+  "failed_receipt": "1795342050752598284-221",
+  "failed_native_receipt_sha256": "e904b0152edaaf42a665fd4ae4e394af14d91b4bf1ef292e519c30cb2bf7c142",
+  "failed_gate_log_sha256": "8275a49a7cf6732454da6a28e1e4a5e07e583636ca637d33a4063e113ac07c56",
+  "first_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroClassOutsideRankedColumnsProof.lean:33:6: error: unsolved goals",
+  "residual_goal": "(if True then first.1.1 else 0) = first.1.1",
+  "reason": "Use the known operand equality directly through if_pos key, rather than rewriting the key inside a classical if. No change to exact target, order, assumptions, definitions or other proof bodies.",
+  "changed_source": "formalization/LogicLineages/PermittedControl/ActualZeroClassOutsideRankedColumnsProof.lean",
+  "old_failed_source_sha256": "02925e3092f4b42165b60d287292b5f283bb8458505e7e2f763ebba9be425cdf",
+  "new_source_sha256": "f1bb3c3af4e2f1aae25fb7d712506daa47746488f62edc86614e4a8602ae1f33",
+  "zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-ZERO-CLASS-OUTSIDE-RANKED-COLUMNS-REPAIR-01.patch",
+  "patch_sha256": "6baee0f31198b9deb1a7b4afad7f8b0b2be659e466adb57f2caa7f8f12b08ee3",
+  "inverse_exact_failed_bytes_verified": true,
+  "immutable_original_manifest": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-ZERO-CLASS-OUTSIDE-RANKED-COLUMNS-AUTHOR-MANIFEST.json": "7285b53d16d3630a4a77e3d593342da244b811afdb5aed023e3ec6cc02f59edc"
+  },
+  "unchanged_authored_source_pins": {
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassOutsideRankedColumnsTargets.lean": "2d4be3d94c227193af7cf4490bf30395494aaea53541b6639e3b4c735f608cb4",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassOutsideRankedColumnsStatementChecks.lean": "360cdc14fa34cdfd8bfa9440e24a320bae39d9c12c5481da46d4140bbf02697d"
+  }
+}
