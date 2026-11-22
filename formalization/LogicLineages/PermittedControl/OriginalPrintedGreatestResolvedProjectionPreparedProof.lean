@@ -50,7 +50,7 @@ theorem exactResolvedPrepared : ExactResolvedPrepared := by
       (List.mem_map.mpr ⟨r,hr,rfl⟩)
   have prepared (r : Row) (hr : r ∈ fullRows known gates p branch) : PreparedInput ops (compile r) := by
     by_cases h : admittedCode r.1 = true
-    · simpa only [compile,emit,if_pos h] using (hRow r hr).1
+    · simpa only [compile,emit,if_pos h,ops,table,rs] using (hRow r hr).1
     · simpa only [compile,emit,if_neg h] using safeFalsity ops
   have prefixShape : PreparedInput ops (conjoin (pre.map compile)) := by
     apply conjoinSafe
@@ -72,7 +72,7 @@ theorem exactResolvedPrepared : ExactResolvedPrepared := by
       have transported := row.trans (exists_congr fun v =>
         transport θ known gates p branch member checked z [r]
           (fun q hq => (List.mem_singleton.mp hq).symm ▸ hr) f [(v,true)])
-      simpa only [compile,emit,if_pos h,choosePolarity,if_true] using transported
+      simpa only [compile,emit,if_pos h,choosePolarity,if_true,ops,table,rs,slots,output] using transported
     · have illegal : ¬ r.1.Admitted := fun yes => h ((admittedExact r.1).mpr yes)
       change (if admittedCode r.1 then _ else NormalForm.Formula.falsity).eval slots ↔ _
       rw [if_neg h]
@@ -82,7 +82,8 @@ theorem exactResolvedPrepared : ExactResolvedPrepared := by
       (compile (atomRow a)).eval slots ↔ a.eval output := by
     have onePlain : PreparedProjection.PlainPreparedFormula (.atom a) := by
       intro b hb
-      obtain rfl := List.mem_singleton.mp hb
+      have same : b = a := List.mem_singleton.mp hb
+      subst b
       exact plain a ha
     have per := meaning (atomRow a) (hAtom a ha)
     constructor

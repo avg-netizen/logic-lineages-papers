@@ -1,0 +1,12 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedProjectionPreparedProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedProjectionPreparedProof.lean
+@@ -53 +53 @@
+-    · simpa only [compile,emit,if_pos h] using (hRow r hr).1
++    · simpa only [compile,emit,if_pos h,ops,table,rs] using (hRow r hr).1
+@@ -75 +75 @@
+-      simpa only [compile,emit,if_pos h,choosePolarity,if_true] using transported
++      simpa only [compile,emit,if_pos h,choosePolarity,if_true,ops,table,rs,slots,output] using transported
+@@ -85 +85,2 @@
+-      obtain rfl := List.mem_singleton.mp hb
++      have same : b = a := List.mem_singleton.mp hb
++      subst b
