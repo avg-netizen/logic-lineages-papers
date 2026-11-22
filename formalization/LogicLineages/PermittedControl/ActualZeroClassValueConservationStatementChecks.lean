@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroClassValueConservationTargets
+import LogicLineages.PermittedControl.ActualZeroClassValueConservationProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualZeroClassValueConservation :
+    ActualZeroClassValueConservation.FullActualZeroClassValueConservation :=
+  ActualZeroClassValueConservation.fullActualZeroClassValueConservation
+
+#print axioms fixed_actualZeroClassValueConservation
+
+end LogicLineages.PermittedControl.StatementChecks
