@@ -2,6 +2,8 @@ module
 
 public import LogicLineages.PersistentMarking.NumberedWindowInternalCoverAuxFragmentGuardTargets
 import LogicLineages.PersistentMarking.NumberedWindowInternalCoverSharedMemoRowCasesProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverSharedMemoTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalAuxMeasureMemoTargets
 import LogicLineages.PersistentMarking.NumberedWindowInternalAuxExchangeMemoOpenStepCodeProof
 import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof
 import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceSupportProof
@@ -41,8 +43,11 @@ open NumberedWindowInternalAuxExchangeMemoStepTargets (currentKey unaryAfter)
 open NumberedWindowInternalAuxExchangeMemoOpenStepCodeProof (unaryGraph)
 open NumberedWindowInternalAuxMeasureStepTargets (shapeCheck certain earlierAt)
 open NumberedWindowInternalCoverSharedMemoRowCasesProof (exact_OpenCoverSharedMemoRowCases)
+open NumberedWindowInternalCoverSharedMemoTargets (ObservedStep)
+open NumberedWindowInternalAuxMeasureMemoTargets (selectedMeasure)
 open NumberedWindowInternalCoverAuxFragmentGuardTargets
 
+attribute [local irreducible] programGraph
 variable {body : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
 
 theorem headerZeroOfNotOne (tag arity : Nat) (key : OTerm α)
@@ -92,16 +97,34 @@ private theorem atPhysicalRow (prior old : OTerm α)
   obtain rfl := Fin.eq_zero i
   exact key
 
+private theorem consumeSelectedRow (prior : OTerm α)
+    (rejected : Nonempty (Derivation body Γ (unary termShape z (suc prior))))
+    {β : Type} (j : α → β) (Δ : List (Formula β)) (old : OTerm β)
+    (keep : ∀ f ∈ Γ, f.relabel j ∈ Δ)
+    (row : ObservedStep (auxSyntaxUpdate fragmentLeaf (constantOne 1)) body Δ
+      (prior.relabel j) old ((suc z : OTerm α).relabel j)) :
+    Nonempty (Derivation body Δ ((unary (header 2 2) z (suc prior)).relabel j)) := by
+  have reject := renameInto rejected j Δ keep
+  simp only [unaryRename,sucRelabel,zRelabel] at reject
+  have actual := row.update
+  simp only [sucRelabel,zRelabel] at actual
+  have result := atPhysicalRow (prior.relabel j) old reject actual
+  have same : (unary (header 2 2) z (suc prior)).relabel j =
+      unary (header 2 2) z (suc (prior.relabel j)) := by
+    simp only [unaryRename,sucRelabel,zRelabel]
+  exact Eq.mpr (congrArg (fun f => Nonempty (Derivation body Δ f)) same) result
+
 theorem exact_OpenCoverAuxFragmentLeaf : ExactOpenCoverAuxFragmentLeaf := by
   intro body α Γ prior actual noAux
-  let R := auxSyntaxUpdate fragmentLeaf (constantOne 1)
-  let Q := unary (header 2 2) z (suc prior)
-  apply exact_OpenCoverSharedMemoRowCases R body α Γ prior (suc z) Q actual
-  intro β j Δ old keep row
-  have reject := renameInto noAux j Δ keep
-  simp only [unaryRename,sucRelabel,zRelabel] at reject
-  simp only [Q,unaryRename,zRelabel,sucRelabel]
-  exact atPhysicalRow (prior.relabel j) old reject row.update
+  let R : Program 4 := auxSyntaxUpdate fragmentLeaf (constantOne 1)
+  let Q : Formula α := unary (header 2 2) z (suc prior)
+  have parent : Nonempty (Derivation body Γ (unary (selectedMeasure R) (suc z) (suc prior))) := actual
+  have close : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (old : OTerm β),
+      (∀ f ∈ Γ, f.relabel j ∈ Δ) →
+      ObservedStep R body Δ (prior.relabel j) old ((suc z : OTerm α).relabel j) →
+      Nonempty (Derivation body Δ (Q.relabel j)) :=
+    fun _ j Δ old keep row => consumeSelectedRow prior noAux j Δ old keep row
+  exact exact_OpenCoverSharedMemoRowCases R body α Γ prior (suc z) Q parent close
 
 #print axioms headerZeroOfNotOne
 #print axioms exact_OpenCoverAuxFragmentLeaf
