@@ -48,7 +48,7 @@ theorem exactRawOrderedNode : ExactRawOrderedNode := by
   unfold groupedCode orderedSuccessor
   simp only [coefficientCalibration,zeroBodyCalibration]
   by_cases h : maximalCoefficient ts answers = 0
-  · simp only [if_pos h]
+  · simp only [if_pos h] <;> rfl
   · simp only [if_neg h,Option.map_none]
 
 theorem exactRawCanonicalNode : ExactRawCanonicalNode := by
