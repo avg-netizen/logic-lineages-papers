@@ -1,5 +1,6 @@
 module
 public import LogicLineages.PermittedControl.AffineCollapseTopologicalLowTargets
+import LogicLineages.PermittedControl.AffineCollapseTopologicalLowProjectionProof
 import LogicLineages.PermittedControl.AffineCollapseTopologicalLowProof
 
 @[expose] public section
