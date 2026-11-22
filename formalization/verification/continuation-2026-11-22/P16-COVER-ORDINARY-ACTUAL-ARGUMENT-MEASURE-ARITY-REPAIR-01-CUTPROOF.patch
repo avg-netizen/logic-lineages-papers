@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverOrdinaryMeasureCutProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverOrdinaryMeasureCutProof.lean
+@@ -100 +100 @@
+-      (unary (unaryAfter lambdaBump (ordinaryArgumentCode A)) p (ordinaryKey h a))) := by
++      (unary (ordinarySelectedBump A) p (ordinaryKey h a))) := by
+@@ -134 +134 @@
+-  exact successorBranchElim (header 4 2) M (unaryAfter lambdaBump (ordinaryArgumentCode A)) p z ![raw]
++  exact successorBranchElim (header 4 2) M (ordinarySelectedBump A) p z ![raw]

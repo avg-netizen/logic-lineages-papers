@@ -58,7 +58,7 @@ private theorem selfWeak (d : OTerm α) : Nonempty (Derivation body Γ (ltF d (s
 argument selector used in the actual accepted numeric bump graph. -/
 theorem exact_OpenOrdinaryBumpFromArgument (A : Program 1) (h a p m : OTerm α)
     (cut : Nonempty (Derivation body Γ
-      (unary (unaryAfter lambdaBump (ordinaryArgumentCode A)) p (ordinaryKey h a))))
+      (unary (ordinarySelectedBump A) p (ordinaryKey h a))))
     (arg : Nonempty (Derivation body Γ (unary (selectedArgsMeasure A) m a))) :
     Nonempty (Derivation body Γ (unary lambdaBump p m)) := by
   let raw := ordinaryKey h a
@@ -84,7 +84,7 @@ private theorem reindex {β : Type} (j : α → β) (Δ : List (Formula β))
 
 theorem exact_OpenCoverOrdinaryArgumentPair : ExactOpenCoverOrdinaryArgumentPair := by
   intro M A body α Γ h a p Q parent next
-  let L := unaryAfter lambdaBump (ordinaryArgumentCode A)
+  let L := ordinarySelectedBump A
   have cut := exact_OpenCoverOrdinaryMeasureCut M A body α Γ h a p parent
   apply programCases (selectedArgsMeasure A) ![a] Q
   intro β j Δ m keep arg

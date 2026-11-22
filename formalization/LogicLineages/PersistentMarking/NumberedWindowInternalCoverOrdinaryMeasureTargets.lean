@@ -42,10 +42,13 @@ def selectedArgsMeasure (A : Program 1) : Program 1 :=
   branch (.projection 0) (constantZero 1) A
 
 def ordinaryArgumentCode (A : Program 1) : Program 1 :=
-  unaryAfter (selectedArgsMeasure A) (field 1)
+  .composition (selectedArgsMeasure A) (fun _ : Fin 1 => field 1)
+
+def ordinarySelectedBump (A : Program 1) : Program 1 :=
+  .composition lambdaBump (fun _ : Fin 1 => ordinaryArgumentCode A)
 
 def ordinaryMeasureBase (M A : Program 1) : Program 1 :=
-  branch (header 4 2) M (unaryAfter lambdaBump (ordinaryArgumentCode A))
+  branch (header 4 2) M (ordinarySelectedBump A)
 
 abbrev ordinarySharedMeasure (M A : Program 1) : Program 1 :=
   namedSharedMeasure (ordinaryMeasureBase M A)
@@ -71,7 +74,7 @@ def ExactOpenCoverOrdinaryMeasureCut : Prop :=
     (h a p : OTerm α),
     Nonempty (Derivation body Γ (unary (ordinarySharedMeasure M A) p (ordinaryKey h a))) →
     Nonempty (Derivation body Γ
-      (unary (unaryAfter lambdaBump (ordinaryArgumentCode A)) p (ordinaryKey h a)))
+      (unary (ordinarySelectedBump A) p (ordinaryKey h a)))
 
 def ExactOpenCoverOrdinaryArgumentPair : Prop :=
   ∀ (M A : Program 1) (body : Positive (Fin 1)) (α : Type) (Γ : List (Formula α))

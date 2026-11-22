@@ -1,0 +1,14 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverOrdinaryMeasureTargets.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverOrdinaryMeasureTargets.lean
+@@ -45 +45,4 @@
+-  unaryAfter (selectedArgsMeasure A) (field 1)
++  .composition (selectedArgsMeasure A) (fun _ : Fin 1 => field 1)
++
++def ordinarySelectedBump (A : Program 1) : Program 1 :=
++  .composition lambdaBump (fun _ : Fin 1 => ordinaryArgumentCode A)
+@@ -48 +51 @@
+-  branch (header 4 2) M (unaryAfter lambdaBump (ordinaryArgumentCode A))
++  branch (header 4 2) M (ordinarySelectedBump A)
+@@ -74 +77 @@
+-      (unary (unaryAfter lambdaBump (ordinaryArgumentCode A)) p (ordinaryKey h a)))
++      (unary (ordinarySelectedBump A) p (ordinaryKey h a)))

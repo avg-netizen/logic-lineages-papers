@@ -1,0 +1,87 @@
+{
+  "status": "minimal literal unary-tape arity repair; exact native retry pending",
+  "immutable_previous_verified_remote": "77ce5cb2b86a3b970e7a9aadb4d10fcb54b4fc11",
+  "previous_source_local": "8deec57b82d4468601e29bfede08da0fbf61339f",
+  "previous_verified_tree": "37b6c0f4eea123fc6d95e6bffaea7e0481b79fdf",
+  "receipt": {
+    "path": "formalization/build-reports/1795364188179344885-78.json",
+    "sha256": "e3a390fcc0189bc7e31f59ed792c86de1dd26ee4bdb8570bd0253ba7040d0f75"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795364188179344885-78-LogicLineages-PersistentMarking-NumberedWindowInternalCoverOrdinaryMeasureTargets.log",
+    "sha256": "52f31c62cb850bb86c3915349b0c5dfa7f9c2b2f6ec11d0c9f8b81bbd33649d5"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-ordinary-argument-measure-arity-initial-diagnostic.txt",
+    "sha256": "52f31c62cb850bb86c3915349b0c5dfa7f9c2b2f6ec11d0c9f8b81bbd33649d5"
+  },
+  "repaired_editions": [
+    {
+      "edition": "Targets",
+      "archived_previous": {
+        "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverOrdinaryMeasureTargets-01.lean",
+        "sha256": "606df431d4762e73e2b98fb67155f27f5e0a8e2240657a229abb7602689fbd56"
+      },
+      "repaired_source": {
+        "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverOrdinaryMeasureTargets.lean",
+        "sha256": "136c0f979f2ea4e34712e055f171c1aa9d79c3aa81770ae8bd6c69349a01a6fb"
+      },
+      "reversible_patch": {
+        "path": "formalization/verification/continuation-2026-11-22/P16-COVER-ORDINARY-ACTUAL-ARGUMENT-MEASURE-ARITY-REPAIR-01-TARGETS.patch",
+        "sha256": "d40e5430d4dc0a0a04203e0f118bd64fd747d7bcd36c80c2a1630566f629ea9a"
+      },
+      "native_status": "failed target arity"
+    },
+    {
+      "edition": "CutProof",
+      "archived_previous": {
+        "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverOrdinaryMeasureCutProof-01.lean",
+        "sha256": "a1be2b284340b58a39d6663e94bf37dbafa98b7084b3f72e24178a1d17295bc9"
+      },
+      "repaired_source": {
+        "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverOrdinaryMeasureCutProof.lean",
+        "sha256": "49f74d360698991e7aa5484f44b52091b291c885a15b03b54715710fc2426fe1"
+      },
+      "reversible_patch": {
+        "path": "formalization/verification/continuation-2026-11-22/P16-COVER-ORDINARY-ACTUAL-ARGUMENT-MEASURE-ARITY-REPAIR-01-CUTPROOF.patch",
+        "sha256": "7e325e8760547a6b0b859cdcb9d825287891c8ae0a1350f08bf2eb0e9ccff401"
+      },
+      "native_status": "not reached in previous native gate; conforming reference only"
+    },
+    {
+      "edition": "ArgumentProof",
+      "archived_previous": {
+        "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverOrdinaryMeasureArgumentProof-01.lean",
+        "sha256": "342279a95906994d2de473f58625147d732be2d3af4f4990d52c1b9410ef1d50"
+      },
+      "repaired_source": {
+        "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverOrdinaryMeasureArgumentProof.lean",
+        "sha256": "4ca1b736275bd2e62295a446aec39e7623584f82132579a7d01f38320877c065"
+      },
+      "reversible_patch": {
+        "path": "formalization/verification/continuation-2026-11-22/P16-COVER-ORDINARY-ACTUAL-ARGUMENT-MEASURE-ARITY-REPAIR-01-ARGUMENTPROOF.patch",
+        "sha256": "64254dfa2d99d95d50ab905a2e5b77e33772befb3cb5f1b46df3683dbed7d0d0"
+      },
+      "native_status": "not reached in previous native gate; conforming reference only"
+    }
+  ],
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverOrdinaryMeasureNumericProof.lean",
+      "sha256": "9fb65c021667323763919b529567cc4d9159347cf3d1e4151224d1af19c19267"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverOrdinaryMeasureNullaryPairProof.lean",
+      "sha256": "9a13691a8816a6eef04b3b1eababfed04aee3721e9b067ba8ef65739d7760220"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverOrdinaryMeasureNullaryFittedProof.lean",
+      "sha256": "aca05c59a51e952a56414d756c7ae50852b98e7eef1daa85e69b0b90432a6be0"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-COVER-ORDINARY-ACTUAL-ARGUMENT-MEASURE-SOURCE-MAP.md",
+      "sha256": "a17327907fa5e1be05d6a89f47d27a0d05e86ea27dfe00a8472ca2741ba7dc5a"
+    }
+  ],
+  "diagnosis": "unaryAfter is a helper specialized to row arity 4; the original designated fallback tape is unary raw. Use actual composition for the callback after field1 and for its bump, shared by the literal target and its two references. The true AST intent, exact original field/order, numeric fit, argument-side bounds, and public propositions besides expressing the intended well-typed program are unchanged. The initial target failed before any proof."
+}

@@ -97,7 +97,7 @@ private theorem fromRow (M A : Program 1) (h a old p : OTerm α)
     (row : ObservedStep (sharedMeasureUpdate (leafMeasureBase (namedMeasureBase (ordinaryMeasureBase M A))))
       body Γ (ordinaryPrior h a) old p) :
     Nonempty (Derivation body Γ
-      (unary (unaryAfter lambdaBump (ordinaryArgumentCode A)) p (ordinaryKey h a))) := by
+      (unary (ordinarySelectedBump A) p (ordinaryKey h a))) := by
   let L := ordinaryMeasureBase M A
   let N := namedMeasureBase L
   let B := leafMeasureBase N
@@ -131,7 +131,7 @@ private theorem fromRow (M A : Program 1) (h a old p : OTerm α)
   have bound := zeroBranchElim (header 0 2) (branch (header 1 2) L namedMeasurePair)
     namedMeasurePair p ![raw] shape.notFree n
   have ordinary := zeroBranchElim (header 1 2) L namedMeasurePair p ![raw] shape.notBound bound
-  exact successorBranchElim (header 4 2) M (unaryAfter lambdaBump (ordinaryArgumentCode A)) p z ![raw]
+  exact successorBranchElim (header 4 2) M (ordinarySelectedBump A) p z ![raw]
     shape.accepted ordinary
 
 theorem exact_OpenCoverOrdinaryMeasureCut : ExactOpenCoverOrdinaryMeasureCut := by
