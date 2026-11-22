@@ -31,8 +31,15 @@ private theorem rowFlag (all : List Nat) (C u : Nat) (hu : u ∈ all) (hc : C �
       intro a used
       obtain ⟨v,hv,rfl⟩ := List.mem_map.mp used
       exact (notLessExact u v).mpr (eq.symm ▸ upper v hv)
-  cases bit : (all.map (compare u)).all notLess <;> by_cases eq : u = C <;>
-    simp_all
+  by_cases eq : u = C
+  · have yes : decide (u = C) = true := decide_eq_true eq
+    exact (bounds.mpr eq).trans yes.symm
+  · have no : ((all.map (compare u)).all notLess) = false := by
+      cases h : (all.map (compare u)).all notLess with
+      | false => rfl
+      | true => exact False.elim (eq (bounds.mp h))
+    have bit : decide (u = C) = false := by simp [eq]
+    exact no.trans bit.symm
 
 private theorem flagsBlock (all chosen : List Nat) (C : Nat)
     (present : ∀ u ∈ chosen, u ∈ all) (hc : C ∈ all) (upper : ∀ v ∈ all, v ≤ C) :

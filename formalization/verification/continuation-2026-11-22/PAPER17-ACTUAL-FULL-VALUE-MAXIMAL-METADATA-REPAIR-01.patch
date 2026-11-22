@@ -1,0 +1,14 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualFullValueMaximalMetadataFlagsProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualFullValueMaximalMetadataFlagsProof.lean
+@@ -34,2 +34,9 @@
+-  cases bit : (all.map (compare u)).all notLess <;> by_cases eq : u = C <;>
+-    simp_all
++  by_cases eq : u = C
++  · have yes : decide (u = C) = true := decide_eq_true eq
++    exact (bounds.mpr eq).trans yes.symm
++  · have no : ((all.map (compare u)).all notLess) = false := by
++      cases h : (all.map (compare u)).all notLess with
++      | false => rfl
++      | true => exact False.elim (eq (bounds.mp h))
++    have bit : decide (u = C) = false := by simp [eq]
++    exact no.trans bit.symm
