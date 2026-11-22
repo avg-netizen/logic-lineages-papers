@@ -1,0 +1,19 @@
+module
+public import LogicLineages.PermittedControl.ActualSelectedSignedRouteProjectionTargets
+import LogicLineages.PermittedControl.ActualSelectedSignedRouteProjectionChosenProof
+import LogicLineages.PermittedControl.ActualSelectedSignedRouteProjectionProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualSelectedSignedRouteProjection
+
+theorem fixed_exactChosenRouteProjection : ExactChosenRouteProjection := exactChosenRouteProjection
+theorem fixed_exactSignedRouteUnionProjection : ExactSignedRouteUnionProjection := exactSignedRouteUnionProjection
+theorem fixed_fullActualSelectedSignedRouteProjection : FullActualSelectedSignedRouteProjection :=
+  ⟨fixed_exactChosenRouteProjection,fixed_exactSignedRouteUnionProjection⟩
+
+#print axioms fixed_exactChosenRouteProjection
+#print axioms fixed_exactSignedRouteUnionProjection
+#print axioms fixed_fullActualSelectedSignedRouteProjection
+
+end LogicLineages.PermittedControl.StatementChecks
