@@ -85,15 +85,28 @@ private theorem pairTapePrimitive :
     Primrec.listFilterMap Primrec.id (labelPrimitive.comp Primrec.snd).to₂
   exact orderedPairsPrimitive.comp labelTape
 
+private theorem foldMaximumWithConfig {A X C : Type}
+    [Primcodable A] [Primcodable X] [Primcodable C]
+    {xs : A → List X} {cfg : A → C} {cost : C → X → Nat}
+    (items : Primrec xs) (config : Primrec cfg) (eval : Primrec₂ cost) :
+    Primrec (fun a => (xs a).foldr (fun x n => max (cost (cfg a) x) n) 0) :=
+  foldMaximumWith items (eval.comp₂ (config.comp₂ Primrec₂.left) Primrec₂.right)
+
+private theorem alphabetFoldLiteral (p : Nat × AlphabetCode) :
+    (orderedPairs (p.2.filterMap labelCode)).foldr
+      (fun x n => max (pairCostCode p.1 x) n) 0 = alphabetCode p.1 p.2 :=
+  rfl
+
 private theorem alphabetUncurried :
     Primrec (fun p : Nat × AlphabetCode => alphabetCode p.1 p.2) := by
   let A := Nat × AlphabetCode
   have tape : Primrec (fun p : A => orderedPairs (p.2.filterMap labelCode)) :=
-    pairTapePrimitive.comp Primrec.snd
-  have eval : Primrec₂ (fun (p : A) (item : PairCode) => pairCostCode p.1 item) :=
-    (pairCostUncurried.comp ((Primrec.fst.comp Primrec.fst).pair Primrec.snd) :
-      Primrec (fun p : A × PairCode => pairCostCode p.1.1 p.2)).to₂
-  exact (foldMaximumWith tape eval).of_eq (fun _ => rfl)
+    pairTapePrimitive.comp (Primrec.snd : Primrec (Prod.snd : A → AlphabetCode))
+  have cfg : Primrec (Prod.fst : A → Nat) := Primrec.fst
+  have folded : Primrec (fun p : A => (orderedPairs (p.2.filterMap labelCode)).foldr
+      (fun x n => max (pairCostCode p.1 x) n) 0) :=
+    foldMaximumWithConfig tape cfg pairCostPrimitive
+  exact folded.of_eq alphabetFoldLiteral
 
 theorem alphabetPrimitive : Primrec₂ alphabetCode := alphabetUncurried.to₂
 
