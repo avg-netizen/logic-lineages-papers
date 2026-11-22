@@ -71,12 +71,13 @@ theorem exactResolvedProjection : ExactResolvedProjection := by
   have backward (z : Nat) (h : source z) : prior θ ∧ available ∧ stage z := by
     obtain ⟨paid,pr,actual⟩ := h
     have packet := ((same z paid).mp ⟨pr,actual⟩).2
-    obtain ⟨⟨xs,hx,_⟩,ys,hy,_⟩ := packet
+    obtain ⟨⟨xs,hx,tx⟩,ys,hy,accepted⟩ := packet
     have real : actualRows f (output z) (fullRows known gates p branch) (xs ++ ys) :=
       combine _ _ _ _ _ _ hx hy
     have rankedHit := (transport θ known gates p branch member ordered z
       (fullRows known gates p branch) (fun _ h => h) f (xs ++ ys)).mpr real
-    exact ⟨(fixedPrior z).mp pr,dh.2.2.2 z (xs ++ ys) rankedHit,paid,packet⟩
+    exact ⟨(fixedPrior z).mp pr,dh.2.2.2 z (xs ++ ys) rankedHit,paid,
+      ⟨⟨xs,hx,tx⟩,ys,hy,accepted⟩⟩
   change ((prior θ ∧ available ∧ (eliminatePreparedFormula q).eval ν) ↔ ∃ z : Nat, source z)
   exact projectActual ops q ν (prior θ) available stage source prep.1 point forward backward
 
