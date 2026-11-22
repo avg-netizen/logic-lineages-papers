@@ -1,0 +1,23 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedRawGraphAllocatorTargets
+import LogicLineages.PermittedControl.OriginalPrintedRawGraphAllocatorProof
+import LogicLineages.PermittedControl.OriginalPrintedRawGraphAllocatorPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedRawGraphAllocator
+
+theorem fixed_exactOriginalRawGraphNames : ExactOriginalRawGraphNames := exactOriginalRawGraphNames
+theorem fixed_exactOriginalRawGraphAllocator : ExactOriginalRawGraphAllocator := exactOriginalRawGraphAllocator
+theorem fixed_exactOriginalRawGraphAllocatorEffectivity : ExactOriginalRawGraphAllocatorEffectivity :=
+  exactOriginalRawGraphAllocatorEffectivity
+theorem fixed_fullOriginalPrintedRawGraphAllocator : FullOriginalPrintedRawGraphAllocator :=
+  ⟨fixed_exactOriginalRawGraphNames,fixed_exactOriginalRawGraphAllocator,
+    fixed_exactOriginalRawGraphAllocatorEffectivity⟩
+
+#print axioms fixed_exactOriginalRawGraphNames
+#print axioms fixed_exactOriginalRawGraphAllocator
+#print axioms fixed_exactOriginalRawGraphAllocatorEffectivity
+#print axioms fixed_fullOriginalPrintedRawGraphAllocator
+
+end LogicLineages.PermittedControl.StatementChecks
