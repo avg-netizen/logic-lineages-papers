@@ -1,0 +1,16 @@
+module
+public import LogicLineages.PermittedControl.ActualSyntaxChargeBudgetTargets
+import LogicLineages.PermittedControl.ActualSyntaxChargeBudgetProof
+import LogicLineages.PermittedControl.ActualSyntaxChargeBudgetCodeProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualSyntaxChargeBudget :
+    ActualSyntaxChargeBudget.FullActualSyntaxChargeBudget :=
+  ⟨ActualSyntaxChargeBudget.exactDistinctSupportBudget,ActualSyntaxChargeBudget.exactChargeBudget,
+    ActualSyntaxChargeBudget.budgetCodeExact⟩
+
+#print axioms fixed_actualSyntaxChargeBudget
+
+end LogicLineages.PermittedControl.StatementChecks
