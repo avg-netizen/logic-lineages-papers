@@ -50,7 +50,7 @@ theorem consumeArgument (F : Program 1) (s : Settings) (raw : OTerm α) (goal : 
   let j : α → α ⊕ Fin 6 := Sum.inl
   let vals : Fin 6 → OTerm (α ⊕ Fin 6) := fun i => .var (.inr i)
   let P := argumentMatrix F s raw
-  let Δ := P :: Γ.map weaken
+  let Δ := P :: Γ.map (fun q => q.relabel j)
   apply actualFiniteExistentialElimination body α 6 Γ P goal actual
   have hs : Derivation body Δ (argumentPayload F s (raw.relabel j) vals) :=
     Derivation.hypothesis List.mem_cons_self
