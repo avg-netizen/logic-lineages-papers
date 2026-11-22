@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualFiniteSignedNodeBranchTargets
+import LogicLineages.PermittedControl.ActualFiniteSignedNodeBranchProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualFiniteSignedNodeBranch :
+    ActualFiniteSignedNodeBranch.ExactFiniteSignedNodeBranch :=
+  ActualFiniteSignedNodeBranch.exactFiniteSignedNodeBranch
+
+#print axioms fixed_exactActualFiniteSignedNodeBranch
+
+end LogicLineages.PermittedControl.StatementChecks
