@@ -12,7 +12,7 @@ public section
 namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverAuxFragmentNumericRowProof
 open LogicLineages.ComputabilityKnowledge GorbowPRProgram List.Vector
 open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion
-open InternalAcceptance (constantZero conjunction)
+open InternalAcceptance (branch constantZero conjunction)
 open InternalAcceptanceCalibrationProof (evalBranch actualConjunctionEvaluation)
 open InternalLessThan (constantOne)
 open InternalLessThanEvaluationProof (exactLessThanEvaluation)
