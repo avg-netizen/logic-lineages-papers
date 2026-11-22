@@ -1,0 +1,28 @@
+module
+public import LogicLineages.PermittedControl.OriginalMixedGateSequentialTargets
+import LogicLineages.PermittedControl.OriginalMixedGateSequentialReadProof
+import LogicLineages.PermittedControl.OriginalMixedGateSequentialProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalMixedGateRead : OriginalMixedGateSequential.ExactMixedGateRead :=
+  OriginalMixedGateSequential.exactMixedGateRead
+
+theorem fixed_exactOriginalMixedSequential : OriginalMixedGateSequential.ExactMixedSequential :=
+  OriginalMixedGateSequential.exactMixedSequential
+
+theorem fixed_exactOriginalMixedFailureAndUniqueness :
+    OriginalMixedGateSequential.ExactMixedFailureAndUniqueness :=
+  OriginalMixedGateSequential.exactMixedFailureAndUniqueness
+
+theorem fixed_fullOriginalMixedGateSequential : OriginalMixedGateSequential.FullOriginalMixedGateSequential :=
+  ⟨fixed_exactOriginalMixedGateRead,fixed_exactOriginalMixedSequential,
+    fixed_exactOriginalMixedFailureAndUniqueness⟩
+
+#print axioms fixed_exactOriginalMixedGateRead
+#print axioms fixed_exactOriginalMixedSequential
+#print axioms fixed_exactOriginalMixedFailureAndUniqueness
+#print axioms fixed_fullOriginalMixedGateSequential
+
+end LogicLineages.PermittedControl.StatementChecks
