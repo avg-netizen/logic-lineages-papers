@@ -1,0 +1,53 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "eef136b7d7535e4395e5d142ea4c48a32ab63027",
+  "failed_source_local_commit": "e579a6bdb828c7ef2092894fa258cfa4a145b912",
+  "failed_source_tree": "aff32853ad9abf231d3771097aceb1d19f7a4812",
+  "failed_exact_gate_receipt": "1795380025573115572-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualCanonicalFundedTerminalStatementChecks",
+  "failed_receipt_sha256": "d6d1356fe6e7611b5bf10417e93eb925da41bb91a0b5fe81a18df70b01b7db07",
+  "failed_exact_module_log_sha256": "a6a1c06a46914335e32a5c93d72199209e04270790a9a0970642f1c54b01122a",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalFundedTerminalTruthProof.lean:53:4: error: Type mismatch\n  Or.inr\n    (have this := \u27e8active, verdict\u27e9;\n    this)\nhas type\n  ?m.256 \u2228 ActiveAt top xs \u2227 NonzeroForward f B \u03c1 r top initial stopped xs\nbut is expected to have type\n  ForwardTruth f B \u03c1 r top initial stopped\n",
+  "failed_original_native_log_sha256": "d154d51bc1f3361b488610c54836c96a953a1b8bb54468a0586f6fcf4e329845",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualCanonicalFundedTerminalTruthProof.lean",
+  "failed_proof_sha256": "3cc62c45ff2ce09261b5e8cadb07f9bac81f62364d61272b2f11467ac453674b",
+  "repaired_proof_sha256": "8c05074940ebce22e4a9ec1024df256b6877b5c2558c3541c1114fb3b760f10b",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-FUNDED-TERMINAL-REPAIR-03.patch",
+  "patch_sha256": "3ca5102f6c760129da9629bce4721a49b2828ff542a3aefafe2a03ee5c47146f",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-FUNDED-TERMINAL-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "b63edc833da932486d6735bc6fe73f80ec7b10cc50f7be0626b9a473685662d4",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-FUNDED-TERMINAL-REPAIR-01.json": "e1a75cc27c280f07f339541277530a2417327f02fb0ac9bc5626748e8e30073f",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-FUNDED-TERMINAL-REPAIR-02.json": "150a285dd36b6bed2f93213332f9cf82ad283b221a466b9f36735ab8b66aa1d0"
+  },
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalFundedTerminalProof.lean": "d6c7bedd7e0590fec40e56f90b7c336217db1731f4422b07e665b2a61aaf7b94",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalFundedTerminalStatementChecks.lean": "fb6db27acd5452025c6c71887f2a363d22dd66981c19a20cb973393c5e649515",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalFundedTerminalTargets.lean": "1a0bc599ae0c4b6a919902b7bdb0e1b9a2257589a66c8f16d51bb250d25c819e",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-FUNDED-TERMINAL-SOURCE-MAP.md": "e62030d679cba7c4f51577fe383140052fb52fb75e629b1ae01e851249b7246b"
+  },
+  "static_module_closure": {
+    "Proof": {
+      "local": 603,
+      "external": 43,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 604,
+      "external": 43,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 226,
+      "external": 34,
+      "contains_totient": false
+    },
+    "TruthProof": {
+      "local": 502,
+      "external": 43,
+      "contains_totient": false
+    }
+  },
+  "scope": "Construct the shared stopped-read existential first, then split its actual inactive/nonzero branch. Before the split the same actual tuple and read witness now applies to both resulting goals. No target, domain or other proof changes."
+}

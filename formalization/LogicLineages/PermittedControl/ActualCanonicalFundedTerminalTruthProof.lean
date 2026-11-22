@@ -33,8 +33,9 @@ theorem exactFundedForwardTruth : ExactFundedForwardTruth := by
   intro f B chosen ρ strict r top initial stopped answers live ranks long signPaid path stop
   obtain ⟨_,endLive,endRank,_,value,_⟩ := exactCanonicalTraceReplay f B chosen ρ r top
     initial stopped answers path
-  obtain ⟨xs,normal,sourceReads,inactive | ⟨active,nonzero⟩⟩ := stop
+  obtain ⟨xs,normal,sourceReads,branches⟩ := stop
   refine ⟨xs,normal,sourceReads,?_⟩
+  rcases branches with inactive | ⟨active,nonzero⟩
   · exact Or.inl ⟨inactive,linearForward f ρ top initial stopped xs (endLive live)
       (fun rd member => (endRank ranks rd member).2) normal inactive value⟩
   · have localPaid := (exactCanonicalSignFunding f B chosen ρ r top initial stopped answers
