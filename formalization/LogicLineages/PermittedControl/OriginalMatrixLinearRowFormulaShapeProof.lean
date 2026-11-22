@@ -1,6 +1,6 @@
 module
 public import LogicLineages.PermittedControl.OriginalMatrixLinearRowFormulaTargets
-import LogicLineages.PermittedControl.PreparedParameterRowsProof
+public import LogicLineages.PermittedControl.PreparedParameterRowsProof
 
 @[expose] public section
 namespace LogicLineages.PermittedControl.OriginalMatrixLinearRowFormula

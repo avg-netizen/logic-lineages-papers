@@ -1,0 +1,50 @@
+{
+  "status": "exact source-only narrow import visibility repair; native not invoked by author",
+  "failed_source_remote_commit": "bafdbeb1c413493f5f66bda93db1861fec8539df",
+  "failed_source_local_commit": "5cbd0bd85",
+  "failed_exact_gate_receipt": "1795360390773094722-74",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalMatrixLinearRowFormulaStatementChecks",
+  "failed_receipt_sha256": "68b13580e18ba146ee4faac46bc88e6117178690afc693f924ffdb02c7c3b19c",
+  "failed_exact_module_log_sha256": "e77bc63af76e09d6172ea4218c56a0e9930fdea1e9ef7f33fc3ca0cf6a911507",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalMatrixLinearRowFormulaShapeProof.lean:11:74: error(lean.unknownIdentifier): Unknown identifier `PlainPreparedRow`\n\nNote: A public declaration `PlainPreparedRow` exists but is imported privately; consider adding `public import LogicLineages.PermittedControl.PreparedParameterRowsProof`.\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalMatrixLinearRowFormulaShapeProof.lean:55:13: error(lean.unknownIdentifier): Unknown identifier `PlainPreparedRow`\n\nNote: A public declaration `PlainPreparedRow` exists but is imported privately; consider adding `public import LogicLineages.PermittedControl.PreparedParameterRowsProof`.",
+  "failed_original_native_log_sha256": "cc9566525528a163c0c273f707501446a3b347bc11f96b2eca1932d6e283cd2e",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalMatrixLinearRowFormulaShapeProof.lean",
+  "failed_proof_sha256": "9b246419640f0b5c871319b4eca0bc8117594417d74205e90003cabd8ea2a03b",
+  "repaired_proof_sha256": "cb2716339ca5b3bd4087c802340f95d42d4770ee9af41addbb7454cdfbc50e13",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-MATRIX-LINEAR-ROW-FORMULA-REPAIR-01.patch",
+  "patch_sha256": "931230e03b83e04d5495bb6012b775fc9196c69698be484f95dd31b8c24f1579",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-MATRIX-LINEAR-ROW-FORMULA-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "a739640cd555958acd4099756f24469aed3d1a706180ab1be35347d7cbf6d321",
+  "downstream_manifest_untouched": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-LINEAR-PROJECTION-AUTHOR-MANIFEST.json",
+  "downstream_original_manifest_sha256": "b11e2033183e2ff8a1bd0901f0496edaf70e517c1b5bce4868ff0c65955b2027",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalMatrixLinearRowFormulaTargets.lean": "2400441621873a5406c1383e1aa390619a97824c43009157a3cb94ef41f68f34",
+    "formalization/LogicLineages/PermittedControl/OriginalMatrixLinearRowFormulaProof.lean": "fe96af820a18f88c08d917b95c662492d3fff2582153fbe53a7317851a391496",
+    "formalization/LogicLineages/PermittedControl/OriginalMatrixLinearRowFormulaStatementChecks.lean": "d2c17b8758684f89a94ac4347db29d39ee956e5c7f197b073537e22523ce242b",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-MATRIX-LINEAR-ROW-FORMULA-SOURCE-MAP.md": "65511201e9a4fef4c36853cf5079f2e74d7bb14e8cb6302cb44c730f45bd3b08"
+  },
+  "static_closure_unchanged": {
+    "Targets": {
+      "local": 154,
+      "external": 31,
+      "contains_totient": false
+    },
+    "ShapeProof": {
+      "local": 156,
+      "external": 31,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 294,
+      "external": 38,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 295,
+      "external": 38,
+      "contains_totient": false
+    }
+  },
+  "scope": "Mark existing PreparedParameterRowsProof import public so the unchanged exposed shape helper statements can name PlainPreparedRow. No added module, proof bodies, definitions, target or peers."
+}
