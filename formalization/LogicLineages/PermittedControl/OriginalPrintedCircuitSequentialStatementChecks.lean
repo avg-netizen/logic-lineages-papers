@@ -1,0 +1,31 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedCircuitSequentialTargets
+import LogicLineages.PermittedControl.OriginalPrintedCircuitSequentialReadProof
+import LogicLineages.PermittedControl.OriginalPrintedCircuitSequentialProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedCircuitGateReads :
+    OriginalPrintedCircuitSequential.ExactCircuitGateReads :=
+  OriginalPrintedCircuitSequential.exactCircuitGateReads
+
+theorem fixed_exactOriginalPrintedCircuitRun :
+    OriginalPrintedCircuitSequential.ExactPrintedCircuitRun :=
+  OriginalPrintedCircuitSequential.exactPrintedCircuitRun
+
+theorem fixed_exactOriginalPrintedCircuitFailureAndUniqueness :
+    OriginalPrintedCircuitSequential.ExactPrintedCircuitFailureAndUniqueness :=
+  OriginalPrintedCircuitSequential.exactPrintedCircuitFailureAndUniqueness
+
+theorem fixed_fullOriginalPrintedCircuitSequential :
+    OriginalPrintedCircuitSequential.FullOriginalPrintedCircuitSequential :=
+  ⟨fixed_exactOriginalPrintedCircuitGateReads,fixed_exactOriginalPrintedCircuitRun,
+    fixed_exactOriginalPrintedCircuitFailureAndUniqueness⟩
+
+#print axioms fixed_exactOriginalPrintedCircuitGateReads
+#print axioms fixed_exactOriginalPrintedCircuitRun
+#print axioms fixed_exactOriginalPrintedCircuitFailureAndUniqueness
+#print axioms fixed_fullOriginalPrintedCircuitSequential
+
+end LogicLineages.PermittedControl.StatementChecks
