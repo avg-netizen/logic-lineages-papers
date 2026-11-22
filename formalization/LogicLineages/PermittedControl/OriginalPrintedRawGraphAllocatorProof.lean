@@ -1,6 +1,6 @@
 module
 public import LogicLineages.PermittedControl.OriginalPrintedRawGraphAllocatorTargets
-import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.MaximalPlainBranchProgramsCalibrationProof
+import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsCodeCalibrationProof
 
 @[expose] public section
 namespace LogicLineages.PermittedControl.OriginalPrintedRawGraphAllocator
@@ -52,10 +52,31 @@ private theorem liftNames (gs : List OriginalMixedGateSequential.Gate) :
   simp only [names,OriginalMixedGateNormalization.listedNames,List.map_map,List.flatMap_map,
     Function.comp_def,Gate.output,Gate.references]
 
+private theorem formulaVariablesFromAtoms (p : NormalForm.Formula) :
+    p.variables = (LinearRows.atoms p).flatMap (fun a => NormalForm.rowVariables a.row) := by
+  induction p <;> simp [NormalForm.Formula.variables, LinearRows.atoms, *]
+
+private theorem atomRowLiteral (a : NormalForm.Atom) :
+    a.data.2.2 = NormalForm.rowData a.row := by cases a <;> rfl
+
+private theorem summandNameLiteral (s : NormalForm.Summand) :
+    s.data.2.1 = s.name := by cases s <;> rfl
+
+private theorem atomDataLiteral (a : NormalForm.Atom) :
+    LinearRows.Code.decodeAtom (Encodable.encode a.data) = a.data := by
+  simp only [LinearRows.Code.decodeAtom, Encodable.encodek, Option.getD_some]
+
+private theorem formulaVariablesLiteral (p : NormalForm.Formula) :
+    MaximalPlainBranchPrograms.Code.variables p.encode = p.variables := by
+  rw [formulaVariablesFromAtoms p]
+  simp only [MaximalPlainBranchPrograms.Code.variables, LinearRowsCodeProof.atoms_calibration,
+    List.flatMap_map, Function.comp_def, atomDataLiteral, atomRowLiteral, NormalForm.rowData,
+    NormalForm.rowVariables, List.map_map, summandNameLiteral]
+
 private theorem exteriorLiteral (known : List Nat) (p : NormalForm.Formula) :
     exteriorCode (known,p.encode) = OriginalPrintedCircuitNormalizedTerminal.exterior known (.rows p) := by
   simp only [exteriorCode,OriginalPrintedCircuitNormalizedTerminal.exterior,OriginalMixedTerminalTest.testCeiling,
-    OriginalMixedTerminalTest.Test.names,MaximalPlainBranchProgramsProof.variables_calibration]
+    OriginalMixedTerminalTest.Test.names,formulaVariablesLiteral]
 
 private theorem protectedLiteral (ext : Nat) (gs : List Gate) :
     protectedCode (ext,gs.map encodeGate) = protectedCeiling ext gs := by
