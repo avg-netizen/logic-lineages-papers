@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionPreparedProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionPreparedProof.lean
+@@ -83 +83 @@
+-      change atomAnswer output a = true at bit
++      have atomBit : atomAnswer output a = true := by cases a <;> exact bit
+@@ -86 +86 @@
+-      rw [bit] at actual
++      rw [atomBit] at actual

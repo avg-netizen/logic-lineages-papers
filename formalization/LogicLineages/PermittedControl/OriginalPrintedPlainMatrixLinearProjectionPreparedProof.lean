@@ -80,10 +80,10 @@ theorem exactAlreadyLinearPreparedCircuit : ExactAlreadyLinearPreparedCircuit :=
       exact (exactPlainTerminalSuffix f output (.atom a) onePlain true).mpr ⟨[(v,true)],live,rfl⟩
     · intro holds
       have bit := (OriginalMixedTerminalTest.exactTerminalTestRead (.rows (.atom a)) onePlain output true).mpr holds
-      change atomAnswer output a = true at bit
+      have atomBit : atomAnswer output a = true := by cases a <;> exact bit
       have actual := (exactPlainTerminalSnapshot f output (.atom a) onePlain (snapshot output (.atom a))).mpr rfl
       change actualRows f output [atomRow a] [(NormalForm.rowValue a.row output,atomAnswer output a)] at actual
-      rw [bit] at actual
+      rw [atomBit] at actual
       exact per.mpr ⟨_,actual⟩
   have suffix : (choosePolarity (atomMap (fun a => emit (atomRow a)) p) positive).eval slots ↔
       (OriginalMixedTerminalTest.Test.rows p).atPolarity positive output := by
