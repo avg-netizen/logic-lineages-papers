@@ -1,0 +1,20 @@
+module
+public import LogicLineages.PermittedControl.ActualCanonicalNormalizedTapeTargets
+import LogicLineages.PermittedControl.ActualCanonicalNormalizedTapeProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualCanonicalNormalizedTape
+
+theorem fixed_exactCanonicalTapeCertificate : ExactCanonicalTapeCertificate :=
+  exactCanonicalTapeCertificate
+
+theorem fixed_exactCanonicalTapeDomain : ExactCanonicalTapeDomain := exactCanonicalTapeDomain
+
+theorem fixed_fullActualCanonicalNormalizedTape : FullActualCanonicalNormalizedTape :=
+  ⟨fixed_exactCanonicalTapeCertificate,fixed_exactCanonicalTapeDomain⟩
+
+#print axioms fixed_exactCanonicalTapeCertificate
+#print axioms fixed_exactCanonicalTapeDomain
+#print axioms fixed_fullActualCanonicalNormalizedTape
+
+end LogicLineages.PermittedControl.ActualCanonicalNormalizedTape
