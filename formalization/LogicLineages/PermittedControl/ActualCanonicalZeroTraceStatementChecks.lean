@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.ActualCanonicalZeroTraceTargets
+import LogicLineages.PermittedControl.ActualCanonicalZeroTraceWitnessProof
+import LogicLineages.PermittedControl.ActualCanonicalZeroTraceReplayProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualCanonicalZeroTrace
+
+theorem fixed_exactCanonicalZeroWitness : ExactCanonicalZeroWitness := exactCanonicalZeroWitness
+theorem fixed_exactCanonicalZeroReplay : ExactCanonicalZeroReplay := exactCanonicalZeroReplay
+theorem fixed_exactCanonicalTraceReplay : ExactCanonicalTraceReplay := exactCanonicalTraceReplay
+
+theorem fixed_fullActualCanonicalZeroTrace : FullActualCanonicalZeroTrace :=
+  ⟨fixed_exactCanonicalZeroWitness,fixed_exactCanonicalZeroReplay,fixed_exactCanonicalTraceReplay⟩
+
+#print axioms fixed_exactCanonicalZeroWitness
+#print axioms fixed_exactCanonicalZeroReplay
+#print axioms fixed_exactCanonicalTraceReplay
+#print axioms fixed_fullActualCanonicalZeroTrace
+
+end LogicLineages.PermittedControl.ActualCanonicalZeroTrace
