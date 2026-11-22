@@ -160,7 +160,7 @@ theorem actualOrdinarySingletonShape (h ty : OTerm α) : OrdinarySingletonShape 
     (rejectBackwardOrder four (numeral 2) (ltTag 2 4 (by decide)))
   have noNum := rejectHeader 5 5 raw four head
     (rejectForwardOrder four (numeral 5) (ltTag 4 5 (by decide)))
-  have top := packedNode (literal 1 4) four [h,key] (literalGraph 4 ![raw])
+  have top := packedNode (body := body) (Γ := Γ) (literal 1 4) four [h,key] (literalGraph 4 ![raw])
   have arg := top.2.2.1
   have child := makeUnary singletonTypeGuard (field 1) (suc z) raw key (actualSingleton ty) arg
   have guard := conjunctionAccept (header 4 2) (applyUnary singletonTypeGuard (field 1)) ![raw] top.1 child
@@ -168,7 +168,7 @@ theorem actualOrdinarySingletonShape (h ty : OTerm α) : OrdinarySingletonShape 
   have childHead := makeUnary cellHead (field 1) q raw key
     ⟨Derivation.conjunctionLeft (Derivation.conjunctionRight argCell)⟩ arg
   have childType :=
-    (packedNode (literal 1 3) (numeral 3) [ty] (literalGraph 3 ![q])).2.1
+    (packedNode (body := body) (Γ := Γ) (literal 1 3) (numeral 3) [ty] (literalGraph 3 ![q])).2.1
   exact ⟨noLambda,noNum,guard,
     makeUnary (field 0) (applyUnary cellHead (field 1)) ty raw q childType childHead⟩
 

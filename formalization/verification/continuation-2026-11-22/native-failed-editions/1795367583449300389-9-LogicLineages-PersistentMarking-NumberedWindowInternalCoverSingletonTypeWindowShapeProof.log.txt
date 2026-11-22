@@ -1,0 +1,98 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSingletonTypeWindowShapeProof.lean:163:14: error: don't know how to synthesize implicit argument `Γ`
+  @packedNode ?m.111 α ?m.113 (literal 1 4) four [h, key] (literalGraph 4 ![raw])
+context:
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+h ty : OTerm α
+q : OTerm α := ⋯
+key : OTerm α := ⋯
+raw : OTerm α := ⋯
+four : OTerm α := ⋯
+cell :
+  Derivation body Γ
+    (NumberedWindowInternalSparseFieldCellTargets.certifiedCell (rawCons four (packedBody [h, key])) four
+      (packedBody [h, key]))
+head : Nonempty (Derivation body Γ (unary cellHead four raw))
+noLambda : Nonempty (Derivation body Γ (unary (header 2 2) z raw))
+noNum : Nonempty (Derivation body Γ (unary (header 5 5) z raw))
+⊢ List (ID1Completion.InternalCalculus.Formula α)
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSingletonTypeWindowShapeProof.lean:163:14: error: don't know how to synthesize implicit argument `body`
+  @packedNode ?m.111 α ?m.113 (literal 1 4) four [h, key] (literalGraph 4 ![raw])
+context:
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+h ty : OTerm α
+q : OTerm α := ⋯
+key : OTerm α := ⋯
+raw : OTerm α := ⋯
+four : OTerm α := ⋯
+cell :
+  Derivation body Γ
+    (NumberedWindowInternalSparseFieldCellTargets.certifiedCell (rawCons four (packedBody [h, key])) four
+      (packedBody [h, key]))
+head : Nonempty (Derivation body Γ (unary cellHead four raw))
+noLambda : Nonempty (Derivation body Γ (unary (header 2 2) z raw))
+noNum : Nonempty (Derivation body Γ (unary (header 5 5) z raw))
+⊢ Positive (Fin 1)
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSingletonTypeWindowShapeProof.lean:163:53: error: don't know how to synthesize implicit argument `Γ`
+  @literalGraph ?m.111 α ?m.113 (Nat.succ 0) 4 ![raw]
+context:
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+h ty : OTerm α
+q : OTerm α := ⋯
+key : OTerm α := ⋯
+raw : OTerm α := ⋯
+four : OTerm α := ⋯
+cell :
+  Derivation body Γ
+    (NumberedWindowInternalSparseFieldCellTargets.certifiedCell (rawCons four (packedBody [h, key])) four
+      (packedBody [h, key]))
+head : Nonempty (Derivation body Γ (unary cellHead four raw))
+noLambda : Nonempty (Derivation body Γ (unary (header 2 2) z raw))
+noNum : Nonempty (Derivation body Γ (unary (header 5 5) z raw))
+⊢ List (ID1Completion.InternalCalculus.Formula α)
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSingletonTypeWindowShapeProof.lean:163:53: error: don't know how to synthesize implicit argument `body`
+  @literalGraph ?m.111 α ?m.113 (Nat.succ 0) 4 ![raw]
+context:
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+h ty : OTerm α
+q : OTerm α := ⋯
+key : OTerm α := ⋯
+raw : OTerm α := ⋯
+four : OTerm α := ⋯
+cell :
+  Derivation body Γ
+    (NumberedWindowInternalSparseFieldCellTargets.certifiedCell (rawCons four (packedBody [h, key])) four
+      (packedBody [h, key]))
+head : Nonempty (Derivation body Γ (unary cellHead four raw))
+noLambda : Nonempty (Derivation body Γ (unary (header 2 2) z raw))
+noNum : Nonempty (Derivation body Γ (unary (header 5 5) z raw))
+⊢ Positive (Fin 1)
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSingletonTypeWindowShapeProof.lean:163:7: error: failed to infer `have` declaration type
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSingletonTypeWindowShapeProof.lean:151:94: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+h ty : OTerm α
+q : OTerm α := typeLeafTerm ty
+key : OTerm α := singletonTypeKey ty
+raw : OTerm α := ordinaryKey h key
+four : OTerm α := numeral 4
+cell :
+  Derivation body Γ
+    (NumberedWindowInternalSparseFieldCellTargets.certifiedCell (rawCons four (packedBody [h, key])) four
+      (packedBody [h, key]))
+head : Nonempty (Derivation body Γ (unary cellHead four raw))
+noLambda : Nonempty (Derivation body Γ (unary (header 2 2) z raw))
+noNum : Nonempty (Derivation body Γ (unary (header 5 5) z raw))
+⊢ OrdinarySingletonShape body Γ h ty
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverSingletonTypeWindowShapeProof.actualOrdinarySingletonShape' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

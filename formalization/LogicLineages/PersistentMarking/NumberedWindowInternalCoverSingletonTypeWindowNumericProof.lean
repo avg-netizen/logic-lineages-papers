@@ -132,8 +132,8 @@ theorem exact_CoverOrdinarySingletonKBase : ExactCoverOrdinarySingletonKBase := 
   by_cases yes : run ordinarySingletonGuard raw = 1
   · obtain ⟨h,q,ty,read,head,selector⟩ := matching raw yes
     rw [yes,if_neg (by decide),ordinarySingletonKBranch,evalBranch,evalNormalize]
-    change (if (if run (singletonArgumentTypeAt s) raw = 1 then 1 else 0) = 0
-      then 0 else evaluate B (ctx ::ᵥ raw ::ᵥ nil)) = _
+    change (if (if evaluate (onRaw (singletonArgumentTypeAt s)) (ctx ::ᵥ raw ::ᵥ nil) = 1
+      then 1 else 0) = 0 then 0 else evaluate B (ctx ::ᵥ raw ::ᵥ nil)) = _
     rw [calibrated]
     by_cases zero : intrinsicWindow s ctx raw = 0
     · rw [zero]
@@ -142,7 +142,12 @@ theorem exact_CoverOrdinarySingletonKBase : ExactCoverOrdinarySingletonKBase := 
       have finite : run (singletonArgumentTypeAt s) raw = 1 := by
         rw [singletonArgumentTypeAt,applyValue,selector]
         exact memberOne s ty found
-      rw [finite,if_pos (show (1 : Nat) = 1 from rfl),if_neg (by decide)]
+      have tested : evaluate (onRaw (singletonArgumentTypeAt s)) (ctx ::ᵥ raw ::ᵥ nil) = 1 := finite
+      have nonzero : (if evaluate (onRaw (singletonArgumentTypeAt s)) (ctx ::ᵥ raw ::ᵥ nil) = 1
+          then (1 : Nat) else 0) ≠ 0 := by
+        rw [if_pos tested]
+        exact Nat.one_ne_zero
+      exact if_neg nonzero
   · have zero : run ordinarySingletonGuard raw = 0 := by
       unfold ordinarySingletonGuard at *
       rw [conjRun] at yes ⊢
