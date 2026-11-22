@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualZeroEdgeAlphabetCodeCalibrationProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualZeroEdgeAlphabetCodeCalibrationProof.lean
+@@ -106 +106,3 @@
+-  | cons depth depths ih => simp only [List.flatMap_cons,List.map_append,stepsLiteral,ih]
++  | cons depth depths ih =>
++      simp only [List.flatMap_cons,List.map_append]
++      rw [ih,stepsLiteral depth alphabet]

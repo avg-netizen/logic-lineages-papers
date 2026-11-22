@@ -103,7 +103,9 @@ private theorem collectLiteral (budget : Nat) (alphabet : List LowerOperand) :
   generalize List.range (budget+1) = depths
   induction depths with
   | nil => rfl
-  | cons depth depths ih => simp only [List.flatMap_cons,List.map_append,stepsLiteral,ih]
+  | cons depth depths ih =>
+      simp only [List.flatMap_cons,List.map_append]
+      rw [ih,stepsLiteral depth alphabet]
 
 theorem codeCalibration : CodeCalibration := ⟨expandLiteral,stepsLiteral,collectLiteral⟩
 

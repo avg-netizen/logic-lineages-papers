@@ -1,0 +1,35 @@
+{
+  "status": "source-only narrow proof repair; native retry not run by author",
+  "immutable_failed_source_commit": "ac408730e0f76f731af2f9e8c6b8cf8e8c837a5f",
+  "receipt": "1795345922352919229-8",
+  "exact_gate": "LogicLineages.PermittedControl.ActualZeroEdgeAlphabetCodeStatementChecks",
+  "failed_receipt_sha256": "5e83a8a7b1a0c275caf259a2765012b2a37f2162b3effe07b3ee82d8a0dc0ed0",
+  "failed_log_sha256": "89276f5f06b095727bbeaa9264a581a42d6a740d9aa5987b8ee23477e721c6ba",
+  "failed_module_record": {
+    "module": "LogicLineages.PermittedControl.ActualZeroEdgeAlphabetCodeCalibrationProof",
+    "returncode": 1,
+    "seconds": 1.067,
+    "observed_cpu_seconds": 1.01,
+    "last_wait_channel": "0",
+    "stopped_threads": [],
+    "peak_process_tree_rss_kib": 988208,
+    "memory_observation_failure": {},
+    "discarded_failed_outputs": [],
+    "source_sha256": "4584988be972d2f2dc0fece1442aa6c7a28c0da445d116411f5f5d677686d0d6",
+    "log": "build-reports/1795345922352919229-8-LogicLineages-PermittedControl-ActualZeroEdgeAlphabetCodeCalibrationProof.log"
+  },
+  "diagnostics": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroEdgeAlphabetCodeCalibrationProof.lean:106:25: error: unsolved goals\ncase cons\nbudget : ℕ\nalphabet : List LowerOperand\ndepth : ℕ\ndepths : List ℕ\nih :\n  List.flatMap (fun depth => expandStepsCode depth (List.map LowerOperand.code alphabet)) depths =\n    List.map LowerOperand.code (List.flatMap (fun depth => expandSteps depth alphabet) depths)\n⊢ List.map LowerOperand.code (expandSteps depth alphabet) ++\n      List.flatMap (fun depth => List.map LowerOperand.code (expandSteps depth alphabet)) depths =\n    List.map LowerOperand.code (expandSteps depth alphabet) ++\n      List.map LowerOperand.code (List.flatMap (fun depth => expandSteps depth alphabet) depths)\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroEdgeAlphabetCodeCalibrationProof.lean:106:86: warning: This simp argument is unused:\n  ih\n\nHint: Omit it from the simp argument list.\n  simp only [List.flatMap_cons, ̲List.map_append, ̲stepsLiteral,̵i̵h̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+  "original_author_manifest_sha256": "ed44977cd3477117351a4d6fd7f2edd8900760cae582d16d28e094a16bb3e214",
+  "changed_source": "formalization/LogicLineages/PermittedControl/ActualZeroEdgeAlphabetCodeCalibrationProof.lean",
+  "failed_source_sha256": "4584988be972d2f2dc0fece1442aa6c7a28c0da445d116411f5f5d677686d0d6",
+  "repair_source_sha256": "6c37c70af2fc3df1458f04cdaf5da48aa25e9276feca4180959a4501929dcff2",
+  "preserved_sources_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualZeroEdgeAlphabetCodeTargets.lean": "ae6d7caa19d30fe66c7cce2fc0af0f6f5ed1c74c6d2055f541e03e8f11fc8311",
+    "formalization/LogicLineages/PermittedControl/ActualZeroEdgeAlphabetCodePrimitiveProof.lean": "0643502da8552365ac9d0ffa8c8f41de5c0ed9dabd6cddc0ee9b0b982dbb137a",
+    "formalization/LogicLineages/PermittedControl/ActualZeroEdgeAlphabetCodeStatementChecks.lean": "50562e1e515a38e4dd0c8f9de02580b6474eba19f895f179e4645f775e30eee6"
+  },
+  "zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-ZERO-EDGE-ALPHABET-CODE-REPAIR-01.patch",
+  "patch_sha256": "674d25953dbb2a08b9cc8fa2b29d0e534410787a1c16f44daa9d3f402486bc9a",
+  "inverse": "Reverse exact patch with fuzz zero to recover exact failed initial CalibrationProof bytes.",
+  "change": "Split collector FlatMap cons, apply induction to still-unexpanded tail, then calibrate only the literal head depth. No definition, primitive proof, target, other leaf, imports or static 192-local/33-external closure changed."
+}
