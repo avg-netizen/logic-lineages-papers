@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroClassConcreteAssemblyTargets
+import LogicLineages.PermittedControl.ActualZeroClassConcreteAssemblyProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualZeroClassConcreteAssembly :
+    ActualZeroClassConcreteAssembly.ExactConcreteZeroClassAssembly :=
+  ActualZeroClassConcreteAssembly.exactConcreteZeroClassAssembly
+
+#print axioms fixed_actualZeroClassConcreteAssembly
+
+end LogicLineages.PermittedControl.StatementChecks
