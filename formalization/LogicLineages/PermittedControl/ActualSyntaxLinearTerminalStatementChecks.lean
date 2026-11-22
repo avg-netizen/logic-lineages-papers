@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.ActualSyntaxLinearTerminalTargets
+import LogicLineages.PermittedControl.ActualSyntaxLinearTerminalCalibrationProof
+import LogicLineages.PermittedControl.ActualSyntaxLinearTerminalProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualSyntaxOfLinearExit : ActualSyntaxLinearTerminal.ExactSyntaxOfLinearExit :=
+  ActualSyntaxLinearTerminal.exactSyntaxOfLinearExit
+
+theorem fixed_exactActualSyntaxLinearTerminal : ActualSyntaxLinearTerminal.ExactActualSyntaxLinearTerminal :=
+  ActualSyntaxLinearTerminal.exactActualSyntaxLinearTerminal
+
+theorem fixed_fullActualSyntaxLinearTerminal : ActualSyntaxLinearTerminal.FullActualSyntaxLinearTerminal :=
+  ⟨fixed_exactActualSyntaxOfLinearExit,fixed_exactActualSyntaxLinearTerminal⟩
+
+#print axioms fixed_exactActualSyntaxOfLinearExit
+#print axioms fixed_exactActualSyntaxLinearTerminal
+#print axioms fixed_fullActualSyntaxLinearTerminal
+
+end LogicLineages.PermittedControl.StatementChecks
