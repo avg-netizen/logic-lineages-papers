@@ -1,0 +1,30 @@
+module
+public import LogicLineages.PermittedControl.ArbitraryHeadSequentialOutputsTargets
+import LogicLineages.PermittedControl.ArbitraryHeadSequentialOutputsProof
+import LogicLineages.PermittedControl.ArbitraryHeadSequentialOutputsHiddenProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactArbitraryHeadSequentialOutputs : ArbitraryHeadSequentialOutputs.ExactSequentialOutputs :=
+  ArbitraryHeadSequentialOutputs.exactSequentialOutputs
+
+theorem fixed_exactArbitraryHeadFailureAndUniqueOutputs :
+    ArbitraryHeadSequentialOutputs.ExactFailureAndUniqueOutputs :=
+  ArbitraryHeadSequentialOutputs.exactFailureAndUniqueOutputs
+
+theorem fixed_exactArbitraryHeadCanonicalHiddenAfterOutputs :
+    ArbitraryHeadSequentialOutputs.ExactCanonicalHiddenAfterOutputs :=
+  ArbitraryHeadSequentialOutputs.exactCanonicalHiddenAfterOutputs
+
+theorem fixed_fullArbitraryHeadSequentialOutputs :
+    ArbitraryHeadSequentialOutputs.FullArbitraryHeadSequentialOutputs :=
+  ⟨fixed_exactArbitraryHeadSequentialOutputs,fixed_exactArbitraryHeadFailureAndUniqueOutputs,
+    fixed_exactArbitraryHeadCanonicalHiddenAfterOutputs⟩
+
+#print axioms fixed_exactArbitraryHeadSequentialOutputs
+#print axioms fixed_exactArbitraryHeadFailureAndUniqueOutputs
+#print axioms fixed_exactArbitraryHeadCanonicalHiddenAfterOutputs
+#print axioms fixed_fullArbitraryHeadSequentialOutputs
+
+end LogicLineages.PermittedControl.StatementChecks

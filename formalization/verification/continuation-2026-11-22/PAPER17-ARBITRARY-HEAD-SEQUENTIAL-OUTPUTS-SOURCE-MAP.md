@@ -1,0 +1,8 @@
+# Discover exact original outputs of a topological arbitrary-head gate list
+
+Paper 17, `17-permitted-control-canonical-comparison/sections/arithmetic.tex`, lines 3–27 and 33–48.
+
+- Work on the actual ordered list of original canonical arbitrary heads. Every source wire is already available and every output is a new name; later gates can share any known wire, but cannot overwrite it. The original transition is exactly `ArbitraryFixedHeadCollapse.read f (headCode w.head, state w.source)`. It writes only the original output name on a successful hit, and propagates failure without reading later gates.
+- A successful final valuation is equivalent to the literal original raw gate conjunction and agreement at every name not produced by the list. The topology ensures each earlier source and output is stable through later writes. Failure is exactly absence of any such final valuation, and a success has exactly one final valuation agreeing with the external inputs.
+- A separate exact bridge applies #980 afterwards: the same original final valuation exists iff it leaves exterior names fixed and admits the unique normalized hidden lift. The lift does not rediscover or change any original source/output name, including all names up to the original gate maximum. Unrelated external names above that maximum are not asserted unchanged in the hidden stage; the original-output stage does preserve every exterior name.
+- No parser, topological sorting, circuit DAG grammar, new effectivity, valuation-independent symbolic branching, computed cutoff or decision theorem is asserted. The failure theorem is a raw semantic equivalence, not a claim a canonical selected-control gate can actually fail.
