@@ -1,0 +1,28 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoStepDataProof.lean:18:5: error: unknown namespace `InternalApplicationStepPeelEvaluationSupportProof`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoStepDataProof.lean:44:17: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoStepDataProof.lean:52:6: error(lean.unknownIdentifier): Unknown identifier `conjunctionEvaluation`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoStepDataProof.lean:51:81: error: unsolved goals
+n : ℕ
+p q : Program n
+xs : List.Vector ℕ n
+⊢ evaluate (conjunction p q) xs = 1 ↔ evaluate p xs = 1 ∧ evaluate q xs = 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoStepDataProof.lean:57:6: error(lean.unknownIdentifier): Unknown identifier `conjunctionEvaluation`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoStepDataProof.lean:56:77: error: unsolved goals
+n : ℕ
+p q : Program n
+xs : List.Vector ℕ n
+⊢ evaluate (conjunction p q) xs = 0 ∨ evaluate (conjunction p q) xs = 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoStepDataProof.lean:61:29: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoStepDataProof.lean:64:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoStepDataProof.lean:71:14: error(lean.unknownIdentifier): Unknown identifier `conjunctionEvaluation`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoStepDataProof.lean:69:41: error: unsolved goals
+i old : ℕ
+missing : decode (i + 1) = none
+flag : run cellGood (i + 1 + 1) ≠ 1
+⊢ evaluate (conjunction (unaryAfter cellGood packedKey) (InternalLessThan.constantOne 4)) (args i old) = 0

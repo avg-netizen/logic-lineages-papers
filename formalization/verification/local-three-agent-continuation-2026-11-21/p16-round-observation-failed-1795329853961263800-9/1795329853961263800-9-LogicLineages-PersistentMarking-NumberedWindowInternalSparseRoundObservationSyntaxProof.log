@@ -1,0 +1,17 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRoundObservationSyntaxProof.lean:54:84: error: Type mismatch
+  Fin.elim0
+has type
+  Fin 0 → ?m.118
+but is expected to have type
+  ∀ (i : Fin 0),
+    Term.subst (![k, ctx, dom, cod, arg] i.succ.succ.succ.succ.succ) ts =
+      ![Term.subst k ts, Term.subst ctx ts, Term.subst dom ts, Term.subst cod ts, Term.subst arg ts]
+        i.succ.succ.succ.succ.succ
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRoundObservationSyntaxProof.lean:71:69: error: Type mismatch
+  Fin.elim0
+has type
+  Fin 0 → ?m.81
+but is expected to have type
+  ∀ (i : Fin 0),
+    Term.subst (edgeTape ctx ty f g i.succ.succ.succ.succ) ts =
+      edgeTape (Term.subst ctx ts) (Term.subst ty ts) (Term.subst f ts) (Term.subst g ts) i.succ.succ.succ.succ

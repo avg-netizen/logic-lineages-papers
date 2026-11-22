@@ -1,0 +1,16 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRetainedScanTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRetainedScanInductionProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseRetainedScanChecks
+open NumberedWindowInternalSparseRetainedScanTargets
+open NumberedWindowInternalSparseRetainedScanInductionProof (retainedScan retainedPredecessor)
+
+theorem exact_RetainedScan : ExactRetainedScan := retainedScan
+
+theorem exact_RetainedPredecessor : ExactRetainedPredecessor := retainedPredecessor
+
+#print axioms exact_RetainedScan
+#print axioms exact_RetainedPredecessor
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseRetainedScanChecks

@@ -1,0 +1,7 @@
+# Original mixed-row leading annotations
+
+The source annotates each active long count with its full value, actual prefix and signed correction. It compares those full values with the ordinary nonlinear values, and a surviving nonlinear occurrence at the greatest raw coordinate ensures the largest full value dominates the control at that coordinate. [Count annotation and leading-class step](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex#L96)
+
+`BuildActualAnnotations` preserves every ordered source occurrence and original read, including repetitions and zero-weight terms. Each active count uses its actual affordable long prefix and each active ordinary nonlinear field supplies its actual control image. `LargestActualFull` gives a member of the list of full values that dominates every member and the control at the greatest raw coordinate. [Exact targets](../../LogicLineages/PermittedControl/ActualMixedRowLeadingAnnotationsTargets.lean) · [Aligned construction](../../LogicLineages/PermittedControl/ActualMixedRowLeadingAnnotationsBuildProof.lean) · [Maximum](../../LogicLineages/PermittedControl/ActualMixedRowLeadingAnnotationsMaximumProof.lean)
+
+Gate `1795329437588189467-9` passed 316 local modules and all three exact standard-axiom aliases. The weighted coefficient and error sum, symbolic weak-order branching and zero-class normalization remain open. [Author manifest](PAPER17-ACTUAL-MIXED-ROW-LEADING-ANNOTATIONS-AUTHOR-MANIFEST.json)

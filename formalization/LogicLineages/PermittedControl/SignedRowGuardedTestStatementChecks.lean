@@ -1,0 +1,31 @@
+module
+public import LogicLineages.PermittedControl.SignedRowGuardedTestTargets
+import LogicLineages.PermittedControl.SignedRowGuardedTestValueProof
+import LogicLineages.PermittedControl.SignedRowGuardedTestSemanticsProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_signedRowValueWithoutHit : SignedRowGuardedTest.ExactValue :=
+  SignedRowGuardedTest.exactValue
+
+theorem fixed_signedRowActualSelectedFailures : SignedRowGuardedTest.ExactSelectedFailures :=
+  SignedRowGuardedTest.exactSelectedFailures
+
+theorem fixed_signedRowGuardedTests : SignedRowGuardedTest.ExactGuardedTests :=
+  SignedRowGuardedTest.exactGuardedTests
+
+theorem fixed_signedRowZeroModulusExcluded : SignedRowGuardedTest.ZeroModulusExcluded :=
+  SignedRowGuardedTest.zeroModulusExcluded
+
+theorem fixed_fullSignedRowGuardedTest : SignedRowGuardedTest.FullSignedRowGuardedTest :=
+  ⟨fixed_signedRowValueWithoutHit,fixed_signedRowActualSelectedFailures,fixed_signedRowGuardedTests,
+    fixed_signedRowZeroModulusExcluded⟩
+
+#print axioms fixed_signedRowValueWithoutHit
+#print axioms fixed_signedRowActualSelectedFailures
+#print axioms fixed_signedRowGuardedTests
+#print axioms fixed_signedRowZeroModulusExcluded
+#print axioms fixed_fullSignedRowGuardedTest
+
+end LogicLineages.PermittedControl.StatementChecks

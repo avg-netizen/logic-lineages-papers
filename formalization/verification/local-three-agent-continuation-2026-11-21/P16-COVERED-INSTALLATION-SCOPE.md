@@ -1,0 +1,3 @@
+# Both minima exist and agree on every accepted exchange
+
+The only object premise is the literal accepted exchange edge. Both endpoint leasts then exist, and for each proposed value the two successful output graphs are equivalent. The installation recalibrates the typed raw checker, least checker and application at the identical new window and exchange callbacks. The numeric admission coverage and symmetric pair conditions hold separately for original finite source windows. [Exact target](../../LogicLineages/PersistentMarking/NumberedWindowInternalSparseCoveredInstallationTargets.lean) · [Native gate](P16-COVERED-INSTALLATION-LOCAL-EVIDENCE.json)

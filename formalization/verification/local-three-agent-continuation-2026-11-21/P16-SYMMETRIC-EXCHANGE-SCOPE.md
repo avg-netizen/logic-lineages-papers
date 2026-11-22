@@ -1,0 +1,3 @@
+# One exchange preserves the successful packed minimum
+
+The returned representatives at two seeds are equal in the original calculus when both least calls succeed and the single scalar exchange accepts. The programs use both orientations of the same base exchange and compare the actual option outputs of the cover callback. The proof reverses the option equality and the two window checks inside the calculus. The next installation theorem must calibrate this choice of exchange against the original head relations. [Formal statements](../../LogicLineages/PersistentMarking/NumberedWindowInternalSparseSymmetricExchangeTargets.lean) · [Native proof and axiom output](P16-SYMMETRIC-EXCHANGE-LOCAL-EVIDENCE.json)

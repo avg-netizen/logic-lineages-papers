@@ -1,0 +1,35 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedRowColumnsTargets.lean:17:53: error: Application type mismatch: The argument
+  equal
+has type
+  ValueKey r
+of sort `Type` but is expected to have type
+  LowerOperand.ordinary ?m.12 ?m.13 = LowerOperand.ordinary ?m.14 ?m.15
+of sort `Prop` in the application
+  LowerOperand.ordinary.inj equal
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedRowColumnsTargets.lean:18:4: error: Type mismatch
+  Prod.ext (Fin.ext rank) field
+has type
+  ?m.35 = ?m.36
+but is expected to have type
+  ∀ ⦃a₂ : ValueKey r⦄,
+    (fun key => LowerOperand.ordinary (↑key.1) key.2) equal = (fun key => LowerOperand.ordinary (↑key.1) key.2) a₂ →
+      equal = a₂
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedRowColumnsTargets.lean:14:4: error: (kernel) declaration has metavariables 'LogicLineages.PermittedControl.ActualRankedRowColumns.valueOperand'
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedRowColumnsTargets.lean:23:51: error: Application type mismatch: The argument
+  equal
+has type
+  CountKey r
+of sort `Type` but is expected to have type
+  LowerOperand.count ?m.18 ?m.19 ?m.20 = LowerOperand.count ?m.21 ?m.22 ?m.23
+of sort `Prop` in the application
+  LowerOperand.count.inj equal
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedRowColumnsTargets.lean:24:4: error: Type mismatch
+  Prod.ext (Prod.ext lam mu) (Fin.ext rank)
+has type
+  ?m.51 = ?m.52
+but is expected to have type
+  ∀ ⦃a₂ : CountKey r⦄,
+    (fun key => LowerOperand.count (↑key.2) key.1.1 key.1.2) equal =
+        (fun key => LowerOperand.count (↑key.2) key.1.1 key.1.2) a₂ →
+      equal = a₂
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedRowColumnsTargets.lean:20:4: error: (kernel) declaration has metavariables 'LogicLineages.PermittedControl.ActualRankedRowColumns.countOperand'

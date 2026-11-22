@@ -1,0 +1,23 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroClassCohortTransferTargets
+import LogicLineages.PermittedControl.ActualZeroClassCohortTransferCohortProof
+import LogicLineages.PermittedControl.ActualZeroClassCohortTransferMinimumProof
+import LogicLineages.PermittedControl.ActualZeroClassCohortTransferProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualZeroClassCohortTransfer
+
+theorem fixed_actualZeroClassCohort : ExactCohort := exactCohort
+theorem fixed_actualZeroClassLeastPrefix : ExactLeastPrefix := exactLeastPrefix
+theorem fixed_actualZeroClassCohortTransfer : ExactCohortTransfer := exactCohortTransfer
+
+theorem fixed_fullActualZeroClassCohortTransfer : FullActualZeroClassCohortTransfer :=
+  ⟨fixed_actualZeroClassCohort,fixed_actualZeroClassLeastPrefix,fixed_actualZeroClassCohortTransfer⟩
+
+#print axioms fixed_actualZeroClassCohort
+#print axioms fixed_actualZeroClassLeastPrefix
+#print axioms fixed_actualZeroClassCohortTransfer
+#print axioms fixed_fullActualZeroClassCohortTransfer
+
+end LogicLineages.PermittedControl.StatementChecks

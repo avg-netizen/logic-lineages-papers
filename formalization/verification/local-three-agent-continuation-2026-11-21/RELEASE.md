@@ -1,5 +1,7 @@
 # Explicit three-lane continuation, 21 November 2026
 
+**Paused after the current round.** The user requested the checkpoint. The final native gates have closed and the three proof lanes are idle. [Pause handoff](PAUSED-HANDOFF.md)
+
 The user now requests: “Please fetch the repo and have the lanes continue.”
 This is a fresh release of the three formalization lanes, without a new
 round ceiling or deadline. It supersedes their previous pause and expired
@@ -55,3 +57,7 @@ source tools. After this leaf, coordinate the disjoint filter-membership
 inclusion with Astra, who owns the ordered-round recursion equations.
 
 After root bootstrap verified genuine API assistant responses, ongoing provider dispatch is delegated to the existing Astra lead. Root retains allocation and Git oversight. Do not launch a second provider while a turn is running; resume the same successfully completed session after target review. Preserve the independent reviewer and the sole native queue.
+
+## User clarification: proof validation
+
+See PROOF-WORKFLOW.md. Existing review Sol now authors actual Paper16 CoverScratchOpen lemmas and repairs Lean diagnostics. Lean is the proof-validity gate; retain focused source-statement correspondence and one native/axiom gate, without duplicate proof-body review or full artifact replay. Earlier review requirements are superseded only to this extent; historical records remain unchanged.

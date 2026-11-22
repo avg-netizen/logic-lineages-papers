@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.HighFieldPreparedActualTargets
+import LogicLineages.PermittedControl.HighFieldPreparedActualCodeProof
+import LogicLineages.PermittedControl.HighFieldPreparedActualProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_highFieldPreparedFullCompilerEffective : HighFieldPreparedPacket.FullCompilerEffective :=
+  HighFieldPreparedPacket.fullCompilerEffective
+
+theorem fixed_highFieldPreparedActualComparison : HighFieldPreparedPacket.ActualPreparedComparison :=
+  HighFieldPreparedPacket.actualPreparedComparison
+
+theorem fixed_fullHighFieldPreparedComparison : HighFieldPreparedPacket.FullHighFieldPreparedComparison :=
+  ⟨fixed_highFieldPreparedFullCompilerEffective,fixed_highFieldPreparedActualComparison⟩
+
+#print axioms fixed_highFieldPreparedFullCompilerEffective
+#print axioms fixed_highFieldPreparedActualComparison
+#print axioms fixed_fullHighFieldPreparedComparison
+
+end LogicLineages.PermittedControl.StatementChecks

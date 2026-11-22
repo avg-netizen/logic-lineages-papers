@@ -1,0 +1,28 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualZeroClassOutsideAndShiftConstantProof.lean:39:38: error: unsolved goals
+case pos.cons
+f ρ : ℕ → ℕ
+C : ℕ
+anchor : Option ActualZeroClassCohortTransfer.SurvivingPrefix
+rd : Read
+xs : List Read
+next :
+  ∀ (annotations : List Annotation) (ledger : List (Origin × CountDisposition)) (out : List Read),
+    AlignedAnnotations f ρ (List.map Prod.fst xs) (List.map Prod.snd xs) annotations →
+      DisposedOrigins f ρ anchor (countOrigins f C xs annotations) ledger out →
+        (replaceRow f C (List.map Prod.fst xs) (List.map Prod.snd xs) annotations).2 = weightedOriginShift ledger
+ann : Annotation
+annotations : List Annotation
+a✝¹ : LowerOperandActual f ρ rd.1.2 rd.2
+a✝ : lowerOperandRead f ρ rd.1.2 = some (some rd.2)
+actual : ActualAnnotation f ρ rd.1 rd.2 ann
+rest : AlignedAnnotations f ρ (List.map Prod.fst xs) (List.map Prod.snd xs) annotations
+kept : fullValue f ann = some C ∧ isCountAnnotation ann = true
+d✝ : CountDisposition
+ledger✝ : List (Origin × CountDisposition)
+first✝ tail✝ : List Read
+head : OriginOutcome f ρ anchor (rd, ann) d✝ first✝
+remaining : DisposedOrigins f ρ anchor (countOrigins f C xs annotations) ledger✝ tail✝
+localShift : (replaceOccurrence f C rd.1 rd.2 ann).2 = rd.1.1 * InnerTerminationTargets.Disposition.shift d✝
+tailShift : (replaceRow f C (List.map Prod.fst xs) (List.map Prod.snd xs) annotations).2 = weightedOriginShift ledger✝
+⊢ rd.1.1 * InnerTerminationTargets.Disposition.shift d✝ + weightedOriginShift ledger✝ =
+    weightedOriginShift (((rd, ann), d✝) :: ledger✝)

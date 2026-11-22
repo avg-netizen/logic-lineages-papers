@@ -1,0 +1,44 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedZeroClassSelectionProof.lean:17:15: error: unsolved goals
+case ordinary
+f ρ : ℕ → ℕ
+C : ℕ
+rd : Read
+q : ℕ
+left✝¹ : rd.1.1 ≠ 0
+rank : ℕ
+F : ValueField
+op : rd.1.2 = LowerOperand.ordinary rank F
+nonlinear : SelectedNonlinearImageBounds.NonlinearField F
+left✝ : ρ rank ≤ q
+right✝ : rd.2 = f q
+⊢ (if f q = C then (2 * rd.1.1, 0) else (0, rd.1.1 * ↑rd.2)).1 = if f q = C then 2 * rd.1.1 else 0
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedZeroClassSelectionProof.lean:20:16: error: unsolved goals
+case count
+f ρ : ℕ → ℕ
+C : ℕ
+rd : Read
+i q : ℕ
+κ : ℤ
+left✝ : rd.1.1 ≠ 0
+rank : ℕ
+lam mu : NONote
+op : rd.1.2 = LowerOperand.count rank lam mu
+right✝ :
+  have x := ρ rank;
+  have A := countInitial (↑lam).repr x;
+  have η := (↑mu).repr + Ordinal.omega0 ^ 2;
+  η ≤ (↑lam).repr ∧
+    FirstEntry f A η i ∧
+      q = entryNormAt f A i ∧
+        q = f^[i] x ∧
+          x + i ≤ q ∧
+            κ = Targets.countCoreConstant (↑mu).repr ∧
+              2 * ↑rd.2 = ↑(f q) + 2 * (↑i + κ) ∧ ∀ (D : ℕ), f q ≤ D → (↑i + κ).natAbs ≤ D.log2 + κ.natAbs
+⊢ (if f q = C then (rd.1.1, rd.1.1 * (↑i + κ)) else (0, rd.1.1 * ↑rd.2)).1 = if f q = C then rd.1.1 else 0
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedZeroClassSelectionProof.lean:74:50: warning: This simp argument is unused:
+  if_neg selected
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵l̵a̵s̵s̵L̵e̵d̵g̵e̵r̵,̵c̵l̵a̵s̵s̵R̵e̵a̵d̵s̵,̵i̵f̵_̵n̵e̵g̵ ̵s̵e̵l̵e̵c̵t̵e̵d̵,̵m̵e̵m̵F̵u̵l̵l̵C̵o̵n̵s̵,̵s̵e̵l̵e̵c̵t̵e̵d̵,̵f̵a̵l̵s̵e̵_̵o̵r̵]̵[̲c̲l̲a̲s̲s̲L̲e̲d̲g̲e̲r̲,̲ ̲c̲l̲a̲s̲s̲R̲e̲a̲d̲s̲,̲ ̲m̲e̲m̲F̲u̲l̲l̲C̲o̲n̲s̲,̲ ̲s̲e̲l̲e̲c̲t̲e̲d̲,̲ ̲f̲a̲l̲s̲e̲_̲o̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

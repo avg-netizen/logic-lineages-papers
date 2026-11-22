@@ -1,0 +1,29 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxApplicationsChecks.lean:75:2: error: 'change' tactic failed, pattern
+  Nonempty
+    (Derivation body Δ
+      (programGraph singletonAux block ![Term.relabel j a, Term.relabel j d, Term.relabel j c, Term.relabel j f]))
+is not definitionally equal to target
+  Nonempty
+    (Derivation body Δ (programGraph singletonAux block (Fin.cons (Term.relabel j a) fun i => Term.relabel j (p i))))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxApplicationsChecks.lean:97:2: error: 'change' tactic failed, pattern
+  Nonempty
+    (Derivation body Δ
+      (programGraph argAxis block ![Term.relabel j f, Term.relabel j T, Term.relabel j d, Term.relabel j c]))
+is not definitionally equal to target
+  Nonempty (Derivation body Δ (programGraph argAxis block (Fin.cons (Term.relabel j f) fun i => Term.relabel j (p i))))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxApplicationsChecks.lean:121:2: error: 'change' tactic failed, pattern
+  Nonempty
+    (Derivation body Δ
+      (programGraph fnAxis block ![Term.relabel j c, Term.relabel j K, Term.relabel j T, Term.relabel j d]))
+is not definitionally equal to target
+  Nonempty (Derivation body Δ (programGraph fnAxis block (Fin.cons (Term.relabel j c) fun i => Term.relabel j (p i))))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxApplicationsChecks.lean:142:2: error: 'change' tactic failed, pattern
+  Nonempty (Derivation body Δ (programGraph codAxis block ![Term.relabel j d, Term.relabel j K, Term.relabel j T]))
+is not definitionally equal to target
+  Nonempty (Derivation body Δ (programGraph codAxis block (Fin.cons (Term.relabel j d) fun i => Term.relabel j (p i))))
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverAuxApplicationsNumericProof.exact_AuxApplicationsValue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverAuxApplicationsChecks.exact_OpenAuxApplicationsMember' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]

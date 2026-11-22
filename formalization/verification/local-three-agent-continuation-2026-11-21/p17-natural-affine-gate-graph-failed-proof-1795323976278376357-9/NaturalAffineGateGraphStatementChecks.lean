@@ -1,0 +1,26 @@
+module
+public import LogicLineages.PermittedControl.NaturalAffineGateGraphTargets
+import LogicLineages.PermittedControl.NaturalAffineGateGraphCodeProof
+import LogicLineages.PermittedControl.NaturalAffineGateGraphSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_naturalAffineGateGraphCodeExact : NaturalAffineGateGraph.CodeExact :=
+  NaturalAffineGateGraph.codeExact
+
+theorem fixed_naturalAffineSignedGraph : NaturalAffineGateGraph.SignedGraph :=
+  NaturalAffineGateGraph.signedGraph
+
+theorem fixed_actualNaturalAffineExtension : NaturalAffineGateGraph.ActualNaturalExtension :=
+  NaturalAffineGateGraph.actualNaturalExtension
+
+theorem fixed_fullNaturalAffineGateGraph : NaturalAffineGateGraph.FullNaturalAffineGateGraph :=
+  ⟨fixed_naturalAffineGateGraphCodeExact,fixed_naturalAffineSignedGraph,fixed_actualNaturalAffineExtension⟩
+
+#print axioms fixed_naturalAffineGateGraphCodeExact
+#print axioms fixed_naturalAffineSignedGraph
+#print axioms fixed_actualNaturalAffineExtension
+#print axioms fixed_fullNaturalAffineGateGraph
+
+end LogicLineages.PermittedControl.StatementChecks

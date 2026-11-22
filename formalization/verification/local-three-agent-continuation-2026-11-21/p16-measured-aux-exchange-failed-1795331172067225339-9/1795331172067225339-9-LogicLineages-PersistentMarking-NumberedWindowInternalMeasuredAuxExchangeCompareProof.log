@@ -1,0 +1,35 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredAuxExchangeCompareProof.lean:40:21: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredAuxExchangeCompareProof.lean:40:21: warning: 'rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredAuxExchangeCompareProof.lean:50:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredAuxExchangeCompareProof.lean:57:51: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  evaluate X
+    (NumberedWindowInternalSparseScalarEdge.exchangeTape a b 0 ::ᵥ
+      NumberedWindowInternalSparseScalarEdge.exchangeTape a b 1 ::ᵥ nil)
+in the target expression
+  (if evaluate X (a ::ᵥ b ::ᵥ nil) = 1 ∧ evaluate (compareMeasurements M) (a ::ᵥ b ::ᵥ nil) = 1 then 1 else 0) =
+    (bits s.equivalentHeads a b).1.toNat
+
+s : NumberedWindowScalarAlgorithm.Settings
+M : Program 1
+X : Program 2
+measure : NumberedWindowInternalFactoredCoverTargets.TermMeasureCalibrated M
+exchange : NumberedWindowInternalSparseScalarEdgeTargets.ActualTermExchange s X
+a b : ℕ
+acceptedBase :
+  evaluate X
+      (NumberedWindowInternalSparseScalarEdge.exchangeTape a b 0 ::ᵥ
+        NumberedWindowInternalSparseScalarEdge.exchangeTape a b 1 ::ᵥ nil) =
+    (bits s.equivalentHeads a b).1.toNat
+⊢ (if evaluate X (a ::ᵥ b ::ᵥ nil) = 1 ∧ evaluate (compareMeasurements M) (a ::ᵥ b ::ᵥ nil) = 1 then 1 else 0) =
+    (bits s.equivalentHeads a b).1.toNat
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredAuxExchangeCompareProof.lean:91:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.

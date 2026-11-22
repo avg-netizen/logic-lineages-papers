@@ -1,0 +1,51 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseScalarInstallationChecks.lean:57:11: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Nonempty.casesOn` can only eliminate into `Prop`
+
+C : ComputabilityKnowledge.GorbowPRProgram.Program 3
+s : NumberedWindowScalarAlgorithm.Settings
+baseX : ComputabilityKnowledge.GorbowPRProgram.Program 2
+baseW root other : ComputabilityKnowledge.GorbowPRProgram.Program 3
+syntaxProg cv tv j : ComputabilityKnowledge.GorbowPRProgram.Program 1
+d : ComputabilityKnowledge.GorbowPRProgram.Program 3
+W : ComputabilityKnowledge.GorbowPRProgram.Program 3 := coveredWindow C s baseW
+X : ComputabilityKnowledge.GorbowPRProgram.Program 2 := guardedExchange C s (pairedExchange baseX)
+least : ComputabilityKnowledge.GorbowPRProgram.Program 3 := packedLeastProgram C X W s
+raw : ComputabilityKnowledge.GorbowPRProgram.Program 5 := typedRaw5 root other W syntaxProg
+body : Positive (Fin 1)
+c : ℕ
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+a b : OTerm α
+i : ComputabilityKnowledge.GorbowPRProgram.Program 1 := addressScalar cv tv W least
+r : ComputabilityKnowledge.GorbowPRProgram.Program 3 := addressPositive cv tv raw least
+S : ID1Completion.SourcePresentation.Data := data i j r d
+E : ID1Completion.InternalCalculus.Formula α := edge S false c a b
+Δ : List (ID1Completion.InternalCalculus.Formula α) := E :: Γ
+h :
+  Derivation body Δ
+    (SourceComputabilityFormulaSupportProof.existsOne
+      (certificate S false c (Term.relabel Sum.inl a) (Term.relabel Sum.inl b) (var (Sum.inr 0))))
+tag : α → α ⊕ Fin 1 := Sum.inl
+w : OTerm (α ⊕ Fin 1) := var (Sum.inr 0)
+hyp : ID1Completion.InternalCalculus.Formula (α ⊕ Fin 1) :=
+  certificate S false c (Term.relabel tag a) (Term.relabel tag b) w
+Θ : List (ID1Completion.InternalCalculus.Formula (α ⊕ Fin 1)) := hyp :: List.map weaken Δ
+accepted :
+  Nonempty
+    (Derivation body Θ
+      (NumberedWindowComputabilityFormulaTargets.accepts (if false = true then d else r) (Term.relabel tag a) w
+        (Term.relabel tag b)))
+⊢ Derivation body
+    (certificate S false c (Term.relabel Sum.inl a) (Term.relabel Sum.inl b) (var (Sum.inr 0)) :: List.map weaken Δ)
+    (weaken (unary i (suc z) a ⊓ unary i (suc z) b))
+'LogicLineages.PersistentMarking.NumberedWindowInternalSparseScalarInstallationChecks.exact_ReinstallScalar' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalSparseScalarInstallationChecks.exact_PhysicalEdgeCarriers' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalSparseScalarInstallationChecks.exact_ScalarInstallation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

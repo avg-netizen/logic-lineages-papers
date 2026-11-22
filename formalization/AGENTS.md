@@ -1,3 +1,19 @@
+# Paused after the current round, 22 November 2026
+
+The user asked to pause, commit and push and explicitly allowed the existing round to finish. All three local formalization lanes and the native queue are paused. Fable turn 004 is complete and the provider lane is idle. The native policy requires explicit user direction to resume. The latest checked supporting entry is 883. [Current handoff](verification/local-three-agent-continuation-2026-11-21/PAUSED-HANDOFF.md)
+
+---
+
+# Current user correction — proof construction and Lean validation
+
+The former review Sol now constructs missing proofs and repairs compiler
+failures. Lean checks proof validity. Read the [current proof workflow](verification/local-three-agent-continuation-2026-11-21/PROOF-WORKFLOW.md).
+Keep focused statement-to-paper/assumption checks, one exact native/axiom gate,
+and existing safeguards. Earlier manual proof-body approval and duplicate full
+artifact replay requirements are superseded for new work. Preserve old evidence.
+
+---
+
 # Additional user-authorized lane — Fable 5.2 High
 
 The user adds one Fable 5.2 High lane through the API-first `claudep` wrapper,

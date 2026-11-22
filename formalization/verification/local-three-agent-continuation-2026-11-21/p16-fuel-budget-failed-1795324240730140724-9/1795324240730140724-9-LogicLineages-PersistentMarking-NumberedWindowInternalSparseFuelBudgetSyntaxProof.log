@@ -1,0 +1,24 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFuelBudgetSyntaxProof.lean:35:5: error: unknown namespace `NumberedWindowInternalSparsePathSuccessfulAdvanceGraphSyntaxProof`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFuelBudgetSyntaxProof.lean:60:55: error(lean.unknownIdentifier): Unknown identifier `unarySubst`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFuelBudgetSyntaxProof.lean:59:168: error: unsolved goals
+alpha beta : Type
+E : Program 4
+elapsed vertices ctx ty seed size before after count : OTerm alpha
+ts : alpha → OTerm beta
+⊢ (BoundedFormula.subst
+          (NumberedWindowInternalSparsePathEnvelopeTargets.unary NumberedWindowInternalSparseDirectedRounds.poolLength
+            size vertices)
+          fun a => emb (ts a)) ⊓
+        graph2 PrimaryUncoveredCount.count (Term.subst count ts) (Term.subst vertices ts) (Term.subst before ts) ⊓
+      (NumberedWindowInternalSparseOpenRoundsTargets.roundGraph E (Term.subst before ts) (Term.subst elapsed ts)
+          (Term.subst vertices ts) (Term.subst ctx ts) (Term.subst ty ts) (Term.subst seed ts) ⊓
+        NumberedWindowInternalSparseOpenRoundsTargets.roundGraph E (Term.subst after ts) (suc (Term.subst elapsed ts))
+          (Term.subst vertices ts) (Term.subst ctx ts) (Term.subst ty ts) (Term.subst seed ts)) =
+    NumberedWindowInternalSparsePathEnvelopeTargets.unary NumberedWindowInternalSparseDirectedRounds.poolLength
+          (Term.subst size ts) (Term.subst vertices ts) ⊓
+        graph2 PrimaryUncoveredCount.count (Term.subst count ts) (Term.subst vertices ts) (Term.subst before ts) ⊓
+      (NumberedWindowInternalSparseOpenRoundsTargets.roundGraph E (Term.subst before ts) (Term.subst elapsed ts)
+          (Term.subst vertices ts) (Term.subst ctx ts) (Term.subst ty ts) (Term.subst seed ts) ⊓
+        NumberedWindowInternalSparseOpenRoundsTargets.roundGraph E (Term.subst after ts)
+          (NumberedWindowInternalSparsePathEnvelopeTargets.suc (Term.subst elapsed ts)) (Term.subst vertices ts)
+          (Term.subst ctx ts) (Term.subst ty ts) (Term.subst seed ts))

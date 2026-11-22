@@ -1,0 +1,1 @@
+Add membership of the largest value in the actual nonlinear image list. The source uses an actual largest full value, and separation between distinct control images requires the comparison value to be a control image. The former statement only assumed a dominating natural bound. This edition was never compiled or accepted.

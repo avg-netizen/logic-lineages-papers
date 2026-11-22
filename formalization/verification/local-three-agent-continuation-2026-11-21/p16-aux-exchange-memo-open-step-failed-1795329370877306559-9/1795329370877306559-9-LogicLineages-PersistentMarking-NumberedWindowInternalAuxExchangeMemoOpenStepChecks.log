@@ -1,0 +1,86 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoOpenStepChecks.lean:48:71: error: Application type mismatch: The argument
+  keyEq
+has type
+  OTerm α
+of sort `Type` but is expected to have type
+  Nonempty (Derivation body Γ (eqn (suc prior) (pairTerm src dst)))
+of sort `Prop` in the application
+  keyReports prior old src dst keyEq
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoOpenStepChecks.lean:59:28: error: Application type mismatch: The argument
+  e
+has type
+  α
+of sort `Type` but is expected to have type
+  Derivation body Γ (eqn ?m.182 parent)
+of sort `Type 1` in the application
+  orderRight child e
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoOpenStepChecks.lean:56:66: error: unsolved goals
+case func
+base : Program 2
+V : Program 1
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+dom cod fn fn' arg gap old : OTerm α
+syntaxSrc : OTerm α := auxiliaryTerm dom cod fn' arg
+syntaxDst : OrdinaryArithmetic.Term α := OrdinaryArithmetic.addTerm (pairTerm fn fn') gap
+src : OTerm α := auxiliaryTerm dom cod fn arg
+dst : OTerm α := auxiliaryTerm dom cod fn' arg
+child : OrdinaryArithmetic.Term α := pairTerm fn fn'
+parent : OrdinaryArithmetic.Term α := pairTerm src dst
+prior : OrdinaryArithmetic.Term α := OrdinaryArithmetic.addTerm child gap
+xs : Fin 4 → OTerm α := ![prior, old, z, z]
+reports : KeyReports body Γ ![prior, old, z, z] src dst
+frame :
+  NumberedWindowInternalSparseRawFunctionFrameOpenGuardProof.Ready body Γ
+    (NumberedWindowInternalSparseRawFunctionFrameOpenGuardProof.liftedTape dom cod arg fn z fn') fn z fn'
+fromFrame : Nonempty (Derivation body Γ (programGraph (atFrame frameGood) (suc z) xs))
+fromSource : Nonempty (Derivation body Γ (programGraph (atFrame (frameSlot 2 0)) fn xs))
+fromTarget : Nonempty (Derivation body Γ (programGraph (atFrame (frameSlot 2 2)) fn' xs))
+paired : Nonempty (Derivation body Γ (programGraph childKey child xs))
+l✝ : ℕ
+_f✝ : OrdinaryArithmetic.arithmeticLanguage.Functions l✝
+_ts✝ : Fin l✝ → OrdinaryArithmetic.arithmeticLanguage.Term α
+priorLookup : Nonempty (Derivation body Γ (eqn (suc syntaxDst) (pairTerm (func _f✝ _ts✝) syntaxSrc)))
+⊢ Nonempty (Derivation body Γ (ltF child parent))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoOpenStepChecks.lean:68:6: error: Application type mismatch: The argument
+  priorLookup
+has type
+  Nonempty (Derivation body Γ (eqn (suc syntaxDst) (pairTerm keyEq syntaxSrc)))
+but is expected to have type
+  Nonempty (Derivation body Γ (programGraph lookup (suc z) ![gap, old]))
+in the application
+  binaryGraph lookup childLag (Program.projection 1) (suc z) gap old xs priorLookup
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoOpenStepChecks.lean:69:56: error: Application type mismatch: The argument
+  syntaxSrc
+has type
+  OTerm α
+of sort `Type` but is expected to have type
+  Nonempty (Derivation ?m.249 ?m.251 (programGraph V (suc z) ![src]))
+of sort `Prop` in the application
+  unaryGraph V rawSource (suc z) src xs syntaxSrc
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoOpenStepChecks.lean:70:56: error: Application type mismatch: The argument
+  syntaxDst
+has type
+  OrdinaryArithmetic.Term α
+of sort `Type` but is expected to have type
+  Nonempty (Derivation ?m.263 ?m.265 (programGraph V (suc z) ![dst]))
+of sort `Prop` in the application
+  unaryGraph V rawTarget (suc z) dst xs syntaxDst
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoOpenStepChecks.lean:78:2: error: Type mismatch
+  successorBranchIntro goodKey (constantZero 4)
+    (branch (enough V) (binaryAfter base rawSource rawTarget) (constantOne 4)) (suc z) z xs reports.valid inner
+has type
+  Nonempty
+    (Derivation body Γ
+      (programGraph
+        (branch goodKey (constantZero 4) (branch (enough V) (binaryAfter base rawSource rawTarget) (constantOne 4)))
+        (suc z) xs))
+but is expected to have type
+  Nonempty (Derivation body Γ (programGraph V (suc z) ![keyEq])) →
+    Nonempty (Derivation body Γ (programGraph V (suc z) ![syntaxSrc])) →
+      Nonempty (Derivation body Γ (programGraph lookup (suc z) ![gap, old])) →
+        Nonempty (Derivation body Γ (programGraph (step base V) (suc z) ![syntaxDst, old, z, z]))
+'LogicLineages.PersistentMarking.NumberedWindowInternalAuxExchangeMemoOpenStepChecks.exact_OpenAuxMemoStepAtGap' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]

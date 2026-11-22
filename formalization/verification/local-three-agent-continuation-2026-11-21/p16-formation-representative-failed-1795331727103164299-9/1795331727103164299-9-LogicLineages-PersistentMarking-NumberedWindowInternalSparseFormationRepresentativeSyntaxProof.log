@@ -1,0 +1,75 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFormationRepresentativeSyntaxProof.lean:20:5: error: unknown namespace `NumberedWindowInternalSparsePassWindowSyntaxProof`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFormationRepresentativeSyntaxProof.lean:21:5: error: unknown namespace `NumberedWindowInternalSparseRawTickShapeSyntaxProof`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFormationRepresentativeSyntaxProof.lean:30:49: error(lean.unknownIdentifier): Unknown identifier `windowSubst`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFormationRepresentativeSyntaxProof.lean:30:90: error(lean.unknownIdentifier): Unknown identifier `rawConsSubst`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFormationRepresentativeSyntaxProof.lean:31:2: error: Tactic `rfl` failed: The left-hand side
+  SourceComputabilityFormulaSupportProof.allOne
+    ((BoundedFormula.subst
+        (windowAt W (Term.relabel Sum.inl ctx) (Term.relabel Sum.inl (rawCons dom cod)) (var (Sum.inr 0))) fun a =>
+        emb (ID1Completion.InternalComputabilityApplicationSyntaxProof.liftTerms ts a)) ⟹
+      BoundedFormula.subst
+        (windowAt W (Term.relabel Sum.inl ctx) (Term.relabel Sum.inl cod)
+          (auxiliaryTerm (Term.relabel Sum.inl dom) (Term.relabel Sum.inl cod) (var (Sum.inr 0))
+            (Term.relabel Sum.inl arg)))
+        fun a => emb (ID1Completion.InternalComputabilityApplicationSyntaxProof.liftTerms ts a))
+is not definitionally equal to the right-hand side
+  SourceComputabilityFormulaSupportProof.allOne
+    (Formula.imp
+      (windowAt W (Term.relabel Sum.inl (Term.subst ctx ts))
+        (Term.relabel Sum.inl (rawCons (Term.subst dom ts) (Term.subst cod ts))) (var (Sum.inr 0)))
+      (windowAt W (Term.relabel Sum.inl (Term.subst ctx ts)) (Term.relabel Sum.inl (Term.subst cod ts))
+        (auxiliaryTerm (Term.relabel Sum.inl (Term.subst dom ts)) (Term.relabel Sum.inl (Term.subst cod ts))
+          (var (Sum.inr 0)) (Term.relabel Sum.inl (Term.subst arg ts)))))
+
+α β : Type
+W : Program 3
+ctx dom cod arg : OTerm α
+ts : α → OTerm β
+⊢ SourceComputabilityFormulaSupportProof.allOne
+      ((BoundedFormula.subst
+          (windowAt W (Term.relabel Sum.inl ctx) (Term.relabel Sum.inl (rawCons dom cod)) (var (Sum.inr 0))) fun a =>
+          emb (ID1Completion.InternalComputabilityApplicationSyntaxProof.liftTerms ts a)) ⟹
+        BoundedFormula.subst
+          (windowAt W (Term.relabel Sum.inl ctx) (Term.relabel Sum.inl cod)
+            (auxiliaryTerm (Term.relabel Sum.inl dom) (Term.relabel Sum.inl cod) (var (Sum.inr 0))
+              (Term.relabel Sum.inl arg)))
+          fun a => emb (ID1Completion.InternalComputabilityApplicationSyntaxProof.liftTerms ts a)) =
+    SourceComputabilityFormulaSupportProof.allOne
+      (Formula.imp
+        (windowAt W (Term.relabel Sum.inl (Term.subst ctx ts))
+          (Term.relabel Sum.inl (rawCons (Term.subst dom ts) (Term.subst cod ts))) (var (Sum.inr 0)))
+        (windowAt W (Term.relabel Sum.inl (Term.subst ctx ts)) (Term.relabel Sum.inl (Term.subst cod ts))
+          (auxiliaryTerm (Term.relabel Sum.inl (Term.subst dom ts)) (Term.relabel Sum.inl (Term.subst cod ts))
+            (var (Sum.inr 0)) (Term.relabel Sum.inl (Term.subst arg ts)))))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFormationRepresentativeSyntaxProof.lean:30:61: warning: This simp argument is unused:
+  auxiliarySubst
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵o̵r̵m̵a̵t̵i̵o̵n̵,̵a̵l̵l̵E̵m̵b̵e̵d̵d̵e̵d̵S̵u̵b̵s̵t̵,̵i̵m̵p̵S̵u̵b̵s̵t̵,̵w̵i̵n̵d̵o̵w̵S̵u̵b̵s̵t̵,̵a̵u̵x̵i̵l̵i̵a̵r̵y̵S̵u̵b̵s̵t̵,̵l̵i̵f̵t̵T̵e̵r̵m̵S̵u̵b̵s̵t̵,̵r̵a̵w̵C̵o̵n̵s̵S̵u̵b̵s̵t̵]̵[̲f̲o̲r̲m̲a̲t̲i̲o̲n̲,̲ ̲a̲l̲l̲E̲m̲b̲e̲d̲d̲e̲d̲S̲u̲b̲s̲t̲,̲ ̲i̲m̲p̲S̲u̲b̲s̲t̲,̲ ̲w̲i̲n̲d̲o̲w̲S̲u̲b̲s̲t̲,̲ ̲l̲i̲f̲t̲T̲e̲r̲m̲S̲u̲b̲s̲t̲,̲ ̲r̲a̲w̲C̲o̲n̲s̲S̲u̲b̲s̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFormationRepresentativeSyntaxProof.lean:30:76: warning: This simp argument is unused:
+  liftTermSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵o̵r̵m̵a̵t̵i̵o̵n̵,̵a̵l̵l̵E̵m̵b̵e̵d̵d̵e̵d̵S̵u̵b̵s̵t̵,̵i̵m̵p̵S̵u̵b̵s̵t̵,̵w̵i̵n̵d̵o̵w̵S̵u̵b̵s̵t̵,̵a̵u̵x̵i̵l̵i̵a̵r̵y̵S̵u̵b̵s̵t̵,̵l̵i̵f̵t̵T̵e̵r̵m̵S̵u̵b̵s̵t̵,̵r̵a̵w̵C̵o̵n̵s̵S̵u̵b̵s̵t̵]̵[̲f̲o̲r̲m̲a̲t̲i̲o̲n̲,̲ ̲a̲l̲l̲E̲m̲b̲e̲d̲d̲e̲d̲S̲u̲b̲s̲t̲,̲ ̲i̲m̲p̲S̲u̲b̲s̲t̲,̲ ̲w̲i̲n̲d̲o̲w̲S̲u̲b̲s̲t̲,̲ ̲a̲u̲x̲i̲l̲i̲a̲r̲y̲S̲u̲b̲s̲t̲,̲ ̲r̲a̲w̲C̲o̲n̲s̲S̲u̲b̲s̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFormationRepresentativeSyntaxProof.lean:45:49: error(lean.unknownIdentifier): Unknown identifier `windowSubst`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFormationRepresentativeSyntaxProof.lean:45:2: error: Type mismatch: After simplification, term
+  Nonempty.intro applied
+ has type
+  Nonempty
+    (Derivation body Γ
+      ((BoundedFormula.subst
+          (windowAt W (Term.relabel Sum.inl ctx) (Term.relabel Sum.inl (rawCons dom cod)) (var (Sum.inr 0))) fun a =>
+          emb (ID1Completion.InternalTagArithmeticSyntaxProof.bindTerm f a)) ⟹
+        BoundedFormula.subst
+          (windowAt W (Term.relabel Sum.inl ctx) (Term.relabel Sum.inl cod)
+            (auxiliaryTerm (Term.relabel Sum.inl dom) (Term.relabel Sum.inl cod) (var (Sum.inr 0))
+              (Term.relabel Sum.inl arg)))
+          fun a => emb (ID1Completion.InternalTagArithmeticSyntaxProof.bindTerm f a)))
+but is expected to have type
+  Nonempty
+    (Derivation body Γ
+      (Formula.imp (windowAt W ctx (rawCons dom cod) f) (windowAt W ctx cod (auxiliaryTerm dom cod f arg))))

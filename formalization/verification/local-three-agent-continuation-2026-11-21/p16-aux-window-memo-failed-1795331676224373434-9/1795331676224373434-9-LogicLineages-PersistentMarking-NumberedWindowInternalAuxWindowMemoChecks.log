@@ -1,0 +1,44 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxWindowMemoChecks.lean:47:32: warning: This simp argument is unused:
+  beq_iff_eq
+
+Hint: Omit it from the simp argument list.
+  simp [̵i̵n̵t̵r̵i̵n̵s̵i̵c̵W̵i̵n̵d̵o̵w̵,̵v̵a̵l̵i̵d̵,̵b̵e̵q̵_̵i̵f̵f̵_̵e̵q̵]̵[̲i̲n̲t̲r̲i̲n̲s̲i̲c̲W̲i̲n̲d̲o̲w̲,̲ ̲v̲a̲l̲i̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxWindowMemoChecks.lean:83:26: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  intrinsicWindow s ctx (auxRaw dom cod fn arg)
+in the target expression
+  (have fallback := evaluate base (ctx ::ᵥ NumberedWindowFieldAlgorithm.packNode 6 [dom, cod, fn, arg] ::ᵥ nil);
+    cod + 1) =
+    intrinsicWindow s ctx (NumberedWindowFieldAlgorithm.packNode 6 [dom, cod, fn, arg])
+
+s : Settings
+base : Program 2
+cal : IntrinsicWindowCalibrated s base
+i old ctx : ℕ
+prior : ∀ n < i + 1, evaluate lookup ((i - n) ::ᵥ old ::ᵥ nil) = intrinsicWindow s ctx n
+x✝ : Option (ℕ × List ℕ)
+dom cod fn arg : ℕ
+read : NumberedWindowFieldAlgorithm.unpackNode (i + 1) = some (6, [dom, cod, fn, arg])
+fnSmall : fn < i + 1
+argSmall : arg < i + 1
+domAllowed : typeGuard s dom = true
+codAllowed : typeGuard s cod = true
+fnReport : intrinsicWindow s ctx fn = arrow dom cod + 1
+argReport : intrinsicWindow s ctx arg = dom + 1
+⊢ (have fallback := evaluate base (ctx ::ᵥ NumberedWindowFieldAlgorithm.packNode 6 [dom, cod, fn, arg] ::ᵥ nil);
+    cod + 1) =
+    intrinsicWindow s ctx (NumberedWindowFieldAlgorithm.packNode 6 [dom, cod, fn, arg])
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxWindowMemoChecks.lean:94:35: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'LogicLineages.PersistentMarking.NumberedWindowInternalAuxWindowMemoChecks.exact_PackedIntrinsicProjection' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalAuxWindowMemoChecks.exact_IntrinsicAuxWindow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalAuxWindowMemoChecks.exact_IntrinsicMemoCalibration' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

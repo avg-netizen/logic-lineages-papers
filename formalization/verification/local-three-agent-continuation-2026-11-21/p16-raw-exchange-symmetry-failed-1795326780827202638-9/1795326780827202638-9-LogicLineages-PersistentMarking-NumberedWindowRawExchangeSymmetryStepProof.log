@@ -1,0 +1,128 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeSymmetryStepProof.lean:49:38: error: unsolved goals
+hp : HeadPairs
+sym : HeadPairsSymmetric hp
+before after : List Row
+i : Nat
+fs gs : List Nat
+child :
+  ∀ (k : Nat),
+    before.getD (pair (fs.getD k 0) (gs.getD k 0)) (false, false) =
+      after.getD (pair (gs.getD k 0) (fs.getD k 0)) (false, false)
+equal : ∀ (k : Nat), (fs.getD k 0 == gs.getD k 0) = (gs.getD k 0 == fs.getD k 0)
+heads : allowed hp (fs.getD 0 0) (gs.getD 0 0) = allowed hp (gs.getD 0 0) (fs.getD 0 0)
+declared :
+  ((declaration (fs.getD 0 0)).fst == (declaration (gs.getD 0 0)).fst) =
+    ((declaration (gs.getD 0 0)).fst == (declaration (fs.getD 0 0)).fst)
+bags : ∀ (k : Nat), bag (fs.getD k 0) (gs.getD k 0) = bag (gs.getD k 0) (fs.getD k 0)
+⊢ (fs[0]?.getD 0 == gs[0]?.getD 0 && (before[pair (fs[1]?.getD 0) (gs[1]?.getD 0)]?.getD (false, false)).fst) =
+    (gs[0]?.getD 0 == fs[0]?.getD 0 && (after[pair (gs[1]?.getD 0) (fs[1]?.getD 0)]?.getD (false, false)).fst)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeSymmetryStepProof.lean:49:38: error: unsolved goals
+hp : HeadPairs
+sym : HeadPairsSymmetric hp
+before after : List Row
+i : Nat
+fs gs : List Nat
+child :
+  ∀ (k : Nat),
+    before.getD (pair (fs.getD k 0) (gs.getD k 0)) (false, false) =
+      after.getD (pair (gs.getD k 0) (fs.getD k 0)) (false, false)
+equal : ∀ (k : Nat), (fs.getD k 0 == gs.getD k 0) = (gs.getD k 0 == fs.getD k 0)
+heads : allowed hp (fs.getD 0 0) (gs.getD 0 0) = allowed hp (gs.getD 0 0) (fs.getD 0 0)
+declared :
+  ((declaration (fs.getD 0 0)).fst == (declaration (gs.getD 0 0)).fst) =
+    ((declaration (gs.getD 0 0)).fst == (declaration (fs.getD 0 0)).fst)
+bags : ∀ (k : Nat), bag (fs.getD k 0) (gs.getD k 0) = bag (gs.getD k 0) (fs.getD k 0)
+⊢ (allowed hp (fs[0]?.getD 0) (gs[0]?.getD 0) &&
+          (declaration (fs[0]?.getD 0)).fst == (declaration (gs[0]?.getD 0)).fst &&
+        bag (fs[1]?.getD 0) (gs[1]?.getD 0) ||
+      fs[0]?.getD 0 == gs[0]?.getD 0 && (before[pair (fs[1]?.getD 0) (gs[1]?.getD 0)]?.getD (false, false)).snd) =
+    (allowed hp (gs[0]?.getD 0) (fs[0]?.getD 0) &&
+          (declaration (gs[0]?.getD 0)).fst == (declaration (fs[0]?.getD 0)).fst &&
+        bag (gs[1]?.getD 0) (fs[1]?.getD 0) ||
+      gs[0]?.getD 0 == fs[0]?.getD 0 && (after[pair (gs[1]?.getD 0) (fs[1]?.getD 0)]?.getD (false, false)).snd)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeSymmetryStepProof.lean:49:38: error: unsolved goals
+hp : HeadPairs
+sym : HeadPairsSymmetric hp
+before after : List Row
+i : Nat
+fs gs : List Nat
+child :
+  ∀ (k : Nat),
+    before.getD (pair (fs.getD k 0) (gs.getD k 0)) (false, false) =
+      after.getD (pair (gs.getD k 0) (fs.getD k 0)) (false, false)
+equal : ∀ (k : Nat), (fs.getD k 0 == gs.getD k 0) = (gs.getD k 0 == fs.getD k 0)
+heads : allowed hp (fs.getD 0 0) (gs.getD 0 0) = allowed hp (gs.getD 0 0) (fs.getD 0 0)
+declared :
+  ((declaration (fs.getD 0 0)).fst == (declaration (gs.getD 0 0)).fst) =
+    ((declaration (gs.getD 0 0)).fst == (declaration (fs.getD 0 0)).fst)
+bags : ∀ (k : Nat), bag (fs.getD k 0) (gs.getD k 0) = bag (gs.getD k 0) (fs.getD k 0)
+⊢ (fs[1]?.getD 0 == gs[1]?.getD 0 && fs[2]?.getD 0 == gs[2]?.getD 0 &&
+      (allowed hp (fs[0]?.getD 0) (gs[0]?.getD 0) && bag (fs[3]?.getD 0) (gs[3]?.getD 0) &&
+          fs[4]?.getD 0 == gs[4]?.getD 0 ||
+        fs[0]?.getD 0 == gs[0]?.getD 0 &&
+          ((before[pair (fs[3]?.getD 0) (gs[3]?.getD 0)]?.getD (false, false)).snd && fs[4]?.getD 0 == gs[4]?.getD 0 ||
+            fs[3]?.getD 0 == gs[3]?.getD 0 &&
+              (before[pair (fs[4]?.getD 0) (gs[4]?.getD 0)]?.getD (false, false)).snd))) =
+    (gs[1]?.getD 0 == fs[1]?.getD 0 && gs[2]?.getD 0 == fs[2]?.getD 0 &&
+      (allowed hp (gs[0]?.getD 0) (fs[0]?.getD 0) && bag (gs[3]?.getD 0) (fs[3]?.getD 0) &&
+          gs[4]?.getD 0 == fs[4]?.getD 0 ||
+        gs[0]?.getD 0 == fs[0]?.getD 0 &&
+          ((after[pair (gs[3]?.getD 0) (fs[3]?.getD 0)]?.getD (false, false)).snd && gs[4]?.getD 0 == fs[4]?.getD 0 ||
+            gs[3]?.getD 0 == fs[3]?.getD 0 && (after[pair (gs[4]?.getD 0) (fs[4]?.getD 0)]?.getD (false, false)).snd)))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeSymmetryStepProof.lean:49:38: error: unsolved goals
+hp : HeadPairs
+sym : HeadPairsSymmetric hp
+before after : List Row
+i : Nat
+fs gs : List Nat
+child :
+  ∀ (k : Nat),
+    before.getD (pair (fs.getD k 0) (gs.getD k 0)) (false, false) =
+      after.getD (pair (gs.getD k 0) (fs.getD k 0)) (false, false)
+equal : ∀ (k : Nat), (fs.getD k 0 == gs.getD k 0) = (gs.getD k 0 == fs.getD k 0)
+heads : allowed hp (fs.getD 0 0) (gs.getD 0 0) = allowed hp (gs.getD 0 0) (fs.getD 0 0)
+declared :
+  ((declaration (fs.getD 0 0)).fst == (declaration (gs.getD 0 0)).fst) =
+    ((declaration (gs.getD 0 0)).fst == (declaration (fs.getD 0 0)).fst)
+bags : ∀ (k : Nat), bag (fs.getD k 0) (gs.getD k 0) = bag (gs.getD k 0) (fs.getD k 0)
+⊢ (fs[0]?.getD 0 == gs[0]?.getD 0 && fs[1]?.getD 0 == gs[1]?.getD 0 &&
+      ((before[pair (fs[2]?.getD 0) (gs[2]?.getD 0)]?.getD (false, false)).fst && fs[3]?.getD 0 == gs[3]?.getD 0 ||
+        fs[2]?.getD 0 == gs[2]?.getD 0 && (before[pair (fs[3]?.getD 0) (gs[3]?.getD 0)]?.getD (false, false)).fst)) =
+    (gs[0]?.getD 0 == fs[0]?.getD 0 && gs[1]?.getD 0 == fs[1]?.getD 0 &&
+      ((after[pair (gs[2]?.getD 0) (fs[2]?.getD 0)]?.getD (false, false)).fst && gs[3]?.getD 0 == fs[3]?.getD 0 ||
+        gs[2]?.getD 0 == fs[2]?.getD 0 && (after[pair (gs[3]?.getD 0) (fs[3]?.getD 0)]?.getD (false, false)).fst))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeSymmetryStepProof.lean:50:19: warning: This simp argument is unused:
+  equal
+
+Hint: Omit it from the simp argument list.
+  simp [parts, e̵q̵u̵a̵l̵,̵ ̵child, heads, declared, bags]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeSymmetryStepProof.lean:50:26: warning: This simp argument is unused:
+  child
+
+Hint: Omit it from the simp argument list.
+  simp [parts, equal, c̵hi̵l̵d̵,̵ ̵h̵eads, declared, bags]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeSymmetryStepProof.lean:50:33: warning: This simp argument is unused:
+  heads
+
+Hint: Omit it from the simp argument list.
+  simp [parts, equal, child, h̵e̵a̵ds̵,̵ ̵d̵eclared, bags]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeSymmetryStepProof.lean:50:40: warning: This simp argument is unused:
+  declared
+
+Hint: Omit it from the simp argument list.
+  simp [parts, equal, child, heads, d̵e̵c̵l̵a̵r̵e̵d̵,̵ ̵bags]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeSymmetryStepProof.lean:50:50: warning: This simp argument is unused:
+  bags
+
+Hint: Omit it from the simp argument list.
+  simp [parts, equal, child, heads, declared,̵ ̵b̵a̵g̵s̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

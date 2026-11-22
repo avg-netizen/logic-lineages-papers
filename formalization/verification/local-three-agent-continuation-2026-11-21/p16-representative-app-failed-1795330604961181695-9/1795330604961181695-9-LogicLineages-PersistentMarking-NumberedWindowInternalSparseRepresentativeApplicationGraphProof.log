@@ -1,0 +1,16 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRepresentativeApplicationGraphProof.lean:64:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  fun x => Sum.elim var (fun i => var (Sum.inr i)) (Sum.map j id x)
+in the target expression
+  Derivation body Δ (BoundedFormula.subst p ((Sum.elim var fun i => var (Sum.inr i)) ∘ Sum.map j id))
+
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+p : ID1Completion.InternalCalculus.Formula (α ⊕ Fin 2)
+h : Nonempty (Derivation body Γ (allBlock p))
+j : α → α ⊕ Fin 2 := Sum.inl
+Δ : List (language.Formula (α ⊕ Fin 2)) := List.map (fun q => Formula.relabel j q) Γ
+moved : Nonempty (Derivation body Δ (allBlock (Formula.relabel (Sum.map j id) p)))
+out : Derivation body Δ (BoundedFormula.subst p ((Sum.elim var fun i => var (Sum.inr i)) ∘ Sum.map j id))
+identity : (fun x => Sum.elim var (fun i => var (Sum.inr i)) (Sum.map j id x)) = var
+⊢ Nonempty (Derivation body (List.map (fun q => Formula.relabel Sum.inl q) Γ) p)

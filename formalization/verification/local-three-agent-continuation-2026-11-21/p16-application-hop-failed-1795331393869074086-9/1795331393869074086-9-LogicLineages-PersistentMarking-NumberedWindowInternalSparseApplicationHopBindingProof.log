@@ -1,0 +1,46 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseApplicationHopBindingProof.lean:50:18: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseApplicationHopBindingProof.lean:68:2: error: Type mismatch: After simplification, term
+  data
+ has type
+  Nonempty
+    (Derivation body Γ
+      (NumberedWindowInternalSparsePackedLeastOpen.leastGraph C X W s ctx cod src left ⊓
+          NumberedWindowInternalSparsePackedLeastOpen.leastGraph C X W s ctx cod dst right ⊓
+        NumberedWindowInternalSparsePositiveHeadDecompositionTargets.positiveAt raw
+          (NumberedWindowInternalSparsePackedLeast.packedLeastProgram C X W s) ctx cod left
+          (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons
+            (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons (suc (suc z))
+              (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons right
+                (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons
+                  (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons (suc z)
+                    (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons src
+                      (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons dst
+                        (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons wr z))))
+                  z)))
+            z)
+          right))
+but is expected to have type
+  Nonempty
+    (Derivation body Γ
+      (NumberedWindowInternalSparsePackedLeastOpen.leastGraph C X W s ctx cod src (xs 0) ⊓
+          NumberedWindowInternalSparsePackedLeastOpen.leastGraph C X W s ctx cod dst (xs 1) ⊓
+        NumberedWindowInternalSparsePositiveHeadDecompositionTargets.positiveAt raw
+          (NumberedWindowInternalSparsePackedLeast.packedLeastProgram C X W s) ctx cod (xs 0)
+          (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons
+            (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons
+              (ID1Completion.InternalTagArithmeticSyntaxProof.suc
+                (ID1Completion.InternalTagArithmeticSyntaxProof.suc ID1Completion.InternalTagArithmeticSyntaxProof.z))
+              (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons (xs 1)
+                (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons
+                  (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons
+                    (ID1Completion.InternalTagArithmeticSyntaxProof.suc
+                      ID1Completion.InternalTagArithmeticSyntaxProof.z)
+                    (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons src
+                      (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons dst
+                        (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons wr
+                          ID1Completion.InternalTagArithmeticSyntaxProof.z))))
+                  ID1Completion.InternalTagArithmeticSyntaxProof.z)))
+            ID1Completion.InternalTagArithmeticSyntaxProof.z)
+          (xs 1)))

@@ -1,0 +1,3 @@
+# Paper 17 finite low strips for signed test matrices
+
+A single raw rank takes each value below the supplied bound, with the same update for every original row, inherited guard and whole-vector test. The emitted status vectors preserve the order of the original rows and distinguish failed reads from negative tests. Other raw coordinates remain arbitrary. This proves the finite low family without choosing the cutoff or deriving a high comparison. The statement scope was checked before implementation. [Exact target](../../LogicLineages/PermittedControl/HeterogeneousSignedMatrixLowStripsTargets.lean) · [Native gate](P17-HETEROGENEOUS-LOW-LOCAL-EVIDENCE.json)

@@ -1,0 +1,3 @@
+# Physical minimum along an accepted exchange
+
+For an actual directed edge from a to b, successful packed least runs at both seeds prove that the minimum at a is at most the minimum at b. No cover inclusion, seed membership, or vertex list is supplied. If the reverse edge also accepts, the two minima are equal. Arbitrary settings may give a directed head relation, so the equality statement explicitly includes the reverse edge. The installer carries both laws on the same programs as the original positive and application checkers. [Exact target](../../LogicLineages/PersistentMarking/NumberedWindowInternalSparseAdjacentMinimumTargets.lean) · [Native gate](P16-ADJACENT-MINIMUM-LOCAL-EVIDENCE.json)

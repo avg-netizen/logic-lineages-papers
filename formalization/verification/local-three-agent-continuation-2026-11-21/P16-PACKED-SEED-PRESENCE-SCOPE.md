@@ -1,0 +1,7 @@
+# Paper 16 seed membership from actual successful packed selection
+
+Successful original packed selection produces an occurrence of the same seed in the original cover. Its genuine vertices witness is identified with the supplied output by functionality of the actual scratch program. The proof transports membership to that supplied output. [Frozen target](../../LogicLineages/PersistentMarking/NumberedWindowInternalSparsePackedSeedPresenceTargets.lean) · [Cover proof](../../LogicLineages/PersistentMarking/NumberedWindowInternalSparsePackedSeedPresenceCoverProof.lean)
+
+For the supplied actual members pool, the proof opens the original scratch program's vertices and physical length using original graph totality. It recovers the unchanged members composition and uses the known seed occurrence and the original seed-every-round rule at that length. The two rules share the exact actual settings, callback, exchange and window programs, context, type and seed. The retained-predecessor proof is applied internally. No independent seed-membership or context witness is a premise. [Exact declarations](../../LogicLineages/PersistentMarking/NumberedWindowInternalSparsePackedSeedPresenceChecks.lean)
+
+The first complete native gate `1795326512564070593-9` checks both exact declarations with only standard Lean axioms. [Freeze](P16-PACKED-SEED-PRESENCE-FROZEN.json) · [Author manifest](P16-PACKED-SEED-PRESENCE-AUTHOR-MANIFEST.json) · [Native evidence](P16-PACKED-SEED-PRESENCE-LOCAL-EVIDENCE.json)

@@ -1,0 +1,45 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedZeroClassFiniteProof.lean:26:27: warning: Try `simp at charged` instead of `simpa using charged`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedZeroClassFiniteProof.lean:34:12: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  rd.1.2
+in the target expression
+  finiteClassKey r (LowerOperand.ordinary n F) = some (Sum.inl (i, F))
+
+case ordinary.refine_1
+r : ℕ
+row : RankedRow r
+rd : Read
+charged : NonlinearOperand rd.1.2
+n : ℕ
+F : ValueField
+shape : rd.1.2 = LowerOperand.ordinary n F
+inColumn :
+  SelectedNonlinearImageBounds.NonlinearField F →
+    ∃ rank, ↑rank = n ∧ (rank, F) ∈ row.value.support ∧ row.value (rank, F) = rd.1.1
+active : SelectedNonlinearImageBounds.NonlinearField F
+i : Fin r
+rank : ↑i = n
+member : (i, F) ∈ row.value.support
+weight : row.value (i, F) = rd.1.1
+bound : n < r
+⊢ finiteClassKey r (LowerOperand.ordinary n F) = some (Sum.inl (i, F))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedZeroClassFiniteProof.lean:46:12: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  rd.1.2
+in the target expression
+  finiteClassKey r (LowerOperand.count n lam mu) = some (Sum.inr ((lam, mu), i))
+
+case count.refine_1
+r : ℕ
+row : RankedRow r
+rd : Read
+charged : NonlinearOperand rd.1.2
+n : ℕ
+lam mu : NONote
+shape : rd.1.2 = LowerOperand.count n lam mu
+i : Fin r
+rank : ↑i = n
+member : ((lam, mu), i) ∈ row.count.support
+weight : row.count ((lam, mu), i) = rd.1.1
+bound : n < r
+⊢ finiteClassKey r (LowerOperand.count n lam mu) = some (Sum.inr ((lam, mu), i))

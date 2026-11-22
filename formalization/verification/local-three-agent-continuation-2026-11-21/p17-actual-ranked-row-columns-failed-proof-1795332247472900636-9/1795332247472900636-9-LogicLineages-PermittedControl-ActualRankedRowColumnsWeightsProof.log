@@ -1,0 +1,56 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedRowColumnsWeightsProof.lean:19:2: error: unsolved goals
+case refine_1
+r : ℕ
+c : ℤ
+xs : List Read
+row : RankedRow r := rankedRow r c xs
+countWeight : ∀ (k : CountKey r), row.count k = (groupedWeights xs) ((countOperand r) k)
+valueWeight : ∀ (k : ValueKey r), NonlinearField k.2 → row.value k = (groupedWeights xs) ((valueOperand r) k)
+linearWeight : ∀ (k : ValueKey r), ¬NonlinearField k.2 → row.value k = 0
+k : CountKey r
+⊢ (rankedRow r c xs).count k ≠ 0 ↔ (groupedWeights xs) ((countOperand r) k) ≠ 0
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedRowColumnsWeightsProof.lean:23:4: error: unsolved goals
+case pos
+r : ℕ
+c : ℤ
+xs : List Read
+row : RankedRow r := rankedRow r c xs
+countWeight : ∀ (k : CountKey r), row.count k = (groupedWeights xs) ((countOperand r) k)
+valueWeight : ∀ (k : ValueKey r), NonlinearField k.2 → row.value k = (groupedWeights xs) ((valueOperand r) k)
+linearWeight : ∀ (k : ValueKey r), ¬NonlinearField k.2 → row.value k = 0
+k : ValueKey r
+active : NonlinearField k.2
+⊢ (rankedRow r c xs).value k ≠ 0 ↔ (groupedWeights xs) ((valueOperand r) k) ≠ 0
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedRowColumnsWeightsProof.lean:24:4: error: unsolved goals
+case neg
+r : ℕ
+c : ℤ
+xs : List Read
+row : RankedRow r := rankedRow r c xs
+countWeight : ∀ (k : CountKey r), row.count k = (groupedWeights xs) ((countOperand r) k)
+valueWeight : ∀ (k : ValueKey r), NonlinearField k.2 → row.value k = (groupedWeights xs) ((valueOperand r) k)
+linearWeight : ∀ (k : ValueKey r), ¬NonlinearField k.2 → row.value k = 0
+k : ValueKey r
+active : ¬NonlinearField k.2
+⊢ (rankedRow r c xs).value k = 0
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedRowColumnsWeightsProof.lean:20:39: warning: This simp argument is unused:
+  countWeight
+
+Hint: Omit it from the simp argument list.
+  simp only [Finsupp.mem_support_iff,̵c̵o̵u̵n̵t̵W̵e̵i̵g̵h̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedRowColumnsWeightsProof.lean:23:41: warning: This simp argument is unused:
+  valueWeight k active
+
+Hint: Omit it from the simp argument list.
+  simp only [̵F̵i̵n̵s̵u̵p̵p̵.̵m̵e̵m̵_̵s̵u̵p̵p̵o̵r̵t̵_̵i̵f̵f̵,̵v̵a̵l̵u̵e̵W̵e̵i̵g̵h̵t̵ ̵k̵ ̵a̵c̵t̵i̵v̵e̵,̵a̵c̵t̵i̵v̵e̵,̵t̵r̵u̵e̵_̵a̵n̵d̵]̵[̲F̲i̲n̲s̲u̲p̲p̲.̲m̲e̲m̲_̲s̲u̲p̲p̲o̲r̲t̲_̲i̲f̲f̲,̲ ̲a̲c̲t̲i̲v̲e̲,̲ ̲t̲r̲u̲e̲_̲a̲n̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualRankedRowColumnsWeightsProof.lean:24:36: warning: This simp argument is unused:
+  linearWeight k active
+
+Hint: Omit it from the simp argument list.
+  simp [̵F̵i̵n̵s̵u̵p̵p̵.̵m̵e̵m̵_̵s̵u̵p̵p̵o̵r̵t̵_̵i̵f̵f̵,̵l̵i̵n̵e̵a̵r̵W̵e̵i̵g̵h̵t̵ ̵k̵ ̵a̵c̵t̵i̵v̵e̵,̵a̵c̵t̵i̵v̵e̵]̵[̲F̲i̲n̲s̲u̲p̲p̲.̲m̲e̲m̲_̲s̲u̲p̲p̲o̲r̲t̲_̲i̲f̲f̲,̲ ̲a̲c̲t̲i̲v̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

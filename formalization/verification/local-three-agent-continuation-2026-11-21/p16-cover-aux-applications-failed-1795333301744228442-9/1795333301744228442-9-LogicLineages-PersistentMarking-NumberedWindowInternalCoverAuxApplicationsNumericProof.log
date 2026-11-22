@@ -1,0 +1,47 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxApplicationsNumericProof.lean:31:2: error: Tactic `rfl` failed: The left-hand side
+  evaluate NumberedWindowInternalSparsePair.fieldCons
+    (6 ::ᵥ
+      evaluate NumberedWindowInternalSparsePair.fieldCons
+          (evaluate (Program.projection 1) (a ::ᵥ d ::ᵥ c ::ᵥ f ::ᵥ nil) ::ᵥ
+            evaluate NumberedWindowInternalSparsePair.fieldCons
+                (evaluate (Program.projection 2) (a ::ᵥ d ::ᵥ c ::ᵥ f ::ᵥ nil) ::ᵥ
+                  evaluate NumberedWindowInternalSparsePair.fieldCons
+                      (evaluate (Program.projection 3) (a ::ᵥ d ::ᵥ c ::ᵥ f ::ᵥ nil) ::ᵥ
+                        evaluate NumberedWindowInternalSparsePair.fieldCons
+                            (evaluate (Program.projection 0) (a ::ᵥ d ::ᵥ c ::ᵥ f ::ᵥ nil) ::ᵥ
+                              evaluate (ID1Completion.InternalAcceptance.constantZero 4)
+                                  (a ::ᵥ d ::ᵥ c ::ᵥ f ::ᵥ nil) ::ᵥ
+                                nil) ::ᵥ
+                          nil) ::ᵥ
+                    nil) ::ᵥ
+              nil) ::ᵥ
+        nil)
+is not definitionally equal to the right-hand side
+  packNode 6 [d, c, f, a]
+
+d c f a : ℕ
+⊢ evaluate NumberedWindowInternalSparsePair.fieldCons
+      (6 ::ᵥ
+        evaluate NumberedWindowInternalSparsePair.fieldCons
+            (evaluate (Program.projection 1) (a ::ᵥ d ::ᵥ c ::ᵥ f ::ᵥ nil) ::ᵥ
+              evaluate NumberedWindowInternalSparsePair.fieldCons
+                  (evaluate (Program.projection 2) (a ::ᵥ d ::ᵥ c ::ᵥ f ::ᵥ nil) ::ᵥ
+                    evaluate NumberedWindowInternalSparsePair.fieldCons
+                        (evaluate (Program.projection 3) (a ::ᵥ d ::ᵥ c ::ᵥ f ::ᵥ nil) ::ᵥ
+                          evaluate NumberedWindowInternalSparsePair.fieldCons
+                              (evaluate (Program.projection 0) (a ::ᵥ d ::ᵥ c ::ᵥ f ::ᵥ nil) ::ᵥ
+                                evaluate (ID1Completion.InternalAcceptance.constantZero 4)
+                                    (a ::ᵥ d ::ᵥ c ::ᵥ f ::ᵥ nil) ::ᵥ
+                                  nil) ::ᵥ
+                            nil) ::ᵥ
+                      nil) ::ᵥ
+                nil) ::ᵥ
+          nil) =
+    packNode 6 [d, c, f, a]
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxApplicationsNumericProof.lean:30:41: warning: This simp argument is unused:
+  consValue
+
+Hint: Omit it from the simp argument list.
+  simp only [̵a̵u̵x̵C̵o̵d̵e̵,̵b̵i̵n̵a̵r̵y̵,̵c̵o̵m̵p̵o̵s̵i̵t̵e̵T̵w̵o̵,̵c̵o̵n̵s̵V̵a̵l̵u̵e̵,̵l̵i̵t̵e̵r̵a̵l̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵]̵[̲a̲u̲x̲C̲o̲d̲e̲,̲ ̲b̲i̲n̲a̲r̲y̲,̲ ̲c̲o̲m̲p̲o̲s̲i̲t̲e̲T̲w̲o̲,̲ ̲l̲i̲t̲e̲r̲a̲l̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,34 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRoundLeastChecks.lean:113:6: error(lean.unknownIdentifier): Unknown identifier `NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof.unaryRename`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRoundLeastChecks.lean:107:68: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+C : Program 3
+X : Program 2
+W : Program 3
+s : Settings
+paid : SameLeastOnEdge C X W s
+ctx ty seed m vertices : OTerm α
+least : Nonempty (Derivation body Γ (leastGraph C X W s ctx ty seed m))
+physical : Nonempty (Derivation body Γ (unary (scratchVertices C s) vertices seed))
+β : Type
+j : α → β
+Δ : List (ID1Completion.InternalCalculus.Formula β)
+pool : OTerm β
+keep : ∀ r ∈ Γ, Formula.relabel j r ∈ Δ
+computed :
+  Nonempty
+    (Derivation body Δ
+      (programGraph (members (edge4 X W)) pool
+        ![Term.relabel j vertices, Term.relabel j ctx, Term.relabel j ty, Term.relabel j seed]))
+v : Nonempty (Derivation body Δ (Formula.relabel j (unary (scratchVertices C s) vertices seed)))
+⊢ Nonempty
+    (Derivation body Δ
+      (leastGraph C X W s (Term.relabel j ctx) (Term.relabel j ty) (Term.relabel j m) (Term.relabel j m)))
+'LogicLineages.PersistentMarking.NumberedWindowInternalSparseRoundLeastChecks.exact_RoundLeast' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalSparseRoundLeastChecks.exact_CoveredLeastIdempotent' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

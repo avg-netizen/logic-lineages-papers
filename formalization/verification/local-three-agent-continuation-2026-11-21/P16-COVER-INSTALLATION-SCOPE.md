@@ -1,0 +1,3 @@
+# Cover preservation in the physical installation
+
+The installer picks the original cover C and an original calibrated exchange callback. It tests equality of the two full option outputs before accepting exchange and proves on every input that the guarded callback returns the original bit. The same guarded callback supplies the physical least and the reinstalled application core. Accepted edges now prove equality of the two actual vertex outputs, while positive paths retain both endpoint guards and successful minima retain their same-cover bound. [Exact statements](../../LogicLineages/PersistentMarking/NumberedWindowInternalSparseCoverInstallationTargets.lean) · [Native gate](P16-COVER-INSTALLATION-LOCAL-EVIDENCE.json)

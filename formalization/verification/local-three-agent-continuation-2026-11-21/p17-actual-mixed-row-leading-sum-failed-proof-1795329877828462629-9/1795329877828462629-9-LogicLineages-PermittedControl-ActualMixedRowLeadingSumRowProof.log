@@ -1,0 +1,26 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualMixedRowLeadingSumRowProof.lean:75:47: error: Tactic `rfl` failed: equality expected
+  (c.natAbs + (offsetBound terms + slopeBound terms * C.log2)).le
+    (c.natAbs + (offsetBound terms + slopeBound terms * C.log2))
+
+f : ℕ → ℕ
+B : ℕ
+selected : SelectedWithThreshold f B
+ρ : ℕ → ℕ
+z C : ℕ
+c : ℤ
+terms : List WeightedOperand
+values : List ℕ
+annotations : List Annotation
+aligned : AlignedAnnotations f ρ terms values annotations
+raw : ∀ t ∈ terms, ρ t.2.rank ≤ z
+member : C ∈ fullValues f annotations
+largest : ∀ D ∈ fullValues f annotations, D ≤ C
+dominates : f z ≤ C
+p : ℕ
+image : f p = C
+zLog : z ≤ C.log2
+bound : (rowParts f C terms values annotations).2.natAbs ≤ slopeBound terms * C.log2 + offsetBound terms
+parts : ℤ × ℤ := rowParts f C terms values annotations
+equation : 2 * actualSum terms values = parts.1 * ↑C + 2 * parts.2
+⊢ c.natAbs + (offsetBound terms + slopeBound terms * C.log2) ≤
+    c.natAbs + (offsetBound terms + slopeBound terms * C.log2)

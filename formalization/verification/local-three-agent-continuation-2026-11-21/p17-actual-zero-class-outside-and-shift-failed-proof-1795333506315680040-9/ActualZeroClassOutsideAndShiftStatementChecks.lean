@@ -1,0 +1,20 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroClassOutsideAndShiftTargets
+import LogicLineages.PermittedControl.ActualZeroClassOutsideAndShiftComplementProof
+import LogicLineages.PermittedControl.ActualZeroClassOutsideAndShiftConstantProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualZeroClassOutsideAndShift
+
+theorem fixed_actualZeroClassOutside : ExactOutsideClass := exactOutsideClass
+theorem fixed_actualZeroClassOriginShift : ExactOriginShift := exactOriginShift
+
+theorem fixed_fullActualZeroClassOutsideAndShift : FullActualZeroClassOutsideAndShift :=
+  ⟨fixed_actualZeroClassOutside,fixed_actualZeroClassOriginShift⟩
+
+#print axioms fixed_actualZeroClassOutside
+#print axioms fixed_actualZeroClassOriginShift
+#print axioms fixed_fullActualZeroClassOutsideAndShift
+
+end LogicLineages.PermittedControl.StatementChecks

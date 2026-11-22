@@ -1,0 +1,117 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalGuardedMatchingInstallationChecks.lean:30:26: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+baseV baseM : ComputabilityKnowledge.GorbowPRProgram.Program 1
+G : ComputabilityKnowledge.GorbowPRProgram.Program 3
+hV : NumberedWindowInternalAuxExchangeMemoStepTargets.TermSyntaxCalibrated baseV
+hM : NumberedWindowInternalFactoredCoverTargets.TermMeasureCalibrated baseM
+hG : NumberedWindowInternalFactoredCoverTargets.GrammarOptionCalibrated G
+right✝ :
+  NumberedWindowInternalSparseCoverScratchTargets.ActualSelectedCoverOutput
+    (NumberedWindowInternalFactoredCoverTargets.factoredCover baseV baseM G)
+P : ComputabilityKnowledge.GorbowPRProgram.Program 2
+hP : NumberedWindowInternalAuxMeasureMemoTargets.CombineCalibrated P
+V : ComputabilityKnowledge.GorbowPRProgram.Program 1 := syntaxFlag baseV
+M : ComputabilityKnowledge.GorbowPRProgram.Program 1 := selectedMeasure (measureUpdate baseM P)
+flag : NumberedWindowInternalSparseTypedRawTargets.ActualRawSyntax (syntaxFlag baseV)
+measure : NumberedWindowInternalFactoredCoverTargets.TermMeasureCalibrated (selectedMeasure (measureUpdate baseM P))
+cover :
+  NumberedWindowInternalSparseCoverScratchTargets.ActualSelectedCoverOutput
+    (NumberedWindowInternalFactoredCoverTargets.factoredCover V M G)
+entries✝ : NumberedWindowCopyAlgorithm.Entries
+s✝ : NumberedWindowScalarAlgorithm.Settings
+W✝ : List NumberedWindowInternalFreshProbeDispatchWindowTargets.ProbeTy
+entries : NumberedWindowInternalFreshProbeDispatchWindowTargets.ValidWindow s✝ W✝
+s : NumberedWindowRawExchangeSymmetryTargets.HeadPairsSymmetric s✝.equivalentHeads
+W : NumberedWindowInternalSparseCoveredWindowTargets.WindowSeedsCovered s✝
+⊢ ∃ i j cv tv base intrinsicBase T d oldCore oldLeast root other v,
+    NumberedWindowInternalSparseRawTickTargets.ActualRoot (NumberedWindowConcreteCheckers.root entries✝ s✝) root ∧
+      NumberedWindowInternalSparseRawTickTargets.ActualFallback other ∧
+        NumberedWindowInternalSparseScalarEdgeTargets.ActualTermExchange s✝ base ∧
+          NumberedWindowInternalAuxWindowMemoTargets.IntrinsicWindowCalibrated s✝ intrinsicBase ∧
+            NumberedWindowInternalAuxWindowStepTargets.TypeGuardCalibrated s✝ T ∧
+              have baseW :=
+                NumberedWindowInternalAuxWindowStepTargets.intrinsicQuery
+                  (NumberedWindowInternalAuxWindowMemoTargets.selectedIntrinsic
+                    (NumberedWindowInternalAuxWindowStepTargets.windowUpdate intrinsicBase T));
+              NumberedWindowInternalSparseTypedRawTargets.ActualPackedWindow s✝ baseW ∧
+                NumberedWindowInternalSparseIntrinsicInstallationTargets.AuxWindowAt baseW T ∧
+                  have Wp :=
+                    NumberedWindowInternalSparseStructuralApplicationTargets.window
+                      (NumberedWindowInternalFactoredCoverTargets.factoredCover (syntaxFlag baseV)
+                        (selectedMeasure (measureUpdate baseM P)) G)
+                      s✝ baseW (syntaxFlag baseV);
+                  have X :=
+                    NumberedWindowInternalMeasuredAuxExchangeTargets.measuredFactoredExchange s✝ base (syntaxFlag baseV)
+                      baseM P G;
+                  have raw := NumberedWindowInternalSparseTypedRaw.typedRaw5 root other Wp (syntaxFlag baseV);
+                  have least :=
+                    NumberedWindowInternalSparsePackedLeast.packedLeastProgram
+                      (NumberedWindowInternalFactoredCoverTargets.factoredCover (syntaxFlag baseV)
+                        (selectedMeasure (measureUpdate baseM P)) G)
+                      X Wp s✝;
+                  have newI := NumberedWindowInternalSparseCanonicalAddressTargets.addressScalar cv tv Wp least;
+                  have final := NumberedWindowInternalSparseApplicationReinstall.frontendInputs newI least v;
+                  NumberedWindowInternalSparseScalarEdgeTargets.ActualTermExchange s✝ X ∧
+                    NumberedWindowInternalSparseTypedRawTargets.ActualPackedWindow s✝ Wp ∧
+                      NumberedWindowInternalSparsePathAdvanceTargets.ActualLeastCalibration s✝ least ∧
+                        NumberedWindowInternalSparseApplicationFrontendTargets.ActualScalarCalibration s✝ newI ∧
+                          NumberedWindowInternalSparseTuple.InstalledTupleAt entries✝ s✝ W✝ i j cv tv d oldCore raw
+                              oldLeast v ∧
+                            NumberedWindowInternalSparseTuple.InstalledTupleAt entries✝ s✝ W✝ i j cv tv d oldCore raw
+                                least v ∧
+                              NumberedWindowInternalFreshProbeParsedTyped.chosenA final =
+                                  NumberedWindowInternalFreshProbeParsedTyped.chosenA v ∧
+                                NumberedWindowInternalSparseTuple.InstalledTupleAt entries✝ s✝ W✝ newI j cv tv d
+                                    (NumberedWindowInternalSparseApplicationFrontend.applicationCore least) raw least
+                                    final ∧
+                                  NumberedWindowInternalSparseScalarInstallationTargets.EdgeCarriersAt newI j
+                                      (NumberedWindowInternalSparseAddressPositive.addressPositive cv tv raw least) d ∧
+                                    NumberedWindowInternalSparseInstalledOccurrenceTargets.OpenCoverAt
+                                        (NumberedWindowInternalFactoredCoverTargets.factoredCover (syntaxFlag baseV)
+                                          (selectedMeasure (measureUpdate baseM P)) G)
+                                        X Wp s✝ ∧
+                                      NumberedWindowInternalSparseDirectedInstallationTargets.MinimumEdgeAt
+                                          (NumberedWindowInternalFactoredCoverTargets.factoredCover (syntaxFlag baseV)
+                                            (selectedMeasure (measureUpdate baseM P)) G)
+                                          X Wp s✝ ∧
+                                        NumberedWindowInternalSparseDirectedInstallationTargets.PositiveEndpointsAt raw
+                                            least Wp ∧
+                                          NumberedWindowInternalSparseCoverInstallationTargets.EdgeCoverAt
+                                              (NumberedWindowInternalFactoredCoverTargets.factoredCover
+                                                (syntaxFlag baseV) (selectedMeasure (measureUpdate baseM P)) G)
+                                              X Wp s✝ ∧
+                                            NumberedWindowInternalSparseAdjacentMinimumTargets.EdgeMinimumOrderAt
+                                                (NumberedWindowInternalFactoredCoverTargets.factoredCover
+                                                  (syntaxFlag baseV) (selectedMeasure (measureUpdate baseM P)) G)
+                                                X Wp s✝ ∧
+                                              NumberedWindowInternalSparseAdjacentMinimumTargets.MutualEdgeMinimumEqualityAt
+                                                  (NumberedWindowInternalFactoredCoverTargets.factoredCover
+                                                    (syntaxFlag baseV) (selectedMeasure (measureUpdate baseM P)) G)
+                                                  X Wp s✝ ∧
+                                                NumberedWindowInternalSparseSymmetricExchangeTargets.EdgeMinimumEqualityAt
+                                                    (NumberedWindowInternalFactoredCoverTargets.factoredCover
+                                                      (syntaxFlag baseV) (selectedMeasure (measureUpdate baseM P)) G)
+                                                    X Wp s✝ ∧
+                                                  NumberedWindowInternalSparseCoveredInstallationTargets.SameLeastOnEdge
+                                                      (NumberedWindowInternalFactoredCoverTargets.factoredCover
+                                                        (syntaxFlag baseV) (selectedMeasure (measureUpdate baseM P)) G)
+                                                      X Wp s✝ ∧
+                                                    NumberedWindowInternalSparseMeasuredInstallationTargets.FunctionApplicationAt
+                                                        (NumberedWindowInternalFactoredCoverTargets.factoredCover
+                                                          (syntaxFlag baseV) (selectedMeasure (measureUpdate baseM P))
+                                                          G)
+                                                        s✝ X Wp ∧
+                                                      NumberedWindowInternalSparseMeasuredInstallationTargets.SingletonAt
+                                                          (NumberedWindowInternalFactoredCoverTargets.factoredCover
+                                                            (syntaxFlag baseV) (selectedMeasure (measureUpdate baseM P))
+                                                            G)
+                                                          s✝ X Wp raw ∧
+                                                        NumberedWindowInternalGuardedMatchedPathTargets.GuardedPathAt
+                                                          (NumberedWindowInternalFactoredCoverTargets.factoredCover
+                                                            (syntaxFlag baseV) (selectedMeasure (measureUpdate baseM P))
+                                                            G)
+                                                          s✝ X Wp T raw
+'LogicLineages.PersistentMarking.NumberedWindowInternalGuardedMatchingInstallationChecks.exact_GuardedMatchingInstallation' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

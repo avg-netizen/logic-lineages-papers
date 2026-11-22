@@ -1,0 +1,20 @@
+module
+public import LogicLineages.PermittedControl.ActualRankedZeroClassTargets
+import LogicLineages.PermittedControl.ActualRankedZeroClassSelectionProof
+import LogicLineages.PermittedControl.ActualRankedZeroClassActualProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualRankedZeroClass
+
+theorem fixed_actualRankedClassSelection : ExactClassSelection := exactClassSelection
+theorem fixed_actualRankedZeroClass : ExactRankedClass := exactRankedClass
+
+theorem fixed_fullActualRankedZeroClass : FullActualRankedZeroClass :=
+  ⟨fixed_actualRankedClassSelection,fixed_actualRankedZeroClass⟩
+
+#print axioms fixed_actualRankedClassSelection
+#print axioms fixed_actualRankedZeroClass
+#print axioms fixed_fullActualRankedZeroClass
+
+end LogicLineages.PermittedControl.StatementChecks

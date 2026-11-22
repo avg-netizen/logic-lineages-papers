@@ -1,0 +1,21 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseCanonicalCoordinatesTestProof.lean:52:8: error: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseCanonicalCoordinatesTestProof.lean:74:96: error: Type mismatch
+  Fin.elim0
+has type
+  Fin 0 → ?m.153
+but is expected to have type
+  ∀ (i : Fin 0),
+    Nonempty
+      (Derivation body Δ
+        (programGraph (![least, someValue] i.succ.succ) (![out, suc (Term.relabel j k)] i.succ.succ) xs))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseCanonicalCoordinatesTestProof.lean:89:88: error: Type mismatch
+  Fin.elim0
+has type
+  Fin 0 → ?m.149
+but is expected to have type
+  ∀ (i : Fin 0),
+    Nonempty
+      (Derivation body (B :: Γ) (programGraph (![least, someValue] i.succ.succ) (![suc k, suc k] i.succ.succ) xs))

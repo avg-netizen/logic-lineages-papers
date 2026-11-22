@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PermittedControl.HighComparisonLowerParameterTargets
+import LogicLineages.PermittedControl.HighComparisonLowerParameterDomainProof
+import LogicLineages.PermittedControl.HighComparisonLowerParameterCodeProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_highComparisonSmallerEntryHead : HighComparisonLowerParameter.SmallerEntryHeadExact :=
+  HighComparisonLowerParameter.smallerEntryHeadExact
+
+theorem fixed_highComparisonAffordableLowerParameter : HighComparisonLowerParameter.AffordableLowerParameter :=
+  HighComparisonLowerParameter.affordableLowerParameter
+
+theorem fixed_highComparisonOriginalFieldCode : HighComparisonLowerParameter.OriginalFieldCodeExact :=
+  HighComparisonLowerParameter.originalFieldCodeExact
+
+theorem fixed_fullHighComparisonLowerParameter : HighComparisonLowerParameter.FullHighComparisonLowerParameter :=
+  ⟨fixed_highComparisonSmallerEntryHead,fixed_highComparisonAffordableLowerParameter,
+    fixed_highComparisonOriginalFieldCode⟩
+
+#print axioms fixed_highComparisonSmallerEntryHead
+#print axioms fixed_highComparisonAffordableLowerParameter
+#print axioms fixed_highComparisonOriginalFieldCode
+#print axioms fixed_fullHighComparisonLowerParameter
+
+end LogicLineages.PermittedControl.StatementChecks

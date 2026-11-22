@@ -1,0 +1,52 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseMembersClosureChecks.lean:70:83: error: Tactic `rfl` failed: The left-hand side
+  Term.relabel j (roundsTape (suc size) vertices ctx ty seed 0)
+is not definitionally equal to the right-hand side
+  roundsTape (suc (Term.relabel j size)) (Term.relabel j vertices) (Term.relabel j ctx) (Term.relabel j ty)
+    (Term.relabel j seed) 0
+
+case refine_1
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+pred : ExactRetainedPredecessor
+E : Program 4
+vertices ctx ty seed size pool source target : OTerm α
+len : Nonempty (Derivation body Γ (unary poolLength size vertices))
+out : Nonempty (Derivation body Γ (roundGraph E pool size vertices ctx ty seed))
+edge :
+  Nonempty
+    (Derivation body Γ (memberGraph pool source ⊓ acceptEdge E ctx ty source target ⊓ memberGraph vertices target))
+β : Type
+j : α → β
+Δ : List (ID1Completion.InternalCalculus.Formula β)
+next : OTerm β
+keep : ∀ r ∈ Γ, Formula.relabel j r ∈ Δ
+nextOut :
+  Nonempty
+    (Derivation body Δ
+      (programGraph (rounds E) next fun i => Term.relabel j (roundsTape (suc size) vertices ctx ty seed i)))
+l : Nonempty (Derivation body Δ (unary poolLength (Term.relabel j size) (Term.relabel j vertices)))
+o :
+  Nonempty
+    (Derivation body Δ
+      (roundGraph E (Term.relabel j pool) (Term.relabel j size) (Term.relabel j vertices) (Term.relabel j ctx)
+        (Term.relabel j ty) (Term.relabel j seed)))
+e :
+  Nonempty
+    (Derivation body Δ
+      (memberGraph (Term.relabel j pool) (Term.relabel j source) ⊓
+          programGraph E
+            (ID1Completion.InternalTagArithmeticSyntaxProof.suc ID1Completion.InternalTagArithmeticSyntaxProof.z)
+            ![Term.relabel j ctx, Term.relabel j ty, Term.relabel j source, Term.relabel j target] ⊓
+        memberGraph (Term.relabel j vertices) (Term.relabel j target)))
+k : Fin 5
+⊢ Term.relabel j (roundsTape (suc size) vertices ctx ty seed 0) =
+    roundsTape (suc (Term.relabel j size)) (Term.relabel j vertices) (Term.relabel j ctx) (Term.relabel j ty)
+      (Term.relabel j seed) 0
+'LogicLineages.PersistentMarking.NumberedWindowInternalSparseMembersClosureChecks.exact_LengthStableFromPredecessor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalSparseMembersClosureChecks.exact_MembersEdgeClosure' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,29 @@
+module
+public import LogicLineages.PermittedControl.InverseComparisonPreparedRowsTargets
+import LogicLineages.PermittedControl.InverseComparisonPreparedRowsCodeProof
+import LogicLineages.PermittedControl.InverseComparisonPreparedRowsSupportProof
+import LogicLineages.PermittedControl.InverseComparisonPreparedRowsSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_inverseComparisonPreparedRowsCodeExact : InverseComparisonPreparedRows.CodeExact :=
+  InverseComparisonPreparedRows.codeExact
+
+theorem fixed_inverseComparisonPreparedRowsShape : InverseComparisonPreparedRows.PreparedShape :=
+  InverseComparisonPreparedRows.preparedShape
+
+theorem fixed_actualInverseComparisonPreparedRows : InverseComparisonPreparedRows.ActualInverseRows :=
+  InverseComparisonPreparedRows.actualInverseRows
+
+theorem fixed_fullInverseComparisonPreparedRows :
+    InverseComparisonPreparedRows.FullInverseComparisonPreparedRows :=
+  ⟨fixed_inverseComparisonPreparedRowsCodeExact,fixed_inverseComparisonPreparedRowsShape,
+    fixed_actualInverseComparisonPreparedRows⟩
+
+#print axioms fixed_inverseComparisonPreparedRowsCodeExact
+#print axioms fixed_inverseComparisonPreparedRowsShape
+#print axioms fixed_actualInverseComparisonPreparedRows
+#print axioms fixed_fullInverseComparisonPreparedRows
+
+end LogicLineages.PermittedControl.StatementChecks

@@ -11,14 +11,20 @@ private theorem oppositeSum (terms : List Input) (ν : Nat → Nat) :
   induction terms with
   | nil => rfl
   | cons t rest ih =>
-    simp only [List.map_cons,List.sum_cons,ih,neg_mul]
+    simp only [List.map_cons,List.sum_cons]
+    rw [ih,neg_mul]
     omega
 
 theorem signedGraph : SignedGraph := by
   intro output e ν
   simp only [graph,lowerRow,upperRow,signedValue,NormalForm.Formula.eval,NormalForm.Atom.eval,
-    NormalForm.rowValue,List.map_cons,List.sum_cons,List.map_map,Function.comp_apply,
+    NormalForm.rowValue,List.map_cons,List.sum_cons,List.map_map,
     NormalForm.Summand.term,OrdinalComparison.LayeredComparison.SnyatkovCompletion.Term.value,one_mul]
+  change (0 ≤ e.1 + ((-1 : Int) * (ν output : Int) +
+      (e.2.map (fun t => t.1 * (ν t.2 : Int))).sum) ∧
+    0 ≤ -e.1 + ((ν output : Int) +
+      (e.2.map (fun t => -t.1 * (ν t.2 : Int))).sum)) ↔
+    (ν output : Int) = e.1 + (e.2.map (fun t => t.1 * (ν t.2 : Int))).sum
   rw [oppositeSum]
   omega
 

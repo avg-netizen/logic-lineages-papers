@@ -1,0 +1,35 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/HighFieldPreparedActualProof.lean:20:6: error: Tactic `rewrite` failed: motive is not type correct:
+  fun _a =>
+    (have P' := normalizeHighFieldCode F;
+      have Q' := normalizeHighFieldCode G;
+      if rankF < rankG then (0, rawDistinctForm P' Q')
+      else if rankG < rankF then (1, rawDistinctForm Q' P') else (0, rawConstForm (rawSameForm P' Q'))) =
+      have P' := normalizeHighFieldCode F;
+      have Q' := normalizeHighFieldCode G;
+      if _a then (0, rawDistinctForm P' Q')
+      else if ρ rankG < ρ rankF then (1, rawDistinctForm Q' P') else (0, rawConstForm (rawSameForm P' Q'))
+Error: Application type mismatch: The argument
+  (ρ rankF).decLt (ρ rankG)
+has type
+  Decidable (ρ rankF < ρ rankG)
+but is expected to have type
+  Decidable _a
+in the application
+  @ite OrientedHighFormCode _a ((ρ rankF).decLt (ρ rankG))
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+F G : LongFieldCode
+ρ : ℕ → ℕ
+mono : StrictMono ρ
+rankF rankG : ℕ
+⊢ (have P' := normalizeHighFieldCode F;
+    have Q' := normalizeHighFieldCode G;
+    if rankF < rankG then (0, rawDistinctForm P' Q')
+    else if rankG < rankF then (1, rawDistinctForm Q' P') else (0, rawConstForm (rawSameForm P' Q'))) =
+    have P' := normalizeHighFieldCode F;
+    have Q' := normalizeHighFieldCode G;
+    if ρ rankF < ρ rankG then (0, rawDistinctForm P' Q')
+    else if ρ rankG < ρ rankF then (1, rawDistinctForm Q' P') else (0, rawConstForm (rawSameForm P' Q'))

@@ -1,0 +1,7 @@
+# Exact numeric lifting of function exchange
+
+`NumberedWindowAuxExchangeLiftChecks` passed native gate `1795327687570210349-9`. The 878-module closure had five named audits with only `propext`, `Classical.choice`, and `Quot.sound`. The two earlier failed candidates and their native diagnostics remain under `p16-aux-exchange-lift-failed-*`.
+
+The three equations characterize the original syntax, lexical typing and combined scalar admission tests on all four raw numerical fields. Tag six is the original `auxRaw`. The function is checked at `arrow dom cod`, the argument at `dom`, and the parent at `cod`, all with the same lexical context. The combined admission equation includes the original type decoder and type-window membership for both explicit type fields.
+
+The two lift rules preserve the argument and both type fields literally. The original raw exchange bit lifts from its true function child and the two parent syntax conditions. The original scalar edge additionally uses both checked endpoint windows and the admitted argument. No symmetry of the supplied head-pair table is required. This is numerical evidence for the contextual quotient from `sections/ordinals.tex` (lines 70–76). The separate application-certificate transport from lines 123–127 and the arbitrary-open object exchange derivation remain separate. See `P16-AUX-EXCHANGE-OBJECT-CONSTRUCTION.md` for the object construction and remaining premises.

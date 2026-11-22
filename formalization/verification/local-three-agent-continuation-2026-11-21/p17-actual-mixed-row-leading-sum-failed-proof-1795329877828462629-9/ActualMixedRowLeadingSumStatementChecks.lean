@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.ActualMixedRowLeadingSumTargets
+import LogicLineages.PermittedControl.ActualMixedRowLeadingSumSignProof
+import LogicLineages.PermittedControl.ActualMixedRowLeadingSumCodeProof
+import LogicLineages.PermittedControl.ActualMixedRowLeadingSumRowProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualMixedRowLeadingSum
+
+theorem fixed_actualMixedRowEffectiveCutoff : ExactEffectiveCutoff := exactEffectiveCutoff
+theorem fixed_actualMixedRowSignedDecomposition : ExactSignedDecomposition := exactSignedDecomposition
+theorem fixed_actualMixedRowNonzeroLeadingSign : ExactNonzeroLeadingSign := exactNonzeroLeadingSign
+
+theorem fixed_fullActualMixedRowLeadingSum : FullActualMixedRowLeadingSum :=
+  ⟨fixed_actualMixedRowEffectiveCutoff,fixed_actualMixedRowSignedDecomposition,
+    fixed_actualMixedRowNonzeroLeadingSign⟩
+
+#print axioms fixed_actualMixedRowEffectiveCutoff
+#print axioms fixed_actualMixedRowSignedDecomposition
+#print axioms fixed_actualMixedRowNonzeroLeadingSign
+#print axioms fixed_fullActualMixedRowLeadingSum
+
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,36 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoGuardedChecks.lean:104:7: error: unexpected token 'syntax'; expected '(', ':=', '|' or term
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoGuardedChecks.lean:104:7: error: Missing cases:
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoGuardedChecks.lean:96:70: error: unsolved goals
+C : Program 3
+s : Settings
+base : Program 2
+V : Program 1
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+dom cod fn fn' arg outA outB : OTerm α
+a : OTerm α := auxiliaryTerm dom cod fn arg
+b : OTerm α := auxiliaryTerm dom cod fn' arg
+X : Program 2 := guardedExchange C s (paired base V)
+parentCovers : ID1Completion.InternalCalculus.Formula α :=
+  unary (coverOption C s) outA a ⊓ (unary (coverOption C s) outB b ⊓ eqn outA outB)
+h : ID1Completion.InternalCalculus.Formula α := accepted X fn fn' ⊓ (syntaxOne V a ⊓ syntaxOne V b ⊓ parentCovers)
+Δ : List (ID1Completion.InternalCalculus.Formula α) := h :: Γ
+input : Derivation body Δ h
+pairAndCover :
+  Derivation body Δ
+    (programGraph (paired base V) (suc z) ![fn, fn'] ⊓ programGraph (compareOptions C s) (suc z) ![fn, fn'])
+facts : Derivation body Δ (syntaxOne V a ⊓ syntaxOne V b ⊓ parentCovers)
+⊢ Nonempty
+    (Derivation body Γ
+      (Formula.imp (accepted X fn fn' ⊓ (syntaxOne V a ⊓ syntaxOne V b ⊓ parentCovers)) (accepted X a b)))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoGuardedChecks.lean:104:13: error: unexpected token ':='; expected identifier or stx
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoGuardedChecks.lean:107:38: error: unexpected token '⟩'; expected identifier or stx
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoGuardedChecks.lean:107:75: error: unexpected token '⟩'; expected identifier or stx
+'LogicLineages.PersistentMarking.NumberedWindowInternalAuxExchangeMemoGuardedChecks.exact_OpenPairedAuxMemoLift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalAuxExchangeMemoGuardedChecks.exact_OpenGuardedAuxMemoLift' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

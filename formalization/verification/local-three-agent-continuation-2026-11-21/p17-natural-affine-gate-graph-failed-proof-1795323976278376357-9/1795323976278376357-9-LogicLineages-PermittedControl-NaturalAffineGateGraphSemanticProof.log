@@ -1,0 +1,85 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/NaturalAffineGateGraphSemanticProof.lean:15:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  a + b ≤ -1
+where
+ a := (List.map (fun t => t.1 * ↑(ν t.2)) rest).sum
+ b := (List.map (fun t => -(t.1 * ↑(ν t.2))) rest).sum
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/NaturalAffineGateGraphSemanticProof.lean:14:43: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp only [List.map_cons, ̲List.sum_cons,i̵h̵,̵ ̲neg_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/NaturalAffineGateGraphSemanticProof.lean:22:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (List.map (fun t => -t.1 * ↑(?ν t.2)) ?terms).sum
+in the target expression
+  0 ≤
+        e.1 +
+          (-1 * ↑(ν output) +
+            (List.map
+                ((fun a =>
+                    a.1 *
+                      ↑(Term.value ν
+                          (match a.2 with
+                          | NormalForm.Summand.variable i => Term.variable i
+                          | NormalForm.Summand.phi i e => (shiftTerm (Term.variable i) e).phi
+                          | NormalForm.Summand.hyperPhi i e h => HyperWindow.valueTerm i e h))) ∘
+                  fun t => (t.1, NormalForm.Summand.variable t.2))
+                e.2).sum) ∧
+      0 ≤
+        -e.1 +
+          (↑(ν output) +
+            (List.map
+                ((fun a =>
+                    a.1 *
+                      ↑(Term.value ν
+                          (match a.2 with
+                          | NormalForm.Summand.variable i => Term.variable i
+                          | NormalForm.Summand.phi i e => (shiftTerm (Term.variable i) e).phi
+                          | NormalForm.Summand.hyperPhi i e h => HyperWindow.valueTerm i e h))) ∘
+                  fun t => (-t.1, NormalForm.Summand.variable t.2))
+                e.2).sum) ↔
+    ↑(ν output) = e.1 + (List.map (fun t => t.1 * ↑(ν t.2)) e.2).sum
+
+output : ℕ
+e : Expression
+ν : ℕ → ℕ
+⊢ 0 ≤
+        e.1 +
+          (-1 * ↑(ν output) +
+            (List.map
+                ((fun a =>
+                    a.1 *
+                      ↑(Term.value ν
+                          (match a.2 with
+                          | NormalForm.Summand.variable i => Term.variable i
+                          | NormalForm.Summand.phi i e => (shiftTerm (Term.variable i) e).phi
+                          | NormalForm.Summand.hyperPhi i e h => HyperWindow.valueTerm i e h))) ∘
+                  fun t => (t.1, NormalForm.Summand.variable t.2))
+                e.2).sum) ∧
+      0 ≤
+        -e.1 +
+          (↑(ν output) +
+            (List.map
+                ((fun a =>
+                    a.1 *
+                      ↑(Term.value ν
+                          (match a.2 with
+                          | NormalForm.Summand.variable i => Term.variable i
+                          | NormalForm.Summand.phi i e => (shiftTerm (Term.variable i) e).phi
+                          | NormalForm.Summand.hyperPhi i e h => HyperWindow.valueTerm i e h))) ∘
+                  fun t => (-t.1, NormalForm.Summand.variable t.2))
+                e.2).sum) ↔
+    ↑(ν output) = e.1 + (List.map (fun t => t.1 * ↑(ν t.2)) e.2).sum
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/NaturalAffineGateGraphSemanticProof.lean:20:65: warning: This simp argument is unused:
+  Function.comp_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵g̵r̵a̵p̵h̵,̵l̵o̵w̵e̵r̵R̵o̵w̵,̵u̵p̵p̵e̵r̵R̵o̵w̵,̵s̵i̵g̵n̵e̵d̵V̵a̵l̵u̵e̵,̵N̵o̵r̵m̵a̵l̵F̵o̵r̵m̵.̵F̵o̵r̵m̵u̵l̵a̵.̵e̵v̵a̵l̵,̵N̵o̵r̵m̵a̵l̵F̵o̵r̵m̵.̵A̵t̵o̵m̵.̵e̵v̵a̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵N̵o̵r̵m̵a̵l̵F̵o̵r̵m̵.̵r̵o̵w̵V̵a̵l̵u̵e̵,̵L̵i̵s̵t̵.̵m̵a̵p̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵s̵u̵m̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵m̵a̵p̵_̵m̵a̵p̵,̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵
+  ̵ ̵ ̵ ̵ ̵N̵o̵r̵m̵a̵l̵F̵o̵r̵m̵.̵S̵u̵m̵m̵a̵n̵d̵.̵t̵e̵r̵m̵,̵O̵r̵d̵i̵n̵a̵l̵C̵o̵m̵p̵a̵r̵i̵s̵o̵n̵.̵L̵a̵y̵e̵r̵e̵d̵C̵o̵m̵p̵a̵r̵i̵s̵o̵n̵.̵S̵n̵y̵a̵t̵k̵o̵v̵C̵o̵m̵p̵l̵e̵t̵i̵o̵n̵.̵T̵e̵r̵m̵.̵v̵a̵l̵u̵e̵,̵o̵n̵e̵_̵m̵u̵l̵]̵[̲g̲r̲a̲p̲h̲,̲ ̲l̲o̲w̲e̲r̲R̲o̲w̲,̲ ̲u̲p̲p̲e̲r̲R̲o̲w̲,̲ ̲s̲i̲g̲n̲e̲d̲V̲a̲l̲u̲e̲,̲ ̲N̲o̲r̲m̲a̲l̲F̲o̲r̲m̲.̲F̲o̲r̲m̲u̲l̲a̲.̲e̲v̲a̲l̲,̲ ̲N̲o̲r̲m̲a̲l̲F̲o̲r̲m̲.̲A̲t̲o̲m̲.̲e̲v̲a̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲N̲o̲r̲m̲a̲l̲F̲o̲r̲m̲.̲r̲o̲w̲V̲a̲l̲u̲e̲,̲ ̲L̲i̲s̲t̲.̲m̲a̲p̲_̲c̲o̲n̲s̲,̲ ̲L̲i̲s̲t̲.̲s̲u̲m̲_̲c̲o̲n̲s̲,̲ ̲L̲i̲s̲t̲.̲m̲a̲p̲_̲m̲a̲p̲,̲ ̲N̲o̲r̲m̲a̲l̲F̲o̲r̲m̲.̲S̲u̲m̲m̲a̲n̲d̲.̲t̲e̲r̲m̲,̲
+  ̲ ̲ ̲ ̲ ̲O̲r̲d̲i̲n̲a̲l̲C̲o̲m̲p̲a̲r̲i̲s̲o̲n̲.̲L̲a̲y̲e̲r̲e̲d̲C̲o̲m̲p̲a̲r̲i̲s̲o̲n̲.̲S̲n̲y̲a̲t̲k̲o̲v̲C̲o̲m̲p̲l̲e̲t̲i̲o̲n̲.̲T̲e̲r̲m̲.̲v̲a̲l̲u̲e̲,̲ ̲o̲n̲e̲_̲m̲u̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

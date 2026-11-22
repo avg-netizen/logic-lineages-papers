@@ -1,0 +1,9 @@
+# Paper 17 natural affine gate
+
+The finite circuit language pays the natural-output condition on affine gates. Its final tests may still use unrestricted signed linear combinations. The original source states both requirements and describes retaining the exact graph equation for each gate. [arithmetic.tex](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex#L3-L11) [arithmetic.tex](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex#L34-L46)
+
+The graph records the literal opposite affine inequalities in the original normal-form syntax. The ordered list of input coefficients and names is used on both sides, including repeated names and zero coefficients. The primitive recursive code returns the exact radix-six representation of those two rows. [Frozen target](../../LogicLineages/PermittedControl/NaturalAffineGateGraphTargets.lean) [Code proof](../../LogicLineages/PermittedControl/NaturalAffineGateGraphCodeProof.lean)
+
+The signed graph theorem recovers the actual integer equality at an arbitrary valuation. For an output name absent from the original inputs, evaluation at the updated natural valuation has a unique output exactly when the signed source value is nonnegative. Each other name retains its original value. [Semantic proof](../../LogicLineages/PermittedControl/NaturalAffineGateGraphSemanticProof.lean)
+
+The exact supporting result covers one affine gate. Whole-circuit flattening, uniform Boolean arithmetic assembly, later low-strip dimension recursion, and the printed #704 comparison remain open. The native four-alias gate was `1795324268432410377-9`. [Author manifest](PAPER17-NATURAL-AFFINE-GATE-GRAPH-AUTHOR-MANIFEST.json) [Named checks](../../LogicLineages/PermittedControl/NaturalAffineGateGraphStatementChecks.lean) [Native evidence](P17-AFFINE-GATE-LOCAL-EVIDENCE.json)

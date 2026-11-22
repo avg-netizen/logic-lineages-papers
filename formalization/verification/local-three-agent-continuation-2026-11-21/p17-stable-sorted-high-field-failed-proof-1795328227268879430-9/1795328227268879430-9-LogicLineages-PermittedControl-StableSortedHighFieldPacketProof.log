@@ -1,0 +1,15 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/StableSortedHighFieldPacketProof.lean:20:6: error: Type mismatch: After simplification, term
+  ⟨packetExact.right.right 0 sign lowRank highRank wanted H admitted,
+    packetShape.right.right 0 sign lowRank highRank wanted H⟩
+ has type
+  And
+    (postprocess ((0, rawLinearForm sign (longFieldCode H)), lowRank, highRank, wanted) =
+      preparedPacketCode [LowerOperand.ordinary (if True then lowRank else highRank) H]
+        (InverseComparisonPreparedRows.emitFormula sign (if True then wanted else reverseComparisonCode wanted)))
+    (PreparedInput [LowerOperand.ordinary (if True then lowRank else highRank) H]
+      (InverseComparisonPreparedRows.emitFormula sign (if True then wanted else reverseComparisonCode wanted)))
+but is expected to have type
+  And
+    (postprocess ((0, rawLinearForm sign (longFieldCode H)), lowRank, highRank, wanted) =
+      preparedPacketCode [LowerOperand.ordinary lowRank H] (InverseComparisonPreparedRows.emitFormula sign wanted))
+    (PreparedInput [LowerOperand.ordinary lowRank H] (InverseComparisonPreparedRows.emitFormula sign wanted))

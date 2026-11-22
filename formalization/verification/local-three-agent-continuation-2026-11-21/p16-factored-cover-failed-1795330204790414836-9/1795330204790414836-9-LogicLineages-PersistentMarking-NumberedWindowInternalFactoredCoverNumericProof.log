@@ -1,0 +1,13 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFactoredCoverNumericProof.lean:32:17: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFactoredCoverNumericProof.lean:78:2: error: Type mismatch: After simplification, term
+  agrees (Encodable.encode heads ::ᵥ Encodable.encode types ::ᵥ Encodable.encode measure ::ᵥ nil)
+ has type
+  evaluate G (Encodable.encode heads ::ᵥ Encodable.encode types ::ᵥ Encodable.encode measure ::ᵥ nil) =
+    Encodable.encode
+        (grammar heads types (Nat.unpair (Encodable.encode measure)).2 (Nat.unpair (Encodable.encode measure)).1).1 +
+      1
+but is expected to have type
+  evaluate G (Encodable.encode heads ::ᵥ Encodable.encode types ::ᵥ Encodable.encode measure ::ᵥ nil) =
+    Encodable.encode (grammar heads types measure.2 measure.1).1 + 1

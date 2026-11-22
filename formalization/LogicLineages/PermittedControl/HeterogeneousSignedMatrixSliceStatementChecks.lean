@@ -1,0 +1,32 @@
+module
+public import LogicLineages.PermittedControl.HeterogeneousSignedMatrixSliceTargets
+import LogicLineages.PermittedControl.HeterogeneousSignedMatrixSliceCodeProof
+import LogicLineages.PermittedControl.HeterogeneousSignedMatrixSliceRowsProof
+import LogicLineages.PermittedControl.HeterogeneousSignedMatrixSliceTestProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_heterogeneousSignedMatrixSliceCodeExact : HeterogeneousSignedMatrixSlice.CodeExact :=
+  HeterogeneousSignedMatrixSlice.codeExact
+
+theorem fixed_heterogeneousSignedMatrixResidualRows : HeterogeneousSignedMatrixSlice.ResidualRowsExact :=
+  HeterogeneousSignedMatrixSlice.residualRowsExact
+
+theorem fixed_heterogeneousSignedMatrixSnapshots : HeterogeneousSignedMatrixSlice.ExactMatrixSnapshots :=
+  HeterogeneousSignedMatrixSlice.exactMatrixSnapshots
+
+theorem fixed_heterogeneousSignedMatrixGuardedTests : HeterogeneousSignedMatrixSlice.ExactGuardedMatrixTests :=
+  HeterogeneousSignedMatrixSlice.exactGuardedMatrixTests
+
+theorem fixed_fullHeterogeneousSignedMatrixSlice : HeterogeneousSignedMatrixSlice.FullHeterogeneousSignedMatrixSlice :=
+  ⟨fixed_heterogeneousSignedMatrixSliceCodeExact,fixed_heterogeneousSignedMatrixResidualRows,
+    fixed_heterogeneousSignedMatrixSnapshots,fixed_heterogeneousSignedMatrixGuardedTests⟩
+
+#print axioms fixed_heterogeneousSignedMatrixSliceCodeExact
+#print axioms fixed_heterogeneousSignedMatrixResidualRows
+#print axioms fixed_heterogeneousSignedMatrixSnapshots
+#print axioms fixed_heterogeneousSignedMatrixGuardedTests
+#print axioms fixed_fullHeterogeneousSignedMatrixSlice
+
+end LogicLineages.PermittedControl.StatementChecks

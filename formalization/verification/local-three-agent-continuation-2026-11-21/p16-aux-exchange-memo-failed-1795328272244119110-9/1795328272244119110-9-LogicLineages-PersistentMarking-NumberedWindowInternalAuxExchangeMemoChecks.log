@@ -1,0 +1,47 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoChecks.lean:112:18: error: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => evaluate (constantZero 2) (_a ::ᵥ _a ::ᵥ nil) = reference s.equivalentHeads _a
+Error: Application type mismatch: The argument
+  nil
+has type
+  List.Vector ℕ 0
+but is expected to have type
+  List.Vector ℕ _a
+in the application
+  _a ::ᵥ nil
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+case ind.zero
+s : Settings
+base : Program 2
+R : Program 4
+cal : ActualTermExchange s base
+step : StepCalibrated base R
+ih : ∀ m < 0, evaluate (scratchRow (constantZero 2) R) (m ::ᵥ 0 ::ᵥ 0 ::ᵥ nil) = reference s.equivalentHeads m
+⊢ evaluate (constantZero 2) (0 ::ᵥ 0 ::ᵥ nil) = reference s.equivalentHeads 0
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoChecks.lean:125:15: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  evaluate (Program.composition ?p (Fin.cons ?a (Fin.cons ?b (Fin.cons ?c Fin.elim0)))) ?xs
+in the target expression
+  evaluate
+      ((scratchRow (constantZero 2) R).composition
+        ![NumberedWindowInternalSparsePair.pair, constantZero 2, constantZero 2])
+      (a ::ᵥ b ::ᵥ nil) =
+    (bits s.equivalentHeads a b).1.toNat
+
+s : Settings
+base : Program 2
+R : Program 4
+cal : ActualTermExchange s base
+step : StepCalibrated base R
+a b : ℕ
+⊢ evaluate
+      ((scratchRow (constantZero 2) R).composition
+        ![NumberedWindowInternalSparsePair.pair, constantZero 2, constantZero 2])
+      (a ::ᵥ b ::ᵥ nil) =
+    (bits s.equivalentHeads a b).1.toNat
+'LogicLineages.PersistentMarking.NumberedWindowInternalAuxExchangeMemoChecks.exact_AuxExchangeMemoCalibration' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
