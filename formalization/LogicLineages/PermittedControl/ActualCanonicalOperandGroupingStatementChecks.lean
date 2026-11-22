@@ -1,0 +1,26 @@
+module
+public import LogicLineages.PermittedControl.ActualCanonicalOperandGroupingTargets
+import LogicLineages.PermittedControl.ActualCanonicalOperandGroupingEncodingProof
+import LogicLineages.PermittedControl.ActualCanonicalOperandGroupingTapeProof
+import LogicLineages.PermittedControl.ActualCanonicalOperandGroupingReadProof
+import LogicLineages.PermittedControl.ActualCanonicalOperandGroupingChargeProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualCanonicalOperandGrouping
+
+theorem fixed_exactOperandEncoding : ExactOperandEncoding := exactOperandEncoding
+theorem fixed_exactCanonicalTape : ExactCanonicalTape := exactCanonicalTape
+theorem fixed_exactCanonicalReads : ExactCanonicalReads := exactCanonicalReads
+theorem fixed_exactCanonicalCharge : ExactCanonicalCharge := exactCanonicalCharge
+
+theorem fixed_fullActualCanonicalOperandGrouping : FullActualCanonicalOperandGrouping :=
+  ⟨fixed_exactOperandEncoding,fixed_exactCanonicalTape,fixed_exactCanonicalReads,
+    fixed_exactCanonicalCharge⟩
+
+#print axioms fixed_exactOperandEncoding
+#print axioms fixed_exactCanonicalTape
+#print axioms fixed_exactCanonicalReads
+#print axioms fixed_exactCanonicalCharge
+#print axioms fixed_fullActualCanonicalOperandGrouping
+
+end LogicLineages.PermittedControl.ActualCanonicalOperandGrouping
