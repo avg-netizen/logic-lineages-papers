@@ -38,7 +38,10 @@ theorem exactRawFamilyLayout : ExactRawFamilyLayout := by
 private theorem appears_true (ns : List Nat) (k : Nat) : appears ns k = true ↔ k ∈ ns := by
   induction ns with
   | nil => simp [appears]
-  | cons head tail ih => simp [appears, ih, eq_comm]
+  | cons head tail ih =>
+      change (decide (head = k) || appears tail k) = true ↔ k ∈ head :: tail
+      rw [Bool.or_eq_true, decide_eq_true_eq, ih, List.mem_cons]
+      exact or_congr eq_comm Iff.rfl
 
 private theorem below_max (ns : List Nat) (k : Nat) (hk : k ∈ ns) : k ≤ ns.foldr max 0 := by
   induction ns with
