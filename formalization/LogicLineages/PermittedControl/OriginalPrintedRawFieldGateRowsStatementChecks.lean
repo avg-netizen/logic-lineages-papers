@@ -1,0 +1,23 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedRawFieldGateRowsTargets
+import LogicLineages.PermittedControl.OriginalPrintedRawFieldGateRowsProof
+import LogicLineages.PermittedControl.OriginalPrintedRawFieldGateRowsPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedRawFieldGateRows
+
+theorem fixed_exactOriginalRawFieldGateRows : ExactOriginalRawFieldGateRows := exactOriginalRawFieldGateRows
+theorem fixed_exactOriginalRawFieldGateStep : ExactOriginalRawFieldGateStep := exactOriginalRawFieldGateStep
+theorem fixed_exactOriginalRawFieldGateEffectivity : ExactOriginalRawFieldGateEffectivity :=
+  exactOriginalRawFieldGateEffectivity
+theorem fixed_fullOriginalPrintedRawFieldGateRows : FullOriginalPrintedRawFieldGateRows :=
+  ⟨fixed_exactOriginalRawFieldGateRows,fixed_exactOriginalRawFieldGateStep,
+    fixed_exactOriginalRawFieldGateEffectivity⟩
+
+#print axioms fixed_exactOriginalRawFieldGateRows
+#print axioms fixed_exactOriginalRawFieldGateStep
+#print axioms fixed_exactOriginalRawFieldGateEffectivity
+#print axioms fixed_fullOriginalPrintedRawFieldGateRows
+
+end LogicLineages.PermittedControl.StatementChecks
