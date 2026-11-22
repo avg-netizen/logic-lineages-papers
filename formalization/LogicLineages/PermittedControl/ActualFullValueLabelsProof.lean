@@ -5,6 +5,7 @@ import LogicLineages.PermittedControl.ActualMixedRowLeadingAnnotationsBuildProof
 import LogicLineages.PermittedControl.SelectedCountOnlyClassProof
 import LogicLineages.PermittedControl.PreparedParameterActualProof
 import LogicLineages.PermittedControl.EntryBasicsProof
+import LogicLineages.PermittedControl.EntryLinearProof
 
 @[expose] public section
 namespace LogicLineages.PermittedControl.ActualFullValueLabels
