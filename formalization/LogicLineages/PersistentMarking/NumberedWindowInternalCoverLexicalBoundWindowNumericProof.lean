@@ -43,7 +43,7 @@ private theorem actualFields {raw ty i : Nat} (read : unpackNode raw = some (1,[
   have last : run cellHead (pack [i]) = i := (headTailOfCell (cellAt i (pack []))).1
   change run (field 0) (NumberedWindowPairAlgorithm.pair 1 (pack [ty,i]) + 1) = ty ∧
     run (field 1) (NumberedWindowPairAlgorithm.pair 1 (pack [ty,i]) + 1) = i
-  simp only [field,cursor,applyValue,outer,first,middle,last] <;> exact ⟨rfl,rfl⟩
+  simp only [field,cursor,applyValue,outer,first,middle,last] <;> simp
 
 /-- Actual source lexical obligation, not a premise that the new guard
 is numerically correct on undecodable packed contexts. -/

@@ -1,0 +1,52 @@
+{
+  "status": "proof-only first repair; exact native retry pending",
+  "immutable_previous_verified_remote": "2b4d08cdc15a9755d47eb698a038bdbf830b1ea2",
+  "previous_source_local": "9498a2dd318ff989e2453849a086068851a65fd6",
+  "receipt": {
+    "path": "formalization/build-reports/1795362207543730274-77.json",
+    "sha256": "df9fad1f1ab4043bb2e9aff927940113b6accaa97051328d6c3ddd5f13b08e69"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795362207543730274-77-LogicLineages-PersistentMarking-NumberedWindowInternalCoverLexicalBoundWindowNumericProof.log",
+    "sha256": "f4d2b6d7716820fe261132c46f3debb605bb1ed57bb70878d1e1891dcfb80ef2"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-lexical-bound-window-numeric-initial-diagnostic.txt",
+    "sha256": "f4d2b6d7716820fe261132c46f3debb605bb1ed57bb70878d1e1891dcfb80ef2"
+  },
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-COVER-LEXICAL-BOUND-WINDOW-NUMERIC-REPAIR-01.patch",
+    "sha256": "01c08d41f4d85d668c6a1bcbec1802aaf60b864a0d38152cdbf79c32b178c235"
+  },
+  "archived_failed_source": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverLexicalBoundWindowNumericProof-01.lean",
+    "sha256": "c63d2ccac2b47528ac83da89d456c1e2353ee6460124a8a495c3fe97fd98579d"
+  },
+  "repaired_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLexicalBoundWindowNumericProof.lean",
+    "sha256": "b3dcfe1f63cbca0a52cc001896a94af15a6073e0fb254d8987d11842824f9f72"
+  },
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLexicalBoundWindowTargets.lean",
+      "sha256": "e83b7da781ddb30c574dc3738b73c0d389526cc7275209559becf146dd418931"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLexicalBoundWindowBaseOpenProof.lean",
+      "sha256": "6e9d03610176c4b087f92a55c66a2d4464a14376a0a7baa99e17e30ab8aff979"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLexicalBoundWindowSelectedProof.lean",
+      "sha256": "47e40ffc07d6c1b2535a5cc46b97d8a9b78117996252f21f332a29a61ae13040"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLexicalBoundWindowReportsProof.lean",
+      "sha256": "5790248a7b9762ca419c1d8887114c2dec81ef1f2f4d492c4cb545487d52f509"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-COVER-LEXICAL-BOUND-WINDOW-SOURCE-MAP.md",
+      "sha256": "da90fb4e2ab40b42f7ddcd62e96b3e18bdf5c1749a9f5964fb2711c88480f984"
+    }
+  ],
+  "diagnosis": "The first exact numeric field selector equality already simplifies to True, so use ordinary propositional simplification after the original precise evaluation rewrites. No statement/program/open changes. Failed sorryAx is not success."
+}
