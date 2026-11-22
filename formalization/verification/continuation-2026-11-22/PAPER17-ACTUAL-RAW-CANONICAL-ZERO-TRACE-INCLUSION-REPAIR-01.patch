@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualRawCanonicalZeroTraceInclusionProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualRawCanonicalZeroTraceInclusionProof.lean
+@@ -52 +52,4 @@
+-  · rw [exactRawCanonicalZeroStep,actualStep] <;> rfl
++  · rw [exactRawCanonicalZeroStep]
++    change (ActualCanonicalSymbolicZeroSuccessor.canonicalSuccessor source.constant
++      (eraseState source).terms answer).map encodeSyntax = some (encodeSyntax (eraseState target))
++    rw [actualStep] <;> rfl

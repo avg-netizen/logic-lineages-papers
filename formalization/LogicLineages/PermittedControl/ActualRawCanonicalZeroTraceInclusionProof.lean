@@ -49,7 +49,10 @@ theorem exactActualZeroCandidateEdge : ExactActualZeroCandidateEdge := by
     rw [listEq]
     exact List.mem_map.mpr
       ⟨answer,(exactFinitePatternEnumeration _ answer).mpr width,rfl⟩
-  · rw [exactRawCanonicalZeroStep,actualStep] <;> rfl
+  · rw [exactRawCanonicalZeroStep]
+    change (ActualCanonicalSymbolicZeroSuccessor.canonicalSuccessor source.constant
+      (eraseState source).terms answer).map encodeSyntax = some (encodeSyntax (eraseState target))
+    rw [actualStep] <;> rfl
 
 private theorem firstThenPath (start mid endState : RawSyntax) (head : AnswerCode)
     (answers : SequenceCode) (allowed : head ∈ available start)
