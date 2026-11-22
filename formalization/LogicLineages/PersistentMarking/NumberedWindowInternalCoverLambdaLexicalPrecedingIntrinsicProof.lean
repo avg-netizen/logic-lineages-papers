@@ -1,0 +1,44 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalCoverLambdaLexicalWindowTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverNumberedTypeWindowNumericProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverHeadWindowNumericProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverNamedResultNumericProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverLexicalBoundWindowNumericProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverNamedLeafIntrinsicNumericProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverTypeLeafIntrinsicNumericProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSettingsGrammarGuardNumericProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalStrictAuxWindowNumericProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverLambdaLexicalPrecedingIntrinsicProof
+open NumberedWindowInternalCoverNumberedTypeWindowTargets (numberedTypeBase)
+open NumberedWindowInternalCoverNumberedTypeWindowNumericProof (exact_CoverNumberedTypeBase)
+open NumberedWindowInternalCoverHeadWindowTargets (grammarHeadBase)
+open NumberedWindowInternalCoverHeadWindowNumericProof (exact_CoverGrammarHeadBase)
+open NumberedWindowInternalCoverNamedResultTargets (namedResultAt namedResultBase)
+open NumberedWindowInternalCoverNamedResultNumericProof (exact_CoverNamedResultAt)
+open NumberedWindowInternalCoverLexicalBoundWindowTargets (lexicalBoundBase)
+open NumberedWindowInternalCoverLexicalBoundWindowNumericProof (exact_CoverLexicalBoundBase)
+open NumberedWindowInternalCoverNamedLeafIntrinsicTargets (namedGrammarAt namedGrammarBase)
+open NumberedWindowInternalCoverNamedLeafIntrinsicNumericProof (exact_CoverNamedLeafGrammarAt)
+open NumberedWindowInternalCoverTypeLeafIntrinsicNumericProof (exact_CoverTypeLeafIntrinsicBase)
+open NumberedWindowInternalSettingsGrammarGuardNumericProof (exact_SettingsRefitGuardCalibration)
+open NumberedWindowInternalStrictAuxWindowNumericProof (exact_StrictAuxIntrinsicCalibration)
+open NumberedWindowInternalCoverLambdaLexicalWindowTargets
+
+theorem exact_CoverLambdaPrecedingIntrinsic : ExactCoverLambdaPrecedingIntrinsic := by
+  intro s B T incl base scalar
+  let H := grammarHeadBase s (numberedTypeBase s B)
+  let L := lexicalBoundBase (namedResultBase H)
+  have h := exact_CoverGrammarHeadBase s (numberedTypeBase s B) (exact_CoverNumberedTypeBase s B incl base)
+  have n := exact_CoverNamedResultAt false s (namedResultAt true H) (exact_CoverNamedResultAt true s H h)
+  have child := exact_CoverLexicalBoundBase s (namedResultBase H) n
+  have k := exact_CoverNamedLeafGrammarAt false s (namedGrammarAt true s L) incl
+    (exact_CoverNamedLeafGrammarAt true s L incl child)
+  have outer := exact_CoverTypeLeafIntrinsicBase s (namedGrammarBase s L) incl k
+  exact exact_StrictAuxIntrinsicCalibration s _ _ outer (exact_SettingsRefitGuardCalibration s T incl scalar)
+
+#print axioms exact_CoverLambdaPrecedingIntrinsic
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalCoverLambdaLexicalPrecedingIntrinsicProof
