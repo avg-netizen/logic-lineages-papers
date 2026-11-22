@@ -72,7 +72,12 @@ theorem exactOriginalRawBaseGateStep : ExactOriginalRawBaseGateStep := by
       obtain ⟨lam,code,limit,_,_,_,_,_⟩ := exactTypedWireTransport.1 a 0 kind
       have good : LimitHead (limitCode a) := by
         rw [← code]
-        simpa only [LimitHead,rawNoteDecodeEncode] using (And.intro lam.2 limit)
+        change (rawNoteDecode (rawNoteEncode lam.1)).NF ∧
+          Order.IsSuccLimit (rawNoteDecode (rawNoteEncode lam.1)).repr
+        have decoded : rawNoteDecode (rawNoteEncode lam.1) = lam.1 :=
+          rawNoteDecodeEncode lam.1
+        rw [decoded]
+        exact ⟨lam.2,limit⟩
       have lhs : collapseRowsCode (headCode a,source,n,output) =
           limitRowsCode (limitCode a,shiftedExpression a source,n,output) := by
         simp [collapseRowsCode,limitCode,tailCode,shiftedExpression,kind]

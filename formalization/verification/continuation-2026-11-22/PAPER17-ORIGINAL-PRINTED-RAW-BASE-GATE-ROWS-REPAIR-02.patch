@@ -1,0 +1,10 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedRawBaseGateRowsProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedRawBaseGateRowsProof.lean
+@@ -75 +75,6 @@
+-        simpa only [LimitHead,rawNoteDecodeEncode] using (And.intro lam.2 limit)
++        change (rawNoteDecode (rawNoteEncode lam.1)).NF ∧
++          Order.IsSuccLimit (rawNoteDecode (rawNoteEncode lam.1)).repr
++        have decoded : rawNoteDecode (rawNoteEncode lam.1) = lam.1 :=
++          rawNoteDecodeEncode lam.1
++        rw [decoded]
++        exact ⟨lam.2,limit⟩
