@@ -27,8 +27,11 @@ theorem exactPrintedDenseRankedMatrix : ExactPrintedDenseRankedMatrix := by
       (passingList θ gs) xs gate.1
   refine ⟨chart.1,chart.2.2.2,?_,?_⟩
   · intro row hrow t ht
-    have h := dm.2.2.2.1 t.2.rank
-      (List.mem_flatMap.mpr ⟨row,hrow,List.mem_map.mpr ⟨t,ht,rfl⟩⟩)
+    have h : t.2.rank < ActualCoordinateRankChart.size θ (support original) :=
+      dm.2.2.2.1 t.2.rank
+        (List.mem_flatMap.mpr ⟨row,hrow,List.mem_map.mpr ⟨t,ht,rfl⟩⟩)
+    change t.2.rank < ActualCoordinateRankChart.size θ (support original) ∧
+      t.2.rank ≤ ActualCoordinateRankChart.size θ (support original) - 1
     exact ⟨h,by omega⟩
   · constructor
     · rintro ⟨graph,test⟩

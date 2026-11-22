@@ -1,0 +1,10 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixDenseRanksProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixDenseRanksProof.lean
+@@ -30,2 +30,5 @@
+-    have h := dm.2.2.2.1 t.2.rank
+-      (List.mem_flatMap.mpr ⟨row,hrow,List.mem_map.mpr ⟨t,ht,rfl⟩⟩)
++    have h : t.2.rank < ActualCoordinateRankChart.size θ (support original) :=
++      dm.2.2.2.1 t.2.rank
++        (List.mem_flatMap.mpr ⟨row,hrow,List.mem_map.mpr ⟨t,ht,rfl⟩⟩)
++    change t.2.rank < ActualCoordinateRankChart.size θ (support original) ∧
++      t.2.rank ≤ ActualCoordinateRankChart.size θ (support original) - 1
