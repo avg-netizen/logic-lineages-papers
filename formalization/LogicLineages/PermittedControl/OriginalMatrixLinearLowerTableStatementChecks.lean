@@ -1,0 +1,25 @@
+module
+public import LogicLineages.PermittedControl.OriginalMatrixLinearLowerTableTargets
+import LogicLineages.PermittedControl.OriginalMatrixLinearLowerTableProof
+import LogicLineages.PermittedControl.OriginalMatrixLinearLowerTableRowProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalMatrixLinearLowerTable :
+    OriginalMatrixLinearLowerTable.ExactLinearLowerTable :=
+  OriginalMatrixLinearLowerTable.exactLinearLowerTable
+
+theorem fixed_exactOriginalMatrixLinearPreparedRow :
+    OriginalMatrixLinearLowerTable.ExactLinearPreparedRow :=
+  OriginalMatrixLinearLowerTable.exactLinearPreparedRow
+
+theorem fixed_fullOriginalMatrixLinearLowerTable :
+    OriginalMatrixLinearLowerTable.FullOriginalMatrixLinearLowerTable :=
+  ⟨fixed_exactOriginalMatrixLinearLowerTable,fixed_exactOriginalMatrixLinearPreparedRow⟩
+
+#print axioms fixed_exactOriginalMatrixLinearLowerTable
+#print axioms fixed_exactOriginalMatrixLinearPreparedRow
+#print axioms fixed_fullOriginalMatrixLinearLowerTable
+
+end LogicLineages.PermittedControl.StatementChecks
