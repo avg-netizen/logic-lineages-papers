@@ -1,0 +1,18 @@
+module
+public import LogicLineages.PermittedControl.ActualGuardedResidualBitFamilyTargets
+import LogicLineages.PermittedControl.ActualGuardedResidualBitFamilyProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualGuardedResidualBitFamily
+
+theorem fixed_exactGuardedResidualBitFamily : ExactGuardedResidualBitFamily := exactGuardedResidualBitFamily
+theorem fixed_exactGuardedResidualUnion : ExactGuardedResidualUnion := exactGuardedResidualUnion
+theorem fixed_fullActualGuardedResidualBitFamily : FullActualGuardedResidualBitFamily :=
+  ⟨fixed_exactGuardedResidualBitFamily,fixed_exactGuardedResidualUnion⟩
+
+#print axioms fixed_exactGuardedResidualBitFamily
+#print axioms fixed_exactGuardedResidualUnion
+#print axioms fixed_fullActualGuardedResidualBitFamily
+
+end LogicLineages.PermittedControl.StatementChecks
