@@ -102,11 +102,13 @@ private theorem linearPacketShape (top : Nat) (test : OrderTest) (pos : Bool) (s
 
 private theorem signedPacketShape (test : OrderTest) (pos : Bool) (coef : Int) :
     Shape (terminalPacket test pos (.signed coef)) := by
-  change PreparedInput [] (if (if pos then signedBit test coef else !(signedBit test coef))
-    then .truth else .falsity)
-  split
-  · exact safeTruth []
-  · exact safeFalsity []
+  let selected := if pos then signedBit test coef else !(signedBit test coef)
+  change PreparedInput [] (if selected then .truth else .falsity)
+  by_cases passes : selected = true
+  · rw [if_pos passes]
+    exact safeTruth []
+  · rw [if_neg passes]
+    exact safeFalsity []
 
 theorem exactEmittedRouteShape : ExactEmittedRouteShape := by
   intro top fuel
