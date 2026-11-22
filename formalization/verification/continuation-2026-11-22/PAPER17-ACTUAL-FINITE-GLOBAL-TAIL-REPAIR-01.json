@@ -1,0 +1,38 @@
+{
+  "status": "source-only narrow visibility repair; native retry not run by author",
+  "immutable_failed_source_commit": "8bbee17fa1ed852333964509e15d0384c11be1b1",
+  "receipt": "1795345473061512211-8",
+  "exact_gate": "LogicLineages.PermittedControl.ActualFiniteGlobalTailStatementChecks",
+  "failed_receipt_sha256": "330b5508af312850add1cbc2337cb85eb78f9866d8b7d9ab0e4f6825b1959764",
+  "failed_log_sha256": "5c4288a6d0926d1f3f3e0abc9843e560b119826ff7db4ced503fbf450399baf3",
+  "failed_module_record": {
+    "module": "LogicLineages.PermittedControl.ActualFiniteGlobalTailProof",
+    "returncode": 1,
+    "seconds": 0.915,
+    "observed_cpu_seconds": 0.86,
+    "last_wait_channel": "__futex_wait",
+    "stopped_threads": [],
+    "peak_process_tree_rss_kib": 984476,
+    "memory_observation_failure": {},
+    "discarded_failed_outputs": [],
+    "source_sha256": "c385aa61021f8cac59bdc843d5099923dade7d850fa24103aec72409dedce23a",
+    "log": "build-reports/1795345473061512211-8-LogicLineages-PermittedControl-ActualFiniteGlobalTailProof.log"
+  },
+  "diagnostics": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFiniteGlobalTailProof.lean:61:43: error(lean.unknownIdentifier): Unknown identifier `exactNormalizedReads`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFiniteGlobalTailProof.lean:61:9: error: Tactic `rcases` failed: `x✝ : ?m.64` is not an inductive datatype",
+  "original_author_manifest_sha256": "7e60798b889060196bcda67d3c54af645c0f96586b8a1ffa1a2bfdc36d90684d",
+  "changed_source": "formalization/LogicLineages/PermittedControl/ActualFiniteGlobalTailProof.lean",
+  "failed_source_sha256": "c385aa61021f8cac59bdc843d5099923dade7d850fa24103aec72409dedce23a",
+  "repair_source_sha256": "f8737367cb5be9fa0bbc2d7dca217a1fd90967d60dbd415c771e74e0e0e5889b",
+  "preserved_sources_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualFiniteGlobalTailTargets.lean": "a127e5b0f21ac6e1ff508868bde293334d61480b38440b3d6c3d60e3eee92490",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteGlobalTailDominanceProof.lean": "a1b3405338485ab2cb0f5e7a56d700e4a25a0db7d9794ab5c9e3ccd9d0c3c02d",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteGlobalTailEnclosureProof.lean": "a7ce89a95785826ee3dc6e0110237eed6126c9508d3ab96fdf82d021524ff8ea",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteGlobalTailStatementChecks.lean": "135f23673b4d74fff6c184e31f83659219d3a52b38ec59db0d5c0922ea00e545"
+  },
+  "zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FINITE-GLOBAL-TAIL-REPAIR-01.patch",
+  "patch_sha256": "053701187ba68d4e50d2e8f195d62138cb7deaabbb38328ad5c018d43802ffbf",
+  "inverse": "Reverse exact patch with fuzz zero to recover exact failed initial Proof bytes.",
+  "change": "Directly import the supplier of exactNormalizedReads for actual original read provenance. It already compiled as a private transitive dependency but was not in scope at the use site. The exact recursive local and external closure sets are identical (329 local / 40 external). No theorem body, target or other leaf changed.",
+  "added_direct_import": "LogicLineages.PermittedControl.ActualWeightedReadNormalizationActualProof",
+  "supplier_sha256": "92c92c3d9915675817c903f43ab3a18bb8f24de173288494bfb31d9456c8c846"
+}

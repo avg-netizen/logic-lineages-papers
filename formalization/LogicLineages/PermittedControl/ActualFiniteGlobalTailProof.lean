@@ -3,6 +3,7 @@ public import LogicLineages.PermittedControl.ActualFiniteGlobalTailTargets
 import LogicLineages.PermittedControl.ActualFiniteGlobalTailDominanceProof
 import LogicLineages.PermittedControl.ActualFiniteGlobalTailEnclosureProof
 import LogicLineages.PermittedControl.ActualNodeTailSupplyProof
+import LogicLineages.PermittedControl.ActualWeightedReadNormalizationActualProof
 
 @[expose] public section
 namespace LogicLineages.PermittedControl.ActualFiniteGlobalTail
