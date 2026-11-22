@@ -1,0 +1,19 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedZeroSupportTargets
+import LogicLineages.PermittedControl.OriginalPrintedZeroSupportSnapshotProof
+import LogicLineages.PermittedControl.OriginalPrintedZeroSupportProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedZeroSupport
+
+theorem fixed_exactClosedActualSnapshot : ExactClosedActualSnapshot := exactClosedActualSnapshot
+theorem fixed_exactOriginalZeroSupport : ExactOriginalZeroSupport := exactOriginalZeroSupport
+theorem fixed_fullOriginalPrintedZeroSupport : FullOriginalPrintedZeroSupport :=
+  ⟨fixed_exactClosedActualSnapshot,fixed_exactOriginalZeroSupport⟩
+
+#print axioms fixed_exactClosedActualSnapshot
+#print axioms fixed_exactOriginalZeroSupport
+#print axioms fixed_fullOriginalPrintedZeroSupport
+
+end LogicLineages.PermittedControl.StatementChecks
