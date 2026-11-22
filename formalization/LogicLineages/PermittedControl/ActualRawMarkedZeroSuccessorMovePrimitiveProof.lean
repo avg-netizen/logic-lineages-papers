@@ -72,9 +72,9 @@ theorem movedPrimitive : Primrec₂ movedCode := by
   let P := A × PrefixCode
   let Q := P × PrefixCode
   have tape : Primrec (fun p : P => p.1.2) := Primrec.snd.comp Primrec.fst
-  have from : Primrec (fun p : Q => p.1.2) := Primrec.snd.comp Primrec.fst
+  have best : Primrec (fun p : Q => p.1.2) := Primrec.snd.comp Primrec.fst
   have item : Primrec (Prod.snd : Q → PrefixCode) := Primrec.snd
-  have step : Primrec (fun p : Q => moveOneCode p.1.2 p.2) := moveOnePrimitive.comp from item
+  have step : Primrec (fun p : Q => moveOneCode p.1.2 p.2) := moveOnePrimitive.comp best item
   have series : Primrec (fun p : P => p.1.2.flatMap (moveOneCode p.2)) :=
     Primrec.list_flatMap tape step.to₂
   have commit := Primrec.option_casesOn (Primrec.fst : Primrec (Prod.fst : A → Option PrefixCode))

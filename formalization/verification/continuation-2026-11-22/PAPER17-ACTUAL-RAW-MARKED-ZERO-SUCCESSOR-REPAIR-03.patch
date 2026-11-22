@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorMovePrimitiveProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorMovePrimitiveProof.lean
+@@ -75 +75 @@
+-  have from : Primrec (fun p : Q => p.1.2) := Primrec.snd.comp Primrec.fst
++  have best : Primrec (fun p : Q => p.1.2) := Primrec.snd.comp Primrec.fst
+@@ -77 +77 @@
+-  have step : Primrec (fun p : Q => moveOneCode p.1.2 p.2) := moveOnePrimitive.comp from item
++  have step : Primrec (fun p : Q => moveOneCode p.1.2 p.2) := moveOnePrimitive.comp best item
