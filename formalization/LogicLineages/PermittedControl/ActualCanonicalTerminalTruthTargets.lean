@@ -48,16 +48,16 @@ def ExactCanonicalInactiveTruth : Prop :=
     normalizeCanonical f ρ rs = some xs → ¬ ActiveAt top xs →
     ∀ (test : Test) (positive : Bool), test.Admitted →
       let q := canonicalPacket top constant (rs.map Prod.fst) test positive
-        PreparedInput q.1 q.2 ∧
-        (∃ ν : Nat → Nat, PreparedTableTied f top ρ q.1 ν) ∧
-        ∀ (ν : Nat → Nat), PreparedTableTied f top ρ q.1 ν →
-          OriginalSlots ν (lowerReads top xs) ∧
-          (∀ (j : Nat) (hj : j < q.1.length),
-            lowerOperandRead f ρ q.1[j] = some (some (ν (j+1)))) ∧
-          ((q.2.eval (Function.update ν 0 (ρ top))) ↔ test.atPolarity positive (constant + readSum rs)) ∧
-          ∀ z : Nat,
-            liftedReads f (Function.update ρ top z) (replay top z xs) ∧
-              ((q.2.eval (Function.update ν 0 z)) ↔ test.atPolarity positive (constant + readSum (replay top z xs)))
+      PreparedInput q.1 q.2 ∧
+      (∃ ν : Nat → Nat, PreparedTableTied f top ρ q.1 ν) ∧
+      ∀ (ν : Nat → Nat), PreparedTableTied f top ρ q.1 ν →
+        OriginalSlots ν (lowerReads top xs) ∧
+        (∀ (j : Nat) (hj : j < q.1.length),
+          lowerOperandRead f ρ q.1[j] = some (some (ν (j+1)))) ∧
+        ((q.2.eval (Function.update ν 0 (ρ top))) ↔ test.atPolarity positive (constant + readSum rs)) ∧
+        ∀ z : Nat,
+          liftedReads f (Function.update ρ top z) (replay top z xs) ∧
+            ((q.2.eval (Function.update ν 0 z)) ↔ test.atPolarity positive (constant + readSum (replay top z xs)))
 
 /-- Payment is the actual numeric current-row cutoff. No assertion
 about a global trace bound, nor about congruence from a sign. -/
