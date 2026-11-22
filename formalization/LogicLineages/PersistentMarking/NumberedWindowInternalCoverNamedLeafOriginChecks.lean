@@ -41,9 +41,15 @@ open NumberedWindowInternalCoverNamedLeafOriginDataProof (singletonOrigin)
 attribute [local irreducible] programGraph
 variable {body : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
 
+private theorem unaryTapeRename {β : Type} (a : OTerm α) (j : α → β) :
+    (fun q : Fin 1 => ((![a] : Fin 1 → OTerm α) q).relabel j) = ![a.relabel j] := by
+  funext q
+  obtain rfl := Fin.eq_zero q
+  rfl
+
 private theorem rangeRename {β : Type} (ids m : OTerm α) (j : α → β) :
     (rangeReport ids (suc m)).relabel j = rangeReport (ids.relabel j) (suc (m.relabel j)) := by
-  simp only [rangeReport,programRename,unaryInputsRename,sucRelabel]
+  simp only [rangeReport,programRename,unaryTapeRename,sucRelabel]
 
 private theorem selectedIndex (b : Bool) (K m key ty ids i : OTerm α)
     (typeHit : Nonempty (Derivation body Γ (memberGraph K ty)))
@@ -97,6 +103,7 @@ private theorem innerAxis (b : Bool) (K m key ty ids block : OTerm α)
   have bound := renameInto range j Δ keep
   rw [graphRename] at ht
   rw [rangeRename] at bound
+  rw [unaryTapeRename] at witness
   obtain ⟨witness⟩ := witness
   exact selectedIndex b (K.relabel j) (m.relabel j) (key.relabel j) (ty.relabel j)
     (ids.relabel j) i ht ⟨Derivation.conjunctionLeft witness⟩ ⟨Derivation.conjunctionRight witness⟩ bound
@@ -157,6 +164,7 @@ private theorem fromRange (b : Bool) (out K m key ids : OTerm α)
   rw [namedOriginRename]
   have actual := renameInto range j Δ keep
   rw [rangeRename] at actual
+  rw [unaryTapeRename] at witness
   obtain ⟨witness⟩ := witness
   exact outerAxis b (K.relabel j) (m.relabel j) (key.relabel j) ty (ids.relabel j)
     ⟨Derivation.conjunctionLeft witness⟩ ⟨Derivation.conjunctionRight witness⟩ actual

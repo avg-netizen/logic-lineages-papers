@@ -1,0 +1,16 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedLeafOriginChecks.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedLeafOriginChecks.lean
+@@ -43,0 +44,6 @@
++private theorem unaryTapeRename {β : Type} (a : OTerm α) (j : α → β) :
++    (fun q : Fin 1 => ((![a] : Fin 1 → OTerm α) q).relabel j) = ![a.relabel j] := by
++  funext q
++  obtain rfl := Fin.eq_zero q
++  rfl
++
+@@ -46 +52 @@
+-  simp only [rangeReport,programRename,unaryInputsRename,sucRelabel]
++  simp only [rangeReport,programRename,unaryTapeRename,sucRelabel]
+@@ -99,0 +106 @@
++  rw [unaryTapeRename] at witness
+@@ -159,0 +167 @@
++  rw [unaryTapeRename] at witness
