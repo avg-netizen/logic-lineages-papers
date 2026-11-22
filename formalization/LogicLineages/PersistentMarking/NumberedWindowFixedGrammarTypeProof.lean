@@ -1,5 +1,7 @@
-import LogicLineages.PersistentMarking.NumberedWindowFixedGrammarTypeTargets
+module
+public import LogicLineages.PersistentMarking.NumberedWindowFixedGrammarTypeTargets
 
+@[expose] public section
 namespace LogicLineages.PersistentMarking.NumberedWindowFixedGrammarType
 open NumberedWindowArithmeticScalarTargets (fixed)
 open NumberedWindowAdmissionTargets (window)

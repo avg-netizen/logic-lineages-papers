@@ -24,7 +24,7 @@ private theorem appendSub {α : Type} {xs ys ws zs : List α}
   · exact List.mem_append.mpr (.inl (ha h))
   · exact List.mem_append.mpr (.inr (hb h))
 
-private theorem reflSub {α : Type} (xs : List α) : xs ⊆ xs := fun h => h
+private theorem reflSub {α : Type} (xs : List α) : xs ⊆ xs := fun _ h => h
 
 private theorem leavesSub (K : List Nat) {I J : List Nat} (ij : I ⊆ J) :
     leaves K I ⊆ leaves K J := by
@@ -38,14 +38,14 @@ private theorem termsStepSub (H K : List Nat) {I J ts us xs ys : List Nat}
     (ij : I ⊆ J) (tu : ts ⊆ us) (xy : xs ⊆ ys) :
     leaves K I ++ lambdas K ts ++ ordinary H xs ++ numbered H K I xs ++ applications K ts ⊆
     leaves K J ++ lambdas K us ++ ordinary H ys ++ numbered H K J ys ++ applications K us := by
-  have hλ : lambdas K ts ⊆ lambdas K us := flatSub (reflSub K) (fun _ => mapSub _ tu)
+  have hlambda : lambdas K ts ⊆ lambdas K us := flatSub (reflSub K) (fun _ => mapSub _ tu)
   have ho : ordinary H xs ⊆ ordinary H ys := flatSub (reflSub H) (fun _ => mapSub _ xy)
   have hn : numbered H K I xs ⊆ numbered H K J ys :=
     flatSub (reflSub H) (fun _ => flatSub (reflSub K) (fun _ => flatSub ij
       (fun _ => flatSub xy (fun _ => mapSub _ xy))))
   have happ : applications K ts ⊆ applications K us :=
     flatSub (reflSub K) (fun _ => flatSub (reflSub K) (fun _ => flatSub tu (fun _ => mapSub _ tu)))
-  exact appendSub (appendSub (appendSub (appendSub (leavesSub K ij) hλ) ho) hn) happ
+  exact appendSub (appendSub (appendSub (appendSub (leavesSub K ij) hlambda) ho) hn) happ
 
 private theorem argsStepSub {ts us xs ys : List Nat} (tu : ts ⊆ us) (xy : xs ⊆ ys) :
     cells ts xs ⊆ cells us ys := by
@@ -95,12 +95,12 @@ private theorem depthSub (H K : List Nat) (m : Nat) {d e : Nat} (h : d ≤ e) :
   | refl => exact ⟨reflSub _,reflSub _⟩
   | @step e _ ih =>
       have step := nextDepthSub H K m e
-      exact ⟨fun h => step.1 (ih.1 h),fun h => step.2 (ih.2 h)⟩
+      exact ⟨fun _ h => step.1 (ih.1 h),fun _ h => step.2 (ih.2 h)⟩
 
 theorem boundsInclusion : ExactGrammarBoundsInclusion := by
   intro H K m n d e hm hd
   have h1 := numeralSub H K hm d
   have h2 := depthSub H K n hd
-  exact ⟨fun h => h2.1 (h1.1 h),fun h => h2.2 (h1.2 h)⟩
+  exact ⟨fun _ h => h2.1 (h1.1 h),fun _ h => h2.2 (h1.2 h)⟩
 
 end LogicLineages.PersistentMarking.NumberedWindowCoverGrammarMonotone

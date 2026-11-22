@@ -1,5 +1,7 @@
-import LogicLineages.PersistentMarking.NumberedWindowFixedGrammarTypeProof
+module
+public import LogicLineages.PersistentMarking.NumberedWindowFixedGrammarTypeProof
 
+@[expose] public section
 namespace LogicLineages.PersistentMarking.NumberedWindowFixedGrammarType
 theorem exact_FixedGrammarTypeInclusion : ExactFixedGrammarTypeInclusion := inclusion
 theorem exact_FixedGuardRunGrammarType : ExactFixedGuardRunGrammarType := guardRun

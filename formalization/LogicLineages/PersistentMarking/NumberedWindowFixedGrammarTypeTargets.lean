@@ -1,6 +1,8 @@
-import LogicLineages.PersistentMarking.NumberedWindowArithmeticScalarTargets
-import LogicLineages.PersistentMarking.NumberedWindowInternalAuxWindowStepTargets
+module
+public import LogicLineages.PersistentMarking.NumberedWindowArithmeticScalarTargets
+public import LogicLineages.PersistentMarking.NumberedWindowInternalAuxWindowStepTargets
 
+@[expose] public section
 namespace LogicLineages.PersistentMarking.NumberedWindowFixedGrammarType
 open NumberedWindowArithmeticScalarTargets (fixed)
 open NumberedWindowInternalAuxWindowMemoTargets (typeGuard)
