@@ -1,0 +1,41 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalCoverOrdinaryMeasureTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverOrdinaryMeasureCutProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverOrdinaryMeasureArgumentProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverLambdaMeasureRowBumpProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceBranchProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceConjunctionProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityStackAppendTransitionProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphSupportProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverOrdinaryMeasureNullaryPairProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalAcceptance (constantZero)
+open ID1Completion.InternalAcceptanceBranchProof (zeroBranchIntro)
+open ID1Completion.InternalAcceptanceConjunctionProof (constantZeroValue)
+open ID1Completion.InternalControlGraphSupportProof (projectionValue)
+open ID1Completion.InternalApplicationValidityStackAppendTransitionProof (pairZero)
+open ID1Completion.InternalTagArithmeticSyntaxProof (z)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open NumberedWindowInternalSparsePathEnvelopeTargets (unary)
+open NumberedWindowInternalCoverLambdaMeasureRowBumpProof (exact_OpenCoverLambdaBumpPair)
+open NumberedWindowInternalCoverOrdinaryMeasureCutProof (exact_OpenCoverOrdinaryMeasureCut)
+open NumberedWindowInternalCoverOrdinaryMeasureArgumentProof (exact_OpenOrdinaryBumpFromArgument)
+open NumberedWindowInternalCoverOrdinaryMeasureTargets
+
+theorem exact_OpenCoverOrdinaryNullaryPair : ExactOpenCoverOrdinaryNullaryPair := by
+  intro M A body α Γ h p parent
+  have empty : Nonempty (Derivation body Γ (unary (selectedArgsMeasure A) z (z : OTerm α))) :=
+    zeroBranchIntro (.projection 0) (constantZero 1) A z ![z] (projectionValue 0 ![z]) (constantZeroValue ![z])
+  have picked := exact_OpenCoverOrdinaryMeasureCut M A body α Γ h z p parent
+  have bump := exact_OpenOrdinaryBumpFromArgument A h z p z picked empty
+  exact exact_OpenCoverLambdaBumpPair body α Γ p z z z pairZero bump
+
+#print axioms exact_OpenCoverOrdinaryNullaryPair
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalCoverOrdinaryMeasureNullaryPairProof
