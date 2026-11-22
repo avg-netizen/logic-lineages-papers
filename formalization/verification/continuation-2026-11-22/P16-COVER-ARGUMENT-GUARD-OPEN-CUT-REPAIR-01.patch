@@ -1,0 +1,5 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentGuardOpenCutProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentGuardOpenCutProof.lean
+@@ -99 +99 @@
+-  exact next δ (l ∘ k) Ω ((h.relabel g).relabel l) (a.relabel l) (keepThrough k l both carried) vals
++  exact next δ (l ∘ k) Ω (h.relabel (l ∘ g)) (a.relabel l) (keepThrough k l both carried) vals

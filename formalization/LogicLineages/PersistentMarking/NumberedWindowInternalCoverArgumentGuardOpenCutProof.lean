@@ -96,7 +96,7 @@ private theorem withSelectors (G : Program 1) (prior old : OTerm α) (Q : Formul
   intro δ l Ω carried vals
   simp only [Term.relabel_relabel] at vals
   rw [formulaRelabelComposition k l Q]
-  exact next δ (l ∘ k) Ω ((h.relabel g).relabel l) (a.relabel l) (keepThrough k l both carried) vals
+  exact next δ (l ∘ k) Ω (h.relabel (l ∘ g)) (a.relabel l) (keepThrough k l both carried) vals
 
 theorem actualArgumentGuardSuccessor (G : Program 1) (prior : OTerm α) (Q : Formula α)
     (actual : Nonempty (Derivation body Γ (unary (argumentReject G) z (suc prior))))

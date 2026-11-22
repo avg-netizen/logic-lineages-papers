@@ -1,0 +1,12 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentGuardOpenCutProof.lean:99:96: error: Application type mismatch: The argument
+  vals
+has type
+  AtSuccessor G body Ω (Term.relabel (l ∘ k) prior) (Term.relabel (l ∘ g) h) (Term.relabel l a)
+but is expected to have type
+  AtSuccessor G body Ω (Term.relabel (l ∘ k) prior) (Term.relabel l (Term.relabel g h)) (Term.relabel l a)
+in the application
+  next δ (l ∘ k) Ω (Term.relabel l (Term.relabel g h)) (Term.relabel l a) (keepThrough k l both carried) vals
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverArgumentGuardOpenCutProof.actualArgumentGuardSuccessor' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
