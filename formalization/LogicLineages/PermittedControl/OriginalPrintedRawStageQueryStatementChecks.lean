@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedRawStageQueryTargets
+import LogicLineages.PermittedControl.OriginalPrintedRawStageQueryProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedRawStageQuery
+
+theorem fixed_exactOriginalRawStageQuery : ExactOriginalRawStageQuery := exactOriginalRawStageQuery
+theorem fixed_exactOriginalRawStageFailure : ExactOriginalRawStageFailure := exactOriginalRawStageFailure
+theorem fixed_originalRawStageQueryEffectivity : OriginalRawStageQueryEffectivity :=
+  originalRawStageQueryEffectivity
+theorem fixed_fullOriginalRawStageQuery : FullOriginalRawStageQuery :=
+  ⟨fixed_exactOriginalRawStageQuery,fixed_exactOriginalRawStageFailure,
+    fixed_originalRawStageQueryEffectivity⟩
+
+#print axioms fixed_exactOriginalRawStageQuery
+#print axioms fixed_exactOriginalRawStageFailure
+#print axioms fixed_originalRawStageQueryEffectivity
+#print axioms fixed_fullOriginalRawStageQuery
+
+end LogicLineages.PermittedControl.StatementChecks
