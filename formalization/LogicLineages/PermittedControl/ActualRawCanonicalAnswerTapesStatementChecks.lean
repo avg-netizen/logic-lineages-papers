@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.ActualRawCanonicalAnswerTapesTargets
+import LogicLineages.PermittedControl.ActualRawCanonicalAnswerTapesProof
+import LogicLineages.PermittedControl.ActualRawCanonicalAnswerTapesPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualRawCanonicalAnswerTapes
+
+theorem fixed_exactRawAnswerTapeEnumeration : ExactRawAnswerTapeEnumeration := exactRawAnswerTapeEnumeration
+theorem fixed_exactCanonicalAnswerPairs : ExactCanonicalAnswerPairs := exactCanonicalAnswerPairs
+theorem fixed_exactRawAnswerTapeEffectivity : ExactRawAnswerTapeEffectivity := exactRawAnswerTapeEffectivity
+theorem fixed_fullActualRawCanonicalAnswerTapes : FullActualRawCanonicalAnswerTapes :=
+  ⟨fixed_exactRawAnswerTapeEnumeration,fixed_exactCanonicalAnswerPairs,fixed_exactRawAnswerTapeEffectivity⟩
+
+#print axioms fixed_exactRawAnswerTapeEnumeration
+#print axioms fixed_exactCanonicalAnswerPairs
+#print axioms fixed_exactRawAnswerTapeEffectivity
+#print axioms fixed_fullActualRawCanonicalAnswerTapes
+
+end LogicLineages.PermittedControl.StatementChecks
