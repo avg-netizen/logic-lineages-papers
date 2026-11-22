@@ -1,0 +1,75 @@
+{
+  "status": "exact source-only narrow proof repair; native not invoked by author",
+  "failed_source_remote_commit": "7b38951c85e22900f229bca84593b05e9bb4a4ab",
+  "failed_source_local_commit": "2691ec4ee",
+  "failed_exact_gate_receipt": "1795360492737764757-101",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalPrintedPlainMatrixLinearProjectionStatementChecks",
+  "failed_receipt_sha256": "3a071623660e28192b625fefa704a9154038420a7bd33c51b9750f7367841090",
+  "failed_exact_module_log_sha256": "46c5bd2f047659ff74db758d7df7206ef9efe9b94629b35bd01b57b673bcb845",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionPrefixProof.lean:26:26: error(lean.synthInstanceFailed): failed to synthesize instance of type class\n  Decidable (Test.congruence m, c, ts).1.Admitted\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionPrefixProof.lean:35:62: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionPrefixProof.lean:36:62: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+  "failed_original_native_log_sha256": "90626556c0eb183e3d4c200254c72020013a0bdaf1d813d6cc25962e5cfdb53e",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionPrefixProof.lean",
+  "failed_proof_sha256": "95e8ed083ea8b9f5f0b29e50e424bd360cb5e15f91c391c878d4657985218111",
+  "repaired_proof_sha256": "e809993dadadf3c29540a9f8f2c4cfcee580ccbc48472ddb4c038b0e535847e2",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-LINEAR-PROJECTION-REPAIR-01.patch",
+  "patch_sha256": "e809993dadadf3c29540a9f8f2c4cfcee580ccbc48472ddb4c038b0e535847e2",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-LINEAR-PROJECTION-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "b11e2033183e2ff8a1bd0901f0496edaf70e517c1b5bce4868ff0c65955b2027",
+  "accepted_row_formula_receipt": "1795360488735103550-85",
+  "upstream_row_formula_visibility_repair": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-MATRIX-LINEAR-ROW-FORMULA-REPAIR-01.json",
+  "upstream_row_formula_visibility_repair_sha256": "e7ba65caafdbacd519a5bfd41493172356231ccdcf51e1ef8e0045991bf53bed",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionTargets.lean": "98149d5be08cd2b95d7086a6a0753e1a9561c1cc04d5a5a88b478e680f519ccf",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionSyntaxProof.lean": "06cd1760642a57f315e4178c8e5f46d000cbbcb41f9f43aef81dd963cb7458fe",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionTransportProof.lean": "c214741af4e51d5ee7e8f8d82846c574cb4378143196f49651f043405fba2454",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionPreparedProof.lean": "6335ad59b1ab1bd90cb9aec4aa19a2ebed3b2a255579a595bdaaccba404e5e9b",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionProof.lean": "20d7831feffa0cd659c97fd90c68926d942e3bedb92b461f78a8e937c4f28704",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionReplayProof.lean": "cfbd99d0d133ea1cd025d4b97d741237f2c891c0614bfcde43791cc8e920985b",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionStatementChecks.lean": "a5e96f0feac4faa5c4b15fd0366855e687c396e398b2b276568fa43f6e712de8",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-LINEAR-PROJECTION-SOURCE-MAP.md": "68943ae2fc976d936b5c0126984d138b47861d33539ab82d1d7b6db5eb749f82"
+  },
+  "static_closure_unchanged": {
+    "Targets": {
+      "local": 267,
+      "external": 35,
+      "contains_totient": false
+    },
+    "SyntaxProof": {
+      "local": 270,
+      "external": 35,
+      "contains_totient": false
+    },
+    "TransportProof": {
+      "local": 427,
+      "external": 42,
+      "contains_totient": false
+    },
+    "PrefixProof": {
+      "local": 272,
+      "external": 35,
+      "contains_totient": false
+    },
+    "PreparedProof": {
+      "local": 438,
+      "external": 42,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 439,
+      "external": 42,
+      "contains_totient": false
+    },
+    "ReplayProof": {
+      "local": 428,
+      "external": 42,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 441,
+      "external": 42,
+      "contains_totient": false
+    }
+  },
+  "scope": "Expose the concrete positive modulus proposition to type class inference in its own constructor case. No extra admission premise, target, side condition, dependencies, or other leaves changed."
+}

@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionPrefixProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionPrefixProof.lean
+@@ -26 +26,3 @@
+-  | congruence m => exact decide_eq_true_eq.mp h
++  | congruence m =>
++      change 0 < m
++      exact decide_eq_true_eq.mp (show decide (0 < m) = true from h)

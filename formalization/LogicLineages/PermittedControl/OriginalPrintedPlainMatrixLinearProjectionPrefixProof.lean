@@ -23,7 +23,9 @@ private theorem admitted (r : Row) (h : admission r.1 = true) : r.1.Admitted := 
   | equalZero => trivial
   | nonnegative => trivial
   | positive => trivial
-  | congruence m => exact decide_eq_true_eq.mp h
+  | congruence m =>
+      change 0 < m
+      exact decide_eq_true_eq.mp (show decide (0 < m) = true from h)
 
 private theorem admitsGate (g : NormalizedGate) : (rows g).all (fun r => admission r.1) = true := by
   cases g with
