@@ -1,0 +1,23 @@
+module
+public import LogicLineages.PermittedControl.ActualRawCanonicalNodeCoefficientTargets
+import LogicLineages.PermittedControl.ActualRawCanonicalNodeCoefficientProof
+import LogicLineages.PermittedControl.ActualRawCanonicalNodeCoefficientPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualRawCanonicalNodeCoefficient
+
+theorem fixed_exactRawCanonicalWeightTape : ExactRawCanonicalWeightTape := exactRawCanonicalWeightTape
+theorem fixed_exactRawCanonicalCoefficient : ExactRawCanonicalCoefficient := exactRawCanonicalCoefficient
+theorem fixed_exactRawCanonicalCoefficientEffectivity :
+    ExactRawCanonicalCoefficientEffectivity := exactRawCanonicalCoefficientEffectivity
+theorem fixed_fullActualRawCanonicalNodeCoefficient : FullActualRawCanonicalNodeCoefficient :=
+  ⟨fixed_exactRawCanonicalWeightTape,fixed_exactRawCanonicalCoefficient,
+    fixed_exactRawCanonicalCoefficientEffectivity⟩
+
+#print axioms fixed_exactRawCanonicalWeightTape
+#print axioms fixed_exactRawCanonicalCoefficient
+#print axioms fixed_exactRawCanonicalCoefficientEffectivity
+#print axioms fixed_fullActualRawCanonicalNodeCoefficient
+
+end LogicLineages.PermittedControl.StatementChecks
