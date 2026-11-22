@@ -30,7 +30,7 @@ def Interval.right : Interval → NONote
 def Interval.firstHit (f : Nat → Nat) (x i : Nat) (P : Interval) : Prop :=
   FirstEntry f (countInitial P.left.1.repr x) P.right.1.repr i
 
-def Interval.entryNorm (f : Nat → Nat) (x i : Nat) (P : Interval) : Nat :=
+noncomputable def Interval.entryNorm (f : Nat → Nat) (x i : Nat) (P : Interval) : Nat :=
   entryNormAt f (countInitial P.left.1.repr x) i
 
 inductive Gate where
