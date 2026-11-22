@@ -17,7 +17,7 @@ open NormalForm (Formula Atom)
 
 private theorem originalVariablesFromAtoms (p : Formula) :
     p.variables = (LinearRows.atoms p).flatMap (fun a => NormalForm.rowVariables a.row) := by
-  induction p <;> simp [Formula.variables,LinearRows.atoms,*]
+  induction p <;> simp_all [Formula.variables,LinearRows.atoms]
 
 private theorem atomDataRow (a : Atom) : a.data.2.2 = NormalForm.rowData a.row := by
   cases a <;> rfl
@@ -50,7 +50,7 @@ private theorem atomVariablesOnlyExact (a : Atom) :
   · intro h t ht
     have tag := h t ht
     cases rule : t.2 with
-    | variable i => exact ⟨i,rule⟩
+    | «variable» i => exact ⟨i,by simp only [rule]⟩
     | phi i e => simp [rule,NormalForm.Summand.data] at tag
     | hyperPhi i e h => simp [rule,NormalForm.Summand.data] at tag
   · intro h t ht
