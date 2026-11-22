@@ -74,7 +74,11 @@ private theorem allNotLessPrimitive : Primrec (fun xs : List Nat => xs.all notLe
   intro xs
   induction xs with
   | nil => rfl
-  | cons h t ih => simp only [List.foldr_cons,List.all_cons,ih]
+  | cons h t ih =>
+    change t.foldr (fun b s => notLessCode b && s) true = t.all notLessCode at ih
+    change (notLessCode h && t.foldr (fun b s => notLessCode b && s) true) =
+      (notLessCode h && t.all notLessCode)
+    rw [ih]
 
 theorem flagsPrimitive :
     Primrec (fun p : Nat × Nat × List Nat => flagsCode p.1 p.2.1 p.2.2) := by
