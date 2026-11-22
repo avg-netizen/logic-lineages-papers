@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualEffectiveHighTailNormalizationTargets
+import LogicLineages.PermittedControl.ActualEffectiveHighTailNormalizationProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualEffectiveHighTailNormalization :
+    ActualEffectiveHighTailNormalization.ExactActualEffectiveHighTailNormalization :=
+  ActualEffectiveHighTailNormalization.exactActualEffectiveHighTailNormalization
+
+#print axioms fixed_actualEffectiveHighTailNormalization
+
+end LogicLineages.PermittedControl.StatementChecks
