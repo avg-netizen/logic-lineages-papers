@@ -38,17 +38,21 @@ private theorem measuredList (H K : List Nat) (m : Measure) :
       Encodable.encode m ::ᵥ nil) = numbersNumber (grammar H K m.2 m.1).1 := by
   let xs := Encodable.encode H ::ᵥ Encodable.encode K ::ᵥ Encodable.encode m ::ᵥ nil
   have code : Encodable.encode m = Nat.pair m.1 m.2 := by
-    simp only [Encodable.encode_prod_val,Encodable.encode_nat]
+    cases m <;> rfl
   have read := exactUnpairEvaluation (Encodable.encode m)
   rw [code,Nat.unpair_pair] at read
   have dl : evaluate (reorder left (![2] : Fin 1 → Fin 3)) xs = m.1 := by
     change evaluate left (ofFn fun i : Fin 1 => xs.get ((![2] : Fin 1 → Fin 3) i)) = _
     rw [vectorOne]
-    simpa only [← code] using read.1
+    change evaluate left (Encodable.encode m ::ᵥ nil) = m.1
+    rw [code]
+    exact read.1
   have dr : evaluate (reorder right (![2] : Fin 1 → Fin 3)) xs = m.2 := by
     change evaluate right (ofFn fun i : Fin 1 => xs.get ((![2] : Fin 1 → Fin 3) i)) = _
     rw [vectorOne]
-    simpa only [← code] using read.2
+    change evaluate right (Encodable.encode m ::ᵥ nil) = m.2
+    rw [code]
+    exact read.2
   change evaluate selectedTerms (ofFn fun i : Fin 4 =>
     evaluate ((![(reorder left (![2] : Fin 1 → Fin 3)),.projection 0,.projection 1,
       (reorder right (![2] : Fin 1 → Fin 3))] : Fin 4 → Program 3) i) xs) = _

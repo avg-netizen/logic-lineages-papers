@@ -67,8 +67,9 @@ theorem headGraphOfTailAgreement (f : Nat → Nat) (known : List Nat) (p : Pair)
   have sameAffine : NaturalAffineGateGraph.signedValue p.2.1 final =
       NaturalAffineGateGraph.signedValue p.2.1 middle := by
     simp only [NaturalAffineGateGraph.signedValue,terms]
-  simp only [graphAt,AffineCollapseGraphComposition.graph,NaturalAffineGateGraph.signedGraph,
-    hi,ho,sameAffine]
+  unfold graphAt AffineCollapseGraphComposition.graph
+  rw [NaturalAffineGateGraph.signedGraph (input p) p.2.1 final,
+    NaturalAffineGateGraph.signedGraph (input p) p.2.1 middle,hi,ho,sameAffine]
 
 theorem extendTailAgreement (p : Pair) (ps : List Pair) (base final : Valuation)
     (diff : input p ≠ output p) (outside : AgreesOutside (p :: ps) base final) :
@@ -76,10 +77,10 @@ theorem extendTailAgreement (p : Pair) (ps : List Pair) (base final : Valuation)
   intro n notLater
   by_cases nI : n = input p
   · subst n
-    exact (putInput _ _ _ diff).symm
+    exact (putInput p base (final (input p),final (output p)) diff).symm
   by_cases nO : n = output p
   · subst n
-    exact (putOutput _ _ _).symm
+    exact (putOutput p base (final (input p),final (output p))).symm
   have notAll : n ∉ born (p :: ps) := by
     intro h
     rcases List.mem_cons.mp h with h | h
