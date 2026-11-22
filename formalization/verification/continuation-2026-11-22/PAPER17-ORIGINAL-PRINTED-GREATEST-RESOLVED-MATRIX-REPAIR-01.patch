@@ -1,0 +1,10 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedMatrixProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedMatrixProof.lean
+@@ -41 +41,6 @@
+-  | nil => simp [PositiveRows,actualRows,AllTrue]
++  | nil =>
++      constructor
++      · intro _ m hm
++        exact False.elim (List.not_mem_nil hm)
++      · intro _
++        exact ⟨[],True.intro,by simp [AllTrue]⟩

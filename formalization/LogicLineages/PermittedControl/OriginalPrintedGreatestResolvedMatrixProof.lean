@@ -38,7 +38,12 @@ private theorem positiveAppend (f θ : Nat → Nat) (rs ss : List Row) :
 private theorem emitted (f θ : Nat → Nat) (ms : List Mode) :
     PositiveRows f θ (ms.flatMap emit) ↔ ∀ m ∈ ms, m.Holds f θ := by
   induction ms with
-  | nil => simp [PositiveRows,actualRows,AllTrue]
+  | nil =>
+      constructor
+      · intro _ m hm
+        exact False.elim (List.not_mem_nil hm)
+      · intro _
+        exact ⟨[],True.intro,by simp [AllTrue]⟩
   | cons m ms ih =>
       change PositiveRows f θ (emit m ++ ms.flatMap emit) ↔ _
       rw [positiveAppend,exactModeMatrix f θ m,ih]
