@@ -124,7 +124,10 @@ theorem exactReverseSignedPair : ExactReverseSignedPair := by
         valueAt f ρ 0 (signedTerms F G i j c) t := by
     rw [exactValues,exactValues]
     have same (u v : Nat) : (-c) * ((v : Int)-(u : Int)) = c * ((u : Int)-(v : Int)) := by
-      simp only [mul_sub,neg_mul,sub_eq_add_neg,neg_neg,add_comm]
+      calc
+        (-c) * ((v : Int)-(u : Int)) = c * (-((v : Int)-(u : Int))) :=
+          (neg_mul c _).trans (mul_neg c _).symm
+        _ = c * ((u : Int)-(v : Int)) := by rw [neg_sub]
     constructor
     · rintro ⟨v,u,hv,hu,eq⟩
       exact ⟨u,v,hu,hv,(same u v).symm.trans eq⟩
