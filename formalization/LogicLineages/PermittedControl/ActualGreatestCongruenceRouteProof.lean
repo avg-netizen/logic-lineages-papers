@@ -27,7 +27,6 @@ theorem exactGreatestCongruenceShape : ExactGreatestCongruenceShape := by
     obtain ⟨slot,slotMember,what⟩ := List.mem_map.mp member
     have nameEq : slot.1 = n := by
       rw [← eq,← what]
-      rfl
     rw [← nameEq]
     exact (exactGreatestResidueLayout top s.terms).2.2 slot slotMember
   exact safePolarity (table top s.terms) _ ⟨shape.1,bounds⟩ positive
