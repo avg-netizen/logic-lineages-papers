@@ -1,7 +1,7 @@
 module
 public import LogicLineages.PermittedControl.ActualZeroClassConcreteAssemblyTargets
 import LogicLineages.PermittedControl.ActualZeroClassCohortTransferMinimumProof
-import LogicLineages.PermittedControl.ActualZeroClassCohortTransferProof
+import LogicLineages.PermittedControl.ActualZeroClassConcreteAssemblyTransferNarrowProof
 import LogicLineages.PermittedControl.ActualWeightedReadNormalizationActualProof
 
 @[expose] public section
@@ -94,7 +94,7 @@ theorem chooseMovedReads (f : Nat → Nat) (B : Nat) (hf : SelectedWithThreshold
     let ps := cohort f C (xs.map Prod.fst) annotations
     ∃ moved : List Read, MovedAt f ρ (leastPrefix ps) ps moved ∧ liftedReads f ρ moved := by
   let ps := cohort f C (xs.map Prod.fst) annotations
-  have transfer := exactCohortTransfer f B hf ρ ordered C (xs.map Prod.fst) (xs.map Prod.snd)
+  have transfer := assemblyCohortTransfer f B hf ρ ordered C (xs.map Prod.fst) (xs.map Prod.snd)
     annotations aligned tails
   change (match leastPrefix ps with
     | none => ps = []

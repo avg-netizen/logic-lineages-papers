@@ -13,7 +13,8 @@ open LogicLineages.OrdinalComparison.TerminationOrdering
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram List.Vector
 open ID1Completion.InternalAcceptanceCalibrationProof (actualConjunctionEvaluation)
 open ID1Completion.InternalEqualityTestEvaluationProof (vectorTwo)
-open NumberedMultisetNumeric (numbersNumber numbersRoundTrip)
+open NumberedMultisetNumeric (numbersNumber)
+open NumberedMultisetNumericSupportProof (numbersRoundTrip)
 open NumberedWindowScalarAlgorithm (Settings)
 open NumberedWindowInternalSettingsGrammarGuardDefinitions
 open NumberedWindowInternalAuxWindowMemoTargets (typeGuard)
@@ -54,7 +55,7 @@ theorem exact_SettingsRefitGuardCalibration : ExactSettingsRefitGuardCalibration
   rw [refitGuard,actualConjunctionEvaluation,originalValue]
   cases h : typeGuard s ty
   · simp [h]
-  · have listed : s.window.1.contains ty = true := (Bool.and_eq_true.mp h).2
+  · have listed : s.window.1.contains ty = true := (Bool.and_eq_true_iff.mp h).2
     have present : ty ∈ s.types := included ty (List.contains_iff_mem.mp listed)
     simp [h,memberOne s ty present]
 

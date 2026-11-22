@@ -1,0 +1,9 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardNumericProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardNumericProof.lean
+@@ -16 +16,2 @@
+-open NumberedMultisetNumeric (numbersNumber numbersRoundTrip)
++open NumberedMultisetNumeric (numbersNumber)
++open NumberedMultisetNumericSupportProof (numbersRoundTrip)
+@@ -57 +58 @@
+-  · have listed : s.window.1.contains ty = true := (Bool.and_eq_true.mp h).2
++  · have listed : s.window.1.contains ty = true := (Bool.and_eq_true_iff.mp h).2
