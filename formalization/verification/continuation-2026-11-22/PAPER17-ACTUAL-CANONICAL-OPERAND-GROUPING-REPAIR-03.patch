@@ -1,0 +1,18 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean
+@@ -4,0 +5 @@
++import LogicLineages.PermittedControl.ActualWeightedReadNormalizationWeightsProof
+@@ -57 +58,2 @@
+-  simp only [List.map_map,Function.comp_apply]
++  simp only [List.map_map]
++  conv_rhs => rw [← List.map_id (groupTyped (xs.map Prod.fst))]
+@@ -60,2 +62,2 @@
+-  exact (Prod.ext ((exactCanonicalTape.2.2 xs t.1 t.2).mp
+-    (show (t.1,t.2) ∈ groupTyped (xs.map Prod.fst) from member)).1.symm rfl)
++  exact Prod.ext ((exactCanonicalTape.2.2 xs t.1 t.2).mp
++    (show (t.1,t.2) ∈ groupTyped (xs.map Prod.fst) from member)).1.symm rfl
+@@ -78,2 +80,2 @@
+-      change a.1.1 * (a.2 : Int) + (b.1.1 * (b.2 : Int) + readSum rest) =
+-        b.1.1 * (b.2 : Int) + (a.1.1 * (a.2 : Int) + readSum rest)
++      change b.1.1 * (b.2 : Int) + (a.1.1 * (a.2 : Int) + readSum rest) =
++        a.1.1 * (a.2 : Int) + (b.1.1 * (b.2 : Int) + readSum rest)

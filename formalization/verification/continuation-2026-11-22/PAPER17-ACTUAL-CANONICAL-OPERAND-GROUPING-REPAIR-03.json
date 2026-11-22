@@ -1,0 +1,65 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "c41c0f97dfe94c06314a33e4cd6136317cc8f740",
+  "failed_source_local_commit": "f3e4aa1ce9afad8f97efeec18c559530908c228e",
+  "failed_source_tree": "120bd90a1e1741b20f6bd4d0cdb1e20f3adac903",
+  "failed_exact_gate_receipt": "1795373543722843417-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualCanonicalOperandGroupingStatementChecks",
+  "failed_receipt_sha256": "1fd2e2ff3f4df73a5353ac5a2381369eb12424ad3bdf722c46a37331e32c3300",
+  "failed_exact_module_log_sha256": "81a4ac7972354911b685f378928308fffb069bea7cb93705171c9d273d8fd534",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean:34:12: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'lowerOperandRead', which is 'noncomputable'\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean:37:12: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'groupedWeights', which is 'noncomputable'\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean:46:32: error(lean.unknownIdentifier): Unknown identifier `exactGroupedWeights`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean:46:13: error: Tactic `rcases` failed: `x\u271d : ?m.37` is not an inductive datatype\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean:58:2: error: Tactic `apply` failed: could not unify the conclusion of `@List.map_congr_left`\n  List.map ?f ?l = List.map ?g ?l\nwith the goal\n  List.map (Prod.fst \u2218 render f \u03c1 xs \u2218 Prod.snd) (groupTyped (List.map Prod.fst xs)) = groupTyped (List.map Prod.fst xs)\n\nNote: The full type of `@List.map_congr_left` is\n  \u2200 {\u03b1 : Type ?u.42} {l : List \u03b1} {\u03b1_1 : Type ?u.41} {f g : \u03b1 \u2192 \u03b1_1}, (\u2200 a \u2208 l, f a = g a) \u2192 List.map f l = List.map g l\n\nf \u03c1 : \u2115 \u2192 \u2115\nxs : List Read\n\u22a2 List.map (Prod.fst \u2218 render f \u03c1 xs \u2218 Prod.snd) (groupTyped (List.map Prod.fst xs)) = groupTyped (List.map Prod.fst xs)\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean:57:26: warning: This simp argument is unused:\n  Function.comp_apply\n\nHint: Omit it from the simp argument list.\n  simp only [List.map_map,\u0335F\u0335u\u0335n\u0335c\u0335t\u0335i\u0335o\u0335n\u0335.\u0335c\u0335o\u0335m\u0335p\u0335_\u0335a\u0335p\u0335p\u0335l\u0335y\u0335]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean:78:6: error: 'change' tactic failed, pattern\n  a.1.1 * \u2191a.2 + (b.1.1 * \u2191b.2 + readSum rest) = b.1.1 * \u2191b.2 + (a.1.1 * \u2191a.2 + readSum rest)\nis not definitionally equal to target\n  readSum (b :: a :: rest) = readSum (a :: b :: rest)\n",
+  "failed_original_native_log_sha256": "38a9feecbebaa8a72c1a607b860d48183fcf95f6056c30311c7e98dc0f4edc21",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean",
+  "failed_proof_sha256": "e4cf27361a836be572c00558b8b7d6308fbe2afd57be5586878d39a56f7154f2",
+  "repaired_proof_sha256": "bea186e274bc1d70a849c917a0112f2454d5911c8b1699be3e1de9571965099c",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-REPAIR-03.patch",
+  "patch_sha256": "2fcd6bb57db7171eb4bdf57326fda218568331b10b4c286850cf36a04757418d",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "01c8cb98e517db5ff7cafa4c5b5d44695f471e777846e49568d9ad297f0dd62d",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-REPAIR-01.json": "6c6866e2a16910ca60ea0fd333ff88b7f895f2f0dc5b232830283a34fa1e5930",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-REPAIR-02.json": "66df3f52b25774ecec6f1ea10146ab76716bf0c8a053599b85ca75853939af10"
+  },
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingChargeProof.lean": "e08d7c1385db2576c49b848ea4d3dd2a3f0b76027ec98a04994dee08efb34a0a",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingEncodingProof.lean": "70f8f0897fd4199e21239af3e382dd452cfa7ad2f99344d23924b92fdd5a5aa1",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingStatementChecks.lean": "766f2ed354e1361710a9eb048f632fead1bcbeb040908a77fc708e99d7e62d3f",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTapeProof.lean": "d42868d0f1b61f463ed28e9ac714b2d5432556c4db73c469ccf0ced2a04ba6df",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTargets.lean": "f3c77221f0a1112a61160a1144f9e8a1c993b507a185823c81ac5808d618278c",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-SOURCE-MAP.md": "3f07dedbc49e167216f54772aa79a6a600b6ba55865f858f962b7c1f15d4e90f"
+  },
+  "static_module_closure": {
+    "ChargeProof": {
+      "local": 178,
+      "external": 34,
+      "contains_totient": false
+    },
+    "EncodingProof": {
+      "local": 189,
+      "external": 34,
+      "contains_totient": false
+    },
+    "ReadProof": {
+      "local": 319,
+      "external": 41,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 321,
+      "external": 41,
+      "contains_totient": false
+    },
+    "TapeProof": {
+      "local": 191,
+      "external": 34,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 177,
+      "external": 34,
+      "contains_totient": false
+    }
+  },
+  "scope": "Direct importer for the exact support witness, explicitly reintroduce the identity map at the canonical tape right-hand side before pointwise coefficient congruence, and orient the permutation swap to its actual constructor. Targets and sibling leaves unchanged."
+}

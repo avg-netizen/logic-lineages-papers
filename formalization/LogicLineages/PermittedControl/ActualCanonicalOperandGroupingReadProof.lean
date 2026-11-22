@@ -2,6 +2,7 @@ module
 public import LogicLineages.PermittedControl.ActualCanonicalOperandGroupingTargets
 import LogicLineages.PermittedControl.ActualCanonicalOperandGroupingTapeProof
 import LogicLineages.PermittedControl.ActualWeightedReadNormalizationActualProof
+import LogicLineages.PermittedControl.ActualWeightedReadNormalizationWeightsProof
 import LogicLineages.PermittedControl.PreparedParameterActualProof
 
 @[expose] public section
@@ -54,11 +55,12 @@ private theorem mapActual (f ρ : Nat → Nat) (xs : List Read) (ok : liftedRead
 private theorem renderedTerms (f ρ : Nat → Nat) (xs : List Read) :
     (((groupTyped (xs.map Prod.fst)).map Prod.snd).map (render f ρ xs)).map Prod.fst =
       groupTyped (xs.map Prod.fst) := by
-  simp only [List.map_map,Function.comp_apply]
+  simp only [List.map_map]
+  conv_rhs => rw [← List.map_id (groupTyped (xs.map Prod.fst))]
   apply List.map_congr_left
   intro t member
-  exact (Prod.ext ((exactCanonicalTape.2.2 xs t.1 t.2).mp
-    (show (t.1,t.2) ∈ groupTyped (xs.map Prod.fst) from member)).1.symm rfl)
+  exact Prod.ext ((exactCanonicalTape.2.2 xs t.1 t.2).mp
+    (show (t.1,t.2) ∈ groupTyped (xs.map Prod.fst) from member)).1.symm rfl
 
 private theorem allHitOfPerm (f ρ : Nat → Nat) (out old : List Read) (same : out.Perm old)
     (live : liftedReads f ρ old) : liftedReads f ρ out := by
@@ -75,8 +77,8 @@ private theorem readSumOfPerm (out old : List Read) (same : out.Perm old) :
       change rd.1.1 * (rd.2 : Int) + readSum _ = rd.1.1 * (rd.2 : Int) + readSum _
       rw [ih]
   | swap a b rest =>
-      change a.1.1 * (a.2 : Int) + (b.1.1 * (b.2 : Int) + readSum rest) =
-        b.1.1 * (b.2 : Int) + (a.1.1 * (a.2 : Int) + readSum rest)
+      change b.1.1 * (b.2 : Int) + (a.1.1 * (a.2 : Int) + readSum rest) =
+        a.1.1 * (a.2 : Int) + (b.1.1 * (b.2 : Int) + readSum rest)
       exact add_left_comm _ _ _
   | trans left right ihLeft ihRight => exact ihLeft.trans ihRight
 
