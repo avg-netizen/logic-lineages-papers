@@ -32,18 +32,24 @@ private theorem dedupKeyPrimitive : Primrec (List.dedup : Keys → Keys) := by
   let P := Keys × (K × Keys)
   have key : Primrec (fun p : P => p.2.1) := Primrec.fst.comp Primrec.snd
   have tailKeys : Primrec (fun p : P => p.2.2) := Primrec.snd.comp Primrec.snd
-  have step : Primrec (fun p : P =>
-      if p.2.2.any (fun k => decide (k = p.2.1)) then p.2.2 else p.2.1 :: p.2.2) :=
-    Primrec.cond (anyKeyPrimitive.comp (key.pair tailKeys)) tailKeys
-      (Primrec.list_cons.comp key tailKeys)
-  have fold := Primrec.list_foldr (Primrec.id : Primrec (id : Keys → Keys))
-    (Primrec.const ([] : Keys)) step.to₂
+  let advance (key : K) (acc : Keys) : Keys :=
+    if acc.any (fun k => decide (k = key)) then acc else key :: acc
+  have step : Primrec (fun p : P => advance p.2.1 p.2.2) := by
+    apply (Primrec.cond (anyKeyPrimitive.comp (key.pair tailKeys)) tailKeys
+      (Primrec.list_cons.comp key tailKeys)).of_eq
+    intro p
+    cases seen : p.2.2.any (fun k => decide (k = p.2.1)) <;> simp [advance,seen]
+  have fold : Primrec (fun keys : Keys => keys.foldr advance []) :=
+    Primrec.list_foldr (Primrec.id : Primrec (id : Keys → Keys))
+      (Primrec.const ([] : Keys)) step.to₂
   apply fold.of_eq
   intro keys
   induction keys with
   | nil => rfl
   | cons key keys ih =>
-      simp only [id_eq,List.foldr_cons,ih,List.dedup_cons']
+      change advance key (keys.foldr advance []) = (key::keys).dedup
+      rw [ih,List.dedup_cons']
+      dsimp only [advance]
       have mem : keys.dedup.any (fun k => decide (k = key)) = true ↔ key ∈ keys.dedup := by
         simp only [List.any_eq_true,decide_eq_true_eq]
         constructor
@@ -101,7 +107,9 @@ theorem groupCheckedRawPrimitive : Primrec₂ groupCheckedRaw := by
   have check : Primrec (Prod.fst : P → Bool) := Primrec.fst
   have group : Primrec (fun p : P => groupRaw p.2) := groupRawPrimitive.comp Primrec.snd
   have present : Primrec (fun p : P => some (groupRaw p.2)) := Primrec.option_some_iff.mpr group
-  exact (Primrec.cond check present (Primrec.const none)).to₂
+  apply (Primrec.cond check present (Primrec.const none)).to₂.of_eq
+  intro checked terms
+  cases checked <;> rfl
 
 theorem groupCodePrimitive : Primrec groupCode := by
   let A := Bool × Nat
