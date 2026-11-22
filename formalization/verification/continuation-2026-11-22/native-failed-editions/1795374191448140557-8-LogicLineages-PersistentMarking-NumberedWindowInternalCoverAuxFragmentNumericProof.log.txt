@@ -1,0 +1,47 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentNumericProof.lean:34:38: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentNumericProof.lean:38:15: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentNumericProof.lean:42:19: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentNumericProof.lean:42:19: warning: 'rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentNumericProof.lean:53:41: error: Application type mismatch: The argument
+  packing
+has type
+  SourceFragment fn
+but is expected to have type
+  unpackNode ?m.66 = some (?m.67, ?m.68)
+in the application
+  nodeBounds packing
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentNumericProof.lean:53:59: error: `simp` made no progress
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentNumericProof.lean:66:76: error: Application type mismatch: The argument
+  actual
+has type
+  SourceFragment actualFn
+but is expected to have type
+  unpackNode raw = some ?m.95
+in the application
+  Eq.trans (Eq.symm packing) actual
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentNumericProof.lean:88:45: error: Application type mismatch: The argument
+  packed
+has type
+  SourceFragment fn
+but is expected to have type
+  unpackNode (i + 1) = some (6, [dom, cod, fn, arg])
+in the application
+  Exists.intro arg packed
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentNumericProof.lean:116:41: error: don't know how to synthesize placeholder for argument `right`
+context:
+⊢ ∀ (raw : ℕ), run fragmentGuard raw = 1 ↔ SourceFragment raw
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentNumericProof.lean:116:37: error: don't know how to synthesize placeholder for argument `left`
+context:
+⊢ ∀ (raw : ℕ), run fragmentGuard raw = 0 ∨ run fragmentGuard raw = 1
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentNumericProof.lean:115:84: error: unsolved goals
+⊢ ExactCoverAuxFragmentNumericSource
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverAuxFragmentNumericProof.exact_CoverAuxFragmentNumericSource' depends on axioms: [propext,
+ sorryAx]

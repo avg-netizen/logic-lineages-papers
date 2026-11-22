@@ -45,31 +45,36 @@ private theorem earlier (i child : Nat) (less : child < i+1) :
     sourceLookup i (old i) child = row child :=
   lookupAt (constantZero 2) R (0 ::ᵥ 0 ::ᵥ nil) i child (Nat.le_of_lt_succ less)
 
+private theorem sourceCases {raw : Nat} (good : SourceFragment raw) :
+    (0 < raw ∧ ¬ HasAuxPayload raw ∧ ¬ HasLambdaPayload raw) ∨
+      ∃ dom cod fn arg, unpackNode raw = some (6,[dom,cod,fn,arg]) ∧
+        SourceFragment fn ∧ SourceFragment arg :=
+  match good with
+  | .terminal prior noAux noLambda => .inl ⟨Nat.zero_lt_succ prior,noAux,noLambda⟩
+  | .fork _ dom cod fn arg packing first second => .inr ⟨dom,cod,fn,arg,packing,first,second⟩
+
 private theorem sourcePositive {raw : Nat} (good : SourceFragment raw) : 0 < raw := by
-  cases good with
-  | terminal => exact Nat.zero_lt_succ _
-  | fork =>
-    rename_i fn arg packing fnGood argGood
-    exact Nat.zero_lt_of_lt ((nodeBounds packing).2 fn (by simp))
+  rcases sourceCases good with ⟨positive,_,_⟩ | ⟨dom,cod,fn,arg,packing,_,_⟩
+  · exact positive
+  · exact Nat.zero_lt_of_lt ((nodeBounds packing).2 fn (by simp))
 
 private theorem sourceFork {raw dom cod fn arg : Nat}
     (packing : unpackNode raw = some (6,[dom,cod,fn,arg])) :
     SourceFragment raw ↔ SourceFragment fn ∧ SourceFragment arg := by
   constructor
   · intro good
-    cases good with
-    | terminal =>
-      rename_i noAux noLambda
-      exact False.elim (noAux ⟨dom,cod,fn,arg,packing⟩)
-    | fork =>
-      rename_i actualFn actualArg actual gfn garg
-      have fields := congrArg Prod.snd (Option.some.inj (packing.symm.trans actual))
+    rcases sourceCases good with ⟨_,noAux,_⟩ | ⟨d,c,actualFn,actualArg,actual,gfn,garg⟩
+    · exact False.elim (noAux ⟨dom,cod,fn,arg,packing⟩)
+    · have fields : [dom,cod,fn,arg] = [d,c,actualFn,actualArg] :=
+        congrArg Prod.snd (Option.some.inj (packing.symm.trans actual))
       have sameFn : fn = actualFn := by
         have value := congrArg (fun xs : List Nat => xs.getD 2 0) fields
-        simpa using value
+        change fn = actualFn at value
+        exact value
       have sameArg : arg = actualArg := by
         have value := congrArg (fun xs : List Nat => xs.getD 3 0) fields
-        simpa using value
+        change arg = actualArg at value
+        exact value
       rw [sameFn,sameArg]
       exact ⟨gfn,garg⟩
   · rintro ⟨gfn,garg⟩
@@ -79,13 +84,9 @@ private theorem sourceTerminal (i : Nat) (miss : ¬ HasAuxPayload (i+1)) :
     SourceFragment (i+1) ↔ ¬ HasLambdaPayload (i+1) := by
   constructor
   · intro good
-    cases good with
-    | terminal =>
-      rename_i noLambda
-      exact noLambda
-    | fork =>
-      rename_i dom cod fn arg packed goodFn goodArg
-      exact False.elim (miss ⟨dom,cod,fn,arg,packed⟩)
+    rcases sourceCases good with ⟨_,_,noLambda⟩ | ⟨dom,cod,fn,arg,packed,_,_⟩
+    · exact noLambda
+    · exact False.elim (miss ⟨dom,cod,fn,arg,packed⟩)
   · intro noLambda
     exact .terminal i miss noLambda
 
@@ -113,7 +114,7 @@ private theorem exactRow (raw : Nat) : row raw = 1 ↔ SourceFragment raw := by
       · rw [h.2.1 has,sourceTerminal i has]
 
 theorem exact_CoverAuxFragmentNumericSource : ExactCoverAuxFragmentNumericSource := by
-  exact ⟨(selectedRow 0).trans seed, ?_, ?_⟩
+  refine ⟨(selectedRow 0).trans seed, ?_, ?_⟩
   · intro raw
     rw [selectedRow]
     cases raw with
