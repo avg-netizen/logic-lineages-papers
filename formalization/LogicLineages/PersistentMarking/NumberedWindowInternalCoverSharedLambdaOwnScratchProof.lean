@@ -96,8 +96,8 @@ private theorem fromCoordinates (V T M : Program 1) (W : Program 3) (s : Setting
 
 theorem exact_OpenCoverSharedLambdaOwnScratch : ExactOpenCoverSharedLambdaOwnScratch := by
   intro V TV M W s body α Γ p vertices ctx bodyTy ty q paid
-  obtain ⟨syntax⟩ := exact_OpenCoverSharedLambdaSyntaxParent V TV body α Γ ty q paid.valid
-  have childValid := Nonempty.intro (Derivation.conjunctionRight syntax)
+  obtain ⟨syntaxReport⟩ := exact_OpenCoverSharedLambdaSyntaxParent V TV body α Γ ty q paid.valid
+  have childValid := Nonempty.intro (Derivation.conjunctionRight syntaxReport)
   apply exact_OpenCoverSharedLambdaMeasureParent M body α Γ ty q p _ paid.measured
   intro β j Δ old mc d width keep row
   rw [graphRename,lambdaRename]

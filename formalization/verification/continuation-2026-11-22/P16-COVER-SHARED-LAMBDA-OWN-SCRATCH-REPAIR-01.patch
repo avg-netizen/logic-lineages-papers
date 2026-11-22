@@ -1,0 +1,7 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSharedLambdaOwnScratchProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSharedLambdaOwnScratchProof.lean
+@@ -99,2 +99,2 @@
+-  obtain ⟨syntax⟩ := exact_OpenCoverSharedLambdaSyntaxParent V TV body α Γ ty q paid.valid
+-  have childValid := Nonempty.intro (Derivation.conjunctionRight syntax)
++  obtain ⟨syntaxReport⟩ := exact_OpenCoverSharedLambdaSyntaxParent V TV body α Γ ty q paid.valid
++  have childValid := Nonempty.intro (Derivation.conjunctionRight syntaxReport)
