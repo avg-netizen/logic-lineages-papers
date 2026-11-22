@@ -27,6 +27,7 @@ theorem exactPositiveCircuitSnapshots : ExactPositiveCircuitSnapshots := by
         have gy := ih ys hy truth.2
         rw [eq,gx,gy] <;> rfl
   have passes : AllTrue (passingList θ gs) := by
+    clear shape
     induction gs with
     | nil => simp [passingList,AllTrue]
     | cons g gs ih => exact (allAppend (passing θ g) (passingList θ gs)).mpr ⟨gateTrue θ g,ih⟩

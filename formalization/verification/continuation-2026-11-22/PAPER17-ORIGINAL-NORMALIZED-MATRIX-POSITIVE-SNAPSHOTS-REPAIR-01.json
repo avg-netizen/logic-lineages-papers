@@ -1,0 +1,54 @@
+{
+  "status": "exact source-only narrow proof repair; native not invoked by author",
+  "failed_source_remote_commit": "52b8328de96a35bdd2b49885110075913f37aadd",
+  "failed_source_local_commit": "d322e57fa",
+  "failed_exact_gate_receipt": "1795359630638243972-72",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalNormalizedMatrixPositiveSnapshotsStatementChecks",
+  "failed_receipt_sha256": "2628b07815f352e4fd2d0d105ea95851fccf608c77b01fd9aa2167a7049cfa89",
+  "failed_exact_module_log_sha256": "336ef1cdc97a4f02f408cbf4f5c8cbfcd918a40ff7992c1e6c838285599a85fb",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalNormalizedMatrixPositiveSnapshotsProof.lean:32:91: error: Application type mismatch: The argument\n  ih\nhas type\n  (\u2200 (s : Snapshot), HeterogeneousSignedMatrixSlice.actualRows f \u03b8 (rowsList gs) s \u2192 AllTrue s \u2192 s = passingList \u03b8 gs) \u2192\n    AllTrue (passingList \u03b8 gs)\nbut is expected to have type\n  AllTrue (passingList \u03b8 gs)\nin the application\n  \u27e8gateTrue \u03b8 g, ih\u27e9",
+  "failed_original_native_log_sha256": "43ccb4a3f64171665a2be03cdaa3825995c2405e9cf7d67e2516b9b32cda9abb",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalNormalizedMatrixPositiveSnapshotsProof.lean",
+  "failed_proof_sha256": "e258d6f4254e51c2a63b344ef14319bf3c6b2d72a1b25a88a94c47f6d21fd9f6",
+  "repaired_proof_sha256": "942ac15527eaf949f96c203a75a9f90180291a97d0b3e58e97653770cd164257",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-NORMALIZED-MATRIX-POSITIVE-SNAPSHOTS-REPAIR-01.patch",
+  "patch_sha256": "114834c9461cc08e2de9bd1a836c2bc7a3f2d67d96758d2c6fabd2da8204ba33",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-NORMALIZED-MATRIX-POSITIVE-SNAPSHOTS-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "452128c8a3ec675e385e3b22f0cc930a1f30d7201423b4567f77c15ba0a1925d",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalNormalizedMatrixPositiveSnapshotsTargets.lean": "79d70a428b4e1e4401261e6b5d3151c10417c18ef4ceb2a3e3a90e2c9e1b571f",
+    "formalization/LogicLineages/PermittedControl/OriginalNormalizedMatrixPositiveSnapshotsShapeProof.lean": "07f623ddedf1a0e4bda3a1d586eeeae05d4035abf4ea3e060485e092e274d86f",
+    "formalization/LogicLineages/PermittedControl/OriginalNormalizedMatrixPositiveSnapshotsGateProof.lean": "34439d9c88419936997d0188671d633a186fccb368c430990e8259d8cfdfdd8e",
+    "formalization/LogicLineages/PermittedControl/OriginalNormalizedMatrixPositiveSnapshotsStatementChecks.lean": "1cf6237f58eb2531f89eab2c4821a9c77d389eb5c2ef6ec689f3d4707d6196e0",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-NORMALIZED-MATRIX-POSITIVE-SNAPSHOTS-SOURCE-MAP.md": "2e8f39458d61d091aa406b004929aefa964f121f30269156a148131de7110812"
+  },
+  "static_closure_unchanged": {
+    "Targets": {
+      "local": 167,
+      "external": 31,
+      "contains_totient": false
+    },
+    "ShapeProof": {
+      "local": 168,
+      "external": 31,
+      "contains_totient": false
+    },
+    "GateProof": {
+      "local": 346,
+      "external": 40,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 354,
+      "external": 40,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 355,
+      "external": 40,
+      "contains_totient": false
+    }
+  },
+  "scope": "Clear the independent shape proof only inside the later all-true list induction so its induction hypothesis is not conditional. Keep shape proof for final original graph comparison; no target, imports or other leaf change."
+}
