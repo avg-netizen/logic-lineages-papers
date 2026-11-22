@@ -15,11 +15,12 @@ theorem firstKeyMem {α : Type} [DecidableEq α] (keys : List α) (key : α) :
 
 theorem firstKeyNodup {α : Type} [DecidableEq α] (keys : List α) :
     (firstKeys keys).Nodup := by
-  exact (List.nodup_dedup keys.reverse).reverse
+  exact List.nodup_reverse.mpr (List.nodup_dedup keys.reverse)
 
 private theorem firstKeyCode (keys : List LowerOperand) :
     firstKeys (keys.map LowerOperand.code) = (firstKeys keys).map LowerOperand.code := by
-  simp only [firstKeys,List.map_reverse,
+  simp only [firstKeys,List.map_reverse]
+  rw [← List.map_reverse (f := LowerOperand.code) (l := keys),
     List.dedup_map_of_injective exactOperandEncoding.1]
 
 private theorem exactSignedWeight (terms : List WeightedOperand) (key : LowerOperand) :
@@ -77,7 +78,12 @@ private theorem chosenKeys (terms : List WeightedOperand) (keys : List LowerOper
 private theorem signedReads (xs : List Read) (key : LowerOperand) :
     signedWeight (xs.map Prod.fst) key = groupedWeights xs key := by
   rw [(exactGroupedWeights xs key).1]
-  simp only [signedWeight,List.map_map,Function.comp_apply,weightAt]
+  simp only [signedWeight,List.map_map]
+  apply congrArg List.sum
+  apply List.map_congr_left
+  intro x _
+  change (if x.1.2 = key then x.1.1 else 0) = weightAt key x
+  by_cases same : x.1.2 = key <;> simp [weightAt,same]
 
 private theorem present (xs : List Read) (w : Int) (key : LowerOperand) :
     (w,key) ∈ groupTyped (xs.map Prod.fst) ↔

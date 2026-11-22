@@ -1,0 +1,64 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "7fa78bdbfa9f5f5c2617618c63d603069f9c2104",
+  "failed_source_local_commit": "82237ef05d1e88a3b44b59785665a1b68986a8f8",
+  "failed_source_tree": "c95cbca7a5a20562ff9258d8f9294a9d2ea0be39",
+  "failed_exact_gate_receipt": "1795373276635487365-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualCanonicalOperandGroupingStatementChecks",
+  "failed_receipt_sha256": "3220a0a88808041715a4cea5d479f36f05e28a0d24dca05b7841a4ceb792d3a7",
+  "failed_exact_module_log_sha256": "310fa672981c508df180235924f48600295b733419fc4d2a0f3489a7946f6ccc",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTapeProof.lean:18:2: error: Type mismatch\n  List.Pairwise.reverse (List.nodup_dedup keys.reverse)\nhas type\n  List.Pairwise (fun x2 x1 => x1 \u2260 x2) keys.reverse.dedup.reverse\nbut is expected to have type\n  (firstKeys keys).Nodup\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTapeProof.lean:21:87: error: unsolved goals\nkeys : List LowerOperand\n\u22a2 (List.map LowerOperand.code keys).reverse.dedup.reverse = (List.map LowerOperand.code keys.reverse.dedup).reverse\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTapeProof.lean:23:4: warning: This simp argument is unused:\n  List.dedup_map_of_injective exactOperandEncoding.1\n\nHint: Omit it from the simp argument list.\n  simp only [\u0335f\u0335i\u0335r\u0335s\u0335t\u0335K\u0335e\u0335y\u0335s\u0335,\u0335L\u0335i\u0335s\u0335t\u0335.\u0335m\u0335a\u0335p\u0335_\u0335r\u0335e\u0335v\u0335e\u0335r\u0335s\u0335e\u0335,\u0335\n  \u0335 \u0335 \u0335 \u0335 \u0335L\u0335i\u0335s\u0335t\u0335.\u0335d\u0335e\u0335d\u0335u\u0335p\u0335_\u0335m\u0335a\u0335p\u0335_\u0335o\u0335f\u0335_\u0335i\u0335n\u0335j\u0335e\u0335c\u0335t\u0335i\u0335v\u0335e\u0335 \u0335e\u0335x\u0335a\u0335c\u0335t\u0335O\u0335p\u0335e\u0335r\u0335a\u0335n\u0335d\u0335E\u0335n\u0335c\u0335o\u0335d\u0335i\u0335n\u0335g\u0335.\u03351\u0335]\u0335[\u0332f\u0332i\u0332r\u0332s\u0332t\u0332K\u0332e\u0332y\u0332s\u0332,\u0332 \u0332L\u0332i\u0332s\u0332t\u0332.\u0332m\u0332a\u0332p\u0332_\u0332r\u0332e\u0332v\u0332e\u0332r\u0332s\u0332e\u0332]\u0332\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTapeProof.lean:54:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTapeProof.lean:78:66: error: unsolved goals\nxs : List Read\nkey : LowerOperand\n\u22a2 (List.map ((fun t => if t.2 = key then t.1 else 0) \u2218 Prod.fst) xs).sum = (List.map (weightAt key) xs).sum\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTapeProof.lean:80:39: warning: This simp argument is unused:\n  Function.comp_apply\n\nHint: Omit it from the simp argument list.\n  simp only [\u0335s\u0335i\u0335g\u0335n\u0335e\u0335d\u0335W\u0335e\u0335i\u0335g\u0335h\u0335t\u0335,\u0335L\u0335i\u0335s\u0335t\u0335.\u0335m\u0335a\u0335p\u0335_\u0335m\u0335a\u0335p\u0335,\u0335F\u0335u\u0335n\u0335c\u0335t\u0335i\u0335o\u0335n\u0335.\u0335c\u0335o\u0335m\u0335p\u0335_\u0335a\u0335p\u0335p\u0335l\u0335y\u0335,\u0335w\u0335e\u0335i\u0335g\u0335h\u0335t\u0335A\u0335t\u0335]\u0335[\u0332s\u0332i\u0332g\u0332n\u0332e\u0332d\u0332W\u0332e\u0332i\u0332g\u0332h\u0332t\u0332,\u0332 \u0332L\u0332i\u0332s\u0332t\u0332.\u0332m\u0332a\u0332p\u0332_\u0332m\u0332a\u0332p\u0332,\u0332 \u0332w\u0332e\u0332i\u0332g\u0332h\u0332t\u0332A\u0332t\u0332]\u0332\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTapeProof.lean:80:59: warning: This simp argument is unused:\n  weightAt\n\nHint: Omit it from the simp argument list.\n  simp only [signedWeight, \u0332List.map_map, \u0332Function.comp_apply,\u0335w\u0335e\u0335i\u0335g\u0335h\u0335t\u0335A\u0335t\u0335]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+  "failed_original_native_log_sha256": "2fd1b93579ae161ee158eadafde073ddee3a9c467d6931e3511cde7e73c92722",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTapeProof.lean",
+  "failed_proof_sha256": "993d759d4e74f2c7ef438d722bfb9fa64f13d58dba340813c7cf4477fe046c80",
+  "repaired_proof_sha256": "d42868d0f1b61f463ed28e9ac714b2d5432556c4db73c469ccf0ced2a04ba6df",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-REPAIR-02.patch",
+  "patch_sha256": "8116cb13821fbe28516df75e11f1a0515287e43591a787f5090b76e566ef93d8",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "01c8cb98e517db5ff7cafa4c5b5d44695f471e777846e49568d9ad297f0dd62d",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-REPAIR-01.json": "6c6866e2a16910ca60ea0fd333ff88b7f895f2f0dc5b232830283a34fa1e5930"
+  },
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingChargeProof.lean": "e08d7c1385db2576c49b848ea4d3dd2a3f0b76027ec98a04994dee08efb34a0a",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingEncodingProof.lean": "70f8f0897fd4199e21239af3e382dd452cfa7ad2f99344d23924b92fdd5a5aa1",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean": "e4cf27361a836be572c00558b8b7d6308fbe2afd57be5586878d39a56f7154f2",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingStatementChecks.lean": "766f2ed354e1361710a9eb048f632fead1bcbeb040908a77fc708e99d7e62d3f",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTargets.lean": "f3c77221f0a1112a61160a1144f9e8a1c993b507a185823c81ac5808d618278c",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-SOURCE-MAP.md": "3f07dedbc49e167216f54772aa79a6a600b6ba55865f858f962b7c1f15d4e90f"
+  },
+  "static_module_closure": {
+    "ChargeProof": {
+      "local": 178,
+      "external": 34,
+      "contains_totient": false
+    },
+    "EncodingProof": {
+      "local": 189,
+      "external": 34,
+      "contains_totient": false
+    },
+    "ReadProof": {
+      "local": 319,
+      "external": 41,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 321,
+      "external": 41,
+      "contains_totient": false
+    },
+    "TapeProof": {
+      "local": 191,
+      "external": 34,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 177,
+      "external": 34,
+      "contains_totient": false
+    }
+  },
+  "scope": "Use exact Nodup reverse, orient map_reverse before injective dedup commutation, expose signed weight alias occurrence-by-occurrence. Preserve all targets, definitions, order and siblings."
+}
