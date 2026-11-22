@@ -33,14 +33,26 @@ private theorem foldMaximum {A X : Type} [Primcodable A] [Primcodable X]
     Primrec.nat_max.comp (hc.comp root p) n
   exact Primrec.list_foldr hi (Primrec.const 0) step.to₂
 
-private theorem chartCostCurried :
-    Primrec₂ (fun (p : Nat × RawFamily) (chart : Pattern) => chartCost p.1 p.2 chart) := by
+private def chartArgs (p : (Nat × RawFamily) × Pattern) : Nat × RawFamily × Pattern :=
+  (p.1.1,p.1.2,p.2)
+
+private theorem chartArgsPrimitive : Primrec chartArgs := by
   let A := (Nat × RawFamily) × Pattern
   have B : Primrec (fun p : A => p.1.1) := Primrec.fst.comp Primrec.fst
   have raw : Primrec (fun p : A => p.1.2) := Primrec.snd.comp Primrec.fst
-  have flat : Primrec (fun p : A => chartCost p.1.1 p.1.2 p.2) :=
-    chartCostPrimitive.comp (B.pair (raw.pair Primrec.snd))
-  exact flat.to₂
+  exact B.pair (raw.pair Primrec.snd)
+
+private theorem chartArgsLiteral (p : (Nat × RawFamily) × Pattern) :
+    chartCost (chartArgs p).1 (chartArgs p).2.1 (chartArgs p).2.2 =
+      chartCost p.1.1 p.1.2 p.2 := rfl
+
+private theorem chartCostLifted :
+    Primrec (fun p : (Nat × RawFamily) × Pattern => chartCost p.1.1 p.1.2 p.2) :=
+  (chartCostPrimitive.comp chartArgsPrimitive).of_eq chartArgsLiteral
+
+private theorem chartCostCurried :
+    Primrec₂ (fun (p : Nat × RawFamily) (chart : Pattern) => chartCost p.1 p.2 chart) :=
+  chartCostLifted.to₂
 
 private theorem stageLiteral (p : Nat × RawFamily) :
     (charts p.2).foldr (fun c n => max (chartCost p.1 p.2 c) n) 0 = stageBound p.1 p.2 := rfl
