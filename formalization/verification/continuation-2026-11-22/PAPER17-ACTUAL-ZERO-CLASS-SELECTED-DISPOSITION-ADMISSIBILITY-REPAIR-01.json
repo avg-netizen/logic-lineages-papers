@@ -1,0 +1,25 @@
+{
+  "status": "source-only proof repair; exact native/axiom gate pending",
+  "failed_receipt": "1795342069930861403-156",
+  "failed_native_receipt_sha256": "52706fca98a00cf3b81b6bf958ec455e763913d4913c414fe762f7ecfcef3928",
+  "failed_gate_log_sha256": "d79d7e627965a5797ea5c16a94e2a8966c548fa52b51839caa375a772e0df9c2",
+  "first_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedDispositionAdmissibilityProof.lean:24:6: error: unsolved goals",
+  "residual_goal": "(if True then head.2 else dispositionAt tail head.1) = head.2",
+  "reason": "Use the same head-lookup simplification already compiled in disposition sums. It discharges the reflexive key equality and the resulting classical if True. No target, branch order, guards, definitions, imports or other proofs changed.",
+  "validated_lookup_pattern": {
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedDispositionSumsProof.lean": "51e0655b6c136716e99618a7325e3d43669729391289976897e7ebeddaa18a2c"
+  },
+  "changed_source": "formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedDispositionAdmissibilityProof.lean",
+  "old_failed_source_sha256": "2b4e51022e83104b68dd718101d45e8a708bfbe89adbf2116d9a2bb1f5ebe753",
+  "new_source_sha256": "e407b40b8763663afda98b092316fb1b56ba6d75bca67d0e0a0cd49dfdeb636c",
+  "zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-ZERO-CLASS-SELECTED-DISPOSITION-ADMISSIBILITY-REPAIR-01.patch",
+  "patch_sha256": "f4c5ac49f305e1027ae35d04f0e10286a3ba4ab952c0be82fcb9beb8826edb04",
+  "inverse_exact_failed_bytes_verified": true,
+  "immutable_original_manifest": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-ZERO-CLASS-SELECTED-DISPOSITION-ADMISSIBILITY-AUTHOR-MANIFEST.json": "35da2a4ac857656189a0f1b9bba1e922d1691ff563b121ab3f6c0de4dffbe845"
+  },
+  "unchanged_authored_source_pins": {
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedDispositionAdmissibilityTargets.lean": "63e87d0c4c18503de389ef5954a20d6a47fc5347b43ee3e64f6be71e67d347af",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedDispositionAdmissibilityStatementChecks.lean": "afdc4e291f3e7df5a9bc38b7927cdcb5020b5cfc66221fff2211c943a1863d9f"
+  }
+}

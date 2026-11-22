@@ -22,7 +22,7 @@ private theorem lookupOnOriginal {r : Nat} (indexed : List (KeyedDisposition r))
       obtain ⟨fresh,ntail⟩ := List.nodup_cons.mp nodup
       rcases List.mem_cons.mp member with equal | among
       · subst item
-        simp only [dispositionAt,if_pos rfl]
+        simp [dispositionAt]
       · have ne : item.1 ≠ head.1 := by
           intro eq
           exact fresh (List.mem_map.mpr ⟨item,among,eq⟩)
