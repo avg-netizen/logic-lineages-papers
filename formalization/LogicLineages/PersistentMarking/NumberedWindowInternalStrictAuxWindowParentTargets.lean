@@ -6,7 +6,7 @@ public import LogicLineages.PersistentMarking.NumberedWindowInternalStrictAuxWin
 namespace LogicLineages.PersistentMarking.NumberedWindowInternalStrictAuxWindowParentTargets
 open FirstOrder Language
 open LogicLineages.OrdinalComparison.TerminationOrdering
-open ID1Completion.InternalCalculus
+open PositiveArithmeticOperators ID1Completion.InternalCalculus
 open ID1Completion.InternalGraphComposition (OTerm)
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open NumberedWindowInternalSparseRawFunctionFrameTargets (auxiliaryTerm)
