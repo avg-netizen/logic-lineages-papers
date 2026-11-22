@@ -2,6 +2,7 @@ module
 public import LogicLineages.PermittedControl.OriginalPrintedCircuitNormalizationTargets
 public import LogicLineages.PermittedControl.ActualCountLeadingErrorTargets
 public import LogicLineages.PermittedControl.SelectedLeadingSignCutoffTargets
+public import LogicLineages.PermittedControl.ShortFieldPreprocessingTargets
 
 @[expose] public section
 namespace LogicLineages.PermittedControl.OriginalGreatestGateGrowth
