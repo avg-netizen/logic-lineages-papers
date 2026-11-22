@@ -1,0 +1,15 @@
+module
+public import LogicLineages.PermittedControl.ActualSignedReadMassTargets
+import LogicLineages.PermittedControl.ActualSignedReadMassNormalizationProof
+import LogicLineages.PermittedControl.ActualSignedReadMassEdgeProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualSignedReadMass : ActualSignedReadMass.FullActualSignedReadMass :=
+  ⟨ActualSignedReadMass.exactNormalizedMass,ActualSignedReadMass.exactOriginMovedMass,
+    ActualSignedReadMass.exactZeroEdgeMass,ActualSignedReadMass.exactTraceMass⟩
+
+#print axioms fixed_actualSignedReadMass
+
+end LogicLineages.PermittedControl.StatementChecks
