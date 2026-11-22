@@ -106,7 +106,11 @@ theorem comparedSubst (d H K m M : OTerm α) (w : Fin 6 → OTerm α) (ts : α �
     (compared d H K m M w).subst (fun a => emb (ts a)) =
       compared (d.subst ts) (H.subst ts) (K.subst ts) (m.subst ts) (M.subst ts)
         (fun i => (w i).subst ts) := by
-  simp only [compared,impSubst,conjunctionSubst,observedSubst,pairInclusion,axisSubst]
+  unfold compared
+  rw [impSubst,conjunctionSubst]
+  rw [observedSubst d H K m (w 0) (w 1) (w 2) ts,
+    observedSubst d H K M (w 3) (w 4) (w 5) ts]
+  simp only [pairInclusion,conjunctionSubst,axisSubst]
 
 private theorem widthSubst (d H K m M : OTerm α) (ts : α → OTerm β) :
     (widthAt d H K m M).subst (fun a => emb (ts a)) =

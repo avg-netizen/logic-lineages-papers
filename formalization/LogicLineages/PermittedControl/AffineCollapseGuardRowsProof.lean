@@ -18,7 +18,9 @@ private theorem affineValue (f θ : Nat → Nat) (e : NaturalAffineGateGraph.Exp
   change valueAt f θ e.1 (((-1,input) :: e.2).map (fun t => (t.1,.coordinate t.2))) a ↔ _
   rw [coordinatesSum]
   simp only [List.map_cons,List.sum_cons,neg_one_mul,NaturalAffineGateGraph.signedValue]
-  omega
+  let s : Int := (e.2.map (fun t => t.1 * (θ t.2 : Int))).sum
+  change e.1 + (-(θ input : Int) + s) = a ↔ (e.1 + s) - (θ input : Int) = a
+  rw [sub_eq_add_neg, add_assoc, add_comm s (-(θ input : Int))]
 
 private theorem normValue (f θ : Nat → Nat) (lam : NONote) (input : Nat) (b : Int) :
     valueAt f θ (-(actualOrdinalNorm lam.1.repr : Int)) [(1,.coordinate input)] b ↔
