@@ -1,0 +1,17 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunTargets.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunTargets.lean
+@@ -49,2 +49,2 @@
+-  ∀ (f : Nat → Nat) (values : List Nat) (prefix suffix : List RawGate) (why : Nat),
+-    runCode f (values,prefix) = .inl why → runCode f (values,prefix ++ suffix) = .inl why
++  ∀ (f : Nat → Nat) (values : List Nat) (doneGates suffix : List RawGate) (why : Nat),
++    runCode f (values,doneGates) = .inl why → runCode f (values,doneGates ++ suffix) = .inl why
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunBankProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunBankProof.lean
+@@ -57,2 +57,2 @@
+-  · intro f values prefix suffix why stop
+-    change (prefix ++ suffix).foldl (fun st g => stepCarry f (st,g)) (Sum.inr values) = Sum.inl why
++  · intro f values doneGates suffix why stop
++    change (doneGates ++ suffix).foldl (fun st g => stepCarry f (st,g)) (Sum.inr values) = Sum.inl why
+@@ -60 +60 @@
+-    change suffix.foldl (fun st g => stepCarry f (st,g)) (runCode f (values,prefix)) = _
++    change suffix.foldl (fun st g => stepCarry f (st,g)) (runCode f (values,doneGates)) = _

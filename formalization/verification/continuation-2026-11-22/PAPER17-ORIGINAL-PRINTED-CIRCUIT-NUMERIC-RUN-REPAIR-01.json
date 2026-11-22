@@ -1,0 +1,38 @@
+{
+  "status": "narrow alpha-renaming only source repair, not native checked by author",
+  "failed_source_remote_commit": "3437e64e653c7d51d471370cf7f5d2b3cdb76a62",
+  "failed_exact_gate_receipt": "1795354010074080880-72",
+  "failed_original_native_log_sha256": "acc7b2b2e662dffa6fca7a4f5ad084c63f6a056a27f3f146b302f33b21cb7dbd",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunTargets.lean:49:41: error: unexpected token 'prefix'; expected '_' or identifier\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunTargets.lean:49:47: error: unexpected identifier; expected ':'\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunTargets.lean:50:28: error: unexpected token ')'; expected ':'\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunTargets.lean:50:67: error: unexpected token '++'; expected ':'",
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-RUN-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "e0798c12662b5eb6380caf881c066a4e27b1e07413a8c1c1c32467a1ed06ff14",
+  "changed_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunTargets.lean": {
+      "failed_sha256": "11fae087353c6acdf4cc60fb87eca2d4bbe4f5499ff36e2d2ff2a64c24471857",
+      "repaired_sha256": "16929be0f3a120119709af9a91e048b0cb28daf3b6b721eeb520cbea0e31903c"
+    },
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunBankProof.lean": {
+      "failed_sha256": "cca87d987e24ad7807cf9220447b3d7c33bcf49e4f8281ff19c94a340af74c6e",
+      "repaired_sha256": "37aceb13a2e2687b3c5d3be653295f44322116559f6d326196347ca014b82cc0"
+    }
+  },
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-RUN-REPAIR-01.patch",
+  "patch_sha256": "6e8cb2174efa018ee176c6053f2439670c7fb7d0ade4e84c6f2e30ae39cf4150",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunEffectiveProof.lean": "2bd5025ce9b98389c2bd51f3de62c1fc0ef8c565c0fb2f6fcac48284ba5caace",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunStatementChecks.lean": "5bb08d109c72d788c571c4ba6b1ec9e6a595dc5867e94df09ec8c19687e201da",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunTypedProof.lean": "ef46699e7c1a23b13fd0985ec99f3d1f7af1c5e6fa659f5246ee15a2833d9750",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-RUN-SOURCE-MAP.md": "eb6a775432fcac559ecb13e6125ba208369a93566dbea33f0c4f103cdbefa867"
+  },
+  "static_closure_unchanged": {
+    "target_local": 147,
+    "target_external": 31,
+    "bank_local": 148,
+    "bank_external": 31,
+    "effective_local": 264,
+    "effective_external": 38,
+    "gate_local": 268,
+    "gate_external": 38
+  },
+  "scope": "Rename only the reserved local binder prefix to doneGates in the exact preserved-error proposition and its corresponding proof. No other terms, theorem types, invariant, code or scope change."
+}

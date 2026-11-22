@@ -46,8 +46,8 @@ def ExactNumericBankUpdates : Prop :=
 def ExactNumericRunBehavior : Prop :=
   (∀ (f : Nat → Nat) (values : List Nat) (g : RawGate), values.length ≤ rawOutput g →
     step f (values,g) = .inl 0) ∧
-  ∀ (f : Nat → Nat) (values : List Nat) (prefix suffix : List RawGate) (why : Nat),
-    runCode f (values,prefix) = .inl why → runCode f (values,prefix ++ suffix) = .inl why
+  ∀ (f : Nat → Nat) (values : List Nat) (doneGates suffix : List RawGate) (why : Nat),
+    runCode f (values,doneGates) = .inl why → runCode f (values,doneGates ++ suffix) = .inl why
 
 def ExactNumericTypedRun : Prop :=
   ∀ (f : Nat → Nat) (known : List Nat) (gates : List Gate), Topological known gates →

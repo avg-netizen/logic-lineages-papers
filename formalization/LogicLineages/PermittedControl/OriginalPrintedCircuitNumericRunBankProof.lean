@@ -54,10 +54,10 @@ theorem exactNumericRunBehavior : ExactNumericRunBehavior := by
   constructor
   · intro f values g out
     simp only [step,if_neg (Nat.not_lt_of_ge out)]
-  · intro f values prefix suffix why stop
-    change (prefix ++ suffix).foldl (fun st g => stepCarry f (st,g)) (Sum.inr values) = Sum.inl why
+  · intro f values doneGates suffix why stop
+    change (doneGates ++ suffix).foldl (fun st g => stepCarry f (st,g)) (Sum.inr values) = Sum.inl why
     rw [List.foldl_append]
-    change suffix.foldl (fun st g => stepCarry f (st,g)) (runCode f (values,prefix)) = _
+    change suffix.foldl (fun st g => stepCarry f (st,g)) (runCode f (values,doneGates)) = _
     rw [stop]
     exact foldError f suffix why
 
