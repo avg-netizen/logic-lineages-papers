@@ -31,7 +31,10 @@ theorem exactNonemptyBitFamilyStep : ExactNonemptyBitFamilyStep := by
     rcases List.mem_append.mp member with small | large
     · obtain ⟨ρ,_,source⟩ := low.mpr ⟨out,small,truth⟩
       exact ⟨ρ,source⟩
-    · obtain ⟨p,member,rfl⟩ := List.mem_map.mp large
+    · have src : ∃ p ∈ compile B family, p.2 = out :=
+        List.mem_map.mp (show out ∈ (compile B family).map Prod.snd from large)
+      obtain ⟨p,member,eq⟩ := src
+      subst out
       obtain ⟨ρ,_,source⟩ := high.mpr ⟨p,member,truth⟩
       exact ⟨ρ,source⟩
 
@@ -39,7 +42,10 @@ theorem exactSmallerBitFamilyChildren : ExactSmallerBitFamilyChildren := by
   intro f B family out member
   rcases List.mem_append.mp member with low | high
   · exact exactBitFamilyExistentialLowDimension f (cutoff B family) family out low
-  · obtain ⟨p,member,rfl⟩ := List.mem_map.mp high
+  · have src : ∃ p ∈ compile B family, p.2 = out :=
+      List.mem_map.mp (show out ∈ (compile B family).map Prod.snd from high)
+    obtain ⟨p,member,eq⟩ := src
+    subst out
     exact (exactGenericHighDimension B family p member).2
 
 theorem exactSoundBitFamilyLayer : ExactSoundBitFamilyLayer := by
