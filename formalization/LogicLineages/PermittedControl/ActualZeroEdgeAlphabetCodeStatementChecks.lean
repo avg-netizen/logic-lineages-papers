@@ -1,0 +1,15 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroEdgeAlphabetCodeTargets
+import LogicLineages.PermittedControl.ActualZeroEdgeAlphabetCodeCalibrationProof
+import LogicLineages.PermittedControl.ActualZeroEdgeAlphabetCodePrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualZeroEdgeAlphabetCode :
+    ActualZeroEdgeAlphabetCode.FullActualZeroEdgeAlphabetCode :=
+  ⟨ActualZeroEdgeAlphabetCode.codeEffectivity,ActualZeroEdgeAlphabetCode.codeCalibration⟩
+
+#print axioms fixed_actualZeroEdgeAlphabetCode
+
+end LogicLineages.PermittedControl.StatementChecks
