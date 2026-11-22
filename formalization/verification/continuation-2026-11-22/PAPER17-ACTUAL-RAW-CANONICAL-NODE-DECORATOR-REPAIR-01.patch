@@ -1,0 +1,49 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualRawCanonicalNodeDecoratorProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualRawCanonicalNodeDecoratorProof.lean
+@@ -50 +50,3 @@
+-      rw [step,ih,walk,h]
++      have head : walk (t::ts) bits = (walk ts bits).map (List.cons (t,false)) := by
++        cases bits <;> simp [walk,h]
++      rw [step,ih,head]
+@@ -56 +58,2 @@
+-        rw [step,foldNone,walk,h] <;> rfl
++        have head : walk (t::ts) [] = none := by simp [walk,h]
++        rw [step,foldNone,head] <;> rfl
+@@ -60 +63,3 @@
+-        rw [step,ih,walk,h]
++        have head : walk (t::ts) (b::more) = (walk ts more).map (List.cons (t,b)) := by
++          simp [walk,h]
++        rw [step,ih,head]
+@@ -79 +84 @@
+-    rw [List.map_cons,walk,decorate,labelCalibrationOne]
++    rw [List.map_cons]
+@@ -82,2 +87,8 @@
+-      simp only [h,Option.map_none]
+-      rw [ih]
++      have rawLabel : activeLabelCode (encodeTerm t) = none := by
++        simp [labelCalibrationOne,h]
++      have rawHead : walk (encodeTerm t :: ts.map encodeTerm) mask =
++          (walk (ts.map encodeTerm) mask).map (List.cons (encodeTerm t,false)) := by
++        cases mask <;> simp [walk,rawLabel]
++      have typedHead : decorate (t::ts) mask = (decorate ts mask).map (List.cons (t,false)) := by
++        cases mask <;> simp [decorate,h]
++      rw [rawHead,typedHead,ih]
+@@ -85,0 +97,2 @@
++      have rawLabel : activeLabelCode (encodeTerm t) =
++          some (ActualRawComparisonCeiling.encodeLabel label) := by simp [labelCalibrationOne,h]
+@@ -87 +100,5 @@
+-      | nil => simp only [h,Option.map_some,Option.map_none]
++      | nil =>
++        have rawHead : walk (encodeTerm t :: ts.map encodeTerm) [] = none := by
++          simp [walk,rawLabel]
++        have typedHead : decorate (t::ts) [] = none := by simp [decorate,h]
++        rw [rawHead,typedHead] <;> rfl
+@@ -89,2 +106,6 @@
+-        simp only [h,Option.map_some]
+-        rw [ih]
++        have rawHead : walk (encodeTerm t :: ts.map encodeTerm) (b::more) =
++            (walk (ts.map encodeTerm) more).map (List.cons (encodeTerm t,b)) := by
++          simp [walk,rawLabel]
++        have typedHead : decorate (t::ts) (b::more) =
++            (decorate ts more).map (List.cons (t,b)) := by simp [decorate,h]
++        rw [rawHead,typedHead,ih]

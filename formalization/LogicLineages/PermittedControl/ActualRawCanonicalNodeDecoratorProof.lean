@@ -47,17 +47,22 @@ private theorem foldWalk (ts : List RawTerm) (bits : List Bool) (rev : List RawM
     | none =>
       have step : paintStep (some (bits,rev)) t = some (bits,(t,false)::rev) := by
         simp [paintStep,h]
-      rw [step,ih,walk,h]
+      have head : walk (t::ts) bits = (walk ts bits).map (List.cons (t,false)) := by
+        cases bits <;> simp [walk,h]
+      rw [step,ih,head]
       exact appendReversed (t,false) rev _
     | some label =>
       cases bits with
       | nil =>
         have step : paintStep (some ([],rev)) t = none := by simp [paintStep,h]
-        rw [step,foldNone,walk,h] <;> rfl
+        have head : walk (t::ts) [] = none := by simp [walk,h]
+        rw [step,foldNone,head] <;> rfl
       | cons b more =>
         have step : paintStep (some (b::more,rev)) t = some (more,(t,b)::rev) := by
           simp [paintStep,h]
-        rw [step,ih,walk,h]
+        have head : walk (t::ts) (b::more) = (walk ts more).map (List.cons (t,b)) := by
+          simp [walk,h]
+        rw [step,ih,head]
         exact appendReversed (t,b) rev _
 
 private theorem codeWalk (ts : List RawTerm) (bits : List Bool) :
@@ -76,18 +81,34 @@ private theorem walkCalibration (ts : List WeightedOperand) (mask : List Bool) :
   induction ts generalizing mask with
   | nil => cases mask <;> rfl
   | cons t ts ih =>
-    rw [List.map_cons,walk,decorate,labelCalibrationOne]
+    rw [List.map_cons]
     cases h : activeLabel t with
     | none =>
-      simp only [h,Option.map_none]
-      rw [ih]
+      have rawLabel : activeLabelCode (encodeTerm t) = none := by
+        simp [labelCalibrationOne,h]
+      have rawHead : walk (encodeTerm t :: ts.map encodeTerm) mask =
+          (walk (ts.map encodeTerm) mask).map (List.cons (encodeTerm t,false)) := by
+        cases mask <;> simp [walk,rawLabel]
+      have typedHead : decorate (t::ts) mask = (decorate ts mask).map (List.cons (t,false)) := by
+        cases mask <;> simp [decorate,h]
+      rw [rawHead,typedHead,ih]
       exact encodedCons (t,false) _
     | some label =>
+      have rawLabel : activeLabelCode (encodeTerm t) =
+          some (ActualRawComparisonCeiling.encodeLabel label) := by simp [labelCalibrationOne,h]
       cases mask with
-      | nil => simp only [h,Option.map_some,Option.map_none]
+      | nil =>
+        have rawHead : walk (encodeTerm t :: ts.map encodeTerm) [] = none := by
+          simp [walk,rawLabel]
+        have typedHead : decorate (t::ts) [] = none := by simp [decorate,h]
+        rw [rawHead,typedHead] <;> rfl
       | cons b more =>
-        simp only [h,Option.map_some]
-        rw [ih]
+        have rawHead : walk (encodeTerm t :: ts.map encodeTerm) (b::more) =
+            (walk (ts.map encodeTerm) more).map (List.cons (encodeTerm t,b)) := by
+          simp [walk,rawLabel]
+        have typedHead : decorate (t::ts) (b::more) =
+            (decorate ts more).map (List.cons (t,b)) := by simp [decorate,h]
+        rw [rawHead,typedHead,ih]
         exact encodedCons (t,b) _
 
 theorem exactRawDecorateCalibration : ExactRawDecorateCalibration := by
