@@ -1,0 +1,20 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedHighResidualTargets
+import LogicLineages.PermittedControl.OriginalPrintedHighResidualChartProof
+import LogicLineages.PermittedControl.OriginalPrintedHighResidualProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedHighResidual
+
+theorem fixed_exactOriginalDenseLowerChart : ExactOriginalDenseLowerChart := exactOriginalDenseLowerChart
+theorem fixed_exactOriginalPrintedHighResidual : ExactOriginalPrintedHighResidual :=
+  exactOriginalPrintedHighResidual
+theorem fixed_fullOriginalPrintedHighResidual : FullOriginalPrintedHighResidual :=
+  ⟨fixed_exactOriginalDenseLowerChart,fixed_exactOriginalPrintedHighResidual⟩
+
+#print axioms fixed_exactOriginalDenseLowerChart
+#print axioms fixed_exactOriginalPrintedHighResidual
+#print axioms fixed_fullOriginalPrintedHighResidual
+
+end LogicLineages.PermittedControl.StatementChecks
