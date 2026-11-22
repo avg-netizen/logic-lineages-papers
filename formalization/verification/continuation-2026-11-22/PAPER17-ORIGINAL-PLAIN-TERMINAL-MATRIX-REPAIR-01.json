@@ -1,0 +1,50 @@
+{
+  "status": "exact source-only narrow proof repair; native not invoked by author",
+  "failed_source_remote_commit": "959d516c1afa2339e6ef4ea0b896cbc5112c8fa1",
+  "failed_source_local_commit": "d52787ed7",
+  "failed_exact_gate_receipt": "1795356192822234713-74",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalPlainTerminalMatrixStatementChecks",
+  "failed_receipt_sha256": "6625803df3c18ce4b38c0ad2dc4a0a84b9e1f76755acc84b224d1b4dfed75c46",
+  "failed_exact_module_log_sha256": "f8ba9b4c1ce738906c0ec150cb82a878f3fc7d7654ed30b7f5f9fde2c921042d",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPlainTerminalMatrixSnapshotProof.lean:17:17: error: unsolved goals\ncase cons\n\u03b8 : \u2115 \u2192 \u2115\ns : \u2124 \u00d7 NormalForm.Summand\nts : List (\u2124 \u00d7 NormalForm.Summand)\nih :\n  (\u2200 s \u2208 ts, \u2203 i, s.2 = NormalForm.Summand.variable i) \u2192\n    (List.map (fun s => s.1 * \u2191(\u03b8 s.2.name)) ts).sum = (List.map (fun s => s.1 * \u2191(Term.value \u03b8 s.2.term)) ts).sum\nplain : \u2200 s_1 \u2208 s :: ts, \u2203 i, s_1.2 = NormalForm.Summand.variable i\nh\u2082 : (List.map (fun s => s.1 * \u2191(\u03b8 s.2.name)) ts).sum = (List.map (fun s => s.1 * \u2191(Term.value \u03b8 s.2.term)) ts).sum\ni : \u2115\nhi : s.2 = NormalForm.Summand.variable i\n\u22a2 s.1 * \u2191(\u03b8 i) +\n      (List.map\n          (fun s =>\n            s.1 *\n              \u2191(\u03b8\n                  (match s.2 with\n                  | NormalForm.Summand.variable i => i\n                  | NormalForm.Summand.phi i shift => i\n                  | NormalForm.Summand.hyperPhi i indexShift outerShift => i)))\n          ts).sum =\n    s.1 * \u2191(\u03b8 i) +\n      (List.map\n          (fun s =>\n            s.1 *\n              \u2191(Term.value \u03b8\n                  (match s.2 with\n                  | NormalForm.Summand.variable i => Term.variable i\n                  | NormalForm.Summand.phi i e => (shiftTerm (Term.variable i) e).phi\n                  | NormalForm.Summand.hyperPhi i e h => HyperWindow.valueTerm i e h)))\n          ts).sum\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPlainTerminalMatrixSnapshotProof.lean:21:45: warning: This simp argument is unused:\n  h\u2082\n\nHint: Omit it from the simp argument list.\n  simp only [\u0335L\u0335i\u0335s\u0335t\u0335.\u0335m\u0335a\u0335p\u0335_\u0335c\u0335o\u0335n\u0335s\u0335,\u0335L\u0335i\u0335s\u0335t\u0335.\u0335s\u0335u\u0335m\u0335_\u0335c\u0335o\u0335n\u0335s\u0335,\u0335h\u0335\u2082\u0335,\u0335h\u0335i\u0335,\u0335N\u0335o\u0335r\u0335m\u0335a\u0335l\u0335F\u0335o\u0335r\u0335m\u0335.\u0335S\u0335u\u0335m\u0335m\u0335a\u0335n\u0335d\u0335.\u0335n\u0335a\u0335m\u0335e\u0335,\u0335\n  \u0335 \u0335 \u0335 \u0335 \u0335 \u0335 \u0335 \u0335 \u0335N\u0335o\u0335r\u0335m\u0335a\u0335l\u0335F\u0335o\u0335r\u0335m\u0335.\u0335S\u0335u\u0335m\u0335m\u0335a\u0335n\u0335d\u0335.\u0335t\u0335e\u0335r\u0335m\u0335,\u0335T\u0335e\u0335r\u0335m\u0335.\u0335v\u0335a\u0335l\u0335u\u0335e\u0335]\u0335[\u0332L\u0332i\u0332s\u0332t\u0332.\u0332m\u0332a\u0332p\u0332_\u0332c\u0332o\u0332n\u0332s\u0332,\u0332 \u0332L\u0332i\u0332s\u0332t\u0332.\u0332s\u0332u\u0332m\u0332_\u0332c\u0332o\u0332n\u0332s\u0332,\u0332 \u0332h\u0332i\u0332,\u0332 \u0332N\u0332o\u0332r\u0332m\u0332a\u0332l\u0332F\u0332o\u0332r\u0332m\u0332.\u0332S\u0332u\u0332m\u0332m\u0332a\u0332n\u0332d\u0332.\u0332n\u0332a\u0332m\u0332e\u0332,\u0332 \u0332N\u0332o\u0332r\u0332m\u0332a\u0332l\u0332F\u0332o\u0332r\u0332m\u0332.\u0332S\u0332u\u0332m\u0332m\u0332a\u0332n\u0332d\u0332.\u0332t\u0332e\u0332r\u0332m\u0332,\u0332\n  \u0332 \u0332 \u0332 \u0332 \u0332 \u0332 \u0332 \u0332 \u0332T\u0332e\u0332r\u0332m\u0332.\u0332v\u0332a\u0332l\u0332u\u0332e\u0332]\u0332\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+  "failed_original_native_log_sha256": "9fee48d91b6db4f6bcac2394dd9d239f6aee607ab9c53c32f02736930449ac94",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPlainTerminalMatrixSnapshotProof.lean",
+  "failed_proof_sha256": "3ba0151950bca6dd472a3b3eb605da6330e76aa905d67ae3c2628da9fd51f040",
+  "repaired_proof_sha256": "9ddeee01c9589436bcad3b8943a3bc65a50d1362f4a42f15331df13eddab348b",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PLAIN-TERMINAL-MATRIX-REPAIR-01.patch",
+  "patch_sha256": "7c18e10b8cbb09b960416618f407fa3d90253fd8f1c529936ec3d492cb65f453",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PLAIN-TERMINAL-MATRIX-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "152c5d1e4ca303ce906a5c2f2e17c2ace0774a9b7bbc258a7a7644333bf00e82",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPlainTerminalMatrixTargets.lean": "f7c78c019823a84db2aa199d553789ed3faabe3710482f5812e78c4ac8d5efb3",
+    "formalization/LogicLineages/PermittedControl/OriginalPlainTerminalMatrixProof.lean": "b8771c2e30ebf5a279b4c4146b0855f63b03256abe7ccd8ebe05638f09472c31",
+    "formalization/LogicLineages/PermittedControl/OriginalPlainTerminalMatrixStatementChecks.lean": "dc35ee01db887eccbfdc2344741bd3b8498b12458a688aadb472d2d2847037c2",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PLAIN-TERMINAL-MATRIX-SOURCE-MAP.md": "829350982fab07a62653ceabe01dcc3520aeb7f6fe8f511fb9e618fa657484b8"
+  },
+  "static_closure_unchanged": {
+    "Targets": {
+      "local": 192,
+      "external": 32,
+      "contains_totient": false
+    },
+    "SnapshotProof": {
+      "local": 330,
+      "external": 39,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 333,
+      "external": 39,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 334,
+      "external": 39,
+      "contains_totient": false
+    }
+  },
+  "downstream_manifest_untouched": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-INFINITE-LOW-AUTHOR-MANIFEST.json",
+  "downstream_original_manifest_sha256": "ce3bfb7289ac7d624a59a64911ae0a6c097de9165fd23debb76ead57f3609a23",
+  "scope": "Rewrite the cons tail before changing the head constructor. No target, imports, suffix interpretation, matrix, or given-bound strip source changes."
+}

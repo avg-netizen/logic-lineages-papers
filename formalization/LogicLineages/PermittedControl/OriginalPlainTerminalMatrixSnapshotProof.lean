@@ -18,8 +18,9 @@ private theorem exactPlainListSum (θ : Nat → Nat) (ts : List (Int × NormalFo
       have h₁ := plain s List.mem_cons_self
       have h₂ := ih (fun t ht => plain t (List.mem_cons_of_mem _ ht))
       obtain ⟨i,hi⟩ := h₁
-      simp only [List.map_cons,List.sum_cons,h₂,hi,NormalForm.Summand.name,
-        NormalForm.Summand.term,Term.value]
+      simp only [List.map_cons,List.sum_cons]
+      rw [h₂]
+      simp only [hi,NormalForm.Summand.name,NormalForm.Summand.term,Term.value]
 
 private theorem atomValue (f θ : Nat → Nat) (a : NormalForm.Atom)
     (plain : ∀ s ∈ a.row.2, ∃ i : Nat, s.2 = .variable i) (v : Int) :

@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPlainTerminalMatrixSnapshotProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPlainTerminalMatrixSnapshotProof.lean
+@@ -21,2 +21,3 @@
+-      simp only [List.map_cons,List.sum_cons,h₂,hi,NormalForm.Summand.name,
+-        NormalForm.Summand.term,Term.value]
++      simp only [List.map_cons,List.sum_cons]
++      rw [h₂]
++      simp only [hi,NormalForm.Summand.name,NormalForm.Summand.term,Term.value]
