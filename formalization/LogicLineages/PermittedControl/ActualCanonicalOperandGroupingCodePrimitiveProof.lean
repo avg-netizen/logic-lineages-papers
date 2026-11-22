@@ -38,7 +38,10 @@ private theorem dedupKeyPrimitive : Primrec (List.dedup : Keys → Keys) := by
     apply (Primrec.cond (anyKeyPrimitive.comp (key.pair tailKeys)) tailKeys
       (Primrec.list_cons.comp key tailKeys)).of_eq
     intro p
-    cases seen : p.2.2.any (fun k => decide (k = p.2.1)) <;> simp [advance,seen]
+    change (bif p.2.2.any (fun k => decide (k = p.2.1)) then p.2.2 else p.2.1 :: p.2.2) =
+      (if p.2.2.any (fun k => decide (k = p.2.1)) = true then p.2.2 else p.2.1 :: p.2.2)
+    generalize p.2.2.any (fun k => decide (k = p.2.1)) = seen
+    cases seen <;> rfl
   have fold : Primrec (fun keys : Keys => keys.foldr advance []) :=
     Primrec.list_foldr (Primrec.id : Primrec (id : Keys → Keys))
       (Primrec.const ([] : Keys)) step.to₂
