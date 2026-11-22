@@ -1,0 +1,31 @@
+module
+public import LogicLineages.PermittedControl.ActualBitFamilyHighTargets
+import LogicLineages.PermittedControl.ActualBitFamilyHighRankProof
+import LogicLineages.PermittedControl.ActualBitFamilyHighSetupProof
+import LogicLineages.PermittedControl.ActualBitFamilyHighUniformProof
+import LogicLineages.PermittedControl.ActualBitFamilyHighExistentialProof
+import LogicLineages.PermittedControl.ActualBitFamilyHighDimensionProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualBitFamilyHigh
+
+theorem fixed_exactValidGenericCharts : ExactValidGenericCharts := exactValidGenericCharts
+theorem fixed_exactGenericRankTransport : ExactGenericRankTransport := exactGenericRankTransport
+theorem fixed_exactGenericHighSetup : ExactGenericHighSetup := exactGenericHighSetup
+theorem fixed_exactGenericUniformChartChild : ExactGenericUniformChartChild := exactGenericUniformChartChild
+theorem fixed_exactGenericHighExistential : ExactGenericHighExistential := exactGenericHighExistential
+theorem fixed_exactGenericHighDimension : ExactGenericHighDimension := exactGenericHighDimension
+theorem fixed_fullActualBitFamilyHigh : FullActualBitFamilyHigh :=
+  ⟨fixed_exactValidGenericCharts,fixed_exactGenericRankTransport,fixed_exactGenericHighSetup,
+    fixed_exactGenericUniformChartChild,fixed_exactGenericHighExistential,fixed_exactGenericHighDimension⟩
+
+#print axioms fixed_exactValidGenericCharts
+#print axioms fixed_exactGenericRankTransport
+#print axioms fixed_exactGenericHighSetup
+#print axioms fixed_exactGenericUniformChartChild
+#print axioms fixed_exactGenericHighExistential
+#print axioms fixed_exactGenericHighDimension
+#print axioms fixed_fullActualBitFamilyHigh
+
+end LogicLineages.PermittedControl.StatementChecks
