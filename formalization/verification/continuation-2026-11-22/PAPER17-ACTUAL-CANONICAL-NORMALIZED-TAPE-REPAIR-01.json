@@ -1,0 +1,44 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "360fcee22940c8fda107e9d727481f415ec06fa2",
+  "failed_source_local_commit": "8616da15c9fa04591ef5b7a16597a446986b4188",
+  "failed_source_tree": "ae18f66faeaffa3d23af1770fb32538fa4c94368",
+  "failed_exact_gate_receipt": "1795373926378550060-102",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualCanonicalNormalizedTapeStatementChecks",
+  "failed_receipt_sha256": "aa9989ef9d80ac4345ac975b32807040977820810f51c0ada9ec777f2b835920",
+  "failed_exact_module_log_sha256": "529c81b48d2ab0e3c5de4c791c8dfb201545acdd6f0b8f11341e16b173483183",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalNormalizedTapeProof.lean:19:63: error: Type mismatch\n  List.Perm.map (fun rd => ?m.129) perm\nhas type\n  (List.map (fun rd => ?m.129) xs).Perm (List.map (fun rd => ?m.129) old)\nbut is expected to have type\n  (originalKeys xs).Perm (originalKeys old)\n",
+  "failed_original_native_log_sha256": "095ee3ac7f5de10d4f5728ee6e2e59f7f8eb8b5d9d711decbd1204a0157c0404",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualCanonicalNormalizedTapeProof.lean",
+  "failed_proof_sha256": "48373fe9bbcd8296e4b9fc59996faf0f74fff9f145d85aeb17a5b5faac29e8ae",
+  "repaired_proof_sha256": "e8b118aaaea13715404c27c8cd8371f1c5e72a18e428759fb3b804879947246a",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-NORMALIZED-TAPE-REPAIR-01.patch",
+  "patch_sha256": "661ee931d2b08a8566342e0f5d8662118cd1f9396c5360775073f15ac4854cf6",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-NORMALIZED-TAPE-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "62297ec6d64e11b2f625841d506f5c5232a05b9322c478bd4e8495d7058d3e35",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalNormalizedTapeStatementChecks.lean": "616e2f3751c59a2bf0c47069032689cae6a486ff54097d218d96311a98c2a522",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalNormalizedTapeTargets.lean": "9d6bca3715fa562bbb0ac9321ad8454f04eedc095d49e96c550d64746091083e",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-NORMALIZED-TAPE-SOURCE-MAP.md": "195c5afbaa489eed58dd37cbd3ee045b71d7cb7a3b427a0b78f28876eb711048"
+  },
+  "static_module_closure": {
+    "Proof": {
+      "local": 324,
+      "external": 41,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 325,
+      "external": 41,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 179,
+      "external": 34,
+      "contains_totient": false
+    }
+  },
+  "scope": "Expose originalKeys as its same actual map of Read operand projections on both sides before applying List.Perm.map. No statement, domain or sibling changes."
+}

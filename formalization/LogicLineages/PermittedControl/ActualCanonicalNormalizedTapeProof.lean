@@ -16,7 +16,9 @@ theorem exactCanonicalTapeCertificate : ExactCanonicalTapeCertificate := by
   obtain ⟨out,outCode,perm,_,trueReads,value⟩ := (exactCanonicalReads f ρ raw).2 old oldCode
   have same : out = xs := Option.some.inj (outCode.symm.trans canonicalCode)
   subst out
-  have permKeys : (originalKeys xs).Perm (originalKeys old) := perm.map (fun rd => rd.1.2)
+  have permKeys : (originalKeys xs).Perm (originalKeys old) := by
+    change (xs.map (fun rd : Read => rd.1.2)).Perm (old.map (fun rd : Read => rd.1.2))
+    exact perm.map (fun rd : Read => rd.1.2)
   refine ⟨allReads,trueReads,permKeys.nodup_iff.mpr original.unique,?_,value.symm,?_⟩
   · intro key
     exact permKeys.mem_iff.trans (original.covers key)
