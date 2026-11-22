@@ -34,22 +34,39 @@ private theorem payloadPrimitive {X : Type} [Primcodable X] {active : X → Bool
   intro p
   cases active p.1 <;> rfl
 
-private theorem statePayloadPrimitive :
-    Primrec (fun p : RawTerm × State =>
-      if (activeLabelCode p.1).isSome then
-        p.2.1.head?.map (fun b => (p.2.1.tail,(p.1,b)::p.2.2))
-      else some (p.2.1,(p.1,false)::p.2.2)) :=
-  payloadPrimitive (Primrec.option_isSome.comp activeLabelPrimitive)
+private def rawActive (t : RawTerm) : Bool := (activeLabelCode t).isSome
+
+private theorem rawActivePrimitive : Primrec rawActive :=
+  Primrec.option_isSome.comp activeLabelPrimitive
+
+private def statePayload (p : RawTerm × State) : Option State :=
+  if rawActive p.1 then
+    p.2.1.head?.map (fun b => (p.2.1.tail,(p.1,b)::p.2.2))
+  else some (p.2.1,(p.1,false)::p.2.2)
+
+private theorem payloadLiteral (p : RawTerm × State) :
+    (if rawActive p.1 then
+      p.2.1.head?.map (fun b => (p.2.1.tail,(p.1,b)::p.2.2))
+    else some (p.2.1,(p.1,false)::p.2.2)) = statePayload p := rfl
+
+private theorem statePayloadPrimitive : Primrec statePayload :=
+  (payloadPrimitive rawActivePrimitive).of_eq payloadLiteral
+
+private def payloadArgs (p : (Option State × RawTerm) × State) : RawTerm × State :=
+  (p.1.2,p.2)
+
+private theorem payloadArgsPrimitive : Primrec payloadArgs :=
+  (Primrec.snd.comp Primrec.fst).pair Primrec.snd
+
+private theorem paintStepLiteral (p : Option State × RawTerm) :
+    p.1.bind (fun s => statePayload (payloadArgs (p,s))) = paintStep p.1 p.2 := rfl
 
 theorem paintStepPrimitive : Primrec₂ paintStep := by
-  let A := Option State × RawTerm
-  let Q := A × State
-  have term : Primrec (fun p : Q => p.1.2) := Primrec.snd.comp Primrec.fst
-  have old : Primrec (Prod.snd : Q → State) := Primrec.snd
-  have run := statePayloadPrimitive.comp (term.pair old)
-  have step : Primrec (fun p : A => paintStep p.1 p.2) :=
+  have run := statePayloadPrimitive.comp payloadArgsPrimitive
+  have step : Primrec (fun p : Option State × RawTerm =>
+      p.1.bind (fun s => statePayload (payloadArgs (p,s)))) :=
     Primrec.option_bind Primrec.fst run.to₂
-  exact step.to₂
+  exact (step.of_eq paintStepLiteral).to₂
 
 private theorem finishOnStatePrimitive : Primrec (fun p : State =>
     if p.1.length = 0 then some p.2.reverse else none) := by
