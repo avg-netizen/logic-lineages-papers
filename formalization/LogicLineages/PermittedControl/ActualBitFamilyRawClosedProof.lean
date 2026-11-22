@@ -54,7 +54,7 @@ theorem rawClauseCalibration (clause : List BitRow) :
     cases hb : closedCell r.1 <;> cases ht : closedSnapshot (originalRows rs) <;>
       simp only [originalRows] at ht <;>
       simp [closedClause,originalRows,wantedBits,closedSnapshot,hb,ht,bind,pure,
-        List.cons.injEq,Bool.decide_and]
+        List.cons.injEq,Bool.decide_and] <;> rfl
 
 theorem exactClosedRawCalibration : ExactClosedRawCalibration := by
   refine ⟨rawClauseCalibration,?_⟩
