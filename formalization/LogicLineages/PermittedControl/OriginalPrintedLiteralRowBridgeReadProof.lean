@@ -75,6 +75,7 @@ theorem exactLiteralRowProper : ExactLiteralRowProper := by
   exact ⟨admitted,properTape f ρ row.1.2.2 vs reads⟩
 
 theorem exactLiteralProperClauseFilter : ExactLiteralProperClauseFilter := by
+  classical
   intro f ρ family
   constructor
   · rintro ⟨c,member,live⟩
