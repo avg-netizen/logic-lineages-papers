@@ -35,7 +35,7 @@ theorem exactOriginalRankReadLocality : ExactOriginalRankReadLocality := by
     have tie := agreed op.rank within
     cases op <;> simp only [LowerOperand.rank] at tie <;>
       simp only [lowerOperandRead,LowerOperandActual,tie] <;>
-      exact ⟨rfl,fun _ => Iff.rfl⟩
+      exact ⟨True.intro,fun _ => True.intro⟩
   refine ⟨opRead,?_,?_,?_⟩
   · intro terms all vs
     induction terms generalizing vs with
