@@ -61,7 +61,7 @@ private theorem headPlan (f : Nat → Nat) (B : Nat) (hf : SelectedWithThreshold
             have kNZ : k ≠ 0 := Nat.ne_of_gt planFacts.2.2.1
             have iNZ : i ≠ 0 := Nat.ne_of_gt planFacts.2.2.2.1.1
             simp [kept,selected,fullValue,residualHead,survivingPrefix,replaceOccurrence,
-              originShift,nz,op,same,plan,iNZ,gap,kNZ,κEq]
+              originShift,nz,op,same,plan,iNZ,gap,kNZ,κEq,mul_add]
         | survives eta =>
             rw [plan] at planFacts
             have gap : shortGapLength lam (prefixTarget mu) = 0 := planFacts.2.1
@@ -84,7 +84,7 @@ theorem exactOutsideAndOriginShiftSyntax : ExactOutsideAndOriginShiftSyntax := b
       · change outsideSyntax (head::rest) =
           (residualHead f C t v a ++ outsideCohort f C terms values anns).map Prod.fst
         rw [List.map_append,← details.1,← restDetails.1]
-        cases h : kept head <;> simp [outsideSyntax,h,head]
+        cases h : kept head <;> simp [outsideSyntax,h,head,rest]
       · change originShifts (head::rest) = some ((replaceOccurrence f C t v a).2 +
             (replaceRow f C terms values anns).2)
         simp [originShifts,show originShift head = _ from details.2,

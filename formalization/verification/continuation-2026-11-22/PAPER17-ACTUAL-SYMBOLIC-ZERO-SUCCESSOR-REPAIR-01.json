@@ -1,0 +1,55 @@
+{
+  "status": "source-only outside and signed shift proof repair, no Lean/Git invoked by author",
+  "failed_source_remote_commit": "d67d5761a8b2a04c86970ac66b6a24c026370fd9",
+  "failed_source_local_commit": "40b7641270d63793dde9cc5a56fc09afd6f900c2",
+  "failed_source_tree": "7c9a9bcfcf718a29e1f39cd3fa66b4a296a028ec",
+  "failed_exact_gate_receipt": "1795366716288806839-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualSymbolicZeroSuccessorStatementChecks",
+  "failed_receipt_sha256": "b5275b40a3d5408aa43eb13a99817d68d8177321466c7f84ffdfc10b7e039116",
+  "failed_exact_module_log_sha256": "7ab344914524f59b47aee8ed9c1a3c25cddc53a256c55d8fc7d72fe399c85454",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualSymbolicZeroSuccessorOutsideProof.lean:58:22: error: unsolved goals\ncase pos.short\nf : \u2115 \u2192 \u2115\nB : \u2115\nhf : SelectedWithThreshold f B\n\u03b8 : \u2115 \u2192 \u2115\nC : \u2115\nt : WeightedOperand\nv : \u2115\nactual : LowerOperandActual f \u03b8 t.2 v\nready : t.1 \u2260 0 \u2192 CountTailReady \u03b8 t.2\ni q : \u2115\n\u03ba : \u2124\nnz : t.1 \u2260 0\nrank : \u2115\nlam mu : NONote\nop : t.2 = LowerOperand.count rank lam mu\nsame : f q = C\nfunded : CountTailReady \u03b8 (LowerOperand.count rank lam mu)\nreal : LowerOperandActual f \u03b8 (LowerOperand.count rank lam mu) v\nleft\u271d\u00b3 : (\u2191mu).repr + Ordinal.omega0 ^ 2 \u2264 (\u2191lam).repr\nfirst : FirstEntry f (countInitial (\u2191lam).repr (\u03b8 rank)) ((\u2191mu).repr + Ordinal.omega0 ^ 2) i\nleft\u271d\u00b2 : q = entryNormAt f (countInitial (\u2191lam).repr (\u03b8 rank)) i\nleft\u271d\u00b9 : q = f^[i] (\u03b8 rank)\nleft\u271d : \u03b8 rank + i \u2264 q\n\u03baEq : \u03ba = Targets.countCoreConstant (\u2191mu).repr\nright\u271d : 2 * \u2191v = \u2191(f q) + 2 * (\u2191i + \u03ba) \u2227 \u2200 (D : \u2115), f q \u2264 D \u2192 (\u2191i + \u03ba).natAbs \u2264 D.log2 + \u03ba.natAbs\noriginal : FirstEntry f (countInitial (\u2191lam).repr (\u03b8 rank)) (\u2191(prefixTarget mu)).repr i\neta : NONote\nk : \u2115\nplanFacts :\n  ActualZeroSuccessorPrefixPlan.PlanFacts f B \u03b8 rank lam mu i (ActualZeroSuccessorPrefixPlan.CountPlan.short eta k)\nplan : countPlan lam mu = ActualZeroSuccessorPrefixPlan.CountPlan.short eta k\ngap : shortGapLength lam (prefixTarget mu) = k\nkNZ : k \u2260 0\niNZ : i \u2260 0\n\u22a2 t.1 * (Targets.countCoreConstant (\u2191mu).repr + \u2191k) = t.1 * Targets.countCoreConstant (\u2191mu).repr + t.1 * \u2191k\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualSymbolicZeroSuccessorOutsideProof.lean:84:6: error: unsolved goals\ncase cons.left.false\nf : \u2115 \u2192 \u2115\nB : \u2115\nhf : SelectedWithThreshold f B\n\u03b8 : \u2115 \u2192 \u2115\nC : \u2115\nterms\u271d : List WeightedOperand\nvalues\u271d : List \u2115\nanns\u271d : List Annotation\nt : WeightedOperand\nterms : List WeightedOperand\nv : \u2115\nvalues : List \u2115\na : Annotation\nanns : List Annotation\nactual : LowerOperandActual f \u03b8 t.2 v\nenc : lowerOperandRead f \u03b8 t.2 = some (some v)\nann : ActualAnnotation f \u03b8 t v a\ntail : ActualMixedRowLeadingAnnotations.AlignedAnnotations f \u03b8 terms values anns\nih :\n  (\u2200 t \u2208 terms, t.1 \u2260 0 \u2192 CountTailReady \u03b8 t.2) \u2192\n    outsideSyntax (actualMarked f C terms anns) = List.map Prod.fst (outsideCohort f C terms values anns) \u2227\n      originShifts (actualMarked f C terms anns) = some (replaceRow f C terms values anns).2\nready : \u2200 t_1 \u2208 t :: terms, t_1.1 \u2260 0 \u2192 CountTailReady \u03b8 t_1.2\nhead : WeightedOperand \u00d7 Bool := (t, selected f C a)\nrest : List ActualZeroSuccessorMarkedClass.Marked := actualMarked f C terms anns\ndetails :\n  (if kept (t, selected f C a) = true then [t] else []) = List.map Prod.fst (residualHead f C t v a) \u2227\n    originShift (t, selected f C a) = some (replaceOccurrence f C t v a).2\nrestDetails :\n  outsideSyntax (actualMarked f C terms anns) = List.map Prod.fst (outsideCohort f C terms values anns) \u2227\n    originShifts (actualMarked f C terms anns) = some (replaceRow f C terms values anns).2\nh : kept head = false\n\u22a2 List.map Prod.fst (List.filter kept rest) = List.map Prod.fst (List.filter kept (actualMarked f C terms anns))\n\ncase cons.left.true\nf : \u2115 \u2192 \u2115\nB : \u2115\nhf : SelectedWithThreshold f B\n\u03b8 : \u2115 \u2192 \u2115\nC : \u2115\nterms\u271d : List WeightedOperand\nvalues\u271d : List \u2115\nanns\u271d : List Annotation\nt : WeightedOperand\nterms : List WeightedOperand\nv : \u2115\nvalues : List \u2115\na : Annotation\nanns : List Annotation\nactual : LowerOperandActual f \u03b8 t.2 v\nenc : lowerOperandRead f \u03b8 t.2 = some (some v)\nann : ActualAnnotation f \u03b8 t v a\ntail : ActualMixedRowLeadingAnnotations.AlignedAnnotations f \u03b8 terms values anns\nih :\n  (\u2200 t \u2208 terms, t.1 \u2260 0 \u2192 CountTailReady \u03b8 t.2) \u2192\n    outsideSyntax (actualMarked f C terms anns) = List.map Prod.fst (outsideCohort f C terms values anns) \u2227\n      originShifts (actualMarked f C terms anns) = some (replaceRow f C terms values anns).2\nready : \u2200 t_1 \u2208 t :: terms, t_1.1 \u2260 0 \u2192 CountTailReady \u03b8 t_1.2\nhead : WeightedOperand \u00d7 Bool := (t, selected f C a)\nrest : List ActualZeroSuccessorMarkedClass.Marked := actualMarked f C terms anns\ndetails :\n  (if kept (t, selected f C a) = true then [t] else []) = List.map Prod.fst (residualHead f C t v a) \u2227\n    originShift (t, selected f C a) = some (replaceOccurrence f C t v a).2\nrestDetails :\n  outsideSyntax (actualMarked f C terms anns) = List.map Prod.fst (outsideCohort f C terms values anns) \u2227\n    originShifts (actualMarked f C terms anns) = some (replaceRow f C terms values anns).2\nh : kept head = true\n\u22a2 List.map Prod.fst (List.filter kept rest) = List.map Prod.fst (List.filter kept (actualMarked f C terms anns))\n",
+  "failed_original_native_log_sha256": "d7cdc2ff29659af7c297b6b10424c7a33eae76c24289869694a463a9638ba65c",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualSymbolicZeroSuccessorOutsideProof.lean",
+  "failed_proof_sha256": "d16005887e7fd191902ec4105a46a1612da7d1b84d3d62eff49bcaac3495515b",
+  "repaired_proof_sha256": "ccc3d0527a7a070243ec77437234892ee7ef94c97aa45500fdd9b2c62418df03",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-SYMBOLIC-ZERO-SUCCESSOR-REPAIR-01.patch",
+  "patch_sha256": "649d887a7ff3e94026a87ac15a4416d48e6d0bd3e460ae1e7f4b0d4b9dcfbf99",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-SYMBOLIC-ZERO-SUCCESSOR-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "7e1831b8aa6d2c2528d07b9752eeb0f04884f95ad9aed2425f363420e219642d",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualSymbolicZeroSuccessorTargets.lean": "1ccb77f01fb54b9085d3e890b013e2af8ecfc7f7d0255c47432e139f4854f79d",
+    "formalization/LogicLineages/PermittedControl/ActualSymbolicZeroSuccessorMovedProof.lean": "5ec0a562a7f380199420c1842d0dc5706c1e498c1b3c5d93478f1b0da790e2ee",
+    "formalization/LogicLineages/PermittedControl/ActualSymbolicZeroSuccessorProof.lean": "074007e35efddc5dbf930a9588e93feb4f6b8fcbd67d3011687283b8141b8a12",
+    "formalization/LogicLineages/PermittedControl/ActualSymbolicZeroSuccessorStatementChecks.lean": "b01292081ca2ebeac0d3e84efcfc8e41cfd23022965a6686b35e57812824e08d",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-SYMBOLIC-ZERO-SUCCESSOR-SOURCE-MAP.md": "869cb09d03cae95dbbeaff78118ccd3c33ba24db905340db804ef2743361123a"
+  },
+  "static_module_closure_unchanged": {
+    "Targets": {
+      "local": 200,
+      "external": 33,
+      "contains_totient": false
+    },
+    "MovedProof": {
+      "local": 201,
+      "external": 33,
+      "contains_totient": false
+    },
+    "OutsideProof": {
+      "local": 413,
+      "external": 40,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 431,
+      "external": 41,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 432,
+      "external": 41,
+      "contains_totient": false
+    }
+  },
+  "scope": "Only distributivity mul_add on the original signed short-count origin shift and the literal rest alias in the outside trace list. No changes to source, selected origins, exact H, scope, imports or other modules."
+}

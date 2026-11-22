@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualSymbolicZeroSuccessorOutsideProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualSymbolicZeroSuccessorOutsideProof.lean
+@@ -64 +64 @@
+-              originShift,nz,op,same,plan,iNZ,gap,kNZ,κEq]
++              originShift,nz,op,same,plan,iNZ,gap,kNZ,κEq,mul_add]
+@@ -87 +87 @@
+-        cases h : kept head <;> simp [outsideSyntax,h,head]
++        cases h : kept head <;> simp [outsideSyntax,h,head,rest]
