@@ -1,0 +1,247 @@
+Compiling LogicLineages.PermittedControl.ActualZeroClassSelectedCountKeysProof
+LogicLineages/PermittedControl/ActualZeroClassSelectedCountKeysProof.lean:119:21: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  List.map (fun kd => (countOperand r) kd.1) indexed
+in the target expression
+  (List.map (⇑(countOperand r) ∘ Prod.fst) indexed).Nodup
+
+f ρ : ℕ → ℕ
+C r : ℕ
+constant : ℤ
+raw xs : List Read
+annotations : List Annotation
+anchor : Option SurvivingPrefix
+ledger : List DispositionEntry
+moved : List Read
+paid : liftedReads f ρ raw
+bounded : ∀ rd ∈ raw, rd.1.2.rank < r
+normalized : normalizeReads f ρ raw = some xs
+aligned : AlignedAnnotations f ρ (List.map Prod.fst xs) (List.map Prod.snd xs) annotations
+present : C ∈ fullValues f annotations
+disposed : DisposedOrigins f ρ anchor (countOrigins f C xs annotations) ledger moved
+row : RankedRow r := rankedRow r constant raw
+selected : List Read := classReads f C xs annotations
+origins : List Origin := countOrigins f C xs annotations
+indexed : List (KeyedDisposition r) := keyedLedger r ledger
+horder : List.map Prod.fst ledger = origins
+hout✝ : normalizeReads f ρ raw = some xs
+left✝⁶ : liftedReads f ρ xs
+left✝⁵ : readSum raw = readSum xs
+left✝⁴ :
+  ∀ k ∈ (rankedRow r constant raw).count.support,
+    WitnessesColumn f ρ xs ((countOperand r) k) ((rankedRow r constant raw).count k)
+left✝³ :
+  ∀ k ∈ (rankedRow r constant raw).value.support,
+    WitnessesColumn f ρ xs ((valueOperand r) k) ((rankedRow r constant raw).value k)
+hcolumns : ∀ read ∈ xs, IsInRankedColumn (rankedRow r constant raw) read
+hout : normalizeReads f ρ raw = some xs
+left✝² : List.map (fun r => r.1.2) xs = (groupedWeights raw).support.toList
+hnodup : (List.map (fun r => r.1.2) xs).Nodup
+left✝¹ : liftedReads f ρ xs
+left✝ : readSum raw = readSum xs
+right✝ : ∀ r ∈ xs, r.1.1 = (groupedWeights raw) r.1.2 ∧ r.1.1 ≠ 0 ∧ ∃ prior ∈ raw, prior.1.2 = r.1.2 ∧ prior.2 = r.2
+hselected :
+  have ledger := classLedger f C xs annotations;
+  have selected := classReads f C xs annotations;
+  selected.Sublist xs ∧
+    (∀ item ∈ ledger, ActualAnnotation f ρ item.1.1 item.1.2 item.2 ∧ fullValue f item.2 = some C) ∧
+      (∀ rd ∈ selected, NonlinearOperand rd.1.2) ∧
+        (selected ≠ [] ↔ C ∈ fullValues f annotations) ∧
+          (ActualMixedRowLeadingSum.rowParts f C (List.map Prod.fst xs) (List.map Prod.snd xs) annotations).1 =
+            (List.map leadingWeight selected).sum
+hclass :
+  have row := rankedRow r constant raw;
+  have selected := classReads f C xs annotations;
+  have columns := finiteClassColumns r selected;
+  columns.1 ⊆ row.value.support ∧
+    columns.2 ⊆ row.count.support ∧
+      (columns.1.Nonempty ∨ columns.2.Nonempty) ∧
+        (∀ (k : ValueKey r), k ∈ columns.1 ↔ ∃ rd ∈ selected, rd.1.2 = (valueOperand r) k) ∧
+          (∀ (k : CountKey r), k ∈ columns.2 ↔ ∃ rd ∈ selected, rd.1.2 = (countOperand r) k) ∧
+            (ActualMixedRowLeadingSum.rowParts f C (List.map Prod.fst xs) (List.map Prod.snd xs) annotations).1 =
+              2 * ∑ k ∈ columns.1, row.value k + ∑ k ∈ columns.2, row.count k
+originsSub : (List.map Prod.fst origins).Sublist selected
+hcounts : ∀ o ∈ origins, ∃ rank lam mu, o.1.1.2 = LowerOperand.count rank lam mu
+allKnown :
+  ∀ item ∈ ledger,
+    ∃ k,
+      finiteClassKey r item.1.1.1.2 = some (Sum.inr k) ∧ item.1.1.1.2 = (countOperand r) k ∧ item.1.1.1.1 = row.count k
+hmatch : List.Forall₂ (KeyedMatch row) ledger indexed
+hmaps : List.map (fun kd => (countOperand r) kd.1) indexed = List.map (fun item => item.1.1.1.2) ledger
+hrawKeys : List.map (fun item => item.1.1.1.2) ledger = List.map (fun rd => rd.1.2) (List.map Prod.fst origins)
+⊢ (List.map (⇑(countOperand r) ∘ Prod.fst) indexed).Nodup
+LogicLineages/PermittedControl/ActualZeroClassSelectedCountKeysProof.lean:128:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  List.map (⇑(countOperand r) ∘ Prod.fst) ?m.653
+in the target expression
+  (countOperand r) k ∈ List.map (fun kd => (countOperand r) kd.1) indexed
+
+f ρ : ℕ → ℕ
+C r : ℕ
+constant : ℤ
+raw xs : List Read
+annotations : List Annotation
+anchor : Option SurvivingPrefix
+ledger : List DispositionEntry
+moved : List Read
+paid : liftedReads f ρ raw
+bounded : ∀ rd ∈ raw, rd.1.2.rank < r
+normalized : normalizeReads f ρ raw = some xs
+aligned : AlignedAnnotations f ρ (List.map Prod.fst xs) (List.map Prod.snd xs) annotations
+present : C ∈ fullValues f annotations
+disposed : DisposedOrigins f ρ anchor (countOrigins f C xs annotations) ledger moved
+row : RankedRow r := rankedRow r constant raw
+selected : List Read := classReads f C xs annotations
+origins : List Origin := countOrigins f C xs annotations
+indexed : List (KeyedDisposition r) := keyedLedger r ledger
+horder : List.map Prod.fst ledger = origins
+hout✝ : normalizeReads f ρ raw = some xs
+left✝⁶ : liftedReads f ρ xs
+left✝⁵ : readSum raw = readSum xs
+left✝⁴ :
+  ∀ k ∈ (rankedRow r constant raw).count.support,
+    WitnessesColumn f ρ xs ((countOperand r) k) ((rankedRow r constant raw).count k)
+left✝³ :
+  ∀ k ∈ (rankedRow r constant raw).value.support,
+    WitnessesColumn f ρ xs ((valueOperand r) k) ((rankedRow r constant raw).value k)
+hcolumns : ∀ read ∈ xs, IsInRankedColumn (rankedRow r constant raw) read
+hout : normalizeReads f ρ raw = some xs
+left✝² : List.map (fun r => r.1.2) xs = (groupedWeights raw).support.toList
+hnodup : (List.map (fun r => r.1.2) xs).Nodup
+left✝¹ : liftedReads f ρ xs
+left✝ : readSum raw = readSum xs
+right✝ : ∀ r ∈ xs, r.1.1 = (groupedWeights raw) r.1.2 ∧ r.1.1 ≠ 0 ∧ ∃ prior ∈ raw, prior.1.2 = r.1.2 ∧ prior.2 = r.2
+hselected :
+  have ledger := classLedger f C xs annotations;
+  have selected := classReads f C xs annotations;
+  selected.Sublist xs ∧
+    (∀ item ∈ ledger, ActualAnnotation f ρ item.1.1 item.1.2 item.2 ∧ fullValue f item.2 = some C) ∧
+      (∀ rd ∈ selected, NonlinearOperand rd.1.2) ∧
+        (selected ≠ [] ↔ C ∈ fullValues f annotations) ∧
+          (ActualMixedRowLeadingSum.rowParts f C (List.map Prod.fst xs) (List.map Prod.snd xs) annotations).1 =
+            (List.map leadingWeight selected).sum
+hclass :
+  have row := rankedRow r constant raw;
+  have selected := classReads f C xs annotations;
+  have columns := finiteClassColumns r selected;
+  columns.1 ⊆ row.value.support ∧
+    columns.2 ⊆ row.count.support ∧
+      (columns.1.Nonempty ∨ columns.2.Nonempty) ∧
+        (∀ (k : ValueKey r), k ∈ columns.1 ↔ ∃ rd ∈ selected, rd.1.2 = (valueOperand r) k) ∧
+          (∀ (k : CountKey r), k ∈ columns.2 ↔ ∃ rd ∈ selected, rd.1.2 = (countOperand r) k) ∧
+            (ActualMixedRowLeadingSum.rowParts f C (List.map Prod.fst xs) (List.map Prod.snd xs) annotations).1 =
+              2 * ∑ k ∈ columns.1, row.value k + ∑ k ∈ columns.2, row.count k
+originsSub : (List.map Prod.fst origins).Sublist selected
+hcounts : ∀ o ∈ origins, ∃ rank lam mu, o.1.1.2 = LowerOperand.count rank lam mu
+allKnown :
+  ∀ item ∈ ledger,
+    ∃ k,
+      finiteClassKey r item.1.1.1.2 = some (Sum.inr k) ∧ item.1.1.1.2 = (countOperand r) k ∧ item.1.1.1.1 = row.count k
+hmatch : List.Forall₂ (KeyedMatch row) ledger indexed
+hmaps : List.map (fun kd => (countOperand r) kd.1) indexed = List.map (fun item => item.1.1.1.2) ledger
+hrawKeys : List.map (fun item => item.1.1.1.2) ledger = List.map (fun rd => rd.1.2) (List.map Prod.fst origins)
+hnd : (List.map Prod.fst indexed).Nodup
+k : CountKey r
+hk : k ∈ List.map Prod.fst (keyedLedger r ledger)
+⊢ (countOperand r) k ∈ List.map (fun kd => (countOperand r) kd.1) indexed
+LogicLineages/PermittedControl/ActualZeroClassSelectedCountKeysProof.lean:138:69: error: Application type mismatch: The argument
+  he
+has type
+  rd.1.2 = (countOperand r) k
+but is expected to have type
+  rd = ?m.799
+in the application
+  Eq.trans hro he
+LogicLineages/PermittedControl/ActualZeroClassSelectedCountKeysProof.lean:142:75: error: Application type mismatch: The argument
+  he
+has type
+  rd.1.2 = (countOperand r) k
+but is expected to have type
+  rd = ?m.861
+in the application
+  Eq.trans hro he
+LogicLineages/PermittedControl/ActualZeroClassSelectedCountKeysProof.lean:143:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  List.map (⇑(countOperand r) ∘ Prod.fst) ?m.866
+in the target expression
+  (countOperand r) k ∈ List.map (fun kd => (countOperand r) kd.1) indexed
+
+case mpr
+f ρ : ℕ → ℕ
+C r : ℕ
+constant : ℤ
+raw xs : List Read
+annotations : List Annotation
+anchor : Option SurvivingPrefix
+ledger : List DispositionEntry
+moved : List Read
+paid : liftedReads f ρ raw
+bounded : ∀ rd ∈ raw, rd.1.2.rank < r
+normalized : normalizeReads f ρ raw = some xs
+aligned : AlignedAnnotations f ρ (List.map Prod.fst xs) (List.map Prod.snd xs) annotations
+present : C ∈ fullValues f annotations
+disposed : DisposedOrigins f ρ anchor (countOrigins f C xs annotations) ledger moved
+row : RankedRow r := rankedRow r constant raw
+selected : List Read := classReads f C xs annotations
+origins : List Origin := countOrigins f C xs annotations
+indexed : List (KeyedDisposition r) := keyedLedger r ledger
+horder : List.map Prod.fst ledger = origins
+hout✝ : normalizeReads f ρ raw = some xs
+left✝⁶ : liftedReads f ρ xs
+left✝⁵ : readSum raw = readSum xs
+left✝⁴ :
+  ∀ k ∈ (rankedRow r constant raw).count.support,
+    WitnessesColumn f ρ xs ((countOperand r) k) ((rankedRow r constant raw).count k)
+left✝³ :
+  ∀ k ∈ (rankedRow r constant raw).value.support,
+    WitnessesColumn f ρ xs ((valueOperand r) k) ((rankedRow r constant raw).value k)
+hcolumns : ∀ read ∈ xs, IsInRankedColumn (rankedRow r constant raw) read
+hout : normalizeReads f ρ raw = some xs
+left✝² : List.map (fun r => r.1.2) xs = (groupedWeights raw).support.toList
+hnodup : (List.map (fun r => r.1.2) xs).Nodup
+left✝¹ : liftedReads f ρ xs
+left✝ : readSum raw = readSum xs
+right✝ : ∀ r ∈ xs, r.1.1 = (groupedWeights raw) r.1.2 ∧ r.1.1 ≠ 0 ∧ ∃ prior ∈ raw, prior.1.2 = r.1.2 ∧ prior.2 = r.2
+hselected :
+  have ledger := classLedger f C xs annotations;
+  have selected := classReads f C xs annotations;
+  selected.Sublist xs ∧
+    (∀ item ∈ ledger, ActualAnnotation f ρ item.1.1 item.1.2 item.2 ∧ fullValue f item.2 = some C) ∧
+      (∀ rd ∈ selected, NonlinearOperand rd.1.2) ∧
+        (selected ≠ [] ↔ C ∈ fullValues f annotations) ∧
+          (ActualMixedRowLeadingSum.rowParts f C (List.map Prod.fst xs) (List.map Prod.snd xs) annotations).1 =
+            (List.map leadingWeight selected).sum
+hclass :
+  have row := rankedRow r constant raw;
+  have selected := classReads f C xs annotations;
+  have columns := finiteClassColumns r selected;
+  columns.1 ⊆ row.value.support ∧
+    columns.2 ⊆ row.count.support ∧
+      (columns.1.Nonempty ∨ columns.2.Nonempty) ∧
+        (∀ (k : ValueKey r), k ∈ columns.1 ↔ ∃ rd ∈ selected, rd.1.2 = (valueOperand r) k) ∧
+          (∀ (k : CountKey r), k ∈ columns.2 ↔ ∃ rd ∈ selected, rd.1.2 = (countOperand r) k) ∧
+            (ActualMixedRowLeadingSum.rowParts f C (List.map Prod.fst xs) (List.map Prod.snd xs) annotations).1 =
+              2 * ∑ k ∈ columns.1, row.value k + ∑ k ∈ columns.2, row.count k
+originsSub : (List.map Prod.fst origins).Sublist selected
+hcounts : ∀ o ∈ origins, ∃ rank lam mu, o.1.1.2 = LowerOperand.count rank lam mu
+allKnown :
+  ∀ item ∈ ledger,
+    ∃ k,
+      finiteClassKey r item.1.1.1.2 = some (Sum.inr k) ∧ item.1.1.1.2 = (countOperand r) k ∧ item.1.1.1.1 = row.count k
+hmatch : List.Forall₂ (KeyedMatch row) ledger indexed
+hmaps : List.map (fun kd => (countOperand r) kd.1) indexed = List.map (fun item => item.1.1.1.2) ledger
+hrawKeys : List.map (fun item => item.1.1.1.2) ledger = List.map (fun rd => rd.1.2) (List.map Prod.fst origins)
+hnd : (List.map Prod.fst indexed).Nodup
+k : CountKey r
+hk : k ∈ (finiteClassColumns r (classReads f C xs annotations)).2
+rd : Read
+hrd : rd ∈ classReads f C xs annotations
+he : rd.1.2 = (countOperand r) k
+o : Read × Annotation
+ho : o ∈ classLedger f C xs annotations
+hro : o.1 = rd
+ha : ActualAnnotation f ρ o.1.1 o.1.2 o.2
+hfull : fullValue f o.2 = some C
+hcount : isCountAnnotation o.2 = true
+horig : o ∈ origins
+hmem : (countOperand r) k ∈ List.map (fun kd => (countOperand r) kd.1) indexed
+⊢ k ∈ List.map Prod.fst (keyedLedger r ledger)
+COMPILE_FAILED LogicLineages.PermittedControl.ActualZeroClassSelectedCountKeysProof: 1
+BUILD_RECEIPT build-reports/1795341663987959597-872.json

@@ -114,9 +114,12 @@ theorem exactSelectedCountKeyLedger : ExactSelectedCountKeyLedger := by
       _ = ((ledger.map Prod.fst).map Prod.fst).map (fun rd => rd.1.2) := by
         simp only [List.map_map,Function.comp_def]
       _ = _ := by rw [horder]
+  have hflatten : (indexed.map Prod.fst).map (countOperand r) =
+      indexed.map (fun kd => countOperand r kd.1) := by
+    simp only [List.map_map,Function.comp_def]
   have hnd : (indexed.map Prod.fst).Nodup := by
     apply List.Nodup.of_map (countOperand r)
-    rw [List.map_map,hmaps,hrawKeys]
+    rw [hflatten,hmaps,hrawKeys]
     exact ((originsSub.trans hselected.1).map _).nodup hnodup
   refine ⟨horder,hmatch,hnd,?_⟩
   apply Finset.ext
@@ -125,7 +128,7 @@ theorem exactSelectedCountKeyLedger : ExactSelectedCountKeyLedger := by
   constructor
   · intro hk
     have hmem : countOperand r k ∈ indexed.map (fun kd => countOperand r kd.1) := by
-      rw [← List.map_map (g := countOperand r) (f := @Prod.fst (CountKey r) CountDisposition)]
+      rw [← hflatten]
       exact List.mem_map.mpr ⟨k,hk,rfl⟩
     rw [hmaps,hrawKeys] at hmem
     obtain ⟨rd,hrd,he⟩ := List.mem_map.mp hmem
@@ -133,14 +136,16 @@ theorem exactSelectedCountKeyLedger : ExactSelectedCountKeyLedger := by
   · intro hk
     obtain ⟨rd,hrd,he⟩ := (hclass.2.2.2.2.1 k).mp hk
     obtain ⟨o,ho,hro⟩ := List.mem_map.mp hrd
+    have hop : o.1.1.2 = countOperand r k :=
+      (congrArg (fun p : Read => p.1.2) hro).trans he
     obtain ⟨ha,hfull⟩ := hselected.2.1 o ho
     have hcount : isCountAnnotation o.2 = true :=
-      (countedShape f ρ C o ha hfull).mpr ⟨k.2,k.1.1,k.1.2,hro.trans he⟩
+      (countedShape f ρ C o ha hfull).mpr ⟨k.2,k.1.1,k.1.2,hop⟩
     have horig : o ∈ origins := List.mem_filter.mpr ⟨ho,hcount⟩
     have hmem : countOperand r k ∈ indexed.map (fun kd => countOperand r kd.1) := by
       rw [hmaps,hrawKeys]
-      exact List.mem_map.mpr ⟨o.1,List.mem_map.mpr ⟨o,horig,rfl⟩,hro.trans he⟩
-    rw [← List.map_map (g := countOperand r) (f := @Prod.fst (CountKey r) CountDisposition)] at hmem
+      exact List.mem_map.mpr ⟨o.1,List.mem_map.mpr ⟨o,horig,rfl⟩,hop⟩
+    rw [← hflatten] at hmem
     obtain ⟨j,hj,hjk⟩ := List.mem_map.mp hmem
     exact (countOperand r).injective hjk ▸ hj
 

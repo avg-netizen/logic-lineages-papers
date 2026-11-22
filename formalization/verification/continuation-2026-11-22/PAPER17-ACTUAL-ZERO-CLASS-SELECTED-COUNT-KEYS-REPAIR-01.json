@@ -1,0 +1,27 @@
+{
+  "status": "source-only narrow proof repair; exact native/axiom gate pending",
+  "failed_receipt": "1795341663987959597-872",
+  "failed_native_receipt_sha256": "d9fa96b8770c53f7c31dff2a5be36099a2ec50731e0de2184e2eb27f04963035",
+  "failed_gate_log_sha256": "c72206cac070d1c84c7f2b703c60f0b41bc1c7f041deda72e2237d4608067f86",
+  "failed_diagnostics": [
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedCountKeysProof.lean:119:21: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedCountKeysProof.lean:128:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedCountKeysProof.lean:138:69: error: Application type mismatch: The argument",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedCountKeysProof.lean:142:75: error: Application type mismatch: The argument",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedCountKeysProof.lean:143:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern"
+  ],
+  "diagnosis": "Map proofs needed explicit equality between function composition and its lambda form (119/128/143); record equality o.1 = rd needed projection to actual operand before transitivity (138/142). No target, definitions, guard, syntax or imports changed.",
+  "changed_source": "formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedCountKeysProof.lean",
+  "old_failed_source_sha256": "0cb54dce137ff464b6329575db16bfbbe0f80ceaa36c6c4ab9523c46c05738dc",
+  "new_source_sha256": "90923e838e960a1b308674ca43f728a683c18cae0f0c7d1049b4585bfd2a5bcb",
+  "zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-ZERO-CLASS-SELECTED-COUNT-KEYS-REPAIR-01.patch",
+  "patch_sha256": "a8dd1efd258b291b07c9b43ffa13f53958a7c58ec8c24f5bfeaed94ea9985ff4",
+  "inverse_exact_failed_bytes_verified": true,
+  "immutable_original_manifest": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-ZERO-CLASS-SELECTED-COUNT-KEYS-AUTHOR-MANIFEST.json": "9177a1933ae726e75738ac2cc51f3d0e6812e2b629750469312edec9f7a43975"
+  },
+  "unchanged_source_pins": {
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedCountKeysTargets.lean": "da6c32549377ce8393a16cbc6ef3e7291568737ad37e649f637b4525c2359e33",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedCountKeysStatementChecks.lean": "4377313250fb31342f33621f29e42ecc7d09672239a822fbfdc345fa731a9630"
+  }
+}
