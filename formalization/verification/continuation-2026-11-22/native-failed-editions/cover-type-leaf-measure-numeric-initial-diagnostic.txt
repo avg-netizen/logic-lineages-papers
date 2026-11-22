@@ -1,0 +1,18 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafMeasureNumericProof.lean:30:17: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  evaluate (Program.composition ?p (Fin.cons ?a (Fin.cons ?b Fin.elim0))) ?xs
+in the target expression
+  evaluate (pairing.composition ![literal 1 1, constantZero 1]) (raw ::ᵥ nil) = Encodable.encode (1, 0)
+
+raw : ℕ
+⊢ evaluate (pairing.composition ![literal 1 1, constantZero 1]) (raw ::ᵥ nil) = Encodable.encode (1, 0)
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafMeasureNumericProof.lean:36:2: warning: 'change evaluate (leafMeasureBase M) (n ::ᵥ nil) = Encodable.encode (bounds n).1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverTypeLeafMeasureNumericProof.exact_CoverTypeLeafMeasureBase' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverTypeLeafMeasureNumericProof.exact_CoverTypeLeafSharedMeasure' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

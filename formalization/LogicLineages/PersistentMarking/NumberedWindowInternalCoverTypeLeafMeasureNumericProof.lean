@@ -27,7 +27,9 @@ open NumberedWindowInternalCoverTypeLeafMeasureTargets
 
 private theorem pairValue (raw : Nat) :
     evaluate leafPair10 (raw ::ᵥ nil) = Encodable.encode ((1,0) : Nat × Nat) := by
-  rw [leafPair10,compositeTwo,literalEvaluation]
+  change evaluate (.composition pairing (Fin.cons (literal 1 1) (Fin.cons (constantZero 1) Fin.elim0)))
+    (raw ::ᵥ nil) = Encodable.encode ((1,0) : Nat × Nat)
+  rw [compositeTwo,literalEvaluation]
   have zero : evaluate (constantZero 1) (raw ::ᵥ nil) = 0 := rfl
   rw [zero,exactPairingEvaluation] <;> simp only [Encodable.encode_prod_val,Encodable.encode_nat]
 

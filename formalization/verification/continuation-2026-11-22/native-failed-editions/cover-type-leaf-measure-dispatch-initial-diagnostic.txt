@@ -1,0 +1,30 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafMeasureDispatchProof.lean:73:9: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Nonempty.casesOn` can only eliminate into `Prop`
+
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+n : ℕ
+p q : Program n
+xs : Fin n → OTerm α
+zero : Nonempty (Derivation body Γ (programGraph p z xs))
+F : ID1Completion.InternalCalculus.Formula α := programGraph (conjunction p q) (suc z) xs
+x✝ : Nonempty (Derivation body (F :: Γ) (programGraph p (suc z) xs ⊓ programGraph q (suc z) xs))
+⊢ Derivation body (programGraph (conjunction p q) (suc z) xs :: Γ) ⊥
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafMeasureDispatchProof.lean:84:9: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Nonempty.casesOn` can only eliminate into `Prop`
+
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+n : ℕ
+p q : Program n
+xs : Fin n → OTerm α
+zero : Nonempty (Derivation body Γ (programGraph q z xs))
+F : ID1Completion.InternalCalculus.Formula α := programGraph (conjunction p q) (suc z) xs
+x✝ : Nonempty (Derivation body (F :: Γ) (programGraph p (suc z) xs ⊓ programGraph q (suc z) xs))
+⊢ Derivation body (programGraph (conjunction p q) (suc z) xs :: Γ) ⊥
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverTypeLeafMeasureDispatchProof.exact_OpenCoverTypeLeafMeasureDispatch' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

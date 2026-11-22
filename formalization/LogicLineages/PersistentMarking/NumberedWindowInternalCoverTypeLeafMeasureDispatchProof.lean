@@ -68,22 +68,18 @@ private theorem leftZero {n : Nat} (p q : Program n) (xs : Fin n → OTerm α)
     Nonempty (Derivation body Γ (programGraph (conjunction p q) z xs)) := by
   let F := programGraph (conjunction p q) (suc z) xs
   apply conjunctionReject p q xs
-  apply Nonempty.intro
-  apply Derivation.implicationIntroduction
   obtain ⟨both⟩ := conjunctionRecover p q xs (body := body) (Gamma := F :: Γ) ⟨Derivation.hypothesis List.mem_cons_self⟩
   obtain ⟨bad⟩ := valueUnique p (suc z) z xs ⟨Derivation.conjunctionLeft both⟩ (withHyp zero F)
-  exact sucNeZeroApply bad
+  exact ⟨Derivation.implicationIntroduction (sucNeZeroApply bad)⟩
 
 private theorem rightZero {n : Nat} (p q : Program n) (xs : Fin n → OTerm α)
     (zero : Nonempty (Derivation body Γ (programGraph q z xs))) :
     Nonempty (Derivation body Γ (programGraph (conjunction p q) z xs)) := by
   let F := programGraph (conjunction p q) (suc z) xs
   apply conjunctionReject p q xs
-  apply Nonempty.intro
-  apply Derivation.implicationIntroduction
   obtain ⟨both⟩ := conjunctionRecover p q xs (body := body) (Gamma := F :: Γ) ⟨Derivation.hypothesis List.mem_cons_self⟩
   obtain ⟨bad⟩ := valueUnique q (suc z) z xs ⟨Derivation.conjunctionRight both⟩ (withHyp zero F)
-  exact sucNeZeroApply bad
+  exact ⟨Derivation.implicationIntroduction (sucNeZeroApply bad)⟩
 
 private theorem auxReject (ty : OTerm α)
     (head : Nonempty (Derivation body Γ (unary cellHead (numeral 3) (typeLeafTerm ty)))) :

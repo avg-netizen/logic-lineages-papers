@@ -1,0 +1,48 @@
+{
+  "status": "narrow proof-only first repair; exact native retry pending",
+  "immutable_previous_verified_remote": "e4f23469fadb9df476d995474766b3a1960e43d9",
+  "previous_source_local_prefix": "51479bbd4",
+  "receipt": {
+    "path": "formalization/build-reports/1795360569117246425-10.json",
+    "sha256": "457266ea65dd84ed93344f7a461ec9ef8a1e76b77a5cf640eb9c9a5ba9ad8cde"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795360569117246425-10-LogicLineages-PersistentMarking-NumberedWindowInternalCoverTypeLeafMeasureNumericProof.log",
+    "sha256": "e475f95abad7a67d26b930b00bba32ef1f831a60ed9974f1a09ec70aef5592e0"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-type-leaf-measure-numeric-initial-diagnostic.txt",
+    "sha256": "e475f95abad7a67d26b930b00bba32ef1f831a60ed9974f1a09ec70aef5592e0"
+  },
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-COVER-TYPE-LEAF-MEASURE-NUMERIC-REPAIR-01.patch",
+    "sha256": "6884c8caedcd417d8cfa5745b6e683d221248c2c86ec32ac89426abb109cb337"
+  },
+  "archived_failed_source": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverTypeLeafMeasureNumericProof-01.lean",
+    "sha256": "712328c60eb979cf7c09fb3f13f8157e45f79fe98977776339f9229da5ca3b71"
+  },
+  "repaired_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafMeasureNumericProof.lean",
+    "sha256": "fac24b0e4e5c4f212cb04d7cccbb55494ad078a1f12712465a43352bff07672d"
+  },
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafMeasureTargets.lean",
+      "sha256": "ad1f23c721ece5dc35ac516024be9db359eab6bfe4c18a09c241e672b7e6e19b"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafSharedMeasureProof.lean",
+      "sha256": "53603263dd4616f4e7380b0eb2d7855ee60a4a538f63cb79001fcc2df2efc0d1"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafMeasuredBaseScratchProof.lean",
+      "sha256": "2731a36ef14f03085d75af330ec9cd00ab87ed48306833fa6734811520aa58ec"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-COVER-TYPE-LEAF-MEASURED-SUCCESSOR-BASE-SOURCE-MAP.md",
+      "sha256": "a243c759ef9e2df0c8d17dcc5a4424ee17be61cd320df70e284dccb001de8810"
+    }
+  ],
+  "diagnosis": "Use the definitionally identical explicit Fin.cons component tape expected by the existing binary composition evaluator. The physical pairing AST, component programs, numeric scope and statements are unchanged. Shared and scratch roots were not attempted. Failed sorryAx is not acceptance."
+}

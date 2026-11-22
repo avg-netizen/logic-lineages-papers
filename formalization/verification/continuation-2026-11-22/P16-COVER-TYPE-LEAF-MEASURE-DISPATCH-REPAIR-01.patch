@@ -1,0 +1,14 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafMeasureDispatchProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafMeasureDispatchProof.lean
+@@ -71,2 +70,0 @@
+-  apply Nonempty.intro
+-  apply Derivation.implicationIntroduction
+@@ -75 +73 @@
+-  exact sucNeZeroApply bad
++  exact ⟨Derivation.implicationIntroduction (sucNeZeroApply bad)⟩
+@@ -82,2 +79,0 @@
+-  apply Nonempty.intro
+-  apply Derivation.implicationIntroduction
+@@ -86 +82 @@
+-  exact sucNeZeroApply bad
++  exact ⟨Derivation.implicationIntroduction (sucNeZeroApply bad)⟩
