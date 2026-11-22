@@ -30,8 +30,8 @@ theorem exact_OpenCoverRefinedStep : ExactOpenCoverRefinedStep := by
   intro V T body α Γ prior old row
   let xs : Fin 4 → OTerm α := ![prior,old,z,z]
   obtain ⟨both⟩ := conjunctionRecover (sharedSyntaxUpdate V T) headerOnRow xs row.update
-  have key := unaryGraph .succ (.projection 0) (suc prior) prior xs
-    (successorValue ![prior]) (projectionValue 0 xs)
+  have key : Nonempty (Derivation body Γ (programGraph currentKey (suc prior) xs)) :=
+    unaryGraph .succ (.projection 0) (suc prior) prior xs (successorValue ![prior]) (projectionValue 0 xs)
   have check : Nonempty (Derivation body Γ (unary (headerAny layout) (suc z) (suc prior))) := by
     apply compositionRecover (headerAny layout) (fun _ : Fin 1 => currentKey)
       (suc z) xs ![suc prior] ⟨Derivation.conjunctionRight both⟩

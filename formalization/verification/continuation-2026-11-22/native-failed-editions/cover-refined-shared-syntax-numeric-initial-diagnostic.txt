@@ -1,0 +1,35 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRefinedSharedSyntaxNumericProof.lean:33:29: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRefinedSharedSyntaxNumericProof.lean:58:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if false.toNat = 1 ∧ evaluate (headerAny layout) ((i + 1) ::ᵥ nil) = 1 then ?m.131 else ?m.132
+in the target expression
+  (if false.toNat = 1 ∧ run (headerAny layout) (i + 1) = 1 then 1 else 0) = false.toNat
+
+case false
+V T : Program 1
+cv : TermSyntaxCalibrated V
+ct : TypeSyntaxCalibrated T
+i old : ℕ
+earlier : ∀ n < i + 1, evaluate InternalRawListRecursion.lookup ((i - n) ::ᵥ old ::ᵥ nil) = (syntaxBits n).1.toNat
+h : (syntaxBits (i + 1)).1 = false
+reject : ¬(false.toNat = 1 ∧ evaluate (headerAny layout) ((i + 1) ::ᵥ nil) = 1)
+⊢ (if false.toNat = 1 ∧ run (headerAny layout) (i + 1) = 1 then 1 else 0) = false.toNat
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRefinedSharedSyntaxNumericProof.lean:59:2: error: unsolved goals
+case true
+V T : Program 1
+cv : TermSyntaxCalibrated V
+ct : TypeSyntaxCalibrated T
+i old : ℕ
+earlier : ∀ n < i + 1, evaluate InternalRawListRecursion.lookup ((i - n) ::ᵥ old ::ᵥ nil) = (syntaxBits n).1.toNat
+h : (syntaxBits (i + 1)).1 = true
+pass : evaluate (headerAny layout) ((i + 1) ::ᵥ nil) = 1
+⊢ 1 = true.toNat
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverRefinedSharedSyntaxNumericProof.exact_CoverRefinedSharedSyntaxStep' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverRefinedSharedSyntaxNumericProof.exact_CoverRefinedSharedSyntax' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

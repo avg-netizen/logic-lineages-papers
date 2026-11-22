@@ -54,11 +54,10 @@ theorem exact_CoverRefinedSharedSyntaxStep : ExactCoverRefinedSharedSyntaxStep :
     headerOnRow,unaryValue,current]
   cases h : (syntaxBits (i+1)).1
   · have reject : ¬ ((Bool.toNat false : Nat) = 1 ∧
-        evaluate (headerAny layout) ((i+1) ::ᵥ nil) = 1) := fun check => by cases check.1
-    rw [if_neg reject]
+        run (headerAny layout) (i+1) = 1) := fun check => by cases check.1
+    rw [if_neg reject] <;> rfl
   · have pass := acceptedLayout V cv (i+1) h
-    change evaluate (headerAny layout) ((i+1) ::ᵥ nil) = 1 at pass
-    rw [if_pos ⟨rfl,pass⟩]
+    rw [if_pos ⟨rfl,pass⟩] <;> rfl
 
 private theorem selectedRow (V T : Program 1) (cv : TermSyntaxCalibrated V) (ct : TypeSyntaxCalibrated T)
     (n : Nat) :
