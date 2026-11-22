@@ -51,9 +51,10 @@ theorem exactRawMarkedSuccessor : ExactRawMarkedSuccessor := by
       movedCode (leastCode (cohortCode (ms.map encodeMark))) (cohortCode (ms.map encodeMark)) =
       before.map encodeWeighted := by
     rw [outsideCalibration,cohortCalibration,leastCalibration,moveCalibration]
-    exact (List.map_append _ _).symm
+    exact List.map_append.symm
   unfold markedSuccessorCode successorFromMarks
-  simp only [Prod.mk_snd,Prod.mk_fst,shiftsCalibration]
+  dsimp only
+  rw [shiftsCalibration]
   cases status : originShifts ms with
   | none => rfl
   | some delta =>
@@ -63,7 +64,6 @@ theorem exactRawMarkedSuccessor : ExactRawMarkedSuccessor := by
       some (encodeSyntax ⟨constant+delta+cleanupShift before,cleanSyntax before⟩)
     rw [arranged]
     change some (constant+delta+shiftCode (before.map encodeWeighted),retainCode (before.map encodeWeighted)) = _
-    rw [shiftCalibration,retainCalibration]
-    rfl
+    rw [shiftCalibration,retainCalibration] <;> rfl
 
 end LogicLineages.PermittedControl.ActualRawMarkedZeroSuccessor

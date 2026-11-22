@@ -1,0 +1,13 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorProof.lean
+@@ -54 +54 @@
+-    exact (List.map_append _ _).symm
++    exact List.map_append.symm
+@@ -56 +56,2 @@
+-  simp only [Prod.mk_snd,Prod.mk_fst,shiftsCalibration]
++  dsimp only
++  rw [shiftsCalibration]
+@@ -66,2 +67 @@
+-    rw [shiftCalibration,retainCalibration]
+-    rfl
++    rw [shiftCalibration,retainCalibration] <;> rfl
