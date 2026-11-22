@@ -1,0 +1,32 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentMemoNumericProof.lean:63:29: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentMemoNumericProof.lean:67:48: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentMemoNumericProof.lean:67:48: warning: 'rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentMemoNumericProof.lean:89:17: error: Tactic `rfl` failed: The left-hand side
+  evaluate (atPredecessor (InternalAcceptance.branch gap (InternalLessThan.constantOne 1) (constantZero 1)))
+    ((n + 1) ::ᵥ nil)
+is not definitionally equal to the right-hand side
+  1
+
+case isTrue
+F : Program 1
+fits : TermMeasureCalibrated F
+n old : ℕ
+earlier : ∀ k < n + 1, evaluate lookup ((n - k) ::ᵥ old ::ᵥ nil) = Encodable.encode (bounds k).2
+read : decode n = none
+absent : NumberedWindowInternalSparseFieldCell.chosenCell (n + 1) = none
+non : run cellGood (n + 1) ≠ 1
+pos : n + 1 ≠ 0
+h✝ : evaluate gap (ofFn fun x => evaluate InternalEqualityTest.predecessor ((n + 1) ::ᵥ nil)) = 0
+⊢ evaluate (atPredecessor (InternalAcceptance.branch gap (InternalLessThan.constantOne 1) (constantZero 1)))
+      ((n + 1) ::ᵥ nil) =
+    1
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverArgumentMemoNumericProof.exact_CoverArgumentMemo' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

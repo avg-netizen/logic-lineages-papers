@@ -1,0 +1,17 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentMemoNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentMemoNumericProof.lean
+@@ -85,2 +85,3 @@
+-        change evaluate good (List.Vector.ofFn (fun _ : Fin 1 =>
+-            evaluate InternalEqualityTest.predecessor ((n+1) ::ᵥ nil))) = 0 ∨ _
++        let xs : List.Vector Nat 1 := List.Vector.ofFn (fun _ : Fin 1 =>
++          evaluate InternalEqualityTest.predecessor ((n+1) ::ᵥ nil))
++        change evaluate good xs = 0 ∨ evaluate good xs = 1
+@@ -89,2 +90,6 @@
+-        · right; rfl
+-        · left; rfl
++        · right
++          change evaluate (InternalLessThan.constantOne 1) xs = 1
++          rfl
++        · left
++          change evaluate (constantZero 1) xs = 0
++          rfl

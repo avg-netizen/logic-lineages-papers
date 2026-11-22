@@ -82,12 +82,17 @@ private theorem step (F : Program 1) (fits : TermMeasureCalibrated F) (n old : N
         change (if n+1 = 0 then 0 else evaluate (atPredecessor good) ((n+1) ::ᵥ nil)) = 0 ∨
           (if n+1 = 0 then 0 else evaluate (atPredecessor good) ((n+1) ::ᵥ nil)) = 1
         rw [if_neg pos]
-        change evaluate good (List.Vector.ofFn (fun _ : Fin 1 =>
-            evaluate InternalEqualityTest.predecessor ((n+1) ::ᵥ nil))) = 0 ∨ _
+        let xs : List.Vector Nat 1 := List.Vector.ofFn (fun _ : Fin 1 =>
+          evaluate InternalEqualityTest.predecessor ((n+1) ::ᵥ nil))
+        change evaluate good xs = 0 ∨ evaluate good xs = 1
         rw [good,evalBranch]
         split
-        · right; rfl
-        · left; rfl
+        · right
+          change evaluate (InternalLessThan.constantOne 1) xs = 1
+          rfl
+        · left
+          change evaluate (constantZero 1) xs = 0
+          rfl
       exact bits.resolve_right non
     rw [fail,if_pos rfl,source,read]
     rfl
