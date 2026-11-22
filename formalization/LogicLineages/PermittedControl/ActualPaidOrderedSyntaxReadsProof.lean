@@ -65,7 +65,7 @@ theorem exactPaidOrderedSyntaxReads : ExactPaidOrderedSyntaxReads := by
   obtain ⟨rs,frames,live⟩ := ordered f B selected ρ s.terms proper
     (fun t used => (ceilingDominates t s.terms used).trans (paid t used))
   refine ⟨⟨s.constant,rs⟩,?_,live⟩
-  cases s
-  exact congrArg (fun ts => ⟨_,ts⟩) frames
+  cases s with
+  | mk c ts => exact congrArg (ActualSymbolicZeroSuccessor.SyntaxState.mk c) frames
 
 end LogicLineages.PermittedControl.ActualPaidOrderedSyntaxReads

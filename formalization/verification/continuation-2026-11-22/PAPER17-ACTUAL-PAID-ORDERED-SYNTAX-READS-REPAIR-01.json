@@ -1,0 +1,43 @@
+{
+  "status": "narrow source-only syntax constructor elaboration repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "af7ed619caf866e18fbcb69d217dd49d2d66645e",
+  "failed_source_local_commit": "5474afd3d505f1fbd1eb095afc2829385322a8da",
+  "failed_source_tree": "559b55feb8ebbd3df39f8b041438fb6fd50bb7e0",
+  "failed_exact_gate_receipt": "1795368356510880423-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualPaidOrderedSyntaxReadsStatementChecks",
+  "failed_receipt_sha256": "3be0f23d4aceb5989e8cc77a642e24b8669b5586334539e20bca568697ad6f0e",
+  "failed_exact_module_log_sha256": "d41b00179abea504e57b219aef061a823092b3d5cf16b1293d64f792b7a13132",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualPaidOrderedSyntaxReadsProof.lean:69:28: error: Invalid `\u27e8...\u27e9` notation: The expected type of this term could not be determined\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualPaidOrderedSyntaxReadsProof.lean:69:2: error: Type mismatch\n  congrArg (fun ts => ?m.69) frames\nhas type\n  ?m.70 (List.map Prod.fst rs) = ?m.70 { constant := constant\u271d, terms := terms\u271d }.terms\nbut is expected to have type\n  stateSyntax { constant := { constant := constant\u271d, terms := terms\u271d }.constant, reads := rs } =\n    { constant := constant\u271d, terms := terms\u271d }\n",
+  "failed_original_native_log_sha256": "557a8f718c8bd8595c6a6e17f51e6977ace51ed633abb28e60bbcc6200809940",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualPaidOrderedSyntaxReadsProof.lean",
+  "failed_proof_sha256": "66cb7f0b6e915d1e45d075a776f4cceacb20779d5a39b9867010b12ab5472152",
+  "repaired_proof_sha256": "89006fa90367fab2b6fed4fdd91934a664cfd385365369377f1371ae44494536",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-PAID-ORDERED-SYNTAX-READS-REPAIR-01.patch",
+  "patch_sha256": "690e4844fbce83d22578ab1cc14bd279c6cb79243bc620c55fc51c98130c864f",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-PAID-ORDERED-SYNTAX-READS-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "9bbc90b35c478f8554c4dacb3007f2ccad864f4be06c0f334b9c7b7be2db49eb",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualPaidOrderedSyntaxReadsStatementChecks.lean": "ead3123fcd3a583cfe3eb45a13bc24f1137fe4483c96683eec7e1d3d97d0642d",
+    "formalization/LogicLineages/PermittedControl/ActualPaidOrderedSyntaxReadsTargets.lean": "8013f31ec3c28eed308d50c43509edc89e034b4ab75cc49b44b7fa2bd8376e5f",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-PAID-ORDERED-SYNTAX-READS-SOURCE-MAP.md": "8e27944afd00690f356fdec39a3e9e99734163d6dc7fba9ee6dead6dd872ff9a"
+  },
+  "static_module_closure_unchanged": {
+    "Proof": {
+      "local": 349,
+      "external": 40,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 350,
+      "external": 40,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 212,
+      "external": 33,
+      "contains_totient": false
+    }
+  },
+  "scope": "Explicit original SyntaxState constructor in same final frames congruence; no targets/imports/scope/status change."
+}
