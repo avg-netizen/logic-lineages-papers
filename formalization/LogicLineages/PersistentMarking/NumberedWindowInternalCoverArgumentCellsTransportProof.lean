@@ -40,9 +40,29 @@ variable {body : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
 private theorem impRename {β : Type} (P Q : Formula α) (j : α → β) :
     (P.imp Q).relabel j = (P.relabel j).imp (Q.relabel j) := rfl
 
+section
+attribute [local irreducible] programGraph
+
 theorem axisRename {β : Type} (old next : OTerm α) (j : α → β) :
     (axisInclusion old next).relabel j = axisInclusion (old.relabel j) (next.relabel j) := by
-  simp only [axisInclusion,actualUniversalRenaming,impRename,graphRename,Term.relabel_relabel] <;> rfl
+  let a : α → α ⊕ Fin 1 := Sum.inl
+  let b : β → β ⊕ Fin 1 := Sum.inl
+  let J : α ⊕ Fin 1 → β ⊕ Fin 1 := Sum.map j id
+  let x : OTerm (α ⊕ Fin 1) := .var (.inr 0)
+  let y : OTerm (β ⊕ Fin 1) := .var (.inr 0)
+  let phi := (memberGraph (old.relabel a) x).imp (memberGraph (next.relabel a) x)
+  let psi := (memberGraph ((old.relabel j).relabel b) y).imp (memberGraph ((next.relabel j).relabel b) y)
+  change (allOne phi).relabel j = allOne psi
+  rw [actualUniversalRenaming α β j phi]
+  apply congrArg allOne
+  change ((memberGraph (old.relabel a) x).imp (memberGraph (next.relabel a) x)).relabel J = psi
+  rw [impRename,graphRename,graphRename]
+  have free (t : OTerm α) : (t.relabel a).relabel J = (t.relabel j).relabel b := by
+    simp only [Term.relabel_relabel] <;> rfl
+  have bound : x.relabel J = y := rfl
+  rw [free old,free next,bound]
+
+end
 
 private theorem useAxis (old next key : OTerm α)
     (inclusion : Nonempty (Derivation body Γ (axisInclusion old next)))

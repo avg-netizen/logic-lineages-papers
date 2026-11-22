@@ -1,0 +1,34 @@
+{
+  "status": "Proof-only explicit object-universal and matrix renaming; native gate pending",
+  "failed_receipt": "1795345800419352912-10",
+  "failed_receipt_sha256": "013045d1714e158b7e13822fa0130640ae43b7d2731f90db188ffcfe71886ba1",
+  "immutable_previous_commit": "090e34a33061b82c0b10b1174e8abbb6c5635c88",
+  "failed_combined_log_sha256": "93813add977f2c3a4705cc77743353879e04bd4ded57856e603e23efd6ff3a56",
+  "failed_diagnostic": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-argument-cells-transport-precheck01-diagnostic.txt": "c322d1af3bae7c18c60d58202e2155172a3213fc16d8ad88078cd8a4f3f4e76d"
+  },
+  "failed_errors": [
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsTransportProof.lean:45:99: error: (deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached"
+  ],
+  "diagnosis": "The monolithic simp/rfl ran into default isDefEq heartbeats and did not use structural relabel lemmas. Expose exact allOne matrix, rewrite using actualUniversalRenaming, structural implication/membership relabels and small term equalities. Keep programGraph irreducible in this lemma only; no resource changes, import changes, target changes, AST changes or downstream theorem edits.",
+  "changed_source": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsTransportProof.lean",
+  "old_failed_source_sha256": "2adc7d8ae5d335a1c7d722f5ade9c11e49b901e838c0f030293e48d67ea1f19a",
+  "new_source_sha256": "ebf5d884d6809d6fc01f47d1c73b2dfea3eff3e3fd11852db9f3148fe56b5433",
+  "failed_source_archive": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverArgumentCellsTransportProof-01.lean": "2adc7d8ae5d335a1c7d722f5ade9c11e49b901e838c0f030293e48d67ea1f19a"
+  },
+  "zero_context_patch": {
+    "formalization/verification/continuation-2026-11-22/P16-COVER-ARGUMENT-CELLS-TRANSPORT-REPAIR-01.patch": "bb72955e4d67cfed3da6a7d7727f8ed6c113d96a3f4b8818dca2061a7051ae75"
+  },
+  "forward_and_inverse_exact_bytes_verified": true,
+  "unchanged_source_pins": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsBindingProof.lean": "9341081f37643403148862cd60f5435b2c3849d157313e69d5305f04bbfeff9f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsConstructorProof.lean": "6e592b5ae71c00355d51c3c8da6cd8e485801a862cb97182fa1068db1ed31337",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsNumericProof.lean": "755d44185b4197b948f972b4c7ed666d8e0543849fefdb791036999cbfec05b9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsOpenDataProof.lean": "9aaf5ad402538ce7a22bbb5658aefba57a90c45cee4d907112c103fb2813594d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsOriginProof.lean": "476787f6008acba1029560090b7610742dc0a554e8717ded6510547e87e741dc",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsTargets.lean": "11086fdd35d247b2cde8bb913895314d87430be045c61cfc15fbaff7c7d33dde",
+    "formalization/verification/continuation-2026-11-22/P16-COVER-ARGUMENT-CELLS-TRANSPORT-PRECHECK-01.json": "9405d072d8971317ad31f5e64107ef7f92640551b207498807ac155a7ab08e13",
+    "formalization/verification/continuation-2026-11-22/P16-ORIGINAL-COVER-ARGUMENT-CELLS-SOURCE-MAP.md": "08d1b85db89b132f7fc20b82fce23d4f34f4f06a5451830bb60133b36a025751"
+  }
+}

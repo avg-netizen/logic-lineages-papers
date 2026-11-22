@@ -1,0 +1,26 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsTransportProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsTransportProof.lean
+@@ -42,0 +43,3 @@
++section
++attribute [local irreducible] programGraph
++
+@@ -45 +48,18 @@
+-  simp only [axisInclusion,actualUniversalRenaming,impRename,graphRename,Term.relabel_relabel] <;> rfl
++  let a : α → α ⊕ Fin 1 := Sum.inl
++  let b : β → β ⊕ Fin 1 := Sum.inl
++  let J : α ⊕ Fin 1 → β ⊕ Fin 1 := Sum.map j id
++  let x : OTerm (α ⊕ Fin 1) := .var (.inr 0)
++  let y : OTerm (β ⊕ Fin 1) := .var (.inr 0)
++  let phi := (memberGraph (old.relabel a) x).imp (memberGraph (next.relabel a) x)
++  let psi := (memberGraph ((old.relabel j).relabel b) y).imp (memberGraph ((next.relabel j).relabel b) y)
++  change (allOne phi).relabel j = allOne psi
++  rw [actualUniversalRenaming α β j phi]
++  apply congrArg allOne
++  change ((memberGraph (old.relabel a) x).imp (memberGraph (next.relabel a) x)).relabel J = psi
++  rw [impRename,graphRename,graphRename]
++  have free (t : OTerm α) : (t.relabel a).relabel J = (t.relabel j).relabel b := by
++    simp only [Term.relabel_relabel] <;> rfl
++  have bound : x.relabel J = y := rfl
++  rw [free old,free next,bound]
++
++end
