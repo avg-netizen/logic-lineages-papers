@@ -18,7 +18,7 @@ open OriginalRankedLiteralClauseHigh (familyNeed OriginalSetup highMinimum highP
 open ActualSymbolicPredecessorProjection (prepend)
 open ActualGreatestRouteResidual (Residual lowerFamily)
 
-def names (family : Family) : List Nat := (coordinates family).toList
+noncomputable def names (family : Family) : List Nat := (coordinates family).toList
 
 def renameBit (p : Pattern) (row : BitRow) : BitRow := (renameRow (rename p) row.1,row.2)
 
