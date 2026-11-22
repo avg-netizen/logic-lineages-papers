@@ -1,0 +1,56 @@
+{
+  "status": "narrow data declaration and consumed binder repair; exact native retry pending",
+  "immutable_previous_verified_remote": "7ad32739c418e61f0ea97dfc7df2b6dffa2a2e09",
+  "previous_source_local_prefix": "0a29fb13a",
+  "receipt": {
+    "path": "formalization/build-reports/1795360044210582883-74.json",
+    "sha256": "4e4c4f9e7c0b354070217644c1243114e87dc2849e19f0d1a6b79ffc90c048be"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795360044210582883-74-LogicLineages-PersistentMarking-NumberedWindowInternalCoverRefinedInductionDispatchTransportProof.log",
+    "sha256": "2d2643c6c3218bcebc93e804b708708bc2cfefa0fa1948dee1a2e2cd6bd83abd"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-refined-induction-dispatch-transport-initial-diagnostic.txt",
+    "sha256": "2d2643c6c3218bcebc93e804b708708bc2cfefa0fa1948dee1a2e2cd6bd83abd"
+  },
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-COVER-REFINED-INDUCTION-DISPATCH-TRANSPORT-REPAIR-01.patch",
+    "sha256": "7afa744e5d9841028901cb079cb862a0fd3677cf5b084ec3c8b2b408c2813c36"
+  },
+  "archived_failed_source": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverRefinedInductionDispatchTransportProof-01.lean",
+    "sha256": "f8885908e70f8d723633143b4e18050960bc8067dbbd97d7eef8554c8db34163"
+  },
+  "repaired_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRefinedInductionDispatchTransportProof.lean",
+    "sha256": "501e8418d484a3e1ede60a0aea711709535cdca84824dfe74de3323cb33ea3c3"
+  },
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRefinedInductionDispatchTargets.lean",
+      "sha256": "058f9204e7cd93565ca290f841562bb963104725059b3c050499b3936004f54e"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRefinedInductionDispatchLeavesProof.lean",
+      "sha256": "2c86688ceeb66ec001d382982f73d199035c66cfb741006ee8ed66bac3be5b34"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRefinedInductionDispatchArgsProof.lean",
+      "sha256": "d3fc75e6c18acbde1f6ea696d824ef71bd51ee9f2a6f052698d81fbaa2f25fee"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRefinedInductionDispatchRecursiveProof.lean",
+      "sha256": "becfb8a468bac841595ed69d321881122e77a7def03576ffff76bd605066d98c"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRefinedInductionDispatchProof.lean",
+      "sha256": "bf866d18a5433f0c7626dea9412bcb0a051755898b1cf77b5a7b9835872e59fd"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-COVER-REFINED-SEVEN-CASE-INDUCTION-DISPATCH-SOURCE-MAP.md",
+      "sha256": "f4b5c07a5541588f91fc43dc278cf9981d65129745949a7cd0c7d7ddc62be511"
+    }
+  ],
+  "diagnosis": "Register the unchanged Derivation-data helper as private def: it is not a proposition. Native packRow also reports consumed same at all four literal uses. Unpack only an alias of that very same equality derivation, retaining original Nonempty evidence unchanged for all its existing uses. No target, helper proof body, graph, physical AST, sibling proof, or downstream typing/numerical scope changed. Siblings were not attempted."
+}

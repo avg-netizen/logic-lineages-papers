@@ -58,7 +58,7 @@ theorem ownBelowRename (V : Program 1) (W C : Program 3) (s : Settings) (q : OTe
   unfold ownMotive
   rw [ownAtRename] <;> rfl
 
-private theorem moveBelow (V : Program 1) (W C : Program 3) (s : Settings)
+private def moveBelow (V : Program 1) (W C : Program 3) (s : Settings)
     (u v : OTerm α) (eq : Derivation body Γ (eqn u v))
     (h : Derivation body Γ (ownBelow V W C s u)) :
     Derivation body Γ (ownBelow V W C s v) := by
@@ -113,7 +113,8 @@ theorem packRow (P : Programs) (s : Settings)
     (same : Nonempty (Derivation body Γ (eqn raw key)))
     (header : Nonempty (Derivation body Γ (NumberedWindowInternalCoverSelectedValidityTargets.headerAt tag fields.length raw))) :
     PackedRow P s body Γ raw key p vertices ctx result tag fields := by
-  obtain ⟨e⟩ := same
+  have equality := same
+  obtain ⟨e⟩ := equality
   obtain ⟨typed⟩ := row.typed
   obtain ⟨hbelow⟩ := row.branchBelow
   have valid := moveUnary P.V (suc z) raw key same row.parent.valid
