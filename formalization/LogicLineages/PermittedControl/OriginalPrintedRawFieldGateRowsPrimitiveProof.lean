@@ -41,6 +41,7 @@ private theorem shapePrimitive : Primrec identityShapeCode := by
   have constant : Primrec (fun head : Nat => (if terminalScanGuard (head,head) then 0 else 1 : Int)) := by
     apply (Primrec.cond enabled (Primrec.const 0) (Primrec.const 1)).of_eq
     intro head
+    simp only [id_eq]
     cases terminalScanGuard (head,head) <;> rfl
   exact (Primrec.const ((0,0) : TestCode)).pair (constant.pair (Primrec.const []))
 
@@ -71,32 +72,58 @@ private theorem identityPrimitive (count : Bool) : Primrec (fun p : Nat × Nat �
   | false => exact tail _ (equalityPrimitive.comp (coordinatePrimitive.comp source) o)
   | true => exact tail _ (zeroPrimitive.comp o)
 
+private theorem sourcePrimitive : Primrec (fun g : RawGate => g.2.1) :=
+  Primrec.fst.comp Primrec.snd
+
+private theorem outputPrimitive : Primrec (fun g : RawGate => g.2.2.1) :=
+  Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
+
+private theorem payloadPrimitive : Primrec (fun g : RawGate => g.2.2.2.1) :=
+  Primrec.fst.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
+
+private theorem headPrimitive : Primrec (fun g : RawGate => g.2.2.2.1.1) :=
+  Primrec.fst.comp payloadPrimitive
+
+private theorem endpointPrimitive : Primrec (fun g : RawGate => g.2.2.2.1.2) :=
+  Primrec.snd.comp payloadPrimitive
+
+private theorem iterateOperandPrimitive : Primrec (fun g : RawGate =>
+    ((1,g.2.1,(0,g.2.2.2.1.1,0,0)) : LowerOperandCode)) :=
+  (Primrec.const 1).pair (sourcePrimitive.pair
+    ((Primrec.const 0).pair (headPrimitive.pair (Primrec.const (0,0)))))
+
+private theorem properOperandPrimitive (k : Nat) : Primrec (fun g : RawGate =>
+    ((k,g.2.1,(1,0,g.2.2.2.1.1,g.2.2.2.1.2)) : LowerOperandCode)) :=
+  (Primrec.const k).pair (sourcePrimitive.pair ((Primrec.const 1).pair
+    ((Primrec.const 0).pair (headPrimitive.pair endpointPrimitive))))
+
+private theorem onePrimitive {operand : RawGate → LowerOperandCode} (h : Primrec operand) :
+    Primrec (fun g : RawGate => some [equalityCode (operand g) g.2.2.1]) :=
+  Primrec.option_some.comp
+    (Primrec.list_cons.comp (equalityPrimitive.comp h outputPrimitive) (Primrec.const []))
+
+private theorem identityCasePrimitive (b : Bool) : Primrec (fun g : RawGate =>
+    some (identityRowsCode b g.2.2.2.1.1 g.2.1 g.2.2.1)) :=
+  Primrec.option_some.comp ((identityPrimitive b).comp
+    (headPrimitive.pair (sourcePrimitive.pair outputPrimitive)))
+
+private theorem dispatchPrimitive {A T : Type} [Primcodable A] [Primcodable T]
+    {tag : A → Nat} {on2 on3 on4 on5 on6 : A → Option T}
+    (ht : Primrec tag) (h2 : Primrec on2) (h3 : Primrec on3) (h4 : Primrec on4)
+    (h5 : Primrec on5) (h6 : Primrec on6) :
+    Primrec (fun a : A => if tag a = 2 then on2 a else if tag a = 3 then on3 a
+      else if tag a = 4 then on4 a else if tag a = 5 then on5 a
+      else if tag a = 6 then on6 a else none) := by
+  have eq (k : Nat) : PrimrecPred (fun a : A => tag a = k) :=
+    Primrec.eq.comp ht (Primrec.const k)
+  exact Primrec.ite (eq 2) h2 (Primrec.ite (eq 3) h3 (Primrec.ite (eq 4) h4
+    (Primrec.ite (eq 5) h5 (Primrec.ite (eq 6) h6 (Primrec.const none)))))
+
 private theorem rowsPrimitive : Primrec rowsCode := by
-  have tag : Primrec (fun g : RawGate => g.1) := Primrec.fst
-  have source : Primrec (fun g : RawGate => g.2.1) := Primrec.fst.comp Primrec.snd
-  have output : Primrec (fun g : RawGate => g.2.2.1) :=
-    Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
-  have payload : Primrec (fun g : RawGate => g.2.2.2.1) :=
-    Primrec.fst.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
-  have head : Primrec (fun g : RawGate => g.2.2.2.1.1) := Primrec.fst.comp payload
-  have endpoint : Primrec (fun g : RawGate => g.2.2.2.1.2) := Primrec.snd.comp payload
-  have it : Primrec (fun g : RawGate => ((1,g.2.1,(0,g.2.2.2.1.1,0,0)) : LowerOperandCode)) :=
-    (Primrec.const 1).pair (source.pair ((Primrec.const 0).pair (head.pair (Primrec.const (0,0)))))
-  have proper (k : Nat) : Primrec (fun g : RawGate =>
-      ((k,g.2.1,(1,0,g.2.2.2.1.1,g.2.2.2.1.2)) : LowerOperandCode)) :=
-    (Primrec.const k).pair (source.pair ((Primrec.const 1).pair
-      ((Primrec.const 0).pair (head.pair endpoint))))
-  have one {field : RawGate → LowerOperandCode} (h : Primrec field) :
-      Primrec (fun g : RawGate => some [equalityCode (field g) g.2.2.1]) :=
-    Primrec.option_some.comp (Primrec.list_cons.comp (equalityPrimitive.comp h output) (Primrec.const []))
-  have identity (b : Bool) : Primrec (fun g : RawGate =>
-      some (identityRowsCode b g.2.2.2.1.1 g.2.1 g.2.2.1)) :=
-    Primrec.option_some.comp ((identityPrimitive b).comp (head.pair (source.pair output)))
-  have check (k : Nat) : PrimrecPred (fun g : RawGate => g.1 = k) :=
-    Primrec.eq.comp tag (Primrec.const k)
-  exact Primrec.ite (check 2) (one it) (Primrec.ite (check 3) (one (proper 1))
-    (Primrec.ite (check 4) (one (proper 2)) (Primrec.ite (check 5) (identity false)
-      (Primrec.ite (check 6) (identity true) (Primrec.const none)))))
+  have tag : Primrec (Prod.fst : RawGate → Nat) := Primrec.fst
+  exact (dispatchPrimitive tag (onePrimitive iterateOperandPrimitive)
+    (onePrimitive (properOperandPrimitive 1)) (onePrimitive (properOperandPrimitive 2))
+    (identityCasePrimitive false) (identityCasePrimitive true)).of_eq (fun _ => rfl)
 
 theorem exactOriginalRawFieldGateEffectivity : ExactOriginalRawFieldGateEffectivity := by
   have step : Primrec (fun p : StepArgs × List RawRow => (p.1.1,p.2)) :=
