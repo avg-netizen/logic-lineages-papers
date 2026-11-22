@@ -1,0 +1,39 @@
+{
+  "status": "source-only narrow proof repair; native retry not run by author",
+  "immutable_failed_source_commit": "66b15baec2b6c719f3a16c177d2a6a05223184f6",
+  "receipt": "1795347919889089172-8",
+  "exact_gate": "LogicLineages.PermittedControl.ActualEffectiveTerminalSignBoundStatementChecks",
+  "failed_receipt_sha256": "c436b0f92be44abc1c80c0aadc8da1e0ffc87ee8bde9da5d6b8e920a78ef45ad",
+  "failed_log_sha256": "b8e614e9043b2f34be43c8975bbf885de2e6f868e0515d79639d99463c35fac3",
+  "failed_module_record": {
+    "module": "LogicLineages.PermittedControl.ActualEffectiveTerminalSignBoundCalibrationProof",
+    "returncode": 1,
+    "seconds": 1.016,
+    "observed_cpu_seconds": 0.96,
+    "last_wait_channel": "__futex_wait",
+    "stopped_threads": [],
+    "peak_process_tree_rss_kib": 983152,
+    "memory_observation_failure": {},
+    "discarded_failed_outputs": [],
+    "source_sha256": "11e2dd10f497fb65e251cf89270232b5f9bec3be4677b0f60fb5551f72203b7a",
+    "log": "build-reports/1795347919889089172-8-LogicLineages-PermittedControl-ActualEffectiveTerminalSignBoundCalibrationProof.log"
+  },
+  "diagnostics": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualEffectiveTerminalSignBoundCalibrationProof.lean:103:16: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  edgeFactorCode (List.map LowerOperand.code ?alphabet)\nin the target expression\n  (have alphabet :=\n      List.map LowerOperand.code\n        (List.flatMap (fun depth => expandSteps depth (List.map Prod.snd terms)) (List.range (budget + 1)));\n    have mass := 3 ^ budget * syntaxMass terms;\n    have constant := c.natAbs + budget * (mass * edgeFactorCode alphabet);\n    SelectedLeadingSignCutoff.cutoff (2 * mass) (constant + mass * correctionMaxCode alphabet)) =\n    have alphabet := List.flatMap (fun depth => expandSteps depth (List.map Prod.snd terms)) (List.range (budget + 1));\n    have mass := 3 ^ budget * syntaxMass terms;\n    have constant := c.natAbs + budget * (mass * edgeFactor alphabet);\n    SelectedLeadingSignCutoff.cutoff (2 * mass) (constant + mass * correctionMaximum alphabet)\n\nbudget : ℕ\nc : ℤ\nterms : List WeightedOperand\nkeys : List.map Prod.snd (List.map encodeWeighted terms) = List.map LowerOperand.code (List.map Prod.snd terms)\n⊢ (have alphabet :=\n      List.map LowerOperand.code\n        (List.flatMap (fun depth => expandSteps depth (List.map Prod.snd terms)) (List.range (budget + 1)));\n    have mass := 3 ^ budget * syntaxMass terms;\n    have constant := c.natAbs + budget * (mass * edgeFactorCode alphabet);\n    SelectedLeadingSignCutoff.cutoff (2 * mass) (constant + mass * correctionMaxCode alphabet)) =\n    have alphabet := List.flatMap (fun depth => expandSteps depth (List.map Prod.snd terms)) (List.range (budget + 1));\n    have mass := 3 ^ budget * syntaxMass terms;\n    have constant := c.natAbs + budget * (mass * edgeFactor alphabet);\n    SelectedLeadingSignCutoff.cutoff (2 * mass) (constant + mass * correctionMaximum alphabet)",
+  "original_author_manifest_sha256": "d789f3316d76b5028a09ece300bd1c0874a8a1eae07528116c1dad7d13435e09",
+  "changed_source": "formalization/LogicLineages/PermittedControl/ActualEffectiveTerminalSignBoundCalibrationProof.lean",
+  "failed_source_sha256": "11e2dd10f497fb65e251cf89270232b5f9bec3be4677b0f60fb5551f72203b7a",
+  "repair_source_sha256": "47353bd45daa3ea8bfd095a2b0f7e6e049132c4fae07749a7ba091ff42e1688a",
+  "preserved_sources_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualEffectiveTerminalSignBoundTargets.lean": "ba5a2d9f5c53786ad93dbf6cad888d64157087fb1c4ffe94ecd2b7c7dc8adddd",
+    "formalization/LogicLineages/PermittedControl/ActualEffectiveTerminalSignBoundPrimitiveProof.lean": "f57595d8af0a95481482a5b5446c417ca5a8a2823d8dff049946e90fa49f4639",
+    "formalization/LogicLineages/PermittedControl/ActualEffectiveTerminalSignBoundDominanceProof.lean": "3ac6f9c809bb95425b9a0fea191ed65d06cf525c6648d6ab217f7b9784a9aab4",
+    "formalization/LogicLineages/PermittedControl/ActualEffectiveTerminalSignBoundStatementChecks.lean": "67492d03072720dc4b926c1bd48f08fb632400920fb26d270ccc43516e4df508",
+    "formalization/LogicLineages/PermittedControl/ActualPaidTerminalSignNormalizationTargets.lean": "050fb210f322b772394c17eadce15e726162d8333007a8aa0e287db5597ab5b2",
+    "formalization/LogicLineages/PermittedControl/ActualPaidTerminalSignNormalizationProof.lean": "d48a1522c31eac910db6ccf2e609ecb9be55b063a788fff6f7ec8e7458f3e30d",
+    "formalization/LogicLineages/PermittedControl/ActualPaidTerminalSignNormalizationStatementChecks.lean": "7e01923de0e939c68fbea1ada432ff4abff6828e0f31812706e03594b9f117a5"
+  },
+  "zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-EFFECTIVE-TERMINAL-SIGN-BOUND-REPAIR-01.patch",
+  "patch_sha256": "36bf2003e8082ccc13cd10167158a331e30ba2b00389525cdc90435170c4d8fb",
+  "inverse": "Reverse exact patch with fuzz zero to recover exact failed initial CalibrationProof bytes.",
+  "change": "After typed key/alphabet and mass calibration, use dsimp only to expose the same let-bound alphabet before exact edge/correction rewrites. No numerical definition, target, primitive or aggregate proof, import or static 209-local/36-external closure changed."
+}

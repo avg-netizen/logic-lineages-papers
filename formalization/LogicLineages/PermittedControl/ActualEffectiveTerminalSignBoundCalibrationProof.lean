@@ -99,8 +99,9 @@ theorem suppliedLiteral (budget : Nat) (c : Int) (terms : List WeightedOperand) 
   have keys : (terms.map encodeWeighted).map Prod.snd = (terms.map Prod.snd).map LowerOperand.code := by
     simp only [List.map_map,Function.comp_def,encodeWeighted]
   unfold signCeilingAtBudgetCode signCeilingAtBudget depthAlphabet
-  rw [keys,ActualZeroEdgeAlphabetCode.codeCalibration.2.2,
-    massLiteral,edgeFactorLiteral,correctionMaxLiteral]
+  rw [keys,ActualZeroEdgeAlphabetCode.codeCalibration.2.2,massLiteral]
+  dsimp only
+  rw [edgeFactorLiteral,correctionMaxLiteral]
 
 theorem inputLiteral (r : Nat) (c : Int) (terms : List WeightedOperand) :
     inputSignBoundCode r c (terms.map encodeWeighted) = signCeilingAtBudget (syntaxBudget r terms) c terms := by
