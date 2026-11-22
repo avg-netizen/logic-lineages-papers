@@ -99,10 +99,16 @@ private theorem safeGate (label : Nat → Nat) (greatest : Nat) (g : NormalizedG
           · exfalso
             simpa [mode,atTop,emit,failedRows,badNames,badTerms] using h
           · by_cases typed : LimitHead head
-            · have eq : n = s := by
-                simpa [mode,atTop,emit,rows,baseRows,limitRows,typed,
-                  AffineCollapseGuardRows.guardRows,AffineCollapseGuardRows.collapseTerms,
-                  badNames,affineBad,badTerms,badOperand] using h
+            · have actual : n ∈ badNames
+                  (AffineCollapseGuardRows.guardRows (OriginalNormalizedCircuitMatrix.typedHead head typed) e s o) := by
+                simpa only [mode,if_neg atTop,emit,rows,baseRows,limitRows,dif_pos typed] using h
+              change n ∈ badTerms (AffineCollapseGuardRows.affineTerms e s) ++
+                (badTerms [(1,.coordinate s)] ++
+                  (badTerms (AffineCollapseGuardRows.collapseTerms
+                    (OriginalNormalizedCircuitMatrix.typedHead head typed) s o) ++ [])) at actual
+              rw [affineBad] at actual
+              have eq : n = s := by
+                simpa [AffineCollapseGuardRows.collapseTerms,badTerms,badOperand] using actual
               simpa only [eq] using atTop
             · exfalso
               simpa [mode,atTop,emit,rows,baseRows,limitRows,typed,failedRows,badNames,badTerms] using h
@@ -203,7 +209,9 @@ theorem exactResolvedMatrixTopLinear : ExactResolvedMatrixTopLinear := by
       exact safeGate tag greatest g n (List.mem_flatMap.mpr ⟨r,there,bad⟩)
     · obtain ⟨a,ha,rfl⟩ := List.mem_map.mp ht
       change n ∈ badTerms (a.row.2.map (fun t => (t.1,.coordinate t.2.name))) at bad
-      rw [bareMap Prod.fst (fun t => t.2.name)] at bad
+      have clearNames := bareMap (fun (t : Int × NormalForm.Summand) => t.1)
+        (fun (t : Int × NormalForm.Summand) => t.2.name) a.row.2
+      rw [clearNames] at bad
       exact False.elim (List.not_mem_nil bad)
   refine ⟨nameSubset,?_⟩
   obtain ⟨_,_,ties⟩ := exactBranchRealization θ (support (matrix known gates p)) branch member ordered
