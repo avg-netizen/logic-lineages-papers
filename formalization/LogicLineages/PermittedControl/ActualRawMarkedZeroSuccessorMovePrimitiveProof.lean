@@ -1,11 +1,11 @@
 module
 public import LogicLineages.PermittedControl.ActualRawMarkedZeroSuccessorTargets
-import LogicLineages.PermittedControl.ConcreteCountPairReplacementProof
+import LogicLineages.PermittedControl.OrdinalEndpointProgramsProof
 import LogicLineages.OrdinalComparison.LayeredComparison.IntegerAlgorithmsProof
 
 @[expose] public section
 namespace LogicLineages.PermittedControl.ActualRawMarkedZeroSuccessor
-open OrdinalComparison.LayeredComparison
+open OrdinalComparison OrdinalComparison.LayeredComparison
 open MixedSameRankResidue ConcreteCountPairReplacement
 
 private theorem leastStepPrimitive : Primrec₂ leastStepCode := by
@@ -40,6 +40,15 @@ private theorem anchorPrimitive : Primrec₂ anchorCode := by
   have key := (Primrec.const 2).pair (rank.pair ((Primrec.const 1).pair ((Primrec.const 0).pair (lam.pair eta))))
   exact ((Primrec.snd : Primrec (Prod.snd : A → Int)).pair key).to₂
 
+private theorem replacementPrimitive : Primrec₂ replacementCode := by
+  let A := Nat × IntervalPairCodes
+  have hp : Primrec (fun z : A => z.2.1) := Primrec.fst.comp Primrec.snd
+  have hq : Primrec (fun z : A => z.2.2) := Primrec.snd.comp Primrec.snd
+  have hd := ordinalSubCodeEffective.comp (Primrec.fst.comp hp) (Primrec.snd.comp hp)
+  have hk := ordinalAddCodeEffective.comp (Primrec.snd.comp hq) hd
+  exact ((Primrec.const 2).pair (Primrec.fst.pair
+    ((Primrec.const 1).pair ((Primrec.const 0).pair ((Primrec.fst.comp hq).pair hk))))).to₂
+
 private theorem moveOnePrimitive : Primrec₂ moveOneCode := by
   let A := PrefixCode × PrefixCode
   have a : Primrec (Prod.fst : A → PrefixCode) := Primrec.fst
@@ -52,7 +61,7 @@ private theorem moveOnePrimitive : Primrec₂ moveOneCode := by
     Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp p))
   have ends := lam.pair eta
   have bare := anchorPrimitive.comp a w
-  have H := codeExact.1.comp (rank.comp a) ((ends.comp p).pair (ends.comp a))
+  have H := replacementPrimitive.comp (rank.comp a) ((ends.comp p).pair (ends.comp a))
   have pair := (IntegerAlgorithms.Proof.negate_primitive.comp w).pair H
   have single := Primrec.list_cons.comp bare (Primrec.const ([] : List WeightedCode))
   have both := Primrec.list_cons.comp bare (Primrec.list_cons.comp pair (Primrec.const []))

@@ -1,0 +1,21 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorMovePrimitiveProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorMovePrimitiveProof.lean
+@@ -3 +3 @@
+-import LogicLineages.PermittedControl.ConcreteCountPairReplacementProof
++import LogicLineages.PermittedControl.OrdinalEndpointProgramsProof
+@@ -8 +8 @@
+-open OrdinalComparison.LayeredComparison
++open OrdinalComparison OrdinalComparison.LayeredComparison
+@@ -42,0 +43,9 @@
++private theorem replacementPrimitive : Primrec₂ replacementCode := by
++  let A := Nat × IntervalPairCodes
++  have hp : Primrec (fun z : A => z.2.1) := Primrec.fst.comp Primrec.snd
++  have hq : Primrec (fun z : A => z.2.2) := Primrec.snd.comp Primrec.snd
++  have hd := ordinalSubCodeEffective.comp (Primrec.fst.comp hp) (Primrec.snd.comp hp)
++  have hk := ordinalAddCodeEffective.comp (Primrec.snd.comp hq) hd
++  exact ((Primrec.const 2).pair (Primrec.fst.pair
++    ((Primrec.const 1).pair ((Primrec.const 0).pair ((Primrec.fst.comp hq).pair hk))))).to₂
++
+@@ -55 +64 @@
+-  have H := codeExact.1.comp (rank.comp a) ((ends.comp p).pair (ends.comp a))
++  have H := replacementPrimitive.comp (rank.comp a) ((ends.comp p).pair (ends.comp a))

@@ -1,0 +1,74 @@
+{
+  "status": "source-only exact local digit recut following preflight missing cache; not native verification",
+  "native_failed_receipt": null,
+  "failed_source": {
+    "local": "f9562dbf11383a916565d42282b6043235cfb095",
+    "remote": "e435da06653b75905aff2ca1870ce6d03a24c917",
+    "tree": "15ace61048f9f501c5c47e3e9ba80b585777a5ab"
+  },
+  "prior_author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MARKED-ZERO-SUCCESSOR-AUTHOR-MANIFEST.json",
+  "prior_author_manifest_sha256": "dce21ba40a8b8227dea6f8d81ab98875896507e92a4bb14d3869d4e58b3b221a",
+  "preflight_log": {
+    "name": "ii5-nov22-actual-raw-marked-zero-successor.log",
+    "sha256": "3796bf741c6a1ab1196e6df9175fc8cfdd0c37dc9c91126a9d851c4d4317f13d",
+    "stdout": "Traceback (most recent call last):\n  File \"/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/scripts/check.py\", line 561, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/scripts/check.py\", line 435, in main\n    cache_context = checked_compiler_context(compiler, env, external_imports)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/scripts/check.py\", line 306, in checked_compiler_context\n    raise RuntimeError('Cannot identify external cached import: ' + module)\nRuntimeError: Cannot identify external cached import: Mathlib.Tactic.LinearCombination\n"
+  },
+  "before_import_path": [
+    "ActualRawMarkedZeroSuccessorMoveProof or ActualRawMarkedZeroSuccessorMovePrimitiveProof",
+    "ConcreteCountPairReplacementProof",
+    "CountTransferProof",
+    "Mathlib.Tactic.LinearCombination"
+  ],
+  "scope": "Only recover exact local replacementCode calibration and Primrec from literal ordinal digit operations; no change to compiler function, guards, target, checker, cache or any other proof.",
+  "after_direct_replacement_imports": [
+    "LogicLineages.PermittedControl.ThresholdNoteCodeProof",
+    "LogicLineages.PermittedControl.OrdinalEndpointProgramsProof"
+  ],
+  "after_static_closure": {
+    "MoveProof": {
+      "local": 329,
+      "external": 35,
+      "linearCombination": false,
+      "totient": false
+    },
+    "MovePrimitiveProof": {
+      "local": 326,
+      "external": 37,
+      "linearCombination": false,
+      "totient": false
+    },
+    "StatementChecks": {
+      "local": 405,
+      "external": 41,
+      "linearCombination": false,
+      "totient": false
+    }
+  },
+  "leaves": [
+    {
+      "file": "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorMoveProof.lean",
+      "old_sha256": "f41a99b5a77f1d2732578a9212174dbc1f02105fe7e31772fb552cc4fced908b",
+      "new_sha256": "9bab678c8d45d685ad23c94108466b8eac67307042c75c62d3de9c0a5e6a417f",
+      "patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MARKED-ZERO-SUCCESSOR-RECUT-01-MoveProof.patch",
+      "patch_sha256": "b019ca13265deb33558c990a45cd242a2c42bb14a7b7915f5e73ca2571099fd6",
+      "exact_inverse_checked": true
+    },
+    {
+      "file": "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorMovePrimitiveProof.lean",
+      "old_sha256": "87c8f53a1eb9012e05ea11467d3f263f5a936ba6eb15269db16837bfdd94a5ed",
+      "new_sha256": "753469b08fa73767e3ea1d08836a6e1afbcea22dae3544b62b8aa428c04dabc4",
+      "patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MARKED-ZERO-SUCCESSOR-RECUT-01-MovePrimitiveProof.patch",
+      "patch_sha256": "49be7eabbf29eb6e0e9f90c760255fb5f6c73a3c1b348c6b38a8982af56d0bda",
+      "exact_inverse_checked": true
+    }
+  ],
+  "unchanged": {
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorPlanPrimitiveProof.lean": "136b1cc97e65bf384308a4a5231e6839e3ce40c8b6a4228de9f9c31465d06712",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorPlanProof.lean": "8da74932286c397553d4b04d456c832b6911bebb5a4c2aec10ff7dc93e9d1b5b",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorPrimitiveProof.lean": "3f5e04e644719be33a09adb12e827b37276511a0a6ac5a7e303aaa02f38f920b",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorProof.lean": "4ddce600babf5e705162cd6ce3b6aa78acd2551dc43b7c77e20166449559dc8b",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorStatementChecks.lean": "16f07952f2329956167965e7e3fb95dc5f2051b3acbaa92876b7ad371444cf9c",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorTargets.lean": "d4358749791f9359ffbbf9b344e5507fe41ba64ecfc4f9e2d91d405bf04ba6c8",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MARKED-ZERO-SUCCESSOR-SOURCE-MAP.md": "44adc71d4614a2d1b83d6ed15148ae63b24028ba96f4c81261a33a835761b890"
+  }
+}
