@@ -1,0 +1,28 @@
+module
+public import LogicLineages.PermittedControl.OriginalMixedGateNormalizationTargets
+import LogicLineages.PermittedControl.OriginalMixedGateNormalizationFreshProof
+import LogicLineages.PermittedControl.OriginalMixedGateNormalizationProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalMixedFreshAliases : OriginalMixedGateNormalization.ExactMixedFreshAliases :=
+  OriginalMixedGateNormalization.exactMixedFreshAliases
+
+theorem fixed_exactOriginalMixedNormalizedExtension :
+    OriginalMixedGateNormalization.ExactMixedNormalizedExtension :=
+  OriginalMixedGateNormalization.exactMixedNormalizedExtension
+
+theorem fixed_exactOriginalMixedRunThenNormalize : OriginalMixedGateNormalization.ExactMixedRunThenNormalize :=
+  OriginalMixedGateNormalization.exactMixedRunThenNormalize
+
+theorem fixed_fullOriginalMixedGateNormalization : OriginalMixedGateNormalization.FullOriginalMixedGateNormalization :=
+  ⟨fixed_exactOriginalMixedFreshAliases,fixed_exactOriginalMixedNormalizedExtension,
+    fixed_exactOriginalMixedRunThenNormalize⟩
+
+#print axioms fixed_exactOriginalMixedFreshAliases
+#print axioms fixed_exactOriginalMixedNormalizedExtension
+#print axioms fixed_exactOriginalMixedRunThenNormalize
+#print axioms fixed_fullOriginalMixedGateNormalization
+
+end LogicLineages.PermittedControl.StatementChecks

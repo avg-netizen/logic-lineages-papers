@@ -1,0 +1,8 @@
+# Exact mixed original graph and hidden-only normalized extension
+
+Paper 17, `17-permitted-control-canonical-comparison/sections/arithmetic.tex`, lines 3–27 and 33–48. This joins the checked original mixed sequential graph (#989) to actual finite/limit wire normalization and freshness (#978/#980).
+
+- Preserve every original affine graph clause literally in its position, with all signed occurrences and original output name. Normalize each collapse in original order by its actual finite/limit branch. Candidate names advance only over collapse gate occurrences; finite gates allocate no hidden wire.
+- The numeric protected ceiling covers every original output and every actual input reference (all affine terms and collapse sources). It also includes a supplied exterior ceiling. Thus a caller can protect named test or external coordinates by choosing an exterior ceiling at least as large as those names; the theorem does not infer an external test's names.
+- Every actual hidden coordinate is distinct and strictly above this ceiling. The exact normalized mixed conjunction and agreement away from hidden coordinates are equivalent to the literal original mixed source graphs and the canonical hidden lift. Hence normalized extension is unique and preserves every protected name. In particular, the original output discovery, when successful, agrees with the unique normalized graph after hidden extension.
+- No parser, graph scheduling, mixed primitive constructors beyond affine and arbitrary collapse, new executable graph/finite branch compiler, arithmetic decision, or uniform cutoff is claimed.
