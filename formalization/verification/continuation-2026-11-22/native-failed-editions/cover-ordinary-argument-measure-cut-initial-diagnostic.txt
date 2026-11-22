@@ -1,0 +1,16 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverOrdinaryMeasureCutProof.lean:55:5: error: unknown namespace `NumberedWindowInternalCoverNamedLeavesOpenDataProof`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverOrdinaryMeasureCutProof.lean:142:96: error(lean.unknownIdentifier): Unknown identifier `namedRename`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverOrdinaryMeasureCutProof.lean:144:2: error: Type mismatch
+  fromRow M A (Term.relabel j h) (Term.relabel j a) old (Term.relabel j p) row
+has type
+  Nonempty
+    (Derivation body Δ
+      (unary (ordinarySelectedBump A) (Term.relabel j p) (ordinaryKey (Term.relabel j h) (Term.relabel j a))))
+but is expected to have type
+  Nonempty
+    (Derivation body Δ
+      (unary (ordinarySelectedBump A) (Term.relabel j p)
+        (Term.relabel j (NumberedWindowInternalCoverNamedLeavesTargets.namedTerm 4 h a))))
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverOrdinaryMeasureCutProof.exact_OpenCoverOrdinaryMeasureCut' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]
