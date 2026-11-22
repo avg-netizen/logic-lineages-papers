@@ -67,10 +67,11 @@ theorem exactBranchRealization : ExactBranchRealization := by
     · by_cases hi : i < p.1
       · obtain ⟨a,ha,ea⟩ := all i hi
         have left : realized θ p i = θ a.1 := by rw [← ea,atRank a ha]
-        rw [left,realized θ p j,if_neg hj]
+        rw [left]
+        simp only [realized,if_neg hj]
         have bound := leMaximum θ p.2 a ha
         omega
-      · rw [realized θ p i,if_neg hi,realized θ p j,if_neg hj]
+      · simp only [realized,if_neg hi,if_neg hj]
         omega
   · intro name hn
     rw [← keys] at hn

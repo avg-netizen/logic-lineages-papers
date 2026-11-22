@@ -1,0 +1,66 @@
+{
+  "status": "exact source-only narrow proof repair; native not invoked by author",
+  "failed_source_remote_commit": "79ddaeb6b78069d7d91d84e3ebe18e6fbd5177ec",
+  "failed_source_local_commit": "3f328498a",
+  "failed_exact_gate_receipt": "1795357813022017315-10",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualFiniteOrderBranchesStatementChecks",
+  "failed_receipt_sha256": "891e043212cfa0024e622fef1fc1adcd4c6862fa25d1826e624bdeadd969baaa",
+  "failed_exact_module_log_sha256": "e3ae5a0c1335eb9c7956c2f595794c6b2fdc8e9fefaa5812664ba4ad61a331d6",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesRealizationProof.lean:70:17: error: Invalid rewrite argument: Expected an equality or iff proof or definition name, but `realized \u03b8 p j` is a value of type\n  \u2115\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesRealizationProof.lean:73:12: error: Invalid rewrite argument: Expected an equality or iff proof or definition name, but `realized \u03b8 p i` is a value of type\n  \u2115",
+  "failed_original_native_log_sha256": "02039e130d19e20415802195371c52c97fdd4fbf7ea638e833f4acd28c8306b5",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesRealizationProof.lean",
+  "failed_proof_sha256": "034398b2e0793972cae978df7fca4fb39299073aec97d327613692aa2764a9de",
+  "repaired_proof_sha256": "1386dcc108687501a6ec0f36ef33536f689299ddd30528f30479855f7b14b157",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FINITE-ORDER-BRANCHES-REPAIR-03.patch",
+  "patch_sha256": "706766967bd51bfe41fd564d6a4f0fcd751807074f952786337df2b449c7997b",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FINITE-ORDER-BRANCHES-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "b2bcce068fb82a3b391187823f949452607679c4b1a2ce95263b24c89e67160a",
+  "previous_repair_manifest_sha256": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FINITE-ORDER-BRANCHES-REPAIR-01.json": "cc6a75857b653f3859773c3dae8fffe0b3514940d489348e35d4da62529473ea",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FINITE-ORDER-BRANCHES-REPAIR-02.json": "f5fb6a2363f1346e9ff7257a2e770ca775432dcb085cf3170a20f6f7d918d111"
+  },
+  "downstream_manifest_untouched": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-ORDER-BRANCHES-AUTHOR-MANIFEST.json",
+  "downstream_original_manifest_sha256": "d76a8a4b9f388b779f1178bf9970cfbd4456ed54d2cb8e8eb352f485293c58ce",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesTargets.lean": "98c23d875caf39c0dacd8a35c6a888a10d26eb7b40bc748855ec14c79f9bc891",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesEnumerateProof.lean": "1056adaef322847e08a482db58e93ab1da6a93204441c4feed1f9cab53174ffe",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesGuardProof.lean": "19109ac5217801273cc32ef57d90cd6b993401dfd3ee44494f7b44e8bcdc90ba",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesCoverageProof.lean": "794d66eabc4eb5011bf9a4347fb252a41fcd033f706e93605f07b5c9a884f886",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesStatementChecks.lean": "0fe5dc687ec74c31f94895c416a384e91dabc39943b2e3eccb22ed4905aacb3d",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FINITE-ORDER-BRANCHES-SOURCE-MAP.md": "b11eb4d3c371864b8b1cc2004898d00b63902637069735b4dca3becad161d592"
+  },
+  "static_closure_unchanged": {
+    "Targets": {
+      "local": 92,
+      "external": 23,
+      "contains_totient": false
+    },
+    "EnumerateProof": {
+      "local": 93,
+      "external": 23,
+      "contains_totient": false
+    },
+    "GuardProof": {
+      "local": 93,
+      "external": 23,
+      "contains_totient": false
+    },
+    "CoverageProof": {
+      "local": 96,
+      "external": 23,
+      "contains_totient": false
+    },
+    "RealizationProof": {
+      "local": 95,
+      "external": 23,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 98,
+      "external": 23,
+      "contains_totient": false
+    }
+  },
+  "scope": "Expand the actual outside-rank branch by its definition, not by treating its Nat value as a rewrite theorem. No target, strictness argument, imports, branch emitter or peers change."
+}
