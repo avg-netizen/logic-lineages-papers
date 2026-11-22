@@ -1,0 +1,17 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedLengthReachTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedLengthReachPackedProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedLengthReachPairedProof
+open NumberedWindowInternalCoverCombinedRestrictedLengthReachPackedProof (exact_OpenCoverPackedLengthReach)
+open NumberedWindowInternalCoverCombinedRestrictedLengthReachTargets
+
+theorem exact_OpenCoverCombinedRestrictedPairedLengthReach : ExactOpenCoverCombinedRestrictedPairedLengthReach := by
+  intro V TV M M0 B T base s body α Γ ctx dom cod f g arg vertices fuel pool P W X a b both length edge actual
+  exact exact_OpenCoverPackedLengthReach P.cover X W s body α Γ ctx cod vertices a b fuel pool
+    both.scratchA length both.memberA both.memberB edge actual
+
+#print axioms exact_OpenCoverCombinedRestrictedPairedLengthReach
+end LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedLengthReachPairedProof
