@@ -1,0 +1,13 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalNaturalFieldGatesProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalNaturalFieldGatesProof.lean
+@@ -57,2 +57,8 @@
+-          simpa only [Gate.readAt,Gate.domain,Gate.value,Interval.domain,Interval.firstHit,
+-            Interval.entryNorm,Interval.left,Interval.right,FieldValue,Function.iterate_zero,id_eq] using routed
++          have sameValue (v : Nat) : FieldValue f (.entry 0 lam mu) x v ↔
++              (Gate.entry (.proper lam mu) s o).value f x v := by
++            simp only [Gate.value,Interval.firstHit,Interval.entryNorm,Interval.left,Interval.right,
++              FieldValue,Function.iterate_zero,id_eq]
++          refine ⟨routed.1,?_,?_⟩
++          · exact routed.2.1.trans (and_congr Iff.rfl (forall_congr' fun v => not_congr (sameValue v)))
++          · intro v
++            exact (routed.2.2 v).trans (and_congr Iff.rfl (sameValue v))

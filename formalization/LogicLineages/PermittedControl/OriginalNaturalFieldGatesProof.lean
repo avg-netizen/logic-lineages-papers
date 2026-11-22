@@ -54,8 +54,14 @@ theorem exactOrdinaryGateReads : ExactOrdinaryGateReads := by
       | proper lam mu =>
           have actual := closedOrdinaryValueActual f (.entry 0 lam mu) x
           have routed := threeWayOf _ _ _ actual.1 actual.2
-          simpa only [Gate.readAt,Gate.domain,Gate.value,Interval.domain,Interval.firstHit,
-            Interval.entryNorm,Interval.left,Interval.right,FieldValue,Function.iterate_zero,id_eq] using routed
+          have sameValue (v : Nat) : FieldValue f (.entry 0 lam mu) x v ↔
+              (Gate.entry (.proper lam mu) s o).value f x v := by
+            simp only [Gate.value,Interval.firstHit,Interval.entryNorm,Interval.left,Interval.right,
+              FieldValue,Function.iterate_zero,id_eq]
+          refine ⟨routed.1,?_,?_⟩
+          · exact routed.2.1.trans (and_congr Iff.rfl (forall_congr' fun v => not_congr (sameValue v)))
+          · intro v
+            exact (routed.2.2 v).trans (and_congr Iff.rfl (sameValue v))
       | identity mu =>
           exact identityReadExact mu x x _ (fun hd v => identityValue f mu x v hd)
   | count P s o =>
