@@ -103,15 +103,25 @@ private theorem atStep (b : Bool) (s : Settings) (B : Program 2) (T : Program 1)
     exact Fin.cases (projectionValue 2 xs) (Fin.cases key (fun j => Fin.elim0 j)) i
   exact exact_OpenCoverHeadIntrinsic b s B body α Γ ctx h result tail len actual
 
-private theorem atUpdate (b : Bool) (s : Settings) (B : Program 2) (T : Program 1)
+/-- Abstract the whole updater and final branch consumer while moving the
+actual memo reports through their existential binders. -/
+private def StepConsumer (b : Bool) (s : Settings) (A : Program 2) (T : Program 1)
+    (body : Positive (Fin 1)) : Prop :=
+  ∀ (γ : Type) (Ξ : List (Formula γ)) (ctx h result old : OTerm γ)
+    (tail : List (OTerm γ)), (h::tail).length = headArity b →
+    Nonempty (Derivation body Ξ (contextStep (strictAuxUpdate A T) (suc result) (headPrior b h tail) old ctx)) →
+    Nonempty (Derivation body Ξ (memberGraph (headsTerm s γ) h))
+
+private theorem atUpdate (b : Bool) (s : Settings) (A : Program 2) (T : Program 1)
+    (consume : StepConsumer b s A T body)
     (ctx h result old value : OTerm α) (tail : List (OTerm α)) (len : (h::tail).length = headArity b)
-    (parent : Nonempty (Derivation body Γ (windowGraph (headFittedWindow s B T) ctx result (headKey b h tail))))
+    (parent : Nonempty (Derivation body Γ (windowGraph (strictAuxWindow A T) ctx result (headKey b h tail))))
     (table : Nonempty (Derivation body Γ (contextTable
-      (strictAuxUpdate (fittedWindowBase s (grammarHeadBase s B)) (refitGuard s T)) old (headPrior b h tail) ctx)))
+      (strictAuxUpdate A T) old (headPrior b h tail) ctx)))
     (update : Nonempty (Derivation body Γ (contextStep
-      (strictAuxUpdate (fittedWindowBase s (grammarHeadBase s B)) (refitGuard s T)) value (headPrior b h tail) old ctx))) :
+      (strictAuxUpdate A T) value (headPrior b h tail) old ctx))) :
     Nonempty (Derivation body Γ (memberGraph (headsTerm s α) h)) := by
-  let R := strictAuxUpdate (fittedWindowBase s (grammarHeadBase s B)) (refitGuard s T)
+  let R := strictAuxUpdate A T
   let F := selectedIntrinsic R
   let key := headKey b h tail
   let prior := headPrior b h tail
@@ -120,15 +130,16 @@ private theorem atUpdate (b : Bool) (s : Settings) (B : Program 2) (T : Program 
   have actual := exact_OpenContextMemoSuccessor R body α Γ value prior old ctx table update
   have agree := valueUnique (scratchRow (constantZero 2) R) value (suc result) ![key,ctx,z] actual parentRow
   have sameOutput := outputTransport R value (suc result) ![prior,old,ctx,z] agree update
-  exact atStep b s B T ctx h result old tail len sameOutput
+  exact consume α Γ ctx h result old tail len sameOutput
 
-private theorem withTable (b : Bool) (s : Settings) (B : Program 2) (T : Program 1)
+private theorem withTable (b : Bool) (s : Settings) (A : Program 2) (T : Program 1)
+    (consume : StepConsumer b s A T body)
     (ctx h result old : OTerm α) (tail : List (OTerm α)) (len : (h::tail).length = headArity b)
-    (parent : Nonempty (Derivation body Γ (windowGraph (headFittedWindow s B T) ctx result (headKey b h tail))))
+    (parent : Nonempty (Derivation body Γ (windowGraph (strictAuxWindow A T) ctx result (headKey b h tail))))
     (table : Nonempty (Derivation body Γ (contextTable
-      (strictAuxUpdate (fittedWindowBase s (grammarHeadBase s B)) (refitGuard s T)) old (headPrior b h tail) ctx))) :
+      (strictAuxUpdate A T) old (headPrior b h tail) ctx))) :
     Nonempty (Derivation body Γ (memberGraph (headsTerm s α) h)) := by
-  let R := strictAuxUpdate (fittedWindowBase s (grammarHeadBase s B)) (refitGuard s T)
+  let R := strictAuxUpdate A T
   apply programCases R ![headPrior b h tail,old,ctx,z] _
   intro β j Δ value keep update
   simp only [quadInputsRename,priorRename,zRelabel] at update
@@ -137,20 +148,32 @@ private theorem withTable (b : Bool) (s : Settings) (B : Program 2) (T : Program
   have table' := renameInto table j Δ keep
   simp only [windowGraph,programRename,tripleInputsRename,sucRelabel,zRelabel,keyRename] at parent'
   simp only [contextTable,programRename,tripleInputsRename,priorRename,zRelabel] at table'
-  exact atUpdate b s B T (ctx.relabel j) (h.relabel j) (result.relabel j) (old.relabel j)
+  exact atUpdate b s A T consume (ctx.relabel j) (h.relabel j) (result.relabel j) (old.relabel j)
     value (tail.map (fun t => t.relabel j)) (lengthRename b h tail j len) parent' table' update
 
-theorem exact_OpenCoverHeadFittedWindow : ExactOpenCoverHeadFittedWindow := by
-  intro b s B T body α Γ ctx h result tail len parent
-  let R := strictAuxUpdate (fittedWindowBase s (grammarHeadBase s B)) (refitGuard s T)
+private theorem fromWindow (b : Bool) (s : Settings) (A : Program 2) (T : Program 1)
+    (consume : StepConsumer b s A T body)
+    (ctx h result : OTerm α) (tail : List (OTerm α)) (len : (h::tail).length = headArity b)
+    (parent : Nonempty (Derivation body Γ (windowGraph (strictAuxWindow A T) ctx result (headKey b h tail)))) :
+    Nonempty (Derivation body Γ (memberGraph (headsTerm s α) h)) := by
+  let R := strictAuxUpdate A T
   apply programCases (scratchTable (constantZero 2) R) ![headPrior b h tail,ctx,z] _
   intro β j Δ old keep table
   simp only [tripleInputsRename,priorRename,zRelabel] at table
   simp only [graphRename,headsTerm,numeralRename]
   have parent' := renameInto parent j Δ keep
   simp only [windowGraph,programRename,tripleInputsRename,sucRelabel,zRelabel,keyRename] at parent'
-  exact withTable b s B T (ctx.relabel j) (h.relabel j) (result.relabel j) old
+  exact withTable b s A T consume (ctx.relabel j) (h.relabel j) (result.relabel j) old
     (tail.map (fun t => t.relabel j)) (lengthRename b h tail j len) parent' table
+
+theorem exact_OpenCoverHeadFittedWindow : ExactOpenCoverHeadFittedWindow := by
+  intro b s B T body α Γ ctx h result tail len parent
+  let A := fittedWindowBase s (grammarHeadBase s B)
+  let S := refitGuard s T
+  have finish : StepConsumer b s A S body := by
+    intro γ Ξ c x r old fs size row
+    exact atStep b s B T c x r old fs size row
+  exact fromWindow b s A S finish ctx h result tail len parent
 
 #print axioms exact_OpenCoverHeadFittedWindow
 
