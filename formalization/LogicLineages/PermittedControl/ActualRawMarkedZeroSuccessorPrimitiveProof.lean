@@ -42,8 +42,15 @@ private theorem outsidePrimitive : Primrec outsideCode := by
     Primrec.and.comp ((Primrec.eq.comp coeff (Primrec.const (0 : Int))).not.decide)
       (Primrec.not.comp bit)
   have filtered : Primrec (fun ms : List MarkCode =>
-      ms.filter (fun m => decide (m.1.1 ≠ 0) && !m.2)) :=
-    Primrec.listFilter (Primrec.eq.comp keep (Primrec.const true))
+      ms.filter (fun m => decide (m.1.1 ≠ 0) && !m.2)) := by
+    apply (Primrec.listFilter (Primrec.eq.comp keep (Primrec.const true))).of_eq
+    intro ms
+    apply List.filter_congr
+    intro m _
+    change decide ((decide (m.1.1 ≠ 0) && !m.2) = true) =
+      (decide (m.1.1 ≠ 0) && !m.2)
+    generalize (decide (m.1.1 ≠ 0) && !m.2) = bitValue
+    cases bitValue <;> rfl
   have get : Primrec (fun p : A => p.2.1) := Primrec.fst.comp Primrec.snd
   exact Primrec.list_map filtered get.to₂
 
