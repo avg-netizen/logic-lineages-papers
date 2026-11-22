@@ -10,7 +10,7 @@ public section
 namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverHereditaryAuxTreeProof
 open FirstOrder Language
 open LogicLineages.OrdinalComparison.TerminationOrdering
-open PositiveArithmeticOperators
+open PositiveArithmeticOperators ID1Completion.InternalCalculus
 open ID1Completion.InternalGraphComposition (OTerm)
 open ID1Completion.InternalTagArithmeticSyntaxProof (sucRelabel zRelabel)
 open ID1Completion.InternalOriginalOrderSyntaxProof (orderRename)
