@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.ActualPaidSignedRouteReplayTargets
+import LogicLineages.PermittedControl.ActualPaidSignedRouteReplayContextProof
+import LogicLineages.PermittedControl.ActualPaidSignedRouteReplayProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualPaidSignedRouteReplay
+
+theorem fixed_exactSignCutoffFromSyntax : ExactSignCutoffFromSyntax := exactSignCutoffFromSyntax
+theorem fixed_exactActualReplayContext : ExactActualReplayContext := exactActualReplayContext
+theorem fixed_exactOriginalSignedRoutesAcrossReplay : ExactOriginalSignedRoutesAcrossReplay :=
+  exactOriginalSignedRoutesAcrossReplay
+theorem fixed_fullActualPaidSignedRouteReplay : FullActualPaidSignedRouteReplay :=
+  ⟨fixed_exactSignCutoffFromSyntax,fixed_exactActualReplayContext,fixed_exactOriginalSignedRoutesAcrossReplay⟩
+
+#print axioms fixed_exactSignCutoffFromSyntax
+#print axioms fixed_exactActualReplayContext
+#print axioms fixed_exactOriginalSignedRoutesAcrossReplay
+#print axioms fixed_fullActualPaidSignedRouteReplay
+
+end LogicLineages.PermittedControl.StatementChecks
