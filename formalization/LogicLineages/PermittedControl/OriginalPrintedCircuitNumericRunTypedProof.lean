@@ -69,8 +69,10 @@ theorem exactNumericTypedRun : ExactNumericTypedRun := by
               rw [len]
               exact fits.2 x (List.mem_cons_of_mem _ hx)
           have nextRun := ih (g.output :: known) top.2.2 next rest
-          rw [run,seen,← bankExact]
-          change EncodesRun values.length (runCode f (next,gs.map encodeGate)) (run f (bank next) gs)
+          rw [run,seen]
+          change EncodesRun values.length (runCode f (next,gs.map encodeGate))
+            (run f (Function.update (bank values) g.output n) gs)
+          rw [← bankExact]
           simpa only [len] using nextRun
 
 end LogicLineages.PermittedControl.OriginalPrintedCircuitNumericRun
