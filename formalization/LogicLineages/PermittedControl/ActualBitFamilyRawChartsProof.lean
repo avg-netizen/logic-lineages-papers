@@ -2,6 +2,7 @@ module
 public import LogicLineages.PermittedControl.ActualBitFamilyRawChartsTargets
 import LogicLineages.PermittedControl.ActualBitFamilyRawLayoutProof
 import LogicLineages.PermittedControl.ActualFiniteOrderBranchesEnumerateProof
+import LogicLineages.PermittedControl.ActualFiniteOrderBranchesCoverageProof
 import LogicLineages.PermittedControl.ActualFiniteOrderBranchesRealizationProof
 
 @[expose] public section
