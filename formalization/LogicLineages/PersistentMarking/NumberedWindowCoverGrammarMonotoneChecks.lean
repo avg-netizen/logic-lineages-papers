@@ -1,0 +1,9 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowCoverGrammarMonotoneTargets
+import LogicLineages.PersistentMarking.NumberedWindowCoverGrammarMonotoneProof
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowCoverGrammarMonotone
+theorem exact_GrammarBoundsInclusion : ExactGrammarBoundsInclusion := boundsInclusion
+#print axioms exact_GrammarBoundsInclusion
+end LogicLineages.PersistentMarking.NumberedWindowCoverGrammarMonotone
