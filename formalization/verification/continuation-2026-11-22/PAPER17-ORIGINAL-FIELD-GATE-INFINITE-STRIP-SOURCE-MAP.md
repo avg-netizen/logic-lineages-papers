@@ -1,0 +1,5 @@
+# Original field-gate finite-width, infinite-coordinate low strips
+
+Paper 17, `17-permitted-control-canonical-comparison/sections/arithmetic.tex`, lines 33–54 and 225–274. This is not a finite bank enumeration: every other original coordinate may have any natural value in the shared valuation.
+
+Append the original field-gate matrix to an actual ordered test suffix and consume the specified original #812 matrix low slice at a single common selected rank and supplied finite bound. At each chosen value the exact field guards and earlier prior remain positive, while the original polarity applies only to the ordered test suffix. All use the same original update; rejected/missed selected field reads cannot be accepted as false terminal values. On a hit, the residual list retains exactly all original unselected operand occurrences in their order with the original test sorts. No emit/compile theorem for the remaining normalized affine/limit graph or arbitrary terminal syntax, no computed cutoff, no high-strip projection, and no dimension induction or arithmetic decision is claimed.

@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.OriginalFieldGateMatrixTargets
+import LogicLineages.PermittedControl.OriginalFieldGateMatrixProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalFieldGateRow : OriginalFieldGateMatrix.ExactOriginalFieldRow :=
+  OriginalFieldGateMatrix.exactOriginalFieldRow
+
+theorem fixed_exactOriginalFieldGateList : OriginalFieldGateMatrix.ExactOriginalFieldList :=
+  OriginalFieldGateMatrix.exactOriginalFieldList
+
+theorem fixed_fullOriginalFieldGateMatrix : OriginalFieldGateMatrix.FullOriginalFieldGateMatrix :=
+  ⟨fixed_exactOriginalFieldGateRow,fixed_exactOriginalFieldGateList⟩
+
+#print axioms fixed_exactOriginalFieldGateRow
+#print axioms fixed_exactOriginalFieldGateList
+#print axioms fixed_fullOriginalFieldGateMatrix
+
+end LogicLineages.PermittedControl.StatementChecks
