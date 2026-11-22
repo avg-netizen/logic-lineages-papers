@@ -41,7 +41,11 @@ theorem exactRawZeroPrefixLevels : ExactRawZeroPrefixLevels := by
       change tapes.length = 0 at hlen
       cases path with
       | nil => exact List.mem_cons_self
-      | snoc _ _ _ => simp only [List.length_append,List.length_cons,List.length_nil] at hlen
+      | @snoc past s t a prev used ok =>
+        change (past++[a]).length = 0 at hlen
+        have impossible : past.length + 1 = 0 := by
+          simpa only [List.length_append,List.length_cons,List.length_nil] using hlen
+        omega
   | succ n ih =>
     intro entry
     constructor
@@ -62,9 +66,9 @@ theorem exactRawZeroPrefixLevels : ExactRawZeroPrefixLevels := by
         have eqSucc : past.length + 1 = n+1 := by
           simpa only [List.length_append,List.length_cons,List.length_nil] using hlen
         have priorLength : past.length = n := Nat.add_right_cancel eqSucc
-        change (past++[a],t) ∈ (level start n).flatMap children
+        change (past++[a],st) ∈ (level start n).flatMap children
         refine List.mem_flatMap.mpr ⟨(past,s),(ih (past,s)).mpr ⟨prev,priorLength⟩,?_⟩
-        exact (memChildren (past,s) (past++[a],t)).mpr ⟨a,used,ok,rfl⟩
+        exact (memChildren (past,s) (past++[a],st)).mpr ⟨a,used,ok,rfl⟩
 
 theorem exactRawZeroPrefixEnumeration : ExactRawZeroPrefixEnumeration := by
   intro fuel start entry
