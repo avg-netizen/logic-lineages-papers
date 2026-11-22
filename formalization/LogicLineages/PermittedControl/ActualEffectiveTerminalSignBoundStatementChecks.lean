@@ -1,0 +1,17 @@
+module
+public import LogicLineages.PermittedControl.ActualEffectiveTerminalSignBoundTargets
+import LogicLineages.PermittedControl.ActualEffectiveTerminalSignBoundCalibrationProof
+import LogicLineages.PermittedControl.ActualEffectiveTerminalSignBoundPrimitiveProof
+import LogicLineages.PermittedControl.ActualEffectiveTerminalSignBoundDominanceProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualEffectiveTerminalSignBound :
+    ActualEffectiveTerminalSignBound.FullActualEffectiveTerminalSignBound :=
+  ⟨ActualEffectiveTerminalSignBound.codeEffectivity,ActualEffectiveTerminalSignBound.codeCalibration,
+    ActualEffectiveTerminalSignBound.exactSignBoundDominance⟩
+
+#print axioms fixed_actualEffectiveTerminalSignBound
+
+end LogicLineages.PermittedControl.StatementChecks

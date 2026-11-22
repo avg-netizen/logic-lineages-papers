@@ -19,6 +19,13 @@ open NumberedMultisetNumeric (numbersNumber)
 open NumberedMultisetNumericSupportProof (numbersRoundTrip)
 open NumberedWindowInternalCoverAscendingRangeTargets
 
+private theorem appendFold (xs ys : List Nat) :
+    xs.foldr (fun k a => 1 + Nat.pair k a) (numbersNumber ys) =
+      numbersNumber (xs ++ ys) := by
+  induction xs with
+  | nil => rfl
+  | cons x xs ih => simp only [List.foldr_cons,List.cons_append,numbersNumber,ih]
+
 private theorem encodeAppend (xs ys : List Nat) :
     evaluate append (numbersNumber xs ::ᵥ numbersNumber ys ::ᵥ nil) =
       numbersNumber (xs ++ ys) := by
@@ -30,9 +37,7 @@ private theorem encodeAppend (xs ys : List Nat) :
       evaluate appendStep (k ::ᵥ a ::ᵥ numbersNumber ys ::ᵥ nil) = 1 + Nat.pair k a := by
     exact consEvaluation k a
   simp only [hs]
-  induction xs with
-  | nil => rfl
-  | cons x xs ih => simp only [List.foldr_cons,List.cons_append,numbersNumber,ih]
+  exact appendFold xs ys
 
 private theorem singletonValue (i previous : Nat) :
     evaluate singleton (i ::ᵥ previous ::ᵥ nil) = numbersNumber [i] := by
@@ -44,7 +49,9 @@ private theorem stepValue (i : Nat) (xs : List Nat) :
     evaluate rangeStep (i ::ᵥ numbersNumber xs ::ᵥ nil) = numbersNumber (xs ++ [i]) := by
   change evaluate append
     (ofFn ![numbersNumber xs,evaluate singleton (i ::ᵥ numbersNumber xs ::ᵥ nil)]) = _
-  rw [singletonValue,vectorTwo,encodeAppend]
+  rw [singletonValue,vectorTwo]
+  change evaluate append (numbersNumber xs ::ᵥ numbersNumber [i] ::ᵥ nil) = _
+  exact encodeAppend xs [i]
 
 theorem exact_CoverAscendingRangeValue : ExactCoverAscendingRangeValue := by
   intro bound

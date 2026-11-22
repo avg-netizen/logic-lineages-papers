@@ -1,0 +1,52 @@
+Compiling LogicLineages.PersistentMarking.NumberedWindowInternalCoverAscendingRangeNumericThinProof
+LogicLineages/PersistentMarking/NumberedWindowInternalCoverAscendingRangeNumericThinProof.lean:35:17: error: unsolved goals
+case cons
+ys : List ℕ
+hs : ∀ (k a : ℕ), evaluate appendStep (k ::ᵥ a ::ᵥ numbersNumber ys ::ᵥ nil) = 1 + Nat.pair k a
+x : ℕ
+xs : List ℕ
+ih :
+  evaluate append (numbersNumber xs ::ᵥ numbersNumber ys ::ᵥ nil) =
+      List.foldr (fun head result => evaluate appendStep (head ::ᵥ result ::ᵥ numbersNumber ys ::ᵥ nil))
+        (evaluate (Program.projection 0) (numbersNumber ys ::ᵥ nil))
+        ((NumberedMultisetNumeric.decodeNumbers (numbersNumber xs)).getD []) →
+    List.foldr (fun head result => 1 + Nat.pair head result)
+        (evaluate (Program.projection 0) (numbersNumber ys ::ᵥ nil)) ((some xs).getD []) =
+      numbersNumber (xs ++ ys)
+h :
+  evaluate append (numbersNumber (x :: xs) ::ᵥ numbersNumber ys ::ᵥ nil) =
+    List.foldr (fun head result => evaluate appendStep (head ::ᵥ result ::ᵥ numbersNumber ys ::ᵥ nil))
+      (evaluate (Program.projection 0) (numbersNumber ys ::ᵥ nil))
+      ((NumberedMultisetNumeric.decodeNumbers (numbersNumber (x :: xs))).getD [])
+⊢ List.foldr (fun head result => 1 + Nat.pair head result) (evaluate (Program.projection 0) (numbersNumber ys ::ᵥ nil))
+      ((some (x :: xs)).getD []) =
+    1 + Nat.pair x (numbersNumber (xs ++ ys))
+LogicLineages/PersistentMarking/NumberedWindowInternalCoverAscendingRangeNumericThinProof.lean:35:31: warning: This simp argument is unused:
+  List.foldr_cons
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵s̵t̵.̵f̵o̵l̵d̵r̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵c̵o̵n̵s̵_̵a̵p̵p̵e̵n̵d̵,̵n̵u̵m̵b̵e̵r̵s̵N̵u̵m̵b̵e̵r̵,̵i̵h̵]̵[̲L̲i̲s̲t̲.̲c̲o̲n̲s̲_̲a̲p̲p̲e̲n̲d̲,̲ ̲n̲u̲m̲b̲e̲r̲s̲N̲u̲m̲b̲e̲r̲,̲ ̲i̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+LogicLineages/PersistentMarking/NumberedWindowInternalCoverAscendingRangeNumericThinProof.lean:35:78: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp only [List.foldr_cons, ̲List.cons_append, ̲numbersNumber,̵i̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+LogicLineages/PersistentMarking/NumberedWindowInternalCoverAscendingRangeNumericThinProof.lean:47:31: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  evaluate append (numbersNumber ?xs ::ᵥ numbersNumber ?ys ::ᵥ nil)
+in the target expression
+  evaluate append (![numbersNumber xs, numbersNumber [i]] 0 ::ᵥ ![numbersNumber xs, numbersNumber [i]] 1 ::ᵥ nil) =
+    numbersNumber (xs ++ [i])
+
+i : ℕ
+xs : List ℕ
+⊢ evaluate append (![numbersNumber xs, numbersNumber [i]] 0 ::ᵥ ![numbersNumber xs, numbersNumber [i]] 1 ::ᵥ nil) =
+    numbersNumber (xs ++ [i])
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverAscendingRangeNumericThinProof.exact_CoverAscendingRangeValue' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]
+COMPILE_FAILED LogicLineages.PersistentMarking.NumberedWindowInternalCoverAscendingRangeNumericThinProof: 1
+BUILD_RECEIPT build-reports/1795347751352462661-8.json
