@@ -1,0 +1,34 @@
+{
+  "status": "narrow proof-only source repair, not native checked by author",
+  "failed_source_remote_commit": "5e6967d04cf27c932fb5bb1018d70de12c658823",
+  "failed_exact_gate_receipt": "1795354096557462778-129",
+  "failed_original_native_log_sha256": "1e391295a972502cae997a1def618b40e016c92c6ec7d749b388868d2f9797ed",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunBankProof.lean:33:41: error(lean.unknownIdentifier): Unknown constant `Nat.zero_ne_succ`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunBankProof.lean:41:43: warning: `Nat.succ_ne_succ` has been deprecated: Use `Nat.succ_ne_succ_iff` instead",
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-RUN-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "e0798c12662b5eb6380caf881c066a4e27b1e07413a8c1c1c32467a1ed06ff14",
+  "previous_repair_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-RUN-REPAIR-01.json",
+  "previous_repair_manifest_sha256": "fe721acdb785af3c431376c8356083b6307e09f20aee85f6b1a7c1c8b32d1de8",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunBankProof.lean",
+  "failed_proof_sha256": "37aceb13a2e2687b3c5d3be653295f44322116559f6d326196347ca014b82cc0",
+  "repaired_proof_sha256": "8b9d57590eb18520245ac5c2eadcdfd336f9c58a92af5fe1c2306f9af0c11359",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-RUN-REPAIR-02.patch",
+  "patch_sha256": "57014640962c1d83f6ee0bf1ef1cda9b3363b308f50df8bf9898d744827e23bb",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunEffectiveProof.lean": "2bd5025ce9b98389c2bd51f3de62c1fc0ef8c565c0fb2f6fcac48284ba5caace",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunStatementChecks.lean": "5bb08d109c72d788c571c4ba6b1ec9e6a595dc5867e94df09ec8c19687e201da",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunTargets.lean": "16929be0f3a120119709af9a91e048b0cb28daf3b6b721eeb520cbea0e31903c",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunTypedProof.lean": "ef46699e7c1a23b13fd0985ec99f3d1f7af1c5e6fa659f5246ee15a2833d9750",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-RUN-SOURCE-MAP.md": "eb6a775432fcac559ecb13e6125ba208369a93566dbea33f0c4f103cdbefa867"
+  },
+  "static_closure_unchanged": {
+    "target_local": 147,
+    "target_external": 31,
+    "bank_local": 148,
+    "bank_external": 31,
+    "effective_local": 264,
+    "effective_external": 38,
+    "gate_local": 268,
+    "gate_external": 38
+  },
+  "scope": "Replace only missing Nat.zero_ne_succ by symmetric Nat.succ_ne_zero in the same unchanged bank update proof. Preserve elsewhere deprecated warning and exact originally alpha-renamed theorem types."
+}

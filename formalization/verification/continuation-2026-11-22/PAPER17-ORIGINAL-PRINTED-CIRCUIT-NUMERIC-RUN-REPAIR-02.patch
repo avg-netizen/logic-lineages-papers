@@ -1,0 +1,5 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunBankProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunBankProof.lean
+@@ -33 +33 @@
+-              rw [Function.update_of_ne (Nat.zero_ne_succ _)] <;> rfl
++              rw [Function.update_of_ne ((Nat.succ_ne_zero _).symm)] <;> rfl

@@ -30,7 +30,7 @@ private theorem setBank (values : List Nat) (i v : Nat) (inRange : i < values.le
           have bound : i < xs.length := Nat.lt_of_succ_lt_succ inRange
           cases n with
           | zero =>
-              rw [Function.update_of_ne (Nat.zero_ne_succ _)] <;> rfl
+              rw [Function.update_of_ne ((Nat.succ_ne_zero _).symm)] <;> rfl
           | succ n =>
               have tail := congrFun (ih i bound) n
               by_cases h : n = i
