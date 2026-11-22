@@ -1,0 +1,27 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentMemoBoundsProof.lean:51:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (LHom.onTerm ?h ?s).equal (LHom.onTerm ?h ?t)
+in the target expression
+  Nonempty (Derivation body Γ (arithmeticEmbedding.onFormula (Term.equal (![mh, mt] i) (![mh', mt'] i))))
+
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+F : Program 1
+h a p mh mt mh' mt' : OTerm α
+head : Nonempty (Derivation body Γ (unary F mh h))
+head' : Nonempty (Derivation body Γ (unary F mh' h))
+tail : Nonempty (Derivation body Γ (unary (argumentMeasure F) mt a))
+tail' : Nonempty (Derivation body Γ (unary (argumentMeasure F) mt' a))
+combined :
+  Nonempty
+    (Derivation body Γ
+      (ID1Completion.InternalGraphComposition.graph (OrdinaryArithmetic.graphFormula chosenCombine) p ![mh, mt]))
+first : Nonempty (Derivation body Γ (ID1Completion.InternalTagArithmeticSyntaxProof.eqn mh mh'))
+second : Nonempty (Derivation body Γ (ID1Completion.InternalTagArithmeticSyntaxProof.eqn mt mt'))
+i : Fin 2
+⊢ Nonempty (Derivation body Γ (arithmeticEmbedding.onFormula (Term.equal (![mh, mt] i) (![mh', mt'] i))))
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentMemoBoundsProof.lean:67:6: error: Invalid rewrite argument: Expected an equality or iff proof or definition name, but `Q` is a value of type
+  language.Formula α
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverArgumentMemoBoundsProof.exact_OpenCoverArgumentMemoBounds' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]

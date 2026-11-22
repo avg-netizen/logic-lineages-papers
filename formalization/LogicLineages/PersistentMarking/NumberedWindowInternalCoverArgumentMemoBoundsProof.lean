@@ -48,7 +48,7 @@ private theorem matchCombine (F : Program 1) (h a p mh mt mh' mt' : OTerm α)
   unfold programGraph at combined ⊢
   apply graphInputTransport body α 2 Γ _ p ![mh,mt] ![mh',mt'] _ combined
   intro i
-  rw [← onEquality]
+  rw [onEquality]
   exact Fin.cases first (Fin.cases second (fun j => Fin.elim0 j)) i
 
 theorem exact_OpenCoverArgumentMemoBounds : ExactOpenCoverArgumentMemoBounds := by
@@ -64,7 +64,8 @@ theorem exact_OpenCoverArgumentMemoBounds : ExactOpenCoverArgumentMemoBounds := 
   simp only [pairRename] at hp tp
   have graph := matchCombine F (h.relabel j) (a.relabel j) (p.relabel j)
     m1 m2 (mh.relabel j) (mt.relabel j) actualHead head actualTail tail combined
-  rw [Q,boundsRename]
+  change Nonempty (Derivation body Δ ((existsOne (boundBody p dh dt wh wt)).relabel j))
+  rw [boundsRename]
   exact exact_OpenChosenAuxMeasureCombine body β Δ (p.relabel j) (mh.relabel j) (mt.relabel j)
     (dh.relabel j) (dt.relabel j) (wh.relabel j) (wt.relabel j) hp tp graph
 
