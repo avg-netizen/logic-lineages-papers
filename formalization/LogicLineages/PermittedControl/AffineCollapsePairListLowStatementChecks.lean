@@ -1,0 +1,28 @@
+module
+public import LogicLineages.PermittedControl.AffineCollapsePairListLowTargets
+import LogicLineages.PermittedControl.AffineCollapsePairListLowPrefixProof
+import LogicLineages.PermittedControl.AffineCollapsePairListLowSemanticsProof
+import LogicLineages.PermittedControl.AffineCollapsePairListLowCodeProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactAffineCollapseListSharedPrefix : AffineCollapsePairListLow.ExactSharedPrefix :=
+  AffineCollapsePairListLow.exactSharedPrefix
+
+theorem fixed_exactAffineCollapseListBranchCode : AffineCollapsePairListLow.ExactListBranchCode :=
+  AffineCollapsePairListLow.exactListBranchCode
+
+theorem fixed_exactAffineCollapseFiniteListLow : AffineCollapsePairListLow.ExactFiniteListLow :=
+  AffineCollapsePairListLow.exactFiniteListLow
+
+theorem fixed_fullAffineCollapsePairListLow : AffineCollapsePairListLow.FullAffineCollapsePairListLow :=
+  ⟨fixed_exactAffineCollapseListSharedPrefix,fixed_exactAffineCollapseListBranchCode,
+    fixed_exactAffineCollapseFiniteListLow⟩
+
+#print axioms fixed_exactAffineCollapseListSharedPrefix
+#print axioms fixed_exactAffineCollapseListBranchCode
+#print axioms fixed_exactAffineCollapseFiniteListLow
+#print axioms fixed_fullAffineCollapsePairListLow
+
+end LogicLineages.PermittedControl.StatementChecks
