@@ -1,0 +1,17 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedRawSelectedStageQueryTargets
+import LogicLineages.PermittedControl.OriginalPrintedRawSelectedStageQueryProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedRawSelectedStageQuery
+
+theorem fixed_exactOriginalRawSelectedStageQuery : ExactOriginalRawSelectedStageQuery :=
+  exactOriginalRawSelectedStageQuery
+theorem fixed_fullOriginalRawSelectedStageQuery : FullOriginalRawSelectedStageQuery :=
+  fullOriginalRawSelectedStageQuery
+
+#print axioms fixed_exactOriginalRawSelectedStageQuery
+#print axioms fixed_fullOriginalRawSelectedStageQuery
+
+end LogicLineages.PermittedControl.StatementChecks
