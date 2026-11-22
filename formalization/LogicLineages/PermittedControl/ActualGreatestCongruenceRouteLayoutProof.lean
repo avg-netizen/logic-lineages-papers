@@ -31,7 +31,9 @@ theorem exactGreatestResidueLayout : ExactGreatestResidueLayout := by
     · have rankUsed : t.2.rank ∈ rankSupport terms :=
         ((rankSupportExact.1 terms).2 t.2.rank).mpr ⟨t,used,rfl⟩
       have h : t.2.rank ∈ low := List.mem_filter.mpr ⟨rankUsed,decide_eq_true_eq.mpr below⟩
-      have slot : t.2.rank ∈ (namedSlots low).map Prod.snd := (namedSlotsExact low).1 ▸ h
+      have slot : t.2.rank ∈ (namedSlots low).map Prod.snd := by
+        rw [(namedSlotsExact low).1]
+        exact h
       exact List.mem_cons_of_mem _ slot
     · rw [here]
       exact List.mem_cons_self
@@ -79,7 +81,8 @@ theorem exactGreatestResidueTies : ExactGreatestResidueTies := by
       change (table top terms)[j].rank < top ∧
         LowerOperandActual f baseline ((table top terms)[j]) (ν (j+1)) at read
       rw [eq] at read
-      simp only [Function.update_of_ne (Nat.succ_ne_zero j),Function.update_of_ne (ne_of_lt hr)]
+      change Function.update ν 0 z (j+1) = Function.update baseline top z low[j]
+      rw [Function.update_of_ne (Nat.succ_ne_zero j),Function.update_of_ne (ne_of_lt hr)]
       exact read.2
 
 end LogicLineages.PermittedControl.ActualGreatestCongruenceRoute

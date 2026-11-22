@@ -1,0 +1,11 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualGreatestCongruenceRouteLayoutProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualGreatestCongruenceRouteLayoutProof.lean
+@@ -34 +34,3 @@
+-      have slot : t.2.rank ∈ (namedSlots low).map Prod.snd := (namedSlotsExact low).1 ▸ h
++      have slot : t.2.rank ∈ (namedSlots low).map Prod.snd := by
++        rw [(namedSlotsExact low).1]
++        exact h
+@@ -82 +84,2 @@
+-      simp only [Function.update_of_ne (Nat.succ_ne_zero j),Function.update_of_ne (ne_of_lt hr)]
++      change Function.update ν 0 z (j+1) = Function.update baseline top z low[j]
++      rw [Function.update_of_ne (Nat.succ_ne_zero j),Function.update_of_ne (ne_of_lt hr)]
