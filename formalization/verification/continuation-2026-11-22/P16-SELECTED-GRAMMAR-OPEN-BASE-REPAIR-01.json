@@ -1,0 +1,35 @@
+{
+  "status": "Proof-only correction of existing namespace lists; native gate pending",
+  "failed_receipt": "1795348236926466499-9",
+  "failed_receipt_sha256": "d187c07dd1af0fe90d6ed9734bd3a0bcf4d83c2f3881f285d9484f3bd50904a0",
+  "immutable_previous_commit": "cdd399a27443862ffa0a6408706b8bd74b3feb80",
+  "failed_combined_log_sha256": "751f662e6b7d4f7f198b42745745f6adf337230958e797f4a925359a7d2f7c36",
+  "failed_diagnostic": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-selected-grammar-open-base-initial-diagnostic.txt": "5b40ea2ba7b23084450976b5baa38032eaa1aae362e89bccf65279a43ca8a727"
+  },
+  "failed_errors": [
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarOpenBaseProof.lean:28:50: error(lean.unknownIdentifier): Unknown constant `LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAdditionLawsProof.addZero`",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarOpenBaseProof.lean:52:4: error: overloaded, errors ",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarOpenBaseProof.lean:53:33: error(lean.unknownIdentifier): Unknown identifier `add`",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarOpenBaseProof.lean:54:43: error: overloaded, errors "
+  ],
+  "diagnosis": "The invalid addZero member rejects the entire InternalAdditionLawsProof open and cascades. Move addZero into its existing InternalTagArithmeticSupportProof open only, keeping add and leftZero in AdditionLawsProof. No import, body, target, program, or resource changes.",
+  "changed_source": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarOpenBaseProof.lean",
+  "old_failed_source_sha256": "f6d774147007ed97ff779b517f06bf6588529c00aaec89cfbdcad56a0df5648f",
+  "new_source_sha256": "79265b7e906ea4bb84aeea1d655293628ee5632bfa94edc29e246d8d66ad1c7d",
+  "failed_source_archive": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverSelectedGrammarOpenBaseProof-01.lean": "f6d774147007ed97ff779b517f06bf6588529c00aaec89cfbdcad56a0df5648f"
+  },
+  "zero_context_patch": {
+    "formalization/verification/continuation-2026-11-22/P16-SELECTED-GRAMMAR-OPEN-BASE-REPAIR-01.patch": "2bd47792796be693682fd12009a95a693f96c967e01eab602181a7d26e4e9f8a"
+  },
+  "forward_and_inverse_exact_bytes_verified": true,
+  "unchanged_source_pins": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarNumericProof.lean": "56fc33a633ed1b8d6edda81b49d63aeccaa5f1a73f97773eaa18cb6faaf748c2",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarOpenRowProof.lean": "309bbae9f2275a36dccbbf45cb6e392328617651de7ef85d607f6cc795c21a11",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarOpenStepProof.lean": "74aa0220207af1131da18142d8f2e480932443b157925786dc2ee8b34c30bc2f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarOpenTargets.lean": "30b0023d4624f1de05c926068345f13f2d7f078be5cc17b1228f872e4648a02f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarTargets.lean": "30b56e9d32535baf568dbd892334f2f8c685d702835e727fafb2ac94dcd39878",
+    "formalization/verification/continuation-2026-11-22/P16-SELECTED-GRAMMAR-ACTUAL-BASE-STEP-SOURCE-MAP.md": "3ee88eaeae793fe167d170dcdee6914ba021807d6cf05fc659f618e8e335bb34"
+  }
+}
