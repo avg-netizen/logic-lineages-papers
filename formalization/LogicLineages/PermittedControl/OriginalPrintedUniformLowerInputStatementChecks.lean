@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedUniformLowerInputTargets
+import LogicLineages.PermittedControl.OriginalPrintedUniformLowerInputProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedUniformLowerInput
+
+theorem fixed_exactOriginalPrintedUniformLowerInput : ExactOriginalPrintedUniformLowerInput :=
+  exactOriginalPrintedUniformLowerInput
+
+#print axioms fixed_exactOriginalPrintedUniformLowerInput
+
+end LogicLineages.PermittedControl.StatementChecks

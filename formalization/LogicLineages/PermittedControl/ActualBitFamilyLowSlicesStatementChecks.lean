@@ -1,0 +1,26 @@
+module
+public import LogicLineages.PermittedControl.ActualBitFamilyLowSlicesTargets
+import LogicLineages.PermittedControl.ActualBitFamilyLowSlicesHitProof
+import LogicLineages.PermittedControl.ActualBitFamilyLowSlicesProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualBitFamilyLowSlices
+
+theorem fixed_exactOrderedHitExtraction : ExactOrderedHitExtraction := exactOrderedHitExtraction
+theorem fixed_exactBitClauseSlice : ExactBitClauseSlice := exactBitClauseSlice
+theorem fixed_exactBitClauseProvenance : ExactBitClauseProvenance := exactBitClauseProvenance
+theorem fixed_exactBitFamilyLowStrips : ExactBitFamilyLowStrips := exactBitFamilyLowStrips
+theorem fixed_exactBitFamilyLowDimension : ExactBitFamilyLowDimension := exactBitFamilyLowDimension
+theorem fixed_fullActualBitFamilyLowSlices : FullActualBitFamilyLowSlices :=
+  ⟨fixed_exactOrderedHitExtraction,fixed_exactBitClauseSlice,fixed_exactBitClauseProvenance,
+    fixed_exactBitFamilyLowStrips,fixed_exactBitFamilyLowDimension⟩
+
+#print axioms fixed_exactOrderedHitExtraction
+#print axioms fixed_exactBitClauseSlice
+#print axioms fixed_exactBitClauseProvenance
+#print axioms fixed_exactBitFamilyLowStrips
+#print axioms fixed_exactBitFamilyLowDimension
+#print axioms fixed_fullActualBitFamilyLowSlices
+
+end LogicLineages.PermittedControl.StatementChecks
