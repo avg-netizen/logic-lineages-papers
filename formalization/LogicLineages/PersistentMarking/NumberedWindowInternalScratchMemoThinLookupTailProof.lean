@@ -1,6 +1,7 @@
 module
 public import LogicLineages.PersistentMarking.NumberedWindowInternalScratchMemoThinLookupSyntaxProof
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationCertificateConstructorsSupportProof
 @[expose] public section
 namespace LogicLineages.PersistentMarking.NumberedWindowInternalScratchMemoThinLookupTailProof
 open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion
@@ -14,7 +15,6 @@ open InternalApplicationCertificateConstructorsSyntaxProof
 open InternalControlGraphSupportProof InternalAcceptanceSupportProof InternalGraphCompositionFunctionalityProof
 open InternalRawListRecursionSupportProof InternalRecursionGraphStepSyntaxProof
 open InternalTagArithmeticSyntaxProof (z suc)
-open InternalApplicationStepPeelSupportProof (andLeft andRight)
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open NumberedWindowInternalScratchMemoThinLookupSyntaxProof
 variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
@@ -34,7 +34,8 @@ theorem tableTail (B : Program 2) (R : Program 4)
   let xs : Fin 4 → OTerm beta := Fin.cons (index.relabel j) (Fin.cons (old.relabel j) (fun i => (params i).relabel j))
   have hc := binaryRecover InternalListCodec.consCode R (.projection 1)
     (out.relabel j) value (old.relabel j) xs ht' hv (projectionValue 1 xs)
-  exact andLeft (andRight (InternalListCodecSupportProof.consDestruction (out.relabel j) value (old.relabel j) hc))
+  obtain ⟨consFields⟩ := InternalListCodecSupportProof.consDestruction (out.relabel j) value (old.relabel j) hc
+  exact ⟨Derivation.conjunctionLeft (Derivation.conjunctionRight consFields)⟩
 
 theorem memoHead (B : Program 2) (R : Program 4)
     (out code tab : OTerm alpha) (params : Fin 2 → OTerm alpha)

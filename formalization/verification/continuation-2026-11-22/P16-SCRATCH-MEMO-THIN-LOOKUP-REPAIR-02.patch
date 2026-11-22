@@ -1,0 +1,10 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchMemoThinLookupTailProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchMemoThinLookupTailProof.lean
+@@ -3,0 +4 @@
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationCertificateConstructorsSupportProof
+@@ -17 +17,0 @@
+-open InternalApplicationStepPeelSupportProof (andLeft andRight)
+@@ -37 +37,2 @@
+-  exact andLeft (andRight (InternalListCodecSupportProof.consDestruction (out.relabel j) value (old.relabel j) hc))
++  obtain ⟨consFields⟩ := InternalListCodecSupportProof.consDestruction (out.relabel j) value (old.relabel j) hc
++  exact ⟨Derivation.conjunctionLeft (Derivation.conjunctionRight consFields)⟩
