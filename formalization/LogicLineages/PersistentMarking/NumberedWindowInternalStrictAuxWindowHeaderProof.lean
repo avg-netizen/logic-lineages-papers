@@ -42,6 +42,7 @@ private theorem moveWindow (W : Program 3) (ctx ty other raw key : OTerm α)
   have self : Nonempty (Derivation body Γ (equal ctx ctx)) := by rw [equalEqn]; exact ⟨refl ctx⟩
   have sameTy : Nonempty (Derivation body Γ (equal ty other)) := by rw [equalEqn]; exact types
   have sameKey : Nonempty (Derivation body Γ (equal raw key)) := by rw [equalEqn]; exact keys
+  unfold windowGraph programGraph at actual ⊢
   apply graphInputTransport body α 3 Γ (OrdinaryArithmetic.graphFormula W) (suc z)
     ![ctx,ty,raw] ![ctx,other,key] _ actual
   intro i

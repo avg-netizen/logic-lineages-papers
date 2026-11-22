@@ -1,0 +1,44 @@
+{
+  "status": "one-line proof-only graph transparency repair; native gate pending",
+  "immutable_previous_verified_remote": "74458e0e1847a3d097435f745722a7a4c6b6a5e7",
+  "previous_source_local_prefix": "e6e75e155",
+  "receipt": {
+    "path": "formalization/build-reports/1795355863214748054-87.json",
+    "sha256": "5cbd4c47205fbc2d0ce8e2bacfdea3fd249103ce53a84eddd354b5b019b2d262"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795355863214748054-87-LogicLineages-PersistentMarking-NumberedWindowInternalStrictAuxWindowHeaderProof.log",
+    "sha256": "b52814c369216ad5bd9bc84984c3c32af6f7becb300c4524608e4292e46db582"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/strict-auxiliary-raw-header-initial-proof-diagnostic.txt",
+    "sha256": "b52814c369216ad5bd9bc84984c3c32af6f7becb300c4524608e4292e46db582"
+  },
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-STRICT-AUXILIARY-RAW-HEADER-PROOF-REPAIR-01.patch",
+    "sha256": "22d347a669fd7179700608bbf8c0385ca83ddbe118875ba574f5df9563bba210"
+  },
+  "archived_failed_source": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalStrictAuxWindowHeaderProof-01.lean",
+    "sha256": "450683902dacb5b42bbd6cfe3fb8258b45b4d27679d4117ee0d6c5e43e56c076"
+  },
+  "repaired_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowHeaderProof.lean",
+    "sha256": "e11c22a887daed4932b5bc1eb15019e6cc3fd2bf95a24d4a34ad7952c6576d72"
+  },
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowHeaderTargets.lean",
+      "sha256": "fffcfd257552e4a11d15b81aa432e97aa9d0e3c32b7830520bb5e5dfd7ee3ee8"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowResultTypeProof.lean",
+      "sha256": "585644ce4f6396921fb22f6cac8342a5142654b3b5b8a98cd903007b09577a0a"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-STRICT-AUXILIARY-RAW-HEADER-SOURCE-MAP.md",
+      "sha256": "9fc523bf8cb5c434498a7ab5ce651aea8773c7110b201e284b22f1347d92a857"
+    }
+  ],
+  "diagnosis": "Local programGraph irreducibility hid the unchanged original graph from the explicit graphInputTransport application. Explicitly unfold the windowGraph/programGraph aliases in the supplied derivation and target of the local helper only; same program, output, three inputs, exact equality proofs and open conclusion. Frozen targets and checked result-type proof unchanged. Failed sorryAx output does not indicate acceptance."
+}
