@@ -80,8 +80,8 @@ def ExactOriginalPaidBranchPacket : Prop :=
     ∀ (prior : (Nat → Nat) → Prop) (polarity : Bool) (branch : Pattern),
       branch ∈ branches known gates p →
       originalFamilyCeiling B known gates p ≤ realized θ branch 0 →
-        ((guard branch).eval θ ∧ prior θ ∧ SourceAccepts f θ known gates p polarity) ↔
-        (guard branch).eval θ ∧ prior θ ∧ BranchPacket f B θ known gates p polarity branch
+        (((guard branch).eval θ ∧ prior θ ∧ SourceAccepts f θ known gates p polarity) ↔
+        ((guard branch).eval θ ∧ prior θ ∧ BranchPacket f B θ known gates p polarity branch))
 
 def FullOriginalMatrixActualHighPacket : Prop :=
   ExactActualHighPacket ∧ ExactOriginalFamilyHighBound ∧ ExactOriginalPaidBranchPacket
