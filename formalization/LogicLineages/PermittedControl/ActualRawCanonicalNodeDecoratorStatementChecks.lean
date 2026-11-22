@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.ActualRawCanonicalNodeDecoratorTargets
+import LogicLineages.PermittedControl.ActualRawCanonicalNodeDecoratorProof
+import LogicLineages.PermittedControl.ActualRawCanonicalNodeDecoratorPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualRawCanonicalNodeDecorator
+
+theorem fixed_exactRawDecorateCalibration : ExactRawDecorateCalibration := exactRawDecorateCalibration
+theorem fixed_exactLiteralRawDecorationDomain : ExactLiteralRawDecorationDomain := exactLiteralRawDecorationDomain
+theorem fixed_exactCanonicalSuppliedDecoration : ExactCanonicalSuppliedDecoration := exactCanonicalSuppliedDecoration
+theorem fixed_exactRawDecorateEffectivity : ExactRawDecorateEffectivity := exactRawDecorateEffectivity
+theorem fixed_fullActualRawCanonicalNodeDecorator : FullActualRawCanonicalNodeDecorator :=
+  ⟨fixed_exactRawDecorateCalibration,fixed_exactLiteralRawDecorationDomain,
+    fixed_exactCanonicalSuppliedDecoration,fixed_exactRawDecorateEffectivity⟩
+
+#print axioms fixed_exactRawDecorateCalibration
+#print axioms fixed_exactLiteralRawDecorationDomain
+#print axioms fixed_exactCanonicalSuppliedDecoration
+#print axioms fixed_exactRawDecorateEffectivity
+#print axioms fixed_fullActualRawCanonicalNodeDecorator
+
+end LogicLineages.PermittedControl.StatementChecks
