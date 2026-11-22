@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.OriginalRankedLiteralClauseHighTargets
+import LogicLineages.PermittedControl.OriginalRankedLiteralClauseHighReadyProof
+import LogicLineages.PermittedControl.OriginalRankedLiteralClauseHighPointProof
+import LogicLineages.PermittedControl.OriginalRankedLiteralClauseHighProjectionProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalRankedLiteralClauseHigh
+
+theorem fixed_exactOriginalLiteralReady : ExactOriginalLiteralReady := exactOriginalLiteralReady
+theorem fixed_exactRankedLiteralHigh : ExactRankedLiteralHigh := exactRankedLiteralHigh
+theorem fixed_exactRankedLiteralHighProjection : ExactRankedLiteralHighProjection := exactRankedLiteralHighProjection
+theorem fixed_fullOriginalRankedLiteralClauseHigh : FullOriginalRankedLiteralClauseHigh :=
+  ⟨fixed_exactOriginalLiteralReady,fixed_exactRankedLiteralHigh,fixed_exactRankedLiteralHighProjection⟩
+
+#print axioms fixed_exactOriginalLiteralReady
+#print axioms fixed_exactRankedLiteralHigh
+#print axioms fixed_exactRankedLiteralHighProjection
+#print axioms fixed_fullOriginalRankedLiteralClauseHigh
+
+end LogicLineages.PermittedControl.StatementChecks
