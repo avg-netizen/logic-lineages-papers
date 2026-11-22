@@ -1,0 +1,66 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "85b64021b5b2635256b65cffe021bc4a8cee1862",
+  "failed_source_local_commit": "f5d321be2a7bf3bc23d555987ab97c973817cfd5",
+  "failed_source_tree": "e23285c7373979394b50898c561a5787ce0821b1",
+  "failed_exact_gate_receipt": "1795373777063633037-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualCanonicalOperandGroupingStatementChecks",
+  "failed_receipt_sha256": "8b0f1dba953eed4f0cbe74152a692a18c26a24db6385e5a4c7058260c7b56b95",
+  "failed_exact_module_log_sha256": "1345ff56db284f9fe551049b52e2c21b0a2e08a6db2cea5ff38a6b10e10a2796",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean:35:12: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'lowerOperandRead', which is 'noncomputable'\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean:38:12: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'groupedWeights', which is 'noncomputable'\n",
+  "failed_original_native_log_sha256": "4874abfc3c93a5b3176aabda5e7b7a8c0dedd47c4137a4ae29d13620805e60c0",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean",
+  "failed_proof_sha256": "bea186e274bc1d70a849c917a0112f2454d5911c8b1699be3e1de9571965099c",
+  "repaired_proof_sha256": "1529800e6d3b7b349df314ebd4353883cfe6c79c0cf0d0b44241960275ae2ffc",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-REPAIR-04.patch",
+  "patch_sha256": "bc808bf6bc111a77b29429a8cd628e0c258c289e0b8e10993076b451187b75f6",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "01c8cb98e517db5ff7cafa4c5b5d44695f471e777846e49568d9ad297f0dd62d",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-REPAIR-01.json": "6c6866e2a16910ca60ea0fd333ff88b7f895f2f0dc5b232830283a34fa1e5930",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-REPAIR-03.json": "9068352de25863703df2f9ad80e367ab18aa956c5dab8e835be726b99129e224",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-REPAIR-02.json": "66df3f52b25774ecec6f1ea10146ab76716bf0c8a053599b85ca75853939af10"
+  },
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingChargeProof.lean": "e08d7c1385db2576c49b848ea4d3dd2a3f0b76027ec98a04994dee08efb34a0a",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingEncodingProof.lean": "70f8f0897fd4199e21239af3e382dd452cfa7ad2f99344d23924b92fdd5a5aa1",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingStatementChecks.lean": "766f2ed354e1361710a9eb048f632fead1bcbeb040908a77fc708e99d7e62d3f",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTapeProof.lean": "d42868d0f1b61f463ed28e9ac714b2d5432556c4db73c469ccf0ced2a04ba6df",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTargets.lean": "f3c77221f0a1112a61160a1144f9e8a1c993b507a185823c81ac5808d618278c",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-SOURCE-MAP.md": "3f07dedbc49e167216f54772aa79a6a600b6ba55865f858f962b7c1f15d4e90f"
+  },
+  "static_module_closure": {
+    "ChargeProof": {
+      "local": 178,
+      "external": 34,
+      "contains_totient": false
+    },
+    "EncodingProof": {
+      "local": 189,
+      "external": 34,
+      "contains_totient": false
+    },
+    "ReadProof": {
+      "local": 319,
+      "external": 41,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 321,
+      "external": 41,
+      "contains_totient": false
+    },
+    "TapeProof": {
+      "local": 191,
+      "external": 34,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 177,
+      "external": 34,
+      "contains_totient": false
+    }
+  },
+  "scope": "Mark only two private typed actual semantic render helpers noncomputable as compiler requires; no target/other proof change, raw executable definitions unchanged."
+}

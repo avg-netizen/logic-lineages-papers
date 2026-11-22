@@ -32,10 +32,10 @@ private theorem allSourceHit (f ρ : Nat → Nat) (xs : List Read)
     lowerOperandRead f ρ rd.1.2 = some (some rd.2) :=
   List.all_eq_true.mp ((exactInputChecks f ρ xs).mpr ok) rd used |> of_decide_eq_true
 
-private def payload (f ρ : Nat → Nat) (op : LowerOperand) : Nat :=
+private noncomputable def payload (f ρ : Nat → Nat) (op : LowerOperand) : Nat :=
   (lowerOperandRead f ρ op).join.getD 0
 
-private def render (f ρ : Nat → Nat) (xs : List Read) (key : LowerOperand) : Read :=
+private noncomputable def render (f ρ : Nat → Nat) (xs : List Read) (key : LowerOperand) : Read :=
   ((groupedWeights xs key,key),payload f ρ key)
 
 private theorem mapActual (f ρ : Nat → Nat) (xs : List Read) (ok : liftedReads f ρ xs)
