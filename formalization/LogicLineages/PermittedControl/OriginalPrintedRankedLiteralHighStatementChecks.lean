@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedRankedLiteralHighTargets
+import LogicLineages.PermittedControl.OriginalPrintedRankedLiteralHighSourceProof
+import LogicLineages.PermittedControl.OriginalPrintedRankedLiteralHighFundingProof
+import LogicLineages.PermittedControl.OriginalPrintedRankedLiteralHighProjectionProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedRankedLiteralHigh
+
+theorem fixed_exactRankedOriginalBoolSource : ExactRankedOriginalBoolSource := exactRankedOriginalBoolSource
+theorem fixed_exactOriginalChartFunding : ExactOriginalChartFunding := exactOriginalChartFunding
+theorem fixed_exactOriginalPrintedRankedHighProjection : ExactOriginalPrintedRankedHighProjection :=
+  exactOriginalPrintedRankedHighProjection
+theorem fixed_fullOriginalPrintedRankedLiteralHigh : FullOriginalPrintedRankedLiteralHigh :=
+  ⟨fixed_exactRankedOriginalBoolSource,fixed_exactOriginalChartFunding,
+    fixed_exactOriginalPrintedRankedHighProjection⟩
+
+#print axioms fixed_exactRankedOriginalBoolSource
+#print axioms fixed_exactOriginalChartFunding
+#print axioms fixed_exactOriginalPrintedRankedHighProjection
+#print axioms fixed_fullOriginalPrintedRankedLiteralHigh
+
+end LogicLineages.PermittedControl.StatementChecks
