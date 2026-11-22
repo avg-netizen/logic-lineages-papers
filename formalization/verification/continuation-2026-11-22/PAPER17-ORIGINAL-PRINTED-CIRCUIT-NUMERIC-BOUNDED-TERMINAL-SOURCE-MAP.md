@@ -1,0 +1,7 @@
+# Coded admitted bounded-source terminal on the original bank
+
+Paper 17, `17-permitted-control-canonical-comparison/sections/arithmetic.tex`, lines 3–19 and 33–54. This is the bounded-source counterpart of the literal signed-row numeric suffix at fixed supplied external inputs.
+
+- The old raw admitted bounded-source evaluator already implements the literal leading bound, ordinary local update, exact finite search and binder shadowing. This packet does not modify it. A separate exact raw crawl recovers the same literal list of all source test names (including bound names), in order. The raw guard checks both the old bounded syntax admission and availability of every listed name in the finite bank. This is an explicit conservative bank capacity premise, not a restriction on local bounded values.
+- A source run error is returned unchanged before evaluating a terminal. On a successful bank, guard rejection is 0, false and true are disjoint codes 4 and 5, and the exact typed original observation is calibrated to the actual final valuation under the original scheduled bank fit and listed test name capacities.
+- The raw bounded name crawl and bounded terminal evaluator are **Computable**; the whole driver is Computable under Computable f. The nominal local-update behavior comes from the existing exact source codec; no new primitive-recursion claim for bounded search. No unbounded quantifier, closed arithmetic decision, parser of arbitrary circuits, or automatic cutoff is claimed.
