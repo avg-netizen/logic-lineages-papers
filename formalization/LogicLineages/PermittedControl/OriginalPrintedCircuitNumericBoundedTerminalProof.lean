@@ -33,7 +33,8 @@ theorem exactBoundedTerminalData : ExactBoundedTerminalData := by
   refine ⟨namesComputable,finishComputable,namesCalibrate,?_,?_⟩
   · intro values p
     simp only [boundedGuard,Bool.and_eq_true_iff,namesFit,List.all_eq_true,decide_eq_true_eq,
-      BoundedSourceProgramsProof.literalSyntaxCode,namesCalibrate,Test.Admitted]
+      namesCalibrate,Test.Admitted]
+    rw [BoundedSourceProgramsProof.literalSyntaxCode p]
   · intro values p
     exact BoundedSourceProgramsProof.literalAnswerCode values p
 
