@@ -18,10 +18,9 @@ open NumberedWindowInternalCoverSelectedGrammarAuxScratchTargets
 
 theorem exact_OpenSelectedGrammarAuxScratchAtObserved : ExactOpenSelectedGrammarAuxScratchAtObserved := by
   intro V Measure s body α Γ m d maxNumeral df mf da ma fState fTerms fArgs aState aTerms aArgs
-    prev prevTerms prevArgs next vertices nextArgs dom cod fn arg paid before after
+    prev prevTerms prevArgs next vertices nextArgs dom cod fn arg C parent paid before after
   let H := headsTerm s α
   let K := typesTerm s α
-  let parent := auxiliaryTerm dom cod fn arg
   obtain ⟨member⟩ := exact_OpenSelectedGrammarAuxParent body α Γ
     d H K maxNumeral df mf da ma fState fTerms fArgs aState aTerms aArgs
     prev prevTerms prevArgs next vertices nextArgs dom cod fn arg

@@ -1,0 +1,29 @@
+{
+  "source": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarAuxScratchMembershipProof.lean",
+  "previous_sha256": "49d7630649076ebd709bc01cbdf847411aa30bc200bc1c7ed8d25f9c21021ce1",
+  "repaired_sha256": "662c2cf7b678c3c20eb0ec6774c589e0c00bbb913c934774502a9e068e5d93c5",
+  "immutable_previous_commit": "252db1c3c51f31b928e6b6f17ae034520171685c",
+  "verified_remote_with_previous_source": "120797f3ebe0c9d1c96fef775a5432c9e7518cb9",
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-SELECTED-GRAMMAR-AUX-SCRATCH-MEMBERSHIP-PRECHECK-01.patch",
+    "sha256": "ada79e6bbc89a85120f1401c2c2224c8400b9fa0e15a5b10e6b6202b2fba547e"
+  },
+  "unchanged_common_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarAuxScratchTargets.lean",
+      "sha256": "2fd889be69341da328c7495324bdbffeb362d3652b41603292b30112f609d119"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarAuxScratchInputsRenameProof.lean",
+      "sha256": "32b622c3ff7e47926b5df1d0bb26eea6faf2c993a82ffb9a73caf37f7bc2fc43"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-SELECTED-GRAMMAR-AUX-SCRATCH-SOURCE-MAP.md",
+      "sha256": "95161aaea16274a46952ee6422fe037ee2a016bec79efc416191e54de0ff16d1"
+    }
+  ],
+  "status": "anticipatory proof-only repair; initial membership root was blocked by its observed dependency and not natively attempted",
+  "diagnosis": "The frozen membership signature has the same leading lets C and parent. Explicitly introduce both before paid and held without changing any helpers, proposition or physical AST.",
+  "observed_initial_sha256": "a42a9ee3e6aa9cda506a607041df0d7574048cf9e04380042e99082a1b3600e4",
+  "observed_repaired_sha256": "44831a01b1d12a44a764ac2271819ca6380b77597596c6fe4da6fc5638e29ad3"
+}

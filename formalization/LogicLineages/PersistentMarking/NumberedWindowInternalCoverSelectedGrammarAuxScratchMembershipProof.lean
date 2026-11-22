@@ -88,7 +88,7 @@ private theorem withBefore (V Measure : Program 1) (s : Settings)
 
 theorem exact_OpenSelectedGrammarAuxScratchMembership : ExactOpenSelectedGrammarAuxScratchMembership := by
   intro V Measure s body α Γ m d M df mf da ma fState fTerms fArgs aState aTerms aArgs
-    vertices dom cod fn arg paid held
+    vertices dom cod fn arg C parent paid held
   apply observationCases d (headsTerm s α) (typesTerm s α) M _
   intro β j Δ prev prevTerms prevArgs keep before
   rw [graphRename,auxiliaryRename]
