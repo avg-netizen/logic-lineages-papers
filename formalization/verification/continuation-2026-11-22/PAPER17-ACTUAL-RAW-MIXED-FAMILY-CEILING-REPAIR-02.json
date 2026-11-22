@@ -1,0 +1,31 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "de768a921c6321b763d7069e98ca36d0dd682d52",
+  "failed_source_local_commit": "f10791b468974be56cbe5d831012888d5e308382",
+  "failed_source_tree": "b3785cab87a0c9b5d26525dd53c2fa08cc96e00a",
+  "failed_exact_gate_receipt": "1795374777512118928-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualRawStageCutoffStatementChecks",
+  "failed_receipt_sha256": "132dcf9e21b7ccd832b3f79c32d568dd2db5ba03c0d183d90e3255d68fbc772f",
+  "failed_exact_module_log_sha256": "745757cbc01f093cdd8d5e1595f7e31770636433bb704c99f013b4b22580a1e7",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingPrimitiveProof.lean:18:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingPrimitiveProof.lean:50:8: error: (kernel) unknown constant 'LogicLineages.PermittedControl.ActualRawMixedFamilyCeiling.rowBoundPrimitive'\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingPrimitiveProof.lean:58:8: error: (kernel) unknown constant 'LogicLineages.PermittedControl.ActualRawMixedFamilyCeiling.rowBoundPrimitive'",
+  "failed_original_native_log_sha256": "368807b7dae372180076b51c7b24a48058c43391569b96f04aa2e5da9a4a5bde",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingPrimitiveProof.lean",
+  "failed_proof_sha256": "59d357bcddec78eae148146d157a58b576221b7f41054b45838d5c4bff6918c2",
+  "repaired_proof_sha256": "e126e57afc35b7f3b32e2287622e4bd00955147b208414fb763ab8f688144dfb",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MIXED-FAMILY-CEILING-REPAIR-02.patch",
+  "patch_sha256": "52b2b3806cc8b70fcfb4e095d6519eea99a4c99a5dc3f13ea967bab6ae27f435",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MIXED-FAMILY-CEILING-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "433003ac8df3fb6b6bf1f4f037669942ac19ea9b8b701084c7a1090760ece970",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MIXED-FAMILY-CEILING-REPAIR-01.json": "e4003ac89f004d397af8925e446a9ac4e3761ee42004922f37f98f0ff0a56bd5",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MIXED-FAMILY-CEILING-REPAIR-01.patch": "522fe7228702f672244ed14663ab03b3242379579e12766f84502c005899eab7"
+  },
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingProof.lean": "b7269b8b0279424cc6c657311532a2bd53b54ec85906ca8aa938a647cf43e261",
+    "formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingStatementChecks.lean": "4a4a24b7cfaba5a39729a4485a876659015dcfcb70b2cbaf892504d83a890ac6",
+    "formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingTargets.lean": "1c58fece2fb1af3fbfae3556a9d4244a96863f51817744ba2daeb1a6704154bf",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MIXED-FAMILY-CEILING-SOURCE-MAP.md": "47cb145d9024b587484da8a2b5d9096be9b71156bab9436f35667d2a936ee345"
+  },
+  "scope": "Prove shallow standalone modular formula and signed-syntax PR maps, lift each into bit-row scope, and combine with a polymorphic exact branch/max lemma and standalone rfl. No program, target, theorem, import, or checker profile changes."
+}
