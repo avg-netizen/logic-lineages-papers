@@ -1,0 +1,56 @@
+{
+  "status": "narrow proof-only first repair; exact native retry pending",
+  "immutable_previous_verified_remote": "e55a928bb13e67ad54dd940a9eab517140b70f19",
+  "previous_source_local": "316821cc88f7a320cb02fcab1afd3180a8741f3e",
+  "receipt": {
+    "path": "formalization/build-reports/1795361152552466968-8.json",
+    "sha256": "33976e44a69c67267a384330cbb95b55b33f2f67f4bb9aa40ad5b666bffafae3"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795361152552466968-8-LogicLineages-PersistentMarking-NumberedWindowInternalCoverTypeLeafIntrinsicNumericProof.log",
+    "sha256": "a38a20e37d1b0e7b22b70c40fbe5a4be6fc83826123f0391b957e13dad44587c"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-type-leaf-intrinsic-numeric-initial-diagnostic.txt",
+    "sha256": "a38a20e37d1b0e7b22b70c40fbe5a4be6fc83826123f0391b957e13dad44587c"
+  },
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-COVER-TYPE-LEAF-INTRINSIC-NUMERIC-REPAIR-01.patch",
+    "sha256": "e483b686120bdd7b2a5727ccf04879ed02e09d33deb7cf2b50c349c7ff540e1e"
+  },
+  "archived_failed_source": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverTypeLeafIntrinsicNumericProof-01.lean",
+    "sha256": "43ab2c7687c5498e93ca26025b2028c93405f48833fe99b747bc8948f8020a01"
+  },
+  "repaired_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafIntrinsicNumericProof.lean",
+    "sha256": "94b2bca584caa6aa2547a5bcdca0b05f50f239d251f4aa779ea538ea245a8cc8"
+  },
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafIntrinsicTargets.lean",
+      "sha256": "7e455b46f9c0fc3308dd217421ffeb77d7e2d00c83ac1799182f34644b5758f2"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafIntrinsicShapeProof.lean",
+      "sha256": "e3ca601857e73b5e044ff698bbd75af952314464ec63cda6bfcfa734a94111f3"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafIntrinsicBaseOpenProof.lean",
+      "sha256": "5f644bd2ae2bedca3d73784320f73e044f543f82b3f78f376a0bd9ab6f898db6"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafStrictWindowProof.lean",
+      "sha256": "67f41c53fe810e528d916e580ad59d3e69247c9fb65099144329d6785d34d798"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafTypedMeasuredScratchProof.lean",
+      "sha256": "66d6b44cabb40ff76c93c6ad952ee0e07f605bb71e863933ebf439a08fbfb637"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-COVER-TYPE-LEAF-ACTUAL-K-STRICT-BASE-SOURCE-MAP.md",
+      "sha256": "695b764a3b405d6b3bf5ef6a58379370ca46c077b6d73693dec482fc93aabcfe"
+    }
+  ],
+  "diagnosis": "Use the available Bool.and_eq_true_iff direction and explicitly normalize the singleton getD by definitional equality. The original effective graph, hypotheses, exact target, and separately submitted open proof leaves are unchanged. Failed sorryAx is not acceptance."
+}

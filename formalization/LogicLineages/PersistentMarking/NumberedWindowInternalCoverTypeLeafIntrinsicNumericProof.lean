@@ -87,9 +87,10 @@ private theorem leafMember (s : Settings) (ctx raw ty : Nat)
     rw [admitted,Bool.and_eq_true] at yes'
     have goodBits := yes'.2
     change ((NumberedWindowSyntaxAlgorithm.syntaxBits raw).1 && (rawBits s.window raw).1) = true at goodBits
-    have admittedLeaf : (rawBits s.window raw).1 = true := (Bool.and_eq_true.mp goodBits).2
+    have admittedLeaf : (rawBits s.window raw).1 = true := (Bool.and_eq_true_iff.mp goodBits).2
     apply List.contains_iff_mem.mp
-    simpa only [rawBits,termNext,read,Option.any_some,termParts] using admittedLeaf
+    have fieldZero : ([ty] : List Nat).getD 0 0 = ty := rfl
+    simpa only [rawBits,termNext,read,Option.any_some,termParts,fieldZero] using admittedLeaf
 
 private theorem onRawValue (P : Program 1) (ctx raw : Nat) :
     evaluate (onRaw P) (ctx ::ᵥ raw ::ᵥ nil) = run P raw := rfl
