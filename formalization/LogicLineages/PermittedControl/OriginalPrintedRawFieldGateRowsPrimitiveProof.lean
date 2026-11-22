@@ -102,10 +102,33 @@ private theorem onePrimitive {operand : RawGate → LowerOperandCode} (h : Primr
   Primrec.option_some.comp
     (Primrec.list_cons.comp (equalityPrimitive.comp h outputPrimitive) (Primrec.const []))
 
+private def identityInput (g : RawGate) : Nat × Nat × Nat :=
+  (g.2.2.2.1.1, g.2.1, g.2.2.1)
+
+private theorem identityInputPrimitive : Primrec identityInput :=
+  headPrimitive.pair (sourcePrimitive.pair outputPrimitive)
+
+private def identityOutput (b : Bool) (p : Nat × Nat × Nat) : List RawRow :=
+  identityRowsCode b p.1 p.2.1 p.2.2
+
+private theorem identityOutputPrimitive (b : Bool) : Primrec (identityOutput b) :=
+  identityPrimitive b
+
+private theorem identityCompositePrimitive (b : Bool) :
+    Primrec (identityOutput b ∘ identityInput) :=
+  (identityOutputPrimitive b).comp identityInputPrimitive
+
+private theorem optionLiftPrimitive {A T : Type} [Primcodable A] [Primcodable T]
+    {f : A → T} (h : Primrec f) : Primrec (fun a => some (f a)) :=
+  Primrec.option_some.comp h
+
+private theorem identityCaseLiteral (b : Bool) (g : RawGate) :
+    some ((identityOutput b ∘ identityInput) g) =
+      some (identityRowsCode b g.2.2.2.1.1 g.2.1 g.2.2.1) := rfl
+
 private theorem identityCasePrimitive (b : Bool) : Primrec (fun g : RawGate =>
     some (identityRowsCode b g.2.2.2.1.1 g.2.1 g.2.2.1)) :=
-  Primrec.option_some.comp ((identityPrimitive b).comp
-    (headPrimitive.pair (sourcePrimitive.pair outputPrimitive)))
+  (optionLiftPrimitive (identityCompositePrimitive b)).of_eq (identityCaseLiteral b)
 
 private theorem dispatchPrimitive {A T : Type} [Primcodable A] [Primcodable T]
     {tag : A → Nat} {on2 on3 on4 on5 on6 : A → Option T}
