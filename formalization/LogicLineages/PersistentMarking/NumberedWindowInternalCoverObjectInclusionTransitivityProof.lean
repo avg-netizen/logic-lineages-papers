@@ -22,7 +22,7 @@ open NumberedWindowInternalCoverArgumentCellsTargets (axisInclusion)
 open NumberedWindowInternalCoverArgumentCellsTransportProof (axisRename)
 open NumberedWindowInternalCoverSelectedGrammarWidthTargets (pairInclusion)
 
-private theorem applyAxis {body : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+private def applyAxis {body : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
     (a b v : OTerm α) (includeAB : Derivation body Γ (axisInclusion a b))
     (memberA : Derivation body Γ (memberGraph a v)) :
     Derivation body Γ (memberGraph b v) := by

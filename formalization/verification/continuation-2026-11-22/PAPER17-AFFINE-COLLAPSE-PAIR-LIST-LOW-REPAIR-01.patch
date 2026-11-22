@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/AffineCollapsePairListLowPrefixProof.lean
++++ b/formalization/LogicLineages/PermittedControl/AffineCollapsePairListLowPrefixProof.lean
+@@ -71,2 +71,3 @@
+-        rcases List.mem_cons.mp hq with rfl | hq
+-        · exact (actualHead f θ p hp).mp h₁
++        rcases List.mem_cons.mp hq with heq | hq
++        · subst q
++          exact (actualHead f θ p hp).mp h₁

@@ -68,8 +68,9 @@ theorem exactSharedPrefix : ExactSharedPrefix := by
       · intro h
         obtain ⟨h₁,h₂⟩ := app.mp h
         intro q hq
-        rcases List.mem_cons.mp hq with rfl | hq
-        · exact (actualHead f θ p hp).mp h₁
+        rcases List.mem_cons.mp hq with heq | hq
+        · subst q
+          exact (actualHead f θ p hp).mp h₁
         · exact (ih hs).mp h₂ q hq
       · intro h
         exact app.mpr ⟨(actualHead f θ p hp).mpr (h p List.mem_cons_self),
