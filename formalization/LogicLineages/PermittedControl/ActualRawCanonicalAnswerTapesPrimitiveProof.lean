@@ -17,9 +17,9 @@ private theorem nextTapesPrimitive : Primrec nextTapes := by
   have old : Primrec (Prod.fst : A → List (List Nat)) := Primrec.fst
   have digit : Primrec (fun p : S => p.1.2) := Primrec.snd.comp Primrec.fst
   have tape : Primrec (Prod.snd : S → List Nat) := Primrec.snd
-  have prefix : Primrec (fun p : A => p.1.map (List.cons p.2)) :=
+  have prependTape : Primrec (fun p : A => p.1.map (List.cons p.2)) :=
     Primrec.list_map old (Primrec.list_cons.comp digit tape).to₂
-  exact Primrec.list_flatMap (Primrec.const [0,1,2]) prefix.to₂
+  exact Primrec.list_flatMap (Primrec.const [0,1,2]) prependTape.to₂
 
 theorem answerTapesPrimitive : Primrec answerTapes := by
   apply (Primrec.nat_rec' Primrec.id (Primrec.const ([[]] : List (List Nat)))
