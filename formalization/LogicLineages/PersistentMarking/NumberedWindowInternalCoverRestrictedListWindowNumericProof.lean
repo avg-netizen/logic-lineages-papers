@@ -72,7 +72,9 @@ theorem exact_TypeOnlyArgumentDomain (s : Settings) (a : Nat) :
       constructor
       · intro h
         exact ⟨xs,rfl,fun q hq =>
-          (exact_CoverTypeOnlyHeadGuardNumeric s q).mp (by simpa using h q hq)⟩
+          (exact_CoverTypeOnlyHeadGuardNumeric s q).mp (by
+            change evaluate (typeOnlyHeadGuard s) (q ::ᵥ nil) = 1
+            exact beq_iff_eq.mp (h q hq))⟩
       · rintro ⟨ys,read,h⟩
         have same := Option.some.inj read
         subst ys
