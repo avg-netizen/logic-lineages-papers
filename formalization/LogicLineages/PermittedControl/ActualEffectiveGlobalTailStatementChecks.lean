@@ -1,0 +1,17 @@
+module
+public import LogicLineages.PermittedControl.ActualEffectiveGlobalTailTargets
+import LogicLineages.PermittedControl.ActualEffectiveGlobalTailPrimitiveProof
+import LogicLineages.PermittedControl.ActualEffectiveGlobalTailCalibrationProof
+import LogicLineages.PermittedControl.ActualEffectiveGlobalTailDominanceProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualEffectiveGlobalTail :
+    ActualEffectiveGlobalTail.FullActualEffectiveGlobalTail :=
+  ⟨ActualEffectiveGlobalTail.codeEffectivity,ActualEffectiveGlobalTail.codeCalibration,
+    ActualEffectiveGlobalTail.exactTailDominance⟩
+
+#print axioms fixed_actualEffectiveGlobalTail
+
+end LogicLineages.PermittedControl.StatementChecks
