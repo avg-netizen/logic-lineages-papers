@@ -1,0 +1,25 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedRawConditionalQueryTargets
+import LogicLineages.PermittedControl.OriginalPrintedRawConditionalQueryProof
+import LogicLineages.PermittedControl.OriginalPrintedRawConditionalQueryComputableProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedRawConditionalQuery
+
+theorem fixed_exactOriginalRawConditionalQuery : ExactOriginalRawConditionalQuery :=
+  exactOriginalRawConditionalQuery
+theorem fixed_exactOriginalRawQueryFailure : ExactOriginalRawQueryFailure :=
+  exactOriginalRawQueryFailure
+theorem fixed_originalRawConditionalQueryEffectivity : OriginalRawConditionalQueryEffectivity :=
+  originalRawConditionalQueryEffectivity
+theorem fixed_fullOriginalRawConditionalQuery : FullOriginalRawConditionalQuery :=
+  ⟨fixed_exactOriginalRawConditionalQuery,fixed_exactOriginalRawQueryFailure,
+    fixed_originalRawConditionalQueryEffectivity⟩
+
+#print axioms fixed_exactOriginalRawConditionalQuery
+#print axioms fixed_exactOriginalRawQueryFailure
+#print axioms fixed_originalRawConditionalQueryEffectivity
+#print axioms fixed_fullOriginalRawConditionalQuery
+
+end LogicLineages.PermittedControl.StatementChecks
