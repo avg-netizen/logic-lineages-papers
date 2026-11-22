@@ -66,7 +66,7 @@ theorem choicesPrimitive : Primrec (fun p : Nat × List Nat => choices p.1 p.2) 
 
 private theorem containsPrimitive : Primrec (fun p : List Nat × Nat => p.1.contains p.2) := by
   have index : Primrec (fun p : List Nat × Nat => p.1.idxOf p.2) :=
-    Primrec.list_idxOf.comp Primrec.fst Primrec.snd
+    Primrec.list_idxOf.comp Primrec.snd Primrec.fst
   have length : Primrec (fun p : List Nat × Nat => p.1.length) :=
     Primrec.list_length.comp Primrec.fst
   apply (Primrec.nat_lt.comp index length).decide.of_eq
