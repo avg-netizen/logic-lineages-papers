@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.ActualBitFamilyRawClosedTargets
+import LogicLineages.PermittedControl.ActualBitFamilyRawClosedProof
+import LogicLineages.PermittedControl.ActualBitFamilyRawClosedPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualBitFamilyRawClosed
+
+theorem fixed_exactClosedRawCalibration : ExactClosedRawCalibration := exactClosedRawCalibration
+theorem fixed_exactClosedRawTruth : ExactClosedRawTruth := exactClosedRawTruth
+theorem fixed_exactClosedRawEffectivity : ExactClosedRawEffectivity := exactClosedRawEffectivity
+theorem fixed_fullActualBitFamilyRawClosed : FullActualBitFamilyRawClosed :=
+  ⟨fixed_exactClosedRawCalibration,fixed_exactClosedRawTruth,fixed_exactClosedRawEffectivity⟩
+
+#print axioms fixed_exactClosedRawCalibration
+#print axioms fixed_exactClosedRawTruth
+#print axioms fixed_exactClosedRawEffectivity
+#print axioms fixed_fullActualBitFamilyRawClosed
+
+end LogicLineages.PermittedControl.StatementChecks
