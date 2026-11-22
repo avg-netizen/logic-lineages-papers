@@ -30,7 +30,7 @@ theorem exactOriginalRawGraphGate : ExactOriginalRawGraphGate := by
     simpa only [onGate,baseTag,if_pos,nextSlot] using
       OriginalPrintedRawBaseGateRows.exactOriginalRawBaseGateStep b n
   | field f =>
-    simpa only [onGate,fieldTag,if_neg,nextSlot] using
+    simpa only [onGate,fieldTag,if_false,nextSlot] using
       OriginalPrintedRawFieldGateRows.exactOriginalRawFieldGateStep f n
 
 private theorem normalizeCons (n : Nat) (g : Gate) (gs : List Gate) :
@@ -67,7 +67,7 @@ private theorem runEncoded (gs : List Gate) (n : Nat) (prior : List RawRow) :
     rw [exactOriginalRawGraphGate g n]
     change run (gs.map encodeGate)
       (some (nextSlot n g,prior ++ (rowsList (normalizeFrom n [g])).map encodeRow)) = _
-    rw [ih,encodedCons,List.append_assoc]
+    rw [ih,encodedCons n g gs,List.append_assoc]
 
 theorem exactOriginalRawGraphRun : ExactOriginalRawGraphRun := ⟨runNone,runEncoded⟩
 
