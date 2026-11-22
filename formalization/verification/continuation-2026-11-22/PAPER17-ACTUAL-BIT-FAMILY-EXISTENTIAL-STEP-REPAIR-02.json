@@ -1,0 +1,46 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "829046007de23eb4d9d5c7b11e513f69e9095b0b",
+  "failed_source_local_commit": "412a81568b0902372d011da7576ad9a4fc006218",
+  "failed_source_tree": "de54786d83cc8ebb5f1921aa18496270ab959d94",
+  "failed_exact_gate_receipt": "1795372196010413083-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualBitFamilyExistentialStepStatementChecks",
+  "failed_receipt_sha256": "33328c352ad08d56299e660ccfb466e5b6148d8a5713c55fd30d115fd969ad34",
+  "failed_exact_module_log_sha256": "44c42515b26ea508b325cf176bf0795caea38fb98d1eba53894605232b44540d",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualBitFamilyExistentialStepProof.lean:38:41: error: Application type mismatch: The argument\n  member\nhas type\n  p.2 \u2208 children f B family\nbut is expected to have type\n  p \u2208 compile B family\nin the application\n  And.intro member\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualBitFamilyExistentialStepProof.lean:49:48: error: Application type mismatch: The argument\n  member\nhas type\n  p.2 \u2208 children f B family\nbut is expected to have type\n  p \u2208 compile B family\nin the application\n  exactGenericHighDimension B family p member\n",
+  "failed_original_native_log_sha256": "9821fe6ebc95b9e53e21b03ed58b2b64e537ea4c21cd2dcab82d77ef71dd1dda",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualBitFamilyExistentialStepProof.lean",
+  "failed_proof_sha256": "d20a6bf2a3c178a3db906fc6a9f6bf43cfff74551f03ece494b88b43e817c53c",
+  "repaired_proof_sha256": "e6be82e4ed052afdb172e4cbfa76d5f259f9080df57ea1ab1d07216bc92e06cc",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-EXISTENTIAL-STEP-REPAIR-02.patch",
+  "patch_sha256": "aed4f2942cfd28113b7cca5db7152a6753dca15c8feaca0a02d2649594f529c8",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-EXISTENTIAL-STEP-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "973134703fd9337d32a036dc6f5df23671b788d90525bff887bbd0c1dba3e78b",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-EXISTENTIAL-STEP-REPAIR-01.json": "4c86e2f94ef5046147e487b61261a95b35ee94bf9e01c021b8ff8e021a278cb1"
+  },
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyExistentialStepStatementChecks.lean": "ec63bd5f90f3e69cb98cec79b128d662136ee86c123cb5d19c4cd4b87fd4dcbe",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyExistentialStepTargets.lean": "0d2862d41f28167687c462fcee6e40947df0f61001c54ac09f690794450233b6",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-EXISTENTIAL-STEP-SOURCE-MAP.md": "edea4432e005d643c4fbe2b8cc64fe63bda81cb7aea6b9bc1c1d6691768a2217"
+  },
+  "static_module_closure": {
+    "Proof": {
+      "local": 801,
+      "external": 44,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 802,
+      "external": 44,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 316,
+      "external": 35,
+      "contains_totient": false
+    }
+  },
+  "scope": "Use unshared listedHigh and explicit typed keep in both high pair-membership cases, rewriting only the truth or dimension by the same equality rather than substituting all hypotheses. No target, data, imports, or proof scope changed."
+}
