@@ -52,6 +52,7 @@ theorem rawClauseCalibration (clause : List BitRow) :
     change (rowCode (encodeBitRow r) && clauseCode (rs.map encodeBitRow)) = closedClause (r :: rs)
     rw [literalRow,ih]
     cases hb : closedCell r.1 <;> cases ht : closedSnapshot (originalRows rs) <;>
+      simp only [originalRows] at ht <;>
       simp [closedClause,originalRows,wantedBits,closedSnapshot,hb,ht,bind,pure,
         List.cons.injEq,Bool.decide_and]
 
