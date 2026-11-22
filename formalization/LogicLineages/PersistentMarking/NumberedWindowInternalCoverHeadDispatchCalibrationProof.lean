@@ -1,0 +1,24 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalCoverHeadDispatchTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverHeadWindowNumericProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverNamedResultNumericProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSettingsGrammarGuardNumericProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverHeadDispatchCalibrationProof
+open NumberedWindowInternalSettingsGrammarGuardDefinitions (refitGuard)
+open NumberedWindowInternalSettingsGrammarGuardNumericProof (exact_SettingsRefitGuardCalibration)
+open NumberedWindowInternalCoverNamedResultNumericProof (exact_CoverNamedResultWindowCalibrated)
+open NumberedWindowInternalCoverHeadWindowTargets (grammarHeadBase)
+open NumberedWindowInternalCoverHeadWindowNumericProof (exact_CoverGrammarHeadBase)
+open NumberedWindowInternalCoverHeadDispatchTargets
+
+theorem exact_CoverHeadFittedWindowCalibrated : ExactCoverHeadFittedWindowCalibrated := by
+  intro s B T fit base scalar
+  exact exact_CoverNamedResultWindowCalibrated s (grammarHeadBase s B) (refitGuard s T) fit
+    (exact_CoverGrammarHeadBase s B base) (exact_SettingsRefitGuardCalibration s T fit scalar)
+
+#print axioms exact_CoverHeadFittedWindowCalibrated
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalCoverHeadDispatchCalibrationProof
