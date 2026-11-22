@@ -1,0 +1,13 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedLeafMeasureNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedLeafMeasureNumericProof.lean
+@@ -64 +63,0 @@
+-  have coordinate : ([ty,i] : List Nat).getD 1 0 = i := rfl
+@@ -66 +65,7 @@
+-    cases b <;> simp only [Bool.toNat,bounds,termNext,parse,Option.map_some,Option.getD_some,termMeasure,coordinate]
++    cases b <;>
++      simp only [bounds,termNext,parse,Option.map_some,Option.getD_some] <;>
++      first
++      | change termMeasure _ 0 [ty,i] = (1,i)
++        rfl
++      | change termMeasure _ 1 [ty,i] = (1,i)
++        rfl

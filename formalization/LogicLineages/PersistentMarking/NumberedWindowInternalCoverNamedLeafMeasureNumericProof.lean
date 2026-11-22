@@ -61,9 +61,14 @@ private theorem branchPaid (b : Bool) (raw : Nat)
     evaluate namedMeasurePair (raw ::ᵥ nil) = Encodable.encode (bounds raw).1 := by
   obtain ⟨fields,parse,len⟩ := (exact_CoverHeaderUnpackNode b.toNat 2 raw).mp leaf
   rcases fields with _ | ⟨ty,_ | ⟨i,_ | ⟨extra,rest⟩⟩⟩ <;> simp at len
-  have coordinate : ([ty,i] : List Nat).getD 1 0 = i := rfl
   have exactBounds : (bounds raw).1 = ((1,i) : Nat × Nat) := by
-    cases b <;> simp only [Bool.toNat,bounds,termNext,parse,Option.map_some,Option.getD_some,termMeasure,coordinate]
+    cases b <;>
+      simp only [bounds,termNext,parse,Option.map_some,Option.getD_some] <;>
+      first
+      | change termMeasure _ 0 [ty,i] = (1,i)
+        rfl
+      | change termMeasure _ 1 [ty,i] = (1,i)
+        rfl
   rw [ownPair parse,exactBounds]
 
 theorem exact_CoverNamedLeafMeasureBase : ExactCoverNamedLeafMeasureBase := by
