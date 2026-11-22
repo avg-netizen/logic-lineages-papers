@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PermittedControl.OriginalMatrixDenseRanksTargets
+import LogicLineages.PermittedControl.OriginalMatrixDenseRanksTapeProof
+import LogicLineages.PermittedControl.OriginalMatrixDenseRanksProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalMatrixRenamedReadTape : OriginalMatrixDenseRanks.ExactRenamedReadTape :=
+  OriginalMatrixDenseRanks.exactRenamedReadTape
+
+theorem fixed_exactOriginalMatrixRenamedRows : OriginalMatrixDenseRanks.ExactRenamedMatrix :=
+  OriginalMatrixDenseRanks.exactRenamedMatrix
+
+theorem fixed_exactOriginalMatrixDenseRanks : OriginalMatrixDenseRanks.ExactDenseMatrix :=
+  OriginalMatrixDenseRanks.exactDenseMatrix
+
+theorem fixed_fullOriginalMatrixDenseRanks : OriginalMatrixDenseRanks.FullOriginalMatrixDenseRanks :=
+  ⟨fixed_exactOriginalMatrixRenamedReadTape,fixed_exactOriginalMatrixRenamedRows,
+    fixed_exactOriginalMatrixDenseRanks⟩
+
+#print axioms fixed_exactOriginalMatrixRenamedReadTape
+#print axioms fixed_exactOriginalMatrixRenamedRows
+#print axioms fixed_exactOriginalMatrixDenseRanks
+#print axioms fixed_fullOriginalMatrixDenseRanks
+
+end LogicLineages.PermittedControl.StatementChecks

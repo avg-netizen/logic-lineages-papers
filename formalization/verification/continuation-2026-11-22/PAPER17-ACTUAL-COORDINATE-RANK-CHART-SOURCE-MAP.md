@@ -1,0 +1,5 @@
+# Paper 17 — dense actual ordered quotient of a finite coordinate support
+
+Source: [arithmetic.tex](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex), lines 256–257. For one supplied valuation, take the distinct actual values of the original literal name list and use Mathlib's canonical increasing bijection with its cardinality. Names with equal values have exactly the same dense rank; strict value comparison is strict rank comparison. Every rank below cardinality is represented by at least one original listed name.
+
+[Targets](../../LogicLineages/PermittedControl/ActualCoordinateRankChartTargets.lean) · [Proof](../../LogicLineages/PermittedControl/ActualCoordinateRankChartProof.lean) · [Exact check](../../LogicLineages/PermittedControl/ActualCoordinateRankChartStatementChecks.lean). The total ambient rank valuation is extended strictly above the observed finite values, solely for exact compatibility with the existing charge APIs. No fresh source coordinate is observed on this tail. No finite enumeration of symbolic branches, arbitrary valuation absence, or computed cutoff.

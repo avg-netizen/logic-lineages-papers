@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PermittedControl.ActualCoordinateRankChartTargets
+import LogicLineages.PermittedControl.ActualCoordinateRankChartProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualCoordinateRankChart : ActualCoordinateRankChart.ExactDenseRankChart :=
+  ActualCoordinateRankChart.exactDenseRankChart
+
+#print axioms fixed_exactActualCoordinateRankChart
+
+end LogicLineages.PermittedControl.StatementChecks
