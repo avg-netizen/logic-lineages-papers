@@ -46,8 +46,8 @@ theorem exactPatternEnumeration : ExactPatternEnumeration := by
     obtain ⟨vs,hv,eq⟩ := List.mem_map.mp inMap
     obtain ⟨rfl,rfl⟩ := Prod.mk.inj eq
     obtain ⟨member,all⟩ := List.mem_filter.mp hv
-    obtain ⟨namesEq,bounds⟩ := (choicesExact k names es).mp member
-    exact ⟨Nat.le_of_lt_succ (List.mem_range.mp within),namesEq,bounds,(ontoExact k es).mp all⟩
+    obtain ⟨namesEq,bounds⟩ := (choicesExact i names vs).mp member
+    exact ⟨Nat.le_of_lt_succ (List.mem_range.mp within),namesEq,bounds,(ontoExact i vs).mp all⟩
   · rintro ⟨within,keys,bounds,all⟩
     refine List.mem_flatMap.mpr ⟨k,List.mem_range.mpr (Nat.lt_succ_of_le within),?_⟩
     refine List.mem_map.mpr ⟨es,List.mem_filter.mpr ⟨?_,?_⟩,rfl⟩

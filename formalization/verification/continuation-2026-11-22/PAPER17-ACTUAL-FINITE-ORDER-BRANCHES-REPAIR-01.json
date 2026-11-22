@@ -1,0 +1,62 @@
+{
+  "status": "exact source-only narrow proof repair; native not invoked by author",
+  "failed_source_remote_commit": "32043cc971283677a5d6527f6b374531b7fbf953",
+  "failed_source_local_commit": "56dd63fa6",
+  "failed_exact_gate_receipt": "1795357627716537476-74",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualFiniteOrderBranchesStatementChecks",
+  "failed_receipt_sha256": "9be3e99fcd5a208e60f120ae8287cf9bd5f6125546e7516296bd45c355c50ac0",
+  "failed_exact_module_log_sha256": "e636651c87557eba2f4bff135ae8582d339bee70ed13ec813f39c936f0a248da",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesEnumerateProof.lean:49:45: error(lean.unknownIdentifier): Unknown identifier `k`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesEnumerateProof.lean:49:53: error(lean.unknownIdentifier): Unknown identifier `es`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesEnumerateProof.lean:50:82: error(lean.unknownIdentifier): Unknown identifier `k`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesEnumerateProof.lean:50:84: error(lean.unknownIdentifier): Unknown identifier `es`",
+  "failed_original_native_log_sha256": "e0fbbb0f69bf8e7639eaf54d04d06055a98fbb2ce41cf90f09ed56b21343c661",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesEnumerateProof.lean",
+  "failed_proof_sha256": "1edb9d876de6f2fc785dbbe345883c8d6a9a12ddba1378d906df3678ee549b1b",
+  "repaired_proof_sha256": "1056adaef322847e08a482db58e93ab1da6a93204441c4feed1f9cab53174ffe",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FINITE-ORDER-BRANCHES-REPAIR-01.patch",
+  "patch_sha256": "551b3229d0e2abc7706bc98fd6e66410483b39acba147ba582def5186494b18a",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FINITE-ORDER-BRANCHES-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "b2bcce068fb82a3b391187823f949452607679c4b1a2ce95263b24c89e67160a",
+  "downstream_manifest_untouched": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-ORDER-BRANCHES-AUTHOR-MANIFEST.json",
+  "downstream_original_manifest_sha256": "d76a8a4b9f388b779f1178bf9970cfbd4456ed54d2cb8e8eb352f485293c58ce",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesTargets.lean": "98c23d875caf39c0dacd8a35c6a888a10d26eb7b40bc748855ec14c79f9bc891",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesGuardProof.lean": "19109ac5217801273cc32ef57d90cd6b993401dfd3ee44494f7b44e8bcdc90ba",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesCoverageProof.lean": "369b60dc03a8dbea6920779f0151f6d0116d1091709cfc94ec95a017009ea6cb",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesRealizationProof.lean": "034398b2e0793972cae978df7fca4fb39299073aec97d327613692aa2764a9de",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesStatementChecks.lean": "0fe5dc687ec74c31f94895c416a384e91dabc39943b2e3eccb22ed4905aacb3d",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FINITE-ORDER-BRANCHES-SOURCE-MAP.md": "b11eb4d3c371864b8b1cc2004898d00b63902637069735b4dca3becad161d592"
+  },
+  "static_closure_unchanged": {
+    "Targets": {
+      "local": 92,
+      "external": 23,
+      "contains_totient": false
+    },
+    "EnumerateProof": {
+      "local": 93,
+      "external": 23,
+      "contains_totient": false
+    },
+    "GuardProof": {
+      "local": 93,
+      "external": 23,
+      "contains_totient": false
+    },
+    "CoverageProof": {
+      "local": 96,
+      "external": 23,
+      "contains_totient": false
+    },
+    "RealizationProof": {
+      "local": 95,
+      "external": 23,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 98,
+      "external": 23,
+      "contains_totient": false
+    }
+  },
+  "scope": "Use surviving local names for the very same bounded and onto enumeration after the existing pair decomposition. No target, imports, branch emitter or other proof changes."
+}

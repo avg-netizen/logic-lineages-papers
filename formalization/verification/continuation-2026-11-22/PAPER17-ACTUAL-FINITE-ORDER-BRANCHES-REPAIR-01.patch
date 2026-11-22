@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesEnumerateProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesEnumerateProof.lean
+@@ -49,2 +49,2 @@
+-    obtain ⟨namesEq,bounds⟩ := (choicesExact k names es).mp member
+-    exact ⟨Nat.le_of_lt_succ (List.mem_range.mp within),namesEq,bounds,(ontoExact k es).mp all⟩
++    obtain ⟨namesEq,bounds⟩ := (choicesExact i names vs).mp member
++    exact ⟨Nat.le_of_lt_succ (List.mem_range.mp within),namesEq,bounds,(ontoExact i vs).mp all⟩
