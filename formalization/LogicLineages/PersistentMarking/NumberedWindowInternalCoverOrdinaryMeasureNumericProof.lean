@@ -78,6 +78,7 @@ theorem exact_CoverOrdinaryMeasureBase : ExactCoverOrdinaryMeasureBase := by
         rw [actualConjunctionEvaluation]
         split <;> simp
       exact bits.resolve_right yes
+    change evaluate (header 4 2) (raw ::ᵥ nil) = 0 at zero
     rw [if_pos zero]
     exact calibrated raw
 
