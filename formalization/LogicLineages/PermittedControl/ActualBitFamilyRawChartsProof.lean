@@ -29,13 +29,14 @@ private theorem consistentOfNoDuplicate (es : List Entry) (uniq : (es.map Prod.f
 
 theorem exactNonemptyPatterns : ExactNonemptyPatterns := by
   intro source uniq p
-  simp only [nonemptyPatterns,List.mem_filter,decide_eq_true_eq,exactPatternEnumeration]
+  simp only [nonemptyPatterns,List.mem_filter,decide_eq_true_eq]
   constructor
-  · rintro ⟨dense,pos⟩
+  · rintro ⟨member,pos⟩
+    have dense : Dense source p := (exactPatternEnumeration source p).mp member
     have once : (p.2.map Prod.fst).Nodup := dense.2.1.symm ▸ uniq
     exact ⟨dense,pos,consistentOfNoDuplicate p.2 once⟩
   · rintro ⟨dense,pos,_⟩
-    exact ⟨dense,pos⟩
+    exact ⟨(exactPatternEnumeration source p).mpr dense,pos⟩
 
 theorem exactRawChartEnumeration : ExactRawChartEnumeration := by
   intro raw p
