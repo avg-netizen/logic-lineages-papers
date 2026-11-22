@@ -18,7 +18,7 @@ private theorem originalKeyBudget (raw : List Read) : (groupedWeights raw).suppo
     exact List.mem_toFinset.mpr (List.mem_map.mpr ⟨rd,original,key⟩)
   calc
     (groupedWeights raw).support.card ≤ keys.toFinset.card := Finset.card_le_card subset
-    _ ≤ keys.length := List.toFinset_card_le
+    _ ≤ keys.length := List.toFinset_card_le keys
     _ = raw.length := List.length_map _
 
 theorem exactDistinctSupportBudget : ExactDistinctSupportBudget := by
