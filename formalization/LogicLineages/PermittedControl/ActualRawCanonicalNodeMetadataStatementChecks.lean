@@ -1,0 +1,26 @@
+module
+public import LogicLineages.PermittedControl.ActualRawCanonicalNodeMetadataTargets
+import LogicLineages.PermittedControl.ActualRawCanonicalNodeMetadataProof
+import LogicLineages.PermittedControl.ActualRawCanonicalNodeMetadataPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualRawCanonicalNodeMetadata
+
+theorem fixed_exactRawActiveLabelTape : ExactRawActiveLabelTape := exactRawActiveLabelTape
+theorem fixed_exactRawHighestActivity : ExactRawHighestActivity := exactRawHighestActivity
+theorem fixed_exactRawSuppliedAnswerFlags : ExactRawSuppliedAnswerFlags := exactRawSuppliedAnswerFlags
+theorem fixed_exactRawCanonicalNodeCalibration : ExactRawCanonicalNodeCalibration := exactRawCanonicalNodeCalibration
+theorem fixed_exactRawCanonicalNodeEffectivity : ExactRawCanonicalNodeEffectivity := exactRawCanonicalNodeEffectivity
+theorem fixed_fullActualRawCanonicalNodeMetadata : FullActualRawCanonicalNodeMetadata :=
+  ⟨fixed_exactRawActiveLabelTape,fixed_exactRawHighestActivity,fixed_exactRawSuppliedAnswerFlags,
+    fixed_exactRawCanonicalNodeCalibration,fixed_exactRawCanonicalNodeEffectivity⟩
+
+#print axioms fixed_exactRawActiveLabelTape
+#print axioms fixed_exactRawHighestActivity
+#print axioms fixed_exactRawSuppliedAnswerFlags
+#print axioms fixed_exactRawCanonicalNodeCalibration
+#print axioms fixed_exactRawCanonicalNodeEffectivity
+#print axioms fixed_fullActualRawCanonicalNodeMetadata
+
+end LogicLineages.PermittedControl.StatementChecks
