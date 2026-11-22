@@ -1,0 +1,29 @@
+module
+public import LogicLineages.PermittedControl.ActualGlobalComparisonCeilingTargets
+import LogicLineages.PermittedControl.ActualGlobalComparisonCeilingDominanceProof
+import LogicLineages.PermittedControl.ActualGlobalComparisonCeilingTraceProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualAlphabetComparisonDominance :
+    ActualGlobalComparisonCeiling.ExactAlphabetComparisonDominance :=
+  ActualGlobalComparisonCeiling.exactAlphabetComparisonDominance
+
+theorem fixed_exactActualReachedComparisonFamily : ActualGlobalComparisonCeiling.ExactReachedComparisonFamily :=
+  ActualGlobalComparisonCeiling.exactReachedComparisonFamily
+
+theorem fixed_exactActualCombinedReachedComparisonSupply :
+    ActualGlobalComparisonCeiling.ExactCombinedReachedComparisonSupply :=
+  ActualGlobalComparisonCeiling.exactCombinedReachedComparisonSupply
+
+theorem fixed_fullActualGlobalComparisonCeiling : ActualGlobalComparisonCeiling.FullActualGlobalComparisonCeiling :=
+  ⟨fixed_exactActualAlphabetComparisonDominance,fixed_exactActualReachedComparisonFamily,
+    fixed_exactActualCombinedReachedComparisonSupply⟩
+
+#print axioms fixed_exactActualAlphabetComparisonDominance
+#print axioms fixed_exactActualReachedComparisonFamily
+#print axioms fixed_exactActualCombinedReachedComparisonSupply
+#print axioms fixed_fullActualGlobalComparisonCeiling
+
+end LogicLineages.PermittedControl.StatementChecks
