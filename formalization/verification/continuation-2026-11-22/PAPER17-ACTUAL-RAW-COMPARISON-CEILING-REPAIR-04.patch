@@ -1,0 +1,81 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualRawComparisonCeilingPrimitiveProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualRawComparisonCeilingPrimitiveProof.lean
+@@ -6,0 +7 @@
++import LogicLineages.OrdinalComparison.RawNormCode
+@@ -32,2 +33,11 @@
+-theorem pairCostPrimitive : Primrec₂ pairCostCode := by
+-  let A := Nat × PairCode
++/-- Keep the two field projections and their cost arguments abstract while
++assembling the primitive recursion proof. This avoids unfolding the
++ordinal comparison program while inferring the product codecs. -/
++private theorem liftedPairCosts {F L : Type} [Primcodable F] [Primcodable L]
++    {field : L → F} {oriented : Nat → F → F → Nat}
++    (key : Primrec field)
++    (cost : Primrec (fun p : Nat × F × F => oriented p.1 p.2.1 p.2.2)) :
++    Primrec (fun p : Nat × (L × L) =>
++      max (oriented p.1 (field p.2.1) (field p.2.2))
++        (oriented p.1 (field p.2.2) (field p.2.1))) := by
++  let A := Nat × (L × L)
+@@ -35,6 +45,16 @@
+-  have x : Primrec (fun p : A => p.2.1.2) := Primrec.snd.comp (Primrec.fst.comp Primrec.snd)
+-  have y : Primrec (fun p : A => p.2.2.2) := Primrec.snd.comp (Primrec.snd.comp Primrec.snd)
+-  have both : Primrec (fun p : A => pairCostCode p.1 p.2) :=
+-    Primrec.nat_max.comp (orientedMinimumPrimitive.comp (B.pair (x.pair y)))
+-      (orientedMinimumPrimitive.comp (B.pair (y.pair x)))
+-  exact both.to₂
++  have x : Primrec (fun p : A => field p.2.1) := key.comp (Primrec.fst.comp Primrec.snd)
++  have y : Primrec (fun p : A => field p.2.2) := key.comp (Primrec.snd.comp Primrec.snd)
++  have forward : Primrec (fun p : A => oriented p.1 (field p.2.1) (field p.2.2)) :=
++    cost.comp (B.pair (x.pair y))
++  have backward : Primrec (fun p : A => oriented p.1 (field p.2.2) (field p.2.1)) :=
++    cost.comp (B.pair (y.pair x))
++  exact Primrec.nat_max.comp forward backward
++
++private theorem pairCostUncurried :
++    Primrec (fun p : Nat × PairCode => pairCostCode p.1 p.2) := by
++  have asFields :=
++    liftedPairCosts (Primrec.snd : Primrec (Prod.snd : LabelCode → LongFieldCode))
++      orientedMinimumPrimitive
++  exact asFields.of_eq (fun _ => rfl)
++
++theorem pairCostPrimitive : Primrec₂ pairCostCode := pairCostUncurried.to₂
+@@ -51,3 +71,13 @@
+-theorem alphabetPrimitive : Primrec₂ alphabetCode := by
+-  let A := Nat × AlphabetCode
+-  let Q := A × (PairCode × Nat)
++private theorem foldMaximumWith {A X : Type} [Primcodable A] [Primcodable X]
++    {xs : A → List X} {cost : A → X → Nat} (items : Primrec xs) (eval : Primrec₂ cost) :
++    Primrec (fun a => (xs a).foldr (fun x n => max (cost a x) n) 0) := by
++  let Q := A × (X × Nat)
++  have cfg : Primrec (Prod.fst : Q → A) := Primrec.fst
++  have item : Primrec (fun p : Q => p.2.1) := Primrec.fst.comp Primrec.snd
++  have acc : Primrec (fun p : Q => p.2.2) := Primrec.snd.comp Primrec.snd
++  have step : Primrec (fun p : Q => max (cost p.1 p.2.1) p.2.2) :=
++    Primrec.nat_max.comp (eval.comp cfg item) acc
++  exact Primrec.list_foldr items (Primrec.const 0) step.to₂
++
++private theorem pairTapePrimitive :
++    Primrec (fun xs : AlphabetCode => orderedPairs (xs.filterMap labelCode)) := by
+@@ -56,9 +86,13 @@
+-  have pairTape : Primrec (fun p : A => orderedPairs (p.2.filterMap labelCode)) :=
+-    orderedPairsPrimitive.comp (labelTape.comp Primrec.snd)
+-  have cfg : Primrec (fun p : Q => p.1.1) := Primrec.fst.comp Primrec.fst
+-  have item : Primrec (fun p : Q => p.2.1) := Primrec.fst.comp Primrec.snd
+-  have acc : Primrec (fun p : Q => p.2.2) := Primrec.snd.comp Primrec.snd
+-  have all : Primrec (fun p : A => alphabetCode p.1 p.2) :=
+-    Primrec.list_foldr pairTape (Primrec.const 0)
+-      (Primrec.nat_max.comp (pairCostPrimitive.comp cfg item) acc).to₂
+-  exact all.to₂
++  exact orderedPairsPrimitive.comp labelTape
++
++private theorem alphabetUncurried :
++    Primrec (fun p : Nat × AlphabetCode => alphabetCode p.1 p.2) := by
++  let A := Nat × AlphabetCode
++  have tape : Primrec (fun p : A => orderedPairs (p.2.filterMap labelCode)) :=
++    pairTapePrimitive.comp Primrec.snd
++  have eval : Primrec₂ (fun (p : A) (item : PairCode) => pairCostCode p.1 item) :=
++    (pairCostUncurried.comp ((Primrec.fst.comp Primrec.fst).pair Primrec.snd) :
++      Primrec (fun p : A × PairCode => pairCostCode p.1.1 p.2)).to₂
++  exact (foldMaximumWith tape eval).of_eq (fun _ => rfl)
++
++theorem alphabetPrimitive : Primrec₂ alphabetCode := alphabetUncurried.to₂
