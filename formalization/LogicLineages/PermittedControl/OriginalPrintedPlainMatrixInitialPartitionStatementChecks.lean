@@ -1,0 +1,29 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixInitialPartitionTargets
+import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixInitialPartitionFundingProof
+import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixInitialPartitionProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedRankZeroFunding :
+    OriginalPrintedPlainMatrixInitialPartition.ExactActualRankZeroFunding :=
+  OriginalPrintedPlainMatrixInitialPartition.exactActualRankZeroFunding
+
+theorem fixed_exactOriginalPrintedThreeStrata : OriginalPrintedPlainMatrixInitialPartition.ExactThreeStrata :=
+  OriginalPrintedPlainMatrixInitialPartition.exactThreeStrata
+
+theorem fixed_exactOriginalPrintedInitialPartition : OriginalPrintedPlainMatrixInitialPartition.ExactInitialPartition :=
+  OriginalPrintedPlainMatrixInitialPartition.exactInitialPartition
+
+theorem fixed_fullOriginalPrintedPlainMatrixInitialPartition :
+    OriginalPrintedPlainMatrixInitialPartition.FullOriginalPrintedPlainMatrixInitialPartition :=
+  ⟨fixed_exactOriginalPrintedRankZeroFunding,fixed_exactOriginalPrintedThreeStrata,
+    fixed_exactOriginalPrintedInitialPartition⟩
+
+#print axioms fixed_exactOriginalPrintedRankZeroFunding
+#print axioms fixed_exactOriginalPrintedThreeStrata
+#print axioms fixed_exactOriginalPrintedInitialPartition
+#print axioms fixed_fullOriginalPrintedPlainMatrixInitialPartition
+
+end LogicLineages.PermittedControl.StatementChecks
