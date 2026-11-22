@@ -11,7 +11,7 @@ open ActualFiniteGlobalTail ActualEffectiveGlobalTail ActualEffectiveTerminalSig
 /-- Strengthened nonzero terminal: the same actual maximum, equation
 and error are retained, with the exact current sign cutoff paid. -/
 def SignedNonzeroTerminal (f ρ : Nat → Nat) (zRank : Nat) (s : ReadState) (xs : List Read) : Prop :=
-  ∃ (annotations : List Annotation) (C : Nat),
+  ∃ (annotations : List ActualMixedRowLeadingAnnotations.Annotation) (C : Nat),
     ChosenClass f ρ zRank xs annotations C ∧
     let terms := xs.map Prod.fst
     let parts := rowParts f C terms (xs.map Prod.snd) annotations

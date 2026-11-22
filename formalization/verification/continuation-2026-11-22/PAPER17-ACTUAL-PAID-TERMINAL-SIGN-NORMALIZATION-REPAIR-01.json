@@ -1,0 +1,34 @@
+{
+  "status": "source-only narrow name qualification; native retry not run by author",
+  "immutable_failed_source_commit": "787b473addccf5a29aa6b774a6ef3081a585fec9",
+  "receipt": "1795348106356108637-28",
+  "exact_gate": "LogicLineages.PermittedControl.ActualPaidTerminalSignNormalizationStatementChecks",
+  "failed_receipt_sha256": "b5ee7c81cce955bb6677c36c0bf1fd0f09902c4865acbd2d20aefec6fb75d029",
+  "failed_log_sha256": "e6a15925ee6e781dc823c2f9dbe5780402de87f34c55c3a4aac2c94a98a28cd3",
+  "failed_module_record": {
+    "module": "LogicLineages.PermittedControl.ActualPaidTerminalSignNormalizationTargets",
+    "returncode": 1,
+    "seconds": 0.865,
+    "observed_cpu_seconds": 0.8,
+    "last_wait_channel": "__futex_wait",
+    "stopped_threads": [],
+    "peak_process_tree_rss_kib": 973584,
+    "memory_observation_failure": {},
+    "discarded_failed_outputs": [],
+    "source_sha256": "050fb210f322b772394c17eadce15e726162d8333007a8aa0e287db5597ab5b2",
+    "log": "build-reports/1795348106356108637-28-LogicLineages-PermittedControl-ActualPaidTerminalSignNormalizationTargets.log"
+  },
+  "diagnostics": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualPaidTerminalSignNormalizationTargets.lean:14:24: error(lean.unknownIdentifier): Unknown identifier `Annotation`",
+  "original_author_manifest_sha256": "c7d64d07aaccc3af01526d071f9549eb60bdfdef3af4908ad8e816921c32af48",
+  "changed_source": "formalization/LogicLineages/PermittedControl/ActualPaidTerminalSignNormalizationTargets.lean",
+  "failed_source_sha256": "050fb210f322b772394c17eadce15e726162d8333007a8aa0e287db5597ab5b2",
+  "repair_source_sha256": "8395048d9f182cb9726a4d1a219bfdb1b1926a94e2cddabdac797ea7010b5914",
+  "preserved_sources_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualPaidTerminalSignNormalizationProof.lean": "d48a1522c31eac910db6ccf2e609ecb9be55b063a788fff6f7ec8e7458f3e30d",
+    "formalization/LogicLineages/PermittedControl/ActualPaidTerminalSignNormalizationStatementChecks.lean": "7e01923de0e939c68fbea1ada432ff4abff6828e0f31812706e03594b9f117a5"
+  },
+  "zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-PAID-TERMINAL-SIGN-NORMALIZATION-REPAIR-01.patch",
+  "patch_sha256": "04c7954b26e78922e1823720c47044f753312bb4da045a44d1f4fcab6eaccf67",
+  "inverse": "Reverse exact patch with fuzz zero to recover exact failed initial target bytes.",
+  "change": "Qualify precisely the already intended original #913 Annotation name at the one failure locus. Telescope, definitions, comparator semantics, proof leaves, imports, and 189-local/33-external target / 508-local/42-external exact closure stay unchanged."
+}
