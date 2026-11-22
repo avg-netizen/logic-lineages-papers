@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.ActualRawCanonicalZeroPrefixesTargets
+import LogicLineages.PermittedControl.ActualRawCanonicalZeroPrefixesProof
+import LogicLineages.PermittedControl.ActualRawCanonicalZeroPrefixesPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualRawCanonicalZeroPrefixes
+
+theorem fixed_exactRawZeroPrefixLevels : ExactRawZeroPrefixLevels := exactRawZeroPrefixLevels
+theorem fixed_exactRawZeroPrefixEnumeration : ExactRawZeroPrefixEnumeration := exactRawZeroPrefixEnumeration
+theorem fixed_exactRawZeroPrefixReplay : ExactRawZeroPrefixReplay := exactRawZeroPrefixReplay
+theorem fixed_exactRawZeroPrefixEffectivity : ExactRawZeroPrefixEffectivity := exactRawZeroPrefixEffectivity
+theorem fixed_fullActualRawCanonicalZeroPrefixes : FullActualRawCanonicalZeroPrefixes :=
+  ⟨fixed_exactRawZeroPrefixLevels,fixed_exactRawZeroPrefixEnumeration,
+    fixed_exactRawZeroPrefixReplay,fixed_exactRawZeroPrefixEffectivity⟩
+
+#print axioms fixed_exactRawZeroPrefixLevels
+#print axioms fixed_exactRawZeroPrefixEnumeration
+#print axioms fixed_exactRawZeroPrefixReplay
+#print axioms fixed_exactRawZeroPrefixEffectivity
+#print axioms fixed_fullActualRawCanonicalZeroPrefixes
+
+end LogicLineages.PermittedControl.StatementChecks
