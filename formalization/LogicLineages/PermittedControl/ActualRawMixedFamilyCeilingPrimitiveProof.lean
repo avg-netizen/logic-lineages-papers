@@ -24,12 +24,12 @@ theorem rowBoundPrimitive :
   have header : Primrec (fun p : A => p.2.2.1.1) := Primrec.fst.comp row
   have tag : Primrec (fun p : A => p.2.2.1.1.1) := Primrec.fst.comp header
   have modulus : Primrec (fun p : A => p.2.2.1.1.2) := Primrec.snd.comp header
-  have syntax : Primrec (fun p : A => p.2.2.1.2) := Primrec.snd.comp row
-  have terms : Primrec (fun p : A => p.2.2.1.2.2) := Primrec.snd.comp syntax
+  have sourceSyntax : Primrec (fun p : A => p.2.2.1.2) := Primrec.snd.comp row
+  have terms : Primrec (fun p : A => p.2.2.1.2.2) := Primrec.snd.comp sourceSyntax
   have modularBound : Primrec (fun p : A => weightedTailCode p.1 p.2.2.1.1.2 p.2.2.1.2.2) :=
     MixedSameRankResidue.codeExact.2.1.comp (b.pair (modulus.pair terms))
   have signedBound : Primrec (fun p : A => staticCode p.1 p.2.1 (cleanupCode p.2.2.1.2)) :=
-    staticPrimitive.comp (b.pair (r.pair (cleanupPrimitive.comp syntax)))
+    staticPrimitive.comp (b.pair (r.pair (cleanupPrimitive.comp sourceSyntax)))
   have branch := Primrec.ite (Primrec.eq.comp tag (Primrec.const 3)) modularBound signedBound
   exact (Primrec.nat_max.comp (rowPrimitive.comp row) branch).of_eq (fun _ => rfl)
 
