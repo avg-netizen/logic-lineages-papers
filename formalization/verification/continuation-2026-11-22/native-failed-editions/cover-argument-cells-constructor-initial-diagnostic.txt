@@ -1,0 +1,38 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsConstructorProof.lean:31:5: error: unknown namespace `NumberedWindowInternalCoverCartesianFoldSyntaxProof`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsConstructorProof.lean:61:6: error(lean.unknownIdentifier): Unknown identifier `flatRename`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsConstructorProof.lean:55:68: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+row q a ars : OTerm α
+run : Nonempty (Derivation body Γ (flatGraph cellSingle row ars ![q]))
+ha : Nonempty (Derivation body Γ (memberGraph ars a))
+β : Type
+j : α → β
+Δ : List (ID1Completion.InternalCalculus.Formula β)
+one : OTerm β
+keep : ∀ r ∈ Γ, Formula.relabel j r ∈ Δ
+singleton : Nonempty (Derivation body Δ (programGraph cellSingle one ![Term.relabel j a, Term.relabel j q]))
+run' : Nonempty (Derivation body Δ (Formula.relabel j (flatGraph cellSingle row ars ![q])))
+⊢ Nonempty (Derivation body Δ (memberGraph (Term.relabel j row) (rawCons (Term.relabel j q) (Term.relabel j a))))
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsConstructorProof.lean:80:6: error(lean.unknownIdentifier): Unknown identifier `flatRename`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsConstructorProof.lean:74:70: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+trail ts ars q a : OTerm α
+run : Nonempty (Derivation body Γ (flatGraph cellBlock trail ts ![ars]))
+hq : Nonempty (Derivation body Γ (memberGraph ts q))
+ha : Nonempty (Derivation body Γ (memberGraph ars a))
+β : Type
+j : α → β
+Δ : List (ID1Completion.InternalCalculus.Formula β)
+row : OTerm β
+keep : ∀ r ∈ Γ, Formula.relabel j r ∈ Δ
+rowRun : Nonempty (Derivation body Δ (programGraph cellBlock row ![Term.relabel j q, Term.relabel j ars]))
+run' : Nonempty (Derivation body Δ (Formula.relabel j (flatGraph cellBlock trail ts ![ars])))
+⊢ Nonempty (Derivation body Δ (memberGraph (Term.relabel j trail) (rawCons (Term.relabel j q) (Term.relabel j a))))
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverArgumentCellsConstructorProof.exact_OpenCoverArgumentCellsConstructor' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
