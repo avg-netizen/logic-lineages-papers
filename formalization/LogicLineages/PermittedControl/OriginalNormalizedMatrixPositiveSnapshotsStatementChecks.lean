@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.OriginalNormalizedMatrixPositiveSnapshotsTargets
+import LogicLineages.PermittedControl.OriginalNormalizedMatrixPositiveSnapshotsProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalNormalizedMatrixPositiveSnapshots :
+    OriginalNormalizedMatrixPositiveSnapshots.ExactPositiveCircuitSnapshots :=
+  OriginalNormalizedMatrixPositiveSnapshots.exactPositiveCircuitSnapshots
+
+#print axioms fixed_exactOriginalNormalizedMatrixPositiveSnapshots
+
+end LogicLineages.PermittedControl.StatementChecks
