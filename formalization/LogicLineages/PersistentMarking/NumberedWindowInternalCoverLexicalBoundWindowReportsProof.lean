@@ -1,0 +1,20 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalCoverLexicalBoundWindowTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverLexicalBoundWindowSelectedProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverLexicalSlotOpenProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverLexicalBoundWindowReportsProof
+open NumberedWindowInternalCoverLexicalSlotOpenProof (exact_OpenCoverPhysicalLexicalSlot)
+open NumberedWindowInternalCoverLexicalBoundWindowSelectedProof (exact_OpenCoverLexicalBoundWindowSlot)
+open NumberedWindowInternalCoverLexicalBoundWindowTargets
+
+theorem exact_OpenCoverLexicalBoundWindowReports : ExactOpenCoverLexicalBoundWindowReports := by
+  intro s B T body α Γ ctx ty i result Q window next
+  exact exact_OpenCoverPhysicalLexicalSlot body α Γ i ctx ty Q
+    (exact_OpenCoverLexicalBoundWindowSlot s B T body α Γ ctx ty i result window) next
+
+#print axioms exact_OpenCoverLexicalBoundWindowReports
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalCoverLexicalBoundWindowReportsProof
