@@ -1,6 +1,6 @@
 module
 public import LogicLineages.PermittedControl.OriginalPrintedRawTerminalRowsTargets
-import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsCodeRecursionProof
+import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsCodeDataProof
 import Mathlib.Computability.Primrec.List
 
 @[expose] public section
@@ -8,7 +8,6 @@ namespace LogicLineages.PermittedControl.OriginalPrintedRawTerminalRows
 open OrdinalComparison.LayeredComparison.SnyatkovCompletion
 open HeterogeneousSignedMatrixSlice (TestCode)
 open PreparedProjection (LowerOperandCode)
-open LinearRowsCodeProof (atoms_primitive decodeAtom_primitive)
 
 private theorem coordinatePrimitive : Primrec (fun n : Nat => ((0,n,(0,0,0,0)) : LowerOperandCode)) :=
   (Primrec.const 0).pair (Primrec.id.pair (Primrec.const (0,0,0,0)))
@@ -36,7 +35,8 @@ private theorem atomPrimitive : Primrec atomCode := by
   exact (testPrimitive.comp kind modulus).pair (signedConst.pair terms)
 
 private theorem tapePrimitive : Primrec rowsCode :=
-  Primrec.list_map atoms_primitive ((atomPrimitive.comp decodeAtom_primitive).comp Primrec.snd).to₂
+  Primrec.list_map LinearRowsCodeProof.atoms_primitive
+    ((atomPrimitive.comp LinearRowsCodeProof.decodeAtom_primitive).comp Primrec.snd).to₂
 
 theorem exactOriginalRawTerminalRowsEffectivity : ExactOriginalRawTerminalRowsEffectivity :=
   ⟨weightedPrimitive,atomPrimitive,tapePrimitive⟩
