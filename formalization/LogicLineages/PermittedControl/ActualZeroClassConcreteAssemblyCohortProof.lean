@@ -29,7 +29,8 @@ private theorem survivingRank (f : Nat → Nat) (C : Nat) (t : WeightedOperand)
           · simp only [survivingPrefix,if_pos keep,Option.some.injEq] at found
             subst p
             rfl
-          · simp only [survivingPrefix,if_neg keep,Option.none_ne_some] at found
+          · simp only [survivingPrefix,if_neg keep] at found
+            cases found
 
 private theorem cohortRankBound (f : Nat → Nat) (C r : Nat) (terms : List WeightedOperand)
     (annotations : List Annotation) (bounded : ∀ t ∈ terms, t.2.rank < r) :
