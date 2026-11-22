@@ -110,17 +110,17 @@ theorem exactLinearPreparedRow : ExactLinearPreparedRow := by
     rw [← eq]
     exact hname t ht
   · intro ν fit z v
-    let µ := Function.update ν 0 z
-    let read : WeightedOperand → Nat := fun t => µ (name t.2)
+    let updated := Function.update ν 0 z
+    let read : WeightedOperand → Nat := fun t => updated (name t.2)
     have all (t : WeightedOperand) (ht : t ∈ row.2.2) :
         LowerOperandActual f (Function.update ρ top z) t.2 (read t) ∧
           lowerOperandRead f (Function.update ρ top z) t.2 = some (some (read t)) :=
       (evaluateTerm f ρ top rows row hr shape ν fit t ht z).2
-    have sum : NormalForm.rowValue (preparedRow top ops row) µ =
+    have sum : NormalForm.rowValue (preparedRow top ops row) updated =
         row.2.1 + actualSum row.2.2 (row.2.2.map read) := by
       unfold preparedRow NormalForm.rowValue
       simp only [List.map_map,Function.comp_def,NormalForm.Summand.term,Term.value]
-      rw [sumEval name µ row.2.2] <;> rfl
+      rw [sumEval name updated row.2.2] <;> rfl
     change (∃ vs, orderedReads f (Function.update ρ top z) row.2.2 vs ∧
       row.2.1 + actualSum row.2.2 vs = v) ↔ _
     rw [sum]
