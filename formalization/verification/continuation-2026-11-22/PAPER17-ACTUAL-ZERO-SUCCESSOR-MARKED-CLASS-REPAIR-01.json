@@ -1,0 +1,49 @@
+{
+  "status": "source-only marked occurrence alignment proof repair, no Lean/Git invoked by author",
+  "failed_source_remote_commit": "27fb2a6cf7548c8865c840f333362c363f61ef58",
+  "failed_source_local_commit": "6f2ff480fa23ebb3dd3fa2ebedc8a1721e56f42b",
+  "failed_source_tree": "1b9a9b5d840a05dca8f713603f191f4accd96a54",
+  "failed_exact_gate_receipt": "1795366156116832240-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualZeroSuccessorMarkedClassStatementChecks",
+  "failed_receipt_sha256": "39a888c2efb3595986acbd6e1367dd67ffa9ed023dc9824698dae6159316e580",
+  "failed_exact_module_log_sha256": "482fe935902c11052b626fac10324df2c112934ff7d3f3ec674db4e93cc89dce",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroSuccessorMarkedClassAlignmentProof.lean:39:55: error: unsolved goals\ncase cons.none.none\nf : \u2115 \u2192 \u2115\nB : \u2115\nchosen : SelectedWithThreshold f B\n\u03c1 : \u2115 \u2192 \u2115\nterms\u271d : List WeightedOperand\nvalues\u271d : List \u2115\nanns\u271d : List Annotation\nC : \u2115\nt : WeightedOperand\nterms : List WeightedOperand\nv : \u2115\nvalues : List \u2115\na : Annotation\nanns : List Annotation\nactual : LowerOperandActual f \u03c1 t.2 v\nread : lowerOperandRead f \u03c1 t.2 = some (some v)\nann : ActualAnnotation f \u03c1 t v a\na\u271d : AlignedAnnotations f \u03c1 terms values anns\nih :\n  (\u2200 t \u2208 terms, t.1 \u2260 0 \u2192 CountTailReady \u03c1 t.2) \u2192\n    decorate terms (List.map (fun v => decide (v = C)) (fullValues f anns)) = some (actualMarked f C terms anns)\nready : \u2200 t_1 \u2208 t :: terms, t_1.1 \u2260 0 \u2192 CountTailReady \u03c1 t_1.2\ntail : decorate terms (List.map (fun v => decide (v = C)) (fullValues f anns)) = some (actualMarked f C terms anns)\nhl : activeLabel t = none\nhv : fullValue f a = none\nhead : True\n\u22a2 decorate terms (List.map (fun v => decide (v = C)) (List.filterMap (fullValue f) anns)) =\n    some\n      (List.zipWith\n        (fun t a =>\n          (t,\n            match fullValue f a with\n            | none => false\n            | some v => decide (v = C)))\n        terms anns)\n\ncase cons.some.some\nf : \u2115 \u2192 \u2115\nB : \u2115\nchosen : SelectedWithThreshold f B\n\u03c1 : \u2115 \u2192 \u2115\nterms\u271d : List WeightedOperand\nvalues\u271d : List \u2115\nanns\u271d : List Annotation\nC : \u2115\nt : WeightedOperand\nterms : List WeightedOperand\nv : \u2115\nvalues : List \u2115\na : Annotation\nanns : List Annotation\nactual : LowerOperandActual f \u03c1 t.2 v\nread : lowerOperandRead f \u03c1 t.2 = some (some v)\nann : ActualAnnotation f \u03c1 t v a\na\u271d : AlignedAnnotations f \u03c1 terms values anns\nih :\n  (\u2200 t \u2208 terms, t.1 \u2260 0 \u2192 CountTailReady \u03c1 t.2) \u2192\n    decorate terms (List.map (fun v => decide (v = C)) (fullValues f anns)) = some (actualMarked f C terms anns)\nready : \u2200 t_1 \u2208 t :: terms, t_1.1 \u2260 0 \u2192 CountTailReady \u03c1 t_1.2\ntail : decorate terms (List.map (fun v => decide (v = C)) (fullValues f anns)) = some (actualMarked f C terms anns)\nval\u271d\u00b9 : Label\nhl : activeLabel t = some val\u271d\u00b9\nval\u271d : \u2115\nhv : fullValue f a = some val\u271d\nhead : True\n\u22a2 decorate terms (List.map (fun v => decide (v = C)) (List.filterMap (fullValue f) anns)) =\n    some\n      (List.zipWith\n        (fun t a =>\n          (t,\n            match fullValue f a with\n            | none => false\n            | some v => decide (v = C)))\n        terms anns)\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroSuccessorMarkedClassAlignmentProof.lean:44:62: warning: This simp argument is unused:\n  tail\n\nHint: Omit it from the simp argument list.\n  simp [decorate, \u0332hl, \u0332hv, \u0332fullValues, \u0332actualMarked, \u0332selected,\u0335t\u0335a\u0335i\u0335l\u0335]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+  "failed_original_native_log_sha256": "16d455fe75aee1aa7a27cc2c23107361d6ee4f63e91bf24f30e1c82b0bc66b71",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualZeroSuccessorMarkedClassAlignmentProof.lean",
+  "failed_proof_sha256": "48a6c561918ebe08d910f079ec592e82237648a46627832fb3d166d470f44ab8",
+  "repaired_proof_sha256": "39b16a24cb2334de8d0d896023849c9e34fcb978dcba5e14a78bb3fe95775565",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-ZERO-SUCCESSOR-MARKED-CLASS-REPAIR-01.patch",
+  "patch_sha256": "8a2cac530e94cdf4c953afa77bb5a0b64dbd1558aad09599bdb384961ab86761",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-ZERO-SUCCESSOR-MARKED-CLASS-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "de83fde79bfaf184a3ab07c1ff57a4caed7df28818d3093c53419e2de97bcc89",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualZeroSuccessorMarkedClassTargets.lean": "6926a226db1d6072dbc94b79afe468d93430ce459b9e4db1a86751eaf040b0f5",
+    "formalization/LogicLineages/PermittedControl/ActualZeroSuccessorMarkedClassDomainProof.lean": "8e55b2ff1095acce3144c1bad3fe1f2ad43280b03e50c1e26c6cb07616ff75de",
+    "formalization/LogicLineages/PermittedControl/ActualZeroSuccessorMarkedClassStatementChecks.lean": "778663262876b7ad5e9708fd98d51c81b75f2f74848d0df1a6f2f6eeec97a8ec",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-ZERO-SUCCESSOR-MARKED-CLASS-SOURCE-MAP.md": "9e8d28c06a3726ffc6195ea3fc4082d81ec2e0a26542edd59f2d7a76cc83ca59"
+  },
+  "static_module_closure_unchanged": {
+    "Targets": {
+      "local": 173,
+      "external": 32,
+      "contains_totient": false
+    },
+    "DomainProof": {
+      "local": 174,
+      "external": 32,
+      "contains_totient": false
+    },
+    "AlignmentProof": {
+      "local": 394,
+      "external": 40,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 396,
+      "external": 40,
+      "contains_totient": false
+    }
+  },
+  "scope": "Expose tail equality under exactly the same three definitional aliases already simplified in both goals. No selector, source, actual guard, import, target or sibling changes."
+}

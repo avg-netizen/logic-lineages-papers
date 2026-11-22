@@ -39,6 +39,7 @@ theorem exactActualDecoration : ExactActualDecoration := by
   | @cons t terms v values a anns actual read ann _ ih =>
       have head := headStatus f B chosen ρ t v a actual read ann (ready t List.mem_cons_self)
       have tail := ih (fun u hu => ready u (List.mem_cons_of_mem _ hu))
+      simp only [fullValues,actualMarked,selected] at tail
       cases hl : activeLabel t <;> cases hv : fullValue f a <;>
         simp [hl,hv] at head <;>
         simp [decorate,hl,hv,fullValues,actualMarked,selected,tail]
