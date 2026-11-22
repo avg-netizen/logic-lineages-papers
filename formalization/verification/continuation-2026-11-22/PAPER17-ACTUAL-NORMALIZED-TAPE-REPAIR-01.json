@@ -1,0 +1,62 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "0c7b0a6dd82cb896f0a7b52f5998f99f020fa69a",
+  "failed_source_local_commit": "d5c868094d50950abdaca491ddf63db9a99eda64",
+  "failed_source_tree": "c90c4fc6791238986028f36a0bc4b56183d39311",
+  "failed_exact_gate_receipt": "1795373429180661070-102",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualNormalizedTapeStatementChecks",
+  "failed_receipt_sha256": "9ef2a3fb7bfc55fbde75ee8419e053af430bc0ed7fe92cca824988a0bb1ea973",
+  "failed_exact_module_log_sha256": "946cd7a15def4896e0dc8788892463ba787d93629796afb28f8e3b9729b3dc1d",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualNormalizedTapeCertificateProof.lean:78:67: error: Application type mismatch: The argument\n  zero\nhas type\n  (groupedWeights xs) rd.1.2 = 0\nbut is expected to have type\n  (groupedWeights raw) rd.1.2 = 0\nin the application\n  Eq.trans weight zero\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualNormalizedTapeCertificateProof.lean:90:53: error: Application type mismatch: The argument\n  listed\nhas type\n  (valueOperand r) (i, F) \u2208 (groupedWeights xs).support\nbut is expected to have type\n  (valueOperand r) (i, F) \u2208 (groupedWeights raw).support\nin the application\n  \u27e8active, listed\u27e9\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualNormalizedTapeCertificateProof.lean:100:52: error: Application type mismatch: The argument\n  listed\nhas type\n  (countOperand r) ((lam, mu), i) \u2208 (groupedWeights xs).support\nbut is expected to have type\n  (countOperand r) ((lam, mu), i) \u2208 (groupedWeights raw).support\nin the application\n  (countSupport ((lam, mu), i)).mpr listed\n",
+  "failed_original_native_log_sha256": "ffd5dd9d36827a5fadfc2b9dc4adf918921f4fd5627d323f2443822b148c462d",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualNormalizedTapeCertificateProof.lean",
+  "failed_proof_sha256": "fad5a135d482eaa6d5466b472b0911265ab66614c61d3f04d85b019269fce13e",
+  "repaired_proof_sha256": "2e78c6d0af1287901edadd8f73d799175140957195ae0f0f136b20de450953bd",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-NORMALIZED-TAPE-REPAIR-01.patch",
+  "patch_sha256": "34b7a2f4dde5b9b4e6ef992f520da50415afa8b8fd358f1c6db87442d4708bf4",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-NORMALIZED-TAPE-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "fde1e30b005433441233a6af0e406504bc97ac85772657864d1d8ca447c31506",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualNormalizedTapeClassProof.lean": "e6ff572f26d038f866363e631c08ac3c83491e8d492e0b9684c475ddf36c3fbc",
+    "formalization/LogicLineages/PermittedControl/ActualNormalizedTapeOutsideColumnsProof.lean": "8d71a57c102e31adf740f9e25d29008818529c423bdd167a35aae7f234dda68b",
+    "formalization/LogicLineages/PermittedControl/ActualNormalizedTapeOutsideProof.lean": "912ff54f3696c6c1473adfae4e8a7d9dc9179c8859a8a3df76fad32bd2d9a12a",
+    "formalization/LogicLineages/PermittedControl/ActualNormalizedTapeStatementChecks.lean": "f59496707f4ca78a15c44d871139fe49bfe1a23d099eff56da9fca63cd567d72",
+    "formalization/LogicLineages/PermittedControl/ActualNormalizedTapeTargets.lean": "ebc8776d2b7a888df8ba5da266ffe4ae30d1dcf7fc4067086d1ec25de030fe2c",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-NORMALIZED-TAPE-SOURCE-MAP.md": "bd9a7bf96bfe10075f2c02220a31628ef64994f4346db767c9fbaace67fbc09e"
+  },
+  "static_module_closure": {
+    "CertificateProof": {
+      "local": 303,
+      "external": 39,
+      "contains_totient": false
+    },
+    "ClassProof": {
+      "local": 306,
+      "external": 39,
+      "contains_totient": false
+    },
+    "OutsideColumnsProof": {
+      "local": 308,
+      "external": 39,
+      "contains_totient": false
+    },
+    "OutsideProof": {
+      "local": 165,
+      "external": 32,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 309,
+      "external": 39,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 163,
+      "external": 32,
+      "contains_totient": false
+    }
+  },
+  "scope": "Three support witnesses in the ranked member proof refer explicitly to the original raw grouped weights, not the normalized output. No targets or siblings changed."
+}

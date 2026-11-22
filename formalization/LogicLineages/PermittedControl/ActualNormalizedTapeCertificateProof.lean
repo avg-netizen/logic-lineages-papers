@@ -74,7 +74,7 @@ theorem exactTapeRankedMembers : ExactTapeRankedMembers := by
   obtain ⟨weight,nonzero,prior,priorMem,sameOp,_⟩ := tape.records rd retained
   have rankBound : rd.1.2.rank < r := by
     simpa only [sameOp] using bounded prior priorMem
-  have inSupport : rd.1.2 ∈ (groupedWeights xs).support :=
+  have inSupport : rd.1.2 ∈ (groupedWeights raw).support :=
     Finsupp.mem_support_iff.mpr (fun zero => nonzero (weight.trans zero))
   cases shape : rd.1.2 with
   | coordinate n => exact (by simp only [IsInRankedColumn,shape] : IsInRankedColumn row rd)
@@ -84,7 +84,7 @@ theorem exactTapeRankedMembers : ExactTapeRankedMembers := by
       rw [shape] at rankBound
       let i : Fin r := ⟨n,rankBound⟩
       have literal : valueOperand r (i,F) = rd.1.2 := shape.symm
-      have listed : valueOperand r (i,F) ∈ (groupedWeights xs).support := by
+      have listed : valueOperand r (i,F) ∈ (groupedWeights raw).support := by
         rw [literal]
         exact inSupport
       refine ⟨i,rfl,(valueSupport (i,F)).mpr ⟨active,listed⟩,?_⟩
@@ -94,7 +94,7 @@ theorem exactTapeRankedMembers : ExactTapeRankedMembers := by
       rw [shape] at rankBound
       let i : Fin r := ⟨n,rankBound⟩
       have literal : countOperand r ((lam,mu),i) = rd.1.2 := shape.symm
-      have listed : countOperand r ((lam,mu),i) ∈ (groupedWeights xs).support := by
+      have listed : countOperand r ((lam,mu),i) ∈ (groupedWeights raw).support := by
         rw [literal]
         exact inSupport
       refine ⟨i,rfl,(countSupport ((lam,mu),i)).mpr listed,?_⟩
