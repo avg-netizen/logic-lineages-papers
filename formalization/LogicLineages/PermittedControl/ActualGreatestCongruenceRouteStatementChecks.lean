@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.ActualGreatestCongruenceRouteTargets
+import LogicLineages.PermittedControl.ActualGreatestCongruenceRouteLayoutProof
+import LogicLineages.PermittedControl.ActualGreatestCongruenceRouteProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualGreatestCongruenceRoute
+
+theorem fixed_exactGreatestResidueLayout : ExactGreatestResidueLayout := exactGreatestResidueLayout
+theorem fixed_exactGreatestResidueTies : ExactGreatestResidueTies := exactGreatestResidueTies
+theorem fixed_exactGreatestCongruenceShape : ExactGreatestCongruenceShape := exactGreatestCongruenceShape
+theorem fixed_exactGreatestCongruencePacket : ExactGreatestCongruencePacket := exactGreatestCongruencePacket
+theorem fixed_fullActualGreatestCongruenceRoute : FullActualGreatestCongruenceRoute :=
+  ⟨fixed_exactGreatestResidueLayout,fixed_exactGreatestResidueTies,
+    fixed_exactGreatestCongruenceShape,fixed_exactGreatestCongruencePacket⟩
+
+#print axioms fixed_exactGreatestResidueLayout
+#print axioms fixed_exactGreatestResidueTies
+#print axioms fixed_exactGreatestCongruenceShape
+#print axioms fixed_exactGreatestCongruencePacket
+#print axioms fixed_fullActualGreatestCongruenceRoute
+
+end LogicLineages.PermittedControl.StatementChecks
