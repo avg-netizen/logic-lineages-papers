@@ -28,7 +28,7 @@ open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open NumberedWindowInternalSparseFieldCell (cellHead cellGood)
 open NumberedWindowInternalSparseFieldParserOpenSyntaxProof (binaryInputsRename tripleInputsRename)
 open NumberedWindowInternalSparsePathEnvelopeTargets (unary)
-open NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof (unaryRename)
+open NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof (inputsRename)
 open NumberedWindowInternalCoverAuxApplicationsTargets (binary)
 open NumberedWindowInternalCoverLexicalSlotTargets
 
@@ -85,7 +85,7 @@ theorem exact_OpenCoverPhysicalLexicalSlot : ExactOpenCoverPhysicalLexicalSlot :
   simp only [programRename,tripleInputsRename,sucRelabel,zRelabel] at hit'
   apply programCases cellHead ![rest] (Q.relabel j)
   intro γ k Ξ actual keep' head
-  rw [unaryRename] at head
+  rw [inputsRename] at head
   have hit'' := renameInto hit' k Ξ keep'
   simp only [programRename,tripleInputsRename,sucRelabel,zRelabel] at hit''
   have drop' := renameInto dropReport k Ξ keep'
