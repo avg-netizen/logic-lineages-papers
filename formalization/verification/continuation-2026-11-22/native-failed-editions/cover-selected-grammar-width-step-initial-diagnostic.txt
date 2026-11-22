@@ -1,0 +1,22 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarWidthStepProof.lean:64:21: error: Function expected at
+  exact_OpenCoverAscendingRangeInclusion
+but this term has type
+  NumberedWindowInternalCoverAscendingRangeInclusionProof.ExactOpenCoverAscendingRangeInclusion
+
+Note: Expected a function because this term is being applied to the argument
+  body
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarWidthStepProof.lean:62:88: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+d H K m M ids ids' old oldTerms oldArgs next nextTerms nextArgs lo loTerms loArgs hi hiTerms hiArgs : OTerm α
+bound : Nonempty (Derivation body Γ (ltF m (suc M)))
+ih : Nonempty (Derivation body Γ (widthAt d H K m M))
+loRange : Nonempty (Derivation body Γ (rangeReport ids (suc m)))
+hiRange : Nonempty (Derivation body Γ (rangeReport ids' (suc M)))
+priorLo : Nonempty (Derivation body Γ (observed d H K m lo loTerms loArgs))
+priorHi : Nonempty (Derivation body Γ (observed d H K M hi hiTerms hiArgs))
+small : Nonempty (Derivation body Γ (observed (suc d) H K m old oldTerms oldArgs))
+large : Nonempty (Derivation body Γ (observed (suc d) H K M next nextTerms nextArgs))
+prior : Derivation body Γ (pairInclusion loTerms hiTerms loArgs hiArgs)
+⊢ Nonempty (Derivation body Γ (pairInclusion oldTerms nextTerms oldArgs nextArgs))

@@ -6,7 +6,7 @@ import LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedGramma
 import LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedGrammarWidthSyntaxProof
 import LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedGrammarOpenRowProof
 import LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedSuccessorInclusionProof
-import LogicLineages.PersistentMarking.NumberedWindowInternalCoverAscendingRangeInclusionProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverAscendingRangeInclusionTransparentProof
 import LogicLineages.PersistentMarking.NumberedWindowInternalCoverArgumentCellsOpenDataProof
 import LogicLineages.PersistentMarking.NumberedWindowInternalCoverArgumentCellsTransportProof
 import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceSupportProof
@@ -24,7 +24,7 @@ open ID1Completion.InternalGraphCompositionFunctionalityProof (renameInto)
 open ID1Completion.InternalControlGraphSupportProof (programRename)
 open ID1Completion.InternalRecursionGraphStepSyntaxProof (conjunctionRename)
 open NumberedWindowInternalCoverAscendingRangeTargets (rangeReport ascendingRange)
-open NumberedWindowInternalCoverAscendingRangeInclusionProof (exact_OpenCoverAscendingRangeInclusion)
+open NumberedWindowInternalCoverAscendingRangeInclusionTransparentProof (includeActualRanges)
 open NumberedWindowInternalCoverSelectedSuccessorInclusionProof (exact_OpenSelectedCoverSuccessorInclusion)
 open NumberedWindowInternalCoverArgumentCellsOpenDataProof (unaryTapeRename)
 open NumberedWindowInternalCoverArgumentCellsTransportProof (axisRename)
@@ -61,7 +61,7 @@ theorem advanceWidth (d H K m M ids ids'
     (large : Nonempty (Derivation body Γ (observed (suc d) H K M next nextTerms nextArgs))) :
     Nonempty (Derivation body Γ (pairInclusion oldTerms nextTerms oldArgs nextArgs)) := by
   obtain ⟨prior⟩ := consumeWidth d H K m M lo loTerms loArgs hi hiTerms hiArgs ih priorLo priorHi
-  have includeIds := exact_OpenCoverAscendingRangeInclusion body α Γ ids ids' m M loRange hiRange bound
+  have includeIds := includeActualRanges body α Γ ids ids' m M loRange hiRange bound
   obtain ⟨priorLo⟩ := priorLo
   obtain ⟨priorHi⟩ := priorHi
   obtain ⟨small⟩ := small

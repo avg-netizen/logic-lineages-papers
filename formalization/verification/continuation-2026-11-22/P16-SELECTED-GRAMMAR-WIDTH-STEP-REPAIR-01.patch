@@ -1,0 +1,11 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarWidthStepProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarWidthStepProof.lean
+@@ -9 +9 @@
+-import LogicLineages.PersistentMarking.NumberedWindowInternalCoverAscendingRangeInclusionProof
++import LogicLineages.PersistentMarking.NumberedWindowInternalCoverAscendingRangeInclusionTransparentProof
+@@ -27 +27 @@
+-open NumberedWindowInternalCoverAscendingRangeInclusionProof (exact_OpenCoverAscendingRangeInclusion)
++open NumberedWindowInternalCoverAscendingRangeInclusionTransparentProof (includeActualRanges)
+@@ -64 +64 @@
+-  have includeIds := exact_OpenCoverAscendingRangeInclusion body α Γ ids ids' m M loRange hiRange bound
++  have includeIds := includeActualRanges body α Γ ids ids' m M loRange hiRange bound
