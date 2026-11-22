@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroClassGuardedOneStepTargets
+import LogicLineages.PermittedControl.ActualZeroClassGuardedOneStepProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualZeroClassGuardedOneStep :
+    ActualZeroClassGuardedOneStep.ExactGuardedZeroClassOneStep :=
+  ActualZeroClassGuardedOneStep.exactGuardedZeroClassOneStep
+
+#print axioms fixed_actualZeroClassGuardedOneStep
+
+end LogicLineages.PermittedControl.StatementChecks
