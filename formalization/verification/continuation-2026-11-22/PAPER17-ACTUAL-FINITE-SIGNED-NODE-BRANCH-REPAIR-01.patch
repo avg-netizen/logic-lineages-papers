@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualFiniteSignedNodeBranchSupportProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualFiniteSignedNodeBranchSupportProof.lean
+@@ -53 +53 @@
+-            exact ⟨fun h => by cases h,fun h => by cases h⟩
++            constructor <;> intro h <;> cases h
+@@ -57 +57 @@
+-            exact ⟨fun h => by cases h,fun h => by cases h⟩
++            constructor <;> intro h <;> cases h

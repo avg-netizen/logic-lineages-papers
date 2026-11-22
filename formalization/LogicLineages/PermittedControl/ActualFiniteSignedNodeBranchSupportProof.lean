@@ -50,11 +50,11 @@ theorem matchedTransport (f ρ σ : Nat → Nat) (top : Nat) (agreed : AgreeThro
         cases as with
         | nil => exact ⟨fun _ => .nil,fun _ => .nil⟩
         | cons a as =>
-            exact ⟨fun h => by cases h,fun h => by cases h⟩
+            constructor <;> intro h <;> cases h
     | cons p ps ih =>
         cases as with
         | nil =>
-            exact ⟨fun h => by cases h,fun h => by cases h⟩
+            constructor <;> intro h <;> cases h
         | cons a as =>
             have range := within p List.mem_cons_self
             have head : ActualOutcome f ρ p a ↔ ActualOutcome f σ p a := by

@@ -1,0 +1,49 @@
+{
+  "status": "source-only exact matched support proof syntax repair, no Lean/Git invoked by author",
+  "failed_source_remote_commit": "9182e40ab9cc2e5658a0d1812ed696c9789e0a14",
+  "failed_source_local_commit": "d76e72550c970ff1b2a20a83c95e19323e2783b5",
+  "failed_source_tree": "9d796cf06bcb58303d5fe3883b89158bea78dd4b",
+  "failed_exact_gate_receipt": "1795365970982863423-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualFiniteSignedNodeBranchStatementChecks",
+  "failed_receipt_sha256": "1ac6450edade39cc71ec1f4529c535a6223082cb4a57412053123f1294821fdd",
+  "failed_exact_module_log_sha256": "9e53d781d135c12c0c5ee99e6c987313e37add1fa507acbca87d77b53e1db7b4",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFiniteSignedNodeBranchSupportProof.lean:53:18: error: Insufficient number of fields for `\u27e8...\u27e9` constructor: Constructor `Iff.intro` has 2 explicit field, but only 1 was provided\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFiniteSignedNodeBranchSupportProof.lean:53:51: error: Tactic `cases` failed: major premise type is not an inductive type\n  ?m.164\n\nExplanation: the `cases` tactic is for constructor-based reasoning as well as for applying custom cases principles with a 'using' clause or a registered '@[cases_eliminator]' theorem. The above type neither is an inductive type nor has a registered theorem.\n\nf \u03c1 \u03c3 : \u2115 \u2192 \u2115\ntop : \u2115\nagreed : AgreeThrough \u03c1 \u03c3 top\nls : List Label\nrange : \u2200 l \u2208 ls, l.rank \u2264 top\nas\u271d : List Answer\nlabel :\n  \u2200 (l : Label),\n    l.rank \u2264 top \u2192 \u2200 (v : \u2115), ActualFullValueLabels.ActualLabel f \u03c1 l v \u2194 ActualFullValueLabels.ActualLabel f \u03c3 l v\nscope : \u2200 p \u2208 pairs ls, p.1.rank \u2264 top \u2227 p.2.rank \u2264 top\nwithin : \u2200 p \u2208 [], p.1.rank \u2264 top \u2227 p.2.rank \u2264 top\na : Answer\nas : List Answer\nh\u271d : Matches f \u03c1 [] (a :: as)\nh : ?m.164\n\u22a2 ?m.167 h\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFiniteSignedNodeBranchSupportProof.lean:53:31: error: Missing eliminator: An eliminator must be provided when multiple induction targets are specified and no default eliminator has been registered\n\nHint: Write `using <eliminator-name>` to specify an eliminator, or register a default eliminator with the attribute `[cases_eliminator]`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFiniteSignedNodeBranchSupportProof.lean:57:18: error: Insufficient number of fields for `\u27e8...\u27e9` constructor: Constructor `Iff.intro` has 2 explicit field, but only 1 was provided\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFiniteSignedNodeBranchSupportProof.lean:57:51: error: Tactic `cases` failed: major premise type is not an inductive type\n  ?m.204\n\nExplanation: the `cases` tactic is for constructor-based reasoning as well as for applying custom cases principles with a 'using' clause or a registered '@[cases_eliminator]' theorem. The above type neither is an inductive type nor has a registered theorem.\n\nf \u03c1 \u03c3 : \u2115 \u2192 \u2115\ntop : \u2115\nagreed : AgreeThrough \u03c1 \u03c3 top\nls : List Label\nrange : \u2200 l \u2208 ls, l.rank \u2264 top\nas : List Answer\nlabel :\n  \u2200 (l : Label),\n    l.rank \u2264 top \u2192 \u2200 (v : \u2115), ActualFullValueLabels.ActualLabel f \u03c1 l v \u2194 ActualFullValueLabels.ActualLabel f \u03c3 l v\nscope : \u2200 p \u2208 pairs ls, p.1.rank \u2264 top \u2227 p.2.rank \u2264 top\np : Pair\nps : List Pair\nih : (\u2200 p \u2208 ps, p.1.rank \u2264 top \u2227 p.2.rank \u2264 top) \u2192 \u2200 (as : List Answer), Matches f \u03c1 ps as \u2194 Matches f \u03c3 ps as\nwithin : \u2200 p_1 \u2208 p :: ps, p_1.1.rank \u2264 top \u2227 p_1.2.rank \u2264 top\nh\u271d : Matches f \u03c1 (p :: ps) []\nh : ?m.204\n\u22a2 ?m.207 h\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFiniteSignedNodeBranchSupportProof.lean:57:31: error: Missing eliminator: An eliminator must be provided when multiple induction targets are specified and no default eliminator has been registered\n\nHint: Write `using <eliminator-name>` to specify an eliminator, or register a default eliminator with the attribute `[cases_eliminator]`\n",
+  "failed_original_native_log_sha256": "41a456f17ce71c698ae1f254d1d05c790090c2e3f4cc3025af6553a9202a73cb",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualFiniteSignedNodeBranchSupportProof.lean",
+  "failed_proof_sha256": "c29fd3e0b2c4569bc5e988f0be20a9c5c60c6f57eb07142b72379cc278fd7578",
+  "repaired_proof_sha256": "9478abc22133b6b97ad2ef519c774e5a4ab9a94b9ad5a7780bec0e35eb9ecc31",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FINITE-SIGNED-NODE-BRANCH-REPAIR-01.patch",
+  "patch_sha256": "5b90de73cddc1a134e0920f565b8afcbbe95e9b4f5aaf977c72426eac6083024",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FINITE-SIGNED-NODE-BRANCH-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "9afef41d31b44dbe6a3fee45002551e2bdc1fea27cc310d1ac303b80f5c68f2c",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualFiniteSignedNodeBranchTargets.lean": "6844756e700034e1729dcbb6582d1f50008b8e02710bc90492088eb4a7b1ba48",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteSignedNodeBranchProof.lean": "fd1ff923dd6155b89c81fa49803e9394ec45f4a09bf46a24150973b6899b7e65",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteSignedNodeBranchStatementChecks.lean": "3736e8efeb196f62bec686c7ed15c7488d2944ed8575baa864dd8c834e1e4213",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FINITE-SIGNED-NODE-BRANCH-SOURCE-MAP.md": "a2a6e8671c13f03a52a4419787a8c1b506c70788405ccd6fda60f426f44ffa99"
+  },
+  "static_module_closure_unchanged": {
+    "Targets": {
+      "local": 197,
+      "external": 33,
+      "contains_totient": false
+    },
+    "SupportProof": {
+      "local": 419,
+      "external": 41,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 537,
+      "external": 42,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 538,
+      "external": 42,
+      "contains_totient": false
+    }
+  },
+  "scope": "Only parse the two impossible list arity directions explicitly via constructor; no interpretation, theorem, support, numeric scope, imports or other edits."
+}
