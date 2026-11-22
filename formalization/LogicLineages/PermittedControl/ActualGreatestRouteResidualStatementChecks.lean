@@ -1,0 +1,25 @@
+module
+public import LogicLineages.PermittedControl.ActualGreatestRouteResidualTargets
+import LogicLineages.PermittedControl.ActualGreatestRouteResidualTableProof
+import LogicLineages.PermittedControl.ActualGreatestRouteResidualDecodeProof
+import LogicLineages.PermittedControl.ActualGreatestRouteResidualProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualGreatestRouteResidual
+
+theorem fixed_exactKeptActualRoute : ExactKeptActualRoute := exactKeptActualRoute
+theorem fixed_exactDecodedActualResidual : ExactDecodedActualResidual := exactDecodedActualResidual
+theorem fixed_exactActualLowerRouteFamily : ExactActualLowerRouteFamily := exactActualLowerRouteFamily
+theorem fixed_exactActualLowerRouteDimension : ExactActualLowerRouteDimension := exactActualLowerRouteDimension
+theorem fixed_fullActualGreatestRouteResidual : FullActualGreatestRouteResidual :=
+  ⟨fixed_exactKeptActualRoute,fixed_exactDecodedActualResidual,fixed_exactActualLowerRouteFamily,
+    fixed_exactActualLowerRouteDimension⟩
+
+#print axioms fixed_exactKeptActualRoute
+#print axioms fixed_exactDecodedActualResidual
+#print axioms fixed_exactActualLowerRouteFamily
+#print axioms fixed_exactActualLowerRouteDimension
+#print axioms fixed_fullActualGreatestRouteResidual
+
+end LogicLineages.PermittedControl.StatementChecks
