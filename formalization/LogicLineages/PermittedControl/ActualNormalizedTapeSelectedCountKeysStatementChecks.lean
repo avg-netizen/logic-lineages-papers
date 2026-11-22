@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PermittedControl.ActualNormalizedTapeSelectedCountKeysTargets
+import LogicLineages.PermittedControl.ActualNormalizedTapeSelectedCountKeysProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualNormalizedTapeSelectedCountKeys
+
+theorem fixed_exactTapeSelectedCountKeyLedger : ExactTapeSelectedCountKeyLedger :=
+  exactTapeSelectedCountKeyLedger
+
+#print axioms fixed_exactTapeSelectedCountKeyLedger
+
+end LogicLineages.PermittedControl.ActualNormalizedTapeSelectedCountKeys

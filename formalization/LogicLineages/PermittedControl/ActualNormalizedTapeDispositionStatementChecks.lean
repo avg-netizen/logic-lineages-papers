@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.ActualNormalizedTapeDispositionTargets
+import LogicLineages.PermittedControl.ActualNormalizedTapeDispositionSumsProof
+import LogicLineages.PermittedControl.ActualNormalizedTapeDispositionAdmissibilityProof
+import LogicLineages.PermittedControl.ActualNormalizedTapeDispositionValueProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualNormalizedTapeDisposition
+
+theorem fixed_exactTapeDispositionSums : ExactTapeDispositionSums := exactTapeDispositionSums
+theorem fixed_exactTapeDispositionAdmissibility : ExactTapeDispositionAdmissibility :=
+  exactTapeDispositionAdmissibility
+theorem fixed_exactTapeValueConservation : ExactTapeValueConservation := exactTapeValueConservation
+
+theorem fixed_fullActualNormalizedTapeDisposition : FullActualNormalizedTapeDisposition :=
+  ⟨fixed_exactTapeDispositionSums,fixed_exactTapeDispositionAdmissibility,
+    fixed_exactTapeValueConservation⟩
+
+#print axioms fixed_exactTapeDispositionSums
+#print axioms fixed_exactTapeDispositionAdmissibility
+#print axioms fixed_exactTapeValueConservation
+#print axioms fixed_fullActualNormalizedTapeDisposition
+
+end LogicLineages.PermittedControl.ActualNormalizedTapeDisposition
