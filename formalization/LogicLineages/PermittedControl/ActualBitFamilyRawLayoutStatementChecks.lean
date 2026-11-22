@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.ActualBitFamilyRawLayoutTargets
+import LogicLineages.PermittedControl.ActualBitFamilyRawLayoutProof
+import LogicLineages.PermittedControl.ActualBitFamilyRawLayoutPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualBitFamilyRawLayout
+
+theorem fixed_exactRawFamilyLayout : ExactRawFamilyLayout := exactRawFamilyLayout
+theorem fixed_exactRawFamilyNames : ExactRawFamilyNames := exactRawFamilyNames
+theorem fixed_exactRawLayoutEffectivity : ExactRawLayoutEffectivity := exactRawLayoutEffectivity
+theorem fixed_fullActualBitFamilyRawLayout : FullActualBitFamilyRawLayout :=
+  ⟨fixed_exactRawFamilyLayout,fixed_exactRawFamilyNames,fixed_exactRawLayoutEffectivity⟩
+
+#print axioms fixed_exactRawFamilyLayout
+#print axioms fixed_exactRawFamilyNames
+#print axioms fixed_exactRawLayoutEffectivity
+#print axioms fixed_fullActualBitFamilyRawLayout
+
+end LogicLineages.PermittedControl.StatementChecks
