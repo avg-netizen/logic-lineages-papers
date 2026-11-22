@@ -1,0 +1,7 @@
+# P16 actual bounded aux fragment object course-of-values induction
+
+Frozen (awaiting native). Applies the original object strong-induction theorem at the held raw key. The sole induction hypothesis is the standard original below formula at genuinely smaller raw keys, with actual selected G and same-context, same-result, same-key W₀→W₁ clause universally quantified in result. The bounded source step uses only the proved guard inversion and exact window cuts, no supplied bridge; the generic assembly abstracts the two window program terms solely to reduce elaboration, then instantiates the exact preceding and lexical fitted programs. All finite universal binders, implication introduction/elimination and strong induction are in the original object derivation calculus. The theorem needs only actual G=1 at that raw and the actual preceding W₀ report, no host tree, no assumed below property. It does not identify general V/W acceptance with G, cover recursively nested lambdas, or change lexical context into a protected probe context. Distinct from any unconditional own-cover proof. Gate exact alias `exact_OpenCoverAuxFragmentWindowForward` after the source step and local cut pass; static closure excludes Hydra/Linarith.
+
+| File (PersistentMarking) | SHA-256 | Static closure including root |
+|---|---|---:|
+| `NumberedWindowInternalCoverAuxFragmentInductionProof.lean` | `5feaeb5884a9cbfb9258482729f854f931409dd31bf5182f54330ba2cd36c499` | 1504 |
