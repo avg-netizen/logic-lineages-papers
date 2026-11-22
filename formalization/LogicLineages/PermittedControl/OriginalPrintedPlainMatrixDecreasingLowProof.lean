@@ -23,7 +23,7 @@ theorem exactOriginalDecreasingLowCase : ExactOriginalDecreasingLowCase := by
     exact ⟨name,used,below,branch,residual,member,digit,hits,pr,suffix,actual,accepted⟩
 
 theorem exactOriginalCodedLowChildren : ExactOriginalCodedLowChildren := by
-  intro f B known gates p name used branch member residual hits
+  intro f B known gates p name used source bound branch member residual hits
   exact (exactCodedLowFamilyDimension.2 f name (originalFamilyCeiling B known gates p)
     (matrix known gates p) used branch member residual hits).2
 

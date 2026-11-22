@@ -1,0 +1,46 @@
+{
+  "status": "exact source-only narrow proof repair; native not invoked by author",
+  "failed_source_remote_commit": "e3fc81d5b0c83808d2fb160c359fc0e4dfb5910c",
+  "failed_source_local_commit": "0810a8b1e",
+  "failed_exact_gate_receipt": "1795359282575658031-43",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalPrintedPlainMatrixDecreasingLowStatementChecks",
+  "failed_receipt_sha256": "aa65115bf1c425e40c8047493ca6765a367b0d8a03a1861e685f707170b2916e",
+  "failed_exact_module_log_sha256": "7b9ab575db8b2ee9d1ac2d84cdc5bd847b7ede6b0b521d6509f18aaf3b468382",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixDecreasingLowProof.lean:28:32: error: Application type mismatch: The argument\n  branch\nhas type\n  List HeterogeneousSignedMatrixSlice.RawRow\nbut is expected to have type\n  HeterogeneousSignedMatrixLowStrips.RawBranch\nin the application\n  exactCodedLowFamilyDimension.right f name (originalFamilyCeiling B known gates p) (matrix known gates p) used branch",
+  "failed_original_native_log_sha256": "98d2e5781cd7dd38baa3be6e9f7f4f4360608a6d5e7767008d4990d530abf9f3",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixDecreasingLowProof.lean",
+  "failed_proof_sha256": "38e6e55f8d79de7b786a4cf4843f0aceb7384bf4601a075f280987ac2641761f",
+  "repaired_proof_sha256": "2c759b5b0293305cc0b5a8d82be9bf37c6514545d9d5584e40427947fb2cd9a1",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-DECREASING-LOW-REPAIR-01.patch",
+  "patch_sha256": "b8128c3079a3143fbb5c0c2aff93e6d1f1cc78dcfdad14b4c4b6583690ec1f00",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-DECREASING-LOW-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "be31c616d9fdcd722959322c2e5b76c99028bc3c576c5b270cf90e4616a2713a",
+  "accepted_typed_and_coded_low_dimension_receipts": [
+    "1795359274409024318-10",
+    "1795359278697705066-26"
+  ],
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixDecreasingLowTargets.lean": "766f663649bbbdebe6849a42d99c0f4546840f76993511e4ca3a088da9a97bf7",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixDecreasingLowStatementChecks.lean": "2cfede8f73389e77bfe30d6f28be57ca62554139fd699c0d6036886b37754749",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-DECREASING-LOW-SOURCE-MAP.md": "1d83f606c68856c8d3e57e5800ddf2b1c86d0187f85df4d024fff80e9b91d377"
+  },
+  "static_closure_unchanged": {
+    "Targets": {
+      "local": 268,
+      "external": 35,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 667,
+      "external": 44,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 668,
+      "external": 44,
+      "contains_totient": false
+    }
+  },
+  "scope": "Introduce the existing source and bound let binders before the actual raw branch and row premises. No target, imports, actual encoded matrix, ceiling, or other leaf change."
+}
