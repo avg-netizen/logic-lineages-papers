@@ -1,0 +1,33 @@
+module
+public import LogicLineages.PermittedControl.ActualFiniteOrderBranchesTargets
+import LogicLineages.PermittedControl.ActualFiniteOrderBranchesEnumerateProof
+import LogicLineages.PermittedControl.ActualFiniteOrderBranchesGuardProof
+import LogicLineages.PermittedControl.ActualFiniteOrderBranchesCoverageProof
+import LogicLineages.PermittedControl.ActualFiniteOrderBranchesRealizationProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualFiniteOrderEnumeration : ActualFiniteOrderBranches.ExactPatternEnumeration :=
+  ActualFiniteOrderBranches.exactPatternEnumeration
+
+theorem fixed_exactActualFiniteOrderGuard : ActualFiniteOrderBranches.ExactOrderGuard :=
+  ActualFiniteOrderBranches.exactOrderGuard
+
+theorem fixed_exactActualFiniteOrderCoverage : ActualFiniteOrderBranches.ExactActualBranchCoverage :=
+  ActualFiniteOrderBranches.exactActualBranchCoverage
+
+theorem fixed_exactActualFiniteOrderRealization : ActualFiniteOrderBranches.ExactBranchRealization :=
+  ActualFiniteOrderBranches.exactBranchRealization
+
+theorem fixed_fullActualFiniteOrderBranches : ActualFiniteOrderBranches.FullActualFiniteOrderBranches :=
+  ⟨fixed_exactActualFiniteOrderEnumeration,fixed_exactActualFiniteOrderGuard,
+    fixed_exactActualFiniteOrderCoverage,fixed_exactActualFiniteOrderRealization⟩
+
+#print axioms fixed_exactActualFiniteOrderEnumeration
+#print axioms fixed_exactActualFiniteOrderGuard
+#print axioms fixed_exactActualFiniteOrderCoverage
+#print axioms fixed_exactActualFiniteOrderRealization
+#print axioms fixed_fullActualFiniteOrderBranches
+
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,23 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixOrderBranchesTargets
+import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixOrderBranchesProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedOrderBranch : OriginalPrintedPlainMatrixOrderBranches.ExactPrintedOrderBranch :=
+  OriginalPrintedPlainMatrixOrderBranches.exactPrintedOrderBranch
+
+theorem fixed_exactOriginalPrintedOrderBranchesCover :
+    OriginalPrintedPlainMatrixOrderBranches.ExactPrintedOrderBranchesCover :=
+  OriginalPrintedPlainMatrixOrderBranches.exactPrintedOrderBranchesCover
+
+theorem fixed_fullOriginalPrintedPlainMatrixOrderBranches :
+    OriginalPrintedPlainMatrixOrderBranches.FullOriginalPrintedPlainMatrixOrderBranches :=
+  ⟨fixed_exactOriginalPrintedOrderBranch,fixed_exactOriginalPrintedOrderBranchesCover⟩
+
+#print axioms fixed_exactOriginalPrintedOrderBranch
+#print axioms fixed_exactOriginalPrintedOrderBranchesCover
+#print axioms fixed_fullOriginalPrintedPlainMatrixOrderBranches
+
+end LogicLineages.PermittedControl.StatementChecks
