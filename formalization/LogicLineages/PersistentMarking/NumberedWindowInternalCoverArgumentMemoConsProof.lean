@@ -78,7 +78,7 @@ private theorem rowCases (F : Program 1) (h a before out : OTerm α) (goal : For
   let k := g ∘ j
   have both := keepThrough j g keep retain
   have head' := renameInto head g Ξ retain
-  simp only [unaryRename,Term.relabel_relabel] at head'
+  simp only [programRename,inputsRename,Term.relabel_relabel] at head'
   have row := carryRow R h a before out k Ξ both step
   have tl : Nonempty (Derivation body Ξ (readRow R mt (a.relabel k))) := tail
   have combined := actualArgumentCombine F (h.relabel k) (a.relabel k) (before.relabel k)
