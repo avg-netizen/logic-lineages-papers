@@ -55,6 +55,8 @@ theorem exactGreatestReplayGuards : ExactGreatestReplayGuards := by
     have zPaid : originalFamilyCeiling B known gates p ≤ z := (le_max_left _ _).trans high
     by_cases hTop : rename branch name = top branch
     · simpa only [replay,if_pos (And.intro used hTop)] using zPaid
-    · simpa only [replay,if_neg (fun h => hTop h.2)] using paid name used
+    · have lower : ¬ (name ∈ support (matrix known gates p) ∧ rename branch name = top branch) :=
+        fun h => hTop h.2
+      simpa only [replay,if_neg lower] using paid name used
 
 end LogicLineages.PermittedControl.OriginalPrintedPlainMatrixLinearProjection
