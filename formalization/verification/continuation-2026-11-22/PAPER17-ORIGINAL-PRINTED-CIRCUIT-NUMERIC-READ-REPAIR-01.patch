@@ -1,0 +1,32 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadPrimitiveProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadPrimitiveProof.lean
+@@ -34,2 +34,5 @@
+-private theorem packOption (noneCode : Nat) :
+-    Primrec (fun r : Option Nat => r.casesOn noneCode (fun n => n+4)) := by
++private def optionNumeric (noneCode : Nat) : Option Nat → Nat
++  | none => noneCode
++  | some n => n + 4
++
++private theorem packOption (noneCode : Nat) : Primrec (optionNumeric noneCode) := by
+@@ -38 +41,6 @@
+-  exact Primrec.option_casesOn Primrec.id (Primrec.const noneCode) someCode.to₂
++  exact (Primrec.option_casesOn
++    (o := (id : Option Nat → Option Nat))
++    (f := fun _ : Option Nat => (noneCode : Nat))
++    (g := fun (_ : Option Nat) (n : Nat) => n + 4)
++    Primrec.id (Primrec.const noneCode) someCode.to₂).of_eq
++    (fun r => by cases r <;> rfl)
+@@ -45 +53 @@
+-  have someCode : Primrec (fun p : A => p.2.casesOn 3 (fun n => n+4)) :=
++  have someCode : Primrec (fun p : A => optionNumeric 3 p.2) :=
+@@ -47,2 +55,8 @@
+-  exact (Primrec.option_casesOn Primrec.id (Primrec.const 2) someCode.to₂).of_eq
+-    (fun p => by rcases p with - | q <;> rfl)
++  exact (Primrec.option_casesOn
++    (o := (id : ClosedNaturalFieldResult → ClosedNaturalFieldResult))
++    (f := fun _ : ClosedNaturalFieldResult => (2 : Nat))
++    (g := fun (_ : ClosedNaturalFieldResult) (r : Option Nat) => optionNumeric 3 r)
++    Primrec.id (Primrec.const 2) someCode.to₂).of_eq (fun p => by
++      cases p with
++      | none => rfl
++      | some r => cases r <;> rfl)

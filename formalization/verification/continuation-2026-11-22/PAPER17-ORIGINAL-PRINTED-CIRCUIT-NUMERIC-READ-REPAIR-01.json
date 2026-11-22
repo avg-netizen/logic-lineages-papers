@@ -1,0 +1,32 @@
+{
+  "status": "narrow proof-only source repair, not native checked by author",
+  "failed_source_remote_commit": "8a33f5f60a20a044eaccf97f8c6daf2640377761",
+  "failed_exact_gate_receipt": "1795353531280713836-8",
+  "failed_original_native_log_sha256": "a763be611d7605a420907c7d5e946b22d10a83f27b1475d415e4cf2e6300b107",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadPrimitiveProof.lean:35:35: error: failed to elaborate eliminator, expected type is not available\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadPrimitiveProof.lean:38:2: error: Type mismatch\n  Primrec.option_casesOn Primrec.id (Primrec.const noneCode) (Primrec.to\u2082 someCode)\nhas type\n  Primrec.{0, 0} fun a => Option.casesOn (id a) noneCode fun b => (a, b).2 + 4\nbut is expected to have type\n  Primrec.{0, u_1} fun r => ?m.5\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadPrimitiveProof.lean:41:3: error(lean.unknownIdentifier): Unknown identifier `packOption`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadPrimitiveProof.lean:45:40: error: failed to elaborate eliminator, expected type is not available\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadPrimitiveProof.lean:46:5: error(lean.unknownIdentifier): Unknown identifier `packOption`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadPrimitiveProof.lean:43:50: error: unsolved goals\nA : Type := ClosedNaturalFieldResult \u00d7 Option \u2115\n\u22a2 Primrec packField",
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-READ-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "58268cff3253b519ae4d1a9bdefa37f154995eed124b2650949524e1f56bf7b7",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadPrimitiveProof.lean",
+  "failed_proof_sha256": "d2436e88a4ebd919c318087d0c59c063e245c22383f783e98a06c0dc52531cf3",
+  "repaired_proof_sha256": "38005c5539736dffb709a44a5f3ed6bfa568c72b143705a6959b2a074165ba66",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-READ-REPAIR-01.patch",
+  "patch_sha256": "eabf4cfcde7c86df7678aa2d175f3fcc5356e51b348e859657da134f6a77fd99",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadCalibrationProof.lean": "c21ecd380075eba10602f4a67e09071d7aff64c580e4173a7d26381f24c91218",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadEffectiveProof.lean": "914ec7379760045404f7295c37548db0c2359a1bcba4ff01076a3fad06a702bb",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadStatementChecks.lean": "908af3a1fd3c29d11cf2505f1a860bcf7258c27512552a8f9c1c5c2dc8d07ab1",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadTargets.lean": "2f243d8089c0845c63e67081a9fa026ac2f690c0ff10a56ab315160d1b081fbe",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-READ-SOURCE-MAP.md": "cf5c580529b8657afb16a34cb1d8316f9f40e437f3c34eaa993cd201cab30b1e"
+  },
+  "static_closure_unchanged": {
+    "target_local": 146,
+    "target_external": 31,
+    "primitive_local": 220,
+    "primitive_external": 37,
+    "effective_local": 258,
+    "effective_external": 38,
+    "gate_local": 260,
+    "gate_external": 38
+  },
+  "scope": "Replace underconstrained dependent casesOn method syntax by private result-typed Option Nat to Nat helper and explicit option_casesOn parameter types; relate by literal constructors. Exact packBase/packField and raw code/target/all other leaves unchanged."
+}

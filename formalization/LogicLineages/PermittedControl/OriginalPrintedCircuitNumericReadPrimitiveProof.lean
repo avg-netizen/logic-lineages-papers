@@ -31,21 +31,35 @@ theorem sameTag (n : Nat) : Primrec (fun p : Args => decide (tag p = n)) :=
 theorem hitPrimitive : Primrec (fun n : Nat => n + 4) :=
   Primrec.nat_add.comp Primrec.id (Primrec.const 4)
 
-private theorem packOption (noneCode : Nat) :
-    Primrec (fun r : Option Nat => r.casesOn noneCode (fun n => n+4)) := by
+private def optionNumeric (noneCode : Nat) : Option Nat → Nat
+  | none => noneCode
+  | some n => n + 4
+
+private theorem packOption (noneCode : Nat) : Primrec (optionNumeric noneCode) := by
   let A := Option Nat × Nat
   have someCode : Primrec (fun p : A => p.2 + 4) := hitPrimitive.comp Primrec.snd
-  exact Primrec.option_casesOn Primrec.id (Primrec.const noneCode) someCode.to₂
+  exact (Primrec.option_casesOn
+    (o := (id : Option Nat → Option Nat))
+    (f := fun _ : Option Nat => (noneCode : Nat))
+    (g := fun (_ : Option Nat) (n : Nat) => n + 4)
+    Primrec.id (Primrec.const noneCode) someCode.to₂).of_eq
+    (fun r => by cases r <;> rfl)
 
 theorem packBasePrimitive : Primrec packBase :=
   (packOption 1).of_eq (fun p => by cases p <;> rfl)
 
 theorem packFieldPrimitive : Primrec packField := by
   let A := ClosedNaturalFieldResult × Option Nat
-  have someCode : Primrec (fun p : A => p.2.casesOn 3 (fun n => n+4)) :=
+  have someCode : Primrec (fun p : A => optionNumeric 3 p.2) :=
     (packOption 3).comp Primrec.snd
-  exact (Primrec.option_casesOn Primrec.id (Primrec.const 2) someCode.to₂).of_eq
-    (fun p => by rcases p with - | q <;> rfl)
+  exact (Primrec.option_casesOn
+    (o := (id : ClosedNaturalFieldResult → ClosedNaturalFieldResult))
+    (f := fun _ : ClosedNaturalFieldResult => (2 : Nat))
+    (g := fun (_ : ClosedNaturalFieldResult) (r : Option Nat) => optionNumeric 3 r)
+    Primrec.id (Primrec.const 2) someCode.to₂).of_eq (fun p => by
+      cases p with
+      | none => rfl
+      | some r => cases r <;> rfl)
 
 theorem identityGuardPrimitive : Primrec identityGuard := by
   have htarget : Primrec (fun p : Nat × Nat => terminalScanGuard (p.1,p.1)) :=
