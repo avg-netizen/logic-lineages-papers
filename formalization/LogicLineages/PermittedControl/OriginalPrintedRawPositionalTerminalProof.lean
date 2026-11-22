@@ -30,7 +30,7 @@ private theorem tapeLiteral (p : NormalForm.Formula) : tape p.encode = typedTape
 
 private theorem atomCount (p : NormalForm.Formula) :
     (typedTape p).count 2 = (LinearRows.atoms p).length := by
-  induction p <;> simp [typedTape,LinearRows.atoms,List.count_append,*]
+  induction p <;> simp_all [typedTape,LinearRows.atoms,List.count_append]
 
 theorem exactOriginalPositionalTape : ExactOriginalPositionalTape :=
   ⟨tapeLiteral,atomCount⟩
