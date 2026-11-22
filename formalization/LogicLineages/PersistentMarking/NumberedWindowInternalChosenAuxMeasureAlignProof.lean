@@ -54,7 +54,8 @@ theorem exact_OpenChosenAuxMeasureAlign : ExactOpenChosenAuxMeasureAlign := by
     apply programCases chosenCombine ![mf,ma] _
     intro β j Δ value keep actual
     simp only [binaryInputsRename] at actual
-    simp only [conjunctionRename,programRename,binaryInputsRename,parentReportRename]
+    rw [conjunctionRename, parentReportRename M dom cod fn arg p df da bf ba j,
+      programRename, binaryInputsRename]
     let dom' := dom.relabel j
     let cod' := cod.relabel j
     let fn' := fn.relabel j

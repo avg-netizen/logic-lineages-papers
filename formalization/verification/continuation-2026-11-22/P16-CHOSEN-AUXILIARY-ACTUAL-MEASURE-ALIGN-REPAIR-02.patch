@@ -1,0 +1,6 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChosenAuxMeasureAlignProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChosenAuxMeasureAlignProof.lean
+@@ -57 +57,2 @@
+-    simp only [conjunctionRename,programRename,binaryInputsRename,parentReportRename]
++    rw [conjunctionRename, parentReportRename M dom cod fn arg p df da bf ba j,
++      programRename, binaryInputsRename]
