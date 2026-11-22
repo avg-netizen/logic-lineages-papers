@@ -33,7 +33,7 @@ theorem exactSymbolicPredecessorGuard : ExactSymbolicPredecessorGuard := by
   let pred := top-1
   let q := predecessorPacket top
   have genuine (ν : Nat → Nat) (tied : PreparedTableTied f top baseline q.1 ν) :
-      ν 1 = baseline pred := (tied 0 (by decide)).2
+      ν 1 = baseline pred := (tied 0 (Nat.zero_lt_succ 0)).2
   have interpret (ν : Nat → Nat) (tied : PreparedTableTied f top baseline q.1 ν) :
       q.2.eval (Function.update ν 0 z) ↔ baseline pred+1 ≤ z := by
     change (orderGuard 1).eval (Function.update ν 0 z) ↔ _

@@ -1,0 +1,50 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "abf9eda1e29ba7c706c7213e0a310350b13496c0",
+  "failed_source_local_commit": "d894bd63e73722ee9bdd67e2214794bce54467a4",
+  "failed_source_tree": "d4ce5447d1daba555f420b59ffc234e4026d83fd",
+  "failed_exact_gate_receipt": "1795371483572779282-78",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualSymbolicPredecessorProjectionStatementChecks",
+  "failed_receipt_sha256": "29dff64b35d938f945cf818bb700286a24dcf877ce983f1fcae4a5c82f8051d8",
+  "failed_exact_module_log_sha256": "1e04fa3f2c74d93902b619d13be238794d0a53fb66233af090d159764b3653d3",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualSymbolicPredecessorProjectionGuardProof.lean:36:41: error: Expected type must not contain free variables\n  0 < (predecessorPacket top).1.length\n\nHint: Use the `+revert` option to automatically clean up and revert free variables\n",
+  "failed_original_native_log_sha256": "d46f5040720a4714eecc7957ea7635f4471fd881023ee5b57dfee651d43108d6",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualSymbolicPredecessorProjectionGuardProof.lean",
+  "failed_proof_sha256": "0aaa484f007882602fba3fb6ada700a03a36f33786a28867379e1a56c89ef435",
+  "repaired_proof_sha256": "b1366cba41f5ab78d173bedefe108a555f85c999489965eb3bd415c45bcb97aa",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-SYMBOLIC-PREDECESSOR-PROJECTION-REPAIR-01.patch",
+  "patch_sha256": "c9a608cab8f2b666d15a58b12266efed5d68721def273a064946dbcc8b387083",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-SYMBOLIC-PREDECESSOR-PROJECTION-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "27c7c93717579a70fbe5d34949a778b81ab87cbc3fb9f7270c4aedaf8e1a29d2",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualSymbolicPredecessorProjectionProof.lean": "7280b128ccda928c0a114606929851cb7139d8e888635354e4097051c57156bc",
+    "formalization/LogicLineages/PermittedControl/ActualSymbolicPredecessorProjectionStatementChecks.lean": "8cb45643bba36484f114284cd16194af554a52fa5384fc10670f13781da2e3c2",
+    "formalization/LogicLineages/PermittedControl/ActualSymbolicPredecessorProjectionTargets.lean": "37fd77c5d9b940892cb8c5a1b4124689e948033eab28c6088c5afb2674cfec39",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-SYMBOLIC-PREDECESSOR-PROJECTION-SOURCE-MAP.md": "30b1a361d36329f348798529b275999486d763cf0f026f5d5b002f1ac703d77a"
+  },
+  "static_module_closure": {
+    "GuardProof": {
+      "local": 464,
+      "external": 39,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 510,
+      "external": 42,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 511,
+      "external": 42,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 290,
+      "external": 35,
+      "contains_totient": false
+    }
+  },
+  "scope": "Use the literal Nat.zero_lt_succ singleton index instead of deciding with free top in the expected type, while keeping genuine unchanged allocated slot and reader. No target, imports, mode, or other source changes."
+}
