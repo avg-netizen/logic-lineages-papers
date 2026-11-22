@@ -45,7 +45,9 @@ private theorem anyPrimitive {A : Type} [Primcodable A] {p : A → Bool}
   intro xs
   induction xs with
   | nil => rfl
-  | cons x xs ih => simp only [List.foldr_cons,List.any_cons,ih]
+  | cons x xs ih =>
+    change (p x || xs.foldr (fun item acc => p item || acc) false) = (p x || xs.any p)
+    exact congrArg (fun b => p x || b) ih
 
 private theorem depthPrimitive : Primrec depth :=
   Primrec.list_length.comp namesPrimitive
@@ -94,15 +96,28 @@ private theorem advanceComputable (f : Nat → Nat) (bound : BoundProgram) (high
         Computable (Prod.snd : State × RawFamily → RawFamily))).to₂
   exact ok.pair next
 
-theorem exactDriverEffectivity : ExactDriverEffectivity := by
-  intro f bound high hf hb hh
+private theorem computableIteration {A S V : Type} [Primcodable A] [Primcodable S] [Primcodable V]
+    {count : A → Nat} {initial : A → S} {next : S → S} {finish : S → V}
+    (hc : Computable count) (hi : Computable initial) (hn : Computable next)
+    (hf : Computable finish) :
+    Computable (fun a : A => finish (Nat.rec (initial a) (fun _ s => next s) (count a))) := by
+  have applyNext : Computable₂ (fun (_ : A) (t : Nat × S) => next t.2) :=
+    (hn.comp (Computable.snd.comp Computable.snd) :
+      Computable (fun p : A × (Nat × S) => next p.2.2)).to₂
+  exact hf.comp (Computable.nat_rec hc hi applyNext)
+
+private theorem solveComputable (f : Nat → Nat) (bound : BoundProgram) (high : HighProgram)
+    (hf : Computable f) (hb : Computable bound) (hh : Computable high) :
+    Computable (solve f bound high) := by
   have n : Computable (fun raw : RawFamily => depth raw + 1) :=
     (Primrec.succ.comp depthPrimitive).to_comp
   have initial : Computable (fun raw : RawFamily => ((false,[raw]) : State)) :=
     (Computable.const false).pair (Computable.list_cons.comp Computable.id (Computable.const []))
-  have advanceWith := advanceComputable f bound high hf hb hh
-  have next : Computable₂ (fun (_ : RawFamily) (t : Nat × State) => advance f bound high t.2) :=
-    advanceWith.comp (Computable.snd.comp Computable.snd)
-  exact Computable.fst.comp (Computable.nat_rec n initial next)
+  have advanceWith : Computable (advance f bound high) :=
+    advanceComputable f bound high hf hb hh
+  have finish : Computable (Prod.fst : State → Bool) := Computable.fst
+  exact (computableIteration n initial advanceWith finish).of_eq (fun _ => rfl)
+
+theorem exactDriverEffectivity : ExactDriverEffectivity := solveComputable
 
 end LogicLineages.PermittedControl.ActualBitFamilyRawDriver
