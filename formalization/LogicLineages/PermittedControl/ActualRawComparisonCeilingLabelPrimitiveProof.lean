@@ -30,6 +30,8 @@ private theorem rawCountTagPrimitive :
   have middle := Primrec.ite (Primrec.eq.comp short (Primrec.const 0)) shape (Primrec.const 1)
   apply (Primrec.cond guard middle (Primrec.const 0)).of_eq
   rintro ⟨lam,mu⟩
+  unfold rawTag
+  dsimp only
   cases h : closedProperEntryGuard (lam,mu,rawNormCode lam) <;> rfl
 
 private theorem rawCountLabelPrimitive :
