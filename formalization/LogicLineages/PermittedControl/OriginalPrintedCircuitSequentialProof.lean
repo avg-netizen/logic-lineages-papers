@@ -117,7 +117,7 @@ theorem exactPrintedCircuitFailureAndUniqueness : ExactPrintedCircuitFailureAndU
       cases success
     · intro noActual
       cases hx : run f base gates with
-      | error why => exact ⟨why,hx⟩
+      | error why => exact ⟨why,rfl⟩
       | ok final => exact (noActual ⟨final,(compare final).mp hx⟩).elim
   · constructor
     · rintro ⟨final,success⟩

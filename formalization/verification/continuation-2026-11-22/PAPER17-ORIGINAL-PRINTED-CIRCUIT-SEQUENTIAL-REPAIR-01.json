@@ -1,0 +1,28 @@
+{
+  "status": "narrow proof-only source repair, not native checked by author",
+  "failed_source_remote_commit": "97f5dbdc7da52fae03037842b161abbab2349d2b",
+  "failed_exact_gate_receipt": "1795352899795561913-74",
+  "failed_original_native_log_sha256": "777b27a76a1fb67ceadd130a5d87c30a72d9cd5b63c6a012346b9f303423a5f9",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitSequentialProof.lean:120:32: error: Application type mismatch: The argument\n  hx\nhas type\n  run f base gates = Except.error why\nbut is expected to have type\n  Except.error why = Except.error why\nin the application\n  Exists.intro why hx",
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-SEQUENTIAL-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "c780bd4bf09a7d0695c973861d8c6a6d4e7eea8656e6ee4723603d33878cd167",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitSequentialProof.lean",
+  "failed_proof_sha256": "32f201765f9d184cd763475f680b34a01b7bd191c0ea9e5fbaf46f3d0148e8e6",
+  "repaired_proof_sha256": "ab997f960f45bc409f78fb7bbb8bcc8e94a1c7d92c247d90eb0b16629baff632",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-SEQUENTIAL-REPAIR-01.patch",
+  "patch_sha256": "7bd5d532f32de1c2fd7443c5c53a1a5c92470d288a22db583d79d655175f2431",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitSequentialReadProof.lean": "0b2dbdedf2b680cf8a55efb88366a35eb82f0c8a034549e9c4a26db72c2dff51",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitSequentialStatementChecks.lean": "4922d0235ac925b92df7888b8bda42b8406db9dc640f00931605d3257d8d79d6",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitSequentialTargets.lean": "1e4795449fcc863aae198eb0bc1e0c374617993f93f084cbebade5af917548c3",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-SEQUENTIAL-SOURCE-MAP.md": "0b1bcb7a34fe9339e874bba0ee3ed03a28128ff4e47fa495450d7cc48ca6de2e"
+  },
+  "held_terminal_author_manifest_sha256": "ce5ddf426cc6ebe241fef5f5c7b6d82920413537f64143e0cc8c5860647db320",
+  "static_closure_unchanged": {
+    "target_local": 145,
+    "target_external": 31,
+    "gate_local": 262,
+    "gate_external": 36
+  },
+  "scope": "The error case split already rewrites the existential witness equality to reflexivity. Use rfl in this branch instead of the pre-rewrite equation hx. Exact target and other leaves unchanged."
+}
