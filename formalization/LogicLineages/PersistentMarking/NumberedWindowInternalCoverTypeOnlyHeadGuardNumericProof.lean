@@ -81,7 +81,8 @@ theorem exact_CoverTypeOnlyHeadGuardNumeric : ExactCoverTypeOnlyHeadGuardNumeric
   intro s raw
   have both : run (typeOnlyHeadGuard s) raw = 1 ↔
       run (header 3 1) raw = 1 ∧ run (leafTypeTest s) raw = 1 := by
-    change evaluate (conjunction (header 3 1) (leafTypeTest s)) (raw ::ᵥ nil) = 1 ↔ _
+    change evaluate (conjunction (header 3 1) (leafTypeTest s)) (raw ::ᵥ nil) = 1 ↔
+      evaluate (header 3 1) (raw ::ᵥ nil) = 1 ∧ evaluate (leafTypeTest s) (raw ::ᵥ nil) = 1
     rw [actualConjunctionEvaluation]
     split <;> simp_all
   rw [both]

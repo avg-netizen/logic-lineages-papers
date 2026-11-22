@@ -1,0 +1,6 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeOnlyHeadGuardNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeOnlyHeadGuardNumericProof.lean
+@@ -84 +84,2 @@
+-    change evaluate (conjunction (header 3 1) (leafTypeTest s)) (raw ::ᵥ nil) = 1 ↔ _
++    change evaluate (conjunction (header 3 1) (leafTypeTest s)) (raw ::ᵥ nil) = 1 ↔
++      evaluate (header 3 1) (raw ::ᵥ nil) = 1 ∧ evaluate (leafTypeTest s) (raw ::ᵥ nil) = 1
