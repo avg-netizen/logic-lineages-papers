@@ -1,0 +1,26 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedTerminalBitClausesTargets
+import LogicLineages.PermittedControl.OriginalPrintedTerminalBitClausesBitsProof
+import LogicLineages.PermittedControl.OriginalPrintedTerminalBitClausesProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedTerminalBitClauses
+
+theorem fixed_exactOriginalAcceptedVectors : ExactAcceptedVectors := exactAcceptedVectors
+theorem fixed_exactOriginalBitTape : ExactBitTape := exactBitTape
+theorem fixed_exactPositivePrefixAndBooleanSuffix : ExactPositivePrefixAndBooleanSuffix :=
+  exactPositivePrefixAndBooleanSuffix
+theorem fixed_exactPrintedNormalizedBoolClauses : ExactPrintedNormalizedBoolClauses :=
+  exactPrintedNormalizedBoolClauses
+theorem fixed_fullOriginalPrintedTerminalBitClauses : FullOriginalPrintedTerminalBitClauses :=
+  ⟨fixed_exactOriginalAcceptedVectors,fixed_exactOriginalBitTape,
+    fixed_exactPositivePrefixAndBooleanSuffix,fixed_exactPrintedNormalizedBoolClauses⟩
+
+#print axioms fixed_exactOriginalAcceptedVectors
+#print axioms fixed_exactOriginalBitTape
+#print axioms fixed_exactPositivePrefixAndBooleanSuffix
+#print axioms fixed_exactPrintedNormalizedBoolClauses
+#print axioms fixed_fullOriginalPrintedTerminalBitClauses
+
+end LogicLineages.PermittedControl.StatementChecks
