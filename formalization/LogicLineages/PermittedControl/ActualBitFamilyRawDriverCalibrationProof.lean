@@ -45,6 +45,9 @@ private theorem nextExact (f : Nat → Nat) (B : Nat) (bound : BoundProgram)
   · rfl
   · rename_i nz
     have same := (cal fs (Nat.pos_of_ne_zero nz)).2
+    change lowCode f (bound (encodeFamily fs)) (encodeFamily fs) ++
+      high (bound (encodeFamily fs),encodeFamily fs) =
+      (children f (bound (encodeFamily fs)) fs (names (encodeFamily fs))).map encodeFamily
     rw [same]
     change
       (names (encodeFamily fs)).flatMap
@@ -71,6 +74,7 @@ private theorem advanceExact (f : Nat → Nat) (B : Nat) (bound : BoundProgram)
   have stepList :
       (fs.map encodeFamily).flatMap (nextCode f bound high) =
         (fs.flatMap (typedNext f bound)).map encodeFamily := by
+    clear hitList
     induction fs with
     | nil => rfl
     | cons a tail ih =>
