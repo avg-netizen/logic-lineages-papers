@@ -1,0 +1,50 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "3f4075d1785ee4af986c98f1f0e4a10d1e66e524",
+  "failed_source_local_commit": "dd660f0d21b5ab5d0dd4cf0e756a3a277bae201a",
+  "failed_source_tree": "4953bfc9d74c2f5df21360fd292d961061289fa1",
+  "failed_exact_gate_receipt": "1795369431542171226-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalPrintedTerminalBitClausesStatementChecks",
+  "failed_receipt_sha256": "19303bef75acc274a7addeb800db02dc6fb4aa71b087556fcc0a0d97c4d0a3e7",
+  "failed_exact_module_log_sha256": "4d36b8670f34f0ee8a6434138d4d9c87460c516f9e6262b0db7afb7143c2f9cd",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedTerminalBitClausesProof.lean:51:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedTerminalBitClausesProof.lean:77:48: error: Type mismatch: After simplification, term\n  snapshotLength\n has type\n  \u2200 (f \u03c1 : \u2115 \u2192 \u2115) (rows : List Row) (snap : Snapshot), actualRows f \u03c1 rows snap \u2192 List.length snap = rows.length\nbut is expected to have type\n  List.length snap = tail.length\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedTerminalBitClausesProof.lean:75:2: error: unsolved goals\ncase mp\nf \u03c1 : \u2115 \u2192 \u2115\npre tail : List Row\np : OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalForm.Formula\npositive : Bool\ngraphPass : \u2203 prefixSnap, actualRows f \u03c1 pre prefixSnap \u2227 AllTrue prefixSnap\nsnap : Snapshot\nactual : actualRows f \u03c1 tail snap\naccepts : OriginalPlainTerminalMatrix.accepts p positive snap\nbits : List Bool := List.map Prod.snd snap\nsize : bits.length = tail.length\n\u22a2 \u2203 branch \u2208 clauses pre tail p positive, ClauseHolds f \u03c1 branch\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedTerminalBitClausesProof.lean:72:85: error: unsolved goals\ncase mpr\nf \u03c1 : \u2115 \u2192 \u2115\npre tail : List Row\np : OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalForm.Formula\npositive : Bool\n\u22a2 (\u2203 branch \u2208 clauses pre tail p positive, ClauseHolds f \u03c1 branch) \u2192\n    (\u2203 prefixSnap, actualRows f \u03c1 pre prefixSnap \u2227 AllTrue prefixSnap) \u2227\n      \u2203 suffix, actualRows f \u03c1 tail suffix \u2227 OriginalPlainTerminalMatrix.accepts p positive suffix\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedTerminalBitClausesProof.lean:78:21: error: unexpected identifier; expected command\n",
+  "failed_original_native_log_sha256": "cd90c3a73f0d2790e86c497daeea405ade19205f4feb9ecc2f2c1f5b0b171690",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedTerminalBitClausesProof.lean",
+  "failed_proof_sha256": "7c8af0bdd7e857fff55b1384c15d3fc9cf1dc512d4413bcdb7e23b43e1679898",
+  "repaired_proof_sha256": "f6a3ad30dfd5f95a02a6e63655fec7fe6fc659a483457d7137b44d14ff9b477d",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-TERMINAL-BIT-CLAUSES-REPAIR-01.patch",
+  "patch_sha256": "9125daa89dcb7198bb713a94c7e8059690585c0a602a62d8e7402b74d075131b",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-TERMINAL-BIT-CLAUSES-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "288b37335f5b3f073099ca6c35e53c157f87aa6e2566d77a85ddf8535ef166a5",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedTerminalBitClausesBitsProof.lean": "456587aa0ebb187ea84fcf3f248cfe01304ae1679a52d0926491aab126c7e631",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedTerminalBitClausesStatementChecks.lean": "98b3c3810c1864f5197e6119b45ada8f508fac88dfa3e03fe04f44810d51917e",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedTerminalBitClausesTargets.lean": "c017aacb02bc6d934fa1b9721eff2819f72c7d32b9aa9b69b321752f78c005f4",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-TERMINAL-BIT-CLAUSES-SOURCE-MAP.md": "db489c6dcd0ad077fff5b40529c41931315a428f84b3022582418e381f2c9da0"
+  },
+  "static_module_closure": {
+    "BitsProof": {
+      "local": 243,
+      "external": 35,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 401,
+      "external": 42,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 402,
+      "external": 42,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 242,
+      "external": 35,
+      "contains_totient": false
+    }
+  },
+  "scope": "Parenthesize and correctly indent the full existing snapshotLength application after using, so its arguments no longer parse as a new command. All definitions, assertions, and imports unchanged."
+}

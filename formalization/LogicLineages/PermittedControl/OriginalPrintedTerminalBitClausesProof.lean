@@ -74,8 +74,8 @@ theorem exactPositivePrefixAndBooleanSuffix : ExactPositivePrefixAndBooleanSuffi
   constructor
   · rintro ⟨graphPass,snap,actual,accepts⟩
     let bits := snap.map Prod.snd
-    have size : bits.length = tail.length := by simpa only [bits,List.length_map] using
-      snapshotLength f ρ tail snap actual
+    have size : bits.length = tail.length := by
+      simpa only [bits,List.length_map] using (snapshotLength f ρ tail snap actual)
     have member := (exactAcceptedVectors p positive tail.length bits).mpr ⟨size,accepts⟩
     refine ⟨_,List.mem_map.mpr ⟨bits,member,rfl⟩,?_⟩
     exact (appendTape f ρ _ _).mpr
