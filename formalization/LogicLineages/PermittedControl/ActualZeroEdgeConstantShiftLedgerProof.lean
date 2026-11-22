@@ -45,8 +45,14 @@ theorem exactDispositionShiftBound : ExactDispositionShiftBound := by
           (prefixCandidates alphabet) ⟨rank,lam,prefixTarget mu⟩ prefixMember
       have corrAnd : κ.natAbs ≤ correctionMaximum alphabet + prefixShortMaximum alphabet :=
         corr.trans (Nat.le_add_right _ _)
-      have head := outcome.2
-      simp only [key] at head
+      have literal : rd = ((rd.1.1,LowerOperand.count rank lam mu),rd.2) :=
+        Prod.ext (Prod.ext rfl key) rfl
+      have literalOutcome : OriginOutcome f ρ anchor
+          (((rd.1.1,LowerOperand.count rank lam mu),rd.2),.count i q κ) d out := by
+        rw [← literal]
+        exact outcome
+      simp only [OriginOutcome] at literalOutcome
+      have head := literalOutcome.2
       by_cases identity : i = 0
       · simp only [if_pos identity] at head
         obtain ⟨_,kind,_⟩ := head
