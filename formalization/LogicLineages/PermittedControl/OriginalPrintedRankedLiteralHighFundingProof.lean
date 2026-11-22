@@ -98,6 +98,15 @@ private theorem replayOrdered (θ : Nat → Nat) (known : List Nat) (gates : Lis
   rw [actual a ha,actual b hb]
   exact ⟨congrArg all,fun lt => strong lt⟩
 
+private theorem branchCeiling (B : Nat) (known : List Nat) (gates : List Gate)
+    (p : NormalForm.Formula) (positive : Bool) (branch : Pattern)
+    (member : branch ∈ branches known gates p) :
+    familyNeed B branch.1 (rankedFamily known gates p positive branch) ≤ cutoff B known gates p positive := by
+  let cost : Pattern → Nat := fun q => familyNeed B q.1 (rankedFamily known gates p positive q)
+  change cost branch ≤ (branches known gates p).foldr (fun q n => max (cost q) n) 0
+  exact foldBound cost (branches known gates p) branch member
+
+set_option maxHeartbeats 650000 in
 private theorem rankedSetup (B : Nat) (θ : Nat → Nat) (known : List Nat) (gates : List Gate)
     (p : NormalForm.Formula) (positive : Bool) (funded : PaidSupport B θ known gates p positive)
     (branch : Pattern) (member : branch ∈ branches known gates p) (ordered : (guard branch).eval θ) :
@@ -108,8 +117,7 @@ private theorem rankedSetup (B : Nat) (θ : Nat → Nat) (known : List Nat) (gat
   let C := cutoff B known gates p positive
   have across := exactBranchRealization θ (support (matrix known gates p)) branch member ordered
   have allocated : familyNeed B branch.1 family ≤ C :=
-    foldBound (fun q => familyNeed B q.1 (rankedFamily known gates p positive q))
-      (branches known gates p) branch member
+    branchCeiling B known gates p positive branch member
   have info (cs : List BitRow) (c : cs ∈ family) (r : BitRow) (hr : r ∈ cs)
       (t : MixedSameRankResidue.WeightedOperand) (ht : t ∈ r.1.2.2) :
       t.2.rank < branch.1 ∧ t.2.rank ≤ top branch ∧ C ≤ base t.2.rank := by
