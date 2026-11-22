@@ -1,0 +1,32 @@
+module
+public import LogicLineages.PermittedControl.ActualFiniteFullValueGuardsTargets
+import LogicLineages.PermittedControl.ActualFiniteFullValueGuardsEnumProof
+import LogicLineages.PermittedControl.ActualFiniteFullValueGuardsFoldProof
+import LogicLineages.PermittedControl.ActualFiniteFullValueGuardsProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualFiniteFullValuePatternEnumeration :
+    ActualFiniteFullValueGuards.ExactFinitePatternEnumeration :=
+  ActualFiniteFullValueGuards.exactFinitePatternEnumeration
+
+theorem fixed_exactActualOrderedFullValueGuardFold :
+    ActualFiniteFullValueGuards.ExactOrderedGuardFold :=
+  ActualFiniteFullValueGuards.exactOrderedGuardFold
+
+theorem fixed_exactActualFiniteFullValueGuards :
+    ActualFiniteFullValueGuards.ExactFiniteFullValueGuards :=
+  ActualFiniteFullValueGuards.exactFiniteFullValueGuards
+
+theorem fixed_fullActualFiniteFullValueGuards :
+    ActualFiniteFullValueGuards.FullActualFiniteFullValueGuards :=
+  ⟨fixed_exactActualFiniteFullValuePatternEnumeration,fixed_exactActualOrderedFullValueGuardFold,
+    fixed_exactActualFiniteFullValueGuards⟩
+
+#print axioms fixed_exactActualFiniteFullValuePatternEnumeration
+#print axioms fixed_exactActualOrderedFullValueGuardFold
+#print axioms fixed_exactActualFiniteFullValueGuards
+#print axioms fixed_fullActualFiniteFullValueGuards
+
+end LogicLineages.PermittedControl.StatementChecks
