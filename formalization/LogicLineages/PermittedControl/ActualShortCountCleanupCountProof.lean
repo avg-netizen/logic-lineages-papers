@@ -17,7 +17,7 @@ theorem exactPositiveShortCount : ExactPositiveShortCount := by
   let n := ρ rank - actualOrdinalNorm lam.1.repr
   have proper : ProperField (.entry 0 lam mu) := actual.1.1
   have endpoints : lam.1.repr = mu.1.repr + Ordinal.omega0 * (k : Ordinal) :=
-    (shortGapRecognition lam mu k short).2.2.mp rfl
+    (shortGapRecognition lam mu proper k short).2.2.mp rfl
   have muEps := proper.2.2.trans (normalRepresentationSound lam)
   have first := linear_entry f (selected_threshold_admissible f B selected).2
     mu.1.repr proper.2.1 muEps k n

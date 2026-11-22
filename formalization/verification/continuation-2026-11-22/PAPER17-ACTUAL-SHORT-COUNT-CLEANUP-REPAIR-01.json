@@ -1,0 +1,35 @@
+{
+  "status": "source-only narrow proof repair; native retry not run by author",
+  "immutable_failed_source_commit": "7a05fd2fb907777335c6e0238b0af8a3a38bf097",
+  "receipt": "1795344245581226822-8",
+  "exact_gate": "LogicLineages.PermittedControl.ActualShortCountCleanupStatementChecks",
+  "failed_receipt_sha256": "694fda50487b7274ad5a0ee0eb7b14521ab448ef5962bdaf835d214c039feb8b",
+  "failed_log_sha256": "bff1f7b52a013873c6f4c36647f90a31018ead1cbd8c79c56efff13fa4e78a37",
+  "failed_module_record": {
+    "module": "LogicLineages.PermittedControl.ActualShortCountCleanupCountProof",
+    "returncode": 1,
+    "seconds": 0.97,
+    "observed_cpu_seconds": 0.9,
+    "last_wait_channel": "__futex_wait",
+    "stopped_threads": [],
+    "peak_process_tree_rss_kib": 993800,
+    "memory_observation_failure": {},
+    "discarded_failed_outputs": [],
+    "source_sha256": "4b71c706c5579d044e7d044753b1752adae131120772ee4b7f3f4d9bd5f46ddc",
+    "log": "build-reports/1795344245581226822-8-LogicLineages-PermittedControl-ActualShortCountCleanupCountProof.log"
+  },
+  "diagnostics": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualShortCountCleanupCountProof.lean:20:32: error: Application type mismatch: The argument\n  k\nhas type\n  ℕ\nof sort `Type` but is expected to have type\n  ProperField (ValueField.entry 0 lam mu)\nof sort `Prop` in the application\n  shortGapRecognition lam mu k",
+  "original_author_manifest_sha256": "04e2f21ba3e436c27d880a51400a7c5196d5d7dedaf0b946d49310cc17d758f0",
+  "changed_source": "formalization/LogicLineages/PermittedControl/ActualShortCountCleanupCountProof.lean",
+  "failed_source_sha256": "4b71c706c5579d044e7d044753b1752adae131120772ee4b7f3f4d9bd5f46ddc",
+  "repair_source_sha256": "3abda2e16197d544ec95d6c9e81001ba196ee3e9b478778954f526fe0bea1fcd",
+  "preserved_sources_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualShortCountCleanupTargets.lean": "f26e14469d3261f4ec7eabdee150f9ab32924ae1ce597d017957b2a55b196800",
+    "formalization/LogicLineages/PermittedControl/ActualShortCountCleanupProof.lean": "95d8b1c28927b1ba33b8275e277d0b8aa3a0bd5056a79a7ada29b6e51de43066",
+    "formalization/LogicLineages/PermittedControl/ActualShortCountCleanupStatementChecks.lean": "df869502bcdd64a852fdc0ad724d4f280d992dff279921073115230a4c7ebb9a"
+  },
+  "zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-SHORT-COUNT-CLEANUP-REPAIR-01.patch",
+  "patch_sha256": "24bef826ae434294892c90989c51d684ca74624d08178e16f27f45d8d617d5ef",
+  "inverse": "Reverse exact patch with fuzz zero to recover exact failed initial CountProof bytes.",
+  "change": "Pass already derived ProperField argument before k to shortGapRecognition; no new premise. Target, other leaves, imports and static 284-local/38-external closure unchanged."
+}
