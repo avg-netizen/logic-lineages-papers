@@ -41,6 +41,17 @@ private theorem thirdReport (p : Program 1) (out a b c : OTerm α)
   obtain rfl := Fin.eq_zero i
   exact projectionValue (2 : Fin 3) ![a,b,c]
 
+/-- The exact reorder selector is indexed by Fin 1. It is propositionally
+equal to the constant selector of rawCall, but these ASTs are not defeq. -/
+private theorem reorderedThirdReport (p : Program 1) (out a b c : OTerm α)
+    (h : Nonempty (Derivation body Γ (unary p out c))) :
+    Nonempty (Derivation body Γ (programGraph (reorder p (![2] : Fin 1 → Fin 3)) out ![a,b,c])) := by
+  apply compositionValue p (fun i : Fin 1 => .projection ((![2] : Fin 1 → Fin 3) i))
+    out ![a,b,c] ![c] h
+  intro i
+  obtain rfl := Fin.eq_zero i
+  exact projectionValue (2 : Fin 3) ![a,b,c]
+
 private theorem generated (P : Program 5) (A : Program 2) (s : Settings)
     (m depth maxNumeral vertices : OTerm α)
     (pair : Nonempty (Derivation body Γ (measurePair m depth maxNumeral)))
@@ -58,10 +69,10 @@ private theorem generated (P : Program 5) (A : Program 2) (s : Settings)
   let right : Program 3 := reorder ID1Completion.InternalUnpair.right ![2]
   let parts : Fin 4 → Program 3 := ![left,.projection 0,.projection 1,right]
   have head : Nonempty (Derivation body Γ (programGraph left (suc depth) xs)) :=
-    thirdReport ID1Completion.InternalUnpair.left (suc depth) H K m
+    reorderedThirdReport ID1Completion.InternalUnpair.left (suc depth) H K m
       ⟨Derivation.conjunctionLeft fields⟩
   have last : Nonempty (Derivation body Γ (programGraph right maxNumeral xs)) :=
-    thirdReport ID1Completion.InternalUnpair.right maxNumeral H K m
+    reorderedThirdReport ID1Completion.InternalUnpair.right maxNumeral H K m
       ⟨Derivation.conjunctionRight fields⟩
   have core : Nonempty (Derivation body Γ
       (programGraph (.composition (grammarTerms P A) parts) vertices xs)) := by
