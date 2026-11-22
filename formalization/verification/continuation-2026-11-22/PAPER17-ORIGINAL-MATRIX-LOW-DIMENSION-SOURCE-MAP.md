@@ -1,0 +1,5 @@
+# Paper 17 — strict literal coordinate loss in an actual low residual
+
+[arithmetic.tex](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex), lines 249–253 ('one fewer coordinate'). From the existing exact #812 successful matrix shape, the residual's entire operand occurrence list has exactly the original unselected occurrences with original signed coefficients and field/interval labels, in original row/order; original tests are retained. Consequently its rank/name occurrence list is *exactly* the source list filtered by inequality with the chosen rank, its canonical support Finset is source support erased at that rank, and its cardinality is strictly smaller whenever that coordinate actually occurs.
+
+[Targets](../../LogicLineages/PermittedControl/OriginalMatrixLowDimensionTargets.lean) · [Proof](../../LogicLineages/PermittedControl/OriginalMatrixLowDimensionProof.lean) · [Exact checks](../../LogicLineages/PermittedControl/OriginalMatrixLowDimensionStatementChecks.lean). Completely constant residual rows are allowed. No nonexistent or failed selected reads, new fields, rank renaming or general projection.

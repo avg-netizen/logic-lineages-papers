@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.OriginalMatrixLowDimensionCodeTargets
+import LogicLineages.PermittedControl.OriginalMatrixLowDimensionCodeProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalMatrixLowRawShape : OriginalMatrixLowDimensionCode.ExactRawShape :=
+  OriginalMatrixLowDimensionCode.exactRawShape
+
+theorem fixed_exactOriginalMatrixCodedLowFamilyDimension :
+    OriginalMatrixLowDimensionCode.ExactCodedLowFamilyDimension :=
+  OriginalMatrixLowDimensionCode.exactCodedLowFamilyDimension
+
+theorem fixed_fullOriginalMatrixLowDimensionCode : OriginalMatrixLowDimensionCode.FullOriginalMatrixLowDimensionCode :=
+  ⟨fixed_exactOriginalMatrixLowRawShape,fixed_exactOriginalMatrixCodedLowFamilyDimension⟩
+
+#print axioms fixed_exactOriginalMatrixLowRawShape
+#print axioms fixed_exactOriginalMatrixCodedLowFamilyDimension
+#print axioms fixed_fullOriginalMatrixLowDimensionCode
+
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,5 @@
+# Paper 17 — existing coded actual low family strictly decreases on each genuine child
+
+[arithmetic.tex](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex), lines 249–253. This is the literal existing #812 raw branch code, including separate invalid and miss statuses. A raw hit child requires every nested row status to be a hit; no failed code is replaced by a default output. On the actual encoded source, all complete raw hit rows have an exact typed hit preimage and preserve original row encoding. Raw occurrence ranks calibrate to typed original ranks, so raw support is exactly erased and its cardinality strictly decreases in every real child. Existing computation premise remains Computable f.
+
+[Targets](../../LogicLineages/PermittedControl/OriginalMatrixLowDimensionCodeTargets.lean) · [Proof](../../LogicLineages/PermittedControl/OriginalMatrixLowDimensionCodeProof.lean) · [Exact checks](../../LogicLineages/PermittedControl/OriginalMatrixLowDimensionCodeStatementChecks.lean). This statement concerns the actual canonical source and unchanged branch code, not arbitrary malformed raw input or a new recursive decision code.

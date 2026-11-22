@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.OriginalMatrixLowDimensionTargets
+import LogicLineages.PermittedControl.OriginalMatrixLowDimensionProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalMatrixResidualSupportErase : OriginalMatrixLowDimension.ExactResidualSupportErase :=
+  OriginalMatrixLowDimension.exactResidualSupportErase
+
+theorem fixed_exactOriginalMatrixLowFamilyDimension : OriginalMatrixLowDimension.ExactLowFamilyDimension :=
+  OriginalMatrixLowDimension.exactLowFamilyDimension
+
+theorem fixed_fullOriginalMatrixLowDimension : OriginalMatrixLowDimension.FullOriginalMatrixLowDimension :=
+  ⟨fixed_exactOriginalMatrixResidualSupportErase,fixed_exactOriginalMatrixLowFamilyDimension⟩
+
+#print axioms fixed_exactOriginalMatrixResidualSupportErase
+#print axioms fixed_exactOriginalMatrixLowFamilyDimension
+#print axioms fixed_fullOriginalMatrixLowDimension
+
+end LogicLineages.PermittedControl.StatementChecks
