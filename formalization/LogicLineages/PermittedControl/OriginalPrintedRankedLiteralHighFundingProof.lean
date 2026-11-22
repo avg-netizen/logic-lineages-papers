@@ -72,6 +72,7 @@ private theorem replayOrdered (θ : Nat → Nat) (known : List Nat) (gates : Lis
   let all := extend baseline greatest z
   obtain ⟨_,keys,bounds,_⟩ := (exactPatternEnumeration names branch).mp member
   obtain ⟨strict,slots,_⟩ := exactBranchRealization θ names branch member ordered
+  change rankedPredecessor greatest baseline ≤ z at paid
   have above : AboveLower baseline greatest z := by
     intro i lo
     have nz : greatest ≠ 0 := by omega
@@ -97,8 +98,11 @@ private theorem replayOrdered (θ : Nat → Nat) (known : List Nat) (gates : Lis
   rw [actual a ha,actual b hb]
   exact ⟨congrArg all,fun lt => strong lt⟩
 
-theorem exactOriginalChartFunding : ExactOriginalChartFunding := by
-  intro B θ known gates p positive funded branch member ordered
+private theorem rankedSetup (B : Nat) (θ : Nat → Nat) (known : List Nat) (gates : List Gate)
+    (p : NormalForm.Formula) (positive : Bool) (funded : PaidSupport B θ known gates p positive)
+    (branch : Pattern) (member : branch ∈ branches known gates p) (ordered : (guard branch).eval θ) :
+    OriginalSetup B branch.1 (top branch) (realized θ branch) (rankedFamily known gates p positive branch) ∧
+      familyNeed B branch.1 (rankedFamily known gates p positive branch) ≤ cutoff B known gates p positive := by
   let base := realized θ branch
   let family := rankedFamily known gates p positive branch
   let C := cutoff B known gates p positive
@@ -125,20 +129,33 @@ theorem exactOriginalChartFunding : ExactOriginalChartFunding := by
     change C ≤ realized θ branch (rename branch raw.2.rank)
     rw [read]
     exact funded _ input
-  refine ⟨⟨fun _ _ lt _ => across.1 lt,?_,?_⟩,?_⟩
+  refine ⟨⟨fun _ _ lt _ => across.1 lt,?_,?_⟩,allocated⟩
   · intro cs c r hr t ht
     have data := info cs c r hr t ht
     exact ⟨data.1,data.2.1⟩
   · intro cs c r hr t ht _
     exact allocated.trans (info cs ((properClauseMember family cs).mp c).1 r hr t ht).2.2
-  · intro z high
-    have ceilingPaid : C ≤ z := (le_max_left _ _).trans high
-    have prevPaid : rankedPredecessor (top branch) base ≤ z := (le_max_right _ _).trans high
-    refine ⟨max_le (allocated.trans ceilingPaid) prevPaid,?_,replayOrdered θ known gates p branch member ordered z prevPaid⟩
-    intro name used
-    by_cases h : rename branch name = top branch
-    · simpa only [replay,if_pos (And.intro used h)] using ceilingPaid
-    · have neg : ¬ (name ∈ support (matrix known gates p) ∧ rename branch name = top branch) := fun yes => h yes.2
-      simpa only [replay,if_neg neg] using funded name used
+private theorem replayFunding (B : Nat) (θ : Nat → Nat) (known : List Nat) (gates : List Gate)
+    (p : NormalForm.Formula) (positive : Bool) (funded : PaidSupport B θ known gates p positive)
+    (branch : Pattern) (member : branch ∈ branches known gates p) (ordered : (guard branch).eval θ)
+    (allocated : familyNeed B branch.1 (rankedFamily known gates p positive branch) ≤ cutoff B known gates p positive)
+    (z : Nat) (high : chartMinimum B θ known gates p positive branch ≤ z) :
+    OriginalRankedLiteralClauseHigh.highMinimum B branch.1 (top branch) (realized θ branch)
+      (rankedFamily known gates p positive branch) ≤ z ∧
+    PaidSupport B (replay θ known gates p branch z) known gates p positive ∧
+    (guard branch).eval (replay θ known gates p branch z) := by
+  have ceilingPaid : cutoff B known gates p positive ≤ z := (le_max_left _ _).trans high
+  have prevPaid : rankedPredecessor (top branch) (realized θ branch) ≤ z := (le_max_right _ _).trans high
+  refine ⟨max_le (allocated.trans ceilingPaid) prevPaid,?_,replayOrdered θ known gates p branch member ordered z prevPaid⟩
+  intro name used
+  by_cases h : rename branch name = top branch
+  · simpa only [replay,if_pos (And.intro used h)] using ceilingPaid
+  · have neg : ¬ (name ∈ support (matrix known gates p) ∧ rename branch name = top branch) := fun yes => h yes.2
+    simpa only [replay,if_neg neg] using funded name used
+
+theorem exactOriginalChartFunding : ExactOriginalChartFunding := by
+  intro B θ known gates p positive funded branch member ordered
+  obtain ⟨setup,minBound⟩ := rankedSetup B θ known gates p positive funded branch member ordered
+  exact ⟨setup,replayFunding B θ known gates p positive funded branch member ordered minBound⟩
 
 end LogicLineages.PermittedControl.OriginalPrintedRankedLiteralHigh
