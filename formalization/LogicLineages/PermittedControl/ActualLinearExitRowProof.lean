@@ -55,13 +55,15 @@ private theorem namedSum (ν : Nat → Nat) (n : Nat) (xs : List Read)
   induction xs generalizing n with
   | nil => rfl
   | cons rd xs ih =>
-      have head : ν n = rd.2 := by simpa using values 0 (by simp)
+      have head : ν n = rd.2 := by
+        simpa only [Nat.add_zero,List.getElem_cons_zero] using values 0 (by simp)
       have later (j : Nat) (hj : j < xs.length) : ν (n+1+j) = xs[j].2 := by
         rw [show n+1+j = n+(j+1) by omega]
         have bound : j+1 < (rd :: xs).length := Nat.succ_lt_succ hj
         simpa only [List.getElem_cons_succ] using values (j+1) bound
-      simp only [namedTerms,List.map_cons,List.sum_cons,Summand.term,Term.value,head,ih (n+1) later,
-        sumCons]
+      simp only [namedTerms,List.map_cons,List.sum_cons,sumCons]
+      rw [ih (n+1) later]
+      simp only [Summand.term,Term.value,head]
 
 private theorem replaySum (zRank z : Nat) (xs : List Read)
     (bounded : ∀ rd ∈ xs, rd.1.2.rank ≤ zRank) :
@@ -96,7 +98,8 @@ theorem rowReplay (ν : Nat → Nat) (zRank z : Nat) (constant : Int) (xs : List
     rw [Function.update_of_ne (show 1+j ≠ 0 by omega)]
     rw [show 1+j = j+1 by omega]
     exact values j hj
-  simp only [exitRow,rowValue,List.map_cons,List.sum_cons,Summand.term,Term.value,
-    Function.update_self, namedSum _ 1 _ same, replaySum zRank z xs bounded]
+  simp only [exitRow,rowValue,List.map_cons,List.sum_cons]
+  rw [namedSum _ 1 _ same, replaySum zRank z xs bounded] <;>
+    simp only [Summand.term,Term.value,Function.update_self]
 
 end LogicLineages.PermittedControl.ActualLinearExit

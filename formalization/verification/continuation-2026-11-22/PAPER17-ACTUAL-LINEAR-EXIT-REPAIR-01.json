@@ -1,0 +1,36 @@
+{
+  "status": "source-only narrow proof repair; native retry not run by author",
+  "immutable_failed_source_commit": "fa7f9a05417310a3f1966cc4a04cd4d532ae5703",
+  "receipt": "1795343351413150390-8",
+  "exact_gate": "LogicLineages.PermittedControl.ActualLinearExitStatementChecks",
+  "failed_receipt_sha256": "556179f3fba9ff2bd36c8c36792e23cd1e007dfcfa0976a3698c7673179e1712",
+  "failed_log_sha256": "eed9fa81edb887b89c8337a333e1fd223ce731526b1b9b5ffc6a64b2a9f44759",
+  "failed_module_record": {
+    "module": "LogicLineages.PermittedControl.ActualLinearExitRowProof",
+    "returncode": 1,
+    "seconds": 1.373,
+    "observed_cpu_seconds": 1.32,
+    "last_wait_channel": "0",
+    "stopped_threads": [],
+    "peak_process_tree_rss_kib": 1008452,
+    "memory_observation_failure": {},
+    "discarded_failed_outputs": [],
+    "source_sha256": "fcf4e8f38fa5ca7a9238ab300faf6e9ac25e13c02c39b2fa1c5805b9164a22e6",
+    "log": "build-reports/1795343351413150390-8-LogicLineages-PermittedControl-ActualLinearExitRowProof.log"
+  },
+  "diagnostics": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualLinearExitRowProof.lean:58:35: error: Type mismatch: After simplification, term\n  values 0\n    (of_eq_true (Eq.trans (lt_add_iff_pos_left._simp_1 0) (Eq.trans Order.lt_add_one_iff._simp_1 zero_le._simp_1)))\n has type\n  @Eq ℕ (ν n) (rd :: xs)[0].2\nbut is expected to have type\n  @Eq ℕ (ν n) rd.2\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualLinearExitRowProof.lean:57:18: error: unsolved goals\ncase cons\nν : ℕ → ℕ\nrd : Read\nxs : List Read\nih :\n  ∀ (n : ℕ),\n    (∀ (j : ℕ) (hj : j < xs.length), ν (n + j) = xs[j].2) →\n      (List.map (fun s => s.1 * ↑(Term.value ν s.2.term)) (namedTerms n xs)).sum = readSum xs\nn : ℕ\nvalues : ∀ (j : ℕ) (hj : j < (rd :: xs).length), ν (n + j) = (rd :: xs)[j].2\nhead : ν n = rd.2\nlater : ∀ (j : ℕ) (hj : j < xs.length), ν (n + 1 + j) = xs[j].2\n⊢ rd.1.1 * ↑rd.2 +\n      (List.map\n          (fun s =>\n            s.1 *\n              ↑(Term.value ν\n                  (match s.2 with\n                  | Summand.variable i => Term.variable i\n                  | Summand.phi i e => (shiftTerm (Term.variable i) e).phi\n                  | Summand.hyperPhi i e h => HyperWindow.valueTerm i e h)))\n          (namedTerms (n + 1) xs)).sum =\n    rd.1.1 * ↑rd.2 + readSum xs\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualLinearExitRowProof.lean:63:85: warning: This simp argument is unused:\n  ih (n + 1) later\n\nHint: Omit it from the simp argument list.\n  simp only [̵n̵a̵m̵e̵d̵T̵e̵r̵m̵s̵,̵L̵i̵s̵t̵.̵m̵a̵p̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵s̵u̵m̵_̵c̵o̵n̵s̵,̵S̵u̵m̵m̵a̵n̵d̵.̵t̵e̵r̵m̵,̵T̵e̵r̵m̵.̵v̵a̵l̵u̵e̵,̵h̵e̵a̵d̵,̵i̵h̵ ̵(̵n̵+̵1̵)̵ ̵l̵a̵t̵e̵r̵,̵[̲n̲a̲m̲e̲d̲T̲e̲r̲m̲s̲,̲ ̲L̲i̲s̲t̲.̲m̲a̲p̲_̲c̲o̲n̲s̲,̲ ̲L̲i̲s̲t̲.̲s̲u̲m̲_̲c̲o̲n̲s̲,̲ ̲S̲u̲m̲m̲a̲n̲d̲.̲t̲e̲r̲m̲,̲ ̲T̲e̲r̲m̲.̲v̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲,̲ sumCons]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualLinearExitRowProof.lean:93:48: error: unsolved goals\nν : ℕ → ℕ\nzRank z : ℕ\nconstant : ℤ\nxs : List Read\nbounded : ∀ rd ∈ xs, rd.1.2.rank ≤ zRank\nvalues : OriginalSlots ν (lowerReads zRank xs)\nsame : ∀ (j : ℕ) (hj : j < (lowerReads zRank xs).length), Function.update ν 0 z (1 + j) = (lowerReads zRank xs)[j].2\n⊢ constant +\n      (slope zRank xs * ↑z +\n        (List.map\n            (fun a =>\n              a.1 *\n                ↑(Term.value (Function.update ν 0 z)\n                    (match a.2 with\n                    | Summand.variable i => Term.variable i\n                    | Summand.phi i e => (shiftTerm (Term.variable i) e).phi\n                    | Summand.hyperPhi i e h => HyperWindow.valueTerm i e h)))\n            (namedTerms 1 (lowerReads zRank xs))).sum) =\n    constant + (slope zRank xs * ↑z + readSum (lowerReads zRank xs))\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualLinearExitRowProof.lean:100:26: warning: This simp argument is unused:\n  namedSum _ 1 _ same\n\nHint: Omit it from the simp argument list.\n  simp only [exitRow, ̲rowValue, ̲List.map_cons, ̲List.sum_cons, ̲Summand.term, ̲Term.value,\n      Function.update_self, n̵a̵m̵e̵d̵S̵u̵m̵ ̵_̵ ̵1̵ ̵_̵ ̵s̵a̵m̵e̵,̵ ̵replaySum zRank z xs bounded]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+  "original_author_manifest_sha256": "3ab4515a2aed61abba14de5560aa5766e4f33cdb2d9505543294909b8abc842f",
+  "changed_source": "formalization/LogicLineages/PermittedControl/ActualLinearExitRowProof.lean",
+  "failed_source_sha256": "fcf4e8f38fa5ca7a9238ab300faf6e9ac25e13c02c39b2fa1c5805b9164a22e6",
+  "repair_source_sha256": "e13ebb12bfd8048f28fcd6e5558e6079c444e4d704e100ab4160fcec2e33f6b4",
+  "preserved_sources_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualLinearExitTargets.lean": "da0c5b55836c1cfbbcfd512f636921b1054c480cfe5237e1b449d5151ebc6224",
+    "formalization/LogicLineages/PermittedControl/ActualLinearExitReplayProof.lean": "019614b6ae78838ac538fd7686478aff2c210aa008d259acd0404bfd6a4478dd",
+    "formalization/LogicLineages/PermittedControl/ActualLinearExitProof.lean": "3c08c10295f9f30ae22a69f631556af19f1af96f6d8df5bdd0ac6e7e9c3073fd",
+    "formalization/LogicLineages/PermittedControl/ActualLinearExitStatementChecks.lean": "772239f60ca4f621f6ff1b43d739720fe412b38013029830aed4bc6bab855549"
+  },
+  "zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-LINEAR-EXIT-REPAIR-01.patch",
+  "patch_sha256": "6c4941122feb104d799534aac2b267debe6b5b37171c56f1fe0c475be442e416",
+  "inverse": "Reverse exact patch with fuzz zero to recover unchanged initial RowProof bytes.",
+  "change": "Explicit head-index simplification and sequencing of recursive named-sum rewriting before reducing the literal head summand. No target, definitions, other source, or imports changed; same exact gate closure 297 local / 39 external."
+}
