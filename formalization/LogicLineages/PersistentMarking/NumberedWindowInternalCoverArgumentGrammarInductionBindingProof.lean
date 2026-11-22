@@ -60,8 +60,9 @@ private theorem payloadSubst (F : Program 1) (s : Settings) (q : OTerm α)
     (vals : Fin 6 → OTerm α) (ts : α → OTerm β) :
     (argumentPayload F s q vals).subst (fun a => emb (ts a)) =
       argumentPayload F s (q.subst ts) (fun i => (vals i).subst ts) := by
-  simp only [argumentPayload,conjunctionSubst,unarySubst,pairSubst,observedSubst,memberSubst,
-    headsTerm,typesTerm,numeralSubst]
+  unfold argumentPayload
+  rw [conjunctionSubst,conjunctionSubst,conjunctionSubst,observedSubst]
+  simp only [unarySubst,pairSubst,memberSubst,headsTerm,typesTerm,numeralSubst]
 
 theorem argumentExistsSubst (F : Program 1) (s : Settings) (q : OTerm α) (ts : α → OTerm β) :
     (argumentExists F s q).subst (fun a => emb (ts a)) = argumentExists F s (q.subst ts) := by

@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentGrammarInductionBindingProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentGrammarInductionBindingProof.lean
+@@ -63,2 +63,3 @@
+-  simp only [argumentPayload,conjunctionSubst,unarySubst,pairSubst,observedSubst,memberSubst,
+-    headsTerm,typesTerm,numeralSubst]
++  unfold argumentPayload
++  rw [conjunctionSubst,conjunctionSubst,conjunctionSubst,observedSubst]
++  simp only [unarySubst,pairSubst,memberSubst,headsTerm,typesTerm,numeralSubst]
