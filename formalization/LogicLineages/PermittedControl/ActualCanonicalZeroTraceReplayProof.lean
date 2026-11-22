@@ -25,7 +25,9 @@ theorem exactCanonicalZeroReplay : ExactCanonicalZeroReplay := by
   obtain ⟨old,legacy,_,_,_,_,_⟩ := (exactNormalizedReads f ρ s.reads).2 source.live
   obtain ⟨out,found,_,tapeEq,_,_⟩ := (exactCanonicalReads f ρ s.reads).2 old legacy
   have same : out = xs := Option.some.inj (found.symm.trans source.grouped)
-  have frames : terms = groupTyped (s.reads.map Prod.fst) := same ▸ tapeEq
+  have frames : terms = groupTyped (s.reads.map Prod.fst) := by
+    change xs.map Prod.fst = groupTyped (s.reads.map Prod.fst)
+    exact (congrArg (fun ys : List Read => ys.map Prod.fst) same).symm.trans tapeEq
   have zero : maximalCoefficient terms a = 0 := by rw [frames]; exact source.zero
   have literal := exactOrderedSuccessorErasure f B selected ρ C s.constant xs anns a moved
     source.aligned source.guards.1 source.nonempty source.matched source.maximum zero moves
