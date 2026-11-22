@@ -1,0 +1,19 @@
+module
+public import LogicLineages.PermittedControl.ActualRawSignedCleanupTargets
+import LogicLineages.PermittedControl.ActualRawSignedCleanupProof
+import LogicLineages.PermittedControl.ActualRawSignedCleanupPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualRawSignedCleanup
+
+theorem fixed_exactRawInitialCleanup : ExactRawInitialCleanup := exactRawInitialCleanup
+theorem fixed_exactRawInitialCleanupEffectivity : ExactRawInitialCleanupEffectivity := exactRawInitialCleanupEffectivity
+theorem fixed_fullActualRawSignedCleanup : FullActualRawSignedCleanup :=
+  ⟨fixed_exactRawInitialCleanup,fixed_exactRawInitialCleanupEffectivity⟩
+
+#print axioms fixed_exactRawInitialCleanup
+#print axioms fixed_exactRawInitialCleanupEffectivity
+#print axioms fixed_fullActualRawSignedCleanup
+
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,23 @@
+module
+public import LogicLineages.PermittedControl.ActualRawMixedFamilyCeilingTargets
+import LogicLineages.PermittedControl.ActualRawMixedFamilyCeilingProof
+import LogicLineages.PermittedControl.ActualRawMixedFamilyCeilingPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualRawMixedFamilyCeiling
+
+theorem fixed_exactRawMixedRowMajorants : ExactRawMixedRowMajorants := exactRawMixedRowMajorants
+theorem fixed_exactRawMixedFamilyMajorants : ExactRawMixedFamilyMajorants := exactRawMixedFamilyMajorants
+theorem fixed_exactRawMixedFamilyCeilingEffectivity :
+    ExactRawMixedFamilyCeilingEffectivity := exactRawMixedFamilyCeilingEffectivity
+theorem fixed_fullActualRawMixedFamilyCeiling : FullActualRawMixedFamilyCeiling :=
+  ⟨fixed_exactRawMixedRowMajorants,fixed_exactRawMixedFamilyMajorants,
+    fixed_exactRawMixedFamilyCeilingEffectivity⟩
+
+#print axioms fixed_exactRawMixedRowMajorants
+#print axioms fixed_exactRawMixedFamilyMajorants
+#print axioms fixed_exactRawMixedFamilyCeilingEffectivity
+#print axioms fixed_fullActualRawMixedFamilyCeiling
+
+end LogicLineages.PermittedControl.StatementChecks

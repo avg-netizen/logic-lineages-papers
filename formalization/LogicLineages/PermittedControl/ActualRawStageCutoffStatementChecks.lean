@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.ActualRawStageCutoffTargets
+import LogicLineages.PermittedControl.ActualRawStageCutoffProof
+import LogicLineages.PermittedControl.ActualRawStageCutoffPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualRawStageCutoff
+
+theorem fixed_exactRawStageNamesAndCharts : ExactRawStageNamesAndCharts := exactRawStageNamesAndCharts
+theorem fixed_exactRawRankedChartCost : ExactRawRankedChartCost := exactRawRankedChartCost
+theorem fixed_exactRawStageCutoffMajorant : ExactRawStageCutoffMajorant := exactRawStageCutoffMajorant
+theorem fixed_exactRawStageCutoffEffectivity : ExactRawStageCutoffEffectivity := exactRawStageCutoffEffectivity
+theorem fixed_fullActualRawStageCutoff : FullActualRawStageCutoff :=
+  ⟨fixed_exactRawStageNamesAndCharts,fixed_exactRawRankedChartCost,
+    fixed_exactRawStageCutoffMajorant,fixed_exactRawStageCutoffEffectivity⟩
+
+#print axioms fixed_exactRawStageNamesAndCharts
+#print axioms fixed_exactRawRankedChartCost
+#print axioms fixed_exactRawStageCutoffMajorant
+#print axioms fixed_exactRawStageCutoffEffectivity
+#print axioms fixed_fullActualRawStageCutoff
+
+end LogicLineages.PermittedControl.StatementChecks

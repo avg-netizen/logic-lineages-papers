@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.ActualRawSignedStaticCeilingTargets
+import LogicLineages.PermittedControl.ActualRawSignedStaticCeilingProof
+import LogicLineages.PermittedControl.ActualRawSignedStaticCeilingPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualRawSignedStaticCeiling
+
+theorem fixed_exactCommonMinimumMajorant : ExactCommonMinimumMajorant := exactCommonMinimumMajorant
+theorem fixed_exactTerminalCutoffMajorant : ExactTerminalCutoffMajorant := exactTerminalCutoffMajorant
+theorem fixed_exactRawSignedStaticMajorant : ExactRawSignedStaticMajorant := exactRawSignedStaticMajorant
+theorem fixed_exactRawSignedStaticEffectivity : ExactRawSignedStaticEffectivity := exactRawSignedStaticEffectivity
+theorem fixed_fullActualRawSignedStaticCeiling : FullActualRawSignedStaticCeiling :=
+  ⟨fixed_exactCommonMinimumMajorant,fixed_exactTerminalCutoffMajorant,
+    fixed_exactRawSignedStaticMajorant,fixed_exactRawSignedStaticEffectivity⟩
+
+#print axioms fixed_exactCommonMinimumMajorant
+#print axioms fixed_exactTerminalCutoffMajorant
+#print axioms fixed_exactRawSignedStaticMajorant
+#print axioms fixed_exactRawSignedStaticEffectivity
+#print axioms fixed_fullActualRawSignedStaticCeiling
+
+end LogicLineages.PermittedControl.StatementChecks
