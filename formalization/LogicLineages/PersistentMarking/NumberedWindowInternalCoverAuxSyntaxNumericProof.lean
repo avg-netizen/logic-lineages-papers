@@ -121,7 +121,7 @@ theorem exact_CoverAuxSyntaxStepCalibration : ExactCoverAuxSyntaxStepCalibration
       previous fn fnSmall,previous arg argSmall]
     cases dBit : typeBit dom <;> cases cBit : typeBit cod <;>
       cases fBit : (syntaxBits fn).1 <;> cases aBit : (syntaxBits arg).1 <;>
-      simp only [dBit,cBit,fBit,aBit] <;> decide
+      decide
   · have miss : evaluate shapeCheck (args i old) ≠ 1 := fun pass => aux ((shape i old).mp pass)
     have guard : evaluate certain (args i old) = 0 := by
       rw [certain,actualConjunctionEvaluation]
