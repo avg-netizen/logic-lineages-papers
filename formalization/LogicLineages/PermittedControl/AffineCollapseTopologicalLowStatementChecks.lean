@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.AffineCollapseTopologicalLowTargets
+import LogicLineages.PermittedControl.AffineCollapseTopologicalLowProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactTestedAffineCollapseExternalExtension :
+    AffineCollapseTopologicalLow.ExactTestedExternalExtension :=
+  AffineCollapseTopologicalLow.exactTestedExternalExtension
+
+theorem fixed_exactAffineCollapseTopologicalExternalLow :
+    AffineCollapseTopologicalLow.ExactTopologicalExternalLow :=
+  AffineCollapseTopologicalLow.exactTopologicalExternalLow
+
+theorem fixed_fullAffineCollapseTopologicalLow :
+    AffineCollapseTopologicalLow.FullAffineCollapseTopologicalLow :=
+  ⟨fixed_exactTestedAffineCollapseExternalExtension,fixed_exactAffineCollapseTopologicalExternalLow⟩
+
+#print axioms fixed_exactTestedAffineCollapseExternalExtension
+#print axioms fixed_exactAffineCollapseTopologicalExternalLow
+#print axioms fixed_fullAffineCollapseTopologicalLow
+
+end LogicLineages.PermittedControl.StatementChecks
