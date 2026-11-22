@@ -1,0 +1,10 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalGreatestGateGrowthCountProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalGreatestGateGrowthCountProof.lean
+@@ -8,0 +9 @@
++import LogicLineages.PermittedControl.ThresholdNoteCodeProof
+@@ -65 +66 @@
+-    have hλ : lam.1.repr = mu.1.repr + Ordinal.omega0 * (k : Ordinal) :=
++    have endpointEq : lam.1.repr = mu.1.repr + Ordinal.omega0 * (k : Ordinal) :=
+@@ -74 +75 @@
+-      rw [hλ,add_assoc]
++      rw [endpointEq,add_assoc]

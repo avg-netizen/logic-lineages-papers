@@ -6,6 +6,7 @@ import LogicLineages.PermittedControl.SelectedNonlinearImageBoundsGrowthProof
 import LogicLineages.PermittedControl.ActualShortCountCleanupCountProof
 import LogicLineages.PermittedControl.ShortFieldGapProof
 import LogicLineages.PermittedControl.EntryLinearProof
+import LogicLineages.PermittedControl.ThresholdNoteCodeProof
 import LogicLineages.OrdinalComparison.OrdinalRepresentationSound
 import LogicLineages.OrdinalComparison.RawNotationCode
 
@@ -62,7 +63,7 @@ theorem exactShortCountGraph : ExactShortCountGraph := by
     exact ⟨dom.1,dom.2,ActualShortCountCleanup.exactPositiveShortCount f B hf θ source lam mu (θ out)
       hshort real⟩
   · rintro ⟨proper,affordable,outValue⟩
-    have hλ : lam.1.repr = mu.1.repr + Ordinal.omega0 * (k : Ordinal) :=
+    have endpointEq : lam.1.repr = mu.1.repr + Ordinal.omega0 * (k : Ordinal) :=
       (shortGapRecognition lam mu proper k hshort).2.2.mp rfl
     have under := proper.2.2.trans (normalRepresentationSound lam)
     have entered := linear_entry f (selected_threshold_admissible f B hf).2
@@ -71,7 +72,7 @@ theorem exactShortCountGraph : ExactShortCountGraph := by
         mu.1.repr + (Ordinal.omega0 * (k : Ordinal) +
           ((θ source-actualOrdinalNorm lam.1.repr : Nat) : Ordinal)) := by
       change lam.1.repr + ((θ source-actualOrdinalNorm lam.1.repr : Nat) : Ordinal) = _
-      rw [hλ,add_assoc]
+      rw [endpointEq,add_assoc]
     rw [← start] at entered
     exact ⟨⟨proper,affordable⟩,outValue.symm ▸ entered⟩
 
