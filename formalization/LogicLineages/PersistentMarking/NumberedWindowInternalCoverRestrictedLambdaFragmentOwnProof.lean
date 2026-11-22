@@ -1,0 +1,26 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalCoverRestrictedLambdaFragmentOwnTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverRestrictedLambdaFragmentWindowProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverLambdaAuxFragmentOwnProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverRestrictedLambdaFragmentOwnProof
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open ID1Completion.InternalTagArithmeticSyntaxProof (suc z)
+open NumberedWindowInternalSparsePathEnvelopeTargets (unary)
+open NumberedWindowInternalCoverAuxFragmentGuardTargets (fragmentGuard)
+open NumberedWindowInternalCoverRestrictedLambdaFragmentTargets (lambdaFragmentBase)
+open NumberedWindowInternalCoverRestrictedLambdaFragmentWindowProof (exact_OpenCoverRestrictedLambdaFragmentWindow)
+open NumberedWindowInternalCoverLambdaAuxFragmentOwnProof (exact_OpenCoverLambdaAuxFragmentOwnScratch)
+open NumberedWindowInternalCoverRestrictedLambdaFragmentOwnTargets
+
+theorem exact_OpenCoverRestrictedLambdaFragmentOwnScratch : ExactOpenCoverRestrictedLambdaFragmentOwnScratch := by
+  intro V TV M A B T s body α Γ dom q p vertices ctx result row
+  have guard := exact_OpenCoverRestrictedLambdaFragmentWindow s B T body α Γ ctx dom q result row.typed
+  exact exact_OpenCoverLambdaAuxFragmentOwnScratch V TV M A (lambdaFragmentBase B) T s body α Γ
+    dom q p vertices ctx result row guard
+
+#print axioms exact_OpenCoverRestrictedLambdaFragmentOwnScratch
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalCoverRestrictedLambdaFragmentOwnProof
