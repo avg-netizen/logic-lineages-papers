@@ -1,0 +1,20 @@
+module
+public import LogicLineages.PermittedControl.ActualBitFamilyExistentialStepTargets
+import LogicLineages.PermittedControl.ActualBitFamilyExistentialStepProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualBitFamilyExistentialStep
+
+theorem fixed_exactNonemptyBitFamilyStep : ExactNonemptyBitFamilyStep := exactNonemptyBitFamilyStep
+theorem fixed_exactSmallerBitFamilyChildren : ExactSmallerBitFamilyChildren := exactSmallerBitFamilyChildren
+theorem fixed_exactSoundBitFamilyLayer : ExactSoundBitFamilyLayer := exactSoundBitFamilyLayer
+theorem fixed_fullActualBitFamilyExistentialStep : FullActualBitFamilyExistentialStep :=
+  ⟨fixed_exactNonemptyBitFamilyStep,fixed_exactSmallerBitFamilyChildren,fixed_exactSoundBitFamilyLayer⟩
+
+#print axioms fixed_exactNonemptyBitFamilyStep
+#print axioms fixed_exactSmallerBitFamilyChildren
+#print axioms fixed_exactSoundBitFamilyLayer
+#print axioms fixed_fullActualBitFamilyExistentialStep
+
+end LogicLineages.PermittedControl.StatementChecks
