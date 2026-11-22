@@ -1,0 +1,62 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverHeadWindowSelectedProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverHeadWindowSelectedProof.lean
+@@ -174,0 +175,27 @@
++private theorem moveHeadGoal (s : Settings) (h : OTerm α) {β : Type} (j : α → β) :
++    (memberGraph (headsTerm s α) h).relabel j = memberGraph (headsTerm s β) (h.relabel j) :=
++  (graphRename (headsTerm s α) h j).trans
++    (congrArg (fun list => memberGraph list (h.relabel j)) (numeralRename (Encodable.encode s.window.2) j))
++
++private theorem consumeRenamedHeadRow (b : Bool) (s : Settings) (B : Program 2) (T : Program 1)
++    (ctx h result : OTerm α) (tail : List (OTerm α)) (len : (h::tail).length = headArity b)
++    {β : Type} (j : α → β) (Δ : List (Formula β)) (old : OTerm β)
++    (row : Nonempty (Derivation body Δ (contextStep
++       (strictAuxUpdate (fittedWindowBase s (grammarHeadBase s B)) (refitGuard s T))
++       (suc (result.relabel j)) ((headPrior b h tail).relabel j) old (ctx.relabel j)))) :
++    Nonempty (Derivation body Δ ((memberGraph (headsTerm s α) h).relabel j)) := by
++  let A : Program 2 := fittedWindowBase s (grammarHeadBase s B)
++  let S : Program 1 := refitGuard s T
++  let R : Program 4 := strictAuxUpdate A S
++  let fs : List (OTerm β) := tail.map (fun t => t.relabel j)
++  let Fit : OTerm β → Prop :=
++    fun prior => Nonempty (Derivation body Δ
++      (contextStep R (suc (result.relabel j)) prior old (ctx.relabel j)))
++  have pEq : (headPrior b h tail).relabel j = headPrior b (h.relabel j) fs :=
++    priorRename b h tail j
++  have step : Fit (headPrior b (h.relabel j) fs) := Eq.mp (congrArg Fit pEq) row
++  have hit : Nonempty (Derivation body Δ (memberGraph (headsTerm s β) (h.relabel j))) :=
++    atStep b s B T (ctx.relabel j) (h.relabel j) (result.relabel j) old fs (lengthRename b h tail j len) step
++  let Goal : Formula β → Prop := fun f => Nonempty (Derivation body Δ f)
++  exact Eq.mpr (congrArg Goal (moveHeadGoal s h j)) hit
++
+@@ -177,17 +204,14 @@
+-  let A := fittedWindowBase s (grammarHeadBase s B)
+-  let S := refitGuard s T
+-  let prior := headPrior b h tail
+-  let Q := memberGraph (headsTerm s α) h
+-  refine selectedStepCases A S prior ctx result Q parent ?_
+-  intro β j Δ old keep row
+-  have step : Nonempty (Derivation body Δ (contextStep (strictAuxUpdate A S) (suc (result.relabel j))
+-      (headPrior b (h.relabel j) (tail.map (fun t => t.relabel j))) old (ctx.relabel j))) := by
+-    change Nonempty (Derivation body Δ (contextStep (strictAuxUpdate A S) (suc (result.relabel j))
+-      ((headPrior b h tail).relabel j) old (ctx.relabel j))) at row
+-    rw [priorRename b h tail j] at row
+-    exact row
+-  have hit := atStep b s B T (ctx.relabel j) (h.relabel j) (result.relabel j) old
+-    (tail.map (fun t => t.relabel j)) (lengthRename b h tail j len) step
+-  change Nonempty (Derivation body Δ ((memberGraph (headsTerm s α) h).relabel j))
+-  rw [graphRename,headsTerm,numeralRename]
+-  exact hit
++  let A : Program 2 := fittedWindowBase s (grammarHeadBase s B)
++  let S : Program 1 := refitGuard s T
++  let R : Program 4 := strictAuxUpdate A S
++  let prior : OTerm α := headPrior b h tail
++  let Q : Formula α := memberGraph (headsTerm s α) h
++  have atParent : Nonempty (Derivation body Γ (windowGraph (strictAuxWindow A S) ctx result (suc prior))) :=
++    parent
++  have close : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (old : OTerm β),
++      (∀ f ∈ Γ, f.relabel j ∈ Δ) →
++      Nonempty (Derivation body Δ (contextStep R (suc (result.relabel j))
++        (prior.relabel j) old (ctx.relabel j))) →
++      Nonempty (Derivation body Δ (Q.relabel j)) :=
++    fun _ j Δ old _ row => consumeRenamedHeadRow b s B T ctx h result tail len j Δ old row
++  exact selectedStepCases A S prior ctx result Q atParent close
