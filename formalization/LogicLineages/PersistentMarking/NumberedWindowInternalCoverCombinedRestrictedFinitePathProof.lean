@@ -19,10 +19,10 @@ theorem exact_OpenCoverThinFinitePath : ExactOpenCoverThinFinitePath := by
 theorem exact_OpenCoverCombinedRestrictedFinitePath : ExactOpenCoverCombinedRestrictedFinitePath := by
   intro V TV M M0 B T root other X s body α Γ ctx dom cod arg fn next P W raw chain
   induction chain with
-  | last child actual => exact singletonToSuppliedPath P.cover X W s raw ctx cod _
-      (functionWitnessTerm child) _ actual
-  | more child actual _ ih => exact prependThinProvided P.cover X W s raw ctx cod _
-      (functionWitnessTerm child) _ _ actual ih
+  | last child actual =>
+    exact singletonToSuppliedPath P.cover X W s raw ctx cod _ (functionWitnessTerm child) _ actual
+  | more child actual _ ih =>
+    exact prependThinProvided P.cover X W s raw ctx cod _ (functionWitnessTerm child) _ _ actual ih
 
 #print axioms exact_OpenCoverThinFinitePath
 #print axioms exact_OpenCoverCombinedRestrictedFinitePath

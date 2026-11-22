@@ -1,0 +1,25 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedFinitePathProof.lean:22:25: error: Type mismatch
+  singletonToSuppliedPath P.cover X W s raw ctx cod ?m.86
+has type
+  ∀ (wr dst : OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphComposition.OTerm α),
+    Nonempty
+        (OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus.Derivation ?m.83 ?m.85
+          (NumberedWindowInternalCoverCombinedRestrictedSingletonTargets.thinProvided P.cover X W s raw ctx cod ?m.86 wr
+            dst)) →
+      Nonempty
+        (OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus.Derivation ?m.83 ?m.85
+          (NumberedWindowInternalCoverCombinedRestrictedTwoHopTargets.suppliedPath P.cover X W s raw ctx cod ?m.86 dst))
+but is expected to have type
+  Nonempty
+    (OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus.Derivation body Γ
+      (NumberedWindowInternalCoverCombinedRestrictedTwoHopTargets.suppliedPath P.cover X W s raw ctx cod
+        (auxiliaryTerm dom cod fn✝ arg) (auxiliaryTerm dom cod next✝ arg)))
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedFinitePathProof.lean:21:2: error: Alternative `more` has not been provided
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedFinitePathProof.lean:23:6: error: unexpected token '('; expected command
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedFinitePathProof.exact_OpenCoverThinFinitePath' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedFinitePathProof.exact_OpenCoverCombinedRestrictedFinitePath' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
