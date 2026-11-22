@@ -126,6 +126,8 @@ theorem afterStep (bound previous out i : OTerm α)
   rw [ID1Completion.InternalBetaBoundaryProof.supRename,
     ID1Completion.InternalOriginalOrderSyntaxProof.orderRename,
     ID1Completion.InternalTagArithmeticSyntaxProof.eqnRelabel] at movedSplit
+  change Nonempty (Derivation body Δ ((NumberedWindowInternalSparsePathEnvelopeTargets.unary
+    ascendingRange previous bound).relabel j)) at prior
   rw [unaryRename] at prior
   rw [NumberedWindowInternalCoverAscendingRangeSyntaxProof.atRename] at movedIH
   exact endCase (bound.relabel j) (previous.relabel j) (out.relabel j) one

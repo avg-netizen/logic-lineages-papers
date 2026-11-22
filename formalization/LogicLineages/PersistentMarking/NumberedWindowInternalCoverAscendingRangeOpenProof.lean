@@ -57,6 +57,8 @@ private theorem fromPrevious (bound i previous : OTerm α)
   have prior := renameInto old j Δ keep
   have s := renameInto split j Δ keep
   have h := renameInto ih j Δ keep
+  change Nonempty (Derivation body Δ ((NumberedWindowInternalSparsePathEnvelopeTargets.unary
+    ascendingRange previous bound).relabel j)) at prior
   rw [unaryRename] at prior
   rw [supRename,orderRename,eqnRelabel] at s
   rw [atRename] at h

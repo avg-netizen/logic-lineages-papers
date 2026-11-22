@@ -1,0 +1,33 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAscendingRangeOpenDataProof.lean:129:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Formula.relabel ?j (NumberedWindowInternalSparsePathEnvelopeTargets.unary ?p ?o ?n)
+in the target expression
+  Nonempty (Derivation body Δ (Formula.relabel j (rangeReport previous bound)))
+
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+bound previous out i : OTerm α
+old : Nonempty (Derivation body Γ (rangeReport previous bound))
+run : Nonempty (Derivation body Γ (rangeReport out (suc bound)))
+split : Nonempty (Derivation body Γ (ltF i bound ⊔ eqn i bound))
+ih : Nonempty (Derivation body Γ (atBound bound i))
+row : Nonempty (Derivation body Γ (programGraph rangeStep out ![bound, previous]))
+β : Type
+j : α → β
+Δ : List (ID1Completion.InternalCalculus.Formula β)
+one : OTerm β
+keep : ∀ r ∈ Γ, Formula.relabel j r ∈ Δ
+actual :
+  Nonempty
+    (Derivation body Δ
+      (programGraph NumberedWindowInternalCoverAscendingRangeTargets.singleton one
+        ![Term.relabel j bound, Term.relabel j previous]))
+movedSplit :
+  Nonempty
+    (Derivation body Δ (ltF (Term.relabel j i) (Term.relabel j bound) ⊔ eqn (Term.relabel j i) (Term.relabel j bound)))
+prior : Nonempty (Derivation body Δ (Formula.relabel j (rangeReport previous bound)))
+movedIH : Nonempty (Derivation body Δ (Formula.relabel j (atBound bound i)))
+movedRow :
+  Nonempty
+    (Derivation body Δ (programGraph rangeStep (Term.relabel j out) ![Term.relabel j bound, Term.relabel j previous]))
+⊢ Nonempty (Derivation body Δ (memberGraph (Term.relabel j out) (Term.relabel j i)))
