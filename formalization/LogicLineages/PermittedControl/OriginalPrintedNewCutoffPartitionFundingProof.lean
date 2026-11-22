@@ -38,7 +38,7 @@ theorem exactActualGreatestPaysChart : ExactActualGreatestPaysChart := by
     rw [← keys]
     exact List.mem_map.mpr ⟨e,found,rfl⟩
   have fromSupport : cutoff B known gates p positive ≤ z := by
-    change cutoff B known gates p positive ≤ base greatest
+    change cutoff B known gates p positive ≤ realized θ branch greatest
     rw [← atGreatest,(slots e found).2]
     exact paid e.1 named
   have pred : rankedPredecessor greatest base ≤ z := by
