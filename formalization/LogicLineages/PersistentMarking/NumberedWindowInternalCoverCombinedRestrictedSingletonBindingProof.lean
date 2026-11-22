@@ -45,7 +45,6 @@ theorem thinRawRename {α β : Type} (raw : Program 5) (ctx ty q w r : OTerm α)
       (q.relabel j) (w.relabel j) (r.relabel j) := by
   change (programGraph raw (suc z) (loopArgs ctx ty q w r)).relabel j = _
   rw [programRename,loopArgsRename,sucRelabel,zRelabel]
-  rfl
 
 variable {α : Type} (C : Program 3) (X : Program 2) (W : Program 3) (s : Settings) (raw : Program 5)
 
