@@ -3,6 +3,8 @@ public import LogicLineages.PermittedControl.ActualRawComparisonCeilingTargets
 import LogicLineages.PermittedControl.ClosedOrdinaryFieldGuardProof
 import LogicLineages.PermittedControl.ShortFieldEffectivityProof
 import LogicLineages.OrdinalComparison.RawComparisonProof
+import LogicLineages.OrdinalComparison.RawNormCode
+import LogicLineages.PermittedControl.OrdinalEndpointProgramsProof
 
 @[expose] public section
 namespace LogicLineages.PermittedControl.ActualRawComparisonCeiling
