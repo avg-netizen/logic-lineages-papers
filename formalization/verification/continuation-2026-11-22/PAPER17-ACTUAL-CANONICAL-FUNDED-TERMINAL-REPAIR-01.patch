@@ -1,0 +1,15 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualCanonicalFundedTerminalTruthProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualCanonicalFundedTerminalTruthProof.lean
+@@ -46,4 +46,8 @@
+-    refine Or.inr ⟨active,nonzero,localPaid,a,matching,notZero,?_⟩
+-    intro test positive
+-    rw [value]
+-    exact tests test positive
++    have verdict : NonzeroForward f B ρ r top initial stopped xs := by
++      unfold NonzeroForward
++      refine ⟨nonzero,localPaid,?_⟩
++      refine ⟨a,matching,notZero,?_⟩
++      intro test positive
++      rw [value]
++      exact tests test positive
++    exact Or.inr ⟨active,verdict⟩

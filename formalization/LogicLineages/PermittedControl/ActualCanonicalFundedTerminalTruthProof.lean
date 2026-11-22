@@ -43,9 +43,13 @@ theorem exactFundedForwardTruth : ExactFundedForwardTruth := by
       positiveValue,negativeValue,nonnegativeValue,notZeroValue,tests⟩ :=
       exactCanonicalNonzeroTruth f B chosen ρ strict r top stopped xs
         (endLive live) (endRank ranks) normal nonzero localPaid
-    refine Or.inr ⟨active,nonzero,localPaid,a,matching,notZero,?_⟩
-    intro test positive
-    rw [value]
-    exact tests test positive
+    have verdict : NonzeroForward f B ρ r top initial stopped xs := by
+      unfold NonzeroForward
+      refine ⟨nonzero,localPaid,?_⟩
+      refine ⟨a,matching,notZero,?_⟩
+      intro test positive
+      rw [value]
+      exact tests test positive
+    exact Or.inr ⟨active,verdict⟩
 
 end LogicLineages.PermittedControl.ActualCanonicalFundedTerminal
