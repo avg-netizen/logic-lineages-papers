@@ -47,7 +47,7 @@ private theorem properFromLabels (f ρ : Nat → Nat) {ls : List Label} {vs : Li
       · exact ih rest
 
 theorem exactReachedComparisonFamily : ExactReachedComparisonFamily := by
-  intro f B hf ρ baseline r top n initial reached strict agree live scoped funded path xs normal active ready
+  intro f B hf ρ baseline r top n initial reached strict agree live sourceScope funded path xs normal active ready
   let terms := xs.map Prod.fst
   let ls := labels terms
   let alphabet := globalAlphabet r (syntaxOf initial)
@@ -84,7 +84,7 @@ theorem exactReachedComparisonFamily : ExactReachedComparisonFamily := by
   refine ⟨⟨?_,?_⟩,⟨localTail.trans topPaid,?_⟩⟩
   · intro l used
     obtain ⟨t,ht,eq⟩ := originRank l used
-    exact ⟨eq ▸ scoped t ht,properFromLabels f ρ actualLabels l used⟩
+    exact ⟨eq ▸ sourceScope t ht,properFromLabels f ρ actualLabels l used⟩
   · intro l used below
     obtain ⟨t,ht,eq⟩ := originRank l used
     have numeric : bound ≤ ρ l.rank := eq ▸ funded t ht

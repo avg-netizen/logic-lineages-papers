@@ -1,0 +1,49 @@
+{
+  "status": "source-only comparison trace proof alpha repair, no Lean/Git invoked by author",
+  "failed_source_remote_commit": "154cc2a35410854b794c455d0d528e6242055eba",
+  "failed_source_local_commit": "59da024093c9ce0b29e14009c401d0d9630aecac",
+  "failed_source_tree": "b6ec50de3e098f3d474e20e7526e5fd979000259",
+  "failed_exact_gate_receipt": "1795367221306577272-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualGlobalComparisonCeilingStatementChecks",
+  "failed_receipt_sha256": "e271ee2df841f3197d924027ad4ebe4626f5bbf7fbc2d4713c84ea93e744cf7e",
+  "failed_exact_module_log_sha256": "e33411b0990d972ae0a204273e8188c49fd07696c75481e70f55bd50fc0f0e2b",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualGlobalComparisonCeilingTraceProof.lean:49:71: error: unsolved goals\nf : \u2115 \u2192 \u2115\nB : \u2115\nhf : SelectedWithThreshold f B\n\u03c1 baseline : \u2115 \u2192 \u2115\nr top n : \u2115\ninitial reached : ReadState\nstrict : StrictMono \u03c1\nagree : \u2200 i < top, baseline i = \u03c1 i\nlive : liftedReads f \u03c1 initial.reads\n\u22a2 (\u2200 t \u2208 syntaxOf initial, t.2.rank \u2264 top) \u2192\n    PaidComparisonCeiling B r \u03c1 (syntaxOf initial) \u2192\n      Trace f B \u03c1 r top n initial reached \u2192\n        \u2200 (xs : List Read),\n          normalizeReads f \u03c1 reached.reads = some xs \u2192\n            ActiveAt top xs \u2192\n              NodeGuards B \u03c1 xs \u2192\n                have ls := labels (List.map Prod.fst xs);\n                ReadyFamily B baseline top ls \u2227 PaidFamily B baseline top (\u03c1 top) ls\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualGlobalComparisonCeilingTraceProof.lean:50:74: error: unexpected identifier; expected '[', 'add_aesop_rules', 'binder_predicate', 'builtin_cbv_simproc', 'builtin_dsimproc', 'builtin_simproc', 'cbv_simproc', 'def_eval_config_item', 'dsimproc', 'elab', 'elab_rules', 'grind_pattern', 'infix', 'infixl', 'infixr', 'instance', 'macro', 'macro_rules', 'notation', 'notation3', 'postfix', 'prefix', 'simproc', 'syntax' or 'unif_hint'\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualGlobalComparisonCeilingTraceProof.lean:87:22: error: unexpected identifier; expected '[', 'add_aesop_rules', 'binder_predicate', 'builtin_cbv_simproc', 'builtin_dsimproc', 'builtin_simproc', 'cbv_simproc', 'def_eval_config_item', 'dsimproc', 'elab', 'elab_rules', 'grind_pattern', 'infix', 'infixl', 'infixr', 'instance', 'macro', 'macro_rules', 'notation', 'notation3', 'postfix', 'prefix', 'simproc', 'syntax' or 'unif_hint'\n",
+  "failed_original_native_log_sha256": "340f3d94b188f08a9c78394b4d507a85858a54b6de6fa97464c8a9d7dd1b7b35",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualGlobalComparisonCeilingTraceProof.lean",
+  "failed_proof_sha256": "c261383af2242af0e7f2bbfea96c30be71716b410c45b21d72f74ca50cb18008",
+  "repaired_proof_sha256": "0a14d608e6aeb0713c5a127e716961be7e8943f11f2b49a73190ff7381dff932",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-GLOBAL-COMPARISON-CEILING-REPAIR-01.patch",
+  "patch_sha256": "beb04658bdae2e8c4492a63ce3a69c94085c4868d3a181f7672c199ae80532be",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-GLOBAL-COMPARISON-CEILING-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "a3626b1c0663d084758b0c8a6e6461875d30f7e1642a6b108f132965ab549e5b",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualGlobalComparisonCeilingTargets.lean": "09148b2c568bddc13778e03f12f562b037255e851dedcaa0b4ba8ea97e5b0191",
+    "formalization/LogicLineages/PermittedControl/ActualGlobalComparisonCeilingDominanceProof.lean": "aea4e8db7c243a23f25161f28d94dfc406d59783b5a4ae0af11ab063147632d6",
+    "formalization/LogicLineages/PermittedControl/ActualGlobalComparisonCeilingStatementChecks.lean": "29b925df4714377a52816def38fed4b580050d70fd5744871e22dae82957868f",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-GLOBAL-COMPARISON-CEILING-SOURCE-MAP.md": "25dc6a23e8e71bd540eaef78fa9fcf93188d46060e80e808b30c0884b80e4e9e"
+  },
+  "static_module_closure_unchanged": {
+    "Targets": {
+      "local": 199,
+      "external": 33,
+      "contains_totient": false
+    },
+    "DominanceProof": {
+      "local": 203,
+      "external": 34,
+      "contains_totient": false
+    },
+    "TraceProof": {
+      "local": 432,
+      "external": 41,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 433,
+      "external": 41,
+      "contains_totient": false
+    }
+  },
+  "scope": "Only alpha-rename reserved identifier scoped to sourceScope in the exact original rank-range premise and its use. No theorem, code, guarded provenance, imports or siblings changed."
+}
