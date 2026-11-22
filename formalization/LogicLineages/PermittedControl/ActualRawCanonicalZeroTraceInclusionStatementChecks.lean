@@ -1,0 +1,26 @@
+module
+public import LogicLineages.PermittedControl.ActualRawCanonicalZeroTraceInclusionTargets
+import LogicLineages.PermittedControl.ActualRawCanonicalZeroTraceInclusionProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualRawCanonicalZeroTraceInclusion
+
+theorem fixed_exactActualZeroCandidateEdge : ExactActualZeroCandidateEdge := exactActualZeroCandidateEdge
+theorem fixed_exactActualCanonicalCandidateTrace : ExactActualCanonicalCandidateTrace :=
+  exactActualCanonicalCandidateTrace
+theorem fixed_exactActualCanonicalBudgetInclusion : ExactActualCanonicalBudgetInclusion :=
+  exactActualCanonicalBudgetInclusion
+theorem fixed_exactFundedStoppingCandidateInclusion : ExactFundedStoppingCandidateInclusion :=
+  exactFundedStoppingCandidateInclusion
+theorem fixed_fullActualRawCanonicalZeroTraceInclusion : FullActualRawCanonicalZeroTraceInclusion :=
+  ⟨fixed_exactActualZeroCandidateEdge,fixed_exactActualCanonicalCandidateTrace,
+    fixed_exactActualCanonicalBudgetInclusion,fixed_exactFundedStoppingCandidateInclusion⟩
+
+#print axioms fixed_exactActualZeroCandidateEdge
+#print axioms fixed_exactActualCanonicalCandidateTrace
+#print axioms fixed_exactActualCanonicalBudgetInclusion
+#print axioms fixed_exactFundedStoppingCandidateInclusion
+#print axioms fixed_fullActualRawCanonicalZeroTraceInclusion
+
+end LogicLineages.PermittedControl.StatementChecks

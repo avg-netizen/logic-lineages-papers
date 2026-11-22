@@ -1,0 +1,32 @@
+module
+public import LogicLineages.PermittedControl.ActualCanonicalSignFundingTargets
+import LogicLineages.PermittedControl.ActualCanonicalSignFundingMassProof
+import LogicLineages.PermittedControl.ActualCanonicalSignFundingShiftProof
+import LogicLineages.PermittedControl.ActualCanonicalSignFundingTraceProof
+import LogicLineages.PermittedControl.ActualCanonicalSignFundingProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualCanonicalSignFunding
+
+theorem fixed_exactCanonicalNormalizedMass : ExactCanonicalNormalizedMass :=
+  exactCanonicalNormalizedMass
+
+theorem fixed_exactCanonicalEdgeMass : ExactCanonicalEdgeMass := exactCanonicalEdgeMass
+theorem fixed_exactCanonicalShift : ExactCanonicalShift := exactCanonicalShift
+theorem fixed_exactCanonicalTraceMass : ExactCanonicalTraceMass := exactCanonicalTraceMass
+theorem fixed_exactCanonicalTraceConstant : ExactCanonicalTraceConstant := exactCanonicalTraceConstant
+theorem fixed_exactCanonicalSignFunding : ExactCanonicalSignFunding := exactCanonicalSignFunding
+
+theorem fixed_fullActualCanonicalSignFunding : FullActualCanonicalSignFunding :=
+  ⟨fixed_exactCanonicalNormalizedMass,fixed_exactCanonicalEdgeMass,fixed_exactCanonicalShift,
+    fixed_exactCanonicalTraceMass,fixed_exactCanonicalTraceConstant,fixed_exactCanonicalSignFunding⟩
+
+#print axioms fixed_exactCanonicalNormalizedMass
+#print axioms fixed_exactCanonicalEdgeMass
+#print axioms fixed_exactCanonicalShift
+#print axioms fixed_exactCanonicalTraceMass
+#print axioms fixed_exactCanonicalTraceConstant
+#print axioms fixed_exactCanonicalSignFunding
+#print axioms fixed_fullActualCanonicalSignFunding
+
+end LogicLineages.PermittedControl.ActualCanonicalSignFunding
