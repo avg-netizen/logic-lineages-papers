@@ -21,7 +21,7 @@ def lowerTable (top : Nat) (rows : List Row) : List LowerOperand :=
 def Live (f ρ : Nat → Nat) (ops : List LowerOperand) : Prop :=
   ∀ op ∈ ops, ∃ v : Nat, lowerOperandRead f ρ op = some (some v)
 
-private theorem hasIndex {op : LowerOperand} {ops : List LowerOperand} (h : op ∈ ops) :
+theorem hasIndex {op : LowerOperand} {ops : List LowerOperand} (h : op ∈ ops) :
     ∃ i : Nat, ∃ hi : i < ops.length, ops[i] = op :=
   List.mem_iff_getElem.mp h
 
