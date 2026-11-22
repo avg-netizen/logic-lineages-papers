@@ -31,7 +31,7 @@ theorem moveForwardWindowKey (W : Program 3) (ctx ty fromKey toKey : OTerm α)
     (equalKeys : Nonempty (Derivation body Γ (eqn fromKey toKey)))
     (actual : Nonempty (Derivation body Γ (windowAt W ctx ty fromKey))) :
     Nonempty (Derivation body Γ (windowAt W ctx ty toKey)) := by
-  let θ := windowAt W (ctx.relabel Sum.inl) (ty.relabel Sum.inl) (.var (.inr 0))
+  let θ : Formula (α ⊕ Fin 1) := windowAt W (ctx.relabel Sum.inl) (ty.relabel Sum.inl) (.var (.inr 0))
   have instantiateKey (key : OTerm α) : instantiate θ (emb key) = windowAt W ctx ty key := by
     simp only [θ,instantiate,bindEmbedding,windowSubst,liftBind,varBind]
   obtain ⟨equalKeys⟩ := equalKeys

@@ -1,0 +1,5 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentInductionLocalProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentInductionLocalProof.lean
+@@ -34 +34 @@
+-  let θ := windowAt W (ctx.relabel Sum.inl) (ty.relabel Sum.inl) (.var (.inr 0))
++  let θ : Formula (α ⊕ Fin 1) := windowAt W (ctx.relabel Sum.inl) (ty.relabel Sum.inl) (.var (.inr 0))
