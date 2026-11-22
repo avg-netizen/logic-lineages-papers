@@ -1,0 +1,10 @@
+# P16 actual course-of-values own-key induction at the combined restricted selection
+
+Frozen (awaiting native). Uses actual original object `actualStrongInductionInstance` on the raw key and the existing physical own motive. At each stage the standard real below formula provides the earlier hypothesis and actual (V=1) is introduced as an object antecedent. The checked stage machinery chooses the real numeric measure output p by original PR-program totality on the exact physical tape (an object proof, not semantic reflection), binds context/result/scratch, and invokes the single checked all-seven bounded step of the same combined P. The final family theorem closes this below premise using genuine object induction at every raw. The final exact report theorem specializes the actual three binders to the held context, result, and physical scratch and uses its genuine V/W/scratch reports only. No earlier assumption or separately supplied measure survives the final theorem.
+
+This is a substantive restricted selected physical own-key result, not an unlimited cover theorem or old/unrestricted W equivalence. The combined W requires the stated mixed head lists at its ordinary/numbered branches and the finite fragment guard at its literal lambda body; all actual settings/type/grammar provenance still follows the exact selected programs. No formal consequence for protected/fresh-port markings, comparison/placement claims outside that P, or printed-source semantic repairs. Gate Family → final exact alias `exact_OpenCoverCombinedRestrictedInductionOwn` after exact setup. Static closure excludes Hydra/Linarith.
+
+| File (PersistentMarking) | SHA-256 | Static closure including root |
+|---|---|---:|
+| `NumberedWindowInternalCoverCombinedRestrictedInductionFamilyProof.lean` | `69fcd658a93d3398675c66b88e4f1edea405976c2179f7ae7429b6b8520ec6ae` | 1763 |
+| `NumberedWindowInternalCoverCombinedRestrictedInductionProof.lean` | `a1ca49e573f83d94ea588275b362c99986ccfe1bcec43b146f36fc6c10b2422a` | 1764 |
