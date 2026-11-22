@@ -1,0 +1,76 @@
+{
+  "status": "exact source-only narrow direct import repair; native not invoked by author",
+  "failed_source_remote_commit": "3e1dbe690858334473249c50231d51924791a274",
+  "failed_source_local_commit": "7afd290d",
+  "failed_exact_gate_receipt": "1795360638216752646-83",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalPrintedPlainMatrixLinearProjectionStatementChecks",
+  "failed_receipt_sha256": "9d7dae36f8762a78660f1d4131e989e210e2b426dad02d4a43eb35e9c4b12b6e",
+  "failed_exact_module_log_sha256": "862835f97765d9d681f1980ed8ce34d0285dee9a66b25bf7c6e96a2d5a9dc0e4",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionPreparedProof.lean:21:85: error(lean.unknownIdentifier): Unknown constant `LogicLineages.PermittedControl.OriginalMatrixLinearRowFormula.safeAnd`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionPreparedProof.lean:34:4: error(lean.unknownIdentifier): Unknown identifier `rowFormula`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionPreparedProof.lean:40:4: error(lean.unknownIdentifier): Unknown identifier `exactLinearRowFormula`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionPreparedProof.lean:27:81: error: unsolved goals\nf \u03b8 : \u2115 \u2192 \u2115\nknown : List \u2115\ngates : List OriginalPrintedCircuitSequential.Gate\np : NormalForm.Formula\nplain : PreparedProjection.PlainPreparedFormula p\nbranch : ActualFiniteOrderBranches.Pattern\nmember : branch \u2208 OriginalPrintedPlainMatrixOrderBranches.branches known gates p\nchecked : (ActualFiniteOrderBranches.guard branch).eval \u03b8\nlinear : OriginalMatrixLinearLowerTable.TopLinear (top branch) (renamed known gates p branch)\nminimum : \u2115\npositive : Bool\ngs : List OriginalPrintedCircuitNormalization.NormalizedGate := circuit known gates p\nrs : List Row := renamed known gates p branch\n\u03c1 : \u2115 \u2192 \u2115 := realized \u03b8 branch\nops : List PreparedProjection.LowerOperand := table known gates p branch\nemit : Row \u2192 NormalForm.Formula := fun r => sorry\nhPrefix : \u2200 r \u2208 rowsList gs, r \u2208 matrix known gates p\nhAtom : \u2200 a \u2208 LinearRows.atoms p, atomRow a \u2208 matrix known gates p\n\u22a2 have ops := table known gates p branch;\n  have q := formula known gates p branch minimum positive;\n  PreparedInput ops q \u2227\n    \u2200 (\u03bd : \u2115 \u2192 \u2115),\n      PreparedProjection.PreparedTableTied f (top branch) (realized \u03b8 branch) ops \u03bd \u2192\n        \u2200 (z : \u2115),\n          q.eval (Function.update \u03bd 0 z) \u2194\n            minimum \u2264 z \u2227 SourceAccepts f (replay \u03b8 known gates p branch z) known gates p positive",
+  "failed_original_native_log_sha256": "4de67ffc3ad56acbfa8e697f0b241179fac3ca7a0e3884fd4e9fac3fe8b7c43f",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionPreparedProof.lean",
+  "failed_proof_sha256": "6335ad59b1ab1bd90cb9aec4aa19a2ebed3b2a255579a595bdaaccba404e5e9b",
+  "repaired_proof_sha256": "a15b77c65858aec6ac771db447ebb14fa695abbc0d6016c76999e8638f95ee06",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-LINEAR-PROJECTION-REPAIR-02.patch",
+  "patch_sha256": "67b645a7cb8265d79cf2b2b0dc93dca2cdc2abff9549c400433832289026a072",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-LINEAR-PROJECTION-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "b11e2033183e2ff8a1bd0901f0496edaf70e517c1b5bce4868ff0c65955b2027",
+  "previous_repair_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-LINEAR-PROJECTION-REPAIR-01.json",
+  "previous_repair_manifest_sha256": "7a6dd3f66c6d3db4278bb9bb44c48e58c41e6defdbe6fe822742071b8d2ead7b",
+  "accepted_shape_dependency": "formalization/LogicLineages/PermittedControl/OriginalMatrixLinearRowFormulaShapeProof.lean",
+  "accepted_shape_dependency_sha256": "cb2716339ca5b3bd4087c802340f95d42d4770ee9af41addbb7454cdfbc50e13",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionTargets.lean": "98149d5be08cd2b95d7086a6a0753e1a9561c1cc04d5a5a88b478e680f519ccf",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionSyntaxProof.lean": "06cd1760642a57f315e4178c8e5f46d000cbbcb41f9f43aef81dd963cb7458fe",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionTransportProof.lean": "c214741af4e51d5ee7e8f8d82846c574cb4378143196f49651f043405fba2454",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionPrefixProof.lean": "e809993dadadf3c29540a9f8f2c4cfcee580ccbc48472ddb4c038b0e535847e2",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionProof.lean": "20d7831feffa0cd659c97fd90c68926d942e3bedb92b461f78a8e937c4f28704",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionReplayProof.lean": "cfbd99d0d133ea1cd025d4b97d741237f2c891c0614bfcde43791cc8e920985b",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionStatementChecks.lean": "a5e96f0feac4faa5c4b15fd0366855e687c396e398b2b276568fa43f6e712de8",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-LINEAR-PROJECTION-SOURCE-MAP.md": "68943ae2fc976d936b5c0126984d138b47861d33539ab82d1d7b6db5eb749f82"
+  },
+  "static_module_closure_unchanged": {
+    "Targets": {
+      "local": 267,
+      "external": 35,
+      "contains_totient": false
+    },
+    "SyntaxProof": {
+      "local": 270,
+      "external": 35,
+      "contains_totient": false
+    },
+    "TransportProof": {
+      "local": 427,
+      "external": 42,
+      "contains_totient": false
+    },
+    "PrefixProof": {
+      "local": 272,
+      "external": 35,
+      "contains_totient": false
+    },
+    "PreparedProof": {
+      "local": 438,
+      "external": 42,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 439,
+      "external": 42,
+      "contains_totient": false
+    },
+    "ReplayProof": {
+      "local": 428,
+      "external": 42,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 441,
+      "external": 42,
+      "contains_totient": false
+    }
+  },
+  "scope": "Add direct import of already transitive OriginalMatrixLinearRowFormulaShapeProof for safeAnd/safePolarity in the existing open list; no new module closure, body, statement or peer change."
+}
