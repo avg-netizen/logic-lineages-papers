@@ -1,0 +1,33 @@
+{
+  "status": "Proof-only declaration kind correction for original Derivation data helper; native gate pending",
+  "failed_receipt": "1795349350545056652-9",
+  "failed_receipt_sha256": "084122ef798de2532a1aefc4f33cab124d5f3273414ceca68859a4e7e03d0178",
+  "immutable_previous_commit": "4336094232fbc239fe00f3c931a121f4dcf8c84d",
+  "failed_combined_log_sha256": "fe95a6e03aafb69abf98d2847240d84af0bd876d8b7e05ed345b009f06d9261e",
+  "failed_diagnostic": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-selected-grammar-adjacent-depth-base-initial-diagnostic.txt": "2065316ef04a90b8786d65518286a8703f26a62bfcf0aec9eac2fa8556a08df6"
+  },
+  "failed_errors": [
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarDepthBaseProof.lean:85:0: error: type of theorem `_private.LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedGrammarDepthBaseProof.0.LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedGrammarDepthBaseProof.moveKey` is not a proposition",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarDepthBaseProof.lean:94:16: error: (kernel) unknown constant '_private.LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedGrammarDepthBaseProof.0.LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedGrammarDepthBaseProof.moveKey'"
+  ],
+  "diagnosis": "The private moveKey helper returns Derivation data, not Prop. Declare it private def with identical signature and body. No proof term, target, import, actual report, resource, or physical AST changes.",
+  "changed_source": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarDepthBaseProof.lean",
+  "old_failed_source_sha256": "023d2c69af7f2defa8972720b4512af115207f6dd8dc669a0728127da22c37e7",
+  "new_source_sha256": "3438caa442aaf1861e886a10cb2ae1b9b8793e58408352aa165ea123572618d3",
+  "failed_source_archive": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverSelectedGrammarDepthBaseProof-01.lean": "023d2c69af7f2defa8972720b4512af115207f6dd8dc669a0728127da22c37e7"
+  },
+  "zero_context_patch": {
+    "formalization/verification/continuation-2026-11-22/P16-SELECTED-GRAMMAR-ADJACENT-DEPTH-BASE-REPAIR-01.patch": "5156e4158b35a4bb24d6ac19740453241cf7c9df12d0beacdfe4de5cf464b694"
+  },
+  "forward_and_inverse_exact_bytes_verified": true,
+  "unchanged_source_pins": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarDepthBindingProof.lean": "0ea02d53d17dad8db0d15e5775dd9c3bb53485b63767e528eb52e4e8c80d50df",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarDepthInductionProof.lean": "16f7fabb71721676b02eb3e6ad75e98426e5039305094f6477b24cd00d58ea33",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarDepthStepProof.lean": "35ad11270528e681a5a13032462ea0fad293ad1c5432a125133b7c58829d129c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarDepthSyntaxProof.lean": "287e03b4e18f3e1552ccfbc93e2f2afa3aeee047530ca64e266d7ed8f7eccacd",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarDepthTargets.lean": "5423bdafd6f2989989425edbc91953779d9188b24070575f760b1cc2888636fd",
+    "formalization/verification/continuation-2026-11-22/P16-SELECTED-GRAMMAR-ADJACENT-DEPTH-SOURCE-MAP.md": "5ceafd957f53257a95bb1a42af270ecfecbfe2ee452804e68500bd177bda4ec3"
+  }
+}

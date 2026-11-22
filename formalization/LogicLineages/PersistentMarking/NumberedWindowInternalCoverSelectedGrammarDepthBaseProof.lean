@@ -82,7 +82,7 @@ private theorem fromEmpty (old next : OTerm α)
   exact ⟨Derivation.universalIntroduction
     (Derivation.implicationIntroduction (Derivation.explosion bottom))⟩
 
-private theorem moveKey (out a key : OTerm α)
+private def moveKey (out a key : OTerm α)
     (eq : Derivation body Γ (eqn a key))
     (hit : Derivation body Γ (memberGraph out a)) :
     Derivation body Γ (memberGraph out key) := by
