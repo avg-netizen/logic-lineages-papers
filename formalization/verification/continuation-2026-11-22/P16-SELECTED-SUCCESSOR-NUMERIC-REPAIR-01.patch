@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedSuccessorNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedSuccessorNumericProof.lean
+@@ -102,2 +102,4 @@
+-  · simpa only [leaves,List.append_assoc] using nonAux
+-  · simpa only [termsValue,leaves,List.append_assoc] using terms
++  · change evaluate (join throughOrdinary numberedPart) xs = _
++    simpa only [leaves,List.append_assoc] using nonAux
++  · change evaluate (join nonAuxPart auxiliaryPart) xs = _
++    simpa only [termsValue,leaves,List.append_assoc] using terms

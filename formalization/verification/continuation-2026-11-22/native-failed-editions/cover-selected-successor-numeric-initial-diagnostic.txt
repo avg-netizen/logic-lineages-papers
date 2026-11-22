@@ -1,0 +1,42 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedSuccessorNumericProof.lean:102:4: error: Type mismatch: After simplification, term
+  nonAux
+ has type
+  @Eq ℕ (evaluate (join throughOrdinary numberedPart) xs)
+    (numbersNumber
+      (namedLeaves 0 K ids ++
+        (namedLeaves 1 K ids ++
+          (List.map (fun ty => packNode 3 [ty]) K ++ (lambdas K ts ++ (ordinary H args ++ numbered H K ids args))))))
+but is expected to have type
+  @Eq ℕ
+    (evaluate nonAuxPart
+      (numbersNumber H ::ᵥ numbersNumber K ::ᵥ numbersNumber ids ::ᵥ numbersNumber ts ::ᵥ numbersNumber args ::ᵥ nil))
+    (numbersNumber
+      (namedLeaves 0 K ids ++
+        (namedLeaves 1 K ids ++
+          (List.map (fun ty => packNode 3 [ty]) K ++ (lambdas K ts ++ (ordinary H args ++ numbered H K ids args))))))
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedSuccessorNumericProof.lean:103:4: error: Type mismatch: After simplification, term
+  terms
+ has type
+  @Eq ℕ (evaluate (join nonAuxPart auxiliaryPart) xs)
+    (numbersNumber
+      (namedLeaves 0 K ids ++
+        (namedLeaves 1 K ids ++
+          (List.map (fun ty => packNode 3 [ty]) K ++
+            (lambdas K ts ++ (ordinary H args ++ (numbered H K ids args ++ applications K ts)))))))
+but is expected to have type
+  @Eq ℕ
+    (evaluate termsPart
+      (numbersNumber H ::ᵥ numbersNumber K ::ᵥ numbersNumber ids ::ᵥ numbersNumber ts ::ᵥ numbersNumber args ::ᵥ nil))
+    (numbersNumber
+      (namedLeaves 0 K ids ++
+        (namedLeaves 1 K ids ++
+          (List.map (fun ty => packNode 3 [ty]) K ++
+            (lambdas K ts ++ (ordinary H args ++ (numbered H K ids args ++ applications K ts)))))))
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedSuccessorNumericProof.exact_SelectedCoverNonAuxValue' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedSuccessorNumericProof.exact_SelectedCoverSuccessorValue' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

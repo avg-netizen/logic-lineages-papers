@@ -99,8 +99,10 @@ private theorem stageValues (H K ids ts args : List Nat) :
   have nonAux := joinValue throughOrdinary numberedPart xs _ _ second n
   have terms := joinValue nonAuxPart auxiliaryPart xs _ _ nonAux u
   refine ⟨?_,?_,a⟩
-  · simpa only [leaves,List.append_assoc] using nonAux
-  · simpa only [termsValue,leaves,List.append_assoc] using terms
+  · change evaluate (join throughOrdinary numberedPart) xs = _
+    simpa only [leaves,List.append_assoc] using nonAux
+  · change evaluate (join nonAuxPart auxiliaryPart) xs = _
+    simpa only [termsValue,leaves,List.append_assoc] using terms
 
 theorem exact_SelectedCoverNonAuxValue : ExactSelectedCoverNonAuxValue := by
   intro H K ids ts args
