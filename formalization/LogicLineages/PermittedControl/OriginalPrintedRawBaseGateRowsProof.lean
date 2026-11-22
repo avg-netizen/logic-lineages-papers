@@ -56,6 +56,8 @@ theorem exactOriginalRawBaseGateStep : ExactOriginalRawBaseGateStep := by
   | collapse w =>
     rcases w with ⟨a,source,output⟩
     let wire : ArbitraryHeadFreshWireAllocation.Wire := ⟨a,source,output⟩
+    simp only [OriginalPrintedCircuitNormalization.normalizeFrom,rowsList,
+      List.flatMap_cons,List.flatMap_nil,List.append_nil,rows]
     change some (n+1,collapseRowsCode (headCode a,source,n,output)) =
       some (n+1,(baseRows (normalizeGate (install wire n))).map encodeRow)
     cases kind : encodedFiniteTest (headCode a) with
