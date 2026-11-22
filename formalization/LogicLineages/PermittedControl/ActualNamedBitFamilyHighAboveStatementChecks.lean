@@ -1,0 +1,26 @@
+module
+public import LogicLineages.PermittedControl.ActualNamedBitFamilyHighAboveTargets
+import LogicLineages.PermittedControl.ActualNamedBitFamilyHighAboveSetupProof
+import LogicLineages.PermittedControl.ActualNamedBitFamilyHighAboveUniformProof
+import LogicLineages.PermittedControl.ActualNamedBitFamilyHighAboveExistentialProof
+import LogicLineages.PermittedControl.ActualNamedBitFamilyHighAboveDimensionProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualNamedBitFamilyHighAbove
+
+theorem fixed_exactAboveHighSetup : ExactAboveHighSetup := exactAboveHighSetup
+theorem fixed_exactAboveUniformChartChild : ExactAboveUniformChartChild := exactAboveUniformChartChild
+theorem fixed_exactAboveHighExistential : ExactAboveHighExistential := exactAboveHighExistential
+theorem fixed_exactAboveHighDimension : ExactAboveHighDimension := exactAboveHighDimension
+theorem fixed_fullActualNamedBitFamilyHighAbove : FullActualNamedBitFamilyHighAbove :=
+  ⟨fixed_exactAboveHighSetup,fixed_exactAboveUniformChartChild,
+    fixed_exactAboveHighExistential,fixed_exactAboveHighDimension⟩
+
+#print axioms fixed_exactAboveHighSetup
+#print axioms fixed_exactAboveUniformChartChild
+#print axioms fixed_exactAboveHighExistential
+#print axioms fixed_exactAboveHighDimension
+#print axioms fixed_fullActualNamedBitFamilyHighAbove
+
+end LogicLineages.PermittedControl.StatementChecks

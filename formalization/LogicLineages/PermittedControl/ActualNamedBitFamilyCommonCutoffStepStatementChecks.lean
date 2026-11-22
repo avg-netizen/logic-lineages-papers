@@ -1,0 +1,23 @@
+module
+public import LogicLineages.PermittedControl.ActualNamedBitFamilyCommonCutoffStepTargets
+import LogicLineages.PermittedControl.ActualNamedBitFamilyCommonCutoffStepProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualNamedBitFamilyCommonCutoffStep
+
+theorem fixed_exactNamedLowChildMembership : ExactNamedLowChildMembership := exactNamedLowChildMembership
+theorem fixed_exactCommonCutoffNonemptyStep : ExactCommonCutoffNonemptyStep := exactCommonCutoffNonemptyStep
+theorem fixed_exactCommonCutoffChildrenSmaller : ExactCommonCutoffChildrenSmaller := exactCommonCutoffChildrenSmaller
+theorem fixed_exactCommonCutoffLayer : ExactCommonCutoffLayer := exactCommonCutoffLayer
+theorem fixed_fullActualNamedBitFamilyCommonCutoffStep : FullActualNamedBitFamilyCommonCutoffStep :=
+  ⟨fixed_exactNamedLowChildMembership,fixed_exactCommonCutoffNonemptyStep,
+    fixed_exactCommonCutoffChildrenSmaller,fixed_exactCommonCutoffLayer⟩
+
+#print axioms fixed_exactNamedLowChildMembership
+#print axioms fixed_exactCommonCutoffNonemptyStep
+#print axioms fixed_exactCommonCutoffChildrenSmaller
+#print axioms fixed_exactCommonCutoffLayer
+#print axioms fixed_fullActualNamedBitFamilyCommonCutoffStep
+
+end LogicLineages.PermittedControl.StatementChecks
