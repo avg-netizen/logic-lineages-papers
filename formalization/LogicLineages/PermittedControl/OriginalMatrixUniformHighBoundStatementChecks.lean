@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PermittedControl.OriginalMatrixUniformHighBoundTargets
+import LogicLineages.PermittedControl.OriginalMatrixUniformHighBoundProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalMatrixUniformHighBound : OriginalMatrixUniformHighBound.ExactUniformHighBound :=
+  OriginalMatrixUniformHighBound.exactUniformHighBound
+
+#print axioms fixed_exactOriginalMatrixUniformHighBound
+
+end LogicLineages.PermittedControl.StatementChecks
