@@ -87,14 +87,16 @@ theorem exact_OpenCoverAuxFragmentInductionStep : ExactOpenCoverAuxFragmentInduc
     have oldAtSucc := moveForwardWindowKey P c r q (suc prior) eq before
     have typed := exact_OpenCoverLambdaWindowForwardNonRecursive s B T body β Δ c prior r noLambda noAux oldAtSucc
     obtain ⟨eq⟩ := eq
-    rw [goal,windowRename]
+    change Nonempty (Derivation body Δ ((windowAt Q ctx result raw).relabel j))
+    rw [windowRename]
     exact moveForwardWindowKey Q c r (suc prior) q ⟨symm eq⟩ typed
   · intro β j Δ dom cod fn arg keep _ packing fnSmall argSmall fnAccepted argAccepted
     have h := renameInto earlier j Δ keep
     rw [forwardBelowRename] at h
     have before := renameInto old j Δ keep
     rw [windowRename] at before
-    rw [goal,windowRename]
+    change Nonempty (Derivation body Δ ((windowAt Q ctx result raw).relabel j))
+    rw [windowRename]
     exact atAuxKey s B T (ctx.relabel j) (raw.relabel j) (result.relabel j) dom cod fn arg
       packing fnSmall argSmall fnAccepted argAccepted h before
 

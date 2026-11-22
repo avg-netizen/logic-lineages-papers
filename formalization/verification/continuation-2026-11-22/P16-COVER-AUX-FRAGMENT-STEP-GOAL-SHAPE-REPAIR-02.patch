@@ -1,0 +1,10 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentInductionStepProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentInductionStepProof.lean
+@@ -90 +90,2 @@
+-    rw [goal,windowRename]
++    change Nonempty (Derivation body Δ ((windowAt Q ctx result raw).relabel j))
++    rw [windowRename]
+@@ -97 +98,2 @@
+-    rw [goal,windowRename]
++    change Nonempty (Derivation body Δ ((windowAt Q ctx result raw).relabel j))
++    rw [windowRename]
