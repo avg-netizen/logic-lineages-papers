@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroClassCommonTailTargets
+import LogicLineages.PermittedControl.ActualZeroClassCommonTailProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualZeroClassCommonTail :
+    ActualZeroClassCommonTail.FullActualZeroClassCommonTail :=
+  ActualZeroClassCommonTail.fullActualZeroClassCommonTail
+
+#print axioms fixed_actualZeroClassCommonTail
+
+end LogicLineages.PermittedControl.StatementChecks

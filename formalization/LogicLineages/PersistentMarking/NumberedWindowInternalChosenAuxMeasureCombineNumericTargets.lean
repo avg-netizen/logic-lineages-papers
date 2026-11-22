@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalChosenAuxMeasureCombineDefinitions
+public import LogicLineages.PersistentMarking.NumberedWindowInternalAuxMeasureMemoTargets
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalChosenAuxMeasureCombineNumericTargets
+open NumberedWindowInternalChosenAuxMeasureCombine
+open NumberedWindowInternalAuxMeasureMemoTargets (CombineCalibrated)
+
+/-- The selected literal AST has the original combine value on every
+two natural input codes, not merely reachable child measure reports. -/
+def ExactChosenAuxMeasureCombine : Prop := CombineCalibrated chosenCombine
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalChosenAuxMeasureCombineNumericTargets
