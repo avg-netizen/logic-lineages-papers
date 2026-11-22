@@ -89,7 +89,15 @@ private theorem signedCalibrates (values : List Nat) (e : Expression) (out : Nat
 private theorem packAffineCalibrates (z : Int) :
     packAffine z = packResult (baseResult (if 0 ≤ z then some z.toNat else none)) := by
   cases z with
-  | ofNat n => cases n <;> simp [packAffine,Int.sign,baseResult,packResult]
+  | ofNat n =>
+      cases n with
+      | zero => simp [packAffine,Int.sign,baseResult,packResult]
+      | succ n =>
+          have nonneg : 0 ≤ (n : Int) + 1 := by omega
+          have cast : (n : Int) + 1 = ((n + 1 : Nat) : Int) := by omega
+          have absolute : ((n : Int) + 1).natAbs = n + 1 := by
+            rw [cast,Int.natAbs_natCast]
+          simp [packAffine,Int.sign,baseResult,packResult,nonneg,absolute]
   | negSucc n => simp [packAffine,Int.sign,baseResult,packResult]
 
 private theorem identityValueCalibrates (mu : NONote) (x y : Nat) :
@@ -118,7 +126,10 @@ private theorem coreCalibrates (f : Nat → Nat) (values : List Nat) (g : Gate) 
       | collapse w => exact packBaseCalibrates _
   | field g =>
       cases g with
-      | iterate k s o => exact packFieldCalibrates _
+      | iterate k s o =>
+          change packField (closedOrdinaryValueField f (0,k,0,0) (bank values s)) =
+            packResult (fieldResult (closedOrdinaryValueField f (0,k,0,0) (bank values s)))
+          exact packFieldCalibrates (closedOrdinaryValueField f (0,k,0,0) (bank values s))
       | entry P s o =>
           cases P with
           | proper lam mu => exact packFieldCalibrates _

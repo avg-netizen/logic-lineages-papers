@@ -1,0 +1,34 @@
+{
+  "status": "two narrow calibration proof-only repairs, not native checked by author",
+  "failed_source_remote_commit": "3c8c62d48a38b792aba8f0c04ef7a811fddda267",
+  "failed_exact_gate_receipt": "1795353660577740005-8",
+  "failed_original_native_log_sha256": "f1469782d39360150f411cdbdf59a48bf8faf85bc1e4d5511c63bcfbaee1e144",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadCalibrationProof.lean:92:12: error: unsolved goals\ncase ofNat.succ\nn\u271d : \u2115\n\u22a2 (\u2191n\u271d + 1).natAbs + 4 =\n    match\n      match if 0 \u2264 \u2191n\u271d + 1 then some (n\u271d + 1) else none with\n      | none => Except.error OriginalPrintedCircuitSequential.Failure.rejectedBase\n      | some value => Except.ok value with\n    | Except.error OriginalPrintedCircuitSequential.Failure.rejectedBase => 1\n    | Except.error OriginalPrintedCircuitSequential.Failure.invalidField => 2\n    | Except.error OriginalPrintedCircuitSequential.Failure.missedField => 3\n    | Except.ok v => v + 4\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadCalibrationProof.lean:121:25: error: Type mismatch\n  packFieldCalibrates ?m.103\nhas type\n  packField ?m.103 = packResult (fieldResult ?m.103)\nbut is expected to have type\n  readCore f (values, encodeGate (Gate.field (OriginalNaturalFieldGates.Gate.iterate k s o))) =\n    packResult (Gate.read f (bank values) (Gate.field (OriginalNaturalFieldGates.Gate.iterate k s o)))",
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-READ-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "58268cff3253b519ae4d1a9bdefa37f154995eed124b2650949524e1f56bf7b7",
+  "previous_repair_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-READ-REPAIR-01.json",
+  "previous_repair_manifest_sha256": "d4b1f68f2edc54476f28ba4513888b0dd95bd1b8c21e1ba0ec7b80c36397d52d",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadCalibrationProof.lean",
+  "failed_proof_sha256": "c21ecd380075eba10602f4a67e09071d7aff64c580e4173a7d26381f24c91218",
+  "repaired_proof_sha256": "cdcb84e0a52c9105ab563456c898cb534ff42acd283b92230dbf85fd0a291d4d",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-READ-REPAIR-02.patch",
+  "patch_sha256": "43652e17831d83ca56574b1473f87baf326d8127deebf846448dfbf7a5c1600e",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadEffectiveProof.lean": "914ec7379760045404f7295c37548db0c2359a1bcba4ff01076a3fad06a702bb",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadPrimitiveProof.lean": "38005c5539736dffb709a44a5f3ed6bfa568c72b143705a6959b2a074165ba66",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadStatementChecks.lean": "908af3a1fd3c29d11cf2505f1a860bcf7258c27512552a8f9c1c5c2dc8d07ab1",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadTargets.lean": "2f243d8089c0845c63e67081a9fa026ac2f690c0ff10a56ab315160d1b081fbe",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-CIRCUIT-NUMERIC-READ-SOURCE-MAP.md": "cf5c580529b8657afb16a34cb1d8316f9f40e437f3c34eaa993cd201cab30b1e"
+  },
+  "static_closure_unchanged": {
+    "target_local": 146,
+    "target_external": 31,
+    "primitive_local": 220,
+    "primitive_external": 37,
+    "effective_local": 258,
+    "effective_external": 38,
+    "gate_local": 260,
+    "gate_external": 38
+  },
+  "scope": "Eliminate the positive ofNat successor literal sign/absolute cast obligation using actual nonnegativity and cast equality; expose the same literal closed fixed-iterate value reader on both sides. Scope, numerics, target, tested effectivity and Primitive repair unchanged."
+}

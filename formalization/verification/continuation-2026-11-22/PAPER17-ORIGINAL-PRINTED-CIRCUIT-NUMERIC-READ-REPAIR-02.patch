@@ -1,0 +1,19 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadCalibrationProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericReadCalibrationProof.lean
+@@ -92 +92,9 @@
+-  | ofNat n => cases n <;> simp [packAffine,Int.sign,baseResult,packResult]
++  | ofNat n =>
++      cases n with
++      | zero => simp [packAffine,Int.sign,baseResult,packResult]
++      | succ n =>
++          have nonneg : 0 ≤ (n : Int) + 1 := by omega
++          have cast : (n : Int) + 1 = ((n + 1 : Nat) : Int) := by omega
++          have absolute : ((n : Int) + 1).natAbs = n + 1 := by
++            rw [cast,Int.natAbs_natCast]
++          simp [packAffine,Int.sign,baseResult,packResult,nonneg,absolute]
+@@ -121 +129,4 @@
+-      | iterate k s o => exact packFieldCalibrates _
++      | iterate k s o =>
++          change packField (closedOrdinaryValueField f (0,k,0,0) (bank values s)) =
++            packResult (fieldResult (closedOrdinaryValueField f (0,k,0,0) (bank values s)))
++          exact packFieldCalibrates (closedOrdinaryValueField f (0,k,0,0) (bank values s))
