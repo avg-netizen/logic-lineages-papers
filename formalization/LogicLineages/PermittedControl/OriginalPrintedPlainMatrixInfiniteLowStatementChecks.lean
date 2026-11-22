@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixInfiniteLowTargets
+import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixInfiniteLowProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedPlainInfiniteLow :
+    OriginalPrintedPlainMatrixInfiniteLow.ExactPrintedPlainInfiniteLow :=
+  OriginalPrintedPlainMatrixInfiniteLow.exactPrintedPlainInfiniteLow
+
+theorem fixed_exactOriginalPrintedPlainResidualOperands :
+    OriginalPrintedPlainMatrixInfiniteLow.ExactPrintedPlainResidualOperands :=
+  OriginalPrintedPlainMatrixInfiniteLow.exactPrintedPlainResidualOperands
+
+theorem fixed_fullOriginalPrintedPlainMatrixInfiniteLow :
+    OriginalPrintedPlainMatrixInfiniteLow.FullOriginalPrintedPlainMatrixInfiniteLow :=
+  ⟨fixed_exactOriginalPrintedPlainInfiniteLow,fixed_exactOriginalPrintedPlainResidualOperands⟩
+
+#print axioms fixed_exactOriginalPrintedPlainInfiniteLow
+#print axioms fixed_exactOriginalPrintedPlainResidualOperands
+#print axioms fixed_fullOriginalPrintedPlainMatrixInfiniteLow
+
+end LogicLineages.PermittedControl.StatementChecks
