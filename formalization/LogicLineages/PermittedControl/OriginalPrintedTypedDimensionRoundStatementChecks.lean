@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedTypedDimensionRoundTargets
+import LogicLineages.PermittedControl.OriginalPrintedTypedDimensionRoundProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedTypedDimensionRound
+
+theorem fixed_exactOriginalPrintedTypedDimensionRound : ExactOriginalPrintedTypedDimensionRound :=
+  exactOriginalPrintedTypedDimensionRound
+
+#print axioms fixed_exactOriginalPrintedTypedDimensionRound
+
+end LogicLineages.PermittedControl.StatementChecks
