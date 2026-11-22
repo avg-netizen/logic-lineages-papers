@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PermittedControl.SignedCongruenceMatrixLowStripsTargets
+import LogicLineages.PermittedControl.SignedCongruenceMatrixLowStripsCodeProof
+import LogicLineages.PermittedControl.SignedCongruenceMatrixLowStripsSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_signedCongruenceMatrixLowStripsCodeExact : SignedCongruenceMatrixLowStrips.CodeExact :=
+  SignedCongruenceMatrixLowStrips.codeExact
+
+theorem fixed_signedCongruenceMatrixLowStripsResidualRanks : SignedCongruenceMatrixLowStrips.ResidualRanks :=
+  SignedCongruenceMatrixLowStrips.residualRanks
+
+theorem fixed_actualSignedCongruenceMatrixLowStrips : SignedCongruenceMatrixLowStrips.GuardedLowMatrix :=
+  SignedCongruenceMatrixLowStrips.guardedLowMatrix
+
+theorem fixed_fullSignedCongruenceMatrixLowStrips : SignedCongruenceMatrixLowStrips.FullSignedCongruenceMatrixLowStrips :=
+  ⟨fixed_signedCongruenceMatrixLowStripsCodeExact,fixed_signedCongruenceMatrixLowStripsResidualRanks,
+    fixed_actualSignedCongruenceMatrixLowStrips⟩
+
+#print axioms fixed_signedCongruenceMatrixLowStripsCodeExact
+#print axioms fixed_signedCongruenceMatrixLowStripsResidualRanks
+#print axioms fixed_actualSignedCongruenceMatrixLowStrips
+#print axioms fixed_fullSignedCongruenceMatrixLowStrips
+
+end LogicLineages.PermittedControl.StatementChecks

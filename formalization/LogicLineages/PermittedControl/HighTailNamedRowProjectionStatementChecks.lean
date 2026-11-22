@@ -1,0 +1,28 @@
+module
+public import LogicLineages.PermittedControl.HighTailNamedRowProjectionTargets
+import LogicLineages.PermittedControl.HighTailNamedRowProjectionCodeProof
+import LogicLineages.PermittedControl.HighTailNamedRowProjectionSupportProof
+import LogicLineages.PermittedControl.HighTailNamedRowProjectionSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_highTailNamedRowProjectionCodeExact : HighTailNamedRowProjection.CodeExact :=
+  HighTailNamedRowProjection.codeExact
+
+theorem fixed_highTailNamedRowProjectionOutputSupport : HighTailNamedRowProjection.OutputSupport :=
+  HighTailNamedRowProjection.outputSupport
+
+theorem fixed_actualHighTailNamedRowProjection : HighTailNamedRowProjection.ActualProjection :=
+  HighTailNamedRowProjection.actualProjection
+
+theorem fixed_fullHighTailNamedRowProjection : HighTailNamedRowProjection.FullHighTailNamedRowProjection :=
+  ⟨fixed_highTailNamedRowProjectionCodeExact,fixed_highTailNamedRowProjectionOutputSupport,
+    fixed_actualHighTailNamedRowProjection⟩
+
+#print axioms fixed_highTailNamedRowProjectionCodeExact
+#print axioms fixed_highTailNamedRowProjectionOutputSupport
+#print axioms fixed_actualHighTailNamedRowProjection
+#print axioms fixed_fullHighTailNamedRowProjection
+
+end LogicLineages.PermittedControl.StatementChecks

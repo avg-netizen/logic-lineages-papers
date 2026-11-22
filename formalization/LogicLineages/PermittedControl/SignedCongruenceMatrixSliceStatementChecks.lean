@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PermittedControl.SignedCongruenceMatrixSliceTargets
+import LogicLineages.PermittedControl.SignedCongruenceMatrixSliceCodeProof
+import LogicLineages.PermittedControl.SignedCongruenceMatrixSliceSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_signedCongruenceMatrixSliceCodeExact : SignedCongruenceMatrixSlice.CodeExact :=
+  SignedCongruenceMatrixSlice.codeExact
+
+theorem fixed_signedCongruenceMatrixSliceResidualRanks : SignedCongruenceMatrixSlice.ResidualRanks :=
+  SignedCongruenceMatrixSlice.residualRanks
+
+theorem fixed_actualSignedCongruenceMatrixSlice : SignedCongruenceMatrixSlice.ActualJointSlice :=
+  SignedCongruenceMatrixSlice.actualJointSlice
+
+theorem fixed_fullSignedCongruenceMatrixSlice : SignedCongruenceMatrixSlice.FullSignedCongruenceMatrixSlice :=
+  ⟨fixed_signedCongruenceMatrixSliceCodeExact,fixed_signedCongruenceMatrixSliceResidualRanks,
+    fixed_actualSignedCongruenceMatrixSlice⟩
+
+#print axioms fixed_signedCongruenceMatrixSliceCodeExact
+#print axioms fixed_signedCongruenceMatrixSliceResidualRanks
+#print axioms fixed_actualSignedCongruenceMatrixSlice
+#print axioms fixed_fullSignedCongruenceMatrixSlice
+
+end LogicLineages.PermittedControl.StatementChecks

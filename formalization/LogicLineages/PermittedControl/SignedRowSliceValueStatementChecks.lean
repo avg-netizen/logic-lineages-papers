@@ -1,0 +1,26 @@
+module
+public import LogicLineages.PermittedControl.SignedRowSliceValueTargets
+import LogicLineages.PermittedControl.SignedRowSliceValueSplitProof
+import LogicLineages.PermittedControl.SignedRowSliceValueProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_signedRowSliceSplitAndRejoin : SignedRowSliceValue.SplitAndRejoin :=
+  SignedRowSliceValue.splitAndRejoin
+
+theorem fixed_signedRowSliceExactValueAtHit : SignedRowSliceValue.ExactValueAtHit :=
+  SignedRowSliceValue.exactValueAtHit
+
+theorem fixed_signedRowSliceComparisonsAtHit : SignedRowSliceValue.ComparisonsAtHit :=
+  SignedRowSliceValue.comparisonsAtHit
+
+theorem fixed_fullSignedRowSliceValue : SignedRowSliceValue.FullSignedRowSliceValue :=
+  ⟨fixed_signedRowSliceSplitAndRejoin,fixed_signedRowSliceExactValueAtHit,fixed_signedRowSliceComparisonsAtHit⟩
+
+#print axioms fixed_signedRowSliceSplitAndRejoin
+#print axioms fixed_signedRowSliceExactValueAtHit
+#print axioms fixed_signedRowSliceComparisonsAtHit
+#print axioms fixed_fullSignedRowSliceValue
+
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,16 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseCoverOccurrenceSyntaxProof.lean:56:35: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseCoverOccurrenceSyntaxProof.lean:87:9: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Nonempty.casesOn` can only eliminate into `Prop`
+
+C : Program 3
+s : Settings
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+seed k vertices : OTerm α
+member : Nonempty (Derivation body Γ (memberGraph vertices k))
+inst : instantiate (coverBinder C s seed k) (emb vertices) = coverRow C s seed k vertices
+cover : Nonempty (Derivation body Γ (unary (scratchVertices C s) vertices seed))
+⊢ Derivation body Γ (coverRow C s seed k vertices)

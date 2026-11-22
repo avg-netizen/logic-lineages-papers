@@ -1,0 +1,9 @@
+# Paper 17 simultaneous matrix of original signed congruences
+
+The source forms Presburger conditions for the current congruences before eliminating a raw coordinate. This supplier forms one conjunction of the original signed modular rows on the same actual layout. The shared names refer to the same raw valuation in every row. Repeated rows and all of their original weighted operand occurrences remain present. [Arithmetic, lines 231–247 and 255–266](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex#L231) · [Frozen comparator](../../LogicLineages/PermittedControl/SignedCongruenceMatrixTargets.lean)
+
+The program emits one exact shared request tape and the literal radix-six conjunction. It rejects precisely a supplied zero modulus, and the literal code comparison uses canonical original operands. The empty row list yields truth. The separate tail program computes a genuine maximum of the original effective row tails. [Code proof](../../LogicLineages/PermittedControl/SignedCongruenceMatrixCodeProof.lean) · [Tail proof](../../LogicLineages/PermittedControl/SignedCongruenceMatrixTailProof.lean)
+
+Formula truth under the tied valuation is equivalent to an ordered list of actual read results and signed divisibility for every original row. Each inner list is the original ordered set of reads, and the outer list keeps the original row order. For every row, the proper-field and high-tail guards apply only to its own original used ranks. [Semantic proof](../../LogicLineages/PermittedControl/SignedCongruenceMatrixSemanticProof.lean) · [Exact shared-layout supplier](PAPER17-SHARED-RANK-RESIDUE-ROW-SOURCE-MAP.md)
+
+The scope is the simultaneous signed-congruence fragment before elimination. Other prepared formula rows and guards, optional halves, the joint selected raw coordinate existential, and dimension-reducing recursion remain open.

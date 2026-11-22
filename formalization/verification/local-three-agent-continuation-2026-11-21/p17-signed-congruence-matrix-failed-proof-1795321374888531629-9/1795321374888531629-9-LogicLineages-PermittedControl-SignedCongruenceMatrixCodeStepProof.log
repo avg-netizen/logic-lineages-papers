@@ -1,0 +1,10 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/SignedCongruenceMatrixCodeStepProof.lean:27:36: error: Application type mismatch: The argument
+  Primrec.to₂ (Primrec.option_map rest (Primrec.to₂ both))
+has type
+  Primrec₂ fun a b => Option.map (fun b_1 => 6 * Nat.pair ((a, b), b_1).1.2.2 ((a, b), b_1).2 + 4) (a, b).1.2.2
+but is expected to have type
+  Primrec₂ fun p head => do
+    let rest ← p.2.2
+    pure (6 * Nat.pair head.2 rest + 4)
+in the application
+  Primrec.option_bind compile (Primrec.to₂ (Primrec.option_map rest (Primrec.to₂ both)))

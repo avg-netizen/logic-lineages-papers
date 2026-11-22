@@ -1,0 +1,22 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/MixedNamedResidueRowCodeProof.lean:27:76: error: unexpected token ')'; expected ':=' or '|'
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/MixedNamedResidueRowCodeProof.lean:26:22: error: Type mismatch
+  fun q => (1, 2 * q.1 - 1, -↑q.2, [(1, 0, 1, 0, 0)])
+has type
+  (q : Args) → ?m.151 q × ℕ × ℤ × List (?m.152 q × ?m.153 q × ?m.154 q × ?m.155 q × ?m.156 q)
+but is expected to have type
+  NormalForm.Code.AtomData
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/MixedNamedResidueRowCodeProof.lean:26:7: error: Missing cases:
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/MixedNamedResidueRowCodeProof.lean:20:60: error: unsolved goals
+Args : Type := ℕ × ℕ
+modulus : Primrec fun q => 2 * q.1 - 1
+offset : Primrec fun q => -↑q.2
+⊢ Primrec₂ residueAtomCode
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/MixedNamedResidueRowCodeProof.lean:79:58: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/MixedNamedResidueRowCodeProof.lean:90:24: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/MixedNamedResidueRowCodeProof.lean:90:24: warning: 'rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`

@@ -1,0 +1,28 @@
+module
+public import LogicLineages.PermittedControl.MixedNamedResidueRowTargets
+import LogicLineages.PermittedControl.MixedNamedResidueRowCodeProof
+import LogicLineages.PermittedControl.MixedNamedResidueRowFormulaProof
+import LogicLineages.PermittedControl.MixedNamedResidueRowSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_mixedNamedResidueRowCodeExact : MixedNamedResidueRow.CodeExact :=
+  MixedNamedResidueRow.codeExact
+
+theorem fixed_mixedNamedResidueRowShapeAndSupport : MixedNamedResidueRow.ShapeAndSupport :=
+  MixedNamedResidueRow.shapeAndSupport
+
+theorem fixed_mixedNamedResidueRowActual : MixedNamedResidueRow.ActualNamedRow :=
+  MixedNamedResidueRow.actualNamedRow
+
+theorem fixed_fullMixedNamedResidueRow : MixedNamedResidueRow.FullMixedNamedResidueRow :=
+  ⟨fixed_mixedNamedResidueRowCodeExact,fixed_mixedNamedResidueRowShapeAndSupport,
+    fixed_mixedNamedResidueRowActual⟩
+
+#print axioms fixed_mixedNamedResidueRowCodeExact
+#print axioms fixed_mixedNamedResidueRowShapeAndSupport
+#print axioms fixed_mixedNamedResidueRowActual
+#print axioms fixed_fullMixedNamedResidueRow
+
+end LogicLineages.PermittedControl.StatementChecks

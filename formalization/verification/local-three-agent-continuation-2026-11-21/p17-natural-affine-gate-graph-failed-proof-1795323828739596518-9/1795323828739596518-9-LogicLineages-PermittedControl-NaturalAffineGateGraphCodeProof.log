@@ -1,0 +1,49 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/NaturalAffineGateGraphCodeProof.lean:43:33: error: unsolved goals
+output : ℕ
+e : Expression
+⊢ 6 *
+        Nat.pair
+          (6 * Encodable.encode (0, 0, e.1, (-1, 0, output, 0, 0) :: List.map (fun t => (t.1, 0, t.2, 0, 0)) e.2) + 2)
+          (6 * Encodable.encode (0, 0, -e.1, (1, 0, output, 0, 0) :: List.map (fun t => (-t.1, 0, t.2, 0, 0)) e.2) +
+            2) +
+      4 =
+    6 *
+        Nat.pair
+          (6 *
+              Encodable.encode
+                (0, 0, e.1,
+                  (-1, 0, output, 0, 0) ::
+                    List.map
+                      ((fun a =>
+                          (a.1,
+                            match a.2 with
+                            | NormalForm.Summand.variable i => (0, i, 0, 0)
+                            | NormalForm.Summand.phi i e => (1, i, e, 0)
+                            | NormalForm.Summand.hyperPhi i e h => (2, i, e, h))) ∘
+                        fun t => (t.1, NormalForm.Summand.variable t.2))
+                      e.2) +
+            2)
+          (6 *
+              Encodable.encode
+                (0, 0, -e.1,
+                  (1, 0, output, 0, 0) ::
+                    List.map
+                      ((fun a =>
+                          (a.1,
+                            match a.2 with
+                            | NormalForm.Summand.variable i => (0, i, 0, 0)
+                            | NormalForm.Summand.phi i e => (1, i, e, 0)
+                            | NormalForm.Summand.hyperPhi i e h => (2, i, e, h))) ∘
+                        fun t => (-t.1, NormalForm.Summand.variable t.2))
+                      e.2) +
+            2) +
+      4
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/NaturalAffineGateGraphCodeProof.lean:47:71: warning: This simp argument is unused:
+  Function.comp_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [graphCode, ̲graph, ̲lowerData, ̲upperData, ̲lowerRow, ̲upperRow, ̲NormalForm.Formula.encode,
+      NormalForm.Atom.data, ̲NormalForm.rowData, ̲List.map_cons, ̲List.map_map,F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵,̵
+  ̵  ̵ ̵ ̵NormalForm.Summand.data]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

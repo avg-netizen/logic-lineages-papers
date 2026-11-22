@@ -1,0 +1,29 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseSeedBoundInductionProof.lean:24:5: error: unknown namespace `NumberedWindowInternalSparseRoundWindowMotiveProof`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseSeedBoundInductionProof.lean:68:6: error(lean.unknownIdentifier): Unknown identifier `roundRename`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseSeedBoundInductionProof.lean:59:59: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+E : Program 4
+out fuel vertices ctx ty seed : OTerm α
+old : Nonempty (Derivation body Γ (seedAt E fuel vertices ctx ty seed))
+run : Nonempty (Derivation body Γ (roundGraph E out (suc fuel) vertices ctx ty seed))
+β : Type
+j : α → β
+Δ : List (ID1Completion.InternalCalculus.Formula β)
+before : OTerm β
+keep : ∀ r ∈ Γ, Formula.relabel j r ∈ Δ
+prior :
+  Nonempty
+    (Derivation body Δ
+      (programGraph (rounds E) before
+        (roundsTape (Term.relabel j fuel) (Term.relabel j vertices) (Term.relabel j ctx) (Term.relabel j ty)
+          (Term.relabel j seed))))
+ih :
+  Nonempty
+    (Derivation body Δ
+      (seedAt E (Term.relabel j fuel) (Term.relabel j vertices) (Term.relabel j ctx) (Term.relabel j ty)
+        (Term.relabel j seed)))
+yes : Derivation body Δ (memberGraph before (Term.relabel j seed))
+current : Nonempty (Derivation body Δ (Formula.relabel j (roundGraph E out (suc fuel) vertices ctx ty seed)))
+⊢ Nonempty (Derivation body Δ (memberGraph (Term.relabel j out) (Term.relabel j seed)))

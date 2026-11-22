@@ -1,0 +1,82 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/MixedRankNamedResidueRowCompilerProof.lean:74:4: error: unsolved goals
+case pos
+m : ℕ
+c : ℤ
+terms : List WeightedOperand
+cell : Cell
+tail : List Cell
+ih :
+  List.foldr
+      (fun cell tail =>
+        if keep m (c + residueVectorCode (List.map encodeWeighted terms) (toVector cell)) = true then
+          6 * Nat.pair (clauseCode m cell) tail + 5
+        else tail)
+      1 tail =
+    (List.foldr
+        (fun cell tail =>
+          if (fun cell => keep m (c + residueVector terms (toVector cell))) cell = true then
+            (clause m cell).disjunction tail
+          else tail)
+        NormalForm.Formula.falsity tail).encode
+selected : keep m (c + residueVector terms (toVector cell)) = true
+⊢ 6 *
+        Nat.pair (clause m cell).encode
+          (List.foldr
+            (fun cell tail =>
+              if keep m (c + residueVector terms (toVector cell)) = true then
+                6 * Nat.pair (clause m cell).encode tail + 5
+              else tail)
+            1 tail) +
+      5 =
+    6 *
+        Nat.pair (clause m cell).encode
+          (List.foldr
+              (fun cell tail =>
+                if keep m (c + residueVector terms (toVector cell)) = true then (clause m cell).disjunction tail
+                else tail)
+              NormalForm.Formula.falsity tail).encode +
+      5
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/MixedRankNamedResidueRowCompilerProof.lean:75:4: error: unsolved goals
+case neg
+m : ℕ
+c : ℤ
+terms : List WeightedOperand
+cell : Cell
+tail : List Cell
+ih :
+  List.foldr
+      (fun cell tail =>
+        if keep m (c + residueVectorCode (List.map encodeWeighted terms) (toVector cell)) = true then
+          6 * Nat.pair (clauseCode m cell) tail + 5
+        else tail)
+      1 tail =
+    (List.foldr
+        (fun cell tail =>
+          if (fun cell => keep m (c + residueVector terms (toVector cell))) cell = true then
+            (clause m cell).disjunction tail
+          else tail)
+        NormalForm.Formula.falsity tail).encode
+selected : ¬keep m (c + residueVector terms (toVector cell)) = true
+⊢ List.foldr
+      (fun cell tail =>
+        if keep m (c + residueVector terms (toVector cell)) = true then 6 * Nat.pair (clauseCode m cell) tail + 5
+        else tail)
+      1 tail =
+    (List.foldr
+        (fun cell tail =>
+          if keep m (c + residueVector terms (toVector cell)) = true then (clause m cell).disjunction tail else tail)
+        NormalForm.Formula.falsity tail).encode
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/MixedRankNamedResidueRowCompilerProof.lean:74:77: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp only [if_pos selected, ̲NormalForm.Formula.encode, ̲clauseCodeLiteral,̵i̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/MixedRankNamedResidueRowCompilerProof.lean:75:33: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp only [if_neg selected,̵i̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

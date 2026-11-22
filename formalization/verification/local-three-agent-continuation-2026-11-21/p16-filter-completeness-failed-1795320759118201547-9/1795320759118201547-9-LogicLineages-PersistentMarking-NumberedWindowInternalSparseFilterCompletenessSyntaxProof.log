@@ -1,0 +1,49 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFilterCompletenessSyntaxProof.lean:22:5: error: unknown namespace `NumberedWindowInternalSparseScratchMembershipOpenSyntaxProof`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFilterCompletenessSyntaxProof.lean:25:5: error: unknown namespace `NumberedWindowInternalSparsePathSuccessfulAdvanceGraphSyntaxProof`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFilterCompletenessSyntaxProof.lean:43:6: error(lean.unknownIdentifier): Unknown identifier `graphRename`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFilterCompletenessSyntaxProof.lean:40:105: error: unsolved goals
+α β : Type
+E : Program 4
+vertices seen ctx ty k : OTerm α
+j : α → β
+⊢ (Formula.relabel j (memberGraph vertices k) ⊓ Formula.relabel j (scanGraph E seen ctx ty k)).imp
+      (Formula.relabel j (hitGraph E vertices seen ctx ty k)) =
+    completeAt E (Term.relabel j vertices) (Term.relabel j seen) (Term.relabel j ctx) (Term.relabel j ty)
+      (Term.relabel j k)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFilterCompletenessSyntaxProof.lean:48:81: error(lean.unknownIdentifier): Unknown identifier `graph5Subst`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFilterCompletenessSyntaxProof.lean:47:100: error: unsolved goals
+α β : Type
+E : Program 4
+vertices seen ctx ty k : OTerm α
+ts : α → OTerm β
+⊢ (memberGraph (Term.subst vertices ts) (Term.subst k ts) ⊓
+        scanGraph E (Term.subst seen ts) (Term.subst ctx ts) (Term.subst ty ts) (Term.subst k ts) ⟹
+      BoundedFormula.subst
+        (ID1Completion.InternalControlGraph.programGraph
+          (NumberedWindowInternalSparseFilterInclusionSyntaxProof.memberOfPass E) (suc z) ![vertices, seen, ctx, ty, k])
+        fun a => emb (ts a)) =
+    Formula.imp
+      (memberGraph (Term.subst vertices ts) (Term.subst k ts) ⊓
+        scanGraph E (Term.subst seen ts) (Term.subst ctx ts) (Term.subst ty ts) (Term.subst k ts))
+      (ID1Completion.InternalControlGraph.programGraph
+        (NumberedWindowInternalSparseFilterInclusionSyntaxProof.memberOfPass E) (suc z)
+        ![Term.subst vertices ts, Term.subst seen ts, Term.subst ctx ts, Term.subst ty ts, Term.subst k ts])
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFilterCompletenessSyntaxProof.lean:48:93: warning: This simp argument is unused:
+  sucSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [completeAt, ̲impSubst, ̲conjunctionSubst, ̲memberSubst, ̲scanSubst, ̲hitGraph, ̲graph5Subst,s̵u̵c̵S̵u̵b̵s̵t̵,̵
+  ̲ ̲ ̲ ̲ ̲zSubst]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFilterCompletenessSyntaxProof.lean:48:102: warning: This simp argument is unused:
+  zSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [completeAt, ̲impSubst, ̲conjunctionSubst, ̲memberSubst, ̲scanSubst, ̲hitGraph, ̲graph5Subst,
+  ̲ ̲ ̲ ̲ ̲sucSubst,̵z̵S̵u̵b̵s̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFilterCompletenessSyntaxProof.lean:62:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

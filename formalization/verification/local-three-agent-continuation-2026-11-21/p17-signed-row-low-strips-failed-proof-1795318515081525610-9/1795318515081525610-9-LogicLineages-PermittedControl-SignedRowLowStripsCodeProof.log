@@ -1,0 +1,78 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/SignedRowLowStripsCodeProof.lean:39:11: error: Tactic `rfl` failed: The left-hand side
+  List.foldr
+    (fun item state =>
+      ((item, state).1,
+          sliceCode f
+            ((rank, bound, c, terms).1, (item, state).1, (rank, bound, c, terms).2.2.1,
+              (rank, bound, c, terms).2.2.2)) ::
+        (item, state).2)
+    [] []
+is not definitionally equal to the right-hand side
+  match (rank, bound, c, terms) with
+  | (rank, bound, c, terms) => List.map (fun a => (a, sliceCode f (rank, a, c, terms))) (List.range bound)
+
+case nil
+f : ℕ → ℕ
+hf : Computable f
+Input : Type := FamilyArgs × ℕ
+args : Computable Prod.fst
+literalRank : Computable fun p => p.1.1
+value : Computable Prod.snd
+row : Computable fun p => p.1.2.2
+result : Computable fun p => sliceCode f (p.1.1, p.2, p.1.2.2.1, p.1.2.2.2)
+build : Computable₂ fun p a => (a, sliceCode f (p.1, a, p.2.2.1, p.2.2.2))
+Fold : Type := FamilyArgs × ℕ × List Branch
+step : Computable₂ fun p q => (q.1, sliceCode f (p.1, q.1, p.2.2.1, p.2.2.2)) :: q.2
+bound✝ : Primrec fun p => p.2.1
+rank bound : ℕ
+c : ℤ
+terms : List WeightedCode
+⊢ List.foldr
+      (fun item state =>
+        ((item, state).1,
+            sliceCode f
+              ((rank, bound, c, terms).1, (item, state).1, (rank, bound, c, terms).2.2.1,
+                (rank, bound, c, terms).2.2.2)) ::
+          (item, state).2)
+      [] [] =
+    match (rank, bound, c, terms) with
+    | (rank, bound, c, terms) => List.map (fun a => (a, sliceCode f (rank, a, c, terms))) (List.range bound)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/SignedRowLowStripsCodeProof.lean:40:17: error: unsolved goals
+case cons
+f : ℕ → ℕ
+hf : Computable f
+Input : Type := FamilyArgs × ℕ
+args : Computable Prod.fst
+literalRank : Computable fun p => p.1.1
+value : Computable Prod.snd
+row : Computable fun p => p.1.2.2
+result : Computable fun p => sliceCode f (p.1.1, p.2, p.1.2.2.1, p.1.2.2.2)
+build : Computable₂ fun p a => (a, sliceCode f (p.1, a, p.2.2.1, p.2.2.2))
+Fold : Type := FamilyArgs × ℕ × List Branch
+step : Computable₂ fun p q => (q.1, sliceCode f (p.1, q.1, p.2.2.1, p.2.2.2)) :: q.2
+bound✝ : Primrec fun p => p.2.1
+rank bound : ℕ
+c : ℤ
+terms : List WeightedCode
+a : ℕ
+as : List ℕ
+ih :
+  List.foldr
+      (fun item state =>
+        ((item, state).1,
+            sliceCode f
+              ((rank, bound, c, terms).1, (item, state).1, (rank, bound, c, terms).2.2.1,
+                (rank, bound, c, terms).2.2.2)) ::
+          (item, state).2)
+      [] as =
+    match (rank, bound, c, terms) with
+    | (rank, bound, c, terms) => List.map (fun a => (a, sliceCode f (rank, a, c, terms))) (List.range bound)
+⊢ (a, sliceCode f (rank, a, c, terms)) :: List.map (fun a => (a, sliceCode f (rank, a, c, terms))) (List.range bound) =
+    List.map (fun a => (a, sliceCode f (rank, a, c, terms))) (List.range bound)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/SignedRowLowStripsCodeProof.lean:40:47: warning: This simp argument is unused:
+  List.map_cons
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵s̵t̵.̵f̵o̵l̵d̵r̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵m̵a̵p̵_̵c̵o̵n̵s̵,̵i̵h̵]̵[̲L̲i̲s̲t̲.̲f̲o̲l̲d̲r̲_̲c̲o̲n̲s̲,̲ ̲i̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

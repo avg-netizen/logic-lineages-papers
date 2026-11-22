@@ -1,0 +1,11 @@
+# Paper 17 signed residue formula at one raw rank
+
+The paper converts each current congruence into a Presburger condition on the original raw input modulo `2m`. Every occurrence at the same raw rank uses the same residue. This supplier treats one signed row with a constant and an ordered list of coordinate, ordinary-value, and count terms. [Arithmetic, lines 231–240](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex#L231)
+
+The emitter considers every `j < 2*m` in order. It retains the literal atom for `j` precisely when the signed table value is divisible by `m`. The original radix-six packet contains the singleton request for the raw coordinate at positive name `1`. The code is primitive recursive and rejects modulus zero. The literal code calibration is for canonical operand encodings. [Frozen comparator](../../LogicLineages/PermittedControl/MixedNamedResidueRowTargets.lean) · [Code proof](../../LogicLineages/PermittedControl/MixedNamedResidueRowCodeProof.lean)
+
+The formula consists of plain variables with support contained in the positive, duplicate-free request table. At a valuation with `ν 1 = ρ rank`, the unique atom that can hold represents the actual raw residue. The checked same-rank signed operand theorem produces every original read under the proper-field and combined-tail guards. Divisibility of the table value then agrees with divisibility of the actual signed sum. [Formula proof](../../LogicLineages/PermittedControl/MixedNamedResidueRowFormulaProof.lean) · [Actual-read proof](../../LogicLineages/PermittedControl/MixedNamedResidueRowSemanticProof.lean) · [Preceding signed operand row](PAPER17-MIXED-SAME-RANK-RESIDUE-SOURCE-MAP.md)
+
+The first gate rejected the parentheses in a local type annotation for the literal atom payload. The original failure and initial parameter-only spelling are preserved. The repaired gate passed all four named aliases with standard axioms. [Author pins](PAPER17-MIXED-NAMED-RESIDUE-ROW-AUTHOR-MANIFEST.json) · [Failed native edition](p17-mixed-named-residue-row-failed-proof-1795317424020051048-9/1795317424020051048-9.json)
+
+This supplier is for one high-tail raw rank. Multi-rank collation, optional halves, unprepared small-input strips across the matrix, and the complete printed arithmetic theorem remain separate obligations.

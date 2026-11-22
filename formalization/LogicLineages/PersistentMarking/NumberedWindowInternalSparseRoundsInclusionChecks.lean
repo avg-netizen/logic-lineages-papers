@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRoundsInclusionTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRoundsInclusionProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseRoundsInclusionChecks
+open NumberedWindowInternalSparseRoundsInclusionTargets
+
+theorem exact_RoundsInclusionFromPass : ExactRoundsInclusionFromPass :=
+  NumberedWindowInternalSparseRoundsInclusionProof.transport
+
+#print axioms exact_RoundsInclusionFromPass
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseRoundsInclusionChecks

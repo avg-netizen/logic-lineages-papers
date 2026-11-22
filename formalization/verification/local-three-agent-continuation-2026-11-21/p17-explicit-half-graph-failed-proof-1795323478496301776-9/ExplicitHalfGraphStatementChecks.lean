@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.ExplicitHalfGraphTargets
+import LogicLineages.PermittedControl.ExplicitHalfGraphCodeProof
+import LogicLineages.PermittedControl.ExplicitHalfGraphSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_explicitHalfGraphCodeExact : ExplicitHalfGraph.CodeExact := ExplicitHalfGraph.codeExact
+
+theorem fixed_explicitHalfNaturalGraph : ExplicitHalfGraph.NaturalGraph := ExplicitHalfGraph.naturalGraph
+
+theorem fixed_actualExplicitHalfExtension : ExplicitHalfGraph.ActualHalfExtension :=
+  ExplicitHalfGraph.actualHalfExtension
+
+theorem fixed_fullExplicitHalfGraph : ExplicitHalfGraph.FullExplicitHalfGraph :=
+  ⟨fixed_explicitHalfGraphCodeExact,fixed_explicitHalfNaturalGraph,fixed_actualExplicitHalfExtension⟩
+
+#print axioms fixed_explicitHalfGraphCodeExact
+#print axioms fixed_explicitHalfNaturalGraph
+#print axioms fixed_actualExplicitHalfExtension
+#print axioms fixed_fullExplicitHalfGraph
+
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,28 @@
+module
+public import LogicLineages.PermittedControl.SignedRowCoordinateSliceTargets
+import LogicLineages.PermittedControl.SignedRowCoordinateSliceCodeProof
+import LogicLineages.PermittedControl.SignedRowCoordinateSliceFailureProof
+import LogicLineages.PermittedControl.SignedRowCoordinateSliceHitProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_signedRowCoordinateSliceCodeExact : SignedRowCoordinateSlice.CodeExact :=
+  SignedRowCoordinateSlice.codeExact
+
+theorem fixed_signedRowCoordinateSliceFailureExact : SignedRowCoordinateSlice.FailureExact :=
+  SignedRowCoordinateSlice.failureExact
+
+theorem fixed_signedRowCoordinateSliceHitExact : SignedRowCoordinateSlice.HitExact :=
+  SignedRowCoordinateSlice.hitExact
+
+theorem fixed_fullSignedRowCoordinateSlice : SignedRowCoordinateSlice.FullSignedRowCoordinateSlice :=
+  ⟨fixed_signedRowCoordinateSliceCodeExact,fixed_signedRowCoordinateSliceFailureExact,
+    fixed_signedRowCoordinateSliceHitExact⟩
+
+#print axioms fixed_signedRowCoordinateSliceCodeExact
+#print axioms fixed_signedRowCoordinateSliceFailureExact
+#print axioms fixed_signedRowCoordinateSliceHitExact
+#print axioms fixed_fullSignedRowCoordinateSlice
+
+end LogicLineages.PermittedControl.StatementChecks

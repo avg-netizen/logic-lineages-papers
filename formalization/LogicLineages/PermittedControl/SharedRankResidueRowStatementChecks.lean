@@ -1,0 +1,33 @@
+module
+public import LogicLineages.PermittedControl.SharedRankResidueRowTargets
+import LogicLineages.PermittedControl.SharedRankResidueRowCodeProof
+import LogicLineages.PermittedControl.SharedRankResidueRowLayoutProof
+import LogicLineages.PermittedControl.SharedRankResidueRowSupportProof
+import LogicLineages.PermittedControl.SharedRankResidueRowSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_sharedRankResidueRowCodeExact : SharedRankResidueRow.CodeExact :=
+  SharedRankResidueRow.codeExact
+
+theorem fixed_sharedRankResidueCommonLayout : SharedRankResidueRow.CommonLayoutExact :=
+  SharedRankResidueRow.commonLayoutExact
+
+theorem fixed_sharedRankResidueFormulaSupport : SharedRankResidueRow.FormulaSupport :=
+  SharedRankResidueRow.formulaSupport
+
+theorem fixed_actualSharedRankResidueRow : SharedRankResidueRow.ActualRowAtLayout :=
+  SharedRankResidueRow.actualRowAtLayout
+
+theorem fixed_fullSharedRankResidueRow : SharedRankResidueRow.FullSharedRankResidueRow :=
+  ⟨fixed_sharedRankResidueRowCodeExact,fixed_sharedRankResidueCommonLayout,
+    fixed_sharedRankResidueFormulaSupport,fixed_actualSharedRankResidueRow⟩
+
+#print axioms fixed_sharedRankResidueRowCodeExact
+#print axioms fixed_sharedRankResidueCommonLayout
+#print axioms fixed_sharedRankResidueFormulaSupport
+#print axioms fixed_actualSharedRankResidueRow
+#print axioms fixed_fullSharedRankResidueRow
+
+end LogicLineages.PermittedControl.StatementChecks

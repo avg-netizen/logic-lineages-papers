@@ -1,0 +1,9 @@
+# Paper 17 pointwise simultaneous restriction of signed congruences
+
+The small-input branch fixes one original coordinate at a time and uses that same value throughout the matrix. This packet fixes one raw rank and value across the entire finite signed-congruence fragment. It leaves every other raw coordinate unbounded. [Arithmetic, lines 249–254](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex#L249) · [Frozen comparator](../../LogicLineages/PermittedControl/SignedCongruenceMatrixSliceTargets.lean)
+
+The program preserves each original modulus and computes the exact original one-row slice at that same raw coordinate. Its ordered result includes every row's actual invalid, miss, or hit status. A residual matrix is aligned with that list only when every source slot is an actual hit. The residual keeps each original modulus and row position and carries the exact remaining operands from the original row filter. [Code proof](../../LogicLineages/PermittedControl/SignedCongruenceMatrixSliceCodeProof.lean) · [Original pointwise signed row](PAPER17-SIGNED-ROW-COORDINATE-SLICE-SOURCE-MAP.md)
+
+Every actual source read excludes both closed-reading failure statuses at the selected rank. The original pointwise row equivalence then transfers the signed condition and actual reads. Induction carries all row slots at the same original valuation in both directions and proves that no residual operand still uses the selected raw rank. [Read proof](../../LogicLineages/PermittedControl/SignedCongruenceMatrixSliceReadProof.lean) · [Semantic proof](../../LogicLineages/PermittedControl/SignedCongruenceMatrixSliceSemanticProof.lean)
+
+This comparator applies at one fixed value. Enumeration below the common cutoff, joining with the joint high branch, and other source matrix guards remain separate.
