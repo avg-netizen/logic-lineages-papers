@@ -23,15 +23,11 @@ private theorem signedFromSyntax :
   have src : Primrec (fun p : A => p.2.2) := Primrec.snd.comp Primrec.snd
   exact staticPrimitive.comp (cfg.pair (width.pair (cleanupPrimitive.comp src)))
 
-private theorem modularFromRow :
-    Primrec (fun p : Nat × RawRow => weightedTailCode p.1 p.2.1.2 p.2.2.2) := by
-  let A := Nat × RawRow
-  have cfg : Primrec (Prod.fst : A → Nat) := Primrec.fst
-  have header : Primrec (fun p : A => p.2.1) := Primrec.fst.comp Primrec.snd
-  have source : Primrec (fun p : A => p.2.2) := Primrec.snd.comp Primrec.snd
-  have modulus : Primrec (fun p : A => p.2.1.2) := Primrec.snd.comp header
-  have terms : Primrec (fun p : A => p.2.2.2) := Primrec.snd.comp source
-  exact MixedSameRankResidue.codeExact.2.1.comp (cfg.pair (modulus.pair terms))
+private def modularCost (p : Nat × Nat × List WeightedCode) : Nat :=
+  weightedTailCode p.1 p.2.1 p.2.2
+
+private theorem modularCostPrimitive : Primrec modularCost :=
+  MixedSameRankResidue.codeExact.2.1
 
 private abbrev RawCostArgs := Nat × Nat × RawBitRow
 
@@ -41,16 +37,40 @@ private theorem sourceRowPrimitive : Primrec (fun p : RawCostArgs => p.2.2.1) :=
 private theorem tagPrimitive : Primrec (fun p : RawCostArgs => p.2.2.1.1.1) :=
   Primrec.fst.comp (Primrec.fst.comp sourceRowPrimitive)
 
-private theorem signedFromBit :
-    Primrec (fun p : RawCostArgs => staticCode p.1 p.2.1 (cleanupCode p.2.2.1.2)) := by
+private def signedArgs (p : RawCostArgs) : Nat × Nat × RawSyntax :=
+  (p.1,p.2.1,p.2.2.1.2)
+
+private theorem signedArgsPrimitive : Primrec signedArgs := by
   have cfg : Primrec (Prod.fst : RawCostArgs → Nat) := Primrec.fst
   have width : Primrec (fun p : RawCostArgs => p.2.1) := Primrec.fst.comp Primrec.snd
   have src : Primrec (fun p : RawCostArgs => p.2.2.1.2) := Primrec.snd.comp sourceRowPrimitive
-  exact signedFromSyntax.comp (cfg.pair (width.pair src))
+  exact cfg.pair (width.pair src)
+
+private def modularArgs (p : RawCostArgs) : Nat × Nat × List WeightedCode :=
+  (p.1,p.2.2.1.1.2,p.2.2.1.2.2)
+
+private theorem modularArgsPrimitive : Primrec modularArgs := by
+  have cfg : Primrec (Prod.fst : RawCostArgs → Nat) := Primrec.fst
+  have source : Primrec (fun p : RawCostArgs => p.2.2.1.2) := Primrec.snd.comp sourceRowPrimitive
+  have header : Primrec (fun p : RawCostArgs => p.2.2.1.1) := Primrec.fst.comp sourceRowPrimitive
+  have m : Primrec (fun p : RawCostArgs => p.2.2.1.1.2) := Primrec.snd.comp header
+  have terms : Primrec (fun p : RawCostArgs => p.2.2.1.2.2) := Primrec.snd.comp source
+  exact cfg.pair (m.pair terms)
+
+private theorem signedArgsLiteral (p : RawCostArgs) :
+    staticCode (signedArgs p).1 (signedArgs p).2.1 (cleanupCode (signedArgs p).2.2) =
+      staticCode p.1 p.2.1 (cleanupCode p.2.2.1.2) := rfl
+
+private theorem modularArgsLiteral (p : RawCostArgs) :
+    modularCost (modularArgs p) = weightedTailCode p.1 p.2.2.1.1.2 p.2.2.1.2.2 := rfl
+
+private theorem signedFromBit :
+    Primrec (fun p : RawCostArgs => staticCode p.1 p.2.1 (cleanupCode p.2.2.1.2)) :=
+  (signedFromSyntax.comp signedArgsPrimitive).of_eq signedArgsLiteral
 
 private theorem modularFromBit :
     Primrec (fun p : RawCostArgs => weightedTailCode p.1 p.2.2.1.1.2 p.2.2.1.2.2) :=
-  modularFromRow.comp (Primrec.fst.pair sourceRowPrimitive)
+  (modularCostPrimitive.comp modularArgsPrimitive).of_eq modularArgsLiteral
 
 private theorem maxReadAndCost {A : Type} [Primcodable A]
     {reads signed modular testTag : A → Nat}

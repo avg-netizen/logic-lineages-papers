@@ -1,0 +1,33 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "4ed352ad514e50552e3c7f97bc73c76615da38e0",
+  "failed_source_local_commit": "787b54f0a120ffcd1191585442142b9ff08b5818",
+  "failed_source_tree": "c6f1af750639353c8cefaaf48f133be35edbb3aa",
+  "failed_exact_gate_receipt": "1795375036931153182-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualRawStageCutoffStatementChecks",
+  "failed_receipt_sha256": "0a961c9f456798b775465eb2342604b337b49bb41d56b698128cecb2a2fba4c2",
+  "failed_exact_module_log_sha256": "c3e85096fdf69c9b782a65ad720a7be66df87f05ed53097b87c930d7b92edbed",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingPrimitiveProof.lean:26:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingPrimitiveProof.lean:44:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingPrimitiveProof.lean:51:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingPrimitiveProof.lean:68:8: error: (kernel) unknown constant '_private.LogicLineages.PermittedControl.ActualRawMixedFamilyCeilingPrimitiveProof.0.LogicLineages.PermittedControl.ActualRawMixedFamilyCeiling.signedFromBit'",
+  "failed_original_native_log_sha256": "7b4b238bf1391dd5cb3e5f1529aecf62895265f3b501f7d527129ae6244ce22e",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingPrimitiveProof.lean",
+  "failed_proof_sha256": "e126e57afc35b7f3b32e2287622e4bd00955147b208414fb763ab8f688144dfb",
+  "repaired_proof_sha256": "dfa41582d87975f0703644c526cafa3eb68fd2bc64ba70e58f31749084dc1e3e",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MIXED-FAMILY-CEILING-REPAIR-03.patch",
+  "patch_sha256": "e11a14ecdeb4ce17fe335b21f42a54c1c739f550003ef5d51776ba9074cfd518",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MIXED-FAMILY-CEILING-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "433003ac8df3fb6b6bf1f4f037669942ac19ea9b8b701084c7a1090760ece970",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MIXED-FAMILY-CEILING-REPAIR-01.json": "e4003ac89f004d397af8925e446a9ac4e3761ee42004922f37f98f0ff0a56bd5",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MIXED-FAMILY-CEILING-REPAIR-01.patch": "522fe7228702f672244ed14663ab03b3242379579e12766f84502c005899eab7",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MIXED-FAMILY-CEILING-REPAIR-02.json": "325996131d91e70805e1cf92d39c691c3d2b1c704ffc4ac4a03f46cc01aff3a6",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MIXED-FAMILY-CEILING-REPAIR-02.patch": "52b2b3806cc8b70fcfb4e095d6519eea99a4c99a5dc3f13ea967bab6ae27f435"
+  },
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingProof.lean": "b7269b8b0279424cc6c657311532a2bd53b54ec85906ca8aa938a647cf43e261",
+    "formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingStatementChecks.lean": "4a4a24b7cfaba5a39729a4485a876659015dcfcb70b2cbaf892504d83a890ac6",
+    "formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingTargets.lean": "1c58fece2fb1af3fbfae3556a9d4244a96863f51817744ba2daeb1a6704154bf",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MIXED-FAMILY-CEILING-SOURCE-MAP.md": "47cb145d9024b587484da8a2b5d9096be9b71156bab9436f35667d2a936ee345"
+  },
+  "scope": "Remove the intermediate deep projected modular computation, prove separately named raw argument projection maps primitive recursive and compose with fixed known cost proofs, then calibrate each literal projection with standalone rfl. No program, target, theorem, import, or profile changes."
+}
