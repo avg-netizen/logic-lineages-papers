@@ -60,7 +60,7 @@ private theorem tiedAppend (f ρ : Nat → Nat) (top : Nat) (left right : List L
       exact a k atLeft
     · let j := k-left.length
       have atRight : j < right.length := by
-        have len := List.length_append left right
+        have len : (left ++ right).length = left.length + right.length := List.length_append
         dsimp [j]
         omega
       have eq : k = left.length+j := by dsimp [j]; omega

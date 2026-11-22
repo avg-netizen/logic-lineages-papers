@@ -1,0 +1,55 @@
+{
+  "status": "source-only append read proof repair, no Lean/Git invoked by author",
+  "failed_source_remote_commit": "9f1fcdd5ce4598189bf242e3a68cd396f44bae31",
+  "failed_source_local_commit": "ddbc789c3d477f8e3acd584c07f9524753a4a5c0",
+  "failed_source_tree": "04e2296d0bfd82d0b86d40eb46f849e0b054b1be",
+  "failed_exact_gate_receipt": "1795364525629813411-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualPreparedSlotAppendStatementChecks",
+  "failed_receipt_sha256": "eda6c857a0c2432741bcfdcae31b2d7850a407f9eb12a27f4f2c1c016e65232f",
+  "failed_exact_module_log_sha256": "dc6dd3eba3b9f442d8609caf4ee6d9b7fe519622dae234ab6bcde02e634bbeea",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualPreparedSlotAppendReadProof.lean:63:20: error: Function expected at\n  List.length_append\nbut this term has type\n  (?m.235 ++ ?m.236).length = List.length ?m.235 + List.length ?m.236\n\nNote: Expected a function because this term is being applied to the argument\n  left\n",
+  "failed_original_native_log_sha256": "66111af8c8412fbe05a3543e15b466963b7469805db290aee964b3ae6175910d",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualPreparedSlotAppendReadProof.lean",
+  "failed_proof_sha256": "704db2e39796c9c4497992a40c180fdf3ffae505d21d69646581e59ad7461288",
+  "repaired_proof_sha256": "cd3fae7e487cbb9fc493994f73035bce4ef4aa1e3c7f3cccea59cc217de8e66d",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-PREPARED-SLOT-APPEND-REPAIR-01.patch",
+  "patch_sha256": "216ae30092c0c793cfe28ec44264e278c1160803ddb9deb44c111346d319c04a",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-PREPARED-SLOT-APPEND-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "4ba8f4758937e41afa0a8dc42d3aea394a1509a46f4a328db2d1aca026a737d3",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualPreparedSlotAppendTargets.lean": "82b91f02fb65c1c02f5ed71d1f4374021af8044615ce61ef8a445a3fa1ea8a8d",
+    "formalization/LogicLineages/PermittedControl/ActualPreparedSlotAppendShiftProof.lean": "c8c7f15cc09349304c375c8cece02093a50d95dd58810a221496b898709fa4c4",
+    "formalization/LogicLineages/PermittedControl/ActualPreparedSlotAppendProof.lean": "3653a3d67e94cdd2d16730044d2e6359dcaf3c738940a24473c1c1ad5388f06c",
+    "formalization/LogicLineages/PermittedControl/ActualPreparedSlotAppendStatementChecks.lean": "d4016322f4c83c8d94c894e7e623e769d7917c0c8721e56caded2c5580930197",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-PREPARED-SLOT-APPEND-SOURCE-MAP.md": "e16155c3a2d5898ee734cb7dd3434f361ff57df8949c1ff5a03c3dbeb6399826"
+  },
+  "static_module_closure_unchanged": {
+    "Targets": {
+      "local": 136,
+      "external": 30,
+      "contains_totient": false
+    },
+    "ShiftProof": {
+      "local": 138,
+      "external": 30,
+      "contains_totient": false
+    },
+    "ReadProof": {
+      "local": 137,
+      "external": 30,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 146,
+      "external": 30,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 147,
+      "external": 30,
+      "contains_totient": false
+    }
+  },
+  "scope": "Only type the existing implicit List.length_append equality at actual joined lists. No theorem, source address/zero, semantics, imports or other leaf changes."
+}
