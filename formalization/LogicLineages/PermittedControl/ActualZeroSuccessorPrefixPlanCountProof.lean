@@ -29,6 +29,9 @@ theorem exactCountPrefixPlan : ExactCountPrefixPlan := by
     obtain ⟨lit,hit⟩ := originalPrefix.2 nz
     have exactRead : strictPrefixRead f ρ rank lam eta i := ⟨pos,lit,hit⟩
     rw [countPlan,tag]
+    change PlanFacts f B ρ rank lam mu i
+      (if shortGapLength lam (prefixTarget mu) = 0 then .survives (prefixTarget mu)
+        else .short (prefixTarget mu) (shortGapLength lam (prefixTarget mu)))
     by_cases gap : shortGapLength lam eta = 0
     · have real : shortGapLength lam (prefixTarget mu) = 0 := gap
       rw [if_pos real]
