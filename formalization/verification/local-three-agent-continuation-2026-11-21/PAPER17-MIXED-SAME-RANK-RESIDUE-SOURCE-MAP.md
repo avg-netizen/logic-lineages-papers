@@ -1,0 +1,11 @@
+# Paper 17 same-rank signed operand residues
+
+The manuscript uses one shared residue modulo `2m` for all occurrences of the same raw input. The ordinary value and count formulas come from the original entry-residue clauses. [Arithmetic, lines 231–240](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex#L231) · [Controls, lines 172–220](../../../17-permitted-control-canonical-comparison/sections/controls.tex#L172)
+
+The comparator takes an ordered list of signed coefficients and original coordinate, ordinary, or count operands. Each operand has the same raw rank. Under the original proper-field and combined-tail guards, the actual function supplies exactly one original successful read per occurrence. The signed weighted sum, with its signed constant, has the same residue modulo `m` as the computed sum at the shared coordinate residue modulo `2m`. [Frozen comparator](../../LogicLineages/PermittedControl/MixedSameRankResidueTargets.lean) · [Source pins](PAPER17-MIXED-SAME-RANK-RESIDUE-FROZEN.json)
+
+The effective code uses the original operand tags and source field encodings. The proof preserves the coordinate's odd bit before reducing to modulus `m`, uses the actual ordinary-value residue result, and proves the count residue from the original first-entry theorem. Its list induction preserves order, duplicates, and zero-weight reads. [Code proof](../../LogicLineages/PermittedControl/MixedSameRankResidueCodeProof.lean) · [Semantic proof](../../LogicLineages/PermittedControl/MixedSameRankResidueSemanticProof.lean) · [Exact aliases](../../LogicLineages/PermittedControl/MixedSameRankResidueStatementChecks.lean)
+
+The first native gate accepted the code proof. Its short-count rewrite closed the goal before the following reflexivity tactic. The repair deletes that tactic. The archived failing proof matches the source hash in the native receipt. [First-attempt archive](p17-mixed-same-rank-residue-failed-proof-1795316929525141790-9/1795316929525141790-9.json)
+
+The next original arithmetic step emits the literal one-name Presburger row. Multiple raw ranks, optional halves, small-input strips, and the full numbered arithmetic theorem remain open here. [Emitted-row comparator](../../LogicLineages/PermittedControl/MixedNamedResidueRowTargets.lean)

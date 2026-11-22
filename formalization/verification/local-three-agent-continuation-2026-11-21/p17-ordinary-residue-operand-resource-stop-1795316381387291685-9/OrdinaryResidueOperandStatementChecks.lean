@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.OrdinaryResidueOperandTargets
+import LogicLineages.PermittedControl.OrdinaryResidueOperandCodeProof
+import LogicLineages.PermittedControl.OrdinaryResidueOperandSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OrdinaryResidueOperand
+
+theorem fixed_ordinaryResidueOperandCodeExact : OrdinaryResidueOperand.CodeExact := codeExact
+
+theorem fixed_ordinaryResidueOperandActual : ActualResidue := actualResidue
+
+theorem fixed_fullOrdinaryResidueOperand : FullOrdinaryResidueOperand :=
+  ⟨fixed_ordinaryResidueOperandCodeExact,fixed_ordinaryResidueOperandActual⟩
+
+#print axioms fixed_ordinaryResidueOperandCodeExact
+#print axioms fixed_ordinaryResidueOperandActual
+#print axioms fixed_fullOrdinaryResidueOperand
+
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,3 +1,26 @@
+# Additional user-authorized lane — Fable 5.2 High
+
+The user adds one Fable 5.2 High lane through the API-first `claudep` wrapper,
+with `claude -p` fallback permitted on exhausted API credits. Read the
+[additional-lane release](verification/local-three-agent-continuation-2026-11-21/RELEASE.md)
+and current CONTROL. Root owns provider dispatch, Astra the sole native queue,
+and Sol independent review. This supersedes the older no-external-author rule
+only for this lane. Credentials remain in the adjacent ignored local env file.
+
+---
+
+# Current release — three formalization lanes, 21 November 2026
+
+The user explicitly requests fetching the repo and continuing the lanes.
+Read [the current release](verification/local-three-agent-continuation-2026-11-21/RELEASE.md)
+and its CONTROL.json. Work continues from fetched `25a33fd2a` on the existing
+formalization branch with one Astra 6.2 High lead and two Sol 6.2 High lanes.
+There is no new deadline or round ceiling. This supersedes the prior pause
+and expired cutoffs for these formalization lanes only. Preserve exact
+source/evidence safeguards and all newer owner work; C5 remains transferred.
+
+---
+
 # Current release — 20 November 2026 until 19:30 UTC
 
 Owner explicitly renewed fetching the latest work and continuing until 1:30pm UTC−06. Follow [current release and reconciliation](verification/continuation-2026-11-20/RELEASE-AND-RECONCILIATION.md). This finite release supersedes previous pauses only until the cutoff; preserve original safeguards and all newer owner work.

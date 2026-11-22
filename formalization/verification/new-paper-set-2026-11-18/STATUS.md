@@ -4,7 +4,17 @@ The new-paper register has **156 checked and 11 pending out of 167**. Historical
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
-## Current Paper 16 proof frontier
+## Current 21 November continuation
+
+The owner register records 156 checked and 11 pending of 167. The fetched checkpoint includes supporting records through #749 and retains the recorded scope qualifications on #699–704. This continuation publishes supporting evidence under the current release. The original selected cover now passes native Lean with the pinned local Mathlib cache, including the option and ordered scratch-list interpretations. [Current control](../local-three-agent-continuation-2026-11-21/CONTROL.json) · [Selected cover](accepted/750-actual-selected-cover-to-scratch.json)
+
+
+Paper 16 now selects one actual cover for all settings and, at each setting, fixes the actual exchange and window programs. The resulting packed program computes the complete original optional least value on every numerical context, type and seed. Paper 17 now has a corrected count-congruence row combining its exact code, shape and support, and guarded semantics. [Selected packed least](accepted/752-original-selected-physical-packed-least.json) · [Guarded count row](accepted/751-corrected-guarded-count-row.json)
+
+
+The original typed raw checker and guarded application now share the same physical least program, with the original window validator also shared by reduction and exchange. The full positive body, its callbacks and proof rules were rebuilt and checked on that syntax. The remaining open matching derivation still requires occurrence and certificate transport. Paper 17 also certifies the original ordinary operand and its actual value at one shared residue. [Installed physical least](accepted/754-physical-least-typed-raw-guarded-application-tuple.json) · [Ordinary residue operand](accepted/753-actual-ordinary-residue-operand.json)
+
+## Paper 16 frontier at the 20 November pause
 
 **Paused after the 20 November round.** Paper 16 remains at **30 checked of 38**. The final round verified exact direct reducts at canonical variables and bottoms, the internal implication from typed computability to accessibility under explicit object-language premises, and the interpretation of the fresh-variable witnesses in the standard natural numbers. Uniform internal arithmetic matching, the fresh-variable proof rules and the Bachmann–Howard bound remain open. [Final evidence and resumption handoff](../local-three-agent-continuation-2026-11-19/PAUSED-HANDOFF-2026-11-20.md)
 

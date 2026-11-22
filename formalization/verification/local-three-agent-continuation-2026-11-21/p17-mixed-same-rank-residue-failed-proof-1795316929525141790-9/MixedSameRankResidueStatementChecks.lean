@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.MixedSameRankResidueTargets
+import LogicLineages.PermittedControl.MixedSameRankResidueCodeProof
+import LogicLineages.PermittedControl.MixedSameRankResidueSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_mixedSameRankResidueCodeExact : MixedSameRankResidue.CodeExact :=
+  MixedSameRankResidue.codeExact
+
+theorem fixed_mixedSameRankResidueActual : MixedSameRankResidue.ActualWeightedResidue :=
+  MixedSameRankResidue.actualWeightedResidue
+
+theorem fixed_fullMixedSameRankResidue : MixedSameRankResidue.FullMixedSameRankResidue :=
+  ⟨fixed_mixedSameRankResidueCodeExact,fixed_mixedSameRankResidueActual⟩
+
+#print axioms fixed_mixedSameRankResidueCodeExact
+#print axioms fixed_mixedSameRankResidueActual
+#print axioms fixed_fullMixedSameRankResidue
+
+end LogicLineages.PermittedControl.StatementChecks

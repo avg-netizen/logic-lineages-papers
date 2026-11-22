@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.CountCongruenceNamedRowGuardedAggregateTargets
+import LogicLineages.PermittedControl.CountCongruenceNamedRowGuardedShapeProof
+import LogicLineages.PermittedControl.CountCongruenceNamedRowCodeStatementChecks
+import LogicLineages.PermittedControl.CountCongruenceNamedRowGuardedSemanticStatementChecks
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_countCongruenceNamedRowGuardedShapeAndSupport :
+    CountCongruenceNamedRow.ShapeAndSupport :=
+  CountCongruenceNamedRow.guardedShapeAndSupport
+
+theorem fixed_fullGuardedCountCongruenceNamedRow :
+    CountCongruenceNamedRow.FullGuardedCountCongruenceNamedRow :=
+  ⟨fixed_countCongruenceNamedRowCodeExact,fixed_countCongruenceNamedRowGuardedShapeAndSupport,
+    fixed_countCongruenceNamedRowGuardedActual⟩
+
+#print axioms fixed_countCongruenceNamedRowGuardedShapeAndSupport
+#print axioms fixed_fullGuardedCountCongruenceNamedRow
+
+end LogicLineages.PermittedControl.StatementChecks
