@@ -5,6 +5,7 @@ public import LogicLineages.PermittedControl.ActualSymbolicZeroSuccessorTargets
 
 @[expose] public section
 namespace LogicLineages.PermittedControl.ActualCanonicalSymbolicZeroSuccessor
+open scoped Classical
 open OrdinalComparison PreparedProjection MixedSameRankResidue
 open ActualCanonicalOperandGrouping ActualSymbolicZeroSuccessor
 open ActualFullValueLabels ActualFullLabelPairGuards ActualFiniteFullValueGuards
@@ -13,6 +14,7 @@ open ActualZeroClassReplacement ActualZeroClassCohortTransfer ActualZeroClassRec
 open ActualMixedRowLeadingAnnotations ActualMixedRowLeadingSum ActualCountOriginDispositions
 open ActualShortCountCleanup ActualShortCountCleanupCharge ActualRankedRowColumns
 open ActualZeroClassSelectedCountKeys ActualZeroClassConcreteAssembly InnerTerminationTargets
+open ActualZeroClassGroupedMovedCount (AnchorAt)
 
 /-- The syntax for one given comparison vector in the supplied order.
 No f, read payload or valuation is used to render the plan. -/

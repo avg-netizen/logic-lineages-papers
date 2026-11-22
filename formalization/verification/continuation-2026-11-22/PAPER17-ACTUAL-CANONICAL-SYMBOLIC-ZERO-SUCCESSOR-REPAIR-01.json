@@ -1,0 +1,50 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "c1c5b113a1e96c6ed099bbcdef3bf63436fc3078",
+  "failed_source_local_commit": "c9c0098977a8c2fb6d46c83b46655993fba5773d",
+  "failed_source_tree": "4b1a223ab80b699cbe5fec1d483b622c563a112d",
+  "failed_exact_gate_receipt": "1795375766237640632-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualCanonicalSymbolicZeroSuccessorStatementChecks",
+  "failed_receipt_sha256": "3ce5edfa040a19804bc46b83f46a824017a26551ebe650101da59c2989ddbd58",
+  "failed_exact_module_log_sha256": "f17c992c0f2e469374ef1ab4049dbf90fc1d2713626ad00474a7a50d1b837ecf",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalSymbolicZeroSuccessorTargets.lean:68:60: error(lean.unknownIdentifier): Unknown identifier `AnchorAt`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalSymbolicZeroSuccessorTargets.lean:73:6: error(lean.synthInstanceFailed): failed to synthesize instance of type class\n  DecidableEq (ValueKey r)\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.\n",
+  "failed_original_native_log_sha256": "066c57c01f49e1d516b62f39210170e62f5257025672760a7dda563686a1360e",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualCanonicalSymbolicZeroSuccessorTargets.lean",
+  "failed_proof_sha256": "b541ae22921cc990694f31b82fb5d49141fad4faf44abd967d4d36a633df6e10",
+  "repaired_proof_sha256": "332e0d274ffc1963e3ed4e9184ab6e250c9576050b703ef9ea86085fa33f50d2",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-SYMBOLIC-ZERO-SUCCESSOR-REPAIR-01.patch",
+  "patch_sha256": "03fa788f3157972dc3f0fd5561bbead6413f635e5ec23583d972117337c4df9f",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-SYMBOLIC-ZERO-SUCCESSOR-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "36cc8ca3ea775f5ee4d6d45bdcac6972a0593abd35c00385ded5f1a63e89445d",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalSymbolicZeroSuccessorOrderedProof.lean": "9eb49138fb448e0800fb5e734fb55dce98aec488f81351ae00c1362321aa6586",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalSymbolicZeroSuccessorProof.lean": "75dd6e5944b23bbd41b74a793121b7bf3d2c0601276776599f8041268fcd09ed",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalSymbolicZeroSuccessorStatementChecks.lean": "69ea1c025bbb8f152ccacaeecb787cd4d31a9500d3b2a2a2b600e804ef5e48ba",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-SYMBOLIC-ZERO-SUCCESSOR-SOURCE-MAP.md": "8c85852477a33d7e1efd35f9ed0906f2a92949921c530a142161d46ed9a06f29"
+  },
+  "static_module_closure": {
+    "OrderedProof": {
+      "local": 433,
+      "external": 42,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 505,
+      "external": 42,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 506,
+      "external": 42,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 207,
+      "external": 34,
+      "contains_totient": false
+    }
+  },
+  "scope": "Open existing AnchorAt namespace and the same classical decidable equality scope as the accepted replacement premise. No intended binders, guards, formulas or output expression changed; other source files byte-identical."
+}
