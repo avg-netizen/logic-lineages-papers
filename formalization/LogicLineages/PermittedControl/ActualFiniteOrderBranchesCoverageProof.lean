@@ -20,7 +20,7 @@ theorem exactActualBranchCoverage : ExactActualBranchCoverage := by
     refine ⟨?_,?_,?_,?_⟩
     · calc
         size θ names ≤ (names.map θ).length := List.toFinset_card_le _
-        _ = names.length := List.length_map
+        _ = names.length := List.length_map θ
     · simp [decorate,List.map_map,Function.comp_def]
     · intro e he
       obtain ⟨name,mem,rfl⟩ := List.mem_map.mp he
