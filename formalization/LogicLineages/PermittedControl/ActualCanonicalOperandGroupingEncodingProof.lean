@@ -9,7 +9,12 @@ open OrdinalComparison PreparedProjection FieldComparison
 private theorem noteBytes : Function.Injective (fun a : NONote => rawNoteEncode a.1) := by
   intro a b h
   apply Subtype.ext
-  simpa only [rawNoteDecodeEncode] using congrArg rawNoteDecode h
+  have equality := congrArg rawNoteDecode h
+  change rawNoteDecode (rawNoteEncode a.1) = rawNoteDecode (rawNoteEncode b.1) at equality
+  have left : rawNoteDecode (rawNoteEncode a.1) = a.1 := rawNoteDecodeEncode a.1
+  have right : rawNoteDecode (rawNoteEncode b.1) = b.1 := rawNoteDecodeEncode b.1
+  rw [left,right] at equality
+  exact equality
 
 private theorem fieldBytes : Function.Injective longFieldCode := by
   intro a b h

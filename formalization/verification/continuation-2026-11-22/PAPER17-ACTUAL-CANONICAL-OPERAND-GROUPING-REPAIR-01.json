@@ -1,0 +1,62 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "399d490101ae2ce7b1a4db104ca254e30f3f4edd",
+  "failed_source_local_commit": "1bc9e38a2a2e27de80c9923d3cd1c69fcb7e398e",
+  "failed_source_tree": "c7b32abd6052154e37ff15e2e1b9598c5474218b",
+  "failed_exact_gate_receipt": "1795373130083480004-9",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualCanonicalOperandGroupingStatementChecks",
+  "failed_receipt_sha256": "ae8c830417356e9b74d739879def25660a92a2415f84bb6be452ce8021508411",
+  "failed_exact_module_log_sha256": "3d12e9591a148b5c3217f91da2fafa564d2544f49368188ec561ffc478c401e1",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingEncodingProof.lean:12:2: error: Type mismatch: After simplification, term\n  congrArg rawNoteDecode h\n has type\n  rawNoteDecode (rawNoteEncode \u2191a) = rawNoteDecode (rawNoteEncode \u2191b)\nbut is expected to have type\n  \u2191a = \u2191b\n",
+  "failed_original_native_log_sha256": "5650d7e13a8dfddd1058c0f7e332c52693fb458ee229f02339c3fd2a32592199",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingEncodingProof.lean",
+  "failed_proof_sha256": "6182617a68ab6e5f64ea841da89beac48638bb590f5661026eb93a6ef4998d7f",
+  "repaired_proof_sha256": "70f8f0897fd4199e21239af3e382dd452cfa7ad2f99344d23924b92fdd5a5aa1",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-REPAIR-01.patch",
+  "patch_sha256": "d7bd4f0d7275693fe7a443151ff34a25c64ba3687a1c18ca788e25ea0f2617e0",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "01c8cb98e517db5ff7cafa4c5b5d44695f471e777846e49568d9ad297f0dd62d",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingChargeProof.lean": "e08d7c1385db2576c49b848ea4d3dd2a3f0b76027ec98a04994dee08efb34a0a",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean": "e4cf27361a836be572c00558b8b7d6308fbe2afd57be5586878d39a56f7154f2",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingStatementChecks.lean": "766f2ed354e1361710a9eb048f632fead1bcbeb040908a77fc708e99d7e62d3f",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTapeProof.lean": "993d759d4e74f2c7ef438d722bfb9fa64f13d58dba340813c7cf4477fe046c80",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTargets.lean": "f3c77221f0a1112a61160a1144f9e8a1c993b507a185823c81ac5808d618278c",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-SOURCE-MAP.md": "3f07dedbc49e167216f54772aa79a6a600b6ba55865f858f962b7c1f15d4e90f"
+  },
+  "static_module_closure": {
+    "ChargeProof": {
+      "local": 178,
+      "external": 34,
+      "contains_totient": false
+    },
+    "EncodingProof": {
+      "local": 189,
+      "external": 34,
+      "contains_totient": false
+    },
+    "ReadProof": {
+      "local": 319,
+      "external": 41,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 321,
+      "external": 41,
+      "contains_totient": false
+    },
+    "TapeProof": {
+      "local": 191,
+      "external": 34,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 177,
+      "external": 34,
+      "contains_totient": false
+    }
+  },
+  "scope": "Expose the literal typed decoder law on both original note components before rewriting the equality. No change to tags/encoding, signatures, order, or siblings."
+}
