@@ -1,0 +1,37 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedRowNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedRowNumericProof.lean
+@@ -49,2 +49,3 @@
+-  change evaluate (.composition parser ![.projection 0]) _ = _
+-  rw [compositeOne]
++  change evaluate (.composition parser (Fin.cons (.projection 0) Fin.elim0))
++    (removed ::ᵥ row ::ᵥ nil) = _
++  rw [compositeOne parser (.projection 0)]
+@@ -61,2 +62,3 @@
+-  change evaluate (.composition predOne ![parseRemoved]) _ = _
+-  rw [compositeOne,parseValue,h]
++  change evaluate (.composition predOne (Fin.cons parseRemoved Fin.elim0))
++    (removed ::ᵥ row ::ᵥ nil) = _
++  rw [compositeOne predOne parseRemoved,parseValue,h]
+@@ -67,2 +69,3 @@
+-  change evaluate (.composition p ![.projection 1]) _ = _
+-  rw [compositeOne] <;> rfl
++  change evaluate (.composition p (Fin.cons (.projection 1) Fin.elim0))
++    (removed ::ᵥ row ::ᵥ nil) = _
++  rw [compositeOne p (.projection 1)] <;> rfl
+@@ -73,2 +76,5 @@
+-  unfold memberAt rowField
+-  rw [compositeTwo,poolValue removed row xs hu,rightValue,hd]
++  change evaluate (.composition scratchMember
++    (Fin.cons poolCode (Fin.cons (liftRight (field 1)) Fin.elim0)))
++      (removed ::ᵥ row ::ᵥ nil) = _
++  rw [compositeTwo scratchMember poolCode (liftRight (field 1)),
++    poolValue removed row xs hu,rightValue,hd]
+@@ -82,2 +88,6 @@
+-  unfold positiveAt rowField
+-  rw [compositeThree,rightValue,rightValue,rightValue,ht,hd,hw]
++  change evaluate (.composition r
++    (Fin.cons (liftRight (field 1))
++      (Fin.cons (liftRight (field 2)) (Fin.cons (liftRight (field 0)) Fin.elim0))))
++        (removed ::ᵥ row ::ᵥ nil) = _
++  rw [compositeThree r (liftRight (field 1)) (liftRight (field 2)) (liftRight (field 0)),
++    rightValue (field 1),rightValue (field 2),rightValue (field 0),ht,hd,hw]

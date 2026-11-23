@@ -1,0 +1,16 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedRowNumericProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedRowOpenProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedRowChecks
+open NumberedWindowInternalDirectInsertedRowTargets
+
+theorem exact_NumericInsertedRow : ExactNumericInsertedRow :=
+  NumberedWindowInternalDirectInsertedRow.exactNumericInsertedRow
+theorem exact_OpenOriginalInsertedRow : ExactOpenInsertedRow :=
+  NumberedWindowInternalDirectInsertedRow.exactOpenInsertedRow
+
+#print axioms exact_NumericInsertedRow
+#print axioms exact_OpenOriginalInsertedRow
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedRowChecks
