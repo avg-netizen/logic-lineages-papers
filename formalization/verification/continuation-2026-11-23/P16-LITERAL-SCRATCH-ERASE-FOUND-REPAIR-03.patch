@@ -1,0 +1,16 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseFlagsInductionSyntaxProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseFlagsInductionSyntaxProof.lean
+@@ -30,0 +31,4 @@
++  have ht : (fun (i : Fin 2) => (![raw,needle] i).subst ts) =
++      (![raw.subst ts,needle.subst ts] : Fin 2 → OTerm beta) := by
++    funext i
++    exact Fin.cases rfl (Fin.cases rfl (fun t => Fin.elim0 t)) i
+@@ -32,2 +36 @@
+-  simp only [impSubst,conjunctionSubst,orSubst,eqnSubst,programSubst,zSubst,sucSubst,
+-    consTermSubst,emptySubst]
++  simp only [impSubst,conjunctionSubst,orSubst,eqnSubst,programSubst,zSubst,sucSubst,ht]
+@@ -46,2 +49,2 @@
+-  simp only [impSubst,conjunctionSubst,fields,flags,memberGraph,orSubst,eqnSubst,
+-    graph2,programSubst,zSubst,sucSubst,consTermSubst,emptySubst,liftSubst,Term.subst,Sum.elim_inr]
++  simp only [impSubst,conjunctionSubst,fields,flagsSubst,graph2,programSubst,consTermSubst,
++    emptySubst,InternalRecursionGraphSyntaxProof.liftSubst,Term.subst,Sum.elim_inr]

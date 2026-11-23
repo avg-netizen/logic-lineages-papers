@@ -1,0 +1,38 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseFlagsInductionSyntaxProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseFlagsInductionSyntaxProof.lean
+@@ -4,0 +5 @@
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAdditionLawsProof
+@@ -20,0 +22 @@
++open InternalAdditionLawsProof (impSubst)
+@@ -53,0 +56,7 @@
++private theorem fieldsSubst {alpha beta : Type} (raw needle acc bit rest : OTerm alpha)
++    (ts : alpha → OTerm beta) :
++    (fields raw needle acc bit rest).subst (fun a => emb (ts a)) =
++      fields (raw.subst ts) (needle.subst ts) (acc.subst ts) (bit.subst ts) (rest.subst ts) := by
++  unfold fields
++  simp only [conjunctionSubst,graph2,programSubst,consTermSubst,emptySubst]
++
+@@ -57,4 +66,13 @@
+-  have he : (Sum.elim Term.var (fun i => emb (![needle,acc,bit,rest] i))) =
+-      (fun a => emb (Sum.elim Term.var ![needle,acc,bit,rest] a)) := by
+-    funext a; cases a <;> rfl
+-  unfold matrix fields flags memberGraph
++  let tape : Fin 4 → OTerm alpha := ![needle,acc,bit,rest]
++  let terms : alpha ⊕ Fin 4 → OTerm alpha := Sum.elim Term.var tape
++  have he : (Sum.elim Term.var (fun i => emb (tape i))) =
++      (fun a => emb (terms a)) := by
++    funext a
++    cases a <;> rfl
++  have held : (raw.relabel (Sum.inl : alpha → alpha ⊕ Fin 4)).subst terms = raw :=
++    InternalRecursionGraphSyntaxProof.witnessLift raw tape
++  have h0 : (Term.var (.inr (0 : Fin 4)) : OTerm (alpha ⊕ Fin 4)).subst terms = needle := rfl
++  have h1 : (Term.var (.inr (1 : Fin 4)) : OTerm (alpha ⊕ Fin 4)).subst terms = acc := rfl
++  have h2 : (Term.var (.inr (2 : Fin 4)) : OTerm (alpha ⊕ Fin 4)).subst terms = bit := rfl
++  have h3 : (Term.var (.inr (3 : Fin 4)) : OTerm (alpha ⊕ Fin 4)).subst terms = rest := rfl
++  change (matrix raw).subst (Sum.elim Term.var (fun i => emb (tape i))) = _
+@@ -62,3 +80,2 @@
+-  simp only [impSubst,conjunctionSubst,orSubst,eqnSubst,graph2,programSubst,
+-    zSubst,sucSubst,consTermSubst,emptySubst,witnessLift,Term.subst,Sum.elim_inr]
+-  rfl
++  unfold matrix
++  rw [impSubst,fieldsSubst,flagsSubst,held,h0,h1,h2,h3]

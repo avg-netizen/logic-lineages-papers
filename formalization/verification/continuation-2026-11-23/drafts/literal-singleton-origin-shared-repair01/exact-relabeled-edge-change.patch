@@ -1,0 +1,6 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonOriginSharedProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonOriginSharedProof.lean
+@@ -132 +132,2 @@
+-    rw [G,edgeRename]
++    change Nonempty (Derivation B Δ ((edge S false c q key).relabel ρ))
++    rw [edgeRename]

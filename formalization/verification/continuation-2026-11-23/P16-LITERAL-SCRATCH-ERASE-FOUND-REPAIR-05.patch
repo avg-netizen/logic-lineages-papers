@@ -1,0 +1,19 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseFoundProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseFoundProof.lean
+@@ -10,2 +10 @@
+-import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaConstructorGraphSyntaxProof
+-import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedDecoderTransportLogicalProof
++import LogicLineages.PersistentMarking.NumberedWindowInternalScratchQueryCasesProof
+@@ -23 +22 @@
+-open InternalTagArithmeticSyntaxProof (z suc eqn emb eqnRelabel zRelabel)
++open InternalTagArithmeticSyntaxProof (z suc eqn emb eqnRelabel zRelabel bindEmbedding liftBind varBind)
+@@ -25 +24 @@
+-open InternalApplicationStepPeelSupportProof (andIntro andRight)
++open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+@@ -28,2 +27 @@
+-open SourceComputabilityCompletion.OriginalTypedDecoderTransportLogicalProof (notRename)
+-open SourceComputabilityCompletion.OriginalLambdaConstructorGraphSyntaxProof (queryCases)
++open NumberedWindowInternalScratchQueryCasesProof (notRename queryCases)
+@@ -81 +79 @@
+-    simp only [instantiate,bindEmbedding,flagsSubst,liftBind,varBind,zSubst] at d
++    simp only [instantiate,bindEmbedding,flagsSubst,liftBind,varBind] at d

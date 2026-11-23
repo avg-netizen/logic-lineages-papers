@@ -1,0 +1,6 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonOriginInstalledProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonOriginInstalledProof.lean
+@@ -75 +75,2 @@
+-  rw [G,edgeRename]
++  change Nonempty (Derivation B Ω ((edge S false c (head.relabel ρ) (key.relabel ρ)).relabel τ))
++  rw [edgeRename]

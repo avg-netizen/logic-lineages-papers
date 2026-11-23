@@ -1,0 +1,10 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginScanInductionProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginScanInductionProof.lean
+@@ -10,0 +11 @@
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+@@ -22,0 +24 @@
++open ID1Completion.InternalTagArithmeticSyntaxProof (zRelabel)
+@@ -47,0 +50,3 @@
++  change D B G (suppliedAt r (z.relabel j) (removed.relabel j)
++    (rawL.relabel j) (rawR.relabel j) (scratchL.relabel j) u v)
++  rw [zRelabel]

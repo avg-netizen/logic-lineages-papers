@@ -1,0 +1,16 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseHeadCountProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseHeadCountProof.lean
+@@ -52 +52 @@
+-  have hyes : Derivation body (E :: Delta) (eqn before (OrdinaryArithmetic.addTerm after (suc z))) := by
++  have hyes : Nonempty (Derivation body (E :: Delta) (eqn before (OrdinaryArithmetic.addTerm after (suc z)))) := by
+@@ -59,2 +59,2 @@
+-    exact trans d (symm plus)
+-  have hno : Derivation body (E.not :: Delta) (eqn before after) := by
++    exact ⟨trans d (symm plus)⟩
++  have hno : Nonempty (Derivation body (E.not :: Delta) (eqn before after)) := by
+@@ -69,2 +69,3 @@
+-    obtain ⟨d⟩ := valueUnique entryCount before after ![raw,query] (withHyp hbefore E.not) hv
+-    exact d
++    exact valueUnique entryCount before after ![raw,query] (withHyp hbefore E.not) hv
++  obtain ⟨hyes⟩ := hyes
++  obtain ⟨hno⟩ := hno

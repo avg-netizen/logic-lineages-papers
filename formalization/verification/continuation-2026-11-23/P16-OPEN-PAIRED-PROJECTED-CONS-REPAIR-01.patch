@@ -1,0 +1,11 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalPairedProjectedConsProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalPairedProjectedConsProof.lean
+@@ -35,4 +35,4 @@
+-private theorem pinHead (code from to tail : OTerm α)
+-    (same : D B Γ (eqn from to)) (cell : D B Γ (consGraph code from tail)) :
+-    D B Γ (consGraph code to tail) :=
+-  headTransport consCode code from to (Fin.cons tail Fin.elim0) same cell
++private theorem pinHead (code earlier later tail : OTerm α)
++    (same : D B Γ (eqn earlier later)) (cell : D B Γ (consGraph code earlier tail)) :
++    D B Γ (consGraph code later tail) :=
++  headTransport consCode code earlier later (Fin.cons tail Fin.elim0) same cell
