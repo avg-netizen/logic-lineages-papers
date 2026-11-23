@@ -1,0 +1,15 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicyIndexedPartialTargets
+import LogicLineages.StandardControlCurrent.PolicyIndexedPartialProgramsProof
+
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.StatementChecks
+open PolicyIndexedPartial
+
+theorem fixed_assembleIndexedPartialPartrec : Partrec₂ assemble := assemblePartrec
+theorem fixed_indexedPartialRunPartrec : Partrec run := indexedPartialRunPartrec
+
+#print axioms fixed_assembleIndexedPartialPartrec
+#print axioms fixed_indexedPartialRunPartrec
+
+end LogicLineages.StandardControlCurrent.StatementChecks

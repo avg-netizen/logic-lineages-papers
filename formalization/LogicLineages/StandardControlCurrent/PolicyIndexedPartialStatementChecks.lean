@@ -1,0 +1,13 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicyIndexedPartialTargets
+import LogicLineages.StandardControlCurrent.PolicyIndexedPartialNodeProof
+
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.StatementChecks
+open PolicyIndexedPartial
+
+theorem fixed_exactIndexedPartialNode : ExactIndexedPartialNode := exactIndexedPartialNode
+
+#print axioms fixed_exactIndexedPartialNode
+
+end LogicLineages.StandardControlCurrent.StatementChecks

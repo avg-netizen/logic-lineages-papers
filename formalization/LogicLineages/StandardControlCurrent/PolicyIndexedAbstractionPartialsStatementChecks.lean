@@ -1,0 +1,13 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicyIndexedAbstractionPartialsProof
+
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.PolicyIndexedAbstractionPartials.StatementChecks
+
+theorem suppliedIndexPartialsExact : ExactPartials := exactPartials
+
+theorem suppliedIndexPartialsPartialRecursive : IndexedPartialsPartrec := indexedPartialsPartrec
+
+#print axioms suppliedIndexPartialsExact
+#print axioms suppliedIndexPartialsPartialRecursive
+end LogicLineages.StandardControlCurrent.PolicyIndexedAbstractionPartials.StatementChecks

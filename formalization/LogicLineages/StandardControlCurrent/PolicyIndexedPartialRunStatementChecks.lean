@@ -1,0 +1,13 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicyIndexedPartialTargets
+import LogicLineages.StandardControlCurrent.PolicyIndexedPartialRunProof
+
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.StatementChecks
+open PolicyIndexedPartial
+
+theorem fixed_exactIndexedPartialRun : ExactIndexedPartialRun := exactIndexedPartialRun
+
+#print axioms fixed_exactIndexedPartialRun
+
+end LogicLineages.StandardControlCurrent.StatementChecks

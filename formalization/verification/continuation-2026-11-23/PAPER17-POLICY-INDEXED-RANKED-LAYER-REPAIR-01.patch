@@ -1,0 +1,60 @@
+--- a/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedRankedLayerProof.lean
++++ b/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedRankedLayerProof.lean
+@@ -37,0 +38,22 @@
++private theorem optionalRowComputable {β σ : Type} [Primcodable β] [Primcodable σ] :
++    Computable (fun x : β × Option σ => (x.2.map (x.1, ·)).toList) :=
++  Primrec.optionToList.to_comp.comp
++    (Computable.option_map Computable.snd ((Computable.fst.comp Computable.fst).pair Computable.snd).to₂)
++
++private theorem resultComputable {T β σ : Type} [Primcodable T] [Primcodable β] [Primcodable σ]
++    {s : T → State β σ} (hs : Computable s) : Computable₂ (fun (p : T × β) (out : Option σ) =>
++      ((s p.1).1.tail,(s p.1).2 ++ (out.map (p.2, ·)).toList)) := by
++  let U := (T × β) × Option σ
++  have input : Computable (fun p : U => p.1.1) := Computable.fst.comp Computable.fst
++  have rowInput : Computable (fun p : U => (p.1.2,p.2)) :=
++    (Computable.snd.comp Computable.fst).pair Computable.snd
++  have state : Computable (fun p : U => s p.1.1) := hs.comp input
++  have nodes : Computable (fun p : U => (s p.1.1).1) := Computable.fst.comp state
++  have prior : Computable (fun p : U => (s p.1.1).2) := Computable.snd.comp state
++  have row : Computable (fun p : U => (p.2.map (p.1.2, ·)).toList) :=
++    optionalRowComputable.comp rowInput
++  have combined : Computable (fun p : U =>
++      ((s p.1.1).1.tail,(s p.1.1).2 ++ (p.2.map (p.1.2, ·)).toList)) :=
++    (Primrec.list_tail.to_comp.comp nodes).pair (Primrec.list_append.to_comp.comp prior row)
++  exact combined.to₂
++
+@@ -46,2 +67,0 @@
+-  have prior : Computable (fun p : T => p.2.2) := Computable.snd.comp Computable.snd
+-  have tail : Computable (fun p : T => p.2.1.tail) := Primrec.list_tail.to_comp.comp nodes
+@@ -53,3 +72,0 @@
+-  have addRow : Computable (fun x : β × Option σ => (x.2.map (x.1, ·)).toList) :=
+-    Primrec.optionToList.to_comp.comp
+-      (Computable.option_map Computable.snd ((Computable.fst.comp Computable.fst).pair Computable.snd).to₂)
+@@ -57,8 +74,2 @@
+-      (p.1.2.1.tail,p.1.2.2 ++ (out.map (p.2, ·)).toList)) := by
+-    let outer : Computable (fun x : (T × β) × Option σ => x.1.1) :=
+-      Computable.fst.comp Computable.fst
+-    have append : Computable (fun x : (T × β) × Option σ =>
+-        x.1.1.2.2 ++ (x.2.map (x.1.2, ·)).toList) :=
+-      Primrec.list_append.to_comp.comp (prior.comp outer)
+-        (addRow.comp ((Computable.snd.comp Computable.fst).pair Computable.snd))
+-    exact ((tail.comp outer).pair append).to₂
++      (p.1.2.1.tail,p.1.2.2 ++ (out.map (p.2, ·)).toList)) :=
++    resultComputable (Computable.snd : Computable (Prod.snd : T → State β σ))
+@@ -75,0 +87,10 @@
++
++private theorem passesRec {A β σ : Type} [Primcodable β]
++    (l : β → List β) (assemble : Assembly A β σ) (a : A) (prev : Matrix β σ)
++    (initial : State β σ) (n : Nat) :
++    n.rec (Part.some initial) (fun _ s => s.bind (advance l assemble a prev)) =
++      passes l assemble a prev initial n := by
++  induction n with
++  | zero => rfl
++  | succ n ih =>
++    exact congrArg (fun s => s.bind (advance l assemble a prev)) ih
+@@ -95 +116,4 @@
+-    rfl)
++    change ((nodes.length.rec (Part.some (nodes,([] : Matrix β σ)))
++      (fun _ s => s.bind (advance l assemble a prev))).map Prod.snd) =
++      ((passes l assemble a prev (nodes,[]) nodes.length).map Prod.snd)
++    rw [passesRec])

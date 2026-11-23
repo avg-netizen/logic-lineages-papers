@@ -1,0 +1,19 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicyIndexedRankedLayerTargets
+import LogicLineages.StandardControlCurrent.PolicyIndexedRankedLayerProof
+
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.StatementChecks
+open PolicyIndexedRankedLayer
+
+theorem fixed_exactPolicyIndexedRankedLayer : ExactIndexedLayer := exactIndexedLayer
+theorem fixed_policyIndexedRankedLayerEffectivity : IndexedLayerEffectivity :=
+  indexedLayerEffectivity
+theorem fixed_fullPolicyIndexedRankedLayer : FullPolicyIndexedRankedLayer :=
+  ⟨fixed_exactPolicyIndexedRankedLayer,fixed_policyIndexedRankedLayerEffectivity⟩
+
+#print axioms fixed_exactPolicyIndexedRankedLayer
+#print axioms fixed_policyIndexedRankedLayerEffectivity
+#print axioms fixed_fullPolicyIndexedRankedLayer
+
+end LogicLineages.StandardControlCurrent.StatementChecks
