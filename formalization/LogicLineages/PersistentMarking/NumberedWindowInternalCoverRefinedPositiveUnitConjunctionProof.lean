@@ -4,6 +4,7 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphSupportProof
 import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBoundedDescentNormalizerStepSupportProof
 import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaTotalityProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphChoiceProof
 
 public section
 namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverRefinedPositiveUnitConjunctionProof
@@ -16,7 +17,8 @@ open ID1Completion.InternalBoundedDescentNormalizerStepSupportProof (conjunction
 open ID1Completion.InternalControlGraphSupportProof (valueUnique)
 open ID1Completion.InternalTagArithmeticSyntaxProof (z suc)
 open ID1Completion.InternalTagArithmeticSupportProof (sucNeZeroApply)
-open ID1Completion.InternalBetaTotalityProof (addHyp disjunctionElimination excludedMiddle)
+open ID1Completion.InternalBetaTotalityProof (addHyp disjunctionElimination)
+open ID1Completion.InternalControlGraphChoiceProof (excludedMiddle)
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 
 /-- A successor output of the actual normalized conjunction must be its
