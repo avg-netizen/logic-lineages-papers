@@ -1,0 +1,11 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowFixedApplicationOutputScalarLegacyProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowFixedApplicationOutputScalarLegacyProof.lean
+@@ -38,3 +38,5 @@
+-          by_contra bad
+-          simp only [decodedApplication, fView, uView, Option.bind_eq_bind, Option.bind_some,
+-            if_neg bad] at hApp <;> cases hApp
++          by_cases good : (canonicalBit S K ⟨Γ,.arrow σ τ,i⟩ && canonicalBit S K ⟨Δ,argTy,j⟩ &&
++              decide (Γ = Δ) && decide (σ = argTy)) = true
++          · exact good
++          · simp only [decodedApplication, fView, uView, Option.bind_eq_bind, Option.bind_some,
++              if_neg good] at hApp <;> cases hApp

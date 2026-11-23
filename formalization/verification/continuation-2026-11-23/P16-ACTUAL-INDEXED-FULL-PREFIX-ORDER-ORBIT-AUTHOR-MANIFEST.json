@@ -1,0 +1,46 @@
+{
+  "paper": 16,
+  "status": "frozen source only; two separate native gates pending",
+  "gate_order": [
+    "LogicLineages.PersistentMarking.FullPrefixOrderOrbitProof",
+    "LogicLineages.PersistentMarking.NativeIndexedFullPrefixOrderOrbitProof"
+  ],
+  "expected_named_axiom_outputs": {
+    "LogicLineages.PersistentMarking.FullPrefixOrderOrbitProof": [
+      "exact_FullPrefixCarrierOrbit",
+      "exact_FullPrefixCarrierAllApproached"
+    ],
+    "LogicLineages.PersistentMarking.NativeIndexedFullPrefixOrderOrbitProof": [
+      "exact_ActualIndexedFullPrefixEdges",
+      "exact_OriginalNativeIndexedFullPrefixOrbit"
+    ]
+  },
+  "source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/FullPrefixOrderOrbitProof.lean": "3661884b3433f3f14d11c330459ab5a71c05f3ddf76b11d85ed42a7427fdd6df",
+    "formalization/LogicLineages/PersistentMarking/NativeIndexedFullPrefixOrderOrbitProof.lean": "77ac9f0164c14cdc388eefad9330348c185653172cc529e5f05529e180583115",
+    "formalization/verification/continuation-2026-11-23/P16-ACTUAL-INDEXED-FULL-PREFIX-ORDER-ORBIT-SOURCE-MAP.md": "a0d765498a5ffafddeadac29aa9b5485276f6aa020222249ead4219260de0691"
+  },
+  "interface_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeIndexedCarrierChecks.lean": "3039356d5dcad0a6360246f50d703ab57f6c0f4c5a1121200edb4c60038f24fe",
+    "formalization/LogicLineages/PersistentMarking/NativeIndexedCarrierSubtype.lean": "69b5f52e53bc3ae75b861234ac5d592daf95b5694c0f35bfde7c687b038a4b15",
+    "formalization/LogicLineages/PersistentMarking/NativeClosedApplication.lean": "d93fb9104e0ade2d45dbe90c38e400614dbc9da546ede017ebde7f5e57a43e17",
+    "formalization/LogicLineages/PersistentMarking/NativeIteratorStrictTargets.lean": "779736c5e358373c6ab1826b444427b0f224ba644fdf55d02719206c848d042c",
+    "formalization/.lake/packages/mathlib/Mathlib/Order/Bounds/Defs.lean": "e5a38e3cf5b12a87a53bbd64d4d458bacb2f707aa75e1b3dca1c33014aa23c2d"
+  },
+  "static_closures": {
+    "LogicLineages.PersistentMarking.FullPrefixOrderOrbitProof": {
+      "local": 1,
+      "mathlib_source_modules": 50,
+      "mathlib_oleans_present": 50,
+      "direct_external": [
+        "Mathlib.Order.Bounds.Defs"
+      ]
+    },
+    "LogicLineages.PersistentMarking.NativeIndexedFullPrefixOrderOrbitProof": {
+      "local": 136,
+      "mathlib_source_modules": 50,
+      "mathlib_oleans_present": 50
+    }
+  },
+  "boundary": "Conditional genuine full-prefix source-order inference, paid actual native carrier edges; semantic realization laws and ordinal/named calibration remain explicitly unproved."
+}
