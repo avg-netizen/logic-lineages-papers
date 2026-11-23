@@ -1,0 +1,12 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedSeedGrammarProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedSeedGrammarProof.lean
+@@ -25 +25,2 @@
+-open NumberedWindowInternalFactoredAuxOwnCoverTargets (headsTerm typesTerm measurePair)
++open NumberedWindowInternalFactoredAuxOwnCoverTargets (headsTerm typesTerm)
++open NumberedWindowInternalChosenAuxMeasureCombineOpenTargets (codePair)
+@@ -74 +75 @@
+-    (pair : Nonempty (Derivation body Γ (measurePair m d b)))
++    (pair : Nonempty (Derivation body Γ (codePair m d b)))
+@@ -94 +95 @@
+-  simp only [measurePair,programRename,binaryInputsRename] at p
++  simp only [codePair,programRename,binaryInputsRename] at p

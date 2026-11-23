@@ -2,6 +2,7 @@ module
 
 public import LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedGrammarAuxScratchTargets
 public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePackedLeastOpenDefinitions
+public import LogicLineages.PersistentMarking.NumberedWindowInternalChosenAuxMeasureCombineOpenTargets
 
 @[expose] public section
 namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedSeedGrammarTargets
@@ -17,7 +18,8 @@ open NumberedWindowInternalSparsePackedLeastOpen (leastGraph)
 open NumberedWindowInternalSparseScratchMembershipTargets (memberGraph)
 open NumberedWindowInternalSparseCoverScratch (coverOption scratchVertices)
 open NumberedWindowInternalCoverSelectedGrammarAuxScratchTargets (selectedCover)
-open NumberedWindowInternalFactoredAuxOwnCoverTargets (headsTerm typesTerm measurePair)
+open NumberedWindowInternalFactoredAuxOwnCoverTargets (headsTerm typesTerm)
+open NumberedWindowInternalChosenAuxMeasureCombineOpenTargets (codePair)
 open NumberedWindowInternalCoverSelectedGrammarWidthTargets (observed)
 
 structure SeedGrammar (s : Settings) (body : Positive (Fin 1)) {α : Type} (Γ : List (Formula α))
@@ -35,7 +37,7 @@ def ExactOpenCoverSelectedSeedGrammar : Prop :=
     Nonempty (Derivation body Γ (leastGraph (selectedCover V N) X W s ctx ty q x)) →
     Nonempty (Derivation body Γ (unary V (suc z) q)) →
     Nonempty (Derivation body Γ (unary N m q)) →
-    Nonempty (Derivation body Γ (measurePair m d b)) →
+    Nonempty (Derivation body Γ (codePair m d b)) →
     (∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (state vertices args : OTerm β),
       (∀ p ∈ Γ, p.relabel j ∈ Δ) →
       SeedGrammar s body Δ (q.relabel j) (d.relabel j) (b.relabel j) state vertices args →

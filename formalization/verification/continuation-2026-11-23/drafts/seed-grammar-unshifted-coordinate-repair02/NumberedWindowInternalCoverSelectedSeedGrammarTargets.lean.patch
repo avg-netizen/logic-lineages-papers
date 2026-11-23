@@ -1,0 +1,11 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedSeedGrammarTargets.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedSeedGrammarTargets.lean
+@@ -4,0 +5 @@
++public import LogicLineages.PersistentMarking.NumberedWindowInternalChosenAuxMeasureCombineOpenTargets
+@@ -20 +21,2 @@
+-open NumberedWindowInternalFactoredAuxOwnCoverTargets (headsTerm typesTerm measurePair)
++open NumberedWindowInternalFactoredAuxOwnCoverTargets (headsTerm typesTerm)
++open NumberedWindowInternalChosenAuxMeasureCombineOpenTargets (codePair)
+@@ -38 +40 @@
+-    Nonempty (Derivation body Γ (measurePair m d b)) →
++    Nonempty (Derivation body Γ (codePair m d b)) →

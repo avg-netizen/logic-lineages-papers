@@ -26,7 +26,8 @@ open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
 open NumberedWindowScalarAlgorithm (Settings)
 open NumberedWindowInternalCoverCombinedRestrictedRoundApplicationSyntaxProof (appAuxRename)
 open NumberedWindowInternalCoverAuxOwnBoundsAssemblyProof (boundsRename)
-open NumberedWindowInternalFactoredAuxOwnCoverTargets (typesTerm measurePair)
+open NumberedWindowInternalFactoredAuxOwnCoverTargets (typesTerm)
+open NumberedWindowInternalChosenAuxMeasureCombineOpenTargets (codePair)
 open NumberedWindowInternalSparseFieldParserOpenSyntaxProof (binaryInputsRename)
 open NumberedWindowInternalSparsePackedLeastOpenSyntaxProof (leastRename)
 open NumberedWindowInternalSparsePassWindowSyntaxProof (windowRename)
@@ -52,8 +53,8 @@ theorem inputsRename (V N : Program 1) (X : Program 2) (W : Program 3) (s : Sett
   · simpa only [unaryRename,sucRelabel,zRelabel] using renameInto i.argumentValid j Δ keep
   · simpa only [unaryRename] using renameInto i.functionMeasure j Δ keep
   · simpa only [unaryRename] using renameInto i.argumentMeasure j Δ keep
-  · simpa only [measurePair,programRename,binaryInputsRename] using renameInto i.functionPair j Δ keep
-  · simpa only [measurePair,programRename,binaryInputsRename] using renameInto i.argumentPair j Δ keep
+  · simpa only [codePair,programRename,binaryInputsRename] using renameInto i.functionPair j Δ keep
+  · simpa only [codePair,programRename,binaryInputsRename] using renameInto i.argumentPair j Δ keep
   · simpa only [unaryRename,sucRelabel,zRelabel,appAuxRename] using renameInto i.parentValid j Δ keep
   · simpa only [unaryRename,appAuxRename] using renameInto i.parentMeasure j Δ keep
   · simpa only [boundsRename] using renameInto i.parentBounds j Δ keep

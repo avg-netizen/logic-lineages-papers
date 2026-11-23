@@ -1,0 +1,40 @@
+{
+  "gate": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedSeedGrammarProof",
+  "label": "p16-seed-and-known-scopes-1018",
+  "receipt": "1795429129882107757-39",
+  "original": {
+    "leaf": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/selected-seed-grammar-repair01/NumberedWindowInternalCoverSelectedSeedGrammarProof.lean.failed-source",
+      "sha256": "0be44daff7734ab78fbab51f831e9a9a820c326924f566d82143669e95c17754"
+    },
+    "module_diagnostic": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/selected-seed-grammar-repair01/SeedGrammarProof.native.log",
+      "sha256": "63add58d0a5a8459f5a4c9408336a343c089998fabc2f6e034573fe7eb7c852a"
+    },
+    "gate_receipt": {
+      "path": "formalization/build-reports/1795429129882107757-39.json",
+      "sha256": "5badd04820f6ca42ef207006d787fbe45c3a848d53d5d2163ccc07296c7f1081"
+    },
+    "gate_stdout": {
+      "path": "/tmp/ii5-nov23-p16-seed-and-known-scopes-1018.log",
+      "sha256": "713f820f719dee60ee3ce7726dc8408c699d3f14aef38162e7ac63b876088964"
+    }
+  },
+  "repair": "Separate the actual seed membership and actual measured selected scratch into explicitly typed private lemmas; locally prevent proof elaboration from normalizing programGraph. Frozen public proposition, programs, premises and caps unchanged.",
+  "candidate": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedSeedGrammarProof.lean",
+    "sha256": "3212c8532692bfa20e6911d0b00f69a114bdb10cf1738679e5bcb4debb67d92b"
+  },
+  "unchanged_sibling_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedSeedGrammarTargets.lean",
+      "sha256": "861809c8f2d8ea440d485a8e33083261f708ee9efdcd42515eb199f4dfe0fa6f"
+    }
+  ],
+  "patch": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/selected-seed-grammar-repair01/split-typed-proofs.patch",
+    "sha256": "8cbbf8a0582dfeab7c455e7a50426e27bd43cbc76e35d352be8dc9a5e1d47f71"
+  },
+  "round_trip_exact": true,
+  "native_candidate": "Pending; source author did not run Lean or Git."
+}

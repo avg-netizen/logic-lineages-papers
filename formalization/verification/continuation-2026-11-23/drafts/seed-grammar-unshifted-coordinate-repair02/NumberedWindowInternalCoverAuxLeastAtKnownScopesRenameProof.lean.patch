@@ -1,0 +1,11 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxLeastAtKnownScopesRenameProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxLeastAtKnownScopesRenameProof.lean
+@@ -29 +29,2 @@
+-open NumberedWindowInternalFactoredAuxOwnCoverTargets (typesTerm measurePair)
++open NumberedWindowInternalFactoredAuxOwnCoverTargets (typesTerm)
++open NumberedWindowInternalChosenAuxMeasureCombineOpenTargets (codePair)
+@@ -55,2 +56,2 @@
+-  · simpa only [measurePair,programRename,binaryInputsRename] using renameInto i.functionPair j Δ keep
+-  · simpa only [measurePair,programRename,binaryInputsRename] using renameInto i.argumentPair j Δ keep
++  · simpa only [codePair,programRename,binaryInputsRename] using renameInto i.functionPair j Δ keep
++  · simpa only [codePair,programRename,binaryInputsRename] using renameInto i.argumentPair j Δ keep

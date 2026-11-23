@@ -1,0 +1,13 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxLeastAtKnownScopesTargets.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxLeastAtKnownScopesTargets.lean
+@@ -25 +25 @@
+-open NumberedWindowInternalFactoredAuxOwnCoverTargets (typesTerm measurePair)
++open NumberedWindowInternalFactoredAuxOwnCoverTargets (typesTerm)
+@@ -27 +27 @@
+-open NumberedWindowInternalChosenAuxMeasureCombineOpenTargets (boundBody)
++open NumberedWindowInternalChosenAuxMeasureCombineOpenTargets (boundBody codePair)
+@@ -39,2 +39,2 @@
+-  functionPair : Nonempty (Derivation body Γ (measurePair mf df bf))
+-  argumentPair : Nonempty (Derivation body Γ (measurePair ma da ba))
++  functionPair : Nonempty (Derivation body Γ (codePair mf df bf))
++  argumentPair : Nonempty (Derivation body Γ (codePair ma da ba))
