@@ -1,0 +1,16 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedScanCasesProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedScanCasesChecks
+open NumberedWindowInternalDirectInsertedScanCasesTargets
+
+theorem exact_OpenOriginalInsertedScanCases : ExactOpenScanCases :=
+  NumberedWindowInternalDirectInsertedScanCases.exactOpenScanCases
+
+theorem exact_OpenOriginalInsertedScanMemberCases : ExactOpenScanMemberCases :=
+  NumberedWindowInternalDirectInsertedScanCases.exactOpenScanMemberCases
+
+#print axioms exact_OpenOriginalInsertedScanCases
+#print axioms exact_OpenOriginalInsertedScanMemberCases
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedScanCasesChecks
