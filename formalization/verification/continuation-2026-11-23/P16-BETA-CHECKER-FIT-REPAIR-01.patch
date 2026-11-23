@@ -1,0 +1,12 @@
+--- LogicLineages/PersistentMarking/NumberedWindowInternalBetaCheckerFitProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowInternalBetaCheckerFitProof.lean
+@@ -66 +66,4 @@
+-  · rw [evaluateCompose2,evaluateCompose2,evaluateTarget]
++  · rw [evaluateCompose2,evaluateCompose2]
++    change run2 equalityTest (run2 sub (run2 arg src dst) (run2 body src dst))
++      (run2 (.composition .succ (fun _ : Fin 1 => .projection (1 : Fin 2))) src dst) = _
++    rw [evaluateTarget]
+@@ -83 +86,2 @@
+-  rw [checkerEvaluation,guardFit,argFit,bodyFit,subFit,codeMatches]
++  rw [checkerEvaluation,guardFit,argFit,bodyFit,subFit]
++  simp only [codeMatches]

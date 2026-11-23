@@ -1,0 +1,6 @@
+--- LogicLineages/PersistentMarking/NumberedWindowInternalBetaCheckerSelectionProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowInternalBetaCheckerSelectionProof.lean
+@@ -34,0 +35,3 @@
++      change
++        (NumberedWindowFieldAlgorithm.unpackNode (p.2.getD 2 0)).map (fun f => (p,f)) =
++        (NumberedWindowFieldAlgorithm.unpackNode (p.2.getD 2 0)).bind (fun f => some (p,f))

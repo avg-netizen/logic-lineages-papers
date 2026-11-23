@@ -1,0 +1,13 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowOriginalSelectRootFieldsProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowOriginalSelectRootFieldsProof.lean
+@@ -58 +58 @@
+-      have b : (tag == 5) && fromOwner extra index domains dst
++      have b : ((tag == 5) && fromOwner extra index domains dst
+@@ -60 +60 @@
+-          (slots.getD 3 0) (slots.getD 4 0) = true := by
++          (slots.getD 3 0) (slots.getD 4 0)) = true := by
+@@ -83 +83,3 @@
+-          exact ⟨f,t,label,b,e,tape,child,sx,sy,seen,got,picked,tested.1,tested.2.symm⟩
++          exact ⟨f,t,label,b,e,tape,child,sx,sy,
++            by first | exact seen | rfl, by first | exact got | rfl,
++            by first | exact picked | rfl,tested.1,tested.2.symm⟩
