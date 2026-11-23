@@ -1,0 +1,5 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreEnvelopeProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreEnvelopeProof.lean
+@@ -62 +62 @@
+-    Fin.cases ?_ (fun d => Fin.cases ?_ Fin.elim0 d) c) b) a) i
++    Fin.cases ?_ (fun d => Fin.cases ?_ (fun q => Fin.elim0 q) d) c) b) a) i

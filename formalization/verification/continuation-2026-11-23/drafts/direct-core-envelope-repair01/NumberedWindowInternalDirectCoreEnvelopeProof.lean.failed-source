@@ -1,0 +1,107 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectCoreTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectCoreCutProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectWitnessEnvelopeOpenProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionRawGraphProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserOpenSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceConjunctionProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionEqualityProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceInversionSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectCoreEnvelopeProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalAcceptanceSupportProof (compositionRecover programCompositionCases)
+open ID1Completion.InternalAcceptanceConjunctionProof (conjunctionRecover)
+open ID1Completion.InternalControlGraphSupportProof (projectionValue valueUnique)
+open ID1Completion.InternalSourceInversionSupportProof (onEquality)
+open ID1Completion.InternalGraphCompositionEqualityProof (graphInputTransport)
+open ID1Completion.InternalTagArithmeticSupportProof (refl)
+open ID1Completion.InternalTagArithmeticSyntaxProof (eqn sucRelabel zRelabel)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open NumberedWindowInternalSparsePathEnvelope (field)
+open NumberedWindowInternalSparsePathEnvelopeTargets (unary suc z)
+open NumberedWindowInternalSparseFieldParserOpenSyntaxProof (tripleInputsRename)
+open NumberedWindowInternalDirectSourcePartitionRawTargets (sourceTape)
+open NumberedWindowInternalDirectSourcePartitionRawGraphProof (renameUnit)
+open NumberedWindowInternalDirectWitnessEnvelopeTargets (guardAt reports tripleTerm)
+open NumberedWindowInternalDirectWitnessEnvelope (exactOpenTriple)
+open NumberedWindowInternalDirectCoreTargets
+open NumberedWindowInternalDirectCoreCutProof (exact_OpenCoreCut)
+
+variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+private theorem fromCert (p : Program 1) (s w t v : OTerm α)
+    (h : Nonempty (Derivation B Γ (programGraph (onCert p) v (sourceTape s w t)))) :
+    Nonempty (Derivation B Γ (unary p v w)) := by
+  apply compositionRecover p ![.projection 1] v (sourceTape s w t) ![w] h
+  intro i
+  obtain rfl := Fin.eq_zero i
+  exact projectionValue 1 (sourceTape s w t)
+
+/-- The generated core input tuple has two projection witnesses; object
+functionality lands these at the original endpoints, not new representatives. -/
+private theorem pinEndpoints (p : Program 5) (s t : OTerm α) (vs : Fin 5 → OTerm α)
+    (h : Nonempty (Derivation B Γ (programGraph p (suc z) vs)))
+    (es : Nonempty (Derivation B Γ (eqn (vs 0) s)))
+    (et : Nonempty (Derivation B Γ (eqn (vs 1) t))) :
+    Nonempty (Derivation B Γ (programGraph p (suc z) (coreTape s t (vs 2) (vs 3) (vs 4)))) := by
+  apply graphInputTransport B α 5 Γ (OrdinaryArithmetic.graphFormula p) (suc z)
+    vs (coreTape s t (vs 2) (vs 3) (vs 4)) _ h
+  intro i
+  rw [onEquality]
+  refine Fin.cases ?_ (fun a => Fin.cases ?_ (fun b => Fin.cases ?_ (fun c =>
+    Fin.cases ?_ (fun d => Fin.cases ?_ Fin.elim0 d) c) b) a) i
+  · exact es
+  · exact et
+  · exact ⟨refl _⟩
+  · exact ⟨refl _⟩
+  · exact ⟨refl _⟩
+
+private theorem unitFields (s w t : OTerm α) (vs : Fin 5 → OTerm α)
+    (guard : Nonempty (Derivation B Γ (programGraph (onCert (guardAt 5)) (suc z) (sourceTape s w t))))
+    (fields : ∀ i, Nonempty (Derivation B Γ (programGraph (witnessAt i) (vs i) (sourceTape s w t)))) :
+    Nonempty (Derivation B Γ (reports 5 w (vs 2) (vs 3) (vs 4))) := by
+  obtain ⟨g⟩ := fromCert (guardAt 5) s w t (suc z) guard
+  obtain ⟨k⟩ := fromCert (field 0) s w t (vs 2) (fields 2)
+  obtain ⟨r⟩ := fromCert (field 1) s w t (vs 3) (fields 3)
+  obtain ⟨a⟩ := fromCert (field 2) s w t (vs 4) (fields 4)
+  exact ⟨Derivation.conjunctionIntroduction g (Derivation.conjunctionIntroduction k
+    (Derivation.conjunctionIntroduction r a))⟩
+
+theorem exact_OpenDCore : ExactOpenDCore := by
+  intro scalar positive count B α Γ s w t goal held next
+  let p := core scalar positive count
+  let xs := sourceTape s w t
+  obtain ⟨split⟩ := conjunctionRecover (onCert (guardAt 5)) (.composition p witnessAt) xs held
+  have guard : Nonempty (Derivation B Γ (programGraph (onCert (guardAt 5)) (suc z) xs)) :=
+    ⟨Derivation.conjunctionLeft split⟩
+  apply programCompositionCases p witnessAt (suc z) xs goal ⟨Derivation.conjunctionRight split⟩
+  intro β j vs Δ keep ran fields
+  rw [sucRelabel,zRelabel] at ran
+  let S := s.relabel j
+  let W := w.relabel j
+  let T := t.relabel j
+  let tape := sourceTape S W T
+  have fields' (i : Fin 5) :
+      Nonempty (Derivation B Δ (programGraph (witnessAt i) (vs i) tape)) := by
+    simpa only [tape,S,W,T,xs,tripleInputsRename] using fields i
+  have es := valueUnique (.projection 0) (vs 0) S tape (fields' 0) (projectionValue 0 tape)
+  have et := valueUnique (.projection 2) (vs 1) T tape (fields' 1) (projectionValue 2 tape)
+  have cut := pinEndpoints p S T vs ran es et
+  obtain ⟨facts⟩ := unitFields S W T vs (renameUnit (onCert (guardAt 5)) s w t guard j Δ keep) fields'
+  obtain ⟨bridge⟩ := exactOpenTriple B β Δ 5 W (vs 2) (vs 3) (vs 4)
+  have packed := Derivation.implicationElimination (Derivation.conjunctionRight bridge) facts
+  exact next β j Δ (vs 2) (vs 3) (vs 4) keep ⟨facts⟩ ⟨packed⟩
+    (exact_OpenCoreCut scalar positive count B β Δ S T (vs 2) (vs 3) (vs 4) cut)
+
+#print axioms exact_OpenDCore
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectCoreEnvelopeProof

@@ -1,0 +1,8 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreCutProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreCutProof.lean
+@@ -49 +49 @@
+-    exact Fin.cases rfl (Fin.cases rfl (Fin.cases rfl Fin.elim0)) l
++    exact Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (fun q => Fin.elim0 q))) l
+@@ -52 +52 @@
+-    exact Fin.cases rfl (Fin.cases rfl Fin.elim0) l
++    exact Fin.cases rfl (Fin.cases rfl (fun q => Fin.elim0 q)) l
