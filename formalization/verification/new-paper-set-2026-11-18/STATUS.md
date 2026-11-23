@@ -4,9 +4,22 @@ The new-paper register has **159 checked and 8 pending out of 167**. Historical 
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
+## Independent review of round 2, 22 November
+
+The source review of `1cd1734fe` finds no material mismatch in Paper 17's strengthened
+`UniformMainComparison`: the supplied policy program and near-control parameter are genuine runtime
+inputs, with valid-program termination and the original comparison semantics. Paper 16's native
+iteration statement matches the printed scope, and the fixed-point structural correction is
+supported by its four comparator conjuncts. The broader lambda fundamental-lemma sentence still
+exceeds the proved abstraction rule, so `lem:realization` remains pending. No numbered status is
+changed by this review; #1445 and #1446 are ready for promotion decisions. Application summaries now
+state the shared-context reports and the arbitrary-type-program codomain premise. Historical
+source-map/manifest snapshots were restored at their exact recorded hashes.
+[Review and evidence](../github-round2-review-2026-11-22/REVIEW.md)
+
 ## Round 2 of the local Fable-pair continuation, 22 November (paused)
 
-Supporting records now end at **1448**, with numbered acceptances #1435, #1436 and #1449. Paper 16 `lem:structural-interpretation` is promoted: the owner applied the recorded fixed-point correction to `decision.tex`, and the corrected lemma is the conjunction of four accepted statements. Paper 17 `thm:main` has a strengthened comparator, uniform in a supplied policy program and in the near-control parameter, proved with no hypothesis; it is not promoted until that comparator has been read against the paper. The native Paper 16 statements for iteration, realization and ranks compiled for the first time, on module-system copies of the legacy native files that remove an import-footprint memory stop; they are candidates for `thm:iteration` and `lem:realization`, not promoted. [Handoff](../local-fable-pair-2026-11-22-round2/HANDOFF.md) · [structural interpretation](accepted/1449-p16-lem-structural-interpretation.json) · [uniform main comparison](accepted/1445-p17-uniform-main-comparison.json) · [native iteration](accepted/1446-p16-native-iteration-on-module-copies.json) · [Paper 16 gap map](../local-fable-pair-2026-11-22-round2/opusB/P16-GAP-MAP.md)
+Supporting records now end at **1448**, with numbered acceptances #1435, #1436 and #1449. Paper 16 `lem:structural-interpretation` is promoted: the owner applied the recorded fixed-point correction to `decision.tex`, and the corrected lemma is the conjunction of four accepted statements. Paper 17 `thm:main` has a strengthened comparator, uniform in a supplied policy program and in the near-control parameter, proved with no hypothesis; its independent source review is now complete and promotion remains a register decision. The native Paper 16 statements for iteration, realization and ranks compiled for the first time, on module-system copies of the legacy native files that remove an import-footprint memory stop; they are candidates for `thm:iteration` and `lem:realization`, not promoted. [Handoff](../local-fable-pair-2026-11-22-round2/HANDOFF.md) · [structural interpretation](accepted/1449-p16-lem-structural-interpretation.json) · [uniform main comparison](accepted/1445-p17-uniform-main-comparison.json) · [native iteration](accepted/1446-p16-native-iteration-on-module-copies.json) · [Paper 16 gap map](../local-fable-pair-2026-11-22-round2/opusB/P16-GAP-MAP.md)
 
 ## Promotion of two Paper 17 statements, 22 November
 
