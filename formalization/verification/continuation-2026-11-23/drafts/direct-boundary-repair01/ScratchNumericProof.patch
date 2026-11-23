@@ -1,0 +1,22 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectBoundaryScratchNumericProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectBoundaryScratchNumericProof.lean
+@@ -15,2 +15,2 @@
+-open ID1Completion.InternalAcceptanceCalibrationProof (evalBranch)
+-open NumberedWindowInternalFreshProbeDispatchProgramControlProof (compositeTwo bothEvaluation)
++open ID1Completion.InternalAcceptanceCalibrationProof (evalBranch actualConjunctionEvaluation)
++open NumberedWindowInternalFreshProbeDispatchProgramControlProof (compositeTwo)
+@@ -27 +27 @@
+-  rw [bothEvaluation,fit n]
++  rw [actualConjunctionEvaluation 1 scalar (constantOne 1) (n ::ᵥ nil),fit n]
+@@ -46 +46,3 @@
+-    unfold scalarFailures
++    change evaluate (.composition scratchMember
++      (Fin.cons (ID1Completion.InternalListMap.map (k := 0) (normalizeScalar scalar))
++        (Fin.cons (constantZero 1) Fin.elim0))) (numbersNumber xs ::ᵥ nil) = _
+@@ -62 +64,5 @@
+-  cases xs <;> rfl
++  cases xs with
++  | nil => rfl
++  | cons a as =>
++    change (if 1 + Nat.pair a (numbersNumber as) = 0 then 0 else 1) = 1
++    rw [if_neg (by omega)]

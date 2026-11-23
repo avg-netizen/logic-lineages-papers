@@ -1,0 +1,10 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectBoundaryNonemptyProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectBoundaryNonemptyProof.lean
+@@ -80,2 +80,5 @@
+-  have head' := renameInto head k Θ hk
+-  rw [unaryRename] at head'
++  have head' : Nonempty (Derivation B Θ (unary headCode (h.relabel k) ((code.relabel j).relabel k))) := by
++    have moved := renameInto head k Θ hk
++    change Nonempty (Derivation B Θ ((unary headCode h (code.relabel j)).relabel k)) at moved
++    rw [unaryRename] at moved
++    exact moved

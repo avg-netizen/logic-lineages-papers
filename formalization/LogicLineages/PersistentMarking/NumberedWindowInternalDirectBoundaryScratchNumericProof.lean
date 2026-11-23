@@ -1,0 +1,72 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectBoundaryGuardsTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchProgramControlProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseScratchMembershipNumericProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListMapEvaluationProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectBoundaryScratchNumericProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram List.Vector
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open ID1Completion.InternalListMapEvaluationProof (actualRawListMapEvaluation)
+open ID1Completion.InternalAcceptance (conjunction constantZero)
+open ID1Completion.InternalLessThan (constantOne)
+open ID1Completion.InternalAcceptanceCalibrationProof (evalBranch actualConjunctionEvaluation)
+open NumberedWindowInternalFreshProbeDispatchProgramControlProof (compositeTwo)
+open NumberedWindowInternalSparseScratchMembership (scratchMember)
+open NumberedWindowInternalSparseScratchMembershipNumericProof (allInput)
+open NumberedMultisetNumeric (numbersNumber)
+open NumberedMultisetNumericSupportProof (numbersRoundTrip)
+open NumberedWindowInternalDirectBoundaryGuardsTargets
+
+private theorem normalizeValue (scalar : Program 1) (accepts : Nat → Bool)
+    (fit : ScalarFit scalar accepts) (n : Nat) :
+    evaluate (normalizeScalar scalar) (n ::ᵥ nil) = (accepts n).toNat := by
+  unfold normalizeScalar
+  rw [actualConjunctionEvaluation 1 scalar (constantOne 1) (n ::ᵥ nil),fit n]
+  cases accepts n <;> rfl
+
+private theorem allMiss (accepts : Nat → Bool) (xs : List Nat) :
+    ((xs.map fun a => (accepts a).toNat).any fun v => v == 0) = !(xs.all accepts) := by
+  induction xs with
+  | nil => rfl
+  | cons x xs ih =>
+    rw [List.map_cons,List.any_cons,List.all_cons,ih]
+    cases accepts x <;> rfl
+
+theorem exact_TypedScratchFromOriginalMap (scalar : Program 1) (accepts : Nat → Bool)
+    (fit : ScalarFit scalar accepts) (xs : List Nat) :
+    evaluate (typedScratch scalar) (numbersNumber xs ::ᵥ nil) = (xs.all accepts).toNat := by
+  have mapped := actualRawListMapEvaluation 0 (normalizeScalar scalar) nil (numbersNumber xs)
+  rw [numbersRoundTrip] at mapped
+  simp only [Option.getD_some,normalizeValue scalar accepts fit] at mapped
+  have bad : evaluate (scalarFailures scalar) (numbersNumber xs ::ᵥ nil) =
+      (!(xs.all accepts)).toNat := by
+    change evaluate (.composition scratchMember
+      (Fin.cons (ID1Completion.InternalListMap.map (k := 0) (normalizeScalar scalar))
+        (Fin.cons (constantZero 1) Fin.elim0))) (numbersNumber xs ::ᵥ nil) = _
+    rw [compositeTwo]
+    change evaluate scratchMember
+      (evaluate (ID1Completion.InternalListMap.map (k := 0) (normalizeScalar scalar))
+        (numbersNumber xs ::ᵥ nil) ::ᵥ 0 ::ᵥ nil) = _
+    rw [mapped,allInput _ 0,numbersRoundTrip]
+    change (((xs.map fun a => (accepts a).toNat).any fun v => v == 0)).toNat = _
+    rw [allMiss]
+  unfold typedScratch
+  rw [evalBranch,bad]
+  cases xs.all accepts <;> rfl
+
+theorem exact_NumericPresentScratch (xs : List Nat) :
+    evaluate presentScratch (numbersNumber xs ::ᵥ nil) = (!xs.isEmpty).toNat := by
+  unfold presentScratch
+  rw [evalBranch]
+  cases xs with
+  | nil => rfl
+  | cons a as =>
+    change (if 1 + Nat.pair a (numbersNumber as) = 0 then 0 else 1) = 1
+    rw [if_neg (by omega)]
+
+#print axioms exact_TypedScratchFromOriginalMap
+#print axioms exact_NumericPresentScratch
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectBoundaryScratchNumericProof

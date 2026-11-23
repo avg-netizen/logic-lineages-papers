@@ -1,0 +1,10 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectBoundaryRawNumericProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectBoundaryRawNumericProof.lean
+@@ -6,0 +7 @@
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceCalibrationProof
+@@ -64 +65 @@
+-  rw [exact_TypedScratchFromOriginalMap scalar accepts fit s,
++  simp only [exact_TypedScratchFromOriginalMap scalar accepts fit s,
+@@ -76 +77 @@
+-  rw [conValue,conValue,conValue,sReady,tReady,rReady]
++  simp only [conValue,sReady,tReady,rReady]

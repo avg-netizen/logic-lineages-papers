@@ -1,0 +1,37 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectBoundaryRawNumericProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectBoundaryRawNumericProof.lean
+@@ -12,0 +13 @@
++open ID1Completion.InternalAcceptanceCalibrationProof (actualConjunctionEvaluation)
+@@ -15 +16,2 @@
+-  (compositeOne compositeThree branchEvaluation zeroEvaluation literalEvaluation predEvaluation bothEvaluation)
++  (compositeOne compositeThree branchEvaluation zeroEvaluation literalEvaluation predEvaluation)
++open NumberedWindowInternalSparseFieldParser (parser)
+@@ -26 +28 @@
+-  unfold parserAt
++  change evaluate (.composition parser (Fin.cons (.projection i) Fin.elim0)) xs = _
+@@ -39 +41 @@
+-  change evaluate (.composition predOne ![parserAt i]) xs = _
++  change evaluate (.composition predOne (Fin.cons (parserAt i) Fin.elim0)) xs = _
+@@ -41,0 +44,10 @@
++
++private theorem conValue {n : Nat} (p q : Program n) (xs : List.Vector Nat n) :
++    evaluate (conjunction p q) xs = (if evaluate p xs = 1 ∧ evaluate q xs = 1 then 1 else 0) :=
++  actualConjunctionEvaluation n p q xs
++
++private theorem slotValue (p : Program 1) (i : Fin 3) (xs : List.Vector Nat 3) :
++    evaluate (atSlot p i) xs = evaluate p (xs.get i ::ᵥ nil) := by
++  change evaluate (.composition p (Fin.cons (.projection i) Fin.elim0)) xs = _
++  rw [compositeOne]
++  rfl
+@@ -47,2 +59,2 @@
+-  unfold boundaryScratch atSlot
+-  rw [bothEvaluation,bothEvaluation,compositeOne,compositeOne,compositeOne]
++  unfold boundaryScratch
++  rw [conValue,conValue,slotValue,slotValue,slotValue]
+@@ -64 +76 @@
+-  rw [bothEvaluation,bothEvaluation,bothEvaluation,sReady,tReady,rReady]
++  rw [conValue,conValue,conValue,sReady,tReady,rReady]
+@@ -76 +88,2 @@
+-          unfold decodedCall
++          change evaluate (.composition (boundaryScratch scalar)
++            (Fin.cons (payloadAt 0) (Fin.cons (payloadAt 1) (Fin.cons (payloadAt 2) Fin.elim0)))) xs = _

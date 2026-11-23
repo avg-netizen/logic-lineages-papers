@@ -1,0 +1,97 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectBoundaryGuardsTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectBoundaryScratchNumericProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserNumericChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchProgramControlProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceCalibrationProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectBoundaryRawNumericProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram List.Vector
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open ID1Completion.InternalAcceptance (conjunction)
+open ID1Completion.InternalAcceptanceCalibrationProof (actualConjunctionEvaluation)
+open NumberedWindowInternalFreshProbeDispatchProgram (chooseBranch zeroAt predOne literal)
+open NumberedWindowInternalFreshProbeDispatchProgramControlProof
+  (compositeOne compositeThree branchEvaluation zeroEvaluation literalEvaluation predEvaluation)
+open NumberedWindowInternalSparseFieldParser (parser)
+open NumberedWindowInternalSparseFieldParserNumericChecks (exact_ActualEncodedOutput)
+open NumberedWindowInternalSparseFieldParserTargets (encodeResult)
+open NumberedWindowFieldAlgorithm (unpack)
+open NumberedMultisetNumeric (numbersNumber)
+open NumberedWindowInternalDirectSourcePartitionRawTargets
+open NumberedWindowInternalDirectBoundaryGuardsTargets
+open NumberedWindowInternalDirectBoundaryScratchNumericProof
+
+private theorem parserValue (i : Fin 3) (xs : List.Vector Nat 3) :
+    evaluate (parserAt i) xs = encodeResult (unpack (xs.get i)) := by
+  change evaluate (.composition parser (Fin.cons (.projection i) Fin.elim0)) xs = _
+  rw [compositeOne]
+  exact exact_ActualEncodedOutput (xs.get i)
+
+private theorem readyValue (i : Fin 3) (xs : List.Vector Nat 3) :
+    evaluate (parsedAt i) xs = (unpack (xs.get i)).isSome.toNat := by
+  change evaluate (chooseBranch (parserAt i) (zeroAt 3) (literal 3 1)) xs = _
+  rw [branchEvaluation,parserValue,zeroEvaluation,literalEvaluation]
+  cases unpack (xs.get i) <;> rfl
+
+private theorem payloadValue (i : Fin 3) (xs : List.Vector Nat 3) (ys : List Nat)
+    (parsed : unpack (xs.get i) = some ys) :
+    evaluate (payloadAt i) xs = numbersNumber ys := by
+  change evaluate (.composition predOne (Fin.cons (parserAt i) Fin.elim0)) xs = _
+  rw [compositeOne,parserValue,parsed]
+  exact predEvaluation (numbersNumber ys + 1)
+
+private theorem conValue {n : Nat} (p q : Program n) (xs : List.Vector Nat n) :
+    evaluate (conjunction p q) xs = (if evaluate p xs = 1 ∧ evaluate q xs = 1 then 1 else 0) :=
+  actualConjunctionEvaluation n p q xs
+
+private theorem slotValue (p : Program 1) (i : Fin 3) (xs : List.Vector Nat 3) :
+    evaluate (atSlot p i) xs = evaluate p (xs.get i ::ᵥ nil) := by
+  change evaluate (.composition p (Fin.cons (.projection i) Fin.elim0)) xs = _
+  rw [compositeOne]
+  rfl
+
+private theorem numericalCore (scalar : Program 1) (accepts : Nat → Bool)
+    (fit : ScalarFit scalar accepts) (s t r : List Nat) :
+    evaluate (boundaryScratch scalar) (numbersNumber s ::ᵥ numbersNumber t ::ᵥ numbersNumber r ::ᵥ nil) =
+      (s.all accepts && t.all accepts && !r.isEmpty).toNat := by
+  unfold boundaryScratch
+  rw [conValue,conValue,slotValue,slotValue,slotValue]
+  change (if evaluate (typedScratch scalar) (numbersNumber s ::ᵥ nil) = 1 ∧
+      (if evaluate (typedScratch scalar) (numbersNumber t ::ᵥ nil) = 1 ∧
+        evaluate presentScratch (numbersNumber r ::ᵥ nil) = 1 then 1 else 0) = 1 then 1 else 0) = _
+  simp only [exact_TypedScratchFromOriginalMap scalar accepts fit s,
+    exact_TypedScratchFromOriginalMap scalar accepts fit t,exact_NumericPresentScratch]
+  cases s.all accepts <;> cases t.all accepts <;> cases r <;> simp
+
+theorem exact_NumericRawGuards : ExactNumericRawGuards := by
+  intro scalar accepts fit src dst removed
+  let xs := src ::ᵥ dst ::ᵥ removed ::ᵥ nil
+  change evaluate (conjunction parsedAll (decodedCall (boundaryScratch scalar))) xs = _
+  have sReady : evaluate (parsedAt 0) xs = (unpack src).isSome.toNat := readyValue 0 xs
+  have tReady : evaluate (parsedAt 1) xs = (unpack dst).isSome.toNat := readyValue 1 xs
+  have rReady : evaluate (parsedAt 2) xs = (unpack removed).isSome.toNat := readyValue 2 xs
+  unfold parsedAll
+  simp only [conValue,sReady,tReady,rReady]
+  cases hs : unpack src with
+  | none => simp [expected,hs]
+  | some s =>
+    cases ht : unpack dst with
+    | none => simp [expected,hs,ht]
+    | some t =>
+      cases hr : unpack removed with
+      | none => simp [expected,hs,ht,hr]
+      | some r =>
+        have ran : evaluate (decodedCall (boundaryScratch scalar)) xs =
+            (s.all accepts && t.all accepts && !r.isEmpty).toNat := by
+          change evaluate (.composition (boundaryScratch scalar)
+            (Fin.cons (payloadAt 0) (Fin.cons (payloadAt 1) (Fin.cons (payloadAt 2) Fin.elim0)))) xs = _
+          rw [compositeThree,payloadValue 0 xs s hs,payloadValue 1 xs t ht,payloadValue 2 xs r hr]
+          exact numericalCore scalar accepts fit s t r
+        cases good : (s.all accepts && t.all accepts && !r.isEmpty) <;>
+          simp [expected,hs,ht,hr,ran,good]
+
+#print axioms exact_NumericRawGuards
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectBoundaryRawNumericProof
