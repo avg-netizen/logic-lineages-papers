@@ -1,0 +1,5 @@
+# P16: real ranked original body and all-type fresh computability
+
+Paper 16, [ordinals.tex](../../../16-persistent-marking-termination-ordering/sections/ordinals.tex) 112–128. The exact original directed scalar exchange preserves the full neutral left-spine rank, without any symmetry premise. The physically installed even program uses the same actual i, raw positive input, and packed least program: the original chosen interpretation, rules, probes, and full J package are rebuilt at that exact new rank-guarded body.
+
+The rank-guarded application is numerically fitted to the original graph at every input, explicitly requiring the genuine output scalar law of the chosen settings (proved independently at closed original fixed settings). The ranked tuple obtains both that same actual p and a newly selected h, retaining chosenA and paying the complete original fresh-variable C rule with no type restriction. The companion C→I theorem uses that real fresh rule and the original typed rule, for all types, but continues to require the exact same-body function-side ForwardRule. No whole constructor, unrestricted function path, or ordinal upper-bound inference is claimed.

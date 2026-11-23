@@ -1,0 +1,12 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralSpineExchangeRankProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralSpineExchangeRankProof.lean
+@@ -108,2 +108,2 @@
+-        simpa only [Bool.and_eq_true,Bool.or_eq_true,beq_iff_eq,and_assoc] using
+-          (Bool.and_eq_true.mp test).2
++        simp only [Bool.and_eq_true,Bool.or_eq_true,beq_iff_eq,and_assoc] at test
++        exact test.2.2
+@@ -125,2 +125,2 @@
+-        simpa only [Bool.and_eq_true,Bool.or_eq_true,beq_iff_eq,and_assoc] using
+-          (Bool.and_eq_true.mp test).2
++        simp only [Bool.and_eq_true,Bool.or_eq_true,beq_iff_eq,and_assoc] at test
++        exact test.2.2

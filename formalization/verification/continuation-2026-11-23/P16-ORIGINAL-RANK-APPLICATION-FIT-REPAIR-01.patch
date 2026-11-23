@@ -1,0 +1,19 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginalRankApplicationFitProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginalRankApplicationFitProof.lean
+@@ -2,0 +3,2 @@
++public import LogicLineages.PersistentMarking.NumberedWindowInternalNeutralAddressRankDefinitions
++public import LogicLineages.PersistentMarking.NumberedWindowNeutralSpineRankAlgorithm
+@@ -47,5 +49,8 @@
+-  apply exact_RankApplicationNumeric i (addressRank raw) p (graph s) pFit
+-  intro f u y accepted pos
+-  have carrier := scalarOutput f u y accepted
+-  have plus := exact_OriginalAddressRankApplicationReport s raw rawFit transport f u y accepted carrier pos
+-  exact ⟨by rw [plus]; exact Nat.succ_ne_zero _, (iFit y).trans (congrArg Bool.toNat carrier)⟩
++  have holds : ∀ f u y, graph s f u y = true → run (addressRank raw) f ≠ 0 →
++      run (addressRank raw) y ≠ 0 ∧ run i y = 1 := by
++    intro f u y accepted pos
++    have carrier := scalarOutput f u y accepted
++    have plus := exact_OriginalAddressRankApplicationReport s raw rawFit transport f u y accepted carrier pos
++    exact ⟨fun bad => Nat.succ_ne_zero _ (plus.symm.trans bad),
++      (iFit y).trans (congrArg Bool.toNat carrier)⟩
++  exact exact_RankApplicationNumeric i (addressRank raw) p (graph s) pFit holds

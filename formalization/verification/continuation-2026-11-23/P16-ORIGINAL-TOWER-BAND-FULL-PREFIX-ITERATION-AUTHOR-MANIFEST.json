@@ -1,0 +1,55 @@
+{
+  "paper": 16,
+  "status": "frozen source only; two separate native gates pending",
+  "gate_order": [
+    "LogicLineages.PersistentMarking.NativeCanonicalAppliedIteratorCarrierProof",
+    "LogicLineages.PersistentMarking.NativeTowerBandFullPrefixIterationProof"
+  ],
+  "expected_named_axiom_outputs": {
+    "LogicLineages.PersistentMarking.NativeCanonicalAppliedIteratorCarrierProof": [
+      "exact_AppliedIteratorLiteral",
+      "exact_CanonicalAppliedIteratorAboveIndexed"
+    ],
+    "LogicLineages.PersistentMarking.NativeTowerBandFullPrefixIterationProof": [
+      "exact_OriginalTowerBandFullPrefixCarrierRealization",
+      "exact_OriginalTowerBandFullPrefixIteratorRealization"
+    ]
+  },
+  "source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeCanonicalAppliedIteratorCarrierProof.lean": "1129f80798c8e2143b6dd31efe8385157ffccde3dcf151bc82a7e07d94cce2c8",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerBandFullPrefixIterationProof.lean": "2653d6b4de8ffd5c4d6346c1f59748690244a7b8c20fc73b7bcbca68d6ee6e3a",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-TOWER-BAND-FULL-PREFIX-ITERATION-SOURCE-MAP.md": "063c343e437b8e655b15176351b59939aa90206d63f35126e81e83e1e5770260"
+  },
+  "interface_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeIteratorStrictChecks.lean": "240b1b0663b55a09121a086fd5cc562f4a8d8cbbc850ed5ad53d7d87398878d9",
+    "formalization/LogicLineages/PersistentMarking/NativeIteratorChecks.lean": "76d53ab5fc46ae8a04f26382313b0555a07f14da104f93c2855903747bdbadad",
+    "formalization/LogicLineages/PersistentMarking/NativeIndexedCarrierSubtype.lean": "69b5f52e53bc3ae75b861234ac5d592daf95b5694c0f35bfde7c687b038a4b15",
+    "formalization/LogicLineages/PersistentMarking/StablePairProof.lean": "a5b38868743cf9350ce1bbce2c96d48bbe7c1e632e58abd013d32fe7c1aed6ec",
+    "formalization/LogicLineages/PersistentMarking/NativeIndexedFullPrefixOrderOrbitProof.lean": "77ac9f0164c14cdc388eefad9330348c185653172cc529e5f05529e180583115",
+    "formalization/LogicLineages/PersistentMarking/NativeIndexedCarrierChecks.lean": "3039356d5dcad0a6360246f50d703ab57f6c0f4c5a1121200edb4c60038f24fe",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerVariableDimensionBandReflectionProof.lean": "823a8a2eb0d18d8e8f8cf5e2ffef02d4503f314fc1ebbffb9838087c7c02576f",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerVariableDimensionBandsProof.lean": "3b716bd419e5a861573e7fca3ba8d86f51a9cda436923a3a6dd56d5be344d9d2"
+  },
+  "prior_evidence_sha256": {
+    "formalization/build-reports/1795455719789629090-8.json": "44b798c8b5a67e2610afc46de41d4e42b292f6b3877a478fd67a0e75c08af870",
+    "formalization/build-reports/1795455720854297967-18.json": "7e1bd327cf852dcc38a2bde5adb81dc88b2aec6fb866acbd0c8fc7145db71be1",
+    "formalization/verification/continuation-2026-11-23/1770-p16-original-fixed-tower-variable-sum-native-reliso-native.json": "61411c1bc4dd016e1a027274f8b0fcf64539ccb4ae16668b8d31e935bd715ba3"
+  },
+  "static_closures": {
+    "LogicLineages.PersistentMarking.NativeCanonicalAppliedIteratorCarrierProof": {
+      "local": 253,
+      "external": [
+        "Init"
+      ]
+    },
+    "LogicLineages.PersistentMarking.NativeTowerBandFullPrefixIterationProof": {
+      "local": 686,
+      "mathlib_source_modules": 50,
+      "mathlib_oleans_present": 50,
+      "direct_additional_external": [
+        "Mathlib.Order.Bounds.Defs"
+      ]
+    }
+  },
+  "boundary": "Actual source-index assignment and iterator at each point plus common top; seed/equations/semantic relation laws remain explicit. No ordinal/rank/named calibration."
+}
