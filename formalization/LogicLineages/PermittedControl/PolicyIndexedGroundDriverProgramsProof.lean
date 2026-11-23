@@ -94,7 +94,11 @@ theorem indexedDecisionPartrec : IndexedDecisionPartrec := by
   change ((s (leftArgs x)).bind (fun o =>
     o.casesOn (Part.some false) (fun ea => rightDecision s cbd query rel (x,ea)))) =
       indexedDecision s cbd query rel x
-  rfl
+  unfold indexedDecision leftArgs
+  apply congrArg (fun f : Option EncodedVector → Part Bool =>
+    (s (x.1,x.2.1,x.2.2.1)).bind f)
+  funext o
+  cases o <;> rfl
 
 #print axioms indexedDecisionPartrec
 end LogicLineages.PermittedControl.PolicyIndexedGroundDriver

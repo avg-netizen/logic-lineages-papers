@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PermittedControl/PolicyIndexedGroundDriverProgramsProof.lean
++++ b/formalization/LogicLineages/PermittedControl/PolicyIndexedGroundDriverProgramsProof.lean
+@@ -97 +97,5 @@
+-  rfl
++  unfold indexedDecision leftArgs
++  apply congrArg (fun f : Option EncodedVector → Part Bool =>
++    (s (x.1,x.2.1,x.2.2.1)).bind f)
++  funext o
++  cases o <;> rfl
