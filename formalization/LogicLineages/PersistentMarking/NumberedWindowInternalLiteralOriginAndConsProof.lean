@@ -1,0 +1,84 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectInstalledOriginTargets
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedUnionLiteralJTargets
+public import LogicLineages.PersistentMarking.NumberedWindowInternalOriginalRawConsUnionReportThinProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectInstalledOriginChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountMembershipChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountReflexiveProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectProjectedCertTargets
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalLiteralOriginAndConsProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalAccessibilityRules (certificate)
+open ID1Completion.SourcePresentation (sourceBody)
+open ID1Completion.InternalGraphComposition (OTerm)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open NumberedWindowInternalPresentationTargets (data)
+open NumberedWindowInternalDirectCoreTargets (dCore)
+open NumberedWindowInternalDirectSharedTapeTargets (Reports)
+open NumberedWindowInternalSparseFieldParser (parser)
+open NumberedWindowInternalSparsePathEnvelopeTargets (unary suc z)
+open NumberedWindowInternalSparseScratchMembershipTargets (memberGraph)
+open NumberedWindowInternalDirectTargetMapOriginTargets (originRow)
+
+open NumberedWindowInternalLiteralCount (permutation)
+open NumberedWindowInternalDirectTypedListTargets (jRaw)
+open NumberedWindowInternalDirectTypedUnionLiteralJTargets (literalData)
+open NumberedWindowInternalDirectInstalledOriginChecks (exact_InstalledOriginalSuccessorOrigin)
+open NumberedWindowInternalLiteralCountMembershipChecks (exact_OpenLiteralTargetMemberLaw)
+open NumberedWindowInternalLiteralCountReflexiveProof (exact_LiteralObserverReflexivity)
+open NumberedWindowInternalConsUnionReportBuildProof (Report)
+open NumberedWindowInternalCertifiedUnionStepProof (unionGraph)
+open NumberedWindowInternalOriginalRawConsUnionReportThinProof (exact_OriginalRawConsUnionReport)
+open NumberedWindowInternalSparsePathEnvelopeTargets (rawCons)
+
+/-- Any actual parsed member of a genuine selected successor comes from
+the exact retained tape or a checked row with the same positive original
+certificate. This does not repartition duplicate occurrences. -/
+def ExactLiteralInstalledSuccessorOrigin : Prop :=
+  ∀ (i : Program 1) (r : Program 3) (c : Nat)
+    (α : Type) (Γ : List (Formula α))
+    (src w dst knownTarget key : OTerm α) (goal : Formula α),
+    let S := literalData i r
+    let B := sourceBody S c
+    Nonempty (Derivation B Γ (certificate S true c src dst w)) →
+    Nonempty (Derivation B Γ (unary parser (suc knownTarget) dst)) →
+    Nonempty (Derivation B Γ (memberGraph knownTarget key)) →
+    (∀ (β : Type) (ρ : α → β) (Δ : List (Formula β))
+        (kept removed inserted s t k d a p sk tp : OTerm β),
+      (∀ f ∈ Γ, f.relabel ρ ∈ Δ) →
+      Reports permutation permutation r B Δ (src.relabel ρ) (dst.relabel ρ)
+        kept removed inserted s t k d a p sk tp →
+      Nonempty (Derivation B Δ (memberGraph k (key.relabel ρ))) →
+      Nonempty (Derivation B Δ (goal.relabel ρ))) →
+    (∀ (β : Type) (ρ : α → β) (Δ : List (Formula β))
+        (kept removed inserted s t k d a p sk tp row dom cert : OTerm β),
+      (∀ f ∈ Γ, f.relabel ρ ∈ Δ) →
+      Reports permutation permutation r B Δ (src.relabel ρ) (dst.relabel ρ)
+        kept removed inserted s t k d a p sk tp →
+      Nonempty (Derivation B Δ (originRow a (key.relabel ρ) row)) →
+      NumberedWindowInternalDirectInsertedRowCasesTargets.Reports r B Δ
+        removed row d (key.relabel ρ) dom cert →
+      Nonempty (Derivation B Δ (goal.relabel ρ))) →
+    Nonempty (Derivation B Γ goal)
+
+
+theorem exact_LiteralInstalledSuccessorOrigin : ExactLiteralInstalledSuccessorOrigin := by
+  intro i r c α Γ src w dst target key goal S B cert parsed mem kept inserted
+  exact exact_InstalledOriginalSuccessorOrigin i (jRaw i) r permutation c α Γ src w dst target key goal
+    (exact_OpenLiteralTargetMemberLaw (sourceBody (literalData i r) c)) cert parsed mem kept inserted
+
+/-- The exact installed observer builds the actual singleton/tail union
+report at every literal original cons whose actual tail parser succeeded. -/
+theorem exact_LiteralRawConsUnionReport {B : Positive (Fin 1)} {α : Type}
+    {Γ : List (Formula α)} (h t scratch : OTerm α)
+    (tailParse : Report (B := B) (Γ := Γ) parser (suc scratch) ![t]) :
+    Nonempty (Derivation B Γ (unionGraph permutation (rawCons h z) t (rawCons h t))) :=
+  exact_OriginalRawConsUnionReport permutation (exact_LiteralObserverReflexivity B) h t scratch tailParse
+
+#print axioms exact_LiteralInstalledSuccessorOrigin
+#print axioms exact_LiteralRawConsUnionReport
+end LogicLineages.PersistentMarking.NumberedWindowInternalLiteralOriginAndConsProof
