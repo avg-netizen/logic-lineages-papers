@@ -90,6 +90,7 @@ theorem selectedAtomicNumeralAdmission : ExactSelectedAtomicNumeralAdmission := 
     apply (exact_DomainRules i j (refined i r) d false c Q β Δ (numeral a)).2
     apply numeralDomain
     have h : evaluate i (a ::ᵥ nil) = (scalar s a).toNat := retained.1.1 a
+    change evaluate i (a ::ᵥ nil) = 1
     rw [h,ha] <;> rfl
   constructor
   · intro ctx t ha
