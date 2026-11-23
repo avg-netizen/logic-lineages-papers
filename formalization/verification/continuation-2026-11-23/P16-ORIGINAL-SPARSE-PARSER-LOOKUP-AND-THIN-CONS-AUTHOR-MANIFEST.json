@@ -1,0 +1,156 @@
+{
+  "status": "frozen source only; native pending",
+  "paper": 16,
+  "gate": "LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserThinOpenConsProof",
+  "staged_gates": [
+    "LogicLineages.PersistentMarking.NumberedWindowInternalSparseParserLookupProof",
+    "LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserThinOpenStepProof",
+    "LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserThinOpenConsProof"
+  ],
+  "expected_named_axiom_outputs": {
+    "LogicLineages.PersistentMarking.NumberedWindowInternalSparseParserLookupProof": [
+      "exact_OriginalSparseParserLookupAtDifference"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserThinOpenStepProof": [
+      "stepCertified"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserThinOpenConsProof": [
+      "consFromPrepend",
+      "exact_OriginalSparseParserNil"
+    ]
+  },
+  "source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParserLookupProof.lean": "7d1dd07f1044f0fb1e9fea97d2fa47476dcc1a3af7fe7a9a9fded1b3e62854c3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserThinOpenStepProof.lean": "83d4c548db55dbb9788c0be19352c286b5dfdfb00c7cb34ae1e9c74e8833b8fe",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserThinOpenConsProof.lean": "8d5902815d582ab484ff92645e7e6f892cbc6afb6873f98139b9c4f2b775f080",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-SPARSE-PARSER-LOOKUP-AND-THIN-CONS-SOURCE-MAP.md": "47958f9edddec95b90485ec1e0ff96deacb7f6e0db795e4686e2335b637c4896"
+  },
+  "direct_source_pins_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParserTableLocalProof.lean": "5b1ca9bb2c46d2cfba404fde1d7b06d673bad3e05dd43504c5444e05f38abfbe",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParserDropProof.lean": "c1192ba5620861abfbe2c729c485864e861842e3807cca525c93fec444ee526c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParser.lean": "6fe3c1842a72f153b11bcec7a0704dfe3967fd6567d1ee9f2032f41ad8faf321",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserOpenTableProof.lean": "92cec903001fed2083623a01cd2a566d6400354cf633840b486b20246c6aed7d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePairOrderProof.lean": "7d3f5ab02368b5b553e73b6efd1a981d78775bd7d5b1d681411dc3cccc7ae916",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldCellSuccessProof.lean": "4d9fbbe53978e1c003cb46a3cc34de1512229228a1c9508409c9884e3d6778bc"
+  },
+  "historical_not_imported_pins_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserOpenStepProof.lean": "28fa9be34acef3a4af00fa9253ff6be5179d5d68cdb77b22a4a61c16fa08ce3a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserOpenConsBuildProof.lean": "1154fb5150ac632b55cbbb56893a656e1144b66a154ac0d480d8c874ed415dc9"
+  },
+  "prior_evidence_pins_sha256": {
+    "formalization/verification/continuation-2026-11-23/1543-p16-original-sparse-parser-local-table-tail-head-native.json": "ceb75b055e3b80b6cd8944f8b24cf05f1fffba20b9b85d55368bf89632091bd3",
+    "formalization/verification/continuation-2026-11-23/1547-p16-original-sparse-parser-table-drop-native.json": "2252d43872937be5aa184b6d00f469d43775cb69c26875701ca2e7fdc414b6e8",
+    "formalization/verification/new-paper-set-2026-11-18/accepted/629-original-full-sparse-parser-open.json": "e679a8b6173250fcc117b09b038808fc05863a6a0e215646090cf0e865653e6b"
+  },
+  "static_closures": {
+    "LogicLineages.PersistentMarking.NumberedWindowInternalSparseParserLookupProof": {
+      "local": 1088,
+      "external": [
+        "Init",
+        "Init.Data.List.Lemmas",
+        "Init.Data.Nat.Lemmas",
+        "Lean.Elab.Command",
+        "Lean.Util.CollectAxioms",
+        "Mathlib.Computability.PartrecCode",
+        "Mathlib.Computability.Primrec.List",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Lattice.Fold",
+        "Mathlib.Data.Finset.Max",
+        "Mathlib.Data.Finset.Union",
+        "Mathlib.Data.Fintype.Card",
+        "Mathlib.Data.Fintype.Fin",
+        "Mathlib.Data.Fintype.Order",
+        "Mathlib.Data.Fintype.Pi",
+        "Mathlib.Data.Fintype.Powerset",
+        "Mathlib.Data.Fintype.Prod",
+        "Mathlib.Data.Fintype.Sigma",
+        "Mathlib.Data.List.FinRange",
+        "Mathlib.Data.List.Forall2",
+        "Mathlib.Data.List.Nodup",
+        "Mathlib.Data.List.Perm.Basic",
+        "Mathlib.Data.List.Permutation",
+        "Mathlib.Data.Multiset.DershowitzManna",
+        "Mathlib.Data.Nat.Pairing",
+        "Mathlib.Data.Nat.Sqrt",
+        "Mathlib.Logic.Equiv.List",
+        "Mathlib.Logic.Function.Iterate",
+        "Mathlib.Logic.Godel.GodelBetaFunction",
+        "Mathlib.ModelTheory.Semantics",
+        "Mathlib.Order.FixedPoints"
+      ]
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserThinOpenStepProof": {
+      "local": 1096,
+      "external": [
+        "Init",
+        "Init.Data.List.Lemmas",
+        "Init.Data.Nat.Lemmas",
+        "Lean.Elab.Command",
+        "Lean.Util.CollectAxioms",
+        "Mathlib.Computability.PartrecCode",
+        "Mathlib.Computability.Primrec.List",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Lattice.Fold",
+        "Mathlib.Data.Finset.Max",
+        "Mathlib.Data.Finset.Union",
+        "Mathlib.Data.Fintype.Card",
+        "Mathlib.Data.Fintype.Fin",
+        "Mathlib.Data.Fintype.Order",
+        "Mathlib.Data.Fintype.Pi",
+        "Mathlib.Data.Fintype.Powerset",
+        "Mathlib.Data.Fintype.Prod",
+        "Mathlib.Data.Fintype.Sigma",
+        "Mathlib.Data.List.FinRange",
+        "Mathlib.Data.List.Forall2",
+        "Mathlib.Data.List.Nodup",
+        "Mathlib.Data.List.Perm.Basic",
+        "Mathlib.Data.List.Permutation",
+        "Mathlib.Data.Multiset.DershowitzManna",
+        "Mathlib.Data.Nat.Pairing",
+        "Mathlib.Data.Nat.Sqrt",
+        "Mathlib.Logic.Equiv.List",
+        "Mathlib.Logic.Function.Iterate",
+        "Mathlib.Logic.Godel.GodelBetaFunction",
+        "Mathlib.ModelTheory.Semantics",
+        "Mathlib.Order.FixedPoints"
+      ]
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserThinOpenConsProof": {
+      "local": 1106,
+      "external": [
+        "Init",
+        "Init.Data.List.Lemmas",
+        "Init.Data.Nat.Lemmas",
+        "Lean.Elab.Command",
+        "Lean.Util.CollectAxioms",
+        "Mathlib.Computability.PartrecCode",
+        "Mathlib.Computability.Primrec.List",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Lattice.Fold",
+        "Mathlib.Data.Finset.Max",
+        "Mathlib.Data.Finset.Union",
+        "Mathlib.Data.Fintype.Card",
+        "Mathlib.Data.Fintype.Fin",
+        "Mathlib.Data.Fintype.Order",
+        "Mathlib.Data.Fintype.Pi",
+        "Mathlib.Data.Fintype.Powerset",
+        "Mathlib.Data.Fintype.Prod",
+        "Mathlib.Data.Fintype.Sigma",
+        "Mathlib.Data.List.FinRange",
+        "Mathlib.Data.List.Forall2",
+        "Mathlib.Data.List.Nodup",
+        "Mathlib.Data.List.Perm.Basic",
+        "Mathlib.Data.List.Permutation",
+        "Mathlib.Data.Multiset.DershowitzManna",
+        "Mathlib.Data.Nat.Pairing",
+        "Mathlib.Data.Nat.Sqrt",
+        "Mathlib.Logic.Equiv.List",
+        "Mathlib.Logic.Function.Iterate",
+        "Mathlib.Logic.Godel.GodelBetaFunction",
+        "Mathlib.ModelTheory.Semantics",
+        "Mathlib.Order.FixedPoints"
+      ]
+    }
+  },
+  "scope": "True original scratch lookup at certified difference, thin certified actual parser step/forward cons/nil. No reverse parser, U closure, numbered promotion, or old source edits."
+}
