@@ -1,0 +1,78 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalEmptyMultisetProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalEmptyMultisetProof.lean
+@@ -28 +28,2 @@
+-open ID1Completion.SourcePresentation (sourceBody)
++open ID1Completion.SourcePresentation (Data sourceBody)
++open ID1Completion.InternalTagArithmeticSyntaxProof (zRelabel)
+@@ -96 +97,3 @@
+-  intro i j r d c α Γ y w cert
++  intro i j r d c α Γ y w
++  dsimp only
++  intro cert
+@@ -106,0 +110,28 @@
++private theorem oddEdgeCases {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
++    (S : Data) (c : Nat) (f g : OrdinaryArithmetic.Term α) (psi : Formula α)
++    (h : Nonempty (Derivation B Γ (edge S true c f g)))
++    (k : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (w : OrdinaryArithmetic.Term β),
++      Nonempty (Derivation B Δ (certificate S true c (f.relabel j) (g.relabel j) w)) →
++      Nonempty (Derivation B Δ (psi.relabel j))) :
++    Nonempty (Derivation B Γ psi) := by
++  obtain ⟨h⟩ := h
++  rw [edgeExists] at h
++  let P := certificate S true c (f.relabel Sum.inl) (g.relabel Sum.inl)
++    (.var (.inr (0 : Fin 1)))
++  obtain ⟨d⟩ := k (α ⊕ Fin 1) Sum.inl (P :: Γ.map weaken) (.var (.inr 0))
++    ⟨Derivation.hypothesis List.mem_cons_self⟩
++  exact ⟨Derivation.existentialElimination h d⟩
++
++private theorem oddSuccessorsOf {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
++    (S : Data) (c : Nat) (x : OrdinaryArithmetic.Term α)
++    (next : ∀ (β : Type) (ρ : α → β) (Δ : List (Formula β)) (y : OrdinaryArithmetic.Term β),
++      Nonempty (Derivation B Δ (edge S true c (x.relabel ρ) y)) →
++      Nonempty (Derivation B Δ (membership true y))) :
++    Nonempty (Derivation B Γ (successors S true c x)) := by
++  let β := α ⊕ Fin 1
++  let y : OrdinaryArithmetic.Term β := .var (.inr 0)
++  let H := edge S true c (x.relabel Sum.inl) y
++  let Δ := H :: Γ.map weaken
++  obtain ⟨h⟩ := next β Sum.inl Δ y ⟨Derivation.hypothesis List.mem_cons_self⟩
++  exact ⟨Derivation.universalIntroduction (Derivation.implicationIntroduction h)⟩
++
+@@ -110 +141,2 @@
+-    Nonempty (Derivation (sourceBody S c) Γ (successors S true c (OrdinaryArithmetic.zeroTerm : OrdinaryArithmetic.Term α))) := by
++    Nonempty (Derivation (sourceBody S c) Γ
++      (successors S true c (OrdinaryArithmetic.zeroTerm : OrdinaryArithmetic.Term α))) := by
+@@ -113,19 +145,14 @@
+-  let β := α ⊕ Fin 1
+-  let y : OrdinaryArithmetic.Term β := .var (.inr 0)
+-  let z : OrdinaryArithmetic.Term β := OrdinaryArithmetic.zeroTerm
+-  let H := edge S true c z y
+-  let Δ := H :: Γ.map weaken
+-  have hEdge : Derivation B Δ H := Derivation.hypothesis List.mem_cons_self
+-  have hExists := hEdge
+-  change Derivation B Δ (edge S true c z y) at hExists
+-  rw [edgeExists] at hExists
+-  let γ := β ⊕ Fin 1
+-  let w : OrdinaryArithmetic.Term γ := .var (.inr 0)
+-  let P := certificate S true c (z.relabel Sum.inl) (y.relabel Sum.inl) w
+-  let Ω := P :: Δ.map weaken
+-  have hp : Nonempty (Derivation B Ω (certificate S true c (OrdinaryArithmetic.zeroTerm : OrdinaryArithmetic.Term γ)
+-      (y.relabel Sum.inl) w)) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+-  obtain ⟨bad⟩ := exactOpenEmptyCertificateRejection i j r d c γ Ω (y.relabel Sum.inl) w hp
+-  have goal : Derivation B Δ (membership true y) :=
+-    Derivation.existentialElimination hExists (Derivation.explosion bad)
+-  exact ⟨Derivation.universalIntroduction (Derivation.implicationIntroduction goal)⟩
++  let z : OrdinaryArithmetic.Term α := OrdinaryArithmetic.zeroTerm
++  change Nonempty (Derivation B Γ (successors S true c z))
++  apply oddSuccessorsOf S c z
++  intro β ρ Δ y h
++  have hEdge : Nonempty (Derivation B Δ
++      (edge S true c (OrdinaryArithmetic.zeroTerm : OrdinaryArithmetic.Term β) y)) := by
++    simpa only [z,zRelabel] using h
++  apply oddEdgeCases S c OrdinaryArithmetic.zeroTerm y (membership true y) hEdge
++  intro γ k Ω w cert
++  have hc : Nonempty (Derivation B Ω
++      (certificate S true c (OrdinaryArithmetic.zeroTerm : OrdinaryArithmetic.Term γ)
++        (y.relabel k) w)) := by simpa only [zRelabel] using cert
++  obtain ⟨bad⟩ := exactOpenEmptyCertificateRejection i j r d c γ Ω (y.relabel k) w hc
++  exact ⟨Derivation.explosion bad⟩

@@ -1,0 +1,21 @@
+{
+  "status": "frozen source repair; native pending",
+  "failed_exact_gate_receipt": "1795439133342130664-8",
+  "failed_exact_gate": "empty-multiset-1310",
+  "failed_original_native_log_sha256": "0da8c047dd3dd909232a0a72901b884d1eec003e9346fc4ccbfa7300e47c1aed",
+  "failed_diagnostic": "Targets l20/l35/l47 unknown imported alias namespace OTerm; compilation stopped before Proof.",
+  "file_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalEmptyMultisetTargets.lean": {
+      "failed_sha256": "1563d4883ee22f40a5efa3b89d504c1fe2cae07353cded8804cdc95a74b152fa",
+      "repaired_sha256": "34508cb0fac6a0e9cad046f01b2d9935e8d1e1cdbad8202071bb774c94fef330"
+    },
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalEmptyMultisetProof.lean": {
+      "failed_sha256": "9d829d1090a1f71eff52c3085a3ada0e21b460764f4c371986cf4ff0019e6a1f",
+      "repaired_sha256": "5a5ead5f709b944635f3b58c56b8d30851a938d3a3ff6386664af8866b3e4635"
+    }
+  },
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-23/P16-EMPTY-MULTISET-ID1-REPAIR-01.patch",
+  "patch_sha256": "ba21ad88528332aec1178551b60d9ae3f08a446faf0335af9690032320c7c2e9",
+  "reverse_reconstructs_exact_failed_source": true,
+  "scope": "Replace the unavailable OTerm abbreviation by its definition OrdinaryArithmetic.Term in Targets and Proof. No mathematical statement, program, or native limit changes."
+}

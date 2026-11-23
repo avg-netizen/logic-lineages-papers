@@ -1,0 +1,42 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalEmptyMultisetTargets.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalEmptyMultisetTargets.lean
+@@ -20 +19,0 @@
+-open NumberedWindowInternalProbeTargets (OTerm)
+@@ -35 +34 @@
+-    (Γ : List (Formula α)) (y w : OTerm α),
++    (Γ : List (Formula α)) (y w : OrdinaryArithmetic.Term α),
+@@ -47 +46 @@
+-      Nonempty (Derivation (sourceBody S c) Γ (membership true (OrdinaryArithmetic.zeroTerm : OTerm α)))
++      Nonempty (Derivation (sourceBody S c) Γ (membership true (OrdinaryArithmetic.zeroTerm : OrdinaryArithmetic.Term α)))
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalEmptyMultisetProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalEmptyMultisetProof.lean
+@@ -31 +30,0 @@
+-open NumberedWindowInternalProbeTargets (OTerm)
+@@ -85 +84 @@
+-    (d : Program 3) (w y : OTerm α) :
++    (d : Program 3) (w y : OrdinaryArithmetic.Term α) :
+@@ -88,2 +87,2 @@
+-  let z : OTerm α := OrdinaryArithmetic.zeroTerm
+-  let xs : Fin 3 → OTerm α := ![z,w,y]
++  let z : OrdinaryArithmetic.Term α := OrdinaryArithmetic.zeroTerm
++  let xs : Fin 3 → OrdinaryArithmetic.Term α := ![z,w,y]
+@@ -100 +99 @@
+-  let z : OTerm α := OrdinaryArithmetic.zeroTerm
++  let z : OrdinaryArithmetic.Term α := OrdinaryArithmetic.zeroTerm
+@@ -111 +110 @@
+-    Nonempty (Derivation (sourceBody S c) Γ (successors S true c (OrdinaryArithmetic.zeroTerm : OTerm α))) := by
++    Nonempty (Derivation (sourceBody S c) Γ (successors S true c (OrdinaryArithmetic.zeroTerm : OrdinaryArithmetic.Term α))) := by
+@@ -115,2 +114,2 @@
+-  let y : OTerm β := .var (.inr 0)
+-  let z : OTerm β := OrdinaryArithmetic.zeroTerm
++  let y : OrdinaryArithmetic.Term β := .var (.inr 0)
++  let z : OrdinaryArithmetic.Term β := OrdinaryArithmetic.zeroTerm
+@@ -124 +123 @@
+-  let w : OTerm γ := .var (.inr 0)
++  let w : OrdinaryArithmetic.Term γ := .var (.inr 0)
+@@ -127 +126 @@
+-  have hp : Nonempty (Derivation B Ω (certificate S true c (OrdinaryArithmetic.zeroTerm : OTerm γ)
++  have hp : Nonempty (Derivation B Ω (certificate S true c (OrdinaryArithmetic.zeroTerm : OrdinaryArithmetic.Term γ)
+@@ -149 +148 @@
+-    let z : OTerm α := OrdinaryArithmetic.zeroTerm
++    let z : OrdinaryArithmetic.Term α := OrdinaryArithmetic.zeroTerm

@@ -1,0 +1,19 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalEmptyMultisetProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalEmptyMultisetChecks
+open NumberedWindowInternalEmptyMultisetTargets
+
+theorem exact_SelectedDirectAtEmpty : ExactDirectSelection :=
+  NumberedWindowInternalEmptyMultiset.exactDirectSelection
+
+theorem exact_OpenEmptyMultisetCertificateRejection : ExactOpenEmptyCertificateRejection :=
+  NumberedWindowInternalEmptyMultiset.exactOpenEmptyCertificateRejection
+
+theorem exact_SelectedEmptyMultisetMembership : ExactSelectedEmptyMultiset :=
+  NumberedWindowInternalEmptyMultiset.exactSelectedEmptyMultiset
+
+#print axioms exact_SelectedDirectAtEmpty
+#print axioms exact_OpenEmptyMultisetCertificateRejection
+#print axioms exact_SelectedEmptyMultisetMembership
+end LogicLineages.PersistentMarking.NumberedWindowInternalEmptyMultisetChecks
