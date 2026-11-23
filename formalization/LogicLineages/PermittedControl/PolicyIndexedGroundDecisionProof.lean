@@ -37,11 +37,10 @@ private theorem indexedGroundOf (src : IndexedSource) (hs : Partrec src) (he : S
   · change Code.eval (compile e) (Encodable.encode x) = _
     rw [hcomp e (Encodable.encode x), ← Encodable.encode_prod_val e x]
     unfold joint
-    rw [Encodable.encodek]
-    change ((f (e,x)).map Encodable.encode) = _
+    rw [Encodable.encodek, Part.coe_some, Part.bind_some]
     rw [show f (e,x) = Part.some (pointwiseDecision p cbd query rel x)
       from exactIndexedDecision src he cbd query rel e p hcode x]
-    rfl
+    rw [Part.map_some]
   · exact pointwiseDecisionCorrect query hq ctrl K hsel p rel cbd
       (fun known gs pf ht hp flag => (hdec known gs pf ht hp flag).1)
       Γ hΓ τ υ a b
