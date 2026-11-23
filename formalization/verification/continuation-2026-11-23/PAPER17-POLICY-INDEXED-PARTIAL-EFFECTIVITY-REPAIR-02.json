@@ -1,0 +1,27 @@
+{
+  "status": "frozen source repair; native pending",
+  "baseline": "dd4eddff9f8eab0a4532e8df4880f71b8d5dffb9",
+  "failed_exact_gate_receipt": "1795428899297232102-12",
+  "failed_exact_gate": "indexed-partial-effectivity-repair01",
+  "failed_receipt_sha256": "1a8ea8f518f6ec90f6d039bb2d83dab3f6dff9da28f0751ee298c7d10c4578bf",
+  "failed_exact_module_log_sha256": "ff7dcb3e4cc8305c7ef1108878b982dee742532788d8bee05eaeeba16140809d",
+  "failed_original_native_log_sha256": "aa212342a480f1cf1d81938a39018d88e4d2ba2bc87056646228a1a0310a5581",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedPartialProgramsProof.lean:75:52: error: Tactic `rfl` failed: The left-hand side\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedPartialProgramsProof.lean:75:52: error: Tactic `rfl` failed: The left-hand side\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedPartialProgramsProof.lean:142:12: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'indexedMerge', which is 'noncomputable'\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedPartialProgramsProof.lean:145:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedPartialProgramsProof.lean:154:12: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'actualJoin', which is 'noncomputable'\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedPartialProgramsProof.lean:157:16: error: (kernel) unknown constant '_private.LogicLineages.StandardControlCurrent.PolicyIndexedPartialProgramsProof.0.LogicLineages.StandardControlCurrent.PolicyIndexedPartial.actualJoinPartrec'",
+  "failed_proof_path": "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedPartialProgramsProof.lean",
+  "failed_proof_sha256": "0a3bd8ddbe179578693ac198cd6bc5b5e0b2231e2e61a45a2f6e19bdfff704ee",
+  "repaired_proof_sha256": "71ebaedf9c5f8d6db6e43cc5c9e7dfa3164eb10fe68ad1941489c5bef819782d",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-PARTIAL-EFFECTIVITY-REPAIR-02.patch",
+  "patch_sha256": "5b8d3cefb118b55a195d448322c713085cf4f1f703e3639ad74f5eae9f297fdd",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-PARTIAL-EFFECTIVITY-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "91ed2a9899ed39cb1a0104f7e749d43d741dd366cee4571ae9944820e8c062ca",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedPartialEffectivityStatementChecks.lean": "28d07491ee8f33e857cf6ecc7f02a7ba9f41d732fd953ffee32e03806b782c8a",
+    "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-PARTIAL-EFFECTIVITY-SOURCE-MAP.md": "372f2977717edbda7934c57defd833e58abca5494fe9372a269364d0da26b6bb"
+  },
+  "scope": "Beta/iota normalize option proof before splits; named shallow join projections/composition; mark proof-only Part aliases noncomputable. No program/target/profile edit.",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-PARTIAL-EFFECTIVITY-REPAIR-01.json": "9d255a37e62dbc0ed86e9796ac71d295b25043bdd0e1135eead35ca911e90545",
+    "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-PARTIAL-EFFECTIVITY-REPAIR-01.patch": "b41b923eec7510502f8b26de3197a29c7f1e74fcf7ae6f2f7586b8044913aaa8"
+  }
+}

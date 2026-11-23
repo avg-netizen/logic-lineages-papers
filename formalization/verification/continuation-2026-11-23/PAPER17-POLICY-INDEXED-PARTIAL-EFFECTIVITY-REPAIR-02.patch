@@ -1,0 +1,45 @@
+--- a/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedPartialProgramsProof.lean
++++ b/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedPartialProgramsProof.lean
+@@ -73,0 +74 @@
++  change ((xs.getD 0 none).bind (fun a => (xs.getD 1 none).map (a, ·))) = childPair xs
+@@ -142,2 +143 @@
+-private def actualJoin (k : Nat) (p : NodeInput) : Part Value :=
+-  indexedMerge p.1 p.2.1.1 k p.2.2
++private abbrev MergeInput := Code × Nat × Nat × List Value
+@@ -145,8 +145,2 @@
+-private theorem actualJoinPartrec (k : Nat) : Partrec (actualJoin k) := by
+-  have key : Computable (Prod.fst : NodeInput → Code) := Computable.fst
+-  have s : Primrec (fun p : NodeInput => p.2.1) := Primrec.fst.comp Primrec.snd
+-  have xs : Computable (fun p : NodeInput => p.2.2) := Computable.snd.comp Computable.snd
+-  have level : Computable (fun p : NodeInput => p.2.1.1) := levelPrim.to_comp.comp s.to_comp
+-  have pairArgs : Computable (fun p : NodeInput => (p.1,p.2.1.1,k,p.2.2)) :=
+-    key.pair (level.pair ((Computable.const k).pair xs))
+-  exact runMergePartrec.comp pairArgs
++private def packJoin (k : Nat) (p : NodeInput) : MergeInput :=
++  (p.1,p.2.1.1,k,p.2.2)
+@@ -154 +148,24 @@
+-private def actualBody (p : NodeInput) : Part Value :=
++private theorem joinTail {T : Type} [Primcodable T] {l : T → Nat} {xs : T → List Value}
++    (hl : Computable l) (hx : Computable xs) (k : Nat) :
++    Computable (fun p => (l p,k,xs p)) :=
++  hl.pair ((Computable.const k).pair hx)
++
++private theorem packJoinComputable (k : Nat) : Computable (packJoin k) := by
++  have level : Computable (fun p : NodeInput => p.2.1.1) :=
++    Computable.fst.comp (Computable.fst.comp Computable.snd)
++  have tail : Computable (fun p : NodeInput => (p.2.1.1,k,p.2.2)) :=
++    joinTail level (Computable.snd.comp Computable.snd) k
++  exact (Computable.fst : Computable (Prod.fst : NodeInput → Code)).pair tail
++
++private noncomputable def runMerge (p : MergeInput) : Part Value :=
++  indexedMerge p.1 p.2.1 p.2.2.1 p.2.2.2
++
++private theorem runMergeNamedPartrec : Partrec runMerge := runMergePartrec
++
++private noncomputable def actualJoin (k : Nat) (p : NodeInput) : Part Value :=
++  runMerge (packJoin k p)
++
++private theorem actualJoinPartrec (k : Nat) : Partrec (actualJoin k) :=
++  runMergeNamedPartrec.comp (packJoinComputable k)
++
++private noncomputable def actualBody (p : NodeInput) : Part Value :=

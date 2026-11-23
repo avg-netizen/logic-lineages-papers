@@ -4,6 +4,7 @@ import LogicLineages.StandardControlCurrent.PolicyIndexedRankedLayerProof
 import LogicLineages.StandardControlCurrent.PolicyIndexedRankedGraphProof
 import LogicLineages.StandardControlCurrent.PolicyIndexedMergeProof
 import LogicLineages.OrdinalComparison.WWOrdinalSyntaxHeadProof
+import Mathlib.Computability.RE
 
 @[expose] public section
 namespace LogicLineages.StandardControlCurrent.PolicyIndexedPartial
@@ -68,7 +69,11 @@ private theorem childPairComputable : Computable childPair := by
   have f : Computable (fun x : T => x.1.getD 1 none) := (pick 1).comp Computable.fst
   have k : Computable₂ (fun (x : T) (b : List Nat) => (x.2,b)) :=
     ((Computable.snd.comp Computable.fst).pair Computable.snd).to₂
-  exact Computable.option_bind (pick 0) (Computable.option_map f k).to₂
+  apply (Computable.option_bind (pick 0) (Computable.option_map f k).to₂).of_eq
+  intro xs
+  change ((xs.getD 0 none).bind (fun a => (xs.getD 1 none).map (a, ·))) = childPair xs
+  unfold childPair
+  cases xs.getD 0 none <;> cases xs.getD 1 none <;> rfl
 
 private theorem collapseComputable : Computable₂ collapse := by
   have get : Computable (fun p : Args => childPair p.2) := childPairComputable.comp Computable.snd
@@ -118,7 +123,7 @@ private theorem dispatchPartrec {T : Type} [Primcodable T] {s : T → Node} {xs 
   have hFree : PrimrecPred (fun x => headFree (s x).2.2 = true) :=
     Primrec.eq.comp (ordinalSyntaxHeadOperationsPrimitiveRecursive.1.comp (rankPrim.comp hs))
       (Primrec.const true)
-  have matches : PrimrecPred (fun x => (s x).2.1 = ((s x).2.2/8).unpair.2) :=
+  have matchIndex : PrimrecPred (fun x => (s x).2.1 = ((s x).2.2/8).unpair.2) :=
     Primrec.eq.comp i ((Primrec.snd.comp headPrim).comp hs)
   have positive : PrimrecPred (fun x => 0 < (s x).2.1) := Primrec.nat_lt.comp (Primrec.const 0) i
   have zero : PrimrecPred (fun x => (s x).2.1=0) := Primrec.eq.comp i (Primrec.const 0)
@@ -129,22 +134,58 @@ private theorem dispatchPartrec {T : Type} [Primcodable T] {s : T → Node} {xs 
   have collapseCase : Partrec (fun x => Part.some (collapse (s x) (xs x))) :=
     (collapseComputable.comp hs.to_comp hx).partrec
   have empty : Partrec (fun _ : T => Part.some (none : Value)) := Partrec.const' _
-  exact choose hFree fstCase (choose (split 3) (choose matches repCase empty)
+  exact choose hFree fstCase (choose (split 3) (choose matchIndex repCase empty)
     (choose isActive (choose (split 4) (hj 4)
       (choose (split 5) (choose positive (hj 5) empty) (choose zero collapseCase empty))) empty))
 
+private abbrev NodeInput := Code × Args
+
+private abbrev MergeInput := Code × Nat × Nat × List Value
+
+private def packJoin (k : Nat) (p : NodeInput) : MergeInput :=
+  (p.1,p.2.1.1,k,p.2.2)
+
+private theorem joinTail {T : Type} [Primcodable T] {l : T → Nat} {xs : T → List Value}
+    (hl : Computable l) (hx : Computable xs) (k : Nat) :
+    Computable (fun p => (l p,k,xs p)) :=
+  hl.pair ((Computable.const k).pair hx)
+
+private theorem packJoinComputable (k : Nat) : Computable (packJoin k) := by
+  have level : Computable (fun p : NodeInput => p.2.1.1) :=
+    Computable.fst.comp (Computable.fst.comp Computable.snd)
+  have tail : Computable (fun p : NodeInput => (p.2.1.1,k,p.2.2)) :=
+    joinTail level (Computable.snd.comp Computable.snd) k
+  exact (Computable.fst : Computable (Prod.fst : NodeInput → Code)).pair tail
+
+private noncomputable def runMerge (p : MergeInput) : Part Value :=
+  indexedMerge p.1 p.2.1 p.2.2.1 p.2.2.2
+
+private theorem runMergeNamedPartrec : Partrec runMerge := runMergePartrec
+
+private noncomputable def actualJoin (k : Nat) (p : NodeInput) : Part Value :=
+  runMerge (packJoin k p)
+
+private theorem actualJoinPartrec (k : Nat) : Partrec (actualJoin k) :=
+  runMergeNamedPartrec.comp (packJoinComputable k)
+
+private noncomputable def actualBody (p : NodeInput) : Part Value :=
+  caseBody Part.some (fun _ k _ => actualJoin k p) p.2.1 p.2.2
+
+private theorem actualBodyPartrec : Partrec actualBody := by
+  have s : Primrec (fun p : NodeInput => p.2.1) := Primrec.fst.comp Primrec.snd
+  have xs : Computable (fun p : NodeInput => p.2.2) := Computable.snd.comp Computable.snd
+  exact dispatchPartrec s xs actualJoinPartrec
+
+private theorem liftPartrec {T Y : Type} [Primcodable T] [Primcodable Y]
+    {f : T → Part Y} (h : Partrec f) : Partrec (fun x => (f x).map some) :=
+  Partrec.map h (Computable.option_some.comp Computable.snd).to₂
+
+private theorem assembleLiteral (p : NodeInput) :
+    (actualBody p).map some = assemble p.1 p.2 := rfl
+
 theorem assemblePartrec : Partrec₂ assemble := by
-  let T := Code × Args
-  have key : Computable (Prod.fst : T → Code) := Computable.fst
-  have s : Primrec (fun p : T => p.2.1) := Primrec.fst.comp Primrec.snd
-  have xs : Computable (fun p : T => p.2.2) := Computable.snd.comp Computable.snd
-  have level : Computable (fun p : T => p.2.1.1) := levelPrim.to_comp.comp s.to_comp
-  have join (k : Nat) : Partrec (fun p : T => indexedMerge p.1 p.2.1.1 k p.2.2) :=
-    runMergePartrec.comp (key.pair (level.pair ((Computable.const k).pair xs)))
-  have body := dispatchPartrec s xs join
-  have finish : Computable₂ (fun (_ : T) (v : Value) => some v) :=
-    (Computable.option_some.comp Computable.snd).to₂
-  exact (Partrec.map body finish).to₂
+  have h := (liftPartrec actualBodyPartrec).of_eq assembleLiteral
+  exact h.to₂
 
 theorem indexedPartialRunPartrec : Partrec run := by
   have layer := PolicyIndexedRankedLayer.indexedLayerEffectivity _ _ _ children assemble
