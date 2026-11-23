@@ -2,6 +2,7 @@ module
 public import LogicLineages.StandardControlCurrent.PolicyIndexedAssignmentTargets
 import LogicLineages.StandardControlCurrent.PolicyIndexedShapeProof
 import LogicLineages.OrdinalComparison.WWOrdinalSyntaxBoxComputability
+import Mathlib.Computability.RE
 
 @[expose] public section
 namespace LogicLineages.StandardControlCurrent.PolicyIndexedAssignment
@@ -99,14 +100,29 @@ theorem tailPartrec : Partrec (fun p : Code × Nat × Nat × Nat =>
     (partialOnSome (Computable.snd : Computable (Prod.snd : A × Option Nat → Option Nat))
       ((expansion.comp (Computable.fst.comp Computable.fst) Computable.snd).to₂)).to₂
   have z := (Primrec.option_some.comp (nodePrim (Primrec.const 4) f g)).to_comp.partrec
-  exact partChoose (Primrec.eq.comp n (Primrec.const 0)) z call
+  have normalized : Partrec (fun p : A =>
+      (numeral p.1 p.2.1).bind fun
+        | none => Part.some none
+        | some num => PolicyIndexedShape.macroCode
+            (p.1,PolicyShape.siteCode .optionalBoxTail,2,[p.2.2.1,p.2.2.2,num])) :=
+    call.of_eq (by
+      intro p
+      apply congrArg (fun k => (numeral p.1 p.2.1).bind k)
+      funext out
+      cases out <;> rfl)
+  exact partChoose (Primrec.eq.comp n (Primrec.const 0)) z normalized
 
 theorem recursorPartrec : Partrec (fun p : Code × Nat × Nat =>
     (numeral p.1 2).map (Option.map (recursorFrom p.2.1 p.2.2))) := by
   let A := Code × Nat × Nat
+  let T := A × Nat
+  have old : Computable (fun p : T => p.1.2) := Computable.snd.comp Computable.fst
+  have input : Computable (fun p : T => p.1.2.1) := Computable.fst.comp old
+  have output : Computable (fun p : T => p.1.2.2) := Computable.snd.comp old
+  have args : Computable (fun p : T => (p.1.2.1,p.1.2.2,p.2)) :=
+    input.pair (output.pair Computable.snd)
   have fields : Computable₂ (fun (p : A) (v : Nat) => recursorFrom p.2.1 p.2.2 v) :=
-    (recFieldsPrim.to_comp.comp
-      ((Computable.snd.comp Computable.fst).pair Computable.snd)).to₂
+    (recFieldsPrim.to_comp.comp args).to₂
   exact partialMapSome (numeralPartrec.comp Computable.fst (Computable.const 2)) fields
 
 theorem applicationPartrec : Partrec (fun p : Code × Nat × Nat × List Nat × List Nat =>

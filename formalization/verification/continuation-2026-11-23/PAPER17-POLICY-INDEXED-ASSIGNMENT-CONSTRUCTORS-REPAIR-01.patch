@@ -1,0 +1,28 @@
+--- a/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedAssignmentConstructorPrograms.lean
++++ b/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedAssignmentConstructorPrograms.lean
+@@ -4,0 +5 @@
++import Mathlib.Computability.RE
+@@ -102 +103,11 @@
+-  exact partChoose (Primrec.eq.comp n (Primrec.const 0)) z call
++  have normalized : Partrec (fun p : A =>
++      (numeral p.1 p.2.1).bind fun
++        | none => Part.some none
++        | some num => PolicyIndexedShape.macroCode
++            (p.1,PolicyShape.siteCode .optionalBoxTail,2,[p.2.2.1,p.2.2.2,num])) :=
++    call.of_eq (by
++      intro p
++      apply congrArg (fun k => (numeral p.1 p.2.1).bind k)
++      funext out
++      cases out <;> rfl)
++  exact partChoose (Primrec.eq.comp n (Primrec.const 0)) z normalized
+@@ -106,0 +118,6 @@
++  let T := A × Nat
++  have old : Computable (fun p : T => p.1.2) := Computable.snd.comp Computable.fst
++  have input : Computable (fun p : T => p.1.2.1) := Computable.fst.comp old
++  have output : Computable (fun p : T => p.1.2.2) := Computable.snd.comp old
++  have args : Computable (fun p : T => (p.1.2.1,p.1.2.2,p.2)) :=
++    input.pair (output.pair Computable.snd)
+@@ -108,2 +125 @@
+-    (recFieldsPrim.to_comp.comp
+-      ((Computable.snd.comp Computable.fst).pair Computable.snd)).to₂
++    (recFieldsPrim.to_comp.comp args).to₂
