@@ -1,0 +1,20 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalConstructorBaseLabelProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalConstructorBaseLabelChecks
+open NumberedWindowInternalConstructorBaseLabelTargets
+
+theorem exact_OriginalBaseLabelAtJ : ExactBaseLabelAtJ :=
+  NumberedWindowInternalConstructorBaseLabel.exact_BaseLabelAtJ
+
+theorem exact_OriginalBaseLabelAtParsed : ExactBaseLabelAtParsed :=
+  NumberedWindowInternalConstructorBaseLabel.exact_BaseLabelAtParsed
+
+theorem exact_OriginalCertifiedLowerBaseLabel : ExactCertifiedLowerBaseLabel :=
+  NumberedWindowInternalConstructorBaseLabel.exact_CertifiedLowerBaseLabel
+
+#print axioms exact_OriginalBaseLabelAtJ
+#print axioms exact_OriginalBaseLabelAtParsed
+#print axioms exact_OriginalCertifiedLowerBaseLabel
+end LogicLineages.PersistentMarking.NumberedWindowInternalConstructorBaseLabelChecks

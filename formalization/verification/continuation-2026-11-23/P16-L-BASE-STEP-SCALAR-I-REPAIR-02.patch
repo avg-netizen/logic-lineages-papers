@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralBaseStepScalarProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralBaseStepScalarProof.lean
+@@ -92,0 +93,3 @@
++    have positive : Nonempty (Derivation B Δ (programGraph r (suc z) ![dom,proof,key.relabel j])) :=
++      ⟨Derivation.conjunctionRight details⟩
++    unfold programGraph at positive
+@@ -94 +97 @@
+-      false c B β Δ dom (key.relabel j) proof).2 ⟨Derivation.conjunctionRight details⟩
++      false c B β Δ dom (key.relabel j) proof).2 positive

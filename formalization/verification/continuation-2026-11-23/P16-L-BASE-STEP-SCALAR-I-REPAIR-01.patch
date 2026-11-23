@@ -1,0 +1,18 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralBaseStepScalarProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralBaseStepScalarProof.lean
+@@ -14 +14 @@
+-import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAccessibilityRulesSyntaxProof
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.InverseApplicationSyntaxProof
+@@ -24 +24 @@
+-open ID1Completion.InternalAccessibilityRulesSyntaxProof (membershipRename)
++open ID1Completion.SourceComputabilityCompletion.InverseApplicationSyntaxProof (membershipRename)
+@@ -66 +66,3 @@
+-  intro i r c α Γ source target witness ds dt key cert pS pT members occurs
++  intro i r c α Γ source target witness ds dt key
++  dsimp only
++  intro cert pS pT members occurs
+@@ -100 +102,3 @@
+-  intro i r c α Γ source target witness ds dt cert pS pT members
++  intro i r c α Γ source target witness ds dt
++  dsimp only
++  intro cert pS pT members
