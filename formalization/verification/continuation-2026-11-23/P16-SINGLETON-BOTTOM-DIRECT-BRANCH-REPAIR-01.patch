@@ -1,0 +1,26 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSingletonBottomBranchProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSingletonBottomBranchProof.lean
+@@ -3 +3,2 @@
+-import LogicLineages.PersistentMarking.NumberedWindowInternalSingletonBottomChecks
++import LogicLineages.PersistentMarking.NumberedWindowInternalSingletonBottomProof
++import LogicLineages.ComputabilityKnowledge.GorbowVerifierNormalizationProof
+@@ -36 +37 @@
+-  (branchEvaluation normalizeEvaluation zeroEvaluation)
++  (branchEvaluation)
+@@ -39,2 +40,2 @@
+-open NumberedWindowInternalSingletonBottomChecks
+-  (exact_NumericSingletonBottom exact_OpenSingletonBottom exact_DirectSingletonBottomTarget)
++open NumberedWindowInternalSingletonBottom
++  (exactNumericSingletonBottom exactOpenSingletonBottom exactDirectSingletonBottomTarget)
+@@ -55 +56 @@
+-  rw [branchEvaluation,branchEvaluation,sourceControl,normalizeEvaluation,selectorValue]
++  rw [branchEvaluation,branchEvaluation,sourceControl,GorbowVerifierNormalization.Proof.actualEvaluation.2,selectorValue]
+@@ -70 +71 @@
+-    obtain ⟨ctx,t,hx⟩ := (exact_NumericSingletonBottom x).mp hguard.1
++    obtain ⟨ctx,t,hx⟩ := (exactNumericSingletonBottom x).mp hguard.1
+@@ -75 +76 @@
+-        exact (hguard.2 (exact_DirectSingletonBottomTarget xs s ctx t w y hit)).elim
++        exact (hguard.2 (exactDirectSingletonBottomTarget xs s ctx t w y hit)).elim
+@@ -88 +89 @@
+-  · exact exact_OpenSingletonBottom B α Γ ctx t
++  · exact exactOpenSingletonBottom B α Γ ctx t
