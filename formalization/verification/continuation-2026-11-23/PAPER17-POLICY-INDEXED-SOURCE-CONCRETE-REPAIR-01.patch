@@ -1,0 +1,12 @@
+--- a/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceConcreteProof.lean
++++ b/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceConcreteProof.lean
+@@ -4 +4,4 @@
+-import LogicLineages.StandardControlCurrent.PolicyIndexedAssignmentEffectivityProof
++public import LogicLineages.StandardControlCurrent.PolicyIndexedAssignmentEffectivityProof
++public import LogicLineages.StandardControlCurrent.PolicyIndexedAbstractionBodyTargets
++public import LogicLineages.StandardControlCurrent.PolicyIndexedAbstractionPartialsTargets
++public import LogicLineages.StandardControlCurrent.PolicyIndexedPartialTargets
+@@ -28,2 +31 @@
+-  rw [PolicyIndexedPartial.exactIndexedPartialRun c p h,Part.bind_some]
+-  rfl
++  rw [PolicyIndexedPartial.exactIndexedPartialRun c p h,Part.bind_some] <;> rfl

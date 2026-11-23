@@ -1,0 +1,22 @@
+{
+  "status": "frozen source repair; native pending",
+  "baseline": "dd4eddff9f8eab0a4532e8df4880f71b8d5dffb9",
+  "failed_exact_gate_receipt": "1795429709741677747-42",
+  "failed_exact_gate": "indexed-source-concrete-1028",
+  "failed_receipt_sha256": "0a50b22ffcc56123f79f5e2411636c1a9a7b1126d702071e7e9d9884465cf8dc",
+  "failed_exact_module_log_sha256": "2c3d8c9013a3791b60a3008ffe374693f6d9719b9b26d681860235bb6b4fa5f1",
+  "failed_original_native_log_sha256": "038ee87a93f51ef8591b3d69ca66a656ca3ab0aee2422cec95322feb3cb7cd8d",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceConcreteProof.lean:16:35: error(lean.unknownIdentifier): Unknown identifier `PartialBackend`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceConcreteProof.lean:17:3: error(lean.unknownIdentifier): Unknown identifier `PolicyIndexedPartial.run`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceConcreteProof.lean:19:32: error: typeclass instance problem is stuck\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceConcreteProof.lean:25:4: error(lean.unknownIdentifier): Unknown identifier `ImplementsPartial`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceConcreteProof.lean:26:8: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceConcreteProof.lean:32:20: error(lean.unknownIdentifier): Unknown identifier `PolicyIndexedAbstractionBody.abstractionCode`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceConcreteProof.lean:34:29: error(lean.unknownIdentifier): Unknown identifier `AbstractionPartrec`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceConcreteProof.lean:35:65: error(lean.unknownIdentifier): Unknown identifier `partialBackendPartrec`",
+  "failed_proof_path": "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceConcreteProof.lean",
+  "failed_proof_sha256": "bb9da9f6ed3b43560a95fd97186d86720d986e5d4449f07ac8be0ce7fca19da6",
+  "repaired_proof_sha256": "26a9c51d209122466c24608da34935aca209c3fa37c5c17d9f0f46fed32dfe63",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-SOURCE-CONCRETE-REPAIR-01.patch",
+  "patch_sha256": "616c5a21422ab043017668376aae76aba735e6ed449dc7693179138661e26988",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-SOURCE-CONCRETE-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "6646b11e1a1f72d7c0c0093b4651dc7fbb5d691333eb79803d58156f17ee3c92",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceConcreteStatementChecks.lean": "aec8e872601477e8103322a46a8fc3d8db793a20e43c74afcc63cf3dbbdf84fa"
+  },
+  "scope": "Expose only the prerequisite public targets and the actual AbstractionPartrec signature; keep proof imports private as possible and existing exact term equalities/definitions."
+}

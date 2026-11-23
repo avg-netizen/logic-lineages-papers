@@ -1,7 +1,10 @@
 module
 public import LogicLineages.StandardControlCurrent.PolicyIndexedSourceCompileTargets
 import LogicLineages.StandardControlCurrent.PolicyIndexedSourceCompileProof
-import LogicLineages.StandardControlCurrent.PolicyIndexedAssignmentEffectivityProof
+public import LogicLineages.StandardControlCurrent.PolicyIndexedAssignmentEffectivityProof
+public import LogicLineages.StandardControlCurrent.PolicyIndexedAbstractionBodyTargets
+public import LogicLineages.StandardControlCurrent.PolicyIndexedAbstractionPartialsTargets
+public import LogicLineages.StandardControlCurrent.PolicyIndexedPartialTargets
 import LogicLineages.StandardControlCurrent.PolicyIndexedPartialProgramsProof
 import LogicLineages.StandardControlCurrent.PolicyIndexedPartialRunProof
 import LogicLineages.StandardControlCurrent.PolicyIndexedAbstractionBodyProof
@@ -25,8 +28,7 @@ theorem exactPartialBackend (c : Code) (p : Policy) (h : PolicyIndexedShape.Impl
     ImplementsPartial partialBackend c p := by
   intro level i n
   unfold partialBackend
-  rw [PolicyIndexedPartial.exactIndexedPartialRun c p h,Part.bind_some]
-  rfl
+  rw [PolicyIndexedPartial.exactIndexedPartialRun c p h,Part.bind_some] <;> rfl
 
 noncomputable def abstraction : Abstraction :=
   fun c i r body => PolicyIndexedAbstractionBody.abstractionCode partialBackend (c,i,r,body)
