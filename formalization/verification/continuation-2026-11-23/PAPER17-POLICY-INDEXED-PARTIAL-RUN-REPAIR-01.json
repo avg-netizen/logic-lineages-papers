@@ -1,0 +1,23 @@
+{
+  "status": "frozen source repair; native pending",
+  "baseline": "dd4eddff9f8eab0a4532e8df4880f71b8d5dffb9",
+  "failed_exact_gate_receipt": "1795428991468493370-24",
+  "failed_exact_gate": "indexed-partial-run-1016",
+  "failed_receipt_sha256": "9df6085e6250740fb9a583bf36c3d742df85975fce2d2561540782071decada0",
+  "failed_exact_module_log_sha256": "73bebcfb1b36f40800f8028312a8caffeaff8748f866c9bbcc127e983b50a01f",
+  "failed_original_native_log_sha256": "c660ec6aa047cb62535f026f41959ba9bf00e521fee74164768912bd1d9131d1",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedPartialRunProof.lean:41:6: error: Type mismatch: After simplification, term",
+  "failed_proof_path": "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedPartialRunProof.lean",
+  "failed_proof_sha256": "3bcb93720e568ec5f6ec31493527d553bf08408461d60e8a40c15809acf58d83",
+  "repaired_proof_sha256": "1c950b130b2fcdec16b1f2b04d71f655f652f7ae512ea7fc36d81e28ee0f2e99",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-PARTIAL-RUN-REPAIR-01.patch",
+  "patch_sha256": "48e8ae2186fd45b69af7e35bbb4a6ac6b2bba2a12d517ed409b586ac1333a82c",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-PARTIAL-RUN-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "3470e651895349ed0d52db5c595f3d2f1c9e0690bbede54438de4d41f2e8cd35",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedPartialRunStatementChecks.lean": "97de6cd3c80b5cf92aed5848234d3c23f230abf69bfda569735dfae8602088ca",
+    "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-PARTIAL-RUN-SOURCE-MAP.md": "1568e86d5f45ecd0a505ddcac2c2efa7092be331eef4bf5b23d69efbf1ab4e2a"
+  },
+  "scope": "Use the same encoded DecidableEq as mapGraph via generic helper to avoid raw-product BEq selection and preserve exact lookup equality."
+}

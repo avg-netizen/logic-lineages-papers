@@ -21,6 +21,18 @@ private theorem frontierRank (s : Node) (k : Nat) :
     have h2 := exactIndexedPartialNode.1 c t ht
     omega
 
+/-- Keep the same generic encoded equality instance used by mapGraph;
+the raw product Node also has a different built-in BEq instance. -/
+private theorem lookupAll {β σ : Type} [Primcodable β] (f : β → σ)
+    {bs bs' : List β} (hsub : bs' ⊆ bs) :
+    mapGraph (bs.map (fun x => (x,f x))) bs' = bs'.map f := by
+  letI : DecidableEq β := Encodable.decidableEqOfEncodable β
+  induction bs' with
+  | nil => rfl
+  | cons b bs' ih =>
+    have both : b ∈ bs ∧ bs' ⊆ bs := by simpa using hsub
+    simpa [mapGraph,List.lookup_graph f both.1] using ih both.2
+
 private theorem graphLiteral (p : Policy) (s : Node) (fuel : Nat) (h : fuel ≤ rank s + 1) :
     graph rank children (typedNode p) s fuel =
       (bindList children s (rank s + 1 - fuel)).map
@@ -32,13 +44,6 @@ private theorem graphLiteral (p : Policy) (s : Node) (fuel : Nat) (h : fuel ≤ 
     intro b hb
     have hh := frontierRank s (rank s + 1) b hb
     omega
-  have lookupAll {bs bs' : List Node} (hsub : bs' ⊆ bs) :
-      mapGraph (bs.map (fun x => (x,f x))) bs' = bs'.map f := by
-    induction bs' with
-    | nil => rfl
-    | cons b bs' ih =>
-      have both : b ∈ bs ∧ bs' ⊆ bs := by simpa using hsub
-      simpa [mapGraph,List.lookup_graph f both.1] using ih both.2
   have graphStep (i : Nat) :
       graph rank children (typedNode p) s (i+1) =
         (bindList children s (rank s-i)).filterMap (fun b =>
@@ -55,7 +60,7 @@ private theorem graphLiteral (p : Policy) (s : Node) (fuel : Nat) (h : fuel ≤ 
     apply List.filterMap_eq_map_iff_forall_eq_some.mpr
     intro b hb
     simp
-    rw [lookupAll]
+    rw [lookupAll f]
     · exact exactIndexedPartialNode.2.1 p b
     · exact (List.infix_flatMap_of_mem hb children).subset
 
