@@ -1,0 +1,5 @@
+# Paper 17: ordered merge with a supplied policy program
+
+The literal assignment requires the same ordered merge as `PolicyPartial.mergeCode`. The indexed version reads both coordinate lists with the original zero default and enumerates `level + 2` coordinates from zero in increasing order. Tag 5 first applies the literal positive-repeat macro and then active exponentiation; the other tags take the first operand unchanged and apply active addition. The original trailing literal argument is preserved.
+
+Every literal macro runs with the same supplied policy code. A terminating rejection returns `none` and short-circuits the rest of the merge; a diverging policy call remains undefined. The coordinate, prefix, and whole merge programs are jointly partial recursive in the policy index and the original inputs. If the index implements the policy, the coordinate and complete merge return exactly the option values of their original programs, even on a terminating refusal. This is a supporting lemma for assignment compilation, not a numbered theorem.
