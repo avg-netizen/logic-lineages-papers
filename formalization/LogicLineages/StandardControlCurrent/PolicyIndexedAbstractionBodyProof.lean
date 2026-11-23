@@ -113,9 +113,21 @@ private theorem indexPR : Primrec (fun q : Q => q.1.1.1) :=
 
 private def factor (q : Q) : Nat := PolicyAbstraction.factorCode q.1.1.2.1 q.1.1.2.2.2
 
-private theorem factorPR : Primrec factor :=
-  PolicyAbstractionBasePrograms.factor.comp
-    ((Primrec.fst.pair (Primrec.fst.comp (Primrec.snd.comp Primrec.snd))).comp flatPR)
+private def factorArgs (q : Q) : Nat × List Nat := (q.1.1.2.1,q.1.1.2.2.2)
+
+private theorem factorArgsPR : Primrec factorArgs := by
+  have fields : Primrec (fun q : Q => q.1.1.2) :=
+    Primrec.snd.comp (Primrec.fst.comp Primrec.fst)
+  exact (Primrec.fst.comp fields).pair (Primrec.snd.comp (Primrec.snd.comp fields))
+
+private theorem factorEquation (q : Q) :
+    PolicyAbstraction.factorCode (factorArgs q).1 (factorArgs q).2 = factor q := rfl
+
+private theorem factorPR : Primrec factor := by
+  let A := Nat × List Nat
+  have f : Primrec (fun x : A => PolicyAbstraction.factorCode x.1 x.2) :=
+    PolicyAbstractionBasePrograms.factor
+  exact (f.comp factorArgsPR).of_eq factorEquation
 
 private def term (q : Q) : Nat := (q.1.2.getD 0 []).getD 0 0
 
@@ -136,29 +148,90 @@ private theorem scalarRequestPR : Primrec scalarRequest := by
 private def positiveRequest (q : Q) : MacroArgs :=
   (q.1.1.1,PolicyShape.siteCode .positiveAbstraction,q.1.1.2.2.1,q.1.2.map (fun xs => xs.getD q.2 0))
 
+private def positiveFields (q : Q) : MacroArgs :=
+  (q.1.1.1,PolicyAbstractionCoordinatePrograms.positiveInput (flatten q))
+
+private theorem positiveFieldsPR : Primrec positiveFields := by
+  have fields : Primrec (fun q : Q => PolicyAbstractionCoordinatePrograms.positiveInput (flatten q)) :=
+    PolicyAbstractionCoordinatePrograms.positiveInputProgram.comp flatPR
+  exact indexPR.pair fields
+
+private theorem positiveEquation (q : Q) : positiveFields q = positiveRequest q := rfl
+
 private theorem positiveRequestPR : Primrec positiveRequest :=
-  indexPR.pair ((Primrec.const (PolicyShape.siteCode .positiveAbstraction)).pair
-    ((PolicyAbstractionCoordinatePrograms.mP.comp flatPR).pair (columnP.comp flatPR)))
+  positiveFieldsPR.of_eq positiveEquation
 
 private def request (q : Q) : Option MacroArgs :=
   if q.2 = 0 then (if factor q = 0 then none else some (scalarRequest q))
   else if q.2 < q.1.1.2.1 + 2 then some (positiveRequest q) else none
 
-private theorem requestPR : Primrec request :=
-  Primrec.ite (Primrec.eq.comp Primrec.snd (Primrec.const 0))
-    (Primrec.ite (Primrec.eq.comp factorPR (Primrec.const 0))
-      (Primrec.const none) (Primrec.option_some.comp scalarRequestPR))
-    (Primrec.ite
-      (Primrec.nat_lt.comp Primrec.snd
-        (Primrec.nat_add.comp (PolicyAbstractionCoordinatePrograms.levelP.comp flatPR) (Primrec.const 2)))
-      (Primrec.option_some.comp positiveRequestPR) (Primrec.const none))
+private def head (q : Q) : Nat := headClosure (q.1.1.2.2.2.getD q.2 0)
+
+private theorem headEquation (q : Q) :
+    headClosure ((flatten q).2.2.1.getD (flatten q).2.2.2.2 0) = head q := rfl
+
+private theorem headPR : Primrec head :=
+  (headP.comp flatPR).of_eq headEquation
 
 private def fallback (q : Q) : Option Nat :=
   if q.2 = 0 then some 0 else some (headClosure (q.1.1.2.2.2.getD q.2 0))
 
-private theorem fallbackPR : Primrec fallback :=
-  Primrec.ite (Primrec.eq.comp Primrec.snd (Primrec.const 0))
-    (Primrec.const (some 0)) (Primrec.option_some.comp (headP.comp flatPR))
+private def zeroIndex (q : Q) : Prop := q.2 = 0
+private instance (q : Q) : Decidable (zeroIndex q) := inferInstanceAs (Decidable (q.2 = 0))
+private theorem zeroIndexPR : PrimrecPred zeroIndex :=
+  Primrec.eq.comp Primrec.snd (Primrec.const 0)
+
+private def zeroFactor (q : Q) : Prop := factor q = 0
+private instance (q : Q) : Decidable (zeroFactor q) := inferInstanceAs (Decidable (factor q = 0))
+private theorem zeroFactorPR : PrimrecPred zeroFactor :=
+  Primrec.eq.comp factorPR (Primrec.const 0)
+
+private def insidePositive (q : Q) : Prop := q.2 < q.1.1.2.1 + 2
+private instance (q : Q) : Decidable (insidePositive q) :=
+  inferInstanceAs (Decidable (q.2 < q.1.1.2.1 + 2))
+
+private theorem levelProjectionPR : Primrec (fun q : Q => q.1.1.2.1) := by
+  have fields : Primrec (fun q : Q => q.1.1.2) :=
+    Primrec.snd.comp (Primrec.fst.comp Primrec.fst)
+  exact Primrec.fst.comp fields
+
+private theorem thresholdPR : Primrec (fun q : Q => q.1.1.2.1 + 2) :=
+  Primrec.nat_add.comp levelProjectionPR (Primrec.const 2)
+
+private theorem insidePositivePR : PrimrecPred insidePositive :=
+  Primrec.nat_lt.comp Primrec.snd thresholdPR
+
+private def zeroRequest (q : Q) : Option MacroArgs :=
+  if zeroFactor q then none else some (scalarRequest q)
+
+private def aboveZeroRequest (q : Q) : Option MacroArgs :=
+  if insidePositive q then some (positiveRequest q) else none
+
+private theorem requestEquation (q : Q) :
+    (if zeroIndex q then zeroRequest q else aboveZeroRequest q) = request q := rfl
+
+private theorem fallbackEquation (q : Q) :
+    (if zeroIndex q then some 0 else some (head q)) = fallback q := rfl
+
+attribute [local irreducible] factorArgs positiveFields scalarRequest positiveRequest
+  factor head zeroIndex zeroFactor insidePositive
+
+private theorem zeroRequestPR : Primrec zeroRequest :=
+  Primrec.ite zeroFactorPR (Primrec.const (none : Option MacroArgs))
+    (Primrec.option_some.comp scalarRequestPR)
+
+private theorem aboveZeroRequestPR : Primrec aboveZeroRequest :=
+  Primrec.ite insidePositivePR (Primrec.option_some.comp positiveRequestPR)
+    (Primrec.const (none : Option MacroArgs))
+
+attribute [local irreducible] zeroRequest aboveZeroRequest
+
+private theorem requestPR : Primrec request :=
+  (Primrec.ite zeroIndexPR zeroRequestPR aboveZeroRequestPR).of_eq requestEquation
+
+private theorem fallbackPR : Primrec fallback := by
+  have tail : Primrec (fun q : Q => some (head q)) := Primrec.option_some.comp headPR
+  exact (Primrec.ite zeroIndexPR (Primrec.const (some 0)) tail).of_eq fallbackEquation
 
 private theorem deltaEquation (q : Q) :
     (match request q with
@@ -170,8 +243,19 @@ private theorem deltaEquation (q : Q) :
   · by_cases ht : q.2 < q.1.1.2.1 + 2 <;>
       simp [request,fallback,delta,positiveRequest,hz,ht]
 
+private def finishArgs (q : Q × Nat) : Input × Nat := (flatten q.1,q.2)
+
+private theorem finishArgsPR : Primrec finishArgs :=
+  (flatPR.comp Primrec.fst).pair Primrec.snd
+
+private theorem finishEquation (q : Q × Nat) :
+    (if (finishArgs q).1.2.2.2.2 < (finishArgs q).1.2.1 + 1 then
+        OrdinalComparison.Source.OrdinalSyntax.node 4 (finishArgs q).2
+          (headClosure ((finishArgs q).1.2.2.1.getD (finishArgs q).1.2.2.2.2 0))
+      else (finishArgs q).2) = finish q.1.1 q.1.2 q.2 := rfl
+
 private theorem finishPR : Primrec (fun q : Q × Nat => finish q.1.1 q.1.2 q.2) :=
-  finishP.comp ((flatPR.comp Primrec.fst).pair Primrec.snd)
+  (finishP.comp finishArgsPR).of_eq finishEquation
 
 private theorem coordinateEquation (q : Q) :
     (delta q.1 q.2).map (Option.map (finish q.1 q.2)) = coordinate q.1 q.2 := rfl
