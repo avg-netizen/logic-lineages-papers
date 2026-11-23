@@ -1,0 +1,12 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectTargetPartitionRawProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectTargetPartitionRawChecks
+open NumberedWindowInternalDirectTargetPartitionRawTargets
+
+theorem exact_OpenOriginalRawTargetPartition : ExactOpenRawTargetCheck :=
+  NumberedWindowInternalDirectTargetPartitionRawProof.exactOpenRawTargetCheck
+
+#print axioms exact_OpenOriginalRawTargetPartition
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectTargetPartitionRawChecks

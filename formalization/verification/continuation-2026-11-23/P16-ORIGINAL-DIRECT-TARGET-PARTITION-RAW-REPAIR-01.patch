@@ -1,0 +1,7 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetPartitionRawGraphProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetPartitionRawGraphProof.lean
+@@ -52,2 +52,2 @@
+-      (programGraph (.composition predecessor ![.composition p ![.projection i]]) out xs)) := by
+-  apply compositionValue predecessor ![.composition p ![.projection i]] out xs
++      (programGraph (.composition predecessor ![(.composition p ![.projection i])]) out xs)) := by
++  apply compositionValue predecessor ![(.composition p ![.projection i])] out xs
