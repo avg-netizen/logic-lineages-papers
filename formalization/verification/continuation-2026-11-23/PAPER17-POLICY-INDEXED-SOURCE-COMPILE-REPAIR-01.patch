@@ -1,0 +1,5 @@
+--- a/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceCompileTargets.lean
++++ b/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceCompileTargets.lean
+@@ -16 +16 @@
+-  (Part.ofOption row).map (fun assigned => assigned.bind compileVectorCode)
++  (Part.ofOption row).map (fun assigned => assigned.bind Source.OrdinalSyntax.compileVectorCode)

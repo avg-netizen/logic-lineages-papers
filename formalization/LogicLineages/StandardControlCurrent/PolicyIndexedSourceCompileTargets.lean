@@ -13,7 +13,7 @@ abbrev Args := Code × Nat × Nat
 /-- Absence of a ranked root row (not possible at implementing codes) is
 not relabeled as the original assignment's returned failure. -/
 noncomputable def finish (row : Option PolicyIndexedAssignment.Value) : Part (Option EncodedVector) :=
-  (Part.ofOption row).map (fun assigned => assigned.bind compileVectorCode)
+  (Part.ofOption row).map (fun assigned => assigned.bind Source.OrdinalSyntax.compileVectorCode)
 
 noncomputable def compile (abs : Abstraction) (x : Args) : Part (Option EncodedVector) :=
   (PolicyIndexedAssignment.run abs (x.1,List.replicate x.2.1 0,x.2.2)).bind finish

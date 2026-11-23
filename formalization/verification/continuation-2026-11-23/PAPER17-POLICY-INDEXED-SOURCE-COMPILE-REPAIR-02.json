@@ -1,0 +1,28 @@
+{
+  "status": "frozen source repair; native pending",
+  "baseline": "dd4eddff9f8eab0a4532e8df4880f71b8d5dffb9",
+  "failed_exact_gate_receipt": "1795429532847298614-11",
+  "failed_exact_gate": "indexed-source-compile-repair01",
+  "failed_receipt_sha256": "3b43764d022ff94047961d65b77d4621e8e50486a2cbae71ae30073b3d580c33",
+  "failed_exact_module_log_sha256": "1ea8f3fafedf56d7497a59b432a370fc83af658c29af39252747fe537fe46bc3",
+  "failed_original_native_log_sha256": "77a13dea71e7af95174abe5ff04f978d68f5156b793e490bc48ff5c2780c7dfd",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceCompileProof.lean:19:43: error(lean.unknownIdentifier): Unknown identifier `compileVectorCode`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceCompileProof.lean:21:7: error(lean.unknownIdentifier): Unknown identifier `ordinalSyntaxVectorCompilerPrimitiveRecursive.to_comp.comp`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceCompileProof.lean:17:50: error: unsolved goals",
+  "failed_proof_path": "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceCompileProof.lean",
+  "failed_proof_sha256": "955d4b3210aed551e186ecb53329a851e71b03d85685e91a327797446731f18e",
+  "repaired_proof_sha256": "6c3c42ab3a8a4c3ae8450b4890e306301c72b42d6ffe62a5c9a9f2cf7b2f5911",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-SOURCE-COMPILE-REPAIR-02.patch",
+  "patch_sha256": "06cbab55fd36508c930274781fb0ea152010472aa2a2d7d8829078513f1f8eb8",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-SOURCE-COMPILE-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "1bfbf878e2f8286135208cffb282d14bbf55037618c6abe74a7042ab4147b9e6",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceCompileStatementChecks.lean": "9bec43eed52c2ed053a824dc9ead9462c45409ee69dc676bd1f1e9e1779931df",
+    "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-SOURCE-COMPILE-SOURCE-MAP.md": "eb76bf7963834e9b2dab33c5f51ea91b0748f352961b31dbd7ce103a5777e1b9",
+    "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceCompileTargets.lean": "3284c88f6715e01088012d6ae06726845215e3a18e2cefe5d4c0e3459e6a990b"
+  },
+  "scope": "Only import and open the exact original vector compiler and its primitive recursive theorem in Proof; retain prior target repair and all definitions/claims/caps.",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-SOURCE-COMPILE-REPAIR-01.json": "bb56becd8d44770ce08f69d0ea3dee4a0aa10b90735235d7d30f69a176fcadeb",
+    "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-SOURCE-COMPILE-REPAIR-01.patch": "157f5bc0ea262da5d798bd6145aff10dca592923987a8003cb59d529dd00b06d"
+  }
+}

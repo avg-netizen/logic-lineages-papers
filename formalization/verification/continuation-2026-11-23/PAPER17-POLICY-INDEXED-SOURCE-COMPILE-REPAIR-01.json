@@ -1,0 +1,24 @@
+{
+  "status": "frozen source repair; native pending",
+  "baseline": "dd4eddff9f8eab0a4532e8df4880f71b8d5dffb9",
+  "failed_exact_gate_receipt": "1795429449719052587-23",
+  "failed_exact_gate": "indexed-source-compile-1024",
+  "failed_receipt_sha256": "cf8bc55a08385fced95abbbd0ba17a818e4bb70e5fe6c9ce5079d2ef1a0c1d07",
+  "failed_exact_module_log_sha256": "1efd50d53f37f889038124a5bfe45a8a0032eefacb1ca55a555a09ed91e2b414",
+  "failed_original_native_log_sha256": "547dd49924afbcd2812428bdf0f3c4c7595d45f942b07db8452a271a8dba59a1",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceCompileTargets.lean:16:57: error(lean.unknownIdentifier): Unknown identifier `compileVectorCode`",
+  "failed_proof_path": "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceCompileTargets.lean",
+  "failed_proof_sha256": "ec90e20e526f62d61ad824904e7e663a4ca28222a2f1ac37115a9a2541d4fa1f",
+  "repaired_proof_sha256": "3284c88f6715e01088012d6ae06726845215e3a18e2cefe5d4c0e3459e6a990b",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-SOURCE-COMPILE-REPAIR-01.patch",
+  "patch_sha256": "157f5bc0ea262da5d798bd6145aff10dca592923987a8003cb59d529dd00b06d",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-SOURCE-COMPILE-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "1bfbf878e2f8286135208cffb282d14bbf55037618c6abe74a7042ab4147b9e6",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceCompileProof.lean": "955d4b3210aed551e186ecb53329a851e71b03d85685e91a327797446731f18e",
+    "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedSourceCompileStatementChecks.lean": "9bec43eed52c2ed053a824dc9ead9462c45409ee69dc676bd1f1e9e1779931df",
+    "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-SOURCE-COMPILE-SOURCE-MAP.md": "eb76bf7963834e9b2dab33c5f51ea91b0748f352961b31dbd7ce103a5777e1b9"
+  },
+  "scope": "Qualify the exact original compileVectorCode from the existing source interface; no definition substitute, statement or profile change."
+}

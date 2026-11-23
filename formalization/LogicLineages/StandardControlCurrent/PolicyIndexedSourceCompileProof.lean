@@ -1,11 +1,12 @@
 module
 public import LogicLineages.StandardControlCurrent.PolicyIndexedSourceCompileTargets
 import LogicLineages.StandardControlCurrent.PolicyIndexedAssignmentRunProof
-import LogicLineages.OrdinalComparison.WWScalarSyntaxCodeProof
+import LogicLineages.OrdinalComparison.WWOrdinalSyntaxVectorCompilerComputability
 
 @[expose] public section
 namespace LogicLineages.StandardControlCurrent.PolicyIndexedSourceCompile
 open OrdinalComparison Source Source.ForwardTranslation
+open Source.OrdinalSyntax (compileVectorCode ordinalSyntaxVectorCompilerPrimitiveRecursive)
 open PolicyIndexedAssignment (Node exactIndexedAssignmentRun)
 
 theorem exactPolicyIndexedSourceCompile : ExactPolicyIndexedSourceCompile := by
