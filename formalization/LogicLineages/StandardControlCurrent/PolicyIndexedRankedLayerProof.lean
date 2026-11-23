@@ -40,50 +40,75 @@ private theorem optionalRowComputable {β σ : Type} [Primcodable β] [Primcodab
   Primrec.optionToList.to_comp.comp
     (Computable.option_map Computable.snd ((Computable.fst.comp Computable.fst).pair Computable.snd).to₂)
 
-private theorem resultComputable {T β σ : Type} [Primcodable T] [Primcodable β] [Primcodable σ]
-    {s : T → State β σ} (hs : Computable s) : Computable₂ (fun (p : T × β) (out : Option σ) =>
-      ((s p.1).1.tail,(s p.1).2 ++ (out.map (p.2, ·)).toList)) := by
-  let U := (T × β) × Option σ
+private def finishOut {β σ : Type} (x : State β σ × β × Option σ) : State β σ :=
+  (x.1.1.tail,x.1.2 ++ (x.2.2.map (x.2.1, ·)).toList)
+
+private theorem finishOutComputable {β σ : Type} [Primcodable β] [Primcodable σ] :
+    Computable (finishOut : State β σ × β × Option σ → State β σ) := by
+  let U := State β σ × β × Option σ
+  have nodes : Computable (fun p : U => p.1.1) := Computable.fst.comp Computable.fst
+  have old : Computable (fun p : U => p.1.2) := Computable.snd.comp Computable.fst
+  have input : Computable (fun p : U => p.2) := Computable.snd
+  have row : Computable (fun p : U => (p.2.2.map (p.2.1, ·)).toList) :=
+    optionalRowComputable.comp input
+  have tail : Computable (fun p : U => p.1.1.tail) := Primrec.list_tail.to_comp.comp nodes
+  have add : Computable (fun p : U => p.1.2 ++ (p.2.2.map (p.2.1, ·)).toList) :=
+    Primrec.list_append.to_comp.comp old row
+  exact tail.pair add
+
+private theorem chooseHead {T β V : Type} [Primcodable T] [Primcodable β] [Primcodable V]
+    {head : T → Option β} {missing : T → V} {found : T → β → Part V}
+    (hh : Computable head) (hm : Computable missing) (hf : Partrec₂ found) :
+    Partrec (fun p => match head p with
+      | none => Part.some (missing p)
+      | some b => found p b) := by
+  have call := Partrec.bind (Computable.ofOption hh) hf
+  apply (Partrec.cond (Primrec.option_isSome.to_comp.comp hh) call hm.partrec).of_eq
+  intro p
+  cases e : head p <;> simp [e,Part.bind_some]
+
+private abbrev AdvanceIn (A β σ : Type) := (A × Matrix β σ) × State β σ
+
+private theorem headAssembly {A β σ : Type} [Primcodable A] [Primcodable β] [Primcodable σ]
+    {l : β → List β} {assemble : Assembly A β σ}
+    (hl : Primrec l) (ha : Partrec₂ assemble) :
+    Partrec₂ (fun (p : AdvanceIn A β σ) (b : β) =>
+      assemble p.1.1 (b,mapGraph p.1.2 (l b))) := by
+  let U := AdvanceIn A β σ × β
   have input : Computable (fun p : U => p.1.1) := Computable.fst.comp Computable.fst
-  have rowInput : Computable (fun p : U => (p.1.2,p.2)) :=
+  have key : Computable (fun p : U => p.1.1.1) := Computable.fst.comp input
+  have prev : Computable (fun p : U => p.1.1.2) := Computable.snd.comp input
+  have node : Computable (fun p : U => p.2) := Computable.snd
+  have values : Computable (fun p : U => mapGraph p.1.1.2 (l p.2)) :=
+    mapGraphProgram.to_comp.comp prev (hl.to_comp.comp node)
+  exact (ha.comp key (node.pair values)).to₂
+
+private theorem headFinish {A β σ : Type} [Primcodable A] [Primcodable β] [Primcodable σ] :
+    Computable₂ (fun (p : AdvanceIn A β σ × β) (out : Option σ) =>
+      finishOut (p.1.2,p.2,out)) := by
+  let U := (AdvanceIn A β σ × β) × Option σ
+  have pairIn : Computable (fun p : U => (p.1.2,p.2)) :=
     (Computable.snd.comp Computable.fst).pair Computable.snd
-  have state : Computable (fun p : U => s p.1.1) := hs.comp input
-  have nodes : Computable (fun p : U => (s p.1.1).1) := Computable.fst.comp state
-  have prior : Computable (fun p : U => (s p.1.1).2) := Computable.snd.comp state
-  have row : Computable (fun p : U => (p.2.map (p.1.2, ·)).toList) :=
-    optionalRowComputable.comp rowInput
-  have combined : Computable (fun p : U =>
-      ((s p.1.1).1.tail,(s p.1.1).2 ++ (p.2.map (p.1.2, ·)).toList)) :=
-    (Primrec.list_tail.to_comp.comp nodes).pair (Primrec.list_append.to_comp.comp prior row)
-  exact combined.to₂
+  have state : Computable (fun p : U => p.1.1.2) :=
+    Computable.snd.comp (Computable.fst.comp Computable.fst)
+  exact (finishOutComputable.comp (state.pair pairIn)).to₂
 
 private theorem advancePartrec {A β σ : Type} [Primcodable A] [Primcodable β] [Primcodable σ]
     {l : β → List β} {assemble : Assembly A β σ}
     (hl : Primrec l) (ha : Partrec₂ assemble) :
-    Partrec (fun p : (A × Matrix β σ) × State β σ => advance l assemble p.1.1 p.1.2 p.2) := by
-  let T := (A × Matrix β σ) × State β σ
-  have key : Computable (fun p : T => p.1.1) := Computable.fst.comp Computable.fst
-  have prev : Computable (fun p : T => p.1.2) := Computable.snd.comp Computable.fst
+    Partrec (fun p : AdvanceIn A β σ => advance l assemble p.1.1 p.1.2 p.2) := by
+  let T := AdvanceIn A β σ
   have nodes : Computable (fun p : T => p.2.1) := Computable.fst.comp Computable.snd
   have head : Computable (fun p : T => p.2.1[0]?) :=
     Primrec.list_getElem?.to_comp.comp nodes (Computable.const 0)
-  have call : Partrec₂ (fun (p : T) (b : β) => assemble p.1.1 (b,mapGraph p.1.2 (l b))) :=
-    (ha.comp (key.comp Computable.fst) (Computable.snd.pair
-      (mapGraphProgram.to_comp.comp (prev.comp Computable.fst) (hl.to_comp.comp Computable.snd)))).to₂
-  have result : Computable₂ (fun (p : T × β) (out : Option σ) =>
-      (p.1.2.1.tail,p.1.2.2 ++ (out.map (p.2, ·)).toList)) :=
-    resultComputable (Computable.snd : Computable (Prod.snd : T → State β σ))
-  have onHead : Partrec₂ (fun (p : T) (b : β) =>
-      (assemble p.1.1 (b,mapGraph p.1.2 (l b))).map (fun out =>
-        (p.2.1.tail,p.2.2 ++ (out.map (b, ·)).toList))) :=
-    (Partrec.map call result).to₂
-  have action := Partrec.bind (Computable.ofOption head) onHead
-  have flag : Computable (fun p : T => if p.2.1[0]?.isSome then (1 : Nat) else 0) :=
-    (Primrec.cond Primrec.id (Primrec.const 1) (Primrec.const 0)).to_comp.comp
-      (Primrec.option_isSome.to_comp.comp head)
-  apply (Partrec.nat_casesOn_right flag Computable.snd (action.comp Computable.fst).to₂).of_eq
-  rintro ⟨⟨a,prev⟩,nodes,prior⟩
-  cases nodes <;> simp [advance,Computable.ofOption,Part.bind_some]
+  have found : Partrec₂ (fun (p : T) (b : β) =>
+      (assemble p.1.1 (b,mapGraph p.1.2 (l b))).map (fun out => finishOut (p.2,b,out))) :=
+    (Partrec.map (headAssembly hl ha)
+      (headFinish : Computable₂ (fun (p : T × β) (out : Option σ) =>
+        finishOut (p.1.2,p.2,out)))).to₂
+  exact (chooseHead head Computable.snd found).of_eq (by
+    rintro ⟨⟨a,prev⟩,nodes,prior⟩
+    cases nodes <;> rfl)
 
 private theorem passesRec {A β σ : Type} [Primcodable β]
     (l : β → List β) (assemble : Assembly A β σ) (a : A) (prev : Matrix β σ)
@@ -113,10 +138,8 @@ theorem indexedLayerEffectivity : IndexedLayerEffectivity := by
   have h := Partrec.map hrun (Computable.snd.comp Computable.snd).to₂
   have hlayer : Partrec (fun p : T => layer l assemble p.1 p.2) := h.of_eq (by
     rintro ⟨a,nodes,prev⟩
-    change ((nodes.length.rec (Part.some (nodes,([] : Matrix β σ)))
-      (fun _ s => s.bind (advance l assemble a prev))).map Prod.snd) =
-      ((passes l assemble a prev (nodes,[]) nodes.length).map Prod.snd)
-    rw [passesRec])
+    exact congrArg (fun x : Part (State β σ) => x.map Prod.snd)
+      (passesRec l assemble a prev (nodes,[]) nodes.length))
   exact hlayer.to₂
 
 end LogicLineages.StandardControlCurrent.PolicyIndexedRankedLayer

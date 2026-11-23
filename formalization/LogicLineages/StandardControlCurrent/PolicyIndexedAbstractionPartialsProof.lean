@@ -32,30 +32,55 @@ private theorem callArgsPrim : Primrec (fun q : Args × Nat => callArgs q.1 q.2)
     ((Primrec.fst.comp hctx).pair
       (Primrec.snd.pair ((Primrec.list_getD 0).comp hbody Primrec.snd)))
 
-private theorem prefixEquation (run : PartialBackend) (q : Args × Nat) :
-    q.2.rec (Part.some []) (fun i ih => ih.bind (fun rs =>
-      (run (callArgs q.1 i)).map (fun r => rs ++ [r]))) =
-    prefixCode run q.1 q.2 := rfl
-
 private theorem partialsEquation (run : PartialBackend) (q : Args) :
     (prefixCode run q (q.2.2.1 + 1)).map collectLists = partialsCode run q := rfl
 
-attribute [local irreducible] callArgs prefixCode partialsCode
+private abbrev Results := List (Option (List Nat))
+private abbrev Input := Args × Nat
+private abbrev Step := Input × (Nat × Results)
+private abbrev Finished := Step × Option (List Nat)
+
+private def stepArg (q : Step) : Args × Nat := (q.1.1,q.2.1)
+
+private def stepAppend (q : Finished) : Results := q.1.2.2 ++ [q.2]
+
+private noncomputable def advance (run : PartialBackend) (q : Step) : Part Results :=
+  (run (callArgs (stepArg q).1 (stepArg q).2)).map (fun r => stepAppend (q,r))
+
+private theorem stepArgProgram : Computable stepArg :=
+  (Computable.fst.comp Computable.fst).pair (Computable.fst.comp Computable.snd)
+
+private theorem stepAppendProgram : Computable stepAppend :=
+  Primrec.list_concat.to_comp.comp
+    (Computable.snd.comp (Computable.snd.comp Computable.fst)) Computable.snd
+
+private theorem advanceEquation (run : PartialBackend) (q : Step) :
+    (run (callArgs (stepArg q).1 (stepArg q).2)).map (fun r => stepAppend (q,r)) =
+      advance run q := rfl
+
+private theorem advancePrefixEquation (run : PartialBackend) (x : Input) :
+    x.2.rec (Part.some []) (fun i ih => ih.bind (fun rs => advance run (x,i,rs))) =
+      prefixCode run x.1 x.2 := rfl
+
+attribute [local irreducible] callArgs prefixCode partialsCode stepArg stepAppend advance
+
+private theorem advancePartrec (run : PartialBackend) (hr : Partrec run) :
+    Partrec (advance run) := by
+  have read : Computable (fun q : Step => callArgs (stepArg q).1 (stepArg q).2) :=
+    callArgsPrim.to_comp.comp stepArgProgram
+  have evaluation : Partrec (fun q : Step => run (callArgs (stepArg q).1 (stepArg q).2)) :=
+    hr.comp read
+  have program : Computable₂ (fun (q : Step) (r : Option (List Nat)) => stepAppend (q,r)) :=
+    stepAppendProgram.to₂
+  exact (Partrec.map evaluation program).of_eq (advanceEquation run)
 
 private theorem prefixPartrec (run : PartialBackend) (hr : Partrec run) :
-    Partrec (fun q : Args × Nat => prefixCode run q.1 q.2) := by
-  let Results := List (Option (List Nat))
-  let P := (Args × Nat) × Nat × Results
-  have arg : Computable (fun q : P => (q.1.1,q.2.1)) :=
-    (Computable.fst.comp Computable.fst).pair (Computable.fst.comp Computable.snd)
-  have eval : Partrec (fun q : P => run (callArgs q.1.1 q.2.1)) :=
-    hr.comp (callArgsPrim.to_comp.comp arg)
-  have add : Computable₂ (fun (q : P) (r : Option (List Nat)) => q.2.2 ++ [r]) :=
-    (Primrec.list_concat.to_comp.comp
-      (Computable.snd.comp (Computable.snd.comp Computable.fst)) Computable.snd).to₂
-  have start : Computable (fun _ : Args × Nat => ([] : Results)) := Computable.const []
-  have h := Partrec.nat_rec Computable.snd start (eval.map add).to₂
-  exact h.of_eq (prefixEquation run)
+    Partrec (fun q : Input => prefixCode run q.1 q.2) := by
+  have count : Computable (fun q : Input => q.2) := Computable.snd
+  have start : Computable (fun _ : Input => ([] : Results)) := Computable.const []
+  have step : Partrec₂ (fun (q : Input) (s : Nat × Results) => advance run (q,s)) :=
+    (advancePartrec run hr).to₂
+  exact (Partrec.nat_rec count start step).of_eq (advancePrefixEquation run)
 
 theorem indexedPartialsPartrec : IndexedPartialsPartrec := by
   intro run hr

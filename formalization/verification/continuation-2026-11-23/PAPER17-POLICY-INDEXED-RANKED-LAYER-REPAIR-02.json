@@ -1,0 +1,28 @@
+{
+  "status": "frozen source repair; native pending",
+  "baseline": "dd4eddff9f8eab0a4532e8df4880f71b8d5dffb9",
+  "failed_exact_gate_receipt": "1795428012292581922-23",
+  "failed_exact_gate": "indexed-rank-layer-repair01",
+  "failed_receipt_sha256": "440a1b9c2e0f57b9cdfabcb94841c2c7c843346d65fa4e5ed12950718bfee584",
+  "failed_exact_module_log_sha256": "bb8033490acb0f347f93cfb8c95a772f12e8f0b1b45cf935f199fe7de6b78077",
+  "failed_original_native_log_sha256": "bf6878d0950c1f0920d89dc6fc7944de3bab239761e3fedccefb4d5dfd6d8161",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedRankedLayerProof.lean:43:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedRankedLayerProof.lean:60:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedRankedLayerProof.lean:116:13: error: failed to elaborate eliminator, expected type is not available\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedRankedLayerProof.lean:98:8: error: (kernel) unknown constant '_private.LogicLineages.StandardControlCurrent.PolicyIndexedRankedLayerProof.0.LogicLineages.StandardControlCurrent.PolicyIndexedRankedLayer.advancePartrec'",
+  "failed_proof_path": "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedRankedLayerProof.lean",
+  "failed_proof_sha256": "4886409852341a344514121421bcaebffd08e6f94cd6feff2690c8d293dd4dbf",
+  "repaired_proof_sha256": "13296849ec3d8855da086a2eac6af7cd0f86fcbe57795b879b392b68d94d1f3d",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-RANKED-LAYER-REPAIR-02.patch",
+  "patch_sha256": "b7ac6383ac6a4383133056a98c0a8e358748a946581210452f5ed5b7b0031bf2",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-RANKED-LAYER-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "ed5783affa6fb6b279c901c9dc153bf28cfcb9a1cca7190e0bf1ccd64c71984a",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedRankedLayerStatementChecks.lean": "e26181bc9f62f08602dd97fde0d1a3e70626a08f97bb155c101e155b70be2063",
+    "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedRankedLayerTargets.lean": "7f432c37455b328515b6020132a3627870be907e8f8324677f2f46ed2db5c8af",
+    "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-RANKED-LAYER-SOURCE-MAP.md": "59437971f400aee9a231b13c198e825e8e5c9697c14ca14cb0f4dab2cc8d0afd"
+  },
+  "scope": "Typed named finish/assembly/option branch helpers; explicit congrArg on exact recursion equality. Same algorithm, targets and gate profile.",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-RANKED-LAYER-REPAIR-01.json": "bae701b22a7b869ad9a7a5d558446991520bc9d7e4d7f2cfd9ba48ee7e7c0866",
+    "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-RANKED-LAYER-REPAIR-01.patch": "a74e128a2ff69bfe718d226cb50b9c52d717847eb4c2cf2401503c375808be23"
+  }
+}
