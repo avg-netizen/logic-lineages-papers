@@ -1,0 +1,129 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedScratchConsTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseScratchMembershipOpenMemberConsProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserOpenSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathSuccessfulAdvanceGraphSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceBranchProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceConjunctionProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceNormalizationProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphChoiceProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionFunctionalityProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaTotalityProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLessThanSupportProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedScratchConsFailureProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalListCodecSupportProof (consGraph)
+open ID1Completion.InternalAcceptance (constantZero)
+open ID1Completion.InternalLessThan (constantOne)
+open ID1Completion.InternalLessThanSupportProof (oneConstantValue)
+open ID1Completion.InternalRawListRecursion (recGraph)
+open ID1Completion.InternalRawListRecursionProof (consForward stepCases)
+open ID1Completion.InternalAcceptanceBranchProof (zeroBranchIntro zeroBranchElim successorBranchElim)
+open ID1Completion.InternalAcceptanceConjunctionProof (constantZeroValue)
+open ID1Completion.InternalAcceptanceNormalizationProof (normalizeReject)
+open ID1Completion.InternalControlGraphSupportProof (programRename projectionValue outputTransport valueUnique)
+open ID1Completion.InternalControlGraphChoiceProof (excludedMiddle)
+open ID1Completion.InternalGraphCompositionFunctionalityProof (renameInto)
+open ID1Completion.InternalTagArithmeticSupportProof (symm sucNeZeroApply)
+open ID1Completion.InternalTagArithmeticSyntaxProof (zRelabel)
+open ID1Completion.InternalBetaTotalityProof (addHyp disjunctionElimination)
+open LogicLineages.ComputabilityKnowledge GorbowPRProgram GorbowVerifierNormalization
+open NumberedWindowInternalFreshProbeProof (optionGraphCases)
+open NumberedWindowInternalSparsePathEnvelopeTargets (unary suc z)
+open NumberedWindowInternalSparseFieldParserOpenSyntaxProof (binaryInputsRename tripleInputsRename)
+open NumberedWindowInternalSparsePathSuccessfulAdvanceGraphSyntaxProof (oneRename)
+open NumberedWindowInternalSparseScratchMembership
+open NumberedWindowInternalSparseScratchMembershipOpenMemberConsProof (headMember)
+open NumberedWindowInternalDirectBoundaryGuardsTargets (normalizeScalar)
+
+variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+private theorem tailFromRow (h t previous : OTerm α)
+    (ran : Nonempty (Derivation B Γ (programGraph scratchMember previous ![t,z])))
+    (row : Nonempty (Derivation B Γ (programGraph memberStep z ![h,previous,z]))) :
+    Nonempty (Derivation B Γ (programGraph scratchMember z ![t,z])) := by
+  apply optionGraphCases headMatches ![h,previous,z] (programGraph scratchMember z ![t,z])
+  · intro β ρ Δ keep zero
+    let xs : Fin 3 → OTerm β := ![h.relabel ρ,previous.relabel ρ,z]
+    have h0 : Nonempty (Derivation B Δ (programGraph headMatches z xs)) := by
+      simpa only [xs,tripleInputsRename,zRelabel] using zero
+    have held : Nonempty (Derivation B Δ (programGraph memberStep z xs)) := by
+      simpa only [xs,programRename,tripleInputsRename,zRelabel] using renameInto row ρ Δ keep
+    have picked := zeroBranchElim headMatches (.projection 1) (constantOne 3) z xs h0 held
+    obtain ⟨e⟩ := valueUnique (.projection (1 : Fin 3)) z (previous.relabel ρ) xs
+      picked (projectionValue 1 xs)
+    rw [programRename,binaryInputsRename,zRelabel]
+    have actual : Nonempty (Derivation B Δ
+        (programGraph scratchMember (previous.relabel ρ) ![t.relabel ρ,z])) := by
+      simpa only [programRename,binaryInputsRename,zRelabel] using renameInto ran ρ Δ keep
+    exact outputTransport scratchMember (previous.relabel ρ) z ![t.relabel ρ,z] ⟨symm e⟩ actual
+  · intro β ρ Δ witness keep hit
+    let xs : Fin 3 → OTerm β := ![h.relabel ρ,previous.relabel ρ,z]
+    have hh : Nonempty (Derivation B Δ (programGraph headMatches (suc witness) xs)) := by
+      simpa only [xs,tripleInputsRename,zRelabel] using hit
+    have held : Nonempty (Derivation B Δ (programGraph memberStep z xs)) := by
+      simpa only [xs,programRename,tripleInputsRename,zRelabel] using renameInto row ρ Δ keep
+    have bad := successorBranchElim headMatches (.projection 1) (constantOne 3) z witness xs hh held
+    obtain ⟨no⟩ := valueUnique (constantOne 3) (suc z) z xs (oneConstantValue xs) bad
+    exact ⟨Derivation.explosion (sucNeZeroApply no)⟩
+
+/-- At literal output zero, the original membership cons step preserved
+the same zero tail value: its head-hit branch would output one. -/
+theorem tailMiss (code h t : OTerm α)
+    (cell : Nonempty (Derivation B Γ (consGraph code h t)))
+    (missing : Nonempty (Derivation B Γ (programGraph scratchMember z ![code,z]))) :
+    Nonempty (Derivation B Γ (programGraph scratchMember z ![t,z])) := by
+  let ps : Fin 1 → OTerm α := ![z]
+  have step := consForward memberBase memberStep code h t z ps cell missing
+  apply stepCases memberBase memberStep z h t ps (programGraph scratchMember z ![t,z]) step
+  intro β ρ Δ prior _ ran row
+  have ran' : Nonempty (Derivation B Δ (programGraph scratchMember prior ![t.relabel ρ,z])) := by
+    change Nonempty (Derivation B Δ (programGraph (InternalRawListRecursion.listRec memberBase memberStep)
+      prior (Fin.cons (t.relabel ρ) ![ID1Completion.InternalTagArithmeticSyntaxProof.z])))
+    simpa only [ps,oneRename,zRelabel,recGraph] using ran
+  have row' : Nonempty (Derivation B Δ (programGraph memberStep z ![h.relabel ρ,prior,z])) := by
+    change Nonempty (Derivation B Δ (programGraph memberStep ID1Completion.InternalTagArithmeticSyntaxProof.z
+      (Fin.cons (h.relabel ρ) (Fin.cons prior ![ID1Completion.InternalTagArithmeticSyntaxProof.z]))))
+    simpa only [ps,oneRename,zRelabel] using row
+  rw [programRename,binaryInputsRename,zRelabel]
+  exact tailFromRow (h.relabel ρ) (t.relabel ρ) prior ran' row'
+
+/-- If the original scalar call did not accept, its actual chosen map
+head would be zero, giving a real head occurrence at the same mapped cons. -/
+theorem scalarAtMappedHead (i : Program 1) (head mapped mappedHead mappedTail : OTerm α)
+    (held : Nonempty (Derivation B Γ (unary (normalizeScalar i) mappedHead head)))
+    (cell : Nonempty (Derivation B Γ (consGraph mapped mappedHead mappedTail)))
+    (missing : Nonempty (Derivation B Γ (programGraph scratchMember z ![mapped,z]))) :
+    Nonempty (Derivation B Γ (unary i (suc z) head)) := by
+  let P := unary i (suc z) head
+  have yes : Derivation B Γ (P.imp P) :=
+    Derivation.implicationIntroduction (Derivation.hypothesis List.mem_cons_self)
+  obtain ⟨call⟩ := held
+  obtain ⟨cons⟩ := cell
+  obtain ⟨miss⟩ := missing
+  have rejected : Nonempty (Derivation B (P.not :: Γ) (programGraph (normalize i) z ![head])) :=
+    normalizeReject i ![head] ⟨Derivation.hypothesis List.mem_cons_self⟩
+  have zero : Nonempty (Derivation B (P.not :: Γ) (unary (normalizeScalar i) z head)) :=
+    zeroBranchIntro (normalize i) (constantZero 1) (normalize (constantOne 1)) z ![head]
+      rejected (constantZeroValue ![head])
+  have eq := valueUnique (normalizeScalar i) z mappedHead ![head] zero ⟨addHyp call P.not⟩
+  have present := headMember mapped mappedHead mappedTail z ⟨addHyp cons P.not⟩ eq
+  obtain ⟨bad⟩ := valueUnique scratchMember (suc z) z ![mapped,z] present ⟨addHyp miss P.not⟩
+  have no : Derivation B Γ (P.not.imp P) :=
+    Derivation.implicationIntroduction (Derivation.explosion (sucNeZeroApply bad))
+  exact ⟨disjunctionElimination (excludedMiddle P) yes no⟩
+
+#print axioms tailMiss
+#print axioms scalarAtMappedHead
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedScratchConsFailureProof

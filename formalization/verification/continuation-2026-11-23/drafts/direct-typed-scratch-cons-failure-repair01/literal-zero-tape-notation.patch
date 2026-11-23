@@ -1,0 +1,10 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchConsFailureProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchConsFailureProof.lean
+@@ -92 +92,3 @@
+-    simpa only [ps,oneRename,zRelabel,recGraph,scratchMember] using ran
++    change Nonempty (Derivation B Δ (programGraph (InternalRawListRecursion.listRec memberBase memberStep)
++      prior (Fin.cons (t.relabel ρ) ![ID1Completion.InternalTagArithmeticSyntaxProof.z])))
++    simpa only [ps,oneRename,zRelabel,recGraph] using ran
+@@ -93,0 +96,2 @@
++    change Nonempty (Derivation B Δ (programGraph memberStep ID1Completion.InternalTagArithmeticSyntaxProof.z
++      (Fin.cons (h.relabel ρ) (Fin.cons prior ![ID1Completion.InternalTagArithmeticSyntaxProof.z]))))
