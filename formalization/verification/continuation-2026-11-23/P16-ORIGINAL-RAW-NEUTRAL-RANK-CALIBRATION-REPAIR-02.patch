@@ -1,0 +1,22 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralSpineRankCalibrationProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralSpineRankCalibrationProof.lean
+@@ -35 +35 @@
+-      rw [← hat,← hfs,← packOfUnpack t ht]
++      rw [← hat,← hfs,packNode,← packOfUnpack t ht]
+@@ -41,0 +42,4 @@
++private theorem auxRow (prior : List Nat) (dom cod fn arg : Nat) :
++    row prior 6 [dom,cod,fn,arg] =
++      if prior.getD fn 0 = 0 then 0 else prior.getD fn 0 + 1 := rfl
++
+@@ -53,3 +57,3 @@
+-    simp only [rawRank,next,auxView,Option.map_some,Option.getD_some] at ⊢
+-    change row (table q) 6 [dom,cod,fn,arg] = _
+-    simp [row,lookup,ih]
++    have seen : unpackNode q = some (6,[dom,cod,fn,arg]) := auxView dom cod fn arg
++    rw [rawRank,next,seen,Option.map_some,Option.getD_some,auxRow,lookup,ih,
++      if_neg (Nat.succ_ne_zero n)]
+@@ -88,2 +92,2 @@
+-        have hv : (if rawRank fn = 0 then 0 else rawRank fn + 1) = n+1 := by
+-          simpa [row,form,v] using hr
++        rw [form,auxRow,v] at hr
++        have hv := hr

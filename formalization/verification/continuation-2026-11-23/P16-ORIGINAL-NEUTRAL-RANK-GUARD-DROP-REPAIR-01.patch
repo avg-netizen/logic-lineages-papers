@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalNeutralRankGuardDropProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalNeutralRankGuardDropProof.lean
+@@ -73 +73,3 @@
+-  rw [acceptsGraph,R,rankEven] at actual
++  rw [acceptsGraph] at actual
++  change Nonempty (Derivation B Γ (programGraph (rankEven i g r) (suc z) xs)) at actual
++  rw [rankEven] at actual

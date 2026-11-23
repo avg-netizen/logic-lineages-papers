@@ -1,0 +1,5 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalNeutralRankEvenOriginalNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalNeutralRankEvenOriginalNumericProof.lean
+@@ -56 +56 @@
+-      exact ⟨actualTarget.symm ▸ descent.1, by rwa [actualTarget,actualSource], targetScalar⟩
++      exact ⟨actualTarget.symm ▸ descent.1, by rw [actualTarget,actualSource]; exact descent.2, targetScalar⟩

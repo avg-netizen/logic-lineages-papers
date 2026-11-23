@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralSpineRankAlgorithm.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralSpineRankAlgorithm.lean
+@@ -37 +37,2 @@
+-    · rw [table,List.getD_eq_getElem?_getD,List.getElem?_append_left (tableLength n ▸ hi)]
++    · have old : i < (table n).length := by simpa only [tableLength] using hi
++      rw [table,List.getD_eq_getElem?_getD,List.getElem?_append_left old]
+@@ -42 +43 @@
+-      rw [table,List.getD_eq_getElem?_getD,List.getElem?_append_right (by rw [tableLength]),
++      rw [table,List.getD_eq_getElem?_getD,List.getElem?_append_right (by rw [tableLength]; exact Nat.le_refl n),

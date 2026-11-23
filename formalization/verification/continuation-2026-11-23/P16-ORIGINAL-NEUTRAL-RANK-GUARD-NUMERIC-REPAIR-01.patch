@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalNeutralRankGuardNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalNeutralRankGuardNumericProof.lean
+@@ -20,0 +21 @@
++open NumberedWindowInternalAtomicRefinement (atSource atTarget)
+@@ -35 +36,3 @@
+-  rw [lowersRank,compositeTwo,targetValue,sourceValue]
++  change evaluate (.composition ltTest (Fin.cons (atTarget g) (Fin.cons (atSource g) Fin.elim0)))
++    (x ::ᵥ w ::ᵥ y ::ᵥ nil) = _
++  rw [compositeTwo,targetValue,sourceValue]

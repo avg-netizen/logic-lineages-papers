@@ -1,0 +1,18 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowOriginalApplicationRawRankProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowOriginalApplicationRawRankProof.lean
+@@ -11 +11 @@
+-open NumberedWindowScalarAlgorithm (Settings scalar least edge vertices)
++open NumberedWindowScalarAlgorithm (Settings scalar least edge vertices canonical)
+@@ -46 +46,2 @@
+-      simpa only [view,Option.bind_some] using run
++      rw [view] at run
++      exact run
+@@ -52 +53,5 @@
+-      simp only [arrow,Option.bind_some] at actual
++      rw [arrow] at actual
++      change (if (canonical s (ctx,ty,fn) && canonical s (aCtx,aTy,arg) &&
++          (ctx == aCtx) && (dom == aTy)) = true then
++        (least s ctx cod (auxRaw dom cod fn arg)).map
++          (fun k => packedAddress (pack ctx) cod k) else none) = some y at actual
+@@ -92 +96,0 @@
+-      rw [h]

@@ -1,0 +1,32 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralSpineRankCalibrationProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralSpineRankCalibrationProof.lean
+@@ -5,2 +5 @@
+-import LogicLineages.PersistentMarking.NumberedWindowArithmeticFieldAlgorithmChecks
+-import LogicLineages.PersistentMarking.NumberedWindowArithmeticNodeProof
++import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof
+@@ -12 +11,3 @@
+-open NumberedWindowFieldAlgorithm (unpackNode packNode)
++open NumberedWindowFieldAlgorithm (unpack unpackNode packNode)
++open NumberedWindowInternalSparseFieldCell (chosenCell)
++open NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof (noNode nodeOfCell codeOfCell packOfUnpack)
+@@ -20,2 +20,0 @@
+-open NumberedWindowArithmeticFieldAlgorithmChecks (exact_ExactTaggedNodeCodec)
+-open NumberedWindowArithmeticNodeProof (nodeRead)
+@@ -25,4 +24,13 @@
+-  have h := nodeRead (show NumberedWindowArithmeticFields.decodeNode q = some (tag,fields) by
+-    rw [exact_ExactTaggedNodeCodec.2]
+-    exact read)
+-  rwa [exact_ExactTaggedNodeCodec.1] at h
++  cases hc : chosenCell q with
++  | none => rw [noNode hc] at read; cases read
++  | some pair =>
++    rcases pair with ⟨a,t⟩
++    rw [nodeOfCell hc] at read
++    cases ht : unpack t with
++    | none => rw [ht] at read; cases read
++    | some fs =>
++      rw [ht] at read
++      have same : (a,fs) = (tag,fields) := Option.some.inj read
++      obtain ⟨hat,hfs⟩ := Prod.mk.inj same
++      rw [← hat,← hfs,← packOfUnpack t ht]
++      exact (codeOfCell hc).symm

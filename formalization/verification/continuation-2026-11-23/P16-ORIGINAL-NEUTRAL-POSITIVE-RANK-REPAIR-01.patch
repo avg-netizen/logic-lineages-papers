@@ -1,0 +1,12 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralSpinePositiveRankProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralSpinePositiveRankProof.lean
+@@ -38,3 +38,3 @@
+-  obtain ⟨q,w,y,_,real,_,_,from,to⟩ := hopReport xs s ctx ty src code dst accepted
+-  have l := exact_OriginalNeutralRankLeast s pres ctx ty q src from
+-  have r := exact_OriginalNeutralRankLeast s pres ctx ty y dst to
++  obtain ⟨q,w,y,_,real,_,_,startCall,endCall⟩ := hopReport xs s ctx ty src code dst accepted
++  have l := exact_OriginalNeutralRankLeast s pres ctx ty q src startCall
++  have r := exact_OriginalNeutralRankLeast s pres ctx ty y dst endCall
+@@ -80 +80 @@
+-      exact ⟨tail.1,tail.2.trans (Nat.le_of_lt head.2)⟩
++      exact ⟨tail.1,Nat.le_trans tail.2 (Nat.le_of_lt head.2)⟩

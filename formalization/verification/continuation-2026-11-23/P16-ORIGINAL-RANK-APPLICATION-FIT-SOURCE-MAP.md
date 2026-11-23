@@ -1,0 +1,5 @@
+# P16 original application rank on positive neutral spines
+
+The pure root unpacks actual original graph success, visible function address, actual `applyAddresses` aux seed and exact least report, then uses real round minimum feature preservation. Application increments the positive raw rank exactly once. Scalar at y is used only to ensure the returned address passes its physical decoder. The thin numerical wrapper identifies both physical `addressRank` results and proves exact all-input ranked application fit via the existing guard evaluator. The original raw edge rank invariant and scalar endpoint law are explicit premises. No fixed legacy graph/PR join or object computability is asserted.
+
+Roots: `LogicLineages.PersistentMarking.NumberedWindowOriginalApplicationRawRankProof`, aliases `exact_OriginalApplicationRawRank`, `exact_OriginalApplicationFunctionAddress`; `LogicLineages.PersistentMarking.NumberedWindowInternalOriginalRankApplicationFitProof`, aliases `exact_OriginalAddressRankApplicationReport`, `exact_OriginalRankedApplicationFit`.
