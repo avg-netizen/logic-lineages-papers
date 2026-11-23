@@ -1,0 +1,38 @@
+{
+  "status": "frozen proof-only repair01; native retry pending",
+  "gate": "LogicLineages.PersistentMarking.NativeTowerBandFullCoefficientModelProof",
+  "failed_native": {
+    "receipt": "1795461058348019971-38",
+    "receipt_pin": {
+      "path": "formalization/build-reports/1795461058348019971-38.json",
+      "sha256": "e52346be2ffc3f2fbc236cb6489f98dd1e11928b64ff3e275d645d20b4705f86"
+    },
+    "module_log": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-band-full-coefficient-model-repair01/1795461058348019971-38.module.log",
+      "sha256": "740c1076feab83747b7607c8be9b41ea0157c093e5358ed331c31db8531fc91a"
+    },
+    "failed_source": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-band-full-coefficient-model-repair01/NativeTowerBandFullCoefficientModelProof.lean.failed-source",
+      "sha256": "d62ce8592f16a3c0b2a7cdbb979f0eff4b2b11b5f1ff0ed7117c608596ecc7d7"
+    },
+    "diagnosis": "In the long-left / singleton-right case, the singleton coefficient is shifted while its length remains 1, so the complete lex clause is not definitionally unchanged. Only line 153 fails."
+  },
+  "repair": "Split the singleton/long cases explicitly and discharge both of the singleton case's impossible length guards using length > 1 (same arithmetic and simp rules as the already-passed long-left / empty-right sibling). The long/long case is still reflexive. No definition, target, import, or cap change.",
+  "changed_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NativeTowerBandFullCoefficientModelProof.lean",
+    "sha256": "e88b38f9c901567f6b3c7352b17429bde408b72c8e167d0cd7b78fd44cee0c27"
+  },
+  "unchanged_reliso_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NativeTowerBandFullCoefficientRelIsoProof.lean",
+    "sha256": "80654d45627cf2311fe1a161bdc67ff7a6025563678643c08522a76c8dd475b8"
+  },
+  "reverse_patch": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/original-band-full-coefficient-model-repair01/repair01.patch",
+    "sha256": "d6528bbd9ad40ea95344dcfe92f9a11454eb96085f08a969e8da065cabfd70c1"
+  },
+  "reverse_bytes_verified": true,
+  "original_author_manifest": {
+    "path": "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-TOWER-BAND-FULL-COEFFICIENT-AUTHOR-MANIFEST.json",
+    "sha256": "af9f90fa43a4efce62109fc5e2165f0e3ad6cc5d0617f583c7b6221d14d52eed"
+  }
+}

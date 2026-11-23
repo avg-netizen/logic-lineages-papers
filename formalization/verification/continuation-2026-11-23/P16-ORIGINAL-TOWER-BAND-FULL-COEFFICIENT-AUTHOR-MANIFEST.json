@@ -1,0 +1,40 @@
+{
+  "paper": 16,
+  "status": "frozen source; native checks pending",
+  "gate_order": [
+    "LogicLineages.PersistentMarking.NativeTowerBandFullCoefficientModelProof",
+    "LogicLineages.PersistentMarking.NativeTowerBandFullCoefficientRelIsoProof"
+  ],
+  "expected_named_axiom_outputs": {
+    "LogicLineages.PersistentMarking.NativeTowerBandFullCoefficientModelProof": [
+      "exact_FullCoefficientLeftInverse",
+      "exact_FullCoefficientRightInverse",
+      "exact_FullCoefficientStrictIff",
+      "exact_FullCoefficientZeroAndLong"
+    ],
+    "LogicLineages.PersistentMarking.NativeTowerBandFullCoefficientRelIsoProof": [
+      "exact_OriginalFullFiniteCoefficientRelIso",
+      "exact_ActualFixedTowerFullCoefficientImage",
+      "exact_OriginalFullCoefficientWellOrder"
+    ]
+  },
+  "source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerBandFullCoefficientModelProof.lean": "d62ce8592f16a3c0b2a7cdbb979f0eff4b2b11b5f1ff0ed7117c608596ecc7d7",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerBandFullCoefficientRelIsoProof.lean": "80654d45627cf2311fe1a161bdc67ff7a6025563678643c08522a76c8dd475b8",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-TOWER-BAND-FULL-COEFFICIENT-SOURCE-MAP.md": "394949f0b35c2996adbed8ffad46eb98b7b2275d9bb0814547062395e9b06535"
+  },
+  "checked_interface_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerBandCoefficientModelProof.lean": "c00f56b2e27ec1669b87304e2c420170a15b48c304cbe1b705c259cbae520646",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerBandCoefficientRelIsoProof.lean": "b4e25d54b049789b368b3bad7a1fe48130583ac281527b2938a8bfee66dfff35",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerVariableDimensionBandImageRelIsoProof.lean": "9cb408888b244079cac878d1fdfc679ef03ab198a56bd4affbb8f3493a2c9f05"
+  },
+  "prior_check_receipts_sha256": {
+    "formalization/build-reports/1795460784276837590-28.json": "d4b1efd8bdc1e07adfcf9265416ae3e86cec67e3e272fb78afd08ea909cb73f1",
+    "formalization/build-reports/1795460785587497699-38.json": "1b8ca9b964db28664231c1b950cb63b9dc0a93ee0af1f285b9203b1d80fbd4ce"
+  },
+  "static_closures": {
+    "model": "301 local source modules; same core externals as prior model",
+    "reliso": "687 local source modules; same transitive Mathlib subset as prior relation isomorphism (175)"
+  },
+  "boundary": "Exact same actual bounded native image; empty coefficient word added by first-band shift, not new physical zero; no ordinal interpretation."
+}

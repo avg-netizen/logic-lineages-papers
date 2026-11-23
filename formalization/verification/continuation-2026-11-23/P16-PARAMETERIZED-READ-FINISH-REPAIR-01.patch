@@ -1,0 +1,30 @@
+--- LogicLineages/PersistentMarking/NumberedWindowInternalParameterizedPositiveFoldOpenReadFinishProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowInternalParameterizedPositiveFoldOpenReadFinishProof.lean
+@@ -45,3 +45,4 @@
+-private theorem zeroTail :
+-    Nonempty (Derivation B Γ (unaryGraph tailCode (z : OTerm α) z)) := by
+-  obtain ⟨d⟩ := numeral_evaluation_exact B 1 tailCode
++private theorem literalUnaryZero (p : Program 1)
++    (evaluated : evaluate p (List.Vector.cons 0 List.Vector.nil) = 0) :
++    Nonempty (Derivation B Γ (unaryGraph p (z : OTerm α) z)) := by
++  obtain ⟨d⟩ := numeral_evaluation_exact B 1 p
+@@ -49,2 +49,0 @@
+-  have evaluated : evaluate tailCode (List.Vector.cons 0 List.Vector.nil) = 0 :=
+-    (tailEvaluation 0).trans (by decide)
+@@ -51,0 +51,8 @@
++  have inputEq : (fun i : Fin 1 =>
++      (SourceComputabilityFormulaSupportProof.numeral
++        ((List.Vector.cons 0 List.Vector.nil).get i) : OTerm α)) =
++      (Fin.cons z Fin.elim0 : Fin 1 → OTerm α) := by
++    funext i
++    obtain rfl := Fin.eq_zero i
++    rfl
++  rw [inputEq] at d
+@@ -53,0 +61,4 @@
++
++private theorem zeroTail :
++    Nonempty (Derivation B Γ (unaryGraph tailCode (z : OTerm α) z)) :=
++  literalUnaryZero tailCode ((tailEvaluation 0).trans (by decide))
+@@ -93 +104 @@
+-  have oneInput : (fun i : Fin 1 => ((Fin.cons state Fin.elim0) i).relabel j) =
++  have oneInput : (fun i : Fin 1 => (((Fin.cons state Fin.elim0 : Fin 1 → OTerm α) i).relabel j)) =

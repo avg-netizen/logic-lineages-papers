@@ -1,0 +1,22 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountTargets.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountTargets.lean
+@@ -1,0 +2,3 @@
++public import LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsDefinitions
++public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaSupportProof
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculusDefinitions
+@@ -7,7 +10,8 @@
+-open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion
+-open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+-open InternalGraphComposition (OTerm)
+-open InternalApplicationCertificateConstructors SourceComputabilityFormulaSupportProof
+-open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+-open NumberedWindowInternalThinUncoveredCount
+-open NumberedWindowInternalScratchInclusionThinProof (included includedRename includedSubst)
++open FirstOrder Language LogicLineages.OrdinalComparison.TerminationOrdering
++open PositiveArithmeticOperators (Positive arithmeticEmbedding)
++open ID1Completion.InternalCalculus (Formula Derivation)
++open ID1Completion.InternalGraphComposition (OTerm)
++open ID1Completion.InternalApplicationCertificateConstructors (graph2)
++open SourceComputabilityFormulaSupportProof (numeral)
++open NumberedWindowInternalThinUncoveredCount (count bounded)
++open NumberedWindowInternalScratchInclusionThinProof (included)

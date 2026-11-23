@@ -1,0 +1,13 @@
+--- failed/NativeTowerBandFullCoefficientModelProof.lean
++++ repaired/NativeTowerBandFullCoefficientModelProof.lean
+@@ -153 +153,9 @@
+-        cases cs <;> rfl
++        cases cs with
++        | nil =>
++          have big : 1 < (a :: b :: bs).length := by
++            simp only [List.length_cons]
++            omega
++          have notLt : ¬ (a :: b :: bs).length < 1 := Nat.not_lt_of_ge (Nat.le_of_lt big)
++          have unequal : (a :: b :: bs).length ≠ 1 := by omega
++          simp only [raiseZero,List.length_singleton,notLt,unequal,false_and,false_or]
++        | cons d ds => rfl
