@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralRefinedScalarTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedListInstallProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountNumericChecks
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalLiteralRefinedScalarInstallProof
+open NumberedWindowPresentationCheckers (checks)
+open NumberedWindowInternalAtomicRefinement (refined)
+open NumberedWindowInternalAtomicRefinementNumericChecks (exact_OriginalPositiveRefinement)
+open NumberedWindowInternalDirectCoreNumericTargets (PositiveFit)
+open NumberedWindowInternalDirectTypedListInstallProof (exact_ReinstallTypedList)
+open NumberedWindowInternalLiteralCount (permutation)
+open NumberedWindowInternalLiteralCountNumericChecks (exact_OriginalLiteralCountFit)
+open NumberedWindowInternalLiteralRefinedScalarTargets
+
+theorem exact_ReinstallLiteralRefinedScalar : ExactReinstallLiteralRefinedScalar := by
+  intro xs s i r scalarFit originalFit
+  have positive : PositiveFit (refined i r) (checks xs s).positive :=
+    exact_OriginalPositiveRefinement xs s i r scalarFit originalFit
+  exact exact_ReinstallTypedList xs s i (refined i r) permutation scalarFit positive
+    exact_OriginalLiteralCountFit
+
+#print axioms exact_ReinstallLiteralRefinedScalar
+end LogicLineages.PersistentMarking.NumberedWindowInternalLiteralRefinedScalarInstallProof

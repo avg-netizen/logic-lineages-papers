@@ -1,0 +1,18 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptNilProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptNilProof.lean
+@@ -62 +62 @@
+-    Derivation B Γ (piece s z s s) := by
++    Nonempty (Derivation B Γ (piece s z s s)) := by
+@@ -65 +65 @@
+-  exact Derivation.conjunctionIntroduction a p
++  exact ⟨Derivation.conjunctionIntroduction a p⟩
+@@ -81,3 +81,6 @@
+-  exact ⟨Derivation.conjunctionIntroduction (emptyPiece l)
+-    (Derivation.conjunctionIntroduction (emptyPiece r)
+-      (Derivation.conjunctionIntroduction (emptyPiece z)
++  obtain ⟨pl⟩ := emptyPiece (B := B) (Γ := Γ) l
++  obtain ⟨pr⟩ := emptyPiece (B := B) (Γ := Γ) r
++  obtain ⟨pk⟩ := emptyPiece (B := B) (Γ := Γ) (z : OTerm α)
++  exact ⟨Derivation.conjunctionIntroduction pl
++    (Derivation.conjunctionIntroduction pr
++      (Derivation.conjunctionIntroduction pk

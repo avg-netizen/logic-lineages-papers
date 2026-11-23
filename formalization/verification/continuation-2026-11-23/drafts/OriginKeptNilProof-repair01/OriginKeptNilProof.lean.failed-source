@@ -1,0 +1,88 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalOriginKeptSplitTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountReflexiveProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFiniteBlocksProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionClosureSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityStackAppendListProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphSupportProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalOriginKeptNilProof
+open FirstOrder Language LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalFiniteBlocksProof (actualFiniteExistentialIntroduction)
+open ID1Completion.InternalTagArithmeticSyntaxProof (emb sucSubst zSubst)
+open ID1Completion.InternalRawListRecursionSyntaxProof (programSubst)
+open ID1Completion.InternalRecursionClosureSyntaxProof (conjunctionSubst)
+open ID1Completion.InternalRecursionGraphSyntaxProof (witnessLift)
+open ID1Completion.InternalApplicationValidityStackAppend (append)
+open ID1Completion.InternalApplicationValidityStackAppendListProof (appendZeroValue appendZeroRecover)
+open ID1Completion.InternalControlGraphSupportProof (headTransport)
+open NumberedWindowInternalLiteralCount (permutation)
+open NumberedWindowInternalLiteralCountReflexiveProof (exact_LiteralObserverReflexivity)
+open NumberedWindowInternalLiteralCountEquivalenceProof (exact_LiteralObserverSymmetry)
+open NumberedWindowInternalSparsePathEnvelopeTargets (suc z)
+open NumberedWindowInternalOriginKeptSplitTargets
+
+attribute [local irreducible] programGraph
+variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+private theorem tapeSubst {β : Type} (x y : OTerm α) (σ : α → OTerm β) :
+    (fun i : Fin 2 => ((![x,y] : Fin 2 → OTerm α) i).subst σ) =
+      ![x.subst σ,y.subst σ] := by
+  funext i
+  exact Fin.cases rfl (Fin.cases rfl (fun j => Fin.elim0 j)) i
+
+private theorem pieceSubst {β : Type} (s l r j : OTerm α) (σ : α → OTerm β) :
+    (piece s l r j).subst (fun i => emb (σ i)) =
+      piece (s.subst σ) (l.subst σ) (r.subst σ) (j.subst σ) := by
+  simp only [piece,conjunctionSubst,programSubst,tapeSubst,sucSubst,zSubst]
+
+theorem matrixWitness (l r k d : OTerm α) (w : Fin 8 → OTerm α) :
+    (matrix l r k d).subst (Sum.elim Term.var (fun i => emb (w i))) = evidence l r k d w := by
+  have m : Sum.elim Term.var (fun i => emb (w i)) =
+      (fun i => emb (Sum.elim Term.var w i)) := by
+    funext i
+    cases i <;> rfl
+  rw [m]
+  simp only [matrix,evidence,conjunctionSubst,pieceSubst,witnessLift,Term.subst,Sum.elim_inr]
+
+/-- Pack these exact four physical reports into a genuine finite
+existential block. No host witness dependence or semantic decoding. -/
+theorem packSplit (l r k d : OTerm α) (w : Fin 8 → OTerm α)
+    (ev : Nonempty (Derivation B Γ (evidence l r k d w))) :
+    Nonempty (Derivation B Γ (splitExists l r k d)) := by
+  apply actualFiniteExistentialIntroduction B α 8 Γ (matrix l r k d) (fun i => emb (w i))
+  rw [matrixWitness]
+  exact ev
+
+private theorem emptyPiece (s : OTerm α) :
+    Derivation B Γ (piece s z s s) := by
+  obtain ⟨a⟩ := appendZeroValue (body := B) (Gamma := Γ) s
+  obtain ⟨p⟩ := exact_LiteralObserverReflexivity B α Γ s
+  exact Derivation.conjunctionIntroduction a p
+
+/-- With no kept occurrences, left and right themselves are the exact
+removed partitions. The supplied actual count is moved using the actual
+empty-append equation and original comparator symmetry. -/
+theorem exact_OriginalKeptSplitNil (l r d srcJoin dstJoin : OTerm α)
+    (src : Nonempty (Derivation B Γ (programGraph append srcJoin ![l,r])))
+    (dst : Nonempty (Derivation B Γ (programGraph append dstJoin ![z,d])))
+    (balance : Nonempty (Derivation B Γ (programGraph permutation (suc z) ![srcJoin,dstJoin]))) :
+    Nonempty (Derivation B Γ (splitExists l r z d)) := by
+  have equal := appendZeroRecover dstJoin d dst
+  have flip := exact_LiteralObserverSymmetry srcJoin dstJoin balance
+  obtain ⟨p⟩ := headTransport permutation (suc z) dstJoin d ![srcJoin] equal flip
+  obtain ⟨a⟩ := src
+  let w : Fin 8 → OTerm α := ![z,l,z,r,l,r,z,srcJoin]
+  apply packSplit l r z d w
+  exact ⟨Derivation.conjunctionIntroduction (emptyPiece l)
+    (Derivation.conjunctionIntroduction (emptyPiece r)
+      (Derivation.conjunctionIntroduction (emptyPiece z)
+        (Derivation.conjunctionIntroduction a p)))⟩
+
+#print axioms packSplit
+#print axioms exact_OriginalKeptSplitNil
+end LogicLineages.PersistentMarking.NumberedWindowInternalOriginKeptNilProof

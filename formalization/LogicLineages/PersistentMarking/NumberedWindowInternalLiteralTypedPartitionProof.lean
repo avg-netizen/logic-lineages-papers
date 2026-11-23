@@ -1,0 +1,96 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalScratchAppendOpenTargets
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedScratchAllMembersTargets
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountEquivalenceProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedScratchAllMembersProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedScratchMemberProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectSharedTapeSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalScratchAppendOpenChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalScratchAppendOpenSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionFunctionalityProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalLiteralTypedPartitionProof
+open FirstOrder Language LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalGraphCompositionFunctionalityProof (renameInto)
+open ID1Completion.InternalTagArithmeticSyntaxProof (sucRelabel zRelabel)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open NumberedWindowInternalSparsePathEnvelopeTargets (unary suc z)
+open NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof (unaryRename)
+open NumberedWindowInternalSparseScratchMembershipTargets (memberGraph)
+open NumberedWindowInternalScratchAppendOpenTargets (appendGraph)
+open NumberedWindowInternalScratchAppendOpenChecks (fromLeft fromRight)
+open NumberedWindowInternalScratchAppendOpenSyntaxProof (appendRename)
+open NumberedWindowInternalDirectBoundaryGuardsTargets (typedScratch)
+open NumberedWindowInternalDirectTypedScratchMemberProof (exact_TypedScratchMember)
+open NumberedWindowInternalDirectTypedScratchAllMembersTargets (allMembers)
+open NumberedWindowInternalDirectTypedScratchAllMembersProof (exact_TypedScratchAllMembers)
+open NumberedWindowInternalLiteralCount (permutation)
+open NumberedWindowInternalLiteralCountEquivalenceProof (exact_LiteralMemberReverse)
+open NumberedWindowInternalDirectSharedTapeSyntaxProof (renamePair)
+
+attribute [local irreducible] programGraph
+variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+abbrev Typed (i : Program 1) (t : OTerm α) : Formula α := unary (typedScratch i) (suc z) t
+abbrev Compared (whole joined : OTerm α) : Formula α := programGraph permutation (suc z) ![whole,joined]
+
+private theorem typedByHeredity (i : Program 1) (whole side : OTerm α)
+    (typed : Nonempty (Derivation B Γ (Typed i whole)))
+    (image : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (key : OTerm β),
+      (∀ f ∈ Γ, f.relabel j ∈ Δ) →
+      Nonempty (Derivation B Δ (memberGraph (side.relabel j) key)) →
+      Nonempty (Derivation B Δ (memberGraph (whole.relabel j) key))) :
+    Nonempty (Derivation B Γ (Typed i side)) := by
+  let j : α → α ⊕ Fin 1 := Sum.inl
+  let key : OTerm (α ⊕ Fin 1) := .var (.inr 0)
+  let H := memberGraph (side.relabel j) key
+  let Δ := H :: Γ.map (fun q => q.relabel j)
+  have keep : ∀ f ∈ Γ, f.relabel j ∈ Δ := by
+    intro f hf
+    exact List.mem_cons_of_mem _ (List.mem_map.mpr ⟨f,hf,rfl⟩)
+  have t' : Nonempty (Derivation B Δ (Typed i (whole.relabel j))) := by
+    simpa only [Typed,unaryRename,sucRelabel,zRelabel] using renameInto typed j Δ keep
+  obtain ⟨v⟩ := t'
+  obtain ⟨u⟩ := image (α ⊕ Fin 1) j Δ key keep ⟨Derivation.hypothesis List.mem_cons_self⟩
+  obtain ⟨law⟩ := exact_TypedScratchMember i B (α ⊕ Fin 1) Δ (whole.relabel j) key
+  have all : Derivation B Γ (allMembers i side) :=
+    Derivation.universalIntroduction (Derivation.implicationIntroduction
+      (Derivation.implicationElimination law (Derivation.conjunctionIntroduction v u)))
+  obtain ⟨iff⟩ := exact_TypedScratchAllMembers i B α Γ side
+  exact ⟨Derivation.implicationElimination (Derivation.conjunctionRight iff) all⟩
+
+/-- Actual typed whole scratch gives both actual typed operands of a true
+occurrence-preserving split, using the same observed ordered append. This
+does not construct the split or remove multiplicities. -/
+theorem exact_LiteralTypedParts (i : Program 1) (whole left right joined : OTerm α)
+    (typed : Nonempty (Derivation B Γ (Typed i whole)))
+    (appendHeld : Nonempty (Derivation B Γ (appendGraph joined left right)))
+    (cmp : Nonempty (Derivation B Γ (Compared whole joined))) :
+    Nonempty (Derivation B Γ (Typed i left)) ∧ Nonempty (Derivation B Γ (Typed i right)) := by
+  have moved (β : Type) (j : α → β) (Δ : List (Formula β)) (key : OTerm β)
+      (keep : ∀ f ∈ Γ, f.relabel j ∈ Δ)
+      (member : Nonempty (Derivation B Δ (memberGraph (joined.relabel j) key))) :
+      Nonempty (Derivation B Δ (memberGraph (whole.relabel j) key)) := by
+    have h : Nonempty (Derivation B Δ (Compared (whole.relabel j) (joined.relabel j))) := by
+      simpa only [Compared,sucRelabel,zRelabel] using
+        renamePair permutation (suc z) whole joined cmp j keep
+    exact exact_LiteralMemberReverse B β Δ (whole.relabel j) (joined.relabel j) key h member
+  constructor
+  · apply typedByHeredity i whole left typed
+    intro β j Δ key keep mem
+    have ap := renameInto appendHeld j Δ keep
+    rw [appendRename] at ap
+    exact moved β j Δ key keep (fromLeft (left.relabel j) (right.relabel j) (joined.relabel j) key ap mem)
+  · apply typedByHeredity i whole right typed
+    intro β j Δ key keep mem
+    have ap := renameInto appendHeld j Δ keep
+    rw [appendRename] at ap
+    exact moved β j Δ key keep (fromRight (left.relabel j) (right.relabel j) (joined.relabel j) key ap mem)
+
+#print axioms exact_LiteralTypedParts
+end LogicLineages.PersistentMarking.NumberedWindowInternalLiteralTypedPartitionProof
