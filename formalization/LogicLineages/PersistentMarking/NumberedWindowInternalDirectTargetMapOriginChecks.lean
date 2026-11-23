@@ -1,0 +1,12 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectTargetMapOriginProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectTargetMapOriginChecks
+open NumberedWindowInternalDirectTargetMapOriginTargets
+
+theorem exact_OpenOriginalProjectedTargetOrigin : ExactOpenProjectedTargetOrigin :=
+  NumberedWindowInternalDirectTargetMapOrigin.exactOpenProjectedTargetOrigin
+
+#print axioms exact_OpenOriginalProjectedTargetOrigin
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectTargetMapOriginChecks

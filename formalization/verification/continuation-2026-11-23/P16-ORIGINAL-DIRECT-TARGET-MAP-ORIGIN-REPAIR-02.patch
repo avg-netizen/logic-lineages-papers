@@ -1,0 +1,19 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapOriginSyntaxProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapOriginSyntaxProof.lean
+@@ -27 +27 @@
+-open ID1Completion.InternalSourceIntroductionSyntaxProof (formulaRelabelAsSubst)
++open ID1Completion.InternalSourceIntroductionSyntaxProof (formulaRelabelAsSubst termRelabelAsSubst)
+@@ -63 +63 @@
+-  rw [originSubst] <;> rfl
++  simp only [originSubst, ← termRelabelAsSubst]
+@@ -73 +73 @@
+-  rw [allOutputsSubst] <;> rfl
++  simp only [allOutputsSubst, ← termRelabelAsSubst]
+@@ -77 +77,2 @@
+-  rw [originBody,instantiate,bindEmbedding,rowSubst,liftBind,varBind]
++  rw [originBody,instantiate,bindEmbedding,rowSubst]
++  simp only [liftBind,varBind]
+@@ -81 +82,2 @@
+-  rw [allOutputsBody,instantiate,bindEmbedding,outputSubst,liftBind,varBind]
++  rw [allOutputsBody,instantiate,bindEmbedding,outputSubst]
++  simp only [liftBind,varBind]

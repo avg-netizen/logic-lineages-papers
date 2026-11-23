@@ -1,0 +1,33 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapOriginProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapOriginProof.lean
+@@ -7,0 +8,2 @@
++
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+@@ -19,0 +22 @@
++open ID1Completion.InternalTagArithmeticSyntaxProof (zRelabel)
+@@ -27,7 +30,6 @@
+-private theorem nilAll (key : OTerm α) :
+-    Nonempty (Derivation B Γ (allOutputs z key)) := by
+-  have held : Nonempty (Derivation B (Γ.map weaken) (allOutputsBody z key)) := by
+-    unfold allOutputsBody
+-    change Nonempty (Derivation B (Γ.map weaken)
+-      (atOutput z (key.relabel Sum.inl) (.var (.inr 0))))
+-    exact nilAt (key.relabel Sum.inl) (.var (.inr 0))
++attribute [local irreducible] atOutput
++
++private theorem closeAll (code key : OTerm α)
++    (held : Nonempty (Derivation B (Γ.map weaken) (allOutputsBody code key))) :
++    Nonempty (Derivation B Γ (allOutputs code key)) := by
++  unfold allOutputs
+@@ -35,0 +38,11 @@
++
++private theorem nilBody (key : OTerm α) :
++    Nonempty (Derivation B (Γ.map weaken) (allOutputsBody z key)) := by
++  have zeroWeaken : (z : OTerm α).relabel (Sum.inl : α → α ⊕ Fin 1) = z :=
++    zRelabel Sum.inl
++  rw [allOutputsBody,zeroWeaken]
++  exact nilAt (key.relabel Sum.inl) (.var (.inr 0))
++
++private theorem nilAll (key : OTerm α) :
++    Nonempty (Derivation B Γ (allOutputs z key)) :=
++  closeAll z key (nilBody key)
