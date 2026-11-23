@@ -1,0 +1,12 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountAllQueriesProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountAllQueriesChecks
+open NumberedWindowInternalLiteralCountAllQueriesTargets
+
+theorem exact_OpenLiteralCountAgreement : ExactOpenLiteralCountAgreement :=
+  NumberedWindowInternalLiteralCountAllQueries.exactOpenLiteralCountAgreement
+
+#print axioms exact_OpenLiteralCountAgreement
+end LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountAllQueriesChecks

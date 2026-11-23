@@ -1,0 +1,64 @@
+{
+  "status": "frozen source only; native pending",
+  "paper": 16,
+  "gate": "LogicLineages.PersistentMarking.NumberedWindowInternalSparseParserPositiveCasesProof",
+  "expected_named_axiom_outputs": [
+    "exact_OriginalPositiveSparseParserCases"
+  ],
+  "source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParserPositiveCasesProof.lean": "1f7706add1a10fc7e9fa3235ab9c9a91e4a07e7b3b8bf4215ec1844e45e20635",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-POSITIVE-SPARSE-PARSER-CASES-SOURCE-MAP.md": "68c1f27d6fe0ea4173d4a77c03b4cd89594b1906b50c2dd9282b601eef09221d"
+  },
+  "direct_source_pins_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParserRawCasesProof.lean": "22b2ad7fb2fe2a7ea25c16992084e6df67187816bcdd54eae075908b51da09d1",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginalRawConsParserReverseProof.lean": "f31bb305adcc1b0c493da3ea34164954e13e2d3c857144c0b355b1fa07f5c21e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldExistentialProof.lean": "2200efa833a46df6dca540fa18e47da5223ca8fd54d546864b9966821840db5f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldCellSyntaxProof.lean": "b4560bc6503548d4470d593519197def4c880a2af1020472f9059dc4b7b5d407"
+  },
+  "prior_evidence_pins_sha256": {
+    "formalization/verification/continuation-2026-11-23/1558-original-raw-cons-parser-reverse-native.json": "ff778b26c579feff7be129a8ab2a9b9e4b0cc25fe7a011b1ee39807fefeb4bd8",
+    "formalization/verification/new-paper-set-2026-11-18/accepted/621-original-sparse-field-induction.json": "75e7c11d44f559e288ff3568bdc405c40db9235ba81da5ce01dc0a102e1d249f"
+  },
+  "raw_cases_pass": {
+    "receipt": "1795447126669945326-24",
+    "result_sha256": "7283ba308b09a5b1e8af97e20e71e3ebd477d245c6a7e6872f875d552a329781"
+  },
+  "static_closure": {
+    "local": 1301,
+    "external": [
+      "Init",
+      "Init.Data.List.Lemmas",
+      "Init.Data.List.Perm",
+      "Init.Data.Nat.Lemmas",
+      "Lean.Elab.Command",
+      "Lean.Util.CollectAxioms",
+      "Mathlib.Computability.PartrecCode",
+      "Mathlib.Computability.Primrec.List",
+      "Mathlib.Data.Finset.Card",
+      "Mathlib.Data.Finset.Lattice.Fold",
+      "Mathlib.Data.Finset.Max",
+      "Mathlib.Data.Finset.Union",
+      "Mathlib.Data.Fintype.Card",
+      "Mathlib.Data.Fintype.Fin",
+      "Mathlib.Data.Fintype.Order",
+      "Mathlib.Data.Fintype.Pi",
+      "Mathlib.Data.Fintype.Powerset",
+      "Mathlib.Data.Fintype.Prod",
+      "Mathlib.Data.Fintype.Sigma",
+      "Mathlib.Data.List.FinRange",
+      "Mathlib.Data.List.Forall2",
+      "Mathlib.Data.List.Nodup",
+      "Mathlib.Data.List.Perm.Basic",
+      "Mathlib.Data.List.Permutation",
+      "Mathlib.Data.Multiset.DershowitzManna",
+      "Mathlib.Data.Nat.Pairing",
+      "Mathlib.Data.Nat.Sqrt",
+      "Mathlib.Logic.Equiv.List",
+      "Mathlib.Logic.Function.Iterate",
+      "Mathlib.Logic.Godel.GodelBetaFunction",
+      "Mathlib.ModelTheory.Semantics",
+      "Mathlib.Order.FixedPoints"
+    ]
+  },
+  "scope": "Positive parser on arbitrary actual sparse raw code: true zero/empty or actual cons on exact positive strict tail and original observed scratch. No object induction, arbitrary J, or numbered promotion."
+}
