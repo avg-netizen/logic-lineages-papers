@@ -1,0 +1,31 @@
+--- failed/NumberedWindowInternalTransparentAuxRankNumericProof.lean
++++ repaired/NumberedWindowInternalTransparentAuxRankNumericProof.lean
+@@ -3,0 +4 @@
++public import LogicLineages.PersistentMarking.NumberedWindowInternalAuxExchangeMemoStepDataProof
+@@ -6 +6,0 @@
+-import LogicLineages.PersistentMarking.NumberedWindowInternalAuxExchangeMemoStepDataProof
+@@ -29 +29 @@
+-open NumberedWindowInternalSparseFieldParser (scratchRow)
++open NumberedWindowInternalSparseFieldParser (scratchRow scratchTable)
+@@ -108,6 +108,15 @@
+-      rw [rowSucc]
+-      apply exact_TransparentAuxRankUpdateCalibration g fit
+-      intro child small
+-      rw [lookupAt (constantZero 2) (rankUpdate g) (0 ::ᵥ 0 ::ᵥ nil)
+-        i child (Nat.le_of_lt_succ small)]
+-      exact ih child small
++      let old := evaluate (scratchTable (constantZero 2) (rankUpdate g)) (i ::ᵥ 0 ::ᵥ 0 ::ᵥ nil)
++      have prior : ∀ child, child < i+1 →
++          evaluate lookup ((i-child) ::ᵥ old ::ᵥ nil) = rawRank child := by
++        intro child small
++        change evaluate lookup ((i-child) ::ᵥ
++          evaluate (scratchTable (constantZero 2) (rankUpdate g)) (i ::ᵥ 0 ::ᵥ 0 ::ᵥ nil) ::ᵥ nil) =
++          rawRank child
++        exact (lookupAt (constantZero 2) (rankUpdate g) (0 ::ᵥ 0 ::ᵥ nil)
++          i child (Nat.le_of_lt_succ small)).trans (ih child small)
++      have step : evaluate (rankUpdate g) (args i old) = rawRank (i+1) :=
++        exact_TransparentAuxRankUpdateCalibration g fit i old prior
++      have unfoldRow : evaluate (scratchRow (constantZero 2) (rankUpdate g)) ((i+1) ::ᵥ 0 ::ᵥ 0 ::ᵥ nil) =
++          evaluate (rankUpdate g) (args i old) :=
++        rowSucc (constantZero 2) (rankUpdate g) (0 ::ᵥ 0 ::ᵥ nil) i
++      exact unfoldRow.trans step

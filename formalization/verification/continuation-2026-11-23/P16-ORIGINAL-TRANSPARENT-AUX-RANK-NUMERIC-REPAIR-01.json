@@ -1,0 +1,44 @@
+{
+  "status": "frozen proof/import visibility repair01; native retry pending",
+  "gate": "LogicLineages.PersistentMarking.NumberedWindowInternalTransparentAuxRankNumericProof",
+  "failed_native": {
+    "receipt": "1795463893456358501-48",
+    "receipt_pin": {
+      "path": "formalization/build-reports/1795463893456358501-48.json",
+      "sha256": "1587597e271adcf9f0028164077728f59d44f6da30641342a22d0923d69f09f0"
+    },
+    "module_log": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-transparent-aux-rank-numeric-repair01/1795463893456358501-48.module.log",
+      "sha256": "7472a99403a3721fc45769c8af64806b563d5840acf65dc6cc98985538e1f181"
+    },
+    "failed_source": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-transparent-aux-rank-numeric-repair01/NumberedWindowInternalTransparentAuxRankNumericProof.lean.failed-source",
+      "sha256": "cc86312391d36ce1772cf925eaa40942c752c5c7d20befb021820396705a260f"
+    },
+    "diagnosis": "Public step calibration could not see the old args helper through a private import (line78); downstream apply on a recursive physical program whnf timed out under the unchanged 200k cap (line109). Both source-only raw statements passed."
+  },
+  "repair": "Export the already-imported args module, with no dependency graph change. Bind the physical prior scratch table explicitly and compose exact typed row-step/lookup equalities instead of unqualified apply inference. No target, physical program, or limit changes.",
+  "changed_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalTransparentAuxRankNumericProof.lean",
+    "sha256": "f25eaea36b44d50cb4b2b1f94f26c44e8b625446d4d21c907ad13bddcedc3bea"
+  },
+  "unchanged_open_and_targets": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalTransparentAuxRankOpenZeroProof.lean",
+      "sha256": "1e8b54395ab3eae19ac99888615a12baf2139668b60f932372c0ca8903a7f3f2"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalTransparentAuxRankTargets.lean",
+      "sha256": "a51ed46a55ef6c49b5ad6584b62740f6a04c6812a524787aaad2a9940264317a"
+    }
+  ],
+  "reverse_patch": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/original-transparent-aux-rank-numeric-repair01/repair01.patch",
+    "sha256": "c361f12642214b21128a4b5340a69b391cc3228c72eb8661a10757759eee3df7"
+  },
+  "reverse_bytes_verified": true,
+  "original_author_manifest": {
+    "path": "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-TRANSPARENT-AUX-RANK-AUTHOR-MANIFEST.json",
+    "sha256": "b92369212b0e1b93546c9e14effd3e3d36fb8e8a112b702c0ab0f554b9699660"
+  }
+}

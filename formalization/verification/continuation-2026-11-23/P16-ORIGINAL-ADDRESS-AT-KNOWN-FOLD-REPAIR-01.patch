@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAddressAtKnownFoldProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAddressAtKnownFoldProof.lean
+@@ -38 +38 @@
+-  have to := slotIntro rawLeast 2 dst xs
++  have dstRead := slotIntro rawLeast 2 dst xs
+@@ -40 +40 @@
+-  exact foldRead P xs c t src dst ctx ty fr to body
++  exact foldRead P xs c t src dst ctx ty fr dstRead body
