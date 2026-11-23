@@ -1,0 +1,38 @@
+{
+  "status": "frozen proof-only repair02; native retry pending",
+  "gate": "LogicLineages.PersistentMarking.NativeTowerBandCoefficientModelProof",
+  "failed_native": {
+    "receipt": "1795460644861398804-8",
+    "receipt_pin": {
+      "path": "formalization/build-reports/1795460644861398804-8.json",
+      "sha256": "cbed3d17a74953f78c10a0137cb90a23a50671dc45988653038cb15724aa89a0"
+    },
+    "module_log": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-band-coefficient-model-repair02/1795460644861398804-8.module.log",
+      "sha256": "25bc4b6d50355aebe11afc3b95fbd66b174663574ecc17a362a7664445adf2d1"
+    },
+    "failed_source": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-band-coefficient-model-repair02/NativeTowerBandCoefficientModelProof.lean.failed-source",
+      "sha256": "f8d3a23fd698e71b5f614a9d1b1ac9e3cc159ab18c39fb0f3e76a97e4318b76b"
+    },
+    "diagnosis": "Only dimension-zero comparison remained. The exact List.Lex simplification yields Nat.lt p q iff Nat.lt (Nat.succ p) (Nat.succ q); simp's overloaded successor lemma was unused on this literal Nat.lt shape."
+  },
+  "repair": "Keep the literal List.Lex simplification; close its remaining iff by applying the exact Nat.succ_lt_succ and Nat.lt_of_succ_lt_succ maps directly. No definition, target, import, or cap change.",
+  "changed_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NativeTowerBandCoefficientModelProof.lean",
+    "sha256": "c00f56b2e27ec1669b87304e2c420170a15b48c304cbe1b705c259cbae520646"
+  },
+  "unchanged_reliso_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NativeTowerBandCoefficientRelIsoProof.lean",
+    "sha256": "b4e25d54b049789b368b3bad7a1fe48130583ac281527b2938a8bfee66dfff35"
+  },
+  "reverse_patch": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/original-band-coefficient-model-repair02/repair02.patch",
+    "sha256": "c5922b8fbcb498d8bb7003008fbe6cd2d247602b31ad91b9cb82725bc65f1400"
+  },
+  "reverse_bytes_verified": true,
+  "previous_repair_manifest": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/original-band-coefficient-model-repair01/REPAIR-MANIFEST.json",
+    "sha256": "c6452dc4aa36bd483a8b23779d4ebb77228ce92076e476e7a951a6551e4e6dcf"
+  }
+}

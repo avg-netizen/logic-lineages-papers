@@ -1,0 +1,6 @@
+--- failed/NativeTowerBandCoefficientModelProof.lean
++++ repaired/NativeTowerBandCoefficientModelProof.lean
+@@ -132 +132,2 @@
+-    simp only [List.cons_lex_cons_iff,List.not_lex_nil,and_false,or_false,Nat.succ_lt_succ_iff]
++    simp only [List.cons_lex_cons_iff,List.not_lex_nil,and_false,or_false]
++    exact ⟨Nat.succ_lt_succ,Nat.lt_of_succ_lt_succ⟩

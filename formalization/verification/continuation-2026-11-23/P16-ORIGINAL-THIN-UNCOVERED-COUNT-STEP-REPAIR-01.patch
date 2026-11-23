@@ -1,0 +1,24 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountStepProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountStepProof.lean
+@@ -7,0 +8 @@
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListCodecDefinitions
+@@ -39,2 +40,2 @@
+-  InternalRawListRecursionProof.nilValue (InternalAcceptance.constantZero 1) countStep z
+-    (Fin.cons reached Fin.elim0) (InternalAcceptanceConjunctionProof.constantZeroValue (Fin.cons reached Fin.elim0))
++  ID1Completion.InternalRawListRecursionProof.nilValue (ID1Completion.InternalAcceptance.constantZero 1) countStep z
++    (Fin.cons reached Fin.elim0) (ID1Completion.InternalAcceptanceConjunctionProof.constantZeroValue (Fin.cons reached Fin.elim0))
+@@ -76 +77 @@
+-      (Fin.cons rest Fin.elim0) (InternalControlGraphSupportProof.successorValue (Fin.cons rest Fin.elim0))
++      (Fin.cons rest Fin.elim0) (ID1Completion.InternalControlGraphSupportProof.successorValue (Fin.cons rest Fin.elim0))
+@@ -84 +85 @@
+-    (hc : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode raw head tail)))
++    (hc : Nonempty (Derivation body Delta (graph2 ID1Completion.InternalListCodec.consCode raw head tail)))
+@@ -90 +91 @@
+-    InternalRawListRecursionProof.consValue (InternalAcceptance.constantZero 1) countStep
++    ID1Completion.InternalRawListRecursionProof.consValue (ID1Completion.InternalAcceptance.constantZero 1) countStep
+@@ -95 +96 @@
+-    (hc : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode raw head tail)))
++    (hc : Nonempty (Derivation body Delta (graph2 ID1Completion.InternalListCodec.consCode raw head tail)))
+@@ -101 +102 @@
+-    InternalRawListRecursionProof.consValue (InternalAcceptance.constantZero 1) countStep
++    ID1Completion.InternalRawListRecursionProof.consValue (ID1Completion.InternalAcceptance.constantZero 1) countStep

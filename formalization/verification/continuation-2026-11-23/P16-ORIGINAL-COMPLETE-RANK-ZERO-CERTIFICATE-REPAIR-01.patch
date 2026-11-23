@@ -1,0 +1,18 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCompleteRankPartitionZeroCertificateProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCompleteRankPartitionZeroCertificateProof.lean
+@@ -11,0 +12,2 @@
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveUnfoldingSupportProof
++
+@@ -18,0 +21,2 @@
++open ID1Completion.InternalPositiveUnfoldingSupportProof (formulaRelabelComposition)
++open NumberedWindowComputabilityFormulaTargets (accepts)
+@@ -41,0 +46,3 @@
++private theorem acceptsGraph {α : Type} (r : Program 3) (x w y : OTerm α) :
++    accepts r x w y = programGraph r (suc z) ![x,w,y] := rfl
++
+@@ -55 +62 @@
+-  change Nonempty (Derivation B Γ (programGraph (alwaysCarried i r) (suc z) ![x,w,y])) at carried
++  rw [acceptsGraph] at carried
+@@ -97 +104 @@
+-  have rel (f : Formula α) : (f.relabel ρ).relabel ι = f.relabel (ι ∘ ρ) := Formula.relabel_relabel _ _ _
++  have rel (f : Formula α) : (f.relabel ρ).relabel ι = f.relabel (ι ∘ ρ) := formulaRelabelComposition ρ ι f

@@ -1,0 +1,19 @@
+--- failed/NativeTowerBandCoefficientModelProof.lean
++++ repaired/NativeTowerBandCoefficientModelProof.lean
+@@ -16 +16 @@
+-  | 0, p => [p+1]
++  | 0, p => [Nat.succ p]
+@@ -41 +41 @@
+-    change [p+1] = [q+1] at h
++    change [Nat.succ p] = [Nat.succ q] at h
+@@ -79 +79 @@
+-    change (a-1+1) :: rest = a :: rest
++    change Nat.succ (a-1) :: rest = a :: rest
+@@ -81 +81 @@
+-    have leading : a-1+1 = a := by omega
++    have leading : Nat.succ (a-1) = a := by omega
+@@ -131,2 +131,2 @@
+-    change Nat.lt p q ↔ List.Lex Nat.lt [p+1] [q+1]
+-    simp [List.cons_lex_cons_iff]
++    change Nat.lt p q ↔ List.Lex Nat.lt [Nat.succ p] [Nat.succ q]
++    simp only [List.cons_lex_cons_iff,List.not_lex_nil,and_false,or_false,Nat.succ_lt_succ_iff]

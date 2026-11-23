@@ -1,0 +1,52 @@
+{
+  "paper": 16,
+  "status": "frozen source only; two separate native gates pending",
+  "gate_order": [
+    "LogicLineages.PersistentMarking.NativeTowerBandCoefficientModelProof",
+    "LogicLineages.PersistentMarking.NativeTowerBandCoefficientRelIsoProof"
+  ],
+  "expected_named_axiom_outputs": {
+    "LogicLineages.PersistentMarking.NativeTowerBandCoefficientModelProof": [
+      "coeffsLength",
+      "exact_OriginalBandCoefficientDecode",
+      "exact_OriginalBandCoefficientInjective",
+      "exact_OriginalBandCoefficientEncode",
+      "exact_OriginalOrbitCoefficientDictionary",
+      "exact_OriginalBandCoefficientStrictIff"
+    ],
+    "LogicLineages.PersistentMarking.NativeTowerBandCoefficientRelIsoProof": [
+      "exact_OriginalBandCoefficientRelIso",
+      "exact_ActualFixedTowerCoefficientImage",
+      "exact_OriginalPositiveCoefficientWellOrder"
+    ]
+  },
+  "source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerBandCoefficientModelProof.lean": "9988f4e0731dd4c34002db200a339be1f38f39e4e5c9f5a56755ad03ccb19590",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerBandCoefficientRelIsoProof.lean": "b4e25d54b049789b368b3bad7a1fe48130583ac281527b2938a8bfee66dfff35",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-TOWER-BAND-COEFFICIENT-MODEL-SOURCE-MAP.md": "410824b976eac6fad56462ae4218a6d19a44e25e7252321ab6a048ce88b46144"
+  },
+  "interface_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerVariableDimensionBandsProof.lean": "3b716bd419e5a861573e7fca3ba8d86f51a9cda436923a3a6dd56d5be344d9d2",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerVariableDimensionBandImageRelIsoProof.lean": "9cb408888b244079cac878d1fdfc679ef03ab198a56bd4affbb8f3493a2c9f05",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerNestedInnerOrbitLexProof.lean": "98cd2a26dbd6b0ff7f173bf4804ec0329d1bd8c3c62a0d7313cfc373fdbd90cc",
+    "formalization/.lake/packages/mathlib/Mathlib/Order/RelIso/Basic.lean": "f134e208ef1ed7469f55b728b3abbaf40d3b9460e8d396abbdb8740673919f45"
+  },
+  "prior_evidence_sha256": {
+    "formalization/verification/continuation-2026-11-23/1770-p16-original-fixed-tower-variable-sum-native-reliso-native.json": "61411c1bc4dd016e1a027274f8b0fcf64539ccb4ae16668b8d31e935bd715ba3"
+  },
+  "static_closures": {
+    "LogicLineages.PersistentMarking.NativeTowerBandCoefficientModelProof": {
+      "local": 300,
+      "external": [
+        "Init",
+        "Init.Data.List.Lex"
+      ]
+    },
+    "LogicLineages.PersistentMarking.NativeTowerBandCoefficientRelIsoProof": {
+      "local": 685,
+      "mathlib_source_modules": 175,
+      "mathlib_oleans_present": 175
+    }
+  },
+  "boundary": "Exact actual band order = canonical positive coefficient order with literal native bounded image; no named ordinal, rank or height."
+}

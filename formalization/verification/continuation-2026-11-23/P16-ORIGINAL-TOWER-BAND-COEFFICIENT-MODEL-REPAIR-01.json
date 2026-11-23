@@ -1,0 +1,38 @@
+{
+  "status": "frozen inference-only repair; retry pending",
+  "gate": "LogicLineages.PersistentMarking.NativeTowerBandCoefficientModelProof",
+  "failed_native": {
+    "receipt": "1795460517745044171-52",
+    "receipt_pin": {
+      "path": "formalization/build-reports/1795460517745044171-52.json",
+      "sha256": "2a7468536c6eac44927861f08c92f2ed47f25453f11b2bbe32c76f6af9030a77"
+    },
+    "module_log": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-band-coefficient-model-repair01/1795460517745044171-52.module.log",
+      "sha256": "53d8b2661488c075352cf7ac9da960642e0a8c6cbca296c4038f03edab4ee577"
+    },
+    "failed_source": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-band-coefficient-model-repair01/NativeTowerBandCoefficientModelProof.lean.failed-source",
+      "sha256": "9988f4e0731dd4c34002db200a339be1f38f39e4e5c9f5a56755ad03ccb19590"
+    },
+    "diagnosis": "Dimension zero p has regular reducibility alias OrbitCoords 0, so overloaded addition cannot synthesize HAdd. Underlying natural successor was not accepted, cascading to list leading, decoding and singleton dictionary."
+  },
+  "repair": "Use Nat.succ rather than overloaded addition at exact dimension zero. Use the actual singleton List.Lex equation, no nil target and Nat.succ_lt_succ_iff with simp only. This is the same exact coefficient encoding, no theorem/import/cap modifications.",
+  "changed_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NativeTowerBandCoefficientModelProof.lean",
+    "sha256": "f8d3a23fd698e71b5f614a9d1b1ac9e3cc159ab18c39fb0f3e76a97e4318b76b"
+  },
+  "unchanged_reliso_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NativeTowerBandCoefficientRelIsoProof.lean",
+    "sha256": "b4e25d54b049789b368b3bad7a1fe48130583ac281527b2938a8bfee66dfff35"
+  },
+  "reverse_patch": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/original-band-coefficient-model-repair01/repair01.patch",
+    "sha256": "bc456c423f6d55a5e5378685911139d4348d564779feb94ba5aaf22c378d7014"
+  },
+  "reverse_bytes_verified": true,
+  "original_author_manifest": {
+    "path": "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-TOWER-BAND-COEFFICIENT-MODEL-AUTHOR-MANIFEST.json",
+    "sha256": "8d0fe43446bca36bdc9597296c25e49e351b47f0c683354a4b6d67a8772ec0f4"
+  }
+}
