@@ -1,0 +1,10 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalSparseAppliedOneHopForwardProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalSparseAppliedOneHopForwardProof.lean
+@@ -68 +68 @@
+-  let row := accepts p (g.relabel Sum.inl) (u.relabel Sum.inl) (.var (.inr 0)) ⊓
++  let row : Formula (α ⊕ Fin 1) := accepts p (g.relabel Sum.inl) (u.relabel Sum.inl) (.var (.inr 0)) ⊓
+@@ -102 +102,3 @@
+-  have app := acceptedFromLeast i least gAddr u ctx result dom cod g arg k gOK uOK parsed call
++  have app : Nonempty (Derivation B Γ (accepts (applicationGuard i least) gAddr u y)) := by
++    simpa only [accepts,programGraph,y] using
++      (acceptedFromLeast i least gAddr u ctx result dom cod g arg k gOK uOK parsed call)

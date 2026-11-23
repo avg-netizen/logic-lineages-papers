@@ -1,0 +1,11 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalSparseAppliedOneHopForwardProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalSparseAppliedOneHopForwardProof.lean
+@@ -44,0 +45,3 @@
++
++private theorem acceptsGraph {α : Type} (p : Program 3) (f u y : OTerm α) :
++    accepts p f u y = programGraph p (suc z) ![f,u,y] := rfl
+@@ -103,2 +106,2 @@
+-    simpa only [accepts,programGraph,y] using
+-      (acceptedFromLeast i least gAddr u ctx result dom cod g arg k gOK uOK parsed call)
++    rw [acceptsGraph]
++    exact acceptedFromLeast i least gAddr u ctx result dom cod g arg k gOK uOK parsed call
