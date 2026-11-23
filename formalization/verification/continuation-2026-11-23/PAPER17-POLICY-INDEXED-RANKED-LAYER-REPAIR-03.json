@@ -1,0 +1,30 @@
+{
+  "status": "frozen source repair; native pending",
+  "baseline": "dd4eddff9f8eab0a4532e8df4880f71b8d5dffb9",
+  "failed_exact_gate_receipt": "1795428307897877000-57",
+  "failed_exact_gate": "indexed-rank-layer-repair02",
+  "failed_receipt_sha256": "92431786ca458850b458349eb177906afecb7a0dee0f6fbccdd55fdf818282b0",
+  "failed_exact_module_log_sha256": "50fbd4d71ed1e7ad116a558af958fbb058409014a3ccc8a0a2ad7547e9323a38",
+  "failed_original_native_log_sha256": "4d68756a3db5f6f9bbca17d14398052592bf8172d3a5c642bc2c1957ef9e51f6",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedRankedLayerProof.lean:66:9: error(lean.unknownIdentifier): Unknown constant `Partrec.cond`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedRankedLayerProof.lean:67:8: error: No goals to be solved",
+  "failed_proof_path": "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedRankedLayerProof.lean",
+  "failed_proof_sha256": "13296849ec3d8855da086a2eac6af7cd0f86fcbe57795b879b392b68d94d1f3d",
+  "repaired_proof_sha256": "eabf2eee408f3a48c0473e2320099e436507e7e99fa52d750c1b8eb0b7a457ab",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-RANKED-LAYER-REPAIR-03.patch",
+  "patch_sha256": "15e7e4420b5427b9e9c257dd94e1dfd431598376b806ec01fd0946237e3abd06",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-RANKED-LAYER-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "ed5783affa6fb6b279c901c9dc153bf28cfcb9a1cca7190e0bf1ccd64c71984a",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedRankedLayerStatementChecks.lean": "e26181bc9f62f08602dd97fde0d1a3e70626a08f97bb155c101e155b70be2063",
+    "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedRankedLayerTargets.lean": "7f432c37455b328515b6020132a3627870be907e8f8324677f2f46ed2db5c8af",
+    "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-RANKED-LAYER-SOURCE-MAP.md": "59437971f400aee9a231b13c198e825e8e5c9697c14ca14cb0f4dab2cc8d0afd"
+  },
+  "scope": "Only import pinned Mathlib.Computability.RE for actual Partrec.cond, which the prior exact log reports missing; no tactics, algorithms, targets or settings changed.",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-RANKED-LAYER-REPAIR-01.json": "bae701b22a7b869ad9a7a5d558446991520bc9d7e4d7f2cfd9ba48ee7e7c0866",
+    "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-RANKED-LAYER-REPAIR-01.patch": "a74e128a2ff69bfe718d226cb50b9c52d717847eb4c2cf2401503c375808be23",
+    "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-RANKED-LAYER-REPAIR-02.json": "09113440bc7ec9a6837a0d5041576c46e3f76a2043b2a70b303bbc10139b3d28",
+    "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-RANKED-LAYER-REPAIR-02.patch": "b7ac6383ac6a4383133056a98c0a8e358748a946581210452f5ed5b7b0031bf2"
+  }
+}

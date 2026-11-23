@@ -1,5 +1,6 @@
 module
 public import LogicLineages.StandardControlCurrent.PolicyIndexedRankedLayerTargets
+import Mathlib.Computability.RE
 
 @[expose] public section
 namespace LogicLineages.StandardControlCurrent.PolicyIndexedRankedLayer
