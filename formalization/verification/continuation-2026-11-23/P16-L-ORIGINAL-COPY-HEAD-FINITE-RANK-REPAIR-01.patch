@@ -1,0 +1,18 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCopyHeadBoundProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCopyHeadBoundProof.lean
+@@ -22,0 +23,2 @@
++attribute [local irreducible] programGraph
++
+@@ -32,2 +34,3 @@
+-      have same := congrArg Prod.snd (Option.some.inj h)
+-      simpa only [← same, List.length_cons] using Nat.zero_lt_succ tail.length
++      have same : 0 = index := congrArg Prod.snd (Option.some.inj h)
++      rw [← same, List.length_cons]
++      exact Nat.zero_lt_succ tail.length
+@@ -96,2 +99,4 @@
+-  rw [arguments] at d
+-  simp only [xs,exactLessThanEvaluation,if_pos bound] at d
++  have observedOne : evaluate ltTest xs = 1 := by
++    change evaluate ltTest (value ::ᵥ n ::ᵥ List.Vector.nil) = 1
++    rw [exactLessThanEvaluation,if_pos bound]
++  rw [arguments,observedOne] at d

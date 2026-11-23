@@ -1,0 +1,18 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalSparseAppliedPathPrependProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalSparseAppliedPathPrependProof.lean
+@@ -58 +58,3 @@
+-  simp only [liftInputs,liftedEndpointGuards,conjunctionRename,graph5Rename,programRename,
++  simp only [liftInputs,conjunctionRename]
++  rw [graph5Rename,rawConsRename,sucRelabel,zRelabel]
++  simp only [liftedEndpointGuards,conjunctionRename,programRename,
+@@ -60 +62 @@
+-    rawConsRename,auxiliaryRename,sucRelabel,zRelabel]
++    auxiliaryRename,sucRelabel,zRelabel]
+@@ -90,0 +93 @@
++  rw [auxiliaryRename] at lastLeast
+@@ -151 +154 @@
+-  intro β h Δ cert keep prefix
++  intro β h Δ cert keep headCert
+@@ -155 +158 @@
+-  obtain ⟨p⟩ := prefix
++  obtain ⟨p⟩ := headCert
