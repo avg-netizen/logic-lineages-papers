@@ -1,0 +1,15 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountStepProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountStepProof.lean
+@@ -2,0 +3,2 @@
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalEqualityTestDefinitions
+@@ -24,0 +27,2 @@
++open ID1Completion.InternalEqualityTest (equalityTest)
++open ID1Completion.InternalEqualityTestCompositionProof (equalityOfEqual)
+@@ -29,0 +34 @@
++attribute [local irreducible] programGraph
+@@ -54,2 +59,2 @@
+-    have hq := binaryValue InternalEqualityTest.equalityTest leftCount rightCount (suc z) lc rc xs
+-      (InternalEqualityTestCompositionProof.equalityOfEqual lc rc he) hl' hr'
++    have hq := binaryValue equalityTest leftCount rightCount (suc z) lc rc xs
++      (equalityOfEqual lc rc he) hl' hr'

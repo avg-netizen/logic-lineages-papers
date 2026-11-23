@@ -1,0 +1,122 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedScratchIntroTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedScratchReportProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserOpenSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListMapProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceConjunctionProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceBranchProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLessThanSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalEqualityTestProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientComparisonProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionFunctionalityProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedScratchIntroProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalListCodec (consCode)
+open ID1Completion.InternalListCodecSupportProof (consGraph consGraphRename)
+open ID1Completion.InternalListMap (mapStep)
+open ID1Completion.InternalListMapProof (consBackward)
+open ID1Completion.InternalRawListRecursionProof (nilValue consValue)
+open ID1Completion.InternalAcceptanceSupportProof (programCases)
+open ID1Completion.InternalAcceptanceConjunctionProof (constantZeroValue conjunctionAccept)
+open ID1Completion.InternalAcceptanceBranchProof (zeroBranchIntro)
+open ID1Completion.InternalLessThan (constantOne)
+open ID1Completion.InternalLessThanSupportProof (oneConstantValue)
+open ID1Completion.InternalEqualityTest (equalityTest)
+open ID1Completion.InternalEqualityTestProof (rejectBackwardOrder)
+open ID1Completion.InternalQuotientComparisonProof (zeroLessSuccessor)
+open ID1Completion.InternalControlGraphSupportProof (compositionValue projectionValue zeroValue programRename)
+open ID1Completion.InternalGraphCompositionFunctionalityProof (renameInto)
+open ID1Completion.InternalTagArithmeticSyntaxProof (sucRelabel zRelabel)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open NumberedWindowInternalSparsePathEnvelopeTargets (unary suc z)
+open NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof (unaryRename)
+open NumberedWindowInternalSparseFieldParserOpenSyntaxProof (binaryInputsRename)
+open NumberedWindowInternalSparseScratchMembership
+open NumberedWindowInternalDirectBoundaryGuardsTargets (typedScratch normalizeScalar)
+open NumberedWindowInternalDirectTypedScratchReportTargets (Reports normalizedMap)
+open NumberedWindowInternalDirectTypedScratchReportProof (exact_EliminateTypedScratch exact_IntroduceTypedScratch)
+open NumberedWindowInternalDirectTypedScratchIntroTargets
+
+variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+theorem exact_TypedScratchNil : ExactTypedScratchNil := by
+  intro i B α Γ
+  have mapNil : Nonempty (Derivation B Γ (unary (normalizedMap i) z z)) :=
+    nilValue (k := 0) .zero (mapStep (k := 0) (normalizeScalar i)) z Fin.elim0 (zeroValue Fin.elim0)
+  have missing : Nonempty (Derivation B Γ (programGraph scratchMember z ![z,z])) :=
+    nilValue memberBase memberStep z ![z] (constantZeroValue ![z])
+  exact exact_IntroduceTypedScratch i B α Γ z z ⟨mapNil,missing⟩
+
+private theorem zeroRow : Nonempty (Derivation B Γ (programGraph memberStep z ![suc z,z,z])) := by
+  let xs : Fin 3 → OTerm α := ![suc z,z,z]
+  have miss : Nonempty (Derivation B Γ (programGraph equalityTest z ![suc z,z])) :=
+    rejectBackwardOrder (suc z) z ⟨zeroLessSuccessor z⟩
+  have hit : Nonempty (Derivation B Γ (programGraph headMatches z xs)) := by
+    apply compositionValue equalityTest (![.projection 0,.projection 2] : Fin 2 → Program 3) z xs ![suc z,z] miss
+    intro k
+    refine Fin.cases ?_ (fun l => ?_) k
+    · exact projectionValue 0 xs
+    · obtain rfl := Fin.eq_zero l
+      exact projectionValue 2 xs
+  exact zeroBranchIntro headMatches (.projection 1) (constantOne 3) z xs hit (projectionValue 1 xs)
+
+private theorem withMappedCons (i : Program 1) (code head tail mt mapped : OTerm α)
+    (cell : Nonempty (Derivation B Γ (consGraph code head tail)))
+    (scalar : Nonempty (Derivation B Γ (unary i (suc z) head)))
+    (ht : Reports i B Γ tail mt)
+    (mc : Nonempty (Derivation B Γ (consGraph mapped (suc z) mt))) :
+    Nonempty (Derivation B Γ (unary (typedScratch i) (suc z) code)) := by
+  have hh : Nonempty (Derivation B Γ (unary (normalizeScalar i) (suc z) head)) :=
+    conjunctionAccept i (constantOne 1) ![head] scalar (oneConstantValue ![head])
+  have mapReport : Nonempty (Derivation B Γ (unary (normalizedMap i) mapped code)) :=
+    consBackward (k := 0) (normalizeScalar i) code head tail (suc z) mt mapped Fin.elim0 cell hh ht.mappedCall mc
+  have miss : Nonempty (Derivation B Γ (programGraph scratchMember z ![mapped,z])) :=
+    consValue memberBase memberStep mapped (suc z) mt z z ![z] mc ht.missingZero zeroRow
+  exact exact_IntroduceTypedScratch i B α Γ code mapped ⟨mapReport,miss⟩
+
+private theorem selectMappedCons (i : Program 1) (code head tail mt : OTerm α)
+    (cell : Nonempty (Derivation B Γ (consGraph code head tail)))
+    (scalar : Nonempty (Derivation B Γ (unary i (suc z) head)))
+    (ht : Reports i B Γ tail mt) :
+    Nonempty (Derivation B Γ (unary (typedScratch i) (suc z) code)) := by
+  apply programCases consCode ![suc z,mt] _
+  intro β ρ Δ mapped keep mc
+  simp only [unaryRename,sucRelabel,zRelabel]
+  have c : Nonempty (Derivation B Δ (consGraph (code.relabel ρ) (head.relabel ρ) (tail.relabel ρ))) := by
+    simpa only [consGraphRename] using renameInto cell ρ Δ keep
+  have h : Nonempty (Derivation B Δ (unary i (suc z) (head.relabel ρ))) := by
+    simpa only [unaryRename,sucRelabel,zRelabel] using renameInto scalar ρ Δ keep
+  have ht' : Reports i B Δ (tail.relabel ρ) (mt.relabel ρ) := by
+    constructor
+    · simpa only [unaryRename] using renameInto ht.mappedCall ρ Δ keep
+    · simpa only [programRename,binaryInputsRename,zRelabel] using renameInto ht.missingZero ρ Δ keep
+  have installed : Nonempty (Derivation B Δ (consGraph mapped (suc z) (mt.relabel ρ))) := by
+    simpa only [consGraph,binaryInputsRename,sucRelabel,zRelabel] using mc
+  exact withMappedCons i (code.relabel ρ) (head.relabel ρ) (tail.relabel ρ) (mt.relabel ρ) mapped
+    c h ht' installed
+
+theorem exact_IntroTypedScratchCons : ExactIntroTypedScratchCons := by
+  intro i B α Γ code head tail cell scalar checked
+  apply exact_EliminateTypedScratch i B α Γ tail (unary (typedScratch i) (suc z) code) checked
+  intro β ρ Δ mt keep reports
+  simp only [unaryRename,sucRelabel,zRelabel]
+  have c : Nonempty (Derivation B Δ (consGraph (code.relabel ρ) (head.relabel ρ) (tail.relabel ρ))) := by
+    simpa only [consGraphRename] using renameInto cell ρ Δ keep
+  have h : Nonempty (Derivation B Δ (unary i (suc z) (head.relabel ρ))) := by
+    simpa only [unaryRename,sucRelabel,zRelabel] using renameInto scalar ρ Δ keep
+  exact selectMappedCons i (code.relabel ρ) (head.relabel ρ) (tail.relabel ρ) mt c h reports
+
+#print axioms exact_TypedScratchNil
+#print axioms exact_IntroTypedScratchCons
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedScratchIntroProof
