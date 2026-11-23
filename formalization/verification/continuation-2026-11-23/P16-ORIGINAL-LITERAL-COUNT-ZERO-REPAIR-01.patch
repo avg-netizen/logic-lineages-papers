@@ -1,0 +1,8 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountZeroStepProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountZeroStepProof.lean
+@@ -42,2 +42,3 @@
+-  have inc := unaryValue .succ (.projection 1) (suc previous) previous xs
+-    (successorValue (Fin.cons previous Fin.elim0)) (projectionValue 1 xs)
++  have inc : Nonempty (Derivation B Γ (programGraph (succOf (.projection 1)) (suc previous) xs)) :=
++    unaryValue .succ (.projection 1) (suc previous) previous xs
++      (successorValue (Fin.cons previous Fin.elim0)) (projectionValue 1 xs)

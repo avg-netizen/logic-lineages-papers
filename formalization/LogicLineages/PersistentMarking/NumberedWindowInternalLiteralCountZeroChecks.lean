@@ -1,0 +1,12 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountZeroProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountZeroChecks
+open NumberedWindowInternalLiteralCountZeroTargets
+
+theorem exact_OpenLiteralZeroCountAbsent : ExactLiteralZeroCount :=
+  NumberedWindowInternalLiteralCountZero.exactLiteralZeroCount
+
+#print axioms exact_OpenLiteralZeroCountAbsent
+end LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountZeroChecks

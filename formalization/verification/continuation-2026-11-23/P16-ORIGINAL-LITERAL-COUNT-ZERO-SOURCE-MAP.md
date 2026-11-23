@@ -1,0 +1,15 @@
+# Actual literal entry count zero forbids membership
+
+Exact root `LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountZeroChecks`,
+alias `exact_OpenLiteralZeroCountAbsent`. Zero in the actual entryCount graph
+rules out real membership. At a physical cons, its literal zero step
+rejects a head hit (actual output would be successor), hence its true prior
+count also reports zero; internal membership inversion closes the two
+branches of the actual induction. Same occurrence count AST, no numeric
+reflection, historical nominal identity, signed partition or J.
+
+731c9c1f74bf1fcec37b2a4218514f52d9e84a3f4c7c006c8913597dde1bcd79  formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountZeroChecks.lean
+50e594937dff69c5555b06c22f7ca28ce1730dd556ce59b542d4d94d83d7bea1  formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountZeroProof.lean
+2edf2ddebe196b637706948ba27d3eb955bcdb86ca68ceee15dfa6f3650de064  formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountZeroStepProof.lean
+6740f2b05e6e845ef54dcafa3cc6a19d2c3cafa7a61a9844f54e47ccc296c39a  formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountZeroSyntaxProof.lean
+0d02f988ef05b1ff7ef49d2983a3734524dcb0f3739a9bd064d14e90adc57dba  formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountZeroTargets.lean

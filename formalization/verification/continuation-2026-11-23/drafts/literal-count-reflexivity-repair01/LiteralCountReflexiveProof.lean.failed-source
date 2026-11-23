@@ -1,0 +1,183 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountSupportedTargets
+public import LogicLineages.PersistentMarking.NumberedWindowInternalOriginalRawConsUnionReportThinProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountSupportedSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserOpenSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalClosedProgramsBindingProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListInductionProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceBranchProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationCertificateConstructorsSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionFunctionalityProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalEqualityTestCompositionProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportInternalVariableSupportProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountReflexiveProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalTagArithmeticSyntaxProof (eqn emb bindEmbedding liftBind varBind sucSubst zSubst sucRelabel zRelabel)
+open ID1Completion.InternalTagArithmeticSupportProof (refl)
+open ID1Completion.InternalControlGraphSupportProof (programRename projectionValue)
+open ID1Completion.InternalGraphCompositionFunctionalityProof (renameInto)
+open ID1Completion.InternalApplicationCertificateConstructorsSupportProof (binaryValue)
+open ID1Completion.InternalAcceptanceSupportProof (programCases compositionValue)
+open ID1Completion.InternalAcceptanceBranchProof (successorBranchIntro)
+open ID1Completion.InternalEqualityTest (equalityTest)
+open ID1Completion.InternalEqualityTestCompositionProof (equalityOfEqual)
+open ID1Completion.InternalListCodecSupportProof (consGraph consGraphRename)
+open ID1Completion.InternalRawListRecursion (recGraph)
+open ID1Completion.InternalRawListRecursionProof (consValue nilValue)
+open ID1Completion.InternalRawListRecursionSyntaxProof (programSubst)
+open ID1Completion.InternalListInduction (atCode atIndex constructorBody constructors premises)
+open ID1Completion.InternalListInductionProof (actualOriginalListInductionAtCode)
+open ID1Completion.InternalClosedProgramsBindingProof (actualFiniteUniversalIntroduction)
+open ID1Completion.InternalApplicationValidityStackAppend (append)
+open ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransport (constant sameOf)
+open ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportInternalVariableSupportProof (constantValue)
+open NumberedWindowInternalSparsePathEnvelopeTargets (suc z)
+open NumberedWindowInternalSparseFieldParserOpenSyntaxProof (binaryInputsRename)
+open NumberedWindowInternalLiteralCount
+open NumberedWindowInternalLiteralCountSupportedTargets (accepted)
+open NumberedWindowInternalLiteralCountSupportedSyntaxProof (acceptedRename)
+open NumberedWindowInternalOriginalRawConsUnionReportThinProof (OpenObserverReflexivity)
+
+attribute [local irreducible] programGraph
+variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+private theorem tapeThree (c l r : OTerm α) :
+    (![c,l,r] : Fin 3 → OTerm α) = Fin.cons c (![l,r] : Fin 2 → OTerm α) := by
+  funext i
+  exact Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (fun q => Fin.elim0 q))) i
+
+private theorem tapeFour (h a l r : OTerm α) :
+    (![h,a,l,r] : Fin 4 → OTerm α) = Fin.cons h (Fin.cons a (![l,r] : Fin 2 → OTerm α)) := by
+  funext i
+  exact Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (fun q => Fin.elim0 q)))) i
+
+private theorem foldNil (s : OTerm α) :
+    Nonempty (Derivation B Γ (accepted z s s)) := by
+  simpa only [accepted,tapeThree,recGraph,allCounts] using
+    (nilValue (constant 2 1) step (suc z) ![s,s]
+      (constantValue (body := B) (Delta := Γ) 1 ![s,s]))
+
+private theorem stepSame (head s n : OTerm α)
+    (pay : Nonempty (Derivation B Γ (programGraph entryCount n ![s,head]))) :
+    Nonempty (Derivation B Γ (programGraph step (suc z) ![head,suc z,s,s])) := by
+  let xs : Fin 4 → OTerm α := ![head,suc z,s,s]
+  have l : Nonempty (Derivation B Γ (programGraph leftCount n xs)) :=
+    binaryValue entryCount (.projection 2) (.projection 0) n s head xs
+      pay (projectionValue 2 xs) (projectionValue 0 xs)
+  have r : Nonempty (Derivation B Γ (programGraph rightCount n xs)) :=
+    binaryValue entryCount (.projection 3) (.projection 0) n s head xs
+      pay (projectionValue 3 xs) (projectionValue 0 xs)
+  have test := binaryValue equalityTest leftCount rightCount (suc z) n n xs
+    (equalityOfEqual n n ⟨refl n⟩) l r
+  exact successorBranchIntro (sameOf leftCount rightCount) (constant 4 0) (.projection 1)
+    (suc z) z xs test (projectionValue 1 xs)
+
+private theorem foldCons (c h t s : OTerm α)
+    (cell : Nonempty (Derivation B Γ (consGraph c h t)))
+    (tail : Nonempty (Derivation B Γ (accepted t s s))) :
+    Nonempty (Derivation B Γ (accepted c s s)) := by
+  apply programCases entryCount ![s,h] _
+  intro β j Δ n keep nPay
+  rw [binaryInputsRename] at nPay
+  rw [acceptedRename]
+  have c' := renameInto cell j Δ keep
+  rw [consGraphRename] at c'
+  have t' := renameInto tail j Δ keep
+  rw [acceptedRename] at t'
+  let c₂ := c.relabel j
+  let h₂ := h.relabel j
+  let t₂ := t.relabel j
+  let s₂ := s.relabel j
+  have hTail : Nonempty (Derivation B Δ (recGraph (constant 2 1) step (suc z) t₂ ![s₂,s₂])) := by
+    simpa only [accepted,tapeThree,recGraph,allCounts,t₂,s₂] using t'
+  have hStep := stepSame h₂ s₂ n nPay
+  have out := consValue (constant 2 1) step c₂ h₂ t₂ (suc z) (suc z) ![s₂,s₂] c' hTail
+    (by simpa only [tapeFour] using hStep)
+  simpa only [accepted,tapeThree,recGraph,allCounts,c₂,s₂] using out
+
+private def motive (s : OTerm α) : Formula (α ⊕ Fin 1) :=
+  accepted (.var (.inr 0)) (s.relabel Sum.inl) (s.relabel Sum.inl)
+
+private theorem formSubst {β : Type} (c l r : OTerm α) (σ : α → OTerm β) :
+    (accepted c l r).subst (fun a => emb (σ a)) =
+      accepted (c.subst σ) (l.subst σ) (r.subst σ) := by
+  have tape : (fun i : Fin 3 => ((![c,l,r] : Fin 3 → OTerm α) i).subst σ) =
+      ![c.subst σ,l.subst σ,r.subst σ] := by
+    funext i
+    exact Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (fun j => Fin.elim0 j))) i
+  simp only [accepted,programSubst,tape,sucSubst,zSubst]
+
+private theorem motiveCode (c s : OTerm α) :
+    atCode (motive s) c = accepted c s s := by
+  rw [atCode,instantiate,bindEmbedding]
+  unfold motive
+  rw [formSubst]
+  simp only [liftBind,varBind]
+
+private theorem motiveIndex (s : OTerm α) (i : Fin 3) :
+    atIndex (motive s) i =
+      accepted (.var (.inr i)) (s.relabel Sum.inl) (s.relabel Sum.inl) := by
+  unfold atIndex motive
+  rw [acceptedRename]
+  simp only [Term.relabel_relabel,Term.relabel] <;> rfl
+
+private theorem constructorLaw (s : OTerm α) :
+    Nonempty (Derivation B Γ (constructors (motive s))) := by
+  apply actualFiniteUniversalIntroduction B α 3 Γ (constructorBody (motive s))
+  let j : α → α ⊕ Fin 3 := Sum.inl
+  let c : OTerm (α ⊕ Fin 3) := .var (.inr 0)
+  let h : OTerm (α ⊕ Fin 3) := .var (.inr 1)
+  let t : OTerm (α ⊕ Fin 3) := .var (.inr 2)
+  let C := consGraph c h t
+  let I := accepted t (s.relabel j) (s.relabel j)
+  let Δ := I :: C :: Γ.map (fun f => f.relabel j)
+  change Nonempty (Derivation B (Γ.map (fun f => f.relabel j))
+    (C.imp ((atIndex (motive s) 2).imp (atIndex (motive s) 0))))
+  simp only [motiveIndex]
+  obtain ⟨d⟩ := foldCons (B := B) (Γ := Δ) c h t (s.relabel j)
+    ⟨Derivation.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)⟩
+    ⟨Derivation.hypothesis List.mem_cons_self⟩
+  exact ⟨Derivation.implicationIntroduction (Derivation.implicationIntroduction d)⟩
+
+private theorem foldReflexive (c s : OTerm α) :
+    Nonempty (Derivation B Γ (accepted c s s)) := by
+  have bs : Nonempty (Derivation B Γ (atCode (motive s) z)) := by
+    rw [motiveCode]
+    exact foldNil s
+  obtain ⟨d⟩ := bs
+  obtain ⟨k⟩ := constructorLaw (B := B) (Γ := Γ) s
+  have hw : Nonempty (Derivation B Γ (premises (motive s))) :=
+    ⟨Derivation.conjunctionIntroduction d k⟩
+  have done := actualOriginalListInductionAtCode B α Γ (motive s) c hw
+  rw [motiveCode] at done
+  exact done
+
+/-- The installed actual observer accepts both copies of any open operand.
+It executes the real append and proves its actual count-fold result by
+object list induction at that appended code. -/
+theorem exact_LiteralObserverReflexivity (B : Positive (Fin 1)) :
+    OpenObserverReflexivity B permutation := by
+  intro α Γ s
+  apply programCases append ![s,s] _
+  intro β j Δ joined _ ap
+  rw [binaryInputsRename] at ap
+  simp only [programRename,binaryInputsRename,sucRelabel,zRelabel]
+  let s₂ := s.relabel j
+  apply compositionValue allCounts ![append,.projection 0,.projection 1] (suc z)
+    ![s₂,s₂] ![joined,s₂,s₂] (foldReflexive joined s₂)
+  intro k
+  exact Fin.cases ap (Fin.cases (projectionValue 0 ![s₂,s₂])
+    (Fin.cases (projectionValue 1 ![s₂,s₂]) (fun i => Fin.elim0 i))) k
+
+#print axioms exact_LiteralObserverReflexivity
+end LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountReflexiveProof
