@@ -1,0 +1,9 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalConstructorLowerLabelArithmeticProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalConstructorLowerLabelArithmeticProof.lean
+@@ -59,0 +60,3 @@
++  have connected : Derivation B Γ (eqn (OrdinaryArithmetic.addTerm dst (suc z)) src) :=
++    ID1Completion.InternalTagArithmeticSupportProof.trans addOne
++      (ID1Completion.InternalTagArithmeticSupportProof.symm same)
+@@ -61 +64 @@
+-    actualOriginalOrderIntroduction B α Γ dst src z ⟨trans addOne (symm same)⟩
++    actualOriginalOrderIntroduction B α Γ dst src z ⟨connected⟩

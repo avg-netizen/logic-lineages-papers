@@ -1,0 +1,21 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRefinedOpenAuxFromLeastProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRefinedOpenAuxFromLeastProof.lean
+@@ -4,0 +5,2 @@
++import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchControlChecks
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardedSourceSyntaxProof
+@@ -26,0 +29 @@
++open ID1Completion.GuardedSourceSyntaxProof (numeralRename)
+@@ -44,0 +48,3 @@
++private theorem acceptsGraph {α : Type} (r : Program 3) (x w y : OTerm α) :
++    accepts r x w y = programGraph r (suc z) ![x,w,y] := rfl
++
+@@ -80,3 +86 @@
+-  change Nonempty (Derivation B Γ (programGraph r (suc z) xs)) ↔
+-    Nonempty (Derivation B Γ (programGraph (refined i r) (suc z) xs))
+-  rw [branchAST]
++  rw [acceptsGraph, acceptsGraph, branchAST]
+@@ -103,3 +107 @@
+-  rw [unaryRename] at tag'
+-  have six : ((numeral 6 : OTerm α).relabel h) = (numeral 6 : OTerm β) := rfl
+-  rw [six] at tag'
++  rw [unaryRename, numeralRename] at tag'

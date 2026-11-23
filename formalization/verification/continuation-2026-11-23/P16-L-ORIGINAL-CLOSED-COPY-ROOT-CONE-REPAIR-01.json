@@ -1,0 +1,26 @@
+{
+  "status": "frozen statement-grouping correction; native pending",
+  "failed_exact_gate_receipt": "1795453379937434941-8",
+  "failed_native_log_path": "formalization/verification/continuation-2026-11-23/drafts/P16-L-ORIGINAL-CLOSED-COPY-ROOT-CONE-REPAIR-01/original-closed-copy-root-1703.log",
+  "failed_native_log_sha256": "344b06eb247ddcb60b4a275d8768cd764c1b37b17abde85f1a1a78fa2c1e448d",
+  "diagnostic": "introN found the single RootCone premise, then no binders; RootCone mistakenly put source and target parser views to the left of implications inside that premise.",
+  "correction": "Supply both physical endpoint parser views conjunctively alongside the callback. Destructure this premise in the proof. Actual executable root, payload, rank bridge, and object rejection/functionality route are unchanged.",
+  "sources": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCopyHeadClosedRootTargets.lean",
+      "failed_source_path": "formalization/verification/continuation-2026-11-23/drafts/P16-L-ORIGINAL-CLOSED-COPY-ROOT-CONE-REPAIR-01/failed-target.lean",
+      "failed_source_sha256": "6839a930540f561f3f422f1ba26a4649218f9868e24f5a45dcb7be2fe5145652",
+      "repaired_source_sha256": "ec175d1b51de2f6da3bdc3cc414e1e750904bde40dc1cbb82c1360f32347a611",
+      "reverse_reconstructs_exact_failed_source": true
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCopyHeadClosedRootProof.lean",
+      "failed_source_path": "formalization/verification/continuation-2026-11-23/drafts/P16-L-ORIGINAL-CLOSED-COPY-ROOT-CONE-REPAIR-01/failed-proof.lean",
+      "failed_source_sha256": "bee62656d40ae9adc89ad3d58e0230991df86b9cd24c606621493b49579aeabb",
+      "repaired_source_sha256": "66e1438bf914c9ce838058e2406e9507e7faca0192e20d82b5b90247c2bdf99b",
+      "reverse_reconstructs_exact_failed_source": true
+    }
+  ],
+  "patch_path": "formalization/verification/continuation-2026-11-23/P16-L-ORIGINAL-CLOSED-COPY-ROOT-CONE-REPAIR-01.patch",
+  "patch_sha256": "1b4ad3ddcbda8ffd522dd41c0c771bda1c38e11fb7236ea3d29be4d105da82d1"
+}

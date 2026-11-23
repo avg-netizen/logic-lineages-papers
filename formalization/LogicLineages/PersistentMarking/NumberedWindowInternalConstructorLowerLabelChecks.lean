@@ -1,0 +1,19 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalConstructorLowerLabelProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalConstructorLowerLabelArithmeticProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalConstructorLowerLabelChecks
+open NumberedWindowInternalConstructorLowerLabelTargets
+
+theorem exact_OriginalNumericLowerLabel : ExactNumericLowerLabel :=
+  NumberedWindowInternalConstructorLowerLabelArithmeticProof.exactNumericLowerLabel
+theorem exact_OriginalOpenLowerLabel : ExactOpenLowerLabel :=
+  NumberedWindowInternalConstructorLowerLabelArithmeticProof.exactOpenLowerLabel
+theorem exact_OriginalOpenLowerUse : ExactOpenLowerUse :=
+  NumberedWindowInternalConstructorLowerLabel.exactOpenLowerUse
+
+#print axioms exact_OriginalNumericLowerLabel
+#print axioms exact_OriginalOpenLowerLabel
+#print axioms exact_OriginalOpenLowerUse
+end LogicLineages.PersistentMarking.NumberedWindowInternalConstructorLowerLabelChecks

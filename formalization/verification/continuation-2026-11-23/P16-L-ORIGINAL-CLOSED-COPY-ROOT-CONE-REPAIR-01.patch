@@ -1,0 +1,12 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCopyHeadClosedRootTargets.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCopyHeadClosedRootTargets.lean
+@@ -32,2 +32,2 @@
+-  unpackNode src = some (5,[f,ty,label,base,extras]) →
+-  unpackNode dst = some (4,[g,args]) →
++  unpackNode src = some (5,[f,ty,label,base,extras]) ∧
++  unpackNode dst = some (4,[g,args]) ∧
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCopyHeadClosedRootProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCopyHeadClosedRootProof.lean
+@@ -64 +64 @@
+-  intro srcView dstView next
++  rintro ⟨srcView,dstView,next⟩

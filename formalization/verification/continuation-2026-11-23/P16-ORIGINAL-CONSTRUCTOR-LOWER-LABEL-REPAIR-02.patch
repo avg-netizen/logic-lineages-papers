@@ -1,0 +1,12 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalConstructorLowerLabelArithmeticProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalConstructorLowerLabelArithmeticProof.lean
+@@ -18,0 +19 @@
++open ID1Completion.InternalSourceInversionSupportProof (onEquality)
+@@ -62,0 +64,4 @@
++  have embedded : Nonempty (Derivation B Γ (arithmeticEmbedding.onFormula
++      ((OrdinaryArithmetic.addTerm dst (OrdinaryArithmetic.succTerm z)).equal src))) := by
++    rw [onEquality]
++    exact ⟨connected⟩
+@@ -64 +69 @@
+-    actualOriginalOrderIntroduction B α Γ dst src z ⟨connected⟩
++    actualOriginalOrderIntroduction B α Γ dst src z embedded
