@@ -1,0 +1,50 @@
+{
+  "status": "frozen source only; separate native gates pending; cap-abstraction dependency pending",
+  "paper": 16,
+  "gate_order": [
+    "LogicLineages.PersistentMarking.NativeOrdinalCapHierarchyBoundsProof",
+    "LogicLineages.PersistentMarking.NativeOrdinalCapHierarchyLexProof"
+  ],
+  "expected_named_axiom_outputs": {
+    "LogicLineages.PersistentMarking.NativeOrdinalCapHierarchyBoundsProof": [
+      "exact_CapLevelIterationCeiling",
+      "exact_CapHierarchyFloorCeiling"
+    ],
+    "LogicLineages.PersistentMarking.NativeOrdinalCapHierarchyLexProof": [
+      "exact_NativeCapHierarchyLexPreservation",
+      "exact_NativeCapHierarchyLexReflection",
+      "exact_NativeCapHierarchyInjective"
+    ]
+  },
+  "source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeOrdinalCapHierarchyBoundsProof.lean": "1537c86e46b7a616f0c67e55a6e5c27b1994fb2bac1c84148947a73e23e78d8d",
+    "formalization/LogicLineages/PersistentMarking/NativeOrdinalCapHierarchyLexProof.lean": "e2a9286b4d74548cb0ec8fa85a633fdfe41b3d05824db313a5af92b556cd27ab",
+    "formalization/verification/continuation-2026-11-23/P16-NATIVE-ORDINAL-CAP-HIERARCHY-SOURCE-MAP.md": "8395cfa66a75c0f591a20738817b94ecf86474c027dcf5e40f0115017ef8cd7b"
+  },
+  "actual_interfaces_pins_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeOrdinalCapAbstractionProof.lean": "876217470b9e7d92cf9d50a34496e7abe7f1dc402a96f53c42215a41c0c763f0",
+    "formalization/LogicLineages/PersistentMarking/NativeOrdinalCapPathsTargets.lean": "fd6e8ea69fa2c9b2aa305ebe901168e9a2576ee3d0a0d44fd8250df4ea14c5b6",
+    "formalization/LogicLineages/PersistentMarking/NativeOrdinalBasisTargets.lean": "a929bbcd9f6b9016f89ba939c36f10357652d16b26baa0bb03c7e252b08e6c5d",
+    "formalization/LogicLineages/PersistentMarking/NativeOrdinalBasisChecks.lean": "5f8ebc44ae2b3c6fb24fdcceb0d6b443e940c1e5cf1a9b3e8d8a969b82942f6b",
+    "formalization/LogicLineages/PersistentMarking/StablePairProof.lean": "a5b38868743cf9350ce1bbce2c96d48bbe7c1e632e58abd013d32fe7c1aed6ec",
+    "formalization/LogicLineages/PersistentMarking/NativeClosedStrictWellFoundedChecks.lean": "cc7abcd142910c274d0148a3c87bebe0f00e550336d25f10d01655b1cc2a13b5",
+    "formalization/LogicLineages/PersistentMarking/NativeIteratorStrictTargets.lean": "779736c5e358373c6ab1826b444427b0f224ba644fdf55d02719206c848d042c"
+  },
+  "static_closures": {
+    "LogicLineages.PersistentMarking.NativeOrdinalCapHierarchyBoundsProof": {
+      "local": 252,
+      "external": [
+        "Init"
+      ]
+    },
+    "LogicLineages.PersistentMarking.NativeOrdinalCapHierarchyLexProof": {
+      "local": 634,
+      "external": [
+        "Init",
+        "Init.Data.List.MinMax",
+        "Init.Data.List.Perm"
+      ]
+    }
+  },
+  "boundary": "Actual closed native finite lex family, no equality with legacy block syntax and no ordinal/rank/height calibration."
+}

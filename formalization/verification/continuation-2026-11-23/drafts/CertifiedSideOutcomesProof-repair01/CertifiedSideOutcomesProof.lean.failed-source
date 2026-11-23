@@ -1,0 +1,89 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalScratchSideSeedProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalCertifiedOriginFinishProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalChangedSideCasesProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalOriginEmptyRemovedProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountReflexiveProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountEquivalenceProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionRawGraphProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveUnfoldingSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityStackAppendInductionCoreProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionFunctionalityProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalCertifiedSideOutcomesProof
+open FirstOrder Language LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalTagArithmeticSyntaxProof (eqn eqnRelabel zRelabel)
+open ID1Completion.InternalPositiveUnfoldingSupportProof (formulaRelabelComposition)
+open ID1Completion.InternalApplicationValidityStackAppendInductionCoreProof (formulaCases)
+open ID1Completion.InternalAcceptanceSupportProof (programCases)
+open ID1Completion.InternalGraphCompositionFunctionalityProof (renameInto)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open NumberedWindowInternalSparsePathEnvelopeTargets (unary suc z)
+open NumberedWindowInternalSparseFieldParser (parser)
+open NumberedWindowInternalDirectTypedUnionLiteralJTargets (literalData)
+open NumberedWindowInternalCertifiedUnionStepProof (Pr)
+open NumberedWindowInternalChangedSideFromScratchProof (Body)
+open NumberedWindowInternalChangedSideCasesProof (exact_LiteralChangedSideCases)
+open NumberedWindowInternalOriginEmptyRemovedProof (exact_OpenScratchNonzeroCases)
+open NumberedWindowInternalCertifiedOriginFinishProof (Outcome)
+open NumberedWindowInternalRawUnionFromEquivalentPartsProof (Cmp)
+open NumberedWindowInternalLiteralCountReflexiveProof (exact_LiteralObserverReflexivity)
+open NumberedWindowInternalLiteralCountEquivalenceProof (exact_LiteralObserverSymmetry)
+open NumberedWindowInternalScratchSideSeedProof
+open NumberedWindowInternalDirectSourcePartitionRawGraphProof (keepThrough)
+
+attribute [local irreducible] programGraph
+variable {α : Type} {Γ : List (Formula α)}
+
+/-- At a true empty removed tape preserve the exact raw source, not a
+repacked equal-count substitute. At nonempty removed tape construct the
+original changed certificate using the actual seed reports. -/
+theorem exact_OriginalCertifiedSideOutcomes (i : Program 1) (r : Program 3) (c : Nat)
+    (s d ds dt dk dd da projected sj : OTerm α) (goal : Formula α)
+    (seed : ScratchSideSeed i r c Γ s d ds dt dk dd da projected sj)
+    (next : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (changed : Bool)
+      (raw w observed : OTerm β),
+      (∀ f ∈ Γ, f.relabel j ∈ Δ) →
+      Pr (literalData i r) c Δ (unary parser (suc observed) raw) →
+      Pr (literalData i r) c Δ (Cmp (dt.relabel j) observed) →
+      Outcome i r c Δ changed (s.relabel j) raw w (dd.relabel j) →
+      Pr (literalData i r) c Δ (goal.relabel j)) :
+    Pr (literalData i r) c Γ goal := by
+  let E := eqn dd z
+  let B := Body i r c
+  apply formulaCases E
+  · apply programCases (.projection (0 : Fin 1)) ![s] goal
+    intro β j Δ _ keep _
+    have kj : ∀ f ∈ Γ, f.relabel j ∈ Δ := fun f hf => keep f (List.mem_cons_of_mem _ hf)
+    have p := relocateScratchSideSeed i r c seed j kj
+    have held : Nonempty (Derivation B (E :: Γ) E) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+    have empty := renameInto held j Δ keep
+    change Nonempty (Derivation B Δ ((eqn dd z).relabel j)) at empty
+    rw [eqnRelabel,zRelabel] at empty
+    have same := exact_OriginalUnchangedSideCount p empty
+    exact next β j Δ false (s.relabel j) z (ds.relabel j) kj p.sourceParse
+      (exact_LiteralObserverSymmetry (ds.relabel j) (dt.relabel j) same) ⟨rfl,empty⟩
+  · have ne : Nonempty (Derivation B (E.not :: Γ) (eqn dd z).not) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+    apply exact_OpenScratchNonzeroCases B α (E.not :: Γ) dd goal ne
+    intro β j Δ h tail keep cons
+    have kj : ∀ f ∈ Γ, f.relabel j ∈ Δ := fun f hf => keep f (List.mem_cons_of_mem _ hf)
+    have p := relocateScratchSideSeed i r c seed j kj
+    apply exact_LiteralChangedSideCases i r c (s.relabel j) (d.relabel j) (ds.relabel j)
+      (dt.relabel j) (dk.relabel j) (dd.relabel j) (da.relabel j)
+      (projected.relabel j) (sj.relabel j) h tail (goal.relabel j)
+      (exact_OriginalScratchSideOfCons p cons)
+    intro γ k Ω raw witness saved parsed cert
+    rw [formulaRelabelComposition j k goal]
+    let ρ := k ∘ j
+    have keep' := keepThrough j k kj saved
+    apply next γ ρ Ω true raw witness (dt.relabel ρ) keep'
+    · simpa only [ρ,← Term.relabel_relabel] using parsed
+    · exact exact_LiteralObserverReflexivity B γ Ω (dt.relabel ρ)
+    · simpa only [Outcome,ρ,← Term.relabel_relabel] using cert
+
+#print axioms exact_OriginalCertifiedSideOutcomes
+end LogicLineages.PersistentMarking.NumberedWindowInternalCertifiedSideOutcomesProof

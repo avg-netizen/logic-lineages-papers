@@ -1,0 +1,17 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChangedSideCasesProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChangedSideCasesProof.lean
+@@ -8,0 +9 @@
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphSupportProof
+@@ -17,0 +19 @@
++open ID1Completion.InternalControlGraphSupportProof (programRename)
+@@ -22 +24 @@
+-open NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof (unaryRename)
++open NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof (unaryRename inputsRename)
+@@ -48,2 +50,2 @@
+-  · simpa only [unaryRename,sucRelabel,zRelabel] using renameInto p.sourceTyped j Δ keep
+-  · simpa only [unaryRename,sucRelabel,zRelabel] using renameInto p.targetTyped j Δ keep
++  · simpa only [programRename,inputsRename,sucRelabel,zRelabel] using renameInto p.sourceTyped j Δ keep
++  · simpa only [programRename,inputsRename,sucRelabel,zRelabel] using renameInto p.targetTyped j Δ keep
+@@ -56 +58 @@
+-  · simpa only [unaryRename,sucRelabel] using renameInto p.projection j Δ keep
++  · simpa only [programRename,inputsRename,sucRelabel] using renameInto p.projection j Δ keep
