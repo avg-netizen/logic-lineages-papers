@@ -1,0 +1,19 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedListInstallTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedListInstallProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalAccessibilityChecks
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedListInstallSelectedProof
+open NumberedWindowInternalAccessibilityChecks (exact_ConcreteInternalAccessibility)
+open NumberedWindowInternalDirectTypedListInstallTargets
+open NumberedWindowInternalDirectTypedListInstallProof (exact_ReinstallTypedList)
+
+theorem exact_SelectedReinstallTypedList : ExactSelectedReinstallTypedList := by
+  intro xs s count hf
+  obtain ⟨i,oldJ,r,oldD,held,_,_⟩ := exact_ConcreteInternalAccessibility xs s
+  exact ⟨i,r,exact_ReinstallTypedList xs s i r count held.1 held.2.2.1 hf⟩
+
+#print axioms exact_SelectedReinstallTypedList
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedListInstallSelectedProof
