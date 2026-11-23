@@ -1,0 +1,55 @@
+--- a/formalization/LogicLineages/PersistentMarking/NativeTowerIteratorCodeBridge.lean
++++ b/formalization/LogicLineages/PersistentMarking/NativeTowerIteratorCodeBridge.lean
+@@ -53,0 +54,4 @@
++  change applicationCode (encodeTy a) (encodeTy a)
++    (applicationCode (encodeTy step) (encodeTy endo)
++      (applicationCode (encodeTy .ground) (encodeTy (.arrow step endo))
++        (rawCode (.head (.recursor a) .nil)) (rawCode z)) (rawCode k)) (rawCode u) = _
+@@ -87,2 +91,6 @@
+-  rw [exactNativeTowerTypeCode n,exactNativeTowerTypeCode (n+1),exactBoundCode,exactBoundCode,
+-    exactEraseCode,exactLeftCode e hp,exactRawApp e e hl he]
++  rw [exactNativeTowerTypeCode n,exactNativeTowerTypeCode (n+1)]
++  change recursorCode (encodeTy a) zeroCode (lambdaCode 0
++    (applicationCode (encodeTy e) (encodeTy e)
++      (leftCode (encodeTy e) (boundCode (encodeTy e) 2))
++      (eraseCode (n+1) 3))) (boundCode (encodeTy a) 0) = _
++  rw [exactBoundCode e 2,exactBoundCode a 0,exactEraseCode,exactLeftCode e hp,exactRawApp e e hl he]
+--- a/formalization/LogicLineages/PersistentMarking/NativeTowerIteratorCodeProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NativeTowerIteratorCodeProof.lean
+@@ -32 +32,2 @@
+-  have body : Primrec (fun p : T => fields2 p.2.2.1 p.2.2.2) := fields2Primitive.comp arg
++  have body : Primrec (fun p : T => fields2 p.2.2.1 p.2.2.2) :=
++    fields2Primitive.comp (Primrec.fst.comp arg) (Primrec.snd.comp arg)
+@@ -33,0 +35,12 @@
++
++private theorem fourInputs {T : Type} [Primcodable T] {a b f x : T → Nat}
++    (ha : Primrec a) (hb : Primrec b) (hf : Primrec f) (hx : Primrec x) :
++    Primrec (fun p => (a p,b p,f p,x p)) := by
++  have tail : Primrec (fun p => (b p,f p,x p)) := hb.pair (hf.pair hx)
++  exact ha.pair tail
++
++private theorem composeFour {T : Type} [Primcodable T] {a b f x : T → Nat}
++    {raw : (Nat × Nat × Nat × Nat) → Nat} (h : Primrec raw)
++    (ha : Primrec a) (hb : Primrec b) (hf : Primrec f) (hx : Primrec x) :
++    Primrec (fun p => raw (a p,b p,f p,x p)) :=
++  h.comp (fourInputs ha hb hf hx)
+@@ -38 +51 @@
+-  applicationPrimitive.comp (ha.pair (hb.pair (hf.pair hx)))
++  composeFour applicationPrimitive ha hb hf hx
+@@ -79,5 +92,11 @@
+-theorem iteratorBodyPrimitive : Primrec iteratorBodyCode := by
+-  have terminal := boundCodePrimitive.comp nativeTowerTypeCodeEffectivity (Primrec.const 0)
+-  have step := lambdaCodePrimitive.comp (Primrec.const 0) stepPrimitive
+-  exact recursorPrimitive.comp (nativeTowerTypeCodeEffectivity.pair
+-    ((Primrec.const zeroCode).pair (step.pair terminal)))
++private theorem iteratorTerminalPrimitive : Primrec (fun n => boundCode (typeCode n) 0) :=
++  boundCodePrimitive.comp nativeTowerTypeCodeEffectivity (Primrec.const 0)
++
++private theorem iteratorBodyStepPrimitive : Primrec (fun n => lambdaCode 0
++    (applicationCode (typeCode (n+1)) (typeCode (n+1))
++      (leftCode (typeCode (n+1)) (boundCode (typeCode (n+1)) 2)) (eraseCode (n+1) 3))) :=
++  lambdaCodePrimitive.comp (Primrec.const 0) stepPrimitive
++
++theorem iteratorBodyPrimitive : Primrec iteratorBodyCode :=
++  composeFour recursorPrimitive nativeTowerTypeCodeEffectivity (Primrec.const zeroCode)
++    iteratorBodyStepPrimitive iteratorTerminalPrimitive

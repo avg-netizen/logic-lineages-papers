@@ -1,0 +1,29 @@
+{
+  "status": "Frozen exact source repair; native pending",
+  "edits": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerIteratorCodeBridge.lean": {
+      "failed_sha256": "bf9d63b48fb0f8f1af4a249598a3638cccbca8f0945b4220e78486bb00e64821",
+      "repaired_sha256": "2908e4fb72b3b0b8495da37acb547eab59324f764719092c7d8233990313e015",
+      "failed_receipt": "1795441186025079465-8",
+      "failed_receipt_sha256": "eb9b18c330c6c8085a876cd48a621d74f3eb39fb690778fead9eda4c59273387",
+      "failed_exact_log_sha256": "c822dcc2080cb4a05b353c8eaf0e662fc421ebf3b7ac4c1dae000f7eb10ffb23",
+      "failed_gate_log_sha256": "a55c139561a638a1f9068ff481012ca648b4f68fac5e97a8ce0980092d5b8495",
+      "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerIteratorCodeBridge.lean:54:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerIteratorCodeBridge.lean:87:64: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern"
+    },
+    "formalization/LogicLineages/PersistentMarking/NativeTowerIteratorCodeProof.lean": {
+      "failed_sha256": "f9ca8d8127434a8587c26984b12451ff506d5c971c81bfe6ea27eb43b806abf4",
+      "repaired_sha256": "137d2db72dbf45c73cee00d669cb3878b79a260d3f784577ea8d4a7645d34e33",
+      "failed_receipt": "1795441187028982862-21",
+      "failed_receipt_sha256": "084f15bf1f1e64ffd3519f811f0c1c3cd946d0c90d69c97616396f06f4562d68",
+      "failed_exact_log_sha256": "bd818d8a03d0ba827f0d8c290b9d7e2929863f75e5ff1f9e44eaff978294bdfe",
+      "failed_gate_log_sha256": "fc632bc5ef1fcc6751f31d6893a3b5fa19b62c70002a33484d7b9de38876fd94",
+      "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerIteratorCodeProof.lean:32:64: error: Type mismatch\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerIteratorCodeProof.lean:32:86: error: Application type mismatch: The argument\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerIteratorCodeProof.lean:35:0: error: (deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerIteratorCodeProof.lean:43:8: error: (kernel) unknown constant '_private.LogicLineages.PersistentMarking.NativeTowerIteratorCodeProof.0.LogicLineages.PersistentMarking.NativeTowerIteratorCodeProof.buildApp'\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerIteratorCodeProof.lean:62:16: error: (kernel) unknown constant '_private.LogicLineages.PersistentMarking.NativeTowerIteratorCodeProof.0.LogicLineages.PersistentMarking.NativeTowerIteratorCodeProof.buildApp'\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerIteratorCodeProof.lean:71:16: error: (kernel) unknown constant '_private.LogicLineages.PersistentMarking.NativeTowerIteratorCodeProof.0.LogicLineages.PersistentMarking.NativeTowerIteratorCodeProof.buildApp'\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerIteratorCodeProof.lean:79:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerIteratorCodeProof.lean:85:8: error: (kernel) unknown constant 'LogicLineages.PersistentMarking.NativeTowerIteratorCodeProof.iteratorBodyPrimitive'"
+    }
+  },
+  "author_manifest": "formalization/verification/continuation-2026-11-23/P16-NATIVE-TOWER-ITERATOR-CODE-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "5c0c98d04f0e5a832b5755b2175dcbb5485712bbed8688a6e8ac91b4cbd6fd94",
+  "patch": "formalization/verification/continuation-2026-11-23/P16-NATIVE-TOWER-ITERATOR-CODE-REPAIR-01.patch",
+  "patch_sha256": "a0c6597e9ac18b0bdd582b3f1d70001d494d12df3a16fa2d77c375d5dcb905e3",
+  "reverse_reconstructs_both_exact_failed_sources": true,
+  "scope": "Expose original reducible type and iterator let aliases in bridge; exact field projection and separated generic typed four-argument composition for primitive proof; no kernel/target/setting changes."
+}
