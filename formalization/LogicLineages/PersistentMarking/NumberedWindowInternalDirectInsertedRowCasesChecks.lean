@@ -1,0 +1,12 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedRowCasesProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedRowCasesChecks
+open NumberedWindowInternalDirectInsertedRowCasesTargets
+
+theorem exact_OpenOriginalInsertedRowCases : ExactOpenInsertedRowCases :=
+  NumberedWindowInternalDirectInsertedRowCases.exactOpenInsertedRowCases
+
+#print axioms exact_OpenOriginalInsertedRowCases
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedRowCasesChecks
