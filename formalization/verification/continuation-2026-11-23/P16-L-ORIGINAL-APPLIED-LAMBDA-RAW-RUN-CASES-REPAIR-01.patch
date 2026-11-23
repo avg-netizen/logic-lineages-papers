@@ -1,0 +1,5 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowAppliedLambdaOriginalRunCasesProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowAppliedLambdaOriginalRunCasesProof.lean
+@@ -75 +75 @@
+-    exact ⟨w,out,rfl,rfl,codeOfNode hy,frame.symm⟩
++    exact ⟨w,out,rfl,rfl,(codeOfNode hy).trans (codeOfNode (lambdaView dom out)).symm,frame.symm⟩
