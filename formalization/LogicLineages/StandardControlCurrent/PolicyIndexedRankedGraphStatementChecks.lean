@@ -1,0 +1,20 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicyIndexedRankedGraphTargets
+import LogicLineages.StandardControlCurrent.PolicyIndexedRankedGraphProof
+
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.StatementChecks
+open PolicyIndexedRankedGraph
+
+theorem fixed_exactPolicyIndexedRankedGraph : ExactPolicyIndexedRankedGraph :=
+  exactPolicyIndexedRankedGraph
+theorem fixed_policyIndexedRankedEffectivity : PolicyIndexedRankedEffectivity :=
+  policyIndexedRankedEffectivity
+theorem fixed_fullPolicyIndexedRankedGraph : FullPolicyIndexedRankedGraph :=
+  ⟨fixed_exactPolicyIndexedRankedGraph,fixed_policyIndexedRankedEffectivity⟩
+
+#print axioms fixed_exactPolicyIndexedRankedGraph
+#print axioms fixed_policyIndexedRankedEffectivity
+#print axioms fixed_fullPolicyIndexedRankedGraph
+
+end LogicLineages.StandardControlCurrent.StatementChecks
