@@ -1,0 +1,8 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectProjectedCertSyntaxProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectProjectedCertSyntaxProof.lean
+@@ -106 +106 @@
+-  obtain ⟨positive⟩ := movePositive r row dom cert old key hit.targetField actual
++  obtain ⟨positive⟩ := movePositive r row dom cert old key hit.targetField ⟨f⟩
+@@ -108 +108 @@
+-  exact ⟨hit.parsed,actual,hit.dominatorField,hit.certificateField,
++  exact ⟨hit.parsed,⟨f⟩,hit.dominatorField,hit.certificateField,

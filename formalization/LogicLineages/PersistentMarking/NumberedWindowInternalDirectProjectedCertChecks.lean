@@ -1,0 +1,12 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectProjectedCertProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectProjectedCertChecks
+open NumberedWindowInternalDirectProjectedCertTargets
+
+theorem exact_OpenOriginalProjectedTargetCertificate : ExactProjectedCert :=
+  NumberedWindowInternalDirectProjectedCert.exactProjectedCert
+
+#print axioms exact_OpenOriginalProjectedTargetCertificate
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectProjectedCertChecks
