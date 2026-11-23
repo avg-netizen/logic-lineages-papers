@@ -1,0 +1,5 @@
+# P16 actual original measured auxiliary exchange and packed function edge
+
+Open comparison and composition use the literal calibrated measure/swap/guarded exchange programs. The selected memo's actual child reads and parent write use the already checked thin scratch lookup and successor; exact read projection is recut without the wide table import. The auxiliary measured lift handles distinct raw representatives by recovering two actual directed reports and a common actual measure, deriving same parent measure through actual child lookups, and rebuilding one common optional cover output. The separate function-edge supplier uses both held actual parent window reports, recovers their syntax checks from the physical unrestricted window, and returns the genuinely accepted packed edge. No equality of least outputs or Forward yet.
+
+Native roots: NumberedWindowInternalMeasuredExchangeThinOpenChecks.exact_OpenMeasuredFactoredAuxLift and NumberedWindowInternalMeasuredUnrestrictedFunctionEdgeProof.exact_UnrestrictedMeasuredFunctionEdge.

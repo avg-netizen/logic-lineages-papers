@@ -1,0 +1,17 @@
+--- LogicLineages/PersistentMarking/NumberedWindowInternalBetaCheckerOpenElimProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowInternalBetaCheckerOpenElimProof.lean
+@@ -61 +61,13 @@
+-  have hit := equalityOfAcceptance (ys 0) (ys 1) eq
++  have ysTuple : (![ys 0,ys 1] : Fin 2 → OTerm β) = ys := by
++    funext i
++    refine Fin.cases ?_ (fun k => ?_) i
++    · rfl
++    · have hk : k = 0 := Fin.eq_zero k
++      subst k
++      rfl
++  have acceptEq : Nonempty (Derivation B Δ
++      (ID1Completion.InternalEqualityTestCompositionProof.equalityGraph (suc z) (ys 0) (ys 1))) := by
++    change Nonempty (Derivation B Δ (programGraph equalityTest (suc z) ![ys 0,ys 1]))
++    rw [ysTuple]
++    exact eq
++  have hit := equalityOfAcceptance (ys 0) (ys 1) acceptEq

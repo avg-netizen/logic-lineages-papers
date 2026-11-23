@@ -1,0 +1,8 @@
+--- LogicLineages/PersistentMarking/NumberedWindowInternalBetaRootDispatchNumericProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowInternalBetaRootDispatchNumericProof.lean
+@@ -68 +68,4 @@
+-  rw [betaCall,compositeTwo]
++  change evaluate (.composition beta
++    (Fin.cons (.projection (0 : Fin 3)) (Fin.cons (.projection (2 : Fin 3)) Fin.elim0)))
++    (tape q w r) = run2 beta q r
++  rw [compositeTwo]

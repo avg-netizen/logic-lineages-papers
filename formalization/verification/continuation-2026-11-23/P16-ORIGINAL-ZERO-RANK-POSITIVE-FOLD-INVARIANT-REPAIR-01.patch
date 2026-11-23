@@ -1,0 +1,5 @@
+--- failed/NumberedWindowInternalZeroRankPositiveFoldInvariantProof.lean
++++ repaired/NumberedWindowInternalZeroRankPositiveFoldInvariantProof.lean
+@@ -62 +62 @@
+-        rw [Option.filter_some_neg (neverReturn a h b before next)]
++        rw [Option.filter_some_neg (neverReturn a h b before next)] <;> rfl

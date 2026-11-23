@@ -1,0 +1,46 @@
+--- LogicLineages/PersistentMarking/NumberedWindowInternalBetaRootDispatchNumericProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowInternalBetaRootDispatchNumericProof.lean
+@@ -5 +5 @@
+-import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawFunctionFrameNumericASTProof
++public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawFunctionFrameNumericASTProof
+@@ -29,4 +29,2 @@
+-theorem witnessOne (q w r : Nat) :
+-    evaluate witnessTest (tape q w r) = 1 ↔ unpackNode w = some (6,[]) := by
+-  rw [witnessTest,atSlot]
+-  change run (nodeGood (literal 1 6) 0) w = 1 ↔ _
++private theorem unaryOne (w : Nat) :
++    run (nodeGood (literal 1 6) 0) w = 1 ↔ unpackNode w = some (6,[]) := by
+@@ -42,4 +40,2 @@
+-private theorem witnessBit (q w r : Nat) :
+-    evaluate witnessTest (tape q w r) = 0 ∨ evaluate witnessTest (tape q w r) = 1 := by
+-  rw [witnessTest,atSlot]
+-  change run (nodeGood (literal 1 6) 0) w = 0 ∨ run (nodeGood (literal 1 6) 0) w = 1
++private theorem unaryBit (w : Nat) :
++    run (nodeGood (literal 1 6) 0) w = 0 ∨ run (nodeGood (literal 1 6) 0) w = 1 := by
+@@ -48,0 +45,20 @@
++
++attribute [local irreducible] run nodeGood literal
++
++private theorem slotValue (q w r : Nat) :
++    evaluate witnessTest (tape q w r) = run (nodeGood (literal 1 6) 0) w := by
++  have coordinate : (tape q w r).get (1 : Fin 3) = w := rfl
++  unfold witnessTest
++  rw [atSlot,coordinate]
++
++theorem witnessOne (q w r : Nat) :
++    evaluate witnessTest (tape q w r) = 1 ↔ unpackNode w = some (6,[]) := by
++  rw [slotValue]
++  exact unaryOne w
++
++private theorem witnessZero (q w r : Nat) (h : unpackNode w ≠ some (6,[])) :
++    evaluate witnessTest (tape q w r) = 0 := by
++  rw [slotValue]
++  have seen : run (nodeGood (literal 1 6) 0) w ≠ 1 :=
++    fun hit => h ((unaryOne w).mp hit)
++  exact (unaryBit w).resolve_right seen
+@@ -67,2 +83,3 @@
+-    simp [check,h,parts]
+-  · have bit := (witnessBit q w r).resolve_right (fun e => h ((witnessOne q w r).1 e))
++    rw [check,h,Option.any_some]
++    rfl
++  · have bit := witnessZero q w r h

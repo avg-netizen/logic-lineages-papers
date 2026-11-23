@@ -1,0 +1,12 @@
+--- LogicLineages/PersistentMarking/NumberedWindowInternalBetaCheckerOpenElimProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowInternalBetaCheckerOpenElimProof.lean
+@@ -50 +50,8 @@
+-  change Nonempty (Derivation B Δ (programGraph (.composition sub ![arg,body]) (suc (dst.relabel j)) xs))
++  have xsRelabel : xs = (fun i : Fin 2 => (![src,dst] i).relabel j) := by
++    funext i
++    refine Fin.cases ?_ (fun k => ?_) i
++    · rfl
++    · have hk : k = 0 := Fin.eq_zero k
++      subst k
++      rfl
++  rw [← xsRelabel] at parts ⊢

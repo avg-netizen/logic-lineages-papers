@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredUnrestrictedNumericChoiceProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredUnrestrictedNumericChoiceProof.lean
+@@ -55,2 +55,2 @@
+-  have syntax := exact_SyntaxWindowCalibration s baseW V w valid
+-  have combined := exact_LiteralCoveredWindowCalibration C s (syntaxWindow baseW V) cover covered syntax
++  have syntaxFit := exact_SyntaxWindowCalibration s baseW V w valid
++  have combined := exact_LiteralCoveredWindowCalibration C s (syntaxWindow baseW V) cover covered syntaxFit

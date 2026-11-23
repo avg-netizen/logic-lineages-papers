@@ -1,0 +1,44 @@
+{
+  "status": "frozen proof-only repair; retry pending",
+  "gate": "LogicLineages.PersistentMarking.NumberedWindowInternalZeroRankPositiveFoldInvariantProof",
+  "failed_native": {
+    "receipt": "1795459589707926209-18",
+    "receipt_pin": {
+      "path": "formalization/build-reports/1795459589707926209-18.json",
+      "sha256": "1a3251fe1593160c105a2c78bd5d1428b545a731ab72d7e90d66253ad3ba95d8"
+    },
+    "module_log": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-zero-rank-positive-invariant-repair01/1795459589707926209-18.module.log",
+      "sha256": "90a3d3d387be5edaaf3aaf409abf7e7b6a91b667d47ae73b3994241bb46f3907"
+    },
+    "failed_source": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-zero-rank-positive-invariant-repair01/NumberedWindowInternalZeroRankPositiveFoldInvariantProof.lean.failed-source",
+      "sha256": "8dbbdb071bdad01bcc5dc89f205adec33119b38ed6cdee54d30d0ebc56c2dbeb"
+    },
+    "diagnosis": "After exact guarded rank-positive step rejects both cases, sole residual goal is Option.filter keep none = none."
+  },
+  "repair": "Apply reflexivity after the unchanged rewrite. No statement, definition, import or cap change.",
+  "changed_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalZeroRankPositiveFoldInvariantProof.lean",
+    "sha256": "23d7178951e055724649a7b110834d8184396702bba21cae8357a2afa331cb2e"
+  },
+  "unchanged_siblings": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalZeroRankPositiveFoldDecodeProof.lean",
+      "sha256": "b84eb2e93556aa1458af2dfe15c473e5b22434f6173cd31a5e1f282e6466d70e"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalZeroRankPositiveFoldResultProof.lean",
+      "sha256": "f5277c9e305b0a40b307c983c54e51460b01f3f3e712348c2214dfc94ed59479"
+    }
+  ],
+  "reverse_patch": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/original-zero-rank-positive-invariant-repair01/repair01.patch",
+    "sha256": "cbe4a8edc6ede2fbb3b6d8e752967456f1cc4f935433874cc52d5666af879bdf"
+  },
+  "reverse_bytes_verified": true,
+  "original_author_manifest": {
+    "path": "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-ZERO-RANK-POSITIVE-FOLD-NUMERIC-AUTHOR-MANIFEST.json",
+    "sha256": "d4d295d2d75ef6f949b6924c73cafa23d78b4d5215797e2e3177690dbe03da98"
+  }
+}

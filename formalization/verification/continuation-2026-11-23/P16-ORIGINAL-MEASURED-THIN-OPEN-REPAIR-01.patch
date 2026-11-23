@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredExchangeThinOpenChecks.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredExchangeThinOpenChecks.lean
+@@ -29 +29 @@
+-open NumberedWindowInternalMeasuredExchangeThinOpenCompareProof (calibration compareCases)
++open NumberedWindowInternalMeasuredExchangeThinOpenCompareProof (compareCases)
+@@ -50 +50 @@
+-    apply compareCases M fn fn' _ equalMeasures
++    refine compareCases M fn fn' (accepted X a b) equalMeasures ?_
