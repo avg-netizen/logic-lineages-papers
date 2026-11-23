@@ -1,0 +1,20 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptTailTransferProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptTailTransferProof.lean
+@@ -2,0 +3 @@
++import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountEquivalenceProof
+@@ -33,0 +35,9 @@
++private theorem fromVector {β : Type} {Δ : List (Formula β)} (out h t : OTerm β)
++    (g : Nonempty (Derivation B Δ (programGraph consCode out ![h,t]))) :
++    Nonempty (Derivation B Δ (consGraph out h t)) := by
++  have e : (![h,t] : Fin 2 → OTerm β) = Fin.cons h (Fin.cons t Fin.elim0) := by
++    funext i
++    exact Fin.cases rfl (Fin.cases rfl (fun j => Fin.elim0 j)) i
++  rw [e] at g
++  exact g
++
+@@ -63 +73,2 @@
+-  have c := renamePair consCode kept head tail cell ρ chain
++  have c := fromVector (kept.relabel ρ) (head.relabel ρ) (tail.relabel ρ)
++    (renamePair consCode kept head tail cell ρ chain)
+@@ -68,0 +80 @@
++    apply fromVector

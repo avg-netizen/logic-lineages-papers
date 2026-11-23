@@ -1,0 +1,15 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountTupleProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountTupleProof.lean
+@@ -23,0 +24,3 @@
++private def countTape {n : Nat} (needle : OTerm α) (codes : Fin n → OTerm α) :
++    Fin (n+1) → OTerm α := Fin.cons needle codes
++
+@@ -30 +33 @@
+-      (fun a => (Fin.cons needle codes a).relabel j)))) :
++      (fun a => (countTape needle codes a).relabel j)))) :
+@@ -32 +35 @@
+-  let xs : Fin (n+1) → OTerm β := fun a => (Fin.cons needle codes a).relabel j
++  let xs : Fin (n+1) → OTerm β := fun a => (countTape needle codes a).relabel j
+@@ -48 +51 @@
+-  apply programsCases selectCount (Fin.cons needle codes) goal
++  apply programsCases selectCount (countTape needle codes) goal

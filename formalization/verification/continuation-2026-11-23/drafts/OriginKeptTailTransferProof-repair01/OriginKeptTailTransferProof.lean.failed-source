@@ -1,0 +1,79 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountConsShiftProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectSharedTapeSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserOpenSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionRawGraphProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveUnfoldingSupportProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalOriginKeptTailTransferProof
+open FirstOrder Language LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalApplicationValidityStackAppend (append)
+open ID1Completion.InternalListCodec (consCode)
+open ID1Completion.InternalListCodecSupportProof (consGraph)
+open ID1Completion.InternalAcceptanceSupportProof (programCases)
+open ID1Completion.InternalPositiveUnfoldingSupportProof (formulaRelabelComposition)
+open ID1Completion.InternalTagArithmeticSyntaxProof (sucRelabel zRelabel)
+open NumberedWindowInternalSparsePathEnvelopeTargets (suc z)
+open NumberedWindowInternalLiteralCount (permutation)
+open NumberedWindowInternalLiteralCountEquivalenceProof (exact_LiteralObserverTransitivity)
+open NumberedWindowInternalLiteralCountConsShiftProof (exact_LiteralConsShift)
+open NumberedWindowInternalDirectSharedTapeSyntaxProof (renamePair)
+open NumberedWindowInternalDirectSourcePartitionRawGraphProof (keepThrough)
+open NumberedWindowInternalSparseFieldParserOpenSyntaxProof (binaryInputsRename)
+
+attribute [local irreducible] programGraph
+variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+abbrev App (l r out : OTerm α) : Formula α := programGraph append out ![l,r]
+abbrev Cmp (l r : OTerm α) : Formula α := programGraph permutation (suc z) ![l,r]
+
+private theorem moveCmp {β : Type} {Δ : List (Formula β)} (s t : OTerm α)
+    (h : Nonempty (Derivation B Γ (Cmp s t))) (j : α → β)
+    (keep : ∀ f ∈ Γ, f.relabel j ∈ Δ) :
+    Nonempty (Derivation B Δ (Cmp (s.relabel j) (t.relabel j))) := by
+  simpa only [Cmp,sucRelabel,zRelabel] using renamePair permutation (suc z) s t h j keep
+
+/-- In the original object calculus, moving one actual chosen head from
+the kept tape to the removed tape preserves the whole count balance.
+The new scratch cons and actual append outputs are existentially
+eliminated, with no proof-game resampling or set equality. -/
+theorem exact_OriginalKeptTailTransfer (src kept head tail removed joined : OTerm α)
+    (cell : Nonempty (Derivation B Γ (consGraph kept head tail)))
+    (appendHeld : Nonempty (Derivation B Γ (App kept removed joined)))
+    (balance : Nonempty (Derivation B Γ (Cmp src joined))) (goal : Formula α)
+    (next : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (extra out : OTerm β),
+      (∀ f ∈ Γ, f.relabel j ∈ Δ) →
+      Nonempty (Derivation B Δ (consGraph extra (head.relabel j) (removed.relabel j))) →
+      Nonempty (Derivation B Δ (App (tail.relabel j) extra out)) →
+      Nonempty (Derivation B Δ (Cmp (src.relabel j) out)) →
+      Nonempty (Derivation B Δ (goal.relabel j))) :
+    Nonempty (Derivation B Γ goal) := by
+  apply programCases consCode ![head,removed] goal
+  intro β j Δ extra keep ec
+  rw [binaryInputsRename] at ec
+  apply programCases append ![tail.relabel j,extra] (goal.relabel j)
+  intro γ k Ω out hold ap
+  rw [binaryInputsRename] at ap
+  let ρ := k ∘ j
+  have chain := keepThrough j k keep hold
+  have c := renamePair consCode kept head tail cell ρ chain
+  have ec' := renamePair consCode extra (head.relabel j) (removed.relabel j) ec k hold
+  have a := renamePair append joined kept removed appendHeld ρ chain
+  have b := moveCmp src joined balance ρ chain
+  have eh : Nonempty (Derivation B Ω (consGraph (extra.relabel k)
+      (head.relabel ρ) (removed.relabel ρ))) := by
+    simpa only [ρ,← Term.relabel_relabel] using ec'
+  have tailApp : Nonempty (Derivation B Ω (App (tail.relabel ρ) (extra.relabel k) out)) := by
+    simpa only [ρ,← Term.relabel_relabel] using ap
+  have q := exact_LiteralConsShift (head.relabel ρ) (tail.relabel ρ) (removed.relabel ρ)
+    (kept.relabel ρ) (extra.relabel k) (joined.relabel ρ) out c eh a tailApp
+  have same := exact_LiteralObserverTransitivity (src.relabel ρ) (joined.relabel ρ) out b q
+  rw [formulaRelabelComposition j k goal]
+  exact next γ ρ Ω (extra.relabel k) out chain eh tailApp same
+
+#print axioms exact_OriginalKeptTailTransfer
+end LogicLineages.PersistentMarking.NumberedWindowInternalOriginKeptTailTransferProof

@@ -1,0 +1,16 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseZeroKeepProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseZeroKeepProof.lean
+@@ -35,2 +35,2 @@
+-private theorem pairRestTransport (acc bit oldRest to : OTerm alpha)
+-    (he : Nonempty (Derivation body Delta (eqn oldRest to)))
++private theorem pairRestTransport (acc bit oldRest newRest : OTerm alpha)
++    (he : Nonempty (Derivation body Delta (eqn oldRest newRest)))
+@@ -38 +38 @@
+-    Nonempty (Derivation body Delta (graph2 InternalPairing.pairing acc bit to)) := by
++    Nonempty (Derivation body Delta (graph2 InternalPairing.pairing acc bit newRest)) := by
+@@ -41 +41 @@
+-    acc ![bit,oldRest] ![bit,to] _ hp
++    acc ![bit,oldRest] ![bit,newRest] _ hp
+@@ -48 +48 @@
+-    change Nonempty (Derivation body Delta (equal oldRest to))
++    change Nonempty (Derivation body Delta (equal oldRest newRest))

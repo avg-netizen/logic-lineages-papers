@@ -1,0 +1,43 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAppendAlgebraProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAppendAlgebraProof.lean
+@@ -84 +84 @@
+-  let B := b.relabel j
++  let Bterm := b.relabel j
+@@ -94 +94 @@
+-  let codes : Fin 5 → OTerm β := ![A,B,C,AB,BC]
++  let codes : Fin 5 → OTerm β := ![A,Bterm,C,AB,BC]
+@@ -101 +101 @@
+-  have cb : Nonempty (Derivation B Ω (counted (B.relabel k) (key.relabel k) vb)) :=
++  have cb : Nonempty (Derivation B Ω (counted (Bterm.relabel k) (key.relabel k) vb)) :=
+@@ -116 +116 @@
+-  obtain ⟨eab⟩ := exact_LiteralOpenCountAppend (A.relabel k) (B.relabel k)
++  obtain ⟨eab⟩ := exact_LiteralOpenCountAppend (A.relabel k) (Bterm.relabel k)
+@@ -118,2 +118,2 @@
+-    (renamePair append AB A B pab k retain) ca cb cab
+-  obtain ⟨ebc⟩ := exact_LiteralOpenCountAppend (B.relabel k) (C.relabel k)
++    (renamePair append AB A Bterm pab k retain) ca cb cab
++  obtain ⟨ebc⟩ := exact_LiteralOpenCountAppend (Bterm.relabel k) (C.relabel k)
+@@ -121 +121 @@
+-    (renamePair append BC B C pbc k retain) cb cc cbc
++    (renamePair append BC Bterm C pbc k retain) cb cc cbc
+@@ -147 +147 @@
+-  let B := b.relabel j
++  let Bterm := b.relabel j
+@@ -162 +162 @@
+-  let codes : Fin 8 → OTerm β := ![A,B,C,D,AB,CD,AC,BD]
++  let codes : Fin 8 → OTerm β := ![A,Bterm,C,D,AB,CD,AC,BD]
+@@ -169 +169 @@
+-  have cb : Nonempty (Derivation B Ω (counted (B.relabel k) (key.relabel k) vb)) :=
++  have cb : Nonempty (Derivation B Ω (counted (Bterm.relabel k) (key.relabel k) vb)) :=
+@@ -193 +193 @@
+-  obtain ⟨eab⟩ := exact_LiteralOpenCountAppend (A.relabel k) (B.relabel k)
++  obtain ⟨eab⟩ := exact_LiteralOpenCountAppend (A.relabel k) (Bterm.relabel k)
+@@ -195 +195 @@
+-    (renamePair append AB A B pab k retain) ca cb cab
++    (renamePair append AB A Bterm pab k retain) ca cb cab
+@@ -202 +202 @@
+-  obtain ⟨ebd⟩ := exact_LiteralOpenCountAppend (B.relabel k) (D.relabel k)
++  obtain ⟨ebd⟩ := exact_LiteralOpenCountAppend (Bterm.relabel k) (D.relabel k)
+@@ -204 +204 @@
+-    (renamePair append BD B D pbd k retain) cb cd cbd
++    (renamePair append BD Bterm D pbd k retain) cb cd cbd

@@ -1,0 +1,21 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapIntroSyntaxProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapIntroSyntaxProof.lean
+@@ -34,0 +35,2 @@
++attribute [local irreducible] programGraph
++
+@@ -55,4 +57,11 @@
+-  congr 1
+-  unfold projectedBody
+-  rw [projectedRename]
+-  simp only [Term.relabel_relabel,Term.relabel] <;> rfl
++  let rho : α ⊕ Fin 1 → β ⊕ Fin 1 := Sum.map j id
++  have slots : (projectedBody rows).relabel rho = projectedBody (rows.relabel j) := by
++    unfold projectedBody
++    rw [projectedRename]
++    have first : (Term.var (.inr (0 : Fin 1)) : OTerm (α ⊕ Fin 1)).relabel rho =
++        (Term.var (.inr (0 : Fin 1)) : OTerm (β ⊕ Fin 1)) := rfl
++    have second : (rows.relabel Sum.inl).relabel rho = (rows.relabel j).relabel Sum.inl := by
++      rw [Term.relabel_relabel,Term.relabel_relabel]
++      rfl
++    rw [first,second]
++  rw [slots]
