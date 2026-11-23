@@ -1,0 +1,45 @@
+{
+  "status": "frozen proof-layout-only repair; retry pending",
+  "gate": "LogicLineages.PersistentMarking.NativeTowerVariableDimensionBandsProof",
+  "failed_native": {
+    "receipt": "1795454601800916822-38",
+    "receipt_pin": {
+      "path": "formalization/build-reports/1795454601800916822-38.json",
+      "sha256": "24e27fc77dbb5ee8643a190b4b13131cef23e352d80814772f0c347b39e484dc"
+    },
+    "module_log": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-tower-variable-dimension-bands-repair01/1795454601800916822-38.module.log",
+      "sha256": "89b959c379fdd2b12724db85c31983770e667e985ef276f06ce241fbdc2ce51d"
+    },
+    "failed_source": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-tower-variable-dimension-bands-repair01/NativeTowerVariableDimensionBandsProof.lean.failed-source",
+      "sha256": "c50eddcad395a85c36f83a4d49a7abfd3e8451d6b926a6f61e8fbfc581a0266c"
+    },
+    "diagnosis": "Invalid multiline layout for the local succ alternative: its second transBase argument was parsed outside the tactic; remaining zero/succ goals cascade."
+  },
+  "repair": "Keep the same transBase proof and second argument on the same properly indented tactic line. No statements, imports, cuts, solver options, or caps changed.",
+  "changed_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NativeTowerVariableDimensionBandsProof.lean",
+    "sha256": "3b716bd419e5a861573e7fca3ba8d86f51a9cda436923a3a6dd56d5be344d9d2"
+  },
+  "increasing_cuts_native_pass": {
+    "receipt": "1795454600839398523-28",
+    "receipt_pin": {
+      "path": "formalization/build-reports/1795454600839398523-28.json",
+      "sha256": "019f796015c5ef49b04ff3ea7b46667be7abfe7f11e32205c588a42541d80c5b"
+    },
+    "source": {
+      "path": "formalization/LogicLineages/PersistentMarking/NativeTowerIncreasingInnerCutsProof.lean",
+      "sha256": "7a69001ffa491bd367f4f8596b3d915a6d578b032199aab24323a928087c8dfc"
+    }
+  },
+  "reverse_patch": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/original-tower-variable-dimension-bands-repair01/repair01.patch",
+    "sha256": "3019ace7fe17bc73fa283bd201aa6b69793112491a5d1827f7dabcf0979d140c"
+  },
+  "reverse_bytes_verified": true,
+  "original_author_manifest": {
+    "path": "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-FIXED-TOWER-VARIABLE-DIMENSION-SUM-AUTHOR-MANIFEST.json",
+    "sha256": "d9821a63a76e36aea4d32001431d24e9a0345a3fdf18e39ed492921b3f79e438"
+  }
+}

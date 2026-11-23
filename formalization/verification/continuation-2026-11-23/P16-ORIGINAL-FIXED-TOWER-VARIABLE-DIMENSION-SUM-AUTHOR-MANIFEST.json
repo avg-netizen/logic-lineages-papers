@@ -1,0 +1,61 @@
+{
+  "paper": 16,
+  "status": "frozen source only; two separate native gates pending",
+  "gate_order": [
+    "LogicLineages.PersistentMarking.NativeTowerIncreasingInnerCutsProof",
+    "LogicLineages.PersistentMarking.NativeTowerVariableDimensionBandsProof"
+  ],
+  "expected_named_axiom_outputs": {
+    "LogicLineages.PersistentMarking.NativeTowerIncreasingInnerCutsProof": [
+      "exact_OriginalZeroBelowEvaluatedZero",
+      "exact_EvaluatedInnerStrictMonotone",
+      "exact_EvaluatedIterRaises",
+      "exact_EvaluatedPositiveIterRaises",
+      "exact_EvaluatedCutIterStaysInCone",
+      "exact_OriginalBandStartRises",
+      "exact_OriginalBandStartsAdjacent",
+      "exact_OriginalBandStartsWeaklyOrdered",
+      "exact_OriginalBandStartAdmitted"
+    ],
+    "LogicLineages.PersistentMarking.NativeTowerVariableDimensionBandsProof": [
+      "exact_OriginalAnchoredBand",
+      "exact_OriginalTowerBandEndpoints",
+      "exact_OriginalTowerBandSeparation",
+      "exact_OriginalTowerBandLexPreservation",
+      "exact_OriginalTowerVariableDimensionLexSum"
+    ]
+  },
+  "source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerIncreasingInnerCutsProof.lean": "7a69001ffa491bd367f4f8596b3d915a6d578b032199aab24323a928087c8dfc",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerVariableDimensionBandsProof.lean": "c50eddcad395a85c36f83a4d49a7abfd3e8451d6b926a6f61e8fbfc581a0266c",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-FIXED-TOWER-VARIABLE-DIMENSION-SUM-SOURCE-MAP.md": "49e7df7189b32f0e79da56496c6dd611b75794cf790f87705f399311c2bbaa68"
+  },
+  "interface_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerOuterIndexConeProof.lean": "6850330beb1ffe02d6f7abf0f1d2fef8c85671e210ff062bdf062b4eb6dad660",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerNestedInnerOrbitLexProof.lean": "98cd2a26dbd6b0ff7f173bf4804ec0329d1bd8c3c62a0d7313cfc373fdbd90cc",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerInnerMapHigherIteratorProof.lean": "0f66d9734a7b23900d63c34887cda8aec00708e9a1407dad0c2b635cc9b438b8",
+    "formalization/LogicLineages/PersistentMarking/NativeIndexedCarrierFiniteOrbitProof.lean": "2f89e3bc631c22046940323d8a06c2ceada134fb42141713a97d4e5178bd649b",
+    "formalization/LogicLineages/PersistentMarking/NativeIndexedCarrierOrbitBlocksProof.lean": "bf6fa7450be612666a398e050a57bf6869c880f6988bfa9770d9edfbba5e00a2",
+    "formalization/LogicLineages/PersistentMarking/NativeOrdinalCapPathsTargets.lean": "fd6e8ea69fa2c9b2aa305ebe901168e9a2576ee3d0a0d44fd8250df4ea14c5b6",
+    "formalization/LogicLineages/PersistentMarking/NativeOrdinalBasisChecks.lean": "5f8ebc44ae2b3c6fb24fdcceb0d6b443e940c1e5cf1a9b3e8d8a969b82942f6b"
+  },
+  "prior_evidence_sha256": {
+    "formalization/build-reports/1795454035223151406-8.json": "9ec0fcc363eee90b8b821d112dddcde9610f2069d8f59a08add3d0a0647d59d5",
+    "formalization/build-reports/1795454198264175250-14.json": "c1ca44c6ab8ebc2f1da88d96dedefb4d8b56679649dc70a17fc41c4514a9a803"
+  },
+  "static_closures": {
+    "LogicLineages.PersistentMarking.NativeTowerIncreasingInnerCutsProof": {
+      "local": 297,
+      "external": [
+        "Init"
+      ]
+    },
+    "LogicLineages.PersistentMarking.NativeTowerVariableDimensionBandsProof": {
+      "local": 299,
+      "external": [
+        "Init"
+      ]
+    }
+  },
+  "boundary": "One actual whole variable-dimensional lex sum strictly preserving native comparison inside fixed printed tower; no named ordinal or rank and no reflection assertion."
+}

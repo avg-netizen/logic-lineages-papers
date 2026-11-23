@@ -1,0 +1,7 @@
+--- failed/NativeTowerVariableDimensionBandsProof.lean
++++ repaired/NativeTowerVariableDimensionBandsProof.lean
+@@ -26,2 +26,2 @@
+-      | succ p => exact transBase starts
+-          (exact_OriginalInnerOrbitSameIndex S l a (Nat.zero_lt_succ p))
++      | succ p =>
++        exact transBase starts (exact_OriginalInnerOrbitSameIndex S l a (Nat.zero_lt_succ p))

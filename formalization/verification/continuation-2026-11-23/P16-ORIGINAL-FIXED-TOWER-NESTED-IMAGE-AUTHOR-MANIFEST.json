@@ -1,0 +1,58 @@
+{
+  "paper": 16,
+  "status": "frozen source only; two separate native gates pending",
+  "gate_order": [
+    "LogicLineages.PersistentMarking.NativeTowerNestedInnerOrbitReflectionProof",
+    "LogicLineages.PersistentMarking.NativeTowerNestedInnerOrbitImageRelIsoProof"
+  ],
+  "expected_named_axiom_outputs": {
+    "LogicLineages.PersistentMarking.NativeTowerNestedInnerOrbitReflectionProof": [
+      "exact_OriginalOrbitLexTrichotomy",
+      "exact_OriginalNativeStrictNoLoop",
+      "exact_ActualFixedTowerNestedStrictIff",
+      "exact_ActualFixedTowerNestedInjective"
+    ],
+    "LogicLineages.PersistentMarking.NativeTowerNestedInnerOrbitImageRelIsoProof": [
+      "exact_OriginalOrbitLexWellOrder",
+      "exact_ActualFixedTowerImageRelIsoAndBound",
+      "exact_ActualFixedTowerImageWellOrder"
+    ]
+  },
+  "source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerNestedInnerOrbitReflectionProof.lean": "730bbceae4db16dfcece5260c5faedb67f08ffcbf0b61641a723d56afd11cde1",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerNestedInnerOrbitImageRelIsoProof.lean": "adb3fa0aab0db7c10750ef1b237db5326a0721d36fe5c827370a0913476112fc",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-FIXED-TOWER-NESTED-IMAGE-SOURCE-MAP.md": "1daf1c7fd6bb74a2607ea4dd74a71b66547cc8db7c619f66c33815600f999baa"
+  },
+  "interface_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerNestedInnerOrbitLexProof.lean": "98cd2a26dbd6b0ff7f173bf4804ec0329d1bd8c3c62a0d7313cfc373fdbd90cc",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerOuterIndexConeProof.lean": "6850330beb1ffe02d6f7abf0f1d2fef8c85671e210ff062bdf062b4eb6dad660",
+    "formalization/LogicLineages/PersistentMarking/NativeClosedStrictWellFoundedChecks.lean": "cc7abcd142910c274d0148a3c87bebe0f00e550336d25f10d01655b1cc2a13b5",
+    "formalization/.lake/packages/mathlib/Mathlib/Logic/Equiv/Set.lean": "65c3205dafdb9c0a8714495c3fc2983d615050dedc6379dec4614f2839a98777",
+    "formalization/.lake/packages/mathlib/Mathlib/Order/RelIso/Basic.lean": "f134e208ef1ed7469f55b728b3abbaf40d3b9460e8d396abbdb8740673919f45",
+    "formalization/.lake/packages/mathlib/Mathlib/Order/RelClasses.lean": "a28675ceb792d080859b6e513d9fa3e5e03eb58a94b30fa0ea59b477b05db079"
+  },
+  "prior_evidence_sha256": {
+    "formalization/build-reports/1795454198264175250-14.json": "c1ca44c6ab8ebc2f1da88d96dedefb4d8b56679649dc70a17fc41c4514a9a803",
+    "formalization/verification/continuation-2026-11-23/1667-p16-native-cap-image-reliso-native.json": "75679ec719e6fb4e8afb8521ed3168e811b96ff28ee55e08304338faabb52bec"
+  },
+  "static_closures": {
+    "LogicLineages.PersistentMarking.NativeTowerNestedInnerOrbitReflectionProof": {
+      "local": 679,
+      "external": [
+        "Init",
+        "Init.Data.List.MinMax",
+        "Init.Data.List.Perm"
+      ]
+    },
+    "LogicLineages.PersistentMarking.NativeTowerNestedInnerOrbitImageRelIsoProof": {
+      "local": 680,
+      "mathlib_source_modules": 175,
+      "mathlib_oleans_present": 175,
+      "direct_additional_external": [
+        "Mathlib.Logic.Equiv.Set",
+        "Mathlib.Order.RelIso.Basic"
+      ]
+    }
+  },
+  "boundary": "Actual original finite native image comparison, injectivity and relation well-order at each dimension; no rank or height."
+}

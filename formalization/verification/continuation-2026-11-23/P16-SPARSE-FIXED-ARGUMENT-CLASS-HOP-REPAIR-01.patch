@@ -1,0 +1,19 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFixedArgumentClassHopProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFixedArgumentClassHopProof.lean
+@@ -21,0 +22 @@
++open SourceComputabilityFormulaSupportProof (numeral)
+@@ -46,0 +48,7 @@
++private theorem numeralRename {β : Type} (n : Nat) (j : α → β) :
++    (numeral n : OTerm α).relabel j = numeral n := by
++  induction n with
++  | zero => exact zRelabel j
++  | succ n ih =>
++    simpa only [numeral,sucRelabel] using congrArg ID1Completion.InternalTagArithmeticSyntaxProof.suc ih
++
+@@ -50,2 +58 @@
+-  rw [rawConsRename,rawConsRename,zRelabel]
+-  rfl
++  rw [rawConsRename,rawConsRename,zRelabel,numeralRename]
+@@ -124 +131 @@
+-  simpa only [formulaRelabelComposition,J] using next γ J Θ (a.relabel k) b compose hL hR full
++  simpa only [formulaRelabelComposition,J] using next γ J Θ (a.relabel k) b compose ⟨lG⟩ ⟨rG⟩ full

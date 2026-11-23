@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalNeutralAuxiliaryNumericCalibrationProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalNeutralAuxiliaryNumericCalibrationProof.lean
+@@ -82 +82,5 @@
+-    simp [equal,bothEvaluation,bottom,targetValue,scalarCal,hscalar]
++    have terminal :
++        evaluate bottomTarget (packedAuxFree c dom cod stored name arg ::ᵥ w ::ᵥ y ::ᵥ nil) = 1 :=
++      bottom.trans (if_pos equal)
++    have carrier : run i y = 1 := by rw [scalarCal,hscalar]; rfl
++    rw [if_pos equal,if_neg Nat.one_ne_zero,bothEvaluation,terminal,targetValue,carrier] <;> simp

@@ -1,0 +1,47 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalNeutralAuxiliaryNumericCalibrationProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalNeutralAuxiliaryNumericCalibrationProof.lean
+@@ -3 +3 @@
+-import LogicLineages.PersistentMarking.NumberedWindowAtomicRawStepFieldProof
++import LogicLineages.PersistentMarking.NumberedWindowConcretePositiveEndpointsScalarProof
+@@ -24,0 +25 @@
++open NumberedWindowInternalFreshProbeDispatchProgram (compareNumbers)
+@@ -28 +29 @@
+-open NumberedWindowAtomicRawStepFieldProof (nodePacked)
++open NumberedWindowConcretePositiveEndpointsScalarProof (scalarEndpoints)
+@@ -30 +30,0 @@
+-open NumberedWindowFieldAlgorithm (unpackNode)
+@@ -39 +39,5 @@
+-  rw [sameField,compositeTwo,sourceValue,targetValue,compareEvaluation]
++  change evaluate (.composition compareNumbers
++    (Fin.cons (NumberedWindowInternalAtomicRefinement.atSource p)
++      (Fin.cons (NumberedWindowInternalAtomicRefinement.atTarget p) Fin.elim0)))
++    (x ::ᵥ w ::ᵥ y ::ᵥ nil) = _
++  rw [compositeTwo,sourceValue,targetValue,compareEvaluation]
+@@ -52,4 +56,4 @@
+-  have xc : run rawContext x = c := hx.1
+-  have yc : run rawContext y = c := hy.1
+-  have xr : run rawResult x = cod := hx.2.1
+-  have yr : run rawResult y = cod := hy.2.1
++  have xc : run rawContext x = c := by simpa only [x,packedAuxFree] using hx.1
++  have yc : run rawContext y = c := by simpa only [y,packedAuxBottom] using hy.1
++  have xr : run rawResult x = cod := by simpa only [x,packedAuxFree] using hx.2.1
++  have yr : run rawResult y = cod := by simpa only [y,packedAuxBottom] using hy.2.1
+@@ -69 +73 @@
+-  have endpoint := exact_ConcreteAuxFreeAddressPositive xs s c dom cod stored name arg w y accepted
++  have endpoint := exact_ConcreteAuxFreeAddressPositive xs s c dom cod stored name arg w y (by simpa only [packedAuxFree] using accepted)
+@@ -74 +78 @@
+-      if y = bottomAddress c cod then 1 else 0 := v
++      if y = bottomAddress c cod then 1 else 0 := by simpa only [packedAuxFree] using v
+@@ -77,11 +81 @@
+-  · have hscalar : scalar s y = true := by
+-      rcases endpoint with ⟨_,hs⟩ | ⟨_,_,out,_,shape,_,_⟩
+-      · exact hs
+-      · have payload := congrArg (run rawLeast) (equal.symm.trans shape)
+-        rw [bottomAddress,(literalFields c cod (bottomRaw cod)).2.2,
+-          (literalFields c cod (auxRaw dom cod (bottomRaw stored) out)).2.2] at payload
+-        have decoded := congrArg unpackNode payload
+-        change unpackNode (NumberedWindowFieldAlgorithm.packNode 3 [cod]) =
+-          unpackNode (NumberedWindowFieldAlgorithm.packNode 6 [dom,cod,bottomRaw stored,out]) at decoded
+-        rw [nodePacked,nodePacked] at decoded
+-        contradiction
++  · have hscalar : scalar s y = true := (scalarEndpoints xs s _ w y accepted).2
