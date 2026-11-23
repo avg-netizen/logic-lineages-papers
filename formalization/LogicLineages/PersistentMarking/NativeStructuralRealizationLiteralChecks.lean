@@ -1,0 +1,16 @@
+import LogicLineages.PersistentMarking.NativeStructuralRealizationBetaProof
+
+namespace LogicLineages.PersistentMarking.NativeStructuralRealizationLiteralChecks
+open NativeStructuralRealizationSyntax NativeStructuralRealizationClosingProof
+open NativeStructuralRealizationBetaProof
+
+theorem fixed_ExactLiteralStructuralTyping : ExactLiteralStructuralTyping := literalTyping
+theorem fixed_ExactStructuralNativeBeta : ExactStructuralNativeBeta := exact_StructuralNativeBeta
+
+#print axioms fixed_ExactLiteralStructuralTyping
+#print axioms literalInstantiation
+#print axioms instantiatedVar
+#print axioms instantiatedApp
+#print axioms instantiatedConstant
+#print axioms fixed_ExactStructuralNativeBeta
+end LogicLineages.PersistentMarking.NativeStructuralRealizationLiteralChecks

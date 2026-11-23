@@ -1,0 +1,9 @@
+import LogicLineages.PersistentMarking.NativeStructuralRealizationProof
+
+namespace LogicLineages.PersistentMarking.NativeStructuralRealizationChecks
+open NativeStructuralRealizationTargets NativeStructuralRealizationProof
+
+theorem fixed_ExactStructuralNativeRealization : ExactStructuralNativeRealization := exact_StructuralNativeRealization
+
+#print axioms fixed_ExactStructuralNativeRealization
+end LogicLineages.PersistentMarking.NativeStructuralRealizationChecks
