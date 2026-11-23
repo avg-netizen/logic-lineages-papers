@@ -1,0 +1,26 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicyIndexedShapeTargets
+import LogicLineages.StandardControlCurrent.PolicyIndexedShapeProof
+
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.StatementChecks
+open PolicyIndexedShape
+
+theorem fixed_policyIndexedShapePartrec : Partrec macroCode := policyIndexedShapePartrec
+theorem fixed_exactPolicyIndexedShape : ExactPolicyIndexedShape := exactPolicyIndexedShape
+theorem fixed_exactPolicyIndexedShapeValues : ExactPolicyIndexedShapeValues := exactPolicyIndexedShapeValues
+theorem fixed_exactPolicyIndexedShapeDomain : ExactPolicyIndexedShapeDomain := exactPolicyIndexedShapeDomain
+theorem fixed_everyEffectivePolicyHasIndex : EveryEffectivePolicyHasIndex := everyEffectivePolicyHasIndex
+
+theorem fixed_fullPolicyIndexedShape : FullPolicyIndexedShape :=
+  ⟨fixed_policyIndexedShapePartrec,fixed_exactPolicyIndexedShape,fixed_exactPolicyIndexedShapeValues,
+    fixed_exactPolicyIndexedShapeDomain,fixed_everyEffectivePolicyHasIndex⟩
+
+#print axioms fixed_policyIndexedShapePartrec
+#print axioms fixed_exactPolicyIndexedShape
+#print axioms fixed_exactPolicyIndexedShapeValues
+#print axioms fixed_exactPolicyIndexedShapeDomain
+#print axioms fixed_everyEffectivePolicyHasIndex
+#print axioms fixed_fullPolicyIndexedShape
+
+end LogicLineages.StandardControlCurrent.StatementChecks
