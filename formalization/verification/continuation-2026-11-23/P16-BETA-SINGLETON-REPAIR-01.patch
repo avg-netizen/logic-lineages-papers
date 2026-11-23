@@ -1,0 +1,22 @@
+--- LogicLineages/PersistentMarking/NumberedWindowInternalBetaSingletonProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowInternalBetaSingletonProof.lean
+@@ -36 +36 @@
+-theorem typedBeta (original other windowProg : Program 3) (syntax : Program 1)
++theorem typedBeta (original other windowProg : Program 3) (syn : Program 1)
+@@ -42,2 +42,2 @@
+-    (qSyntax : Nonempty (Derivation B Γ (programGraph syntax (suc z) ![q])))
+-    (rSyntax : Nonempty (Derivation B Γ (programGraph syntax (suc z) ![r])))
++    (qSyntax : Nonempty (Derivation B Γ (programGraph syn (suc z) ![q])))
++    (rSyntax : Nonempty (Derivation B Γ (programGraph syn (suc z) ![r])))
+@@ -48 +48 @@
+-    Nonempty (Derivation B Γ (programGraph (typedRaw5 root other windowProg syntax)
++    Nonempty (Derivation B Γ (programGraph (typedRaw5 root other windowProg syn)
+@@ -58 +58 @@
+-  obtain ⟨shape⟩ := exact_OpenTypedRaw5 B root other windowProg syntax α Γ ctx ty q w r
++  obtain ⟨shape⟩ := exact_OpenTypedRaw5 B root other windowProg syn α Γ ctx ty q w r
+@@ -70 +70 @@
+-theorem singleton (original other windowProg least : Program 3) (syntax : Program 1)
++theorem singleton (original other windowProg least : Program 3) (syn : Program 1)
+@@ -73 +73 @@
+-    let raw := typedRaw5 root other windowProg syntax
++    let raw := typedRaw5 root other windowProg syn

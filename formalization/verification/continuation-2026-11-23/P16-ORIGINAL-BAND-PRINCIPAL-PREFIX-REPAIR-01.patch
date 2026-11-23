@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PersistentMarking/NativeTowerBandPrincipalPrefixProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NativeTowerBandPrincipalPrefixProof.lean
+@@ -17 +17,3 @@
+-  | zero => exact Nat.not_lt_zero p
++  | zero =>
++    change ¬ Nat.lt p 0
++    exact Nat.not_lt_zero p

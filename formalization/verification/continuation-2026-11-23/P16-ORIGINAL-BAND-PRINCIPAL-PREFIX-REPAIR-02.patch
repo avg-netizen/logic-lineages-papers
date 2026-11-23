@@ -1,0 +1,6 @@
+--- a/formalization/LogicLineages/PersistentMarking/NativeTowerBandPrincipalPrefixProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NativeTowerBandPrincipalPrefixProof.lean
+@@ -18,2 +18 @@
+-    change ¬ Nat.lt p 0
+-    exact Nat.not_lt_zero p
++    simp [OrbitLex,leastCoords]
