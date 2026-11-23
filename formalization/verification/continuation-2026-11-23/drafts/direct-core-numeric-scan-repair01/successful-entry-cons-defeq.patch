@@ -1,0 +1,6 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreNumericScanProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreNumericScanProof.lean
+@@ -43,0 +44,3 @@
++        change (decide (d ∈ rs) && positive d w t && es.all (entryOK positive rs)) =
++          ((t,d,w) :: es).all (entryOK positive rs)
++        rfl

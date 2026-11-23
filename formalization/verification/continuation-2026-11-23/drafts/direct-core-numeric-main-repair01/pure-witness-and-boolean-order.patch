@@ -1,0 +1,24 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreNumericProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreNumericProof.lean
+@@ -95,0 +96,6 @@
++  have rowOrder : (fun e : NumberedWindowDirectAlgorithm.Entry =>
++      positive e.2.1 e.2.2 e.1 && decide (e.2.1 ∈ removed)) = entryOK positive removed := by
++    funext e
++    exact Bool.and_comm _ _
++  rw [rowOrder, Bool.and_comm (added.all (entryOK positive removed))
++    (decide (dst.Perm (keep ++ added.map Prod.fst)))]
+@@ -134,0 +141,10 @@
++    change (do
++      let kept ← unpack a
++      let removed ← unpack b
++      let inputs ← unpack c
++      let added ← NumberedWindowDirectAlgorithm.entries inputs
++      pure (kept,removed,added)) = (do
++      let kept ← unpack a
++      let removed ← unpack b
++      let added ← actualEntries c
++      pure (kept,removed,added))
+@@ -136 +152,2 @@
+-    cases unpack a <;> cases unpack b <;> cases unpack c <;> rfl
++    cases ha : unpack a <;> cases hb : unpack b <;> cases hc : unpack c <;>
++      simp [ha,hb,hc,Option.bind]
