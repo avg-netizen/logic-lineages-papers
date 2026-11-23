@@ -1,0 +1,14 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralSpineZeroPathProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralSpineZeroPathProof.lean
+@@ -80,2 +80,3 @@
+-      by_contra bad
+-      exact (nonzeroFinal xs s ctx ty tail mid dst bad endEq) lastZero
++      by_cases known : rawRank mid = 0
++      · exact known
++      · exact False.elim ((nonzeroFinal xs s ctx ty tail mid dst known endEq) lastZero)
+@@ -111,2 +112,3 @@
+-      by_contra bad
+-      exact (nonzeroFinal xs s ctx ty tail right dst bad after) lastZero
++      by_cases known : rawRank right = 0
++      · exact known
++      · exact False.elim ((nonzeroFinal xs s ctx ty tail right dst known after) lastZero)
