@@ -40,7 +40,9 @@ private theorem evaluateClosedReport (p : Program 2) (left right : Nat)
     funext i
     exact Fin.cases rfl (Fin.cases rfl (fun q => Fin.elim0 q)) i
   obtain ⟨result⟩ := actualOriginalNumeralEvaluation body 2 p (List.Vector.ofFn ![left,right]) α
-  rw [run,xs] at result
+  have one : (numeral 1 : OTerm α) = suc z := rfl
+  rw [run,xs,one] at result
+  unfold programGraph
   exact ⟨weakenClosed result Γ⟩
 
 /-- The original physical base at the literal numeral parent tape. No

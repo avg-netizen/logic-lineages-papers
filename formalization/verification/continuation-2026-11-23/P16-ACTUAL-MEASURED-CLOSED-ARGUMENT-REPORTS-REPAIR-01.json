@@ -1,0 +1,57 @@
+{
+  "scope": "Superseding only ReportsProof pin in P16-ACTUAL-MEASURED-CLOSED-ARGUMENT-EXCHANGE-SOURCE-MAP.md. Exact original calibrated base/directed numeral reports, same endpoints, no changed assumptions or imports.",
+  "gate": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredClosedArgumentReportsProof",
+  "receipt": "1795438932524058620-23",
+  "original": {
+    "leaf": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/measured-closed-argument-reports-repair01/NumberedWindowInternalCoverMeasuredClosedArgumentReportsProof.lean.failed-source",
+      "sha256": "be0d9a09d021e6c3761470cbc801acaf1d76fade00caeeecb956a04642a99fc6"
+    },
+    "module_diagnostic": {
+      "sha256": "63570f0779b0e7c84a00213225c056b43d2b2fbbe43b3ba24cd5282e219782cc",
+      "summary": "Only error: existing numeral report concludes with output numeral 1; target was the unreduced internal programGraph at output suc z."
+    },
+    "local_receipt": {
+      "sha256": "6c8d55c6d23427fb58576272d8d9f7bcaad1e2389d29444250bbc1352ab71ca1"
+    },
+    "local_gate_stdout": {
+      "sha256": "ca338c466f96903f2835e0352438575225db30058e34b4299830757925d437a5"
+    }
+  },
+  "repair": "Use exact literal numeral-one equality (rfl, same shape as existing OriginalLambdaConstructorGraphSyntaxProof.oneTermEq) and unfold the locally irreducible programGraph at the target. Neither graph program changes.",
+  "candidate": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredClosedArgumentReportsProof.lean",
+    "sha256": "9e43a375e8a49f44f87972cdb121a35bad7aabf731042cb6a681299e553735d2"
+  },
+  "unchanged_source_map": {
+    "path": "formalization/verification/continuation-2026-11-23/P16-ACTUAL-MEASURED-CLOSED-ARGUMENT-EXCHANGE-SOURCE-MAP.md",
+    "sha256": "8ba0eb565095f9190d611cf8149458a5d69b4eaf6d47cf9bd7046ee22afcbc7b"
+  },
+  "unchanged_siblings": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredClosedArgumentNumericProof.lean",
+      "sha256": "19602dc7660a45373c6d0bc77d8e6963aa0154f670b1adcf5b17adf626f5c1a7"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredClosedArgumentAssemblyProof.lean",
+      "sha256": "707558beab911e71978608b32971f672cd5b9e91205325b2e8c338d0b9dc5699"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredClosedArgumentProof.lean",
+      "sha256": "7ffe7b3c1d135a6f72d5970df3b381a4daf99a8da08ef4f5af02fb9dc8068966"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRawFunctionContextArgumentObstructionProof.lean",
+      "sha256": "e139a239a7946f0b5bd3423429334bd7cd865c07c7acdc5dffd7bc50922f14c1"
+    }
+  ],
+  "patch": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/measured-closed-argument-reports-repair01/exact-numeral-programgraph.patch",
+    "sha256": "92d3163c2c4bab85ec3aa12515b819a59aa896388f42d3a7c7103434904c8e91"
+  },
+  "round_trip_exact": true,
+  "native_candidate": {
+    "status": "checked",
+    "receipt": "1795439004520313500-8"
+  }
+}

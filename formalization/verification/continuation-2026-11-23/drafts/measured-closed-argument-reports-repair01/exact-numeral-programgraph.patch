@@ -1,0 +1,7 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredClosedArgumentReportsProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredClosedArgumentReportsProof.lean
+@@ -43 +43,3 @@
+-  rw [run,xs] at result
++  have one : (numeral 1 : OTerm α) = suc z := rfl
++  rw [run,xs,one] at result
++  unfold programGraph
