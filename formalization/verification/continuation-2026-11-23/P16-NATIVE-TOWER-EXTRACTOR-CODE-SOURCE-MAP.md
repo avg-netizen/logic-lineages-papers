@@ -1,0 +1,3 @@
+# Paper 16: numeric generator for the literal general B_l extractor
+
+Printed anchor ordinals.tex:532–550, especially the last actual Z application. The shared kernel encodes the unchanged iterator application at actual level, preserves original h and h_l slots, drains the literal decreasing A_j suffix, and installs binders from original inner to outer order. The exact Core bridge specializes the natural fixed-head parameter to rawCode ordinalFix, not an abstract different operator. The independent PR gate proves primitive recursion jointly in that fixed-head code and index; neither a large normalization of Fix nor rank/ordinal semantics is involved. Whole tower/code/rank effectiveness and all numbered claims remain separate.

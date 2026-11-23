@@ -1,0 +1,29 @@
+{
+  "status": "Frozen exact source repair; native pending",
+  "edits": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerExtractorCodeBridge.lean": {
+      "failed_sha256": "8fe0c8346a704ce2e2a4701302935ce7010428a3939778f8a7d6275e31c5e480",
+      "repaired_sha256": "dadc90eeb22b940109ebbb83a06b13f7110e258dd2962c5943a0f78369315c51",
+      "failed_receipt": "1795441419751335383-8",
+      "failed_receipt_sha256": "6de64c337f5dcf084224965a186a145d44ef32c99093a5480b53fc5dd220ff7a",
+      "failed_exact_log_sha256": "a03b2257c555d02ea3bfe4c76556f7451182bbf8003d6272d38213370297f426",
+      "failed_gate_log_sha256": "92dc4484d75804ac4e825c515feb760d8cea24276454b2301f69dfb8dccbe149",
+      "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerExtractorCodeBridge.lean:34:4: error: Type mismatch\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerExtractorCodeBridge.lean:72:4: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerExtractorCodeBridge.lean:113:42: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern"
+    },
+    "formalization/LogicLineages/PersistentMarking/NativeTowerExtractorCodeProof.lean": {
+      "failed_sha256": "f73393eeee6435714955af7ad7925bb2f45bed639aaa139297d17eca7c032c56",
+      "repaired_sha256": "ceede944dc44b7f7d336abe27dd04ff2a4ad65d6f4bde073672fa0b6a19069b9",
+      "failed_receipt": "1795441422662678154-21",
+      "failed_receipt_sha256": "2edc842bdbd98b0e3530bdc858bd341595daf7dc8c45553bc6cb4a344c6f13bb",
+      "failed_exact_log_sha256": "46b2b3cb734cd51cc7f40adc7562f7e1da85606b57c9c821033436c52143821a",
+      "failed_gate_log_sha256": "a7dbe087850892c5c6ecb7f106e456d9e9a0c6f9d0d1032f5d74c22c3afb5030",
+      "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerExtractorCodeProof.lean:16:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerExtractorCodeProof.lean:31:16: error: (kernel) unknown constant '_private.LogicLineages.PersistentMarking.NativeTowerExtractorCodeProof.0.LogicLineages.PersistentMarking.NativeTowerExtractorCodeProof.makeApp'\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerExtractorCodeProof.lean:47:8: error: (kernel) unknown constant '_private.LogicLineages.PersistentMarking.NativeTowerExtractorCodeProof.0.LogicLineages.PersistentMarking.NativeTowerExtractorCodeProof.makeApp'\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerExtractorCodeProof.lean:61:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerExtractorCodeProof.lean:71:8: error: (kernel) unknown constant '_private.LogicLineages.PersistentMarking.NativeTowerExtractorCodeProof.0.LogicLineages.PersistentMarking.NativeTowerExtractorCodeProof.innerSeedPrimitive'\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerExtractorCodeProof.lean:92:8: error: (kernel) unknown constant '_private.LogicLineages.PersistentMarking.NativeTowerExtractorCodeProof.0.LogicLineages.PersistentMarking.NativeTowerExtractorCodeProof.makeApp'"
+    }
+  },
+  "author_manifest": "formalization/verification/continuation-2026-11-23/P16-NATIVE-TOWER-EXTRACTOR-CODE-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "5f241d2ae78246a352bc0838e0e16fe7661aba67b5d9c93d3f0bfd39dbb9f384",
+  "patch": "formalization/verification/continuation-2026-11-23/P16-NATIVE-TOWER-EXTRACTOR-CODE-REPAIR-01.patch",
+  "patch_sha256": "6a7c59ac6819fa731988f3c585a6201d3cce86edb808ecbac3131806366e0f01",
+  "reverse_reconstructs_both_exact_failed_sources": true,
+  "scope": "Exact natural type and original App operand rewrites; reuse already-gated small generic 4-input packing and isolate inner seed projection. No shared program/target/profile changes."
+}

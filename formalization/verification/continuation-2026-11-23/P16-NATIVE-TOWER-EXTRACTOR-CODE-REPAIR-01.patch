@@ -1,0 +1,55 @@
+--- a/formalization/LogicLineages/PersistentMarking/NativeTowerExtractorCodeBridge.lean
++++ b/formalization/LogicLineages/PersistentMarking/NativeTowerExtractorCodeBridge.lean
+@@ -33 +33,2 @@
+-    simp only [lowerOperandCode,Nat.succ_ne_zero,if_false,lowerOperand,exactNativeTowerTypeCode]
++    simp only [lowerOperandCode,Nat.succ_ne_zero,if_false,lowerOperand]
++    rw [exactNativeTowerTypeCode (j+1)]
+@@ -72,2 +73,5 @@
+-    exactRawApp indexType (ty (n+2)) it hi,
+-    exactRawApp (ty (n+1)) (ty (n+1)) hf hh]
++    exactRawApp (ty 0) (ty (n+2)) it hi]
++  change applicationCode (encodeTy (ty n)) (encodeTy (ty n))
++    (applicationCode (encodeTy (ty (n+1))) (encodeTy (ty (n+1))) (rawCode f) (rawCode h))
++      (rawCode x) = _
++  rw [exactRawApp (ty (n+1)) (ty (n+1)) hf hh]
+@@ -113 +117,2 @@
+-    exactInnerCode S,exactLambdaCode _ hi,exactRawApp endo endo hFix hi]
++    exactInnerCode S,exactLambdaCode _ hi,
++    exactRawApp endo endo (f := ordinalFix) (x := .lam indexType (inner n)) hFix hi]
+--- a/formalization/LogicLineages/PersistentMarking/NativeTowerExtractorCodeProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NativeTowerExtractorCodeProof.lean
+@@ -15,0 +16,12 @@
++private theorem fourInputs {T : Type} [Primcodable T] {a b f x : T → Nat}
++    (ha : Primrec a) (hb : Primrec b) (hf : Primrec f) (hx : Primrec x) :
++    Primrec (fun p => (a p,b p,f p,x p)) := by
++  have tail : Primrec (fun p => (b p,f p,x p)) := hb.pair (hf.pair hx)
++  exact ha.pair tail
++
++private theorem composeFour {T : Type} [Primcodable T] {a b f x : T → Nat}
++    {raw : (Nat × Nat × Nat × Nat) → Nat} (h : Primrec raw)
++    (ha : Primrec a) (hb : Primrec b) (hf : Primrec f) (hx : Primrec x) :
++    Primrec (fun p => raw (a p,b p,f p,x p)) :=
++  h.comp (fourInputs ha hb hf hx)
++
+@@ -18,4 +30,2 @@
+-    Primrec (fun p => applicationCode (a p) (b p) (f p) (x p)) := by
+-  have tail : Primrec (fun p => (b p,f p,x p)) := hb.pair (hf.pair hx)
+-  have input : Primrec (fun p => (a p,b p,f p,x p)) := ha.pair tail
+-  exact applicationPrimitive.comp input
++    Primrec (fun p => applicationCode (a p) (b p) (f p) (x p)) :=
++  composeFour applicationPrimitive ha hb hf hx
+@@ -60,0 +71,3 @@
++private theorem initialHPrimitive : Primrec (fun n => boundCode (typeCode (n+1)) (n+1)) :=
++  boundCodePrimitive.comp (levelShift Primrec.id 1) Primrec.succ
++
+@@ -63,7 +76,3 @@
+-      (lowerOperandCode n)) := by
+-  have h : Primrec (fun n => boundCode (typeCode (n+1)) (n+1)) :=
+-    boundCodePrimitive.comp (levelShift Primrec.id 1) Primrec.succ
+-  have args : Primrec (fun n => (boundCode (typeCode 0) 0,boundCode (typeCode (n+1)) (n+1),
+-      lowerOperandCode n)) :=
+-    (Primrec.const _).pair (h.pair lowerOperandPrimitive)
+-  exact appliedPrimitive.comp (Primrec.id.pair args)
++      (lowerOperandCode n)) :=
++  composeFour appliedPrimitive Primrec.id (Primrec.const (boundCode (typeCode 0) 0))
++    initialHPrimitive lowerOperandPrimitive
