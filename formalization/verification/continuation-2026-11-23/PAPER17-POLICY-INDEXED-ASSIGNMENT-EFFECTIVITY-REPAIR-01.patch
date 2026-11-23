@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedAssignmentEffectivityProof.lean
++++ b/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedAssignmentEffectivityProof.lean
+@@ -165 +165 @@
+-          cases h1 : rs.getD 0 none <;> cases h2 : rs.getD 1 none <;>
++          cases h1 : (rs[0]?).getD none <;> cases h2 : (rs[1]?).getD none <;>
+@@ -169 +169 @@
+-            cases hv : rs.getD 0 none <;> simp [body,reqLam,hmain,lo,h5,h6,hb,hv]
++            cases hv : (rs[0]?).getD none <;> simp [body,reqLam,hmain,lo,h5,h6,hb,hv]

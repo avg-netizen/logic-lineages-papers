@@ -1,0 +1,3 @@
+# Paper 17: joint partial recursion of actual indexed typed assignment
+
+The original literal source and context tests decide the branches and child inputs. The indexed typed assembler uses the actual numeral, tail, recursor, and application operations, preserving same-index child and abstraction calls. Returned `none` is an ordinary result; divergence of a selected partial call is not treated as rejection. The original rank and finite frontier then give joint partial recursiveness of the complete indexed assignment conditional on a jointly partial-recursive indexed abstraction. Exact correspondence is checked separately at #1445 and #1446; this does not yet certify the compiler or classification.

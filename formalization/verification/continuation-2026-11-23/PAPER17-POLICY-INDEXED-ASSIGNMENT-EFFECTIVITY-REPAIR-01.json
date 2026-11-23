@@ -1,0 +1,22 @@
+{
+  "status": "frozen source repair; native pending",
+  "baseline": "dd4eddff9f8eab0a4532e8df4880f71b8d5dffb9",
+  "failed_exact_gate_receipt": "1795429363753295473-23",
+  "failed_exact_gate": "indexed-assignment-effectivity-1023",
+  "failed_receipt_sha256": "bb8ffc2913bfe7a5e7ba93a860664cec9c41c6fc26ec3dfb218c8d5a3122d7c2",
+  "failed_exact_module_log_sha256": "9ebe1624016e7e95200dc3b17673b5323c92180ba22389ae3421f466216406f8",
+  "failed_original_native_log_sha256": "21eaa4dece886a5cbd8b6aed13077d3f2345369239dc3931b65f5e92b6af70df",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedAssignmentEffectivityProof.lean:164:6: error: unsolved goals\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedAssignmentEffectivityProof.lean:168:8: error: unsolved goals",
+  "failed_proof_path": "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedAssignmentEffectivityProof.lean",
+  "failed_proof_sha256": "7202329b928fc62ff9b8b42c13331e34479c7bf9a8477db2bac2e0e814618691",
+  "repaired_proof_sha256": "7d1743a6c8fa06fef300a2f00b4ad0448b4358d65c3b52af060faec27ebda4ff",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-ASSIGNMENT-EFFECTIVITY-REPAIR-01.patch",
+  "patch_sha256": "c72222b162b264cce3be5d671976f9fefc573cc4ce6bf91a0558cd459593928c",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-ASSIGNMENT-EFFECTIVITY-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "17dff6979c1ceac8a107c8300287579afaae74fa7efe0461b74b89a8bded6d34",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/StandardControlCurrent/PolicyIndexedAssignmentEffectivityStatementChecks.lean": "6b2e951333234e898d0a43f9795fdeebf02aa99b62f04d4205e2fe906525d42f"
+  },
+  "scope": "Case split source child options using exact simplified Option.getD alias exposed in both branches. No change to any executable definition, target, or checker settings."
+}

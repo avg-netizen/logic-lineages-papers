@@ -162,11 +162,11 @@ private theorem assembledBodyPartrec (backend : Abstraction) (ha : AbstractionPa
       · by_cases h4 : n%8=4 <;> simp [body,hmain,lo,h0,h4]
     · by_cases h5 : n%8=5
       · cases harg : check ctx (n/8).unpair.2 <;>
-          cases h1 : rs.getD 0 none <;> cases h2 : rs.getD 1 none <;>
+          cases h1 : (rs[0]?).getD none <;> cases h2 : (rs[1]?).getD none <;>
           simp [body,reqApp,hmain,lo,h5,harg,h1,h2]
       · by_cases h6 : n%8=6
         · cases hb : check ((n/8).unpair.1::ctx) (n/8).unpair.2 <;>
-            cases hv : rs.getD 0 none <;> simp [body,reqLam,hmain,lo,h5,h6,hb,hv]
+            cases hv : (rs[0]?).getD none <;> simp [body,reqLam,hmain,lo,h5,h6,hb,hv]
         · simp [body,hmain,lo,h5,h6]
 
 theorem indexedAssignmentAssemblePartrec (backend : Abstraction) (ha : AbstractionPartrec backend) :
