@@ -1,0 +1,19 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSingletonBottomProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSingletonBottomChecks
+open NumberedWindowInternalSingletonBottomTargets
+
+theorem exact_NumericSingletonBottom : ExactNumericSingletonBottom :=
+  NumberedWindowInternalSingletonBottom.exactNumericSingletonBottom
+
+theorem exact_OpenSingletonBottom : ExactOpenSingletonBottom :=
+  NumberedWindowInternalSingletonBottom.exactOpenSingletonBottom
+
+theorem exact_DirectSingletonBottomTarget : ExactDirectSingletonBottomTarget :=
+  NumberedWindowInternalSingletonBottom.exactDirectSingletonBottomTarget
+
+#print axioms exact_NumericSingletonBottom
+#print axioms exact_OpenSingletonBottom
+#print axioms exact_DirectSingletonBottomTarget
+end LogicLineages.PersistentMarking.NumberedWindowInternalSingletonBottomChecks

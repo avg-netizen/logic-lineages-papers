@@ -1,0 +1,23 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSingletonBottomProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSingletonBottomProof.lean
+@@ -16,0 +17 @@
++open ID1Completion.InternalControlGraphSupportProof (equalEqn)
+@@ -72 +73,5 @@
+-  obtain ⟨atom⟩ := exact_OpenAtomicRecognition.2 B α Γ h ctx t ⟨refl h⟩
++  have same : Nonempty (Derivation B Γ (equal h (packedBottomTerm ctx t))) := by
++    change Nonempty (Derivation B Γ (equal h h))
++    rw [equalEqn]
++    exact ⟨ID1Completion.InternalTagArithmeticSupportProof.refl h⟩
++  obtain ⟨atom⟩ := exact_OpenAtomicRecognition.2 B α Γ h ctx t same
+@@ -114,4 +119,4 @@
+-      have dom : e.2.1 = a := by simpa [hr] using (Bool.and_eq_true.mp bad).1
+-      have pos := (Bool.and_eq_true.mp bad).2
+-      rw [dom,terminal] at pos
+-      contradiction
++      simp only [Bool.and_eq_true] at bad
++      have dom : e.2.1 = a := by simpa [hr] using bad.1
++      have pos := bad.2
++      rw [dom,terminal] at pos <;> contradiction
+@@ -134 +139 @@
+-        simpa only [hw,hy] using h
++        simpa only [hw,hy,NumberedWindowConcreteCheckers.positive] using h
