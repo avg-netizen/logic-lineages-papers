@@ -1,0 +1,12 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchReportProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchReportProof.lean
+@@ -29 +29 @@
+-open ID1Completion.InternalControlGraphSupportProof (compositionValue valueUnique)
++open ID1Completion.InternalControlGraphSupportProof (compositionValue valueUnique programRename)
+@@ -70,2 +70,4 @@
+-    have preserved := renameInto clean τ Ω retain
+-    simp only [unaryRename,zRelabel,Term.relabel_relabel] at preserved
++    have preserved : Nonempty (Derivation B Ω
++      (programGraph (scalarFailures i) z ![code.relabel (τ ∘ ρ)])) := by
++      simpa only [programRename,inputsRename,zRelabel,Term.relabel_relabel] using
++        renameInto clean τ Ω retain
