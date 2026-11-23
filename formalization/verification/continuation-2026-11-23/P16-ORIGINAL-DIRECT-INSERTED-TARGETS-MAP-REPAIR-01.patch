@@ -1,0 +1,8 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedTargetsMapProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedTargetsMapProof.lean
+@@ -56 +56 @@
+-    mapped (row :: rows) = do
++    mapped (row :: rows) = (do
+@@ -59 +59 @@
+-      pure (e.1 :: ts) := by
++      pure (e.1 :: ts)) := by
