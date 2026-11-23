@@ -1,0 +1,3 @@
+# Paper 16: literal B₁ and native N_B beta paths
+
+Printed source: ordinals.tex:529–550, 563–573. The two binder substitutions leave the original ordinal binder and terminal Z untouched. The first outer reduction is lifted through the function slot of the actual application; its strict edge uses the existing native function-slot strict congruence on the actual closed argument. The second reduction is the original root beta step. The same statements specialize to actual ((B₁ B₀) ordinalNext), preserving the two literal reducts and two genuine strict edges. No ordinal semantic, Veblen-hull, Simmons, calibration, cofinality, or height assertion.
