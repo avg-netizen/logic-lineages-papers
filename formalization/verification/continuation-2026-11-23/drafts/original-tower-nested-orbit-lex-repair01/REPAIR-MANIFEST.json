@@ -1,0 +1,45 @@
+{
+  "status": "frozen inference-only repair; retry pending",
+  "gate": "LogicLineages.PersistentMarking.NativeTowerNestedInnerOrbitLexProof",
+  "failed_native": {
+    "receipt": "1795454036313933496-18",
+    "receipt_pin": {
+      "path": "formalization/build-reports/1795454036313933496-18.json",
+      "sha256": "f33717e5b9f056c0eef70f6fce2f3cfa6b6c6f266fc23e1289d3d246acc77f88"
+    },
+    "module_log": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-tower-nested-orbit-lex-repair01/1795454036313933496-18.module.log",
+      "sha256": "9a1adad6f9b188b7fe06956a9bf0bf6e1838f5369b883fda43d5254e3f25b133"
+    },
+    "failed_source": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-tower-nested-orbit-lex-repair01/NativeTowerNestedInnerOrbitLexProof.lean.failed-source",
+      "sha256": "e032d5d8922923669b65ed447e4a858cc1720e6cca8ff53b654a8d6717d4a857"
+    },
+    "diagnosis": "LT inference fails on the regular definitional alias OrbitCoords 0. Subsequent base proof and triple specialization cannot use the intended natural order."
+  },
+  "repair": "Name Nat.lt directly in the dimension-one base equation, expose this same predicate in the base induction, and expose the definally same nested two-step triple in the explicit triple proof. No theorem statement, underlying interpretation, cuts, imports or caps change.",
+  "changed_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NativeTowerNestedInnerOrbitLexProof.lean",
+    "sha256": "98cd2a26dbd6b0ff7f173bf4804ec0329d1bd8c3c62a0d7313cfc373fdbd90cc"
+  },
+  "outer_cone_native_pass": {
+    "receipt": "1795454035223151406-8",
+    "receipt_pin": {
+      "path": "formalization/build-reports/1795454035223151406-8.json",
+      "sha256": "9ec0fcc363eee90b8b821d112dddcde9610f2069d8f59a08add3d0a0647d59d5"
+    },
+    "source": {
+      "path": "formalization/LogicLineages/PersistentMarking/NativeTowerOuterIndexConeProof.lean",
+      "sha256": "6850330beb1ffe02d6f7abf0f1d2fef8c85671e210ff062bdf062b4eb6dad660"
+    }
+  },
+  "reverse_patch": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/original-tower-nested-orbit-lex-repair01/repair01.patch",
+    "sha256": "ff644400faec576b507e266899ce4301d73c6971a80b9aead9fe28b7f87101c9"
+  },
+  "reverse_bytes_verified": true,
+  "original_author_manifest": {
+    "path": "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-FIXED-TOWER-NESTED-ORBIT-LEX-AUTHOR-MANIFEST.json",
+    "sha256": "233a4d8aeb533951fde9da7ff92cc589977e2275abe27f88ffbfa4afd30b7efb"
+  }
+}

@@ -1,0 +1,5 @@
+# P16: original free-headed auxiliary cone, concrete checker
+
+Paper 16, [ordinals.tex](../../../16-persistent-marking-termination-ordering/sections/ordinals.tex) 112–121. The prior numerical case analysis of the original auxiliary path allows whole bottom, or a bottom-headed auxiliary with the original context and types. The selected right argument can differ from the admitted raw intermediate, so a scalar test for the auxiliary candidate is not inferred from the original raw admissibility.
+
+The candidate `neutralPositive` physically tests the older r on the same source, original witness, and target. It keeps the existing terminal bottom-auxiliary refinement and adds certified selection for the free-headed auxiliary cone. The whole-bottom target tests the selected scalar on the actual target; the auxiliary case does not claim this test. The branch proof opens these genuine graph calls in any open arithmetic context. An all-input numerical equivalence and full neutral accessibility are independent further obligations.

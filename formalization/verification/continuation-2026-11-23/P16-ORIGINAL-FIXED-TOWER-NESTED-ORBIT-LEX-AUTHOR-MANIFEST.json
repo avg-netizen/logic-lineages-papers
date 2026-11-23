@@ -1,0 +1,58 @@
+{
+  "paper": 16,
+  "status": "frozen source only; two separate native gates pending",
+  "gate_order": [
+    "LogicLineages.PersistentMarking.NativeTowerOuterIndexConeProof",
+    "LogicLineages.PersistentMarking.NativeTowerNestedInnerOrbitLexProof"
+  ],
+  "expected_named_axiom_outputs": {
+    "LogicLineages.PersistentMarking.NativeTowerOuterIndexConeProof": [
+      "exact_ActualOriginalOuterIndexCone",
+      "exact_EvaluatedInnerStaysInActualCone",
+      "exact_OriginalInnerOrbitIndexCut",
+      "exact_OriginalInnerOrbitCrossIndex",
+      "exact_OriginalInnerOrbitSameIndex"
+    ],
+    "LogicLineages.PersistentMarking.NativeTowerNestedInnerOrbitLexProof": [
+      "exact_OriginalTowerBoundedOrbitLift",
+      "exact_OriginalTowerNestedCutAdmitted",
+      "exact_OriginalTowerNestedPointBelowCut",
+      "exact_OriginalTowerNestedLexPreservation",
+      "exact_ActualFixedTowerNestedLex",
+      "exact_ActualFixedTowerTripleLex"
+    ]
+  },
+  "source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerOuterIndexConeProof.lean": "68e3a2bd31f11e99c96cd6749c4965c22f1c644e792a98148d64ed84b5232e96",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerNestedInnerOrbitLexProof.lean": "e032d5d8922923669b65ed447e4a858cc1720e6cca8ff53b654a8d6717d4a857",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-FIXED-TOWER-NESTED-ORBIT-LEX-SOURCE-MAP.md": "e12c542073df9aa7cbcf5cbca9550115f4608be47a24c7cbb0f54c2ef9fdf8c8"
+  },
+  "interface_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerBoundedInnerOrbitBlocksProof.lean": "cd41fb577986b2cc1d02e5c2bc84d50ce13b5092a9143a6d0dc20a88b24686bc",
+    "formalization/LogicLineages/PersistentMarking/NativeIndexedCarrierOrbitBlocksProof.lean": "bf6fa7450be612666a398e050a57bf6869c880f6988bfa9770d9edfbba5e00a2",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerInnerMapHigherIteratorProof.lean": "0f66d9734a7b23900d63c34887cda8aec00708e9a1407dad0c2b635cc9b438b8",
+    "formalization/LogicLineages/PersistentMarking/NativeIndexedCarrierFiniteOrbitProof.lean": "2f89e3bc631c22046940323d8a06c2ceada134fb42141713a97d4e5178bd649b",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerIndexedEntryProof.lean": "730c7a226962192a79f7edc8a192346ef9f982502fde7106d3a50233d733dd34",
+    "formalization/LogicLineages/PersistentMarking/NativeOrdinalBasisChecks.lean": "5f8ebc44ae2b3c6fb24fdcceb0d6b443e940c1e5cf1a9b3e8d8a969b82942f6b"
+  },
+  "prior_evidence_sha256": {
+    "formalization/verification/continuation-2026-11-23/1734-p16-original-indexed-carrier-orbit-blocks-native.json": "baa44ceb137cff1637f033b9fd56b57a58637133975e2ab005946d17fd9f3da5",
+    "formalization/verification/continuation-2026-11-23/1735-p16-original-fixed-tower-lex-blocks-native.json": "3f55a8ca9c4ca84a225cd474fab293b9f4c6cac4e53e125cd6f7417e851e4999",
+    "formalization/verification/continuation-2026-11-23/1716-p16-original-tower-higher-iterator-native.json": "8928fc908e45678c8ac8e99ff113b96b0fdc1472720b97b9d08b4bd15b97f30a"
+  },
+  "static_closures": {
+    "LogicLineages.PersistentMarking.NativeTowerOuterIndexConeProof": {
+      "local": 296,
+      "external": [
+        "Init"
+      ]
+    },
+    "LogicLineages.PersistentMarking.NativeTowerNestedInnerOrbitLexProof": {
+      "local": 297,
+      "external": [
+        "Init"
+      ]
+    }
+  },
+  "boundary": "Fixed original actual top, finite strict lex families with exact bounds at each dimension, and no named ordinal or rank."
+}

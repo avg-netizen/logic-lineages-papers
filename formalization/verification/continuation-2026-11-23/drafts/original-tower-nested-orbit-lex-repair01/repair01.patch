@@ -1,0 +1,14 @@
+--- failed/NativeTowerNestedInnerOrbitLexProof.lean
++++ repaired/NativeTowerNestedInnerOrbitLexProof.lean
+@@ -16 +16 @@
+-  | 0, p, q => p < q
++  | 0, p, q => Nat.lt p q
+@@ -66,0 +67 @@
++      change Nat.lt p q at earlier
+@@ -105,2 +106,4 @@
+-    (∀ p q, tripleLex p q → NativeBelow (tripleImage S l p) (tripleImage S l q)) :=
+-  exact_ActualFixedTowerNestedLex S l 2
++    (∀ p q, tripleLex p q → NativeBelow (tripleImage S l p) (tripleImage S l q)) := by
++  change (∀ p : OrbitCoords 2, NativeBelow (nestedPoint S l 2 p) (closedTower S (l+2))) ∧
++    (∀ p q : OrbitCoords 2, OrbitLex 2 p q → NativeBelow (nestedPoint S l 2 p) (nestedPoint S l 2 q))
++  exact exact_ActualFixedTowerNestedLex S l 2

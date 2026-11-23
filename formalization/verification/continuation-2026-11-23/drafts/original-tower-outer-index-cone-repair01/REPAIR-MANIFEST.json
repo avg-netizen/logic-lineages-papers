@@ -1,0 +1,48 @@
+{
+  "status": "frozen namespace-only repair; retry pending",
+  "gate": "LogicLineages.PersistentMarking.NativeTowerOuterIndexConeProof",
+  "failed_native": {
+    "receipt": "1795453915517542696-10",
+    "receipt_pin": {
+      "path": "formalization/build-reports/1795453915517542696-10.json",
+      "sha256": "e934bf631ab72a0457874d658b29ed79eacd93c58272fac5651938cbbbfcae69"
+    },
+    "module_log": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-tower-outer-index-cone-repair01/1795453915517542696-10.module.log",
+      "sha256": "45c1260c19421536166b4a0199256d69d72102d8481b9b7b2f102451d28b2add"
+    },
+    "failed_source": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-tower-outer-index-cone-repair01/NativeTowerOuterIndexConeProof.lean.failed-source",
+      "sha256": "68e3a2bd31f11e99c96cd6749c4965c22f1c644e792a98148d64ed84b5232e96"
+    },
+    "diagnosis": "The full diagnostic reports unresolved existing level and actualArg names in three proof bodies (l78, 84, 90); other proofs elaborated."
+  },
+  "repair": "Open already imported defining namespaces NativeTowerWitnessPrefixTargets and NativeTowerBetaPathProof. No imports, statements, steps, other bodies, or caps changed.",
+  "changed_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NativeTowerOuterIndexConeProof.lean",
+    "sha256": "6850330beb1ffe02d6f7abf0f1d2fef8c85671e210ff062bdf062b4eb6dad660"
+  },
+  "unchanged_nested_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NativeTowerNestedInnerOrbitLexProof.lean",
+    "sha256": "e032d5d8922923669b65ed447e4a858cc1720e6cca8ff53b654a8d6717d4a857"
+  },
+  "defining_interface_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NativeTowerWitnessPrefixTargets.lean",
+      "sha256": "3ee7f42cca5c8367ac3d521bd490de5b1e59a018c466138c027af3f3aed55c70"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NativeTowerBetaPathProof.lean",
+      "sha256": "4cd87a1062753cc8e76a983cff5d5b4c2825361d16c6b440e47e4842974592b8"
+    }
+  ],
+  "reverse_patch": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/original-tower-outer-index-cone-repair01/repair01.patch",
+    "sha256": "e2784727a7995690edb437e7b97f2566734e85cbd8f9f19b9a95c526af0d049a"
+  },
+  "reverse_bytes_verified": true,
+  "original_author_manifest": {
+    "path": "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-FIXED-TOWER-NESTED-ORBIT-LEX-AUTHOR-MANIFEST.json",
+    "sha256": "233a4d8aeb533951fde9da7ff92cc589977e2275abe27f88ffbfa4afd30b7efb"
+  }
+}
