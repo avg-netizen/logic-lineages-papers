@@ -1,0 +1,17 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOpenOriginScanRoutedStepProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOpenOriginScanRoutedStepProof.lean
+@@ -47,2 +47 @@
+-  have caseL : Derivation B Γ (L.imp goal) := by
+-    apply Derivation.implicationIntroduction
++  have caseL : Nonempty (Derivation B Γ (L.imp goal)) := by
+@@ -51,3 +50,2 @@
+-    exact Derivation.conjunctionIntroduction left right
+-  have caseR : Derivation B Γ (R.imp goal) := by
+-    apply Derivation.implicationIntroduction
++    exact ⟨Derivation.implicationIntroduction (Derivation.conjunctionIntroduction left right)⟩
++  have caseR : Nonempty (Derivation B Γ (R.imp goal)) := by
+@@ -57 +55,3 @@
+-    exact Derivation.conjunctionIntroduction left right
++    exact ⟨Derivation.implicationIntroduction (Derivation.conjunctionIntroduction left right)⟩
++  obtain ⟨caseL⟩ := caseL
++  obtain ⟨caseR⟩ := caseR

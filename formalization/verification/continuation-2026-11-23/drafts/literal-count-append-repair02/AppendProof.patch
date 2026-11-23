@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAppendProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAppendProof.lean
+@@ -170,2 +170,4 @@
+-    rw [C,consGraphRename] at c'
+-    rw [I,atFrontRename] at i'
++    change Nonempty (Derivation B Ω ((consGraph F H T).relabel ρ)) at c'
++    change Nonempty (Derivation B Ω ((atFront T (b.relabel j) (k.relabel j) (r.relabel j)).relabel ρ)) at i'
++    rw [consGraphRename] at c'
++    rw [atFrontRename] at i'

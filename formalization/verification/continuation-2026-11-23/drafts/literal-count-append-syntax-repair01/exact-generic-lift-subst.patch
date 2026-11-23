@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAppendSyntaxProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAppendSyntaxProof.lean
+@@ -23 +23 @@
+-open ID1Completion.InternalRecursionGraphSyntaxProof (witnessLift)
++open ID1Completion.InternalRecursionGraphSyntaxProof (witnessLift liftSubst)
+@@ -101 +101 @@
+-  simp only [matrix,querySubst,termRelabelSubst,Term.subst,Sum.elim_inr] <;> rfl
++  simp only [matrix,querySubst,liftSubst,Term.subst,Sum.elim_inr] <;> rfl
