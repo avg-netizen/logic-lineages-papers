@@ -1,0 +1,81 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseParserTableLocalProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRecursionClosureSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationSyntaxProof
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseParserDropSyntaxProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators SourceComputabilityFormulaSupportProof
+open ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalTagArithmeticSyntaxProof (emb)
+open ID1Completion.InternalControlGraphSupportProof (programRename)
+open ID1Completion.InternalRecursionGraphStepSyntaxProof (consTermRename)
+open ID1Completion.InternalRecursionGraphSyntaxProof (witnessLift liftSubst)
+open ID1Completion.InternalRecursionClosureSyntaxProof (allBlockSubst liftedEmbedding conjunctionSubst)
+open ID1Completion.InternalSourceIntroductionSyntaxProof (formulaRelabelAsSubst termRelabelAsSubst)
+open ID1Completion.InternalAdditionLawsProof (impSubst)
+open ID1Completion.InternalComputabilityApplicationSyntaxProof (programSubst)
+open ID1Completion.InternalRawListRecursionSyntaxProof (dropGraph consTermSubst emptySubst)
+open ID1Completion.InternalClosedPrograms (allBlock)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open NumberedWindowInternalSparseParserTableLocalProof (tableReport)
+
+@[simp] theorem tableReportRename {α β : Type} (B : Program 2) (R : Program 4)
+    (out code : OTerm α) (params : Fin 2 → OTerm α) (j : α → β) :
+    (tableReport B R out code params).relabel j =
+      tableReport B R (out.relabel j) (code.relabel j) (fun i => (params i).relabel j) := by
+  simp only [tableReport,programRename,consTermRename]
+
+def scratchDropBody {α : Type} (B : Program 2) (R : Program 4)
+    (gap : OTerm α) (params : Fin 2 → OTerm α) : Formula (α ⊕ Fin 3) :=
+  (tableReport B R (.var (.inr 1)) (.var (.inr 0)) (fun i => (params i).relabel Sum.inl) ⊓
+    tableReport B R (.var (.inr 2))
+      (OrdinaryArithmetic.addTerm (.var (.inr 0)) (gap.relabel Sum.inl))
+        (fun i => (params i).relabel Sum.inl)).imp
+    (dropGraph (.var (.inr 1)) (gap.relabel Sum.inl) (.var (.inr 2)))
+
+/-- Every older table is reached by exactly its index difference many tails. -/
+def scratchDropMotive {α : Type} (B : Program 2) (R : Program 4)
+    (gap : OTerm α) (params : Fin 2 → OTerm α) : Formula α :=
+  allBlock (scratchDropBody B R gap params)
+
+theorem scratchDropMotiveSubst {α β : Type} (B : Program 2) (R : Program 4)
+    (gap : OTerm α) (params : Fin 2 → OTerm α) (ts : α → OTerm β) :
+    (scratchDropMotive B R gap params).subst (fun a => emb (ts a)) =
+      scratchDropMotive B R (gap.subst ts) (fun i => (params i).subst ts) := by
+  unfold scratchDropMotive scratchDropBody
+  rw [allBlockSubst,liftedEmbedding,impSubst,conjunctionSubst]
+  simp only [tableReport,dropGraph,programSubst,consTermSubst,InternalAdditionLawsProof.addSubst,
+    liftSubst,Term.subst,Sum.elim_inr,emptySubst]
+
+theorem scratchDropMotiveRename {α β : Type} (B : Program 2) (R : Program 4)
+    (gap : OTerm α) (params : Fin 2 → OTerm α) (j : α → β) :
+    (scratchDropMotive B R gap params).relabel j =
+      scratchDropMotive B R (gap.relabel j) (fun i => (params i).relabel j) := by
+  rw [formulaRelabelAsSubst]
+  change (scratchDropMotive B R gap params).subst (fun a => emb (.var (j a))) = _
+  rw [scratchDropMotiveSubst]
+  simp only [← termRelabelAsSubst]
+
+theorem scratchDropBodyWitness {α : Type} (B : Program 2) (R : Program 4)
+    (gap code small large : OTerm α) (params : Fin 2 → OTerm α) :
+    (scratchDropBody B R gap params).subst
+      (Sum.elim Term.var (fun i => emb (![code,small,large] i))) =
+      (tableReport B R small code params ⊓
+        tableReport B R large (OrdinaryArithmetic.addTerm code gap) params).imp
+          (dropGraph small gap large) := by
+  have he : (Sum.elim Term.var (fun i => emb (![code,small,large] i))) =
+      (fun a => emb (Sum.elim Term.var ![code,small,large] a)) := by
+    funext a
+    cases a <;> rfl
+  unfold scratchDropBody
+  rw [he,impSubst,conjunctionSubst]
+  simp only [tableReport,dropGraph,programSubst,consTermSubst,InternalAdditionLawsProof.addSubst,
+    witnessLift,Term.subst,Sum.elim_inr,emptySubst]
+  rfl
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseParserDropSyntaxProof

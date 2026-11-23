@@ -1,0 +1,35 @@
+{
+  "status": "frozen syntax-proof-only repair; separate native retry needed",
+  "gate": "LogicLineages.PersistentMarking.NumberedWindowInternalSparseParserDropProof",
+  "failed_module": "LogicLineages.PersistentMarking.NumberedWindowInternalSparseParserDropSyntaxProof",
+  "failed_native_receipt": "1795446179192027494-8",
+  "failed_native_receipt_sha256": "e82461870168d66488b31e4c773b9f9a03b3e18f17543b90d0c3a8d567d93179",
+  "failed_source": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/sparse-parser-table-drop-repair01/NumberedWindowInternalSparseParserDropSyntaxProof.lean.failed-source",
+    "sha256": "21075a015c2fae0bdd0f4b285322245740366cf2edcfd96611604b569b7f1814"
+  },
+  "native_log": {
+    "sha256": "a19f1642c15610a2fa50b0fc1393c974b8c625d2b355f824dcf401029dd91553"
+  },
+  "reverse_patch": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/sparse-parser-table-drop-repair01/qualified-add-substitution.patch",
+    "sha256": "6910a677b1171ebaa0686e27cdbd54ca03e847ecabe6aeccfee70ba2c617d2c1"
+  },
+  "repaired_proof": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParserDropSyntaxProof.lean",
+    "sha256": "81969522fb8ad2eb6d399bea7f3dc15c7de47d6fa6994118824f50bac984ac90"
+  },
+  "original_author_manifest": {
+    "path": "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-SPARSE-PARSER-TABLE-DROP-AUTHOR-MANIFEST.json",
+    "sha256": "6abf25856688d4a67cf4db00aadde084db88f872109a23f2321022f2ec501ad2"
+  },
+  "unchanged_main": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParserDropProof.lean",
+    "sha256": "c1192ba5620861abfbe2c729c485864e861842e3807cca525c93fec444ee526c"
+  },
+  "repair": "Qualify only the two existing arithmetic add-substitution simp lemma references through ID1Completion. Actual recorded residuals contain Term.subst(addTerm …) exactly targeted by this lemma; no imports, statements, other proof sources, or settings changed. Reverse patch reproduced exact original bytes.",
+  "native_candidate": {
+    "status": "checked",
+    "receipt": "1795446265062151045-8"
+  }
+}
