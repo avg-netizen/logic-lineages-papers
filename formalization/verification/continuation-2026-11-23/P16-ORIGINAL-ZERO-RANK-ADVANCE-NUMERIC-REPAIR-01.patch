@@ -1,0 +1,5 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalZeroRankAdvanceNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalZeroRankAdvanceNumericProof.lean
+@@ -51 +51 @@
+-    by_cases z : rawRank y = 0 <;> simp [z,encodeState]
++    by_cases z : rawRank y = 0 <;> simp [Option.filter,z,encodeState]

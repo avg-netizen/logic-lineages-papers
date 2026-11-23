@@ -1,0 +1,72 @@
+{
+  "paper": 16,
+  "status": "frozen source only; four separate native gates pending",
+  "gate_order": [
+    "LogicLineages.PersistentMarking.NumberedWindowInternalParameterizedPositiveFoldStateProof",
+    "LogicLineages.PersistentMarking.NumberedWindowInternalParameterizedPositiveFoldIterationProof",
+    "LogicLineages.PersistentMarking.NumberedWindowInternalParameterizedPositiveFoldFuelProof",
+    "LogicLineages.PersistentMarking.NumberedWindowInternalParameterizedPositiveFoldResultProof"
+  ],
+  "expected_named_axiom_outputs": {
+    "LogicLineages.PersistentMarking.NumberedWindowInternalParameterizedPositiveFoldStateProof": [
+      "exact_ParameterizedAdvanceValue",
+      "exact_ParameterizedUpdateValue"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowInternalParameterizedPositiveFoldIterationProof": [
+      "exact_ParameterizedStepValue",
+      "exact_ParameterizedIterationValue"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowInternalParameterizedPositiveFoldFuelProof": [
+      "exact_ParameterizedRepeatDecoded",
+      "exact_ParameterizedFuelDecoded"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowInternalParameterizedPositiveFoldResultProof": [
+      "exact_ParameterizedFinishValue",
+      "exact_ParameterizedPositiveValue"
+    ]
+  },
+  "source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalParameterizedPositiveFoldStateProof.lean": "eabf41f960cb80fc5db244b97ea71866827bca1a049e11ef217800cb0224b84e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalParameterizedPositiveFoldIterationProof.lean": "41bf543ac198d03a990efd4bf65a0e97b89ed138ac36ec2e03c61857e877a385",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalParameterizedPositiveFoldFuelProof.lean": "852ceb1a1a1fc69bb3edb5309db21cd4fc91a0a7469cb9d76d946b40c16c9cdc",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalParameterizedPositiveFoldResultProof.lean": "9bdde330ffca15622ce33d5b5ec8fa6d1474e7074161dd61ec31fd8771c5820b",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-PARAMETERIZED-POSITIVE-FOLD-NUMERIC-SOURCE-MAP.md": "7890983e0e5d5177c36b9fe19bd34a1d390b180a25ab8d2d5ce10c743b18b714"
+  },
+  "interface_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalParameterizedPositiveFold.lean": "51a8be65fcdb59cff331b79b025628afa9331362778edd7336dffd434364a8db",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalZeroRankAdvanceDefinitions.lean": "f311d225fbec7124a7103f146e1f802e977b481c186a731c188520cd28738c43",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFold.lean": "a7b087e119109f9b22dc981ff64b490233790d8cd1221b6309fea9f27dd9e209",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldStateEvaluationProof.lean": "80afb7772bd6191db6cf54d9ae602710a52e592697da97eafc3bb4a4414575df",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveFoldIterationProof.lean": "40a4f2f4371eccd1b692d7183259d99576202a25790ebffbca6074433e4f8f60",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathAdvanceTargets.lean": "1f65cd506da843f68d210295f78041974256ec916135c1a38e9a3dfc283ec253",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean": "152ccbeddae0395a3b52a13e306c8c7ef9d0c0341b6475370c274f66ff662521",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserRawPairProof.lean": "78436a11845e12412da85ac5adbe2ed6e983c9afc132ddcb6c9be90bc1c8bdb9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowFieldAlgorithm.lean": "4b44f21f2bbaa6695a65ae0e34afb20b0bad3facf2693f1f7018d633488ba7b4"
+  },
+  "prior_evidence_sha256": {
+    "formalization/build-reports/1795459046297684160-32.json": "4b4555cdcd8d18ae7152377ec23488643730698cbbd2baec1d25daec11ad8e8b"
+  },
+  "static_closures": {
+    "LogicLineages.PersistentMarking.NumberedWindowInternalParameterizedPositiveFoldStateProof": {
+      "local": 856,
+      "mathlib_source_modules": 689,
+      "mathlib_oleans_present": 689
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowInternalParameterizedPositiveFoldIterationProof": {
+      "local": 876,
+      "mathlib_source_modules": 689,
+      "mathlib_oleans_present": 689
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowInternalParameterizedPositiveFoldFuelProof": {
+      "local": 877,
+      "mathlib_source_modules": 689,
+      "mathlib_oleans_present": 689
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowInternalParameterizedPositiveFoldResultProof": {
+      "local": 889,
+      "mathlib_source_modules": 689,
+      "mathlib_oleans_present": 689
+    }
+  },
+  "boundary": "Numeric exact physical A over original parser; no object-theory completeness or zero-rank path equivalence asserted."
+}
