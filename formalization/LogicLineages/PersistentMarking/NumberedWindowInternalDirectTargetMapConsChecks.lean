@@ -1,0 +1,12 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectTargetMapConsProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectTargetMapConsChecks
+open NumberedWindowInternalDirectTargetMapConsTargets
+
+theorem exact_OpenOriginalTargetMapCons : ExactOpenTargetMapCons :=
+  NumberedWindowInternalDirectTargetMapCons.exactOpenTargetMapCons
+
+#print axioms exact_OpenOriginalTargetMapCons
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectTargetMapConsChecks

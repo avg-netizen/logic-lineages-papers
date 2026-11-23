@@ -1,0 +1,8 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapConsProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapConsProof.lean
+@@ -85 +85 @@
+-  have rec : Nonempty (Derivation B Γ (recGraph targetBase targetStep
++  have acceptedRec : Nonempty (Derivation B Γ (recGraph targetBase targetStep
+@@ -90 +90 @@
+-  have step := consForward targetBase targetStep code row tail (suc projected) Fin.elim0 cell rec
++  have step := consForward targetBase targetStep code row tail (suc projected) Fin.elim0 cell acceptedRec

@@ -1,0 +1,8 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapConsProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapConsProof.lean
+@@ -95 +95 @@
+-    simpa only [oneTape,unary,recGraph] using sub
++    simpa only [oneTape,unary,recGraph,scratchTargets] using sub
+@@ -122 +122 @@
+-  · simpa only [ρ,R,Term.relabel_relabel] using fieldReport
++  · simpa only [ρ,R,Term.relabel_relabel,unary] using fieldReport
