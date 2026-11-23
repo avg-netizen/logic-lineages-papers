@@ -1,0 +1,3 @@
+# Paper 16: effective original finite-type ladder codes
+
+Printed anchor: ordinals.tex:532, actual ladder A₀=ι=o→o, Aₙ₊₁=Aₙ→Aₙ, already interpreted by the native type translation in NativeTowerWitnessPrefixTargets. The typeCode starts at the literal existing code of o→o, namely 1, and recursively uses the existing NumberedWindowArithmeticTyCode arrow record with both fields equal to the preceding original type code. Its calibration holds at every index, and the recurrence is primitive recursive using the exact stored polynomial arithmetic pair. No alternative encoding, iterator or extractor effectivity, ordinal/rank claim, or numbered promotion.

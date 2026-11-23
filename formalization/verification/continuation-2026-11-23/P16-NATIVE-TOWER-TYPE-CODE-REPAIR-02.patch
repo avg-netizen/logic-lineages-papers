@@ -1,0 +1,102 @@
+--- a/formalization/LogicLineages/PersistentMarking/NativeTowerTypeCodeTargets.lean
++++ b/formalization/LogicLineages/PersistentMarking/NativeTowerTypeCodeTargets.lean
+@@ -0,0 +1 @@
++import LogicLineages.PersistentMarking.NativeTowerTypeCodeKernel
+@@ -3 +4 @@
+-import Mathlib.Computability.Primrec.Basic
++
+@@ -7,6 +7,0 @@
+-open NumberedWindowArithmeticPair (pair)
+-
+-/-- First code is the original type o → o. Each later code records
+-two copies of the former arrow field under the fixed original codec. -/
+-def typeCode : Nat → Nat :=
+-  Nat.rec 1 (fun _ old => pair old old + 1)
+@@ -15,3 +9,0 @@
+-def NativeTowerTypeCodeEffectivity : Prop := Primrec typeCode
+-def FullNativeTowerTypeCode : Prop :=
+-  ExactNativeTowerTypeCode ∧ NativeTowerTypeCodeEffectivity
+--- a/formalization/LogicLineages/PersistentMarking/NativeTowerTypeCodeProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NativeTowerTypeCodeProof.lean
+@@ -1 +1,5 @@
+-import LogicLineages.PersistentMarking.NativeTowerTypeCodeTargets
++module
++public import LogicLineages.PersistentMarking.NativeTowerTypeCodeKernel
++public import Mathlib.Computability.Primrec.Basic
++
++@[expose] public section
+@@ -4,4 +7,0 @@
+-open NativeTowerWitnessPrefixTargets (level ty)
+-open NativeIndexedCarrierTargets (indexType actualType)
+-open NumberedWindowArithmeticTyCode (encodeTy)
+-open NumberedWindowArithmeticPair (pair)
+@@ -9,2 +9 @@
+-/-- The exact existing arithmetic codec pair, not another pairing. -/
+-theorem pairPrimitive : Primrec₂ pair := by
++theorem pairPrimitive : Primrec₂ codecPair := by
+@@ -17,11 +16,3 @@
+-theorem exactNativeTowerTypeCode : ExactNativeTowerTypeCode := by
+-  intro n
+-  induction n with
+-  | zero => rfl
+-  | succ n ih =>
+-    change pair (typeCode n) (typeCode n) + 1 = pair (encodeTy (ty n)) (encodeTy (ty n)) + 1
+-    rw [ih]
+-
+-theorem nativeTowerTypeCodeEffectivity : NativeTowerTypeCodeEffectivity := by
+-  have step : Primrec₂ (fun (_ : Nat) (old : Nat) => pair old old + 1) := by
+-    have squarePair : Primrec (fun p : Nat × Nat => pair p.2 p.2) :=
++theorem nativeTowerTypeCodeEffectivity : Primrec typeCode := by
++  have step : Primrec₂ (fun (_ : Nat) (old : Nat) => codecPair old old + 1) := by
++    have squarePair : Primrec (fun p : Nat × Nat => codecPair p.2 p.2) :=
+@@ -32,3 +22,0 @@
+-theorem fullNativeTowerTypeCode : FullNativeTowerTypeCode :=
+-  ⟨exactNativeTowerTypeCode,nativeTowerTypeCodeEffectivity⟩
+-
+@@ -36 +23,0 @@
+-#print axioms exactNativeTowerTypeCode
+@@ -38 +24,0 @@
+-#print axioms fullNativeTowerTypeCode
+--- /dev/null
++++ b/formalization/LogicLineages/PersistentMarking/NativeTowerTypeCodeKernel.lean
+@@ -0,0 +1,14 @@
++module
++public import Init
++
++@[expose] public section
++namespace LogicLineages.PersistentMarking.NativeTowerTypeCodeTargets
++
++def codecPair (a b : Nat) : Nat := (a+b)*(a+b)+a
++
++/-- Literal arithmetic recurrence shared by the rank-free source bridge
++and the independent effectivity proof. -/
++def typeCode : Nat → Nat :=
++  Nat.rec 1 (fun _ old => codecPair old old + 1)
++
++end LogicLineages.PersistentMarking.NativeTowerTypeCodeTargets
+--- /dev/null
++++ b/formalization/LogicLineages/PersistentMarking/NativeTowerTypeCodeBridge.lean
+@@ -0,0 +1,23 @@
++import LogicLineages.PersistentMarking.NativeTowerTypeCodeTargets
++
++namespace LogicLineages.PersistentMarking.NativeTowerTypeCodeBridge
++open NativeTowerTypeCodeTargets
++open NativeTowerWitnessPrefixTargets (ty)
++open NumberedWindowArithmeticTyCode (encodeTy)
++open NumberedWindowArithmeticPair (pair)
++
++/-- The rank-free alias is exactly the pair stored by the native codec. -/
++theorem exactCodecPair (a b : Nat) : codecPair a b = pair a b := rfl
++
++theorem exactNativeTowerTypeCode : ExactNativeTowerTypeCode := by
++  intro n
++  induction n with
++  | zero => rfl
++  | succ n ih =>
++    change codecPair (typeCode n) (typeCode n) + 1 = pair (encodeTy (ty n)) (encodeTy (ty n)) + 1
++    rw [ih,exactCodecPair]
++
++#print axioms exactCodecPair
++#print axioms exactNativeTowerTypeCode
++
++end LogicLineages.PersistentMarking.NativeTowerTypeCodeBridge

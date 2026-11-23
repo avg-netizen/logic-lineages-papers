@@ -1,0 +1,35 @@
+{
+  "status": "Frozen exact split source repair, native pending",
+  "failed_exact_gate_receipt": "1795440876828499974-8",
+  "failed_receipt_sha256": "6d4105b826d967204fbf042c22bbfc54222b4f7b08bf8cba0dae6b042cebcd3f",
+  "failed_exact_module_log_sha256": "7a83dbfa5cba7b33a83ee881c694672781d703b2ae85b9764e4dcd29b02e8f04",
+  "failed_diagnostic": "RSS hard stop on legacy target mixing native source and Mathlib",
+  "edits": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerTypeCodeTargets.lean": {
+      "failed_sha256": "ce641761ed4bc77eb6a754907c7a716c5b394433eccdee13b458a06478925d29",
+      "repaired_sha256": "04e930bee2c37541d26cc1d63316ecede4664f4e377b9e15369c352df0c30e00"
+    },
+    "formalization/LogicLineages/PersistentMarking/NativeTowerTypeCodeProof.lean": {
+      "failed_sha256": "9c2058d11b7b4b204a1b1b033306f6e35af2af4990a11b87d69117e56aeb5293",
+      "repaired_sha256": "d0bc851490a64b9243412dbd2fe43b368b4524edbd51bc6892f31d5629fc7e31"
+    },
+    "formalization/LogicLineages/PersistentMarking/NativeTowerTypeCodeKernel.lean": {
+      "failed_sha256": null,
+      "repaired_sha256": "f4fcbea06f2ca386e94f6de7b434aa4fcd021922590fb4734c181bd635fed9ae"
+    },
+    "formalization/LogicLineages/PersistentMarking/NativeTowerTypeCodeBridge.lean": {
+      "failed_sha256": null,
+      "repaired_sha256": "680c05083ed1ad6eced4b5492593c6cc652a5371d2ff0b2320f3b01b53b4592b"
+    }
+  },
+  "prior_repair_manifest": "formalization/verification/continuation-2026-11-23/P16-NATIVE-TOWER-TYPE-CODE-REPAIR-01.json",
+  "prior_repair_manifest_sha256": "39dbd4041c85cd0c7c47ce34192314b9648eb78cb5e2570e3460eeb5b3ac5b62",
+  "patch": "formalization/verification/continuation-2026-11-23/P16-NATIVE-TOWER-TYPE-CODE-REPAIR-02.patch",
+  "patch_sha256": "5731ba7ba4c276e311fd28fb953ba1fd70cf9b2ba796dbf6f694e1e55fc39ba7",
+  "reverse_reconstructs_exact_failed_sources": true,
+  "roots": [
+    "LogicLineages.PersistentMarking.NativeTowerTypeCodeBridge",
+    "LogicLineages.PersistentMarking.NativeTowerTypeCodeProof"
+  ],
+  "scope": "A shared Init-only literal polynomial recurrence; separate original legacy type/codec equality and module-mode Mathlib effectivity. No old file or checker changes."
+}

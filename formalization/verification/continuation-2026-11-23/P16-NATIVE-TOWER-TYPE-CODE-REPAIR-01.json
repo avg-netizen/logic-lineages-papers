@@ -1,0 +1,23 @@
+{
+  "status": "Frozen exact source repair, native pending",
+  "failed_exact_gate_receipt": "1795440821524864372-8",
+  "failed_receipt_sha256": "e226c4f47137722d87db646186ce8a2c79bf0c758da6a6236b4685a3b3225dce",
+  "failed_exact_module_log_sha256": "5b35a8ae148693a3a28fa99dca787205dec9e6ee88413266d94a41a0f8ff71ad",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NativeTowerTypeCodeTargets.lean:1:0: error: cannot import non-`module` LogicLineages.PersistentMarking.NativeTowerWitnessPrefixTargets from `module`",
+  "edits": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerTypeCodeTargets.lean": {
+      "failed_sha256": "45a7fc69b5db980fef24a3bc6886f55df6bef9625af54f51afe4e1984bce9ee0",
+      "repaired_sha256": "ce641761ed4bc77eb6a754907c7a716c5b394433eccdee13b458a06478925d29"
+    },
+    "formalization/LogicLineages/PersistentMarking/NativeTowerTypeCodeProof.lean": {
+      "failed_sha256": "b96dcc0b725a605213d41683f1526b3d2f4f7f895107113059d4aa508cb1624f",
+      "repaired_sha256": "9c2058d11b7b4b204a1b1b033306f6e35af2af4990a11b87d69117e56aeb5293"
+    }
+  },
+  "author_manifest": "formalization/verification/continuation-2026-11-23/P16-NATIVE-TOWER-TYPE-CODE-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "6c6336d923ecff524786a06a5ba27f9583910b2d51a0170836c43c1f31d17b62",
+  "patch": "formalization/verification/continuation-2026-11-23/P16-NATIVE-TOWER-TYPE-CODE-REPAIR-01.patch",
+  "patch_sha256": "7dc1b6571e44524cb9b2bdcebfad9f18e4e2fa22f81bd9652e2175c8fa428665",
+  "reverse_reconstructs_both_exact_failed_sources": true,
+  "scope": "Only the two new leaves use legacy import syntax to refer to the original legitimate type ladder and codec, with original programs and statements unchanged; no existing source or checker edited."
+}
