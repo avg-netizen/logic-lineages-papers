@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticSyntaxAlgorithmProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticSyntaxAlgorithmChecks
+open NumberedWindowArithmeticSyntaxAlgorithmTargets
+theorem exact_ExactNominalHeadGuard : ExactNominalHeadGuard := NumberedWindowArithmeticSyntaxPartsProof.headGuard
+theorem exact_ExactTermArgsTable : ExactTermArgsTable := NumberedWindowArithmeticSyntaxAlgorithmProof.prefixTable
+theorem exact_ExactTermArgsGuards : ExactTermArgsGuards := NumberedWindowArithmeticSyntaxAlgorithmProof.guards
+#print axioms exact_ExactNominalHeadGuard
+#print axioms exact_ExactTermArgsTable
+#print axioms exact_ExactTermArgsGuards
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticSyntaxAlgorithmChecks

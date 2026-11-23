@@ -1,0 +1,13 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticStatRootProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticStatRootChecks
+open NumberedWindowArithmeticStatRootTargets
+theorem exact_ExactStatRoot : ExactStatRoot := NumberedWindowArithmeticStatRootProof.statExact
+theorem exact_RejectedStatPartition : RejectedStatPartition := NumberedWindowArithmeticStatRootProof.invalid
+#print axioms exact_ExactStatRoot
+#print axioms exact_RejectedStatPartition
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticStatRootChecks

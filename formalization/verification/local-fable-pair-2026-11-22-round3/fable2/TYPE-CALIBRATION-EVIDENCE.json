@@ -1,0 +1,77 @@
+{
+  "gate": "G05 — calibration of the type guards",
+  "lane": "fable2",
+  "date": "2026-11-22",
+  "command": "bash verification/local-fable-pair-2026-11-22-round3/gate.sh mathlib LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeCalibrationTargets LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeCalibrationProof",
+  "result": "COMPILE_PASS (both modules, first gate, no failed attempt)",
+  "passing_receipt_id": "1795402855547066197-3279443",
+  "passing_receipt_path": "build-reports/1795402855547066197-3279443.json",
+  "passing_receipt_sha256": "fbaf544591d75df7ae9da7fc365df83410b3ccd5e55aa1e11c8d01b077b348c5",
+  "modules": [
+    {
+      "module": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeCalibrationTargets",
+      "path": "LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationTypeCalibrationTargets.lean",
+      "sha256": "12593c684f85288ae3302bd34268a9b07e68c918a6a4828e1eee004031ecf932",
+      "sha256_recorded_in_ledger_before_proof": true,
+      "changed_after_freeze": false
+    },
+    {
+      "module": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeCalibrationProof",
+      "path": "LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationTypeCalibrationProof.lean",
+      "sha256": "d0073128acd68b38e5efb88c177a478edabc895a1c0c6ae39de85f45bbe5cecc"
+    }
+  ],
+  "task_items": {
+    "1_window_entails_refit_guard_at_its_type": "NO — diagnosed, nothing gated for it. The guard program occurs in the installed window only inside admittedChildren, applied to fields 0 and 1 of a key of auxiliary shape; windowAt Q.window ctx ty k is otherwise the equality test F(ctx,k) = succ ty.",
+    "2_arrow_codomain_inversion_for_actual_type_program": "NOT PROVED — the actual type programs are existential witnesses of Proof.unaryCorrespondence with numeric calibration only (ActualTypeGuard, TypeGuardCalibrated); no object-calculus derivation for open terms follows. Settings carries no closure of s.types.",
+    "3_guard_free_statements_with_no_premise_beyond_closure": "NOT REACHED — depends on item 2."
+  },
+  "what_is_gated_instead": "The premise shrink item 1 asked for, reached through the scalar's free type-checker slot instead of the window: for the installation with tv := conjunction TV (refitGuard s T), the three application statements hold under codomain inversion of TV and of refitGuard s T alone. SyntaxGuardRefits is no longer a premise.",
+  "remaining_premises": [
+    "ArrowCodomainInversion body TV",
+    "ArrowCodomainInversion body (refitGuard s T)  [implied by ArrowCodomainInversion body T and GrammarCodomainInversion body s]"
+  ],
+  "endpoints": [
+    {
+      "theorem": "exact_RefitGuardCodomainInversionFromComponents",
+      "statement": "ExactRefitGuardCodomainInversionFromComponents",
+      "conditional_on_inversion_premises": false
+    },
+    {
+      "theorem": "exact_RefittedInstalledApplicationTypeGuards",
+      "statement": "ExactRefittedInstalledApplicationTypeGuards",
+      "conditional_on_inversion_premises": true
+    },
+    {
+      "theorem": "exact_RefittedInstalledApplicationOutputAddress",
+      "statement": "ExactRefittedInstalledApplicationOutputAddress",
+      "conditional_on_inversion_premises": true
+    },
+    {
+      "theorem": "exact_RefittedInstalledApplicationFrontendAcceptance",
+      "statement": "ExactRefittedInstalledApplicationFrontendAcceptance",
+      "conditional_on_inversion_premises": true
+    },
+    {
+      "theorem": "exact_RefittedInstalledApplicationOutputFunctionalityContinuation",
+      "statement": "ExactRefittedInstalledApplicationOutputFunctionalityContinuation",
+      "conditional_on_inversion_premises": true
+    }
+  ],
+  "print_axioms": [
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeCalibrationProof.exact_RefitGuardCodomainInversionFromComponents' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeCalibrationProof.exact_RefittedInstalledApplicationTypeGuards' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeCalibrationProof.exact_RefittedInstalledApplicationOutputAddress' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeCalibrationProof.exact_RefittedInstalledApplicationFrontendAcceptance' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeCalibrationProof.exact_RefittedInstalledApplicationOutputFunctionalityContinuation' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "forbidden_constructs": "no sorry, axiom or native_decide in either module",
+  "existing_files_edited": "none",
+  "limits": [
+    "The installation is a DIFFERENT tuple from #1453: its scalar type checker is conjunction TV (refitGuard s T), not TV. Nothing here is a statement about the tv := TV installation.",
+    "The refitted scalar type checker is not shown to satisfy ActualTypeGuard; numerically it computes typeGuard s plus membership in s.types, which is strictly narrower than typeBit. Whether the accepted numeric installation chain (ConcreteAddressPositive, GuardedAt) survives this choice of tv was not examined.",
+    "No instance of either inversion premise is proved. TV and T remain arbitrary programs.",
+    "GrammarCodomainInversion body s is an internal rule; it is NOT derived from numeric closure of s.types under arrow codomains.",
+    "The non-entailment in item 1 and the standard-model falsity of the #1453 premise for the actual calibrations are arguments recorded in the ledger, not gated theorems."
+  ]
+}

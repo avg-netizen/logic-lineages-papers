@@ -1,0 +1,20 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowCanonicalAddressMapProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowCanonicalAddressMapChecks
+open NumberedWindowCanonicalAddressMapTargets NumberedWindowCanonicalAddressMapProof
+
+theorem exact_ActualClassAddressSpecification : ActualClassAddressSpecification := specification
+
+theorem exact_ActualClassAddressInjection : ActualClassAddressInjection := injection
+
+theorem exact_ActualClassAddressSuccessors : ActualClassAddressSuccessors := successors
+
+#print axioms exact_ActualClassAddressSpecification
+#print axioms exact_ActualClassAddressInjection
+#print axioms exact_ActualClassAddressSuccessors
+
+end LogicLineages.PersistentMarking.NumberedWindowCanonicalAddressMapChecks

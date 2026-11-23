@@ -1,0 +1,13 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticAddressCheckersProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticAddressCheckersChecks
+open NumberedWindowArithmeticAddressCheckersTargets
+theorem exact_MultisetDomain : ExactMultisetDomain := NumberedWindowArithmeticAddressCheckersProof.domain
+theorem exact_PositiveAndDirect : ExactPositiveAndDirect := NumberedWindowArithmeticAddressCheckersProof.certificates
+#print axioms exact_MultisetDomain
+#print axioms exact_PositiveAndDirect
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticAddressCheckersChecks

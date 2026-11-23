@@ -1,0 +1,13 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.MarkedConstructorSelectProof
+public import LogicLineages.NativeModule.PersistentMarking.MarkedConstructorFAbsExactProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.MarkedConstructorTestChecks
+theorem exact_SelectExact : MarkedConstructorTargets.SelectExact := MarkedConstructorSelectProof.select
+theorem exact_FAbsExact : MarkedConstructorTargets.FAbsExact := MarkedConstructorFAbsExactProof.fabs
+#print axioms exact_SelectExact
+#print axioms exact_FAbsExact
+end LogicLineages.PersistentMarking.MarkedConstructorTestChecks

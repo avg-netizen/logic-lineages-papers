@@ -1,0 +1,16 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticPairProgramProof
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticPairProgramCalibration
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticPairProgramChecks
+open NumberedWindowArithmeticPairProgramTargets NumberedWindowArithmeticPairProgramProof
+theorem exact_PairAndDecodeCalibration : PairAndDecodeCalibration := NumberedWindowArithmeticPairProgramCalibration.calibration
+theorem exact_ActualPairProgram : ActualPairProgram := actualPair
+theorem exact_ActualPairDecoderProgram : ActualPairDecoderProgram := actualDecoder
+#print axioms exact_PairAndDecodeCalibration
+#print axioms exact_ActualPairProgram
+#print axioms exact_ActualPairDecoderProgram
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticPairProgramChecks

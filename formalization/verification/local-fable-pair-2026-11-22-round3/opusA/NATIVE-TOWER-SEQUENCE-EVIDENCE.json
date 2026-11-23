@@ -1,0 +1,40 @@
+{
+ "key": "NATIVE-TOWER-SEQUENCE",
+ "lane": "opusA",
+ "round": 3,
+ "serves": "Paper 16 ordinals.tex 564-590: (D) native terms t_n realize the paper composites Delta_n prime",
+ "source_map": "verification/local-fable-pair-2026-11-22-round3/opusA/NATIVE-TOWER-SEQUENCE-SOURCE-MAP.md",
+ "modules": [
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.NativeTowerSequenceTargets",
+   "sha256": "830ba1663446ed317e15e9bd1fa9b584d1122552b0972e3dfd791ca0c65eb754",
+   "frozen_receipt": "1795402872232949190-3279494",
+   "peak_rss_kib": 874840
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.NativeTowerSequenceProof",
+   "sha256": "25998ef946d6e77fd74cec10f2788ab834f8b7c1637282a9a3d6ba87ae8553cf",
+   "receipt": "1795402918597835057-3279644",
+   "peak_rss_kib": 941296
+  }
+ ],
+ "theorem": "LogicLineages.PersistentMarking.NativeTowerSequenceProof.exact_NativeTowerSequenceRealization : NativeTowerSequenceRealization",
+ "named_axiom_output": {
+  "exact_NativeTowerSequenceRealization": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ]
+ },
+ "peak_rss_kib_closure": 945812,
+ "depends_on": [
+  "#1459 exact_PrintedTowerRealization",
+  "#1456 closure exact_LiteralNativeArithmeticRealizes"
+ ],
+ "external_residue": [
+  "E1 Delta_n prime = psi_B(a_n) (Simmons calibration)",
+  "E2 characterization (P)",
+  "E3 psi_B(eps_{Omega+1}) = BH (Pohlers 9.4-9.5)",
+  "E4 Pohlers norm theorem"
+ ]
+}

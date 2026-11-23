@@ -1,0 +1,22 @@
+{
+  "id": "new-set-1451",
+  "statement": "17-permitted-control-canonical-comparison:thm:main",
+  "kind": "current numbered statement",
+  "target": "LogicLineages.PermittedControl.UniformGroundComparison.UniformMainComparison",
+  "exact_alias": "LogicLineages.PermittedControl.UniformGroundComparison.uniformMainComparison",
+  "native_receipt": "1795399023916468157-3254750",
+  "supporting_record": "1445-p17-uniform-main-comparison.json",
+  "supporting_record_sha256": "c5bfc1fc7d7d0139372e5428ab942e833e0b9a37ec5571bebd651e1ed0844817",
+  "consolidated_gate": "1795400038619106271-3265668 (all 700 new modules of round 2)",
+  "comparator_origin": "Written and frozen by the local root (Claude) in round 2 in response to the first external source check, which found the earlier comparator (#1429 MainComparison) too weak; not a Codex-owned comparator.",
+  "independent_review": "External agent source check of the strengthened comparator, ../github-round2-review-2026-11-22/P17-UNIFORMITY-REVIEW.md (sha256 4680fbf8d339b72ccfd862e8111692ff30d8a43d47f8108ed670ba1a76846ea9): \"no material source-correspondence mismatch found in the new uniformity repair. The strengthened comparator closes the supplied-policy-program and joint near-control-parameter gaps identified in the earlier correspondence review.\" The earlier check is ../github-continuation-2026-11-22/p17/CORRESPONDENCE-REVIEW.md (sha256 1016a78ff581af6170f66ca802f91018b2359035b1ba3f8ba2a47dbba56a2e83). Both are statement-to-paper comparisons; Lean is the proof-validity check.",
+  "owner_decision": "Owner instruction of 2026-11-22: \"ok, promote thm:main if you judge it to be ready.\" Root's judgement: ready \u2014 the comparator is proved with no hypothesis, both gaps the first review named are closed by construction (policy program and b are runtime inputs of one procedure), and the second review checked all five printed clauses and found no mismatch.",
+  "accepted_utc": "2026-11-23T02:47:39.176497+00:00",
+  "limitations": [
+    "'Permitted' is carried by the control-law clauses of #010 (FullControl) rather than by a formalisation of Wilken-Weiermann section 2.1; the reviews retain the existing formal interpretation of control laws, canonical assignments and original-domain circuit semantics",
+    "One procedure per relation (weak, strict, equality) rather than the relation as a runtime tag; the review judged this immaterial",
+    "The procedure may diverge on programs that realize no policy; on realizing programs it halts on every raw input and is correct on codes of typed terms whose free variables all have ground type",
+    "Clauses (ii) and (iii) are the accepted no-decider statements for every selected control and policy together with the literal policy- and control-independent reduction programs",
+    "Compiled and verified on the local continuation host; build receipts are host-local"
+  ]
+}

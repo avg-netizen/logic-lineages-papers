@@ -1,8 +1,24 @@
 # Current comparison formalization status
 
-The new-paper register has **159 checked and 8 pending out of 167**. Historical register:
+The new-paper register has **160 checked and 7 pending out of 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
+
+## Round 5 of the local Fable-pair continuation, 22/23 November (paused)
+
+Supporting records now end at **1473**; the register is unchanged at 160 checked and 7 pending. The conditional Paper 16 statements were tightened: item 6 of `thm:main` now carries the explicit cofinal family of tower terms, `thm:upper` takes the uniform internal accessibility sentence rather than one atom per address, the abstract tower hypotheses are shown consistent by a toy model, and the height is confirmed to range over exactly the printed relation's field. The complete list of what the four literature-dependent statements assume is five named hypotheses. [Handoff](../local-fable-pair-2026-11-22-round5/HANDOFF.md) · [main, effective](accepted/1471-p16-conditional-main-effective.json) · [upper, uniform](accepted/1472-p16-conditional-upper-uniform.json)
+
+## Round 4 of the local Fable-pair continuation, 22 November (paused)
+
+Supporting records now end at **1467**; the register is unchanged at 160 checked and 7 pending. The paper's own arguments for Paper 16 `lem:tower-cofinality`, `thm:height`, `thm:upper` and `thm:main` are compiled conditionally: each result cited from Simmons or Pohlers, and the internal accessibility statement, is an explicit named hypothesis over abstract data, and everything else is checked. These do not promote any numbered statement, because the cited objects have no definitions in the repository. [Handoff](../local-fable-pair-2026-11-22-round4/HANDOFF.md) · [tower cofinality](accepted/1463-p16-conditional-tower-cofinality.json) · [height](accepted/1465-p16-conditional-height.json) · [upper bound](accepted/1466-p16-conditional-upper.json) · [main](accepted/1467-p16-conditional-main.json)
+
+## Round 3 of the local Fable-pair continuation, 22 November (paused)
+
+Supporting records now end at **1462**. Every construction that is Paper 16's own is compiled on module-system copies of the native files: iteration, realization with its finite-chain and abstraction-rule sentences, the native arithmetic realizers, every tower term and the tower sequence of (D), and the chain from the confined rank of a term to the least stage of the tagged operator. `thm:iteration` is ready for promotion; `lem:realization` waits on the wording of its last sentence. The other pending statements need the internal ID₁ accessibility proof or external results of Simmons and Pohlers that have no definitions in the repository. [Handoff](../local-fable-pair-2026-11-22-round3/HANDOFF.md) · [tower sequence](accepted/1462-p16-native-tower-sequence.json) · [rank chain](accepted/1460-p16-confined-rank-below-tagged-stage-norm.json)
+
+## Paper 17 complete, 22 November
+
+The owner promoted `thm:main` on the strengthened comparator `UniformMainComparison`, proved with no hypothesis and checked against the printed theorem by the external round-2 review. Paper 17 is at 33 of 33. The seven pending statements are all in Paper 16. [thm:main](accepted/1451-p17-thm-main.json) · [review](../github-round2-review-2026-11-22/P17-UNIFORMITY-REVIEW.md)
 
 ## Independent review of round 2, 22 November
 

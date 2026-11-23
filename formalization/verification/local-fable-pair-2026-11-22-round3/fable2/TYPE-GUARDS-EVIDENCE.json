@@ -1,0 +1,66 @@
+{
+  "gate": "G04 — type guards",
+  "lane": "fable2",
+  "date": "2026-11-22",
+  "command": "bash verification/local-fable-pair-2026-11-22-round3/gate.sh mathlib LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationGuardFreeTargets LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationGuardFreeProof",
+  "result": "COMPILE_PASS (both modules, first gate, no failed attempt)",
+  "passing_receipt_id": "1795402283407171155-3276597",
+  "passing_receipt_path": "build-reports/1795402283407171155-3276597.json",
+  "passing_receipt_sha256": "54f38d0db2b2ea0c9198827838f394b8e6bf2089a6eb18c3e4d413da4851cee8",
+  "modules": [
+    {
+      "module": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationGuardFreeTargets",
+      "path": "LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationGuardFreeTargets.lean",
+      "sha256": "59d05ab1d9b4bd5d972fb66199122a27e20447cba68a9af4bb19031d1940005d",
+      "sha256_recorded_in_ledger_before_proof": true,
+      "changed_after_freeze": false
+    },
+    {
+      "module": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationGuardFreeProof",
+      "path": "LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationGuardFreeProof.lean",
+      "sha256": "638cbda693b86d63cf92d63c387c204467be91c4c0f195e4cb2ba750af245ccb"
+    }
+  ],
+  "named_premise": "TypeGuardArrowCalibration body s TV T",
+  "endpoints": [
+    {
+      "theorem": "exact_TypeGuardArrowCalibrationFromComponents",
+      "statement": "ExactTypeGuardArrowCalibrationFromComponents",
+      "conditional_on_named_premise": false
+    },
+    {
+      "theorem": "exact_InstalledApplicationTypeGuards",
+      "statement": "ExactInstalledApplicationTypeGuards",
+      "conditional_on_named_premise": true
+    },
+    {
+      "theorem": "exact_InstalledGuardFreeApplicationOutputAddress",
+      "statement": "ExactInstalledGuardFreeApplicationOutputAddress",
+      "conditional_on_named_premise": true
+    },
+    {
+      "theorem": "exact_InstalledGuardFreeApplicationFrontendAcceptance",
+      "statement": "ExactInstalledGuardFreeApplicationFrontendAcceptance",
+      "conditional_on_named_premise": true
+    },
+    {
+      "theorem": "exact_InstalledGuardFreeApplicationOutputFunctionalityContinuation",
+      "statement": "ExactInstalledGuardFreeApplicationOutputFunctionalityContinuation",
+      "conditional_on_named_premise": true
+    }
+  ],
+  "print_axioms": [
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationGuardFreeProof.exact_TypeGuardArrowCalibrationFromComponents' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationGuardFreeProof.exact_InstalledApplicationTypeGuards' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationGuardFreeProof.exact_InstalledGuardFreeApplicationOutputAddress' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationGuardFreeProof.exact_InstalledGuardFreeApplicationFrontendAcceptance' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationGuardFreeProof.exact_InstalledGuardFreeApplicationOutputFunctionalityContinuation' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "forbidden_constructs": "no sorry, axiom or native_decide in either module",
+  "existing_files_edited": "none",
+  "limits": [
+    "The guards are NOT discharged unconditionally: TV and T are arbitrary programs, and the four application endpoints are conditional on the named premise TypeGuardArrowCalibration.",
+    "No instance of the premise (no concrete TV/T satisfying it) is proved here.",
+    "The general arbitrary-tv statements of #1438/#1440/#1442 are untouched; these results are for the installation with tv := TV only."
+  ]
+}

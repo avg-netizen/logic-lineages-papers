@@ -1,0 +1,10 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowRawContextFrameLamProof
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowRawContextFrameOrdinaryProof
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowRawContextFrameNumberedBaseProof
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowRawContextFrameNumberedExtraProof
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowRawContextFrameAuxProof
+
+@[expose] public section
+

@@ -1,0 +1,20 @@
+{
+  "id": "new-set-1453",
+  "kind": "supporting only",
+  "paper": "paper-16",
+  "scope": "The installed application's output address, frontend acceptance and output functionality (#1438, #1440, #1442) with both type-guard hypotheses removed and replaced by one named premise on the type programs, TypeGuardArrowCalibration: from acceptance of an arrow type and of its domain by the syntax type program, acceptance of the codomain and the refit guard at domain and codomain. That premise follows from codomain inversion of the type program together with the syntax guard refitting (proved). No concrete type program is shown to satisfy the premise; for arbitrary programs it cannot hold.",
+  "evidence": "../local-fable-pair-2026-11-22-round3/evidence/1453-p16-installed-application-guard-free-native.json",
+  "evidence_sha256": "a88ee6adac2bbd50a7a7d05f9d8076d0e0ef0f77426ea88663cf2a9cfd78e6d5",
+  "statement_scope_check": "../local-fable-pair-2026-11-22-round3/fable2/TYPE-GUARDS-SOURCE-MAP.md",
+  "verification": "Exact original native Lean normal profile and named axiom output, with source-to-statement scope checked by the authoring lane and root; no separate artifact replay, no cross-model review.",
+  "native_receipt": "1795402283407171155-3276597",
+  "exact_alias_count": 5,
+  "numbered_promotions": [],
+  "source_pins": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationGuardFreeTargets.lean": "59d05ab1d9b4bd5d972fb66199122a27e20447cba68a9af4bb19031d1940005d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationGuardFreeProof.lean": "638cbda693b86d63cf92d63c387c204467be91c4c0f195e4cb2ba750af245ccb",
+    "formalization/verification/local-fable-pair-2026-11-22-round3/fable2/TYPE-GUARDS-SOURCE-MAP.md": "42d9f4461a60a13606978c6ad37df0b945da686241b0d9a2c4415ab327e96437",
+    "formalization/verification/local-fable-pair-2026-11-22-round3/evidence/1453-p16-installed-application-guard-free-native.json": "a88ee6adac2bbd50a7a7d05f9d8076d0e0ef0f77426ea88663cf2a9cfd78e6d5"
+  },
+  "later_finding": "Same round, record #1461 (lane fable2, session G05): under the accepted calibrations of the actual type programs, the premise SyntaxGuardRefits (hence TypeGuardArrowCalibration as obtained from it) says every valid type code lies in the finite window list, which is false in the standard model. The statements of this record remain valid Lean theorems but their premise is not satisfiable by the actual installed programs; do not cite this record as discharging the type guards. The finding is an argument from the definitions, not a gated theorem."
+}

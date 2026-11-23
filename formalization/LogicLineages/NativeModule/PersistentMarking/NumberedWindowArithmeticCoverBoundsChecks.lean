@@ -1,0 +1,14 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticCoverBoundsProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticCoverBoundsChecks
+open NumberedWindowArithmeticCoverBoundsTargets
+theorem exact_LiteralCoverBounds : LiteralCoverBounds :=
+  ⟨NumberedWindowArithmeticCoverBoundsProof.term,NumberedWindowArithmeticCoverBoundsProof.args⟩
+theorem exact_SourceSelectedCover : SourceSelectedCover := NumberedWindowArithmeticCoverBoundsProof.sourceCover
+#print axioms exact_LiteralCoverBounds
+#print axioms exact_SourceSelectedCover
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticCoverBoundsChecks

@@ -1,0 +1,13 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticCoverAlgorithmProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticCoverAlgorithmChecks
+open NumberedWindowArithmeticCoverAlgorithmTargets
+theorem exact_ExactPairedGrammar : ExactPairedGrammar := NumberedWindowArithmeticCoverAlgorithmProof.paired
+theorem exact_ExactOriginalCover : ExactOriginalCover := NumberedWindowArithmeticCoverAlgorithmProof.actual
+#print axioms exact_ExactPairedGrammar
+#print axioms exact_ExactOriginalCover
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticCoverAlgorithmChecks

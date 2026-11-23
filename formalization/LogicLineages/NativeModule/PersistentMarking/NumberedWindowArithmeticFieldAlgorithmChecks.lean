@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticFieldAlgorithmProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticFieldAlgorithmChecks
+open NumberedWindowArithmeticFieldAlgorithmTargets
+
+theorem exact_ExactFieldFuel : ExactFieldFuel := NumberedWindowArithmeticFieldAlgorithmProof.fuelAgreement
+theorem exact_ExactOrderedFieldCodec : ExactOrderedFieldCodec := NumberedWindowArithmeticFieldAlgorithmProof.fields
+theorem exact_ExactTaggedNodeCodec : ExactTaggedNodeCodec := NumberedWindowArithmeticFieldAlgorithmProof.nodes
+
+#print axioms exact_ExactFieldFuel
+#print axioms exact_ExactOrderedFieldCodec
+#print axioms exact_ExactTaggedNodeCodec
+
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticFieldAlgorithmChecks

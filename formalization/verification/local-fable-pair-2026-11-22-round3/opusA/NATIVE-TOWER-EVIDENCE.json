@@ -1,0 +1,69 @@
+{
+ "key": "NATIVE-TOWER",
+ "lane": "opusA",
+ "round": 3,
+ "serves": "Paper 16 ordinals.tex 531-550, (B)/(B_T): realization of B_l for every l",
+ "source_map": "verification/local-fable-pair-2026-11-22-round3/opusA/NATIVE-TOWER-SOURCE-MAP.md",
+ "modules": [
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.NativeTowerTargets",
+   "sha256": "a4f51a006a7a2f4f4d93e01905f3d1e8f4c213802560376030a66ba8d0692aec",
+   "frozen_receipt": "1795402383492741785-3277208",
+   "peak_rss_kib": 881112
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.NativeTowerSyntaxProof",
+   "sha256": "a9a69146c43f940c02d50ce15465bad788f09d924541a4ccd0a769dbdf2dc3b5",
+   "receipt": "1795402486217973933-3277777",
+   "peak_rss_kib": 889704
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.NativeTowerProof",
+   "sha256": "f3d571c5a76cd69b220f8560b680c3dfc75a2f7306f09b2f7e7d65c7cecc7982",
+   "receipt": "1795402619861101760-3278384",
+   "peak_rss_kib": 945812
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.NativeTowerPrintedTargets",
+   "sha256": "a7d91a501cb70e13b405e1333687717e850d06e04f56aa53dfbd59898210c2df",
+   "frozen_receipt": "1795402698832557428-3278827",
+   "peak_rss_kib": 875468
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.NativeTowerPrintedProof",
+   "sha256": "e34d68237af0dad8f44aff33b94bdb74a6df33cd7c1f61b88a4c3dff438c1c4c",
+   "receipt": "1795402711003426157-3278878",
+   "peak_rss_kib": 929444
+  }
+ ],
+ "theorems": {
+  "LogicLineages.PersistentMarking.NativeTowerProof.exact_NativeTowerRealization": "NativeTowerRealization (any closed native fix realizer F |= phi)",
+  "LogicLineages.PersistentMarking.NativeTowerPrintedProof.exact_PrintedTowerRealization": "PrintedTowerRealization (printed ordinalFix, fix f z = orbit f (s z) w)"
+ },
+ "named_axiom_output": {
+  "exact_NativeTowerRealization": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "exact_PrintedTowerRealization": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ]
+ },
+ "peak_rss_kib": 945812,
+ "rss_cap_kib": 1572864,
+ "depends_on": [
+  "NativeOrdinalRealizationProof.exact_NativeLambdaRealization (twin)",
+  "NativeOrdinalIterationProof.exact_NativeIteratorRealizesFullPrefix (twin)",
+  "NativeClosedBetaChecks.exact_ClosedNativeBeta (twin)",
+  "OrdinalNativeOrbitProof.exact_FullPrefixOrbitExists",
+  "NativeOrdinalArithmeticCompositionProof.exact_LiteralNativeArithmeticRealizes (Opus B twin, #1456 closure; printed instance only)"
+ ],
+ "not_covered": [
+  "t_n application assembly for (D) (syntactic/definitional)",
+  "Delta_n = psi_B(a_n) calibration (external: Simmons)",
+  "lem:tower-cofinality, thm:upper (external/other)"
+ ]
+}

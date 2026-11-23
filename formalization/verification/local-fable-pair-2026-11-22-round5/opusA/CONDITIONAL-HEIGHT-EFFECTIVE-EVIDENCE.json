@@ -1,0 +1,50 @@
+{
+ "key": "CONDITIONAL-HEIGHT-EFFECTIVE",
+ "lane": "opusA",
+ "round": 5,
+ "serves": "Paper 16 thm:height cofinal effective witnesses; thm:main item 6 effective form",
+ "modules": [
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ConditionalHeightEffectiveTargets",
+   "sha256": "441d25c6b9fe9edf36faaa69be09aa4a6cb3fc51b89be9204ec349b99b9ffe0d",
+   "frozen_receipt": "1795405209297027940-3293841",
+   "peak_rss_kib": 880048
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ConditionalHeightEffectiveProof",
+   "sha256": "2bbe42f4242af9a948395e682a2c6ca946e48bfc7e305efa8633a28e92c91d86",
+   "receipt": "1795405228525235744-3293922",
+   "peak_rss_kib": 945288
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ConditionalMain16EffectiveTargets",
+   "sha256": "b6bf012cf66792ce89e3b5461c03ce9f3fdbc4f3bca4c4670088ea46d8aefc5a",
+   "frozen_receipt": "1795405246789453837-3294054",
+   "peak_rss_kib": 1055020
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ConditionalMain16EffectiveProof",
+   "sha256": "610db3bba350b773419b161fceb1a99e76f9a0f015ca55110a3f763be2718ea5",
+   "receipt": "1795405251540126890-3294118",
+   "peak_rss_kib": 1143768
+  }
+ ],
+ "theorems": {
+  "LogicLineages.PersistentMarking.ConditionalHeightEffectiveProof.conditionalHeightEffective": "ConditionalHeightEffective",
+  "LogicLineages.PersistentMarking.ConditionalMain16EffectiveProof.exact_ConditionalMain16Effective": "ConditionalMain16Effective"
+ },
+ "named_axiom_output": {
+  "conditionalHeightEffective": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "exact_ConditionalMain16Effective": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ]
+ },
+ "effectiveness_form": "explicit computable Lean function sequenceTerm : Nat -> Expr by structural recursion (recursion equations as rfl theorems); Spine.Expr has no Primcodable instance. A Nat code nativeCode (tr then encodeTerm, injective on closed native terms) exists, but no Computable/Primrec proof of n -> nativeCode t_n was attempted",
+ "domain_note": "verification/local-fable-pair-2026-11-22-round5/opusA/HEIGHT-DOMAIN-NOTE.md (same domain)"
+}

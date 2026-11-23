@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticDirectAlgorithmProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticDirectAlgorithmChecks
+open NumberedWindowArithmeticDirectAlgorithmTargets
+
+theorem exact_LiteralOccurrenceDecoders : LiteralOccurrenceDecoders := NumberedWindowArithmeticDirectAlgorithmProof.decoders
+theorem exact_OriginalMultisetCheckerValues : OriginalMultisetCheckerValues := NumberedWindowArithmeticDirectAlgorithmProof.checkers
+
+#print axioms exact_LiteralOccurrenceDecoders
+#print axioms exact_OriginalMultisetCheckerValues
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticDirectAlgorithmChecks

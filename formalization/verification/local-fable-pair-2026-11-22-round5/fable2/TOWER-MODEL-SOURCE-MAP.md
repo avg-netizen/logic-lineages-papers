@@ -1,0 +1,5 @@
+- Source: Paper 16 `lem:tower-cofinality`, as formalized conditionally in record #1463 (`ConditionalTowerCofinality{Targets,Proof}.lean`); this adds no paper claim, only a non-vacuity witness for the hypothesis bundle `TowerHypotheses`.
+- `toyModel` (`ConditionalTowerCofinalityModelTargets.lean`): `I = O = ENat`, `a n = n`, `endpoint = ⊤`, `one = 0`, `norm = 0`, `critical θ := 0 < θ`, `psi ξ = ξ + 1` — a toy, NOT the paper's collapse (Simmons 2004 §5 / Pohlers §9.4–9.5 remain cited, uninstantiated inputs).
+- `TowerHypothesesConsistent` := `∃ D : CollapseData ENat ENat, TowerHypotheses D`, proved by `towerHypothesesConsistent` via `toyModelSatisfiesHypotheses` (all seven fields, (P) in `toyCharacterization`).
+- Sanity checks: `toyModelConclusion` (direct: `⊤` is the LUB of the tower values and equals `psi endpoint`) and `toyModelConditionalInstance` (`conditionalTowerSupremum` applied to the model).
+- Gate: COMPILE_PASS, receipt `build-reports/1795405199376168853-3293755.json`; axioms `[propext, Classical.choice, Quot.sound]` for all five theorems; hashes in `TOWER-MODEL-EVIDENCE.json`.

@@ -1,0 +1,16 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowActualPairAlgorithm
+public import LogicLineages.PersistentMarking.NumberedWindowRegistryPairCalibration
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticPairProgramTargets
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticPairProgramCalibration
+open NumberedWindowArithmeticPairProgramTargets
+
+theorem calibration : PairAndDecodeCalibration :=
+  ⟨fun a b => congrFun (congrFun (NumberedWindowActualPairAlgorithm.pair.trans NumberedWindowRegistryPairCalibration.pair) a) b,
+   congrFun (NumberedWindowActualPairAlgorithm.decode.trans NumberedWindowRegistryPairCalibration.decode)⟩
+
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticPairProgramCalibration

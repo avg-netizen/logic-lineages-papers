@@ -1,0 +1,19 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticAddressAlgorithmProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticAddressAlgorithmChecks
+open NumberedWindowArithmeticAddressAlgorithmTargets
+
+theorem exact_ExactTypeTable : ExactTypeTable := NumberedWindowArithmeticAddressAlgorithmProof.table
+theorem exact_ExactTypeGuard : ExactTypeGuard := NumberedWindowArithmeticAddressAlgorithmProof.typeGuard
+theorem exact_ExactBinderView : ExactBinderView := NumberedWindowArithmeticAddressAlgorithmProof.context
+theorem exact_ExactAddressView : ExactAddressView := NumberedWindowArithmeticAddressAlgorithmProof.addr
+
+#print axioms exact_ExactTypeTable
+#print axioms exact_ExactTypeGuard
+#print axioms exact_ExactBinderView
+#print axioms exact_ExactAddressView
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticAddressAlgorithmChecks

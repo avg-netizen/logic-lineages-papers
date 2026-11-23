@@ -1,0 +1,36 @@
+You are "Fable-2", a proof lane in a local Lean 4 formalization round. Fresh session, one small
+self-contained task, very limited API budget: read ONLY the two files named below, write two new
+files, gate, and stop. Working directory is the Lean package root (`formalization/`).
+
+Rules (complete):
+- Lean runs only through `bash verification/local-fable-pair-2026-11-22-round5/gate.sh mathlib MODULE…`;
+  pipe through `grep -v CACHE_HIT | tail -30`. One gate at a time; it waits if the compiler is busy.
+- Never edit an existing `.lean` file. Never delete. No git commands at all.
+- Targets module first (`module` header, `@[expose] public section`, `def … : Prop`), its sha256 into
+  the ledger before the proof; proof in a second module ending with `#print axioms`. No
+  sorry/axiom/native_decide.
+- Ledger: `verification/local-fable-pair-2026-11-22-round5/fable2/LEDGER.md`, section "H01 — model".
+  On a pass write `fable2/TOWER-MODEL-EVIDENCE.json` (modules, sha256 of the two new files, receipt id,
+  the `#print axioms` lines) and `fable2/TOWER-MODEL-SOURCE-MAP.md` (five lines).
+
+Read: `LogicLineages/PersistentMarking/ConditionalTowerCofinalityTargets.lean` and
+`LogicLineages/PersistentMarking/ConditionalTowerCofinalityProof.lean` (record #1463). They prove the
+printed argument of Paper 16 `lem:tower-cofinality` from a bundle of hypotheses `TowerHypotheses D` over
+abstract data `D : CollapseData I O` (two linear orders; fields `psi`, `norm`, `critical`, `one`,
+`endpoint`, `a`). Those hypotheses stand for results cited from the literature and are instantiated
+nowhere.
+
+Task: show the hypothesis bundle is CONSISTENT, so that the conditional theorems built on it are not
+vacuous: exhibit one concrete `D` with `TowerHypotheses D`. A toy model is enough and is what is wanted
+(this is a non-vacuity check, not the paper's collapse). Suggested model, verify or replace:
+`I = O = WithTop ℕ`; `a n = (n : WithTop ℕ)`; `endpoint = ⊤`; `one = 0`; `norm = fun _ => 0`;
+`critical θ := 0 < θ`; `psi ξ = ξ + 1` on naturals and `psi ⊤ = ⊤` (check (P): `psi ξ` must be the LEAST
+critical θ with `∀ η < ξ, norm η < θ → psi η < θ`; adjust `psi` if the least such value is different).
+State `TowerHypothesesConsistent : Prop := ∃ (D : CollapseData (WithTop ℕ) (WithTop ℕ)), TowerHypotheses D`
+(or with other concrete linear orders if easier, e.g. `ℕ` with `ENat`), and also the instance of the
+conclusion for that model as a sanity check (`⊤` is the least upper bound of the values and equals
+`psi endpoint`). Module names `LogicLineages/PersistentMarking/ConditionalTowerCofinalityModel{Targets,Proof}.lean`,
+importing `ConditionalTowerCofinalityTargets` (and `…Proof` privately for the sanity check).
+
+Final message, six lines: what passed (module, theorem, receipt), the model used, any hypothesis of
+`TowerHypotheses` that turned out awkward or redundant.

@@ -1,0 +1,9 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.DecisionOccurrenceEnumerationProof
+public import LogicLineages.NativeModule.PersistentMarking.DecisionOccurrenceTypingProof
+public import LogicLineages.NativeModule.PersistentMarking.DecisionOccurrenceOrdinaryProof
+public import LogicLineages.NativeModule.PersistentMarking.DecisionOccurrenceValidityProof
+
+@[expose] public section
+
