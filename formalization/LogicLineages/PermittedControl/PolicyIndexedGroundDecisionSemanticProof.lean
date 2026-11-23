@@ -20,7 +20,7 @@ theorem pointwiseDecisionCorrect (query : Query) (hq : QueryInterface query)
     (ctrl : Nat → Nat) (K : Nat) (hsel : SelectedWithThreshold ctrl K)
     (p : Policy) (rel : Relation) (cbd : Block)
     (hdec : ∀ (known : List Nat) (gs : List OriginalPrintedCircuitSequential.Gate)
-      (pf : NormalForm.Formula), OriginalPrintedCircuitSequential.Topological known gs →
+      (pf : OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalForm.Formula), OriginalPrintedCircuitSequential.Topological known gs →
       PreparedProjection.PlainPreparedFormula pf →
       ∀ b : Bool, cbd (OriginalPrintedRawFamilyFrontend.encodeInput known gs pf b) = some true ↔
         OriginalPrintedTypedExistential.HasSuccessfulObservation ctrl gs pf b)
