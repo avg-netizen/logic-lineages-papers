@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PermittedControl/PolicyIndexedGroundDriverCalibrationProof.lean
++++ b/formalization/LogicLineages/PermittedControl/PolicyIndexedGroundDriverCalibrationProof.lean
+@@ -16 +16 @@
+-  rw [hsource e p he d a]
++  rw [hsource e p he d a, Part.bind_some]
+@@ -22,2 +22 @@
+-    rw [hsource e p he d b]
+-    rfl
++    rw [hsource e p he d b, Part.map_some]

@@ -1,0 +1,14 @@
+{
+  "status": "frozen source repair; native pending",
+  "failed_exact_gate_receipt": "1795432510245668882-24",
+  "failed_exact_gate": "ground-calibration-1115",
+  "failed_original_native_log_sha256": "0d833bf246ee78221e4849e000a392b0d454de5330bfd84621cf08916ab2ca01",
+  "failed_diagnostic": "l18 rfl and l20 change failed because Part.bind on Part.some is not definitional.",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/PolicyIndexedGroundDriverCalibrationProof.lean",
+  "failed_proof_sha256": "b4eef588ee1d6cf51320f9f1848d76ef7f52e1d544c59f06a3b0645405741dc4",
+  "repaired_proof_sha256": "4d987e07e800fa14d02d991787ec701ed14c3188062320938afaa03f80ab8762",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-23/PAPER17-POLICY-INDEXED-GROUND-CALIBRATION-REPAIR-01.patch",
+  "patch_sha256": "aa0d6a76ed67ebe6c2ce1e1a4aea46d4b6afc9a948d9a603ceac66b2672a980e",
+  "reverse_reconstructs_exact_failed_source": true,
+  "scope": "Rewrite Part.bind_some for the original left term evaluation and Part.map_some for the right term evaluation only after left success. Underlying programs, statements and native checker limits unchanged."
+}

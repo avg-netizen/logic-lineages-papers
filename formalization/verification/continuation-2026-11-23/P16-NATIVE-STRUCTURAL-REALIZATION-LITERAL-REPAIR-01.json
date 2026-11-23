@@ -1,0 +1,50 @@
+{
+  "status": "frozen source-only proof repair; no repaired native result",
+  "gates": {
+    "LogicLineages.PersistentMarking.NativeStructuralRealizationLiteralChecks": {
+      "axiom_outputs_expected": 6
+    },
+    "LogicLineages.PersistentMarking.NativeStructuralRealizationChecks": {
+      "axiom_outputs_expected": 1
+    }
+  },
+  "failed_receipt": "1795432315046297310-1806",
+  "failed_receipt_sha256": "5f15515a38af525b620e5dfbe92577daa36da03b2d604a8e2bc321ccec46f269",
+  "requested_modules": [
+    "LogicLineages.PersistentMarking.NativeStructuralRealizationLiteralChecks"
+  ],
+  "failed_module_data": {
+    "module": "LogicLineages.PersistentMarking.NativeStructuralRealizationClosingProof",
+    "returncode": 1,
+    "seconds": 0.669,
+    "observed_cpu_seconds": 0.61,
+    "last_wait_channel": "0",
+    "stopped_threads": [],
+    "peak_process_tree_rss_kib": 496876,
+    "memory_observation_failure": {},
+    "discarded_failed_outputs": [],
+    "source_sha256": "f95b5ac26e956d76bf0c5af5e73c8951108b6818fa110ac75550aa40c4434c7f",
+    "log": "build-reports/1795432315046297310-1806-LogicLineages-PersistentMarking-NativeStructuralRealizationClosingProof.log"
+  },
+  "failure": ":63:88 unsolved goal: in boundShape after simp-only, native no-head claim is \u00acFalse",
+  "rejected_source": "formalization/verification/continuation-2026-11-23/drafts/native-structural-realization-literal-repair01/NativeStructuralRealizationClosingProof.lean.failed-source",
+  "rejected_source_sha256": "f95b5ac26e956d76bf0c5af5e73c8951108b6818fa110ac75550aa40c4434c7f",
+  "exact_compiler_module_log": "formalization/verification/continuation-2026-11-23/drafts/native-structural-realization-literal-repair01/ClosingProof.native.log",
+  "exact_compiler_module_log_sha256": "8c950b9ffb90c60ce0bcf3104bc14aba65bbb6e23f56401effb313f32b31e304",
+  "repair": "Explicit proof of remaining \u00acFalse by fun impossible => impossible; no other change.",
+  "repaired_source": "formalization/LogicLineages/PersistentMarking/NativeStructuralRealizationClosingProof.lean",
+  "repaired_source_sha256": "8684e19396bc4e5f3ff8972d439e4f99ce19d5c8f22d163cc9b499b77b56b176",
+  "patch": "formalization/verification/continuation-2026-11-23/drafts/native-structural-realization-literal-repair01/false-elimination.patch",
+  "patch_sha256": "3f10c79ee216642c726ea871b6a832ceb2f12f60562f47d9c52f209de73a8c08",
+  "reverse_patch_verified_bytewise": true,
+  "original_author_manifest_sha256": "43212f832f1a2561cbf1e37aaebe73dcc5d5bb0e9b065ee5940558ae97e4e0d8",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeStructuralRealizationBetaProof.lean": "2d95735c89b7c07022545be3ee563b80750f6cb277799aa1040117048283bbdf",
+    "formalization/LogicLineages/PersistentMarking/NativeStructuralRealizationChecks.lean": "cb295e392773a04c65964377e8fb5a5bc058a59447b01ec7c793eab13212d5b8",
+    "formalization/LogicLineages/PersistentMarking/NativeStructuralRealizationLiteralChecks.lean": "2a5e498009414fd6132658b1d4eda09e31ad1aeb3bc11451ea6e800c8acd3e7f",
+    "formalization/LogicLineages/PersistentMarking/NativeStructuralRealizationProof.lean": "7ede19e7b1ee80e69f4d86fb03ab0cf5314a61d2d0619722bd1ce50a224ef99c",
+    "formalization/LogicLineages/PersistentMarking/NativeStructuralRealizationSyntax.lean": "0ad825bdbd090391602c8b6295b551fa2b32b17b336d5253a7e9e5ab6ae3cbf9",
+    "formalization/LogicLineages/PersistentMarking/NativeStructuralRealizationTargets.lean": "993894db8dd26b6494042bb26d987d231f3e8b32aadf78e6b00e26ac62051db6",
+    "formalization/verification/continuation-2026-11-23/P16-NATIVE-STRUCTURAL-REALIZATION-SOURCE-MAP.md": "e9a3c8a51b6215bef807d8f20f67564a7ff65c337ee0934b08dc7c3b0c868751"
+  }
+}

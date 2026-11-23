@@ -64,6 +64,7 @@ private theorem boundShape (S : Signature) (τ : Ty) (i : Nat) : Shape S (.bound
   refine ⟨True.intro,True.intro,fun _ => rfl,?_⟩
   intro name arity
   simp only [DecisionInventory.heads,List.not_mem_nil]
+  exact fun impossible => impossible
 
 private theorem sourceAppShape (σ τ : Ty) (q u : Expr)
     (hq : Shape S q) (hu : Shape S u) : Shape S (app σ τ q u) := by
