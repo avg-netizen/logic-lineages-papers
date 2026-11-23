@@ -1,0 +1,125 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.TypedLambdaRealizationTargets
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.TypedLambdaRealization
+open Spine NativeReduction NativeCarrierTargets NativeIndexedCarrierTargets NativeIteratorStrictTargets
+open OrdinalRealizationTargets NativeOrdinalRealizationTargets NativeTowerSyntaxProof
+
+private theorem liftFits {S Γ A Δ} {ρ : EntryEnv S Γ} (hρ : EnvFits Δ ρ) :
+    EnvFits (Δ.push (nativeType A)) (liftEntries (A := A) ρ) := by
+  intro B v
+  cases v with
+  | here => rfl
+  | there w =>
+    have hw := hρ _ w
+    cases he : ρ _ w with
+    | bound i =>
+      simpa only [liftEntries,he,liftEntry,EntryFits,BoundContext.push] using hw
+    | closed q => simp only [liftEntries,he,liftEntry,EntryFits]
+
+theorem nativeCompilation : NativeCompilation := by
+  intro S C c Γ A t
+  induction t with
+  | var v =>
+    intro Δ ρ hρ
+    have hv := hρ _ v
+    cases he : ρ _ v with
+    | bound i =>
+      have hi : Δ i = some (nativeType _) := by simpa only [he,EntryFits] using hv
+      simpa only [compile,he,entryExpr] using boundIn S Δ _ i hi
+    | closed q =>
+      simpa only [compile,he,entryExpr] using closedIn Δ q.property
+  | constant a =>
+    intro Δ ρ _
+    exact closedIn Δ (c _ a).property
+  | app f u ihf ihu =>
+    intro Δ ρ hρ
+    exact appIn (ihf Δ ρ hρ) (ihu Δ ρ hρ)
+  | @lam Γ A D body ih =>
+    intro Δ ρ hρ
+    exact lamIn (ih (Δ.push (nativeType A)) (liftEntries ρ) (liftFits hρ))
+
+private theorem closedFits {S Γ} (Δ : BoundContext) (ρ : TermEnv S Γ) :
+    EnvFits Δ (closedEntries ρ) := fun _ _ => True.intro
+
+theorem closedCompilation {S C Γ A} (c : ConstantTerms S C) (t : Term C Γ A) (ρ : TermEnv S Γ) :
+    ClosedNative S (compile c t (closedEntries ρ)) (nativeType A) :=
+  close (nativeCompilation S C c Γ A t EmptyContext (closedEntries ρ) (closedFits EmptyContext ρ))
+
+private theorem liftEntrySub {S A B depth} {u : (nativeTerms S).term A} {p q : Entry S B}
+    (h : EntrySub u depth p q) : EntrySub u (depth+1) (liftEntry p) (liftEntry q) := by
+  cases h with
+  | below i hi => exact EntrySub.below (i+1) (by omega)
+  | hit => exact EntrySub.hit
+  | above i hi =>
+    have hpos : 1 ≤ i := by omega
+    simpa only [liftEntry,Nat.add_sub_cancel,Nat.sub_add_cancel hpos] using
+      (EntrySub.above (u := u) (depth := depth+1) (B := B) (i+1) (by omega))
+  | closed q => exact EntrySub.closed q
+
+private theorem liftEnvSub {S Γ A B depth} {u : (nativeTerms S).term A} {ρ σ : EntryEnv S Γ}
+    (h : EnvSub u depth ρ σ) :
+    EnvSub u (depth+1) (liftEntries (A := B) ρ) (liftEntries (A := B) σ) := by
+  intro D v
+  cases v with
+  | here => exact EntrySub.below 0 (by omega)
+  | there w => exact liftEntrySub (h _ w)
+
+private theorem entrySubEquation {S A B depth} {u : (nativeTerms S).term A} {p q : Entry S B}
+    (h : EntrySub u depth p q) :
+    substitute (.cons u.val .nil) depth (entryExpr p) = entryExpr q := by
+  cases h with
+  | below i hi => simp only [entryExpr,substitute,hi,if_true]
+  | hit =>
+    simpa only [entryExpr,substitute,Nat.lt_irrefl,if_false,Nat.sub_self,Args.get] using
+      ClosedSyntaxProof.closedShift u.val (nativeType A) u.property.1.1.1 depth
+  | above i hi =>
+    have hn : ¬ i < depth := by omega
+    obtain ⟨j,hj⟩ : ∃ j, i-depth = j+1 := ⟨i-depth-1,by omega⟩
+    simp only [entryExpr,substitute,hn,if_false,hj,Args.get,Args.length]
+  | closed q => exact unchanged q.property.1.1.1 (.cons u.val .nil) depth
+
+theorem literalSubstitution : LiteralSubstitution := by
+  intro S C c Γ A t
+  induction t with
+  | var v =>
+    intro B u depth ρ σ h
+    exact entrySubEquation (h _ v)
+  | constant a =>
+    intro B u depth ρ σ _
+    exact unchanged (c _ a).property.1.1.1 (.cons u.val .nil) depth
+  | @app Γ A D f x ihf ihx =>
+    intro B u depth ρ σ h
+    change NativeReduction.app (nativeType A) (nativeType D)
+      (substitute (.cons u.val .nil) depth (compile c f ρ))
+      (substitute (.cons u.val .nil) depth (compile c x ρ)) =
+      NativeReduction.app (nativeType A) (nativeType D) (compile c f σ) (compile c x σ)
+    rw [ihf B u depth ρ σ h,ihx B u depth ρ σ h]
+  | @lam Γ A D body ih =>
+    intro B u depth ρ σ h
+    change Expr.lam (nativeType A)
+      (substitute (.cons u.val .nil) (depth+1) (compile c body (liftEntries ρ))) =
+      Expr.lam (nativeType A) (compile c body (liftEntries σ))
+    exact congrArg (Expr.lam (nativeType A))
+      (ih B u (depth+1) (liftEntries ρ) (liftEntries σ) (liftEnvSub h))
+
+/-- The concrete beta-instance equation needed in the structural lambda case. -/
+theorem closeUnderBinder {S C Γ A D} (c : ConstantTerms S C) (body : Term C (A :: Γ) D)
+    (ρ : TermEnv S Γ) (u : (nativeTerms S).term A) :
+    substitute (.cons u.val .nil) 0 (compile c body (liftEntries (closedEntries ρ))) =
+      compile c body (closedEntries (extendTerms u ρ)) := by
+  apply literalSubstitution S C c (A :: Γ) D body A u 0
+  intro B v
+  cases v with
+  | here => exact EntrySub.hit
+  | there w => exact EntrySub.closed (ρ _ w)
+
+#print axioms nativeCompilation
+#print axioms closedCompilation
+#print axioms literalSubstitution
+#print axioms closeUnderBinder
+
+end LogicLineages.PersistentMarking.TypedLambdaRealization

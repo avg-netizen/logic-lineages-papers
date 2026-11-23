@@ -1,0 +1,19 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NativeRealizationCompleteTargets
+public import LogicLineages.NativeModule.PersistentMarking.NativeOrdinalRealizationProof
+public import LogicLineages.NativeModule.PersistentMarking.NativeRealizationChainProof
+public import LogicLineages.NativeModule.PersistentMarking.TypedLambdaRealizationProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NativeRealizationComplete
+
+theorem exact_FullRealization : FullRealization :=
+  ⟨NativeOrdinalRealizationProof.exact_NativeRealizationClosure,
+    TypedLambdaRealization.fullTypedLambdaFragment,
+    NativeRealizationChain.nativeRealizationFiniteChains⟩
+
+#print axioms exact_FullRealization
+
+end LogicLineages.PersistentMarking.NativeRealizationComplete

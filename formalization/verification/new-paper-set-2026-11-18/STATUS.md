@@ -1,8 +1,45 @@
 # Current comparison formalization status
 
-The new-paper register has **160 checked and 7 pending out of 167**. Historical register:
+The new-paper register has **162 checked and 5 pending out of 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
+
+## Third GitHub continuation, 22 November (checked and paused)
+
+Paper 16 `thm:iteration` is adopted as #1478 using its previously compiled exact
+native endpoint and a completed source/evidence check, without redundant replay.
+`lem:realization` is adopted as #1483 through a separately frozen and checked
+conjunction of the old realization closures, the new structural typed-lambda
+fundamental theorem, and finite-chain transport. The structural proof covers
+arbitrary nested binders, exact native syntax/substitution, and full set-function
+semantics; realizing constants and variable environments are its standard
+interpretation premises, and lambda-body realization is derived by induction.
+No manuscript wording was changed.
+
+Supporting #1479 proves the actual ordinal index sequence beginning `0, 1, Ω`,
+its strict cofinality and least-fixed-point endpoint. Supporting #1480 provides
+the seven structural-lambda endpoints. Supporting #1481/#1482 provide seven
+checked internal finite-membership and grammar-codomain endpoints, retaining
+their explicit finite numerical and calibration hypotheses. All mathematical
+gates have completed: **14 new Lean files**, **23 new exact checked aliases**,
+and **six records #1478–#1483**, with two numbered adoptions and four supporting
+packets. Portable receipts/logs, freeze and acceptance audits, and the empty
+queue/process closeout are complete; the local run policy is paused.
+
+The five remaining numbered statements are `lem:arithmetic-accessibility`,
+`thm:upper`, `lem:tower-cofinality`, `thm:height`, and `thm:main`, all in Paper 16.
+The internal accessibility supplier, ID₁ norm theorem, intended collapse and
+coefficient norm, ordinal calibration, epsilon endpoint bridge, and BH
+identification remain separate obligations. Finite grammar rules do not provide
+unrestricted all-type inversion or a refitted installed tuple. The combined
+conditional main theorem retains exactly its five named hypotheses.
+[Current handoff](../github-continuation-2026-11-22-round3/HANDOFF.md) ·
+[Iteration](accepted/1478-p16-thm-iteration.json) ·
+[Complete realization](accepted/1483-p16-lem-realization.json) ·
+[Lambda source review](../github-continuation-2026-11-22-round3/ordinal-frontier/TYPED-LAMBDA-SOURCE-REVIEW.md) ·
+[Actual Ω indices](accepted/1479-p16-actual-omega-index-tower.json)
+
+Earlier dated sections retain their historical counts and frontiers.
 
 ## GitHub continuation after rounds 3–5, 22 November (checked and paused)
 

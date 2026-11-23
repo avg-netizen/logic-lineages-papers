@@ -477,8 +477,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/ordinals.tex",
           "line": 434,
           "statement_latex": "[Realization closure]\\label{lem:realization}\nRealization is preserved when a term is replaced by a strict predecessor.\nIt is downward closed in its semantic value, with pointwise order at\narrows. If one fixed term realizes every member of a nonempty countable\nfamily, it realizes their pointwise supremum. The typed lambda\nfundamental lemma holds for these realizers.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.NativeRealizationComplete.FullRealization",
+          "verified_alias": "LogicLineages.PersistentMarking.NativeRealizationComplete.exact_FullRealization",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/1483-p16-lem-realization.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:thm:iteration",
@@ -487,8 +490,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/ordinals.tex",
           "line": 467,
           "statement_latex": "[Native finite-type iteration]\\label{thm:iteration}\n$\\It_A$ realizes $(\\alpha,f,x)\\mapsto f^\\alpha(x)$ with convention\n\\textup{(I)}, even when $f$ is not monotone.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.NativeOrdinalIterationTargets.NativeIteratorRealizesFullPrefix",
+          "verified_alias": "LogicLineages.PersistentMarking.NativeOrdinalIterationProof.exact_NativeIteratorRealizesFullPrefix",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/1478-p16-thm-iteration.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:tower-cofinality",
@@ -2371,7 +2377,7 @@
     }
   ],
   "status_counts": {
-    "pending": 7,
-    "checked": 160
+    "pending": 5,
+    "checked": 162
   }
 }
