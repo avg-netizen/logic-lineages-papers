@@ -1,0 +1,12 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectSharedTapeMemberProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectSharedTapeMemberChecks
+open NumberedWindowInternalDirectSharedTapeMemberTargets
+
+theorem exact_OpenOriginalDirectSharedTapeMember : ExactOpenSharedTapeMember :=
+  NumberedWindowInternalDirectSharedTapeMember.exactOpenSharedTapeMember
+
+#print axioms exact_OpenOriginalDirectSharedTapeMember
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectSharedTapeMemberChecks
