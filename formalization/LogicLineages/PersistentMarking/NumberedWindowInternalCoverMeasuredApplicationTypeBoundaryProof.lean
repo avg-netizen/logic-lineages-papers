@@ -62,7 +62,10 @@ theorem exact_TypeBitArrowLaw : ExactTypeBitArrowLaw := by
   have codomainBound : cod < pair dom cod + 1 :=
     Nat.lt_succ_of_le (tailBound dom cod)
   change nextType (pair dom cod + 1) (typeTable (pair dom cod + 1)) = _
-  rw [nextType,encodedPair,previous domainBound,previous codomainBound]
+  rw [nextType,encodedPair]
+  change ((typeTable (pair dom cod + 1)).getD dom false &&
+    (typeTable (pair dom cod + 1)).getD cod false) = _
+  rw [previous domainBound,previous codomainBound]
 
 theorem exact_ValidArrowCodeChain : ExactValidArrowCodeChain := by
   intro depth

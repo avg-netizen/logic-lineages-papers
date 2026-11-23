@@ -4,6 +4,24 @@ The new-paper register has **160 checked and 7 pending out of 167**. Historical 
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
+## GitHub continuation after rounds 3–5, 22 November (checked and paused)
+
+Supporting records now end at **1477**. Four new packets provide **16 exact
+checked endpoints**: the uniform accessibility input and explicit cofinal family
+now coexist in one conditional main theorem; the literal tower family has a
+primitive-recursive generator calibrated to its existing syntax code; and the
+coded family is retained in the combined main conclusion. The original numeric
+type test also has unbounded valid codes, proving that no finite refitted checker
+can satisfy `ActualTypeGuard` or occupy that slot in an accepted installed tuple.
+The code theorem and type obstruction are unconditional; the conditional main
+theorem retains its five named hypotheses. The register stays at 160 checked and
+7 pending, with no manuscript change or numbered promotion.
+[Handoff](../github-continuation-2026-11-22-round2/HANDOFF.md) ·
+[Fetched-work review](../github-continuation-2026-11-22-round2/FETCHED-REVIEW.md) ·
+[Tower code](accepted/1476-p16-primitive-recursive-tower-code.json) ·
+[Type boundary](accepted/1475-p16-refitted-type-boundary.json) ·
+[Coded uniform main](accepted/1477-p16-uniform-coded-effective-main.json)
+
 ## Round 5 of the local Fable-pair continuation, 22/23 November (paused)
 
 Supporting records now end at **1473**; the register is unchanged at 160 checked and 7 pending. The conditional Paper 16 statements were tightened: item 6 of `thm:main` now carries the explicit cofinal family of tower terms, `thm:upper` takes the uniform internal accessibility sentence rather than one atom per address, the abstract tower hypotheses are shown consistent by a toy model, and the height is confirmed to range over exactly the printed relation's field. The complete list of what the four literature-dependent statements assume is five named hypotheses. [Handoff](../local-fable-pair-2026-11-22-round5/HANDOFF.md) · [main, effective](accepted/1471-p16-conditional-main-effective.json) · [upper, uniform](accepted/1472-p16-conditional-upper-uniform.json)

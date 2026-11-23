@@ -1,0 +1,1 @@
+Native receipt `1795407031709445528-11`: line 65 attempted table lookup rewrites under an unreduced successful decoder match. Targets passed unchanged. This failed draft is unaccepted; downstream sorryAx output comes from this error. The repair reduces the match explicitly before rewriting.

@@ -72,3 +72,39 @@
   target concerns actual existing syntax codes, not ordinal/rank computation.
 - Detailed source references and the integration boundary are recorded in
   `TOWER-CODE-SOURCE-REVIEW.md`. Frozen targets and maps are unchanged.
+
+## 2026-11-22 (America/Chicago): uniform-effective native gate passed
+
+- Root's serialized gate01 passed
+  `LogicLineages.NativeModule.PersistentMarking.ConditionalMain16UniformEffectiveProof`.
+- Exact endpoint:
+  `LogicLineages.PersistentMarking.ConditionalMain16UniformEffectiveProof.exact_ConditionalMain16UniformEffective`.
+- Its axiom closure is exactly `propext`, `Classical.choice`, and `Quot.sound`.
+- Native receipt: `build-reports/1795406363595178414-12.json`.
+- The cooperating tower-code definitions and frozen targets also passed in
+  this gate without changes.
+- Root published the source checkpoint
+  `5d3f9d9206d3c1dc417d4f7a1e6bc7a7b08873f7`.
+- Gate02 now checks `NativeTowerCodeProof` and the coded integration endpoint.
+  That proof-validity result remains pending. The frozen source maps, target
+  hashes, and five-hypothesis scope are unchanged.
+
+## 2026-11-22 (America/Chicago): coded native gate passed; lane stopped
+
+- Root's serialized gate06 passed
+  `LogicLineages.NativeModule.PersistentMarking.ConditionalMain16UniformEffectiveCodedProof`.
+- Exact endpoint:
+  `LogicLineages.PersistentMarking.ConditionalMain16UniformEffectiveCodedProof.exact_ConditionalMain16UniformEffectiveCoded`.
+- Its axiom closure is exactly `propext`, `Classical.choice`, and `Quot.sound`.
+- Native receipt: `build-reports/1795407211156632997-11.json`.
+- The cooperating coding proof passed all five audited aliases. Its earlier
+  failed gates, preserved drafts, and proof repairs remain recorded in the
+  tower-code lane; this ledger does not overwrite or reinterpret them.
+- Root accepts the uniform-effective packet as supporting record #1474 and
+  the coded uniform-effective packet as supporting record #1477, and owns
+  evidence packaging and final publication.
+- Both endpoints retain exactly the five named ordinal/accessibility
+  hypotheses. Primitive recursiveness and calibration of the actual syntax
+  code are supplied conclusions. No numbered statement is promoted.
+- Authoring in this lane is stopped. Frozen targets and source maps remain
+  unchanged; this final ledger entry is the only closeout edit.

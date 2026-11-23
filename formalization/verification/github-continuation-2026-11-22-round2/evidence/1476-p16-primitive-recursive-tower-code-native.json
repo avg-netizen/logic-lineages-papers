@@ -1,0 +1,61 @@
+{
+  "status": "checked",
+  "base_commit": "b28541e6f1682fc41c47a385729df36e9db87b0d",
+  "base_note": "New continuation files; pre-existing Lean source, manuscript and numbered register unchanged.",
+  "native_receipt": "1795407211156632997-11",
+  "native_receipt_sha256": "9cc1a8062f424bb4e33e895eaceb136ee9f2d64cdc2f38aa9c3a61efaebe533e",
+  "completion_gate_receipts": [
+    {
+      "id": "1795407211156632997-11",
+      "sha256": "9cc1a8062f424bb4e33e895eaceb136ee9f2d64cdc2f38aa9c3a61efaebe533e"
+    }
+  ],
+  "exact_gate": "LogicLineages.NativeModule.PersistentMarking.NativeTowerCodeProof",
+  "gate_seconds": 1.938,
+  "gate_cpu_seconds": 1.89,
+  "peak_process_tree_rss_kib": 963804,
+  "named_axiom_output": {
+    "LogicLineages.PersistentMarking.NativeTowerCode.sequenceCodePrimitiveRecursive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NativeTowerCode.sequenceCodeComputable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NativeTowerCode.sequenceCodeCalibration": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NativeTowerCode.nativeCodeCalibration": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NativeTowerCode.fullTowerCode": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "profile": {
+    "core_only_profile": false,
+    "cpu_seconds": 90,
+    "heap_cap_mib": 2048,
+    "minimum_free_mib": 2048,
+    "rss_cap_mib": 1536,
+    "single_thread": true,
+    "threads": 1,
+    "upstream_cache_only": true,
+    "wall_seconds": 180
+  },
+  "source_pins": {
+    "formalization/LogicLineages/NativeModule/PersistentMarking/NativeTowerCodeDefinitions.lean": "f2ca242c37f927536b951fdd02e526bb40e43cee8f9d2e7d738e48e7cc5b4f36",
+    "formalization/LogicLineages/NativeModule/PersistentMarking/NativeTowerCodeTargets.lean": "afeffe985c1d705c185cb5e4e7967257f78d0847973c1a2c0e1e0fa7739de079",
+    "formalization/LogicLineages/NativeModule/PersistentMarking/NativeTowerCodeProof.lean": "72a7f247b4371779f7d08522c5a103072a9c215bcc4444179593a997722ca3bd",
+    "formalization/verification/github-continuation-2026-11-22-round2/tower-code/SOURCE-MAP.md": "330aed1d00385c7281cbe808537e8a80a1d2fec0e7521fd52994326ffe0e1ece"
+  },
+  "verification": "Focused source/statement scope check and one serialized exact native/standard-axiom gate, with necessary diagnostic repairs. No duplicate full artifact replay or manual proof-validity acceptance claim.",
+  "portable_evidence": "../root/portable-native-evidence.zip"
+}

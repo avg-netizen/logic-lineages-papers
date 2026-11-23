@@ -1,6 +1,7 @@
 module
 
 public import LogicLineages.NativeModule.PersistentMarking.NativeTowerCodeTargets
+public import Mathlib.Computability.Partrec
 import LogicLineages.NativeModule.PersistentMarking.NativeOrdinalExponentialTypingProof
 import LogicLineages.NativeModule.PersistentMarking.NumberedWindowOrdinaryDomainProof
 
@@ -174,7 +175,7 @@ private theorem encodedApp {a b : Ty} {f x : Expr} {cf cx : Nat}
   obtain ⟨F,hF,hf⟩ := hf
   obtain ⟨X,hX,hx⟩ := hx
   refine ⟨.ordinary (.app a b) (.cons F (.cons X .nil)),?_,?_⟩
-  · simp only [app,tr,trArgs,hF,hX,Option.bind_some,Option.map_some]
+  · simp [app,tr,trArgs,hF,hX]
   · change appCode (encodeTy a) (encodeTy b) (encodeTerm F) (encodeTerm X) = _
     rw [hf,hx]
 
@@ -200,6 +201,8 @@ private theorem tierTypeCalibration (l : Nat) : encodeTy (tierType l) = tierType
     change arrowCode (encodeTy (tierType l)) (encodeTy (tierType l)) =
       arrowCode (tierTypeCode l) (tierTypeCode l)
     rw [ih]
+
+private theorem indexCodeCalibration : encodeTy indexType = indexCode := rfl
 
 private theorem encodedErase (l i : Nat) :
     Encoded (eraseBound (nativeShape (tier l)) i) (eraseTierCode l i) := by
@@ -258,7 +261,8 @@ private theorem encodedSpine (l : Nat) :
     Encoded (spine l (.bound indexType 0) boundSlots) (spineCode l) := by
   cases l with
   | zero => exact encodedApplied 0 (encodedBound indexType 0) (encodedSlot 1) encodedTowerZero
-  | succ m => exact encodedNatDown m
+  | succ m =>
+    exact encodedNatDown m
       (encodedApplied (m+1) (encodedBound indexType 0) (encodedSlot (m+2)) (encodedSlot (m+1)))
 
 private theorem encodedBinders (k : Nat) {q : Expr} {c : Nat} (h : Encoded q c) :
@@ -267,7 +271,7 @@ private theorem encodedBinders (k : Nat) {q : Expr} {c : Nat} (h : Encoded q c) 
   | zero => exact h
   | succ k ih =>
     have hl := encodedLam (a := tierType (k+1)) ih
-    simpa only [tierTypeCalibration] using hl
+    simpa only [binders,bindersCode,wrapCode,Nat.rec_add_one,tierTypeCalibration] using hl
 
 private theorem encodedFixed {q : Expr} (h : Ordinary q) : Encoded q (fixedCode q) := by
   obtain ⟨Q,hQ⟩ := (NumberedWindowOrdinaryDomainProof.termDomain q).mpr h
@@ -292,12 +296,12 @@ private theorem encodedTower (l : Nat) : Encoded (towerB l) (towerCode l) := by
   apply encodedBinders (l+1)
   have h := encodedApp (a := tierType 1) (b := tierType 1)
     encodedFix (encodedLam (a := indexType) (encodedSpine l))
-  simpa only [tierTypeCalibration] using h
+  simpa only [NativeTowerTargets.fixBody,tierTypeCalibration,indexCodeCalibration] using h
 
 private theorem encodedVeblen : Encoded veblenTerm veblenCode := by
   have h := encodedApp (a := tierType 1) (b := tierType 1)
     (encodedApp (a := tierType 2) (b := tierType 2) (encodedTower 1) (encodedTower 0)) encodedNext
-  simpa only [tierTypeCalibration] using h
+  simpa only [veblenTerm,veblenCode,tierTypeCalibration] using h
 
 private theorem encodedBase : Encoded baseTerm baseCode := encodedApp encodedVeblen encodedOmega
 
@@ -326,7 +330,7 @@ private theorem encodedSequence (n : Nat) : Encoded (sequenceTerm n) (sequenceCo
     have h := encodedApp (a := indexType) (b := indexType)
       (encodedApp (a := tierType 1) (b := tierType 1)
         (encodedDown l (encodedTower l)) encodedVeblen) encodedBase
-    simpa only [tierTypeCalibration] using h
+    simpa only [sequenceTerm,sequenceCode,tierTypeCalibration,indexCodeCalibration] using h
 
 theorem sequenceCodeCalibration : SequenceCodeCalibration := by
   intro n

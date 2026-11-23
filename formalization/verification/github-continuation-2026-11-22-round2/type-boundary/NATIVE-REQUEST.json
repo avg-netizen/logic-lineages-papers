@@ -1,5 +1,5 @@
 {
-  "status": "pending",
+  "status": "complete",
   "reviewed_head": "b28541e6f1682fc41c47a385729df36e9db87b0d",
   "frozen_utc": "2026-11-23T03:57:08Z",
   "user_date": "2026-11-22",
@@ -19,11 +19,66 @@
   ],
   "source_pins": {
     "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationTypeBoundaryTargets.lean": "008bd58b1a5e86c4e1259e81555b3a498a579bddca9018cafbfcd95e3f719abc",
-    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationTypeBoundaryProof.lean": "a74b220dead1d717c7d99a68c3ec9735a7f04cc253cfa1182d5e480c4f63eeac",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationTypeBoundaryProof.lean": "3e88cbc09be1a72c7ed402445a0805c628870f5009b984a55627b2f27efc900e",
     "formalization/verification/github-continuation-2026-11-22-round2/type-boundary/TYPE-BOUNDARY-SOURCE-MAP.md": "e56a5f3b49934d02af47b0db8d6d2da1dada479b58a4bdd543caad595cfd2c5e"
   },
   "scope": "Original numeric type-bit arrow law, explicit unbounded valid-code chain, finite-list omission, and unconditional failure of actual type calibration and installed-tuple membership for the finite refitted checker. No internal derivability or application guard discharge claim.",
   "native_gate_owner": "root",
-  "native_receipt": null,
-  "axiom_output": null
+  "native_receipt": "1795407134226655233-11",
+  "axiom_output": {
+    "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeBoundaryProof.exact_TypeBitArrowLaw": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeBoundaryProof.exact_ValidArrowCodeChain": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeBoundaryProof.exact_ValidTypeCodesUnbounded": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeBoundaryProof.exact_FiniteTypeListOmission": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeBoundaryProof.exact_NoAllTypesWindowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeBoundaryProof.exact_RefittedValidTypeRejection": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeBoundaryProof.exact_ActualTypeRefitCounterexample": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeBoundaryProof.exact_RefittedTypeGuardNeverActual": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationTypeBoundaryProof.exact_RefittedInstalledTupleImpossible": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "failed_receipts": [
+    "1795407031709445528-11"
+  ],
+  "repair": "Reduce successful decoder match definitionally before table lookup rewrites; frozen targets unchanged.",
+  "native_receipt_path": "formalization/build-reports/1795407134226655233-11.json",
+  "native_receipt_sha256": "91340d52ffde04368a1155cac3b3e730a1f623543e01f3f618009e510de9b8a8",
+  "native_log": "formalization/build-reports/1795407134226655233-11-LogicLineages-PersistentMarking-NumberedWindowInternalCoverMeasuredApplicationTypeBoundaryProof.log",
+  "native_log_sha256": "b5902dfbbd24db2e5c3008132b1dc1b1bb2e557933620e98fb4476e1b94a319c",
+  "result": "All nine exact aliases passed; frozen targets and source map unchanged. Initial failed draft preserved."
 }
