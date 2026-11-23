@@ -1,0 +1,22 @@
+--- a/formalization/LogicLineages/PersistentMarking/NativeTowerNumericCodeProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NativeTowerNumericCodeProof.lean
+@@ -52,0 +53,4 @@
++private theorem appCodePositive (σ τ : Ty) (f a : Nat) : 0 < appCode σ τ f a := by
++  unfold appCode encodeNode
++  exact Nat.succ_pos _
++
+@@ -55,2 +59,12 @@
+-  | zero => exact Nat.succ_pos _
+-  | succ n => cases n <;> exact Nat.succ_pos _
++  | zero =>
++    simpa only [towerCode,zeroCode] using
++      (appCodePositive indexType indexType (rawCode nativeNB) (rawCode omegaCarrier))
++  | succ n =>
++    cases n with
++    | zero =>
++      simpa only [towerCode] using
++        (appCodePositive indexType indexType (rawCode nativeNB) zeroCode)
++    | succ l =>
++      simpa only [towerCode] using
++        (appCodePositive indexType indexType
++          (appCode endo endo (lowerCode l (rawCode (extractor l))) (rawCode nativeNB)) zeroCode)

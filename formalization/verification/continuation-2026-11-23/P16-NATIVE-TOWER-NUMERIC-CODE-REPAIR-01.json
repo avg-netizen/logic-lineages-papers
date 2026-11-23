@@ -1,0 +1,41 @@
+{
+  "status": "checked after frozen proof-only repair",
+  "gate": "LogicLineages.PersistentMarking.NativeTowerNumericCodeProof",
+  "prior_failure_receipt": "1795439780607126929-87",
+  "prior_failure_receipt_sha256": "47cd6b98a8327f685ff1f7be1e469f98d11cb08fa727a076ddef57944604206a",
+  "prior_full_log_label": "tower-numeric-full-1320.log",
+  "prior_full_log_sha256": "a96959bc6e68cac9096303c4fc82cc5e090327546add124c5e6edc5ffe6d8a94",
+  "failed_leaf_record": {
+    "module": "LogicLineages.PersistentMarking.NativeTowerNumericCodeProof",
+    "returncode": 1,
+    "seconds": 0.357,
+    "observed_cpu_seconds": 0.3,
+    "last_wait_channel": "0",
+    "stopped_threads": [],
+    "peak_process_tree_rss_kib": 517244,
+    "memory_observation_failure": {},
+    "discarded_failed_outputs": [],
+    "source_sha256": "28d0c03ae9b6676c3b780ebf46e320ca107bcca94a425007b11f79696a35339b",
+    "log": "build-reports/1795439780607126929-87-LogicLineages-PersistentMarking-NativeTowerNumericCodeProof.log"
+  },
+  "failure_diagnostics": [
+    ":55:12 maximum recursion depth reached",
+    ":56:26 maximum recursion depth reached"
+  ],
+  "rejected_source": "formalization/verification/continuation-2026-11-23/drafts/native-tower-numeric-code-repair01/NativeTowerNumericCodeProof.lean.failed-source",
+  "rejected_source_sha256": "28d0c03ae9b6676c3b780ebf46e320ca107bcca94a425007b11f79696a35339b",
+  "prior_module_log_sha256": "56213811d6c9f4b08cfc6083c0f0528efaf7b1642444e8ddd6ca9079400ad7e0",
+  "repair": "Prove positivity once for a single literal app-code constructor with symbolic operands; rewrite just the outer tower equations. No increase to recursion depth or other limits.",
+  "repaired_proof": "formalization/LogicLineages/PersistentMarking/NativeTowerNumericCodeProof.lean",
+  "repaired_proof_sha256": "b3823b015a3db540d727986b3341fcd5dd5e5d64a43960571ea3c1ac01d5ffa5",
+  "inverse_patch": "formalization/verification/continuation-2026-11-23/drafts/native-tower-numeric-code-repair01/abstract-node-positivity.patch",
+  "patch_sha256": "27e63c25bca30f43f440de12336eb94e1aed8f2e67bcaf58185e99eae1adc154",
+  "exact_reversal_verified": true,
+  "original_author_manifest_sha256": "4617607feaf0d28e89733dd74f09b56839b1ff2a19a47b42e16153a22806ef74",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerNumericCodeApplicationProof.lean": "814f95c5828a0099f370c3b85a12c244247029c2ab298dde340b9c43f670fc60",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerNumericCodeTargets.lean": "15b140a506c26b7c74a45d2b8b7b6749d264c2652bcdd1742d140c16a889d879",
+    "formalization/verification/continuation-2026-11-23/P16-NATIVE-TOWER-NUMERIC-CODE-SOURCE-MAP.md": "1f117927a84842f52ff38170ebbb920900740365fe33070af5cafda7abc20c45"
+  },
+  "checked_receipt": "1795439849848112749-8"
+}
