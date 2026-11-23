@@ -1,0 +1,390 @@
+module
+public import LogicLineages.PermittedControl.UniformPolicyCompilerPartialProof
+public import LogicLineages.StandardControlCurrent.PolicyConstructorsDefinitions
+public import LogicLineages.StandardControlCurrent.PolicyAbstractionDefinitions
+import LogicLineages.StandardControlCurrent.PolicyAbstractionBasePrograms
+import LogicLineages.OrdinalComparison.WWOrdinalSyntaxBoxComputability
+import LogicLineages.OrdinalComparison.WWOrdinalSyntaxHeadProof
+import Mathlib.Computability.Primrec.List
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.UniformPolicyCompiler
+open OrdinalComparison Source Source.AdmissibleSum Source.OrdinalSyntax
+open PolicySuppliedCodeMacro (RealizesPolicy)
+open StandardControlCurrent
+
+/-! ## The uniform partial recursion as a named function -/
+
+noncomputable def runU : RunArgs →. Option (List Nat) := Classical.choose exactUniformPartial
+
+theorem runUPartrec : Partrec runU := (Classical.choose_spec exactUniformPartial).1
+
+theorem runUCal {e : Code} {p : Policy} (he : RealizesPolicy e p) (level i n : Nat) :
+    runU (e,level,i,n) = Part.some (PolicyPartial.run p level i n) :=
+  (Classical.choose_spec exactUniformPartial).2 e p he level i n
+
+/-! ## Repetition -/
+
+theorem replicateC : Computable (fun x : Nat × Nat => List.replicate x.1 x.2) := by
+  have h := Primrec.list_map (Primrec.list_range.comp (Primrec.fst (β := Nat)))
+    (Primrec.snd.comp (Primrec.fst (β := Nat))).to₂
+  exact (h.of_eq (fun x => by simp)).to_comp
+
+noncomputable def repeatP (e : Code) (tag count t : Nat) : Part (Option Nat) :=
+  if count = 0 then Part.some (some 0) else macroP e tag (count-1) (List.replicate count t)
+
+theorem repeatAt {α : Type} [Primcodable α] {e : α → Code} {tag count t : α → Nat}
+    (he : Computable e) (htag : Computable tag) (hc : Computable count) (ht : Computable t) :
+    Partrec (fun a => repeatP (e a) (tag a) (count a) (t a)) := by
+  have hz0 : Primrec (fun n : Nat => decide (n = 0)) := (Primrec.eq.comp Primrec.id (Primrec.const 0)).decide
+  have hz : Computable (fun a => decide (count a = 0)) := hz0.to_comp.comp hc
+  have hT : Partrec (fun _ : α => (Part.some (some 0) : Part (Option Nat))) :=
+    (Computable.const (some (0 : Nat))).partrec
+  have hF : Partrec (fun a => macroP (e a) (tag a) (count a - 1) (List.replicate (count a) (t a))) :=
+    macroAt he htag (Primrec.nat_sub.to_comp.comp hc (Computable.const 1)) (replicateC.comp (hc.pair ht))
+  have h := pite (P := fun a => count a = 0) hz hT hF
+  exact h
+
+theorem repeatCal {e : Code} {p : Policy} (he : RealizesPolicy e p) (tag count t : Nat) :
+    repeatP e tag count t = Part.some (PolicyShape.repeatCode p tag count t) := by
+  unfold repeatP PolicyShape.repeatCode
+  by_cases h : count = 0
+  · simp [h]
+  · rw [if_neg h,if_neg h]
+    exact macroCal he _ _ _
+
+/-! ## Constructors -/
+
+private theorem nodePrim {α : Type*} [Primcodable α] {t a b : α → Nat}
+    (ht : Primrec t) (ha : Primrec a) (hb : Primrec b) : Primrec (fun x => node (t x) (a x) (b x)) :=
+  Primrec.nat_add.comp (Primrec.nat_mul.comp (Primrec.const 8) (Primrec₂.natPair.comp ha hb)) ht
+
+private theorem recFieldsPrim : Primrec (fun x : Nat × Nat × Nat =>
+    (List.range (x.2.1+1)).map (fun i => if i=0 then x.2.2 else if i=x.1+2 then 2 else 1)) := by
+  apply Primrec.list_map (Primrec.list_range.comp (Primrec.succ.comp (Primrec.fst.comp Primrec.snd)))
+  exact Primrec.ite (Primrec.eq.comp Primrec.snd (Primrec.const 0))
+    (Primrec.snd.comp (Primrec.snd.comp Primrec.fst))
+    (Primrec.ite (Primrec.eq.comp Primrec.snd
+      (Primrec.nat_add.comp (Primrec.fst.comp Primrec.fst) (Primrec.const 2)))
+      (Primrec.const 2) (Primrec.const 1))
+
+noncomputable def recursorP (e : Code) (inputLevel resultLevel : Nat) : Part (Option (List Nat)) :=
+  pbind (repeatP e (PolicyShape.siteCode .numeral) 2 1) (fun two =>
+    Part.some (some ((List.range (resultLevel+1)).map (fun i =>
+      if i=0 then two else if i=inputLevel+2 then 2 else 1))))
+
+theorem recursorPartrec : Partrec (fun x : Code × Nat × Nat => recursorP x.1 x.2.1 x.2.2) := by
+  let A := Code × Nat × Nat
+  have hrep : Partrec (fun x : A => repeatP x.1 (PolicyShape.siteCode .numeral) 2 1) :=
+    repeatAt Computable.fst (Computable.const _) (Computable.const 2) (Computable.const 1)
+  have hk : Computable (fun y : A × Nat => some ((List.range (y.1.2.2+1)).map (fun i =>
+      if i=0 then y.2 else if i=y.1.2.1+2 then 2 else 1))) := by
+    have h := recFieldsPrim.comp ((Primrec.fst.comp (Primrec.snd.comp Primrec.fst)).pair
+      ((Primrec.snd.comp (Primrec.snd.comp Primrec.fst)).pair Primrec.snd) :
+        Primrec (fun y : A × Nat => (y.1.2.1,y.1.2.2,y.2)))
+    exact (Primrec.option_some.comp h).to_comp
+  exact pbindPartrec hrep hk.partrec.to₂
+
+theorem recursorCal {e : Code} {p : Policy} (he : RealizesPolicy e p) (inputLevel resultLevel : Nat) :
+    recursorP e inputLevel resultLevel = Part.some (PolicyConstructors.recursorCode p inputLevel resultLevel) := by
+  unfold recursorP PolicyConstructors.recursorCode
+  rw [repeatCal he]
+  exact pbind_calibrated _ _ _ (fun two => rfl)
+
+noncomputable def boxTailP (e : Code) (n f g : Nat) : Part (Option Nat) :=
+  if n = 0 then Part.some (some (node 4 f g)) else
+    pbind (repeatP e (PolicyShape.siteCode .numeral) n 1) (fun num =>
+      macroP e (PolicyShape.siteCode .optionalBoxTail) 2 [f,g,num])
+
+theorem boxTailPartrec : Partrec (fun x : Code × Nat × Nat × Nat => boxTailP x.1 x.2.1 x.2.2.1 x.2.2.2) := by
+  let A := Code × Nat × Nat × Nat
+  have hn : Primrec (fun x : A => x.2.1) := Primrec.fst.comp Primrec.snd
+  have hf : Primrec (fun x : A => x.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
+  have hg : Primrec (fun x : A => x.2.2.2) := Primrec.snd.comp (Primrec.snd.comp Primrec.snd)
+  have hz : Computable (fun x : A => decide (x.2.1 = 0)) :=
+    (Primrec.eq.comp hn (Primrec.const 0)).decide.to_comp
+  have hT : Partrec (fun x : A => (Part.some (some (node 4 x.2.2.1 x.2.2.2)) : Part (Option Nat))) :=
+    (Primrec.option_some.comp (nodePrim (Primrec.const 4) hf hg)).to_comp.partrec
+  have hrep : Partrec (fun x : A => repeatP x.1 (PolicyShape.siteCode .numeral) x.2.1 1) :=
+    repeatAt Computable.fst (Computable.const _) hn.to_comp (Computable.const 1)
+  have hlist : Computable (fun y : A × Nat => [y.1.2.2.1,y.1.2.2.2,y.2]) :=
+    Primrec.list_cons.to_comp.comp (hf.to_comp.comp Computable.fst)
+      (Primrec.list_cons.to_comp.comp (hg.to_comp.comp Computable.fst)
+        (Primrec.list_cons.to_comp.comp Computable.snd (Computable.const [])))
+  have hmac : Partrec (fun y : A × Nat => macroP y.1.1 (PolicyShape.siteCode .optionalBoxTail) 2
+      [y.1.2.2.1,y.1.2.2.2,y.2]) :=
+    macroAt (Computable.fst.comp Computable.fst) (Computable.const _) (Computable.const 2) hlist
+  have hF := pbindPartrec hrep hmac.to₂
+  exact pite (P := fun x : A => x.2.1 = 0) hz hT hF
+
+theorem boxTailCal {e : Code} {p : Policy} (he : RealizesPolicy e p) (n f g : Nat) :
+    boxTailP e n f g = Part.some (PolicyConstructors.boxTailCode p n f g) := by
+  unfold boxTailP PolicyConstructors.boxTailCode
+  by_cases h : n = 0
+  · simp [h]
+  · rw [if_neg h,if_neg h,repeatCal he]
+    exact pbind_calibrated _ _ _ (fun num => macroCal he _ _ _)
+
+def appFieldsU (result arg : Nat) (f g : List Nat) (tail : Nat) : List Nat :=
+  (List.range (result+1)).map (fun i => if i=0 then node 6 (boxPositive arg f g 1) tail
+    else boxPositive arg f g i)
+
+theorem appFieldsPrim : Primrec (fun x : Nat × Nat × List Nat × List Nat × Nat =>
+    appFieldsU x.1 x.2.1 x.2.2.1 x.2.2.2.1 x.2.2.2.2) := by
+  let P := Nat × Nat × List Nat × List Nat × Nat
+  apply Primrec.list_map (Primrec.list_range.comp (Primrec.succ.comp Primrec.fst))
+  have ha : Primrec (fun x : P × Nat => x.1.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.fst)
+  have hf : Primrec (fun x : P × Nat => x.1.2.2.1) := Primrec.fst.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.fst))
+  have hg : Primrec (fun x : P × Nat => x.1.2.2.2.1) :=
+    Primrec.fst.comp (Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.fst)))
+  have ht : Primrec (fun x : P × Nat => x.1.2.2.2.2) :=
+    Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.fst)))
+  have bp {i : P × Nat → Nat} (hi : Primrec i) : Primrec (fun x => boxPositive x.1.2.1 x.1.2.2.1 x.1.2.2.2.1 (i x)) :=
+    ordinalSyntaxBoxOperationsPrimitiveRecursive.1.comp (ha.pair (hf.pair (hg.pair hi)))
+  exact Primrec.ite (Primrec.eq.comp Primrec.snd (Primrec.const 0))
+    (nodePrim (Primrec.const 6) (bp (Primrec.const 1)) ht) (bp Primrec.snd)
+
+noncomputable def applicationP (e : Code) (resultLevel argLevel : Nat) (f g : List Nat) :
+    Part (Option (List Nat)) :=
+  pbind (boxTailP e argLevel (f.getD 0 0) (g.getD 0 0)) (fun tail =>
+    Part.some (some (appFieldsU resultLevel argLevel f g tail)))
+
+theorem applicationPartrec : Partrec (fun x : Code × Nat × Nat × List Nat × List Nat =>
+    applicationP x.1 x.2.1 x.2.2.1 x.2.2.2.1 x.2.2.2.2) := by
+  let A := Code × Nat × Nat × List Nat × List Nat
+  have hr : Computable (fun x : A => x.2.1) := Computable.fst.comp Computable.snd
+  have ha : Computable (fun x : A => x.2.2.1) := Computable.fst.comp (Computable.snd.comp Computable.snd)
+  have hf : Computable (fun x : A => x.2.2.2.1) :=
+    Computable.fst.comp (Computable.snd.comp (Computable.snd.comp Computable.snd))
+  have hg : Computable (fun x : A => x.2.2.2.2) :=
+    Computable.snd.comp (Computable.snd.comp (Computable.snd.comp Computable.snd))
+  have hf0 : Computable (fun x : A => x.2.2.2.1.getD 0 0) := (Primrec.list_getD 0).to_comp.comp hf (Computable.const 0)
+  have hg0 : Computable (fun x : A => x.2.2.2.2.getD 0 0) := (Primrec.list_getD 0).to_comp.comp hg (Computable.const 0)
+  have hbox : Partrec (fun x : A => boxTailP x.1 x.2.2.1 (x.2.2.2.1.getD 0 0) (x.2.2.2.2.getD 0 0)) := by
+    have h := boxTailPartrec.comp (Computable.fst.pair (ha.pair (hf0.pair hg0)))
+    exact h
+  have hfields : Computable (fun y : A × Nat => some (appFieldsU y.1.2.1 y.1.2.2.1 y.1.2.2.2.1 y.1.2.2.2.2 y.2)) := by
+    have h := appFieldsPrim.to_comp.comp ((hr.comp Computable.fst).pair ((ha.comp Computable.fst).pair
+      ((hf.comp Computable.fst).pair ((hg.comp Computable.fst).pair Computable.snd))))
+    exact Computable.option_some.comp h
+  have hk : Partrec₂ (fun (y : A) (tail : Nat) =>
+      (Part.some (some (appFieldsU y.2.1 y.2.2.1 y.2.2.2.1 y.2.2.2.2 tail)) : Part (Option (List Nat)))) :=
+    hfields.partrec.to₂
+  have h := pbindPartrec hbox hk
+  exact h
+
+theorem applicationCal {e : Code} {p : Policy} (he : RealizesPolicy e p) (resultLevel argLevel : Nat)
+    (f g : List Nat) :
+    applicationP e resultLevel argLevel f g =
+      Part.some (PolicyConstructors.applicationCode p resultLevel argLevel f g) := by
+  unfold applicationP PolicyConstructors.applicationCode
+  rw [boxTailCal he]
+  exact pbind_calibrated _ _ _ (fun tail => rfl)
+
+/-! ## Abstraction -/
+
+noncomputable def listRun (e : Code) (level m : Nat) (h : List Nat) : Part (List (Option (List Nat))) :=
+  Nat.rec (motive := fun _ => Part (List (Option (List Nat)))) (Part.some [])
+    (fun i IH => IH.bind (fun acc => (runU (e,level,i,h.getD i 0)).map (fun r => acc ++ [r]))) (m+1)
+
+noncomputable def partialsP (e : Code) (level m : Nat) (h : List Nat) : Part (Option (List (List Nat))) :=
+  (listRun e level m h).map collectLists
+
+theorem partialsPartrec : Partrec (fun x : Code × Nat × Nat × List Nat => partialsP x.1 x.2.1 x.2.2.1 x.2.2.2) := by
+  let A := Code × Nat × Nat × List Nat
+  have hlen : Computable (fun x : A => x.2.2.1 + 1) :=
+    Computable.succ.comp (Computable.fst.comp (Computable.snd.comp Computable.snd))
+  have hrun : Partrec (fun y : A × Nat × List (Option (List Nat)) =>
+      runU (y.1.1,y.1.2.1,y.2.1,y.1.2.2.2.getD y.2.1 0)) := by
+    let Y := A × Nat × List (Option (List Nat))
+    have c1 : Computable (fun y : Y => y.1.1) := Computable.fst.comp Computable.fst
+    have c2 : Computable (fun y : Y => y.1.2.1) := Computable.fst.comp (Computable.snd.comp Computable.fst)
+    have c3 : Computable (fun y : Y => y.2.1) := Computable.fst.comp Computable.snd
+    have c4 : Computable (fun y : Y => y.1.2.2.2) :=
+      Computable.snd.comp (Computable.snd.comp (Computable.snd.comp Computable.fst))
+    have c5 : Computable (fun y : Y => y.1.2.2.2.getD y.2.1 0) := (Primrec.list_getD 0).to_comp.comp c4 c3
+    have h := runUPartrec.comp (c1.pair (c2.pair (c3.pair c5)))
+    exact h
+  have happ : Computable₂ (fun (y : A × Nat × List (Option (List Nat))) (r : Option (List Nat)) => y.2.2 ++ [r]) :=
+    (Primrec.list_concat.to_comp.comp (Computable.snd.comp (Computable.snd.comp Computable.fst))
+      Computable.snd).to₂
+  have hstep : Partrec₂ (fun (a : A) (q : Nat × List (Option (List Nat))) =>
+      (runU (a.1,a.2.1,q.1,a.2.2.2.getD q.1 0)).map (fun r => q.2 ++ [r])) :=
+    (hrun.map happ).to₂
+  have hl := Partrec.nat_rec hlen (Computable.const ([] : List (Option (List Nat)))).partrec hstep
+  have hlr : Partrec (fun x : A => listRun x.1 x.2.1 x.2.2.1 x.2.2.2) := hl
+  exact hlr.map (PolicyAbstractionBasePrograms.collectPrim.to_comp.comp Computable.snd).to₂
+
+private theorem map_range_succ {β : Type} (f : Nat → β) (k : Nat) :
+    (List.range (k+1)).map f = (List.range k).map f ++ [f k] := by
+  rw [List.range_succ,List.map_append]
+  rfl
+
+theorem partialsCal {e : Code} {p : Policy} (he : RealizesPolicy e p) (level m : Nat) (h : List Nat) :
+    partialsP e level m h = Part.some (PolicyAbstraction.partialsCode p level m h) := by
+  unfold partialsP PolicyAbstraction.partialsCode
+  have hl : ∀ k, (Nat.rec (motive := fun _ => Part (List (Option (List Nat)))) (Part.some [])
+      (fun i IH => IH.bind (fun acc => (runU (e,level,i,h.getD i 0)).map (fun r => acc ++ [r]))) k) =
+      Part.some ((List.range k).map (fun i => PolicyPartial.run p level i (h.getD i 0))) := by
+    intro k
+    induction k with
+    | zero => rfl
+    | succ k ih =>
+      change (Nat.rec (motive := fun _ => Part (List (Option (List Nat)))) (Part.some [])
+        (fun i IH => IH.bind (fun acc => (runU (e,level,i,h.getD i 0)).map (fun r => acc ++ [r]))) k).bind
+          (fun acc => (runU (e,level,k,h.getD k 0)).map (fun r => acc ++ [r])) = _
+      rw [ih,Part.bind_some,runUCal he,Part.map_some,map_range_succ]
+  have hL : listRun e level m h =
+      Part.some ((List.range (m+1)).map (fun i => PolicyPartial.run p level i (h.getD i 0))) := hl (m+1)
+  rw [hL,Part.map_some]
+
+noncomputable def deltaP (e : Code) (level m : Nat) (h : List Nat) (ps : List (List Nat)) (j : Nat) :
+    Part (Option Nat) :=
+  if j = 0 then repeatP e (PolicyShape.siteCode .scalarRepeat) (PolicyAbstraction.factorCode level h)
+      ((ps.getD 0 []).getD 0 0)
+  else if j < level+2 then macroP e (PolicyShape.siteCode .positiveAbstraction) m (ps.map (fun xs => xs.getD j 0))
+  else Part.some (some (headClosure (h.getD j 0)))
+
+noncomputable def coordinateP (e : Code) (level m : Nat) (h : List Nat) (ps : List (List Nat)) (j : Nat) :
+    Part (Option Nat) :=
+  pbind (deltaP e level m h ps j) (fun delta =>
+    Part.some (some (if j < m+1 then node 4 delta (headClosure (h.getD j 0)) else delta)))
+
+abbrev CoordArgs := Code × Nat × Nat × List Nat × List (List Nat) × Nat
+
+theorem coordinatePartrec : Partrec (fun x : CoordArgs =>
+    coordinateP x.1 x.2.1 x.2.2.1 x.2.2.2.1 x.2.2.2.2.1 x.2.2.2.2.2) := by
+  let A := CoordArgs
+  have he : Computable (fun x : A => x.1) := Computable.fst
+  have hl : Primrec (fun x : A => x.2.1) := Primrec.fst.comp Primrec.snd
+  have hm : Primrec (fun x : A => x.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
+  have hh : Primrec (fun x : A => x.2.2.2.1) := Primrec.fst.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
+  have hps : Primrec (fun x : A => x.2.2.2.2.1) :=
+    Primrec.fst.comp (Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd)))
+  have hj : Primrec (fun x : A => x.2.2.2.2.2) :=
+    Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd)))
+  have hhead : Primrec (fun x : A => headClosure (x.2.2.2.1.getD x.2.2.2.2.2 0)) :=
+    ordinalSyntaxHeadOperationsPrimitiveRecursive.2.1.comp ((Primrec.list_getD 0).comp hh hj)
+  have hz : Computable (fun x : A => decide (x.2.2.2.2.2 = 0)) := (Primrec.eq.comp hj (Primrec.const 0)).decide.to_comp
+  have hlt : Computable (fun x : A => decide (x.2.2.2.2.2 < x.2.1 + 2)) :=
+    (Primrec.nat_lt.comp hj (Primrec.nat_add.comp hl (Primrec.const 2))).decide.to_comp
+  have hscalar : Partrec (fun x : A => repeatP x.1 (PolicyShape.siteCode .scalarRepeat)
+      (PolicyAbstraction.factorCode x.2.1 x.2.2.2.1) ((x.2.2.2.2.1.getD 0 []).getD 0 0)) :=
+    repeatAt he (Computable.const _) (PolicyAbstractionBasePrograms.factor.comp (hl.pair hh)).to_comp
+      ((Primrec.list_getD 0).comp ((Primrec.list_getD []).comp hps (Primrec.const 0)) (Primrec.const 0)).to_comp
+  have hcol : Primrec (fun x : A => x.2.2.2.2.1.map (fun xs => xs.getD x.2.2.2.2.2 0)) :=
+    Primrec.list_map hps ((Primrec.list_getD 0).comp Primrec.snd (hj.comp Primrec.fst)).to₂
+  have hpos : Partrec (fun x : A => macroP x.1 (PolicyShape.siteCode .positiveAbstraction) x.2.2.1
+      (x.2.2.2.2.1.map (fun xs => xs.getD x.2.2.2.2.2 0))) :=
+    macroAt he (Computable.const _) hm.to_comp hcol.to_comp
+  have hlast : Partrec (fun x : A => (Part.some (some (headClosure (x.2.2.2.1.getD x.2.2.2.2.2 0))) :
+      Part (Option Nat))) := (Primrec.option_some.comp hhead).to_comp.partrec
+  have hdelta : Partrec (fun x : A => deltaP x.1 x.2.1 x.2.2.1 x.2.2.2.1 x.2.2.2.2.1 x.2.2.2.2.2) := by
+    have h := pite (P := fun x : A => x.2.2.2.2.2 = 0) hz hscalar (pite (P := fun x : A => x.2.2.2.2.2 < x.2.1 + 2) hlt hpos hlast)
+    exact h
+  have hfin : Primrec (fun y : A × Nat => some (if y.1.2.2.2.2.2 < y.1.2.2.1 + 1 then
+      node 4 y.2 (headClosure (y.1.2.2.2.1.getD y.1.2.2.2.2.2 0)) else y.2)) := by
+    have h := Primrec.ite (Primrec.nat_lt.comp (hj.comp Primrec.fst) (Primrec.succ.comp (hm.comp Primrec.fst)))
+      (nodePrim (Primrec.const 4) Primrec.snd (hhead.comp Primrec.fst)) Primrec.snd
+    exact Primrec.option_some.comp h
+  exact pbindPartrec hdelta hfin.to_comp.partrec.to₂
+
+theorem coordinateCal {e : Code} {p : Policy} (he : RealizesPolicy e p) (level m : Nat) (h : List Nat)
+    (ps : List (List Nat)) (j : Nat) :
+    coordinateP e level m h ps j = Part.some (PolicyAbstraction.coordinateCode p level m h ps j) := by
+  unfold coordinateP deltaP PolicyAbstraction.coordinateCode
+  by_cases h0 : j = 0
+  · rw [if_pos h0,if_pos h0,repeatCal he]
+    exact pbind_calibrated _ _ _ (fun d => rfl)
+  · rw [if_neg h0,if_neg h0]
+    by_cases hl : j < level + 2
+    · rw [if_pos hl,if_pos hl,macroCal he]
+      exact pbind_calibrated _ _ _ (fun d => rfl)
+    · rw [if_neg hl,if_neg hl]
+      exact pbind_calibrated _ _ _ (fun d => rfl)
+
+noncomputable def resultStep (e : Code) (level m : Nat) (h : List Nat) (ps : List (List Nat)) (j : Nat)
+    (acc : Option (List Nat)) : Part (Option (List Nat)) :=
+  pbind (Part.some acc) (fun xs => pbind (coordinateP e level m h ps j) (fun x => Part.some (some (xs ++ [x]))))
+
+noncomputable def resultP (e : Code) (level m : Nat) (h : List Nat) (ps : List (List Nat)) :
+    Part (Option (List Nat)) :=
+  Nat.rec (motive := fun _ => Part (Option (List Nat))) (Part.some (some []))
+    (fun j IH => IH.bind (fun acc => resultStep e level m h ps j acc)) (max (level+1) m + 1)
+
+theorem resultPartrec : Partrec (fun x : Code × Nat × Nat × List Nat × List (List Nat) =>
+    resultP x.1 x.2.1 x.2.2.1 x.2.2.2.1 x.2.2.2.2) := by
+  let A := Code × Nat × Nat × List Nat × List (List Nat)
+  let B := A × Nat × Option (List Nat)
+  have hacc : Partrec (fun y : B => (Part.some y.2.2 : Part (Option (List Nat)))) :=
+    (Computable.snd.comp Computable.snd).partrec
+  let C := B × List Nat
+  have hcoord : Partrec (fun z : C => coordinateP z.1.1.1 z.1.1.2.1 z.1.1.2.2.1 z.1.1.2.2.2.1 z.1.1.2.2.2.2 z.1.2.1) := by
+    have hA : Computable (fun z : C => z.1.1) := Computable.fst.comp Computable.fst
+    have h := coordinatePartrec.comp ((Computable.fst.comp hA).pair ((Computable.fst.comp (Computable.snd.comp hA)).pair
+      ((Computable.fst.comp (Computable.snd.comp (Computable.snd.comp hA))).pair
+        ((Computable.fst.comp (Computable.snd.comp (Computable.snd.comp (Computable.snd.comp hA)))).pair
+          ((Computable.snd.comp (Computable.snd.comp (Computable.snd.comp (Computable.snd.comp hA)))).pair
+            (Computable.fst.comp (Computable.snd.comp Computable.fst)))))))
+    exact h
+  have happ : Partrec₂ (fun (z : C) (x : Nat) => (Part.some (some (z.2 ++ [x])) : Part (Option (List Nat)))) := by
+    have h : Computable (fun w : C × Nat => some (w.1.2 ++ [w.2])) :=
+      Computable.option_some.comp (Primrec.list_concat.to_comp.comp (Computable.snd.comp Computable.fst) Computable.snd)
+    exact h.partrec.to₂
+  have hinner := (pbindPartrec hcoord happ).to₂
+  have hstep : Partrec₂ (fun (a : A) (q : Nat × Option (List Nat)) =>
+      resultStep a.1 a.2.1 a.2.2.1 a.2.2.2.1 a.2.2.2.2 q.1 q.2) := by
+    have h := pbindPartrec hacc hinner
+    exact h.to₂
+  have hlen : Computable (fun a : A => max (a.2.1+1) a.2.2.1 + 1) :=
+    Computable.succ.comp (Primrec.nat_max.to_comp.comp
+      (Computable.succ.comp (Computable.fst.comp Computable.snd))
+      (Computable.fst.comp (Computable.snd.comp Computable.snd)))
+  have h := Partrec.nat_rec hlen (Computable.const (some ([] : List Nat))).partrec hstep
+  exact h
+
+private theorem foldl_range_succ' {β : Type} (f : β → Nat → β) (init : β) (k : Nat) :
+    (List.range (k+1)).foldl f init = f ((List.range k).foldl f init) k := by
+  rw [List.range_succ,List.foldl_append]
+  rfl
+
+theorem resultCal {e : Code} {p : Policy} (he : RealizesPolicy e p) (level m : Nat) (h : List Nat)
+    (ps : List (List Nat)) :
+    resultP e level m h ps = Part.some (PolicyAbstraction.resultCode p level m h ps) := by
+  unfold resultP PolicyAbstraction.resultCode
+  generalize max (level + 1) m + 1 = k
+  induction k with
+  | zero => rfl
+  | succ k ih =>
+    rw [foldl_range_succ']
+    change (Nat.rec (motive := fun _ => Part (Option (List Nat))) (Part.some (some []))
+      (fun j IH => IH.bind (fun acc => resultStep e level m h ps j acc)) k).bind
+        (fun acc => resultStep e level m h ps k acc) = _
+    rw [ih,Part.bind_some]
+    unfold resultStep
+    apply pbind_calibrated
+    intro xs
+    rw [coordinateCal he]
+    exact pbind_calibrated _ _ _ (fun x => rfl)
+
+noncomputable def abstractionP (e : Code) (level m : Nat) (h : List Nat) : Part (Option (List Nat)) :=
+  pbind (partialsP e level m h) (fun ps => resultP e level m h ps)
+
+theorem abstractionPartrec : Partrec (fun x : Code × Nat × Nat × List Nat =>
+    abstractionP x.1 x.2.1 x.2.2.1 x.2.2.2) := by
+  let A := Code × Nat × Nat × List Nat
+  have hres : Partrec (fun y : A × List (List Nat) => resultP y.1.1 y.1.2.1 y.1.2.2.1 y.1.2.2.2 y.2) := by
+    have h := resultPartrec.comp ((Computable.fst.comp Computable.fst).pair
+      ((Computable.fst.comp (Computable.snd.comp Computable.fst)).pair
+        ((Computable.fst.comp (Computable.snd.comp (Computable.snd.comp Computable.fst))).pair
+          ((Computable.snd.comp (Computable.snd.comp (Computable.snd.comp Computable.fst))).pair Computable.snd))))
+    exact h
+  exact pbindPartrec partialsPartrec hres.to₂
+
+theorem abstractionCal {e : Code} {p : Policy} (he : RealizesPolicy e p) (level m : Nat) (h : List Nat) :
+    abstractionP e level m h = Part.some (PolicyAbstraction.abstractionCode p level m h) := by
+  unfold abstractionP PolicyAbstraction.abstractionCode
+  rw [partialsCal he]
+  exact pbind_calibrated _ _ _ (fun ps => resultCal he _ _ _ _)
+
+end LogicLineages.PermittedControl.UniformPolicyCompiler

@@ -1,0 +1,23 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowConstructorArgumentComputabilityProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowConstructorArgumentComputabilityChecks
+open NumberedWindowConstructorArgumentComputabilityTargets
+
+theorem exact_PrimitiveReplacementComputableArguments : PrimitiveReplacementComputableArguments :=
+  NumberedWindowConstructorArgumentComputabilityProof.primitive
+
+theorem exact_RawStepComputableArgument : RawStepComputableArgument :=
+  NumberedWindowConstructorArgumentComputabilityProof.raw
+
+theorem exact_RawArgsStepComputableArguments : RawArgsStepComputableArguments :=
+  NumberedWindowConstructorArgumentComputabilityProof.arguments
+
+#print axioms exact_PrimitiveReplacementComputableArguments
+#print axioms exact_RawStepComputableArgument
+#print axioms exact_RawArgsStepComputableArguments
+
+end LogicLineages.PersistentMarking.NumberedWindowConstructorArgumentComputabilityChecks

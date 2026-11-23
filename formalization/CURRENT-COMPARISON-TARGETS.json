@@ -209,9 +209,12 @@
           "label": "lem:structural-interpretation",
           "file": "16-persistent-marking-termination-ordering/sections/decision.tex",
           "line": 149,
-          "statement_latex": "[Structural interpretation]\\label{lem:structural-interpretation}\nInterpretation and this original-spine helper are monotone and commute\nwith weakening. Interpretation respects capture-avoiding substitution.\nFor environments interpreting concrete substitutions, the helper\ninterprets full application of the resulting substituted source,\nincluding its undefined cases. This is not a claim that a previously\nundefined application remains undefined under free substitution.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "statement_latex": "[Structural interpretation]\\label{lem:structural-interpretation}\nInterpretation and this original-spine helper are monotone and commute\nwith weakening. Interpretation respects capture-avoiding substitution.\nFor environments interpreting concrete substitutions, and at a fixed\npoint of the constructor operator of Lemma~\\ref{lem:operator}, the helper\ninterprets full application of the resulting substituted source,\nincluding its undefined cases. The fixed-point hypothesis is needed:\nat the bottom family the helper's output for an ordinary successor\napplied to a covered ground variable differs from the interpretation\nof that application. This is not a claim that a previously\nundefined application remains undefined under free substitution.",
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PersistentMarking.StructuralInterpretationCorrected.CorrectedStructuralInterpretation",
+          "verified_alias": "LogicLineages.PersistentMarking.StructuralInterpretationCorrected.correctedStructuralInterpretation",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/1449-p16-lem-structural-interpretation.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:operator",
@@ -569,8 +572,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/arithmetic.tex",
           "line": 13,
           "statement_latex": "[Closed-block decision]\\label{thm:arithmetic}\nFor either control of Section~\\ref{sec:controls}, closed existential\nand closed universal Boolean combinations of linear inequalities,\nequalities and congruences over finite circuits of fixed-head collapses\nare decidable. The procedure preserves shared inputs and shared circuit\nnodes. The fixed heads may be arbitrary ordinals below \\(\\varepsilon_0\\).",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.ClosedBlockDecision.ClosedBlockDecision",
+          "verified_alias": "LogicLineages.PermittedControl.StageCallbackGuardRender.closedBlockDecision",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/1435-p17-thm-arithmetic.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:lem:field-comparison",
@@ -618,8 +624,11 @@
           "file": "17-permitted-control-canonical-comparison/sections/consequences.tex",
           "line": 9,
           "statement_latex": "[All ground free variables]\\label{thm:ground}\nFor either \\(f_*\\) or a fixed \\(f_b\\), universal weak comparison,\nWilken--Weiermann strict comparison, and universal equality of canonical\nassignments are decidable for original G\\\"odel T terms whose free variables\nall have ground type. There is no bound on internal types, bound-variable\ntypes, result types, recursor instances, or finite nesting.",
-          "status": "pending",
-          "reuse_status": "requires exact source and dependency comparison"
+          "status": "checked",
+          "reuse_status": "requires exact source and dependency comparison",
+          "formal_target": "LogicLineages.PermittedControl.GroundComparison.GroundComparison",
+          "verified_alias": "LogicLineages.PermittedControl.GroundComparison.groundComparison",
+          "acceptance": "verification/new-paper-set-2026-11-18/accepted/1436-p17-thm-ground.json"
         },
         {
           "id": "17-permitted-control-canonical-comparison:lem:tail-growth",
@@ -2359,7 +2368,7 @@
     }
   ],
   "status_counts": {
-    "pending": 11,
-    "checked": 156
+    "pending": 8,
+    "checked": 159
   }
 }

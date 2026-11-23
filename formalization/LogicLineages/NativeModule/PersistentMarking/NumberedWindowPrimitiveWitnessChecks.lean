@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowPrimitiveWitnessReplacementProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowPrimitiveWitnessChecks
+open NumberedWindowPrimitiveWitnessTargets
+
+theorem exact_LiteralMarkBit : ExactLiteralMarkBit :=
+  NumberedWindowPrimitiveWitnessMarkProof.reflection
+
+theorem exact_LiteralPermutationBit : ExactLiteralPermutationBit :=
+  NumberedWindowPrimitiveWitnessReplacementProof.permutation
+
+theorem exact_SuppliedReplacementBit : ExactSuppliedReplacementBit :=
+  NumberedWindowPrimitiveWitnessReplacementProof.supplied
+
+theorem exact_CertifiedPrimitiveReplacement : ExactCertifiedPrimitiveReplacement :=
+  NumberedWindowPrimitiveWitnessReplacementProof.certified
+
+#print axioms exact_LiteralMarkBit
+#print axioms exact_LiteralPermutationBit
+#print axioms exact_SuppliedReplacementBit
+#print axioms exact_CertifiedPrimitiveReplacement
+
+end LogicLineages.PersistentMarking.NumberedWindowPrimitiveWitnessChecks

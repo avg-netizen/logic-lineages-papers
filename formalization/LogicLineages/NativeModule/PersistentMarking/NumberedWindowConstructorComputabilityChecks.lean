@@ -1,0 +1,16 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowConstructorComputabilityProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowConstructorComputabilityChecks
+open NumberedWindowConstructorComputabilityTargets NumberedWindowConstructorComputabilityProof
+
+theorem exact_ConstructorInductionFromRawCases : ConstructorInductionFromRawCases := NumberedWindowConstructorInductionProof.fromRaw
+theorem exact_AllConstructorRawCases : AllConstructorRawCases := raw
+theorem exact_AllConstructorsComputable : AllConstructorsComputable := owners
+#print axioms exact_ConstructorInductionFromRawCases
+#print axioms exact_AllConstructorRawCases
+#print axioms exact_AllConstructorsComputable
+end LogicLineages.PersistentMarking.NumberedWindowConstructorComputabilityChecks

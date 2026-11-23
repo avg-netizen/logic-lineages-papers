@@ -1,0 +1,70 @@
+{
+  "lane": "fable2",
+  "item": "G02 — frontend acceptance",
+  "paper": 16,
+  "status": "native gate passed",
+  "gate": "bash verification/local-fable-pair-2026-11-22-round2/gate.sh mathlib LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationFrontendAcceptanceProof",
+  "receipt": {
+    "id": "build-reports/1795397653724718198-3233856.json",
+    "sha256": "e8421c35fbec3e3af59a85f4f146fc8fbc9b3f7cb69b75fa32e3e34af0a81999",
+    "lines": [
+      "COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationFrontendAcceptanceTargets",
+      "COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationFrontendAcceptanceProof"
+    ]
+  },
+  "modules": [
+    {
+      "module": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationFrontendAcceptanceTargets",
+      "file": "LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationFrontendAcceptanceTargets.lean",
+      "sha256": "05b5b51e5d35074f926ea1517f316495a714aff5a0783388b028529993fd3a64",
+      "frozen_before_proof": true,
+      "frozen_at": "2026-11-23T01:33Z",
+      "sha256_rechecked_after_pass": "unchanged",
+      "definitions": [
+        "ExactInstalledApplicationFrontendAcceptance",
+        "ExactInstalledSyntaxGuardedApplicationFrontendAcceptance"
+      ]
+    },
+    {
+      "module": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationFrontendAcceptanceProof",
+      "file": "LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationFrontendAcceptanceProof.lean",
+      "sha256": "904d8faf4fcf9213711fd38a73583b6cc8a6d18b8a46018ffd73b179f601dfee",
+      "theorems": [
+        "exact_InstalledApplicationFrontendAcceptance",
+        "exact_InstalledSyntaxGuardedApplicationFrontendAcceptance"
+      ],
+      "private_lemmas": [
+        "parsedFromReports",
+        "outputFromLeast"
+      ]
+    }
+  ],
+  "print_axioms": [
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationFrontendAcceptanceProof.exact_InstalledApplicationFrontendAcceptance' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationFrontendAcceptanceProof.exact_InstalledSyntaxGuardedApplicationFrontendAcceptance' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "forbidden_tokens": { "sorry": 0, "axiom": 0, "native_decide": 0 },
+  "existing_lean_files_edited": 0,
+  "gate_attempts": 1,
+  "ingredients": {
+    "arrowGood qf": "derived — canonicalCell dom cod + makeUnary over the function report's rawResult conjunct",
+    "arrowReports qf dom cod": "derived — canonicalCell head/tail + makeUnary over the same conjunct",
+    "shell equation qf = addressTerm ctx (rawCons dom cod) fn (and result = rawCons dom cod)": "derived — assembleInputs (exact_OpenAddressArrowCoordinates)",
+    "shell equation qa = addressTerm ctx dom arg": "derived — assembleInputs (readNode)",
+    "six-witness block introduction": "accepted supplier `supply` (SparseApplicationFrontendOpenBindingProof); no private block lemma written",
+    "outputReport conjunct": "derived — G01 least call as the single witness, address equation by reflexivity"
+  },
+  "explicit_premises_beyond_G01": [],
+  "explicit_premises_inherited_from_G01": [
+    "Nonempty (Derivation body Γ (unary TV (suc z) dom ⊓ unary TV (suc z) cod))",
+    "Nonempty (Derivation body Γ (unary (refitGuard s T) (suc z) dom ⊓ unary (refitGuard s T) (suc z) cod))",
+    "Nonempty (Derivation body Γ (unary tv (suc z) cod))  -- general statement only; absent at tv := TV",
+    "both operand addressReports at one ctx and both operand installed-scalar acceptances"
+  ],
+  "not_claimed": [
+    "discharge of the two syntax/refit type guards",
+    "a closed existential formula for the output (the witness stays under the continuation)",
+    "uniqueness of the accepted output for (qf, qa)",
+    "any numbered paper statement or register promotion"
+  ]
+}

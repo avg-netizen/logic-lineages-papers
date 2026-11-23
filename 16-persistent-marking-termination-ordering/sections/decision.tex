@@ -149,9 +149,13 @@ observation context.
 \begin{lemma}[Structural interpretation]\label{lem:structural-interpretation}
 Interpretation and this original-spine helper are monotone and commute
 with weakening. Interpretation respects capture-avoiding substitution.
-For environments interpreting concrete substitutions, the helper
+For environments interpreting concrete substitutions, and at a fixed
+point of the constructor operator of Lemma~\ref{lem:operator}, the helper
 interprets full application of the resulting substituted source,
-including its undefined cases. This is not a claim that a previously
+including its undefined cases. The fixed-point hypothesis is needed:
+at the bottom family the helper's output for an ordinary successor
+applied to a covered ground variable differs from the interpretation
+of that application. This is not a claim that a previously
 undefined application remains undefined under free substitution.
 \end{lemma}
 \begin{proof}
@@ -225,9 +229,13 @@ The head clauses use their displayed concrete premises; in particular
 Stat's strict bits are genuine proofs of the present strict relation.
 FAbs uses the fresh port and the opened source in the enlarged context.
 The tuple output is a concrete marked owner with all arguments appended.
-The joint structural induction of
-Lemma~\ref{lem:structural-interpretation} supplies interpretation of
-ordinary heads, lambdas, and substitution environments.
+The monotonicity, weakening and substitution clauses of
+Lemma~\ref{lem:structural-interpretation}, which hold at every stage,
+supply interpretation of ordinary heads, lambdas, and substitution
+environments. Its full-application clause requires a fixed point and
+is not used in this stage induction: soundness at each finite stage
+uses the hereditary relation above on whole tuples, and full
+application is invoked only at the stable family, for completeness.
 
 The new marked strict bit is justified by the same already constructed
 weak proof $\W P u$ as its weak bit and the equation $\mk(P)=P$.

@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticLeastClassQuotientProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticLeastClassChecks
+open NumberedWindowArithmeticLeastClassTargets
+
+theorem exact_LeastCodeSpecification : LeastCodeSpecification :=
+  NumberedWindowArithmeticLeastClassSpecProof.specification
+
+theorem exact_LeastCodeReflectsPrimary : LeastCodeReflectsPrimary :=
+  NumberedWindowArithmeticLeastClassEqualityProof.leastEq
+
+theorem exact_RepresentativeReflectsPrimary : RepresentativeReflectsPrimary :=
+  NumberedWindowArithmeticLeastClassEqualityProof.representativeEq
+
+theorem exact_LeastCodeReflectsActualQuotient : LeastCodeReflectsActualQuotient :=
+  NumberedWindowArithmeticLeastClassQuotientProof.quotientEq
+
+#print axioms exact_LeastCodeSpecification
+#print axioms exact_LeastCodeReflectsPrimary
+#print axioms exact_RepresentativeReflectsPrimary
+#print axioms exact_LeastCodeReflectsActualQuotient
+
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticLeastClassChecks

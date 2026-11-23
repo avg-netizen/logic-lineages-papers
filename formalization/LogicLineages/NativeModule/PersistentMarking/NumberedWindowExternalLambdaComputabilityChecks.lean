@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowExternalLambdaComputabilityProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowExternalLambdaComputabilityChecks
+open NumberedWindowExternalLambdaComputabilityTargets
+theorem exact_InstanceClassLiteral : InstanceClassLiteral := NumberedWindowExternalLambdaComputabilityProof.literal
+theorem exact_AppliedLambdaReducts : AppliedLambdaReducts := NumberedWindowExternalLambdaComputabilityProof.reducts
+theorem exact_ComputableLambda : ComputableLambda := NumberedWindowExternalLambdaComputabilityProof.computableLambda
+#print axioms exact_InstanceClassLiteral
+#print axioms exact_AppliedLambdaReducts
+#print axioms exact_ComputableLambda
+end LogicLineages.PersistentMarking.NumberedWindowExternalLambdaComputabilityChecks

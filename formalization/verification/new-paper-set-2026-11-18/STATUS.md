@@ -1,8 +1,16 @@
 # Current comparison formalization status
 
-The new-paper register has **156 checked and 11 pending out of 167**. Historical register:
+The new-paper register has **159 checked and 8 pending out of 167**. Historical register:
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
+
+## Round 2 of the local Fable-pair continuation, 22 November (paused)
+
+Supporting records now end at **1448**, with numbered acceptances #1435, #1436 and #1449. Paper 16 `lem:structural-interpretation` is promoted: the owner applied the recorded fixed-point correction to `decision.tex`, and the corrected lemma is the conjunction of four accepted statements. Paper 17 `thm:main` has a strengthened comparator, uniform in a supplied policy program and in the near-control parameter, proved with no hypothesis; it is not promoted until that comparator has been read against the paper. The native Paper 16 statements for iteration, realization and ranks compiled for the first time, on module-system copies of the legacy native files that remove an import-footprint memory stop; they are candidates for `thm:iteration` and `lem:realization`, not promoted. [Handoff](../local-fable-pair-2026-11-22-round2/HANDOFF.md) · [structural interpretation](accepted/1449-p16-lem-structural-interpretation.json) · [uniform main comparison](accepted/1445-p17-uniform-main-comparison.json) · [native iteration](accepted/1446-p16-native-iteration-on-module-copies.json) · [Paper 16 gap map](../local-fable-pair-2026-11-22-round2/opusB/P16-GAP-MAP.md)
+
+## Promotion of two Paper 17 statements, 22 November
+
+The owner promoted `thm:arithmetic` and `thm:ground` after an external source check found no material mismatch between their comparators and the printed statements. Paper 17 is at 32 of 33; `thm:main` stays pending because the same check found its comparator lacks the printed uniformity in a supplied policy program, and a strengthened comparator is frozen and in progress. [thm:arithmetic](accepted/1435-p17-thm-arithmetic.json) · [thm:ground](accepted/1436-p17-thm-ground.json) · [source check](../github-continuation-2026-11-22/p17/CORRESPONDENCE-REVIEW.md) · [strengthened main target](../local-fable-pair-2026-11-22-round2/root/UNIFORM-MAIN-SOURCE-MAP.md)
 
 ## Local Fable-pair round, 22 November (paused)
 

@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowExternalSubstituteBetaProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowExternalBindingNaturalityChecks
+open NumberedWindowExternalBindingNaturalityTargets
+theorem exact_SubstituteAfterShift : SubstituteAfterShift := NumberedWindowExternalSubstituteShiftProof.shifts
+theorem exact_SubstituteBeta : SubstituteBeta := NumberedWindowExternalSubstituteBetaProof.beta
+theorem exact_SubstituteFreshBody : SubstituteFreshBody := NumberedWindowExternalSubstituteShiftProof.fresh
+#print axioms exact_SubstituteAfterShift
+#print axioms exact_SubstituteBeta
+#print axioms exact_SubstituteFreshBody
+end LogicLineages.PersistentMarking.NumberedWindowExternalBindingNaturalityChecks

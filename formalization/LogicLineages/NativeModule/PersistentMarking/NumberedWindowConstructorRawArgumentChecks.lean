@@ -1,0 +1,19 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowConstructorRawArgumentProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowConstructorRawArgumentChecks
+open NumberedWindowConstructorRawArgumentTargets
+
+theorem exact_RawStepPositiveAddresses : RawStepPositiveAddresses :=
+  NumberedWindowConstructorRawArgumentProof.positive
+
+theorem exact_RawArgumentAddressDescent : RawArgumentAddressDescent :=
+  NumberedWindowConstructorRawArgumentProof.argument
+
+#print axioms exact_RawStepPositiveAddresses
+#print axioms exact_RawArgumentAddressDescent
+
+end LogicLineages.PersistentMarking.NumberedWindowConstructorRawArgumentChecks

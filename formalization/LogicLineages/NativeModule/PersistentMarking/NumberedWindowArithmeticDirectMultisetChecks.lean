@@ -1,0 +1,32 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticDirectMultisetComplete
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticDirectMultisetDomain
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticDirectMultisetChecks
+open NumberedWindowArithmeticDirectMultisetTargets
+
+theorem exact_TypedAddressListBit : ExactTypedAddressListBit :=
+  NumberedWindowArithmeticDirectMultisetSound.typed
+
+theorem exact_SuppliedDirectMultisetSound : SuppliedDirectMultisetSound :=
+  NumberedWindowArithmeticDirectMultisetSound.supplied
+
+theorem exact_CertifiedDirectMultiset : ExactCertifiedDirectMultiset :=
+  NumberedWindowArithmeticDirectMultisetComplete.exactDirect
+
+theorem exact_StrictReplacementPreservesTypedAddresses : StrictReplacementPreservesTypedAddresses :=
+  NumberedWindowArithmeticDirectMultisetDomain.preserved
+
+theorem exact_DirectMultisetRespectsPermutations : DirectMultisetRespectsPermutations :=
+  NumberedWindowArithmeticDirectMultisetDomain.permutations
+
+#print axioms exact_TypedAddressListBit
+#print axioms exact_SuppliedDirectMultisetSound
+#print axioms exact_CertifiedDirectMultiset
+#print axioms exact_StrictReplacementPreservesTypedAddresses
+#print axioms exact_DirectMultisetRespectsPermutations
+
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticDirectMultisetChecks

@@ -1,0 +1,25 @@
+{
+  "id": "new-set-1435",
+  "statement": "17-permitted-control-canonical-comparison:thm:arithmetic",
+  "kind": "current numbered statement",
+  "target": "LogicLineages.PermittedControl.ClosedBlockDecision.ClosedBlockDecision",
+  "exact_alias": "LogicLineages.PermittedControl.StageCallbackGuardRender.closedBlockDecision",
+  "native_receipt": "1795387043908318394-3159191",
+  "supporting_record": "1418-p17-closed-block-decision.json",
+  "supporting_record_sha256": "0e98dfe1548097db30ae41d3592756444a271c6ed80fd3ff68e27ee0a68c3ef7",
+  "consolidated_gate": "1795388841702636941-3166500 (all 108 modules of the 22 November local round, every one a verified cache hit)",
+  "comparator_origin": "Written and frozen by the local root (Claude) in the 22 November round; not a Codex-owned comparator.",
+  "independent_review": "External agent source check, ../github-continuation-2026-11-22/p17/CORRESPONDENCE-REVIEW.md (sha256 1016a78ff581af6170f66ca802f91018b2359035b1ba3f8ba2a47dbba56a2e83): \"No material mismatch found in the stated circuit language and original-domain semantics.\" The review is a statement-to-paper comparison and makes no proof-validity claim; Lean is the proof-validity check.",
+  "correspondence_table": "../local-fable-pair-2026-11-22/opusA/P17-THM-ARITHMETIC-CORRESPONDENCE.md",
+  "owner_decision": "Owner instruction of 2026-11-22 after reading the review summary: \"go ahead and promote.\"",
+  "accepted_utc": "2026-11-23T01:16:57.907767+00:00",
+  "limitations": [
+    "Correctness is stated on encodings of topological circuits with plain prepared matrices; nothing is claimed on malformed raw arguments, and the answer there is unconstrained",
+    "Universal blocks range over successful observations (vacuous when no run succeeds), as the printed true-domain convention requires",
+    "'Preserves shared inputs and shared circuit nodes' is carried by deciding the shared-coordinate circuit itself; no separate memory-layout or complexity invariant is stated",
+    "The identification of collapseWith with the paper's psi_f and of the ordinal notations rests on earlier accepted records and was not re-opened by the review",
+    "The near controls are decided for each b separately; joint computability in b is not part of this statement",
+    "Compiled and verified on the local continuation host; build receipts are host-local",
+    "Does not promote paper17 thm:main, whose comparator the same review found too weak"
+  ]
+}

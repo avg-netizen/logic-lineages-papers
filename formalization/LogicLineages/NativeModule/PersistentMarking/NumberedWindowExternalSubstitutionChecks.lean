@@ -1,0 +1,19 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowExternalSubstitutionPrimaryProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowExternalSubstitutionChecks
+open NumberedWindowExternalSubstitutionTargets
+
+theorem exact_CompatibleBodySubstitutionPrimary : CompatibleBodySubstitutionPrimary :=
+  NumberedWindowExternalSubstitutionPrimaryProof.compatible
+
+theorem exact_LiteralBodyClassSubstitution : LiteralBodyClassSubstitution :=
+  NumberedWindowExternalSubstitutionPrimaryProof.literalBody
+
+#print axioms exact_CompatibleBodySubstitutionPrimary
+#print axioms exact_LiteralBodyClassSubstitution
+
+end LogicLineages.PersistentMarking.NumberedWindowExternalSubstitutionChecks

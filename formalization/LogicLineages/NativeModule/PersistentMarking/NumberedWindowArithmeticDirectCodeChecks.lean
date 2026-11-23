@@ -1,0 +1,41 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticDirectCodeProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticDirectCodeChecks
+open NumberedWindowArithmeticCodecLaws
+open NumberedWindowArithmeticDirectCode NumberedWindowArithmeticDirectCodeTargets
+open NumberedWindowArithmeticDirectWitnessCodeProof
+
+theorem exact_AddressListCodec : ExactAddressListCodec :=
+  NumberedWindowArithmeticTermCodeChecks.exact_FieldsCodec
+
+theorem exact_InsertedOccurrenceCodec : ExactInsertedOccurrenceCodec :=
+  codec encodeInsertion decodeInsertion insertionRead insertionRound
+
+theorem exact_DirectMultisetWitnessCodec : ExactDirectMultisetWitnessCodec :=
+  codec encodeDirectWitness decodeDirectWitness witnessRead witnessRound
+
+theorem exact_TypedAddressListOnCodes : ExactTypedAddressListOnCodes :=
+  NumberedWindowArithmeticDirectCodeProof.typed
+
+theorem exact_DirectMultisetOnCodes : ExactDirectMultisetOnCodes :=
+  NumberedWindowArithmeticDirectCodeProof.direct
+
+theorem exact_OriginalCodedDirectDomains : OriginalCodedDirectDomains :=
+  NumberedWindowArithmeticDirectCodeProof.domains
+
+theorem exact_CodedDirectRejectsMalformed : CodedDirectRejectsMalformed :=
+  NumberedWindowArithmeticDirectCodeProof.malformed
+
+#print axioms exact_AddressListCodec
+#print axioms exact_InsertedOccurrenceCodec
+#print axioms exact_DirectMultisetWitnessCodec
+#print axioms exact_TypedAddressListOnCodes
+#print axioms exact_DirectMultisetOnCodes
+#print axioms exact_OriginalCodedDirectDomains
+#print axioms exact_CodedDirectRejectsMalformed
+
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticDirectCodeChecks

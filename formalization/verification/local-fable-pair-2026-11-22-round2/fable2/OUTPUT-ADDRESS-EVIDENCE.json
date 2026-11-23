@@ -1,0 +1,52 @@
+{
+  "lane": "fable2",
+  "item": "G01 — output address",
+  "paper": 16,
+  "status": "native gate passed",
+  "gate": "bash verification/local-fable-pair-2026-11-22-round2/gate.sh mathlib LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationOutputAddressProof",
+  "receipt": {
+    "id": "build-reports/1795397242217822492-3231382.json",
+    "sha256": "6f255001348057c2d37b2a6b31ba867356dd46cfdcad7655397028b8e47d5c3d",
+    "lines": [
+      "COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationOutputAddressTargets",
+      "COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationOutputAddressProof"
+    ]
+  },
+  "modules": [
+    {
+      "module": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationOutputAddressTargets",
+      "file": "LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationOutputAddressTargets.lean",
+      "sha256": "7164f6998e96658f10e0a5e55b9cfbb821de9655aef7262e0254b521afaf8eca",
+      "frozen_before_proof": true,
+      "frozen_at": "2026-11-23T01:21:11Z",
+      "definitions": [
+        "ExactInstalledApplicationOutputAddress",
+        "ExactInstalledSyntaxGuardedApplicationOutputAddress"
+      ]
+    },
+    {
+      "module": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationOutputAddressProof",
+      "file": "LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationOutputAddressProof.lean",
+      "sha256": "492c77121cf8bd9f02361f4b45ec8788db06636382e7b0b4bf7cc2f4797519ab",
+      "theorems": [
+        "exact_InstalledApplicationOutputAddress",
+        "exact_InstalledSyntaxGuardedApplicationOutputAddress"
+      ]
+    }
+  ],
+  "print_axioms": [
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationOutputAddressProof.exact_InstalledApplicationOutputAddress' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationOutputAddressProof.exact_InstalledSyntaxGuardedApplicationOutputAddress' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "forbidden_tokens": { "sorry": 0, "axiom": 0, "native_decide": 0 },
+  "existing_lean_files_edited": 0,
+  "gate_attempts": 1,
+  "explicit_premises_beyond_integration_statement": [
+    "Nonempty (Derivation body Γ (unary tv (suc z) cod))  -- general statement only; absent at tv := TV"
+  ],
+  "not_claimed": [
+    "programGraph Q.application (suc z) ![qf,qa,addressTerm ctx cod m]",
+    "discharge of the two syntax/refit type guards",
+    "any numbered paper statement or register promotion"
+  ]
+}

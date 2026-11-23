@@ -1,0 +1,12 @@
+1. **Passed:** `NumberedWindowInternalCoverMeasuredApplicationOutputAddressProof`, theorems `exact_InstalledApplicationOutputAddress` and `exact_InstalledSyntaxGuardedApplicationOutputAddress`, receipt `build-reports/1795397242217822492-3231382.json`, first gate attempt; axioms are `propext`, `Classical.choice`, `Quot.sound`.
+2. **Target freeze:** `…OutputAddressTargets.lean`, sha256 `7164f699…afaf8eca`, was in the ledger before the proof module existed and is unchanged after the pass. No existing `.lean` file was edited.
+3. **Statement:** from the integration statement's hypotheses (two type guards, both operand `addressReport`s at one `ctx`, both `Q.scalar` acceptances), in continuation form over a fresh `m`, three things hold.
+4. They are: `m` is the measured least of `auxiliaryTerm dom cod fn arg`; `addressReport (addressTerm ctx cod m) ctx cod m`; and `unary Q.scalar (suc z) (addressTerm ctx cod m)`.
+5. **Correction to the brief:** the output address stores the least `m`, not the auxiliary term. This is what the original `outputReport` emits, so the report is `addressReport q ctx cod m`.
+6. **Derived, not assumed:** the context check, the window at `m`, the fixed point `leastGraph … m m`, and the report itself. The fixed point comes from the accepted `exact_CoveredLeastIdempotent`, which applies because `thinPairedExchange`/`thinMatchingWindow` unfold to `pairedExchange`/`coveredWindow`.
+7. **Still assumed:** the two original syntax/refit type guards, and in the general statement one extra premise `unary tv (suc z) cod`.
+8. **Why that premise stays:** `tv` is an arbitrary program, so it cannot be derived, and `exact_InstalledCarrierCoordinates` applied to the conclusion returns it, so it is necessary. The second theorem takes `tv := TV`, where it is the right half of the syntax guard and disappears.
+9. **Not claimed:** acceptance by the application program itself, `programGraph Q.application (suc z) ![qf,qa,addressTerm ctx cod m]`; no numbered statement or register promotion.
+10. **Next:** prove that frontend acceptance through `exact_InstalledApplicationReport`. It needs `arrowGood qf`, `arrowReports qf dom cod`, the two shell equations for `qf` and `qa`, and a six-witness `block` introduction; this step already supplies the `outputReport` conjunct.
+
+The ledger, `OUTPUT-ADDRESS-EVIDENCE.json` and `OUTPUT-ADDRESS-SOURCE-MAP.md` are in `verification/local-fable-pair-2026-11-22-round2/fable2/`.

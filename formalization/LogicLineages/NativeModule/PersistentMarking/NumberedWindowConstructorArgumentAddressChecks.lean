@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowConstructorArgumentAddressProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowConstructorArgumentAddressChecks
+open NumberedWindowConstructorArgumentAddressTargets
+theorem exact_PrimaryArgumentAddress : PrimaryArgumentAddress := NumberedWindowConstructorArgumentAddressProof.primary
+theorem exact_PermutedArgumentAddresses : PermutedArgumentAddresses := NumberedWindowConstructorArgumentAddressProof.permuted
+theorem exact_ComputableArgumentsGiveMultiset : ComputableArgumentsGiveMultiset := NumberedWindowConstructorArgumentAddressProof.multiset
+#print axioms exact_PrimaryArgumentAddress
+#print axioms exact_PermutedArgumentAddresses
+#print axioms exact_ComputableArgumentsGiveMultiset
+end LogicLineages.PersistentMarking.NumberedWindowConstructorArgumentAddressChecks

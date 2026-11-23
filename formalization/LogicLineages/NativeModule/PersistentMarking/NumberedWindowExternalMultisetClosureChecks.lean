@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowExternalMultisetMembersProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowExternalMultisetClosureChecks
+open NumberedWindowExternalMultisetClosureTargets
+
+theorem exact_ExternalJUnion : ExternalJUnion := NumberedWindowExternalMultisetUnionProof.union
+theorem exact_ExternalISingleton : ExternalISingleton := NumberedWindowExternalMultisetMembersProof.singleton
+theorem exact_ExternalIFiniteMultiset : ExternalIFiniteMultiset := NumberedWindowExternalMultisetMembersProof.finite
+
+#print axioms exact_ExternalJUnion
+#print axioms exact_ExternalISingleton
+#print axioms exact_ExternalIFiniteMultiset
+
+end LogicLineages.PersistentMarking.NumberedWindowExternalMultisetClosureChecks

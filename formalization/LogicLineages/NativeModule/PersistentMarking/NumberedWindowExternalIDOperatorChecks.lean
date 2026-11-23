@@ -1,0 +1,46 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowExternalIDLeastProof
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowExternalIDAccProof
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowExternalIDStageProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowExternalIDOperatorChecks
+open NumberedWindowExternalIDOperatorTargets
+universe u
+
+theorem exact_DisjointOperatorTags : ExactDisjointOperatorTags :=
+  NumberedWindowExternalIDTagProof.tags
+
+theorem exact_TaggedClauseProjection : ExactTaggedClauseProjection :=
+  NumberedWindowExternalIDTagProof.projection
+
+theorem exact_ActualOperatorsMonotone : ActualOperatorsMonotone :=
+  NumberedWindowExternalIDTagProof.monotone
+
+theorem exact_ActualLeastPredicatesFixed : ActualLeastPredicatesFixed :=
+  NumberedWindowExternalIDLeastProof.actualFixed
+
+theorem exact_ActualLeastTagProjection : ActualLeastTagProjection :=
+  NumberedWindowExternalIDLeastProof.actualProjection
+
+theorem exact_ActualGuardedAccessibilitySemantics : ActualGuardedAccessibilitySemantics :=
+  NumberedWindowExternalIDAccProof.actualAcc
+
+theorem exact_ActualStageTagProjection : ActualStageTagProjection.{u} :=
+  NumberedWindowExternalIDStageProof.actual
+
+theorem exact_StageStartsAtOperatorEmpty : StageStartsAtOperatorEmpty.{u} :=
+  NumberedWindowExternalIDStageProof.starts
+
+#print axioms exact_DisjointOperatorTags
+#print axioms exact_TaggedClauseProjection
+#print axioms exact_ActualOperatorsMonotone
+#print axioms exact_ActualLeastPredicatesFixed
+#print axioms exact_ActualLeastTagProjection
+#print axioms exact_ActualGuardedAccessibilitySemantics
+#print axioms exact_ActualStageTagProjection
+#print axioms exact_StageStartsAtOperatorEmpty
+
+end LogicLineages.PersistentMarking.NumberedWindowExternalIDOperatorChecks

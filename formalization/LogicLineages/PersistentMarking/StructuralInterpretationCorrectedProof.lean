@@ -1,0 +1,21 @@
+import LogicLineages.PersistentMarking.StructuralInterpretationCorrectedTargets
+import LogicLineages.PersistentMarking.ProtectedSpineInterpretationProof
+import LogicLineages.PersistentMarking.ProtectedSpineFreeSubstitutionProof
+import LogicLineages.PersistentMarking.ProtectedSpineBoundSubstitutionProof
+import LogicLineages.PersistentMarking.ProtectedSpineFixedApplicationProof
+import LogicLineages.PersistentMarking.ProtectedSpineApplicationGapChecks
+
+namespace LogicLineages.PersistentMarking.StructuralInterpretationCorrected
+
+theorem correctedStructuralInterpretation : CorrectedStructuralInterpretation :=
+  ⟨ProtectedSpineInterpretationProof.exact_InterpretationLaws,
+    ProtectedSpineFreeSubstitutionProof.exact_FreeSubstitution,
+    ProtectedSpineBoundSubstitutionProof.exact_BoundSubstitution,
+    ProtectedSpineFixedApplicationProof.exact_FixedApplication⟩
+
+theorem correctedWithBoundary : CorrectedWithBoundary :=
+  ⟨correctedStructuralInterpretation,ProtectedSpineApplicationGapChecks.exact_AvailabilityGap⟩
+
+#print axioms correctedStructuralInterpretation
+#print axioms correctedWithBoundary
+end LogicLineages.PersistentMarking.StructuralInterpretationCorrected

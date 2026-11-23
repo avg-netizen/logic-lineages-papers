@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowExternalComputabilityProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowExternalComputabilityChecks
+open NumberedWindowExternalComputabilityTargets
+theorem exact_GroundAtCanonicalAddress : GroundAtCanonicalAddress := NumberedWindowExternalComputabilityProof.ground
+theorem exact_ArrowAtEveryTypedArgument : ArrowAtEveryTypedArgument := NumberedWindowExternalComputabilityProof.arrow
+theorem exact_ComputablePositiveDescendants : ComputablePositiveDescendants := NumberedWindowExternalComputabilityProof.positive
+theorem exact_ComputableDirectDescendants : ComputableDirectDescendants := NumberedWindowExternalComputabilityProof.direct
+
+#print axioms exact_GroundAtCanonicalAddress
+#print axioms exact_ArrowAtEveryTypedArgument
+#print axioms exact_ComputablePositiveDescendants
+#print axioms exact_ComputableDirectDescendants
+end LogicLineages.PersistentMarking.NumberedWindowExternalComputabilityChecks
