@@ -1,0 +1,53 @@
+{
+  "status": "frozen source only; two separate native gates pending",
+  "paper": 16,
+  "gate_order": [
+    "LogicLineages.PersistentMarking.NativeIndexedCarrierFiniteOrbitProof",
+    "LogicLineages.PersistentMarking.NativeTowerIndexedFiniteOrbitProof"
+  ],
+  "expected_named_axiom_outputs": {
+    "LogicLineages.PersistentMarking.NativeIndexedCarrierFiniteOrbitProof": [
+      "exact_IndexedCarrierFiniteAbsorption",
+      "exact_IndexedCarrierFiniteSeedOrbit",
+      "exact_IndexedCarrierFiniteEarlierOrbit"
+    ],
+    "LogicLineages.PersistentMarking.NativeTowerIndexedFiniteOrbitProof": [
+      "exact_ActualTowerIndexedFiniteOrbitDominance"
+    ]
+  },
+  "source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeIndexedCarrierFiniteOrbitProof.lean": "2f89e3bc631c22046940323d8a06c2ceada134fb42141713a97d4e5178bd649b",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerIndexedFiniteOrbitProof.lean": "af33b9d77bf635a0efa3046ca1d5c90fe8e3ba59d5255a81138231a9c0332e32",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-TOWER-INDEXED-FINITE-ORBIT-SOURCE-MAP.md": "c7fe887aa20d35289e634dcc32df1edf1192a5203918c8568011870f895452b9"
+  },
+  "actual_interfaces_pins_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeIndexedCarrierChecks.lean": "3039356d5dcad0a6360246f50d703ab57f6c0f4c5a1121200edb4c60038f24fe",
+    "formalization/LogicLineages/PersistentMarking/NativeIndexedSelectorProof.lean": "71ebd97dfde1ebe0421a5c5fa06827f3962388eabe7e1d5beeed6cfa67dc9cb8",
+    "formalization/LogicLineages/PersistentMarking/NativeCarrierThinChecks.lean": "42084d704790d839b0122a1bfcab2bb2bb0567b7e5ba47fed904ebddee526149",
+    "formalization/LogicLineages/PersistentMarking/NativeIndexedCarrierSubtype.lean": "69b5f52e53bc3ae75b861234ac5d592daf95b5694c0f35bfde7c687b038a4b15",
+    "formalization/LogicLineages/PersistentMarking/NativeOrdinalBasisTargets.lean": "a929bbcd9f6b9016f89ba939c36f10357652d16b26baa0bb03c7e252b08e6c5d",
+    "formalization/LogicLineages/PersistentMarking/NativeOrdinalBasisChecks.lean": "5f8ebc44ae2b3c6fb24fdcceb0d6b443e940c1e5cf1a9b3e8d8a969b82942f6b",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerIndexedEntryProof.lean": "730c7a226962192a79f7edc8a192346ef9f982502fde7106d3a50233d733dd34",
+    "formalization/LogicLineages/PersistentMarking/NativeOrdinalCapPathsTargets.lean": "fd6e8ea69fa2c9b2aa305ebe901168e9a2576ee3d0a0d44fd8250df4ea14c5b6",
+    "formalization/LogicLineages/PersistentMarking/StablePairProof.lean": "a5b38868743cf9350ce1bbce2c96d48bbe7c1e632e58abd013d32fe7c1aed6ec"
+  },
+  "prior_checked_evidence_sha256": {
+    "formalization/verification/new-paper-set-2026-11-18/accepted/503-native-ordinal-successor-and-cap.json": "c277de98dba813fad04fb780e2e74e70e1f063640734637705349838070544a6",
+    "formalization/verification/continuation-2026-11-23/1492-p16-original-native-tower-indexed-entry-native.json": "5c2ece3ba0e48eae0e833cbaf3ffb0069cd2c33c87a2a12a19eb555cc3ca5d33"
+  },
+  "static_closures": {
+    "LogicLineages.PersistentMarking.NativeIndexedCarrierFiniteOrbitProof": {
+      "local": 136,
+      "external": [
+        "Init"
+      ]
+    },
+    "LogicLineages.PersistentMarking.NativeTowerIndexedFiniteOrbitProof": {
+      "local": 291,
+      "external": [
+        "Init"
+      ]
+    }
+  },
+  "boundary": "Pointwise actual native strict comparison below original concrete tower, no order/type/rank or height calculation and no printed promotion."
+}

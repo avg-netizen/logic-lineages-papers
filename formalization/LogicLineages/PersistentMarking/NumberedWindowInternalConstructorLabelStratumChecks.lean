@@ -1,0 +1,16 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalConstructorLabelStratumProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalConstructorLabelStratumChecks
+open NumberedWindowInternalConstructorLabelStratumTargets
+
+theorem exact_OriginalLabelStratumAtJBase : ExactLabelStratumAtJBase :=
+  NumberedWindowInternalConstructorLabelStratum.exact_LabelStratumAtJBase
+
+theorem exact_OriginalLabelStratumFromParsedBase : ExactLabelStratumFromParsedBase :=
+  NumberedWindowInternalConstructorLabelStratum.exact_LabelStratumFromParsedBase
+
+#print axioms exact_OriginalLabelStratumAtJBase
+#print axioms exact_OriginalLabelStratumFromParsedBase
+end LogicLineages.PersistentMarking.NumberedWindowInternalConstructorLabelStratumChecks
