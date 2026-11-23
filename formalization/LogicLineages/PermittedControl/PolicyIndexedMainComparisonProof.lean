@@ -9,14 +9,15 @@ import LogicLineages.PermittedControl.SelectedFunctionalHardnessProof
 
 public section
 namespace LogicLineages.PermittedControl.PolicyIndexedMainComparison
-open StandardControlCurrent (PolicyIndexedSourceConcrete PolicyIndexedShape)
+open LogicLineages.StandardControlCurrent.PolicyIndexedSourceConcrete (compile compilePartrec compileExact)
+open LogicLineages.StandardControlCurrent.PolicyIndexedShape (everyEffectivePolicyHasIndex)
 
 theorem indexedGroundBothControls : IndexedGroundBothControls :=
-  PolicyIndexedGroundDriver.indexedGroundFromOriginalQuery PolicyIndexedSourceConcrete.compile
-    PolicyIndexedSourceConcrete.compilePartrec PolicyIndexedSourceConcrete.compileExact
+  PolicyIndexedGroundDriver.indexedGroundFromOriginalQuery compile
+    compilePartrec compileExact
 
 theorem indexedMainComparison : IndexedMainComparison :=
-  ⟨fullControl, nearControlModular, PolicyIndexedShape.everyEffectivePolicyHasIndex,
+  ⟨fullControl, nearControlModular, everyEffectivePolicyHasIndex,
     indexedGroundBothControls, SelectedFunctionalHardness.Proof.selectedFunctionalHardness⟩
 
 #print axioms indexedGroundBothControls

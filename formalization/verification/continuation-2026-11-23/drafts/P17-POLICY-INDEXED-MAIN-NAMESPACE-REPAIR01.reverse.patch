@@ -1,0 +1,16 @@
+diff --git b/formalization/LogicLineages/PermittedControl/PolicyIndexedMainComparisonProof.lean a/formalization/LogicLineages/PermittedControl/PolicyIndexedMainComparisonProof.lean
+index e88b91868..0d9c2b983 100644
+--- b/formalization/LogicLineages/PermittedControl/PolicyIndexedMainComparisonProof.lean
++++ a/formalization/LogicLineages/PermittedControl/PolicyIndexedMainComparisonProof.lean
+@@ -12,2 +12 @@ namespace LogicLineages.PermittedControl.PolicyIndexedMainComparison
+-open LogicLineages.StandardControlCurrent.PolicyIndexedSourceConcrete (compile compilePartrec compileExact)
+-open LogicLineages.StandardControlCurrent.PolicyIndexedShape (everyEffectivePolicyHasIndex)
++open StandardControlCurrent (PolicyIndexedSourceConcrete PolicyIndexedShape)
+@@ -16,2 +15,2 @@ theorem indexedGroundBothControls : IndexedGroundBothControls :=
+-  PolicyIndexedGroundDriver.indexedGroundFromOriginalQuery compile
+-    compilePartrec compileExact
++  PolicyIndexedGroundDriver.indexedGroundFromOriginalQuery PolicyIndexedSourceConcrete.compile
++    PolicyIndexedSourceConcrete.compilePartrec PolicyIndexedSourceConcrete.compileExact
+@@ -20 +19 @@ theorem indexedMainComparison : IndexedMainComparison :=
+-  ⟨fullControl, nearControlModular, everyEffectivePolicyHasIndex,
++  ⟨fullControl, nearControlModular, PolicyIndexedShape.everyEffectivePolicyHasIndex,
