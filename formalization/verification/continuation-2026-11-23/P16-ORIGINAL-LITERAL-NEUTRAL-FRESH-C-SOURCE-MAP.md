@@ -1,0 +1,5 @@
+# P16: same literal neutral body and actual fresh probes
+
+Paper 16, [ordinals.tex](../../../16-persistent-marking-termination-ordering/sections/ordinals.tex) 112–128. The bare free original code is accessible in the new calibrated literal neutral body: original acceptance forgets only the outer neutral refinements, so an actual bare free successor is an exact carried whole bottom, within the same body.
+
+For ground, the actual original selected fresh report opens its exact packed free output; the selected tuple's alignment proves the carrier of this same fresh u. Ground computability is the original I. For an arrow-into-ground fresh domain, the actual parsed fresh proof exposes the real domain code and exact packed free shape; the earlier same-body C proof applies at the candidate shape- and output-guarded p. This step proves C without a caller-supplied application of that fresh term. It does not transport old typed proofs to a different h or establish that this candidate p is the installed actual callback.

@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralNeutralArrowGroundCProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralNeutralArrowGroundCProof.lean
+@@ -10,0 +11 @@
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveUnfoldingSupportProof
+@@ -84 +85,3 @@
+-    exact List.mem_map.mpr ⟨g.relabel Sum.inl,List.mem_map.mpr ⟨g,hg,rfl⟩,rfl⟩
++    refine List.mem_map.mpr ⟨g.relabel Sum.inl,List.mem_map.mpr ⟨g,hg,rfl⟩,?_⟩
++    exact ID1Completion.InternalPositiveUnfoldingSupportProof.formulaRelabelComposition
++      (Sum.inl : α → α ⊕ Fin 1) (Sum.inl : α ⊕ Fin 1 → β) g

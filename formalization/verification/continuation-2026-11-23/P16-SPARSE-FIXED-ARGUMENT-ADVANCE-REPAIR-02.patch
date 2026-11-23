@@ -1,0 +1,9 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFixedArgumentAdvanceProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFixedArgumentAdvanceProof.lean
+@@ -95,3 +95,3 @@
+-    (by simpa only [Term.relabel_relabel] using lcall)
+-    (by simpa only [Term.relabel_relabel] using rcall)
+-    (by simpa only [Term.relabel_relabel] using mapped)
++    (by simpa only [leftAux,W,Term.relabel_relabel] using lcall)
++    (by simpa only [rightAux,W,Term.relabel_relabel] using rcall)
++    (by simpa only [leftAux,rightAux,W,raw,least,Term.relabel_relabel] using mapped)

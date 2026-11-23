@@ -1,0 +1,5 @@
+# P16: literal neutral body, same physical scalar and original application core
+
+Supplies a single physical cover/window/exchange/raw/least selection from `exact_SelectedLiteralPhysicalScalar`, with exactly `i = addressScalar cv tv windowProg least` and `R = addressPositive cv tv (typedRaw5 root other windowProg syntaxProg) least`. The new even leaf is exactly `N = augmented i (neutralWithCarrier i R)`, and the fresh tuple corresponds definitionally to `literalNeutral i R`. Actual `exact_ReinstallTypedList` consumes the checked numeric refinements and actual multiplicity program. A small recut of the private rebuilding lemma constructs fresh Interpretation, Rules, invariant parsed probes and carrier tests in this body. Original odd J package retained in both actual bodies. Original application remains `guard i (applicationCore least)`; no claim about an output guard, object term computability, or transporting any earlier derivation.
+
+Native root: `LogicLineages.PersistentMarking.NumberedWindowInternalLiteralNeutralPhysicalChoiceProof`; alias `exact_SelectedLiteralNeutralPhysicalScalar`.
