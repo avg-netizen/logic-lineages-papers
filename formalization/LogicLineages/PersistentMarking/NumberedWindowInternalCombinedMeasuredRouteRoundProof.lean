@@ -10,8 +10,8 @@ open NumberedWindowInternalCoverCombinedRestrictedMeasuredRoundProof
 
 theorem exact_InstalledMeasuredRound : ExactInstalledMeasuredRound := by
   intro s V TV M M0 B T base body α Γ ctx dom cod f arg μ m fuel vertices out k K
-    syntax typed argument measured applied round member
+    syn typed argument measured applied round member
   exact exact_FullyMeasuredRoundApplicationLeast V TV M M0 B T base s body α Γ
-    ctx dom cod f arg μ m fuel vertices out k syntax typed argument measured applied round member
+    ctx dom cod f arg μ m fuel vertices out k syn typed argument measured applied round member
 
 end LogicLineages.PersistentMarking.NumberedWindowInternalCombinedMeasuredRouteProof

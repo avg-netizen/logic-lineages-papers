@@ -1,0 +1,7 @@
+# Paper 16: native scope of the measured route and application-domain checks
+
+The original combined source programs are unchanged. One measured, paired, cover-guarded exchange supplies the installed edge, round graph and packed least. The gate proves exact edge and round reports, and accepts the true paired-unmeasured edge as measured only with the two actual equal-measure reports. It does not identify measured and unmeasured round or least outputs. See the [route source map](P16-COMBINED-MEASURED-ROUTE-SOURCE-MAP.md) for correspondence.
+
+The same measured installation now constructs application least witnesses from the actual function and argument windows and the distinct original TV and refit guards. The representative form transports the constructed witness to the selected function representative, without requiring a fresh representative-window premise. The class form gives a common application least for the two admitted function seeds when their held function leasts agree. It still uses actual function windows, the shared argument window and the type guards. It does not establish that a function least implies its window, or that the unmeasured route has the same result. See the [application domain source map](P16-MEASURED-APPLICATION-DOMAIN-FROM-FUNCTION-WINDOWS-SOURCE-MAP.md) for the prior frozen sources.
+
+These are supporting checks inside the same calculus, not promotions of numbered manuscript statements.

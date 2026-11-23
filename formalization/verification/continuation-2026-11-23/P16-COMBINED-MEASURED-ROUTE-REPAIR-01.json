@@ -1,0 +1,50 @@
+{
+  "status": "frozen source-only repair; no repaired native result claimed",
+  "gate": "LogicLineages.PersistentMarking.NumberedWindowInternalCombinedMeasuredRouteChecks",
+  "failed": {
+    "receipt": "1795428119643653213-5",
+    "receipt_sha256": "53618a7849e552593ff58b87b4393df419133dc80c1b8f534b720a42426a38ca",
+    "requested": [
+      "LogicLineages.PersistentMarking.NumberedWindowInternalCombinedMeasuredRouteChecks",
+      "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredApplicationDomainClassProof",
+      "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredApplicationDomainRepresentativeProof"
+    ],
+    "outer_log": "ii5-nov23-measured-route-resume1002.log",
+    "outer_log_sha256": "6e0faf4f620410f896ce6fec8cb8e6c752c2ce4d309596d48a770d824faa41b1",
+    "module": "LogicLineages.PersistentMarking.NumberedWindowInternalCombinedMeasuredRouteRoundProof",
+    "module_result": {
+      "module": "LogicLineages.PersistentMarking.NumberedWindowInternalCombinedMeasuredRouteRoundProof",
+      "returncode": 1,
+      "seconds": 1.07,
+      "observed_cpu_seconds": 1.01,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 1220384,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "2b1305252011f88410cc14c263e700f1bd5315578848c9c6e84db2bfb185e0b3",
+      "log": "build-reports/1795428119643653213-5-LogicLineages-PersistentMarking-NumberedWindowInternalCombinedMeasuredRouteRoundProof.log"
+    },
+    "archived_source": "formalization/verification/continuation-2026-11-23/drafts/combined-measured-route-repair01/NumberedWindowInternalCombinedMeasuredRouteRoundProof.lean.failed-source",
+    "source_sha256": "2b1305252011f88410cc14c263e700f1bd5315578848c9c6e84db2bfb185e0b3",
+    "archived_module_log": "formalization/verification/continuation-2026-11-23/drafts/combined-measured-route-repair01/RoundProof.native.log",
+    "module_log_sha256": "263c4a7cbb89b5a82c10a4b0191a2521e73434e168a74fe46da21443b8162f4f",
+    "diagnostics": [
+      ":11:70 error: unsolved goals (parser left the hypotheses as implication goals)",
+      ":15:45 error: unexpected token 'syntax'; expected ':'",
+      ":15:97 error: unexpected token 'end'; expected ':'"
+    ]
+  },
+  "repair": "Alpha-rename only the reserved local binder syntax to syn at its two occurrences, with theorem/guard definitions unchanged.",
+  "repaired_source": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCombinedMeasuredRouteRoundProof.lean",
+  "repaired_source_sha256": "a3edc9c061d16c55cc888f6e9b792566abf18cb0b2bb6b8e995c906b3fd0b8bc",
+  "reverse_patch": "formalization/verification/continuation-2026-11-23/drafts/combined-measured-route-repair01/alpha-rename.patch",
+  "patch_sha256": "fa6c5c3c78b95836998d3440dea16134aced75f9bc52da3e9feeb19ed9941a6c",
+  "reverse_verified_bytewise": true,
+  "unchanged_gate_sources_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCombinedMeasuredRouteTargets.lean": "9b7c709ae47b7c96a74fded94a852f137b225617070a0ac24f488bdd59a972c2",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCombinedMeasuredRouteChecks.lean": "5e2196b0928c5e147ecbbd10a2de36867f4ef6a3e54bdfb26b84797b316d952c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCombinedMeasuredRouteEdgeProof.lean": "5ea1c77b03df3e0dc7e394abd136e5b31d26af2b63dc49b825f329d74ca40399"
+  },
+  "original_manifest_sha256": "ac66d3b7a4cdc01cf5c62271e20ef69bedf39d2031562f90e9c363a78753bcb9"
+}

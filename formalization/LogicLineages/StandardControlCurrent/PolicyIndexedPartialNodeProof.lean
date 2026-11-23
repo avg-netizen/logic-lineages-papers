@@ -37,8 +37,12 @@ private theorem typedLiteral (p : Policy) (s : Node) :
             simp [typedNode,caseBody,children,active,typedMerge,childPair,hf,h3,h4,h5,h6,hi,
               Option.bind_assoc]
         · by_cases h6 : n%8=6
-          · by_cases hi : i = 0 <;>
-              simp [typedNode,caseBody,children,active,collapse,childPair,hf,h3,h4,h5,h6,hi,
+          · by_cases hi : i = 0
+            · simp [typedNode,caseBody,children,active,collapse,childPair,hf,h3,h4,h5,h6,hi,
+                Option.bind_assoc,Option.map]
+              cases PolicyPartial.run p level 1 (Nat.unpair (n / 8)).1 <;>
+                cases PolicyPartial.run p level 0 (Nat.unpair (n / 8)).2 <;> rfl
+            · simp [typedNode,caseBody,children,active,collapse,childPair,hf,h3,h4,h5,h6,hi,
                 Option.bind_assoc,Option.map]
           · simp [typedNode,caseBody,children,active,hf,h3,h4,h5,h6]
 

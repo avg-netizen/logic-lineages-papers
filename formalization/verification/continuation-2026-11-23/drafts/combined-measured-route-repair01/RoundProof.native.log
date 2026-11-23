@@ -1,0 +1,58 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCombinedMeasuredRouteRoundProof.lean:11:70: error: unsolved goals
+s : NumberedWindowScalarAlgorithm.Settings
+V TV M M0 : ComputabilityKnowledge.GorbowPRProgram.Program 1
+B : ComputabilityKnowledge.GorbowPRProgram.Program 2
+T : ComputabilityKnowledge.GorbowPRProgram.Program 1
+base : ComputabilityKnowledge.GorbowPRProgram.Program 2
+body : OrdinalComparison.TerminationOrdering.PositiveArithmeticOperators.Positive (Fin 1)
+α : Type
+Γ : List (OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus.Formula α)
+ctx dom cod f arg μ m fuel vertices out k :
+  OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphComposition.OTerm α
+K : InstalledRoute := install s V TV M M0 B T base
+⊢ Nonempty
+      (OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus.Derivation body Γ
+        (NumberedWindowInternalSparsePathEnvelopeTargets.unary TV
+            (OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof.suc
+              OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof.z)
+            dom ⊓
+          NumberedWindowInternalSparsePathEnvelopeTargets.unary TV
+            (OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof.suc
+              OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof.z)
+            cod)) →
+    Nonempty
+        (OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus.Derivation body Γ
+          (NumberedWindowInternalSparsePathEnvelopeTargets.unary
+              (NumberedWindowInternalSettingsGrammarGuardDefinitions.refitGuard s T)
+              (OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof.suc
+                OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof.z)
+              dom ⊓
+            NumberedWindowInternalSparsePathEnvelopeTargets.unary
+              (NumberedWindowInternalSettingsGrammarGuardDefinitions.refitGuard s T)
+              (OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof.suc
+                OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof.z)
+              cod)) →
+      Nonempty
+          (OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus.Derivation body Γ
+            (NumberedWindowInternalSparsePassWindowTargets.windowAt K.window ctx dom arg)) →
+        Nonempty
+            (OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus.Derivation body Γ
+              (NumberedWindowInternalSparsePathEnvelopeTargets.unary K.measure μ f)) →
+          Nonempty
+              (OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus.Derivation body Γ
+                (K.LeastAt ctx cod (NumberedWindowInternalSparseRawFunctionFrameTargets.auxiliaryTerm dom cod f arg)
+                  m)) →
+            Nonempty
+                (OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus.Derivation body Γ
+                  (K.RoundAt out fuel vertices ctx (NumberedWindowInternalSparsePathEnvelopeTargets.rawCons dom cod)
+                    f)) →
+              Nonempty
+                  (OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus.Derivation body Γ
+                    (NumberedWindowInternalSparseScratchMembershipTargets.memberGraph out k)) →
+                Nonempty
+                  (OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus.Derivation body Γ
+                    (NumberedWindowInternalSparsePathEnvelopeTargets.unary K.measure μ k ⊓
+                      K.LeastAt ctx cod
+                        (NumberedWindowInternalSparseRawFunctionFrameTargets.auxiliaryTerm dom cod k arg) m))
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCombinedMeasuredRouteRoundProof.lean:15:45: error: unexpected token 'syntax'; expected ':'
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCombinedMeasuredRouteRoundProof.lean:15:97: error: unexpected token 'end'; expected ':'
