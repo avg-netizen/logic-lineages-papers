@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.PolicyIndexedMainComparisonTargets
+import LogicLineages.PermittedControl.PolicyIndexedGroundDecisionFromOriginalQuery
+import LogicLineages.StandardControlCurrent.PolicyIndexedSourceConcreteProof
+import LogicLineages.StandardControlCurrent.PolicyIndexedShapeProof
+import LogicLineages.PermittedControl.ControlProof
+import LogicLineages.PermittedControl.NearControlProof
+import LogicLineages.PermittedControl.SelectedFunctionalHardnessProof
+
+public section
+namespace LogicLineages.PermittedControl.PolicyIndexedMainComparison
+open StandardControlCurrent (PolicyIndexedSourceConcrete PolicyIndexedShape)
+
+theorem indexedGroundBothControls : IndexedGroundBothControls :=
+  PolicyIndexedGroundDriver.indexedGroundFromOriginalQuery PolicyIndexedSourceConcrete.compile
+    PolicyIndexedSourceConcrete.compilePartrec PolicyIndexedSourceConcrete.compileExact
+
+theorem indexedMainComparison : IndexedMainComparison :=
+  ⟨fullControl, nearControlModular, PolicyIndexedShape.everyEffectivePolicyHasIndex,
+    indexedGroundBothControls, SelectedFunctionalHardness.Proof.selectedFunctionalHardness⟩
+
+#print axioms indexedGroundBothControls
+#print axioms indexedMainComparison
+end LogicLineages.PermittedControl.PolicyIndexedMainComparison
