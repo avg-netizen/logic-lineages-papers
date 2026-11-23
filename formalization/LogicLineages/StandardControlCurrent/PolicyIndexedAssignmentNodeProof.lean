@@ -90,11 +90,18 @@ private theorem bodyLiteral (backend : Abstraction) (c : Code) (p : Policy)
     · by_cases h5 : n%8=5
       · cases harg : check ctx (n/8).unpair.2 <;>
           cases hf : rs.getD 0 none <;> cases hg : rs.getD 1 none <;>
-          simp [hn,h,h5,harg,hf,hg,appLiteral c p hc]
+          simp [hn,h,h5,harg,hf,hg]
+        rename_i arg f g
+        change Part.map some (Part.map (Option.map (applicationFrom (typeLevel ty) (typeLevel arg) f g))
+          (tailCode c (typeLevel arg) (f.getD 0 0) (g.getD 0 0))) =
+            Part.some (some (PolicyConstructors.applicationCode p (typeLevel ty) (typeLevel arg) f g))
+        rw [appLiteral c p hc] <;> rfl
       · by_cases h6 : n%8=6
         · cases hty : check ((n/8).unpair.1::ctx) (n/8).unpair.2 <;>
             cases hval : rs.getD 0 none <;>
-            simp [hn,h,h5,h6,hty,hval,hb]
+            simp [hn,h,h5,h6,hty,hval]
+          rename_i bodyType value
+          rw [hb (typeLevel (n/8).unpair.1) (typeLevel bodyType) value] <;> rfl
         · simp [hn,h,h5,h6]
 
 theorem exactIndexedAssignmentNode : ExactIndexedAssignmentNode :=

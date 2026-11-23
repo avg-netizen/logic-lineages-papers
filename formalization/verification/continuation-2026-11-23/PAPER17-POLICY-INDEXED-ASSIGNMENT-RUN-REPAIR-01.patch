@@ -1,0 +1,26 @@
+--- a/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedAssignmentRunProof.lean
++++ b/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedAssignmentRunProof.lean
+@@ -23,0 +24,12 @@
++/-- Keep the same generic encoded equality instance used by mapGraph;
++the raw product Node also has a different built-in BEq instance. -/
++private theorem lookupAll {β σ : Type} [Primcodable β] (f : β → σ)
++    {bs bs' : List β} (hsub : bs' ⊆ bs) :
++    mapGraph (bs.map (fun x => (x,f x))) bs' = bs'.map f := by
++  letI : DecidableEq β := Encodable.decidableEqOfEncodable β
++  induction bs' with
++  | nil => rfl
++  | cons b bs' ih =>
++    have both : b ∈ bs ∧ bs' ⊆ bs := by simpa using hsub
++    simpa [mapGraph,List.lookup_graph f both.1] using ih both.2
++
+@@ -35,7 +46,0 @@
+-  have lookupAll {bs bs' : List Node} (hsub : bs' ⊆ bs) :
+-      mapGraph (bs.map (fun x => (x,f x))) bs' = bs'.map f := by
+-    induction bs' with
+-    | nil => rfl
+-    | cons b bs' ih =>
+-      have both : b ∈ bs ∧ bs' ⊆ bs := by simpa using hsub
+-      simpa [mapGraph,List.lookup_graph f both.1] using ih both.2
+@@ -58 +63 @@
+-    rw [lookupAll]
++    rw [lookupAll f]

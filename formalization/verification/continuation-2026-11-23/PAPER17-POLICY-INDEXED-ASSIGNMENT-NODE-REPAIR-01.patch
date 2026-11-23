@@ -1,0 +1,15 @@
+--- a/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedAssignmentNodeProof.lean
++++ b/formalization/LogicLineages/StandardControlCurrent/PolicyIndexedAssignmentNodeProof.lean
+@@ -93 +93,6 @@
+-          simp [hn,h,h5,harg,hf,hg,appLiteral c p hc]
++          simp [hn,h,h5,harg,hf,hg]
++        rename_i arg f g
++        change Part.map some (Part.map (Option.map (applicationFrom (typeLevel ty) (typeLevel arg) f g))
++          (tailCode c (typeLevel arg) (f.getD 0 0) (g.getD 0 0))) =
++            Part.some (some (PolicyConstructors.applicationCode p (typeLevel ty) (typeLevel arg) f g))
++        rw [appLiteral c p hc] <;> rfl
+@@ -97 +102,3 @@
+-            simp [hn,h,h5,h6,hty,hval,hb]
++            simp [hn,h,h5,h6,hty,hval]
++          rename_i bodyType value
++          rw [hb (typeLevel (n/8).unpair.1) (typeLevel bodyType) value] <;> rfl
