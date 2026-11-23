@@ -1,0 +1,38 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountBoundSyntaxProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountBoundSyntaxProof.lean
+@@ -1,0 +2,3 @@
++public import LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsDefinitions
++public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaSupportProof
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionDefinitions
+@@ -24,2 +27,3 @@
+-open FirstOrder Language PositiveArithmeticOperators
+-open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus (Derivation Formula)
++open FirstOrder FirstOrder.Language LogicLineages.OrdinalComparison.TerminationOrdering
++open PositiveArithmeticOperators (Positive)
++open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus (Derivation Formula Term instantiate)
+@@ -44 +48 @@
+-private theorem orSubst {α β : Type} (p q : Formula α) (ts : α → Term β) :
++private theorem boundOrSubst {α β : Type} (p q : Formula α) (ts : α → Term β) :
+@@ -54 +58 @@
+-  simp only [result,bounded,orRename,orderRename,eqnRelabel]
++  simp only [result, boundedRename]
+@@ -60 +64 @@
+-  simp only [impSubst,fields,conjunctionSubst,result,bounded,orSubst,orderSubst,eqnSubst,
++  simp only [impSubst,fields,conjunctionSubst,result,bounded,boundOrSubst,orderSubst,eqnSubst,
+@@ -62 +66 @@
+-    consTermSubst,emptySubst,liftSubst,Term.subst,Sum.elim_inr]
++    consTermSubst,emptySubst,liftSubst,FirstOrder.Language.Term.subst,Sum.elim_inr]
+@@ -70 +74 @@
+-    (matrix raw).subst (Sum.elim Term.var (fun i => emb (![reached,remaining,size] i))) =
++    (matrix raw).subst (Sum.elim FirstOrder.Language.Term.var (fun i => emb (![reached,remaining,size] i))) =
+@@ -72,2 +76,2 @@
+-  have he : (Sum.elim Term.var (fun i => emb (![reached,remaining,size] i))) =
+-      (fun a => emb (Sum.elim Term.var ![reached,remaining,size] a)) := by
++  have he : (Sum.elim FirstOrder.Language.Term.var (fun i => emb (![reached,remaining,size] i))) =
++      (fun a => emb (Sum.elim FirstOrder.Language.Term.var ![reached,remaining,size] a)) := by
+@@ -78 +82 @@
+-  simp only [impSubst,fields,conjunctionSubst,result,bounded,orSubst,orderSubst,eqnSubst,
++  simp only [impSubst,fields,conjunctionSubst,result,bounded,boundOrSubst,orderSubst,eqnSubst,
+@@ -80 +84 @@
+-    consTermSubst,emptySubst,witnessLift,Term.subst,Sum.elim_inr]
++    consTermSubst,emptySubst,witnessLift,FirstOrder.Language.Term.subst,Sum.elim_inr]

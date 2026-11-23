@@ -1,0 +1,16 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareBindingProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareBindingProof.lean
+@@ -1,0 +2,3 @@
++public import LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsDefinitions
++public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaSupportProof
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionDefinitions
+@@ -22 +25,5 @@
+-open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
++open FirstOrder FirstOrder.Language LogicLineages.OrdinalComparison.TerminationOrdering
++open PositiveArithmeticOperators (Positive)
++open ID1Completion.InternalCalculus (Derivation Formula instantiate weaken)
++open ID1Completion.InternalGraphComposition (OTerm)
++open ID1Completion.InternalControlGraph
+@@ -44 +51 @@
+-  rw [CompareSyntaxProof.matrixWitness] at h
++  rw [NumberedWindowInternalThinUncoveredCountCompareSyntaxProof.matrixWitness] at h

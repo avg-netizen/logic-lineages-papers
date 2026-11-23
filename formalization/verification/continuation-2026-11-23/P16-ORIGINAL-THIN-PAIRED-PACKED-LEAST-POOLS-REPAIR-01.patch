@@ -1,0 +1,31 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinPairedPackedLeastAtPoolsProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinPairedPackedLeastAtPoolsProof.lean
+@@ -8,0 +9,3 @@
++import LogicLineages.PersistentMarking.NumberedWindowInternalThinGuardedEdgeCoverProof
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphSupportProof
++
+@@ -39 +42 @@
+-    Derivation B Γ (eqn p.va p.vb) := by
++    Nonempty (Derivation B Γ (eqn p.va p.vb)) := by
+@@ -44 +47 @@
+-  exact Derivation.implicationElimination q (Derivation.conjunctionIntroduction edge
++  exact ⟨Derivation.implicationElimination q (Derivation.conjunctionIntroduction edge
+@@ -47 +50 @@
+-      (Derivation.conjunctionLeft (Derivation.conjunctionRight b))))
++      (Derivation.conjunctionLeft (Derivation.conjunctionRight b))))⟩
+@@ -51 +54 @@
+-    Derivation B Γ (prefixed E v ctx ty pool later) := by
++    Nonempty (Derivation B Γ (prefixed E v ctx ty pool later)) := by
+@@ -54 +57 @@
+-  exact Derivation.conjunctionIntroduction pass' (Derivation.conjunctionRight h)
++  exact ⟨Derivation.conjunctionIntroduction pass' (Derivation.conjunctionRight h)⟩
+@@ -81,6 +84,3 @@
+-  have fixB' : Derivation B Γ (NumberedWindowInternalThinPrefixedRoundsTargets.prefixed (edge4 X W)
+-      p.va p.ctx p.ty p.pb lb) := by
+-    exact movePrefixed (edge4 X W) p.vb p.va p.ctx p.ty p.pb lb (symm (sameCover C base W s p data)) fixB
+-  have fixA' : Derivation B Γ (NumberedWindowInternalThinPrefixedRoundsTargets.prefixed (edge4 X W)
+-      p.vb p.ctx p.ty p.pa la) := by
+-    exact movePrefixed (edge4 X W) p.va p.vb p.ctx p.ty p.pa la (sameCover C base W s p data) fixA
++  obtain ⟨same⟩ := sameCover C base W s p data
++  obtain ⟨fixB'⟩ := movePrefixed (edge4 X W) p.vb p.va p.ctx p.ty p.pb lb (symm same) fixB
++  obtain ⟨fixA'⟩ := movePrefixed (edge4 X W) p.va p.vb p.ctx p.ty p.pa la same fixA

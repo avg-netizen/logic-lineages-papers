@@ -1,0 +1,20 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountOrderProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountOrderProof.lean
+@@ -1,0 +2 @@
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculusDefinitions
+@@ -48 +49 @@
+-  ⟨orRight (refl a)⟩
++  ⟨orRight (InternalTagArithmeticSupportProof.refl a)⟩
+@@ -61 +62,2 @@
+-    orRight (trans (symm (addHyp ha _)) (trans (Derivation.hypothesis List.mem_cons_self) (addHyp hb _)))
++    orRight (InternalTagArithmeticSupportProof.trans (InternalTagArithmeticSupportProof.symm (addHyp ha _))
++      (InternalTagArithmeticSupportProof.trans (Derivation.hypothesis List.mem_cons_self) (addHyp hb _)))
+@@ -69 +71 @@
+-    trans (leftSuccessor z a) (congSuc (leftZero a))
++    InternalTagArithmeticSupportProof.trans (leftSuccessor z a) (congSuc (leftZero a))
+@@ -71 +73 @@
+-    trans (leftSuccessor z b) (congSuc (leftZero b))
++    InternalTagArithmeticSupportProof.trans (leftSuccessor z b) (congSuc (leftZero b))
+@@ -90 +92 @@
+-  have he := orderLeft (suc b) (symm (Derivation.hypothesis (body := body)
++  have he := orderLeft (suc b) (InternalTagArithmeticSupportProof.symm (Derivation.hypothesis (body := body)

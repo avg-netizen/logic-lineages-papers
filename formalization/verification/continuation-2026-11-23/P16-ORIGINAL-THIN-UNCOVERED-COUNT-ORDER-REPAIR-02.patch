@@ -1,0 +1,11 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountOrderProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountOrderProof.lean
+@@ -23 +23,3 @@
+-open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
++open FirstOrder Language PositiveArithmeticOperators
++open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus (Derivation Formula)
++open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraph
+@@ -46 +48,2 @@
+-  simp only [bounded,orRename,orderRename,eqnRelabel]
++  unfold bounded
++  rw [orRename (ltF a b) (eqn a b) j, orderRename, eqnRelabel]

@@ -1,0 +1,35 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareSyntaxProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareSyntaxProof.lean
+@@ -1,0 +2,3 @@
++import LogicLineages.PersistentMarking.NumberedWindowInternalThinUncoveredCountOrderProof
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculusDefinitions
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphSupportProof
+@@ -22 +25,3 @@
+-open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
++open FirstOrder FirstOrder.Language LogicLineages.OrdinalComparison.TerminationOrdering
++open ID1Completion.InternalCalculus (Formula Term instantiate)
++open ID1Completion.InternalControlGraph
+@@ -24 +29 @@
+-open SourceComputabilityFormulaSupportProof InternalControlGraphSupportProof
++open ID1Completion.InternalControlGraphSupportProof (programRename emptyRename)
+@@ -56 +61 @@
+-  simp only [result,newness,bounded,conjunctionRename,implicationRename,negationRename,orRename,orderRename,eqnRelabel,
++  simp only [result,newness,NumberedWindowInternalThinUncoveredCountOrderProof.boundedRename,conjunctionRename,implicationRename,negationRename,orderRename,eqnRelabel,
+@@ -62 +67,2 @@
+-  simp only [bounded,orSubst,orderSubst,eqnSubst]
++  unfold bounded
++  rw [orSubst _ _ (fun x => emb (ts x)), orderSubst, eqnSubst]
+@@ -87 +93 @@
+-  simp only [impSubst,fieldsSubst,resultSubst,liftSubst,Term.subst,Sum.elim_inr]
++  simp only [impSubst,fieldsSubst,resultSubst,liftSubst,FirstOrder.Language.Term.subst,Sum.elim_inr]
+@@ -96 +102 @@
+-    (matrix raw).subst (Sum.elim Term.var (fun i => emb (![left,right,leftCount,rightCount,candidate] i))) =
++    (matrix raw).subst (Sum.elim FirstOrder.Language.Term.var (fun i => emb (![left,right,leftCount,rightCount,candidate] i))) =
+@@ -98,2 +104,2 @@
+-  have he : (Sum.elim Term.var (fun i => emb (![left,right,leftCount,rightCount,candidate] i))) =
+-      (fun a => emb (Sum.elim Term.var ![left,right,leftCount,rightCount,candidate] a)) := by
++  have he : (Sum.elim FirstOrder.Language.Term.var (fun i => emb (![left,right,leftCount,rightCount,candidate] i))) =
++      (fun a => emb (Sum.elim FirstOrder.Language.Term.var ![left,right,leftCount,rightCount,candidate] a)) := by
+@@ -104 +110 @@
+-  simp only [impSubst,fieldsSubst,resultSubst,witnessLift,Term.subst,Sum.elim_inr]
++  simp only [impSubst,fieldsSubst,resultSubst,witnessLift,FirstOrder.Language.Term.subst,Sum.elim_inr]

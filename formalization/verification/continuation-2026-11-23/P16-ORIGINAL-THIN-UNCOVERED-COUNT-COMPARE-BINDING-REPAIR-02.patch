@@ -1,0 +1,13 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareBindingProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareBindingProof.lean
+@@ -31 +31 @@
+-open SourceComputabilityFormulaSupportProof InternalTagArithmeticSyntaxProof
++open ID1Completion.InternalTagArithmeticSyntaxProof (emb)
+@@ -37,0 +38,2 @@
++attribute [local irreducible] programGraph
++
+@@ -90 +92,3 @@
+-  obtain ⟨d⟩ := strongInduction theta hs
++  have derived : Nonempty (Derivation body Delta (SourceComputabilityFormulaSupportProof.allOne theta)) :=
++    strongInduction theta hs
++  obtain ⟨d⟩ := derived

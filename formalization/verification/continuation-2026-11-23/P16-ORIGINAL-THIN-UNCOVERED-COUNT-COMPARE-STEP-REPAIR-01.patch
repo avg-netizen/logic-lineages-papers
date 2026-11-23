@@ -1,0 +1,68 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareStepProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareStepProof.lean
+@@ -1,0 +2,4 @@
++public import LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsDefinitions
++public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaSupportProof
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculusDefinitions
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionDefinitions
+@@ -10 +14,5 @@
+-open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
++open FirstOrder FirstOrder.Language LogicLineages.OrdinalComparison.TerminationOrdering
++open PositiveArithmeticOperators (Positive)
++open ID1Completion.InternalCalculus (Formula Derivation instantiate weaken)
++open ID1Completion.InternalControlGraph
++open ID1Completion.InternalControlGraph (equal)
+@@ -16 +24 @@
+-open SourceComputabilityFormulaSupportProof
++open LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaSupportProof
+@@ -28,0 +37,2 @@
++attribute [local irreducible] programGraph
++
+@@ -31 +41 @@
+-theorem resultTransport (raw left right a b x y candidate : OTerm alpha)
++theorem resultTransport (raw left right a b x y candidate : OrdinaryArithmetic.Term alpha)
+@@ -37 +47 @@
+-  obtain ⟨hw⟩ := OrderProof.transport b a y x hb ha ⟨Derivation.conjunctionLeft h⟩
++  obtain ⟨hw⟩ := NumberedWindowInternalThinUncoveredCountOrderProof.transport b a y x hb ha ⟨Derivation.conjunctionLeft h⟩
+@@ -47 +57 @@
+-theorem leftHitTail (raw head tail left right candidate : OTerm alpha)
++theorem leftHitTail (raw head tail left right candidate : OrdinaryArithmetic.Term alpha)
+@@ -66 +76 @@
+-theorem rightMissTail (raw head tail left right candidate : OTerm alpha)
++theorem rightMissTail (raw head tail left right candidate : OrdinaryArithmetic.Term alpha)
+@@ -85 +95 @@
+-theorem hitResult (raw head tail left right a b candidate : OTerm alpha)
++theorem hitResult (raw head tail left right a b candidate : OrdinaryArithmetic.Term alpha)
+@@ -98 +108 @@
+-theorem missResult (raw head tail left right a b candidate : OTerm alpha)
++theorem missResult (raw head tail left right a b candidate : OrdinaryArithmetic.Term alpha)
+@@ -104 +114 @@
+-  obtain ⟨hw⟩ := OrderProof.successor b a ⟨Derivation.conjunctionLeft h⟩
++  obtain ⟨hw⟩ := NumberedWindowInternalThinUncoveredCountOrderProof.successor b a ⟨Derivation.conjunctionLeft h⟩
+@@ -108 +118 @@
+-  obtain ⟨hs⟩ := OrderProof.strictSucc b a
++  obtain ⟨hs⟩ := NumberedWindowInternalThinUncoveredCountOrderProof.strictSucc b a
+@@ -112 +122 @@
+-theorem newResult (raw left right a b candidate : OTerm alpha)
++theorem newResult (raw left right a b candidate : OrdinaryArithmetic.Term alpha)
+@@ -115 +125 @@
+-  obtain ⟨hs⟩ := OrderProof.strictNext b a h
++  obtain ⟨hs⟩ := NumberedWindowInternalThinUncoveredCountOrderProof.strictNext b a h
+@@ -119 +129 @@
+-theorem consKnown (raw head tail left right leftCount rightCount candidate a b : OTerm alpha)
++theorem consKnown (raw head tail left right leftCount rightCount candidate a b : OrdinaryArithmetic.Term alpha)
+@@ -135 +145 @@
+-    obtain ⟨el⟩ := StepProof.consHitEquation raw head tail left leftCount a
++    obtain ⟨el⟩ := NumberedWindowInternalThinUncoveredCountStepProof.consHitEquation raw head tail left leftCount a
+@@ -137 +147 @@
+-    obtain ⟨er⟩ := StepProof.consHitEquation raw head tail right rightCount b
++    obtain ⟨er⟩ := NumberedWindowInternalThinUncoveredCountStepProof.consHitEquation raw head tail right rightCount b
+@@ -142 +152 @@
+-    have hlEq := StepProof.consMissEquation raw head tail left leftCount a
++    have hlEq := NumberedWindowInternalThinUncoveredCountStepProof.consMissEquation raw head tail left leftCount a
+@@ -146 +156 @@
+-      obtain ⟨er⟩ := StepProof.consHitEquation raw head tail right rightCount b
++      obtain ⟨er⟩ := NumberedWindowInternalThinUncoveredCountStepProof.consHitEquation raw head tail right rightCount b
+@@ -155 +165 @@
+-      obtain ⟨er⟩ := StepProof.consMissEquation raw head tail right rightCount b
++      obtain ⟨er⟩ := NumberedWindowInternalThinUncoveredCountStepProof.consMissEquation raw head tail right rightCount b

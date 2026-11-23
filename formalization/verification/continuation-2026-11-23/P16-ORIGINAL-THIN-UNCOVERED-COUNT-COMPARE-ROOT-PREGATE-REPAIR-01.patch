@@ -1,0 +1,37 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareProof.lean
+@@ -1,0 +2,4 @@
++public import LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsDefinitions
++public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaSupportProof
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculusDefinitions
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionDefinitions
+@@ -10 +14,5 @@
+-open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
++open FirstOrder FirstOrder.Language LogicLineages.OrdinalComparison.TerminationOrdering
++open PositiveArithmeticOperators (Positive)
++open ID1Completion.InternalCalculus (Formula Derivation instantiate weaken)
++open ID1Completion.InternalControlGraph
++open ID1Completion.InternalControlGraph (equal)
+@@ -16 +24 @@
+-open SourceComputabilityFormulaSupportProof
++open LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaSupportProof
+@@ -25,0 +34,2 @@
++attribute [local irreducible] programGraph
++
+@@ -27 +37 @@
+-theorem inductionStep (raw : OTerm alpha)
++theorem inductionStep (raw : OrdinaryArithmetic.Term alpha)
+@@ -31,5 +41,5 @@
+-  let left : OTerm (alpha ⊕ Fin 5) := .var (.inr 0)
+-  let right : OTerm (alpha ⊕ Fin 5) := .var (.inr 1)
+-  let leftCount : OTerm (alpha ⊕ Fin 5) := .var (.inr 2)
+-  let rightCount : OTerm (alpha ⊕ Fin 5) := .var (.inr 3)
+-  let candidate : OTerm (alpha ⊕ Fin 5) := .var (.inr 4)
++  let left : OrdinaryArithmetic.Term (alpha ⊕ Fin 5) := .var (.inr 0)
++  let right : OrdinaryArithmetic.Term (alpha ⊕ Fin 5) := .var (.inr 1)
++  let leftCount : OrdinaryArithmetic.Term (alpha ⊕ Fin 5) := .var (.inr 2)
++  let rightCount : OrdinaryArithmetic.Term (alpha ⊕ Fin 5) := .var (.inr 3)
++  let candidate : OrdinaryArithmetic.Term (alpha ⊕ Fin 5) := .var (.inr 4)
+@@ -47 +57 @@
+-theorem comparison (raw left right leftCount rightCount candidate : OTerm alpha)
++theorem comparison (raw left right leftCount rightCount candidate : OrdinaryArithmetic.Term alpha)

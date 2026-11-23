@@ -1,0 +1,35 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountBoundProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountBoundProof.lean
+@@ -1,0 +2,4 @@
++public import LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsDefinitions
++public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaSupportProof
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculusDefinitions
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionDefinitions
+@@ -23 +27,2 @@
+-open FirstOrder Language PositiveArithmeticOperators
++open FirstOrder FirstOrder.Language LogicLineages.OrdinalComparison.TerminationOrdering
++open PositiveArithmeticOperators (Positive)
+@@ -25,0 +31 @@
++open ID1Completion.InternalControlGraph (equal)
+@@ -31 +37 @@
+-open SourceComputabilityFormulaSupportProof
++open LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaSupportProof
+@@ -42,0 +49,2 @@
++attribute [local irreducible] programGraph
++
+@@ -44 +52 @@
+-theorem inductionStep (raw : OTerm alpha)
++theorem inductionStep (raw : OrdinaryArithmetic.Term alpha)
+@@ -48,3 +56,3 @@
+-  let reached : OTerm (alpha ⊕ Fin 3) := .var (.inr 0)
+-  let remaining : OTerm (alpha ⊕ Fin 3) := .var (.inr 1)
+-  let size : OTerm (alpha ⊕ Fin 3) := .var (.inr 2)
++  let reached : OrdinaryArithmetic.Term (alpha ⊕ Fin 3) := .var (.inr 0)
++  let remaining : OrdinaryArithmetic.Term (alpha ⊕ Fin 3) := .var (.inr 1)
++  let size : OrdinaryArithmetic.Term (alpha ⊕ Fin 3) := .var (.inr 2)
+@@ -64 +72 @@
+-    (Delta : List (Formula alpha)) (pool reached remaining size : OTerm alpha)
++    (Delta : List (Formula alpha)) (pool reached remaining size : OrdinaryArithmetic.Term alpha)
+@@ -76 +84 @@
+-    (Delta : List (Formula alpha)) (pool reached remaining size : OTerm alpha)
++    (Delta : List (Formula alpha)) (pool reached remaining size : OrdinaryArithmetic.Term alpha)

@@ -1,0 +1,12 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountOrderProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountOrderProof.lean
+@@ -2,0 +3,2 @@
++public import LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsDefinitions
++import LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaSupportProof
+@@ -23 +25,2 @@
+-open FirstOrder Language PositiveArithmeticOperators
++open FirstOrder Language LogicLineages.OrdinalComparison.TerminationOrdering
++open LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperators (Positive)
+@@ -31 +34 @@
+-open SourceComputabilityFormulaSupportProof
++open LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaSupportProof

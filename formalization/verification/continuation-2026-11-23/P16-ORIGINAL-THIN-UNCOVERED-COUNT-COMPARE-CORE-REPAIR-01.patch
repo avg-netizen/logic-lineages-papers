@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareCoreProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareCoreProof.lean
+@@ -1,0 +2 @@
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextInsertionLengthProof
+@@ -110 +111,2 @@
+-  apply listCases raw
++  refine ID1Completion.SourceComputabilityCompletion.OriginalContextInsertionLengthProof.listCases raw
++    (result raw left right leftCount rightCount candidate) ?_ ?_

@@ -1,0 +1,46 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountBoundCoreProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountBoundCoreProof.lean
+@@ -1,0 +2,4 @@
++public import LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsDefinitions
++public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaSupportProof
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculusDefinitions
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionDefinitions
+@@ -23 +27,2 @@
+-open FirstOrder Language PositiveArithmeticOperators
++open FirstOrder FirstOrder.Language LogicLineages.OrdinalComparison.TerminationOrdering
++open PositiveArithmeticOperators (Positive)
+@@ -25,0 +31 @@
++open ID1Completion.InternalControlGraph (equal)
+@@ -31 +37 @@
+-open SourceComputabilityFormulaSupportProof
++open LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaSupportProof
+@@ -49 +55 @@
+-theorem consKnown (raw head tail reached remaining size tailCount tailSize : OTerm alpha)
++theorem consKnown (raw head tail reached remaining size tailCount tailSize : OrdinaryArithmetic.Term alpha)
+@@ -63 +69 @@
+-  · obtain ⟨he⟩ := StepProof.consHitEquation raw head tail reached remaining tailCount
++  · obtain ⟨he⟩ := NumberedWindowInternalThinUncoveredCountStepProof.consHitEquation raw head tail reached remaining tailCount
+@@ -65,3 +71,3 @@
+-    exact OrderProof.transport tailCount (suc tailSize) remaining size ⟨symm he⟩
+-      ⟨symm (addHyp heSize A)⟩ (OrderProof.rightSuccessorBound tailCount tailSize (withHyp hi A))
+-  · obtain ⟨he⟩ := StepProof.consMissEquation raw head tail reached remaining tailCount
++    exact NumberedWindowInternalThinUncoveredCountOrderProof.transport tailCount (suc tailSize) remaining size ⟨symm he⟩
++      ⟨symm (addHyp heSize A)⟩ (NumberedWindowInternalThinUncoveredCountOrderProof.rightSuccessorBound tailCount tailSize (withHyp hi A))
++  · obtain ⟨he⟩ := NumberedWindowInternalThinUncoveredCountStepProof.consMissEquation raw head tail reached remaining tailCount
+@@ -69,2 +75,2 @@
+-    exact OrderProof.transport (suc tailCount) (suc tailSize) remaining size ⟨symm he⟩
+-      ⟨symm (addHyp heSize A.not)⟩ (OrderProof.successor tailCount tailSize (withHyp hi A.not))
++    exact NumberedWindowInternalThinUncoveredCountOrderProof.transport (suc tailCount) (suc tailSize) remaining size ⟨symm he⟩
++      ⟨symm (addHyp heSize A.not)⟩ (NumberedWindowInternalThinUncoveredCountOrderProof.successor tailCount tailSize (withHyp hi A.not))
+@@ -72 +78 @@
+-theorem consWithCount (raw head tail reached remaining size tailCount : OTerm alpha)
++theorem consWithCount (raw head tail reached remaining size tailCount : OrdinaryArithmetic.Term alpha)
+@@ -96 +102 @@
+-theorem consCore (raw head tail reached remaining size : OTerm alpha)
++theorem consCore (raw head tail reached remaining size : OrdinaryArithmetic.Term alpha)
+@@ -117 +123 @@
+-theorem zeroCore (raw reached remaining size : OTerm alpha)
++theorem zeroCore (raw reached remaining size : OrdinaryArithmetic.Term alpha)
+@@ -128 +134 @@
+-theorem core (raw reached remaining size : OTerm alpha)
++theorem core (raw reached remaining size : OrdinaryArithmetic.Term alpha)

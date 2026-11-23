@@ -1,0 +1,5 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinPackedSeedReportProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinPackedSeedReportProof.lean
+@@ -52 +52 @@
+-  have r := renameInto cover k Θ keep'
++  have r := renameInto (phi := NumberedWindowInternalSparsePathEnvelopeTargets.unary (scratchVertices C s) verts (seed.relabel j)) cover k Θ keep'

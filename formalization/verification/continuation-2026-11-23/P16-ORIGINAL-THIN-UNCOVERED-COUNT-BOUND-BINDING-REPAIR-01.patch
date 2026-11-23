@@ -1,0 +1,26 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountBoundBindingProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountBoundBindingProof.lean
+@@ -1,0 +2,2 @@
++public import LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsDefinitions
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionDefinitions
+@@ -24,2 +26,4 @@
+-open FirstOrder Language PositiveArithmeticOperators
+-open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus (Derivation Formula)
++open FirstOrder FirstOrder.Language LogicLineages.OrdinalComparison.TerminationOrdering
++open PositiveArithmeticOperators (Positive)
++open ID1Completion.InternalGraphComposition (OTerm)
++open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus (Derivation Formula instantiate weaken)
+@@ -28 +32 @@
+-open SourceComputabilityFormulaSupportProof InternalTagArithmeticSyntaxProof
++open ID1Completion.InternalTagArithmeticSyntaxProof (emb)
+@@ -35,0 +40,2 @@
++attribute [local irreducible] programGraph
++
+@@ -49 +55 @@
+-  rw [BoundSyntaxProof.matrixWitness] at h
++  rw [NumberedWindowInternalThinUncoveredCountBoundSyntaxProof.matrixWitness] at h
+@@ -88 +94,3 @@
+-  obtain ⟨d⟩ := strongInduction theta hs
++  have derived : Nonempty (Derivation body Delta (SourceComputabilityFormulaSupportProof.allOne theta)) :=
++    strongInduction theta hs
++  obtain ⟨d⟩ := derived

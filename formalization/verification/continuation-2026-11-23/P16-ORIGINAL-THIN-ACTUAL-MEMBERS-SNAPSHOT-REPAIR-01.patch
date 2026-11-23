@@ -1,0 +1,5 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinActualMembersSnapshotProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinActualMembersSnapshotProof.lean
+@@ -90 +90 @@
+-  have len' := renameInto len k Ω retain
++  have len' := renameInto (phi := unary poolLength size (vertices.relabel j)) len k Ω retain

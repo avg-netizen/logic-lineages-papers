@@ -1,0 +1,29 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareCoreProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareCoreProof.lean
+@@ -1,0 +2,4 @@
++public import LogicLineages.OrdinalComparison.TerminationOrdering.PositiveArithmeticOperatorsDefinitions
++public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaSupportProof
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculusDefinitions
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionDefinitions
+@@ -10 +14,5 @@
+-open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
++open FirstOrder FirstOrder.Language LogicLineages.OrdinalComparison.TerminationOrdering
++open PositiveArithmeticOperators (Positive)
++open ID1Completion.InternalCalculus (Formula Derivation instantiate weaken)
++open ID1Completion.InternalControlGraph
++open ID1Completion.InternalControlGraph (equal)
+@@ -16 +24 @@
+-open SourceComputabilityFormulaSupportProof
++open LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaSupportProof
+@@ -29 +37 @@
+-theorem consWithLeft (raw head tail left right leftCount rightCount candidate a : OTerm alpha)
++theorem consWithLeft (raw head tail left right leftCount rightCount candidate a : OrdinaryArithmetic.Term alpha)
+@@ -55 +63 @@
+-theorem consCore (raw head tail left right leftCount rightCount candidate : OTerm alpha)
++theorem consCore (raw head tail left right leftCount rightCount candidate : OrdinaryArithmetic.Term alpha)
+@@ -78 +86 @@
+-theorem zeroCore (raw left right leftCount rightCount candidate : OTerm alpha)
++theorem zeroCore (raw left right leftCount rightCount candidate : OrdinaryArithmetic.Term alpha)
+@@ -96 +104 @@
+-theorem core (raw left right leftCount rightCount candidate : OTerm alpha)
++theorem core (raw left right leftCount rightCount candidate : OrdinaryArithmetic.Term alpha)

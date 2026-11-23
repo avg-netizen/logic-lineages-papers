@@ -1,0 +1,24 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareStepProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareStepProof.lean
+@@ -63 +63 @@
+-  let A := equal head candidate
++  let A := eqn head candidate
+@@ -65 +65 @@
+-    have heq : Nonempty (Derivation body (A :: Delta) (equal head candidate)) :=
++    have heq : Nonempty (Derivation body (A :: Delta) (eqn head candidate)) :=
+@@ -67 +66,0 @@
+-    rw [equalEqn] at heq
+@@ -72 +71 @@
+-  obtain ⟨hm⟩ := NumberedWindowInternalThinUncoveredCountMemberProof.missRecover raw head tail candidate hc (by simpa only [equalEqn] using he)
++  obtain ⟨hm⟩ := NumberedWindowInternalThinUncoveredCountMemberProof.missRecover raw head tail candidate hc he
+@@ -82 +81 @@
+-  let A := equal head candidate
++  let A := eqn head candidate
+@@ -84 +83 @@
+-    have heq : Nonempty (Derivation body (A :: Delta) (equal head candidate)) :=
++    have heq : Nonempty (Derivation body (A :: Delta) (eqn head candidate)) :=
+@@ -86 +84,0 @@
+-    rw [equalEqn] at heq
+@@ -91 +89 @@
+-  obtain ⟨hm⟩ := NumberedWindowInternalThinUncoveredCountMemberProof.missRecover raw head tail candidate hc (by simpa only [equalEqn] using he)
++  obtain ⟨hm⟩ := NumberedWindowInternalThinUncoveredCountMemberProof.missRecover raw head tail candidate hc he

@@ -1,0 +1,40 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountBoundDefinitions.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountBoundDefinitions.lean
+@@ -1,0 +2 @@
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalClosedProgramsDefinitions
+@@ -22,18 +23,8 @@
+-open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion
+-open FirstOrder Language PositiveArithmeticOperators
+-open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalCalculus (Derivation Formula)
+-open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraph
+-open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+-open InternalApplicationCertificateConstructorsSupportProof InternalControlGraphSupportProof
+-open InternalAcceptanceSupportProof InternalGraphCompositionFunctionalityProof
+-open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
+-open InternalTagArithmeticSupportProof
+-open SourceComputabilityFormulaSupportProof
+-open InternalApplicationValidityStackAppendInductionCoreProof (withHyp formulaCases)
+-open InternalApplicationStepPeelSupportProof (andIntro)
+-open InternalBetaTotalityProof InternalQuotientComparisonProof
+-open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+-open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion
+-open NumberedWindowInternalThinUncoveredCount
+-open NumberedWindowInternalThinUncoveredCountOrderProof
+-open NumberedWindowInternalSparseScratchMembership (scratchMember)
++open FirstOrder Language LogicLineages.OrdinalComparison.TerminationOrdering
++open ID1Completion.InternalCalculus (Formula)
++open ID1Completion.InternalGraphComposition (OTerm)
++open ID1Completion.InternalApplicationCertificateConstructors (graph2)
++open ID1Completion.InternalClosedPrograms (allBlock)
++open ID1Completion.InternalStrongInduction (below)
++open ID1Completion.SourceComputabilityCompletion.OriginalContextInsertion (lengthGraph)
++open NumberedWindowInternalThinUncoveredCount (count bounded)
+@@ -44 +35 @@
+-  graph2 count remaining raw reached ⊓ OriginalContextInsertion.lengthGraph size raw
++  graph2 count remaining raw reached ⊓ lengthGraph size raw
+@@ -48 +39 @@
+-def AtRaw {alpha : Type} (raw : OTerm alpha) : Formula alpha := InternalClosedPrograms.allBlock (matrix raw)
++def AtRaw {alpha : Type} (raw : OTerm alpha) : Formula alpha := allBlock (matrix raw)
+@@ -50 +41 @@
+-def BelowRaw {alpha : Type} (raw : OTerm alpha) : Formula alpha := InternalStrongInduction.below rawPredicate raw
++def BelowRaw {alpha : Type} (raw : OTerm alpha) : Formula alpha := below rawPredicate raw
