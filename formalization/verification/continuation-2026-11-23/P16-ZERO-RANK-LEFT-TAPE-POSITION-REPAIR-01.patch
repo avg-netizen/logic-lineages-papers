@@ -1,0 +1,6 @@
+--- LogicLineages/PersistentMarking/NumberedWindowInternalZeroRankLeftTapePositionProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowInternalZeroRankLeftTapePositionProof.lean
+@@ -153,2 +153 @@
+-          rw [← sucRelabel,← fuelRename,Term.relabel_relabel]
+-          rfl
++          simp only [fuelRename, fuelAfter, sucRelabel, Term.relabel_relabel]

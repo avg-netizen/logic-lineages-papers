@@ -1,0 +1,34 @@
+{
+  "status": "frozen parser-only repair01; native retry pending",
+  "gate": "LogicLineages.PersistentMarking.NumberedWindowInternalMeasuredUnrestrictedRefitTypeSyntaxProof",
+  "failed_native": {
+    "receipt": "1795463688621028702-146",
+    "receipt_pin": {
+      "path": "formalization/build-reports/1795463688621028702-146.json",
+      "sha256": "2b7cb537fab2fe151c6f811e23a168e48092c0473ba33daa69368778a9cbda94"
+    },
+    "module_log": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-measured-refit-type-syntax-repair01/1795463688621028702-146.module.log",
+      "sha256": "7e4144b2325b378630132f9abd55a05b7ba3026c82a6fd86f3d3e9a6a85f1dbc"
+    },
+    "failed_source": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-measured-refit-type-syntax-repair01/NumberedWindowInternalMeasuredUnrestrictedRefitTypeSyntaxProof.lean.failed-source",
+      "sha256": "87d1614546cf22800e0a30d68525643e45a54f8111b7ffa0347b523cf0bc5b99"
+    },
+    "diagnosis": "Lean keyword syntax used twice as a local identifier, with parser cascades. No independent source term errors reported."
+  },
+  "repair": "Alpha-rename the local value proof syntax to syntaxValue and unnamed explicit final coverage argument syntax to syntaxFit. No changes to formulas, program definitions, imports or limits.",
+  "changed_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredUnrestrictedRefitTypeSyntaxProof.lean",
+    "sha256": "1837d8a1bd53f2f37060b682dd7e81e52098789c73e4bd1827a7155499970020"
+  },
+  "reverse_patch": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/original-measured-refit-type-syntax-repair01/repair01.patch",
+    "sha256": "1f162ed17b2077f1773d28a101cd32fd5beb5a18cf766ce389fd06db26ef2335"
+  },
+  "reverse_bytes_verified": true,
+  "original_author_manifest": {
+    "path": "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-MEASURED-UNRESTRICTED-REFIT-TYPE-SYNTAX-AUTHOR-MANIFEST.json",
+    "sha256": "bbbc4cda279ae12842f460b51d1294b9019074cb0b14cbbfe40e35ab6d17224b"
+  }
+}

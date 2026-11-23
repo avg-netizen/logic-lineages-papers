@@ -1,0 +1,14 @@
+--- failed/NumberedWindowInternalMeasuredUnrestrictedRefitTypeSyntaxProof.lean
++++ repaired/NumberedWindowInternalMeasuredUnrestrictedRefitTypeSyntaxProof.lean
+@@ -43 +43 @@
+-  have syntax : evaluate TV (ty ::ᵥ nil) = (typeBit ty).toNat := types ty
++  have syntaxValue : evaluate TV (ty ::ᵥ nil) = (typeBit ty).toNat := types ty
+@@ -45 +45 @@
+-  rw [actualConjunctionEvaluation,refit,syntax]
++  rw [actualConjunctionEvaluation,refit,syntaxValue]
+@@ -67 +67 @@
+-    (syntax : ActualRawSyntax Va) (cover : ActualSelectedCoverOutput C) (covered : WindowSeedsCovered s) :
++    (syntaxFit : ActualRawSyntax Va) (cover : ActualSelectedCoverOutput C) (covered : WindowSeedsCovered s) :
+@@ -74 +74 @@
+-    (exact_SyntaxWindowCalibration s baseW Va w syntax)
++    (exact_SyntaxWindowCalibration s baseW Va w syntaxFit)
