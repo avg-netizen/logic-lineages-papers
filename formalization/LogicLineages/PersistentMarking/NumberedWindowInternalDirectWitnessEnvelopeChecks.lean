@@ -1,0 +1,19 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectWitnessEnvelopeNumericProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectWitnessEnvelopeOpenProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectWitnessEnvelopeChecks
+open NumberedWindowInternalDirectWitnessEnvelopeTargets
+
+theorem exact_OriginalDirectWitnessRawTriple : ExactRawTriple :=
+  NumberedWindowInternalDirectWitnessEnvelope.exactRawTriple
+theorem exact_OriginalDirectWitnessRead : ExactSelectedWitness :=
+  NumberedWindowInternalDirectWitnessEnvelope.exactSelectedWitness
+theorem exact_OpenOriginalDirectWitnessTriple : ExactOpenTriple :=
+  NumberedWindowInternalDirectWitnessEnvelope.exactOpenTriple
+
+#print axioms exact_OriginalDirectWitnessRawTriple
+#print axioms exact_OriginalDirectWitnessRead
+#print axioms exact_OpenOriginalDirectWitnessTriple
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectWitnessEnvelopeChecks

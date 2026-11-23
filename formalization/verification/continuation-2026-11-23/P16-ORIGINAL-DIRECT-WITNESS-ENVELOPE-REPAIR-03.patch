@@ -1,0 +1,6 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectWitnessEnvelopeNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectWitnessEnvelopeNumericProof.lean
+@@ -125 +125,2 @@
+-    simp only [selectedList,run,exact_ActualDecodedOutput]
++    have selectedExact (v : Nat) : selectedList v = unpack v := exact_ActualDecodedOutput v
++    simp only [selectedExact]

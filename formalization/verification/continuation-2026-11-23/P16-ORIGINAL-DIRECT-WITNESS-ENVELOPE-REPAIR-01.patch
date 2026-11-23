@@ -1,0 +1,39 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectWitnessEnvelopeNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectWitnessEnvelopeNumericProof.lean
+@@ -6,2 +5,0 @@
+-import LogicLineages.PersistentMarking.NumberedWindowArithmeticFieldAlgorithmProof
+-import LogicLineages.PersistentMarking.NumberedWindowArithmeticNodeProof
+@@ -14,2 +12,2 @@
+-open NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof (cellAt headTailOfCell)
+-open NumberedWindowInternalSparseFieldCell (cellHead cellTail)
++open NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof (cellAt headTailOfCell codeOfCell noNode nodeOfCell packOfUnpack)
++open NumberedWindowInternalSparseFieldCell (cellHead cellTail chosenCell)
+@@ -18,2 +15,0 @@
+-open NumberedWindowArithmeticFieldAlgorithmProof (nodes)
+-open NumberedWindowArithmeticNodeProof (nodeRead)
+@@ -35,0 +32,17 @@
++private theorem rawNodeCode {n tag : Nat} {fs : List Nat}
++    (found : unpackNode n = some (tag,fs)) :
++    n = packNode tag fs := by
++  cases cell : chosenCell n with
++  | none => rw [noNode cell] at found; cases found
++  | some p =>
++    obtain ⟨k,t⟩ := p
++    rw [nodeOfCell cell] at found
++    cases h : unpack t with
++    | none => rw [h] at found; cases found
++    | some actual =>
++      rw [h] at found
++      have e : (k,actual) = (tag,fs) := Option.some.inj found
++      have hk : k = tag := congrArg Prod.fst e
++      have hf : actual = fs := congrArg Prod.snd e
++      rw [codeOfCell cell,hk,packOfUnpack t h,hf] <;> rfl
++
+@@ -39,6 +52 @@
+-  have hn : n = packNode tag [a,b,c] := by
+-    have h' : NumberedWindowArithmeticFields.decodeNode n = some (tag,[a,b,c]) := by
+-      rwa [nodes.2]
+-    rw [← nodes.1]
+-    exact (nodeRead h').symm
+-  rw [hn]
++  rw [rawNodeCode h]

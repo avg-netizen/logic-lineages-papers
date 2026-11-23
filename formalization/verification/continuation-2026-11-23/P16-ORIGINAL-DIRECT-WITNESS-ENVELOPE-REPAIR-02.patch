@@ -1,0 +1,23 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectWitnessEnvelopeNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectWitnessEnvelopeNumericProof.lean
+@@ -104 +104 @@
+-  unfold selectedWitness selectedList
++  unfold selectedWitness
+@@ -106 +106 @@
+-  simp only [exact_ActualDecodedOutput,exactEntries]
++  simp only [exactEntries]
+@@ -113 +113,13 @@
+-      rcases tag with _ | _ | _ | _ | _ | _ | tag <;> rfl
++      rcases tag with _ | _ | _ | _ | _ | _ | tag <;> try rfl
++    change (do
++      let kept ← selectedList a
++      let removed ← selectedList b
++      let raw ← selectedList c
++      let added ← entries raw
++      pure (kept,removed,added)) = (do
++        let kept ← unpack a
++        let removed ← unpack b
++        let raw ← unpack c
++        let added ← entries raw
++        pure (kept,removed,added))
++    simp only [selectedList,run,exact_ActualDecodedOutput]
