@@ -1,0 +1,3 @@
+# Paper 16: exact native iterator erasure code
+
+Printed iterator source: ordinals.tex:452–467. The original eraseBound carries its live erased index under each binder. At actual level n and arbitrary slot, the arithmetic code starts at original bound tag 1 for type code of o→o and slot+n. It then uses original lambda tag 2 for types A₀,…,Aₙ₋₁ in their actual inside-to-outside order. The core bridge uses the exact same ordinary translation and arithmetic encoder, with no validity assertion on an arbitrary numeral. The independent module-only gate proves primitive recursion for this same Init-only shared kernel. No full iterator, extractor, ordinal or cofinality claim.
