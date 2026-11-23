@@ -1,0 +1,12 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicyIndexedAssignmentTargets
+import LogicLineages.StandardControlCurrent.PolicyIndexedAssignmentConstructorPrograms
+
+namespace LogicLineages.StandardControlCurrent.PolicyIndexedAssignment
+
+#print axioms numeralPartrec
+#print axioms tailPartrec
+#print axioms recursorPartrec
+#print axioms applicationPartrec
+
+end LogicLineages.StandardControlCurrent.PolicyIndexedAssignment

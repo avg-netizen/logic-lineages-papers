@@ -1,0 +1,10 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicyIndexedAssignmentTargets
+import LogicLineages.StandardControlCurrent.PolicyIndexedAssignmentEffectivityProof
+
+namespace LogicLineages.StandardControlCurrent.PolicyIndexedAssignment
+
+#print axioms indexedAssignmentAssemblePartrec
+#print axioms indexedAssignmentRunPartrec
+
+end LogicLineages.StandardControlCurrent.PolicyIndexedAssignment

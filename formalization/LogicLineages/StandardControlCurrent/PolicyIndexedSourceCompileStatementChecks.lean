@@ -1,0 +1,17 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicyIndexedSourceCompileTargets
+import LogicLineages.StandardControlCurrent.PolicyIndexedSourceCompileProof
+
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.StatementChecks
+open PolicyIndexedSourceCompile
+
+theorem fixed_exactPolicyIndexedSourceCompile : ExactPolicyIndexedSourceCompile :=
+  exactPolicyIndexedSourceCompile
+theorem fixed_policyIndexedSourceCompileEffectivity : PolicyIndexedSourceCompileEffectivity :=
+  policyIndexedSourceCompileEffectivity
+
+#print axioms fixed_exactPolicyIndexedSourceCompile
+#print axioms fixed_policyIndexedSourceCompileEffectivity
+
+end LogicLineages.StandardControlCurrent.StatementChecks

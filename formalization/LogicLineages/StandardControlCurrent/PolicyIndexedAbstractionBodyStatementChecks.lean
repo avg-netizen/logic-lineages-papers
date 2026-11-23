@@ -1,0 +1,16 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicyIndexedAbstractionBodyProof
+
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.PolicyIndexedAbstractionBody.StatementChecks
+
+theorem suppliedIndexResultExact : ExactResult := resultExact
+
+theorem suppliedIndexAbstractionExact : ExactAbstraction := abstractionExact
+
+theorem suppliedIndexAbstractionPartialRecursive : IndexedAbstractionPartrec := abstractionPartrec
+
+#print axioms suppliedIndexResultExact
+#print axioms suppliedIndexAbstractionExact
+#print axioms suppliedIndexAbstractionPartialRecursive
+end LogicLineages.StandardControlCurrent.PolicyIndexedAbstractionBody.StatementChecks

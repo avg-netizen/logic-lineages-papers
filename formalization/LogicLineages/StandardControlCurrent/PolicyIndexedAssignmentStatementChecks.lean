@@ -1,0 +1,13 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicyIndexedAssignmentTargets
+import LogicLineages.StandardControlCurrent.PolicyIndexedAssignmentNodeProof
+
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.StatementChecks
+open PolicyIndexedAssignment
+
+theorem fixed_exactIndexedAssignmentNode : ExactIndexedAssignmentNode := exactIndexedAssignmentNode
+
+#print axioms fixed_exactIndexedAssignmentNode
+
+end LogicLineages.StandardControlCurrent.StatementChecks

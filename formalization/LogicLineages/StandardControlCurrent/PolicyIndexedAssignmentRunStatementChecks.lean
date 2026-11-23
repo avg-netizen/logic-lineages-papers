@@ -1,0 +1,13 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicyIndexedAssignmentTargets
+import LogicLineages.StandardControlCurrent.PolicyIndexedAssignmentRunProof
+
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.StatementChecks
+open PolicyIndexedAssignment
+
+theorem fixed_exactIndexedAssignmentRun : ExactIndexedAssignmentRun := exactIndexedAssignmentRun
+
+#print axioms fixed_exactIndexedAssignmentRun
+
+end LogicLineages.StandardControlCurrent.StatementChecks

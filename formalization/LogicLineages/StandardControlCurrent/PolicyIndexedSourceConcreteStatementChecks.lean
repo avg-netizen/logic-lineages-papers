@@ -1,0 +1,13 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicyIndexedSourceConcreteProof
+
+namespace LogicLineages.StandardControlCurrent.PolicyIndexedSourceConcrete
+
+#print axioms partialBackendPartrec
+#print axioms exactPartialBackend
+#print axioms abstractionPartrec
+#print axioms exactAbstraction
+#print axioms compilePartrec
+#print axioms compileExact
+
+end LogicLineages.StandardControlCurrent.PolicyIndexedSourceConcrete
