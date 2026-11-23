@@ -1,0 +1,10 @@
+# Paper 16: actual exact finite confined paths from the literal cap
+
+Source: [ordinals.tex](../../../16-persistent-marking-termination-ordering/sections/ordinals.tex) lines 499–511, where the manuscript defines `Z`, `s`, the literal cap, and `w = Cap(s,Z)`. In repository-relative terms the manuscript is `16-persistent-marking-termination-ordering/sections/ordinals.tex`.
+
+* The independent [#503 accepted support](../new-paper-set-2026-11-18/accepted/503-native-ordinal-successor-and-cap.json), native receipt `1795140173140399659-9`, provides the actual closed terms, the two confined steps with genuine `successorInstance a.val` midpoint, and the single cap-over-finite-application edge for every closed payload. In the two-step successor pair the first edge is a literal beta reduction and the second is an actual outer-argument Select edge.
+* [Targets](../../LogicLineages/PersistentMarking/NativeOrdinalCapPathsTargets.lean) index a path by its number of `NativeBelow` links, all on one `Signature` and the original closed index type. They do not add a transitive edge to the relation or call each link a reduction.
+* [Proof](../../LogicLineages/PersistentMarking/NativeOrdinalCapPathsProof.lean): `exact_SuccessorIterationPath` follows the same literal finite application, with the same midpoint witness from #503 at each stage, for exactly `2*m` links; `exact_CapPayloadPath` prepends the one actual cap edge; `exact_OmegaZeroPath` specializes by literal carrier equality to the **same** original fixed `omegaCarrier` and `ordinalZero` for every `m`. No change of signature / relation / payload at induction.
+* The exact length is a witnessed number of links, not shortest or maximal. The ordinal-rank lower bound, including any repeated-cap argument to `omega^2`, is **not** a declaration here. No ordinal rank or ordinal arithmetic is used and no numbered claim is promoted.
+
+Native root: `LogicLineages.PersistentMarking.NativeOrdinalCapPathsProof`; exact three named axiom audits. Author performed static source review only.
