@@ -1,0 +1,11 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedScanNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedScanNumericProof.lean
+@@ -54,2 +54,2 @@
+-    rw [List.foldr_cons,stepValue,ih]
+-    cases expected r removed h <;> cases rows.all (expected r removed) <;> rfl
++    rw [List.foldr_cons,stepValue,ih,List.all_cons]
++    cases expected r removed h <;> cases rows.all (expected r removed) <;> simp [Bool.toNat]
+@@ -97 +97,2 @@
+-    cases xs.all (expected r removed) <;> rfl
++    simp only [Option.any]
++    cases xs.all (expected r removed) <;> simp [Bool.toNat]

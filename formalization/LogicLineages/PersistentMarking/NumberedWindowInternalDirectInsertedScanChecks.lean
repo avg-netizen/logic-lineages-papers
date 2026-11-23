@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedScanNumericProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedScanOpenProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedScanChecks
+open NumberedWindowInternalDirectInsertedScanTargets
+
+theorem exact_OriginalOrderedInsertedRows : ExactNumericScan :=
+  NumberedWindowInternalDirectInsertedScan.exactNumericScan
+theorem exact_OpenOriginalInsertedScanParser : ExactOpenScanParser :=
+  NumberedWindowInternalDirectInsertedScan.exactOpenScanParser
+theorem exact_OpenOriginalInsertedScanNil : ExactOpenScanNil :=
+  NumberedWindowInternalDirectInsertedScan.exactOpenScanNil
+theorem exact_OpenOriginalInsertedScanCons : ExactOpenScanCons :=
+  NumberedWindowInternalDirectInsertedScan.exactOpenScanCons
+
+#print axioms exact_OriginalOrderedInsertedRows
+#print axioms exact_OpenOriginalInsertedScanParser
+#print axioms exact_OpenOriginalInsertedScanNil
+#print axioms exact_OpenOriginalInsertedScanCons
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedScanChecks
