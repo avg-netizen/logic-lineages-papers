@@ -1,0 +1,9 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedScanMemberProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedScanMemberProof.lean
+@@ -93 +93 @@
+-  have left : Derivation B Γ (L.imp (rowAccept r k removed)) := by
++  have leftWitness : Nonempty (Derivation B Γ (L.imp (rowAccept r k removed))) := by
+@@ -98 +98,2 @@
+-    exact Derivation.implicationIntroduction p
++    exact ⟨Derivation.implicationIntroduction p⟩
++  obtain ⟨left⟩ := leftWitness

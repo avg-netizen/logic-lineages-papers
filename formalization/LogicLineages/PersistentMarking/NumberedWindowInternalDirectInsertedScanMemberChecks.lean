@@ -1,0 +1,12 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedScanMemberProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedScanMemberChecks
+open NumberedWindowInternalDirectInsertedScanMemberTargets
+
+theorem exact_OpenOriginalInsertedScanMember : ExactOpenScanMember :=
+  NumberedWindowInternalDirectInsertedScanMember.exactOpenScanMember
+
+#print axioms exact_OpenOriginalInsertedScanMember
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectInsertedScanMemberChecks
