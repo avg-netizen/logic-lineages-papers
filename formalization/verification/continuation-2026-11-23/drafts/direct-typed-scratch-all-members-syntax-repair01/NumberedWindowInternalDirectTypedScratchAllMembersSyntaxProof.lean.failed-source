@@ -1,0 +1,60 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedScratchAllMembersTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathSuccessfulAdvanceGraphSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePassWindowSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSourceIntroductionSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBinderTransportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAdditionLawsProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedScratchAllMembersSyntaxProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open ID1Completion.InternalCalculus
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalAdditionLawsProof (impSubst)
+open ID1Completion.InternalSourceIntroductionSyntaxProof (formulaRelabelAsSubst termRelabelAsSubst)
+open ID1Completion.InternalTagArithmeticSyntaxProof (emb bindEmbedding liftBind varBind sucRelabel zRelabel sucSubst zSubst)
+open ID1Completion.InternalComputabilityApplicationSyntaxProof (allEmbeddedSubst liftTermSubst liftTerms)
+open ID1Completion.InternalListInduction (atCode atIndex)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open NumberedWindowInternalSparsePathEnvelopeTargets (unary suc z)
+open NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof (unaryRename)
+open NumberedWindowInternalSparsePathSuccessfulAdvanceGraphSyntaxProof (unarySubst)
+open NumberedWindowInternalSparsePassWindowSyntaxProof (memberSubst)
+open NumberedWindowInternalDirectBoundaryGuardsTargets (typedScratch)
+open NumberedWindowInternalDirectTypedScratchAllMembersTargets
+
+theorem allMembersSubst {α β : Type} (i : Program 1) (code : OTerm α) (ts : α → OTerm β) :
+    (allMembers i code).subst (fun a => emb (ts a)) = allMembers i (code.subst ts) := by
+  unfold allMembers
+  rw [allEmbeddedSubst,impSubst,memberSubst,unarySubst,liftTermSubst]
+  simp only [sucSubst,zSubst,Term.subst,liftTerms,Sum.elim_inr]
+
+theorem allMembersRename {α β : Type} (i : Program 1) (code : OTerm α) (ρ : α → β) :
+    (allMembers i code).relabel ρ = allMembers i (code.relabel ρ) := by
+  rw [formulaRelabelAsSubst]
+  change (allMembers i code).subst (fun a => emb (.var (ρ a))) = _
+  rw [allMembersSubst]
+  simp only [← termRelabelAsSubst]
+
+theorem invariantCode {α : Type} (i : Program 1) (code : OTerm α) :
+    atCode (invariant i) code = fromAllMembers i code := by
+  rw [atCode,instantiate,bindEmbedding]
+  change (fromAllMembers i (.var (.inr 0) : OTerm (α ⊕ Fin 1))).subst _ = _
+  simp only [fromAllMembers,impSubst,allMembersSubst,unarySubst,sucSubst,zSubst,varBind]
+
+theorem invariantIndex {α : Type} (i : Program 1) (j : Fin 3) :
+    atIndex (invariant i) j = (fromAllMembers i (.var (.inr j)) : Formula (α ⊕ Fin 3)) := by
+  unfold atIndex
+  change (fromAllMembers i (.var (.inr 0) : OTerm (α ⊕ Fin 1))).relabel _ = _
+  unfold fromAllMembers
+  change ((allMembers i (.var (.inr 0))).relabel _).imp
+    ((unary (typedScratch i) (suc z) (.var (.inr 0))).relabel _) = _
+  simp only [allMembersRename,unaryRename,sucRelabel,zRelabel,Term.relabel] <;> rfl
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectTypedScratchAllMembersSyntaxProof

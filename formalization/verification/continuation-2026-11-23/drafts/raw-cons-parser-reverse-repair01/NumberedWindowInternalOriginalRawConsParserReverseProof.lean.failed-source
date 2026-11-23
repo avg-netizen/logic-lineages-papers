@@ -1,0 +1,99 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalOriginalRawConsUnionReportThinProof
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalOriginalRawConsParserReverseProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalListCodec (consCode)
+open ID1Completion.InternalAcceptance (constantZero)
+open ID1Completion.InternalAcceptanceBranchProof (zeroBranchIntro)
+open ID1Completion.InternalAcceptanceSupportProof (programCases)
+open ID1Completion.InternalControlGraphSupportProof (valueUnique outputTransport projectionValue)
+open ID1Completion.InternalLessThanSupportProof (zeroConstantValue)
+open ID1Completion.InternalRecursionClosureLogicProof (closedApply)
+open ID1Completion.InternalOriginalOrderSyntaxProof (ltF)
+open ID1Completion.InternalTagArithmeticSupportProof (cancelSuc sucNeZeroApply)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open NumberedWindowInternalSparsePathEnvelopeTargets (rawCons z suc)
+open NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof (rawConsRename inputsRename)
+open NumberedWindowInternalSparseFieldParser (parser prependPayload)
+open NumberedWindowInternalSparseFieldParserOpenSyntaxProof (binaryInputsRename)
+open NumberedWindowInternalSparseFieldParserThinOpenConsProof (consFromPrepend)
+open NumberedWindowInternalSparsePairOrderProof (consTailDecrease)
+open NumberedWindowInternalFreshProbeProof (optionGraphCases)
+open NumberedWindowInternalDirectSourcePartitionRawGraphProof (renameParser)
+open NumberedWindowInternalCertifiedUnionProgressSupportProof (Preserves keepsComp)
+open NumberedWindowInternalConsUnionReportBuildProof (Report)
+open NumberedWindowInternalOriginalRawConsUnionReportThinProof (actualRawConsParser)
+
+variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+/-- The unchanged literal cons parser rejects when the actual tail parser
+rejects. This is the true zero branch of the actual prepend program. -/
+theorem exact_OriginalRawConsRejectsOfTailReject (h t : OTerm α)
+    (tail : Report (B := B) (Γ := Γ) parser z ![t]) :
+    Report (B := B) (Γ := Γ) parser z ![rawCons h t] := by
+  have noResult := zeroBranchIntro (.projection (1 : Fin 2)) (constantZero 2) prependPayload z ![h,z]
+    (projectionValue (1 : Fin 2) ![h,z]) (zeroConstantValue ![h,z])
+  exact consFromPrepend z (rawCons h t) h t z
+    (NumberedWindowInternalSparsePairGraphProof.consGraph h t) tail noResult
+
+/-- Reverse success at the *given literal original cons* only. The fresh
+scratch suffix is from the true tail parser, the actual standard scratch
+cons has exactly the original selected result, and the original raw tail
+is strictly smaller. No arbitrary raw parent is decomposed. -/
+theorem exact_OriginalRawConsParserReverse (h t out : OTerm α) (goal : Formula α)
+    (parsed : Report (B := B) (Γ := Γ) parser (suc out) ![rawCons h t])
+    (next : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (tailScratch : OTerm β),
+      Preserves Γ j Δ →
+      Report (B := B) (Γ := Δ) parser (suc tailScratch) ![t.relabel j] →
+      Report (B := B) (Γ := Δ) consCode (out.relabel j) ![h.relabel j,tailScratch] →
+      Nonempty (Derivation B Δ (ltF (t.relabel j) (rawCons (h.relabel j) (t.relabel j)))) →
+      Nonempty (Derivation B Δ (goal.relabel j))) :
+    Nonempty (Derivation B Γ goal) := by
+  apply optionGraphCases parser ![t] goal
+  · intro β j Δ keep rejected
+    rw [inputsRename] at rejected
+    have held := renameParser (rawCons h t) out parsed j Δ keep
+    rw [rawConsRename] at held
+    have zero := exact_OriginalRawConsRejectsOfTailReject (h.relabel j) (t.relabel j) rejected
+    obtain ⟨impossible⟩ := valueUnique parser (suc (out.relabel j)) z
+      ![rawCons (h.relabel j) (t.relabel j)] held zero
+    exact ⟨Derivation.explosion (sucNeZeroApply impossible)⟩
+  · intro β j Δ tailScratch keep tail
+    rw [inputsRename] at tail
+    have held := renameParser (rawCons h t) out parsed j Δ keep
+    rw [rawConsRename] at held
+    apply programCases consCode ![h.relabel j,tailScratch] _
+    intro γ k Ξ selected keep' written
+    rw [binaryInputsRename] at written
+    let head₂ := (h.relabel j).relabel k
+    let tail₂ := (t.relabel j).relabel k
+    let out₂ := (out.relabel j).relabel k
+    let suffix := tailScratch.relabel k
+    have actualTail := renameParser (t.relabel j) tailScratch tail k Ξ keep'
+    have actualParent := renameParser (rawCons (h.relabel j) (t.relabel j))
+      (out.relabel j) held k Ξ keep'
+    rw [rawConsRename] at actualParent
+    have built := actualRawConsParser head₂ tail₂ suffix selected actualTail written
+    obtain ⟨same⟩ := valueUnique parser (suc selected) (suc out₂)
+      ![rawCons head₂ tail₂] built actualParent
+    have exactCons := outputTransport consCode selected out₂ ![head₂,suffix]
+      ⟨cancelSuc same⟩ written
+    obtain ⟨order⟩ := closedApply (consTailDecrease B γ (rawCons head₂ tail₂) head₂ tail₂)
+      (NumberedWindowInternalSparsePairGraphProof.consGraph head₂ tail₂)
+    have bound : Nonempty (Derivation B Ξ (ltF tail₂ (rawCons head₂ tail₂))) :=
+      ⟨Derivation.conjunctionRight order⟩
+    have reported := next γ (k ∘ j) Ξ suffix (keepsComp Γ Δ Ξ j k keep keep')
+      (by simpa only [tail₂,suffix,Term.relabel_relabel] using actualTail)
+      (by simpa only [head₂,out₂,suffix,Term.relabel_relabel] using exactCons)
+      (by simpa only [tail₂,head₂,Term.relabel_relabel] using bound)
+    simpa only [ID1Completion.InternalPositiveUnfoldingSupportProof.formulaRelabelComposition] using reported
+
+#print axioms exact_OriginalRawConsRejectsOfTailReject
+#print axioms exact_OriginalRawConsParserReverse
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalOriginalRawConsParserReverseProof

@@ -1,0 +1,13 @@
+--- failed/NumberedWindowInternalOriginalRawConsParserReverseProof.lean
++++ repaired/NumberedWindowInternalOriginalRawConsParserReverseProof.lean
+@@ -2,0 +3 @@
++public import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeProof
+@@ -22 +23 @@
+-open NumberedWindowInternalSparseFieldParser (parser prependPayload)
++open NumberedWindowInternalSparseFieldParser (parser prependPayload prependResult)
+@@ -39,2 +40,3 @@
+-  have noResult := zeroBranchIntro (.projection (1 : Fin 2)) (constantZero 2) prependPayload z ![h,z]
+-    (projectionValue (1 : Fin 2) ![h,z]) (zeroConstantValue ![h,z])
++  have noResult : Report (B := B) (Γ := Γ) prependResult z ![h,z] :=
++    zeroBranchIntro (.projection (1 : Fin 2)) (constantZero 2) prependPayload z ![h,z]
++      (projectionValue (1 : Fin 2) ![h,z]) (zeroConstantValue ![h,z])

@@ -1,0 +1,6 @@
+--- failed/NumberedWindowInternalOriginalRawConsParserReverseProof.lean
++++ repaired/NumberedWindowInternalOriginalRawConsParserReverseProof.lean
+@@ -79 +79,2 @@
+-    have actualTail := renameParser (t.relabel j) tailScratch tail k Ξ keep'
++    have actualTail : Report (B := B) (Γ := Ξ) parser (suc suffix) ![tail₂] :=
++      renameParser (t.relabel j) tailScratch tail k Ξ keep'

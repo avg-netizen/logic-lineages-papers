@@ -1,0 +1,31 @@
+{
+  "status": "repaired chain exact checked in 1795446948038578177-8",
+  "gate": "LogicLineages.PersistentMarking.NumberedWindowInternalOriginalRawConsParserReverseProof",
+  "failed_native_receipt": "1795446873223650794-8",
+  "failed_native_receipt_sha256": "d294482b6bdc3ede7e80cd7acacc2fe88043e45e38bce795c2fdcafe85395cc5",
+  "failed_source": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/raw-cons-parser-reverse-repair02/NumberedWindowInternalOriginalRawConsParserReverseProof.lean.failed-source",
+    "sha256": "a1553ccf0579bc06925b6393772a3de7ffa3d9bb30732fac1eb97b0087e3f664"
+  },
+  "native_log": {
+    "sha256": "e94250d13d6e82759bc857b14f01c762d65351fb928f5ba8acd7d6b3a9a9c561",
+    "file": "RawConsParserReverseProof.native.log"
+  },
+  "reverse_patch": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/raw-cons-parser-reverse-repair02/typed-tail-parser-report.patch",
+    "sha256": "94f8e2911230fd652302e1f988ade2a665c7bde8236b215c089c7918af12bccb"
+  },
+  "repaired_proof": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginalRawConsParserReverseProof.lean",
+    "sha256": "f31bb305adcc1b0c493da3ea34164954e13e2d3c857144c0b355b1fa07f5c21e"
+  },
+  "original_author_manifest": {
+    "path": "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-RAW-CONS-PARSER-REVERSE-AUTHOR-MANIFEST.json",
+    "sha256": "1f27a4c678e1db4cce89bede75a432e2ed7ebf99facdd22ae713ba22854ad218"
+  },
+  "prior_repair_manifest": {
+    "path": "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-RAW-CONS-PARSER-REVERSE-REPAIR-01.json",
+    "sha256": "ce679e94173c0850e4e13efd16d39f656d11ff73b8bc469e6aac73b8bab2d236"
+  },
+  "repair": "Use a proof-local expected Report type for the already relocated genuine tail parser graph before simplifying composed relabelling. Unary parser is definitionally the same parser graph on the singleton input vector, already accepted as actualRawConsParser input before this failing simp. No source statement, import, AST, option, or other file changed. Reverse patch reproduced exact original bytes."
+}

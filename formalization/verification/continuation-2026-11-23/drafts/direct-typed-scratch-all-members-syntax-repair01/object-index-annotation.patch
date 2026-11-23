@@ -1,0 +1,7 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchAllMembersSyntaxProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchAllMembersSyntaxProof.lean
+@@ -56,2 +56,2 @@
+-  change ((allMembers i (.var (.inr 0))).relabel _).imp
+-    ((unary (typedScratch i) (suc z) (.var (.inr 0))).relabel _) = _
++  change ((allMembers i (.var (.inr 0) : OTerm (α ⊕ Fin 1))).relabel _).imp
++    ((unary (typedScratch i) (suc z) (.var (.inr 0) : OTerm (α ⊕ Fin 1))).relabel _) = _
