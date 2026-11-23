@@ -1,0 +1,44 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSingletonBottomMembershipEmptyProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSingletonBottomMembershipEmptyProof.lean
+@@ -13,0 +14 @@
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+@@ -93,0 +95,18 @@
++private theorem rawOddCertificate {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
++    (i j : Program 1) (r D : Program 3) (c : Nat) (y w : OrdinaryArithmetic.Term α)
++    (cert : Nonempty (Derivation B Γ (certificate (data i j r D) true c z y w))) :
++    Nonempty (Derivation B Γ (programGraph D (suc z) ![z,w,y])) := by
++  have h := (exact_CertificateRules i j r D true c B α Γ z y w).1 cert
++  exact h
++
++private theorem rejectRawEmpty {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
++    (d : Program 3) (y w : OrdinaryArithmetic.Term α)
++    (hit : Nonempty (Derivation B Γ (programGraph (selectedDirect d) (suc z) ![z,w,y]))) :
++    Nonempty (Derivation B Γ (⊥ : Formula α)) := by
++  have miss : Nonempty (Derivation B Γ (programGraph (selectedDirect d) z ![z,w,y])) :=
++    selectedAtEmpty d w y
++  obtain ⟨bad⟩ := valueUnique (selectedDirect d) (suc z) z ![z,w,y] hit miss
++  exact ⟨sucNeZeroApply bad⟩
++
++attribute [local irreducible] selectedDirect
++
+@@ -100 +119 @@
+-    Nonempty (Derivation B Γ (certificate S true c z y w)) →
++    Nonempty (Derivation B Γ (certificate S true c OrdinaryArithmetic.zeroTerm y w)) →
+@@ -102 +121,6 @@
+-  dsimp only
++  let D := selectedDirect d
++  let S := data i j r D
++  let B := sourceBody S c
++  change Nonempty (Derivation B Γ
++    (certificate (data i j r D) true c OrdinaryArithmetic.zeroTerm y w)) →
++      Nonempty (Derivation B Γ (⊥ : Formula α))
+@@ -104,6 +128,3 @@
+-  let S := data i j r (selectedDirect d)
+-  let B := sourceBody S c
+-  have h : Nonempty (Derivation B Γ (programGraph (selectedDirect d) (suc z) ![z,w,y])) :=
+-    (exact_CertificateRules i j r (selectedDirect d) true c B α Γ z y w).1 cert
+-  obtain ⟨bad⟩ := valueUnique (selectedDirect d) (suc z) z ![z,w,y] h (selectedAtEmpty d w y)
+-  exact ⟨sucNeZeroApply bad⟩
++  have hit : Nonempty (Derivation B Γ (programGraph D (suc z) ![z,w,y])) :=
++    rawOddCertificate i j r D c y w cert
++  exact rejectRawEmpty d y w hit
