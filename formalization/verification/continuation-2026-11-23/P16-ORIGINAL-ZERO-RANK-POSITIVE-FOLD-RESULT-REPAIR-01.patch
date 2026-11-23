@@ -1,0 +1,7 @@
+--- failed/NumberedWindowInternalZeroRankPositiveFoldResultProof.lean
++++ repaired/NumberedWindowInternalZeroRankPositiveFoldResultProof.lean
+@@ -57 +57,3 @@
+-    rw [exactGuard]
++    by_cases answer : packedPositive xs s c ty src cert dst = true ∧ rawRank dst = 0
++    · rw [if_pos (exactGuard.mpr answer),if_pos answer]
++    · rw [if_neg (fun h => answer (exactGuard.mp h)),if_neg answer]

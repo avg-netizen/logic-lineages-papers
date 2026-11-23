@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalZeroRankAddressNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalZeroRankAddressNumericProof.lean
+@@ -54,2 +54,2 @@
+-  have bit : (packedPositive entries s (run rawContext x) (run rawResult x) (run rawLeast x) w
+-      (run rawLeast y)).toNat = 1 ↔
++  have bit : (if packedPositive entries s (run rawContext x) (run rawResult x) (run rawLeast x) w
++      (run rawLeast y) = true then (1 : Nat) else 0) = 1 ↔

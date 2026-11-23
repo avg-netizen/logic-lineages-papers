@@ -1,0 +1,44 @@
+{
+  "status": "frozen proof-only repair; retry pending",
+  "gate": "LogicLineages.PersistentMarking.NumberedWindowInternalZeroRankPositiveFoldResultProof",
+  "failed_native": {
+    "receipt": "1795459677400436198-48",
+    "receipt_pin": {
+      "path": "formalization/build-reports/1795459677400436198-48.json",
+      "sha256": "0d8623e41f4358606b9d5e0988a0cfe104c099b6272745a98d6376459abe7b05"
+    },
+    "module_log": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-zero-rank-positive-result-repair01/1795459677400436198-48.module.log",
+      "sha256": "8c9c344fe7eabf6b5a71e079cc8604ae2ee2f4bbbf4fc6fda4c4629228761571"
+    },
+    "failed_source": {
+      "path": "formalization/verification/continuation-2026-11-23/drafts/original-zero-rank-positive-result-repair01/NumberedWindowInternalZeroRankPositiveFoldResultProof.lean.failed-source",
+      "sha256": "f5277c9e305b0a40b307c983c54e51460b01f3f3e712348c2214dfc94ed59479"
+    },
+    "diagnosis": "Both directions of the actual guard equivalence elaborate, but rewriting in the body of if also needs a corresponding dependent Decidable; rw cannot synthesize that motive."
+  },
+  "repair": "Split on the already stated final acceptance guard, transport its truth or falsity via the unchanged equivalence, and evaluate both literal ifs with if_pos/if_neg. No definitions, assertions, imports or resource settings change.",
+  "changed_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalZeroRankPositiveFoldResultProof.lean",
+    "sha256": "b6b8f79d2573bafc6e17acfef02753162da5857947dd8110d6fe288afca2da39"
+  },
+  "unchanged_siblings": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalZeroRankPositiveFoldInvariantProof.lean",
+      "sha256": "23d7178951e055724649a7b110834d8184396702bba21cae8357a2afa331cb2e"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalZeroRankPositiveFoldDecodeProof.lean",
+      "sha256": "b84eb2e93556aa1458af2dfe15c473e5b22434f6173cd31a5e1f282e6466d70e"
+    }
+  ],
+  "reverse_patch": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/original-zero-rank-positive-result-repair01/repair01.patch",
+    "sha256": "e3915349650c93f7fc623161bf839a12e71e4363792460d1595ed26ce28f8e0f"
+  },
+  "reverse_bytes_verified": true,
+  "original_author_manifest": {
+    "path": "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-ZERO-RANK-POSITIVE-FOLD-NUMERIC-AUTHOR-MANIFEST.json",
+    "sha256": "d4d295d2d75ef6f949b6924c73cafa23d78b4d5215797e2e3177690dbe03da98"
+  }
+}
