@@ -1,0 +1,5 @@
+- (P), Simmons 2004 §5 as recorded in #1463 `CharacterizationP` ("`psi ξ` is the least critical θ with η < ξ, |η| < θ ⇒ psi η < θ") → reused unchanged; `CollapseData` built as `⟨psi, norm, critical, one, endpoint, a⟩`.
+- "Such a θ exists at every stage" (not in the source; our hypothesis) → `Solvable` (total `prev`) and `SolvableBelow` (`prev` only on η < ξ); `solvableIffSolvableBelow` proves them equivalent.
+- "Define psi by recursion on ξ as the least such θ" → `characterizationExistsBelow`: `WellFounded.has_min` on `O` gives the least θ, `WellFounded.fix` / `WellFounded.fix_eq` on `I` gives `psi`.
+- The three clauses of (P) (critical, closure, minimality) → the membership and leastness halves of the chosen minimum, rewritten along the unfolding equation; `characterizationExists` is the simple-hypothesis corollary.
+- Companion to #1484 `CharacterizationDeterminesCollapse` (uniqueness): together (P) defines exactly one function, conditional on `Solvable`, which is not discharged for any concrete system here.

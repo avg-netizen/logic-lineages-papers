@@ -1,0 +1,61 @@
+{
+ "key": "ACTUAL-COLLAPSE-MAIN",
+ "lane": "opusA",
+ "round": 6,
+ "serves": "Paper 16 conditional statements on the actual collapse data (five hypotheses -> four)",
+ "source_map": "verification/local-fable-pair-2026-11-23-round6/opusA/ACTUAL-COLLAPSE-MAIN-SOURCE-MAP.md",
+ "modules": [
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCollapseMainTargets",
+   "sha256": "aa31516edce9ce79067e1bda2466de7fc1ff99b1c49b3b15722f164b44a1ef31",
+   "frozen_receipt": "1795413729690514195-3315280",
+   "peak_rss_kib": 1065464
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCollapseMainProof",
+   "sha256": "b31310ad8f156e2f2db7c31040729e516d429aee931fb1503765644e5feb11cf",
+   "receipt": "1795413791081556546-3315542",
+   "peak_rss_kib": 1185272
+  }
+ ],
+ "named_axiom_output": {
+  "solutionExists": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "actualTowerCofinality": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "actualHeightEffective": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "actualMain16": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "calibrationFirstInstances": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ]
+ },
+ "remaining_hypotheses_main": [
+  "NormTheorem BH",
+  "UniformAccessibility",
+  "Calibration (veblenData fix pow w)",
+  "BHIdentification (veblenData fix pow w) BH"
+ ],
+ "calibration": "n=0 and n=1 proved definitionally; n=2 first non-definitional instance (needs N_B monotone/continuous and orbit-from-0 vs orbit-from-Gamma0 comparison: Simmons helpfulness)",
+ "depends_on": [
+  "#1486",
+  "#1470",
+  "#1477",
+  "#1463"
+ ]
+}

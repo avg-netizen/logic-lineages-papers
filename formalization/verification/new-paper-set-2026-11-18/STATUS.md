@@ -4,6 +4,10 @@ The new-paper register has **162 checked and 5 pending out of 167**. Historical 
 178 checked, 2 inherited, 9 pending /189, preserved separately and not added
 to this replacement collection. Old statuses do not transfer automatically.
 
+## Round 6 of the local Fable-pair continuation, 23 November (paused)
+
+Supporting records now end at **1494**; the register is unchanged at 162 checked and 5 pending. The five named hypotheses behind the pending Paper 16 statements are now four: an actual collapse built from the printed definitions satisfies the tower hypotheses outright, and the main statement is compiled on it. The calibration of the tower composites against that collapse is proved for n = 0, 1, 2, with the level invariant for the next case; the general case is a formalization of the cited Simmons results. Inside the ID₁ calculus, J is closed under multiset union and I(q) gives J({q}), conditional on named arithmetic premises; the presentation programs being existence witnesses is identified as the obstacle to deriving those premises. [Handoff](../local-fable-pair-2026-11-23-round6/HANDOFF.md) · [actual collapse](accepted/1486-p16-actual-collapse-tower-hypotheses.json) · [main on actual data](accepted/1488-p16-actual-collapse-main.json) · [calibration at two](accepted/1491-p16-calibration-at-two.json)
+
 ## Third GitHub continuation, 22 November (checked and paused)
 
 Paper 16 `thm:iteration` is adopted as #1478 using its previously compiled exact

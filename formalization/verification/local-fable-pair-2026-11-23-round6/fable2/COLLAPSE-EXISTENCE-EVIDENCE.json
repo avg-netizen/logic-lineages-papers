@@ -1,0 +1,39 @@
+{
+  "task": "H02 — existence",
+  "lane": "Fable-2",
+  "status": "COMPILE_PASS",
+  "gate": "bash verification/local-fable-pair-2026-11-23-round6/gate.sh mathlib LogicLineages.PersistentMarking.ConditionalCollapseExistenceTargets LogicLineages.PersistentMarking.ConditionalCollapseExistenceProof",
+  "gate_attempts": 1,
+  "failed_drafts": [],
+  "receipt": "build-reports/1795413122950914125-3313037.json",
+  "modules": {
+    "LogicLineages.PersistentMarking.ConditionalCollapseExistenceTargets": {
+      "file": "LogicLineages/PersistentMarking/ConditionalCollapseExistenceTargets.lean",
+      "sha256": "59536f74302447216d0e1f06cbcb47a43759ed1a967316113952559ddfb4520e",
+      "defs": [
+        "Solvable",
+        "SolvableBelow",
+        "CharacterizationExists",
+        "CharacterizationExistsBelow",
+        "SolvableIffSolvableBelow"
+      ]
+    },
+    "LogicLineages.PersistentMarking.ConditionalCollapseExistenceProof": {
+      "file": "LogicLineages/PersistentMarking/ConditionalCollapseExistenceProof.lean",
+      "sha256": "42d2243c5f0603b4f3908056471a5cd35935b2ae9a8c0e423906ed79afc8eeaa",
+      "theorems": {
+        "characterizationExists": "CharacterizationExists.{u,v}",
+        "characterizationExistsBelow": "CharacterizationExistsBelow.{u,v}",
+        "solvableIffSolvableBelow": "SolvableIffSolvableBelow.{u,v}"
+      }
+    }
+  },
+  "targets_sha256_unchanged_since_ledger_freeze": true,
+  "print_axioms": [
+    "'LogicLineages.PersistentMarking.ConditionalCollapseExistence.solvableIffSolvableBelow' depends on axioms: [propext]",
+    "'LogicLineages.PersistentMarking.ConditionalCollapseExistence.characterizationExistsBelow' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.ConditionalCollapseExistence.characterizationExists' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "recursion_device": "WellFounded.fix (C := fun _ => O) wellFounded_lt F, unfolded by WellFounded.fix_eq; least element from WellFounded.has_min on the value order, turned into a function F by `choose`",
+  "scope_note": "Abstract and conditional: Solvable is a hypothesis, not established for any concrete notation system. No sorry, axiom or native_decide."
+}

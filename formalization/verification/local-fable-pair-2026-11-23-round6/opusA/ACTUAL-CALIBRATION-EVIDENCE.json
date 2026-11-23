@@ -1,0 +1,62 @@
+{
+ "key": "ACTUAL-CALIBRATION",
+ "lane": "opusA",
+ "round": 6,
+ "serves": "Paper 16 calibration Delta_n = psi(a_n): monotonicity, orbit comparison, n = 2",
+ "source_map": "verification/local-fable-pair-2026-11-23-round6/opusA/ACTUAL-CALIBRATION-SOURCE-MAP.md",
+ "modules": [
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationTargets",
+   "sha256": "67164767482f8bb91c4b391231a43cab4ccbbffcb8aee7b47f4718820c66c466",
+   "frozen_receipt": "1795414149544123977-3316676",
+   "peak_rss_kib": 1069324
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationMonotoneProof",
+   "sha256": "77cc39dcda04816781c4e6dd41aa4b851567c4db43517c5bdf0efa931b0a39f1",
+   "receipt": "1795414267122070603-3317173",
+   "peak_rss_kib": 1122292
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationComparisonProof",
+   "sha256": "fd0325e8de3080f3834be2337028b25c4fa3f4e6c6bdd4fd679cdf6460a13b0a",
+   "receipt": "1795414344456309033-3317393",
+   "peak_rss_kib": 1116864
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationTwoProof",
+   "sha256": "69d2b8bbb20f7ea94fa2b95d0b2e23e1aee759aa8daec0724c7b6e8a6f6972ab",
+   "receipt": "1795414486482435704-3317900",
+   "peak_rss_kib": 1132008
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationChecks",
+   "sha256": "7f4d7ece9f32d867d78a29383e9f478d3a74670dacfefcfda5d34c7326c6bfe7",
+   "receipt": "1795414527299825250-3318034",
+   "peak_rss_kib": 1106848
+  }
+ ],
+ "exact_gate": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationChecks",
+ "named_axiom_output": {
+  "exact_MonotoneLayer": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "exact_OrbitComparison": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "exact_CalibrationTwo": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ]
+ },
+ "findings": [
+  "Next and N_B are not continuous (Next(eps0)=eps1 > sup_{z<eps0} Next z = eps0); continuity not needed",
+  "n=2 closed; n=3 first needs the A_1-level helpfulness invariant"
+ ],
+ "peak_rss_kib": 1132008
+}

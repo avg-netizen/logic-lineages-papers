@@ -1,0 +1,20 @@
+{
+  "id": "new-set-1485",
+  "kind": "supporting only",
+  "paper": "paper-16",
+  "scope": "Existence of a collapse from its defining clause, abstractly: on a well-founded linear index order with a well-ordered value order, if for every index and every assignment of earlier values there is a critical value dominating the earlier values of small norm (Solvable), then a function satisfying the characterization (P) of #1463 exists, defined by well-founded recursion as the least such value. The dependent variant of the hypothesis is shown equivalent. With #1484 the collapse is then unique. Solvability for the paper's actual norm and criticality is not claimed.",
+  "evidence": "../local-fable-pair-2026-11-23-round6/evidence/1485-p16-characterization-exists-native.json",
+  "evidence_sha256": "5ffab88b60c4ec273cff82acbe094a2f655317b3c2f05054c7dadd5912618591",
+  "statement_scope_check": "../local-fable-pair-2026-11-23-round6/fable2/COLLAPSE-EXISTENCE-SOURCE-MAP.md",
+  "verification": "Exact original native Lean normal profile and named axiom output, with source-to-statement scope checked by the authoring lane and root; no separate artifact replay, no cross-model review.",
+  "native_receipt": "1795413122950914125-3313037",
+  "exact_alias_count": 3,
+  "numbered_promotions": [],
+  "source_pins": {
+    "formalization/LogicLineages/PersistentMarking/ConditionalCollapseExistenceTargets.lean": "59536f74302447216d0e1f06cbcb47a43759ed1a967316113952559ddfb4520e",
+    "formalization/LogicLineages/PersistentMarking/ConditionalCollapseExistenceProof.lean": "42d2243c5f0603b4f3908056471a5cd35935b2ae9a8c0e423906ed79afc8eeaa",
+    "formalization/verification/local-fable-pair-2026-11-23-round6/fable2/COLLAPSE-EXISTENCE-SOURCE-MAP.md": "9a5e5904ee15b10337ac6660427e62c8c03465d682c23f12fa941c883a421ab2",
+    "formalization/verification/local-fable-pair-2026-11-23-round6/evidence/1485-p16-characterization-exists-native.json": "5ffab88b60c4ec273cff82acbe094a2f655317b3c2f05054c7dadd5912618591"
+  },
+  "later_finding": "Same round, record #1486 (lane opusA): the hypothesis Solvable of this record quantifies over arbitrary earlier values, including uncountable ones, and is false for the paper's actual setting where critical values are countable; the actual collapse was therefore built with its own recursion carrying the invariant that earlier values are critical. This record remains a valid abstract statement but does not apply to the actual data."
+}
