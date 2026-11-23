@@ -1,0 +1,132 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalMeasuredSelectedGrammarRefitPhysicalReinstallProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalAuxWindowStepTargets
+public import LogicLineages.PersistentMarking.NumberedWindowInternalRankCheckedLeastDefinitions
+public import LogicLineages.PersistentMarking.NumberedWindowNeutralSpineRankAlgorithm
+import LogicLineages.PersistentMarking.NumberedWindowInternalRankCheckedLeastNumericProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseLeastInstallationChecks
+import LogicLineages.PersistentMarking.NumberedWindowNeutralSpineRankProgramProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalMeasuredSelectedGrammarRefitCheckedLeastChoiceProof
+
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram List.Vector
+open NumberedWindowCopyAlgorithm (Entries)
+open NumberedWindowScalarAlgorithm (Settings)
+open NumberedWindowInternalFreshProbeDispatchWindowTargets (ProbeTy ValidWindow)
+open NumberedWindowInternalFreshProbeParsedTyped (Inputs chosenA chosenH)
+open NumberedWindowInternalSparseTypedRaw (typedRaw5)
+open NumberedWindowInternalSparseTypedRawTargets (ActualRawSyntax ActualPackedWindow)
+open NumberedWindowInternalSparseRawTickTargets (ActualRoot ActualFallback)
+open NumberedWindowInternalSparsePackedLeast (packedLeastProgram)
+open NumberedWindowInternalSparseCoverScratchTargets (ActualSelectedCoverOutput)
+open NumberedWindowInternalSparseScalarEdgeTargets (ActualTermExchange)
+open NumberedWindowInternalSparseCanonicalAddressThinDefinitions (addressScalar)
+open NumberedWindowInternalSparseApplicationReinstall (frontendInputs)
+open NumberedWindowInternalSparseApplicationFrontend (applicationCore)
+open NumberedWindowInternalSparseApplicationFrontendTargets (ActualScalarCalibration)
+open NumberedWindowInternalSparseTuple (CallbacksAt InstalledReportAt)
+open NumberedWindowInternalSparseAddressPositive (addressPositive)
+open NumberedWindowInternalAtomicRefinementReinstallTargets (TupleAt)
+open NumberedWindowInternalDirectTypedListTargets (jRaw)
+open NumberedWindowInternalDirectCoreTargets (dCore)
+open NumberedWindowInternalLiteralCount (permutation)
+open NumberedWindowGuardedGraphTargets (guard)
+open NumberedWindowInternalAuxMeasureMemoTargets (selectedMeasure CombineCalibrated)
+open NumberedWindowInternalAuxMeasureStepTargets (measureUpdate)
+open NumberedWindowInternalFactoredCoverTargets (TermMeasureCalibrated GrammarOptionCalibrated factoredCover)
+open NumberedWindowInternalCoverAuxSyntaxTargets (auxSyntax)
+open NumberedWindowInternalCoverLambdaSyntaxRowTargets (TypeSyntaxCalibrated)
+open NumberedWindowInternalCoverSelectedGrammarOptionTargets (selectedGrammarOption)
+open NumberedWindowInternalChosenAuxMeasureCombine (chosenCombine)
+open NumberedWindowInternalAuxWindowStepTargets
+  (intrinsicQuery windowUpdate TypeGuardCalibrated)
+open NumberedWindowInternalSettingsGrammarGuardNumericTargets (GrammarTypeInclusion)
+open NumberedWindowInternalMeasuredUnrestrictedRefitTypeSyntaxProof (refitTypeSyntax)
+open NumberedWindowInternalAuxWindowMemoTargets (selectedIntrinsic IntrinsicWindowCalibrated)
+open NumberedWindowRawExchangeSymmetryTargets (HeadPairsSymmetric)
+open NumberedWindowInternalMeasuredPairedGuardedThinNumericProof (measuredFactoredExchange)
+open NumberedWindowInternalMeasuredUnrestrictedWindowDefinitions (WindowSeedsCovered window)
+open NumberedWindowNeutralSpineRankAlgorithm (rawRank)
+open NumberedWindowNeutralSpineRankProgramProof (exact_OriginalRawNeutralRankProgram)
+open NumberedWindowInternalRankCheckedLeast (checkedLeast)
+open NumberedWindowInternalRankCheckedLeastNumericProof (exact_OriginalRankCheckedLeastNumeric)
+open NumberedWindowInternalSparseLeastInstallationChecks (exact_ReinstallCalibratedLeast)
+open NumberedWindowInternalLiteralPhysicalScalarReinstallProof (exact_ReinstallLiteralPhysicalScalar)
+open NumberedWindowInternalSparsePathAdvanceTargets (ActualLeastCalibration)
+open NumberedWindowInternalSparseTuple (InstalledTupleAt)
+open NumberedWindowInternalAtomicRefinement (refined)
+
+/-- One measured original C/Xm/Wp, with a numerically conservative checked
+least inserted at the same physical scalar, application and path programs.
+Only the base numeric callback fits leave the previous proof body. -/
+theorem selected :
+    ∃ (g V TV baseM : Program 1),
+      let Va := auxSyntax V TV
+      let M := selectedMeasure (measureUpdate baseM chosenCombine)
+      let C := factoredCover Va M selectedGrammarOption
+      (∀ n, evaluate g (n ::ᵥ nil) = rawRank n) ∧
+      ActualRawSyntax V ∧ TypeSyntaxCalibrated TV ∧ ActualRawSyntax Va ∧
+      TermMeasureCalibrated baseM ∧ CombineCalibrated chosenCombine ∧
+      TermMeasureCalibrated M ∧ GrammarOptionCalibrated selectedGrammarOption ∧ ActualSelectedCoverOutput C ∧
+      ∀ (entries : Entries) (s : Settings) (W : List ProbeTy), ValidWindow s W →
+        HeadPairsSymmetric s.equivalentHeads → WindowSeedsCovered s → GrammarTypeInclusion s →
+        ∃ (cv tv : Program 1) (base primitiveW : Program 2) (T : Program 1)
+          (root other : Program 3) (v : Inputs),
+          let TT := refitTypeSyntax s T TV
+          let baseW := intrinsicQuery (selectedIntrinsic (windowUpdate primitiveW TT))
+          let Wp := window C s baseW Va
+          let Xm := measuredFactoredExchange s base Va baseM chosenCombine selectedGrammarOption
+          let raw := typedRaw5 root other Wp Va
+          let baseL := packedLeastProgram C Xm Wp s
+          let L := checkedLeast g baseL
+          let i := addressScalar cv tv Wp L
+          let R := addressPositive cv tv raw L
+          let updated := frontendInputs i L v
+          let RR := refined i R
+          ActualRoot (NumberedWindowConcreteCheckers.root entries s) root ∧ ActualFallback other ∧
+          ActualTermExchange s base ∧ ActualTermExchange s Xm ∧
+          IntrinsicWindowCalibrated s primitiveW ∧ TypeGuardCalibrated s T ∧ TypeGuardCalibrated s TT ∧
+          ActualPackedWindow s baseW ∧ ActualPackedWindow s Wp ∧
+          ActualLeastCalibration s baseL ∧ ActualLeastCalibration s L ∧
+          CallbacksAt entries s cv tv raw L ∧ ActualScalarCalibration s i ∧
+          chosenA updated = chosenA v ∧ updated.applicationGuard = guard i (applicationCore L) ∧
+          TupleAt entries s W i (jRaw i) R (dCore i R permutation) updated ∧
+          InstalledReportAt i (jRaw i) cv tv (dCore i R permutation) raw L ∧
+          TupleAt entries s W i (jRaw i) RR (dCore i RR permutation) updated := by
+  obtain ⟨g,rankFit⟩ := exact_OriginalRawNeutralRankProgram
+  obtain ⟨V,TV,baseM,hV,hTV,hVa,hBaseM,hCombine,hM,hGrammar,hC,pick⟩ := NumberedWindowInternalMeasuredSelectedGrammarRefitPhysicalReinstallProof.selected
+  let Va := auxSyntax V TV
+  let C := factoredCover Va (selectedMeasure (measureUpdate baseM chosenCombine)) selectedGrammarOption
+  refine ⟨g,V,TV,baseM,rankFit,hV,hTV,hVa,hBaseM,hCombine,hM,hGrammar,hC,?_⟩
+  intro entries s W valid symmetric covered included
+  obtain ⟨cv,tv,base,primitiveW,T,root,other,v,hroot,hother,hbase,hXm,hPrimitive,hT,hTT,hBaseW,hWp,
+    callbacks,scalar,keeps,guardEq,baseTuple,baseReport,_⟩ :=
+    pick entries s W valid symmetric covered included
+  let Wp := window C s (intrinsicQuery (selectedIntrinsic (windowUpdate primitiveW (refitTypeSyntax s T TV)))) Va
+  let Xm := measuredFactoredExchange s base Va baseM chosenCombine selectedGrammarOption
+  let raw := typedRaw5 root other Wp Va
+  let baseL := packedLeastProgram C Xm Wp s
+  let L := checkedLeast g baseL
+  let baseI := addressScalar cv tv Wp baseL
+  let baseR := addressPositive cv tv raw baseL
+  let baseD := dCore baseI baseR permutation
+  let update := frontendInputs baseI baseL v
+  have baseCal : ActualLeastCalibration s baseL := callbacks.2.2.2.1
+  have leastCal : ActualLeastCalibration s L :=
+    exact_OriginalRankCheckedLeastNumeric s g baseL rankFit baseCal
+  have prior : InstalledTupleAt entries s W baseI (jRaw baseI) cv tv baseD
+      (applicationCore baseL) raw baseL update :=
+    ⟨baseTuple,guardEq,callbacks,baseReport⟩
+  have physical := exact_ReinstallCalibratedLeast entries s W valid baseI (jRaw baseI)
+    cv tv baseD (applicationCore baseL) raw baseL L update prior leastCal
+  obtain ⟨newScalar,newKeeps,newGuard,newTuple,newReport,refinedTuple⟩ :=
+    exact_ReinstallLiteralPhysicalScalar entries s W valid baseI (jRaw baseI)
+      cv tv baseD (applicationCore baseL) Wp raw L update hWp physical
+  -- The output records the same older input leaves. Its new guard does
+  -- not use the older application guard field; use the held update itself.
+  exact ⟨cv,tv,base,primitiveW,T,root,other,update,hroot,hother,hbase,hXm,hPrimitive,hT,hTT,hBaseW,hWp,
+    baseCal,leastCal,physical.2.2.1,newScalar,newKeeps,newGuard,newTuple,newReport,refinedTuple⟩
+
+#print axioms selected
+end LogicLineages.PersistentMarking.NumberedWindowInternalMeasuredSelectedGrammarRefitCheckedLeastChoiceProof

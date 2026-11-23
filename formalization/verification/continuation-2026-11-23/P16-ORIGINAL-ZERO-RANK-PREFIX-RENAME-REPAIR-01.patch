@@ -1,0 +1,13 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalZeroRankPrefixRenameProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalZeroRankPrefixRenameProof.lean
+@@ -5 +5 @@
+-import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathAdvanceOpenSyntaxProof
++import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserOpenSyntaxProof
+@@ -20 +20 @@
+-open NumberedWindowInternalSparsePathAdvanceOpenSyntaxProof (quadRename)
++open NumberedWindowInternalSparseFieldParserOpenSyntaxProof (quadInputsRename)
+@@ -22,0 +23 @@
++attribute [local irreducible] programGraph
+@@ -47 +48 @@
+-    simp only [programRename,quadRename,sucRelabel] at s'
++    simp only [programRename,quadInputsRename,sucRelabel] at s'
