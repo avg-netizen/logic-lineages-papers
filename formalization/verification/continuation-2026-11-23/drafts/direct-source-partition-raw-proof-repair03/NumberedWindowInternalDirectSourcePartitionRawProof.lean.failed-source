@@ -1,0 +1,64 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionRawTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionRawGraphProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceConjunctionProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveUnfoldingSupportProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionRawProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalAcceptance (conjunction)
+open ID1Completion.InternalAcceptanceConjunctionProof (conjunctionRecover)
+open NumberedWindowInternalSparsePathEnvelopeTargets (suc z)
+open ID1Completion.InternalPositiveUnfoldingSupportProof (formulaRelabelComposition)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open NumberedWindowInternalDirectSourcePartitionRawTargets
+open NumberedWindowInternalDirectSourcePartitionRawGraphProof
+
+attribute [local irreducible] programGraph
+
+theorem exact_OpenRawSourceDecode : ExactOpenRawSourceDecode := by
+  intro core B α Γ src kept removed goal held next
+  let xs := sourceTape src kept removed
+  obtain ⟨both⟩ := conjunctionRecover parsedAll (decodedCall core) xs held
+  obtain ⟨ready⟩ := conjunctionRecover (parsedAt 0) (conjunction (parsedAt 1) (parsedAt 2)) xs
+    ⟨Derivation.conjunctionLeft both⟩
+  obtain ⟨rest⟩ := conjunctionRecover (parsedAt 1) (parsedAt 2) xs ⟨Derivation.conjunctionRight ready⟩
+  have call := Derivation.conjunctionRight both
+  apply chosenParserCases 0 src kept removed goal ⟨Derivation.conjunctionLeft ready⟩
+  intro β j Δ ds hj ps
+  let s₁ := src.relabel j
+  let k₁ := kept.relabel j
+  let r₁ := removed.relabel j
+  have pk₁ := renameUnit (parsedAt 1) src kept removed ⟨Derivation.conjunctionLeft rest⟩ j Δ hj
+  have pr₁ := renameUnit (parsedAt 2) src kept removed ⟨Derivation.conjunctionRight rest⟩ j Δ hj
+  have call₁ := renameUnit (decodedCall core) src kept removed ⟨call⟩ j Δ hj
+  apply chosenParserCases 1 s₁ k₁ r₁ (goal.relabel j) pk₁
+  intro γ k Θ dk hk pk
+  let s₂ := s₁.relabel k
+  let k₂ := k₁.relabel k
+  let r₂ := r₁.relabel k
+  have ps₂ := renameParser s₁ ds ps k Θ hk
+  have pr₂ := renameUnit (parsedAt 2) s₁ k₁ r₁ pr₁ k Θ hk
+  have call₂ := renameUnit (decodedCall core) s₁ k₁ r₁ call₁ k Θ hk
+  apply chosenParserCases 2 s₂ k₂ r₂ ((goal.relabel j).relabel k) pr₂
+  intro δ l Ω dr hl pr
+  let s₃ := s₂.relabel l
+  let k₃ := k₂.relabel l
+  let r₃ := r₂.relabel l
+  let ds₃ := (ds.relabel k).relabel l
+  let dk₃ := dk.relabel l
+  have ps₃ := renameParser s₂ (ds.relabel k) ps₂ l Ω hl
+  have pk₃ := renameParser k₂ dk pk l Ω hl
+  have p : ParsedTriplet B Ω s₃ k₃ r₃ ds₃ dk₃ dr := ⟨ps₃,pk₃,pr⟩
+  have checked := selectedCore core s₃ k₃ r₃ ds₃ dk₃ dr p
+    (renameUnit (decodedCall core) s₂ k₂ r₂ call₂ l Ω hl)
+  rw [formulaRelabelComposition j k goal,formulaRelabelComposition (k ∘ j) l goal]
+  apply next δ (l ∘ (k ∘ j)) Ω ds₃ dk₃ dr (keepThrough (k ∘ j) l (keepThrough j k hj hk) hl) _ checked
+  simpa only [s₃,k₃,r₃,s₂,k₂,r₂,s₁,k₁,r₁,Term.relabel_relabel] using p
+
+#print axioms exact_OpenRawSourceDecode
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionRawProof

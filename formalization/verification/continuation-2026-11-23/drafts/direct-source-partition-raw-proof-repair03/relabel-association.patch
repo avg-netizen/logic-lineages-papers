@@ -1,0 +1,6 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectSourcePartitionRawProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectSourcePartitionRawProof.lean
+@@ -61 +61,2 @@
+-  simpa only [s₃,k₃,r₃,s₂,k₂,r₂,s₁,k₁,r₁,Term.relabel_relabel] using p
++  have associate : ((l ∘ k) ∘ j) = l ∘ (k ∘ j) := rfl
++  simpa only [s₃,k₃,r₃,s₂,k₂,r₂,s₁,k₁,r₁,Term.relabel_relabel,associate] using p

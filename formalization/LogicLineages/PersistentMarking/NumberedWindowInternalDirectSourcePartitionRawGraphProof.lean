@@ -1,0 +1,119 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionRawTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserOpenSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceBranchProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceConjunctionProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionFunctionalityProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalEqualityTestPredecessorProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveUnfoldingSupportProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionRawGraphProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalAcceptance (constantZero conjunction)
+open ID1Completion.InternalLessThan (constantOne)
+open ID1Completion.InternalEqualityTest (predecessor)
+open ID1Completion.InternalEqualityTestPredecessorProof (predecessorSuccessor)
+open ID1Completion.InternalAcceptanceSupportProof (compositionRecover)
+open ID1Completion.InternalAcceptanceBranchProof (zeroBranchElim)
+open ID1Completion.InternalAcceptanceConjunctionProof (conjunctionRecover constantZeroValue)
+open ID1Completion.InternalControlGraphSupportProof (compositionValue projectionValue programRename valueUnique)
+open ID1Completion.InternalGraphCompositionFunctionalityProof (renameInto)
+open ID1Completion.InternalTagArithmeticSupportProof (sucNeZeroApply)
+open ID1Completion.InternalTagArithmeticSyntaxProof (sucRelabel zRelabel)
+open ID1Completion.InternalPositiveUnfoldingSupportProof (formulaRelabelComposition)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open NumberedWindowInternalSparseFieldParser (parser)
+open NumberedWindowInternalSparsePathEnvelopeTargets (unary suc z)
+open NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof (unaryRename inputsRename)
+open NumberedWindowInternalSparseFieldParserOpenSyntaxProof (tripleInputsRename)
+open NumberedWindowInternalFreshProbeProof (optionGraphCases)
+open NumberedWindowInternalDirectSourcePartitionRawTargets
+
+attribute [local irreducible] programGraph
+variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+theorem keepThrough {β γ : Type} {Δ : List (Formula β)} {Ω : List (Formula γ)}
+    (j : α → β) (k : β → γ) (hj : ∀ p ∈ Γ, p.relabel j ∈ Δ)
+    (hk : ∀ p ∈ Δ, p.relabel k ∈ Ω) : ∀ p ∈ Γ, p.relabel (k ∘ j) ∈ Ω := by
+  intro p h
+  rw [← formulaRelabelComposition j k p]
+  exact hk _ (hj p h)
+
+theorem renameUnit {β : Type} (p : Program 3) (s k r : OTerm α)
+    (held : Nonempty (Derivation B Γ (programGraph p (suc z) (sourceTape s k r))))
+    (j : α → β) (Δ : List (Formula β)) (keep : ∀ f ∈ Γ, f.relabel j ∈ Δ) :
+    Nonempty (Derivation B Δ (programGraph p (suc z)
+      (sourceTape (s.relabel j) (k.relabel j) (r.relabel j)))) := by
+  simpa only [programRename,tripleInputsRename,sucRelabel,zRelabel] using
+    renameInto held j Δ keep
+
+theorem renameParser {β : Type} (raw out : OTerm α)
+    (held : Nonempty (Derivation B Γ (unary parser (suc out) raw)))
+    (j : α → β) (Δ : List (Formula β)) (keep : ∀ f ∈ Γ, f.relabel j ∈ Δ) :
+    Nonempty (Derivation B Δ (unary parser (suc (out.relabel j)) (raw.relabel j))) := by
+  simpa only [unaryRename,sucRelabel] using renameInto held j Δ keep
+
+private theorem liftParser (i : Fin 3) (xs : Fin 3 → OTerm α) (out : OTerm α)
+    (h : Nonempty (Derivation B Γ (unary parser out (xs i)))) :
+    Nonempty (Derivation B Γ (programGraph (parserAt i) out xs)) := by
+  apply compositionValue parser ![.projection i] out xs ![xs i] h
+  intro k
+  obtain rfl := Fin.eq_zero k
+  exact projectionValue i xs
+
+private theorem payloadReport (i : Fin 3) (xs : Fin 3 → OTerm α) (out : OTerm α)
+    (h : Nonempty (Derivation B Γ (unary parser (suc out) (xs i)))) :
+    Nonempty (Derivation B Γ (programGraph (payloadAt i) out xs)) := by
+  apply compositionValue predecessor ![parserAt i] out xs ![suc out] (predecessorSuccessor out)
+  intro k
+  obtain rfl := Fin.eq_zero k
+  exact liftParser i xs (suc out) h
+
+theorem chosenParserCases (i : Fin 3) (s k r : OTerm α) (goal : Formula α)
+    (h : Nonempty (Derivation B Γ (programGraph (parsedAt i) (suc z) (sourceTape s k r))))
+    (next : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (out : OTerm β),
+      (∀ f ∈ Γ, f.relabel j ∈ Δ) →
+      Nonempty (Derivation B Δ (unary parser (suc out) ((sourceTape s k r i).relabel j))) →
+      Nonempty (Derivation B Δ (goal.relabel j))) :
+    Nonempty (Derivation B Γ goal) := by
+  apply optionGraphCases parser ![sourceTape s k r i] goal
+  · intro β j Δ keep zero
+    rw [inputsRename] at zero
+    let xs := sourceTape (s.relabel j) (k.relabel j) (r.relabel j)
+    have landed : (sourceTape s k r i).relabel j = xs i := by
+      change (fun a => (sourceTape s k r a).relabel j) i = xs i
+      rw [tripleInputsRename]
+    rw [landed] at zero
+    have lost := zeroBranchElim (parserAt i) (constantZero 3) (constantOne 3) (suc z) xs
+      (liftParser i xs z zero) (renameUnit (parsedAt i) s k r h j Δ keep)
+    obtain ⟨bad⟩ := valueUnique (constantZero 3) (suc z) z xs lost (constantZeroValue xs)
+    exact ⟨Derivation.explosion (sucNeZeroApply bad)⟩
+  · intro β j Δ out keep positive
+    rw [inputsRename] at positive
+    exact next β j Δ out keep positive
+
+theorem selectedCore (core : Program 3) (s k r ds dk dr : OTerm α)
+    (p : ParsedTriplet B Γ s k r ds dk dr)
+    (h : Nonempty (Derivation B Γ (programGraph (decodedCall core) (suc z) (sourceTape s k r)))) :
+    Nonempty (Derivation B Γ (programGraph core (suc z) (sourceTape ds dk dr))) := by
+  let xs := sourceTape s k r
+  apply compositionRecover core ![payloadAt 0,payloadAt 1,payloadAt 2] (suc z) xs
+    (sourceTape ds dk dr) h
+  intro i
+  exact Fin.cases (payloadReport 0 xs ds p.source)
+    (Fin.cases (payloadReport 1 xs dk p.kept)
+      (Fin.cases (payloadReport 2 xs dr p.removed) (fun k => Fin.elim0 k))) i
+
+#print axioms chosenParserCases
+#print axioms selectedCore
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionRawGraphProof
