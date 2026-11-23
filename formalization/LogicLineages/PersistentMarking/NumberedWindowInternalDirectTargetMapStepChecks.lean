@@ -1,0 +1,12 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectTargetMapStepProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectTargetMapStepChecks
+open NumberedWindowInternalDirectTargetMapStepTargets
+
+theorem exact_OpenOriginalTargetMapStep : ExactOpenTargetMapStep :=
+  NumberedWindowInternalDirectTargetMapStep.exactOpenTargetMapStep
+
+#print axioms exact_OpenOriginalTargetMapStep
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectTargetMapStepChecks
