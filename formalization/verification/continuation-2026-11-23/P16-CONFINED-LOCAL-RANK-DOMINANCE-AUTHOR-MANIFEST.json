@@ -1,0 +1,43 @@
+{
+  "status": "frozen source only; native not run",
+  "paper": 16,
+  "gate": "LogicLineages.PersistentMarking.NumberedWindowConfinedLocalRankDominanceProof",
+  "expected_named_axiom_outputs": [
+    "exact_ConfinedRankBelowFixedQuote"
+  ],
+  "exact_unchanged_target": "formalization/LogicLineages/PersistentMarking/NumberedWindowConfinedRankDominanceTargets.lean",
+  "target_sha256": "4e81b998999459e038df6539964abb344e3ea4e1aded763f0dc4d05fef48cf93",
+  "source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowConfinedLocalRankDominanceProof.lean": "19cf5be260b040dcf2d611ef44ce0ffb8cd7efa8a4b7944e5e514d20189e107c",
+    "formalization/verification/continuation-2026-11-23/P16-CONFINED-LOCAL-RANK-DOMINANCE-SOURCE-MAP.md": "9b8dead7ed20c7f5836a90fb41ff1ff64746225e87871e990280d9ce3aa64aba"
+  },
+  "prior_source_and_evidence_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowConfinedRankDominanceTargets.lean": "4e81b998999459e038df6539964abb344e3ea4e1aded763f0dc4d05fef48cf93",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowConfinedRankMapChecks.lean": "cd77e88bd6a594d5826215810dd9d85dbf28cbf31c4e54d3e1341becd0b93b8a",
+    "formalization/LogicLineages/PersistentMarking/OrdinalPredecessorClosedRankProof.lean": "9cb307efc0415aef0201049408a5741d9ca9615367b62deeffdaa89d93161d94",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowConfinedRankDominanceProof.lean": "13781110a22ca9cc2679bfa64110ce8cc9fae2e11fbb56f3c828c6299b1b22fa",
+    "formalization/verification/new-paper-set-2026-11-18/accepted/521-confined-fixed-window-rank-map.json": "8c91511c669df78aad1a748899e77a707de8ec7b78c0a7daeba4e97592528f9a",
+    "formalization/verification/new-paper-set-2026-11-18/accepted/522-ordinal-rank-predecessor-closed-restriction.json": "e528404286bca5c287669995d0041e8bcebe363a1b62f4acb51c7c2900897000"
+  },
+  "static_closures": {
+    "old_two_theorem_proof": {
+      "local": 434,
+      "external": [
+        "Init",
+        "Init.Data.List.MinMax",
+        "Init.Data.List.Perm",
+        "Mathlib.SetTheory.Ordinal.Rank"
+      ]
+    },
+    "new_local_only_proof": {
+      "local": 176,
+      "external": [
+        "Init",
+        "Mathlib.SetTheory.Ordinal.Rank"
+      ]
+    }
+  },
+  "global_accessibility_import_removed": true,
+  "lean_pin": "leanprover/lean4:v4.32.0-rc1",
+  "scope": "Conditional at the exact old theorem on both genuine local Acc witnesses. Existing global wrapper and all BH/ID1 obligations remain open."
+}
