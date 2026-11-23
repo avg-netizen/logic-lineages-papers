@@ -1,0 +1,14 @@
+# Actual absent needle forces zero original literal entry count
+
+Exact gate `LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountAbsentChecks`,
+alias `exact_OpenLiteralAbsentCountZero`. Object list induction on the literal
+count input, no standard model implication. Head and tail absence follow
+using genuine cons membership introductions; the original rejecting equality
+branch leaves the prior actual output unchanged, so the induction may keep
+the output term fixed. Combined all-needle congruence is separate.
+
+9cd2279f688a076e8943facd455760ee6b13497927c35d66a51d59048993de43  formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAbsentChecks.lean
+c470555876b2ae5bb8c716c30486883061e1f0095d689e66b1e637a66be3caaf  formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAbsentConsProof.lean
+baee21a303c55f4e5434da3eee517f6fba16a26fc41837cdc4ddbd35e8d8ea1b  formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAbsentProof.lean
+483b58cacc58714fb369fdc8db479ab444543f0b561c73321d62139063b60cfc  formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAbsentSyntaxProof.lean
+b4225f1509edb48b98171d8388bd5004f33ee3317cea1d68f034586301caf053  formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAbsentTargets.lean
