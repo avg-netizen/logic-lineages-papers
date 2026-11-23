@@ -1,0 +1,60 @@
+{
+  "paper": 16,
+  "status": "frozen source only; two separate native gates pending",
+  "gate_order": [
+    "LogicLineages.PersistentMarking.NativeTowerVariableDimensionBandReflectionProof",
+    "LogicLineages.PersistentMarking.NativeTowerVariableDimensionBandImageRelIsoProof"
+  ],
+  "expected_named_axiom_outputs": {
+    "LogicLineages.PersistentMarking.NativeTowerVariableDimensionBandReflectionProof": [
+      "exact_OriginalBandLexTrichotomy",
+      "exact_OriginalBandNativeComparisonIff",
+      "exact_OriginalBandImageInjective",
+      "exact_OriginalBandLexWellFounded"
+    ],
+    "LogicLineages.PersistentMarking.NativeTowerVariableDimensionBandImageRelIsoProof": [
+      "exact_OriginalVariableBandLexWellOrder",
+      "exact_ActualFixedTowerBandRelIsoAndBound",
+      "exact_ActualFixedTowerBandImageWellOrder"
+    ]
+  },
+  "source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerVariableDimensionBandReflectionProof.lean": "823a8a2eb0d18d8e8f8cf5e2ffef02d4503f314fc1ebbffb9838087c7c02576f",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerVariableDimensionBandImageRelIsoProof.lean": "9cb408888b244079cac878d1fdfc679ef03ab198a56bd4affbb8f3493a2c9f05",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-FIXED-TOWER-VARIABLE-BAND-IMAGE-SOURCE-MAP.md": "7da32d187ea2c9304e0ee291c3da7c8b4874aea1e61bf3d5b9d90813aff8fc04"
+  },
+  "interface_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NativeTowerVariableDimensionBandsProof.lean": "3b716bd419e5a861573e7fca3ba8d86f51a9cda436923a3a6dd56d5be344d9d2",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerNestedInnerOrbitReflectionProof.lean": "730bbceae4db16dfcece5260c5faedb67f08ffcbf0b61641a723d56afd11cde1",
+    "formalization/LogicLineages/PersistentMarking/NativeTowerOuterIndexConeProof.lean": "6850330beb1ffe02d6f7abf0f1d2fef8c85671e210ff062bdf062b4eb6dad660",
+    "formalization/LogicLineages/PersistentMarking/NativeClosedStrictWellFoundedChecks.lean": "cc7abcd142910c274d0148a3c87bebe0f00e550336d25f10d01655b1cc2a13b5",
+    "formalization/.lake/packages/mathlib/Mathlib/Logic/Equiv/Set.lean": "65c3205dafdb9c0a8714495c3fc2983d615050dedc6379dec4614f2839a98777",
+    "formalization/.lake/packages/mathlib/Mathlib/Order/RelIso/Basic.lean": "f134e208ef1ed7469f55b728b3abbaf40d3b9460e8d396abbdb8740673919f45",
+    "formalization/.lake/packages/mathlib/Mathlib/Order/RelClasses.lean": "a28675ceb792d080859b6e513d9fa3e5e03eb58a94b30fa0ea59b477b05db079"
+  },
+  "prior_evidence_sha256": {
+    "formalization/build-reports/1795454773334120541-28.json": "0502e448b2e3c277f1ac60b492b1454d0f62cef93cc8f536a7783bd65aa0baa1",
+    "formalization/build-reports/1795454542908505629-130.json": "5b6836af22ebb3ba8018392d2722d2435040214620856068bd613e57afd64ee6",
+    "formalization/build-reports/1795454544889282287-140.json": "a798470da66dccd8f38eaf14a930bc143cd8e4a75b67118bb14c13529ca52f38"
+  },
+  "static_closures": {
+    "LogicLineages.PersistentMarking.NativeTowerVariableDimensionBandReflectionProof": {
+      "local": 682,
+      "external": [
+        "Init",
+        "Init.Data.List.MinMax",
+        "Init.Data.List.Perm"
+      ]
+    },
+    "LogicLineages.PersistentMarking.NativeTowerVariableDimensionBandImageRelIsoProof": {
+      "local": 683,
+      "mathlib_source_modules": 175,
+      "mathlib_oleans_present": 175,
+      "direct_additional_external": [
+        "Mathlib.Logic.Equiv.Set",
+        "Mathlib.Order.RelIso.Basic"
+      ]
+    }
+  },
+  "boundary": "Full original dependent sum realized as actual bounded well-ordered original native image, no named ordinal, rank or height."
+}

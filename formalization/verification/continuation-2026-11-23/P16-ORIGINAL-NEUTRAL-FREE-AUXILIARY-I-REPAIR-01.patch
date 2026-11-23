@@ -1,0 +1,10 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalNeutralAuxiliaryFreeMembershipProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalNeutralAuxiliaryFreeMembershipProof.lean
+@@ -29,2 +29,5 @@
+-  exact_OpenLiteralNeutralFreeAuxICore exact_OpenNeutralBottomAuxTargetShapeCases i r c α Γ
+-    x ctx dom cod stored name arg shape held
++  exact_OpenLiteralNeutralFreeAuxICore
++    (fun B _ Δ y cc dd ee ss goal flags next =>
++      exact_OpenNeutralBottomAuxTargetShapeCases (B := B) (Γ := Δ)
++        y cc dd ee ss goal flags next)
++    i r c α Γ x ctx dom cod stored name arg shape held

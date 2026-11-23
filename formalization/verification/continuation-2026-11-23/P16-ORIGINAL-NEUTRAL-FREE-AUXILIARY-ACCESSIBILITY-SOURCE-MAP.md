@@ -1,0 +1,5 @@
+# P16: free-headed auxiliary I on the same literal original body
+
+Paper 16, [ordinals.tex](../../../16-persistent-marking-termination-ordering/sections/ordinals.tex) 112–121. In the numerical layer the chosen even checker preserves the original positive bit on every input under the original scalar and r fit. Independently in the object arithmetic, the physical program gives the same body's real carrier of each accepted successor.
+
+The exact original positive acceptance at a carried free-headed auxiliary sorts successors into whole bottom and bottom-headed auxiliaries. The latter opens the *target's own* selected right argument from the real field report. Both successors are I by the existing same-body terminal rules. The original accessibility introduction rule then yields I of the carried free-headed auxiliary. No parser, whole progress or arbitrary C premise is supplied to the final theorem. This is a single free-headed application form, not an arbitrary nested neutral spine or the entire scalar computability induction.

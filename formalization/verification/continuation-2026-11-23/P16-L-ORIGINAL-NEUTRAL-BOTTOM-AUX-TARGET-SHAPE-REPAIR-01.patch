@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalNeutralAuxiliaryBottomTargetShapeProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalNeutralAuxiliaryBottomTargetShapeProof.lean
+@@ -74 +74,2 @@
+-  · simpa only [ρ,jk,Term.relabel_relabel] using a
++  · have assoc : (m ∘ k) ∘ j = m ∘ (k ∘ j) := rfl
++    simpa only [ρ,jk,Term.relabel_relabel,assoc] using a
+@@ -76 +77 @@
+-  · simpa only [Term.relabel_relabel] using argReport
++  · simpa only [Term.relabel_relabel,unary] using argReport
