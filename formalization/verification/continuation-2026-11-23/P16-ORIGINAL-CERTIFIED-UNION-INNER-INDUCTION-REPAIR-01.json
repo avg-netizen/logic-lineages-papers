@@ -1,0 +1,34 @@
+{
+  "status": "frozen proof-only repair; separate native retry needed",
+  "gate": "LogicLineages.PersistentMarking.NumberedWindowInternalCertifiedUnionInnerInductionProof",
+  "failed_native_receipt": "1795444680424307239-8",
+  "failed_native_receipt_sha256": "40e376b9edfce3d75eaefcb07dc5e43d2877f0102ffc9d368b6b849de2cd6bb3",
+  "failed_source": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/certified-union-inner-induction-repair01/NumberedWindowInternalCertifiedUnionInnerInductionProof.lean.failed-source",
+    "sha256": "5accc92c448a321f48ee51926f8531fdca64dd06eb3478b0a731ba8f04cb9a7e"
+  },
+  "native_log": {
+    "sha256": "4e5e058957ed4e620d5156094b9071dc3b489c449fccb1c7a7e771f48c1738ed"
+  },
+  "reverse_patch": {
+    "path": "formalization/verification/continuation-2026-11-23/drafts/certified-union-inner-induction-repair01/typed-retained-left-parameter.patch",
+    "sha256": "199cf8aff7d0adfc06f0b391985a831076c643125793790c7894e47515dca2b2"
+  },
+  "repaired_proof": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedUnionInnerInductionProof.lean",
+    "sha256": "ac64199b5ecfc378bff2c6af14ca34021932ae794601ec4f9c4d052696c3a1d9"
+  },
+  "original_author_manifest": {
+    "path": "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-CERTIFIED-UNION-INNER-INDUCTION-AUTHOR-MANIFEST.json",
+    "sha256": "896f32d5ba4cbb65e12aa136614c0ae63b379ac9985f293033f79ca3aea472dd"
+  },
+  "unchanged_syntax": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedUnionInnerSyntaxProof.lean",
+    "sha256": "dbcdf4a3a4ecd92c77628dad39b9c685a7ae7db507c63fab18580e9b9e668d82"
+  },
+  "repair": "Type-annotate only the proof-local left parameter as OTerm (α ⊕ Fin 1). This fixes both unresolved β metavariables after intro; the failed unsolved theorem goal is downstream. No target or imports changed. Reverse patch reproduced exact original bytes.",
+  "native_candidate": {
+    "status": "checked",
+    "receipt": "1795444800521201221-8"
+  }
+}
