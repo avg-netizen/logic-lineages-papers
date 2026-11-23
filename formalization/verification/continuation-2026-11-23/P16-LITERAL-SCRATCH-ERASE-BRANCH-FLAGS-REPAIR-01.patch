@@ -1,0 +1,22 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseBranchFlagsProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseBranchFlagsProof.lean
+@@ -41 +41 @@
+-    fin_cases i
++    refine Fin.cases ?_ (fun k => ?_) i
+@@ -44 +44 @@
+-    · rfl
++    · exact Fin.cases rfl (fun t => Fin.elim0 t) k
+@@ -73 +73 @@
+-    fin_cases i
++    refine Fin.cases ?_ (fun k => ?_) i
+@@ -76,2 +76 @@
+-    · rfl
+-    · rfl
++    · exact Fin.cases rfl (Fin.cases rfl (fun t => Fin.elim0 t)) k
+@@ -108 +107 @@
+-    fin_cases i
++    refine Fin.cases ?_ (fun k => ?_) i
+@@ -111,2 +110 @@
+-    · rfl
+-    · rfl
++    · exact Fin.cases rfl (Fin.cases rfl (fun t => Fin.elim0 t)) k

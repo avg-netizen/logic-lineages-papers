@@ -1,0 +1,73 @@
+{
+  "status": "frozen source only; native pending",
+  "paper": 16,
+  "gate": "LogicLineages.PersistentMarking.NumberedWindowInternalLiteralSparseJFoldProof",
+  "optional_staged_gates": [
+    "LogicLineages.PersistentMarking.NumberedWindowInternalLiteralSparseJFoldSyntaxProof",
+    "LogicLineages.PersistentMarking.NumberedWindowInternalLiteralSparseJFoldSupportProof"
+  ],
+  "expected_named_axiom_outputs": [
+    "exact_LiteralSparseParsedJFold"
+  ],
+  "source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSparseJFoldSyntaxProof.lean": "d6d7b013a5985b2caa393650a090a84c941ff1750f467a7267d85ebb511270dd",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSparseJFoldSupportProof.lean": "980f92d5c26599f7f87d906fd0f04b14623bdf24f428807aa4d604b87e87dfa7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSparseJFoldProof.lean": "3c83f180b2bfa00bd045ae6dd7431b3304688b9dae146b74ab825626160335ca",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-LITERAL-SYMBOLIC-SPARSE-J-FOLD-SOURCE-MAP.md": "46872b50f6f1286c88effee2af476828e4ba6235da37d5d0cb8ad5819c3ba5b4"
+  },
+  "direct_source_pins_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParsedFoldProof.lean": "6ebb4e8ae0fc22b159bed4d5e49aaa7a4da71cc83bdb56f5f0b78cbe1667766a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParsedFoldSyntaxProof.lean": "95ace8dec0aa37647902206dab5f053450b1a57c926bd16f24f14c47deb1d805",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedUnionLiteralJSpecializedProof.lean": "e5ab9fe88835d2c2daf2d4020b4d615500aee2f094574cef7ed7063250f49044",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralOriginAndConsProof.lean": "0cb63bffbe39c106c1c407e38e4d476fe788763a6daaa119f73c1307c142c624",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchConsProof.lean": "34118eadf8a71ded203d1a4401a1860522057785af903175c0dbe5a24c5e02e7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseScratchMembershipOpenMemberConsProof.lean": "b570824e040605552c86d311033a786121edd9bd47bb816d12437fd95c9831e0"
+  },
+  "prior_evidence_pins_sha256": {
+    "formalization/verification/continuation-2026-11-23/1576-original-literal-union-carrier-and-j-native.json": "d1c32833967c1ac3f43a46867a334985d3fc8b035c425a5dfce1ab20dbc2ab11",
+    "formalization/verification/continuation-2026-11-23/1578-original-literal-origin-and-cons-native.json": "073d58a67675ed0712ddc792b130b799a5bca308c428c3c9b598c7de6cc668d6"
+  },
+  "generic_fold_pass": {
+    "receipt": "1795447591157061551-22",
+    "result_sha256": "747f3e1fea0f709c9cb591bb2ea25b5120cbae657f83a9a85c16e82555a3a51c"
+  },
+  "static_closure": {
+    "local": 1560,
+    "external": [
+      "Init",
+      "Init.Data.List.Lemmas",
+      "Init.Data.List.Perm",
+      "Init.Data.Nat.Lemmas",
+      "Lean.Elab.Command",
+      "Lean.Util.CollectAxioms",
+      "Mathlib.Computability.PartrecCode",
+      "Mathlib.Computability.Primrec.List",
+      "Mathlib.Data.Finset.Card",
+      "Mathlib.Data.Finset.Lattice.Fold",
+      "Mathlib.Data.Finset.Max",
+      "Mathlib.Data.Finset.Union",
+      "Mathlib.Data.Fintype.Card",
+      "Mathlib.Data.Fintype.Fin",
+      "Mathlib.Data.Fintype.Order",
+      "Mathlib.Data.Fintype.Pi",
+      "Mathlib.Data.Fintype.Powerset",
+      "Mathlib.Data.Fintype.Prod",
+      "Mathlib.Data.Fintype.Sigma",
+      "Mathlib.Data.List.Count",
+      "Mathlib.Data.List.FinRange",
+      "Mathlib.Data.List.Forall2",
+      "Mathlib.Data.List.Nodup",
+      "Mathlib.Data.List.Perm.Basic",
+      "Mathlib.Data.List.Permutation",
+      "Mathlib.Data.Multiset.DershowitzManna",
+      "Mathlib.Data.Nat.Pairing",
+      "Mathlib.Data.Nat.Sqrt",
+      "Mathlib.Logic.Equiv.List",
+      "Mathlib.Logic.Function.Iterate",
+      "Mathlib.Logic.Godel.GodelBetaFunction",
+      "Mathlib.ModelTheory.Semantics",
+      "Mathlib.Order.FixedPoints"
+    ]
+  },
+  "scope": "Actual original symbolic J fold on genuine positive sparse parser and typed same scratch, under explicitly supplied nil J, scalar singleton promotion, and original certificate splitting. No unconditional J or numbered promotion."
+}
