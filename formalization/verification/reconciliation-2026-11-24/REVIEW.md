@@ -19,8 +19,10 @@ Both proof branches descend from that fork and from pre-merge main.
   fork to `ff0f88fefe74f978fc40ed6864f11c1f4786bc69`, this reconciliation
   takes 485 exact paths: eight supporting acceptances with their referenced
   evidence and the complete missing local Lean closure (436 files) of
-  those proof endpoints. No prior draft or alternate Paper 17 compiler
-  chain is recursively merged. The full prior history remains at its pin.
+  those proof endpoints. Some of the eight records also pin exact
+  failed-source or patch artifacts as evidence; those are kept unchanged.
+  No unrelated prior draft or alternate Paper 17 compiler chain is merged.
+  The full prior history remains at its pin.
 
 The combined change from pre-merge main to the newer baseline already
 contains 72,143 changed paths, mostly cumulative formalization evidence
@@ -49,7 +51,8 @@ statements describe the reconciliation delta, not all inherited commits.
   The differing records under numbers 1430–1494 are branch-local.
   [INDEX.json](INDEX.json) maps exact path plus pin for both branches.
   No conflicting prior numbered ID was copied into the live acceptance
-  directory, and no old record content was rewritten.
+  directory, and no old record content was rewritten. A test overlay that
+  reintroduced both actual #1430 files was rejected by the ID check.
 
 ## Numbered correspondence disposition
 
@@ -77,6 +80,11 @@ exact manuscript correspondence rather than removal of the Lean results.
 * The two records move unchanged to `historical-numbered/`, outside the
   live checked-record bijection. The other four newer promotions remain
   in force. No supporting proof is counted as a new numbered adoption.
+Their native gate and source pins are independently cross-checked. The
+Paper 17 main receipt pins the source map as it existed before its Outcome
+section was appended. The exact 2,135-byte historical prefix is preserved
+under this review with the original expected digest; the current expanded
+map and native evidence are unchanged.
 
 ## Verification boundary
 
@@ -89,6 +97,9 @@ field on every packet; older packets with a native receipt and scope map
 already violated that assumption before this reconciliation. Its failure
 is not reported as a pass. The focused validator does not retroactively
 assert independent review or validate an entire historical build.
+Two trailing spaces in byte-pinned imported sources are retained rather
+than modifying the historical inputs; all other reconciliation files pass
+the standard diff whitespace check.
 
 The selected prior records retain their original standard-axiom receipt
 metadata and SHA-pinned source. The original host receipts were checked

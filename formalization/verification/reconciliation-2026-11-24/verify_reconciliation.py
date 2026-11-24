@@ -133,11 +133,40 @@ def main():
         assert receipt["named_axiom_output"] == sample["axioms"], rid
         assert len(sample["axioms"]) == packet["exact_alias_count"], rid
         assert all(set(x) <= AXIOMS for x in sample["axioms"].values()), rid
+    inherited = index["retained_newer_numbered_evidence"]
+    for rid, item in inherited.items():
+        acceptance = ROOT / item["acceptance"]
+        assert ids[rid] == acceptance, rid
+        packet = load(acceptance)
+        assert packet["kind"] == NUMBERED, rid
+        supporting = load(LIVE / packet["supporting_record"]) if "supporting_record" in packet else {}
+        linked = dict(supporting, **packet)
+        ep = ROOT / item["native_evidence"]
+        assert ep == (VERIFY / linked["evidence"]).resolve(), rid
+        assert digest(ep) == linked["evidence_sha256"] == item["evidence_sha256"], rid
+        receipt = load(ep)
+        assert receipt["status"] == "checked", rid
+        assert (receipt.get("exact_gate") or receipt["native_module"]) == item["exact_gate"], rid
+        assert receipt["native_receipt"] == packet["native_receipt"] == item["native_receipt"], rid
+        assert receipt["native_receipt_sha256"] == item["native_receipt_sha256"], rid
+        assert all(set(xs) <= AXIOMS for xs in receipt["named_axiom_output"].values()), rid
+        overrides = item["historical_source_pin_overrides"]
+        assert overrides.keys() <= receipt["source_pins"].keys(), rid
+        for path, expected in receipt["source_pins"].items():
+            if path not in overrides:
+                assert digest(ROOT / path) == expected, (rid, path)
+            else:
+                override = overrides[path]
+                archived = ROOT / override["archived_path"]
+                assert digest(archived) == expected, (rid, path)
+                assert digest(ROOT / path) == override["current_sha256"], (rid, path)
+                assert (ROOT / path).read_bytes()[:override["prefix_bytes"]] == archived.read_bytes(), (rid, path)
     print(json.dumps({"archive_pairs": len(archive["files"]), "numbered_status": count,
                       "current_acceptance_ids": len(ids), "historical_adoptions": len(retired),
                       "branch_local_identifier_collisions": len(index["collisions"]),
                       "imported_older_paths": len(index["imported_older_paths_git_blob"]),
                       "checked_support_receipt_metadata": len(index["selected_older_support"]),
+                      "retained_numbered_receipt_metadata": len(inherited),
                       "verification": "static only; not a full build or re-audit of historical acceptance decisions"}, indent=2))
 
 
