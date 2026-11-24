@@ -27,9 +27,12 @@ Both proof branches descend from that fork and from pre-merge main.
 The combined change from pre-merge main to the newer baseline already
 contains 72,143 changed paths, mostly cumulative formalization evidence
 and sources. No claim is made here to have repeated a line-by-line review
-of that whole history. The new reconciliation adds no build-system,
-CI, toolchain, dependency-manifest, or paper manuscript edit; these
-statements describe the reconciliation delta, not all inherited commits.
+of that whole history. No toolchain, dependency-manifest, or paper manuscript was edited in
+the reconciliation delta. The focused
+[checker traversal correction](CI-IMPORT-TRAVERSAL.md) repairs an
+inherited Python overflow and makes the two existing CI list producers
+propagate failures. No verification step, compiler/resource limit, or
+workflow trigger was removed or relaxed.
 
 ## Exact overlap and selected reuse
 

@@ -86,6 +86,74 @@ def source_for(module: str) -> Path | None:
         path = ROOT / (module.replace(".", "/") + ".lean")
     return path if path.is_file() else None
 
+
+def strip_lean_comments(text: str) -> str:
+    # Scan declarations after removing nested block and line comments.
+    code, i, depth = [], 0, 0
+    while i < len(text):
+        if text.startswith('/-', i):
+            depth += 1; code.append('  '); i += 2
+        elif depth and text.startswith('-/', i):
+            depth -= 1; code.append('  '); i += 2
+        elif not depth and text.startswith('--', i):
+            end = text.find('\n', i)
+            if end < 0: break
+            code.append('\n'); i = end + 1
+        else:
+            code.append(text[i] if not depth or text[i] == '\n' else ' '); i += 1
+    return ''.join(code)
+
+
+def dependency_postorder(roots, children):
+    """Yield source modules at exit in deterministic import DFS order.
+
+    Explicit enter/exit frames preserve both cycle detection and ordering
+    without putting large but finite Lean hierarchies on Python's call stack.
+    """
+    active, visited = set(), set()
+    for root in roots:
+        stack = [(root, False)]
+        while stack:
+            module, leaving = stack.pop()
+            if leaving:
+                active.remove(module)
+                visited.add(module)
+                yield module
+            elif module in active:
+                raise RuntimeError("Circular local import: " + module)
+            elif module not in visited:
+                active.add(module)
+                stack.append((module, True))
+                stack.extend((dependency, False) for dependency in reversed(children(module)))
+
+
+def plan_sources(requested):
+    """Validate source text and collect the dependency-first native plan."""
+    dependencies, external_dependencies, external_imports = {}, {}, set()
+
+    def local_children(module):
+        path = source_for(module)
+        if path is None:
+            raise RuntimeError("Missing planned local source: " + module)
+        clean = strip_lean_comments(path.read_text())
+        if re.search(r"\b(?:sorry|admit|native_decide)\b|^\s*(?:private\s+|public\s+)?axiom\b", clean, re.M):
+            raise RuntimeError("Forbidden proof placeholder or axiom in " + module)
+        children, upstream = [], []
+        for line in IMPORT.findall(clean):
+            for dependency in line.split():
+                if source_for(dependency) is not None:
+                    children.append(dependency)
+                else:
+                    external_imports.add(dependency)
+                    upstream.append(dependency)
+        dependencies[module] = children
+        external_dependencies[module] = upstream
+        return children
+
+    order = list(dependency_postorder(requested, local_children))
+    return order, dependencies, external_dependencies, external_imports
+
+
 def resident_kib(pid: int, proc: Path = Path("/proc"), seen: set[int] | None = None) -> int:
     """Measure a process tree without losing own RSS when task/children is absent.
 
@@ -358,48 +426,7 @@ def main() -> int:
         if source_for(module) is None:
             parser.error("Source not found: " + module)
         requested.append(module)
-    order, visiting, visited, dependencies = [], set(), set(), {}
-    external_dependencies = {}
-    external_imports = set()
-    def visit(module):
-        if module in visited:
-            return
-        if module in visiting:
-            raise RuntimeError("Circular local import: " + module)
-        path = source_for(module)
-        if path is None:
-            return
-        visiting.add(module)
-        text = path.read_text()
-        # Scan declarations after removing nested block and line comments.
-        code, i, depth = [], 0, 0
-        while i < len(text):
-            if text.startswith('/-', i):
-                depth += 1; code.append('  '); i += 2
-            elif depth and text.startswith('-/', i):
-                depth -= 1; code.append('  '); i += 2
-            elif not depth and text.startswith('--', i):
-                end = text.find('\n', i)
-                if end < 0: break
-                code.append('\n'); i = end + 1
-            else:
-                code.append(text[i] if not depth or text[i] == '\n' else ' '); i += 1
-        clean = ''.join(code)
-        if re.search(r"\b(?:sorry|admit|native_decide)\b|^\s*(?:private\s+|public\s+)?axiom\b", clean, re.M):
-            raise RuntimeError("Forbidden proof placeholder or axiom in " + module)
-        dependencies[module] = []
-        external_dependencies[module] = []
-        for line in IMPORT.findall(clean):
-            for dependency in line.split():
-                if source_for(dependency) is not None:
-                    dependencies[module].append(dependency)
-                    visit(dependency)
-                else:
-                    external_imports.add(dependency)
-                    external_dependencies[module].append(dependency)
-        visiting.remove(module); visited.add(module); order.append(module)
-    for module in requested:
-        visit(module)
+    order, dependencies, external_dependencies, external_imports = plan_sources(requested)
     if args.core_profile:
         allowed_prefixes = ('Init', 'Lean', 'Std')
         forbidden = sorted(d for d in external_imports

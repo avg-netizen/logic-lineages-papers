@@ -43,7 +43,14 @@ jobs:
         run: |
           set -euo pipefail
           lean --version
-          mapfile -t modules < <(python3 scripts/mathlib_imports.py)
+          module_list="$(mktemp)"
+          trap 'rm -f "$module_list"' EXIT
+          python3 scripts/mathlib_imports.py > "$module_list"
+          mapfile -t modules < "$module_list"
+          if (( ${#modules[@]} == 0 )); then
+            echo 'No Mathlib cache roots were listed; refusing fallback cache acquisition.' >&2
+            exit 1
+          fi
           lake exe cache get "${modules[@]}"
           git diff --exit-code -- lake-manifest.json lakefile.toml lean-toolchain
 
@@ -86,7 +93,14 @@ jobs:
               'coverage': 'Only the accepted gates imported by LogicLineages.lean; most full paper targets remain pending.'
           }, indent=2) + '\n')
           PY
-          mapfile -t gates < <(python3 scripts/accepted_gates.py)
+          gate_list="$(mktemp)"
+          trap 'rm -f "$gate_list"' EXIT
+          python3 scripts/accepted_gates.py > "$gate_list"
+          mapfile -t gates < "$gate_list"
+          if (( ${#gates[@]} == 0 )); then
+            echo 'No accepted gates were listed; refusing an empty verification plan.' >&2
+            exit 1
+          fi
           # Explicit profiles measured during external continuation. Defaults remain
           # conservative for other shared development hosts.
           python3 scripts/check.py --fresh --memory-mib 2048 --rss-mib 1536 --min-free-mib 2048 "${gates[@]}"

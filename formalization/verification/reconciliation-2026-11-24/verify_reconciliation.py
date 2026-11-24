@@ -28,13 +28,18 @@ def content_id(path):
     return sha1(b"blob " + str(len(body)).encode() + b"\0" + body).hexdigest()
 
 
-def verify_link_fields(record, is_retired=False):
+def verify_link_fields(record, tool_pins, seen_tools, is_retired=False):
     if "evidence" in record:
         assert digest(VERIFY / record["evidence"]) == record["evidence_sha256"], record["id"]
     else:
         assert record["kind"] == NUMBERED and record.get("supporting_record"), record["id"]
     for p, h in record.get("source_pins", {}).items():
-        assert digest(ROOT / p) == h, (record["id"], p)
+        if digest(ROOT / p) != h:
+            archived = tool_pins.get(p, {}).get(h)
+            assert archived is not None, (record["id"], p)
+            assert record["id"] in archived["records"], (record["id"], p)
+            assert digest(ROOT / archived["historical_path"]) == h, (record["id"], p)
+            seen_tools.add((p, h, record["id"]))
     for field in ("statement_scope_check", "source_map", "freeze"):
         if field in record:
             assert (VERIFY / record[field]).is_file(), (record["id"], field)
@@ -52,6 +57,8 @@ def verify_link_fields(record, is_retired=False):
 
 def main():
     index = load(HERE / "INDEX.json")
+    tool_pins = index.get("historical_tool_pins", {})
+    seen_tools = set()
     archive = load(ROOT / "archive/comparison-editions-pre-2026-11-17/MANIFEST.json")
     for row in archive["files"]:
         for key in ("original_path", "archived_path"):
@@ -91,7 +98,7 @@ def main():
         assert rid not in ids, (rid, ids.get(rid), path)
         ids[rid] = path
         assert packet["kind"] in (NUMBERED, "supporting only"), path
-        verify_link_fields(packet)
+        verify_link_fields(packet, tool_pins, seen_tools)
         if packet["kind"] == NUMBERED:
             key = packet["statement"]
             assert key not in live_numbered, key
@@ -111,8 +118,10 @@ def main():
         assert digest(p) == item["sha256"], key
         packet = load(p)
         assert packet["kind"] == NUMBERED and packet["statement"] == key and packet["id"] not in ids, key
-        verify_link_fields(packet, is_retired=True)
+        verify_link_fields(packet, tool_pins, seen_tools, is_retired=True)
         retired[packet["id"]] = item["original_path"]
+    assert seen_tools == {(p, h, rid) for p, versions in tool_pins.items()
+                          for h, archive in versions.items() for rid in archive["records"]}
     assert set(index["collisions"]) == {f"new-set-{i}" for i in range(1430, 1495)}
     for rid, paths in index["collisions"].items():
         newer = retired[rid] if rid in retired else str(ids[rid].relative_to(ROOT))
@@ -167,6 +176,7 @@ def main():
                       "imported_older_paths": len(index["imported_older_paths_git_blob"]),
                       "checked_support_receipt_metadata": len(index["selected_older_support"]),
                       "retained_numbered_receipt_metadata": len(inherited),
+                      "preserved_historical_tool_pins": len(seen_tools),
                       "verification": "static only; not a full build or re-audit of historical acceptance decisions"}, indent=2))
 
 
