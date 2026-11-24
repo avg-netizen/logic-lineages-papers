@@ -25,6 +25,9 @@ not change this limit, and the evidence below is not a full CI pass.
   the conditional neutral/fresh work on the scalar side.
 * [Literal context descent and fuel](LITERAL-CONTEXT-OWN-FUEL.md):
   exact numerical own-fuel equivalence and open function-context peeling.
+* [Open auxiliary own-fuel induction](AUXILIARY-OWN-FUEL-INDUCTION.md):
+  an actually descending fallback and original strong induction give
+  the open child's own-code graph in the selected typed checker.
 
 ## Rerun the focused work
 
