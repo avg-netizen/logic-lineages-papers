@@ -23,6 +23,8 @@ not change this limit, and the evidence below is not a full CI pass.
 * [Direct hops and root classification](SCALAR-PATH-AND-ROOT-CLASSIFICATION.md):
   a positive path's actual first hop, the eight typed root cases, and
   the conditional neutral/fresh work on the scalar side.
+* [Literal context descent and fuel](LITERAL-CONTEXT-OWN-FUEL.md):
+  exact numerical own-fuel equivalence and open function-context peeling.
 
 ## Rerun the focused work
 
