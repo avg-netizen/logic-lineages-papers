@@ -28,6 +28,15 @@ not change this limit, and the evidence below is not a full CI pass.
 * [Open auxiliary own-fuel induction](AUXILIARY-OWN-FUEL-INDUCTION.md):
   an actually descending fallback and original strong induction give
   the open child's own-code graph in the selected typed checker.
+* [Typed auxiliary children](AUXILIARY-TYPED-CHILD.md): the actual
+  same-context strict memo recovers both original child guards, giving
+  the same typed callback on the child's own witness.
+* [Actual child addresses and target carriers](ADDRESSED-AUXILIARY-AND-CARRIERS.md):
+  actual reported auxiliary least addresses and direct hops; a separate
+  ordinary installation gives a scalar carrier at each direct edge's target.
+* [Covered carriers and remaining neutral rules](COVERED-CARRIER-NEUTRAL-BRIDGE.md):
+  one covered selection and its carrier wrapper; actual trace recovery
+  and child installation with its explicit destination scalar check.
 
 ## Rerun the focused work
 
