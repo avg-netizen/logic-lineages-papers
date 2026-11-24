@@ -39,7 +39,7 @@ private theorem differentiableAt_continuousAt {g : ℝ → ℝ} {x : ℝ}
     simpa only [sub_add_cancel] using hD.isLittleOTVS.isBigOTVS.fun_add hlin
   have hdisp : (fun y : ℝ ↦ y - x) =o[ℝ; 𝓝 x] (1 : ℝ → ℝ) :=
     isLittleOTVS_one.mpr (by
-      simpa only [sub_self] using ((tendsto_id : Tendsto id (𝓝 x) (𝓝 x)).sub_const x))
+      simpa only [id_eq, sub_self] using ((tendsto_id : Tendsto id (𝓝 x) (𝓝 x)).sub_const x))
   have hzero : Tendsto (fun y : ℝ ↦ g y - g x) (𝓝 x) (𝓝 0) :=
     isLittleOTVS_one.mp (hdiff.trans_isLittleOTVS hdisp)
   change Tendsto g (𝓝 x) (𝓝 (g x))
