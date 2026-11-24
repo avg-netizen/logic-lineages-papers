@@ -2,6 +2,7 @@ module
 
 public import LogicLineages.Ultrafilters.Targets
 public import LogicLineages.Ultrafilters.Translation
+public import Mathlib.Analysis.Calculus.FDeriv.Basic
 public import Mathlib.Tactic.Linarith
 
 @[expose] public section

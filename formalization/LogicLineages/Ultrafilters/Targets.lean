@@ -1,7 +1,7 @@
 module
 
 public import LogicLineages.Ultrafilters.Definitions
-public import Mathlib.Analysis.Calculus.Deriv.Basic
+public import Mathlib.Topology.MetricSpace.Basic
 
 /-! Independent paper-11 statements. The full universal properness target
 is specified now and remains pending until its actual witness is constructed. -/
