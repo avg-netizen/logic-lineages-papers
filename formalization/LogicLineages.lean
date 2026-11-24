@@ -2022,7 +2022,6 @@ Only fixed statement gates with successful compiler and axiom receipts belong
 here. The full paper inventory and remaining dependencies are in TARGETS.json.
 -/
 
-#audit_namespace LogicLineages
 
 -- Accepted local continuation through R026; no whole-source promotions.
 public import LogicLineages.ComputabilityKnowledge.GorbowUniformCommonKnowledgeStatementChecks
@@ -2394,3 +2393,5 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.Continuation20
 
 -- P12 chosen CK implication transport and the literal/selector theta bridge.
 public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.ChosenCommonKnowledgeTransport.StatementChecks
+
+#audit_aggregate_namespace LogicLineages
