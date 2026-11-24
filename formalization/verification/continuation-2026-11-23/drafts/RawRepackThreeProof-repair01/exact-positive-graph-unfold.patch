@@ -1,0 +1,11 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRawRepackThreeProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRawRepackThreeProof.lean
+@@ -12,0 +13 @@
++open NumberedWindowInternalSparsePathEnvelopeTargets (unary)
+@@ -43,3 +44,3 @@
+-  · simpa only [all,kj,← Term.relabel_relabel,Function.comp_assoc] using one
+-  · simpa only [all,kj,← Term.relabel_relabel] using two
+-  · simpa only [all,kj,← Term.relabel_relabel] using pc
++  · simpa only [all,kj,positiveGraph,unary,← Term.relabel_relabel,Function.comp_assoc] using one
++  · simpa only [all,kj,positiveGraph,unary,← Term.relabel_relabel] using two
++  · simpa only [all,kj,positiveGraph,unary,← Term.relabel_relabel] using pc

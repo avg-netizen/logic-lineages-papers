@@ -20,7 +20,7 @@
         },
         {
           "path": "16-persistent-marking-termination-ordering/sections/decision.tex",
-          "sha256": "2dcac539d8d6466fa8baa87f88cc3841f17c64e4481bd860bb6f67690eada275"
+          "sha256": "bbf73326e21a6e71984bd46e8c86696013c65ac1875a113a48786db996880af9"
         },
         {
           "path": "16-persistent-marking-termination-ordering/sections/foundations.tex",
@@ -210,18 +210,15 @@
           "file": "16-persistent-marking-termination-ordering/sections/decision.tex",
           "line": 149,
           "statement_latex": "[Structural interpretation]\\label{lem:structural-interpretation}\nInterpretation and this original-spine helper are monotone and commute\nwith weakening. Interpretation respects capture-avoiding substitution.\nFor environments interpreting concrete substitutions, and at a fixed\npoint of the constructor operator of Lemma~\\ref{lem:operator}, the helper\ninterprets full application of the resulting substituted source,\nincluding its undefined cases. The fixed-point hypothesis is needed:\nat the bottom family the helper's output for an ordinary successor\napplied to a covered ground variable differs from the interpretation\nof that application. This is not a claim that a previously\nundefined application remains undefined under free substitution.",
-          "status": "checked",
-          "reuse_status": "requires exact source and dependency comparison",
-          "formal_target": "LogicLineages.PersistentMarking.StructuralInterpretationCorrected.CorrectedStructuralInterpretation",
-          "verified_alias": "LogicLineages.PersistentMarking.StructuralInterpretationCorrected.correctedStructuralInterpretation",
-          "acceptance": "verification/new-paper-set-2026-11-18/accepted/1449-p16-lem-structural-interpretation.json"
+          "status": "pending",
+          "reuse_status": "Corrected fixed-point manuscript retained. The original promotion explicitly records no independent comparison of the whole corrected conjunction; the closed fixed-application and free/bound substitution interfaces need an exact comparison with the printed substituted-source clause."
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:operator",
           "kind": "lemma",
           "label": "lem:operator",
           "file": "16-persistent-marking-termination-ordering/sections/decision.tex",
-          "line": 179,
+          "line": 183,
           "statement_latex": "\\label{lem:operator}\n$\\mathcal F$ is a monotone endomap of the coherent natural families.\nIts iteration from bottom reaches the least fixed point in finitely\nmany steps.",
           "status": "checked",
           "reuse_status": "requires exact source and dependency comparison",
@@ -234,7 +231,7 @@
           "kind": "theorem",
           "label": "thm:adequacy",
           "file": "16-persistent-marking-termination-ordering/sections/decision.tex",
-          "line": 205,
+          "line": 209,
           "statement_latex": "[Exact observation semantics]\\label{thm:adequacy}\nAt the least fixed point, a weak or strict observation bit is true\nexactly when its corresponding finite recursive judgment is derivable.",
           "status": "checked",
           "reuse_status": "requires exact source and dependency comparison",
@@ -247,7 +244,7 @@
           "kind": "theorem",
           "label": "thm:decide",
           "file": "16-persistent-marking-termination-ordering/sections/decision.tex",
-          "line": 253,
+          "line": 261,
           "statement_latex": "[Decidability]\\label{thm:decide}\nBoth $\\succeq_\\star$ and $\\succ_\\star$, and therefore $\\cw,\\cs$, are\ndecidable on all ordinary finite inputs.",
           "status": "checked",
           "reuse_status": "requires exact source and dependency comparison",
@@ -477,11 +474,8 @@
           "file": "16-persistent-marking-termination-ordering/sections/ordinals.tex",
           "line": 434,
           "statement_latex": "[Realization closure]\\label{lem:realization}\nRealization is preserved when a term is replaced by a strict predecessor.\nIt is downward closed in its semantic value, with pointwise order at\narrows. If one fixed term realizes every member of a nonempty countable\nfamily, it realizes their pointwise supremum. The typed lambda\nfundamental lemma holds for these realizers.",
-          "status": "checked",
-          "reuse_status": "requires exact source and dependency comparison",
-          "formal_target": "LogicLineages.PersistentMarking.NativeRealizationComplete.FullRealization",
-          "verified_alias": "LogicLineages.PersistentMarking.NativeRealizationComplete.exact_FullRealization",
-          "acceptance": "verification/new-paper-set-2026-11-18/accepted/1483-p16-lem-realization.json"
+          "status": "pending",
+          "reuse_status": "The compiled proof transports realization from strict predecessor to original; the unmodified printed statement says replacement by a strict predecessor. Preserve the proof and record without claiming the printed direction."
         },
         {
           "id": "16-persistent-marking-termination-ordering:thm:iteration",
@@ -1899,7 +1893,7 @@
           "statement_latex": "[Exact decision equivalence]\\label{thm:decision-equivalence}\nUniversal weak/strict canonical comparison on the full all-ground-free-variable\ndomain, its ground-output restriction, and unsatisfiability in $\\Esrc$ are\ncomputably equivalent.  Satisfiability uses answer complementation.",
           "status": "checked",
           "reuse_status": "requires exact source and dependency comparison",
-          "formal_target": "LogicLineages.ControlSensitivityCurrent.CurrentDecisionTargets.Full \u2227 LogicLineages.ControlSensitivityCurrent.CurrentTreeInputCoverageTargets.Full \u2227 LogicLineages.ControlSensitivityCurrent.CurrentDecisionTreePresentationTargets.Full \u2227 LogicLineages.ControlSensitivityCurrent.CurrentDecisionOriginalGroundOutputTargets.Full",
+          "formal_target": "LogicLineages.ControlSensitivityCurrent.CurrentDecisionTargets.Full ∧ LogicLineages.ControlSensitivityCurrent.CurrentTreeInputCoverageTargets.Full ∧ LogicLineages.ControlSensitivityCurrent.CurrentDecisionTreePresentationTargets.Full ∧ LogicLineages.ControlSensitivityCurrent.CurrentDecisionOriginalGroundOutputTargets.Full",
           "verified_alias": "LogicLineages.ControlSensitivityCurrent.CurrentDecision.NumberedStatementChecks.exact_current_decision_equivalence",
           "acceptance": "verification/new-paper-set-2026-11-18/accepted/427-full-decision-equivalence.json"
         },
@@ -2377,7 +2371,7 @@
     }
   ],
   "status_counts": {
-    "pending": 5,
-    "checked": 162
+    "pending": 7,
+    "checked": 160
   }
 }

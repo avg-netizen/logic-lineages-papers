@@ -1,8 +1,14 @@
 # Current comparison formalization status
 
-The new-paper register has **162 checked and 5 pending out of 167**. Historical register:
-178 checked, 2 inherited, 9 pending /189, preserved separately and not added
-to this replacement collection. Old statuses do not transfer automatically.
+The reconciled new-paper register has **160 checked and 7 pending out of 167**.
+Paper 17 retains all checked rows. Paper 16's corrected structural
+interpretation and realization closure are held pending exact printed-source
+correspondence, with their Lean proofs and earlier records preserved. The
+historical 189-statement register remains separate. See the
+[reconciliation review](../reconciliation-2026-11-24/REVIEW.md).
+
+The entries below are historical round notes; their counts are as of the
+original rounds.
 
 ## Round 6 of the local Fable-pair continuation, 23 November (paused)
 
@@ -39,7 +45,7 @@ unrestricted all-type inversion or a refitted installed tuple. The combined
 conditional main theorem retains exactly its five named hypotheses.
 [Current handoff](../github-continuation-2026-11-22-round3/HANDOFF.md) ·
 [Iteration](accepted/1478-p16-thm-iteration.json) ·
-[Complete realization](accepted/1483-p16-lem-realization.json) ·
+[Complete realization](historical-numbered/1483-p16-lem-realization.json) ·
 [Lambda source review](../github-continuation-2026-11-22-round3/ordinal-frontier/TYPED-LAMBDA-SOURCE-REVIEW.md) ·
 [Actual Ω indices](accepted/1479-p16-actual-omega-index-tower.json)
 
@@ -94,7 +100,7 @@ source-map/manifest snapshots were restored at their exact recorded hashes.
 
 ## Round 2 of the local Fable-pair continuation, 22 November (paused)
 
-Supporting records now end at **1448**, with numbered acceptances #1435, #1436 and #1449. Paper 16 `lem:structural-interpretation` is promoted: the owner applied the recorded fixed-point correction to `decision.tex`, and the corrected lemma is the conjunction of four accepted statements. Paper 17 `thm:main` has a strengthened comparator, uniform in a supplied policy program and in the near-control parameter, proved with no hypothesis; its independent source review is now complete and promotion remains a register decision. The native Paper 16 statements for iteration, realization and ranks compiled for the first time, on module-system copies of the legacy native files that remove an import-footprint memory stop; they are candidates for `thm:iteration` and `lem:realization`, not promoted. [Handoff](../local-fable-pair-2026-11-22-round2/HANDOFF.md) · [structural interpretation](accepted/1449-p16-lem-structural-interpretation.json) · [uniform main comparison](accepted/1445-p17-uniform-main-comparison.json) · [native iteration](accepted/1446-p16-native-iteration-on-module-copies.json) · [Paper 16 gap map](../local-fable-pair-2026-11-22-round2/opusB/P16-GAP-MAP.md)
+Supporting records now end at **1448**, with numbered acceptances #1435, #1436 and #1449. Paper 16 `lem:structural-interpretation` is promoted: the owner applied the recorded fixed-point correction to `decision.tex`, and the corrected lemma is the conjunction of four accepted statements. Paper 17 `thm:main` has a strengthened comparator, uniform in a supplied policy program and in the near-control parameter, proved with no hypothesis; its independent source review is now complete and promotion remains a register decision. The native Paper 16 statements for iteration, realization and ranks compiled for the first time, on module-system copies of the legacy native files that remove an import-footprint memory stop; they are candidates for `thm:iteration` and `lem:realization`, not promoted. [Handoff](../local-fable-pair-2026-11-22-round2/HANDOFF.md) · [structural interpretation](historical-numbered/1449-p16-lem-structural-interpretation.json) · [uniform main comparison](accepted/1445-p17-uniform-main-comparison.json) · [native iteration](accepted/1446-p16-native-iteration-on-module-copies.json) · [Paper 16 gap map](../local-fable-pair-2026-11-22-round2/opusB/P16-GAP-MAP.md)
 
 ## Promotion of two Paper 17 statements, 22 November
 

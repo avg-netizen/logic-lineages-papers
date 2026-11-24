@@ -1,0 +1,57 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserTargets
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalEqualityTestDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityStackAppendDefinitions
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionRawTargets
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalAcceptance (branch conjunction constantZero)
+open ID1Completion.InternalLessThan (constantOne)
+open ID1Completion.InternalEqualityTest (predecessor)
+open ID1Completion.InternalApplicationValidityStackAppend (append)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open NumberedWindowInternalSparseFieldParser (parser)
+open NumberedWindowInternalSparsePathEnvelopeTargets (unary suc z)
+
+abbrev sourceTape {α : Type} (src kept removed : α) : Fin 3 → α := ![src,kept,removed]
+
+def parserAt (i : Fin 3) : Program 3 := .composition parser ![.projection i]
+def parsedAt (i : Fin 3) : Program 3 := branch (parserAt i) (constantZero 3) (constantOne 3)
+def payloadAt (i : Fin 3) : Program 3 := .composition predecessor ![parserAt i]
+def parsedAll : Program 3 := conjunction (parsedAt 0) (conjunction (parsedAt 1) (parsedAt 2))
+def decodedCall (core : Program 3) : Program 3 := .composition core ![payloadAt 0,payloadAt 1,payloadAt 2]
+def rawSourceCheck (core : Program 3) : Program 3 := conjunction parsedAll (decodedCall core)
+
+/-- Decode and append the literal scratch kept/removed lists. The actual
+suffix and duplicates remain, independently of what observer is chosen. -/
+def appendKeptRemoved : Program 3 := .composition append ![.projection 1,.projection 2]
+def observePartition (test : Program 2) : Program 3 :=
+  .composition test ![.projection 0,appendKeptRemoved]
+
+structure ParsedTriplet (B : Positive (Fin 1)) {α : Type} (Γ : List (Formula α))
+    (src kept removed ds dk dr : OTerm α) : Prop where
+  source : Nonempty (Derivation B Γ (unary parser (suc ds) src))
+  kept : Nonempty (Derivation B Γ (unary parser (suc dk) kept))
+  removed : Nonempty (Derivation B Γ (unary parser (suc dr) removed))
+
+/-- A single true raw check determines actual success of the three original
+sparse parsers and the exact supplied core on those same decoded scratch
+lists, never independently supplied convenient lists. -/
+def ExactOpenRawSourceDecode : Prop :=
+  ∀ (core : Program 3) (B : Positive (Fin 1)) (α : Type) (Γ : List (Formula α))
+    (src kept removed : OTerm α) (goal : Formula α),
+    Nonempty (Derivation B Γ (programGraph (rawSourceCheck core) (suc z) (sourceTape src kept removed))) →
+    (∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (ds dk dr : OTerm β),
+      (∀ f ∈ Γ, f.relabel j ∈ Δ) →
+      ParsedTriplet B Δ (src.relabel j) (kept.relabel j) (removed.relabel j) ds dk dr →
+      Nonempty (Derivation B Δ (programGraph core (suc z) (sourceTape ds dk dr))) →
+      Nonempty (Derivation B Δ (goal.relabel j))) →
+    Nonempty (Derivation B Γ goal)
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionRawTargets

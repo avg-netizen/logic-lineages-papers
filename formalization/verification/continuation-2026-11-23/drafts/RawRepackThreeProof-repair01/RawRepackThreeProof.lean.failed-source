@@ -1,0 +1,48 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalRawRepackCasesProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionRawGraphProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveUnfoldingSupportProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalRawRepackThreeProof
+open FirstOrder Language LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalPositiveUnfoldingSupportProof (formulaRelabelComposition)
+open NumberedWindowInternalSparseParsedFoldSyntaxProof (positiveGraph)
+open NumberedWindowInternalRawRepackCasesProof (exact_OriginalRawRepackCases)
+open NumberedWindowInternalDirectSourcePartitionRawGraphProof (renameParser keepThrough)
+
+variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+/-- Open three actual parser preimages together while keeping the original
+scratch values and the original context fixed. The three raw values are
+introduced by genuine object existential rules. -/
+theorem exact_OriginalRawRepackThree (s t u : OTerm α) (goal : Formula α)
+    (next : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (a b c : OTerm β),
+      (∀ f ∈ Γ, f.relabel j ∈ Δ) →
+      Nonempty (Derivation B Δ (positiveGraph a (s.relabel j))) →
+      Nonempty (Derivation B Δ (positiveGraph b (t.relabel j))) →
+      Nonempty (Derivation B Δ (positiveGraph c (u.relabel j))) →
+      Nonempty (Derivation B Δ (goal.relabel j))) :
+    Nonempty (Derivation B Γ goal) := by
+  apply exact_OriginalRawRepackCases s goal
+  intro β j Δ a keep pa
+  apply exact_OriginalRawRepackCases (t.relabel j) (goal.relabel j)
+  intro γ k Ω b hold pb
+  apply exact_OriginalRawRepackCases ((u.relabel j).relabel k) ((goal.relabel j).relabel k)
+  intro δ q Xi c saved pc
+  let kj := k ∘ j
+  let all := q ∘ kj
+  have kept := keepThrough j k keep hold
+  have chain := keepThrough kj q kept saved
+  have one := renameParser a (s.relabel j) pa (q ∘ k) Xi (keepThrough k q hold saved)
+  have two := renameParser b ((t.relabel j).relabel k) pb q Xi saved
+  rw [formulaRelabelComposition j k goal,formulaRelabelComposition kj q goal]
+  apply next δ all Xi (a.relabel (q ∘ k)) (b.relabel q) c chain
+  · simpa only [all,kj,← Term.relabel_relabel,Function.comp_assoc] using one
+  · simpa only [all,kj,← Term.relabel_relabel] using two
+  · simpa only [all,kj,← Term.relabel_relabel] using pc
+
+#print axioms exact_OriginalRawRepackThree
+end LogicLineages.PersistentMarking.NumberedWindowInternalRawRepackThreeProof

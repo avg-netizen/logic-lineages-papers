@@ -1,0 +1,59 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionRawTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionRawGraphProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserOpenSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphSupportProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionAppendProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open NumberedWindowInternalSparsePathEnvelopeTargets (suc z)
+open ID1Completion.InternalApplicationValidityStackAppend (append)
+open ID1Completion.InternalAcceptanceSupportProof (programCases compositionRecover)
+open ID1Completion.InternalControlGraphSupportProof (compositionValue projectionValue)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open NumberedWindowInternalSparseFieldParserOpenSyntaxProof (binaryInputsRename)
+open NumberedWindowInternalDirectSourcePartitionRawTargets
+open NumberedWindowInternalDirectSourcePartitionRawGraphProof (renameUnit)
+
+attribute [local irreducible] programGraph
+variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+private theorem recoverTest (test : Program 2) (s k r both : OTerm α)
+    (a : Nonempty (Derivation B Γ (programGraph append both ![k,r])))
+    (c : Nonempty (Derivation B Γ (programGraph (observePartition test) (suc z) (sourceTape s k r)))) :
+    Nonempty (Derivation B Γ (programGraph test (suc z) ![s,both])) := by
+  let xs := sourceTape s k r
+  have carried : Nonempty (Derivation B Γ (programGraph appendKeptRemoved both xs)) := by
+    apply compositionValue append ![.projection 1,.projection 2] both xs ![k,r] a
+    intro i
+    exact Fin.cases (projectionValue 1 xs)
+      (Fin.cases (projectionValue 2 xs) (fun j => Fin.elim0 j)) i
+  apply compositionRecover test ![.projection 0,appendKeptRemoved] (suc z) xs ![s,both] c
+  intro i
+  exact Fin.cases (projectionValue 0 xs) (Fin.cases carried (fun j => Fin.elim0 j)) i
+
+/-- Internal ordered append witness on the same actual decoded inputs.
+The observer's exact output is recovered at that same append, not at an
+equal-count substitute. No properties of the observer are assumed. -/
+theorem exact_OpenSourcePartitionAppend (test : Program 2) (s k r : OTerm α) (goal : Formula α)
+    (held : Nonempty (Derivation B Γ (programGraph (observePartition test) (suc z) (sourceTape s k r))))
+    (next : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (both : OTerm β),
+      (∀ f ∈ Γ, f.relabel j ∈ Δ) →
+      Nonempty (Derivation B Δ (programGraph append both ![k.relabel j,r.relabel j])) →
+      Nonempty (Derivation B Δ (programGraph test (suc z) ![s.relabel j,both])) →
+      Nonempty (Derivation B Δ (goal.relabel j))) : Nonempty (Derivation B Γ goal) := by
+  apply programCases append ![k,r] goal
+  intro β j Δ both keep appended
+  rw [binaryInputsRename] at appended
+  have ran := renameUnit (observePartition test) s k r held j Δ keep
+  exact next β j Δ both keep appended
+    (recoverTest test (s.relabel j) (k.relabel j) (r.relabel j) both appended ran)
+
+#print axioms exact_OpenSourcePartitionAppend
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionAppendProof

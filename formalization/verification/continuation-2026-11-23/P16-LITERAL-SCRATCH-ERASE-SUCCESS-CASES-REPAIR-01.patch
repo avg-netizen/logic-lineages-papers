@@ -1,0 +1,7 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseSuccessCasesProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseSuccessCasesProof.lean
+@@ -81 +81,3 @@
+-    simpa only [Term.relabel_relabel] using hcons
++    have cell : Nonempty (Derivation body Ξ (consGraph rebuilt ((needle.relabel j).relabel k)
++      ((ys 2).relabel k))) := hcons
++    simpa only [Term.relabel_relabel] using cell

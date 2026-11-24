@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedSideOutcomesProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedSideOutcomesProof.lean
+@@ -84 +84 @@
+-    · simpa only [ρ,← Term.relabel_relabel] using parsed
++    · simpa only [ρ,← Term.relabel_relabel,unary] using parsed
+@@ -86 +86,2 @@
+-    · simpa only [Outcome,ρ,← Term.relabel_relabel] using cert
++    · change Pr (literalData i r) c Ω (certificate (literalData i r) true c (s.relabel ρ) raw witness)
++      simpa only [ρ,← Term.relabel_relabel] using cert

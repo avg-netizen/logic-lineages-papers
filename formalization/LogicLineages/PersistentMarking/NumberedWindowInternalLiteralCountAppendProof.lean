@@ -1,0 +1,200 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountAppendSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectSharedTapeSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserOpenSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountSupportedSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalClosedProgramsBindingProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionFunctionalityProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListInductionProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalOrderSyntaxProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountAppendProof
+open FirstOrder Language LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalTagArithmeticSyntaxProof (eqn emb eqnRelabel)
+open ID1Completion.InternalListCodecSupportProof (consGraph consGraphRename)
+open ID1Completion.InternalAdditionLawsProof (add)
+open ID1Completion.InternalOriginalOrderSyntaxProof (addRelabel)
+open ID1Completion.InternalAcceptanceSupportProof (programCases)
+open ID1Completion.InternalApplicationValidityStackAppend (append)
+open ID1Completion.InternalGraphCompositionFunctionalityProof (renameInto)
+open ID1Completion.InternalClosedProgramsBindingProof (actualFiniteUniversalIntroduction actualFiniteUniversalElimination)
+open ID1Completion.InternalListInduction (atCode atIndex constructorBody constructors premises)
+open ID1Completion.InternalListInductionProof (actualOriginalListInductionAtCode)
+open NumberedWindowInternalSparsePathEnvelopeTargets (z)
+open NumberedWindowInternalLiteralCount (entryCount)
+open NumberedWindowInternalLiteralCountSupportedTargets (counted)
+open NumberedWindowInternalLiteralCountSupportedSyntaxProof (countedRename)
+open NumberedWindowInternalLiteralCountAppendCoreProof
+open NumberedWindowInternalLiteralCountAppendSyntaxProof
+open NumberedWindowInternalDirectSharedTapeSyntaxProof (renamePair)
+open NumberedWindowInternalSparseFieldParserOpenSyntaxProof (binaryInputsRename)
+
+attribute [local irreducible] programGraph
+variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+private theorem atApply (a b key r u l o : OTerm α)
+    (h : Nonempty (Derivation B Γ (atFront a b key r)))
+    (da : Nonempty (Derivation B Γ (appended a b u)))
+    (dl : Nonempty (Derivation B Γ (counted a key l)))
+    (do' : Nonempty (Derivation B Γ (counted u key o))) :
+    Nonempty (Derivation B Γ (eqn o (add l r))) := by
+  obtain ⟨w⟩ := actualFiniteUniversalElimination B α 3 Γ (matrix a b key r)
+    (fun i => emb (![u,l,o] i)) h
+  rw [matrixWitness] at w
+  obtain ⟨d⟩ := da
+  obtain ⟨p⟩ := dl
+  obtain ⟨q⟩ := do'
+  exact ⟨Derivation.implicationElimination w
+    (Derivation.conjunctionIntroduction d (Derivation.conjunctionIntroduction p q))⟩
+
+private structure Held (B : Positive (Fin 1)) (Γ : List (Formula α))
+    (front head tail suffix key r u l o : OTerm α) : Prop where
+  cell : Nonempty (Derivation B Γ (consGraph front head tail))
+  ih : Nonempty (Derivation B Γ (atFront tail suffix key r))
+  ap : Nonempty (Derivation B Γ (appended front suffix u))
+  lc : Nonempty (Derivation B Γ (counted front key l))
+  oc : Nonempty (Derivation B Γ (counted u key o))
+
+private theorem relocate {β : Type} {Δ : List (Formula β)}
+    {f h t b k r u l o : OTerm α} (p : Held B Γ f h t b k r u l o)
+    (j : α → β) (keep : ∀ q ∈ Γ, q.relabel j ∈ Δ) :
+    Held B Δ (f.relabel j) (h.relabel j) (t.relabel j) (b.relabel j) (k.relabel j)
+      (r.relabel j) (u.relabel j) (l.relabel j) (o.relabel j) := by
+  have a := renameInto p.cell j Δ keep
+  have b' := renameInto p.ih j Δ keep
+  have c := renameInto p.ap j Δ keep
+  have d := renameInto p.lc j Δ keep
+  have e := renameInto p.oc j Δ keep
+  rw [consGraphRename] at a
+  rw [atFrontRename] at b'
+  rw [appRename] at c
+  rw [countedRename] at d e
+  exact ⟨a,b',c,d,e⟩
+
+private theorem openedCounts (f h t b k r u l o jOut lTail : OTerm α)
+    (p : Held B Γ f h t b k r u l o)
+    (ap : Nonempty (Derivation B Γ (appended t b jOut)))
+    (lc : Nonempty (Derivation B Γ (counted t k lTail))) :
+    Nonempty (Derivation B Γ (eqn o (add l r))) := by
+  apply programCases entryCount ![jOut,k] _
+  intro β j Δ oTail keep oc
+  rw [binaryInputsRename] at oc
+  rw [eqnRelabel,addRelabel]
+  have q := relocate p j keep
+  have a := renamePair append jOut t b ap j keep
+  have c := renamePair entryCount lTail t k lc j keep
+  have ih := atApply (t.relabel j) (b.relabel j) (k.relabel j) (r.relabel j)
+    (jOut.relabel j) (lTail.relabel j) oTail q.ih a c oc
+  exact exact_LiteralCountAppendConsAtReports (f.relabel j) (h.relabel j) (t.relabel j)
+    (b.relabel j) (jOut.relabel j) (u.relabel j) (k.relabel j) (lTail.relabel j) oTail
+    (l.relabel j) (r.relabel j) (o.relabel j) q.cell a q.ap c oc q.lc q.oc ih
+
+private theorem openedAppend (f h t b k r u l o jOut : OTerm α)
+    (p : Held B Γ f h t b k r u l o)
+    (ap : Nonempty (Derivation B Γ (appended t b jOut))) :
+    Nonempty (Derivation B Γ (eqn o (add l r))) := by
+  apply programCases entryCount ![t,k] _
+  intro β j Δ lTail keep lc
+  rw [binaryInputsRename] at lc
+  rw [eqnRelabel,addRelabel]
+  exact openedCounts (f.relabel j) (h.relabel j) (t.relabel j) (b.relabel j) (k.relabel j)
+    (r.relabel j) (u.relabel j) (l.relabel j) (o.relabel j) (jOut.relabel j) lTail
+    (relocate p j keep) (renamePair append jOut t b ap j keep) lc
+
+private theorem consReports (f h t b k r u l o : OTerm α)
+    (p : Held B Γ f h t b k r u l o) :
+    Nonempty (Derivation B Γ (eqn o (add l r))) := by
+  apply programCases append ![t,b] _
+  intro β j Δ joined keep ap
+  rw [binaryInputsRename] at ap
+  rw [eqnRelabel,addRelabel]
+  exact openedAppend (f.relabel j) (h.relabel j) (t.relabel j) (b.relabel j) (k.relabel j)
+    (r.relabel j) (u.relabel j) (l.relabel j) (o.relabel j) joined (relocate p j keep) ap
+
+private theorem atIntro (f b k r : OTerm α)
+    (solve : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (u l o : OTerm β),
+      (∀ q ∈ Γ, q.relabel j ∈ Δ) →
+      Nonempty (Derivation B Δ (appended (f.relabel j) (b.relabel j) u)) →
+      Nonempty (Derivation B Δ (counted (f.relabel j) (k.relabel j) l)) →
+      Nonempty (Derivation B Δ (counted u (k.relabel j) o)) →
+      Nonempty (Derivation B Δ (eqn o (add l (r.relabel j))))) :
+    Nonempty (Derivation B Γ (atFront f b k r)) := by
+  apply actualFiniteUniversalIntroduction B α 3 Γ (matrix f b k r)
+  let j : α → α ⊕ Fin 3 := Sum.inl
+  let U : OTerm (α ⊕ Fin 3) := .var (.inr 0)
+  let L : OTerm (α ⊕ Fin 3) := .var (.inr 1)
+  let O : OTerm (α ⊕ Fin 3) := .var (.inr 2)
+  let H := appended (f.relabel j) (b.relabel j) U ⊓
+    (counted (f.relabel j) (k.relabel j) L ⊓ counted U (k.relabel j) O)
+  let Δ := H :: Γ.map (fun q => q.relabel j)
+  have own : Derivation B Δ H := Derivation.hypothesis List.mem_cons_self
+  obtain ⟨w⟩ := solve (α ⊕ Fin 3) j Δ U L O
+    (fun q hq => List.mem_cons_of_mem _ (List.mem_map.mpr ⟨q,hq,rfl⟩))
+    ⟨Derivation.conjunctionLeft own⟩ ⟨Derivation.conjunctionLeft (Derivation.conjunctionRight own)⟩
+    ⟨Derivation.conjunctionRight (Derivation.conjunctionRight own)⟩
+  exact ⟨Derivation.implicationIntroduction w⟩
+
+private theorem nilLaw (b k r : OTerm α) (hr : Nonempty (Derivation B Γ (counted b k r))) :
+    Nonempty (Derivation B Γ (atFront z b k r)) := by
+  apply atIntro z b k r
+  intro β j Δ u l o keep ap pl po
+  rw [ID1Completion.InternalTagArithmeticSyntaxProof.zRelabel] at ap pl
+  have h' := renameInto hr j Δ keep
+  rw [countedRename] at h'
+  exact exact_LiteralCountAppendNil (b.relabel j) u (k.relabel j) l (r.relabel j) o ap pl h' po
+
+private theorem consLaw (b k r : OTerm α) :
+    Nonempty (Derivation B Γ (constructors (motive b k r))) := by
+  apply actualFiniteUniversalIntroduction B α 3 Γ (constructorBody (motive b k r))
+  let j : α → α ⊕ Fin 3 := Sum.inl
+  let F : OTerm (α ⊕ Fin 3) := .var (.inr 0)
+  let H : OTerm (α ⊕ Fin 3) := .var (.inr 1)
+  let T : OTerm (α ⊕ Fin 3) := .var (.inr 2)
+  let C := consGraph F H T
+  let I := atFront T (b.relabel j) (k.relabel j) (r.relabel j)
+  let Δ := I :: C :: Γ.map (fun q => q.relabel j)
+  change Nonempty (Derivation B (Γ.map (fun q => q.relabel j))
+    (C.imp ((atIndex (motive b k r) 2).imp (atIndex (motive b k r) 0))))
+  simp only [motiveIndex]
+  have out : Nonempty (Derivation B Δ (atFront F (b.relabel j) (k.relabel j) (r.relabel j))) := by
+    apply atIntro F (b.relabel j) (k.relabel j) (r.relabel j)
+    intro β ρ Ω u l o keep ap pl po
+    have cD : Nonempty (Derivation B Δ C) := ⟨Derivation.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)⟩
+    have iD : Nonempty (Derivation B Δ I) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+    have c' := renameInto cD ρ Ω keep
+    have i' := renameInto iD ρ Ω keep
+    change Nonempty (Derivation B Ω ((consGraph F H T).relabel ρ)) at c'
+    change Nonempty (Derivation B Ω ((atFront T (b.relabel j) (k.relabel j) (r.relabel j)).relabel ρ)) at i'
+    rw [consGraphRename] at c'
+    rw [atFrontRename] at i'
+    exact consReports (F.relabel ρ) (H.relabel ρ) (T.relabel ρ) ((b.relabel j).relabel ρ)
+      ((k.relabel j).relabel ρ) ((r.relabel j).relabel ρ) u l o ⟨c',i',ap,pl,po⟩
+  obtain ⟨d⟩ := out
+  exact ⟨Derivation.implicationIntroduction (Derivation.implicationIntroduction d)⟩
+
+/-- Exact addition of literal counts on arbitrary original open scratch
+append graphs. The induction property is universally bound over the
+actual append output and the two counts that vary with the front tape. -/
+theorem exact_LiteralOpenCountAppend (f b key u l r o : OTerm α)
+    (ap : Nonempty (Derivation B Γ (appended f b u)))
+    (cl : Nonempty (Derivation B Γ (counted f key l)))
+    (cr : Nonempty (Derivation B Γ (counted b key r)))
+    (co : Nonempty (Derivation B Γ (counted u key o))) :
+    Nonempty (Derivation B Γ (eqn o (add l r))) := by
+  have base : Nonempty (Derivation B Γ (atCode (motive b key r) z)) := by
+    rw [motiveCode]
+    exact nilLaw b key r cr
+  obtain ⟨d⟩ := base
+  obtain ⟨s⟩ := consLaw (B := B) (Γ := Γ) b key r
+  have p : Nonempty (Derivation B Γ (premises (motive b key r))) :=
+    ⟨Derivation.conjunctionIntroduction d s⟩
+  have all := actualOriginalListInductionAtCode B α Γ (motive b key r) f p
+  rw [motiveCode] at all
+  exact atApply f b key r u l o all ap cl co
+
+#print axioms exact_LiteralOpenCountAppend
+end LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountAppendProof
