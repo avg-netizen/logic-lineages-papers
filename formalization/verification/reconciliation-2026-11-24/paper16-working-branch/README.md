@@ -20,6 +20,9 @@ not change this limit, and the evidence below is not a full CI pass.
 * [J characterization](LITERAL-J-CHARACTERIZATION.md): exact raw carrier
   and scalar-members criterion for J in the chosen endpoint-guarded
   presentation. The scalar uniform all-terms theorem remains open.
+* [Direct hops and root classification](SCALAR-PATH-AND-ROOT-CLASSIFICATION.md):
+  a positive path's actual first hop, the eight typed root cases, and
+  the conditional neutral/fresh work on the scalar side.
 
 ## Rerun the focused work
 
