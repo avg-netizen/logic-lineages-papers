@@ -37,6 +37,9 @@ not change this limit, and the evidence below is not a full CI pass.
 * [Covered carriers and remaining neutral rules](COVERED-CARRIER-NEUTRAL-BRIDGE.md):
   one covered selection and its carrier wrapper; actual trace recovery
   and child installation with its explicit destination scalar check.
+* [Canonical covered child](CANONICAL-COVERED-CHILD.md):
+  real canonical address program and checked finite-round least
+  transport, conditional on coherence of the selected exchange edges.
 
 ## Rerun the focused work
 
