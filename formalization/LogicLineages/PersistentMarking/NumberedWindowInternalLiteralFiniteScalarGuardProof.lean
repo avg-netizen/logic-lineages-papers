@@ -50,10 +50,10 @@ abbrev D (B : Positive (Fin 1)) {α : Type} (Γ : List (Formula α)) (φ : Formu
   Nonempty (Derivation B Γ φ)
 variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
 
-/-- Include the original ground code explicitly so the literal tail
-selector of ground also remains inside the finite list. This does not
-admit any extra scalar input because the original scalar is retained. -/
-def finiteCodes (P : List ProbeTy) : List Nat := 0 :: P.map code
+/-- Use precisely the original finite list. If ground occurs, the
+literal tail at that code is ground again; otherwise no extra type
+needs to be inserted or admitted. -/
+def finiteCodes (P : List ProbeTy) : List Nat := P.map code
 
 def storedTypeIn (codes : List Nat) : Program 1 := .composition scratchMember
   (Fin.cons (literal 1 (Encodable.encode codes)) (Fin.cons rawResult Fin.elim0))
@@ -80,7 +80,7 @@ private theorem actualTypeListed (s : Settings) (P : List ProbeTy) (q : Nat)
     have chosen : run rawResult q = t := by
       rw [decoded.nameEq,(literalFields decoded.ctx decoded.ty decoded.classCode).2.1,value]
     rw [chosen,same]
-    exact List.mem_cons_of_mem _ (List.mem_map.mpr ⟨τ,listed,rfl⟩)
+    exact List.mem_map.mpr ⟨τ,listed,rfl⟩
 
 /-- The actual finite type report is redundant numerically for the
 original scalar but is a real guard in the new program. Every raw
