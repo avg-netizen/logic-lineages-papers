@@ -62,7 +62,7 @@ theorem exact_LiteralAtomicTypedRawCalibration (xs : Entries) (s : Settings) (p 
     (exact_LiteralAtomicRootCalibration xs s p fit) (exact_LiteralAtomicFallbackCalibration other fall)
     syntaxFit window
 
-private theorem openRoot (p : Program 3) (q w r : OTerm α) (goal : Formula α)
+theorem exact_OpenLiteralRootCallPayload (p : Program 3) (q w r : OTerm α) (goal : Formula α)
     (held : D B Γ (programGraph (rootCall p) (suc z) ![q,w,r]))
     (k : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (payload : OTerm β),
       (∀ f ∈ Γ, f.relabel j ∈ Δ) →
@@ -101,7 +101,7 @@ theorem exact_OpenLiteralAtomicTypedFreeTarget (p other W : Program 3) (V : Prog
   have fallback := exact_OpenLiteralAtomicFallbackFree other q w r (freeReports (B := B) (Γ := Γ) t n).1
   have rootYes := exact_OpenLiteralTerminalOwnRunRoot (atomicRoot p) (atomicFallback other) q w r fast fallback
     (own p other W V ctx ty q w r held)
-  apply openRoot (atomicRoot p) q w r (eqn r (bottomTerm t)) rootYes
+  apply exact_OpenLiteralRootCallPayload (atomicRoot p) q w r (eqn r (bottomTerm t)) rootYes
   intro β j Δ payload keep h
   rw [eqnRelabel,renameBottom]
   rw [show q.relabel j = freeTerm (t.relabel j) (n.relabel j) from renameFree t n j] at h
@@ -117,7 +117,7 @@ theorem exact_OpenLiteralAtomicTypedBottomReject (p other W : Program 3) (V : Pr
   have fallback := (exact_OpenLiteralAtomicTickBottomCallbacks p other q w r no yes).2
   have rootYes := exact_OpenLiteralTerminalOwnRunRoot (atomicRoot p) (atomicFallback other) q w r fast fallback
     (own p other W V ctx ty q w r held)
-  apply openRoot (atomicRoot p) q w r ⊥ rootYes
+  apply exact_OpenLiteralRootCallPayload (atomicRoot p) q w r ⊥ rootYes
   intro β j Δ payload keep h
   rw [show q.relabel j = bottomTerm (t.relabel j) from renameBottom t j] at h
   obtain ⟨nof,bot⟩ := exact_OpenLiteralBottomTests (B := B) (Γ := Δ) (t.relabel j)
@@ -126,6 +126,7 @@ theorem exact_OpenLiteralAtomicTypedBottomReject (p other W : Program 3) (V : Pr
   obtain ⟨no⟩ := valueUnique (atomicRoot p) (suc z) z ![bottomTerm (t.relabel j),payload,r.relabel j] h declined
   exact ⟨Derivation.explosion (sucNeZeroApply no)⟩
 
+#print axioms exact_OpenLiteralRootCallPayload
 #print axioms exact_LiteralAtomicTypedRawCalibration
 #print axioms exact_OpenLiteralAtomicTypedFreeTarget
 #print axioms exact_OpenLiteralAtomicTypedBottomReject

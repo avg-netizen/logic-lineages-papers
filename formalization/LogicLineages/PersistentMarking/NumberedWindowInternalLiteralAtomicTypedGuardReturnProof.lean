@@ -21,7 +21,7 @@ open ID1Completion.InternalAcceptance (conjunction)
 open ID1Completion.InternalControlGraphChoiceProof (excludedMiddle)
 open ID1Completion.InternalBoundedDescentNormalizerStepSupportProof (conjunctionReject)
 open ID1Completion.InternalBetaTotalityProof (addHyp disjunctionElimination)
-open ID1Completion.InternalTagArithmeticSyntaxProof (sucRelabel zRelabel)
+open ID1Completion.InternalTagArithmeticSyntaxProof (eqn sucRelabel zRelabel)
 open ID1Completion.InternalTagArithmeticSupportProof (symm)
 open ID1Completion.InternalEqualityTest (equalityTest)
 open LogicLineages.ComputabilityKnowledge.GorbowPRProgram (Program)
@@ -56,14 +56,18 @@ private theorem nodeZero (tag n : Nat) (q : OTerm α)
     (conjunction (.composition equalityTest ![cellHead,literal 1 tag]) (applyUnary (exactBody n) cellTail))
     ![q] denied
 
-/-- Re-introduce the original outer atom guard at an arbitrary genuine
-child of the per-tick selected typed raw program. This closes the raw
-rebuild independently of any least / scalar carrier problems. -/
-theorem exact_OpenLiteralAtomicTypedGuardReturn (p other W : Program 3) (V : Program 1)
+/-- The exact open consequences of the free and bottom constructors
+are enough to rebuild the selected test for every real raw call. -/
+structure RawAtoms (raw : Program 5) : Prop where
+  free : ∀ (B : Positive (Fin 1)) (α : Type) (Γ : List (Formula α)) (ctx ty t n w r : OTerm α),
+    D B Γ (programGraph raw (suc z) ![ctx,ty,freeTerm t n,w,r]) → D B Γ (eqn r (bottomTerm t))
+  bottom : ∀ (B : Positive (Fin 1)) (α : Type) (Γ : List (Formula α)) (ctx ty t w r : OTerm α),
+    D B Γ (programGraph raw (suc z) ![ctx,ty,bottomTerm t,w,r]) → D B Γ ⊥
+
+theorem exact_OpenLiteralRawGuardReturnFromAtoms (raw : Program 5) (atoms : RawAtoms raw)
     (ctx ty q w r : OTerm α)
-    (held : D B Γ (programGraph (atomicTypedRaw p other W V) (suc z) ![ctx,ty,q,w,r])) :
-    D B Γ (programGraph (guardedRaw (atomicTypedRaw p other W V)) (suc z) ![ctx,ty,q,w,r]) := by
-  let raw := atomicTypedRaw p other W V
+    (held : D B Γ (programGraph raw (suc z) ![ctx,ty,q,w,r])) :
+    D B Γ (programGraph (guardedRaw raw) (suc z) ![ctx,ty,q,w,r]) := by
   let result := programGraph (guardedRaw raw) (suc z) ![ctx,ty,q,w,r]
   let F := unary freeTest (suc z) q
   let T := unary bottomTest (suc z) q
@@ -78,7 +82,7 @@ theorem exact_OpenLiteralAtomicTypedGuardReturn (p other W : Program 3) (V : Pro
     simp only [programRename,fiveRename,sucRelabel,zRelabel] at raw'
     have toAtom := replaceRawSource raw (ctx.relabel j) (ty.relabel j) (q.relabel j) (freeTerm t n)
       (w.relabel j) (r.relabel j) shape raw'
-    have target := exact_OpenLiteralAtomicTypedFreeTarget p other W V (ctx.relabel j) (ty.relabel j) t n
+    have target := atoms.free B β Δ (ctx.relabel j) (ty.relabel j) t n
       (w.relabel j) (r.relabel j) toAtom
     have ret := exact_OpenLiteralGuardedFreeRawIntro raw (ctx.relabel j) (ty.relabel j) t n
       (w.relabel j) (r.relabel j) toAtom target
@@ -96,7 +100,7 @@ theorem exact_OpenLiteralAtomicTypedGuardReturn (p other W : Program 3) (V : Pro
     simp only [programRename,fiveRename,sucRelabel,zRelabel] at raw'
     have toAtom := replaceRawSource raw (ctx.relabel j) (ty.relabel j) (q.relabel j) (bottomTerm t)
       (w.relabel j) (r.relabel j) shape raw'
-    obtain ⟨no⟩ := exact_OpenLiteralAtomicTypedBottomReject p other W V (ctx.relabel j) (ty.relabel j)
+    obtain ⟨no⟩ := atoms.bottom B β Δ (ctx.relabel j) (ty.relabel j)
       t (w.relabel j) (r.relabel j) toAtom
     exact ⟨Derivation.explosion no⟩
   have ordinary : D B (T.not :: F.not :: Γ) result := by
@@ -113,5 +117,14 @@ theorem exact_OpenLiteralAtomicTypedGuardReturn (p other W : Program 3) (V : Pro
   exact ⟨disjunctionElimination (excludedMiddle F)
     (Derivation.implicationIntroduction fa) (Derivation.implicationIntroduction neither)⟩
 
+theorem exact_OpenLiteralAtomicTypedGuardReturn (p other W : Program 3) (V : Program 1)
+    (ctx ty q w r : OTerm α)
+    (held : D B Γ (programGraph (atomicTypedRaw p other W V) (suc z) ![ctx,ty,q,w,r])) :
+    D B Γ (programGraph (guardedRaw (atomicTypedRaw p other W V)) (suc z) ![ctx,ty,q,w,r]) :=
+  exact_OpenLiteralRawGuardReturnFromAtoms (atomicTypedRaw p other W V)
+    ⟨fun B α Γ => exact_OpenLiteralAtomicTypedFreeTarget p other W V,
+     fun B α Γ => exact_OpenLiteralAtomicTypedBottomReject p other W V⟩ ctx ty q w r held
+
+#print axioms exact_OpenLiteralRawGuardReturnFromAtoms
 #print axioms exact_OpenLiteralAtomicTypedGuardReturn
 end LogicLineages.PersistentMarking.NumberedWindowInternalLiteralAtomicTypedGuardReturnProof

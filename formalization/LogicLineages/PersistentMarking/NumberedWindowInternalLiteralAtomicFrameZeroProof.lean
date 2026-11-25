@@ -48,7 +48,7 @@ open NumberedWindowInternalLiteralNeutralAtomProof (zeroBelowSuccessor)
 attribute [local irreducible] programGraph
 variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
 
-private theorem nodeTagReject (tag limit : Nat) (actual : OTerm α) (fields : List (OTerm α))
+theorem nodeTagReject (tag limit : Nat) (actual : OTerm α) (fields : List (OTerm α))
     (different : D B Γ (programGraph equalityTest z ![actual,numeral tag])) :
     D B Γ (unary (nodeGood (literal 1 tag) limit) z (rawCons actual (packedBody fields))) := by
   let code := rawCons actual (packedBody fields)
@@ -105,6 +105,7 @@ theorem exact_OpenLiteralAtomicNoFunctionFrame (q w r : OTerm α)
     rightZero (onRaw witnessShape 1) (conjunction (onRaw termShape 0) tail) xs stopped
   exact zeroBranchIntro frameGood (constantZero 3) emitFrame z xs guard (constantZeroValue xs)
 
+#print axioms nodeTagReject
 #print axioms exact_OpenLiteralAtomicAuxReject
 #print axioms exact_OpenLiteralBottomTests
 #print axioms exact_OpenLiteralAtomicNoFunctionFrame
