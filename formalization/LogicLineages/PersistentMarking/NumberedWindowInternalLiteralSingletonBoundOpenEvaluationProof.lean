@@ -32,7 +32,7 @@ open NumberedWindowInternalLiteralSingletonBoundOpenRowsProof
 attribute [local irreducible] programGraph
 variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
 
-private theorem readBoundComparison (C : Program 2) (a d t i out : OTerm α)
+theorem readBoundComparison (C : Program 2) (a d t i out : OTerm α)
     (compared : D B Γ (programGraph C out ![i,d])) :
     D B Γ (programGraph (.composition C ![boundIndex,.projection 1])
       out ![a,d,boundTerm t i]) := by
