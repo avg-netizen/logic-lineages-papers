@@ -1,0 +1,18 @@
+{
+  "statement": "16-persistent-marking-termination-ordering:lem:structural-interpretation",
+  "source": "16-persistent-marking-termination-ordering/sections/decision.tex",
+  "source_sha256": "bbf73326e21a6e71984bd46e8c86696013c65ac1875a113a48786db996880af9",
+  "target": "LogicLineages.PersistentMarking.Paper16StructuralScopeTargets.StructuralInterpretationWithBoundary",
+  "target_checkpoint": "fba138f3c",
+  "exact_alias": "LogicLineages.PersistentMarking.Paper16StructuralScopeProof.exact_StructuralInterpretationWithBoundary",
+  "proof_source_sha256": "b6df03dff38ba16e6d79a154cc7aea796b63a96d34ffe1360630737e45d6a126",
+  "native_receipt": "1795672039102686067-2",
+  "axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "source_comparison": [
+    "The decision section fixes the covered finite type, head and observation inventory before interpretation. Typed and Covered select the admissible source terms, and MarkedConstructorInventoryProof closes PrefixClosed for the actual input environment. EvaluationLaws includes monotonicity and weakening for both value and full-tuple call.",
+    "FreeSubstitution and BoundSubstitution give value and call agreement on their related frames. NamedValueSubstitution translates the original capture-avoiding named substitution into the same locally nameless operation.",
+    "The related concrete frame, its canonical finite instance and the consumed-prefix case all use the stipulated fixed point and full ordered argument tuple. concreteOutput evaluates the substituted source or returns the complete bottom code when application is undefined.",
+    "AvailabilityGap uses the ordinary successor, a covered free ground argument and the retained bottom family. The helper is unavailable and the successfully applied source is available at the same context."
+  ],
+  "verification": "The native declaration and axiom audit ran with the pinned toolchain. The warm imported objects were matched to source hashes, successful native rows and object bundles. The proof receipt and log are preserved in the local build reports."
+}

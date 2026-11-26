@@ -210,8 +210,11 @@
           "file": "16-persistent-marking-termination-ordering/sections/decision.tex",
           "line": 149,
           "statement_latex": "[Structural interpretation]\\label{lem:structural-interpretation}\nInterpretation and this original-spine helper are monotone and commute\nwith weakening. Interpretation respects capture-avoiding substitution.\nFor environments interpreting concrete substitutions, and at a fixed\npoint of the constructor operator of Lemma~\\ref{lem:operator}, the helper\ninterprets full application of the resulting substituted source,\nincluding its undefined cases. The fixed-point hypothesis is needed:\nat the bottom family the helper's output for an ordinary successor\napplied to a covered ground variable differs from the interpretation\nof that application. This is not a claim that a previously\nundefined application remains undefined under free substitution.",
-          "status": "pending",
-          "reuse_status": "Corrected fixed-point manuscript retained. The original promotion explicitly records no independent comparison of the whole corrected conjunction; the closed fixed-application and free/bound substitution interfaces need an exact comparison with the printed substituted-source clause."
+          "status": "checked",
+          "reuse_status": "Compared at the pinned finite source inventory, with the printed fixed-point hypothesis and bottom-family witness.",
+          "formal_target": "LogicLineages.PersistentMarking.Paper16StructuralScopeTargets.StructuralInterpretationWithBoundary",
+          "verified_alias": "LogicLineages.PersistentMarking.Paper16StructuralScopeProof.exact_StructuralInterpretationWithBoundary",
+          "acceptance": "verification/paper16-remaining-targets-2026-11-25/STRUCTURAL-SCOPE-ACCEPTANCE.json"
         },
         {
           "id": "16-persistent-marking-termination-ordering:lem:operator",
@@ -475,7 +478,7 @@
           "line": 434,
           "statement_latex": "[Realization closure]\\label{lem:realization}\nRealization is preserved when a term is replaced by a strict predecessor.\nIt is downward closed in its semantic value, with pointwise order at\narrows. If one fixed term realizes every member of a nonempty countable\nfamily, it realizes their pointwise supremum. The typed lambda\nfundamental lemma holds for these realizers.",
           "status": "pending",
-          "reuse_status": "The compiled proof transports realization from strict predecessor to original; the unmodified printed statement says replacement by a strict predecessor. Preserve the proof and record without claiming the printed direction."
+          "reuse_status": "The checked Paper16RealizationDirectionProof.exact_NotPrintedRealization refutes the printed direction at a closed native beta edge. The manuscript's beta argument uses transport from strict predecessor to original."
         },
         {
           "id": "16-persistent-marking-termination-ordering:thm:iteration",

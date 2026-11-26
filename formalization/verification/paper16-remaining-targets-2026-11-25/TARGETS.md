@@ -2,8 +2,8 @@
 
 Applies to the current comparison register at reconciled tip `2391fb243`
 and the continuation on `formalization/paper16-continuation-2026-11-25`.
-The seven pending statements in the current comparison register are all
-in Paper 16. The earlier register also has one pending statement in live
+The seven pending statements at branch selection were all in Paper 16.
+The earlier register also has one pending statement in live
 Paper 02. Its other eight pending rows belong to the archived Paper 06
 edition. The modules below give proof destinations and exact interfaces.
 Use the corresponding named statement as the next proof's conclusion.
@@ -142,7 +142,7 @@ selected probes, and outer-context numeral.
 
 ## Validation
 
-The current comparison register stays at **160 checked / 7 pending**.
+The current comparison register has **161 checked / 6 pending**.
 `Paper16RealizationDirectionTargets` passed the native declaration check
 (receipt `1795666861166467569-12` in the older checkout's
 `formalization/build-reports/`). The run used the new target file and
@@ -154,8 +154,8 @@ The other new target modules still require their native declaration checks.
   passed native checking. It assembles the named and bound substitution
   interfaces, all three fixed applications and the bottom-family witness.
   Receipt `1795672039102686067-2` records the exact proof source hash.
-  Comparing the finite covered syntax hypotheses to the printed paragraph
-  remains the scope check for numbered adoption.
+  The [source comparison](STRUCTURAL-SCOPE-ACCEPTANCE.json) supports
+  adoption of the numbered structural interpretation row.
 - `Paper16RealizationDirectionProof.exact_PrintedDirectionCounterexample`
   and `exact_NotPrintedRealization` passed native checking in receipt
   `1795671863201769769-10`. The countable rank of the closed beta source

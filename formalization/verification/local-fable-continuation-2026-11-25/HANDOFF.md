@@ -54,7 +54,7 @@ python3 scripts/check.py --timeout 180 --cpu-seconds 90 --memory-mib 2048 \
   LogicLineages.PersistentMarking.NumberedWindowInternalLiteralSingletonBoundOpenEvaluationProof
 ```
 
-The current register on this branch has 160 checked and 7 pending.
+At this checkpoint the register had 160 checked and 7 pending.
 
 ## Three Fable lanes resumed from the target plan
 
@@ -65,11 +65,13 @@ arithmetic accessibility. Each lane started its next assignment after its return
 | Lane | Draft proof destination | Current proof obligation |
 | --- | --- | --- |
 | Above-depth lowering | `NumberedWindowInternalLiteralSingletonLambdaBoundAboveBetaProof` | Supply the open raw beta preservation premise for the same installed child program. |
-| Lambda child | `NumberedWindowInternalLiteralSingletonLambdaRowsNumericProof` | Compare the course-of-values table lookup with the same child program at incremented depth. |
-| Positive-depth hit | `NumberedWindowInternalLiteralSingletonShiftHitInstallationProof` | Prove the open fallback boundary when the actual syntax program rejects the replacement. |
+| Lambda child | `NumberedWindowInternalLiteralSingletonLambdaChildFitProof` | Check the table lookup and offset proof, then use the same fitted child in beta installation. |
+| Positive-depth hit | `NumberedWindowInternalLiteralSingletonShiftHitRejectOpenProof` | Check the open fallback boundary and supply the graph for a recursive shift tag. |
 
 The coordinator's `Paper16RealizationDirectionProof` and
 `Paper16StructuralScopeProof` passed native checking with standard axioms.
+The source comparison closes the structural interpretation row at 161 checked
+and 6 pending. The realization proof refutes the printed direction.
 The [target plan](../paper16-remaining-targets-2026-11-25/TARGETS.md#validation)
 records the statements and receipts. The accessibility batch awaits its
 native checks under the existing free-memory floor.
@@ -77,3 +79,10 @@ native checks under the existing free-memory floor.
 The serialized checker now retains completed dependency receipts across a
 low-memory stop (`a74a82d7d`). All 50 checker tests passed with the sparse
 worktree's omitted fixtures supplied from that same Git tree.
+
+Each Fable lane returned four rounds. As two lanes began round five,
+`claudep` reported exhausted API credits and the subscription reported its
+monthly spend limit. The lambda-child lane had already started round four
+and returned its course-of-values proof. Its source is saved with the other
+pending accessibility drafts. The retained sessions can resume when the
+provider permits new turns.
