@@ -1,3 +1,10 @@
+# Remaining public proof targets, 25 November 2026
+
+The [target sequence](verification/paper16-remaining-targets-2026-11-25/TARGETS.md)
+identifies the Lean conclusions for the seven pending Paper 16 statements
+and the live Paper 02 consumer corollary. It gives the source clauses,
+selected program interfaces, proof dependencies, and declaration-check status.
+
 # Current release — new comparison collection, 18 November 2026
 
 Formalization of papers16–20 is active through 19 November2026 at18:00UTC.
