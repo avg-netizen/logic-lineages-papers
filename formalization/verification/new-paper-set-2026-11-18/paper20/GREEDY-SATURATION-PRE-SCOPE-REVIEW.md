@@ -1,0 +1,5 @@
+# Independent pre-scope: current20 greedy and saturation
+
+Approved two complete source scopes thm:greedy and lem:saturation; all eight pins independently match. Greedy retains actual finite-sup maximum semantics, all base/retain/drop/lower-power branches, exact coefficient split including zero remainder, budget-phase rank decrease, real optimized fuel interpreter correctness at every sufficient fuel, NF/actual ordinal calibration, faithful reference equalities and genuine Computable2 wrappers. The optimized definition must remain a branch interpreter rather than an exhaustive-search substitution; reference equivalence may legitimately pay effectivity.
+
+Saturation retains precisely both printed assertions on every positive limit below epsilon-zero and every natural budget including zero: exact norm and strict budget monotonicity. No extra joint-order monotonicity is smuggled into the source claim. Neither scope depends on control selection. Fresh native gates and full recursive source/evidence review are required despite prior independently checked versions in other papers. No inherited status, collapse/count, parked period or main theorem credit.

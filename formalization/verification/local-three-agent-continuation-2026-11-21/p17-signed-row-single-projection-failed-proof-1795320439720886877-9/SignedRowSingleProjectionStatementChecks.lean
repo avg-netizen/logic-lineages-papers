@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.SignedRowSingleProjectionTargets
+import LogicLineages.PermittedControl.SignedRowSingleProjectionCodeProof
+import LogicLineages.PermittedControl.SignedRowSingleProjectionSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_signedRowSingleProjectionCodeExact : SignedRowSingleProjection.CodeExact :=
+  SignedRowSingleProjection.codeExact
+
+theorem fixed_actualSignedRowSingleProjection : SignedRowSingleProjection.ActualCaseSplit :=
+  SignedRowSingleProjection.actualCaseSplit
+
+theorem fixed_fullSignedRowSingleProjection : SignedRowSingleProjection.FullSignedRowSingleProjection :=
+  ⟨fixed_signedRowSingleProjectionCodeExact,fixed_actualSignedRowSingleProjection⟩
+
+#print axioms fixed_signedRowSingleProjectionCodeExact
+#print axioms fixed_actualSignedRowSingleProjection
+#print axioms fixed_fullSignedRowSingleProjection
+
+end LogicLineages.PermittedControl.StatementChecks

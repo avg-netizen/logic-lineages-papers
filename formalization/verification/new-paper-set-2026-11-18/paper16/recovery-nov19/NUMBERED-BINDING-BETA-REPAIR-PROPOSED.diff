@@ -1,0 +1,17 @@
+--- LogicLineages/PersistentMarking/NumberedWindowBindingChecks.lean
++++ LogicLineages/PersistentMarking/NumberedWindowBindingChecks.lean
+@@ -15,7 +15,13 @@
+     simpa only [Nat.zero_add,shiftArgsZero] using cancelArgs a 0 0 bs
+   have he : substituteArgs (.cons a .nil) 0 (shiftArgs 1 0 es) = es := by
+     simpa only [Nat.zero_add,shiftArgsZero] using cancelArgs a 0 0 es
+-  simp only [openNumbered,substitute,substituteAppend,hb,he,substituteArgs,substituteBoundZero]
++  have hz : substituteArgs (.cons a .nil) 0 (.cons (.bound σ 0) .nil) = .cons a .nil := by
++    change NArgs.cons (substitute (.cons a .nil) 0 (.bound σ 0)) .nil = .cons a .nil
++    rw [substituteBoundZero]
++  change NTerm.numbered f τ k (substituteArgs (.cons a .nil) 0 (shiftArgs 1 0 bs))
++      (substituteArgs (.cons a .nil) 0 ((shiftArgs 1 0 es).append (.cons (.bound σ 0) .nil))) =
++    .numbered f τ k bs (es.append (.cons a .nil))
++  rw [substituteAppend,hb,he,hz]
+ 
+ #print axioms exact_SingleCancellation
+ #print axioms exact_SingleArgsCancellation

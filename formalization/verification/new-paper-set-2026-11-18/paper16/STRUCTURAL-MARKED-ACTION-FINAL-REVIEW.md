@@ -1,0 +1,3 @@
+# Independent final: marked actions
+
+Accepted first-pass receipt `1795022674506549558-2`. Compiler-free evidence exactly matches author: 111 modules, two exact standard-only aliases, zero errors; all twenty-five frozen/inherited pins reconcile. Actual proof was read at subset scope: retained Fits and valid parameters derive successful optional output membership; success identifies decode values and independent family monotonicity/(C) establishes the two laws. No default or caller family-law oracle supplies a result. Accept only MarkedActionSound and MarkedActionLaws; whole bottom, insertion, interpreter and operator remain separate. No native execution by reviewer.

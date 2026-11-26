@@ -1,0 +1,22 @@
+--- LogicLineages/PersistentMarking/NumberedWindowSimulationData.lean
++++ LogicLineages/PersistentMarking/NumberedWindowSimulationData.lean
+@@ -17,7 +17,7 @@
+   | .put _ _ _ _ _ t => budget t + 1
+   | .select f _ bs es _ _ _ ds _ _ _ _ _ _ t =>
+       budget t + (Spine.ownerCopies f bs es ds).length + 2
+-  | .fabs _ _ _ _ _ _ _ _ _ _ t => budget t + 1
++  | .fabs _ _ _ _ _ _ _ _ _ _ _ t => budget t + 1
+   | .copy _ _ _ _ _ _ _ _ t => budget t + 1
+   | .stat _ _ _ _ _ _ _ _ m w => max (budget m) (budget w) + 1
+   | .strictIntro _ _ _ _ _ _ _ t => budget t + 1
+--- verification/new-paper-set-2026-11-18/paper16/recovery-nov19/NUMBERED-WINDOW-POSITIVE-SIMULATION-FROZEN.json
++++ verification/new-paper-set-2026-11-18/paper16/recovery-nov19/NUMBERED-WINDOW-POSITIVE-SIMULATION-FROZEN.json
+@@ -33,7 +33,7 @@
+     "formalization/LogicLineages/PersistentMarking/ConfinedPair.lean": "09b5b2ace504c3cc234fe13c7c1561804c09dca22f7b8874a4c80f7c19c21e9e",
+     "formalization/LogicLineages/PersistentMarking/TypeSupportTargets.lean": "19a03fae35c56eb9761502f93687c4c229d5e88fb51d94ed50903eb59c580156",
+     "formalization/LogicLineages/PersistentMarking/LiteralDerivationLocalityTargets.lean": "8a8573b2748a1cfcea7ee873f03ae075c22623a4a83216309698d6ca733b7d42",
+-    "formalization/LogicLineages/PersistentMarking/NumberedWindowSimulationData.lean": "2d87d78b285b2dcfcc144bf415574bdcfe73910ec60c04858ab4c087a6d5cf96",
++    "formalization/LogicLineages/PersistentMarking/NumberedWindowSimulationData.lean": "7c3648950394bd87c329900c06b1b1837466c07ec94fe6aaae0038b7ee6a05d4",
+     "formalization/LogicLineages/PersistentMarking/NumberedWindowPositiveSimulationTargets.lean": "606fb30f8a6c4be4324f2ce715bbf9de30278e6ad0dd9245e18ada32ef79bedd"
+   }
+ }

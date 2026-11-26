@@ -1,0 +1,11 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseApplicationFrontendNumericSlotsProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseApplicationFrontendNumericSlotsProof.lean
+@@ -81,7 +81,7 @@
+         (run rawContext f = run rawContext u ∧ (run rawDomain f = run rawResult u ∧
+           evaluate (outputCore least)
+             (run rawContext f ::ᵥ run rawDomain f ::ᵥ run rawCodomain f ::ᵥ
+-              run rawLeast f ::ᵥ run rawLeast u ::ᵥ y ::ᵥ nil) = 1))))) := by
++              run rawLeast f ::ᵥ run rawLeast u ::ᵥ y ::ᵥ nil) = 1)))) := by
+   simp only [applicationCore,acceptedBoth,leftValue,rightValue,sameContext,domainAgreement,compareSlots,outputValue]
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowInternalSparseApplicationFrontendNumericSlotsProof

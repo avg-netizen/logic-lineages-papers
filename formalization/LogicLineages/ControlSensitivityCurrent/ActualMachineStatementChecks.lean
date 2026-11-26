@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.ActualMachineProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.ActualMachine.StatementChecks
+theorem fixed_effectiveEnumeration : ActualMachineTargets.EffectiveEnumeration := effectiveEnumeration
+theorem fixed_exactTransitionClock : ActualMachineTargets.ExactTransitionClock := exactTransitionClock
+theorem fixed_monotoneHalting : ActualMachineTargets.MonotoneHalting := monotoneHalting
+theorem fixed_actualMachineGrowth : ActualMachineTargets.ActualMachineGrowth := actualMachineGrowth
+#audit_namespace LogicLineages.ControlSensitivityCurrent.ActualMachine.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.ActualMachine.StatementChecks

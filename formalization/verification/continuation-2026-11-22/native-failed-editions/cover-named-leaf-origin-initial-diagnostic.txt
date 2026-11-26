@@ -1,0 +1,36 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedLeafOriginChecks.lean:45:93: error: unsolved goals
+α β : Type
+ids m : OTerm α
+j : α → β
+⊢ programGraph ascendingRange (Term.relabel j ids) (Fin.cons (suc (Term.relabel j m)) Fin.elim0) =
+    programGraph ascendingRange (Term.relabel j ids) ![suc (Term.relabel j m)]
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedLeafOriginChecks.lean:102:91: error: Application type mismatch: The argument
+  witness
+has type
+  Derivation body Δ
+    (NumberedWindowInternalCoverCartesianFoldOriginTargets.originRow D (Term.relabel j ids) i (Term.relabel j key)
+      fun i => Term.relabel j (![ty] i))
+but is expected to have type
+  Derivation body Δ
+    (?m.231 ⊓
+      NumberedWindowInternalCoverCartesianFoldOriginTargets.blockHit (singletonLeaf b.toNat) i (Term.relabel j key)
+        ![Term.relabel j ty])
+in the application
+  witness.conjunctionRight
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedLeafOriginChecks.lean:162:70: error: Application type mismatch: The argument
+  witness
+has type
+  Derivation body Δ
+    (NumberedWindowInternalCoverCartesianFoldOriginTargets.originRow D (Term.relabel j K) ty (Term.relabel j key)
+      fun i => Term.relabel j (![ids] i))
+but is expected to have type
+  Derivation body Δ
+    (?m.160 ⊓
+      NumberedWindowInternalCoverCartesianFoldOriginTargets.blockHit (typeBlock b.toNat) ty (Term.relabel j key)
+        ![Term.relabel j ids])
+in the application
+  witness.conjunctionRight
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverNamedLeafOriginChecks.exact_OpenCoverNamedLeafOrigin' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

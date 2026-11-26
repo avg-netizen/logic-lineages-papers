@@ -1,0 +1,3 @@
+# Independent coded semantic scope review
+
+Full bits, targets and source map read;30 frozen pins verified. Successful decoded original literal endpoints/certificates compose unchanged supplied witness checkers. Existential codes reflect independent actual WindowStep/WindowPath, and arbitrary least-class Nat endpoints retain ActualCodeAt to original ClassEdge/positive RS. Primary independently guards both actual typed/window endpoints; Closed K retained where needed. Explicit malformed rejection; no equality of absences, search or internal arithmetic/ID1. Six exact contracts await target-only original core preflight.

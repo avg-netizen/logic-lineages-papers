@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceLambdaComputabilityProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceLambdaComputabilityGate
+
+theorem lambdaComputability : SourceLambdaComputabilityTargets.ActualLambdaComputability :=
+  SourceLambdaComputabilityProof.actualLambdaComputability
+
+#print axioms lambdaComputability
+#print axioms SourceLambdaComputabilityProof.actualLambdaComputability
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceLambdaComputabilityGate

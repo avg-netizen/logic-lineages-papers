@@ -1,0 +1,17 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentCountComparison/NativeProof.lean:63:2: error: unsolved goals
+case pos
+left right : List ℕ
+ha :
+  evaluate InternalApplicationValidityStackAppend.append (ofFn ![numbersNumber left, numbersNumber right]) =
+    numbersNumber (left ++ right)
+hp : left.Perm right
+hb : ∀ a ∈ left ++ right, List.count a left = List.count a right
+⊢ (decide (∀ a ∈ left ++ right, List.count a left = List.count a right)).toNat = true.toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentCountComparison/NativeProof.lean:64:18: warning: This simp argument is unused:
+  hb
+
+Hint: Omit it from the simp argument list.
+  simp only [hp,h̵b̵,̵ ̲decide_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentCountComparison/NativeProof.lean:89:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentCountComparison.NativeProof.numericPermutation: forbidden axiom dependency sorryAx

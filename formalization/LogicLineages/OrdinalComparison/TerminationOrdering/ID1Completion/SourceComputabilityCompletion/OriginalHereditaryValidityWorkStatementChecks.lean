@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityWorkProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityWorkStatementChecks
+
+theorem payload_bounds_exact :
+    OriginalHereditaryValidityTargets.ActualOriginalHereditaryPayloadBounds :=
+  OriginalHereditaryValidityWorkProof.actualOriginalHereditaryPayloadBounds
+#print axioms payload_bounds_exact
+
+theorem work_decrease_exact :
+    OriginalHereditaryValidityTargets.ActualOriginalHereditaryWorkDecrease :=
+  OriginalHereditaryValidityWorkProof.actualOriginalHereditaryWorkDecrease
+#print axioms work_decrease_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityWorkStatementChecks

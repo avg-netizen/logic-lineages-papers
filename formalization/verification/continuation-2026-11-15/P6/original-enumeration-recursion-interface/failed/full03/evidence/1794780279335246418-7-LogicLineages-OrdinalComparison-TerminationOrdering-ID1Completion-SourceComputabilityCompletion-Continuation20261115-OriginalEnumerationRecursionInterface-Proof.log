@@ -1,0 +1,23 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEnumerationRecursionInterface/Proof.lean:41:98: error: unexpected identifier; expected '}'
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEnumerationRecursionInterface/Proof.lean:41:30: error: Fields missing: `ts`, `hs`, `ls`, `tb`, `p2`, `p3`, `nodePair`, `parameterPair`, `secondPair`, `thirdPair`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEnumerationRecursionInterface/Proof.lean:39:53: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+n : ℕ
+node answers param vb f ts hs ls tb p2 p3 out : OTerm alpha
+hn : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing node vb f))
+hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing param ts p2))
+h2 : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing p2 hs p3))
+h3 : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing p3 ls tb))
+x : Frame body Delta :=
+  { node := node, answers := answers, param := param, vb := vb, f := f, ts := sorry, hs := sorry, ls := sorry,
+    tb := sorry, p2 := sorry, p3 := sorry, nodePair := ⋯, parameterPair := ⋯, secondPair := ⋯, thirdPair := ⋯ }
+⊢ Nonempty (Derivation body Delta (graph3 (G n) out node answers param)) ↔
+    Nonempty
+      (Derivation body Delta
+        (eqn f z ⊓ eqn out (numeral 1) ⊔ Formula.not (eqn f z) ⊓ Targets.positiveOutput n out answers ts hs ls tb vb))
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationRecursionInterface.Proof.backward: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEnumerationRecursionInterface/Proof.lean:46:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationRecursionInterface.Proof.internalCombine: forbidden axiom dependency sorryAx

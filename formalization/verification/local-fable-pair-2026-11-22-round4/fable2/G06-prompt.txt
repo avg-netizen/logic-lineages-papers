@@ -1,0 +1,53 @@
+You are "Fable-2", a proof lane in a local Lean 4 formalization round (Paper 16, object calculus
+inside ID1). Fresh session, one narrow task, limited API budget: read ONLY what is named below (plus
+greps for lemma names), and stop at the first gated statement or a clearly diagnosed stop.
+Working directory is the Lean package root (`formalization/`).
+
+Rules (complete):
+- Lean runs only through `bash verification/local-fable-pair-2026-11-22-round4/gate.sh mathlib MODULE…`;
+  pipe through `grep -v CACHE_HIT | tail -40`. One gate at a time; it waits if the compiler is busy
+  (two other lanes are using it).
+- Never edit an existing `.lean` file (all are tracked and hash-pinned); new work goes in new modules.
+  Never delete (no rm). No git commands at all, not even read-only ones.
+- Write the `…Targets.lean` module first (`def … : Prop`, `@[expose] public section`), put its sha256 in
+  the ledger BEFORE drafting the proof, then prove in a separate module (`public section`, heavy
+  suppliers as private `import`), ending with `#print axioms <theorem>`. No sorry/axiom/native_decide;
+  no hypothesis that assumes the conclusion.
+- Ledger: `verification/local-fable-pair-2026-11-22-round4/fable2/LEDGER.md`, section "G06 — refitted installation
+  guards" (plan, targets + sha, receipts, failures, state and next). On a pass write
+  `fable2/REFITTED-INSTALL-EVIDENCE.json` (modules, sha256 of each new file, passing receipt id, the
+  `#print axioms` lines) and `fable2/REFITTED-INSTALL-SOURCE-MAP.md` (claimed / assumed / not claimed).
+
+Context (all in `LogicLineages/PersistentMarking/`): a previous session of yours gated
+`NumberedWindowInternalCoverMeasuredApplicationTypeCalibration{Targets,Proof}.lean` (record #1461):
+for the scalar installed with the type checker `conjunction TV (refitGuard s T)` instead of `TV`, two
+accepted operand addresses at one context give the application's output address, frontend acceptance
+and output functionality with no type-guard hypothesis, under two open codomain-inversion premises.
+That session's own caveat, recorded in #1461's scope and in
+`verification/local-fable-pair-2026-11-22-round3/fable2/LEDGER.md` (section G05, read it):
+
+  "the refitted scalar does not satisfy `ActualTypeGuard` (it is narrower than `typeBit`). I did not
+   check whether `ConcreteAddressPositive` / `GuardedAt` survive that choice" — and its Next: "first
+   check whether the numeric installation chain survives the refitted `tv`".
+
+Task: settle that caveat. Read the G05 ledger section and the TypeCalibration modules; then by grep:
+where the accepted installation uses `ActualTypeGuard tv` (and `TypeGuardCalibrated s T`) — which
+accepted statements about the installed tuple take it as a hypothesis (`InstalledTupleAt`,
+`ConcreteAddressPositive`, `GuardedAt`, the measured installation statements of
+`NumberedWindowInternalCoverCombinedMeasuredInstall{Targets,Proof}.lean`, the external agent's #1430)
+and what each uses it for.
+
+Deliver one of:
+(a) a gated statement that the installation facts the application step relies on hold for the refitted
+    type checker under a named, numeric, checkable condition on the settings (for example: the refit
+    guard accepts every type the syntax guard accepts on the finite window) — with that condition as an
+    explicit `def … : Prop` and the proof from the accepted calibrations; or
+(b) if the refitted checker genuinely breaks an accepted installation fact, the precise statement that
+    fails and why (as a gated counterexample if it is cheap, otherwise as an argument clearly labelled
+    as such), and the correct reading of #1461: which of its conclusions are then about a scalar the
+    accepted chain does not install.
+Prefix `NumberedWindowInternalCoverMeasuredApplicationRefittedInstall`. Do not attempt the two open
+codomain-inversion premises.
+
+Final message, ten lines: what passed (module, theorem, receipt) or the exact failing statement; what
+#1461 may and may not be cited for; what you would do next.

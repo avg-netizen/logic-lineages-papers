@@ -1,0 +1,7 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafMeasureNumericProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafMeasureNumericProof.lean
+@@ -30 +30,3 @@
+-  rw [leafPair10,compositeTwo,literalEvaluation]
++  change evaluate (.composition pairing (Fin.cons (literal 1 1) (Fin.cons (constantZero 1) Fin.elim0)))
++    (raw ::ᵥ nil) = Encodable.encode ((1,0) : Nat × Nat)
++  rw [compositeTwo,literalEvaluation]

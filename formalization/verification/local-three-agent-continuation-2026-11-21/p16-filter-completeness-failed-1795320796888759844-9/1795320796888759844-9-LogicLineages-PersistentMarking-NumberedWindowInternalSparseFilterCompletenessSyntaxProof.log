@@ -1,0 +1,14 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFilterCompletenessSyntaxProof.lean:42:105: error: unsolved goals
+α β : Type
+E : Program 4
+vertices seen ctx ty k : OTerm α
+j : α → β
+⊢ (memberGraph (Term.relabel j vertices) (Term.relabel j k) ⊓
+          scanGraph E (Term.relabel j seen) (Term.relabel j ctx) (Term.relabel j ty) (Term.relabel j k)).imp
+      (hitGraph E (Term.relabel j vertices) (Term.relabel j seen) (Term.relabel j ctx) (Term.relabel j ty)
+        (Term.relabel j k)) =
+    completeAt E (Term.relabel j vertices) (Term.relabel j seen) (Term.relabel j ctx) (Term.relabel j ty)
+      (Term.relabel j k)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFilterCompletenessSyntaxProof.lean:64:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

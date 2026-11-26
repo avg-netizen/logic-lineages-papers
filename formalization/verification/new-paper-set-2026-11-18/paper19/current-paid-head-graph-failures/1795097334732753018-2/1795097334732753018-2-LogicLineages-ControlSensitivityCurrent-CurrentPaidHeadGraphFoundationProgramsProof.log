@@ -1,0 +1,43 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphFoundationProgramsProof.lean:84:12: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'CurrentOrdinalEvaluation.evaluate', which is 'noncomputable'
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphFoundationProgramsProof.lean:103:12: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'finishParams', which is 'noncomputable'
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphFoundationProgramsProof.lean:115:67: error: unsolved goals
+p : Policy
+hp : PolicyShape.Effective p
+f : ℕ → ℕ
+hc : Computable f
+hf : FullAddition.Targets.SourceGrowth f
+g : Primrec fun q => q.1
+a : Primrec fun q => q.2.1
+hcheck : PrimrecPred fun q => SyntaxCode.check q.1 q.2.1 = some (SyntaxCode.typeCode (Ty.curriedGround 1))
+ha : Computable fun q => PolicyAssignment.assignmentCode p q.1 q.2.1
+program :
+  Computable fun a =>
+    if SyntaxCode.check a.1 a.2.1 = some (SyntaxCode.typeCode (Ty.curriedGround 1)) then
+      (PolicyAssignment.assignmentCode p a.1 a.2.1).bind fun b => fromVector f (a, b)
+    else none
+q : P
+⊢ (if SyntaxCode.check q.1 q.2.1 = some (SyntaxCode.typeCode (Ty.curriedGround 1)) then
+      (PolicyAssignment.assignmentCode p q.1 q.2.1).bind fun a =>
+        a[1]?.bind fun a_1 =>
+          a[0]?.bind fun a =>
+            (UnitHeadCode.positiveCode a_1).bind
+              (some ∘ fun a_2 =>
+                (encodedClosedHead a_2, shiftCode (encodedClosedHead a_2) q.2.2,
+                  encodedFiniteValue (CurrentOrdinalEvaluation.evaluate f [] (UnitHeadCode.unitCode a))))
+    else none) =
+    if SyntaxCode.check q.1 q.2.1 = some (SyntaxCode.typeCode (Ty.curriedGround 1)) then
+      (PolicyAssignment.assignmentCode p q.1 q.2.1).bind fun a =>
+        a[1]?.bind fun a_1 =>
+          a[0]?.bind fun a =>
+            (UnitHeadCode.positiveCode a_1).bind fun a_2 =>
+              some
+                (encodedClosedHead a_2, shiftCode (encodedClosedHead a_2) q.2.2,
+                  encodedFiniteValue (CurrentOrdinalEvaluation.evaluate f [] (UnitHeadCode.unitCode a)))
+    else none
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphFoundationProgramsProof.lean:128:37: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵e̵q̵_̵b̵i̵n̵d̵,̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵p̵u̵r̵e̵]̵[̲O̲p̲t̲i̲o̲n̲.̲m̲a̲p̲_̲e̲q̲_̲b̲i̲n̲d̲,̲ ̲b̲i̲n̲d̲,̲ ̲p̲u̲r̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

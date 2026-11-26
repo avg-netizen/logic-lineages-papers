@@ -1,0 +1,56 @@
+CACHE_HIT LogicLineages.PersistentMarking.Syntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineSyntax
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowSyntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineTyping
+CACHE_HIT LogicLineages.PersistentMarking.Signature
+CACHE_HIT LogicLineages.PersistentMarking.NameBridge
+CACHE_HIT LogicLineages.PersistentMarking.FreeSubstitution
+CACHE_HIT LogicLineages.PersistentMarking.StructuralContext
+CACHE_HIT LogicLineages.PersistentMarking.Occurrences
+CACHE_HIT LogicLineages.PersistentMarking.SpineMarking
+CACHE_HIT LogicLineages.PersistentMarking.Comparison
+CACHE_HIT LogicLineages.PersistentMarking.StructuralStabilityTargets
+CACHE_HIT LogicLineages.PersistentMarking.StructuralCoverageTargets
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupport
+CACHE_HIT LogicLineages.PersistentMarking.DecisionInventory
+CACHE_HIT LogicLineages.PersistentMarking.DecisionPorts
+CACHE_HIT LogicLineages.PersistentMarking.DecisionObservations
+CACHE_HIT LogicLineages.PersistentMarking.DecisionSourceUniverse
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowDomain
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRules
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowPrimary
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowPreservationTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowClosing
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowTraceAlgebra
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowOrdinaryTranslation
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowTupleTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowTraceBudgetTargets
+CACHE_HIT LogicLineages.PersistentMarking.LiteralDerivationTree
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowSimulationData
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupportTargets
+CACHE_HIT LogicLineages.PersistentMarking.ConfinedPair
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowPositiveSimulationTargets
+CACHE_HIT LogicLineages.PersistentMarking.LiteralDerivationLocalityTargets
+Compiling LogicLineages.PersistentMarking.NumberedWindowSimulationJobs
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowSimulationJobs
+Compiling LogicLineages.PersistentMarking.NumberedWindowSimulationFootProof
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowSimulationFootProof.lean:12:6: error: Failed to rewrite using equation theorems for `footprint`
+
+Hint: Try rewriting with `LogicLineages.PersistentMarking.LiteralDerivationLocalityTargets.footprint.eq_def`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowSimulationFootProof.lean:16:36: error: unsolved goals
+case x_1
+S : Spine.Signature
+K : List Ty
+J : Judgment
+d : Tree S J
+h : Foot K d
+ρ : Ty
+hρ : ρ ∈ rootTypes J
+⊢ ∀ (f : Head) (τ : Ty) (bs es : Spine.Args) (t : Spine.Expr) (i : Nat) (q : Spine.Expr) (ds : List Ty) (r : Spine.Expr)
+    (a : Spine.PaperTerm S (Spine.Expr.marked f τ bs es) τ) (a_1 : Spine.PaperTerm S t τ)
+    (a_2 : Spine.At bs i q ∨ Spine.At es i q) (a_3 : Spine.Typed Spine.EmptyContext q (Spine.ArrowPrefix ds τ))
+    (a_4 : Spine.apply q (Spine.ownerCopies f bs es ds) = some r) (a_5 : Tree S (Judgment.weak r t)),
+    J = Judgment.weak (Spine.Expr.marked f τ bs es) t →
+      d ≍ Tree.select f τ bs es t i q ds r a a_1 a_2 a_3 a_4 a_5 → False
+COMPILE_FAILED LogicLineages.PersistentMarking.NumberedWindowSimulationFootProof: 1
+BUILD_RECEIPT build-reports/1795081946254933271-6.json

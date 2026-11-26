@@ -1,0 +1,7 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.RecursiveHeadLayerReflexivity.Targets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.RecursiveHeadLayerReflexivity.Preflight
+example : Prop := Targets.InternalOrdinary
+example : Prop := Targets.InternalNumbered
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.RecursiveHeadLayerReflexivity.Preflight

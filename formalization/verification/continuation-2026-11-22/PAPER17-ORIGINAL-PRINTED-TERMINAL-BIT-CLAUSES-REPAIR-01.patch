@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedTerminalBitClausesProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedTerminalBitClausesProof.lean
+@@ -77,2 +77,2 @@
+-    have size : bits.length = tail.length := by simpa only [bits,List.length_map] using
+-      snapshotLength f ρ tail snap actual
++    have size : bits.length = tail.length := by
++      simpa only [bits,List.length_map] using (snapshotLength f ρ tail snap actual)

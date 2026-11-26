@@ -1,0 +1,24 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseCanonicalAddressNumericProof.lean:45:6: error: Tactic `rewrite` failed: motive is not type correct:
+  fun _a => (if _a ∧ run (coordinateCall W least) q = 1 then 1 else 0) = (scalar s q).toNat
+Error: Application type mismatch: The argument
+  instDecidableEqNat (run (shapeChecks cv tv) q) 1
+has type
+  Decidable (run (shapeChecks cv tv) q = 1)
+but is expected to have type
+  Decidable _a
+in the application
+  @instDecidableAnd _a (run (coordinateCall W least) q = 1) (instDecidableEqNat (run (shapeChecks cv tv) q) 1)
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+s : NumberedWindowScalarAlgorithm.Settings
+cv tv : Program 1
+W least : Program 3
+hc : NumberedWindowInternalSparseAddressPositiveCalibrationTargets.ActualContextGuard cv
+ht : NumberedWindowInternalSparseAddressPositiveCalibrationTargets.ActualTypeGuard tv
+hw : NumberedWindowInternalSparseTypedRawTargets.ActualPackedWindow s W
+hl : NumberedWindowInternalSparsePathAdvanceTargets.ActualLeastCalibration s least
+q : ℕ
+⊢ (if run (shapeChecks cv tv) q = 1 ∧ run (coordinateCall W least) q = 1 then 1 else 0) = (scalar s q).toNat

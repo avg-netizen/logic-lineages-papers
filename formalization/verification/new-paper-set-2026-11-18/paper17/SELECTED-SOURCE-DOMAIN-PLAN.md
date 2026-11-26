@@ -1,0 +1,9 @@
+# Selected-control source domain bridge plan
+
+After checked literal finiteness/covariance, the missing source-finiteness bridge is actual selected-f grading. Existing OriginalDomain closed/ambient/head classes have fixed collapse semantics and cannot be reused as current f classes.
+
+Define a fresh source domain parameterized by actual f: closedValue/valuation/expressionValue use the existing literal Term grammar with ParametricSourceSuccessor.denoteWith f (whose collapse is actual collapseWith f of natural omega product plus tail). ClosedGrade reproduces all six source B rules with actual f norm guard; an admissible substitution assigns whole typed closed B-vectors with all original bounded-norm inequalities. AmbientGrade and HeadGrade reproduce source C/C^x including universal f-valued guard and promotion only when wholly head-free. No target closure theorem or computational supplier in the structures.
+
+First supporting contract, independently reviewed before proof: every actual HeadGrade input belongs to the already checked literal Domain, hence has unique node-bounded partial for every policy; high grades i>sigma.level are genuinely head-free; all graded vectors' actual partial collection and inner delta/full abstraction succeed uniquely, and high retained coordinates agree with the source's unchanged x-free trees after dropping the tracked context. These are syntactic consequences of real source grades for arbitrary f, therefore also both selected controls, not semantic value/norm estimates.
+
+No weak-scalar/box/domain-output-bound or arbitrary fixed-G transfer. Later full source-finiteness assembly needs actual naked-delta effective code (the earlier full abstraction code includes retained addend), and clear source substitution/grade-domain instantiation. General covariance is already proved for all lifted tail substitutions, so grading is not smuggled as a covariance oracle. Threshold remains parked.

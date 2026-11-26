@@ -1,0 +1,58 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "0ecb78709d14be80b27c71832b8e03efd1a0a5d4",
+  "failed_source_local_commit": "c4e1c1a355ee600d87a4656c4ca46a5a55fb352e",
+  "failed_source_tree": "bced00ec2a447bcae0df785ca0b9cd5c6ce089b6",
+  "failed_exact_gate_receipt": "1795370390497218341-101",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalPrintedRankedLiteralHighStatementChecks",
+  "failed_receipt_sha256": "e964492551699ec6d1689663438ba1ef20b698f96e468578ea6d239bffdf87f4",
+  "failed_exact_module_log_sha256": "f7362326b8462370a293c5fe6091fdddf2b3bc5c946b8c3607ce71ae202b533e",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedRankedLiteralHighFundingProof.lean:111:4: error: (deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached\n\nNote: Use `set_option maxHeartbeats <num>` to set the limit.\n\nHint: Additional diagnostic information may be available using the `set_option diagnostics true` command.\n",
+  "failed_original_native_log_sha256": "94fa2bcd281d498a368e9f9ae3211cda43334afed6dd7d178082afca330a5aff",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedRankedLiteralHighFundingProof.lean",
+  "failed_proof_sha256": "e1556ca48abd7e89d6a51f7c1ff7b3fa5980f9114af9d89f2a0689fa57fd4cbf",
+  "repaired_proof_sha256": "299165444b7bb9a8a1e83e157fa941c258c2f759cca54a50cc804bb29ef15a89",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-RANKED-LITERAL-HIGH-REPAIR-02.patch",
+  "patch_sha256": "6c018944f4d9c0cac21cc5a9debae385306c6349a4e53f0dd2aaea713a2d566d",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-RANKED-LITERAL-HIGH-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "977793174978a2ac4718a4e5a8fe191eb47f5dc93f6e99bf618083e814d365b0",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-RANKED-LITERAL-HIGH-REPAIR-01.json": "433f5f7adff9e16cf7cb6f53c06746908fdd5af09b98fa4994eefb61b7982d74"
+  },
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedRankedLiteralHighProjectionProof.lean": "291a9c06c0e375544d9008ee6cfd01835eeb2a21cce7fdc85ee4a8d19f7b53cd",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedRankedLiteralHighSourceProof.lean": "1fa494a462be00f261e5775139a33c51bc31c9efcbf1e5bf4d4715dd8b54b129",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedRankedLiteralHighStatementChecks.lean": "94304ab939ce0322bbc35f227bd4223dfda77809dc20323305d10bf3e9efa24d",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedRankedLiteralHighTargets.lean": "4735f7bab299d2874b90a3330bd7529aeefddc8ab4ac5d5cacf8fe9c2bba3688",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-RANKED-LITERAL-HIGH-SOURCE-MAP.md": "77f7b01425abcdb887579ca52c09e5d6b7bce3b30889aef794de5d5c960037f5"
+  },
+  "static_module_closure": {
+    "FundingProof": {
+      "local": 472,
+      "external": 42,
+      "contains_totient": false
+    },
+    "ProjectionProof": {
+      "local": 737,
+      "external": 44,
+      "contains_totient": false
+    },
+    "SourceProof": {
+      "local": 468,
+      "external": 42,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 738,
+      "external": 44,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 301,
+      "external": 35,
+      "contains_totient": false
+    }
+  },
+  "scope": "Type the pure branch fold before specializing, via a private Nat cost alias and explicit goal. Add bounded local 650000 elaboration heartbeats only for rankedSetup as released after deterministic 200000 isDefEq; suite native resources and all target/data/import scopes unchanged."
+}

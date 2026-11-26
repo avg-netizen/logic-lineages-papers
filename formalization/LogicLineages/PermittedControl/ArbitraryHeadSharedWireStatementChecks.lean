@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PermittedControl.ArbitraryHeadSharedWireTargets
+import LogicLineages.PermittedControl.ArbitraryHeadSharedWireRawProof
+import LogicLineages.PermittedControl.ArbitraryHeadSharedWireTypedProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactArbitraryHeadFiniteWire : ArbitraryHeadSharedWire.ExactFiniteWire :=
+  ArbitraryHeadSharedWire.exactFiniteWire
+
+theorem fixed_exactArbitraryHeadInfiniteWire : ArbitraryHeadSharedWire.ExactInfiniteWire :=
+  ArbitraryHeadSharedWire.exactInfiniteWire
+
+theorem fixed_exactArbitraryHeadTypedWireTransport : ArbitraryHeadSharedWire.ExactTypedWireTransport :=
+  ArbitraryHeadSharedWire.exactTypedWireTransport
+
+theorem fixed_fullArbitraryHeadSharedWire : ArbitraryHeadSharedWire.FullArbitraryHeadSharedWire :=
+  ⟨fixed_exactArbitraryHeadFiniteWire,fixed_exactArbitraryHeadInfiniteWire,
+    fixed_exactArbitraryHeadTypedWireTransport⟩
+
+#print axioms fixed_exactArbitraryHeadFiniteWire
+#print axioms fixed_exactArbitraryHeadInfiniteWire
+#print axioms fixed_exactArbitraryHeadTypedWireTransport
+#print axioms fixed_fullArbitraryHeadSharedWire
+
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.ActualParityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.ActualParity.StatementChecks
+theorem fixed_exactControlParity : ActualParityTargets.ExactControlParity := exactControlParity
+theorem fixed_nonEventualPeriodicity : ActualParityTargets.NonEventualPeriodicity := nonEventualPeriodicity
+#audit_namespace LogicLineages.ControlSensitivityCurrent.ActualParity.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.ActualParity.StatementChecks

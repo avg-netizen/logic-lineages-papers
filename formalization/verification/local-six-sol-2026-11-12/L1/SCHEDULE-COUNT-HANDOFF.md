@@ -1,0 +1,11 @@
+# Actual schedule counts checked
+
+BUILD-080 checked ScheduleCountStatementChecks.rawExpansionLength and annotatedExpansionLength with only propext, Classical.choice and Quot.sound. Shared evidence: BUILD-080-SCHEDULE-COUNT-CHECKED.json. Receipt: build-reports/1794542911978390921-9.json. It contains 2,847 current-source-matched receipt rows (omitted legacy imports are excluded); all five request hashes match the receipt and current sources. All five ScheduleCount sources are immutable. L4 ran the only serialized native compiler.
+
+Both exact contracts prove that the unchanged actual raw/annotated expansion length equals the sum of actual constructor arity and original context length, counting duplicate jobs. Both Programs retain their unchanged original order. The annotated target retains actual role/type/rawJob/typed/job and parameter/window/Gamma pair graphs. It adds no source admission, result invariant or runtime correctness premise. These are precisely the original counters stored in actual visit's return frame.
+
+The proof identifies the literal zero/one/two-child branch using internal Program graphs, preserves the supplied symbolic arity by functionality, reuses actual deletionJobs length, and applies unchanged annotation-scan length. ScheduleCountRowsProof.rowsExact also retains an arbitrary appended suffix and its actual length. Once L2's append right-zero law is checked, this helper specializes to exact raw child-prefix length without another arity case proof.
+
+Source and target correspondence were frozen before proof authoring in FROZEN-SCHEDULE-COUNT.json (target04e8ea6e737426109adbc1c38f078476038b139010b3e3e80129954ed5f61702). BUILD-076's failed final composition draft is preserved; its only repair explicitly reduces the remaining singleton Program vector coordinate at the same graph boundary. Accepted targets, arithmetic support, RowsProof, inherited Programs and source domains/quantifiers did not change.
+
+This is a scheduler-count supplier for protected old-result-suffix execution and L2's actual annotation scan split. It does not establish recursive scalar/list/deletion-row content, an evaluator/layer fixed point, internal I/C or whole paper06 lem:id1. The next full framing route remains analysis only in NEXT-FRAMING-COUNT.md. No numbered promotion, full-root build or remote CI result is claimed.

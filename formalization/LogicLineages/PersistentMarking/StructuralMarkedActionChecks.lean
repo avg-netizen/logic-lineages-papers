@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.StructuralMarkedActionProof
+namespace LogicLineages.PersistentMarking.StructuralMarkedActionChecks
+theorem exact_MarkedActionSound : StructuralActionTargets.MarkedActionSound := StructuralMarkedActionProof.sound
+theorem exact_MarkedActionLaws : StructuralActionTargets.MarkedActionLaws := StructuralMarkedActionProof.laws
+#print axioms exact_MarkedActionSound
+#print axioms exact_MarkedActionLaws
+end LogicLineages.PersistentMarking.StructuralMarkedActionChecks

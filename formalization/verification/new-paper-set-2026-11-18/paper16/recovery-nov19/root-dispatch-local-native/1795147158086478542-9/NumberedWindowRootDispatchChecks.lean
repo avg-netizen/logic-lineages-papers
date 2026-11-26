@@ -1,0 +1,10 @@
+import LogicLineages.PersistentMarking.NumberedWindowRootDispatchProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowRootDispatchChecks
+open NumberedWindowRootDispatchTargets
+
+theorem exact_RootDispatch : ExactRootDispatch := NumberedWindowRootDispatchProof.rootExact
+
+#print axioms exact_RootDispatch
+
+end LogicLineages.PersistentMarking.NumberedWindowRootDispatchChecks

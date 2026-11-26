@@ -1,0 +1,10 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicySourceEqualityProof
+public import LogicLineages.StandardControlCurrent.PolicySourceEqualityPrograms
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.PolicySourceEqualityStatementChecks
+theorem full : PolicySourceEqualityTargets.Full :=
+  ⟨DefaultSourceDomainProof.domain,PolicySourceEqualityPrograms.programs,
+    PolicySourceEqualityProof.typed,PolicySourceEqualityProof.raw⟩
+#print axioms full
+end LogicLineages.StandardControlCurrent.PolicySourceEqualityStatementChecks

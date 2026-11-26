@@ -1,0 +1,11 @@
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedExchangeEquation/ZeroProof.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedExchangeEquation/ZeroProof.lean
+@@ -65,7 +65,7 @@
+   · exact ⟨Derivation.hypothesis List.mem_cons_self⟩
+   · intro beta j Theta head tail hj hc
+     rw [eqnRelabel,zRelabel]
+-      have hrj := InternalGraphCompositionFunctionalityProof.renameInto hr j Theta hj
++    have hrj := InternalGraphCompositionFunctionalityProof.renameInto hr j Theta hj
+     rw [graph2Rename] at hrj
+     have hdj := InternalGraphCompositionFunctionalityProof.renameInto hd j Theta hj
+     rw [graph2Rename] at hdj

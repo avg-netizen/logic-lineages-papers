@@ -1,0 +1,19 @@
+import LogicLineages.PersistentMarking.MarkedFamilyLookupProof
+import LogicLineages.PersistentMarking.MarkedFamilyEncodingProof
+import LogicLineages.PersistentMarking.MarkedFamilyRoundtripProof
+namespace LogicLineages.PersistentMarking.MarkedFamilyCodingChecks
+theorem exact_RawEnumeration : MarkedFamilyCodingTargets.RawEnumeration := MarkedFamilyLookupProof.rawEnumeration
+theorem exact_CoordinateSuccess : MarkedFamilyCodingTargets.CoordinateSuccess := MarkedFamilyLookupProof.coordinateSuccess
+theorem exact_OutputSuccess : MarkedFamilyCodingTargets.OutputSuccess := MarkedFamilyLookupProof.outputSuccess
+theorem exact_EncodingExact : MarkedFamilyCodingTargets.EncodingExact := MarkedFamilyEncodingProof.encodingExact
+theorem exact_EncodingCongruence : MarkedFamilyCodingTargets.EncodingCongruence := MarkedFamilyEncodingProof.encodingCongruence
+theorem exact_CodeRoundtrip : MarkedFamilyCodingTargets.CodeRoundtrip := MarkedFamilyRoundtripProof.codeRoundtrip
+theorem exact_SemanticRoundtrip : MarkedFamilyCodingTargets.SemanticRoundtrip := MarkedFamilyRoundtripProof.semanticRoundtrip
+#print axioms exact_RawEnumeration
+#print axioms exact_CoordinateSuccess
+#print axioms exact_OutputSuccess
+#print axioms exact_EncodingExact
+#print axioms exact_EncodingCongruence
+#print axioms exact_CodeRoundtrip
+#print axioms exact_SemanticRoundtrip
+end LogicLineages.PersistentMarking.MarkedFamilyCodingChecks

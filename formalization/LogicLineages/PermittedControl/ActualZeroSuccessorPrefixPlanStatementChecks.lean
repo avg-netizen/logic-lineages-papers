@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroSuccessorPrefixPlanTargets
+import LogicLineages.PermittedControl.ActualZeroSuccessorPrefixPlanCountProof
+import LogicLineages.PermittedControl.ActualZeroSuccessorPrefixPlanCohortProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualZeroCountPrefixPlan : ActualZeroSuccessorPrefixPlan.ExactCountPrefixPlan :=
+  ActualZeroSuccessorPrefixPlan.exactCountPrefixPlan
+
+theorem fixed_exactActualCanonicalPrefixAnchor : ActualZeroSuccessorPrefixPlan.ExactCanonicalPrefixAnchor :=
+  ActualZeroSuccessorPrefixPlan.exactCanonicalPrefixAnchor
+
+theorem fixed_exactActualSelectedCohortSyntax : ActualZeroSuccessorPrefixPlan.ExactSelectedCohortSyntax :=
+  ActualZeroSuccessorPrefixPlan.exactSelectedCohortSyntax
+
+theorem fixed_fullActualZeroSuccessorPrefixPlan : ActualZeroSuccessorPrefixPlan.FullActualZeroSuccessorPrefixPlan :=
+  ⟨fixed_exactActualZeroCountPrefixPlan,fixed_exactActualCanonicalPrefixAnchor,
+    fixed_exactActualSelectedCohortSyntax⟩
+
+#print axioms fixed_exactActualZeroCountPrefixPlan
+#print axioms fixed_exactActualCanonicalPrefixAnchor
+#print axioms fixed_exactActualSelectedCohortSyntax
+#print axioms fixed_fullActualZeroSuccessorPrefixPlan
+
+end LogicLineages.PermittedControl.StatementChecks

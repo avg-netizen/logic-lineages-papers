@@ -1,0 +1,67 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerEmbeddingProof.lean:39:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  shift 9
+in the target expression
+  shiftTable (List.map SyntaxCode.typeCode Γ) = renamingCode fun {σ} => shift 9
+
+Γ : List Ty
+⊢ shiftTable (List.map SyntaxCode.typeCode Γ) = renamingCode fun {σ} => shift 9
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerEmbeddingProof.lean:50:10: error: unsolved goals
+case var
+Γ Θ : List Ty
+r : Renaming Γ Θ
+x : Variable Γ Ty.ground
+⊢ (renamingCode fun {σ} => r)[variableIndex x]?.getD 0 = variableIndex (r x)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerEmbeddingProof.lean:51:51: warning: This simp argument is unused:
+  Operations.renaming_lookup
+
+Hint: Omit it from the simp argument list.
+  simp [renamePortRaw, encodePort, portRename,̵ ̵O̵p̵e̵r̵a̵t̵i̵o̵n̵s̵.̵r̵e̵n̵a̵m̵i̵n̵g̵_̵l̵o̵o̵k̵u̵p̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerEmbeddingProof.lean:54:83: error: unsolved goals
+case eq
+Γ Θ : List Ty
+r : Renaming Γ Θ
+a✝ b✝ : Port Γ
+⊢ (if encodePort a✝ = 0 then 0 else (renamingCode fun {σ} => r)[encodePort a✝ - 1]?.getD 0 + 1) =
+      encodePort (portRename (fun {σ} => r) a✝) ∧
+    (if encodePort b✝ = 0 then 0 else (renamingCode fun {σ} => r)[encodePort b✝ - 1]?.getD 0 + 1) =
+      encodePort (portRename (fun {σ} => r) b✝)
+
+case add
+Γ Θ : List Ty
+r : Renaming Γ Θ
+a✝ b✝ c✝ : Port Γ
+⊢ (if encodePort a✝ = 0 then 0 else (renamingCode fun {σ} => r)[encodePort a✝ - 1]?.getD 0 + 1) =
+      encodePort (portRename (fun {σ} => r) a✝) ∧
+    (if encodePort b✝ = 0 then 0 else (renamingCode fun {σ} => r)[encodePort b✝ - 1]?.getD 0 + 1) =
+        encodePort (portRename (fun {σ} => r) b✝) ∧
+      (if encodePort c✝ = 0 then 0 else (renamingCode fun {σ} => r)[encodePort c✝ - 1]?.getD 0 + 1) =
+        encodePort (portRename (fun {σ} => r) c✝)
+
+case sort
+Γ Θ : List Ty
+r : Renaming Γ Θ
+a✝ b✝ low✝ high✝ : Port Γ
+⊢ (if encodePort a✝ = 0 then 0 else (renamingCode fun {σ} => r)[encodePort a✝ - 1]?.getD 0 + 1) =
+      encodePort (portRename (fun {σ} => r) a✝) ∧
+    (if encodePort b✝ = 0 then 0 else (renamingCode fun {σ} => r)[encodePort b✝ - 1]?.getD 0 + 1) =
+        encodePort (portRename (fun {σ} => r) b✝) ∧
+      (if encodePort low✝ = 0 then 0 else (renamingCode fun {σ} => r)[encodePort low✝ - 1]?.getD 0 + 1) =
+          encodePort (portRename (fun {σ} => r) low✝) ∧
+        (if encodePort high✝ = 0 then 0 else (renamingCode fun {σ} => r)[encodePort high✝ - 1]?.getD 0 + 1) =
+          encodePort (portRename (fun {σ} => r) high✝)
+
+case one
+Γ Θ : List Ty
+r : Renaming Γ Θ
+a✝ : Port Γ
+⊢ (if encodePort a✝ = 0 then 0 else (renamingCode fun {σ} => r)[encodePort a✝ - 1]?.getD 0 + 1) =
+    encodePort (portRename (fun {σ} => r) a✝)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerEmbeddingProof.lean:55:59: warning: This simp argument is unused:
+  rename_port_code
+
+Hint: Omit it from the simp argument list.
+  simp [renameGateRaw, encodeGate, gateRename, rename_̵p̵o̵r̵t̵_̵c̵o̵d̵e̵,̵ ̵r̵e̵n̵a̵m̵e̵PortRaw]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

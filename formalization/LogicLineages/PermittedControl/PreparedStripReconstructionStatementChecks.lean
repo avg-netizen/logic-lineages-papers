@@ -1,0 +1,15 @@
+module
+public import LogicLineages.PermittedControl.PreparedStripReconstructionTargets
+import LogicLineages.PermittedControl.PreparedStripReconstructionCodeStatementChecks
+import LogicLineages.PermittedControl.PreparedStripReconstructionSemanticStatementChecks
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_fullPreparedStripReconstruction :
+    PreparedStripReconstruction.FullPreparedStripReconstruction :=
+  ⟨fixed_preparedStripCodeExact,fixed_preparedStripHitReconstruction,fixed_preparedStripClosedHitDecision⟩
+
+#print axioms fixed_fullPreparedStripReconstruction
+
+end LogicLineages.PermittedControl.StatementChecks

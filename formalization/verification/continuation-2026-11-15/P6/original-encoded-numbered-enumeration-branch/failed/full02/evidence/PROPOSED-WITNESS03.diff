@@ -1,0 +1,15 @@
+--- WitnessProof.before
++++ WitnessProof.after
+@@ -27,7 +27,11 @@
+       (rawHead.subst sub) (t.subst sub) (b.subst sub) (ts.subst sub) (e.subst sub) := by
+   simp only [fields,conjunctionSubst,graph1,graph2,InternalComputabilityApplicationSyntaxProof.programSubst,
+     numeral,zSubst,sucSubst,consTermSubst,emptySubst]
+-  rfl
++  have hxs : (fun i => (![k,rawHead,t,b,ts,e] i).subst sub) =
++      ![k.subst sub,rawHead.subst sub,t.subst sub,b.subst sub,ts.subst sub,e.subst sub] := by
++    funext i
++    fin_cases i <;> rfl
++  rw [hxs]
+ 
+ @[simp] theorem fieldsRename {beta : Type} (n : Nat)
+     (labels heads types bases tuples extras code k encodedHead rawHead t b ts e : OTerm alpha)

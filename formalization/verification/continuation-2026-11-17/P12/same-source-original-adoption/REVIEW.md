@@ -1,0 +1,7 @@
+# Independent original-contract comparator review
+
+Approved ten exact proposed pins for fresh freeze/native comparator checking. Read unchanged original SelectedCertifiedPresentation and SourceCollapse, compared their complete existential conjuncts with both expanded iff gates. Alias targets name precisely those original declarations; Together is their conjunction. Original theory D, chosen CK registry/fixed-point fields, HB2/HB3 and selector-uniform collapse formulas all match. Verified hashes of all ten files including paper source. No hidden success premise or target replacement.
+
+Important scope: a conjunction of two existential contracts does not itself enforce shared witnesses. The requested stronger same-tuple provenance must therefore be checked in the actual proof: invoke accepted LobCollapse exactly once at fixed harmless f/lhs/rhs and construct both projections using that identical pF,pR,q,c,tagCK,pCK. This is not a comparator defect because both required unchanged original contracts are themselves existential; do not claim sharing from their conjunction alone.
+
+The eventual collapse projection matches paper thm:collapse and the existing original SourceCollapse endpoint. Native named projections, axioms, recursive evidence and independent register reconciliation remain necessary before numbered promotion. Corollary3/selector/full-paper completion remain distinct. No proof or native execution performed in this review.

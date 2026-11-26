@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.ElementaryBridgeProof
+namespace LogicLineages.PersistentMarking.ElementaryBridgeChecks
+theorem markEncoding : ElementaryBridgeTargets.MarkEncoding := ElementaryBridgeProof.markEncoding
+#print axioms markEncoding
+end LogicLineages.PersistentMarking.ElementaryBridgeChecks

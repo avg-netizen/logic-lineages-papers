@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.StableSortedHighFieldTargets
+import LogicLineages.PermittedControl.StableSortedHighFieldPacketProof
+import LogicLineages.PermittedControl.StableSortedHighFieldGuardProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_stableSortedHighFieldBasePacket : StableSortedHighField.BasePacketExact :=
+  StableSortedHighField.basePacketExact
+
+theorem fixed_actualGuardedSortedHighFieldPacket : StableSortedHighField.ActualGuardedPacket :=
+  StableSortedHighField.actualGuardedPacket
+
+theorem fixed_fullStableSortedHighField : StableSortedHighField.FullStableSortedHighField :=
+  ⟨fixed_stableSortedHighFieldBasePacket,fixed_actualGuardedSortedHighFieldPacket⟩
+
+#print axioms fixed_stableSortedHighFieldBasePacket
+#print axioms fixed_actualGuardedSortedHighFieldPacket
+#print axioms fixed_fullStableSortedHighField
+
+end LogicLineages.PermittedControl.StatementChecks

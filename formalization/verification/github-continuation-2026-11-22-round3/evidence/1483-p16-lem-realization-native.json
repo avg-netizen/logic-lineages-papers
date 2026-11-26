@@ -1,0 +1,56 @@
+{
+  "status": "checked",
+  "base_commit": "9a8fd8f8ffd9c1ab27b91096dc1e52aa196bb413",
+  "scope": "Complete numbered realization closure in the paper finite-semantic-type setting: strict-backward and downward realization closure, nonempty countable pointwise suprema, the structural typed-lambda fundamental theorem with literal native syntax/substitution, and finite strict-chain transport. The standard interpretation hypotheses for constants/environments are explicit; the old lambda-body premise is discharged by induction. No manuscript rewrite or universal raw-system-T denotation claim.",
+  "proof_modules": [
+    {
+      "module": "LogicLineages.NativeModule.PersistentMarking.NativeRealizationCompleteProof",
+      "native_receipt": "1795411504802658682-11",
+      "native_receipt_sha256": "6e87cf08ef39b39a32541f777118546d23a658dcc4188fd78a1cfe54a5f68aa3",
+      "native_row": {
+        "discarded_failed_outputs": [],
+        "last_wait_channel": "0",
+        "log": "build-reports/1795411504802658682-11-LogicLineages-NativeModule-PersistentMarking-NativeRealizationCompleteProof.log",
+        "memory_observation_failure": {},
+        "module": "LogicLineages.NativeModule.PersistentMarking.NativeRealizationCompleteProof",
+        "observed_cpu_seconds": 0.81,
+        "peak_process_tree_rss_kib": 948232,
+        "returncode": 0,
+        "seconds": 0.866,
+        "source_sha256": "c1df4f4c677943c7e2b70760586095945b037c1fed1cdb487ccbda39e3dce097",
+        "stopped_threads": []
+      },
+      "native_log_sha256": "e1c3bffb5a7fe43b41686e0ec0585f04dbd5154dc50ea45224c986868e2ed3a4",
+      "profile": {
+        "core_only_profile": false,
+        "cpu_seconds": 90,
+        "heap_cap_mib": 2048,
+        "minimum_free_mib": 2048,
+        "rss_cap_mib": 1536,
+        "single_thread": true,
+        "threads": 1,
+        "upstream_cache_only": true,
+        "wall_seconds": 180
+      }
+    }
+  ],
+  "named_axiom_output": {
+    "LogicLineages.PersistentMarking.NativeRealizationComplete.exact_FullRealization": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "completion_gate_receipt": "1795411504802658682-11",
+  "completion_gate_receipt_sha256": "6e87cf08ef39b39a32541f777118546d23a658dcc4188fd78a1cfe54a5f68aa3",
+  "source_pins": {
+    "formalization/LogicLineages/NativeModule/PersistentMarking/NativeRealizationCompleteTargets.lean": "933465c543dc83d56d18e90c635aa0fce6958375d7217692e586716013ae0841",
+    "formalization/LogicLineages/NativeModule/PersistentMarking/NativeRealizationCompleteProof.lean": "c1df4f4c677943c7e2b70760586095945b037c1fed1cdb487ccbda39e3dce097",
+    "formalization/verification/github-continuation-2026-11-22-round3/root/REALIZATION-COMPLETION-SOURCE-MAP.md": "7af5380fd4448e4e8f1962c5a0accac2cd544c869c30f3d48a8947b575e9c9e5",
+    "formalization/verification/github-continuation-2026-11-22-round3/ordinal-frontier/TYPED-LAMBDA-SOURCE-REVIEW.md": "8d26f7474a901e5b8e414c8e5d149fc9cbef7bcce0d6b51a91301beea776eb92",
+    "formalization/verification/github-continuation-2026-11-22-round3/root/FROZEN-REALIZATION-COMPLETE.json": "3493c7f4675955d223df2fb994aff193c124596263b3723da95dc2e948dde963",
+    "16-persistent-marking-termination-ordering/sections/ordinals.tex": "526aa249902b4e4bf00f45bee770bdcdc9f9b39c2dc341778834600b7f8bf1b5"
+  },
+  "verification": "Focused statement/source comparison and original fixed-limit native gate, with preserved necessary proof repairs; no duplicate artifact replay.",
+  "portable_evidence": "../root/portable-native-evidence.zip"
+}

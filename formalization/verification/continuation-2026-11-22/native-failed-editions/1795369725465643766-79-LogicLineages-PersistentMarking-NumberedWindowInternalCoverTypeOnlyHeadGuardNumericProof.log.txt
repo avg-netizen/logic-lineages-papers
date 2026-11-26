@@ -1,0 +1,25 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeOnlyHeadGuardNumericProof.lean:44:93: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeOnlyHeadGuardNumericProof.lean:44:93: warning: 'rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeOnlyHeadGuardNumericProof.lean:70:13: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeOnlyHeadGuardNumericProof.lean:83:65: error: unsolved goals
+case isTrue
+s : Settings
+raw : ℕ
+h✝ : evaluate (header 3 1) (raw ::ᵥ nil) = 1 ∧ evaluate (leafTypeTest s) (raw ::ᵥ nil) = 1
+⊢ run (header 3 1) raw = 1 ∧ run (leafTypeTest s) raw = 1
+
+case isFalse
+s : Settings
+raw : ℕ
+h✝ : evaluate (header 3 1) (raw ::ᵥ nil) = 1 → ¬evaluate (leafTypeTest s) (raw ::ᵥ nil) = 1
+⊢ run (header 3 1) raw = 1 → ¬run (leafTypeTest s) raw = 1
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverTypeOnlyHeadGuardNumericProof.exact_CoverTypeOnlyHeadGuardNumeric' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

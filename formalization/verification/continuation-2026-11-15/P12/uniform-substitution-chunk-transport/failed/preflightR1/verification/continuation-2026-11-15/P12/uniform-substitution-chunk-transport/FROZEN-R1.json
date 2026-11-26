@@ -1,0 +1,40 @@
+{
+  "status": "Semantic freeze approved; namespace-only R1 awaits corrected preflight; no proof",
+  "sources": {
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformSubstitutionChunkTransport/Definitions.lean": "a764ad58f0a3a4095cff1c59883a7e70e009f0828b79267d4fbd0913a41390a8",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformSubstitutionChunkTransport/Preflight.lean": "aef0e7abd366f5e7e87c17840356cff45e01332f0de7f78afc29b4d915e7cca7",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformSubstitutionChunkTransport/Targets.lean": "cde585820f0dd8d19a9136547e5723230f5235d08ac142a017d8aafaf1299be4"
+  },
+  "provenance": {
+    "LogicLineages/ComputabilityKnowledge/GorbowSubstitutionCode.lean": "5c3228b3d5d2feabc9b4cf13776635de34094d689c6b4e08a44a92343dc248c0",
+    "LogicLineages/ComputabilityKnowledge/GorbowSyntaxValidation.lean": "cb50025da11c49b5e0f67c2af36594f7ef9ca90b1d4e70843983d650573e3c16",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralSyntaxStep/Definitions.lean": "355bcc42bb8b6c6ec2af19523ce2afa38b55db7a68db556312cb199e2f1f810b",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralSyntaxScan/Definitions.lean": "eee07340552ee74eb12fd4ec41d11a4c9bc845c9cf73e6e34b9bf4f4fa00236c",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformClosedSubstitutionEmit/Definitions.lean": "a88e45f475db0177d8ed21f9d30dcbb87ea099323c9d18efa3abeb0eda55cd2c",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformSubstitutionIndexValidity/Targets.lean": "a2239b63f5ae5b0328efd9244896f41898715720a81fecdadce01e0948c5e6cc",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepSuccessTargets.lean": "a1ff2a045571471bddf38060ab220877d7eb93bacadcc52fdd3d5fe7a8daf0bd"
+  },
+  "correspondence": [
+    "Original old task kinds 0 term, 1 formula, 2 index; new kind retains 0/1, but old2 maps to new0 because original emitter suppressed term-variable marker0.",
+    "Every old task bound is successor of corresponding new bound. Quantifier constructors increment both; old index positivity at bound depth+1 enables checked runtime index chunk validity at depth.",
+    "Original scanner receives raw new stack and itself initializes SOME. Emitter receives SOME old stack exactly as original subStep emits from its old syntax state. Success is SOME result encoded successor, not boolean acceptance only.",
+    "Equal lengths and actual lookup relation cover arbitrary numeric stacks. No native image, mapped-stack AST, success transfer or emitter-output premise.",
+    "Empty old task stack/default failure and unknown kind/token branches are handled from original successful-step inversion, not omitted by enumeration of well-shaped constructors. Malformed old zero bound is explicitly outside this relation.",
+    "Supplied tags may be duplicate copies. Recover actual child tags and use defining-equation copy coherence; never identify supplied tags with extracted tags."
+  ],
+  "plan": [
+    "Prove relational empty/cons decomposition internally using actual length/lookup and numeric pair/list reconstruction; pay witness elimination.",
+    "Classify original arbitrary successful step using accepted StepSuccess and all19-arm expansion classification; recover old/new head and related tails.",
+    "Term-variable marker0 emits empty chunk: original new scanner nil leaves term task unchanged, while old pending index task is related to that term task.",
+    "All other term/formula constructors emit singleton token; prove original scanner singleton transition and exact finite child-prefix relation, including quantifier successor alignment.",
+    "Index case uses checked InternalIndexEmission with actual old bound positivity; original success-only frame theorem carries standalone chunk scan across arbitrary new tail. Related old/new tails supply the resulting relation.",
+    "Eliminate all decomposition/case/arithmetic witnesses in final existential result; no induction over arbitrary input list claimed here."
+  ],
+  "noncircularity": "No Program AST is added; all programs are previously fixed independently of root/formula codes. Relation is a first-order formula using original installed primitives.",
+  "remaining": [
+    "This is a single emitted-chunk simulation, not arbitrary raw-fold composition. Output-append fusion plus internal count/list exhaustion and whole-fold relation remain unpaid.",
+    "Initial and final stack specialization, full runtime capture-correct formula output validity, uniform rule13 recognizer/certificates and HB3 remain open."
+  ],
+  "previous": "FROZEN.json",
+  "repair": "FROZEN-R1.diff"
+}

@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.OpeningBridgeProof
+namespace LogicLineages.PersistentMarking.OpeningBridgeChecks
+theorem openingBridge : BridgeTargets.OpeningBridge := OpeningBridgeProof.openingBridge
+#print axioms openingBridge
+end LogicLineages.PersistentMarking.OpeningBridgeChecks

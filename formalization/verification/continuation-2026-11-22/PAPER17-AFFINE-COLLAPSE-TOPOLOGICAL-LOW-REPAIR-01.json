@@ -1,0 +1,27 @@
+{
+  "status": "narrow exact alias visibility source repair, not native checked by author",
+  "failed_source_commit": "a1a812fb2db3ed991a34f73efcc37ea9492e31b3",
+  "failed_exact_gate_receipt": "1795350141001194216-30",
+  "failed_original_native_log_sha256": "7be938fa138ce4ae0ad8cb588f088f86b536aa7a3b58f3e6e31a3b64f3388478",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/AffineCollapseTopologicalLowStatementChecks.lean:10:2: error(lean.unknownIdentifier): Unknown identifier `AffineCollapseTopologicalLow.exactTestedExternalExtension`\n'LogicLineages.PermittedControl.StatementChecks.fixed_exactTestedAffineCollapseExternalExtension' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n'LogicLineages.PermittedControl.StatementChecks.fixed_exactAffineCollapseTopologicalExternalLow' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'LogicLineages.PermittedControl.StatementChecks.fixed_fullAffineCollapseTopologicalLow' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]",
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-AFFINE-COLLAPSE-TOPOLOGICAL-LOW-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "2c2827ab28649fe0ddef000dd153c5b192d57a5ae863c40ac1b64c5ec356a267",
+  "failed_alias_path": "formalization/LogicLineages/PermittedControl/AffineCollapseTopologicalLowStatementChecks.lean",
+  "failed_alias_sha256": "ca6ad61c07af8aad2f6afeff81305524e1bf265b0ba6d72a18727f026ca953f4",
+  "repaired_alias_sha256": "a0c0db714e8e68ea2496bb0c849a7466cb0f42f3ae2517159efb9d631854346c",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-AFFINE-COLLAPSE-TOPOLOGICAL-LOW-REPAIR-01.patch",
+  "patch_sha256": "d1c77fbadee35b35f9c60839d701ee206c4af14748b339915190c3114b274a8a",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/AffineCollapseTopologicalLowProjectionProof.lean": "b129566eb2da92b3680cc4c7d2171bf99ee7a70c7c3b7bd6fe1212659a7d630d",
+    "formalization/LogicLineages/PermittedControl/AffineCollapseTopologicalLowProof.lean": "1cd3f2ed9bd4c82689d1a8a8b0986b45e9fa3dcb3103b953e2a0af4020989272",
+    "formalization/LogicLineages/PermittedControl/AffineCollapseTopologicalLowTargets.lean": "295a3fffa8a7c3375aa169d4863927a81b0a5a69f3175a175a7c51c71b43403e",
+    "formalization/verification/continuation-2026-11-22/PAPER17-AFFINE-COLLAPSE-TOPOLOGICAL-LOW-SOURCE-MAP.md": "ce210e78d6d43de338eb897477dc3944ae2ad65c7ca2266a4a6c6af93f095680"
+  },
+  "static_closure_unchanged": {
+    "target_local": 157,
+    "target_external": 31,
+    "gate_local": 341,
+    "gate_external": 39
+  },
+  "scope": "Add direct import of the already compiled ProjectionProof module to make the exact TestedExternalExtension alias visible. Existing transitively imported module; no proof, target, assumptions, or scope changed."
+}

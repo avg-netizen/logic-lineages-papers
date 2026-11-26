@@ -1,0 +1,13 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryIteratorDrain.SourceProof
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryIteratorDrain.StatementChecks
+theorem internalDropExhaustion : Targets.InternalDropExhaustion := DropInductionProof.internalDropExhaustion
+theorem internalIteratorRemaining : Targets.InternalIteratorRemaining := IterationProof.internalIteratorRemaining
+theorem internalIteratorDrain : Targets.InternalIteratorDrain := IterationProof.internalIteratorDrain
+theorem sameSourceIteratorDrain : Targets.SameSourceIteratorDrain := SourceProof.sameSourceIteratorDrain
+#print axioms internalDropExhaustion
+#print axioms internalIteratorRemaining
+#print axioms internalIteratorDrain
+#print axioms sameSourceIteratorDrain
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryIteratorDrain.StatementChecks

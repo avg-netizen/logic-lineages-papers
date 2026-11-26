@@ -1,0 +1,27 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.TypedHeadMoveReflexivity.Proof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.TypedHeadMoveReflexivity.StatementChecks
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof InternalAcceptanceSupportProof
+open InternalTagArithmeticSyntaxProof (z suc eqn sucRelabel zRelabel)
+open InternalRecursionGraphStepSyntaxProof
+open InternalApplicationStepPeelSupportProof (andIntro)
+open SourceComputabilityFormulaSupportProof (numeral)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114
+open OriginalTypedDecoderInternalAcceptance OriginalTypedDecoderInternalAcceptanceSyntaxProof
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+theorem exactPermutation : Targets.InternalPermutation := Proof.permutation
+theorem exactBasic : Targets.InternalBasic := Proof.basic
+theorem exactUnary : Targets.InternalUnary := Proof.unary
+theorem exactApplication : Targets.InternalApplication := Proof.application
+theorem exactRanked : Targets.InternalRanked := Proof.ranked
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.TypedHeadMoveReflexivity.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.TypedHeadMoveReflexivity.StatementChecks

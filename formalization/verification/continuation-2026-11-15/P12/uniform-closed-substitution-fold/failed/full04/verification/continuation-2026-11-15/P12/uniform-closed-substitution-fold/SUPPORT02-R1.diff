@@ -1,0 +1,26 @@
+--- SUPPORT02/NativeStepProof.lean
++++ SUPPORT02R1/NativeStepProof.lean
+@@ -56,19 +56,19 @@
+  cases i using Fin.cases with
+  | zero => exact accumulatorAt tokens state raw
+  | succ i => cases i using Fin.cases with
+-   | zero => simp only [oneEval,remainingAt,List.Vector.get_cons_succ,List.Vector.get_cons_zero]
++   | zero => simp only [List.Vector.get_ofFn,oneEval,remainingAt,List.Vector.get_cons_succ,List.Vector.get_cons_zero]
+    | succ i => cases i using Fin.cases with
+-     | zero => rfl
++     | zero => simp only [List.Vector.get_ofFn,List.Vector.get_cons_succ,List.Vector.get_cons_zero,projectionEval,get2_1]
+      | succ i => exact Fin.elim0 i
+ theorem tickNil (state raw : Nat) :
+  evaluate tick (Nat.pair 0 state ::ᵥ raw ::ᵥ nil) = Nat.pair 0 state := by
+- simp only [tick,chooseEval,remainingAt,projectionEval,get2_0,if_pos rfl]
++ simp only [tick,chooseEval,remainingAt,projectionEval,get2_0,if_pos rfl,ite_true]
+ theorem tickCons (token : Nat) (tokens : List Nat) (s : GorbowSubstitutionCode.OutputState) (raw : List Nat)
+  (hr : GorbowSyntaxValidation.validTerm 0 raw = true) :
+  evaluate tick (Nat.pair (Encodable.encode (token::tokens)) (Encodable.encode s) ::ᵥ Encodable.encode raw ::ᵥ nil) =
+  Nat.pair (Encodable.encode tokens) (Encodable.encode (GorbowSubstitutionCode.subStep 1 0 [raw] s token)) := by
+  simp only [tick,chooseEval,remainingAt,twoEval,oneEval,advancedAt,
+-  HistoryLookup.NativeProof.tailList,HistoryLookup.NativeProof.headCons]
++  HistoryLookup.NativeProof.tailList,HistoryLookup.NativeProof.headCons,List.tail_cons,HistoryDispatcher.NativeProof.encodeNat]
+  have hn : Encodable.encode (token::tokens) ≠ 0 := by
+   rw [HistoryLookup.NativeProof.encodeCons]; exact Nat.succ_ne_zero _
+  rw [if_neg hn,subStepAt s token raw hr,pairEval]

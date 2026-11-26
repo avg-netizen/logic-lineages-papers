@@ -1,0 +1,45 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalApplicationInverseTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepInverseTargets
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+open InternalOriginalUniformDescentSelection (Data)
+open InternalParameterizedStructuralEndpointGuard (selectedEndpoint)
+open ClaudeSupervisedCompletion (InverseGuardTargets)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+/-- Invert the ACTUAL guarded original step, with its state and all peeled
+witnesses bound internally. A peeled child is accepted by the same full
+stepChecker, including source validity at both child endpoints. The zero
+branch preserves the original leaf at the same inputs. No supplied guard,
+constructor witness, child typing, calibration or consistency is required. -/
+def ActualSelectedStepElimination : Prop :=
+  ∀ (body : Positive (Fin 1)) (data : Data) (oldStep : Program 4)
+    (alpha : Type) (Gamma : List (Formula alpha))
+    (S T K parameter : OTerm alpha) (psi : Formula alpha),
+  Nonempty (Derivation body Gamma
+    (UniformCertificateCompletion.stepAccepted data oldStep S T K parameter)) →
+  (∀ (beta : Type) (j : alpha → beta) (Delta : List (Formula beta)),
+    (∀ r ∈ Gamma, r.relabel j ∈ Delta) → ∀ state : OTerm beta,
+    Nonempty (Derivation body Delta
+      (graph3 edgeCode state (S.relabel j) (T.relabel j) (K.relabel j) ⊓
+        InverseGuardTargets.Unpeeled (selectedEndpoint data) oldStep
+          InternalOriginalStepGuard.one state (S.relabel j) (T.relabel j)
+          (K.relabel j) (parameter.relabel j))) →
+    Nonempty (Derivation body Delta (psi.relabel j))) →
+  (∀ (beta : Type) (j : alpha → beta) (Delta : List (Formula beta)),
+    (∀ r ∈ Gamma, r.relabel j ∈ Delta) →
+    ∀ state d e arrow f g a k child : OTerm beta,
+    Nonempty (Derivation body Delta
+      (graph3 edgeCode state (S.relabel j) (T.relabel j) (K.relabel j) ⊓
+        (InverseGuardTargets.Peeled (selectedEndpoint data) oldStep
+          d e arrow f g a k child InternalOriginalStepGuard.one state
+          (S.relabel j) (T.relabel j) (K.relabel j) (parameter.relabel j) ⊓
+            UniformCertificateCompletion.stepAccepted data oldStep f g k
+              (parameter.relabel j)))) →
+    Nonempty (Derivation body Delta (psi.relabel j))) →
+  Nonempty (Derivation body Gamma psi)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepInverseTargets

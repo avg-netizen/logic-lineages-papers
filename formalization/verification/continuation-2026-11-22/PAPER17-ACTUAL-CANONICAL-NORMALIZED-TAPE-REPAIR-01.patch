@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualCanonicalNormalizedTapeProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualCanonicalNormalizedTapeProof.lean
+@@ -19 +19,3 @@
+-  have permKeys : (originalKeys xs).Perm (originalKeys old) := perm.map (fun rd => rd.1.2)
++  have permKeys : (originalKeys xs).Perm (originalKeys old) := by
++    change (xs.map (fun rd : Read => rd.1.2)).Perm (old.map (fun rd : Read => rd.1.2))
++    exact perm.map (fun rd : Read => rd.1.2)

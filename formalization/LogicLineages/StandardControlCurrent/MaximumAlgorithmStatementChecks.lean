@@ -1,0 +1,13 @@
+module
+public import LogicLineages.StandardControlCurrent.MaximumAlgorithmTargets
+public import LogicLineages.OrdinalComparison.OptimizedAlgorithmProof
+
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.MaximumAlgorithmStatementChecks
+
+theorem full : MaximumAlgorithmTargets.FullOptimizedMaximumAlgorithm :=
+  OrdinalComparison.fullOptimizedMaximumAlgorithm
+
+#print axioms full
+
+end LogicLineages.StandardControlCurrent.MaximumAlgorithmStatementChecks

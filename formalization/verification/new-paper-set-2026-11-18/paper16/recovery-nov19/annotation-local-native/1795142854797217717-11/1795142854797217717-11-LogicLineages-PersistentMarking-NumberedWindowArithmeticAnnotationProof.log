@@ -1,0 +1,26 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAnnotationProof.lean:87:4: error: Tactic `generalize` failed: result is not type correct
+  ∀ (x : Option NTerm),
+    (if x.isSome = true then some (annotations n).fst else none,
+          if (decodeArgs n).isSome = true then some (annotations n).snd else none).fst =
+      (Option.map (fun q => encodeTy q.type) x,
+          Option.map (fun qs => List.map encodeTy (annotationList qs)) (decodeArgs n)).fst
+
+case fst
+n : Nat
+⊢ (if (decodeTerm n).isSome = true then some (annotations n).fst else none,
+        if (decodeArgs n).isSome = true then some (annotations n).snd else none).fst =
+    (Option.map (fun q => encodeTy q.type) (decodeTerm n),
+        Option.map (fun qs => List.map encodeTy (annotationList qs)) (decodeArgs n)).fst
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAnnotationProof.lean:92:4: error: Tactic `generalize` failed: result is not type correct
+  ∀ (x : Option NArgs),
+    (if (decodeTerm n).isSome = true then some (annotations n).fst else none,
+          if x.isSome = true then some (annotations n).snd else none).snd =
+      (Option.map (fun q => encodeTy q.type) (decodeTerm n),
+          Option.map (fun qs => List.map encodeTy (annotationList qs)) x).snd
+
+case snd
+n : Nat
+⊢ (if (decodeTerm n).isSome = true then some (annotations n).fst else none,
+        if (decodeArgs n).isSome = true then some (annotations n).snd else none).snd =
+    (Option.map (fun q => encodeTy q.type) (decodeTerm n),
+        Option.map (fun qs => List.map encodeTy (annotationList qs)) (decodeArgs n)).snd

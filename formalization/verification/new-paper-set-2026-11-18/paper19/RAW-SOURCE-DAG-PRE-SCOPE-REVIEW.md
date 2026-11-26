@@ -1,0 +1,9 @@
+# RawSourceDAG exact pre-scope review
+
+Approved four-contract/six-pin supporting codec scope. All six hashes independently verified. Read full executable definitions, targets, source map, actual GroundEquivalence DAG and actual bijective SyntaxCode type decoder.
+
+The concrete storage convention is newest-first, unlike the earlier conceptual oldest-first option; this is explicit and correctly mirrors the spec list. Decoder recursively handles the tail first, then the current head. All seven constructors plus nil, local binder prefixes, arbitrary result/internal types and exact variable/reference indices are retained. Application checks both earlier typed references; lambda verifies declared arrow and child extended prefix. Case/recursor parameters and exact payload arities are explicit. The final root is checked at empty local prefix. No expanded-term stand-in or shared-reference compaction occurs.
+
+TypedRoundtrip requires equality of the actual dependent packed graph/Input. Validation additionally requires successful decoding to re-encode the exact raw input; this is plausible because every natural type code is genuinely canonical under the inspected typeCode/decodeType bijection, not a default-type decoder. Must prove both dependent reference lookup directions and preserve declared type/spec fields at constructor casts. Invalid tags and malformed structures fail, and empty graph cannot have a valid root.
+
+Effective requires actual total Computable valid and reifyCode, the latter defined by typed decoding then encoding. A finite raw validator with exact agreement is a legitimate proof route; semantic existence or classical choice alone is not. Source table length equality is literal. No all-gate compiler, source operation commutation, whole formula encoding, polynomial-bit requirement or final compiler theorem credit. Target-only preflight recommended before proofs.

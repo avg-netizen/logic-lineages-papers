@@ -1,0 +1,32 @@
+module
+public import LogicLineages.PermittedControl.ActualFullValueMaximalMetadataTargets
+import LogicLineages.PermittedControl.ActualFullValueMaximalMetadataVectorProof
+import LogicLineages.PermittedControl.ActualFullValueMaximalMetadataFlagsProof
+import LogicLineages.PermittedControl.ActualFullValueMaximalMetadataProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualFullValueMatchedNumericVector :
+    ActualFullValueMaximalMetadata.ExactMatchedNumericVector :=
+  ActualFullValueMaximalMetadata.exactMatchedNumericVector
+
+theorem fixed_exactActualFullValueMaximumFlags :
+    ActualFullValueMaximalMetadata.ExactNumericMaximumFlags :=
+  ActualFullValueMaximalMetadata.exactNumericMaximumFlags
+
+theorem fixed_exactActualFullValueMaximalMetadata :
+    ActualFullValueMaximalMetadata.ExactActualMaximalMetadata :=
+  ActualFullValueMaximalMetadata.exactActualMaximalMetadata
+
+theorem fixed_fullActualFullValueMaximalMetadata :
+    ActualFullValueMaximalMetadata.FullActualFullValueMaximalMetadata :=
+  ⟨fixed_exactActualFullValueMatchedNumericVector,fixed_exactActualFullValueMaximumFlags,
+    fixed_exactActualFullValueMaximalMetadata⟩
+
+#print axioms fixed_exactActualFullValueMatchedNumericVector
+#print axioms fixed_exactActualFullValueMaximumFlags
+#print axioms fixed_exactActualFullValueMaximalMetadata
+#print axioms fixed_fullActualFullValueMaximalMetadata
+
+end LogicLineages.PermittedControl.StatementChecks

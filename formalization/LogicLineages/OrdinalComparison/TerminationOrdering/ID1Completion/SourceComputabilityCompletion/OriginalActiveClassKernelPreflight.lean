@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalActiveClassKernelTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion
+open OriginalActiveClassKernel OriginalActiveClassKernelTargets
+#check domainProgram
+#check keyTest
+#check observerTest
+#check kernel
+#check classTest
+#check relationTest
+#check Domain
+#check Accepted
+#check CharacterizationLaw
+#check HitDomainLaw
+#check RowCoherenceLaw
+#check ActualOriginalActiveClassKernelCalibration
+#check ActualOriginalActiveClassKernelCharacterization
+#check ActualOriginalActiveClassKernelHitDomain
+#check ActualOriginalActiveClassKernelRowCoherence

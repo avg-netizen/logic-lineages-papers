@@ -1,0 +1,9 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralValidatedMPRun.Targets
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralValidatedMPRun.Preflight
+#check Targets.InternalNewLineValidity
+#check Targets.InternalTrailingStep
+#check Targets.InternalConstructedRun
+#check Targets.InternalCoreAcceptance
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralValidatedMPRun.Preflight

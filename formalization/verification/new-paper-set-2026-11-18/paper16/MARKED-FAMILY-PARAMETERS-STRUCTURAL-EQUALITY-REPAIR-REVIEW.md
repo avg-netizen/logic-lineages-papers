@@ -1,0 +1,5 @@
+# Executable five-field equality repair
+
+Read preserved second failure1795018016657807232-2 and actual Parameter/field definitions. Approve named `parameterEq (a b : Parameter) : Bool` as conjunction of the five literal field equalities: Head, output Ty, Context, ordered List Code base tuple, ordered List Tagged extras. Replace only parameters' dedup comparator with parameterEq. No field omission, set-equivalence substitute, context reindexing or quotient equality is permitted. All fields are concrete executable types; no classical equality or noncomputable selector is needed.
+
+This is a material executable equality implementation repair, not another annotation retry. Before final acceptance internally prove `parameterEq a b = true ↔ a = b` by product decomposition, and use that theorem in dedup membership/distinctness. This pays exact original equality, including all repeated positional base slots and literal canonical extras/context. Raw product/targets stay unchanged. Preserve current failed edition; refresh only affected definition pin among17 and send exact diff for independent applied confirmation before fresh native. No cap change or proof acceptance.

@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.DecisionSourceSubstitutionProof
+namespace LogicLineages.PersistentMarking.DecisionSourceSubstitutionChecks
+theorem exact_SourceBoundSubstitution : DecisionSourceTargets.SourceBoundSubstitution := DecisionSourceSubstitutionProof.boundSubstitution
+#print axioms exact_SourceBoundSubstitution
+end LogicLineages.PersistentMarking.DecisionSourceSubstitutionChecks

@@ -1,0 +1,52 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphCompilerProgramsProof.lean:16:52: error: Application type mismatch: The argument
+  Computable.option_some_iff.mpr h₂
+has type
+  Computable fun a => some (f a.1 a.2)
+but is expected to have type
+  Computable fun p => ?m.30 p.1 p.2
+in the application
+  ComputableFoldProof.filterMapProgram h₁ (Computable.option_some_iff.mpr h₂)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphCompilerProgramsProof.lean:31:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphCompilerProgramsProof.lean:55:16: error: (kernel) unknown constant '_private.LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraphCompilerProgramsProof.0.LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph.pointProgram'
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphCompilerProgramsProof.lean:98:2: error: Tactic `split` failed: Could not split an `if` or `match` expression in the goal
+
+Hint: Use `set_option trace.split.failure true` to display additional diagnostic information
+
+p : Policy
+hp : PolicyShape.Effective p
+f : ℕ → ℕ
+hc : Computable f
+hf : FullAddition.Targets.SourceGrowth f
+h : Computable fun d => parameterCode p f d.1 d.2.1 d.2.2
+Γ : List ℕ
+src δ : ℕ
+⊢ ((parameterCode p f Γ src δ).bind fun a =>
+      (auxiliaryCode Γ src).bind fun a_1 =>
+        (UnitCode.block p f a_1.1 a_1.2).bind
+          (some ∘ fun a_2 =>
+            (directBlock (groundCount a_1.1.tail) a_2 δ (rawNormCode a.2.1) (rawNormCode a.1 + a.2.2 + 1)
+                (smallValues f) (pointValuesCode f a.2.1 (rawNormCode a.1 + a.2.2 + 1)),
+              rawNormCode a.2.1))) =
+    (parameterCode p f Γ src δ).bind fun a =>
+      (auxiliaryCode Γ src).bind fun a_1 =>
+        (UnitCode.block p f a_1.1 a_1.2).bind fun a_2 =>
+          some
+            (directBlock (groundCount a_1.1.tail) a_2 δ (rawNormCode a.2.1) (rawNormCode a.1 + a.2.2 + 1)
+                (smallValues f) (pointValuesCode f a.2.1 (rawNormCode a.1 + a.2.2 + 1)),
+              rawNormCode a.2.1)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphCompilerProgramsProof.lean:109:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphCompilerProgramsProof.lean:119:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphCompilerProgramsProof.lean:152:29: error(lean.unknownIdentifier): Unknown identifier `Targets.EffectiveHeadGraph`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphCompilerProgramsProof.lean:154:8: error: No goals to be solved

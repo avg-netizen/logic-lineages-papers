@@ -1,0 +1,98 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementFullCallProof.lean:27:10: error: Tactic `assumption` failed
+
+S : Signature
+τ : Ty
+r b : Expr
+bs : Args
+a : Expr
+as : Args
+ha : RefinementTree S a b
+hab : RefinementBasesTree S as bs
+f : Head
+qb sb : Args
+hp : PaperTerm S (Expr.head f qb) f.result
+hs : PaperTerm S (Expr.head f sb) f.result
+hb : RefinementBasesTree S qb sb
+hta : CallTyped EmptyContext (Expr.head f qb).type (Args.cons a as) τ
+htb : CallTyped EmptyContext (Expr.head f sb).type (Args.cons b bs) τ
+hr : apply (Expr.head f sb) (Args.cons b bs) = some r
+hca : consumeTypes (Expr.head f qb).type (Args.cons a as) = some τ
+hcb : consumeTypes (Expr.head f sb).type (Args.cons b bs) = some τ
+⊢ Option.map (fun τ => Expr.marked f τ sb (Args.cons b bs)) (consumeTypes f.result (Args.cons b bs)) =
+    some (Expr.marked f τ sb (Args.cons b bs))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementFullCallProof.lean:31:10: error: Tactic `assumption` failed
+
+case cons.cons.head.refine_1
+S : Signature
+τ : Ty
+b : Expr
+bs : Args
+a : Expr
+as : Args
+ha : RefinementTree S a b
+hab : RefinementBasesTree S as bs
+f : Head
+qb sb : Args
+hp : PaperTerm S (Expr.head f qb) f.result
+hs : PaperTerm S (Expr.head f sb) f.result
+hb : RefinementBasesTree S qb sb
+hta : CallTyped EmptyContext (Expr.head f qb).type (Args.cons a as) τ
+htb : CallTyped EmptyContext (Expr.head f sb).type (Args.cons b bs) τ
+hca : consumeTypes (Expr.head f qb).type (Args.cons a as) = some τ
+hcb : consumeTypes (Expr.head f sb).type (Args.cons b bs) = some τ
+hright hr : apply (Expr.head f sb) (Args.cons b bs) = some (Expr.marked f τ sb (Args.cons b bs))
+⊢ Option.map (fun τ => Expr.marked f τ qb (Args.cons a as)) (consumeTypes f.result (Args.cons a as)) =
+    some (Expr.marked f τ qb (Args.cons a as))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementFullCallProof.lean:37:10: error: Tactic `assumption` failed
+
+S : Signature
+τ : Ty
+r b : Expr
+bs : Args
+a : Expr
+as : Args
+ha : RefinementTree S a b
+hab : RefinementBasesTree S as bs
+f : Head
+σ : Ty
+qb qe sb se : Args
+hp : PaperTerm S (Expr.marked f σ qb qe) σ
+hs : PaperTerm S (Expr.marked f σ sb se) σ
+hb : RefinementBasesTree S qb sb
+he : RefinementExtrasTree S f qb qe se
+hta : CallTyped EmptyContext (Expr.marked f σ qb qe).type (Args.cons a as) τ
+htb : CallTyped EmptyContext (Expr.marked f σ sb se).type (Args.cons b bs) τ
+hr : apply (Expr.marked f σ sb se) (Args.cons b bs) = some r
+hca : consumeTypes (Expr.marked f σ qb qe).type (Args.cons a as) = some τ
+hcb : consumeTypes (Expr.marked f σ sb se).type (Args.cons b bs) = some τ
+⊢ Option.map (fun τ => Expr.marked f τ sb (se.append (Args.cons b bs))) (consumeTypes σ (Args.cons b bs)) =
+    some (Expr.marked f τ sb (se.append (Args.cons b bs)))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementFullCallProof.lean:41:10: error: Tactic `assumption` failed
+
+case cons.cons.marked.refine_1
+S : Signature
+τ : Ty
+b : Expr
+bs : Args
+a : Expr
+as : Args
+ha : RefinementTree S a b
+hab : RefinementBasesTree S as bs
+f : Head
+σ : Ty
+qb qe sb se : Args
+hp : PaperTerm S (Expr.marked f σ qb qe) σ
+hs : PaperTerm S (Expr.marked f σ sb se) σ
+hb : RefinementBasesTree S qb sb
+he : RefinementExtrasTree S f qb qe se
+hta : CallTyped EmptyContext (Expr.marked f σ qb qe).type (Args.cons a as) τ
+htb : CallTyped EmptyContext (Expr.marked f σ sb se).type (Args.cons b bs) τ
+hca : consumeTypes (Expr.marked f σ qb qe).type (Args.cons a as) = some τ
+hcb : consumeTypes (Expr.marked f σ sb se).type (Args.cons b bs) = some τ
+hright hr : apply (Expr.marked f σ sb se) (Args.cons b bs) = some (Expr.marked f τ sb (se.append (Args.cons b bs)))
+⊢ Option.map (fun τ => Expr.marked f τ qb (qe.append (Args.cons a as))) (consumeTypes σ (Args.cons a as)) =
+    some (Expr.marked f τ qb (qe.append (Args.cons a as)))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementFullCallProof.lean:8:0: error: maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementFullCallProof.lean:92:8: error: (kernel) unknown constant 'LogicLineages.PersistentMarking.RefinementFullCallProof.call'

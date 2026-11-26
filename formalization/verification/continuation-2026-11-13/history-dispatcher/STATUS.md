@@ -1,0 +1,3 @@
+# Checked literal whole-Line dispatcher
+
+Receipt1794573663291715714-5 and verified evidence establish three exact targets: constructive history-independent actual leaf programs, calibration to every original Line including malformed payloads, and internal arbitrary-term dispatcher suffix acceptance. Native calibration is not an internal premise. Independent source-scope audit found no mismatch. Exact evidence verifies463 source-matched modules, standard axioms, zero errors. Not arbitrary raw/default state calibration, old opaque kernel identity, whole history-machine/HB or full-root build. Register unchanged175/2/12.

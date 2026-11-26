@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.MarkedExtrasRestrictionProof
+namespace LogicLineages.PersistentMarking.MarkedExtrasRestrictionChecks
+theorem exact_RestrictionMonotone : MarkedExtrasTargets.RestrictionMonotone := MarkedExtrasRestrictionProof.monotone
+theorem exact_Weakening : MarkedExtrasTargets.Weakening := MarkedExtrasRestrictionProof.weakening
+#print axioms exact_RestrictionMonotone
+#print axioms exact_Weakening
+end LogicLineages.PersistentMarking.MarkedExtrasRestrictionChecks

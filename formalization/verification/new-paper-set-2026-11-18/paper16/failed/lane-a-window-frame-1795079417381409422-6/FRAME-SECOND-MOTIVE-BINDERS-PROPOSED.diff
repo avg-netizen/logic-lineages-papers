@@ -1,0 +1,54 @@
+--- LogicLineages/PersistentMarking/NumberedWindowClosingRawProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowClosingRawProof.lean
+@@ -30,7 +30,7 @@
+   | numberedBase _ ih => intro d; exact .numberedBase (ih d)
+   | numberedExtra _ ih => intro d; exact .numberedExtra (ih d)
+   | auxFunction _ ih => intro d; exact .auxFunction (ih d)
+-  | first _ ih => intro d; exact .first (ih d)
+-  | later _ ih => intro d; exact .later (ih d)
++  | first _ ih => rename_i depth; exact .first (ih depth)
++  | later _ ih => rename_i depth; exact .later (ih depth)
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowClosingRawProof
+--- LogicLineages/PersistentMarking/NumberedWindowClosingPrimaryProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowClosingPrimaryProof.lean
+@@ -48,7 +48,9 @@
+   | numberedExtras hb _ ih =>
+     intro d D hc
+     exact .numberedExtras (base n d _ D _ _ hb hc) (ih d D hc)
+-  | nil => intros; exact .nil
+-  | cons _ _ iq ir => intro d D hc; exact .cons (iq d D hc) (ir d D hc)
++  | nil => exact .nil
++  | cons _ _ iq ir =>
++    rename_i depth D hEnv
++    exact .cons (iq depth D hEnv) (ir depth D hEnv)
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowClosingPrimaryProof
+--- LogicLineages/PersistentMarking/NumberedWindowClosingRealizationProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowClosingRealizationProof.lean
+@@ -23,7 +23,7 @@
+   | lam _ ih => intro d; exact .lam (ih (d+1))
+   | ordinary _ ih => intro d; exact .ordinary (ih d)
+   | marked hk _ _ hb he => intro d; exact .marked hk (hb d) (he d)
+-  | nil => intro d; exact .nil
+-  | cons _ _ hq hs => intro d; exact .cons (hq d) (hs d)
++  | nil => exact .nil
++  | cons _ _ hq hs => rename_i depth; exact .cons (hq depth) (hs depth)
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowClosingRealizationProof
+--- LogicLineages/PersistentMarking/NumberedWindowClosingFreshProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowClosingFreshProof.lean
+@@ -32,10 +32,10 @@
+     intro hs
+     have hp := Bool.or_eq_false_iff.mp hs
+     exact ⟨hb hp.1,he hp.2⟩
+-  | nil => intro _; trivial
++  | nil => trivial
+   | cons _ _ hq hs =>
+-    intro h
+-    have hp := Bool.or_eq_false_iff.mp h
++    rename_i hFresh
++    have hp := Bool.or_eq_false_iff.mp hFresh
+     exact ⟨hq hp.1,hs hp.2⟩
+ 
+ theorem realizedArgs (n : Name) {b qs As} (h : RealizesArgs b qs As) :

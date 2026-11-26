@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixProjectedSupportTargets
+import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixProjectedSupportProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedProjectedLowerSupport :
+    OriginalPrintedPlainMatrixProjectedSupport.ExactProjectedLowerSupport :=
+  OriginalPrintedPlainMatrixProjectedSupport.exactProjectedLowerSupport
+
+#print axioms fixed_exactOriginalPrintedProjectedLowerSupport
+
+end LogicLineages.PermittedControl.StatementChecks

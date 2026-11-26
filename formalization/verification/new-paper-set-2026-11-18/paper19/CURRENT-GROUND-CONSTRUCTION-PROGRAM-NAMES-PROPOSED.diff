@@ -1,0 +1,59 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationMarkerProgramsProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationMarkerProgramsProof.lean
+@@ -59,7 +59,7 @@
+     (runProgram.comp (Primrec.fst.pair
+       (Primrec.option_some.comp (Primrec.snd.pair (Primrec.const [])))))
+ 
+-theorem macro (p : Policy) (hp : PolicyShape.Effective p) :
++theorem markerProgram (p : Policy) (hp : PolicyShape.Effective p) :
+     Computable (fun x : Nat × Nat × List Nat => macroCode p x.1 x.2.1 x.2.2) := by
+   have hs : Computable (fun x : Nat × Nat × List Nat => PolicyShape.selector p x.1 x.2.1) :=
+     Computable.comp (f := fun y : Nat × Nat => PolicyShape.selector p y.1 y.2)
+@@ -78,7 +78,7 @@
+     simp
+   exact chooseProgram (Primrec.eq.comp Primrec.fst (Primrec.const 0))
+     (Computable.const (some 0))
+-    ((macro p hp).comp ((Computable.const (PolicyShape.siteCode .scalarRepeat)).pair
++    ((markerProgram p hp).comp ((Computable.const (PolicyShape.siteCode .scalarRepeat)).pair
+       (hc.pair hrep).to_comp))
+ 
+ end LogicLineages.ControlSensitivityCurrent.CurrentGroundAnnotationPrograms
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationPartialProgramsProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationPartialProgramsProof.lean
+@@ -11,7 +11,7 @@
+ open LogicLineages.StandardControlCurrent
+ open AdmissibleSum SourceAnnotationCode
+ 
+-theorem partial (p : Policy) (hp : PolicyShape.Effective p) :
++theorem groundPartialProgram (p : Policy) (hp : PolicyShape.Effective p) :
+     Computable (fun s : Nat × Nat => CurrentGroundAnnotationCode.groundPartialCode p s.1 s.2) := by
+   let S := Nat × Nat
+   let A := S × List (Option Nat)
+@@ -37,7 +37,7 @@
+       Primrec.list_cons.comp (Primrec.fst.comp Primrec.snd)
+         (Primrec.list_cons.comp (Primrec.snd.comp Primrec.snd) (Primrec.const [4]))
+     exact PolicyPartialMergePrograms.bindTwo Computable.fst Computable.snd
+-      ((macro p hp).comp ((Computable.const (PolicyShape.siteCode .activeAdd)).pair
++      ((markerProgram p hp).comp ((Computable.const (PolicyShape.siteCode .activeAdd)).pair
+         ((Computable.const 2).pair hl.to_comp)))
+   have hclose := SourceAnnotationCode.Proof.primitiveRecursiveAlgorithms.2.2.1
+   have hlam : Primrec₂ collapseAsm := Primrec.option_map Primrec.snd
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationBuildProgramsProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationBuildProgramsProof.lean
+@@ -43,7 +43,7 @@
+   have hv : Primrec (fun z : Q => z.2.1) := Primrec.fst.comp Primrec.snd
+   have hfactor := Primrec.nat_mul.comp (Primrec.const 2)
+     (sum_prim.comp (Primrec.list_map hv (OrdinalSyntax.ordinalSyntaxHeadOperationsPrimitiveRecursive.2.2.comp Primrec.snd).to₂))
+-  have hpart := (partial p hp).comp ((Primrec.succ.comp Primrec.fst).pair hb).to_comp
++  have hpart := (groundPartialProgram p hp).comp ((Primrec.succ.comp Primrec.fst).pair hb).to_comp
+   have hrepeat : Computable (fun z : Q × Nat => CurrentGroundAnnotationCode.repeatCode p
+       (2*((z.1.2.1.map OrdinalSyntax.partialSize).sum)) z.2) :=
+     (repeated p hp).comp (((hfactor.comp Primrec.fst).pair Primrec.snd).to_comp)
+@@ -202,6 +202,6 @@
+ 
+ theorem algorithmsEffective : CurrentGroundAnnotationTargets.AlgorithmsEffective := by
+   intro p hp
+-  exact ⟨macro p hp,partial p hp,buildProgram p hp⟩
++  exact ⟨markerProgram p hp,groundPartialProgram p hp,buildProgram p hp⟩
+ 
+ end LogicLineages.ControlSensitivityCurrent.CurrentGroundAnnotationPrograms

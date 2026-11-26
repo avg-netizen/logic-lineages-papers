@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.RawPacketAlgebraResidualTargets
+import LogicLineages.PermittedControl.RawPacketAlgebraResidualCalibrationProof
+import LogicLineages.PermittedControl.RawPacketAlgebraResidualEffectivityProof
+
+public section
+namespace LogicLineages.PermittedControl.RawPacketAlgebra
+
+theorem fullRawPacketAlgebraResidual : FullRawPacketAlgebraResidual :=
+  ⟨residualCalibration,residualEffectivity⟩
+
+#print axioms fullRawPacketAlgebraResidual
+
+end LogicLineages.PermittedControl.RawPacketAlgebra

@@ -1,0 +1,13 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchCanonicalAppProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchCanonicalAppProof.lean
+@@ -51,6 +51,10 @@
+         (fun k => packNode 3 [pack (Γ.map encodeTy),encodeTy τ,k]) := by
+   have hqc := (canonicalAt S K ⟨Γ,.arrow σ τ,i⟩).trans hq
+   have huc := (canonicalAt S K ⟨Γ,σ,j⟩).trans hu
++  change NumberedWindowScalarAlgorithm.canonical (fixed S K)
++    (Γ.map encodeTy,encodeTy (.arrow σ τ),i) = true at hqc
++  change NumberedWindowScalarAlgorithm.canonical (fixed S K)
++    (Γ.map encodeTy,encodeTy σ,j) = true at huc
+   unfold application
+   rw [viewAt,viewAt]
+   simp only [Option.bind_eq_bind,Option.bind_some,applyAddresses,arrowAt,address,

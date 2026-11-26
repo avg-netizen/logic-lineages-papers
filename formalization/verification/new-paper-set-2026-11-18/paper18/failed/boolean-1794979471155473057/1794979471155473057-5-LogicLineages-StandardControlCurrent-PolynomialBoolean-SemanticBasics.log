@@ -1,0 +1,131 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/PolynomialBoolean/SemanticBasics.lean:27:74: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b + d ≤ -1
+where
+ b := (List.map (fun a => a.1 * ↑(wordValue a.2.2 (ν a.2.1))) rs).sum
+ d := (List.map (fun a => -(a.1 * ↑(wordValue a.2.2 (ν a.2.1)))) rs).sum
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/PolynomialBoolean/SemanticBasics.lean:28:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (List.map (fun a => -a.1 * ↑(wordValue a.2.2 (ν a.2.1))) rs).sum
+in the target expression
+  -c + (List.map ((fun a => a.1 * ↑(wordValue a.2.2 (ν a.2.1))) ∘ fun a => (-a.1, a.2)) rs).sum =
+    -(c + (List.map (fun a => a.1 * ↑(wordValue a.2.2 (ν a.2.1))) rs).sum)
+
+ν : ℕ → ℕ
+c : ℤ
+rs : List (ℤ × ℕ × Word)
+h :
+  (List.map (fun a => -a.1 * ↑(wordValue a.2.2 (ν a.2.1))) rs).sum =
+    -(List.map (fun a => a.1 * ↑(wordValue a.2.2 (ν a.2.1))) rs).sum
+⊢ -c + (List.map ((fun a => a.1 * ↑(wordValue a.2.2 (ν a.2.1))) ∘ fun a => (-a.1, a.2)) rs).sum =
+    -(c + (List.map (fun a => a.1 * ↑(wordValue a.2.2 (ν a.2.1))) rs).sum)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/PolynomialBoolean/SemanticBasics.lean:22:50: warning: This simp argument is unused:
+  Function.comp_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [RowValue, negativeRow, List.map_map,̵ ̵F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/PolynomialBoolean/SemanticBasics.lean:27:69: warning: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  simp only [List.map_cons, ̲List.sum_cons, ̲neg_mul,̵i̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/PolynomialBoolean/SemanticBasics.lean:71:6: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  a ≥ 1
+where
+ a := ↑(ν i)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/PolynomialBoolean/SemanticBasics.lean:103:25: error: Application type mismatch: The argument
+  hv
+has type
+  Source.Valid d p.neg
+of sort `Prop` but is expected to have type
+  ℕ
+of sort `Type` in the application
+  ih hv
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/PolynomialBoolean/SemanticBasics.lean:106:17: error: Application type mismatch: The argument
+  hv.left
+has type
+  Source.Valid d p
+of sort `Prop` but is expected to have type
+  ℕ
+of sort `Type` in the application
+  ihp hv.left
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/PolynomialBoolean/SemanticBasics.lean:107:16: error: Application type mismatch: The argument
+  hv.right
+has type
+  Source.Valid d q
+of sort `Prop` but is expected to have type
+  ℕ
+of sort `Type` in the application
+  ihq hv.right
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/PolynomialBoolean/SemanticBasics.lean:106:17: error: Application type mismatch: The argument
+  hv.left
+has type
+  Source.Valid d p
+of sort `Prop` but is expected to have type
+  ℕ
+of sort `Type` in the application
+  ihp hv.left
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/PolynomialBoolean/SemanticBasics.lean:107:16: error: Application type mismatch: The argument
+  hv.right
+has type
+  Source.Valid d q
+of sort `Prop` but is expected to have type
+  ℕ
+of sort `Type` in the application
+  ihq hv.right
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/PolynomialBoolean/SemanticBasics.lean:119:15: error: Tactic `rfl` failed: The left-hand side
+  WordLinearDecisionCompletion.Formula.eval ν (compile start (Source.truth b)).2.2
+is not definitionally equal to the right-hand side
+  WordLinearDecisionCompletion.Formula.eval μ (compile start (Source.truth b)).2.2
+
+case truth
+ν μ : ℕ → ℕ
+b : Bool
+start : ℕ
+hf : ∀ i < (compile start (Source.truth b)).1, ν i = μ i
+⊢ WordLinearDecisionCompletion.Formula.eval ν (compile start (Source.truth b)).2.2 ↔
+    WordLinearDecisionCompletion.Formula.eval μ (compile start (Source.truth b)).2.2
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/PolynomialBoolean/SemanticBasics.lean:147:36: error: Application type mismatch: The argument
+  hv
+has type
+  Source.Valid d p.neg
+of sort `Prop` but is expected to have type
+  ℕ
+of sort `Type` in the application
+  ih hv
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/PolynomialBoolean/SemanticBasics.lean:149:25: error: Application type mismatch: The argument
+  hv.left
+has type
+  Source.Valid d p
+of sort `Prop` but is expected to have type
+  ℕ
+of sort `Type` in the application
+  ihp hv.left
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/PolynomialBoolean/SemanticBasics.lean:150:11: error: Application type mismatch: The argument
+  hv.right
+has type
+  Source.Valid d q
+of sort `Prop` but is expected to have type
+  ℕ
+of sort `Type` in the application
+  ihq hv.right
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/PolynomialBoolean/SemanticBasics.lean:152:24: error: Application type mismatch: The argument
+  hv.left
+has type
+  Source.Valid d p
+of sort `Prop` but is expected to have type
+  ℕ
+of sort `Type` in the application
+  ihp hv.left
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/PolynomialBoolean/SemanticBasics.lean:153:11: error: Application type mismatch: The argument
+  hv.right
+has type
+  Source.Valid d q
+of sort `Prop` but is expected to have type
+  ℕ
+of sort `Type` in the application
+  ihq hv.right

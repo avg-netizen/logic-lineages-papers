@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.MarkedFamilyFilterProof
+namespace LogicLineages.PersistentMarking.MarkedFamilyFilterChecks
+theorem exact_MonotoneExact : MarkedFamilyCoherenceTargets.MonotoneExact := MarkedFamilyFilterProof.monotoneExact
+theorem exact_CoherentExact : MarkedFamilyCoherenceTargets.CoherentExact := MarkedFamilyFilterProof.coherentExact
+#print axioms exact_MonotoneExact
+#print axioms exact_CoherentExact
+end LogicLineages.PersistentMarking.MarkedFamilyFilterChecks

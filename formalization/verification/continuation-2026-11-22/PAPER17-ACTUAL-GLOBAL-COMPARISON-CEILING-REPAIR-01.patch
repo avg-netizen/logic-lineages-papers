@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualGlobalComparisonCeilingTraceProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualGlobalComparisonCeilingTraceProof.lean
+@@ -50 +50 @@
+-  intro f B hf ρ baseline r top n initial reached strict agree live scoped funded path xs normal active ready
++  intro f B hf ρ baseline r top n initial reached strict agree live sourceScope funded path xs normal active ready
+@@ -87 +87 @@
+-    exact ⟨eq ▸ scoped t ht,properFromLabels f ρ actualLabels l used⟩
++    exact ⟨eq ▸ sourceScope t ht,properFromLabels f ρ actualLabels l used⟩

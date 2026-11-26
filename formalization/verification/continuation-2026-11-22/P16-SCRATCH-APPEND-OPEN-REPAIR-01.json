@@ -1,0 +1,35 @@
+{
+  "status": "proof-only one-line name-resolution repair; fresh native/axiom gate pending",
+  "failed_receipt": "1795341684005409664-599",
+  "failed_receipt_sha256": "dce839f11c1ff0ee4f6582eba6f28df3df811b82b52c8efb528618e0c9453abc",
+  "failed_diagnostic": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/scratch-append-initial-diagnostic.txt": "04867c938567323a49359f54f0bec6352a4a839b606afd80501cc6a3157b1330"
+  },
+  "failed_errors": [
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchAppendOpenSyntaxProof.lean:38:11: error(lean.unknownIdentifier): Unknown identifier `memberGraph`",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchAppendOpenSyntaxProof.lean:38:43: error(lean.unknownIdentifier): Unknown identifier `memberGraph`",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchAppendOpenSyntaxProof.lean:59:11: error(lean.unknownIdentifier): Unknown identifier `memberGraph`",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchAppendOpenSyntaxProof.lean:60:5: error(lean.unknownIdentifier): Unknown identifier `memberGraph`"
+  ],
+  "immutable_original_commit": "78eadc9f32f6932013862da190c19a3e8b8b4324",
+  "failed_source_archive": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalScratchAppendOpenSyntaxProof-01.lean": "de3bd00236c201dcb3db4efb24ba26b815151ebaf738ff011122ec90dc3e2eb0"
+  },
+  "diagnosis": "Both explicit change terms use memberGraph; open its already-imported defining namespace. No new import, statement, tactic, compiler configuration, or downstream thin-recut source change.",
+  "changed_source": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchAppendOpenSyntaxProof.lean",
+  "old_failed_source_sha256": "de3bd00236c201dcb3db4efb24ba26b815151ebaf738ff011122ec90dc3e2eb0",
+  "new_source_sha256": "15c885a5a140dc39a92d12884d937a582e5e2de24b5659226e1fce7a8f2787e7",
+  "zero_context_patch": {
+    "formalization/verification/continuation-2026-11-22/P16-SCRATCH-APPEND-OPEN-REPAIR-01.patch": "2e512e6064db81b05c0a9c48493a9558b3e6f96d1712394bda4cc1b4198f5a96"
+  },
+  "inverse_exact_failed_bytes_verified": true,
+  "unchanged_source_pins": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchAppendOpenTargets.lean": "66263ed26180239eb23fa0a36ccaa0818b1b9a19ed33c8c66456fbd093cc5bee",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchAppendOpenChecks.lean": "815ae08d1c67816dbf0675da28c9087f2adb5b0c3a25beb6ea2c4ade4a7f7214",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFactoredAuxOwnCoverThinChecks.lean": "a6b5509b030a7fc4a8197c6462bcd074ddaecea9d26cae37f5f82205e9706f1f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseScratchMembershipTargets.lean": "e5fb706b7a1ab6e0bfab29dd9aaf117aa969891b1e948b02404516781f66a21c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseScratchMembershipOpenSyntaxProof.lean": "2a1197f2dca6e2dc40a19e7533414932af97744d58cb653b90e4fe1cd726000b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePassWindowSyntaxProof.lean": "7d39072a9ce731fb20c22da23f7e412fdb2d7056074258c1279bab4073f3bf9b",
+    "formalization/verification/continuation-2026-11-22/P16-SCRATCH-APPEND-OPEN-SOURCE-MAP.md": "095553e714c444fe92b30f8d745743dbea4eea0031fde48096bcecebd30d17ce"
+  }
+}

@@ -1,0 +1,9 @@
+module
+public import LogicLineages.StandardControlCurrent.PeakWordTargets
+public import LogicLineages.OrdinalComparison.PrincipalKernelWordProof
+public import LogicLineages.OrdinalComparison.PeakWordProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.PeakWordProof
+theorem full : PeakWordTargets.Full :=
+  ⟨OrdinalComparison.actualPrincipalKernelWordPositions, OrdinalComparison.fullActualPrincipalPeakWord⟩
+end LogicLineages.StandardControlCurrent.PeakWordProof

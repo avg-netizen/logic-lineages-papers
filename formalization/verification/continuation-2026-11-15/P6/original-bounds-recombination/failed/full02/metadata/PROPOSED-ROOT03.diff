@@ -1,0 +1,12 @@
+--- Root02
++++ Root03
+@@ -22,7 +22,8 @@
+       codeNumber,List.Vector.get_ofFn,Matrix.cons_val_zero,Nat.unpair_pair,
+       pairOfEvaluation,constantEvaluation,leftOfEvaluation,rightEvaluation,
+       rootBounds,Encodable.encode_prod_val]
+-  all_goals norm_num
++  all_goals simp only [Encodable.encode_nat]
++  all_goals rfl
+ 
+ theorem rootAccepted (n raw : Nat) (code : Code (Fin n)) (hc : decodeCode n raw = some code) :
+     evaluate (root n) (ofFn ![raw]) = Encodable.encode (rootBounds code) := by

@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.HereditaryCodeOrderProof
+namespace LogicLineages.PersistentMarking.HereditaryCodeOrderChecks
+theorem exact_CodeOrderExact : HereditaryOrderTargets.CodeOrderExact := HereditaryCodeOrderProof.exactOrder
+#print axioms exact_CodeOrderExact
+end LogicLineages.PersistentMarking.HereditaryCodeOrderChecks

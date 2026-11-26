@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonapplicationCheckerTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonapplicationCheckerPreflight
+/-- Target-only aliases. No candidate proof is imported or present. -/
+def rawListFixedPointComparator : Prop :=
+  OriginalNonapplicationCheckerTargets.ActualOriginalParameterizedRawListFixedPoint
+
+def checkerCollapseComparator : Prop :=
+  OriginalNonapplicationCheckerTargets.ActualOriginalNonapplicationCheckerCollapse
+
+def normalizedConstructorCasesComparator : Prop :=
+  OriginalNonapplicationCheckerTargets.ActualOriginalNormalizedConstructorCases
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNonapplicationCheckerPreflight

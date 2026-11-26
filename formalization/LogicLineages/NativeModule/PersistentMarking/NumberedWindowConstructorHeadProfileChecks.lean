@@ -1,0 +1,16 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowConstructorHeadProfileProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowConstructorHeadProfileChecks
+open NumberedWindowConstructorHeadProfileTargets NumberedWindowConstructorHeadProfileProof
+
+theorem exact_PrimaryHeadProfile : PrimaryHeadProfile := primary
+theorem exact_AddressBagExact : AddressBagExact := bagExact
+theorem exact_SameSlotComputable : SameSlotComputable := sameSlot
+#print axioms exact_PrimaryHeadProfile
+#print axioms exact_AddressBagExact
+#print axioms exact_SameSlotComputable
+end LogicLineages.PersistentMarking.NumberedWindowConstructorHeadProfileChecks

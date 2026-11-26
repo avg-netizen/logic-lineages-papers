@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.FiniteStripCollectorRecoveryEffectiveProof
+public import LogicLineages.PermittedControl.FiniteStripCollectorRecoveryHitProof
+
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_finiteStripCollectorRecovery : FiniteStripCollectorRecovery.FullCollector :=
+  ⟨FiniteStripCollectorRecovery.collectorEffective,
+    FiniteStripCollectorRecovery.collectorReadExact,
+    FiniteStripCollectorRecovery.collectorHitFold⟩
+
+#print axioms fixed_finiteStripCollectorRecovery
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,11 @@
+--- LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedFinitePathProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedFinitePathProof.lean
+@@ -22,4 +22,4 @@
+-  | last child actual => exact singletonToSuppliedPath P.cover X W s raw ctx cod _
+-      (functionWitnessTerm child) _ actual
+-  | more child actual _ ih => exact prependThinProvided P.cover X W s raw ctx cod _
+-      (functionWitnessTerm child) _ _ actual ih
++  | last child actual =>
++    exact singletonToSuppliedPath P.cover X W s raw ctx cod _ (functionWitnessTerm child) _ actual
++  | more child actual _ ih =>
++    exact prependThinProvided P.cover X W s raw ctx cod _ (functionWitnessTerm child) _ _ actual ih

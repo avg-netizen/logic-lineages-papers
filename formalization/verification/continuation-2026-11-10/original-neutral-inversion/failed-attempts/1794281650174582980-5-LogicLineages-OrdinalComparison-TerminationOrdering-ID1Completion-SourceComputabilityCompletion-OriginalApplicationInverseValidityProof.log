@@ -1,0 +1,18 @@
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalApplicationInverseValidityProof.lean:74:74: error: unexpected token ']]'; expected ']'
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalApplicationInverseValidityProof.lean:71:71: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Gamma : List (InternalCalculus.Formula α)
+node oldLeaf : Program 2
+arrow d e fp ap fn arg parent parameter : OTerm α
+hc : Nonempty (Derivation body Gamma (applicationConstructors arrow d e fp ap fn arg parent))
+hp : Nonempty (Derivation body Gamma (graph2 (validatorP node oldLeaf) (suc z) parent parameter))
+qs : Fin 2 → Program 3 :=
+  ![(validatorP node oldLeaf).composition ![Program.projection 0, Program.projection 2],
+    (validatorP node oldLeaf).composition ![Program.projection 1, Program.projection 2] ]
+⊢ Nonempty
+    (Derivation body Gamma
+      (graph2 node (suc z) e parameter ⊓
+        (graph2 (validatorP node oldLeaf) (suc z) fn parameter ⊓
+          graph2 (validatorP node oldLeaf) (suc z) arg parameter)))
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalApplicationInverseValidityProof.lean:186:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalApplicationInverseValidityProof.sourceRecover: forbidden axiom dependency sorryAx

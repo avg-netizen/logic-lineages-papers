@@ -1,0 +1,10 @@
+module
+public import LogicLineages.StandardControlCurrent.MixedCancellationCoverageProof
+public import LogicLineages.StandardControlCurrent.MixedCancellationProgressProof
+public import LogicLineages.StandardControlCurrent.MixedCancellationSupportProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.MixedCancellation
+
+theorem full : MixedCancellationTargets.Full :=
+  ⟨enumeration,partition,classCoverage,cancellation,guardedSemantics,progress,support⟩
+end LogicLineages.StandardControlCurrent.MixedCancellation

@@ -1,0 +1,37 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalInternalCompletionInductionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalInternalCompletionTotalityProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors OriginalLambdaTraversal OriginalLambdaTraversalInternal
+open InternalApplicationCertificateConstructorsSyntaxProof InternalApplicationCertificateConstructorsSupportProof
+open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (z suc zRelabel sucRelabel)
+open InternalAdditionLawsProof (add)
+open InternalOriginalOrderSyntaxProof (addRelabel)
+open InternalAcceptanceSupportProof
+open InternalApplicationStepPeelSupportProof (queryCases)
+open SourceComputabilityFormulaSupportProof (numeral)
+open OriginalLambdaConstructorGraphSyntaxProof
+open OriginalLambdaTraversalInternalCompletion OriginalLambdaTraversalInternalCompletionSyntaxProof
+open OriginalLambdaTraversalInternalCompletionBindingProof OriginalLambdaTraversalInternalCompletionPayloadBindingProof
+open OriginalLambdaTraversalInternalCompletionPayloadSyntaxProof
+open OriginalLambdaTraversalInternalPayloadArithmeticProof
+open OriginalHereditaryValidityInternalRecurrenceIterationBoundSyntaxProof (weakBoundRename)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+variable {positive : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+
+
+theorem allPayload (leaf : Program 2) (payload : OTerm alpha) :
+    Nonempty (Derivation positive Delta (AtPayload leaf payload)) :=
+  OriginalLambdaTraversalInternalCompletionInductionProof.allPayload leaf payload
+
+theorem hasCompletion (leaf : Program 2) (value parameter payload : OTerm alpha)
+    (hp : Nonempty (Derivation positive Delta (graph1 InternalUnpair.right payload value))) :
+    Nonempty (Derivation positive Delta (HasCompletion leaf value parameter payload)) :=
+  OriginalLambdaTraversalInternalCompletionInductionProof.hasCompletion leaf value parameter payload hp
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalInternalCompletionTotalityProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalInternalCompletionTotalityProof

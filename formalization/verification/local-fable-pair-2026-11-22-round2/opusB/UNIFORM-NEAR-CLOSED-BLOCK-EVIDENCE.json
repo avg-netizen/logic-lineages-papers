@@ -1,0 +1,28 @@
+{
+  "key": "UNIFORM-NEAR-CLOSED-BLOCK",
+  "lane": "opusB",
+  "serves": "Round 2 Part 1: joint near-control closed-block decision (root's UniformGroundAssembly.JointNearClosedBlocks)",
+  "source_map": "verification/local-fable-pair-2026-11-22-round2/opusB/UNIFORM-NEAR-CLOSED-BLOCK-SOURCE-MAP.md",
+  "modules": [
+    {"module": "LogicLineages.PermittedControl.UniformNearClosedBlockTargets", "sha256": "0473f56ede0e82f751ef6795ed71b1782f6c3cc08566b559f5236c1c7820fac3", "frozen_receipt": "1795397439900681705-3232524"},
+    {"module": "LogicLineages.PermittedControl.UniformNearClosedBlockEntryProof", "sha256": "5cd6934113fa595bfc0aee5fe3db91848601a58cecd214af509967ce3a4e39f5", "receipt": "1795397326730841646-3231875"},
+    {"module": "LogicLineages.PermittedControl.UniformNearClosedBlockScanProof", "sha256": "02ef954c04833dacb6bcf5a7e56daac6e13d94576780f0978dd4778f5145328f", "receipt": "1795397340946521434-3231960 (passed in that gate; the gate failed later on FieldProof)"},
+    {"module": "LogicLineages.PermittedControl.UniformNearClosedBlockFieldProof", "sha256": "9c8640d2e4e497eb2be976c323459064bd42523d1beaad28e8089536c3e9da13", "receipt": "1795397415231054253-3232412"},
+    {"module": "LogicLineages.PermittedControl.UniformNearClosedBlockSliceProof", "sha256": "588fa92e4fccd7d9b719a8c8ed3acd245095a0eb1a7358c0939a285c8ceef909", "receipt": "1795397525165634837-3233010"},
+    {"module": "LogicLineages.PermittedControl.UniformNearClosedBlockDriverProof", "sha256": "c09c2123fb2c56d35d141100b890365745d9df86803bad46e153743872c2873d", "receipt": "1795397630588805580-3233688"},
+    {"module": "LogicLineages.PermittedControl.UniformNearClosedBlockProof", "sha256": "3968943dc0607279fdfde5a5eb9c389ffda8430a50070e30146d271dfb062e28", "receipt": "1795397679846287297-3234101"},
+    {"module": "LogicLineages.PermittedControl.UniformNearClosedBlockJointProof", "sha256": "e5aebd9186181756e315f0880ba20f3365bbfebc713226a732778f419d64ffc6", "receipt": "1795397699271029203-3234272"}
+  ],
+  "passing_receipt": "1795397699271029203-3234272",
+  "theorems": [
+    "UniformNearClosedBlock.parametricSolveEffectivity : ParametricSolveEffectivity",
+    "UniformNearClosedBlock.nearDecideComputable : NearDecideComputable",
+    "UniformNearClosedBlock.nearDecideExact : NearDecideExact",
+    "UniformNearClosedBlock.uniformNearClosedBlockDecision : UniformNearClosedBlockDecision",
+    "UniformNearClosedBlock.fullUniformNearClosedBlock : FullUniformNearClosedBlock",
+    "UniformNearClosedBlock.jointNearClosedBlocks : UniformGroundAssembly.JointNearClosedBlocks"
+  ],
+  "print_axioms": "all [propext, Classical.choice, Quot.sound]",
+  "failed_receipts": ["1795396910867291828-3228823 (EntryProof v1, SIGXCPU at 90 s)", "entry/field drafts: whnf timeouts and stuck instances; fixed by splitting, local irreducibility and typed projections", "1795397665700092748-3233970 (headline v1: missing imports)"],
+  "non_uniform_ingredients": "none found; every per-control effectivity lemma on the path was re-proved with the control as a computable parameter"
+}

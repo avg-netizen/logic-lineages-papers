@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryWorkBoundProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryWorkBoundStatementChecks
+theorem successorBounds : OriginalHereditaryWorkBoundTargets.SuccessorBounds :=
+  OriginalHereditaryWorkBoundProof.successorBounds
+theorem pathBound : OriginalHereditaryWorkBoundTargets.PathBound :=
+  OriginalHereditaryWorkBoundProof.pathBound
+theorem workBound : OriginalHereditaryWorkBoundTargets.WorkBound :=
+  OriginalHereditaryWorkBoundProof.workBound
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryWorkBoundStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryWorkBoundStatementChecks

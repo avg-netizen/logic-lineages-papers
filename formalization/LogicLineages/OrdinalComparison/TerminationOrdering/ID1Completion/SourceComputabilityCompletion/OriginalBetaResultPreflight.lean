@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalBetaResultTargets
+
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalBetaResult
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalBetaResultTargets
+
+#check rootCertificate
+#check rawResult
+#check resultValue
+#check Calibrated
+#check ActualOriginalBetaCertificateCoding
+#check ActualOriginalNumericBetaCertificate
+#check ActualOriginalBetaRawCalibration
+#check ActualOriginalBetaUniformCalibration
+#check ActualOriginalBetaResultPrimitive
+#check ActualOriginalBetaResultProgram

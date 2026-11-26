@@ -1,0 +1,28 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ComparisonOrdinaryProof.lean:28:34: error: Application type mismatch: The argument
+  hr.right
+has type
+  OrdinaryArgs rest✝
+but is expected to have type
+  Ordinary q✝
+in the application
+  ih hr.right
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ComparisonOrdinaryProof.lean:35:57: error: Application type mismatch: The argument
+  hw
+has type
+  Weak S (NameBridge.openBody σ✝ x✝ s✝) (NameBridge.openBody σ✝ x✝ t✝)
+but is expected to have type
+  Weak ?m.96 ?m.97 (substitute ?m.93 ?m.94 (Expr.lam σ✝ t✝))
+in the application
+  weakOrdinary ?m.96 ?m.97 (substitute ?m.93 ?m.94 (Expr.lam σ✝ t✝)) hw
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ComparisonOrdinaryProof.lean:40:57: error: Application type mismatch: The argument
+  hw
+has type
+  Weak S (Expr.marked f✝ τ✝ ss✝ (es✝.append (Args.cons (Expr.free σ✝ x✝) Args.nil))) (NameBridge.openBody σ✝ x✝ body✝)
+but is expected to have type
+  Weak ?m.244 ?m.245 (substitute ?m.241 ?m.242 (Expr.lam σ✝ body✝))
+in the application
+  weakOrdinary ?m.244 ?m.245 (substitute ?m.241 ?m.242 (Expr.lam σ✝ body✝)) hw
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ComparisonOrdinaryProof.lean:30:0: error: failed to infer structural recursion:
+Cannot use parameters h of LogicLineages.PersistentMarking.ComparisonOrdinaryProof.weakOrdinary, h of LogicLineages.PersistentMarking.ComparisonOrdinaryProof.wholeOrdinary, and h of LogicLineages.PersistentMarking.ComparisonOrdinaryProof.matchingOrdinary:
+  failed to eliminate recursive application
+    matchingOrdinary S ss✝ ts✝ hm

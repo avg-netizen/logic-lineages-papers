@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.PutRootCalibrationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.PutRootInternalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.PutRootStatementChecks
+
+theorem originalNumericPutCertificate : PutRootWorkingTargets.ActualOriginalNumericPutCertificate :=
+  PutRootNumericProof.actualOriginalNumericPutCertificate
+
+theorem originalPutLeafEquality : PutRootWorkingTargets.ActualOriginalPutLeafEquality :=
+  PutRootCalibrationProof.actualOriginalPutLeafEquality
+
+theorem originalPutCalibration : PutRootWorkingTargets.ActualOriginalPutCalibration :=
+  PutRootCalibrationProof.actualOriginalPutCalibration
+
+theorem originalPutIntroduction : PutRootWorkingTargets.ActualOriginalPutIntroduction :=
+  PutRootInternalProof.actualOriginalPutIntroduction
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.PutRootStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.PutRootStatementChecks

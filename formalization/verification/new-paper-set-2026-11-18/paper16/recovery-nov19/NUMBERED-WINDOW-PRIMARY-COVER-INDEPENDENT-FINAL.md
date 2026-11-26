@@ -1,0 +1,5 @@
+# Independent final: finite cover of actual primary classes
+
+Supporting four-target package accepted. Exact actual-syntax bounds and finite grammar comparator22pins independently read/frozen/preflight verified. All7authored proof leaves fully read/hashmatched. Actual mutual Primary/OrderedPrimary invariance uses literal permutation folds; grammar completeness uses only actual constructors, original support/head guards and strictly smaller fuel. Final genuine class cover propagates window from initial admitted source; no target guard/measure hypothesis or enlarged alphabet/context.
+
+Clean native1795086145517100014-2 passes45modules under original core caps/max506992KiB/reaped. Independent recursive replay/object/log/compiler/profile/axiom checks match45currentmodules/51mergedpins/all4standard-only aliases, zeroerrors. Finite list is a cover and may contain irrelevant/untyped/duplicate terms. This is not exact class membership/enumeration, least representative, arithmetic coding or ID1 accessibility. Arbitrary lookup functions C are not claimed effectively encoded by this support. No numbered promotion or full-root/CI claim.

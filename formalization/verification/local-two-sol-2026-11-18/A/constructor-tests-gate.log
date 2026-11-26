@@ -1,0 +1,107 @@
+COMPILER_BUSY: another serialized Lean job owns the lock.
+COMPILER_BUSY: another serialized Lean job owns the lock.
+COMPILER_BUSY: another serialized Lean job owns the lock.
+COMPILER_BUSY: another serialized Lean job owns the lock.
+COMPILER_BUSY: another serialized Lean job owns the lock.
+COMPILER_BUSY: another serialized Lean job owns the lock.
+CACHE_HIT LogicLineages.PersistentMarking.Syntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineSyntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineTyping
+CACHE_HIT LogicLineages.PersistentMarking.Signature
+CACHE_HIT LogicLineages.PersistentMarking.NameBridge
+CACHE_HIT LogicLineages.PersistentMarking.FreeSubstitution
+CACHE_HIT LogicLineages.PersistentMarking.StructuralContext
+CACHE_HIT LogicLineages.PersistentMarking.Occurrences
+CACHE_HIT LogicLineages.PersistentMarking.SpineMarking
+CACHE_HIT LogicLineages.PersistentMarking.Comparison
+CACHE_HIT LogicLineages.PersistentMarking.StructuralStabilityTargets
+CACHE_HIT LogicLineages.PersistentMarking.StructuralCoverageTargets
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupport
+CACHE_HIT LogicLineages.PersistentMarking.DecisionInventory
+CACHE_HIT LogicLineages.PersistentMarking.DecisionPorts
+CACHE_HIT LogicLineages.PersistentMarking.DecisionObservations
+CACHE_HIT LogicLineages.PersistentMarking.FiniteDomainFoundation
+CACHE_HIT LogicLineages.PersistentMarking.FiniteDomainFoundationTargets
+CACHE_HIT LogicLineages.PersistentMarking.FinitePrefixProof
+CACHE_HIT LogicLineages.PersistentMarking.FiniteDomainSchema
+CACHE_HIT LogicLineages.PersistentMarking.HereditaryDomainCode
+CACHE_HIT LogicLineages.PersistentMarking.HereditaryDomainSemantics
+CACHE_HIT LogicLineages.PersistentMarking.HereditaryDomainTargets
+CACHE_HIT LogicLineages.PersistentMarking.MarkedExtras
+CACHE_HIT LogicLineages.PersistentMarking.DecisionSourceUniverse
+CACHE_HIT LogicLineages.PersistentMarking.MarkedBaseTuples
+CACHE_HIT LogicLineages.PersistentMarking.MarkedFamilyParameters
+CACHE_HIT LogicLineages.PersistentMarking.MarkedFamilyCoding
+CACHE_HIT LogicLineages.PersistentMarking.MarkedFamilyCoherence
+CACHE_HIT LogicLineages.PersistentMarking.MarkedFamilyLattice
+CACHE_HIT LogicLineages.PersistentMarking.StructuralActions
+CACHE_HIT LogicLineages.PersistentMarking.ProtectedSpineEnvironment
+CACHE_HIT LogicLineages.PersistentMarking.MarkedConstructorTests
+CACHE_HIT LogicLineages.PersistentMarking.MarkedConstructorValue
+CACHE_HIT LogicLineages.PersistentMarking.HereditaryOrderTargets
+CACHE_HIT LogicLineages.PersistentMarking.MarkedConstructorTargets
+Compiling LogicLineages.PersistentMarking.MarkedConstructorOccurrenceProof
+COMPILE_PASS LogicLineages.PersistentMarking.MarkedConstructorOccurrenceProof
+Compiling LogicLineages.PersistentMarking.MarkedConstructorOccurrenceChecks
+'LogicLineages.PersistentMarking.MarkedConstructorOccurrenceChecks.exact_MatchingExact' depends on axioms: [propext,
+ Quot.sound]
+'LogicLineages.PersistentMarking.MarkedConstructorOccurrenceChecks.exact_MultisetExact' depends on axioms: [propext,
+ Quot.sound]
+COMPILE_PASS LogicLineages.PersistentMarking.MarkedConstructorOccurrenceChecks
+Compiling LogicLineages.PersistentMarking.MarkedConstructorHeadProof
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/MarkedConstructorHeadProof.lean:11:73: error: unsolved goals
+case some.some
+S : Signature
+f g : Head
+val✝¹ : Nat
+hf : classRank S f = some val✝¹
+val✝ : Nat
+hg : classRank S g = some val✝
+⊢ val✝¹ = val✝ ↔ val✝ = val✝¹
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/MarkedConstructorHeadProof.lean:21:70: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/MarkedConstructorHeadProof.lean:23:53: error: unsolved goals
+case head
+S : Signature
+E : Environment
+heads : List Head
+M : FiniteDomainSchema.Code
+p : MarkedFamilyParameters.Parameter
+symbol✝ : Head
+base✝ : Args
+⊢ (symbol✝.result = p.snd.fst ∧ Precedes S p.fst symbol✝) ∧
+      WholeWitness E heads M p (MarkedConstructorTests.terms base✝) ↔
+    ∃ g ts,
+      (symbol✝ = g ∧ base✝ = ts) ∧
+        g.result = p.snd.fst ∧ Precedes S p.fst g ∧ WholeWitness E heads M p (MarkedConstructorTests.terms ts)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/MarkedConstructorHeadProof.lean:27:53: error: unsolved goals
+case head
+S : Signature
+E : Environment
+heads : List Head
+M : FiniteDomainSchema.Code
+p : MarkedFamilyParameters.Parameter
+symbol✝ : Head
+base✝ : Args
+⊢ symbol✝.result = p.snd.fst →
+    Equivalent S p.fst symbol✝ →
+      WholeWitness E heads M p (MarkedConstructorTests.terms base✝) →
+        (MarkedConstructorTests.multiset E p.snd.snd.fst (p.fst.arguments.zip p.snd.snd.snd.fst)
+              (MarkedConstructorTests.terms base✝) =
+            true ↔
+          Replaces E p.snd.snd.fst (p.fst.arguments.zip p.snd.snd.snd.fst) (MarkedConstructorTests.terms base✝))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/MarkedConstructorHeadProof.lean:30:4: warning: This simp argument is unused:
+  MarkedConstructorOccurrenceProof.multiset
+
+Hint: Omit it from the simp argument list.
+  simp [̵M̵a̵r̵k̵e̵d̵C̵o̵n̵s̵t̵r̵u̵c̵t̵o̵r̵T̵e̵s̵t̵s̵.̵s̵t̵a̵t̵T̵e̵s̵t̵,̵e̵q̵u̵i̵v̵a̵l̵e̵n̵t̵,̵w̵h̵o̵l̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵M̵a̵r̵k̵e̵d̵C̵o̵n̵s̵t̵r̵u̵c̵t̵o̵r̵O̵c̵c̵u̵r̵r̵e̵n̵c̵e̵P̵r̵o̵o̵f̵.̵m̵u̵l̵t̵i̵s̵e̵t̵,̵[̲M̲a̲r̲k̲e̲d̲C̲o̲n̲s̲t̲r̲u̲c̲t̲o̲r̲T̲e̲s̲t̲s̲.̲s̲t̲a̲t̲T̲e̲s̲t̲,̲ ̲e̲q̲u̲i̲v̲a̲l̲e̲n̲t̲,̲ ̲w̲h̲o̲l̲e̲,̲ and_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+COMPILE_FAILED LogicLineages.PersistentMarking.MarkedConstructorHeadProof: 1
+BUILD_RECEIPT build-reports/1795031224650467670-36.json

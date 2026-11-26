@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.StageCallbackCanonicalSupplierTargets
+import LogicLineages.PermittedControl.StageCallbackCanonicalSupplierProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open StageCallbackCanonicalSupplier
+
+theorem fixed_exactCanonicalSupplierShape : ExactCanonicalSupplierShape :=
+  exactCanonicalSupplierShape
+theorem fixed_exactCanonicalSupplierExact : ExactCanonicalSupplierExact :=
+  exactCanonicalSupplierExact
+theorem fixed_exactCanonicalStageCallback : ExactCanonicalStageCallback :=
+  exactCanonicalStageCallback
+theorem fixed_fullStageCallbackCanonicalSupplier : FullStageCallbackCanonicalSupplier :=
+  ⟨fixed_exactCanonicalSupplierShape,fixed_exactCanonicalSupplierExact,
+    fixed_exactCanonicalStageCallback⟩
+
+#print axioms fixed_exactCanonicalSupplierShape
+#print axioms fixed_exactCanonicalSupplierExact
+#print axioms fixed_exactCanonicalStageCallback
+#print axioms fixed_fullStageCallbackCanonicalSupplier
+
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,7 @@
+# Independent PeriodInitialOnly final review
+
+Approved supporting InitialResidue only. Independent read-only verifier exactly reproduces author evidence: 35 current-source local modules, zero errors, fixed_initialResidue standard-only (propext/Classical.choice/Quot.sound). Separate import traversal equals the complete evidence module set. Native receipt1794993833869374132-2. All split15/combined13/full-period14 pins independently match.
+
+Read target, unchanged proof body and genuine translated-rational reconstruction supplier. Statement takes coefficient -1 of the actual translated rational embedding of the literal linked differential at EVERY actual primitive root, u>=5. Actual arithmetic derives source divisibility; odd modulus follows positive half exponent. Actual primitive-root derivative theorems derive source vanishing and nonzero derivative internally. Polynomial mapping identities transfer these to the genuine denominator. TranslatedRationalSimplePole uses injective fraction embedding, nonzero mapped denominator and actual SimplePoleLaurent reconstruction; taking coefficient -1 gives the actual tuple with numerator X^(offset-1), not a surrogate assignment.
+
+Only the approved proof-import replacement differs from the preserved stopped edition; proof body is identical and real reconstruction remains imported. Recorded peak1567996 KiB is below unchanged1572864 KiB cap. Previous stops preserved. Combined-union/full-period fresh gates and reviews remain required. No scalar nonperiodicity or full period claim; no compiler invoked by reviewer.

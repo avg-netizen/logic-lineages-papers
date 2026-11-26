@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSingletonTypeWindowShapeProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSingletonTypeWindowShapeProof.lean
+@@ -163 +163 @@
+-  have top := packedNode (literal 1 4) four [h,key] (literalGraph 4 ![raw])
++  have top := packedNode (body := body) (Γ := Γ) (literal 1 4) four [h,key] (literalGraph 4 ![raw])
+@@ -171 +171 @@
+-    (packedNode (literal 1 3) (numeral 3) [ty] (literalGraph 3 ![q])).2.1
++    (packedNode (body := body) (Γ := Γ) (literal 1 3) (numeral 3) [ty] (literalGraph 3 ![q])).2.1

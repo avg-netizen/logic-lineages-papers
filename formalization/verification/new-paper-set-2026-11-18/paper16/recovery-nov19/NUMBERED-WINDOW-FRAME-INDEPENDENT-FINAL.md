@@ -1,0 +1,5 @@
+# Independent acceptance: literal closing and containing-window transport
+
+All thirteen frozen supporting endpoints pass exact native1795080369778348548-6. Independent recursive replay checks49 current source/object/input-key/receipt modules,50 source pins including21 own, and13 named standard-only axiom audits; separate native-object review reports no errors. Typed and Abs resource-stop editions remain preserved unchanged, excluded from the successful closure. New append-only structural-recursion designs were independently read before the original-cap retry; maximum RSS508696 KiB is below524288 KiB. No checker or cap changed.
+
+Closing transports actual lexical typing, finite support, singleton beta, raw and primary witnesses, complete literal trace vertex images and exact raw counts. Actual same-threshold realization commutes with name closing; original fresh Abs and FAbs bodies recover exactly. Window inclusion keeps the original signature, context, terms and witnesses. All thirteen contracts remain supporting only: no simulation existence, whole window-locality theorem, accessibility or full II5 claim. Manuscripts unchanged; no full-root or CI claim.

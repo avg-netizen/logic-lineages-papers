@@ -1,0 +1,14 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowAtomicApplicationTableProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowAtomicApplicationTableProof.lean
+@@ -72,9 +72,9 @@
+ /-- The exact original tag6 row split at the two actual child rows. -/
+ theorem rowAuxPair (hp : HeadPairs) (dom cod fn arg dom' cod' fn' arg' : Nat) :
+     (row hp (auxRaw dom cod fn arg) (auxRaw dom' cod' fn' arg')).1 =
+-      (dom == dom') && (cod == cod') &&
++      ((dom == dom') && (cod == cod') &&
+         (((row hp fn fn').1 && (arg == arg')) ||
+-          ((fn == fn') && (row hp arg arg').1)) := by
++          ((fn == fn') && (row hp arg arg').1))) := by
+   let q := auxRaw dom cod fn arg
+   let r := auxRaw dom' cod' fn' arg'
+   let tab := table hp (pair q r)

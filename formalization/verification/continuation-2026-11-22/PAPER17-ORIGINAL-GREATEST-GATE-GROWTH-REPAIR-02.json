@@ -1,0 +1,54 @@
+{
+  "status": "exact narrow CountProof syntax/visibility repair; native not invoked by author",
+  "failed_source_remote_commit": "1fa5bceaa1ab620329a669592523349b7adf3b65",
+  "failed_source_local_commit": "4656704985a1b6fdea0a72240ff0d415a9c456a2",
+  "failed_source_tree": "3deae7e96e7c78b89ef3fe652b915c555b194ef6",
+  "failed_exact_gate_receipt": "1795362358780587741-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalGreatestGateGrowthStatementChecks",
+  "failed_receipt_sha256": "4c4d48c9653f6babe45e3b18f0d3f550ab577ae545fd4eeb1b5997636e35d611",
+  "failed_exact_module_log_sha256": "d8480dd6886f8b84ff1e513212f56c1ecb28f313c4b4ea5a176b2b0dde1a6881",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalGreatestGateGrowthCountProof.lean:20:47: error(lean.unknownIdentifier): Unknown identifier `normal_norm_code`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalGreatestGateGrowthCountProof.lean:18:53: error: unsolved goals\nlam mu : NONote\n\u22a2 max (rawNormCode (rawNoteEncode \u2191lam))\n      (max (rawNormCode (rawNoteEncode \u2191mu) + 3)\n        (SelectedLeadingSignCutoff.cutoff 2 (1 - \u2191((rawNormCode (rawNoteEncode \u2191mu) + 1) / 2)).natAbs)) =\n    max (actualOrdinalNorm (\u2191lam).repr)\n      (max (actualOrdinalNorm (\u2191mu).repr + 3)\n        (SelectedLeadingSignCutoff.cutoff 2 (1 - \u2191((actualOrdinalNorm (\u2191mu).repr + 1) / 2)).natAbs))\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalGreatestGateGrowthCountProof.lean:65:10: error: unexpected token '\u03bb'; expected ':=' or '|'\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalGreatestGateGrowthCountProof.lean:65:9: error: Missing cases:",
+  "failed_original_native_log_sha256": "19bed9a8ae9c7910ff60fc56eb919923840fcf684ba3bc03c1d5a4a2fc6729dd",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalGreatestGateGrowthCountProof.lean",
+  "failed_proof_sha256": "f4e9b58e79ff4c040b1f0cfde8f01e06427c526b4c9f3503db353a8fed6c6295",
+  "repaired_proof_sha256": "61ce657bff3e419ab41d7315279980321200b5d22db2725e2ccf7c1e20ffb2d9",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-GREATEST-GATE-GROWTH-REPAIR-02.patch",
+  "patch_sha256": "d9e4b2c61b521ab1d093a8c6a0d51f242377916dd4f86264e3aa01e39e28d09d",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-GREATEST-GATE-GROWTH-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "32b59005f0f088d7e74222c302ec11a88f8fa0abb083c3414402ca3cb178aa2a",
+  "prior_target_repair": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-GREATEST-GATE-GROWTH-TARGET-IMPORT-REPAIR-01.json",
+  "prior_target_repair_sha256": "f1800f4eb525b200c7da987dc6a1cdd67847673c5c89e95bcd2a9fdf62a0dd22",
+  "direct_already_transitive_import_sha256": {
+    "formalization/LogicLineages/PermittedControl/ThresholdNoteCodeProof.lean": "86a3fe52fea07d67a19ad5db089ccaaecac27c72fde660aaf7d887e4a0293490"
+  },
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalGreatestGateGrowthTargets.lean": "54b268d85b8368a13b2903ccd3acbbf27d9d21e58d770f621bc3e9c2167868f9",
+    "formalization/LogicLineages/PermittedControl/OriginalGreatestGateGrowthOrdinaryProof.lean": "1029e19f3107cdb67c9c37cd87e0f7d2dc49fb2cb30ab19d300ef1c3249a8e13",
+    "formalization/LogicLineages/PermittedControl/OriginalGreatestGateGrowthStatementChecks.lean": "3ddf059a4c20c18cc618e7fdd0ced6b5bdbdf35371e8fcf81a8fd3a0593f2f41",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-GREATEST-GATE-GROWTH-SOURCE-MAP.md": "98213709f81a5013a34e790eef6cf1a2d4df798f2e8db6b009155e5352f05c37"
+  },
+  "static_module_closure_unchanged_since_repair01": {
+    "Targets": {
+      "local": 156,
+      "external": 31,
+      "contains_totient": false
+    },
+    "OrdinaryProof": {
+      "local": 269,
+      "external": 37,
+      "contains_totient": false
+    },
+    "CountProof": {
+      "local": 370,
+      "external": 39,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 378,
+      "external": 39,
+      "contains_totient": false
+    }
+  },
+  "scope": "Import already-transitive source ThresholdNoteCodeProof explicitly to expose existing normal_norm_code; alpha-rename only reserved local h\u03bb to endpointEq. No scope, coefficients, bounds, semantic target or other source changes."
+}

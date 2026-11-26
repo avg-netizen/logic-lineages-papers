@@ -1,0 +1,6 @@
+# Independent review: compatible-profile descent plan
+Approved for concrete scope drafting, not acceptance. The reindex orientation is correct: coefficient Frobenius sends b(z)/(X-z) to b(z)^2/(X-z^2); writing the new root as y=e(z) gives coefficient b(e^-1(y))^2. Therefore B(b)(e(z))=b(z)^2, and B(b)=b iff b(e(z))=b(z)^2. Both equivalence directions must use actual root-permutation inverse equations and subtype equality, not merely bijective cardinality.
+
+Choose only a witness from the proved full-root permutation with literal square values. Prove actual finite-sum/fraction map equality, then use already checked arbitrary-tuple PF injectivity for fixedness iff compatibility. Source finite-field Frobenius is not identity on all scalars. Independent base state properness plus extended canonical denominator divisibility is appropriate and is not a range predicate. Both unique coverage directions must be frozen; use actual rational descent and canonical properness iff to transfer the unique base preimage and actual PF uniqueness to transfer the unique tuple.
+
+Any resulting Equiv must be assembled from these proofs, not assumed. This is mathematical choice-based correspondence, not executable profile conversion. Unrestricted geometric equivalence, actual maps/output, all-word source observer and effectivity remain unpaid. No source edits or native run.

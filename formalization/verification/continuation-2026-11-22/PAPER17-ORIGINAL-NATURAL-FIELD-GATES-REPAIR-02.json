@@ -1,0 +1,29 @@
+{
+  "status": "narrow proof-only source repair, not native checked by author",
+  "failed_source_remote_commit": "8cf6e9e096084b73e0e2e72a2de83330bcb4b5ca",
+  "failed_exact_gate_receipt": "1795352613898559048-83",
+  "failed_original_native_log_sha256": "e14d86dd73bcf727471e1e2e3ca8010477fc1fceb987663140d6504e23ef5c3e",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalNaturalFieldGatesProof.lean:57:10: error: Type mismatch: After simplification, term\n  routed\n has type\n  ThreeWay (closedOrdinaryValueField f (longFieldCode (ValueField.entry 0 lam mu)) x)\n    (ClosedOrdinaryValueDomain (ValueField.entry 0 lam mu) x) (FieldValue f (ValueField.entry 0 lam mu) x)\nbut is expected to have type\n  ThreeWay (closedOrdinaryValueField f (longFieldCode (ValueField.entry 0 lam mu)) x)\n    (ClosedOrdinaryValueDomain (ValueField.entry 0 lam mu) x) fun v =>\n    \u2203 i, FirstEntry f (countInitial (\u2191lam).repr x) (\u2191mu).repr i \u2227 v = entryNormAt f (countInitial (\u2191lam).repr x) i",
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-NATURAL-FIELD-GATES-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "4f3d2fe2fcb89f8631cee807efa152b8c5a48dca2453fac4d079fbebdad55f63",
+  "previous_repair_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-NATURAL-FIELD-GATES-REPAIR-01.json",
+  "previous_repair_manifest_sha256": "52fd0c20cf9f4bd438628ce45deae1f0bff61b094436ed25e2ebb2a7ce017f2a",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalNaturalFieldGatesProof.lean",
+  "failed_proof_sha256": "2ab32e501b9b4e2c698ae599d8b1cdb79a2b4d76b8adc0aa432d55b9ff2506fb",
+  "repaired_proof_sha256": "1c845ed1550c3380058b9a57ea6324cc56787133ea4fc660e28e9b3d279dd071",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-NATURAL-FIELD-GATES-REPAIR-02.patch",
+  "patch_sha256": "845dcf99acbbad278f81e3dd045cbcdc78d3947d71fa8b2eb559ec2a48b46d80",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalNaturalFieldGatesIdentityProof.lean": "0fa39140f90b82c0195a79d6652681a4651c237b08a5ebd5cf2b7fd6b5fc881c",
+    "formalization/LogicLineages/PermittedControl/OriginalNaturalFieldGatesStatementChecks.lean": "83a6789ad9c97251ec69043be1737e7be87edd45943e4ef45c095d5f1a8d0ec4",
+    "formalization/LogicLineages/PermittedControl/OriginalNaturalFieldGatesTargets.lean": "b969db253d49c5ec6be3aa7c1c78f851233e3d18da878f6c1af0e9e91b63a4eb",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-NATURAL-FIELD-GATES-SOURCE-MAP.md": "c04142ba5c8ec5fd01e44346809e93aaa8c107f0aa67a2467f45d28d7dfa57a8"
+  },
+  "static_closure_unchanged": {
+    "target_local": 81,
+    "target_external": 21,
+    "gate_local": 207,
+    "gate_external": 30
+  },
+  "scope": "Pointwise expose FieldValue at the genuine original entry with outer iterate zero. Transport the unchanged ThreeWay miss/hit predicates along that same f/x iff; invalid domain, target, prior modifier and other files unchanged."
+}

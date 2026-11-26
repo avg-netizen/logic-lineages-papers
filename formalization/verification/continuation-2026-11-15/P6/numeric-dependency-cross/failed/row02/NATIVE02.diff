@@ -1,0 +1,18 @@
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/NumericDependencyCross/NativeProof.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/NumericDependencyCross/NativeProof.lean
+@@ -19,6 +19,7 @@
+   congr 1
+   congr 1
+   rw [vectorTwo,exactPairingEvaluation]
++  rfl
+ 
+ theorem rowValue (right : List Nat) (left : Nat) :
+     evaluate row (ofFn ![numbersNumber right,left]) =
+@@ -65,6 +66,7 @@
+   rw [ArgumentEntriesChildren.NativeProof.nativeChildren,ArgumentEntriesChildren.NativeProof.nativeChildren,crossValue]
+   simp only [NumberedExchangeCodeFieldsProof.dependencies,NumberedCodeEnumerationPrimrecSupportProof.cross,
+     List.map_flatMap,List.flatMap_map,List.map_map]
++  rfl
+ 
+ theorem nativeCorrespondence : Targets.NativeCorrespondence := ⟨crossValue,dependencyValue⟩
+ end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.NumericDependencyCross.NativeProof

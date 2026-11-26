@@ -1,0 +1,9 @@
+# Exact current ranked cancellation correspondence
+
+Current m:lem:row (polynomial-arithmetic.tex lines437–493): arbitrary finite families and chosen maximal raw variable map to ExactFamilyPackage for the literal Runner.compile. No family nonemptiness or maximum-occurrence premise. Region is the original shared-valuation relation; all original names remain correlated.
+
+RankedRow.PackageCorrect is an expanded namespace-separated copy of the actual contract with fresh numerical RowDomain/RowValue. Every emitted guard is allowed and linear in the maximum, original names only, outcomes preserve source order/length. Tags0/2 mean known strict signs, tag3 exact equal-valued linear row (zero included). Tail pays all original rows, all guard syntactic occurrences and all output rows, including zero coefficient occurrences. Case coverage and every satisfied case's List.Forall₂ correctness are explicit. Guard Formula semantics uses the same pinned actual row semantics, calibrated by mandatory RowCalibration for every admitted row using the broad NumericalKernel bridge; it is not an uninterpreted predicate.
+
+The finite computed artifact is encodePackage of concrete compile. Full also requires actual all-input work-stack termination, least stopping/no earlier stop/invalid-input convention, actual finite-runner and leastFuel computability, single-row correctness and joint family compiler computability. These strengthen, rather than replace, the printed finite family conclusion.
+
+Proof closure must retain whole-counter cancellation, residual repartition, strictly decreasing top-level rank histogram, no inherited deleted provenance, actual current nonlinear support and explicit sign/error bounds. Nested word comparisons use separate terminating guard machinery. No termination, sign, domain or arithmetic oracle. No general QE or common/balanced decision credit.

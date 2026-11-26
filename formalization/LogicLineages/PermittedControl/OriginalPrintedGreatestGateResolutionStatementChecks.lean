@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedGreatestGateResolutionTargets
+import LogicLineages.PermittedControl.OriginalPrintedGreatestGateResolutionProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedGreatestGateResolution :
+    OriginalPrintedGreatestGateResolution.ExactUniformGateResolution :=
+  OriginalPrintedGreatestGateResolution.exactUniformGateResolution
+
+theorem fixed_exactOriginalPrintedGreatestResolvedBranch :
+    OriginalPrintedGreatestGateResolution.ExactUniformOriginalResolvedBranch :=
+  OriginalPrintedGreatestGateResolution.exactUniformOriginalResolvedBranch
+
+theorem fixed_fullOriginalPrintedGreatestGateResolution :
+    OriginalPrintedGreatestGateResolution.FullOriginalPrintedGreatestGateResolution :=
+  ⟨fixed_exactOriginalPrintedGreatestGateResolution,fixed_exactOriginalPrintedGreatestResolvedBranch⟩
+
+#print axioms fixed_exactOriginalPrintedGreatestGateResolution
+#print axioms fixed_exactOriginalPrintedGreatestResolvedBranch
+#print axioms fixed_fullOriginalPrintedGreatestGateResolution
+
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,16 @@
+--- LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ScanStateTransportRawProof.lean original
++++ LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ScanStateTransportRawProof.lean R1
+@@ -17,11 +17,11 @@
+  have h1 := HistoryIteratorSuffix.RelationProof.universalUnder _ _ h
+  have h1' : Derivation T (.imp (GorbowPACore.weaken (GorbowPACore.weaken H))
+   (allResults itag len ptag q l r (liftTerm (liftTerm raw)) (.var (1 : Fin (ctx+2))) (.var 0))) := by
+-  simpa only [allResults,liftTerm,renameTerm,substitute] using h1
++  simpa only [allResults,liftTerm,renameTerm,substitute,Fin.succ_zero_eq_one,Fin.succ_one_eq_two] using h1
+  have h2 := HistoryIteratorSuffix.RelationProof.universalUnder _ _ h1'
+  have h2' : Derivation T (.imp (GorbowPACore.weaken H)
+   (allNew itag len ptag q l r (liftTerm raw) (.var (0 : Fin (ctx+1))))) := by
+-  simpa only [allNew,liftTerm,renameTerm,substitute] using h2
++  simpa only [allNew,liftTerm,renameTerm,substitute,Fin.succ_zero_eq_one] using h2
+  exact HistoryIteratorSuffix.RelationProof.universalUnder _ _ h2'
+ /-- Original empty-input transport with all three coordinates generalized. -/
+ theorem nilAll {n ctx : Nat} (p : Program n) (itag len ptag q l r : Nat)

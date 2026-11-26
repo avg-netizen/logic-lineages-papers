@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.PrefixSplicingProof
+namespace LogicLineages.PersistentMarking.PrefixSplicingChecks
+theorem exact_splicing : PrefixEscapeSupportTargets.Splicing := PrefixSplicingProof.splicing
+#print axioms exact_splicing
+end LogicLineages.PersistentMarking.PrefixSplicingChecks

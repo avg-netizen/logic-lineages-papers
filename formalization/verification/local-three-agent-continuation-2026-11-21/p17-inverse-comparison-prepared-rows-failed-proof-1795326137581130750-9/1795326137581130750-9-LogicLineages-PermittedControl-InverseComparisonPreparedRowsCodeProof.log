@@ -1,0 +1,25 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/InverseComparisonPreparedRowsCodeProof.lean:27:11: error: Tactic `unfold` failed to unfold `emitCode` in
+  (if p.1 = 0 then
+      if p.2 = 0 then (greaterMinusParameter 0).encode
+      else if p.2 = 2 then (parameterMinusGreater (-1)).encode else NormalForm.Formula.falsity.encode
+    else
+      if p.1 = 1 then
+        if p.2 = 0 then (greaterMinusParameter (-1)).encode
+        else
+          if p.2 = 1 then equalRows.encode
+          else if p.2 = 2 then (parameterMinusGreater (-1)).encode else NormalForm.Formula.falsity.encode
+      else
+        if p.1 = 2 then
+          if p.2 = 0 then (greaterMinusParameter (-1)).encode
+          else if p.2 = 2 then (parameterMinusGreater 0).encode else NormalForm.Formula.falsity.encode
+        else NormalForm.Formula.falsity.encode) =
+    ?m.222 p
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/InverseComparisonPreparedRowsCodeProof.lean:26:2: error: Type mismatch
+  Primrec.to₂ (Primrec.of_eq compiled fun p => ?m.214)
+has type
+  Primrec₂ fun a b => ?m.222 (a, b)
+but is expected to have type
+  Primrec₂ emitCode
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/InverseComparisonPreparedRowsCodeProof.lean:17:7: warning: Local variable 'zero' resembles constructor 'Nat.Primrec.zero' - write '.zero' (with a dot) or 'Nat.Primrec.zero' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`

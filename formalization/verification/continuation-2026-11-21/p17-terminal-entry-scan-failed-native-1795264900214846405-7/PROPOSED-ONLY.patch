@@ -1,0 +1,34 @@
+--- a/formalization/LogicLineages/PermittedControl/TerminalEntryScanGuardProof.lean
++++ b/formalization/LogicLineages/PermittedControl/TerminalEntryScanGuardProof.lean
+@@ -12,10 +12,16 @@
+ private theorem guard_primitive : Primrec terminalScanGuard := by
+   have hn : Primrec rawNormalCode := Primrec.nat_iff.mpr rawNormalPrimitiveRecursive
+   have hs : Primrec rawSplitCode := Primrec.nat_iff.mpr rawSplitPrimitiveRecursive
+-  have hstart := Primrec.eq.comp (hn.comp Primrec.fst) (Primrec.const 1)
+-  have htarget := Primrec.eq.comp (hn.comp Primrec.snd) (Primrec.const 1)
+-  have hlimit := Primrec.eq.comp (Primrec.fst.comp (Primrec.unpair.comp (hs.comp Primrec.snd)))
+-    Primrec.snd
++  have hfirst : Primrec (fun p : Nat × Nat => p.1) := Primrec.fst
++  have hsecond : Primrec (fun p : Nat × Nat => p.2) := Primrec.snd
++  have hlimcode : Primrec (fun p : Nat × Nat => (rawSplitCode p.2).unpair.1) :=
++    Primrec.fst.comp (Primrec.unpair.comp (hs.comp hsecond))
++  have hstart : PrimrecPred (fun p : Nat × Nat => rawNormalCode p.1 = 1) :=
++    Primrec.eq.comp (hn.comp hfirst) (Primrec.const 1)
++  have htarget : PrimrecPred (fun p : Nat × Nat => rawNormalCode p.2 = 1) :=
++    Primrec.eq.comp (hn.comp hsecond) (Primrec.const 1)
++  have hlimit : PrimrecPred (fun p : Nat × Nat => (rawSplitCode p.2).unpair.1 = p.2) :=
++    Primrec.eq.comp hlimcode hsecond
+   exact (hstart.and (htarget.and hlimit)).decide
+ 
+ private theorem limit_part_zero_or_limit (z : Ordinal.{0}) :
+--- a/formalization/verification/continuation-2026-11-21/PAPER17-TERMINAL-ENTRY-SCAN-AUTHOR-MANIFEST.json
++++ b/formalization/verification/continuation-2026-11-21/PAPER17-TERMINAL-ENTRY-SCAN-AUTHOR-MANIFEST.json
+@@ -11,7 +11,7 @@
+     "pins_rechecked": 16
+   },
+   "new_source_hashes": {
+-    "formalization/LogicLineages/PermittedControl/TerminalEntryScanGuardProof.lean": "9a16304aa1e208971f0bfdb37e5496f2a55174f7feac47d7399f7814feacb896",
++    "formalization/LogicLineages/PermittedControl/TerminalEntryScanGuardProof.lean": "56b758a84b490a8b1981f48cd31fc9a88583ee7496e6cab481233cacdc28d66b",
+     "formalization/LogicLineages/PermittedControl/TerminalEntryScanPrefixProof.lean": "88c0eb0b620e0d947824ae4d298b66cc24ac123c826939d017401e875dba045a",
+     "formalization/LogicLineages/PermittedControl/TerminalEntryScanNumericProof.lean": "9608b10cb9b97424ce56f2c5f28a13da97772dd10d896c7c2585b8975887f25a",
+     "formalization/LogicLineages/PermittedControl/TerminalEntryScanProgramProof.lean": "5a7217ee772a4b08fd5ade8c1fa330c126d8410b9aa0e73ed8aa2205a83509dc",

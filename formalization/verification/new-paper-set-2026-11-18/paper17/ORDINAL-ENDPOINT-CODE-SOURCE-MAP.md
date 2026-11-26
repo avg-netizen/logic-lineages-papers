@@ -1,0 +1,6 @@
+# Actual endpoint code operations
+Source prop:threshold requires effective fixed CNF endpoints deltaQ=lambdaQ-muQ and kappa=muP+deltaQ. This packet implements both genuine normal-code ordinary operations, not formula construction. Installed pinned Mathlib ONote.addAux/add/sub are the exact syntactic reference algorithms; their NF preservation and repr correctness establish the normal-domain bridge only after literal all-code agreement is proved.
+
+The programs use complete finite tables indexed by Nat.pair(a,b), and exact rawComparisonCode. Addition recurses on the left tail with right input unchanged and examines the recursive result in addAux. Subtraction recurses on both tails only when exponents and positive coefficients are equal. All lookup decreases, table lengths, coefficient-minus-one arithmetic, and total all-code Primrec claims are internal obligations. The zero default in getD is never used to disguise a missing recursive entry.
+
+Combined target requires joint Primrec, literal all-input raw syntax equations, output normality and actual ordinary ordinal addition/subtraction equalities. Supporting only, not full prop:threshold; interval validity, table case assembly, translated inputs and signed output offsets/collisions remain separate.

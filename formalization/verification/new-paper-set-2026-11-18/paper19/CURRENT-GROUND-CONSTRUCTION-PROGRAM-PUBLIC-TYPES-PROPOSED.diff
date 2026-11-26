@@ -1,0 +1,60 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationBuildProgramsProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationBuildProgramsProof.lean
+@@ -158,7 +158,7 @@
+         ((Primrec.snd.comp Primrec.fst).pair Primrec.snd))).to_comp).to₂
+ 
+ theorem buildProgram (pol : Policy) (he : PolicyShape.Effective pol) :
+-    Computable (fun s : S => CurrentGroundAnnotationCode.buildCode pol s.1 s.2.1 s.2.2) := by
++    Computable (fun s : List Nat × Nat × Nat => CurrentGroundAnnotationCode.buildCode pol s.1 s.2.1 s.2.2) := by
+   let children : S → List S := fun s =>
+     if s.2.2%8=5 then [(s.1,s.2.1,(s.2.2/8).unpair.1),(s.1,s.2.1,(s.2.2/8).unpair.2)]
+     else if s.2.2%8=6 then [(0::s.1,s.2.1+1,(s.2.2/8).unpair.2)] else []
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountProgramsProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountProgramsProof.lean
+@@ -83,7 +83,7 @@
+       (head_primitive.comp (Primrec.fst.comp Primrec.snd))).to_comp (collapseMapProgram p hp).to₂
+ 
+ theorem accountProgram (p : Policy) (hp : PolicyShape.Effective p) :
+-    Computable (fun z : S => CurrentGroundAccount.accountCode p z.1 z.2) := by
++    Computable (fun z : List Nat × Nat => CurrentGroundAccount.accountCode p z.1 z.2) := by
+   let children : S → List S := fun s =>
+     if s.2%4=2 then [(s.1,(s.2/4).unpair.1),(s.1,(s.2/4).unpair.2)]
+     else if s.2%4=3 then [(s.1,(s.2/4).unpair.2)] else []
+@@ -152,7 +152,7 @@
+ 
+ 
+ theorem sourceProgram (p : Policy) (hp : PolicyShape.Effective p) :
+-    Computable (fun z : S => CurrentGroundAccount.sourceCode p z.1 z.2) := by
++    Computable (fun z : List Nat × Nat => CurrentGroundAccount.sourceCode p z.1 z.2) := by
+   have hb : Computable (fun q : S => CurrentGroundAnnotationCode.buildCode p q.1 0 q.2) :=
+     (CurrentGroundAnnotationPrograms.buildProgram p hp).comp
+       (Computable.fst.pair ((Computable.const 0).pair Computable.snd))
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionProgramsProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionProgramsProof.lean
+@@ -38,7 +38,7 @@
+   simp [Option.map_eq_bind]
+ 
+ theorem callerProgram (pol : Policy) (hp : PolicyShape.Effective pol) :
+-    Computable (fun z : P => callerCode pol z.1 z.2.1 z.2.2) := by
++    Computable (fun z : List Nat × Nat × Nat => callerCode pol z.1 z.2.1 z.2.2) := by
+   have ha : Computable (fun q : P => (TrackedSourceInspectionCode.arityCode q.2.1).bind (fun r =>
+       if r=0 then none else
+         let sat := NumericCarrierData.saturateSource (r-1) q.2.2
+@@ -59,7 +59,7 @@
+   simp [callerCode]
+ 
+ theorem chainProgram (pol : Policy) (hp : PolicyShape.Effective pol) :
+-    Computable (fun z : S => chainCode pol z.1 z.2) := by
++    Computable (fun z : List Nat × List RawOperator => chainCode pol z.1 z.2) := by
+   have hn := NumericUnaryChain.Proof.primitiveRecursiveAlgorithms
+   have hctx : Primrec (fun z : S => NumericUnaryChain.contextCode z.1 z.2) := hn.1
+   have hterms : Primrec (fun z : S => (NumericUnaryChain.mergeData z.2).2.map Prod.fst) :=
+@@ -104,7 +104,7 @@
+   simp [finish,Option.map_eq_bind]
+ 
+ theorem compilerProgram (pol : Policy) (hp : PolicyShape.Effective pol) :
+-    Computable (fun q : A => compileCode pol q.1 q.2.1 q.2.2.1 q.2.2.2) := by
++    Computable (fun q : List Nat × Nat × Nat × Nat => compileCode pol q.1 q.2.1 q.2.2.1 q.2.2.2) := by
+   have hΓ : Primrec (fun q : A => q.2.1::q.1) :=
+     Primrec.list_cons.comp (Primrec.fst.comp Primrec.snd) Primrec.fst
+   have hP : Primrec (fun q : A => q.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)

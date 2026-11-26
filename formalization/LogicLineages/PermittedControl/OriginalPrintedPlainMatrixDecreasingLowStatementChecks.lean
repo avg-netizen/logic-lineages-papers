@@ -1,0 +1,28 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixDecreasingLowTargets
+import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixDecreasingLowProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedDecreasingLowCase : OriginalPrintedPlainMatrixDecreasingLow.ExactOriginalDecreasingLowCase :=
+  OriginalPrintedPlainMatrixDecreasingLow.exactOriginalDecreasingLowCase
+
+theorem fixed_exactOriginalPrintedCodedLowChildren : OriginalPrintedPlainMatrixDecreasingLow.ExactOriginalCodedLowChildren :=
+  OriginalPrintedPlainMatrixDecreasingLow.exactOriginalCodedLowChildren
+
+theorem fixed_exactOriginalPrintedDecreasingInitialPartition :
+    OriginalPrintedPlainMatrixDecreasingLow.ExactOriginalDecreasingInitialPartition :=
+  OriginalPrintedPlainMatrixDecreasingLow.exactOriginalDecreasingInitialPartition
+
+theorem fixed_fullOriginalPrintedPlainMatrixDecreasingLow :
+    OriginalPrintedPlainMatrixDecreasingLow.FullOriginalPrintedPlainMatrixDecreasingLow :=
+  ⟨fixed_exactOriginalPrintedDecreasingLowCase,fixed_exactOriginalPrintedCodedLowChildren,
+    fixed_exactOriginalPrintedDecreasingInitialPartition⟩
+
+#print axioms fixed_exactOriginalPrintedDecreasingLowCase
+#print axioms fixed_exactOriginalPrintedCodedLowChildren
+#print axioms fixed_exactOriginalPrintedDecreasingInitialPartition
+#print axioms fixed_fullOriginalPrintedPlainMatrixDecreasingLow
+
+end LogicLineages.PermittedControl.StatementChecks

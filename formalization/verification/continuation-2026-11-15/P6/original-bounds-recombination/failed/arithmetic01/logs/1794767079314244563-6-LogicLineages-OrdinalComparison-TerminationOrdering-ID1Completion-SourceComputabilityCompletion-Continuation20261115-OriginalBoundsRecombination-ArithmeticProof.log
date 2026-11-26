@@ -1,0 +1,55 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalBoundsRecombination/ArithmeticProof.lean:23:4: error(lean.unknownIdentifier): Unknown identifier `projectionEvaluation`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalBoundsRecombination/ArithmeticProof.lean:35:4: error: Tactic `rfl` failed: The left-hand side
+  Nat.pair
+    ((Nat.unpair head).1 +
+      (Nat.unpair
+          (Encodable.encode
+            (List.foldr (fun value rest => (value.1 + rest.1, max value.2 rest.2)) (0, 0)
+              (List.map Nat.unpair tail)))).1)
+    (max (Nat.unpair head).2
+      (Nat.unpair
+          (Encodable.encode
+            (List.foldr (fun value rest => (value.1 + rest.1, max value.2 rest.2)) (0, 0)
+              (List.map Nat.unpair tail)))).2)
+is not definitionally equal to the right-hand side
+  Nat.pair
+    (Encodable.encode
+      ((Nat.unpair head).1 +
+        (List.foldr (fun value rest => (value.1 + rest.1, max value.2 rest.2)) (0, 0) (List.map Nat.unpair tail)).1))
+    (Encodable.encode
+      (max (Nat.unpair head).2
+        (List.foldr (fun value rest => (value.1 + rest.1, max value.2 rest.2)) (0, 0) (List.map Nat.unpair tail)).2))
+
+case cons
+head : ℕ
+tail : List ℕ
+ih :
+  List.foldr (fun head acc => evaluate merge (head ::ᵥ acc ::ᵥ nil)) 0 tail =
+    Encodable.encode (collectBounds (List.map Nat.unpair tail))
+⊢ Nat.pair
+      ((Nat.unpair head).1 +
+        (Nat.unpair
+            (Encodable.encode
+              (List.foldr (fun value rest => (value.1 + rest.1, max value.2 rest.2)) (0, 0)
+                (List.map Nat.unpair tail)))).1)
+      (max (Nat.unpair head).2
+        (Nat.unpair
+            (Encodable.encode
+              (List.foldr (fun value rest => (value.1 + rest.1, max value.2 rest.2)) (0, 0)
+                (List.map Nat.unpair tail)))).2) =
+    Nat.pair
+      (Encodable.encode
+        ((Nat.unpair head).1 +
+          (List.foldr (fun value rest => (value.1 + rest.1, max value.2 rest.2)) (0, 0) (List.map Nat.unpair tail)).1))
+      (Encodable.encode
+        (max (Nat.unpair head).2
+          (List.foldr (fun value rest => (value.1 + rest.1, max value.2 rest.2)) (0, 0) (List.map Nat.unpair tail)).2))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalBoundsRecombination/ArithmeticProof.lean:34:97: warning: This simp argument is unused:
+  Nat.unpair_pair
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵l̵l̵e̵c̵t̵B̵o̵u̵n̵d̵s̵,̵L̵i̵s̵t̵.̵m̵a̵p̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵f̵o̵l̵d̵r̵_̵c̵o̵n̵s̵,̵m̵e̵r̵g̵e̵B̵o̵u̵n̵d̵s̵,̵E̵n̵c̵o̵d̵a̵b̵l̵e̵.̵e̵n̵c̵o̵d̵e̵_̵p̵r̵o̵d̵_̵v̵a̵l̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵]̵[̲c̲o̲l̲l̲e̲c̲t̲B̲o̲u̲n̲d̲s̲,̲ ̲L̲i̲s̲t̲.̲m̲a̲p̲_̲c̲o̲n̲s̲,̲ ̲L̲i̲s̲t̲.̲f̲o̲l̲d̲r̲_̲c̲o̲n̲s̲,̲ ̲m̲e̲r̲g̲e̲B̲o̲u̲n̲d̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲E̲n̲c̲o̲d̲a̲b̲l̲e̲.̲e̲n̲c̲o̲d̲e̲_̲p̲r̲o̲d̲_̲v̲a̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalBoundsRecombination/ArithmeticProof.lean:43:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalBoundsRecombination.ArithmeticProof.collectValue: forbidden axiom dependency sorryAx

@@ -1,0 +1,3 @@
+# Reinstallation of the measured function exchange
+
+One actual term measure and grammar are chosen before all settings. The same physical exchange and least supply the scalar, positive checker and application frontend. A function edge lifts with two parent windows. An actual raw function reduction supplies both codomain classes and their positive singleton under the same window hypotheses. The original valid-window, symmetric-head and covered-seed premises remain. [Exact target](../../LogicLineages/PersistentMarking/NumberedWindowInternalSparseMeasuredInstallationTargets.lean) · [Native gate](P16-MEASURED-INSTALLATION-LOCAL-EVIDENCE.json)

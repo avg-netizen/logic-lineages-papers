@@ -1,0 +1,11 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowAnnotationProgramProof
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowAnnotationProgramChecks
+open NumberedWindowAnnotationProgramTargets
+theorem exact_HeadDeclarationProgram : HeadDeclarationProgram := NumberedWindowAnnotationProgramProof.declarationProgram
+theorem exact_AnnotationProgram : AnnotationProgram := NumberedWindowAnnotationProgramProof.annotationProgram
+#print axioms exact_HeadDeclarationProgram
+#print axioms exact_AnnotationProgram
+end LogicLineages.PersistentMarking.NumberedWindowAnnotationProgramChecks

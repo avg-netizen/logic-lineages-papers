@@ -1,0 +1,29 @@
+module
+public import LogicLineages.PermittedControl.HeterogeneousSignedMatrixLowStripsTargets
+import LogicLineages.PermittedControl.HeterogeneousSignedMatrixLowStripsCodeProof
+import LogicLineages.PermittedControl.HeterogeneousSignedMatrixLowStripsSemanticsProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_heterogeneousSignedMatrixLowCodeExact : HeterogeneousSignedMatrixLowStrips.CodeExact :=
+  HeterogeneousSignedMatrixLowStrips.codeExact
+
+theorem fixed_heterogeneousSignedMatrixExactLowBranch : HeterogeneousSignedMatrixLowStrips.ExactBranch :=
+  HeterogeneousSignedMatrixLowStrips.exactBranch
+
+theorem fixed_heterogeneousSignedMatrixGuardedLowExistential :
+    HeterogeneousSignedMatrixLowStrips.ExactGuardedLowExistential :=
+  HeterogeneousSignedMatrixLowStrips.exactGuardedLowExistential
+
+theorem fixed_fullHeterogeneousSignedMatrixLowStrips :
+    HeterogeneousSignedMatrixLowStrips.FullHeterogeneousSignedMatrixLowStrips :=
+  ⟨fixed_heterogeneousSignedMatrixLowCodeExact,fixed_heterogeneousSignedMatrixExactLowBranch,
+    fixed_heterogeneousSignedMatrixGuardedLowExistential⟩
+
+#print axioms fixed_heterogeneousSignedMatrixLowCodeExact
+#print axioms fixed_heterogeneousSignedMatrixExactLowBranch
+#print axioms fixed_heterogeneousSignedMatrixGuardedLowExistential
+#print axioms fixed_fullHeterogeneousSignedMatrixLowStrips
+
+end LogicLineages.PermittedControl.StatementChecks

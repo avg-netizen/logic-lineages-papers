@@ -1,0 +1,16 @@
+import LogicLineages.PersistentMarking.NumberedWindowArithmeticPairProgramCalibration
+import LogicLineages.PersistentMarking.NumberedWindowRegistryPairPrograms
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticPairProgramProof
+open LogicLineages.ComputabilityKnowledge List.Vector NumberedWindowArithmeticPair
+open NumberedWindowArithmeticPairProgramTargets
+
+theorem calibration : PairAndDecodeCalibration := NumberedWindowArithmeticPairProgramCalibration.calibration
+
+theorem actualPair : ActualPairProgram :=
+  NumberedWindowRegistryPairPrograms.calibratedEncoding pair calibration.1
+
+theorem actualDecoder : ActualPairDecoderProgram :=
+  NumberedWindowRegistryPairPrograms.calibratedDecoding decode calibration.2
+
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticPairProgramProof

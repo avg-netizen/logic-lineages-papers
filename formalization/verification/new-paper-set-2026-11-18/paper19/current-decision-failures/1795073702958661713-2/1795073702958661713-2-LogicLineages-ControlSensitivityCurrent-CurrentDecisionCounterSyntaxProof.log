@@ -1,0 +1,174 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSyntaxProof.lean:32:6: error: failed to generate equality theorems for `match` expression `LogicLineages.ControlSensitivityCurrent.CurrentDecision.place.match_1`
+Γ✝ : List Ty
+motive✝ : (x : Ty) → Variable (Ty.ground :: Ty.ground :: Γ✝) x → Sort u_1
+x✝¹ : Ty
+x✝ : Variable Γ✝ x✝¹
+h_1✝ : Unit → motive✝ Ty.ground Variable.here
+h_2✝ : Unit → motive✝ Ty.ground Variable.here.there
+h_3✝ : (x : Ty) → (x_1 : Variable Γ✝ x) → motive✝ x x_1.there.there
+⊢ List.cons.noConfusion ⋯
+      (fun head_eq =>
+        Eq.ndrec (motive := fun {τ} =>
+          Ty.ground :: Γ✝ ≍ Ty.ground :: Γ✝ → x✝¹ = x✝¹ → x✝.there.there ≍ x✝.there.there → motive✝ x✝¹ x✝.there.there)
+          (fun tail_eq =>
+            Eq.ndrec (motive := fun {Γ} =>
+              (a : Variable Γ x✝¹) → x✝¹ = x✝¹ → x✝.there.there ≍ a.there → motive✝ x✝¹ x✝.there.there)
+              (fun a h =>
+                Eq.ndrec (motive := fun {σ} =>
+                  (a : Variable (Ty.ground :: Γ✝) σ) → x✝.there.there ≍ a.there → motive✝ x✝¹ x✝.there.there)
+                  (fun a h =>
+                    ⋯ ▸
+                      place._sparseCasesOn_1 (motive := fun x => (a : Variable (Ty.ground :: Γ✝) x) → motive✝ x a.there)
+                        x✝¹
+                        (fun a =>
+                          Variable.casesOn (motive := fun a_1 a_2 x =>
+                            Ty.ground :: Γ✝ = a_1 → Ty.ground = a_2 → a ≍ x → motive✝ Ty.ground a.there) a
+                            (fun {Γ} {σ} h =>
+                              List.cons.noConfusion h fun head_eq =>
+                                Eq.ndrec (motive := fun {σ} =>
+                                  Γ✝ ≍ Γ → Ty.ground = σ → a ≍ Variable.here → motive✝ Ty.ground a.there)
+                                  (fun tail_eq =>
+                                    Eq.ndrec (motive := fun {Γ} =>
+                                      Ty.ground = Ty.ground → a ≍ Variable.here → motive✝ Ty.ground a.there)
+                                      (fun h h_1 => ⋯ ▸ h_2✝ ()) ⋯)
+                                  ⋯)
+                            (fun {Γ} {σ τ} a_1 h =>
+                              List.cons.noConfusion h fun head_eq =>
+                                Eq.ndrec (motive := fun {τ} =>
+                                  Γ✝ ≍ Γ → Ty.ground = σ → a ≍ a_1.there → motive✝ Ty.ground a.there)
+                                  (fun tail_eq =>
+                                    Eq.ndrec (motive := fun {Γ} =>
+                                      (a_2 : Variable Γ σ) → Ty.ground = σ → a ≍ a_2.there → motive✝ Ty.ground a.there)
+                                      (fun a_2 h =>
+                                        Eq.ndrec (motive := fun {σ} =>
+                                          (a_3 : Variable Γ✝ σ) → a ≍ a_3.there → motive✝ Ty.ground a.there)
+                                          (fun a_3 h => ⋯ ▸ h_3✝ Ty.ground a_3) h a_2)
+                                      ⋯ a_1)
+                                  ⋯)
+                            ⋯ ⋯ ⋯)
+                        (fun h a =>
+                          Variable.casesOn (motive := fun a_1 a_2 x =>
+                            Ty.ground :: Γ✝ = a_1 → x✝¹ = a_2 → a ≍ x → motive✝ x✝¹ a.there) a
+                            (fun {Γ} {σ} h_1 =>
+                              List.cons.noConfusion h_1 fun head_eq =>
+                                Eq.ndrec (motive := fun {σ} =>
+                                  Γ✝ ≍ Γ → x✝¹ = σ → a ≍ Variable.here → motive✝ x✝¹ a.there)
+                                  (fun tail_eq =>
+                                    Eq.ndrec (motive := fun {Γ} =>
+                                      x✝¹ = Ty.ground → a ≍ Variable.here → motive✝ x✝¹ a.there)
+                                      (fun h_2 =>
+                                        Eq.ndrec (motive := fun x =>
+                                          Nat.hasNotBit 1 x.ctorIdx →
+                                            (a : Variable (Ty.ground :: Γ✝) x) → a ≍ Variable.here → motive✝ x a.there)
+                                          (fun h a h_3 => ⋯ ▸ ⋯.elim) ⋯ h a)
+                                      ⋯)
+                                  ⋯)
+                            (fun {Γ} {σ τ} a_1 h =>
+                              List.cons.noConfusion h fun head_eq =>
+                                Eq.ndrec (motive := fun {τ} => Γ✝ ≍ Γ → x✝¹ = σ → a ≍ a_1.there → motive✝ x✝¹ a.there)
+                                  (fun tail_eq =>
+                                    Eq.ndrec (motive := fun {Γ} =>
+                                      (a_2 : Variable Γ σ) → x✝¹ = σ → a ≍ a_2.there → motive✝ x✝¹ a.there)
+                                      (fun a_2 h =>
+                                        Eq.ndrec (motive := fun {σ} =>
+                                          (a_3 : Variable Γ✝ σ) → a ≍ a_3.there → motive✝ x✝¹ a.there)
+                                          (fun a_3 h => ⋯ ▸ h_3✝ x✝¹ a_3) h a_2)
+                                      ⋯ a_1)
+                                  ⋯)
+                            ⋯ ⋯ ⋯)
+                        a)
+                  h a)
+              ⋯ x✝.there)
+          ⋯)
+      ⋯ ⋯ =
+    h_3✝ x✝¹ x✝
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSyntaxProof.lean:32:6: error: failed to generate equality theorems for `match` expression `LogicLineages.ControlSensitivityCurrent.CurrentDecision.place.match_1`
+Γ✝ : List Ty
+motive✝ : (x : Ty) → Variable (Ty.ground :: Ty.ground :: Γ✝) x → Sort u_1
+x✝¹ : Ty
+x✝ : Variable Γ✝ x✝¹
+h_1✝ : Unit → motive✝ Ty.ground Variable.here
+h_2✝ : Unit → motive✝ Ty.ground Variable.here.there
+h_3✝ : (x : Ty) → (x_1 : Variable Γ✝ x) → motive✝ x x_1.there.there
+⊢ List.cons.noConfusion ⋯
+      (fun head_eq =>
+        Eq.ndrec (motive := fun {τ} =>
+          Ty.ground :: Γ✝ ≍ Ty.ground :: Γ✝ → x✝¹ = x✝¹ → x✝.there.there ≍ x✝.there.there → motive✝ x✝¹ x✝.there.there)
+          (fun tail_eq =>
+            Eq.ndrec (motive := fun {Γ} =>
+              (a : Variable Γ x✝¹) → x✝¹ = x✝¹ → x✝.there.there ≍ a.there → motive✝ x✝¹ x✝.there.there)
+              (fun a h =>
+                Eq.ndrec (motive := fun {σ} =>
+                  (a : Variable (Ty.ground :: Γ✝) σ) → x✝.there.there ≍ a.there → motive✝ x✝¹ x✝.there.there)
+                  (fun a h =>
+                    ⋯ ▸
+                      place._sparseCasesOn_1 (motive := fun x => (a : Variable (Ty.ground :: Γ✝) x) → motive✝ x a.there)
+                        x✝¹
+                        (fun a =>
+                          Variable.casesOn (motive := fun a_1 a_2 x =>
+                            Ty.ground :: Γ✝ = a_1 → Ty.ground = a_2 → a ≍ x → motive✝ Ty.ground a.there) a
+                            (fun {Γ} {σ} h =>
+                              List.cons.noConfusion h fun head_eq =>
+                                Eq.ndrec (motive := fun {σ} =>
+                                  Γ✝ ≍ Γ → Ty.ground = σ → a ≍ Variable.here → motive✝ Ty.ground a.there)
+                                  (fun tail_eq =>
+                                    Eq.ndrec (motive := fun {Γ} =>
+                                      Ty.ground = Ty.ground → a ≍ Variable.here → motive✝ Ty.ground a.there)
+                                      (fun h h_1 => ⋯ ▸ h_2✝ ()) ⋯)
+                                  ⋯)
+                            (fun {Γ} {σ τ} a_1 h =>
+                              List.cons.noConfusion h fun head_eq =>
+                                Eq.ndrec (motive := fun {τ} =>
+                                  Γ✝ ≍ Γ → Ty.ground = σ → a ≍ a_1.there → motive✝ Ty.ground a.there)
+                                  (fun tail_eq =>
+                                    Eq.ndrec (motive := fun {Γ} =>
+                                      (a_2 : Variable Γ σ) → Ty.ground = σ → a ≍ a_2.there → motive✝ Ty.ground a.there)
+                                      (fun a_2 h =>
+                                        Eq.ndrec (motive := fun {σ} =>
+                                          (a_3 : Variable Γ✝ σ) → a ≍ a_3.there → motive✝ Ty.ground a.there)
+                                          (fun a_3 h => ⋯ ▸ h_3✝ Ty.ground a_3) h a_2)
+                                      ⋯ a_1)
+                                  ⋯)
+                            ⋯ ⋯ ⋯)
+                        (fun h a =>
+                          Variable.casesOn (motive := fun a_1 a_2 x =>
+                            Ty.ground :: Γ✝ = a_1 → x✝¹ = a_2 → a ≍ x → motive✝ x✝¹ a.there) a
+                            (fun {Γ} {σ} h_1 =>
+                              List.cons.noConfusion h_1 fun head_eq =>
+                                Eq.ndrec (motive := fun {σ} =>
+                                  Γ✝ ≍ Γ → x✝¹ = σ → a ≍ Variable.here → motive✝ x✝¹ a.there)
+                                  (fun tail_eq =>
+                                    Eq.ndrec (motive := fun {Γ} =>
+                                      x✝¹ = Ty.ground → a ≍ Variable.here → motive✝ x✝¹ a.there)
+                                      (fun h_2 =>
+                                        Eq.ndrec (motive := fun x =>
+                                          Nat.hasNotBit 1 x.ctorIdx →
+                                            (a : Variable (Ty.ground :: Γ✝) x) → a ≍ Variable.here → motive✝ x a.there)
+                                          (fun h a h_3 => ⋯ ▸ ⋯.elim) ⋯ h a)
+                                      ⋯)
+                                  ⋯)
+                            (fun {Γ} {σ τ} a_1 h =>
+                              List.cons.noConfusion h fun head_eq =>
+                                Eq.ndrec (motive := fun {τ} => Γ✝ ≍ Γ → x✝¹ = σ → a ≍ a_1.there → motive✝ x✝¹ a.there)
+                                  (fun tail_eq =>
+                                    Eq.ndrec (motive := fun {Γ} =>
+                                      (a_2 : Variable Γ σ) → x✝¹ = σ → a ≍ a_2.there → motive✝ x✝¹ a.there)
+                                      (fun a_2 h =>
+                                        Eq.ndrec (motive := fun {σ} =>
+                                          (a_3 : Variable Γ✝ σ) → a ≍ a_3.there → motive✝ x✝¹ a.there)
+                                          (fun a_3 h => ⋯ ▸ h_3✝ x✝¹ a_3) h a_2)
+                                      ⋯ a_1)
+                                  ⋯)
+                            ⋯ ⋯ ⋯)
+                        a)
+                  h a)
+              ⋯ x✝.there)
+          ⋯)
+      ⋯ ⋯ =
+    h_3✝ x✝¹ x✝
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSyntaxProof.lean:34:4: error: Type mismatch
+  prefix_table_code Γ 6
+has type
+  prefixTable 6 (List.map SyntaxCode.typeCode Γ) = renamingCode fun {σ} => shift 6
+but is expected to have type
+  (renamingCode fun {α} x => shift 6 x) = prefixTable 6 (List.map SyntaxCode.typeCode Γ)

@@ -1,0 +1,5 @@
+# Authored full supporting root scope
+
+Read StandardSourceFactsProof and StatementChecks; full root approved for parent-controlled native under eight unchanged pins/original caps. full_bound applies the actual arbitrary-predicate support comparison bridge with derived comparison-support coverage, so the original supported semantic norm theorem is transported to the complete original substitution. canonicalFacts obtains actual all-policy assignment success/grades/bounds, transports grades and values via Phi calibration, derives positive finite scalar and exact card/norm calibration, and bounds each coordinate. Unary/ground wrappers unfold only after genuine success, excluding getD fallback. NumericalGrowth explicitly supplies actual Phi strict monotonicity/self-growth/adjacent tower bound; no selected-control disjunction is used.
+
+Final alias includes the complete four-family supporting target. Native and fresh recursive mathematical supplier review remain required. No hardness, detector, or unchanged-G corollary acceptance follows from this scope review.

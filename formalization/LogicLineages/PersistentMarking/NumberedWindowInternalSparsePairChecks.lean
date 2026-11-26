@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePairTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePairEvaluationProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePairOrderProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePairChecks
+open NumberedWindowInternalSparsePairTargets
+
+theorem exact_PairValue : PairValue := NumberedWindowInternalSparsePairEvaluationProof.pairValue
+theorem exact_FieldConsValue : FieldConsValue := NumberedWindowInternalSparsePairEvaluationProof.consValue
+theorem exact_OpenPairGraph : OpenPairGraph := NumberedWindowInternalSparsePairGraphProof.openPairGraph
+theorem exact_OpenFieldConsGraph : OpenFieldConsGraph := NumberedWindowInternalSparsePairGraphProof.openConsGraph
+theorem exact_OpenPairInjective : OpenPairInjective := NumberedWindowInternalSparsePairOrderProof.pairInjective
+theorem exact_OpenFieldConsInjective : OpenFieldConsInjective :=
+  NumberedWindowInternalSparsePairOrderProof.consInjective
+theorem exact_OpenFieldConsTailDecrease : OpenFieldConsTailDecrease :=
+  NumberedWindowInternalSparsePairOrderProof.consTailDecrease
+
+#print axioms exact_PairValue
+#print axioms exact_FieldConsValue
+#print axioms exact_OpenPairGraph
+#print axioms exact_OpenFieldConsGraph
+#print axioms exact_OpenPairInjective
+#print axioms exact_OpenFieldConsInjective
+#print axioms exact_OpenFieldConsTailDecrease
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePairChecks

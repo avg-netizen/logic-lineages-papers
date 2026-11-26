@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualCanonicalZeroTraceReplayProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualCanonicalZeroTraceReplayProof.lean
+@@ -28 +28,3 @@
+-  have frames : terms = groupTyped (s.reads.map Prod.fst) := same ▸ tapeEq
++  have frames : terms = groupTyped (s.reads.map Prod.fst) := by
++    change xs.map Prod.fst = groupTyped (s.reads.map Prod.fst)
++    exact (congrArg (fun ys : List Read => ys.map Prod.fst) same).symm.trans tapeEq

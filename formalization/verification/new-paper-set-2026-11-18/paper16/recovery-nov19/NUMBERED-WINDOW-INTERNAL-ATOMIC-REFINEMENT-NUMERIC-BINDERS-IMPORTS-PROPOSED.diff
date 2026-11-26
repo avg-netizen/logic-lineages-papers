@@ -1,0 +1,39 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericRecognizeProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericRecognizeProof.lean
+@@ -1,5 +1,6 @@
+ module
+ public import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericTargets
++import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericFieldsProof
+ import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericControlProof
+ import LogicLineages.PersistentMarking.NumberedWindowAtomicRawStepFieldProof
+ import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeArityEvaluationProof
+@@ -42,7 +43,7 @@
+ checks. The unmatched and malformed branches remain within q's domain. -/
+ private theorem atomCode (tag rest q : Nat) :
+     run (atomSource tag (rest+1)) q = 1 ↔
+-      ∃ c t (tail : List Nat), tail.length = rest ∧
++      ∃ (c t : Nat) (tail : List Nat), tail.length = rest ∧
+         q = packedAddress c t (packNode tag (t::tail)) := by
+   rw [atomSource,bothTrue,bothTrue,applyValue,outerShape,innerShape,fitsTrue]
+   constructor
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean
+@@ -1,5 +1,7 @@
+ module
+ public import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericTargets
++import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericFieldsProof
++import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericControlProof
+ import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericRecognizeProof
+ import LogicLineages.PersistentMarking.NumberedWindowAtomicPositiveChecks
+ 
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericChecks.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericChecks.lean
+@@ -1,5 +1,8 @@
+ module
+ public import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericTargets
++import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericFieldsProof
++import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericControlProof
++import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericRecognizeProof
+ import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericCalibrationProof
+ 
+ public section

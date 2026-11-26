@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.Targets
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.Preflight
+#check validityTag
+#check lineFields
+#check topWitness
+#check provenance
+#check Targets.ActualValidityOccurrence
+#check Targets.InternalTopProvenance
+#check Targets.InternalFullRunProvenance
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.Preflight

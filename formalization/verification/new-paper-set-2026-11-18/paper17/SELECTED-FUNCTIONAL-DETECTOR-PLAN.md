@@ -1,0 +1,13 @@
+# Selected full-vector detector plan
+
+Full current Paper17 hardness.tex lem:functional-detector, independently of parked threshold and full undecidability. Quantify every selected control, every policy, every context and actual unary pair, and every genuine selected admissible valuation. No finite-head, successful-assignment, norm, extra-tail, or source-level restriction.
+
+Reuse only literal pad/alignedLeft/alignedRight/combine/payload/left/right source syntax. Define fresh actual selected HeadEqual/VectorEqual via successful policy assignment and actual expressionValue, and actual selected ground scalar. Define fresh selected admissible groundExtension by the literal closed positive numeral n+1, proving selected closed grade and whole-vector bounds; iterate for the two genuinely fresh coordinates. Original inputs are held fixed. Alignment iff ranges over z,w:Nat encoding positive inputs z+1,w+1; witnesses z=5*b0,w=5*a0. Actual full-vector values, including scalar and first field, are required, not just a numeric synthetic comparator.
+
+Fresh selected semantic bridges are mandatory: assignment success; policy-independent scalar value of ground application; capture-avoiding rename valuation; pad fields2*a1+2 and collapse(omega*(2*a1+2)+5*a0+4+z0); actual positive ground extension calibration. All policy expansions at the small relevant shapes use checked pure syntax invariance, not a fixed-G value theorem.
+
+Detector: actual X=S(A,A),Y=S(B,B),Z=S(A,B),W=S(B,A), Q=W(Z(Y(X0))). Derive actual q>=1+x0+y0+z0+w0>=5. Use selected coordinate facts and selected bounded norm to derive norm(alpha)<=4q+2<=2^(q+1)<=f(Nbeta) internally. Controlled strictness and checked all-input selected TailGrowth then prove the larger diagonal application exceeds four times BOTH cross applications. Equal-head unequal-scalar branch uses exact14/9/5/13 tails and derived two-unit gaps. Both orientations retained.
+
+Final literal eraser ground values must be freshly calibrated in selected semantics for arbitrary policy; its monotonicity and gap>=2 follow actual selected collapse finite-tail inequality, not an unchanged-G eraser theorem. Conclude right<=left, equality iff entire actual vectors equal, and unequal gap>=2 on every valuation, not only alignment witnesses.
+
+One full frozen conjunction includes both alignment iff and detector clauses. Numerical supporting lemmas may stage, but no full detector promotion until actual syntax/valuation/ground extension bridges and all cases are checked. Full pair compiler, source-level/effectivity reduction, functional undecidability and unchanged-displayed-control consequences remain distinct.

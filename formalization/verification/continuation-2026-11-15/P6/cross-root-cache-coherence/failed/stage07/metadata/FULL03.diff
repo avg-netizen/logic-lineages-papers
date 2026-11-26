@@ -1,0 +1,71 @@
+--- FULL02/ConsFrameProof.lean
++++ FULL03/ConsFrameProof.lean
+@@ -23,8 +23,19 @@
+ open SideProof PresenceProof
+ 
+ structure Frame (body : Positive (Fin 1)) {alpha : Type} (Delta : List (Formula alpha)) (raw param : OTerm alpha) where
+-  s1 s2 : Side body Delta raw param
+-  tau head tail pred1 pred2 old1 old2 next1 next2 deps found : OTerm alpha
++  s1 : Side body Delta raw param
++  s2 : Side body Delta raw param
++  tau : OTerm alpha
++  head : OTerm alpha
++  tail : OTerm alpha
++  pred1 : OTerm alpha
++  pred2 : OTerm alpha
++  old1 : OTerm alpha
++  old2 : OTerm alpha
++  next1 : OTerm alpha
++  next2 : OTerm alpha
++  deps : OTerm alpha
++  found : OTerm alpha
+   constructor : Nonempty (Derivation body Delta (graph3 OriginalRawSyntaxTransport.consConstructor raw tau head tail))
+   index1 : Nonempty (Derivation body Delta (eqn s1.index (suc pred1)))
+   index2 : Nonempty (Derivation body Delta (eqn s2.index (suc pred2)))
+--- FULL02/InputProof.lean
++++ FULL03/InputProof.lean
+@@ -23,7 +23,8 @@
+ open SideProof PresenceProof
+ 
+ structure Input (body : Positive (Fin 1)) {alpha : Type} (Delta : List (Formula alpha)) (raw param : OTerm alpha) where
+-  s1 s2 : Side body Delta raw param
++  s1 : Side body Delta raw param
++  s2 : Side body Delta raw param
+   found : OTerm alpha
+   below : Nonempty (Derivation body Delta (InductionDefinitions.BelowRaw raw))
+   lookup : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup found s1.table raw))
+@@ -43,7 +44,9 @@
+ 
+ structure ConsInput (body : Positive (Fin 1)) {alpha : Type} (Delta : List (Formula alpha)) (raw param : OTerm alpha)
+     extends Input body Delta raw param where
+-  tau head tail : OTerm alpha
++  tau : OTerm alpha
++  head : OTerm alpha
++  tail : OTerm alpha
+   constructor : Nonempty (Derivation body Delta (graph3 OriginalRawSyntaxTransport.consConstructor raw tau head tail))
+ 
+ def ConsInput.rename {raw param : OTerm alpha} (c : ConsInput body Delta raw param)
+--- FULL02/SideProof.lean
++++ FULL03/SideProof.lean
+@@ -24,7 +24,11 @@
+ open InternalGraphCompositionEqualityProof
+ 
+ structure Side (body : Positive (Fin 1)) {alpha : Type} (Delta : List (Formula alpha)) (raw param : OTerm alpha) where
+-  index seed depth frontier table : OTerm alpha
++  index : OTerm alpha
++  seed : OTerm alpha
++  depth : OTerm alpha
++  frontier : OTerm alpha
++  table : OTerm alpha
+   bounded : Nonempty (Derivation body Delta (PrimaryUncoveredCount.bounded index seed))
+   subtraction : Nonempty (Derivation body Delta (graph2 InternalEqualityTest.subtract depth index seed))
+   front : Nonempty (Derivation body Delta (graph3 (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) frontier depth seed param))
+@@ -59,7 +63,7 @@
+     (he : Nonempty (Derivation body Delta (eqn index next)))
+     (hg : Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph out index seed param))) :
+     Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph out next seed param)) := by
+-  apply graphInputTransport body alpha 3 Delta _ out
++  apply graphInputTransport body alpha 3 Delta (OrdinaryArithmetic.graphFormula ArgumentEntriesRecursor.graph) out
+     (Fin.cons index (Fin.cons seed (Fin.cons param Fin.elim0)))
+     (Fin.cons next (Fin.cons seed (Fin.cons param Fin.elim0))) _ hg
+   intro i

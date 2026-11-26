@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.PortHeadObservationProof
+namespace LogicLineages.PersistentMarking.PortHeadObservationChecks
+theorem exact_HeadObservations : PortNormalizationTargets.HeadObservations := PortHeadObservationProof.headObservations
+#print axioms exact_HeadObservations
+end LogicLineages.PersistentMarking.PortHeadObservationChecks

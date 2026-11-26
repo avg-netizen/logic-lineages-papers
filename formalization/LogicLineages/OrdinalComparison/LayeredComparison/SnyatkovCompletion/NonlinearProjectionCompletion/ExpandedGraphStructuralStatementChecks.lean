@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphSupportProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphPlainProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphStructuralStatementChecks
+
+theorem actualGraphSupport : ExpandedGraphTargets.ExactGraphSupport := ExpandedGraphProof.exactGraphSupport
+theorem actualPlainGraph : ExpandedGraphTargets.PlainOriginalGraphClass := ExpandedGraphProof.plainOriginalGraphClass
+#print axioms actualGraphSupport
+#print axioms actualPlainGraph
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphStructuralStatementChecks

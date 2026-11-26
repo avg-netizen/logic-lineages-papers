@@ -1,0 +1,30 @@
+{
+  "status": "Proof-only staged substitution of both unchanged observed graph conjunctions; native gate pending",
+  "failed_receipt": "1795348658350847987-8",
+  "failed_receipt_sha256": "e478a8112f13eab035d5438fd6a4790a9439034304a7cf197ca6ddfbc79660e0",
+  "immutable_previous_commit": "5633b724516bfa6285523443bdf34e07221ac21c",
+  "failed_combined_log_sha256": "e56033fe677d4e23a31ea10f128e214e5f77648973892512c63aca73881cb702",
+  "failed_diagnostic": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-selected-grammar-width-syntax-initial-diagnostic.txt": "3fe439e7884e9bf66a0a0ec65435872e53a59777fddcaecc1e7e4256ca03653d"
+  },
+  "failed_errors": [
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarWidthSyntaxProof.lean:108:37: error: unsolved goals"
+  ],
+  "diagnosis": "Monolithic simplification unfolded each observed conjunction before its exact substitution rule could fire. Rewrite just the outer implication/antecedent conjunction, apply the exact observedSubst rule to each ordered observation, and then simplify the unchanged outcome conjunction. No import, target, observation, program, or resource changes.",
+  "changed_source": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarWidthSyntaxProof.lean",
+  "old_failed_source_sha256": "98be24dcbbd84884f7b08f359bf4223200c40c1492250e83a7d0838038922c76",
+  "new_source_sha256": "490e354a92e4669c99bf22c4601ba7f9d5928d29ad6a97bfdfc97c3c08dd119f",
+  "failed_source_archive": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverSelectedGrammarWidthSyntaxProof-01.lean": "98be24dcbbd84884f7b08f359bf4223200c40c1492250e83a7d0838038922c76"
+  },
+  "zero_context_patch": {
+    "formalization/verification/continuation-2026-11-22/P16-SELECTED-GRAMMAR-WIDTH-SYNTAX-REPAIR-01.patch": "303c9495a4fae556bc750b59fa5de3d7aabd91c8a7e7d2fcb8bf45f54e045531"
+  },
+  "forward_and_inverse_exact_bytes_verified": true,
+  "unchanged_source_pins": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarWidthTargets.lean": "9c58da9404d94c99c7e11c4a5de09f4839c7a33966eb6c963b8c6c46fac5f382",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarWidthBindingProof.lean": "6309ab2ae7938ec5d561c8231a8a15909bd87aa263072b60846afd423732c7fe",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarWidthObservationProof.lean": "042ae786db3d73c99012d1bb9c80d869c9cde86bcd6cc8f37e5ef21057f2c5b7",
+    "formalization/verification/continuation-2026-11-22/P16-SELECTED-GRAMMAR-WIDTH-MOTIVE-SOURCE-MAP.md": "54d3010f9c0ba27c808f425c386afeb4836f501f01d4a926e63a159058b34136"
+  }
+}

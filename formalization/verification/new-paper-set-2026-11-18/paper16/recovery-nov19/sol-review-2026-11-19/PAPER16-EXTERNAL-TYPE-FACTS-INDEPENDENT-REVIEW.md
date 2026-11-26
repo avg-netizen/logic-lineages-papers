@@ -1,0 +1,16 @@
+# Paper 16 neutral, variable and bottom computability
+
+The four checked statements match the joint induction in `ordinals.tex` 112–127. The original `Primary` relation preserves literal free variables, bound variables and bottom. Every representative of a variable class therefore has just its typed bottom reduct. The bottom class has no actual raw edge. Both kinds of variable retain their typing and scope. Both leaf cases are nonlambda. [Manuscript](../../../../../../16-persistent-marking-termination-ordering/sections/ordinals.tex#L112) · [Frozen targets](../../../../../LogicLineages/PersistentMarking/NumberedWindowExternalTypeFactsTargets.lean) · [Atomic classes](../../../../../LogicLineages/PersistentMarking/NumberedWindowExternalAtomicClassesProof.lean)
+
+At ground, the neutral proof takes the first actual `ClassEdge` in any positive path and uses accessibility of that immediate successor for the rest of the path. At an arrow, it applies codomain neutrality to the literal application and uses the checked direct-edge classification. The bottom branch uses codomain bottom computability. The function-side branch uses the hypothesis on the actual successor and applies it to the same computable argument. [Joint proof](../../../../../LogicLineages/PersistentMarking/NumberedWindowExternalTypeFactsProof.lean#L42) · [Neutral application review](PAPER16-EXTERNAL-NEUTRAL-INDEPENDENT-REVIEW.md)
+
+The arrow implication from computability to scalar accessibility chooses a domain variable at an index above the actual function’s numeral bound. That bound includes every free occurrence and is invariant across `Primary` representatives. The original arrow’s membership in the subtype-closed window supplies the variable type. The proof applies the domain-variable and codomain-accessibility induction hypotheses, then uses the verified fixed-argument pullback. The final result holds at every actual canonical class code. All four statements concern the external predicates. [Variable choice and pullback](../../../../../LogicLineages/PersistentMarking/NumberedWindowExternalTypeFactsProof.lean#L30) · [Bound invariant](../../../../../LogicLineages/PersistentMarking/NumberedWindowPrimaryCoverBoundsProof.lean#L8)
+
+I matched all 42 frozen and three author entries, 74 recursive pins, all 215 module source and object hashes, and the archived passing receipt and gate log. All four aliases use only standard axioms. [Freeze](../NUMBERED-WINDOW-EXTERNAL-TYPE-FACTS-FROZEN.json) · [Author manifest](../NUMBERED-WINDOW-EXTERNAL-TYPE-FACTS-AUTHOR-MANIFEST.json) · [Recursive evidence](../NUMBERED-WINDOW-EXTERNAL-TYPE-FACTS-LOCAL-EVIDENCE.json) · [Receipt](../numbered-window-external-type-facts-native/1795132595530682618-10/1795132595530682618-10.json) · [Axiom log](../numbered-window-external-type-facts-native/1795132595530682618-10/1795132595530682618-10-LogicLineages-PersistentMarking-NumberedWindowExternalTypeFactsChecks.log)
+
+| File | SHA-256 |
+| --- | --- |
+| Freeze | `0ab692b1c38affd16be87bbec8728d3514991875473565d99f636aa8bac73225` |
+| Author manifest | `b8c16528a52e22985f0966c8af266c308d6961b24d561265ed2175af8918bbc3` |
+| Recursive evidence | `3a4a41d111b1cc0f5daaa3db567b06315e2a980d5f99de9e0d1329b0469d8568` |
+| Passing receipt | `8ec6d8e21f9401aade99eb3f741c124941f30ef3711f21e5c3cbf5844ce018e4` |

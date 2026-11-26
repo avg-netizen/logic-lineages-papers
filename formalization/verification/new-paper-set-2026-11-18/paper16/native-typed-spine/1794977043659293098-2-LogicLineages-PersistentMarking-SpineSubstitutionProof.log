@@ -1,0 +1,22 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/SpineSubstitutionProof.lean:59:9: error: unsolved goals
+case none
+v : Expr
+rest : Args
+σ : Ty
+i : Nat
+hg : rest.get i = none
+⊢ i + 1 - (1 + rest.length) = i - rest.length
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/SpineSubstitutionProof.lean:59:31: warning: This simp argument is unused:
+  Nat.add_comm
+
+Hint: Omit it from the simp argument list.
+  simp [Args.length, Nat.add_c̵o̵m̵m̵,̵ ̵N̵a̵t̵.̵a̵d̵d̵_̵sub_add_right]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/SpineSubstitutionProof.lean:59:45: warning: This simp argument is unused:
+  Nat.add_sub_add_right
+
+Hint: Omit it from the simp argument list.
+  simp [Args.length, Nat.add_comm,̵ ̵N̵a̵t̵.̵a̵d̵d̵_̵s̵u̵b̵_̵a̵d̵d̵_̵r̵i̵g̵h̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

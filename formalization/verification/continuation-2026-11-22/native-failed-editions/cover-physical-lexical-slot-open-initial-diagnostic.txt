@@ -1,0 +1,35 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLexicalSlotOpenProof.lean:88:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Formula.relabel ?j (unary ?p ?o ?n)
+in the target expression
+  Nonempty (Derivation body Ξ (programGraph cellHead actual fun i => Term.relabel k (![rest] i)))
+
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+i ctx ty : OTerm α
+Q : ID1Completion.InternalCalculus.Formula α
+hit : Nonempty (Derivation body Γ (programGraph slotCheck (suc z) ![i, ctx, ty]))
+next :
+  ∀ (β : Type) (j : α → β) (Δ : List (ID1Completion.InternalCalculus.Formula β)) (rest : OTerm β),
+    (∀ p ∈ Γ, Formula.relabel j p ∈ Δ) →
+      SlotReports body Δ (Term.relabel j i) (Term.relabel j ctx) (Term.relabel j ty) rest →
+        Nonempty (Derivation body Δ (Formula.relabel j Q))
+β : Type
+j : α → β
+Δ : List (ID1Completion.InternalCalculus.Formula β)
+rest : OTerm β
+keep : ∀ r ∈ Γ, Formula.relabel j r ∈ Δ
+dropReport : Nonempty (Derivation body Δ (programGraph dropContext rest ![Term.relabel j i, Term.relabel j ctx]))
+hit' :
+  Nonempty
+    (Derivation body Δ (programGraph slotCheck (suc z) ![Term.relabel j i, Term.relabel j ctx, Term.relabel j ty]))
+γ : Type
+k : β → γ
+Ξ : List (ID1Completion.InternalCalculus.Formula γ)
+actual : OTerm γ
+keep' : ∀ r ∈ Δ, Formula.relabel k r ∈ Ξ
+head : Nonempty (Derivation body Ξ (programGraph cellHead actual fun i => Term.relabel k (![rest] i)))
+⊢ Nonempty (Derivation body Ξ (Formula.relabel k (Formula.relabel j Q)))
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverLexicalSlotOpenProof.exact_OpenCoverPhysicalLexicalSlot' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]

@@ -1,0 +1,94 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericControlProof
+import LogicLineages.PersistentMarking.NumberedWindowAtomicRawStepFieldProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeArityEvaluationProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchProgramControlProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericRecognizeProof
+open LogicLineages.ComputabilityKnowledge GorbowPRProgram List.Vector
+open NumberedWindowInternalAtomicRefinement NumberedWindowInternalAtomicRefinementNumericTargets
+open NumberedWindowInternalAtomicRefinementNumericFieldsProof (literalFields firstField)
+open NumberedWindowInternalAtomicRefinementNumericControlProof (runBoth bothTrue fitsTrue)
+open NumberedWindowInternalFreshProbeParsedEmitter (addressTag addressGood rawResult rawLeast)
+open NumberedWindowInternalFreshProbeDispatchProgram (literal)
+open NumberedWindowInternalFreshProbeDispatchProgramControlProof (literalEvaluation)
+open NumberedWindowInternalSparsePathEnvelope (run field nodeGood)
+open NumberedWindowInternalSparsePathEnvelopeArityEvaluationProof (applyValue nodeArity)
+open NumberedWindowFieldAlgorithm (packNode unpackNode)
+open NumberedWindowAtomicRawStep (freeRaw bottomRaw)
+open NumberedWindowAtomicRawStepFieldProof (nodePacked codeOfNode)
+open NumberedWindowAtomicPositiveTargets (packedAddress freeAddress bottomAddress)
+
+private theorem outerShape (q : Nat) :
+    run addressGood q = 1 ↔ ∃ c t k, q = packedAddress c t k := by
+  have value : run addressTag q = 3 := literalEvaluation 1 3 (q ::ᵥ nil)
+  change run (nodeGood addressTag 3) q = 1 ↔ _
+  rw [nodeArity addressTag 3 q 3 value]
+  constructor
+  · rintro ⟨fs,decoded,len⟩
+    rcases fs with _ | ⟨c,_ | ⟨t,_ | ⟨k,_ | ⟨n,rest⟩⟩⟩⟩ <;> simp at len
+    exact ⟨c,t,k,codeOfNode decoded⟩
+  · rintro ⟨c,t,k,rfl⟩
+    exact ⟨[c,t,k],nodePacked 3 [c,t,k],rfl⟩
+
+private theorem innerShape (tag count q : Nat) :
+    run (nodeGood (literal 1 tag) count) q = 1 ↔
+      ∃ fs, unpackNode q = some (tag,fs) ∧ fs.length = count :=
+  nodeArity (literal 1 tag) count q tag (literalEvaluation 1 tag (q ::ᵥ nil))
+
+/-- Pay the exact stored/result equality after both genuine raw parser
+checks. The unmatched and malformed branches remain within q's domain. -/
+private theorem atomCode (tag rest q : Nat) :
+    run (atomSource tag (rest+1)) q = 1 ↔
+      ∃ c t (tail : List Nat), tail.length = rest ∧
+        q = packedAddress c t (packNode tag (t::tail)) := by
+  rw [atomSource,bothTrue,bothTrue,applyValue,outerShape,innerShape,fitsTrue]
+  constructor
+  · rintro ⟨⟨c,t,k,rfl⟩,⟨fs,decoded,hlen⟩,same⟩
+    have fields := literalFields c t k
+    rw [fields.2.2] at decoded
+    cases fs with
+    | nil => simp at hlen
+    | cons u tail =>
+      have size : tail.length = rest := Nat.succ.inj hlen
+      have kcode : k = packNode tag (u::tail) := codeOfNode decoded
+      rw [fields.2.1,storedType,applyValue,fields.2.2,kcode,firstField] at same
+      exact ⟨c,t,tail,size,by rw [kcode,same]⟩
+  · rintro ⟨c,t,tail,hsize,rfl⟩
+    have fields := literalFields c t (packNode tag (t::tail))
+    refine ⟨⟨c,t,_,rfl⟩,⟨t::tail,?_,?_⟩,?_⟩
+    · rw [fields.2.2]
+      exact nodePacked tag (t::tail)
+    · simp [hsize]
+    · rw [fields.2.1,storedType,applyValue,fields.2.2,firstField]
+
+private theorem atomBit (tag count q : Nat) :
+    run (atomSource tag count) q = 0 ∨ run (atomSource tag count) q = 1 := by
+  unfold atomSource
+  rw [runBoth]
+  split <;> simp
+
+theorem exactRecognizers : ExactNumericAtomicRecognizers := by
+  intro q
+  refine ⟨⟨?_,atomBit 0 2 q⟩,⟨?_,atomBit 3 1 q⟩⟩
+  · change run (atomSource 0 (1+1)) q = 1 ↔ _
+    rw [atomCode]
+    constructor
+    · rintro ⟨c,t,tail,hlen,same⟩
+      rcases tail with _ | ⟨n,_ | ⟨m,rest⟩⟩ <;> simp at hlen
+      exact ⟨c,t,n,same⟩
+    · rintro ⟨c,t,n,same⟩
+      exact ⟨c,t,[n],rfl,same⟩
+  · change run (atomSource 3 (0+1)) q = 1 ↔ _
+    rw [atomCode]
+    constructor
+    · rintro ⟨c,t,tail,hlen,same⟩
+      cases tail with
+      | nil => exact ⟨c,t,same⟩
+      | cons u tail => simp at hlen
+    · rintro ⟨c,t,same⟩
+      exact ⟨c,t,[],rfl,same⟩
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalAtomicRefinementNumericRecognizeProof

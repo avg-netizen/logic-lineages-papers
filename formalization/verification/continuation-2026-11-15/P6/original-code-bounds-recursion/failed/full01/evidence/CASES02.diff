@@ -1,0 +1,11 @@
+--- CasesProof before
++++ CasesProof after
+@@ -26,7 +26,7 @@
+       Nonempty (Derivation body Theta (psi.relabel j))) : Nonempty (Derivation body Delta psi) := by
+   apply programCases (OriginalCodeValidityGuard.check n) (Fin.cons raw Fin.elim0) psi
+   intro beta j Theta control hj hg
+-  simp only [consTermRename,emptyRename] at hg
++  simp only [InternalRecursionGraphStepSyntaxProof.consTermRename,emptyRename] at hg
+   have hr := GuardRangeProof.guardRange n body beta Theta (raw.relabel j) control hg
+   have a : Nonempty (Derivation body Theta ((eqn control z).imp (psi.relabel j))) := by
+     have hc := outputTransport (OriginalCodeValidityGuard.check n) control z (Fin.cons (raw.relabel j) Fin.elim0)

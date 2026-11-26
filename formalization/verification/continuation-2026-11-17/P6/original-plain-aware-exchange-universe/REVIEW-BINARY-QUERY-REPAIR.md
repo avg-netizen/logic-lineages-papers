@@ -1,0 +1,3 @@
+# Direct pair-query implementation review
+
+Approved source-only replacement. preserved keeps its complete original hypothesis/conclusion shape. New atFirst queries only last pair after preserved queries first pair, both using original total pairing programCases. All original constructor, environment, edge and BelowRaw assumptions are renamed into the continuation; first pair graph is additionally renamed on the second query. Same BinaryAtChildren target receives both actual pair graphs. No bounds result is needed by that target, so removing old bounds-enriched query import and its unused results neither weakens obligations nor changes original ASTs. No native/global endpoint claim.

@@ -1,0 +1,48 @@
+{
+  "status": "authorized exact target auxiliary visibility correction; native not invoked by author",
+  "failed_source_remote_commit": "22e349b1ccc05f14170b1548310c7362076ab1b8",
+  "failed_source_local_commit": "e27ca3169",
+  "failed_exact_gate_receipt": "1795359893640164589-72",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalMatrixLinearLowerTableStatementChecks",
+  "failed_receipt_sha256": "beae3c3fa18043d1573a301576078337841c7073ccd7d097fd4d45e01692fbe8",
+  "failed_exact_module_log_sha256": "5483f44dc81c20d0c270bf71b74f35efa949e40f514543aebdbcfbd6b9d105d9",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalMatrixLinearLowerTableTargets.lean:33:33: error(lean.unknownIdentifier): Unknown identifier `hasIndex`\n\nNote: A private declaration `hasIndex` (from the current module) exists but would need to be public to access here.",
+  "failed_original_native_log_sha256": "27c36b04a0f35c3ebe733112a7ef73382dff86c822bcd2963b114c264b65da17",
+  "failed_target_path": "formalization/LogicLineages/PermittedControl/OriginalMatrixLinearLowerTableTargets.lean",
+  "failed_target_sha256": "18a6d06a523a7b231a088a69d80831c9b9611bcd4186f8c96b547dd446c1bcfc",
+  "repaired_target_sha256": "4fd430ae25dc7b1d343e964f374fe9bfabffeb09bf7a63a26cf013401046605a",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-MATRIX-LINEAR-LOWER-TABLE-TARGET-VISIBILITY-REPAIR-01.patch",
+  "patch_sha256": "4fd430ae25dc7b1d343e964f374fe9bfabffeb09bf7a63a26cf013401046605a",
+  "reverse_reconstructs_exact_failed_target": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-MATRIX-LINEAR-LOWER-TABLE-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "2f974751ca8ef9aedfdb2429aa1384ec06ffddf49e59b7c77e4b13bfb538bc31",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalMatrixLinearLowerTableProof.lean": "561734884d44b737837d4cbed6ea8d8695e8c34e773cba1013fe9b0be67a9d51",
+    "formalization/LogicLineages/PermittedControl/OriginalMatrixLinearLowerTableRowProof.lean": "98f5588df3518ad4ca86c474941aead0cb42018dbb731a4bfdb00c87c3bf832a",
+    "formalization/LogicLineages/PermittedControl/OriginalMatrixLinearLowerTableStatementChecks.lean": "40ae4acb6b6e75995c7b89f33f1792d1670d59a5e921803b776c50d33219a939",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-MATRIX-LINEAR-LOWER-TABLE-SOURCE-MAP.md": "22daa1bb022235f0f9839fe278dff45cd9077e4744ad82d4b86ae01c3d18eb5b"
+  },
+  "static_closure_unchanged": {
+    "Targets": {
+      "local": 153,
+      "external": 31,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 290,
+      "external": 38,
+      "contains_totient": false
+    },
+    "RowProof": {
+      "local": 291,
+      "external": 38,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 292,
+      "external": 38,
+      "contains_totient": false
+    }
+  },
+  "scope": "Remove only private visibility of hasIndex to allow the same reference in the exposed slot definition. All theorem propositions, numeric behavior, proofs, imports and peers remain identical."
+}

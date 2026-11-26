@@ -1,0 +1,73 @@
+{
+  "status": "authorized exact target import scope correction; native not invoked by author",
+  "failed_source_remote_commit": "f76b8afa88c478beccc8cdfaaa4d3c1fab8affc4",
+  "failed_source_local_commit": "028315418cf4ca901db14da2d944e3d368b9f4b8",
+  "failed_exact_gate_receipt": "1795362255108823503-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalGreatestGateGrowthStatementChecks",
+  "failed_receipt_sha256": "dc2c536c65b3872a16274275ac8609f4c7c41047456efeb49943a273551738a7",
+  "failed_exact_module_log_sha256": "f3e3eabe2bfe6c856225197eda9430f12a7289162d40ae6b994c7ac4badaa946",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalGreatestGateGrowthTargets.lean:47:10: error(lean.unknownIdentifier): Unknown identifier `shortGapLength`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalGreatestGateGrowthTargets.lean:50:20: error(lean.unknownIdentifier): Unknown identifier `shortGapLength`",
+  "failed_original_native_log_sha256": "45917cb939e6199ec8269418ec2c8635c5421108f3bee074c2e61a0842be8c3b",
+  "failed_target_path": "formalization/LogicLineages/PermittedControl/OriginalGreatestGateGrowthTargets.lean",
+  "failed_target_sha256": "678202bf6f5681c3c503f769c1ea0f5810c9b9bf811d5800846acb64c9de13af",
+  "repaired_target_sha256": "54b268d85b8368a13b2903ccd3acbbf27d9d21e58d770f621bc3e9c2167868f9",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-GREATEST-GATE-GROWTH-TARGET-IMPORT-REPAIR-01.patch",
+  "patch_sha256": "f5c6414323863ea13a7336101acd52bace0f455b36c404ea0d6702a745cdd155",
+  "reverse_reconstructs_exact_failed_target": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-GREATEST-GATE-GROWTH-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "32b59005f0f088d7e74222c302ec11a88f8fa0abb083c3414402ca3cb178aa2a",
+  "added_target_import": {
+    "formalization/LogicLineages/PermittedControl/ShortFieldPreprocessingTargets.lean": "dc0c49b8bc1c928c9c792942a34fb60ced0d3f33e42ebb1f6231dd9e7146cb09"
+  },
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalGreatestGateGrowthOrdinaryProof.lean": "1029e19f3107cdb67c9c37cd87e0f7d2dc49fb2cb30ab19d300ef1c3249a8e13",
+    "formalization/LogicLineages/PermittedControl/OriginalGreatestGateGrowthCountProof.lean": "f4e9b58e79ff4c040b1f0cfde8f01e06427c526b4c9f3503db353a8fed6c6295",
+    "formalization/LogicLineages/PermittedControl/OriginalGreatestGateGrowthStatementChecks.lean": "3ddf059a4c20c18cc618e7fdd0ced6b5bdbdf35371e8fcf81a8fd3a0593f2f41",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-GREATEST-GATE-GROWTH-SOURCE-MAP.md": "98213709f81a5013a34e790eef6cf1a2d4df798f2e8db6b009155e5352f05c37"
+  },
+  "previous_static_closure": {
+    "Targets": {
+      "local": 153,
+      "external": 31,
+      "contains_totient": false
+    },
+    "OrdinaryProof": {
+      "local": 268,
+      "external": 37,
+      "contains_totient": false
+    },
+    "CountProof": {
+      "local": 370,
+      "external": 39,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 378,
+      "external": 39,
+      "contains_totient": false
+    }
+  },
+  "static_closure": {
+    "Targets": {
+      "local": 156,
+      "external": 31,
+      "contains_totient": false
+    },
+    "OrdinaryProof": {
+      "local": 269,
+      "external": 37,
+      "contains_totient": false
+    },
+    "CountProof": {
+      "local": 370,
+      "external": 39,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 378,
+      "external": 39,
+      "contains_totient": false
+    }
+  },
+  "scope": "Publicly import only the defining targets module for the literal original shortGapLength already occurring in the statement. No scope/semantics, proof body, or other source changes."
+}

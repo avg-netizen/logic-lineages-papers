@@ -1,5 +1,6 @@
 module
 public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TermCodecProof
+public meta import LogicLineages.Audit
 @[expose] public section
 namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TermCodecStatementChecks
 theorem actualLiteralRoundTrip : TermCodecTargets.LiteralTermRoundTrip := TermCodecProof.literalTermRoundTrip
@@ -11,3 +12,5 @@ theorem actualPrimitiveCoding : TermCodecTargets.LiteralPrimitiveCoding := TermC
 #print axioms actualOriginalInjectivity
 #print axioms actualPrimitiveCoding
 end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TermCodecStatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TermCodecStatementChecks

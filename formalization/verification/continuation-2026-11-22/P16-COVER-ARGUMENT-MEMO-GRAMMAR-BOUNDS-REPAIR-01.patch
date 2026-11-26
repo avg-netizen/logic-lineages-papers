@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentMemoBoundsProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentMemoBoundsProof.lean
+@@ -51 +51 @@
+-  rw [← onEquality]
++  rw [onEquality]
+@@ -67 +67,2 @@
+-  rw [Q,boundsRename]
++  change Nonempty (Derivation body Δ ((existsOne (boundBody p dh dt wh wt)).relabel j))
++  rw [boundsRename]

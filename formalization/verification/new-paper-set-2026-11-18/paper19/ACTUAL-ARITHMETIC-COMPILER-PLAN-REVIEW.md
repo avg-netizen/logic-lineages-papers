@@ -1,0 +1,11 @@
+# Independent conceptual review: actual arithmetic/compiler staging
+
+Approved as dependency staging, not complete numbered addition acceptance.
+
+Read current setting.tex and compiler.tex (including lem:addition), the plan, and ParametricSourceAddition definitions/targets and SourceAdditionCompletion targets. The source fixes an arbitrary computable literal policy as well as a permitted control. ParametricSourceAddition genuinely quantifies actual strict/inflationary control but its Equation and literal assignment explicitly use defaultPolicy. SourceAdditionCompletion's one/DAG clauses do not supply the missing arbitrary-policy/generic-control bridge. Combining names cannot establish the current full lemma.
+
+A fresh explicitly default-policy supporting packet for actual atomic eraser assignment/value, weighted equality, unique-witness/existential addition and same-machine gamma specialization is honest. Check natural/raw coordinates throughout: raw value is natural+1; natural witness 3*n_b corresponds to raw 3*raw_b-2 and stays positive. The generic assumptions may strengthen the result, but actual permitted-control instantiation must derive them.
+
+Next prove the specific finite-gadget policy bridge from real ordered all-operands-once policy laws and actual assigned syntax. Do not infer global policy invariance: existing arbitrary subtrees, collapse placement, nested exponential repeats and the source counterexample forbid that shortcut. Generic one must use actual S v = I 0 and shared Plus(u,u,v), with raw v=3, u=2 and witness 4. Generic binary DAG must retain shared predecessor wires, zero/one and exact all-k semantics; distinguish a numerical abstract Run from constructive typed-source realization/code generation if claiming compiler complexity.
+
+Later sort/collision/aggregate/compiler packets must keep the same control, policy, joint valuation and supplied actual original sources. Sorting needs actual S graph plus superincreasing arithmetic; collision cannot replace arbitrary P,Q by unattached scalar values; Boolean compilation must preserve guards under negation, shared leaves/inputs and finite DAG size including empty cases. Restricted typing and coRE remain separate prerequisites to hardness. Proceed to the first exact supporting freeze; no native/proof acceptance follows from this plan.

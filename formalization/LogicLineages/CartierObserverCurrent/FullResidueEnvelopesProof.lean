@@ -1,0 +1,12 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullResidueEnvelopesTargets
+public import LogicLineages.OrdinalComparison.ControlResidueProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullResidueEnvelopes
+
+theorem completeEnvelopes : Targets.CompleteEnvelopes :=
+  LogicLineages.OrdinalComparison.fullUniformResidueEnvelopes
+
+#audit_namespace LogicLineages.CartierObserverCurrent.FullResidueEnvelopes
+end LogicLineages.CartierObserverCurrent.FullResidueEnvelopes

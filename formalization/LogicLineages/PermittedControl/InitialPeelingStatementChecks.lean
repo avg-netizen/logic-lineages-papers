@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.InitialPeelingProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_actualInitialPeeling : Targets.ActualInitialPeeling := actualInitialPeeling
+#print axioms fixed_actualInitialPeeling
+end LogicLineages.PermittedControl.StatementChecks

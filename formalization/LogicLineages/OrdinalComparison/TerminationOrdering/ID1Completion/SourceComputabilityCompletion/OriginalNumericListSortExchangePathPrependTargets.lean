@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNumericListSortExchangePathPrependDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNumericListSortExchangePathPrependTargets
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+open InternalTagArithmeticSyntaxProof (z suc)
+open OriginalNumericListSortExchange
+/-- Actual finite-path one-head lifting. No native/source permutation premise. -/
+def ActualPathPrepend : Prop := ∀ (body : Positive (Fin 1)) (alpha : Type) (Delta : List (Formula alpha))
+ (raw source target value newSource newTarget mapped : OTerm alpha),
+ Nonempty (Derivation body Delta (InternalPathChecker.pathGraph edge source target raw)) →
+ Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode newSource value source)) →
+ Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode newTarget value target)) →
+ Nonempty (Derivation body Delta (graph2 OriginalNumericListSortExchangePathPrepend.mapPath mapped raw value)) →
+ Nonempty (Derivation body Delta (InternalPathChecker.pathGraph edge newSource newTarget mapped))
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNumericListSortExchangePathPrependTargets

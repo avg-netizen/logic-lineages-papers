@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.CurrentAttainmentProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.CurrentAttainment.StatementChecks
+theorem fixed_actual_attainment : CurrentAttainmentTargets.Full := full
+#audit_namespace LogicLineages.ControlSensitivityCurrent.CurrentAttainment.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.CurrentAttainment.StatementChecks

@@ -1,0 +1,45 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeEmitterObjectChecks.lean:15:5: error: unknown namespace `NumberedWindowInternalFreshProbeSyntaxProof`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeEmitterObjectChecks.lean:40:6: error(lean.unknownIdentifier): Unknown identifier `unaryRename`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeEmitterObjectChecks.lean:29:70: error: unsolved goals
+p : Selectors
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+q u : OTerm α
+h : Nonempty (Derivation body Γ (NumberedWindowInternalProbeTargets.freshAt (chooseFresh p) q u))
+hf : Nonempty (Derivation body Γ (programGraph (emitSelected p) u ![q]))
+β : Type
+j : α → β
+ys : Fin 3 → ID1Completion.InternalGraphComposition.OTerm β
+Δ : List (ID1Completion.InternalCalculus.Formula β)
+a✝ : ∀ r ∈ Γ, Formula.relabel j r ∈ Δ
+hout : Nonempty (Derivation body Δ (programGraph packedEmitter (Term.relabel j u) ys))
+hcoord :
+  ∀ (i : Fin 3),
+    Nonempty
+      (Derivation body Δ
+        (programGraph (Fin.cons p.context (Fin.cons p.domain (Fin.cons p.name Fin.elim0)) i) (ys i) fun a =>
+          Term.relabel j (![q] a)))
+hc :
+  Nonempty
+    (Derivation body Δ
+      (programGraph (Fin.cons p.context (Fin.cons p.domain (Fin.cons p.name Fin.elim0)) 0) (ys 0) fun a =>
+        Term.relabel j (![q] a)))
+ht :
+  Nonempty
+    (Derivation body Δ
+      (programGraph (Fin.cons p.context (Fin.cons p.domain (Fin.cons p.name Fin.elim0)) 1) (ys 1) fun a =>
+        Term.relabel j (![q] a)))
+hn :
+  Nonempty
+    (Derivation body Δ
+      (programGraph (Fin.cons p.context (Fin.cons p.domain (Fin.cons p.name Fin.elim0)) 2) (ys 2) fun a =>
+        Term.relabel j (![q] a)))
+⊢ Nonempty (Derivation body Δ (shapeAt p (Term.relabel j q) (Term.relabel j u)))
+'LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeEmitterObjectChecks.exact_PackedFreeEmitterGraph' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeEmitterObjectChecks.exact_SelectedFreshOpenShape' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

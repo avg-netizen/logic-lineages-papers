@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PermittedControl.ArbitraryHeadWireListTargets
+import LogicLineages.PermittedControl.ArbitraryHeadWireListAssignmentsProof
+import LogicLineages.PermittedControl.ArbitraryHeadWireListProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactArbitraryHeadWireListAssignments : ArbitraryHeadWireList.ExactWireListAssignments :=
+  ArbitraryHeadWireList.exactWireListAssignments
+
+theorem fixed_exactArbitraryHeadSharedWireList : ArbitraryHeadWireList.ExactSharedWireList :=
+  ArbitraryHeadWireList.exactSharedWireList
+
+theorem fixed_uniqueArbitraryHeadSharedWireList : ArbitraryHeadWireList.UniqueSharedWireList :=
+  ArbitraryHeadWireList.uniqueSharedWireList
+
+theorem fixed_fullArbitraryHeadWireList : ArbitraryHeadWireList.FullArbitraryHeadWireList :=
+  ⟨fixed_exactArbitraryHeadWireListAssignments,fixed_exactArbitraryHeadSharedWireList,
+    fixed_uniqueArbitraryHeadSharedWireList⟩
+
+#print axioms fixed_exactArbitraryHeadWireListAssignments
+#print axioms fixed_exactArbitraryHeadSharedWireList
+#print axioms fixed_uniqueArbitraryHeadSharedWireList
+#print axioms fixed_fullArbitraryHeadWireList
+
+end LogicLineages.PermittedControl.StatementChecks

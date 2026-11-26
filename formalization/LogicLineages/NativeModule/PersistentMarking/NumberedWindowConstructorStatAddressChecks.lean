@@ -1,0 +1,19 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowConstructorStatMultisetProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowConstructorStatAddressChecks
+open NumberedWindowConstructorStatAddressTargets
+
+theorem exact_MarkDecreasePositiveAddresses : MarkDecreasePositiveAddresses :=
+  NumberedWindowConstructorStatMarkProof.addresses
+
+theorem exact_PrimitiveReplacementAddressDescent : PrimitiveReplacementAddressDescent :=
+  NumberedWindowConstructorStatMultisetProof.primitive
+
+#print axioms exact_MarkDecreasePositiveAddresses
+#print axioms exact_PrimitiveReplacementAddressDescent
+
+end LogicLineages.PersistentMarking.NumberedWindowConstructorStatAddressChecks

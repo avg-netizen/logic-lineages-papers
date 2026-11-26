@@ -1,0 +1,8 @@
+# Exact executable finite original low stratum for the printed five-kind circuit
+
+Paper 17, `17-permitted-control-canonical-comparison/sections/arithmetic.tex`, lines 3–19, 33–54, and 225–274.
+
+- A raw terminal tag dispatches the exact checked #1037 plain signed literal or #1038 bounded source evaluator. The original #1029 circuit runs first and its failure code is returned unchanged even for an unsupported suffix. Only a successful bank may supply an admitted terminal result: 4 is false and 5 true, disjoint from failure codes.
+- The actual low table is exactly the ordered numeric range below the supplied cutoff. Each entry updates the one original external slot in the finite baseline bank, then runs the full original five-kind circuit and unified suffix. Unsupported rank capacity is rejected. The exact typed comparison uses supplied original topology, actual bank fit and original test-name capacity. The original rank is explicitly an external known name; real update and numeric bank update commute.
+- At every range value the numeric point is exactly the packed original #1015 terminal result. A Boolean entry, and finite existence at either polarity, is equivalent to the exact #1019 positive normalized graph with one shared lifted valuation and original exterior names fixed at that same rank update. Failures are never false signs.
+- The table and finite Boolean summary are Computable under Computable f. This is a finite evaluation at a fixed baseline, not a symbolic residual branch of all other coordinates, a computed sufficient cutoff, high-stratum reasoning, or the full closed-block arithmetic decision.

@@ -1,0 +1,7 @@
+# Concrete original child-field suppliers
+
+Exact3 makes fields5/6/12/13 actual ASTs, using paid OriginalRawSyntaxTransport arityOf/firstOf/secondOf selectors, not a new algorithm. The original fields defaults are var0, numeric zero. firstOf alone is not defaulted on leaves: firstRaw explicitly gates positive original arity. secondRaw explicitly gates arity2; leaves and unary nodes return zero. Outer V retains malformed node/window zero defaults. NativeChildren covers all vectors, both node sides, all eight original constructors, including numbered base/extras ordering.
+
+InternalLambda and InternalApplication consume actual raw-side query graphs and actual original constructor graphs, then conclude literal child outputs (and lambda second default zero). No arbitrary selector correctness premise or native reflection. The raw-side query is the already fixed source/target unpair AST, not a newly selected opaque program. Existing paid constructor selectors will be reused rather than reproved. App and argsCons share exact original payload shape; no child reordering.
+
+Canonical code decoder soundness is required natively, as for the checked tag packet. Other fields, guard semantic correctness, headMove, and internal dependency recursion/coverage and source stability remain open. These child suppliers are not yet installed in a replacement full tuple. Targets do not claim complete E. No proof before reviewed preflight.

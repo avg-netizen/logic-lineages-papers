@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportCalibrationProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportChecks
+
+theorem literal_code_calibration : OutcomeTransportTargets.LiteralCodeCalibration :=
+  OutcomeTransportProof.literalCodeCalibration
+
+#print axioms literal_code_calibration
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportChecks

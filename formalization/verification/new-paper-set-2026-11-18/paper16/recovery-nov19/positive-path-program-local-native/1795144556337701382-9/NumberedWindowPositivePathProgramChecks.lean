@@ -1,0 +1,13 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowPositivePathProgramProof
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowPositivePathProgramChecks
+open NumberedWindowPositivePathProgramTargets
+
+theorem exact_PositivePathPrograms : PositivePathPrograms := NumberedWindowPositivePathProgramProof.programs
+
+#print axioms exact_PositivePathPrograms
+
+end LogicLineages.PersistentMarking.NumberedWindowPositivePathProgramChecks

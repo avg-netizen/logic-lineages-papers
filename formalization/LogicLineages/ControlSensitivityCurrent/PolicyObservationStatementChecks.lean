@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.PolicyObservationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.PolicyObservation.StatementChecks
+theorem fixed_expressionNaturality : PolicyObservationTargets.ExpressionNaturality := expressionNaturality
+theorem fixed_sourceNaturality : PolicyObservationTargets.SourceNaturality := sourceNaturality
+theorem fixed_observationCalibration : PolicyObservationTargets.ObservationCalibration := observationCalibration
+theorem fixed_equationCalibration : PolicyObservationTargets.EquationCalibration := equationCalibration
+#audit_namespace LogicLineages.ControlSensitivityCurrent.PolicyObservation.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.PolicyObservation.StatementChecks

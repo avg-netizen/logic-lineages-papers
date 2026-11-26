@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.ConstantLeafProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.ConstantLeafChecks
+
+theorem exact_constant_evaluation : MachineTargets.ExactConstantEvaluation :=
+  ConstantLeafProof.exactConstantEvaluation
+
+#print axioms exact_constant_evaluation
+
+end LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.ConstantLeafChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.ConstantLeafChecks

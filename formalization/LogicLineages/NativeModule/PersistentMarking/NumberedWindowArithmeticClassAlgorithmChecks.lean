@@ -1,0 +1,13 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticClassAlgorithmProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticClassAlgorithmChecks
+open NumberedWindowArithmeticClassAlgorithmTargets
+theorem exact_ExactPrimaryRounds : ExactPrimaryRounds := NumberedWindowArithmeticClassAlgorithmProof.everyRound
+theorem exact_ExactPrimaryListAndLeast : ExactPrimaryListAndLeast := NumberedWindowArithmeticClassAlgorithmProof.membersLeast
+#print axioms exact_ExactPrimaryRounds
+#print axioms exact_ExactPrimaryListAndLeast
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticClassAlgorithmChecks

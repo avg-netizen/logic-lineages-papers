@@ -1,0 +1,13 @@
+import LogicLineages.PersistentMarking.NumberedWindowAtomicAddressProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowAtomicAddressChecks
+open NumberedWindowAtomicAddressTargets
+
+theorem exact_NoBottomDirectAddress : NoBottomDirectAddress := NumberedWindowAtomicAddressProof.noBottom
+
+theorem exact_VariableDirectAddress : ExactVariableDirectAddress := NumberedWindowAtomicAddressProof.variableEdgeAddress
+
+#print axioms exact_NoBottomDirectAddress
+#print axioms exact_VariableDirectAddress
+
+end LogicLineages.PersistentMarking.NumberedWindowAtomicAddressChecks

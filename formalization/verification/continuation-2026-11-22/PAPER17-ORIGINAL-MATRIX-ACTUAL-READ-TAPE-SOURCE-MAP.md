@@ -1,0 +1,5 @@
+# Paper 17 — ordered original row/read-state interface
+
+[arithmetic.tex](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex), original signed and guard rows and lines 225–274. The charge machinery expects genuine `ActualReadChargeIteration.ReadState`, whereas a signed matrix row supplies a weighted operand occurrence list and its guard/test. This exact interface collects each occurrence from its original `lowerOperandRead`, on the same valuation; neither invalid nor genuine miss yields a tape, even for an occurrence with weight zero or a cancelled pair. It does not infer a successful read from a signed sum.
+
+[Targets](../../LogicLineages/PermittedControl/OriginalMatrixActualReadTapeTargets.lean) · [Proof](../../LogicLineages/PermittedControl/OriginalMatrixActualReadTapeProof.lean) · [Exact aliases](../../LogicLineages/PermittedControl/OriginalMatrixActualReadTapeStatementChecks.lean). Every admitted row and bit is retained, including a positive-modulus congruence as its original guarded signed test. No residue conversion or recursive symbolic compiler is asserted.

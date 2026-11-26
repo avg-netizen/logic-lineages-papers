@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/d6452c0f74c7/ii5-nov21-recovery/formalization/scripts/check.py", line 561, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/workspace/scratch/d6452c0f74c7/ii5-nov21-recovery/formalization/scripts/check.py", line 435, in main
+    cache_context = checked_compiler_context(compiler, env, external_imports)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/d6452c0f74c7/ii5-nov21-recovery/formalization/scripts/check.py", line 306, in checked_compiler_context
+    raise RuntimeError('Cannot identify external cached import: ' + module)
+RuntimeError: Cannot identify external cached import: Mathlib.Algebra.BigOperators.Fin

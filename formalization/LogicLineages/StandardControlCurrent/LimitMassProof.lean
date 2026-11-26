@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.LimitMassTargets
+public import LogicLineages.OrdinalComparison.LimitMassProfileProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.LimitMassProof
+theorem full : LimitMassTargets.Full := OrdinalComparison.fullActualLimitExponentMassSeparation
+end LogicLineages.StandardControlCurrent.LimitMassProof

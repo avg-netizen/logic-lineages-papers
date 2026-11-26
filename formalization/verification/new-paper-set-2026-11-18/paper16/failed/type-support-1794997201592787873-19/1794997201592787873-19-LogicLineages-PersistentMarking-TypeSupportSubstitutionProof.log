@@ -1,0 +1,63 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TypeSupportSubstitutionProof.lean:20:13: error: unsolved goals
+case free
+θ : FreeMap
+ρ σ : Ty
+x : Nat
+⊢ ρ ∈ support (θ σ x) ↔ ∃ σ_1 x_1, (σ_1 = σ ∧ x_1 = x) ∧ ρ ∈ support (θ σ_1 x_1)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TypeSupportSubstitutionProof.lean:17:0: error: failed to prove termination, possible solutions:
+  - Use `have`-expressions to prove the remaining goals
+  - Use `termination_by` to specify a different well-founded relation
+  - Use `decreasing_by` to specify your own tactic for discharging this kind of goal
+θ✝ : FreeMap
+q✝ : (_ : Expr) ×' Ty
+a✝¹ :
+  ∀ (y : (_ : FreeMap) ×' (_ : Expr) ×' Ty ⊕' (_ : FreeMap) ×' (_ : Args) ×' Ty),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x =>
+          PSum.casesOn x (fun _x => PSigma.casesOn _x fun θ q => PSigma.casesOn q fun q ρ => sizeOf q) fun _x =>
+            PSigma.casesOn _x fun θ qs => PSigma.casesOn qs fun qs ρ => sizeOf qs)
+        y (PSum.inl ⟨θ✝, q✝⟩) →
+      PSum.casesOn y (fun _x => _x.2.2 ∈ images _x.1 _x.2.1 ↔ ImageSupport _x.1 _x.2.1 _x.2.2) fun _x =>
+        _x.2.2 ∈ imagesArgs _x.1 _x.2.1 ↔ ∃ σ x, freeOccursArgs (σ, x) _x.2.1 = true ∧ _x.2.2 ∈ support (_x.1 σ x)
+q : Expr
+ρ✝ : Ty
+a✝ :
+  ∀ (y : (_ : FreeMap) ×' (_ : Expr) ×' Ty ⊕' (_ : FreeMap) ×' (_ : Args) ×' Ty),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x =>
+          PSum.casesOn x (fun _x => PSigma.casesOn _x fun θ q => PSigma.casesOn q fun q ρ => sizeOf q) fun _x =>
+            PSigma.casesOn _x fun θ qs => PSigma.casesOn qs fun qs ρ => sizeOf qs)
+        y (PSum.inl ⟨θ✝, ⟨q, ρ✝⟩⟩) →
+      PSum.casesOn y (fun _x => _x.2.2 ∈ images _x.1 _x.2.1 ↔ ImageSupport _x.1 _x.2.1 _x.2.2) fun _x =>
+        _x.2.2 ∈ imagesArgs _x.1 _x.2.1 ↔ ∃ σ x, freeOccursArgs (σ, x) _x.2.1 = true ∧ _x.2.2 ∈ support (_x.1 σ x)
+f : Head
+τ : Ty
+qs✝ es : Args
+x✝ :
+  ∀ (y : (_ : FreeMap) ×' (_ : Expr) ×' Ty ⊕' (_ : FreeMap) ×' (_ : Args) ×' Ty),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x =>
+          PSum.casesOn x (fun _x => PSigma.casesOn _x fun θ q => PSigma.casesOn q fun q ρ => sizeOf q) fun _x =>
+            PSigma.casesOn _x fun θ qs => PSigma.casesOn qs fun qs ρ => sizeOf qs)
+        y (PSum.inl ⟨θ✝, ⟨Expr.marked f τ qs✝ es, ρ✝⟩⟩) →
+      PSum.casesOn y (fun _x => _x.2.2 ∈ images _x.1 _x.2.1 ↔ ImageSupport _x.1 _x.2.1 _x.2.2) fun _x =>
+        _x.2.2 ∈ imagesArgs _x.1 _x.2.1 ↔ ∃ σ x, freeOccursArgs (σ, x) _x.2.1 = true ∧ _x.2.2 ∈ support (_x.1 σ x)
+h✝ : q = Expr.marked f τ qs✝ es
+θ : FreeMap
+qs : Args
+ρ : Ty
+⊢ sizeOf qs < 1 + sizeOf f + sizeOf τ + sizeOf qs✝ + sizeOf es
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TypeSupportSubstitutionProof.lean:59:37: warning: This simp argument is unused:
+  or_comm
+
+Hint: Omit it from the simp argument list.
+  simp only [̵o̵r̵_̵a̵s̵s̵o̵c̵,̵o̵r̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵o̵r̵_̵c̵o̵m̵m̵]̵[̲o̲r̲_̲a̲s̲s̲o̲c̲,̲ ̲o̲r̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TypeSupportSubstitutionProof.lean:67:37: warning: This simp argument is unused:
+  or_comm
+
+Hint: Omit it from the simp argument list.
+  simp only [̵o̵r̵_̵a̵s̵s̵o̵c̵,̵o̵r̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵o̵r̵_̵c̵o̵m̵m̵]̵[̲o̲r̲_̲a̲s̲s̲o̲c̲,̲ ̲o̲r̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

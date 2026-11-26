@@ -32,28 +32,28 @@ theorem literalTermRoundTrip : TermCodecTargets.LiteralTermRoundTrip := by
     rfl
   | add a b iha ihb =>
     rw [Term.encode, decode_step _ 2 (by decide)]
-    simp only [reduceIte, Nat.unpair_pair, iha, ihb]
+    simp only [reduceIte, Nat.unpair_pair, iha, ihb] <;> rfl
   | subtract a b iha ihb =>
     rw [Term.encode, decode_step _ 3 (by decide)]
-    simp only [reduceIte, Nat.unpair_pair, iha, ihb]
+    simp only [reduceIte, Nat.unpair_pair, iha, ihb] <;> rfl
   | multiply c a ih =>
     rw [Term.encode, decode_step _ 4 (by decide)]
-    simp only [reduceIte, Nat.unpair_pair, ih]
+    simp only [reduceIte, Nat.unpair_pair, ih] <;> rfl
   | divide c a ih =>
     rw [Term.encode, decode_step _ 5 (by decide)]
-    simp only [reduceIte, Nat.unpair_pair, ih]
+    simp only [reduceIte, Nat.unpair_pair, ih] <;> rfl
   | phi a ih =>
     rw [Term.encode, decode_step _ 6 (by decide)]
-    simp only [reduceIte, ih]
+    simp only [reduceIte, ih] <;> rfl
   | hyper a ih =>
     rw [Term.encode, decode_step _ 7 (by decide)]
-    simp only [reduceIte, ih]
+    simp only [reduceIte, ih] <;> rfl
   | phiInverse a ih =>
     rw [Term.encode, decode_step _ 8 (by decide)]
-    simp only [reduceIte, ih]
+    simp only [reduceIte, ih] <;> rfl
   | hyperInverse a ih =>
     rw [Term.encode, decode_step _ 9 (by decide)]
-    simp only [reduceIte, ih]
+    simp only [reduceIte, ih] <;> rfl
 
 theorem everyOriginalCodeRoundTrip : TermCodecTargets.EveryOriginalCodeRoundTrip := by
   intro code
@@ -89,4 +89,11 @@ def originalCoding : Primcodable Term := Primcodable.ofEquiv Nat originalEquiv
 theorem literalPrimitiveCoding : TermCodecTargets.LiteralPrimitiveCoding :=
   ⟨originalCoding, fun _ => rfl⟩
 
+#print axioms decode_step
+#print axioms literalTermRoundTrip
+#print axioms everyOriginalCodeRoundTrip
+#print axioms originalEncodeInjectivity
+#print axioms originalEquiv
+#print axioms originalCoding
+#print axioms literalPrimitiveCoding
 end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.TermCodecProof

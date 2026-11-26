@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.FullSortProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.FullSort.StatementChecks
+theorem fixed_completeSort : Targets.CompleteSort := completeSort
+#audit_namespace LogicLineages.ControlSensitivityCurrent.FullSort.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.FullSort.StatementChecks

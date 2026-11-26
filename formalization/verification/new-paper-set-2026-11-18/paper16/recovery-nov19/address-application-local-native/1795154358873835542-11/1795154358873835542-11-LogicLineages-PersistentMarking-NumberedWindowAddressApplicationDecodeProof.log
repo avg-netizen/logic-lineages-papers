@@ -1,0 +1,60 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressApplicationDecodeProof.lean:80:13: error(lean.unknownIdentifier): Unknown constant `Bool.and_eq_true.mp`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressApplicationDecodeProof.lean:82:13: error(lean.unknownIdentifier): Unknown constant `Bool.and_eq_true.mp`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressApplicationDecodeProof.lean:96:8: error: unsolved goals
+case neg
+S : Spine.Signature
+K : List Ty
+source argument : Nat
+Γ : List Ty
+i : Nat
+Δ : List Ty
+ty : Ty
+j : Nat
+σ τ : Ty
+canonQ :
+  NumberedWindowScalarAlgorithm.canonical (fixed S K) (List.map encodeTy Γ, encodeTy (σ.arrow τ), i) =
+    canonicalBit S K { context := Γ, result := σ.arrow τ, least := i }
+canonU :
+  NumberedWindowScalarAlgorithm.canonical (fixed S K) (List.map encodeTy Δ, encodeTy ty, j) =
+    canonicalBit S K { context := Δ, result := ty, least := j }
+valid :
+  ¬(canonicalBit S K { context := Γ, result := σ.arrow τ, least := i } &&
+            canonicalBit S K { context := Δ, result := ty, least := j } &&
+          decide (Γ = Δ) &&
+        decide (σ = ty)) =
+      true
+⊢ (if false = true then
+      Option.map
+        (fun k =>
+          NumberedWindowFieldAlgorithm.packNode 3
+            [NumberedWindowFieldAlgorithm.pack (List.map encodeTy Γ), encodeTy τ, k])
+        (NumberedWindowScalarAlgorithm.least (fixed S K) (List.map encodeTy Γ) (encodeTy τ)
+          (NumberedWindowFieldAlgorithm.packNode 6 [encodeTy σ, encodeTy τ, i, j]))
+    else none) =
+    if false = true then
+      (decodeTerm i).bind fun Q =>
+        (decodeTerm j).bind fun U =>
+          Option.map (fun k => encodeAddress { context := Γ, result := τ, least := k })
+            (NumberedWindowArithmeticLeastClass.leastCode S K Γ τ (NumberedWindowSyntax.NTerm.auxApp σ τ Q U))
+    else none
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressApplicationDecodeProof.lean:95:32: warning: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  simp [packAddress, ̲hq̵,̵h̵u]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressApplicationDecodeProof.lean:95:35: warning: This simp argument is unused:
+  hu
+
+Hint: Omit it from the simp argument list.
+  simp [packAddress, ̲hq,̵h̵u̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressApplicationDecodeProof.lean:96:27: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [valid,̵i̵f̵_̵f̵a̵l̵s̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

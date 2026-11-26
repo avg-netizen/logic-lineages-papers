@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeNumericSuppliers.NativeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeNumericSuppliers.NativeStatementChecks
+theorem exactRank : Targets.NativeRankDecrease := NativeProof.nativeRankDecrease
+#print axioms exactRank
+theorem exactOriginal : Targets.NativeOriginalValue := NativeProof.nativeOriginalValue
+#print axioms exactOriginal
+theorem exactLayer : Targets.NativeLayerLaw := NativeProof.nativeLayerLaw
+#print axioms exactLayer
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeNumericSuppliers.NativeStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeNumericSuppliers.NativeStatementChecks

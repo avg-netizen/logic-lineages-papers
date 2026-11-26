@@ -1,0 +1,55 @@
+{
+  "status": "exact current source comparator and target-only preflight passed; proof not yet natively attempted or accepted",
+  "ticket": "CHAIN-TARGET-0821",
+  "exit_code": 0,
+  "reaped": true,
+  "receipt": "build-reports/1795076499119739754-2.json",
+  "receipt_sha256": "38af567965845988dddf8e8997c31d411eb570d46c8fadb25e251de18da26e94",
+  "profile": {
+    "requested": [
+      "LogicLineages.ControlSensitivityCurrent.CurrentUnaryChainTargets"
+    ],
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "core_only_profile": false,
+    "single_thread": true,
+    "threads": 1,
+    "upstream_cache_only": true,
+    "calculator_objects_borrowed": true
+  },
+  "closure_count": 130,
+  "pin_count": 20,
+  "freeze": "verification/new-paper-set-2026-11-18/paper19/CURRENT-UNARY-CHAIN-FREEZE.json",
+  "freeze_sha256": "40e0538f5a4a168815db83977a2a109d0e757593c5d73ebb6caf27f30057c1d9",
+  "successful_native_rows": [
+    {
+      "module": "LogicLineages.ControlSensitivityCurrent.CurrentUnaryChainDefinitions",
+      "returncode": 0,
+      "seconds": 1.899,
+      "observed_cpu_seconds": 1.72,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 990312,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "a366407b68af86a3c7a93362df959a343738bcc8fad038921f29f290d528d625",
+      "log": "build-reports/1795076499119739754-2-LogicLineages-ControlSensitivityCurrent-CurrentUnaryChainDefinitions.log"
+    },
+    {
+      "module": "LogicLineages.ControlSensitivityCurrent.CurrentUnaryChainTargets",
+      "returncode": 0,
+      "seconds": 1.433,
+      "observed_cpu_seconds": 1.37,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 982268,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "11935967c5cf7dc60af1623eed5798437c9fb714f345d465d66b54abc93ee8b2",
+      "log": "build-reports/1795076499119739754-2-LogicLineages-ControlSensitivityCurrent-CurrentUnaryChainTargets.log"
+    }
+  ]
+}

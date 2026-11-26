@@ -1,0 +1,48 @@
+{
+ "lane": "opusA",
+ "key": "ROUND-APPLICATION-REPRESENTATIVE",
+ "targets_module": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationRepresentativeTargets",
+ "proof_modules": [
+  "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationRepresentativeProof",
+  "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationMeasuredCombinedProof"
+ ],
+ "statements": {
+  "ExactLeastRepresentativeApplication": "NumberedWindowInternalCoverCombinedRestrictedRoundApplicationRepresentativeProof.exact_LeastRepresentativeApplication",
+  "ExactMeasuredToPlainEdge": "NumberedWindowInternalCoverCombinedRestrictedRoundApplicationMeasuredCombinedProof.exact_MeasuredToPlainEdge",
+  "ExactMeasuredCombinedApplicationEdgeStepAt": "NumberedWindowInternalCoverCombinedRestrictedRoundApplicationMeasuredCombinedProof.exact_MeasuredCombinedApplicationEdgeStepAt",
+  "ExactMeasuredCombinedRoundApplicationLeast": "NumberedWindowInternalCoverCombinedRestrictedRoundApplicationMeasuredCombinedProof.exact_MeasuredCombinedRoundApplicationLeast",
+  "ExactCombinedLeastRepresentativeApplication": "NumberedWindowInternalCoverCombinedRestrictedRoundApplicationMeasuredCombinedProof.exact_CombinedLeastRepresentativeApplication",
+  "ExactMeasuredCombinedLeastRepresentativeApplication": "NumberedWindowInternalCoverCombinedRestrictedRoundApplicationMeasuredCombinedProof.exact_MeasuredCombinedLeastRepresentativeApplication"
+ },
+ "source_sha256": {
+  "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedRoundApplicationRepresentativeTargets.lean": "84ad689b2c5b8f07eefed95b50d5cb89642058072712e98bfc74abaf123027ef",
+  "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedRoundApplicationRepresentativeProof.lean": "de4df8cfe1337680db368c72601be53caf0d4aa36ba5dc6204ca98d248e3df1a",
+  "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedRoundApplicationMeasuredCombinedProof.lean": "338ee4f1f3538edff9ca491e15f4a0c3b0f190b93db596ee727ea08a07b2957d"
+ },
+ "passing_receipts": {
+  "targets_only": "1795385537101036829-3152762",
+  "representative_proof": "1795385640581243464-3153208",
+  "measured_combined_proof": "1795385713754905498-3153640"
+ },
+ "failed_receipts": {
+  "representative_proof_v1": "1795385590667437564-3152968",
+  "representative_proof_v2": "1795385613435124896-3153088 (rename pattern; fixed; drafts/opusA/RepresentativeProof-v1.*)"
+ },
+ "print_axioms": [
+  "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationRepresentativeProof.exact_LeastRepresentativeApplication' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationMeasuredCombinedProof.exact_MeasuredToPlainEdge' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationMeasuredCombinedProof.exact_MeasuredCombinedApplicationEdgeStepAt' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationMeasuredCombinedProof.exact_MeasuredCombinedRoundApplicationLeast' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationMeasuredCombinedProof.exact_CombinedLeastRepresentativeApplication' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationMeasuredCombinedProof.exact_MeasuredCombinedLeastRepresentativeApplication' depends on axioms: [propext, Classical.choice, Quot.sound]"
+ ],
+ "accepted_suppliers": [
+  "exact_SelectedInSuppliedPool (#835 closure)",
+  "exact_OpenMembersAtLength",
+  "programCases",
+  "compositionValue/projectionValue",
+  "conjunctionAccept/conjunctionRecover/compositionRecover"
+ ],
+ "remaining_inputs": "unmeasured: MeasurePreservingEdge premise; both: type guards, argument window, the seed application's least m",
+ "source_map": "verification/local-fable-pair-2026-11-22/opusA/ROUND-APPLICATION-SOURCE-MAP.md"
+}

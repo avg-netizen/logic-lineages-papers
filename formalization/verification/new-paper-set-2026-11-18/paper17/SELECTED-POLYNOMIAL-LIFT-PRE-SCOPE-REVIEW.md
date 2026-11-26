@@ -1,0 +1,7 @@
+# Selected polynomial lift exact pre-scope review
+
+Approved supporting comparator before proofs. Independently verified all seven frozen hashes, read the actual definitions/targets/source map and literal prefixVariable/oldVariable recursion. No native execution.
+
+GradedRealization quantifies arbitrary ctrl and every nonzero natural polynomial; requires actual ctrl ClosedGrade1, actual signedCNF equality, positivity and omega^omega strict bound. This is a legitimate collapse-free structural strengthening only if the fresh proof constructs actual grade/value witnesses. ExactPaddedVector derives both Fin2 grades, every coordinate norm inequality and exact N(head)+1 padding. SimultaneousExtension preserves all old typed coordinates literally and realizes the entire family with ordered prefixVariable indices in one admissible substitution, including n=0. SignedInputCalibration uses precisely original Context n/inputVariable and actual SelectedPairCompiler.inputs, without an extra seed.
+
+No fixed-control grade or admissibility transfer is permitted by these endpoints. No semantic success, norm bound or chosen family valuation is supplied as an assumption. Existence rather than a computable witness selector is explicitly the supporting boundary. Final must inspect fresh grade/whole-vector construction, family induction and exact empty-context indexing bridge. No hardness/undecidability credit from this supporting packet.

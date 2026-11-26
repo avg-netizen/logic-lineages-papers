@@ -1,0 +1,8 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowTypedProbeProgramChecks.lean:67:4: error: 'change' tactic failed, pattern
+  (if typed s t n = true then 1 else 0) = (typed s t n).toNat
+is not definitionally equal to target
+  (bif typed s (t ::ᵥ n ::ᵥ nil).head (t ::ᵥ n ::ᵥ nil).tail.head then 1 else 0) = (typed s t n).toNat
+'LogicLineages.PersistentMarking.NumberedWindowTypedProbeProgramChecks.exact_TypedProbePrograms' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.RefinementOpeningProof
+namespace LogicLineages.PersistentMarking.RefinementOpeningChecks
+theorem exact_synchronize : RefinementOpeningTargets.Synchronize := RefinementOpeningProof.synchronize
+#print axioms exact_synchronize
+end LogicLineages.PersistentMarking.RefinementOpeningChecks

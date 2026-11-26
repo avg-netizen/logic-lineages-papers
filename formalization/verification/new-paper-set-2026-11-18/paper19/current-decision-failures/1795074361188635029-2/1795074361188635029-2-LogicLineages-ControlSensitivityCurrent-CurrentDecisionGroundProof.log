@@ -1,0 +1,44 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionGroundProof.lean:49:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ParametricSourceSuccessor.denoteWith f (fun c => ↑(inputs ρ c + 1)) (av 0)
+in the target expression
+  (if strict = true then
+      ParametricSourceSuccessor.denoteWith f (fun c => ↑((fun c => inputs ρ c + 1) c)) (av 0) <
+        ParametricSourceSuccessor.denoteWith f (fun c => ↑((fun c => inputs ρ c + 1) c)) (bv 0)
+    else
+      ParametricSourceSuccessor.denoteWith f (fun c => ↑((fun c => inputs ρ c + 1) c)) (av 0) ≤
+        ParametricSourceSuccessor.denoteWith f (fun c => ↑((fun c => inputs ρ c + 1) c)) (bv 0)) ↔
+    if strict = true then PolicyCollision.rawScalar p f (inputs ρ) a < PolicyCollision.rawScalar p f (inputs ρ) b
+    else PolicyCollision.rawScalar p f (inputs ρ) a ≤ PolicyCollision.rawScalar p f (inputs ρ) b
+
+case refl.refl
+p : AdmissibleSum.Policy
+f : ℕ → ℕ
+strict : Bool
+Γ : List Ty
+a b : OriginalTerm Γ Ty.ground
+ρ : Variable Γ Ty.ground → ℕ
+av bv : OrdinalVector Γ 0
+ha : AdmissibleAssignment.assignment p a = some av
+hb : AdmissibleAssignment.assignment p b = some bv
+v : ℕ
+left✝¹ : 0 < v
+w : ℕ
+left✝ : 0 < w
+hv : PolicyCollision.rawScalar p f (inputs ρ) a = v
+hw : PolicyCollision.rawScalar p f (inputs ρ) b = w
+ha' : some av = some av
+va : ParametricSourceSuccessor.denoteWith f (fun c => ↑(inputs ρ c + 1)) (av 0) = ↑v
+hb' : some bv = some bv
+vb : ParametricSourceSuccessor.denoteWith f (fun c => ↑(inputs ρ c + 1)) (bv 0) = ↑w
+hpos :
+  ∀ (j : ℕ),
+    CurrentCounterBound.coordinate f av (fun c => inputs ρ c + 1) (j + 1) ≤
+      CurrentCounterBound.coordinate f bv (fun c => inputs ρ c + 1) (j + 1)
+⊢ (if strict = true then
+      ParametricSourceSuccessor.denoteWith f (fun c => ↑((fun c => inputs ρ c + 1) c)) (av 0) <
+        ParametricSourceSuccessor.denoteWith f (fun c => ↑((fun c => inputs ρ c + 1) c)) (bv 0)
+    else
+      ParametricSourceSuccessor.denoteWith f (fun c => ↑((fun c => inputs ρ c + 1) c)) (av 0) ≤
+        ParametricSourceSuccessor.denoteWith f (fun c => ↑((fun c => inputs ρ c + 1) c)) (bv 0)) ↔
+    if strict = true then PolicyCollision.rawScalar p f (inputs ρ) a < PolicyCollision.rawScalar p f (inputs ρ) b
+    else PolicyCollision.rawScalar p f (inputs ρ) a ≤ PolicyCollision.rawScalar p f (inputs ρ) b

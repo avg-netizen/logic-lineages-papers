@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.CounterExpansionProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.CounterExpansionStatementChecks
+theorem full : CounterExpansionTargets.Full := CounterExpansionProof.full
+#print axioms full
+end LogicLineages.StandardControlCurrent.CounterExpansionStatementChecks

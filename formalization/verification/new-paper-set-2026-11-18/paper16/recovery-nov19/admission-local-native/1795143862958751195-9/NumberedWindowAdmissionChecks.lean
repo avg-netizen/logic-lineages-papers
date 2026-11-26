@@ -1,0 +1,14 @@
+import LogicLineages.PersistentMarking.NumberedWindowAdmissionProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowAdmissionChecks
+open NumberedWindowAdmissionTargets
+
+theorem exact_WindowConstants : WindowConstants := NumberedWindowAdmissionConstantsProof.constants
+theorem exact_LiteralAdmission : LiteralAdmission := NumberedWindowAdmissionProof.literal
+theorem exact_DecodedAdmission : DecodedAdmission := NumberedWindowAdmissionProof.decoded
+
+#print axioms exact_WindowConstants
+#print axioms exact_LiteralAdmission
+#print axioms exact_DecodedAdmission
+
+end LogicLineages.PersistentMarking.NumberedWindowAdmissionChecks

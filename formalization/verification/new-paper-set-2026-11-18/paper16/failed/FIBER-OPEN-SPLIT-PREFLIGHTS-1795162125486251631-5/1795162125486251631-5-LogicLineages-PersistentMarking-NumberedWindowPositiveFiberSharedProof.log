@@ -1,0 +1,24 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowPositiveFiberSharedProof.lean:83:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Formula.relabel ?j (one ?r ?q ?w ?v)
+in the target expression
+  Derivation body
+    (programGraph a (var (Sum.inr 0)) ![Term.relabel Sum.inl q] ⊓
+        programGraph a (var (Sum.inr 0)) ![Term.relabel Sum.inl v] ::
+      List.map weaken Γ)
+    (weaken (one (agree a) q w v))
+
+case mpr
+a : Program 1
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+q w v : OTerm α
+h :
+  Derivation body Γ
+    (have value := var (Sum.inr 0);
+    existsOne (programGraph a value ![Term.relabel Sum.inl q] ⊓ programGraph a value ![Term.relabel Sum.inl v]))
+⊢ Derivation body
+    (programGraph a (var (Sum.inr 0)) ![Term.relabel Sum.inl q] ⊓
+        programGraph a (var (Sum.inr 0)) ![Term.relabel Sum.inl v] ::
+      List.map weaken Γ)
+    (weaken (one (agree a) q w v))

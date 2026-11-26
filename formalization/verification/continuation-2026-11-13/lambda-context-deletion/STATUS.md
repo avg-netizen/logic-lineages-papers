@@ -1,0 +1,1 @@
+Exact metadata gate passed `1794587504400509637-6`, standard axioms only. Original cons length, strict successor bound, literal lookup and deletion graphs are derived; no source, evaluator, or compatibility assumption. This is list bookkeeping, not semantic congruence. Accepted sources immutable.

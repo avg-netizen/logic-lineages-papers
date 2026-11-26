@@ -1,0 +1,29 @@
+module
+public import LogicLineages.PermittedControl.HighFieldPreparedPacketTargets
+import LogicLineages.PermittedControl.HighFieldPreparedPacketCodeProof
+import LogicLineages.PermittedControl.HighFieldPreparedPacketShapeProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_highFieldPreparedPostprocessEffective :
+    HighFieldPreparedPacket.PostprocessEffective :=
+  HighFieldPreparedPacket.postprocessEffective
+
+theorem fixed_highFieldPreparedPacketExact : HighFieldPreparedPacket.PacketExact :=
+  HighFieldPreparedPacket.packetExact
+
+theorem fixed_highFieldPreparedPacketShape : HighFieldPreparedPacket.PacketShape :=
+  HighFieldPreparedPacket.packetShape
+
+theorem fixed_fullHighFieldPreparedPostprocess :
+    HighFieldPreparedPacket.FullHighFieldPreparedPostprocess :=
+  ⟨fixed_highFieldPreparedPostprocessEffective,fixed_highFieldPreparedPacketExact,
+    fixed_highFieldPreparedPacketShape⟩
+
+#print axioms fixed_highFieldPreparedPostprocessEffective
+#print axioms fixed_highFieldPreparedPacketExact
+#print axioms fixed_highFieldPreparedPacketShape
+#print axioms fixed_fullHighFieldPreparedPostprocess
+
+end LogicLineages.PermittedControl.StatementChecks

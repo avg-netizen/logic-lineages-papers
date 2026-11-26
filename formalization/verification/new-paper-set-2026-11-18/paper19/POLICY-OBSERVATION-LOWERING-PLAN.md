@@ -1,0 +1,11 @@
+# Next actual generic observation/renaming bridge
+
+Before the nine-witness gate lowerer, establish actual generic selected-f observations/naturality. Existing assignmentNaturality is arbitrary-policy syntax, so reusable with fresh evidence. Selected-control denoteWith rename compatibility needs a direct structural induction; no fixedPhi denotation theorem suffices.
+
+First supporting freeze: actual ordinalExpressionRename equality under arbitrary source/target ordinal valuations agreeing on renamed components; actual PolicyCollision.rawScalar of any ground source after typed renaming equals original at corresponding positive finite natural valuations; actual source natural observation rawScalar-1 calibrates to positive raw scalar+1; actual PolicyAddition.Equation iff actual rawScalar equality under same policy/f/shared valuation. GenericScalar pays real successful assignments/positive values, no input scalar premise. Renaming can merge names, provided valuation agreement holds, and must cover binder-lifted source rename.
+
+Next primitive gate packet: same existing PrimitiveLowering.Expr/lower syntax and nine shared fresh coordinates, but fresh f-parametric numericValue (port value, f(n+4), f(3a+b+8), f6) and p-parametric actual SourceHolds. Derive actual all-policy port/successor (including zero port), atomic eraser and I0 assignment+denotation. Prove literal ten-equation gate iff arithmetic gate Holds and unique canonical nine-witness vector. This then supplies generic Plan.Eval/compile semantics, not an oracle graph.
+
+Valuation boundary: these source observations quantify actual positive NATURAL component coordinates. They cover current19 ground-free inputs, not paper17 arbitrary functional ORDINAL valuations. Only generic CompositeEraser finite closure or numerical facts transfer to paper17 after its own bridges; do not export full collision/aggregate as unrestricted functional-ordinal results.
+
+Full existential source expression→A-normal Program coverage is still missing and must get a new explicit input syntax/normalization bridge; GlobalFlatten only does Boolean DAG→arithmetic gates. Likewise actual encoded shared typed source DAG polynomial bounds and literal weak K/I comparison remain separate. No full compiler promotion.

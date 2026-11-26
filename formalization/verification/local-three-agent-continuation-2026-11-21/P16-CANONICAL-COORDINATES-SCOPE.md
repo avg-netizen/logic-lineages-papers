@@ -1,0 +1,3 @@
+# Canonical raw coordinates at both ends of an accepted path
+
+The selected program tests original window admission together with successful self-selection by the same packed least. It computes the source canonical predicate for every packed context, including rejection of undecodable tapes. Inside ID₁, each original successful hop yields both window guards and both self-selection equations, using its original endpoint minimum calls and the open fixed-point theorem. The existing positive fold transfers this test to both ends of its entire nonempty certificate. [Exact target](../../LogicLineages/PersistentMarking/NumberedWindowInternalSparseCanonicalCoordinatesTargets.lean) · [Native gate](P16-CANONICAL-COORDINATES-LOCAL-EVIDENCE.json)

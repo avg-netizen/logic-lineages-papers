@@ -1,0 +1,111 @@
+module
+public import LogicLineages.CartierObserverCurrent.BasicRationalProof
+
+public meta import LogicLineages.Audit
+
+@[expose] public section
+universe u
+namespace LogicLineages.CartierObserverCurrent.Basic
+
+theorem actualDifferentialCartierSquarePullout : Targets.ActualDifferentialCartierSquarePullout.{u} := by
+  intro K _ _ _ f g
+  have hf := actualRationalSquareRootDecomposition K f
+  have he : g ^ 2 * f = (g * actualRationalSquareRootDigit false f) ^ 2 +
+      rationalX * (g * actualRationalSquareRootDigit true f) ^ 2 := by
+    conv_lhs => rw [hf]
+    ring
+  rw [he, actualDifferentialCartierCharacterization]
+  rfl
+
+private theorem constant_sqrt_square {K : Type*} [Field K] [CharP K 2] [PerfectRing K 2]
+    (b : K) : (rationalC ((frobeniusEquiv K 2).symm b) : RatFunc K) ^ 2 = rationalC b := by
+  rw [← map_pow]
+  exact congrArg rationalC ((frobeniusEquiv K 2).apply_symm_apply b)
+
+private theorem cartier_constant {K : Type*} [Field K] [CharP K 2] [PerfectRing K 2]
+    (b : K) : actualDifferentialCartier (rationalC b) = 0 := by
+  have h := actualDifferentialCartierCharacterization K
+    (rationalC ((frobeniusEquiv K 2).symm b)) 0
+  simpa only [constant_sqrt_square, zero_pow (by decide : 2 ≠ 0), mul_zero, add_zero] using h
+
+theorem actualDifferentialCartierLocalPowers : Targets.ActualDifferentialCartierLocalPowers.{u} := by
+  intro K _ _ _ z b
+  let h : RatFunc K := rationalX - rationalC z
+  have hn : h ≠ 0 := by
+    have h := RatFunc.algebraMap_ne_zero (K := K) (Polynomial.X_sub_C_ne_zero z)
+    have hc : algebraMap (Polynomial K) (RatFunc K) (Polynomial.C z) = rationalC z := by
+      exact (IsScalarTower.algebraMap_apply K (Polynomial K) (RatFunc K) z).symm
+    simpa only [map_sub, hc] using h
+  have hc : actualDifferentialCartier h = 1 := by
+    have h0 := actualDifferentialCartierCharacterization K
+      (rationalC ((frobeniusEquiv K 2).symm (-z))) 1
+    rw [constant_sqrt_square] at h0
+    simpa only [map_neg, one_pow, mul_one, neg_add_eq_sub] using h0
+  refine ⟨hn, ?_⟩
+  intro k
+  have heven : (h ^ k) ^ 2 = h ^ (2 * k) := by
+    rw [← zpow_natCast, ← zpow_mul]
+    congr 1
+    ring
+  have he : rationalC b * h ^ (2 * k) =
+      (rationalC ((frobeniusEquiv K 2).symm b) * h ^ k) ^ 2 := by
+    rw [mul_pow, constant_sqrt_square, heven]
+  have ho : rationalC b * h ^ (2 * k + 1) =
+      (rationalC ((frobeniusEquiv K 2).symm b) * h ^ k) ^ 2 * h := by
+    rw [mul_pow, constant_sqrt_square, heven, zpow_add₀ hn, zpow_one]
+    ring
+  constructor
+  · change actualDifferentialCartier (rationalC b * h ^ (2 * k)) = 0
+    rw [he]
+    have h0 := actualDifferentialCartierCharacterization K
+      (rationalC ((frobeniusEquiv K 2).symm b) * h ^ k) 0
+    simpa only [zero_pow (by decide : 2 ≠ 0), mul_zero, add_zero] using h0
+  · change actualDifferentialCartier (rationalC b * h ^ (2 * k + 1)) = _
+    rw [ho, actualDifferentialCartierSquarePullout, hc, mul_one]
+
+theorem evenSelectorIdentity : Targets.EvenSelectorIdentity.{u} := by
+  intro K _ _ _ f
+  have hf := actualRationalSquareRootDecomposition K f
+  have he : rationalX * f =
+      (rationalX * actualRationalSquareRootDigit true f) ^ 2 +
+        rationalX * (actualRationalSquareRootDigit false f) ^ 2 := by
+    conv_lhs => rw [hf]
+    ring
+  rw [he, actualDifferentialCartierCharacterization]
+
+theorem cartierAdd (K : Type u) [Field K] [CharP K 2] [PerfectRing K 2]
+    (f g : RatFunc K) :
+    actualDifferentialCartier (f + g) =
+      actualDifferentialCartier f + actualDifferentialCartier g := by
+  have hf := actualRationalSquareRootDecomposition K f
+  have hg := actualRationalSquareRootDecomposition K g
+  have he : f + g =
+      (actualRationalSquareRootDigit false f + actualRationalSquareRootDigit false g) ^ 2 +
+      rationalX * (actualRationalSquareRootDigit true f + actualRationalSquareRootDigit true g) ^ 2 := by
+    rw [CharTwo.add_sq, CharTwo.add_sq]
+    conv_lhs => rw [hf, hg]
+    ring
+  rw [he, actualDifferentialCartierCharacterization]
+  rfl
+
+theorem evenSelectorLocalPowers : Targets.EvenSelectorLocalPowers.{u} := by
+  intro K _ _ _ z b k
+  let h : RatFunc K := rationalX - rationalC z
+  have hn : h ≠ 0 := (actualDifferentialCartierLocalPowers K z b).1
+  have split (m : Int) : rationalX * (rationalC b * h ^ m) =
+      rationalC b * h ^ (m + 1) + rationalC (z * b) * h ^ m := by
+    rw [zpow_add₀ hn, zpow_one, map_mul]
+    dsimp [h]
+    ring
+  have hb := (actualDifferentialCartierLocalPowers K z b).2
+  have hzb := (actualDifferentialCartierLocalPowers K z (z * b)).2
+  constructor
+  · change actualDifferentialCartier (rationalX * (rationalC b * h ^ (2 * k))) = _
+    rw [split, cartierAdd, (hb k).2, (hzb k).1, add_zero]
+  · change actualDifferentialCartier (rationalX * (rationalC b * h ^ (2 * k + 1))) = _
+    rw [split, cartierAdd]
+    have hi : (2 * k + 1) + 1 = 2 * (k + 1) := by ring
+    rw [hi, (hb (k + 1)).1, (hzb k).2, zero_add]
+
+#audit_namespace LogicLineages.CartierObserverCurrent.Basic
+end LogicLineages.CartierObserverCurrent.Basic

@@ -1,0 +1,41 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchWitnessSyntaxProof.lean:62:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchWitnessSyntaxProof.lean:88:106: error: Tactic `rfl` failed: The left-hand side
+  existsOne
+    (factors p h a τ (Term.relabel Sum.inl (Term.subst q' (bindTerm u)))
+      ((var (Sum.inl (Sum.inr 0))).subst
+        (ID1Completion.InternalComputabilityApplicationSyntaxProof.liftTerms (bindTerm u)))
+      ((var (Sum.inr 0)).subst (ID1Completion.InternalComputabilityApplicationSyntaxProof.liftTerms (bindTerm u))))
+is not definitionally equal to the right-hand side
+  existsOne (factors p h a τ q' u' (var (Sum.inr 0)))
+
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+p : Program 3
+h : Program 2
+a : Program 1
+τ : ProbeTy
+q u v : OTerm α
+hf : Nonempty (Derivation body Γ (freshAt a q u))
+hp : Nonempty (Derivation body Γ (accepts p q u v))
+ht : Nonempty (Derivation body Γ (typedAt h τ v))
+q' : OTerm (α ⊕ Fin 1) := Term.relabel Sum.inl q
+u' : OTerm (α ⊕ Fin 1) := Term.relabel Sum.inl u
+A : ID1Completion.InternalCalculus.Formula ((α ⊕ Fin 1) ⊕ Fin 1) :=
+  factors p h a τ (Term.relabel Sum.inl q') (var (Sum.inl (Sum.inr 0))) (var (Sum.inr 0))
+B : ID1Completion.InternalCalculus.Formula (α ⊕ Fin 1) := factors p h a τ q' u' (var (Sum.inr 0))
+⊢ existsOne
+      (factors p h a τ (Term.relabel Sum.inl (Term.subst q' (bindTerm u)))
+        ((var (Sum.inl (Sum.inr 0))).subst
+          (ID1Completion.InternalComputabilityApplicationSyntaxProof.liftTerms (bindTerm u)))
+        ((var (Sum.inr 0)).subst (ID1Completion.InternalComputabilityApplicationSyntaxProof.liftTerms (bindTerm u)))) =
+    existsOne (factors p h a τ q' u' (var (Sum.inr 0)))
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchWitnessSyntaxProof.lean:88:92: warning: This simp argument is unused:
+  liftBind
+
+Hint: Omit it from the simp argument list.
+  simp only [instantiate, ̲bindEmbedding, ̲existsEmbeddedSubst, ̲A, ̲B, ̲factorsSubst, ̲liftTermSubst,̵l̵i̵f̵t̵B̵i̵n̵d̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

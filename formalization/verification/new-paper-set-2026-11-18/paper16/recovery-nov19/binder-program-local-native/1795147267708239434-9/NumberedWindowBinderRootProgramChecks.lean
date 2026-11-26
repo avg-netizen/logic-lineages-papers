@@ -1,0 +1,9 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowBinderRootProgramTargets
+import LogicLineages.PersistentMarking.NumberedWindowBinderRootProgramProof
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowBinderRootProgramChecks
+theorem exact_BinderRootPrograms : NumberedWindowBinderRootProgramTargets.BinderRootPrograms :=
+  NumberedWindowBinderRootProgramProof.program
+#print axioms exact_BinderRootPrograms
+end LogicLineages.PersistentMarking.NumberedWindowBinderRootProgramChecks

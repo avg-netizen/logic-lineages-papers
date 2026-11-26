@@ -1,0 +1,4 @@
+# Actual-G aggregation handoff
+Four supporting families/six unchanged pins. Ticket STANDARDAGGREGATIONFULL-1726 reaped/released. Fold1795022723227058728-5/full1795022738206275756-5 first-attempt passes, no failures or repairs. Original caps 2048 memory/1536 RSS/2048 minimum free MiB.
+Gate StandardAggregationStatementChecks; alias LogicLineages.PermittedControl.StatementChecks.fixed_standardAggregation; report STANDARD-AGGREGATION-EVIDENCE.json.
+Inspect actual Phi growth/monotonicity/inflation and eraser coefficient calibration, numerical-only collision reuse, same actual functional valuation ordered fold/empty1, literal successful K/I values with offsets5/3, and strict+weak NOT AllEqual. No selected semantic aggregation or Nat-source-domain transfer; system/mask/query/corollary remain separate.

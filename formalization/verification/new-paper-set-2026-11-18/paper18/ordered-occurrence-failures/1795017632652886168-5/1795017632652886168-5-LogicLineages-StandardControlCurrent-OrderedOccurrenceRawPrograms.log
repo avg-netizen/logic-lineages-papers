@@ -1,0 +1,38 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawPrograms.lean:13:92: error: unexpected token ':'; expected ')'
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawPrograms.lean:37:57: error: unexpected token ':'; expected ')'
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawPrograms.lean:62:48: error: Type mismatch
+  (0, [], 0, 0, Code.formula q.2)
+has type
+  ?m.37 × List ?m.41 × ?m.44 × ?m.48 × ℕ
+but is expected to have type
+  ℕ
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawPrograms.lean:62:78: error: Type mismatch
+  Descriptor
+has type
+  Type
+of sort `Type 1` but is expected to have type
+  ℕ
+of sort `Type`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawPrograms.lean:62:18: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Primcodable Std.Legacy.Range
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawPrograms.lean:65:27: error: Type mismatch
+  fun q => List.map (fun i => (1, q.1, i, 0, Code.formula q.2)) (inactive q.1 q.2)
+has type
+  (q : Input) → List (?m.180 q × List ℕ × ℕ × ?m.181 q × ℕ)
+but is expected to have type
+  List Descriptor
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawPrograms.lean:67:6: error: Application type mismatch: The argument
+  Computable.pair (Computable.const 1)
+    (Computable.pair (Computable.comp Computable.fst Computable.fst)
+      (Computable.pair Computable.snd (Computable.pair (Computable.const 0) (Computable.comp code Computable.fst))))
+has type
+  Computable fun a => (1, a.1.1, a.2, 0, Code.formula a.1.2)
+but is expected to have type
+  Computable₂ ?m.197
+in the application
+  mapC 0 (Primrec.to_comp inactive_primitive)
+    (Computable.pair (Computable.const 1)
+      (Computable.pair (Computable.comp Computable.fst Computable.fst)
+        (Computable.pair Computable.snd (Computable.pair (Computable.const 0) (Computable.comp code Computable.fst)))))

@@ -1,0 +1,5 @@
+# Original named context coverage
+
+Receipt 1794996449344711634-5 first pass under original core caps; six coverage/eight structural pins unchanged, four exact standard-only aliases. The raw all-environment ordinary encoder equivalence is proved by actual syntax induction. Source NamedContextTyped induction derives all DB ContextTyped head sibling typing/validity/ordinariness through checked named bridges, with actual arity equation and every capturing named binder. The two named filled comparison endpoints use the checked literal NamedFill equality and genuine weak/strict context proofs, not an assumed comparison correspondence.
+
+Source constructors are exhaustive: the hole, each literal argument position in every original ordinary head (native application included), and each named abstraction. All fixed siblings are source ordinary well-typed valid terms, and no binder is required fresh for the hole. No full four-way source stability acceptance until fresh assembly gate and final review.

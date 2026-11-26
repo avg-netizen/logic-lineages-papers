@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullThetaEntryProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullThetaEntry.StatementChecks
+theorem fixed_completeEntry : Targets.CompleteEntry := completeEntry
+#audit_namespace LogicLineages.CartierObserverCurrent.FullThetaEntry.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullThetaEntry.StatementChecks

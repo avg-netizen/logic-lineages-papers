@@ -1,0 +1,63 @@
+{
+  "status": "source-only narrow import recut; native not attempted on old source because external cache preflight stopped",
+  "immutable_original_commit": "13ced73cf3db8e38d93be3120fcaf4eb9aece142",
+  "failed_log_sha256": "3796bf741c6a1ab1196e6df9175fc8cfdd0c37dc9c91126a9d851c4d4317f13d",
+  "exact_first_diagnostic": "RuntimeError: Cannot identify external cached import: Mathlib.Tactic.LinearCombination",
+  "no_native_receipt_for_preflight_failure": true,
+  "original_author_manifest": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-ZERO-CLASS-CONCRETE-ASSEMBLY-AUTHOR-MANIFEST.json": "94c7d0ba480677ee1c5be1fc0dc13eb3760e71e34d8d977c153664508806f5ce"
+  },
+  "gate": "LogicLineages.PermittedControl.ActualZeroClassConcreteAssemblyStatementChecks",
+  "unchanged_exact_target_sha256": "d862dfb6b6488118513007b967b4ce0df12b13f55f36f8cfe5fbe5ae5999f8a3",
+  "recut_sources_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassConcreteAssemblyCohortProof.lean": "995d2f9b5e0bf244577ceb4d5d3dd1dfce7d9e17ccc8d110cb8fca11df72b19d",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassConcreteAssemblyPairNarrowProof.lean": "e6f98e4669e44e85696be3f290752458a45be40a3f8ff4c94c465c050ec46469",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassConcreteAssemblyTransferNarrowProof.lean": "2492d1a6038a034a3cfbfe065b839eb3a2a9f15b70cfe459fe4bd4b7167bfe07"
+  },
+  "reproduced_prior_source_and_current_bridge_pins": {
+    "formalization/LogicLineages/PermittedControl/CountTransferProof.lean": "8bd3a40c33fdbd3c6a269a526f77d60c4f31ab8eec6d7ffe4480cd865aa340aa",
+    "formalization/LogicLineages/PermittedControl/ConcreteCountPairReplacementProof.lean": "2c70a43c095c213b889094a3981186ed7f4894e18d04cd3e2a2f578687805920",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassCohortTransferProof.lean": "af14954c40f81ff4a7bdc592e2277c3682d013821bce3fcb7cd7ecfcc749379f",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassCohortTransferPairProof.lean": "131578f0ee24659fca0d74ce640535089ada047ac5521b1dbeb313904d99296d",
+    "formalization/LogicLineages/PermittedControl/GapInputFoundationProof.lean": "0e6d3b2410331954039eebedd407d08823386fdca741a80fb00b37d476145a06",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassOutsideRankedColumnsProof.lean": "f1bb3c3af4e2f1aae25fb7d712506daa47746488f62edc86614e4a8602ae1f33",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedDispositionAdmissibilityProof.lean": "e407b40b8763663afda98b092316fb1b56ba6d75bca67d0e0a0cd49dfdeb636c",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedDispositionSumsProof.lean": "51e0655b6c136716e99618a7325e3d43669729391289976897e7ebeddaa18a2c"
+  },
+  "zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-ZERO-CLASS-CONCRETE-ASSEMBLY-IMPORT-RECUT-01.patch",
+  "patch_sha256": "6c2af973a36ebee6d5879a7bcfc73c76705d730455cab9e660de12d8bbf47999",
+  "inverse": "Reverse the patch: only deletes the two new leaves and restores the original cohort leaf. Cohort inverse bytes are pinned by immutable author manifest.",
+  "static_closure": {
+    "preflight_old_local_modules": 437,
+    "recut_local_modules": 433,
+    "unchanged_target_only_local_modules": 167,
+    "removed_local_modules": [
+      "LogicLineages.PermittedControl.ActualZeroClassCohortTransferPairProof",
+      "LogicLineages.PermittedControl.ActualZeroClassCohortTransferProof",
+      "LogicLineages.PermittedControl.ConcreteCountPairReplacementProof",
+      "LogicLineages.PermittedControl.ConcreteCountPairReplacementStatementChecks",
+      "LogicLineages.PermittedControl.CountTransferProof",
+      "LogicLineages.PermittedControl.ThresholdNumericProgramsProof"
+    ],
+    "added_local_modules": [
+      "LogicLineages.PermittedControl.ActualZeroClassConcreteAssemblyPairNarrowProof",
+      "LogicLineages.PermittedControl.ActualZeroClassConcreteAssemblyTransferNarrowProof"
+    ],
+    "old_blocker_import_path": [
+      "LogicLineages.PermittedControl.ActualZeroClassConcreteAssemblyStatementChecks",
+      "LogicLineages.PermittedControl.ActualZeroClassConcreteAssemblyProof",
+      "LogicLineages.PermittedControl.ActualZeroClassConcreteAssemblyCohortProof",
+      "LogicLineages.PermittedControl.ActualZeroClassCohortTransferProof",
+      "LogicLineages.PermittedControl.ActualZeroClassCohortTransferPairProof",
+      "LogicLineages.PermittedControl.ConcreteCountPairReplacementStatementChecks",
+      "LogicLineages.PermittedControl.ConcreteCountPairReplacementProof",
+      "LogicLineages.PermittedControl.CountTransferProof",
+      "Mathlib.Tactic.LinearCombination"
+    ],
+    "new_external_imports": [],
+    "removed_external_imports": [
+      "Mathlib.Tactic.LinearCombination"
+    ]
+  },
+  "math_scope": "Copy only already defined semantic rank transfer and distinct-gap clauses and the already checked actual pair/cohort proof path. No code effectivity, class polynomial identity or other unrelated requirement; no frozen proposition or earlier module changes."
+}

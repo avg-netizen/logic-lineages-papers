@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullOmegaBlockProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullOmegaBlock.StatementChecks
+theorem fixed_completeOmegaBlock : Targets.CompleteOmegaBlock := completeOmegaBlock
+#audit_namespace LogicLineages.CartierObserverCurrent.FullOmegaBlock.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullOmegaBlock.StatementChecks

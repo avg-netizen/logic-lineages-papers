@@ -1,0 +1,44 @@
+{
+  "status": "source-only one-term proof repair; fresh native gate pending",
+  "failed_receipt": "1795284669113000922-9264",
+  "failed_archive": "formalization/verification/continuation-2026-11-21/second-recovery-p17-prepared-semantic-failed-native-1795284669113000922-9264/exact-failed-edition.zip",
+  "failed_archive_sha256": "c0e3c9bfed04fdefe7521d6d1ba244be45b6734d613cea8efa0df1e3157e6dab",
+  "changed_source": "formalization/LogicLineages/PermittedControl/PreparedStripReconstructionHitProof.lean",
+  "old_sha256": "28b9549bf70bc9cd60f7a1f07038758d66c312e8f1327a79a65f7d766e395457",
+  "new_sha256": "7d5759f8cdd1c15585f639a6ed5602907e8c58d70e33cb8ec737c2d34263e23f",
+  "patch": "formalization/verification/continuation-2026-11-21/PAPER17-PREPARED-STRIP-RECONSTRUCTION-SEMANTIC-REPAIR-01.patch",
+  "patch_sha256": "864eb03eb02f0fd29d0768f25d953d9f2aa5c4afac877a3c5e3f0a44c628f568",
+  "inverse": {
+    "before": "        exact Or.inr \u27e8v,hx,hread,he.symm\u27e9",
+    "after": "        exact Or.inr \u27e8v,hx,rfl,he.symm\u27e9",
+    "archive_bytes_roundtrip_verified": true
+  },
+  "reason": "After cases rewrites the required successful read equality, its proof is reflexivity, not the unreduced equation hread. No theorem statement, imports, definitions, other proof leaf, or checker changes.",
+  "unchanged_author_manifest": {
+    "formalization/verification/continuation-2026-11-21/PAPER17-PREPARED-STRIP-RECONSTRUCTION-SEMANTIC-AUTHOR-MANIFEST.json": "f29fc6439dc80c457c0f9a6e2ccdfd17a281600f75a6c5ef9311209720fe5939"
+  },
+  "unchanged_target_freeze": {
+    "formalization/verification/continuation-2026-11-21/PAPER17-PREPARED-STRIP-RECONSTRUCTION-FREEZE.json": "249cf22e7baa3cd6925550f556ec107a08b64823a3743e274cb75bf914d74840"
+  },
+  "target_source_sha256": "ba68db71cbf76f0d7d89a6bfbce6b27637e7ce8bf7d51919028824a3b5330803",
+  "all_original_freeze_and_author_pins_checked_before_repair": true,
+  "updated_proof_hashes": {
+    "formalization/LogicLineages/PermittedControl/PreparedStripReconstructionHitProof.lean": "7d5759f8cdd1c15585f639a6ed5602907e8c58d70e33cb8ec737c2d34263e23f",
+    "formalization/LogicLineages/PermittedControl/PreparedStripReconstructionClosedProof.lean": "7ac240bb1912c39f387c27b0779da0ce467e03390780ebbca954ed49007240a1",
+    "formalization/LogicLineages/PermittedControl/PreparedStripReconstructionSemanticStatementChecks.lean": "2647d963de712906ccf849b6719d4b484a3ccaa8dc53e9b536d0d1fcd60397c9"
+  },
+  "unchanged_static_import_closure": {
+    "LogicLineages.PermittedControl.PreparedStripReconstructionHitProof": {
+      "count": 297,
+      "ordered_module_names_sha256": "183cd5bb9e01d1421c80e9add43876966f9a9ace5bebf673f1d22f1452f57d75"
+    },
+    "LogicLineages.PermittedControl.PreparedStripReconstructionClosedProof": {
+      "count": 313,
+      "ordered_module_names_sha256": "1f9e1577cfe2bee6f41836b960d68127ab15d26975455fce1ca05b2b851993b1"
+    },
+    "LogicLineages.PermittedControl.PreparedStripReconstructionSemanticStatementChecks": {
+      "count": 314,
+      "ordered_module_names_sha256": "0885374e1b426416cd503f745d5598b9ef532f1836fca72e25b01c3516231933"
+    }
+  }
+}

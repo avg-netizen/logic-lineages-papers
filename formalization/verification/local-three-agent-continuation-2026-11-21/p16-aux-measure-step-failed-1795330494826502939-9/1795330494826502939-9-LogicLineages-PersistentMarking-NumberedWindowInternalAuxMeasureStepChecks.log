@@ -1,0 +1,50 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxMeasureStepChecks.lean:46:29: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxMeasureStepChecks.lean:84:30: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if fn < i + 1 ∧ arg < i + 1 then ?m.218 else ?m.219
+in the target expression
+  evaluate P (evaluate lookup ((i - fn) ::ᵥ old ::ᵥ nil) ::ᵥ evaluate lookup ((i - arg) ::ᵥ old ::ᵥ nil) ::ᵥ nil) =
+    match some (6, [dom, cod, fn, arg]) with
+    | some (6, [head, head_1, fn, arg]) =>
+      if fn < i + 1 ∧ arg < i + 1 then
+        combine (evaluate lookup ((i - fn) ::ᵥ old ::ᵥ nil)) (evaluate lookup ((i - arg) ::ᵥ old ::ᵥ nil))
+      else evaluate base ((i + 1) ::ᵥ nil)
+    | x => evaluate base ((i + 1) ::ᵥ nil)
+
+case pos
+base : Program 1
+P : Program 2
+combiner : CombineCalibrated P
+i old dom cod fn arg : ℕ
+read : unpackNode (i + 1) = some (6, [dom, cod, fn, arg])
+checked : evaluate shapeCheck (args i old) = 1
+fields :
+  run (NumberedWindowInternalSparsePathEnvelope.field 0) (i + 1) = dom ∧
+    run (NumberedWindowInternalSparsePathEnvelope.field 1) (i + 1) = cod ∧
+      run (NumberedWindowInternalSparsePathEnvelope.field 2) (i + 1) = fn ∧
+        run (NumberedWindowInternalSparsePathEnvelope.field 3) (i + 1) = arg
+fnOut : evaluate (childAt 2) (args i old) = fn
+argOut : evaluate (childAt 3) (args i old) = arg
+fnSmall : fn < i + 1
+argSmall : arg < i + 1
+admitted : evaluate certain (args i old) = 1
+smaller : fn < i + 1 ∧ arg < i + 1
+⊢ evaluate P (evaluate lookup ((i - fn) ::ᵥ old ::ᵥ nil) ::ᵥ evaluate lookup ((i - arg) ::ᵥ old ::ᵥ nil) ::ᵥ nil) =
+    match some (6, [dom, cod, fn, arg]) with
+    | some (6, [head, head_1, fn, arg]) =>
+      if fn < i + 1 ∧ arg < i + 1 then
+        combine (evaluate lookup ((i - fn) ::ᵥ old ::ᵥ nil)) (evaluate lookup ((i - arg) ::ᵥ old ::ᵥ nil))
+      else evaluate base ((i + 1) ::ᵥ nil)
+    | x => evaluate base ((i + 1) ::ᵥ nil)
+'LogicLineages.PersistentMarking.NumberedWindowInternalAuxMeasureStepChecks.exact_CombineProgram' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalAuxMeasureStepChecks.exact_PhysicalAuxMeasureStep' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalAuxMeasureStepChecks.exact_PhysicalAuxMeasure' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

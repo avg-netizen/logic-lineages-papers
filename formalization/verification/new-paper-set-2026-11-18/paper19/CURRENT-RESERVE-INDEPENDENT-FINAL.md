@@ -1,0 +1,11 @@
+# Independent final: Paper19 whole reserve lemma
+
+Accept realization.tex72–137 lem:reserve with exact current p/f source grammar and common-unit observations. Original frozen two comparator modules/source map and all11complete authored leaves1328lines independently read;41frozen+11currentproof hashes independently verified. Two frozen typing elaboration repairs and two proof-only exact native repairs individually diff/inverse verified, all original failure editions preserved. No limit changes.
+
+Clean exact native1795085336209036064-2 passed/reaped under original mathlib profile. Independent recursive compiler-free verification matches461current source/artifact/input-key/log/profile/compiler modules with zeroerrors and all10exact named standard-only audits, including whole Full conjunction. Whole target pays nine contracts, not merely an accounting identity.
+
+Actual p-assigned source carriers retain their full vectors/scalars and literal operator-origin construction. Structural transported accounts keep exactly the same ordered actual carrier occurrence list (multiset refinement), not just equal heads. Finite constants are Nat but d=c−3|M| is Int, preserving negative local delta−3 adjustments. Exact actual partial denotation, arbitrary typed tracked position, zero-ground source closure/full vector covariance, and both admissible ground-partial three-operand associations are proved. Ground partial preserves labels and nondecreases c/d; no universal+2 assertion.
+
+Unconditional generated-source clauses derive actual assignment, head trees and source annotation, literal fresh account origins, partial success and source floor≥1,≥4except actual bare F, with ground-lambda floor≥5 from the actual full-vector multiplier. Arbitrary annotated scalars have no asserted positive floor. No arbitrary all-one source inhabitant. Both current actual carriers and affine-head suppliers are source-matched, not default-policy historical accounting.
+
+This closes full reserve lemma only. Original-budget ground-construction and head-graph still pending; effectiveness of raw accounting emitter and original budget scale remain future obligations. No manuscript change, full-root or CI claim.

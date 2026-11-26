@@ -1,0 +1,76 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EntryBoundsGenericSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.EntryDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationResultFoldTotalitySyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientComparisonSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedDecoderInternalLogicSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryUncoveredCount.CompareSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextInsertionSyntaxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.EntrySyntaxProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalApplicationCertificateConstructors
+open SourceComputabilityFormulaSupportProof InternalControlGraphSupportProof
+open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
+open InternalRawListRecursionSyntaxProof InternalGraphCompositionSyntaxProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open InternalBinderTransportProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
+open InternalAdditionLawsProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Entry
+open InternalQuotientComparisonSyntaxProof InternalOriginalOrderSyntaxProof
+open OriginalTypedDecoderInternalLogicSyntaxProof (equalSubst orSubst)
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114
+open PrimaryUncoveredCount.CompareSyntaxProof (boundedSubst)
+open InternalStrongInduction
+open OriginalContextInsertionSyntaxProof (lengthSubst)
+
+attribute [local irreducible] programGraph
+
+theorem fieldsSubst {alpha beta : Type} (n : Nat) (raw param entries value : OTerm alpha) (ts : alpha → OTerm beta) :
+    (fields n raw param entries value).subst (fun a => emb (ts a)) =
+      fields n (raw.subst ts) (param.subst ts) (entries.subst ts) (value.subst ts) := by
+  exact LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EntryBoundsSyntaxProof.fieldsSchemaSubst (Continuation20261115.OriginalCodeValidityGuard.check n) (Fold.weighted rankWeight) Continuation20261114.ArgumentEntriesRecursor.extract raw param entries value ts
+@[simp] theorem fieldsRename {alpha beta : Type} (n : Nat) (raw param entries value : OTerm alpha) (j : alpha → beta) :
+    (fields n raw param entries value).relabel j = fields n (raw.relabel j) (param.relabel j) (entries.relabel j) (value.relabel j) := by
+  rw [formulaRelabelAsSubst]
+  change (fields n raw param entries value).subst (fun a => emb (.var (j a))) = _
+  rw [fieldsSubst]
+  simp only [← termRelabelAsSubst]
+
+theorem atRawSubst {alpha beta : Type} (n : Nat) (raw : OTerm alpha) (ts : alpha → OTerm beta) :
+    (AtRaw n raw).subst (fun a => emb (ts a)) = AtRaw n (raw.subst ts) := by
+  exact LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EntryBoundsSyntaxProof.allSchemaSubst (Continuation20261115.OriginalCodeValidityGuard.check n) (Fold.weighted rankWeight) rawRankCode Continuation20261114.ArgumentEntriesRecursor.extract raw ts
+@[simp] theorem atRawRename {alpha beta : Type} (n : Nat) (raw : OTerm alpha) (j : alpha → beta) :
+    (AtRaw n raw).relabel j = AtRaw n (raw.relabel j) := by
+  rw [formulaRelabelAsSubst]
+  change (AtRaw n raw).subst (fun a => emb (.var (j a))) = _
+  rw [atRawSubst]
+  simp only [← termRelabelAsSubst]
+
+theorem matrixWitness {alpha : Type} (n : Nat) (raw param entries value : OTerm alpha) :
+    (matrix n raw).subst (Sum.elim Term.var (fun i => emb (![param,entries,value] i))) =
+      (fields n raw param entries value).imp (graph1 rawRankCode value raw) := by
+  exact LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EntryBoundsSyntaxProof.matrixSchemaWitness (Continuation20261115.OriginalCodeValidityGuard.check n) (Fold.weighted rankWeight) rawRankCode Continuation20261114.ArgumentEntriesRecursor.extract raw param entries value
+theorem predicateInstantiate {alpha : Type} (n : Nat) (raw : OTerm alpha) :
+    instantiate (predicate n) (emb raw) = AtRaw n raw := by
+  rw [predicate,instantiate,bindEmbedding,atRawSubst]
+  simp only [varBind]
+
+@[simp] theorem belowRawRename {alpha beta : Type} (n : Nat) (raw : OTerm alpha) (j : alpha → beta) :
+    (BelowRaw n raw).relabel j = BelowRaw n (raw.relabel j) := by
+  unfold BelowRaw
+  rw [InternalStrongInductionSyntaxProof.belowRename]
+  unfold predicate
+  rw [atRawRename]
+  rfl
+
+theorem predicateLift {alpha : Type} (n : Nat) :
+    lift (predicate (alpha := alpha) n) = predicate (alpha := alpha ⊕ Fin 1) n := by
+  unfold lift predicate
+  rw [atRawRename]
+  rfl
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.EntrySyntaxProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.EntrySyntaxProof

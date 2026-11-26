@@ -1,0 +1,21 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentNamedHeaderCertificate.Preflight
+public import LogicLineages.ComputabilityKnowledge.GorbowHeaderSubstitutionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentNamedHeaderCertificate.TemplateProof
+open GorbowSyntax GorbowPRProgram GorbowTheoryProof SixSol20261113 List.Vector
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+theorem arithmetic : ArithmeticTemplateEvaluation.Arithmetic template := by
+ change ArithmeticTemplateEvaluation.Arithmetic (GorbowRegistryTuple.headerTerm 2 0 [(.var 0 : Term 2),.var 1])
+ simp [template,GorbowNamedDefiningTheory.headerVariables,GorbowPRDefiningEquations.argumentVariables,
+  GorbowRegistryTuple.headerTerm,GorbowRegistryTuple.pairTerm,GorbowRegistryTuple.tupleTerm,
+  Term.numeral,ArithmeticTemplateEvaluation.Arithmetic]
+theorem value {ctx : Nat} (r s : Term ctx) :
+ ArithmeticTemplateEvaluation.instantiatedValue template (r ::ᵥ s ::ᵥ nil) =
+ GorbowRegistryTuple.headerTerm 2 0 [r,s] := by
+ unfold ArithmeticTemplateEvaluation.instantiatedValue template GorbowNamedDefiningTheory.headerVariables
+ rw [GorbowHeaderSubstitutionProof.headers]
+ rfl
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentNamedHeaderCertificate.TemplateProof
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentNamedHeaderCertificate.TemplateProof

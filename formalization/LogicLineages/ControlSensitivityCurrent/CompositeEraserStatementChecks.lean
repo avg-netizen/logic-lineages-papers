@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.CompositeEraserProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.CompositeEraser.StatementChecks
+theorem fixed_assignmentClosure : CompositeEraserTargets.AssignmentClosure := assignmentClosure
+theorem fixed_scalarUniqueness : CompositeEraserTargets.ScalarUniqueness := scalarUniqueness
+theorem fixed_finiteClosure : CompositeEraserTargets.FiniteClosure := finiteClosure
+#audit_namespace LogicLineages.ControlSensitivityCurrent.CompositeEraser.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.CompositeEraser.StatementChecks

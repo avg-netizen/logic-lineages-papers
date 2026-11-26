@@ -1,0 +1,20 @@
+--- TraversalDefinitions original
++++ TraversalDefinitions R1
+@@ -11,7 +11,16 @@
+ /-- Private membership-only interface. The expand child is recovered from step
+ at the final endpoint; it is NOT an added premise of the frozen target. -/
+ structure Installation {n : Nat} (p : Program n) where
+- ftag ptag ctag stag etag atag xtag dtag ltag rtag : Nat
++ ftag : Nat
++ ptag : Nat
++ ctag : Nat
++ stag : Nat
++ etag : Nat
++ atag : Nat
++ xtag : Nat
++ dtag : Nat
++ ltag : Nat
++ rtag : Nat
+  hf : (nodes p)[ftag]? = some ⟨3,UniformClosedSubstitutionRawFold.foldCode⟩
+  hp : (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩
+  hc : (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩

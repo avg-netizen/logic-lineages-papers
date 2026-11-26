@@ -1,0 +1,26 @@
+--- Arithmetic01
++++ Arithmetic02
+@@ -20,8 +20,12 @@
+ theorem mergeValue (a b : Nat) : evaluate merge (a ::ᵥ b ::ᵥ nil) =
+     Nat.pair ((Nat.unpair a).1 + (Nat.unpair b).1) (max (Nat.unpair a).2 (Nat.unpair b).2) := by
+   simp only [merge,pairOfEvaluation,addOfEvaluation,leftOfEvaluation,rightOfEvaluation,
+-    projectionEvaluation,binaryCompositionEvaluation]
++    InternalApplicationStepPeelEvaluationSupportProof.projectionEvaluation,binaryCompositionEvaluation]
+   rw [InternalEqualityTestEvaluationProof.vectorTwo,maximumValue]
++  rfl
++
++theorem pairEncoding (p : Nat × Nat) : Encodable.encode p = Nat.pair p.1 p.2 := by
++  cases p
+   rfl
+ 
+ theorem foldValue (xs : List Nat) :
+@@ -31,8 +35,7 @@
+   | nil => rfl
+   | cons head tail ih =>
+     rw [List.foldr_cons,ih,mergeValue]
+-    simp only [collectBounds,List.map_cons,List.foldr_cons,mergeBounds,Encodable.encode_prod_val,Nat.unpair_pair]
+-    rfl
++    simp only [collectBounds,List.map_cons,List.foldr_cons,mergeBounds,pairEncoding,Nat.unpair_pair]
+ 
+ theorem collectValue (raw : Nat) : evaluate collect (raw ::ᵥ nil) =
+     Encodable.encode (collectBounds (((decodeNumbers raw).getD []).map Nat.unpair)) := by

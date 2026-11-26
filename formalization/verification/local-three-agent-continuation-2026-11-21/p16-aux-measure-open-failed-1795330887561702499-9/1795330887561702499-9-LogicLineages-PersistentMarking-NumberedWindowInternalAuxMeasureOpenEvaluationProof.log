@@ -1,0 +1,45 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxMeasureOpenEvaluationProof.lean:24:5: error: unknown namespace `ID1Completion.InternalAcceptanceConjunctionProof`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxMeasureOpenEvaluationProof.lean:29:5: error: unknown namespace `ID1Completion.GuardedSourceSyntaxProof`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxMeasureOpenEvaluationProof.lean:50:101: error: unsolved goals
+α β : Type
+base : Program 1
+P : Program 2
+out raw : OTerm α
+j : α → β
+⊢ programGraph (selectedMeasure (measureUpdate base P)) (Term.relabel j out) (Fin.cons (Term.relabel j raw) Fin.elim0) =
+    programGraph (selectedMeasure (measureUpdate base P)) (Term.relabel j out) ![Term.relabel j raw]
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxMeasureOpenEvaluationProof.lean:62:79: error(lean.unknownIdentifier): Unknown identifier `numeralRename`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxMeasureOpenEvaluationProof.lean:78:107: error: Application type mismatch: The argument
+  table
+has type
+  Nonempty
+    (Derivation body Δ
+      (programGraph (scratchTable (constantZero 2) R) old
+        ![NumberedWindowInternalSparsePair.pairTerm (Term.relabel j (numeral 6))
+            (NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof.packedBody
+              [Term.relabel j dom, Term.relabel j cod, Term.relabel j fn, Term.relabel j arg]),
+          z, z]))
+but is expected to have type
+  Nonempty (Derivation body Δ (NumberedWindowInternalAuxExchangeMemoOpenTableTargets.tableAt R old prior))
+in the application
+  slotReports R 2 fn' (Term.relabel j mf) prior old fields.key fields.fnField earlier.left fnRow table
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxMeasureOpenEvaluationProof.lean:79:111: error: Application type mismatch: The argument
+  table
+has type
+  Nonempty
+    (Derivation body Δ
+      (programGraph (scratchTable (constantZero 2) R) old
+        ![NumberedWindowInternalSparsePair.pairTerm (Term.relabel j (numeral 6))
+            (NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof.packedBody
+              [Term.relabel j dom, Term.relabel j cod, Term.relabel j fn, Term.relabel j arg]),
+          z, z]))
+but is expected to have type
+  Nonempty (Derivation body Δ (NumberedWindowInternalAuxExchangeMemoOpenTableTargets.tableAt R old prior))
+in the application
+  slotReports R 3 arg' (Term.relabel j ma) prior old fields.key fields.argField earlier.right argRow table
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxMeasureOpenEvaluationProof.lean:81:4: error(lean.unknownIdentifier): Unknown identifier `conjunctionAccept`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxMeasureOpenEvaluationProof.lean:53:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.

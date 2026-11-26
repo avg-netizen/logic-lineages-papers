@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.FixedEntryProgramProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_fixedEntryProgramFoundation : Targets.FixedEntryProgramFoundation := fixedEntryProgramFoundation
+#print axioms fixed_fixedEntryProgramFoundation
+end LogicLineages.PermittedControl.StatementChecks

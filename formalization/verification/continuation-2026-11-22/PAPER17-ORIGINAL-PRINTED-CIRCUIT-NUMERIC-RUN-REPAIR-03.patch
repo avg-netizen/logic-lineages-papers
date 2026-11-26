@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunTypedProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericRunTypedProof.lean
+@@ -72,2 +72,4 @@
+-          rw [run,seen,← bankExact]
+-          change EncodesRun values.length (runCode f (next,gs.map encodeGate)) (run f (bank next) gs)
++          rw [run,seen]
++          change EncodesRun values.length (runCode f (next,gs.map encodeGate))
++            (run f (Function.update (bank values) g.output n) gs)
++          rw [← bankExact]

@@ -1,0 +1,9 @@
+module
+public import LogicLineages.StandardControlCurrent.DirectGrowthProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.DirectGrowthStatementChecks
+theorem full : DirectGrowthTargets.Full := DirectGrowthProof.full
+end LogicLineages.StandardControlCurrent.DirectGrowthStatementChecks
+#audit_namespace LogicLineages.StandardControlCurrent.DirectGrowthStatementChecks
+#print axioms LogicLineages.StandardControlCurrent.DirectGrowthStatementChecks.full

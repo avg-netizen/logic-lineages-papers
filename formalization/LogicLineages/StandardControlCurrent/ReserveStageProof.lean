@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.ReserveStageTargets
+public import LogicLineages.OrdinalComparison.ReserveStageProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.ReserveStageProof
+theorem full : ReserveStageTargets.Full := OrdinalComparison.fullActualOneStageReserve
+end LogicLineages.StandardControlCurrent.ReserveStageProof

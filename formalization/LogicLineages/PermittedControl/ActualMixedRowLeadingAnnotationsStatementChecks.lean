@@ -1,0 +1,23 @@
+module
+public import LogicLineages.PermittedControl.ActualMixedRowLeadingAnnotationsTargets
+import LogicLineages.PermittedControl.ActualMixedRowLeadingAnnotationsBuildProof
+import LogicLineages.PermittedControl.ActualMixedRowLeadingAnnotationsMaximumProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualMixedRowLeadingAnnotations
+
+theorem fixed_buildActualMixedRowLeadingAnnotations : BuildActualAnnotations :=
+  buildActualAnnotations
+
+theorem fixed_largestActualMixedRowFullValue : LargestActualFull :=
+  largestActualFull
+
+theorem fixed_fullActualMixedRowLeadingAnnotations : FullActualMixedRowLeadingAnnotations :=
+  ⟨fixed_buildActualMixedRowLeadingAnnotations,fixed_largestActualMixedRowFullValue⟩
+
+#print axioms fixed_buildActualMixedRowLeadingAnnotations
+#print axioms fixed_largestActualMixedRowFullValue
+#print axioms fixed_fullActualMixedRowLeadingAnnotations
+
+end LogicLineages.PermittedControl.StatementChecks

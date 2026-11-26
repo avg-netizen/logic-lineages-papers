@@ -1,0 +1,148 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualZeroClassReplacementTermProof.lean:45:20: error: Invalid `⟨...⟩` notation: The expected type
+  orderedReads f ρ
+    (List.map Prod.fst
+      (if shortGapLength lam (prefixTarget mu) = 0 then
+            (some ((t.1, LowerOperand.count rank lam (prefixTarget mu)), i), t.1 * κ)
+          else (none, t.1 * κ + t.1 * ↑(shortGapLength lam (prefixTarget mu)))).1.toList)
+    (List.map Prod.snd
+      (if shortGapLength lam (prefixTarget mu) = 0 then
+            (some ((t.1, LowerOperand.count rank lam (prefixTarget mu)), i), t.1 * κ)
+          else (none, t.1 * κ + t.1 * ↑(shortGapLength lam (prefixTarget mu)))).1.toList)
+is not an inductive type
+
+Note: This notation can only be used when the expected type is an inductive type with a single constructor
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualZeroClassReplacementTermProof.lean:44:10: error: unsolved goals
+case pos
+f : ℕ → ℕ
+B : ℕ
+selected : SelectedWithThreshold f B
+ρ : ℕ → ℕ
+C : ℕ
+t : WeightedOperand
+v : ℕ
+actual : LowerOperandActual f ρ t.2 v
+read : lowerOperandRead f ρ t.2 = some (some v)
+i q : ℕ
+κ : ℤ
+ready : PrefixTailReady f B ρ C t (Annotation.count i q κ)
+same : f q = C
+left✝ : t.1 ≠ 0
+rank : ℕ
+lam mu : NONote
+op : t.2 = LowerOperand.count rank lam mu
+below : (↑mu).repr + Ordinal.omega0 ^ 2 ≤ (↑lam).repr
+first : FirstEntry f (countInitial (↑lam).repr (ρ rank)) ((↑mu).repr + Ordinal.omega0 ^ 2) i
+right✝ :
+  q = entryNormAt f (countInitial (↑lam).repr (ρ rank)) i ∧
+    q = f^[i] (ρ rank) ∧
+      ρ rank + i ≤ q ∧
+        κ = Targets.countCoreConstant (↑mu).repr ∧
+          2 * ↑v = ↑(f q) + 2 * (↑i + κ) ∧ ∀ (D : ℕ), f q ≤ D → (↑i + κ).natAbs ≤ D.log2 + κ.natAbs
+eta : NONote := prefixTarget mu
+etaRepr : (↑(prefixTarget mu)).repr = (↑mu).repr + Ordinal.omega0 ^ 2
+paid :
+  (i = 0 ↔ (↑(prefixTarget mu)).repr = (↑lam).repr) ∧
+    (i ≠ 0 →
+      LowerOperandActual f ρ (LowerOperand.count rank lam (prefixTarget mu)) i ∧
+        lowerOperandRead f ρ (LowerOperand.count rank lam (prefixTarget mu)) = some (some i))
+identity : ¬i = 0
+prefixActual : LowerOperandActual f ρ (LowerOperand.count rank lam (prefixTarget mu)) i
+prefixRead : lowerOperandRead f ρ (LowerOperand.count rank lam (prefixTarget mu)) = some (some i)
+long : shortGapLength lam eta = 0
+⊢ (if shortGapLength lam (prefixTarget mu) = 0 then
+          (some ((t.1, LowerOperand.count rank lam (prefixTarget mu)), i), t.1 * κ)
+        else (none, t.1 * κ + t.1 * ↑(shortGapLength lam (prefixTarget mu)))).2 +
+      (List.zipWith (fun t v => t.1 * v)
+          (List.map Prod.fst
+            (if shortGapLength lam (prefixTarget mu) = 0 then
+                  (some ((t.1, LowerOperand.count rank lam (prefixTarget mu)), i), t.1 * κ)
+                else (none, t.1 * κ + t.1 * ↑(shortGapLength lam (prefixTarget mu)))).1.toList)
+          (List.flatMap (fun a => [↑a])
+            (List.map Prod.snd
+              (if shortGapLength lam (prefixTarget mu) = 0 then
+                    (some ((t.1, LowerOperand.count rank lam (prefixTarget mu)), i), t.1 * κ)
+                  else (none, t.1 * κ + t.1 * ↑(shortGapLength lam (prefixTarget mu)))).1.toList))).sum =
+    t.1 * κ + t.1 * ↑i
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualZeroClassReplacementTermProof.lean:52:20: error: Application type mismatch: The argument
+  True.intro
+has type
+  True
+but is expected to have type
+  liftedReads f ρ
+    (if shortGapLength lam (prefixTarget mu) = 0 then
+          (some ((t.1, LowerOperand.count rank lam (prefixTarget mu)), i), t.1 * κ)
+        else (none, t.1 * κ + t.1 * ↑(shortGapLength lam (prefixTarget mu)))).1.toList
+in the application
+  And.intro True.intro
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualZeroClassReplacementTermProof.lean:47:10: error: unsolved goals
+case neg
+f : ℕ → ℕ
+B : ℕ
+selected : SelectedWithThreshold f B
+ρ : ℕ → ℕ
+C : ℕ
+t : WeightedOperand
+v : ℕ
+actual : LowerOperandActual f ρ t.2 v
+read : lowerOperandRead f ρ t.2 = some (some v)
+i q : ℕ
+κ : ℤ
+same : f q = C
+left✝ : t.1 ≠ 0
+rank : ℕ
+lam mu : NONote
+op : t.2 = LowerOperand.count rank lam mu
+below : (↑mu).repr + Ordinal.omega0 ^ 2 ≤ (↑lam).repr
+first : FirstEntry f (countInitial (↑lam).repr (ρ rank)) ((↑mu).repr + Ordinal.omega0 ^ 2) i
+right✝ :
+  q = entryNormAt f (countInitial (↑lam).repr (ρ rank)) i ∧
+    q = f^[i] (ρ rank) ∧
+      ρ rank + i ≤ q ∧
+        κ = Targets.countCoreConstant (↑mu).repr ∧
+          2 * ↑v = ↑(f q) + 2 * (↑i + κ) ∧ ∀ (D : ℕ), f q ≤ D → (↑i + κ).natAbs ≤ D.log2 + κ.natAbs
+eta : NONote := prefixTarget mu
+etaRepr : (↑(prefixTarget mu)).repr = (↑mu).repr + Ordinal.omega0 ^ 2
+paid :
+  (i = 0 ↔ (↑(prefixTarget mu)).repr = (↑lam).repr) ∧
+    (i ≠ 0 →
+      LowerOperandActual f ρ (LowerOperand.count rank lam (prefixTarget mu)) i ∧
+        lowerOperandRead f ρ (LowerOperand.count rank lam (prefixTarget mu)) = some (some i))
+identity : ¬i = 0
+prefixActual : LowerOperandActual f ρ (LowerOperand.count rank lam (prefixTarget mu)) i
+prefixRead : lowerOperandRead f ρ (LowerOperand.count rank lam (prefixTarget mu)) = some (some i)
+long : ¬shortGapLength lam eta = 0
+positive : 0 < shortGapLength lam eta
+ready :
+  f q = C →
+    i ≠ 0 →
+      0 < shortGapLength lam (prefixTarget mu) →
+        max (actualOrdinalNorm (↑lam).repr) (max (actualOrdinalNorm (↑(prefixTarget mu)).repr + 3) (max 1 B)) ≤ ρ rank
+count : i = shortGapLength lam eta
+⊢ (if shortGapLength lam (prefixTarget mu) = 0 then
+          (some ((t.1, LowerOperand.count rank lam (prefixTarget mu)), shortGapLength lam eta), t.1 * κ)
+        else (none, t.1 * κ + t.1 * ↑(shortGapLength lam (prefixTarget mu)))).2 +
+      (List.zipWith (fun t v => t.1 * v)
+          (List.map Prod.fst
+            (if shortGapLength lam (prefixTarget mu) = 0 then
+                  (some ((t.1, LowerOperand.count rank lam (prefixTarget mu)), shortGapLength lam eta), t.1 * κ)
+                else (none, t.1 * κ + t.1 * ↑(shortGapLength lam (prefixTarget mu)))).1.toList)
+          (List.flatMap (fun a => [↑a])
+            (List.map Prod.snd
+              (if shortGapLength lam (prefixTarget mu) = 0 then
+                    (some ((t.1, LowerOperand.count rank lam (prefixTarget mu)), shortGapLength lam eta), t.1 * κ)
+                  else (none, t.1 * κ + t.1 * ↑(shortGapLength lam (prefixTarget mu)))).1.toList))).sum =
+    t.1 * κ + t.1 * ↑(shortGapLength lam eta)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualZeroClassReplacementTermProof.lean:44:85: warning: This simp argument is unused:
+  if_pos long
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵e̵p̵l̵a̵c̵e̵O̵c̵c̵u̵r̵r̵e̵n̵c̵e̵,̵c̵o̵n̵t̵r̵i̵b̵u̵t̵i̵o̵n̵,̵i̵f̵_̵p̵o̵s̵ ̵s̵a̵m̵e̵,̵o̵p̵,̵i̵f̵_̵n̵e̵g̵ ̵i̵d̵e̵n̵t̵i̵t̵y̵,̵i̵f̵_̵p̵o̵s̵ ̵l̵o̵n̵g̵]̵[̲r̲e̲p̲l̲a̲c̲e̲O̲c̲c̲u̲r̲r̲e̲n̲c̲e̲,̲ ̲c̲o̲n̲t̲r̲i̲b̲u̲t̲i̲o̲n̲,̲ ̲i̲f̲_̲p̲o̲s̲ ̲s̲a̲m̲e̲,̲ ̲o̲p̲,̲ ̲i̲f̲_̲n̲e̲g̲ ̲i̲d̲e̲n̲t̲i̲t̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualZeroClassReplacementTermProof.lean:51:85: warning: This simp argument is unused:
+  if_neg long
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵e̵p̵l̵a̵c̵e̵O̵c̵c̵u̵r̵r̵e̵n̵c̵e̵,̵c̵o̵n̵t̵r̵i̵b̵u̵t̵i̵o̵n̵,̵i̵f̵_̵p̵o̵s̵ ̵s̵a̵m̵e̵,̵o̵p̵,̵i̵f̵_̵n̵e̵g̵ ̵i̵d̵e̵n̵t̵i̵t̵y̵,̵i̵f̵_̵n̵e̵g̵ ̵l̵o̵n̵g̵]̵[̲r̲e̲p̲l̲a̲c̲e̲O̲c̲c̲u̲r̲r̲e̲n̲c̲e̲,̲ ̲c̲o̲n̲t̲r̲i̲b̲u̲t̲i̲o̲n̲,̲ ̲i̲f̲_̲p̲o̲s̲ ̲s̲a̲m̲e̲,̲ ̲o̲p̲,̲ ̲i̲f̲_̲n̲e̲g̲ ̲i̲d̲e̲n̲t̲i̲t̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,33 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPrimitiveGateGuardProof.lean:51:2: error: unsolved goals
+case mpr.eq
+Γ : List Ty
+a✝ b✝ : Port Γ
+⊢ (encodePort a✝ = 0 ∨ RawValidator.variable (List.map SyntaxCode.typeCode Γ) 0 (encodePort a✝ - 1) = true) ∧
+    (encodePort b✝ = 0 ∨ RawValidator.variable (List.map SyntaxCode.typeCode Γ) 0 (encodePort b✝ - 1) = true)
+
+case mpr.add
+Γ : List Ty
+a✝ b✝ c✝ : Port Γ
+⊢ ((encodePort a✝ = 0 ∨ RawValidator.variable (List.map SyntaxCode.typeCode Γ) 0 (encodePort a✝ - 1) = true) ∧
+      (encodePort b✝ = 0 ∨ RawValidator.variable (List.map SyntaxCode.typeCode Γ) 0 (encodePort b✝ - 1) = true)) ∧
+    (encodePort c✝ = 0 ∨ RawValidator.variable (List.map SyntaxCode.typeCode Γ) 0 (encodePort c✝ - 1) = true)
+
+case mpr.sort
+Γ : List Ty
+a✝ b✝ low✝ high✝ : Port Γ
+⊢ (((encodePort a✝ = 0 ∨ RawValidator.variable (List.map SyntaxCode.typeCode Γ) 0 (encodePort a✝ - 1) = true) ∧
+        (encodePort b✝ = 0 ∨ RawValidator.variable (List.map SyntaxCode.typeCode Γ) 0 (encodePort b✝ - 1) = true)) ∧
+      (encodePort low✝ = 0 ∨ RawValidator.variable (List.map SyntaxCode.typeCode Γ) 0 (encodePort low✝ - 1) = true)) ∧
+    (encodePort high✝ = 0 ∨ RawValidator.variable (List.map SyntaxCode.typeCode Γ) 0 (encodePort high✝ - 1) = true)
+
+case mpr.one
+Γ : List Ty
+a✝ : Port Γ
+⊢ encodePort a✝ = 0 ∨ RawValidator.variable (List.map SyntaxCode.typeCode Γ) 0 (encodePort a✝ - 1) = true
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPrimitiveGateGuardProof.lean:52:45: warning: This simp argument is unused:
+  port_guard_typed
+
+Hint: Omit it from the simp argument list.
+  simp [encodeGate, gateGuard, port_̵g̵u̵a̵r̵d̵_̵t̵y̵p̵e̵d̵,̵ ̵p̵o̵r̵t̵Guard]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

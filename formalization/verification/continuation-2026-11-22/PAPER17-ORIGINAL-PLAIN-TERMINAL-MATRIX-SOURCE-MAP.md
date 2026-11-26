@@ -1,0 +1,8 @@
+# Paper 17 — original plain terminal as an ordered signed suffix
+
+Source: [arithmetic.tex](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex), in particular the signed terminal and guard treatment and lines 247–252 on literal substitution through the matrix. This support leaf is for the existing typed variable-only `NormalForm.Formula` terminal (#999) using its exact existing `PlainPreparedFormula` admission, not a translation of the arbitrary bounded-source terminal.
+
+- [Targets](../../LogicLineages/PermittedControl/OriginalPlainTerminalMatrixTargets.lean): literal `LinearRows.atoms` occurrence order, original signed constants, coefficients, coordinate names, and modulus `m+1`. Repeated atoms remain separate. Nonlinear summands are excluded by the original admission, even with zero coefficients.
+- [Snapshot](../../LogicLineages/PermittedControl/OriginalPlainTerminalMatrixSnapshotProof.lean): the translated rows produce exactly the original signed values and each atom's true or false bit at one shared assignment. No requirement that all terminal rows be true.
+- [Boolean evaluation](../../LogicLineages/PermittedControl/OriginalPlainTerminalMatrixProof.lean): each connective consumes exactly its syntactic subtrees' bits in order, using the original Boolean formula; only its final answer is compared to the requested polarity. No DNF expansion, reordering, deletion or negation of any computational prefix.
+- [Exact checks](../../LogicLineages/PermittedControl/OriginalPlainTerminalMatrixStatementChecks.lean). No raw effectivity assertion, quantified decision, or bounded-source-to-matrix claim.

@@ -1,0 +1,11 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentUnaryChainDefinitions.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentUnaryChainDefinitions.lean
+@@ -4,7 +4,7 @@
+ @[expose] public section
+ namespace LogicLineages.ControlSensitivityCurrent.CurrentUnaryChain
+ 
+-open LogicLineages.OrdinalComparison.Source
++open LogicLineages.OrdinalComparison LogicLineages.OrdinalComparison.Source
+ open LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemantics
+ 
+ abbrev Unary (Γ : List Ty) := OriginalTerm Γ (.arrow .ground .ground)

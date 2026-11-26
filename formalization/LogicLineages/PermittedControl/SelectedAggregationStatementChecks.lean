@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.SelectedAggregationWeakProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_selectedAggregation : SelectedAggregationTargets.SelectedAggregation :=
+  SelectedAggregation.Proof.selectedAggregation
+#print axioms fixed_selectedAggregation
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,100 @@
+--- a/formalization/LogicLineages/PermittedControl/HighFieldComparisonPrimitiveProof.lean
++++ b/formalization/LogicLineages/PermittedControl/HighFieldComparisonPrimitiveProof.lean
+@@ -42,23 +42,72 @@
+   exact Primrec.ite (Primrec.eq.comp ht (Primrec.const 0)) (Primrec.const 0)
+     (shortFieldPreprocessingEffective.2.2.2.1.comp (hl.pair (hm.pair hB)))
+ 
++/-- Pure max composition over five opaque function arguments. This
++elaborates independently of the notation and certificate routines. -/
++private theorem stagedMaxBound_primrec {α : Type*} [Primcodable α]
++    {a b c d e : α → Nat} (ha : Primrec a) (hb : Primrec b) (hc : Primrec c)
++    (hd : Primrec d) (he : Primrec e) :
++    Primrec (fun p => max (max (a p) (b p)) (max (c p) (max (d p) (e p)))) := by
++  have hab := Primrec.nat_max.comp ha hb
++  have hde := Primrec.nat_max.comp hd he
++  have hcde := Primrec.nat_max.comp hc hde
++  exact Primrec.nat_max.comp hab hcde
++
++private abbrev BoundArgs := Nat × LongFieldCode × LongFieldCode
++
++private def budgetArg (p : BoundArgs) : Nat := p.1
++private def leftFieldArg (p : BoundArgs) : LongFieldCode := p.2.1
++private def rightFieldArg (p : BoundArgs) : LongFieldCode := p.2.2
++private def normalizedLeftFieldArg (p : BoundArgs) : LongFieldCode :=
++  normalizeHighFieldCode (leftFieldArg p)
++private def normalizedRightFieldArg (p : BoundArgs) : LongFieldCode :=
++  normalizeHighFieldCode (rightFieldArg p)
++
++private def forwardBoundArgs (p : BoundArgs) : BoundArgs :=
++  (budgetArg p, normalizedLeftFieldArg p, normalizedRightFieldArg p)
++private def reverseBoundArgs (p : BoundArgs) : BoundArgs :=
++  (budgetArg p, normalizedRightFieldArg p, normalizedLeftFieldArg p)
++
++private theorem budgetArg_primrec : Primrec budgetArg := Primrec.fst
++private theorem leftFieldArg_primrec : Primrec leftFieldArg := Primrec.fst.comp Primrec.snd
++private theorem rightFieldArg_primrec : Primrec rightFieldArg := Primrec.snd.comp Primrec.snd
++private theorem normalizedLeftFieldArg_primrec : Primrec normalizedLeftFieldArg :=
++  normalizeHighFieldCode_primrec.comp leftFieldArg_primrec
++private theorem normalizedRightFieldArg_primrec : Primrec normalizedRightFieldArg :=
++  normalizeHighFieldCode_primrec.comp rightFieldArg_primrec
++private theorem forwardBoundArgs_primrec : Primrec forwardBoundArgs :=
++  budgetArg_primrec.pair (normalizedLeftFieldArg_primrec.pair normalizedRightFieldArg_primrec)
++private theorem reverseBoundArgs_primrec : Primrec reverseBoundArgs :=
++  budgetArg_primrec.pair (normalizedRightFieldArg_primrec.pair normalizedLeftFieldArg_primrec)
++
++private theorem shortLeftBound_primrec :
++    Primrec (fun p : BoundArgs => highShortBoundCode (budgetArg p) (leftFieldArg p)) :=
++  highShortBoundCode_primrec.comp budgetArg_primrec leftFieldArg_primrec
++
++private theorem shortRightBound_primrec :
++    Primrec (fun p : BoundArgs => highShortBoundCode (budgetArg p) (rightFieldArg p)) :=
++  highShortBoundCode_primrec.comp budgetArg_primrec rightFieldArg_primrec
++
++private theorem sameHighBound_primrec :
++    Primrec (fun p : BoundArgs => longFieldSameBoundCode
++      (forwardBoundArgs p).1 (forwardBoundArgs p).2.1 (forwardBoundArgs p).2.2) :=
++  longFieldSameBoundCode_primrec.comp forwardBoundArgs_primrec
++
++private theorem forwardHighBound_primrec :
++    Primrec (fun p : BoundArgs => longFieldDistinctBoundCode
++      (forwardBoundArgs p).1 (forwardBoundArgs p).2.1 (forwardBoundArgs p).2.2) :=
++  longFieldDistinctBoundCode_primrec.comp forwardBoundArgs_primrec
++
++private theorem reverseHighBound_primrec :
++    Primrec (fun p : BoundArgs => longFieldDistinctBoundCode
++      (reverseBoundArgs p).1 (reverseBoundArgs p).2.1 (reverseBoundArgs p).2.2) :=
++  longFieldDistinctBoundCode_primrec.comp reverseBoundArgs_primrec
++
+ private theorem highFieldComparisonBoundCode_primrec :
+     Primrec (fun p : Nat × LongFieldCode × LongFieldCode =>
+       highFieldComparisonBoundCode p.1 p.2.1 p.2.2) := by
+-  have hB : Primrec (fun p : Nat × LongFieldCode × LongFieldCode => p.1) := Primrec.fst
+-  have hP : Primrec (fun p : Nat × LongFieldCode × LongFieldCode => p.2.1) :=
+-    Primrec.fst.comp Primrec.snd
+-  have hQ : Primrec (fun p : Nat × LongFieldCode × LongFieldCode => p.2.2) :=
+-    Primrec.snd.comp Primrec.snd
+-  have hNP := normalizeHighFieldCode_primrec.comp hP
+-  have hNQ := normalizeHighFieldCode_primrec.comp hQ
+-  have hPQ := hB.pair (hNP.pair hNQ)
+-  have hQP := hB.pair (hNQ.pair hNP)
+-  exact Primrec.nat_max.comp
+-    (Primrec.nat_max.comp (highShortBoundCode_primrec.comp hB hP) (highShortBoundCode_primrec.comp hB hQ))
+-    (Primrec.nat_max.comp (longFieldSameBoundCode_primrec.comp hPQ)
+-      (Primrec.nat_max.comp (longFieldDistinctBoundCode_primrec.comp hPQ)
+-        (longFieldDistinctBoundCode_primrec.comp hQP)))
++  exact (stagedMaxBound_primrec shortLeftBound_primrec shortRightBound_primrec sameHighBound_primrec
++    forwardHighBound_primrec reverseHighBound_primrec).of_eq (fun _ => rfl)
+ 
+ private theorem flipHighComparisonAnswer_primrec : Primrec₂ flipHighComparisonAnswer := by
+   exact Primrec.ite (Primrec.eq.comp Primrec.fst (Primrec.const 0)) Primrec.snd
+--- a/formalization/verification/continuation-2026-11-21/PAPER17-HIGH-FIELD-COMPARISON-AUTHOR-MANIFEST.json
++++ b/formalization/verification/continuation-2026-11-21/PAPER17-HIGH-FIELD-COMPARISON-AUTHOR-MANIFEST.json
+@@ -11,7 +11,7 @@
+     "pins_rechecked": 18
+   },
+   "new_source_hashes": {
+-    "formalization/LogicLineages/PermittedControl/HighFieldComparisonPrimitiveProof.lean": "5e0ea5cd9177ed4bf5d6bf6bcf1ba2908586cabb9c9263dc9c918f7acfa2dab0",
++    "formalization/LogicLineages/PermittedControl/HighFieldComparisonPrimitiveProof.lean": "b6633a5219439020f36fe97fe8afb99899413582807b89a3d9baf8adaa3c2f74",
+     "formalization/LogicLineages/PermittedControl/HighFieldComparisonCalibrationProof.lean": "133e8cd6d5d7a21efa1bdd802f5a71de6d74d72c619383815dafe87a557da711",
+     "formalization/LogicLineages/PermittedControl/HighFieldComparisonActualProof.lean": "3c72423057398591e71a5acebec932930787b62728a7c286884c14e236003602",
+     "formalization/LogicLineages/PermittedControl/HighFieldComparisonStatementChecks.lean": "196a8f6353df684bd4c169869cca36a490067c53096aedab8fdd0542fa4ace30"

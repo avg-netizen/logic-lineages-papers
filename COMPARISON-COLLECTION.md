@@ -1,4 +1,12 @@
-# The Wilken–Weiermann comparison collection
+# The earlier six-paper comparison collection
+
+**Historical organization.** Start with the [current five-paper guide](COMPARISON-RESOLUTION-GUIDE.md).
+The identity and multivariate papers are now combined; source expressivity and
+modular descent have revised accounts; the two core papers give the current
+structural and permitted-control results. This page preserves the earlier
+reading map and its version-specific scope. In particular, entry 06 has a
+[checked composition obstruction](archive/comparison-editions-pre-2026-11-17/06-godel-t-termination-ordering/STATUS.md);
+its older claims must not be treated as the current structural proof.
 
 These six working manuscripts explain and prove the established parts of a
 research programme around Wilken–Weiermann's ordinal assignments to Gödel's T.
@@ -16,12 +24,12 @@ research note is a proof dependency.
 
 | Read | Manuscript | Role |
 |---|---|---|
-| First | [Foundations and guide](05-wilken-weiermann-foundations/paper.pdf) | Defines the source calculus, canonical assignment and remaining problem; proves the evaluator, counts and source invariant. |
-| Independently | [Termination ordering](06-godel-t-termination-ordering/paper.pdf) | A syntactic ordering, its comparator, stability and height; a different contract from numerical assignment comparison. |
-| After foundations | [Equality and one variable](07-collapse-equality-and-one-variable/paper.pdf) | Identity separation, finite zeros, principal kernels and a complete eventual-sign algorithm. |
-| After foundations | [Descent and modular counts](10-collapse-descent-and-modular-counts/paper.pdf) | Partition congruences, moving-prefix counts and full-state versus scalar observations. |
-| With the partition-transfer theorem | [Multivariate comparison](08-multivariate-collapse-comparison/paper.pdf) | Positive decision classes, ranked cancellation and source consumers. |
-| After foundations | [Actual-source expressivity](09-canonical-source-expressivity/paper.pdf) | Arithmetic interpretation, source construction and precisely scoped negative boundaries. |
+| First | [Foundations and guide](archive/comparison-editions-pre-2026-11-17/05-wilken-weiermann-foundations/paper.pdf) | Defines the source calculus, canonical assignment and remaining problem; proves the evaluator, counts and source invariant. |
+| Independently | [Termination ordering](archive/comparison-editions-pre-2026-11-17/06-godel-t-termination-ordering/paper.pdf) | A syntactic ordering, its comparator, stability and height; a different contract from numerical assignment comparison. |
+| After foundations | [Equality and one variable](archive/comparison-editions-pre-2026-11-17/07-collapse-equality-and-one-variable/paper.pdf) | Identity separation, finite zeros, principal kernels and a complete eventual-sign algorithm. |
+| After foundations | [Descent and modular counts](archive/comparison-editions-pre-2026-11-17/10-collapse-descent-and-modular-counts/paper.pdf) | Partition congruences, moving-prefix counts and full-state versus scalar observations. |
+| With the partition-transfer theorem | [Multivariate comparison](archive/comparison-editions-pre-2026-11-17/08-multivariate-collapse-comparison/paper.pdf) | Positive decision classes, ranked cancellation and source consumers. |
+| After foundations | [Actual-source expressivity](archive/comparison-editions-pre-2026-11-17/09-canonical-source-expressivity/paper.pdf) | Arithmetic interpretation, source construction and precisely scoped negative boundaries. |
 
 At theorem level the dependencies are acyclic. The shared foundation does not
 use its later overview of the companions to prove its foundational results.
@@ -74,3 +82,4 @@ no independent human audit, established novelty or journal acceptance is
 claimed. The separate formalization register records checked components;
 these six complete manuscripts and the source repair are not claimed to be
 fully Lean verified.
+

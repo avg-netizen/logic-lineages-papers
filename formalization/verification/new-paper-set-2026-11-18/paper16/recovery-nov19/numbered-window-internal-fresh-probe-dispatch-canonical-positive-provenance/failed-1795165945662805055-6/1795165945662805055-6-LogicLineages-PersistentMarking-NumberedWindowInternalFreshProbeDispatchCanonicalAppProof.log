@@ -1,0 +1,68 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchCanonicalAppProof.lean:51:70: error: unsolved goals
+S : Spine.Signature
+K Γ : List Ty
+σ τ : Ty
+i j : Nat
+hq : canonicalBit S K { context := Γ, result := σ.arrow τ, least := i } = true
+hu : canonicalBit S K { context := Γ, result := σ, least := j } = true
+hqc :
+  NumberedWindowScalarAlgorithm.canonical (fixed S K) (address { context := Γ, result := σ.arrow τ, least := i }) = true
+huc : NumberedWindowScalarAlgorithm.canonical (fixed S K) (address { context := Γ, result := σ, least := j }) = true
+⊢ (if
+        (NumberedWindowScalarAlgorithm.canonical (fixed S K) (List.map encodeTy Γ, encodeTy (σ.arrow τ), i) &&
+                NumberedWindowScalarAlgorithm.canonical (fixed S K) (List.map encodeTy Γ, encodeTy σ, j) &&
+              true &&
+            true) =
+          true then
+      Option.map (fun k => packNode 3 [pack (List.map encodeTy Γ), encodeTy τ, k])
+        (NumberedWindowScalarAlgorithm.least (fixed S K) (List.map encodeTy Γ) (encodeTy τ)
+          (packNode 6 [encodeTy σ, encodeTy τ, i, j]))
+    else none) =
+    Option.map (fun k => packNode 3 [pack (List.map encodeTy Γ), encodeTy τ, k])
+      (NumberedWindowScalarAlgorithm.least (fixed S K) (List.map encodeTy Γ) (encodeTy τ)
+        (packNode 6 [encodeTy σ, encodeTy τ, i, j]))
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchCanonicalAppProof.lean:57:4: warning: This simp argument is unused:
+  hqc
+
+Hint: Omit it from the simp argument list.
+  simp only [Option.bind_eq_bind, ̲Option.bind_some, ̲applyAddresses, ̲arrowAt, ̲address, ̲h̲u̲c̲,̲
+      h̵q̵c̵,̵h̵u̵c̵,̵beq_self_eq_true, ̲Bool.true_and, ̲if_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchCanonicalAppProof.lean:57:8: warning: This simp argument is unused:
+  huc
+
+Hint: Omit it from the simp argument list.
+  simp only [Option.bind_eq_bind, ̲Option.bind_some, ̲applyAddresses, ̲arrowAt, ̲address, ̲h̲q̲c̲,̲
+      h̵q̵c̵,̵h̵u̵c̵,̵beq_self_eq_true, ̲Bool.true_and, ̲if_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchCanonicalAppProof.lean:57:29: warning: This simp argument is unused:
+  Bool.true_and
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵e̵q̵_̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵a̵p̵p̵l̵y̵A̵d̵d̵r̵e̵s̵s̵e̵s̵,̵a̵r̵r̵o̵w̵A̵t̵,̵a̵d̵d̵r̵e̵s̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵h̵q̵c̵,̵h̵u̵c̵,̵b̵e̵q̵_̵s̵e̵l̵f̵_̵e̵q̵_̵t̵r̵u̵e̵,̵B̵o̵o̵l̵.̵t̵r̵u̵e̵_̵a̵n̵d̵,̵i̵f̵_̵t̵r̵u̵e̵]̵[̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲e̲q̲_̲b̲i̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲a̲p̲p̲l̲y̲A̲d̲d̲r̲e̲s̲s̲e̲s̲,̲ ̲a̲r̲r̲o̲w̲A̲t̲,̲ ̲a̲d̲d̲r̲e̲s̲s̲,̲ ̲h̲q̲c̲,̲ ̲h̲u̲c̲,̲
+  ̲ ̲ ̲ ̲ ̲b̲e̲q̲_̲s̲e̲l̲f̲_̲e̲q̲_̲t̲r̲u̲e̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchCanonicalAppProof.lean:57:43: warning: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵e̵q̵_̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵a̵p̵p̵l̵y̵A̵d̵d̵r̵e̵s̵s̵e̵s̵,̵a̵r̵r̵o̵w̵A̵t̵,̵a̵d̵d̵r̵e̵s̵s̵,̵
+  ̵ ̵ ̵ ̵ ̵h̵q̵c̵,̵h̵u̵c̵,̵b̵e̵q̵_̵s̵e̵l̵f̵_̵e̵q̵_̵t̵r̵u̵e̵,̵B̵o̵o̵l̵.̵t̵r̵u̵e̵_̵a̵n̵d̵,̵i̵f̵_̵t̵r̵u̵e̵]̵[̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲e̲q̲_̲b̲i̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲a̲p̲p̲l̲y̲A̲d̲d̲r̲e̲s̲s̲e̲s̲,̲ ̲a̲r̲r̲o̲w̲A̲t̲,̲ ̲a̲d̲d̲r̲e̲s̲s̲,̲ ̲h̲q̲c̲,̲ ̲h̲u̲c̲,̲
+  ̲ ̲ ̲ ̲ ̲b̲e̲q̲_̲s̲e̲l̲f̲_̲e̲q̲_̲t̲r̲u̲e̲,̲ ̲B̲o̲o̲l̲.̲t̲r̲u̲e̲_̲a̲n̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchCanonicalAppProof.lean:84:17: warning: This simp argument is unused:
+  Option.bind_eq_bind
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵e̵q̵_̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵r̵e̵s̵u̵l̵t̵P̵a̵c̵k̵]̵[̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲r̲e̲s̲u̲l̲t̲P̲a̲c̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchCanonicalAppProof.exact_CanonicalLiteralApplication' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

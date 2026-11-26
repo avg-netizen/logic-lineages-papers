@@ -1,0 +1,31 @@
+--- GraphProof FULL02
++++ GraphProof FULL03
+@@ -36,8 +36,9 @@
+  induction t with
+  | var i =>
+   cases h : e i with
+-  | inl j => simpa only [termProgram,termValue,h] using constantValue p [] raw
+-     (Encodable.encode (GorbowTermPrefixCode.encode (.var j)))
++  | inl j =>
++   simpa only [termProgram,termValue,h] using constantValue p [] raw
++    (Encodable.encode (GorbowTermPrefixCode.encode (.var j)))
+   | inr j => simpa only [termProgram,termValue,h] using projection p [] raw j
+  | zero => exact constantValue p [] raw _
+  | succ t ih => exact unaryComputes p ctag hc raw 2 _ _ ih
+@@ -51,12 +52,14 @@
+  (ha : (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩) (raw : List.Vector (Term ctx) inputs) :
+  Computes p [] (formulaProgram f e) raw (formulaValue ctag atag raw f e) := by
+  induction f generalizing depth with
+- | equal t u => exact binaryComputes p ctag atag hc ha raw 0 _ _ _ _
++ | equal t u =>
++  exact binaryComputes p ctag atag hc ha raw 0 _ _ _ _
+    (termComputes e t p ctag atag hc ha raw) (termComputes e u p ctag atag hc ha raw)
+  | universalRelation t => exact unaryComputes p ctag hc raw 1 _ _ (termComputes e t p ctag atag hc ha raw)
+  | agent t => exact unaryComputes p ctag hc raw 2 _ _ (termComputes e t p ctag atag hc ha raw)
+  | knowledgeAll t => exact unaryComputes p ctag hc raw 3 _ _ (termComputes e t p ctag atag hc ha raw)
+- | knowledge t u => exact binaryComputes p ctag atag hc ha raw 4 _ _ _ _
++ | knowledge t u =>
++  exact binaryComputes p ctag atag hc ha raw 4 _ _ _ _
+    (termComputes e t p ctag atag hc ha raw) (termComputes e u p ctag atag hc ha raw)
+  | truth t => exact unaryComputes p ctag hc raw 5 _ _ (termComputes e t p ctag atag hc ha raw)
+  | neg f ih => exact unaryComputes p ctag hc raw 6 _ _ (ih e)

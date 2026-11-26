@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationEdgeProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralQuotientGlobalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationEdgeGlobalProof
+
+/-- Add the requested-argument rule at the exact tuple already supplying
+generic quotient inversion and the complete original calibrated package. -/
+theorem actualOriginalNeutralApplicationEdgeGlobalSelection :
+    OriginalNeutralApplicationEdgeTargets.ActualOriginalNeutralApplicationEdgeGlobalSelection := by
+  intro n arity
+  obtain ⟨p,hp,hr,hpackage,hroot,hmark,hbottom,hpaired,hgeneric,hvariables⟩ :=
+    OriginalNeutralQuotientGlobalProof.actualOriginalNeutralQuotientGlobalSelection n arity
+  exact ⟨p,hp,hr,hpackage,hroot,hmark,hbottom,hpaired,hgeneric,
+    OriginalNeutralApplicationEdgeProof.actualOriginalNeutralApplicationEdgeElimination p,hvariables⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationEdgeGlobalProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationEdgeGlobalProof
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationEdgeGlobalProof.actualOriginalNeutralApplicationEdgeGlobalSelection

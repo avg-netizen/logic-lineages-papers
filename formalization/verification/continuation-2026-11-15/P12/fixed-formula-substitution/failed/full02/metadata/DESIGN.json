@@ -1,0 +1,19 @@
+{
+  "scope": "Concrete fixed-AST term and full formula substitution compiler for closed runtime raw inputs, allowing arbitrary typed bound variables and arbitrary nested quantifiers. Exact native original syntax correspondence plus unconditional internal raw constructor graphs.",
+  "correspondence": "Term prefix tags0..5 and all Formula tags0..11 copied literally from GorbowTermPrefixCode.encode and GorbowFormulaPrefixCode.encode. Original GorbowSubstitution.substitute and GorbowFormulaSubstitution.substituteFormula are native comparator endpoints. Universal function/relation and agent/knowledge/truth symbols remain uninterpreted syntax.",
+  "binder_duty": "Environment Fin n -> Sum (Fin depth) (Fin inputs) distinguishes real bound indices from closed runtime inputs. liftEnvironment introduces bound0 and increments old bound indices only. Native proof must establish assignment(liftEnvironment e) = liftSubstitute(assignment e) using closed-term renaming invariance; mere AST shape agreement is insufficient.",
+  "proof_plan": [
+    "Structural term induction gives native exact prefix encoding and actual PR-node defining-equation graph.",
+    "Structural full-formula induction with lifted typed environments pays both binder cases, all connective and nonarithmetical atom constructors.",
+    "Internal proofs use actual subtree memberships and original PR equation derivations with explicit cons/append registry coherence; arbitrary raw values have no validation/success premise.",
+    "No inference of internal acceptance from native evaluation."
+  ],
+  "next_use": "Prerequisite for a fixed general-formula original tag13 instantiation line/recognizer and internal acceptance, replacing equality-only template limitation; later finite node-equation closures require these binders.",
+  "not_claimed": [
+    "tag13 logical acceptance for full formulas",
+    "rule4 node-axiom acceptance/source enumeration index-fuel bridge",
+    "general certificate specialization and numeric MP assembly",
+    "new source admission or HB3",
+    "runtime universal syntax evaluator"
+  ]
+}

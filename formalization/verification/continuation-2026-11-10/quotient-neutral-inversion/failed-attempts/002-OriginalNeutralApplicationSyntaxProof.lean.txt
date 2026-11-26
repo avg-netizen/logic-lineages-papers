@@ -1,0 +1,34 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalOriginalUniformApplicationTypingApplicationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationSyntaxProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalOriginalUniformDescentSelection (Data)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (sucRelabel zRelabel)
+open InternalOriginalUniformApplicationTypingApplicationProof (typedGraphRename)
+open InternalParameterizedCanonicalResultFoldSyntaxProof (foldGraphRename)
+open OriginalNeutralApplication
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+theorem inputPremisesRename {alpha beta : Type} (data : Data) (window : Program 1)
+    (arrow d e function argument parameter : OTerm alpha) (j : alpha → beta) :
+    (InputPremises data window arrow d e function argument parameter).relabel j =
+      InputPremises data window (arrow.relabel j) (d.relabel j) (e.relabel j)
+        (function.relabel j) (argument.relabel j) (parameter.relabel j) := by
+  simp only [InputPremises,OriginalFunctionNeutrality.windowGraph,conjunctionRename,
+    graph1Rename,graph2Rename,typedGraphRename,InternalOriginalStepGuard.one,sucRelabel,zRelabel]
+
+theorem recoveredRename {alpha beta : Type} (data : Data)
+    (d e function argument out argumentOut parameter : OTerm alpha) (j : alpha → beta) :
+    (Recovered data d e function argument out argumentOut parameter).relabel j =
+      Recovered data (d.relabel j) (e.relabel j) (function.relabel j)
+        (argument.relabel j) (out.relabel j) (argumentOut.relabel j) (parameter.relabel j) := by
+  simp only [Recovered,conjunctionRename,foldGraphRename,graph4Rename]
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationSyntaxProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralApplicationSyntaxProof

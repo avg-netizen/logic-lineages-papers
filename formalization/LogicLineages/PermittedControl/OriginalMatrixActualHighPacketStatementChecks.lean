@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PermittedControl.OriginalMatrixActualHighPacketTargets
+import LogicLineages.PermittedControl.OriginalMatrixActualHighPacketProof
+import LogicLineages.PermittedControl.OriginalMatrixActualHighPacketBranchProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalMatrixActualHighPacket : OriginalMatrixActualHighPacket.ExactActualHighPacket :=
+  OriginalMatrixActualHighPacket.exactActualHighPacket
+
+theorem fixed_exactOriginalMatrixFamilyHighBound : OriginalMatrixActualHighPacket.ExactOriginalFamilyHighBound :=
+  OriginalMatrixActualHighPacket.exactOriginalFamilyHighBound
+
+theorem fixed_exactOriginalMatrixPaidBranchPacket : OriginalMatrixActualHighPacket.ExactOriginalPaidBranchPacket :=
+  OriginalMatrixActualHighPacket.exactOriginalPaidBranchPacket
+
+theorem fixed_fullOriginalMatrixActualHighPacket : OriginalMatrixActualHighPacket.FullOriginalMatrixActualHighPacket :=
+  ⟨fixed_exactOriginalMatrixActualHighPacket,fixed_exactOriginalMatrixFamilyHighBound,
+    fixed_exactOriginalMatrixPaidBranchPacket⟩
+
+#print axioms fixed_exactOriginalMatrixActualHighPacket
+#print axioms fixed_exactOriginalMatrixFamilyHighBound
+#print axioms fixed_exactOriginalMatrixPaidBranchPacket
+#print axioms fixed_fullOriginalMatrixActualHighPacket
+
+end LogicLineages.PermittedControl.StatementChecks

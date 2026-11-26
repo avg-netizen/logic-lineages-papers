@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityRecurrenceSourceOutputProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityRecurrenceSourceNormalizedProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityRecurrenceSourceGuardProof
+open OriginalHereditaryValidity
+open OriginalHereditaryValidityRecurrenceSourceOutputProof
+open OriginalHereditaryValidityRecurrenceSourceNormalizedProof
+
+theorem actualOriginalHereditarySourceGuardRedundancy :
+    OriginalHereditaryValidityRecurrenceTargets.ActualOriginalHereditarySourceGuardRedundancy := by
+  intro n arity data hc v
+  have hn := normalizedCalibration n arity data hc
+  exact (calibratedValidatorOutput n arity (normalizedData data) hn v).trans
+    ((hn.1 v).trans (hc.1 v).symm)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityRecurrenceSourceGuardProof

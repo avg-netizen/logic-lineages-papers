@@ -1,0 +1,18 @@
+import LogicLineages.PersistentMarking.AuxiliaryReflexivityProof
+import LogicLineages.PersistentMarking.AuxiliaryEmbeddingProof
+namespace LogicLineages.PersistentMarking.AuxiliaryInitialChecks
+
+theorem refinementReflexive : AuxiliaryTargets.RefinementReflexive := AuxiliaryReflexivityProof.refinementRefl
+theorem refinementRetyping : AuxiliaryTargets.RefinementRetyping := AuxiliaryReflexivityProof.refinementRetyping
+theorem originalWeakEmbedding : AuxiliaryTargets.OriginalWeakEmbedding := AuxiliaryEmbeddingProof.originalWeakEmbedding
+theorem originalStrictEmbedding : AuxiliaryTargets.OriginalStrictEmbedding := AuxiliaryEmbeddingProof.originalStrictEmbedding
+theorem extendedReflexive : AuxiliaryTargets.ExtendedReflexive := AuxiliaryReflexivityProof.extendedRefl
+theorem markedStrictSelf : AuxiliaryTargets.MarkedStrictSelf := AuxiliaryReflexivityProof.markedStrictSelf
+
+#print axioms refinementReflexive
+#print axioms refinementRetyping
+#print axioms originalWeakEmbedding
+#print axioms originalStrictEmbedding
+#print axioms extendedReflexive
+#print axioms markedStrictSelf
+end LogicLineages.PersistentMarking.AuxiliaryInitialChecks

@@ -1,0 +1,16 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowCoverBoundsProgramProof.lean:55:7: error: unexpected token 'calc'; expected '(', ':=', '|' or term
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowCoverBoundsProgramProof.lean:55:7: error: Missing cases:
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowCoverBoundsProgramProof.lean:47:52: error: unsolved goals
+check : List Measures × ℕ → ℕ × ℕ :=
+  fun p =>
+    (Option.map
+          (fun qr =>
+            let q := (p.1.getD qr.1 default).1;
+            let r := (p.1.getD qr.2 default).2;
+            (q.1 + 1 + r.1, max q.2 r.2))
+          (NumberedWindowPairAlgorithm.decode p.2)).getD
+      default
+prev : Primrec fun p => p.1.1
+q : Primrec fun a => (a.1.1.getD a.2.1 default).1
+r : Primrec fun a => (a.1.1.getD a.2.2 default).2
+⊢ Primrec₂ argsNext

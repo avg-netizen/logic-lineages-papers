@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.AlphaCompletenessProof
+namespace LogicLineages.PersistentMarking.AlphaCompletenessChecks
+theorem alphaExact : BridgeTargets.AlphaExact := AlphaCompletenessProof.alphaExact
+theorem decodeEncodeAlpha : BridgeTargets.DecodeEncodeAlpha := AlphaCompletenessProof.decodeEncodeAlpha
+#print axioms alphaExact
+#print axioms decodeEncodeAlpha
+end LogicLineages.PersistentMarking.AlphaCompletenessChecks

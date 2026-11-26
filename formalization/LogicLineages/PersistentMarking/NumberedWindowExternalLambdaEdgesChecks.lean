@@ -1,0 +1,13 @@
+import LogicLineages.PersistentMarking.NumberedWindowExternalLambdaApplicationEdgesProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowExternalLambdaEdgesChecks
+open NumberedWindowExternalLambdaEdgesTargets
+theorem exact_LambdaClassLiteral : LambdaClassLiteral := NumberedWindowExternalLambdaShapeProof.literal
+theorem exact_PrimaryLambdaComponents : PrimaryLambdaComponents := NumberedWindowExternalLambdaShapeProof.components
+theorem exact_LambdaEdges : LambdaEdges := NumberedWindowExternalLambdaShapeProof.edges
+theorem exact_LambdaApplicationEdges : LambdaApplicationEdges := NumberedWindowExternalLambdaApplicationEdgesProof.applied
+#print axioms exact_LambdaClassLiteral
+#print axioms exact_PrimaryLambdaComponents
+#print axioms exact_LambdaEdges
+#print axioms exact_LambdaApplicationEdges
+end LogicLineages.PersistentMarking.NumberedWindowExternalLambdaEdgesChecks

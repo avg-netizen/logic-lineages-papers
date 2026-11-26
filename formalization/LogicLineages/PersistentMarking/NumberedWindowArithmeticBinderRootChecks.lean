@@ -1,0 +1,8 @@
+import LogicLineages.PersistentMarking.NumberedWindowArithmeticBetaRootProof
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticBinderRootChecks
+open NumberedWindowArithmeticBinderRootTargets
+theorem exact_ExactFAbsRoot : ExactFAbsRoot := NumberedWindowArithmeticFreshRootProof.fabsExact
+theorem exact_ExactBetaRoot : ExactBetaRoot := NumberedWindowArithmeticBetaRootProof.betaExact
+#print axioms exact_ExactFAbsRoot
+#print axioms exact_ExactBetaRoot
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticBinderRootChecks

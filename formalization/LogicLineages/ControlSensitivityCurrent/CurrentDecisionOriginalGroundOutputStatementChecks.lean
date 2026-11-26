@@ -1,0 +1,21 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.CurrentDecisionOriginalGroundOutputProof
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.CurrentDecisionOriginalGroundOutput.StatementChecks
+
+theorem typed_original_query_reencoding : CurrentDecisionOriginalGroundOutputTargets.TypedReencoding := typedReencoding
+theorem literal_arithmetic_ground_outputs : CurrentDecisionOriginalGroundOutputTargets.ArithmeticOutputs := arithmeticOutputs
+theorem literal_original_ground_outputs : CurrentDecisionOriginalGroundOutputTargets.OriginalOutputs := originalOutputs
+theorem actual_effective_ground_outputs : CurrentDecisionOriginalGroundOutputTargets.Effective := effective
+
+theorem exact_original_ground_output_presentation : CurrentDecisionOriginalGroundOutputTargets.Full :=
+  ⟨typed_original_query_reencoding,literal_arithmetic_ground_outputs,literal_original_ground_outputs,
+    actual_effective_ground_outputs⟩
+
+#print axioms typed_original_query_reencoding
+#print axioms literal_arithmetic_ground_outputs
+#print axioms literal_original_ground_outputs
+#print axioms actual_effective_ground_outputs
+#print axioms exact_original_ground_output_presentation
+
+end LogicLineages.ControlSensitivityCurrent.CurrentDecisionOriginalGroundOutput.StatementChecks

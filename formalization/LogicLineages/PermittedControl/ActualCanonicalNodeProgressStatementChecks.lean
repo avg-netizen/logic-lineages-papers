@@ -1,0 +1,19 @@
+module
+public import LogicLineages.PermittedControl.ActualCanonicalNodeProgressTargets
+import LogicLineages.PermittedControl.ActualCanonicalNodeProgressLocalProof
+import LogicLineages.PermittedControl.ActualCanonicalNodeProgressProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualCanonicalNodeProgress
+
+theorem fixed_exactCanonicalLocalProgress : ExactCanonicalLocalProgress := exactCanonicalLocalProgress
+theorem fixed_exactCanonicalReachedProgress : ExactCanonicalReachedProgress := exactCanonicalReachedProgress
+
+theorem fixed_fullActualCanonicalNodeProgress : FullActualCanonicalNodeProgress :=
+  ⟨fixed_exactCanonicalLocalProgress,fixed_exactCanonicalReachedProgress⟩
+
+#print axioms fixed_exactCanonicalLocalProgress
+#print axioms fixed_exactCanonicalReachedProgress
+#print axioms fixed_fullActualCanonicalNodeProgress
+
+end LogicLineages.PermittedControl.ActualCanonicalNodeProgress

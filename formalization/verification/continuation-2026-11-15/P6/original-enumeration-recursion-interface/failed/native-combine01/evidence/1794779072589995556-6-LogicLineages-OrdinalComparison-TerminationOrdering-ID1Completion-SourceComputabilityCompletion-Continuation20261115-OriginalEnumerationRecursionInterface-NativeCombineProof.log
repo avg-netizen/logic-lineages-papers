@@ -1,0 +1,37 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEnumerationRecursionInterface/NativeCombineProof.lean:20:50: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  evaluate InternalRawListRecursion.lookup (?k ::ᵥ NumberedMultisetNumeric.numbersNumber ?xs ::ᵥ nil)
+in the target expression
+  evaluate InternalRawListRecursion.lookup
+      (![i, NumberedMultisetNumeric.numbersNumber (List.map Encodable.encode answers)] 0 ::ᵥ
+        ![i, NumberedMultisetNumeric.numbersNumber (List.map Encodable.encode answers)] 1 ::ᵥ nil) =
+    Encodable.encode (answers.getD i [])
+
+n i node param : ℕ
+answers : List (List (Code (Fin n)))
+⊢ evaluate InternalRawListRecursion.lookup
+      (![i, NumberedMultisetNumeric.numbersNumber (List.map Encodable.encode answers)] 0 ::ᵥ
+        ![i, NumberedMultisetNumeric.numbersNumber (List.map Encodable.encode answers)] 1 ::ᵥ nil) =
+    Encodable.encode (answers.getD i [])
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEnumerationRecursionInterface/NativeCombineProof.lean:41:8: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEnumerationRecursionInterface/NativeCombineProof.lean:39:53: warning: This simp argument is unused:
+  Matrix.cons_val_one
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵y̵p̵e̵s̵,̵h̵e̵a̵d̵s̵,̵l̵a̵b̵e̵l̵s̵,̵t̵u̵p̵l̵e̵B̵o̵u̵n̵d̵,̵v̵a̵r̵i̵a̵b̵l̵e̵B̵o̵u̵n̵d̵,̵l̵e̵f̵t̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵r̵i̵g̵h̵t̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵r̵o̵j̵e̵c̵t̵i̵o̵n̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵
+  ̵ ̵ ̵ ̵ ̵i̵n̵p̵u̵t̵s̵,̵L̵i̵s̵t̵.̵V̵e̵c̵t̵o̵r̵.̵g̵e̵t̵_̵o̵f̵F̵n̵,̵M̵a̵t̵r̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵z̵e̵r̵o̵,̵M̵a̵t̵r̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵o̵n̵e̵,̵M̵a̵t̵r̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵t̵w̵o̵,̵
+  ̵ ̵ ̵ ̵ ̵E̵n̵c̵o̵d̵a̵b̵l̵e̵.̵e̵n̵c̵o̵d̵e̵_̵p̵r̵o̵d̵_̵v̵a̵l̵,̵E̵n̵c̵o̵d̵a̵b̵l̵e̵.̵e̵n̵c̵o̵d̵e̵_̵n̵a̵t̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵a̵n̵s̵w̵e̵r̵V̵a̵l̵u̵e̵]̵[̲t̲y̲p̲e̲s̲,̲ ̲h̲e̲a̲d̲s̲,̲ ̲l̲a̲b̲e̲l̲s̲,̲ ̲t̲u̲p̲l̲e̲B̲o̲u̲n̲d̲,̲ ̲v̲a̲r̲i̲a̲b̲l̲e̲B̲o̲u̲n̲d̲,̲ ̲l̲e̲f̲t̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲r̲i̲g̲h̲t̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲
+  ̲ ̲ ̲ ̲ ̲p̲r̲o̲j̲e̲c̲t̲i̲o̲n̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲i̲n̲p̲u̲t̲s̲,̲ ̲L̲i̲s̲t̲.̲V̲e̲c̲t̲o̲r̲.̲g̲e̲t̲_̲o̲f̲F̲n̲,̲ ̲M̲a̲t̲r̲i̲x̲.̲c̲o̲n̲s̲_̲v̲a̲l̲_̲z̲e̲r̲o̲,̲ ̲M̲a̲t̲r̲i̲x̲.̲c̲o̲n̲s̲_̲v̲a̲l̲_̲t̲w̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲E̲n̲c̲o̲d̲a̲b̲l̲e̲.̲e̲n̲c̲o̲d̲e̲_̲p̲r̲o̲d̲_̲v̲a̲l̲,̲ ̲E̲n̲c̲o̲d̲a̲b̲l̲e̲.̲e̲n̲c̲o̲d̲e̲_̲n̲a̲t̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲,̲ ̲a̲n̲s̲w̲e̲r̲V̲a̲l̲u̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationRecursionInterface.NativeCombineProof.fuelValue: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationRecursionInterface.NativeCombineProof.inputs.eq_1: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEnumerationRecursionInterface/NativeCombineProof.lean:64:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationRecursionInterface.NativeCombineProof.positiveValue: forbidden axiom dependency sorryAx

@@ -1,0 +1,1 @@
+Independent read-only review accepted exact existing unrestricted HeadSignatureCalibrated with ordered application arguments, ranked arity, actual decoder rejection and n=0. Internal graph factors are not reflection oracles. Full internal arguments/source-exchange preservation remain separate. Four pins verified.

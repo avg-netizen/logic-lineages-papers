@@ -1,0 +1,9 @@
+# Independent current-source review: positive endpoint fibers
+
+Read all three comparator modules and their map and all six authored proof/check leaves, including the exact preserved syntax repairs. Independently checked all30 frozen/authored pins. The selected AST preserves supplied certificate input1 and tests actual packed ordered lexical context and actual result code at source input0 and destination input2. Numerical calibration covers every raw triple including malformed addresses.
+
+The open proof uses original composition witnesses, equality-test acceptance, output transport and genuine existential introduction/elimination at arbitrary object terms, proof contexts and fixed positive body. Its reverse uses the supplied shared output witness. Original conjunction rules preserve the same original r graph in both directions. No semantic reflection or extensional substitution of source bodies is used.
+
+Independently replayed all1041 current module source/input/compiler/dependency/object hashes and native logs/receipts, with exact4 standard-only named declarations. The clean union gate1795162901522974443-5 uses original heap2048MiB/RSS1536MiB/free2048MiB, CPU90/wall180, one thread. Referenced prior successful leaf receipts, including the numeric leaf in an otherwise failed batch, are preserved in the complete evidence archive; the clean union cache gate independently validates those input/object identities. No full-root build or CI claim.
+
+A future source presentation must consistently select this guarded AST and prove its operator/computability bridges. Numerical equality alone does not transport old sourceBody derivations. This packet is not open path matching, arithmetic accessibility, all-terms derivability or a Bachmann–Howard bound. No numbered promotion:150checked/17pending.

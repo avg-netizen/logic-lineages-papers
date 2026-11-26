@@ -1,0 +1,76 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.GuardedErasureInductionProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.RootSoundnessProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalMixedClosedRecognitionProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceSupportProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionFunctionalityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.GuardedErasureProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalAcceptanceSupportProof (programCases)
+open InternalControlGraphSupportProof InternalRecursionGraphStepSyntaxProof
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open OriginalFinalVariableCanonicalSupportProof (iffForward iffBackward)
+open SourceComputabilityFormulaSupportProof (numeral)
+open GuardedErasureFinalGraphsProof GuardedErasurePackingProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+attribute [local irreducible] programGraph
+
+/-- Actual recognized input, actual original Insert/erase geometry, and one
+fixed final tuple suffice. Transformed recognition and every guard/branch/IH
+supplier are discharged internally; both output facts share one certificate. -/
+theorem actualSameFinalGuardedErasure : GuardedErasureTargets.ActualSameFinalGuardedErasure := by
+  intro p H G W P
+  dsimp only [GuardedErasureTargets.SameFinalGuardedErasure]
+  intro body alpha Delta s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT
+  let D := finalData p H G W P
+  let F := finalLeaf p H G W P
+  let S := InternalOriginalUniformDescentSelection.validity D
+  let C := closedChecker p H G W
+  let raw := OriginalTransparentMixedDirectBottom.leaf H G (member p) W p.oldStep
+  let B := pairedLeaf D F C
+  let A := GuardedErasureTargets.Premise S F s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT
+  have ha : Nonempty (Derivation body (A :: Delta) A) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+  have hs := Integration.FinalErasureProof.finalSource p H G W P
+  have hl := Integration.ClosedTransportProof.actualPreparedKernelClosedChecker p H G W P
+  have hclosed := iffForward
+    (Integration.FinalErasureProof.recognizesCongruence S (literalSource p H G W) F C hs hl
+      body alpha (A :: Delta) (numeral 1) (Fin.cons s (Fin.cons t (Fin.cons cert (Fin.cons oldParam Fin.elim0)))))
+    (andLeft ha)
+  have hrec := OriginalMixedClosedRecognitionProof.recognizesFactor (literalSource p H G W)
+    H G (member p) W p.oldStep p.window body alpha (A :: Delta) s t cert oldParam hclosed
+  have root := RootSoundnessProof.recognizerRootSoundness (literalSource p H G W) raw
+    body alpha (A :: Delta) s t cert oldParam hrec
+  have geom := andRight ha
+  have input := andIntro (andLeft root) (andIntro (andRight root) (andIntro hrec geom))
+  have result : Nonempty (Derivation body (A :: Delta)
+      (OriginalMixedClosedTraceInductionDefinitions.result (literalSource p H G W) B
+        s t newParam erasedS erasedT)) := by
+    apply programCases InternalUnpair.left (Fin.cons cert Fin.elim0) _
+    intro beta j Theta path hj hp
+    rw [OriginalMixedClosedTraceInductionSyntaxProof.resultRename]
+    simp only [consTermRename,emptyRename] at hp
+    have input' := InternalGraphCompositionFunctionalityProof.renameInto input j Theta hj
+    simp only [conjunctionRename,graph2Rename,graph3Rename,graph4Rename,
+      OriginalContextInsertionSyntaxProof.insertRename,GuardedSourceSyntaxProof.numeralRename,
+      InternalTagArithmeticSyntaxProof.sucRelabel,InternalTagArithmeticSyntaxProof.zRelabel] at input'
+    exact OriginalMixedClosedTraceInductionBindingProof.atPathApply (literalSource p H G W) raw B path
+      (s.relabel j) (t.relabel j) (cert.relabel j) (oldParam.relabel j) (newParam.relabel j)
+      (gamma.relabel j) (extended.relabel j) (d.relabel j) (cutoff.relabel j) (c.relabel j)
+      (erasedS.relabel j) (erasedT.relabel j) (GuardedErasureInductionProof.rows p H G W P path)
+      (andIntro hp (by simpa only [SourceComputabilityFormulaSupportProof.numeral] using input'))
+  have both := OriginalMixedTraceErasedValidityProof.actualBothErasedSource H G (member p) W p.oldStep
+    body alpha (A :: Delta) s t cert oldParam newParam gamma extended d cutoff c erasedS erasedT
+    (andLeft root) hrec (andLeft geom) (andLeft (andRight geom)) (andLeft (andRight (andRight geom)))
+    (andLeft (andRight (andRight (andRight geom)))) (andRight (andRight (andRight (andRight geom))))
+  have packed := iffBackward (resultEquivalent D F C erasedS erasedT newParam s t) (andRight result)
+  have finalResult := resultRawTransport D F C F (Integration.GraphCongruenceProof.equivalentReverse hl)
+    erasedS erasedT newParam s t packed
+  obtain ⟨out⟩ := andIntro (sourceToFinal p H G W P erasedS newParam (andLeft both))
+    (andIntro (sourceToFinal p H G W P erasedT newParam (andRight both)) finalResult)
+  exact ⟨Derivation.implicationIntroduction out⟩
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.GuardedErasureProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.GuardedErasureProof

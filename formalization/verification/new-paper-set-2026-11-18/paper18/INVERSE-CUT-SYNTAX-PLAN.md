@@ -1,0 +1,11 @@
+# Next elimination dependency: actual inverse-cut matrix construction
+
+Direct successor of the proved arithmetic InverseCut, not an unrelated numeric helper. General Snyatkov elimination must output a formula valid for all remaining parameters, not call a numeric solver after fixing them. This bundle converts that exact cut into actual existing expanded Term/Matrix syntax and proves shared-valuation equivalence.
+
+Use SnyatkovCompletion.Term with Phi/H, their actual inverses, natural addition/subtraction, fixed multiplication/division; Matrix has equal/less/divisibility/Boolean constructors. Four arbitrary parameter terms a,b,lo,hi may contain any of those functions, including nested inverse and hyperfunction occurrences. Fix literal m>=1,r<m. A distinguished bound name x is absent from those parameter terms; actual bound evaluation uses Function.update ν x n, so capture/shadowing avoidance is explicit, not variable-independent valuation handwaving.
+
+Emit finite guarded cases for lo<=g(0) versus lo>g(0) and a>=Lg(lo) versus a<Lg(lo). Each branch selects actual A=a or Lg(lo). No max or if primitive is added. Encode residue A%m as A−m*(A/m); encode C=A+((r+m−(A%m))%m) using the same fixed-modulus arithmetic terms. Emit C<=b and g(C)<=hi under each branch guard, with all <= represented in the existing Matrix signature. Invalid m=0/r>=m emits falsity. Parameters are never independently refreshed: repeated names/terms keep their original coordinate.
+
+Freeze targets for literal emitted Matrix semantics iff the actual existential cut, original free-name support inclusion/no bound x, exact numeric output-code construction and genuine joint PR raw compiler. The code compiler is finite constructor composition on input term codes (no semantic evaluator or parse-success premise). Derived pointwise equivalence under negation and outer valuation updates explains safe reuse inside alternation, but does not claim it eliminates arbitrary nonlinear formulas.
+
+This pays one actual parameter-preserving nonlinear elimination rule with existing extended signature. Full nonlinear row normalization, arbitrary Boolean branch management and terminating complete elimination remain unpaid. No full m:thm:snyatkov/common/balanced promotion. Independent plan then exact freeze review before proof.

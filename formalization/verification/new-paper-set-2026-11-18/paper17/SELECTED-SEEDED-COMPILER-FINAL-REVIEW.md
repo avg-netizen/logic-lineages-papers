@@ -1,0 +1,9 @@
+# Independent selected seeded compiler final
+
+Accepted supporting full four-clause SelectedSeededCompiler. Receipt 1795016912168891321-5, 644 current-source modules, zero errors and exact standard-only full alias. Compiler-free independent evidence equals author evidence; all seven frozen pins match.
+
+Read definitions, targets, fresh CompilerProof/SolvabilityProof and literal inherited SeededBoundProof. Actual generic selected-control/all-policy compiler induction handles the final index with the proved closed omega seed, not a new free variable. Negation, shift and additive scale alignment use the actual selected pair suppliers. Successful positive assignments are explicitly obtained at the same policy/control/valuation; literal internal-level-three bounds are syntactic, not transferred old semantics.
+
+Seed subtraction is structural signed-group calibration. Shared family construction treats zero polynomial by the seed alone and nonzero by actual ctrl-graded realization plus natural sum with seed. Induction uses the actual norm-padded admissible extension while preserving every old coordinate. Empty context/n=0 is explicit. Forward simultaneous solvability cancels the shared seed and embeds polynomial coefficients. Reverse takes actual finite coefficients of arbitrary admitted ordinal inputs; their nonnegativity justifies Int.toNat recovery, finitePart(seed)=0 eliminates seed, and actual shift/add/neg projection transports every equation. It does not assume the full signed difference is positive or restrict valuations to generated ones.
+
+Only literal compiler bounds and control-independent signed-group/projection facts transfer from old namespaces. Initial ambiguous compile-name failure is preserved and repaired by explicit qualification; no frozen change. This supports compiler plus simultaneous polynomial equivalence only. No free seed, masks, numeric query construction, level-three reduction or full hardness is accepted here.

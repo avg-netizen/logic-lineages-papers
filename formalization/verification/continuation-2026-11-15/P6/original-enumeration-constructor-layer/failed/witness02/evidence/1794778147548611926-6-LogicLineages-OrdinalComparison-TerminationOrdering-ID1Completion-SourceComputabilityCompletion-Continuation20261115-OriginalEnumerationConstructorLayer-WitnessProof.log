@@ -1,0 +1,37 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEnumerationConstructorLayer/WitnessProof.lean:57:13: error(lean.unknownIdentifier): Unknown identifier `witnessLift`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEnumerationConstructorLayer/WitnessProof.lean:50:56: error: unsolved goals
+alpha : Type
+n : ℕ
+xs : Fin 7 → OTerm alpha
+code : OTerm alpha
+ys : Fin 8 → OTerm alpha
+he : (Sum.elim var fun i => emb (ys i)) = fun a => emb (Sum.elim var ys a)
+⊢ (componentGraphs n (fun i => (Term.relabel Sum.inl (xs i)).subst (Sum.elim var ys)) fun i => ys i) ⊓
+      branchMember (fun i => ys i) ((Term.relabel Sum.inl code).subst (Sum.elim var ys)) =
+    componentGraphs n xs ys ⊓ branchMember ys code
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEnumerationConstructorLayer/WitnessProof.lean:64:13: error(lean.unknownIdentifier): Unknown identifier `liftSubst`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEnumerationConstructorLayer/WitnessProof.lean:61:99: error: unsolved goals
+alpha beta : Type
+n : ℕ
+xs : Fin 7 → OTerm alpha
+code : OTerm alpha
+sub : alpha → OTerm beta
+⊢ InternalFiniteBlocks.block
+      ((componentGraphs n
+          (fun i =>
+            (Term.relabel Sum.inl (xs i)).subst
+              (Sum.elim (fun x => Term.relabel Sum.inl (sub x)) fun i => var (Sum.inr i)))
+          fun i => var (Sum.inr i)) ⊓
+        branchMember (fun i => var (Sum.inr i))
+          ((Term.relabel Sum.inl code).subst
+            (Sum.elim (fun x => Term.relabel Sum.inl (sub x)) fun i => var (Sum.inr i)))) =
+    InternalFiniteBlocks.block
+      ((componentGraphs n (fun i => Term.relabel Sum.inl (Term.subst (xs i) sub)) fun i => var (Sum.inr i)) ⊓
+        branchMember (fun i => var (Sum.inr i)) (Term.relabel Sum.inl (Term.subst code sub)))
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationConstructorLayer.WitnessProof.memberRename: [propext,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationConstructorLayer.WitnessProof.componentsSubst: [propext,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationConstructorLayer.WitnessProof.memberSubst: [propext,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEnumerationConstructorLayer/WitnessProof.lean:81:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationConstructorLayer.WitnessProof.introduce: forbidden axiom dependency sorryAx

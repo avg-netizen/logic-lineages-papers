@@ -1,0 +1,7 @@
+# Actual argumentEntries recombination (exact4)
+
+NumberedExchangeRootPrimrecProof.lean: entriesRecombine returns outer some; argumentsNil gives inner some []; argumentsCons obtains typed entry (tau,q) and consumes recursive tail value at index1 with getD default none; all other constructors give inner none. children places the tail at index1. The new step implements exactly the inner Option and recombine adds the outer Some after actual numeric lookup1. Missing answers are 0/None, never empty-success. Order and duplicate entries are preserved.
+
+NativeLayer explicitly covers all constructors, all optional tail values and arbitrary answer lists (including short/missing index1). List entries retain original type and Code encodings via actual numeric pairing. Native list-code alignment must be paid, not assumed. InternalNil uses actual tag6/payload0 pair; InternalConsFailure and InternalConsSuccess use original raw cons constructor, actual typed-entry pair and actual list cons graphs. They assert concrete AST graphs, not native semantic reflection.
+
+This pays literal original recursion-layer computation only. Full argumentEntries recursion must still be supplied with original child ordering/decrease, dependency graph coverage and extraction. Permutation, window and sourceHeads guards and global headMove/E/source stability remain open. No selected tuple mutation, replacement recursion algorithm or altered cutoff.

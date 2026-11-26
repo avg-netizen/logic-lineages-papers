@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLambdaLexicalSourceProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLambdaLexicalSourceProof.lean
+@@ -35 +35,4 @@
+-    · rw [step,List.getElem?_append_left (length n ▸ before)]
++    · have within : i < (tab n).length := by
++        rw [length n]
++        exact before
++      rw [step n,List.getElem?_append_left (l₁ := tab n) (l₂ := [row n]) within]

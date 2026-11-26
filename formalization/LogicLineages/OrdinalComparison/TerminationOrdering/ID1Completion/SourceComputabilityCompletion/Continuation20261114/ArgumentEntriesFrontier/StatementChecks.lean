@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesFrontier.Proof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesFrontier.StatementChecks
+theorem exactDependency : Targets.RawDependency := Proof.rawDependency
+theorem exactFrontier : Targets.ValidFrontier := Proof.validFrontier
+theorem exactExhaustion : Targets.OriginalRankExhaustion := Proof.originalRankExhaustion
+#print axioms exactDependency
+#print axioms exactFrontier
+#print axioms exactExhaustion
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesFrontier.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesFrontier.StatementChecks

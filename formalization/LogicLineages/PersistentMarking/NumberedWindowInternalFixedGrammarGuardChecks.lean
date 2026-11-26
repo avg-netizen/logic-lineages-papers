@@ -1,0 +1,20 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalFixedGrammarGuardTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalFixedGrammarGuardNumericProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalFixedGrammarGuardOpenProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalFixedGrammarGuardChecks
+open NumberedWindowInternalFixedGrammarGuardTargets
+open NumberedWindowInternalFixedGrammarGuardNumericProof (calibration)
+open NumberedWindowInternalFixedGrammarGuardOpenProof (reports)
+
+theorem exact_RefitGuardCalibration : ExactRefitGuardCalibration := calibration
+
+theorem exact_OpenRefitGuardReports : ExactOpenRefitGuardReports := reports
+
+#print axioms exact_RefitGuardCalibration
+#print axioms exact_OpenRefitGuardReports
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalFixedGrammarGuardChecks

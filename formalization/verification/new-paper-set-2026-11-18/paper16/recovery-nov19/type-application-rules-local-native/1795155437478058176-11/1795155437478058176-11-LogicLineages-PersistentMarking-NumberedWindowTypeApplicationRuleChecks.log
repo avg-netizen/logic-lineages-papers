@@ -1,0 +1,68 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowTypeApplicationRuleChecks.lean:35:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  instantiate
+    (allOne
+      (condition ?p ?σ ?τ (Term.relabel (fun a => Sum.inl (Sum.inl a)) ?q) (var (Sum.inl (Sum.inr 0)))
+        (var (Sum.inr 0))))
+    (emb ?u)
+in the target expression
+  Derivation body Γ
+    (instantiate
+      (allOne
+        ((accepts p (Term.relabel (fun j => Sum.inl (Sum.inl j)) q) (var (Sum.inl (Sum.inr 0))) (var (Sum.inr 0))).imp
+          ((formula p σ (var (Sum.inl (Sum.inr 0)))).imp (formula p τ (var (Sum.inr 0))))))
+      (emb u))
+
+body : PositiveArithmeticOperators.Positive (Fin 1)
+p : Program 3
+σ τ : Ty
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+q u v : OrdinaryArithmetic.Term α
+hf : Derivation body Γ (formula p (σ.arrow τ) q)
+hg : Derivation body Γ (accepts p q u v)
+hu : Derivation body Γ (formula p σ u)
+h1 :
+  Derivation body Γ
+    (instantiate
+      (allOne
+        ((accepts p (Term.relabel (fun j => Sum.inl (Sum.inl j)) q) (var (Sum.inl (Sum.inr 0))) (var (Sum.inr 0))).imp
+          ((formula p σ (var (Sum.inl (Sum.inr 0)))).imp (formula p τ (var (Sum.inr 0))))))
+      (emb u))
+⊢ Nonempty (Derivation body Γ (formula p τ v))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowTypeApplicationRuleChecks.lean:43:8: error: Invalid `⟨...⟩` notation: The expected type
+  Nonempty
+      (Derivation body
+        (formula p σ (var d) ::
+          accepts p (Term.relabel (fun a => Sum.inl (Sum.inl a)) q) (var d) (var (Sum.inr 0)) ::
+            List.map weaken (List.map weaken Γ))
+        (formula p τ (var (Sum.inr 0)))) →
+    Nonempty (Derivation body Γ (formula p (σ.arrow τ) q))
+is not an inductive type
+
+Note: This notation can only be used when the expected type is an inductive type with a single constructor
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowTypeApplicationRuleChecks.lean:40:67: error: unsolved goals
+case func
+body : PositiveArithmeticOperators.Positive (Fin 1)
+p : Program 3
+σ τ : Ty
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+q : OrdinaryArithmetic.Term α
+l✝ : ℕ
+_f✝ : OrdinaryArithmetic.arithmeticLanguage.Functions l✝
+_ts✝ : Fin l✝ → OrdinaryArithmetic.arithmeticLanguage.Term ((α ⊕ Fin 1) ⊕ Fin 1)
+⊢ have vp := var (Sum.inr 0);
+  have qp := Term.relabel (fun a => Sum.inl (Sum.inl a)) q;
+  Nonempty
+      (Derivation body
+        (formula p σ (func _f✝ _ts✝) :: accepts p qp (func _f✝ _ts✝) vp :: List.map weaken (List.map weaken Γ))
+        (formula p τ vp)) →
+    Nonempty (Derivation body Γ (formula p (σ.arrow τ) q))
+'LogicLineages.PersistentMarking.NumberedWindowTypeApplicationRuleChecks.exact_FormulaSubstitution' depends on axioms: [propext,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowTypeApplicationRuleChecks.exact_ApplicationElimination' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowTypeApplicationRuleChecks.exact_ApplicationIntroduction' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]

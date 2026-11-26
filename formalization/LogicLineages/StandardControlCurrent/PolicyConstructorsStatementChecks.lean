@@ -1,0 +1,10 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicyConstructorsSyntaxProof
+public import LogicLineages.StandardControlCurrent.PolicyConstructorsProgramsProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.PolicyConstructorsStatementChecks
+theorem full : PolicyConstructorsTargets.FullPolicyConstructors :=
+  ⟨PolicyConstructorsSyntaxProof.constants,PolicyConstructorsSyntaxProof.tail,
+    PolicyConstructorsSyntaxProof.application,PolicyConstructorsProgramsProof.programs⟩
+#print axioms full
+end LogicLineages.StandardControlCurrent.PolicyConstructorsStatementChecks

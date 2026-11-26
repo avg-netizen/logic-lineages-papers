@@ -1,0 +1,11 @@
+module
+public import LogicLineages.StandardControlCurrent.PrefixCountsTargets
+public import LogicLineages.OrdinalComparison.PrefixTraceSourceProof
+public import LogicLineages.OrdinalComparison.ControlledCountProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.PrefixCountsProof
+theorem prefix : PrefixCountsTargets.FullPrefix :=
+  OrdinalComparison.fullActualCompatiblePrefixSplitting
+theorem counts : PrefixCountsTargets.FullCounts :=
+  OrdinalComparison.fullActualOrderedControlsAndCounts
+end LogicLineages.StandardControlCurrent.PrefixCountsProof

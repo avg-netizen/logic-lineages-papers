@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -83,7 +83,7 @@
+     change evaluate (symbols n) (ofFn fun _ : Fin 1 => evaluate InternalUnpair.left v) = _
+     rw [InternalEqualityTestEvaluationProof.vectorOne]
+     congr 1
+-    exact InternalApplicationCertificateConstructorsEvaluationProof.leftEvaluation v
++    exact congrArg (fun x : Nat => x ::ᵥ nil) (InternalApplicationCertificateConstructorsEvaluationProof.leftEvaluation v)
+   rw [he,nativeSymbols,Encodable.decode_prod_val]
+   obtain ⟨xs,hxs⟩ := typeListTotal (Nat.unpair (v.get 0)).2
+   rw [hxs]

@@ -1,0 +1,20 @@
+--- failed/CurrentInstallationProof.lean
++++ CurrentInstallationProof.lean
+@@ -43,16 +43,6 @@
+  let dispatch : UniformClosedRule12Dispatcher.Installation p old arithmetic x :=
+   { toInstallation := validity, constructorTag,lineTag,logicalTag,dispatcherTag,h_constructor,h_line,h_logical,h_dispatcher }
+  exact ⟨{ toDispatcherInstallation := dispatch, iteratorTag,coreTag,verifierTag,h_iterator,h_core,h_verifier }⟩
+-/-- Actual subtree admission with globally recovered tags; reusable beneath a
+-future published root, without any Theory(carrier) inclusion assertion. -/
+-theorem installedAt (old arithmetic : Program 1) (x : Program 3) {n : Nat} (p : Program n) (tag : Nat)
+- (ht : (nodes p)[tag]? = some ⟨6,carrier old arithmetic x⟩) :
+- Nonempty (UniformClosedRule12Certificate.Installation p old arithmetic x) :=
+- installed old arithmetic x p
+-  (ReflexivityInstalled.BundleProof.bundleInstallation (items old arithmetic x) n p tag ht)
+-theorem finiteInstallation (old arithmetic : Program 1) (x : Program 3) :
+- Nonempty (UniformClosedRule12Certificate.Installation (carrier old arithmetic x) old arithmetic x) :=
+- installedAt old arithmetic x (carrier old arithmetic x) 0
+-  (GorbowPRRegistry.StatementChecks.rootTag 6 (carrier old arithmetic x))
++
+ end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeUniformRule12Registry.CurrentInstallationProof
+ #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeUniformRule12Registry.CurrentInstallationProof

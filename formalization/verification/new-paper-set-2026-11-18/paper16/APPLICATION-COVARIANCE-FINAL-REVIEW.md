@@ -1,0 +1,9 @@
+# Independent final: complete application covariance
+
+Approved complete current lem:application-covariance, not comparison cut. Fresh native 1794991454771665773-5. Independent read-only verifier reconciles 121 modules, one exact full standard-only alias, zero errors; JSON equals author evidence and actual recursive imports equal its module set. Six frozen scope pins and inherited semantic freezes remain unchanged. No compiler invoked.
+
+Compared the full target and final proof with composition.tex (C). Actual typed arguments are related by the ordered witness, arbitrary marked sources/targets remain permitted, and only the right original full success is assumed. The conclusion contains both the left ORIGINAL full success and its actual E-related result.
+
+Crucially, SourceSuccess obtains actual left original success BEFORE either full call is translated to unary stages. SuccessfulUnaryStages is used in its proved forward direction on each actual success. The paired fold then transports each actual unary call using checked UnaryTransport, with argument/domain/output annotations derived by CallTyped, endpoint facts and actual call preservation. Actual list-tail termination is separate from the already checked derivation-count induction. Determinism of the left unary result identifies the transported result with the independently obtained ORIGINAL full result. There is no staged-success converse, generic associativity, or comparison-cut oracle.
+
+The preceding independent supplier reviews cover genuine blocked-original-spine inversion, successful-only auxiliary plugging, all 25 unary cases, new-owner selection with PrefixEscape/sharp admissibility, and literal two-environment binder substitution. This fresh assembly covers the entire printed lemma, rather than merely its unary supporting case.

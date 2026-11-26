@@ -1,0 +1,19 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceLiteralCounterexample.ComparatorGate
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.LiteralCommonKnowledgeCounterexample.StatementChecks
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalAdoption.Proof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceLiteralCounterexample.Proof
+
+/-- The discharged original selected witness supplies one tuple for every
+literal claim. No independent existential presentations are combined. -/
+theorem exactSource : Targets.Source :=
+  LiteralCommonKnowledgeCounterexample.StatementChecks.fromSelectedPresentation
+    SameSourceOriginalAdoption.Proof.originalSelected
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceLiteralCounterexample.Proof
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceLiteralCounterexample.Proof

@@ -1,0 +1,11 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowLexicalProgramProof
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowLexicalProgramChecks
+open NumberedWindowLexicalProgramTargets
+theorem exact_RequirementsProgram : RequirementsProgram := NumberedWindowLexicalProgramProof.requirementsProgram
+theorem exact_FiniteTypedProgram : FiniteTypedProgram := NumberedWindowLexicalProgramProof.finiteTypedProgram
+#print axioms exact_RequirementsProgram
+#print axioms exact_FiniteTypedProgram
+end LogicLineages.PersistentMarking.NumberedWindowLexicalProgramChecks

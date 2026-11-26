@@ -1,0 +1,11 @@
+module
+public import LogicLineages.PermittedControl.SelectedCanonicalDomainProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_fullSelectedCanonicalDomain : SelectedCanonicalDomainTargets.FullSelectedCanonicalDomain :=
+  SelectedCanonicalDomainProof.fullSelectedCanonicalDomain
+#print axioms fixed_fullSelectedCanonicalDomain
+
+end LogicLineages.PermittedControl.StatementChecks

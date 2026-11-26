@@ -1,0 +1,9 @@
+# Independent final: complete effective profile reserve
+
+Approved complete current18 u:lem:reserve. Read the printed source, actual finite compiler/threshold/budget definitions, fresh assembly, ProfileCompilerProof, ProfileReserveWordProof and ReserveEndpointProof. All nested lower nonprincipal limit heads are retained under the source principal L>omega context. Structural compiler validity and an actual running upper-bound induction prove domination: addition sequentially processes both trees and uses an omega head; a final omega head yields nonempty strict domination. This is a real finite word construction, not a chosen dominating function.
+
+R/H are calibrated to actual norms/leading monomials. The consumer induction allocates N(rho)+1 principal copies to each actual head, derives its ordinal reserve eligibility and input affordability, and invokes the complete one-stage result to obtain a true first finite remainder exceeding that head's value. It proves the relative cut is no later than the actual global terminal count and transports the real terminal endpoint along the original trace before consuming the remaining word. Thus no count or reserve oracle replaces actual consumption. Arbitrary permanent numerical mass is handled through genuine compensated control domination, actual count monotonicity and actual norm iterations, with no realizable-prefix restriction on c.
+
+Compiler-free independent recursive evidence exactly reproduces the author report: 112 current-source modules, zero errors, exact full alias LogicLineages.StandardControlCurrent.ProfileReserveStatementChecks.full, standard axioms only. All eight frozen pins independently match. First native receipt 1795001739282371075-2 passed unchanged caps, no repairs. No native compiler invoked by reviewer.
+
+Complete profile-reserve credit only. No later direct-growth/cross-mass separation, semantic numeric evaluator, arithmetic/QE or frontend claim.

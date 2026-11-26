@@ -1,0 +1,52 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "3e1cbee7a47e5ac2e1a3439ccbe6cd84f6754484",
+  "failed_source_local_commit": "f1f37e5fa387ecea9f30e2bc7a9ac5c731c06d28",
+  "failed_source_tree": "7863195e737c25d22539f28cba65efa50336c9fe",
+  "failed_exact_gate_receipt": "1795374304201691600-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualCanonicalOperandGroupingCodeStatementChecks",
+  "failed_receipt_sha256": "c8ef9bfb168b2563ddd9d5224064fbac69eebc316efb52d6682039b1169a7c4f",
+  "failed_exact_module_log_sha256": "8805d065e0d266b1746a614aee468abc9e80f30595faf41fed057b23b21810a2",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingCodePrimitiveProof.lean:37:60: error: unsolved goals\ncase false\nP : Type := Keys \u00d7 K \u00d7 Keys\nkey : Primrec fun p => p.2.1\ntailKeys : Primrec fun p => p.2.2\nadvance : K \u2192 Keys \u2192 Keys := fun key acc => if (List.any acc fun k => decide (k = key)) = true then acc else key :: acc\np : P\nseen : (List.any p.2.2 fun k => decide (k = p.2.1)) = false\n\u22a2 p.2.1 \u2209 p.2.2\n\ncase true\nP : Type := Keys \u00d7 K \u00d7 Keys\nkey : Primrec fun p => p.2.1\ntailKeys : Primrec fun p => p.2.2\nadvance : K \u2192 Keys \u2192 Keys := fun key acc => if (List.any acc fun k => decide (k = key)) = true then acc else key :: acc\np : P\nseen : (List.any p.2.2 fun k => decide (k = p.2.1)) = true\n\u22a2 p.2.1 \u2208 p.2.2\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingCodePrimitiveProof.lean:41:75: warning: This simp argument is unused:\n  seen\n\nHint: Omit it from the simp argument list.\n  simp [advance,\u0335s\u0335e\u0335e\u0335n\u0335]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+  "failed_original_native_log_sha256": "3173be70c9a18e45e72f8a73bcca05f85574f34156c298aaabb0adf5bd2f5961",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingCodePrimitiveProof.lean",
+  "failed_proof_sha256": "880a8c7b2da676aef69b7aaf1372c1beab9bc7de69f6fad7cca46400ceda982f",
+  "repaired_proof_sha256": "ce735131809ebb7c522d7c6c75dedfdc94d0d19bcaee973ed37abaa90d02a62e",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-CODE-REPAIR-02.patch",
+  "patch_sha256": "45cd90e4a837e6d15c470383c82260fd0a34c1211cf6d99d7ce8ac35eeb9f14b",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-CODE-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "d6ac6d09d6cc041d902c7c7b769423f4b077a4e91e95a9650e1345fa62c3a3a6",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-CODE-REPAIR-01.json": "1f2c54a930c6a8215efd1705b98a17bd49555622673c0cefcf47f3f981221eb5"
+  },
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingCodeCalibrationProof.lean": "f6f57c222831ac211c987c125ea2fbbc69ca7cb91ae572f103f3517c55a18491",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingCodeStatementChecks.lean": "93023a76941160ebd42fa48d5126d180f952d3f050e7b800d4b368a20de6ce08",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingCodeTargets.lean": "daedd4048d58e2cf848218eb68849263a45cfa3f9558d5aa82130385867db3af",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-OPERAND-GROUPING-CODE-SOURCE-MAP.md": "add65efc99b05d8936791ecc522db964be3c3f4c9e89a8d546385a96d7f313fa"
+  },
+  "static_module_closure": {
+    "CalibrationProof": {
+      "local": 193,
+      "external": 34,
+      "contains_totient": false
+    },
+    "PrimitiveProof": {
+      "local": 181,
+      "external": 36,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 197,
+      "external": 36,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 178,
+      "external": 34,
+      "contains_totient": false
+    }
+  },
+  "scope": "Expose the identical Bool membership computation on each side of the fold step calibration, then split directly without global membership simp. No target, code, ordering or other proof changes."
+}

@@ -1,0 +1,9 @@
+import LogicLineages.PersistentMarking.HereditaryConstructionProof
+namespace LogicLineages.PersistentMarking.HereditaryConstructionChecks
+ theorem exact_ConstructionEquation : HereditaryDomainTargets.ConstructionEquation := HereditaryConstructionProof.equation
+ theorem exact_EffectiveCarrier : HereditaryDomainTargets.EffectiveCarrier := HereditaryConstructionProof.effective
+ theorem exact_CarrierDistinct : HereditaryDomainTargets.CarrierDistinct := HereditaryConstructionProof.distinct
+#print axioms exact_ConstructionEquation
+#print axioms exact_EffectiveCarrier
+#print axioms exact_CarrierDistinct
+end LogicLineages.PersistentMarking.HereditaryConstructionChecks

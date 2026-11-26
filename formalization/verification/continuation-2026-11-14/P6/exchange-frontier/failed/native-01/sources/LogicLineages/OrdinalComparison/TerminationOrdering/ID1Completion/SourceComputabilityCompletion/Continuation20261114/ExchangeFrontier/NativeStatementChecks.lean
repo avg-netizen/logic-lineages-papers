@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeFrontier.NativeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeFrontier.NativeStatementChecks
+theorem exactFlatten : Targets.NativeFlatten := NativeProof.nativeFlatten
+#print axioms exactFlatten
+theorem exactBindList : Targets.NativeBindList := NativeProof.nativeBindList
+#print axioms exactBindList
+theorem exactRank : Targets.OriginalRankExhaustion := NativeProof.originalRankExhaustion
+#print axioms exactRank
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeFrontier.NativeStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeFrontier.NativeStatementChecks

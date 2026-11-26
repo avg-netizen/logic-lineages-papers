@@ -1,0 +1,35 @@
+{
+  "status": "proof-only correction using two exact already-imported names; fresh native/axiom gate pending",
+  "failed_receipt": "1795342292942060973-8",
+  "failed_receipt_sha256": "3438b85e3ee3c4d7a29e6755bfb756b69c08e0c02dccef183264fd163b0e2671",
+  "failed_diagnostic": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/settings-grammar-guard-numeric-initial-diagnostic.txt": "9e67068e7ea4bb4cd7b87d333c67aadb2e0c4f3386ccca25581b185adeaf53c7"
+  },
+  "failed_errors": [
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardNumericProof.lean:16:44: error(lean.unknownIdentifier): Unknown constant `LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetNumeric.numbersRoundTrip`",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardNumericProof.lean:25:65: error: Function expected at",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardNumericProof.lean:44:68: error(lean.unknownIdentifier): Unknown identifier `numbersRoundTrip`",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardNumericProof.lean:33:51: error: unsolved goals",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardNumericProof.lean:57:52: error(lean.unknownIdentifier): Unknown constant `Bool.and_eq_true.mp`"
+  ],
+  "failed_source_archive": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalSettingsGrammarGuardNumericProof-01.lean": "03ff308debee0454706b39fe371ef5fb4baeca109824bd4b9945dba15317fde5"
+  },
+  "diagnosis": "numbersNumber is in NumberedMultisetNumeric; numbersRoundTrip is in NumberedMultisetNumericSupportProof. Core equality theorem is Bool.and_eq_true_iff. Function-expected/unsolved errors follow the original bad resolution. No imports, target, open proof, guard or program changed.",
+  "changed_source": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardNumericProof.lean",
+  "old_failed_source_sha256": "03ff308debee0454706b39fe371ef5fb4baeca109824bd4b9945dba15317fde5",
+  "new_source_sha256": "02572fab3a437c733d86ddc8435813d102064c04a2dfe562f001f15b4d73e527",
+  "zero_context_patch": {
+    "formalization/verification/continuation-2026-11-22/P16-SETTINGS-GRAMMAR-GUARD-NUMERIC-REPAIR-01.patch": "58bb3cd411d2cccd93b16b0001bcfb7fadcec73f725f3c864e0730cd60064684"
+  },
+  "inverse_exact_failed_bytes_verified": true,
+  "unchanged_source_pins": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardDefinitions.lean": "cddccc9ab1bb6e9e9a500c4f07ce9fd5278f3bba1ae55555c12787509a9b67b6",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardNumericTargets.lean": "bd6b328959c156de941e29263815c413d1d52f9fdd8aa588717114f2d566b731",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardOpenTargets.lean": "7c65a12f30c9c61ac69424ce2341898c5bdb75649394e350fdf90f6f3e00c828",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardOpenProof.lean": "7895593935f4daff26497fdbd6f1be317d85a946b5c19746bebea9c2ad958726",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFixedGrammarGuardNumericProof.lean": "9fc7094f6e8c71b73ba583e70a998b0c757012e5587361bf7af927d027172610",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedMultisetNumericSupportProof.lean": "f7c36f0246a91f3745a8fda5eb9184acbfeda52ca037696aacb1bb5216aa4a70",
+    "formalization/verification/continuation-2026-11-22/P16-SETTINGS-GRAMMAR-GUARD-SOURCE-MAP.md": "f7a888dbe51ddcf76a991dd5d9cf5ffeac221220aa9e93b235df22529cc3abf6"
+  }
+}

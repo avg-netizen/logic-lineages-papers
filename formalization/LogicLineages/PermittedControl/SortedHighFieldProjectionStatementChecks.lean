@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PermittedControl.SortedHighFieldProjectionTargets
+import LogicLineages.PermittedControl.SortedHighFieldProjectionProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualSortedHighFieldProjection : StableSortedHighField.ActualSortedHighProjection :=
+  StableSortedHighField.actualSortedHighProjection
+
+#print axioms fixed_actualSortedHighFieldProjection
+
+end LogicLineages.PermittedControl.StatementChecks

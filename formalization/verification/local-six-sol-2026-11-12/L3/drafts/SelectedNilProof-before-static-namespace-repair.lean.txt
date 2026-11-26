@@ -1,0 +1,162 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.SelectedNilTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationStepCheckerGraphProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentVariableStepWrapperProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.SelectedNilProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
+open InternalApplicationCertificateConstructorsSyntaxProof InternalRecursionGraphStepSyntaxProof
+open InternalApplicationCertificateConstructorsProof (edgeSelectors)
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof
+open InternalGraphCompositionFunctionalityProof
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalParameterizedApplicationStepChecker
+open InternalParameterizedApplicationStepCheckerGraphProof (edgeStateValue)
+open InternalParameterizedApplicationStepCheckerSyntaxProof (appendParameterThree)
+open InternalParameterizedApplicationStepCheckerRepeatSupportProof (repeatZeroValue)
+open InternalParameterizedApplicationResultStackWiringProof (liftValue wireValue wireRecover)
+open InternalTagArithmeticSyntaxProof (z suc zRelabel sucRelabel)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+
+/-- The actual edge state has the original nil path, so the original
+parameterized raw-list iterator returns that ENTIRE state unchanged. -/
+theorem normalizerAtNil (endpoint : Program 6)
+ (s t cert state parameter : OTerm alpha)
+ (he : Nonempty (Derivation body Delta (graph3 edgeCode state s t cert)))
+ (hp : Nonempty (Derivation body Delta (graph1 InternalUnpair.left z cert))) :
+ Nonempty (Derivation body Delta (normalizerGraph endpoint state state parameter)) := by
+ have hs := edgeSelectors state s t cert he
+ have hpath := unaryValue InternalUnpair.left step z cert (Fin.cons state Fin.elim0)
+  hp (andRight (andRight hs))
+ have hraw := liftValue InternalApplicationStepPeel.rawPath z state parameter hpath
+ let xs : Fin 2 → OTerm alpha := Fin.cons state (Fin.cons parameter Fin.elim0)
+ apply compositionValue (repeatP (transitionP endpoint))
+  ![InternalParameterizedApplicationResultStack.liftP InternalApplicationStepPeel.rawPath,
+   .projection 0,.projection 1]
+  state xs (Fin.cons z (Fin.cons state (Fin.cons parameter Fin.elim0)))
+  (repeatZeroValue (transitionP endpoint) state parameter)
+ intro i
+ exact Fin.cases hraw (Fin.cases (projectionValue 0 xs)
+  (Fin.cases (projectionValue 1 xs) (fun k => Fin.elim0 k))) i
+
+theorem selectorsAt (s t cert state : OTerm alpha)
+ (he : Nonempty (Derivation body Delta (graph3 edgeCode state s t cert))) :
+ ∀ i : Fin 3, Nonempty (Derivation body Delta
+  (graph1 ((![source,target,step] : Fin 3 → Program 1) i)
+   ((![s,t,cert] : Fin 3 → OTerm alpha) i) state)) := by
+ have hs := edgeSelectors state s t cert he
+ intro i
+ exact Fin.cases (andLeft hs) (Fin.cases (andLeft (andRight hs))
+  (Fin.cases (andRight (andRight hs)) (fun k => Fin.elim0 k))) i
+
+theorem forwardAt (endpoint : Program 6) (oldChecker : Program 4)
+ (out s t cert state parameter : OTerm alpha)
+ (he : Nonempty (Derivation body Delta (graph3 edgeCode state s t cert)))
+ (hp : Nonempty (Derivation body Delta (graph1 InternalUnpair.left z cert)))
+ (hc : Nonempty (Derivation body Delta
+  (graph4 (checkerP endpoint oldChecker) out s t cert parameter))) :
+ Nonempty (Derivation body Delta (graph4 oldChecker out s t cert parameter)) := by
+ let xs : Fin 4 → OTerm alpha := ![s,t,cert,parameter]
+ let sp : Fin 2 → OTerm alpha := ![state,parameter]
+ have hn := normalizerAtNil endpoint s t cert state parameter he hp
+ have hs := binaryRecover (checkedStateP endpoint oldChecker) edgeStateP (.projection 3)
+  out state parameter xs hc (edgeStateValue state s t cert parameter he) (projectionValue 3 xs)
+ have hv := binaryRecover (selectedCheckerP oldChecker) (normalizerP endpoint) (.projection 1)
+  out state parameter sp hs hn (projectionValue 1 sp)
+ have ho := wireRecover oldChecker ![source,target,step] out state parameter ![s,t,cert]
+  hv (selectorsAt s t cert state he)
+ simpa only [appendParameterThree] using ho
+
+theorem backwardAt (endpoint : Program 6) (oldChecker : Program 4)
+ (out s t cert state parameter : OTerm alpha)
+ (he : Nonempty (Derivation body Delta (graph3 edgeCode state s t cert)))
+ (hp : Nonempty (Derivation body Delta (graph1 InternalUnpair.left z cert)))
+ (ho : Nonempty (Derivation body Delta (graph4 oldChecker out s t cert parameter))) :
+ Nonempty (Derivation body Delta
+  (graph4 (checkerP endpoint oldChecker) out s t cert parameter)) := by
+ let xs : Fin 4 → OTerm alpha := ![s,t,cert,parameter]
+ let sp : Fin 2 → OTerm alpha := ![state,parameter]
+ have hn := normalizerAtNil endpoint s t cert state parameter he hp
+ have hv := wireValue oldChecker ![source,target,step] out state parameter ![s,t,cert]
+  (by simpa only [appendParameterThree] using ho) (selectorsAt s t cert state he)
+ have hs := binaryValue (selectedCheckerP oldChecker) (normalizerP endpoint) (.projection 1)
+  out state parameter sp hv hn (projectionValue 1 sp)
+ exact binaryValue (checkedStateP endpoint oldChecker) edgeStateP (.projection 3)
+  out state parameter xs hs (edgeStateValue state s t cert parameter he) (projectionValue 3 xs)
+
+theorem forward (endpoint : Program 6) (oldChecker : Program 4)
+ (out s t cert parameter : OTerm alpha)
+ (hp : Nonempty (Derivation body Delta (graph1 InternalUnpair.left z cert)))
+ (hc : Nonempty (Derivation body Delta
+  (graph4 (checkerP endpoint oldChecker) out s t cert parameter))) :
+ Nonempty (Derivation body Delta (graph4 oldChecker out s t cert parameter)) := by
+ apply programCases edgeCode (Fin.cons s (Fin.cons t (Fin.cons cert Fin.elim0))) _
+ intro beta rho Theta state hrho he
+ simp only [graph4Rename]
+ simp only [consTermRename,emptyRename] at he
+ have hp' := renameInto hp rho Theta hrho
+ have hc' := renameInto hc rho Theta hrho
+ simp only [graph1Rename,zRelabel] at hp'
+ simp only [graph4Rename] at hc'
+ exact forwardAt endpoint oldChecker (out.relabel rho) (s.relabel rho) (t.relabel rho)
+  (cert.relabel rho) state (parameter.relabel rho) he hp' hc'
+
+theorem backward (endpoint : Program 6) (oldChecker : Program 4)
+ (out s t cert parameter : OTerm alpha)
+ (hp : Nonempty (Derivation body Delta (graph1 InternalUnpair.left z cert)))
+ (ho : Nonempty (Derivation body Delta (graph4 oldChecker out s t cert parameter))) :
+ Nonempty (Derivation body Delta
+  (graph4 (checkerP endpoint oldChecker) out s t cert parameter)) := by
+ apply programCases edgeCode (Fin.cons s (Fin.cons t (Fin.cons cert Fin.elim0))) _
+ intro beta rho Theta state hrho he
+ simp only [graph4Rename]
+ simp only [consTermRename,emptyRename] at he
+ have hp' := renameInto hp rho Theta hrho
+ have ho' := renameInto ho rho Theta hrho
+ simp only [graph1Rename,zRelabel] at hp'
+ simp only [graph4Rename] at ho'
+ exact backwardAt endpoint oldChecker (out.relabel rho) (s.relabel rho) (t.relabel rho)
+  (cert.relabel rho) state (parameter.relabel rho) he hp' ho'
+
+theorem originalSelectedNilCertificate : SelectedNilTargets.OriginalSelectedNilCertificate := by
+ intro endpoint oldChecker body alpha Delta out s t cert parameter
+ let A := graph1 InternalUnpair.left z cert
+ let P := graph4 (checkerP endpoint oldChecker) out s t cert parameter
+ let Q := graph4 oldChecker out s t cert parameter
+ have hp : Nonempty (Derivation body (A :: Delta) A) :=
+  ⟨Derivation.hypothesis List.mem_cons_self⟩
+ obtain ⟨hf⟩ := forward endpoint oldChecker out s t cert parameter (withHyp hp P)
+  (show Nonempty (Derivation body (P :: A :: Delta) P) from
+   ⟨Derivation.hypothesis List.mem_cons_self⟩)
+ obtain ⟨hb⟩ := backward endpoint oldChecker out s t cert parameter (withHyp hp Q)
+  (show Nonempty (Derivation body (Q :: A :: Delta) Q) from
+   ⟨Derivation.hypothesis List.mem_cons_self⟩)
+ exact ⟨Derivation.implicationIntroduction (Derivation.conjunctionIntroduction
+  (Derivation.implicationIntroduction hf) (Derivation.implicationIntroduction hb))⟩
+
+theorem originalSelectedClosedVariable : SelectedNilTargets.OriginalSelectedClosedVariable := by
+ intro data source oldStep endpoint window body alpha Delta s t cert parameter typ
+ let A := graph2 source (suc z) s parameter ⊓
+  (graph1 OriginalLambdaConstructor.tag z s ⊓
+   (graph1 InternalUnpair.left typ s ⊓
+    (graph1 BottomRepresentative.bottomCode t typ ⊓
+     graph1 OriginalTransparentVariableStep.certificateCode cert s)))
+ have h : Nonempty (Derivation body (A :: Delta) A) :=
+  ⟨Derivation.hypothesis List.mem_cons_self⟩
+ have hc := andRight (andRight (andRight (andRight h)))
+ have hp := OriginalTransparentVariableStepHereditaryProof.certificatePath s cert hc
+ have ho := OriginalTransparentVariableStepWrapperProof.closedIntroduction source oldStep endpoint window
+  s t cert parameter typ (andLeft h) (andLeft (andRight h))
+  (andLeft (andRight (andRight h))) (andLeft (andRight (andRight (andRight h)))) hc
+ obtain ⟨ho⟩ := backward (InternalParameterizedStructuralEndpointGuard.selectedEndpoint data)
+  (OriginalHereditaryLambdaGlobal.closedLeaf endpoint window
+   (OriginalTransparentVariableStep.refined source oldStep))
+  (suc z) s t cert parameter hp ho
+ exact ⟨Derivation.implicationIntroduction ho⟩
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.SelectedNilProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.SelectedNilProof

@@ -1,0 +1,82 @@
+{
+  "key": "STAGE-CALLBACK-GUARD-RENDER",
+  "lane": "opusB",
+  "serves": "Root Task 6: guard field of StageCallbackRawLevel.Rendering.Exact + concrete record R\u2080 with Rendering.Exact and StageEmitter.RenderingEffective",
+  "source_map": "verification/local-fable-pair-2026-11-22/opusB/STAGE-CALLBACK-GUARD-RENDER-SOURCE-MAP.md",
+  "modules": [
+    {
+      "module": "LogicLineages.PermittedControl.StageCallbackGuardRenderTargets",
+      "sha256": "ad8b4423a3a13e485bf91f28687717210c49773ab3f25de518875ba1e9abe6e3",
+      "first_receipt": "1795386726818073956-3157693"
+    },
+    {
+      "module": "LogicLineages.PermittedControl.StageCallbackGuardRenderCalibrationProof",
+      "sha256": "2e8fcb7a08b8e696b8785750753d19a02a25fc2138afafe8bf934b5f1d716828",
+      "receipt": "1795386836133607408-3158099"
+    },
+    {
+      "module": "LogicLineages.PermittedControl.StageCallbackGuardRenderEffectivityProof",
+      "sha256": "c04063867a1ea024449d69173c520b040a11a008b1320925983edd4203d288ee",
+      "receipt": "1795386918858553059-3158529"
+    },
+    {
+      "module": "LogicLineages.PermittedControl.StageCallbackGuardRenderStatementChecks",
+      "sha256": "1ea06e27182b8d9a0c25a5b845f9bc1afc3306eba972c87282035eec307b4150",
+      "receipt": "1795386947138244103-3158617"
+    },
+    {
+      "module": "LogicLineages.PermittedControl.StageCallbackGuardRenderRecordTargets",
+      "sha256": "36e87ab0249cd8238ee523f5ad84435f1515eac1bcf4f66998c5ac7559af1fa7",
+      "first_receipt": "1795386961593199923-3158797"
+    },
+    {
+      "module": "LogicLineages.PermittedControl.StageCallbackGuardRenderRecordProof",
+      "sha256": "7a84daae0d05faa242b5f9c975b4dbbba7f86c40e316896a4ceb81476ea55214",
+      "receipt": "1795386972428225726-3158838"
+    },
+    {
+      "module": "LogicLineages.PermittedControl.StageCallbackGuardRenderCloseProof",
+      "sha256": "f39fa010a82d701ceaac1e6b573ec90506fbadc15c7036391f63696af15a84fb",
+      "receipt": "1795387043908318394-3159191"
+    }
+  ],
+  "passing_receipts": {
+    "guard": "1795386947138244103-3158617",
+    "record": "1795386972428225726-3158838",
+    "close": "1795387043908318394-3159191"
+  },
+  "failed_receipts": [
+    "1795386893166228144-3158377 (EffectivityProof v1: stuck Primcodable instance; draft kept)",
+    "1795387030515883198-3159090 (CloseProof v1: guardCode not publicly imported; draft kept)"
+  ],
+  "theorems": [
+    "StatementChecks.fixed_exactGuardCode : StageCallbackGuardRender.ExactGuardCode",
+    "StatementChecks.fixed_guardCodeEffectivity : StageCallbackGuardRender.GuardCodeEffectivity",
+    "StatementChecks.fixed_fullStageCallbackGuardRender",
+    "StageCallbackGuardRender.exactR\u2080 : ExactR\u2080 (= Rendering.Exact R\u2080)",
+    "StageCallbackGuardRender.effectiveR\u2080 : EffectiveR\u2080 (= StageEmitter.RenderingEffective R\u2080)",
+    "StageCallbackGuardRender.fullR\u2080",
+    "StageCallbackGuardRender.guardExact : StageEmitter.GuardExact guardCode",
+    "StageCallbackGuardRender.guardEffective : StageEmitter.GuardEffective guardCode",
+    "StageCallbackGuardRender.closedBlockDecision : ClosedBlockDecision.ClosedBlockDecision"
+  ],
+  "print_axioms": [
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_fullStageCallbackGuardRender' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StageCallbackGuardRender.exactR\u2080' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StageCallbackGuardRender.effectiveR\u2080' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StageCallbackGuardRender.fullR\u2080' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StageCallbackGuardRender.closedBlockDecision' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "reused": [
+    "StatementChecks.fixed_stableSortedHighFieldBasePacket",
+    "fixed_highFieldComparisonCalibration/Effective",
+    "fixed_rawFieldComparisonFormCalibration/Effective",
+    "fixed_highFieldPreparedFullCompilerEffective",
+    "RawPacketAlgebra appendCodeEq/exactAppendCode/appendPrimitive/tableBytes/tablePrimitive",
+    "CommonHeadCode.Program.zipWith_primitive",
+    "LinearRowsCodeProof.conjunction_primitive",
+    "StatementChecks.fixed_exactLinearCode/fixed_linearCodeEffectivity (#1409)",
+    "fixed_exactModularCode/fixed_modularCodeEffectivity (#1410)"
+  ],
+  "new_encoding": "none"
+}

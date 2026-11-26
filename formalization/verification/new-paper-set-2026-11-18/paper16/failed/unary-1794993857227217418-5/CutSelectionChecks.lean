@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.CutSelectionProof
+namespace LogicLineages.PersistentMarking.CutSelectionChecks
+theorem exact_selection : CutSelectionTargets.Selection := CutSelectionProof.selection
+#print axioms exact_selection
+end LogicLineages.PersistentMarking.CutSelectionChecks

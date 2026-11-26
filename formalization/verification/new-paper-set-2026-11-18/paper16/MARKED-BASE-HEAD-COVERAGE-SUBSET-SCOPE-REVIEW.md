@@ -1,0 +1,3 @@
+# Head coverage subset scope
+
+Read MarkedBaseHeadCoverageProof/Checks. Approved fresh bounded gate for exactly HeadDeclaration and SourceHeadCoverage from the nine-endpoint/fifteen-pin packet. Raw declaration inclusion directly uses the already checked actual DecisionInventory declarations theorem. Coverage obtains actual initial input auxiliary Universe from typed ordinary inputs; result and every original argument type enter the same inventory K via subtype self-membership and declaration inclusion. No caller-supplied K coverage, changed source head list, or family compatibility premise is introduced. Scope only; fresh native evidence/final required. No marked family/operator acceptance.

@@ -1,0 +1,11 @@
+module
+public import LogicLineages.StandardControlCurrent.WholeBlockProjectorTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.WholeBoundProjectionCodeProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.WholeBlockProjectorProof
+open OrdinalComparison LayeredComparison.SnyatkovCompletion NonlinearProjectionCompletion
+
+theorem initialized : WholeBlockProjectorTargets.Initialized :=
+  ⟨WholeBoundProjectionCodeProof.literalInitializedProjection,
+    WholeBoundProjectionCodeProof.actualJointProgram⟩
+end LogicLineages.StandardControlCurrent.WholeBlockProjectorProof

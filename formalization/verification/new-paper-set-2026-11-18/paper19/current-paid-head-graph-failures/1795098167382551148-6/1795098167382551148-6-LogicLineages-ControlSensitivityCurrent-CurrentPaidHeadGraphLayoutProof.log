@@ -1,0 +1,163 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean:36:42: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.ground` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `Lean.Meta.Simp.Config.ground`
+  [apply] `Lean.Parser.Sym.DSimp.ground`
+  [apply] `Lean.Parser.Sym.Simp.ground`
+  [apply] `Ty.ground`
+  [apply] `TrackedSource.Expr.ground`
+  [apply] `TrackedSource.Generated.ground`
+  [apply] `UnitElimination.Selection.ground`
+  [apply] `TrackedSource.Generated.below.ground`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean:36:59: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.ground` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `Lean.Meta.Simp.Config.ground`
+  [apply] `Lean.Parser.Sym.DSimp.ground`
+  [apply] `Lean.Parser.Sym.Simp.ground`
+  [apply] `Ty.ground`
+  [apply] `TrackedSource.Expr.ground`
+  [apply] `TrackedSource.Generated.ground`
+  [apply] `UnitElimination.Selection.ground`
+  [apply] `TrackedSource.Generated.below.ground`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean:36:77: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.ground` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `Lean.Meta.Simp.Config.ground`
+  [apply] `Lean.Parser.Sym.DSimp.ground`
+  [apply] `Lean.Parser.Sym.Simp.ground`
+  [apply] `Ty.ground`
+  [apply] `TrackedSource.Expr.ground`
+  [apply] `TrackedSource.Generated.ground`
+  [apply] `UnitElimination.Selection.ground`
+  [apply] `TrackedSource.Generated.below.ground`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean:38:2: error: Tactic `generalize` failed: result is not type correct
+  σ = ?m.17 ∨ σ ∈ Γ → σ = ?m.20
+
+Γ : List ?m.22
+hg : ∀ σ ∈ Γ, σ = ?m.7
+σ : ?m.22
+h : σ ∈ ?m.17 :: Γ
+⊢ σ = ?m.20
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean:42:79: error: unsolved goals
+⊢ ∀ σ ∈ ?m.9, σ = sorry ()
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean:62:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 1
+  b ≥ 0
+  b - c ≥ 0
+  a ≥ 0
+where
+ a := ↑n
+ b := ↑(f (n + 4))
+ c := ↑((Option.map (fun v => Cardinal.toNat (ParametricSourceSuccessor.denoteWith f (fun c => ↑(ρ c + 1)) (v 0)).card)
+        (some v)).getD
+    0)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean:61:13: warning: This simp argument is unused:
+  Option.map_some
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵,̵O̵p̵t̵i̵o̵n̵.̵g̵e̵t̵D̵_̵s̵o̵m̵e̵,̵h̵e̵,̵O̵r̵i̵g̵i̵n̵a̵l̵D̵o̵m̵a̵i̵n̵.̵f̵i̵n̵i̵t̵e̵V̵a̵l̵u̵e̵,̵O̵r̵d̵i̵n̵a̵l̵.̵c̵a̵r̵d̵_̵n̵a̵t̵,̵C̵a̵r̵d̵i̵n̵a̵l̵.̵t̵o̵N̵a̵t̵_̵n̵a̵t̵C̵a̵s̵t̵]̵[̲O̲p̲t̲i̲o̲n̲.̲g̲e̲t̲D̲_̲s̲o̲m̲e̲,̲ ̲h̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲D̲o̲m̲a̲i̲n̲.̲f̲i̲n̲i̲t̲e̲V̲a̲l̲u̲e̲,̲ ̲O̲r̲d̲i̲n̲a̲l̲.̲c̲a̲r̲d̲_̲n̲a̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲C̲a̲r̲d̲i̲n̲a̲l̲.̲t̲o̲N̲a̲t̲_̲n̲a̲t̲C̲a̲s̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean:61:29: warning: This simp argument is unused:
+  Option.getD_some
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵,̵O̵p̵t̵i̵o̵n̵.̵g̵e̵t̵D̵_̵s̵o̵m̵e̵,̵h̵e̵,̵O̵r̵i̵g̵i̵n̵a̵l̵D̵o̵m̵a̵i̵n̵.̵f̵i̵n̵i̵t̵e̵V̵a̵l̵u̵e̵,̵O̵r̵d̵i̵n̵a̵l̵.̵c̵a̵r̵d̵_̵n̵a̵t̵,̵C̵a̵r̵d̵i̵n̵a̵l̵.̵t̵o̵N̵a̵t̵_̵n̵a̵t̵C̵a̵s̵t̵]̵[̲O̲p̲t̲i̲o̲n̲.̲m̲a̲p̲_̲s̲o̲m̲e̲,̲ ̲h̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲D̲o̲m̲a̲i̲n̲.̲f̲i̲n̲i̲t̲e̲V̲a̲l̲u̲e̲,̲ ̲O̲r̲d̲i̲n̲a̲l̲.̲c̲a̲r̲d̲_̲n̲a̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲C̲a̲r̲d̲i̲n̲a̲l̲.̲t̲o̲N̲a̲t̲_̲n̲a̲t̲C̲a̲s̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean:61:46: warning: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  simp only [Option.map_some, ̲Option.getD_some,h̵e̵,̵ ̲OriginalDomain.finiteValue, ̲Ordinal.card_nat,
+  ̲ ̲ ̲ ̲ ̲Cardinal.toNat_natCast]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean:61:76: warning: This simp argument is unused:
+  Ordinal.card_nat
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵,̵O̵p̵t̵i̵o̵n̵.̵g̵e̵t̵D̵_̵s̵o̵m̵e̵,̵h̵e̵,̵O̵r̵i̵g̵i̵n̵a̵l̵D̵o̵m̵a̵i̵n̵.̵f̵i̵n̵i̵t̵e̵V̵a̵l̵u̵e̵,̵O̵r̵d̵i̵n̵a̵l̵.̵c̵a̵r̵d̵_̵n̵a̵t̵,̵C̵a̵r̵d̵i̵n̵a̵l̵.̵t̵o̵N̵a̵t̵_̵n̵a̵t̵C̵a̵s̵t̵]̵[̲O̲p̲t̲i̲o̲n̲.̲m̲a̲p̲_̲s̲o̲m̲e̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲g̲e̲t̲D̲_̲s̲o̲m̲e̲,̲ ̲h̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲D̲o̲m̲a̲i̲n̲.̲f̲i̲n̲i̲t̲e̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲C̲a̲r̲d̲i̲n̲a̲l̲.̲t̲o̲N̲a̲t̲_̲n̲a̲t̲C̲a̲s̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean:61:93: warning: This simp argument is unused:
+  Cardinal.toNat_natCast
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵,̵O̵p̵t̵i̵o̵n̵.̵g̵e̵t̵D̵_̵s̵o̵m̵e̵,̵h̵e̵,̵O̵r̵i̵g̵i̵n̵a̵l̵D̵o̵m̵a̵i̵n̵.̵f̵i̵n̵i̵t̵e̵V̵a̵l̵u̵e̵,̵O̵r̵d̵i̵n̵a̵l̵.̵c̵a̵r̵d̵_̵n̵a̵t̵,̵C̵a̵r̵d̵i̵n̵a̵l̵.̵t̵o̵N̵a̵t̵_̵n̵a̵t̵C̵a̵s̵t̵]̵[̲O̲p̲t̲i̲o̲n̲.̲m̲a̲p̲_̲s̲o̲m̲e̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲g̲e̲t̲D̲_̲s̲o̲m̲e̲,̲ ̲h̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲D̲o̲m̲a̲i̲n̲.̲f̲i̲n̲i̲t̲e̲V̲a̲l̲u̲e̲,̲ ̲O̲r̲d̲i̲n̲a̲l̲.̲c̲a̲r̲d̲_̲n̲a̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean:84:109: error: unexpected token ',*'; expected ']'
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean:83:63: error: unsolved goals
+case cons
+A F B G : Type
+l : Layout A F
+r : Layout B G
+ta : A → B
+fa : F → G
+limit : ℕ
+h : LayoutMap l r ta fa limit
+head✝ : F
+tail✝ : List F
+tail_ih✝ : fa (List.foldr l.and l.yes tail✝) = List.foldr r.and r.yes (List.map fa tail✝)
+⊢ r.and (fa head✝) (fa (List.foldr l.and l.yes tail✝)) = r.and (fa head✝) (List.foldr r.and r.yes (List.map fa tail✝))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean:87:97: error: unexpected token ',*'; expected ']'
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean:86:58: error: unsolved goals
+case cons
+A F B G : Type
+l : Layout A F
+r : Layout B G
+ta : A → B
+fa : F → G
+limit : ℕ
+h : LayoutMap l r ta fa limit
+a head✝ : F
+tail✝ : List F
+tail_ih✝ : fa (List.foldr l.or a tail✝) = List.foldr r.or (fa a) (List.map fa tail✝)
+⊢ r.or (fa head✝) (fa (List.foldr l.or a tail✝)) = r.or (fa head✝) (List.foldr r.or (fa a) (List.map fa tail✝))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean:118:2: error: Tactic `apply` failed: could not unify the conclusion of `@List.map_congr_left`
+  List.map ?f ?l = List.map ?g ?l
+with the goal
+  [r.le (r.lit (max nξ base)) (r.var (directWidth w δ)), r.eq (r.var (uSlot w 0)) (r.var (directWidth w δ)),
+        r.eq (r.var (w + 2)) (r.lit 0), r.eq (r.var (uSlot w δ)) (r.add (r.lit base) (r.var (w + 1))), fa a,
+        r.eq (r.var (directWidth w δ + 1)) (r.add (r.var w) (r.lit (δ + 1)))] ++
+      List.map fa (List.map (fun j => fGate l small (uSlot w j) (uSlot w (j + 1)) (argSlot w δ j)) (List.range δ)) =
+    [r.le (r.lit (max nξ base)) (r.var (directWidth w δ)), r.eq (r.var (uSlot w 0)) (r.var (directWidth w δ)),
+        r.eq (r.var (w + 2)) (r.lit 0), r.eq (r.var (uSlot w δ)) (r.add (r.lit base) (r.var (w + 1))), fa a,
+        r.eq (r.var (directWidth w δ + 1)) (r.add (r.var w) (r.lit (δ + 1)))] ++
+      List.map (fun j => fGate r small (uSlot w j) (uSlot w (j + 1)) (argSlot w δ j)) (List.range δ)
+
+Note: The full type of `@List.map_congr_left` is
+  ∀ {α : Type ?u.65} {l : List α} {α_1 : Type ?u.64} {f g : α → α_1}, (∀ a ∈ l, f a = g a) → List.map f l = List.map g l
+
+case e_l
+A F B G : Type
+l : Layout A F
+r : Layout B G
+ta : A → B
+fa : F → G
+limit : ℕ
+h : LayoutMap l r ta fa limit
+w δ nξ base : ℕ
+hlim : directWidth w δ + 1 < limit
+small : List ℕ
+a : F
+ht : directWidth w δ < limit
+hz : w + 1 < limit
+hzero : w + 2 < limit
+hv : w < limit
+hu : uSlot w 0 < limit
+hud : uSlot w δ < limit
+⊢ [r.le (r.lit (max nξ base)) (r.var (directWidth w δ)), r.eq (r.var (uSlot w 0)) (r.var (directWidth w δ)),
+        r.eq (r.var (w + 2)) (r.lit 0), r.eq (r.var (uSlot w δ)) (r.add (r.lit base) (r.var (w + 1))), fa a,
+        r.eq (r.var (directWidth w δ + 1)) (r.add (r.var w) (r.lit (δ + 1)))] ++
+      List.map fa (List.map (fun j => fGate l small (uSlot w j) (uSlot w (j + 1)) (argSlot w δ j)) (List.range δ)) =
+    [r.le (r.lit (max nξ base)) (r.var (directWidth w δ)), r.eq (r.var (uSlot w 0)) (r.var (directWidth w δ)),
+        r.eq (r.var (w + 2)) (r.lit 0), r.eq (r.var (uSlot w δ)) (r.add (r.lit base) (r.var (w + 1))), fa a,
+        r.eq (r.var (directWidth w δ + 1)) (r.add (r.var w) (r.lit (δ + 1)))] ++
+      List.map (fun j => fGate r small (uSlot w j) (uSlot w (j + 1)) (argSlot w δ j)) (List.range δ)

@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericPlainTerminalCalibrationProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericPlainTerminalCalibrationProof.lean
+@@ -20 +20 @@
+-  induction p <;> simp [Formula.variables,LinearRows.atoms,*]
++  induction p <;> simp_all [Formula.variables,LinearRows.atoms]
+@@ -53 +53 @@
+-    | variable i => exact ⟨i,rule⟩
++    | «variable» i => exact ⟨i,by simp only [rule]⟩

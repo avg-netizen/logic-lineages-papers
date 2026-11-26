@@ -1,0 +1,74 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCodec.Targets
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCodec.NativeProof
+open GorbowPRProgram List.Vector
+
+theorem evaluateAdd (a b : Nat) : evaluate add (a ::ᵥ b ::ᵥ nil) = b+a := by
+  induction a with
+  | zero => rfl
+  | succ a ih =>
+      change (evaluate add (a ::ᵥ b ::ᵥ nil)).succ = b+a.succ
+      rw [ih,Nat.add_succ]
+
+theorem evaluateMultiply (a b : Nat) : evaluate multiply (a ::ᵥ b ::ᵥ nil) = b*a := by
+  induction a with
+  | zero => rfl
+  | succ a ih =>
+      change evaluate add (evaluate multiply (a ::ᵥ b ::ᵥ nil) ::ᵥ b ::ᵥ nil) = b*a.succ
+      rw [evaluateAdd,ih,Nat.mul_succ,Nat.add_comm b (b*a)]
+
+theorem evaluatePredecessor (a : Nat) : evaluate predecessor (a ::ᵥ nil) = a.pred := by
+  cases a <;> rfl
+
+theorem evaluateDifference (a b : Nat) : evaluate difference (a ::ᵥ b ::ᵥ nil) = b-a := by
+  induction a with
+  | zero => rfl
+  | succ a ih =>
+      change evaluate predecessor (evaluate difference (a ::ᵥ b ::ᵥ nil) ::ᵥ nil) = b-a.succ
+      rw [evaluatePredecessor,ih,Nat.sub_succ]
+
+theorem evaluateSelect (test a b : Nat) :
+    evaluate select (test ::ᵥ a ::ᵥ b ::ᵥ nil) = if test=0 then a else b := by
+  cases test <;> rfl
+
+theorem evaluateBinary {n : Nat} (p : Program 2) (a b : Program n) (v : List.Vector Nat n) :
+    evaluate (binary p a b) v = evaluate p (evaluate b v ::ᵥ evaluate a v ::ᵥ nil) := rfl
+
+theorem evaluateHigh (a b : Nat) : evaluate high (a ::ᵥ b ::ᵥ nil) = a*a+a+b := by
+  simp only [high,squareFirst,evaluateBinary,evaluateAdd,evaluateMultiply,evaluate]
+  rfl
+
+theorem evaluateLow (a b : Nat) : evaluate low (a ::ᵥ b ::ᵥ nil) = b*b+a := by
+  simp only [low,squareSecond,evaluateBinary,evaluateAdd,evaluateMultiply,evaluate]
+  rfl
+
+theorem nativePair : Targets.NativePair := by
+  intro v
+  have hv : v = v.head ::ᵥ v.tail.head ::ᵥ nil := by
+    calc
+      v = v.head ::ᵥ v.tail := (List.Vector.cons_head_tail v).symm
+      _ = v.head ::ᵥ v.tail.head ::ᵥ nil := by
+        apply congrArg (List.Vector.cons v.head)
+        simpa only [List.Vector.singleton_tail] using (List.Vector.cons_head_tail v.tail).symm
+  rw [hv]
+  change evaluate select (evaluate difference (v.head ::ᵥ v.tail.head ::ᵥ nil) ::ᵥ
+    evaluate high (v.head ::ᵥ v.tail.head ::ᵥ nil) ::ᵥ
+    evaluate low (v.head ::ᵥ v.tail.head ::ᵥ nil) ::ᵥ nil) = Nat.pair v.head v.tail.head
+  rw [evaluateSelect,evaluateDifference,evaluateHigh,evaluateLow]
+  simp only [Nat.pair,Nat.sub_eq_zero_iff_le]
+  split_ifs <;> omega
+
+theorem nativeConsAllVectors : Targets.NativeConsAllVectors := by
+  intro v
+  change (evaluate pair v).succ = _
+  rw [nativePair]
+
+theorem nativeCons : Targets.NativeCons := by
+  intro entry tail
+  rw [nativeConsAllVectors]
+  rfl
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCodec.NativeProof

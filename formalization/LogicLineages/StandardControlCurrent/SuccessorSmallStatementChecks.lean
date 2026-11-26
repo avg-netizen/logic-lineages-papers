@@ -1,0 +1,11 @@
+module
+public import LogicLineages.StandardControlCurrent.SuccessorSmallProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.SuccessorSmallStatementChecks
+theorem successor : SuccessorSmallTargets.FullActualSuccessorCutCocycle := SuccessorSmallProof.successor
+theorem small : SuccessorSmallTargets.FullActualSmallPrincipalKernels := SuccessorSmallProof.small
+end LogicLineages.StandardControlCurrent.SuccessorSmallStatementChecks
+#audit_namespace LogicLineages.StandardControlCurrent.SuccessorSmallStatementChecks
+#print axioms LogicLineages.StandardControlCurrent.SuccessorSmallStatementChecks.successor
+#print axioms LogicLineages.StandardControlCurrent.SuccessorSmallStatementChecks.small

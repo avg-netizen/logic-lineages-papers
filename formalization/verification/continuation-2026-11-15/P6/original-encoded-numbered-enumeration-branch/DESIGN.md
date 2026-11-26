@@ -1,0 +1,9 @@
+# Distinct corrected original numbered enumeration branch
+
+The previous OriginalNumberedEnumerationBranch typed native target is false and remains preserved unchanged. Counterexample: cases ground has original encoded head 1 but headNumber 6. This packet composes the actual accepted converter map into slot1 before the existing literal six-field raw cross/map constructor. It does not relabel the old packet as accepted.
+
+Exact3: native equality to the original typed six-field nested flatMap in label/head/type/base/type-list/extras order; constructive actual membership introduction; constructive internal existential elimination recovering label, encoded head, raw head, result type, base, type tuple and extras. The last two fields in the witness conjunction are the actual converter and numbered-constructor graph, not an assumed semantic supplier. Left-associated conjunction order is literal as written. All malformed encoded heads map to raw0, retaining their occurrences; native calibration only inputs actual typed lists. Internal results quantify all raw input/output codes.
+
+Plan: reuse passed raw row/cross introduction and projection helpers (not failed NativeProof), pay generic actual list-map membership forward/backward with original cons/nil and internal strong induction. Recover the five nested cross witnesses and outer tag map internally. Native proof uses converter encodedHead plus actual Code.codeNumericSound and original Ty/list/nested-list codecs; none are assumed equal to headNumber. Preserve input list order/duplicates and output order, not merely set equivalence.
+
+No full enumeration fuel/completeness, class-code Q, or global E completion is claimed. Later source layer supplies labels range and shared prior base/extras; these restrictions are not silently imposed here.

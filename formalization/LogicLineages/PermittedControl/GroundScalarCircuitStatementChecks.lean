@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PermittedControl.GroundScalarCircuitTargets
+public import LogicLineages.PermittedControl.GroundScalarCircuitCodeTargets
+import LogicLineages.PermittedControl.GroundScalarCircuitShapeProof
+import LogicLineages.PermittedControl.GroundScalarCircuitSemanticsProof
+import LogicLineages.PermittedControl.GroundScalarCircuitCalibrationProof
+import LogicLineages.PermittedControl.GroundScalarCircuitEffectivityProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open GroundScalarCircuit
+
+theorem fixed_groundBlockShape : BlockShape := blockShape
+theorem fixed_groundBlockCorrect : BlockCorrect := blockCorrect
+theorem fixed_fullGroundScalarCircuit : FullGroundScalarCircuit := ⟨blockShape,blockCorrect⟩
+theorem fixed_groundCircuitCalibration : CircuitCalibration := circuitCalibration
+theorem fixed_groundExactQueryCode : ExactQueryCode := exactQueryCode
+theorem fixed_groundQueryCodeEffectivity : QueryCodeEffectivity := queryCodeEffectivity
+theorem fixed_fullGroundScalarCircuitCode : FullGroundScalarCircuitCode :=
+  ⟨circuitCalibration,exactQueryCode,queryCodeEffectivity⟩
+
+#print axioms fixed_fullGroundScalarCircuit
+#print axioms fixed_groundExactQueryCode
+#print axioms fixed_groundQueryCodeEffectivity
+#print axioms fixed_fullGroundScalarCircuitCode
+
+end LogicLineages.PermittedControl.StatementChecks

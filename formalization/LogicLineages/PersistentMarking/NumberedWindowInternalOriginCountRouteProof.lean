@@ -1,0 +1,19 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalOriginCountRouteTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalOriginMemberRouteProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountMembershipChecks
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalOriginCountRouteProof
+open NumberedWindowInternalOriginCountRouteTargets
+open NumberedWindowInternalOriginMemberRouteProof (exact_OpenOriginMemberRoute)
+open NumberedWindowInternalLiteralCountMembershipChecks (exact_OpenLiteralCountMembershipForward)
+
+theorem exact_OpenChosenOriginCountRoute : ExactOpenChosenOriginCountRoute := by
+  intro body α Γ removed left right joined dom count appended member
+  exact exact_OpenOriginMemberRoute body α Γ left right joined dom appended
+    (exact_OpenLiteralCountMembershipForward body α Γ removed joined dom count member)
+
+#print axioms exact_OpenChosenOriginCountRoute
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalOriginCountRouteProof

@@ -1,0 +1,3 @@
+# Backward application matching over an arbitrary positive certificate
+
+An internal induction over the actual sparse function certificate maps a later application result backward to an earlier result and a nonempty codomain path, using the fixed-argument window formation and the previously derived advance rule. Empty finish gives either the identical result or a positive predecessor. Malformed certificates cannot supply an accepting finish. [Exact target](../../LogicLineages/PersistentMarking/NumberedWindowInternalSparseMatchedPathTargets.lean) · [Native gate](P16-MATCHED-PATH-LOCAL-EVIDENCE.json)

@@ -1,0 +1,2 @@
+# Comparator-gate extension review
+Approved as an additional freeze/preflight pin only. All ten proposed extension pins match current bytes, and prior FROZEN.json hash matches recorded hash. Original nine pins remain unchanged. exactOriginalContract expands exactly both Code guards, actual headMove/result graph, and original termCheck with explicit constant-one M/W and same inputs. Iff.rfl proves definitional correspondence only, not any diagnostic conjunct. Namespace audit is present. No native/proof/refutation claim, no old target change.

@@ -1,0 +1,52 @@
+{
+  "status": "single-line numeric proof-only Boolean reduction repair; native gate pending",
+  "immutable_previous_verified_remote": "ed42e9cc2046a4eb7aa77b5c5b83cb3c9f555ac3",
+  "previous_source_local_prefix": "2f7030d6c",
+  "receipt": {
+    "path": "formalization/build-reports/1795356414280960471-8.json",
+    "sha256": "74fc8737069eea788a9274e2cb39b88466e3a6f37667f6b631f85f58147738b5"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795356414280960471-8-LogicLineages-PersistentMarking-NumberedWindowInternalCoverAuxSyntaxNumericProof.log",
+    "sha256": "251515207e2c6d51a72bb9e24ebe474bdd272837a948fcd966f26cc5cf369a25"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-reselected-aux-syntax-numeric-repair01-diagnostic.txt",
+    "sha256": "251515207e2c6d51a72bb9e24ebe474bdd272837a948fcd966f26cc5cf369a25"
+  },
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-COVER-RESELECTED-AUX-SYNTAX-NUMERIC-REPAIR-02.patch",
+    "sha256": "b0e7bc4f42ea93ee5abcd7bf9b59fab341ad26b35db0d762660e2f49707ad72d"
+  },
+  "archived_failed_source": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverAuxSyntaxNumericProof-02.lean",
+    "sha256": "9f677e3c792e18abca184faf68f71321d0db76b2892f53d9e091417967d6d7a8"
+  },
+  "repaired_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxSyntaxNumericProof.lean",
+    "sha256": "3d6cd9ec4330437fd2794a68f2d2db3304e0e8638d99dacddda49e681fc00090"
+  },
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxSyntaxTargets.lean",
+      "sha256": "5a4a626bce7b7b75997ce1487d07980acf515dfb2b7b9c88ff7eb698f6933e69"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxSyntaxOpenRowProof.lean",
+      "sha256": "9a123541add95cd506fc1b14eafd18d82f45c4563a15a11a2ac38f104072fe95"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxSyntaxOpenParentProof.lean",
+      "sha256": "753758e2c00bff628f9c732b79357f9521da9046599f72ef85f71fa14b7d5f66"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-COVER-RESELECTED-AUX-SYNTAX-SOURCE-MAP.md",
+      "sha256": "4e9b2dbd2a7cab97560c6745368ccd04b24654c7e57de3cda58c135d281f6a95"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-COVER-RESELECTED-AUX-SYNTAX-NUMERIC-REPAIR-01.json",
+      "sha256": "6182f8eea9fd84c5b3ca1de0aa81fa3c738ad3b28bf64de25a0213349cd2ac93"
+    }
+  ],
+  "diagnosis": "Native Repair01 reached the final sixteen Bool assignments, then every goal stopped before decide because restricted simp with the already-substituted case equations made no progress. Drop only that progress-sensitive tactic; retain the exact instantiated conjunction and lookup rewrites and use decide on the closed leaf equalities. No target, physical code, import, open branch or other proof changed. Failed sorryAx lines indicate no acceptance."
+}

@@ -1,0 +1,12 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalDirectInstalledOriginProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalDirectInstalledOriginChecks
+open NumberedWindowInternalDirectInstalledOriginTargets
+
+theorem exact_InstalledOriginalSuccessorOrigin : ExactInstalledSuccessorOrigin :=
+  NumberedWindowInternalDirectInstalledOrigin.exactInstalledSuccessorOrigin
+
+#print axioms exact_InstalledOriginalSuccessorOrigin
+end LogicLineages.PersistentMarking.NumberedWindowInternalDirectInstalledOriginChecks

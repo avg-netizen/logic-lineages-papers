@@ -1,0 +1,9 @@
+module
+public import LogicLineages.PermittedControl.PolynomialUndecidabilitySupplierProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_polynomialUndecidabilitySupplier :
+    PolynomialUndecidabilitySupplierTargets.PolynomialUndecidabilitySupplier :=
+  PolynomialUndecidabilitySupplier.Proof.polynomialUndecidabilitySupplier
+#print axioms fixed_polynomialUndecidabilitySupplier
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,13 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalMatrixLinearLowerTableRowProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalMatrixLinearLowerTableRowProof.lean
+@@ -113,2 +113,2 @@
+-    let µ := Function.update ν 0 z
+-    let read : WeightedOperand → Nat := fun t => µ (name t.2)
++    let updated := Function.update ν 0 z
++    let read : WeightedOperand → Nat := fun t => updated (name t.2)
+@@ -119 +119 @@
+-    have sum : NormalForm.rowValue (preparedRow top ops row) µ =
++    have sum : NormalForm.rowValue (preparedRow top ops row) updated =
+@@ -123 +123 @@
+-      rw [sumEval name µ row.2.2] <;> rfl
++      rw [sumEval name updated row.2.2] <;> rfl

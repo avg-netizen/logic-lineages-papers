@@ -1,0 +1,46 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalSourceHeads/NativeProof.lean:39:14: warning: This simp argument is unused:
+  List.filter_cons
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵,̵L̵i̵s̵t̵.̵f̵i̵l̵t̵e̵r̵_̵c̵o̵n̵s̵,̵n̵u̵m̵b̵e̵r̵s̵N̵u̵m̵b̵e̵r̵]̵[̲h̲,̲ ̲n̲u̲m̲b̲e̲r̲s̲N̲u̲m̲b̲e̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalSourceHeads/NativeProof.lean:55:103: error: unsolved goals
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+types : List Ty
+hm :
+  List.map (fun head => headNumber (headCode head)) (rawHeadWindow symbols types) =
+    List.map headNumber (List.map headCode (rawHeadWindow symbols types))
+hf :
+  evaluate (filterHeads n arity)
+      (ofFn
+        ![numbersNumber (List.map headNumber (List.map headCode (rawHeadWindow symbols types))),
+          numbersNumber (List.map Fin.val symbols), numbersNumber (List.map typeNumber types)]) =
+    numbersNumber
+      (List.map headNumber
+        (List.filter (fun head => decide (HeadInWindow arity symbols types (decodeHead head)))
+          (List.map headCode (rawHeadWindow symbols types))))
+h0 :
+  evaluate (Program.projection 0)
+      (ofFn ![numbersNumber (List.map Fin.val symbols), numbersNumber (List.map typeNumber types)]) =
+    numbersNumber (List.map Fin.val symbols)
+h1 :
+  evaluate (Program.projection 1)
+      (ofFn ![numbersNumber (List.map Fin.val symbols), numbersNumber (List.map typeNumber types)]) =
+    numbersNumber (List.map typeNumber types)
+⊢ List.map (headNumber ∘ headCode)
+      (List.filter ((fun head => decide (HeadInWindow arity symbols types (decodeHead head))) ∘ headCode)
+        (rawHeadWindow symbols types)) =
+    List.map (headNumber ∘ headCode)
+      (List.filter (fun f => decide (HeadInWindow arity symbols types f)) (rawHeadWindow symbols types))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalSourceHeads/NativeProof.lean:70:4: warning: This simp argument is unused:
+  NumberedAuxiliaryDecodingProof.headRoundTrip
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵u̵m̵b̵e̵r̵e̵d̵A̵u̵x̵i̵l̵i̵a̵r̵y̵E̵n̵u̵m̵e̵r̵a̵t̵i̵o̵n̵.̵s̵o̵u̵r̵c̵e̵H̵e̵a̵d̵s̵,̵h̵e̵a̵d̵W̵i̵n̵d̵o̵w̵,̵L̵i̵s̵t̵.̵f̵i̵l̵t̵e̵r̵_̵m̵a̵p̵,̵
+  ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵A̵u̵x̵i̵l̵i̵a̵r̵y̵D̵e̵c̵o̵d̵i̵n̵g̵P̵r̵o̵o̵f̵.̵h̵e̵a̵d̵R̵o̵u̵n̵d̵T̵r̵i̵p̵]̵[̲N̲u̲m̲b̲e̲r̲e̲d̲A̲u̲x̲i̲l̲i̲a̲r̲y̲E̲n̲u̲m̲e̲r̲a̲t̲i̲o̲n̲.̲s̲o̲u̲r̲c̲e̲H̲e̲a̲d̲s̲,̲ ̲h̲e̲a̲d̲W̲i̲n̲d̲o̲w̲,̲ ̲L̲i̲s̲t̲.̲f̲i̲l̲t̲e̲r̲_̲m̲a̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/OriginalSourceHeads/NativeProof.lean:96:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.OriginalSourceHeads.NativeProof.sourceValue: forbidden axiom dependency sorryAx

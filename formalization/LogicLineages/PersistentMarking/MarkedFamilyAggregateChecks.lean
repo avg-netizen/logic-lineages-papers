@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.MarkedFamilyAggregateProof
+namespace LogicLineages.PersistentMarking.MarkedFamilyAggregateChecks
+theorem exact_AggregateValid : MarkedFamilyLatticeTargets.AggregateValid := MarkedFamilyAggregateProof.aggregateValid
+#print axioms exact_AggregateValid
+end LogicLineages.PersistentMarking.MarkedFamilyAggregateChecks

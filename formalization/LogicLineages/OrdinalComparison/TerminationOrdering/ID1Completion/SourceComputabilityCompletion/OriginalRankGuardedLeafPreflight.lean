@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRankGuardedLeafTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion
+open OriginalRankGuardedLeaf OriginalRankGuardedLeafTargets
+#check refined
+#check priorData
+#check PriorRankLaw
+#check OtherRankLaw
+#check (ActualOriginalRankGuardedPriorLeafRank : Prop)
+#check (ActualOriginalRankGuardedOtherLeafRank : Prop)

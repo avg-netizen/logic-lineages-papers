@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentMixedPathRunProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentMixedPathRunStatementChecks
+theorem actualRunForward : OriginalTransparentMixedPathRunTargets.RunForward := by
+ intro body alpha Delta
+ exact OriginalTransparentMixedPathRunProof.runForward
+theorem actualRunBackward : OriginalTransparentMixedPathRunTargets.RunBackward := by
+ intro body alpha Delta
+ exact OriginalTransparentMixedPathRunProof.runBackward
+theorem actualRefinedForward : OriginalTransparentMixedPathRunTargets.RefinedForward := by
+ intro body alpha Delta
+ exact OriginalTransparentMixedPathRunProof.refinedForward
+theorem actualRefinedBackward : OriginalTransparentMixedPathRunTargets.RefinedBackward := by
+ intro body alpha Delta
+ exact OriginalTransparentMixedPathRunProof.refinedBackward
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentMixedPathRunStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentMixedPathRunStatementChecks

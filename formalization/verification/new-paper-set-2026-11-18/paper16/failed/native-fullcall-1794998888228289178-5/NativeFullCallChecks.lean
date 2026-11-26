@@ -1,0 +1,9 @@
+import LogicLineages.PersistentMarking.NativeFullCallProof
+namespace LogicLineages.PersistentMarking.NativeFullCallChecks
+theorem exact_firstFullCall : NativeOrientationTargets.FirstFullCall := NativeFullCallProof.firstFullCall
+theorem exact_secondFullCall : NativeOrientationTargets.SecondFullCall := NativeFullCallProof.secondFullCall
+theorem exact_thirdFullCall : NativeOrientationTargets.ThirdFullCall := NativeFullCallProof.thirdFullCall
+#print axioms exact_firstFullCall
+#print axioms exact_secondFullCall
+#print axioms exact_thirdFullCall
+end LogicLineages.PersistentMarking.NativeFullCallChecks

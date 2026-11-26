@@ -1,0 +1,63 @@
+CACHE_HIT LogicLineages.PersistentMarking.Syntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineSyntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineTyping
+CACHE_HIT LogicLineages.PersistentMarking.Signature
+CACHE_HIT LogicLineages.PersistentMarking.NameBridge
+CACHE_HIT LogicLineages.PersistentMarking.FreeSubstitution
+CACHE_HIT LogicLineages.PersistentMarking.StructuralContext
+CACHE_HIT LogicLineages.PersistentMarking.Occurrences
+CACHE_HIT LogicLineages.PersistentMarking.SpineMarking
+CACHE_HIT LogicLineages.PersistentMarking.Comparison
+CACHE_HIT LogicLineages.PersistentMarking.StructuralStabilityTargets
+CACHE_HIT LogicLineages.PersistentMarking.StructuralCoverageTargets
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupport
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupportTargets
+CACHE_HIT LogicLineages.PersistentMarking.ConfinedPair
+CACHE_HIT LogicLineages.PersistentMarking.StablePairTargets
+CACHE_HIT LogicLineages.PersistentMarking.NativeReduction
+CACHE_HIT LogicLineages.PersistentMarking.DecisionInventory
+CACHE_HIT LogicLineages.PersistentMarking.NativeCarrierTargets
+Compiling LogicLineages.PersistentMarking.NativeIndexedCarrierTargets
+COMPILE_PASS LogicLineages.PersistentMarking.NativeIndexedCarrierTargets
+CACHE_HIT LogicLineages.PersistentMarking.NativeOrientationTargets
+CACHE_HIT LogicLineages.PersistentMarking.ComparisonTargets
+CACHE_HIT LogicLineages.PersistentMarking.BridgeTargets
+CACHE_HIT LogicLineages.PersistentMarking.SpineTypingTargets
+CACHE_HIT LogicLineages.PersistentMarking.SpineShiftProof
+CACHE_HIT LogicLineages.PersistentMarking.SubstitutionTargets
+CACHE_HIT LogicLineages.PersistentMarking.InsertionTargets
+CACHE_HIT LogicLineages.PersistentMarking.SubstitutionProof
+CACHE_HIT LogicLineages.PersistentMarking.InsertionProof
+CACHE_HIT LogicLineages.PersistentMarking.SpineSubstitutionProof
+CACHE_HIT LogicLineages.PersistentMarking.OpeningFoundationProof
+CACHE_HIT LogicLineages.PersistentMarking.SpineMarkingTargets
+CACHE_HIT LogicLineages.PersistentMarking.SpineMarkingProof
+CACHE_HIT LogicLineages.PersistentMarking.ElementarySupportProof
+CACHE_HIT LogicLineages.PersistentMarking.ElementaryProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeCovarianceTargets
+CACHE_HIT LogicLineages.PersistentMarking.FreeShiftProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeCompositionProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeCallProof
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupportFoundationProof
+CACHE_HIT LogicLineages.PersistentMarking.NativeTypingProof
+CACHE_HIT LogicLineages.PersistentMarking.NativeCarrierTypingProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeTypingProof
+CACHE_HIT LogicLineages.PersistentMarking.ClosingProof
+Compiling LogicLineages.PersistentMarking.NativeClosedProof
+COMPILE_PASS LogicLineages.PersistentMarking.NativeClosedProof
+Compiling LogicLineages.PersistentMarking.NativeIndexedTypingProof
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeIndexedTypingProof.lean:16:20: error: Invalid simp theorem: Expected a proposition, but found
+  Ty → Expr
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeIndexedTypingProof.lean:16:4: error: unsolved goals
+S : Signature
+η : Ty
+⊢ ∀ (name arity : Nat), ¬Head.ranked name arity ∈ DecisionInventory.heads (NativeIndexedCarrierTargets.discard η)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeIndexedTypingProof.lean:16:28: warning: This simp argument is unused:
+  DecisionInventory.heads
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵a̵t̵i̵v̵e̵,̵d̵i̵s̵c̵a̵r̵d̵,̵D̵e̵c̵i̵s̵i̵o̵n̵I̵n̵v̵e̵n̵t̵o̵r̵y̵.̵h̵e̵a̵d̵s̵]̵[̲N̲a̲t̲i̲v̲e̲,̲ ̲d̲i̲s̲c̲a̲r̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+COMPILE_FAILED LogicLineages.PersistentMarking.NativeIndexedTypingProof: 1
+BUILD_RECEIPT build-reports/1795070475944631327-6.json

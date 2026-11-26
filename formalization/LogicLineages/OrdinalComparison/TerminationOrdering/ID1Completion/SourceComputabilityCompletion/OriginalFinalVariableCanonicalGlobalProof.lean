@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableCanonicalCancellationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableCanonicalRankProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableWeakeningGlobalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableCanonicalGlobalProof
+open OriginalFinalVariableCanonicalFixednessProof OriginalFinalVariableCanonicalCancellationProof
+open OriginalFinalVariableCanonicalRankProof
+
+/-- The exact same initial tuple, once-refined variable leaves and entire
+final pipeline retain every preceding weakening/native property and all three
+new independent internal laws, before any runtime context is introduced. -/
+theorem actualOriginalFinalVariableCanonicalSelection :
+    OriginalFinalVariableCanonicalTargets.ActualOriginalFinalVariableCanonicalSelection := by
+  intro n arity
+  obtain ⟨p,guard,hp⟩ :=
+    OriginalFinalVariableWeakeningGlobalProof.actualOriginalFinalVariableWeakeningSelection n arity
+  exact ⟨p,guard,hp,hp.2.2.2.1,
+    actualOriginalFinalVariableFixedness guard p,
+    actualOriginalFinalVariableCancellation guard p,
+    actualOriginalFinalVariableRankPreservation guard p⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableCanonicalGlobalProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableCanonicalGlobalProof

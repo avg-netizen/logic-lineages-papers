@@ -1,0 +1,5 @@
+# Independent literal typed raw5 function lift and singleton
+
+Read entire frozen target/map and Graph/Singleton/Checks leaves. Input arrow is rawCons dom cod (actual 1+polynomial pair); parent codomain and unchanged packed context, original tag6 annotations/right argument held literally. Uses actual 710 object graph recovery at unchanged child tape; genuinely apply closed 708 with predecessor zero to lift ownRun unit, and only reconstruct actual 710 on wrapped tape from all four supplied syntax/window graphs. Singleton uses original same body/data and actual closed #681 applied with both real address/validator reports and both exact selected least successes, supplying the literal transformed certificate. No generated replacement witness, no old graph transport, no equality of distinct quotient arguments.
+
+Preflight1795262669190821833-6 and first native1795263043037694719-6 passed original caps. Independent1481 module replay, both exact standard-only aliases, unchanged all source and author pin maps, complete native closure logs archived. No endpoint guard/least derivation, RawMatching, general accessibility or numbered promotion.

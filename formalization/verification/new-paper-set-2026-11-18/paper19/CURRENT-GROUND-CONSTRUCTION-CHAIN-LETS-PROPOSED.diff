@@ -1,0 +1,23 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionChainProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionChainProof.lean
+@@ -101,7 +101,7 @@
+         (HeterogeneousUnaryAssembly.chargedSum (vs.map (fun v => unitValue f (v 1))))
+     rw [ih]
+     rw [show ordinalNaturalSum (unitValue f (v 1)) 3 = unitValue f (v 1)+3 by
+-      simpa using actualNaturalSumFiniteRight (unitValue f (v 1)) 3]
++      simpa using LogicLineages.OrdinalComparison.actualNaturalSumFiniteRight (unitValue f (v 1)) 3]
+ 
+ theorem positiveCommonValue (f : Nat → Nat) {Γ i} (q : OrdinalExpression Γ)
+     (hq : GeneratedOrdinalGrade Γ i q) (hi : 0 < i) (μ : Variable Γ .ground → Nat) :
+@@ -131,8 +131,9 @@
+     rw [hm.1,hm.2.2]
+     have hcode : ((merged ops).map NumericUnaryChain.pairCode).map Prod.fst =
+         (terms ops).map SyntaxCode.encodeTerm := by simp [terms,List.map_map,NumericUnaryChain.pairCode,Function.comp_def]
+-    rw [hcode,hl,hv']
+-    rfl
++    rw [hcode,hl]
++    dsimp only
++    simp only [hv',bind,pure,Option.bind_some] <;> rfl
+   · obtain ⟨v',hv',hg⟩ := AdmissibleAssignment.actualAdmissibleAssignmentGenerated (context ops)
+       (Ty.curriedGround 1) p (SourceUnaryChain.chainSource (terms ops))
+     have same : v' = v := Option.some.inj (hv'.symm.trans hv)

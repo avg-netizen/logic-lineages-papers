@@ -1,0 +1,6 @@
+# Paper 17: original raw successful-domain query with an explicit high callback
+
+* Compose the genuine raw literal surface frontend with the actual checked semantic bounded raw driver, using the exact typed proof on the same literal graph/terminal clause family and original successful observation.
+* The wrapper is correct on a genuine source encoding with actual topology and plain terminal admission. It characterizes both existence and absence of a successful observation at the requested polarity. Looking for no successful observation at the opposite polarity characterizes agreement with the desired polarity for **every successful observation**, not total success. An observation error is never counted as successful false. The raw frontend's own failure propagates `none`.
+* The callback remains an explicit hypothesis: correct same-bound encoded typed children for each genuine positive-dimensional family, strict rank decrease, and the true same-C paid-high meaning. No old output order is imposed. Computability additionally assumes computable function, bound, and high callback.
+* This is not a raw topology/admission validator, a construction of the high compiler, or a closure of a numbered theorem.

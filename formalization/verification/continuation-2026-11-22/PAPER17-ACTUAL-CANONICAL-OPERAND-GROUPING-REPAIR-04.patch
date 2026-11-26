@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingReadProof.lean
+@@ -35 +35 @@
+-private def payload (f ρ : Nat → Nat) (op : LowerOperand) : Nat :=
++private noncomputable def payload (f ρ : Nat → Nat) (op : LowerOperand) : Nat :=
+@@ -38 +38 @@
+-private def render (f ρ : Nat → Nat) (xs : List Read) (key : LowerOperand) : Read :=
++private noncomputable def render (f ρ : Nat → Nat) (xs : List Read) (key : LowerOperand) : Read :=

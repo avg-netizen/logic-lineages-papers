@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.CutStrictStrictProof
+namespace LogicLineages.PersistentMarking.CutStrictStrictChecks
+theorem exact_strictStrict : CutOccurrenceTargets.StrictStrict := CutStrictStrictProof.strictStrict
+#print axioms exact_strictStrict
+end LogicLineages.PersistentMarking.CutStrictStrictChecks

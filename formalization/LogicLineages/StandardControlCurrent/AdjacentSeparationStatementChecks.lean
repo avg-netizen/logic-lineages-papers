@@ -1,0 +1,9 @@
+module
+public import LogicLineages.StandardControlCurrent.AdjacentSeparationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.AdjacentSeparationStatementChecks
+theorem full : AdjacentSeparationTargets.Full := AdjacentSeparationProof.full
+end LogicLineages.StandardControlCurrent.AdjacentSeparationStatementChecks
+#audit_namespace LogicLineages.StandardControlCurrent.AdjacentSeparationStatementChecks
+#print axioms LogicLineages.StandardControlCurrent.AdjacentSeparationStatementChecks.full

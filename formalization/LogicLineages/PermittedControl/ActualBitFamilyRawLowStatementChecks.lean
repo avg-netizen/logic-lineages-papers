@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.ActualBitFamilyRawLowTargets
+import LogicLineages.PermittedControl.ActualBitFamilyRawLowProof
+import LogicLineages.PermittedControl.ActualBitFamilyRawLowComputableProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualBitFamilyRawLow
+
+theorem fixed_exactRawLowCode : ExactRawLowCode := exactRawLowCode
+theorem fixed_exactRawLowCalibration : ExactRawLowCalibration := exactRawLowCalibration
+theorem fixed_exactRawLowDimension : ExactRawLowDimension := exactRawLowDimension
+theorem fixed_fullActualBitFamilyRawLow : FullActualBitFamilyRawLow :=
+  ⟨fixed_exactRawLowCode,fixed_exactRawLowCalibration,fixed_exactRawLowDimension⟩
+
+#print axioms fixed_exactRawLowCode
+#print axioms fixed_exactRawLowCalibration
+#print axioms fixed_exactRawLowDimension
+#print axioms fixed_fullActualBitFamilyRawLow
+
+end LogicLineages.PermittedControl.StatementChecks

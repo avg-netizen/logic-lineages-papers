@@ -1,0 +1,20 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphIndexProof.lean:41:9: error: unsolved goals
+case zero
+Γ : List Ty
+σ : Ty
+x : Variable Γ σ
+⊢ variableIndex x = variableIndex x
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphIndexProof.lean:70:16: error: Type mismatch: After simplification, term
+  congrArg (fun x => x + 1) ih
+ has type
+  (List.filter (fun x => decide (x = 0)) (List.map SyntaxCode.typeCode Γ)).length + 1 = (groundCtx Γ).length + 1
+but is expected to have type
+  (List.filter (fun x => decide (x = 0)) (List.map SyntaxCode.typeCode Γ)).length = (groundCtx Γ).length
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphIndexProof.lean:98:8: error: Type mismatch: After simplification, term
+  congrArg (fun x => x + 1) (ih x)
+ has type
+  ↑(groundRank x) + 1 =
+    (List.filter (fun x => decide (x = 0)) (List.take (variableIndex x) (List.map SyntaxCode.typeCode Γ))).length + 1
+but is expected to have type
+  ↑(groundRank x) =
+    (List.filter (fun x => decide (x = 0)) (List.take (variableIndex x) (List.map SyntaxCode.typeCode Γ))).length

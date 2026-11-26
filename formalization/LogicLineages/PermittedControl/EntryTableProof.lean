@@ -1,0 +1,103 @@
+module
+public import LogicLineages.PermittedControl.EntryTableTargets
+public import LogicLineages.PermittedControl.EntryResiduesProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl
+open OrdinalComparison
+
+theorem bare_iterate_residue (f : Nat → Nat) (B : Nat) (hf : SelectedWithThreshold f B)
+    (m t a : Nat) (hm : 0 < m) (ht : max m B ≤ t) (ha : 0 < a) :
+    Int.ModEq (2*(m : Int)) (f^[a] t : Int) (2*(potential t : Int)-2*(a : Int)) := by
+  have hp := selected_orbit f B hf m t a hm ht
+  have heven : 2 ∣ f^[a] t := by
+    obtain ⟨k,rfl⟩ := Nat.exists_eq_succ_of_ne_zero (by omega : a ≠ 0)
+    rw [Function.iterate_succ_apply']
+    exact selected_even f B hf _
+  have hcast : (f^[a] t : Int) = 2*(potential (f^[a] t) : Int) := by
+    have h := Nat.mod_eq_zero_of_dvd heven
+    unfold potential
+    omega
+  rw [hcast]
+  have h := hp.mul_left' (c := 2)
+  convert h using 1 <;> omega
+
+theorem bareIterateAndIdentityTable : Targets.BareIterateAndIdentityTable := by
+  refine ⟨bare_iterate_residue,?_,?_⟩
+  · intro t
+    unfold potential
+    omega
+  · intro q
+    unfold potential
+    omega
+
+theorem identityEntry : Targets.IdentityEntry := by
+  intro f nu t heps hnu ht
+  have hi : actualLimitPart (countInitial nu t) = nu := by
+    rcases hnu with rfl | hnu
+    · simpa only [countInitial,zero_add] using limitPart_finite (t-actualOrdinalNorm 0)
+    · exact limitPart_tail nu hnu _
+  have hhit := (interval_iff_limitPart (countInitial nu t) nu hnu).mpr hi
+  refine ⟨⟨hhit.1,hhit.2,by intro j hj; omega⟩,?_⟩
+  change actualOrdinalNorm (nu+((t-actualOrdinalNorm nu : Nat) : Ordinal)) = t
+  rw [(actualFiniteTailClosureNorm nu heps _).2,Nat.add_sub_of_le ht]
+
+theorem proper_entry_pos (f : Nat → Nat) (lam nu : Ordinal.{0}) (t i : Nat)
+    (hl : Order.IsSuccLimit lam) (hlt : nu < lam)
+    (hi : FirstEntry f (countInitial lam t) nu i) : 0 < i := by
+  have hbound : nu+Ordinal.omega0 ≤ lam := by
+    apply (Ordinal.add_le_iff_of_isSuccLimit Ordinal.isSuccLimit_omega0).mpr
+    intro d hd
+    obtain ⟨n,rfl⟩ := Ordinal.lt_omega0.mp hd
+    exact (hl.add_natCast_lt hlt n).le
+  by_contra h
+  have hz : i = 0 := by omega
+  subst i
+  have hno : nu+Ordinal.omega0 ≤ countInitial lam t := hbound.trans le_self_add
+  exact (not_lt_of_ge hno) hi.2.1
+
+theorem derivedEntryTable : Targets.DerivedEntryTable := by
+  intro f B hf m lam nu t i hm ha hl hnu hlt ht hi
+  obtain ⟨q,hq,horbit,hfinite,hlong⟩ := entryResidues f B hf m lam nu t hm ha hl hnu hlt ht
+  have hiq := firstEntry_unique f _ nu i q hi hq
+  subst q
+  have htail : max m B ≤ t := (le_max_right _ _).trans ((le_max_right _ _).trans ht)
+  have hip := proper_entry_pos f lam nu t i hl hlt hi
+  have hiter : ∀ a : Nat, f^[a] (entryNormAt f (countInitial lam t) i) = f^[i+a] t := by
+    intro a
+    rw [horbit,Nat.add_comm i a,Function.iterate_add_apply]
+  have hvalues : ∀ a : Nat, Int.ModEq (2*(m : Int))
+      (f^[a] (entryNormAt f (countInitial lam t) i) : Int)
+      (2*(potential t : Int)-2*((i : Int)+(a : Int))) := by
+    intro a
+    rw [hiter]
+    have h := bare_iterate_residue f B hf m t (i+a) hm htail (hip.trans_le (Nat.le_add_right _ _))
+    simpa only [Int.natCast_add] using h
+  have hhalf : Int.ModEq (m : Int) (potential (f (entryNormAt f (countInitial lam t) i)) : Int)
+      ((potential t : Int)-(i : Int)-1) := by
+    have h := selected_orbit f B hf m t (i+1) hm htail
+    rw [Function.iterate_succ_apply',← horbit] at h
+    convert h using 1 <;> simp only [Int.natCast_add,Int.natCast_one] <;> omega
+  constructor
+  · intro k hk heq
+    have hik := hfinite k hk heq
+    subst k
+    exact ⟨Int.ModEq.refl _,hvalues,hhalf⟩
+  · intro hnot
+    have hcount := (hlong hnot).1
+    refine ⟨hcount,?_,?_⟩
+    · intro a
+      have hc := (hcount.mul_left' (c := 2)).sub_left
+        (2*(potential t : Int)-2*(a : Int))
+      have hnormalized : Int.ModEq (2*(m : Int))
+          (2*(potential t : Int)-2*((i : Int)+(a : Int)))
+          (2*(((actualOrdinalNorm nu+1)/2 : Nat) : Int)-2*(a : Int)) := by
+        convert hc using 1 <;> omega
+      exact (hvalues a).trans hnormalized
+    · have hc := (hcount.sub_left (potential t : Int)).sub_right 1
+      have hnormalized : Int.ModEq (m : Int) ((potential t : Int)-(i : Int)-1)
+          ((((actualOrdinalNorm nu+1)/2 : Nat) : Int)-1) := by
+        convert hc using 1 <;> omega
+      exact hhalf.trans hnormalized
+
+end LogicLineages.PermittedControl

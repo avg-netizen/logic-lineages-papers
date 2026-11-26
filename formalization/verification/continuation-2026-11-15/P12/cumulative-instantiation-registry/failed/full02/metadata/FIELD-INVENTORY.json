@@ -1,0 +1,529 @@
+{
+  "RawNumericSearch": {
+    "parameters": "(test : Program 2)",
+    "parent": null,
+    "parent_args": "",
+    "fields": [
+      [
+        "ht",
+        "testTag",
+        "2,test"
+      ],
+      [
+        "hs",
+        "searchTag",
+        "2,search test"
+      ]
+    ]
+  },
+  "RawMulLeftAcceptance": {
+    "parameters": "(old : Program 1)",
+    "parent": "RawNumericSearch",
+    "parent_args": "RawMulLeftReplace.candidateTest",
+    "fields": [
+      [
+        "hq",
+        "qtag",
+        "3,RawMulLeftReplace.lineConstructor"
+      ],
+      [
+        "hlogical",
+        "logicalTag",
+        "1,RawMulLeftReplace.logicalLeaf old"
+      ],
+      [
+        "hp",
+        "pairTag",
+        "2,HistoryCodec.pair"
+      ],
+      [
+        "hc",
+        "consTag",
+        "2,HistoryCodec.cons"
+      ],
+      [
+        "ha",
+        "appendTag",
+        "2,HistoryAppend.append"
+      ],
+      [
+        "hlength",
+        "lengthTag",
+        "1,HistoryLengthOffset.lengthProgram"
+      ],
+      [
+        "hdrop",
+        "dropTag",
+        "2,HistoryLookup.drop"
+      ],
+      [
+        "hv",
+        "validatorTag",
+        "1,TwoSol20261113.ReflexivityRecognizer.termValidator"
+      ]
+    ]
+  },
+  "RawMulLeftDispatcher": {
+    "parameters": "(old arithmetic : Program 1) (x : Program 3)",
+    "parent": "RawMulLeftAcceptance",
+    "parent_args": "old",
+    "fields": [
+      [
+        "hf",
+        "ftag",
+        "2,LiteralSyntaxValidator.formulaValidator"
+      ],
+      [
+        "hlineValidator",
+        "ltag",
+        "1,LiteralSyntaxValidator.lineValidator"
+      ],
+      [
+        "hdispatcher",
+        "dtag",
+        "4,dispatcher old arithmetic x"
+      ]
+    ]
+  },
+  "RawMulLeftCertificate": {
+    "parameters": "(old arithmetic : Program 1) (x : Program 3)",
+    "parent": "RawMulLeftDispatcher",
+    "parent_args": "old arithmetic x",
+    "fields": [
+      [
+        "hi",
+        "itag",
+        "4,SixSol20261112.HistoryMachine.iterator (kernel old arithmetic x)"
+      ],
+      [
+        "hqc",
+        "qctag",
+        "5,checker old arithmetic x"
+      ],
+      [
+        "hu",
+        "utag",
+        "5,verifier old arithmetic x"
+      ]
+    ]
+  },
+  "RawMulLeftCongruence": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "RawMulLeftCertificate",
+    "parent_args": "(previousLogical old) a x",
+    "fields": [
+      [
+        "haddLeft",
+        "addLeftTag",
+        "1,RawMulRightCongruence.previousLogical old"
+      ],
+      [
+        "hrightReplace",
+        "rightReplaceTag",
+        "1,RawRightReplace.logicalLeaf (RawCumulativeLogical.logical old)"
+      ],
+      [
+        "haddRight",
+        "addRightTag",
+        "1,RawAddLeftCongruence.previousLogical old"
+      ],
+      [
+        "hcumulative",
+        "cumulativeTag",
+        "1,RawCumulativeLogical.logical old"
+      ],
+      [
+        "hprevious",
+        "previousTag",
+        "1,previousLogical old"
+      ],
+      [
+        "hreflexivity",
+        "reflexivityTag",
+        "1,RawReflexivity.lineConstructor"
+      ],
+      [
+        "hlookup",
+        "lookupTag",
+        "2,HistoryLookup.lookup"
+      ],
+      [
+        "hmp",
+        "mpTag",
+        "4,LiteralRawMP.constructor"
+      ]
+    ]
+  },
+  "RawRetainedMulRightCongruence": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "RawMulLeftCongruence",
+    "parent_args": "old a x",
+    "fields": [
+      [
+        "hrightLine",
+        "rightLineTag",
+        "3,RawMulRightReplace.lineConstructor"
+      ],
+      [
+        "hrightTest",
+        "rightTestTag",
+        "2,RawMulRightReplace.candidateTest"
+      ],
+      [
+        "hrightSearch",
+        "rightSearchTag",
+        "3,RawSuffixSearch.search RawMulRightReplace.candidateTest"
+      ]
+    ]
+  },
+  "RawMulNewestTransitivity": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "RawRetainedMulRightCongruence",
+    "parent_args": "old a x",
+    "fields": [
+      [
+        "hequalityLine",
+        "equalityLineTag",
+        "3,RawRightReplace.lineConstructor"
+      ]
+    ]
+  },
+  "RawMulNewestSuccCongruence": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "RawMulNewestTransitivity",
+    "parent_args": "old a x",
+    "fields": [
+      [
+        "hreplace",
+        "replaceTag",
+        "2,RawSuccReplace.lineConstructor"
+      ]
+    ]
+  },
+  "RawMulNewestAddition": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "RawMulNewestSuccCongruence",
+    "parent_args": "old (arithmetic a) x",
+    "fields": [
+      [
+        "hzero",
+        "zeroTag",
+        "1,RawAddZero.lineConstructor"
+      ],
+      [
+        "hadd",
+        "addTag",
+        "2,RawAddSucc.lineConstructor"
+      ],
+      [
+        "holdArithmetic",
+        "oldArithmeticTag",
+        "1,RawCumulativeArithmetic.arithmetic a"
+      ],
+      [
+        "harithmetic",
+        "arithmeticTag",
+        "1,arithmetic a"
+      ]
+    ]
+  },
+  "RawMulNewestAdditionIteration": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "RawMulNewestAddition",
+    "parent_args": "old a x",
+    "fields": [
+      [
+        "hright",
+        "rightTag",
+        "1,HistoryDecoder.decoder true"
+      ],
+      [
+        "hleft",
+        "leftTag",
+        "1,HistoryDecoder.decoder false"
+      ],
+      [
+        "hbase",
+        "baseTag",
+        "1,base"
+      ],
+      [
+        "hstep",
+        "stepTag",
+        "2,step"
+      ],
+      [
+        "hiterator",
+        "iteratorTag",
+        "2,iterator"
+      ],
+      [
+        "hnumeral",
+        "numeralTag",
+        "1,LiteralNumeralPrefix.numeralCode"
+      ],
+      [
+        "hprefix",
+        "prefixTag",
+        "2,successorPrefix"
+      ]
+    ]
+  },
+  "RawNewestMultiplicationComputation": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "RawMulNewestAdditionIteration",
+    "parent_args": "old a x",
+    "fields": [
+      [
+        "hmulZero",
+        "mulZeroTag",
+        "1,RawMultiplication.Zero.lineConstructor"
+      ],
+      [
+        "hmulSucc",
+        "mulSuccTag",
+        "2,RawMultiplication.Succ.lineConstructor"
+      ],
+      [
+        "hcongruenceStep",
+        "congruenceStepTag",
+        "1,RawMulNewestSuccIteration.step"
+      ],
+      [
+        "hcongruenceIterator",
+        "congruenceIteratorTag",
+        "2,RawMulNewestSuccIteration.iterator"
+      ]
+    ]
+  },
+  "RawNewestMultiplicationIteration": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "RawNewestMultiplicationComputation",
+    "parent_args": "old a x",
+    "fields": [
+      [
+        "hnumericAdd",
+        "numericAddTag",
+        "2,HistoryCodec.add"
+      ],
+      [
+        "hmulBase",
+        "mulBaseTag",
+        "1,base"
+      ],
+      [
+        "hmulStep",
+        "mulStepTag",
+        "2,step"
+      ],
+      [
+        "hmulIterator",
+        "mulIteratorTag",
+        "2,iterator"
+      ]
+    ]
+  },
+  "RawMultiplicationEvaluation": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "RawNewestMultiplicationIteration",
+    "parent_args": "old a x",
+    "fields": []
+  },
+  "RawMulNewestAddReplacements": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "RawMultiplicationEvaluation",
+    "parent_args": "old a x",
+    "fields": [
+      [
+        "haddRightLine",
+        "addRightLineTag",
+        "3,RawAddRightReplace.lineConstructor"
+      ],
+      [
+        "haddRightTest",
+        "addRightTestTag",
+        "2,RawAddRightReplace.candidateTest"
+      ],
+      [
+        "haddRightSearch",
+        "addRightSearchTag",
+        "3,RawSuffixSearch.search RawAddRightReplace.candidateTest"
+      ],
+      [
+        "haddLeftLine",
+        "addLeftLineTag",
+        "3,RawAddLeftReplace.lineConstructor"
+      ],
+      [
+        "haddLeftTest",
+        "addLeftTestTag",
+        "2,RawAddLeftReplace.candidateTest"
+      ],
+      [
+        "haddLeftSearch",
+        "addLeftSearchTag",
+        "2,RawNumericSearch.search RawAddLeftReplace.candidateTest"
+      ]
+    ]
+  },
+  "RawMulNewestAddCongruences": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "RawMulNewestAddReplacements",
+    "parent_args": "old a x",
+    "fields": []
+  },
+  "RawMulNewestAdditionEvaluation": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "RawMulNewestAddCongruences",
+    "parent_args": "old a x",
+    "fields": []
+  },
+  "RawUnaryEvaluation": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "RawMulNewestAdditionEvaluation",
+    "parent_args": "old a x",
+    "fields": []
+  },
+  "RawAdditionProducer": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "RawUnaryEvaluation",
+    "parent_args": "old a x",
+    "fields": [
+      [
+        "hproducer",
+        "producerTag",
+        "6,producer"
+      ]
+    ]
+  },
+  "RawMultiplicationProducer": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "RawAdditionProducer",
+    "parent_args": "old a x",
+    "fields": [
+      [
+        "hmultiplicationProducer",
+        "multiplicationProducerTag",
+        "6,producer"
+      ]
+    ]
+  },
+  "ArithmeticTemplateEvaluation": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "RawMultiplicationProducer",
+    "parent_args": "old a x",
+    "fields": [
+      [
+        "hsuccessorProducer",
+        "successorProducerTag",
+        "3,RawSuccessorProducer.producer"
+      ]
+    ]
+  },
+  "RawUniversalCongruence": {
+    "parameters": "(old a : Program 1) (x : Program 3)",
+    "parent": "ArithmeticTemplateEvaluation",
+    "parent_args": "old a x",
+    "fields": [
+      [
+        "huniversalLine",
+        "universalLineTag",
+        "2,RawUniversalReplace.lineConstructor"
+      ],
+      [
+        "huniversalLogical",
+        "universalLogicalTag",
+        "1,RawUniversalReplace.logicalLeaf (previousLogical old)"
+      ],
+      [
+        "huniversalDispatcher",
+        "universalDispatcherTag",
+        "4,RawUniversalReplaceDispatcher.dispatcher (previousLogical old) (RawMulNewestAddition.arithmetic a) x"
+      ],
+      [
+        "huniversalIterator",
+        "universalIteratorTag",
+        "4,SixSol20261112.HistoryMachine.iterator (RawUniversalReplaceCertificate.kernel (previousLogical old) (RawMulNewestAddition.arithmetic a) x)"
+      ],
+      [
+        "huniversalCore",
+        "universalCoreTag",
+        "5,RawUniversalReplaceCertificate.checker (previousLogical old) (RawMulNewestAddition.arithmetic a) x"
+      ]
+    ]
+  },
+  "RawEqualityInstantiationDispatcher": {
+    "parameters": "(a b : Term 1) (old arithmetic : Program 1) (x : Program 3)",
+    "parent": null,
+    "parent_args": "",
+    "fields": [
+      [
+        "hq",
+        "qtag",
+        "1,RawEqualityInstantiation.line a b"
+      ],
+      [
+        "hp",
+        "ptag",
+        "2,HistoryCodec.pair"
+      ],
+      [
+        "hc",
+        "ctag",
+        "2,HistoryCodec.cons"
+      ],
+      [
+        "ha",
+        "atag",
+        "2,HistoryAppend.append"
+      ],
+      [
+        "hv",
+        "vtag",
+        "1,TwoSol20261113.ReflexivityRecognizer.termValidator"
+      ],
+      [
+        "hf",
+        "ftag",
+        "2,LiteralSyntaxValidator.formulaValidator"
+      ],
+      [
+        "hl",
+        "ltag",
+        "1,LiteralSyntaxValidator.lineValidator"
+      ],
+      [
+        "hb",
+        "btag",
+        "1,RawEqualityInstantiationAcceptance.logicalLeaf a b old"
+      ],
+      [
+        "hd",
+        "dtag",
+        "4,dispatcher a b old arithmetic x"
+      ]
+    ]
+  },
+  "RawEqualityInstantiationCertificate": {
+    "parameters": "(a b : Term 1) (old arithmetic : Program 1) (x : Program 3)",
+    "parent": "RawEqualityInstantiationDispatcher",
+    "parent_args": "a b old arithmetic x",
+    "fields": [
+      [
+        "hi",
+        "itag",
+        "4,SixSol20261112.HistoryMachine.iterator (kernel a b old arithmetic x)"
+      ],
+      [
+        "hqc",
+        "qctag",
+        "5,checker a b old arithmetic x"
+      ],
+      [
+        "hu",
+        "utag",
+        "5,verifier a b old arithmetic x"
+      ]
+    ]
+  }
+}

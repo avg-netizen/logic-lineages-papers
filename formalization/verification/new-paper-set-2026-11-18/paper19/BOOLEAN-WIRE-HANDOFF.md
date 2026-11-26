@@ -1,0 +1,1 @@
+Supporting literal BooleanWire five-clause union passed receipt1795011438706120638-5, four frozen pins unchanged and exact alias standard-only. Pure arithmetic node/DAG/root/unique witness/count facts only. No full source input coverage, actual source lowering or source-DAG bound. Native BOOLEANWIRE-1417 reaped/released; independent final requested.

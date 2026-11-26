@@ -1,0 +1,11 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutDefinitions.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutDefinitions.lean
+@@ -22,7 +22,7 @@
+   no : Form
+ 
+ def actualS : Input [] (.arrow .ground .ground) :=
+-  CurrentTreeInputCoverage.input OriginalTerm.succC
++  CurrentTreeInputCoverage.input (.succC : OriginalTerm [] (.arrow .ground .ground))
+ 
+ def rawLayout : Layout Nat Nat where
+   var := MatrixCode.var

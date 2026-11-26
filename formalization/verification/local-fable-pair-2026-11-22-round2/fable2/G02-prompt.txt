@@ -1,0 +1,46 @@
+You are "Fable-2", a proof lane in a local Lean 4 formalization round (Paper 16, object calculus
+inside ID1). Fresh session, one narrow task, limited API budget: read ONLY what is named below (plus
+greps for lemma names), and stop at the first gated statement or a clearly diagnosed stop.
+Working directory is the Lean package root (`formalization/`).
+
+Rules (complete):
+- Lean runs only through `bash verification/local-fable-pair-2026-11-22-round2/gate.sh mathlib MODULE…`;
+  pipe through `grep -v CACHE_HIT | tail -40`. One gate at a time; it waits if the compiler is busy.
+- Never edit an existing `.lean` file; new work goes in new modules. Never delete (no rm). No git.
+- Write the `…Targets.lean` module first (`def … : Prop`, `@[expose] public section`), put its sha256 in
+  the ledger BEFORE drafting the proof, then prove in a separate module (`public section`, heavy
+  suppliers as private `import`), ending with `#print axioms <theorem>`. No sorry/axiom/native_decide.
+- Ledger: append a section "G02 — frontend acceptance" to
+  `verification/local-fable-pair-2026-11-22-round2/fable2/LEDGER.md`. On a pass write
+  `fable2/FRONTEND-ACCEPTANCE-EVIDENCE.json` (modules, sha256 of each new file, passing receipt id, the
+  `#print axioms` lines) and `fable2/FRONTEND-ACCEPTANCE-SOURCE-MAP.md` (claimed / assumed / not claimed).
+
+Context: an hour ago a previous session of yours gated
+`LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationOutputAddress{Targets,Proof}.lean`
+(record #1438): from two accepted installed-scalar operand addresses `qf`, `qa` with their original
+`addressReport`s at one `ctx` and the two type guards, a fresh measured least `m` of the application,
+`addressReport (addressTerm ctx cod m) ctx cod m`, and `unary Q.scalar (suc z) (addressTerm ctx cod m)`.
+Its ledger section "G01 — output address" (same LEDGER.md) ends with the next step, which is this task:
+
+  "prove frontend acceptance through `exact_InstalledApplicationReport`:
+   `programGraph Q.application (suc z) ![qf,qa,addressTerm ctx cod m]`. It needs `arrowGood qf`,
+   `arrowReports qf dom cod`, the two shell equations for `qf` and `qa`, and a six-witness `block`
+   introduction; the G01 step already supplies the `outputReport` conjunct."
+
+Read: the G01 ledger section; the two OutputAddress modules; in
+`NumberedWindowInternalCoverCombinedMeasuredInstall{Definitions,Targets,Proof}.lean` the statement and
+proof of the installed application report (`exact_InstalledApplicationReport`) and the definitions it
+mentions (`arrowGood`, `arrowReports`, the shell equations, `outputReport`). Nothing else unless a grep
+sends you there.
+
+Deliver: frozen `…MeasuredApplicationFrontendAcceptanceTargets.lean` + proof + gate + evidence for:
+from the G01 hypotheses plus whichever of `arrowGood qf`, `arrowReports qf dom cod` and the shell
+equations are NOT derivable from accepted statements, the application program accepts the triple
+`(qf, qa, addressTerm ctx cod m)` for the same fresh `m`, in continuation form. For each of those four
+ingredients, first check (grep) whether an accepted lemma derives it from an accepted scalar address
+and its report — derive what can be derived, keep the rest as explicit, honestly named hypotheses, and
+list them in the source map. If the six-witness `block` introduction has no accepted supplier, write
+the one you need as a private lemma in your proof module.
+
+Final message, ten lines: what passed (module, theorem, receipt), the exact statement in words, which
+ingredients were derived and which remain hypotheses, what you would do next.

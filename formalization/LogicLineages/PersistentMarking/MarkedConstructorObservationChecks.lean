@@ -1,0 +1,8 @@
+import LogicLineages.PersistentMarking.MarkedConstructorSelectProof
+import LogicLineages.PersistentMarking.MarkedConstructorFAbsProof
+namespace LogicLineages.PersistentMarking.MarkedConstructorObservationChecks
+theorem exact_SelectExact : MarkedConstructorTargets.SelectExact := MarkedConstructorSelectProof.select
+theorem exact_FAbsExact : MarkedConstructorTargets.FAbsExact := MarkedConstructorFAbsProof.fabs
+#print axioms exact_SelectExact
+#print axioms exact_FAbsExact
+end LogicLineages.PersistentMarking.MarkedConstructorObservationChecks

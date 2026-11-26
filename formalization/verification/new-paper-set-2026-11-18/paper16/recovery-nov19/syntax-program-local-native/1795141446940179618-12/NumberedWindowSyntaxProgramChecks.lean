@@ -1,0 +1,14 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowSyntaxProgramProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowSyntaxProgramChecks
+open NumberedWindowSyntaxProgramTargets
+theorem exact_NominalHeadProgram : NominalHeadProgram := NumberedWindowSyntaxProgramProof.headProgram
+theorem exact_RawTermProgram : RawTermProgram := NumberedWindowSyntaxProgramProof.termProgram
+theorem exact_RawArgumentProgram : RawArgumentProgram := NumberedWindowSyntaxProgramProof.argsProgram
+#print axioms exact_NominalHeadProgram
+#print axioms exact_RawTermProgram
+#print axioms exact_RawArgumentProgram
+end LogicLineages.PersistentMarking.NumberedWindowSyntaxProgramChecks

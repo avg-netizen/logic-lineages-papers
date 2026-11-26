@@ -1,0 +1,40 @@
+{
+  "status": "Accepted uniform-raw-fold-input-fusion exact1",
+  "accepted_at_utc": "2026-11-15T20:06:27.178701+00:00",
+  "new_exact_contracts": 1,
+  "supporting_contracts_total": 685,
+  "cumulative_new_contracts_20261115": 181,
+  "numbered_register": "175 checked,2 inherited,12 pending /189 unchanged",
+  "native_receipt": "1794772871692281908-6",
+  "native_source_matched_modules": 1935,
+  "named_standard_axiom_audits": {
+    "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformRawFoldInputFusion.StatementChecks.exactInputFusion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "source_pins": {
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformRawFoldInputFusion/Definitions.lean": "283108bac12b5fb8f827c48915300034de64449ff96dc001600fb5a698f61507",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformRawFoldInputFusion/InductionProof.lean": "1b5605bc4dac174d3f0aaca6f10ecdd20daa6cb552e44f8b18e4b5e8c03a2079",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformRawFoldInputFusion/LogicProof.lean": "132eff420b8287b0ad34b8cb67d82eaeaf485f2c54d66f80fd79c82648dfc17e",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformRawFoldInputFusion/PositiveProof.lean": "09f6b868ac058fe4905da673f9609671bbd0cb120443ece35df0b81053fffcc3",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformRawFoldInputFusion/Preflight.lean": "e80645535f8bc8ed92f1824abd285e068bb4968bed348ef6cbe082f2af85df9e",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformRawFoldInputFusion/Proof.lean": "e029d01899802eb6d04a2fb9697dee133b63f12be6881eebce617b9faeefc413",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformRawFoldInputFusion/RecursionProof.lean": "381ab88158de8eeb7b95512a7ef687f13c5f4be6c0915af473577736b1712115",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformRawFoldInputFusion/StatementChecks.lean": "bfc54fbc3d9420cef6fcdc35860c323e08232af962ade3cd9f5e207adef41756",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/UniformRawFoldInputFusion/Targets.lean": "c2c3a77979e89871a96b67033b978c947204c5ab36750135774a4f0da543fd61"
+  },
+  "independent_evidence": {
+    "path": "formalization/verification/continuation-2026-11-15/P12/REVIEW-EVIDENCE-56.json",
+    "sha256": "3175d7e9d0f1911a9a2debe2369734e1ed4a3a01273f228ddc611fab23073a2a",
+    "bytes": 5148331
+  },
+  "scope": "Actual original length-driven raw fold input-concatenation fusion for arbitrary internal left/right/packed state/replacement with eight literal memberships only; no validity, success, native image or helper membership premise.",
+  "semantic_review": [
+    "Recursion nil and cons equations use the same actual old-state next function on both sides; state is universally quantified before the induction step.",
+    "Positive raw reconstruction derives actual head/tail and tail <= predecessor from installed append decoder children, then instantiates bounded IH at tail and changed packed state.",
+    "Bounded PA induction fixes right/replacement through capture-correct lifting and successorLift, closes at reflexive bound, then instantiates arbitrary packed state.",
+    "No native-list induction or reflection; not runtime-environment specialization or repeated certificate composition."
+  ]
+}

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.SelectedSystemReductionProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_selectedSystemReduction : SelectedSystemReductionTargets.SelectedSystemReduction :=
+  SelectedSystemReduction.Proof.selectedSystemReduction
+#print axioms fixed_selectedSystemReduction
+end LogicLineages.PermittedControl.StatementChecks

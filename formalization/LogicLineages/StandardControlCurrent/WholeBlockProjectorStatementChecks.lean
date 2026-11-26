@@ -1,0 +1,7 @@
+module
+public import LogicLineages.StandardControlCurrent.WholeBlockProjectorProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.StatementChecks
+theorem fixed_wholeBlockProjector : WholeBlockProjectorTargets.Full := WholeBlockProjectorProof.full
+#print axioms fixed_wholeBlockProjector
+end LogicLineages.StandardControlCurrent.StatementChecks

@@ -1,0 +1,31 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/HigherPolesGeometryProof.lean:16:4: error: Type mismatch: After simplification, term
+  (transient j).left
+ has type
+  MixedProper.proper
+    ((Naturality.rationalMap σ)
+      (MixedWord.execute (List.replicate j true)
+        ((algebraMap (Polynomial K) (RatFunc K)) P /
+          (algebraMap (Polynomial K) (RatFunc K)) (SourceBudget.denominator K d))))
+but is expected to have type
+  MixedProper.proper
+    ((Naturality.rationalMap σ)
+      (Basic.actualDifferentialCartier^[j]
+        ((algebraMap (Polynomial K) (RatFunc K)) P /
+          (algebraMap (Polynomial K) (RatFunc K)) (SourceBudget.denominator K d))))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/HigherPolesGeometryProof.lean:21:4: error: Type mismatch: After simplification, term
+  (transient (a + j)).right.right hlen z
+ has type
+  PoleContraction.poleOrder z
+      ((Naturality.rationalMap σ)
+        (MixedWord.execute (List.replicate (a + j) true)
+          ((algebraMap (Polynomial K) (RatFunc K)) P /
+            (algebraMap (Polynomial K) (RatFunc K)) (SourceBudget.denominator K d)))) ≤
+    1
+but is expected to have type
+  PoleContraction.poleOrder z
+      ((Naturality.rationalMap σ)
+        (Basic.actualDifferentialCartier^[SourceBudget.transient d + j]
+          ((algebraMap (Polynomial K) (RatFunc K)) P /
+            (algebraMap (Polynomial K) (RatFunc K)) (SourceBudget.denominator K d)))) ≤
+    1
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/HigherPolesGeometryProof.lean:23:0: error: LogicLineages.CartierObserverCurrent.HigherPolesGeometry.geometricRemoval: forbidden axiom dependency sorryAx

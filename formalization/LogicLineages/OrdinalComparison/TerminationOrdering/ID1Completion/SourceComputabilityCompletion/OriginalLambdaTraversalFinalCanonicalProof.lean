@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalCanonicalFoldFusionFinalProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalObserverProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalCanonicalProof
+
+/-- The actual unchanged application-only final fold is internally C on
+original source/window/type inputs. Both fusion inductions and every guard
+supplier are proved and instantiated, with no supplied C equality. -/
+theorem actualOriginalLambdaTraversalFinalCanonical :
+    OriginalLambdaTraversalSelectionTargets.ActualOriginalLambdaTraversalFinalCanonical := by
+  intro p
+  exact OriginalCanonicalFoldFusionFinalProof.finalCanonical p
+    (OriginalLambdaTraversalObserverProof.actualOriginalLambdaTraversalObserverLaws p.base p.window)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalCanonicalProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalCanonicalProof
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalFinalCanonicalProof.actualOriginalLambdaTraversalFinalCanonical

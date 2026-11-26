@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.PureSuccessorSeparationProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_pureSuccessorFoundation : Targets.PureSuccessorFoundation := pureSuccessorFoundation
+#print axioms fixed_pureSuccessorFoundation
+end LogicLineages.PermittedControl.StatementChecks

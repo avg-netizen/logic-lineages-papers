@@ -1,0 +1,20 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedNewCutoffPartitionTargets
+import LogicLineages.PermittedControl.OriginalPrintedNewCutoffPartitionFundingProof
+import LogicLineages.PermittedControl.OriginalPrintedNewCutoffPartitionProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedNewCutoffPartition
+
+theorem fixed_exactActualGreatestPaysChart : ExactActualGreatestPaysChart := exactActualGreatestPaysChart
+theorem fixed_exactOriginalPrintedNewCutoffPartition : ExactOriginalPrintedNewCutoffPartition :=
+  exactOriginalPrintedNewCutoffPartition
+theorem fixed_fullOriginalPrintedNewCutoffPartition : FullOriginalPrintedNewCutoffPartition :=
+  ⟨fixed_exactActualGreatestPaysChart,fixed_exactOriginalPrintedNewCutoffPartition⟩
+
+#print axioms fixed_exactActualGreatestPaysChart
+#print axioms fixed_exactOriginalPrintedNewCutoffPartition
+#print axioms fixed_fullOriginalPrintedNewCutoffPartition
+
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,11 @@
+--- LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportIndexProof.lean original
++++ LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportIndexProof.lean R1
+@@ -23,7 +23,7 @@
+   (.equal (HistoryDifference.differenceCall dtag tok (call r (head ::ᵥ nil))) (.succ gap))) :
+  Nonempty (Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+   (.equal (LiteralSyntaxStep.stepCall stag (.succ (HistoryLookup.consCall ctag head tail)) tok) (.succ tail))) := by
+- have hex := ExpansionRuntimeProof.indexPositive p G l r dtag hl hr hd head tok gap hk hg etag he
++ obtain ⟨hex⟩ := ExpansionRuntimeProof.indexPositive p G l r dtag hl hr hd head tok gap hk hg etag he
+  obtain ⟨hstep⟩ := LiteralSyntaxStep.StepProof.internalPrepend n p stag etag ctag atag hs he hc ha ctx head tail tok .zero
+  have hresult := Hilbert.Local.mp (.base hstep) hex
+  obtain ⟨hnil⟩ := HistoryAppend.AppendEquationsProof.internalAppendNil n p atag ha ctx tail

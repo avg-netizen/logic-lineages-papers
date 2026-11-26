@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.SelectedGeneratedSourceProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+theorem fixed_fullSelectedGeneratedSource : SelectedGeneratedSourceTargets.FullSelectedGeneratedSource :=
+  SelectedGeneratedSourceProof.fullSelectedGeneratedSource
+#print axioms fixed_fullSelectedGeneratedSource
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,14 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketShapeProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketShapeProof.lean
+@@ -51,3 +51,4 @@
+-  | nil => cases as
+-             · exact safeTruth []
+-             · exact safeFalsity []
++  | nil =>
++    cases as with
++    | nil => exact safeTruth []
++    | cons a as => exact safeFalsity []
+@@ -104 +105,2 @@
+-  unfold terminalPacket
++  change PreparedInput [] (if (if pos then signedBit test coef else !(signedBit test coef))
++    then .truth else .falsity)

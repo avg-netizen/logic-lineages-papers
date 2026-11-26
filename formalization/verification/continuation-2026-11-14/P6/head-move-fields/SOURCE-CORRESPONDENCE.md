@@ -1,0 +1,7 @@
+# Actual slot16 replacement
+
+Original ExchangeLayer.input16 is headMove of source/target Fields.head and Fields.first. The new move AST uses actual guarded raw-head and first-child selectors (including defaults on non-head/non-branch constructors), the concrete OriginalHeadMove six-input program, and the literal original parameter product's symbol/type list projections. The outer original V guard returns zero on every malformed node/window. NativeField must pay the decoded Window product/list/Fin.val encoding alignment and every default branch; native calibration is not used as an internal proof.
+
+Only supplier16 is replaced. ResultStructuralFields keeps concrete tag, annotations, heads, labels, type lists, children, answer slots, and result fields. NativeFields retains the original optional layer extension Some0=1/Some1=2 and all nineteen field meanings. Existing U calibration remains only as an interface hypothesis for still-supplied fields; the new slot16 never consults U16.
+
+InternalOrdinary/Numbered derive the head/base selector values from actual source/target constructors, actual node pairing, actual window parameter pairing and actual V acceptance. Their conclusion is the actual six-input HeadMove graph, not a claimed semantic headMove fact. No hidden field-output witness premise. Full internal component semantic adequacy, original recursion-table semantic correctness and source stability remain unpaid; no global E correctness or original theorem completion claimed. New AST explicit, no identity with earlier selected tuple asserted.

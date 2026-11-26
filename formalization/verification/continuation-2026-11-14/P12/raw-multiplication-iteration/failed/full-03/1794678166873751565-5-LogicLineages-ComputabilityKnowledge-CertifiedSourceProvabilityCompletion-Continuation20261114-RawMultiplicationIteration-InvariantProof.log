@@ -1,0 +1,64 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawMultiplicationIteration/InvariantProof.lean:17:1: error: Type mismatch: After simplification, term
+  h
+ has type
+  @Derivation T ctx
+    ((Formula.equal v w).imp
+      ((Formula.equal
+            (call q
+              (index ::ᵥ
+                fuel ::ᵥ
+                  Term.zero ::ᵥ
+                    (call c
+                            (substitute (fun i => Fin.cases v Term.var i) (Term.numeral 0) ::ᵥ
+                              call a (t ::ᵥ v ::ᵥ nil) ::ᵥ nil)).add
+                        (call c
+                          (substitute (fun i => Fin.cases v Term.var i) (Term.numeral 0) ::ᵥ
+                            call a (t ::ᵥ v ::ᵥ nil) ::ᵥ nil)) ::ᵥ
+                      cert ::ᵥ nil))
+            Term.zero.succ).imp
+        (Formula.equal
+          (call q
+            (index ::ᵥ
+              fuel ::ᵥ
+                Term.zero ::ᵥ
+                  (call c
+                          (substitute (fun i => Fin.cases w Term.var i) (Term.numeral 0) ::ᵥ
+                            call a (t ::ᵥ w ::ᵥ nil) ::ᵥ nil)).add
+                      (call c
+                        (substitute (fun i => Fin.cases w Term.var i) (Term.numeral 0) ::ᵥ
+                          call a (t ::ᵥ w ::ᵥ nil) ::ᵥ nil)) ::ᵥ
+                    cert ::ᵥ nil))
+          Term.zero.succ)))
+but is expected to have type
+  @Derivation T ctx
+    ((Formula.equal v w).imp
+      ((Formula.equal
+            (call q
+              (index ::ᵥ
+                fuel ::ᵥ
+                  Term.zero ::ᵥ
+                    (call c (Term.numeral 0 ::ᵥ call a (t ::ᵥ v ::ᵥ nil) ::ᵥ nil)).add
+                        (call c (Term.numeral 0 ::ᵥ call a (t ::ᵥ v ::ᵥ nil) ::ᵥ nil)) ::ᵥ
+                      cert ::ᵥ nil))
+            Term.zero.succ).imp
+        (Formula.equal
+          (call q
+            (index ::ᵥ
+              fuel ::ᵥ
+                Term.zero ::ᵥ
+                  (call c (Term.numeral 0 ::ᵥ call a (t ::ᵥ w ::ᵥ nil) ::ᵥ nil)).add
+                      (call c (Term.numeral 0 ::ᵥ call a (t ::ᵥ w ::ᵥ nil) ::ᵥ nil)) ::ᵥ
+                    cert ::ᵥ nil))
+          Term.zero.succ)))
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMultiplicationIteration.InvariantProof.moveRight._proof_1: [propext]
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMultiplicationIteration.InvariantProof.stepProperty: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawMultiplicationIteration/InvariantProof.lean:111:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMultiplicationIteration.InvariantProof.baseProperty: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMultiplicationIteration.InvariantProof.baseProperty' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMultiplicationIteration.InvariantProof.stepProperty' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

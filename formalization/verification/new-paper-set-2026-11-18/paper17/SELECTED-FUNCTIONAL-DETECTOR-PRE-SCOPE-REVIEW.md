@@ -1,0 +1,5 @@
+# Selected functional detector exact scope
+
+Approved full current lem:functional-detector comparator before proofs; all seven pins verified against files. Read manuscript statement and complete definitions/targets/source map. Arbitrary unary original sources, contexts, policies and genuine selected admissible valuations remain unrestricted. Fresh extension preserves original coordinates and supplies actual positive numeral grades with explicit n+1 calibration. Existential z,w are chosen after valuation and cover every positive ground input. Actual head equality iff actual full-vector alignment includes both coordinates and real successful assignment.
+
+Detector uses literal original left/right sources; explicit successful finite denotation conjunct excludes getD-zero fallback. It requires right<=left, exact whole-vector equality iff, and unequal gap>=2, not just compiled-pair or finite-head cases. Selected application/eraser/payload bounds and strictness must be derived internally, not transferred from fixed-G semantics or added as premises. No effectiveness/reduction/hardness/threshold credit. No native execution performed.

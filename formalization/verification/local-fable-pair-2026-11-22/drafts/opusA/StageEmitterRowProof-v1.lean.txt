@@ -1,0 +1,263 @@
+module
+public import LogicLineages.PermittedControl.StageEmitterRowTargets
+import LogicLineages.PermittedControl.ActualRawCanonicalNodePrimitiveProof
+import LogicLineages.PermittedControl.ActualCanonicalOperandGroupingCodePrimitiveProof
+import LogicLineages.PermittedControl.ActualRawCanonicalNodeMetadataPrimitiveProof
+import LogicLineages.PermittedControl.ActualRawCanonicalAnswerTapesPrimitiveProof
+import LogicLineages.PermittedControl.ActualRawSignedCleanupPrimitiveProof
+import LogicLineages.PermittedControl.ActualSyntaxChargeBudgetCodeProof
+import LogicLineages.OrdinalComparison.LayeredComparison.IntegerAlgorithmsProof
+import Mathlib.Computability.Primrec.List
+
+public section
+namespace LogicLineages.PermittedControl.StageEmitter
+open PreparedProjection (PreparedPacketCode)
+open StageCallbackRawLevel
+open ActualRawComparisonCeiling (LabelCode)
+open ActualRawSignedStaticCeiling (RawSyntax)
+open ActualBitFamilyRawLayout (RawBitRow)
+open ActualCanonicalOperandGroupingCode (groupRawPrimitive)
+open ActualRawCanonicalNode (groupedPrimitive)
+open ActualRawCanonicalNodeMetadata (labelsPrimitive tapeHighestPrimitive)
+open ActualRawCanonicalAnswerTapes (candidateTapesPrimitive)
+open ActualRawSignedCleanup (cleanupPrimitive)
+open ActualSyntaxChargeBudget (budgetCodeExact)
+
+private theorem zeroTestPrimitive : Primrec (fun z : Int => decide (z = 0)) :=
+  (Primrec.eq.comp Primrec.id (Primrec.const (0 : Int))).decide
+
+private theorem nonnegativePrimitive : Primrec (fun z : Int => decide (0 ≤ z)) := by
+  apply (Primrec.ite
+    (Primrec.eq.comp OrdinalComparison.LayeredComparison.IntegerAlgorithms.Proof.sign_primitive
+      (Primrec.const (-1 : Int)))
+    (Primrec.const false) (Primrec.const true)).of_eq
+  intro z
+  cases z with
+  | ofNat n => cases n <;> rfl
+  | negSucc n => rfl
+
+private theorem positivePrimitive : Primrec (fun z : Int => decide (0 < z)) := by
+  apply ((Primrec.eq.comp OrdinalComparison.LayeredComparison.IntegerAlgorithms.Proof.sign_primitive
+    (Primrec.const (1 : Int))).decide).of_eq
+  intro z
+  cases z with
+  | ofNat n => cases n <;> simp
+  | negSucc n => simp
+
+private theorem signedBitPrimitive : Primrec (fun x : Nat × Int => signedBitCode x.1 x.2) := by
+  have c0 : PrimrecPred (fun x : Nat × Int => x.1 = 0) := Primrec.eq.comp Primrec.fst (Primrec.const 0)
+  have c1 : PrimrecPred (fun x : Nat × Int => x.1 = 1) := Primrec.eq.comp Primrec.fst (Primrec.const 1)
+  have h := Primrec.ite c0 (zeroTestPrimitive.comp Primrec.snd)
+    (Primrec.ite c1 (nonnegativePrimitive.comp Primrec.snd) (positivePrimitive.comp Primrec.snd))
+  exact h.of_eq (fun x => rfl)
+
+private theorem signedTipPrimitive :
+    Primrec (fun x : Nat × Bool × Int => signedTipCode x.1 x.2.1 x.2.2) := by
+  have bit : Primrec (fun x : Nat × Bool × Int => signedBitCode x.1 x.2.2) :=
+    signedBitPrimitive.comp (Primrec.fst.pair (Primrec.snd.comp Primrec.snd))
+  have pos : PrimrecPred (fun x : Nat × Bool × Int => x.2.1 = true) :=
+    Primrec.eq.comp (Primrec.fst.comp Primrec.snd) (Primrec.const true)
+  have inner := Primrec.ite pos bit (Primrec.not.comp bit)
+  have test : PrimrecPred (fun x : Nat × Bool × Int =>
+      (if x.2.1 = true then signedBitCode x.1 x.2.2 else !(signedBitCode x.1 x.2.2)) = true) :=
+    Primrec.eq.comp inner (Primrec.const true)
+  have h := Primrec.ite test (Primrec.const (RawPacketAlgebra.encodePacket ([],.truth)))
+    (Primrec.const (RawPacketAlgebra.encodePacket ([],.falsity)))
+  exact h.of_eq (fun x => rfl)
+
+private theorem nodePrimitive : Primrec (fun p : RawSyntax × List Nat => nodeOut p.1 p.2) := by
+  have h := groupedPrimitive.comp ((Primrec.fst.comp Primrec.fst).pair
+    ((groupRawPrimitive.comp (Primrec.snd.comp Primrec.fst)).pair Primrec.snd))
+  exact h
+
+section
+variable (R : Rendering) (hR : RenderingEffective R)
+include hR
+
+private theorem stepPrimitive :
+    Primrec (fun q : (Nat × EntryCode) × List Nat => stepOfCode R q.1.1 q.1.2 q.2) := by
+  let Q := (Nat × EntryCode) × List Nat
+  have node : Primrec (fun q : Q => nodeOut q.1.2.2 q.2) :=
+    nodePrimitive.comp ((Primrec.snd.comp (Primrec.snd.comp Primrec.fst)).pair Primrec.snd)
+  have guardQ : Primrec (fun q : Q => R.guard q.1.1 (labelsCode (ActualCanonicalOperandGrouping.groupRaw q.1.2.2.2)) q.2) := by
+    have h := hR.guard.comp ((Primrec.fst.comp Primrec.fst).pair
+      ((labelsPrimitive.comp (groupRawPrimitive.comp
+        (Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.fst))))).pair Primrec.snd))
+    exact h
+  have app : Primrec (fun q : Q => q.1.2.1 ++
+      [R.guard q.1.1 (labelsCode (ActualCanonicalOperandGrouping.groupRaw q.1.2.2.2)) q.2]) :=
+    Primrec.list_append.comp (Primrec.fst.comp (Primrec.snd.comp Primrec.fst))
+      (Primrec.list_cons.comp guardQ (Primrec.const []))
+  have pairUp : Primrec₂ (fun (q : Q) (s : RawSyntax) => (q.1.2.1 ++
+      [R.guard q.1.1 (labelsCode (ActualCanonicalOperandGrouping.groupRaw q.1.2.2.2)) q.2],s)) :=
+    ((app.comp Primrec.fst).pair Primrec.snd).to₂
+  have mapped := Primrec.option_map (Primrec.snd.comp node) pairUp
+  have zero : PrimrecPred (fun q : Q => (nodeOut q.1.2.2 q.2).1 = 0) :=
+    Primrec.eq.comp (Primrec.fst.comp node) (Primrec.const (0 : Int))
+  have h := Primrec.ite zero mapped (Primrec.const (none : Option EntryCode))
+  exact h.of_eq (fun q => rfl)
+
+private theorem childrenPrimitive :
+    Primrec (fun p : Nat × EntryCode => childrenCode R p.1 p.2) := by
+  let P := Nat × EntryCode
+  have grouped : Primrec (fun p : P => ActualCanonicalOperandGrouping.groupRaw p.2.2.2) :=
+    groupRawPrimitive.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
+  have active : PrimrecPred (fun p : P => tapeHighestCode p.1 (ActualCanonicalOperandGrouping.groupRaw p.2.2.2) = true) :=
+    Primrec.eq.comp (tapeHighestPrimitive.comp Primrec.fst grouped) (Primrec.const true)
+  have tapes : Primrec (fun p : P => candidateTapes (ActualCanonicalOperandGrouping.groupRaw p.2.2.2)) :=
+    candidateTapesPrimitive.comp grouped
+  have kids := Primrec.listFilterMap tapes (stepPrimitive R hR).to₂
+  have h := Primrec.ite active kids (Primrec.const ([] : List EntryCode))
+  exact h.of_eq (fun p => rfl)
+
+private theorem levelUncurried :
+    Primrec (fun p : (Nat × RawSyntax) × Nat => levelCode R p.1.1 p.1.2 p.2) := by
+  let A := (Nat × RawSyntax) × Nat
+  let X := A × (Nat × List EntryCode)
+  have fuel : Primrec (Prod.snd : A → Nat) := Primrec.snd
+  have init : Primrec (fun p : A => [(([] : List PreparedPacketCode),p.1.2)]) :=
+    Primrec.list_cons.comp ((Primrec.const ([] : List PreparedPacketCode)).pair
+      (Primrec.snd.comp Primrec.fst)) (Primrec.const [])
+  have kid : Primrec₂ (fun (x : X) (e : EntryCode) => childrenCode R x.1.1.1 e) := by
+    have h := (childrenPrimitive R hR).comp
+      ((Primrec.fst.comp (Primrec.fst.comp (Primrec.fst.comp Primrec.fst))).pair Primrec.snd)
+    exact h.to₂
+  have advance : Primrec (fun x : X => x.2.2.flatMap (childrenCode R x.1.1.1)) :=
+    Primrec.list_flatMap (Primrec.snd.comp Primrec.snd) kid
+  have h := Primrec.nat_rec' fuel init advance.to₂
+  apply h.of_eq
+  intro p
+  rcases p with ⟨⟨top,start⟩,n⟩
+  induction n with
+  | zero => rfl
+  | succ n ih =>
+    change (n.rec [(([] : List PreparedPacketCode),start)]
+        (fun _ acc => acc.flatMap (childrenCode R top))).flatMap (childrenCode R top) =
+      (levelCode R top start n).flatMap (childrenCode R top)
+    rw [ih]
+
+private theorem leafPrimitive :
+    Primrec (fun q : ((Nat × Nat × Bool) × EntryCode) × List Nat =>
+      leafOfCode R q.1.1.1 q.1.1.2.1 q.1.1.2.2 q.1.2 q.2) := by
+  let Q := ((Nat × Nat × Bool) × EntryCode) × List Nat
+  have node : Primrec (fun q : Q => nodeOut q.1.2.2 q.2) :=
+    nodePrimitive.comp ((Primrec.snd.comp (Primrec.snd.comp Primrec.fst)).pair Primrec.snd)
+  have guardQ : Primrec (fun q : Q =>
+      R.guard q.1.1.1 (labelsCode (ActualCanonicalOperandGrouping.groupRaw q.1.2.2.2)) q.2) := by
+    have h := hR.guard.comp ((Primrec.fst.comp (Primrec.fst.comp Primrec.fst)).pair
+      ((labelsPrimitive.comp (groupRawPrimitive.comp
+        (Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.fst))))).pair Primrec.snd))
+    exact h
+  have list : Primrec (fun q : Q => q.1.2.1 ++
+      [R.guard q.1.1.1 (labelsCode (ActualCanonicalOperandGrouping.groupRaw q.1.2.2.2)) q.2]) :=
+    Primrec.list_append.comp (Primrec.fst.comp (Primrec.snd.comp Primrec.fst))
+      (Primrec.list_cons.comp guardQ (Primrec.const []))
+  have tip : Primrec (fun q : Q => signedTipCode q.1.1.2.1 q.1.1.2.2 (nodeOut q.1.2.2 q.2).1) := by
+    have h := signedTipPrimitive.comp
+      ((Primrec.fst.comp (Primrec.snd.comp (Primrec.fst.comp Primrec.fst))).pair
+        ((Primrec.snd.comp (Primrec.snd.comp (Primrec.fst.comp Primrec.fst))).pair
+          (Primrec.fst.comp node)))
+    exact h
+  have step : Primrec₂ (fun (q : Q) (p : PreparedPacketCode × PreparedPacketCode) => R.append p.1 p.2) := by
+    have h := hR.append.comp (Primrec.fst.comp Primrec.snd) (Primrec.snd.comp Primrec.snd)
+    exact h.to₂
+  have fold := Primrec.list_foldr list tip step
+  have zero : PrimrecPred (fun q : Q => (nodeOut q.1.2.2 q.2).1 = 0) :=
+    Primrec.eq.comp (Primrec.fst.comp node) (Primrec.const (0 : Int))
+  have h := Primrec.ite zero (Primrec.const (none : Option PreparedPacketCode))
+    (Primrec.option_some.comp fold)
+  exact h.of_eq (fun q => rfl)
+
+private theorem leavesPrimitive :
+    Primrec (fun p : (Nat × Nat × Bool) × EntryCode => leavesCode R p.1.1 p.1.2.1 p.1.2.2 p.2) := by
+  let P := (Nat × Nat × Bool) × EntryCode
+  have grouped : Primrec (fun p : P => ActualCanonicalOperandGrouping.groupRaw p.2.2.2) :=
+    groupRawPrimitive.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))
+  have active : PrimrecPred (fun p : P =>
+      tapeHighestCode p.1.1 (ActualCanonicalOperandGrouping.groupRaw p.2.2.2) = true) :=
+    Primrec.eq.comp (tapeHighestPrimitive.comp (Primrec.fst.comp Primrec.fst) grouped) (Primrec.const true)
+  have tapes : Primrec (fun p : P => candidateTapes (ActualCanonicalOperandGrouping.groupRaw p.2.2.2)) :=
+    candidateTapesPrimitive.comp grouped
+  have kids := Primrec.listFilterMap tapes (leafPrimitive R hR).to₂
+  have lin : Primrec (fun p : P => R.linear p.1.1 p.2.2 p.1.2.1 p.1.2.2) := by
+    have h := hR.linear.comp ((Primrec.fst.comp Primrec.fst).pair ((Primrec.snd.comp Primrec.snd).pair
+      ((Primrec.fst.comp (Primrec.snd.comp Primrec.fst)).pair (Primrec.snd.comp (Primrec.snd.comp Primrec.fst)))))
+    exact h
+  have step : Primrec₂ (fun (p : P) (x : PreparedPacketCode × PreparedPacketCode) => R.append x.1 x.2) := by
+    have h := hR.append.comp (Primrec.fst.comp Primrec.snd) (Primrec.snd.comp Primrec.snd)
+    exact h.to₂
+  have fold := Primrec.list_foldr (Primrec.fst.comp Primrec.snd) lin step
+  have other := Primrec.list_cons.comp fold (Primrec.const ([] : List PreparedPacketCode))
+  have h := Primrec.ite active kids other
+  exact h.of_eq (fun p => rfl)
+
+private theorem signedPrimitive :
+    Primrec (fun p : Nat × Nat × Bool × Nat × RawSyntax =>
+      signedCode R p.1 p.2.1 p.2.2.1 p.2.2.2.1 p.2.2.2.2) := by
+  let P := Nat × Nat × Bool × Nat × RawSyntax
+  have indices : Primrec (fun p : P => List.range (p.2.2.2.1 + 1)) :=
+    Primrec.list_range.comp (Primrec.succ.comp
+      (Primrec.fst.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.snd))))
+  have lev : Primrec (fun x : P × Nat => levelCode R x.1.1 x.1.2.2.2.2 x.2) := by
+    have h := (levelUncurried R hR).comp (((Primrec.fst.comp Primrec.fst).pair
+      (Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp (Primrec.snd.comp Primrec.fst)))) ).pair Primrec.snd)
+    exact h
+  have leaf : Primrec₂ (fun (x : P × Nat) (e : EntryCode) =>
+      leavesCode R x.1.1 x.1.2.1 x.1.2.2.1 e) := by
+    have cfg : Primrec (fun y : (P × Nat) × EntryCode => (y.1.1.1,y.1.1.2.1,y.1.1.2.2.1)) :=
+      (Primrec.fst.comp (Primrec.fst.comp Primrec.fst)).pair
+        ((Primrec.fst.comp (Primrec.snd.comp (Primrec.fst.comp Primrec.fst))).pair
+          (Primrec.fst.comp (Primrec.snd.comp (Primrec.snd.comp (Primrec.fst.comp Primrec.fst)))))
+    have h := (leavesPrimitive R hR).comp (cfg.pair Primrec.snd)
+    exact h.to₂
+  have select : Primrec₂ (fun (p : P) (n : Nat) =>
+      (levelCode R p.1 p.2.2.2.2 n).flatMap (leavesCode R p.1 p.2.1 p.2.2.1)) := by
+    have h := Primrec.list_flatMap lev leaf
+    exact h.to₂
+  have h := Primrec.list_flatMap indices select
+  exact h.of_eq (fun p => rfl)
+
+private theorem rowPrimitive :
+    Primrec (fun p : Nat × Nat × RawBitRow => rowCode R p.1 p.2.1 p.2.2) := by
+  let P := Nat × Nat × RawBitRow
+  have row : Primrec (fun p : P => p.2.2) := Primrec.snd.comp Primrec.snd
+  have tag : Primrec (fun p : P => p.2.2.1.1.1) := Primrec.fst.comp (Primrec.fst.comp (Primrec.fst.comp row))
+  have modulus : Primrec (fun p : P => p.2.2.1.1.2) := Primrec.snd.comp (Primrec.fst.comp (Primrec.fst.comp row))
+  have syn : Primrec (fun p : P => p.2.2.1.2) := Primrec.snd.comp (Primrec.fst.comp row)
+  have pos : Primrec (fun p : P => p.2.2.2) := Primrec.snd.comp row
+  have top : Primrec (fun p : P => p.2.1) := Primrec.fst.comp Primrec.snd
+  have modBranch : Primrec (fun p : P => [R.modular p.2.1 p.2.2.1.1.2 p.2.2.1.2 p.2.2.2]) := by
+    have h := Primrec.list_cons.comp (hR.modular.comp (top.pair (modulus.pair (syn.pair pos))))
+      (Primrec.const ([] : List PreparedPacketCode))
+    exact h
+  have clean : Primrec (fun p : P => ActualRawSignedCleanup.cleanupCode p.2.2.1.2) := cleanupPrimitive.comp syn
+  have budget : Primrec (fun p : P => ActualSyntaxChargeBudget.syntaxBudgetCode p.1
+      (ActualRawSignedCleanup.cleanupCode p.2.2.1.2).2) := by
+    have h := budgetCodeExact.1.comp Primrec.fst (Primrec.snd.comp clean)
+    exact h
+  have signedBranch : Primrec (fun p : P => signedCode R p.2.1 p.2.2.1.1.1 p.2.2.2
+      (ActualSyntaxChargeBudget.syntaxBudgetCode p.1 (ActualRawSignedCleanup.cleanupCode p.2.2.1.2).2)
+      (ActualRawSignedCleanup.cleanupCode p.2.2.1.2)) := by
+    have h := (signedPrimitive R hR).comp (top.pair (tag.pair (pos.pair (budget.pair clean))))
+    exact h
+  have three : PrimrecPred (fun p : P => p.2.2.1.1.1 = 3) := Primrec.eq.comp tag (Primrec.const 3)
+  have h := Primrec.ite three modBranch signedBranch
+  exact h.of_eq (fun p => rfl)
+
+end
+
+theorem exactLevelCodeEffectivity : ExactLevelCodeEffectivity :=
+  fun R hR => levelUncurried R hR
+
+theorem exactSignedCodeEffectivity : ExactSignedCodeEffectivity :=
+  fun R hR => signedPrimitive R hR
+
+theorem exactRowCodeEffectivity : ExactRowCodeEffectivity :=
+  fun R hR => rowPrimitive R hR
+
+theorem fullStageEmitterRow : FullStageEmitterRow :=
+  ⟨exactLevelCodeEffectivity,exactSignedCodeEffectivity,exactRowCodeEffectivity⟩
+
+#print axioms exactRowCodeEffectivity
+#print axioms fullStageEmitterRow
+end LogicLineages.PermittedControl.StageEmitter

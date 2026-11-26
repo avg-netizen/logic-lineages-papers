@@ -1,0 +1,1 @@
+Independent applied confirmation: diff against preserved 1795014775387643152-5 consists exactly of the two approved List Nat / Formula binder annotations. Only target pin changed; all seven current pins verified. Target SHA923b5a1a86030f2654f920b54420d99f01dbbefca18ac0469308d4e23a47978f. Fresh parent-controlled retry permitted; no proof acceptance.

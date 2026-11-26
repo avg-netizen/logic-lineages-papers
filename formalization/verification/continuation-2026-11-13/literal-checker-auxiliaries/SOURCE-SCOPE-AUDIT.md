@@ -1,0 +1,28 @@
+# Independent source-scope audit: literal checker auxiliaries
+
+Exact7 PASS 1794582341858152898-5; 531-module evidence verified per coordinator. Source-only review; no HB/register promotion.
+
+The NEW bound, initial and finalizer are literal Program ASTs fixed before source witnesses. bound is certificate identity; initial is pair(1,certificate); finalizer decodes the state option/history/head, rejects NONE and SOME empty, and compares requested context and doubled raw-formula code. CodecProof proves both encoding preimage AND actual decodeCertificate success for every code. NativeProof uses that fact to justify removal of the external certificate-validity guard, exact sorted formula decoding, and State codec totality to extend native calibration to every input vector. This is not used as reflection of internal equations.
+
+Internal bound/initial and finish characterization/failure use installed literal nodes and arbitrary internal terms. Finish characterization is expressly on a nonempty successful-history image; it does not claim every raw state succeeds. Both NONE and SOME empty rejection remain. Equality tests and positive/zero branch equations supply the internal iff, without NativeLeaves premises.
+
+SourceProof constructs leaves once, forms the NEW checker from these fixed auxiliaries, and chooses pF/pR/code/CK/producer once through actualRegistry. The SAME root transports actual kernel/append/pair/cons/drop/right and auxiliary addresses. Full kernel calibration, iterator calibration, UniversalVerifier, Actual, SyntaxAdequate, CK installation/fixedpoint, producer installation, fuel step/increment/monotonicity, fusion, suffix iterator, drain, and four auxiliary clauses are retained in one existential tuple. No identity with earlier opaque auxiliary ASTs is asserted; native leaf witnesses remain explicit only in the existential construction. Certificate constructors and full HB2/HB3 are not established by this packet.
+
+## Reviewed source snapshot (SHA-256)
+
+```text
+54bc544a2475c35fc2ee2d93272fca064c2e0a828e59ea2525d0a03a552d722f  LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralCheckerAuxiliaries/CodecProof.lean
+7a1cb050e569eed8ba84651e805ff13f065c2d6b40da6e0f5dbf5f789920cafd  LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralCheckerAuxiliaries/ComparisonProof.lean
+e5a1d1891e5144050e24cd58e420169c8079d879bd8de005b732d1996f23d33d  LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralCheckerAuxiliaries/Definitions.lean
+ed66cd0c797528452bf2f733b1f111a0aaad859bd35024d64ddbc3709dc72a2f  LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralCheckerAuxiliaries/EquationsProof.lean
+90a82a1e4411a68c12bc867fe43c178dc48b429c1fb6d50464e8662bf159e262  LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralCheckerAuxiliaries/FailureProof.lean
+e4bff9c70d065b591b7839fb5716220de0f5ca13e86a6a8860a2aa2d9717a9e4  LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralCheckerAuxiliaries/FieldsProof.lean
+22b694da809f901487fb13a4952794d661710d9d05e1dc8bc281443fb3ee72c2  LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralCheckerAuxiliaries/InitialProof.lean
+a7c9ede385ea859f61c8e2f2900961b8ed96771bc3e617630a7aec08650c8f4b  LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralCheckerAuxiliaries/InstallationProof.lean
+2ef2c21ab0c835058b5ff2da14c172489a3e7f92f93a56eef448aa9e56b4d505  LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralCheckerAuxiliaries/NativeProof.lean
+49d1543a4f7730f8d2b6fa9ba01669e44e6976ba3b312bff4790e563f600c26a  LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralCheckerAuxiliaries/NativeStatementChecks.lean
+9934f597918a186333ff2dfad3f88cf20678f26be593e06fd449a7b29f604143  LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralCheckerAuxiliaries/Preflight.lean
+2d3ca671af633751d3fe41a3467c7ed12826475a47fe13900319ffb948ea614b  LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralCheckerAuxiliaries/SourceProof.lean
+d4a79a329d7b0efd1c89dcb2fe13ae0199134e1d2a033a2b92a1b2f8d68dbb37  LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralCheckerAuxiliaries/StatementChecks.lean
+174797891c15966a3b90cc63e6830e10d0b97013cd5d57ce0c025426290da5c4  LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralCheckerAuxiliaries/Targets.lean
+```

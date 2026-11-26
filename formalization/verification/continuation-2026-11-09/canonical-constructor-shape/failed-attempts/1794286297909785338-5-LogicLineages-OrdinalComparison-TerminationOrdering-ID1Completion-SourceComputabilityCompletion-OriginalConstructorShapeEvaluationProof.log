@@ -1,0 +1,230 @@
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalConstructorShapeEvaluationProof.lean:47:87: error: unsolved goals
+case ordinary
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+q r : Packed (Fin n) arity Gamma
+Gamma✝ : List Ty
+f✝ g✝ : SourceMarkedSyntax.Head (Fin n)
+base✝ : AuxArguments (Fin n) arity Gamma✝ (SourceMarkedSyntax.headArguments arity f✝)
+target✝ : AuxArguments (Fin n) arity Gamma✝ (SourceMarkedSyntax.headArguments arity g✝)
+a✝⁴ : HeadInWindow arity symbols S f✝
+a✝³ : HeadInWindow arity symbols S g✝
+a✝² : RecursiveComparison.headEquivalent f✝ g✝
+a✝¹ : SourceMarkedSyntax.headResult f✝ = SourceMarkedSyntax.headResult g✝
+a✝ : (argumentList base✝).Perm (argumentList target✝)
+⊢ evaluate mark
+      (Nat.pair (typeNumber (SourceMarkedSyntax.headResult f✝))
+          (Nat.pair 4 (Nat.pair (headNumber (headCode f✝)) (codeNumber (argumentsCode base✝)))) ::ᵥ
+        nil) =
+    evaluate mark
+      (Nat.pair (typeNumber (SourceMarkedSyntax.headResult g✝))
+          (Nat.pair 4 (Nat.pair (headNumber (headCode g✝)) (codeNumber (argumentsCode target✝)))) ::ᵥ
+        nil)
+
+case numbered
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+q r : Packed (Fin n) arity Gamma
+Gamma✝ : List Ty
+k✝ : ℕ
+f✝ g✝ : SourceMarkedSyntax.Head (Fin n)
+tau✝ : Ty
+base✝ : AuxArguments (Fin n) arity Gamma✝ (SourceMarkedSyntax.headArguments arity f✝)
+target✝ : AuxArguments (Fin n) arity Gamma✝ (SourceMarkedSyntax.headArguments arity g✝)
+types✝ : List Ty
+extras✝ : AuxArguments (Fin n) arity Gamma✝ types✝
+a✝³ : HeadInWindow arity symbols S f✝
+a✝² : HeadInWindow arity symbols S g✝
+a✝¹ : RecursiveComparison.headEquivalent f✝ g✝
+a✝ : (argumentList base✝).Perm (argumentList target✝)
+⊢ evaluate mark
+      (Nat.pair (typeNumber tau✝)
+          (Nat.pair 5
+            (Nat.pair k✝
+              (Nat.pair (headNumber (headCode f✝))
+                (Nat.pair (typeNumber tau✝)
+                  (Nat.pair (codeNumber (argumentsCode base✝))
+                    (Nat.pair (typesNumber types✝) (codeNumber (argumentsCode extras✝)))))))) ::ᵥ
+        nil) =
+    evaluate mark
+      (Nat.pair (typeNumber tau✝)
+          (Nat.pair 5
+            (Nat.pair k✝
+              (Nat.pair (headNumber (headCode g✝))
+                (Nat.pair (typeNumber tau✝)
+                  (Nat.pair (codeNumber (argumentsCode target✝))
+                    (Nat.pair (typesNumber types✝) (codeNumber (argumentsCode extras✝)))))))) ::ᵥ
+        nil)
+
+case lam
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+q r : Packed (Fin n) arity Gamma
+Gamma✝ : List Ty
+sigma✝ tau✝ : Ty
+q✝ r✝ : AuxTerm (Fin n) arity (sigma✝ :: Gamma✝) tau✝
+a✝ : WindowPrimary (Fin n) arity symbols S (sigma✝ :: Gamma✝) ⟨tau✝, q✝⟩ ⟨tau✝, r✝⟩
+a_ih✝ : evaluate mark (ofFn ![packedNumber ⟨tau✝, q✝⟩]) = evaluate mark (ofFn ![packedNumber ⟨tau✝, r✝⟩])
+⊢ evaluate mark
+      (Nat.pair (typeNumber (sigma✝.arrow tau✝))
+          (Nat.pair 1 (Nat.pair (typeNumber sigma✝) (codeNumber (termCode q✝)))) ::ᵥ
+        nil) =
+    evaluate mark
+      (Nat.pair (typeNumber (sigma✝.arrow tau✝))
+          (Nat.pair 1 (Nat.pair (typeNumber sigma✝) (codeNumber (termCode r✝)))) ::ᵥ
+        nil)
+
+case appFunction
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+q r : Packed (Fin n) arity Gamma
+Gamma✝ : List Ty
+sigma✝ tau✝ : Ty
+q✝ r✝ : AuxTerm (Fin n) arity Gamma✝ (sigma✝.arrow tau✝)
+a✝¹ : AuxTerm (Fin n) arity Gamma✝ sigma✝
+a✝ : WindowPrimary (Fin n) arity symbols S Gamma✝ ⟨sigma✝.arrow tau✝, q✝⟩ ⟨sigma✝.arrow tau✝, r✝⟩
+a_ih✝ :
+  evaluate mark (ofFn ![packedNumber ⟨sigma✝.arrow tau✝, q✝⟩]) =
+    evaluate mark (ofFn ![packedNumber ⟨sigma✝.arrow tau✝, r✝⟩])
+⊢ evaluate mark
+      (Nat.pair (typeNumber tau✝)
+          (Nat.pair 2
+            (Nat.pair (typeNumber sigma✝) (Nat.pair (codeNumber (termCode q✝)) (codeNumber (termCode a✝¹))))) ::ᵥ
+        nil) =
+    evaluate mark
+      (Nat.pair (typeNumber tau✝)
+          (Nat.pair 2
+            (Nat.pair (typeNumber sigma✝) (Nat.pair (codeNumber (termCode r✝)) (codeNumber (termCode a✝¹))))) ::ᵥ
+        nil)
+
+case appArgument
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+q r : Packed (Fin n) arity Gamma
+Gamma✝ : List Ty
+sigma✝ tau✝ : Ty
+q✝ : AuxTerm (Fin n) arity Gamma✝ (sigma✝.arrow tau✝)
+a✝¹ b✝ : AuxTerm (Fin n) arity Gamma✝ sigma✝
+a✝ : WindowPrimary (Fin n) arity symbols S Gamma✝ ⟨sigma✝, a✝¹⟩ ⟨sigma✝, b✝⟩
+a_ih✝ : evaluate mark (ofFn ![packedNumber ⟨sigma✝, a✝¹⟩]) = evaluate mark (ofFn ![packedNumber ⟨sigma✝, b✝⟩])
+⊢ evaluate mark
+      (Nat.pair (typeNumber tau✝)
+          (Nat.pair 2
+            (Nat.pair (typeNumber sigma✝) (Nat.pair (codeNumber (termCode q✝)) (codeNumber (termCode a✝¹))))) ::ᵥ
+        nil) =
+    evaluate mark
+      (Nat.pair (typeNumber tau✝)
+          (Nat.pair 2
+            (Nat.pair (typeNumber sigma✝) (Nat.pair (codeNumber (termCode q✝)) (codeNumber (termCode b✝))))) ::ᵥ
+        nil)
+
+case ordinaryArguments
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+q r : Packed (Fin n) arity Gamma
+Gamma✝ : List Ty
+f✝ : SourceMarkedSyntax.Head (Fin n)
+base✝ target✝ : AuxArguments (Fin n) arity Gamma✝ (SourceMarkedSyntax.headArguments arity f✝)
+a✝ : WindowArgumentPrimary (Fin n) arity symbols S Gamma✝ (SourceMarkedSyntax.headArguments arity f✝) base✝ target✝
+a_ih✝ : True
+⊢ evaluate mark
+      (Nat.pair (typeNumber (SourceMarkedSyntax.headResult f✝))
+          (Nat.pair 4 (Nat.pair (headNumber (headCode f✝)) (codeNumber (argumentsCode base✝)))) ::ᵥ
+        nil) =
+    evaluate mark
+      (Nat.pair (typeNumber (SourceMarkedSyntax.headResult f✝))
+          (Nat.pair 4 (Nat.pair (headNumber (headCode f✝)) (codeNumber (argumentsCode target✝)))) ::ᵥ
+        nil)
+
+case numberedBase
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+q r : Packed (Fin n) arity Gamma
+Gamma✝ : List Ty
+k✝ : ℕ
+f✝ : SourceMarkedSyntax.Head (Fin n)
+tau✝ : Ty
+base✝ target✝ : AuxArguments (Fin n) arity Gamma✝ (SourceMarkedSyntax.headArguments arity f✝)
+types✝ : List Ty
+extras✝ : AuxArguments (Fin n) arity Gamma✝ types✝
+a✝ : WindowArgumentPrimary (Fin n) arity symbols S Gamma✝ (SourceMarkedSyntax.headArguments arity f✝) base✝ target✝
+a_ih✝ : True
+⊢ evaluate mark
+      (Nat.pair (typeNumber tau✝)
+          (Nat.pair 5
+            (Nat.pair k✝
+              (Nat.pair (headNumber (headCode f✝))
+                (Nat.pair (typeNumber tau✝)
+                  (Nat.pair (codeNumber (argumentsCode base✝))
+                    (Nat.pair (typesNumber types✝) (codeNumber (argumentsCode extras✝)))))))) ::ᵥ
+        nil) =
+    evaluate mark
+      (Nat.pair (typeNumber tau✝)
+          (Nat.pair 5
+            (Nat.pair k✝
+              (Nat.pair (headNumber (headCode f✝))
+                (Nat.pair (typeNumber tau✝)
+                  (Nat.pair (codeNumber (argumentsCode target✝))
+                    (Nat.pair (typesNumber types✝) (codeNumber (argumentsCode extras✝)))))))) ::ᵥ
+        nil)
+
+case numberedExtras
+n : ℕ
+arity : Fin n → ℕ
+symbols : List (Fin n)
+S Gamma : List Ty
+q r : Packed (Fin n) arity Gamma
+Gamma✝ : List Ty
+k✝ : ℕ
+f✝ : SourceMarkedSyntax.Head (Fin n)
+tau✝ : Ty
+base✝ : AuxArguments (Fin n) arity Gamma✝ (SourceMarkedSyntax.headArguments arity f✝)
+types✝ : List Ty
+extras✝ target✝ : AuxArguments (Fin n) arity Gamma✝ types✝
+a✝ : WindowArgumentPrimary (Fin n) arity symbols S Gamma✝ types✝ extras✝ target✝
+a_ih✝ : True
+⊢ evaluate mark
+      (Nat.pair (typeNumber tau✝)
+          (Nat.pair 5
+            (Nat.pair k✝
+              (Nat.pair (headNumber (headCode f✝))
+                (Nat.pair (typeNumber tau✝)
+                  (Nat.pair (codeNumber (argumentsCode base✝))
+                    (Nat.pair (typesNumber types✝) (codeNumber (argumentsCode extras✝)))))))) ::ᵥ
+        nil) =
+    evaluate mark
+      (Nat.pair (typeNumber tau✝)
+          (Nat.pair 5
+            (Nat.pair k✝
+              (Nat.pair (headNumber (headCode f✝))
+                (Nat.pair (typeNumber tau✝)
+                  (Nat.pair (codeNumber (argumentsCode base✝))
+                    (Nat.pair (typesNumber types✝) (codeNumber (argumentsCode target✝)))))))) ::ᵥ
+        nil)
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalConstructorShapeEvaluationProof.lean:52:26: warning: This simp argument is unused:
+  markEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp [̵m̵a̵r̵k̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵a̵c̵k̵e̵d̵N̵u̵m̵b̵e̵r̵,̵t̵e̵r̵m̵C̵o̵d̵e̵,̵c̵o̵d̵e̵N̵u̵m̵b̵e̵r̵]̵[̲p̲a̲c̲k̲e̲d̲N̲u̲m̲b̲e̲r̲,̲ ̲t̲e̲r̲m̲C̲o̲d̲e̲,̲ ̲c̲o̲d̲e̲N̲u̲m̲b̲e̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalConstructorShapeEvaluationProof.applicationDomainEvaluation: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalConstructorShapeEvaluationProof.sameMarkEvaluation: [propext,
+ Quot.sound]
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalConstructorShapeEvaluationProof.lean:139:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalConstructorShapeEvaluationProof.representativeMark: forbidden axiom dependency sorryAx

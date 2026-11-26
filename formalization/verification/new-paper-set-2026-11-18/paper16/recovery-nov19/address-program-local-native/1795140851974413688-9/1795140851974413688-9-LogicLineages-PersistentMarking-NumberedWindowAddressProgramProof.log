@@ -1,0 +1,53 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressProgramProof.lean:20:7: warning: Local variable 'left' resembles constructor 'Nat.Primrec.left' - write '.left' (with a dot) or 'Nat.Primrec.left' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressProgramProof.lean:22:7: warning: Local variable 'right' resembles constructor 'Nat.Primrec.right' - write '.right' (with a dot) or 'Nat.Primrec.right' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressProgramProof.lean:92:41: error: Type mismatch
+  (GorbowPRProgram.Proof.unaryCorrespondence ?m.28).mp
+    (Primrec.of_eq (Primrec.cond validType (Primrec.const 1) (Primrec.const 0)) fun n => ?m.30)
+has type
+  ∃ p, ∀ (x : ℕ), GorbowPRProgram.evaluate p (x ::ᵥ nil) = ?m.28 x
+but is expected to have type
+  TypeCodeProgram
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  TypeCodeProgram ↦ 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressProgramProof.lean:94:14: error: unsolved goals
+case false
+n : ℕ
+h : typeBit n = false
+⊢ 0 = ?m.28 n
+
+case true
+n : ℕ
+h : typeBit n = true
+⊢ 1 = ?m.28 n
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressProgramProof.lean:94:47: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressProgramProof.lean:95:47: error: Type mismatch
+  (GorbowPRProgram.Proof.unaryCorrespondence fun a => Encodable.encode (contextView a)).mp
+    (Primrec.comp Primrec.encode contextPrim)
+has type
+  ∃ p, ∀ (x : ℕ), GorbowPRProgram.evaluate p (x ::ᵥ nil) = Encodable.encode (contextView x)
+but is expected to have type
+  ContextCodeProgram
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  ContextCodeProgram ↦ 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowAddressProgramProof.lean:97:47: error: Type mismatch
+  (GorbowPRProgram.Proof.unaryCorrespondence fun a => Encodable.encode (addressView a)).mp
+    (Primrec.comp Primrec.encode addressPrim)
+has type
+  ∃ p, ∀ (x : ℕ), GorbowPRProgram.evaluate p (x ::ᵥ nil) = Encodable.encode (addressView x)
+but is expected to have type
+  AddressCodeProgram
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  AddressCodeProgram ↦ 1

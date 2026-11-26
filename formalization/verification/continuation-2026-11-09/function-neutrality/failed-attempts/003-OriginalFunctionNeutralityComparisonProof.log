@@ -1,0 +1,27 @@
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityComparisonProof.lean:26:13: error(lean.unknownIdentifier): Unknown identifier `andRight`
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityComparisonProof.lean:16:93: error: unsolved goals
+data : InternalOriginalUniformDescentSelection.Data
+window : ComputabilityKnowledge.GorbowPRProgram.Program 1
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+out left right leftType rightType parameter value : OTerm alpha
+selected : InternalOriginalUniformDescentSelection.Data := selectedData data window
+P : InternalCalculus.Formula alpha :=
+  windowGraph window left parameter ⊓
+    (windowGraph window right parameter ⊓
+      (sourcePremises selected left leftType parameter ⊓
+        (sourcePremises selected right rightType parameter ⊓
+          (foldGraph selected out left parameter ⊓ foldGraph selected out right parameter))))
+hp : Nonempty (Derivation body (P :: Delta) P)
+⊢ have selected := selectedData data window;
+  Nonempty
+    (Derivation body Delta
+      (Formula.imp
+        (windowGraph window left parameter ⊓
+          (windowGraph window right parameter ⊓
+            (sourcePremises selected left leftType parameter ⊓
+              (sourcePremises selected right rightType parameter ⊓
+                (foldGraph selected out left parameter ⊓ foldGraph selected out right parameter)))))
+        (Formula.iff (markGraph value left) (markGraph value right))))
+/workspace/scratch/363d22bb1778/logic-lineages-papers/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalFunctionNeutralityComparisonProof.lean:43:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFunctionNeutralityComparisonProof.actualOriginalFunctionNeutralityCanonicalComparison: forbidden axiom dependency sorryAx

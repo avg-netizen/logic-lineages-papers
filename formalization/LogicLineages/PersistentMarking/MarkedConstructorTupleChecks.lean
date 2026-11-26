@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.MarkedConstructorTupleProof
+
+namespace LogicLineages.PersistentMarking.MarkedConstructorTupleChecks
+theorem exact_TupleSuccess : MarkedConstructorTargets.TupleSuccess :=
+  MarkedConstructorTupleProof.tupleSuccess
+#print axioms exact_TupleSuccess
+end LogicLineages.PersistentMarking.MarkedConstructorTupleChecks

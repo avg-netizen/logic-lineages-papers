@@ -1,0 +1,54 @@
+{
+ "key": "CONDITIONAL-HEIGHT",
+ "lane": "opusA",
+ "round": 4,
+ "serves": "Paper 16 thm:height, conditional; shared external interface",
+ "source_map": "verification/local-fable-pair-2026-11-22-round4/opusA/CONDITIONAL-HEIGHT-SOURCE-MAP.md",
+ "interface_doc": "verification/local-fable-pair-2026-11-22-round4/opusA/EXTERNAL-INTERFACE.md",
+ "modules": [
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ExternalOrdinalInterfaceTargets",
+   "sha256": "e040bcb11a3988d7c26c72b86c0957f5c790e6d00d6a00a1a5a34fcc4c43eb81",
+   "frozen_receipt": "1795403969736168254-3288731",
+   "peak_rss_kib": 883604
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ExternalOrdinalInterfaceID1Targets",
+   "sha256": "8e6ed85d920e9e2c92bc7bb79f97bec60a52aac0243adc6e33cc8ae6833c1c3b",
+   "frozen_receipt": "1795404149778390897-3290098",
+   "peak_rss_kib": 1023260
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ConditionalHeightTargets",
+   "sha256": "35cd1d592134e2d39cb14631d5ee8a558e249021522c5c74f952290040324274",
+   "frozen_receipt": "1795404223726135807-3290467",
+   "peak_rss_kib": 882088
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ConditionalHeightProof",
+   "sha256": "a4a2a5ad02261ced49522b490a7300f76bc564bf1b9d03265af2edd1e38a1300",
+   "receipt": "1795404261857473158-3290689",
+   "peak_rss_kib": 949780
+  }
+ ],
+ "theorem": "LogicLineages.PersistentMarking.ConditionalHeightProof.conditionalHeight : ConditionalHeight",
+ "hypotheses": [
+  "Calibration D (E1)",
+  "TowerHypotheses D (E2, #1463)",
+  "BHIdentification D BH (E3)",
+  "UpperBound BH (thm:upper conclusion)"
+ ],
+ "named_axiom_output": {
+  "conditionalHeight": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ]
+ },
+ "peak_rss_kib": 949780,
+ "depends_on": [
+  "#1462",
+  "#1463",
+  "#1448"
+ ]
+}

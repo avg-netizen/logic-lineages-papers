@@ -1,0 +1,57 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawRosterPrograms.lean:12:6: error: Type mismatch
+  fun ai => (ri.2, ?m.25, ?m.28, ?m.29)
+has type
+  (ai : ?m.18) → ℕ × ?m.30 ai × ?m.31 ai × ?m.32 ai
+but is expected to have type
+  RawOccurrence
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawRosterPrograms.lean:12:23: error: Invalid projection: Type of
+  ai
+is not known; cannot resolve projection `2`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawRosterPrograms.lean:12:28: error: Invalid projection: Type of
+  ai
+is not known; cannot resolve projection `1`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawRosterPrograms.lean:12:35: error: Invalid projection: Type of
+  ai
+is not known; cannot resolve projection `1`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawRosterPrograms.lean:10:45: error: unsolved goals
+⊢ Primrec roster
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawRosterPrograms.lean:29:15: error: Invalid field notation: Function `Primrec.not` does not have a usable parameter of type `Primrec ...` for which to substitute
+  PrimrecPred.decide (PrimrecRel.comp Primrec.eq c (Primrec.const 0))
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawRosterPrograms.lean:38:6: error: Application type mismatch: The argument
+  PrimrecPred.decide
+    (PrimrecRel.comp Primrec.eq (Primrec.comp name_primitive Primrec.snd) (Primrec.comp Primrec.snd Primrec.fst))
+has type
+  Primrec fun a => decide (name a.2 = a.1.2)
+but is expected to have type
+  Primrec₂ ?m.33
+in the application
+  anyP (Primrec.comp live_primitive Primrec.fst)
+    (PrimrecPred.decide
+      (PrimrecRel.comp Primrec.eq (Primrec.comp name_primitive Primrec.snd) (Primrec.comp Primrec.snd Primrec.fst)))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawRosterPrograms.lean:44:2: error: Invalid field notation: Function `Nat.Primrec.add` does not have a usable parameter of type `Nat.Primrec ...` for which to substitute
+  Primrec₂.comp Primrec.nat_mul (Primrec.const base) Primrec₂.natPair
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawRosterPrograms.lean:45:41: error: Invalid field notation: Function `Nat.Primrec.add` does not have a usable parameter of type `Nat.Primrec ...` for which to substitute
+  Primrec₂.comp Primrec.nat_mul (Primrec.const 10) Primrec.id
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawRosterPrograms.lean:49:2: error: Invalid field notation: Function `Nat.Primrec.add` does not have a usable parameter of type `Nat.Primrec ...` for which to substitute
+  Primrec₂.comp Primrec.nat_mul (Primrec.const 8) (Primrec₂.comp lessP Primrec.snd Primrec.fst)
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawRosterPrograms.lean:52:50: error: Application type mismatch: The argument
+  Primrec₂.comp conjunctionP (Primrec.comp Primrec.fst Primrec.snd) (Primrec.comp Primrec.snd Primrec.snd)
+has type
+  Primrec fun a => WindowCode.conjunction a.2.1 a.2.2
+but is expected to have type
+  Primrec₂ ?m.13
+in the application
+  Primrec.list_foldr Primrec.id (Primrec.const 0)
+    (Primrec₂.comp conjunctionP (Primrec.comp Primrec.fst Primrec.snd) (Primrec.comp Primrec.snd Primrec.snd))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawRosterPrograms.lean:58:31: error: Invalid field notation: Function `Nat.Primrec.add` does not have a usable parameter of type `Nat.Primrec ...` for which to substitute
+  Primrec.comp Primrec.snd Primrec.snd
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation

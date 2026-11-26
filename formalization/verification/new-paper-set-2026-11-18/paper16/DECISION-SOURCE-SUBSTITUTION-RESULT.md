@@ -1,0 +1,5 @@
+# Source universe actual bound substitution
+
+Exact SourceBoundSubstitution passed1795003902594892213-7 under original core caps. Eight semantic pins unchanged. Initial argument-order failure1795003545491685993-5 and resource stop1795003563504151152-9 fully preserved. Independent resource plan approved direct actual Typed/BaseTyped/ExtrasTyped induction, generalized output context/depth and isolated constructor helpers. Revised elaboration attempts1795003808490010295-5,1795003828999737277-7,1795003869921893627-7 preserved; repairs explicitly supply all nine recursor cases and infer original constructor binder parameters rather than confusing duplicate nil/cons names. No target weakening or cap changes.
+
+Actual finiteCompatible is discharged from the typed tuple. No Closed K, Ordinary or result-validity premise. Source full-call, owner tuple, observed types and full recursive closure remain separate. Native reaped, SOURCESUBRECUR-1211 released; independent final requested, no root-build/CI claim.

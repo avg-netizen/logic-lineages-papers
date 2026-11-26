@@ -1,0 +1,12 @@
+module
+public import LogicLineages.StandardControlCurrent.IdentityTailProof
+
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.IdentityTailStatementChecks
+
+theorem fixed_rootPeakInjectivity : IdentityTailTargets.RootPeakInjectivity := rootPeakInjectivity
+theorem fixed_effectiveFiniteZeros : IdentityTailTargets.EffectiveFiniteZeros := effectiveFiniteZeros
+
+#print axioms fixed_rootPeakInjectivity
+#print axioms fixed_effectiveFiniteZeros
+end LogicLineages.StandardControlCurrent.IdentityTailStatementChecks

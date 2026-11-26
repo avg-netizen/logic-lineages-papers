@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.RefinementRenamingProof
+namespace LogicLineages.PersistentMarking.RefinementRenamingChecks
+theorem exact_sizePreservingRenaming : RefinementRenamingTargets.SizePreservingRenaming := RefinementRenamingProof.sizePreservingRenaming
+#print axioms exact_sizePreservingRenaming
+end LogicLineages.PersistentMarking.RefinementRenamingChecks

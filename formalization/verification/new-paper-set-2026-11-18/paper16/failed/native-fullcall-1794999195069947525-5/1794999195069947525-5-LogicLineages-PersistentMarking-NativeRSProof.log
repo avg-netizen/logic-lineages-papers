@@ -1,0 +1,29 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeRSProof.lean:6:82: error: unsolved goals
+σ τ : Ty
+f a : Expr
+ρ : Ty
+⊢ ρ ∈ subtypes (Head.app σ τ).result ∨ ρ ∈ support f ∨ ρ ∈ support a ↔ ρ ∈ subtypes τ ∨ ρ ∈ support f ∨ ρ ∈ support a
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeRSProof.lean:22:6: error: Type mismatch: After simplification, term
+  toStep S τ n A B hn hA hoA hB
+ has type
+  Weak S (C0 τ n A B (stepType τ)) A
+but is expected to have type
+  Weak S (Expr.marked (Head.recursor τ) (stepType τ) Args.nil extras) A
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeRSProof.lean:24:8: error: Type mismatch: After simplification, term
+  toNumber S τ n A B hn hon hA hB
+ has type
+  Weak S (C0 τ n A B Ty.ground) n
+but is expected to have type
+  Weak S (Expr.marked (Head.recursor τ) Ty.ground Args.nil extras) n
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeRSProof.lean:32:6: error: Type mismatch: After simplification, term
+  hfirst
+ has type
+  Weak S (C0 τ n A B (τ.arrow τ)) (app Ty.ground (τ.arrow τ) A n)
+but is expected to have type
+  Weak S (Expr.marked (Head.recursor τ) (τ.arrow τ) Args.nil extras) (app Ty.ground (τ.arrow τ) A n)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeRSProof.lean:34:8: error: Type mismatch: After simplification, term
+  toRecursion S τ n A B hn hon hA hoA hB hoB
+ has type
+  Weak S (C0 τ n A B τ) (recTerm τ n A B)
+but is expected to have type
+  Weak S (Expr.marked (Head.recursor τ) τ Args.nil extras) (recTerm τ n A B)

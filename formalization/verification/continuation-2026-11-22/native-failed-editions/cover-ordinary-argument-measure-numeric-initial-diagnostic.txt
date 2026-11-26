@@ -1,0 +1,31 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverOrdinaryMeasureNumericProof.lean:54:2: warning: 'change evaluate (selectedArgsMeasure A) (a ::ᵥ nil) = Encodable.encode (bounds a).2' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverOrdinaryMeasureNumericProof.lean:81:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  if run (header 4 2) raw = 0 then ?m.219 else ?m.220
+in the target expression
+  (if evaluate (header 4 2) (raw ::ᵥ nil) = 0 then evaluate M (raw ::ᵥ nil)
+    else evaluate (ordinarySelectedBump A) (raw ::ᵥ nil)) =
+    Encodable.encode (bounds raw).1
+
+case neg
+M A : Program 1
+calibrated : TermMeasureCalibrated M
+args : ArgsMeasureCalibrated A
+raw : ℕ
+yes : ¬run (header 4 2) raw = 1
+zero : run (header 4 2) raw = 0
+⊢ (if evaluate (header 4 2) (raw ::ᵥ nil) = 0 then evaluate M (raw ::ᵥ nil)
+    else evaluate (ordinarySelectedBump A) (raw ::ᵥ nil)) =
+    Encodable.encode (bounds raw).1
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverOrdinaryMeasureNumericProof.exact_CoverSelectedArgsMeasure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverOrdinaryMeasureNumericProof.exact_CoverOrdinaryMeasureBase' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverOrdinaryMeasureNumericProof.exact_CoverOrdinarySharedMeasure' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

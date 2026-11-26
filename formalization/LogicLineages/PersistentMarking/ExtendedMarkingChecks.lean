@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.ExtendedMarkingProof
+namespace LogicLineages.PersistentMarking.ExtendedMarkingChecks
+theorem exact_fullMarking : ExtendedMarkingTargets.FullMarking := ExtendedMarkingProof.fullMarking
+#print axioms exact_fullMarking
+end LogicLineages.PersistentMarking.ExtendedMarkingChecks

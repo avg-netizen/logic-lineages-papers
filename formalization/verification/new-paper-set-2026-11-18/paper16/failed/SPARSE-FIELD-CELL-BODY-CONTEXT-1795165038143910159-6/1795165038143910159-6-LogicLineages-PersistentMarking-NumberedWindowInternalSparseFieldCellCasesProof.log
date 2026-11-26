@@ -1,0 +1,55 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldCellCasesProof.lean:36:15: error: don't know how to synthesize implicit argument `body`
+  @setFlag ?m.122 β (a :: Δ) k z (Nonempty.intro (Derivation.hypothesis List.mem_cons_self))
+context:
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+n : OTerm α
+β : Type
+j : α → β
+Δ : List (ID1Completion.InternalCalculus.Formula β)
+k : OrdinaryArithmetic.Term β
+a✝ : ∀ p ∈ Γ, Formula.relabel j p ∈ Δ
+e : Derivation body Δ (eqn (Term.relabel j n) (suc k))
+nn : OrdinaryArithmetic.arithmeticLanguage.Term β := ⋯
+a : ID1Completion.InternalCalculus.Formula β := ⋯
+b : ID1Completion.InternalCalculus.Formula β := ⋯
+states : Derivation body Δ (NumberedWindowInternalSparseDecodeGuardProof.guardCases k)
+⊢ Positive (Fin 1)
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldCellCasesProof.lean:36:41: error: don't know how to synthesize implicit argument `α`
+  @Nonempty.intro (Derivation ?m.122 (a :: Δ) (unary good z k)) (Derivation.hypothesis List.mem_cons_self)
+context:
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+n : OTerm α
+β : Type
+j : α → β
+Δ : List (ID1Completion.InternalCalculus.Formula β)
+k : OrdinaryArithmetic.Term β
+a✝ : ∀ p ∈ Γ, Formula.relabel j p ∈ Δ
+e : Derivation body Δ (eqn (Term.relabel j n) (suc k))
+nn : OrdinaryArithmetic.arithmeticLanguage.Term β := ⋯
+a : ID1Completion.InternalCalculus.Formula β := ⋯
+b : ID1Completion.InternalCalculus.Formula β := ⋯
+states : Derivation body Δ (NumberedWindowInternalSparseDecodeGuardProof.guardCases k)
+⊢ Type 1
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldCellCasesProof.lean:36:42: error: don't know how to synthesize implicit argument `body`
+  @Derivation.hypothesis ?m.122 β (a :: Δ) (unary good z k) ⋯
+context:
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+n : OTerm α
+β : Type
+j : α → β
+Δ : List (ID1Completion.InternalCalculus.Formula β)
+k : OrdinaryArithmetic.Term β
+a✝ : ∀ p ∈ Γ, Formula.relabel j p ∈ Δ
+e : Derivation body Δ (eqn (Term.relabel j n) (suc k))
+nn : OrdinaryArithmetic.arithmeticLanguage.Term β := ⋯
+a : ID1Completion.InternalCalculus.Formula β := ⋯
+b : ID1Completion.InternalCalculus.Formula β := ⋯
+states : Derivation body Δ (NumberedWindowInternalSparseDecodeGuardProof.guardCases k)
+⊢ Positive (Fin 1)
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldCellCasesProof.lean:36:9: error: failed to infer `have` declaration type

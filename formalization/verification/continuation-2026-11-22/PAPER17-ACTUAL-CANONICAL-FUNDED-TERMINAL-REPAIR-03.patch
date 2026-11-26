@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualCanonicalFundedTerminalTruthProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualCanonicalFundedTerminalTruthProof.lean
+@@ -36 +36 @@
+-  obtain ⟨xs,normal,sourceReads,inactive | ⟨active,nonzero⟩⟩ := stop
++  obtain ⟨xs,normal,sourceReads,branches⟩ := stop
+@@ -37,0 +38 @@
++  rcases branches with inactive | ⟨active,nonzero⟩

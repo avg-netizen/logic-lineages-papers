@@ -1,0 +1,25 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAdditionIteration/IterationProof.lean:55:11: error: Type mismatch: After simplification, term
+  h
+ has type
+  @Derivation T ctx
+    ((RawReflexivityDispatcher.valid I.vtag t).imp
+      (property I.vtag I.qctag I.ctag I.atag I.leftTag I.rightTag I.numeralTag I.prefixTag count t index fuel
+        (binaryCall I.iteratorTag count t)))
+but is expected to have type
+  @Derivation (GorbowPRNumeralCalculation.Theory p) ctx
+    ((RawReflexivityDispatcher.valid I.vtag t).imp
+      ((Formula.equal (RawIteratedSucc.first I.leftTag (binaryCall I.iteratorTag count t))
+            (LiteralNumeralPrefix.numeralCall I.numeralTag count)).conj
+        ((Formula.equal (RawIteratedSucc.second I.leftTag I.rightTag (binaryCall I.iteratorTag count t))
+              (binaryCall I.prefixTag count t)).conj
+          ((RawReflexivityDispatcher.valid I.vtag (binaryCall I.prefixTag count t)).conj
+            (RawEqualityComposition.accepted I.qctag I.ctag I.atag index fuel
+              (RawAdditionComputation.addRaw I.ctag I.atag t (LiteralNumeralPrefix.numeralCall I.numeralTag count))
+              (binaryCall I.prefixTag count t)
+              (RawIteratedSucc.third I.rightTag (binaryCall I.iteratorTag count t)))))))
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawAdditionIteration.IterationProof.substBinary: [propext]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAdditionIteration/IterationProof.lean:58:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawAdditionIteration.IterationProof.internalIteration: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawAdditionIteration.IterationProof.internalIteration' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

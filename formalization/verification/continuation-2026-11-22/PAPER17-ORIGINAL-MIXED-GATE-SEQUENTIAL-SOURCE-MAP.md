@@ -1,0 +1,7 @@
+# Original mixed affine and arbitrary-head sequential gate semantics
+
+Paper 17, `17-permitted-control-canonical-comparison/sections/arithmetic.tex`, lines 3–27 and 33–48.
+
+- The supplied ordered list has precisely two source gate constructors, original signed affine expressions and original canonical arbitrary fixed-head collapse. Every actual affine term occurrence, including repeats, contributes its given source name to the topology. The affine evaluator computes the original signed expression and rejects exactly when negative; it writes the natural value only on a hit. A collapse calls the same original arbitrary-head reader as #984, at the actual original source name.
+- Extend the original name-availability condition from a single collapse source to every source occurrence in a gate. New original outputs cannot overwrite previous names, and all repeated/shared real references read the actual current valuation. The exact sequential output is equivalent to the conjunction of the true original graph of each gate at one final valuation agreeing at every exterior name. Failure is exactly absence of a graph extension, not a value inserted for a negative affine output.
+- No compilation/decision effectivity, parsing or topological ordering, hidden wire construction for this mixed grammar, extra primitive source gate constructor, arbitrary circuit DAG theorem, or uniform symbolic branch/cutoff is asserted.

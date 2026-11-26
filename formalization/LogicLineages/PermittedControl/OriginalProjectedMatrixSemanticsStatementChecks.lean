@@ -1,0 +1,33 @@
+module
+public import LogicLineages.PermittedControl.OriginalProjectedMatrixSemanticsTargets
+import LogicLineages.PermittedControl.OriginalProjectedMatrixSemanticsAvailabilityProof
+import LogicLineages.PermittedControl.OriginalProjectedMatrixSemanticsProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalProjectedAvailabilityRows : OriginalProjectedMatrixSemantics.ExactAvailabilityRows :=
+  OriginalProjectedMatrixSemantics.exactAvailabilityRows
+
+theorem fixed_exactOriginalProjectedRowSnapshots : OriginalProjectedMatrixSemantics.ExactDecodedRowSnapshots :=
+  OriginalProjectedMatrixSemantics.exactDecodedRowSnapshots
+
+theorem fixed_exactOriginalProjectedBooleanSuffix : OriginalProjectedMatrixSemantics.ExactDecodedSuffix :=
+  OriginalProjectedMatrixSemantics.exactDecodedSuffix
+
+theorem fixed_exactOriginalProjectedResidualInterface :
+    OriginalProjectedMatrixSemantics.ExactResidualMatrixInterface :=
+  OriginalProjectedMatrixSemantics.exactResidualMatrixInterface
+
+theorem fixed_fullOriginalProjectedMatrixSemantics :
+    OriginalProjectedMatrixSemantics.FullOriginalProjectedMatrixSemantics :=
+  ⟨fixed_exactOriginalProjectedAvailabilityRows,fixed_exactOriginalProjectedRowSnapshots,
+    fixed_exactOriginalProjectedBooleanSuffix,fixed_exactOriginalProjectedResidualInterface⟩
+
+#print axioms fixed_exactOriginalProjectedAvailabilityRows
+#print axioms fixed_exactOriginalProjectedRowSnapshots
+#print axioms fixed_exactOriginalProjectedBooleanSuffix
+#print axioms fixed_exactOriginalProjectedResidualInterface
+#print axioms fixed_fullOriginalProjectedMatrixSemantics
+
+end LogicLineages.PermittedControl.StatementChecks

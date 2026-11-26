@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityStackAppendDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsReverseInternalTargets
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+/-- Actual numeric append of a singleton, then actual fixed reverse AST. No
+native list decoding, calibrated oracle, or changed runtime program. -/
+def AppendSingleton : Prop := ∀ (body : Positive (Fin 1)) (alpha : Type)
+ (front value singleton combined mapped out : OTerm alpha),
+ Nonempty (Derivation body []
+ ((graph2 InternalListCodec.consCode singleton value OrdinaryArithmetic.zeroTerm ⊓
+ (graph2 InternalApplicationValidityStackAppend.append combined front singleton ⊓
+  graph1 OriginalTypedArgumentObservations.reverse mapped front)).imp
+ ((graph1 OriginalTypedArgumentObservations.reverse out combined).iff
+  graph2 InternalListCodec.consCode out value mapped)))
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedArgumentObservationsReverseInternalTargets

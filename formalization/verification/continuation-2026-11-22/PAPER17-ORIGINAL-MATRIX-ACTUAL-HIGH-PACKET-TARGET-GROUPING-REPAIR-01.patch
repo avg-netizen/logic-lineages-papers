@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalMatrixActualHighPacketTargets.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalMatrixActualHighPacketTargets.lean
+@@ -83,2 +83,2 @@
+-        ((guard branch).eval θ ∧ prior θ ∧ SourceAccepts f θ known gates p polarity) ↔
+-        (guard branch).eval θ ∧ prior θ ∧ BranchPacket f B θ known gates p polarity branch
++        (((guard branch).eval θ ∧ prior θ ∧ SourceAccepts f θ known gates p polarity) ↔
++        ((guard branch).eval θ ∧ prior θ ∧ BranchPacket f B θ known gates p polarity branch))

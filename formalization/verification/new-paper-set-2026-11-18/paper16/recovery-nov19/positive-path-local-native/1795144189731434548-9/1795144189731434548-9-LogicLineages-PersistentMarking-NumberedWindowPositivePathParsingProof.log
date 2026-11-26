@@ -1,0 +1,15 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowPositivePathParsingProof.lean:41:28: error: Type mismatch
+  decodedEnvelope t e
+has type
+  Option.map (NumberedWindowClassPathWitnessBits.ClassHop.mk t) (decodeClassEdge e) =
+    (Option.map (fun row => (t, row)) (edgeView e)).bind hopPayload
+but is expected to have type
+  ((some (0 + 1 + 1, [t, e])).bind fun p => assembleClassHop p.fst p.snd) =
+    (do
+          let __x ← some (0 + 1 + 1, [t, e])
+          match __x with
+            | (2, [target, edge]) => do
+              let row ← edgeView edge
+              pure (target, row)
+            | x => none).bind
+      hopPayload

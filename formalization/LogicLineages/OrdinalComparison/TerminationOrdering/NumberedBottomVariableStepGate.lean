@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableStepProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableStepGate
+
+theorem step : NumberedBottomVariableLiftingTargets.ActualStepInverse :=
+  NumberedBottomVariableStepProof.actualStepInverse
+
+theorem arguments : NumberedBottomVariableLiftingTargets.ActualArgumentStepInverse :=
+  NumberedBottomVariableStepProof.actualArgumentStepInverse
+
+#print axioms step
+#print axioms arguments
+#print axioms NumberedBottomVariableStepSupportProof.lambdaShapeInverse
+#print axioms NumberedBottomVariableStepSupportProof.applicationStepCases
+#print axioms NumberedBottomVariableStepSupportProof.memberImageInverse
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableStepGate

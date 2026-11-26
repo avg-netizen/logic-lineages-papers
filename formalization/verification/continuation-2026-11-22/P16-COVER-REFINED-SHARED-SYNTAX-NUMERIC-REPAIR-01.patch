@@ -1,0 +1,11 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRefinedSharedSyntaxNumericProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRefinedSharedSyntaxNumericProof.lean
+@@ -57,2 +57,2 @@
+-        evaluate (headerAny layout) ((i+1) ::ᵥ nil) = 1) := fun check => by cases check.1
+-    rw [if_neg reject]
++        run (headerAny layout) (i+1) = 1) := fun check => by cases check.1
++    rw [if_neg reject] <;> rfl
+@@ -60,2 +60 @@
+-    change evaluate (headerAny layout) ((i+1) ::ᵥ nil) = 1 at pass
+-    rw [if_pos ⟨rfl,pass⟩]
++    rw [if_pos ⟨rfl,pass⟩] <;> rfl

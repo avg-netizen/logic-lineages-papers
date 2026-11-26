@@ -1,0 +1,3 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalAdoption.StatementChecks
+@[expose] public section

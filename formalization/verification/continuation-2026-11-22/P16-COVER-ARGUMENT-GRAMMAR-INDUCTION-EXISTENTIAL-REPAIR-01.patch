@@ -1,0 +1,5 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentGrammarInductionExistentialProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentGrammarInductionExistentialProof.lean
+@@ -53 +53 @@
+-  let Δ := P :: Γ.map weaken
++  let Δ := P :: Γ.map (fun q => q.relabel j)

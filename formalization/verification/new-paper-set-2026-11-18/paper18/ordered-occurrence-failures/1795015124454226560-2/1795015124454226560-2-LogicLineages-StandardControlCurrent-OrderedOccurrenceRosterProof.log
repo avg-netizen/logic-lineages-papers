@@ -1,0 +1,12 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRosterProof.lean:26:66: error: unsolved goals
+xs : List ℕ
+p : NormalForm.Formula
+i : ℕ
+⊢ (i ∈ xs ∧ ∀ x ∈ live xs p, ¬((summand x).name == i) = true) ↔ i ∈ xs ∧ ∀ o ∈ live xs p, (summand o).name ≠ i
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRosterProof.lean:28:78: warning: This simp argument is unused:
+  beq_eq_false_iff_ne
+
+Hint: Omit it from the simp argument list.
+  simp only [inactive, List.mem_filter, Bool.not_eq_true', List.any_eq_false,̵ ̵b̵e̵q̵_̵e̵q̵_̵f̵a̵l̵s̵e̵_̵i̵f̵f̵_̵n̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

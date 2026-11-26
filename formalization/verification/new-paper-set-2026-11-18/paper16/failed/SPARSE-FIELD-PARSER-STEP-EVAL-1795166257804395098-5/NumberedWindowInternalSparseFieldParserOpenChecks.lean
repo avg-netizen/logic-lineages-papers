@@ -1,0 +1,20 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserOpenMalformedProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserOpenConsProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserOpenChecks
+open NumberedWindowInternalSparseFieldParserTargets
+open NumberedWindowInternalSparseFieldParserOpenMalformedProof (nil gap)
+open NumberedWindowInternalSparseFieldParserOpenConsProof (openCons rejectedTail)
+theorem exact_OpenNilRow : OpenNilRow := nil
+theorem exact_OpenMalformedRow : OpenMalformedRow := gap
+theorem exact_OpenConsRow : OpenConsRow := openCons
+theorem exact_OpenRejectedTail : OpenRejectedTail := rejectedTail
+
+#print axioms exact_OpenNilRow
+#print axioms exact_OpenMalformedRow
+#print axioms exact_OpenConsRow
+#print axioms exact_OpenRejectedTail
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserOpenChecks

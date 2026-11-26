@@ -1,0 +1,31 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowExternalNeutralEdgesProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowExternalNeutralChecks
+open NumberedWindowExternalNeutralTargets
+
+theorem exact_PrimaryPreservesNonLambda : PrimaryPreservesNonLambda :=
+  NumberedWindowExternalNeutralPrimaryProof.nonLambda
+
+theorem exact_ExactNonLambdaRepresentatives : ExactNonLambdaRepresentatives :=
+  NumberedWindowExternalNeutralPrimaryProof.representatives
+
+theorem exact_PrimaryAuxApplicationComponents : PrimaryAuxApplicationComponents :=
+  NumberedWindowExternalNeutralPrimaryProof.applicationComponents
+
+theorem exact_NonLambdaApplicationClass : NonLambdaApplicationClass :=
+  NumberedWindowExternalNeutralEdgesProof.application
+
+theorem exact_NeutralApplicationEdges : NeutralApplicationEdges :=
+  NumberedWindowExternalNeutralEdgesProof.edges
+
+#print axioms exact_PrimaryPreservesNonLambda
+#print axioms exact_ExactNonLambdaRepresentatives
+#print axioms exact_PrimaryAuxApplicationComponents
+#print axioms exact_NonLambdaApplicationClass
+#print axioms exact_NeutralApplicationEdges
+
+end LogicLineages.PersistentMarking.NumberedWindowExternalNeutralChecks

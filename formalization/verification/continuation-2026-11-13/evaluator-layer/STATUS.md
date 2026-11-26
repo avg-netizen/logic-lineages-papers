@@ -1,0 +1,5 @@
+# Checked original source-restricted evaluator unfolding
+
+The sole premise is acceptance by the ORIGINAL source H G M W. The conclusion is an INTERNAL graph iff between the unchanged computed-fuel evaluator R and the unchanged layer R (evaluator R), at the same output, packed input and parameter. Actual metadata, scheduling, child completion/content, return geometry and deletion observations are discharged internally. One actual shared value and graph functionality establish both directions. No native fixed-point reflection, desired semantic output, framed-content assumption or fuel bound is a public premise. This remains source-restricted; no arbitrary-input correctness, selected-tuple replacement, canonical Object fixedness or full I/C is claimed.
+
+Exact native evidence verifies 3,631 source-matched modules, standard axioms and zero errors. Register unchanged:175 checked,2 inherited,12 pending. No full-root or remote CI claim. Sources and compact evidence are published; reconstructible native snapshots remain local.

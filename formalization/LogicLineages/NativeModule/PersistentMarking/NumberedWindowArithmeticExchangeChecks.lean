@@ -1,0 +1,13 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticExchangeProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticExchangeChecks
+open NumberedWindowArithmeticExchangeProof NumberedWindowArithmeticExchangeTargets
+theorem exact_LiteralContextualExchange : LiteralContextualExchange := ⟨term,args⟩
+theorem exact_DecodedContextualExchange : DecodedContextualExchange := decoded
+#print axioms exact_LiteralContextualExchange
+#print axioms exact_DecodedContextualExchange
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticExchangeChecks

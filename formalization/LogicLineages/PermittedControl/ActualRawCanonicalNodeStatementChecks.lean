@@ -1,0 +1,25 @@
+module
+public import LogicLineages.PermittedControl.ActualRawCanonicalNodeTargets
+import LogicLineages.PermittedControl.ActualRawCanonicalNodeProof
+import LogicLineages.PermittedControl.ActualRawCanonicalNodePrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualRawCanonicalNode
+
+theorem fixed_exactRawNodeBranches : ExactRawNodeBranches := exactRawNodeBranches
+theorem fixed_exactRawOrderedNode : ExactRawOrderedNode := exactRawOrderedNode
+theorem fixed_exactRawCanonicalNode : ExactRawCanonicalNode := exactRawCanonicalNode
+theorem fixed_exactRawCanonicalNodeEffectivity : ExactRawCanonicalNodeEffectivity :=
+  exactRawCanonicalNodeEffectivity
+theorem fixed_fullActualRawCanonicalNode : FullActualRawCanonicalNode :=
+  ⟨fixed_exactRawNodeBranches,fixed_exactRawOrderedNode,fixed_exactRawCanonicalNode,
+    fixed_exactRawCanonicalNodeEffectivity⟩
+
+#print axioms fixed_exactRawNodeBranches
+#print axioms fixed_exactRawOrderedNode
+#print axioms fixed_exactRawCanonicalNode
+#print axioms fixed_exactRawCanonicalNodeEffectivity
+#print axioms fixed_fullActualRawCanonicalNode
+
+end LogicLineages.PermittedControl.StatementChecks

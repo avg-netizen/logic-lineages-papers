@@ -1,0 +1,16 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSyntaxProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSyntaxProof.lean
+@@ -25,7 +25,12 @@
+       (if right then [2,3] else [0,1]) ++ prefixTable 6 (Γ.map SyntaxCode.typeCode) := by
+   have tail : renamingCode (Γ:=Γ) (fun x => place right (.there (.there x))) =
+       prefixTable 6 (Γ.map SyntaxCode.typeCode) := by
+-    change renamingCode (shift 6 (Γ:=Γ)) = _
++    have pointwise :
++        (fun {α : Ty} (x : Variable Γ α) => place right (.there (.there x))) =
++        (fun {α : Ty} (x : Variable Γ α) => shift 6 x) := by
++      funext α x
++      cases right <;> simp only [place]
++    rw [pointwise]
+     exact prefix_table_code Γ 6
+   rw [renamingCode, renamingCode, tail]
+   cases right <;> rfl

@@ -1,0 +1,15 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralEqualityQuote.Targets
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralEqualityQuote.NativeProof
+open GorbowSyntax GorbowPRProgram List.Vector HistoryRuleSuffix.NativeProof
+
+theorem nativeCalibration : Targets.NativeCalibration := by
+ intro k t u values
+ rw [equalityQuote,LiteralTemplateQuote.prependToken,twoEval,constantEval,twoEval,
+  LiteralTemplateQuote.NativeProof.nativeCalibration,LiteralTemplateQuote.NativeProof.nativeCalibration,
+  appendList,HistoryCodec.NativeProof.nativeConsAllVectors]
+ rfl
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralEqualityQuote.NativeProof
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralEqualityQuote.NativeProof

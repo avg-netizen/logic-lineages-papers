@@ -1,0 +1,11 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowRawWitnessRootBuild.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowRawWitnessRootBuild.lean
+@@ -24,7 +24,7 @@
+     TermCert S K (.numbered f τ (k+1) bs es) (.numbered f τ k bs es) :=
+   viaRoot (w := .lower) (termRefl _)
+ 
+-private theorem selectSide {S K f τ k bs es a ex i domains R}
++private theorem selectSide {S K f τ k bs es a} {ex : Bool} {i domains R}
+     (hg : (if ex then es else bs : NArgs).get i = some a)
+     (ht : a.type = ArrowPrefix domains τ)
+     (ha : applications a (ownerCopies f k bs es domains) = some R) :

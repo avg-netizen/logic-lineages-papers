@@ -1,0 +1,93 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowAtomicRawStepRootProof.lean:40:69: error: unsolved goals
+case none.inl
+xs : Entries
+s : Settings
+q y tag : Nat
+ws sourceFields : List Nat
+hmark : ∀ (k : Nat), NumberedWindowMarkRootAlgorithm.mark k q y = false
+hlower : NumberedWindowMarkRootAlgorithm.lower q y = false
+hselect : ∀ (extra : Bool) (i : Nat) (ds : List Nat), NumberedWindowSelectAlgorithm.select extra i ds q y = false
+hcopy : NumberedWindowCopyAlgorithm.copy xs s.window.snd q y = false
+hstat : ∀ (part : Nat), NumberedWindowStatRootAlgorithm.stat xs s.window.snd part q y = false
+hfabs : NumberedWindowBinderRootAlgorithm.fabs q y = false
+hy : unpackNode (sourceFields.getD 2 0) = none
+view : unpackNode q = some (0, sourceFields)
+⊢ (NumberedWindowSyntaxAlgorithm.syntaxBits q).fst = true →
+    (NumberedWindowSyntaxAlgorithm.syntaxBits y).fst = true →
+      Option.any (NumberedWindowBinderRootAlgorithm.betaRows y (0, sourceFields))
+          (unpackNode (sourceFields[2]?.getD 0)) =
+        false
+
+case none.inr
+xs : Entries
+s : Settings
+q y tag : Nat
+ws sourceFields : List Nat
+hmark : ∀ (k : Nat), NumberedWindowMarkRootAlgorithm.mark k q y = false
+hlower : NumberedWindowMarkRootAlgorithm.lower q y = false
+hselect : ∀ (extra : Bool) (i : Nat) (ds : List Nat), NumberedWindowSelectAlgorithm.select extra i ds q y = false
+hcopy : NumberedWindowCopyAlgorithm.copy xs s.window.snd q y = false
+hstat : ∀ (part : Nat), NumberedWindowStatRootAlgorithm.stat xs s.window.snd part q y = false
+hfabs : NumberedWindowBinderRootAlgorithm.fabs q y = false
+hy : unpackNode (sourceFields.getD 2 0) = none
+view : unpackNode q = some (3, sourceFields)
+⊢ (NumberedWindowSyntaxAlgorithm.syntaxBits q).fst = true →
+    (NumberedWindowSyntaxAlgorithm.syntaxBits y).fst = true →
+      Option.any (NumberedWindowBinderRootAlgorithm.betaRows y (3, sourceFields))
+          (unpackNode (sourceFields[2]?.getD 0)) =
+        false
+
+case some.inl
+xs : Entries
+s : Settings
+q y tag : Nat
+ws sourceFields : List Nat
+hmark : ∀ (k : Nat), NumberedWindowMarkRootAlgorithm.mark k q y = false
+hlower : NumberedWindowMarkRootAlgorithm.lower q y = false
+hselect : ∀ (extra : Bool) (i : Nat) (ds : List Nat), NumberedWindowSelectAlgorithm.select extra i ds q y = false
+hcopy : NumberedWindowCopyAlgorithm.copy xs s.window.snd q y = false
+hstat : ∀ (part : Nat), NumberedWindowStatRootAlgorithm.stat xs s.window.snd part q y = false
+hfabs : NumberedWindowBinderRootAlgorithm.fabs q y = false
+val✝ : Nat × List Nat
+hy : unpackNode (sourceFields.getD 2 0) = some val✝
+view : unpackNode q = some (0, sourceFields)
+⊢ (NumberedWindowSyntaxAlgorithm.syntaxBits q).fst = true →
+    (NumberedWindowSyntaxAlgorithm.syntaxBits y).fst = true →
+      Option.any (NumberedWindowBinderRootAlgorithm.betaRows y (0, sourceFields))
+          (unpackNode (sourceFields[2]?.getD 0)) =
+        false
+
+case some.inr
+xs : Entries
+s : Settings
+q y tag : Nat
+ws sourceFields : List Nat
+hmark : ∀ (k : Nat), NumberedWindowMarkRootAlgorithm.mark k q y = false
+hlower : NumberedWindowMarkRootAlgorithm.lower q y = false
+hselect : ∀ (extra : Bool) (i : Nat) (ds : List Nat), NumberedWindowSelectAlgorithm.select extra i ds q y = false
+hcopy : NumberedWindowCopyAlgorithm.copy xs s.window.snd q y = false
+hstat : ∀ (part : Nat), NumberedWindowStatRootAlgorithm.stat xs s.window.snd part q y = false
+hfabs : NumberedWindowBinderRootAlgorithm.fabs q y = false
+val✝ : Nat × List Nat
+hy : unpackNode (sourceFields.getD 2 0) = some val✝
+view : unpackNode q = some (3, sourceFields)
+⊢ (NumberedWindowSyntaxAlgorithm.syntaxBits q).fst = true →
+    (NumberedWindowSyntaxAlgorithm.syntaxBits y).fst = true →
+      Option.any (NumberedWindowBinderRootAlgorithm.betaRows y (3, sourceFields))
+          (unpackNode (sourceFields[2]?.getD 0)) =
+        false
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowAtomicRawStepRootProof.lean:42:64: warning: This simp argument is unused:
+  hy
+
+Hint: Omit it from the simp argument list.
+  simp [NumberedWindowBinderRootAlgorithm.beta, ̲guarded, ̲view,h̵y̵,̵
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲NumberedWindowBinderRootAlgorithm.betaRows]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowAtomicRawStepRootProof.lean:42:67: warning: This simp argument is unused:
+  NumberedWindowBinderRootAlgorithm.betaRows
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵B̵i̵n̵d̵e̵r̵R̵o̵o̵t̵A̵l̵g̵o̵r̵i̵t̵h̵m̵.̵b̵e̵t̵a̵,̵g̵u̵a̵r̵d̵e̵d̵,̵v̵i̵e̵w̵,̵h̵y̵,̵N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵B̵i̵n̵d̵e̵r̵R̵o̵o̵t̵A̵l̵g̵o̵r̵i̵t̵h̵m̵.̵b̵e̵t̵a̵R̵o̵w̵s̵]̵[̲N̲u̲m̲b̲e̲r̲e̲d̲W̲i̲n̲d̲o̲w̲B̲i̲n̲d̲e̲r̲R̲o̲o̲t̲A̲l̲g̲o̲r̲i̲t̲h̲m̲.̲b̲e̲t̲a̲,̲ ̲g̲u̲a̲r̲d̲e̲d̲,̲ ̲v̲i̲e̲w̲,̲ ̲h̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

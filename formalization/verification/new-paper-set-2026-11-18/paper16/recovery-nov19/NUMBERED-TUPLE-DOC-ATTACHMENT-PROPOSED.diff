@@ -1,0 +1,36 @@
+--- LogicLineages/PersistentMarking/NumberedWindowSyntax.lean
++++ LogicLineages/PersistentMarking/NumberedWindowSyntax.lean
+@@ -2,7 +2,7 @@
+ 
+ namespace LogicLineages.PersistentMarking.NumberedWindowSyntax
+ 
+-/-- Paper16's numerical auxiliary syntax. An ordinary head has implicit
++/- Paper16's numerical auxiliary syntax. An ordinary head has implicit
+ label omega. A numbered head has an actual natural label, its original
+ head and base, its current output type, and ordered extras. Auxiliary
+ application is disjoint from the ordinary head `Head.app`. -/
+
+--- LogicLineages/PersistentMarking/NumberedWindowRules.lean
++++ LogicLineages/PersistentMarking/NumberedWindowRules.lean
+@@ -18,7 +18,7 @@
+     source.toList.Perm (kept ++ removed) ∧ target.toList.Perm (kept ++ added) ∧
+       removed ≠ [] ∧ ∀ a ∈ added, ∃ b ∈ removed, MarkDecrease b a
+ 
+-/-- Source rule shapes. WindowStep below imposes original typedness and
++/- Source rule shapes. WindowStep below imposes original typedness and
+ declaration-retaining window admission of both endpoints. In particular
+ this has function-side auxiliary application closure only. -/
+ mutual
+
+--- LogicLineages/PersistentMarking/NumberedWindowTupleTargets.lean
++++ LogicLineages/PersistentMarking/NumberedWindowTupleTargets.lean
+@@ -3,7 +3,7 @@
+ namespace LogicLineages.PersistentMarking.NumberedWindowTupleTargets
+ open Spine NumberedWindowSyntax NumberedWindowDomain NumberedWindowRules
+ 
+-/-- The actual realized shape has the original symbols, current output
++/- The actual realized shape has the original symbols, current output
+ annotations, list order and globally typed names. Each symbolic mark gets
+ its own finite label at or above the same threshold. Neither bottom nor
+ an auxiliary application realizes symbolic syntax. -/
+

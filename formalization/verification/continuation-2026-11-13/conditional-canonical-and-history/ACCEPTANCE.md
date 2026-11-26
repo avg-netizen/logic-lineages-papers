@@ -1,0 +1,7 @@
+# Accepted focused combined evidence
+
+The coordinator accepts snapshot `runs/20261113T172016.577126Z` for the seven already reviewed exact gate roots and thirteen aliases in CONFIG.json. All 5,338 local modules have source-matched successful fixed-profile native receipts; all axiom dependencies are permitted; all 227 frozen files (including the custom canonical induction specifications) match. Inherited mathematics is unchanged; only the explicitly allowed AGENTS release differs from baseline. No native compiler overlapped evidence assembly.
+
+The constructor, canonical-preservation and Object-cancellation results retain the explicit uniform compatibility premise for the SAME original representative. The earlier Object target requiring erased-output equivalence remains separately unchanged. History splice and length conservation are actual internal iterator results; they do not claim MP validity, SAME final root or HB completion. Application erasure and lambda context deletion are supporting internal adapters. Register remains 175 checked / 2 inherited / 12 pending.
+
+The adopted bounded v2 assembler uses streaming JSONL archives and unchanged native checker limits; peak RSS was 73,504 KiB. Generated candidate report remains unchanged, with mathematical adoption recorded here. Full-root build, external cache revalidation and remote CI are not claimed. Large reconstructible archives and full AXIOMS remain local; compact report, preservation records, exact source files and hashes are publication priorities.

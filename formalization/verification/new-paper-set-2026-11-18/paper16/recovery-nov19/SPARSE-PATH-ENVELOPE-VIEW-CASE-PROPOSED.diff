@@ -1,0 +1,36 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeEvaluationProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeEvaluationProof.lean
+@@ -33,18 +33,18 @@
+ 
+ theorem edge : AllInputEdgeEnvelope := by
+   intro n
+-  cases out : edgeView n with
++  cases resultEq : edgeView n with
+   | none =>
+     have notGood : run edgeGood n ≠ 1 := by
+       intro good
+       obtain ⟨q,r,w,found⟩ := (acceptedEdge n).mp good
+       have e : edgeView n = some (q,w,r) := edgeViewSome.mpr found
+-      rw [out] at e
++      rw [resultEq] at e
+       cases e
+     rw [selectedEdge, if_neg notGood]
+-  | some out =>
+-    obtain ⟨q,w,r⟩ := out
+-    have found := edgeViewSome.mp out
++  | some result =>
++    obtain ⟨q,w,r⟩ := result
++    have found := edgeViewSome.mp resultEq
+     have good := (acceptedEdge n).mpr ⟨q,r,w,found⟩
+     obtain ⟨hq,hw,hr⟩ := edgeProjections found
+     rw [selectedEdge,if_pos good,hq,hw,hr]
+@@ -55,8 +55,7 @@
+   · obtain ⟨t,e,found⟩ := (acceptedOuterHop n).mp outer
+     obtain ⟨ht,he⟩ := hopProjections found
+     have form : hopView n = (edgeView e).map (fun x => (t,x)) := by
+-      unfold hopView
+-      rw [found]
++      simp only [hopView,found,Option.bind_eq_bind,Option.bind_some]
+       cases edgeView e <;> rfl
+     rw [form,← edge e]
+     have guard : run hopGood n = 1 ↔ run edgeGood e = 1 := by

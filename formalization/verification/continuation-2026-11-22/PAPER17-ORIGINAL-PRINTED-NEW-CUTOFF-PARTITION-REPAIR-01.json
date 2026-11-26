@@ -1,0 +1,50 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "90dc14bb9247f774074202360427d37205688e14",
+  "failed_source_local_commit": "81179459c9a45cdf6dd1429f5fae6eb27db893c5",
+  "failed_source_tree": "94dca5fd86d2e9a6e1bea04675ffb3d3396e3d52",
+  "failed_exact_gate_receipt": "1795370723372409069-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalPrintedNewCutoffPartitionStatementChecks",
+  "failed_receipt_sha256": "6dc9d95ddd61ac3ffbfb04b987ba67cc3b137118c715af0ba9a5d2e4f7c0f331",
+  "failed_exact_module_log_sha256": "89500cdd35763049bafb9b1d84d2549da5586b323e1fca200eac9c75d43c549e",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedNewCutoffPartitionFundingProof.lean:42:21: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  realized \u03b8 branch e.2\nin the target expression\n  cutoff B known gates p positive \u2264 base e.2\n\nB : \u2115\n\u03b8 : \u2115 \u2192 \u2115\nknown : List \u2115\ngates : List OriginalPrintedCircuitSequential.Gate\np : OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalForm.Formula\npositive : Bool\nnonempty : support (matrix known gates p) \u2260 []\npaid : OriginalPrintedRankedLiteralHigh.PaidSupport B \u03b8 known gates p positive\nbranch : ActualFiniteOrderBranches.Pattern\nmember : branch \u2208 OriginalPrintedPlainMatrixOrderBranches.branches known gates p\nordered : (ActualFiniteOrderBranches.guard branch).eval \u03b8\nz : \u2115 := realized \u03b8 branch (top branch)\nnames : List \u2115 := support (matrix known gates p)\ngreatest : \u2115 := top branch\nbase : \u2115 \u2192 \u2115 := realized \u03b8 branch\nleft\u271d : branch.1 \u2264 names.length\nkeys : List.map Prod.fst branch.2 = names\nbounds : \u2200 e \u2208 branch.2, e.2 < branch.1\nonto : \u2200 j < branch.1, \u2203 e \u2208 branch.2, e.2 = j\nstrict : StrictMono (realized \u03b8 branch)\nslots : \u2200 e \u2208 branch.2, rename branch e.1 = e.2 \u2227 realized \u03b8 branch e.2 = \u03b8 e.1\nties : \u2200 name \u2208 names, rename branch name < branch.1 \u2227 realized \u03b8 branch (rename branch name) = \u03b8 name\nwidth : 0 < branch.1\nchosen : greatest < branch.1\ne : Entry\nfound : e \u2208 branch.2\natGreatest : e.2 = greatest\nnamed : e.1 \u2208 names\n\u22a2 cutoff B known gates p positive \u2264 base e.2\n",
+  "failed_original_native_log_sha256": "32f03d93b7540bcb5ef77bc2f59309daf83a71a1181172db108c1bbc8a324878",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedNewCutoffPartitionFundingProof.lean",
+  "failed_proof_sha256": "0d86ba361cd376f91a9a4843cdab4cebb867919585552b3795f8ed95dd91f291",
+  "repaired_proof_sha256": "f9ce491a8a554af165d4214d37852c32790a50e689734dd28939aa5397b34509",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-NEW-CUTOFF-PARTITION-REPAIR-01.patch",
+  "patch_sha256": "f9c278770e2282b1df7907611f5f4edc6a62785f470607b8d8239fe800bd941d",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-NEW-CUTOFF-PARTITION-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "3411e777150e844dbe4daddaf5e573261058277d0ed90c01407506b3eaba1df3",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedNewCutoffPartitionProof.lean": "884a5439dafc92f409c473e24b3d9d08d4b68a228604bc6c0b707152487ee013",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedNewCutoffPartitionStatementChecks.lean": "b15cbadeaf65e7bcd385d43ec08d35c5d18043dc22d725132227a2b2a6a1ca1e",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedNewCutoffPartitionTargets.lean": "d51afb466c51b7a4dce08fe64d3f1e96d7730d91b5a9a1250a09579713451d9f",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-NEW-CUTOFF-PARTITION-SOURCE-MAP.md": "f3ed7cc4c9518e21fdeca81c98df38a0d874e0309de31aab3def94774fcf9427"
+  },
+  "static_module_closure": {
+    "FundingProof": {
+      "local": 465,
+      "external": 42,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 768,
+      "external": 44,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 769,
+      "external": 44,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 304,
+      "external": 35,
+      "contains_totient": false
+    }
+  },
+  "scope": "Expose the identical realized \u03b8 branch instead of opaque local base in the paid greatest actual representative inequality before the existing slot rewrite. No target, import, or other proof edits."
+}

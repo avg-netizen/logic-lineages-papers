@@ -1,0 +1,13 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FullFormulaInstantiation.RefinementProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FullFormulaInstantiation.LogicalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FullFormulaInstantiation.StatementChecks
+theorem exactNativeLine : Targets.NativeLine := NativeProof.nativeLine
+theorem exactNativeAcceptance : Targets.NativeAcceptance := NativeProof.nativeAcceptance
+theorem exactInternalLine : Targets.InternalLine := GraphProof.internalLine
+theorem exactNativeRefinement : Targets.NativeRefinement := RefinementProof.nativeRefinement
+theorem exactInternalLogical : Targets.InternalLogical := LogicalProof.internalLogical
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FullFormulaInstantiation.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FullFormulaInstantiation.StatementChecks

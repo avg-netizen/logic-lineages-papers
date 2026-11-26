@@ -1,0 +1,23 @@
+--- formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedCountKeysProof.lean
++++ formalization/LogicLineages/PermittedControl/ActualZeroClassSelectedCountKeysProof.lean
+@@ -116,0 +117,3 @@
++  have hflatten : (indexed.map Prod.fst).map (countOperand r) =
++      indexed.map (fun kd => countOperand r kd.1) := by
++    simp only [List.map_map,Function.comp_def]
+@@ -119 +122 @@
+-    rw [List.map_map,hmaps,hrawKeys]
++    rw [hflatten,hmaps,hrawKeys]
+@@ -128 +131 @@
+-      rw [← List.map_map (g := countOperand r) (f := @Prod.fst (CountKey r) CountDisposition)]
++      rw [← hflatten]
+@@ -135,0 +139,2 @@
++    have hop : o.1.1.2 = countOperand r k :=
++      (congrArg (fun p : Read => p.1.2) hro).trans he
+@@ -138 +143 @@
+-      (countedShape f ρ C o ha hfull).mpr ⟨k.2,k.1.1,k.1.2,hro.trans he⟩
++      (countedShape f ρ C o ha hfull).mpr ⟨k.2,k.1.1,k.1.2,hop⟩
+@@ -142,2 +147,2 @@
+-      exact List.mem_map.mpr ⟨o.1,List.mem_map.mpr ⟨o,horig,rfl⟩,hro.trans he⟩
+-    rw [← List.map_map (g := countOperand r) (f := @Prod.fst (CountKey r) CountDisposition)] at hmem
++      exact List.mem_map.mpr ⟨o.1,List.mem_map.mpr ⟨o,horig,rfl⟩,hop⟩
++    rw [← hflatten] at hmem

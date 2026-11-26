@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixSupportLowTargets
+import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixSupportLowProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedSupportLowAt :
+    OriginalPrintedPlainMatrixSupportLow.ExactOriginalSupportLowAt :=
+  OriginalPrintedPlainMatrixSupportLow.exactOriginalSupportLowAt
+
+theorem fixed_exactOriginalPrintedSupportLowStrips :
+    OriginalPrintedPlainMatrixSupportLow.ExactOriginalSupportLowStrips :=
+  OriginalPrintedPlainMatrixSupportLow.exactOriginalSupportLowStrips
+
+theorem fixed_fullOriginalPrintedPlainMatrixSupportLow :
+    OriginalPrintedPlainMatrixSupportLow.FullOriginalPrintedPlainMatrixSupportLow :=
+  ⟨fixed_exactOriginalPrintedSupportLowAt,fixed_exactOriginalPrintedSupportLowStrips⟩
+
+#print axioms fixed_exactOriginalPrintedSupportLowAt
+#print axioms fixed_exactOriginalPrintedSupportLowStrips
+#print axioms fixed_fullOriginalPrintedPlainMatrixSupportLow
+
+end LogicLineages.PermittedControl.StatementChecks

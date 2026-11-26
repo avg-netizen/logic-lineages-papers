@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualBitFamilyRawDriverCalibrationProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualBitFamilyRawDriverCalibrationProof.lean
+@@ -47,0 +48,3 @@
++    change lowCode f (bound (encodeFamily fs)) (encodeFamily fs) ++
++      high (bound (encodeFamily fs),encodeFamily fs) =
++      (children f (bound (encodeFamily fs)) fs (names (encodeFamily fs))).map encodeFamily
+@@ -73,0 +77 @@
++    clear hitList

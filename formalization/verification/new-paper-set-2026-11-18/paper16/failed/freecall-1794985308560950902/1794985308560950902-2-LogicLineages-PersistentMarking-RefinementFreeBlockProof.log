@@ -1,0 +1,26 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementFreeBlockProof.lean:26:11: error: Tactic `rfl` failed: The left-hand side
+  (Args.nil.append ws).length
+is not definitionally equal to the right-hand side
+  Args.nil.length + ws.length
+
+case nil
+ws : Args
+⊢ (Args.nil.append ws).length = Args.nil.length + ws.length
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementFreeBlockProof.lean:64:8: error: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementFreeBlockProof.lean:57:53: warning: This simp argument is unused:
+  appendLength
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵,̵h̵i̵,̵A̵r̵g̵s̵.̵g̵e̵t̵,̵s̵h̵i̵f̵t̵,̵a̵p̵p̵e̵n̵d̵G̵e̵t̵,̵a̵p̵p̵e̵n̵d̵L̵e̵n̵g̵t̵h̵,̵A̵r̵g̵s̵.̵l̵e̵n̵g̵t̵h̵]̵[̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲,̲ ̲h̲i̲,̲ ̲A̲r̲g̲s̲.̲g̲e̲t̲,̲ ̲s̲h̲i̲f̲t̲,̲ ̲a̲p̲p̲e̲n̲d̲G̲e̲t̲,̲ ̲A̲r̲g̲s̲.̲l̲e̲n̲g̲t̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementFreeBlockProof.lean:57:66: warning: This simp argument is unused:
+  Args.length
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵,̵h̵i̵,̵A̵r̵g̵s̵.̵g̵e̵t̵,̵s̵h̵i̵f̵t̵,̵a̵p̵p̵e̵n̵d̵G̵e̵t̵,̵a̵p̵p̵e̵n̵d̵L̵e̵n̵g̵t̵h̵,̵A̵r̵g̵s̵.̵l̵e̵n̵g̵t̵h̵]̵[̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲,̲ ̲h̲i̲,̲ ̲A̲r̲g̲s̲.̲g̲e̲t̲,̲ ̲s̲h̲i̲f̲t̲,̲ ̲a̲p̲p̲e̲n̲d̲G̲e̲t̲,̲ ̲a̲p̲p̲e̲n̲d̲L̲e̲n̲g̲t̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

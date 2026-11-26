@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalObjectCoherenceTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalObjectCoherence
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalObjectCoherenceTargets
+#check canonicalObject
+#check (ActualOriginalFinalObjectCanonicalCancellation : Prop)
+#check (ActualOriginalFinalObjectRankInvariance : Prop)
+#check (ActualOriginalFinalObjectGlobalSelection : Prop)

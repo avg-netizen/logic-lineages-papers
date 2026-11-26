@@ -1,0 +1,9 @@
+# ExchangeRowMemo exact5
+
+Original NumberedExchangeCodePrimrecProof.codeExchangePrimitive invokes nat_omega_rec with source codeNumber as measure and dependencies equal to children-source CROSS children-target. This packet preserves that measure, not the earlier considered paired-rank alternative. OriginalBinaryDependencies records literal cross order, making positions0/3 exactly diagonal. OriginalDependencyBounds derives strict decrease for BOTH coordinates from actual original children lists; the source decrease justifies earlier source rows, target decrease preserves any original target bound. These are native statements, not reflected internal graph laws.
+
+A future faithful bounded implementation uses newest-first rows for source ranks0..i, parameterized by original window and target bound. This packet's actual PR AST table appends the actual supplier row at each source successor. B and R remain explicit arbitrary Programs, not hidden selected correctness assumptions or an asserted implementation of codeExchange. InternalTableTail, InternalTableDrop and InternalRowLookup prove symbolic arithmetic table coherence by genuine internal recursion and induction, generalizing the paid concrete Erasure.RankMemo pattern to the two unchanged parameters. The older InternalRawListRecursion.tableLookup applies only to its different list-tail table and is not reusable as if it were this table.
+
+Remaining: build/verify the actual row supplier with target-column iteration, original fields/children decoding and dependency answer map; prove their internal source-decrease/column bounds; implement headMove and establish its original exchange semantics; connect the completed recurrence to the original source nat_omega_rec and install a NEW full tuple. No existing tuple changes, no native-to-internal reflection, no full recursive E or class coherence claim.
+
+Frozen only; no proof authoring or compiler launch until review/preflight.

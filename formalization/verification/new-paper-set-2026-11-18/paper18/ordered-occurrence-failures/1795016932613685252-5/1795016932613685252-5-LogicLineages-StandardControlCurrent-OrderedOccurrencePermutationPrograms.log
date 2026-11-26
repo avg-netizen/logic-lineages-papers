@@ -1,0 +1,112 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:15:17: error: unsolved goals
+case cons
+t : ℕ
+tail : List ℕ
+y : ℕ
+ys : List ℕ
+ih : insertSlices t tail ys = (List.permutationsAux2 t tail [] ys id).2
+⊢ (t :: y :: (ys ++ tail)) :: List.map (fun x => y :: x) (List.permutationsAux2 t tail [] ys id).2 =
+    (t :: y :: ys ++ tail) :: List.map (fun x => y :: x) (List.permutationsAux2 t tail [] ys id).2
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:30:40: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:20:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:52:5: error: Invalid field notation: Function `Nat.Primrec.add` does not have a usable parameter of type `Nat.Primrec ...` for which to substitute
+  Primrec.comp Primrec.list_length Primrec.fst
+
+Note: Such a parameter must be explicit, or implicit with a unique name, to be used by field notation
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:53:9: error(lean.unknownIdentifier): Unknown constant `Primrec.nat_pow.comp`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:56:2: error: Tactic `apply` failed: could not unify the conclusion of `Primrec.list_casesOn Primrec.fst (Primrec.const [])`
+  Primrec fun a => List.casesOn a.1 [] fun b l => ?m.14 a (b, l)
+with the goal
+  Primrec children
+
+Note: The full type of `Primrec.list_casesOn Primrec.fst (Primrec.const [])` is
+  Primrec₂ ?m.14 → Primrec fun a => List.casesOn a.1 [] fun b l => ?m.14 a (b, l)
+
+⊢ Primrec children
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:71:7: error: unknown tactic
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:69:25: error: Tactic `subst` failed: invalid equality proof, it is not of the form (x = t) or (t = x)
+  c = (is, []) ∨ c ∈ []
+
+case cons.inr
+c : Input
+is : List ℕ
+t : ℕ
+ts : List ℕ
+h✝ : c = (is, []) ∨ c ∈ []
+⊢ rank c < rank (t :: ts, is)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:85:10: error(lean.unknownIdentifier): Unknown constant `List.foldr_congr`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:86:10: error: No goals to be solved
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:89:101: error: unsolved goals
+case nil
+A : Type := Input × List (List (List ℕ))
+input : Primrec fun a => a.1.1
+old : Primrec fun a => a.1.2
+first : Primrec fun a => a.2[0]?.getD []
+second : Primrec fun a => a.2[1]?.getD []
+t : Primrec fun a => a.1.1.head!
+ts : Primrec fun a => a.1.1.tail
+step : Primrec₂ fun a yr => insertSlices a.1.1.head! a.1.1.tail yr.1 ++ yr.2
+folded :
+  Primrec fun a =>
+    List.foldr (fun b s => insertSlices a.1.1.head! a.1.1.tail (b, s).1 ++ (b, s).2) (a.2[0]?.getD [])
+      (a.1.2 :: a.2[1]?.getD [])
+result :
+  Primrec fun a =>
+    if a.1.1.length = 0 then some []
+    else
+      some
+        (List.foldr (fun b s => insertSlices a.1.1.head! a.1.1.tail (b, s).1 ++ (b, s).2) (a.2[0]?.getD [])
+          (a.1.2 :: a.2[1]?.getD []))
+a : A
+⊢ some [] =
+    match a.1.1 with
+    | [] => some []
+    | t :: ts =>
+      some (insertSlices t ts a.1.2 ++ ((List.map (insertSlices t ts) (a.2[1]?.getD [])).flatten ++ a.2[0]?.getD []))
+
+case cons
+A : Type := Input × List (List (List ℕ))
+input : Primrec fun a => a.1.1
+old : Primrec fun a => a.1.2
+first : Primrec fun a => a.2[0]?.getD []
+second : Primrec fun a => a.2[1]?.getD []
+t : Primrec fun a => a.1.1.head!
+ts : Primrec fun a => a.1.1.tail
+step : Primrec₂ fun a yr => insertSlices a.1.1.head! a.1.1.tail yr.1 ++ yr.2
+folded :
+  Primrec fun a =>
+    List.foldr (fun b s => insertSlices a.1.1.head! a.1.1.tail (b, s).1 ++ (b, s).2) (a.2[0]?.getD [])
+      (a.1.2 :: a.2[1]?.getD [])
+result :
+  Primrec fun a =>
+    if a.1.1.length = 0 then some []
+    else
+      some
+        (List.foldr (fun b s => insertSlices a.1.1.head! a.1.1.tail (b, s).1 ++ (b, s).2) (a.2[0]?.getD [])
+          (a.1.2 :: a.2[1]?.getD []))
+a : A
+head✝ : ℕ
+tail✝ : List ℕ
+⊢ some
+      (insertSlices head✝ tail✝ a.1.2 ++
+        ((List.map (insertSlices head✝ tail✝) (a.2[1]?.getD [])).flatten ++ a.2[0]?.getD [])) =
+    match a.1.1 with
+    | [] => some []
+    | t :: ts =>
+      some (insertSlices t ts a.1.2 ++ ((List.map (insertSlices t ts) (a.2[1]?.getD [])).flatten ++ a.2[0]?.getD []))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:89:8: error: (kernel) unknown constant 'LogicLineages.StandardControlCurrent.OrderedOccurrencePermutationPrograms.slices_primitive'
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrencePermutationPrograms.lean:109:44: warning: This simp argument is unused:
+  List.headI
+
+Hint: Omit it from the simp argument list.
+  simp [̵a̵s̵s̵e̵m̵b̵l̵e̵,̵L̵i̵s̵t̵.̵h̵e̵a̵d̵!̵,̵L̵i̵s̵t̵.̵h̵e̵a̵d̵I̵]̵[̲a̲s̲s̲e̲m̲b̲l̲e̲,̲ ̲L̲i̲s̲t̲.̲h̲e̲a̲d̲!̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

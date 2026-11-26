@@ -1,0 +1,25 @@
+--- a/formalization/LogicLineages/PermittedControl/TerminalEntryScanActualProof.lean
++++ b/formalization/LogicLineages/PermittedControl/TerminalEntryScanActualProof.lean
+@@ -141,8 +141,10 @@
+     rw [hfin.1]
+     symm
+     simpa only [Nat.cast_zero,mul_zero,zero_add,Nat.zero_mul] using actualFiniteHeadNorm 0 E
++  have hzero : rawNoteEncode (NONote.ofNat 0).1 = 0 := by
++    simp only [NONote.ofNat, ONote.ofNat, rawNoteEncode]
+   have hh := ((scan_actual_graph f a (NONote.ofNat 0) (Or.inl rfl)).1 E T).mpr ⟨hentry,hnorm⟩
+-  simpa only [E,T,Prod.eta] using hh
++  simpa only [hzero,E,T,Prod.eta] using hh
+ 
+ theorem terminalEntryScanActual : Targets.TerminalEntryScanActual :=
+   ⟨scan_invalid_iff,scan_actual_graph,scan_zero_target⟩
+--- a/formalization/verification/continuation-2026-11-21/PAPER17-TERMINAL-ENTRY-SCAN-AUTHOR-MANIFEST.json
++++ b/formalization/verification/continuation-2026-11-21/PAPER17-TERMINAL-ENTRY-SCAN-AUTHOR-MANIFEST.json
+@@ -15,7 +15,7 @@
+     "formalization/LogicLineages/PermittedControl/TerminalEntryScanPrefixProof.lean": "88c0eb0b620e0d947824ae4d298b66cc24ac123c826939d017401e875dba045a",
+     "formalization/LogicLineages/PermittedControl/TerminalEntryScanNumericProof.lean": "ce36d4781aa822f7c78477f9f2c0bf7d552e84e0db49b842453db09b17c7e67d",
+     "formalization/LogicLineages/PermittedControl/TerminalEntryScanProgramProof.lean": "5a7217ee772a4b08fd5ade8c1fa330c126d8410b9aa0e73ed8aa2205a83509dc",
+-    "formalization/LogicLineages/PermittedControl/TerminalEntryScanActualProof.lean": "ed02d4b0d06d54a015643c4252ea741ff60922497b02d41bf8496f520511152a",
++    "formalization/LogicLineages/PermittedControl/TerminalEntryScanActualProof.lean": "c391dbd479225dc4da5d8e1ea24d15ed58eaa063b74db059ef6d8f22e97013eb",
+     "formalization/LogicLineages/PermittedControl/TerminalEntryScanStatementChecks.lean": "c841628eaf1b16d4fda123193fd57e8b00cec0ac63000d26ed2c7fb6ad070933"
+   },
+   "dependency_anchors": {

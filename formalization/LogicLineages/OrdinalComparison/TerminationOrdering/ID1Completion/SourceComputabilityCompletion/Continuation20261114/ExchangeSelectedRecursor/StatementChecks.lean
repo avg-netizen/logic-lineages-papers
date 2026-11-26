@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeSelectedRecursor.NativeStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeSelectedRecursor.InternalStatementChecks
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeSelectedRecursor.StatementChecks
+theorem exactFinal : Targets.NativeFinalValue := NativeStatementChecks.exactFinal
+#print axioms exactFinal
+theorem exactSelection : Targets.ConcreteSelection := NativeStatementChecks.exactSelection
+#print axioms exactSelection
+theorem exactGraph : Targets.InternalFinalGraph := InternalStatementChecks.exactGraph
+#print axioms exactGraph
+theorem exactSingleton : Targets.InternalSingletonValue := InternalStatementChecks.exactSingleton
+#print axioms exactSingleton
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeSelectedRecursor.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeSelectedRecursor.StatementChecks

@@ -1,0 +1,16 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualBitFamilyRawDriverSemanticsProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualBitFamilyRawDriverSemanticsProof.lean
+@@ -44 +44 @@
+-      rcases Bool.or_eq_true.mp done with early | found
++      rcases Bool.or_eq_true_iff.mp done with early | found
+@@ -47 +47 @@
+-        obtain ⟨empty,value⟩ := Bool.and_eq_true.mp good
++        obtain ⟨empty,value⟩ := Bool.and_eq_true_iff.mp good
+@@ -60 +60 @@
+-    · exact Or.inl (Bool.or_eq_true.mpr (Or.inl done))
++    · exact Or.inl (Bool.or_eq_true_iff.mpr (Or.inl done))
+@@ -63,2 +63,2 @@
+-          ⟨fs,used,Bool.and_eq_true.mpr ⟨decide_eq_true empty,(exactBitFamilyClosed f fs empty).mpr yes⟩⟩
+-        exact Or.inl (Bool.or_eq_true.mpr (Or.inr found))
++          ⟨fs,used,Bool.and_eq_true_iff.mpr ⟨decide_eq_true empty,(exactBitFamilyClosed f fs empty).mpr yes⟩⟩
++        exact Or.inl (Bool.or_eq_true_iff.mpr (Or.inr found))

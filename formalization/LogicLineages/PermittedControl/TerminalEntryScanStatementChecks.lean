@@ -1,0 +1,33 @@
+module
+public import LogicLineages.PermittedControl.TerminalEntryScanTargets
+import LogicLineages.PermittedControl.TerminalEntryScanGuardProof
+import LogicLineages.PermittedControl.TerminalEntryScanPrefixProof
+import LogicLineages.PermittedControl.TerminalEntryScanProgramProof
+import LogicLineages.PermittedControl.TerminalEntryScanActualProof
+
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_terminalEntryScanGuardExact : Targets.TerminalEntryScanGuardExact :=
+  terminalEntryScanGuardExact
+
+theorem fixed_boundedTerminalEntryIndexExact : Targets.BoundedTerminalEntryIndexExact :=
+  boundedTerminalEntryIndexExact
+
+theorem fixed_terminalEntryScanEffective : Targets.TerminalEntryScanEffective :=
+  terminalEntryScanEffective
+
+theorem fixed_terminalEntryScanActual : Targets.TerminalEntryScanActual :=
+  terminalEntryScanActual
+
+theorem fixed_fullTerminalEntryScan : Targets.FullTerminalEntryScan :=
+  ⟨terminalEntryScanGuardExact,boundedTerminalEntryIndexExact,
+    terminalEntryScanEffective,terminalEntryScanActual⟩
+
+#print axioms fixed_terminalEntryScanGuardExact
+#print axioms fixed_boundedTerminalEntryIndexExact
+#print axioms fixed_terminalEntryScanEffective
+#print axioms fixed_terminalEntryScanActual
+#print axioms fixed_fullTerminalEntryScan
+
+end LogicLineages.PermittedControl.StatementChecks

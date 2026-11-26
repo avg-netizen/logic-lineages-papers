@@ -1,0 +1,33 @@
+module
+public import LogicLineages.PermittedControl.SignedCongruenceMatrixTargets
+import LogicLineages.PermittedControl.SignedCongruenceMatrixCodeProof
+import LogicLineages.PermittedControl.SignedCongruenceMatrixTailProof
+import LogicLineages.PermittedControl.SignedCongruenceMatrixSupportProof
+import LogicLineages.PermittedControl.SignedCongruenceMatrixSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_signedCongruenceMatrixCodeExact : SignedCongruenceMatrix.CodeExact :=
+  SignedCongruenceMatrix.codeExact
+
+theorem fixed_signedCongruenceMatrixTailExact : SignedCongruenceMatrix.TailExact :=
+  SignedCongruenceMatrix.tailExact
+
+theorem fixed_signedCongruenceMatrixFormulaSupport : SignedCongruenceMatrix.FormulaSupport :=
+  SignedCongruenceMatrix.formulaSupport
+
+theorem fixed_actualSignedCongruenceMatrix : SignedCongruenceMatrix.ActualConjunction :=
+  SignedCongruenceMatrix.actualConjunction
+
+theorem fixed_fullSignedCongruenceMatrix : SignedCongruenceMatrix.FullSignedCongruenceMatrix :=
+  ⟨fixed_signedCongruenceMatrixCodeExact,fixed_signedCongruenceMatrixTailExact,
+    fixed_signedCongruenceMatrixFormulaSupport,fixed_actualSignedCongruenceMatrix⟩
+
+#print axioms fixed_signedCongruenceMatrixCodeExact
+#print axioms fixed_signedCongruenceMatrixTailExact
+#print axioms fixed_signedCongruenceMatrixFormulaSupport
+#print axioms fixed_actualSignedCongruenceMatrix
+#print axioms fixed_fullSignedCongruenceMatrix
+
+end LogicLineages.PermittedControl.StatementChecks

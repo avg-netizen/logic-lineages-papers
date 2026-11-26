@@ -1,0 +1,59 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseOrderedMinimumOpenStepProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseOrderedMinimumOpenStepProof.lean
+@@ -1,7 +1,7 @@
+ module
+ public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseOrderedMinimumTargets
+ import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeProof
+-import LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeSyntaxProof
++public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeSyntaxProof
+ import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserOpenSyntaxProof
+ import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceBranchProof
+ import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphSupportProof
+@@ -69,30 +69,32 @@
+   exact projectionValue 0 ![h,prior]
+ 
+ private theorem fromOffer (h prior k : OTerm α) :
+-    Derivation body Γ ((binary offerHead (suc k) h prior).imp (eqn k h ⊔ eqn prior (suc k))) := by
+-  apply Derivation.implicationIntroduction
+-  obtain ⟨same⟩ := valueUnique offerHead (suc k) (suc h) ![h,prior]
++    Nonempty (Derivation body Γ ((binary offerHead (suc k) h prior).imp (eqn k h ⊔ eqn prior (suc k)))) := by
++  let premise := binary offerHead (suc k) h prior
++  obtain ⟨same⟩ := valueUnique (body := body) (Gamma := premise :: Γ) offerHead (suc k) (suc h) ![h,prior]
+     ⟨Derivation.hypothesis List.mem_cons_self⟩ (offerValue h prior)
+-  exact orLeft (cancelSuc same)
++  exact ⟨Derivation.implicationIntroduction (orLeft (cancelSuc same))⟩
+ 
+ private theorem fromPrior (h prior k : OTerm α) :
+-    Derivation body Γ ((binary (.projection 1) (suc k) h prior).imp (eqn k h ⊔ eqn prior (suc k))) := by
+-  apply Derivation.implicationIntroduction
+-  obtain ⟨same⟩ := valueUnique (.projection (1 : Fin 2)) prior (suc k) ![h,prior]
+-    (projectionValue 1 ![h,prior]) ⟨Derivation.hypothesis List.mem_cons_self⟩
+-  exact orRight same
++    Nonempty (Derivation body Γ ((binary (.projection 1) (suc k) h prior).imp (eqn k h ⊔ eqn prior (suc k)))) := by
++  let premise := binary (.projection 1) (suc k) h prior
++  obtain ⟨same⟩ := valueUnique (body := body) (Gamma := premise :: Γ) (.projection (1 : Fin 2))
++    prior (suc k) ![h,prior] (projectionValue 1 ![h,prior]) ⟨Derivation.hypothesis List.mem_cons_self⟩
++  exact ⟨Derivation.implicationIntroduction (orRight same)⟩
+ 
+ theorem pick (h prior k : OTerm α)
+     (accepted : Nonempty (Derivation body Γ (binary minimumStep (suc k) h prior))) :
+     Nonempty (Derivation body Γ (eqn k h ⊔ eqn prior (suc k))) := by
+   let later := branch preferHead (.projection (1 : Fin 2)) offerHead
++  let premise := binary later (suc k) h prior
+   obtain ⟨outer⟩ := selectedSide (.projection (1 : Fin 2)) offerHead later (suc k) h prior accepted
+-  have next : Derivation body Γ ((binary later (suc k) h prior).imp (eqn k h ⊔ eqn prior (suc k))) := by
+-    apply Derivation.implicationIntroduction
+-    obtain ⟨inner⟩ := selectedSide preferHead (.projection (1 : Fin 2)) offerHead (suc k) h prior
+-      ⟨Derivation.hypothesis List.mem_cons_self⟩
+-    exact disjunctionElimination inner (fromPrior h prior k) (fromOffer h prior k)
+-  exact ⟨disjunctionElimination outer (fromOffer h prior k) next⟩
++  obtain ⟨headCase⟩ := fromOffer (body := body) (Γ := Γ) h prior k
++  obtain ⟨inner⟩ := selectedSide (body := body) (Γ := premise :: Γ) preferHead
++    (.projection (1 : Fin 2)) offerHead (suc k) h prior ⟨Derivation.hypothesis List.mem_cons_self⟩
++  obtain ⟨priorCase⟩ := fromPrior (body := body) (Γ := premise :: Γ) h prior k
++  obtain ⟨offerCase⟩ := fromOffer (body := body) (Γ := premise :: Γ) h prior k
++  have next := Derivation.implicationIntroduction (disjunctionElimination inner priorCase offerCase)
++  exact ⟨disjunctionElimination outer headCase next⟩
+ 
+ theorem stepOpen : ExactOpenOrderedMinimumStep := by
+   intro body α Γ h prior k

@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.TypeSupportNamedProof
+namespace LogicLineages.PersistentMarking.TypeSupportNamedChecks
+theorem exact_namedSubstitutionEncoding : TypeSupportTargets.NamedSubstitutionEncoding := TypeSupportNamedProof.namedSubstitutionEncoding
+theorem exact_namedExactSubstitution : TypeSupportTargets.NamedExactSubstitution := TypeSupportNamedProof.namedExactSubstitution
+#print axioms exact_namedSubstitutionEncoding
+#print axioms exact_namedExactSubstitution
+end LogicLineages.PersistentMarking.TypeSupportNamedChecks

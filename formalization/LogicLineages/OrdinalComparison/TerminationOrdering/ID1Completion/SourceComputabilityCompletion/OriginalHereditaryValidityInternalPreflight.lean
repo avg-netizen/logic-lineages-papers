@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityInternalTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityInternal
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityInternalTargets
+#check FrameGraph
+#check StateGraph
+#check WorkCons
+#check StateFrame
+#check LiveWork
+#check OpenedWork
+#check NodeFactors
+#check PushedFrame
+#check PushedApplication
+#check ApplicationResult
+#check ExtendedParameter
+#check LambdaResult
+#check LiveWorkOpening
+#check ActualOriginalHereditaryLiveWorkOpening
+#check ActualOriginalHereditaryNodeGraph
+#check ActualOriginalHereditaryInitialNodeGraph
+#check ActualOriginalHereditaryPopTransition
+#check ActualOriginalHereditaryApplicationTransition
+#check ActualOriginalHereditaryLambdaTransition
+#check ActualOriginalHereditaryRejectTransition
+#check ActualOriginalHereditaryAbsorbingStates

@@ -1,0 +1,47 @@
+{
+  "state": "authored-static-only-pending-independent-review-and-native-proof-gate",
+  "target_preflight": {
+    "module": "LogicLineages.PermittedControl.TerminalEntryScanTargets",
+    "receipt": "1795264411549700219-9",
+    "verification": "coordinator-reported PASS; all target freeze pins independently recomputed"
+  },
+  "freeze_manifest": {
+    "path": "formalization/verification/continuation-2026-11-21/PAPER17-TERMINAL-ENTRY-SCAN-FREEZE.json",
+    "sha256": "b4868e1ee5b5ae84f6750c547f193e01df0ca714da8fdb681a22ce8829708634",
+    "pins_rechecked": 16
+  },
+  "new_source_hashes": {
+    "formalization/LogicLineages/PermittedControl/TerminalEntryScanGuardProof.lean": "56b758a84b490a8b1981f48cd31fc9a88583ee7496e6cab481233cacdc28d66b",
+    "formalization/LogicLineages/PermittedControl/TerminalEntryScanPrefixProof.lean": "88c0eb0b620e0d947824ae4d298b66cc24ac123c826939d017401e875dba045a",
+    "formalization/LogicLineages/PermittedControl/TerminalEntryScanNumericProof.lean": "ce36d4781aa822f7c78477f9f2c0bf7d552e84e0db49b842453db09b17c7e67d",
+    "formalization/LogicLineages/PermittedControl/TerminalEntryScanProgramProof.lean": "5a7217ee772a4b08fd5ade8c1fa330c126d8410b9aa0e73ed8aa2205a83509dc",
+    "formalization/LogicLineages/PermittedControl/TerminalEntryScanActualProof.lean": "c391dbd479225dc4da5d8e1ea24d15ed58eaa063b74db059ef6d8f22e97013eb",
+    "formalization/LogicLineages/PermittedControl/TerminalEntryScanStatementChecks.lean": "c841628eaf1b16d4fda123193fd57e8b00cec0ac63000d26ed2c7fb6ad070933"
+  },
+  "dependency_anchors": {
+    "formalization/LogicLineages/PermittedControl/EncodedEvaluatorProof.lean": "074403899339bed96198bb2ec691eebf45769b3ba54b1bde89a379db3fe65ffe",
+    "formalization/LogicLineages/PermittedControl/EntryBasicsProof.lean": "fe2ca37a221fd455e54db22cabf2656b55ab782db9a7ea3d5784b797c6025c3b",
+    "formalization/LogicLineages/PermittedControl/EntryEffectivityProof.lean": "54699f3418391559ed9519a9faf31377d00c5c634cf3e2e2af8d9a1ec3975825",
+    "formalization/LogicLineages/PermittedControl/TerminalProof.lean": "0cba19da439f5543b00e3a93e11dae0c1e3924c98645837ae08407670400ba77",
+    "formalization/LogicLineages/OrdinalComparison/RawNormalProof.lean": "beee0a24b585d401abdc3c61e18c070df0bdb8446de2cbdeaf9d78cdb49f2ef3",
+    "formalization/LogicLineages/OrdinalComparison/RawSplitProof.lean": "c016aae6ee73a019aab0164843317e49c318d957e2e8e9eae9618b57340a6944",
+    "formalization/LogicLineages/OrdinalComparison/ActualFiniteHead.lean": "27ba191bd79731661e65663cc5369c49fccc516dbd759b08680bc34c1e64b9b0",
+    "formalization/LogicLineages/OrdinalComparison/RawNormCode.lean": "9e6b0de72f65126061c63aadb1d24f4b73d442410c479d6f32d3d0dc708dc4e9",
+    "formalization/LogicLineages/OrdinalComparison/RawNotationCode.lean": "ff0c8b35adf7361440961258dee243352ba3ec860a0da58b1f88fdea71619877"
+  },
+  "requested_native_gate": "LogicLineages.PermittedControl.TerminalEntryScanStatementChecks",
+  "expected_exact_aliases": [
+    "LogicLineages.PermittedControl.StatementChecks.fixed_terminalEntryScanGuardExact",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_boundedTerminalEntryIndexExact",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_terminalEntryScanEffective",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_terminalEntryScanActual",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_fullTerminalEntryScan"
+  ],
+  "allowed_standard_axiom_names": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "closure_note": "Allowlist is upper bound; exact aliases, actual standard axiom closure and native recursive source evidence under original caps required. No compiler by author.",
+  "scope": "Actual normal start/zero or limit target, terminal-inclusive least hit, precise miss and rejection, arbitrary control semantics and computable-f total effectivity. No fixed endpoint lift, affordability convention, finite-strip substitution, or numbered credit."
+}

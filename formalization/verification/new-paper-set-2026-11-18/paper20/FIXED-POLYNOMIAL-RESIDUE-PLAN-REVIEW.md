@@ -1,0 +1,9 @@
+# Independent conceptual review: fixed polynomial residue
+
+Approved to prepare exact frozen contracts, not proof or theorem acceptance. Read the plan against partitions.tex cor:fixed-polynomial-residue and its proof. The two proposed components cover the printed congruence and exact finite exceptions without substituting classical finite choice for computation.
+
+Freeze actual controlled count E for a single omega^d block at total input t, retained mass c, literal Q=d!m^(d-1), and threshold max(c+d+1,Q), with d,m positive and c unrestricted natural. Prove Q positive and explicitly identify the natural residue representative with the nonnegative Int.emod of the integer difference r_Q-c. In particular c>r_Q must not collapse by truncated natural subtraction. Use the actual standard control and established residue witness, not an arbitrary congruent schedule assumption left in the final statement.
+
+The exact evaluator should be a genuine Computable total numeric function with correctness for every valid input t>=c+d+1, or an equally explicit computable restricted-domain evaluator covering every smaller valid exception. Verify encoded initial ordinal construction, total input norm and retained mass, normality, actual count semantics and termination/domain facts. A Partrec program alone or a noncomputable function named evaluator does not discharge this requirement. No specification on invalid inputs need be imposed beyond the actual chosen totalization.
+
+A narrow fresh interface importing only the needed suffix/count suppliers is sensible. Existing supplier names confer no acceptance: inspect their actual closure and encoding/calibration. Freeze congruence and evaluator separately if needed, then require a fresh full conjunction gate and source review. No parked Cartier tuple-period dependency or unrelated signed-recursion claims.

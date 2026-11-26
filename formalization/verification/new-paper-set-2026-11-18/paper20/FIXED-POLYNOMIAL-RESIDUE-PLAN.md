@@ -1,0 +1,9 @@
+# Next cor:fixed-polynomial-residue: full scope plan
+
+Printed formula must retain actual E_c^d(t), literal Q=d!m^(d-1), threshold max(c+d+1,Q), and integer/modular subtraction (r_Q-c) mod Q. The existing kernelModularDifference=(r+Q-c%Q)%Q is a genuine nontruncated residue representative; an explicit Int.emod equality bridge should be checked rather than silently interpreting Nat subtraction.
+
+Two required source components:
+1. ActualSuffixKernelCount(omega^d)c t congruent to actual restrictedPartitionCount at that modular difference, for d,m>=1 and t>=threshold. Existing KernelCounterResidueProof has genuine used-budget calibration, actual initial total norm, monotone Phi iterates and all control residues; fresh closure required.
+2. The printed finite smaller valid inputs can be evaluated exactly. Must supply real Computable numerical evaluator plus equality to actualSuffixKernelCount for every valid t>=c+d+1 (stronger than finite exceptional range). Existing encodedSuffixKernelCount(encodedNatNote d)c t is a plausible executable evaluator, with encoded initial note correctness and actual controlled count algorithm proof. Do not replace this with classical finite selection or noncomputable existence. FiniteKernelRecursion's existing ActualFiniteKernelPrograms can supply it, but imports signed degree2 recurrence irrelevant to this corollary; preferably a fresh narrow evaluator interface importing actual EncodedSuffixKernel proof only, not that broad signed recursion proof.
+
+Stage exact scope and bounded import preflight before claiming full corollary feasibility. Keep arithmetic source formula and evaluator obligations separately frozen if union proof is broad. Current17 may already have source-complete computable counter suppliers but do not assume a named partial evaluator is correct without checking exact input/encoding map. No parked actual Cartier period dependency.

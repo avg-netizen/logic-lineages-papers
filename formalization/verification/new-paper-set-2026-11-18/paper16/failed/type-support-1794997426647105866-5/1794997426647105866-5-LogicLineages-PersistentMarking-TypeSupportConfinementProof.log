@@ -1,0 +1,18 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TypeSupportConfinementProof.lean:26:70: warning: This simp argument is unused:
+  or_assoc
+
+Hint: Omit it from the simp argument list.
+  simp only [fill, ̲support, ̲supportAppend, ̲supportArgs, ̲List.mem_append,̵o̵r̵_̵a̵s̵s̵o̵c̵] at h ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TypeSupportConfinementProof.lean:62:14: error: Invalid `←` modifier: Cannot be applied to a rule that rewrites to `True`
+
+Note: This simp theorem will rewrite
+  StructuralStabilityTargets.NamedFill
+to `True`, which should not be applied in the reverse direction
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/TypeSupportConfinementProof.lean:62:2: error: Type mismatch: After simplification, term
+  he
+ has type
+  ρ ∈ support (fill (encodeContext C) (encode [] s))
+but is expected to have type
+  ρ ∈ namedSupport (namedFill C s)

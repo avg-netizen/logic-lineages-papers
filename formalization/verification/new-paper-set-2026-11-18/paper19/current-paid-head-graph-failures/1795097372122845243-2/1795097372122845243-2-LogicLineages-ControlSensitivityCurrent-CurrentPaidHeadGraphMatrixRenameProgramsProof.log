@@ -1,0 +1,182 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:29:56: error(lean.unknownIdentifier): Unknown identifier `R`
+
+Note: A private declaration `R` (from the current module) exists but would need to be public to access here.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:29:66: error(lean.unknownIdentifier): Unknown identifier `R`
+
+Note: A private declaration `R` (from the current module) exists but would need to be public to access here.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:32:16: warning: declaration uses `sorry`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:32:57: warning: Variable name `h` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:35:2: warning: 'exact
+  Primrec.list_map (h.comp g)
+    ((Primrec.fst.comp Primrec.fst).pair
+        ((Primrec.fst.comp (Primrec.snd.comp Primrec.fst)).pair Primrec.snd)).to₂' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:38:16: warning: declaration uses `sorry`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:39:5: warning: Variable name `h` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:39:47: warning: Variable name `hz` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:41:2: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:41:2: warning: 'exact h _ _ hx' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:58:7: warning: Local variable 'left' resembles constructor 'Nat.Primrec.left' - write '.left' (with a dot) or 'Nat.Primrec.left' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:67:99: error: unsolved goals
+case pos
+q : R
+h0 : ¬q.2.2 % 8 = 0
+h2 : q.2.2 % 8 = 2
+h4 : q.2.2 % 8 = 4
+h3 : q.2.2 % 8 = 3
+⊢ add (renameTerm q.1 q.2.1 (Nat.unpair (q.2.2 / 8)).1) (renameTerm q.1 q.2.1 (Nat.unpair (q.2.2 / 8)).2) =
+    add
+      ((List.replicate
+              (if sorry () % 8 = 2 then [(Nat.unpair (sorry () / 8)).1, (Nat.unpair (sorry () / 8)).2]
+                else if sorry () % 8 = 4 then [(Nat.unpair (sorry () / 8)).2] else []).length
+              (renameTerm (sorry ()) (sorry ()) (sorry ())))[0]?.getD
+        0)
+      ((List.replicate
+              (if sorry () % 8 = 2 then [(Nat.unpair (sorry () / 8)).1, (Nat.unpair (sorry () / 8)).2]
+                else if sorry () % 8 = 4 then [(Nat.unpair (sorry () / 8)).2] else []).length
+              (renameTerm (sorry ()) (sorry ()) (sorry ())))[1]?.getD
+        0)
+
+case neg
+q : R
+h0 : ¬q.2.2 % 8 = 0
+h2 : q.2.2 % 8 = 2
+h4 : q.2.2 % 8 = 4
+h3 : ¬q.2.2 % 8 = 3
+⊢ add (renameTerm q.1 q.2.1 (Nat.unpair (q.2.2 / 8)).1) (renameTerm q.1 q.2.1 (Nat.unpair (q.2.2 / 8)).2) =
+    add
+      ((List.replicate
+              (if sorry () % 8 = 2 then [(Nat.unpair (sorry () / 8)).1, (Nat.unpair (sorry () / 8)).2]
+                else if sorry () % 8 = 4 then [(Nat.unpair (sorry () / 8)).2] else []).length
+              (renameTerm (sorry ()) (sorry ()) (sorry ())))[0]?.getD
+        0)
+      ((List.replicate
+              (if sorry () % 8 = 2 then [(Nat.unpair (sorry () / 8)).1, (Nat.unpair (sorry () / 8)).2]
+                else if sorry () % 8 = 4 then [(Nat.unpair (sorry () / 8)).2] else []).length
+              (renameTerm (sorry ()) (sorry ()) (sorry ())))[1]?.getD
+        0)
+
+case pos
+q : R
+h0 : ¬q.2.2 % 8 = 0
+h2 : q.2.2 % 8 = 2
+h4 : ¬q.2.2 % 8 = 4
+h3 : q.2.2 % 8 = 3
+⊢ add (renameTerm q.1 q.2.1 (Nat.unpair (q.2.2 / 8)).1) (renameTerm q.1 q.2.1 (Nat.unpair (q.2.2 / 8)).2) =
+    add
+      ((List.replicate
+              (if sorry () % 8 = 2 then [(Nat.unpair (sorry () / 8)).1, (Nat.unpair (sorry () / 8)).2]
+                else if sorry () % 8 = 4 then [(Nat.unpair (sorry () / 8)).2] else []).length
+              (renameTerm (sorry ()) (sorry ()) (sorry ())))[0]?.getD
+        0)
+      ((List.replicate
+              (if sorry () % 8 = 2 then [(Nat.unpair (sorry () / 8)).1, (Nat.unpair (sorry () / 8)).2]
+                else if sorry () % 8 = 4 then [(Nat.unpair (sorry () / 8)).2] else []).length
+              (renameTerm (sorry ()) (sorry ()) (sorry ())))[1]?.getD
+        0)
+
+case neg
+q : R
+h0 : ¬q.2.2 % 8 = 0
+h2 : q.2.2 % 8 = 2
+h4 : ¬q.2.2 % 8 = 4
+h3 : ¬q.2.2 % 8 = 3
+⊢ add (renameTerm q.1 q.2.1 (Nat.unpair (q.2.2 / 8)).1) (renameTerm q.1 q.2.1 (Nat.unpair (q.2.2 / 8)).2) =
+    add
+      ((List.replicate
+              (if sorry () % 8 = 2 then [(Nat.unpair (sorry () / 8)).1, (Nat.unpair (sorry () / 8)).2]
+                else if sorry () % 8 = 4 then [(Nat.unpair (sorry () / 8)).2] else []).length
+              (renameTerm (sorry ()) (sorry ()) (sorry ())))[0]?.getD
+        0)
+      ((List.replicate
+              (if sorry () % 8 = 2 then [(Nat.unpair (sorry () / 8)).1, (Nat.unpair (sorry () / 8)).2]
+                else if sorry () % 8 = 4 then [(Nat.unpair (sorry () / 8)).2] else []).length
+              (renameTerm (sorry ()) (sorry ()) (sorry ())))[1]?.getD
+        0)
+
+case neg
+q : R
+h0 : ¬q.2.2 % 8 = 0
+h2 : ¬q.2.2 % 8 = 2
+h4 : q.2.2 % 8 = 4
+h3 : ¬q.2.2 % 8 = 3
+⊢ unary (payload (Nat.unpair (q.2.2 / 8)).1) (renameTerm q.1 q.2.1 (Nat.unpair (q.2.2 / 8)).2) =
+    unary (payload (Nat.unpair (q.2.2 / 8)).1)
+      ((List.replicate
+              (if sorry () % 8 = 2 then [(Nat.unpair (sorry () / 8)).1, (Nat.unpair (sorry () / 8)).2]
+                else if sorry () % 8 = 4 then [(Nat.unpair (sorry () / 8)).2] else []).length
+              (renameTerm (sorry ()) (sorry ()) (sorry ())))[0]?.getD
+        0)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:70:51: warning: declaration uses `sorry`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:72:8: warning: declaration uses `sorry`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:103:108: error: unsolved goals
+case pos
+q : R
+h : 5 ≤ q.2.2 % 8
+h5 : q.2.2 % 8 = 5
+⊢ neg (renameFormula q.1 q.2.1 (q.2.2 / 8)) =
+    neg
+      ((List.replicate
+              (if 5 ≤ sorry () % 8 then
+                  if sorry () % 8 = 5 then [sorry () / 8]
+                  else [(Nat.unpair (sorry () / 8)).1, (Nat.unpair (sorry () / 8)).2]
+                else []).length
+              (renameFormula (sorry ()) (sorry ()) (sorry ())))[0]?.getD
+        0)
+
+case neg
+q : R
+h : 5 ≤ q.2.2 % 8
+h5 : ¬q.2.2 % 8 = 5
+⊢ atom (q.2.2 % 8) (renameFormula q.1 q.2.1 (Nat.unpair (q.2.2 / 8)).1)
+      (renameFormula q.1 q.2.1 (Nat.unpair (q.2.2 / 8)).2) =
+    atom (q.2.2 % 8)
+      ((List.replicate
+              (if 5 ≤ sorry () % 8 then
+                  if sorry () % 8 = 5 then [sorry () / 8]
+                  else [(Nat.unpair (sorry () / 8)).1, (Nat.unpair (sorry () / 8)).2]
+                else []).length
+              (renameFormula (sorry ()) (sorry ()) (sorry ())))[0]?.getD
+        0)
+      ((List.replicate
+              (if 5 ≤ sorry () % 8 then
+                  if sorry () % 8 = 5 then [sorry () / 8]
+                  else [(Nat.unpair (sorry () / 8)).1, (Nat.unpair (sorry () / 8)).2]
+                else []).length
+              (renameFormula (sorry ()) (sorry ()) (sorry ())))[1]?.getD
+        0)
+
+case pos
+q : R
+h : ¬5 ≤ q.2.2 % 8
+h5 : q.2.2 % 8 = 5
+⊢ neg (renameFormula q.1 q.2.1 (q.2.2 / 8)) =
+    neg
+      ((List.replicate
+              (if 5 ≤ sorry () % 8 then
+                  if sorry () % 8 = 5 then [sorry () / 8]
+                  else [(Nat.unpair (sorry () / 8)).1, (Nat.unpair (sorry () / 8)).2]
+                else []).length
+              (renameFormula (sorry ()) (sorry ()) (sorry ())))[0]?.getD
+        0)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:106:26: warning: declaration uses `sorry`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRenameProgramsProof.lean:108:8: warning: declaration uses `sorry`

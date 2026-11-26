@@ -1,0 +1,11 @@
+--- LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ConstructorFrameProof.lean original
++++ LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ConstructorFrameProof.lean R1
+@@ -20,7 +20,7 @@
+  have hframed := Hilbert.Local.mp (.base hframe) hvalid
+  obtain ⟨hcons⟩ := HistoryAppend.ConsProof.internalAppendCons n p atag ctag ha hc ctx task .zero suffix
+  obtain ⟨hnil⟩ := HistoryAppend.AppendEquationsProof.internalAppendNil n p atag ha ctx suffix
+- have htail := callCongruence ctag (task ::ᵥ HistoryAppend.appendCall atag .zero suffix ::ᵥ nil)
++ have htail := callCongruence (T := GorbowPRNumeralCalculation.Theory p) (G := G) ctag (task ::ᵥ HistoryAppend.appendCall atag .zero suffix ::ᵥ nil)
+   (task ::ᵥ suffix ::ᵥ nil) (fun i => by
+    cases i using Fin.cases with
+    | zero => exact Hilbert.Local.base (.logical (.reflexive task))

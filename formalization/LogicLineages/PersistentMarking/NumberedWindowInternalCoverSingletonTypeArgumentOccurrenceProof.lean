@@ -1,0 +1,27 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalCoverSingletonTypeArgumentTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedGrammarTypeLeafStageProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedGrammarNonemptyArgsStageProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedGrammarNullaryEmptyArgsProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverSingletonTypeArgumentOccurrenceProof
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open ID1Completion.InternalTagArithmeticSyntaxProof (z suc)
+open NumberedWindowInternalCoverTypeLeavesTargets (typeLeafTerm)
+open NumberedWindowInternalCoverSelectedGrammarTypeLeafStageProof (exact_OpenSelectedGrammarTypeLeafAtSuccessor)
+open NumberedWindowInternalCoverSelectedGrammarNonemptyArgsStageProof (exact_OpenSelectedNonemptyArgsFromPredecessor)
+open NumberedWindowInternalCoverSelectedGrammarNullaryEmptyArgsProof (exact_OpenSelectedGrammarEmptyArgs)
+open NumberedWindowInternalCoverSingletonTypeArgumentTargets
+
+theorem exact_OpenCoverSingletonTypeOccurrence : ExactOpenCoverSingletonTypeOccurrence := by
+  intro body α Γ H K ty one ts₁ as₁ two ts₂ as₂ inK before after
+  have term := exact_OpenSelectedGrammarTypeLeafAtSuccessor body α Γ z H K z one ts₁ as₁ ty before inK
+  have empty := exact_OpenSelectedGrammarEmptyArgs body α Γ (suc z) H K z one ts₁ as₁ before
+  exact exact_OpenSelectedNonemptyArgsFromPredecessor body α Γ (suc z) H K z
+    one ts₁ as₁ two ts₂ as₂ (typeLeafTerm ty) z before after term empty
+
+#print axioms exact_OpenCoverSingletonTypeOccurrence
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalCoverSingletonTypeArgumentOccurrenceProof

@@ -1,0 +1,22 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SupportProof.lean:69:5: error(lean.unknownIdentifier): Unknown identifier `InternalSourceInversionSupportProof.addHyp`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SupportProof.lean:70:9: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Nonempty.casesOn` can only eliminate into `Prop`
+
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+raw tail index : OTerm alpha
+hl : Nonempty (Derivation body Delta (InternalLessThan.strictLess tail raw))
+hb : Nonempty (Derivation body Delta (PrimaryUncoveredCount.bounded raw index))
+hw : Nonempty (Derivation body Delta (ltF raw (suc index)))
+h : Derivation body Delta (ltF tail index)
+h0 : Derivation body (eqn index z :: Delta) (ltF tail z)
+x✝ :
+  Nonempty
+    (Derivation body []
+      (arithmeticEmbedding.onFormula (OrdinaryArithmetic.lessFormula tail OrdinaryArithmetic.zeroTerm)).not)
+⊢ Derivation body (eqn index z :: Delta) ⊥
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.CrossRootCacheCoherence.SupportProof.stage: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SupportProof.lean:99:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.CrossRootCacheCoherence.SupportProof.indexNonzero: forbidden axiom dependency sorryAx

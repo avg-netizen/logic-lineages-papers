@@ -1,0 +1,26 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseOpenRoundsRecursionProof.lean:33:4: error: Application type mismatch: The argument
+  ID1Completion.InternalRecursionGraphZeroEliminationProof.actualOriginalRecursionZeroElimination body n α
+    (OrdinaryArithmetic.graphFormula f) (OrdinaryArithmetic.graphFormula g) out xs
+has type
+  Nonempty
+    (Derivation body []
+      (Formula.imp
+        (ID1Completion.InternalRecursionGraph.recursion (OrdinaryArithmetic.graphFormula f)
+          (OrdinaryArithmetic.graphFormula g) out OrdinaryArithmetic.zeroTerm xs)
+        (ID1Completion.InternalGraphComposition.graph (OrdinaryArithmetic.graphFormula f) out xs)))
+but is expected to have type
+  Nonempty (Derivation body [] (Formula.imp (programGraph (f.recursion g) out (Fin.cons z xs)) (programGraph f out xs)))
+in the application
+  ID1Completion.InternalRecursionClosureLogicProof.closedApply
+    (ID1Completion.InternalRecursionGraphZeroEliminationProof.actualOriginalRecursionZeroElimination body n α
+      (OrdinaryArithmetic.graphFormula f) (OrdinaryArithmetic.graphFormula g) out xs)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseOpenRoundsRecursionProof.lean:41:2: error: Type mismatch
+  recursionSuccessorIntroduction Γ (OrdinaryArithmetic.graphFormula f) (OrdinaryArithmetic.graphFormula g) out fuel
+    prior xs ?m.34 ?m.35
+has type
+  Nonempty
+    (Derivation ?m.29 Γ
+      (ID1Completion.InternalRecursionGraph.recursion (OrdinaryArithmetic.graphFormula f)
+        (OrdinaryArithmetic.graphFormula g) out (ID1Completion.InternalTagArithmeticSyntaxProof.suc fuel) xs))
+but is expected to have type
+  Nonempty (Derivation body Γ (programGraph (f.recursion g) out (Fin.cons (suc fuel) xs)))

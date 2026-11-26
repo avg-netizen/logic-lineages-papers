@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceZeroNumberedEdgeProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceZeroNumberedEdgeGate
+theorem edge : SourceZeroNumberedComputabilityTargets.ActualZeroNumberedEdge := SourceZeroNumberedEdgeProof.actualZeroNumberedEdge
+#print axioms edge
+#print axioms SourceZeroNumberedReplacementProof.replacementPerm
+#print axioms SourceZeroNumberedReplacementProof.replacementAppendLeft
+#print axioms SourceZeroNumberedReplacementProof.replacementAppendRight
+#print axioms SourceZeroNumberedReplacementProof.argumentStepReplacement
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceZeroNumberedEdgeGate

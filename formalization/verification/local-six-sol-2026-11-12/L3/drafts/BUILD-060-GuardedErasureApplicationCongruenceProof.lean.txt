@@ -1,0 +1,104 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.GuardedErasureConstructorsProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalExistentialRankResultApplicationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.GuardedErasureApplicationCongruenceProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntaxProof
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalQuotientComparisonProof (orLeft orRight)
+open InternalBetaTotalityProof (disjunctionElimination)
+open InternalTagArithmeticSyntaxProof (z suc zRelabel sucRelabel)
+open SourceComputabilityFormulaSupportProof (numeral)
+open GuardedErasureFinalGraphsProof GuardedErasurePackingProof
+open OriginalMixedExistentialCongruenceDefinitions
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+theorem fromCertificate (p : UniformCertificateCompletion.GlobalSourcePackage.Inputs)
+    (H G : Program 1) (W : Program 2) (P : Program 3)
+    (s t parameter childS childT arg d e arrow childCert : OTerm alpha)
+    (hf : Nonempty (Derivation body Delta (ApplicationFrame (literalSource p H G W)
+      s t parameter childS childT arg d e arrow)))
+    (hend : Nonempty (Derivation body Delta
+      (InternalParameterizedApplicationStepChecker.endpointGraph (literalEndpoint p H G W)
+        (numeral 1) d e childS childT arg parameter)))
+    (hc : Nonempty (Derivation body Delta
+      (graph4 (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W))
+        (numeral 1) childS childT childCert parameter))) :
+    Nonempty (Derivation body Delta (OriginalLambdaErasureSquareDichotomyDefinitions.Witness
+      (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W)) s t parameter)) := by
+  apply programCases stepLift (Fin.cons childCert Fin.elim0) _
+  intro beta j Theta cert hj hp
+  rw [OriginalLambdaErasureSquareDichotomySyntaxProof.witnessRename]
+  simp only [consTermRename,emptyRename] at hp
+  have hf' := renameInto hf j Theta hj
+  rw [OriginalMixedClosedCongruenceApplicationProof.frameRename] at hf'
+  have hc' := renameInto hc j Theta hj
+  simp only [graph4Rename,GuardedSourceSyntaxProof.numeralRename] at hc'
+  have hend' := renameInto hend j Theta hj
+  simp only [InternalParameterizedApplicationStepCheckerSyntaxProof.endpointGraphRename,
+    GuardedSourceSyntaxProof.numeralRename] at hend'
+  have hpair := GuardedErasureConstructorsProof.applicationAtCertificate p H G W P
+    (s.relabel j) (t.relabel j) (parameter.relabel j) (childS.relabel j) (childT.relabel j)
+    (arg.relabel j) (d.relabel j) (e.relabel j) (arrow.relabel j) cert (childCert.relabel j)
+    hf' hend' hp (certificateRecover _ _ _ _ _ _ _ hc')
+  exact OriginalLambdaErasureSquareDichotomySyntaxProof.witnessIntro
+    (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W))
+    (s.relabel j) (t.relabel j) (parameter.relabel j) cert (certificateAccept _ _ _ _ _ _ _ hpair)
+
+theorem actualApplication (p : UniformCertificateCompletion.GlobalSourcePackage.Inputs)
+    (H G : Program 1) (W : Program 2) (P : Program 3)
+    (s t parameter childS childT arg d e arrow oldS oldT oldChildS oldChildT oldArg : OTerm alpha)
+    (hf : Nonempty (Derivation body Delta (ApplicationFrame (literalSource p H G W)
+      s t parameter childS childT arg d e arrow)))
+    (hend : Nonempty (Derivation body Delta
+      (InternalParameterizedApplicationStepChecker.endpointGraph (literalEndpoint p H G W)
+        (numeral 1) d e childS childT arg parameter)))
+    (hs : Nonempty (Derivation body Delta (graph4 application oldS d e oldChildS oldArg)))
+    (ht : Nonempty (Derivation body Delta (graph4 application oldT d e oldChildT oldArg)))
+    (hresult : Nonempty (Derivation body Delta
+      (OriginalExistentialRankResultDefinitions.Result
+        (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W))
+        childS childT parameter oldChildS oldChildT))) :
+    Nonempty (Derivation body Delta
+      (OriginalExistentialRankResultDefinitions.Result
+        (pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W)) s t parameter oldS oldT)) := by
+  let L := pairedLeaf (finalData p H G W P) (finalLeaf p H G W P) (closedChecker p H G W)
+  let A := equal childS childT ⊓ OriginalExistentialRankResultDefinitions.RankWitness oldChildS oldChildT
+  let B := OriginalLambdaErasureSquareDichotomyDefinitions.Witness L childS childT parameter
+  let R := OriginalExistentialRankResultDefinitions.Result L s t parameter oldS oldT
+  have left : Nonempty (Derivation body (A :: Delta) R) := by
+    have ha : Nonempty (Derivation body (A :: Delta) A) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+    have he := OriginalMixedClosedCongruenceApplicationProof.equalParents s t d e childS childT arg
+      (withHyp (andLeft (andRight hf)) A) (withHyp (andLeft (andRight (andRight hf))) A) (andLeft ha)
+    have hr := OriginalExistentialRankResultApplicationProof.lift oldS oldT d e oldChildS oldChildT oldArg
+      (withHyp hs A) (withHyp ht A) (andRight ha)
+    obtain ⟨out⟩ := andIntro he hr
+    exact ⟨orLeft out⟩
+  have right : Nonempty (Derivation body (B :: Delta) R) := by
+    have hb : Nonempty (Derivation body (B :: Delta) B) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+    have hw : Nonempty (Derivation body (B :: Delta) (OriginalLambdaErasureSquareDichotomyDefinitions.Witness L s t parameter)) := by
+      apply OriginalMixedExistentialCongruenceSupportProof.mapWitness L s t parameter childS childT parameter hb
+      intro beta j Theta cert hj hc
+      have hf' := renameInto (withHyp hf B) j Theta hj
+      rw [OriginalMixedClosedCongruenceApplicationProof.frameRename] at hf'
+      have hend' := renameInto (withHyp hend B) j Theta hj
+      simp only [InternalParameterizedApplicationStepCheckerSyntaxProof.endpointGraphRename,
+        GuardedSourceSyntaxProof.numeralRename] at hend'
+      exact fromCertificate p H G W P (s.relabel j) (t.relabel j) (parameter.relabel j)
+        (childS.relabel j) (childT.relabel j) (arg.relabel j) (d.relabel j) (e.relabel j) (arrow.relabel j)
+        cert hf' hend' hc
+    obtain ⟨hw⟩ := hw
+    exact ⟨orRight hw⟩
+  obtain ⟨hresult⟩ := hresult
+  obtain ⟨left⟩ := left
+  obtain ⟨right⟩ := right
+  exact ⟨disjunctionElimination hresult (Derivation.implicationIntroduction left) (Derivation.implicationIntroduction right)⟩
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.GuardedErasureApplicationCongruenceProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.GuardedErasureApplicationCongruenceProof

@@ -1,0 +1,153 @@
+--- ProtectedSpineEnvironment.before
++++ ProtectedSpineEnvironment.after
+@@ -3,14 +3,14 @@
+ open Spine NameBridge DecisionPorts HereditaryDomainCode HereditaryDomainSemantics
+ 
+ /-- Codes are rooted at the ambient context supplied to the interpreter. -/
+-abbrev FreeValues := List (Name × Code)
+-abbrev BoundValues := List (Ty × Code)
++abbrev FreeValues := List (Name × FiniteDomainSchema.Code)
++abbrev BoundValues := List (Ty × FiniteDomainSchema.Code)
+ 
+-def lookupFree : FreeValues → Name → Option Code
++def lookupFree : FreeValues → Name → Option FiniteDomainSchema.Code
+   | [], _ => none
+   | (a,c)::rest, b => if a=b then some c else lookupFree rest b
+ 
+-def lookupBound (values : BoundValues) (σ : Ty) (i : Nat) : Option Code := do
++def lookupBound (values : BoundValues) (σ : Ty) (i : Nat) : Option FiniteDomainSchema.Code := do
+   let p ← values[i]?
+   if p.1=σ then some p.2 else none
+ 
+@@ -36,13 +36,13 @@
+   strict _ _ := false
+   application Δ _ τ _ := StructuralActions.bottom E τ Δ
+ 
+-def literalCode (E : Environment) (Γ : Context) (σ : Ty) (x : Nat) : Code :=
++def literalCode (E : Environment) (Γ : Context) (σ : Ty) (x : Nat) : FiniteDomainSchema.Code :=
+   HereditaryDomainSemantics.encode E σ Γ (literal E σ x)
+ 
+-def freeCode (E : Environment) (Γ : Context) (values : FreeValues) (σ : Ty) (x : Nat) : Code :=
++def freeCode (E : Environment) (Γ : Context) (values : FreeValues) (σ : Ty) (x : Nat) : FiniteDomainSchema.Code :=
+   (lookupFree values (σ,x)).getD (literalCode E Γ σ x)
+ 
+-def boundCode (E : Environment) (Γ : Context) (values : BoundValues) (σ : Ty) (i : Nat) : Code :=
++def boundCode (E : Environment) (Γ : Context) (values : BoundValues) (σ : Ty) (i : Nat) : FiniteDomainSchema.Code :=
+   (lookupBound values σ i).getD (StructuralActions.bottom E σ Γ)
+ 
+ /-- Consume the literal full type tuple, not successive semantic calls. -/
+@@ -51,9 +51,9 @@
+   | .ground, _::_ => none
+   | .arrow σ τ, ρ::ds => if σ=ρ then residualType τ ds else none
+ 
+-def originalHeadCall (E : Environment) (heads : List Head) (M : Code) (Γ : Context)
+-    (f : Head) (σ : Ty) (base : List Code) (extras : List MarkedExtras.Tagged)
+-    (domains : List Ty) (values : List Code) (τ : Ty) : Code :=
++def originalHeadCall (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (Γ : Context)
++    (f : Head) (σ : Ty) (base : List FiniteDomainSchema.Code) (extras : List MarkedExtras.Tagged)
++    (domains : List Ty) (values : List FiniteDomainSchema.Code) (τ : Ty) : FiniteDomainSchema.Code :=
+   if residualType σ domains = some τ ∧ domains.length=values.length then
+     (StructuralActions.markedAction E heads M
+       (f,τ,Γ,base,StructuralActions.insertExtras E Γ extras (domains.zip values))).getD
+--- MarkedConstructorTests.before
++++ MarkedConstructorTests.after
+@@ -31,18 +31,18 @@
+   (splits bs).any fun source => !source.2.isEmpty &&
+     (splits ts).any fun target => matching E Γ source.1 target.1 && coverage E Γ source.2 target.2
+ 
+-def owner (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (τ : Ty) : Option Code :=
++def owner (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (τ : Ty) : Option FiniteDomainSchema.Code :=
+   StructuralActions.markedAction E heads M (p.1,τ,p.2.2.1,p.2.2.2.1,p.2.2.2.2)
+ 
+-def ownerTuple (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (ds : List Ty) : Option (List Code) :=
++def ownerTuple (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (ds : List Ty) : Option (List FiniteDomainSchema.Code) :=
+   ds.mapM (owner E heads M p)
+ 
+-def whole (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (ts : List Expr) : Bool :=
++def whole (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (ts : List Expr) : Bool :=
+   ts.all fun t => match owner E heads M p t.type with
+     | none => false
+     | some c => (HereditaryDomainSemantics.decode E t.type p.2.2.1 c).weak p.2.2.1 t
+ 
+-def selected (E : Environment) (heads : List Head) (M : Code) (p : Parameter)
++def selected (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter)
+     (a : MarkedExtras.Tagged) (ds : List Ty) (t : Expr) : Bool :=
+   match ds with
+   | [] => bit false E p.2.2.1 a t
+@@ -52,7 +52,7 @@
+       let c := StructuralActions.fullAction E a.1 p.2.2.1 a.2 ds p.2.1 xs
+       (HereditaryDomainSemantics.decode E p.2.1 p.2.2.1 c).weak p.2.2.1 t
+ 
+-def selectTest (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (t : Expr) : Bool :=
++def selectTest (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (t : Expr) : Bool :=
+   (p.1.arguments.zip p.2.2.2.1 ++ p.2.2.2.2).any fun a =>
+     (([],a.1)::fullPrefixes a.1).any fun suffix =>
+       decide (suffix.2=p.2.1) && selected E heads M p a suffix.1 t
+@@ -67,12 +67,12 @@
+   | some a,some b => decide (b<a)
+   | _,_ => false
+ 
+-def copyTest (S : Signature) (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (t : Expr) : Bool :=
++def copyTest (S : Signature) (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (t : Expr) : Bool :=
+   match t with
+   | .head g ts => decide (g.result=p.2.1) && precedes S p.1 g && whole E heads M p (terms ts)
+   | _ => false
+ 
+-def statTest (S : Signature) (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (t : Expr) : Bool :=
++def statTest (S : Signature) (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (t : Expr) : Bool :=
+   match t with
+   | .head g ts => decide (g.result=p.2.1) && equivalent S p.1 g &&
+       multiset E p.2.2.1 (p.1.arguments.zip p.2.2.2.1) (terms ts) && whole E heads M p (terms ts)
+@@ -84,7 +84,7 @@
+   let v := ProtectedSpineEnvironment.literalCode E Θ σ (portName E.names i)
+   (p.1,τ,Θ,w.2.2.2.1,StructuralActions.insertExtras E Θ w.2.2.2.2 [(σ,v)])
+ 
+-def fabsTest (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (t : Expr) : Bool :=
++def fabsTest (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (t : Expr) : Bool :=
+   match p.2.1,t with
+   | .arrow σ τ,.lam ρ body =>
+     if σ=ρ then match ProtectedSpineEnvironment.openingSlot p.2.2.1 with
+@@ -98,6 +98,6 @@
+     else false
+   | _,_ => false
+ 
+-def weakTest (S : Signature) (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (t : Expr) : Bool :=
++def weakTest (S : Signature) (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (t : Expr) : Bool :=
+   selectTest E heads M p t || copyTest S E heads M p t || statTest S E heads M p t || fabsTest E heads M p t
+ end LogicLineages.PersistentMarking.MarkedConstructorTests
+--- MarkedConstructorValue.before
++++ MarkedConstructorValue.after
+@@ -4,7 +4,7 @@
+ open MarkedFamilyParameters (Parameter)
+ 
+ /-- New observation fields; all premises and tuple outputs read only previous M. -/
+-def build (S : Signature) (E : Environment) (heads : List Head) (M : Code) (p : Parameter) : Value where
++def build (S : Signature) (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) : Value where
+   available _ := true
+   weak Δ t := MarkedConstructorTests.weakTest S E heads M (MarkedFamilyCoherence.weakenParameter E p Δ) t
+   strict Δ t := MarkedConstructorTests.weakTest S E heads M (MarkedFamilyCoherence.weakenParameter E p Δ) t
+--- MarkedConstructorTargets.before
++++ MarkedConstructorTargets.after
+@@ -21,11 +21,11 @@
+     removed ≠ [] ∧ Matches E Γ kept matched ∧
+     ∀ t, t ∈ added → ∃ a, a ∈ removed ∧ MarkedConstructorTests.bit true E Γ a t = true
+ 
+-def WholeWitness (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (ts : List Expr) : Prop :=
++def WholeWitness (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (ts : List Expr) : Prop :=
+   ∀ t, t ∈ ts → ∃ c, MarkedConstructorTests.owner E heads M p t.type = some c ∧
+     (HereditaryDomainSemantics.decode E t.type p.2.2.1 c).weak p.2.2.1 t = true
+ 
+-def SelectWitness (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (t : Expr) : Prop :=
++def SelectWitness (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (t : Expr) : Prop :=
+   ∃ a, a ∈ p.1.arguments.zip p.2.2.2.1 ++ p.2.2.2.2 ∧
+     ((a.1=p.2.1 ∧ MarkedConstructorTests.bit false E p.2.2.1 a t = true) ∨
+      ∃ ds xs, (ds,p.2.1) ∈ fullPrefixes a.1 ∧
+@@ -33,7 +33,7 @@
+        (HereditaryDomainSemantics.decode E p.2.1 p.2.2.1
+          (StructuralActions.fullAction E a.1 p.2.2.1 a.2 ds p.2.1 xs)).weak p.2.2.1 t = true)
+ 
+-def FAbsWitness (E : Environment) (heads : List Head) (M : Code) (p : Parameter) (t : Expr) : Prop :=
++def FAbsWitness (E : Environment) (heads : List Head) (M : FiniteDomainSchema.Code) (p : Parameter) (t : Expr) : Prop :=
+   ∃ σ τ body i c, p.2.1 = .arrow σ τ ∧ t = .lam σ body ∧
+     ProtectedSpineEnvironment.openingSlot p.2.2.1 = some i ∧
+     StructuralActions.markedAction E heads M (MarkedConstructorTests.fabsParameter E p σ τ i) = some c ∧

@@ -1,0 +1,32 @@
+{
+  "key": "RAW-PACKET-ALGEBRA-REIFY-CHILD",
+  "lane": "opusB",
+  "serves": "Root Task 4 groups 4 (reify/reifyFamily on ResidualCode) and 5 (assembled childCode, Fable-2's interface item 2)",
+  "source_map": "verification/local-fable-pair-2026-11-22/opusB/RAW-PACKET-ALGEBRA-REIFY-CHILD-SOURCE-MAP.md",
+  "modules": [
+    {"module": "LogicLineages.PermittedControl.RawPacketAlgebraReifyTargets", "sha256": "1520ff85775a6723b2aaed958428655c7207eb4162c05ef9b36946a5d350a92b", "first_receipt": "1795385752127892140-3153782"},
+    {"module": "LogicLineages.PermittedControl.RawPacketAlgebraChildTargets", "sha256": "0700af0e8508a7691918c0e81f194fa72302d8b16796b12842f4a0bb54b022ee", "first_receipt": "1795385752127892140-3153782"},
+    {"module": "LogicLineages.PermittedControl.RawPacketAlgebraReifyProof", "sha256": "35da0bb7b68f886c0f5386b2e9a3b3eebf7b4ba2af14e73485eb556df0c6394c", "receipt": "1795385836912543661-3154100"},
+    {"module": "LogicLineages.PermittedControl.RawPacketAlgebraChildProof", "sha256": "7c0e44e1e32444cfa67392806f490ca5e34a87f3803a9f2a469e6989e21aa538", "receipt": "1795385987212346157-3154936"}
+  ],
+  "passing_receipt": "1795385987212346157-3154936",
+  "passing_receipt_note": "this receipt also verified-cache-hit every other RawPacketAlgebra module of groups 1-4 at the hashes in their evidence files",
+  "failed_receipts": [
+    "1795385855593800890-3154180 (ChildProof v1: imported the Residual bundle, whose private imports hide its lemmas)",
+    "1795385869794241763-3154230 (ChildProof v2: whnf timeout in childPrimitive)",
+    "1795385938591068432-3154541 (ChildProof v3: isDefEq timeout elaborating comp against an expected type); drafts kept"
+  ],
+  "theorems": [
+    "RawPacketAlgebra.fullRawPacketAlgebraReify : FullRawPacketAlgebraReify",
+    "RawPacketAlgebra.exactChildCode : ExactChildCode  -- childCode (C,top,qs.map encodePacket) = encodeFamily (reifyFamily C top (lowerFamily top C (qs.map (prepend top)))), all C top qs, no hypothesis",
+    "RawPacketAlgebra.childEffectivity : ChildEffectivity  -- Primrec childCode ∧ Computable childCode",
+    "RawPacketAlgebra.fullRawPacketAlgebraChild : FullRawPacketAlgebraChild"
+  ],
+  "print_axioms": [
+    "'LogicLineages.PermittedControl.RawPacketAlgebra.fullRawPacketAlgebraReify' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.RawPacketAlgebra.exactChildCode' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.RawPacketAlgebra.fullRawPacketAlgebraChild' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "reused": ["OriginalPrintedRawClauseAssembly.exactOriginalRawClauseAssembly / exactOriginalRawClauseEffectivity (#1343)", "IntegerAlgorithms.Proof.ofNat_primitive / negate_primitive"],
+  "new_encoding": "none beyond group 3's ResidualCode, which is internal to childCode"
+}

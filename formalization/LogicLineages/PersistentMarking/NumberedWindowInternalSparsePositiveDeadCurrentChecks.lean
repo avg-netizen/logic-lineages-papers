@@ -1,0 +1,26 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveDeadCurrentNoneRulesProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldInductionChecks
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveDeadCurrentChecks
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open NumberedWindowInternalSparseFieldInductionChecks (exact_SparseFieldInductionAtCode)
+open NumberedWindowInternalSparsePositiveDeadCurrentTargets
+open NumberedWindowInternalSparsePositiveDeadCurrentNoneBindingProof (noneMotive noneAt)
+open NumberedWindowInternalSparsePositiveDeadCurrentNoneRulesProof (inductionPremises)
+
+theorem exact_OpenMalformedFinishZero : OpenMalformedFinishZero :=
+  NumberedWindowInternalSparsePositiveDeadCurrentGapChecks.exact_OpenMalformedFinishZero
+
+theorem exact_OpenNoCurrentFinishZero : OpenNoCurrentFinishZero := by
+  intro body raw least α ctx ty cert
+  have rule := exact_SparseFieldInductionAtCode body α [] (noneMotive raw least ctx ty) cert
+    (inductionPremises body raw least ctx ty)
+  rw [noneAt] at rule
+  exact rule
+
+#print axioms exact_OpenMalformedFinishZero
+#print axioms exact_OpenNoCurrentFinishZero
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveDeadCurrentChecks

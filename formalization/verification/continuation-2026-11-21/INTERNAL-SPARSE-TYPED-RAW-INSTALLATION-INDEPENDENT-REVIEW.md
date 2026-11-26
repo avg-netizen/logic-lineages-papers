@@ -1,0 +1,5 @@
+# Independent actual same-window raw5 reinstallation
+
+Read full exact target/source map and all four Calibration/Reinstall/Concrete/Checks leaves. Re-derive actual advance, fuel, positive and address equality for the new physical raw while retaining the exact same least/cv/tv calibrations. Fresh presentation on actual new r with original i/j/d, fresh Guards via literal original guard i p₀, actual new-body typed totality and alignment, same physical chosen A/H and original v. Reinstantiate actual original report for the new raw/least at the actual new body; no transport of old report or derivation based on numerical equality. Separate concrete original tuple retains all leaves and pairs with actual 711 real callback selection.
+
+Preflight1795261498508215442-6 and first proof native1795261773452718597-8 passed original caps; independent1849 module source/current-object/input/receipt replay and exact2 standard-only aliases, complete native logs/archive. All frozen and author maps independently verified. No adoption of arbitrary-open raw/least semantics, RawMatching, general I/C, numbered theorem or full-root/CI.

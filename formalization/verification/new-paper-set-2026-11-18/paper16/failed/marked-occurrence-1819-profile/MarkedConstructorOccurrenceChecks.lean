@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.MarkedConstructorOccurrenceProof
+namespace LogicLineages.PersistentMarking.MarkedConstructorOccurrenceChecks
+theorem exact_MatchingExact : MarkedConstructorTargets.MatchingExact := MarkedConstructorOccurrenceProof.matching
+theorem exact_MultisetExact : MarkedConstructorTargets.MultisetExact := MarkedConstructorOccurrenceProof.multiset
+#print axioms exact_MatchingExact
+#print axioms exact_MultisetExact
+end LogicLineages.PersistentMarking.MarkedConstructorOccurrenceChecks

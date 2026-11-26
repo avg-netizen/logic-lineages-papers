@@ -1,4 +1,238 @@
-# Current checkpoint — reconciled main, 9 November 2026
+# Current release — new comparison collection, 18 November 2026
+
+Formalization of papers16–20 is active through 19 November2026 at18:00UTC.
+Read the [current status](verification/new-paper-set-2026-11-18/STATUS.md),
+[source-exact register](CURRENT-COMPARISON-TARGETS.json), and
+[plan](verification/new-paper-set-2026-11-18/PLAN.md). The new167-statement
+register is separate from the historical189-statement register, which remains
+178 checked,2 inherited,9 pending. Those counts are not additive, and historical
+statuses do not automatically transfer to replacement manuscripts.
+
+Old comparison editions05–10 are preserved in the
+[recoverable archive](../archive/comparison-editions-pre-2026-11-17/README.md).
+Only current acceptance records designate verified endpoints; pending draft
+files and focused checks do not imply a complete main proof or full-root/CI pass.
+The pause notices and counts below are retained historical checkpoints, not
+instructions to stop this currently authorized continuation.
+
+---
+
+# Historical checkpoint — two-agent continuation paused
+
+Fifteen exact supporting contracts in 29 new source files are checked across
+the two-agent continuation. These cover retained compatibility diagnostics,
+explicit primary membership, reflexivity recognition and actual singleton
+CORE proof certificates. Root verified 4,173 distinct local native modules;
+all exact audits use standard axioms only. See
+[the final handoff](verification/local-two-sol-2026-11-13/FINAL-HANDOFF.md)
+for precise scope and remaining integration gaps. Both workers and the compiler
+are paused; only the user-requested commit/push is authorized. The numbered
+register remains **175 checked, 2 inherited, 12 pending /189**. Full paper06
+I/C/accessibility and paper12 HB3 remain open; no full-root or CI claim.
+
+---
+
+# Previous source reconciliation — internal level two
+
+**175 checked, 2 inherited, 12 pending /189.** The existing complete source08
+internal-level-two comparison proof has been natively revalidated and adopted
+at its unchanged original source scope. See
+[the adoption record](verification/local-six-sol-2026-11-12/ROOT-LEVELTWO-ADOPTION.json).
+All numbered paper08 statements are checked. Remaining: paper02=1, paper06=8,
+paper12=3. All six lanes and the compiler are paused after their current rounds
+and required Lean repairs completed; see the
+[final handoff](verification/local-six-sol-2026-11-12/FINAL-STOPPED-HANDOFF.md).
+Earlier counts below are historical; no full-root or CI claim.
+
+---
+
+# Previous source completions — common-head and balanced comparison
+
+**174 checked, 2 inherited, 13 pending /189 at this checkpoint.** The original paper08
+`thm:common` and `thm:balanced` are now checked at both their complete pointwise
+compiler/exact-variable/effectivity and arbitrary quantified-decision clauses,
+using the previously completed Snyatkov arithmetic supplier. Read
+[the adoption record](verification/local-six-sol-2026-11-12/ROOT-COMMON-BALANCED-ADOPTION.json).
+Pending counts: paper02=1, paper06=8, paper08=1, paper12=3. Earlier counts below
+are historical. No full-root or remote-CI result is claimed.
+
+---
+
+# Previous source completion — full Snyatkov arithmetic decision
+
+**172 checked, 2 inherited, 15 pending /189 at this checkpoint.** The original paper08
+`thm:snyatkov` is checked at its complete first-order scope, with the exact
+f(n)=F5(n+100), an explicit computable decision procedure and standard axioms.
+Read [the root adoption record](verification/local-six-sol-2026-11-12/ROOT-SNYATKOV-ADOPTION.json).
+Six Sol lanes continue. Paper06 full internal accessibility, source12 HB/collapse
+and the other pending numbered statements remain separate. No full-root or
+remote-CI result is claimed. Earlier checkpoint counts below are historical.
+
+---
+
+# Current checkpoint — repaired rank, minimum search and observer guards
+
+33 exact supporting contracts now pass six focused native gates with standard
+axioms. These cover the inherited raw/final rank and transparent least-hit drafts,
+the observer class Hit law, its active guard collapse and native all-input rank
+calibration. The class predicate retains the entire old predicate when inactive;
+activation uses the original window and transparent source before minimization.
+The final guarded-rank completion also discharges its original unconditional
+contracts. See [the checkpoint status](verification/fable-collaboration-2026-11-11/STATUS.md)
+for exact gates, provenance, resource limits and the remaining source boundary.
+
+Fable and local proof work are paused. The register remains **171 checked,
+2 inherited, 16 pending / 189**. Original internal representative coherence,
+I/C and full paper06 accessibility remain pending. No full-root or remote-CI
+pass is claimed. The checker now reuses content-verified `.olean` modules;
+44 helper/regression tests pass and the fixed native resource limits remain.
+
+---
+
+# Previous checkpoint — original Object applications and spine guards
+
+11 exact supporting contracts in 58 new Lean modules extend `594d0a1a`
+on the existing cumulative branch. The first quotient-edge function case now
+reconstructs the original accepted Object application, binding its target
+function and vertex Objects internally at the SAME Gamma and retaining the
+SAME argument Object. The exact original ordinary suffix remains unchanged.
+
+The SAME full canonical fold preserves the entire bottom-spine flag/depth mark.
+A new all-input-equal old-leaf refinement exposes the original spine guard;
+internal backward transport through the original peel/repeat checker pays it
+at unchanged raw endpoints, certificate and parameter. One calibrated global
+selection retains the complete previous Object/global Package and the raw-step
+guard at that SAME final tuple. No source Program is replaced by a new relation.
+
+All 11 exact aliases and 83 additional audited declarations use only
+standard axioms. The gate/preflight union has 2066 successful source-matched
+native modules. All 20 active frozen files, inherited mathematical sources,
+manuscripts and prior evidence remain unchanged. Checker, toolchain/dependency
+pins, CI and fixed serialized limits are preserved. No full-root or remote-CI
+pass is claimed.
+
+Next: combine raw-step guard progress with full-fold mark preservation to
+construct the original function-child Object source certificate; then prove
+the same-code suffix rule and finite-type neutral/arrow computability. Later
+function reducts may be lambdas, so final H+ endpoint shape is not restricted.
+Lambda/substitution, multiset, constructors and all-term accessibility remain
+pending. Paper06 `lem:id1` is pending; register **171 checked, 2 inherited,
+16 pending / 189**. Read [the accepted checkpoint](verification/continuation-2026-11-11/object-application/STATUS.md) and
+[next steps](verification/continuation-2026-11-11/object-application/NEXT-STEPS.md).
+
+---
+
+# Current checkpoint — original source neutral applications
+
+Seven exact supporting contracts in 34 new Lean modules extend `cbda2bacd`
+on the existing cumulative branch. The original requested-function non-lambda
+premise now supplies actualJ neutrality. Original Object domain/accepted
+application inputs internally expose one common Gamma, raw inputs/output,
+parameter and all window/member facts. The original source H+ certificate
+consumer classifies only its FIRST quotient-edge vertex and retains its exact
+ordinary suffix to the requested endpoint. One globally calibrated final tuple
+retains the complete Package and every predecessor law with these new rules.
+
+All seven exact aliases and 36 further audited declarations use only standard
+axioms. The gate/preflight union has 2008 successful source-matched native
+modules. All fourteen frozen files, inherited mathematical sources and prior
+verification evidence are unchanged. Checker, pins, manuscripts, CI and fixed
+serialized limits remain unchanged. No full-root or remote-CI pass is claimed.
+
+Next: reconstruct the original function-child Object certificate and accepted
+Object application at the first vertex for the finite-type consumer, then pay
+neutral/arrow computability and suffix closure. Raw child edge, target typing
+and actualJ alignment are already checked. Later function reducts may be lambdas;
+do not impose application shape on the final H+ endpoint. Lambda/substitution,
+multiset, constructors and all-term accessibility remain pending. Paper06
+`lem:id1` is pending; register **171 checked, 2 inherited, 16 pending / 189**.
+Read [the accepted checkpoint](verification/continuation-2026-11-10/source-neutral-application/STATUS.md) and [next steps](verification/continuation-2026-11-10/source-neutral-application/NEXT-STEPS.md).
+All owned proof-author/compiler jobs have completed. Publish to the existing
+cumulative branch with a non-force update preserving intervening work.
+
+---
+
+# Previous checkpoint — original quotient-neutral application inversion
+
+Seven exact supporting contracts in 35 new Lean modules extend `f898851d`
+on the existing cumulative branch. Original accepted raw steps reconstruct the
+SAME uniform quotient checker; neutral quotient edges have literal same-type
+bottom or an accepted function-child quotient edge. The typed actualJ equation
+retains the requested function and internally folds the raw argument. The
+aligned edge consumer retains that requested RAW argument in its target actualJ
+graph and derives the target function's typing. One globally calibrated final
+tuple retains the complete Package and all prior laws with both inversion rules.
+
+All seven exact aliases and 43 additional declarations use standard axioms.
+The gate/preflight union has 1983 source-matched successful native modules;
+all eleven frozen files and all inherited mathematical sources are unchanged.
+Fixed serialized resource limits, checker, pins, manuscripts and CI are retained.
+Register: **171 checked, 2 inherited, 16 pending / 189**. Paper06 `lem:id1`
+remains pending. No full-root or remote-CI pass is claimed.
+
+Next: source/Object application wrappers and the original non-lambda-premise
+neutrality bridge, then path wrappers and finite-type neutral/arrow computability.
+Do not assume that later function reducts remain non-lambdas. Lambda/substitution,
+multiset, constructors and all-term accessibility remain pending. Read the
+[accepted checkpoint](verification/continuation-2026-11-10/quotient-neutral-inversion/STATUS.md) and [next steps](verification/continuation-2026-11-10/quotient-neutral-inversion/NEXT-STEPS.md).
+All owned author/compiler jobs are complete. Publish on the existing cumulative
+branch using a non-force update; preserve any intervening work.
+
+---
+
+# Previous checkpoint — canonical function neutrality
+
+**171 checked, 2 inherited, 16 pending / 189**, derived from
+[TARGETS.json](TARGETS.json). Six new exact contracts prove function-neutrality
+reflection through the SAME selected descent and full canonical fold, common
+canonical-output comparison, and its original raw-step consumer. One global
+final tuple retains the complete calibrated Package and all prior root,
+neutral-bottom and variable Object laws.
+
+The packet has 24 new modules, six exact aliases and 86 additional
+standard-axiom declaration audits. All 1,871 local gate dependencies have
+source-matched native evidence; the separate preflight also passed. Accepted
+mathematical sources, frozen targets and resource limits are unchanged.
+Read the [accepted checkpoint](verification/continuation-2026-11-09/function-neutrality/STATUS.md)
+and [next proof obligations](verification/continuation-2026-11-09/function-neutrality/NEXT-STEPS.md).
+Canonical application-component coherence, quotient neutral inversion and
+arrow computability remain pending, as does paper06 `lem:id1`. No full-root
+or remote-CI pass is claimed.
+
+# Previous checkpoint — canonical constructor reflection, 10 November 2026
+
+**171 checked, 2 inherited, 16 pending / 189**, derived from
+[TARGETS.json](TARGETS.json). Seven new exact supporting contracts preserve
+and reflect root constructor tags and application domains through the SAME
+selected bounded descent and full canonical fold. The original application
+eliminator recovers both certified child outputs and the final selected-leaf
+graph. One globally calibrated shape/neutral/variable tuple retains the full
+source Package and prior neutral and variable Object laws.
+
+The packet has 22 new modules, seven exact aliases and 92 additional
+standard-axiom declaration audits. All 1,842 local gate dependencies have
+source-matched native evidence; the separate preflight also passed. Accepted
+mathematical sources, frozen targets and resource limits are unchanged.
+Read the [accepted checkpoint](verification/continuation-2026-11-09/canonical-constructor-shape/STATUS.md)
+and [next proof obligations](verification/continuation-2026-11-09/canonical-constructor-shape/NEXT-STEPS.md).
+Function-child neutrality and canonical component coherence remain pending,
+as does the full paper06 `lem:id1`. No full-root or remote-CI pass is claimed.
+
+# Previous checkpoint — closed existential word arithmetic, 9 November 2026
+
+**171 checked, 2 inherited, 16 pending / 189**, derived from
+[TARGETS.json](TARGETS.json). Paper08 `thm:existential` is now checked by the
+actual jointly computable closed word solver on the original global domains.
+The exact final gate, 125 owned declaration audits and 679 current dependency
+sources have source-matched native evidence using only standard axioms.
+Read the [register adoption](audits/CLOSED-EXISTENTIAL-COMPLETION-2026-11-09.json).
+Native receipts and logs are retained locally; their portable publication is
+still held. The public root selects the accepted gate, but no full-root build
+or remote-CI pass is claimed. The separate LevelTwo consumer and full
+first-order BASE remain pending. The [current release](RESUME-2026-11-09.md)
+continues through 21:30 UTC; older stop instructions and counts are historical.
+
+# Previous checkpoint — reconciled main, 9 November 2026
 
 **170 checked, 2 inherited, 17 pending / 189**, derived from
 [TARGETS.json](TARGETS.json). Both agents' checkpoints and the remaining unique

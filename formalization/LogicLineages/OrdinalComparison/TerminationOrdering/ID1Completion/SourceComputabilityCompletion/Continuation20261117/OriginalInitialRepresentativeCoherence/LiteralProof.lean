@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalInitialRepresentativeCoherence.Targets
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalInitialRepresentativeCoherence.LiteralProof
+/-- Original record-field identity, with no evaluation/reflection step. -/
+theorem representative : Targets.LiteralRepresentativeIdentity := by
+  intro n arity p W
+  rfl
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalInitialRepresentativeCoherence.LiteralProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalInitialRepresentativeCoherence.LiteralProof

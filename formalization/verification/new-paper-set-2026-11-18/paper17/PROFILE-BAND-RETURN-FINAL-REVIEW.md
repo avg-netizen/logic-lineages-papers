@@ -1,0 +1,9 @@
+# Independent final review: actual profile-band return
+
+Approved supporting only. Independently reconciled 213 current-source native modules, zero errors and exact fixed_actualProfileBandReturn standard-only alias; independent evidence equals author evidence. All four frozen pins match. Native receipt 1794990510449070871-5, first attempt; no reviewer compiler invocation.
+
+Read full expanded target, ProfileIntervalCouplingProof and ProfileBandReturnProof. Agreement is on [zeta,E), not at E; initial finite tails and E-charges are genuinely unrestricted. At zeta=E the actual limit-part intervals give clock-zero first hits directly. For zeta<E the proof derives candidate affordability from the actual endpoint norm identity and common source radius. Both initial descents use the common actual next budget f(t), and their maxima lie below omega^E, where pointwise profile equality applies. The first step therefore couples actual relative maxima without assuming the two initial relative states or finite tails agree.
+
+The subsequent well-founded interval proof uses both actual greatest-candidate specifications, maintains target and prefix affordability through actual next norms, and couples every ensuing maximum. Exact FirstEntry witnesses exclude earlier hits; the initial step is prepended using the genuine ordinal separation of the lower target from omega^E. Nonfinite target survival then proves both original norm clocks f^[i](t). No norm monotonicity, supplied visit or cost oracle is substituted.
+
+This proves affordable pure-target coupling only. It does not pay construction/norm bounds for a highest-piece endpoint, a thick-block visit, clipped-limit separation, terminal coefficients, divergence-to-entry ordering or full effective equal-gap comparison. Those remain separate obligations.

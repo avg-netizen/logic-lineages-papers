@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.HereditaryEncodedFitsProof
+namespace LogicLineages.PersistentMarking.HereditaryEncodedFitsChecks
+theorem exact_EncodedFits : HereditaryEncodingTargets.EncodedFits := HereditaryEncodedFitsProof.fits
+#print axioms exact_EncodedFits
+end LogicLineages.PersistentMarking.HereditaryEncodedFitsChecks

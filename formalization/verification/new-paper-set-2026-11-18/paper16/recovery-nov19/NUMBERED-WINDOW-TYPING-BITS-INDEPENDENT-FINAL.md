@@ -1,0 +1,7 @@
+# Independent final: actual syntax equality and finite-context typing bits
+
+Eight supporting exact contracts accepted. All three comparator modules and six proof leaves read in full, original source/domain correspondence checked,20 own frozen pins and final authored hashes verified. Actual mutually recursive constructor equality preserves every field; finite context lookup is proven pointwise with exact prefix/push/extension. Structural typing retains all head declarations, numbered output annotations, original extras and both auxiliary application type checks. Window reflection is against the unchanged InWindow, not a newly defined surrogate.
+
+Final clean native1795087338152511759-2 passes36/36 under unchanged core caps, peak495804KiB, reaped. Independent current recursive replay/source/compiler/object/input-key/profile/receipt/log review passes36modules,49mergedpins and all8standard-only aliases with zeroerrors. Prior ordinary failures and exact editions are archived, including rejected elaborator recovery axioms in the failed root; final native audit has no such axioms. Each minimal repair was exact-diff reviewed and independently inverse-verified.
+
+C-parametric correctness does not encode arbitrary lookup functions. Concrete finite List Ty binder inputs separately reflect the actual original context. This is not exact primary-class membership, least representatives, arithmetic definability, ID1 accessibility or a numbered statement promotion. No full-root/CI claim.

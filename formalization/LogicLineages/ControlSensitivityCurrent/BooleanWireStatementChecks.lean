@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.BooleanWireProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.BooleanWire.StatementChecks
+theorem fixed_exactBooleanWires : BooleanWireTargets.ExactBooleanWires := exactBooleanWires
+#audit_namespace LogicLineages.ControlSensitivityCurrent.BooleanWire.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.BooleanWire.StatementChecks

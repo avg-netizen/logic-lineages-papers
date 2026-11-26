@@ -1,0 +1,80 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSourceNeutralApplicationDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepPeelSupportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSourceNeutralApplicationFieldsProof
+open FirstOrder Language Source PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalOriginalUniformDescentSelection (Data)
+open InternalApplicationCertificateConstructors InternalApplicationStepPeelSupportProof
+open SourceComputabilityFormulaSupportProof (numeral)
+open NumberedLeastCodeRepresentative (typeNumber)
+open OriginalSourceNeutralApplication
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+variable {body : Positive (Fin 1)} {alpha : Type} {Gamma : List (Formula alpha)}
+  {data : Data} {window : Program 1} {comp : JointGammaComputability.Data}
+  {context : Nat} {sigma tau : Ty}
+  {functionObject argumentObject outputObject gammaCode function argument out parameter : OTerm alpha}
+  (h : Nonempty (Derivation body Gamma
+    (Recovered data window comp context sigma tau
+      functionObject argumentObject outputObject gammaCode function argument out parameter)))
+
+include h
+
+theorem domainOf : Nonempty (Derivation body Gamma
+    (InternalComputabilityDownward.domain comp context sigma tau functionObject argumentObject)) :=
+  andLeft h
+
+theorem acceptedOf : Nonempty (Derivation body Gamma
+    (InternalComputabilityApplication.accepted comp sigma tau (numeral context)
+      functionObject argumentObject outputObject)) :=
+  andLeft (andRight h)
+
+theorem functionPairOf : Nonempty (Derivation body Gamma
+    (graph2 InternalPairing.pairing functionObject gammaCode function)) :=
+  andLeft (andRight (andRight h))
+
+theorem argumentPairOf : Nonempty (Derivation body Gamma
+    (graph2 InternalPairing.pairing argumentObject gammaCode argument)) :=
+  andLeft (andRight (andRight (andRight h)))
+
+theorem outputPairOf : Nonempty (Derivation body Gamma
+    (graph2 InternalPairing.pairing outputObject gammaCode out)) :=
+  andLeft (andRight (andRight (andRight (andRight h))))
+
+theorem parameterPairOf : Nonempty (Derivation body Gamma
+    (graph2 InternalPairing.pairing parameter (numeral context) gammaCode)) :=
+  andLeft (andRight (andRight (andRight (andRight (andRight h)))))
+
+theorem applicationPremisesOf : Nonempty (Derivation body Gamma
+    (InternalOriginalUniformApplicationTyping.applicationPremises data
+      (numeral (typeNumber (.arrow sigma tau))) (numeral (typeNumber sigma))
+      (numeral (typeNumber tau)) function argument out parameter)) :=
+  andLeft (andRight (andRight (andRight (andRight (andRight (andRight h))))))
+
+theorem inputPremisesOf : Nonempty (Derivation body Gamma
+    (OriginalNeutralApplication.InputPremises data window
+      (numeral (typeNumber (.arrow sigma tau))) (numeral (typeNumber sigma))
+      (numeral (typeNumber tau)) function argument parameter)) :=
+  andLeft (andRight (andRight (andRight (andRight (andRight (andRight (andRight h)))))))
+
+theorem actualJOf : Nonempty (Derivation body Gamma
+    (InternalParameterizedCanonicalResultFold.applicationGraph data out
+      (numeral (typeNumber sigma)) (numeral (typeNumber tau)) function argument parameter)) :=
+  andLeft (andRight (andRight (andRight (andRight (andRight (andRight (andRight (andRight h))))))))
+
+theorem nonLambdaEquivalenceOf : Nonempty (Derivation body Gamma
+    ((nonLambdaObject functionObject).iff (OriginalNonLambdaApplication.nonLambda function))) :=
+  andRight (andRight (andRight (andRight (andRight (andRight (andRight (andRight (andRight h))))))))
+
+theorem nonLambdaOf
+    (hn : Nonempty (Derivation body Gamma (nonLambdaObject functionObject))) :
+    Nonempty (Derivation body Gamma (OriginalNonLambdaApplication.nonLambda function)) := by
+  obtain ⟨hi⟩ := nonLambdaEquivalenceOf h
+  obtain ⟨hn⟩ := hn
+  exact ⟨Derivation.implicationElimination (Derivation.conjunctionLeft hi) hn⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSourceNeutralApplicationFieldsProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSourceNeutralApplicationFieldsProof

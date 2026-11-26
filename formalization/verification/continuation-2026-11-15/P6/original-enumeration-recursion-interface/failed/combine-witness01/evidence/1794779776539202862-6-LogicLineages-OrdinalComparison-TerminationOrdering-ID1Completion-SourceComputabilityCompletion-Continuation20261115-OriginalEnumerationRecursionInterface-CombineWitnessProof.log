@@ -1,0 +1,23 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEnumerationRecursionInterface/CombineWitnessProof.lean:34:96: error: unsolved goals
+alpha beta : Type
+n : ℕ
+out answers ts hs ls tb vb prior opened value : OTerm alpha
+sub : alpha → OTerm beta
+⊢ (programGraph InternalRawListRecursion.lookup (Term.subst prior sub)
+            (Fin.cons z (Fin.cons (Term.subst answers sub) Fin.elim0)) ⊓
+          programGraph InternalRawListRecursion.lookup (Term.subst opened sub)
+            (Fin.cons (suc z) (Fin.cons (Term.subst answers sub) Fin.elim0)) ⊓
+        programGraph (OriginalEnumerationConstructorLayer.layer n) (Term.subst value sub) fun i =>
+          Term.subst (![ts, hs, ls, tb, vb, prior, opened] i) sub) ⊓
+      eqn (Term.subst out sub) (suc (Term.subst value sub)) =
+    programGraph InternalRawListRecursion.lookup (Term.subst prior sub)
+            (Fin.cons z (Fin.cons (Term.subst answers sub) Fin.elim0)) ⊓
+          programGraph InternalRawListRecursion.lookup (Term.subst opened sub)
+            (Fin.cons (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+              (Fin.cons (Term.subst answers sub) Fin.elim0)) ⊓
+        programGraph (OriginalEnumerationConstructorLayer.layer n) (Term.subst value sub)
+          ![Term.subst ts sub, Term.subst hs sub, Term.subst ls sub, Term.subst tb sub, Term.subst vb sub,
+            Term.subst prior sub, Term.subst opened sub] ⊓
+      eqn (Term.subst out sub) (suc (Term.subst value sub))
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationRecursionInterface.CombineWitnessProof.matrix._proof_1: [propext]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalEnumerationRecursionInterface/CombineWitnessProof.lean:78:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationRecursionInterface.CombineWitnessProof.positiveRename: forbidden axiom dependency sorryAx

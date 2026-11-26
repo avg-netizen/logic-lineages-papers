@@ -1,0 +1,20 @@
+module
+public import LogicLineages.PermittedControl.ActualCanonicalZeroAlphabetTargets
+import LogicLineages.PermittedControl.ActualCanonicalZeroAlphabetProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualCanonicalZeroAlphabet
+
+theorem fixed_exactCertifiedExpansion : ExactCertifiedExpansion := exactCertifiedExpansion
+theorem fixed_exactCanonicalZeroAlphabet : ExactCanonicalZeroAlphabet := exactCanonicalZeroAlphabet
+theorem fixed_exactCanonicalTraceAlphabet : ExactCanonicalTraceAlphabet := exactCanonicalTraceAlphabet
+
+theorem fixed_fullActualCanonicalZeroAlphabet : FullActualCanonicalZeroAlphabet :=
+  ⟨fixed_exactCertifiedExpansion,fixed_exactCanonicalZeroAlphabet,fixed_exactCanonicalTraceAlphabet⟩
+
+#print axioms fixed_exactCertifiedExpansion
+#print axioms fixed_exactCanonicalZeroAlphabet
+#print axioms fixed_exactCanonicalTraceAlphabet
+#print axioms fixed_fullActualCanonicalZeroAlphabet
+
+end LogicLineages.PermittedControl.ActualCanonicalZeroAlphabet

@@ -1,0 +1,13 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportTaskProof.lean:60:13: error: Type mismatch: After simplification, term
+  hs
+ has type
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal (call ctag (head ::ᵥ tail ::ᵥ nil)).succ
+      (call ctag (LiteralSyntaxStep.taskCall ptag (kind ctor) (call r (head ::ᵥ nil)) ::ᵥ tail ::ᵥ nil)).succ)
+but is expected to have type
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal (((call ctag (head ::ᵥ tail ::ᵥ nil)).succ ::ᵥ tok ::ᵥ nil).get 0)
+      (((call ctag (LiteralSyntaxStep.taskCall ptag (kind ctor) (call r (head ::ᵥ nil)) ::ᵥ tail ::ᵥ nil)).succ ::ᵥ
+            Term.numeral (token ctor) ::ᵥ nil).get
+        0))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepTransportTaskProof.lean:66:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.StepTransportTaskProof.constructorInput: forbidden axiom dependency sorryAx

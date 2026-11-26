@@ -1,0 +1,42 @@
+{
+  "state": "authored-static-only-pending-independent-review-and-native-proof-gate",
+  "target_preflight": {
+    "module": "LogicLineages.PermittedControl.LongFieldEffectiveTailTargets",
+    "receipt": "1795261582992931206-6",
+    "verification": "coordinator-reported PASS; all target freeze pins independently recomputed"
+  },
+  "freeze_manifest": {
+    "path": "formalization/verification/continuation-2026-11-21/PAPER17-LONG-FIELD-EFFECTIVE-TAIL-FREEZE.json",
+    "sha256": "08ae129f252c30eff1795f81b6d675193fd9a24c80f25cb7b159dd18c9cfd250",
+    "pins_rechecked": 14
+  },
+  "new_source_hashes": {
+    "formalization/LogicLineages/PermittedControl/LongFieldDistinctBoundProof.lean": "6e09dde3a499f3de8d5ab9bdd61cc3f33fb26e9cd6432b308c1811de3e0f30b1",
+    "formalization/LogicLineages/PermittedControl/LongFieldSameBoundProof.lean": "50992897b6e55221195ff227fb33f4d5915069920437fb8bec8de12ebcbfb77a",
+    "formalization/LogicLineages/PermittedControl/LongFieldTailCalibrationProof.lean": "5ccefc7f16c634d600d64534b6cca0bc051dbe4c59edf81029dff270478dd33f",
+    "formalization/LogicLineages/PermittedControl/LongFieldTailPrimitiveProof.lean": "722c42fc38afdb6e4e2460db27453c4ea03a857ecf0ba50fd1e7343b94241362",
+    "formalization/LogicLineages/PermittedControl/LongFieldEffectiveTailProof.lean": "33539ed2604d34311ef044e367cfad6ea1345e4cf004c89ca555742849604551",
+    "formalization/LogicLineages/PermittedControl/LongFieldEffectiveTailStatementChecks.lean": "a18f210a3ed8bfea5152fed667a518057ae117759d333523fe75cf915cb5294f"
+  },
+  "anchors": {
+    "formalization/LogicLineages/PermittedControl/EntryLinearProof.lean": "330e531a903a2e4f178c8f027b550a20030999fd3c6fd76af15b785dc5fe306f",
+    "formalization/LogicLineages/PermittedControl/EntryTableProof.lean": "ce1986860094d7c84c0c1404640ca9beee210110c4acb5bede35b7f66f008d4f",
+    "formalization/LogicLineages/PermittedControl/InverseTableProof.lean": "d7b9447cfb9a7fca9a908c868976e60a1464fbc75cfac88d75fb852cbec55549",
+    "formalization/LogicLineages/PermittedControl/OrdinalEndpointProgramsProof.lean": "72a7b807a3d407d2eccb2a79e985b4c9157f52d22ddda93cc0eec32ffbdf7875",
+    "formalization/LogicLineages/OrdinalComparison/RawNormCode.lean": "9e6b0de72f65126061c63aadb1d24f4b73d442410c479d6f32d3d0dc708dc4e9"
+  },
+  "requested_native_gate": "LogicLineages.PermittedControl.LongFieldEffectiveTailStatementChecks",
+  "expected_exact_aliases": [
+    "LogicLineages.PermittedControl.StatementChecks.fixed_longFieldTailEffective",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_longFieldDistinctAtBound",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_longFieldSameAtBound",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_fullLongFieldEffectiveTail"
+  ],
+  "allowed_standard_axiom_names": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "closure_note": "Allowed set is upper bound only; actual axiom closure and source-matched recursive native evidence under original caps required. No compiler by proof author.",
+  "scope": "Specified LongField tails and both actual comparisons only; no arbitrary short assembly, raw output form, low strips, whole printed theorem or numbered register promotion."
+}

@@ -1,0 +1,45 @@
+--- failedR2/NativeProof.lean
++++ R3/NativeProof.lean
+@@ -18,13 +18,15 @@
+    Encodable.encode replacement ::ᵥ nil) := by
+   ext i
+   cases i using Fin.cases with
+-  | zero => rfl
++  | zero =>
++   simp only [g,List.Vector.get_ofFn,List.Vector.get_cons_zero,List.Vector.get_cons_succ,projectionEval,v,get2_0,get2_1]
+   | succ i => cases i using Fin.cases with
+     | zero =>
+      change evaluate initialState v = Encodable.encode ((some [(1,1)],[]) : GorbowSubstitutionCode.OutputState)
+      exact initialAt (Encodable.encode formula) (Encodable.encode replacement)
+     | succ i => cases i using Fin.cases with
+-      | zero => rfl
++      | zero =>
++       simp only [g,List.Vector.get_ofFn,List.Vector.get_cons_zero,List.Vector.get_cons_succ,projectionEval,v,get2_0,get2_1]
+       | succ i => exact Fin.elim0 i
+  change evaluate UniformClosedSubstitutionRawFold.foldCode (List.Vector.ofFn (fun i => evaluate (g i) v)) = _
+  rw [hargs]
+@@ -34,13 +36,21 @@
+  evaluate outputCode (Encodable.encode formula ::ᵥ Encodable.encode replacement ::ᵥ nil) =
+  Encodable.encode (GorbowSubstitutionCode.subRaw 1 1 0 [replacement] formula) := by
+  rw [outputCode,oneEval,rawFoldAt formula replacement hr,HistoryDecoder.NativeProof.evaluateDecoder]
+- simp only [HistoryDispatcher.NativeProof.encodeProd,HistoryDecoder.NativeProof.coordinate,ite_true,Nat.unpair_pair]
+- rfl
++ simp only [HistoryDecoder.NativeProof.coordinate,ite_true]
++ have hproj (s : GorbowSubstitutionCode.OutputState) :
++  (Nat.unpair (Encodable.encode s)).2 = Encodable.encode s.2 := by
++  obtain ⟨state,out⟩ := s
++  rw [HistoryDispatcher.NativeProof.encodeProd,Nat.unpair_pair]
++ simpa only [GorbowSubstitutionCode.subRaw] using
++  hproj (formula.foldl (GorbowSubstitutionCode.subStep 1 0 [replacement]) (some [(1,1)],[]))
+ theorem exactOriginalInstance : Targets.ExactOriginalInstance := by
+  intro formula replacement
++ have ht : evaluate TwoSol20261113.ReflexivityRecognizer.termValidator (Encodable.encode replacement ::ᵥ nil) =
++  HistoryDispatcher.truth (GorbowSyntaxValidation.validTerm 0 replacement) :=
++  TwoSol20261113.ReflexivityRecognizer.NativeProof.nativeTerm replacement
+  simp only [instanceCode,chooseEval,twoEval,formulaGuard,termGuard,oneEval,constantEval,
+   projectionEval,get2_0,get2_1,LiteralSyntaxValidator.NativeProof.formulaEncoded,
+-  TwoSol20261113.ReflexivityRecognizer.NativeProof.nativeTerm,equalEval]
++  ht,equalEval]
+  by_cases hf : GorbowSyntaxValidation.validFormula 1 formula = true
+  · by_cases hr : GorbowSyntaxValidation.validTerm 0 replacement = true
+    · simp only [hf,hr,HistoryDispatcher.truth,ite_true,Nat.one_ne_zero,ite_false]

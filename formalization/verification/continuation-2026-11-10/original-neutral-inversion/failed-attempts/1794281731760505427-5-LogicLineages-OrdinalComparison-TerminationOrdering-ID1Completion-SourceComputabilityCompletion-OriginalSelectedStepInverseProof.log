@@ -1,0 +1,19 @@
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalSelectedStepInverseProof.lean:120:29: error: Type mismatch: After simplification, term
+  hw
+ has type
+  Nonempty
+    (Derivation body Theta
+      (peeledBranch (selectedEndpoint data) oldStep d e arrow f g a k child (suc z) (Term.relabel q state)
+          (Term.relabel (q ∘ j) S) (Term.relabel (q ∘ j) T) (Term.relabel (q ∘ j) K) (Term.relabel (q ∘ j) parameter) ⊓
+        stepAccepted data oldStep f g k (Term.relabel (q ∘ j) parameter)))
+but is expected to have type
+  Nonempty
+    (Derivation body Theta
+      (InverseGuardTargets.Peeled (selectedEndpoint data) oldStep d e arrow f g a k child InternalOriginalStepGuard.one
+          (Term.relabel q state) (Term.relabel (q ∘ j) S) (Term.relabel (q ∘ j) T) (Term.relabel (q ∘ j) K)
+          (Term.relabel (q ∘ j) parameter) ⊓
+        stepAccepted data oldStep f g k (Term.relabel (q ∘ j) parameter)))
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepInverseProof.peeledStep: [propext,
+ Classical.choice,
+ Quot.sound]
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalSelectedStepInverseProof.lean:125:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepInverseProof.actualSelectedStepElimination: forbidden axiom dependency sorryAx

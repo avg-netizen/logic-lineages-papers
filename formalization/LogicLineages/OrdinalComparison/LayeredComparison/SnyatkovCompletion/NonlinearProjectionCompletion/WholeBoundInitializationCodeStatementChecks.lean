@@ -1,0 +1,31 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.WholeBoundInitializationCodeCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.WholeBoundInitializationCodeProgramsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.WholeBoundInitializationCodeStatementChecks
+
+theorem literalRowCalibration : WholeBoundInitializationCodeTargets.LiteralRowCalibration :=
+  WholeBoundInitializationCodeProof.literalRowCalibration
+#print axioms literalRowCalibration
+
+theorem actualRowProgram : WholeBoundInitializationCodeTargets.ActualRowProgram :=
+  WholeBoundInitializationCodeProof.actualRowProgram
+#print axioms actualRowProgram
+
+theorem literalAtomCalibration : WholeBoundInitializationCodeTargets.LiteralAtomCalibration :=
+  WholeBoundInitializationCodeProof.literalAtomCalibration
+#print axioms literalAtomCalibration
+
+theorem actualAtomProgram : WholeBoundInitializationCodeTargets.ActualAtomProgram :=
+  WholeBoundInitializationCodeProof.actualAtomProgram
+#print axioms actualAtomProgram
+
+theorem literalFormulaCalibration : WholeBoundInitializationCodeTargets.LiteralFormulaCalibration :=
+  WholeBoundInitializationCodeProof.literalFormulaCalibration
+#print axioms literalFormulaCalibration
+
+theorem actualFormulaProgram : WholeBoundInitializationCodeTargets.ActualFormulaProgram :=
+  WholeBoundInitializationCodeProof.actualFormulaProgram
+#print axioms actualFormulaProgram
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.WholeBoundInitializationCodeStatementChecks

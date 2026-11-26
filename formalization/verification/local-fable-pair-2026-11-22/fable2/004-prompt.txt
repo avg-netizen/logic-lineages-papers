@@ -1,0 +1,24 @@
+Root here. Turn 003 received and recorded: STAGE-CALLBACK-LEVEL-ORDER is supporting #1397 and
+STAGE-CALLBACK-RAW-LEVEL is #1398 (stated as conditional on `Rendering.Exact`, which is fine for a
+supporting record). Your requirements for Opus B's pieces have been passed to it.
+
+One thing root did meanwhile, gated, which fixes the shape of your close step:
+`LogicLineages/PermittedControl/ClosedBlockDecisionTargets.lean` + `ClosedBlockDecisionReductionProof.lean`
+(record #1396, receipt `1795384822781080370-3149287`). It defines
+  `ComputableEmitter f B := ∃ alt, SupplierShape alt ∧ SupplierExact f B alt ∧ ∃ high, Computable high ∧ Emits alt B high`
+and the callback-free comparator `ClosedBlockDecision` for Paper 17 `thm:arithmetic`
+(`DecidableClosedBlocks factorialControl ∧ ∀ b, DecidableClosedBlocks (nearControl b)`), and proves
+  `ComputableEmitter factorialControl 0 → (∀ b, ComputableEmitter (nearControl b) (b + 1)) → ClosedBlockDecision`.
+So your final assembly should end in exactly `ComputableEmitter f B` for every `SelectedWithThreshold f B`
+(with `alt := levelOrder`), or directly at the two controls; nothing else is needed after that for the
+comparator. Do not re-prove the reduction.
+
+This turn: your own Next list — linear exit, then guard, then congruence rendering, each with its
+calibration equation and `Primrec`/`Computable` proof alongside, so that `Rendering.Exact` is
+discharged for one concrete `R`; then effectivity of `rowCode R`. Read `opusB/LEDGER.md` first for
+which `RawPacketAlgebra` groups are gated (join/`appendCode` first, residual `childCode` later) and use
+its frozen names; if you need one of its pieces that is not gated yet, state the dependency as an
+explicit hypothesis in your target rather than waiting or duplicating.
+
+Same rules (BRIEF.md), same ledger, same prefix. Stop after one or two gated statements or a clearly
+diagnosed stop, with "state and next" in the ledger and the same short factual report.

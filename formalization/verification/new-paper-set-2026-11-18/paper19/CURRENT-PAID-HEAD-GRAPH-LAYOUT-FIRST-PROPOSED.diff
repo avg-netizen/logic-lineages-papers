@@ -1,0 +1,72 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphLayoutProof.lean
+@@ -33,13 +33,14 @@
+     (idx : Nat→Nat) (x : Variable Γ .ground) :
+     route hg z idx x = slot z (idx (variableIndex x)) := rfl
+ 
+-theorem groundCons {Γ} (hg : ∀ σ ∈ Γ, σ = .ground) : ∀ σ ∈ .ground :: Γ, σ = .ground := by
++theorem groundCons {Γ : List Ty} (hg : ∀ σ ∈ Γ, σ = .ground) : ∀ σ ∈ .ground :: Γ, σ = .ground := by
+   intro σ h
+   rcases List.mem_cons.mp h with rfl|h
+   · rfl
+   · exact hg σ h
+ 
+-theorem directGround : ∀ σ ∈ DirectCtx, σ = .ground := groundCons (groundCons (by simp))
++theorem directGround : ∀ σ ∈ DirectCtx, σ = .ground :=
++  groundCons (Γ:=[Ty.ground]) (groundCons (Γ:=[]) (by simp))
+ 
+ theorem exactS : Targets.ExactS := by
+   intro p f hf n
+@@ -58,7 +59,9 @@
+   change PolicyCollision.rawScalar p f ρ (BooleanCompiler.call actualS x).term-1=f (n+4)
+   unfold PolicyCollision.rawScalar
+   rw [hcall,hv]
+-  simp only [Option.map_some,Option.getD_some,he,OriginalDomain.finiteValue,Ordinal.card_nat,Cardinal.toNat_natCast]
++  change OriginalDomain.finiteValue (ParametricSourceSuccessor.denoteWith f
++    (fun c => ((ρ c+1 : Nat) : Ordinal)) (v 0))-1=f (n+4)
++  simp only [he,OriginalDomain.finiteValue,Ordinal.card_nat,Cardinal.toNat_natCast]
+   omega
+ 
+ /-- Any literal algebra map on the emitted grammar. Bounds apply only to
+@@ -81,10 +84,14 @@
+ 
+ theorem foldAnd (h : LayoutMap l r ta fa limit) (xs : List F) :
+     fa (xs.foldr l.and l.yes)=(xs.map fa).foldr r.and r.yes := by
+-  induction xs <;> simp only [List.foldr_nil,List.map_nil,List.foldr_cons,List.map_cons,h.trueValue,h.conjoin,*]
++  induction xs with
++  | nil => exact h.trueValue
++  | cons _ _ ih => simp only [List.foldr_cons,List.map_cons,h.conjoin,ih]
+ theorem foldOr (h : LayoutMap l r ta fa limit) (xs : List F) (a : F) :
+     fa (xs.foldr l.or a)=(xs.map fa).foldr r.or (fa a) := by
+-  induction xs <;> simp only [List.foldr_nil,List.map_nil,List.foldr_cons,List.map_cons,h.disjoin,*]
++  induction xs with
++  | nil => rfl
++  | cons _ _ ih => simp only [List.foldr_cons,List.map_cons,h.disjoin,ih]
+ 
+ theorem gate (h : LayoutMap l r ta fa limit) (small : List Nat) (u v arg : Nat)
+     (hu : u<limit) (hv : v<limit) (ha : arg<limit) :
+@@ -114,14 +121,16 @@
+   have hud : uSlot w δ<limit := by unfold uSlot directWidth at *; omega
+   simp only [List.map_cons,List.map_nil,h.ordering,h.equality,h.addition,h.constant,h.varAt _ ht,
+     h.varAt _ hlim,h.varAt _ hz,h.varAt _ hzero,h.varAt _ hv,h.varAt _ hu,h.varAt _ hud]
+-  congr 1
+-  apply List.map_congr_left
+-  intro j hj
+-  have hh := List.mem_range.mp hj
+-  apply h.gate
+-  · unfold uSlot directWidth at *; omega
+-  · unfold uSlot directWidth at *; omega
+-  · unfold argSlot directWidth at *; omega
++  have hm : (List.range δ).map (fun j => fa (fGate l small (uSlot w j) (uSlot w (j+1)) (argSlot w δ j))) =
++      (List.range δ).map (fun j => fGate r small (uSlot w j) (uSlot w (j+1)) (argSlot w δ j)) := by
++    apply List.map_congr_left
++    intro j hj
++    have hh := List.mem_range.mp hj
++    apply h.gate
++    · unfold uSlot directWidth at *; omega
++    · unfold uSlot directWidth at *; omega
++    · unfold argSlot directWidth at *; omega
++  simp only [List.map_map,Function.comp_def,hm]
+ 
+ theorem wholePart (h : LayoutMap l r ta fa limit) (w δ nξ base : Nat)
+     (hlim : directWidth w δ+1<limit) (small points : List Nat) (a : F) :

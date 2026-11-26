@@ -1,0 +1,21 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryNativeBoundDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryNativeBoundTargets
+open Source NumberedRewriteSyntax NumberedPrimaryEquivalence NumberedBottomVariable
+open OriginalHereditaryNativeBoundDefinitions
+/-- Structural size, not variable rank. Bottom erasure actually preserves it. -/
+def ActualSubstitutionSize : Prop :=
+  ∀ (Symbol : Type) (arity : Symbol → Nat) (Gamma Delta : List Ty) (tau : Ty)
+    (q : AuxTerm Symbol arity Gamma tau) (theta : NumberedRewriteSyntax.Substitution Symbol arity Gamma Delta),
+    BottomOrVariable theta → size (substitute q theta) = size q
+
+def ActualChildSize : Prop :=
+  ∀ (Symbol : Type) (arity : Symbol → Nat) (s t : State Symbol arity),
+    Child s t → size t.term.2 < size s.term.2 ∧ t.context.length ≤ s.context.length + 1
+
+def ActualTraceBound : Prop :=
+  ∀ (Symbol : Type) (arity : Symbol → Nat) (n : Nat) (s t : State Symbol arity),
+    Trace n s t → n + weight t ≤ weight s
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryNativeBoundTargets

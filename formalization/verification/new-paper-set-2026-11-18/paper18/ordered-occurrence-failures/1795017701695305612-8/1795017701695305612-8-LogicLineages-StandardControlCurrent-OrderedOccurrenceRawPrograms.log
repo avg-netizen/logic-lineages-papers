@@ -1,0 +1,45 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawPrograms.lean:73:99: error: unsolved goals
+code : Computable fun a => Code.formula a.2
+finished : Computable fun q => [(0, [], 0, 0, Code.formula q.2)]
+absent : Computable fun q => List.map (fun i => (1, q.1, i, 0, Code.formula q.2)) (inactive q.1 q.2)
+empty : PrimrecPred fun q => q.1 = []
+noAbsent : PrimrecPred fun q => inactive q.1 q.2 = []
+q : Input
+⊢ (if q.1 = [] then [(0, [], 0, 0, Code.formula q.2)]
+    else
+      bif decide (inactive q.1 q.2 = []) then
+        List.flatMap
+            (fun i =>
+              List.map
+                (fun j => (2, q.1.erase i, i, j, WindowCode.matrixSubstitute i (WindowCode.var j) (Code.formula q.2)))
+                (List.filter (fun j => j != i) q.1))
+            q.1 ++
+          List.flatMap
+            (fun ys =>
+              List.map
+                (fun oi =>
+                  (3, ys, name oi.1, oi.2,
+                    WindowCode.conjunction (strictOrder ys)
+                      (WindowCode.conjunction (maximal (live q.1 q.2) oi.1) (Code.formula q.2))))
+                (live q.1 q.2).zipIdx)
+            q.1.permutations
+      else List.map (fun i => (1, q.1, i, 0, Code.formula q.2)) (inactive q.1 q.2)) =
+    if q.1 = [] then [(0, [], 0, 0, Code.formula q.2)]
+    else
+      if inactive q.1 q.2 = [] then
+        List.flatMap
+            (fun i =>
+              List.map
+                (fun j => (2, q.1.erase i, i, j, WindowCode.matrixSubstitute i (WindowCode.var j) (Code.formula q.2)))
+                (List.filter (fun j => j != i) q.1))
+            q.1 ++
+          List.flatMap
+            (fun ys =>
+              List.map
+                (fun oi =>
+                  (3, ys, name oi.1, oi.2,
+                    WindowCode.conjunction (strictOrder ys)
+                      (WindowCode.conjunction (maximal (live q.1 q.2) oi.1) (Code.formula q.2))))
+                (live q.1 q.2).zipIdx)
+            q.1.permutations
+      else List.map (fun i => (1, q.1, i, 0, Code.formula q.2)) (inactive q.1 q.2)

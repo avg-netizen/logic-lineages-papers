@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.InverseTableProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_actualInverseTable : Targets.ActualInverseTable := actualInverseTable
+#print axioms fixed_actualInverseTable
+end LogicLineages.PermittedControl.StatementChecks

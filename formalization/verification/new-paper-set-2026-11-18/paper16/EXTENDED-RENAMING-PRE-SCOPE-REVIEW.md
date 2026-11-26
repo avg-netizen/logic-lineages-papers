@@ -1,0 +1,8 @@
+# Independent pre-scope: full auxiliary-tree injective renaming
+Approved supporting count-preserving equivariance scope for proof development. All seven frozen pins independently match. Compared all 25 actual ExtendedTree constructors with ExtendedMeasure and all seven judgment tags with renameJudgment.
+
+The explicit count includes every recursive premise: all three Marked2 witnesses, both matching/coverage multiset premises, ordered/whole/list companions and strict weak-child. Propositional typing, occurrence, permutation and prefix proofs are preserved obligations but need not add nodes to this induction count. Each constructor contributes one, ensuring actual premise trees are strictly smaller. The target constructs an actual renamed tree at the actual renamed judgment with equal count, not merely relation-level existence or an assumed covariance theorem.
+
+Renaming is injective typed-free-name substitution only, preserving heads, signatures, bound indices, argument order and annotations. Actual At/Remove/Split/nonempty/permutation/prefix/tuple witnesses must be transported with literal positions and types. Select/PSelect must use actual successful full-call covariance for free images; strict introduction actual mark covariance; Abs/FAbs actual fresh-name/opening identities. Whole-owner retyping equality must be proved. Equality transports must preserve the tree count.
+
+This correctly supports later finite-swap synchronization when a refining source contains a formerly fresh name erased by refinement. It does not by itself establish arbitrary substitution covariance, conservative elimination, prefix escape or comparison cut. No compiler run or source edits.

@@ -1,0 +1,10 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowCoverProgramProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowCoverProgramChecks
+open NumberedWindowCoverProgramTargets
+theorem exact_CoverGrammarProgram : CoverGrammarProgram := NumberedWindowCoverProgramProof.program
+#print axioms exact_CoverGrammarProgram
+end LogicLineages.PersistentMarking.NumberedWindowCoverProgramChecks

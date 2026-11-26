@@ -1,0 +1,16 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepSuccessProof.lean:36:2: error: Type mismatch: After simplification, term
+  hout.discharge.finish
+ has type
+  @Derivation (GorbowPRNumeralCalculation.Theory p) (ctx + 1 + 1)
+    (H.imp
+      (property s e c a
+        (Fin.cases (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) code)) Term.var 0).succ
+        (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) tok))
+        (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) result))))
+but is expected to have type
+  @Derivation T (ctx + 1 + 1)
+    (H.imp
+      (property s e c a (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) code)).succ
+        (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) tok))
+        (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) result))))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepSuccessProof.lean:74:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.StepSuccessProof.positive: forbidden axiom dependency sorryAx

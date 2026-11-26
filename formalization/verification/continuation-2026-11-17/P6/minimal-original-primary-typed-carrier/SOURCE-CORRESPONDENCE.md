@@ -1,0 +1,80 @@
+# Fresh minimal source-AST reconstruction
+
+This is a FRESH comparator, not the unchanged frozen OriginalPrimaryTypedCarrier
+target. The old packet is preserved; its gate stopped without passing. Here the
+candidate AST uses fresh namespaces recorded in DECLARATION-COMPARISON.json. Every
+needed original Program body is retained modulo namespace qualification. No old
+constant is shadowed. No generic Q parameter replaces actual enumeration/filter.
+This is source-AST reconstruction, NOT a native old/new equivalence theorem or an
+original full-root build. Proof/native release awaits independent review and the
+fresh named literal comparator gate. No helper-credit or acceptance is claimed.
+
+The ten-module cut removes proof-only imports that reintroduced blocked numbered
+and type-list CrossIntro induction syntax. It retains every original declaration
+in those definitions, including external value specifications. Existing H/G,
+primary, edge B and membership constants are unchanged. Import closure must be
+checked for excluded modules before native checking. Later proof modules must not
+import old Candidates/ClassCodes statement checks, which restore the bad closure.
+
+## Original source reconciliation (preserved from prior proposal)
+
+# Original filtered primary typed-carrier invariant
+
+Proposed exact internal endpoint only; no proof or acceptance yet.
+
+## Why unrestricted raw exchange typing was the wrong goal
+NumberedExchangePrimrecTargets.ActualPackedCalibration quantifies BOTH endpoints
+as Packed Symbol arity Gamma. NumberedExchangeCalibrationProof.termSound likewise
+receives an already typed target AuxTerm. Neither says raw codeExchange preserves
+typing on arbitrary raw Code endpoints. NumberedExchangeNeighborhoodDefinitions
+ordinaryNeighbors and numberedNeighbors use permutations.filterMap followed by
+argumentsFromList at the destination head's ORDERED argument-type list. The
+original reconstruction rejects positional annotation mismatches. Raw headMove
+retains the permutation but omits this reconstruction test. The verified
+same-application-head swap diagnostic therefore obstructs unrestricted raw typing
+preservation, not the original typed neighborhood theorem.
+
+## Actual original numeric caller
+ID1Completion/ContextUniformPrimaryDefinitions.lean defines:
+1. classCodes using the original size/label/context bounds and 2*size fuel;
+2. candidates = classCodes.filterMap (rawStructuralDecode arity Gamma);
+3. vertices = seed :: candidates;
+4. step = reached ++ pool.filter (fun r => reached.any (packedCodeExchange ... r));
+5. reachable and primaryList iterate this step inside that SAME pool.
+NumberedUniformPackedDecodingDefinitions.rawStructuralDecode retains the literal
+raw pair iff the existing decodeTerm succeeds. Thus the raw edge is intentionally
+broader than the typed relation, but original primary reachability only selects
+from already filtered vertices. Its target typing comes from the pool filter,
+not from a false preservation theorem for the raw edge.
+
+## Literal internal AST
+The endpoint fixes H = OriginalConcreteHeadSignature.signature n arity and
+G = OriginalDecodedContextValidity.contextGuard n. It uses T = the existing
+OriginalTypedDecoder.target H G, Q = OriginalCandidates.candidates n arity H,
+and the existing SeededPrimaryPool.primary T Q (TypedPrimaryEdge.edge B).
+The original installed structural supplier B is universally quantified and kept
+unchanged. This is stronger than requiring its native calibration, since the
+carrier invariant depends only on the literal pool-selection algorithm. It
+applies in particular to B chosen by OriginalCandidateInstallation.SelectedTuple;
+no alternate edge is installed and no relation is weakened.
+
+## Exact premises and proof obligations
+Premises are admitted seed, actual primary output graph and actual output-list
+membership. Conclusion is original T(candidate, SAME parameter)=1. There is NO
+premise of target typing, pool membership, successful rawStructuralDecode,
+semantic source coverage or arbitrary M/W preservation.
+The proof must query the actual pool internally, use SeededPrimaryPool's existing
+InternalPrimaryCarrier reached-subset-pool law, then use actual candidate retain
+facts from OriginalCandidates/OriginalCandidateInstallation. Seed equality and
+candidate retain branches must both reconstruct original T including G. A
+nonzero packedCheck retain witness must be normalized to original acceptance,
+not silently treated as graph output1 without the internal Boolean law.
+
+## Scope of what remains unpaid
+This is plain original packed typing plus original parameter-context admission.
+It is NOT arbitrary OriginalUniverseDecoder M/W preservation. Full source-universe
+membership additionally requires actual window/type/annotation coverage from the
+original classCodes enumeration, as well as the original bounds and context
+invariants. This theorem does not alone settle that coverage, global internal
+I/C or paper06 accessibility. The old raw universal target stays held. No accepted
+or frozen source is modified by this fresh proposal.

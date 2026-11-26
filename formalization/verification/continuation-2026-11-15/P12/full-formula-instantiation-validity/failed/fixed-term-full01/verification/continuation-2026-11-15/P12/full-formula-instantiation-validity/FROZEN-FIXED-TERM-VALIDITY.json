@@ -1,0 +1,25 @@
+{
+  "status": "Frozen exact1 fixed term validity; no proof; bound-variable native passed, independent acceptance pending",
+  "sources": {
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/FixedTermValidityTargets.lean": "f1538c8aefca0ae9eea3167c2d8accb2c1d4df4ca4341a5b779e2f417fa24667"
+  },
+  "original_validity_target": {
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/Targets.lean": "a30b23141502fbf21729c7d322eeee2e8623c7e9e3bb5722480c86bef0deb72e"
+  },
+  "original_substitution_definitions": {
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/Definitions.lean": "953cd8b36149b9fa9b33653dacd3189cac717fe878e49614a224089c50b5b976"
+  },
+  "scope": "All original Term constructors var/zero/succ/add/mul/universalFunction, at arbitrary Environment n depth inputs and arbitrary raw vector. Only actual local valid-vtag predicates for each runtime coordinate. No native Term0 list-image premise, no graph/value evaluator assumption.",
+  "proof_plan": [
+    "Structural induction on original Term n, retaining actual e/depth/raw/context G.",
+    "Variable .inl j uses exact BoundVariableValidity at Fin depth j; .inr i uses exact ClosedTermDepth with local actual validator proof for raw.get i.",
+    "Zero uses checked constructor row term1 with empty child list, followed by exact numeral cons encoding [1] normalization; do not replace fixed termValue numeral.",
+    "Succ/universalFunction use original constructor rows term2/term5 and one inductive child scan.",
+    "Add/mul use original term3/term4 and two child scans; rawSequence matches exact binaryValue append encoding by definition.",
+    "Exact comparator targets original FixedFormulaSubstitution.termValue, not a redefined semantic output."
+  ],
+  "remaining": [
+    "Formula validity induction for all12 constructors and lifted environment, including depth successor normalization.",
+    "Actual original tag13 antecedent/consequent implication validity and source integration."
+  ]
+}

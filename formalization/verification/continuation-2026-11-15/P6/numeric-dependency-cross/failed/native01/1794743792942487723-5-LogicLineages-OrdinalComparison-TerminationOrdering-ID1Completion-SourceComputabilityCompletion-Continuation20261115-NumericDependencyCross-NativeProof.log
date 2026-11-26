@@ -1,0 +1,26 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/NumericDependencyCross/NativeProof.lean:15:98: error: unsolved goals
+case e_a.e_a
+head tail left : ℕ
+⊢ ![Nat.pair (![left, head] 0) (![left, head] 1), tail] 0 = Nat.pair left head
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/NumericDependencyCross/NativeProof.lean:61:68: error: unsolved goals
+n : ℕ
+source target : NumberedAuxiliaryCoding.Code (Fin n)
+⊢ numbersNumber
+      (List.flatMap
+        (fun a =>
+          List.map
+            ((fun b => Nat.pair (NumberedLeastCodeRepresentative.codeNumber a) b) ∘
+              NumberedLeastCodeRepresentative.codeNumber)
+            (NumberedSyntaxBoundsPrimrecSupportProof.children target))
+        (NumberedSyntaxBoundsPrimrecSupportProof.children source)) =
+    numbersNumber
+      (List.flatMap
+        (fun a =>
+          List.map
+            ((fun child =>
+                Nat.pair (NumberedLeastCodeRepresentative.codeNumber child.1)
+                  (NumberedLeastCodeRepresentative.codeNumber child.2)) ∘
+              fun b => (a, b))
+            (NumberedSyntaxBoundsPrimrecSupportProof.children target))
+        (NumberedSyntaxBoundsPrimrecSupportProof.children source))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/NumericDependencyCross/NativeProof.lean:71:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.NumericDependencyCross.NativeProof.rowStepValue: forbidden axiom dependency sorryAx

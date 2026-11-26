@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullNormBallsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullNormBalls.StatementChecks
+theorem fixed_completeNormBalls : Targets.CompleteNormBalls := completeNormBalls
+#audit_namespace LogicLineages.CartierObserverCurrent.FullNormBalls.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullNormBalls.StatementChecks

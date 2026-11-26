@@ -1,0 +1,13 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowStatProgramProof
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowStatProgramChecks
+open NumberedWindowStatProgramTargets
+
+theorem exact_StatPrograms : StatPrograms := NumberedWindowStatProgramProof.programs
+
+#print axioms exact_StatPrograms
+
+end LogicLineages.PersistentMarking.NumberedWindowStatProgramChecks

@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.RawFieldComparisonFormTargets
+import LogicLineages.PermittedControl.RawFieldComparisonFormPrimitiveProof
+import LogicLineages.PermittedControl.RawFieldComparisonFormCalibrationProof
+
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_rawFieldComparisonFormEffective : FieldComparison.RawFieldComparisonFormEffective :=
+  FieldComparison.rawFieldComparisonFormEffective
+
+theorem fixed_rawFieldComparisonFormCalibration : FieldComparison.RawFieldComparisonFormCalibration :=
+  FieldComparison.rawFieldComparisonFormCalibration
+
+theorem fixed_fullRawFieldComparisonForm : FieldComparison.FullRawFieldComparisonForm :=
+  ⟨FieldComparison.rawFieldComparisonFormEffective,FieldComparison.rawFieldComparisonFormCalibration⟩
+
+#print axioms fixed_rawFieldComparisonFormEffective
+#print axioms fixed_rawFieldComparisonFormCalibration
+#print axioms fixed_fullRawFieldComparisonForm
+
+end LogicLineages.PermittedControl.StatementChecks

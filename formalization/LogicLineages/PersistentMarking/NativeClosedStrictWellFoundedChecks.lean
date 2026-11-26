@@ -1,0 +1,10 @@
+import LogicLineages.PersistentMarking.NativeClosedStrictWellFoundedProof
+
+namespace LogicLineages.PersistentMarking.NativeClosedStrictWellFoundedChecks
+open NativeIteratorStrictTargets
+
+theorem exact_ClosedNativeStrictWellFounded : ClosedNativeStrictWellFounded := NativeClosedStrictWellFoundedProof.wf
+
+#print axioms exact_ClosedNativeStrictWellFounded
+
+end LogicLineages.PersistentMarking.NativeClosedStrictWellFoundedChecks

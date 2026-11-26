@@ -1,0 +1,43 @@
+{
+  "status": "checked",
+  "base_commit": "1bd0f9d9ad68addb5bb23e6c6970578c97e5e00d",
+  "base_note": "Sources are new files on top of this commit at gate time; root commits them afterwards.",
+  "native_receipt": "1795386914033320087-3158455",
+  "native_receipt_sha256": "bcd4f06a5ccf5846ba4908206f530fafdd93266ec08e99a7ff26aaefffc85747",
+  "exact_gate": "LogicLineages.PermittedControl.StageEmitterGuardProof",
+  "gate_seconds": 1.382,
+  "gate_cpu_seconds": 1.32,
+  "peak_process_tree_rss_kib": 954672,
+  "named_axiom_output": {
+    "LogicLineages.PermittedControl.StageEmitter.exactRenderingFromGuard": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PermittedControl.StageEmitter.exactClosedBlockDecisionFromGuard": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PermittedControl.StageEmitter.fullStageEmitterGuard": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "verification": "One exact bounded Lean gate with focused source correspondence, no duplicate artifact replay.",
+  "profile": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "source_pins": {
+    "formalization/LogicLineages/PermittedControl/StageEmitterGuardTargets.lean": "268d81c12fe6f217712fe22510c796ca041f2fefc24436b7d54ea54f6712cfc8",
+    "formalization/LogicLineages/PermittedControl/StageEmitterGuardProof.lean": "a43a49cc6a69404e989749847b6f0e7b12508092e2260c64867463216e68d6ef",
+    "formalization/verification/local-fable-pair-2026-11-22/opusA/STAGE-EMITTER-SOURCE-MAP.md": "8969f11e9c882bd296033e50615cd7a701c5e587e03f38452b35e6bc7034a222"
+  }
+}

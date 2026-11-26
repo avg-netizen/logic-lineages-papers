@@ -1,0 +1,4 @@
+# SourceASTTerm supporting fresh gate
+Receipt1795014581030212648-9 under SOURCEASTFULLFIX-1508 passed; process reaped and ticket released. Three standard-only exact aliases. Current five pins verified unchanged from independently approved repairs. Empty-valuation binder annotation and genuine parsed-proposition repair each have prior approval plus applied confirmation. Malformed prior Semantic grouping remains preserved and UNACCEPTED; no status transfers from it.
+
+Ordinary proof failures retained in source-ast-term-draft01 through06, target failure in target-draft01. Actual source renaming and singleton-call semantics were freshly proved, then genuine structural CPS preservation and literal emitted cost/source-table bounds. Continuation specifications and budget premises are explicit supporting interfaces to instantiate later. No full Boolean/prefix coverage, encoded computation/bit complexity/shared-DAG output compiler theorem or hardness claim.

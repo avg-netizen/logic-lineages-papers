@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingCodePrimitiveProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingCodePrimitiveProof.lean
+@@ -41 +41,4 @@
+-    cases seen : p.2.2.any (fun k => decide (k = p.2.1)) <;> simp [advance,seen]
++    change (bif p.2.2.any (fun k => decide (k = p.2.1)) then p.2.2 else p.2.1 :: p.2.2) =
++      (if p.2.2.any (fun k => decide (k = p.2.1)) = true then p.2.2 else p.2.1 :: p.2.2)
++    generalize p.2.2.any (fun k => decide (k = p.2.1)) = seen
++    cases seen <;> rfl

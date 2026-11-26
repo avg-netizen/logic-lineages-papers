@@ -1,0 +1,3 @@
+# Independent pre-scope: current finite-coefficient identity
+
+Approved full current f:cor:finite-coefficient scope; six frozen pins match. Literal independent actualCollapse at ordinary omega*k+n, every natural k/n including zero, exact Phi iteration k starting at2k+n and final+k match the printed identity. No pair-model realization, norm budget or translation promise is supplied by the caller. The actual ordinal norm/predecessor/recurrence supplier must remain in native recursive evidence; a parametric count formula alone would not suffice. No runtime, frontend or arithmetic decision claim is made. Fresh native and final review required.

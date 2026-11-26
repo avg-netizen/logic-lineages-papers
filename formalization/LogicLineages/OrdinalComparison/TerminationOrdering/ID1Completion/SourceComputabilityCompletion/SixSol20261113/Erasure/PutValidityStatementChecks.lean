@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.PutValidityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.PutValidityStatementChecks
+theorem raw : PutValidity.ActualRawPutValidity := PutValidityRawProof.actualRawPutValidity
+theorem packed : PutValidity.ActualPackedPutValidity := PutValidityPackedProof.actualPackedPutValidity
+theorem finalValidity : PutValidity.ActualFinalPutValidity := PutValidityProof.actualFinalPutValidity
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.PutValidityStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.PutValidityStatementChecks

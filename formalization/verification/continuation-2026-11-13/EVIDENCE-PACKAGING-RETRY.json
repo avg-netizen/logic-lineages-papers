@@ -1,0 +1,13 @@
+{
+  "time": "2026-11-13T13:29:02.930960+00:00",
+  "terminated_read_only_sessions": {
+    "unsorted-child": 52927,
+    "spine-children": 60449
+  },
+  "exit_code": 137,
+  "reason": "signal termination; memory pressure observed concurrently; exact process cause not asserted",
+  "remaining_evidence_session": 69817,
+  "plan": "Finish current observed-other-leaf packaging, then run unsorted-child and spine-children serially. No compiler limit adjustment. Proof sources/receipts unaffected.",
+  "native_memory_gate": "Standalone RankArgumentSyntax receipt1794576465189726154-14 refused compiler at1334MiB. Later LocalProof run accepted Syntax6 and Local2 at recovered memory under unchanged2048MiB minimum.",
+  "resolution": "Both serial retries verified: unsorted-child2302 modules, spine-children1551 modules, zero errors. All proof sources preserved throughout."
+}

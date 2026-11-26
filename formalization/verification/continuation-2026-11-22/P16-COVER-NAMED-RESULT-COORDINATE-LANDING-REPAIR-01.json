@@ -1,0 +1,52 @@
+{
+  "status": "proof-only first repair; exact native retry pending",
+  "immutable_previous_verified_remote": "e7cc788932986f4ee5aa691464accc8236b171b2",
+  "previous_source_local": "6ecee292cec771722e754aee360739430a61ec19",
+  "receipt": {
+    "path": "formalization/build-reports/1795362590846290752-8.json",
+    "sha256": "08d2da3a9fe23c507b5d339a101676bb28fb0e91a29ee7b95699992185e3dcb2"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795362590846290752-8-LogicLineages-PersistentMarking-NumberedWindowInternalCoverNamedResultLandingProof.log",
+    "sha256": "a3aa1b133ea4a48acc4166ccbd3e04b5dab0cc900520cdab8fdb58ae6a35b98a"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-named-result-coordinate-landing-initial-diagnostic.txt",
+    "sha256": "a3aa1b133ea4a48acc4166ccbd3e04b5dab0cc900520cdab8fdb58ae6a35b98a"
+  },
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-COVER-NAMED-RESULT-COORDINATE-LANDING-REPAIR-01.patch",
+    "sha256": "322c6dcc6445a7ba68ce70806c8b49dff175a3799c7c3ffe4ee5982098cddb1d"
+  },
+  "archived_failed_source": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverNamedResultLandingProof-01.lean",
+    "sha256": "ee5086a224a1464c8577b4de96e49bd8bcb0165a3dfbd946ec3598d80a423716"
+  },
+  "repaired_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedResultLandingProof.lean",
+    "sha256": "c9a3e6a32e3750a65387dcedf4958e16cfb41c797ba97829f9c89d7c86acb5d2"
+  },
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedResultTargets.lean",
+      "sha256": "fd78f4d80efb2dc5a167ec538ef9c985fe6941416da123955529caf36a480869"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedResultNumericProof.lean",
+      "sha256": "43e425315c6959a3bb003f5d80c0c27971cc13856b60521d5826877a2b636644"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedResultBaseProof.lean",
+      "sha256": "56b271ce282adedbdd6b6a65e3219999e47bdd26ad7797c9cfe2eb0d291eab26"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedResultWindowProof.lean",
+      "sha256": "f95fe5a2368410a9cf8c5cf670177aa5b86d8bfbbc14780e3b047caa8363bd56"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-COVER-NAMED-RESULT-COORDINATE-SOURCE-MAP.md",
+      "sha256": "3ce3c9eb5115f86c5212ad0acbbcdaeb824f5ce2e97514fecb8eb08c8a5c4d11"
+    }
+  ],
+  "diagnosis": "Explicitly type the unchanged bound-header rejection report at the actual original body, context, and tape so the proof elaborator can thread the two implicit arguments. No program or proposition changed; failed sorryAx is not success."
+}

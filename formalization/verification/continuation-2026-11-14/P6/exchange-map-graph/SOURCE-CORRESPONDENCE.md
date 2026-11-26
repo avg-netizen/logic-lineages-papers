@@ -1,0 +1,9 @@
+# ExchangeMapGraph exact5: actual nat_omega_rec graph mapper
+
+Source: Mathlib/Computability/Primrec/List.lean, nat_omega_rec' lines305ff, used by original NumberedExchangeCodePrimrecProof.codeExchangePrimitive. Actual implementation defines mapGraph M bs = bs.flatMap (Option.toList <| M.lookup ·), bindList dependency frontiers, and a depth-indexed graph rebuilding each frontier. It is NOT a dense rank-row implementation. Prior ExchangeRowMemo remains proved generic infrastructure and is not installed as this actual implementation.
+
+Concrete lookup is first-match association lookup over actual pair-encoded entries. The arithmetic result encodes Option Nat: 0 is none, suc(value) is some(value). Duplicated keys obey FIRST-match semantics. Concrete mapGraph preserves requested key order/duplicates, but omits missing lookups entirely. Filling a missing slot with zero would change subsequent original answer positions0/3 and is explicitly forbidden. NativeMapGraph proves the literal all-list operation (including empty maps, duplicate keys and missing keys); every numeric raw list code has original codec total decoding, but this packet does not use native reflection internally.
+
+Internal first-hit, miss-tail and missing-map-tail laws come from actual listRec/conditional/pair inversion ASTs. No completeness of the association table is assumed. The later original dependency coverage theorem must ensure missing keys cannot occur on complete recurrence frontiers; only then can mapped positions0/3 be aligned with complete original dependency answers.
+
+Still open: actual bindList frontier iteration, graph-stage rebuild with original g/l, recursive coverage and internal headMove/field semantics. Existing full tuple is unchanged, no complete recursive E or class theorem claimed. Freeze only; await independent review/preflight.

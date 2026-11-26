@@ -1,0 +1,7 @@
+# Original primary reroot coherence
+
+Exact public scope is the unchanged one-way inclusion source scope: seed/parameter pair observations, original context guard, actual types selector and ArrowClosed, original concrete-signature source universe acceptance, actual seed primary, candidate membership and actual candidate primary output. Conclusion is one object-language conjunction of the two internal included formulas. No output list-code equality, cardinality/count equality or externally supplied symmetry, reachability, carrier, universe or closure oracle.
+
+Intended route: existing one-way caller gives targetOut included out. OriginalPrimaryReverseMembership (currently being authored) derives seed membership in targetOut using original E reversal and actual induction. Internally query candidate pair; accepted original primary universe closure derives candidate source acceptance at its own type/raw. Derive target admission from actual filtered carrier and transport original parameter-only types selector without metadata equality. Apply exact one-way inclusion with candidate as source and original seed as member, obtaining out included targetOut. Conjoin both internal formulas; all query witnesses eliminated.
+
+This is local source-scoped component membership coherence, not equality of list encodings, canonical representatives, globally installed source presentation, original accessibility or numbered Paper6 completion. Prerequisite raw/installed symmetry and reverse membership remain unaccepted until their native/evidence gates pass.

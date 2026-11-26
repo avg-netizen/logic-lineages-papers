@@ -1,0 +1,25 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedTypedExistentialTargets
+import LogicLineages.PermittedControl.OriginalPrintedTypedExistentialSourceProof
+import LogicLineages.PermittedControl.OriginalPrintedTypedExistentialProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedTypedExistential
+
+theorem fixed_exactOriginalLiteralFamilyExistential : ExactOriginalLiteralFamilyExistential :=
+  exactOriginalLiteralFamilyExistential
+theorem fixed_exactOriginalTypedObservationExistential : ExactOriginalTypedObservationExistential :=
+  exactOriginalTypedObservationExistential
+theorem fixed_exactOriginalPrintedTypedExistential : ExactOriginalPrintedTypedExistential :=
+  exactOriginalPrintedTypedExistential
+theorem fixed_fullOriginalPrintedTypedExistential : FullOriginalPrintedTypedExistential :=
+  ⟨fixed_exactOriginalLiteralFamilyExistential,fixed_exactOriginalTypedObservationExistential,
+    fixed_exactOriginalPrintedTypedExistential⟩
+
+#print axioms fixed_exactOriginalLiteralFamilyExistential
+#print axioms fixed_exactOriginalTypedObservationExistential
+#print axioms fixed_exactOriginalPrintedTypedExistential
+#print axioms fixed_fullOriginalPrintedTypedExistential
+
+end LogicLineages.PermittedControl.StatementChecks

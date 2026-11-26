@@ -1,0 +1,7 @@
+# Actual original argumentPermutation
+
+Source: NumberedExchangeCodeDefinitions.argumentPermutation, lines18–23: match the two actual argumentEntries results; compare the successful typed lists by Perm; otherwise false. This component uses the already calibrated literal ArgumentEntriesRecursor.extract on the original raw Code numbers and unused parameter0. It retains the source nat_omega_rec dependency-frontier algorithm, not auxiliary dense memoization. Both Option gates are literal zero/nonzero branches. Some list codes are predecessor-decoded only after their gate; the compared lists use the original count-based bounded domain xs++ys from NumberedExchangeGuardsPrimrecProof.permutationPrimitive.
+
+NativeOriginal requires exact generic typed-entry list encoding alignment with numbersNumber(map encode); no raw/generic encoding guess. InternalNone and InternalSome refer to actual extraction graphs in the existing arithmetic calculus and factor actual guard/comparison ASTs. They do NOT infer semantic extraction from native calibration. InternalSome permits arbitrary output, not only true. None versus Some[] remain distinct (0 versus1).
+
+One of four literal headMove conjuncts is assembled, not the full headMove or selected exchange tuple. Internal original extraction adequacy, global permutation adequacy, HeadInWindow/sourceHeads coverage and original exchange/source-stability duties remain open. No malformed decoding claim or tuple replacement. No proof before reviewed preflight.

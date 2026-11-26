@@ -1,0 +1,73 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:63:76: error: unsolved goals
+Γ : List Ty
+hg : ∀ τ ∈ Γ, τ = Ty.ground
+row : LinearCode
+q : OpenGraph Γ
+w : ℕ := q.width
+Δ : List Ty := Ty.ground :: WireCtx w (Ty.ground :: Γ)
+r₀ : Renaming (WireCtx w Γ) Δ := fun {σ} x => (under (fun {σ} => Renaming.weaken Γ Ty.ground) w x).there
+r : Renaming (WireCtx w (Ty.ground :: Γ)) Δ := fun {σ} => reroute w (fun {σ} => r₀) Variable.here
+hctx : List.map SyntaxCode.typeCode Δ = bitCtx (w + 1 + 1 + Γ.length)
+hform :
+  MatrixCode.renameFormula (bitCtx (w + 1 + 1 + Γ.length))
+      (List.map (fun i => if i = w then 0 else i + 1) (List.range (w + 1 + Γ.length))) (MatrixCode.formula q.matrix) =
+    MatrixCode.formula (renameFormula (fun {σ} => r) q.matrix)
+⊢ (w + 1,
+      MatrixCode.both
+        (MatrixCode.renameFormula (bitCtx ((typedBlock q).1 + 1 + 1 + Γ.length))
+          (List.map (fun i => if i = (typedBlock q).1 then 0 else i + 1) (List.range ((typedBlock q).1 + 1 + Γ.length)))
+          (typedBlock q).2)
+        (rawRow row (MatrixCode.add (MatrixCode.var 0) (MatrixCode.lit 1)) (MatrixCode.lit 0)
+          (MatrixCode.add (MatrixCode.var ((typedBlock q).1 + 1)) (MatrixCode.lit 1)))) =
+    (w + 1,
+      MatrixCode.both (MatrixCode.formula (renameFormula (fun {σ} => r) q.matrix))
+        (rawRow row (MatrixCode.add (MatrixCode.var 0) (MatrixCode.lit 1)) (MatrixCode.lit 0)
+          (MatrixCode.add (MatrixCode.var (w + 1)) (MatrixCode.lit 1))))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:80:13: warning: This simp argument is unused:
+  hform
+
+Hint: Omit it from the simp argument list.
+  simp only [h̵f̵o̵r̵m̵,̵MatrixCode.formula, ̲rowsExact, ̲raw, ̲MatrixCode.term, ̲MatrixCode.raw,
+  ̵  ̵ ̵ ̵variableIndex,
+  ̲ ̲ ̲ ̲ ̲shiftedIndex, ̲Nat.add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:120:6: error: unsolved goals
+case pos
+Γ : List Ty
+b c : ℕ
+Δ : List Ty := Ty.ground :: Ty.ground :: WireCtx b (WireCtx c (Ty.ground :: Γ))
+l : Renaming (WireCtx b Γ) Δ := fun {σ} x => (under (fun {σ} x => shift c x.there) b x).there.there
+r : Renaming (WireCtx c Γ) Δ := fun {σ} x => (shift b (under (fun {σ} => Renaming.weaken Γ Ty.ground) c x)).there.there
+hL :
+  ∀ (τ : Ty) (x : Variable (WireCtx b Γ) τ),
+    variableIndex (l x) = if variableIndex x < b then variableIndex x + 2 else variableIndex x + c + 3
+hR :
+  ∀ (τ : Ty) (x : Variable (WireCtx c Γ) τ),
+    variableIndex (r x) = if variableIndex x < c then variableIndex x + b + 2 else variableIndex x + b + 3
+len : ∀ (w : ℕ), (WireCtx w (Ty.ground :: Γ)).length = w + 1 + Γ.length
+τ : Ty
+x : Variable (WireCtx b (Ty.ground :: Γ)) τ
+h : ¬variableIndex x < b
+he : variableIndex x = b
+⊢ 0 = if b < b then b + 2 else 0
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:120:19: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp only [h,̵h̵e, ̲if_true, ̲if_false, ̲variableIndex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:120:32: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵,̵h̵e̵,̵i̵f̵_̵t̵r̵u̵e̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵v̵a̵r̵i̵a̵b̵l̵e̵I̵n̵d̵e̵x̵]̵[̲h̲,̲ ̲h̲e̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲,̲ ̲v̲a̲r̲i̲a̲b̲l̲e̲I̲n̲d̲e̲x̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:168:96: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:168:96: warning: 'rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`

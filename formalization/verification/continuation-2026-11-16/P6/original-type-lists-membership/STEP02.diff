@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -14,7 +14,8 @@
+ open SourceComputabilityFormulaSupportProof (numeral)
+ open TwoSol20261113.CalibratedPrimary.Membership (contains)
+ open TwoSol20261113.CalibratedPrimary.MembershipInternalProof
+-open InternalRawListRecursionSyntaxProof (consTermRename emptyRename)
++open InternalRecursionGraphStepSyntaxProof (consTermRename)
++open InternalAcceptanceSupportProof (programCases)
+ open OriginalContextInsertionSyntaxProof (lengthRename)
+ open InductionSyntaxProof
+ variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}

@@ -1,0 +1,44 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/SpineCallTypingProof.lean:8:11: error: Tactic `rfl` failed: The left-hand side
+  consumeTypes σ Args.nil
+is not definitionally equal to the right-hand side
+  some σ
+
+case nil
+Γ : BoundContext
+σ : Ty
+⊢ consumeTypes σ Args.nil = some σ
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/SpineCallTypingProof.lean:5:8: error: (kernel) application type mismatch
+  x✝ ⟨τ✝, ⟨xs✝, hxs⟩⟩
+argument has type
+  (σ : Ty) ×' (args : Args) ×' CallTyped Γ σ args τ
+but function has type
+  ∀ (y : (σ : Ty) ×' (args : Args) ×' CallTyped Γ σ args υ✝),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x => PSigma.casesOn x fun σ args => PSigma.casesOn args fun args h => sizeOf args) y
+        ⟨σ✝.arrow τ✝, ⟨Args.cons x✝¹ xs✝, ⋯⟩⟩ →
+      consumeTypes y.1 y.2.1 = some υ✝
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/SpineCallTypingProof.lean:11:33: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [consumeTypes, ht,̵ ̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/SpineCallTypingProof.lean:15:8: error: (kernel) application type mismatch
+  x✝ ⟨τ✝, ⟨xs✝, hxs⟩⟩
+argument has type
+  (σ : Ty) ×' (args : Args) ×' CallTyped Γ σ args τ
+but function has type
+  ∀ (y : (σ : Ty) ×' (args : Args) ×' CallTyped Γ σ args υ✝),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x => PSigma.casesOn x fun σ args => PSigma.casesOn args fun args h => sizeOf args) y
+        ⟨σ✝.arrow τ✝, ⟨Args.cons x✝¹ xs✝, ⋯⟩⟩ →
+      ExtrasTyped Γ y.2.1
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/SpineCallTypingProof.lean:22:8: error: (kernel) application type mismatch
+  x✝ ⟨xs✝, hxs⟩
+argument has type
+  (left : Args) ×' ExtrasTyped Γ left
+but function has type
+  ∀ (y : (left : Args) ×' ExtrasTyped Γ✝ left),
+    InvImage (fun x1 x2 => x1 < x2) (fun x => PSigma.casesOn x fun left hl => sizeOf left) y ⟨Args.cons x✝¹ xs✝, ⋯⟩ →
+      ExtrasTyped Γ✝ (y.1.append right)

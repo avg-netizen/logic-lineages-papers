@@ -1,0 +1,84 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalChangedSideFromScratchProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalRawRepackThreeProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectSharedTapeSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalDirectSourcePartitionRawGraphProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalOpenOriginScanRoutedHeadProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionFunctionalityProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphSupportProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalChangedSideCasesProof
+open FirstOrder Language LogicLineages.OrdinalComparison.TerminationOrdering
+open ID1Completion.InternalCalculus ID1Completion.InternalAccessibilityRules ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalListCodecSupportProof (consGraphRename)
+open ID1Completion.InternalApplicationValidityStackAppend (append)
+open ID1Completion.InternalGraphCompositionFunctionalityProof (renameInto)
+open ID1Completion.InternalControlGraphSupportProof (programRename)
+open ID1Completion.InternalTagArithmeticSyntaxProof (sucRelabel zRelabel)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open NumberedWindowInternalConsUnionReportBuildProof (Report)
+open NumberedWindowInternalSparsePathEnvelopeTargets (unary suc z)
+open NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof (unaryRename inputsRename)
+open NumberedWindowInternalSparseFieldParser (parser)
+open NumberedWindowInternalDirectInsertedTargetsMapTargets (scratchTargets)
+open NumberedWindowInternalOpenOriginScanRoutedHeadProof (loopRename)
+open NumberedWindowInternalDirectTypedUnionLiteralJTargets (literalData)
+open NumberedWindowInternalLiteralCount (permutation)
+open NumberedWindowInternalDirectWitnessEnvelopeTargets (tripleTerm)
+open NumberedWindowInternalDirectSharedTapeSyntaxProof (renamePair)
+open NumberedWindowInternalDirectSourcePartitionRawGraphProof (renameParser)
+open NumberedWindowInternalChangedSideFromScratchProof
+open NumberedWindowInternalRawRepackThreeProof (exact_OriginalRawRepackThree)
+open NumberedWindowInternalSparseParsedFoldSyntaxProof (positiveGraph)
+
+attribute [local irreducible] programGraph
+variable {α β : Type} {Γ : List (Formula α)} {Δ : List (Formula β)}
+
+private theorem move (i : Program 1) (r : Program 3) (c : Nat)
+    {s d ds dt dk dd da projected sj h t : OTerm α}
+    (p : ScratchSide i r c Γ s d ds dt dk dd da projected sj h t)
+    (j : α → β) (keep : ∀ f ∈ Γ, f.relabel j ∈ Δ) :
+    ScratchSide i r c Δ (s.relabel j) (d.relabel j) (ds.relabel j) (dt.relabel j)
+      (dk.relabel j) (dd.relabel j) (da.relabel j) (projected.relabel j) (sj.relabel j)
+      (h.relabel j) (t.relabel j) := by
+  constructor
+  · exact renameParser s ds p.sourceParse j Δ keep
+  · exact renameParser d dd p.removedParse j Δ keep
+  · simpa only [programRename,inputsRename,sucRelabel,zRelabel] using renameInto p.sourceTyped j Δ keep
+  · simpa only [programRename,inputsRename,sucRelabel,zRelabel] using renameInto p.targetTyped j Δ keep
+  · have v := renameInto p.removedCons j Δ keep
+    rw [consGraphRename] at v
+    exact v
+  · exact renamePair append sj dk dd p.sourceAppend j keep
+  · simpa only [sucRelabel,zRelabel] using renamePair permutation (suc z) ds sj p.sourceCount j keep
+  · exact renamePair append dt dk projected p.targetAppend j keep
+  · simpa only [programRename,inputsRename,sucRelabel] using renameInto p.projection j Δ keep
+  · simpa only [loopRename] using renameInto p.rows j Δ keep
+
+/-- Obtain the changed original destination and exact tag-5 witness by
+internal elimination of real parser preimages, keeping the original raw
+source and removed code fixed. Relabelled goal is arbitrary. -/
+theorem exact_LiteralChangedSideCases (i : Program 1) (r : Program 3) (c : Nat)
+    (s d ds dt dk dd da projected sj h t : OTerm α) (goal : Formula α)
+    (p : ScratchSide i r c Γ s d ds dt dk dd da projected sj h t)
+    (next : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (dst w : OTerm β),
+      (∀ f ∈ Γ, f.relabel j ∈ Δ) →
+      Report (B := Body i r c) (Γ := Δ) parser (suc (dt.relabel j)) ![dst] →
+      Nonempty (Derivation (Body i r c) Δ (certificate (literalData i r) true c (s.relabel j) dst w)) →
+      Nonempty (Derivation (Body i r c) Δ (goal.relabel j))) :
+    Nonempty (Derivation (Body i r c) Γ goal) := by
+  apply exact_OriginalRawRepackThree dk da dt goal
+  intro β j Δ k a dst keep kp ap dp
+  have p' := move i r c p j keep
+  have fact := exact_LiteralChangedSideFromScratch i r c (s.relabel j) (d.relabel j)
+    (ds.relabel j) (dt.relabel j) (dk.relabel j) (dd.relabel j) (da.relabel j)
+    (projected.relabel j) (sj.relabel j) (h.relabel j) (t.relabel j) k a dst p'
+    (by simpa only [positiveGraph] using kp) (by simpa only [positiveGraph] using ap)
+    (by simpa only [positiveGraph] using dp)
+  exact next β j Δ dst (tripleTerm 5 k (d.relabel j) a) keep (by simpa only [positiveGraph] using dp) fact
+
+#print axioms exact_LiteralChangedSideCases
+end LogicLineages.PersistentMarking.NumberedWindowInternalChangedSideCasesProof

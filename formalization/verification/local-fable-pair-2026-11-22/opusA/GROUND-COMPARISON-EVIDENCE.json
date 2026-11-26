@@ -1,0 +1,73 @@
+{
+ "lane": "opusA",
+ "key": "GROUND-COMPARISON",
+ "comparators": {
+  "thm:ground": "LogicLineages.PermittedControl.GroundComparison.GroundComparison",
+  "thm:main": "LogicLineages.PermittedControl.GroundComparisonMain.MainComparison"
+ },
+ "theorems": {
+  "thm:ground": "LogicLineages.PermittedControl.GroundComparison.groundComparison",
+  "thm:main": "LogicLineages.PermittedControl.GroundComparisonMain.mainComparison",
+  "M1": "GroundComparisonDomain.selectedGroundDomain",
+  "M3": "GroundComparisonPositive.fullGroundComparisonPositive",
+  "reduction": "GroundComparisonReduction.exactCanonicalReduction",
+  "assembly": "GroundComparisonAssembly.exactGroundFromQuery"
+ },
+ "source_sha256": {
+  "LogicLineages/PermittedControl/GroundComparisonDomainTargets.lean": "f2e62e2f4fd0c00269b60539a5970c6855c65ccccbd63cb3f8bc08aadcc730d0",
+  "LogicLineages/PermittedControl/GroundComparisonDomainProof.lean": "cc5c5f45bbec0dc3d6d5dd0f45c249893a5e0087acd769cc6421139eae1fb69f",
+  "LogicLineages/PermittedControl/GroundComparisonPositiveTargets.lean": "29d83ea6e154ec6a5d5b651d350715969e830eddd621065d18b7d6f02594d99e",
+  "LogicLineages/PermittedControl/GroundComparisonPositiveProof.lean": "ae29e6848ef39182c6379fefbd367eea44d0c1f8d1dd1aa1c979e8b573c298d8",
+  "LogicLineages/PermittedControl/GroundComparisonTargets.lean": "1c4d40201de55c3f03f145914bb44ccd75de641fc2b59038c09de9931b6e2d91",
+  "LogicLineages/PermittedControl/GroundComparisonReductionTargets.lean": "c6b1adb1d3a4f26c57a56dbb07c32f3cb3ec0d9b6e35841561bf5210c641ad6d",
+  "LogicLineages/PermittedControl/GroundComparisonReductionProof.lean": "235f804cd9a946b769d63b5ef757cd3de6eb70afc674582a76d2b576ad116188",
+  "LogicLineages/PermittedControl/GroundComparisonAssemblyTargets.lean": "c8b3264be210f65890a21654b09c4c64fbbce3a6bdac9537fd7a6b7b97675e23",
+  "LogicLineages/PermittedControl/GroundComparisonAssemblyProof.lean": "90db61fa6d1c1bda9748868bf1cc4467e56bfcc1b1e5f72b93b858081577cc83",
+  "LogicLineages/PermittedControl/GroundComparisonProof.lean": "10b685acb411fc336822c4b97a29332ab8395156d01f08f1838d4450628e8691",
+  "LogicLineages/PermittedControl/GroundComparisonMainTargets.lean": "c3552aad4b8e882f9b507473da60d39081ca38256f321291670fb1e84329ac4f",
+  "LogicLineages/PermittedControl/GroundComparisonMainProof.lean": "638f40abb7f2211d8d96a2be33ce700af2e50046fae0dcdbfd13c8a8c220d910"
+ },
+ "passing_receipts": {
+  "M1_targets": "1795387652355466808-3162232",
+  "M1_proof": "1795387681547037752-3162378",
+  "M2_targets": "1795387711612798636-3162507",
+  "M3_targets": "1795387797898352199-3162871",
+  "M3_proof": "1795387863484361049-3163145",
+  "reduction_targets": "1795388072799379934-3163876",
+  "reduction_proof": "1795388167211519221-3164178",
+  "main_targets": "1795388204050892648-3164395",
+  "assembly_targets": "1795388264598927755-3164645",
+  "assembly_proof": "1795388401995430418-3165135",
+  "ground_and_main_close": "1795388718263284980-3166116"
+ },
+ "failed_receipts": [
+  "1795387846072722323-3163019",
+  "1795388334098976752-3164843"
+ ],
+ "print_axioms": [
+  "'LogicLineages.PermittedControl.GroundComparisonDomain.selectedGroundDomain' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PermittedControl.GroundComparisonPositive.fullGroundComparisonPositive' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PermittedControl.GroundComparisonReduction.exactCanonicalReduction' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PermittedControl.GroundComparisonAssembly.exactGroundFromQuery' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PermittedControl.GroundComparison.groundComparison' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PermittedControl.GroundComparisonMain.mainComparison' depends on axioms: [propext, Classical.choice, Quot.sound]"
+ ],
+ "suppliers": [
+  "#261 typedImage/Programs",
+  "#010 fullControl",
+  "nearControlModular",
+  "#339 selectedFunctionalHardness",
+  "#1418 closedBlockDecision",
+  "#1423 GroundScalarCircuit.exactQueryCode/queryCodeEffectivity",
+  "scalarSyntaxNormalizationCorrect",
+  "encodedClosedPositiveCorrect",
+  "rawComparisonOrdinalCorrect",
+  "closed_scalar_finite",
+  "closed_positive"
+ ],
+ "correspondence": [
+  "opusA/P17-THM-GROUND-CORRESPONDENCE.md",
+  "opusA/P17-THM-MAIN-CORRESPONDENCE.md"
+ ],
+ "source_map": "opusA/GROUND-COMPARISON-SOURCE-MAP.md"
+}

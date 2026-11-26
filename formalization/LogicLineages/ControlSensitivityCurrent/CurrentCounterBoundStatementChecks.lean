@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.CurrentCounterBoundProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.CurrentCounterBound.StatementChecks
+theorem fixed_point : CurrentCounterBoundTargets.PointCalibration := pointCalibration
+theorem fixed_effective : CurrentCounterBoundTargets.Effective := effective
+theorem fixed_counter_bound : CurrentCounterBoundTargets.Full := full
+#audit_namespace LogicLineages.ControlSensitivityCurrent.CurrentCounterBound.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.CurrentCounterBound.StatementChecks

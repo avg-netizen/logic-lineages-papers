@@ -1,0 +1,11 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowScalarProgramProof
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowScalarProgramChecks
+open NumberedWindowScalarProgramTargets
+theorem exact_FixedLeastProgram : FixedLeastProgram := NumberedWindowScalarProgramProof.leastProgram
+theorem exact_FixedScalarProgram : FixedScalarProgram := NumberedWindowScalarProgramProof.scalarProgram
+#print axioms exact_FixedLeastProgram
+#print axioms exact_FixedScalarProgram
+end LogicLineages.PersistentMarking.NumberedWindowScalarProgramChecks

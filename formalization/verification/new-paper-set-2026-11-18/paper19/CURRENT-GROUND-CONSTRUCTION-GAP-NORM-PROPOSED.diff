@@ -1,0 +1,21 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionGapProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionGapProof.lean
+@@ -10,6 +10,7 @@
+ open LogicLineages.OrdinalComparison
+ open LogicLineages.OrdinalComparison.Source
+ open LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemantics
++open LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemanticsProof (finiteNorm)
+ open ParametricSourceSuccessor
+ open FunctionalDetector.Proof
+ open CurrentReserve (unitValue zeroUnits)
+@@ -74,7 +75,9 @@
+   have hz : ((paidList b xs caller).map (fun x => unitValue f (x.vector 1))) =
+       (List.replicate (scale b) vals).flatten ++ List.replicate (scale b) a := by
+     simp only [paidList,List.map_append,List.map_replicate,vals,a]
+-    rw [OriginalScaleFlatList.Proof.map_flatten_replicate]
++    exact congrArg (fun ys : List Ordinal => ys ++ List.replicate (scale b) (unitValue f (caller.vector 1)))
++      (OriginalScaleFlatList.Proof.map_flatten_replicate
++        (fun op : Operator Γ => unitValue f (op.vector 1)) (scale b) xs)
+   simpa only [chargedSum,hz, gap,vals,List.length_map,a] using h
+ 
+ end LogicLineages.ControlSensitivityCurrent.CurrentGroundConstruction

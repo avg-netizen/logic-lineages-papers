@@ -1,0 +1,3 @@
+# Selected decision pullback exact pre-scope
+
+Approved supporting conditional helper; four pins verified and exact target read. Fixed actual ctrl/policy/strict are shared between FiniteQueryReduction and the public level-two HasComparisonDecider. Conclusion is genuine ComputablePred for the exact coded polynomial solvability language. No unconditional undecidability is claimed. Proof must use actual bounded query-code calibration, finite ALL-answer fold, and one complement from unsatisfiability to satisfiability. No generated-domain-only decider may substitute for the public specification. Native/final evidence required.

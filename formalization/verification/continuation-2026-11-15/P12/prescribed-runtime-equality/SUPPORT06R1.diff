@@ -1,0 +1,11 @@
+--- TermGuardProof.before
++++ TermGuardProof.after
+@@ -16,7 +16,7 @@
+   (.equal (LiteralSyntaxScan.scanCall I.stag (RawReflexivityDispatcher.TermSoundProof.tasks I.ptag I.ctag) raw) (.succ .zero))) :
+  Nonempty (Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+   (RawReflexivityDispatcher.valid I.vtag raw)) := by
+- let g : Fin 2 → Program 1 := Fin.cases termScan (Fin.cases (constant 1 1) Fin.elim0)
++ let g : Fin 2 → Program 1 := Fin.cases termScan (Fin.cases (HistoryRuleSuffix.constant 1 1) Fin.elim0)
+  have he := SixSol20261112.Fuel.Equations.functionChild p I.vtag HistoryRuleSuffix.equalCode g I.h_vtag
+  obtain ⟨hb⟩ := RawReflexivityDispatcher.TermSoundProof.binding p I.vtag I.stag I.ptag I.ctag (I.vtag+1)
+   I.h_vtag I.h_stag I.h_ptag I.h_ctag he raw

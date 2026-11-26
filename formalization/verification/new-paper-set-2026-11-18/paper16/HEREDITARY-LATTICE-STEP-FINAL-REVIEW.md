@@ -1,0 +1,7 @@
+# Independent final: conditional LatticeStep
+
+Accepted the exact conditional step, not the unconditional operations/full thirteen-family conjunction. Receipt1795015267666977965-2. Compiler-free reconciliation reproduces82 source-matched modules,one exact standard-only alias,zero errors; independent JSON exactly equals author evidence. Revised eleven pins and inherited freezes verify. No native execution.
+
+Read actual Closure/Bounds/Step proofs. ConstructionEquation identifies the actual join/meet with combine. CombineEncoding is followed by AggregateValid and unconditional EncodeDecode, paying retained output membership and semantic equality before any current-type restriction use. All input Valid facts derive from actual retained codes. Bounds transport literal aggregate universal properties through exact code order and ValueEq, including empty inputs. RestrictionOperation first establishes both source and destination aggregate closure and each restricted input membership, then uses original global Restriction, semantic weakening, actual aggregate restriction congruence and retained-code injectivity. Thus it does not assume the same-type operation-preservation conclusion or silently retain default output indices.
+
+Strict proper-type LowerLattice remains an explicit hypothesis of this step. The already scoped actual typeSize induction must discharge it for the original operation endpoints. Fresh original operation and full-conjunction gates/finals remain necessary.

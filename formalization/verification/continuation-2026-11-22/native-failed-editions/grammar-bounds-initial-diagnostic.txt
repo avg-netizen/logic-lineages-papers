@@ -1,0 +1,51 @@
+Compiling LogicLineages.PersistentMarking.NumberedWindowCoverGrammarMonotoneProof
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowCoverGrammarMonotoneProof.lean:27:71: error: Type mismatch
+  h
+has type
+  α
+of sort `Type` but is expected to have type
+  h ∈ xs → h ∈ xs
+of sort `Prop`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowCoverGrammarMonotoneProof.lean:41:8: error: unexpected token 'λ'; expected ':=' or '|'
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowCoverGrammarMonotoneProof.lean:41:7: error: Missing cases:
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowCoverGrammarMonotoneProof.lean:40:93: error: unsolved goals
+H K I J ts us xs ys : List Nat
+ij : I ⊆ J
+tu : ts ⊆ us
+xy : xs ⊆ ys
+⊢ leaves K I ++ lambdas K ts ++ ordinary H xs ++ numbered H K I xs ++ applications K ts ⊆
+    leaves K J ++ lambdas K us ++ ordinary H ys ++ numbered H K J ys ++ applications K us
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowCoverGrammarMonotoneProof.lean:98:35: error: Application type mismatch: The argument
+  h
+has type
+  Nat
+of sort `Type` but is expected to have type
+  ?m.46 ∈ (grammar H K m d).fst
+of sort `Prop` in the application
+  ih.left h
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowCoverGrammarMonotoneProof.lean:98:60: error: Application type mismatch: The argument
+  h
+has type
+  Nat
+of sort `Type` but is expected to have type
+  ?m.54 ∈ (grammar H K m d).snd
+of sort `Prop` in the application
+  ih.right h
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowCoverGrammarMonotoneProof.lean:104:29: error: Application type mismatch: The argument
+  h
+has type
+  Nat
+of sort `Type` but is expected to have type
+  ?m.36 ∈ (grammar H K m d).fst
+of sort `Prop` in the application
+  h1.left h
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowCoverGrammarMonotoneProof.lean:104:52: error: Application type mismatch: The argument
+  h
+has type
+  Nat
+of sort `Type` but is expected to have type
+  ?m.44 ∈ (grammar H K m d).snd
+of sort `Prop` in the application
+  h1.right h
+COMPILE_FAILED LogicLineages.PersistentMarking.NumberedWindowCoverGrammarMonotoneProof: 1
+BUILD_RECEIPT build-reports/1795341676811742251-723.json

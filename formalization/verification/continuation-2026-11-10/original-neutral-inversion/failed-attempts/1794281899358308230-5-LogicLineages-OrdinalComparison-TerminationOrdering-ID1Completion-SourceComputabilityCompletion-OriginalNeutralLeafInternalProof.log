@@ -1,0 +1,33 @@
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafInternalProof.lean:39:15: error(lean.unknownIdentifier): Unknown identifier `unaryValue`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafInternalProof.lean:26:81: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+window : Program 1
+source target certificate parameter : OTerm alpha
+hw : Nonempty (Derivation body Delta (graph2 (BottomRepresentative.windowAt window) (suc z) source parameter))
+beta : Type
+j : alpha → beta
+Theta : List (InternalCalculus.Formula beta)
+context : InternalGraphComposition.OTerm beta
+hj : ∀ r ∈ Delta, Formula.relabel j r ∈ Theta
+hc :
+  Nonempty
+    (Derivation body Theta (programGraph InternalUnpair.left context (Fin.cons (Term.relabel j parameter) Fin.elim0)))
+hw' :
+  Nonempty
+    (Derivation body Theta
+      (graph2 (BottomRepresentative.windowAt window) (suc z) (Term.relabel j source) (Term.relabel j parameter)))
+ys : Fin 2 → OTerm beta := Fin.cons (Term.relabel j source) (Fin.cons (Term.relabel j parameter) Fin.elim0)
+xs : Fin 4 → OTerm beta :=
+  Fin.cons (Term.relabel j source)
+    (Fin.cons (Term.relabel j target)
+      (Fin.cons (Term.relabel j certificate) (Fin.cons (Term.relabel j parameter) Fin.elim0)))
+⊢ Nonempty
+    (Derivation body Theta
+      (graph4 (windowAt window) (suc z) (Term.relabel j source) (Term.relabel j target) (Term.relabel j certificate)
+        (Term.relabel j parameter)))
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafInternalProof.lean:59:4: error(lean.unknownIdentifier): Unknown identifier `binaryValue`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafInternalProof.lean:70:7: error(lean.unknownIdentifier): Unknown identifier `unaryValue`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafInternalProof.lean:109:8: error(lean.unknownIdentifier): Unknown identifier `unaryRecover`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalNeutralLeafInternalProof.lean:138:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralLeafInternalProof.actualOriginalNeutralLeafInternalCases: forbidden axiom dependency sorryAx

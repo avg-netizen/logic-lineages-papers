@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.HereditaryAggregateOrderProof
+namespace LogicLineages.PersistentMarking.HereditaryAggregateOrderChecks
+theorem exact_AggregateOrder : HereditaryLatticeTargets.AggregateOrder := HereditaryAggregateOrderProof.order
+#print axioms exact_AggregateOrder
+end LogicLineages.PersistentMarking.HereditaryAggregateOrderChecks

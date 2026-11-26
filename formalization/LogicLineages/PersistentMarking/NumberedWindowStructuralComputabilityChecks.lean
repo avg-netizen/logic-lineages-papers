@@ -1,0 +1,12 @@
+import LogicLineages.PersistentMarking.NumberedWindowStructuralComputabilityProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowStructuralComputabilityChecks
+open NumberedWindowStructuralComputabilityTargets NumberedWindowStructuralComputabilityProof
+
+theorem exact_StructuralComputableSubstitution : StructuralComputableSubstitution := substitution
+theorem exact_EveryAdmittedTermComputable : EveryAdmittedTermComputable := everyTerm
+theorem exact_EveryActualAddressInExternalI : EveryActualAddressInExternalI := everyAddress
+#print axioms exact_StructuralComputableSubstitution
+#print axioms exact_EveryAdmittedTermComputable
+#print axioms exact_EveryActualAddressInExternalI
+end LogicLineages.PersistentMarking.NumberedWindowStructuralComputabilityChecks

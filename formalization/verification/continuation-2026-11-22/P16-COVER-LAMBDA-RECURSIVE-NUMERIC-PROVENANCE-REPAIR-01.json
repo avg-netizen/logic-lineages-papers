@@ -1,0 +1,40 @@
+{
+  "status": "one-line proof-only simp restriction; native gate pending",
+  "immutable_previous_verified_remote": "053605ba119542607a26ee9d90f47e54119576fb",
+  "previous_source_local_prefix": "f2388efff",
+  "receipt": {
+    "path": "formalization/build-reports/1795353505453397747-72.json",
+    "sha256": "a4b5f57e11a0dfe82b3fbfb6567ca13a3b0643f2505e7d10e39864644dd1006d"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-lambda-recursive-numeric-provenance-initial-diagnostic.txt",
+    "sha256": "7bfad43175bc858b31a1f37deaa79895fe09dc8b8ba1de9b4af83e3588d4a6f6"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795353505453397747-72-LogicLineages-PersistentMarking-NumberedWindowInternalCoverLambdaProvenanceProof.log",
+    "sha256": "7bfad43175bc858b31a1f37deaa79895fe09dc8b8ba1de9b4af83e3588d4a6f6"
+  },
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-COVER-LAMBDA-RECURSIVE-NUMERIC-PROVENANCE-REPAIR-01.patch",
+    "sha256": "b08f4a8a7d26c247a0d60c3342faa562bffa7aa0663f49fb0bce3c39fa9d3347"
+  },
+  "archived_failed_source": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverLambdaProvenanceProof-01.lean",
+    "sha256": "1a19eeda5315af9aabc084485243da80ef2df098d4e8e6c4b8da70ff4ca7743a"
+  },
+  "repaired_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLambdaProvenanceProof.lean",
+    "sha256": "1d3209f4c52009a8016ee108417802e6015855729c7348d3dab3dade59d11a9d"
+  },
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLambdaProvenanceTargets.lean",
+      "sha256": "bac61440458d882aed42024bcb8f4f796c71b1d6cd653159714476f1a9adb253"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-COVER-LAMBDA-RECURSIVE-NUMERIC-PROVENANCE-SOURCE-MAP.md",
+      "sha256": "75facf71114c89f70948c819241f1e9cc37b7471b073491c9bbf36bcd864626a"
+    }
+  ],
+  "diagnosis": "Unrestricted simp rewrote List.getD before readSyntax could match. Restrict to termNext, the original parse, Option.any_some, the actual termParts equation and exact earlier-row readSyntax rule. No imported modules, theorem signatures, or program/source AST changes. The failed-edition named axiom output included sorryAx only as error evidence, not as acceptance."
+}

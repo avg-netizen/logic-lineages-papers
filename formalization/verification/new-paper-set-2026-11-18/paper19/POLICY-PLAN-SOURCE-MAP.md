@@ -1,0 +1,5 @@
+# PolicyPlan supporting scope
+
+Fresh generic p/f Eval/ResultHolds on unchanged actual typed ExistentialPlan.Plan/compile. EquationNaturality uses ground-name agreement; inputs fixes every functional coordinate to natural0/raw1 and does not quantify arbitrary functional ordinal valuations. Compilation covers every done/equation/gate/exists constructor, including full sort gate, both witness construction and reverse extraction with same old shared inputs. Source leaves retain actual typed Input.term and rename under real embeddings. No successful-assignment or source truth oracle premise.
+
+ActualSize is literal compiled forest node sum/length/context exact budgets and ground-context preservation. It is Plan-local, not the still-unpaid all-E_src input normalization or full encoded shared-DAG polynomial compiler. Fresh native closure of syntax-only size supplier required. SourceGrowth stays generic current19; arbitrary policy retained. Weak wrapper, Boolean matrix front end, full source-language→A-normal coverage, encoded compiler effectivity/global bounds and hardness remain separate.

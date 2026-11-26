@@ -1,0 +1,25 @@
+# Independent final: closed polynomial undecidability supplier
+
+Accepted as the exact closed mathematical supplier conjunction, not as selected-control hardness.
+
+## Artifact and domain audit
+Compiler-free recursive reconciliation reproduces all 498 source-matched modules, zero errors and the exact standard-only `fixed_polynomialUndecidabilitySupplier` alias. Independent JSON equals author JSON. All seven frozen pins verify. Full receipt 1795014812137681673-5; staged Diophantine and H10 bridge receipts remain recorded. No compiler run by reviewer.
+
+Read actual target and both different encoded languages. Input is a well-formed integer polynomial with finite zero-allowing Nat roots. Output is the original shared-dimension finite system of signed fixed-coefficient monomials times at most one unknown in N[X]. It is not multiplication of unknown polynomials. All unknown occurrences share one dimension; out-of-range references are excluded before filterMap interpretation. Zero polynomials, empty systems, repeated references and zero witness values are not excluded.
+
+## Halting to actual Diophantine polynomial
+Read UndecidabilityProof, ReductionProof, OrdinaryCodeProof, primitive recursion and minimization semantic/Diophantine proofs. Actual Nat.Partrec.Code halting at zero is RE and contradicts the library halting theorem after exact code encoding. All eight real constructors are covered. Primitive recursion has a length n+1 coded trace, actual base and step membership, and last value; its semantic proof inducts on n. Search requires every earlier computation to terminate with nonzero output, not merely absence of an earlier zero; exact Nat.mem_rfind pays this.
+
+Read bounded-universal normalization, row-packing semantics/Diophantineness, cipher arithmetic/product/index and relation proofs. Finite witnesses are selected jointly and bounded by an actual finite maximum, then encoded at sparse powers with no-carry bounds. Product diagonal extraction excludes off-diagonal power coincidences; the coefficient bound is below base 2^(4q). Row constraints recover actual constant/variable/parameter/add/mul relations using cipher injectivity and mask identities. Empty length and zero branches are explicit. Index uniqueness uses increasing 2-adic congruence, not an index oracle. Ones/mask Diophantineness uses the proved arithmetic characterization and library Diophantine power facts, not arbitrary bounded-universal closure as an assumption. Elementary normalization and polynomial bridge use literal finite support to turn arbitrary auxiliary types into finite witnesses.
+
+The representing polynomial is chosen once for a fixed RE predicate; the runtime reduction is genuine primitive-recursive specialization. No computable extraction of a polynomial from an arbitrary extensional proof is asserted. Read actual specialization polynomial identity, parameter deletion/reindexing and root correspondence, including zero parameter and finite remaining witness coordinates.
+
+## Total H10 bridge and literal N[X] gadgets
+Read H10BridgeProof, AdapterSemantic/Programs, validity calibration, domain shift and circuit allocation/forward/backward/semantic proofs. Nat roots are translated to positive inputs by literal Xi-1 substitution and a true finite-valuation bijection; no positive-root narrowing. Original arity/reference validity is retained. Every malformed decode or invalid reference is mapped to the actual impossible constant equation 1=0. All translate stages are concrete PR code operations and have calibration, not existential representation algorithms.
+
+Read Narendran quotient/square/constant/simultaneous proofs. Difference quotients of nonnegative polynomials are actual nonnegative witnesses. Evaluating derivatives at one proves the triangular square identity including zero. Constant forcing uses nonnegative coefficient monotonicity at sqrt(2) and 2; simultaneous forcing allows zero constants and empty lists through a shared sufficiently large 2^s-1 constant and nonnegative slack. Three square instances plus linear rows recover multiplication with shared/repeated inputs.
+
+The actual global allocation has disjoint wire, slack, scalar, square and constant blocks, with injectivity and bounds. Forward witnesses preserve every original wire; backward rows force all scalar slots to constants and recover the same circuit valuation. Polynomial witness slots are not incorrectly forced into the scalar block. Whole-system faithfulness precedes raw encoding, so dropped malformed references do not enter the argument. The total reduction and closed root-undecidability theorem then contradict a hypothetical decider for the original linear-polynomial language.
+
+## Boundary
+Both conjuncts are accepted: actual total coded H10 bridge and closed non-ComputablePred theorem. No external undecidability field remains. This does not establish selected level-two/level-three hardness, a seed/compiler/query assembly, main theorem, or parked threshold. Those require their own exact source gates and finals.

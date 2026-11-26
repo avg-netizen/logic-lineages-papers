@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryExpansionSoundness.Proof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryExpansionSoundness.StatementChecks
+theorem anyExact : Targets.AnyWitness := AnyProof.anyWitness
+theorem filterExact : Targets.FilterSoundness := FilterProof.filterSoundness
+theorem appendExact : Targets.AppendSoundness := AppendProof.appendSoundness
+theorem expansionExact : Targets.ExpansionCharacterization := Proof.expansionCharacterization
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryExpansionSoundness.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryExpansionSoundness.StatementChecks

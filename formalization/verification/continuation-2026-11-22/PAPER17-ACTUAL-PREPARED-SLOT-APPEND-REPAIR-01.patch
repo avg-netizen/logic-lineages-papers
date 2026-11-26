@@ -1,0 +1,5 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualPreparedSlotAppendReadProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualPreparedSlotAppendReadProof.lean
+@@ -63 +63 @@
+-        have len := List.length_append left right
++        have len : (left ++ right).length = left.length + right.length := List.length_append

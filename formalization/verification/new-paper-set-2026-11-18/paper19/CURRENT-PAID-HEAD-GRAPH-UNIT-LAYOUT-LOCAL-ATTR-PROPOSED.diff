@@ -1,0 +1,11 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLayoutCodeProof.lean
+@@ -176,7 +176,7 @@
+     MatrixCode.raw,variableIndex] <;> rfl
+ 
+ section
+-local attribute [irreducible] originalEraser closedEraser CurrentAbsolute.anchor
++attribute [local irreducible] originalEraser closedEraser CurrentAbsolute.anchor
+ 
+ theorem groundBlockExact (p : AdmissibleSum.Policy) (f : Nat → Nat) {Γ τ}
+     (hg : ∀ σ ∈ Γ, σ = .ground) (a : Input Γ τ) :

@@ -1,0 +1,43 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticScalarProof.lean:20:2: error: 'change' tactic failed, pattern
+  (?m.17 &&
+      decide ((NumberedWindowAdmissionAlgorithm.bits (NumberedWindowAdmissionTargets.window S K) n).fst = ?m.21)) =
+    true
+is not definitionally equal to target
+  (Option.any (typedBit (binderLookup Γ) τ) (decodeTerm n) &&
+      (NumberedWindowAdmissionAlgorithm.bits (fixed S K).window n).fst) =
+    Option.any (finiteWindowBit S K Γ τ) (decodeTerm n)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticScalarProof.lean:31:119: error: Application type mismatch: The argument
+  ?m.30 = ?m.32
+has type
+  Prop
+but is expected to have type
+  Bool
+in the application
+  (NumberedWindowExchangeAlgorithm.bits (NumberedWindowArithmeticExchangeAtomsTargets.pairs S K) a b).fst && ?m.28 &&
+    ?m.30 = ?m.32
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticScalarProof.lean:35:25: error: unexpected token ':='; expected ':'
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticScalarProof.lean:59:11: error: unsolved goals
+case some
+S : Signature
+K : List Ty
+a : ClassAddress
+q : NTerm
+h : decodeTerm a.least = some q
+same : (leastCode S K a.context a.result q == some a.least) = decide (leastCode S K a.context a.result q = some a.least)
+⊢ (finiteWindowBit S K a.context a.result q &&
+      least (fixed S K) (List.map encodeTy a.context) (encodeTy a.result) a.least == some a.least) =
+    (finiteWindowBit S K a.context a.result q && decide (leastCode S K a.context a.result q = some a.least))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticScalarProof.lean:56:24: warning: This simp argument is unused:
+  leastEq
+
+Hint: Omit it from the simp argument list.
+  simp only [admittedEq,̵l̵e̵a̵s̵t̵E̵q̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticScalarProof.lean:63:21: warning: This simp argument is unused:
+  same
+
+Hint: Omit it from the simp argument list.
+  simp [Option.any,̵s̵a̵m̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

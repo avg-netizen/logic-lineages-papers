@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.RecursiveHeadLayerReflexivity.OrdinaryStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.RecursiveHeadLayerReflexivity.NumberedStatementChecks
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.RecursiveHeadLayerReflexivity.StatementChecks
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
+open InternalAcceptanceSupportProof
+open InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (z suc eqn emb)
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open SourceComputabilityFormulaSupportProof (numeral)
+open TwoSol20261113.CalibratedPrimary.Membership (contains)
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+theorem exactOrdinary : Targets.InternalOrdinary := OrdinaryProof.ordinary
+theorem exactNumbered : Targets.InternalNumbered := NumberedProof.numbered
+#print axioms exactOrdinary
+#print axioms exactNumbered
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.RecursiveHeadLayerReflexivity.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.RecursiveHeadLayerReflexivity.StatementChecks

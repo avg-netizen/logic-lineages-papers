@@ -1,0 +1,13 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowAdmissionProgramProof
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowAdmissionProgramChecks
+open NumberedWindowAdmissionProgramTargets
+
+theorem exact_AdmissionProgram : AdmissionProgram := NumberedWindowAdmissionProgramProof.program
+
+#print axioms exact_AdmissionProgram
+
+end LogicLineages.PersistentMarking.NumberedWindowAdmissionProgramChecks

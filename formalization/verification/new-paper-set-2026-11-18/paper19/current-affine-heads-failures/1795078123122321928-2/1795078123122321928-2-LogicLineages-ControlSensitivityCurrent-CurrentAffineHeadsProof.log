@@ -1,0 +1,18 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentAffineHeadsProof.lean:35:2: error: Type mismatch
+  ho
+has type
+  denote (OriginalDomain.valuation (UnitObservation.substitution μ)) (v (outputOne k)) =
+      denote (OriginalDomain.valuation (UnitObservation.substitution ρ)) h + ↑(surplus h) ∧
+    denote (OriginalDomain.valuation (UnitObservation.substitution μ)) (v (outputTwo k)) = ↑(secondCount h) ∧
+      (Ordinal.omega0 ≤ denote (OriginalDomain.valuation (UnitObservation.substitution ρ)) h → 1 ≤ surplus h)
+but is expected to have type
+  denote (commonUnits μ) (v (outputOne k)) = denote (commonUnits ρ) h + ↑(surplus h) ∧
+    denote (commonUnits μ) (v (outputTwo k)) = ↑(secondCount h) ∧
+      (Ordinal.omega0 ≤ denote (commonUnits ρ) h → 1 ≤ surplus h)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentAffineHeadsProof.lean:34:44: warning: This simp argument is unused:
+  sameCommonUnits
+
+Hint: Omit it from the simp argument list.
+  simp only [OriginalDomain.expressionValue,̵s̵a̵m̵e̵C̵o̵m̵m̵o̵n̵U̵n̵i̵t̵s̵] at ho
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

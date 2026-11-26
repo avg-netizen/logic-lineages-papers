@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PermittedControl.ActualRawFundedTerminalCandidateTargets
+import LogicLineages.PermittedControl.ActualRawFundedTerminalCandidateProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualRawFundedTerminalCandidate
+
+theorem fixed_exactRawFundedTerminalCandidate : ExactRawFundedTerminalCandidate :=
+  exactRawFundedTerminalCandidate
+
+#print axioms fixed_exactRawFundedTerminalCandidate
+
+end LogicLineages.PermittedControl.ActualRawFundedTerminalCandidate

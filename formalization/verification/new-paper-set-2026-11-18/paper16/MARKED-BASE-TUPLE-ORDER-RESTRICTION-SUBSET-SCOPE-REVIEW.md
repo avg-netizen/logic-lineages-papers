@@ -1,0 +1,5 @@
+# Positional tuple order and restriction readiness
+
+Read OrderProof/Checks and RestrictionProof/Checks. Approved fresh bounded gates for original TupleOrder (one endpoint) and TupleRestriction/TupleRestrictionMonotone/TupleRestrictionAlgebra (three endpoints) within the nine-contract/fifteen-pin packet. No changed target or additional premise.
+
+Order derives coordinate reflexivity/transitivity/antisymmetry from actual global descriptor PartialOrder, with TupleValues lengths supplying middle coordinates and literal list extensionality. Restriction follows structural type/value list induction, uses actual global descriptor restriction membership and actual derived code monotonicity, and excludes mismatched lengths using TupleValues rather than legitimizing truncation. Identity/composition use the actual original descriptor algebra componentwise; empty lists and repeated positional types remain. No independent lower-law oracle or family promotion. Scope only, fresh native evidence and final review required.

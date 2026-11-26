@@ -1,0 +1,6 @@
+# Independent final: actual auxiliary opening synchronization
+Approved two supporting endpoints. Independently reproduced identical 38-module evidence, two exact standard-only aliases, zero errors; independently traversed actual imports with exact closure equality. Five frozen pins match. Native receipt 1794986279047446870-2, first attempt. No compiler invoked or mathematical source edit.
+
+Read both complete proofs. Abs applies the actual typed finite swap, proved injective, to the actual auxiliary tree; checked opening identities use freshness of both names in both bodies. FAbs decomposes owner freshness into base and extras, fixes both under the swap, maps the literal appended singleton free argument and the actual opened body, preserving the original owner symbol/output annotation. Judgment equality transport is by equality elimination; equal counts compose with the actual renamed-tree equality. x=y is not excluded.
+
+This pays a genuine same-count change of fresh opening name for Abs/FAbs, not an assumed alpha/E covariance theorem. Later conservative induction must still choose the name fresh in the additional refining source and prove the synchronized premise strictly below its current comparison-tree measure. No conservative lemma, arbitrary substitution covariance, prefix escape or cut acceptance.

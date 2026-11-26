@@ -1,0 +1,83 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EntryBoundsDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationResultFoldTotalitySyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientComparisonSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedDecoderInternalLogicSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryUncoveredCount.CompareSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextInsertionSyntaxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EntryBoundsSyntaxProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalApplicationCertificateConstructors
+open SourceComputabilityFormulaSupportProof InternalControlGraphSupportProof
+open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
+open InternalRawListRecursionSyntaxProof InternalGraphCompositionSyntaxProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open InternalBinderTransportProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
+open InternalAdditionLawsProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open EntryBounds
+open InternalQuotientComparisonSyntaxProof InternalOriginalOrderSyntaxProof
+open OriginalTypedDecoderInternalLogicSyntaxProof (equalSubst orSubst)
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114
+open PrimaryUncoveredCount.CompareSyntaxProof (boundedSubst)
+open InternalStrongInduction
+open OriginalContextInsertionSyntaxProof (lengthSubst)
+
+attribute [local irreducible] programGraph
+
+theorem fieldsSubst {alpha beta : Type} (n : Nat) (raw param entries value : OTerm alpha) (ts : alpha → OTerm beta) :
+    (fields n raw param entries value).subst (fun a => emb (ts a)) =
+      fields n (raw.subst ts) (param.subst ts) (entries.subst ts) (value.subst ts) := by
+  simp only [fields,conjunctionSubst,graph1,graph2,programSubst,consTermSubst,emptySubst,sucSubst,zSubst]
+@[simp] theorem fieldsRename {alpha beta : Type} (n : Nat) (raw param entries value : OTerm alpha) (j : alpha → beta) :
+    (fields n raw param entries value).relabel j = fields n (raw.relabel j) (param.relabel j) (entries.relabel j) (value.relabel j) := by
+  rw [formulaRelabelAsSubst]
+  change (fields n raw param entries value).subst (fun a => emb (.var (j a))) = _
+  rw [fieldsSubst]
+  simp only [← termRelabelAsSubst]
+
+theorem atRawSubst {alpha beta : Type} (n : Nat) (raw : OTerm alpha) (ts : alpha → OTerm beta) :
+    (AtRaw n raw).subst (fun a => emb (ts a)) = AtRaw n (raw.subst ts) := by
+  unfold AtRaw matrix
+  rw [allBlockSubst,liftedEmbedding]
+  simp only [impSubst,fieldsSubst,graph1,programSubst,consTermSubst,emptySubst,liftSubst,Term.subst,Sum.elim_inr]
+@[simp] theorem atRawRename {alpha beta : Type} (n : Nat) (raw : OTerm alpha) (j : alpha → beta) :
+    (AtRaw n raw).relabel j = AtRaw n (raw.relabel j) := by
+  rw [formulaRelabelAsSubst]
+  change (AtRaw n raw).subst (fun a => emb (.var (j a))) = _
+  rw [atRawSubst]
+  simp only [← termRelabelAsSubst]
+
+theorem matrixWitness {alpha : Type} (n : Nat) (raw param entries value : OTerm alpha) :
+    (matrix n raw).subst (Sum.elim Term.var (fun i => emb (![param,entries,value] i))) =
+      (fields n raw param entries value).imp (graph1 (Continuation20261115.OriginalCodeBoundsRecursion.bounds n) value raw) := by
+  have he : (Sum.elim Term.var (fun i => emb (![param,entries,value] i))) =
+      (fun a => emb (Sum.elim Term.var ![param,entries,value] a)) := by
+    funext a; cases a <;> rfl
+  unfold matrix
+  rw [he]
+  simp only [impSubst,fieldsSubst,graph1,programSubst,consTermSubst,emptySubst,witnessLift,Term.subst,Sum.elim_inr]
+  rfl
+theorem predicateInstantiate {alpha : Type} (n : Nat) (raw : OTerm alpha) :
+    instantiate (predicate n) (emb raw) = AtRaw n raw := by
+  rw [predicate,instantiate,bindEmbedding,atRawSubst]
+  simp only [varBind]
+
+@[simp] theorem belowRawRename {alpha beta : Type} (n : Nat) (raw : OTerm alpha) (j : alpha → beta) :
+    (BelowRaw n raw).relabel j = BelowRaw n (raw.relabel j) := by
+  unfold BelowRaw
+  rw [InternalStrongInductionSyntaxProof.belowRename]
+  unfold predicate
+  rw [atRawRename]
+  rfl
+
+theorem predicateLift {alpha : Type} (n : Nat) :
+    lift (predicate (alpha := alpha) n) = predicate (alpha := alpha ⊕ Fin 1) n := by
+  unfold lift predicate
+  rw [atRawRename]
+  rfl
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EntryBoundsSyntaxProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.EntryBoundsSyntaxProof

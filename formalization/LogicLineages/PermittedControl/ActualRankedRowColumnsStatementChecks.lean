@@ -1,0 +1,20 @@
+module
+public import LogicLineages.PermittedControl.ActualRankedRowColumnsTargets
+import LogicLineages.PermittedControl.ActualRankedRowColumnsWeightsProof
+import LogicLineages.PermittedControl.ActualRankedRowColumnsActualProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualRankedRowColumns
+
+theorem fixed_actualRankedCoefficients : ExactRankedCoefficients := exactRankedCoefficients
+theorem fixed_actualRankedReads : ExactRankedReads := exactRankedReads
+
+theorem fixed_fullActualRankedRowColumns : FullActualRankedRowColumns :=
+  ⟨fixed_actualRankedCoefficients,fixed_actualRankedReads⟩
+
+#print axioms fixed_actualRankedCoefficients
+#print axioms fixed_actualRankedReads
+#print axioms fixed_fullActualRankedRowColumns
+
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,3 @@
+# thm:control-hardness
+
+The comparator is `CurrentControlHardnessTargets.Full`, corresponding to the theorem and proof in `19/sections/control-sensitivity.tex`. The shared witness graph is the compiled original conjunction for the literal blank-machine interpreter and perturbed control. Output order in the strict query is R then L. The weak query applies exactly K and I to R and L. Both queries are literal original-source term codes with exact closure, binder, prime, and internal-level checks. The DAG budget is linear in the numerical program index and in the bit count of the fixed odd constant. Exact lowering works under every admissible policy. Computable membership and completeness use effective parsing, as required to evaluate actual selected assignments.

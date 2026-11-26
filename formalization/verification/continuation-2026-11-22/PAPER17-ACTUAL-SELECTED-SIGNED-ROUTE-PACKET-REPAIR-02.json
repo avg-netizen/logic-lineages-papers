@@ -1,0 +1,56 @@
+{
+  "status": "narrow source-only ShapeProof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "07cfb842c76ce4dcd1ca8ce721a37c8999d7ff2e",
+  "failed_source_local_commit": "0934d0138924cb50ec9b37af41a7727c8ed64314",
+  "failed_exact_gate_receipt": "1795368069525138904-101",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualSelectedSignedRoutePacketStatementChecks",
+  "failed_receipt_sha256": "d41430336365b78feefcebbd05288f4d5a8b07d5e00f39cc0899284d6929194f",
+  "failed_exact_module_log_sha256": "0d98faf32d536026d4075d12e0c598b6445d1507e01c64009f897ae180ce1a5c",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketShapeProof.lean:97:6: warning: 'change t.2.name \u2264 ops.length' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketShapeProof.lean:108:4: error: Type mismatch\n  safeTruth []\nhas type\n  PreparedInput [] NormalForm.Formula.truth\nbut is expected to have type\n  PreparedInput [] (if signedBit test coef = true then NormalForm.Formula.truth else NormalForm.Formula.falsity)\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketShapeProof.lean:109:4: error: Type mismatch\n  safeFalsity []\nhas type\n  PreparedInput [] NormalForm.Formula.falsity\nbut is expected to have type\n  PreparedInput [] (if (!signedBit test coef) = true then NormalForm.Formula.truth else NormalForm.Formula.falsity)\n",
+  "failed_original_native_log_sha256": "32f003b9917500e85ed69d9026789b887856df4e170d02a83d313aefa2b5b1f3",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketShapeProof.lean",
+  "failed_proof_sha256": "dfc408aa9dcd5fa2cbaf86d1668832e56ee2c3f0e31cf6b351d9bc4adc76a36b",
+  "repaired_proof_sha256": "0d2c3bdf185a6fb066a4bf180dc5123b8afe0143222c83ccee226b8acc75d690",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-SELECTED-SIGNED-ROUTE-PACKET-REPAIR-02.patch",
+  "patch_sha256": "6f2fe0940a3b68875386e47ee06447a13f6c0d052c747065f8052508ebbcb347",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-SELECTED-SIGNED-ROUTE-PACKET-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "67ca1930c51475f9af6af86740458a9c1424665bc976d75a37189bfdc3cd5268",
+  "prior_repair_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-SELECTED-SIGNED-ROUTE-PACKET-REPAIR-01.json",
+  "prior_repair_manifest_sha256": "4590de058c784e353198b73f980cae967d6f0727efaba30faef655b20d0cff32",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketFoldProof.lean": "bad8eb8c0678bc0b360041c521cf7db3f78ed16c8aadd56b20b3f908d3529f6c",
+    "formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketProof.lean": "7f64cdd146e052894c256e681745eee0184ca876056f6ea2d077f1d702f59fbe",
+    "formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketStatementChecks.lean": "234a60921ee9a520e9afccc0967e4a0a64b107cb1f086c7382cc68024aa20b70",
+    "formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketTargets.lean": "d7b83a946196138cab5b4a401af15822edfc00e313d31bf2ad70f0a59d9f35c3",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-SELECTED-SIGNED-ROUTE-PACKET-SOURCE-MAP.md": "ce3cf68894bbaeccf22c7549c3d16599848120e2d1a5b6530ab40aec76654bd2"
+  },
+  "static_module_closure_unchanged": {
+    "FoldProof": {
+      "local": 343,
+      "external": 40,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 425,
+      "external": 40,
+      "contains_totient": false
+    },
+    "ShapeProof": {
+      "local": 390,
+      "external": 37,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 426,
+      "external": 40,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 203,
+      "external": 33,
+      "contains_totient": false
+    }
+  },
+  "scope": "Case split on the whole signed/polarized Boolean, not on positive vs negative polarity. No targets, compiled packet constructors, scope, imports or siblings changed."
+}

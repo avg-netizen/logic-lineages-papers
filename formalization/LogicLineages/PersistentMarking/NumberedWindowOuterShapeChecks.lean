@@ -1,0 +1,13 @@
+import LogicLineages.PersistentMarking.NumberedWindowOuterShapeProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowOuterShapeChecks
+open NumberedWindowOuterShapeTargets
+
+theorem exact_OuterShape : ExactOuterShape := NumberedWindowOuterShapeProof.shape
+
+theorem exact_OuterShapeReject : ExactOuterShapeReject := NumberedWindowOuterShapeProof.reject
+
+#print axioms exact_OuterShape
+#print axioms exact_OuterShapeReject
+
+end LogicLineages.PersistentMarking.NumberedWindowOuterShapeChecks

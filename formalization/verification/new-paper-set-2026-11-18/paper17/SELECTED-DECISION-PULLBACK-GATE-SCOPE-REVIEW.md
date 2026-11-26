@@ -1,0 +1,7 @@
+# Decision pullback and bounded Diophantine root gate scopes
+
+Read SelectedDecisionPullbackProof. Full helper candidate stays within the four-pin conditional target: same ctrl/policy, exact actual bounded queries, literal queryCode, genuine allAnswers computability/meaning, then one complement. No old semantic hardness theorem is used. Full helper gate appropriate, not unconditional hardness acceptance.
+
+The proposed bounded root LogicLineages.ComputabilityKnowledge.DiophantineCompletion.UndecidabilityProof is a direct dependency of the approved closed polynomial supplier through SystemUndecidabilityRootExport. Its exact endpoint is the real encoded integer-polynomial code with zero-allowing natural roots, not the output linear N[X] system. The inspected proof derives actual halting undecidability, full ordinary-code graph Diophantineness (all constructors, not RecursionFree), fixed polynomial representation and computable specialization. No new source-field/Diophantine/undecidability premise occurs in the endpoint.
+
+Thus parent-controlled bounded source-matched native checking of this root is within the approved seven-pin supplier scope. Passing it does NOT accept the H10-to-linear-system bridge, complete supplier, selected-source hardness or full mathematical closure audit. Full final must still inspect lower-level trace/recursion/minimization and actual polynomial representation, not merely standard axioms or this gate. Preserve original caps and stop/release on resource failure.

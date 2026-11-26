@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.PolicyGadgetProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.PolicyGadget.StatementChecks
+theorem fixed_smallShapes : PolicyGadgetTargets.SmallShapes := smallShapes
+theorem fixed_atomicEraserAssignment : PolicyGadgetTargets.AtomicEraserAssignment := atomicEraserAssignment
+theorem fixed_successorAssignment : PolicyGadgetTargets.SuccessorAssignment := successorAssignment
+theorem fixed_identityZeroAssignment : PolicyGadgetTargets.IdentityZeroAssignment := identityZeroAssignment
+#audit_namespace LogicLineages.ControlSensitivityCurrent.PolicyGadget.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.PolicyGadget.StatementChecks

@@ -1,0 +1,236 @@
+\section{Differential Cartier and the surviving residues}
+\label{sec:cartier}
+
+It is useful to normalize the same selected coefficient as a differential.
+Over a perfect field $K$ of characteristic two, every rational function
+has a unique expression $a(z)^2+zb(z)^2$: the elements $1,z$ form a
+basis of $K(z)$ over $K(z^2)$, and perfectness supplies the square
+roots of its coefficients. Define
+$\mathcal C((a^2+zb^2)\,dz)=b\,dz$.
+This is the differential Cartier operator. Multiplication by a square
+pulls out its square root.
+
+\begin{lemma}[Local rule]\label{lem:local}
+For a fixed pole $\zeta$ and $b\in K$,
+\[
+ \mathcal C\!\left(\frac{b\,dz}{(z-\zeta)^{2j}}\right)=0,\qquad
+ \mathcal C\!\left(\frac{b\,dz}{(z-\zeta)^{2j+1}}\right)
+       =\frac{b^{1/2}\,dz}{(z-\zeta)^{j+1}}.
+\]
+The same definition gives
+$\mathcal C(\sum a_nz^n\,dz)=\sum a_{2n+1}^{1/2}z^n\,dz$.
+\end{lemma}
+\begin{proof}
+An even power of $h=z-\zeta$ is a square and contributes zero.
+For odd powers, write $h^{2k+1}=(h^k)^2(z-\zeta)$.
+The constant differential $\zeta\,dz$ has Cartier image zero,
+whereas $\mathcal C(z\,dz)=dz$. Pulling out the square proves
+the rule for all integer $k$, including negative $k$.
+The coefficient rule follows by the same even/odd decomposition.
+\end{proof}
+
+For $e\ge1$ and $2^\ell\ge e$,
+\begin{equation}\label{eq:selection}
+ [z^0\,dz]\,\mathcal C^\ell\!
+             \left(\frac{z^{e-1}}{A_d(z)}\,dz\right)
+                   =p_d(2^\ell-e)\pmod2.
+\end{equation}
+Indeed $\ell$ odd selections choose original exponent $2^\ell-1$,
+which in $z^{e-1}/A_d$ has coefficient $p_d(2^\ell-e)$.
+
+\begin{lemma}[Removal of every higher pole]\label{lem:poles}
+Put $\mu=\sum_{i=1}^d2^{\nu_2(i)}$ and
+$a=\lceil\log_2\mu\rceil$. After $a$ Cartier applications to
+a proper differential with denominator $A_d$, all surviving finite
+poles are simple. Its simple residues subsequently undergo inverse
+Frobenius at their fixed poles. No polynomial part is created.
+\end{lemma}
+\begin{proof}
+The multiplicity at a root of odd order $q$ is
+$\sum_{q\mid i,\ i\le d}2^{\nu_2(i)}\le\mu$.
+By Lemma~\ref{lem:local}, a term of order $k>1$ survives $a$
+applications only if $k-1$ is a positive multiple of $2^a$.
+This is impossible for $k\le\mu\le2^a$. A simple residue is
+replaced by its square root. The proper partial-fraction expansion
+has no polynomial part, and every term in its Cartier image is again
+proper, proving the final assertion.
+\end{proof}
+
+Here $\nu_2(i)$ denotes the exponent of two in the positive integer
+$i$. For rational inputs over $\Ftwo$, the simple-pole tail is
+eventually periodic: all its finitely many poles and residues lie
+in one finite extension of $\Ftwo$, and inverse Frobenius is a
+permutation of that finite field. This proves a finite cycle for
+each supplied cutoff, with no cutoff-independent bound.
+
+\subsection{Closure under both binary selectors}
+
+The preceding lemma concerns repeated $\mathcal C$. To obtain a
+complete observer for arbitrary remaining binary words, one must
+also account for $\Lambda_0$.
+For a rational function $R$ with coefficients in $\Ftwo$, define
+\[
+ \mathcal L_1(R\,dz)=\mathcal C(R\,dz),\qquad
+ \mathcal L_0(R\,dz)=\mathcal C(zR\,dz).
+ \tag{L}
+\]
+Their power-series expansions are respectively
+$\Lambda_1(R)\,dz$ and $\Lambda_0(R)\,dz$, since square roots
+fix the coefficients in $\Ftwo$.
+
+\begin{lemma}[A uniform pole-order transient]\label{lem:binary-transient}
+For a proper rational differential with denominator $A_d$,
+each $\mathcal L_b$ preserves properness and introduces no
+new finite pole. A pole of order $k$ acquires order at most
+$\lceil k/2\rceil$. Consequently every binary word of length
+$a=\lceil\log_2\mu\rceil$ reaches a proper differential
+with only simple poles.
+\end{lemma}
+\begin{proof}
+The assertion for $\mathcal L_1$ is the local Cartier rule.
+At a pole $\zeta$, put $h=z-\zeta$. For $\mathcal L_0$,
+write
+\[
+ \frac{bz}{h^k}\,dz
+ =\frac{b}{h^{k-1}}\,dz+\frac{\zeta b}{h^k}\,dz.
+\]
+For $k=2j$ only the first summand survives Cartier, with
+order $j$. For $k=2j+1$ only the second survives, with
+order $j+1$. When $k=1$, the first summand is a constant
+differential and is killed. Multiplication of a proper
+rational function by $z$ adds at most a constant
+polynomial part, which is likewise killed. Thus the
+result is proper with the claimed poles and orders.
+
+Iterating gives order at most $\lceil k/2^a\rceil$.
+Every initial pole order is at most $\mu$, and $2^a\ge\mu$.
+\end{proof}
+
+Let $\mathcal R_d$ be the set of distinct roots of $A_d$ in
+a finite splitting field $K$. These roots are nonzero and
+the set is closed under Frobenius $\zeta\mapsto\zeta^2$.
+Both the field and the root set can be computed by finite
+polynomial factorization and adjoining roots. Define
+\[
+ \mathcal P_d=
+ \left\{(b_\zeta)_{\zeta\in\mathcal R_d}\in K^{\mathcal R_d}:
+              b_{\zeta^2}=b_\zeta^2\right\}.
+ \tag{P}
+\]
+
+\begin{theorem}[A complete residue-profile observer]
+\label{thm:residue-observer}
+Proper rational differentials over $\Ftwo$ with simple poles
+in $\mathcal R_d$ correspond bijectively to $\mathcal P_d$ by
+\[
+ R(z)\,dz=\sum_{\zeta\in\mathcal R_d}
+                 \frac{b_\zeta}{z-\zeta}\,dz.
+ \tag{PF}
+\]
+The profile space is finite and is closed under both binary
+transitions. At each fixed pole their updates and the output are
+\[
+ \mathcal L_1:\ b_\zeta\longmapsto b_\zeta^{1/2},
+ \qquad
+ \mathcal L_0:\ b_\zeta\longmapsto(\zeta b_\zeta)^{1/2},
+ \qquad
+ \operatorname{out}(b)=\sum_{\zeta\in\mathcal R_d}
+                             \frac{b_\zeta}{\zeta}\in\Ftwo.
+ \tag{U}
+\]
+After the finite transient of
+Lemma~\ref{lem:binary-transient}, this is an exact observer
+for every remaining binary continuation.
+\end{theorem}
+\begin{proof}
+A proper rational function with these simple poles has the
+unique partial-fraction expansion (PF). Applying the field
+Frobenius to its coefficients fixes the function precisely
+when $b_{\zeta^2}=b_\zeta^2$. Conversely a compatible tuple
+makes (PF) invariant under Frobenius, so its coefficients lie
+in $\Ftwo$. There is no additional polynomial part.
+This proves the bijection.
+
+The local rule gives the first transition. For the second,
+the decomposition
+$z/(z-\zeta)=1+\zeta/(z-\zeta)$ leaves only the simple
+fraction after Cartier, giving the second formula.
+Each map preserves the compatibility equation, since
+Frobenius and its inverse commute and
+$(\zeta b_\zeta)^2=\zeta^2b_{\zeta^2}$.
+They are $\Ftwo$-linear maps of the finite profile space.
+
+The constant coefficient is $R(0)$, which is the displayed
+sum because the characteristic is two. Frobenius permutes
+its summands, so the sum lies in $\Ftwo$.
+The profiles reconstruct the entire rational state, and
+the two transition equations agree with the two binary
+selectors by (L). Induction on the remaining word gives
+the final assertion.
+\end{proof}
+
+If $S_d$ is the squarefree part of $A_d$, the profile space
+is also the space of fractions $U/S_d$ with
+$U\in\Ftwo[z]$, $\deg U<\deg S_d$. It therefore has
+exactly $2^{\deg S_d}$ states. The initial transient can
+be computed in $V_d$ by the numerator matrices and then
+converted to this profile by partial fractions. Neither
+representation suppresses a pole, a coefficient, or a
+cancellation.
+
+\begin{corollary}[Scalar output after repeated Cartier]
+\label{cor:scalar-profile}
+Let $\beta_\zeta$ denote the initial coefficient of
+$(z-\zeta)^{-1}$ in the partial-fraction expansion of a
+proper differential over $\Ftwo$ with denominator $A_d$.
+For every $\ell\ge a$,
+\[
+ [z^0\,dz]\,\mathcal C^\ell(R\,dz)
+   =\sum_{\zeta\in\mathcal R_d}
+              \frac{\beta_\zeta^{\,2^{-\ell}}}{\zeta}.
+ \tag{O}
+\]
+Here $2^{-\ell}$ denotes $\ell$ applications of inverse
+Frobenius in $K$.
+\end{corollary}
+\begin{proof}
+A higher pole never becomes simple under repeated
+$\mathcal C$: while it survives its new order is
+$1+(k-1)/2$, still greater than one. By time $a$ every
+such term has vanished. The initial simple residues have
+only undergone inverse Frobenius. Apply the output
+formula (U).
+\end{proof}
+
+Grouping the terms in (O) by Frobenius orbit expresses the
+answer as a sum of finite-field traces. If $\zeta$ has
+orbit length $h$, compatibility puts its summand in
+$\mathbb F_{2^h}$ and the orbit contributes
+$\operatorname{Tr}_{\mathbb F_{2^h}/\Ftwo}
+(\beta_\zeta^{2^{-\ell}}/\zeta)$.
+This makes the scalar cancellation explicit.
+A Frobenius-stable subfamily of poles has autonomous
+updates under (U), but generally does not determine
+the sum over the omitted poles.
+
+\subsection{The actual observation lies beyond the transient}
+
+For the linked values in \eqref{eq:delta}, $C=2^\ell$ with
+$\ell\ge B+1$ by \eqref{eq:growth}. Since
+$\mu\le d(1+\lfloor\log_2 d\rfloor)\le B(1+\log_2B)$,
+we have $a\le B$ for $B\ge16$: use
+$\log_2 B\le B/2$ and $B^2\le2^B$ in this range.
+Also $B>2u$ gives $d=B-u+3>u$ and
+$e-1=u-5<D$, so the actual initial numerator is proper.
+Thus the actual selected observation
+is beyond the higher-pole transient. This pays an actual parameter
+bound; it is not an unspecified promise that enough iterations occur.
+Together, \eqref{eq:selection} and (O) give the exact
+scalar formula for that linked coefficient using all its
+initial simple residues.
+
+The complete state can nevertheless have a long simple-pole cycle.
+Pole count alone cannot prove that. For example, $dS/S$ for a
+squarefree polynomial $S$ has residue one at every simple pole and
+is Cartier-fixed, however many poles $S$ has.
+

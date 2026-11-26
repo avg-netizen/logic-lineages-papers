@@ -1,0 +1,5 @@
+# Indexed carrier independent scope
+
+Read current ordinals.tex indexed carrier statement and construction, frozen IndexedCarrier target, complete new selector, complete thin context proof and exact endpoint assembly. The selector uses the literal original outer application, selects its first argument with one same-owner copy, then the retained second argument via the empty call. It proves original endpoint typing/ordinary/support along with strictness. The thin context proof preserves original erase/context definitions and fill typing, replacing only the heavy stability aggregator with its actual strict-context and support-confinement ingredients. The final endpoint uses the checked unchanged Carrier proposition for all three stated comparisons. No source/native/closed or annotation premises are dropped or added, and no stopped root is reused.
+
+Approved for fresh exact core gate, after target preflight already paid by owner and current frozen pins independently retained. No acceptance until native/evidence and final review.

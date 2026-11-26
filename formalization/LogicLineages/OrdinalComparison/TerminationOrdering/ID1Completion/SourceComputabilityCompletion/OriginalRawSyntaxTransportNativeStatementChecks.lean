@@ -1,0 +1,43 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportTypedProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportCancellationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportDecreaseProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportNativeStatementChecks
+open OriginalRawSyntaxTransportTargets
+
+ theorem transition_exact : ActualRawSyntaxTransitionCalibration :=
+  OriginalRawSyntaxTransportTransitionProof.actualRawSyntaxTransitionCalibration
+ theorem encoded_transition_exact : ActualRawSyntaxEncodedTransition :=
+  OriginalRawSyntaxTransportEncodedProof.actualRawSyntaxEncodedTransition
+ theorem fuel_bounds_exact : ActualRawSyntaxFuelBounds :=
+  OriginalRawSyntaxTransportWeightProof.actualRawSyntaxFuelBounds
+ theorem work_decrease_exact : ActualRawSyntaxWorkDecrease :=
+  OriginalRawSyntaxTransportDecreaseProof.actualRawSyntaxWorkDecrease
+ theorem bounded_calibration_exact : ActualRawSyntaxBoundedCalibration :=
+  OriginalRawSyntaxTransportBoundedProof.actualRawSyntaxBoundedCalibration
+ theorem termination_exact : ActualRawSyntaxNativeTermination :=
+  OriginalRawSyntaxTransportNativeRecurrenceProof.actualRawSyntaxNativeTermination
+ theorem recurrence_exact : ActualRawSyntaxNativeRecurrence :=
+  OriginalRawSyntaxTransportNativeRecurrenceProof.actualRawSyntaxNativeRecurrence
+ theorem code_calibration_exact : ActualRawSyntaxCodeCalibration :=
+  OriginalRawSyntaxTransportCodeProof.actualRawSyntaxCodeCalibration
+ theorem typed_calibration_exact : ActualRawSyntaxTypedCalibration :=
+  OriginalRawSyntaxTransportTypedProof.actualRawSyntaxTypedCalibration
+ theorem cancellation_exact : ActualRawSyntaxNativeCancellation :=
+  OriginalRawSyntaxTransportCancellationProof.actualRawSyntaxNativeCancellation
+
+#print axioms transition_exact
+#print axioms encoded_transition_exact
+#print axioms fuel_bounds_exact
+#print axioms work_decrease_exact
+#print axioms bounded_calibration_exact
+#print axioms termination_exact
+#print axioms recurrence_exact
+#print axioms code_calibration_exact
+#print axioms typed_calibration_exact
+#print axioms cancellation_exact
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportNativeStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportNativeStatementChecks

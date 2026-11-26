@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.UniformClosedPropositional.LogicalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.UniformClosedPropositional.StatementChecks
+theorem exactNativeLine : Targets.NativeLine := NativeLineProof.exactNativeLine
+theorem exactNativeRefinement : Targets.NativeRefinement := NativeProof.exactNativeRefinement
+theorem exactInternalLine : Targets.InternalLine := ConstructorProof.exactInternalLine
+theorem exactInternalLogical : Targets.InternalLogical := LogicalProof.exactInternalLogical
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.UniformClosedPropositional.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.UniformClosedPropositional.StatementChecks

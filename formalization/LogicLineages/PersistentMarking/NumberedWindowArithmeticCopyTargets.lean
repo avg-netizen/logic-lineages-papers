@@ -1,0 +1,17 @@
+import LogicLineages.PersistentMarking.NumberedWindowCopyAlgorithm
+import LogicLineages.PersistentMarking.NumberedWindowArithmeticOwnerTargets
+import LogicLineages.PersistentMarking.NumberedWindowAdmissionTargets
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticCopyTargets
+open NumberedWindowCopyAlgorithm NumberedWindowArithmeticHeadCode NumberedWindowArithmeticMarkRootTargets
+open NumberedWindowAdmissionTargets NumberedWindowRawWitnessRootBits
+
+def ExactClassRank : Prop := ∀ S f, rank S.entries (encodeHead f) = Spine.classRank S f
+
+def ExactRootRankComparisons : Prop := ∀ S f g,
+  compareRanks true S.entries (encodeHead f) (encodeHead g) = precedesBit S f g ∧
+  compareRanks false S.entries (encodeHead f) (encodeHead g) = equivalentBit S f g
+
+def ExactCopyRoot : Prop := ∀ S K, copy S.entries (window S K).2 = rootOn S K .copy
+
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticCopyTargets

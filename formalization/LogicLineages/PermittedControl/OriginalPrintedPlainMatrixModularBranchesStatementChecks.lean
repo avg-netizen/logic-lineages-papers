@@ -1,0 +1,25 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixModularBranchesTargets
+import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixModularBranchesPaymentProof
+import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixModularBranchesProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedInitialModularPayment :
+    OriginalPrintedPlainMatrixModularBranches.ExactInitialModularPayment :=
+  OriginalPrintedPlainMatrixModularBranches.exactInitialModularPayment
+
+theorem fixed_exactOriginalPrintedModularBranches :
+    OriginalPrintedPlainMatrixModularBranches.ExactPrintedModularBranches :=
+  OriginalPrintedPlainMatrixModularBranches.exactPrintedModularBranches
+
+theorem fixed_fullOriginalPrintedPlainMatrixModularBranches :
+    OriginalPrintedPlainMatrixModularBranches.FullOriginalPrintedPlainMatrixModularBranches :=
+  ⟨fixed_exactOriginalPrintedInitialModularPayment,fixed_exactOriginalPrintedModularBranches⟩
+
+#print axioms fixed_exactOriginalPrintedInitialModularPayment
+#print axioms fixed_exactOriginalPrintedModularBranches
+#print axioms fixed_fullOriginalPrintedPlainMatrixModularBranches
+
+end LogicLineages.PermittedControl.StatementChecks

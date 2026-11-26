@@ -1,0 +1,89 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:36:6: error: Tactic `rewrite` failed: motive is not type correct:
+  fun _a =>
+    (if _a = 1 then 1 else 0) =
+      (NumberedCodeParserTable.lookup (List.map (fun v => v == 1) xs)
+          (evaluate child (ofFn ![numbersNumber xs, code]))).toNat
+Error: Application type mismatch: The argument
+  instDecidableEqNat
+    (evaluate InternalRawListRecursion.lookup
+      (![evaluate child (ofFn ![numbersNumber xs, code]), numbersNumber xs] 0 ::ᵥ
+        ![evaluate child (ofFn ![numbersNumber xs, code]), numbersNumber xs] 1 ::ᵥ nil))
+    1
+has type
+  Decidable
+    (evaluate InternalRawListRecursion.lookup
+        (![evaluate child (ofFn ![numbersNumber xs, code]), numbersNumber xs] 0 ::ᵥ
+          ![evaluate child (ofFn ![numbersNumber xs, code]), numbersNumber xs] 1 ::ᵥ nil) =
+      1)
+but is expected to have type
+  Decidable (_a = 1)
+in the application
+  @ite ℕ (_a = 1)
+    (instDecidableEqNat
+      (evaluate InternalRawListRecursion.lookup
+        (![evaluate child (ofFn ![numbersNumber xs, code]), numbersNumber xs] 0 ::ᵥ
+          ![evaluate child (ofFn ![numbersNumber xs, code]), numbersNumber xs] 1 ::ᵥ nil))
+      1)
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+child : Program 2
+xs : List ℕ
+code : ℕ
+⊢ (if
+        evaluate InternalRawListRecursion.lookup
+            (evaluate child (ofFn ![numbersNumber xs, code]) ::ᵥ numbersNumber xs ::ᵥ nil) =
+          1 then
+      1
+    else 0) =
+    (NumberedCodeParserTable.lookup (List.map (fun v => v == 1) xs)
+        (evaluate child (ofFn ![numbersNumber xs, code]))).toNat
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    instDecidableEqNat
+      (evaluate InternalRawListRecursion.lookup
+        (![evaluate child (ofFn ![numbersNumber xs, code]), numbersNumber xs] 0 ::ᵥ
+          ![evaluate child (ofFn ![numbersNumber xs, code]), numbersNumber xs] 1 ::ᵥ nil))
+      1
+  has type
+    Decidable
+      (evaluate InternalRawListRecursion.lookup
+          (![evaluate child (ofFn ![numbersNumber xs, code]), numbersNumber xs] 0 ::ᵥ
+            ![evaluate child (ofFn ![numbersNumber xs, code]), numbersNumber xs] 1 ::ᵥ nil) =
+        1)
+  but is expected to have type
+    Decidable
+      (evaluate InternalRawListRecursion.lookup
+          (evaluate child (ofFn ![numbersNumber xs, code]) ::ᵥ numbersNumber xs ::ᵥ nil) =
+        1)
+  in the application
+    @ite ℕ
+      (evaluate InternalRawListRecursion.lookup
+          (evaluate child (ofFn ![numbersNumber xs, code]) ::ᵥ numbersNumber xs ::ᵥ nil) =
+        1)
+      (instDecidableEqNat
+        (evaluate InternalRawListRecursion.lookup
+          (![evaluate child (ofFn ![numbersNumber xs, code]), numbersNumber xs] 0 ::ᵥ
+            ![evaluate child (ofFn ![numbersNumber xs, code]), numbersNumber xs] 1 ::ᵥ nil))
+        1)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:88:51: warning: This simp argument is unused:
+  secondValue
+
+Hint: Omit it from the simp argument list.
+  simp only [step, ̲chooseValue, ̲firstValue,s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵ ̲bothValue, ̲ordinaryValue, ̲numberedValue,
+      constantEvaluation, ̲sameOfEvaluation, ̲payload, ̲rightOfEvaluation, ̲rawValue,
+      NumberedCodeParserTable.codeNext, ̲NumberedTypeCodecPrimrecSupportProof.decodeTypeExact,t̵y̵p̵e̵s̵S̵o̵m̵e̵,̵
+      t̲y̲p̲e̲s̲S̲o̲m̲e̲,̲ ̲OriginalRawSyntaxTransport.firstValue, ̲OriginalRawSyntaxTransport.secondValue,
+  ̲ ̲ ̲ ̲ ̲tagValue, ̲payloadValue,
+  ̵  ̵ ̵ ̵headValue, ̲hp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderStep.NativeProof.rawValue: [propext]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderStep.NativeProof.typesSome: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:103:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderStep.NativeProof.bothValue: forbidden axiom dependency sorryAx

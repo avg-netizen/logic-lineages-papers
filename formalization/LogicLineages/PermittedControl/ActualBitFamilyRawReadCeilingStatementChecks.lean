@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.ActualBitFamilyRawReadCeilingTargets
+import LogicLineages.PermittedControl.ActualBitFamilyRawReadCeilingProof
+import LogicLineages.PermittedControl.ActualBitFamilyRawReadCeilingPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualBitFamilyRawReadCeiling
+
+theorem fixed_exactReadCeilingCalibration : ExactReadCeilingCalibration := exactReadCeilingCalibration
+theorem fixed_exactRawReadFunding : ExactRawReadFunding := exactRawReadFunding
+theorem fixed_exactRawReadCeilingEffectivity : ExactRawReadCeilingEffectivity := exactRawReadCeilingEffectivity
+theorem fixed_fullActualBitFamilyRawReadCeiling : FullActualBitFamilyRawReadCeiling :=
+  ⟨fixed_exactReadCeilingCalibration,fixed_exactRawReadFunding,fixed_exactRawReadCeilingEffectivity⟩
+
+#print axioms fixed_exactReadCeilingCalibration
+#print axioms fixed_exactRawReadFunding
+#print axioms fixed_exactRawReadCeilingEffectivity
+#print axioms fixed_fullActualBitFamilyRawReadCeiling
+
+end LogicLineages.PermittedControl.StatementChecks

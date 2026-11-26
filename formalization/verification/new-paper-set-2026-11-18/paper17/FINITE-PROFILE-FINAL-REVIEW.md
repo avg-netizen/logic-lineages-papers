@@ -1,0 +1,8 @@
+# Independent final: finite profile foundation
+Approved full supporting conjunction only. Independently reproduced identical 73-module recursive evidence, zero errors; four frozen pins match, exact fixed_finiteProfileFoundation uses standard axioms only. Native receipt 1794985807211997144-8. Read the actual definitions, full target and proof. No compilation or mathematical source edit.
+
+The raw course-of-values table has explicit length and every prior-index correctness; decoded tail indices are bounded by the table stage. Raw comparison and norm-code correctness identify the retained ordinary CNF weighted sum with actual relativeProfile for normal input codes. Primitive recursion is constructed for the total raw table/code, not inferred from semantic recursion or classical finite enumeration.
+
+Joint-piece constancy follows equality of actual CNF filter membership at every combined breakpoint, preserving right endpoints. Finite coverage selects the greatest breakpoint below x if one exists and y=max(2,b+1), proving y<=x<E and list membership; with no lower breakpoint it uses 2. It proves equivalence of every breakpoint test, including clipped/empty cases, without assuming a cover. Duplicates do not affect correctness.
+
+The representative list and cover remain noncomputable ordinal constructions. This packet does not prove an executable representative-list compiler, highest-piece selector, input norm bounds for all chosen representatives, actual phase traversal, effective equal-gap certificate or numbered proposition. The two proof-only failed drafts remain preserved; frozen semantics unchanged.

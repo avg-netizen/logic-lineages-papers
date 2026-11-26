@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SixSol20261113.StructuralFamily.CompatibleProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SixSol20261113.StructuralFamily.CompatibleStatementChecks
+theorem application : CompatibleTargets.FullApplication := CompatibleApplicationProof.fullApplication
+theorem interpretation : CompatibleTargets.InterpretationSubstitution := CompatibleProof.interpretationSubstitution
+theorem scanner : CompatibleTargets.ScannerSubstitution := CompatibleProof.scannerSubstitution
+theorem fixedPoint : CompatibleTargets.FixedPointCompatible := CompatibleProof.fixedPointCompatible
+end LogicLineages.OrdinalComparison.TerminationOrdering.SixSol20261113.StructuralFamily.CompatibleStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.SixSol20261113.StructuralFamily.CompatibleStatementChecks

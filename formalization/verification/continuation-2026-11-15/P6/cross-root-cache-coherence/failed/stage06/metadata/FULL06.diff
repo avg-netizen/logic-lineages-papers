@@ -1,0 +1,31 @@
+--- FULL05/ConsProof.lean
++++ FULL06/ConsProof.lean
+@@ -174,7 +174,7 @@
+     Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
+   apply zeroSuccessorCases Delta c.s2.index _
+   · obtain ⟨hn⟩ := index2Nonzero c
+-    exact ⟨Derivation.explosion (Derivation.implicationElimination (InternalSourceInversionSupportProof.addHyp hn _)
++    exact ⟨Derivation.explosion (Derivation.implicationElimination (InternalBetaTotalityProof.addHyp hn _)
+       (Derivation.hypothesis List.mem_cons_self))⟩
+   · intro beta j Theta pred2 hj hi2
+     rw [graph2Rename]
+@@ -186,7 +186,7 @@
+     Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup c.found c.s2.table raw)) := by
+   apply zeroSuccessorCases Delta c.s1.index _
+   · obtain ⟨hn⟩ := index1Nonzero c
+-    exact ⟨Derivation.explosion (Derivation.implicationElimination (InternalSourceInversionSupportProof.addHyp hn _)
++    exact ⟨Derivation.explosion (Derivation.implicationElimination (InternalBetaTotalityProof.addHyp hn _)
+       (Derivation.hypothesis List.mem_cons_self))⟩
+   · intro beta j Theta pred1 hj hi1
+     rw [graph2Rename]
+--- FULL05/PresenceProof.lean
++++ FULL06/PresenceProof.lean
+@@ -34,7 +34,7 @@
+   have hn := lookupNonzero sn found hf
+   apply zeroSuccessorCases Theta found _
+   · obtain ⟨hn⟩ := hn
+-    exact ⟨Derivation.explosion (Derivation.implicationElimination (InternalSourceInversionSupportProof.addHyp hn _)
++    exact ⟨Derivation.explosion (Derivation.implicationElimination (InternalBetaTotalityProof.addHyp hn _)
+       (Derivation.hypothesis List.mem_cons_self))⟩
+   · intro gamma k Xi value hk he
+     have hfr := InternalGraphCompositionFunctionalityProof.renameInto hf k Xi hk

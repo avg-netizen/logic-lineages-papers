@@ -1,0 +1,7 @@
+# Actual cover factored through the original term measure
+
+`NumberedWindowInternalFactoredCoverChecks` passed native gate `1795330270889576938-9` with four named standard-only audits. Three earlier target or proof diagnostics remain archived.
+
+The selected syntax program returns the original term syntax bit. The replaceable term measure program returns the encoded original pair of node count and maximum numeral. The selected grammar program takes the encoded head list, encoded type list and that same measure pair, and returns the `some` code of the original grammar's term list in its actual order. The genuine syntax branch chooses that grammar computation on accepted inputs and zero on malformed inputs. This recovers the whole original option value on every input and distinguishes rejection from successful empty output. A calibrated term measure is invariant under the original numeric exchange term bit even with arbitrary admitted head-pair inputs.
+
+The object rule opens the actual cover callbacks when both supplied syntax proofs give one. When their actual term-measure graph outputs are the same term, the actual grammar calls have identical inputs. Program functionality then gives genuine equality of the two original optional cover reports. No term-measure equality is inferred from arbitrary open exchange here. The structural auxiliary measure result and its integration remain separate.

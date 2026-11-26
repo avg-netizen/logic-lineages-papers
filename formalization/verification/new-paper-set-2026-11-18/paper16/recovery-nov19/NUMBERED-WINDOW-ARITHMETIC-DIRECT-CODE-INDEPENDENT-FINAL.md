@@ -1,0 +1,5 @@
+# Numeric strict-multiset certificate support accepted
+
+Both comparator leaves, exact source mapping and all three authored leaves were fully independently read. All30 authored/frozen pins verified before first clean native1628. Independent current recursive object/compiler/input-key/receipt and actual axiom review verifies189 modules,56 merged pins and7 exact aliases/errors0. Only standard foundations occur; the three literal codecs use propext/Quot.sound.
+
+The literal ordered Nat list, inserted occurrence and full partition witness retain all fields, order and multiplicities. Successful decoding alone is not mathematical validity. Typed-list code admission and supplied numeric certificate checks reflect independently specified original admitted addresses and original direct multiset replacement on actual decoded endpoint lists. Original endpoint domains and malformed rejection are proved. Existential certificate completeness is not unknown-certificate search or a bare reachability decision. No internal arithmetic formula, I/J stages, ID1 accessibility or numbered promotion; register149/18 unchanged.

@@ -1,0 +1,7 @@
+# Acceptance 001–032 current-source drift reconciliation
+
+Read-only reconciliation at 2026-11-18 05:48 UTC: all 32 original acceptance evidence SHA256 values match; all recorded local source bytes and output artifact bundles still match the current tree. Across the records there are 759 unique local modules and 4,571 uniquely hashed paths. Recorded receipt/log hashes, where present in evidence, also match. Zero source, artifact, receipt or log drift found. Results in ACCEPTANCE-001-032-RECONCILIATION.json; read-only script retained alongside it. No compiler invocation.
+
+The audit handles both list-shaped core-only P16 evidence and dictionary-shaped recursive evidence, memoizing actual path hashes rather than repeatedly hashing shared imports. Missing optional artifact companions are checked as missing, not silently skipped. Later modules and namespace reopenings do not replace the older exact aliases: each original acceptance retains its original evidence, which remains valid against unchanged current bytes. No accepted supplier needs revalidation due to drift at this checkpoint.
+
+This is a point-in-time source/artifact drift audit, not a fresh native proof run, upstream dependency rebuild, acceptance rewrite, or replacement for each packet's recursive input-key and source-scope review. Original receipts and evidence remain untouched. Acceptances after 032 are outside this requested range.

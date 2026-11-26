@@ -1,0 +1,14 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowAddressProgramProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowAddressProgramChecks
+open NumberedWindowAddressProgramTargets
+theorem exact_TypeCodeProgram : TypeCodeProgram := NumberedWindowAddressProgramProof.typeProgram
+theorem exact_ContextCodeProgram : ContextCodeProgram := NumberedWindowAddressProgramProof.contextProgram
+theorem exact_AddressCodeProgram : AddressCodeProgram := NumberedWindowAddressProgramProof.addressProgram
+#print axioms exact_TypeCodeProgram
+#print axioms exact_ContextCodeProgram
+#print axioms exact_AddressCodeProgram
+end LogicLineages.PersistentMarking.NumberedWindowAddressProgramChecks

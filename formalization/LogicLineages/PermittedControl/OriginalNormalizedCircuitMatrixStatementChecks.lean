@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PermittedControl.OriginalNormalizedCircuitMatrixTargets
+import LogicLineages.PermittedControl.OriginalNormalizedCircuitMatrixBaseProof
+import LogicLineages.PermittedControl.OriginalNormalizedCircuitMatrixProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalNormalizedBaseRows : OriginalNormalizedCircuitMatrix.ExactNormalizedBaseRows :=
+  OriginalNormalizedCircuitMatrix.exactNormalizedBaseRows
+
+theorem fixed_exactOriginalNormalizedCircuitRows : OriginalNormalizedCircuitMatrix.ExactNormalizedCircuitRows :=
+  OriginalNormalizedCircuitMatrix.exactNormalizedCircuitRows
+
+theorem fixed_exactOriginalPrintedNormalizedMatrix : OriginalNormalizedCircuitMatrix.ExactPrintedNormalizedMatrix :=
+  OriginalNormalizedCircuitMatrix.exactPrintedNormalizedMatrix
+
+theorem fixed_fullOriginalNormalizedCircuitMatrix : OriginalNormalizedCircuitMatrix.FullOriginalNormalizedCircuitMatrix :=
+  ⟨fixed_exactOriginalNormalizedBaseRows,fixed_exactOriginalNormalizedCircuitRows,
+    fixed_exactOriginalPrintedNormalizedMatrix⟩
+
+#print axioms fixed_exactOriginalNormalizedBaseRows
+#print axioms fixed_exactOriginalNormalizedCircuitRows
+#print axioms fixed_exactOriginalPrintedNormalizedMatrix
+#print axioms fixed_fullOriginalNormalizedCircuitMatrix
+
+end LogicLineages.PermittedControl.StatementChecks

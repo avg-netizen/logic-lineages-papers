@@ -1,0 +1,23 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalPullbackChecks.lean:13:61: error(lean.unknownIdentifier): Unknown constant `LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityDownwardSyntaxProof.membershipRename`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalPullbackChecks.lean:37:6: error(lean.unknownIdentifier): Unknown identifier `membershipRename`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalPullbackChecks.lean:24:69: error: unsolved goals
+s : Data
+p : Program 3
+c : ℕ
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+g a x : OTerm α
+hs : Nonempty (Derivation (sourceBody s c) Γ (descendants s p c a x))
+y : OTerm (α ⊕ Fin 1) := var (Sum.inr 0)
+E : language.Formula (α ⊕ Fin 1) :=
+  accepts p (Term.relabel Sum.inl g) (Term.relabel Sum.inl a) y ⊓ edge s false c (Term.relabel Sum.inl x) y
+Δ : List (language.Formula (α ⊕ Fin 1)) := E :: List.map weaken Γ
+hs' : Nonempty (Derivation (sourceBody s c) Δ (descendants s p c (Term.relabel Sum.inl a) (Term.relabel Sum.inl x)))
+pair : Derivation (sourceBody s c) Δ E
+hy : Nonempty (Derivation (sourceBody s c) Δ (inverse p (Term.relabel Sum.inl a) y))
+hg : Derivation (sourceBody s c) Δ (membership false (Term.relabel Sum.inl g))
+hforward : Derivation (sourceBody s c) Γ (forwardImage s p c g a x)
+⊢ Derivation (sourceBody s c) Δ (Formula.relabel Sum.inl (membership false g))
+'LogicLineages.PersistentMarking.NumberedWindowInternalPullbackChecks.exact_InternalPullback' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]

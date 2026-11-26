@@ -1,0 +1,11 @@
+import LogicLineages.PersistentMarking.NumberedWindowActualPairAlgorithm
+import LogicLineages.PersistentMarking.NumberedWindowRegistryPairPrograms
+import LogicLineages.PersistentMarking.NumberedWindowArithmeticPairProgramTargets
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticPairProgramProof
+open NumberedWindowArithmeticPairProgramTargets
+
+theorem actualPair : ActualPairProgram := NumberedWindowRegistryPairPrograms.literalEncoding
+theorem actualDecoder : ActualPairDecoderProgram := NumberedWindowRegistryPairPrograms.literalDecoding
+
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticPairProgramProof

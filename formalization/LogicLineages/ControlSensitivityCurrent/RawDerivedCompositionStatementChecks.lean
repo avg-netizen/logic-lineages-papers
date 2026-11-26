@@ -1,0 +1,15 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.RawDerivedCompositionCountsProof
+public import LogicLineages.ControlSensitivityCurrent.RawDerivedCompositionPrimitiveProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.RawSourceDAG.DerivedComposition.StatementChecks
+theorem fixed_typed_exactness : RawDerivedCompositionTargets.TypedExactness := typedExactness
+theorem fixed_success_reconstruction : RawDerivedCompositionTargets.SuccessReconstruction := successReconstruction
+theorem fixed_rejection_counts : RawDerivedCompositionTargets.RejectionAndCounts := rejectionAndCounts
+theorem fixed_effective : RawDerivedCompositionTargets.Effective := effective
+#print axioms fixed_typed_exactness
+#print axioms fixed_success_reconstruction
+#print axioms fixed_rejection_counts
+#print axioms fixed_effective
+end LogicLineages.ControlSensitivityCurrent.RawSourceDAG.DerivedComposition.StatementChecks

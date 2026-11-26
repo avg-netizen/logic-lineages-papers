@@ -1,0 +1,12 @@
+--- LogicLineages/ControlSensitivityCurrent/CurrentReserveGroundUnitProof.lean
++++ LogicLineages/ControlSensitivityCurrent/CurrentReserveGroundUnitProof.lean
+@@ -88,8 +88,7 @@
+   rw [groundValue]
+   have h : pullGround r (fun _ => 0) = fun _ => 0 := by
+     funext x
+-    unfold pullGround
+-    cases r x <;> rfl
++    cases hr : r x <;> simp [pullGround,hr]
+   rw [h]
+ 
+ theorem groundUnitAccountTransport : CurrentReserveTargets.GroundUnitAccountTransport := by

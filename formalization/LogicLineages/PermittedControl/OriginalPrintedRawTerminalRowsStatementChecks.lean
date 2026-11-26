@@ -1,0 +1,23 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedRawTerminalRowsTargets
+import LogicLineages.PermittedControl.OriginalPrintedRawTerminalRowsProof
+import LogicLineages.PermittedControl.OriginalPrintedRawTerminalRowsPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedRawTerminalRows
+
+theorem fixed_exactOriginalRawTerminalAtoms : ExactOriginalRawTerminalAtoms := exactOriginalRawTerminalAtoms
+theorem fixed_exactOriginalRawTerminalRows : ExactOriginalRawTerminalRows := exactOriginalRawTerminalRows
+theorem fixed_exactOriginalRawTerminalRowsEffectivity : ExactOriginalRawTerminalRowsEffectivity :=
+  exactOriginalRawTerminalRowsEffectivity
+theorem fixed_fullOriginalPrintedRawTerminalRows : FullOriginalPrintedRawTerminalRows :=
+  ⟨fixed_exactOriginalRawTerminalAtoms,fixed_exactOriginalRawTerminalRows,
+    fixed_exactOriginalRawTerminalRowsEffectivity⟩
+
+#print axioms fixed_exactOriginalRawTerminalAtoms
+#print axioms fixed_exactOriginalRawTerminalRows
+#print axioms fixed_exactOriginalRawTerminalRowsEffectivity
+#print axioms fixed_fullOriginalPrintedRawTerminalRows
+
+end LogicLineages.PermittedControl.StatementChecks

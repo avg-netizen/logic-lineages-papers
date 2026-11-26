@@ -1,0 +1,71 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCodec.ArithmeticSupportProof
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCodec.AddProof
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRDefiningEquations GorbowTheoryProof
+open GorbowPRChildTags GorbowSubstitution GorbowFormulaSubstitution List.Vector
+open SixSol20261112.Fuel NamedArithmeticGraph ArithmeticSupport
+
+private def base : Program 1 := .projection 0
+private def step : Program 3 := .composition .succ (fun _ => .projection (1 : Fin 3))
+
+theorem zero {n ctx : Nat} (p : Program n) tag (ht : (nodes p)[tag]? = some ⟨2,add⟩)
+    (b : Term ctx) : Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
+      (.equal (call tag (.zero ::ᵥ b ::ᵥ nil)) b)) := by
+  have hbase := GorbowPRSubtree.Proof.lookupTransport n p tag ⟨2,add⟩ 1 ⟨1,base⟩ ht
+    (GorbowPRChildTags.Proof.recursionBase 1 base step)
+  obtain ⟨hr⟩ := GorbowPRSymbolicEquations.Proof.recursionZeroEquation n p tag 1 base step ht ctx (b ::ᵥ nil)
+  obtain ⟨hb⟩ := SixSol20261112.Fuel.Equations.projection p (tag+1) (0 : Fin 1) hbase (b ::ᵥ nil)
+  exact ⟨Logic.trans _ _ _ hr hb⟩
+
+theorem successor {n ctx : Nat} (p : Program n) tag (ht : (nodes p)[tag]? = some ⟨2,add⟩)
+    (a b : Term ctx) : Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
+      (.equal (call tag (.succ a ::ᵥ b ::ᵥ nil)) (.succ (call tag (a ::ᵥ b ::ᵥ nil))))) := by
+  have hs := SixSol20261112.Fuel.Equations.recursionStepChild p tag base step ht
+  have hf := SixSol20261112.Fuel.Equations.functionChild p (tag+stepTag base) Program.succ
+    (fun _ : Fin 1 => Program.projection (1 : Fin 3)) hs
+  obtain ⟨hr⟩ := GorbowPRSymbolicEquations.Proof.recursionSuccessorEquation n p tag 1 base step ht ctx a (b ::ᵥ nil)
+  obtain ⟨hc⟩ := SixSol20261112.Fuel.Equations.compositionProjections p (tag+stepTag base) Program.succ
+    (fun _ : Fin 1 => Program.projection (1 : Fin 3)) hs (fun _ => (1 : Fin 3)) (fun _ => rfl)
+    (a ::ᵥ call tag (a ::ᵥ b ::ᵥ nil) ::ᵥ b ::ᵥ nil)
+  obtain ⟨hv⟩ := Support.intoRegistry p Program.succ (tag+stepTag base+1) hf _
+    (NamedArithmeticGraph.Equations.successor (tag+stepTag base+1) ctx
+      (call tag (a ::ᵥ b ::ᵥ nil) ::ᵥ nil))
+  exact ⟨Logic.trans _ _ _ hr (Logic.trans _ _ _ hc hv)⟩
+
+private def template {ctx : Nat} (tag : Nat) (b : Term ctx) : Formula (ctx+1) :=
+  .equal (call tag (.var 0 ::ᵥ liftTerm b ::ᵥ nil)) (.add (liftTerm b) (.var 0))
+
+private theorem templateAt {ctx : Nat} tag (b a : Term ctx) :
+    GorbowStandardInstances.instantiate (template tag b) a =
+      .equal (call tag (a ::ᵥ b ::ᵥ nil)) (.add b a) := by
+  simp only [GorbowStandardInstances.instantiate,template,substituteFormula,Logic.substCall,
+    List.Vector.map_cons,List.Vector.map_nil,substitute,liftTerm,Support.shiftCancel,Fin.cases_zero]
+
+theorem internalAdd : Targets.InternalAdd := by
+  intro n p tag ht ctx a b
+  let T := GorbowPRNumeralCalculation.Theory p
+  let phi := template tag b
+  obtain ⟨hz⟩ := zero p tag ht b
+  have hb : Derivation T (GorbowStandardInstances.instantiate phi .zero) := by
+    rw [show phi = template tag b from rfl,templateAt]
+    exact Logic.trans _ _ _ hz (Support.equalitySymmetry _ _ (.arithmetic (.addZero b)))
+  obtain ⟨hnext⟩ := successor p tag ht (.var 0) (liftTerm b)
+  have ih : Hilbert.Local T (ctx+1) [phi]
+      (.equal (call tag (.var 0 ::ᵥ liftTerm b ::ᵥ nil)) (.add (liftTerm b) (.var 0))) :=
+    .hypothesis List.mem_cons_self
+  have hc := localUnary (.succ (.var 0)) _ _ ih
+  have hs : Derivation T (.imp phi (GorbowStandardInduction.successorInstance phi)) := by
+    change Derivation T (.imp phi (GorbowStandardInduction.successorInstance (template tag b)))
+    simp only [GorbowStandardInduction.successorInstance,template,substituteFormula,Logic.substCall,
+      List.Vector.map_cons,List.Vector.map_nil,substitute,successorLift,Fin.cases_zero]
+    exact Hilbert.Local.finish (Hilbert.Local.discharge
+      (localTrans _ _ _ (.base hnext) (localTrans _ _ _ hc
+        (.base (Support.equalitySymmetry _ _ (.arithmetic (.addSucc (liftTerm b) (.var 0))))))))
+  have h := atTerm phi a (ArithmeticSupport.induction phi hb hs)
+  rw [show phi = template tag b from rfl,templateAt] at h
+  exact ⟨h⟩
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCodec.AddProof

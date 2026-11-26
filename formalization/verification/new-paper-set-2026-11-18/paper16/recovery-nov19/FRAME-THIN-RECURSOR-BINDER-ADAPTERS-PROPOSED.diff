@@ -1,0 +1,64 @@
+--- LogicLineages/PersistentMarking/NumberedWindowClosingTypedThinCore.lean
++++ LogicLineages/PersistentMarking/NumberedWindowClosingTypedThinCore.lean
+@@ -11,8 +11,18 @@
+     (motive_1 := fun C q τ _ => TermGoal n C q τ)
+     (motive_2 := fun C qs types _ => BaseGoal n C qs types)
+     (motive_3 := fun C qs _ => ExtrasGoal n C qs)
+-    (@bFree n) (@bBound n) (@bLam n) (@bBottom n) (@bOrdinary n) (@bNumbered n) (@bAuxApp n)
+-    (@bBaseNil n) (@bBaseCons n) (@bExtrasNil n) (@bExtrasCons n) h) d D hc
++    (@bFree n)
++    (by intro C σ i hi; exact @bBound n C i σ hi)
++    (by intro _ _ _ _ ht ih; exact @bLam n _ _ _ _ ht ih)
++    (@bBottom n)
++    (by intro _ _ _ hb ih; exact @bOrdinary n _ _ _ hb ih)
++    (by intro _ _ _ _ _ _ hb he ib ie; exact @bNumbered n _ _ _ _ _ _ hb he ib ie)
++    (by intro _ _ _ _ _ hq ha iq ia; exact @bAuxApp n _ _ _ _ _ hq ha iq ia)
++    (@bBaseNil n)
++    (by intro _ _ _ _ _ hq hs iq is; exact @bBaseCons n _ _ _ _ _ hq hs iq is)
++    (@bExtrasNil n)
++    (by intro _ _ _ _ hq hs iq is; exact @bExtrasCons n _ _ _ _ hq hs iq is)
++    h) d D hc
+ 
+ theorem base (n : Name) (d : Nat) (C D : Spine.BoundContext) (As : NArgs) (types : List Ty)
+     (h : BaseTyped C As types) (hc : CloseCompatible n d C D) :
+@@ -21,8 +31,18 @@
+     (motive_1 := fun C q τ _ => TermGoal n C q τ)
+     (motive_2 := fun C qs types _ => BaseGoal n C qs types)
+     (motive_3 := fun C qs _ => ExtrasGoal n C qs)
+-    (@bFree n) (@bBound n) (@bLam n) (@bBottom n) (@bOrdinary n) (@bNumbered n) (@bAuxApp n)
+-    (@bBaseNil n) (@bBaseCons n) (@bExtrasNil n) (@bExtrasCons n) h) d D hc
++    (@bFree n)
++    (by intro C σ i hi; exact @bBound n C i σ hi)
++    (by intro _ _ _ _ ht ih; exact @bLam n _ _ _ _ ht ih)
++    (@bBottom n)
++    (by intro _ _ _ hb ih; exact @bOrdinary n _ _ _ hb ih)
++    (by intro _ _ _ _ _ _ hb he ib ie; exact @bNumbered n _ _ _ _ _ _ hb he ib ie)
++    (by intro _ _ _ _ _ hq ha iq ia; exact @bAuxApp n _ _ _ _ _ hq ha iq ia)
++    (@bBaseNil n)
++    (by intro _ _ _ _ _ hq hs iq is; exact @bBaseCons n _ _ _ _ _ hq hs iq is)
++    (@bExtrasNil n)
++    (by intro _ _ _ _ hq hs iq is; exact @bExtrasCons n _ _ _ _ hq hs iq is)
++    h) d D hc
+ 
+ theorem extras (n : Name) (d : Nat) (C D : Spine.BoundContext) (As : NArgs)
+     (h : ExtrasTyped C As) (hc : CloseCompatible n d C D) : ExtrasTyped D (closeArgsAt n d As) :=
+@@ -30,7 +50,17 @@
+     (motive_1 := fun C q τ _ => TermGoal n C q τ)
+     (motive_2 := fun C qs types _ => BaseGoal n C qs types)
+     (motive_3 := fun C qs _ => ExtrasGoal n C qs)
+-    (@bFree n) (@bBound n) (@bLam n) (@bBottom n) (@bOrdinary n) (@bNumbered n) (@bAuxApp n)
+-    (@bBaseNil n) (@bBaseCons n) (@bExtrasNil n) (@bExtrasCons n) h) d D hc
++    (@bFree n)
++    (by intro C σ i hi; exact @bBound n C i σ hi)
++    (by intro _ _ _ _ ht ih; exact @bLam n _ _ _ _ ht ih)
++    (@bBottom n)
++    (by intro _ _ _ hb ih; exact @bOrdinary n _ _ _ hb ih)
++    (by intro _ _ _ _ _ _ hb he ib ie; exact @bNumbered n _ _ _ _ _ _ hb he ib ie)
++    (by intro _ _ _ _ _ hq ha iq ia; exact @bAuxApp n _ _ _ _ _ hq ha iq ia)
++    (@bBaseNil n)
++    (by intro _ _ _ _ _ hq hs iq is; exact @bBaseCons n _ _ _ _ _ hq hs iq is)
++    (@bExtrasNil n)
++    (by intro _ _ _ _ hq hs iq is; exact @bExtrasCons n _ _ _ _ hq hs iq is)
++    h) d D hc
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowClosingTypedThinCore

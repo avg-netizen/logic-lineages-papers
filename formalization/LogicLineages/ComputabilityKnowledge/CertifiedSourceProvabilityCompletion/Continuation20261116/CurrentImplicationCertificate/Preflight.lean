@@ -1,0 +1,13 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentImplicationCertificate.Targets
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentImplicationCertificate.Preflight
+theorem comparatorReflexivity : Targets.InternalTraces = Targets.InternalTraces ∧
+ Targets.InternalLift = Targets.InternalLift ∧ Targets.InternalMPUnder = Targets.InternalMPUnder :=
+ ⟨rfl,rfl,rfl⟩
+#check Targets.InternalTraces
+#check Targets.InternalLift
+#check Targets.InternalMPUnder
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentImplicationCertificate.Preflight
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentImplicationCertificate.Preflight

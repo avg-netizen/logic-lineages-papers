@@ -1,0 +1,11 @@
+# Original Encodable HeadCode conversion prerequisite
+
+This is a separate packet, not an alteration of the false OriginalNumberedEnumerationBranch target. That packet's semantic-blocker record is retained byte-exact. Actual headPrimcodable (NumberedHeadCodecPrimrecDefinitions) is HeadData = Bool ⊕ (Ty ⊕ (Ty ⊕ ((Ty×Ty) ⊕ Fin n))); original codeNumber inserts headNumber rather than Encodable.encode HeadCode.
+
+Literal algorithm: unary Nat recursion maintains pair(floor(raw/2), raw%2), initially pair(0,0)=0 and toggling parity. Each sumCase selects by remainder and passes quotient. Four nested sumCase instances match original HeadData association. Bool0→rawzero0; Bool1→rawsucc pair1 0; other Bool payloads→default0. Ty/Ty×Ty carry unchanged original raw numeric payload (their total decode and roundtrip must be proved). Ranked payload uses actual ltTest against n, maps payload<n to pair5 payload and all other values→default0. n=0 not excluded. No native quotient oracle, Primrec choice, opaque supplier, or altered encoding in AST.
+
+Exact2: native conversion against the actual original Encodable.decode on EVERY raw input, including malformed Bool/Fin; internal inverse from the actual original raw-head check and actual existing encodeHead observation. Internal split-even/split-odd graph laws, parity bounds/cancellation, finite branch inversion and original constructor/payload reconstruction are proof duties, not public hypotheses. Native scalar total Ty and product conversion must be paid explicitly; no fallback[] or all-head decode-total assumption. Typed `evaluate convert (encode h)=headNumber h` follows via encodek as an uncounted helper.
+
+Corrected future enumeration: a DISTINCT branch packet must map convert n over encoded heads before the right-nested cross. Its internal membership contract must explicitly relate encoded head membership to raw-head constructor fields via conversion observations/inversion. Do not claim raw-field membership in original encoded lists. Independent passed raw cross introduction/projection helpers may be reused, but no old false native theorem. Whole layer/enumerate/Q remains unpaid.
+
+All proof work held until frozen independent review and preflight. Standard axioms and fixed limits only.

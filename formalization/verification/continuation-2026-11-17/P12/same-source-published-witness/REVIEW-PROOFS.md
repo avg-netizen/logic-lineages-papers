@@ -1,0 +1,18 @@
+# Final independent proof review
+
+APPROVED final source/proof review pending coordinator recursive evidence. All seven current source hashes match successful rows in receipt1794918225778696932-6. All twelve frozen pins verified unchanged. Full Proof/StatementChecks logs audit exactSource with only propext, Classical.choice, Quot.sound. Reviewed AlignmentProof, SourceBridge and full Proof.exactSource. No reviewer compiler run.
+
+Exactly one SelectionProof.registry call receives E constructed from rawOld/a/baseX and pF0. Native selectedOld, arithmetic, saturated axiom leaves establish the same q first; CK/pG witnesses refer to this q. No old selected source is reused. Actual outer bundle extraction yields literal extra and published extra; nested literal/base extraction yields cumulative extra, base inventory, peel and literal program. Actual JointInstallation and base12 yield base compiler occurrence. Original published/existential/quantifier bundle unpacking yields transform/published programs, q inventory/compiler, and hItems.
+
+N is constructed from all four actual hItems results: both quantifier line constructors and both singleton constructors. Boolean cases prove each membership. N is explicitly passed into SourceBridge, then original CurrentPublishedProvabilityIntroduction.SourceEndpoint.bridge, not merely retained as an unused existential. Full Retained uses same hA/syntax/CK/fixedpoint/pG data; Packages uses that exact hret and MP node from I.
+
+SourceBridge obtains one uniform checker-input bound before all sentence/context/witness terms. It composes the actual internally guarded checkerEquationCode supplier with original published source endpoint using actual N/transformTag/publishedTag. In G=[success,guard], both hypotheses are consumed then discharged in correct order. Same source, I/shared R, index, fuel and code term throughout. Output is actual installed publishedTag call, not native evaluation or uninstalled compiler.
+
+AlignmentProof uses actual calibrated augmented pF/q for original literalCodingCertificates and explicitly includes that named theory in SAME S. Its coding derivation ends at sorted formulaCode; actual tagFormula/raw formulaNumber definitions establish n+n. Original numeralAdd derivation reversed transports numeral(n+n) to object-language add(numeral n,numeral n). Thus correct doubled raw prefix code, not false raw-code equality. Original prD syntax supplied by original applyProvShape.
+
+No oracle, arbitrary equal-address premise or source-index substitution found. This remains witness supplier with full retained package, not full HB3 elimination/introduction. Final source/native comparison and frozen12 validation complete; subsequent changes require delta review.
+
+## Final repair delta
+Compared both archived AlignmentProof failures to current source. One surplus closing parenthesis was removed from the helper theorem's outputAlignment type; no frozen target changed. Added only `unfold GorbowSelectedDistribution.implicationCode at hS` before the existing sorted-code arithmetic rewrite. This exposes the actual original implicationCode definition, not a new equality or assumption. Original named-theory source inclusion and literalCodingCertificates remain the source of hS. Full native now verifies the exact intended doubled-raw conclusion.
+
+Pins saved in REVIEW-PROOFS-PINS.json. This verifies the same-source published witness supplier, not full HB3 existential consumption. No separate credit for syntax/parser repairs or helper infrastructure. Recursive evidence remains coordinator-owned; reviewer ran no compiler.

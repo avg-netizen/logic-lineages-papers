@@ -1,0 +1,53 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionProof.lean
+@@ -13,2 +13,21 @@
+-open OriginalMatrixLinearLowerTable (assignment exactLinearLowerTable)
+-open PreparedProjection (preparedProjectionActual)
++open OriginalMatrixLinearLowerTable (Live assignment exactLinearLowerTable)
++open OriginalPrintedPlainMatrixOrderBranches (SourceAccepts)
++open OrdinalComparison.LayeredComparison.SnyatkovCompletion
++open PreparedProjection (LowerOperand PreparedInput eliminatePreparedFormula preparedProjectionActual)
++
++/-- Keep the actual emitted formula abstract while applying the existing
++one-variable projection equivalence. -/
++private theorem projectWith (ops : List LowerOperand) (q : NormalForm.Formula) (ν : Nat → Nat)
++    (fixed live : Prop) (condition source : Nat → Prop) (fit : PreparedInput ops q)
++    (point : live → ∀ z : Nat, q.eval (Function.update ν 0 z) ↔ condition z)
++    (forward : ∀ z : Nat, fixed → condition z → source z)
++    (backward : ∀ z : Nat, source z → fixed ∧ live ∧ condition z) :
++    (fixed ∧ live ∧ (eliminatePreparedFormula q).eval ν) ↔ ∃ z : Nat, source z := by
++  have kernel := preparedProjectionActual ops q fit ν
++  constructor
++  · rintro ⟨held,funded,projected⟩
++    obtain ⟨z,witness⟩ := kernel.mp projected
++    exact ⟨z,forward z held ((point funded z).mp witness)⟩
++  · rintro ⟨z,h⟩
++    obtain ⟨held,funded,witness⟩ := backward z h
++    exact ⟨held,funded,kernel.mpr ⟨z,(point funded z).mpr witness⟩⟩
+@@ -22,0 +42,4 @@
++  let available := Live f ρ ops
++  let accepts : Nat → Prop := fun z => SourceAccepts f (replay θ known gates p branch z) known gates p positive
++  let condition : Nat → Prop := fun z => minimum ≤ z ∧ accepts z
++  let sourceAt : Nat → Prop := fun z => minimum ≤ z ∧ prior (replay θ known gates p branch z) ∧ accepts z
+@@ -25,7 +48,6 @@
+-  have projected := preparedProjectionActual ops q prep.1 ν
+-  constructor
+-  · rintro ⟨pr,live,holds⟩
+-    obtain ⟨z,h⟩ := projected.mp holds
+-    obtain ⟨ge,source⟩ := (prep.2 ν (domains.2.2.1 live) z).mp h
+-    exact ⟨z,ge,(priorFixed z).mpr pr,source⟩
+-  · rintro ⟨z,ge,pr,source⟩
++  have point (live : available) (z : Nat) : q.eval (Function.update ν 0 z) ↔ condition z :=
++    prep.2 ν (domains.2.2.1 live) z
++  have forward (z : Nat) (pr : prior θ) (h : condition z) : sourceAt z :=
++    ⟨h.1,(priorFixed z).mpr pr,h.2⟩
++  have backward (z : Nat) (h : sourceAt z) : prior θ ∧ available ∧ condition z := by
++    obtain ⟨ge,pr,source⟩ := h
+@@ -35,3 +57,4 @@
+-    have live := domains.2.2.2 z snap full
+-    have h := (prep.2 ν (domains.2.2.1 live) z).mpr ⟨ge,source⟩
+-    exact ⟨(priorFixed z).mp pr,live,projected.mpr ⟨z,h⟩⟩
++    have live : available := domains.2.2.2 z snap full
++    exact ⟨(priorFixed z).mp pr,live,ge,source⟩
++  change (prior θ ∧ available ∧ (eliminatePreparedFormula q).eval ν) ↔ ∃ z : Nat, sourceAt z
++  exact projectWith ops q ν (prior θ) available condition sourceAt prep.1 point forward backward

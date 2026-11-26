@@ -1,0 +1,56 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "c0cfbb1e0890bea92cd93e898cc9fc2bb9dc9281",
+  "failed_source_local_commit": "2a6106502ec18208e4c26655650d5a7eab799294",
+  "failed_source_tree": "36f2e120bff0c4fe567f32f3a3a039b19bad19e8",
+  "failed_exact_gate_receipt": "1795369992665104718-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalRankedLiteralClauseHighStatementChecks",
+  "failed_receipt_sha256": "99bcca997b7d0c3a43385fa1f687a9bb80b7d9d9d32a9247cb49c3d25b3b2825",
+  "failed_exact_module_log_sha256": "196979e6cf4201088aa3938613e31f37c2efe9cd2dc5327b971f57d74cd2224d",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalRankedLiteralClauseHighPointProof.lean:12:49: error(lean.unknownIdentifier): Unknown constant `LogicLineages.PermittedControl.OriginalPrintedLiteralRowBridge.exactLiteralProperClauseFilter`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalRankedLiteralClauseHighPointProof.lean:19:45: error(lean.unknownIdentifier): Unknown identifier `compileRow`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalRankedLiteralClauseHighPointProof.lean:24:19: error(lean.unknownIdentifier): Unknown identifier `exactLiteralProperClauseFilter`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalRankedLiteralClauseHighPointProof.lean:21:59: error: unsolved goals\nf : \u2115 \u2192 \u2115\nB : \u2115\nselected : SelectedWithThreshold f B\nr top : \u2115\nbaseline : \u2115 \u2192 \u2115\nfamily : List (List OriginalPrintedTerminalBitClauses.BitRow)\nsetup : OriginalSetup B r top baseline family\nz : \u2115\npayment : highMinimum B r top baseline family \u2264 z\n\u03b8 : \u2115 \u2192 \u2115 := Function.update baseline top z\n\u22a2 SourceFamily f (Function.update baseline top z) family \u2194\n    \u2203 q \u2208 highPackets r top family, ActualBoundedSignedRoutes.PacketHolds f baseline top z q\n",
+  "failed_original_native_log_sha256": "bd72703171d7047427dfa1e39772d75a4153b4604aded11f57fbd37bfaedf91f",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalRankedLiteralClauseHighPointProof.lean",
+  "failed_proof_sha256": "3e38550585eca6d3dfda4792e25c3d33c2226ec22b3fba4462c49c87101f5703",
+  "repaired_proof_sha256": "d53f18fcad2221ed255f41559e28868c437068669b26a318be793df07cbfd94f",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-RANKED-LITERAL-CLAUSE-HIGH-REPAIR-01.patch",
+  "patch_sha256": "51801176ff3740dde6cf778bd8b76eedf31ac4285fe43249a0ad167c9539e9e7",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-RANKED-LITERAL-CLAUSE-HIGH-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "c66f34f21a466b534256309b43c46280239a3d9e68b47629f90397da3a29e4d3",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalRankedLiteralClauseHighProjectionProof.lean": "97381da3f674757b5c5239a2491463f8384daa3ca2e17d4c39515b007db8b010",
+    "formalization/LogicLineages/PermittedControl/OriginalRankedLiteralClauseHighReadyProof.lean": "38c6a4dedd9de8a6b7052801ed6f546ad2b13efea623485d0eb56ba781cd9fea",
+    "formalization/LogicLineages/PermittedControl/OriginalRankedLiteralClauseHighStatementChecks.lean": "12f2554d844a5d923f244230ca553d09659f880784050ce79cd0d619465a5828",
+    "formalization/LogicLineages/PermittedControl/OriginalRankedLiteralClauseHighTargets.lean": "0f712b30d99f34aa249f5e59c5e45e8a23fc60a6283dea71242132e950789267",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-RANKED-LITERAL-CLAUSE-HIGH-SOURCE-MAP.md": "af38d23e0999dcb5b8f8b2636878942e456221a0a82c8831e90bccdad83adfb4"
+  },
+  "static_module_closure": {
+    "PointProof": {
+      "local": 690,
+      "external": 44,
+      "contains_totient": false
+    },
+    "ProjectionProof": {
+      "local": 692,
+      "external": 44,
+      "contains_totient": false
+    },
+    "ReadyProof": {
+      "local": 689,
+      "external": 44,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 693,
+      "external": 44,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 289,
+      "external": 35,
+      "contains_totient": false
+    }
+  },
+  "scope": "Directly import the existing private-transitive ReadProof supplying exactLiteralProperClauseFilter. No proof terms, declarations, target, or imported module closure changed."
+}

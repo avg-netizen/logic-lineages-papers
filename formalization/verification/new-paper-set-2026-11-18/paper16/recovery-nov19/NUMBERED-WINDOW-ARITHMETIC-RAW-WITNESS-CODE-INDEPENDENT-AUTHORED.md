@@ -1,0 +1,3 @@
+# Independent authored review
+
+Fully read6 proof leaves,33 combined frozen/author pins verified. Generic list proofs retain literal ordered fields and use actual term codec soundness/roundtrip. Partition and Bool/root proofs invert exact tags/arity/components. Recursive raw witness soundness is by actual fuel; completeness derives strict child-code bound from original nodeBelow and pays positivity at fuel0. Generic codec closure is instantiated with actual sound/roundtrip to obtain exact success and malformed rejection, not an unproved encoding instance. Six frozen exact aliases, no coded semantic checker/path-list/internal arithmetic claim. Admitted original core exact gate; acceptance awaits actual current recursive evidence and standard axioms.

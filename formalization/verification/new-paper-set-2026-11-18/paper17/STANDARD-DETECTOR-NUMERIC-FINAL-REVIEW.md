@@ -1,0 +1,10 @@
+# Independent final: StandardDetectorNumeric five supporting families
+Accepted first-pass receipt 1795019758396480333-5. Compiler-free independent recursive evidence exactly matches author: 454 modules, zero errors, fixed_standardDetectorNumeric full alias with standard axioms only. All six frozen hashes match; no failure or target edit. No native run by reviewer.
+
+Read current Targets/Proof/Checks and substantive numeric supplier chain. phi_global identifies actual collapseWith Phi with actualCollapse for every ordinal, not a selected-domain assumption. Finite-tail monotonicity and actualTailSeparation supply all-input numeric inequalities: actual replacement-count joint monotonicity is ordinal induction through actual descent, terminal decomposition and positive count give the iterated Phi double-tower gap. Two successive tail steps yield the fourfold inequality; monotonicity extends it to larger gaps.
+
+HeadBudget actually proves finite-tail closure/norm identities, norm a+s+q+2 <=4q+2 <=2^(q+1) <=Phi(norm b+t+q) from the literal hypotheses. The underlying head_domination separately derives this full budget before actual controlled strictness, combines it with strict ordinal head order and the genuine tail gap, and is not a budget oracle. Zero/tiny q are not silently included: the target explicitly requires q>=5 for this head comparison.
+
+SourceHeadSeparation derives positivity, epsilon bounds and scalar norm bounds from accepted all-policy StandardSourceFacts. Actual omega natural product supplies limit/order/norm properties; ordinary finite ordinal addition remains the tail operation. SourceScalarSeparation derives positive limit head and uses shared actual head equality plus scalar gap>=2; q is unrestricted there. No old default-policy source facts, successful source application, selected admission or fixed semantic proxy is substituted.
+
+Accepted numeric/source-fact supporting conjunction only. Application success/calibration, complete detector, query/compiler reductions and unchanged-G hardness remain unpaid by this packet.

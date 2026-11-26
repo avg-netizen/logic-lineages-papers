@@ -1,0 +1,5 @@
+# Boolean wire supporting packet
+
+Current19 thm:compiler proof's eq/le/lt/neg/and/or natural bit construction. ExactBooleanWires freezes actual Source.BooleanWire backward-reference Node/Dag and real eq/add/sort constraints, unique canonical auxiliaries, every-node/DAG exact evaluation and root truth. Literal arithmetic atom/new-wire overhead <=9 per node is included.
+
+Supporting only. Natural input wires already carry values. This does NOT cover all existential E_src syntax, arithmetic/source global flattening to A-normal Program, actual source-gadget lowering, general supplied-source semantics, or polynomial actual source-DAG size. Existing GlobalFlatten only converts BooleanDAG to arithmetic gates and is not the missing source-language coverage bridge. Subsequent compiler must independently construct and prove that bridge, with arithmetic/source nodes outside negation and shared inputs preserved. No policy/control assumptions needed for pure natural arithmetic. Fresh native and supplier evidence required, no historical acceptance transfer.

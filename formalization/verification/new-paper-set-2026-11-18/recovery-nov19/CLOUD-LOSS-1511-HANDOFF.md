@@ -1,0 +1,11 @@
+# Cloud workspace loss and isolated recovery, 19 November 2026
+
+The previous workspace became unavailable around15:11UTC. Its current checkout, toolchain, caches and local-only proof/evidence files were absent from the older filesystem returned by reattachment. No owned native proof process remained active: P16exact1720 had reaped with an ordinary KeptRemovedProof failure; P19template1725 never launched. Existing older checkouts were not modified.
+
+The last independently verified remote checkpoint was e8a4341ee9f83b593b1aabf10d57fe5bb45e63c1, tree9a57c2e603de3365e9400025241ab239697f69cc, verified14:55:13UTC, accepted supporting packets through462 and numbered149 checked/18 pending. This new isolated recovery clone matches both identifiers. Original archive and mathematical sources remain recoverable there.
+
+Packet463 external tagged-operator semantics had been independently accepted locally from clean receipt1795100348912230675-2 (197 current modules/48 pins/8 standard-only exact audits; observed evidence hash e2fd3e17f5faf60b73ac7f549058e3ce492ff8bf3d635d6a1bb29856df77546e). Its original native receipts, logs and objects are currently unavailable. Source reconstruction from logged exact bytes is not recovery of these native artifacts, nor a fresh pass. No replacement acceptance/evidence may be manufactured; reissue original-cap native checks and current-source review before restoring a current acceptance record.
+
+Additional local-only occurrence-splitting drafts and P19 proof-only repairs are being restored from exact logged bytes with hash comparison. Reconstructed source and historical observed status must remain distinct from fresh native verification. The occurrence exact1720 failed; its archival command was rejected before launch. The P19 full head-graph theorem remains pending. Direct and inserted semantic leaves had observed pre-loss clean checks, not completion of the numbered theorem.
+
+Recovery installs only official Lean4.32.0-rc1 (archive SHAce6e79dd19ea03c0bc17f9d565c3bac20cd2884561e3b431e5b293c1fbb2b5b3) and unchanged dependency pins, with official prebuilt caches. No upstream mathematical rebuild, resource-limit increase, checker/pin/CI/manuscript modification or main merge. The18:00UTC no-new-proof/build cutoff remains unchanged.

@@ -1,0 +1,18 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFactoredAuxOwnCoverProgramProof.lean:61:4: error: Type mismatch
+  thirdReport ID1Completion.InternalUnpair.left (suc depth) H K m (Nonempty.intro fields.conjunctionLeft)
+has type
+  Nonempty
+    (Derivation body Γ
+      (programGraph (ID1Completion.InternalUnpair.left.composition fun x => Program.projection 2) (suc depth)
+        ![H, K, m]))
+but is expected to have type
+  Nonempty (Derivation body Γ (programGraph left (suc depth) xs))
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFactoredAuxOwnCoverProgramProof.lean:64:4: error: Type mismatch
+  thirdReport ID1Completion.InternalUnpair.right maxNumeral H K m (Nonempty.intro fields.conjunctionRight)
+has type
+  Nonempty
+    (Derivation body Γ
+      (programGraph (ID1Completion.InternalUnpair.right.composition fun x => Program.projection 2) maxNumeral
+        ![H, K, m]))
+but is expected to have type
+  Nonempty (Derivation body Γ (programGraph right maxNumeral xs))

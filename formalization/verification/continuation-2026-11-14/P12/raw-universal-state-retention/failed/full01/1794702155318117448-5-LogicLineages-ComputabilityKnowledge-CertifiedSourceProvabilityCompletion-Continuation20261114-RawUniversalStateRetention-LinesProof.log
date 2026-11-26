@@ -1,0 +1,34 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawUniversalStateRetention/LinesProof.lean:63:26: error: Application type mismatch: The argument
+  moveLines ot nt ptag ?m.243 ?m.244 ?m.245 ?m.246 ?m.247 ?m.248 ?m.249
+has type
+  Derivation ?m.241
+    ((Formula.equal ?m.244 ?m.245).imp
+      ((preserves ot nt ptag (pairCall ptag (Term.succ ?m.243) ?m.244) ?m.246 ?m.247 ?m.248 ?m.249).imp
+        (preserves ot nt ptag (pairCall ptag (Term.succ ?m.243) ?m.245) ?m.246 ?m.247 ?m.248 ?m.249)))
+but is expected to have type
+  Derivation T
+    ((Formula.equal (Term.var 0).succ (liftTerm lines)).imp
+      ((preserves ot nt ptag (pairCall ptag (liftTerm h).succ (Term.var 0).succ) (liftTerm index) (liftTerm fuel)
+            (liftTerm out) (liftTerm rest)).imp
+        (preserves ot nt ptag (renameTerm Fin.succ (pairCall ptag h.succ lines)) (renameTerm Fin.succ index)
+          (renameTerm Fin.succ fuel) (renameTerm Fin.succ out) (renameTerm Fin.succ rest))))
+in the application
+  Hilbert.Local.base (moveLines ot nt ptag ?m.243 ?m.244 ?m.245 ?m.246 ?m.247 ?m.248 ?m.249)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawUniversalStateRetention/LinesProof.lean:62:24: warning: This simp argument is unused:
+  substPair
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵i̵f̵t̵T̵e̵r̵m̵,̵s̵u̵b̵s̵t̵P̵a̵i̵r̵,̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵]̵[̲l̲i̲f̲t̲T̲e̲r̲m̲,̲ ̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawUniversalStateRetention/LinesProof.lean:62:34: warning: This simp argument is unused:
+  substitute
+
+Hint: Omit it from the simp argument list.
+  simp only [̵l̵i̵f̵t̵T̵e̵r̵m̵,̵s̵u̵b̵s̵t̵P̵a̵i̵r̵,̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵]̵[̲l̲i̲f̲t̲T̲e̲r̲m̲,̲ ̲s̲u̲b̲s̲t̲P̲a̲i̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawUniversalStateRetention.LinesProof.positiveStep: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawUniversalStateRetention/LinesProof.lean:70:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawUniversalStateRetention.LinesProof.generalStep: forbidden axiom dependency sorryAx

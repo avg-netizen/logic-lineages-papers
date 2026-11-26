@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.ArbitraryHeadFreshWireAllocationTargets
+import LogicLineages.PermittedControl.ArbitraryHeadFreshWireAllocationProof
+import LogicLineages.PermittedControl.ArbitraryHeadFreshWireAllocationSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactArbitraryHeadFreshAllocation : ArbitraryHeadFreshWireAllocation.ExactFreshAllocation :=
+  ArbitraryHeadFreshWireAllocation.exactFreshAllocation
+
+theorem fixed_exactArbitraryHeadAllocatedNormalization :
+    ArbitraryHeadFreshWireAllocation.ExactAllocatedWireNormalization :=
+  ArbitraryHeadFreshWireAllocation.exactAllocatedWireNormalization
+
+theorem fixed_fullArbitraryHeadFreshWireAllocation :
+    ArbitraryHeadFreshWireAllocation.FullArbitraryHeadFreshWireAllocation :=
+  ⟨fixed_exactArbitraryHeadFreshAllocation,fixed_exactArbitraryHeadAllocatedNormalization⟩
+
+#print axioms fixed_exactArbitraryHeadFreshAllocation
+#print axioms fixed_exactArbitraryHeadAllocatedNormalization
+#print axioms fixed_fullArbitraryHeadFreshWireAllocation
+
+end LogicLineages.PermittedControl.StatementChecks

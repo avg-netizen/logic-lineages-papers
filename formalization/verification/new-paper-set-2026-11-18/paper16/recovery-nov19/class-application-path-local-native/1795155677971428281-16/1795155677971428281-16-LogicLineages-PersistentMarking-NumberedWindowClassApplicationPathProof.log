@@ -1,0 +1,47 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationPathProof.lean:107:4: error: unsolved goals
+case some.refine_2
+S : Signature
+K Γ : List Ty
+σ τ : Ty
+hk : DecisionSourceUniverse.Closed K
+q r : Class S K (finiteC Γ) (σ.arrow τ)
+u : Class S K (finiteC Γ) σ
+i j a imageSource certificate : Nat
+hq : ActualCodeAt S K Γ (σ.arrow τ) i q
+hr : ActualCodeAt S K Γ (σ.arrow τ) j r
+hu : ActualCodeAt S K Γ σ a u
+hx : ActualCodeAt S K Γ τ imageSource (appClass hk q u)
+U : NTerm
+hU : decodeTerm a = some U
+old : List ClassHop
+read : decodeClassPath certificate = some old
+valid : (!old.isEmpty) = true ∧ classWalkBit S K Γ (σ.arrow τ) i old j = true
+codeOld : encodeClassPath old = certificate
+unpackOld : NumberedWindowFieldAlgorithm.unpack certificate = some (List.map encodeClassHop old)
+guard : (List.map encodeClassHop old).isEmpty = false
+y : Nat
+newPath : List ClassHop
+folded :
+  ∀ (done : List Nat),
+    List.foldl (advance (least (fixed S K) (List.map encodeTy Γ) (encodeTy τ)) (encodeTy σ) (encodeTy τ) a)
+        (some (imageSource, done)) (List.map encodeClassHop old) =
+      some (y, (List.map encodeClassHop newPath).reverse ++ done)
+related : AlignedHops σ τ U old newPath
+validNew : classWalkBit S K Γ τ imageSource newPath y = true
+hy : ActualCodeAt S K Γ τ y (appClass hk r u)
+readNew : decodeClassPath (encodeClassPath newPath) = some newPath
+done :
+  List.foldl (advance (least (fixed S K) (List.map encodeTy Γ) (encodeTy τ)) (encodeTy σ) (encodeTy τ) a)
+      (some (imageSource, [])) (List.map encodeClassHop old) =
+    some (y, (List.map encodeClassHop newPath).reverse)
+⊢ (if false = true then none else some (y, NumberedWindowFieldAlgorithm.pack (List.map encodeClassHop newPath))) =
+    some (y, NumberedWindowFieldAlgorithm.pack (List.map encodeClassHop newPath))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationPathProof.lean:109:79: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [liftPath, ̲unpackOld, ̲Option.bind_eq_bind, ̲Option.bind_some, ̲guard,i̵f̵_̵f̵a̵l̵s̵ ̲d̲o̲n̲e,
+          d̵o̵n̵e̵,̵List.reverse_reverse, ̲Option.pure_def, ̲encodeClassPath, ̲encodeListOf,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲exact_ExactOrderedFieldCodec.1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

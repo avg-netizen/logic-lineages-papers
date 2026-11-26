@@ -1,0 +1,28 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerEffectiveProof.lean:18:27: warning: Local variable 'unit' resembles constructor 'PUnit.unit' - write '.unit' (with a dot) or 'PUnit.unit' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerEffectiveProof.lean:23:48: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Primcodable ((List ℕ × List Instruction) × List ℕ × Instruction)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerEffectiveProof.lean:35:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Primcodable C
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerEffectiveProof.lean:36:16: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Primcodable (Instruction × State)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerEffectiveProof.lean:27:73: error: unsolved goals
+A : Type := List ℕ × List Instruction
+B : Type := A × Instruction × Option State
+C : Type := B × State
+hlen : Primrec fun a => (endContext a.1 a.2).length
+htable : Primrec fun a => List.range (endContext a.1 a.2).length
+hinit : Primrec fun a => some (endContext a.1 a.2, endContext a.1 a.2, List.range (endContext a.1 a.2).length, [])
+hins : sorry
+⊢ Primrec fun p => runState p.1 p.2
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerEffectiveProof.lean:41:43: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Primcodable ((List ℕ × List Instruction) × List ℕ × ResultCode)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.

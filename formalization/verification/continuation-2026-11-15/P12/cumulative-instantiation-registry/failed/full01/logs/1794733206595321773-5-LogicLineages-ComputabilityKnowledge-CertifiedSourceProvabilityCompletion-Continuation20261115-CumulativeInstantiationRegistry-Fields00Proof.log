@@ -1,0 +1,55 @@
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawNumericSearch.items.eq_1: [propext]
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawNumericSearch.installed: [propext]
+AXIOM_AUDIT_PASS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawNumericSearch: 2 theorems
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftAcceptance.installed: [propext]
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftAcceptance.items.eq_1: [propext]
+AXIOM_AUDIT_PASS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftAcceptance: 2 theorems
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftDispatcher.items.eq_1: [propext]
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftDispatcher.installed: [propext]
+AXIOM_AUDIT_PASS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftDispatcher: 2 theorems
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftCertificate.installed: [propext]
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftCertificate.items.eq_1: [propext]
+AXIOM_AUDIT_PASS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftCertificate: 2 theorems
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/CumulativeInstantiationRegistry/Fields00Proof.lean:110:282: error: Application type mismatch: The argument
+  hq
+has type
+  q ∈ Items_RawMulLeftCertificate.items (previousLogical old) a x
+but is expected to have type
+  q ∈ Items_RawMulLeftCertificate.items (RawMulLeftCongruence.previousLogical old) a x
+in the application
+  Or.inl hq
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/CumulativeInstantiationRegistry/Fields00Proof.lean:115:73: error: unsolved goals
+old a : Program 1
+x : Program 3
+n : ℕ
+p : Program n
+h : ∀ q ∈ items old a x, ∃ tag, (nodes p)[tag]? = some q
+parent : RawMulLeftCertificate.Installation p (previousLogical old) a x
+addLeftTag : ℕ
+haddLeft : (nodes p)[addLeftTag]? = some ⟨1, RawMulRightCongruence.previousLogical old⟩
+rightReplaceTag : ℕ
+hrightReplace : (nodes p)[rightReplaceTag]? = some ⟨1, RawRightReplace.logicalLeaf (RawCumulativeLogical.logical old)⟩
+addRightTag : ℕ
+haddRight : (nodes p)[addRightTag]? = some ⟨1, RawAddLeftCongruence.previousLogical old⟩
+cumulativeTag : ℕ
+hcumulative : (nodes p)[cumulativeTag]? = some ⟨1, RawCumulativeLogical.logical old⟩
+⊢ ⟨1, previousLogical old⟩ ∈ Items_RawMulLeftCertificate.items (RawMulLeftCongruence.previousLogical old) a x ∨
+    previousLogical old = RawMulRightCongruence.previousLogical old ∨
+      previousLogical old = RawRightReplace.logicalLeaf (RawCumulativeLogical.logical old) ∨
+        previousLogical old = RawAddLeftCongruence.previousLogical old ∨
+          previousLogical old = RawCumulativeLogical.logical old ∨
+            previousLogical old = RawMulLeftCongruence.previousLogical old ∨
+              previousLogical old = RawReflexivity.lineConstructor
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/CumulativeInstantiationRegistry/Fields00Proof.lean:120:19: error: Type mismatch
+  parent
+has type
+  RawMulLeftCertificate.Installation p (previousLogical old) a x
+but is expected to have type
+  RawMulLeftCertificate.Installation p (RawMulLeftCongruence.previousLogical old) a x
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/CumulativeInstantiationRegistry/Fields00Proof.lean:130:15: error: Type mismatch
+  hprevious
+has type
+  (nodes p)[previousTag]? = some ⟨1, previousLogical old⟩
+but is expected to have type
+  (nodes p)[previousTag]? = some ⟨1, RawMulLeftCongruence.previousLogical old⟩
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/CumulativeInstantiationRegistry/Fields00Proof.lean:139:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeInstantiationRegistry.Items_RawMulLeftCongruence.installed: forbidden axiom dependency sorryAx

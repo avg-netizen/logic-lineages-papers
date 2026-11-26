@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.MarkedFamilyOrderProof
+namespace LogicLineages.PersistentMarking.MarkedFamilyOrderChecks
+theorem exact_OrderExact : MarkedFamilyLatticeTargets.OrderExact := MarkedFamilyOrderProof.orderExact
+theorem exact_PartialOrder : MarkedFamilyLatticeTargets.PartialOrder := MarkedFamilyOrderProof.partialOrder
+#print axioms exact_OrderExact
+#print axioms exact_PartialOrder
+end LogicLineages.PersistentMarking.MarkedFamilyOrderChecks

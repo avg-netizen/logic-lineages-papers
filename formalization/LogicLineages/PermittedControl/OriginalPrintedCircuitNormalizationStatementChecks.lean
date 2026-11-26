@@ -1,0 +1,31 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedCircuitNormalizationTargets
+import LogicLineages.PermittedControl.OriginalPrintedCircuitNormalizationProtectionProof
+import LogicLineages.PermittedControl.OriginalPrintedCircuitNormalizationProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedProtection :
+    OriginalPrintedCircuitNormalization.ExactPrintedProtection :=
+  OriginalPrintedCircuitNormalization.exactPrintedProtection
+
+theorem fixed_exactOriginalPrintedNormalizedExtension :
+    OriginalPrintedCircuitNormalization.ExactPrintedNormalizedExtension :=
+  OriginalPrintedCircuitNormalization.exactPrintedNormalizedExtension
+
+theorem fixed_exactOriginalPrintedRunThenNormalize :
+    OriginalPrintedCircuitNormalization.ExactPrintedRunThenNormalize :=
+  OriginalPrintedCircuitNormalization.exactPrintedRunThenNormalize
+
+theorem fixed_fullOriginalPrintedCircuitNormalization :
+    OriginalPrintedCircuitNormalization.FullOriginalPrintedCircuitNormalization :=
+  ⟨fixed_exactOriginalPrintedProtection,fixed_exactOriginalPrintedNormalizedExtension,
+    fixed_exactOriginalPrintedRunThenNormalize⟩
+
+#print axioms fixed_exactOriginalPrintedProtection
+#print axioms fixed_exactOriginalPrintedNormalizedExtension
+#print axioms fixed_exactOriginalPrintedRunThenNormalize
+#print axioms fixed_fullOriginalPrintedCircuitNormalization
+
+end LogicLineages.PermittedControl.StatementChecks

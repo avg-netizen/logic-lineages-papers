@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.BlankUniversalityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.BlankUniversality.StatementChecks
+theorem fixed_exactSpecialization : BlankUniversalityTargets.ExactSpecialization := exactSpecialization
+theorem fixed_uniformTranslator : BlankUniversalityTargets.UniformTranslator := uniformTranslator
+theorem fixed_reUniversality : BlankUniversalityTargets.REUniversality := reUniversality
+#audit_namespace LogicLineages.ControlSensitivityCurrent.BlankUniversality.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.BlankUniversality.StatementChecks

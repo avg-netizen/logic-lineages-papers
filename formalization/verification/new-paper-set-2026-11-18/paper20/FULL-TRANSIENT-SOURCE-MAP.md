@@ -1,0 +1,7 @@
+# Complete printed binary-transient assembly
+
+Source `lem:binary-transient` retains one-step properness, no new finite pole and ceil-half actual canonical pole-order bound for both literal selectors. Its quantified source conclusion uses literal A_d, exact mu and Nat.clog2mu with explicit d>=1; every actual proper numerator is covered, including zero, and every List Bool is executed low-bit first. The simple-pole conclusion is stated at every word length >=a, a valid strengthening of source length exactly a. Properness and no-new-pole hold for every word, hence every prefix.
+
+Geometric scope is explicit: arbitrary independently-universed perfect characteristic-two K,L and actual coefficient embedding sigma; the final state is rationalMap sigma applied to the actual base-field execution. Every z:L is quantified. Checked naturality, actual mapped numerator/denominator identity and degree/properness pay this transport, so no base-field-only root test substitutes for geometric poles. Taking L to be a perfect splitting/algebraically closed extension is included without a caller-supplied root enumeration or pole-vector bound. No hypothesis assumes source multiplicity; it must follow from the literal source budget theorem.
+
+Fourteen source/target/definition pins retain all mathematical semantics. No partial-fraction representation is assumed. The complete profile observer, finite field construction, partial-fraction bijection/descent, output and all-continuation profile theorem remain separate; this assembly claims only binary-transient.

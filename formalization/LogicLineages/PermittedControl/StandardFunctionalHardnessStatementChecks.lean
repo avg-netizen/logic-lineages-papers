@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.StandardFunctionalHardnessProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_standardFunctionalHardness : StandardFunctionalHardness.StandardFunctionalHardness :=
+  StandardFunctionalHardness.Proof.standardFunctionalHardness
+#print axioms fixed_standardFunctionalHardness
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,11 @@
+import LogicLineages.PersistentMarking.NumberedWindowNeutralApplicationAddressProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowNeutralApplicationAddressChecks
+open NumberedWindowNeutralApplicationAddressTargets
+
+theorem exact_NeutralApplicationAddress : ExactNeutralApplicationAddress :=
+  NumberedWindowNeutralApplicationAddressProof.classify
+
+#print axioms exact_NeutralApplicationAddress
+
+end LogicLineages.PersistentMarking.NumberedWindowNeutralApplicationAddressChecks

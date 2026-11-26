@@ -1,0 +1,34 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusPrograms.lean:28:4: error: Application type mismatch: The argument
+  Primrec.to₂ (Primrec.option_map right (Primrec.to₂ (Primrec.pair (Primrec.comp Primrec.snd Primrec.fst) Primrec.snd)))
+has type
+  Primrec₂ fun a b => Option.map (fun b_1 => (((a, b), b_1).1.2, ((a, b), b_1).2)) (cell (a, b).1.2)
+but is expected to have type
+  Primrec₂ fun a left => do
+    let right ← cell a.2
+    pure (left, right)
+in the application
+  Primrec.option_bind left
+    (Primrec.to₂
+      (Primrec.option_map right (Primrec.to₂ (Primrec.pair (Primrec.comp Primrec.snd Primrec.fst) Primrec.snd))))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusPrograms.lean:24:7: warning: Local variable 'left' resembles constructor 'Nat.Primrec.left' - write '.left' (with a dot) or 'Nat.Primrec.left' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusPrograms.lean:25:7: warning: Local variable 'right' resembles constructor 'Nat.Primrec.right' - write '.right' (with a dot) or 'Nat.Primrec.right' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusPrograms.lean:58:2: error: Tactic `apply` failed: could not unify the conclusion of `Primrec₂.of_eq (Primrec.nat_rec Primrec.id step)`
+  Primrec₂ ?m.59
+with the goal
+  Primrec fun p => skipPrefix p.2 p.1
+
+Note: The full type of `Primrec₂.of_eq (Primrec.nat_rec Primrec.id step)` is
+  (∀ (a : Option Pair) (b : ℕ), Nat.rec (id a) (fun n IH => skipPair (n, IH).2) b = ?m.59 a b) → Primrec₂ ?m.59
+
+step : Primrec₂ fun x p => skipPair p.2
+⊢ Primrec fun p => skipPrefix p.2 p.1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusPrograms.lean:76:7: error: unexpected token 'prefix'; expected '(', ':=', '|' or term
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusPrograms.lean:76:7: error: Missing cases:
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusPrograms.lean:75:82: error: unsolved goals
+⊢ Primrec fun p => focus p.1 p.2.1 p.2.2
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusPrograms.lean:76:13: error: unexpected token ':='; expected ':'
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFocusPrograms.lean:78:27: error: unexpected token ')'; expected ':'

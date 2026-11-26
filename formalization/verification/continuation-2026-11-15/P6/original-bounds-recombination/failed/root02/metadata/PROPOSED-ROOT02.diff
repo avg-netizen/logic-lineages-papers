@@ -1,0 +1,11 @@
+--- Root01
++++ Root02
+@@ -26,7 +26,7 @@
+ 
+ theorem rootAccepted (n raw : Nat) (code : Code (Fin n)) (hc : decodeCode n raw = some code) :
+     evaluate (root n) (ofFn ![raw]) = Encodable.encode (rootBounds code) := by
+-  have he := NumberedRawParserSoundnessProof.rawCodeSound n raw code hc
++  have he := NumberedNumericDecodingProof.codeNumericSound n raw code hc
+   rw [← he]
+   exact rootImage n code
+ end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalBoundsRecombination.RootProof

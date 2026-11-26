@@ -1,0 +1,6 @@
+# Independent pre-scope: actual refinement append suppliers
+Approved three supporting helpers for proof development. All four frozen pins match independently. Compared the actual finite refinement tree constructors and source composition section.
+
+OmitSuffix explicitly requires both typed/valid marked terms; retained extras are their actual occurrences in the longer list, with reflexive witnesses. MarkedAppend keeps the same actual head symbol, positionwise base refinement, and paired appended tuple tree. It permits output retyping, as the source refinement does; validity and corresponding tuple types must be derived from those finite witnesses, not supplied as a new oracle. Existing old extra occurrences embed in the appended list. For each old whole-owner witness, the genuinely larger owner must first refine the old owner by omission and then compose using the already checked refinement transitivity. Merely retaining an old owner witness without that bridge is insufficient. New extras use their actual appended occurrences and supplied pointwise finite trees. HeadAppend is the corresponding ordinary-head case.
+
+These helpers do not assert comparison cut, arbitrary call associativity, full application or complete sharp-syntax by themselves. No compilation or mathematical source edit.

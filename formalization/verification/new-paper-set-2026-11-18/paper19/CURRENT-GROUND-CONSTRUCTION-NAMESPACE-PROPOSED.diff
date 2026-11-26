@@ -1,0 +1,88 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetDefinitions.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetDefinitions.lean
+@@ -6,7 +6,7 @@
+ namespace LogicLineages.ControlSensitivityCurrent.CurrentGroundBudget
+ 
+ open LogicLineages.OrdinalComparison.Source
+-open LogicLineages.StandardControlCurrent (PolicyAssignment)
++open LogicLineages.StandardControlCurrent
+ open OriginalSecondBudget
+ 
+ /-- First field paired with the original whole-box second field. -/
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetTargets.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundBudgetTargets.lean
+@@ -4,7 +4,7 @@
+ namespace LogicLineages.ControlSensitivityCurrent.CurrentGroundBudgetTargets
+ 
+ open LogicLineages.OrdinalComparison.Source
+-open LogicLineages.StandardControlCurrent (PolicyShape)
++open LogicLineages.StandardControlCurrent
+ open LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemantics
+ open CurrentGroundBudget OriginalSecondBudget HeadFiniteSurplus AdditiveHeadTree
+ 
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationCodeDefinitions.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationCodeDefinitions.lean
+@@ -6,7 +6,7 @@
+ namespace LogicLineages.ControlSensitivityCurrent.CurrentGroundAnnotationCode
+ 
+ open LogicLineages.OrdinalComparison.Source
+-open LogicLineages.StandardControlCurrent (PolicyShape PolicyAssignment PolicyPartial)
++open LogicLineages.StandardControlCurrent
+ open AdmissibleSum SourceAnnotationCode TrackedSourceInspectionCode
+ 
+ /-- Annotation joins differ from ordinary ordinal joins: the literal tag here
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationTargets.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationTargets.lean
+@@ -4,7 +4,7 @@
+ namespace LogicLineages.ControlSensitivityCurrent.CurrentGroundAnnotationTargets
+ 
+ open LogicLineages.OrdinalComparison.Source
+-open LogicLineages.StandardControlCurrent (PolicyShape)
++open LogicLineages.StandardControlCurrent
+ open AdmissibleSum AdditiveHeadTree ActiveScalarAnnotation ScalarAnnotationData
+ open CurrentGroundAnnotation
+ 
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountDefinitions.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountDefinitions.lean
+@@ -6,7 +6,7 @@
+ namespace LogicLineages.ControlSensitivityCurrent.CurrentGroundAccount
+ 
+ open LogicLineages.OrdinalComparison.Source
+-open LogicLineages.StandardControlCurrent (PolicyAssignment)
++open LogicLineages.StandardControlCurrent
+ open AdmissibleSum ScalarAnnotationData DeterministicAccountData
+ open SourceFreeOccurrences
+ 
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountTargets.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountTargets.lean
+@@ -4,7 +4,7 @@
+ namespace LogicLineages.ControlSensitivityCurrent.CurrentGroundAccountTargets
+ 
+ open LogicLineages.OrdinalComparison.Source
+-open LogicLineages.StandardControlCurrent (PolicyShape)
++open LogicLineages.StandardControlCurrent
+ open CurrentGroundAccount
+ open CurrentReserve (Carrier SpawnedAccount Account reserve carrierSum unitValue)
+ open AdmissibleSum ScalarAnnotationData DeterministicAccountData
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionDefinitions.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionDefinitions.lean
+@@ -7,7 +7,7 @@
+ 
+ open LogicLineages.OrdinalComparison (ordinalNaturalSum ordinalNaturalProduct)
+ open LogicLineages.OrdinalComparison.Source
+-open LogicLineages.StandardControlCurrent (PolicyAssignment)
++open LogicLineages.StandardControlCurrent
+ open AdmissibleSum SourceTypedPorts DeterministicAccountData
+ 
+ /-- A private prefix belongs to one occurrence; the suffix Γ is shared by
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionTargets.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionTargets.lean
+@@ -5,7 +5,7 @@
+ 
+ open LogicLineages.OrdinalComparison (ordinalNaturalSum ordinalNaturalProduct)
+ open LogicLineages.OrdinalComparison.Source
+-open LogicLineages.StandardControlCurrent (PolicyShape)
++open LogicLineages.StandardControlCurrent
+ open LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemantics
+ open AdmissibleSum DeterministicAccountData
+ open CurrentGroundConstruction CurrentGroundBudget

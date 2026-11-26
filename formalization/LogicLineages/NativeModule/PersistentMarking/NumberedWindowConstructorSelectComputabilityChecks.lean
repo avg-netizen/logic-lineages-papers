@@ -1,0 +1,19 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowConstructorSelectComputabilityProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowConstructorSelectComputabilityChecks
+open NumberedWindowConstructorSelectComputabilityTargets
+
+theorem exact_TypedAuxiliaryApplicationsComputable : TypedAuxiliaryApplicationsComputable :=
+  NumberedWindowConstructorSelectComputabilityProof.tuple
+
+theorem exact_SelectFromComputableCopies : SelectFromComputableCopies :=
+  NumberedWindowConstructorSelectComputabilityProof.select
+
+#print axioms exact_TypedAuxiliaryApplicationsComputable
+#print axioms exact_SelectFromComputableCopies
+
+end LogicLineages.PersistentMarking.NumberedWindowConstructorSelectComputabilityChecks

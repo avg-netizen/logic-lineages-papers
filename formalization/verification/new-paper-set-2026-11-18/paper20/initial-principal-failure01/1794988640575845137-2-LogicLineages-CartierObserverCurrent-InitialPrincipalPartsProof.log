@@ -1,0 +1,191 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/InitialPrincipalPartsProof.lean:69:35: error(lean.invalidField): Invalid field notation: Type of
+  z
+is not known; cannot resolve field `val`
+
+Hint: Consider replacing the field projection with a call to one of the following:
+  • `AddUnits.val`
+  • `Char.val`
+  • `Fin.val`
+  • `Finset.val`
+  • `Float.val`
+  • `Float32.val`
+  • `FloatSpec.val`
+  • `IntermediateField.val`
+  • `NonScalar.val`
+  • `PNat.val`
+  • `Subalgebra.val`
+  • `SubalgebraClass.val`
+  • `Subtype.val`
+  • `Units.val`
+  • `ZMod.val`
+  • `Array.Mem.val`
+  • `Lean.ElabBlock.val`
+  • `Lean.ElabInline.val`
+  • `Lean.ExprStructEq.val`
+  • `OrderHom.Subtype.val`
+  • `ST.Out.val`
+  • `Vector.Mem.val`
+  • `Lean.Doc.Parser.val`
+  • `Lean.Elab.FieldInfo.val`
+  • `Lean.Language.DynamicSnapshot.val`
+  • `Lean.Language.SyntaxGuarded.val`
+  • `Lean.Meta.InstanceEntry.val`
+  • `Lean.Server.WithRpcRef.val`
+  • `Std.Time.Timestamp.val`
+  • `Std.Time.WallTime.val`
+  • `Lean.Elab.Term.LetRecToLift.val`
+  • `Lean.Elab.Term.NamedArg.val`
+  • `Lean.Meta.Match.Example.val`
+  • `Lean.Meta.Match.Pattern.val`
+  • `Lean.Meta.SynthInstance.Instance.val`
+  • `Std.Time.Internal.UnitVal.val`
+  • `Lean.Meta.Try.Collector.InductionCandidate.val`
+  • `Mathlib.Tactic.Ring.Common.Result.val`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/InitialPrincipalPartsProof.lean:69:49: error(lean.invalidField): Invalid field notation: Type of
+  a
+is not known; cannot resolve field `val`
+
+Hint: Consider replacing the field projection with a call to one of the following:
+  • `AddUnits.val`
+  • `Char.val`
+  • `Fin.val`
+  • `Finset.val`
+  • `Float.val`
+  • `Float32.val`
+  • `FloatSpec.val`
+  • `IntermediateField.val`
+  • `NonScalar.val`
+  • `PNat.val`
+  • `Subalgebra.val`
+  • `SubalgebraClass.val`
+  • `Subtype.val`
+  • `Units.val`
+  • `ZMod.val`
+  • `Array.Mem.val`
+  • `Lean.ElabBlock.val`
+  • `Lean.ElabInline.val`
+  • `Lean.ExprStructEq.val`
+  • `OrderHom.Subtype.val`
+  • `ST.Out.val`
+  • `Vector.Mem.val`
+  • `Lean.Doc.Parser.val`
+  • `Lean.Elab.FieldInfo.val`
+  • `Lean.Language.DynamicSnapshot.val`
+  • `Lean.Language.SyntaxGuarded.val`
+  • `Lean.Meta.InstanceEntry.val`
+  • `Lean.Server.WithRpcRef.val`
+  • `Std.Time.Timestamp.val`
+  • `Std.Time.WallTime.val`
+  • `Lean.Elab.Term.LetRecToLift.val`
+  • `Lean.Elab.Term.NamedArg.val`
+  • `Lean.Meta.Match.Example.val`
+  • `Lean.Meta.Match.Pattern.val`
+  • `Lean.Meta.SynthInstance.Instance.val`
+  • `Std.Time.Internal.UnitVal.val`
+  • `Lean.Meta.Try.Collector.InductionCandidate.val`
+  • `Mathlib.Tactic.Ring.Common.Result.val`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/InitialPrincipalPartsProof.lean:68:17: error: Application type mismatch: The argument
+  Finset.univ
+has type
+  Finset (Root d)
+but is expected to have type
+  Set ?m.1
+in the application
+  Set.Pairwise Finset.univ
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/InitialPrincipalPartsProof.lean:82:4: error: No goals to be solved
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/InitialPrincipalPartsProof.lean:98:38: error(lean.unknownIdentifier): Unknown identifier `factor_coprime`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/InitialPrincipalPartsProof.lean:143:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  f - g ≥ 0
+  e ≥ 0
+  c ≥ 0
+  c - e ≥ 1
+  a ≥ 0
+where
+ a := ↑(omittedProduct d ↑z).natDegree
+ c := ↑M
+ e := ↑↑j
+ f := ↑↑((M - (↑j + 1)) * 1 + M * (omittedProduct d ↑z).natDegree)
+ g := ↑↑(M * (1 + (omittedProduct d ↑z).natDegree))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/InitialPrincipalPartsProof.lean:168:15: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?m.312 * (algebraMap (FieldAt d)[X] (RatFunc (FieldAt d))) (omittedProduct d ↑z) ^ M /
+    (?m.313 * (algebraMap (FieldAt d)[X] (RatFunc (FieldAt d))) (omittedProduct d ↑z) ^ M)
+in the target expression
+  Basic.rationalC (b z j) / (Basic.rationalX - Basic.rationalC ↑z) ^ (↑j + 1) =
+    Basic.rationalC (b z j) *
+        (((algebraMap (FieldAt d)[X] (RatFunc (FieldAt d))) X - Basic.rationalC ↑z) ^ (M - (↑j + 1)) *
+          (algebraMap (FieldAt d)[X] (RatFunc (FieldAt d))) (omittedProduct d ↑z) ^ M) /
+      ((Basic.rationalX - Basic.rationalC ↑z) ^ M *
+        (algebraMap (FieldAt d)[X] (RatFunc (FieldAt d))) (omittedProduct d ↑z) ^ M)
+
+d M : ℕ
+b : Coefficients d M
+z : Root d
+a✝¹ : z ∈ Finset.univ
+j : Fin M
+a✝ : j ∈ Finset.univ
+hF : Basic.rationalX - Basic.rationalC ↑z ≠ 0
+hD : (algebraMap (FieldAt d)[X] (RatFunc (FieldAt d))) (omittedProduct d ↑z) ≠ 0
+⊢ Basic.rationalC (b z j) / (Basic.rationalX - Basic.rationalC ↑z) ^ (↑j + 1) =
+    Basic.rationalC (b z j) *
+        (((algebraMap (FieldAt d)[X] (RatFunc (FieldAt d))) X - Basic.rationalC ↑z) ^ (M - (↑j + 1)) *
+          (algebraMap (FieldAt d)[X] (RatFunc (FieldAt d))) (omittedProduct d ↑z) ^ M) /
+      ((Basic.rationalX - Basic.rationalC ↑z) ^ M *
+        (algebraMap (FieldAt d)[X] (RatFunc (FieldAt d))) (omittedProduct d ↑z) ^ M)
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  function expected
+    b z
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/InitialPrincipalPartsProof.lean:213:2: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  c ≥ 0
+  a ≥ 0
+  a - c ≥ 1
+where
+ a := ↑↑(rootProduct d ^ M).natDegree
+ c := ↑↑(q.natDegree + (rootProduct d ^ M).natDegree)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/InitialPrincipalPartsProof.lean:218:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (∏ x ∈ ?s, ?f x) ^ ?n
+in the target expression
+  ∏ z, (X - C ↑z) ^ M = rootProduct d ^ M
+
+d M : ℕ
+⊢ ∏ z, (X - C ↑z) ^ M = rootProduct d ^ M
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    z
+  has type
+    Root d
+  but is expected to have type
+    ↥(SplittingRoots.rootSet d)
+  in the application
+    ↑z
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/InitialPrincipalPartsProof.lean:230:38: error(lean.unknownIdentifier): Unknown identifier `factor_coprime`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/InitialPrincipalPartsProof.lean:244:4: error: No goals to be solved
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/InitialPrincipalPartsProof.lean:246:2: error: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/InitialPrincipalPartsProof.lean:269:4: error: Type mismatch: After simplification, term
+  hp.right.right
+ has type
+  MixedProper.proper
+    ((algebraMap (FieldAt d)[X] (RatFunc (FieldAt d))) (map (algebraMap (ZMod 2) (FieldAt d)) P) /
+      (algebraMap (FieldAt d)[X] (RatFunc (FieldAt d))) (SourceBudget.denominator (FieldAt d) d))
+but is expected to have type
+  MixedProper.proper
+    ((algebraMap (FieldAt d)[X] (RatFunc (FieldAt d))) (map (algebraMap (ZMod 2) (FieldAt d)) P) /
+      (algebraMap (FieldAt d)[X] (RatFunc (FieldAt d)))
+        (map (algebraMap (ZMod 2) (FieldAt d)) (SourceBudget.denominator (ZMod 2) d)))
+AXIOMS LogicLineages.CartierObserverCurrent.InitialPrincipalParts.boundedPresentation: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.CartierObserverCurrent.InitialPrincipalParts.reconstruct.eq_1: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/InitialPrincipalPartsProof.lean:272:0: error: LogicLineages.CartierObserverCurrent.InitialPrincipalParts.initialSourceCoverage: forbidden axiom dependency sorryAx

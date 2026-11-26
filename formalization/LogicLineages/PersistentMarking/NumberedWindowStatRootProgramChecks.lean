@@ -1,0 +1,9 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowStatRootProgramTargets
+import LogicLineages.PersistentMarking.NumberedWindowStatRootProgramProof
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowStatRootProgramChecks
+theorem exact_StatRootProgram : NumberedWindowStatRootProgramTargets.StatRootProgram :=
+  NumberedWindowStatRootProgramProof.program
+#print axioms exact_StatRootProgram
+end LogicLineages.PersistentMarking.NumberedWindowStatRootProgramChecks

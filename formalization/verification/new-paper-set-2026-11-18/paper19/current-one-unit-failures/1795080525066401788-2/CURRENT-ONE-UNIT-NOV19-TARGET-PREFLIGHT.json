@@ -1,0 +1,68 @@
+{
+  "status": "exact current source comparator target-only preflight PASS; proof not yet natively attempted or accepted",
+  "ticket": "ONE-UNIT-TARGET-0903",
+  "exit_code": 0,
+  "reaped": true,
+  "receipt": "build-reports/1795078906812818688-2.json",
+  "receipt_sha256": "100d7bb1852be4c17fff3b9705ddf5f0c08450ea05b141635a2569b50f3df621",
+  "profile": {
+    "requested": [
+      "LogicLineages.ControlSensitivityCurrent.CurrentOneUnitTargets"
+    ],
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "core_only_profile": false,
+    "single_thread": true,
+    "threads": 1,
+    "upstream_cache_only": true,
+    "calculator_objects_borrowed": true
+  },
+  "closure_count": 257,
+  "pin_count": 44,
+  "freeze": "verification/new-paper-set-2026-11-18/paper19/CURRENT-ONE-UNIT-FREEZE.json",
+  "freeze_sha256": "c474cdad4a8c779aa67575deab43bb9f30edad717cf8fd21061072f92f32b873",
+  "successful_native_rows": [
+    {
+      "module": "LogicLineages.ControlSensitivityCurrent.CurrentOneUnitDefinitions",
+      "returncode": 0,
+      "seconds": 4.125,
+      "observed_cpu_seconds": 2.16,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 941244,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "eee2ec93e8d299acf92b0b06dd49f17e155615d13077d3ce638387c32a88f908",
+      "log": "build-reports/1795078906812818688-2-LogicLineages-ControlSensitivityCurrent-CurrentOneUnitDefinitions.log"
+    },
+    {
+      "module": "LogicLineages.ControlSensitivityCurrent.CurrentOneUnitRawDefinitions",
+      "returncode": 0,
+      "seconds": 1.325,
+      "observed_cpu_seconds": 1.25,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 997960,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "cc3c23e5ca5694a546c7c60df9ac8b89f34d27d81c2e61a61aa8ec7638128278",
+      "log": "build-reports/1795078906812818688-2-LogicLineages-ControlSensitivityCurrent-CurrentOneUnitRawDefinitions.log"
+    },
+    {
+      "module": "LogicLineages.ControlSensitivityCurrent.CurrentOneUnitTargets",
+      "returncode": 0,
+      "seconds": 1.389,
+      "observed_cpu_seconds": 1.32,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 991316,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "d4c17545e7d45efc25412a0df9a1eed0dc45709b82188b5c00e352a6ce3db7f4",
+      "log": "build-reports/1795078906812818688-2-LogicLineages-ControlSensitivityCurrent-CurrentOneUnitTargets.log"
+    }
+  ]
+}

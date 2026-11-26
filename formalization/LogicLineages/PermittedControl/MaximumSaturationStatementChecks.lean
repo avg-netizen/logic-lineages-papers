@@ -1,0 +1,18 @@
+module
+public import LogicLineages.PermittedControl.MaximumAlgorithmTargets
+public import LogicLineages.PermittedControl.LimitSaturationTargets
+public import LogicLineages.StandardControlCurrent.MaximumAlgorithmStatementChecks
+public import LogicLineages.StandardControlCurrent.CollapseFoundationStatementChecks
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_fullMaximumAlgorithm : MaximumAlgorithmTargets.FullOptimizedMaximumAlgorithm :=
+  StandardControlCurrent.MaximumAlgorithmStatementChecks.full
+
+theorem fixed_fullLimitSaturation : LimitSaturationTargets.LimitSaturation :=
+  StandardControlCurrent.CollapseFoundationStatementChecks.saturation
+
+#print axioms fixed_fullMaximumAlgorithm
+#print axioms fixed_fullLimitSaturation
+end LogicLineages.PermittedControl.StatementChecks

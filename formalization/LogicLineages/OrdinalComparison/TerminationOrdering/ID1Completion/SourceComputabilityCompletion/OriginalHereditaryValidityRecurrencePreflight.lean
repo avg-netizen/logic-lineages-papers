@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityRecurrenceTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityRecurrence
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityRecurrenceTargets
+#check DescendantFrame
+#check TypedWindowFrame
+#check (ActualOriginalHereditaryValidatorRecurrence : Prop)
+#check (ActualOriginalHereditaryProgramRecurrence : Prop)
+#check (ActualOriginalHereditarySourceDescendantInvariant : Prop)
+#check (ActualOriginalHereditarySourceGuardRedundancy : Prop)
+#check (ActualOriginalHereditarySourceRefinementCalibration : Prop)

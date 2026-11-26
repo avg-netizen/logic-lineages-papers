@@ -1,0 +1,7 @@
+# Full literal argumentEntries recursion/extraction (exact2)
+
+Actual R is projection of codeNumber, D is the checked concrete original children AST, and G is ArgumentEntriesLayer.recombine on [node,answers] ignoring param. Actual graph/extract are the existing literal Mathlib nat_omega_rec frontier/filterMap association-list algorithm with first-match lookup, omitted missing keys, same old graph per stage, rank subtraction and singleton head/snd extraction. No dense row algorithm or opaque selected supplier replaces it.
+
+OriginalGraph claims exact actual graph contents at every i≤codeNumber(seed)+1: the original typed children frontier at codeNumber(seed)+1-i, paired with original encoded argumentEntries values. OriginalExtraction claims final actual program result equals original argumentEntries encoding, for every Code constructor and unused param. Invalid spines represented by Code give None0, not Some[]1. No claim interprets arbitrary raw numbers as semantic Codes.
+
+Proof must supply, not assume, all-raw rank decrease and concrete layer calibration/coherence via a well-founded raw numeric extension, then pay valid-code correspondence. Existing paid all-raw child bounds, original-frontier image and literal graph coherence are reusable. Native source correspondence is separate from internal arithmetic recursion correctness. HeadMove permutation/window/sourceHeads and original global E/source stability remain open. No tuple mutation.

@@ -1,0 +1,16 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowDirectProgramProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowDirectProgramChecks
+open NumberedWindowDirectProgramTargets
+
+theorem exact_OccurrenceCertificateParsing : OccurrenceCertificateParsing := NumberedWindowDirectParsingProof.parsing
+theorem exact_MultisetDomainProgram : MultisetDomainProgram := NumberedWindowDirectProgramProof.domain
+theorem exact_DirectCertificateProgram : DirectCertificateProgram := NumberedWindowDirectProgramProof.checker
+
+#print axioms exact_OccurrenceCertificateParsing
+#print axioms exact_MultisetDomainProgram
+#print axioms exact_DirectCertificateProgram
+end LogicLineages.PersistentMarking.NumberedWindowDirectProgramChecks

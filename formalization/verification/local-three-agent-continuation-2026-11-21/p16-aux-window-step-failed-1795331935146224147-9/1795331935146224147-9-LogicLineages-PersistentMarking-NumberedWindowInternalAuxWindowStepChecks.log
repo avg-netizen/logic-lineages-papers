@@ -1,0 +1,75 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxWindowStepChecks.lean:29:5: error: unknown namespace `NumberedWindowInternalFreshProbeDispatchProgramControlProof`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxWindowStepChecks.lean:120:2: error: unsolved goals
+case neg
+s : Settings
+base : Program 2
+T : Program 1
+cal : TypeGuardCalibrated s T
+i old ctx dom cod fn arg : ℕ
+read : unpackNode (i + 1) = some (6, [dom, cod, fn, arg])
+fs :
+  run (field 0) (i + 1) = dom ∧ run (field 1) (i + 1) = cod ∧ run (field 2) (i + 1) = fn ∧ run (field 3) (i + 1) = arg
+d : evaluate (childAt 0) (tape i old ctx) = dom
+c : evaluate (childAt 1) (tape i old ctx) = cod
+fnCode : evaluate (childAt 2) (tape i old ctx) = fn
+argCode : evaluate (childAt 3) (tape i old ctx) = arg
+smallFn : fn < i + 1
+smallArg : arg < i + 1
+shapeEarlier : evaluate certain (tape i old ctx) = 1
+bits :
+  evaluate (admittedChildren T) (tape i old ctx) = 1 ↔
+    typeGuard s dom = true ∧
+      typeGuard s cod = true ∧
+        evaluate lookup ((i - fn) ::ᵥ old ::ᵥ nil) = arrow dom cod + 1 ∧
+          evaluate lookup ((i - arg) ::ᵥ old ::ᵥ nil) = dom + 1
+fallback : ℕ := evaluate base (ctx ::ᵥ (i + 1) ::ᵥ nil)
+h : Prop :=
+  typeGuard s dom = true ∧
+    typeGuard s cod = true ∧
+      evaluate lookup ((i - fn) ::ᵥ old ::ᵥ nil) = arrow dom cod + 1 ∧
+        evaluate lookup ((i - arg) ::ᵥ old ::ᵥ nil) = dom + 1
+accepted : ¬h
+no : evaluate (admittedChildren T) (tape i old ctx) = 1 → False
+⊢ evaluate (admittedChildren T) (tape i old ctx) = 1 → cod + 1 = fallback
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxWindowStepChecks.lean:121:27: warning: This simp argument is unused:
+  no
+
+Hint: Omit it from the simp argument list.
+  simp [smallFn, ̲smallArg,n̵o̵,̵ ̲accepted]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxWindowStepChecks.lean:146:6: error(lean.unknownIdentifier): Unknown identifier `vectorTwo`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxWindowStepChecks.lean:141:66: error: unsolved goals
+F : Program 2
+ctx ty raw : ℕ
+xs : List.Vector ℕ (Nat.succ 0).succ.succ := ctx ::ᵥ ty ::ᵥ raw ::ᵥ nil
+⊢ evaluate InternalEqualityTest.equalityTest
+      (ofFn fun i =>
+        evaluate
+          (![F.composition ![Program.projection 0, Program.projection 2],
+              Program.succ.composition ![Program.projection 1]]
+            i)
+          xs) =
+    if evaluate F (ctx ::ᵥ raw ::ᵥ nil) = ty + 1 then 1 else 0
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxWindowStepChecks.lean:153:60: error: unsolved goals
+case neg
+s : Settings
+base : Program 2
+T : Program 1
+hBase : IntrinsicWindowCalibrated s base
+hT : TypeGuardCalibrated s T
+ctx ty raw : ℕ
+memo : IntrinsicWindowCalibrated s (selectedIntrinsic (windowUpdate base T))
+yes : ¬intrinsicWindow s ctx raw = ty + 1
+⊢ 0 = (intrinsicWindow s ctx raw == ty + 1).toNat
+'LogicLineages.PersistentMarking.NumberedWindowInternalAuxWindowStepPrograms.exact_WindowPrimitiveLeaves' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalAuxWindowStepChecks.exact_PhysicalAuxWindowStep' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalAuxWindowStepChecks.exact_PhysicalAuxWindow' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

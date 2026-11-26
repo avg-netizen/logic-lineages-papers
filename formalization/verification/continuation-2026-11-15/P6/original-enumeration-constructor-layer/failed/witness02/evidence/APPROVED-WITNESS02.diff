@@ -1,0 +1,19 @@
+--- Witness01
++++ Witness02
+@@ -1,6 +1,7 @@
+ module
+ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationConstructorLayer.Targets
+ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEncodedNumberedEnumerationBranch.WitnessTransportProof
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTypedDecoderInternalLogicSyntaxProof
+ public meta import LogicLineages.Audit
+ @[expose] public section
+ namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationConstructorLayer.WitnessProof
+@@ -26,7 +27,7 @@
+ theorem memberSubst {beta : Type} (ys : Fin 8 → OTerm alpha) (code : OTerm alpha) (sub : alpha → OTerm beta) :
+     (branchMember ys code).subst (fun a => emb (sub a)) =
+       branchMember (fun i => (ys i).subst sub) (code.subst sub) := by
+-  simp only [branchMember,InternalQuotientComparisonSyntaxProof.supSubst,graph2,
++  simp only [branchMember,OriginalTypedDecoderInternalLogicSyntaxProof.orSubst,graph2,
+     InternalComputabilityApplicationSyntaxProof.programSubst,consTermSubst,emptySubst,numeral,zSubst,sucSubst]
+ 
+ theorem componentsRename {beta : Type} (n : Nat) (xs : Fin 7 → OTerm alpha)

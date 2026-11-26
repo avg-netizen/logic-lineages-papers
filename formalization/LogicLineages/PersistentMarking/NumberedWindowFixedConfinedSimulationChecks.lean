@@ -1,0 +1,15 @@
+import LogicLineages.PersistentMarking.NumberedWindowFixedConfinedSimulationProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowFixedConfinedSimulationChecks
+open NumberedWindowFixedConfinedSimulationTargets
+
+theorem exact_OrdinaryQuoteInSuppliedWindow : OrdinaryQuoteInSuppliedWindow :=
+  NumberedWindowFixedConfinedSimulationProof.quote
+
+theorem exact_PositiveConfinedSimulationInSuppliedWindow : PositiveConfinedSimulationInSuppliedWindow :=
+  NumberedWindowFixedConfinedSimulationProof.positive
+
+#print axioms exact_OrdinaryQuoteInSuppliedWindow
+#print axioms exact_PositiveConfinedSimulationInSuppliedWindow
+
+end LogicLineages.PersistentMarking.NumberedWindowFixedConfinedSimulationChecks

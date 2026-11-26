@@ -1,0 +1,15 @@
+--- SeedProof FULL02
++++ SeedProof FULL03
+@@ -29,8 +29,10 @@
+  evaluate (SaturatedAxiomLeaf.saturated x) (arguments c fuel sigma) = 1 := by
+  refine (SaturatedAxiomLeaf.StatementChecks.nativeCalibration x hx (arguments c fuel sigma)).trans ?_
+  have hh := canonical c fuel sigma h
+- simpa [HistoryDispatcher.axiomFunction,HistoryDispatcher.decodedLine,HistoryDispatcher.truth,
+-  arguments,lineCode,Denumerable.ofNat_encode] using congrArg HistoryDispatcher.truth hh
++ simp only [HistoryDispatcher.axiomFunction,arguments,List.Vector.head_cons,List.Vector.tail_cons,
++  lineCode,HistoryDispatcher.decodedLine,Encodable.encodek,Option.getD_some,Denumerable.ofNat_encode]
++ rw [hh]
++ rfl
+ /-- Rewrite the output of the actual defining-equation graph, at every context. -/
+ theorem seed {n : Nat} (p : Program n) (tag : Nat) (x : Program 3)
+  (hx : (nodes p)[tag]? = some ⟨3,SaturatedAxiomLeaf.saturated x⟩)

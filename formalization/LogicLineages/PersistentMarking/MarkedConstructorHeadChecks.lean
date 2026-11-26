@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.MarkedConstructorHeadProof
+namespace LogicLineages.PersistentMarking.MarkedConstructorHeadChecks
+theorem exact_CopyExact : MarkedConstructorTargets.CopyExact := MarkedConstructorHeadProof.copy
+theorem exact_StatExact : MarkedConstructorTargets.StatExact := MarkedConstructorHeadProof.stat
+#print axioms exact_CopyExact
+#print axioms exact_StatExact
+end LogicLineages.PersistentMarking.MarkedConstructorHeadChecks

@@ -1,0 +1,45 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowTypingBitsChecks.lean:27:44: error: unsolved goals
+S : Spine.Signature
+K : List Ty
+C : Spine.BoundContext
+τ : Ty
+Q : NumberedWindowSyntax.NTerm
+⊢ (typedBit C τ Q = true ∧ (∀ (x : Ty), x ∈ support Q → x ∈ K) ∧ ∀ (x : Head), x ∈ heads Q → HeadInWindow S K x) ↔
+    Typed C Q τ ∧ (∀ (x : Ty), x ∈ support Q → x ∈ K) ∧ ∀ (x : Head), x ∈ heads Q → HeadInWindow S K x
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowTypingBitsChecks.lean:29:40: warning: This simp argument is unused:
+  exact_TypedBit
+
+Hint: Omit it from the simp argument list.
+  simp only [̵w̵i̵n̵d̵o̵w̵B̵i̵t̵,̵B̵o̵o̵l̵.̵a̵n̵d̵_̵e̵q̵_̵t̵r̵u̵e̵,̵e̵x̵a̵c̵t̵_̵T̵y̵p̵e̵d̵B̵i̵t̵,̵L̵i̵s̵t̵.̵a̵l̵l̵_̵e̵q̵_̵t̵r̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵d̵e̵c̵i̵d̵e̵_̵e̵q̵_̵t̵r̵u̵e̵_̵e̵q̵,̵N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵H̵e̵a̵d̵E̵n̵u̵m̵e̵r̵a̵t̵i̵o̵n̵P̵r̵o̵o̵f̵.̵b̵i̵t̵,̵I̵n̵W̵i̵n̵d̵o̵w̵,̵a̵n̵d̵_̵a̵s̵s̵o̵c̵]̵[̲w̲i̲n̲d̲o̲w̲B̲i̲t̲,̲ ̲B̲o̲o̲l̲.̲a̲n̲d̲_̲e̲q̲_̲t̲r̲u̲e̲,̲ ̲L̲i̲s̲t̲.̲a̲l̲l̲_̲e̲q̲_̲t̲r̲u̲e̲,̲ ̲d̲e̲c̲i̲d̲e̲_̲e̲q̲_̲t̲r̲u̲e̲_̲e̲q̲,̲
+  ̲ ̲ ̲ ̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲W̲i̲n̲d̲o̲w̲H̲e̲a̲d̲E̲n̲u̲m̲e̲r̲a̲t̲i̲o̲n̲P̲r̲o̲o̲f̲.̲b̲i̲t̲,̲ ̲I̲n̲W̲i̲n̲d̲o̲w̲,̲ ̲a̲n̲d̲_̲a̲s̲s̲o̲c̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowTypingBitsChecks.lean:32:56: error: unsolved goals
+S : Spine.Signature
+K Γ : List Ty
+τ : Ty
+Q : NumberedWindowSyntax.NTerm
+⊢ windowBit S K (Spine.BoundContext.prefix Γ Spine.EmptyContext) τ Q = true ↔
+    InWindow S K (Spine.BoundContext.prefix Γ Spine.EmptyContext) τ Q
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowTypingBitsChecks.lean:34:29: warning: This simp argument is unused:
+  exact_WindowBit
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵i̵n̵i̵t̵e̵W̵i̵n̵d̵o̵w̵B̵i̵t̵,̵e̵x̵a̵c̵t̵_̵W̵i̵n̵d̵o̵w̵B̵i̵t̵,̵N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵F̵i̵n̵i̵t̵e̵B̵i̵n̵d̵e̵r̵P̵r̵o̵o̵f̵.̵l̵o̵o̵k̵u̵p̵]̵[̲f̲i̲n̲i̲t̲e̲W̲i̲n̲d̲o̲w̲B̲i̲t̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲W̲i̲n̲d̲o̲w̲F̲i̲n̲i̲t̲e̲B̲i̲n̲d̲e̲r̲P̲r̲o̲o̲f̲.̲l̲o̲o̲k̲u̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'LogicLineages.PersistentMarking.NumberedWindowTypingBitsChecks.exact_LiteralTermEquality' depends on axioms: [propext]
+'LogicLineages.PersistentMarking.NumberedWindowTypingBitsChecks.exact_LiteralArgsEquality' depends on axioms: [propext]
+'LogicLineages.PersistentMarking.NumberedWindowTypingBitsChecks.exact_FiniteBinderLookup' depends on axioms: [propext,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowTypingBitsChecks.exact_TypedBit' depends on axioms: [propext, Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowTypingBitsChecks.exact_BaseBit' depends on axioms: [propext, Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowTypingBitsChecks.exact_ExtrasBit' depends on axioms: [propext,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowTypingBitsChecks.exact_WindowBit' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowTypingBitsChecks.exact_FiniteWindowBit' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]

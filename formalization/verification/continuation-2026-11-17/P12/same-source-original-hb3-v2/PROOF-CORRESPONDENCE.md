@@ -1,0 +1,12 @@
+# Actual assembly draft, pending native checks
+
+Exactly one use of the accepted SameSourcePublishedWitness exactSource selects the tuple. All original fields including full Retained/Packages and the actual witness-supplier implication are returned unchanged. No new source is selected. The accepted uniform bound is instantiated to itself, and its guard is proved by the original order reflexivity theorem.
+
+CoherenceProof derives equality of the actual installed verifier call and the named checker call via original registry coherence and two actual memberships of exactly the same AST, then includes that derivation in the same S. It does not equate tags. TransportProof projects the actual accepted verifier conjunct, composes the coherence equality, and transports its formula coordinate along the supplied sorted/raw equality, lifted from ctx0 by the original derivation-substitution theorem.
+
+ExistentialSyntax introduces the explicit output certificate and fixed uniform outer fuel in arbitrary ctx. EliminationProof receives the original inner success at ctx2, produces the closed outer prD weakened twice, then applies original existential elimination first to inner certificate and then inner fuel. The output certificate depends on both inner variables but is bound by the output existential before either input elimination. No undischarged local hypothesis is generalized or promoted to a theory axiom. Original applyProv/prD syntax is aligned explicitly; no computed reflection.
+
+The full original HB3 theorem is only a draft until the unchanged exact comparator/native/standard-axiom and recursive evidence gates pass. No HB2, Lob or numbered completion is claimed.
+
+## RSS-preserving generic split
+The initial specialized TransportProof stopped at the unchanged resident-memory limit with no mathematical diagnostics. Its full source/receipt/log are archived in failed-final01-rss. GenericExistentialSyntax repeats the checked quantifier syntax without importing the selected source tree. GenericTransportProof abstracts only namedTag, encoded index and target output term u from the original local proof. Its hypotheses remain the actual output-term equality and actual checker-call equality; it neither assumes accepted success nor drops the accepted premise. The specialized wrapper retains its exact statement and instantiates these arguments literally. All frozen files and the already passed ExistentialSyntax/CoherenceProof remain untouched. Independent review is required before native retry.

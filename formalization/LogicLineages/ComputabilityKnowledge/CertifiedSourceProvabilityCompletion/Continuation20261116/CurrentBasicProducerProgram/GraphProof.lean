@@ -1,0 +1,17 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentBasicProducerProgram.SeedGraphProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentBasicProducerProgram.GraphProof
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRDefiningEquations GorbowTheoryProof SixSol20261113 List.Vector
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115
+open GorbowSubstitution GorbowFormulaSubstitution PrescribedRuntimeEquality
+open SixSol20261112.Fuel NamedArithmeticGraph
+theorem exactInternal : Targets.InternalLeaf := by
+ intro arity p n kind J tag I ht ctx target inputs
+ exact SeedGraphProof.seedGraph p (target ::ᵥ inputs) J I n (rootTemplate kind)
+  (CurrentRecursionBaseProgram.rootArguments n) (CurrentRecursionBaseProgram.rawValues J target inputs)
+  (CurrentRecursionBaseProgram.GraphInputs.rootArgs p J I.hn target inputs) tag ht
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentBasicProducerProgram.GraphProof
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentBasicProducerProgram.GraphProof

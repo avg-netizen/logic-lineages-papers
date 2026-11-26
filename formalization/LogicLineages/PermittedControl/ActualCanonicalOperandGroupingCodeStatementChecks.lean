@@ -1,0 +1,19 @@
+module
+public import LogicLineages.PermittedControl.ActualCanonicalOperandGroupingCodeTargets
+import LogicLineages.PermittedControl.ActualCanonicalOperandGroupingCodePrimitiveProof
+import LogicLineages.PermittedControl.ActualCanonicalOperandGroupingCodeCalibrationProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualCanonicalOperandGroupingCode
+
+theorem fixed_exactGroupingCodePrimitive : ExactGroupingCodePrimitive := exactGroupingCodePrimitive
+theorem fixed_exactGroupingCodeCalibration : ExactGroupingCodeCalibration := exactGroupingCodeCalibration
+
+theorem fixed_fullActualCanonicalOperandGroupingCode : FullActualCanonicalOperandGroupingCode :=
+  ⟨fixed_exactGroupingCodePrimitive,fixed_exactGroupingCodeCalibration⟩
+
+#print axioms fixed_exactGroupingCodePrimitive
+#print axioms fixed_exactGroupingCodeCalibration
+#print axioms fixed_fullActualCanonicalOperandGroupingCode
+
+end LogicLineages.PermittedControl.ActualCanonicalOperandGroupingCode

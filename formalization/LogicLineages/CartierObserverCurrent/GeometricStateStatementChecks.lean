@@ -1,0 +1,15 @@
+module
+public import LogicLineages.CartierObserverCurrent.GeometricStateProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.GeometricState.StatementChecks
+
+theorem fixed_actualStateEquivalence : Targets.ActualStateEquivalence :=
+  LogicLineages.CartierObserverCurrent.GeometricState.actualStateEquivalence
+
+theorem fixed_actualBaseEquivalence : Targets.ActualBaseEquivalence :=
+  LogicLineages.CartierObserverCurrent.GeometricState.actualBaseEquivalence
+
+#audit_namespace LogicLineages.CartierObserverCurrent.GeometricState.StatementChecks
+end LogicLineages.CartierObserverCurrent.GeometricState.StatementChecks

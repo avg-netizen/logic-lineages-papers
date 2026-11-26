@@ -1,0 +1,19 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxBottomMembershipObjectProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxBottomMembershipObjectProof.lean
+@@ -125,10 +125,14 @@
+ 
+ theorem exactMembership : ExactAugmentedBottomMembership := by
+   constructor
+-  · intro i j r d c α Γ x ctx t shape
++  · intro i j r d c α Γ x ctx t
++    dsimp only
++    intro shape
+     exact ⟨bareMembership i j r d c α Γ x ctx t shape,
+       actualOriginalCarrierExtraction (data i j (augmented i r) d) false c α Γ x⟩
+-  · intro i j r d c α Γ x ctx dom cod stored arg shape
++  · intro i j r d c α Γ x ctx dom cod stored arg
++    dsimp only
++    intro shape
+     exact ⟨auxMembership i j r d c α Γ x ctx dom cod stored arg shape,
+       actualOriginalCarrierExtraction (data i j (augmented i r) d) false c α Γ x⟩
+ 

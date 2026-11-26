@@ -1,0 +1,1 @@
+Coordinator read exact proposed diff and independently verified applied CounterSyntax SHA256 c34d545398494ca43a7d59440136a994dce2f8c85c7db32d30b5e2f47aad2a93. Proof-only constructor unfolding, literal encoded-context projection and zero-add arithmetic normalization preserve original owner targets and runtime code. Original failures retained. Pending fresh helper gate.

@@ -1,0 +1,23 @@
+module
+public import LogicLineages.PermittedControl.StageCallbackLegacyTargets
+import LogicLineages.PermittedControl.StageCallbackLegacyProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open StageCallbackLegacy
+
+theorem fixed_exactLegacySupplierShape : ExactLegacySupplierShape := exactLegacySupplierShape
+theorem fixed_exactLegacySupplierExact : ExactLegacySupplierExact := exactLegacySupplierExact
+theorem fixed_exactLegacyLiteralCompile : ExactLegacyLiteralCompile := exactLegacyLiteralCompile
+theorem fixed_exactLegacyStageCallback : ExactLegacyStageCallback := exactLegacyStageCallback
+theorem fixed_fullStageCallbackLegacy : FullStageCallbackLegacy :=
+  ⟨fixed_exactLegacySupplierShape,fixed_exactLegacySupplierExact,
+    fixed_exactLegacyLiteralCompile,fixed_exactLegacyStageCallback⟩
+
+#print axioms fixed_exactLegacySupplierShape
+#print axioms fixed_exactLegacySupplierExact
+#print axioms fixed_exactLegacyLiteralCompile
+#print axioms fixed_exactLegacyStageCallback
+#print axioms fixed_fullStageCallbackLegacy
+
+end LogicLineages.PermittedControl.StatementChecks

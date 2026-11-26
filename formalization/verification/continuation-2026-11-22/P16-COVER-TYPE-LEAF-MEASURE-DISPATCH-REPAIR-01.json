@@ -1,0 +1,48 @@
+{
+  "status": "narrow proof-only first repair; exact native retry pending",
+  "immutable_previous_verified_remote": "e4f23469fadb9df476d995474766b3a1960e43d9",
+  "previous_source_local_prefix": "51479bbd4",
+  "receipt": {
+    "path": "formalization/build-reports/1795360574776654885-23.json",
+    "sha256": "006ad0db79722ec070111456af91bfd0c717db7947bf7c2e524e7374eb324edf"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795360574776654885-23-LogicLineages-PersistentMarking-NumberedWindowInternalCoverTypeLeafMeasureDispatchProof.log",
+    "sha256": "46e567bc1ef4c881c85753e32d6e35851a786f0376dce1bdf7597461995fb4f0"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-type-leaf-measure-dispatch-initial-diagnostic.txt",
+    "sha256": "46e567bc1ef4c881c85753e32d6e35851a786f0376dce1bdf7597461995fb4f0"
+  },
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-COVER-TYPE-LEAF-MEASURE-DISPATCH-REPAIR-01.patch",
+    "sha256": "42e3db49b28065a4f081c9c12ecf4c26f674f4ec48a8f835c6a6fdbfd936374f"
+  },
+  "archived_failed_source": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverTypeLeafMeasureDispatchProof-01.lean",
+    "sha256": "eecc47a1087a87e3c9b3dd27980fd6c36ebb106f3f599059e5bb239a1a4e27cc"
+  },
+  "repaired_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafMeasureDispatchProof.lean",
+    "sha256": "2b15f4bce4f9a151382653808b88a5d73dfd6799aaa15f96c836af6609354087"
+  },
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafMeasureTargets.lean",
+      "sha256": "ad1f23c721ece5dc35ac516024be9db359eab6bfe4c18a09c241e672b7e6e19b"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafSharedMeasureProof.lean",
+      "sha256": "53603263dd4616f4e7380b0eb2d7855ee60a4a538f63cb79001fcc2df2efc0d1"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafMeasuredBaseScratchProof.lean",
+      "sha256": "2731a36ef14f03085d75af330ec9cd00ab87ed48306833fa6734811520aa58ec"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-COVER-TYPE-LEAF-MEASURED-SUCCESSOR-BASE-SOURCE-MAP.md",
+      "sha256": "a243c759ef9e2df0c8d17dcc5a4424ee17be61cd320df70e284dccb001de8810"
+    }
+  ],
+  "diagnosis": "In each conjunction-zero helper, keep the outer Nonempty proposition while unwrapping actual accepted graph/equality reports in the extended context. Introduce the implication and Nonempty only once the false derivation is available. No change to formula, branch evidence, source program, or tape. Shared and scratch roots were not attempted. Failed sorryAx is not acceptance."
+}

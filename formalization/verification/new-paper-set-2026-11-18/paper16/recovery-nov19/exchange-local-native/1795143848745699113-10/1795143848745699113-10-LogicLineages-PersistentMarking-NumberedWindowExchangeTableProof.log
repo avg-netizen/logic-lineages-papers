@@ -1,0 +1,37 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExchangeTableProof.lean:7:93: error: unexpected token '('; expected command
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExchangeTableProof.lean:56:66: error: unsolved goals
+hp : HeadPairs
+x u y v : Nat
+h1 :
+  (table hp (pair (NumberedWindowArithmeticPair.pair x u).succ (NumberedWindowArithmeticPair.pair y v).succ)).getD
+      (pair x y) (false, false) =
+    row hp x y
+h2 :
+  (table hp (pair (NumberedWindowArithmeticPair.pair x u).succ (NumberedWindowArithmeticPair.pair y v).succ)).getD
+      (pair u v) (false, false) =
+    row hp u v
+⊢ (((table hp
+                  (pair (NumberedWindowArithmeticPair.pair x u + 1)
+                    (NumberedWindowArithmeticPair.pair y v + 1)))[pair x y]?.getD
+            (false, false)).fst &&
+        u == v ||
+      x == y &&
+        ((table hp
+                  (pair (NumberedWindowArithmeticPair.pair x u + 1)
+                    (NumberedWindowArithmeticPair.pair y v + 1)))[pair u v]?.getD
+            (false, false)).snd) =
+    ((row hp x y).fst && u == v || x == y && (row hp u v).snd)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExchangeTableProof.lean:61:84: warning: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  simp [argsNext, ̲← NumberedWindowActualPairAlgorithmChecks.currentDecoder, ̲pairRound, ̲h1̵,̵h̵2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExchangeTableProof.lean:61:87: warning: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  simp [argsNext, ̲← NumberedWindowActualPairAlgorithmChecks.currentDecoder, ̲pairRound, ̲h1,̵h̵2̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

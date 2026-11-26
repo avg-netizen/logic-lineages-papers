@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullResidueEnvelopesProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullResidueEnvelopes.StatementChecks
+theorem fixed_completeEnvelopes : Targets.CompleteEnvelopes := completeEnvelopes
+#audit_namespace LogicLineages.CartierObserverCurrent.FullResidueEnvelopes.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullResidueEnvelopes.StatementChecks

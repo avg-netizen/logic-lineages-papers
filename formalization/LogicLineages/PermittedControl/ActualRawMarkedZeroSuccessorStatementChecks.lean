@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PermittedControl.ActualRawMarkedZeroSuccessorTargets
+import LogicLineages.PermittedControl.ActualRawMarkedZeroSuccessorPlanProof
+import LogicLineages.PermittedControl.ActualRawMarkedZeroSuccessorMoveProof
+import LogicLineages.PermittedControl.ActualRawMarkedZeroSuccessorProof
+import LogicLineages.PermittedControl.ActualRawMarkedZeroSuccessorPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualRawMarkedZeroSuccessor
+
+theorem fixed_exactRawMarkedPlan : ExactRawMarkedPlan := exactRawMarkedPlan
+theorem fixed_exactRawMarkedMove : ExactRawMarkedMove := exactRawMarkedMove
+theorem fixed_exactRawMarkedSuccessor : ExactRawMarkedSuccessor := exactRawMarkedSuccessor
+theorem fixed_exactRawMarkedSuccessorEffectivity : ExactRawMarkedSuccessorEffectivity :=
+  exactRawMarkedSuccessorEffectivity
+
+theorem fixed_fullActualRawMarkedZeroSuccessor : FullActualRawMarkedZeroSuccessor :=
+  ⟨fixed_exactRawMarkedPlan,fixed_exactRawMarkedMove,
+    fixed_exactRawMarkedSuccessor,fixed_exactRawMarkedSuccessorEffectivity⟩
+
+#print axioms fixed_exactRawMarkedPlan
+#print axioms fixed_exactRawMarkedMove
+#print axioms fixed_exactRawMarkedSuccessor
+#print axioms fixed_exactRawMarkedSuccessorEffectivity
+#print axioms fixed_fullActualRawMarkedZeroSuccessor
+
+end LogicLineages.PermittedControl.ActualRawMarkedZeroSuccessor

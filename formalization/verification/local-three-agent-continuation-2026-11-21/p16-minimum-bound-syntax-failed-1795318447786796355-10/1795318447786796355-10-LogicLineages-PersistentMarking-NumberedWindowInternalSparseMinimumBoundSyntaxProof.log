@@ -1,0 +1,10 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseMinimumBoundSyntaxProof.lean:75:35: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseMinimumBoundSyntaxProof.lean:109:2: error: 'change' tactic failed, pattern
+  (Formula.relabel ?m.31 (memberGraph (var (Sum.inr 0)) (Term.relabel Sum.inl k))).imp
+      (Formula.relabel ?m.46 (boundedWitness (var (Sum.inr 0)) (Term.relabel Sum.inl k))) =
+    ?m.56
+is not definitionally equal to target
+  Formula.relabel (Sum.elim Sum.inl fun x => Sum.inr i) (invariant k) =
+    memberBound (var (Sum.inr i)) (Term.relabel Sum.inl k)

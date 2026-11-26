@@ -1,0 +1,15 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorMoveProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorMoveProof.lean
+@@ -3 +3 @@
+-import LogicLineages.PermittedControl.ConcreteCountPairReplacementProof
++import LogicLineages.PermittedControl.ThresholdNoteCodeProof
+@@ -21,0 +22,6 @@
++private theorem replacementLiteral (r0 : Nat) (lp mp lq mq : NONote) :
++    replacementCode r0 (intervalPairCodes lp mp lq mq) =
++      (replacementOperand r0 lp mp lq mq).code := by
++  simp only [replacementCode,intervalPairCodes,replacementOperand,PreparedProjection.LowerOperand.code,FieldComparison.longFieldCode]
++  rw [ordinal_sub_note_code,ordinal_add_note_code]
++
+@@ -27 +33 @@
+-      (replacementOperand a.rank p.lam p.eta a.lam a.eta).code := codeExact.2.2.1 _ _ _ _ _
++      (replacementOperand a.rank p.lam p.eta a.lam a.eta).code := replacementLiteral _ _ _ _ _

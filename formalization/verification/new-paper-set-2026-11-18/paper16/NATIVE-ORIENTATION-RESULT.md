@@ -1,0 +1,5 @@
+# Complete original native reduction orientation
+
+Receipt 1794999332881268119-5 first pass, original core caps/seven unchanged pins and inherited source freezes. One exact FullOrientation alias, standard axioms only. Actual Primitive cases include beta,D0,DS,R0,RS with literal native nullary constants/binary application, concrete capture-avoiding beta substitution and internally derived strict confinement. Actual Reduction induction closes these under all reviewed original typed capturing contexts and ordinary typed substitutions using the full checked confined stable pair.
+
+All primitive constituents independently reviewed before this fresh gate. Full closure includes named capturing context coverage and substitution/alpha bridges, exact support, marked-source grafting, original whole simultaneous calls, genuine RS suppliers and native precedence. No arbitrary reduction orientation premise or staged-call associativity. This pays source thm:orient only after independent final; neither well-foundedness, decidability nor exact ranked restriction is claimed.

@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountNumericProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountNumericChecks
+open NumberedWindowInternalDirectCoreNumericTargets (CountFit)
+open NumberedWindowInternalLiteralCount (permutation)
+
+theorem exact_OriginalLiteralCountFit : CountFit permutation :=
+  NumberedWindowInternalLiteralCountNumeric.exactLiteralCountFit
+
+#print axioms exact_OriginalLiteralCountFit
+end LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountNumericChecks

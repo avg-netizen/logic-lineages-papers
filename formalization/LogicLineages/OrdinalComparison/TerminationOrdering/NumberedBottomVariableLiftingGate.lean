@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableStepGate
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableExchangeGate
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableTraceProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableLiftingGate
+
+theorem primary : NumberedBottomVariableLiftingTargets.ActualPrimaryInverse :=
+  NumberedBottomVariablePrimaryProof.actualPrimaryInverse
+
+theorem trace : NumberedBottomVariableLiftingTargets.ActualTraceInverse :=
+  NumberedBottomVariableTraceProof.actualTraceInverse
+
+#print axioms primary
+#print axioms trace
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableLiftingGate

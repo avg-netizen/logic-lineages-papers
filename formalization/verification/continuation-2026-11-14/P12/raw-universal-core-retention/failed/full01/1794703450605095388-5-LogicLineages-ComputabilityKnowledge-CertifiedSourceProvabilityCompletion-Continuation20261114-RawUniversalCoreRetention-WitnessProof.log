@@ -1,0 +1,40 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawUniversalCoreRetention/WitnessProof.lean:38:2: error: Type mismatch: After simplification, term
+  Hilbert.Local.hypothesis ⋯
+ has type
+  Hilbert.Local T (ctx + 2)
+    [body ptag ctag
+        (runCall ot ptag (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) index))
+          (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) fuel))
+          (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) code)))
+        (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) context))
+        (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) formula))
+        (substitute (fun i => Term.var i.succ) (Term.var 0)) (Term.var 0)]
+    (body ptag ctag
+      (runCall ot ptag (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) index))
+        (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) fuel))
+        (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) code)))
+      (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) context))
+      (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) formula))
+      (substitute (fun i => Term.var i.succ) (Term.var 0)) (Term.var 0))
+but is expected to have type
+  Hilbert.Local T (ctx + 2)
+    [body ptag ctag
+        (runCall ot ptag (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) index))
+          (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) fuel))
+          (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) code)))
+        (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) context))
+        (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) formula))
+        (substitute (fun i => Term.var i.succ) (Term.var 0)) (Term.var 0)]
+    (body ptag ctag
+      (runCall ot ptag (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) index))
+        (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) fuel))
+        (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) code)))
+      (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) context))
+      (substitute (fun i => Term.var i.succ) (substitute (fun i => Term.var i.succ) formula)) (Term.var (Fin.succ 0))
+      (Term.var 0))
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawUniversalCoreRetention.WitnessProof.substRun: [propext]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawUniversalCoreRetention/WitnessProof.lean:55:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawUniversalCoreRetention.WitnessProof.witnessRetention: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawUniversalCoreRetention.WitnessProof.witnessRetention' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

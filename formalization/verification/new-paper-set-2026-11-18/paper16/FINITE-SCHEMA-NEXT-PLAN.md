@@ -1,0 +1,9 @@
+# Next concrete stage after equality/prefix/vector foundations
+
+Define Code = List Nat. For a fixed current type σ, LowerCarrier σ is a dependent callback `(ρ : Ty) → typeSize ρ < typeSize σ → Context → List Code`. This is a supporting descriptor interface only; it cannot be promoted to the final hereditary construction. The strict proof argument prevents accidental lookup at the current or a larger type, and proof irrelevance ensures it cannot distinguish alternate witnesses of the same subtype fact.
+
+Schema keys retain actual context plus one of: availability; weak actual Expr; strict actual Expr; application full domains/result plus a complete List Nat input tuple. Application arguments are enumerated by vectors of the actual lower list lengths. Output bound is the actual lower result list length. The proper-type proof comes from the checked exact full-prefix enumeration, including functional residuals. Equal actual observations are deduplicated before keys are generated.
+
+Extensions are executable filtering of distinct actual contexts by a structural Bool slot-extension check, with exact equivalence to Extends and reflexive/transitive proofs. Schema construction itself needs no naturality assumption. Its exact characterization must quantify every context extension, every actual observation, every full-prefix and every typed coordinate tuple, with no missing or extra keys. Distinctness uses extensional Expr equality and actual context equality, not arbitrary occurrence indices. Schema cardinal bounds may be zero for an externally supplied empty lower list; later actual domains must prove nonemptiness from bottom before claiming a valid output carrier.
+
+Freeze this schema and exact characterization separately. The later builder must instantiate LowerCarrier with the canonical smaller-type domain, prove restriction/order/retention and semantic encoding completeness, rather than leave this callback as a lattice oracle in a final theorem.

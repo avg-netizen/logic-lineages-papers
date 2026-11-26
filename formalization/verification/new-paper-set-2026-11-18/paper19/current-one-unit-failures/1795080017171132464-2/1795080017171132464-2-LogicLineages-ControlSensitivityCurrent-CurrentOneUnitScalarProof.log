@@ -1,0 +1,46 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitScalarProof.lean:27:14: error: Tactic `rfl` failed: The left-hand side
+  ↑(ExistentialPlan.inputs ρ ⟨domain✝.arrow codomain✝, (x, j)⟩ + 1)
+is not definitionally equal to the right-hand side
+  commonUnits ρ ⟨domain✝.arrow codomain✝, (x, j)⟩
+
+case arrow
+Γ : List Ty
+ρ : Variable Γ Ty.ground → ℕ
+domain✝ codomain✝ : Ty
+x : Variable Γ (domain✝.arrow codomain✝)
+j : Fin ((domain✝.arrow codomain✝).level + 1)
+⊢ ↑(ExistentialPlan.inputs ρ ⟨domain✝.arrow codomain✝, (x, j)⟩ + 1) = commonUnits ρ ⟨domain✝.arrow codomain✝, (x, j)⟩
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitScalarProof.lean:39:12: error: Tactic `rfl` failed: The left-hand side
+  denoteWith f (commonUnits ρ) (ordinalHeadClosureComponent ⟨σ, (Variable.here, j)⟩)
+is not definitionally equal to the right-hand side
+  ↑(headUnitWires ρ ⟨σ, (Variable.here, j)⟩ + 1)
+
+case e_ρ.here
+f : ℕ → ℕ
+Γ : List Ty
+σ : Ty
+ρ : Variable Γ Ty.ground → ℕ
+e : OrdinalExpression (σ :: Γ)
+j : Fin (σ.level + 1)
+⊢ denoteWith f (commonUnits ρ) (ordinalHeadClosureComponent ⟨σ, (Variable.here, j)⟩) =
+    ↑(headUnitWires ρ ⟨σ, (Variable.here, j)⟩ + 1)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitScalarProof.lean:40:27: error: Tactic `rfl` failed: The left-hand side
+  denoteWith f (commonUnits ρ) (ordinalHeadClosureComponent ⟨domain✝.arrow codomain✝, (x.there, j)⟩)
+is not definitionally equal to the right-hand side
+  ↑(headUnitWires ρ ⟨domain✝.arrow codomain✝, (x.there, j)⟩ + 1)
+
+case e_ρ.there.arrow
+f : ℕ → ℕ
+Γ : List Ty
+σ : Ty
+ρ : Variable Γ Ty.ground → ℕ
+e : OrdinalExpression (σ :: Γ)
+domain✝ codomain✝ : Ty
+j : Fin ((domain✝.arrow codomain✝).level + 1)
+x : Variable Γ (domain✝.arrow codomain✝)
+⊢ denoteWith f (commonUnits ρ) (ordinalHeadClosureComponent ⟨domain✝.arrow codomain✝, (x.there, j)⟩) =
+    ↑(headUnitWires ρ ⟨domain✝.arrow codomain✝, (x.there, j)⟩ + 1)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitScalarProof.lean:145:8: error(lean.unknownIdentifier): Unknown identifier `hdata`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitScalarProof.lean:149:8: error(lean.unknownIdentifier): Unknown identifier `hdata`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitScalarProof.lean:154:57: error(lean.unknownIdentifier): Unknown identifier `hdata`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentOneUnitScalarProof.lean:162:60: error(lean.unknownIdentifier): Unknown identifier `hdata`

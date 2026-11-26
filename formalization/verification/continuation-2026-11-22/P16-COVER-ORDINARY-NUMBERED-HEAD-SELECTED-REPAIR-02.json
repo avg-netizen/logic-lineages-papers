@@ -1,0 +1,69 @@
+{
+  "status": "theorem-local bounded heartbeat allowance; exact native retry pending",
+  "immutable_previous_verified_remote": "975150c53018c180ba584d8be8946742a2764cf7",
+  "previous_source_local": "a65d3595e169d28296a395ff9a44b2de07b8236d",
+  "previous_verified_tree": "e266d7c9c8939d6372fdcd4d9d2c9260206340c5",
+  "receipt": {
+    "path": "formalization/build-reports/1795363456020727524-109.json",
+    "sha256": "e0c43249f35d3d277965bcacb4606f83aa02faf2ea65a2a2c74a2e3f1596f8ab"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795363456020727524-109-LogicLineages-PersistentMarking-NumberedWindowInternalCoverHeadWindowSelectedProof.log",
+    "sha256": "06614a114a6ba9b45872a8755016ef5a68cde581392ceac553573346ba7123f1"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-ordinary-numbered-head-selected-repair01-diagnostic.txt",
+    "sha256": "06614a114a6ba9b45872a8755016ef5a68cde581392ceac553573346ba7123f1"
+  },
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-COVER-ORDINARY-NUMBERED-HEAD-SELECTED-REPAIR-02.patch",
+    "sha256": "1b3bcccc498df0d38875a84dcaad558067316a8da0c0e96fbffb3c33b58adbc0"
+  },
+  "archived_failed_source": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverHeadWindowSelectedProof-02.lean",
+    "sha256": "42d4751bac04544d24c7bbaf41bb2a174b33da4eaec417739041877e7274127e"
+  },
+  "repaired_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverHeadWindowSelectedProof.lean",
+    "sha256": "f72d0e323b9fe1bf31c86655e8cba2ba4b02581019cf0d0c88586903b8e29dc2"
+  },
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverHeadWindowTargets.lean",
+      "sha256": "21ba512f8c1978fe74919ed733a92017099b31aae27712ae7470550ebef1a59c"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverHeadWindowNumericProof.lean",
+      "sha256": "5a6a017baa128b84158fbfc96db89ffa0ff76748b273db40bd785ae7103cc23f"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverHeadWindowShapeProof.lean",
+      "sha256": "bba889f70fca7c83f5e6bac357ce0d7042e3c3caa73e5fe539a869711b683150"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverHeadWindowBaseOpenProof.lean",
+      "sha256": "66d7eda919a0364b785f94cbd228d5206f73a93ea7510539325656f29805cb67"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverHeadDispatchTargets.lean",
+      "sha256": "284f834ea9b04a3ebc86f17b140d658ba3feb4e41c84f5a15b2e93b0a4e719ab"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverHeadDispatchCalibrationProof.lean",
+      "sha256": "6b07e82c86608fd8a2d4e226721354a7f6520772c6c681a462b6c515586cb8d9"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverHeadDispatchProof.lean",
+      "sha256": "15f2bc937d8cd0053dffe22fffafd7e6afd27017e572c4bff0c57c19e35fd5d2"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-COVER-ORDINARY-NUMBERED-ACTUAL-HEAD-SOURCE-MAP.md",
+      "sha256": "4183b9a2ced5f8e5d5425c54e619855a221f01e26e043f4b8124f52ee90b0d5a"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-COVER-ORDINARY-NUMBERED-HEAD-SELECTED-REPAIR-01.json",
+      "sha256": "63c83a653d4a36bdbc146a44fd8e1a4b11589d3f59444bf5a0a0a02b839463bc"
+    }
+  ],
+  "diagnosis": "After the exact abstraction repair, only withTable and fromWindow exhausted default deterministic whnf 200000; the downstream unknown fromWindow is a consequence. Add explicitly bounded maxHeartbeats 650000 to those two private theorem declarations only. Exact proof bodies and proposition/program bytes, public theorem option, global profile and external caps unchanged. The failed self-referential audit line is not acceptance."
+}

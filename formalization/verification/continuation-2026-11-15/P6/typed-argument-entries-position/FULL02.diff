@@ -1,0 +1,11 @@
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/TypedArgumentEntriesPosition/ValueProof.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/TypedArgumentEntriesPosition/ValueProof.lean
+@@ -49,7 +49,7 @@
+   obtain ⟨hb⟩ := hb
+   obtain ⟨hn⟩ := InternalLeastNumberProof.actualNothingBelowZero body alpha index
+   exact ⟨Derivation.explosion (Derivation.implicationElimination
+-    (InternalRecursionClosureLogicProof.weakenClosed hn Delta) (orderRight index hz hb))⟩
++    (InternalPositiveUnfoldingSupportProof.weakenClosed hn Delta) (orderRight index hz hb))⟩
+ 
+ theorem headPosition (H : Program 1) (gamma entry annotation child expected headEntry headAnnotation head requested : OTerm alpha)
+     (he : Nonempty (Derivation body Delta (eqn entry headEntry)))

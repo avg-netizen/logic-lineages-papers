@@ -1,0 +1,25 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SixSol20261112.SourceDecisionProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SixSol20261112.SourceDecisionStatementChecks
+
+theorem literalTermEmbedding : SourceDecisionTargets.LiteralTermEmbedding := SourceDecisionProof.literalTermEmbedding
+theorem literalBinderCompiler : SourceDecisionTargets.LiteralBinderCompiler := SourceDecisionProof.literalBinderCompiler
+theorem literalSourceCompiler : SourceDecisionTargets.LiteralSourceCompiler := SourceDecisionProof.literalSourceCompiler
+theorem actualCompilerPrograms : SourceDecisionTargets.ActualCompilerPrograms := SourceDecisionProof.actualCompilerPrograms
+theorem groundTermCalibration : SourceDecisionTargets.GroundTermCalibration := SourceDecisionProof.groundTermCalibration
+theorem groundMatrixCalibration : SourceDecisionTargets.GroundMatrixCalibration := SourceDecisionProof.groundMatrixCalibration
+theorem actualEvaluationPrograms : SourceDecisionTargets.ActualEvaluationPrograms := SourceDecisionProof.actualEvaluationPrograms
+theorem effectiveOriginalSourceElimination : SourceDecisionTargets.EffectiveOriginalSourceElimination := SourceDecisionProof.effectiveOriginalSourceElimination
+theorem fullSourceDecision : SourceDecisionTargets.FullSourceDecision := SourceDecisionProof.fullSourceDecision
+
+#print axioms literalTermEmbedding
+#print axioms literalBinderCompiler
+#print axioms literalSourceCompiler
+#print axioms actualCompilerPrograms
+#print axioms groundTermCalibration
+#print axioms groundMatrixCalibration
+#print axioms actualEvaluationPrograms
+#print axioms effectiveOriginalSourceElimination
+#print axioms fullSourceDecision
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SixSol20261112.SourceDecisionStatementChecks

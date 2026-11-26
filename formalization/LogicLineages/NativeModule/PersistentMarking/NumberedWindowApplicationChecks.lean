@@ -1,0 +1,29 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowApplicationArgsProof
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowNumberedAppendProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowApplicationChecks
+open NumberedWindowApplicationTargets
+
+theorem exact_RealizedCallArgs : RealizedCallArgs := NumberedWindowApplicationArgsProof.realized
+theorem exact_AppInWindow : AppInWindow := NumberedWindowApplicationDomainProof.app
+theorem exact_ApplicationsInWindow : ApplicationsInWindow := NumberedWindowApplicationPathProof.applicationsWindow
+theorem exact_LiftAuxFunction : LiftAuxFunction := NumberedWindowApplicationPathProof.liftOne
+theorem exact_LiftApplications : LiftApplications := NumberedWindowApplicationPathProof.lift
+theorem exact_OpenNumberedInWindow : OpenNumberedInWindow := NumberedWindowNumberedDomainProof.openNumberedWindow
+theorem exact_AppendArgumentInWindow : AppendArgumentInWindow := NumberedWindowNumberedDomainProof.appendArg
+theorem exact_WholeNumberedAppend : WholeNumberedAppend := NumberedWindowNumberedAppendProof.wholeNumbered
+
+#print axioms exact_RealizedCallArgs
+#print axioms exact_AppInWindow
+#print axioms exact_ApplicationsInWindow
+#print axioms exact_LiftAuxFunction
+#print axioms exact_LiftApplications
+#print axioms exact_OpenNumberedInWindow
+#print axioms exact_AppendArgumentInWindow
+#print axioms exact_WholeNumberedAppend
+
+end LogicLineages.PersistentMarking.NumberedWindowApplicationChecks

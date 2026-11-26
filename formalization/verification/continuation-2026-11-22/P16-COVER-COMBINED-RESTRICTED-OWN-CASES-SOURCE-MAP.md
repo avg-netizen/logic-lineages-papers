@@ -1,0 +1,7 @@
+# P16 actual single selected combined restricted own-case package
+
+Frozen (awaiting serial native). All three exact aliases use literally `combinedPrograms`: same deepest D = restrictedListBase(mixedLeafHead(s), lambdaFragmentBase(B)), same selected contextual W, same recursive V and measured cover, and same argument memo `argumentMeasure (namedSharedMeasure M0)`. The ordinary and numbered mixed-list proofs specialize the existing restricted-list callback parameter to `lambdaFragmentBase B` definitionally; no equality or transport to a different physical window is invoked. The lambda proof derives actual G at the immediate physical body from the precise same combined parent window, then invokes the already checked guarded own-scratch lemma at the exact same D and original held row/scratch. The actual same-W earlier-own formula in ParentRow remains explicit; no supplied independent G, externally installed earlier proof, cross-window replacement, or proof of whole own induction. No global calibration to previous W, protected/fresh ports, or coverage of all raw terms. Gate exact root after actual guard cut; exact named audits for ordinary, numbered, lambda. No Hydra/Linarith in static closure.
+
+| File (PersistentMarking) | SHA-256 | Static closure including root |
+|---|---|---:|
+| `NumberedWindowInternalCoverCombinedRestrictedOwnProof.lean` | `33b79f6ff1735fa3676033ae640a06afbf5dd03f4c7151f36ea654812c4bd932` | 1742 |

@@ -1,0 +1,13 @@
+# Implemented raw-rank proof route (verification pending)
+
+The exact frozen endpoint keeps both Code guards. The internal source-raw induction uses the existing original ExchangeGuardProof to derive them from actual exchange acceptance as necessary; it therefore proves a slightly stronger internal helper without deleting any public hypothesis. No native evaluation or typed semantic rank theorem is used.
+
+The structural module chain is adapted from OriginalExchangeBoundsPreservation under a NEW namespace only. Its old theorem/file stems may retain the word Bounds for interface continuity, but every measure graph is now the actual OriginalRawSyntaxTransport.variableRankRaw. The original exchange program, original recursion equation, tag parser, accepted-shape decomposition, exact child node pairing and original numeric child-smaller proof remain unchanged. Structural source map records these adaptations.
+
+UnaryBoundsCongruenceProof is freshly proved from rankLambdaBackward/rankOrdinaryBackward and graph functionality. BinaryBoundsCongruenceProof and NumberedBoundsCongruenceProof are freshly proved from exact rank constructor forward equations, rankSumForward and addition functionality. They no longer invoke any bounds recombination theorem as a rank equation. Three scalar rank query programs use the actual original rank program.
+
+The head-move route retains the exact OriginalHeadMove/OriginalArgumentPermutation acceptances. OriginalPermutationRankProof internally exposes actual successful entry extraction, queries both weighted folds, invokes the separately proved EntryProof.actualRankCode bridge, and gets equal fold values from OriginalEntryPermutationFoldProof.actualFold at rankWeight. RawRankCodeProof.recover turns each actual rank and fold result into an original pair(rank,0) graph, so equal pair outputs imply equal first coordinates by original unpair functionality. Rank is NEVER fed as an unencoded scalar to the sum/max weighted fold.
+
+EntryProof's honest strong raw induction follows original argument-entry extraction and both original Code guards on child terms/spines. The empty weighted fold returns0, justified as actual pair(0,0); cons combines ranks by actual original rankCons/rankSum equations and bounds merge with max(0,0)=0. The rankWeight program composes rawRankCode with original pair.right. No successful-child output, weighted-sum identity or semantic permutation premise is added to the final caller.
+
+No target edits, original AST changes, rank=code/size assumption, ArrowClosed strengthening, native-calibration bridge or new axioms. Final native/evidence/independent review remain required. This proves only one raw-exchange rank supplier, not the later primary/minimum/postguard results.

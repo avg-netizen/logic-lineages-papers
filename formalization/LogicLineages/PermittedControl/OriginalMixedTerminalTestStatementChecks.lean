@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PermittedControl.OriginalMixedTerminalTestTargets
+import LogicLineages.PermittedControl.OriginalMixedTerminalTestReadProof
+import LogicLineages.PermittedControl.OriginalMixedTerminalTestProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalMixedTerminalTestRead : OriginalMixedTerminalTest.ExactTerminalTestRead :=
+  OriginalMixedTerminalTest.exactTerminalTestRead
+
+theorem fixed_exactOriginalMixedProtectedTestLift : OriginalMixedTerminalTest.ExactProtectedTestLift :=
+  OriginalMixedTerminalTest.exactProtectedTestLift
+
+theorem fixed_exactOriginalMixedObservedTerminal : OriginalMixedTerminalTest.ExactObservedMixedTerminal :=
+  OriginalMixedTerminalTest.exactObservedMixedTerminal
+
+theorem fixed_fullOriginalMixedTerminalTest : OriginalMixedTerminalTest.FullOriginalMixedTerminalTest :=
+  ⟨fixed_exactOriginalMixedTerminalTestRead,fixed_exactOriginalMixedProtectedTestLift,
+    fixed_exactOriginalMixedObservedTerminal⟩
+
+#print axioms fixed_exactOriginalMixedTerminalTestRead
+#print axioms fixed_exactOriginalMixedProtectedTestLift
+#print axioms fixed_exactOriginalMixedObservedTerminal
+#print axioms fixed_fullOriginalMixedTerminalTest
+
+end LogicLineages.PermittedControl.StatementChecks

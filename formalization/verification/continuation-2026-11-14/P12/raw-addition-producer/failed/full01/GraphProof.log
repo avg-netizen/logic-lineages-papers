@@ -1,0 +1,41 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAdditionProducer/GraphProof.lean:23:70: error: Application type mismatch: The argument
+  old
+has type
+  Program 1
+but is expected to have type
+  List.Vector (Term ?m.153) ?m.152
+in the application
+  RawNewestMultiplicationIteration.CombinatorProof.next p old
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAdditionProducer/GraphProof.lean:10:49: error: unsolved goals
+n : ℕ
+p : Program n
+old a : Program 1
+x : Program 3
+I : Installation p old a x
+ctx : ℕ
+t u m k first second : Term ctx
+args : List.Vector (Term ctx) (Nat.succ 0).succ.succ.succ.succ.succ := t ::ᵥ u ::ᵥ m ::ᵥ k ::ᵥ first ::ᵥ second ::ᵥ nil
+J : RawMulNewestAdditionIteration.Installation p old a x := I.toEvaluator
+K : RawNewestMultiplicationIteration.Installation p old a x := I.toCurrent
+ht : Computes p [] (Program.projection 0) args (args.get 0)
+hu : Computes p [] (Program.projection 1) args (args.get 1)
+hm : Computes p [] (Program.projection 2) args (args.get 2)
+hk : Computes p [] (Program.projection 3) args (args.get 3)
+hf : Computes p [] (Program.projection 4) args (args.get 4)
+hs : Computes p [] (Program.projection 5) args (args.get 5)
+hnm :
+  Computes p [] (applyOne LiteralNumeralPrefix.numeralCode (Program.projection 2)) args
+    (LiteralNumeralPrefix.numeralCall K.numeralTag (args.get 2))
+hnk :
+  Computes p [] (applyOne LiteralNumeralPrefix.numeralCode (Program.projection 3)) args
+    (LiteralNumeralPrefix.numeralCall K.numeralTag (args.get 3))
+⊢ Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      (Formula.equal (producerCall I.producerTag t u m k first second)
+        (RawMulNewestAdditionEvaluation.certificate I.mpTag I.addLeftLineTag I.addRightLineTag I.equalityLineTag
+          I.reflexivityTag I.consTag I.appendTag I.numeralTag I.iteratorTag I.rightTag t u m k first second)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAdditionProducer/GraphProof.lean:35:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawAdditionProducer.GraphProof.internalGraph: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawAdditionProducer.GraphProof.internalGraph' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

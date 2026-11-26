@@ -1,0 +1,54 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageEffectiveProof.lean:116:6: error: Tactic `subst` failed: did not find equation for eliminating 'b'
+
+case pos.inr
+b : Task
+Γ Δ : List ℕ
+n : ℕ
+h5 : n % 8 = 5
+hp : 0 < n
+hd : n / 8 < n
+e : b = (Γ, Δ, (Nat.unpair (n / 8)).2) ∨ b ∈ []
+⊢ measure b < measure (Γ, Δ, n)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageEffectiveProof.lean:122:6: error: Tactic `subst` failed: did not find equation for eliminating 'b'
+
+case pos
+b : Task
+Γ Δ : List ℕ
+n : ℕ
+h5 : ¬n % 8 = 5
+h6 : n % 8 = 6
+hp : 0 < n
+hd : n / 8 < n
+hb :
+  b ∈
+    if 6 = 5 then [(Γ, Δ, (Nat.unpair (n / 8)).1), (Γ, Δ, (Nat.unpair (n / 8)).2)]
+    else [(Γ, (Nat.unpair (n / 8)).1 :: Δ, (Nat.unpair (n / 8)).2)]
+⊢ measure b < measure (Γ, Δ, n)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageEffectiveProof.lean:112:40: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵5̵,̵i̵f̵_̵t̵r̵u̵e̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵]̵[̲h̲5̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲,̲ ̲L̲i̲s̲t̲.̲m̲e̲m̲_̲c̲o̲n̲s̲]̲ at hb
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageEffectiveProof.lean:121:17: warning: This simp argument is unused:
+  h5
+
+Hint: Omit it from the simp argument list.
+  simp only [h5̵,̵h̵6, ̲if_false, ̲if_true, ̲List.mem_singleton] at hb
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageEffectiveProof.lean:121:23: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵5̵,̵h̵6̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵i̵f̵_̵t̵r̵u̵e̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵]̵[̲h̲5̲,̲ ̲h̲6̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲,̲ ̲L̲i̲s̲t̲.̲m̲e̲m̲_̲s̲i̲n̲g̲l̲e̲t̲o̲n̲]̲ at hb
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageEffectiveProof.lean:121:40: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵5̵,̵h̵6̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵i̵f̵_̵t̵r̵u̵e̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵]̵[̲h̲5̲,̲ ̲h̲6̲,̲ ̲i̲f̲_̲f̲a̲l̲s̲e̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲]̲ at hb
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,80 @@
+{
+  "state": "Independently reviewed register adoption; focused final-gate recheck passed; publication pending",
+  "prepared_at_utc": "2026-11-09T15:13:03.237739+00:00",
+  "remote_source_checkpoint": "88abe767854d6099c4eb4c4099a5377a79c52a86",
+  "source_statement": "08-multivariate-collapse-comparison:thm:existential",
+  "source_file": "08-multivariate-collapse-comparison/paper.tex",
+  "source_lines": [
+    708,
+    752
+  ],
+  "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+  "accepted_declaration": "LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.MachineStatementChecks.full_closed_existential_word_arithmetic",
+  "frozen_comparator": {
+    "file": "LogicLineages/OrdinalComparison/ClosedWordDecisionCompletion/MachineTargets.lean",
+    "sha256": "ac325242cf3106c64c9b3eaca54d08fb8f3fc7fc148c95ba0958def4958e4827",
+    "type": "LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.MachineTargets.FullClosedExistentialWordArithmetic"
+  },
+  "native_verification": {
+    "file": "build-reports/1794236143261243833-6.json",
+    "sha256": "7e0f98c57afa37a7418e6a789d8016e9fba9855fb86279616e2c80bd87cd24f1",
+    "availability": "Retained locally; portable native receipts and logs are held for separate publication."
+  },
+  "numbered_source_promotions": 1,
+  "counts_before": {
+    "checked": 170,
+    "pending": 17,
+    "existing-calculator-package": 2
+  },
+  "counts_after": {
+    "checked": 171,
+    "pending": 16,
+    "existing-calculator-package": 2
+  },
+  "paper08_counts_before": {
+    "checked": 13,
+    "pending": 5
+  },
+  "paper08_counts_after": {
+    "checked": 14,
+    "pending": 4
+  },
+  "source_review": "The original closed existential finite-degree Boolean word theorem is checked. The concrete Machine.solve is jointly computable in runtime degree and formula code and decides the literal existential valuation with every original global word domain, including occurrences under negation and unused disjuncts. Signed/composed words, repeated raw names and zero-coefficient occurrences are preserved. Finite-prefix substitution precedes tail rewriting; inherited introduction floors preserve generated-word domains, and actual distinct raw-name count strictly decreases in every branch. No free-parameter or alternating nonlinear quantifier elimination, complexity bound, separate LevelTwo consumer, full-root build or remote CI result is claimed.",
+  "exact_final_aliases": 16,
+  "owned_named_declarations_with_standard_axiom_audits": 125,
+  "current_final_closure_sources_with_native_success": 679,
+  "current_sources_including_separate_support_checks": 682,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "root_import": "LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.MachineStatementChecks",
+  "root_import_reason": "scripts/accepted_gates.py selects accepted component gates from LogicLineages.lean; previous whole-source adoptions likewise select their accepted gate in the public root.",
+  "root_import_validation": "Static single-import inclusion verified. Focused BranchStatementChecks and MachineStatementChecks recheck passed; LogicLineages.lean was not compiled. No full-root or remote-CI pass is claimed.",
+  "evidence_publication": "Native receipts, logs, portable bundles and mapping proposals remain local and are excluded from this source/metadata publication allowlist.",
+  "publication_files": [
+    "formalization/TARGETS.json",
+    "formalization/LogicLineages.lean",
+    "formalization/README.md",
+    "formalization/audits/CLOSED-EXISTENTIAL-COMPLETION-2026-11-09.json"
+  ],
+  "unrelated_source_rows_unchanged": true,
+  "historical_register_records_preserved": true,
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "focused_native_recheck": {
+    "status": "PASS",
+    "verified_at_utc": "2026-11-09T15:23:33.179487+00:00",
+    "receipt": "build-reports/1794237762559564642-5.json",
+    "receipt_sha256": "f836c2fd846c375074acb6dd6854ec9de840f5ec306d82a6bb248548f5e87c2a",
+    "requested_exact_gates": [
+      "LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.BranchStatementChecks",
+      "LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.MachineStatementChecks"
+    ],
+    "source_pins_matched": 679,
+    "standard_axiom_aliases": 16,
+    "root_compiled": false,
+    "availability": "Native receipt and logs retained locally; excluded from the publication allowlist."
+  }
+}

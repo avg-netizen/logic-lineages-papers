@@ -1,0 +1,9 @@
+# Selected aggregation conceptual review
+
+Approved direction for exact supporting freeze. The domain mismatch is material: P19 positive-natural component valuations cannot be reused as a proof about P17 arbitrary functional ordinal coordinates. Only a numeric collision result with its actual SourceGrowth hypothesis discharged by selected control is a legitimate supplier. Every literal source output must instead be calibrated at the actual selected admissible valuation using genuine successful ground assignments.
+
+Keep the six-eraser redetection at each leaf and the exact aggregate fold, not a simpler extensionally plausible fold. The empty family evaluates to scalar one on both sides. Require all leaf/source and aggregate outputs successful and finite before groundValue comparisons, preventing default-value escape. The conjunction must retain nonnegative order, equality iff every pair equality, and the unequal gap at least two, all policies/contexts and arbitrary actual admissible substitutions. The induction must pay actual eraser monotonicity/gap, not assume a fold injectivity oracle.
+
+For weak conversion, independently derive literal K/I assignment values and actual successful application scalars. The inequality reduces to 5+R0<=3+L0, hence R0+2<=L0, only by actual strict monotonicity of the selected coefficient-one collapse. State the direction of the weak comparison explicitly in the frozen target. The aggregate specialization should keep equality and empty-family cases: absence of simultaneous equality is false for the empty family, as is the gap inequality for its equal scalar-one outputs.
+
+No source code/level calibration or full hardness reduction is paid by semantic aggregation alone. Freeze the complete expanded supporting comparator before proofs/native; no fixed-G semantics or finite-coordinate restriction.

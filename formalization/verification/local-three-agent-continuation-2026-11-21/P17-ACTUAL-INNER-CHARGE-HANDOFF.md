@@ -1,0 +1,9 @@
+# Paper 17 actual zero-class handoff
+
+The final packet of this round passed in gate `1795333735433454375-9` with 305 local modules and three exact standard-axiom aliases. It verifies the original normalized row outside the selected keys and the signed constant installed by the ordered count dispositions. The corrected frozen target has SHA-256 `bb73800522624f919e83e2058bf5ef41282f84f166ef8db03aaefb088cc0b465`. All three failed candidate editions are retained with their exact source and receipts. [Author manifest](PAPER17-ACTUAL-ZERO-CLASS-OUTSIDE-AND-SHIFT-AUTHOR-MANIFEST.json) · [Source map](PAPER17-ACTUAL-ZERO-CLASS-OUTSIDE-AND-SHIFT-SOURCE-MAP.md)
+
+The original ordered count disposition ledger passed in gate `1795333256516676555-9` with 344 local modules and three exact standard-axiom aliases. It retains the original count keys through the identity, short, same-rank and higher cases. Distinct original targets can give the same lowered target, so the proof uses the original occurrence order. [Author manifest](PAPER17-ACTUAL-COUNT-ORIGIN-DISPOSITIONS-AUTHOR-MANIFEST.json) · [Native evidence](P17-COUNT-ORIGIN-DISPOSITIONS-LOCAL-EVIDENCE.json)
+
+The exact original ranked support and leading coefficient were verified separately in gate `1795332881973994210-9`. The signed value of the original full row after zero-class replacement and least-rank transfer was verified in gate `1795331426447039939-9`. [Actual ranked zero class](PAPER17-ACTUAL-RANKED-ZERO-CLASS-AUTHOR-MANIFEST.json) · [Recombined row](PAPER17-ACTUAL-ZERO-CLASS-RECOMBINED-ROW-AUTHOR-MANIFEST.json)
+
+The grouped moved count column, the actual `ZeroClassReplacement` witness, and the strict charge decrease for the concrete row remain open. The printed normalization tree and dimension induction remain open. No source for the grouped-count successor was started before the pause.

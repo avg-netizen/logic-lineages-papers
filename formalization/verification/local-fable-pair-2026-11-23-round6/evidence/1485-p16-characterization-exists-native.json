@@ -1,0 +1,41 @@
+{
+  "status": "checked",
+  "base_commit": "8b2613c8c3b2e3aa31a2d32ff8e09d3a88a8af3e",
+  "base_note": "Sources are new files on top of this commit at gate time; root commits them afterwards.",
+  "native_receipt": "1795413122950914125-3313037",
+  "native_receipt_sha256": "165c39fd872fdaec99cf5e67e1088d9a318632107312fa30776b4bbc9e3e983f",
+  "exact_gate": "LogicLineages.PersistentMarking.ConditionalCollapseExistenceProof",
+  "gate_seconds": 1.275,
+  "gate_cpu_seconds": 1.18,
+  "peak_process_tree_rss_kib": 860340,
+  "named_axiom_output": {
+    "LogicLineages.PersistentMarking.ConditionalCollapseExistence.solvableIffSolvableBelow": [
+      "propext"
+    ],
+    "LogicLineages.PersistentMarking.ConditionalCollapseExistence.characterizationExistsBelow": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.ConditionalCollapseExistence.characterizationExists": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "verification": "One exact bounded Lean gate with focused source correspondence, no duplicate artifact replay.",
+  "profile": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "source_pins": {
+    "formalization/LogicLineages/PersistentMarking/ConditionalCollapseExistenceTargets.lean": "59536f74302447216d0e1f06cbcb47a43759ed1a967316113952559ddfb4520e",
+    "formalization/LogicLineages/PersistentMarking/ConditionalCollapseExistenceProof.lean": "42d2243c5f0603b4f3908056471a5cd35935b2ae9a8c0e423906ed79afc8eeaa",
+    "formalization/verification/local-fable-pair-2026-11-23-round6/fable2/COLLAPSE-EXISTENCE-SOURCE-MAP.md": "9a5e5904ee15b10337ac6660427e62c8c03465d682c23f12fa941c883a421ab2"
+  }
+}

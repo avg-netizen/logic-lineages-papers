@@ -1,0 +1,3 @@
+Verified `OriginalMixedPreparedStatementChecks.exactRetention`, receipt 1794500733970472375-5 (retry 312).
+
+One literal prepared tuple is transparent source selection, then direct-bottom refinement, then mixed normalization. Its complete all-input calibration and step-output equality coexist with the entire ActiveKernelMinimum package instantiated at that prepared tuple, and the verified restricted trace law at the literal prepared.oldStep. No theorem equates that checker with a later selected/final checker. The prepared trace remains restricted to recognized lambda/application-function/direct-bottom paths; no source label is declared complete.

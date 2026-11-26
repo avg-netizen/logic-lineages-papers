@@ -1,0 +1,22 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterReportProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterReportProof.lean
+@@ -18,7 +18,7 @@
+ open NumberedWindowInternalSparsePathEnvelope (applyUnary)
+ open NumberedWindowInternalFreshProbeSyntaxProof (unaryRename)
+ 
+-def rawPrograms (bound : Program 1) : Fin 6 → Program 1 :=
++@[expose] def rawPrograms (bound : Program 1) : Fin 6 → Program 1 :=
+   ![rawContext,rawResult,rawDomain,rawCodomain,rawLeast,applyUnary bound rawLeast]
+ 
+ private def reporter (bound : Program 1) : Program 1 :=
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterObjectChecks.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterObjectChecks.lean
+@@ -45,7 +45,7 @@
+     (hn : Nonempty (Derivation body Γ (programGraph (applyUnary bound rawLeast) n ![q]))) :
+     Nonempty (Derivation body Γ (equal u (packedFreeTerm c d n))) := by
+   let p := selected scalarProg bound
+-  let children := Fin.cons p.context (Fin.cons p.domain (Fin.cons p.name Fin.elim0))
++  let children : Fin 3 → Program 1 := Fin.cons p.context (Fin.cons p.domain (Fin.cons p.name Fin.elim0))
+   have c0 := gatePreserves scalarProg rawContext q c guard hc
+   have c1 := gatePreserves scalarProg rawDomain q d guard hd
+   have c2 := gatePreserves scalarProg (applyUnary bound rawLeast) q n guard hn

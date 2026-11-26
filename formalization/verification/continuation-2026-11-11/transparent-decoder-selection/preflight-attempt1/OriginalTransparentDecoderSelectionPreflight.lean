@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentDecoderSelectionTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion
+open OriginalTransparentDecoderSelection OriginalTransparentDecoderSelectionTargets
+#check transparentData
+#check transparentInputs
+#check PreservedFields
+#check LiteralFields
+#check Calibration
+#check Retained
+#check SourceReconstruction
+#check TypedStep
+#check Properties
+#check (ActualOriginalTransparentDecoderLiteralFields : Prop)
+#check (ActualOriginalTransparentDecoderCalibration : Prop)
+#check (ActualOriginalTransparentDecoderInheritedProperties : Prop)
+#check (ActualOriginalTransparentDecoderSelection : Prop)

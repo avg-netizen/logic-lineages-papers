@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PermittedControl.PreparedStripReconstructionTargets
+import LogicLineages.PermittedControl.PreparedStripReconstructionCodeProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_preparedStripCodeExact : PreparedStripReconstruction.CodeExact :=
+  PreparedStripReconstruction.codeExact
+
+#print axioms fixed_preparedStripCodeExact
+
+end LogicLineages.PermittedControl.StatementChecks

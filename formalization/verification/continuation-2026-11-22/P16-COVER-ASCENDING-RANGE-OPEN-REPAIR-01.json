@@ -1,0 +1,41 @@
+{
+  "status": "proof-only exact syntax exposure; fresh native and axiom gate pending",
+  "failed_receipt": "1795343900769957351-8",
+  "failed_receipt_sha256": "5a921ade9e9f4207a0b158adfffe49410e480bbd782edfc9a41c8454da780aa9",
+  "immutable_original_commit": "b64596316ce0ba0032f38ea5afb044a91cd04a92",
+  "failed_diagnostic": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-ascending-range-open-initial-diagnostic.txt": "52920ff7bfae3f34b4f0082384319717f402eda128d3c82fb16512fe96ec3d92"
+  },
+  "failed_errors": [
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAscendingRangeOpenDataProof.lean:129:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern"
+  ],
+  "diagnosis": "Lean did not match generic unaryRename below the rangeReport alias. Expose the definitionally identical unary form with change and keep the identical renaming lemma. Also fix the one textually identical use in the downstream range proof, which this gate did not reach. No imports, physical programs, targets, or proof steps changed otherwise.",
+  "changed_sources": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAscendingRangeOpenDataProof.lean": {
+      "old_sha256": "36663c51d1ef1a959e2f51ca5c5e40fab4d421749483745eff184ee7889dde73",
+      "new_sha256": "52e86af233eab61348c9aacc79e188c03c0bd7ecbe5965af8cee6961c1af314e",
+      "compiler_reached": true
+    },
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAscendingRangeOpenProof.lean": {
+      "old_sha256": "d0914efe90d1734a33343169a90bc8f1abd8a5de4e477100da7079c631c1fba4",
+      "new_sha256": "4698f5174b514a41ab01fbe89a68162787f324a17cfa8c698e5de7b7d91bec0d",
+      "compiler_reached": false
+    }
+  },
+  "failed_source_archive": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverAscendingRangeOpenDataProof-01.lean": "36663c51d1ef1a959e2f51ca5c5e40fab4d421749483745eff184ee7889dde73",
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverAscendingRangeOpenProof-01.lean": "d0914efe90d1734a33343169a90bc8f1abd8a5de4e477100da7079c631c1fba4"
+  },
+  "zero_context_patch": {
+    "formalization/verification/continuation-2026-11-22/P16-COVER-ASCENDING-RANGE-OPEN-REPAIR-01.patch": "5f5cce13940402a2bce82d3fbc0ae499260245913a105efa8a2d3bd0b54fcd88"
+  },
+  "inverse_exact_failed_bytes_verified": true,
+  "unchanged_source_pins": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAscendingRangeTargets.lean": "e20cbf0f3c053227232fc63b4a9862739302af1e9855a3722035ca790fd0b923",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAscendingRangeSyntaxProof.lean": "26d2669aca05511ac2d4d6d43a5edb857ac4f507caaed1733224b21dab901445",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedLeavesOpenDataProof.lean": "49ea80174e327f2e606232709ad7a5401c7b43729739d03688f4a38f510c6a6b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedLeavesOpenProof.lean": "d4d866ff4885b3c35754102c32f0db14b785ceb35756517fb669ae7867918659",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedLeavesTargets.lean": "9c9e518d8e42cd435b5a4976f415fc07d983aa9a35d4fef4a33639829e7dc8e7",
+    "formalization/verification/continuation-2026-11-22/P16-COVER-ASCENDING-RANGE-NAMED-LEAVES-SOURCE-MAP.md": "b2abb3059bed5b51c8e96f257e7f5265cc67820b0a2249e585cab2291e8daa82"
+  }
+}

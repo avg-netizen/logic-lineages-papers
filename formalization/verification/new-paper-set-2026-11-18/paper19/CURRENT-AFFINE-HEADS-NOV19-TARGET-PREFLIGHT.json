@@ -1,0 +1,55 @@
+{
+  "status": "exact current source comparator target-only preflight PASS; proof not yet natively attempted or accepted",
+  "ticket": "AFFINE-TARGET-0844",
+  "exit_code": 0,
+  "reaped": true,
+  "receipt": "build-reports/1795077865848386566-2.json",
+  "receipt_sha256": "eb23d75a454950ff67fa6f870ed19fd41d827a8c3486d9a7fcd3b33faac23f92",
+  "profile": {
+    "requested": [
+      "LogicLineages.ControlSensitivityCurrent.CurrentAffineHeadsTargets"
+    ],
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "core_only_profile": false,
+    "single_thread": true,
+    "threads": 1,
+    "upstream_cache_only": true,
+    "calculator_objects_borrowed": true
+  },
+  "closure_count": 146,
+  "pin_count": 25,
+  "freeze": "verification/new-paper-set-2026-11-18/paper19/CURRENT-AFFINE-HEADS-FREEZE.json",
+  "freeze_sha256": "fe1c529377902aebc9b9cb57e9ce1693a6c710ae0c4b04bee5774832a53c216d",
+  "successful_native_rows": [
+    {
+      "module": "LogicLineages.ControlSensitivityCurrent.CurrentAffineHeadsDefinitions",
+      "returncode": 0,
+      "seconds": 1.681,
+      "observed_cpu_seconds": 1.35,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 965668,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "42ce7d104da1c9fa75b460f37605b7222753e71d96e08fed0b341a3880f7861a",
+      "log": "build-reports/1795077865848386566-2-LogicLineages-ControlSensitivityCurrent-CurrentAffineHeadsDefinitions.log"
+    },
+    {
+      "module": "LogicLineages.ControlSensitivityCurrent.CurrentAffineHeadsTargets",
+      "returncode": 0,
+      "seconds": 1.18,
+      "observed_cpu_seconds": 1.12,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 965848,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "a473c67db90c0ccec55f33ea6111a9be490de5bcd3dd54b290a93f2604da2197",
+      "log": "build-reports/1795077865848386566-2-LogicLineages-ControlSensitivityCurrent-CurrentAffineHeadsTargets.log"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericASTProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericASTProof.lean
+@@ -13,7 +13,8 @@
+ open InternalAcceptance (conjunction constantZero)
+ open InternalAcceptanceCalibrationProof (evalBranch)
+ open InternalApplicationStepPeelEvaluationSupportProof (conjunctionEvaluation)
+-open InternalEqualityTestEvaluationProof (vectorOne exactEqualityEvaluation)
++open InternalEqualityTest (equalityTest)
++open InternalEqualityTestEvaluationProof (vectorOne vectorTwo exactEqualityEvaluation)
+ open NumberedWindowInternalFreshProbeDispatchProgramControlProof (compositeTwo)
+ open NumberedWindowInternalFreshProbeEmitter (consOf)
+ open NumberedWindowInternalSparsePair (fieldCons)
+@@ -33,7 +34,11 @@
+ 
+ theorem sameSlotOne (n : Nat) (v : List.Vector Nat 3) :
+     evaluate (sameSlot n) v = 1 ↔ run (field n) (v.get 0) = run (field n) (v.get 2) := by
+-  rw [sameSlot,compositeTwo,exactEqualityEvaluation]
++  change evaluate equalityTest (List.Vector.ofFn (fun i : Fin 2 =>
++    evaluate ((![frameSlot n 0,frameSlot n 2] : Fin 2 → Program 3) i) v)) = 1 ↔ _
++  rw [vectorTwo]
++  change evaluate equalityTest (evaluate (frameSlot n 0) v ::ᵥ evaluate (frameSlot n 2) v ::ᵥ nil) = 1 ↔ _
++  rw [exactEqualityEvaluation]
+   simp only [frameSlot,atSlot]
+   split <;> simp_all
+ 

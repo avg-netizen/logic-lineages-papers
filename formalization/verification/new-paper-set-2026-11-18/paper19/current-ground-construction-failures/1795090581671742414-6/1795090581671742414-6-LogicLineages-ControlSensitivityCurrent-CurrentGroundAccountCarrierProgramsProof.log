@@ -1,0 +1,147 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountCarrierProgramsProof.lean:15:89: error: unsolved goals
+p : Policy
+hp : PolicyShape.Effective p
+S : Type := List ℕ × ℕ
+hΓ : Primrec fun z => z.1
+hσ : Primrec fun z => z.1.getD 0 0
+hΔ : Primrec fun z => z.1.getD 0 0 :: z.1
+hsrc : Primrec fun z => SourceAnnotationCode.operatorSource z.2
+hrename :
+  Primrec fun a =>
+    SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+      (true, 0, SourceAnnotationCode.operatorSource a.2).2.1 (true, 0, SourceAnnotationCode.operatorSource a.2).2.2
+hsat :
+  Primrec fun a =>
+    NumericCarrierData.saturateSource (Nat.unpair a.2).1
+      (SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+        (true, 0, SourceAnnotationCode.operatorSource a.2).2.1 (true, 0, SourceAnnotationCode.operatorSource a.2).2.2)
+hw :
+  Primrec fun a =>
+    GroundCaptureClosingCode.sourceCode
+      (a.1.getD 0 0 :: a.1, 0,
+          NumericCarrierData.saturateSource (Nat.unpair a.2).1
+            (SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+              (true, 0, SourceAnnotationCode.operatorSource a.2).2.1
+              (true, 0, SourceAnnotationCode.operatorSource a.2).2.2)).1
+      (a.1.getD 0 0 :: a.1, 0,
+            NumericCarrierData.saturateSource (Nat.unpair a.2).1
+              (SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+                (true, 0, SourceAnnotationCode.operatorSource a.2).2.1
+                (true, 0, SourceAnnotationCode.operatorSource a.2).2.2)).2.1
+      (a.1.getD 0 0 :: a.1, 0,
+            NumericCarrierData.saturateSource (Nat.unpair a.2).1
+              (SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+                (true, 0, SourceAnnotationCode.operatorSource a.2).2.1
+                (true, 0, SourceAnnotationCode.operatorSource a.2).2.2)).2.2
+hv :
+  Computable fun a =>
+    PolicyAssignment.assignmentCode p
+      (a.1.getD 0 0 :: a.1,
+          GroundCaptureClosingCode.sourceCode
+            (a.1.getD 0 0 :: a.1, 0,
+                NumericCarrierData.saturateSource (Nat.unpair a.2).1
+                  (SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+                    (true, 0, SourceAnnotationCode.operatorSource a.2).2.1
+                    (true, 0, SourceAnnotationCode.operatorSource a.2).2.2)).1
+            (a.1.getD 0 0 :: a.1, 0,
+                  NumericCarrierData.saturateSource (Nat.unpair a.2).1
+                    (SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+                      (true, 0, SourceAnnotationCode.operatorSource a.2).2.1
+                      (true, 0, SourceAnnotationCode.operatorSource a.2).2.2)).2.1
+            (a.1.getD 0 0 :: a.1, 0,
+                  NumericCarrierData.saturateSource (Nat.unpair a.2).1
+                    (SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+                      (true, 0, SourceAnnotationCode.operatorSource a.2).2.1
+                      (true, 0, SourceAnnotationCode.operatorSource a.2).2.2)).2.2).1
+      (a.1.getD 0 0 :: a.1,
+          GroundCaptureClosingCode.sourceCode
+            (a.1.getD 0 0 :: a.1, 0,
+                NumericCarrierData.saturateSource (Nat.unpair a.2).1
+                  (SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+                    (true, 0, SourceAnnotationCode.operatorSource a.2).2.1
+                    (true, 0, SourceAnnotationCode.operatorSource a.2).2.2)).1
+            (a.1.getD 0 0 :: a.1, 0,
+                  NumericCarrierData.saturateSource (Nat.unpair a.2).1
+                    (SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+                      (true, 0, SourceAnnotationCode.operatorSource a.2).2.1
+                      (true, 0, SourceAnnotationCode.operatorSource a.2).2.2)).2.1
+            (a.1.getD 0 0 :: a.1, 0,
+                  NumericCarrierData.saturateSource (Nat.unpair a.2).1
+                    (SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+                      (true, 0, SourceAnnotationCode.operatorSource a.2).2.1
+                      (true, 0, SourceAnnotationCode.operatorSource a.2).2.2)).2.2).2
+hpriv : Primrec fun a => [a.1.getD 0 0, a.1.getD 0 0]
+hout :
+  Primrec fun z =>
+    ([z.1.1.getD 0 0, z.1.1.getD 0 0],
+      GroundCaptureClosingCode.sourceCode (z.1.1.getD 0 0 :: z.1.1) 0
+        (NumericCarrierData.saturateSource (SourceAnnotationCode.operatorArity z.1.2)
+          (SourceCarrierMapCode.mapCode true 0 (SourceAnnotationCode.operatorSource z.1.2))),
+      z.2)
+h :
+  Computable fun a =>
+    Option.map
+      (fun b =>
+        ([(a, b).1.1.getD 0 0, (a, b).1.1.getD 0 0],
+          GroundCaptureClosingCode.sourceCode ((a, b).1.1.getD 0 0 :: (a, b).1.1) 0
+            (NumericCarrierData.saturateSource (SourceAnnotationCode.operatorArity (a, b).1.2)
+              (SourceCarrierMapCode.mapCode true 0 (SourceAnnotationCode.operatorSource (a, b).1.2))),
+          (a, b).2))
+      (PolicyAssignment.assignmentCode p
+        (a.1.getD 0 0 :: a.1,
+            GroundCaptureClosingCode.sourceCode
+              (a.1.getD 0 0 :: a.1, 0,
+                  NumericCarrierData.saturateSource (Nat.unpair a.2).1
+                    (SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+                      (true, 0, SourceAnnotationCode.operatorSource a.2).2.1
+                      (true, 0, SourceAnnotationCode.operatorSource a.2).2.2)).1
+              (a.1.getD 0 0 :: a.1, 0,
+                    NumericCarrierData.saturateSource (Nat.unpair a.2).1
+                      (SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+                        (true, 0, SourceAnnotationCode.operatorSource a.2).2.1
+                        (true, 0, SourceAnnotationCode.operatorSource a.2).2.2)).2.1
+              (a.1.getD 0 0 :: a.1, 0,
+                    NumericCarrierData.saturateSource (Nat.unpair a.2).1
+                      (SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+                        (true, 0, SourceAnnotationCode.operatorSource a.2).2.1
+                        (true, 0, SourceAnnotationCode.operatorSource a.2).2.2)).2.2).1
+        (a.1.getD 0 0 :: a.1,
+            GroundCaptureClosingCode.sourceCode
+              (a.1.getD 0 0 :: a.1, 0,
+                  NumericCarrierData.saturateSource (Nat.unpair a.2).1
+                    (SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+                      (true, 0, SourceAnnotationCode.operatorSource a.2).2.1
+                      (true, 0, SourceAnnotationCode.operatorSource a.2).2.2)).1
+              (a.1.getD 0 0 :: a.1, 0,
+                    NumericCarrierData.saturateSource (Nat.unpair a.2).1
+                      (SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+                        (true, 0, SourceAnnotationCode.operatorSource a.2).2.1
+                        (true, 0, SourceAnnotationCode.operatorSource a.2).2.2)).2.1
+              (a.1.getD 0 0 :: a.1, 0,
+                    NumericCarrierData.saturateSource (Nat.unpair a.2).1
+                      (SourceCarrierMapCode.mapCode (true, 0, SourceAnnotationCode.operatorSource a.2).1
+                        (true, 0, SourceAnnotationCode.operatorSource a.2).2.1
+                        (true, 0, SourceAnnotationCode.operatorSource a.2).2.2)).2.2).2)
+z : S
+⊢ ((PolicyAssignment.assignmentCode p (z.1[0]?.getD 0 :: z.1)
+          (GroundCaptureClosingCode.sourceCode (z.1[0]?.getD 0 :: z.1) 0
+            (NumericCarrierData.saturateSource (Nat.unpair z.2).1
+              (SourceCarrierMapCode.mapCode true 0 (SourceAnnotationCode.operatorSource z.2))))).bind
+      fun a =>
+      some
+        ([z.1[0]?.getD 0, z.1[0]?.getD 0],
+          GroundCaptureClosingCode.sourceCode (z.1[0]?.getD 0 :: z.1) 0
+            (NumericCarrierData.saturateSource (SourceAnnotationCode.operatorArity z.2)
+              (SourceCarrierMapCode.mapCode true 0 (SourceAnnotationCode.operatorSource z.2))),
+          a)) =
+    (PolicyAssignment.assignmentCode p (z.1[0]?.getD 0 :: z.1)
+          (GroundCaptureClosingCode.sourceCode (z.1[0]?.getD 0 :: z.1) 0
+            (NumericCarrierData.saturateSource (SourceAnnotationCode.operatorArity z.2)
+              (SourceCarrierMapCode.mapCode true 0 (SourceAnnotationCode.operatorSource z.2))))).bind
+      fun v =>
+      some
+        ([z.1[0]?.getD 0, z.1[0]?.getD 0],
+          GroundCaptureClosingCode.sourceCode (z.1[0]?.getD 0 :: z.1) 0
+            (NumericCarrierData.saturateSource (SourceAnnotationCode.operatorArity z.2)
+              (SourceCarrierMapCode.mapCode true 0 (SourceAnnotationCode.operatorSource z.2))),
+          v)

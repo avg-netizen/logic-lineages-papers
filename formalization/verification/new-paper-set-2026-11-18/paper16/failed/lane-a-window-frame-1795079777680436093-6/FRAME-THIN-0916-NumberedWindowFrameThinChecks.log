@@ -1,0 +1,62 @@
+CACHE_HIT LogicLineages.PersistentMarking.Syntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineSyntax
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowSyntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineTyping
+CACHE_HIT LogicLineages.PersistentMarking.Signature
+CACHE_HIT LogicLineages.PersistentMarking.NameBridge
+CACHE_HIT LogicLineages.PersistentMarking.FreeSubstitution
+CACHE_HIT LogicLineages.PersistentMarking.StructuralContext
+CACHE_HIT LogicLineages.PersistentMarking.Occurrences
+CACHE_HIT LogicLineages.PersistentMarking.SpineMarking
+CACHE_HIT LogicLineages.PersistentMarking.Comparison
+CACHE_HIT LogicLineages.PersistentMarking.StructuralStabilityTargets
+CACHE_HIT LogicLineages.PersistentMarking.StructuralCoverageTargets
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupport
+CACHE_HIT LogicLineages.PersistentMarking.DecisionInventory
+CACHE_HIT LogicLineages.PersistentMarking.DecisionPorts
+CACHE_HIT LogicLineages.PersistentMarking.DecisionObservations
+CACHE_HIT LogicLineages.PersistentMarking.DecisionSourceUniverse
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowDomain
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRules
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowPrimary
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowPreservationTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowClosing
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowTupleTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowFrameTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowClosingInventoryProof
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowClosingOperationsProof
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowClosingShiftProof
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowBindingTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowBindingBaseProof
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowClosingBetaProof
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowClosingRawCases
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowClosingRawProof
+Compiling LogicLineages.PersistentMarking.NumberedWindowClosingTypedBuilders
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowClosingTypedBuilders
+Compiling LogicLineages.PersistentMarking.NumberedWindowClosingTypedThinCore
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowClosingTypedThinCore.lean:14:15: error: Application type mismatch: The argument
+  bBound n
+has type
+  ∀ (C : Spine.BoundContext) (i : Nat) (σ : Ty), C i = some σ → TermGoal n C (NTerm.bound σ i) σ
+but is expected to have type
+  ∀ {C : Spine.BoundContext} {σ : Ty} {i : Nat}, C i = some σ → TermGoal n C (NTerm.bound σ i) σ
+in the application
+  Typed.rec (bFree n) (bBound n)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowClosingTypedThinCore.lean:24:15: error: Application type mismatch: The argument
+  bBound n
+has type
+  ∀ (C : Spine.BoundContext) (i : Nat) (σ : Ty), C i = some σ → TermGoal n C (NTerm.bound σ i) σ
+but is expected to have type
+  ∀ {C : Spine.BoundContext} {σ : Ty} {i : Nat}, C i = some σ → TermGoal n C (NTerm.bound σ i) σ
+in the application
+  BaseTyped.rec (bFree n) (bBound n)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowClosingTypedThinCore.lean:33:15: error: Application type mismatch: The argument
+  bBound n
+has type
+  ∀ (C : Spine.BoundContext) (i : Nat) (σ : Ty), C i = some σ → TermGoal n C (NTerm.bound σ i) σ
+but is expected to have type
+  ∀ {C : Spine.BoundContext} {σ : Ty} {i : Nat}, C i = some σ → TermGoal n C (NTerm.bound σ i) σ
+in the application
+  ExtrasTyped.rec (bFree n) (bBound n)
+COMPILE_FAILED LogicLineages.PersistentMarking.NumberedWindowClosingTypedThinCore: 1
+BUILD_RECEIPT build-reports/1795079777680436093-6.json

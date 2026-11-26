@@ -1,0 +1,68 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "542857d5d0f94334daae321dd832bb87583d4bad",
+  "failed_source_local_commit": "7ded95a14f1e576286af419bf6e2ce10eba64894",
+  "failed_source_tree": "2b3358bba7136a9d1cb2812285943e66d6a43abc",
+  "failed_exact_gate_receipt": "1795371794420764360-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualBitFamilyHighStatementChecks",
+  "failed_receipt_sha256": "4d12f565930628cf3e449cdc61658fd5aa891f8c6619498058bd5888a6faa0c5",
+  "failed_exact_module_log_sha256": "071c98e6af3d6c06d06a3558746cebe4f0692739a8eefc5190a3ce9fff92d907",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualBitFamilyHighTargets.lean:21:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Finset.toList', which is 'noncomputable'\n",
+  "failed_original_native_log_sha256": "0c4c1b5c85ffb22d7be03d1b730686097faae094b1f96df85240f027b3250b1d",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualBitFamilyHighTargets.lean",
+  "failed_proof_sha256": "7506e2c2fc8ead35ad27e23a1bb3f5f015d247b3022ecea844fdbfac03d8da14",
+  "repaired_proof_sha256": "fd63d71655ebfd30b9a118977ed2c7d402301f30d59fb73bb7783618c2504b99",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-HIGH-REPAIR-01.patch",
+  "patch_sha256": "9973e1a10af6b2f7e13fcc81ba4ebc97aba3ef0f7dda481eea43f5eff396729e",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-HIGH-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "88045ce40dc9f9e44b48be0780ed88e9259e91556fffd5cebdcea6f155e62ca6",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyHighDimensionProof.lean": "927527d94133ef6f9d1e1ce3a3b40ce0d0eca8fcced8298217d7e0c48d2d94a4",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyHighExistentialProof.lean": "ad14b334d2b09dbd14cd8cb28d924adef16b6133b97540aa46975b87edffdd5f",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyHighRankProof.lean": "c7bad0aed83dd5487b1e8297a0eec6cf6cec3170b749b66970a59fb82ecee41b",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyHighSetupProof.lean": "bc8dab40bebe1fa759256cca33aa8186f9f6bbe1fc1002fb8092043ee34b0b30",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyHighStatementChecks.lean": "6a3cc2127f6847aeaf18071032ccc3eecabafbd34fcb04265cb21392efdd5f77",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyHighUniformProof.lean": "1d847802cbaf55c3659aae39d60cb33219cdc1bc47fbc350207e350727a1015d",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-HIGH-SOURCE-MAP.md": "c75a62d7d1f015993d2f2429be926dcbeced7dc1258e56a5b3ff1b17f273318d"
+  },
+  "static_module_closure": {
+    "DimensionProof": {
+      "local": 791,
+      "external": 44,
+      "contains_totient": false
+    },
+    "ExistentialProof": {
+      "local": 792,
+      "external": 44,
+      "contains_totient": false
+    },
+    "RankProof": {
+      "local": 513,
+      "external": 43,
+      "contains_totient": false
+    },
+    "SetupProof": {
+      "local": 514,
+      "external": 43,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 794,
+      "external": 44,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 313,
+      "external": 35,
+      "contains_totient": false
+    },
+    "UniformProof": {
+      "local": 790,
+      "external": 44,
+      "contains_totient": false
+    }
+  },
+  "scope": "Classify unchanged names def noncomputable, exactly as required by underlying Finset.toList. No semantic proposition, target definitions, imports, proof, or guard changed otherwise. No raw effectivity claimed."
+}

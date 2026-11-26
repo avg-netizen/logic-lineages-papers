@@ -1,0 +1,37 @@
+{
+  "status": "proof-only literal selector correction; fresh native/axiom gate pending",
+  "failed_receipt": "1795342323535775312-93",
+  "failed_receipt_sha256": "8c14e49b756b3b76a361c32c40fa064b129260bb8eba9a8a9c34b8520fe0e5b0",
+  "failed_diagnostic": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/factored-aux-own-cover-thin-initial-diagnostic.txt": "507ee32507817e9a8bab1e780a4c8dc355d960012048fbaed27e75230260c22a"
+  },
+  "failed_errors": [
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFactoredAuxOwnCoverProgramProof.lean:61:4: error: Type mismatch",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFactoredAuxOwnCoverProgramProof.lean:64:4: error: Type mismatch"
+  ],
+  "failed_source_archive": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalFactoredAuxOwnCoverProgramProof-01.lean": "12b54bac5fd2a58d0aad0c4c4ec7a28196dd356dba4187460c2062aa302c2784"
+  },
+  "diagnosis": "The stageGenerator uses reorder at a Fin 1 selector tuple; its function is not definitionally the constant lambda used by rawCall. Derive the exact projected graph with compositionValue and explicit Fin 1 index elimination. Keep thirdReport unchanged for physical rawCall V/M. No target, AST, import, or other proof leaf changed.",
+  "changed_source": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFactoredAuxOwnCoverProgramProof.lean",
+  "old_failed_source_sha256": "12b54bac5fd2a58d0aad0c4c4ec7a28196dd356dba4187460c2062aa302c2784",
+  "new_source_sha256": "1f8f0472cb20b426b10776f1c3192ad4bbf9720dcb77451ec02c7a8c55a4924a",
+  "zero_context_patch": {
+    "formalization/verification/continuation-2026-11-22/P16-FACTORED-AUX-OWN-COVER-THIN-REPAIR-01.patch": "1a774aa1c22d2f967ef436b3c2987a9645962128246c0e11675b2598bf1cf0bf"
+  },
+  "inverse_exact_failed_bytes_verified": true,
+  "unchanged_source_pins": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFactoredAuxOwnCoverTargets.lean": "0c3c3151df3f85e139c0c599d02cfb85d31b158e636a0e4a03b2190a8e1523cc",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFactoredAuxOwnCoverChecks.lean": "de9fae79293ca6d8cf931f9436873369e813cf4b100e743d023c2e289d1773f7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFactoredAuxOwnCoverThinChecks.lean": "a6b5509b030a7fc4a8197c6462bcd074ddaecea9d26cae37f5f82205e9706f1f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxApplicationsThinOpenProof.lean": "0741c93342ea031228cdbae01be4629fc8d93aee6ce5b9672956fa06c85c4224",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldThinOpenProof.lean": "e87bbfc7de09d277ae9da5c0b6d8b700e3767f22adc990c6c70be9f3fba17a51",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldThinStepProof.lean": "0b62f51c4e1117801a136ebb538c25be8801a31d9158ba584bf325d2e0695158",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverGrammarStageThinOpenProof.lean": "1f200e518fa00606ac42049df689e46b58cf77689b242ba297fd4ab8dfa87ecb",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverGrammarStageThinStepProof.lean": "3dc60124100f590deb62f075f04c852c3fa8d232209c20137f81bfd3d9059bbf",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverGrammarStageTargets.lean": "89f330680beb27b417fce870674b865aa3ad8560f28601bf17931bc93c4951e6",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxApplicationsTargets.lean": "030231123ff2bc86918fbcbe9352689840f76830e368c3651e50a9f9eae2054f",
+    "formalization/verification/continuation-2026-11-22/P16-FACTORED-AUX-OWN-COVER-SOURCE-MAP.md": "ae3f8030bd5367cfccfff8cc4003ea8065631dd9ef4a862de3a33cbcf3e665fe",
+    "formalization/verification/continuation-2026-11-22/P16-FACTORED-AUX-OWN-COVER-THIN-SOURCE-MAP.md": "30be94ca5ceffe923790eed4101a84ce432239b5a7f7b5c34a40582cd4a2be0b"
+  }
+}

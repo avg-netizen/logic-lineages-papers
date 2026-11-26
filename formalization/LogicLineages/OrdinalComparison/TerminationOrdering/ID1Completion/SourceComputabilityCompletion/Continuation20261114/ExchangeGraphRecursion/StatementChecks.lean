@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeGraphRecursion.NativeStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeGraphRecursion.CoherenceStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeGraphRecursion.InternalStatementChecks
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeGraphRecursion.StatementChecks
+theorem exactGraph : Targets.NativeGraph := NativeStatementChecks.exactGraph
+#print axioms exactGraph
+theorem exactCoherence : Targets.NativeCoherentGraph := CoherenceStatementChecks.exactCoherence
+#print axioms exactCoherence
+theorem exactZero : Targets.InternalZero := InternalStatementChecks.exactZero
+#print axioms exactZero
+theorem exactSuccessor : Targets.InternalSuccessor := InternalStatementChecks.exactSuccessor
+#print axioms exactSuccessor
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeGraphRecursion.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeGraphRecursion.StatementChecks

@@ -1,0 +1,9 @@
+# Independent original HB3 comparator review
+
+Approved freeze/preflight only. All ten pins independently verified. Machine text comparison confirms Source is the ENTIRE previous SameSourcePublishedWitness Source body, only parenthesizing its final let-bound witness supplier and adjoining HB3. Existing full Retained/Packages, actual memberships/N, prD syntax, doubled alignment and uniform witness fields are not dropped. Definitions are aliases of the same extra/selected/inputCode, no fresh selection or substituted existential tuple.
+
+Compared original GorbowPublishedLobReduction.hb3: exact prD sigma → prD(prD sigma). Gate expands that literal original implication, exact selected two-augmentation source, bundle and input recipe, retaining every prior field. No renamed substitute predicate, conditional HB3 or assumed-success premise. Native Iff.rfl/audit still required; no endpoint acceptance from this review.
+
+Checker coherence remains an honest proof obligation: accepted verifier occurrence must be related by actual registry memberships to canonical named checkerTag on SAME padded augmented root; arbitrary tag equality must not be assumed. The frozen target does not add such an assumption. Uniform bound predates context/sentence/inner witnesses; fixed outer numeral must satisfy its actual order guard. Doubled raw alignment is an existing closed source derivation to be weakened into context2, not semantic reflection. Introduce actual outer fuel/certificate witnesses, then eliminate both inner witnesses capture-freely with a closed conclusion independent of them; certificate itself may depend on them. Local success must remain local and be discharged.
+
+If proved this would establish original HB3 in S at this same selected tuple; it is not yet full source12, HB2/Lob or whole-paper completion. No proof/native job by reviewer.

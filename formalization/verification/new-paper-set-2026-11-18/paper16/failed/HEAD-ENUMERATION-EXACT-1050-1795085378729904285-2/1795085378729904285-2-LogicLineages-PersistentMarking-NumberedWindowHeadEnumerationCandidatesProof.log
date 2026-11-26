@@ -1,0 +1,15 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowHeadEnumerationCandidatesProof.lean:27:28: error: Type mismatch: After simplification, term
+  h
+ has type
+  @Eq (Option (Nat × Nat))
+    (if True then some (b, 0) else Option.map (fun p => (p.fst, p.snd + 1)) (Spine.lookupRank xs name))
+    (some (arity, i))
+but is expected to have type
+  @Eq (Option (Nat × Nat)) (some (b, 0)) (some (arity, i))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowHeadEnumerationCandidatesProof.lean:88:45: warning: This simp argument is unused:
+  true_or
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵a̵n̵d̵i̵d̵a̵t̵e̵s̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵a̵p̵p̵e̵n̵d̵,̵h̵m̵,̵t̵r̵u̵e̵_̵o̵r̵,̵o̵r̵_̵t̵r̵u̵e̵]̵[̲c̲a̲n̲d̲i̲d̲a̲t̲e̲s̲,̲ ̲L̲i̲s̲t̲.̲m̲e̲m̲_̲a̲p̲p̲e̲n̲d̲,̲ ̲h̲m̲,̲ ̲o̲r̲_̲t̲r̲u̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

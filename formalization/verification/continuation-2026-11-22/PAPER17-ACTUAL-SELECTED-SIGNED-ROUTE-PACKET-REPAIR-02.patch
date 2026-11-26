@@ -1,0 +1,15 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketShapeProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualSelectedSignedRoutePacketShapeProof.lean
+@@ -105,5 +105,7 @@
+-  change PreparedInput [] (if (if pos then signedBit test coef else !(signedBit test coef))
+-    then .truth else .falsity)
+-  split
+-  · exact safeTruth []
+-  · exact safeFalsity []
++  let selected := if pos then signedBit test coef else !(signedBit test coef)
++  change PreparedInput [] (if selected then .truth else .falsity)
++  by_cases passes : selected = true
++  · rw [if_pos passes]
++    exact safeTruth []
++  · rw [if_neg passes]
++    exact safeFalsity []

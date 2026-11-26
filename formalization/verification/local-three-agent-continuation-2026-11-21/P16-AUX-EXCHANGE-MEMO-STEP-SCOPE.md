@@ -1,0 +1,7 @@
+# Actual selected auxiliary exchange row update
+
+`NumberedWindowInternalAuxExchangeMemoStepChecks` passed native gate `1795328833001430886-9` with 938 modules and two named standard-only audits. The two earlier source and diagnostic editions remain archived.
+
+The chosen step reads the literal polynomial key, using the original sparse cell parser. A malformed key returns zero. On a successful parse it passes the two raw endpoints and one constructed tag-five dummy field to the existing literal frame parser. The field is used solely to obtain the original same-domain, same-codomain and same-argument shape and function-slot tests. Two calls to the supplied term syntax program are part of the selected step. The strict earlier-child check and the lookup of the actual preceding row use the same paired function key. Fallback evaluates the original base callback on the unchanged raw endpoints. Exact numeric comparison holds at every preceding key and every supplied previous table numeral, including malformed tables.
+
+The resulting full physical recursor is calibrated to the original guarded-syntax exchange term bit on every input pair, given an exactly calibrated syntax program and original base callback. This step discharges `StepCalibrated` by exposing the actual program. It leaves the conditional arbitrary-open graph lifting rule and the original strengthened window and cover choice to separate joins.

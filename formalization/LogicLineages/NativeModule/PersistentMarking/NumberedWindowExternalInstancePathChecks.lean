@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowExternalInstancePathProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowExternalInstancePathChecks
+open NumberedWindowExternalInstancePathTargets
+theorem exact_InstanceClassEdgeOrEqual : InstanceClassEdgeOrEqual := NumberedWindowExternalInstancePathProof.edgeOrEqual
+theorem exact_FreeInstancePreservesPositive : FreeInstancePreservesPositive := NumberedWindowExternalInstancePathProof.freePositive
+theorem exact_FreeInstanceReflectsAccessibility : FreeInstanceReflectsAccessibility := NumberedWindowExternalInstancePathProof.reflect
+#print axioms exact_InstanceClassEdgeOrEqual
+#print axioms exact_FreeInstancePreservesPositive
+#print axioms exact_FreeInstanceReflectsAccessibility
+end LogicLineages.PersistentMarking.NumberedWindowExternalInstancePathChecks

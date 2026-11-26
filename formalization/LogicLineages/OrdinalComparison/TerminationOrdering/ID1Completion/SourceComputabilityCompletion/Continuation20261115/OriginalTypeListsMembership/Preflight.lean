@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalTypeListsMembership.Targets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalTypeListsMembership.Preflight
+#check Targets.InternalMembership
+#check Targets.memberMatrix
+#check Targets.allMembers
+#check OriginalTypeListsEnumeration.StatementChecks.exactZero
+#check OriginalTypeListsEnumeration.StatementChecks.exactSuccessor
+#check OriginalContextInsertion.length
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalTypeListsMembership.Preflight

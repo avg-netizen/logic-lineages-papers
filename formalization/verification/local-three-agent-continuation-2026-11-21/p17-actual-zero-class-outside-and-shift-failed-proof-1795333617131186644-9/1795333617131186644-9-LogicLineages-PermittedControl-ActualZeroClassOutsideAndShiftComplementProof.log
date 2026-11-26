@@ -1,0 +1,33 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/ActualZeroClassOutsideAndShiftComplementProof.lean:82:14: error: unsolved goals
+case neg
+f ρ : ℕ → ℕ
+C : ℕ
+rd : Read
+xs : List Read
+next :
+  ∀ (annotations : List Annotation),
+    AlignedAnnotations f ρ (List.map Prod.fst xs) (List.map Prod.snd xs) annotations →
+      (originalKeys xs).Nodup →
+        (∀ rd ∈ xs, rd.1.1 ≠ 0) →
+          outsideCohort f C (List.map Prod.fst xs) (List.map Prod.snd xs) annotations =
+            removeSelectedKeys (originalKeys (classReads f C xs annotations)) xs
+weights : ∀ rd_1 ∈ rd :: xs, rd_1.1.1 ≠ 0
+ann : Annotation
+annotations : List Annotation
+a✝¹ : LowerOperandActual f ρ rd.1.2 rd.2
+a✝ : lowerOperandRead f ρ rd.1.2 = some (some rd.2)
+actual : ActualAnnotation f ρ rd.1 rd.2 ann
+rest : AlignedAnnotations f ρ (List.map Prod.fst xs) (List.map Prod.snd xs) annotations
+unique : (rd.1.2 :: originalKeys xs).Nodup
+fresh : rd.1.2 ∉ originalKeys xs
+tailUnique : (originalKeys xs).Nodup
+tailEq :
+  outsideCohort f C (List.map Prod.fst xs) (List.map Prod.snd xs) annotations =
+    removeSelectedKeys (originalKeys (classReads f C xs annotations)) xs
+keys : List LowerOperand := originalKeys (classReads f C xs annotations)
+sub : (classReads f C xs annotations).Sublist xs
+freshClass : rd.1.2 ∉ keys
+selected : ¬fullValue f ann = some C
+keyShape : originalKeys (classReads f C (rd :: xs) (ann :: annotations)) = keys
+keep : removeSelectedKeys keys (rd :: xs) = rd :: removeSelectedKeys keys xs
+⊢ [rd] ++ removeSelectedKeys (originalKeys (classReads f C xs annotations)) xs = rd :: removeSelectedKeys keys xs

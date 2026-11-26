@@ -1,0 +1,42 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNumberedTypeWindowNumericProof.lean:53:93: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNumberedTypeWindowNumericProof.lean:53:93: warning: 'rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNumberedTypeWindowNumericProof.lean:70:11: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNumberedTypeWindowNumericProof.lean:73:79: error: unsolved goals
+raw h ty : ℕ
+tail : List ℕ
+read : unpackNode raw = some (5, h :: ty :: tail)
+outer : run cellTail (NumberedWindowPairAlgorithm.pair 5 (pack (h :: ty :: tail)) + 1) = pack (h :: ty :: tail)
+middle : run cellTail (NumberedWindowPairAlgorithm.pair h (pack (ty :: tail)) + 1) = pack (ty :: tail)
+last : run cellHead (NumberedWindowPairAlgorithm.pair ty (pack tail) + 1) = ty
+⊢ run cellHead (run cellTail (pack (h :: ty :: tail))) = ty
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNumberedTypeWindowNumericProof.lean:79:43: warning: This simp argument is unused:
+  middle
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵i̵e̵l̵d̵,̵c̵u̵r̵s̵o̵r̵,̵a̵p̵p̵l̵y̵V̵a̵l̵u̵e̵,̵o̵u̵t̵e̵r̵,̵m̵i̵d̵d̵l̵e̵,̵l̵a̵s̵t̵]̵[̲f̲i̲e̲l̲d̲,̲ ̲c̲u̲r̲s̲o̲r̲,̲ ̲a̲p̲p̲l̲y̲V̲a̲l̲u̲e̲,̲ ̲o̲u̲t̲e̲r̲,̲ ̲l̲a̲s̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNumberedTypeWindowNumericProof.lean:79:50: warning: This simp argument is unused:
+  last
+
+Hint: Omit it from the simp argument list.
+  simp only [field, ̲cursor, ̲applyValue, ̲outer, ̲middle,̵l̵a̵s̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNumberedTypeWindowNumericProof.lean:109:2: warning: 'change evaluate (numberedTypeBase s B) (ctx ::ᵥ raw ::ᵥ nil) = intrinsicWindow s ctx raw' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverNumberedTypeWindowNumericProof.exact_CoverNumberedTypeBase' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverNumberedTypeWindowNumericProof.exact_CoverNumberedTypeWindowCalibrated' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

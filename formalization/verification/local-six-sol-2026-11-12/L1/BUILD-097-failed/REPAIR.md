@@ -1,0 +1,1 @@
+Receipt build-reports/1794544662381866061-9.json. Only CompletedAgreementProof released. Local xs alias prevented the intended input-vector rename simplification. Unfold xs at that exact existing boundary; frozen2 target/definitions and alias unchanged. Original padding passed standard-only and remains unchanged.

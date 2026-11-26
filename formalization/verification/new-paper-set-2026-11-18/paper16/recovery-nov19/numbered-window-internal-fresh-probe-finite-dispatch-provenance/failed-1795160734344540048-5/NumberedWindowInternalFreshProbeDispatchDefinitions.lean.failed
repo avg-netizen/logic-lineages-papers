@@ -1,0 +1,77 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeTargets
+public import LogicLineages.PersistentMarking.NumberedWindowOriginalProbeTotalTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalEqualityTestDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFixedWindowVertexDispatchDefinitions
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatch
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open ID1Completion.InternalEqualityTest (predecessor equalityTest)
+open ID1Completion.InternalFixedWindowVertexDispatch (constant)
+open ID1Completion.InternalAcceptance (branch conjunction constantZero)
+open NumberedWindowInternalProbeTargets (typeCode)
+open NumberedWindowAddressApplication (application graph)
+open NumberedWindowTypedProbe (typed probe)
+open NumberedWindowScalarAlgorithm (Settings)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram List.Vector
+
+abbrev ProbeTy := LogicLineages.OrdinalComparison.Source.Ty
+
+/-- Literal original AST leaves only. No soundness, totality, application
+equality, or object derivation is a data field. -/
+structure Leaves where
+  baseTyped : Program 2
+  fresh : Program 1
+  applicationCode : Program 2
+  applicationGuard : Program 3
+
+def calibrated (s : Settings) (l : Leaves) : Prop :=
+  (∀ t q, evaluate l.baseTyped (t ::ᵥ q ::ᵥ nil) = (typed s t q).toNat) ∧
+  (∀ q, evaluate l.fresh (q ::ᵥ nil) = Encodable.encode (probe s q)) ∧
+  (∀ q u, evaluate l.applicationCode (q ::ᵥ u ::ᵥ nil) = Encodable.encode (application s q u)) ∧
+  (∀ q u v, evaluate l.applicationGuard (q ::ᵥ u ::ᵥ v ::ᵥ nil) = (graph s q u v).toNat)
+
+/-- Specialize only the literal type coordinate, leaving the input q. -/
+def typeLeaf (l : Leaves) (τ : ProbeTy) : Program 1 :=
+  .composition l.baseTyped ![constant 1 (typeCode τ), .projection 0]
+
+def afterPredecessor {n : Nat} (a : Program n) : Program n :=
+  .composition predecessor ![a]
+
+/-- Keeps the three actual source coordinates [q,u,v]. -/
+def resultGuard (l : Leaves) (codomain : Program 1) : Program 3 :=
+  conjunction l.applicationGuard (.composition codomain ![.projection 2])
+
+/-- Inputs [q,u]. The encoded application must be some v, never zero. -/
+def applicationPart (l : Leaves) (codomain : Program 1) : Program 2 :=
+  branch l.applicationCode (constantZero 2)
+    (.composition (resultGuard l codomain)
+      ![.projection 0, .projection 1, afterPredecessor l.applicationCode])
+
+/-- Input [q]. The original optional fresh-address graph must be positive. -/
+def arrowPart (l : Leaves) (codomain : Program 1) : Program 1 :=
+  branch l.fresh (constantZero 1)
+    (.composition (applicationPart l codomain) ![.projection 0, afterPredecessor l.fresh])
+
+def verify (l : Leaves) : ProbeTy → Program 1
+  | .ground => typeLeaf l .ground
+  | .arrow σ τ => conjunction (typeLeaf l (.arrow σ τ)) (arrowPart l (verify l τ))
+
+/-- Inputs [type,q]; the actual literal comparison never tests q. -/
+def typeTest (τ : ProbeTy) : Program 2 :=
+  .composition equalityTest ![.projection 0, constant 2 (typeCode τ)]
+
+def liftBranch (l : Leaves) (τ : ProbeTy) : Program 2 :=
+  .composition (verify l τ) ![.projection 1]
+
+/-- The one selected total two-input typing AST. Duplicates select the
+identical branch; the exact original window support pays its zero default. -/
+def dispatch (l : Leaves) : List ProbeTy → Program 2
+  | [] => constantZero 2
+  | τ :: ts => branch (typeTest τ) (dispatch l ts) (liftBranch l τ)
+
+def sourceWindow (K : List LogicLineages.PersistentMarking.Ty) : List ProbeTy :=
+  K.map NumberedWindowOriginalComputabilityFormulaTargets.formulaType
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatch

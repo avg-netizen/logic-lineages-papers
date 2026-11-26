@@ -1,0 +1,42 @@
+{
+  "state": "authored-static-only-pending-independent-review-and-native-proof-gate",
+  "target_preflight": {
+    "module": "LogicLineages.PermittedControl.FixedEntryClosedScanTargets",
+    "receipt": "1795265430963904666-6",
+    "verification": "coordinator-reported PASS; all target freeze pins independently recomputed"
+  },
+  "freeze_manifest": {
+    "path": "formalization/verification/continuation-2026-11-21/PAPER17-FIXED-ENTRY-CLOSED-SCAN-FREEZE.json",
+    "sha256": "af60f01f0853a5937f8abc79639c8a4244d0f16f85172288352bd00d321e2363",
+    "pins_rechecked": 15
+  },
+  "new_source_hashes": {
+    "formalization/LogicLineages/PermittedControl/FixedEntryClosedScanEffectiveProof.lean": "ebc7aede82c462b158a49421cfa435da2305f279f0bf18988c4c80d1a9273d78",
+    "formalization/LogicLineages/PermittedControl/FixedEntryClosedScanRawProof.lean": "316b2d1f6795f378a94b89f32c5bd4d8ecf8fca02cbde4d1d9761744b51c0471",
+    "formalization/LogicLineages/PermittedControl/FixedEntryClosedScanActualProof.lean": "aed59d85e0599150426ac47e5052ef6cb3d6e1696e5669159c7b3e3d15dd78af",
+    "formalization/LogicLineages/PermittedControl/FixedEntryClosedScanStatementChecks.lean": "c376c04d693c2696c6c024465c81d1000265a1519c95bedb03b7005f2c173cfb"
+  },
+  "dependency_anchors": {
+    "formalization/LogicLineages/PermittedControl/FixedEntryProgramProof.lean": "e00809275e082ef4f185235af9069e3ee9a473a1569fde96baa7b922e4cba2ed",
+    "formalization/LogicLineages/PermittedControl/TerminalEntryScanGuardProof.lean": "56b758a84b490a8b1981f48cd31fc9a88583ee7496e6cab481233cacdc28d66b",
+    "formalization/LogicLineages/PermittedControl/TerminalEntryScanProgramProof.lean": "5a7217ee772a4b08fd5ade8c1fa330c126d8410b9aa0e73ed8aa2205a83509dc",
+    "formalization/LogicLineages/PermittedControl/TerminalEntryScanActualProof.lean": "c391dbd479225dc4da5d8e1ea24d15ed58eaa063b74db059ef6d8f22e97013eb",
+    "formalization/LogicLineages/OrdinalComparison/RawNormalProof.lean": "beee0a24b585d401abdc3c61e18c070df0bdb8446de2cbdeaf9d78cdb49f2ef3",
+    "formalization/LogicLineages/OrdinalComparison/RawNotationCode.lean": "ff0c8b35adf7361440961258dee243352ba3ec860a0da58b1f88fdea71619877"
+  },
+  "requested_native_gate": "LogicLineages.PermittedControl.FixedEntryClosedScanStatementChecks",
+  "expected_exact_aliases": [
+    "LogicLineages.PermittedControl.StatementChecks.fixed_fixedEntryClosedEffective",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_fixedEntryClosedRawExact",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_fixedEntryClosedActual",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_fixedEntryClosedOriginalGraph",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_fullFixedEntryClosedScan"
+  ],
+  "allowed_standard_axiom_names": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "closure_note": "Allowlist is upper bound; exact aliases, standard axiom closure and current recursive native source evidence under original caps required. No compiler by author.",
+  "scope": "Canonical fixed entry scan on all raw inputs with exact rejection, actual hit/miss for every t and original Part hit graph. No outer source call guards, field/count wrappers, strip substitution or numbered credit."
+}

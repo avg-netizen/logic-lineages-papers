@@ -1,0 +1,107 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GlobalSourceSpineLeastProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GlobalSourceSpineApplicationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GlobalSourceSpineComputableProof
+open FirstOrder Language Source PositiveArithmeticOperators InternalCalculus
+open InternalOriginalUniformDescentSelection (Data)
+open InternalComputabilityApplication InternalComputabilityApplicationProof InternalComputabilityApplicationSyntaxProof
+open InternalComputabilityDownward InternalComputabilityDownwardProof InternalComputabilityDownwardSyntaxProof
+open InternalRecursionClosureLogicProof InternalApplicationStepPeelSupportProof
+open InternalGraphCompositionFunctionalityProof (renameInto)
+open InternalTagArithmeticSyntaxProof (OTerm)
+open SourceComputabilityFormulaSupportProof GuardedSourceSyntaxProof
+open SourceComputabilityCompletion.TypedSpine GlobalSourceSpineSyntaxProof
+open UniformCertificateCompletion
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+theorem computableSpine (n : Nat) (arity : Fin n → Nat) (base : Data)
+    (hbase : InternalOriginalUniformDescentSelection.Calibrated n arity base)
+    (window : Program 1) (hwindow : Path.windowCalibrated n window)
+    (oldSrc : SourcePresentation.Data) (oldComp : JointGammaComputability.Data)
+    (oldStep : Program 4) (oldVertex oldResult : Program 5)
+    (symbols : List (Fin n)) (S : List Ty) (table : Fin n → Fin n → Bool)
+    (hS : SubtypeClosed (fun typ => typ ∈ S)) :
+    let context := OrdinaryArithmeticQuotient.contextCode symbols S table
+    let src := OuterSelection.source oldSrc oldComp base oldStep window
+    let comp := OuterSelection.computability oldComp base window oldVertex oldResult
+    ∀ (tau : Ty) (α : Type) (Gamma : List (Formula α)) (f mark depth : OTerm α),
+    Nonempty (Derivation (SourcePresentation.sourceBody src context) Gamma
+      (typed comp tau (numeral context) f)) →
+    Nonempty (Derivation (SourcePresentation.sourceBody src context) Gamma (marked f mark depth)) →
+    Nonempty (Derivation (SourcePresentation.sourceBody src context) Gamma
+      (computable comp tau (numeral context) f)) := by
+  dsimp only
+  let context := OrdinaryArithmeticQuotient.contextCode symbols S table
+  let data := OuterSelection.data base window
+  let src := OuterSelection.source oldSrc oldComp base oldStep window
+  let comp := OuterSelection.computability oldComp base window oldVertex oldResult
+  have hw := GlobalSourceSpineLeastProof.windowEvaluation n window hwindow symbols S table hS
+  have rules := OuterArithmeticProof.arithmeticRules oldSrc oldComp data
+    (RawScalar.checker data) oldStep BottomRepresentative.bottomTest BottomSpineMeasure.measure
+    window oldVertex oldResult context hw
+  intro tau
+  induction tau with
+  | ground =>
+    intro α Gamma f mark depth ht hm
+    rw [computableGround]
+    exact andIntro ht (GlobalSourceSpineLeastProof.least oldSrc oldComp base oldStep window
+      oldVertex oldResult context hw .ground α Gamma f mark depth ht hm)
+  | arrow sigma tau ihs iht =>
+    intro α Gamma f mark depth ht hm
+    apply actualOriginalArrowIntroduction (SourcePresentation.sourceBody src context)
+      comp α Gamma sigma tau (numeral context) f ht
+    let a : OTerm (α ⊕ Fin 1) := .var (.inr 0)
+    let Delta := computable comp sigma (numeral context) a ::
+      guarded comp (f.relabel Sum.inl) a :: Gamma.map weaken
+    have hi : ∀ p ∈ Gamma, p.relabel Sum.inl ∈ Delta := by
+      intro p hp
+      exact List.mem_cons_of_mem _ (List.mem_cons_of_mem _ (List.mem_map.mpr ⟨p,hp,rfl⟩))
+    have ht' := renameInto ht Sum.inl Delta hi
+    simp only [typedRename,numeralRename] at ht'
+    have hm' := renameInto hm Sum.inl Delta hi
+    rw [markedRename] at hm'
+    have hca : Nonempty (Derivation (SourcePresentation.sourceBody src context) Delta
+        (computable comp sigma (numeral context) a)) :=
+      ⟨Derivation.hypothesis List.mem_cons_self⟩
+    have hguard : Nonempty (Derivation (SourcePresentation.sourceBody src context) Delta
+        (guarded comp (f.relabel Sum.inl) a)) :=
+      ⟨Derivation.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)⟩
+    have hdomain : Nonempty (Derivation (SourcePresentation.sourceBody src context) Delta
+        (domain comp context sigma tau (f.relabel Sum.inl) a)) :=
+      andIntro (andIntro ht' (typedness comp sigma (numeral context) a hca)) hguard
+    have happ := closedApply (rules.applicationTotal (α ⊕ Fin 1) sigma tau (f.relabel Sum.inl) a) hdomain
+    have hresult : Nonempty (Derivation (SourcePresentation.sourceBody src context) Delta
+        (resultExists comp sigma tau (numeral context) (f.relabel Sum.inl) a)) := by
+      apply applicationCases comp context sigma tau (f.relabel Sum.inl) a _ happ
+      intro β j Theta out hj haccepted
+      simp only [resultExistsRename,numeralRename]
+      have hdd := renameInto hdomain j Theta hj
+      rw [domainRename] at hdd
+      have hmm := renameInto hm' j Theta hj
+      rw [markedRename] at hmm
+      have hout := GlobalSourceSpineApplicationProof.resultComputable n arity base hbase window hwindow
+        symbols S table hS oldComp oldVertex oldResult sigma tau β Theta
+        ((f.relabel Sum.inl).relabel j) (a.relabel j) out
+        ((mark.relabel Sum.inl).relabel j) ((depth.relabel Sum.inl).relabel j)
+        iht hdd haccepted hmm
+      exact resultIntroduction comp sigma tau (numeral context)
+        ((f.relabel Sum.inl).relabel j) (a.relabel j) out haccepted hout
+    simpa only [numeralRename] using hresult
+
+theorem actualConcreteTypedSpineComputable : TypedSpineTargets.ActualConcreteTypedSpineComputable := by
+  intro n arity base hbase window hwindow oldSrc oldComp oldStep oldVertex oldResult
+  dsimp only
+  intro symbols S table hS
+  let context := OrdinaryArithmeticQuotient.contextCode symbols S table
+  let src := OuterSelection.source oldSrc oldComp base oldStep window
+  let comp := OuterSelection.computability oldComp base window oldVertex oldResult
+  intro tau α Delta f mark depth
+  let H := typed comp tau (numeral context) f ⊓ marked f mark depth
+  have hh : Nonempty (Derivation (SourcePresentation.sourceBody src context) (H :: Delta) H) :=
+    ⟨Derivation.hypothesis List.mem_cons_self⟩
+  obtain ⟨h⟩ := computableSpine n arity base hbase window hwindow oldSrc oldComp oldStep
+    oldVertex oldResult symbols S table hS tau α (H :: Delta) f mark depth (andLeft hh) (andRight hh)
+  exact ⟨Derivation.implicationIntroduction h⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GlobalSourceSpineComputableProof

@@ -1,0 +1,41 @@
+{
+  "status": "checked",
+  "base_commit": "fd88501ef35c0f347fc754f72d93a1088c733c9f",
+  "base_note": "Sources are new files on top of this commit at gate time; root commits them afterwards.",
+  "native_receipt": "1795403715284492323-3286409",
+  "native_receipt_sha256": "3263a7671381549326a73cbbb4e5464c2da5b6d5a348b486b0a760020a837749",
+  "exact_gate": "LogicLineages.PersistentMarking.ConditionalTowerCofinalityProof",
+  "gate_seconds": 1.495,
+  "gate_cpu_seconds": 1.31,
+  "peak_process_tree_rss_kib": 850064,
+  "named_axiom_output": {
+    "LogicLineages.PersistentMarking.ConditionalTowerCofinality.conditionalTowerIncreasing": [
+      "propext"
+    ],
+    "LogicLineages.PersistentMarking.ConditionalTowerCofinality.conditionalTowerSupremum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.ConditionalTowerCofinality.conditionalTowerCofinality": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "verification": "One exact bounded Lean gate with focused source correspondence, no duplicate artifact replay.",
+  "profile": {
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "source_pins": {
+    "formalization/LogicLineages/PersistentMarking/ConditionalTowerCofinalityTargets.lean": "3d850d603dfe1018ae254f853de31b3978445f60a88666f9cccac9ad79014fa7",
+    "formalization/LogicLineages/PersistentMarking/ConditionalTowerCofinalityProof.lean": "30a9a2f9ba78af962ad7c9ce344b8214d61dcc178f6207d5e0826bfaba188261",
+    "formalization/verification/local-fable-pair-2026-11-22-round4/root/P16-CONDITIONAL-TOWER-COFINALITY-SOURCE-MAP.md": "637583f6fb5f48d6aa46a3694307f97af0c909a0eab0b7a640dbb2c0b64199a2"
+  }
+}

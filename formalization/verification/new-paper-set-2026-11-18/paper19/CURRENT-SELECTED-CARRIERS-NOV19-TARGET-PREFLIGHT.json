@@ -1,0 +1,55 @@
+{
+  "status": "exact current source comparator target-only preflight PASS; proof not yet natively attempted or accepted",
+  "ticket": "CARRIERS-TARGET-0833",
+  "exit_code": 0,
+  "reaped": true,
+  "receipt": "build-reports/1795077154188155530-2.json",
+  "receipt_sha256": "33a53c5210c5e5f271f82312337c29f09e590ae0f47b2701da0dcd14524e989e",
+  "profile": {
+    "requested": [
+      "LogicLineages.ControlSensitivityCurrent.CurrentSelectedCarriersTargets"
+    ],
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "core_only_profile": false,
+    "single_thread": true,
+    "threads": 1,
+    "upstream_cache_only": true,
+    "calculator_objects_borrowed": true
+  },
+  "closure_count": 143,
+  "pin_count": 26,
+  "freeze": "verification/new-paper-set-2026-11-18/paper19/CURRENT-SELECTED-CARRIERS-FREEZE.json",
+  "freeze_sha256": "20520d67f80ffb5de489122b9209cef3598459d8ff599c8e6273634b051f5fc9",
+  "successful_native_rows": [
+    {
+      "module": "LogicLineages.ControlSensitivityCurrent.CurrentSelectedCarriersDefinitions",
+      "returncode": 0,
+      "seconds": 4.225,
+      "observed_cpu_seconds": 2.56,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 952860,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "c3740c6313c359a5af192355ee4c46aecff54da0ad83c3c2375ac608fbeaeaab",
+      "log": "build-reports/1795077154188155530-2-LogicLineages-ControlSensitivityCurrent-CurrentSelectedCarriersDefinitions.log"
+    },
+    {
+      "module": "LogicLineages.ControlSensitivityCurrent.CurrentSelectedCarriersTargets",
+      "returncode": 0,
+      "seconds": 1.458,
+      "observed_cpu_seconds": 1.38,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 977624,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "d6674c3e39104376013f0b194c06927b324299c18ad1c6d8ca87645defc20699",
+      "log": "build-reports/1795077154188155530-2-LogicLineages-ControlSensitivityCurrent-CurrentSelectedCarriersTargets.log"
+    }
+  ]
+}

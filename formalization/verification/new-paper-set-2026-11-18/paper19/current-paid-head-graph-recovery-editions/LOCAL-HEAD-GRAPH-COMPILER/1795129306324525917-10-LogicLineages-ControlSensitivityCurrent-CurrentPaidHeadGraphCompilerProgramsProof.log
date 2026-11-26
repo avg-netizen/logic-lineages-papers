@@ -1,0 +1,47 @@
+[diag] Diagnostics
+  [reduction] unfolded declarations (max: 634351, num: 14):
+    [reduction] Bool.decEq ↦ 634351
+    [reduction] dite ↦ 482473
+    [reduction] ite ↦ 255560
+    [reduction] Nat.sqrt ↦ 253742
+    [reduction] Nat.rec ↦ 126871
+    [reduction] Encodable.decode ↦ 4427
+    [reduction] Option.bind ↦ 3635
+    [reduction] Encodable.decodeSigma ↦ 1818
+    [reduction] Nat.unpair ↦ 1818
+    [reduction] Prod.rec ↦ 1817
+    [reduction] Part.ofOption ↦ 774
+    [reduction] PFun.lift ↦ 226
+    [reduction] Part.some ↦ 224
+    [reduction] Primrec ↦ 30
+  [reduction] unfolded reducible declarations (max: 761222, num: 13):
+    [reduction] Nat.casesOn ↦ 761222
+    [reduction] Decidable.casesOn ↦ 738033
+    [reduction] Bool.casesOn ↦ 634351
+    [reduction] Prod.fst ↦ 52387
+    [reduction] Option.casesOn ↦ 4443
+    [reduction] Prod.casesOn ↦ 1818
+    [reduction] Part.get ↦ 888
+    [reduction] OriginalInput ↦ 91
+    [reduction] KInput ↦ 71
+    [reduction] Part.Dom ↦ 49
+    [reduction] Selected ↦ 40
+    [reduction] Prod.snd ↦ 30
+    [reduction] Block ↦ 24
+  [type_class] used instances (max: 101, num: 4):
+    [type_class] Primcodable.prod ↦ 101
+    [type_class] Primcodable.finArrow ↦ 74
+    [type_class] Denumerable.nat ↦ 21
+    [type_class] Primcodable.ofDenumerable ↦ 21
+  [def_eq] heuristic for solving `f a =?= f b` (max: 197, num: 6):
+    [def_eq] Prod.fst ↦ 197
+    [def_eq] PFun.lift ↦ 70
+    [def_eq] Part.some ↦ 70
+    [def_eq] Part.get ↦ 67
+    [def_eq] Primrec ↦ 35
+    [def_eq] Part.Dom ↦ 21
+  use `set_option diagnostics.threshold <num>` to control threshold for reporting counters
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphCompilerProgramsProof.lean:132:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (400000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphCompilerProgramsProof.lean:165:8: error: (kernel) unknown constant '_private.LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraphCompilerProgramsProof.0.LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph.insertProgram'

@@ -1,0 +1,7 @@
+# Paper 17: one actual concrete count pair (supporting 735)
+
+The frozen target was independently source-matched in target-only receipt 1795275992466837127-3495, before proof authorship. The unchanged proof bytes passed fresh native receipt 1795283073564415891-4499 on the pinned toolchain and original caps. All 348 local modules and the sole declared check alias were independently source/object matched. The evidence ZIP passes integrity and the alias uses only propext, Classical.choice, and Quot.sound.
+
+The proof takes the actual two first-entry hits, strict raw-input order x<y, original full-core collision through the selected strictly monotone control, and a safe common bound paying both the inverse-table and gap-comparison thresholds. It proves the gap comparison rather than assuming the certificate sign. It constructs the unchanged-rank syntactic H with endpoint μQ+(λP−μP), proves the proper domain and first count with output norm y, and identifies the inverse-table hit with the rank-transfer count using actual first-entry uniqueness. It gives the natural addition, signed difference, exact fixed-entry membership, original lower operand actual count, and success of the genuine closed count reader at the same x. The syntax and max-tail calibrations are primitive-recursive with their exact canonical code equations.
+
+This is one original concrete pair. It is no arbitrary collision class, minimum or Finsupp surgery, strict charge descent, whole printed #702/#703 correspondence, or change to the numbered paper register.

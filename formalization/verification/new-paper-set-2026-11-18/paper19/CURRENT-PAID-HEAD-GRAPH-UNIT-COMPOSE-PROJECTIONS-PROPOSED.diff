@@ -1,0 +1,23 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean
+@@ -77,8 +77,9 @@
+   change (w+1,MatrixCode.both _ _) =
+     (w+1,MatrixCode.formula (.conj (renameFormula r q.matrix)
+       (rowFormula row (raw (.here : Variable Δ .ground)) (.literal 0) (raw (.there (shift w .here))))))
+-  simp only [hform,MatrixCode.formula,rowsExact,raw,MatrixCode.term,MatrixCode.raw,
+-    variableIndex,shiftedIndex,Nat.add_zero]
++  dsimp only [w] at hform ⊢
++  simp only [typedBlock,hform,MatrixCode.formula,rowsExact,raw,MatrixCode.term,MatrixCode.raw,
++    variableIndex,shiftedIndex,Nat.add_zero] <;> rfl
+ 
+ private theorem activeTable {Γ : List Ty} (b c : Nat) :
+     let Δ := .ground::.ground::WireCtx b (WireCtx c (.ground::Γ))
+@@ -117,7 +118,7 @@
+     · have he : variableIndex x ≠ b := by omega
+       simp only [h,he,if_true,if_false]
+     · by_cases he : variableIndex x=b
+-      · simp only [h,he,if_true,if_false,variableIndex]
++      · simp only [he,lt_irrefl,if_true,if_false,variableIndex]
+       · have hp : ¬ variableIndex x-1<b := by omega
+         simp only [h,he,hp,if_false]
+         omega

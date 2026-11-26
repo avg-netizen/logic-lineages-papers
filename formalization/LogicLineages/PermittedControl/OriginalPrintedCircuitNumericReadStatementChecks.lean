@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedCircuitNumericReadTargets
+import LogicLineages.PermittedControl.OriginalPrintedCircuitNumericReadCalibrationProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedNumericParserIdentity : OriginalPrintedCircuitNumericRead.ExactNumericParserAndIdentity :=
+  OriginalPrintedCircuitNumericRead.exactNumericParserAndIdentity
+
+theorem fixed_exactOriginalPrintedNumericGateRead : OriginalPrintedCircuitNumericRead.ExactNumericGateRead :=
+  OriginalPrintedCircuitNumericRead.exactNumericGateRead
+
+theorem fixed_fullOriginalPrintedCircuitNumericRead : OriginalPrintedCircuitNumericRead.FullOriginalPrintedCircuitNumericRead :=
+  ⟨fixed_exactOriginalPrintedNumericParserIdentity,fixed_exactOriginalPrintedNumericGateRead⟩
+
+#print axioms fixed_exactOriginalPrintedNumericParserIdentity
+#print axioms fixed_exactOriginalPrintedNumericGateRead
+#print axioms fixed_fullOriginalPrintedCircuitNumericRead
+
+end LogicLineages.PermittedControl.StatementChecks

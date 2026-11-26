@@ -1,0 +1,5 @@
+# Independent final acceptance: actual finite-context class addresses
+
+Source/target and all four candidate leaves were independently read before native release. The exact repaired proof was checked against the preserved failed draft with all36 authored/comparator pins unchanged except the approved proof repair. Native1565 passed; independent current recursive object/compiler/input-key/receipt and axiom review verifies178 modules,61 merged source pins and all5 exact aliases, errors0. Only standard foundations occur (codec needs propext/Quot.sound).
+
+The address is the literal finite nearest-first context, literal result type and actual least representative code. The admitted-address bit reflects original admitted classes; positive paths retain a common context/type and original positive RS, not cross-context edges or equality of missing codes. This is supporting infrastructure only: no arbitrary functional C, multiset extension, internal arithmetic/ID1 or whole numbered theorem is claimed. Register remains149 checked/18 pending.

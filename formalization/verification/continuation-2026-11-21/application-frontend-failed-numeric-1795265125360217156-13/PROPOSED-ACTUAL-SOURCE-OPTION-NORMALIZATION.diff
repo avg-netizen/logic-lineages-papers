@@ -1,0 +1,60 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseApplicationFrontendNumericSourceProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseApplicationFrontendNumericSourceProof.lean
+@@ -64,21 +64,49 @@
+     rcases de with ⟨dom,cod⟩
+     obtain ⟨_,shapeF,arrowF,ctxF,_,leastF,domainF,codomainF⟩ := exactCoordinates f g ft fk dom cod fv ar
+     have output := exact_AllInputApplicationOutputCore s least cal (pack g) dom cod fk uk y
+-    simp only [shapeF,shapeU,arrowF,ctxF,ctxU,domainF,resultU,codomainF,leastF,leastU,output,
+-      outputWithView s fv,graph,application,fv,uv,Option.bind_some,applyAddresses,ar,fc,uc,
+-      Bool.true_and,true_and]
++    let selected := (NumberedWindowScalarAlgorithm.least s g cod (packNode 6 [dom,cod,fk,uk])).map
++      (fun k => packNode 3 [pack g,cod,k])
++    have sourceViews : application s f u = applyAddresses s (g,ft,fk) (d,ut,uk) := by
++      unfold application
++      rw [fv]
++      change ((addressView u).bind fun a => applyAddresses s (g,ft,fk) a) = _
++      rw [uv] <;> rfl
++    have sourceArrow : applyAddresses s (g,ft,fk) (d,ut,uk) =
++        if (g == d) && (dom == ut) then selected else none := by
++      unfold applyAddresses
++      change (arrowView ft).bind (fun a => match a with
++        | (m,n) => if canonical s (g,ft,fk) && canonical s (d,ut,uk) && (g == d) && (m == ut) then
++            (NumberedWindowScalarAlgorithm.least s g n (packNode 6 [m,n,fk,uk])).map
++              (fun k => packNode 3 [pack g,n,k])
++          else none) = _
++      rw [ar]
++      change (if canonical s (g,ft,fk) && canonical s (d,ut,uk) && (g == d) && (dom == ut)
++        then selected else none) = _
++      simp only [fc,uc,Bool.true_and]
++    have outValue : originalOutput s (pack g) dom cod fk uk = selected :=
++      outputWithView s fv dom cod uk
++    have oneBit (b : Bool) : b.toNat = 1 ↔ b = true := by cases b <;> simp
++    simp only [shapeF,shapeU,arrowF,ctxF,ctxU,domainF,resultU,codomainF,leastF,leastU,
++      output,outValue,oneBit,graph,sourceViews,sourceArrow]
+     have packed := packedEq fv uv
+     by_cases sc : g = d
+     · have scb : (g == d) = true := by simp [sc]
+       by_cases td : dom = ut
+       · have tdb : (dom == ut) = true := by simp [td]
+-        simp only [scb,tdb,Bool.true_and,if_true,packed,sc,td,true_and]
+-        cases h : (NumberedWindowScalarAlgorithm.least s g cod (packNode 6 [dom,cod,fk,uk])).map
+-            (fun k => packNode 3 [pack g,cod,k]) == some y <;> simp [h]
++        rw [scb,tdb]
++        change (1 = 1 ∧ (1 = 1 ∧ (1 = 1 ∧ (pack g = pack d ∧
++          (dom = ut ∧ (selected == some y) = true))))) ↔ (selected == some y) = true
++        exact ⟨fun ⟨_,_,_,_,_,h⟩ => h, fun h => ⟨rfl,rfl,rfl,packed.mpr sc,td,h⟩⟩
+       · have tdb : (dom == ut) = false :=
+           Bool.eq_false_iff.mpr (fun h => td (eq_of_beq h))
+-        simp [scb,tdb,packed,td]
++        rw [scb,tdb]
++        change (1 = 1 ∧ (1 = 1 ∧ (1 = 1 ∧ (pack g = pack d ∧
++          (dom = ut ∧ (selected == some y) = true))))) ↔ (false : Bool) = true
++        exact ⟨fun ⟨_,_,_,_,h,_⟩ => False.elim (td h),fun h => nomatch h⟩
+     · have scb : (g == d) = false := Bool.eq_false_iff.mpr (fun h => sc (eq_of_beq h))
+-      simp [scb,packed,sc]
++      rw [scb]
++      change (1 = 1 ∧ (1 = 1 ∧ (1 = 1 ∧ (pack g = pack d ∧
++        (dom = ut ∧ (selected == some y) = true))))) ↔ (false : Bool) = true
++      exact ⟨fun ⟨_,_,_,h,_,_⟩ => False.elim (sc (packed.mp h)),fun h => nomatch h⟩
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowInternalSparseApplicationFrontendNumericSourceProof

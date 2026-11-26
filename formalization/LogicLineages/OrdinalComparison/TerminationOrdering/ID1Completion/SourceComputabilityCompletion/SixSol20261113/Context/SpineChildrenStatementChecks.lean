@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.SpineChildrenProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.SpineChildrenStatementChecks
+theorem exactOrdinary : SpineChildrenTargets.ActualOrdinary := SpineChildrenProof.actualOrdinary
+theorem exactNumbered : SpineChildrenTargets.ActualNumbered := SpineChildrenProof.actualNumbered
+theorem exactCons : SpineChildrenTargets.ActualCons := SpineChildrenProof.actualCons
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.SpineChildrenStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.SpineChildrenStatementChecks

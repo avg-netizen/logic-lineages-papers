@@ -1,0 +1,47 @@
+{
+  "status": "Accepted original-ascending-range exact2",
+  "accepted_at_utc": "2026-11-15T21:17:08.001031+00:00",
+  "new_exact_contracts": 2,
+  "supporting_contracts_total": 700,
+  "cumulative_new_contracts_20261115": 196,
+  "numbered_register": "175 checked,2 inherited,12 pending /189 unchanged",
+  "native_receipt": "1794777246697667644-6",
+  "native_source_matched_modules": 3809,
+  "named_standard_axiom_audits": {
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalAscendingRange.StatementChecks.exactMembership": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalAscendingRange.StatementChecks.exactNative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "source_pins": {
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalAscendingRange/CoreProof.lean": "31fa29376959d72906d7403ab6bc7fa2356d5219b0b9fb6f873dba617a8f90b2",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalAscendingRange/Definitions.lean": "cda54b9428f2b2c2f68e9115d79eb6b8d76c9bb268054435275c5b44ddb3ff4d",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalAscendingRange/NativeProof.lean": "a4f4933bbcf7ad79f9b749a330e27b8f987d9e8b51def79bf6a966027771af27",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalAscendingRange/Preflight.lean": "39c78e787c0189026703b86da2d1939ed3ec2ea0011f90460f3994dab289f1e4",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalAscendingRange/Proof.lean": "00fa6d1b348ea8c8a3edfb89471c21d66d9df124a475cf2589486667db7edbc8",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalAscendingRange/StatementChecks.lean": "765c5f4630503feb29c96878d79b0999d2edcdfa663948214d2f175ea5fa20b6",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalAscendingRange/SupportProof.lean": "f0f5c579b923d8862da03222504680e39513deae1c17786b61efaa29962e8ae5",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalAscendingRange/SyntaxProof.lean": "47a53eca4f6ceeff92bfd3ff118ba39f495711ef83a09469217c3b1d89a3fccc",
+    "LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalAscendingRange/Targets.lean": "6edaceea5e5f899500d8ff08d042672884639024ad938c084483ded78bac86ef"
+  },
+  "independent_evidence": {
+    "path": "formalization/verification/continuation-2026-11-15/P6/REVIEW-EVIDENCE-50.json",
+    "sha256": "3a9ffda91773f88d209f8afeb15227589f958d2daae7b59c9739142090e8883c",
+    "bytes": 9767502
+  },
+  "semantic_review": [
+    "Literal recursion starts at empty0 and appends singleton index at the right; native theorem uses actual Encodable List Nat and ascending List.range, retaining zero as an element.",
+    "Internal result is bidirectional membership iff strictLess for every actual graph output and arbitrary raw index, without decoded image or supplied length premises.",
+    "Base derives empty membership impossibility and nothing below zero. Successor recovers actual previous/singleton/append observations and transports unique range output.",
+    "Forward membership splits actual append into previous or singleton; reverse strict-successor split constructs previous or singleton membership, then actual append membership.",
+    "Quantified output/index row uses ordinary internal PA induction with substitution/renaming identities; native calibration is not reflected into the internal theorem.",
+    "All six failed/unrun snapshots independently rehashed (31,24,16,29,1,10 entries); only bounded namespace/codec arithmetic repairs, unchanged limits/target.",
+    "Full eight-block enumeration, opened-bound recursion and Q remain unpaid."
+  ]
+}

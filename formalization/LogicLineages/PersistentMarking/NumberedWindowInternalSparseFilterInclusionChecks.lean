@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFilterInclusionTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFilterInclusionInductionProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseFilterInclusionChecks
+open NumberedWindowInternalSparseFilterInclusionTargets
+open NumberedWindowInternalSparseFilterInclusionInductionProof (inclusion)
+
+theorem exact_DirectedPassInclusion : ExactDirectedPassInclusion := inclusion
+
+#print axioms exact_DirectedPassInclusion
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseFilterInclusionChecks

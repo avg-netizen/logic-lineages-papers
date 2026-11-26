@@ -1,0 +1,15 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveChosenConsFinishProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveChosenConsChecks
+open NumberedWindowInternalSparsePositiveChosenConsTargets
+
+theorem exact_OpenChosenStateCons : OpenChosenStateCons :=
+  NumberedWindowInternalSparsePositiveChosenConsStateProof.stateCons
+theorem exact_OpenFinishCons : OpenFinishCons :=
+  NumberedWindowInternalSparsePositiveChosenConsFinishProof.finishCons
+
+#print axioms exact_OpenChosenStateCons
+#print axioms exact_OpenFinishCons
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveChosenConsChecks

@@ -1,0 +1,27 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalGuardedRankTraversalProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalGuardedRankSelectionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalGuardedRankCompletionProof
+open OriginalFinalGuardedRankTargets
+
+theorem actualOriginalFinalGuardedTraversalRank :
+    ActualOriginalFinalGuardedTraversalRank :=
+  OriginalFinalGuardedRankTraversalProof.actualOriginalFinalGuardedTraversalRank
+
+theorem actualOriginalFinalGuardedFoldRank : ActualOriginalFinalGuardedFoldRank := by
+  intro p H G W
+  exact OriginalFinalGuardedRankFoldProof.foldRank p H G W
+    (actualOriginalFinalGuardedTraversalRank p H G W)
+
+theorem actualOriginalFinalGuardedObjectRank : ActualOriginalFinalGuardedObjectRank := by
+  intro p H G W
+  exact OriginalFinalGuardedRankObjectProof.objectRank p H G W
+    (actualOriginalFinalGuardedFoldRank p H G W)
+
+theorem actualOriginalFinalGuardedRankSelection : ActualOriginalFinalGuardedRankSelection :=
+  OriginalFinalGuardedRankSelectionProof.selection actualOriginalFinalGuardedTraversalRank
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalGuardedRankCompletionProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalGuardedRankCompletionProof

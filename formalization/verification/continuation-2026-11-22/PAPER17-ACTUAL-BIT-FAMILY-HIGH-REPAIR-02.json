@@ -1,0 +1,70 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "97abe49626720971b6bd2a6a31d328f3faef34d1",
+  "failed_source_local_commit": "a10e563c8151391ee7d8b92fce0e00691170ce52",
+  "failed_source_tree": "8fa5f7a8aadab3fffa88aac4d3d4adbe909288fb",
+  "failed_exact_gate_receipt": "1795371887751893475-10",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualBitFamilyHighStatementChecks",
+  "failed_receipt_sha256": "a30f01918dccd95e79721a69245e04f40553cb6ff57be37a25a018a6f53a21e4",
+  "failed_exact_module_log_sha256": "7161b321c68947e3ae941573675ad410f51d84cb8749a64b45714c13246ee3a7",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualBitFamilyHighUniformProof.lean:87:21: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  if k \u2208 (coordinates family).toList then ?m.76 else ?m.77\nin the target expression\n  Function.update lower greatest z (rename p k) =\n    if k \u2208 names family then Function.update lower (top p) z (rename p k) else outside k\n\nf : \u2115 \u2192 \u2115\nB : \u2115\nchosen : SelectedWithThreshold f B\nfamily : Family\np : Pattern\ngood : ValidChart family p\nlower outside : \u2115 \u2192 \u2115\nC : \u2115 := cutoff B family\ngreatest : \u2115 := top p\nchart :\n  OriginalPrintedTerminalBitClauses.ClauseHolds f lower (lowerChart C greatest) \u2194 LowerChartCondition C greatest lower\ndecode :\n  Holds f lower (ActualGuardedResidualBitFamily.reifyFamily C greatest (outputs B family p)) \u2194\n    \u2203 out \u2208 outputs B family p, OriginalPrintedHighResidual.GuardedAccepts f lower C greatest out\nfunded : LowerChartCondition C greatest lower\nz : \u2115\nwithin : seed C p lower \u2264 z\nsetup :\n  OriginalRankedLiteralClauseHigh.OriginalSetup B p.1 (top p) lower (ranked p family) \u2227\n    \u2200 (z : \u2115),\n      seed (cutoff B family) p lower \u2264 z \u2192\n        OriginalRankedLiteralClauseHigh.highMinimum B p.1 (top p) lower (ranked p family) \u2264 z\nk : \u2115\nused : k \u2208 coordinates family\n\u22a2 Function.update lower greatest z (rename p k) =\n    if k \u2208 names family then Function.update lower (top p) z (rename p k) else outside k\n",
+  "failed_original_native_log_sha256": "3725391de444de50cda30607bd4bce5bad6b015ce8d8d624c994e95e8ddc258e",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualBitFamilyHighUniformProof.lean",
+  "failed_proof_sha256": "1d847802cbaf55c3659aae39d60cb33219cdc1bc47fbc350207e350727a1015d",
+  "repaired_proof_sha256": "92ab046410d6b0c1aa22df6fe8b23caea60bbc3a96332abae792f03f1a025df0",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-HIGH-REPAIR-02.patch",
+  "patch_sha256": "9067bd950dfe09108b7a8da23749e79f997f0d1f77878fa9ed472b235586f658",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-HIGH-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "88045ce40dc9f9e44b48be0780ed88e9259e91556fffd5cebdcea6f155e62ca6",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-HIGH-REPAIR-01.json": "067faa6fe5fb05c251b9ba8f2a6bee85c4bfdbddf07dbfc38e862ae9fa3d76ef"
+  },
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyHighDimensionProof.lean": "927527d94133ef6f9d1e1ce3a3b40ce0d0eca8fcced8298217d7e0c48d2d94a4",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyHighExistentialProof.lean": "ad14b334d2b09dbd14cd8cb28d924adef16b6133b97540aa46975b87edffdd5f",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyHighRankProof.lean": "c7bad0aed83dd5487b1e8297a0eec6cf6cec3170b749b66970a59fb82ecee41b",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyHighSetupProof.lean": "bc8dab40bebe1fa759256cca33aa8186f9f6bbe1fc1002fb8092043ee34b0b30",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyHighStatementChecks.lean": "6a3cc2127f6847aeaf18071032ccc3eecabafbd34fcb04265cb21392efdd5f77",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyHighTargets.lean": "fd63d71655ebfd30b9a118977ed2c7d402301f30d59fb73bb7783618c2504b99",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-HIGH-SOURCE-MAP.md": "c75a62d7d1f015993d2f2429be926dcbeced7dc1258e56a5b3ff1b17f273318d"
+  },
+  "static_module_closure": {
+    "DimensionProof": {
+      "local": 791,
+      "external": 44,
+      "contains_totient": false
+    },
+    "ExistentialProof": {
+      "local": 792,
+      "external": 44,
+      "contains_totient": false
+    },
+    "RankProof": {
+      "local": 513,
+      "external": 43,
+      "contains_totient": false
+    },
+    "SetupProof": {
+      "local": 514,
+      "external": 43,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 794,
+      "external": 44,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 313,
+      "external": 35,
+      "contains_totient": false
+    },
+    "UniformProof": {
+      "local": 790,
+      "external": 44,
+      "contains_totient": false
+    }
+  },
+  "scope": "Type exact membership using the original names alias before rewriting real raw reconstructed valuation. No target/import change or altered chart/source domain."
+}

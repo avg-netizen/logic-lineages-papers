@@ -1,0 +1,20 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryTupleOrderProof.lean:63:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ((List.attach ?ds).zip ?pairs).all fun p => ?f (p.fst.val, p.snd)
+in the target expression
+  ((p.val.fst.attach.zip (vs.zip ws)).all fun q => (descriptor E q.fst.val).le Δ q.snd.fst q.snd.snd) = true ↔
+    ValuesLE E Δ p.val.fst vs ws
+
+E : Environment
+σ : Ty
+Δ : Context
+p : Prefix σ
+xs ys : List Nat
+vs ws : List Code
+hx : tupleDecode σ (canonicalLower E σ) Δ p xs = some vs
+hy : tupleDecode σ (canonicalLower E σ) Δ p ys = some ws
+hv : HereditaryDomainSemantics.values E Δ p.val.fst xs = some vs
+hw : HereditaryDomainSemantics.values E Δ p.val.fst ys = some ws
+hvl : p.val.fst.length = vs.length
+hwl : p.val.fst.length = ws.length
+⊢ ((p.val.fst.attach.zip (vs.zip ws)).all fun q => (descriptor E q.fst.val).le Δ q.snd.fst q.snd.snd) = true ↔
+    ValuesLE E Δ p.val.fst vs ws

@@ -1,0 +1,1 @@
+Wind-down receipt build-reports/1794546256819318568-9.json. CountedPrefixSyntax now passed and is immutable. ONLY Query released: qualify/open existing InternalApplicationCertificateConstructorsSupportProof.binaryRecover, used at its three unchanged actual query graph boundaries. No formula/target/proof-body change; other5 source bytes unchanged.

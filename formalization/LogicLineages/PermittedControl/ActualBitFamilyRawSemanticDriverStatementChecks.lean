@@ -1,0 +1,19 @@
+module
+public import LogicLineages.PermittedControl.ActualBitFamilyRawSemanticDriverTargets
+import LogicLineages.PermittedControl.ActualBitFamilyRawSemanticDriverStepProof
+import LogicLineages.PermittedControl.ActualBitFamilyRawSemanticDriverFuelProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualBitFamilyRawSemanticDriver
+
+theorem fixed_exactSemanticDriverStep : ExactSemanticDriverStep := exactSemanticDriverStep
+theorem fixed_exactSemanticDriverSolve : ExactSemanticDriverSolve := exactSemanticDriverSolve
+theorem fixed_fullActualBitFamilyRawSemanticDriver : FullActualBitFamilyRawSemanticDriver :=
+  ⟨fixed_exactSemanticDriverStep,fixed_exactSemanticDriverSolve⟩
+
+#print axioms fixed_exactSemanticDriverStep
+#print axioms fixed_exactSemanticDriverSolve
+#print axioms fixed_fullActualBitFamilyRawSemanticDriver
+
+end LogicLineages.PermittedControl.StatementChecks

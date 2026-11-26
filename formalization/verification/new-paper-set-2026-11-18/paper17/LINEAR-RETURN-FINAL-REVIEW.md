@@ -1,0 +1,5 @@
+# Independent final: actual linear return
+
+Approved supporting exact endpoint. Independent read-only recursive evidence exactly matches:186 source-matched modules, zero errors, standard-only fixed_actualLinearReturn. Native1794988170240514563-5 first pass; three frozen pins unchanged. No compilation performed.
+
+Read actual proof. Arbitrary initial finite tails are recovered from genuine limit-part interval decomposition. Checked linear_entry at the actual positive-limit mu+P proves the precise first hit k, including k=0, without restrictions on the offset beyond its stated ordinal bound. The hit remains nonfinite, so actual trajectory norm gives f^[k](t); the genuine target interval's finite tail and ordinal left cancellation yield relative limit P. Both synchronized copies use the same k/t. Explicit frozen affordability is not weakened; the internal proof is stronger and does not need it. No count/hit/reset is supplied as an oracle. This is not initial peeling or full equal-gap acceptance.

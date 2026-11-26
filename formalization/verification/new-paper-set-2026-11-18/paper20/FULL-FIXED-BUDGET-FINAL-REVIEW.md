@@ -1,0 +1,9 @@
+# Full fixed-budget final review
+
+APPROVED for complete current20 lem:fixed. Independent read-only verification exactly reconciles 81 modules, zero errors and standard-only complete alias, full native 1794998431578597392-2. All seven frozen hashes match; target preflight 1794998424269753408-2 and fresh source bridge do not substitute for semantic review.
+
+Read exact source/targets and NumericalFixedBudget, ConstantBudgetCount/Facts, PolynomialPartition/PolynomialOrdinal and PrefixTraceBasic/General/Source proofs. Actual exact-norm predecessor membership is proved from bounded ordinal predecessors. Equal norm forbids a strict drop within the same finite-tail interval. Saturated genuine maximum predecessor then decomposes that finite set as the greatest state plus precisely the residual set below its limit part; well-founded count recursion counts each state once, including the final finite one.
+
+The partition correspondence is an actual bijection: literal polynomial CNF notes have weighted norm, normality and bound, coefficient injectivity and complete reconstruction of every ordinal below omega^d. Nat.card is transported across this bijection, not replaced by a recurrence axiom. Finite input tail removal is proved for the actual limit part. Numerical proof is stronger than printed affordability assumptions but the frozen endpoint retains them.
+
+Retained-prefix trace uses actual CNF least-exponent divisibility, norm addition and genuine prefix maximum splitting. Induction follows actual controlled states through the first-finite count; actual nonfinite preservation excludes earlier entry and the terminal state has a finite suffix. Positive count follows actual nonfinite input. This does not claim global termination of a nonzero retained prefix. All finite tails, arbitrary numerical mass and d=1 remain included. No growing-budget transfer or partition-period credit.

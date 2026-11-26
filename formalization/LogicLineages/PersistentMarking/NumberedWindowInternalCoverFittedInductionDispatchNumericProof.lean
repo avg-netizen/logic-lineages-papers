@@ -1,0 +1,26 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalCoverFittedInductionDispatchTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverRefinedSharedSyntaxNumericProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverNamedLeafMeasureNumericProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverNamedResultNumericProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSettingsGrammarGuardNumericProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverFittedInductionDispatchNumericProof
+open NumberedWindowInternalSettingsGrammarGuardDefinitions (refitGuard)
+open NumberedWindowInternalCoverRefinedSharedSyntaxNumericProof (exact_CoverRefinedSharedSyntax)
+open NumberedWindowInternalCoverNamedLeafMeasureNumericProof (exact_CoverNamedLeafSharedMeasure)
+open NumberedWindowInternalCoverNamedResultNumericProof (exact_CoverNamedResultWindowCalibrated)
+open NumberedWindowInternalSettingsGrammarGuardNumericProof (exact_SettingsRefitGuardCalibration)
+open NumberedWindowInternalCoverFittedInductionDispatchTargets
+
+theorem exact_CoverFittedInductionPrograms : ExactCoverFittedInductionPrograms := by
+  intro s V TV M B TW incl hv ht hm hb htw P
+  exact ⟨exact_CoverRefinedSharedSyntax V TV hv ht,exact_CoverNamedLeafSharedMeasure M hm,
+    exact_CoverNamedResultWindowCalibrated s B (refitGuard s TW) incl hb
+      (exact_SettingsRefitGuardCalibration s TW incl htw)⟩
+
+#print axioms exact_CoverFittedInductionPrograms
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalCoverFittedInductionDispatchNumericProof

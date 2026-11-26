@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.ActualSymbolicPredecessorProjectionTargets
+import LogicLineages.PermittedControl.ActualSymbolicPredecessorProjectionGuardProof
+import LogicLineages.PermittedControl.ActualSymbolicPredecessorProjectionProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualSymbolicPredecessorProjection
+
+theorem fixed_exactSymbolicPredecessorGuard : ExactSymbolicPredecessorGuard := exactSymbolicPredecessorGuard
+theorem fixed_exactSymbolicPredecessorAppend : ExactSymbolicPredecessorAppend := exactSymbolicPredecessorAppend
+theorem fixed_exactSymbolicPredecessorProjection : ExactSymbolicPredecessorProjection :=
+  exactSymbolicPredecessorProjection
+theorem fixed_fullActualSymbolicPredecessorProjection : FullActualSymbolicPredecessorProjection :=
+  ⟨fixed_exactSymbolicPredecessorGuard,fixed_exactSymbolicPredecessorAppend,fixed_exactSymbolicPredecessorProjection⟩
+
+#print axioms fixed_exactSymbolicPredecessorGuard
+#print axioms fixed_exactSymbolicPredecessorAppend
+#print axioms fixed_exactSymbolicPredecessorProjection
+#print axioms fixed_fullActualSymbolicPredecessorProjection
+
+end LogicLineages.PermittedControl.StatementChecks

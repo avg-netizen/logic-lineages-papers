@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualPaidTerminalSignNormalizationTargets
+import LogicLineages.PermittedControl.ActualPaidTerminalSignNormalizationProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualPaidTerminalSignNormalization :
+    ActualPaidTerminalSignNormalization.ExactActualPaidTerminalSignNormalization :=
+  ActualPaidTerminalSignNormalization.exactActualPaidTerminalSignNormalization
+
+#print axioms fixed_actualPaidTerminalSignNormalization
+
+end LogicLineages.PermittedControl.StatementChecks

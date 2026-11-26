@@ -1,0 +1,19 @@
+--- LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean original
++++ LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/BoundVariableArithmeticProof.lean R1
+@@ -19,7 +19,7 @@
+  rw [hgap] at hadd
+  obtain ⟨hcancel⟩ := HistoryDifference.ArithmeticProof.differenceCancel n p dtag hd ctx
+   (Term.numeral index.val) (.succ (Term.numeral gap))
+- have hc := Logic.callCongruence (GorbowPRNumeralCalculation.Theory p) dtag
++ have hc := Logic.callCongruence (ctx := ctx) (GorbowPRNumeralCalculation.Theory p) dtag
+   (Term.numeral index.val ::ᵥ Term.numeral depth ::ᵥ nil)
+   (Term.numeral index.val ::ᵥ .add (Term.numeral index.val) (.succ (Term.numeral gap)) ::ᵥ nil) (fun i => by
+    cases i using Fin.cases with
+@@ -39,6 +39,6 @@
+   (a ::ᵥ Encodable.encode xs ::ᵥ nil) ctx
+  rw [HistoryCodec.NativeProof.nativeConsAllVectors] at h
+  simpa only [HistoryLookup.consCall,HistoryLookup.NativeProof.encodeCons,List.Vector.map_cons,List.Vector.map_nil,
+-  List.Vector.head_cons,List.Vector.tail_cons] using (show Nonempty _ from ⟨h⟩)
++  List.Vector.head_cons,List.Vector.tail_cons,Encodable.encode_nat] using (show Nonempty _ from ⟨h⟩)
+ end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FullFormulaInstantiationValidity.BoundVariableArithmeticProof
+ #audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FullFormulaInstantiationValidity.BoundVariableArithmeticProof

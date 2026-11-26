@@ -1,0 +1,7 @@
+# Independent TargetVisit final review
+
+Approved supporting SynchronizedTargetVisits only. Native 1794983841685299807-8; independent read-only recursive evidence exactly equals author packet: 165 current-source modules, zero errors, fixed_synchronizedTargetVisits standard-only. Five frozen pins unchanged. No compiler invoked.
+
+Read actual proof and helper actual_entry_reset_continuation. Actual entry existence and exact norm orbit come from affordable state entry, including rho=sigma/event zero without a proper-interval restriction. Relative target guard uses antitone absolute trajectory, actual ordinal subtraction/reconstruction, nonfinite decomposition and first-hit minimality; it proves limit>=rho and equality precisely at hit, not an assumed no-skip predicate. Unequal derived hits produce actual divergence at min(i,j) with both still above rho. Equal hits reset both actual states by interval finite tail plus exact norm subtraction. The additional internal continuation lemma genuinely rewrites iteration i+k to k steps from this reset using iterate composition; no control or clock is replaced.
+
+This pays actual target admission and shared-clock reset support. Full thick-block application still must discharge source CNF/tail affordability, updated residue/modulus/B thresholds, within-block separation and any normalization needed for its initial arbitrary later phase. No thick/equal-gap numbered promotion. Preserved proof-only conv_lhs repair does not change targets. No full-root/upstream build/CI claim.

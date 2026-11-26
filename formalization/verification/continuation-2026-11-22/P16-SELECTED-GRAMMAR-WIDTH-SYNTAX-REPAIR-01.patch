@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarWidthSyntaxProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarWidthSyntaxProof.lean
+@@ -109 +109,5 @@
+-  simp only [compared,impSubst,conjunctionSubst,observedSubst,pairInclusion,axisSubst]
++  unfold compared
++  rw [impSubst,conjunctionSubst]
++  rw [observedSubst d H K m (w 0) (w 1) (w 2) ts,
++    observedSubst d H K M (w 3) (w 4) (w 5) ts]
++  simp only [pairInclusion,conjunctionSubst,axisSubst]

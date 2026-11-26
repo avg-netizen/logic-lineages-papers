@@ -1,0 +1,20 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroClassRecombinedRowTargets
+import LogicLineages.PermittedControl.ActualZeroClassRecombinedRowPartitionProof
+import LogicLineages.PermittedControl.ActualZeroClassRecombinedRowProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualZeroClassRecombinedRow
+
+theorem fixed_actualZeroClassResidualPartition : ExactResidualPartition := exactResidualPartition
+theorem fixed_actualZeroClassRecombinedRow : ExactRecombinedZeroClassRow := exactRecombinedZeroClassRow
+
+theorem fixed_fullActualZeroClassRecombinedRow : FullActualZeroClassRecombinedRow :=
+  ⟨fixed_actualZeroClassResidualPartition,fixed_actualZeroClassRecombinedRow⟩
+
+#print axioms fixed_actualZeroClassResidualPartition
+#print axioms fixed_actualZeroClassRecombinedRow
+#print axioms fixed_fullActualZeroClassRecombinedRow
+
+end LogicLineages.PermittedControl.StatementChecks

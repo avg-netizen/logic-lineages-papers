@@ -1,0 +1,40 @@
+{
+  "status": "single public import repair; native/axiom gate pending",
+  "failed_receipt": "1795343326394292236-8",
+  "failed_receipt_sha256": "fc2306ef9e1f78c9af6d35e493b8306c120abcac9d717864d60909870ad448e0",
+  "immutable_previous_commit": "f019feecd119e521317b76cfed375e024a1012c1",
+  "failed_diagnostic": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/scratch-memo-thin-lookup-repair02-diagnostic.txt": "762505cb2630b4d298cc0ac419a6dac11d14bc989c69296af87f606babe38ac1"
+  },
+  "failed_errors": [
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchMemoThinLookupTailProof.lean:26:37: error(lean.unknownIdentifier): Unknown identifier `graph1`",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchMemoThinLookupTailProof.lean:44:37: error(lean.unknownIdentifier): Unknown identifier `graph1`"
+  ],
+  "diagnosis": "TailProof public theorem signatures need public visibility for existing graph1 definition. Add the exact generic ConstructorsDefinitions public import suggested by Lean. No project transitive closure change, new forbidden edges, proof-body, target or program edits.",
+  "changed_source": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchMemoThinLookupTailProof.lean",
+  "old_failed_source_sha256": "3fd8de587ea89b612ab554ec8de8edcb8bf04d40846dc6ef003b908a3e473d1b",
+  "new_source_sha256": "55e8c19ee88e1933a603d044af0e3c09226cf35aadd71775b4c1e5b0458d51ef",
+  "failed_source_archive": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalScratchMemoThinLookupTailProof-03.lean": "3fd8de587ea89b612ab554ec8de8edcb8bf04d40846dc6ef003b908a3e473d1b"
+  },
+  "zero_context_patch": {
+    "formalization/verification/continuation-2026-11-22/P16-SCRATCH-MEMO-THIN-LOOKUP-REPAIR-03.patch": "8bddde42e84e3846a753e3eef31236f116d11b1d169e556686b6b9bdf6874c95"
+  },
+  "inverse_exact_failed_bytes_verified": true,
+  "static_local_transitive_sets_unchanged": true,
+  "static_local_module_counts": {
+    "NumberedWindowInternalScratchMemoThinLookupTailProof": 1045,
+    "NumberedWindowInternalScratchMemoThinLookupChecks": 1103,
+    "NumberedWindowInternalChosenAuxMeasureMemoThinChecks": 1296
+  },
+  "unchanged_source_pins": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchMemoThinLookupSyntaxProof.lean": "ec6d9b65aac5faa9336e210cf2c077ab263846ea2ec7da4b515dcedb82e7b82d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchMemoThinLookupChecks.lean": "77b5e21d64ed65b44e916d954af80e91c1da3f99f6cea058447c97ba14aa63ca",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoOpenTableTargets.lean": "e53b6e993e5910ab798c3da3ae2c8c7be10c2b04b7a19d083ca0cc61ca04d57f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParser.lean": "6fe3c1842a72f153b11bcec7a0704dfe3967fd6567d1ee9f2032f41ad8faf321",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChosenAuxMeasureMemoTargets.lean": "607174508229abc31d9b45eeb9d048175eb94fd3564287abb1966c6614a53357",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChosenAuxMeasureMemoThinChecks.lean": "edd65b7c7cf7080be5c6f4cefff9846c380d8d22e4cd80bb3d03224063a43598",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/InternalApplicationCertificateConstructorsDefinitions.lean": "80b867bee7afd8709f0ef22199b83d644d15da9ef33935d65decda439ba5f603",
+    "formalization/verification/continuation-2026-11-22/P16-SCRATCH-MEMO-THIN-LOOKUP-REPAIR-02.json": "c28edd463504c23bfed38be2105dbbe80819c4919ee54c12b5116ab902f6b8c3"
+  }
+}

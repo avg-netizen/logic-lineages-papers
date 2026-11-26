@@ -1,0 +1,28 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.Definitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.FoldDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeValidityGuard.Definitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesRecursor.Definitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalStrongInductionDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.Entry
+open Continuation20261116 Continuation20261116.OriginalExchangeBoundsPreservation
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+open InternalTagArithmeticSyntaxProof (suc z)
+open Continuation20261114 Continuation20261115 Continuation20261116.OriginalExchangeBoundsPreservation
+/-- Actual original decoder admission permits the encoded rank to be
+identified with the fold over successfully extracted original argument entries. -/
+def fields {alpha : Type} (n : Nat) (raw param entries value : OTerm alpha) : Formula alpha :=
+  graph1 (OriginalCodeValidityGuard.check n) (suc z) raw ⊓
+  (graph2 ArgumentEntriesRecursor.extract (suc entries) raw param ⊓
+   graph1 (Fold.weighted rankWeight) value entries)
+def matrix {alpha : Type} (n : Nat) (raw : OTerm alpha) : Formula (alpha ⊕ Fin 3) :=
+  let x : Fin 3 → OTerm (alpha ⊕ Fin 3) := fun i => .var (.inr i)
+  (fields n (raw.relabel Sum.inl) (x 0) (x 1) (x 2)).imp
+    (graph1 rawRankCode (x 2) (raw.relabel Sum.inl))
+def AtRaw {alpha : Type} (n : Nat) (raw : OTerm alpha) : Formula alpha := InternalClosedPrograms.allBlock (matrix n raw)
+def predicate {alpha : Type} (n : Nat) : Formula (alpha ⊕ Fin 1) := AtRaw n (.var (.inr 0))
+def BelowRaw {alpha : Type} (n : Nat) (raw : OTerm alpha) : Formula alpha := InternalStrongInduction.below (predicate n) raw
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.Entry

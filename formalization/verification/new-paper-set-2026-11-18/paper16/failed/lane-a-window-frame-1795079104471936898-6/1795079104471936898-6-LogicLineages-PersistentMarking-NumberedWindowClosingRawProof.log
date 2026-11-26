@@ -1,0 +1,25 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowClosingRawProof.lean:33:24: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case first
+n : Name
+S : Spine.Signature
+K : List Ty
+q r q✝ r✝ : NTerm
+tail✝ : NArgs
+a✝ : RawStep S K q✝ r✝
+ih : ∀ (d : Nat), RawStep S K (closeAt n d q✝) (closeAt n d r✝)
+d✝ : Nat
+⊢ RawArgsStep S K (closeArgsAt n d✝ (NArgs.cons q✝ tail✝)) (closeArgsAt n d✝ (NArgs.cons r✝ tail✝))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowClosingRawProof.lean:34:24: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case later
+n : Name
+S : Spine.Signature
+K : List Ty
+q r : NTerm
+tail✝ target✝ : NArgs
+q✝ : NTerm
+a✝ : RawArgsStep S K tail✝ target✝
+ih : ∀ (d : Nat), RawArgsStep S K (closeArgsAt n d tail✝) (closeArgsAt n d target✝)
+d✝ : Nat
+⊢ RawArgsStep S K (closeArgsAt n d✝ (NArgs.cons q✝ tail✝)) (closeArgsAt n d✝ (NArgs.cons q✝ target✝))

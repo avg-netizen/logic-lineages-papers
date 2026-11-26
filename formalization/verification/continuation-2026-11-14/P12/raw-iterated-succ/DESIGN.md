@@ -1,0 +1,7 @@
+# Actual PR arbitrary-count successor congruence
+
+Fixed explicit unary state transition decodes original paired [t,u,cert], prepends successor token2 to both raw terms, and constructs EXACT nested two-MP certificate from RawSuccCongruence. Original MP constructor and original replacement/reflexivity line encodings remain fixed. PR iterator inputs [count,state], zero=state and successor=step(previous), no changed verifier cutoff.
+
+Exact2: internal state transition equation with no acceptance assumption; object-language arbitrary-count induction preserving actual two validator facts and CORE acceptance at decoded runtime state. Same installed checker,index,fuel throughout; each step uses paid successor validity and actual two-MP result. No externally indexed induction or assumed acceptance at each step. Need genuine pair reconstruction for arbitrary state before applying constructor equation; this is original total numeric pairing, not a hidden list/domain assumption.
+
+This is unbounded symbolic certificate-building infrastructure, not full arithmetic evaluation or source/HB3 completion. Canonical addition evaluation still requires internal equality transitivity and genuine raw extraction of its embedded template term. Original logical annotation/reference rules must remain unchanged; no extra annotation/reference slot permitted. Existing numeral validity supplier is already paid and not duplicated. Later same-source installation must preserve all earlier capabilities.

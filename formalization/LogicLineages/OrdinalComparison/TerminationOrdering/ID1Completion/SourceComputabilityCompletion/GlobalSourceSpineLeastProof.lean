@@ -1,0 +1,65 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GlobalSourceSpineSuccessorProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.OuterCarrierProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.GuardCalibrationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GlobalSourceSpineLeastProof
+open FirstOrder Language Source PositiveArithmeticOperators InternalCalculus
+open InternalOriginalUniformDescentSelection (Data)
+open InternalComputabilityApplication InternalAccessibilityRules
+open InternalApplicationStepPeelSupportProof (andLeft andRight)
+open InternalTagArithmeticSyntaxProof (OTerm)
+open SourceComputabilityFormulaSupportProof
+open SourceComputabilityCompletion.TypedSpine
+open UniformCertificateCompletion
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+theorem least (oldSrc : SourcePresentation.Data) (oldComp : JointGammaComputability.Data)
+    (base : Data) (oldStep : Program 4) (window : Program 1) (oldVertex oldResult : Program 5)
+    (context : Nat) (hw : evaluate window (List.Vector.ofFn ![context]) = 1) (tau : Ty) :
+    let src := OuterSelection.source oldSrc oldComp base oldStep window
+    let comp := OuterSelection.computability oldComp base window oldVertex oldResult
+    ∀ (α : Type) (Gamma : List (Formula α)) (x mark depth : OTerm α),
+    Nonempty (Derivation (SourcePresentation.sourceBody src context) Gamma
+      (typed comp tau (numeral context) x)) →
+    Nonempty (Derivation (SourcePresentation.sourceBody src context) Gamma (marked x mark depth)) →
+    Nonempty (Derivation (SourcePresentation.sourceBody src context) Gamma (membership false x)) := by
+  dsimp only
+  intro α Gamma x mark depth ht hm
+  let selected := OuterSelection.data base window
+  let src := OuterSelection.source oldSrc oldComp base oldStep window
+  let comp := OuterSelection.computability oldComp base window oldVertex oldResult
+  apply GlobalSourceSpineStrongProof.fromRows comp context tau _ α Gamma x mark depth ht hm
+  intro β Delta next hb
+  apply GlobalSourceSpineRowsProof.row src comp context tau _ _ β Delta next hb
+  · intro γ Theta y hy
+    exact OuterCarrierProof.typedCarrier oldSrc oldComp selected oldStep
+      BottomRepresentative.bottomTest BottomSpineMeasure.measure window oldVertex oldResult
+      context hw tau y hy
+  · exact GlobalSourceSpineSuccessorProof.certificateLeast oldSrc oldComp base oldStep window
+      oldVertex oldResult context hw tau
+
+theorem windowEvaluation (n : Nat) (window : Program 1) (hw : Path.windowCalibrated n window)
+    (symbols : List (Fin n)) (S : List Ty) (table : Fin n → Fin n → Bool)
+    (hS : SubtypeClosed (fun tau => tau ∈ S)) :
+    evaluate window (List.Vector.ofFn ![OrdinaryArithmeticQuotient.contextCode symbols S table]) = 1 := by
+  rw [hw]
+  exact (GuardCalibrationProof.actualOriginalWindowCalibration n symbols S table).mpr hS
+
+theorem actualConcreteTypedSpineLeast : TypedSpineTargets.ActualConcreteTypedSpineLeast := by
+  intro n arity base hbase window hwindow oldSrc oldComp oldStep oldVertex oldResult
+  dsimp only
+  intro symbols S table hS
+  let context := OrdinaryArithmeticQuotient.contextCode symbols S table
+  have hw := windowEvaluation n window hwindow symbols S table hS
+  intro tau α Delta x mark depth
+  let src := OuterSelection.source oldSrc oldComp base oldStep window
+  let comp := OuterSelection.computability oldComp base window oldVertex oldResult
+  let H := typed comp tau (numeral context) x ⊓ marked x mark depth
+  have hh : Nonempty (Derivation (SourcePresentation.sourceBody src context) (H :: Delta) H) :=
+    ⟨Derivation.hypothesis List.mem_cons_self⟩
+  obtain ⟨h⟩ := least oldSrc oldComp base oldStep window oldVertex oldResult context hw tau
+    α (H :: Delta) x mark depth (andLeft hh) (andRight hh)
+  exact ⟨Derivation.implicationIntroduction h⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.GlobalSourceSpineLeastProof

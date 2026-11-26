@@ -1,0 +1,20 @@
+--- FULL03/Proof.lean
++++ FULL04/Proof.lean
+@@ -20,7 +20,7 @@
+    | succ i => cases i using Fin.cases with
+      | zero => exact .base (.logical (.reflexive raw))
+      | succ i => exact Fin.elim0 i
+-theorem nilFold {n ctx : Nat} (p : Program n) ftag ptag itag ltag rtag
++theorem nilFold {n ctx : Nat} (p : Program n) (ftag ptag itag ltag rtag : Nat)
+  (hf : (nodes p)[ftag]? = some ⟨3,foldCode⟩)
+  (hp : (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩)
+  (hi : (nodes p)[itag]? = some ⟨3,UniformClosedSubstitutionFold.iterator⟩)
+@@ -36,7 +36,7 @@
+  have hm := HistoryLookup.DestructorProof.unaryCallCongruence rtag _ _ (Logic.trans _ _ _ hc hz)
+  obtain ⟨hd⟩ := HistoryLookup.DestructorProof.decoderCrossPair p rtag ptag true hr hp .zero state
+  exact ⟨Logic.trans _ _ _ hb (Logic.trans _ _ _ hm hd)⟩
+-theorem consFold {n ctx : Nat} (p : Program n) ftag ptag ctag stag etag atag itag ltag rtag
++theorem consFold {n ctx : Nat} (p : Program n) (ftag ptag ctag stag etag atag itag ltag rtag : Nat)
+  (hf : (nodes p)[ftag]? = some ⟨3,foldCode⟩)
+  (hp : (nodes p)[ptag]? = some ⟨2,HistoryCodec.pair⟩)
+  (hc : (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩)

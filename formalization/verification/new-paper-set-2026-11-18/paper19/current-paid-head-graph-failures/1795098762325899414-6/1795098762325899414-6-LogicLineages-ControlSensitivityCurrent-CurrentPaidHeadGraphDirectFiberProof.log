@@ -1,0 +1,102 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphDirectFiberProof.lean:15:65: warning: Variable name `hΞ` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphDirectFiberProof.lean:82:15: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  slot ?fallback (variableIndex ?x)
+in the target expression
+  ν (slot z (variableIndex z)) = t
+
+p : Policy
+f : ℕ → ℕ
+hf : FullAddition.Targets.SourceGrowth f
+Γ : List Ty
+hg : ∀ σ ∈ Γ, σ = Ty.ground
+wrData : OpenGraph (Ty.ground :: Γ)
+δ nξ base : ℕ
+small points : List ℕ
+t y : ℕ
+r : OpenGraph (Ty.ground :: Γ) := wrData
+n : ℕ := directWidth r.width δ
+Ξ : List Ty := WireCtx n DirectCtx
+z : Variable Ξ Ty.ground := shift n Variable.here
+z' : Variable Ξ Ty.ground := shift n Variable.here.there
+hs : ∀ σ ∈ WireCtx n DirectCtx, σ = Ty.ground := groundWireCtx n DirectCtx directGround
+hr : ∀ σ ∈ WireCtx r.width (Ty.ground :: Ty.ground :: Γ), σ = Ty.ground :=
+  groundWireCtx r.width (Ty.ground :: Ty.ground :: Γ) (groundCons (groundCons hg))
+hlen : Ξ.length = n + 2
+hi : variableIndex z = n
+hi' : variableIndex z' = n + 1
+hframe : ∀ i < Ξ.length, rayPlacement r.width i < Ξ.length
+hcopy :
+  ∀ (ν : Variable Ξ Ty.ground → ℕ) (w : ℕ → ℕ),
+    (∀ i < Ξ.length, ν (slot z i) = w i) →
+      SourceAST.Formula.eval p f ν (direct hg δ nξ base small points r).matrix =
+        directBody (evalLayout f w) r.width δ nξ base small points
+          (SourceAST.Formula.eval p f (byIndex fun i => w (rayPlacement r.width i)) r.matrix)
+ν : Variable (WireCtx (direct hg δ nξ base small points wrData).width DirectCtx) Ty.ground → ℕ
+he : ∀ (x : Variable DirectCtx Ty.ground), ν (shift (direct hg δ nξ base small points wrData).width x) = endValues t y x
+hm : SourceAST.Formula.eval p f ν (direct hg δ nξ base small points wrData).matrix = true
+w : ℕ → ℕ := fun i => ν (slot z i)
+⊢ ν (slot z (variableIndex z)) = t
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    z
+  has type
+    Variable Ξ Ty.ground
+  but is expected to have type
+    Variable (WireCtx (direct hg δ nξ base small points wrData).width DirectCtx) Ty.ground
+  in the application
+    slot z
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphDirectFiberProof.lean:86:16: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  slot ?fallback (variableIndex ?x)
+in the target expression
+  ν (slot z (variableIndex z')) = y
+
+p : Policy
+f : ℕ → ℕ
+hf : FullAddition.Targets.SourceGrowth f
+Γ : List Ty
+hg : ∀ σ ∈ Γ, σ = Ty.ground
+wrData : OpenGraph (Ty.ground :: Γ)
+δ nξ base : ℕ
+small points : List ℕ
+t y : ℕ
+r : OpenGraph (Ty.ground :: Γ) := wrData
+n : ℕ := directWidth r.width δ
+Ξ : List Ty := WireCtx n DirectCtx
+z : Variable Ξ Ty.ground := shift n Variable.here
+z' : Variable Ξ Ty.ground := shift n Variable.here.there
+hs : ∀ σ ∈ WireCtx n DirectCtx, σ = Ty.ground := groundWireCtx n DirectCtx directGround
+hr : ∀ σ ∈ WireCtx r.width (Ty.ground :: Ty.ground :: Γ), σ = Ty.ground :=
+  groundWireCtx r.width (Ty.ground :: Ty.ground :: Γ) (groundCons (groundCons hg))
+hlen : Ξ.length = n + 2
+hi : variableIndex z = n
+hi' : variableIndex z' = n + 1
+hframe : ∀ i < Ξ.length, rayPlacement r.width i < Ξ.length
+hcopy :
+  ∀ (ν : Variable Ξ Ty.ground → ℕ) (w : ℕ → ℕ),
+    (∀ i < Ξ.length, ν (slot z i) = w i) →
+      SourceAST.Formula.eval p f ν (direct hg δ nξ base small points r).matrix =
+        directBody (evalLayout f w) r.width δ nξ base small points
+          (SourceAST.Formula.eval p f (byIndex fun i => w (rayPlacement r.width i)) r.matrix)
+ν : Variable (WireCtx (direct hg δ nξ base small points wrData).width DirectCtx) Ty.ground → ℕ
+he : ∀ (x : Variable DirectCtx Ty.ground), ν (shift (direct hg δ nξ base small points wrData).width x) = endValues t y x
+hm : SourceAST.Formula.eval p f ν (direct hg δ nξ base small points wrData).matrix = true
+w : ℕ → ℕ := fun i => ν (slot z i)
+h0 : w n = t
+⊢ ν (slot z (variableIndex z')) = y
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    z
+  has type
+    Variable Ξ Ty.ground
+  but is expected to have type
+    Variable (WireCtx (direct hg δ nξ base small points wrData).width DirectCtx) Ty.ground
+  in the application
+    slot z

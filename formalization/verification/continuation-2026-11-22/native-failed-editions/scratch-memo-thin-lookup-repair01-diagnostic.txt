@@ -1,0 +1,45 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchMemoThinLookupTailProof.lean:12:5: error: unknown namespace `InternalApplicationCertificateConstructors`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchMemoThinLookupTailProof.lean:13:5: error: unknown namespace `InternalApplicationCertificateConstructorsSyntaxProof`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchMemoThinLookupTailProof.lean:17:5: error: unknown namespace `InternalApplicationStepPeelSupportProof`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchMemoThinLookupTailProof.lean:26:37: error: Function expected at
+  graph1
+but this term has type
+  ?m.3
+
+Note: Expected a function because this term is being applied to the argument
+  InternalListCodec.tailCode
+
+Hint: The identifier `graph1` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchMemoThinLookupTailProof.lean:30:6: error(lean.unknownIdentifier): Unknown identifier `graph1Rename`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchMemoThinLookupTailProof.lean:26:84: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+x✝ : Sort u_1
+graph1 : x✝
+B : Program 2
+R : Program 4
+old out index : OTerm alpha
+params : Fin 2 → OTerm alpha
+hp : Nonempty (Derivation body Delta (memoGraph B R old index params))
+hs : Nonempty (Derivation body Delta (memoGraph B R out (suc index) params))
+ht : Nonempty (Derivation body Delta (programGraph (scratchStep R) out (Fin.cons index (Fin.cons old params))))
+beta : Type
+j : alpha → beta
+Theta : List (InternalCalculus.Formula beta)
+value : OTerm beta
+hj : ∀ r ∈ Delta, Formula.relabel j r ∈ Theta
+hv :
+  Nonempty
+    (Derivation body Theta (programGraph R value fun i => Term.relabel j (Fin.cons index (Fin.cons old params) i)))
+⊢ Nonempty (Derivation body Theta (Formula.relabel j sorry))
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchMemoThinLookupTailProof.lean:43:37: error: Function expected at
+  graph1
+but this term has type
+  ?m.3
+
+Note: Expected a function because this term is being applied to the argument
+  InternalListCodec.headCode
+
+Hint: The identifier `graph1` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchMemoThinLookupTailProof.lean:44:2: error(lean.unknownIdentifier): Unknown identifier `unaryRecover`

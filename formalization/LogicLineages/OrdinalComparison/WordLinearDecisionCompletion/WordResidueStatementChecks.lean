@@ -1,0 +1,62 @@
+module
+public import LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidueRowProof
+public import LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidueProgramsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.StatementChecks
+
+theorem literal_letter_residue : Targets.LiteralLetterResidue := Proof.literalLetterResidue
+theorem literal_word_residue : Targets.LiteralWordResidue := Proof.literalWordResidue
+theorem exact_slope : Targets.ExactSlope := Proof.exactSlope
+theorem literal_shift_residue : Targets.LiteralShiftResidue := Proof.literalShiftResidue
+theorem actual_row_residue : Targets.ActualRowResidue := Proof.actualRowResidue
+theorem actual_divisibility : Targets.ActualDivisibility := Proof.actualDivisibility
+theorem literal_raw_syntax : Targets.LiteralRawSyntax := Proof.literalRawSyntax
+theorem exact_names : Targets.ExactNames := Proof.exactNames
+theorem output_domains_and_degree : Targets.OutputDomainsAndDegree := Proof.outputDomainsAndDegree
+theorem letter_programs : Targets.LetterPrograms := Proof.letterPrograms
+theorem word_programs : Targets.WordPrograms := Proof.wordPrograms
+theorem row_programs : Targets.RowPrograms := Proof.rowPrograms
+
+end LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.StatementChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue
+
+/- Explicit imported-declaration output supplements module-local namespace enumeration. -/
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.positiveIterateResidue
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.literalLetterResidue
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.letterAffinePrimitive
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.letterTailPrimitive
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.letterPrograms
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.affinePrimitive
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.tailPrimitive
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.wordPrograms
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.integerSumPrimitive
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.naturalSumPrimitive
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.rowPrimitive
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.rowTailPrimitive
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.rowPrograms
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.mappedSumBound
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.mappedSumResidue
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.rowAffineValue
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.actualRowResidue
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.actualDivisibility
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.literalRawSyntax
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.exactNames
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.outputDomainsAndDegree
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.literalWordResidue
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.exactSlope
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.Proof.literalShiftResidue
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.StatementChecks.literal_letter_residue
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.StatementChecks.literal_word_residue
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.StatementChecks.exact_slope
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.StatementChecks.literal_shift_residue
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.StatementChecks.actual_row_residue
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.StatementChecks.actual_divisibility
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.StatementChecks.literal_raw_syntax
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.StatementChecks.exact_names
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.StatementChecks.output_domains_and_degree
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.StatementChecks.letter_programs
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.StatementChecks.word_programs
+#print axioms LogicLineages.OrdinalComparison.WordLinearDecisionCompletion.WordResidue.StatementChecks.row_programs

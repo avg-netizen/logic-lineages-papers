@@ -1,0 +1,135 @@
+module
+public import LogicLineages.PermittedControl.EvaluatorTargets
+public import LogicLineages.PermittedControl.CollapseProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl
+open OrdinalComparison
+open OrdinalComparison.ParametricActualCollapse
+
+theorem descent_strict (f : Nat → Nat) (a : Ordinal) (hn : Ordinal.omega0 ≤ a)
+    (ha : a < epsilonZero) : descentWith f a < a := by
+  have hd := actualNonfiniteDecomposition a hn ha
+  exact (actualMaximumPredecessor_correct (actualLimitPart a) hd.2.1.bot_lt hd.1
+    (f (actualOrdinalNorm a))).1.1.trans_le (Ordinal.mul_div_le a Ordinal.omega0)
+
+theorem descent_norm (f : Nat → Nat) (a : Ordinal) (hn : Ordinal.omega0 ≤ a)
+    (ha : a < epsilonZero) : actualOrdinalNorm (descentWith f a) = f (actualOrdinalNorm a) := by
+  have hd := actualNonfiniteDecomposition a hn ha
+  exact actualLimitMaximumPredecessorSaturation (actualLimitPart a) hd.1 hd.2.1 _
+
+theorem descent_collapse (f : Nat → Nat) (hmono : StrictMono f) (hf : ∀ n, G n ≤ f n)
+    (a : Ordinal) (hn : Ordinal.omega0 ≤ a) (ha : a < epsilonZero) :
+    collapseWith f a = collapseWith f (descentWith f a) + 1 := by
+  have hd := actualNonfiniteDecomposition a hn ha
+  have hr := singlePredecessor f hmono hf (actualLimitPart a) hd.1 hd.2.1 (actualTailPart a)
+  rw [← hd.2.2.1, ← hd.2.2.2] at hr
+  exact hr
+
+theorem terminal_finite (f : Nat → Nat) (n : Nat) :
+    terminalWith f (n : Ordinal) = (n, 0) := by
+  conv_lhs => rw [terminalWith, WellFounded.fix_eq]
+  simp only [dif_pos (ParametricActualCollapse.Proof.natural_facts n).1,
+    dif_pos (Ordinal.natCast_lt_omega0 n), Ordinal.card_nat, Cardinal.toNat_natCast]
+
+theorem terminal_nonfinite (f : Nat → Nat) (a : Ordinal) (ha : a < epsilonZero)
+    (hn : Ordinal.omega0 ≤ a) :
+    (terminalWith f a).1 = (terminalWith f (descentWith f a)).1 ∧
+    (terminalWith f a).2 = (terminalWith f (descentWith f a)).2 + 1 := by
+  have h : terminalWith f a = ((terminalWith f (descentWith f a)).1,
+      (terminalWith f (descentWith f a)).2 + 1) := by
+    conv_lhs => rw [terminalWith, WellFounded.fix_eq]
+    simp only [dif_pos ha, dif_neg (not_lt_of_ge hn)]
+  exact ⟨congrArg Prod.fst h, congrArg Prod.snd h⟩
+
+theorem terminal_firstFinite (f : Nat → Nat) (a : Ordinal) (ha : a < epsilonZero) :
+    (descentWith f)^[(terminalWith f a).2] a = ((terminalWith f a).1 : Ordinal) ∧
+    ∀ k : Nat, k < (terminalWith f a).2 → Ordinal.omega0 ≤ (descentWith f)^[k] a := by
+  revert ha
+  induction a using Ordinal.lt_wf.induction with
+  | h a ih =>
+    intro ha
+    by_cases hfin : a < Ordinal.omega0
+    · obtain ⟨n, rfl⟩ := Ordinal.lt_omega0.mp hfin
+      rw [terminal_finite f n]
+      exact ⟨rfl, fun k hk => False.elim (Nat.not_lt_zero k hk)⟩
+    · have hn := le_of_not_gt hfin
+      have hd := descent_strict f a hn ha
+      have hi := ih (descentWith f a) hd (hd.trans ha)
+      have ht := terminal_nonfinite f a ha hn
+      rw [ht.1, ht.2]
+      constructor
+      · rw [Function.iterate_succ_apply]
+        exact hi.1
+      · intro k hk
+        cases k with
+        | zero => exact hn
+        | succ k =>
+          rw [Function.iterate_succ_apply]
+          exact hi.2 k (Nat.lt_of_succ_lt_succ hk)
+
+theorem terminal_identities (f : Nat → Nat) (hmono : StrictMono f) (hf : ∀ n, G n ≤ f n)
+    (a : Ordinal) (ha : a < epsilonZero) :
+    collapseWith f a = (terminalWith f a).1 + (terminalWith f a).2 ∧
+    (terminalWith f a).1 = f^[(terminalWith f a).2] (actualOrdinalNorm a) := by
+  revert ha
+  induction a using Ordinal.lt_wf.induction with
+  | h a ih =>
+    intro ha
+    by_cases hfin : a < Ordinal.omega0
+    · obtain ⟨n, rfl⟩ := Ordinal.lt_omega0.mp hfin
+      rw [terminal_finite f n, (ParametricActualCollapse.Proof.natural_facts n).2,
+        ParametricActualCollapse.Proof.finiteValues f (control_self_le f hf) n]
+      exact ⟨(Nat.add_zero n).symm, rfl⟩
+    · have hn := le_of_not_gt hfin
+      have hd := descent_strict f a hn ha
+      have hi := ih (descentWith f a) hd (hd.trans ha)
+      have ht := terminal_nonfinite f a ha hn
+      constructor
+      · rw [descent_collapse f hmono hf a hn ha, hi.1, ht.1, ht.2]
+        omega
+      · rw [ht.1, ht.2, Function.iterate_succ_apply, hi.2, descent_norm f a hn ha]
+
+theorem nonfinite_norm (a : Ordinal) (ha : a < epsilonZero)
+    (hn : Ordinal.omega0 ≤ a) : 2 ≤ actualOrdinalNorm a := by
+  obtain ⟨⟨r, hr⟩, heq⟩ := normalRepresentationComplete a ha
+  rw [← heq, actualOrdinalNorm_notationCorrespondence ⟨r, hr⟩]
+  have hnr : Ordinal.omega0 ≤ r.repr := by rwa [heq]
+  cases r with
+  | zero => exact False.elim (not_le_of_gt Ordinal.omega0_pos hnr)
+  | oadd e c t =>
+      have he : e ≠ 0 := by
+        intro he
+        have ht : t = 0 := hr.zero_of_zero he
+        have hf : (ONote.oadd e c t).repr < Ordinal.omega0 := by
+          simpa [ONote.repr, he, ht] using Ordinal.natCast_lt_omega0 (c : Nat)
+        exact not_le_of_gt hf hnr
+      have hw : 0 < Vendor.R1.treeWeight e :=
+        Nat.pos_of_ne_zero (fun h => he ((treeWeight_eq_zero_iff e).mp h))
+      have hm := Nat.le_mul_of_pos_left (1 + Vendor.R1.treeWeight e) c.pos
+      simp only [Vendor.R1.treeWeight]
+      omega
+
+
+theorem terminalSemantics (f : Nat → Nat) (hmono : StrictMono f) (hf : ∀ n, G n ≤ f n) :
+    Targets.TerminalSemantics f := by
+  intro a ha
+  have hfirst := terminal_firstFinite f a ha
+  have hid := terminal_identities f hmono hf a ha
+  refine ⟨hfirst.1, hfirst.2, hid.1, hid.2, ?_⟩
+  intro hn
+  have hp : 0 < (terminalWith f a).2 := by rw [(terminal_nonfinite f a ha hn).2]; omega
+  have hnorm := nonfinite_norm a ha hn
+  have hiter : ∀ k : Nat, actualOrdinalNorm a + k ≤ f^[k] (actualOrdinalNorm a) := by
+    intro k
+    induction k with
+    | zero => simp
+    | succ k ih =>
+      rw [Function.iterate_succ_apply']
+      have h := (self_lt_Phi (f^[k] (actualOrdinalNorm a))).trans_le (hf _)
+      omega
+  have hb := hiter (terminalWith f a).2
+  rw [← hid.2] at hb
+  exact ⟨hp, by omega⟩
+
+end LogicLineages.PermittedControl

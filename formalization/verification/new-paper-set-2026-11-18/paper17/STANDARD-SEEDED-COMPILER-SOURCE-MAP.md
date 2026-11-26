@@ -1,0 +1,9 @@
+# Actual unchanged-Phi seeded compiler: four-family source scope
+
+The current hardness source's unchanged-G functional-input corollary requires both actual levels. This supporting packet pays the original-context closed-seed arithmetic bridge needed by the level-three single-query reduction; it is not the complete corollary or a raw query code theorem.
+
+ActualCompiler fixes the actual displayed Phi, every original Context n/admissible substitution and policy, literal SeededCompiler.compile source pair, both successful positive vectors, exact signed group equation and internal-three bounds. The last expression variable is the actual closed seed source, not an extra free source variable. SeedSubstitution states the exact actual subtractSeed/linearMeaning identity, not a semantic reinterpretation. SharedSeededFamily includes every nonnegative polynomial including zero and constructs one common admissible valuation. SimultaneousSolvability quantifies arbitrary admitted reverse valuations and every complete finite system; finite-part projection and the closed seed's vanishing finite part supply true nonnegative polynomial witnesses.
+
+No selected-control membership, generated-only valuation restriction, nonzero input proviso, semantic solver oracle, or successful assignment premise is added. Existing public seeded_family and pure substitution/calibration may be used only under their actual arbitrary-control scope with fresh closure. Selected-premise compiler/final solvability endpoints may not be specialized at Phi. Actual seeded system detector assembly, allraw single query, no-decider contradiction and full unchanged-G corollary remain separate.
+
+Seven source/definition/target pins were recorded before proof authoring. Independent pre-scope and target-only preflight precede proofs.

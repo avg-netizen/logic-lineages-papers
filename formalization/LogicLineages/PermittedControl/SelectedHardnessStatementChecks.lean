@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.SelectedHardnessProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+theorem fixed_selectedHardnessCombinators : SelectedHardnessTargets.SelectedHardnessCombinators :=
+  SelectedHardnessProof.selectedHardnessCombinators
+#print axioms fixed_selectedHardnessCombinators
+end LogicLineages.PermittedControl.StatementChecks

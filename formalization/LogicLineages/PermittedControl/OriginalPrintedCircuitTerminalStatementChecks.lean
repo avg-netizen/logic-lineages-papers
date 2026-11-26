@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedCircuitTerminalTargets
+import LogicLineages.PermittedControl.OriginalPrintedCircuitTerminalProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedCircuitTerminal :
+    OriginalPrintedCircuitTerminal.ExactPrintedCircuitTerminal :=
+  OriginalPrintedCircuitTerminal.exactPrintedCircuitTerminal
+
+#print axioms fixed_exactOriginalPrintedCircuitTerminal
+
+end LogicLineages.PermittedControl.StatementChecks

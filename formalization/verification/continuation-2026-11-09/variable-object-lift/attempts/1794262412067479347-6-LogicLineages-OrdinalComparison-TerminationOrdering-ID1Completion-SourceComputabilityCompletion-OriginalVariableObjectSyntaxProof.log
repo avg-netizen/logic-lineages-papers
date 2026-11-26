@@ -1,0 +1,95 @@
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:8:48: error: unknown namespace `InternalApplicationCertificateConstructorsSyntaxProof`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:18:28: error(lean.unknownIdentifier): Unknown identifier `graph1Rename`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:17:77: error: unsolved goals
+α β : Type
+object : OTerm α
+j : α → β
+⊢ Formula.relabel j
+      (InternalApplicationCertificateConstructors.graph1 variableObjectTest
+        (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm) object) =
+    InternalApplicationCertificateConstructors.graph1 variableObjectTest
+      (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm) (Term.relabel j object)
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:18:71: warning: This simp argument is unused:
+  sucRelabel
+
+Hint: Omit it from the simp argument list.
+  simp only [variableObject, ̲graph1Rename, ̲InternalOriginalStepGuard.one,s̵u̵c̵R̵e̵l̵a̵b̵e̵l̵,̵ ̲zRelabel]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:18:82: warning: This simp argument is unused:
+  zRelabel
+
+Hint: Omit it from the simp argument list.
+  simp only [variableObject, ̲graph1Rename, ̲InternalOriginalStepGuard.one, ̲sucRelabel,̵z̵R̵e̵l̵a̵b̵e̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:23:37: error(lean.unknownIdentifier): Unknown identifier `graph2Rename`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:22:94: error: unsolved goals
+α β : Type
+out typ gammaCode : OTerm α
+j : α → β
+⊢ Formula.relabel j
+      (InternalApplicationCertificateConstructors.graph2 ComputabilityLeast.bottomObject out typ gammaCode) =
+    ComputabilityLeast.bottomGraph (Term.relabel j out) (Term.relabel j typ) (Term.relabel j gammaCode)
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:32:31: error(lean.unknownIdentifier): Unknown identifier `graph1Rename`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:33:2: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:37:7: error: Function expected at
+  graph1
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  InternalUnpair.left
+
+Hint: The identifier `graph1` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:41:4: error: Function expected at
+  graph1
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  InternalUnpair.left
+
+Hint: The identifier `graph1` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:45:61: error: Invalid argument: Variable `graph1` is not a proposition or let-declaration
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:45:68: error(lean.unknownIdentifier): Unknown identifier `graph2`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:46:61: error(lean.unknownIdentifier): Unknown identifier `consTermSubst`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:46:75: error(lean.unknownIdentifier): Unknown identifier `emptySubst`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:43:80: error: unsolved goals
+x✝ : Sort u_1
+graph1 : x✝
+α : Type
+tau : Ty
+source target gammaCode : OTerm α
+⊢ ((BoundedFormula.subst sorry fun a => emb (InternalTagArithmeticSyntaxProof.bindTerm gammaCode a)) ⊓
+      programGraph ComputabilityLeast.bottomObject target fun i =>
+        Term.subst
+          (Fin.cons (numeral (NumberedLeastCodeRepresentative.typeNumber tau)) (Fin.cons (var (Sum.inr 0)) Fin.elim0) i)
+          (InternalTagArithmeticSyntaxProof.bindTerm gammaCode)) =
+    sorry ⊓
+      InternalApplicationCertificateConstructors.graph2 ComputabilityLeast.bottomObject target
+        (numeral (NumberedLeastCodeRepresentative.typeNumber tau)) gammaCode
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:47:13: warning: This simp argument is unused:
+  varBind
+
+Hint: Omit it from the simp argument list.
+  simp only [conjunctionSubst, ̲ComputabilityLeast.bottomGraph, ̲graph1, ̲graph2,
+      InternalComputabilityApplicationSyntaxProof.programSubst, ̲consTermSubst, ̲emptySubst,
+  ̵  ̵ ̵ ̵liftBind,v̵a̵r̵B̵i̵
+  ̲ ̲ ̲ ̲ ̲nd̵,̵n̵umeralSubst]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalVariableObjectSyntaxProof.lean:47:21: warning: This simp argument is unused:
+  numeralSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [conjunctionSubst, ̲ComputabilityLeast.bottomGraph, ̲graph1, ̲graph2,
+      InternalComputabilityApplicationSyntaxProof.programSubst, ̲consTermSubst, ̲emptySubst,
+  ̵  ̵ ̵ ̵liftBind,
+  ̲ ̲ ̲ ̲ ̲varBind,̵n̵u̵m̵e̵r̵a̵l̵S̵u̵b̵s̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

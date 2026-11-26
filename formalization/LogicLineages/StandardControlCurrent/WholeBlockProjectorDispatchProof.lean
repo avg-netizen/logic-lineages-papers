@@ -1,0 +1,16 @@
+module
+public import LogicLineages.StandardControlCurrent.WholeBlockProjectorTargets
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockDispatchCodeProgramsProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockDispatchCodeCalibrationProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.WholeBlockProjectorProof
+open OrdinalComparison LayeredComparison.SnyatkovCompletion NonlinearProjectionCompletion
+
+theorem dispatch : WholeBlockProjectorTargets.Dispatch :=
+  ⟨PlainBlockDispatchCodeProof.literalRenameCalibration,
+    PlainBlockDispatchCodeProof.literalBranchFamiliesCalibration,
+    PlainBlockDispatchCodeProof.literalBranchAssemblyCalibration,
+    PlainBlockDispatchCodeProof.literalAdvanceCalibration,
+    PlainBlockDispatchCodeProof.literalRunCalibration,
+    PlainBlockDispatchCodeProof.actualDispatchPrograms⟩
+end LogicLineages.StandardControlCurrent.WholeBlockProjectorProof

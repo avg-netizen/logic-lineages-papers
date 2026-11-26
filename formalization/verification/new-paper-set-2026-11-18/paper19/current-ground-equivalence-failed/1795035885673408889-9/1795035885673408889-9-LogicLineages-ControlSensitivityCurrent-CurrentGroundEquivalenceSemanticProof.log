@@ -1,0 +1,158 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundEquivalenceSemanticProof.lean:26:29: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  h ≥ 0
+  g ≥ 0
+  g - h ≥ 0
+  e ≥ 1
+  d ≥ 1
+  d - e ≤ -1
+  c ≥ 0
+where
+ c := ↑(InputNormalization.sourceValue p f ρ b)
+ d := ↑(PolicyCollision.rawScalar p f (inputs ρ) a.term)
+ e := ↑(PolicyCollision.rawScalar p f (inputs ρ) b.term)
+ g := ↑(SourceSortCompletion.input
+    (inputs
+      (extend (extend ρ (PolicyCollision.rawScalar p f (inputs ρ) a.term - 1))
+        (PolicyCollision.rawScalar p f (inputs (extend ρ (PolicyCollision.rawScalar p f (inputs ρ) a.term - 1)))
+            (ScopedDAG.renameInput (fun {σ} => Renaming.weaken Γ Ty.ground) b).term -
+          1)))
+    Variable.here.there)
+ h := ↑(SourceSortCompletion.input
+    (inputs
+      (extend (extend ρ (PolicyCollision.rawScalar p f (inputs ρ) a.term - 1))
+        (PolicyCollision.rawScalar p f (inputs (extend ρ (PolicyCollision.rawScalar p f (inputs ρ) a.term - 1)))
+            (ScopedDAG.renameInput (fun {σ} => Renaming.weaken Γ Ty.ground) b).term -
+          1)))
+    Variable.here)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundEquivalenceSemanticProof.lean:26:29: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  h ≥ 0
+  g ≥ 0
+  g - h ≥ 1
+  e ≥ 1
+  d ≥ 1
+  d - e ≤ 0
+  c ≥ 0
+where
+ c := ↑(InputNormalization.sourceValue p f ρ b)
+ d := ↑(PolicyCollision.rawScalar p f (inputs ρ) a.term)
+ e := ↑(PolicyCollision.rawScalar p f (inputs ρ) b.term)
+ g := ↑(SourceSortCompletion.input
+    (inputs
+      (extend (extend ρ (PolicyCollision.rawScalar p f (inputs ρ) a.term - 1))
+        (PolicyCollision.rawScalar p f (inputs (extend ρ (PolicyCollision.rawScalar p f (inputs ρ) a.term - 1)))
+            (ScopedDAG.renameInput (fun {σ} => Renaming.weaken Γ Ty.ground) b).term -
+          1)))
+    Variable.here.there)
+ h := ↑(SourceSortCompletion.input
+    (inputs
+      (extend (extend ρ (PolicyCollision.rawScalar p f (inputs ρ) a.term - 1))
+        (PolicyCollision.rawScalar p f (inputs (extend ρ (PolicyCollision.rawScalar p f (inputs ρ) a.term - 1)))
+            (ScopedDAG.renameInput (fun {σ} => Renaming.weaken Γ Ty.ground) b).term -
+          1)))
+    Variable.here)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundEquivalenceSemanticProof.lean:25:36: warning: This simp argument is unused:
+  inputs
+
+Hint: Omit it from the simp argument list.
+  simp only [counterexample, Bool.false_eq_true, ite_false, ite_true,
+        InputNormalization.Input.eval, Fin.cases_zero, InputNormalization.Node.eval,
+        PrimitiveLowering.Port.value, i̵n̵p̵u̵t̵s̵,̵ ̵hb, extend, InputNormalization.sourceValue,
+  ̵  ̵ ̵ ̵ ̵ ̵decide_eq_true_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundEquivalenceSemanticProof.lean:25:44: warning: This simp argument is unused:
+  hb
+
+Hint: Omit it from the simp argument list.
+  simp only [counterexample, Bool.false_eq_true, ite_false, ite_true,
+        InputNormalization.Input.eval, Fin.cases_zero, InputNormalization.Node.eval,
+        PrimitiveLowering.Port.value, inputs, h̵b̵,̵ ̵extend, InputNormalization.sourceValue,
+        decide_eq_true_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundEquivalenceSemanticProof.lean:25:48: warning: This simp argument is unused:
+  extend
+
+Hint: Omit it from the simp argument list.
+  simp only [counterexample, Bool.false_eq_true, ite_false, ite_true,
+        InputNormalization.Input.eval, Fin.cases_zero, InputNormalization.Node.eval,
+        PrimitiveLowering.Port.value, inputs, hb, e̵x̵t̵e̵n̵d̵,̵ ̵InputNormalization.sourceValue,
+  ̵  ̵ ̵ ̵ ̵ ̵decide_eq_true_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundEquivalenceSemanticProof.lean:39:44: error: Ambiguous term
+  Weak
+Possible interpretations:
+  PolicyProgramComparisonTargets.Weak : AdmissibleSum.Policy →
+    (ℕ → ℕ) → {Γ : List Ty} → OriginalTerm Γ Ty.ground → OriginalTerm Γ Ty.ground → Prop
+  
+  GroundEquivalence.Weak : OriginalTerm ?m.68 Ty.ground → OriginalTerm ?m.68 Ty.ground → Prop
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundEquivalenceSemanticProof.lean:39:22: error: unsolved goals
+n : ℕ
+a b : Input (List.replicate n Ty.ground) Ty.ground
+f : ℕ → ℕ
+hf : FullAddition.Targets.SourceGrowth f
+p : AdmissibleSum.Policy
+hw :
+  PolicyProgramComparisonTargets.Strict p f
+      (BooleanCompiler.strictPair
+            (InputNormalization.normalize InputNormalization.Dag.nil (counterexample true a b))).1.term
+      (BooleanCompiler.strictPair
+            (InputNormalization.normalize InputNormalization.Dag.nil (counterexample true a b))).2.term ↔
+    ¬∃ ρ, InputNormalization.Input.eval p f ρ Fin.elim0 (counterexample true a b)
+hs :
+  PolicyProgramComparisonTargets.Weak p f
+      (BooleanCompiler.weakPair
+            (InputNormalization.normalize InputNormalization.Dag.nil (counterexample false a b))).1.term
+      (BooleanCompiler.weakPair
+            (InputNormalization.normalize InputNormalization.Dag.nil (counterexample false a b))).2.term ↔
+    ¬∃ ρ, InputNormalization.Input.eval p f ρ Fin.elim0 (counterexample false a b)
+⊢ (∀ (x : Variable (List.replicate n Ty.ground) Ty.ground → ℕ),
+      PolicyCollision.rawScalar p f (inputs x) a.term ≤ PolicyCollision.rawScalar p f (inputs x) b.term) ↔
+    PolicyProgramComparisonTargets.Weak p f a.term b.term
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundEquivalenceSemanticProof.lean:40:44: error: Ambiguous term
+  Strict
+Possible interpretations:
+  PolicyProgramComparisonTargets.Strict : AdmissibleSum.Policy →
+    (ℕ → ℕ) → {Γ : List Ty} → OriginalTerm Γ Ty.ground → OriginalTerm Γ Ty.ground → Prop
+  
+  GroundEquivalence.Strict : OriginalTerm ?m.75 Ty.ground → OriginalTerm ?m.75 Ty.ground → Prop
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundEquivalenceSemanticProof.lean:40:22: error: unsolved goals
+n : ℕ
+a b : Input (List.replicate n Ty.ground) Ty.ground
+f : ℕ → ℕ
+hf : FullAddition.Targets.SourceGrowth f
+p : AdmissibleSum.Policy
+hw :
+  PolicyProgramComparisonTargets.Strict p f
+      (BooleanCompiler.strictPair
+            (InputNormalization.normalize InputNormalization.Dag.nil (counterexample true a b))).1.term
+      (BooleanCompiler.strictPair
+            (InputNormalization.normalize InputNormalization.Dag.nil (counterexample true a b))).2.term ↔
+    ¬∃ ρ, InputNormalization.Input.eval p f ρ Fin.elim0 (counterexample true a b)
+hs :
+  PolicyProgramComparisonTargets.Weak p f
+      (BooleanCompiler.weakPair
+            (InputNormalization.normalize InputNormalization.Dag.nil (counterexample false a b))).1.term
+      (BooleanCompiler.weakPair
+            (InputNormalization.normalize InputNormalization.Dag.nil (counterexample false a b))).2.term ↔
+    ¬∃ ρ, InputNormalization.Input.eval p f ρ Fin.elim0 (counterexample false a b)
+⊢ (∀ (x : Variable (List.replicate n Ty.ground) Ty.ground → ℕ),
+      PolicyCollision.rawScalar p f (inputs x) a.term < PolicyCollision.rawScalar p f (inputs x) b.term) ↔
+    PolicyProgramComparisonTargets.Strict p f a.term b.term
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundEquivalenceSemanticProof.lean:39:62: warning: This simp argument is unused:
+  Nat.not_lt
+
+Hint: Omit it from the simp argument list.
+  simp [counter_iff, Weak, not_exists,̵ ̵N̵a̵t̵.̵n̵o̵t̵_̵l̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundEquivalenceSemanticProof.lean:40:64: warning: This simp argument is unused:
+  Nat.not_le
+
+Hint: Omit it from the simp argument list.
+  simp [counter_iff, Strict, not_exists,̵ ̵N̵a̵t̵.̵n̵o̵t̵_̵l̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

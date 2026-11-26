@@ -1,0 +1,24 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerStepPrimitiveProof.lean:25:4: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Primcodable (Instruction × State)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerStepPrimitiveProof.lean:30:15: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Primcodable C
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerStepPrimitiveProof.lean:32:17: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Primcodable D
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerStepPrimitiveProof.lean:34:51: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Primcodable B
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanCompilerStepPrimitiveProof.lean:25:68: error: unsolved goals
+A : Type := Instruction × State
+B : Type (max 0 ?u.17) := A × (PrimitiveGate.GateCode ⊕ PUnit.{?u.17 + 1})
+C : Type (max ?u.17 0) := B × PrimitiveGate.GateCode
+D : Type (max ?u.17 ?u.24) := B × PUnit.{?u.24 + 1}
+hgate : sorry
+hbinder : sorry
+⊢ sorry

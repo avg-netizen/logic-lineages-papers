@@ -1,0 +1,36 @@
+{
+  "lane": "opusA",
+  "key": "PAIRED-SHARED-MEASURE",
+  "targets_module": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedPairedSharedMeasureTargets",
+  "proof_modules": [
+    "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedPairedSharedMeasureEqualityProof",
+    "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedPairedSharedMeasureProof"
+  ],
+  "statements": {
+    "ExactOpenSharedAuxMeasureEquality": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedPairedSharedMeasureEqualityProof.exact_OpenSharedAuxMeasureEquality",
+    "ExactOpenCoverCombinedRestrictedPairedSharedMeasureParent": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedPairedSharedMeasureEqualityProof.exact_OpenCoverCombinedRestrictedPairedSharedMeasureParent",
+    "ExactOpenCoverCombinedRestrictedPairedSharedMeasureEdge": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedPairedSharedMeasureProof.exact_OpenCoverCombinedRestrictedPairedSharedMeasureEdge",
+    "ExactOpenCoverCombinedRestrictedPairedSharedMeasureCommonLeast": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedPairedSharedMeasureProof.exact_OpenCoverCombinedRestrictedPairedSharedMeasureCommonLeast"
+  },
+  "source_sha256": {
+    "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedPairedSharedMeasureTargets.lean": "c01b0d9896e131e037735cb11ade6e5e22669f483f745fe5e0286e56d3c9e7d9",
+    "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedPairedSharedMeasureEqualityProof.lean": "f676daa1ea94fa43202e8194c57f3a0d5a3c20110dc3210effc8f2ea54cf47e6",
+    "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedPairedSharedMeasureProof.lean": "cf926d9ce11fd1ee77eef922f2019a8013cc24854057a67fc59a1bf58871aa1f"
+  },
+  "passing_receipts": {
+    "targets_only_compile": "1795383944437755657-3145798",
+    "equality_proof_compile": "1795384092628823605-3146358",
+    "main_proof_compile": "1795384163800122757-3146619",
+    "both_proof_modules_cached": "1795384188320039425-3146713"
+  },
+  "print_axioms": [
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedPairedSharedMeasureEqualityProof.exact_OpenSharedAuxMeasureEquality' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedPairedSharedMeasureEqualityProof.exact_OpenCoverCombinedRestrictedPairedSharedMeasureParent' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedPairedSharedMeasureProof.exact_OpenCoverCombinedRestrictedPairedSharedMeasureEdge' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedPairedSharedMeasureProof.exact_OpenCoverCombinedRestrictedPairedSharedMeasureCommonLeast' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "accepted_suppliers": ["#1076 exact_OpenCoverSharedAuxMeasureParent", "programCases", "valueUnique", "outputTransport", "graphInputTransport", "auxiliaryRename", "#1386 exact_OpenCoverCombinedRestrictedPairedEdge", "opusA PAIRED-COMMON-LEAST exact_OpenCoverCombinedRestrictedPairedCommonLeast"],
+  "hypothesis_change": "shared application measure (unary (selectedMeasure P.R) m a, ... m b) replaced by shared function measure (unary (selectedMeasure P.R) m f, ... m g); no hypothesis added",
+  "extra_public_lemma": "NumberedWindowInternalCoverCombinedRestrictedPairedSharedMeasureEqualityProof.auxiliaryTermRename (re-export of accepted auxiliaryRename, not a target)",
+  "source_map": "verification/local-fable-pair-2026-11-22/opusA/PAIRED-SHARED-MEASURE-SOURCE-MAP.md"
+}

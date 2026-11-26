@@ -1,0 +1,140 @@
+module
+public meta import LogicLineages.Audit
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineRepeatSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationStepCheckerRepeatSupportProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepPeelSupportProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineRepeatProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalParameterizedApplicationStepChecker InternalParameterizedApplicationStepCheckerRepeatSyntaxProof
+open InternalParameterizedApplicationStepCheckerRepeatSupportProof OriginalSelectedStepSpineRepeatSyntaxProof
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalListCodec InternalListCodecSupportProof InternalListInduction InternalListInductionProof
+open SourceComputabilityFormulaSupportProof InternalClosedPrograms InternalClosedProgramsBindingProof
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof
+open InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof InternalTagArithmeticSupportProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+variable {body : Positive (Fin 1)} {alpha : Type} {Gamma : List (Formula alpha)}
+
+theorem rowApply (transition test : Program 2) (code initial out parameter : OTerm alpha)
+    (hrow : Nonempty (Derivation body Gamma (backwardRow transition test code)))
+    (hr : Nonempty (Derivation body Gamma (repeatGraph transition out code initial parameter)))
+    (ht : Nonempty (Derivation body Gamma (graph2 test (suc z) out parameter))) :
+    Nonempty (Derivation body Gamma (graph2 test (suc z) initial parameter)) := by
+  have h := actualFiniteUniversalElimination body alpha 3 Gamma (backwardBody transition test code)
+    (fun i => emb (![initial,out,parameter] i)) hrow
+  rw [backwardBodyWitness] at h
+  obtain ⟨h⟩ := h
+  obtain ⟨hp⟩ := andIntro hr ht
+  exact ⟨Derivation.implicationElimination h hp⟩
+
+theorem zeroCore (transition test : Program 2) (initial out parameter : OTerm alpha)
+    (hr : Nonempty (Derivation body Gamma (repeatGraph transition out z initial parameter)))
+    (ht : Nonempty (Derivation body Gamma (graph2 test (suc z) out parameter))) :
+    Nonempty (Derivation body Gamma (graph2 test (suc z) initial parameter)) :=
+  headTransport test (suc z) out initial (Fin.cons parameter Fin.elim0)
+    (repeatZeroRecover transition out initial parameter hr) ht
+
+theorem zeroRow (transition test : Program 2) :
+    Nonempty (Derivation body Gamma (backwardRow transition test z)) := by
+  unfold backwardRow
+  apply actualFiniteUniversalIntroduction body alpha 3 Gamma
+  let initial : OTerm (alpha ⊕ Fin 3) := .var (.inr 0)
+  let out : OTerm (alpha ⊕ Fin 3) := .var (.inr 1)
+  let parameter : OTerm (alpha ⊕ Fin 3) := .var (.inr 2)
+  let A := repeatGraph transition out z initial parameter ⊓ graph2 test (suc z) out parameter
+  obtain ⟨d⟩ := zeroCore (body := body)
+    (Gamma := A :: Gamma.map (fun p => p.relabel Sum.inl)) transition test initial out parameter
+    ⟨Derivation.conjunctionLeft (Derivation.hypothesis List.mem_cons_self)⟩
+    ⟨Derivation.conjunctionRight (Derivation.hypothesis List.mem_cons_self)⟩
+  simpa only [backwardBody,zRelabel] using (Nonempty.intro (Derivation.implicationIntroduction d))
+
+theorem consCore (transition test : Program 2) (hstep : BackwardStep transition test)
+    (code head tail initial out parameter : OTerm alpha)
+    (hrow : Nonempty (Derivation body Gamma (backwardRow transition test tail)))
+    (hc : Nonempty (Derivation body Gamma (consGraph code head tail)))
+    (hr : Nonempty (Derivation body Gamma (repeatGraph transition out code initial parameter)))
+    (ht : Nonempty (Derivation body Gamma (graph2 test (suc z) out parameter))) :
+    Nonempty (Derivation body Gamma (graph2 test (suc z) initial parameter)) := by
+  apply programCases (repeatP transition)
+    (Fin.cons tail (Fin.cons initial (Fin.cons parameter Fin.elim0))) _
+  intro beta j Delta mid hj hm
+  simp only [graph2Rename,sucRelabel,zRelabel]
+  simp only [consTermRename,emptyRename] at hm
+  have hrow' := renameInto hrow j Delta hj
+  rw [backwardRowRename] at hrow'
+  have hc' := renameInto hc j Delta hj
+  rw [consGraphRename] at hc'
+  have hr' := renameInto hr j Delta hj
+  rw [repeatRename] at hr'
+  have ht' := renameInto ht j Delta hj
+  simp only [graph2Rename,sucRelabel,zRelabel] at ht'
+  have htransition := repeatConsRecover transition (code.relabel j) (head.relabel j)
+    (tail.relabel j) mid (out.relabel j) (initial.relabel j) (parameter.relabel j) hc' hm hr'
+  exact rowApply transition test (tail.relabel j) (initial.relabel j) mid (parameter.relabel j)
+    hrow' hm (hstep body beta Delta mid (out.relabel j) (parameter.relabel j) htransition ht')
+
+theorem consRow (transition test : Program 2) (hstep : BackwardStep transition test)
+    (code head tail : OTerm alpha)
+    (hrow : Nonempty (Derivation body Gamma (backwardRow transition test tail)))
+    (hc : Nonempty (Derivation body Gamma (consGraph code head tail))) :
+    Nonempty (Derivation body Gamma (backwardRow transition test code)) := by
+  unfold backwardRow
+  apply actualFiniteUniversalIntroduction body alpha 3 Gamma
+  let initial : OTerm (alpha ⊕ Fin 3) := .var (.inr 0)
+  let out : OTerm (alpha ⊕ Fin 3) := .var (.inr 1)
+  let parameter : OTerm (alpha ⊕ Fin 3) := .var (.inr 2)
+  let c := code.relabel (Sum.inl : alpha → alpha ⊕ Fin 3)
+  let h := head.relabel (Sum.inl : alpha → alpha ⊕ Fin 3)
+  let t := tail.relabel (Sum.inl : alpha → alpha ⊕ Fin 3)
+  let A := repeatGraph transition out c initial parameter ⊓ graph2 test (suc z) out parameter
+  let Delta := A :: Gamma.map (fun p => p.relabel (Sum.inl : alpha → alpha ⊕ Fin 3))
+  have hrow' := renameInto hrow Sum.inl Delta
+    (fun p hp => List.mem_cons_of_mem _ (List.mem_map.mpr ⟨p,hp,rfl⟩))
+  rw [backwardRowRename] at hrow'
+  have hc' := renameInto hc Sum.inl Delta
+    (fun p hp => List.mem_cons_of_mem _ (List.mem_map.mpr ⟨p,hp,rfl⟩))
+  rw [consGraphRename] at hc'
+  obtain ⟨d⟩ := consCore transition test hstep c h t initial out parameter hrow' hc'
+    ⟨Derivation.conjunctionLeft (Derivation.hypothesis List.mem_cons_self)⟩
+    ⟨Derivation.conjunctionRight (Derivation.hypothesis List.mem_cons_self)⟩
+  exact ⟨Derivation.implicationIntroduction d⟩
+
+/-- Original full-language list-code induction, with no native decoding or
+new iteration fuel. The transition rule is proved at all fresh contexts. -/
+theorem allRows (transition test : Program 2) (hstep : BackwardStep transition test)
+    (code : OTerm alpha) : Nonempty (Derivation body Gamma (backwardRow transition test code)) := by
+  let theta : Formula (alpha ⊕ Fin 1) := backwardRow transition test (.var (.inr 0))
+  have hz : Nonempty (Derivation body Gamma (atCode theta z)) := by
+    rw [backwardAtCode]
+    exact zeroRow transition test
+  have hs : Nonempty (Derivation body Gamma (constructors theta)) := by
+    unfold constructors
+    apply actualFiniteUniversalIntroduction body alpha 3 Gamma
+    simp only [constructorBody,theta,backwardAtIndex]
+    let c : OTerm (alpha ⊕ Fin 3) := .var (.inr 0)
+    let h : OTerm (alpha ⊕ Fin 3) := .var (.inr 1)
+    let t : OTerm (alpha ⊕ Fin 3) := .var (.inr 2)
+    let C := consGraph c h t
+    let R := backwardRow transition test t
+    obtain ⟨d⟩ := consRow (body := body)
+      (Gamma := R :: C :: Gamma.map (fun p => p.relabel Sum.inl)) transition test hstep c h t
+      ⟨Derivation.hypothesis List.mem_cons_self⟩
+      ⟨Derivation.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)⟩
+    exact ⟨Derivation.implicationIntroduction (Derivation.implicationIntroduction d)⟩
+  have h := actualOriginalListInductionAtCode body alpha Gamma theta code (andIntro hz hs)
+  rw [backwardAtCode] at h
+  exact h
+
+theorem backwardValue (transition test : Program 2) (hstep : BackwardStep transition test)
+    (code initial out parameter : OTerm alpha)
+    (hr : Nonempty (Derivation body Gamma (repeatGraph transition out code initial parameter)))
+    (ht : Nonempty (Derivation body Gamma (graph2 test (suc z) out parameter))) :
+    Nonempty (Derivation body Gamma (graph2 test (suc z) initial parameter)) :=
+  rowApply transition test code initial out parameter (allRows transition test hstep code) hr ht
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineRepeatProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSelectedStepSpineRepeatProof

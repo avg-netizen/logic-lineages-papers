@@ -1,0 +1,28 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "35ce39032799a6fd5c31e3382650ccdaf8c076e1",
+  "failed_source_local_commit": "907fe0f84b8326d5ddc61f3eea58eedbfd08ee5a",
+  "failed_source_tree": "ac17892bf032c520ac8cf7288e2e291a3cb4d0f5",
+  "failed_exact_gate_receipt": "1795376280270943745-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalPrintedRawTerminalRowsStatementChecks",
+  "failed_receipt_sha256": "b1741d028871e4ac51b178a7eaca7af5a9197207f198f75293bccfc8185e9755",
+  "failed_exact_module_log_sha256": "bc0f17847bfb6e8faff9575870b6fb901190c2ae9363405b15cc3bbc9a973099",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedRawTerminalRowsPrimitiveProof.lean:11:42: error(lean.unknownIdentifier): Unknown constant `LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsCodeProof.decodeAtom_primitive`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedRawTerminalRowsPrimitiveProof.lean:39:19: error(lean.unknownIdentifier): Unknown identifier `atoms_primitive`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedRawTerminalRowsPrimitiveProof.lean:39:56: error(lean.unknownIdentifier): Unknown identifier `decodeAtom_primitive`",
+  "failed_original_native_log_sha256": "48f37051279986a7e840ae816571e96d73f2944869e7a0156694524d8b9a88c5",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedRawTerminalRowsPrimitiveProof.lean",
+  "failed_proof_sha256": "529608eceb4d985de16f6484845dbceab424c89c3373d31e56fddbb5e58f1b4b",
+  "repaired_proof_sha256": "f95adc5a017a64fc5944423cc63ac34de0b98502b924467676466626b1af3394",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-RAW-TERMINAL-ROWS-REPAIR-01.patch",
+  "patch_sha256": "c7b412ea2bcdb60f9f9581e8a2282e0462a2ba07185c9824d446e4b9adf19df9",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-RAW-TERMINAL-ROWS-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "54a0056d21ed950c2d1cf9b750856a439e1c3bed4d8942070386b001a5770bc4",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedRawTerminalRowsProof.lean": "8a5f1a77589d33c88152bd051618499fbbab6932940f223ba20ab86311ba8d01",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedRawTerminalRowsStatementChecks.lean": "0605a0e359a534bacc21efffed86f98f9bacd09d0300bd2b598bdcba31a11daa",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedRawTerminalRowsTargets.lean": "82b89e9c1e15c7e83db986ccd8a710b322c12ccdb85674b8f79cf9f57bd34f34",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-RAW-TERMINAL-ROWS-SOURCE-MAP.md": "d11e7a05daa51ffedcea83d2e28254b2c444633f86b91c7713361901602e77d0"
+  },
+  "scope": "Import the module really providing decodeAtom_primitive (which publicly imports atoms_primitive), and spell out the existing exact theorem names. No raw computation, mathematical target or proof profile changes."
+}

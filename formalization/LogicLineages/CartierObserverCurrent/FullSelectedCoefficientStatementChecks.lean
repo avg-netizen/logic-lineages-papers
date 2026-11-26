@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullSelectedCoefficientProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullSelectedCoefficient.StatementChecks
+theorem fixed_completeSelectedCoefficient : Targets.CompleteSelectedCoefficient := completeSelectedCoefficient
+#audit_namespace LogicLineages.CartierObserverCurrent.FullSelectedCoefficient.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullSelectedCoefficient.StatementChecks

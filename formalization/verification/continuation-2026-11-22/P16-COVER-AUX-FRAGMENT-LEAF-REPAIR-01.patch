@@ -1,0 +1,46 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentLeafProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentLeafProof.lean
+@@ -4,0 +5,2 @@
++import LogicLineages.PersistentMarking.NumberedWindowInternalCoverSharedMemoTargets
++import LogicLineages.PersistentMarking.NumberedWindowInternalAuxMeasureMemoTargets
+@@ -43,0 +46,2 @@
++open NumberedWindowInternalCoverSharedMemoTargets (ObservedStep)
++open NumberedWindowInternalAuxMeasureMemoTargets (selectedMeasure)
+@@ -45,0 +50 @@
++attribute [local irreducible] programGraph
+@@ -94,0 +100,17 @@
++private theorem consumeSelectedRow (prior : OTerm α)
++    (rejected : Nonempty (Derivation body Γ (unary termShape z (suc prior))))
++    {β : Type} (j : α → β) (Δ : List (Formula β)) (old : OTerm β)
++    (keep : ∀ f ∈ Γ, f.relabel j ∈ Δ)
++    (row : ObservedStep (auxSyntaxUpdate fragmentLeaf (constantOne 1)) body Δ
++      (prior.relabel j) old ((suc z : OTerm α).relabel j)) :
++    Nonempty (Derivation body Δ ((unary (header 2 2) z (suc prior)).relabel j)) := by
++  have reject := renameInto rejected j Δ keep
++  simp only [unaryRename,sucRelabel,zRelabel] at reject
++  have actual := row.update
++  simp only [sucRelabel,zRelabel] at actual
++  have result := atPhysicalRow (prior.relabel j) old reject actual
++  have same : (unary (header 2 2) z (suc prior)).relabel j =
++      unary (header 2 2) z (suc (prior.relabel j)) := by
++    simp only [unaryRename,sucRelabel,zRelabel]
++  exact Eq.mpr (congrArg (fun f => Nonempty (Derivation body Δ f)) same) result
++
+@@ -97,8 +119,9 @@
+-  let R := auxSyntaxUpdate fragmentLeaf (constantOne 1)
+-  let Q := unary (header 2 2) z (suc prior)
+-  apply exact_OpenCoverSharedMemoRowCases R body α Γ prior (suc z) Q actual
+-  intro β j Δ old keep row
+-  have reject := renameInto noAux j Δ keep
+-  simp only [unaryRename,sucRelabel,zRelabel] at reject
+-  simp only [Q,unaryRename,zRelabel,sucRelabel]
+-  exact atPhysicalRow (prior.relabel j) old reject row.update
++  let R : Program 4 := auxSyntaxUpdate fragmentLeaf (constantOne 1)
++  let Q : Formula α := unary (header 2 2) z (suc prior)
++  have parent : Nonempty (Derivation body Γ (unary (selectedMeasure R) (suc z) (suc prior))) := actual
++  have close : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (old : OTerm β),
++      (∀ f ∈ Γ, f.relabel j ∈ Δ) →
++      ObservedStep R body Δ (prior.relabel j) old ((suc z : OTerm α).relabel j) →
++      Nonempty (Derivation body Δ (Q.relabel j)) :=
++    fun _ j Δ old keep row => consumeSelectedRow prior noAux j Δ old keep row
++  exact exact_OpenCoverSharedMemoRowCases R body α Γ prior (suc z) Q parent close

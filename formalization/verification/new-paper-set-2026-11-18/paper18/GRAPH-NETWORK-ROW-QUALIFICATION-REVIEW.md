@@ -1,0 +1,3 @@
+# Independent row-name correction review
+
+Approved sole elaboration/name-resolution repair before bounded retry. Compared full preserved/current Definitions bytes: the only change is unqualified rows b.start b.term to PolynomialGraphCompletion.rows b.start b.term inside Block.rows. This selects the intended actual previously checked expression compiler, not self-recursion. All target texts unchanged; exactly one manifest pin changed and all nine current pins match. Original definition/freeze/failure receipt preserved under failed/network-row-name-1794983679059165946. No semantic weakening, new hypothesis, compilation or proof acceptance by this review.

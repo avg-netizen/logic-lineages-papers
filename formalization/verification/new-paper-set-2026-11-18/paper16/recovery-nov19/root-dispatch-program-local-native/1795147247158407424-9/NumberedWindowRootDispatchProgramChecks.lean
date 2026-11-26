@@ -1,0 +1,13 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowRootDispatchProgramProof
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowRootDispatchProgramChecks
+open NumberedWindowRootDispatchProgramTargets
+
+theorem exact_RootDispatchProgram : RootDispatchProgram := NumberedWindowRootDispatchProgramProof.program
+
+#print axioms exact_RootDispatchProgram
+
+end LogicLineages.PersistentMarking.NumberedWindowRootDispatchProgramChecks

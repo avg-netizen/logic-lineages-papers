@@ -1,0 +1,13 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowSingletonProgramProof
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowSingletonProgramChecks
+open NumberedWindowSingletonProgramTargets
+
+theorem exact_SingletonProgram : SingletonProgram := NumberedWindowSingletonProgramProof.program
+
+#print axioms exact_SingletonProgram
+
+end LogicLineages.PersistentMarking.NumberedWindowSingletonProgramChecks

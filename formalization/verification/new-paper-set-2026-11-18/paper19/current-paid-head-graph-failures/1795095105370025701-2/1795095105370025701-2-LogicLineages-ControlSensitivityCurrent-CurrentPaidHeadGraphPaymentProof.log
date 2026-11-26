@@ -1,0 +1,169 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphPaymentProof.lean:17:14: error: Tactic `rfl` failed: The left-hand side
+  ↑(ExistentialPlan.inputs ρ ⟨domain✝.arrow codomain✝, (x, j)⟩ + 1)
+is not definitionally equal to the right-hand side
+  commonUnits ρ ⟨domain✝.arrow codomain✝, (x, j)⟩
+
+case arrow
+Γ : List Ty
+ρ : Variable Γ Ty.ground → ℕ
+domain✝ codomain✝ : Ty
+x : Variable Γ (domain✝.arrow codomain✝)
+j : Fin ((domain✝.arrow codomain✝).level + 1)
+⊢ ↑(ExistentialPlan.inputs ρ ⟨domain✝.arrow codomain✝, (x, j)⟩ + 1) = commonUnits ρ ⟨domain✝.arrow codomain✝, (x, j)⟩
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphPaymentProof.lean:51:87: error: unexpected token ')'; expected term
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphPaymentProof.lean:73:56: error: Application type mismatch: The argument
+  hbound
+has type
+  denoteWith f (fun c => ↑(0 + 1)) (u 1) < epsilonZero
+but is expected to have type
+  atUnits f (u 1) < epsilonZero
+in the application
+  FunctionalDetector.Proof.omega_product_below (atUnits f (u 1)) hbound
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphPaymentProof.lean:74:51: error: Application type mismatch: The argument
+  hpos
+has type
+  0 < denoteWith f (fun c => ↑(0 + 1)) (u 1)
+but is expected to have type
+  0 < atUnits f (u 1)
+in the application
+  FunctionalDetector.Proof.omega_product_limit (atUnits f (u 1)) hpos
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphPaymentProof.lean:79:93: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  OfNat (Type ?u.21) 0
+numerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is
+  Type ?u.21
+due to the absence of the instance above
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphPaymentProof.lean:79:96: error(lean.invalidDottedIdent): Invalid dotted identifier notation: Not supported on type universe
+  Type ?u.20
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphPaymentProof.lean:83:2: error: Type mismatch: After simplification, term
+  h
+ has type
+  GeneratedOrdinalGrade Γ (↑i)
+    (if ↑i = 0 then
+      ComputabilityKnowledge.WWOrdinalTermSemantics.Term.collapse
+        (ordinalBoxPositive σ.level (ordinalVectorAt B) (ordinalVectorAt C) 1)
+        (ordinalBoxScalarTail σ.level (B 0) (C 0))
+    else ordinalBoxPositive σ.level (ordinalVectorAt B) (ordinalVectorAt C) ↑i)
+but is expected to have type
+  GeneratedOrdinalGrade Γ (↑i)
+    (if ↑i = 0 then
+      ComputabilityKnowledge.WWOrdinalTermSemantics.Term.collapse
+        (ordinalBoxPositive σ.level (ordinalVectorAt B) (ordinalVectorAt C) 1) (boxTail p σ.level (B 0) (C 0))
+    else ordinalBoxPositive σ.level (ordinalVectorAt B) (ordinalVectorAt C) ↑i)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphPaymentProof.lean:91:8: error: Expected type must not contain free variables
+  0 < ↑(sourceFirst σ τ)
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphPaymentProof.lean:94:2: error: Type mismatch: After simplification, term
+  h
+ has type
+  @Eq (OrdinalExpression Γ) (ordinalBoxPositive σ.level (ordinalVectorAt B) (ordinalVectorAt C) 1)
+    (ComputabilityKnowledge.WWOrdinalTermSemantics.Term.emul
+      (if 2 = 0 then
+        ComputabilityKnowledge.WWOrdinalTermSemantics.Term.collapse
+          (ordinalBoxPositive σ.level (ordinalVectorAt B) (ordinalVectorAt C) 1)
+          (ordinalBoxScalarTail σ.level (B 0) (C 0))
+      else ordinalBoxPositive σ.level (ordinalVectorAt B) (ordinalVectorAt C) 2)
+      (ComputabilityKnowledge.WWOrdinalTermSemantics.Term.add (B ⟨1, ⋯⟩) (C ⟨1, ⋯⟩)))
+but is expected to have type
+  @Eq (OrdinalExpression Γ) (ordinalBoxPositive σ.level (ordinalVectorAt B) (ordinalVectorAt C) 1)
+    (ComputabilityKnowledge.WWOrdinalTermSemantics.Term.emul
+      (if 2 = 0 then
+        ComputabilityKnowledge.WWOrdinalTermSemantics.Term.collapse
+          (ordinalBoxPositive σ.level (ordinalVectorAt B) (ordinalVectorAt C) 1) (boxTail p σ.level (B 0) (C 0))
+      else ordinalBoxPositive σ.level (ordinalVectorAt B) (ordinalVectorAt C) 2)
+      (ComputabilityKnowledge.WWOrdinalTermSemantics.Term.add (B ⟨1, ⋯⟩) (C ⟨1, ⋯⟩)))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphPaymentProof.lean:125:41: error: expected token
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphPaymentProof.lean:104:4: error: Type mismatch
+  productOmegaTail (denoteWith f (fun c => ↑(0 + 1)) (h.Kvector 1)) hk δ
+has type
+  ordinalNaturalProduct Ordinal.omega0 (denoteWith f (fun c => ↑(0 + 1)) (h.Kvector 1) + ↑δ) =
+    shiftHead (ordinalNaturalProduct Ordinal.omega0 (denoteWith f (fun c => ↑(0 + 1)) (h.Kvector 1))) δ
+but is expected to have type
+  ordinalNaturalProduct Ordinal.omega0 (atUnits f (h.Kvector 1) + ↑δ) =
+    shiftHead (ordinalNaturalProduct Ordinal.omega0 (atUnits f (h.Kvector 1))) δ
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  Ordinal.CNF.eval ↦ 4
+  Ordinal.CNF ↦ 18
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphPaymentProof.lean:121:73: error: unsolved goals
+p : Policy
+f : ℕ → ℕ
+Γ Ξ : List Ty
+σ τ : Ty
+B : OriginalTerm Γ (σ.arrow τ)
+C : OriginalTerm Γ σ
+K : OriginalTerm Ξ (Ty.curriedGround 1)
+b δ : ℕ
+h : Paid p f B C K b δ
+hβ :
+  have β := ordinalNaturalProduct Ordinal.omega0 (atUnits f (h.Kvector 1));
+  β < epsilonZero ∧ Order.IsSuccLimit β
+hk : denoteWith f (fun c => ↑(0 + 1)) (h.Kvector 1) < epsilonZero
+hp : h.paidHead = shiftHead h.baseHead δ
+ρ : Variable Γ Ty.ground → ℕ
+ν : OrdinalComponent Γ → Ordinal.{0} := commonUnits ρ
+hB : ∀ (j : Fin ((σ.arrow τ).level + 1)), GeneratedOrdinalGrade Γ (↑j) (h.Bvector j)
+hC : ∀ (j : Fin (σ.level + 1)), GeneratedOrdinalGrade Γ (↑j) (h.Cvector j)
+i₂ : Fin ((σ.arrow τ).level + 1) := boxSecond σ τ ⋯
+i₁ : Fin ((σ.arrow τ).level + 1) := sourceFirst σ τ
+g₂ : GeneratedOrdinalGrade Γ (↑i₂) (box p h.Bvector h.Cvector i₂)
+hb : denoteWith f ν (box p h.Bvector h.Cvector i₂) = ↑b
+hz : 2 ^ ↑b = ↑(2 ^ b)
+hfirst :
+  box p h.Bvector h.Cvector (sourceFirst σ τ) =
+    ComputabilityKnowledge.WWOrdinalTermSemantics.Term.emul (box p h.Bvector h.Cvector (boxSecond σ τ ⋯))
+      (ComputabilityKnowledge.WWOrdinalTermSemantics.Term.add (h.Bvector (sourceFirst σ τ))
+        (h.Cvector (callerFirst σ ⋯)))
+⊢ ordinalNaturalProduct (2 ^ denoteWith f ν (box p h.Bvector h.Cvector (boxSecond σ τ ⋯)))
+      (ordinalNaturalSum (denoteWith f ν (h.Bvector (sourceFirst σ τ)))
+        (denoteWith f ν (h.Cvector (callerFirst σ ⋯)))) =
+    ordinalNaturalProduct (↑(2 ^ b))
+      (ordinalNaturalSum (denoteWith f ν (h.Bvector i₁)) (denoteWith f ν (h.Cvector (callerFirst σ ⋯))))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphPaymentProof.lean:125:33: error: unexpected syntax
+  failed to pretty print term (use 'set_option pp.rawOnError true' for raw representation)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphPaymentProof.lean:97:63: error: unsolved goals
+p : Policy
+f : ℕ → ℕ
+Γ Ξ : List Ty
+σ τ : Ty
+B : OriginalTerm Γ (σ.arrow τ)
+C : OriginalTerm Γ σ
+K : OriginalTerm Ξ (Ty.curriedGround 1)
+b δ : ℕ
+h : Paid p f B C K b δ
+hβ :
+  have β := ordinalNaturalProduct Ordinal.omega0 (atUnits f (h.Kvector 1));
+  β < epsilonZero ∧ Order.IsSuccLimit β
+hk : denoteWith f (fun c => ↑(0 + 1)) (h.Kvector 1) < epsilonZero
+hp : h.paidHead = shiftHead h.baseHead δ
+ρ : Variable Γ Ty.ground → ℕ
+ν : OrdinalComponent Γ → Ordinal.{0} := commonUnits ρ
+hB : ∀ (j : Fin ((σ.arrow τ).level + 1)), GeneratedOrdinalGrade Γ (↑j) (h.Bvector j)
+hC : ∀ (j : Fin (σ.level + 1)), GeneratedOrdinalGrade Γ (↑j) (h.Cvector j)
+i₂ : Fin ((σ.arrow τ).level + 1) := boxSecond σ τ ⋯
+i₁ : Fin ((σ.arrow τ).level + 1) := sourceFirst σ τ
+g₂ : GeneratedOrdinalGrade Γ (↑i₂) (box p h.Bvector h.Cvector i₂)
+hb : denoteWith f ν (box p h.Bvector h.Cvector i₂) = ↑b
+hz : 2 ^ ↑b = ↑(2 ^ b)
+hfirst :
+  box p h.Bvector h.Cvector (sourceFirst σ τ) =
+    ComputabilityKnowledge.WWOrdinalTermSemantics.Term.emul (box p h.Bvector h.Cvector (boxSecond σ τ ⋯))
+      (ComputabilityKnowledge.WWOrdinalTermSemantics.Term.add (h.Bvector (sourceFirst σ τ))
+        (h.Cvector (callerFirst σ ⋯)))
+hval :
+  denoteWith f ν (box p h.Bvector h.Cvector i₁) =
+    ordinalNaturalProduct (↑(2 ^ b))
+      (ordinalNaturalSum (denoteWith f ν (h.Bvector i₁)) (denoteWith f ν (h.Cvector (callerFirst σ ⋯))))
+hB₁ : sorry
+⊢ denoteWith f (commonUnits ρ) (box p h.Bvector h.Cvector (boxSecond σ τ ⋯)) = ↑b ∧
+    denoteWith f (commonUnits ρ) (box p h.Bvector h.Cvector (sourceFirst σ τ)) =
+        ordinalNaturalProduct (↑(2 ^ b))
+          (ordinalNaturalSum (denoteWith f (commonUnits ρ) (h.Bvector (sourceFirst σ τ)))
+            (denoteWith f (commonUnits ρ) (h.Cvector (callerFirst σ ⋯)))) ∧
+      ∀ (B₀ C₀ y : ℕ),
+        CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) B B₀ →
+          CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) C C₀ →
+            (CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) (Term.app B C) y ↔
+              y = J f h.paidHead (actualOrdinalNorm h.paidHead + B₀ + C₀ + σ.level))

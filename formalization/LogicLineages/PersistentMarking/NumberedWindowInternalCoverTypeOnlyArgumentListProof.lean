@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalCoverTypeOnlyArgumentListTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverTypeOnlyHeadProviderProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverArgumentGrammarInductionProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverTypeOnlyArgumentListProof
+open NumberedWindowInternalCoverTypeLeafMeasureTargets (typeLeafSharedMeasure)
+open NumberedWindowInternalCoverTypeOnlyHeadProviderProof (exact_OpenCoverTypeOnlyHeadProvider)
+open NumberedWindowInternalCoverArgumentGrammarInductionProof (exact_OpenCoverArgumentGrammarInduction)
+open NumberedWindowInternalCoverTypeOnlyArgumentListTargets
+
+theorem exact_OpenCoverTypeOnlyArgumentList : ExactOpenCoverTypeOnlyArgumentList := by
+  intro s M body α Γ raw accepted
+  exact exact_OpenCoverArgumentGrammarInduction (typeLeafSharedMeasure M) (typeOnlyHeadGuard s)
+    s body α Γ raw (exact_OpenCoverTypeOnlyHeadProvider s M body) accepted
+
+#print axioms exact_OpenCoverTypeOnlyArgumentList
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalCoverTypeOnlyArgumentListProof

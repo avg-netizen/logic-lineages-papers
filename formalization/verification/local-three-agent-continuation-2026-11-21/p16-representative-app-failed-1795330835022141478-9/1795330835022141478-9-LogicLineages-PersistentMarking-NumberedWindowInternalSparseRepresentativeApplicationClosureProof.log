@@ -1,0 +1,17 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRepresentativeApplicationClosureProof.lean:108:48: error: Type mismatch: After simplification, term
+  seen
+ has type
+  Derivation body Δ
+    (observed (applicationObserver (packedLeastProgram C X W s)) (Term.relabel j ctx) (Term.relabel j dom)
+      (Term.relabel j cod) (Term.relabel j arg) g (suc (Term.relabel j value)))
+but is expected to have type
+  Derivation body
+    (acceptEdge (edge4 X W) (Term.relabel Sum.inl ctx) (Term.relabel Sum.inl (rawCons dom cod)) (var (Sum.inr 0))
+          (var (Sum.inr 1)) ⊓
+        observed (applicationObserver (packedLeastProgram C X W s)) (Term.relabel Sum.inl ctx)
+          (Term.relabel Sum.inl dom) (Term.relabel Sum.inl cod) (Term.relabel Sum.inl arg) (var (Sum.inr 0))
+          (ID1Completion.InternalTagArithmeticSyntaxProof.suc (Term.relabel Sum.inl value)) ::
+      List.map (fun p => Formula.relabel Sum.inl p) Γ)
+    (observed (applicationObserver (packedLeastProgram C X W s)) (Term.relabel Sum.inl ctx) (Term.relabel Sum.inl dom)
+      (Term.relabel Sum.inl cod) (Term.relabel Sum.inl arg) (var (Sum.inr 1))
+      (ID1Completion.InternalTagArithmeticSyntaxProof.suc (Term.relabel Sum.inl value)))

@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.MarkedFamilyCompleteProof
+namespace LogicLineages.PersistentMarking.MarkedFamilyCompleteChecks
+theorem exact_FiniteNonempty : MarkedFamilyLatticeTargets.FiniteNonempty := MarkedFamilyCompleteProof.finiteNonempty
+theorem exact_Complete : MarkedFamilyLatticeTargets.Complete := MarkedFamilyCompleteProof.complete
+#print axioms exact_FiniteNonempty
+#print axioms exact_Complete
+end LogicLineages.PersistentMarking.MarkedFamilyCompleteChecks

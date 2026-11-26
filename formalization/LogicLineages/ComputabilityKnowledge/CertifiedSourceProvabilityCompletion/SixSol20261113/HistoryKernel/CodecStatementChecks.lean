@@ -1,0 +1,9 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryKernel.CodecTotalProof
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryKernel.CodecStatementChecks
+theorem stateCodecTotal : Targets.StateCodecTotal := CodecTotalProof.stateCodecTotal
+#print axioms stateCodecTotal
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryKernel.CodecStatementChecks

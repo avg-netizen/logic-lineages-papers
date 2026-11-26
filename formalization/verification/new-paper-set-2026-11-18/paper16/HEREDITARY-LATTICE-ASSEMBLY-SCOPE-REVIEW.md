@@ -1,0 +1,10 @@
+# Conditional step and original lattice endpoint assembly scope
+Read ValueEqualityProof, ClosureProof, BoundsProof, LatticeStepProof, LatticeInductionProof, CompleteProof and exact Step/Operation checks. Scope approved contingent on each constituent final and fresh parent gates; no proof acceptance yet.
+
+Closure identifies actual descriptor operation with combine, then actual aggregate encoding. Conditional AggregateValid plus unconditional EncodeDecode establishes actual carrier membership and semantic reconstruction, rather than treating raw encoding equality as proof of indexOf success. Bounds transport actual semantic least/greatest conditions through exact retained code-order correspondence.
+
+Current restriction preservation is derived only after source and destination operation closure. Original global Restriction and pointwise aggregate restriction compare actual descendant semantic coordinates; retained encoding injectivity converts that into code equality. No current-type restriction-preservation premise appears in aggregate validity; only proper-result LowerLattice laws enter there. ValueEq transport preserves actual descendant WF/full tuple domains.
+
+Actual Nat.strongRecOn typeSize jointly establishes JoinAt/MeetAt/RestrictionAt, discharging each strict lower premise with the smaller-size induction hypothesis. Original Join/Meet/RestrictionJoinsMeets aliases are unconditional. Empty joins and meets are covered by list-polymorphic closure/bounds, not a pre-assumed parent nonempty carrier. CarrierNonempty uses join []; Complete filters the explicitly finite actual carrier by arbitrary predicate and applies actual join/meet universal properties. Classical predicate selection is confined to this mathematical existence endpoint, not executable descriptor operations.
+
+Fresh full thirteen-family conjunction gate still requires its own literal alias/closure check after constituent finals. No source finite-lattice promotion, operator/fixed-point/adequacy or decision credit from scope review.

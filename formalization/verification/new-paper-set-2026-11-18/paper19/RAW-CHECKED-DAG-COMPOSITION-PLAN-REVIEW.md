@@ -1,0 +1,9 @@
+# Checked raw composition conceptual review
+
+Approve first concrete application/eraser packet for exact freeze, not final acceptance. Read plan against actual ScopedDAG.application/eraser/append/reference definitions. Newest-first order and shifts are correct: application appends argument table before function table, then new app payload has function root shifted by argument length; eraser uses inserted first graph, second graph, lambda and app, with second root shifted once under the lambda. Require exact encoded table/root equality, including repeated/unused vertices and dependent local prefix/type data.
+
+The checked algorithm must itself inspect actual validity, literal context agreement and full input/output type compatibility. Desired application output type must be validated/derived consistently from the actual arrow code, not accepted just because a malformed code satisfies a numeric equation. Successful reconstruction must recover both actual compatible typed input witnesses and the literal composed output, proving actual decoder acceptance. Reject iff exact guard failure; computational function is concrete data operations, not witness choice.
+
+Primitive raw constructors may be unchecked, but external wrappers must return none on malformed/context/type failures. Actual joint Computable follows concrete valid decision and list routines; exact raw counts are sum+1/sum+2, successful wrapper counts conditional. Do not infer bit complexity from these.
+
+Later detector/aggregate/wrappers require their own literal reconstruction: empty aggregate is two actual zero-source graphs; magnify must retain its actual app/zero/lambda vertex order and cannot be replaced with eraser(input,zero) by denotation. All gate/compiler/source normalization and global shared-DAG bounds remain separate. Freeze definitions and exact typed identity/arbitrary-success/rejection/computation/count contracts before proofs.

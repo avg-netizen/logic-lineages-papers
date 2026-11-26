@@ -1,0 +1,5 @@
+# Full observation union scope confirmation
+
+Confirmed ready for parent-controlled fresh full DecisionObservationChecks gate under unchanged caps, not final acceptance. Seven frozen semantic hashes match. All eleven aliases explicitly have their original DecisionObservationTargets types, including both observation endpoints and actual simultaneous opening typing/depth. Independently byte-compared DecisionAssignmentProof, DecisionObservationProof and DecisionObservationChecks with the preserved initial stopped edition: all three are unchanged. Current aggregation imports the four occurrence proof modules; earlier approved derivation-typing/material splitting and enumeration repair provenance remain subject to full final inspection.
+
+No endpoint was replaced by an isolated occurrence-only subset. Full closure/native evidence is still required. Scope remains supporting finite enumeration with arbitrary compatible reused-port assignments and internal Paper/depth conclusions, not fresh normalization, recursive inventory closure or a decision theorem.

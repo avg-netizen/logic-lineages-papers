@@ -1,0 +1,7 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRefinedSharedStepProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRefinedSharedStepProof.lean
+@@ -33,2 +33,2 @@
+-  have key := unaryGraph .succ (.projection 0) (suc prior) prior xs
+-    (successorValue ![prior]) (projectionValue 0 xs)
++  have key : Nonempty (Derivation body Γ (programGraph currentKey (suc prior) xs)) :=
++    unaryGraph .succ (.projection 0) (suc prior) prior xs (successorValue ![prior]) (projectionValue 0 xs)

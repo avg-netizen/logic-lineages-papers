@@ -1,0 +1,5 @@
+# Independent pre-scope: complete direct growth
+
+Approved current18 u:lem:direct complete two-clause scope; all eight pins match. The actual structural threshold uses compiled lower-profile reserve, structural principal dominator and hereditary weights, not semantic choice. The faithful NONote input retains every principal L>omega and all nested lower nonprincipal limit heads. Above the computed threshold, every genuine numerical mass c with c+N(L)<=t is quantified uniformly, including masses depending on t. No realizable-prefix or fixed-mass restriction appears.
+
+The second clause independently covers every principal pi>=omega and every genuine input, with no eventual threshold, and bounds the actual kernel by actualCollapse(pi+t). Final must pay actual packed-state eligibility/saturation and same-control count comparison for the lower bound, and actual mass/input transport for the upper bound. No such facts are caller premises. Fresh recursive proof/native evidence remains required; no adjacent-input, cross-mass, QE or broader theorem credit.

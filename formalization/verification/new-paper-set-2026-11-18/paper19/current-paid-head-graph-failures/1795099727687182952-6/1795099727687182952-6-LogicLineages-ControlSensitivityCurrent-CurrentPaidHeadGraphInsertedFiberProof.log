@@ -1,0 +1,81 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphInsertedFiberProof.lean:22:2: error: unsolved goals
+case refine_1.isTrue
+wb wc wg : ℕ
+Γ : List Ty
+i : ℕ
+hi : i < wb + 1 + Γ.length
+h✝ : i < wb
+⊢ i < wb + wc + wg + 3 + 1 + Γ.length
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphInsertedFiberProof.lean:25:2: error: unsolved goals
+case refine_2.isTrue
+wb wc wg : ℕ
+Γ : List Ty
+i : ℕ
+hi : i < wc + 1 + Γ.length
+h✝ : i < wc
+⊢ wb + i < wb + wc + wg + 3 + 1 + Γ.length
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphInsertedFiberProof.lean:72:33: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  a ≥ 0
+where
+ a := ↑(operandEnd bb cc gg)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphInsertedFiberProof.lean:79:6: error(lean.unknownIdentifier): Unknown identifier `exact`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphInsertedFiberProof.lean:89:27: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  slot ?fallback (variableIndex ?x)
+in the target expression
+  ν (slot z (variableIndex (shift n x))) = resultValues ρ y x
+
+case mp
+p : Policy
+f : ℕ → ℕ
+Γ : List Ty
+hg : ∀ σ ∈ Γ, σ = Ty.ground
+nξ level : ℕ
+b c : OpenGraph Γ
+g : Presented DirectCtx
+ρ : Variable Γ Ty.ground → ℕ
+y : ℕ
+bb : ℕ := b.width
+cc : ℕ := c.width
+gg : ℕ := g.width
+i : ℕ := operandEnd bb cc gg
+n : ℕ := insertedWidth bb cc gg
+Ξ : List Ty := WireCtx n (Ty.ground :: Γ)
+z : Variable Ξ Ty.ground := shift n Variable.here
+hΞ : ∀ σ ∈ WireCtx n (Ty.ground :: Γ), σ = Ty.ground := groundWireCtx n (Ty.ground :: Γ) (groundCons hg)
+hB : ∀ σ ∈ WireCtx bb (Ty.ground :: Γ), σ = Ty.ground := groundWireCtx bb (Ty.ground :: Γ) (groundCons hg)
+hC : ∀ σ ∈ WireCtx cc (Ty.ground :: Γ), σ = Ty.ground := groundWireCtx cc (Ty.ground :: Γ) (groundCons hg)
+hG : ∀ σ ∈ WireCtx gg DirectCtx, σ = Ty.ground := groundWireCtx gg DirectCtx directGround
+HL :
+  have width := insertedWidth bb cc gg;
+  have Ξ := WireCtx width (Ty.ground :: Γ);
+  (∀ i < bb + 1 + Γ.length, placeB bb cc gg i < Ξ.length) ∧
+    (∀ i < cc + 1 + Γ.length, placeC bb cc gg i < Ξ.length) ∧ ∀ i < gg + 2, placeGraph bb cc gg i < Ξ.length
+PB : ℕ → ℕ := placeB bb cc gg
+PC : ℕ → ℕ := placeC bb cc gg
+PG : ℕ → ℕ := placeGraph bb cc gg
+e :
+  ∀ (ν : Variable Ξ Ty.ground → ℕ) (w : ℕ → ℕ),
+    (∀ j < Ξ.length, ν (slot z j) = w j) →
+      (SourceAST.Formula.eval p f ν (inserted hg nξ level b c g).matrix = true ↔
+        SourceAST.Formula.eval p f (byIndex fun j => w (PB j)) b.matrix = true ∧
+          SourceAST.Formula.eval p f (byIndex fun j => w (PC j)) c.matrix = true ∧
+            w (i + 2) = nξ + level + 2 + w i + w (i + 1) ∧
+              SourceAST.Formula.eval p f (byIndex fun j => w (PG j)) g.matrix = true)
+ν : Variable (WireCtx (inserted hg nξ level b c g).width (Ty.ground :: Γ)) Ty.ground → ℕ
+hρ : ∀ (x : Variable (Ty.ground :: Γ) Ty.ground), ν (shift (inserted hg nξ level b c g).width x) = resultValues ρ y x
+hM : SourceAST.Formula.eval p f ν (inserted hg nξ level b c g).matrix = true
+w : ℕ → ℕ := fun j => ν (slot z j)
+x : Variable (Ty.ground :: Γ) Ty.ground
+⊢ ν (slot z (variableIndex (shift n x))) = resultValues ρ y x
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    z
+  has type
+    Variable Ξ Ty.ground
+  but is expected to have type
+    Variable (WireCtx (inserted hg nξ level b c g).width (Ty.ground :: Γ)) Ty.ground
+  in the application
+    slot z

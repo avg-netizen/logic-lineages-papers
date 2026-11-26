@@ -1,0 +1,11 @@
+# Independent final: counter expansion and collision
+
+Approved complete current m:lem:counter. Fresh receipt 1795006789662575144-8. Independent compiler-free evidence exactly reproduces 254 source-matched modules, zero errors and full standard-only alias; all eight frozen hashes match. Preserved proof-only failed edition did not change scope.
+
+Read fresh definitions/calibration/assembly and actual expansion, residual bounds, growth, cubic recognition, collision and comparison supplier proofs. Every new ladder step uses NumericalKernel.value/count. Monotone actual iterate input bounds propagate the shifted mass affordability; padded correspondence is invoked only after c+2*rank+1 is derived at that particular entry. Bottom cubic and each residual are separately calibrated. Upper recursion pays the same bounds including k=0, and the actual common tail entails both root and ladder budgets.
+
+The count expansion telescopes genuine block recursion in descending order and uses the real quadratic terminal count. The subtraction bound is proved before passage to the signed integer identity. Strict half/three-quarter bands use a genuine residual telescope t+sum<=leader preimage and cubic positive correction; the implementation's stronger total-residual estimate avoids multiplying the bound by rank, rather than assuming the printed estimate. Actual Phi growth pays the upper band.
+
+Cubic recognition cancels actual Phi and uses strict input/mass suppliers to recover shared mass and bottom input. Cross-rank collision uses actual chain splitting, fixed-rank input injectivity, and two signed expansions to derive the aligned-input residual difference. Residual positivity comes from genuine nonfinite suffix count; higher rank domains are proved. Distinct-leader growth and equal-leader rank collision establish both strict-order and equality characterizations.
+
+Full target includes literal entry ranks, leader evenness, signed expansion, bands, mass recovery, aligned input, exact upper residuals, rank restriction and lexicographic iff, plus genuine PR common-tail maps. Additional divergence/fixed-shift maps have only PR conclusions here, not semantic strengthening. No residue/guard/row/QE claim follows.

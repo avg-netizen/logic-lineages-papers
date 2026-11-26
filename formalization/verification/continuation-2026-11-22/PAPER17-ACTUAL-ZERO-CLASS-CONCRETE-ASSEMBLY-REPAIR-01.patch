@@ -1,0 +1,6 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualZeroClassConcreteAssemblyCohortProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualZeroClassConcreteAssemblyCohortProof.lean
+@@ -32 +32,2 @@
+-          · simp only [survivingPrefix,if_neg keep,Option.none_ne_some] at found
++          · simp only [survivingPrefix,if_neg keep] at found
++            cases found

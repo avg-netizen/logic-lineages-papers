@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroEdgeConstantShiftTargets
+import LogicLineages.PermittedControl.ActualZeroEdgeConstantShiftProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualZeroEdgeConstantShift :
+    ActualZeroEdgeConstantShift.FullActualZeroEdgeConstantShift :=
+  ActualZeroEdgeConstantShift.fullActualZeroEdgeConstantShift
+
+#print axioms fixed_actualZeroEdgeConstantShift
+
+end LogicLineages.PermittedControl.StatementChecks

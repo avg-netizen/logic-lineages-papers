@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableCanonicalTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion
+open OriginalFinalVariableCanonical OriginalFinalVariableCanonicalTargets
+#check originalSourceValidity
+#check originalWindowGraph
+#check OriginalRawSyntaxTransport.shiftPackedRaw
+#check OriginalRawSyntaxTransport.erasePackedRaw
+#check OriginalRawSyntaxTransport.variableRankPackedRaw
+#check FixednessLaw
+#check CancellationLaw
+#check RankLaw
+#check NativeProperties
+#check Properties
+#check (ActualOriginalFinalVariableFixedness : Prop)
+#check (ActualOriginalFinalVariableCancellation : Prop)
+#check (ActualOriginalFinalVariableRankPreservation : Prop)
+#check (ActualOriginalFinalVariableCanonicalSelection : Prop)

@@ -1,0 +1,44 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFunctionNeutralityInputProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFunctionNeutralityComparisonProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalConstructorShapeRootFieldsProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralVariableProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFunctionNeutralityGlobalProof
+open OriginalFunctionNeutrality OriginalFunctionNeutralityInputProof UniformCertificateCompletion
+
+/-- Select one original tuple, then refine it in the fixed order. Every law
+below concerns the exact same final source, computability package and lift. -/
+theorem actualOriginalFunctionNeutralityGlobalSelection :
+    OriginalFunctionNeutralityTargets.ActualOriginalFunctionNeutralityGlobalSelection := by
+  intro n arity
+  obtain ⟨p,hp⟩ := GlobalSourcePackageProof.actualOriginalGlobalInputSelection n arity
+  let s := OriginalConstructorShape.refineInputs (refineInputs p)
+  let q := OriginalNeutralLeaf.refineInputs s
+  let r := finalInputs p
+  have hs : GlobalSourcePackage.InputsCalibrated n arity s :=
+    OriginalConstructorShapeInputProof.refinedInputsCalibrated n arity (refineInputs p)
+      (refinedInputsCalibrated n arity p hp)
+  have hq : GlobalSourcePackage.InputsCalibrated n arity q :=
+    OriginalNeutralLeafProof.refinedInputsCalibrated n arity s hs
+  have hr : GlobalSourcePackage.InputsCalibrated n arity r := finalInputsCalibrated n arity p hp
+  refine ⟨p,hp,hr,?_,?_,?_,?_,?_⟩
+  · exact (GlobalSourcePackageProof.actualOriginalGlobalSourcePackageConstruction n arity r hr).2.2
+  · change OriginalConstructorShape.FullFoldRootFields
+      (OuterSelection.data (finalInputs p).base (finalInputs p).window) (finalInputs p).window
+    rw [finalSelectedData,finalWindow]
+    exact OriginalConstructorShapeRootFieldsProof.fullFoldRootFields (baseData p.base p.window) p.window
+  · change FullFoldMarkPreservation
+      (OuterSelection.data (finalInputs p).base (finalInputs p).window) (finalInputs p).window
+    rw [finalSelectedData,finalWindow]
+    exact OriginalFunctionNeutralityFullFoldProof.fullFoldMarkPreservation p.base p.window
+  · exact OriginalNeutralVariableProof.finalNeutralLaw s
+  · intro symbols S table hS
+    exact ⟨OriginalVariableObjectCertificateProof.actualOriginalVariableObjectCertificateBottom
+        n arity q hq symbols S table hS,
+      OriginalVariableObjectLeastProof.actualOriginalVariableObjectLeast
+        n arity q hq symbols S table hS⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFunctionNeutralityGlobalProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFunctionNeutralityGlobalProof

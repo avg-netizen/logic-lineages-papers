@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.OriginalFieldGateInfiniteStripTargets
+import LogicLineages.PermittedControl.OriginalFieldGateInfiniteStripProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalFieldGateInfiniteStrips :
+    OriginalFieldGateInfiniteStrip.ExactFieldGateInfiniteStrips :=
+  OriginalFieldGateInfiniteStrip.exactFieldGateInfiniteStrips
+
+theorem fixed_exactOriginalFieldGateResidualOperands :
+    OriginalFieldGateInfiniteStrip.ExactFieldGateResidualOperands :=
+  OriginalFieldGateInfiniteStrip.exactFieldGateResidualOperands
+
+theorem fixed_fullOriginalFieldGateInfiniteStrip :
+    OriginalFieldGateInfiniteStrip.FullOriginalFieldGateInfiniteStrip :=
+  ⟨fixed_exactOriginalFieldGateInfiniteStrips,fixed_exactOriginalFieldGateResidualOperands⟩
+
+#print axioms fixed_exactOriginalFieldGateInfiniteStrips
+#print axioms fixed_exactOriginalFieldGateResidualOperands
+#print axioms fixed_fullOriginalFieldGateInfiniteStrip
+
+end LogicLineages.PermittedControl.StatementChecks

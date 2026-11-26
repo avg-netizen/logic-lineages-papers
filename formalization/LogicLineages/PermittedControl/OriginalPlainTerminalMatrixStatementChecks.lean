@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.OriginalPlainTerminalMatrixTargets
+import LogicLineages.PermittedControl.OriginalPlainTerminalMatrixSnapshotProof
+import LogicLineages.PermittedControl.OriginalPlainTerminalMatrixProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPlainTerminalSnapshot : OriginalPlainTerminalMatrix.ExactPlainTerminalSnapshot :=
+  OriginalPlainTerminalMatrix.exactPlainTerminalSnapshot
+
+theorem fixed_exactOriginalPlainTerminalSuffix : OriginalPlainTerminalMatrix.ExactPlainTerminalSuffix :=
+  OriginalPlainTerminalMatrix.exactPlainTerminalSuffix
+
+theorem fixed_fullOriginalPlainTerminalMatrix : OriginalPlainTerminalMatrix.FullOriginalPlainTerminalMatrix :=
+  ⟨fixed_exactOriginalPlainTerminalSnapshot,fixed_exactOriginalPlainTerminalSuffix⟩
+
+#print axioms fixed_exactOriginalPlainTerminalSnapshot
+#print axioms fixed_exactOriginalPlainTerminalSuffix
+#print axioms fixed_fullOriginalPlainTerminalMatrix
+
+end LogicLineages.PermittedControl.StatementChecks

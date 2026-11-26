@@ -1,0 +1,38 @@
+--- EnvironmentProof.before
++++ EnvironmentProof.after
+@@ -19,12 +19,12 @@
+  termValue ctag atag (prepend e) (head ::ᵥ raw) (renameTerm Fin.succ f) =
+  termValue ctag atag e raw f := by
+  induction f with
+- | var i => cases h : e i <;> simp [renameTerm,termValue,prepend,h]
++ | var i => cases h : e i <;> simp [renameTerm,GorbowSubstitution.substitute,termValue,prepend,h]
+  | zero => rfl
+- | succ t ih => simp only [renameTerm,termValue,ih]
+- | add t u iht ihu => simp only [renameTerm,termValue,iht,ihu]
+- | mul t u iht ihu => simp only [renameTerm,termValue,iht,ihu]
+- | universalFunction t ih => simp only [renameTerm,termValue,ih]
++ | succ t ih => simp only [renameTerm,GorbowSubstitution.substitute,termValue] at ih ⊢; rw [ih]
++ | add t u iht ihu => simp only [renameTerm,GorbowSubstitution.substitute,termValue] at iht ihu ⊢; rw [iht,ihu]
++ | mul t u iht ihu => simp only [renameTerm,GorbowSubstitution.substitute,termValue] at iht ihu ⊢; rw [iht,ihu]
++ | universalFunction t ih => simp only [renameTerm,GorbowSubstitution.substitute,termValue] at ih ⊢; rw [ih]
+ theorem specializedShifted {n inputs ctx : Nat} (ctag atag : Nat) (e : Environment n 1 inputs)
+  (raw : List.Vector (Term ctx) inputs) (head replacement : Term ctx) (f : Term n) :
+  termValue ctag atag (UniformRuntimeEnvironmentAgreement.specialize (prepend e))
+@@ -32,12 +32,12 @@
+  specializedValue ctag atag e f raw replacement := by
+  induction f with
+  | var i => cases h : e i <;>
+-   simp [renameTerm,termValue,prepend,specializedValue,UniformRuntimeEnvironmentAgreement.specialize,h]
++   simp [renameTerm,GorbowSubstitution.substitute,termValue,prepend,specializedValue,UniformRuntimeEnvironmentAgreement.specialize,h]
+  | zero => rfl
+- | succ t ih => simp only [renameTerm,termValue,specializedValue] at ih ⊢; rw [ih]
+- | add t u iht ihu => simp only [renameTerm,termValue,specializedValue] at iht ihu ⊢; rw [iht,ihu]
+- | mul t u iht ihu => simp only [renameTerm,termValue,specializedValue] at iht ihu ⊢; rw [iht,ihu]
+- | universalFunction t ih => simp only [renameTerm,termValue,specializedValue] at ih ⊢; rw [ih]
++ | succ t ih => simp only [renameTerm,GorbowSubstitution.substitute,termValue,specializedValue] at ih ⊢; rw [ih]
++ | add t u iht ihu => simp only [renameTerm,GorbowSubstitution.substitute,termValue,specializedValue] at iht ihu ⊢; rw [iht,ihu]
++ | mul t u iht ihu => simp only [renameTerm,GorbowSubstitution.substitute,termValue,specializedValue] at iht ihu ⊢; rw [iht,ihu]
++ | universalFunction t ih => simp only [renameTerm,GorbowSubstitution.substitute,termValue,specializedValue] at ih ⊢; rw [ih]
+ theorem matrixValue {n inputs ctx : Nat} (ctag atag : Nat) (e : Environment n 1 inputs)
+  (raw : List.Vector (Term ctx) inputs) (head : Term ctx) (f : Term n) :
+  formulaValue ctag atag (head ::ᵥ raw) (matrix f) (prepend e) =

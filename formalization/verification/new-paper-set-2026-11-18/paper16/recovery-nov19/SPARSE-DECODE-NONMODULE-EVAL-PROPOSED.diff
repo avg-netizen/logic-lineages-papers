@@ -1,0 +1,26 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalSparseDecodeEvaluationProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalSparseDecodeEvaluationProof.lean
+@@ -1,9 +1,7 @@
+-module
+-public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeTargets
++import LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeTargets
+ import LogicLineages.PersistentMarking.NumberedWindowArithmeticPairDecodeProof
+ import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalSquareRootEvaluationProof
+ 
+-public section
+ namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeEvaluationProof
+ open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion
+ open InternalSquareRootEvaluationProof (exactSquareRootEvaluation)
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalSparseDecodeChecks.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalSparseDecodeChecks.lean
+@@ -1,9 +1,7 @@
+-module
+-public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeTargets
++import LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeTargets
+ import LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeEvaluationProof
+ import LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeFailureProof
+ 
+-public section
+ namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeChecks
+ open NumberedWindowInternalSparseDecodeTargets
+ 

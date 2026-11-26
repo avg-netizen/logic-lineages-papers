@@ -1,0 +1,43 @@
+CACHE_HIT LogicLineages.PersistentMarking.Syntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineSyntax
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowSyntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineTyping
+CACHE_HIT LogicLineages.PersistentMarking.Signature
+CACHE_HIT LogicLineages.PersistentMarking.NameBridge
+CACHE_HIT LogicLineages.PersistentMarking.FreeSubstitution
+CACHE_HIT LogicLineages.PersistentMarking.StructuralContext
+CACHE_HIT LogicLineages.PersistentMarking.Occurrences
+CACHE_HIT LogicLineages.PersistentMarking.SpineMarking
+CACHE_HIT LogicLineages.PersistentMarking.Comparison
+CACHE_HIT LogicLineages.PersistentMarking.StructuralStabilityTargets
+CACHE_HIT LogicLineages.PersistentMarking.StructuralCoverageTargets
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupport
+CACHE_HIT LogicLineages.PersistentMarking.DecisionInventory
+CACHE_HIT LogicLineages.PersistentMarking.DecisionPorts
+CACHE_HIT LogicLineages.PersistentMarking.DecisionObservations
+CACHE_HIT LogicLineages.PersistentMarking.DecisionSourceUniverse
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowDomain
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRules
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowTupleTargets
+Compiling LogicLineages.PersistentMarking.NumberedWindowRealizationShapeProof
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowRealizationShapeProof.lean:83:29: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case cons
+n : Nat
+q : Expr
+Q : NTerm
+a✝² : Expr
+A✝ : NTerm
+tail✝ : Args
+Tail✝ : NArgs
+a✝¹ : Realizes n a✝² A✝
+a✝ : RealizesArgs n tail✝ Tail✝
+ih : ∀ (amount cutoff : Nat), Realizes n (Spine.shift amount cutoff a✝²) (NumberedWindowSyntax.shift amount cutoff A✝)
+iht :
+  ∀ (amount cutoff : Nat),
+    RealizesArgs n (Spine.shiftArgs amount cutoff tail✝) (NumberedWindowSyntax.shiftArgs amount cutoff Tail✝)
+amount✝ cutoff✝ : Nat
+⊢ RealizesArgs n (Spine.shiftArgs amount✝ cutoff✝ (Args.cons a✝² tail✝))
+    (NumberedWindowSyntax.shiftArgs amount✝ cutoff✝ (NArgs.cons A✝ Tail✝))
+COMPILE_FAILED LogicLineages.PersistentMarking.NumberedWindowRealizationShapeProof: 1
+BUILD_RECEIPT build-reports/1795072410339582780-6.json

@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseDirectedSeenTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseDirectedSeenNumericProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseDirectedSeenNumericChecks
+open NumberedWindowInternalSparseDirectedSeenTargets
+open NumberedWindowInternalSparseDirectedSeenNumericProof (allInput)
+
+theorem exact_AllInputDirectedSeen : ExactAllInputDirectedSeen := allInput
+
+#print axioms exact_AllInputDirectedSeen
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseDirectedSeenNumericChecks

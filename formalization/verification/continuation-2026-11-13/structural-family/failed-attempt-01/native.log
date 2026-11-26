@@ -1,0 +1,34 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261113/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SixSol20261113/StructuralFamily/FailureProof.lean:20:53: error: failed to synthesize
+  Decidable (Confined input marked)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261113/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SixSol20261113/StructuralFamily/FailureProof.lean:28:3: error: unexpected token 'variable'; expected identifier
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261113/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SixSol20261113/StructuralFamily/FailureProof.lean:28:67: error: failed to synthesize
+  Decidable (Confined input (MarkedTerm.var Variable.here))
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261113/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SixSol20261113/StructuralFamily/FailureProof.lean:54:11: error: Type mismatch
+  ExecutableDomainBottom.bottomValue input Ty.ground world
+has type
+  Value input Ty.ground world
+but is expected to have type
+  Value input ([Ty.ground].get x✝) world
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261113/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SixSol20261113/StructuralFamily/FailureProof.lean:57:58: error: unexpected token 'variable'; expected ')', ',' or ':'
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261113/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SixSol20261113/StructuralFamily/FailureProof.lean:57:67: error: unexpected token ')'; expected '(', '[', '{' or '⦃'
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261113/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SixSol20261113/StructuralFamily/FailureProof.lean:62:8: error: unexpected token 'variable'; expected ':=', 'where' or '|'
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261113/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SixSol20261113/StructuralFamily/FailureProof.lean:62:17: error: unexpected identifier; expected '(', '[', '{' or '⦃'
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261113/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SixSol20261113/StructuralFamily/FailureProof.lean:69:62: error: unsolved goals
+h : ScannerSubstitutionAt constructor
+he :
+  ∀ (q : ConfinedTerm input [arrow] arrow) (s : MarkedSubstitution Unit (fun x => 0) [arrow] [])
+    (hs : RangeConfined input fun {σ} => s) (P : World input) (rho : Environment input [arrow] P)
+    (eta : Environment input [] P) (sourceMask : Protected [arrow]) (targetMask : Protected []),
+    (Agreement constructor (fun {σ} => s) ⋯ (fun {τ} => rho) fun {τ} => eta) →
+      (ProtectedCompatible input (fun {σ} => s) (fun {τ} => sourceMask) fun {τ} => targetMask) →
+        ∀ (types : List Ty) (upsilon : Ty) (args : Values input types P) (h : arrow = arrows types upsilon),
+          scan (substituteSource (fun {σ} => s) ⋯ q) constructor P (fun {τ} => eta) (fun {τ} => targetMask) types
+              upsilon args h =
+            scan q constructor P (fun {τ} => rho) (fun {τ} => sourceMask) types upsilon args h
+⊢ False
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261113/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SixSol20261113/StructuralFamily/FailureProof.lean:71:40: error: unexpected identifier; expected '(', '[', '{' or '⦃'
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261113/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/SixSol20261113/StructuralFamily/FailureProof.lean:83:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.SixSol20261113.StructuralFamily.FailureProof.replacementConfined: forbidden axiom dependency sorryAx

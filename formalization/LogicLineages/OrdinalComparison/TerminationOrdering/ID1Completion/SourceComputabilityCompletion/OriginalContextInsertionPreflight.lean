@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextInsertionTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextInsertion
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextInsertionTargets
+#check lengthStep
+#check length
+#check lengthGraph
+#check witnesses
+#check Insert
+#check NativeInsert
+#check ActualOriginalContextInsertionListCalibration
+#check ActualOriginalContextInsertionCalibration
+#check ActualOriginalContextInsertionZero
+#check ActualOriginalContextInsertionCons
+#check ActualOriginalContextInsertionVariableBelow
+#check ActualOriginalContextInsertionVariableAt
+#check ActualOriginalContextInsertionVariableAbove

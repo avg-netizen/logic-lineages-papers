@@ -1,0 +1,9 @@
+# Paper 17 high-tail projection of one original signed row
+
+In the all-large branch, the paper eliminates a raw coordinate from a Presburger matrix while holding the other values fixed. This supplier eliminates one actual name of the generated multirank congruence. The name must be the original selected rank's own positional slot. [Arithmetic, lines 255–266](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex#L255) · [Frozen comparator](../../LogicLineages/PermittedControl/HighTailNamedRowProjectionTargets.lean)
+
+The numeric projection prepends the literal nonnegative atom for the selected coordinate minus the effective original operand tail. The original Presburger code eliminates that generated name. It preserves the literal request bytes and rejects modulus zero. The resulting formula contains precisely the old row's names other than the selected name. The original input is linear in that name. [Code proof](../../LogicLineages/PermittedControl/HighTailNamedRowProjectionCodeProof.lean) · [Support proof](../../LogicLineages/PermittedControl/HighTailNamedRowProjectionSupportProof.lean)
+
+Every other used raw rank retains its paid tail and original tied value. Both updates agree at all generated slots because their names and raw ranks are each distinct. The selected atom requires its raw witness to pay the same tail. The original emitter then supplies the checked ordered reads at the updated raw valuation. Their uniqueness follows from the original read. This gives both directions of the existential over the original row. [Semantic proof](../../LogicLineages/PermittedControl/HighTailNamedRowProjectionSemanticProof.lean) · [Original emitted congruence](PAPER17-MIXED-RANK-NAMED-ROW-SOURCE-MAP.md)
+
+The theorem covers the high part of one row's existential. The low strips, the other original matrix guards, and dimension-reducing recursion have separate proof obligations.

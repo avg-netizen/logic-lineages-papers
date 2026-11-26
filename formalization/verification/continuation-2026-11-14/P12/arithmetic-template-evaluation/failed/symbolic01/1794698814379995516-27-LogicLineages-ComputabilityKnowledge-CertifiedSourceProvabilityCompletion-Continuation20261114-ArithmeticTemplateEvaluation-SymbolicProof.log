@@ -1,0 +1,22 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/ArithmeticTemplateEvaluation/SymbolicProof.lean:39:12: error: Type mismatch
+  unary p [] values LiteralNumeralPrefix.numeralCode (Program.projection i) ?m.88 ?m.89
+has type
+  Computes p [] (Program.projection i) values ?m.88 →
+    Computes p [] LiteralNumeralPrefix.numeralCode (?m.88 ::ᵥ nil) ?m.89 →
+      Computes p [] (applyOne LiteralNumeralPrefix.numeralCode (Program.projection i)) values ?m.89
+but is expected to have type
+  Computes p [] (LiteralTemplateQuote.templateQuote (Term.var i)) values
+    (raw I.numeralTag I.consTag I.appendTag values (Term.var i))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/ArithmeticTemplateEvaluation/SymbolicProof.lean:38:1: error: Alternative `zero` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/ArithmeticTemplateEvaluation/SymbolicProof.lean:38:1: error: Alternative `succ` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/ArithmeticTemplateEvaluation/SymbolicProof.lean:38:1: error: Alternative `add` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/ArithmeticTemplateEvaluation/SymbolicProof.lean:38:1: error: Alternative `mul` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/ArithmeticTemplateEvaluation/SymbolicProof.lean:38:1: error: Alternative `universalFunction` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/ArithmeticTemplateEvaluation/SymbolicProof.lean:40:4: error: unexpected token '('; expected command
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/ArithmeticTemplateEvaluation/SymbolicProof.lean:114:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.ArithmeticTemplateEvaluation.SymbolicProof.certificateComputes: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.ArithmeticTemplateEvaluation.SymbolicProof.quoteComputes' depends on axioms: [propext,
+ sorryAx]
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.ArithmeticTemplateEvaluation.SymbolicProof.certificateComputes' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

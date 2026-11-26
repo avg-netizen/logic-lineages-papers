@@ -1,0 +1,63 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationActiveProof.lean:12:0: warning: Definition `ambientEq` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationActiveProof.lean:111:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  fun x => η (ambientCast Γ m k x)
+in the target expression
+  (SourceAST.Formula.eval p f
+          (fun x =>
+            η (ambientCast Γ q.width s.width (reroute q.width (fun {σ} => leftBase Γ q.width s.width) Variable.here x)))
+          q.matrix =
+        true ∧
+      SourceAST.Formula.eval p f
+          (fun x =>
+            η
+              (ambientCast Γ q.width s.width
+                (reroute s.width (fun {σ} => rightBase Γ q.width s.width) Variable.here.there x)))
+          s.matrix =
+        true) ∧
+    holds row (η (ambientCast Γ q.width s.width Variable.here) + 1)
+      (η (ambientCast Γ q.width s.width Variable.here.there) + 1)
+      (η (ambientCast Γ q.width s.width (outputPort Γ q.width s.width)) + 1)
+
+case mpr
+p : AdmissibleSum.Policy
+f : ℕ → ℕ
+Γ : List Ty
+ρ : Variable Γ Ty.ground → ℕ
+row : LinearCode
+q s : OpenGraph Γ
+n : ℕ
+m : ℕ := q.width
+k : ℕ := s.width
+l l' : ℕ
+hQ : OpenGraph.holds p f q ρ l
+hS : OpenGraph.holds p f s ρ l'
+hrow : holds row (l + 1) (l' + 1) (n + 1)
+u : Variable (WireCtx q.width (Ty.ground :: Γ)) Ty.ground → ℕ
+hu : SourceAST.Formula.eval p f (fillPrefix q.width u (extend ρ l)) q.matrix = true
+v : Variable (WireCtx s.width (Ty.ground :: Γ)) Ty.ground → ℕ
+hv : SourceAST.Formula.eval p f (fillPrefix s.width v (extend ρ l')) s.matrix = true
+ω : Variable (Ambient Γ m k) Ty.ground → ℕ := extend (extend (fillPrefix m u (fillPrefix k v (extend ρ n))) l') l
+η : Variable (WireCtx (m + k + 2) (Ty.ground :: Γ)) Ty.ground → ℕ := fun x => ω (castGround ⋯ x)
+hη : (fun x => η (ambientCast Γ m k x)) = ω
+hshift : ∀ (x : Variable (Ty.ground :: Γ) Ty.ground), η (shift (m + k + 2) x) = extend ρ n x
+hLeft : (fun x => ω (leftBase Γ m k x)) = fillPrefix m u ρ
+hRight : (fun x => ω (rightBase Γ m k x)) = fillPrefix k v ρ
+hQL : (fun x => ω (reroute m (fun {σ} => leftBase Γ m k) Variable.here x)) = fillPrefix m u (extend ρ l)
+hSR : (fun x => ω (reroute k (fun {σ} => rightBase Γ m k) Variable.here.there x)) = fillPrefix k v (extend ρ l')
+⊢ (SourceAST.Formula.eval p f
+          (fun x =>
+            η (ambientCast Γ q.width s.width (reroute q.width (fun {σ} => leftBase Γ q.width s.width) Variable.here x)))
+          q.matrix =
+        true ∧
+      SourceAST.Formula.eval p f
+          (fun x =>
+            η
+              (ambientCast Γ q.width s.width
+                (reroute s.width (fun {σ} => rightBase Γ q.width s.width) Variable.here.there x)))
+          s.matrix =
+        true) ∧
+    holds row (η (ambientCast Γ q.width s.width Variable.here) + 1)
+      (η (ambientCast Γ q.width s.width Variable.here.there) + 1)
+      (η (ambientCast Γ q.width s.width (outputPort Γ q.width s.width)) + 1)

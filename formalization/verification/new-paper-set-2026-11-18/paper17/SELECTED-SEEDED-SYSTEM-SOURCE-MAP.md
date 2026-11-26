@@ -1,0 +1,7 @@
+# Actual selected shared seeded system
+
+Supporting level-three part of current Paper17 hardness.tex. Literal SeededSystem.compile shares all original n inputs, uses only a CLOSED seed, and adds separate fresh alignment variables per equation. ValuationPreservation fixes the original actual selected valuation before existential extension and preserves every component; reverse covers arbitrary admissible extensions. SystemEquality and QueryComplements quantify every selected control, every policy, all finite systems, zero unknowns/zero solutions/empty systems. SuccessfulQueries eliminates fallback-zero interpretation for both actual strict and weak pairs. Full internal3/context<=1 syntax bounds are conclusions.
+
+Source augments empty system by 0=0. The chosen literal program uses empty aggregate with two scalar1 values. EmptySourceCorrespondence explicitly proves augmentation preserves polynomial satisfiability, actual empty outputs1, and false strict/weak universal queries for both empty fold and singleton zero equation. No claim of syntactic identity between those source programs. The zero equation is literal unit+neg unit; no new unknown introduced.
+
+Only actual selected compiler, renaming/alignment, aggregation and closed-seed family semantics may supply semantic conclusions. Old identical source syntax bounds can transfer; default G source results cannot. Numeric one-query calibration/effectivity and undecidability remain separate, as does unchanged-G corollary. Threshold remains parked.

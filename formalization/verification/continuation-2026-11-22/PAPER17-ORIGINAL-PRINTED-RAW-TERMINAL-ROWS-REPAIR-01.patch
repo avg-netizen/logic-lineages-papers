@@ -1,0 +1,11 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedRawTerminalRowsPrimitiveProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedRawTerminalRowsPrimitiveProof.lean
+@@ -3 +3 @@
+-import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsCodeRecursionProof
++import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.LinearRowsCodeDataProof
+@@ -11 +10,0 @@
+-open LinearRowsCodeProof (atoms_primitive decodeAtom_primitive)
+@@ -39 +38,2 @@
+-  Primrec.list_map atoms_primitive ((atomPrimitive.comp decodeAtom_primitive).comp Primrec.snd).to₂
++  Primrec.list_map LinearRowsCodeProof.atoms_primitive
++    ((atomPrimitive.comp LinearRowsCodeProof.decodeAtom_primitive).comp Primrec.snd).to₂

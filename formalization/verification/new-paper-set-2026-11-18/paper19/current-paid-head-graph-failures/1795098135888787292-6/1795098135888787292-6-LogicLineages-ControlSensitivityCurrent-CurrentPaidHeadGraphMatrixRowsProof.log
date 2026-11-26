@@ -1,0 +1,315 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:53:62: error: Invalid `←` modifier: `rowsBefore` is a declaration name to be unfolded
+
+Hint: The simplifier cannot "refold" definitions by name. Use `rw` for this instead,
+                      or use the `←` simp modifier with an equational lemma for `rowsBefore`.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:40:58: error: unsolved goals
+Γ Δ : List Ty
+r : Renaming Γ Δ
+off : ℕ
+hr : PrefixAt (fun {σ} => r) off
+a b : SourceAST.Term Γ
+tag : ℕ
+node : {Ξ : List Ty} → {n : ℕ} → Port Ξ → Port Ξ → InputNormalization.Node Ξ n
+hout :
+  ∀ {Ξ : List Ty} {n : ℕ} (u v : Port Ξ),
+    encodeInputRow (node u v) = (tag, PrimitiveGate.encodePort u, PrimitiveGate.encodePort v)
+A : Emit := emitTerm off (term a)
+B : Emit := emitTerm (off + A.2.1) (term b)
+Ξ : List Ty
+s : Renaming Δ Ξ
+u : Port Ξ
+hs : PrefixAt (fun {σ} => s) (emitTerm off (term a)).2.1
+hu : PrimitiveGate.encodePort u = (emitTerm off (term a)).2.2
+ha :
+  ∀ (m : ℕ) (k : SourceAST.Continuation Δ m),
+    encodeInput (a.emit (fun {σ} {σ} => r) fun {Δ} => k) =
+      rowsBefore (emitTerm off (term a)).1 (encodeInput (k (fun {σ} => s) u))
+Ω : List Ty
+t : Renaming Ξ Ω
+v : Port Ω
+ht : PrefixAt (fun {σ} => t) (emitTerm (off + A.2.1) (term b)).2.1
+hv : PrimitiveGate.encodePort v = (emitTerm (off + A.2.1) (term b)).2.2
+hb :
+  ∀ (m : ℕ) (k : SourceAST.Continuation Ξ m),
+    encodeInput (b.emit (fun {σ} {σ} x => s (r x)) fun {Δ} => k) =
+      rowsBefore (emitTerm (off + A.2.1) (term b)).1 (encodeInput (k (fun {σ} => t) v))
+m : ℕ
+k : SourceAST.BooleanContinuation Δ m
+hp : PrimitiveGate.encodePort (ExistentialPlan.portRename (fun {σ} => t) u) = liftPort B.2.1 (emitTerm off (term a)).2.2
+⊢ rowsBefore ((emitTerm off (term a)).1 ++ (emitTerm (off + A.2.1) (term b)).1)
+      (((tag, liftPort B.2.1 (emitTerm off (term a)).2.2, (emitTerm (off + A.2.1) (term b)).2.2), none) ::
+          (encodeInput (k (fun {σ} x => t (s x)) Fin.succ 0)).1,
+        (encodeInput (k (fun {σ} x => t (s x)) Fin.succ 0)).2) =
+    rowsBefore
+      ((emitTerm off (term a)).1 ++ (emitTerm (off + (emitTerm off (term a)).2.1) (term b)).1 ++
+        [noneStep tag (liftPort (emitTerm (off + (emitTerm off (term a)).2.1) (term b)).2.1 (emitTerm off (term a)).2.2)
+            (emitTerm (off + (emitTerm off (term a)).2.1) (term b)).2.2])
+      (encodeInput (k (fun {σ} x => t (s x)) Fin.succ 0))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:56:4: error: don't know how to synthesize implicit argument `Γ`
+  @BooleanTrace (?m.52 Γ truth) ([noneStep (if truth = true then 0 else 2) 0 0], 0, 1) fun m k =>
+    InputNormalization.Input.boolean
+      (if truth = true then
+        InputNormalization.Node.eq SourceAdditionCompletion.Atom.zero SourceAdditionCompletion.Atom.zero
+      else InputNormalization.Node.lt SourceAdditionCompletion.Atom.zero SourceAdditionCompletion.Atom.zero)
+      (k (fun {σ} x => x) Fin.succ 0)
+context:
+Γ : List Ty
+truth : Bool
+⊢ List Ty
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:57:18: error: don't know how to synthesize implicit argument `Γ`
+  @InputNormalization.Input.boolean (?m.52 Γ truth) m
+    (if truth = true then
+      InputNormalization.Node.eq SourceAdditionCompletion.Atom.zero SourceAdditionCompletion.Atom.zero
+    else InputNormalization.Node.lt SourceAdditionCompletion.Atom.zero SourceAdditionCompletion.Atom.zero)
+    (k (fun {σ} x => x) Fin.succ 0)
+context:
+Γ : List Ty
+truth : Bool
+m : ℕ
+k : SourceAST.BooleanContinuation (?m.52 Γ truth) m
+⊢ List Ty
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:58:9: error: don't know how to synthesize implicit argument `Δ`
+  @k (?m.52 Γ truth) (m + 1) (fun {σ} x => x) Fin.succ 0
+context:
+Γ : List Ty
+truth : Bool
+m : ℕ
+k : SourceAST.BooleanContinuation (?m.52 Γ truth) m
+⊢ List Ty
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:58:16: error(lean.inferBinderTypeFailed): Failed to infer type of binder `x`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:57:28: error: don't know how to synthesize implicit argument `α`
+  @ite (InputNormalization.Node (?m.52 Γ truth) m) (truth = true) (instDecidableEqBool truth true)
+    (InputNormalization.Node.eq SourceAdditionCompletion.Atom.zero SourceAdditionCompletion.Atom.zero)
+    (InputNormalization.Node.lt SourceAdditionCompletion.Atom.zero SourceAdditionCompletion.Atom.zero)
+context:
+Γ : List Ty
+truth : Bool
+m : ℕ
+k : SourceAST.BooleanContinuation (?m.52 Γ truth) m
+⊢ Type
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:57:63: error: don't know how to synthesize implicit argument `Γ`
+  @InputNormalization.Node.lt (?m.52 Γ truth) m SourceAdditionCompletion.Atom.zero SourceAdditionCompletion.Atom.zero
+context:
+Γ : List Ty
+truth : Bool
+m : ℕ
+k : SourceAST.BooleanContinuation (?m.52 Γ truth) m
+⊢ List Ty
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:57:73: error: don't know how to synthesize implicit argument `Γ`
+  @SourceAdditionCompletion.Atom.zero (?m.52 Γ truth)
+context:
+Γ : List Ty
+truth : Bool
+m : ℕ
+k : SourceAST.BooleanContinuation (?m.52 Γ truth) m
+⊢ List Ty
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:57:67: error: don't know how to synthesize implicit argument `Γ`
+  @SourceAdditionCompletion.Atom.zero (?m.52 Γ truth)
+context:
+Γ : List Ty
+truth : Bool
+m : ℕ
+k : SourceAST.BooleanContinuation (?m.52 Γ truth) m
+⊢ List Ty
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:57:42: error: don't know how to synthesize implicit argument `Γ`
+  @InputNormalization.Node.eq (?m.52 Γ truth) m SourceAdditionCompletion.Atom.zero SourceAdditionCompletion.Atom.zero
+context:
+Γ : List Ty
+truth : Bool
+m : ℕ
+k : SourceAST.BooleanContinuation (?m.52 Γ truth) m
+⊢ List Ty
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:57:52: error: don't know how to synthesize implicit argument `Γ`
+  @SourceAdditionCompletion.Atom.zero (?m.52 Γ truth)
+context:
+Γ : List Ty
+truth : Bool
+m : ℕ
+k : SourceAST.BooleanContinuation (?m.52 Γ truth) m
+⊢ List Ty
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:57:46: error: don't know how to synthesize implicit argument `Γ`
+  @SourceAdditionCompletion.Atom.zero (?m.52 Γ truth)
+context:
+Γ : List Ty
+truth : Bool
+m : ℕ
+k : SourceAST.BooleanContinuation (?m.52 Γ truth) m
+⊢ List Ty
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:57:13: error(lean.inferBinderTypeFailed): Failed to infer type of binder `k`
+
+Note: All parameter types and holes (e.g., `_`) in the header of a theorem are resolved before the proof is processed; information from the proof cannot be used to infer what these values should be
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:76:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  g ≥ 0
+  f ≥ 0
+  d ≥ 0
+  d - f ≥ 1
+  c ≥ 0
+  c - g ≤ -1
+  b ≥ 1
+where
+ b := ↑n
+ c := ↑↑i
+ d := ↑A.2.2
+ f := ↑(emitFormula off (formula a)).2.2
+ g := ↑m
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:78:8: error: Failed to rewrite using equation theorems for `SourceAST.Formula.emit`
+
+Hint: Try rewriting with `LogicLineages.ControlSensitivityCurrent.SourceAST.Formula.emit.eq_def`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:101:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  p ≥ 0
+  o ≥ 0
+  l ≥ 0
+  h ≥ 0
+  g ≥ 0
+  g + h - l - o ≥ 1
+  f ≥ 0
+  f - p ≤ -1
+  d ≥ 1
+  c ≥ 1
+where
+ c := ↑n
+ d := ↑j
+ f := ↑↑i
+ g := ↑A.2.2
+ h := ↑B.2.2
+ l := ↑(emitFormula off (formula a)).2.2
+ o := ↑(emitFormula (off + A.2.1) (formula b)).2.2
+ p := ↑m
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:107:80: error: Invalid `←` modifier: `rowsBefore` is a declaration name to be unfolded
+
+Hint: The simplifier cannot "refold" definitions by name. Use `rw` for this instead,
+                      or use the `←` simp modifier with an equational lemma for `rowsBefore`.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:107:80: error: Invalid `←` modifier: `rowsBefore` is a declaration name to be unfolded
+
+Hint: The simplifier cannot "refold" definitions by name. Use `rw` for this instead,
+                      or use the `←` simp modifier with an equational lemma for `rowsBefore`.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:102:2: error: unsolved goals
+case refine_2.false
+Γ Δ : List Ty
+r : Renaming Γ Δ
+a b : SourceAST.Formula Γ
+off : ℕ
+hr : PrefixAt (fun {σ} => r) off
+ha : BooleanTrace (emitFormula off (formula a)) fun x k => a.emit (fun {σ} => r) fun {Δ} {n} => k
+hb :
+  ∀ (Ξ : List Ty) (s : Renaming Γ Ξ) (o : ℕ),
+    PrefixAt (fun {σ} => s) o →
+      BooleanTrace (emitFormula o (formula b)) fun x k => b.emit (fun {σ} => s) fun {Δ} {n} => k
+A : Emit := emitFormula off (formula a)
+B : Emit := emitFormula (off + A.2.1) (formula b)
+m : ℕ
+Ξ : List Ty
+s : Renaming Δ Ξ
+n : ℕ
+e : Fin m → Fin n
+left : Fin n
+hs : PrefixAt (fun {σ} => s) (emitFormula off (formula a)).2.1
+he : ∀ (i : Fin m), ↑(e i) = ↑i + (emitFormula off (formula a)).2.2
+hl : ↑left = 0
+hca :
+  ∀ (k : SourceAST.BooleanContinuation Δ m),
+    encodeInput ((fun x k => a.emit (fun {σ} => r) fun {Δ} {n} => k) m fun {Δ} {n} => k) =
+      rowsBefore (emitFormula off (formula a)).1 (encodeInput (k (fun {σ} => s) e left))
+Ω : List Ty
+t : Renaming Ξ Ω
+j : ℕ
+k : Fin n → Fin j
+right : Fin j
+ht : PrefixAt (fun {σ} => t) (emitFormula (off + A.2.1) (formula b)).2.1
+hk : ∀ (i : Fin n), ↑(k i) = ↑i + (emitFormula (off + A.2.1) (formula b)).2.2
+hright : ↑right = 0
+hcb :
+  ∀ (k_1 : SourceAST.BooleanContinuation Ξ n),
+    encodeInput ((fun x k => b.emit (fun {σ} x => s (r x)) fun {Δ} {n} => k) n fun {Δ} {n} => k_1) =
+      rowsBefore (emitFormula (off + A.2.1) (formula b)).1 (encodeInput (k_1 (fun {σ} => t) k right))
+cont : SourceAST.BooleanContinuation Δ m
+hh : ↑(k left) = B.2.2
+⊢ rowsBefore ((emitFormula off (formula a)).1 ++ (emitFormula (off + A.2.1) (formula b)).1)
+      (((5, B.2.2, 0), none) :: (encodeInput (cont (fun {σ} x => t (s x)) (fun i => (k (e i)).succ) 0)).1,
+        (encodeInput (cont (fun {σ} x => t (s x)) (fun i => (k (e i)).succ) 0)).2) =
+    rowsBefore
+      ((emitFormula off (formula a)).1 ++ (emitFormula (off + (emitFormula off (formula a)).2.1) (formula b)).1 ++
+        [noneStep 5 (emitFormula (off + (emitFormula off (formula a)).2.1) (formula b)).2.2 0])
+      (encodeInput (cont (fun {σ} x => t (s x)) (fun i => (k (e i)).succ) 0))
+
+case refine_2.true
+Γ Δ : List Ty
+r : Renaming Γ Δ
+a b : SourceAST.Formula Γ
+off : ℕ
+hr : PrefixAt (fun {σ} => r) off
+ha : BooleanTrace (emitFormula off (formula a)) fun x k => a.emit (fun {σ} => r) fun {Δ} {n} => k
+hb :
+  ∀ (Ξ : List Ty) (s : Renaming Γ Ξ) (o : ℕ),
+    PrefixAt (fun {σ} => s) o →
+      BooleanTrace (emitFormula o (formula b)) fun x k => b.emit (fun {σ} => s) fun {Δ} {n} => k
+A : Emit := emitFormula off (formula a)
+B : Emit := emitFormula (off + A.2.1) (formula b)
+m : ℕ
+Ξ : List Ty
+s : Renaming Δ Ξ
+n : ℕ
+e : Fin m → Fin n
+left : Fin n
+hs : PrefixAt (fun {σ} => s) (emitFormula off (formula a)).2.1
+he : ∀ (i : Fin m), ↑(e i) = ↑i + (emitFormula off (formula a)).2.2
+hl : ↑left = 0
+hca :
+  ∀ (k : SourceAST.BooleanContinuation Δ m),
+    encodeInput ((fun x k => a.emit (fun {σ} => r) fun {Δ} {n} => k) m fun {Δ} {n} => k) =
+      rowsBefore (emitFormula off (formula a)).1 (encodeInput (k (fun {σ} => s) e left))
+Ω : List Ty
+t : Renaming Ξ Ω
+j : ℕ
+k : Fin n → Fin j
+right : Fin j
+ht : PrefixAt (fun {σ} => t) (emitFormula (off + A.2.1) (formula b)).2.1
+hk : ∀ (i : Fin n), ↑(k i) = ↑i + (emitFormula (off + A.2.1) (formula b)).2.2
+hright : ↑right = 0
+hcb :
+  ∀ (k_1 : SourceAST.BooleanContinuation Ξ n),
+    encodeInput ((fun x k => b.emit (fun {σ} x => s (r x)) fun {Δ} {n} => k) n fun {Δ} {n} => k_1) =
+      rowsBefore (emitFormula (off + A.2.1) (formula b)).1 (encodeInput (k_1 (fun {σ} => t) k right))
+cont : SourceAST.BooleanContinuation Δ m
+hh : ↑(k left) = B.2.2
+⊢ rowsBefore ((emitFormula off (formula a)).1 ++ (emitFormula (off + A.2.1) (formula b)).1)
+      (((4, B.2.2, 0), none) :: (encodeInput (cont (fun {σ} x => t (s x)) (fun i => (k (e i)).succ) 0)).1,
+        (encodeInput (cont (fun {σ} x => t (s x)) (fun i => (k (e i)).succ) 0)).2) =
+    rowsBefore
+      ((emitFormula off (formula a)).1 ++ (emitFormula (off + (emitFormula off (formula a)).2.1) (formula b)).1 ++
+        [noneStep 4 (emitFormula (off + (emitFormula off (formula a)).2.1) (formula b)).2.2 0])
+      (encodeInput (cont (fun {σ} x => t (s x)) (fun i => (k (e i)).succ) 0))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphMatrixRowsProof.lean:135:6: warning: This simp argument is unused:
+  reduceCtorEq
+
+Hint: Omit it from the simp argument list.
+  simp only [both, ̲either, ̲atom, ̲tagMod _ 6 (by decide), ̲tagMod _ 7 (by decide),
+        tagDiv _ 6 (by decide), ̲tagDiv _ 7 (by decide), ̲Nat.unpair_pair, ̲Nat.reduceLeDiff,
+  ̵  ̵ ̵ ̵ ̵ ̵r̵e̵d̵u̵c̵e̵C̵t̵o̵r̵E̵q̵,̵↓reduceIte,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲Nat.reduceSub]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,345 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:71:2: error: Tactic `rfl` failed: The left-hand side
+  (Nat.pair 0
+      (evaluate HistoryAppend.append
+        (evaluate (termProgram e t) (rawInputs u) ::ᵥ evaluate (termProgram e v) (rawInputs u) ::ᵥ nil))).succ
+is not definitionally equal to the right-hand side
+  Encodable.encode
+    (0 ::
+      (GorbowTermPrefixCode.encode (GorbowSubstitution.substitute (assignment e u) t) ++
+        GorbowTermPrefixCode.encode (GorbowSubstitution.substitute (assignment e u) v)))
+
+case equal
+n inputs : ℕ
+u : Fin inputs → Term 0
+hc : ∀ (a b : ℕ), evaluate HistoryCodec.cons (a ::ᵥ b ::ᵥ nil) = (Nat.pair a b).succ
+n✝ : ℕ
+t v : Term n✝
+depth : ℕ
+e : Environment n✝ depth inputs
+⊢ (Nat.pair 0
+        (evaluate HistoryAppend.append
+          (evaluate (termProgram e t) (rawInputs u) ::ᵥ evaluate (termProgram e v) (rawInputs u) ::ᵥ nil))).succ =
+    Encodable.encode
+      (0 ::
+        (GorbowTermPrefixCode.encode (GorbowSubstitution.substitute (assignment e u) t) ++
+          GorbowTermPrefixCode.encode (GorbowSubstitution.substitute (assignment e u) v)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:74:2: error: Tactic `rfl` failed: The left-hand side
+  (Nat.pair 1 (evaluate (termProgram e t) (rawInputs u))).succ
+is not definitionally equal to the right-hand side
+  Encodable.encode (1 :: GorbowTermPrefixCode.encode (GorbowSubstitution.substitute (assignment e u) t))
+
+case universalRelation
+n inputs : ℕ
+u : Fin inputs → Term 0
+hc : ∀ (a b : ℕ), evaluate HistoryCodec.cons (a ::ᵥ b ::ᵥ nil) = (Nat.pair a b).succ
+n✝ : ℕ
+t : Term n✝
+depth : ℕ
+e : Environment n✝ depth inputs
+⊢ (Nat.pair 1 (evaluate (termProgram e t) (rawInputs u))).succ =
+    Encodable.encode (1 :: GorbowTermPrefixCode.encode (GorbowSubstitution.substitute (assignment e u) t))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:77:2: error: Tactic `rfl` failed: The left-hand side
+  (Nat.pair 2 (evaluate (termProgram e t) (rawInputs u))).succ
+is not definitionally equal to the right-hand side
+  Encodable.encode (2 :: GorbowTermPrefixCode.encode (GorbowSubstitution.substitute (assignment e u) t))
+
+case agent
+n inputs : ℕ
+u : Fin inputs → Term 0
+hc : ∀ (a b : ℕ), evaluate HistoryCodec.cons (a ::ᵥ b ::ᵥ nil) = (Nat.pair a b).succ
+n✝ : ℕ
+t : Term n✝
+depth : ℕ
+e : Environment n✝ depth inputs
+⊢ (Nat.pair 2 (evaluate (termProgram e t) (rawInputs u))).succ =
+    Encodable.encode (2 :: GorbowTermPrefixCode.encode (GorbowSubstitution.substitute (assignment e u) t))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:80:2: error: Tactic `rfl` failed: The left-hand side
+  (Nat.pair 3 (evaluate (termProgram e t) (rawInputs u))).succ
+is not definitionally equal to the right-hand side
+  Encodable.encode (3 :: GorbowTermPrefixCode.encode (GorbowSubstitution.substitute (assignment e u) t))
+
+case knowledgeAll
+n inputs : ℕ
+u : Fin inputs → Term 0
+hc : ∀ (a b : ℕ), evaluate HistoryCodec.cons (a ::ᵥ b ::ᵥ nil) = (Nat.pair a b).succ
+n✝ : ℕ
+t : Term n✝
+depth : ℕ
+e : Environment n✝ depth inputs
+⊢ (Nat.pair 3 (evaluate (termProgram e t) (rawInputs u))).succ =
+    Encodable.encode (3 :: GorbowTermPrefixCode.encode (GorbowSubstitution.substitute (assignment e u) t))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:83:2: error: Tactic `rfl` failed: The left-hand side
+  (Nat.pair 4
+      (evaluate HistoryAppend.append
+        (evaluate (termProgram e t) (rawInputs u) ::ᵥ evaluate (termProgram e v) (rawInputs u) ::ᵥ nil))).succ
+is not definitionally equal to the right-hand side
+  Encodable.encode
+    (4 ::
+      (GorbowTermPrefixCode.encode (GorbowSubstitution.substitute (assignment e u) t) ++
+        GorbowTermPrefixCode.encode (GorbowSubstitution.substitute (assignment e u) v)))
+
+case knowledge
+n inputs : ℕ
+u : Fin inputs → Term 0
+hc : ∀ (a b : ℕ), evaluate HistoryCodec.cons (a ::ᵥ b ::ᵥ nil) = (Nat.pair a b).succ
+n✝ : ℕ
+t v : Term n✝
+depth : ℕ
+e : Environment n✝ depth inputs
+⊢ (Nat.pair 4
+        (evaluate HistoryAppend.append
+          (evaluate (termProgram e t) (rawInputs u) ::ᵥ evaluate (termProgram e v) (rawInputs u) ::ᵥ nil))).succ =
+    Encodable.encode
+      (4 ::
+        (GorbowTermPrefixCode.encode (GorbowSubstitution.substitute (assignment e u) t) ++
+          GorbowTermPrefixCode.encode (GorbowSubstitution.substitute (assignment e u) v)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:86:2: error: Tactic `rfl` failed: The left-hand side
+  (Nat.pair 5 (evaluate (termProgram e t) (rawInputs u))).succ
+is not definitionally equal to the right-hand side
+  Encodable.encode (5 :: GorbowTermPrefixCode.encode (GorbowSubstitution.substitute (assignment e u) t))
+
+case truth
+n inputs : ℕ
+u : Fin inputs → Term 0
+hc : ∀ (a b : ℕ), evaluate HistoryCodec.cons (a ::ᵥ b ::ᵥ nil) = (Nat.pair a b).succ
+n✝ : ℕ
+t : Term n✝
+depth : ℕ
+e : Environment n✝ depth inputs
+⊢ (Nat.pair 5 (evaluate (termProgram e t) (rawInputs u))).succ =
+    Encodable.encode (5 :: GorbowTermPrefixCode.encode (GorbowSubstitution.substitute (assignment e u) t))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:70:62: warning: This simp argument is unused:
+  nativeTerm
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval,n̵ ̲at̵i̵v̵e̵T̵e̵r̵m̵,̵a̵ppendList, ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:70:73: warning: This simp argument is unused:
+  appendList
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval, ̲nativeTerm,a̵p̵p̵e̵n̵d̵L̵i̵s̵t̵,̵ ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:73:28: warning: This simp argument is unused:
+  binary
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram,b̵i̵n̵a̵r̵y̵,̵ ̲unary, ̲twoEval, ̲constantEval, ̲nativeTerm, ̲appendList, ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:73:62: warning: This simp argument is unused:
+  nativeTerm
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval,n̵ ̲at̵i̵v̵e̵T̵e̵r̵m̵,̵a̵ppendList, ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:73:73: warning: This simp argument is unused:
+  appendList
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval, ̲nativeTerm,a̵p̵p̵e̵n̵d̵L̵i̵s̵t̵,̵ ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:76:28: warning: This simp argument is unused:
+  binary
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram,b̵i̵n̵a̵r̵y̵,̵ ̲unary, ̲twoEval, ̲constantEval, ̲nativeTerm, ̲appendList, ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:76:62: warning: This simp argument is unused:
+  nativeTerm
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval,n̵ ̲at̵i̵v̵e̵T̵e̵r̵m̵,̵a̵ppendList, ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:76:73: warning: This simp argument is unused:
+  appendList
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval, ̲nativeTerm,a̵p̵p̵e̵n̵d̵L̵i̵s̵t̵,̵ ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:79:28: warning: This simp argument is unused:
+  binary
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram,b̵i̵n̵a̵r̵y̵,̵ ̲unary, ̲twoEval, ̲constantEval, ̲nativeTerm, ̲appendList, ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:79:62: warning: This simp argument is unused:
+  nativeTerm
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval,n̵ ̲at̵i̵v̵e̵T̵e̵r̵m̵,̵a̵ppendList, ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:79:73: warning: This simp argument is unused:
+  appendList
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval, ̲nativeTerm,a̵p̵p̵e̵n̵d̵L̵i̵s̵t̵,̵ ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:82:62: warning: This simp argument is unused:
+  nativeTerm
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval,n̵ ̲at̵i̵v̵e̵T̵e̵r̵m̵,̵a̵ppendList, ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:82:73: warning: This simp argument is unused:
+  appendList
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval, ̲nativeTerm,a̵p̵p̵e̵n̵d̵L̵i̵s̵t̵,̵ ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:85:28: warning: This simp argument is unused:
+  binary
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram,b̵i̵n̵a̵r̵y̵,̵ ̲unary, ̲twoEval, ̲constantEval, ̲nativeTerm, ̲appendList, ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:85:62: warning: This simp argument is unused:
+  nativeTerm
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval,n̵ ̲at̵i̵v̵e̵T̵e̵r̵m̵,̵a̵ppendList, ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:85:73: warning: This simp argument is unused:
+  appendList
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval, ̲nativeTerm,a̵p̵p̵e̵n̵d̵L̵i̵s̵t̵,̵ ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:88:28: warning: This simp argument is unused:
+  binary
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram,b̵i̵n̵a̵r̵y̵,̵ ̲unary, ̲twoEval, ̲constantEval, ̲nativeTerm, ̲appendList, ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode, ̲ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:88:62: warning: This simp argument is unused:
+  nativeTerm
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval,n̵ ̲at̵i̵v̵e̵T̵e̵r̵m̵,̵a̵ppendList, ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode, ̲ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:88:73: warning: This simp argument is unused:
+  appendList
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval, ̲nativeTerm,a̵p̵p̵e̵n̵d̵L̵i̵s̵t̵,̵ ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode, ̲ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:91:62: warning: This simp argument is unused:
+  nativeTerm
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval,n̵ ̲at̵i̵v̵e̵T̵e̵r̵m̵,̵a̵ppendList, ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode, ̲hf, ̲hg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:94:62: warning: This simp argument is unused:
+  nativeTerm
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval,n̵ ̲at̵i̵v̵e̵T̵e̵r̵m̵,̵a̵ppendList, ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode, ̲hf, ̲hg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:97:62: warning: This simp argument is unused:
+  nativeTerm
+
+Hint: Omit it from the simp argument list.
+  simp only [formulaProgram, ̲binary, ̲unary, ̲twoEval, ̲constantEval,n̵ ̲at̵i̵v̵e̵T̵e̵r̵m̵,̵a̵ppendList, ̲hc,
+  ̲ ̲ ̲ ̲ ̲GorbowFormulaSubstitution.substituteFormula, ̲GorbowFormulaPrefixCode.encode, ̲hf, ̲hg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:100:28: warning: This simp argument is unused:
+  binary
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵o̵r̵m̵u̵l̵a̵P̵r̵o̵g̵r̵a̵m̵,̵b̵i̵n̵a̵r̵y̵,̵u̵n̵a̵r̵y̵,̵t̵w̵o̵E̵v̵a̵l̵,̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵,̵n̵a̵t̵i̵v̵e̵T̵e̵r̵m̵,̵a̵p̵p̵e̵n̵d̵L̵i̵s̵t̵,̵h̵c̵,̵G̵o̵r̵b̵o̵w̵F̵o̵r̵m̵u̵l̵a̵S̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵.̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵F̵o̵r̵m̵u̵l̵a̵,̵G̵o̵r̵b̵o̵w̵F̵o̵r̵m̵u̵l̵a̵P̵r̵e̵f̵i̵x̵C̵o̵d̵e̵.̵e̵n̵c̵o̵d̵e̵,̵←̵ ̵a̵s̵s̵i̵g̵n̵m̵e̵n̵t̵L̵i̵f̵t̵,̵i̵h̵]̵[̲f̲o̲r̲m̲u̲l̲a̲P̲r̲o̲g̲r̲a̲m̲,̲ ̲u̲n̲a̲r̲y̲,̲ ̲t̲w̲o̲E̲v̲a̲l̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲,̲ ̲n̲a̲t̲i̲v̲e̲T̲e̲r̲m̲,̲ ̲a̲p̲p̲e̲n̲d̲L̲i̲s̲t̲,̲ ̲h̲c̲,̲
+  ̲ ̲ ̲ ̲ ̲G̲o̲r̲b̲o̲w̲F̲o̲r̲m̲u̲l̲a̲S̲u̲b̲s̲t̲i̲t̲u̲t̲i̲o̲n̲.̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲F̲o̲r̲m̲u̲l̲a̲,̲ ̲G̲o̲r̲b̲o̲w̲F̲o̲r̲m̲u̲l̲a̲P̲r̲e̲f̲i̲x̲C̲o̲d̲e̲.̲e̲n̲c̲o̲d̲e̲,̲ ̲←̲ ̲a̲s̲s̲i̲g̲n̲m̲e̲n̲t̲L̲i̲f̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲i̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:100:62: warning: This simp argument is unused:
+  nativeTerm
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵o̵r̵m̵u̵l̵a̵P̵r̵o̵g̵r̵a̵m̵,̵b̵i̵n̵a̵r̵y̵,̵u̵n̵a̵r̵y̵,̵t̵w̵o̵E̵v̵a̵l̵,̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵,̵n̵a̵t̵i̵v̵e̵T̵e̵r̵m̵,̵a̵p̵p̵e̵n̵d̵L̵i̵s̵t̵,̵h̵c̵,̵G̵o̵r̵b̵o̵w̵F̵o̵r̵m̵u̵l̵a̵S̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵.̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵F̵o̵r̵m̵u̵l̵a̵,̵G̵o̵r̵b̵o̵w̵F̵o̵r̵m̵u̵l̵a̵P̵r̵e̵f̵i̵x̵C̵o̵d̵e̵.̵e̵n̵c̵o̵d̵e̵,̵←̵ ̵a̵s̵s̵i̵g̵n̵m̵e̵n̵t̵L̵i̵f̵t̵,̵i̵h̵]̵[̲f̲o̲r̲m̲u̲l̲a̲P̲r̲o̲g̲r̲a̲m̲,̲ ̲b̲i̲n̲a̲r̲y̲,̲ ̲u̲n̲a̲r̲y̲,̲ ̲t̲w̲o̲E̲v̲a̲l̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲,̲ ̲a̲p̲p̲e̲n̲d̲L̲i̲s̲t̲,̲ ̲h̲c̲,̲
+  ̲ ̲ ̲ ̲ ̲G̲o̲r̲b̲o̲w̲F̲o̲r̲m̲u̲l̲a̲S̲u̲b̲s̲t̲i̲t̲u̲t̲i̲o̲n̲.̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲F̲o̲r̲m̲u̲l̲a̲,̲ ̲G̲o̲r̲b̲o̲w̲F̲o̲r̲m̲u̲l̲a̲P̲r̲e̲f̲i̲x̲C̲o̲d̲e̲.̲e̲n̲c̲o̲d̲e̲,̲ ̲←̲ ̲a̲s̲s̲i̲g̲n̲m̲e̲n̲t̲L̲i̲f̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲i̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:100:73: warning: This simp argument is unused:
+  appendList
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵o̵r̵m̵u̵l̵a̵P̵r̵o̵g̵r̵a̵m̵,̵b̵i̵n̵a̵r̵y̵,̵u̵n̵a̵r̵y̵,̵t̵w̵o̵E̵v̵a̵l̵,̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵,̵n̵a̵t̵i̵v̵e̵T̵e̵r̵m̵,̵a̵p̵p̵e̵n̵d̵L̵i̵s̵t̵,̵h̵c̵,̵G̵o̵r̵b̵o̵w̵F̵o̵r̵m̵u̵l̵a̵S̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵.̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵F̵o̵r̵m̵u̵l̵a̵,̵G̵o̵r̵b̵o̵w̵F̵o̵r̵m̵u̵l̵a̵P̵r̵e̵f̵i̵x̵C̵o̵d̵e̵.̵e̵n̵c̵o̵d̵e̵,̵←̵ ̵a̵s̵s̵i̵g̵n̵m̵e̵n̵t̵L̵i̵f̵t̵,̵i̵h̵]̵[̲f̲o̲r̲m̲u̲l̲a̲P̲r̲o̲g̲r̲a̲m̲,̲ ̲b̲i̲n̲a̲r̲y̲,̲ ̲u̲n̲a̲r̲y̲,̲ ̲t̲w̲o̲E̲v̲a̲l̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲,̲ ̲n̲a̲t̲i̲v̲e̲T̲e̲r̲m̲,̲ ̲h̲c̲,̲
+  ̲ ̲ ̲ ̲ ̲G̲o̲r̲b̲o̲w̲F̲o̲r̲m̲u̲l̲a̲S̲u̲b̲s̲t̲i̲t̲u̲t̲i̲o̲n̲.̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲F̲o̲r̲m̲u̲l̲a̲,̲ ̲G̲o̲r̲b̲o̲w̲F̲o̲r̲m̲u̲l̲a̲P̲r̲e̲f̲i̲x̲C̲o̲d̲e̲.̲e̲n̲c̲o̲d̲e̲,̲ ̲←̲ ̲a̲s̲s̲i̲g̲n̲m̲e̲n̲t̲L̲i̲f̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲i̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:103:28: warning: This simp argument is unused:
+  binary
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵o̵r̵m̵u̵l̵a̵P̵r̵o̵g̵r̵a̵m̵,̵b̵i̵n̵a̵r̵y̵,̵u̵n̵a̵r̵y̵,̵t̵w̵o̵E̵v̵a̵l̵,̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵,̵n̵a̵t̵i̵v̵e̵T̵e̵r̵m̵,̵a̵p̵p̵e̵n̵d̵L̵i̵s̵t̵,̵h̵c̵,̵G̵o̵r̵b̵o̵w̵F̵o̵r̵m̵u̵l̵a̵S̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵.̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵F̵o̵r̵m̵u̵l̵a̵,̵G̵o̵r̵b̵o̵w̵F̵o̵r̵m̵u̵l̵a̵P̵r̵e̵f̵i̵x̵C̵o̵d̵e̵.̵e̵n̵c̵o̵d̵e̵,̵←̵ ̵a̵s̵s̵i̵g̵n̵m̵e̵n̵t̵L̵i̵f̵t̵,̵i̵h̵]̵[̲f̲o̲r̲m̲u̲l̲a̲P̲r̲o̲g̲r̲a̲m̲,̲ ̲u̲n̲a̲r̲y̲,̲ ̲t̲w̲o̲E̲v̲a̲l̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲,̲ ̲n̲a̲t̲i̲v̲e̲T̲e̲r̲m̲,̲ ̲a̲p̲p̲e̲n̲d̲L̲i̲s̲t̲,̲ ̲h̲c̲,̲
+  ̲ ̲ ̲ ̲ ̲G̲o̲r̲b̲o̲w̲F̲o̲r̲m̲u̲l̲a̲S̲u̲b̲s̲t̲i̲t̲u̲t̲i̲o̲n̲.̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲F̲o̲r̲m̲u̲l̲a̲,̲ ̲G̲o̲r̲b̲o̲w̲F̲o̲r̲m̲u̲l̲a̲P̲r̲e̲f̲i̲x̲C̲o̲d̲e̲.̲e̲n̲c̲o̲d̲e̲,̲ ̲←̲ ̲a̲s̲s̲i̲g̲n̲m̲e̲n̲t̲L̲i̲f̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲i̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:103:62: warning: This simp argument is unused:
+  nativeTerm
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵o̵r̵m̵u̵l̵a̵P̵r̵o̵g̵r̵a̵m̵,̵b̵i̵n̵a̵r̵y̵,̵u̵n̵a̵r̵y̵,̵t̵w̵o̵E̵v̵a̵l̵,̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵,̵n̵a̵t̵i̵v̵e̵T̵e̵r̵m̵,̵a̵p̵p̵e̵n̵d̵L̵i̵s̵t̵,̵h̵c̵,̵G̵o̵r̵b̵o̵w̵F̵o̵r̵m̵u̵l̵a̵S̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵.̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵F̵o̵r̵m̵u̵l̵a̵,̵G̵o̵r̵b̵o̵w̵F̵o̵r̵m̵u̵l̵a̵P̵r̵e̵f̵i̵x̵C̵o̵d̵e̵.̵e̵n̵c̵o̵d̵e̵,̵←̵ ̵a̵s̵s̵i̵g̵n̵m̵e̵n̵t̵L̵i̵f̵t̵,̵i̵h̵]̵[̲f̲o̲r̲m̲u̲l̲a̲P̲r̲o̲g̲r̲a̲m̲,̲ ̲b̲i̲n̲a̲r̲y̲,̲ ̲u̲n̲a̲r̲y̲,̲ ̲t̲w̲o̲E̲v̲a̲l̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲,̲ ̲a̲p̲p̲e̲n̲d̲L̲i̲s̲t̲,̲ ̲h̲c̲,̲
+  ̲ ̲ ̲ ̲ ̲G̲o̲r̲b̲o̲w̲F̲o̲r̲m̲u̲l̲a̲S̲u̲b̲s̲t̲i̲t̲u̲t̲i̲o̲n̲.̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲F̲o̲r̲m̲u̲l̲a̲,̲ ̲G̲o̲r̲b̲o̲w̲F̲o̲r̲m̲u̲l̲a̲P̲r̲e̲f̲i̲x̲C̲o̲d̲e̲.̲e̲n̲c̲o̲d̲e̲,̲ ̲←̲ ̲a̲s̲s̲i̲g̲n̲m̲e̲n̲t̲L̲i̲f̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲i̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:103:73: warning: This simp argument is unused:
+  appendList
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵o̵r̵m̵u̵l̵a̵P̵r̵o̵g̵r̵a̵m̵,̵b̵i̵n̵a̵r̵y̵,̵u̵n̵a̵r̵y̵,̵t̵w̵o̵E̵v̵a̵l̵,̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵,̵n̵a̵t̵i̵v̵e̵T̵e̵r̵m̵,̵a̵p̵p̵e̵n̵d̵L̵i̵s̵t̵,̵h̵c̵,̵G̵o̵r̵b̵o̵w̵F̵o̵r̵m̵u̵l̵a̵S̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵.̵s̵u̵b̵s̵t̵i̵t̵u̵t̵e̵F̵o̵r̵m̵u̵l̵a̵,̵G̵o̵r̵b̵o̵w̵F̵o̵r̵m̵u̵l̵a̵P̵r̵e̵f̵i̵x̵C̵o̵d̵e̵.̵e̵n̵c̵o̵d̵e̵,̵←̵ ̵a̵s̵s̵i̵g̵n̵m̵e̵n̵t̵L̵i̵f̵t̵,̵i̵h̵]̵[̲f̲o̲r̲m̲u̲l̲a̲P̲r̲o̲g̲r̲a̲m̲,̲ ̲b̲i̲n̲a̲r̲y̲,̲ ̲u̲n̲a̲r̲y̲,̲ ̲t̲w̲o̲E̲v̲a̲l̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲,̲ ̲n̲a̲t̲i̲v̲e̲T̲e̲r̲m̲,̲ ̲h̲c̲,̲
+  ̲ ̲ ̲ ̲ ̲G̲o̲r̲b̲o̲w̲F̲o̲r̲m̲u̲l̲a̲S̲u̲b̲s̲t̲i̲t̲u̲t̲i̲o̲n̲.̲s̲u̲b̲s̲t̲i̲t̲u̲t̲e̲F̲o̲r̲m̲u̲l̲a̲,̲ ̲G̲o̲r̲b̲o̲w̲F̲o̲r̲m̲u̲l̲a̲P̲r̲e̲f̲i̲x̲C̲o̲d̲e̲.̲e̲n̲c̲o̲d̲e̲,̲ ̲←̲ ̲a̲s̲s̲i̲g̲n̲m̲e̲n̲t̲L̲i̲f̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲i̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FixedFormulaSubstitution.NativeProof.assignmentLift: [propext,
+ Quot.sound]
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FixedFormulaSubstitution.NativeProof.closedEncode: [propext]
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FixedFormulaSubstitution.NativeProof.closedLift: [propext]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FixedFormulaSubstitution/NativeProof.lean:107:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.FixedFormulaSubstitution.NativeProof.nativeFormula: forbidden axiom dependency sorryAx

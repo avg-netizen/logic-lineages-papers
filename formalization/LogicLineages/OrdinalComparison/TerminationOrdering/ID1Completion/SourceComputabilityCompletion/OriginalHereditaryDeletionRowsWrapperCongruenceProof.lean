@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryDeletionRowsWrapperCongruenceTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryDeletionRowsCongruenceProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryDeletionRowsBoundProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationStepPeelSupportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryDeletionRowsWrapperCongruenceProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus
+open InternalApplicationStepPeelSupportProof (andIntro)
+theorem exactRowsCongruence : OriginalHereditaryDeletionRowsWrapperCongruenceTargets.RowsCongruence := by
+ intro Q body alpha Delta count input parameter gamma other otherParameter otherGamma row otherRow hg hl hg2 hl2 hc hr hr2
+ have hs := OriginalHereditaryDeletionRowsBoundProof.scanFromRows Q input parameter gamma count row hg hl hr
+ have hs2 := OriginalHereditaryDeletionRowsBoundProof.scanFromRows Q other otherParameter otherGamma count otherRow hg2 hl2 hr2
+ obtain ⟨h⟩ := OriginalHereditaryDeletionRowsCongruenceProof.exactCongruence Q body alpha Delta
+   count input parameter other otherParameter row otherRow
+ obtain ⟨hp⟩ := andIntro hc (andIntro hs hs2)
+ exact ⟨Derivation.implicationElimination h hp⟩
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryDeletionRowsWrapperCongruenceProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryDeletionRowsWrapperCongruenceProof

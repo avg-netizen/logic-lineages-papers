@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.PureLimitProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_actualPureLimitSeparation : Targets.ActualPureLimitSeparation := actualPureLimitSeparation
+#print axioms fixed_actualPureLimitSeparation
+end LogicLineages.PermittedControl.StatementChecks

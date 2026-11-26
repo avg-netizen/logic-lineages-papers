@@ -1,0 +1,25 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeClosedBetaProof.lean:50:15: error: Application type mismatch: The argument
+  Primitive.beta bodyTyped hl.left.left.right hl.left.right.left a.property.left.left a.property.left.right.left
+has type
+  Primitive S (app σ τ (Expr.lam σ body) a.val) (substitute (Args.cons a.val Args.nil) 0 body)
+but is expected to have type
+  Primitive S start.val output.val
+in the application
+  Reduction.primitive
+    (Primitive.beta bodyTyped hl.left.left.right hl.left.right.left a.property.left.left a.property.left.right.left)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeClosedBetaProof.lean:51:33: error: Application type mismatch: The argument
+  edge
+has type
+  ConfinedPair.Strict S start.val result
+but is expected to have type
+  NativeBelow output (applyClosed ⟨Expr.lam σ body, hl⟩ a)
+in the application
+  ⟨reduction, edge⟩
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeClosedBetaProof.lean:51:17: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.535 = ?m.535
+but is expected to have type
+  output.val = substitute (Args.cons a.val Args.nil) 0 body
+in the application
+  And.intro rfl

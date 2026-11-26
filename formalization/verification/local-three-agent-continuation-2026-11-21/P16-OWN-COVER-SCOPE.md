@@ -1,0 +1,7 @@
+# Own-cover membership for the original numeric admission checker
+
+`NumberedWindowOwnCoverChecks.exact_AdmittedOwnCover` passed the core native gate `1795327907504160404-10` with 104 checked modules and the standard axioms `propext`, `Classical.choice`, and `Quot.sound`. The first candidate and its dependent transport diagnostic are archived beneath `p16-own-cover-failed-1795327800711258703-10`.
+
+The exact premise is the original support and head test `NumberedWindowAdmissionAlgorithm.bits (window S K) raw`. Its term bit recovers the decoded original raw term `q` and both actual grammar guards. Admit `.cons q .nil` in the original argument grammar at one additional node, then invert that grammar's actual `argumentCells` constructor. This recovers `q` in the term grammar at its original two bounds. Applying the source cover calibration gives the exact successful numeric option and membership of `raw` in its list. The list itself is the original finite candidate cover, with its order and multiplicities.
+
+The result applies to every raw natural and each fixed original signature and window. The checker premise requires no decoded lexical context, valid requested type, closed type window, or selected checker program. A stronger scalar window wrapper can use the admission conjunct even when unused entries of the raw lexical context are malformed. The theorem supplies numeric calibration for that wrapper. Its open object membership rule comes from the selected program syntax and a separate derivation.

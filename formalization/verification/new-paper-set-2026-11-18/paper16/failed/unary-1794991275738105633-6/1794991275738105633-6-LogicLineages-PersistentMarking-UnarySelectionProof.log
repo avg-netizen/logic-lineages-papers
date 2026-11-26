@@ -1,0 +1,29 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/UnarySelectionProof.lean:23:2: error: Tactic `subst` failed: did not find equation for eliminating 'υ'
+
+i : Nat
+S : Signature
+f : Head
+υ : Ty
+base extras : Args
+t q r : Expr
+domains : List Ty
+args : Args
+hp : PaperTerm S (Expr.marked f υ base extras) υ
+ht : PaperTerm S t υ
+ha : At base i q ∨ At extras i q
+hq : Typed EmptyContext q (ArrowPrefix domains υ)
+htuple : PrefixTuple f base extras domains args
+hcall : apply q args = some r
+hc : ExtendedWeakTree S r t
+ih : Unary S r t
+a b : Expr
+τ : Ty
+result : Expr
+hab : ExtendedWeak S a b
+hqa : CallTyped EmptyContext (Expr.marked f υ base extras).type (Args.cons a Args.nil) τ
+hsb : CallTyped EmptyContext t.type (Args.cons b Args.nil) τ
+hright : apply t (Args.cons b Args.nil) = some result
+σ : Ty
+hυ : (Expr.marked f υ base extras).type = σ.arrow τ
+hat : Typed EmptyContext a σ
+⊢ ∃ p, apply (Expr.marked f υ base extras) (Args.cons a Args.nil) = some p ∧ ExtendedWeak S p result

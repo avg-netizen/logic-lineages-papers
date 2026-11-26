@@ -1,0 +1,22 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedMatrixRankProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedMatrixRankProof.lean
+@@ -102,4 +102,10 @@
+-            · have eq : n = s := by
+-                simpa [mode,atTop,emit,rows,baseRows,limitRows,typed,
+-                  AffineCollapseGuardRows.guardRows,AffineCollapseGuardRows.collapseTerms,
+-                  badNames,affineBad,badTerms,badOperand] using h
++            · have actual : n ∈ badNames
++                  (AffineCollapseGuardRows.guardRows (OriginalNormalizedCircuitMatrix.typedHead head typed) e s o) := by
++                simpa only [mode,if_neg atTop,emit,rows,baseRows,limitRows,dif_pos typed] using h
++              change n ∈ badTerms (AffineCollapseGuardRows.affineTerms e s) ++
++                (badTerms [(1,.coordinate s)] ++
++                  (badTerms (AffineCollapseGuardRows.collapseTerms
++                    (OriginalNormalizedCircuitMatrix.typedHead head typed) s o) ++ [])) at actual
++              rw [affineBad] at actual
++              have eq : n = s := by
++                simpa [AffineCollapseGuardRows.collapseTerms,badTerms,badOperand] using actual
+@@ -206 +212,3 @@
+-      rw [bareMap Prod.fst (fun t => t.2.name)] at bad
++      have clearNames := bareMap (fun (t : Int × NormalForm.Summand) => t.1)
++        (fun (t : Int × NormalForm.Summand) => t.2.name) a.row.2
++      rw [clearNames] at bad

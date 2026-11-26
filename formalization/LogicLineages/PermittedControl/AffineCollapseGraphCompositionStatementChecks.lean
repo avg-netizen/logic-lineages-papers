@@ -1,0 +1,23 @@
+module
+public import LogicLineages.PermittedControl.AffineCollapseGraphCompositionTargets
+import LogicLineages.PermittedControl.AffineCollapseGraphCompositionPairProof
+import LogicLineages.PermittedControl.AffineCollapseGraphCompositionTestProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualAffineCollapsePairExtension : AffineCollapseGraphComposition.ExactPairExtension :=
+  AffineCollapseGraphComposition.exactPairExtension
+
+theorem fixed_actualAffineCollapseTestPolarity : AffineCollapseGraphComposition.ExactTestPolarity :=
+  AffineCollapseGraphComposition.exactTestPolarity
+
+theorem fixed_fullAffineCollapseGraphComposition :
+    AffineCollapseGraphComposition.FullAffineCollapseGraphComposition :=
+  ⟨fixed_actualAffineCollapsePairExtension,fixed_actualAffineCollapseTestPolarity⟩
+
+#print axioms fixed_actualAffineCollapsePairExtension
+#print axioms fixed_actualAffineCollapseTestPolarity
+#print axioms fixed_fullAffineCollapseGraphComposition
+
+end LogicLineages.PermittedControl.StatementChecks

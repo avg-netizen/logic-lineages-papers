@@ -1,0 +1,30 @@
+module
+public import LogicLineages.PermittedControl.OriginalMatrixPaidCongruenceTargets
+import LogicLineages.PermittedControl.OriginalMatrixPaidCongruenceReadProof
+import LogicLineages.PermittedControl.OriginalMatrixPaidCongruenceValueProof
+import LogicLineages.PermittedControl.OriginalMatrixPaidCongruenceMatrixProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalMatrixPaidCongruenceReads : OriginalMatrixPaidCongruence.ExactPaidCongruenceReads :=
+  OriginalMatrixPaidCongruence.exactPaidCongruenceReads
+
+theorem fixed_exactOriginalMatrixPaidCongruenceAtValue : OriginalMatrixPaidCongruence.ExactPaidCongruenceAtValue :=
+  OriginalMatrixPaidCongruence.exactPaidCongruenceAtValue
+
+theorem fixed_exactOriginalMatrixPaidCongruence :
+    OriginalMatrixPaidCongruence.ExactPaidCongruenceMatrix :=
+  OriginalMatrixPaidCongruence.exactPaidCongruenceMatrix
+
+theorem fixed_fullOriginalMatrixPaidCongruence :
+    OriginalMatrixPaidCongruence.FullOriginalMatrixPaidCongruence :=
+  ⟨fixed_exactOriginalMatrixPaidCongruenceReads,fixed_exactOriginalMatrixPaidCongruenceAtValue,
+    fixed_exactOriginalMatrixPaidCongruence⟩
+
+#print axioms fixed_exactOriginalMatrixPaidCongruenceReads
+#print axioms fixed_exactOriginalMatrixPaidCongruenceAtValue
+#print axioms fixed_exactOriginalMatrixPaidCongruence
+#print axioms fixed_fullOriginalMatrixPaidCongruence
+
+end LogicLineages.PermittedControl.StatementChecks

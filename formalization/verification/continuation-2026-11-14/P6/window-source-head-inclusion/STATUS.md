@@ -1,0 +1,2 @@
+Remaining unary source-head inclusion accepted with explicit internal ArrowClosed premise: actual arrow-right extraction three times, internal raw-window witness elimination, branch adequacy and positive coverage. Basic/application/ranked three already accepted, not recounted. No closure discharge, native reflection or full exchange completion.
+Combined supporting total 421; numbered register unchanged.

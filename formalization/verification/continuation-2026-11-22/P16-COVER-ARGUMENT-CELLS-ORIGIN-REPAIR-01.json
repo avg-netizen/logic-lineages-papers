@@ -1,0 +1,35 @@
+{
+  "status": "Proof-only direct import of already compiled withHyp supplier; native gate pending",
+  "failed_receipt": "1795345665029945867-16",
+  "failed_receipt_sha256": "a290972f819ae63943736e0bd0cc028cf486c1a10a204d40852827117ff8b1ca",
+  "immutable_previous_commit": "795ced2ee61902e8f2a66b1ec88776296249358e",
+  "failed_combined_log_sha256": "d2d7825f84b9ba12ec6d93fa456db4bab61c509b2508a09ba96a6a3d2603637a",
+  "failed_diagnostic": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-argument-cells-origin-initial-diagnostic.txt": "6a2a463e30ea00d73853c3301518e7ce54aeca149e9e1668468b20bceef9e5e7"
+  },
+  "failed_errors": [
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsOriginProof.lean:32:5: error: unknown namespace `ID1Completion.InternalApplicationValidityStackAppendInductionCoreProof`",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsOriginProof.lean:143:79: error(lean.unknownIdentifier): Unknown identifier `withHyp`"
+  ],
+  "diagnosis": "Directly import the existing original append induction proof that exposes withHyp. It already occurred in the private upstream closure of accepted Cartesian origin; no AST, proposition, proof body, or downstream changes.",
+  "changed_source": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsOriginProof.lean",
+  "old_failed_source_sha256": "98e69db4f1aefea9acf48f67669e0b3ee8d79d96bf272b023f7b882ea976831c",
+  "new_source_sha256": "476787f6008acba1029560090b7610742dc0a554e8717ded6510547e87e741dc",
+  "failed_source_archive": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverArgumentCellsOriginProof-01.lean": "98e69db4f1aefea9acf48f67669e0b3ee8d79d96bf272b023f7b882ea976831c"
+  },
+  "zero_context_patch": {
+    "formalization/verification/continuation-2026-11-22/P16-COVER-ARGUMENT-CELLS-ORIGIN-REPAIR-01.patch": "0f5d43a00e8b6947917adae10addd2d22bbe33ccb301fb93a3d4f7c2508326d9"
+  },
+  "forward_and_inverse_exact_bytes_verified": true,
+  "unchanged_source_pins": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsBindingProof.lean": "9341081f37643403148862cd60f5435b2c3849d157313e69d5305f04bbfeff9f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsConstructorProof.lean": "6e592b5ae71c00355d51c3c8da6cd8e485801a862cb97182fa1068db1ed31337",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsNumericProof.lean": "755d44185b4197b948f972b4c7ed666d8e0543849fefdb791036999cbfec05b9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsOpenDataProof.lean": "9aaf5ad402538ce7a22bbb5658aefba57a90c45cee4d907112c103fb2813594d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsTargets.lean": "11086fdd35d247b2cde8bb913895314d87430be045c61cfc15fbaff7c7d33dde",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsTransportProof.lean": "0f41740ff282b6ef65281d56c68b32ab25f11b5f439637220dfb3545bed51b1c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldNumericThinProof.lean": "2028ff267db77b740ff2610c416543983a82c79d4078ef4ef23a0156ca7826da",
+    "formalization/verification/continuation-2026-11-22/P16-ORIGINAL-COVER-ARGUMENT-CELLS-SOURCE-MAP.md": "08d1b85db89b132f7fc20b82fce23d4f34f4f06a5451830bb60133b36a025751"
+  }
+}

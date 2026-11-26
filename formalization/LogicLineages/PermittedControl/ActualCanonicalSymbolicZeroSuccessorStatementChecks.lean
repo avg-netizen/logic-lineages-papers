@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.ActualCanonicalSymbolicZeroSuccessorTargets
+import LogicLineages.PermittedControl.ActualCanonicalSymbolicZeroSuccessorOrderedProof
+import LogicLineages.PermittedControl.ActualCanonicalSymbolicZeroSuccessorProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualCanonicalSymbolicZeroSuccessor
+
+theorem fixed_exactOrderedSuccessorErasure : ExactOrderedSuccessorErasure :=
+  exactOrderedSuccessorErasure
+
+theorem fixed_exactCanonicalSuccessorWitness : ExactCanonicalSuccessorWitness :=
+  exactCanonicalSuccessorWitness
+
+theorem fixed_fullActualCanonicalSymbolicZeroSuccessor : FullActualCanonicalSymbolicZeroSuccessor :=
+  ⟨fixed_exactOrderedSuccessorErasure,fixed_exactCanonicalSuccessorWitness⟩
+
+#print axioms fixed_exactOrderedSuccessorErasure
+#print axioms fixed_exactCanonicalSuccessorWitness
+#print axioms fixed_fullActualCanonicalSymbolicZeroSuccessor
+
+end LogicLineages.PermittedControl.ActualCanonicalSymbolicZeroSuccessor

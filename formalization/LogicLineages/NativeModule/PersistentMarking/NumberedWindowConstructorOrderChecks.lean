@@ -1,0 +1,13 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowConstructorOrderProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowConstructorOrderChecks
+open NumberedWindowConstructorOrderTargets
+theorem exact_ConstructorMeasureAccessible : ConstructorMeasureAccessible := NumberedWindowConstructorOrderProof.accessible
+theorem exact_ConstructorMeasureInduction : ConstructorMeasureInduction := NumberedWindowConstructorOrderProof.inductionPrinciple
+#print axioms exact_ConstructorMeasureAccessible
+#print axioms exact_ConstructorMeasureInduction
+end LogicLineages.PersistentMarking.NumberedWindowConstructorOrderChecks

@@ -1,0 +1,23 @@
+{
+  "id": "new-set-702",
+  "statement": "17-permitted-control-canonical-comparison:lem:inner-termination",
+  "kind": "current numbered statement",
+  "target": "LogicLineages.PermittedControl.InnerTerminationTargets.FullInnerTermination",
+  "exact_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullInnerTermination",
+  "native_receipt": "1795237985721802859-2723078",
+  "local_modules": 3,
+  "independent_review": "none. The target, including its model of rows and of the zero-class replacement, was written and frozen in this round by the proof author; its correspondence with the printed lemma is argued in paper17/INNER-TERMINATION-SOURCE-MAP.md and has not been read by an independent reviewer. Owner instruction of 2026-11-21: review is not necessary as long as the Lean compiles and the targets have not been changed; asked twice whether a new target should be reviewed, the owner replied 'Please continue.' and 'Please continue'.",
+  "source_map": "paper17/INNER-TERMINATION-SOURCE-MAP.md",
+  "freeze": "paper17/INNER-TERMINATION-FREEZE.json",
+  "evidence": "paper17/INNER-TERMINATION-EVIDENCE.json",
+  "evidence_sha256": "d72a81c34836c0dd4fb2c5c16be798eabb16e1aff0846a0a8f0e7c71a98c09a2",
+  "final_pins": "paper17/INNER-TERMINATION-FINAL-PINS.json",
+  "accepted_utc": "2026-11-21T05:14:09.329130+00:00",
+  "limitations": [
+    "Charge lemma only: for rows with combined fields on a fixed strict order of the raw coordinates, one zero-class replacement (class removed; ended prefixes to constants; equal-input prefixes merged into one field; higher-input prefixes transferred to the surviving input as at most two fields) does not increase M or V and strictly decreases M+V",
+    "Interval labels and ordinary fields are abstract types; nothing evaluates a field. Exactness of the replacement for the actual entry norms and counts, coincidence of cores and the collision transfer are lem:count-transfer, which stays pending",
+    "Target frozen before proof (2 pins, unchanged at acceptance); the target and its model are the author's own and are unreviewed. The register's stated acceptance rule asks for a Codex-owned frozen comparator; this one is Claude-authored",
+    "Compiled and verified on the local continuation host; evidence paths are host-specific",
+    "Does not promote paper17 thm:arithmetic, thm:ground, thm:main, lem:field-comparison or lem:count-transfer; no full-root or CI claim"
+  ]
+}

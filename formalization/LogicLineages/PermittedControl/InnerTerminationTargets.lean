@@ -1,0 +1,97 @@
+module
+public import Mathlib.Data.Finsupp.Basic
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.InnerTerminationTargets
+
+/-- One row of the finite matrix language on `r` strictly ordered raw
+coordinates, after identical syntactic fields have been combined and zero
+coefficients removed (both are built into finitely supported functions).
+`O` is the syntax of ordinary nonlinear value fields. A count field is a
+pair of an interval label in `ι` and its raw input; the input is named by
+its rank `0, …, r-1` in the fixed strict order. Linear occurrences of raw
+coordinates carry no charge and are not represented. -/
+structure Row (O ι : Type) (r : Nat) where
+  value : O →₀ ℤ
+  count : (ι × Fin r) →₀ ℤ
+  const : ℤ
+
+variable {O ι : Type} {r : Nat}
+
+/-- The charge `𝓜`: the sum of `3 ^ rank(x)` over the active count
+occurrences of the row. -/
+def countCharge (R : Row O ι r) : Nat := ∑ c ∈ R.count.support, 3 ^ (c.2 : Nat)
+
+/-- The number `𝓥` of ordinary nonlinear value occurrences of the row. -/
+def valueCount (R : Row O ι r) : Nat := R.value.support.card
+
+/-- What the exact replacement does with the prefix count of one count
+occurrence of the class. `shift` is the integer constant it contributes
+(`κ`, and the constant count of an identity, short or ended piece).
+
+* `ended`: the prefix is an identity or short prefix and is a constant.
+* `survives`: the prefix stays at its own input; all such prefixes of one
+  class are merged into one count field.
+* `transferred lower`: the prefix sits at a higher input and is replaced
+  by the surviving field minus one further count at the surviving input
+  (`lower = some h`), or minus a constant (`lower = none`). -/
+inductive Disposition (ι : Type) where
+  | ended (shift : ℤ)
+  | survives (shift : ℤ)
+  | transferred (lower : Option ι) (shift : ℤ)
+
+/-- The constant contributed by a disposition. -/
+def Disposition.shift : Disposition ι → ℤ
+  | .ended k => k
+  | .survives k => k
+  | .transferred _ k => k
+
+/-- The subtracted count of a transfer, with coefficient `a`. -/
+noncomputable def lowerTerm (x0 : Fin r) (a : ℤ) : Option ι → ((ι × Fin r) →₀ ℤ)
+  | none => 0
+  | some h => Finsupp.single (h, x0) a
+
+/-- The count fields that replace one class occurrence of coefficient
+`a`, when `(q, x0)` is the merged surviving prefix field. -/
+noncomputable def Disposition.term (x0 : Fin r) (q : ι) (a : ℤ) : Disposition ι → ((ι × Fin r) →₀ ℤ)
+  | .ended _ => 0
+  | .survives _ => Finsupp.single (q, x0) a
+  | .transferred lower _ => Finsupp.single (q, x0) a - lowerTerm x0 a lower
+
+/-- Rank condition on a disposition of an occurrence at input `x`: a
+surviving prefix sits at the surviving input `x0`, and a transferred one
+sits strictly above it. -/
+def Disposition.Admissible (x0 x : Fin r) : Disposition ι → Prop
+  | .ended _ => True
+  | .survives _ => x = x0
+  | .transferred _ _ => x0 < x
+
+/-- `R'` is obtained from `R` by one exact zero-class replacement.
+
+The class consists of the ordinary value occurrences `T` and the count
+occurrences `S` of `R`; it is not empty, and its combined leading
+coefficient vanishes in the integer form `2b + Σ aᵢ = 0`. All ordinary
+occurrences of the class disappear. Every count occurrence of the class
+is replaced by its prefix count: ended prefixes become constants, the
+prefixes at the smallest surviving input `x0` are merged into the one
+field `(q, x0)`, and every prefix at a higher input is transferred to
+`x0`. Identical fields are combined and zero coefficients removed. -/
+def ZeroClassReplacement [DecidableEq O] [DecidableEq ι] (R R' : Row O ι r) : Prop :=
+  ∃ (T : Finset O) (S : Finset (ι × Fin r)) (x0 : Fin r) (q : ι)
+      (d : ι × Fin r → Disposition ι),
+    T ⊆ R.value.support ∧ S ⊆ R.count.support ∧ (T.Nonempty ∨ S.Nonempty) ∧
+    2 * (∑ o ∈ T, R.value o) + ∑ c ∈ S, R.count c = 0 ∧
+    (∀ c ∈ S, (d c).Admissible x0 c.2) ∧
+    R'.value = R.value.filter (· ∉ T) ∧
+    R'.count = R.count.filter (· ∉ S) + ∑ c ∈ S, (d c).term x0 q (R.count c) ∧
+    R'.const = R.const + ∑ c ∈ S, R.count c * (d c).shift
+
+/-- Current17 `lem:inner-termination`: every exact zero-class replacement
+strictly decreases `𝓜 + 𝓥`, and neither summand increases. -/
+def FullInnerTermination : Prop :=
+  ∀ (O ι : Type) [DecidableEq O] [DecidableEq ι] (r : Nat) (R R' : Row O ι r),
+    ZeroClassReplacement R R' →
+      countCharge R' ≤ countCharge R ∧ valueCount R' ≤ valueCount R ∧
+      countCharge R' + valueCount R' < countCharge R + valueCount R
+
+end LogicLineages.PermittedControl.InnerTerminationTargets

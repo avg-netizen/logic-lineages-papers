@@ -1,0 +1,14 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowRootDispatchProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowRootDispatchChecks
+open NumberedWindowRootDispatchTargets
+
+theorem exact_RootDispatch : ExactRootDispatch := NumberedWindowRootDispatchProof.rootExact
+
+#print axioms exact_RootDispatch
+
+end LogicLineages.PersistentMarking.NumberedWindowRootDispatchChecks

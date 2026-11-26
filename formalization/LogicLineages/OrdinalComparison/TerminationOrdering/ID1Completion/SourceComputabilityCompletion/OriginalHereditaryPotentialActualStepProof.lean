@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryPotentialStepProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryInternalAgendaVisitProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryPotentialActualStepProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+theorem actualStep (R : Program 2) (H : Program 1) (M W : Program 2) : OriginalHereditaryPotentialCompletion.StepLaw R H M W :=
+ OriginalHereditaryPotentialStepProof.fromVisitPreservation OriginalHereditaryInternalAgendaVisitProof.actualVisitPreservation R H M W
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryPotentialActualStepProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryPotentialActualStepProof

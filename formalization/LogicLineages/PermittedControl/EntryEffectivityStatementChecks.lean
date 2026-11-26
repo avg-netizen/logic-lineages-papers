@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.EntryEffectivityProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_entryEffectivity : Targets.EntryEffectivity := entryEffectivity
+#print axioms fixed_entryEffectivity
+end LogicLineages.PermittedControl.StatementChecks

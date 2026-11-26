@@ -1,0 +1,7 @@
+# Independent source-first supporting trace/budget review
+
+Read all three comparator modules, source map and printed raw closure/mark rules plus positive simulation proof. All27 frozen sources independently match. Actual mixed traces retain original typed edges and literal vertex maps; joins count raw steps and remove only the duplicated joint vertex. Ordered base steps are existing one-position steps, not a new tuple-wide raw rule. Auxiliary transport remains function-side only. The WindowPath adapter assumes the existing path solely to expose its existing raw trace, not to supply missing simulation existence.
+
+Ordinary tr is partial on original constructors and fails on every marked subtree; exact domain and unique realization preserve original head identity, ordered arguments and threshold independence. The reserved-mark endpoint uses the real partial Spine.mark, actual initial lambdas, same fixed window/typing, and both primitive MarkDecrease and one actual RawStep. Starting threshold n+1 supplies a finite predecessor even for a symbolically unchanged already-marked head; zero is not reused.
+
+Scope approved for target-only preflight, not proof acceptance. Full positive simulation, window-locality theorem, accessibility/height and complete Stat witness construction remain separate; both original Stat certificate premises remain required. Manuscripts and prior targets unchanged.

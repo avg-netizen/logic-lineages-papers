@@ -1,0 +1,9 @@
+module
+public import LogicLineages.PermittedControl.SelectedPairCompilerProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_fullSelectedPairCompiler : SelectedPairCompilerTargets.FullSelectedPairCompiler :=
+  SelectedPairCompiler.Proof.fullSelectedPairCompiler
+#print axioms fixed_fullSelectedPairCompiler
+end LogicLineages.PermittedControl.StatementChecks

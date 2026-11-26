@@ -2022,7 +2022,6 @@ Only fixed statement gates with successful compiler and axiom receipts belong
 here. The full paper inventory and remaining dependencies are in TARGETS.json.
 -/
 
-#audit_namespace LogicLineages
 
 -- Accepted local continuation through R026; no whole-source promotions.
 public import LogicLineages.ComputabilityKnowledge.GorbowUniformCommonKnowledgeStatementChecks
@@ -2302,3 +2301,97 @@ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.
 
 -- Preserved older exact source-admission and guarded counterexample compiler.
 public import LogicLineages.OrdinalComparison.LevelTwoCounterexample.AdmissionStatementChecks
+
+-- Entire printed closed existential word-arithmetic theorem on its original global domains.
+public import LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.MachineStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalVariableObjectStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ClaudeSupervisedCompletion.InverseGuardStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralInversionStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalConstructorShapeStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFunctionNeutralityStatementChecks
+
+-- Original printed collapse theorem, exact same-source selected presentation.
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalAdoption.StatementChecks
+
+-- Original printed contradiction corollary on the same chosen source.
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceContradictionCorollaryV2.StatementChecks
+
+-- Original printed selector classification on the same chosen source.
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceSelectorClassification.StatementChecks
+
+-- One selected source for all six registered numbered Paper12 scopes.
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceNumberedIntegration.StatementChecks
+
+-- Original filtered ordinary/numbered head-move universe caller.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalFilteredHeadMoveUniverse.StatementChecks
+
+-- Original plain-aware recursive exchange, exact simultaneous universe bridge.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPlainAwareExchangeUniverse.StatementChecks
+
+-- Actual installed filtered one-edge universe caller, not iteration closure.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalInstalledFilteredEdgeUniverse.StatementChecks
+
+-- Actual original primary output universe closure, with internal count induction.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryUniverseClosure.StatementChecks
+
+-- Original headMove reversal with explicit source validity and same type closure.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalHeadMoveReversal.StatementChecks
+
+-- P6 actual original primary root type and full bounds preservation.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryMetadataPreservation.StatementChecks
+
+-- P6 actual original candidate seed self-coverage.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCandidateSelfCoverage.StatementChecks
+
+-- P6 literal original candidate-list rerooting.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCandidateRerooting.StatementChecks
+
+-- P6 common original candidates and membership-equivalent seed pools.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalCommonCandidatePool.StatementChecks
+
+-- P6 exact original raw exchange reversal.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeSymmetry.StatementChecks
+
+-- P6 exact installed original structural edge reversal.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalInstalledEdgeReversal.StatementChecks
+
+-- P6 one-way original primary reroot inclusion.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryRerootInclusion.StatementChecks
+
+-- P6 actual original primary reverse membership.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.StatementChecks
+
+-- P6 actual original primary membership coherence.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryRerootCoherence.StatementChecks
+
+-- P6 literal original primary class-row coherence.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryClassRowCoherence.StatementChecks
+
+-- P6 original pre-rankguard minimum coherence.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryMinimumCoherence.StatementChecks
+
+-- P6 exact original raw exchange all-variable rank preservation.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.StatementChecks
+
+-- P6 actual original primary all-variable rank preservation.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryVariableRankPreservation.StatementChecks
+
+-- P6 exact original rankguarded minimum coherence.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryRankGuardCoherence.StatementChecks
+
+-- P6 literal initial-tuple representative coherence.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalInitialRepresentativeCoherence.StatementChecks
+
+-- P6 literal concrete initial tuple installation.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalConcreteInitialInstallation.StatementChecks
+
+-- P6 concrete recursive member supplier alignment.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalConcreteUniverseMemberAlignment.StatementChecks
+
+-- P6 raw lambda path factorization and lambda/body accessibility equivalence.
+public import LogicLineages.OrdinalComparison.TerminationOrdering.Continuation20261117.RawLambdaDynamics.StatementChecks
+
+-- P12 chosen CK implication transport and the literal/selector theta bridge.
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.ChosenCommonKnowledgeTransport.StatementChecks
+
+#audit_aggregate_namespace LogicLineages

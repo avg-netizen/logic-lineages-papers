@@ -1,0 +1,45 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.ApplicationCertificateLiftDefinitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedNonLambdaApplicationDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralCertificateTargets
+open Source NumberedRewriteSyntax NumberedRewriteReduction NumberedFiniteUniverse NumberedLeastCodeRepresentative
+open NumberedStepCertificate NumberedNumericStep NumberedPrimaryShapes ApplicationCertificateLift
+
+/-- Invert the ACTUAL accepted original certificate at a non-lambda
+application. The function branch retains its exact path suffix, replacement
+and root selector. No new certificate is selected by semantic completeness. -/
+def ActualTypedNeutralCertificateInversion : Prop :=
+  ∀ (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (S Gamma : List Ty)
+    (table : Fin n → Fin n → Bool) (sigma tau : Ty)
+    (f : AuxTerm (Fin n) arity Gamma (.arrow sigma tau))
+    (a : AuxTerm (Fin n) arity Gamma sigma)
+    (r : AuxTerm (Fin n) arity Gamma tau) (c : StepCertificate),
+  isLambda f = false →
+  stepTest n arity symbols S Gamma table (.app f a) r c = true →
+  r = .bottom tau ∨
+    ∃ (g : AuxTerm (Fin n) arity Gamma (.arrow sigma tau)) (child : StepCertificate),
+      r = .app g a ∧ c = liftCertificate child ∧
+        stepTest n arity symbols S Gamma table f g child = true
+
+/-- Original numeric acceptance supplies every successful decoding needed
+for this inversion. The accepted raw certificate equals the literal original
+liftStep of its recovered child; neither subtype closure nor confinement is
+assumed separately. This is native calibration support, not an internal rule. -/
+def ActualNumericNeutralCertificateInversion : Prop :=
+  ∀ (n : Nat) (arity : Fin n → Nat) (symbols : List (Fin n)) (S Gamma : List Ty)
+    (table : Fin n → Fin n → Bool) (sigma tau : Ty)
+    (f : AuxTerm (Fin n) arity Gamma (.arrow sigma tau))
+    (a : AuxTerm (Fin n) arity Gamma sigma) (target certificate : Nat),
+  isLambda f = false →
+  numericStepTest n arity symbols S Gamma table
+    (packedNumber (⟨tau,.app f a⟩ : Packed (Fin n) arity Gamma)) target certificate = true →
+  target = packedNumber (⟨tau,.bottom tau⟩ : Packed (Fin n) arity Gamma) ∨
+    ∃ (g : AuxTerm (Fin n) arity Gamma (.arrow sigma tau)) (child : Nat),
+      target = packedNumber (⟨tau,.app g a⟩ : Packed (Fin n) arity Gamma) ∧
+        certificate = liftStep child ∧
+          numericStepTest n arity symbols S Gamma table
+            (packedNumber (⟨.arrow sigma tau,f⟩ : Packed (Fin n) arity Gamma))
+            (packedNumber (⟨.arrow sigma tau,g⟩ : Packed (Fin n) arity Gamma)) child = true
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNeutralCertificateTargets

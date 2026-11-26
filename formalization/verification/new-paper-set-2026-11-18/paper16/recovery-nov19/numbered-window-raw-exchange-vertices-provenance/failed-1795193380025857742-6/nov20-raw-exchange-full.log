@@ -1,0 +1,247 @@
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowPairAlgorithm
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowFieldAlgorithm
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowAddressAlgorithm
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowSyntaxAlgorithm
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowAnnotationAlgorithm
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowExchangeAtoms
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowExchangeAlgorithm
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowLexicalAlgorithm
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowAdmissionAlgorithm
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowCoverAlgorithm
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowCoverBoundsAlgorithm
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowClassAlgorithm
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowScalarAlgorithm
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRawExchangeVerticesTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRawExchangeVerticesCodecProof
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRawExchangeVerticesBoundsTableProof
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRawExchangeVerticesArgumentsProof
+Compiling LogicLineages.PersistentMarking.NumberedWindowRawExchangeVerticesExchangeTableProof
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowRawExchangeVerticesExchangeTableProof
+Compiling LogicLineages.PersistentMarking.NumberedWindowRawExchangeVerticesTermStepProof
+me (0 + 1 + 1, xs)
+readB : unpackNode b = some (0 + 1 + 1, ys)
+reported : parts hp (table hp (pair a b)) (0 + 1 + 1) (0 + 1 + 1) xs ys = true
+ok : x 0 = y 0 ∧ (earlier 1).fst = true
+child : (bounds (x 1)).fst = (bounds (y 1)).fst
+⊢ (((NumberedWindowCoverBoundsAlgorithm.table a).getD (xs.getD 1 0) default).fst.fst + 1,
+      ((NumberedWindowCoverBoundsAlgorithm.table a).getD (xs.getD 1 0) default).fst.snd) =
+    (((NumberedWindowCoverBoundsAlgorithm.table b).getD (ys.getD 1 0) default).fst.fst + 1,
+      ((NumberedWindowCoverBoundsAlgorithm.table b).getD (ys.getD 1 0) default).fst.snd)
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:46:2: error: unsolved goals
+case succ.succ.succ.succ.zero
+hp : HeadPairs
+a b : Nat
+xs ys : List Nat
+inductionAt : EarlierAgreement hp a b
+x : Nat → Nat := fun i => xs.getD i 0
+y : Nat → Nat := fun i => ys.getD i 0
+earlier : Nat → NumberedWindowExchangeAlgorithm.Row :=
+  fun i => (table hp (pair a b)).getD (pair (x i) (y i)) (false, false)
+rawA : ∀ (i : Nat), (NumberedWindowCoverBoundsAlgorithm.table a).getD (x i) default = bounds (x i)
+rawB : ∀ (i : Nat), (NumberedWindowCoverBoundsAlgorithm.table b).getD (y i) default = bounds (y i)
+term : ∀ (i : Nat), (earlier i).fst = true → (bounds (x i)).fst = (bounds (y i)).fst
+args : ∀ (i : Nat), (earlier i).snd = true → (bounds (x i)).snd = (bounds (y i)).snd
+readA : unpackNode a = some (0 + 1 + 1 + 1 + 1, xs)
+readB : unpackNode b = some (0 + 1 + 1 + 1 + 1, ys)
+reported : parts hp (table hp (pair a b)) (0 + 1 + 1 + 1 + 1) (0 + 1 + 1 + 1 + 1) xs ys = true
+ok :
+  allowed hp (x 0) (y 0) = true ∧ (declaration (x 0)).fst = (declaration (y 0)).fst ∧ bag (x 1) (y 1) = true ∨
+    x 0 = y 0 ∧ (earlier 1).snd = true
+child : (bounds (x 1)).snd = (bounds (y 1)).snd
+⊢ (((NumberedWindowCoverBoundsAlgorithm.table a).getD (xs.getD 1 0) default).snd.fst + 1,
+      ((NumberedWindowCoverBoundsAlgorithm.table a).getD (xs.getD 1 0) default).snd.snd) =
+    (((NumberedWindowCoverBoundsAlgorithm.table b).getD (ys.getD 1 0) default).snd.fst + 1,
+      ((NumberedWindowCoverBoundsAlgorithm.table b).getD (ys.getD 1 0) default).snd.snd)
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:56:2: error: unsolved goals
+case succ.succ.succ.succ.succ.zero
+hp : HeadPairs
+a b : Nat
+xs ys : List Nat
+inductionAt : EarlierAgreement hp a b
+x : Nat → Nat := fun i => xs.getD i 0
+y : Nat → Nat := fun i => ys.getD i 0
+earlier : Nat → NumberedWindowExchangeAlgorithm.Row :=
+  fun i => (table hp (pair a b)).getD (pair (x i) (y i)) (false, false)
+rawA : ∀ (i : Nat), (NumberedWindowCoverBoundsAlgorithm.table a).getD (x i) default = bounds (x i)
+rawB : ∀ (i : Nat), (NumberedWindowCoverBoundsAlgorithm.table b).getD (y i) default = bounds (y i)
+term : ∀ (i : Nat), (earlier i).fst = true → (bounds (x i)).fst = (bounds (y i)).fst
+args : ∀ (i : Nat), (earlier i).snd = true → (bounds (x i)).snd = (bounds (y i)).snd
+readA : unpackNode a = some (0 + 1 + 1 + 1 + 1 + 1, xs)
+readB : unpackNode b = some (0 + 1 + 1 + 1 + 1 + 1, ys)
+reported : parts hp (table hp (pair a b)) (0 + 1 + 1 + 1 + 1 + 1) (0 + 1 + 1 + 1 + 1 + 1) xs ys = true
+ok :
+  x 1 = y 1 ∧
+    x 2 = y 2 ∧
+      (allowed hp (x 0) (y 0) = true ∧ bag (x 3) (y 3) = true ∧ x 4 = y 4 ∨
+        x 0 = y 0 ∧ ((earlier 3).snd = true ∧ x 4 = y 4 ∨ x 3 = y 3 ∧ (earlier 4).snd = true))
+same : (bounds (x 3)).snd = (bounds (y 3)).snd ∧ (bounds (x 4)).snd = (bounds (y 4)).snd
+mark : xs.getD 2 0 = ys.getD 2 0
+⊢ (((NumberedWindowCoverBoundsAlgorithm.table a).getD (xs.getD 3 0) default).snd.fst +
+          ((NumberedWindowCoverBoundsAlgorithm.table a).getD (xs.getD 4 0) default).snd.fst +
+        1,
+      max (ys.getD 2 0)
+        (max ((NumberedWindowCoverBoundsAlgorithm.table a).getD (xs.getD 3 0) default).snd.snd
+          ((NumberedWindowCoverBoundsAlgorithm.table a).getD (xs.getD 4 0) default).snd.snd)) =
+    (((NumberedWindowCoverBoundsAlgorithm.table b).getD (ys.getD 3 0) default).snd.fst +
+          ((NumberedWindowCoverBoundsAlgorithm.table b).getD (ys.getD 4 0) default).snd.fst +
+        1,
+      max (ys.getD 2 0)
+        (max ((NumberedWindowCoverBoundsAlgorithm.table b).getD (ys.getD 3 0) default).snd.snd
+          ((NumberedWindowCoverBoundsAlgorithm.table b).getD (ys.getD 4 0) default).snd.snd))
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:68:2: error: unsolved goals
+case succ.succ.succ.succ.succ.succ.zero
+hp : HeadPairs
+a b : Nat
+xs ys : List Nat
+inductionAt : EarlierAgreement hp a b
+x : Nat → Nat := fun i => xs.getD i 0
+y : Nat → Nat := fun i => ys.getD i 0
+earlier : Nat → NumberedWindowExchangeAlgorithm.Row :=
+  fun i => (table hp (pair a b)).getD (pair (x i) (y i)) (false, false)
+rawA : ∀ (i : Nat), (NumberedWindowCoverBoundsAlgorithm.table a).getD (x i) default = bounds (x i)
+rawB : ∀ (i : Nat), (NumberedWindowCoverBoundsAlgorithm.table b).getD (y i) default = bounds (y i)
+term : ∀ (i : Nat), (earlier i).fst = true → (bounds (x i)).fst = (bounds (y i)).fst
+args : ∀ (i : Nat), (earlier i).snd = true → (bounds (x i)).snd = (bounds (y i)).snd
+readA : unpackNode a = some (0 + 1 + 1 + 1 + 1 + 1 + 1, xs)
+readB : unpackNode b = some (0 + 1 + 1 + 1 + 1 + 1 + 1, ys)
+reported : parts hp (table hp (pair a b)) (0 + 1 + 1 + 1 + 1 + 1 + 1) (0 + 1 + 1 + 1 + 1 + 1 + 1) xs ys = true
+ok : x 0 = y 0 ∧ x 1 = y 1 ∧ ((earlier 2).fst = true ∧ x 3 = y 3 ∨ x 2 = y 2 ∧ (earlier 3).fst = true)
+both : (bounds (x 2)).fst = (bounds (y 2)).fst ∧ (bounds (x 3)).fst = (bounds (y 3)).fst
+⊢ (((NumberedWindowCoverBoundsAlgorithm.table a).getD (xs.getD 2 0) default).fst.fst +
+          ((NumberedWindowCoverBoundsAlgorithm.table a).getD (xs.getD 3 0) default).fst.fst +
+        1,
+      max ((NumberedWindowCoverBoundsAlgorithm.table a).getD (xs.getD 2 0) default).fst.snd
+        ((NumberedWindowCoverBoundsAlgorithm.table a).getD (xs.getD 3 0) default).fst.snd) =
+    (((NumberedWindowCoverBoundsAlgorithm.table b).getD (ys.getD 2 0) default).fst.fst +
+          ((NumberedWindowCoverBoundsAlgorithm.table b).getD (ys.getD 3 0) default).fst.fst +
+        1,
+      max ((NumberedWindowCoverBoundsAlgorithm.table b).getD (ys.getD 2 0) default).fst.snd
+        ((NumberedWindowCoverBoundsAlgorithm.table b).getD (ys.getD 3 0) default).fst.snd)
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:44:27: warning: This simp argument is unused:
+  rawA 1
+
+Hint: Omit it from the simp argument list.
+  simp only [termMeasure,r̵a̵w̵A̵ 1̵,̵rawB 1, ̲child]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:44:34: warning: This simp argument is unused:
+  rawB 1
+
+Hint: Omit it from the simp argument list.
+  simp only [termMeasure, ̲rawA 1,r̵a̵w̵B̵ 1̵,̵child]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:44:41: warning: This simp argument is unused:
+  child
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵e̵r̵m̵M̵e̵a̵s̵u̵r̵e̵,̵r̵a̵w̵A̵ ̵1̵,̵r̵a̵w̵B̵ ̵1̵,̵c̵h̵i̵l̵d̵]̵[̲t̲e̲r̲m̲M̲e̲a̲s̲u̲r̲e̲,̲ ̲r̲a̲w̲A̲ ̲1̲,̲ ̲r̲a̲w̲B̲ ̲1̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:55:27: warning: This simp argument is unused:
+  rawA 1
+
+Hint: Omit it from the simp argument list.
+  simp only [termMeasure,r̵a̵w̵A̵ 1̵,̵rawB 1, ̲child]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:55:34: warning: This simp argument is unused:
+  rawB 1
+
+Hint: Omit it from the simp argument list.
+  simp only [termMeasure, ̲rawA 1,r̵a̵w̵B̵ 1̵,̵child]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:55:41: warning: This simp argument is unused:
+  child
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵e̵r̵m̵M̵e̵a̵s̵u̵r̵e̵,̵r̵a̵w̵A̵ ̵1̵,̵r̵a̵w̵B̵ ̵1̵,̵c̵h̵i̵l̵d̵]̵[̲t̲e̲r̲m̲M̲e̲a̲s̲u̲r̲e̲,̲ ̲r̲a̲w̲A̲ ̲1̲,̲ ̲r̲a̲w̲B̲ ̲1̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:67:27: warning: This simp argument is unused:
+  rawA 3
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵e̵r̵m̵M̵e̵a̵s̵u̵r̵e̵,̵r̵a̵w̵A̵ ̵3̵,̵r̵a̵w̵A̵ ̵4̵,̵r̵a̵w̵B̵ ̵3̵,̵r̵a̵w̵B̵ ̵4̵,̵s̵a̵m̵e̵.̵1̵,̵s̵a̵m̵e̵.̵2̵,̵m̵a̵r̵k̵]̵[̲t̲e̲r̲m̲M̲e̲a̲s̲u̲r̲e̲,̲ ̲r̲a̲w̲A̲ ̲4̲,̲ ̲r̲a̲w̲B̲ ̲3̲,̲ ̲r̲a̲w̲B̲ ̲4̲,̲ ̲s̲a̲m̲e̲.̲1̲,̲ ̲s̲a̲m̲e̲.̲2̲,̲ ̲m̲a̲r̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:67:34: warning: This simp argument is unused:
+  rawA 4
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵e̵r̵m̵M̵e̵a̵s̵u̵r̵e̵,̵r̵a̵w̵A̵ ̵3̵,̵r̵a̵w̵A̵ ̵4̵,̵r̵a̵w̵B̵ ̵3̵,̵r̵a̵w̵B̵ ̵4̵,̵s̵a̵m̵e̵.̵1̵,̵s̵a̵m̵e̵.̵2̵,̵m̵a̵r̵k̵]̵[̲t̲e̲r̲m̲M̲e̲a̲s̲u̲r̲e̲,̲ ̲r̲a̲w̲A̲ ̲3̲,̲ ̲r̲a̲w̲B̲ ̲3̲,̲ ̲r̲a̲w̲B̲ ̲4̲,̲ ̲s̲a̲m̲e̲.̲1̲,̲ ̲s̲a̲m̲e̲.̲2̲,̲ ̲m̲a̲r̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:67:41: warning: This simp argument is unused:
+  rawB 3
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵e̵r̵m̵M̵e̵a̵s̵u̵r̵e̵,̵r̵a̵w̵A̵ ̵3̵,̵r̵a̵w̵A̵ ̵4̵,̵r̵a̵w̵B̵ ̵3̵,̵r̵a̵w̵B̵ ̵4̵,̵s̵a̵m̵e̵.̵1̵,̵s̵a̵m̵e̵.̵2̵,̵m̵a̵r̵k̵]̵[̲t̲e̲r̲m̲M̲e̲a̲s̲u̲r̲e̲,̲ ̲r̲a̲w̲A̲ ̲3̲,̲ ̲r̲a̲w̲A̲ ̲4̲,̲ ̲r̲a̲w̲B̲ ̲4̲,̲ ̲s̲a̲m̲e̲.̲1̲,̲ ̲s̲a̲m̲e̲.̲2̲,̲ ̲m̲a̲r̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:67:48: warning: This simp argument is unused:
+  rawB 4
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵e̵r̵m̵M̵e̵a̵s̵u̵r̵e̵,̵r̵a̵w̵A̵ ̵3̵,̵r̵a̵w̵A̵ ̵4̵,̵r̵a̵w̵B̵ ̵3̵,̵r̵a̵w̵B̵ ̵4̵,̵s̵a̵m̵e̵.̵1̵,̵s̵a̵m̵e̵.̵2̵,̵m̵a̵r̵k̵]̵[̲t̲e̲r̲m̲M̲e̲a̲s̲u̲r̲e̲,̲ ̲r̲a̲w̲A̲ ̲3̲,̲ ̲r̲a̲w̲A̲ ̲4̲,̲ ̲r̲a̲w̲B̲ ̲3̲,̲ ̲s̲a̲m̲e̲.̲1̲,̲ ̲s̲a̲m̲e̲.̲2̲,̲ ̲m̲a̲r̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:67:55: warning: This simp argument is unused:
+  same.1
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵e̵r̵m̵M̵e̵a̵s̵u̵r̵e̵,̵r̵a̵w̵A̵ ̵3̵,̵r̵a̵w̵A̵ ̵4̵,̵r̵a̵w̵B̵ ̵3̵,̵r̵a̵w̵B̵ ̵4̵,̵s̵a̵m̵e̵.̵1̵,̵s̵a̵m̵e̵.̵2̵,̵m̵a̵r̵k̵]̵[̲t̲e̲r̲m̲M̲e̲a̲s̲u̲r̲e̲,̲ ̲r̲a̲w̲A̲ ̲3̲,̲ ̲r̲a̲w̲A̲ ̲4̲,̲ ̲r̲a̲w̲B̲ ̲3̲,̲ ̲r̲a̲w̲B̲ ̲4̲,̲ ̲s̲a̲m̲e̲.̲2̲,̲ ̲m̲a̲r̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:67:62: warning: This simp argument is unused:
+  same.2
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵e̵r̵m̵M̵e̵a̵s̵u̵r̵e̵,̵r̵a̵w̵A̵ ̵3̵,̵r̵a̵w̵A̵ ̵4̵,̵r̵a̵w̵B̵ ̵3̵,̵r̵a̵w̵B̵ ̵4̵,̵s̵a̵m̵e̵.̵1̵,̵s̵a̵m̵e̵.̵2̵,̵m̵a̵r̵k̵]̵[̲t̲e̲r̲m̲M̲e̲a̲s̲u̲r̲e̲,̲ ̲r̲a̲w̲A̲ ̲3̲,̲ ̲r̲a̲w̲A̲ ̲4̲,̲ ̲r̲a̲w̲B̲ ̲3̲,̲ ̲r̲a̲w̲B̲ ̲4̲,̲ ̲s̲a̲m̲e̲.̲1̲,̲ ̲m̲a̲r̲k̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:75:27: warning: This simp argument is unused:
+  rawA 2
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵e̵r̵m̵M̵e̵a̵s̵u̵r̵e̵,̵r̵a̵w̵A̵ ̵2̵,̵r̵a̵w̵A̵ ̵3̵,̵r̵a̵w̵B̵ ̵2̵,̵r̵a̵w̵B̵ ̵3̵,̵b̵o̵t̵h̵.̵1̵,̵b̵o̵t̵h̵.̵2̵]̵[̲t̲e̲r̲m̲M̲e̲a̲s̲u̲r̲e̲,̲ ̲r̲a̲w̲A̲ ̲3̲,̲ ̲r̲a̲w̲B̲ ̲2̲,̲ ̲r̲a̲w̲B̲ ̲3̲,̲ ̲b̲o̲t̲h̲.̲1̲,̲ ̲b̲o̲t̲h̲.̲2̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:75:34: warning: This simp argument is unused:
+  rawA 3
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵e̵r̵m̵M̵e̵a̵s̵u̵r̵e̵,̵r̵a̵w̵A̵ ̵2̵,̵r̵a̵w̵A̵ ̵3̵,̵r̵a̵w̵B̵ ̵2̵,̵r̵a̵w̵B̵ ̵3̵,̵b̵o̵t̵h̵.̵1̵,̵b̵o̵t̵h̵.̵2̵]̵[̲t̲e̲r̲m̲M̲e̲a̲s̲u̲r̲e̲,̲ ̲r̲a̲w̲A̲ ̲2̲,̲ ̲r̲a̲w̲B̲ ̲2̲,̲ ̲r̲a̲w̲B̲ ̲3̲,̲ ̲b̲o̲t̲h̲.̲1̲,̲ ̲b̲o̲t̲h̲.̲2̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:75:41: warning: This simp argument is unused:
+  rawB 2
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵e̵r̵m̵M̵e̵a̵s̵u̵r̵e̵,̵r̵a̵w̵A̵ ̵2̵,̵r̵a̵w̵A̵ ̵3̵,̵r̵a̵w̵B̵ ̵2̵,̵r̵a̵w̵B̵ ̵3̵,̵b̵o̵t̵h̵.̵1̵,̵b̵o̵t̵h̵.̵2̵]̵[̲t̲e̲r̲m̲M̲e̲a̲s̲u̲r̲e̲,̲ ̲r̲a̲w̲A̲ ̲2̲,̲ ̲r̲a̲w̲A̲ ̲3̲,̲ ̲r̲a̲w̲B̲ ̲3̲,̲ ̲b̲o̲t̲h̲.̲1̲,̲ ̲b̲o̲t̲h̲.̲2̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:75:48: warning: This simp argument is unused:
+  rawB 3
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵e̵r̵m̵M̵e̵a̵s̵u̵r̵e̵,̵r̵a̵w̵A̵ ̵2̵,̵r̵a̵w̵A̵ ̵3̵,̵r̵a̵w̵B̵ ̵2̵,̵r̵a̵w̵B̵ ̵3̵,̵b̵o̵t̵h̵.̵1̵,̵b̵o̵t̵h̵.̵2̵]̵[̲t̲e̲r̲m̲M̲e̲a̲s̲u̲r̲e̲,̲ ̲r̲a̲w̲A̲ ̲2̲,̲ ̲r̲a̲w̲A̲ ̲3̲,̲ ̲r̲a̲w̲B̲ ̲2̲,̲ ̲b̲o̲t̲h̲.̲1̲,̲ ̲b̲o̲t̲h̲.̲2̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:75:55: warning: This simp argument is unused:
+  both.1
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵e̵r̵m̵M̵e̵a̵s̵u̵r̵e̵,̵r̵a̵w̵A̵ ̵2̵,̵r̵a̵w̵A̵ ̵3̵,̵r̵a̵w̵B̵ ̵2̵,̵r̵a̵w̵B̵ ̵3̵,̵b̵o̵t̵h̵.̵1̵,̵b̵o̵t̵h̵.̵2̵]̵[̲t̲e̲r̲m̲M̲e̲a̲s̲u̲r̲e̲,̲ ̲r̲a̲w̲A̲ ̲2̲,̲ ̲r̲a̲w̲A̲ ̲3̲,̲ ̲r̲a̲w̲B̲ ̲2̲,̲ ̲r̲a̲w̲B̲ ̲3̲,̲ ̲b̲o̲t̲h̲.̲2̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesTermStepProof.lean:75:62: warning: This simp argument is unused:
+  both.2
+
+Hint: Omit it from the simp argument list.
+  simp only [̵t̵e̵r̵m̵M̵e̵a̵s̵u̵r̵e̵,̵r̵a̵w̵A̵ ̵2̵,̵r̵a̵w̵A̵ ̵3̵,̵r̵a̵w̵B̵ ̵2̵,̵r̵a̵w̵B̵ ̵3̵,̵b̵o̵t̵h̵.̵1̵,̵b̵o̵t̵h̵.̵2̵]̵[̲t̲e̲r̲m̲M̲e̲a̲s̲u̲r̲e̲,̲ ̲r̲a̲w̲A̲ ̲2̲,̲ ̲r̲a̲w̲A̲ ̲3̲,̲ ̲r̲a̲w̲B̲ ̲2̲,̲ ̲r̲a̲w̲B̲ ̲3̲,̲ ̲b̲o̲t̲h̲.̲1̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+COMPILE_FAILED LogicLineages.PersistentMarking.NumberedWindowRawExchangeVerticesTermStepProof: 1
+BUILD_RECEIPT build-reports/1795193380025857742-6.json

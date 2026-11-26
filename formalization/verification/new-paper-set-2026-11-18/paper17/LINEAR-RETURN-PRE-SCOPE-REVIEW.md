@@ -1,0 +1,3 @@
+# Independent pre-scope: actual linear return
+
+Approved supporting scope; three frozen pins match. Actual arbitrary A/A' have the same true norm and stated limit parts over a common positive-limit retained prefix P. The target derives true FirstEntry at exactly k, actual norm orbit at k and exact relative limit P, including k=0. It does not assume a hit/count/reset. Explicit affordability covers both original common heads and both retained targets with +3; later global traversal must discharge it. No zero/limit restriction on mu/nu is silently imported; the proof must handle the arbitrary offsets actually quantified here. This is synchronized linear-tail support, not initial-phase classification or global equal-gap acceptance.

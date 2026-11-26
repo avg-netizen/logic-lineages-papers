@@ -1,0 +1,13 @@
+# Valid original head encoding: exact internal injectivity prerequisite
+
+Source programs remain literal `Continuation20261114/OriginalHeadEncodingBridge/Definitions.lean` (`encodeHead`, six branches) and `Continuation20261115/OriginalHeadDecoderValidity/Definitions.lean` (`check n`). Actual decoder correspondence and success branches are already checked by OriginalHeadDecoderValidity.Proof. Native head encoding calibration alone is not internal injectivity and will not be used as reflection.
+
+Target has four actual graph observations: successful original head checks on f/g and arbitrary actual encodeHead outputs ef/eg. Its conclusion is derivability equivalence of encoded-output equality and raw-input equality. All tag/payload, dispatch and arithmetic witnesses are internal. No new validity predicate, semantic head witness, standard-N image, natural equality premise or additional calculus rule.
+
+Why restricted domain matters: tags0 and1 have constant branch outputs0 and2 regardless of payload, and unsupported tags default0. Thus arbitrary raw heads are not injected. Actual check enforces payload0 for tags0/1, accepts tags2/3/4 without extra payload restriction and requires payload<n at tag5, excluding unknown tags. n=0 excludes tag5 and is retained.
+
+Plan: query actual unpair graphs; apply checked accepted-branches iff; split precisely the original six supported cases. Consume checked internal tag-factor equations for encodeHead. Express actual sumLeft/sumRight program outputs by internal addition/successor arithmetic; relate these to the original multiplication-based tag terms with checked twoMul. Use paid InternalTagArithmeticProof.actualTagInjectivity and actualTagsDisjoint recursively to separate the finite sum branches, cancel equal tags to recover payload equality, with basics using forced-zero payloads. Pairing functionality reconstructs raw equality. Reverse implication follows actual graph functionality under equality transport. Every parity/multiplication conversion is an explicit internal proof duty, not a new assumption.
+
+Coverage: distinct supported branches are disjoint; same branches2–5 inject payload; basics0/1 force identical payloads. Generic primitive internal tag cancellation is already paid, but no existing actual head-encoding injectivity endpoint was found. No native proof substitutes for these cases.
+
+This prerequisite does not yet derive the successful head-check premises from an enclosing code/node guard. That genuine guard-discharge integration remains later, along with raw semantic constructor recurrence conversion and full packed/context/E installation. No proof authored until independent review/preflight.

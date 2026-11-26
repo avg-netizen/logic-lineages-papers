@@ -1,0 +1,14 @@
+{
+  "status": "proposal only, active proof and frozen sources unchanged",
+  "only_file": "LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageTypedProof.lean",
+  "before_sha256": "bfeee2497fe2f7a15138e2b49fc70c26cef85af73f68cbb5e96528339c7412f0",
+  "proposed_sha256": "90c936d16f68c7e0199403b160690408b5075b20f10f135db1b408cad0bb5763",
+  "failure": "build-reports/1795074715378445341-2.json",
+  "exact_error": [
+    "five constructor branches after simp contained True not equality, with And.intro rfl and witness lambda to True",
+    "generic rw [castVariable/castApplication/castLambda] each left a fresh output context equality already named h",
+    "lambda body rewrite display showed two identical transported bodies but insufficient proof conversion"
+  ],
+  "scope": "use simp to close actual reflexive root and retained-reference equalities; supply exact h and subterms for existing dependent cast rewrites; apply congrArg Term.lam to actual IH equation at same cast body. Targets, binder prefix and retained references unchanged.",
+  "preserved": "verification/new-paper-set-2026-11-18/paper19/current-tree-input-coverage-failures/1795074715378445341-2"
+}

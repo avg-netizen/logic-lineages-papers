@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.AffineCollapseGuardRowsTargets
+import LogicLineages.PermittedControl.AffineCollapseGuardRowsProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactAffineCollapseGuardRows :
+    AffineCollapseGuardRows.ExactAffineCollapseGuardRows :=
+  AffineCollapseGuardRows.exactAffineCollapseGuardRows
+
+#print axioms fixed_exactAffineCollapseGuardRows
+
+end LogicLineages.PermittedControl.StatementChecks

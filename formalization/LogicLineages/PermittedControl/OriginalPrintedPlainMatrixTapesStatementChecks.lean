@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixTapesTargets
+import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixTapesProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedPlainMatrixTapes :
+    OriginalPrintedPlainMatrixTapes.ExactPrintedPlainMatrixTapes :=
+  OriginalPrintedPlainMatrixTapes.exactPrintedPlainMatrixTapes
+
+#print axioms fixed_exactOriginalPrintedPlainMatrixTapes
+
+end LogicLineages.PermittedControl.StatementChecks

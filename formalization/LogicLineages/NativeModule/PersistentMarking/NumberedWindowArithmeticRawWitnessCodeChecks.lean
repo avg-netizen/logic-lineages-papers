@@ -1,0 +1,42 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticRawWitnessCodeSound
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticRawWitnessCodeComplete
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticRawWitnessCodeChecks
+open NumberedWindowArithmeticCodecLaws
+open NumberedWindowArithmeticWitnessListCode NumberedWindowArithmeticWitnessListCodeProof
+open NumberedWindowArithmeticRawRootCode NumberedWindowArithmeticReplacementCodeProof
+open NumberedWindowArithmeticRawRootCodeProof
+open NumberedWindowArithmeticRawWitnessCode NumberedWindowArithmeticRawWitnessCodeTargets
+
+theorem exact_TermOccurrenceListCodec : ExactTermOccurrenceListCodec :=
+  codec encodeTermList decodeTermList termsSound termsRound
+
+theorem exact_ReplacementWitnessCodec : ExactReplacementWitnessCodec :=
+  codec encodeReplacement decodeReplacement partSound partRound
+
+theorem exact_SelectFlagCodec : ExactSelectFlagCodec :=
+  codec encodeFlag decodeFlag flagSound flagRound
+
+theorem exact_RawRootWitnessCodec : ExactRawRootWitnessCodec :=
+  codec encodeRoot decodeRoot rootSound rootRound
+
+theorem exact_RawWitnessFuelCalibration : RawWitnessFuelCalibration :=
+  ⟨NumberedWindowArithmeticRawWitnessCodeSound.atFuel,
+    NumberedWindowArithmeticRawWitnessCodeComplete.atFuel⟩
+
+theorem exact_RawWitnessCodec : ExactRawWitnessCodec :=
+  codec encodeWitness decodeWitness (fun n => NumberedWindowArithmeticRawWitnessCodeSound.atFuel n n)
+    NumberedWindowArithmeticRawWitnessCodeComplete.roundtrip
+
+#print axioms exact_TermOccurrenceListCodec
+#print axioms exact_ReplacementWitnessCodec
+#print axioms exact_SelectFlagCodec
+#print axioms exact_RawRootWitnessCodec
+#print axioms exact_RawWitnessFuelCalibration
+#print axioms exact_RawWitnessCodec
+
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticRawWitnessCodeChecks

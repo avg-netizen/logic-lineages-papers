@@ -1,0 +1,7 @@
+# Independent final review
+
+Approved four supporting endpoints only. Six frozen pins match. Independent recursive evidence exactly reproduces author report: 14 source-matched modules, four exact standard-only aliases, zero errors. Receipt 1794981138806450676-2, source/input/output bundles, compiler context and unchanged bounded profile reconcile. No compiler invoked by reviewer.
+
+Read the full actual proof. rootRemoved is paid by genuine monic-division factorization and nonvanishing evaluation. The proof establishes nonzero polynomial and embedded denominator factors, handles even and odd multiplicity by exact field equalities, then applies actual square pullout and embedded-polynomial Cartier. Both literal selectors are treated, with L0's actual X*P numerator. Canonical output denominator divides the explicit square-root denominator, and actual polynomial root multiplicity monotonicity plus nonvanishing remainder gives precisely ceil(k/2). No partial-fraction representation or assumed contraction appears. Canonical specialization uses actual num/denom equality; no-new-pole follows at k=0. Arbitrary numerator including zero and zero pole order remain included.
+
+One proof-only eval_zero repair is preserved; no target change. These coordinatewise working-field results do not establish coefficient-extension naturality, source mu budget, all-word contraction, full geometric binary-transient or profile theorem. Zero numbered promotions; no root build or CI claim.

@@ -1,0 +1,5 @@
+# FullCollision exact pre-scope review
+
+Approved before proofs; all seven pins independently match. Read complete definitions/targets and printed lem:collision. NumericCollision derives actual g positivity/fourfold adjacent growth from literal SourceGrowth, then all-natural collision inequalities; no supplied growth oracle. CompleteCollision quantifies every policy, arbitrary actual ground sources and shared positive raw valuation, and concludes actual scalar positivity/existence so getD fallback cannot witness success. Both exact six-eraser calibrations match printed nested expressions and g(n)=f(n+2)+1. All three printed weak/equality/gap conclusions retained.
+
+No assignment/Scalar premise, default-policy or Phi-only restriction, or selected17 control restriction. Actual arbitrary-f scalar totality and composite eraser suppliers must be applied and source-growth internally supplies their comparison assumptions. Separate numeric gate is supporting; only fresh full actual-source gate can receive lemma credit. General aggregation/compiler/hardness remains separate. No native execution performed.

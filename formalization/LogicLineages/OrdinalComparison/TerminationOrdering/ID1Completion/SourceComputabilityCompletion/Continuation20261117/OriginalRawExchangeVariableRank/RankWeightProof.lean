@@ -1,0 +1,29 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.RawRankCodeProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.RankWeightProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
+open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
+open InternalApplicationCertificateConstructorsSyntaxProof InternalAcceptanceSupportProof
+open InternalTagArithmeticSyntaxProof (z suc zRelabel sucRelabel)
+open InternalTagArithmeticSupportProof (refl symm)
+open SourceComputabilityFormulaSupportProof (numeral)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Continuation20261114 Continuation20261115 Continuation20261116
+open Continuation20261116.OriginalExchangeBoundsPreservation
+open OriginalRawSyntaxTransport (variableRankRaw)
+open InternalAcceptanceConjunctionProof (constantZeroValue)
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+theorem entry (entry typ raw code : OTerm alpha)
+    (hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing entry typ raw)))
+    (hr : Nonempty (Derivation body Delta (graph1 rawRankCode code raw))) :
+    Nonempty (Derivation body Delta (graph1 rankWeight code entry)) :=
+  unaryValue rawRankCode InternalUnpair.right code raw ![entry] hr (pairRight entry typ raw hp)
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.RankWeightProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.RankWeightProof

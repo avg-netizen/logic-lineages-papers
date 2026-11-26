@@ -1,0 +1,58 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawSuffixSearch/NativeProof.lean:31:21: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.104 = ?m.104
+but is expected to have type
+  True
+in the application
+  Or.inl rfl
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawSuffixSearch/NativeProof.lean:35:78: error: No goals to be solved
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawSuffixSearch/NativeProof.lean:35:34: error: unsolved goals
+test : Program 2
+raw line count : ℕ
+ih :
+  (evaluate (search test) (count ::ᵥ raw ::ᵥ line ::ᵥ nil) = 0 ∨
+      evaluate (search test) (count ::ᵥ raw ::ᵥ line ::ᵥ nil) = 1) ∧
+    (evaluate (search test) (count ::ᵥ raw ::ᵥ line ::ᵥ nil) = 1 ↔
+      ∃ i < count, evaluate test (evaluate HistoryLookup.drop (i ::ᵥ raw ::ᵥ nil) ::ᵥ line ::ᵥ nil) ≠ 0)
+hz : evaluate (search test) (count ::ᵥ raw ::ᵥ line ::ᵥ nil) = 0
+ht : evaluate test (evaluate HistoryLookup.drop (count ::ᵥ raw ::ᵥ nil) ::ᵥ line ::ᵥ nil) = 0
+i : ℕ
+hi : i < count + 1
+hit : evaluate test (evaluate HistoryLookup.drop (i ::ᵥ raw ::ᵥ nil) ::ᵥ line ::ᵥ nil) ≠ 0
+h : ¬i < count
+this : i = count
+⊢ False
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawSuffixSearch/NativeProof.lean:39:20: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.176 = ?m.176
+but is expected to have type
+  True
+in the application
+  Or.inr rfl
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawSuffixSearch/NativeProof.lean:39:73: error: Type mismatch
+  rfl
+has type
+  ?m.187 = ?m.187
+but is expected to have type
+  True
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawSuffixSearch/NativeProof.lean:43:18: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.232 = ?m.232
+but is expected to have type
+  True
+in the application
+  Or.inr rfl
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawSuffixSearch/NativeProof.lean:43:86: error: Type mismatch
+  rfl
+has type
+  ?m.246 = ?m.246
+but is expected to have type
+  True
+AXIOMS LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawSuffixSearch.NativeProof.successor: [propext]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawSuffixSearch/NativeProof.lean:46:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawSuffixSearch.NativeProof.nativeSearch: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawSuffixSearch.NativeProof.nativeSearch' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]

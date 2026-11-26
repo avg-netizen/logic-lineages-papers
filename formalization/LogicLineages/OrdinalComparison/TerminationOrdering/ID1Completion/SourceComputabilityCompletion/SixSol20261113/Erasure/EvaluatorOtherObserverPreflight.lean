@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.EvaluatorOtherObserverTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.EvaluatorOtherObserverPreflight
+example : Prop := EvaluatorOtherObserverTargets.ActualShape
+example : Prop := EvaluatorOtherObserverTargets.ActualNeutrality
+example : Prop := EvaluatorOtherObserverTargets.ActualSpine
+example : Prop := EvaluatorOtherObserverTargets.ActualBottom
+example : Prop := EvaluatorOtherObserverTargets.ActualNonvariableMark
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.EvaluatorOtherObserverPreflight

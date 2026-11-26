@@ -1,0 +1,15 @@
+import LogicLineages.PersistentMarking.NativeSyntaxCountabilityProof
+
+namespace LogicLineages.PersistentMarking.NativeSyntaxCountabilityChecks
+open NativeSyntaxCountabilityTargets
+
+theorem exact_OrdinaryLiteralRoundtrip : OrdinaryLiteralRoundtrip :=
+  NativeSyntaxCountabilityProof.roundtrip
+
+theorem exact_ClosedNativeCountability : ClosedNativeCountability :=
+  NativeSyntaxCountabilityProof.countableSyntax
+
+#print axioms exact_OrdinaryLiteralRoundtrip
+#print axioms exact_ClosedNativeCountability
+
+end LogicLineages.PersistentMarking.NativeSyntaxCountabilityChecks

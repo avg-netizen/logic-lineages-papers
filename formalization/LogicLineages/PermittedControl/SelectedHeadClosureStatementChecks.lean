@@ -1,0 +1,11 @@
+module
+public import LogicLineages.PermittedControl.SelectedHeadClosureProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_fullSelectedHeadClosure : SelectedHeadClosureTargets.FullSelectedHeadClosure :=
+  SelectedHeadClosureProof.fullSelectedHeadClosure
+#print axioms fixed_fullSelectedHeadClosure
+
+end LogicLineages.PermittedControl.StatementChecks

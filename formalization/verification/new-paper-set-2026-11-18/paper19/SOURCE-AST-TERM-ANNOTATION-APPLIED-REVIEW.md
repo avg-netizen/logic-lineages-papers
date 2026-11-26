@@ -1,0 +1,1 @@
+Independently confirmed exact sole empty-valuation binder annotation against preserved draft01. Definitions SHA bf765b17708bb3a9b07458cd44bd62fca7ac900257dad1bd85b6ad5233b14a31; only Definitions pin changed, all five current pins verified. No mathematical scope change. Fresh parent-authorized retry permitted.

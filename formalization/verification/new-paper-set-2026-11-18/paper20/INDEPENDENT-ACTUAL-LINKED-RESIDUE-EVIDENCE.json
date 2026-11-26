@@ -1,0 +1,674 @@
+{
+  "gates": [
+    "LogicLineages.CartierObserverCurrent.ActualLinkedResidueStatementChecks"
+  ],
+  "status": "verified",
+  "native_source_matched_modules": 31,
+  "errors": [],
+  "new_named_standard_axioms": {
+    "LogicLineages.CartierObserverCurrent.ActualLinkedResidue.completeActualResidue": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.CartierObserverCurrent.ActualLinkedResidue.StatementChecks.fixed_completeActualResidue": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "compiler_context": {
+    "compiler": "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/bin/lean",
+    "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "lean_path": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    "pins": {
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lake-manifest.json": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lakefile.toml": "c05684bc8b1905ebc2f1ccaa33f57fd5cb769350165dbd9614c18be7a63227a5",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lakefile.lean": null,
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lake-manifest.json": "28ee3c8d1f319b5da6b53636261d9f8a3048b057f6e1739824feefbc38968672",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lakefile.toml": "a5ae5498a1a8d2920079ce4e652af4b39c41d87b49a2ec3f80e50f27f348a697",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lakefile.lean": null
+    },
+    "external_objects": {
+      "Lean.Elab.Command": {
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Elab/Command.olean": "efad9985ccc485678f6fdb74805a353e2d8f80ff1dae20bb5d3aa3a82126db84",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Elab/Command.olean.private": "fd7cead0fc97509b0e1caab27f03bb2f99bfacda214a63eeba5a74d1879c7534",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Elab/Command.olean.server": "d6f7e8bebea3efbe54a75fa2d17e4b1ff1261dbf91eec40049bcc76ac1c955ef",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Elab/Command.ir": "cbbab80f7c8e03c0bfd11e9af2e3e3b4ab1986412139dcb0f4a71f940e765729"
+      },
+      "Lean.Elab.Tactic.Omega": {
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Elab/Tactic/Omega.olean": "cadce834cd1e7ce0aee7bec71c3e2dd49c548127186113b8839b7dc8b4df8ec7",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Elab/Tactic/Omega.olean.private": "4475db3db199bf217e4bbe6e73a8e5466d10afb0038dd1ebe3aed5f2fd1a278e",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Elab/Tactic/Omega.olean.server": "edecd1187694f6142974631c9171e3459d786b792dab5eea8c7613a00187e82d",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Elab/Tactic/Omega.ir": "bd034fb1f0662b0f64334ed3baf700288a82319d6995f7c25d9848dbee3d1776"
+      },
+      "Lean.Util.CollectAxioms": {
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Util/CollectAxioms.olean": "5b8bd2f4503659076c18144e201bef617ab7de2179333b933d74d7f42305b93e",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Util/CollectAxioms.olean.private": "16bf850027782f7001dee44e8f266661f62a3724b661bf8911ef76e6b3920fac",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Util/CollectAxioms.olean.server": "32eadd1502377a8fa8fe662fe40c616816807691f37d44d957fbba6397dd0f0f",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Lean/Util/CollectAxioms.ir": "0a2b859f1adefcf672ca0f2a567ff55d6687c16c1cd6958c321e815a2598fa64"
+      },
+      "Mathlib.Algebra.BigOperators.Fin": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/Fin.olean": "b7c3868cd7a83235b876566260a01ea4e160c8e81fbfa928d6b917c5b1796525",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/Fin.olean.private": "429950b83a785cd1b60f40d4c9f4046933fb02b4277b319017ecea32a2bce61c",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/Fin.olean.server": "ac3ab96f59af094e7f5025245abf4866d179c472556a2f34601188988f74a71e",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/Fin.ir": "2ff5638281341d30a5b1c002988a7dbdbc76bc17c824c88be98882207446b522"
+      },
+      "Mathlib.Algebra.BigOperators.Intervals": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/Intervals.olean": "af12ba1eb6fddad0d02d38ac9078fc5def8fc3d452c2f2049b39d369a408f645",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/Intervals.olean.private": "185d82b3ea5cb33fb84572f7d8d6845124ccc5b38ceed67aa451141f4ca32234",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/Intervals.olean.server": "007d4b62820e69f12e76d84cd1c7761554475af58dadd3bdfd14f29206ccd8ed",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/Intervals.ir": "c5efe94d0cb3038b3e35838de198c473020820ae4c2c6b3d1a608d21fa120bb1"
+      },
+      "Mathlib.Algebra.CharP.Algebra": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/CharP/Algebra.olean": "472c02d68b3844b3950d747a342361072ecdc6007cd9ffe870199ef4d5c98234",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/CharP/Algebra.olean.private": "20164c661e1f4c2117921fa6ef54319f736dbb627e18732436c62213e43c9170",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/CharP/Algebra.olean.server": "501987ffe0eef6bccaac548cb107ea40fdec48bab7d15e3a726782d2a0becfa8",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/CharP/Algebra.ir": "13c33f0a1427871fa99b72b046d661f29609259f24eda25883b710a6f906b5c6"
+      },
+      "Mathlib.Algebra.CharP.Two": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/CharP/Two.olean": "fba1677b51c8e6e5dc736055e472ade62cc98acf7b7a785ae5e3e708e2162ede",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/CharP/Two.olean.private": "6943b703db5651184fbdabd43872db831b1f48a6ec36f6ffedd510c001a849a2",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/CharP/Two.olean.server": "a95fd1c9a0a170ec2a36e67fa20e3b21e62e07a34bfde8eef10a5a5c88b891fd",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/CharP/Two.ir": "bbc3262f5420d214875e7820fda3ea4a275f1896361f3dc0055f74835eb12478"
+      },
+      "Mathlib.Algebra.Field.ZMod": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Field/ZMod.olean": "2d5bdc6dc07e0854a7b8055533988cd283da4fc29564514c6d51f57a723a0700",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Field/ZMod.olean.private": "75cfd0045cb76334e74513a8e1373285ce93a4f2660324e19fb60abaf0f002b2",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Field/ZMod.olean.server": "244b7f4454b6766ccab714a88cc8592ba49fb860e1c0dde1c1624f7067ba3041",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Field/ZMod.ir": "982b051628f96a0313c51d68843512ffff550b1c86c43798663578fb8d370958"
+      },
+      "Mathlib.Algebra.Polynomial.BigOperators": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/BigOperators.olean": "739914b36bf47839426e087f9610c75fc10bee22327fdf76b71eeb8992880320",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/BigOperators.olean.private": "c445c36b0f4b13328fbeabb3f3073c9aee61da0c11afb8eb3291a0d82728cdec",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/BigOperators.olean.server": "4d3aebeb0f2c2e44940efbf70dd81840fc2c415efb5cdd420000d6937a35ff7d",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/BigOperators.ir": "41e1a581997a47550de3f4456e667239f88b85c899032d3b0918180cb50cccdd"
+      },
+      "Mathlib.Algebra.Polynomial.Degree.Operations": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Degree/Operations.olean": "61180798f4d83bbc4928c8b850e315f3e7686ae93e8af680ea92f41c835f129a",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Degree/Operations.olean.private": "dd104e9d4f38467e0da1ba519ad758fab6ab07a43897b10f501a7d680aff6146",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Degree/Operations.olean.server": "cc9da43cd11ee0dbca2b530cefc5872959dd663398595fc247051f1bf032cce6",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Degree/Operations.ir": "19a861b8443c5837404d6cffee929050be56ed766bf4f02a2240afcc08e38bf5"
+      },
+      "Mathlib.Algebra.Polynomial.Derivative": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Derivative.olean": "f44b30d003c0ab493452d947ae23e23128fc93a96f2982ce1119ebb03f0f955b",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Derivative.olean.private": "3eec46e7fb9c1b3a26b48d9d67a4c88203beaeec16db07ceb6baf22e397e1aae",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Derivative.olean.server": "8eef262a3c187661c734168fd7e694b899e296c7618621c4822f3e5e1b017d6f",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Derivative.ir": "1aea237e151d3d9e0b899224eedd0fff5966a4a420272ce8d2abedd7596e2b4e"
+      },
+      "Mathlib.Algebra.Polynomial.Div": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Div.olean": "5ebff017624d9e1ed2c8699345fe365f05558d900f9bc121f05a3d7f35256a3a",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Div.olean.private": "575538da000d7483180d026c623e8d254b28b4ba70452932bddabe12a98e84f5",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Div.olean.server": "92fd1cf63ca963e52b531a78098f265fecda95be6052cfaa888e02e6fc9a47b5",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Div.ir": "901e4bd45fcce2e51e2cc8c3c68291957eb5c7e2994523ce6a6133d1fbffef84"
+      },
+      "Mathlib.Algebra.Ring.Parity": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Parity.olean": "8ec269b8da660d880083bdf125e6ae00cf743e0218dd4d212c3be7b8be1a14be",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Parity.olean.private": "6da10b499ad869d741e9e440413bffc1952213439761668255dfc7bd5c4a00ae",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Parity.olean.server": "cd0ec5a0a7a5e7514454dcb35cfce02e57af491ef146a8ecb942f8027624e40b",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Parity.ir": "4cf6370f29c8899a3cd278abe65d59e9c0010336bee615a88b0132304bda1b5a"
+      },
+      "Mathlib.Data.Matrix.Mul": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Matrix/Mul.olean": "802e1cead435833951be65f39224dfb990604c0b2fc0c6869e6635dfeb8fc720",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Matrix/Mul.olean.private": "8daca0b68085ddda59c6a163822a88afda502cdb4d411fb3b2a5bdc1eeb4037a",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Matrix/Mul.olean.server": "b4c4eebe6c3c408e38852b383df5ebe1fbbc9c0ebda95d1befc6651eacebe240",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Matrix/Mul.ir": "4f44ffa4cf7e59e45a17d18780c886caa70729a1657c67e225b466c7cd7137ba"
+      },
+      "Mathlib.Data.Nat.Basic": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Basic.olean": "16eb8ad31d49f32acd66fc580f0224fe9b8f2d9c1d6746386e4ed6f374c1bb64",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Basic.olean.private": "5f072aed41d81c524ed1ab1930117312d69710ddb55615b30e1bb40d11c4d5a0",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Basic.olean.server": "c011711c03ba5244b6d0b3497c520702aaa8e581ffae944f7d0dd40b39335fe9",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Basic.ir": "adc1a79032b27774a0067ca160cc3531efe4951656c7d855f2857e773e911af8"
+      },
+      "Mathlib.Data.Nat.Log": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Log.olean": "224a5612c7c8560adce5eb55d419099bac4bd44dee06ac09b839fc8e99c84c35",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Log.olean.private": "375e1adaab6b1625d911853c763c083c75537c1892f143ffaffbe5b0dc54a313",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Log.olean.server": "57be2403c43cd60bff8845ecd803984799f7bed8b1fdafdd05f0c412c40b8ddf",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Log.ir": "0ca3f73d2ccd4db16a9710ee5a082f4126f0c66c1e121eb39831578058eea0c7"
+      },
+      "Mathlib.Data.Nat.Size": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Size.olean": "e5aa900ecb55a8104284880e8ce9f297f96c8942276dda4a17938eeace9ff5ed",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Size.olean.private": "584fb0d11256813af15aa716fde0843cfa3517e30ae10d1c8d8e879e9c345984",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Size.olean.server": "7f5e71c801e4c889445a154dcdff2539bedaa9394ac3a2be5735fc049143628b",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Size.ir": "628d699a5e910d538f06b7e9bd56f04079c4d2b846c8a9ea74c9a8d309dd4dab"
+      },
+      "Mathlib.GroupTheory.OrderOfElement": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/OrderOfElement.olean": "c54f8133c7ca93a8ab1c44ba1c82ec4fac0bcfe4df0ecab72783198c1388428f",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/OrderOfElement.olean.private": "5e9fbc6d0fbba33833f9911955529cc3b77a6ce31918897f665dfdde2af560ac",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/OrderOfElement.olean.server": "d2858d2bc33a66e83ff3269d49fa221d82b3a4c730e92a09990352a98ffbb08d",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/OrderOfElement.ir": "fed7912f9cccf87b6f69b12c766e25c6595837d51359e0918f26028992fc8a8a"
+      },
+      "Mathlib.Logic.Function.Iterate": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Logic/Function/Iterate.olean": "a6765b64e379109d5fe6a9f77493d1ed97681c16822f69ee0efca88457c93951",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Logic/Function/Iterate.olean.private": "1b95475f62cc3b16f6aeac590a880a924f6f64e2489b3adc770d2bfb11a6cf95",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Logic/Function/Iterate.olean.server": "558208f6d58bcbedca51a6ed2c506545fa3beb9e3b8056488a4fd99ab485dd72",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Logic/Function/Iterate.ir": "e195f3afeae010fe347fbb5772085f2a705553176b463c2d06c88d3bfdaf0a24"
+      },
+      "Mathlib.Order.Monotone.Basic": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Monotone/Basic.olean": "523ac8b8e294ed417fd4ea4750ad2de77e940abca76dcfb8b16a332c1001a0b4",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Monotone/Basic.olean.private": "4bf559700eed2aef6cdc0880e8b8775fea441c7a0f235c6c3f14e8fa489dfd96",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Monotone/Basic.olean.server": "8415b0ae1d1f187245639ba74f3597e0cee4a927aef136477b69c758a2940933",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Monotone/Basic.ir": "f7dfbdbb5726d3a649265be3c96d775fdd98fe53a59776c47ff29fa982ac9f73"
+      },
+      "Mathlib.Order.Monotone.Defs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Monotone/Defs.olean": "9bc9226069a85a3ef7aab03066459f066219fc95d982baf3b02362feba8c7b23",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Monotone/Defs.olean.private": "f2d178385cc6d8b6a64c84aa90ad9136c79dce1a00dfd30ec4326c7bacc5a2db",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Monotone/Defs.olean.server": "104d67e456b2f26bb9d5abdc85cd43eb2dfb0ab00923b8197eb0b2ff04b00ccb",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Monotone/Defs.ir": "01b91e58d6fa0d40162a21aab2e10350f130a4d62c3bb5b6b7253d89523eb98c"
+      },
+      "Mathlib.RingTheory.HahnSeries.PowerSeries": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/HahnSeries/PowerSeries.olean": "dc70938f498901c1fa8f827e2f9e9af28ddfb9153ce92e2ea75f9fcfa402a292",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/HahnSeries/PowerSeries.olean.private": "39fcb5a946f64e691fffa20df88511d142f8230dd925100e9724d41bf58d82c9",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/HahnSeries/PowerSeries.olean.server": "2cc80793164e0b5e4c46f2e98360a21ca58f4a1a7902d3e0b7f9c93edb983b5d",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/HahnSeries/PowerSeries.ir": "4010fa05d0e6f7b318b7f07b8cf338d3186e69b956d78b37daf31e9821f5eda4"
+      },
+      "Mathlib.RingTheory.PowerSeries.Inverse": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/PowerSeries/Inverse.olean": "23a700ebfabde9a1348a6f904803e6a694252819cbf8c61d07f2ec975caa38d6",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/PowerSeries/Inverse.olean.private": "c976891155ef24244fb91b183a8ff22b31015a8d7b05c9529acd2729baaff2e4",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/PowerSeries/Inverse.olean.server": "b2e4fcb9a4ff839302eca9f327b8649932eff23505667d82dd40ce1993e3fbd7",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/PowerSeries/Inverse.ir": "bf2e8f14f7e8611764ed84c7babfeae9d42f2476da66662f9fc74ad255070e3a"
+      },
+      "Mathlib.RingTheory.RootsOfUnity.Lemmas": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/Lemmas.olean": "61b0e5f1144fef3be793cbb6fdfd07be1ed12318e640f5037830cdcb09aa5ae6",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/Lemmas.olean.private": "8bc691a98e0dd77ff3678adc980d78d2b6aa2d705bfb4998d438f12bcca5d07b",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/Lemmas.olean.server": "67bd9b70e5172926c3c4eb453ff05e21730e8ef9fd3856c242d247a9ebff9c34",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/Lemmas.ir": "c22aa71ab61e885a2ce68bcfa1c30d8c80405deb4e534296bd5e8a3e78d6c5b4"
+      },
+      "Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/PrimitiveRoots.olean": "c5173fa07c8837d957ca2593ba40c2616bbe74e05ff9ea60eda1ea4cfaa426a0",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/PrimitiveRoots.olean.private": "4e6e42bef844ce8788e49da7edec52e636c5dc793e4a3808dbf874d06ffc495e",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/PrimitiveRoots.olean.server": "1ffc45db04f505cd1331d1322a5f699ff18820770a06f1e28a6aae1ade0c26d6",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/RootsOfUnity/PrimitiveRoots.ir": "07d1e025c81d699a5c1a135552b42bc59da9430baa436cf74a9f115f8839415d"
+      },
+      "Mathlib.Tactic.FieldSimp": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/FieldSimp.olean": "f0c6d5902ebd4b9eb2f9bf6c8517f0dcb0d8c08ccfaf88e0db91d3019d9273a2",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/FieldSimp.olean.private": "806f3d35a767986b825a3cd357412d67fa3288f41005a413fe44ab989bfb5a46",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/FieldSimp.olean.server": "aa05aeff2b93ee6fb5e47dc102dca36be5d366150c34dcb901b347f9eef6e65f",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/FieldSimp.ir": "27ffcc2bb87c146c14e1126350227502e033f48fd8269f5853cda894577533c1"
+      },
+      "Mathlib.Tactic.Linarith": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith.olean": "a6ade8e9df92aebd47310c7a20334c15307364c0c108db430fac6c8ccf0f21e9",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith.olean.private": "8d7b4f23eeab86b4a65cbca125bddff040e726092f537e9f147df60a924c66e8",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith.olean.server": "994021891b9166abb6e4120205854b8302b33804d513e9336acc910b15c766f7",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith.ir": "e7d4b7530f673cf1783a0e4f16285f8a435fe13a95910433debf5e039f1f04eb"
+      },
+      "Mathlib.Tactic.Ring": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Ring.olean": "3244720aab4e327d997e30ad4f4051a305cd37a5e00c71a556a7b53c29e8b552",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Ring.olean.private": "88cb95e682d3f85f5552b8814d0ca885f7a9d6908288a59c6b35f28a03196def",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Ring.olean.server": "1ffbe72cc061d6634fec3033a0a738aa2e2862d4ec10f3d240abd9aababb62aa",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Ring.ir": "891c0bd1a73353872783778a502e5ab32e1cb8efa9980164e6a45da8b3ab9e10"
+      }
+    },
+    "selected_compiler": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550"
+  },
+  "modules": {
+    "LogicLineages.OrdinalComparison.ControlDefinitions": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/ControlDefinitions.lean",
+      "source_sha256": "67b885bc02dc1ebc0322f46bc4607c5e41e15c74b8957976986541cc23a04ee4",
+      "input_key": "4091eeb6e3cf250cd10b61971ccfe621884c63e49cdc952585cc435aa3aabd75",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/ControlDefinitions.ir": "d7ff6ea008582e4294ee363f1402ca64a8360faac7d958f0db006a9f26fa6a65",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/ControlDefinitions.olean": "8fb96dc4872e3db31d00e278ba634c958a250131dc3f9b5670be69b51505e8ba",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/ControlDefinitions.olean.private": "b7f759d5b45008438d817eb1e45904c716b355de068b8647e483a6ea830eca4c",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/ControlDefinitions.olean.server": "e3598edad476e6e5c482f6bca9acd31f4b2f44f3a05689b53e1c560d88cba0d2"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794976025040383354-2.json",
+      "receipt_sha256": "f07ba8a8cd6eecd744d134d9cd8974641fa1b06262b5556110a53cd3541ea5c8",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794976025040383354-2-LogicLineages-OrdinalComparison-ControlDefinitions.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.SeriesObservabilityDefinitions": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/SeriesObservabilityDefinitions.lean",
+      "source_sha256": "4b3be7a486afc0f930dd26f605619f55d5602d559dcf265c7faf177622d90128",
+      "input_key": "a80160cee3dcdb0f948cb642ba2049f6d41adbbb18a3885b515da4138b8f8bf9",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SeriesObservabilityDefinitions.ir": "9bd49b92f77ae7d273901c3c53333b8a4a0282aad5221ca2b4ece2c2f4523c24",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SeriesObservabilityDefinitions.olean": "82e75ba7abb06e19fe2ecf4f4d1440a52a8daec24681ac1dfaec2b2627345d56",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SeriesObservabilityDefinitions.olean.private": "2b7328beb6ab67ec7e2fcd003b0a403bf5f0ccc702ad05ea6fa65ede405ecfab",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SeriesObservabilityDefinitions.olean.server": "4aa593c77ba549f1dde11c440afaf1ae3115e84b55feb2150e59da8204d444ad"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5.json",
+      "receipt_sha256": "cc3f443abb5515cda3f13e7733f7648a6315c0979c59e9402afe57de0aef24bd",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5-LogicLineages-OrdinalComparison-SeriesObservabilityDefinitions.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.SeriesContinuationDefinitions": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/SeriesContinuationDefinitions.lean",
+      "source_sha256": "c79df401c29fc530da14dca8f67079606a607d630b45f0d709fe89e42bbd5297",
+      "input_key": "be623def05d799a173396a1658fae18579cec72cb2c757271656d32ce8a48115",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SeriesContinuationDefinitions.ir": "389e22621b23a6c33ba2da1a198436a723f745c4d019e788cb19274fbda5d51d",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SeriesContinuationDefinitions.olean": "cdebcd369dd7accd32ede8dbe7459c72fe3d5534336587d3b3c832df2cde33ee",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SeriesContinuationDefinitions.olean.private": "914702d926be4f43b2504fa3b723e4c5b46eb0f11b4737bc50cb49c18af01769",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SeriesContinuationDefinitions.olean.server": "ad71c460240849090a57302713dcf4587b700c6d4f587788aa623dfdda4d9a48"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5.json",
+      "receipt_sha256": "cc3f443abb5515cda3f13e7733f7648a6315c0979c59e9402afe57de0aef24bd",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5-LogicLineages-OrdinalComparison-SeriesContinuationDefinitions.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.PolynomialDigitDefinitions": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/PolynomialDigitDefinitions.lean",
+      "source_sha256": "882043ca7c3c98726a9979155a76253bfeb10fc8ff0d88b60687a8e3163e76c9",
+      "input_key": "6fc05e4bfbefeca005fb05d700942d45957870f04da79e67668e301d3c33ed5e",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PolynomialDigitDefinitions.ir": "7347fd85eb045353699ed6be2653e6c6c17a8b1f99d8ca26d79da6d8ec184b5e",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PolynomialDigitDefinitions.olean": "36da6e8fa07c058e908552b1bd431d50f542225dcebed2d6bf65e52961cd04ab",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PolynomialDigitDefinitions.olean.private": "04b371cfdd66fff30f6043f526d1a3b0582406bf16883ee7d5995fa66fbc2cdc",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PolynomialDigitDefinitions.olean.server": "cc1e29222129c4f88e5be034bf905728aa8e9f1f42b03acd681e4f13656f0b6b"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5.json",
+      "receipt_sha256": "cc3f443abb5515cda3f13e7733f7648a6315c0979c59e9402afe57de0aef24bd",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5-LogicLineages-OrdinalComparison-PolynomialDigitDefinitions.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.BinaryQuotientTargets": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/BinaryQuotientTargets.lean",
+      "source_sha256": "4c70e11e0e5b6589a5e56315215e4fd998bc4d4feb10e412717de5afd3b989c5",
+      "input_key": "29b4d07f28f57d35487649dbe879065bae1c0c5054c3c762fec4062bed5efff5",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryQuotientTargets.ir": "8741783420534fc6f0f06074361d7247ddfc4afaec11fb1a43b8cf2616dc8944",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryQuotientTargets.olean": "effd7de923d85a453ad3ab19e8b3b452a757e2f83108778dba1a45893fa52a2f",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryQuotientTargets.olean.private": "f6fc865d9e1a638ea665377cfba670e01bc88a632c94f7c10c383be67c4ff1a8",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryQuotientTargets.olean.server": "92ce3614bb85ff70c0415121dd6e27dc86b08675538d5d4f2d0af423d720bd8d"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5.json",
+      "receipt_sha256": "cc3f443abb5515cda3f13e7733f7648a6315c0979c59e9402afe57de0aef24bd",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5-LogicLineages-OrdinalComparison-BinaryQuotientTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.BinaryPolynomialWordDefinitions": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/BinaryPolynomialWordDefinitions.lean",
+      "source_sha256": "0708c723d41f3684f34f024b87ee0aaa7a94b5d8a4991890e4b2ab77a6b8a671",
+      "input_key": "65765fb32feaf3d5ffba708dc550e8451aae46db0bdff8296e83e584d7a482db",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryPolynomialWordDefinitions.ir": "b3b313d335e1df10e4d21df3847a00c9602cfccbc3e3687e860d8981977ce4fa",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryPolynomialWordDefinitions.olean": "8057a20227a7bcc3fa0cbb44fb047dd4cc6b626e49ae0e6b9da26e25673cab4f",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryPolynomialWordDefinitions.olean.private": "a069864de089919325d8e811321ec468d84ceb48bb3680049c432d9dc867ebf3",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryPolynomialWordDefinitions.olean.server": "67673aeebe73183ce1b5f07b43a465be428fe3c9121b54586d464ec2f3feb71c"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5.json",
+      "receipt_sha256": "cc3f443abb5515cda3f13e7733f7648a6315c0979c59e9402afe57de0aef24bd",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5-LogicLineages-OrdinalComparison-BinaryPolynomialWordDefinitions.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.BinaryMatrixDefinitions": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/BinaryMatrixDefinitions.lean",
+      "source_sha256": "3e31e40a8502efd7fdd36b9bae57688e7873cda3644571a3788215bc6df40a43",
+      "input_key": "ec489c68dee2f4d1354aadf0953ebf937d778505649a29e9b69459e231c7f101",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryMatrixDefinitions.ir": "eda76ae7cd7f67f962ba32a1909e42bca6321281ec5b41153e3ef93aaa37e4f7",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryMatrixDefinitions.olean": "89aff9529a2e58c916f953d8330c828da0ca0bee557cbd913e0c8d2818b9c7d0",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryMatrixDefinitions.olean.private": "a9e76926f1bf2978eddc7d28c6e3cc093e296cd4416c6208ffdfe3cd6e75abbb",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryMatrixDefinitions.olean.server": "0998352926194ea2a4e783dc85fa4e16a9ef89630560d8dfc0f9ffda98308d5a"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5.json",
+      "receipt_sha256": "cc3f443abb5515cda3f13e7733f7648a6315c0979c59e9402afe57de0aef24bd",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5-LogicLineages-OrdinalComparison-BinaryMatrixDefinitions.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.BinaryDenominatorDefinitions": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/BinaryDenominatorDefinitions.lean",
+      "source_sha256": "3dd979dd6ec9c061aa7f948a35b32e0b4946c635b7fb78b21451f4bdf3d54543",
+      "input_key": "2b97541b571e4927b8008d5ff7770f08a8aa4a5d587513dbb9af8a48724e6a4a",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryDenominatorDefinitions.ir": "05202af35a10730026fa54a5a9c81ff3f78185b170b36e8e8fa6f203b6bf8164",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryDenominatorDefinitions.olean": "6c37032a6fd1c2f23280a87ccb8e284aec8953b0871913f6665abaf5983352b2",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryDenominatorDefinitions.olean.private": "4a50c75dbafe669df00dba391884a8da54470f5d1ffcdebef3e7acecdef10fe2",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryDenominatorDefinitions.olean.server": "b20abafd23ec94bb39a5710f108fe3b6ea07122e8799322b4086ac04023c4d00"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5.json",
+      "receipt_sha256": "cc3f443abb5515cda3f13e7733f7648a6315c0979c59e9402afe57de0aef24bd",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5-LogicLineages-OrdinalComparison-BinaryDenominatorDefinitions.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.LinkedResidueDefinitions": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/LinkedResidueDefinitions.lean",
+      "source_sha256": "e9a71747b908aca647a92a12140a4c4f619915a61bb96cdf3b7440c538a79508",
+      "input_key": "25496ad66a21511f121e3bcd64f095547141ba3d315440b81c90b1c962178cf9",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueDefinitions.ir": "e5a6d80e5b1713c3452ef9f2e45dbd663d4692dd014dab78c2b8680c590e4504",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueDefinitions.olean": "93b72dab2736ea9a2bca9fb6a4bd1b079ae32654ee9ff22ea65c2ce04d238837",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueDefinitions.olean.private": "f46b8d95f22ac1c571b3ad2dab65a36e7f1c051b83150026020a4051081340b9",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueDefinitions.olean.server": "10d43057dd52455937c6eace29e6f04df9df0632b1a1f0eb495de9d4e75fc05c"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5.json",
+      "receipt_sha256": "cc3f443abb5515cda3f13e7733f7648a6315c0979c59e9402afe57de0aef24bd",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5-LogicLineages-OrdinalComparison-LinkedResidueDefinitions.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.SimplePoleLaurentDefinitions": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/SimplePoleLaurentDefinitions.lean",
+      "source_sha256": "898eb815e957a7bb2d0d301bd19091b397ccc89b1629773c3fcba79c25abf173",
+      "input_key": "8f38615fe7fb6007ddcb852742aab86b4980b7cae78a6bcd2e956930cb9b3ce7",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SimplePoleLaurentDefinitions.ir": "2bd17532db8028a806f85e8892b8755e16ff0513afefc3f01d82ac90d90e7eeb",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SimplePoleLaurentDefinitions.olean": "66fef4e871d1e092a5acf3d6e7042019eabca1f85a02ba24ef2c704ce9a596c7",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SimplePoleLaurentDefinitions.olean.private": "9340db1471c8d0c8b9238b35fbf9b3d7b343c53d19897ea5e1f6d68756f6174e",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SimplePoleLaurentDefinitions.olean.server": "7ae4545b31b00e451c470f080a977c85fca4bd7d3dcddcd3e2dff4ce4e6d42c9"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990147538119842-2.json",
+      "receipt_sha256": "5f336b8a2cb4a0d38b8fd04e08a5f7463fcef20b4f6e27ce24ad3c7c383ac2bf",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990147538119842-2-LogicLineages-OrdinalComparison-SimplePoleLaurentDefinitions.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.LinkedResidueLaurentDefinitions": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/LinkedResidueLaurentDefinitions.lean",
+      "source_sha256": "4d8c6733ead6467dcab8dc3fc0c49291d6edbdecc43fb4fe70982f8d0f2bc897",
+      "input_key": "487c61c2f5af736c7b50b5f35137a16735bdaa3903ec10c9f0143826ea914901",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueLaurentDefinitions.ir": "eca8d34ffcf87a3785fd95e573037695cbec8b56cfd1e6e15a0b412da0cfd7ed",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueLaurentDefinitions.olean": "5820bbb65fcb0f8b191c91b9d438f73bf11dd19cbae3e1e6c726c7708388be3c",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueLaurentDefinitions.olean.private": "55916de6d367acd8c6281e5a0c83d8225e0ef6036daa16c9660ccec04dc6b0b2",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueLaurentDefinitions.olean.server": "60cb70989c5728927445a0d516a0163c48bc5b5d55f10c11f2133e233ff691b5"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990147538119842-2.json",
+      "receipt_sha256": "5f336b8a2cb4a0d38b8fd04e08a5f7463fcef20b4f6e27ce24ad3c7c383ac2bf",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990147538119842-2-LogicLineages-OrdinalComparison-LinkedResidueLaurentDefinitions.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.LinkedResidueLaurentTargets": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/LinkedResidueLaurentTargets.lean",
+      "source_sha256": "e1be09291162f8504851f3544cbe5702636fcf21d320f1ffb41159d0483a3450",
+      "input_key": "30d6c9a7daad432459554cd79395dd02cd982961d7acb6666d31a6cbe5856cfb",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueLaurentTargets.ir": "dd820b182607f30273e3511ca69fc6b0e9e90dfa674566102bbff4894f24624f",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueLaurentTargets.olean": "875ea5901bcbd18e79d4c4b302e139fcab5f6d14ae526bf86bb6517800e918bb",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueLaurentTargets.olean.private": "b5c282c64ed2c8e81338a28df44b5e08fc8d8ebff84c2add0a700094150ba71e",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueLaurentTargets.olean.server": "c9b1bdf500b2c68a1044521b861d9e002cc54197672a2159e270ff15258f6fa5"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990147538119842-2.json",
+      "receipt_sha256": "5f336b8a2cb4a0d38b8fd04e08a5f7463fcef20b4f6e27ce24ad3c7c383ac2bf",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990147538119842-2-LogicLineages-OrdinalComparison-LinkedResidueLaurentTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.CartierObserverCurrent.ActualLinkedResidueTargets": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/ActualLinkedResidueTargets.lean",
+      "source_sha256": "4d9926c0ebbc655a312db4579e7304a18702655651b25a394c92f906fb650b2b",
+      "input_key": "4c6bb3130674689033c724efb3d5c0795799678152f0a113ada081d2ae7aa4c5",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/ActualLinkedResidueTargets.ir": "ba4bf04be21a5556a9cf2c044c7901a42ea0717f8be66c8b27f14b2486b201e1",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/ActualLinkedResidueTargets.olean": "1da690185ae77400fe32d57c0ba67bc399830f6927375666664e155b4cb1130e",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/ActualLinkedResidueTargets.olean.private": "bf6e5b939cfb9a2579aec6a9d6a60e709d7d916fdf5953a70bb0d443949e699a",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/ActualLinkedResidueTargets.olean.server": "dfb1d6f3caa2c9c467db953fca437af92ff77c9405e1d6991bb1f619f10658d9"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990147538119842-2.json",
+      "receipt_sha256": "5f336b8a2cb4a0d38b8fd04e08a5f7463fcef20b4f6e27ce24ad3c7c383ac2bf",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990147538119842-2-LogicLineages-CartierObserverCurrent-ActualLinkedResidueTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.LinkedResidueTargets": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/LinkedResidueTargets.lean",
+      "source_sha256": "0ff9fe9aa2b3486b5c46465d062b664adbf62fe6a21cc9be5fc5b66fed268b59",
+      "input_key": "527d3189b7425c66b5fcc351bd7ac704540b25d5642d6e1c4bb8d2fdee6f66a4",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueTargets.ir": "e2b1a31a8452ca12605ad8dffbbeb54d1bcd819fac91fadfafac1e4b4c9eb258",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueTargets.olean": "a6971b201a6928e185ff60f04f97079fc704a17d34531dc33ee5a6ff034c716d",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueTargets.olean.private": "43c830f7ffaaef09a0a7d219d2f1d89d7f3b554cbbc0d9f31b973c213cddca54",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueTargets.olean.server": "f329cec9916230de25d2b9b6363c19b37bef21d7ba5c748010549be198de7cd3"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5.json",
+      "receipt_sha256": "cc3f443abb5515cda3f13e7733f7648a6315c0979c59e9402afe57de0aef24bd",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5-LogicLineages-OrdinalComparison-LinkedResidueTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.ControlTargets": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/ControlTargets.lean",
+      "source_sha256": "2b5c663880aec5f55fe6f526bacf19ce131d3ae77e9485332b78dc5826d693c7",
+      "input_key": "5f31a2b38fb540349dcec875ca1ddc9a7faa285140f4fd276b46a9d743c46bc8",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/ControlTargets.ir": "b7f09267610251318e8b39a46d0c565253e6b542fd9432d80490f5c92ba020aa",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/ControlTargets.olean": "d4f643ce40e944742073b6ca205ef3971999476848ff9ab7562f0b68d6e73cbc",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/ControlTargets.olean.private": "66faa0d1416b6033e95db985af0262fd42148d319820e2064039d02e7b780fc9",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/ControlTargets.olean.server": "1e91b571bb4a1470ab04bed77cf4c66a36467d6161c71f0650169091853ab4a8"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794976053087464557-2.json",
+      "receipt_sha256": "dbb4e9704758351d28b35e1f025ac9a72bad19736ce7c701a3fc9ed0204664ff",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794976053087464557-2-LogicLineages-OrdinalComparison-ControlTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.Control": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/Control.lean",
+      "source_sha256": "8db73f8de79a2fd0b0b907d80f98fa3b6e34113f46ced6f50901fb06eb412140",
+      "input_key": "49e136baafcd6ad675a8086eff45008ceae9110ec293401c90ab95ad5611172f",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/Control.ir": "fdab8b656b9dc2fd2169777bd56ad03b27a95352310359e0c1e0c082e2b5ffc6",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/Control.olean": "aaefc3540baaace07efdb8b708c6a4b2102c24b21001816ff9dd6dfbb3846423",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/Control.olean.private": "7edd830dd0d0e039ed07e908a3bca65f2edac3cca96e4ab97bd4c5fedf3bf122",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/Control.olean.server": "f990ea7e470c928d5312f31180b767d76df0cbbeceac6495740b026f789dde2e"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794976053087464557-2.json",
+      "receipt_sha256": "dbb4e9704758351d28b35e1f025ac9a72bad19736ce7c701a3fc9ed0204664ff",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794976053087464557-2-LogicLineages-OrdinalComparison-Control.log",
+      "log_sha256": "604013e77a7f99c3b216dac783b29e2fa3a91af882a1c1f8a8abae4df3c72c2b"
+    },
+    "LogicLineages.OrdinalComparison.LinkedResidueProof": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/LinkedResidueProof.lean",
+      "source_sha256": "1d6e832094a3dbb53b943686062226af7ebaf501daf649e2ddc5b57734ca24fd",
+      "input_key": "e3cfb090ec8fda55e12fdb27f13868908281cb5f82b5508b4b3c78c5e229c8f9",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueProof.ir": "c27654df9bf4670880ae8765a30a6455b6f5372d2b3c754382c226632f7224cb",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueProof.olean": "f7c88857746799ff729c6920230105459012d0b9098e6af7e5c81eb64c070eec",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueProof.olean.private": "ddd22702d0a790ff4fa71235b1b2f4c3474a285bc0a2b81ba04f1a5adaa88cea",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueProof.olean.server": "451d785bf2a921d30af4eb6a1149b1d86b649c9a545eb0429e9ec579778a5033"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5.json",
+      "receipt_sha256": "cc3f443abb5515cda3f13e7733f7648a6315c0979c59e9402afe57de0aef24bd",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977258548003187-5-LogicLineages-OrdinalComparison-LinkedResidueProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.PrimitiveRootProductTargets": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/PrimitiveRootProductTargets.lean",
+      "source_sha256": "9a2709a4183f42cb08f7561ac55dbbe7d32b03f0aae1cbf73d61897fe2f2b537",
+      "input_key": "e0830b010d09f85eb63984f52732339638665892cf37346af3d6b44d0c5fd0a0",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootProductTargets.ir": "3edc405ae9ac7aa5cd929333efeaa478a17b4704e594304aff6fcdd31346c1b9",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootProductTargets.olean": "b73acfd7dab14577b6c5afa62d5cf43d1a663763e46d5d98e9d366bfb84f151e",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootProductTargets.olean.private": "37ef33973d4b5a8f9e7d003976e6d124d741faa1b8b1fc58417d036b6dcf0411",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootProductTargets.olean.server": "c515f287cd1fbf45c52c525dcb567bc4b9be8ec22092e6a9b829fad04d17af14"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2.json",
+      "receipt_sha256": "73b1a7d9737c9f420db84b101913ff1ed4e7cb9746551b6b53a1e3762f678cc5",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2-LogicLineages-OrdinalComparison-PrimitiveRootProductTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.PrimitiveRootDerivativeTargets": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/PrimitiveRootDerivativeTargets.lean",
+      "source_sha256": "a5ab1d0c113f235a35caf997cf086c2c99a2a1379d335504a919140d23a206a3",
+      "input_key": "dc177d068a8239454feb311604cb755222bb1e81e0fc94cf7b8e39b84b5acc00",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootDerivativeTargets.ir": "0d2a5d6d351a06dacda4cffb55bf054a5454808b535eb475bc2613627b905d4f",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootDerivativeTargets.olean": "2e31d3d89fddf1ec46f3c9fec980896fde3dc87c60ec43321ccfad5f86279708",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootDerivativeTargets.olean.private": "b5957b8a169cd2aaab7cc958a99f9de1013b90b1b5b2e3ba96c8c8c541a45ee0",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootDerivativeTargets.olean.server": "f475a729f03223102e8c04aa24f952e900d927c888653c5b3d6701c3e5ca18a7"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2.json",
+      "receipt_sha256": "73b1a7d9737c9f420db84b101913ff1ed4e7cb9746551b6b53a1e3762f678cc5",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2-LogicLineages-OrdinalComparison-PrimitiveRootDerivativeTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.PrimitiveRootProductProof": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/PrimitiveRootProductProof.lean",
+      "source_sha256": "092fb047696acf2b9aa826f40f320be4b0cc864a268822a7b6b38c87038da3d6",
+      "input_key": "d50710bec810dc4c5203280c5a0539e4e48fbc33b268f0f659fb2f4fcab7972f",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootProductProof.ir": "5806ba6106e519d0299531ee1d9a5606fdd8652eee57a4bfc84f50bdf8e07933",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootProductProof.olean": "b214bac6ab7fc05c499ad04b17f8c902593eb129aaeb07701645a14be37a46c5",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootProductProof.olean.private": "b8a6a727771ffa2ccf1765fe736d3a94dca6d7a9850a20d4eb5f6931c7bcbc82",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootProductProof.olean.server": "a74a54312ba3a6d5e293c56d5e225aedb191cbdc5e7a184b027602166ea2bf79"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2.json",
+      "receipt_sha256": "73b1a7d9737c9f420db84b101913ff1ed4e7cb9746551b6b53a1e3762f678cc5",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2-LogicLineages-OrdinalComparison-PrimitiveRootProductProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.PrimitiveRootDerivativeProof": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/PrimitiveRootDerivativeProof.lean",
+      "source_sha256": "b57c14cbfa13f4b99801fa04964769ea26fc6f1c0f1cc5b79dd64412c937bfb0",
+      "input_key": "dc715c86463236bce09e2358fa33c884949711312a7f9f6ddf1aa96183a4c8e4",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootDerivativeProof.ir": "4a6d4555322caf8d872770d44608b38624565246569529320b43031c5c7e0983",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootDerivativeProof.olean": "fd7eb6d7f3b3d41f911845f4a5bf62142c5770396646c34c827cb3a81635bc2f",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootDerivativeProof.olean.private": "0b886757b85e68b7ef9497d27daa1bca18d480d8cdd1e544daedb7297f5a372e",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootDerivativeProof.olean.server": "daeed082b173c822a34743f964b7feefa3598c981936104c022db342e1a55769"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2.json",
+      "receipt_sha256": "73b1a7d9737c9f420db84b101913ff1ed4e7cb9746551b6b53a1e3762f678cc5",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2-LogicLineages-OrdinalComparison-PrimitiveRootDerivativeProof.log",
+      "log_sha256": "bb1f6aebba738f5fd280c0b4b4c2576a1ff86f6f65921081d47423e6d7f50357"
+    },
+    "LogicLineages.OrdinalComparison.PrimitiveRootComplementTargets": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/PrimitiveRootComplementTargets.lean",
+      "source_sha256": "7f403f3d3dec91bb6925282222f6aec638f492bdec55377399a76c932ccb30d5",
+      "input_key": "395f427791bd0dec07cc7548d0c91c84f7cfdfb158554b4d92f2e97f3f9b02a2",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootComplementTargets.ir": "1d0bfb53c208acba12b02b6e411a6c1e6130f61c283834e96cc41a85b18866f7",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootComplementTargets.olean": "3414e758c6c1a0e89112dd96558e23e90a47dd21222cee03b8bc5ac58dfa2732",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootComplementTargets.olean.private": "2bc46967f1a4063e1cbe2ef85690b94e00df04b36040e33c4a54eba430c8de79",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootComplementTargets.olean.server": "159f8765ae4b0247b13666cdd1b0aefb774203b1fdbea0ee1617847d9bba837c"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2.json",
+      "receipt_sha256": "73b1a7d9737c9f420db84b101913ff1ed4e7cb9746551b6b53a1e3762f678cc5",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2-LogicLineages-OrdinalComparison-PrimitiveRootComplementTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.BinaryPeriodSuppliersTargets": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/BinaryPeriodSuppliersTargets.lean",
+      "source_sha256": "df20f603f238615224f18bf876b2722af4f815f8e78c4ff8bd66937843f20521",
+      "input_key": "90b5f67df3d9e19ee703cd0bd8e1d03cb800cf727152d819e50dd94f92036a78",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryPeriodSuppliersTargets.ir": "b88ba28f0a2c4b01f5f0af2ead2630aa41b5dc82c76edef917eb5ad2820006f5",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryPeriodSuppliersTargets.olean": "283b7d4af514dc05a80c52a96550915c456a14e2c3b320ea28910ca83806fa5a",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryPeriodSuppliersTargets.olean.private": "dbb38932212898c67c90480551cae5e62aa7e13e9fdef072017c2bf4525cdf19",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryPeriodSuppliersTargets.olean.server": "c5daeec8f3b6cc96e0945ad368f0ace8dbbfb5ceecb51f14f5379fbb4c32cd5f"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2.json",
+      "receipt_sha256": "73b1a7d9737c9f420db84b101913ff1ed4e7cb9746551b6b53a1e3762f678cc5",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2-LogicLineages-OrdinalComparison-BinaryPeriodSuppliersTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.BinaryPeriodSuppliersProof": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/BinaryPeriodSuppliersProof.lean",
+      "source_sha256": "d7ce07230e56973c5b7cc971713532f0892d5b25169b6d6baf51852a47720474",
+      "input_key": "e84398b7c5dd1ef04b3698c630578f4fdfdec73c2ffae175d40b7d7382fb4796",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryPeriodSuppliersProof.ir": "9428724fcfe2798acad162666c4048ef597e935b1c6508b50f3ea5bf17b9e872",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryPeriodSuppliersProof.olean": "9338b3db6df857afa071d05b506d9877f021d70f303e858040608ec43a195ee6",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryPeriodSuppliersProof.olean.private": "ea5e159430f433698e43a1067ad5886cc8df26244801c103263b38e1cebbdb74",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/BinaryPeriodSuppliersProof.olean.server": "c490586357b4351d59388ab5fb629b714ce119a98968f4e2abc905aacd3af2cf"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2.json",
+      "receipt_sha256": "73b1a7d9737c9f420db84b101913ff1ed4e7cb9746551b6b53a1e3762f678cc5",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2-LogicLineages-OrdinalComparison-BinaryPeriodSuppliersProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.PrimitiveRootComplementProof": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/PrimitiveRootComplementProof.lean",
+      "source_sha256": "a126d769e919de597425d77e8a5afb3ad2cbf733307e0793ab9ad4ec21b6322a",
+      "input_key": "0a8b1582447652ea5c134e33350786fe7f3441aad281649d581b2821af71d7b7",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootComplementProof.ir": "872b7eb57e733131b0fac3c88edef1902acaafee08f671cc3131db8590da49fb",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootComplementProof.olean": "e669ff78e13842eebebde5d2384ad2dbedb56546693bea9800551b1285f17da7",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootComplementProof.olean.private": "bd7c6cac544bcd35d401217de624f7a284021fa14364c6b40d7ee1d666c39f1c",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/PrimitiveRootComplementProof.olean.server": "054dff60a8f6327f7b2f65ea7283112f409d954861617b25fb50972bfe15fd3d"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2.json",
+      "receipt_sha256": "73b1a7d9737c9f420db84b101913ff1ed4e7cb9746551b6b53a1e3762f678cc5",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2-LogicLineages-OrdinalComparison-PrimitiveRootComplementProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.SimplePoleLaurentTargets": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/SimplePoleLaurentTargets.lean",
+      "source_sha256": "b9edce810fce232b560bc339b21c6d452bf44c4bfebbe96ae2c94eae7f62c214",
+      "input_key": "74687b9d2aef9206744f5bb98dfd5e84a37323eda294633304a4b88915bac585",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SimplePoleLaurentTargets.ir": "2059736b5ad086a319fa54b7e028563b2c7f86ea07bfae3efa07a4f2bf6b6294",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SimplePoleLaurentTargets.olean": "d89f53e55ebe3fef8c0b16132dad6ad2351f930debedc4fb58148bde33cda26b",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SimplePoleLaurentTargets.olean.private": "e9857f00befc21434f747452ff7310e658a362eadceb4a7ea2277d775e90723a",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SimplePoleLaurentTargets.olean.server": "17cea3c7ee2b0b91182ae4d648f06544d26acfb59b9f81ed5a62ee6ae5dc70c2"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2.json",
+      "receipt_sha256": "73b1a7d9737c9f420db84b101913ff1ed4e7cb9746551b6b53a1e3762f678cc5",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2-LogicLineages-OrdinalComparison-SimplePoleLaurentTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.SimplePoleLaurentProof": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/SimplePoleLaurentProof.lean",
+      "source_sha256": "d98b7d6928c575b6df3e113d0e583f4a8fd7d4e20fdd3856952b5309c032410a",
+      "input_key": "9db3e49f1aa00e70c43608afaed5181bdc8cf3b829e19a67d7e5c0c8d4682c69",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SimplePoleLaurentProof.ir": "8a4c164d96eee43d01ef19d1abb96f3162bcff5c377d24d9a1a770d4955fa43c",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SimplePoleLaurentProof.olean": "4fb86de3eaadd65ea1f08035e90a34cfbced17b9e3ff48e1c52d11d6838e10bc",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SimplePoleLaurentProof.olean.private": "220d30b79e767ae1622c9fb380bb9ddf5b626327d4be17a5e5131e8835dcdf04",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/SimplePoleLaurentProof.olean.server": "7954fe86292b7df5957ea8a09d4812a2b98f2de2ac31c7d94120ec515cc39ad9"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2.json",
+      "receipt_sha256": "73b1a7d9737c9f420db84b101913ff1ed4e7cb9746551b6b53a1e3762f678cc5",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2-LogicLineages-OrdinalComparison-SimplePoleLaurentProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.OrdinalComparison.LinkedResidueLaurentProof": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/OrdinalComparison/LinkedResidueLaurentProof.lean",
+      "source_sha256": "9571455f06e3648225cac84f3dbd28266d1b2414a91afd77943cdf546252cf95",
+      "input_key": "520752147924526f2fd797686eb6b7150dd8aadebccd08325fa696733d146ac2",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueLaurentProof.ir": "09598e285c77bb4bd7cbcb8910954af614e2fbd63f7d26ba0149235cbcca3ef1",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueLaurentProof.olean": "9f0389c602117e5d22f766aefc18f913def9b22b2842bb44e3b9455b0251c467",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueLaurentProof.olean.private": "9b36a7815432a865eb1a3cd58e86f13327479dc3e60713602ed86e4c1f436333",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/OrdinalComparison/LinkedResidueLaurentProof.olean.server": "80845590e0d47d0c2721843f40cc2e0fd13c3677ac0b69d74a2930a941ea4f9e"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2.json",
+      "receipt_sha256": "73b1a7d9737c9f420db84b101913ff1ed4e7cb9746551b6b53a1e3762f678cc5",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2-LogicLineages-OrdinalComparison-LinkedResidueLaurentProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.Audit": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/Audit.lean",
+      "source_sha256": "5e73efe2f2ec43f5c7fa8cfa4a435c5dd1828c70d2b265a494c9f2065903ad3d",
+      "input_key": "f9d6feed9105d5ab8ac072dd6e0698408f46bda1851216ba3618a5c5ceb08a71",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/Audit.ir": "93fef5ee8917ddcf2c9b104e0c6259a02de1f0d0f8bea763b723d70e0c842d47",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/Audit.olean": "ec5371e46904258c9c47793c0f4b27fccc561f09d04bb83855987335b51b3f5a",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/Audit.olean.private": "430d18b4d41902bd10c6e77a092b8dd2237a5e428d132511b63f03afc6f9739e",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/Audit.olean.server": "2805b5e0ebf4ae3fa9c99700cfc389c9afc76ea95c2a0973b01ae2bc6aa21b33"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977137448913798-2.json",
+      "receipt_sha256": "64182e733b499847846e82b80a928e5fee7b5a8c4d9434b2a3cbd29f5fa1b88a",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794977137448913798-2-LogicLineages-Audit.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.CartierObserverCurrent.ActualLinkedResidueProof": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/ActualLinkedResidueProof.lean",
+      "source_sha256": "403cad0f1fe4597450b196fb3bd989415a4b1f0b069634d5d77a0229c8207b49",
+      "input_key": "4f0683fecdc71cfa2b8dc0292309a65cb61b05b999bb4497f0bad820a74bd11c",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/ActualLinkedResidueProof.ir": "50ce6506ca83848c748e7fd1bc8ec3e9c011a540b93b727d75d239a1751b2c52",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/ActualLinkedResidueProof.olean": "8c985981702e38a112aec10731b682f4bb418b826543c2029646a78a51c1ad22",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/ActualLinkedResidueProof.olean.private": "d1820c0384bfc0fc11a71ae9d493f6861debdb38da05241a77315ab7c88f27a9",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/ActualLinkedResidueProof.olean.server": "7ccf81618fa0f201799c46e16357f0018e60b29aaee3a847eff13c3eb91df5c4"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2.json",
+      "receipt_sha256": "73b1a7d9737c9f420db84b101913ff1ed4e7cb9746551b6b53a1e3762f678cc5",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2-LogicLineages-CartierObserverCurrent-ActualLinkedResidueProof.log",
+      "log_sha256": "da3a6c12f5b313d99e0999138db51bce4cf65f2a2732c8cde514ed2a544f8a5a"
+    },
+    "LogicLineages.CartierObserverCurrent.ActualLinkedResidueStatementChecks": {
+      "source": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/CartierObserverCurrent/ActualLinkedResidueStatementChecks.lean",
+      "source_sha256": "64c561941df188986647eb6a5b9c3ed7488cfa697da51e2788b417f46387be41",
+      "input_key": "65d5affbde1c8f045eddef324a2779a7c0617ab09e7dcb1efbea57d4a897a144",
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/ActualLinkedResidueStatementChecks.ir": "8546fe52d8575e73b59b941b039e1d3d23eba6a7e9809b6d32c266a927980c41",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/ActualLinkedResidueStatementChecks.olean": "58085298bb957d6ac819f0ece176cf28ac498b39717a6d2ec1586f7b1f6e7c7c",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/ActualLinkedResidueStatementChecks.olean.private": "aae77f0cbb80336cf17b248baca9b46e9693dc71dba3710e13969fa7dd99e27a",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/CartierObserverCurrent/ActualLinkedResidueStatementChecks.olean.server": "3040d9bdaab22ba3e5823057223035a8389689d3cf367361592ef208e019a1bf"
+      },
+      "native_receipt": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2.json",
+      "receipt_sha256": "73b1a7d9737c9f420db84b101913ff1ed4e7cb9746551b6b53a1e3762f678cc5",
+      "log": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794990306632154818-2-LogicLineages-CartierObserverCurrent-ActualLinkedResidueStatementChecks.log",
+      "log_sha256": "a863adaaeac669192e568d6b321616153d1f92f472ca8d6d5ec4ff7af9db4f9f"
+    }
+  },
+  "limits": "Focused closure only. Does not certify paper correspondence or a full-root build. Imported axioms are certified through actual new named declaration closures."
+}

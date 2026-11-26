@@ -1,0 +1,1 @@
+Full applied diff inspected against preserved original: exactly standard nil/cons Pointwise declaration, sole List.Forall₂ replacement and cs : List Code annotation. SHA22620c9668da728788b395c3d1d033b9813ac12c2a84182d64a8aa1a71e5a6e1 verified. Only target pin differs, all eleven current pins verified. No logical weakening. Fresh parent retry permitted.

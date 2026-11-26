@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNumericListSortInternalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNumericListSortInternalStatementChecks
+
+theorem insertionStateNil : OriginalNumericListSortInternalTargets.InsertionStateNil := OriginalNumericListSortInternalProof.insertionStateNil
+#print axioms insertionStateNil
+
+theorem insertionStateCons : OriginalNumericListSortInternalTargets.InsertionStateCons := OriginalNumericListSortInternalProof.insertionStateCons
+#print axioms insertionStateCons
+
+theorem sortNil : OriginalNumericListSortInternalTargets.SortNil := OriginalNumericListSortInternalProof.sortNil
+#print axioms sortNil
+
+theorem sortCons : OriginalNumericListSortInternalTargets.SortCons := OriginalNumericListSortInternalProof.sortCons
+#print axioms sortCons
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNumericListSortInternalStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNumericListSortInternalStatementChecks

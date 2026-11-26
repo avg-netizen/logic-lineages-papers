@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserCalibrationProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserUnpackProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserNumericChecks
+open NumberedWindowInternalSparseFieldParserTargets
+open NumberedWindowInternalSparseFieldParserUnpackProof (scratch bounded casesUnpack)
+open NumberedWindowInternalSparseFieldParserCalibrationProof (encoded decoded)
+theorem exact_ScratchBridge : ScratchBridge := scratch
+theorem exact_BoundedOriginalFuelAccumulator : BoundedOriginalFuelAccumulator := bounded
+theorem exact_OriginalUnpackCases : OriginalUnpackCases := casesUnpack
+theorem exact_ActualEncodedOutput : ActualEncodedOutput := encoded
+theorem exact_ActualDecodedOutput : ActualDecodedOutput := decoded
+
+#print axioms exact_ScratchBridge
+#print axioms exact_BoundedOriginalFuelAccumulator
+#print axioms exact_OriginalUnpackCases
+#print axioms exact_ActualEncodedOutput
+#print axioms exact_ActualDecodedOutput
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserNumericChecks

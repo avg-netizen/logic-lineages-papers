@@ -1,0 +1,36 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserLoopProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserLoopProof.lean
+@@ -10,6 +10,8 @@
+ def Terminal : State → Prop
+   | none => True
+   | some (n,_) => n = 0
++
++theorem terminalNone : Terminal none := trivial
+ 
+ theorem terminalStep {s : State} (hs : Terminal s) : step s = s := by
+   rcases s with _ | ⟨n,acc⟩
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserUnpackProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserUnpackProof.lean
+@@ -7,7 +7,7 @@
+ public section
+ namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserUnpackProof
+ open NumberedWindowInternalSparseFieldParserTargets
+-open NumberedWindowInternalSparseFieldParserLoopProof (terminalSteps enough)
++open NumberedWindowInternalSparseFieldParserLoopProof (terminalSteps terminalNone enough)
+ open NumberedWindowInternalSparseFieldParserRawPairProof (encodedPair tailBound)
+ open NumberedWindowInternalSparseFieldCellEvaluationProof (allInput)
+ open NumberedWindowFieldAlgorithm
+@@ -27,10 +27,11 @@
+     unfold unpack
+     rw [steps, step, missing]
+     change finish (steps n none) = none
+-    rw [terminalSteps (s := none) trivial]
++    rw [terminalSteps terminalNone]
+     rfl
+   · intro h t
+-    unfold unpack
++    change finish (steps (pair h t + 1) (some (pair h t + 1,[]))) =
++      (unpack t).map (fun xs => h :: xs)
+     rw [steps, step, encodedPair]
+     change finish (steps (pair h t) (some (t,[h]))) = _
+     simpa using enough t (pair h t) [h] (tailBound h t)

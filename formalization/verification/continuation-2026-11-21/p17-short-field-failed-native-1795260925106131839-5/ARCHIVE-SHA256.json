@@ -1,0 +1,838 @@
+{
+  "native_receipt": "1795260925106131839-5",
+  "classification": "ordinary elaboration error: firstEntry_unique not accessible through FieldComparisonProof private imports",
+  "dependency_detail": "EntryLinearProof introduces the existing exact firstEntry_unique in the parent namespace; it is already in inherited recursive closure. Proposal makes it directly visible, no theorem body change.",
+  "freeze_pins_verified": 9,
+  "archived_files": {
+    "exact/formalization/LogicLineages/PermittedControl/ShortFieldPreprocessingTargets.lean": {
+      "source": "formalization/LogicLineages/PermittedControl/ShortFieldPreprocessingTargets.lean",
+      "sha256": "dc0c49b8bc1c928c9c792942a34fb60ced0d3f33e42ebb1f6231dd9e7146cb09"
+    },
+    "exact/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean": {
+      "source": "formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean",
+      "sha256": "1aaa588676d2ebd2f707e810346c74da1f0cc6a0971d21f5179fe58c9be7d7b2"
+    },
+    "exact/formalization/LogicLineages/PermittedControl/ShortFieldEffectivityProof.lean": {
+      "source": "formalization/LogicLineages/PermittedControl/ShortFieldEffectivityProof.lean",
+      "sha256": "deea22e3ab8479d17b0db23ef83563a835a5d9275b4743fc7decf8205c3e386a"
+    },
+    "exact/formalization/LogicLineages/PermittedControl/ShortFieldNormalizationProof.lean": {
+      "source": "formalization/LogicLineages/PermittedControl/ShortFieldNormalizationProof.lean",
+      "sha256": "03b24b7fabf26122e509aaaa243d5d843a841743b2de3b4f3df1e8a97e36d4fe"
+    },
+    "exact/formalization/LogicLineages/PermittedControl/ShortFieldPreprocessingStatementChecks.lean": {
+      "source": "formalization/LogicLineages/PermittedControl/ShortFieldPreprocessingStatementChecks.lean",
+      "sha256": "063876f43df5a3d897ac42879022b98cf36baa5bef0b08089bdf2b4fe300104d"
+    },
+    "exact/formalization/verification/continuation-2026-11-21/PAPER17-SHORT-FIELD-PREPROCESSING-SOURCE-MAP.md": {
+      "source": "formalization/verification/continuation-2026-11-21/PAPER17-SHORT-FIELD-PREPROCESSING-SOURCE-MAP.md",
+      "sha256": "190304a43b45c3fbfc778199b7453211d733776e68d3dc77f4fcc78052d67951"
+    },
+    "exact/formalization/verification/continuation-2026-11-21/PAPER17-SHORT-FIELD-PREPROCESSING-FREEZE.json": {
+      "source": "formalization/verification/continuation-2026-11-21/PAPER17-SHORT-FIELD-PREPROCESSING-FREEZE.json",
+      "sha256": "2b6e7595f8e7d46f805761db502f3a22ffd9393f70ff8eaf72a7696fff084a91"
+    },
+    "exact/formalization/verification/continuation-2026-11-21/PAPER17-SHORT-FIELD-PREPROCESSING-AUTHOR-MANIFEST.json": {
+      "source": "formalization/verification/continuation-2026-11-21/PAPER17-SHORT-FIELD-PREPROCESSING-AUTHOR-MANIFEST.json",
+      "sha256": "3e7b5c61ece48999fbd84c55ce134d211699f62797f9ccfc1f7c4d6993e3c924"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualCollapseBounds.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualCollapseBounds.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualCollapseBoundsTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualCollapseBoundsTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualFiniteHead.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualFiniteHead.log",
+      "sha256": "04c795caf0b9d78dd7cd64f912ba665ada3a99927fb3dfdee51b3cfcd1c61c91"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualFiniteHeadTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualFiniteHeadTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualTailSeparation.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualTailSeparation.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualTailSeparationTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualTailSeparationTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualTerminal.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualTerminal.log",
+      "sha256": "b0d20e59b6554daf77bee90a66cb468e45d2282cef0595858712da46b3cda71a"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualTerminalDefinitions.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualTerminalDefinitions.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualTerminalTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ActualTerminalTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-CompatiblePrefixDefinitions.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-CompatiblePrefixDefinitions.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-CompatiblePrefixFactsProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-CompatiblePrefixFactsProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-CompatiblePrefixMaximumProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-CompatiblePrefixMaximumProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-CompatiblePrefixNormProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-CompatiblePrefixNormProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-CompatiblePrefixTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-CompatiblePrefixTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ComputabilityTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ComputabilityTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ConstantBudgetDefinitions.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ConstantBudgetDefinitions.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ConstantBudgetFactsProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ConstantBudgetFactsProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ConstantBudgetTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ConstantBudgetTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ConstantCutFactsProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ConstantCutFactsProof.log",
+      "sha256": "83e3ed4e97a3c796e9bbaafc2e63a028a8247aaa715049b1cc30ff3baaf4bd66"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ConstantCutPeriodTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ConstantCutPeriodTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ControlComputability.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ControlComputability.log",
+      "sha256": "c6b9e279f7a1c01d977e84a7e770cbd16de5ab8f525cb14521ca4c338272c06a"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ControlSegmentTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ControlSegmentTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ControlledCountDefinitions.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ControlledCountDefinitions.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ControlledCountProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ControlledCountProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ControlledCountTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ControlledCountTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ControlledStepDefinitions.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ControlledStepDefinitions.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ControlledStepProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ControlledStepProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ControlledStepTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ControlledStepTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-EncodedDescentProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-EncodedDescentProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-EncodedDescentTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-EncodedDescentTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-EncodedMaximumProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-EncodedMaximumProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-EncodedMaximumTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-EncodedMaximumTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-EncodedNormBallProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-EncodedNormBallProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-EncodedNormBallTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-EncodedNormBallTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-OptimizedMaximumBaseProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-OptimizedMaximumBaseProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-OptimizedMaximumDefinitions.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-OptimizedMaximumDefinitions.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-OptimizedMaximumGreedyProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-OptimizedMaximumGreedyProof.log",
+      "sha256": "d5df3a211de006e8b3d79ed68288a4d97511032716f0cc54a34d752b9fb3af5c"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-OptimizedMaximumTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-OptimizedMaximumTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ParametricActualCollapseProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ParametricActualCollapseProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ParametricActualCollapseRecursionProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ParametricActualCollapseRecursionProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ParametricActualCollapseTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-ParametricActualCollapseTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PolynomialOrdinalDefinitions.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PolynomialOrdinalDefinitions.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PolynomialOrdinalNormalProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PolynomialOrdinalNormalProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PolynomialOrdinalProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PolynomialOrdinalProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PolynomialOrdinalTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PolynomialOrdinalTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PolynomialPartitionProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PolynomialPartitionProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PrefixTraceBasicProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PrefixTraceBasicProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PrefixTraceDefinitions.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PrefixTraceDefinitions.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PrefixTraceGeneralProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PrefixTraceGeneralProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PrefixTraceTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-PrefixTraceTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-RawNormalProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-RawNormalProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-RawNormalTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-RawNormalTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-RawSplitProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-RawSplitProof.log",
+      "sha256": "0f5d7680a0b4abfdea788189e26125ebddb2ce16fa35a5bc8d01929022f1933a"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-RawSplitTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-RawSplitTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-RestrictedPartitionCountProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-RestrictedPartitionCountProof.log",
+      "sha256": "8545ca9c5cc0309b91558cf5bd2d6d2086cdb3b77de764901b824898765b110c"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-RestrictedPartitionDefinitions.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-RestrictedPartitionDefinitions.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-RestrictedPartitionPeriodProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-RestrictedPartitionPeriodProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-RestrictedPartitionTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-RestrictedPartitionTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-SmallKernelSuppliersProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-SmallKernelSuppliersProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-SmallKernelSuppliersTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-OrdinalComparison-SmallKernelSuppliersTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CocycleProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CocycleProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CocycleTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CocycleTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CollapseProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CollapseProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CollapseTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CollapseTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ControlProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ControlProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ControlTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ControlTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CountLagProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CountLagProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CountLagTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CountLagTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CountLagTrajectoryProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CountLagTrajectoryProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CountProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CountProof.log",
+      "sha256": "bbf21a5bf643659c4afe588109b7bbd5acb0ea6a5cd612da4bee8b39195c76fd"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CountTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-CountTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-DivergenceEntryProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-DivergenceEntryProof.log",
+      "sha256": "1e08103b45fafba26528b27999419ee8abd43fbd4d3f69a6639db34f5e9a2c61"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-DivergenceEntryTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-DivergenceEntryTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-DoubleQuadraticDivergenceProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-DoubleQuadraticDivergenceProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EffectivityProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EffectivityProof.log",
+      "sha256": "9345eb589c8a37e4116960996aeee58da6de9954f5c1d012e64fbd085b0bd7f7"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EffectivityTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EffectivityTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EncodedEvaluatorProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EncodedEvaluatorProof.log",
+      "sha256": "261daaab6533694a2415806be62726ed1f8f975fff6d9d27ed10278059c81976"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryBasicsProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryBasicsProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryExistenceProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryExistenceProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryLinearProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryLinearProof.log",
+      "sha256": "29304e2c7437f3b2d0df5d38451ce246001e8bdfe99102bc80a01c2da109d17e"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryLongProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryLongProof.log",
+      "sha256": "3967063a97f561510540e9b25f280df42a20b8dc71e0b1f88d7b62de3bd1c2d5"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryPrefixProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryPrefixProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryResiduesProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryResiduesProof.log",
+      "sha256": "87fa630bfb76d16b6087fea5df639a9b9abda482b568ac5b6bdb91ab71088dad"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryTableProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryTableProof.log",
+      "sha256": "770c5bf8089c356d6382c0cba76585b341b722b2315d82e8d2e496af373f3a0a"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryTableTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryTableTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EntryTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EqualGapCertificateCodeProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EqualGapCertificateCodeProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EqualGapCertificateProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EqualGapCertificateProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EqualGapCertificateSourceProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EqualGapCertificateSourceProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EqualGapCertificateTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EqualGapCertificateTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EqualInitialStateProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EqualInitialStateProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EqualRetainedReturnProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EqualRetainedReturnProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EvaluatorTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-EvaluatorTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FactorialProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FactorialProof.log",
+      "sha256": "748672d5e88b8593763d95380b5e6fa8a5a64c27c32f071b897edca609af9ef9"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FactorialTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FactorialTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FieldComparisonPeelProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FieldComparisonPeelProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FieldComparisonProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FieldComparisonProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FiniteCoefficientProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FiniteCoefficientProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FiniteCoefficientTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FiniteCoefficientTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FiniteProfileProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FiniteProfileProof.log",
+      "sha256": "787758942c9df4554d8b14f5adb1770a249aa71a51142640deb2b00430cf66cb"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FiniteProfileTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FiniteProfileTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FunnelProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-FunnelProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-GapInputFoundationProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-GapInputFoundationProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-GapInputProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-GapInputProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-GapInputTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-GapInputTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-GapReserveProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-GapReserveProof.log",
+      "sha256": "d1aedc75f736ca154c97678703d697d4d8367a30458b426c26cd65366f8fdb7d"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-GrowthTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-GrowthTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-HighestPhaseGeometryProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-HighestPhaseGeometryProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-HighestPhaseGeometryTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-HighestPhaseGeometryTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-HighestPieceCodeProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-HighestPieceCodeProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-HighestPieceGeometryProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-HighestPieceGeometryProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-HighestPieceProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-HighestPieceProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-HighestPieceTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-HighestPieceTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialClockProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialClockProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialCodeListSemanticsProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialCodeListSemanticsProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialCodeProgramsProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialCodeProgramsProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialCodeProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialCodeProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialCodeShapeProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialCodeShapeProof.log",
+      "sha256": "4abbc89c95957c5f6f598cec657ac23d423270bfecda9bc7f2bdc08fefb69c4b"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialCodeTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialCodeTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialEqualCostProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialEqualCostProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialExceptionEquivalenceProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialExceptionEquivalenceProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialExceptionalPassProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialExceptionalPassProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialHighDivergenceProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialHighDivergenceProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialLowClassificationProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialLowClassificationProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialLowDivergenceProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialLowDivergenceProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialNoSensitiveProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialNoSensitiveProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialNormProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialNormProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialPassProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialPassProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialPeelingProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialPeelingProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialPeelingTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InitialPeelingTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InverseTableComparisonProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InverseTableComparisonProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InverseTableProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InverseTableProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InverseTableTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-InverseTableTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-LinearReturnProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-LinearReturnProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-LinearReturnTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-LinearReturnTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-LocalPhaseTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-LocalPhaseTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-LocalTailProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-LocalTailProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-NearControlProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-NearControlProof.log",
+      "sha256": "bcba3b1fa41e65c738c351da715a3fa02d9dfcb66d6894b9a43a5714656f2924"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-NearGrowthProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-NearGrowthProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-OriginalSensitiveSplitProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-OriginalSensitiveSplitProof.log",
+      "sha256": "f52890380c57768995a3d527b193dbd8d5e16cf38fcc55f29c90fde51e516bbf"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-OriginalUnitCodeProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-OriginalUnitCodeProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-OriginalUnitOrderProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-OriginalUnitOrderProof.log",
+      "sha256": "88f989ae48b0a1e9fad48eb8edb4d49854f39ca22c0e1e6234947082d23af49a"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-OriginalUnitsProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-OriginalUnitsProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ProfileBandReturnProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ProfileBandReturnProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ProfileBandReturnTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ProfileBandReturnTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ProfileBoundaryProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ProfileBoundaryProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ProfileIntervalCouplingProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ProfileIntervalCouplingProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PropagationProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PropagationProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PropagationTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PropagationTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureCertificateClockProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureCertificateClockProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureCertificateCodeProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureCertificateCodeProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureCertificateLimitProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureCertificateLimitProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureCertificateProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureCertificateProof.log",
+      "sha256": "fae96c398b7d8f4c424004c1b24d3844aa0c83736d1a3c46715a154f4f4d8d47"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureCertificateSuccessorProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureCertificateSuccessorProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureCertificateTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureCertificateTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureCertificateTerminalProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureCertificateTerminalProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureLimitProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureLimitProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureLimitTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureLimitTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureMaximumBandProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureMaximumBandProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureSuccessorSeparationProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureSuccessorSeparationProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureSuccessorStepProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureSuccessorStepProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureSuccessorTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-PureSuccessorTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-QuadraticExceptionReturnProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-QuadraticExceptionReturnProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-QuadraticOriginalReturnProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-QuadraticOriginalReturnProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-RelativeDescentTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-RelativeDescentTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-RelativeMaximumProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-RelativeMaximumProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-RelativeNormProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-RelativeNormProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-RelativeNormTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-RelativeNormTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-RelativeTrajectoryProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-RelativeTrajectoryProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-RetainedOrientationProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-RetainedOrientationProof.log",
+      "sha256": "92035cf42600edc8f7c7d5b04192213a805440084a48acb0be27442a46e35a7c"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-RetainedPhaseProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-RetainedPhaseProof.log",
+      "sha256": "20c36a8081a3d4d27faa493c180a4bfd9b72808846816cac72780866c581be0c"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-SensitiveAdmissionProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-SensitiveAdmissionProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-SensitiveHigherLocalProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-SensitiveHigherLocalProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-SensitiveHigherProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-SensitiveHigherProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-SensitiveQuadraticAdmissionProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-SensitiveQuadraticAdmissionProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-SensitiveQuadraticProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-SensitiveQuadraticProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-SensitiveSetupProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-SensitiveSetupProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-SensitiveUnitTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-SensitiveUnitTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ShortFieldEffectivityProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ShortFieldEffectivityProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ShortFieldNormalizationProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ShortFieldNormalizationProof.log",
+      "sha256": "6641dd484ae03991dee3e1153e3889b7fd48c14d49d04880b01a514ea3d1de70"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-TargetVisitProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-TargetVisitProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-TargetVisitTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-TargetVisitTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-Targets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-Targets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-TerminalPhaseProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-TerminalPhaseProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-TerminalPhaseTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-TerminalPhaseTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-TerminalProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-TerminalProof.log",
+      "sha256": "80715c4c371c3e2447e841f847bac37b5c65ba4460e4262e97dfd85c9836aed6"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ThickArithmeticProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ThickArithmeticProof.log",
+      "sha256": "bbfe6345c8645e1f3204df9a3d6f175cdec9f602e6797f432e41aebca79d5c22"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ThickBlockFactsProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ThickBlockFactsProof.log",
+      "sha256": "7bd4cb70fb2ace99f1cde9de4e161246ae9e584be70303f50ac090edf777d402"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ThickBlockProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ThickBlockProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ThickBlockTargets.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ThickBlockTargets.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ThickEntryResidueProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ThickEntryResidueProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ThickResonanceProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ThickResonanceProof.log",
+      "sha256": "f45473edc27e7d74e051926c1913e736ea2a1a378e856c666ab65fdabc4ef0ac"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ThickTopProof.log.txt": {
+      "source": "formalization/build-reports/1795260925106131839-5-LogicLineages-PermittedControl-ThickTopProof.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exact/formalization/build-reports/1795260925106131839-5.json": {
+      "source": "formalization/build-reports/1795260925106131839-5.json",
+      "sha256": "4c9df5872400895f4591aa5b0c8af3c0412d21e105ac11ffcbe2e9465e51334b"
+    },
+    "exact/formalization/build-reports/1795260420837668535-6.json": {
+      "source": "formalization/build-reports/1795260420837668535-6.json",
+      "sha256": "975b7627015c37a36c38b069afa5dd3a12dad33c08669a3619823995e854822a"
+    },
+    "exact/run-context/nov21-p17-short-repair-2.log.txt": {
+      "source": "run-context/nov21-p17-short-repair-2.log",
+      "sha256": "643fef344be28032797819deb4b2e05ca902f4299d6f0b5d9bf03f700a0e8c2c"
+    },
+    "exact/run-context/nov21-p17-short-preflight.log.txt": {
+      "source": "run-context/nov21-p17-short-preflight.log",
+      "sha256": "8cda558185c4d915af739232a43559e4476376c6912e857cd4b72a4d35e7966b"
+    },
+    "exact/run-context/nov21_native_gate.sh": {
+      "source": "run-context/nov21_native_gate.sh",
+      "sha256": "c0e3503652dd6538e221d8965a02e093b218c595f2464db9c71ed590cd1f6a04"
+    }
+  },
+  "original_log_names": "stored as .log.txt to retain byte-exact logs without repository ignore pattern",
+  "proposal_artifacts": {
+    "PROPOSED-ONLY.patch": "cbf3f87ae46ade87d7bae926b2c4473c48ea0ba05ab2aaf54aff532cff113635",
+    "PROPOSED-INVERSE.patch": "e7f42093cb0613e50d74deb3b423f9313d5e05cbf656c37929a47cab62fc3ce9"
+  },
+  "inverse_test": "GNU patch forward and explicit inverse in temporary copy, no fuzz, byte-exact restored; proposal not applied to live sources"
+}

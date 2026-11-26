@@ -1,0 +1,3 @@
+# Exact finite port context support
+
+Source decision.tex introductory K,V,B context paragraph. B is arbitrary including zero; concrete inputs later instantiate it by checked lambdaDepth. Contexts have precisely B positions, used entries drawn from K; contexts enumerates all such vectors without deduplicating K. Extensions preserve existing Some entries literally. No equality of used-count and binder-stack length is imposed. Values enumerates all used slots of one type, allowing reuse across future independent assignments and unused-by-assignment slots. Port names are strictly above the maximum actual free-name number. Eleven exact support endpoints precede proof. No target subterm enumeration, binder normalization, recursive closure or decision acceptance is claimed.

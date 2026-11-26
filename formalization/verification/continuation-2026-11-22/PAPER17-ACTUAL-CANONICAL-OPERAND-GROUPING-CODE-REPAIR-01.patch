@@ -1,0 +1,29 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingCodePrimitiveProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingCodePrimitiveProof.lean
+@@ -35,6 +35,10 @@
+-  have step : Primrec (fun p : P =>
+-      if p.2.2.any (fun k => decide (k = p.2.1)) then p.2.2 else p.2.1 :: p.2.2) :=
+-    Primrec.cond (anyKeyPrimitive.comp (key.pair tailKeys)) tailKeys
+-      (Primrec.list_cons.comp key tailKeys)
+-  have fold := Primrec.list_foldr (Primrec.id : Primrec (id : Keys → Keys))
+-    (Primrec.const ([] : Keys)) step.to₂
++  let advance (key : K) (acc : Keys) : Keys :=
++    if acc.any (fun k => decide (k = key)) then acc else key :: acc
++  have step : Primrec (fun p : P => advance p.2.1 p.2.2) := by
++    apply (Primrec.cond (anyKeyPrimitive.comp (key.pair tailKeys)) tailKeys
++      (Primrec.list_cons.comp key tailKeys)).of_eq
++    intro p
++    cases seen : p.2.2.any (fun k => decide (k = p.2.1)) <;> simp [advance,seen]
++  have fold : Primrec (fun keys : Keys => keys.foldr advance []) :=
++    Primrec.list_foldr (Primrec.id : Primrec (id : Keys → Keys))
++      (Primrec.const ([] : Keys)) step.to₂
+@@ -46 +50,3 @@
+-      simp only [id_eq,List.foldr_cons,ih,List.dedup_cons']
++      change advance key (keys.foldr advance []) = (key::keys).dedup
++      rw [ih,List.dedup_cons']
++      dsimp only [advance]
+@@ -104 +110,3 @@
+-  exact (Primrec.cond check present (Primrec.const none)).to₂
++  apply (Primrec.cond check present (Primrec.const none)).to₂.of_eq
++  intro checked terms
++  cases checked <;> rfl

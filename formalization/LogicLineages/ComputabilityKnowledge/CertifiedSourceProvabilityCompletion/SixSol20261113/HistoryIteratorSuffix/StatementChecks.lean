@@ -1,0 +1,18 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryIteratorSuffix.SourceProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryIteratorSuffix.ReconstructionStatementChecks
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryIteratorSuffix.StatementChecks
+theorem internalPairSurjective : Targets.InternalPairSurjective := SurjectivityProof.internalPairSurjective
+theorem internalDecoderReconstruction : Targets.InternalDecoderReconstruction := ReconstructionProof.internalDecoderReconstruction
+theorem internalListReconstruction : Targets.InternalListReconstruction := ReconstructionProof.internalListReconstruction
+theorem internalIteratorSuffix : Targets.InternalIteratorSuffix := IterationProof.internalIteratorSuffix
+theorem sameSourceIteratorSuffix : Targets.SameSourceIteratorSuffix := SourceProof.sameSourceIteratorSuffix
+#print axioms internalPairSurjective
+#print axioms internalDecoderReconstruction
+#print axioms internalListReconstruction
+#print axioms internalIteratorSuffix
+#print axioms sameSourceIteratorSuffix
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryIteratorSuffix.StatementChecks

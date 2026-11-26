@@ -1,0 +1,18 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowSparseFloorArithmeticProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowSparseFloorArithmeticProof.lean
+@@ -13,6 +13,7 @@
+ 
+ private theorem rootOfPair (x y : Nat) : Nat.sqrt (pair x y) = x+y := by
+   let s := x+y
++  symm
+   apply Nat.eq_sqrt.mpr
+   change s*s ≤ s*s+x ∧ s*s+x < (s+1)*(s+1)
+   constructor
+@@ -29,7 +30,6 @@
+   have hs : s ≤ s*s := by
+     by_cases h : s = 0
+     · rw [h]
+-      exact Nat.le_refl _
+     · have one : 1 ≤ s := by omega
+       simpa only [Nat.mul_one] using Nat.mul_le_mul_left s one
+   have hx : x ≤ s := Nat.le_add_right x y

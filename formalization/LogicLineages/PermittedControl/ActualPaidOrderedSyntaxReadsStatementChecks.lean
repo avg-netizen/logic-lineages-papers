@@ -1,0 +1,18 @@
+module
+public import LogicLineages.PermittedControl.ActualPaidOrderedSyntaxReadsTargets
+import LogicLineages.PermittedControl.ActualPaidOrderedSyntaxReadsProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualPaidOrderedSyntaxReads
+
+theorem fixed_exactPaidOperandRead : ExactPaidOperandRead := exactPaidOperandRead
+theorem fixed_exactPaidOrderedSyntaxReads : ExactPaidOrderedSyntaxReads := exactPaidOrderedSyntaxReads
+theorem fixed_fullActualPaidOrderedSyntaxReads : FullActualPaidOrderedSyntaxReads :=
+  ⟨fixed_exactPaidOperandRead,fixed_exactPaidOrderedSyntaxReads⟩
+
+#print axioms fixed_exactPaidOperandRead
+#print axioms fixed_exactPaidOrderedSyntaxReads
+#print axioms fixed_fullActualPaidOrderedSyntaxReads
+
+end LogicLineages.PermittedControl.StatementChecks

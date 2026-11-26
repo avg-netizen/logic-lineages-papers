@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveOutputWalkProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveOutputCoordinateChecks
+open NumberedWindowInternalSparsePositiveOutputTargets
+
+theorem exact_OpenChosenState : OpenChosenState := NumberedWindowInternalSparsePositiveOutputStateProof.chosen
+theorem exact_OpenChosenWalk : OpenChosenWalk := NumberedWindowInternalSparsePositiveOutputWalkProof.walk
+
+#print axioms exact_OpenChosenState
+#print axioms exact_OpenChosenWalk
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveOutputCoordinateChecks

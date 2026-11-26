@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixResidualClosureTargets
+import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixResidualClosureProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedResidualMatrixClosure :
+    OriginalPrintedPlainMatrixResidualClosure.ExactOriginalResidualMatrixClosure :=
+  OriginalPrintedPlainMatrixResidualClosure.exactOriginalResidualMatrixClosure
+
+#print axioms fixed_exactOriginalPrintedResidualMatrixClosure
+
+end LogicLineages.PermittedControl.StatementChecks

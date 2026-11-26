@@ -1,0 +1,22 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/UnaryTransportSupport.lean:12:2: error: Tactic `assumption` failed
+
+f : Head
+base : Args
+a : Expr
+τ : Ty
+h : CallTyped EmptyContext (Expr.head f base).type (Args.cons a Args.nil) τ
+hc : consumeTypes (Expr.head f base).type (Args.cons a Args.nil) = some τ
+⊢ Option.map (fun τ => Expr.marked f τ base (Args.cons a Args.nil)) (consumeTypes f.result (Args.cons a Args.nil)) =
+    some (Expr.marked f τ base (Args.cons a Args.nil))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/UnaryTransportSupport.lean:18:2: error: Tactic `assumption` failed
+
+f : Head
+σ : Ty
+base extras : Args
+a : Expr
+τ : Ty
+h : CallTyped EmptyContext (Expr.marked f σ base extras).type (Args.cons a Args.nil) τ
+hc : consumeTypes (Expr.marked f σ base extras).type (Args.cons a Args.nil) = some τ
+⊢ Option.map (fun τ => Expr.marked f τ base (extras.append (Args.cons a Args.nil)))
+      (consumeTypes σ (Args.cons a Args.nil)) =
+    some (Expr.marked f τ base (extras.append (Args.cons a Args.nil)))

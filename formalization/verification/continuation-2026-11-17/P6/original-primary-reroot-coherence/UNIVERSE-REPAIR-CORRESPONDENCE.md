@@ -1,0 +1,7 @@
+# Target universe proof-only memory repair
+
+The public accepted theorem header is byte-identical to the preserved02-RSS draft. No Targets, original supplier, AST, or global declaration was changed. The actual seed admission remains AdmissionProof.both.1. The actual target universe fact remains the exact OriginalPrimaryUniverseClosure.Proof.primaryUniverseClosure with source seed/pair/context/primary/member observations from Request.
+
+UniverseConversionProof abstracts H/M/W and proves the definitional conversion between original internal TermAccepted and original Transport.Accepted with arguments=false in both directions. The caller explicitly uses those generic adapters around the exact original universe theorem, rather than asking elaboration to normalize a large concrete original universe program. This alone still hit RSS, preserved as draft03. Local irreducibility of fixed universe member/window/checker/predicate definitions and original edge then stopped unnecessary caller reductions and passed. These local elaboration hints do not change any definition or theorem statement.
+
+TargetUniverseImports is an imports-only diagnostic which passed under the original profile, confirming that the union of imports itself fits. It is not imported by the accepted caller and adds no theorem. Final receipt1794931664296970300-5 standard-only audit passes. The failed attempts and baseline remain saved; caps were never changed. This is a repair inside the parent coherence endpoint, not separate supporting/numbered credit.

@@ -1,0 +1,97 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesLayer/NativeProof.lean:20:90: error: unsolved goals
+A : Type
+inst✝ : Encodable A
+a : A
+xs : List A
+⊢ (Nat.pair (Encodable.encode a) (Encodable.encodeList xs)).succ =
+    Nat.pair (Encodable.encode a) (Encodable.encode xs) + 1
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesLayer/NativeProof.lean:40:14: error: unsolved goals
+case pos
+x t : ℕ
+h6 : ¬(Nat.unpair x).1 = 6
+h7 : (Nat.unpair x).1 = 7
+ht : t = 0
+⊢ (Nat.unpair (evaluate (Program.projection 0) (x ::ᵥ 0 ::ᵥ List.Vector.nil))).1 = 7 →
+    evaluate (Program.projection 1) (x ::ᵥ 0 ::ᵥ List.Vector.nil) = 0
+
+case neg
+x t : ℕ
+h6 : ¬(Nat.unpair x).1 = 6
+h7 : (Nat.unpair x).1 = 7
+ht : ¬t = 0
+⊢ (if (Nat.unpair (evaluate (Program.projection 0) (x ::ᵥ t ::ᵥ List.Vector.nil))).1 = 7 then
+      if evaluate (Program.projection 1) (x ::ᵥ t ::ᵥ List.Vector.nil) = 0 then 0
+      else
+        1 + Nat.pair (Nat.pair (Nat.unpair (Nat.unpair x).2).1 (Nat.unpair (Nat.unpair (Nat.unpair x).2).2).1) (t - 1) +
+          1
+    else 0) =
+    1 + Nat.pair (Nat.pair (Nat.unpair (Nat.unpair x).2).1 (Nat.unpair (Nat.unpair (Nat.unpair x).2).2).1) (t - 1) + 1
+
+case pos
+x t : ℕ
+h6 : ¬(Nat.unpair x).1 = 6
+h7 : ¬(Nat.unpair x).1 = 7
+ht : t = 0
+⊢ (Nat.unpair (evaluate (Program.projection 0) (x ::ᵥ 0 ::ᵥ List.Vector.nil))).1 = 7 →
+    evaluate (Program.projection 1) (x ::ᵥ 0 ::ᵥ List.Vector.nil) = 0
+
+case neg
+x t : ℕ
+h6 : ¬(Nat.unpair x).1 = 6
+h7 : ¬(Nat.unpair x).1 = 7
+ht : ¬t = 0
+⊢ (Nat.unpair (evaluate (Program.projection 0) (x ::ᵥ t ::ᵥ List.Vector.nil))).1 = 7 →
+    evaluate (Program.projection 1) (x ::ᵥ t ::ᵥ List.Vector.nil) = 0
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesLayer/NativeProof.lean:50:48: error: unsolved goals
+case argumentsCons.some
+n : ℕ
+type✝ : Ty
+head✝ tail✝ : Code (Fin n)
+val✝ : List (Ty × Code (Fin n))
+⊢ typeNumber type✝ = Encodable.encode type✝ ∧ codeNumber head✝ = Encodable.encode head✝
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesLayer/NativeProof.lean:53:50: warning: This simp argument is unused:
+  encodeNone
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵o̵d̵e̵N̵u̵m̵b̵e̵r̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵s̵e̵m̵a̵n̵t̵i̵c̵S̵t̵e̵p̵,̵e̵n̵c̵o̵d̵e̵N̵o̵n̵e̵,̵e̵n̵c̵o̵d̵e̵S̵o̵m̵e̵,̵e̵n̵c̵o̵d̵e̵N̵i̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵e̵n̵c̵o̵d̵e̵C̵o̵n̵s̵,̵e̵n̵c̵o̵d̵e̵E̵n̵t̵r̵y̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲c̲o̲d̲e̲N̲u̲m̲b̲e̲r̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲,̲ ̲s̲e̲m̲a̲n̲t̲i̲c̲S̲t̲e̲p̲,̲ ̲e̲n̲c̲o̲d̲e̲S̲o̲m̲e̲,̲ ̲e̲n̲c̲o̲d̲e̲N̲i̲l̲,̲ ̲e̲n̲c̲o̲d̲e̲C̲o̲n̲s̲,̲ ̲e̲n̲c̲o̲d̲e̲E̲n̲t̲r̲y̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesLayer/NativeProof.lean:53:61: warning: This simp argument is unused:
+  encodeSome
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵o̵d̵e̵N̵u̵m̵b̵e̵r̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵s̵e̵m̵a̵n̵t̵i̵c̵S̵t̵e̵p̵,̵e̵n̵c̵o̵d̵e̵N̵o̵n̵e̵,̵e̵n̵c̵o̵d̵e̵S̵o̵m̵e̵,̵e̵n̵c̵o̵d̵e̵N̵i̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵e̵n̵c̵o̵d̵e̵C̵o̵n̵s̵,̵e̵n̵c̵o̵d̵e̵E̵n̵t̵r̵y̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲c̲o̲d̲e̲N̲u̲m̲b̲e̲r̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲,̲ ̲s̲e̲m̲a̲n̲t̲i̲c̲S̲t̲e̲p̲,̲ ̲e̲n̲c̲o̲d̲e̲N̲o̲n̲e̲,̲ ̲e̲n̲c̲o̲d̲e̲N̲i̲l̲,̲ ̲e̲n̲c̲o̲d̲e̲C̲o̲n̲s̲,̲ ̲e̲n̲c̲o̲d̲e̲E̲n̲t̲r̲y̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesLayer/NativeProof.lean:53:72: warning: This simp argument is unused:
+  encodeNil
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵o̵d̵e̵N̵u̵m̵b̵e̵r̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵s̵e̵m̵a̵n̵t̵i̵c̵S̵t̵e̵p̵,̵e̵n̵c̵o̵d̵e̵N̵o̵n̵e̵,̵e̵n̵c̵o̵d̵e̵S̵o̵m̵e̵,̵e̵n̵c̵o̵d̵e̵N̵i̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵e̵n̵c̵o̵d̵e̵C̵o̵n̵s̵,̵e̵n̵c̵o̵d̵e̵E̵n̵t̵r̵y̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲c̲o̲d̲e̲N̲u̲m̲b̲e̲r̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲,̲ ̲s̲e̲m̲a̲n̲t̲i̲c̲S̲t̲e̲p̲,̲ ̲e̲n̲c̲o̲d̲e̲N̲o̲n̲e̲,̲ ̲e̲n̲c̲o̲d̲e̲S̲o̲m̲e̲,̲ ̲e̲n̲c̲o̲d̲e̲C̲o̲n̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲e̲n̲c̲o̲d̲e̲E̲n̲t̲r̲y̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesLayer/NativeProof.lean:54:6: warning: This simp argument is unused:
+  encodeCons
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵o̵d̵e̵N̵u̵m̵b̵e̵r̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵s̵e̵m̵a̵n̵t̵i̵c̵S̵t̵e̵p̵,̵e̵n̵c̵o̵d̵e̵N̵o̵n̵e̵,̵e̵n̵c̵o̵d̵e̵S̵o̵m̵e̵,̵e̵n̵c̵o̵d̵e̵N̵i̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵e̵n̵c̵o̵d̵e̵C̵o̵n̵s̵,̵e̵n̵c̵o̵d̵e̵E̵n̵t̵r̵y̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲c̲o̲d̲e̲N̲u̲m̲b̲e̲r̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲,̲ ̲s̲e̲m̲a̲n̲t̲i̲c̲S̲t̲e̲p̲,̲ ̲e̲n̲c̲o̲d̲e̲N̲o̲n̲e̲,̲ ̲e̲n̲c̲o̲d̲e̲S̲o̲m̲e̲,̲ ̲e̲n̲c̲o̲d̲e̲N̲i̲l̲,̲ ̲e̲n̲c̲o̲d̲e̲E̲n̲t̲r̲y̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesLayer/NativeProof.lean:54:17: warning: This simp argument is unused:
+  encodeEntry
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵o̵d̵e̵N̵u̵m̵b̵e̵r̵,̵N̵a̵t̵.̵u̵n̵p̵a̵i̵r̵_̵p̵a̵i̵r̵,̵s̵e̵m̵a̵n̵t̵i̵c̵S̵t̵e̵p̵,̵e̵n̵c̵o̵d̵e̵N̵o̵n̵e̵,̵e̵n̵c̵o̵d̵e̵S̵o̵m̵e̵,̵e̵n̵c̵o̵d̵e̵N̵i̵l̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵e̵n̵c̵o̵d̵e̵C̵o̵n̵s̵,̵e̵n̵c̵o̵d̵e̵E̵n̵t̵r̵y̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵]̵[̲c̲o̲d̲e̲N̲u̲m̲b̲e̲r̲,̲ ̲N̲a̲t̲.̲u̲n̲p̲a̲i̲r̲_̲p̲a̲i̲r̲,̲ ̲s̲e̲m̲a̲n̲t̲i̲c̲S̲t̲e̲p̲,̲ ̲e̲n̲c̲o̲d̲e̲N̲o̲n̲e̲,̲ ̲e̲n̲c̲o̲d̲e̲S̲o̲m̲e̲,̲ ̲e̲n̲c̲o̲d̲e̲N̲i̲l̲,̲ ̲e̲n̲c̲o̲d̲e̲C̲o̲n̲s̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ArgumentEntriesLayer/NativeProof.lean:84:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntriesLayer.NativeProof.stepValue: forbidden axiom dependency sorryAx

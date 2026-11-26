@@ -1,0 +1,32 @@
+module
+public import LogicLineages.PermittedControl.StageCallbackLevelOrderTargets
+import LogicLineages.PermittedControl.StageCallbackLevelOrderProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open StageCallbackLevelOrder
+
+theorem fixed_exactLevelOrderRoutes : ExactLevelOrderRoutes := exactLevelOrderRoutes
+theorem fixed_exactLevelOrderMembers : ExactLevelOrderMembers := exactLevelOrderMembers
+theorem fixed_exactSupplierMemberTransfer : ExactSupplierMemberTransfer :=
+  exactSupplierMemberTransfer
+theorem fixed_exactLevelOrderSupplierShape : ExactLevelOrderSupplierShape :=
+  exactLevelOrderSupplierShape
+theorem fixed_exactLevelOrderSupplierExact : ExactLevelOrderSupplierExact :=
+  exactLevelOrderSupplierExact
+theorem fixed_exactLevelOrderStageCallback : ExactLevelOrderStageCallback :=
+  exactLevelOrderStageCallback
+theorem fixed_fullStageCallbackLevelOrder : FullStageCallbackLevelOrder :=
+  ⟨fixed_exactLevelOrderRoutes,fixed_exactLevelOrderMembers,fixed_exactSupplierMemberTransfer,
+    fixed_exactLevelOrderSupplierShape,fixed_exactLevelOrderSupplierExact,
+    fixed_exactLevelOrderStageCallback⟩
+
+#print axioms fixed_exactLevelOrderRoutes
+#print axioms fixed_exactLevelOrderMembers
+#print axioms fixed_exactSupplierMemberTransfer
+#print axioms fixed_exactLevelOrderSupplierShape
+#print axioms fixed_exactLevelOrderSupplierExact
+#print axioms fixed_exactLevelOrderStageCallback
+#print axioms fixed_fullStageCallbackLevelOrder
+
+end LogicLineages.PermittedControl.StatementChecks

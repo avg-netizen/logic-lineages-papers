@@ -1,0 +1,113 @@
+module
+public import LogicLineages.PermittedControl.UniformPolicyCompilerPiecesProof
+public import LogicLineages.StandardControlCurrent.PolicyAssignmentDefinitions
+import LogicLineages.OrdinalComparison.WWSourceSyntaxCodeCheckStatementChecks
+import LogicLineages.OrdinalComparison.WWSourceSyntaxCodeTypesStatementChecks
+import LogicLineages.OrdinalComparison.WWOrdinalSyntaxVectorCompilerComputability
+import Mathlib.Computability.Primrec.List
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.UniformPolicyCompiler
+open OrdinalComparison Source Source.AdmissibleSum Source.SyntaxCode Source.OrdinalSyntax Source.ForwardTranslation
+open PolicySuppliedCodeMacro (RealizesPolicy)
+open StandardControlCurrent
+
+/-! ## Base codes -/
+
+noncomputable def primeP (e : Code) (tag payload resultLevel : Nat) : Part (Option (List Nat)) :=
+  if tag = 0 then Part.some (some ((List.range (resultLevel+1)).map (fun i => 8*Nat.pair payload i+3)))
+  else if tag = 4 then recursorP e (typeLevel payload) resultLevel
+  else Part.some (some (List.replicate (resultLevel+1) 1))
+
+set_option maxHeartbeats 30000 in
+theorem primePartrec : Partrec (fun x : Code × Nat × Nat × Nat => primeP x.1 x.2.1 x.2.2.1 x.2.2.2) := by
+  let A := Code × Nat × Nat × Nat
+  have ht : Primrec (fun x : A => x.2.1) := Primrec.fst.comp Primrec.snd
+  have hp : Primrec (fun x : A => x.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
+  have hr : Primrec (fun x : A => x.2.2.2) := Primrec.snd.comp (Primrec.snd.comp Primrec.snd)
+  have hvars : Primrec (fun x : A => (List.range (x.2.2.2+1)).map (fun i => 8*Nat.pair x.2.2.1 i+3)) := by
+    apply Primrec.list_map (Primrec.list_range.comp (Primrec.succ.comp hr))
+    exact (Primrec.nat_add.comp (Primrec.nat_mul.comp (Primrec.const 8)
+      (Primrec₂.natPair.comp (hp.comp Primrec.fst) Primrec.snd)) (Primrec.const 3)).to₂
+  have hones : Primrec (fun x : A => List.replicate (x.2.2.2+1) 1) := by
+    have h := Primrec.list_map (Primrec.list_range.comp (Primrec.succ.comp hr)) (Primrec.const 1).to₂
+    exact h.of_eq (fun x => by simp)
+  have hrec : Partrec (fun x : A => recursorP x.1 (typeLevel x.2.2.1) x.2.2.2) := by
+    have h := recursorPartrec.comp (Computable.fst.pair
+      ((SyntaxCode.StatementChecks.typeLevelPrimitiveRecursive.comp hp).to_comp.pair hr.to_comp))
+    exact h
+  have h0 : Computable (fun x : A => decide (x.2.1 = 0)) := (Primrec.eq.comp ht (Primrec.const 0)).decide.to_comp
+  have h4 : Computable (fun x : A => decide (x.2.1 = 4)) := (Primrec.eq.comp ht (Primrec.const 4)).decide.to_comp
+  have h := pite (P := fun x : A => x.2.1 = 0) h0 (Primrec.option_some.comp hvars).to_comp.partrec
+    (pite (P := fun x : A => x.2.1 = 4) h4 hrec (Primrec.option_some.comp hones).to_comp.partrec)
+  exact h
+
+set_option maxHeartbeats 30000 in
+theorem primeCal {e : Code} {p : Policy} (he : RealizesPolicy e p) (tag payload resultLevel : Nat) :
+    primeP e tag payload resultLevel = Part.some (PolicyAssignment.primeCode p tag payload resultLevel) := by
+  unfold primeP PolicyAssignment.primeCode
+  by_cases h0 : tag = 0
+  · simp [h0]
+  · rw [if_neg h0,if_neg h0]
+    by_cases h4 : tag = 4
+    · rw [if_pos h4,if_pos h4]
+      exact recursorCal he _ _
+    · simp [h4]
+
+/-! ## The assignment recursion through the fixed-point theorem -/
+
+abbrev AArgs := Code × List Nat × Nat
+
+/-- Branch arguments: (program for the recursive call, policy program, context, term code, result type). -/
+abbrev BArgs := Code × Code × List Nat × Nat × Nat
+
+set_option maxHeartbeats 30000 in
+private theorem q1P : Primrec (fun n : Nat => (n/8).unpair.1) :=
+  Primrec.fst.comp (Primrec.unpair.comp (Primrec.nat_div.comp Primrec.id (Primrec.const 8)))
+
+set_option maxHeartbeats 30000 in
+private theorem q2P : Primrec (fun n : Nat => (n/8).unpair.2) :=
+  Primrec.snd.comp (Primrec.unpair.comp (Primrec.nat_div.comp Primrec.id (Primrec.const 8)))
+
+set_option maxHeartbeats 30000 in
+private theorem checkP : Primrec (fun p : List Nat × Nat => check p.1 p.2) :=
+  SyntaxCode.StatementChecks.checkPrimitiveRecursive
+
+set_option maxHeartbeats 30000 in
+private theorem levelP : Primrec typeLevel := SyntaxCode.StatementChecks.typeLevelPrimitiveRecursive
+
+noncomputable def appInner (G : AArgs →. Option (List Nat)) (e : Code) (Γ : List Nat) (n rt argType : Nat)
+    (f : List Nat) : Part (Option (List Nat)) :=
+  pbind (G (e,Γ,(n/8).unpair.2)) (fun a => applicationP e (typeLevel rt) (typeLevel argType) f a)
+
+set_option diagnostics true in
+set_option diagnostics.threshold 500 in
+set_option maxHeartbeats 30000 in
+theorem appInnerPartrec : Partrec (fun x : (BArgs × Nat) × List Nat =>
+    appInner (decodeEval x.1.1.1) x.1.1.2.1 x.1.1.2.2.1 x.1.1.2.2.2.1 x.1.1.2.2.2.2 x.1.2 x.2) := by
+  let X := (BArgs × Nat) × List Nat
+  have hc : Computable (fun x : X => x.1.1.1) := Computable.fst.comp (Computable.fst.comp Computable.fst)
+  have hb : Computable (fun x : X => x.1.1.2) := Computable.snd.comp (Computable.fst.comp Computable.fst)
+  have he : Computable (fun x : X => x.1.1.2.1) := Computable.fst.comp hb
+  have hΓ : Computable (fun x : X => x.1.1.2.2.1) := Computable.fst.comp (Computable.snd.comp hb)
+  have hn : Computable (fun x : X => x.1.1.2.2.2.1) :=
+    Computable.fst.comp (Computable.snd.comp (Computable.snd.comp hb))
+  have hrt : Computable (fun x : X => x.1.1.2.2.2.2) :=
+    Computable.snd.comp (Computable.snd.comp (Computable.snd.comp hb))
+  have hat : Computable (fun x : X => x.1.2) := Computable.snd.comp Computable.fst
+  have hf : Computable (fun x : X => x.2) := Computable.snd
+  have hq2 : Computable (fun x : X => (x.1.1.2.2.2.1/8).unpair.2) := q2P.to_comp.comp hn
+  have hG : Partrec (fun x : X => (decodeEval x.1.1.1 (x.1.1.2.1,x.1.1.2.2.1,(x.1.1.2.2.2.1/8).unpair.2) :
+      Part (Option (List Nat)))) :=
+    (decodeEvalPartrec (α := AArgs) (σ := Option (List Nat))).comp (hc.pair (he.pair (hΓ.pair hq2)))
+  have hlr : Computable (fun x : X => typeLevel x.1.1.2.2.2.2) := levelP.to_comp.comp hrt
+  have hla : Computable (fun x : X => typeLevel x.1.2) := levelP.to_comp.comp hat
+  have happ : Partrec (fun y : X × List Nat =>
+      applicationP y.1.1.1.2.1 (typeLevel y.1.1.1.2.2.2.2) (typeLevel y.1.1.2) y.1.2 y.2) := by
+    have h := applicationPartrec.comp ((he.comp Computable.fst).pair ((hlr.comp Computable.fst).pair
+      ((hla.comp Computable.fst).pair ((hf.comp Computable.fst).pair Computable.snd))))
+    exact h
+  have h := pbindPartrec hG happ.to₂
+  exact h
+
+end LogicLineages.PermittedControl.UniformPolicyCompiler

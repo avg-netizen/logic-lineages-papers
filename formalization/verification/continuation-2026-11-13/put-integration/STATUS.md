@@ -1,0 +1,5 @@
+# Checked original PUT through the final guarded source
+
+Three exact contracts retain the entire original prepared package after installing the literal PUT leaf once, prove the actual final guarded step from original ordinary-source geometry, and recognize its original positive Object certificate at actual fold outputs. All validity, constructor/neutral/spine, stopped-hereditary and selected nil-path checks are discharged internally. The same final selected input/data tuple is retained throughout; no W-success, target typing or canonical-fixedness premise is supplied.
+
+The certificate theorem retains explicit active-window, parameter, actual fold-output, edge and singleton-path geometry. Arbitrary source-certificate erasure, canonical cancellation, and full I/C/accessibility remain pending. Native exact-gate verification passed with 3,654 source-matched modules and standard-axiom audits. Register remains 175 checked, 2 inherited, 12 pending. No full-root or remote CI claim. Sources and compact reports are published; reconstructible native snapshots remain local.

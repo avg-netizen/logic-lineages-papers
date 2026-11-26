@@ -1,0 +1,24 @@
+--- a/formalization/LogicLineages/PermittedControl/ShortFieldEffectivityProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ShortFieldEffectivityProof.lean
+@@ -20,7 +20,9 @@
+   intro n
+   cases n with
+   | zero => rfl
+-  | succ n => simp only [Nat.succ_ne_zero, ↓reduceIte, Nat.succ_sub_one, rawShortGapLength]
++  | succ n =>
++    have hz : id (n + 1) ≠ (0 : Nat) := Nat.succ_ne_zero n
++    simp only [hz, if_false, Nat.succ_sub_one, rawShortGapLength]
+ 
+ theorem shortFieldPreprocessingEffective : ShortFieldPreprocessingEffective := by
+   have hgap : Primrec₂ shortGapLengthCode :=
+--- a/formalization/verification/continuation-2026-11-21/PAPER17-SHORT-FIELD-PREPROCESSING-AUTHOR-MANIFEST.json
++++ b/formalization/verification/continuation-2026-11-21/PAPER17-SHORT-FIELD-PREPROCESSING-AUTHOR-MANIFEST.json
+@@ -12,7 +12,7 @@
+   },
+   "new_source_hashes": {
+     "formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean": "1aaa588676d2ebd2f707e810346c74da1f0cc6a0971d21f5179fe58c9be7d7b2",
+-    "formalization/LogicLineages/PermittedControl/ShortFieldEffectivityProof.lean": "344f06a041988d48d32c5f1be3e34a11c63dcc11c14280346187155a999fe49a",
++    "formalization/LogicLineages/PermittedControl/ShortFieldEffectivityProof.lean": "deea22e3ab8479d17b0db23ef83563a835a5d9275b4743fc7decf8205c3e386a",
+     "formalization/LogicLineages/PermittedControl/ShortFieldNormalizationProof.lean": "03b24b7fabf26122e509aaaa243d5d843a841743b2de3b4f3df1e8a97e36d4fe",
+     "formalization/LogicLineages/PermittedControl/ShortFieldPreprocessingStatementChecks.lean": "063876f43df5a3d897ac42879022b98cf36baa5bef0b08089bdf2b4fe300104d"
+   },

@@ -1,0 +1,19 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowConcretePositiveEndpointsHopProof.lean:31:26: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  reported
+in the target expression
+  hopView code = some (target, q, w, r)
+
+entries : NumberedWindowCopyAlgorithm.Entries
+s : NumberedWindowScalarAlgorithm.Settings
+ctx : List Nat
+ty source code target : Nat
+ok : advance (step entries s ctx ty) (least s ctx ty) (some source) code = some target
+reported q w r : Nat
+seen : hopView code = some (reported, q, w, r)
+selected : some reported = some target
+same : reported = target
+guards : step entries s ctx ty q w r = true ∧ least s ctx ty q = some source ∧ least s ctx ty r = some reported
+rawGuards :
+  NumberedWindowRawContextAlgorithm.raw (NumberedWindowConcreteCheckers.root entries s) q w r = true ∧
+    admitted s ctx ty q = true ∧ admitted s ctx ty r = true
+⊢ hopView code = some (target, q, w, r)

@@ -1,0 +1,12 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCancellation.Targets
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCancellation.Preflight
+#check Targets.AddCancelRight
+#check Targets.AddCancelLeft
+#check Targets.PairLowerFixedSecond
+#check Targets.PairUpperFixedFirst
+#check Targets.PairInjective
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCancellation.Preflight

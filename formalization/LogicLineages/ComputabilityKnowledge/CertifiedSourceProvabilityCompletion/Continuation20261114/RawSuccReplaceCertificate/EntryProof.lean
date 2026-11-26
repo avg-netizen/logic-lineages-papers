@@ -1,0 +1,30 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawSuccReplaceCertificate.Targets
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawSuccReplaceCertificate.EntryProof
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof GorbowPRDefiningEquations List.Vector SixSol20261113
+open SixSol20261112.Fuel NamedArithmeticGraph HistoryKernel.EntryProof
+
+theorem rawNewHistory {n ctx : Nat} (p : Program n) (old arithmetic : Program 1) (x : Program 3)
+ (I : Installation p old arithmetic x) (raw rawB : Term ctx)
+ (tag : Nat) (ht : (nodes p)[tag]? = some ⟨3,HistoryKernel.someExtendedHistory⟩) :
+ Nonempty (Derivation (GorbowPRNumeralCalculation.Theory p)
+  (.equal (newHistory tag .zero (RawSuccReplace.lineCall I.qtag raw rawB))
+   (HistoryLookup.consCall I.ctag (HistoryKernel.pairCall I.ptag .zero
+    (RawSuccReplace.formulaValue I.ctag I.atag raw rawB)) .zero))) := by
+ obtain ⟨hq⟩ := RawSuccReplace.StatementChecks.exactInternalLine n p I.qtag I.ptag I.ctag I.atag
+  I.hq I.hp I.hc I.ha ctx raw rawB
+ have hcong := Logic.unary (newHistory tag .zero (.var (0 : Fin (ctx+1)))) _ _ hq
+ simp only [newHistory,entryValue,HistoryKernel.pairCall,HistoryLookup.consCall,
+  Logic.substCall,List.Vector.map_cons,List.Vector.map_nil,GorbowSubstitution.substitute,Fin.cases_zero] at hcong
+ obtain ⟨hv⟩ := TwoSol20261113.ReflexivityCertificate.EntryProof.newHistoryExact p tag I.ptag I.ctag
+  ht I.hp I.hc .zero .zero (RawSuccReplace.formulaValue I.ctag I.atag raw rawB)
+  (HistoryKernel.pairCall I.ptag .zero
+   (HistoryKernel.pairCall I.ptag (Term.numeral 12)
+    (HistoryKernel.pairCall I.ptag (HistoryLookup.consCall I.ctag (RawSuccReplace.templateValue I.ctag I.atag raw)
+     (HistoryLookup.consCall I.ctag raw (HistoryLookup.consCall I.ctag rawB .zero)))
+     (HistoryKernel.pairCall I.ptag .zero .zero))))
+ exact ⟨Logic.trans _ _ _ hcong hv⟩
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawSuccReplaceCertificate.EntryProof
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawSuccReplaceCertificate.EntryProof

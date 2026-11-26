@@ -1,0 +1,162 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorBetaProof.lean:44:16: error: don't know how to synthesize implicit argument `τ`
+  @typedCallContext S (callContext (functionType A) ((actualType A).arrow ?m.129) p Context.hole)
+    ((functionType A).arrow ((actualType A).arrow ?m.129)) (actualType A) ?m.129 u
+    (typedCallContext ContextTyped.hole hp.left.left hp.left.right.left) hu.left.left hu.left.right.left
+context:
+S : Signature
+A : SemanticType
+i p u : Expr
+hi : ClosedNative S i indexType
+hp : ClosedNative S p (functionType A)
+hu : ClosedNative S u (actualType A)
+B : Ty := ⋯
+η : Ty := ⋯
+b₀ : Expr := ⋯
+b₁ : Expr := ⋯
+b₂ : Expr := ⋯
+hIterator : ClosedNative S (iterator A) (iteratorType A)
+hBodyI : Typed (EmptyContext.push indexType) (Expr.lam η (Expr.lam B b₀)) (η.arrow η)
+hSourceI : PaperTerm S (app indexType (η.arrow η) (Expr.lam indexType (Expr.lam η (Expr.lam B b₀))) i) (η.arrow η)
+hResultI : PaperTerm S (substitute (Args.cons i Args.nil) 0 (Expr.lam η (Expr.lam B b₀))) (η.arrow η)
+hOrdI : Ordinary (substitute (Args.cons i Args.nil) 0 (Expr.lam η (Expr.lam B b₀)))
+hStageI : PaperTerm S (Expr.lam η (Expr.lam B b₁)) (η.arrow η)
+hStepI : Reduction S (app indexType (η.arrow η) (iterator A) i) (Expr.lam η (Expr.lam B b₁))
+⊢ Ty
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorBetaProof.lean:44:16: error: don't know how to synthesize implicit argument `ρ`
+  @typedCallContext S (callContext (functionType A) ((actualType A).arrow ?m.129) p Context.hole)
+    ((functionType A).arrow ((actualType A).arrow ?m.129)) (actualType A) ?m.129 u
+    (typedCallContext ContextTyped.hole hp.left.left hp.left.right.left) hu.left.left hu.left.right.left
+context:
+S : Signature
+A : SemanticType
+i p u : Expr
+hi : ClosedNative S i indexType
+hp : ClosedNative S p (functionType A)
+hu : ClosedNative S u (actualType A)
+B : Ty := ⋯
+η : Ty := ⋯
+b₀ : Expr := ⋯
+b₁ : Expr := ⋯
+b₂ : Expr := ⋯
+hIterator : ClosedNative S (iterator A) (iteratorType A)
+hBodyI : Typed (EmptyContext.push indexType) (Expr.lam η (Expr.lam B b₀)) (η.arrow η)
+hSourceI : PaperTerm S (app indexType (η.arrow η) (Expr.lam indexType (Expr.lam η (Expr.lam B b₀))) i) (η.arrow η)
+hResultI : PaperTerm S (substitute (Args.cons i Args.nil) 0 (Expr.lam η (Expr.lam B b₀))) (η.arrow η)
+hOrdI : Ordinary (substitute (Args.cons i Args.nil) 0 (Expr.lam η (Expr.lam B b₀)))
+hStageI : PaperTerm S (Expr.lam η (Expr.lam B b₁)) (η.arrow η)
+hStepI : Reduction S (app indexType (η.arrow η) (iterator A) i) (Expr.lam η (Expr.lam B b₁))
+⊢ Ty
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorBetaProof.lean:44:16: error: don't know how to synthesize implicit argument `inside`
+  @typedCallContext S (callContext (functionType A) ((actualType A).arrow ?m.129) p Context.hole)
+    ((functionType A).arrow ((actualType A).arrow ?m.129)) (actualType A) ?m.129 u
+    (typedCallContext ContextTyped.hole hp.left.left hp.left.right.left) hu.left.left hu.left.right.left
+context:
+S : Signature
+A : SemanticType
+i p u : Expr
+hi : ClosedNative S i indexType
+hp : ClosedNative S p (functionType A)
+hu : ClosedNative S u (actualType A)
+B : Ty := ⋯
+η : Ty := ⋯
+b₀ : Expr := ⋯
+b₁ : Expr := ⋯
+b₂ : Expr := ⋯
+hIterator : ClosedNative S (iterator A) (iteratorType A)
+hBodyI : Typed (EmptyContext.push indexType) (Expr.lam η (Expr.lam B b₀)) (η.arrow η)
+hSourceI : PaperTerm S (app indexType (η.arrow η) (Expr.lam indexType (Expr.lam η (Expr.lam B b₀))) i) (η.arrow η)
+hResultI : PaperTerm S (substitute (Args.cons i Args.nil) 0 (Expr.lam η (Expr.lam B b₀))) (η.arrow η)
+hOrdI : Ordinary (substitute (Args.cons i Args.nil) 0 (Expr.lam η (Expr.lam B b₀)))
+hStageI : PaperTerm S (Expr.lam η (Expr.lam B b₁)) (η.arrow η)
+hStepI : Reduction S (app indexType (η.arrow η) (iterator A) i) (Expr.lam η (Expr.lam B b₁))
+⊢ Context
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorBetaProof.lean:44:34: error: don't know how to synthesize implicit argument `τ`
+  @typedCallContext S Context.hole ((functionType A).arrow ((actualType A).arrow ?m.129)) (functionType A)
+    ((actualType A).arrow ?m.129) p ContextTyped.hole hp.left.left hp.left.right.left
+context:
+S : Signature
+A : SemanticType
+i p u : Expr
+hi : ClosedNative S i indexType
+hp : ClosedNative S p (functionType A)
+hu : ClosedNative S u (actualType A)
+B : Ty := ⋯
+η : Ty := ⋯
+b₀ : Expr := ⋯
+b₁ : Expr := ⋯
+b₂ : Expr := ⋯
+hIterator : ClosedNative S (iterator A) (iteratorType A)
+hBodyI : Typed (EmptyContext.push indexType) (Expr.lam η (Expr.lam B b₀)) (η.arrow η)
+hSourceI : PaperTerm S (app indexType (η.arrow η) (Expr.lam indexType (Expr.lam η (Expr.lam B b₀))) i) (η.arrow η)
+hResultI : PaperTerm S (substitute (Args.cons i Args.nil) 0 (Expr.lam η (Expr.lam B b₀))) (η.arrow η)
+hOrdI : Ordinary (substitute (Args.cons i Args.nil) 0 (Expr.lam η (Expr.lam B b₀)))
+hStageI : PaperTerm S (Expr.lam η (Expr.lam B b₁)) (η.arrow η)
+hStepI : Reduction S (app indexType (η.arrow η) (iterator A) i) (Expr.lam η (Expr.lam B b₁))
+⊢ Ty
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorBetaProof.lean:44:34: error: don't know how to synthesize implicit argument `ρ`
+  @typedCallContext S Context.hole ((functionType A).arrow ((actualType A).arrow ?m.129)) (functionType A)
+    ((actualType A).arrow ?m.129) p ContextTyped.hole hp.left.left hp.left.right.left
+context:
+S : Signature
+A : SemanticType
+i p u : Expr
+hi : ClosedNative S i indexType
+hp : ClosedNative S p (functionType A)
+hu : ClosedNative S u (actualType A)
+B : Ty := ⋯
+η : Ty := ⋯
+b₀ : Expr := ⋯
+b₁ : Expr := ⋯
+b₂ : Expr := ⋯
+hIterator : ClosedNative S (iterator A) (iteratorType A)
+hBodyI : Typed (EmptyContext.push indexType) (Expr.lam η (Expr.lam B b₀)) (η.arrow η)
+hSourceI : PaperTerm S (app indexType (η.arrow η) (Expr.lam indexType (Expr.lam η (Expr.lam B b₀))) i) (η.arrow η)
+hResultI : PaperTerm S (substitute (Args.cons i Args.nil) 0 (Expr.lam η (Expr.lam B b₀))) (η.arrow η)
+hOrdI : Ordinary (substitute (Args.cons i Args.nil) 0 (Expr.lam η (Expr.lam B b₀)))
+hStageI : PaperTerm S (Expr.lam η (Expr.lam B b₁)) (η.arrow η)
+hStepI : Reduction S (app indexType (η.arrow η) (iterator A) i) (Expr.lam η (Expr.lam B b₁))
+⊢ Ty
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorBetaProof.lean:44:52: error: don't know how to synthesize implicit argument `σ`
+  @ContextTyped.hole S ((functionType A).arrow ((actualType A).arrow ?m.129))
+context:
+S : Signature
+A : SemanticType
+i p u : Expr
+hi : ClosedNative S i indexType
+hp : ClosedNative S p (functionType A)
+hu : ClosedNative S u (actualType A)
+B : Ty := ⋯
+η : Ty := ⋯
+b₀ : Expr := ⋯
+b₁ : Expr := ⋯
+b₂ : Expr := ⋯
+hIterator : ClosedNative S (iterator A) (iteratorType A)
+hBodyI : Typed (EmptyContext.push indexType) (Expr.lam η (Expr.lam B b₀)) (η.arrow η)
+hSourceI : PaperTerm S (app indexType (η.arrow η) (Expr.lam indexType (Expr.lam η (Expr.lam B b₀))) i) (η.arrow η)
+hResultI : PaperTerm S (substitute (Args.cons i Args.nil) 0 (Expr.lam η (Expr.lam B b₀))) (η.arrow η)
+hOrdI : Ordinary (substitute (Args.cons i Args.nil) 0 (Expr.lam η (Expr.lam B b₀)))
+hStageI : PaperTerm S (Expr.lam η (Expr.lam B b₁)) (η.arrow η)
+hStepI : Reduction S (app indexType (η.arrow η) (iterator A) i) (Expr.lam η (Expr.lam B b₁))
+⊢ Ty
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorBetaProof.lean:44:7: error: failed to infer `have` declaration type
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorBetaProof.lean:30:51: error: unsolved goals
+S : Signature
+A : SemanticType
+i p u : Expr
+hi : ClosedNative S i indexType
+hp : ClosedNative S p (functionType A)
+hu : ClosedNative S u (actualType A)
+B : Ty := actualType A
+η : Ty := functionType A
+b₀ : Expr := iteratorBody A
+b₁ : Expr := afterIndexBody A i
+b₂ : Expr := afterFunctionBody A i p
+hIterator : ClosedNative S (iterator A) (iteratorType A)
+hBodyI : Typed (EmptyContext.push indexType) (Expr.lam η (Expr.lam B b₀)) (η.arrow η)
+hSourceI : PaperTerm S (app indexType (η.arrow η) (Expr.lam indexType (Expr.lam η (Expr.lam B b₀))) i) (η.arrow η)
+hResultI : PaperTerm S (substitute (Args.cons i Args.nil) 0 (Expr.lam η (Expr.lam B b₀))) (η.arrow η)
+hOrdI : Ordinary (substitute (Args.cons i Args.nil) 0 (Expr.lam η (Expr.lam B b₀)))
+hStageI : PaperTerm S (Expr.lam η (Expr.lam B b₁)) (η.arrow η)
+hStepI : Reduction S (app indexType (η.arrow η) (iterator A) i) (Expr.lam η (Expr.lam B b₁))
+⊢ Reduction S (applied A i p u) (afterIndex A i p u) ∧
+    Reduction S (afterIndex A i p u) (afterFunction A i p u) ∧ Reduction S (afterFunction A i p u) (indexedW A p u i)

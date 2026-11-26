@@ -1,0 +1,32 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterAddressProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterAddressProof.lean
+@@ -26,11 +26,9 @@
+   cases hu : unpack raw with
+   | none => simp [hu] at h
+   | some xs =>
+-    cases ht : xs.all typeBit with
+-    | false => simp [hu,ht] at h
+-    | true =>
+-      have same : xs = ctx := by simpa [hu,ht] using h
+-      exact congrArg some same
++    have parsed : (∀ x ∈ xs, typeBit x = true) ∧ xs = ctx := by
++      simpa [hu] using h
++    exact congrArg some parsed.2
+ 
+ /-- Recover the literal tag and original packed context, without
+ replacing either context or result type validation by an arity test. -/
+@@ -87,9 +85,11 @@
+   change run rawContext (packNode 3 [c,r,k]) = c ∧ run rawResult (packNode 3 [c,r,k]) = r ∧
+     run rawLeast (packNode 3 [c,r,k]) = k
+   have outer := (headTailOfCell (cellAt 3 (pack [c,r,k]))).2
+-  have first := headTailOfCell (cellAt c (pack [r,k]))
+-  have second := headTailOfCell (cellAt r (pack [k]))
+-  have third := (headTailOfCell (cellAt k (pack []))).1
++  have first : run cellHead (pack [c,r,k]) = c ∧ run cellTail (pack [c,r,k]) = pack [r,k] :=
++    headTailOfCell (cellAt c (pack [r,k]))
++  have second : run cellHead (pack [r,k]) = r ∧ run cellTail (pack [r,k]) = pack [k] :=
++    headTailOfCell (cellAt r (pack [k]))
++  have third : run cellHead (pack [k]) = k := (headTailOfCell (cellAt k (pack []))).1
+   change run rawContext (NumberedWindowPairAlgorithm.pair 3 (pack [c,r,k])+1) = c ∧
+     run rawResult (NumberedWindowPairAlgorithm.pair 3 (pack [c,r,k])+1) = r ∧
+     run rawLeast (NumberedWindowPairAlgorithm.pair 3 (pack [c,r,k])+1) = k

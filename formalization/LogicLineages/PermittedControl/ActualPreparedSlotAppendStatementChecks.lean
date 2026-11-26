@@ -1,0 +1,28 @@
+module
+public import LogicLineages.PermittedControl.ActualPreparedSlotAppendTargets
+import LogicLineages.PermittedControl.ActualPreparedSlotAppendShiftProof
+import LogicLineages.PermittedControl.ActualPreparedSlotAppendReadProof
+import LogicLineages.PermittedControl.ActualPreparedSlotAppendProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualPreparedSlotShift : ActualPreparedSlotAppend.ExactSlotShift :=
+  ActualPreparedSlotAppend.exactSlotShift
+
+theorem fixed_exactActualPreparedAppendedReads : ActualPreparedSlotAppend.ExactAppendedReads :=
+  ActualPreparedSlotAppend.exactAppendedReads
+
+theorem fixed_exactActualPreparedSlotAppend : ActualPreparedSlotAppend.ExactPreparedAppend :=
+  ActualPreparedSlotAppend.exactPreparedAppend
+
+theorem fixed_fullActualPreparedSlotAppend : ActualPreparedSlotAppend.FullActualPreparedSlotAppend :=
+  ⟨fixed_exactActualPreparedSlotShift,fixed_exactActualPreparedAppendedReads,
+    fixed_exactActualPreparedSlotAppend⟩
+
+#print axioms fixed_exactActualPreparedSlotShift
+#print axioms fixed_exactActualPreparedAppendedReads
+#print axioms fixed_exactActualPreparedSlotAppend
+#print axioms fixed_fullActualPreparedSlotAppend
+
+end LogicLineages.PermittedControl.StatementChecks

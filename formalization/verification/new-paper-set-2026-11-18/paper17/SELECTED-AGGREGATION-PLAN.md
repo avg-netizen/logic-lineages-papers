@@ -1,0 +1,13 @@
+# Selected actual ground aggregation and weak-query conversion
+
+Supporting next step of current Paper17 thm:functional-hardness: ground detector aggregation at one fixed actual selected admissible valuation, and exact weak-query wrapper conversion. Preserve arbitrary functional input types/ordinal coordinates, arbitrary policy and arbitrary ground source pairs.
+
+Literal existing SourceAggregateCompletion.aggregate is NOT just an eraser fold: each leaf is first redetected with actual detectorLeft/detectorRight (six erasers). Retain that exact syntax to reuse later code/level suppliers. Define fresh selected AllEqual/AggregateAt over actual SelectedFunctionalDetector.groundValue. Require explicit successful finite aggregate assignments plus right<=left, equality iff all input pairs equal and unequal gap>=2. Empty list uses actual zeroC twice, scalar1.
+
+Important supplier domain: current19 FullCollision.CompleteCollision quantifies positive-Nat values for every ordinal component and therefore CANNOT supply actual Paper17 functional ordinal valuations. Reuse only its genuine numeric collision theorem after proving SelectedWithThreshold f B implies SourceGrowth f. For actual eraser values, use the newly checked selected all-policy eraser_value and genericCoefficientOne, or CompositeEraser.FiniteClosure with explicit genuine selected scalar witnesses. Our selected ground_facts proves those witnesses for arbitrary functional ordinal valuations. No raw fallback or finite-input restriction.
+
+Derive actual six-eraser calibration to PolicyCollision.leftValue/rightValue f x y. The numeric collision gives nonnegative leaf gaps and equality iff x=y. Induct the exact shared-shaped fold. Strict monotonicity of the actual coefficient-one eraser and its gap>=2 prove root equality iff every leaf equality; neither strictness nor payload supplied as an oracle.
+
+Also retain literal ParametricLiteralWeakWrapper.constantApply R / identityApply L. Prove actual all-policy K=(5,1), I=(3,1), then actual outputs collapseWith f(omega+5+R0), collapseWith f(omega+3+L0). Exact weak comparison iff R0+2<=L0 for arbitrary actual ground L,R follows coefficient-one strict monotonicity; under aggregate nonnegative/gap2 it is equivalent to absence of simultaneous equality. Equality case must not be lost.
+
+Supporting full conjunction proposed: actual selected six-eraser collision; actual aggregate semantics including empty list; exact K/I wrapper values and iff. Source-level, plain numeric query code, simultaneous equation/valuation transport, polynomial zero-pattern equivalence, seeded level3 and undecidability remain separate. No complete printed hardness promotion from this packet.

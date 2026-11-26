@@ -1,0 +1,7 @@
+# Outside rows and signed shift of the actual zero class
+
+The source removes the ordinary values from the zero class and carries each original weighted count correction into the constant. Identity and short prefixes contribute their exact constants. The untouched original operands retain their signed weights and reads. [Exact cancellation and transfer](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex#L124)
+
+`ExactOutsideClass` identifies the outside list with the original normalized row filtered by the literal original keys outside the selected full-value class. It preserves order and the actual original reader values. `ExactOriginShift` proves that the shift installed by the replacement equals the original signed sum of the disposition shifts, with the genuine short count when that branch ends. [Exact targets](../../LogicLineages/PermittedControl/ActualZeroClassOutsideAndShiftTargets.lean) · [Ordered complement](../../LogicLineages/PermittedControl/ActualZeroClassOutsideAndShiftComplementProof.lean) · [Signed aggregate](../../LogicLineages/PermittedControl/ActualZeroClassOutsideAndShiftConstantProof.lean)
+
+Gate `1795333735433454375-9` passed 305 local modules and all three exact standard-axiom aliases. The moved count column and concrete charge decrease remain separate. [Author manifest](PAPER17-ACTUAL-ZERO-CLASS-OUTSIDE-AND-SHIFT-AUTHOR-MANIFEST.json)

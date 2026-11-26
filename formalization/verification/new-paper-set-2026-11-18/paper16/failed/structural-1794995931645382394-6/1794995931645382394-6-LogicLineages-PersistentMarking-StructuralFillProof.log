@@ -1,0 +1,9 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/StructuralFillProof.lean:5:8: error: (kernel) application type mismatch
+  x✝ ⟨xs✝, ⟨σs✝, hqs⟩⟩
+argument has type
+  (xs : Args) ×' (as : List Ty) ×' BaseTyped Γ xs as
+but function has type
+  ∀ (y : (xs : Args) ×' (as : List Ty) ×' BaseTyped Γ✝ xs as),
+    InvImage (fun x1 x2 => x1 < x2) (fun x => PSigma.casesOn x fun xs as => PSigma.casesOn as fun as hx => sizeOf xs) y
+        ⟨Args.cons x✝¹ xs✝, ⟨σ✝ :: σs✝, ⋯⟩⟩ →
+      BaseTyped Γ✝ (y.1.append ys) (y.2.1 ++ bs)

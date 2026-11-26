@@ -1,0 +1,15 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.RawPlanComparisonProof
+public import LogicLineages.ControlSensitivityCurrent.RawPlanComparisonEffectiveProof
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.RawSourceDAG.PlanComparison.StatementChecks
+
+theorem fixed_typed_exactness : RawPlanComparisonTargets.TypedExactness := typed_exactness
+theorem fixed_success_reconstruction : RawPlanComparisonTargets.SuccessReconstruction := success_reconstruction
+theorem fixed_effective : RawPlanComparisonTargets.Effective := effective
+
+#print axioms fixed_typed_exactness
+#print axioms fixed_success_reconstruction
+#print axioms fixed_effective
+
+end LogicLineages.ControlSensitivityCurrent.RawSourceDAG.PlanComparison.StatementChecks

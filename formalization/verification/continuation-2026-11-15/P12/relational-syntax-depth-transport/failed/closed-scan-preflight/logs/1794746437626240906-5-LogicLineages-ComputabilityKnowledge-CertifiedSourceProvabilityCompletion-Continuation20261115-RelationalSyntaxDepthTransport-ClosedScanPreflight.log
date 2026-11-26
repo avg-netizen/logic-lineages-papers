@@ -1,0 +1,29 @@
+LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.Targets.InternalClosedScanTransport :
+  Prop
+LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.ScanStateTransportStatementChecks.exactScanStateTransport :
+  ScanStateTransportTargets.InternalScanStateTransport
+LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxScan.InstalledNodesProof.scanNodes
+  {n : ℕ} (p : GorbowPRProgram.Program n) (stag : ℕ)
+  (hs : (GorbowPRRegistry.nodes p)[stag]? = some ⟨2, SixSol20261113.LiteralSyntaxScan.scanCode⟩) :
+  ∃ itag ltag ptag rtag,
+    (GorbowPRRegistry.nodes p)[itag]? = some ⟨2, SixSol20261113.LiteralSyntaxScan.iterator⟩ ∧
+      (GorbowPRRegistry.nodes p)[ltag]? = some ⟨1, SixSol20261113.HistoryLengthOffset.lengthProgram⟩ ∧
+        (GorbowPRRegistry.nodes p)[ptag]? = some ⟨2, SixSol20261113.HistoryCodec.pair⟩ ∧
+          (GorbowPRRegistry.nodes p)[rtag]? = some ⟨1, SixSol20261113.HistoryDecoder.decoder true⟩
+LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxScan.InstalledNodesProof.stepNode
+  {n : ℕ} (p : GorbowPRProgram.Program n) (itag : ℕ)
+  (hi : (GorbowPRRegistry.nodes p)[itag]? = some ⟨2, SixSol20261113.LiteralSyntaxScan.iterator⟩) :
+  ∃ stag, (GorbowPRRegistry.nodes p)[stag]? = some ⟨2, SixSol20261113.LiteralSyntaxStep.stepCode⟩
+LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralSyntaxScan.ScanBindingProof.binding
+  {n ctx : ℕ} (p : GorbowPRProgram.Program n) (stag itag ltag ptag rtag : ℕ)
+  (hs : (GorbowPRRegistry.nodes p)[stag]? = some ⟨2, SixSol20261113.LiteralSyntaxScan.scanCode⟩)
+  (hi : (GorbowPRRegistry.nodes p)[itag]? = some ⟨2, SixSol20261113.LiteralSyntaxScan.iterator⟩)
+  (hl : (GorbowPRRegistry.nodes p)[ltag]? = some ⟨1, SixSol20261113.HistoryLengthOffset.lengthProgram⟩)
+  (hp : (GorbowPRRegistry.nodes p)[ptag]? = some ⟨2, SixSol20261113.HistoryCodec.pair⟩)
+  (hr : (GorbowPRRegistry.nodes p)[rtag]? = some ⟨1, SixSol20261113.HistoryDecoder.decoder true⟩)
+  (tasks raw : GorbowSyntax.Term ctx) :
+  Nonempty
+    (GorbowTheoryProof.Derivation (GorbowPRNumeralCalculation.Theory p)
+      (GorbowSyntax.Formula.equal (SixSol20261113.LiteralSyntaxScan.scanCall stag tasks raw)
+        (SixSol20261113.LiteralSyntaxScan.StateRecursionProof.scanState itag ltag ptag rtag raw tasks.succ)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ClosedScanPreflight.lean:10:7: error(lean.unknownIdentifier): Unknown identifier `LengthZeroProof.relatedEmpty`

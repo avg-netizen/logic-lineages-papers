@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.SourceFinitenessProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+theorem fixed_fullSourceFiniteness : SourceFinitenessTargets.FullSourceFiniteness :=
+  SourceFinitenessProof.fullSourceFiniteness
+#print axioms fixed_fullSourceFiniteness
+end LogicLineages.PermittedControl.StatementChecks

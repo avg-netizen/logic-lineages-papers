@@ -1,0 +1,11 @@
+--- ValidityProof.before
++++ ValidityProof.after
+@@ -32,7 +32,7 @@
+  obtain ⟨he⟩ := FullFormulaInstantiationValidity.FixedTemplateEncodingProof.boundTermEncoding 0 t arity p
+   I.ctag I.atag I.h_ctag I.h_atag ctx
+  have heq := HistoryLookup.DestructorProof.unaryCallCongruence I.vtag _ _ he
+- exact ⟨LiteralRawMP.DispatcherSupportProof.localTrans _ _ _
++ exact ⟨HistoryCodec.ArithmeticSupport.localTrans _ _ _
+   (.base (Support.equalitySymmetry _ _ heq)) hv⟩
+ theorem numeral {arity ctx : Nat} (p : Program arity) (old arithmetic : Program 1) (x : Program 3)
+  (I : UniformClosedRule12Certificate.Installation p old arithmetic x) (ntag : Nat)

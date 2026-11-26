@@ -1,0 +1,19 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryDecoder.InverseProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryDecoder.CalibrationStatementChecks
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryDecoder.StatementChecks
+
+theorem nativeLeft : Targets.NativeLeft := NativeProof.nativeLeft
+theorem nativeRight : Targets.NativeRight := NativeProof.nativeRight
+theorem leftPairInstalled : Targets.LeftPairInstalled := InstalledProof.leftPairInstalled
+theorem rightPairInstalled : Targets.RightPairInstalled := InstalledProof.rightPairInstalled
+theorem internalLeftInverse : Targets.InternalLeftInverse := InverseProof.internalLeftInverse
+theorem internalRightInverse : Targets.InternalRightInverse := InverseProof.internalRightInverse
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryDecoder.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryDecoder

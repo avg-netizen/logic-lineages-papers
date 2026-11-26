@@ -1,0 +1,52 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeValidityGuard/FieldProof.lean:45:4: error: Application type mismatch: The argument
+  projectionValue 1 ?m.29
+has type
+  Nonempty (Derivation ?m.23 ?m.25 (programGraph (Program.projection 1) (?m.29 1) ?m.29))
+but is expected to have type
+  Nonempty (Derivation body Delta (programGraph (Program.projection 1) raw (Fin.cons table (Fin.cons raw Fin.elim0))))
+in the application
+  firstValueAt (Program.projection 1) first raw (Fin.cons table (Fin.cons raw Fin.elim0)) (projectionValue 1 ?m.29)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeValidityGuard/FieldProof.lean:51:4: error: Application type mismatch: The argument
+  projectionValue 1 ?m.29
+has type
+  Nonempty (Derivation ?m.23 ?m.25 (programGraph (Program.projection 1) (?m.29 1) ?m.29))
+but is expected to have type
+  Nonempty (Derivation body Delta (programGraph (Program.projection 1) raw (Fin.cons table (Fin.cons raw Fin.elim0))))
+in the application
+  secondValueAt (Program.projection 1) second raw (Fin.cons table (Fin.cons raw Fin.elim0)) (projectionValue 1 ?m.29)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeValidityGuard/FieldProof.lean:57:4: error: Application type mismatch: The argument
+  projectionValue 1 ?m.29
+has type
+  Nonempty (Derivation ?m.23 ?m.25 (programGraph (Program.projection 1) (?m.29 1) ?m.29))
+but is expected to have type
+  Nonempty (Derivation body Delta (programGraph (Program.projection 1) raw (Fin.cons table (Fin.cons raw Fin.elim0))))
+in the application
+  headValueAt (Program.projection 1) head raw (Fin.cons table (Fin.cons raw Fin.elim0)) (projectionValue 1 ?m.29)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeValidityGuard/FieldProof.lean:72:13: error(lean.unknownIdentifier): Unknown identifier `reconstructPair`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeValidityGuard/FieldProof.lean:66:98: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+raw : OTerm alpha
+psi : InternalCalculus.Formula alpha
+next :
+  ∀ (beta : Type) (j : alpha → beta) (Theta : List (InternalCalculus.Formula beta))
+    (tag payload first second head : OTerm beta),
+    (∀ p ∈ Delta, Formula.relabel j p ∈ Theta) →
+      Nonempty (Derivation body Theta (graph2 InternalPairing.pairing (Term.relabel j raw) tag payload)) →
+        Nonempty (Derivation body Theta (graph1 (firstOf (Program.projection 0)) first (Term.relabel j raw))) →
+          Nonempty (Derivation body Theta (graph1 (secondOf (Program.projection 0)) second (Term.relabel j raw))) →
+            Nonempty (Derivation body Theta (graph1 (headOf (Program.projection 0)) head (Term.relabel j raw))) →
+              Nonempty (Derivation body Theta (Formula.relabel j psi))
+qs : Fin 5 → Program 1 :=
+  ![InternalUnpair.left, InternalUnpair.right, firstOf (Program.projection 0), secondOf (Program.projection 0),
+    headOf (Program.projection 0)]
+beta : Type
+j : alpha → beta
+ys : Fin 5 → OTerm beta
+Theta : List (InternalCalculus.Formula beta)
+hj : ∀ r ∈ Delta, Formula.relabel j r ∈ Theta
+hq :
+  ∀ (i : Fin 5), Nonempty (Derivation body Theta (programGraph (qs i) (ys i) (Fin.cons (Term.relabel j raw) Fin.elim0)))
+⊢ Nonempty (Derivation body Theta (Formula.relabel j psi))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeValidityGuard/FieldProof.lean:75:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeValidityGuard.FieldProof.headAt: forbidden axiom dependency sorryAx

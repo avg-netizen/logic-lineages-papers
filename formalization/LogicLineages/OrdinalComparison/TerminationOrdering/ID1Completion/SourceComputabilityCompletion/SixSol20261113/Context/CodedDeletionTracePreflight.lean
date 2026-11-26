@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.CodedDeletionTraceTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.CodedDeletionTracePreflight
+#check CodedDeletionTraceDefinitions.record
+#check CodedDeletionTraceDefinitions.StateAt
+#check CodedDeletionTraceDefinitions.StepAt
+#check CodedDeletionTraceDefinitions.AllSteps
+#check CodedDeletionTraceTargets.ActualCodedChain
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Context.CodedDeletionTracePreflight

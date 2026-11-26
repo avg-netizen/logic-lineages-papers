@@ -1,0 +1,28 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "21d8e72df8eec4aa7bf4f7f7b96087d781f4cd6b",
+  "failed_source_local_commit": "b863e3f3841355d956cc9e7016d6b4d76445056f",
+  "failed_source_tree": "34a0a0311e54e4589537174300b71cbef5732f32",
+  "failed_exact_gate_receipt": "1795372059154772200-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualBitFamilyRawLayoutStatementChecks",
+  "failed_receipt_sha256": "80ed4996641962712829331cc870ea7ee49ce48f61e3c9a7abd29ada2c6a3373",
+  "failed_exact_module_log_sha256": "22dfb9f27a4c04874beb41f256ab81759873ed1376de2b3e8e3569737532025c",
+  "failed_diagnostic": "ActualBitFamilyRawLayoutProof.lean:41:25: error: Tactic `simp` failed with a nested error:\nmaximum recursion depth has been reached\nuse `set_option maxRecDepth <num>` to increase limit\nuse `set_option diagnostics true` to get diagnostic information",
+  "failed_original_native_log_sha256": "d963cad48c5dedcaecbe4a8e63fe715619127e05d1cf7b16d8aec3016d257832",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualBitFamilyRawLayoutProof.lean",
+  "failed_proof_sha256": "92c8cb0441e04edcbefa758a8b991ac0735f57764211cdf1f46d5b898d5aa240",
+  "repaired_proof_sha256": "70251c6606a5fc9f817b76aaf533a9cd9a4e08f5d9928c48f35ae9152a06ca3a",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-RAW-LAYOUT-REPAIR-01.patch",
+  "patch_sha256": "3203a83c51169d706fa9997f4dcf7b4dbef599f498e52360981d8ee373c03418",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-RAW-LAYOUT-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "e5b9a6a12d124032536d11ad8d0f579dbebd3b38e273502c3d3798e5389978bb",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyRawLayoutPrimitiveProof.lean": "f9450a1888ad3b65eebb741b50e1e8584c99485b19ed57fd120faaeebf119305",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyRawLayoutStatementChecks.lean": "51ea0f30a4ba2196d985654f14fad97ce864475cd0a45d2acd80a82cf20c6d29",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyRawLayoutTargets.lean": "da07aec49db3ed3bc382e5c2ba9cc8b6c35152b06bef04861dbaf3a43fe19925",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-RAW-LAYOUT-SOURCE-MAP.md": "4984900142a536a8fa09eb80ee3e8bb7ac56cb25e3ac2cbb26531558ce91aee2"
+  },
+  "scope": "Replace recursive generic simp (with equation commutativity) by four exact rewrites and one eq_comm application. Preserve all bounded raw layout definitions, aliases, and effectivity claims."
+}

@@ -1,0 +1,6 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualRankChartPrototypeProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualRankChartPrototypeProof.lean
+@@ -42 +42,2 @@
+-        simp only [readWithin,if_pos member,Function.update_of_ne atGreatest]
++        have away : rename branch name ≠ top branch := atGreatest
++        simp only [readWithin,if_pos member,Function.update_of_ne away]

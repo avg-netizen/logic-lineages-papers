@@ -1,0 +1,19 @@
+--- Witness02
++++ Witness03
+@@ -54,14 +54,14 @@
+     cases a <;> rfl
+   unfold witnessMatrix
+   rw [he,conjunctionSubst,componentsSubst,memberSubst]
+-  simp only [witnessLift,Term.subst,Sum.elim_inr]
++  simp only [InternalRecursionGraphSyntaxProof.witnessLift,Term.subst,Sum.elim_inr]
+ 
+ theorem witnessSubst {beta : Type} (n : Nat) (xs : Fin 7 → OTerm alpha) (code : OTerm alpha) (sub : alpha → OTerm beta) :
+     (InternalFiniteBlocks.block (witnessMatrix n xs code)).subst (fun a => emb (sub a)) =
+       InternalFiniteBlocks.block (witnessMatrix n (fun i => (xs i).subst sub) (code.subst sub)) := by
+   unfold witnessMatrix
+   rw [OriginalContextInsertionSyntaxProof.blockSubst,liftedEmbedding,conjunctionSubst,componentsSubst,memberSubst]
+-  simp only [liftSubst,Term.subst,Sum.elim_inr]
++  simp only [InternalRecursionGraphSyntaxProof.liftSubst,Term.subst,Sum.elim_inr]
+ 
+ theorem witnessRename {beta : Type} (n : Nat) (xs : Fin 7 → OTerm alpha) (code : OTerm alpha) (j : alpha → beta) :
+     (InternalFiniteBlocks.block (witnessMatrix n xs code)).relabel j =

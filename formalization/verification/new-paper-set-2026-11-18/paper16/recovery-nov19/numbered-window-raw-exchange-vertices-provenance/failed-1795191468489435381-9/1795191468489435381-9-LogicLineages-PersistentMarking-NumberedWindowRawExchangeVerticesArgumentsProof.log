@@ -1,0 +1,23 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesArgumentsProof.lean:53:106: error: unsolved goals
+n head tail : Nat
+parsed : decode n = some (head, tail)
+headLt : head < n + 1
+tailLt : tail < n + 1
+⊢ ((table (n + 1))[head]?.getD default).fst.fst + 1 + ((table (n + 1))[tail]?.getD default).snd.fst =
+      (bounds head).fst.fst + 1 + (bounds tail).snd.fst ∧
+    max ((table (n + 1))[head]?.getD default).fst.snd ((table (n + 1))[tail]?.getD default).snd.snd =
+      max (bounds head).fst.snd (bounds tail).snd.snd
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesArgumentsProof.lean:57:24: warning: This simp argument is unused:
+  previous headLt
+
+Hint: Omit it from the simp argument list.
+  simp [̵a̵r̵g̵s̵N̵e̵x̵t̵,̵p̵a̵r̵s̵e̵d̵,̵p̵r̵e̵v̵i̵o̵u̵s̵ ̵h̵e̵a̵d̵L̵t̵,̵p̵r̵e̵v̵i̵o̵u̵s̵[̲a̲r̲g̲s̲N̲e̲x̲t̲,̲ ̲p̲a̲r̲s̲e̲d̲,̲ ̲p̲r̲e̲v̲i̲o̲u̲s̲ tailLt]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesArgumentsProof.lean:57:40: warning: This simp argument is unused:
+  previous tailLt
+
+Hint: Omit it from the simp argument list.
+  simp [̵a̵r̵g̵s̵N̵e̵x̵t̵,̵p̵a̵r̵s̵e̵d̵,̵p̵r̵e̵v̵i̵o̵u̵s̵ ̵h̵e̵a̵d̵L̵t̵,̵p̵r̵e̵v̵i̵o̵u̵s̵ ̵t̵a̵i̵l̵L̵t̵]̵[̲a̲r̲g̲s̲N̲e̲x̲t̲,̲ ̲p̲a̲r̲s̲e̲d̲,̲ ̲p̲r̲e̲v̲i̲o̲u̲s̲ ̲h̲e̲a̲d̲L̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

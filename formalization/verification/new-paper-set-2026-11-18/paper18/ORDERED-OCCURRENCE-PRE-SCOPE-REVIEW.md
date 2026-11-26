@@ -1,0 +1,6 @@
+# Exact supporting pre-scope
+Approved seven-pin full supporting conjunction. Actual Definitions/Targets read and pins verified. rows traverses negative/conjunction/disjunction positions without changing full p.compile; roster carries row/item/coefficient/summand. live filters nonzero nonlinear bound occurrences only; original matrix domains are not erased. ExactInactive is literal absence from live roster.
+
+Dispatch explicitly separates empty block, inactive continuation, tie substitutions and strict-order/unweighted-max guards. TieReduction genuinely removes one of two distinct bound names under equality, while full existential coverage recovers the tie witness from substitution. Tag1 and tag3 do not claim decreasing binders. Maximum permits repeated occurrence values and both nonlinear kinds; provenance refers to actual live-list indices. FreeSupport is outside residual binders. Programs is actual total computable descriptor existence with exact valid formula-code calibration, not an exhaustive arbitrary SourceFormula normalizer.
+
+Proof must establish finite enumeration/permutations/actual maximum, no supplied ordering oracle. No all-case runner-up classification, grammar closure, inactive elimination or global alternation/QE credit. Fresh proofs/native/final required.

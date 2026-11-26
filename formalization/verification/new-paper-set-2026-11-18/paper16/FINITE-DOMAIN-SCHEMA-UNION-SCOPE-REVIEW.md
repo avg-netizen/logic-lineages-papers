@@ -1,0 +1,3 @@
+# Independent ten-contract union scope confirmation
+
+Read FiniteDomainSchemaChecks.lean: exact_FullSchema is literally the conjunction of the ten originally reviewed FiniteDomainSchemaTargets, assembled from the independently accepted Basic8 and Remaining2 suppliers. All seven revised semantic pins reconcile. No extra premise, altered callback, replacement coordinate interpretation or lattice conclusion is added. Approved for a fresh parent-granted full-union gate under unchanged caps. This is scope confirmation, not pre-acceptance of the unrun union. Final source/artifact evidence still required. No native execution here.

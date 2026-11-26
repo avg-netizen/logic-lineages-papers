@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "scope": "Official prebuilt upstream cache recovery for the focused recognizer-factor gate. This record establishes environment provenance, not local proof acceptance.",
+  "repository_branch": "formalization/cumulative-continuation-2026-11-09",
+  "toolchain": {
+    "pin": "leanprover/lean4:v4.32.0-rc1",
+    "observed_version": "Lean (version 4.32.0-rc1, x86_64-unknown-linux-gnu, commit b4812ae53eea93439ad5dce5a5c26591c31cb697, Release)",
+    "verification": "Observed from the installed official runtime with lean --version before proof compilation; the restoration utility independently checked version and commit.",
+    "source_url": "https://github.com/leanprover/lean4/releases/download/v4.32.0-rc1/lean-4.32.0-rc1-linux.tar.zst",
+    "release_archive_sha256": "ce6e79dd19ea03c0bc17f9d565c3bac20cd2884561e3b431e5b293c1fbb2b5b3",
+    "lean_binary_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "installation_path": "/workspace/scratch/85f12b17d02f/lean-4.32.0-rc1-linux"
+  },
+  "dependencies": {
+    "manifest_path": "formalization/lake-manifest.json",
+    "manifest_sha256": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+    "git_dependency_count": 9,
+    "verified_revisions": [
+      {
+        "name": "mathlib",
+        "url": "https://github.com/leanprover-community/mathlib4",
+        "manifest_revision": "360da6fa66c1273b76b6b2d8c5666fd5ac2e3b56",
+        "actual_revision": "360da6fa66c1273b76b6b2d8c5666fd5ac2e3b56",
+        "matches_manifest": true
+      },
+      {
+        "name": "plausible",
+        "url": "https://github.com/leanprover-community/plausible",
+        "manifest_revision": "f3f26cc72646205ca167117487c008ee1dafe816",
+        "actual_revision": "f3f26cc72646205ca167117487c008ee1dafe816",
+        "matches_manifest": true
+      },
+      {
+        "name": "LeanSearchClient",
+        "url": "https://github.com/leanprover-community/LeanSearchClient",
+        "manifest_revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+        "actual_revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+        "matches_manifest": true
+      },
+      {
+        "name": "importGraph",
+        "url": "https://github.com/leanprover-community/import-graph",
+        "manifest_revision": "41f407a8e85b0fdc00910633a8f14754139b63f4",
+        "actual_revision": "41f407a8e85b0fdc00910633a8f14754139b63f4",
+        "matches_manifest": true
+      },
+      {
+        "name": "proofwidgets",
+        "url": "https://github.com/leanprover-community/ProofWidgets4",
+        "manifest_revision": "e6518a674e62de322b8f79eebeda7bcae2a36bc3",
+        "actual_revision": "e6518a674e62de322b8f79eebeda7bcae2a36bc3",
+        "matches_manifest": true
+      },
+      {
+        "name": "aesop",
+        "url": "https://github.com/leanprover-community/aesop",
+        "manifest_revision": "b5b9e2bb45ce91e4bc44eaa738c3a8910404ab82",
+        "actual_revision": "b5b9e2bb45ce91e4bc44eaa738c3a8910404ab82",
+        "matches_manifest": true
+      },
+      {
+        "name": "Qq",
+        "url": "https://github.com/leanprover-community/quote4",
+        "manifest_revision": "7a62bd13860cd39ac98da16ffc8c24d601353f69",
+        "actual_revision": "7a62bd13860cd39ac98da16ffc8c24d601353f69",
+        "matches_manifest": true
+      },
+      {
+        "name": "batteries",
+        "url": "https://github.com/leanprover-community/batteries",
+        "manifest_revision": "954dbc9873f3b4534dc9896604593406d0383520",
+        "actual_revision": "954dbc9873f3b4534dc9896604593406d0383520",
+        "matches_manifest": true
+      },
+      {
+        "name": "Cli",
+        "url": "https://github.com/leanprover/lean4-cli",
+        "manifest_revision": "406ebb8c8e2f7e852a1b47764b42494022ce652c",
+        "actual_revision": "406ebb8c8e2f7e852a1b47764b42494022ce652c",
+        "matches_manifest": true
+      }
+    ],
+    "path_dependency": "r1Calculator remains the repository path dependency; no Lake update or pin rewrite was performed."
+  },
+  "recovery_utility": {
+    "source_repository": "avg-netizen/logic-lineages-papers",
+    "source_commit": "65cd68930901ee72c1d7a284a4618e3f58db9d00",
+    "source_path": "formalization/verification/recovery-2026-11-12/cache-restoration/restore_official_cache.py",
+    "sha256": "78f3b985688c661aeb49cb5bfe12755eb06ef6821312ece62c39c5fa30e955d2",
+    "copied_unchanged": true,
+    "validation": "The utility checked all dependency revisions, the four pinned official Mathlib cache-source digests, and the official Lean runtime version/commit before calculating cache hashes.",
+    "lean_compilation_performed": false,
+    "runtime_version_query_performed": true
+  },
+  "official_cache": {
+    "mathlib_revision": "360da6fa66c1273b76b6b2d8c5666fd5ac2e3b56",
+    "root_hash": "4cc6b9c393376069",
+    "hash_smoke_test": {
+      "module": "Mathlib.Init",
+      "module_count": 61,
+      "root_hash": "4cc6b9c393376069"
+    },
+    "download_url_patterns": [
+      "https://lakecache.blob.core.windows.net/mathlib4-master/f/<hash>.ltar",
+      "https://lakecache.blob.core.windows.net/mathlib4/f/<hash>.ltar"
+    ],
+    "requested_root_count": 25,
+    "requested_roots": [
+      "Mathlib.Computability.PartrecCode",
+      "Mathlib.Computability.Primrec.List",
+      "Mathlib.Data.Finset.Card",
+      "Mathlib.Data.Finset.Lattice.Fold",
+      "Mathlib.Data.Finset.Max",
+      "Mathlib.Data.Finset.Union",
+      "Mathlib.Data.Fintype.Card",
+      "Mathlib.Data.Fintype.Fin",
+      "Mathlib.Data.Fintype.Order",
+      "Mathlib.Data.Fintype.Pi",
+      "Mathlib.Data.Fintype.Powerset",
+      "Mathlib.Data.Fintype.Prod",
+      "Mathlib.Data.Fintype.Sigma",
+      "Mathlib.Data.List.FinRange",
+      "Mathlib.Data.List.Forall2",
+      "Mathlib.Data.List.Nodup",
+      "Mathlib.Data.List.Perm.Basic",
+      "Mathlib.Data.List.Permutation",
+      "Mathlib.Data.Multiset.DershowitzManna",
+      "Mathlib.Data.Nat.Pairing",
+      "Mathlib.Logic.Equiv.List",
+      "Mathlib.Logic.Function.Iterate",
+      "Mathlib.Logic.Godel.GodelBetaFunction",
+      "Mathlib.ModelTheory.Semantics",
+      "Mathlib.Order.FixedPoints"
+    ],
+    "final_gate": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalMixedClosedRecognitionStatementChecks",
+    "final_gate_roots_match_requested_roots": true,
+    "transitive_module_count": 943,
+    "downloaded": 943,
+    "download_failures": 0,
+    "unpacked": 943,
+    "missing_olean_outputs": [],
+    "download_workers": 32,
+    "extraction_workers": 1,
+    "recovery_exit_code": 0,
+    "observed_terminal_output": [
+      "DOWNLOADED 943 FAIL 0 []",
+      "READY 943 official artifacts; no compiler invoked"
+    ],
+    "recovery_finished_before_local_compilation": true,
+    "cold_upstream_build": false
+  },
+  "native_checker_environment": {
+    "PATH_prefix": "/workspace/scratch/85f12b17d02f/lean-4.32.0-rc1-linux/bin",
+    "LEAN_CHECK_LOCK_DIR": "/workspace/scratch/85f12b17d02f/lean-locks",
+    "lock_directory_reason": "The execution environment has no /tmp directory; the existing checker environment override selects an existing absolute workspace directory for both shared lock files.",
+    "checker_modified": false,
+    "heap_mib": 2048,
+    "observed_process_tree_rss_mib": 1536,
+    "minimum_free_mib": 2048,
+    "threads": 1,
+    "cpu_seconds": 90,
+    "wall_seconds": 180,
+    "resource_profile_changed": false
+  },
+  "compressed_evidence": [
+    {
+      "path": "artifact-digests.json.gz",
+      "encoding": "gzip",
+      "gzip_mtime": 0,
+      "uncompressed_sha256": "ef11b351c2b73c902202fd9e02eeee2e50faf5e514fb811e3e369bd74443d33b",
+      "compressed_sha256": "7f7a7163320d53f18a3be623336c52fd574c4769be6901cb61ce9cf18bc0f354",
+      "records": 943
+    },
+    {
+      "path": "download-provenance.json.gz",
+      "encoding": "gzip",
+      "gzip_mtime": 0,
+      "uncompressed_sha256": "963dff2b52a776896802ba2eed9438bfd1b0e4ddb2a015862a72dfe9802acc14",
+      "compressed_sha256": "b585150b593a1df7b6a9d59d0b817571ba705bafda0da3782bb75b300219fe34",
+      "records": 943
+    }
+  ],
+  "limits": [
+    "This record does not claim a full-root build or remote CI pass.",
+    "Official upstream artifacts were downloaded and extracted; local proof acceptance is recorded separately.",
+    "No upstream cached binaries or .ltar archives are included in this evidence directory."
+  ]
+}

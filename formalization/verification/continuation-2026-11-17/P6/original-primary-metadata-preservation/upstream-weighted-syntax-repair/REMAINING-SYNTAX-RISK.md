@@ -1,0 +1,9 @@
+# Read-only remaining syntax risk scan
+
+Three unrepaired syntax modules show the same concrete-program expansion pattern. No checked-cache receipt was present for any of them at inspection, so these are source-based risks, not diagnosed failures or a reason to change caps. Do not edit before a concrete native failure and appropriate authorization.
+
+1. WeightedEraseSyntaxProof: highest source-level risk. fieldsSubst unfolds EraseInvariant.fields and expands both Fold.weighted weight graphs plus weight; matrix/allBlock use Fin 7. If it fails, first abstract the direct weighted program, element-weight program, erase-state Program 2, and merge Program 2 while preserving exact effect conjunction and seven coordinates. Keep old statements as exact instances; split generic fields/effect versus binder/witness files only if necessary.
+2. EraseInvariantSyntaxProof: nested allBlock countEffect (Fin 3) plus outer Fin 4 matrix and concrete Erase.state/count graphs. If it fails, abstract the count and state programs in small syntax schemas, preserve the two implications (equal needle query versus its negation), addTerm bit arithmetic, result disjunction and exact binder layout. Avoid replacing internal count agreement with semantic permutation assumptions.
+3. EraseAbsenceSyntaxProof: Fin 4 matrix re-expands concrete EraseInvariant.fields and count in resultSubst/atRawSubst/matrixWitness. If it fails, reuse checked generic state/count syntax identities or create an exact two-program schema; retain zero-bit implication and zero-count conclusion.
+
+Batch procedure: preserve originals and hashes, diagnose imports-only versus declaration accumulation, factor only syntactic substitution/witness work, verify every old header and exact schema instantiation independently, compile under unchanged historical caps, then verify recursive source/receipt closure. No target/AST/decoder/default change and no repair credit.

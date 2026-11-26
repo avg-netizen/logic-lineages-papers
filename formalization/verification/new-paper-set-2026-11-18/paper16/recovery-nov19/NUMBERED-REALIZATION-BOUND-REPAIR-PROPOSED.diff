@@ -1,0 +1,20 @@
+--- LogicLineages/PersistentMarking/NumberedWindowRealizationSubstitutionProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowRealizationSubstitutionProof.lean
+@@ -20,7 +20,7 @@
+     | nil => trivial
+     | cons _ ht => exact ih ht
+ 
+-private theorem variable {n : Nat} {values : Spine.Args} {Values : NArgs} (hV : RealizesArgs n values Values)
++private theorem substituteBound {n : Nat} {values : Spine.Args} {Values : NArgs} (hV : RealizesArgs n values Values)
+     (σ : Ty) (i d : Nat) :
+     Realizes n (Spine.substitute values d (.bound σ i)) (NumberedWindowSyntax.substitute Values d (.bound σ i)) := by
+   by_cases hlt : i < d
+@@ -54,7 +54,7 @@
+     (motive_2 := fun args As _ => ∀ depth, RealizesArgs n
+       (Spine.substituteArgs values depth args) (NumberedWindowSyntax.substituteArgs Values depth As)) with
+   | free => intro depth; exact .free
+-  | bound σ i => intro depth; exact variable hV σ i depth
++  | bound => intro depth; exact substituteBound hV _ _ depth
+   | lam _ ih => intro depth; exact .lam (ih (depth+1))
+   | ordinary _ ih => intro depth; exact .ordinary (ih depth)
+   | marked hk _ _ ihb ihe => intro depth; exact .marked hk (ihb depth) (ihe depth)

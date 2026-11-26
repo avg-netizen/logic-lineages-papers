@@ -1,0 +1,42 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawCalibrationProof.lean:85:4: error: unsolved goals
+case pos.e_a
+xs : List ℕ
+p : Formula
+hx : ¬xs = []
+hi : OrderedOccurrence.inactive xs p = []
+i j : ℕ
+hj : j ∈ List.filter (fun j => j != i) xs
+⊢ WindowCode.matrixSubstitute i (10 * j + 1) p.compile.encode = (p.compile.substitute i (Term.variable j)).encode
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawCalibrationProof.lean:90:4: error: unsolved goals
+case pos.e_a
+xs : List ℕ
+p : Formula
+hx : ¬xs = []
+hi : OrderedOccurrence.inactive xs p = []
+ys : List ℕ
+oi : OrderedOccurrence.Occurrence × ℕ
+hoi : oi ∈ (OrderedOccurrence.live xs p).zipIdx
+⊢ maximal (List.map occurrenceData (OrderedOccurrence.live xs p)) (occurrenceData oi.1) =
+    maximal (live xs p.encode) (occurrenceData oi.1)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawCalibrationProof.lean:89:41: warning: This simp argument is unused:
+  WindowCodeProof.matrix_calibration
+
+Hint: Omit it from the simp argument list.
+  simp [̵O̵r̵d̵e̵r̵e̵d̵O̵c̵c̵u̵r̵r̵e̵n̵c̵e̵.̵o̵u̵t̵p̵u̵t̵C̵o̵d̵e̵,̵W̵i̵n̵d̵o̵w̵C̵o̵d̵e̵P̵r̵o̵o̵f̵.̵m̵a̵t̵r̵i̵x̵_̵c̵a̵l̵i̵b̵r̵a̵t̵i̵o̵n̵,̵T̵e̵r̵m̵.̵e̵n̵c̵o̵d̵e̵,̵W̵i̵n̵d̵o̵w̵C̵o̵d̵e̵.̵v̵a̵r̵]̵[̲O̲r̲d̲e̲r̲e̲d̲O̲c̲c̲u̲r̲r̲e̲n̲c̲e̲.̲o̲u̲t̲p̲u̲t̲C̲o̲d̲e̲,̲ ̲T̲e̲r̲m̲.̲e̲n̲c̲o̲d̲e̲,̲ ̲W̲i̲n̲d̲o̲w̲C̲o̲d̲e̲.̲v̲a̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawCalibrationProof.lean:89:76: warning: This simp argument is unused:
+  Term.encode
+
+Hint: Omit it from the simp argument list.
+  simp [OrderedOccurrence.outputCode, ̲WindowCodeProof.matrix_calibration,T̵e̵r̵m̵.̵e̵n̵c̵o̵d̵e̵,̵ ̲WindowCode.var]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawCalibrationProof.lean:95:12: warning: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  simp [F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵d̵e̵f̵,̵OrderedOccurrence.outputCode, ̲name_calibration, ̲strict_calibration,
+          ← ̲maximal_calibration, ̲Matrix.encode, ̲WindowCode.conjunction]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

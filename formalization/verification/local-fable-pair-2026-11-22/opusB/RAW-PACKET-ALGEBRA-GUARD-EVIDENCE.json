@@ -1,0 +1,17 @@
+{
+  "key": "RAW-PACKET-ALGEBRA-GUARD",
+  "lane": "opusB",
+  "serves": "Root Task 4 group 2: prepend / cutoffPacket / bounded / project on preparedPacketCode",
+  "source_map": "verification/local-fable-pair-2026-11-22/opusB/RAW-PACKET-ALGEBRA-GUARD-SOURCE-MAP.md",
+  "modules": [
+    {"module": "LogicLineages.PermittedControl.RawPacketAlgebraGuardTargets", "sha256": "6eb200a5609b4e1b8c4ccab3441d9d51cb5afebb8125910d04cd03f7e280f4cc", "first_receipt": "1795385184265797565-3151419"},
+    {"module": "LogicLineages.PermittedControl.RawPacketAlgebraGuardProof", "sha256": "ba980cc8f4ce9b65e95a6a0cc1c1ce6e9fb324addd4a4e236a6f2933bc5b3c1f"}
+  ],
+  "passing_receipt": "1795385229420686671-3151708",
+  "failed_receipts": ["1795385216544389891-3151620 (open list named a nonexistent PreparedProjection.LongFieldCode; draft kept)"],
+  "note_on_receipts": "the failed gate also compiled the existing, unchanged PreparedParameterCodeProof (#728), which was not cached",
+  "theorems": ["RawPacketAlgebra.guardCalibration : GuardCalibration", "RawPacketAlgebra.guardEffectivity : GuardEffectivity", "RawPacketAlgebra.fullRawPacketAlgebraGuard : FullRawPacketAlgebraGuard"],
+  "print_axioms": ["'LogicLineages.PermittedControl.RawPacketAlgebra.fullRawPacketAlgebraGuard' depends on axioms: [propext, Classical.choice, Quot.sound]"],
+  "reused": ["PreparedProjection.preparedProjectionCodeExact (#728)", "IntegerAlgorithms.Proof.ofNat_primitive / negate_primitive", "group 1 appendCodeEq / appendPrimitive"],
+  "new_encoding": "none"
+}

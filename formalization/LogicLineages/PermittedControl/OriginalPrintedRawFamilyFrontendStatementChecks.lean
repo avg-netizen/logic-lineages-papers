@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedRawFamilyFrontendTargets
+import LogicLineages.PermittedControl.OriginalPrintedRawFamilyFrontendProof
+import LogicLineages.PermittedControl.OriginalPrintedRawFamilyFrontendPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedRawFamilyFrontend
+
+theorem fixed_exactOriginalRawFamilyFrontend : ExactOriginalRawFamilyFrontend :=
+  exactOriginalRawFamilyFrontend
+theorem fixed_originalRawFamilyFrontendEffectivity : OriginalRawFamilyFrontendEffectivity :=
+  originalRawFamilyFrontendEffectivity
+theorem fixed_fullOriginalRawFamilyFrontend : FullOriginalRawFamilyFrontend :=
+  ⟨fixed_exactOriginalRawFamilyFrontend,fixed_originalRawFamilyFrontendEffectivity⟩
+
+#print axioms fixed_exactOriginalRawFamilyFrontend
+#print axioms fixed_originalRawFamilyFrontendEffectivity
+#print axioms fixed_fullOriginalRawFamilyFrontend
+
+end LogicLineages.PermittedControl.StatementChecks

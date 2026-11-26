@@ -1,0 +1,10 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.ListSumBoundProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.ListEntryBoundProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.ListSumBoundStatementChecks
+theorem exactSum : ListSumBoundTargets.ActualSumBound := ListSumBoundProof.actualSumBound
+theorem exactEntry : ListSumBoundTargets.ActualEntryBound := ListEntryBoundProof.actualEntryBound
+#print axioms exactSum
+#print axioms exactEntry
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.ListSumBoundStatementChecks

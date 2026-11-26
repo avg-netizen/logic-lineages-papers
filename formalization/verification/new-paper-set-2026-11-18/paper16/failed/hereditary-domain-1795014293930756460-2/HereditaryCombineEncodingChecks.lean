@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.HereditaryCombineEncodingProof
+namespace LogicLineages.PersistentMarking.HereditaryCombineEncodingChecks
+theorem exact_CombineEncoding : HereditaryLatticeTargets.CombineEncoding := HereditaryCombineEncodingProof.encoding
+#print axioms exact_CombineEncoding
+end LogicLineages.PersistentMarking.HereditaryCombineEncodingChecks

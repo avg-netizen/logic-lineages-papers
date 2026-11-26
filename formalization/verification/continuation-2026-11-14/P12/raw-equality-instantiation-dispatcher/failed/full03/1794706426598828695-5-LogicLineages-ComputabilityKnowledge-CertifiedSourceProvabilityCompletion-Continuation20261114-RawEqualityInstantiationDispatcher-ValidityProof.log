@@ -1,0 +1,289 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/ValidityProof.lean:32:19: error: don't know how to synthesize implicit argument `ctx`
+  @HistoryLookup.consCall ?m.251 ctag (Term.numeral 10) (Term.numeral (RawEqualityInstantiation.templateCode a b))
+context:
+a b : Term 1
+n : ℕ
+p : Program n
+vtag ftag ptag ctag atag : ℕ
+hv : (nodes p)[vtag]? = some ⟨1, TwoSol20261113.ReflexivityRecognizer.termValidator⟩
+hf : (nodes p)[ftag]? = some ⟨2, LiteralSyntaxValidator.formulaValidator⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+ha : (nodes p)[atag]? = some ⟨2, HistoryAppend.append⟩
+ctx : ℕ
+raw : Term ctx
+stag : ℕ
+hs : (nodes p)[stag]? = some ⟨2, LiteralSyntaxScan.scanCode⟩
+w✝² w✝¹ w✝ etag : ℕ
+left✝² : (nodes p)[w✝²]? = some ⟨2, LiteralSyntaxScan.scanCode⟩
+left✝¹ : (nodes p)[w✝¹]? = some ⟨2, HistoryCodec.pair⟩
+left✝ : (nodes p)[w✝]? = some ⟨2, HistoryCodec.cons⟩
+he : (nodes p)[etag]? = some ⟨2, HistoryRuleSuffix.equalCode⟩
+T : Sentence → Prop := ⋯
+H : Formula ctx := ⋯
+G : List (Formula ctx) := ⋯
+task : Term ctx := ⋯
+one : Term ctx := ⋯
+two : Term ctx := ⋯
+fs : Term ctx := ⋯
+hh : Hilbert.Local T ctx G H
+av : Term ctx := ⋯
+bv : Term ctx := ⋯
+haScan :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((RawReflexivityDispatcher.valid vtag raw).imp
+      (Formula.equal
+        (LiteralSyntaxScan.scanCall stag
+          (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag Term.zero) one)
+          (RawUnarySubstitution.value ctag atag raw a))
+        one.succ))
+hbScan :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((RawReflexivityDispatcher.valid vtag raw).imp
+      (Formula.equal
+        (LiteralSyntaxScan.scanCall stag
+          (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag Term.zero) Term.zero)
+          (RawUnarySubstitution.value ctag atag raw b))
+        Term.zero.succ))
+hfuse :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((Formula.equal (LiteralSyntaxScan.scanCall stag two av) one.succ).imp
+      (Formula.equal (LiteralSyntaxScan.scanCall stag two (HistoryAppend.appendCall atag av bv))
+        (LiteralSyntaxScan.scanCall stag one bv)))
+hab :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal (LiteralSyntaxScan.scanCall stag two (HistoryAppend.appendCall atag av bv)) Term.zero.succ)
+heq :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (LiteralSyntaxScan.scanCall stag
+        (HistoryLookup.consCall ctag (LiteralSyntaxStep.taskCall ptag 1 Term.zero) Term.zero)
+        (HistoryLookup.consCall ctag (Term.numeral 0) (HistoryAppend.appendCall atag av bv)))
+      (LiteralSyntaxScan.scanCall stag
+        (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag Term.zero)
+          (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag Term.zero) Term.zero))
+        (HistoryAppend.appendCall atag av bv)))
+hinstance :
+  Hilbert.Local T ctx G
+    (Formula.equal (LiteralSyntaxScan.scanCall stag fs (RawEqualityInstantiation.instanceValue ctag atag a b raw))
+      Term.zero.succ)
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/ValidityProof.lean:32:66: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral ?m.251 (RawEqualityInstantiation.templateCode a b)
+context:
+a b : Term 1
+n : ℕ
+p : Program n
+vtag ftag ptag ctag atag : ℕ
+hv : (nodes p)[vtag]? = some ⟨1, TwoSol20261113.ReflexivityRecognizer.termValidator⟩
+hf : (nodes p)[ftag]? = some ⟨2, LiteralSyntaxValidator.formulaValidator⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+ha : (nodes p)[atag]? = some ⟨2, HistoryAppend.append⟩
+ctx : ℕ
+raw : Term ctx
+stag : ℕ
+hs : (nodes p)[stag]? = some ⟨2, LiteralSyntaxScan.scanCode⟩
+w✝² w✝¹ w✝ etag : ℕ
+left✝² : (nodes p)[w✝²]? = some ⟨2, LiteralSyntaxScan.scanCode⟩
+left✝¹ : (nodes p)[w✝¹]? = some ⟨2, HistoryCodec.pair⟩
+left✝ : (nodes p)[w✝]? = some ⟨2, HistoryCodec.cons⟩
+he : (nodes p)[etag]? = some ⟨2, HistoryRuleSuffix.equalCode⟩
+T : Sentence → Prop := ⋯
+H : Formula ctx := ⋯
+G : List (Formula ctx) := ⋯
+task : Term ctx := ⋯
+one : Term ctx := ⋯
+two : Term ctx := ⋯
+fs : Term ctx := ⋯
+hh : Hilbert.Local T ctx G H
+av : Term ctx := ⋯
+bv : Term ctx := ⋯
+haScan :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((RawReflexivityDispatcher.valid vtag raw).imp
+      (Formula.equal
+        (LiteralSyntaxScan.scanCall stag
+          (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag Term.zero) one)
+          (RawUnarySubstitution.value ctag atag raw a))
+        one.succ))
+hbScan :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((RawReflexivityDispatcher.valid vtag raw).imp
+      (Formula.equal
+        (LiteralSyntaxScan.scanCall stag
+          (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag Term.zero) Term.zero)
+          (RawUnarySubstitution.value ctag atag raw b))
+        Term.zero.succ))
+hfuse :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((Formula.equal (LiteralSyntaxScan.scanCall stag two av) one.succ).imp
+      (Formula.equal (LiteralSyntaxScan.scanCall stag two (HistoryAppend.appendCall atag av bv))
+        (LiteralSyntaxScan.scanCall stag one bv)))
+hab :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal (LiteralSyntaxScan.scanCall stag two (HistoryAppend.appendCall atag av bv)) Term.zero.succ)
+heq :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (LiteralSyntaxScan.scanCall stag
+        (HistoryLookup.consCall ctag (LiteralSyntaxStep.taskCall ptag 1 Term.zero) Term.zero)
+        (HistoryLookup.consCall ctag (Term.numeral 0) (HistoryAppend.appendCall atag av bv)))
+      (LiteralSyntaxScan.scanCall stag
+        (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag Term.zero)
+          (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag Term.zero) Term.zero))
+        (HistoryAppend.appendCall atag av bv)))
+hinstance :
+  Hilbert.Local T ctx G
+    (Formula.equal (LiteralSyntaxScan.scanCall stag fs (RawEqualityInstantiation.instanceValue ctag atag a b raw))
+      Term.zero.succ)
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/ValidityProof.lean:32:48: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral ?m.251 10
+context:
+a b : Term 1
+n : ℕ
+p : Program n
+vtag ftag ptag ctag atag : ℕ
+hv : (nodes p)[vtag]? = some ⟨1, TwoSol20261113.ReflexivityRecognizer.termValidator⟩
+hf : (nodes p)[ftag]? = some ⟨2, LiteralSyntaxValidator.formulaValidator⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+ha : (nodes p)[atag]? = some ⟨2, HistoryAppend.append⟩
+ctx : ℕ
+raw : Term ctx
+stag : ℕ
+hs : (nodes p)[stag]? = some ⟨2, LiteralSyntaxScan.scanCode⟩
+w✝² w✝¹ w✝ etag : ℕ
+left✝² : (nodes p)[w✝²]? = some ⟨2, LiteralSyntaxScan.scanCode⟩
+left✝¹ : (nodes p)[w✝¹]? = some ⟨2, HistoryCodec.pair⟩
+left✝ : (nodes p)[w✝]? = some ⟨2, HistoryCodec.cons⟩
+he : (nodes p)[etag]? = some ⟨2, HistoryRuleSuffix.equalCode⟩
+T : Sentence → Prop := ⋯
+H : Formula ctx := ⋯
+G : List (Formula ctx) := ⋯
+task : Term ctx := ⋯
+one : Term ctx := ⋯
+two : Term ctx := ⋯
+fs : Term ctx := ⋯
+hh : Hilbert.Local T ctx G H
+av : Term ctx := ⋯
+bv : Term ctx := ⋯
+haScan :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((RawReflexivityDispatcher.valid vtag raw).imp
+      (Formula.equal
+        (LiteralSyntaxScan.scanCall stag
+          (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag Term.zero) one)
+          (RawUnarySubstitution.value ctag atag raw a))
+        one.succ))
+hbScan :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((RawReflexivityDispatcher.valid vtag raw).imp
+      (Formula.equal
+        (LiteralSyntaxScan.scanCall stag
+          (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag Term.zero) Term.zero)
+          (RawUnarySubstitution.value ctag atag raw b))
+        Term.zero.succ))
+hfuse :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((Formula.equal (LiteralSyntaxScan.scanCall stag two av) one.succ).imp
+      (Formula.equal (LiteralSyntaxScan.scanCall stag two (HistoryAppend.appendCall atag av bv))
+        (LiteralSyntaxScan.scanCall stag one bv)))
+hab :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal (LiteralSyntaxScan.scanCall stag two (HistoryAppend.appendCall atag av bv)) Term.zero.succ)
+heq :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (LiteralSyntaxScan.scanCall stag
+        (HistoryLookup.consCall ctag (LiteralSyntaxStep.taskCall ptag 1 Term.zero) Term.zero)
+        (HistoryLookup.consCall ctag (Term.numeral 0) (HistoryAppend.appendCall atag av bv)))
+      (LiteralSyntaxScan.scanCall stag
+        (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag Term.zero)
+          (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag Term.zero) Term.zero))
+        (HistoryAppend.appendCall atag av bv)))
+hinstance :
+  Hilbert.Local T ctx G
+    (Formula.equal (LiteralSyntaxScan.scanCall stag fs (RawEqualityInstantiation.instanceValue ctag atag a b raw))
+      Term.zero.succ)
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/ValidityProof.lean:32:5: error: failed to infer `let` declaration type
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/ValidityProof.lean:10:69: error: unsolved goals
+a b : Term 1
+n : ℕ
+p : Program n
+vtag ftag ptag ctag atag : ℕ
+hv : (nodes p)[vtag]? = some ⟨1, TwoSol20261113.ReflexivityRecognizer.termValidator⟩
+hf : (nodes p)[ftag]? = some ⟨2, LiteralSyntaxValidator.formulaValidator⟩
+hp : (nodes p)[ptag]? = some ⟨2, HistoryCodec.pair⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+ha : (nodes p)[atag]? = some ⟨2, HistoryAppend.append⟩
+ctx : ℕ
+raw : Term ctx
+stag : ℕ
+hs : (nodes p)[stag]? = some ⟨2, LiteralSyntaxScan.scanCode⟩
+w✝² w✝¹ w✝ etag : ℕ
+left✝² : (nodes p)[w✝²]? = some ⟨2, LiteralSyntaxScan.scanCode⟩
+left✝¹ : (nodes p)[w✝¹]? = some ⟨2, HistoryCodec.pair⟩
+left✝ : (nodes p)[w✝]? = some ⟨2, HistoryCodec.cons⟩
+he : (nodes p)[etag]? = some ⟨2, HistoryRuleSuffix.equalCode⟩
+T : Sentence → Prop := GorbowPRNumeralCalculation.Theory p
+H : Formula ctx := RawReflexivityDispatcher.valid vtag raw
+G : List (Formula ctx) := [H]
+task : Term ctx := LiteralNumeralPrefix.termTask ptag Term.zero
+one : Term ctx := HistoryLookup.consCall ctag task Term.zero
+two : Term ctx := HistoryLookup.consCall ctag task one
+fs : Term ctx := LiteralSyntaxValidator.QuantifierOperationalProof.tasks ptag ctag Term.zero
+hh : Hilbert.Local T ctx G H
+av : Term ctx := RawUnarySubstitution.value ctag atag raw a
+bv : Term ctx := RawUnarySubstitution.value ctag atag raw b
+haScan :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((RawReflexivityDispatcher.valid vtag raw).imp
+      (Formula.equal
+        (LiteralSyntaxScan.scanCall stag
+          (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag Term.zero) one)
+          (RawUnarySubstitution.value ctag atag raw a))
+        one.succ))
+hbScan :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((RawReflexivityDispatcher.valid vtag raw).imp
+      (Formula.equal
+        (LiteralSyntaxScan.scanCall stag
+          (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag Term.zero) Term.zero)
+          (RawUnarySubstitution.value ctag atag raw b))
+        Term.zero.succ))
+hfuse :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    ((Formula.equal (LiteralSyntaxScan.scanCall stag two av) one.succ).imp
+      (Formula.equal (LiteralSyntaxScan.scanCall stag two (HistoryAppend.appendCall atag av bv))
+        (LiteralSyntaxScan.scanCall stag one bv)))
+hab :
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal (LiteralSyntaxScan.scanCall stag two (HistoryAppend.appendCall atag av bv)) Term.zero.succ)
+heq :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (LiteralSyntaxScan.scanCall stag
+        (HistoryLookup.consCall ctag (LiteralSyntaxStep.taskCall ptag 1 Term.zero) Term.zero)
+        (HistoryLookup.consCall ctag (Term.numeral 0) (HistoryAppend.appendCall atag av bv)))
+      (LiteralSyntaxScan.scanCall stag
+        (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag Term.zero)
+          (HistoryLookup.consCall ctag (LiteralNumeralPrefix.termTask ptag Term.zero) Term.zero))
+        (HistoryAppend.appendCall atag av bv)))
+hinstance :
+  Hilbert.Local T ctx G
+    (Formula.equal (LiteralSyntaxScan.scanCall stag fs (RawEqualityInstantiation.instanceValue ctag atag a b raw))
+      Term.zero.succ)
+⊢ Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      ((RawReflexivityDispatcher.valid vtag raw).imp
+        (Formula.equal
+          (LiteralSyntaxValidator.formulaCall ftag Term.zero (RawEqualityInstantiation.formulaValue ctag atag a b raw))
+          Term.zero.succ)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/ValidityProof.lean:61:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityInstantiationDispatcher.ValidityProof.internalFormulaValidity: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityInstantiationDispatcher.ValidityProof.internalFormulaValidity' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

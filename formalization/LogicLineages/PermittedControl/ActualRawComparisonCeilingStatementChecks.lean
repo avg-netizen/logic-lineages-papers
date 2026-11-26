@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.ActualRawComparisonCeilingTargets
+import LogicLineages.PermittedControl.ActualRawComparisonCeilingProof
+import LogicLineages.PermittedControl.ActualRawComparisonCeilingPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualRawComparisonCeiling
+
+theorem fixed_exactRawComparisonCeilingCalibration :
+    ExactRawComparisonCeilingCalibration := exactRawComparisonCeilingCalibration
+theorem fixed_exactRawComparisonCeilingEffectivity :
+    ExactRawComparisonCeilingEffectivity := exactRawComparisonCeilingEffectivity
+theorem fixed_fullActualRawComparisonCeiling : FullActualRawComparisonCeiling :=
+  ⟨fixed_exactRawComparisonCeilingCalibration,fixed_exactRawComparisonCeilingEffectivity⟩
+
+#print axioms fixed_exactRawComparisonCeilingCalibration
+#print axioms fixed_exactRawComparisonCeilingEffectivity
+#print axioms fixed_fullActualRawComparisonCeiling
+
+end LogicLineages.PermittedControl.StatementChecks

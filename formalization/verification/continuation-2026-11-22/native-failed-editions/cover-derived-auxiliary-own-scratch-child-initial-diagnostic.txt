@@ -1,0 +1,35 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxDerivedOwnChildProof.lean:35:5: error: unknown namespace `NumberedWindowInternalSparsePassWindowSyntaxProof`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxDerivedOwnChildProof.lean:50:6: error(lean.unknownIdentifier): Unknown identifier `windowRename`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxDerivedOwnChildProof.lean:45:81: error: unsolved goals
+body : Positive (Fin 1)
+α β : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+Δ : List (ID1Completion.InternalCalculus.Formula β)
+V TV M : Program 1
+W : Program 3
+s : Settings
+j : α → β
+keep : ∀ f ∈ Γ, Formula.relabel j f ∈ Δ
+ctx ty q : OTerm α
+child : LocalChild V TV M W s body Γ ctx ty q
+typed :
+  Nonempty (Derivation body Δ (Formula.relabel j (NumberedWindowInternalSparsePassWindowTargets.windowAt W ctx ty q)))
+ih :
+  Nonempty
+    (Derivation body Δ
+      (Formula.relabel j
+        (NumberedWindowInternalCoverLambdaDerivedOwnTargets.lambdaLocalIH W (auxCover V TV M) s ctx ty q)))
+valid :
+  Nonempty
+    (Derivation body Δ
+      (NumberedWindowInternalSparsePathEnvelopeTargets.unary (auxSyntax V TV)
+        (ID1Completion.InternalTagArithmeticSyntaxProof.suc ID1Completion.InternalTagArithmeticSyntaxProof.z)
+        (Term.relabel j q)))
+⊢ LocalChild V TV M W s body Δ (Term.relabel j ctx) (Term.relabel j ty) (Term.relabel j q)
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverAuxDerivedOwnChildProof.exact_OpenCoverAuxMeasuredChild' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverAuxDerivedOwnChildProof.exact_OpenCoverAuxMeasuredChildCases' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

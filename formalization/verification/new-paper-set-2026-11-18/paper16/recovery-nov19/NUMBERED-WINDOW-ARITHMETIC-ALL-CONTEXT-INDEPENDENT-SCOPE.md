@@ -1,0 +1,3 @@
+# Independent finite-context address scope review
+
+All3 comparator files and source map fully read;32 frozen pins current. Literal nearest-first finite binder lists, result Ty and actual least class codes remain data; fixed original S/K unchanged. Canonical checker independently admits decoded actual representative and tests successful same least code. Independent AdmittedAddress and AddressPositive quantify original Class/ActualCodeAt/positive RS; no checker-defined replacement semantics. Context and type must be literally equal along an edge. No arbitrary functional BoundContext or internal arithmetic/ID1. Five targets await target-only native preflight.

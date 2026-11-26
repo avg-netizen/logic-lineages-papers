@@ -1,0 +1,95 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldSyntaxProof.lean:18:5: error: unknown namespace `ID1Completion.InternalControlGraphSupportProof`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldSyntaxProof.lean:34:23: error(lean.unknownIdentifier): Unknown identifier `programRename`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldSyntaxProof.lean:33:85: error: unsolved goals
+k : ℕ
+α β : Type
+D : Program (k + 1)
+out raw : OTerm α
+params : Fin k → OTerm α
+j : α → β
+⊢ Formula.relabel j (programGraph (flatMap D) out (Fin.cons raw params)) =
+    programGraph (flatMap D) (Term.relabel j out) (Fin.cons (Term.relabel j raw) fun i => Term.relabel j (params i))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldSyntaxProof.lean:34:37: warning: This simp argument is unused:
+  consTermRename
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵l̵a̵t̵G̵r̵a̵p̵h̵,̵p̵r̵o̵g̵r̵a̵m̵R̵e̵n̵a̵m̵e̵,̵c̵o̵n̵s̵T̵e̵r̵m̵R̵e̵n̵a̵m̵e̵]̵[̲f̲l̲a̲t̲G̲r̲a̲p̲h̲,̲ ̲p̲r̲o̲g̲r̲a̲m̲R̲e̲n̲a̲m̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldSyntaxProof.lean:39:24: error(lean.unknownIdentifier): Unknown identifier `programRename`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldSyntaxProof.lean:38:88: error: unsolved goals
+k : ℕ
+α β : Type
+D : Program (k + 1)
+raw image : OTerm α
+params : Fin k → OTerm α
+j : α → β
+⊢ Formula.relabel j
+      (programGraph (containsImage D)
+        (ID1Completion.InternalTagArithmeticSyntaxProof.suc ID1Completion.InternalTagArithmeticSyntaxProof.z)
+        (Fin.cons raw (Fin.cons image params))) =
+    programGraph (containsImage D)
+      (ID1Completion.InternalTagArithmeticSyntaxProof.suc ID1Completion.InternalTagArithmeticSyntaxProof.z)
+      (Fin.cons (Term.relabel j raw) (Fin.cons (Term.relabel j image) fun i => Term.relabel j (params i)))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldSyntaxProof.lean:39:38: warning: This simp argument is unused:
+  consTermRename
+
+Hint: Omit it from the simp argument list.
+  simp only [̵i̵m̵a̵g̵e̵G̵r̵a̵p̵h̵,̵p̵r̵o̵g̵r̵a̵m̵R̵e̵n̵a̵m̵e̵,̵c̵o̵n̵s̵T̵e̵r̵m̵R̵e̵n̵a̵m̵e̵,̵s̵u̵c̵R̵e̵l̵a̵b̵e̵l̵,̵z̵R̵e̵l̵a̵b̵e̵l̵]̵[̲i̲m̲a̲g̲e̲G̲r̲a̲p̲h̲,̲ ̲p̲r̲o̲g̲r̲a̲m̲R̲e̲n̲a̲m̲e̲,̲ ̲s̲u̲c̲R̲e̲l̲a̲b̲e̲l̲,̲ ̲z̲R̲e̲l̲a̲b̲e̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldSyntaxProof.lean:39:53: warning: This simp argument is unused:
+  sucRelabel
+
+Hint: Omit it from the simp argument list.
+  simp only [̵i̵m̵a̵g̵e̵G̵r̵a̵p̵h̵,̵p̵r̵o̵g̵r̵a̵m̵R̵e̵n̵a̵m̵e̵,̵c̵o̵n̵s̵T̵e̵r̵m̵R̵e̵n̵a̵m̵e̵,̵s̵u̵c̵R̵e̵l̵a̵b̵e̵l̵,̵z̵R̵e̵l̵a̵b̵e̵l̵]̵[̲i̲m̲a̲g̲e̲G̲r̲a̲p̲h̲,̲ ̲p̲r̲o̲g̲r̲a̲m̲R̲e̲n̲a̲m̲e̲,̲ ̲c̲o̲n̲s̲T̲e̲r̲m̲R̲e̲n̲a̲m̲e̲,̲ ̲z̲R̲e̲l̲a̲b̲e̲l̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldSyntaxProof.lean:39:64: warning: This simp argument is unused:
+  zRelabel
+
+Hint: Omit it from the simp argument list.
+  simp only [imageGraph, ̲programRename, ̲consTermRename, ̲sucRelabel,̵z̵R̵e̵l̵a̵b̵e̵l̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldSyntaxProof.lean:42:26: error(lean.invalidField): Invalid field notation: Type of
+  Fin.cons ?m.26 ?m.28 i
+is not known; cannot resolve field `subst`
+
+Hint: Consider replacing the field projection with a call to one of the following:
+  • `Eq.subst`
+  • `HEq.subst`
+  • `Iff.subst`
+  • `Aesop.BuiltinRules.subst`
+  • `Aesop.Hyp.subst`
+  • `Aesop.Match.subst`
+  • `Lean.Meta.subst`
+  • `BoundedFormula.subst`
+  • `Term.subst`
+  • `Lean.Meta.AssertAfterResult.subst`
+  • `Lean.Meta.InductionSubgoal.subst`
+  • `Lean.Meta.UnifyEqResult.subst`
+  • `Lean.Parser.Tactic.subst`
+  • `Lean.Parser.Term.subst`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldSyntaxProof.lean:42:38: error: Application type mismatch: The argument
+  ps
+has type
+  Fin k → OTerm α
+but is expected to have type
+  (i : Fin k) → ?m.25 i.succ
+in the application
+  Fin.cons ?m.26 ps
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldSyntaxProof.lean:50:33: error(lean.unknownIdentifier): Unknown identifier `mapCons`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldSyntaxProof.lean:48:85: error: unsolved goals
+k : ℕ
+α β : Type
+D : Program (k + 1)
+raw image : OTerm α
+params : Fin k → OTerm α
+ts : α → OTerm β
+⊢ (ID1Completion.InternalGraphComposition.graph (OrdinaryArithmetic.graphFormula (containsImage D))
+      (ID1Completion.InternalTagArithmeticSyntaxProof.suc ID1Completion.InternalTagArithmeticSyntaxProof.z) fun i =>
+      Term.subst (Fin.cons raw (Fin.cons image params) i) ts) =
+    ID1Completion.InternalGraphComposition.graph (OrdinaryArithmetic.graphFormula (containsImage D))
+      (ID1Completion.InternalTagArithmeticSyntaxProof.suc ID1Completion.InternalTagArithmeticSyntaxProof.z)
+      (Fin.cons (Term.subst raw ts) (Fin.cons (Term.subst image ts) fun i => Term.subst (params i) ts))

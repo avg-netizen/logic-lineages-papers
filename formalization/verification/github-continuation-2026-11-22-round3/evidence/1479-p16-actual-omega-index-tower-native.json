@@ -1,0 +1,89 @@
+{
+  "status": "checked",
+  "base_commit": "9a8fd8f8ffd9c1ab27b91096dc1e52aa196bb413",
+  "scope": "Unconditional literal ordinal index sequence with \u03a9=\u03c9\u2081, a0=0 and a(n+1)=\u03a9^a(n). Proves strict increase, strict cofinality at the actual supremum, every finite stage below it, equality with the normal fixed-point construction, fixedness and least pre-fixed-point property. Does not define psi or coefficient norm, identify epsilon_(\u03a9+1), or discharge full collapse/calibration/BH hypotheses.",
+  "proof_modules": [
+    {
+      "module": "LogicLineages.PersistentMarking.ActualOmegaTowerProof",
+      "native_receipt": "1795411144544945494-11",
+      "native_receipt_sha256": "ce6647115aa986f8dd96f2caa927db9794842cdb626a9f59f0dcdee1c520812f",
+      "native_row": {
+        "discarded_failed_outputs": [],
+        "last_wait_channel": "0",
+        "log": "build-reports/1795411144544945494-11-LogicLineages-PersistentMarking-ActualOmegaTowerProof.log",
+        "memory_observation_failure": {},
+        "module": "LogicLineages.PersistentMarking.ActualOmegaTowerProof",
+        "observed_cpu_seconds": 0.98,
+        "peak_process_tree_rss_kib": 893700,
+        "returncode": 0,
+        "seconds": 1.026,
+        "source_sha256": "7b5a838287757aba12c3ebb35bb912f6e116bf2489b37bfee84884e3e7f77871",
+        "stopped_threads": []
+      },
+      "native_log_sha256": "3c158a9661310853603f33e37b97a31e1019d6d203d0aec43ca7bc0e5b7689d8",
+      "profile": {
+        "core_only_profile": false,
+        "cpu_seconds": 90,
+        "heap_cap_mib": 2048,
+        "minimum_free_mib": 2048,
+        "rss_cap_mib": 1536,
+        "single_thread": true,
+        "threads": 1,
+        "upstream_cache_only": true,
+        "wall_seconds": 180
+      }
+    }
+  ],
+  "named_axiom_output": {
+    "LogicLineages.PersistentMarking.ActualOmegaTower.exact_LiteralRecurrence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.ActualOmegaTower.exact_StrictlyIncreasing": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.ActualOmegaTower.exact_BelowEndpoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.ActualOmegaTower.exact_Cofinal": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.ActualOmegaTower.exact_EndpointAsNfp": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.ActualOmegaTower.exact_EndpointFixedPoint": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.ActualOmegaTower.exact_EndpointLeast": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.ActualOmegaTower.exact_FullActualOmegaTower": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "completion_gate_receipt": "1795411144544945494-11",
+  "completion_gate_receipt_sha256": "ce6647115aa986f8dd96f2caa927db9794842cdb626a9f59f0dcdee1c520812f",
+  "source_pins": {
+    "formalization/LogicLineages/PersistentMarking/ActualOmegaTowerDefinitions.lean": "83192afa669c76ec0371715282fdabe172d93b92ed0417b84d1c0196845d8e89",
+    "formalization/LogicLineages/PersistentMarking/ActualOmegaTowerTargets.lean": "ad9d3d8f0b2b1554f40ed46927dd06b1f1b535dd7601eed3e210b942e6cabb67",
+    "formalization/LogicLineages/PersistentMarking/ActualOmegaTowerProof.lean": "7b5a838287757aba12c3ebb35bb912f6e116bf2489b37bfee84884e3e7f77871",
+    "formalization/verification/github-continuation-2026-11-22-round3/ordinal-frontier/OMEGA-TOWER-SOURCE-MAP.md": "23f4aad98f084fc6c129b78398ede8c21e8c200c15ba4e6d9037c932c3998ebb"
+  },
+  "verification": "Focused statement/source comparison and original fixed-limit native gate, with preserved necessary proof repairs; no duplicate artifact replay.",
+  "portable_evidence": "../root/portable-native-evidence.zip"
+}

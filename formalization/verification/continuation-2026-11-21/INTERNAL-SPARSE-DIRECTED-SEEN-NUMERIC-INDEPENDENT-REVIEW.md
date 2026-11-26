@@ -1,0 +1,7 @@
+# Paper 16: directed seen scan, numerical acceptance (supporting 734)
+
+Reviewed independently against the frozen target, the author's exact proof bytes, and the second-recovery native artifacts. This is a new successful check, not a carryover from either interrupted workspace. Target-only receipt 1795275094106057816-2872 preceded proof authorship. The fresh unchanged-cap proof receipt is 1795282225197323405-1715. All 881 local modules and the exact declared check alias were recursively source/object matched. The archive includes the receipt, gate, independent audit and all module logs, with successful ZIP integrity and no nonstandard axioms.
+
+The literal scan uses standard scratch decoding and list recursion with zero base (including malformed/empty input). In a row [w,prior,ctx,ty,v], head equality tests w=v. If unequal, the fixed projection order 2,3,0,4 evaluates the supplied E at [ctx,ty,w,v]; only exactly 1 counts. Otherwise the actual tail result is retained. The proof identifies the original recursor fold and does list induction to obtain the exact ordered List.any equation for every raw input, with no promise on E. It does not replace the list, reverse the physical edge, or treat any nonzero edge result as acceptance.
+
+This accepts local numerical evidence only. No arbitrary-open witness or rejection rule, fixed original scalar edge installation, filter, rounds, full least, RawMatching, or numbered paper target is credited.

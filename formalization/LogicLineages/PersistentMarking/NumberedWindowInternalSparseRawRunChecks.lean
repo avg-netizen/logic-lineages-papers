@@ -1,0 +1,19 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawRunTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawRunOwnProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawRunChecks
+open NumberedWindowInternalSparseRawRunTargets
+open NumberedWindowInternalSparseRawRunInitialProof (initial)
+open NumberedWindowInternalSparseRawRunIterationProof (loop)
+open NumberedWindowInternalSparseRawRunOwnProof (own)
+
+theorem exact_OriginalRunInitialization : ExactOriginalRunInitialization := initial
+theorem exact_OriginalRawIteration : ExactOriginalRawIteration := loop
+theorem exact_OriginalOwnRawRun : ExactOriginalOwnRawRun := own
+
+#print axioms exact_OriginalRunInitialization
+#print axioms exact_OriginalRawIteration
+#print axioms exact_OriginalOwnRawRun
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseRawRunChecks

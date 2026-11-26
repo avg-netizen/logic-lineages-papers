@@ -1,0 +1,59 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowAtomicPositiveTargets
+import LogicLineages.PersistentMarking.NumberedWindowAtomicRawStepChecks
+import LogicLineages.PersistentMarking.NumberedWindowAtomicLeastChecks
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowAtomicPositiveAdvanceProof
+open NumberedWindowAtomicRawStep NumberedWindowAtomicPositiveTargets
+open NumberedWindowConcreteCheckers (step)
+open NumberedWindowScalarAlgorithm (least)
+open NumberedWindowPositivePathAlgorithm (advance hopView)
+open NumberedWindowAtomicRawStepChecks (exact_ConcreteAtomicRawStep)
+open NumberedWindowAtomicLeastChecks (exact_AtomicLeastSingleton)
+
+private theorem successful (runStep : Nat → Nat → Nat → Bool) (leastOf : Nat → Option Nat)
+    {source code y : Nat} (h : advance runStep leastOf (some source) code = some y) :
+    ∃ q w r, hopView code = some (y,q,w,r) ∧ runStep q w r = true ∧
+      leastOf q = some source ∧ leastOf r = some y := by
+  cases hv : hopView code with
+  | none => simp [advance,hv] at h
+  | some hop =>
+    rcases hop with ⟨target,q,w,r⟩
+    have hc : (if runStep q w r && (leastOf q == some source) && (leastOf r == some target)
+        then some target else none) = some y := by
+      simpa only [advance,Option.bind_eq_bind,Option.bind_some,hv] using h
+    by_cases good : (runStep q w r && (leastOf q == some source) &&
+        (leastOf r == some target)) = true
+    · rw [if_pos good] at hc
+      have hy := Option.some.inj hc
+      simp only [Bool.and_eq_true,beq_iff_eq,and_assoc] at good
+      exact ⟨q,w,r,hy ▸ hv,good.1,good.2.1,hy ▸ good.2.2⟩
+    · rw [if_neg good] at hc
+      cases hc
+
+theorem atomAdvance : ExactConcreteAtomicAdvance := by
+  constructor
+  · intro xs s Γ requested t n code y h
+    obtain ⟨q,w,r,_,accepted,hin,hout⟩ :=
+      successful (step xs s Γ requested) (least s Γ requested) h
+    have isolates := exact_AtomicLeastSingleton s Γ requested t
+    have qFree := (isolates.1 n).1 q hin
+    subst q
+    obtain ⟨rBottom,rAdmitted⟩ := exact_ConcreteAtomicRawStep.1 xs s Γ requested t n w r accepted
+    subst r
+    have yBottom := isolates.2.2 y hout
+    subst y
+    exact ⟨rfl,rAdmitted,hout⟩
+  · intro xs s Γ requested t code
+    cases h : advance (step xs s Γ requested) (least s Γ requested) (some (bottomRaw t)) code with
+    | none => rfl
+    | some y =>
+      obtain ⟨q,w,r,_,accepted,hin,_⟩ :=
+        successful (step xs s Γ requested) (least s Γ requested) h
+      have qBottom := (exact_AtomicLeastSingleton s Γ requested t).2.1 q hin
+      subst q
+      rw [exact_ConcreteAtomicRawStep.2 xs s Γ requested t w r] at accepted
+      cases accepted
+
+end LogicLineages.PersistentMarking.NumberedWindowAtomicPositiveAdvanceProof

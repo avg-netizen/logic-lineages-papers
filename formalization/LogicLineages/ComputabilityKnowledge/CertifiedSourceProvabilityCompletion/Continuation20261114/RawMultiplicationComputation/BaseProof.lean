@@ -1,0 +1,13 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMultiplicationComputation.InstallationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMultiplicationComputation.BaseProof
+theorem internalBase : Targets.InternalBase := by
+ intro n p old a x I ctx t index fuel
+ exact RawMultiplicationCertificates.ZeroCertificate.StatementChecks.exactCore n p
+  (RawRightReplace.logicalLeaf (RawCumulativeLogical.logical old)) (RawCumulativeArithmetic.arithmetic a) x
+  (InstallationProof.zeroInstallation p old a x I) ctx t index fuel
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMultiplicationComputation.BaseProof
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMultiplicationComputation.BaseProof
+#print axioms LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawMultiplicationComputation.BaseProof.internalBase

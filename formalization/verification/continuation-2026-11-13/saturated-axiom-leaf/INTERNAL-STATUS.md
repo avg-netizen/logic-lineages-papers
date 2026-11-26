@@ -1,0 +1,1 @@
+InternalProof.wrapperEquation and InternalProof.internalMonotonicity passed native compile and standard-axiom audit1794601067255601764-5. Arbitrary actual x; no native calibration/Boolean premises. This is internal wrapper monotonicity only, not yet SAME-source installation or full checker/HB monotonicity. Native calibration is a separate lane.

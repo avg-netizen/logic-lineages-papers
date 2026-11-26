@@ -1,0 +1,26 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualRawStageCutoffPrimitiveProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualRawStageCutoffPrimitiveProof.lean
+@@ -36,2 +36,4 @@
+-private theorem chartCostCurried :
+-    Primrec₂ (fun (p : Nat × RawFamily) (chart : Pattern) => chartCost p.1 p.2 chart) := by
++private def chartArgs (p : (Nat × RawFamily) × Pattern) : Nat × RawFamily × Pattern :=
++  (p.1.1,p.1.2,p.2)
++
++private theorem chartArgsPrimitive : Primrec chartArgs := by
+@@ -41,3 +43,13 @@
+-  have flat : Primrec (fun p : A => chartCost p.1.1 p.1.2 p.2) :=
+-    chartCostPrimitive.comp (B.pair (raw.pair Primrec.snd))
+-  exact flat.to₂
++  exact B.pair (raw.pair Primrec.snd)
++
++private theorem chartArgsLiteral (p : (Nat × RawFamily) × Pattern) :
++    chartCost (chartArgs p).1 (chartArgs p).2.1 (chartArgs p).2.2 =
++      chartCost p.1.1 p.1.2 p.2 := rfl
++
++private theorem chartCostLifted :
++    Primrec (fun p : (Nat × RawFamily) × Pattern => chartCost p.1.1 p.1.2 p.2) :=
++  (chartCostPrimitive.comp chartArgsPrimitive).of_eq chartArgsLiteral
++
++private theorem chartCostCurried :
++    Primrec₂ (fun (p : Nat × RawFamily) (chart : Pattern) => chartCost p.1 p.2 chart) :=
++  chartCostLifted.to₂

@@ -1,0 +1,5 @@
+Independent acceptance of eight supporting numerical application contracts.
+
+Reviewed exact source/frozen targets and all seven authored proof leaves, narrow preserved-error proof repairs and applied hashes. Fresh receipt1795074295574882872-6 passes the exact application root under original core limits. Coordinator independently recomputed current compiler/source/object/import input keys for49 modules and44 pins; disk/native-profile/log review reports no errors. All8 exact aliases use only propext and Quot.sound.
+
+Literal original typed argument domains, numeric window admission and function-side path lifting preserve one unchanged universe and binding context. Actual finite-numbered owner append uses the printed abstraction step and literal beta, with one decrement per ordered argument and exact original head/base/extras retention. This supports the numbered whole-tuple proof, but does not establish protected ordinary-prefix simulation, arbitrary derivation locality, positivity, accessibility or any new whole numbered source statement. No full-root or CI claim.

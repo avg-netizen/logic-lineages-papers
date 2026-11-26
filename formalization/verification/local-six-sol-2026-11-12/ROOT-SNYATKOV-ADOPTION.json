@@ -1,0 +1,120 @@
+{
+  "accepted_at_utc": "2026-11-13T01:52:15.941716+00:00",
+  "baseline_commit": "570d4cbb17fd6b0ff8fb1c73032f877e168b4a34",
+  "source_statement": "08-multivariate-collapse-comparison:thm:snyatkov",
+  "source_file": "08-multivariate-collapse-comparison/paper.tex",
+  "source_sha256": "a4a8481437b8c7683ee8d82ec9e13e0a29af44110edcace0e9b0ef31b8fdaf0d",
+  "accepted_declaration": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SixSol20261112.SourceDecisionStatementChecks.fullSourceDecision",
+  "exact_target": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SixSol20261112.SourceDecisionTargets.FullSourceDecision",
+  "frozen_target_file": "LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/SixSol20261112/SourceDecisionWorkingTargets.lean",
+  "frozen_target_sha256": "dd4ac8c5ed1df81487839355f4dae4ef26141324eede8793576228b1b15b0dc6",
+  "scope": "Full original first-order theory of (Nat;0,1,+,<,f), with f(n)=F5(n+100), is decidable by the explicit total computable encoded compiler/evaluator. Every closed original SourceFormula and every valuation is covered, including arbitrary Boolean/quantifier nesting, nonlinear Phi inputs, repeated names and binder shadowing. No source-shape, solver or extra mathematical premise.",
+  "source_correspondence_review": {
+    "complete_grammar": "Original equal/less, negation, conjunction, existential Nat binders form complete first-order syntax; original BaseTerm contains numerals, names, addition and actual Phi.",
+    "exact_control": "ControlDefinitions.fastControl starts each iterate at n; Phi(n)=fastControl 5 (n+100), matching source eq:f. Fixed-seed H stays auxiliary.",
+    "effectivity": "Actual answer=groundMatrix composed with eliminate; literal compiler calibration, Computable compiler/evaluator, full typed source elimination and original support discharge the final endpoint.",
+    "quantifiers": "Every closed original source sentence, all valuations, arbitrary nesting and bound-name shadowing; no solver/premise or fragment admission condition.",
+    "review_basis": "Read actual source statement, source grammar/semantics, exact frozen target, final proof and native exact axiom evidence; reused previously checked immutable semantic suppliers."
+  },
+  "native_verification": {
+    "file": "build-reports/1794530363210414339-9.json",
+    "sha256": "78fdbbc201bfc208f02d1848cdac540a872d9762dc173aa2f03b56dacc7f6db1",
+    "gate": "LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.SixSol20261112.SourceDecisionStatementChecks",
+    "gate_log": "build-reports/1794530363210414339-9-LogicLineages-OrdinalComparison-LayeredComparison-SnyatkovCompletion-SixSol20261112-SourceDecisionStatementChecks.log",
+    "gate_log_sha256": "ff0fb6a6e0f3c35e51288d288480c682fb916d32889ee1ecbd8235296217919c",
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "new_current_source_matched_receipt_entries": 276,
+    "legacy_import_scope": "Previously accepted immutable dependencies reused by the standard checker. Omitted legacy imports are not newly counted as source-matched rows.",
+    "new_active_source_artifact_checks": [
+      {
+        "source": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/SixSol20261112/BooleanGraphCodeCalibrationProof.lean",
+        "source_sha256": "9466a516b8953a933b9feef75c8cbfafdaf290754d19ed476c21a5c7c1e7047d",
+        "native_artifacts_match": true
+      },
+      {
+        "source": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/SixSol20261112/BooleanGraphCodePredicateProgramsProof.lean",
+        "source_sha256": "062910153f23595c197b106cfe430ff8fdd43f36b6e35e507749a37b543b5896",
+        "native_artifacts_match": true
+      },
+      {
+        "source": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/SixSol20261112/BooleanGraphCodeStatementChecks.lean",
+        "source_sha256": "f623fd7ce76c367d5ef7e22e7a44c06f1b50c51e6c08cc0b7c243ae48aaf1bdd",
+        "native_artifacts_match": true
+      },
+      {
+        "source": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/SixSol20261112/BooleanGraphCodeStructureProgramsProof.lean",
+        "source_sha256": "afc07af49afaa390055f2f3ff20dc24a555edde77bc7229db1029cdee4149d71",
+        "native_artifacts_match": true
+      },
+      {
+        "source": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/SixSol20261112/BooleanGraphCodeWorkingDefinitions.lean",
+        "source_sha256": "ca0cfbb2f1d1e6e22a66dc8665889faa5e4c2a960e9d5b65bef3e64bdd79584a",
+        "native_artifacts_match": true
+      },
+      {
+        "source": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/SixSol20261112/BooleanGraphCodeWorkingTargets.lean",
+        "source_sha256": "6dd540f80196eb5ed16105e718105110908901c1a3c5677a3bd67445610f9f7d",
+        "native_artifacts_match": true
+      },
+      {
+        "source": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/SixSol20261112/GroundEvaluatorCalibrationProof.lean",
+        "source_sha256": "2876a4343631c2f1b165c5e96a0aca00758322d20b9376e0fd4acf88bde17acc",
+        "native_artifacts_match": true
+      },
+      {
+        "source": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/SixSol20261112/GroundEvaluatorProgramsProof.lean",
+        "source_sha256": "6f6247daded3705dec3917eff91688116832965fc2899e433af118310bae5cf5",
+        "native_artifacts_match": true
+      },
+      {
+        "source": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/SixSol20261112/SourceCompilerCalibrationProof.lean",
+        "source_sha256": "e61a5ea94e9fad8b0b6553b992e86ffb7cf857da2e3dedabeddce719bf1e26b1",
+        "native_artifacts_match": true
+      },
+      {
+        "source": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/SixSol20261112/SourceCompilerProgramsProof.lean",
+        "source_sha256": "ca61dd92e5bb54aa3d016308e2cc81dfd4c4a82d235ca4d1c5b7e12f0076c034",
+        "native_artifacts_match": true
+      },
+      {
+        "source": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/SixSol20261112/SourceDecisionProof.lean",
+        "source_sha256": "33122511e7a378cb305a8a006e78f4cf0fa8b740256b370272da67210bf9dac0",
+        "native_artifacts_match": true
+      },
+      {
+        "source": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/SixSol20261112/SourceDecisionStatementChecks.lean",
+        "source_sha256": "ac97a630f7307716c671c4eceff695f18841ab3933a4c12200bd8fb6835dc67e",
+        "native_artifacts_match": true
+      },
+      {
+        "source": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/SixSol20261112/SourceDecisionWorkingDefinitions.lean",
+        "source_sha256": "9cf7ab96403bbf1996cb2a93974c94cda01ed76ea58154e969d76ddc2b7b1a99",
+        "native_artifacts_match": true
+      },
+      {
+        "source": "formalization/LogicLineages/OrdinalComparison/LayeredComparison/SnyatkovCompletion/SixSol20261112/SourceDecisionWorkingTargets.lean",
+        "source_sha256": "dd4ac8c5ed1df81487839355f4dae4ef26141324eede8793576228b1b15b0dc6",
+        "native_artifacts_match": true
+      }
+    ]
+  },
+  "counts_before": {
+    "checked": 171,
+    "pending": 16,
+    "existing-calculator-package": 2
+  },
+  "counts_after": {
+    "checked": 172,
+    "pending": 15,
+    "existing-calculator-package": 2
+  },
+  "numbered_source_promotions_in_this_update": 1,
+  "other_statements_promoted": false,
+  "full_root_build": false,
+  "remote_ci_claim": false,
+  "git_publication": false
+}

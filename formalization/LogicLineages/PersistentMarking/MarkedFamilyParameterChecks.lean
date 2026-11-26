@@ -1,0 +1,13 @@
+import LogicLineages.PersistentMarking.MarkedFamilyParameterProof
+namespace LogicLineages.PersistentMarking.MarkedFamilyParameterChecks
+theorem exact_Enumeration : MarkedFamilyParameterTargets.Enumeration := MarkedFamilyParameterProof.enumeration
+theorem exact_Distinct : MarkedFamilyParameterTargets.Distinct := MarkedFamilyParameterProof.distinct
+theorem exact_SchemaExact : MarkedFamilyParameterTargets.SchemaExact := MarkedFamilyParameterProof.schemaExact
+theorem exact_SchemaDistinct : MarkedFamilyParameterTargets.SchemaDistinct := MarkedFamilyParameterProof.schemaDistinct
+theorem exact_SourceCoverage : MarkedFamilyParameterTargets.SourceCoverage := MarkedFamilyParameterProof.sourceCoverage
+#print axioms exact_Enumeration
+#print axioms exact_Distinct
+#print axioms exact_SchemaExact
+#print axioms exact_SchemaDistinct
+#print axioms exact_SourceCoverage
+end LogicLineages.PersistentMarking.MarkedFamilyParameterChecks

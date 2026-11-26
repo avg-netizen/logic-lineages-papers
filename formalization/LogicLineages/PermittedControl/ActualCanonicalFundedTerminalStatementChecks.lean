@@ -1,0 +1,20 @@
+module
+public import LogicLineages.PermittedControl.ActualCanonicalFundedTerminalTargets
+import LogicLineages.PermittedControl.ActualCanonicalFundedTerminalTruthProof
+import LogicLineages.PermittedControl.ActualCanonicalFundedTerminalProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualCanonicalFundedTerminal
+
+theorem fixed_exactFundedForwardTruth : ExactFundedForwardTruth := exactFundedForwardTruth
+theorem fixed_exactFundedCanonicalTerminal : ExactFundedCanonicalTerminal :=
+  exactFundedCanonicalTerminal
+
+theorem fixed_fullActualCanonicalFundedTerminal : FullActualCanonicalFundedTerminal :=
+  ⟨fixed_exactFundedForwardTruth,fixed_exactFundedCanonicalTerminal⟩
+
+#print axioms fixed_exactFundedForwardTruth
+#print axioms fixed_exactFundedCanonicalTerminal
+#print axioms fixed_fullActualCanonicalFundedTerminal
+
+end LogicLineages.PermittedControl.ActualCanonicalFundedTerminal

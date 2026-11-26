@@ -1,0 +1,80 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphTailProof.lean:21:71: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵h̵a̵i̵n̵T̵a̵p̵e̵,̵l̵t̵_̵i̵r̵r̵e̵f̵l̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]̵[̲c̲h̲a̲i̲n̲T̲a̲p̲e̲,̲ ̲l̲t̲_̲i̲r̲r̲e̲f̲l̲,̲ ̲↓̲r̲e̲d̲u̲c̲e̲I̲t̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphTailProof.lean:42:42: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵h̵a̵i̵n̵T̵a̵p̵e̵,̵h̵0̵,̵h̵1̵,̵h̵2̵,̵l̵t̵_̵i̵r̵r̵e̵f̵l̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵↓̵r̵e̵d̵u̵c̵e̵I̵t̵e̵]̵[̲c̲h̲a̲i̲n̲T̲a̲p̲e̲,̲ ̲h̲0̲,̲ ̲h̲1̲,̲ ̲h̲2̲,̲ ̲l̲t̲_̲i̲r̲r̲e̲f̲l̲,̲ ̲↓̲r̲e̲d̲u̲c̲e̲I̲t̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphTailProof.lean:84:14: error: don't know how to synthesize implicit argument `Γ`
+  @variableIndex (WireCtx wr (?m.507 :: Ty.ground :: Γ)) Ty.ground (shift wr Variable.here.there)
+context:
+p : Policy
+f : ℕ → ℕ
+Γ : List Ty
+r : OpenGraph (Ty.ground :: Γ)
+δ nξ base t v : ℕ
+ht : max nξ base ≤ t
+hz : base ≤ f^[δ] t
+rawOut : ℕ
+hout : rawOut + 1 = v
+ν : Variable (WireCtx r.width (Ty.ground :: Ty.ground :: Γ)) Ty.ground → ℕ
+hρ : ∀ (x : Variable (Ty.ground :: Γ) Ty.ground), ν (shift r.width x.there) = rayInputs (f^[δ] t - base) x
+hn : ν (shift r.width Variable.here) = rawOut
+hm : SourceAST.Formula.eval p f ν r.matrix = true
+wr : ℕ := ⋯
+z : Variable (WireCtx wr (Ty.ground :: Ty.ground :: Γ)) Ty.ground := ⋯
+a : ℕ → ℕ := ⋯
+w : ℕ → ℕ := ⋯
+hRay : (byIndex fun i => w (rayPlacement wr i)) = ν
+⊢ List Ty
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphTailProof.lean:84:29: error: don't know how to synthesize implicit argument `Γ`
+  @shift wr (?m.507 :: Ty.ground :: Γ) Ty.ground Variable.here.there
+context:
+p : Policy
+f : ℕ → ℕ
+Γ : List Ty
+r : OpenGraph (Ty.ground :: Γ)
+δ nξ base t v : ℕ
+ht : max nξ base ≤ t
+hz : base ≤ f^[δ] t
+rawOut : ℕ
+hout : rawOut + 1 = v
+ν : Variable (WireCtx r.width (Ty.ground :: Ty.ground :: Γ)) Ty.ground → ℕ
+hρ : ∀ (x : Variable (Ty.ground :: Γ) Ty.ground), ν (shift r.width x.there) = rayInputs (f^[δ] t - base) x
+hn : ν (shift r.width Variable.here) = rawOut
+hm : SourceAST.Formula.eval p f ν r.matrix = true
+wr : ℕ := ⋯
+z : Variable (WireCtx wr (Ty.ground :: Ty.ground :: Γ)) Ty.ground := ⋯
+a : ℕ → ℕ := ⋯
+w : ℕ → ℕ := ⋯
+hRay : (byIndex fun i => w (rayPlacement wr i)) = ν
+⊢ List Ty
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphTailProof.lean:84:39: error: don't know how to synthesize implicit argument `τ`
+  @Variable.there (Ty.ground :: Γ) Ty.ground ?m.507 Variable.here
+context:
+p : Policy
+f : ℕ → ℕ
+Γ : List Ty
+r : OpenGraph (Ty.ground :: Γ)
+δ nξ base t v : ℕ
+ht : max nξ base ≤ t
+hz : base ≤ f^[δ] t
+rawOut : ℕ
+hout : rawOut + 1 = v
+ν : Variable (WireCtx r.width (Ty.ground :: Ty.ground :: Γ)) Ty.ground → ℕ
+hρ : ∀ (x : Variable (Ty.ground :: Γ) Ty.ground), ν (shift r.width x.there) = rayInputs (f^[δ] t - base) x
+hn : ν (shift r.width Variable.here) = rawOut
+hm : SourceAST.Formula.eval p f ν r.matrix = true
+wr : ℕ := ⋯
+z : Variable (WireCtx wr (Ty.ground :: Ty.ground :: Γ)) Ty.ground := ⋯
+a : ℕ → ℕ := ⋯
+w : ℕ → ℕ := ⋯
+hRay : (byIndex fun i => w (rayPlacement wr i)) = ν
+⊢ Ty

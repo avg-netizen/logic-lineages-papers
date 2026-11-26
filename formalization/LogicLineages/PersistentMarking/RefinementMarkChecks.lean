@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.RefinementMarkProof
+namespace LogicLineages.PersistentMarking.RefinementMarkChecks
+theorem refinementMarkReflection : AuxiliaryTargets.RefinementMarkReflection := RefinementMarkProof.refinementMarkReflection
+#print axioms refinementMarkReflection
+end LogicLineages.PersistentMarking.RefinementMarkChecks

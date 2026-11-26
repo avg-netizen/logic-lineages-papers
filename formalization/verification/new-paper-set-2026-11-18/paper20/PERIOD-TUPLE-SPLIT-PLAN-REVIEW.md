@@ -1,0 +1,7 @@
+# Independent tuple-period split plan review
+
+Approved staging plan before concrete target freezes. Generic dynamics implication is mathematically adequate: a positive minimal period divides2r; a proper divisor is at most r, and unless exactly r is at most2r/3. Upper period ensures positive minimal period; midpoint and all positive small periods exclude the remaining alternatives. Generic statement must quantify actual iteration equality/non-equality and positive r, not finite-state surrogate dynamics.
+
+Concrete primitive-root existence must derive the actual index inhabitance from linked q odd/field facts. Concrete upper, midpoint and ALL positive small-exponent exclusions must concern the original actual tuple, with root-count and Frobenius hypotheses discharged. No endpoint may retain a caller-provided root or nonfixedness premise when assembled as full source period.
+
+Separation is a credible reduction of elaboration work: generic divisor arithmetic and root-existence proofs elaborate in narrower environments, while concrete facts split by needed suppliers. It does not eliminate transitive imports from final union; union feasibility is explicitly uncertain. Original14pin theorem and real Laurent bridge unchanged. Review each new exact frozen helper before proof/native; fresh actual tuple and full period gates required. If revised full union still hits unchanged cap, park rather than repeat near-identical retries. No code change/native done by reviewer.

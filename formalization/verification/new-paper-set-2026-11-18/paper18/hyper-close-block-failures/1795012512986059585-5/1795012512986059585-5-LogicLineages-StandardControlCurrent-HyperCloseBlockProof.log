@@ -1,0 +1,49 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/HyperCloseBlockProof.lean:95:31: error: Application type mismatch: The argument
+  hzj
+has type
+  z = j
+but is expected to have type
+  z = j ∨ z ∈ []
+in the application
+  Or.inr hzj
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/HyperCloseBlockProof.lean:97:53: error: Tactic `assumption` failed
+
+case mpr.inr.inr
+xs : List ℕ
+i j : ℕ
+e h k l : ℤ
+c : ℕ
+p : LayeredComparison.SnyatkovCompletion.Matrix
+ν : ℕ → ℕ
+hn : xs.Nodup
+hi : i ∈ xs
+hj : j ∈ xs
+hij : i ≠ j
+rest : List ℕ := (xs.erase i).erase j
+hr : ∀ (z : ℕ), z ∈ rest ↔ z ≠ j ∧ z ≠ i ∧ z ∈ xs
+z : ℕ
+hz : z = j ∨ z ∈ []
+⊢ z ∈ xs
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/HyperCloseBlockProof.lean:125:2: error: `simp` made no progress
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/HyperCloseBlockProof.lean:89:45: warning: This simp argument is unused:
+  List.mem_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [̵L̵i̵s̵t̵.̵m̵e̵m̵_̵a̵p̵p̵e̵n̵d̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵c̵o̵n̵s̵,̵L̵i̵s̵t̵.̵m̵e̵m̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵h̵r̵]̵[̲L̲i̲s̲t̲.̲m̲e̲m̲_̲a̲p̲p̲e̲n̲d̲,̲ ̲L̲i̲s̲t̲.̲m̲e̲m̲_̲c̲o̲n̲s̲,̲ ̲h̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/HyperCloseBlockProof.lean:153:34: error: invalid `▸` notation, argument
+  he
+has type
+  ?m.211
+equality expected
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/HyperCloseBlockProof.lean:157:34: error: invalid `▸` notation, argument
+  he
+has type
+  ?m.236
+equality expected
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/HyperCloseBlockProof.lean:161:34: error: invalid `▸` notation, argument
+  he
+has type
+  ?m.261
+equality expected

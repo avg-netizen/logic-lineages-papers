@@ -1,0 +1,16 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowArithmeticAllContextTargets.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowArithmeticAllContextTargets.lean
+@@ -11,11 +11,11 @@
+ /-- Independent actual quotient carriers, not definitions by accepting
+ an address or path checker. Each input scope is its actual finiteC. -/
+ def AdmittedAddress (S : Signature) (K : List Ty) (n : Nat) : Prop :=
+-  ∃ Γ τ least (x : Class S K (finiteC Γ) τ),
++  ∃ Γ τ least, ∃ x : Class S K (finiteC Γ) τ,
+     encodeAddress ⟨Γ,τ,least⟩ = n ∧ ActualCodeAt S K Γ τ least x
+ 
+ def AddressPositive (S : Signature) (K : List Ty) (src dst : Nat) : Prop :=
+-  ∃ Γ τ i j (x y : Class S K (finiteC Γ) τ),
++  ∃ Γ τ i j, ∃ x y : Class S K (finiteC Γ) τ,
+     encodeAddress ⟨Γ,τ,i⟩ = src ∧ encodeAddress ⟨Γ,τ,j⟩ = dst ∧
+       ActualCodeAt S K Γ τ i x ∧ ActualCodeAt S K Γ τ j y ∧
+       RS S K (finiteC Γ) τ x y

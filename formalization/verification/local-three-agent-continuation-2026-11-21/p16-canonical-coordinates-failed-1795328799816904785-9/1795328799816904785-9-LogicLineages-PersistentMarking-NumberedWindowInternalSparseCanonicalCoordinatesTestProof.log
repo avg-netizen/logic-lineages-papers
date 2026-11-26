@@ -1,0 +1,14 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseCanonicalCoordinatesTestProof.lean:50:13: error: unsolved goals
+case neg
+s : NumberedWindowScalarAlgorithm.Settings
+W least : Program 3
+hW : NumberedWindowInternalSparseTypedRawTargets.ActualPackedWindow s W
+hL : NumberedWindowInternalSparsePathAdvanceTargets.ActualLeastCalibration s least
+ctx ty k : ℕ
+g : List ℕ
+hc : unpack ctx = some g
+a : ℕ
+h : NumberedWindowScalarAlgorithm.least s g ty k = some a
+hw : NumberedWindowScalarAlgorithm.admitted s g ty k = true
+ha : ¬a = k
+⊢ 0 = (a == k).toNat

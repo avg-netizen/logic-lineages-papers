@@ -1,0 +1,9 @@
+# Independent final: complete two environments
+
+Approved current lem:two-environments, including all seven actual judgment families. Independent read-only verifier exactly reproduces evidence:60 source-matched modules, one complete standard-only alias, zero errors. Actual import closure equals recorded modules. Native1794988944963550385-5 first pass; six frozen pins and inherited freezes unchanged. No compiler invocation.
+
+Read support, binder proofs, all25 case declarations and generalized actual-tree-count assembly. Image validity is derived from actual comparison endpoints, not added as a caller premise. Abs/FAbs choose a name beyond original bodies/owners and finite relevant image bounds, synchronize actual opened child with equal count, then apply smaller IH to two masked maps. The masked maps are related by Var at the fixed name and original relation elsewhere; genuine depth-one maskedOpening and absent-owner/extras equalities restore the target syntax and freshness.
+
+Every head/marked/macro case reconstructs its actual witness; no ordinary-target shortcut remains. Select/PSelect map actual indexed occurrences and prefix/whole tuples, use only successful original full-call forward substitution, and retain gamma-result/delta-target continuation. Strict uses actual successful mark covariance including persistent marked roots. Remove/Split/At, nonempty removed parts and permutations retain literal positions even when substituted values coincide. Whole's root output annotation is corrected by actual delta type preservation, while its bases/extras use gamma. Matching/multiset/coverage/whole/ordered endpoints are all explicit, not omitted internal motives.
+
+No comparison cut, comparison application covariance, staged/full application equivalence or external image-validity oracle is assumed. Prefix escape and cut remain separate obligations.

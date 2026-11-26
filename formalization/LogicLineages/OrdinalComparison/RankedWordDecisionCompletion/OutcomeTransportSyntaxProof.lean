@@ -94,7 +94,7 @@ theorem lookup_tokens_property (P : Token → Prop) (rows : List Row) (outcomes 
   apply lookup_property (fun d => ∀ t ∈ Formula.tokens (outcomeFormula d), P t)
     key (makeTable rows (outcomes.map outcomeData))
   · simp [outcomeFormula,Formula.tokens,CotreePresburgerUnit.Boolean.atoms]
-  · exact makeTable_property _ rows outcomes h
+  · exact makeTable_property (fun d => ∀ t ∈ Formula.tokens (outcomeFormula d), P t) rows outcomes h
 
 /-- Literal tokens of the rewritten body come only from unchanged source
 congruences and the selected actual outcome renderings. This is independent
@@ -192,5 +192,22 @@ theorem bodySyntaxAndDomains : OutcomeTransportTargets.BodySyntaxAndDomains := b
     exact hsource t (original_congruence_token p a ha t ht)
   · intro o ho t ht
     exact rowDomain_tokens o.row ν (hdomains o ho) t (outcomeFormula_tokens_subset _ t ht)
+
+/- Explicit per-file audit includes private helpers before module export. -/
+#print axioms transport_tokens_conj
+#print axioms transport_tokens_disj
+#print axioms congruence_atom_member
+#print axioms original_congruence_token
+#print axioms rowAllowed_tokens
+#print axioms rowDomain_tokens
+#print axioms rowNames_tokens
+#print axioms rowLinear_tokens
+#print axioms outcomeFormula_tokens_subset
+#print axioms lookup_property
+#print axioms makeTable_property
+#print axioms lookup_tokens_property
+#print axioms rewriteWith_all_tokens
+#print axioms rewrite_tokens_property
+#print axioms bodySyntaxAndDomains
 
 end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportProof

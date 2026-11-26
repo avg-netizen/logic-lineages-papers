@@ -1,0 +1,11 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRuleSuffix.NativeProof
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRuleSuffix.NativeStatementChecks
+theorem nativeMP : Targets.NativeMP := NativeProof.nativeMP
+theorem nativeGeneralize : Targets.NativeGeneralize := NativeProof.nativeGeneralize
+#print axioms nativeMP
+#print axioms nativeGeneralize
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryRuleSuffix.NativeStatementChecks

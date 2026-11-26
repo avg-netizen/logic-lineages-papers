@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.MarkedFamilyEncodingProof
+namespace LogicLineages.PersistentMarking.MarkedFamilyEncodingChecks
+theorem exact_EncodingExact : MarkedFamilyCodingTargets.EncodingExact := MarkedFamilyEncodingProof.encodingExact
+theorem exact_EncodingCongruence : MarkedFamilyCodingTargets.EncodingCongruence := MarkedFamilyEncodingProof.encodingCongruence
+#print axioms exact_EncodingExact
+#print axioms exact_EncodingCongruence
+end LogicLineages.PersistentMarking.MarkedFamilyEncodingChecks

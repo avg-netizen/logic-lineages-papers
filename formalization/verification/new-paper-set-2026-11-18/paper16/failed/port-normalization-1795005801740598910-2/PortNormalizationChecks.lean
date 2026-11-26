@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.PortNormalizationProof
+namespace LogicLineages.PersistentMarking.PortNormalizationChecks
+ theorem exact_Normalization : PortNormalizationTargets.Normalization := PortNormalizationProof.normalization
+#print axioms exact_Normalization
+end LogicLineages.PersistentMarking.PortNormalizationChecks

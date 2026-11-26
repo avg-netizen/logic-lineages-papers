@@ -1,0 +1,25 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedTypedDomainUniversalTargets
+import LogicLineages.PermittedControl.OriginalPrintedTypedDomainUniversalDomainProof
+import LogicLineages.PermittedControl.OriginalPrintedTypedDomainUniversalProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedTypedDomainUniversal
+
+theorem fixed_exactDefinedDomainCounterexample : ExactDefinedDomainCounterexample :=
+  exactDefinedDomainCounterexample
+theorem fixed_exactOriginalTypedDomainUniversal : ExactOriginalTypedDomainUniversal :=
+  exactOriginalTypedDomainUniversal
+theorem fixed_exactOriginalTypedTotalUniversal : ExactOriginalTypedTotalUniversal :=
+  exactOriginalTypedTotalUniversal
+theorem fixed_fullOriginalPrintedTypedDomainUniversal : FullOriginalPrintedTypedDomainUniversal :=
+  ⟨fixed_exactDefinedDomainCounterexample,fixed_exactOriginalTypedDomainUniversal,
+    fixed_exactOriginalTypedTotalUniversal⟩
+
+#print axioms fixed_exactDefinedDomainCounterexample
+#print axioms fixed_exactOriginalTypedDomainUniversal
+#print axioms fixed_exactOriginalTypedTotalUniversal
+#print axioms fixed_fullOriginalPrintedTypedDomainUniversal
+
+end LogicLineages.PermittedControl.StatementChecks

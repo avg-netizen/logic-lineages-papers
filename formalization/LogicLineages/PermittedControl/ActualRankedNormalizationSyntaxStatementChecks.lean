@@ -1,0 +1,31 @@
+module
+public import LogicLineages.PermittedControl.ActualRankedNormalizationSyntaxTargets
+import LogicLineages.PermittedControl.ActualRankedNormalizationSyntaxSkeletonProof
+import LogicLineages.PermittedControl.ActualRankedNormalizationSyntaxRankProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualNormalizedTermSkeleton :
+    ActualRankedNormalizationSyntax.ExactNormalizedTermSkeleton :=
+  ActualRankedNormalizationSyntax.exactNormalizedTermSkeleton
+
+theorem fixed_exactActualOriginalSupportRankExtension :
+    ActualRankedNormalizationSyntax.ExactOriginalSupportRankExtension :=
+  ActualRankedNormalizationSyntax.exactOriginalSupportRankExtension
+
+theorem fixed_exactActualOriginalRankReadLocality :
+    ActualRankedNormalizationSyntax.ExactOriginalRankReadLocality :=
+  ActualRankedNormalizationSyntax.exactOriginalRankReadLocality
+
+theorem fixed_fullActualRankedNormalizationSyntax :
+    ActualRankedNormalizationSyntax.FullActualRankedNormalizationSyntax :=
+  ⟨fixed_exactActualNormalizedTermSkeleton,fixed_exactActualOriginalSupportRankExtension,
+    fixed_exactActualOriginalRankReadLocality⟩
+
+#print axioms fixed_exactActualNormalizedTermSkeleton
+#print axioms fixed_exactActualOriginalSupportRankExtension
+#print axioms fixed_exactActualOriginalRankReadLocality
+#print axioms fixed_fullActualRankedNormalizationSyntax
+
+end LogicLineages.PermittedControl.StatementChecks

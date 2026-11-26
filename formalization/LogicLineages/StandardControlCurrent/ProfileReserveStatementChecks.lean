@@ -1,0 +1,9 @@
+module
+public import LogicLineages.StandardControlCurrent.ProfileReserveProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.ProfileReserveStatementChecks
+theorem full : ProfileReserveTargets.Full := ProfileReserveProof.full
+end LogicLineages.StandardControlCurrent.ProfileReserveStatementChecks
+#audit_namespace LogicLineages.StandardControlCurrent.ProfileReserveStatementChecks
+#print axioms LogicLineages.StandardControlCurrent.ProfileReserveStatementChecks.full

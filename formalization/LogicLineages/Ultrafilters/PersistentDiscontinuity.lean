@@ -2,6 +2,7 @@ module
 
 public import LogicLineages.Ultrafilters.Targets
 public import LogicLineages.Ultrafilters.Translation
+public import Mathlib.Analysis.Calculus.FDeriv.Defs
 public import Mathlib.Tactic.Linarith
 
 @[expose] public section
@@ -28,6 +29,22 @@ theorem persistent_discontinuity : Targets.PersistentDiscontinuity := by
   rw [abs_of_neg hnegative] at hclose
   linarith
 
+open Asymptotics Filter Topology in
+private theorem differentiableAt_continuousAt {g : ℝ → ℝ} {x : ℝ}
+    (h : DifferentiableAt ℝ g x) : ContinuousAt g x := by
+  obtain ⟨D, hD⟩ := h
+  have hlin : (fun y : ℝ ↦ D (y - x)) =O[ℝ; 𝓝 x] (fun y ↦ y - x) :=
+    D.isBigOTVS_fun_comp
+  have hdiff : (fun y : ℝ ↦ g y - g x) =O[ℝ; 𝓝 x] (fun y ↦ y - x) := by
+    simpa only [sub_add_cancel] using hD.isLittleOTVS.isBigOTVS.fun_add hlin
+  have hdisp : (fun y : ℝ ↦ y - x) =o[ℝ; 𝓝 x] (1 : ℝ → ℝ) :=
+    isLittleOTVS_one.mpr (by
+      simpa only [id_eq, sub_self] using ((tendsto_id : Tendsto id (𝓝 x) (𝓝 x)).sub_const x))
+  have hzero : Tendsto (fun y : ℝ ↦ g y - g x) (𝓝 x) (𝓝 0) :=
+    isLittleOTVS_one.mp (hdiff.trans_isLittleOTVS hdisp)
+  change Tendsto g (𝓝 x) (𝓝 (g x))
+  simpa only [sub_add_cancel, zero_add] using hzero.add_const (g x)
+
 theorem no_differentiable_representative (p : Ultrafilter ℝ)
     (hp : Admissible p) (f : ℝ → ℝ) (hf : ∀ x, 0 < f x)
     (hdrop : DropsOnLargeTranslations p f) (g : ℝ → ℝ)
@@ -36,6 +53,8 @@ theorem no_differentiable_representative (p : Ultrafilter ℝ)
   intro hdiff
   obtain ⟨x, hx, hxdiff⟩ := Filter.nonempty_of_mem
     (Filter.inter_mem (persistent_discontinuity p hp f hf hdrop g heq) hdiff)
-  exact hx hxdiff.continuousAt
+  exact hx (differentiableAt_continuousAt hxdiff)
+
+#print axioms no_differentiable_representative
 
 end LogicLineages.Ultrafilters

@@ -1,0 +1,13 @@
+# Independent final: finite recursive observation closure
+
+Approved complete current lem:observation-closure. Fresh receipt 1795006492834125296-2. Compiler-free independent verifier exactly reproduces author evidence: 102 source-matched modules, one exact full alias, zero errors, standard axioms only. Original nine semantic pins and inherited freezes match. First proof edition 1795006472839799096-2 retained; rename constructor rewrite repair only.
+
+Read exact seven request sorts/18 Child edges, invariant and all six new proof/check modules. This is genuinely success-independent: no Child edge assumes a successful comparison; Select records the full operation request before apply succeeds, and only the continuation edge requires its actual result. Protected failed calls remain within reachable invariants. All sibling premises and Remove/Split choices are independent, including strict deletion with empty added family.
+
+Initial state derives the blank well-formed context, zero used ports, literal root occurrence/empty assignment observation and actual input source universe. Original Weak/Strict equivalence uses identity-renaming normalization and unconditional erasure, not a premise of successful search. Abs/FAbs derive canonical slot identity, filled context/type budget, typed source opening or actual marked extras append, and target observation from genuine lambda descent. No caller-supplied freshness or K-domain assumption enters the endpoint.
+
+Select pulls the real source occurrence from base or extras, gets its type from actual typing, derives owner-copy tuple universe and full CallTyped, and records both input/output K membership. Success uses the checked original full-call supplier, not staged associativity. Subtype requests follow actual closed input inventory. Copy/Stat preserve owner type families and derive target argument observations. Whole derives output K from the actual target observation, not from its head being a source head. Matching/multiset/coverage use literal positional projections and preserve every branch.
+
+Reach induction proves invariants from both initial Weak and Strict roots, regardless of eventual comparison success. The explicit weak-root subtype conjunct follows, and strict-root subtypes likewise follow from its invariant and the universal requestedTypes theorem. Thus actual types, source heads/free names and target observation/depth-port constraints are paid along every generated request.
+
+No finite generated-source size bound, finite-domain construction, fixed-point adequacy, termination or decidability is claimed. Those remain separate later source obligations.

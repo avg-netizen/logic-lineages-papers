@@ -1,0 +1,86 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaEncodingProof.lean:15:4: error: unsolved goals
+case neg.none
+right : List Name
+n m : Name
+ms : List Name
+ih :
+  nameLookup (ms ++ right) n =
+    match nameLookup ms n with
+    | some i => some i
+    | none => Option.map (fun i => ms.length + i) (nameLookup right n)
+he : ¬n = m
+hl : nameLookup ms n = none
+⊢ Option.map (Nat.succ ∘ fun i => i + ms.length) (nameLookup right n) =
+    Option.map (fun i => i + (ms.length + 1)) (nameLookup right n)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaEncodingProof.lean:15:83: warning: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [nameLookup, he, hl, ih, Option.map_map, N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵,̵ ̵Nat.add_comm,
+  ̲  ̲ ̲ ̲ ̲ ̲Nat.add_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaEncodingProof.lean:15:112: warning: This simp argument is unused:
+  Nat.add_left_comm
+
+Hint: Omit it from the simp argument list.
+  simp [nameLookup, he, hl, ih, Option.map_map, Nat.add_assoc,
+  ̲  ̲ ̲ ̲ ̲ ̲N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵ ̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵]̵N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaEncodingProof.lean:77:55: error(lean.unknownIdentifier): Unknown identifier `δ`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaEncodingProof.lean:77:57: error(lean.unknownIdentifier): Unknown identifier `y`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaEncodingProof.lean:77:87: error(lean.unknownIdentifier): Unknown identifier `δ`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaEncodingProof.lean:76:4: error: unsolved goals
+case pos.refl
+env locals : List Name
+σ : Ty
+x z : Nat
+ho : nameLookup locals (σ, x) = none
+hn : nameLookup locals (σ, z) = none
+hf : nameOccurs (σ, z) (Term.var σ x) = false
+hnew : (σ, x) ≠ (σ, z)
+⊢ (match nameLookup (locals ++ (σ, z) :: env) (σ, z) with
+    | some i => Expr.bound σ i
+    | none => Expr.free σ z) =
+    match nameLookup (locals ++ (σ, x) :: env) (σ, x) with
+    | some i => Expr.bound σ i
+    | none => Expr.free σ x
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaEncodingProof.lean:94:6: error: unsolved goals
+case pos
+env locals : List Name
+σ : Ty
+x z : Nat
+ho : nameLookup locals (σ, x) = none
+hn : nameLookup locals (σ, z) = none
+δ : Ty
+y : Nat
+body : Term
+hf : nameOccurs (σ, z) (Term.lam δ y body) = false
+hnew : (δ, y) ≠ (σ, z)
+hfbody : nameOccurs (σ, z) body = false
+hold : (δ, y) = (σ, x)
+n : Name
+hbody : nameOccurs n body = true
+hnz : n ≠ (σ, z)
+hny : n = (δ, y)
+⊢ (if δ = σ ∧ y = x then some 0 else Option.map Nat.succ (nameLookup (locals ++ (σ, z) :: env) (δ, y))) =
+    if δ = σ ∧ y = x then some 0 else Option.map Nat.succ (nameLookup (locals ++ (σ, x) :: env) (δ, y))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaEncodingProof.lean:96:31: warning: This simp argument is unused:
+  hny
+
+Hint: Omit it from the simp argument list.
+  simp only [nameLookup, h̵n̵y̵,̵ ̵if_false, lookupDifferent locals env n (̵σ̵,̵x̵)̵ ̵(̵σ̵,̵z̵)̵(̲σ̲,̲ ̲x̲)̲ ̲(̲σ̲,̲ ̲z̲)̲ hnx hnz]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaEncodingProof.lean:96:36: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [nameLookup, hny, i̵f̵_̵f̵a̵l̵s̵e̵,̵lookupDifferent locals env n (̵σ̵,̵x̵)̵ ̵(̵σ̵,̵z̵)̵(̲σ̲,̲ ̲x̲)̲ ̲(̲σ̲,̲ ̲z̲)̲ hnx hnz]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaEncodingProof.lean:126:0: error: failed to infer structural recursion:
+Cannot use parameters h of LogicLineages.PersistentMarking.AlphaEncodingProof.alphaEncode and h of LogicLineages.PersistentMarking.AlphaEncodingProof.alphaArgsEncode:
+  failed to eliminate recursive application
+    alphaEncode b a h env

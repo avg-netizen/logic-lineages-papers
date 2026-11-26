@@ -1,0 +1,11 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryBounds.Targets
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryBounds.Preflight
+#check Targets.PairFirstBound
+#check Targets.PairSecondBound
+#check Targets.ConsFirstStrictBound
+#check Targets.ConsSecondStrictBound
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryBounds.Preflight

@@ -1,0 +1,197 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/HereditaryCombineEncodingProof.lean:44:18: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  List.flatMap
+    (fun p =>
+      List.map
+        (fun is =>
+          coordinate E v
+            ({ context := Δ, kind := Kind.application p.val.fst p.val.snd is },
+              outputBound σ (lowerCodes σ (canonicalLower E σ)) Δ p.val.fst p.val.snd ⋯))
+        (vectors (tupleBounds σ (canonicalLower E σ) Δ p)))
+    (fullPrefixes σ).attach
+in the target expression
+  [bitCombine meet
+              (List.map
+                (fun c =>
+                  (lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.available }).getD 0)
+                cs)] ++
+          List.map
+            (fun t =>
+              bitCombine meet
+                (List.map
+                  (fun c => (lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.weak t }).getD 0)
+                  cs))
+            obs ++
+        List.map
+          (fun t =>
+            bitCombine meet
+              (List.map
+                (fun c => (lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.strict t }).getD 0)
+                cs))
+          obs ++
+      List.flatMap
+        (fun a =>
+          List.map
+            (fun x =>
+              coordinate E (aggregate E meet (List.map (HereditaryDomainSemantics.decode E σ Γ) cs))
+                ({ context := Δ, kind := Kind.application a.val.fst a.val.snd x },
+                  outputBound σ (lowerCodes σ (canonicalLower E σ)) Δ a.val.fst a.val.snd ⋯))
+            (vectors (argumentBounds σ (lowerCodes σ (canonicalLower E σ)) Δ a.val.fst a.val.snd ⋯)))
+        (fullPrefixes σ).attach =
+    [bitCombine meet
+              (List.map
+                (fun c =>
+                  (lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.available }).getD 0)
+                cs)] ++
+          List.map
+            (fun x =>
+              bitCombine meet
+                (List.map
+                  (fun c => (lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.weak x }).getD 0)
+                  cs))
+            (distinctObservations (DecisionObservations.observations E.names E.ports Δ E.target σ)) ++
+        List.map
+          (fun x =>
+            bitCombine meet
+              (List.map
+                (fun c => (lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.strict x }).getD 0)
+                cs))
+          (distinctObservations (DecisionObservations.observations E.names E.ports Δ E.target σ)) ++
+      List.flatMap
+        (fun p =>
+          List.map
+            (fun xs =>
+              (indexOf ((resultDescriptor σ (canonicalLower E σ) p).carriers Δ)
+                    (if meet = true then
+                      (resultDescriptor σ (canonicalLower E σ) p).meet Δ
+                        (List.filterMap (output E σ (canonicalLower E σ) Γ Δ p xs) cs)
+                    else
+                      (resultDescriptor σ (canonicalLower E σ) p).join Δ
+                        (List.filterMap (output E σ (canonicalLower E σ) Γ Δ p xs) cs))).getD
+                0)
+            (vectors (tupleBounds σ (canonicalLower E σ) Δ p)))
+        (fullPrefixes σ).attach
+
+E : Environment
+σ : Ty
+Γ Δ : Context
+meet : Bool
+cs : List Code
+hw : WellFormed E.types E.ports Δ
+he : Extends Γ Δ
+hc : ∀ (c : Code), c ∈ cs → c ∈ (descriptor E σ).carriers Γ
+v : Value := aggregate E meet (List.map (HereditaryDomainSemantics.decode E σ Γ) cs)
+obs : List Expr := distinctObservations (DecisionObservations.observations E.names E.ports Δ E.target σ)
+hbit :
+  ∀ (k : Kind),
+    k ∈ HereditaryOrderBitProof.bits E σ Δ →
+      coordinate E (aggregate E meet (List.map (HereditaryDomainSemantics.decode E σ Γ) cs))
+          ({ context := Δ, kind := k }, 2) =
+        bitCombine meet
+          (List.map (fun c => (lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := k }).getD 0) cs)
+hav :
+  coordinate E (aggregate E meet (List.map (HereditaryDomainSemantics.decode E σ Γ) cs))
+      ({ context := Δ, kind := Kind.available }, 2) =
+    bitCombine meet
+      (List.map
+        (fun c => (lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.available }).getD 0) cs)
+hwk :
+  List.map (fun t => coordinate E v ({ context := Δ, kind := Kind.weak t }, 2)) obs =
+    List.map
+      (fun t =>
+        bitCombine meet
+          (List.map
+            (fun c => (lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.weak t }).getD 0) cs))
+      obs
+hst :
+  List.map (fun t => coordinate E v ({ context := Δ, kind := Kind.strict t }, 2)) obs =
+    List.map
+      (fun t =>
+        bitCombine meet
+          (List.map
+            (fun c => (lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.strict t }).getD 0)
+            cs))
+      obs
+happ :
+  List.flatMap
+      (fun p =>
+        List.map
+          (fun is =>
+            coordinate E v
+              ({ context := Δ, kind := Kind.application p.val.fst p.val.snd is },
+                outputBound σ (lowerCodes σ (canonicalLower E σ)) Δ p.val.fst p.val.snd ⋯))
+          (vectors (tupleBounds σ (canonicalLower E σ) Δ p)))
+      (fullPrefixes σ).attach =
+    List.flatMap
+      (fun p =>
+        List.map
+          (fun is =>
+            (indexOf ((descriptor E p.val.snd).carriers Δ)
+                  (if meet = true then
+                    (descriptor E p.val.snd).meet Δ (List.filterMap (output E σ (canonicalLower E σ) Γ Δ p is) cs)
+                  else
+                    (descriptor E p.val.snd).join Δ
+                      (List.filterMap (output E σ (canonicalLower E σ) Γ Δ p is) cs))).getD
+              0)
+          (vectors (tupleBounds σ (canonicalLower E σ) Δ p)))
+      (fullPrefixes σ).attach
+⊢ [bitCombine meet
+              (List.map
+                (fun c =>
+                  (lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.available }).getD 0)
+                cs)] ++
+          List.map
+            (fun t =>
+              bitCombine meet
+                (List.map
+                  (fun c => (lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.weak t }).getD 0)
+                  cs))
+            obs ++
+        List.map
+          (fun t =>
+            bitCombine meet
+              (List.map
+                (fun c => (lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.strict t }).getD 0)
+                cs))
+          obs ++
+      List.flatMap
+        (fun a =>
+          List.map
+            (fun x =>
+              coordinate E (aggregate E meet (List.map (HereditaryDomainSemantics.decode E σ Γ) cs))
+                ({ context := Δ, kind := Kind.application a.val.fst a.val.snd x },
+                  outputBound σ (lowerCodes σ (canonicalLower E σ)) Δ a.val.fst a.val.snd ⋯))
+            (vectors (argumentBounds σ (lowerCodes σ (canonicalLower E σ)) Δ a.val.fst a.val.snd ⋯)))
+        (fullPrefixes σ).attach =
+    [bitCombine meet
+              (List.map
+                (fun c =>
+                  (lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.available }).getD 0)
+                cs)] ++
+          List.map
+            (fun x =>
+              bitCombine meet
+                (List.map
+                  (fun c => (lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.weak x }).getD 0)
+                  cs))
+            (distinctObservations (DecisionObservations.observations E.names E.ports Δ E.target σ)) ++
+        List.map
+          (fun x =>
+            bitCombine meet
+              (List.map
+                (fun c => (lookup (layout E σ (canonicalLower E σ) Γ) c { context := Δ, kind := Kind.strict x }).getD 0)
+                cs))
+          (distinctObservations (DecisionObservations.observations E.names E.ports Δ E.target σ)) ++
+      List.flatMap
+        (fun p =>
+          List.map
+            (fun xs =>
+              (indexOf ((resultDescriptor σ (canonicalLower E σ) p).carriers Δ)
+                    (if meet = true then
+                      (resultDescriptor σ (canonicalLower E σ) p).meet Δ
+                        (List.filterMap (output E σ (canonicalLower E σ) Γ Δ p xs) cs)
+                    else
+                      (resultDescriptor σ (canonicalLower E σ) p).join Δ
+                        (List.filterMap (output E σ (canonicalLower E σ) Γ Δ p xs) cs))).getD
+                0)
+            (vectors (tupleBounds σ (canonicalLower E σ) Δ p)))
+        (fullPrefixes σ).attach

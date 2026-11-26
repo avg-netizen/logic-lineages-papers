@@ -1,0 +1,5 @@
+# Original endpoint projection, pending native/adoption review
+
+Proof.together invokes SameSourceLobCollapse.exactSource exactly once, with f=(0=0) in context1 and lhs=rhs=0. Those harmless source template parameters are fixed before all existential selection witnesses and before every full-language selector. The returned actual pF/pR/q/c/tagCK/pCK tuple is explicitly repeated identically in the two existential introductions. The conjunction type alone does not enforce witness equality; this implementation visibly establishes it.
+
+Proof.originalSelected and originalCollapse, and StatementChecks.exactOriginalSelected/exactOriginalCollapse, are declared against the fully qualified unchanged original target types, not merely the new aliases. No original target or register changes. Actual/Syntax/chosen-CodeProgram/RegistryInstall/FixedPointFor fields and HB2D/HB3D or selector-uniform original collapse are exactly the returned same-source fields. This projection introduces no new premise or mathematical reduction.

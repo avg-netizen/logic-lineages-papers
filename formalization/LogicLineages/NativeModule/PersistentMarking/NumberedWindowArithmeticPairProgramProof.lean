@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowActualPairAlgorithm
+public import LogicLineages.PersistentMarking.NumberedWindowDirectPairPrograms
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticPairProgramTargets
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticPairProgramProof
+open NumberedWindowArithmeticPairProgramTargets
+
+theorem actualPair : ActualPairProgram := NumberedWindowDirectPairPrograms.encoding _ NumberedWindowActualPairAlgorithm.pair
+theorem actualDecoder : ActualPairDecoderProgram := NumberedWindowDirectPairPrograms.decoding _ NumberedWindowActualPairAlgorithm.decode
+
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticPairProgramProof

@@ -1,0 +1,56 @@
+# Root worklog — local three-party continuation 2026-11-18
+
+- 19:40 UTC user release. Fetched; checked out formalization/new-paper-set-2026-11-18 at ff2e5a5b8 (remote work was compiled in a cloud sandbox, /workspace/scratch/...; no local objects for papers 16-20).
+- Local pause of 2026-11-14 lifted on explicit user release; prior policy archived (PRIOR-LOCAL-RUN-POLICY-2026-11-14.json); cutoff 2026-11-19T18:00Z from PLAN.md.
+- Tools added here: gate.sh (wrapper around unchanged scripts/check.py), warm.py (cache warmer), import_graph.py.
+- Local timing: 36-module core closure compiled in 23.5 s (0.63 s/module, peak RSS 463 MiB).
+- Sessions (codex exec, gpt-6.2-sol, effort high, workspace-write, cwd formalization/):
+  - Lane A paper16: 01a1f031-cec0-7ba3-8f22-a8c5749a0e54 (logs/A-session-01.out)
+  - Lane B paper19: 01a1f031-ceb1-7dd2-bba6-f8072b983d68 (logs/B-session-01.out)
+  - Resume: codex exec resume <id> -m gpt-6.2-sol -c model_reasoning_effort=high -c sandbox_mode='"workspace-write"' "<msg>" < /dev/null
+- Lane C (root): papers 17/18/20.
+- 20:13 UTC: user approved removing /tmp/apks-transfer-20261115.tar (2.9 GB in RAM-backed /tmp); available memory 5.0 -> 6.6 GB, 2.2 GB of zram swap freed.
+- 20:14 UTC: Lane A session 01 returned (lem:operator gate). Resumed same session (logs/A-session-02.out) toward lem:structural-interpretation and thm:adequacy; told to keep going past numbered gates and to write accepted-schema evidence under paper16/.
+- Root reviews: packets 381 (paper19 derived composition), 382 (paper19 checked renaming), 383 (paper16 lem:operator, numbered). Each: pins recomputed, compiler-free evidence reproduced JSON-identical, comparator read against source. Register 123 checked / 44 pending.
+- reconcile_current_acceptance.py NOT rerun: it checks object hashes at the remote sandbox's absolute paths for packets 1-380 and would report drift on this host.
+- Push to origin was denied by the session permission layer; commits are local only until the user approves a push.
+- 20:42 UTC: root accepted supporting packets 384-387 (paper19 primitive gates, Plan compiler, comparison outputs, continuation renaming) and 388 (paper16 interpreter environments). Tools: root_review.py (Mathlib lanes), root_review_core.py (paper16), root_verify.py.
+- 20:58 UTC: stopped all three warmers (agent gates were queueing behind warm batches; agents had already compiled their own closures). One core-only supplier (ComputabilityKnowledge.PositiveExpression) was recompiled back and forth between profiles by the first warmer version; warm.py now compiles a whole Mathlib closure under the Mathlib profile.
+- 21:00 UTC: lane B session 01 returned (thm:compiler gate); resumed (logs/B-session-02.out) toward cor:ground-equivalence, thm:control-hardness and the rest.
+- 21:02 UTC: lane C gates passed first attempt (five gates through cor:standard-functional-hardness); evidence written; awaiting review by lane B (root is the author).
+- 21:05 UTC: root accepted 389-391 (supporting) and 392 (paper19 thm:compiler, numbered). Register 124 checked / 43 pending.
+- 21:08 UTC: lane C: paper18 WholeBlockProjector full gate (718 modules) passed unchanged; accepted as supporting packet 393 (root reproduced; proofs and scope reviews are the previous coordinator's).
+- 21:10 UTC: root accepted 394-398 (paper16 interpreter packets; 396 carries the checked same-family application gap, lem:structural-interpretation NOT promoted) and 399 (paper19 cor:ground-equivalence, numbered). Register 125 checked / 42 pending.
+
+## Root stop, 2026-11-18 about 21:30 UTC (Claude usage limit)
+
+State: register 125 checked / 42 pending; accepted packets 381-399; six local
+commits ahead of origin (push was denied by the session permission layer, not
+attempted again). Compiler policy still open until 2026-11-19T18:00Z.
+
+Still running, unattended: lane A (logs/A-session-02.out) and lane B
+(logs/B-session-02.out). They append to A/LEDGER.md and B/LEDGER.md and stop
+by themselves after about three hours or when blocked. Nobody is reviewing
+their READY-FOR-ROOT-REVIEW packets until root resumes. To stop them early:
+kill the two `codex exec resume` processes; no Lean job survives its gate.
+
+Open root items, in order:
+1. Review whatever lanes A and B marked READY since 21:10 UTC
+   (root_review.py for paper19, root_review_core.py for paper16).
+2. Lane C paper17 chain (five gates, cor:standard-functional-hardness) is
+   gated with evidence but NOT accepted: it needs a review by someone other
+   than root. Ask lane B at its next resume (C/LEDGER.md has the table).
+3. Source decision for the user: lem:structural-interpretation's application
+   clause is false in the literal same-family reading (packet 396) and true
+   at fixed points (packet 398).
+4. Lane C next packet, not started: effective decision for paper18
+   m:thm:snyatkov. Typed elimination already compiles
+   (OriginalSourceEliminationStatementChecks, 252 modules). Missing: raw
+   eliminateCode on SourceFormula.encode by code recursion
+   (FiniteGraph.Proof.exactDecreasingGraph pattern, as in
+   HFreeGraphNormalizationMatrixProgramsProof), one-binder raw code =
+   WholeBoundProjectionCode.project (Code.names i c) (Code.graphFormula i c),
+   a zero-valuation evaluator for closed H-free Matrix codes (Phi_computable
+   exists; phiInverse computability to be checked), and the closed-sentence
+   decision statement. m:thm:common and m:thm:balanced appear to wait on it.
+- 22:19 UTC: both lane sessions (A-session-02, B-session-02) were killed by Claude Code's low-memory reaper while root was idle. Not restarted. Their last ledger entries and drafts are committed as-is; resume the same codex session ids when memory allows.

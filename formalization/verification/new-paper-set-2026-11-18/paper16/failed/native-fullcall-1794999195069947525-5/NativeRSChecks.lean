@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.NativeRSProof
+namespace LogicLineages.PersistentMarking.NativeRSChecks
+theorem exact_recSucc : NativeOrientationTargets.RecSucc := NativeRSProof.recSucc
+#print axioms exact_recSucc
+end LogicLineages.PersistentMarking.NativeRSChecks

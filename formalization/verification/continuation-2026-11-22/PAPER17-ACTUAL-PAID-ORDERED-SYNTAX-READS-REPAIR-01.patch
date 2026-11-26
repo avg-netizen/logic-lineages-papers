@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualPaidOrderedSyntaxReadsProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualPaidOrderedSyntaxReadsProof.lean
+@@ -68,2 +68,2 @@
+-  cases s
+-  exact congrArg (fun ts => ⟨_,ts⟩) frames
++  cases s with
++  | mk c ts => exact congrArg (ActualSymbolicZeroSuccessor.SyntaxState.mk c) frames

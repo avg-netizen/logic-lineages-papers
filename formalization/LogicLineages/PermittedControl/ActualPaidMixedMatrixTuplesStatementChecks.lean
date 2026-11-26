@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.ActualPaidMixedMatrixTuplesTargets
+import LogicLineages.PermittedControl.ActualPaidMixedMatrixTuplesRowProof
+import LogicLineages.PermittedControl.ActualPaidMixedMatrixTuplesProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualPaidMixedMatrixTuples
+
+theorem fixed_exactMixedMatrixMinimum : ExactMixedMatrixMinimum := exactMixedMatrixMinimum
+theorem fixed_exactPaidMixedRow : ExactPaidMixedRow := exactPaidMixedRow
+theorem fixed_exactMixedTupleShape : ExactMixedTupleShape := exactMixedTupleShape
+theorem fixed_exactPaidMixedMatrixTuples : ExactPaidMixedMatrixTuples := exactPaidMixedMatrixTuples
+theorem fixed_fullActualPaidMixedMatrixTuples : FullActualPaidMixedMatrixTuples :=
+  ⟨fixed_exactMixedMatrixMinimum,fixed_exactPaidMixedRow,
+    fixed_exactMixedTupleShape,fixed_exactPaidMixedMatrixTuples⟩
+
+#print axioms fixed_exactMixedMatrixMinimum
+#print axioms fixed_exactPaidMixedRow
+#print axioms fixed_exactMixedTupleShape
+#print axioms fixed_exactPaidMixedMatrixTuples
+#print axioms fixed_fullActualPaidMixedMatrixTuples
+
+end LogicLineages.PermittedControl.StatementChecks

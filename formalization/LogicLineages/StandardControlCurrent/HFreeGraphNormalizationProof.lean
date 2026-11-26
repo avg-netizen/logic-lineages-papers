@@ -1,0 +1,9 @@
+module
+public import LogicLineages.StandardControlCurrent.HFreeGraphNormalizationSemanticProof
+public import LogicLineages.StandardControlCurrent.HFreeGraphNormalizationCalibrationProof
+public import LogicLineages.StandardControlCurrent.HFreeGraphNormalizationProgramsProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.HFreeGraphNormalizationProof
+ theorem full : HFreeGraphNormalizationTargets.Full :=
+  ⟨termGraphs,matrixGraphs,allowedWholeBlock,originalSupport,literalCode,programs⟩
+end LogicLineages.StandardControlCurrent.HFreeGraphNormalizationProof

@@ -1,0 +1,54 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphOmegaProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphOmegaProof.lean
+@@ -62,7 +62,7 @@
+     (he : ONote.NF e) (ht : ONote.NFBelow t e.repr) :
+     rawNaturalSum (.oadd e c .zero) t=.oadd e c t := by
+   cases t with
+-  | zero => rfl
++  | zero => simp only [rawNaturalSum]
+   | oadd f d u =>
+     have h : ONote.cmp e f=.gt := (@ONote.cmp_compares e f he ht.fst).eq_gt.mpr ht.lt
+     simp only [rawNaturalSum,h]
+@@ -93,20 +93,26 @@
+     (shiftNote (rawNaturalSum a (.oadd .zero m .zero))).repr =
+       (shiftNote a).repr+Ordinal.omega0*(m : Nat) := by
+   induction a with
+-  | zero => simp [rawNaturalSum,shiftNote,ONote.repr]
++  | zero =>
++    change (shiftNote (rawNaturalSum ONote.zero (.oadd .zero m .zero))).repr =
++      (0 : Ordinal)+Ordinal.omega0*(m : Nat)
++    rw [rawNaturalSum]
++    change Ordinal.omega0^(rawNaturalSum 1 ONote.zero).repr*(m : Nat)+0 = _
++    simp only [shiftExponent ONote.zero ONote.NF.zero,ONote.repr_zero,zero_add,Ordinal.opow_one,add_zero]
+   | oadd e c t ihe iht =>
+     have hc := @ONote.cmp_compares e .zero ha.fst ONote.NF.zero
+     cases h : ONote.cmp e .zero with
+     | lt =>
+       have hf : e.repr<0 := hc.eq_lt.mp h
+-      exact (not_lt_of_ge (zero_le _) hf).elim
++      exact (not_lt_of_ge zero_le hf).elim
+     | eq =>
+       have he := ONote.eq_of_cmp_eq h
+       subst e
+       have ht : t=.zero := ONote.NFBelow_zero.mp ha.snd'
+       subst t
+       simp only [rawNaturalSum,h,shiftNote,ONote.repr,PNat.add_coe,Nat.cast_add,
+-        Ordinal.opow_one,add_zero,mul_add]
++        add_zero,mul_add]
++      simp
+     | gt =>
+       simp only [rawNaturalSum,h,shiftNote,ONote.repr]
+       rw [show (shiftNote (rawNaturalSum t (.oadd .zero m .zero))).repr = _ from iht ha.snd]
+@@ -127,8 +133,10 @@
+     have hx : x.1=.oadd .zero m .zero := rfl
+     have hsum := naturalSumDenotation a x
+     change (naturalSum a x).1.repr=ordinalNaturalSum a.1.repr x.1.repr at hsum
+-    rw [ha,show x.1.repr=((d+1 : Nat) : Ordinal) from ONote.repr_ofNat _,
+-      actualNaturalSumFiniteRight] at hsum
++    have hv : x.1.repr=((d+1 : Nat) : Ordinal) := by
++      change (ONote.ofNat (d+1)).repr=((d+1 : Nat) : Ordinal)
++      exact ONote.repr_ofNat _
++    rw [ha,hv,actualNaturalSumFiniteRight] at hsum
+     rw [← hsum,← shiftValue,← ha,← shiftValue]
+     change (shiftNote (rawNaturalSum a.1 x.1)).repr = shiftHead (shiftNote a.1).repr (d+1)
+     rw [hx]

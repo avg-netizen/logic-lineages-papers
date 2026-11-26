@@ -1,0 +1,21 @@
+{
+  "key": "RAW-PACKET-ALGEBRA-RESIDUAL",
+  "lane": "opusB",
+  "serves": "Root Task 4 group 3: decode / keep / decodeRoute / lowerFamily on packet codes",
+  "source_map": "verification/local-fable-pair-2026-11-22/opusB/RAW-PACKET-ALGEBRA-RESIDUAL-SOURCE-MAP.md",
+  "modules": [
+    {"module": "LogicLineages.PermittedControl.RawPacketAlgebraResidualTargets", "sha256": "2f88a8c86fa34c3477941cea211b1d967a1b95ef33225eb19f3a01e3947b0bd2", "first_receipt": "1795385442097803207-3152345"},
+    {"module": "LogicLineages.PermittedControl.RawPacketAlgebraResidualCalibrationProof", "sha256": "0465d1514e71395bb386d80cf36d6cba9af2060a448d4b4c17379eefe0c6c435", "receipt": "1795385656636293085-3153395"},
+    {"module": "LogicLineages.PermittedControl.RawPacketAlgebraResidualEffectivityProof", "sha256": "fc59a1d1e7fea915346e6301e03df9c6a8f919fed5d8daac22e1624581b8001f", "receipt": "1795385675400117186-3153490"},
+    {"module": "LogicLineages.PermittedControl.RawPacketAlgebraResidualProof", "sha256": "e2496bc2131cc3f5ade8f3447c0345de689891f0f8db8cbed5bd81947609588c"}
+  ],
+  "passing_receipt": "1795385685312832325-3153529",
+  "failed_receipts": [
+    "1795385485583304557-3152570 (CalibrationProof v1: whnf timeout in a `change` that unfolded Encodable.encode)",
+    "1795385543906661322-3152844 (CalibrationProof v2: whnf timeout in an `rfl` step lemma; drafts kept)"
+  ],
+  "theorems": ["RawPacketAlgebra.residualCalibration", "RawPacketAlgebra.residualEffectivity", "RawPacketAlgebra.fullRawPacketAlgebraResidual : FullRawPacketAlgebraResidual"],
+  "print_axioms": ["'LogicLineages.PermittedControl.RawPacketAlgebra.fullRawPacketAlgebraResidual' depends on axioms: [propext, Classical.choice, Quot.sound]"],
+  "reused": ["LinearRowsCodeProof.atoms_calibration / atoms_primitive / decodeAtom_primitive / listAll_primitive", "group 1-2 tableBytes, projectCodeEq, tablePrimitive, projectPrimitive"],
+  "new_encoding": "ResidualCode / encodeResidual := (ops.map LowerOperand.code, formula.encode, atoms.map encodeRow): minimal composite of existing field codes; no injectivity used"
+}

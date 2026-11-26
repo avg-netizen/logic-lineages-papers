@@ -1,0 +1,17 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTapeProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingTapeProof.lean
+@@ -18 +18 @@
+-  exact (List.nodup_dedup keys.reverse).reverse
++  exact List.nodup_reverse.mpr (List.nodup_dedup keys.reverse)
+@@ -22 +22,2 @@
+-  simp only [firstKeys,List.map_reverse,
++  simp only [firstKeys,List.map_reverse]
++  rw [← List.map_reverse (f := LowerOperand.code) (l := keys),
+@@ -80 +81,6 @@
+-  simp only [signedWeight,List.map_map,Function.comp_apply,weightAt]
++  simp only [signedWeight,List.map_map]
++  apply congrArg List.sum
++  apply List.map_congr_left
++  intro x _
++  change (if x.1.2 = key then x.1.1 else 0) = weightAt key x
++  by_cases same : x.1.2 = key <;> simp [weightAt,same]

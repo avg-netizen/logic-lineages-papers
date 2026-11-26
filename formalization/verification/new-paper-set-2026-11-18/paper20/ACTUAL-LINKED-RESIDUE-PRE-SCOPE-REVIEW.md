@@ -1,0 +1,9 @@
+# Independent actual linked residue pre-scope review
+
+Approved for target-only preflight and proof development, not inherited acceptance. All ten frozen pins match. Read period.tex's complete residue lemma and proof, current control and boundary linked input definitions, fresh expanded target and actual legacy Laurent/parameter definitions and semantic targets.
+
+Phi is literally fastControl 5 (n+100), with the same variable-seed hierarchy as current G. The v>=4 source domain, u=Phi(v), B=Phi(u), r=log2(B)-1, q=2^r+1, m=u-2, triangular delta, e=u-4 and d=B-u+3 agree with the actual linked source. No independently supplied large inputs replace them. The second displayed exponent is correctly integer subtraction; natural subtractions elsewhere require their actual linked bounds from checked suppliers.
+
+The fresh target contains both displayed formulas, nonzero coefficient at -1 and vanishing of every coefficient below -1 for every primitive q-th root in an arbitrary F2-algebra field. This covers in particular all algebraic-closure primitive roots without restricting q to primes. The expansion is the actual translated Hahn Laurent expression of X^(e-1)/A_d; it is not defined to be the displayed residue. The supplier closure must include and validate genuine simple-pole reconstruction (denominator times expansion equals translated numerator), actual vanishing/nonzero derivative at these roots, and the coefficient theorem. Merely evaluating the named expansion without those semantic suppliers would not suffice for final source acceptance.
+
+The residue -> linked bounds -> full tuple period order is sound. Current scope is only lem:residue, not bounds, orbit period, scalar nonperiodicity, individual residue degree or selected coefficient. Broad legacy import resource risk must be handled under unchanged caps with preserved failures and a separately reviewed alternative if needed, never silent legacy edits or automatic acceptance inheritance.

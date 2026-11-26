@@ -1,0 +1,54 @@
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 441, in __str__
+    return self._str
+           ^^^^^^^^^
+AttributeError: 'PosixPath' object has no attribute '_str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 555, in drive
+    return self._drv
+           ^^^^^^^^^
+AttributeError: 'PosixPath' object has no attribute '_drv'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/scripts/check.py", line 561, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/scripts/check.py", line 402, in main
+    visit(module)
+  File "/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/scripts/check.py", line 396, in visit
+    visit(dependency)
+  File "/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/scripts/check.py", line 396, in visit
+    visit(dependency)
+  File "/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/scripts/check.py", line 396, in visit
+    visit(dependency)
+  [Previous line repeated 986 more times]
+  File "/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/scripts/check.py", line 369, in visit
+    path = source_for(module)
+           ^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/scripts/check.py", line 87, in source_for
+    return path if path.is_file() else None
+                   ^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 892, in is_file
+    return S_ISREG(self.stat().st_mode)
+                   ^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 840, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 448, in __fspath__
+    return str(self)
+           ^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 443, in __str__
+    self._str = self._format_parsed_parts(self.drive, self.root,
+                                          ^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 557, in drive
+    self._load_parts()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 414, in _load_parts
+    path = self._flavour.join(*paths)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen posixpath>", line 77, in join
+RecursionError: maximum recursion depth exceeded

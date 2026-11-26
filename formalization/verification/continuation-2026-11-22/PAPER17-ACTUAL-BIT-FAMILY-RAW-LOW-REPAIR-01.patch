@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualBitFamilyRawLowProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualBitFamilyRawLowProof.lean
+@@ -77 +77,5 @@
+-          simpa only [h, Option.map_some] using congrArg (List.cons (child.map encodeBitRow)) ht
++          simp only [h, Option.map_some]
++          change child.map encodeBitRow ::
++            ((encodeFamily tail).filterMap (fun c => clauseCode f (name,a,c))) =
++              child.map encodeBitRow :: encodeFamily (tail.filterMap (sliceClause f name a))
++          exact congrArg (List.cons (child.map encodeBitRow)) ht

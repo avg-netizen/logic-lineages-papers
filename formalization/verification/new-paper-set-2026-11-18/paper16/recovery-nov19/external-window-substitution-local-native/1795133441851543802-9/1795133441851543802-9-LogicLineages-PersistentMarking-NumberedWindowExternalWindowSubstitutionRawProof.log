@@ -1,0 +1,65 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:45:15: error: Application type mismatch: The argument
+  RawStep.fabs
+has type
+  RawStep ?m.220 ?m.221 (NTerm.numbered ?m.222 (Ty.arrow ?m.223 ?m.224) (?m.225 + 1) ?m.226 ?m.227)
+    (NTerm.lam ?m.223 (openNumbered ?m.222 ?m.223 ?m.224 ?m.225 ?m.226 ?m.227))
+but is expected to have type
+  RawStep S K (NTerm.numbered f✝ (σ✝.arrow τ✝) (k✝ + 1) (substituteArgs values d bs✝) (substituteArgs values d es✝))
+    (NTerm.lam σ✝ (substitute values (d + 1) (openNumbered f✝ σ✝ τ✝ k✝ bs✝ es✝)))
+in the application
+  Or.inl RawStep.fabs
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:49:15: error: Application type mismatch: The argument
+  RawStep.beta
+has type
+  RawStep ?m.247 ?m.248 (NTerm.auxApp ?m.249 ?m.250 (NTerm.lam ?m.249 ?m.251) ?m.252)
+    (substitute (NArgs.cons ?m.252 NArgs.nil) 0 ?m.251)
+but is expected to have type
+  RawStep S K (NTerm.auxApp σ✝ τ✝ (NTerm.lam σ✝ (substitute values (d + 1) body✝)) (substitute values d a✝))
+    (substitute values d (substitute (NArgs.cons a✝ NArgs.nil) 0 body✝))
+in the application
+  Or.inl RawStep.beta
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:89:4: error: too many variable names provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:92:16: error(lean.unknownIdentifier): Unknown identifier `values`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:92:23: error(lean.unknownIdentifier): Unknown identifier `d`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:92:25: error(lean.unknownIdentifier): Unknown identifier `C`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:92:62: error: Application type mismatch: The argument
+  hGuard
+has type
+  RawStep S K D hc
+but is expected to have type
+  ArgsGuard ?m.730 ?m.731 (NArgs.cons ?m.732 ?m.733)
+in the application
+  consParts hGuard
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:93:20: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.first` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `Lean.Parser.Tactic.first`
+  [apply] `Lean.Parser.Tactic.Conv.first`
+  [apply] `Lean.Parser.Tactic.Grind.first`
+  [apply] `RawArgsStep.first`
+  [apply] `RawArgsStep.below.first`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:94:19: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:90:4: error: Alternative `nil` has not been provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:96:4: error: too many variable names provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:98:4: error: Invalid alternative name `cons`: Expected `free`, `bound`, `lam`, `bottom`, `ordinary`, `numbered`, or `auxApp`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:97:4: error: Alternative `free` has not been provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:97:4: error: Alternative `bound` has not been provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:97:4: error: Alternative `lam` has not been provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:97:4: error: Alternative `bottom` has not been provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:97:4: error: Alternative `ordinary` has not been provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:97:4: error: Alternative `numbered` has not been provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:97:4: error: Alternative `auxApp` has not been provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:44:27: warning: This simp argument is unused:
+  exact_SubstituteFreshBody
+
+Hint: Omit it from the simp argument list.
+  simp only [substitute,̵ ̵e̵x̵a̵c̵t̵_̵S̵u̵b̵s̵t̵i̵t̵u̵t̵e̵F̵r̵e̵s̵h̵B̵o̵d̵y̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowExternalWindowSubstitutionRawProof.lean:48:27: warning: This simp argument is unused:
+  exact_SubstituteBeta
+
+Hint: Omit it from the simp argument list.
+  simp only [substitute,̵ ̵e̵x̵a̵c̵t̵_̵S̵u̵b̵s̵t̵i̵t̵u̵t̵e̵B̵e̵t̵a̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

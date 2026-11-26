@@ -1,0 +1,52 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeMapGraph/NativeProof.lean:43:4: error: unsolved goals
+case neg
+key : ℕ
+entries : List (ℕ × ℕ)
+ih :
+  List.foldr (fun a rest => evaluate lookupStep (a ::ᵥ rest ::ᵥ key ::ᵥ nil)) 0
+      (List.map (fun p => Nat.pair p.1 p.2) entries) =
+    Encodable.encode (List.lookup key entries)
+k v : ℕ
+h : ¬k = key
+hn : key ≠ k
+⊢ List.lookup key entries =
+    match key == k with
+    | true => some v
+    | false => List.lookup key entries
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeMapGraph/NativeProof.lean:42:21: warning: This simp argument is unused:
+  List.lookup_cons
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵L̵i̵s̵t̵.̵l̵o̵o̵k̵u̵p̵_̵c̵o̵n̵s̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeMapGraph/NativeProof.lean:44:31: warning: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  simp [List.lookup_cons, ̲h,̵h̵n̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeMapGraph/NativeProof.lean:64:23: warning: This simp argument is unused:
+  ho
+
+Hint: Omit it from the simp argument list.
+  simp only [h̵o̵,̵Encodable.encode_none, ̲ite_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeMapGraph/NativeProof.lean:73:15: warning: This simp argument is unused:
+  ho
+
+Hint: Omit it from the simp argument list.
+  simp only [h̵o̵,̵Encodable.encode_some, ̲Encodable.encode_nat, ̲Nat.succ_ne_zero, ̲ite_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeMapGraph/NativeProof.lean:87:49: warning: This simp argument is unused:
+  ho
+
+Hint: Omit it from the simp argument list.
+  simp only [h̵o̵,̵Option.toList_none, ̲Option.toList_some,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲List.nil_append, ̲List.cons_append, ̲numbersNumber]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/ExchangeMapGraph/NativeProof.lean:98:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeMapGraph.NativeProof.nativeMapGraph: forbidden axiom dependency sorryAx

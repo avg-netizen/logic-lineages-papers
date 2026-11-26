@@ -1,0 +1,31 @@
+module
+public import LogicLineages.PermittedControl.SelectedNonlinearImageBoundsTargets
+import LogicLineages.PermittedControl.SelectedNonlinearImageBoundsGrowthProof
+import LogicLineages.PermittedControl.SelectedNonlinearImageBoundsOrbitProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualOrdinaryFullValueImage : SelectedNonlinearImageBounds.OrdinaryFullValueImage :=
+  SelectedNonlinearImageBounds.ordinaryFullValueImage
+
+theorem fixed_actualPrefixLogarithmicError : SelectedNonlinearImageBounds.ActualPrefixErrorBound :=
+  SelectedNonlinearImageBounds.actualPrefixErrorBound
+
+theorem fixed_actualDistinctFullValueSeparation : SelectedNonlinearImageBounds.DistinctFullValueSeparation :=
+  SelectedNonlinearImageBounds.distinctFullValueSeparation
+
+theorem fixed_actualRawCoordinateLogBound : SelectedNonlinearImageBounds.RawCoordinateLogBound :=
+  SelectedNonlinearImageBounds.rawCoordinateLogBound
+
+theorem fixed_fullSelectedNonlinearImageBounds : SelectedNonlinearImageBounds.FullSelectedNonlinearImageBounds :=
+  ⟨fixed_actualOrdinaryFullValueImage,fixed_actualPrefixLogarithmicError,
+    fixed_actualDistinctFullValueSeparation,fixed_actualRawCoordinateLogBound⟩
+
+#print axioms fixed_actualOrdinaryFullValueImage
+#print axioms fixed_actualPrefixLogarithmicError
+#print axioms fixed_actualDistinctFullValueSeparation
+#print axioms fixed_actualRawCoordinateLogBound
+#print axioms fixed_fullSelectedNonlinearImageBounds
+
+end LogicLineages.PermittedControl.StatementChecks

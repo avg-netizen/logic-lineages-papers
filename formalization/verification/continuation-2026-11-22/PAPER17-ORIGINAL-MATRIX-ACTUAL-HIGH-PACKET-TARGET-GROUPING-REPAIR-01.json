@@ -1,0 +1,51 @@
+{
+  "status": "authorized exact target-grouping correction, not a proof-only repair; native not invoked by author",
+  "failed_source_remote_commit": "1d355ed13c792f3d0c825b7c753fad8391d1517a",
+  "failed_source_local_commit": "9dd3655b5",
+  "failed_exact_gate_receipt": "1795358535432417760-26",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalMatrixActualHighPacketStatementChecks",
+  "failed_receipt_sha256": "408c1565b9398409677a14043fe7a12fe06e4617c8f7c7e737fb900f447582f5",
+  "failed_exact_module_log_sha256": "8cafe2554aed88304582d0709ec524b3cd925fc6b0defc66500a4903d6a3fecf",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalMatrixActualHighPacketBranchProof.lean:18:59: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce\n\nf : \u2115 \u2192 \u2115\nB : \u2115\nhf : SelectedWithThreshold f B\n\u03b8 : \u2115 \u2192 \u2115\nknown : List \u2115\ngates : List OriginalPrintedCircuitSequential.Gate\np : OrdinalComparison.LayeredComparison.SnyatkovCompletion.NormalForm.Formula\nplain : PreparedProjection.PlainPreparedFormula p\nprior : (\u2115 \u2192 \u2115) \u2192 Prop\npolarity : Bool\nbranch : ActualFiniteOrderBranches.Pattern\n\u22a2 branch \u2208 branches known gates p \u2192\n      originalFamilyCeiling B known gates p \u2264 realized \u03b8 branch 0 \u2192\n        (ActualFiniteOrderBranches.guard branch).eval \u03b8 \u2227\n          prior \u03b8 \u2227 OriginalPrintedPlainMatrixOrderBranches.SourceAccepts f \u03b8 known gates p polarity \u2194\n    (ActualFiniteOrderBranches.guard branch).eval \u03b8 \u2227 prior \u03b8 \u2227 BranchPacket f B \u03b8 known gates p polarity branch",
+  "failed_original_native_log_sha256": "edcd786be6ee6772ea1d8f4d382e7a18bf5527acc4a974d8d7bca591064f794d",
+  "failed_target_path": "formalization/LogicLineages/PermittedControl/OriginalMatrixActualHighPacketTargets.lean",
+  "failed_target_sha256": "0cb93fbc451b5240909f4c66a166d9d8cff001673879a63b55bcba8d530d6473",
+  "repaired_target_sha256": "9e4e87af10e19f7157f6866300f49c92c5f76c61e7e2f2b88a6a6085c5b45c9e",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-MATRIX-ACTUAL-HIGH-PACKET-TARGET-GROUPING-REPAIR-01.patch",
+  "patch_sha256": "3b528b25ed7caa306738bca93b937a5be5692f06fe8cc4713c60eb981b6d85d7",
+  "reverse_reconstructs_exact_failed_target": true,
+  "original_parsed_proposition": "((member \u2192 payment \u2192 (guard \u2227 prior \u2227 source)) \u2194 (guard \u2227 prior \u2227 packet))",
+  "corrected_proposition": "member \u2192 payment \u2192 ((guard \u2227 prior \u2227 source) \u2194 (guard \u2227 prior \u2227 packet))",
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-MATRIX-ACTUAL-HIGH-PACKET-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "e3dc2b9d71e0f9e7cc41fb066fc756ebab80bae57dd2d2d04f9324763ed33c02",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalMatrixActualHighPacketProof.lean": "656241a82b884b69118b9f6176d58bb861a7a199a583067e300bcf5e1c1fb4c6",
+    "formalization/LogicLineages/PermittedControl/OriginalMatrixActualHighPacketBranchProof.lean": "9998dc3fd2e2f20fdb34fe4dd38251563e48f1d16d1e4d00ac8b420233df892a",
+    "formalization/LogicLineages/PermittedControl/OriginalMatrixActualHighPacketStatementChecks.lean": "a22a46337bcf8ce0d6f7346f9f5953467be6a37eb00f1a7ce859246c930fd379",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-MATRIX-ACTUAL-HIGH-PACKET-SOURCE-MAP.md": "4ab6c9793701e115c2eccbf98bc51d5e62c278fd50ed28126acbc80e31aa4741"
+  },
+  "static_closure_unchanged": {
+    "Targets": {
+      "local": 263,
+      "external": 35,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 602,
+      "external": 44,
+      "contains_totient": false
+    },
+    "BranchProof": {
+      "local": 630,
+      "external": 44,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 631,
+      "external": 44,
+      "contains_totient": false
+    }
+  },
+  "accepted_uniform_bound_receipt": "1795358531188779001-10",
+  "scope": "Bracket the complete equivalence beneath both already-intended hypotheses, as predeclared in the preserved source map. The original parse and source bytes are recoverable. Exact proof bodies, aliases, row witnesses, finite ceiling and all imports/guards unchanged."
+}

@@ -1,0 +1,31 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "773b6909fe5c5ea484ed51abf75f675f8891e3fd",
+  "failed_source_local_commit": "141c8587d7a11a634159a15a12a4e12f8c41e17b",
+  "failed_source_tree": "d2ee9531635eed4e5616fa96ada693ce8901283f",
+  "failed_exact_gate_receipt": "1795372685566928362-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualBitFamilyRawChartsStatementChecks",
+  "failed_receipt_sha256": "82589a1e461245ba54e5fe12890227446e91741c96560d76202a236751e7c9b8",
+  "failed_exact_module_log_sha256": "38f20fa9a195aee23a77e3c81cc1182068ed6193ef8ea24465500547b0da5418",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualBitFamilyRawChartsProof.lean:35:44: error: Invalid projection: Projections extract constructor fields for one-constructor inductive types. The expression\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualBitFamilyRawChartsProof.lean:36:11: error: Application type mismatch: The argument\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualBitFamilyRawChartsProof.lean:38:11: error: Application type mismatch: The argument",
+  "failed_original_native_log_sha256": "12ef028f397d254533bf41acb1636c6eb3ce6d1e4b38a358c61cbbeff57e204d",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualBitFamilyRawChartsProof.lean",
+  "failed_proof_sha256": "006a9d3ebe64e0afdbae45a23c11e80e259f78335334b7ac6df1dfa9b1b251c9",
+  "repaired_proof_sha256": "3931338bd4bc5e7fb3fb61bd1987541d8ff20c7d27985a9d97bd844b862fc2c0",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-RAW-CHARTS-REPAIR-02.patch",
+  "patch_sha256": "af59427df4fd55eaf424e84323e7f16bd7bf6cb42b60f695c02ffb2f1166cad1",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-RAW-CHARTS-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "55ee4971d6e0948a1bcc96ad8c86019e0c769de801e686e453bfd27794c62071",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-RAW-CHARTS-REPAIR-01.json": "50be908bc3c004d9281a794fca9a64c7ddf48075bbb6ab0ae8cc230564aaf6f4",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-RAW-CHARTS-REPAIR-01.patch": "8d82f1943dc1af8adb3fef3b3a04b20e283911dec391c0dbeb1369df6d11dacd"
+  },
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyRawChartsPrimitiveProof.lean": "cd1756b80d8fd5da7c01d1fb1fb5cca928c80d84dc3b9c91c5f34d97523b0279",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyRawChartsStatementChecks.lean": "4cac6dd891886d54217287f786ee2bf37e49f2c78a290df31922d533956cd02b",
+    "formalization/LogicLineages/PermittedControl/ActualBitFamilyRawChartsTargets.lean": "c9dc49fc7b35f0fa82c1e483b33760c805fb51b176fd35cde1ace129e63d1912",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-BIT-FAMILY-RAW-CHARTS-SOURCE-MAP.md": "73b7a1920718d7df79d5d8c0e7fa468f2fbb97e3a354811e7e918436fceba46b"
+  },
+  "scope": "Use the exact already proved chart enumeration theorem by explicit mp/mpr after unwrapping literal nonempty filtering instead of expecting simplifier to see through its opaque printed-type alias. No program, imports, or statements changed."
+}

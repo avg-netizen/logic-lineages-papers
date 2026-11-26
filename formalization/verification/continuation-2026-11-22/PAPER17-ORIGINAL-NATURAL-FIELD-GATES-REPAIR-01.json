@@ -1,0 +1,27 @@
+{
+  "status": "narrow native elaboration declaration repair, not native checked by author",
+  "failed_source_remote_commit": "481d416d06c0f90ee6232a0f93e0104167f0448e",
+  "failed_exact_gate_receipt": "1795352488693659229-8",
+  "failed_original_native_log_sha256": "6b6262481611dfd4faa563c85a7d77774bbbab776a2046162a008f8d7d002787",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalNaturalFieldGatesTargets.lean:33:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'entryNormAt', which is 'noncomputable'",
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-NATURAL-FIELD-GATES-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "4f3d2fe2fcb89f8631cee807efa152b8c5a48dca2453fac4d079fbebdad55f63",
+  "failed_target_path": "formalization/LogicLineages/PermittedControl/OriginalNaturalFieldGatesTargets.lean",
+  "failed_target_sha256": "f5467d8e2116847bb52ee6adad3673d98c9e1e3627d452d6dec3e2a2fe141cd7",
+  "repaired_target_sha256": "b969db253d49c5ec6be3aa7c1c78f851233e3d18da878f6c1af0e9e91b63a4eb",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-NATURAL-FIELD-GATES-REPAIR-01.patch",
+  "patch_sha256": "51bd46e2bf23b9dce32ab0c5d808c7b62709c3547fd45e47e26e0039d10a9210",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalNaturalFieldGatesIdentityProof.lean": "0fa39140f90b82c0195a79d6652681a4651c237b08a5ebd5cf2b7fd6b5fc881c",
+    "formalization/LogicLineages/PermittedControl/OriginalNaturalFieldGatesProof.lean": "2ab32e501b9b4e2c698ae599d8b1cdb79a2b4d76b8adc0aa432d55b9ff2506fb",
+    "formalization/LogicLineages/PermittedControl/OriginalNaturalFieldGatesStatementChecks.lean": "83a6789ad9c97251ec69043be1737e7be87edd45943e4ef45c095d5f1a8d0ec4",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-NATURAL-FIELD-GATES-SOURCE-MAP.md": "c04142ba5c8ec5fd01e44346809e93aaa8c107f0aa67a2467f45d28d7dfa57a8"
+  },
+  "static_closure_unchanged": {
+    "target_local": 81,
+    "target_external": 21,
+    "gate_local": 207,
+    "gate_external": 30
+  },
+  "scope": "Add only noncomputable modifier to Interval.entryNorm because existing entryNormAt is noncomputable. The literal definition body, all statement types and original domain are unchanged. No proof or effectivity change."
+}

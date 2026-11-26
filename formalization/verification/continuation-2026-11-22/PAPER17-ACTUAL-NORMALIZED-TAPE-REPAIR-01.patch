@@ -1,0 +1,11 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualNormalizedTapeCertificateProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualNormalizedTapeCertificateProof.lean
+@@ -77 +77 @@
+-  have inSupport : rd.1.2 ∈ (groupedWeights xs).support :=
++  have inSupport : rd.1.2 ∈ (groupedWeights raw).support :=
+@@ -87 +87 @@
+-      have listed : valueOperand r (i,F) ∈ (groupedWeights xs).support := by
++      have listed : valueOperand r (i,F) ∈ (groupedWeights raw).support := by
+@@ -97 +97 @@
+-      have listed : countOperand r ((lam,mu),i) ∈ (groupedWeights xs).support := by
++      have listed : countOperand r ((lam,mu),i) ∈ (groupedWeights raw).support := by

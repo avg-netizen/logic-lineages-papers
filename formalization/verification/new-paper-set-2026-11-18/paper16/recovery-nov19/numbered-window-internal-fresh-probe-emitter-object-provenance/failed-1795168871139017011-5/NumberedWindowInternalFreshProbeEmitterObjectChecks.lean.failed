@@ -1,0 +1,47 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeEmitterGraphProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeEmitterPayloadProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeEmitterShapeSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceSupportProof
+public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeEmitterObjectChecks
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators
+open ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalAcceptanceSupportProof (programCompositionCases)
+open NumberedWindowInternalProbeTargets (OTerm)
+open NumberedWindowInternalFreshProbeSyntaxProof (unaryRename)
+open NumberedWindowInternalFreshProbeEmitter
+open NumberedWindowInternalFreshProbeEmitterObjectTargets
+open NumberedWindowInternalFreshProbeEmitterGraphProof (packedEmitterGraphExact packedEmitterEquation)
+open NumberedWindowInternalFreshProbeEmitterPayloadProof (actualPayload)
+open NumberedWindowInternalFreshProbeEmitterShapeSyntaxProof (shapeIntro shapeRename)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+private theorem actualTriple {X : Type} (xs : Fin 3 → X) : (![xs 0,xs 1,xs 2]) = xs := by
+  funext i
+  exact Fin.cases rfl (Fin.cases rfl (Fin.cases rfl (fun k => Fin.elim0 k))) i
+
+theorem exact_PackedFreeEmitterGraph : ExactPackedFreeEmitterGraph := packedEmitterGraphExact
+
+theorem exact_SelectedFreshOpenShape : ExactSelectedFreshOpenShape := by
+  intro p body α Γ q u h
+  have hf := actualPayload p q u h
+  apply programCompositionCases packedEmitter
+    (Fin.cons p.context (Fin.cons p.domain (Fin.cons p.name Fin.elim0)))
+    u ![q] (shapeAt p q u) hf
+  intro β j ys Δ _ hout hcoord
+  rw [shapeRename]
+  have hc := hcoord 0
+  have ht := hcoord 1
+  have hn := hcoord 2
+  rw [unaryRename] at hc ht hn
+  rw [← actualTriple ys] at hout
+  exact shapeIntro p (q.relabel j) (u.relabel j) ys hc ht hn
+    (packedEmitterEquation (u.relabel j) (ys 0) (ys 1) (ys 2) hout)
+
+#print axioms exact_PackedFreeEmitterGraph
+#print axioms exact_SelectedFreshOpenShape
+end LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeEmitterObjectChecks

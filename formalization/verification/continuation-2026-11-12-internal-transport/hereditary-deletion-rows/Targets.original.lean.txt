@@ -1,0 +1,23 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryDeletionRowsDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryDeletionRowsTargets
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open OriginalHereditaryDeletionRows
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+/-- Exact finite numeric row on every input, including empty/malformed contexts. -/
+def NativeScan : Prop := ∀ (Q : Program 2) (count input parameter : Nat),
+  evaluate (scan Q) (List.Vector.ofFn ![count,input,parameter]) =
+    NumberedMultisetNumeric.numbersNumber (values Q count input parameter)
+/-- Actual bounded scan exposes each in-range cell. No source or native premise. -/
+def Indexed : Prop := ∀ (Q : Program 2) (body : Positive (Fin 1))
+    (alpha : Type) (Delta : List (Formula alpha))
+    (count input parameter row cutoff out : OTerm alpha),
+  Nonempty (Derivation body Delta
+    ((OriginalIndexedObserverDefinitions.Below cutoff count ⊓
+      (graph3 (scan Q) row count input parameter ⊓
+        graph2 InternalRawListRecursion.lookup out cutoff row)).imp
+      (graph3 (observation Q) out cutoff input parameter)))
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryDeletionRowsTargets

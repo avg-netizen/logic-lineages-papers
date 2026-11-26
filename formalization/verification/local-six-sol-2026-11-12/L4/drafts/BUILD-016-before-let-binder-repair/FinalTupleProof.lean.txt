@@ -1,0 +1,37 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Integration.EndpointProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalMixedLiteralEndpointProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalActiveKernelMinimumGlobalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Integration.FinalTupleProof
+open UniformCertificateCompletion
+open OriginalFinalVariableCanonicalSupportProof (iffBackward)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+theorem actualFinalApplicationEndpoint : ActualFinalApplicationEndpoint := by
+  intro p H G W oldStep body alpha Delta s t cert parameter fn targetFn childCert arg d e arrow fp ap hcs hh hr
+  have h := OriginalMixedLiteralEndpointProof.actualEndpoint H G
+    (InternalOriginalUniformContextMembership.contextMember p.base.member) W oldStep
+    body alpha Delta s t cert parameter fn targetFn childCert arg d e arrow fp ap hcs hh hr
+  exact iffBackward (EndpointProof.actualFinalEndpoint p H G W body alpha Delta
+    (SourceComputabilityFormulaSupportProof.numeral 1) d e fn targetFn arg parameter) h
+
+theorem kernelEndpoint (p : GlobalSourcePackage.Inputs) (H G : Program 1)
+    (W : Program 2) (P : Program 3) :
+    EndpointLaw (kernelFinalData p H G W P) H G
+      (InternalOriginalUniformContextMembership.contextMember p.base.member) W := by
+  let K := OriginalActiveClassKernel.classTest p H G W P
+  let Q := OriginalActiveObservedClass.classTest p H G W
+    OriginalRawSyntaxTransport.variableRankPackedRaw K
+  let s := OriginalTransparentMinimum.minimumInputs H G Q p
+  exact EndpointProof.actualFinalEndpoint
+    (OriginalRankGuardedRepresentative.guardedInputs H G W s) H G W
+
+theorem actualKernelFinalRetention : ActualKernelFinalRetention := by
+  intro n arity p H G W P hp hH hG hW hP
+  exact ⟨OriginalActiveKernelMinimumGlobalProof.actualOriginalActiveKernelMinimumRetention
+    n arity p H G W P hp hH hG hW hP, kernelEndpoint p H G W P⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Integration.FinalTupleProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Integration.FinalTupleProof

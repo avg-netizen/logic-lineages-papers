@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ConcreteCountPairReplacementTargets
+import LogicLineages.PermittedControl.ConcreteCountPairReplacementProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_concreteCountPairReplacement :
+    ConcreteCountPairReplacement.FullConcretePairReplacement :=
+  ConcreteCountPairReplacement.fullConcretePairReplacement
+
+#print axioms fixed_concreteCountPairReplacement
+
+end LogicLineages.PermittedControl.StatementChecks

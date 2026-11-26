@@ -1,0 +1,7 @@
+# Independent final: full original numbered window locality
+
+Accept Paper16 ordinals.tex195–226 lem:window-locality. Source-exact five-component comparator was independently read/frozen38pins and target-only native checked before authoring. Both new proof files fully read and byte matched. Literal Visits induction retains the actual original tuple path, including every endpoint; exact supplier projections retain original six-sort footprint, uniform start-only numerical typed trace preservation, and actual complete tuple and weak/strict constructed traces. No intermediate admission premise, alternative numeric output or enlarged window is introduced.
+
+Clean exact native1795084394752103407-6 passes168modules, original core caps/max522052KiB, exit0/reaped. Independent recursive replay plus object/axiom inspection matches all168 current source/module/log/input-key/artifact/compiler records and67merged pins. All6exact aliases standard-only, zeroerrors. Whole conjunction exact_FullWindowLocality covers original symbolic derivation terms and actual numerical intermediates constructed below, not just endpoints. Accepted438 supplies complete positive simulation independently.
+
+Full numbered locality is closed. Arithmetic-accessibility requires actual arithmetic carrier/quotient and ID1 proof; neither generic Lean accessibility nor this locality lemma supplies it. Upper/height/main remain separate. No source manuscript change, full-root or CI claim.

@@ -1,0 +1,14 @@
+import LogicLineages.PersistentMarking.NumberedWindowSourceBlockProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowSourceGuardChecks
+open NumberedWindowSourceGuardTargets
+
+theorem exact_ActualBlockGuard : ActualBlockGuard := NumberedWindowSourceBlockProof.term
+theorem exact_ActualBaseBlockGuard : ActualBaseBlockGuard := NumberedWindowSourceBlockProof.base
+theorem exact_ActualExtrasBlockGuard : ActualExtrasBlockGuard := NumberedWindowSourceBlockProof.extras
+
+#print axioms exact_ActualBlockGuard
+#print axioms exact_ActualBaseBlockGuard
+#print axioms exact_ActualExtrasBlockGuard
+
+end LogicLineages.PersistentMarking.NumberedWindowSourceGuardChecks

@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroClassConcreteChargeTargets
+import LogicLineages.PermittedControl.ActualZeroClassConcreteChargeProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualZeroClassConcreteCharge :
+    ActualZeroClassConcreteCharge.ExactConcreteZeroClassCharge :=
+  ActualZeroClassConcreteCharge.exactConcreteZeroClassCharge
+
+#print axioms fixed_actualZeroClassConcreteCharge
+
+end LogicLineages.PermittedControl.StatementChecks

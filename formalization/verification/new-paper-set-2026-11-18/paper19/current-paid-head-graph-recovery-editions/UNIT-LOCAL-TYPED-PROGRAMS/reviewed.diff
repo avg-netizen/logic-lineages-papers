@@ -1,0 +1,79 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLocalProgramsProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitLocalProgramsProof.lean
+@@ -1,5 +1,6 @@
+ module
+ public import LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraphMatrixEmitProgramsProof
++public import LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraphUnitCodeDefinitions
+ public import LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraphFoundationProgramsProof
+ public import LogicLineages.ControlSensitivityCurrent.CurrentProbeCodeProof
+ @[expose] public section
+@@ -15,11 +16,13 @@
+ 
+ theorem rawProgram : Primrec MatrixCode.raw := addProgram.comp varProgram (Primrec.const (lit 1))
+ private theorem timesProgram : Primrec₂ MatrixCode.times := by
+-  let P := Nat×Nat
+-  let S := P×Nat×Nat
+-  have a : Primrec (fun q : S => q.1.2) := Primrec.snd.comp Primrec.fst
++  let S := Nat×Nat×Nat
++  have a : Primrec (fun q : S => q.1) := Primrec.fst
+   have x : Primrec (fun q : S => q.2.2) := Primrec.snd.comp Primrec.snd
+-  exact Primrec.nat_rec (Primrec.fst : Primrec fun q : P => q.1) (Primrec.const (lit 0)) (addProgram.comp a x).to₂
++  have step : Primrec₂ (fun a (q : Nat×Nat) => MatrixCode.add a q.2) :=
++    (addProgram.comp a x).to₂
++  have rec := Primrec.nat_rec (Primrec.const (lit 0) : Primrec (fun _ : Nat => lit 0)) step
++  exact rec.comp Primrec.snd Primrec.fst
+ 
+ theorem rowProgram : Primrec (fun q : LinearCode×Nat×Nat×Nat => rawRow q.1 q.2.1 q.2.2.1 q.2.2.2) := by
+   let P := LinearCode×Nat×Nat×Nat
+@@ -31,24 +34,32 @@
+   have l : Primrec (fun q : P => q.2.1) := Primrec.fst.comp Primrec.snd
+   have m : Primrec (fun q : P => q.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
+   have r : Primrec (fun q : P => q.2.2.2) := Primrec.snd.comp (Primrec.snd.comp Primrec.snd)
+-  exact (binaryNode 2).comp (addProgram.comp (timesProgram.comp (Primrec.fst.comp row) l) (litProgram.comp b))
+-    (addProgram.comp (addProgram.comp (timesProgram.comp c m) (timesProgram.comp d r)) (litProgram.comp e))
++  have left : Primrec (fun q : P => add (times q.1.1 q.2.1) (lit q.1.2.1)) :=
++    addProgram.comp (timesProgram.comp (Primrec.fst.comp row) l) (litProgram.comp b)
++  have middle : Primrec (fun q : P => add (times q.1.2.2.1 q.2.2.1)
++      (times q.1.2.2.2.1 q.2.2.2)) := addProgram.comp (timesProgram.comp c m) (timesProgram.comp d r)
++  have right : Primrec (fun q : P => add (add (times q.1.2.2.1 q.2.2.1)
++      (times q.1.2.2.2.1 q.2.2.2)) (lit q.1.2.2.2.2)) := addProgram.comp middle (litProgram.comp e)
++  exact (binaryNode 2).comp left right
+ 
+ private theorem eraserShiftProgram : Primrec shiftEraser := by
+   have g : Primrec (fun q : Code => q.1) := Primrec.fst
+   have l : Primrec (fun q : Code => q.1.length-2) := Primrec.nat_sub.comp (Primrec.list_length.comp g) (Primrec.const 2)
+-  have t := Primrec.list_map (Primrec.list_range.comp l)
+-    (Primrec.nat_add.comp (Primrec.snd : Primrec (fun q : Code×Nat => q.2)) (Primrec.const 3)).to₂
+-  have table := Primrec.list_cons.comp (Primrec.const 0) (Primrec.list_cons.comp (Primrec.const 1) t)
+-  exact RawSourceDAG.Operations.primitive.2.2.2.comp
++  have t : Primrec (fun q : Code => (List.range (q.1.length-2)).map (fun i => i+3)) :=
++    Primrec.list_map (Primrec.list_range.comp l)
++      (Primrec.nat_add.comp (Primrec.snd : Primrec (fun q : Code×Nat => q.2)) (Primrec.const 3)).to₂
++  have table : Primrec (fun q : Code => 0::1::(List.range (q.1.length-2)).map (fun i => i+3)) :=
++    Primrec.list_cons.comp (Primrec.const 0) (Primrec.list_cons.comp (Primrec.const 1) t)
++  exact RawSourceDAG.Operations.rename_code_primitive.comp
+     ((Primrec.list_cons.comp (Primrec.const 0) g).pair (table.pair Primrec.id))
+ private theorem originalProgram : Primrec originalEraser :=
+   eraserShiftProgram.comp (CurrentProbeCode.effective.2.comp
+-    (CurrentDecisionEmitter.liftCodePrimitive.comp (Primrec.const 2) Primrec.id) (Primrec.const 0))
++    (CurrentDecision.liftCodePrimitive.comp (Primrec.const 2) Primrec.id) (Primrec.const 0))
+ private theorem closedProgram : Primrec closedEraser := by
+   have g : Primrec (fun q : Code => 0::0::q.1) := Primrec.list_append.comp (Primrec.const [0,0]) Primrec.fst
+-  have r := RawSourceDAG.Operations.primitive.2.2.2.comp
+-    (g.pair ((Primrec.const []).pair CurrentProbeCode.effective.1))
++  have args : Primrec (fun q : Code => (0::0::q.1,([] : List Nat),CurrentProbeCode.closeRaw q)) :=
++    g.pair ((Primrec.const []).pair CurrentProbeCode.effective.1)
++  have r := RawSourceDAG.Operations.rename_code_primitive.comp args
+   exact eraserShiftProgram.comp (CurrentProbeCode.effective.2.comp r (Primrec.const 1))
+ 
+ private def groundOutput (q : Code×Nat) : Block :=
+@@ -60,7 +71,8 @@
+ private theorem groundOutputProgram : Primrec groundOutput := by
+   let P := Code×Nat
+   have v : Primrec (fun q : P => q.1) := Primrec.fst
+-  have d := CurrentDecisionEmitter.factorCodePrimitive.comp v
++  have d : Primrec (fun q : P => CurrentDecisionEmitter.factorCode q.1) :=
++    CurrentDecision.factorCodePrimitive.comp v
+   have l := (binaryNode 2).comp (observeProgram.comp (originalProgram.comp v)) (observeProgram.comp (closedProgram.comp v))
+   have a := addProgram.comp (timesProgram.comp d (Primrec.const (MatrixCode.raw 2)))
+     (Primrec.const (MatrixCode.raw 0))

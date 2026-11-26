@@ -1,0 +1,78 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightReplace/RefinementProof.lean:42:1: error: unsolved goals
+case neg
+candidate original : ℕ
+v : List.Vector ℕ (Nat.succ 0) := original ::ᵥ nil
+a : List ℕ
+ha : Encodable.encode a = evaluate leftTermCode v
+b : List ℕ
+hb : Encodable.encode b = evaluate rightTermCode v
+c : List ℕ
+hc : Encodable.encode c = candidate
+args : List.Vector ℕ (Nat.succ 0).succ := candidate ::ᵥ original ::ᵥ nil
+aP : Program 2 := applyOne leftTermCode (Program.projection 1)
+bP : Program 2 := applyOne rightTermCode (Program.projection 1)
+hA : evaluate aP args = Encodable.encode a
+hB : evaluate bP args = Encodable.encode b
+hC : evaluate (Program.projection 0) args = Encodable.encode c
+hl : evaluate (line aP bP (Program.projection 0)) args = Encodable.encode (nativeLine a b c)
+hta : evaluate (applyOne termValidator aP) args = HistoryDispatcher.truth (GorbowSyntaxValidation.validTerm 0 a)
+htb : evaluate (applyOne termValidator bP) args = HistoryDispatcher.truth (GorbowSyntaxValidation.validTerm 0 b)
+htc :
+  evaluate (applyOne termValidator (Program.projection 0)) args =
+    HistoryDispatcher.truth (GorbowSyntaxValidation.validTerm 0 c)
+he : ¬original = Encodable.encode (nativeLine a b c)
+h :
+  args.get 1 = Encodable.encode (nativeLine a b c) ∧
+    ¬HistoryDispatcher.truth (GorbowSyntaxValidation.validTerm 0 a) = 0 ∧
+      ¬HistoryDispatcher.truth (GorbowSyntaxValidation.validTerm 0 b) = 0 ∧
+        ¬HistoryDispatcher.truth (GorbowSyntaxValidation.validTerm 0 c) = 0
+⊢ HistoryDispatcher.logicalFunction (original ::ᵥ nil) = 1
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightReplace/RefinementProof.lean:33:51: warning: This simp argument is unused:
+  get2_1
+
+Hint: Omit it from the simp argument list.
+  simp only [conjunctionEval, ̲twoEval, ̲projectionEval,g̵e̵t̵2̵_̵1̵,̵ ̲hl, ̲equalEval, ̲hta, ̲htb, ̲htc] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightReplace/RefinementProof.lean:39:15: warning: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  simp [he̵,̵h̵va, ̲hvb, ̲hvc, ̲HistoryDispatcher.truth] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightReplace/RefinementProof.lean:40:13: warning: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  simp [he̵,̵h̵va, ̲hvb, ̲HistoryDispatcher.truth] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightReplace/RefinementProof.lean:41:11: warning: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  simp [he̵,̵h̵va, ̲HistoryDispatcher.truth] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightReplace/RefinementProof.lean:42:9: warning: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵e̵]̵ ̵at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightReplace/RefinementProof.lean:50:121: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawAddRightReplace/RefinementProof.lean:62:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawAddRightReplace.RefinementProof.nativeRefinement: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawAddRightReplace.RefinementProof.candidateSound' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawAddRightReplace.RefinementProof.nativeRefinement' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,55 @@
+{
+  "status": "source-only count-label long proof repair, no Lean/Git invoked by author",
+  "failed_source_remote_commit": "b4b7807cd3abb53964ebd2bfa6315dd0a305c94b",
+  "failed_source_local_commit": "ac0119b33e239281c9b5b52319635bb08dd14b4f",
+  "failed_source_tree": "856ddccf3d63a8baac4d78cc040051b6b8ec6855",
+  "failed_exact_gate_receipt": "1795364234128240100-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualCountCoreLabelsStatementChecks",
+  "failed_receipt_sha256": "ed2eeb77b6003c91185be3de6d35f7873d50664d060fa3a8dffab04b43cb4519",
+  "failed_exact_module_log_sha256": "e8d17e2ed2294c8075c7da89da0dba2bfc5be97e1213639c52658dd2a656025d",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCountCoreLabelsLongProof.lean:69:47: error: unsolved goals\nf : \u2115 \u2192 \u2115\nB : \u2115\nselected : SelectedWithThreshold f B\n\u03c1 : \u2115 \u2192 \u2115\nrank : \u2115\nlam mu : NONote\nhLong : LongField (ValueField.entry 0 lam mu)\npaid : max (actualOrdinalNorm (\u2191lam).repr) (actualOrdinalNorm (\u2191mu).repr + 3) \u2264 \u03c1 rank\neta : NONote := prefixTarget mu\nx : \u2115 := \u03c1 rank\nA : Ordinal.{0} := countInitial (\u2191lam).repr x\nproper : ProperField (ValueField.entry 0 lam mu)\naffordable : actualOrdinalNorm (\u2191lam).repr \u2264 x\nzero : shortGapLength lam mu = 0\netaLiteral : (\u2191eta).repr = (\u2191mu).repr + Ordinal.omega0 ^ 2\netaLimit : Order.IsSuccLimit (\u2191eta).repr\nbound : (\u2191mu).repr + Ordinal.omega0 ^ 2 \u2264 (\u2191lam).repr\ni k : \u2115\nhi : FirstEntry f (countInitial (\u2191lam).repr x) ((\u2191mu).repr + Ordinal.omega0 ^ 2) i\nhk : FirstEntry f (countInitial (\u2191lam).repr x) (\u2191mu).repr k\norbit : entryNormAt f (countInitial (\u2191lam).repr x) i = f^[i] x\ntwice : 2 * \u2191k = \u2191(f (entryNormAt f (countInitial (\u2191lam).repr x) i)) + 2 * \u2191i + 2 * Targets.countCoreConstant (\u2191mu).repr\nprefixBound : (\u2191eta).repr \u2264 (\u2191lam).repr\nfirst : FirstEntry f A (\u2191eta).repr i\nq : \u2115 := entryNormAt f A i\nactualCount : LowerOperandActual f \u03c1 (LowerOperand.count rank lam mu) k\nliteralCount : lowerOperandRead f \u03c1 (LowerOperand.count rank lam mu) = some (some k)\nliteralPrefix : fixedEntryClosedScan f (rawNoteEncode \u2191lam, rawNoteEncode \u2191eta, x) = some (some (q, i))\nidentity : i = 0 \u2194 (\u2191(prefixTarget mu)).repr = (\u2191lam).repr\nclassifier :\n  have eta := prefixTarget mu;\n  have proper := ProperField (ValueField.entry 0 lam mu);\n  have k := shortGapLength lam mu;\n  (\u00acproper \u2192 classify lam mu = Shape.invalid) \u2227\n    (proper \u2192 0 < k \u2192 classify lam mu = Shape.shortCount k) \u2227\n      (proper \u2192 k = 0 \u2192 (\u2191eta).repr = (\u2191lam).repr \u2192 classify lam mu = Shape.identityPrefix) \u2227\n        (proper \u2192 k = 0 \u2192 (\u2191eta).repr < (\u2191lam).repr \u2192 classify lam mu = Shape.properPrefix eta) \u2227\n          (proper \u2192 k = 0 \u2192 (\u2191lam).repr < (\u2191eta).repr \u2192 classify lam mu = Shape.invalid) \u2227\n            rawLabel (rawNoteEncode \u2191lam) (rawNoteEncode \u2191mu) = Option.map longFieldCode (fieldLabel lam mu)\nlt : (\u2191eta).repr < (\u2191lam).repr\nF : ValueField := ValueField.entry 1 lam eta\niPositive : 0 < i\nclassified : classify lam mu = Shape.properPrefix (prefixTarget mu)\n\u22a2 some (ValueField.entry 1 lam (prefixTarget mu)) = some (ValueField.entry 1 lam eta)\n",
+  "failed_original_native_log_sha256": "ce8ef76b89a032d9da9ad1102ec837ec11a639bd007b6f7e8c51d817000e336f",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualCountCoreLabelsLongProof.lean",
+  "failed_proof_sha256": "9479d2f14878a594834d6be6ded0e49b8eead6c641b85c68b1e2dcc961f0ca92",
+  "repaired_proof_sha256": "d548cefeefb9e598eda3e1ec023c8fce34018be53dd95b3ba867808af42255bf",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-COUNT-CORE-LABELS-REPAIR-01.patch",
+  "patch_sha256": "8fd9b94cae203c19963c488c7a04093fd8ca4eabfaddee44232f80a084a603dd",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-COUNT-CORE-LABELS-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "455bf5757f27f5963087c80676085461b2fffeece4c67faaadfa3f2ee843626f",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualCountCoreLabelsTargets.lean": "12a730a3f3f2f10434bf71dc4148fef26ce7ccce47205ad31a689457dd85edb7",
+    "formalization/LogicLineages/PermittedControl/ActualCountCoreLabelsSyntaxProof.lean": "14bcabb23787ca82b18fed1998d4dfdc98be05527a2b97ee44f749f5cb70678f",
+    "formalization/LogicLineages/PermittedControl/ActualCountCoreLabelsShortProof.lean": "310f4d94593d4bc8781204a75c737642d22a11ebbc46f2ea21ff077c933c6575",
+    "formalization/LogicLineages/PermittedControl/ActualCountCoreLabelsStatementChecks.lean": "ed73f981c3f3737a1406293d14c324c1e002871fd9c2cf317a5ee480c5bcafba",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-COUNT-CORE-LABELS-SOURCE-MAP.md": "aaeecba0e38053aabc94866bb455396a14382e9f281e0bf673e783db88c5c413"
+  },
+  "static_module_closure_unchanged": {
+    "Targets": {
+      "local": 154,
+      "external": 32,
+      "contains_totient": false
+    },
+    "SyntaxProof": {
+      "local": 231,
+      "external": 36,
+      "contains_totient": false
+    },
+    "ShortProof": {
+      "local": 294,
+      "external": 39,
+      "contains_totient": false
+    },
+    "LongProof": {
+      "local": 365,
+      "external": 39,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 367,
+      "external": 39,
+      "contains_totient": false
+    }
+  },
+  "scope": "Only unfold definitional eta = prefixTarget mu in proper-prefix returned label simp. Scope, true spans/reads/tail, aliases, source classification, imports, other leaves unchanged."
+}

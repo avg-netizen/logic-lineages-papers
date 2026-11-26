@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PermittedControl.SelectedCountOnlyClassTargets
+import LogicLineages.PermittedControl.SelectedCountOnlyClassProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_selectedCountOnlyClass : SelectedCountOnlyClass.FullSelectedCountOnlyClass :=
+  SelectedCountOnlyClass.fullSelectedCountOnlyClass
+
+#print axioms fixed_selectedCountOnlyClass
+
+end LogicLineages.PermittedControl.StatementChecks

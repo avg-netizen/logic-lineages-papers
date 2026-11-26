@@ -1,0 +1,35 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowHeaderProof.lean:46:37: error: Application type mismatch: The argument
+  actual
+has type
+  Nonempty (Derivation body Γ (windowGraph W ctx ty raw))
+but is expected to have type
+  Nonempty
+    (Derivation body Γ
+      (ID1Completion.InternalGraphComposition.graph (OrdinaryArithmetic.graphFormula W) (suc z) ![ctx, ty, raw]))
+in the application
+  graphInputTransport body α 3 Γ (OrdinaryArithmetic.graphFormula W) (suc z) ![ctx, ty, raw] ![ctx, other, key] ?m.64
+    actual
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalStrictAuxWindowHeaderProof.lean:45:2: error: Tactic `apply` failed: could not unify the type of `graphInputTransport body α 3 Γ (OrdinaryArithmetic.graphFormula W)
+  (suc z) ![ctx, ty, raw] ![ctx, other, key] ?m.64 sorry`
+  Nonempty
+    (Derivation body Γ
+      (ID1Completion.InternalGraphComposition.graph (OrdinaryArithmetic.graphFormula W) (suc z) ![ctx, other, key]))
+with the goal
+  Nonempty (Derivation body Γ (windowGraph W ctx other key))
+
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+W : Program 3
+ctx ty other raw key : OTerm α
+types : Nonempty (Derivation body Γ (eqn ty other))
+keys : Nonempty (Derivation body Γ (eqn raw key))
+actual : Nonempty (Derivation body Γ (windowGraph W ctx ty raw))
+self : Nonempty (Derivation body Γ (equal ctx ctx))
+sameTy : Nonempty (Derivation body Γ (equal ty other))
+sameKey : Nonempty (Derivation body Γ (equal raw key))
+⊢ Nonempty (Derivation body Γ (windowGraph W ctx other key))
+'LogicLineages.PersistentMarking.NumberedWindowInternalStrictAuxWindowHeaderProof.exact_OpenStrictAuxWindowAtHeader' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,57 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowPositiveFiberSharedSyntaxProof.lean:49:13: error: don't know how to synthesize implicit argument `α`
+  @Eq (Fin 1 → OrdinaryArithmetic.arithmeticLanguage.Term (α ⊕ ?m.47)) (fun i => Term.relabel Sum.inl (![q] i))
+    ![Term.relabel Sum.inl q]
+context:
+α : Type
+a : Program 1
+n q : OTerm α
+⊢ Type ?u.34
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowPositiveFiberSharedSyntaxProof.lean:49:59: error: don't know how to synthesize implicit argument `α`
+  @Matrix.vecCons (OrdinaryArithmetic.arithmeticLanguage.Term (α ⊕ ?m.47)) 0 (Term.relabel Sum.inl q) ![]
+context:
+α : Type
+a : Program 1
+n q : OTerm α
+⊢ Type ?u.34
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowPositiveFiberSharedSyntaxProof.lean:49:59: error: don't know how to synthesize implicit argument `α`
+  @Matrix.vecEmpty (OrdinaryArithmetic.arithmeticLanguage.Term (α ⊕ ?m.47))
+context:
+α : Type
+a : Program 1
+n q : OTerm α
+⊢ Type ?u.34
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowPositiveFiberSharedSyntaxProof.lean:49:61: error: don't know how to synthesize implicit argument `β`
+  @Term.relabel OrdinaryArithmetic.arithmeticLanguage α (α ⊕ ?m.47) Sum.inl q
+context:
+α : Type
+a : Program 1
+n q : OTerm α
+⊢ Type ?u.34
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowPositiveFiberSharedSyntaxProof.lean:49:71: error: don't know how to synthesize implicit argument `β`
+  @Sum.inl α ?m.47
+context:
+α : Type
+a : Program 1
+n q : OTerm α
+⊢ Type ?u.34
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowPositiveFiberSharedSyntaxProof.lean:49:31: error: don't know how to synthesize implicit argument `β`
+  @Term.relabel OrdinaryArithmetic.arithmeticLanguage α (α ⊕ ?m.47) Sum.inl (![q] i)
+context:
+α : Type
+a : Program 1
+n q : OTerm α
+i : Fin 1
+⊢ Type ?u.34
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowPositiveFiberSharedSyntaxProof.lean:49:48: error: don't know how to synthesize implicit argument `β`
+  @Sum.inl α ?m.47
+context:
+α : Type
+a : Program 1
+n q : OTerm α
+i : Fin 1
+⊢ Type ?u.34
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowPositiveFiberSharedSyntaxProof.lean:48:31: error: unsolved goals
+α : Type
+a : Program 1
+n q : OTerm α
+⊢ instantiate (programGraph a (var (Sum.inr 0)) ![Term.relabel Sum.inl q]) (emb n) = programGraph a n ![q]

@@ -1,0 +1,32 @@
+{
+  "gates": [
+    "LogicLineages.ControlSensitivityCurrent.CurrentDecisionNumberedStatementChecks"
+  ],
+  "status": "failed",
+  "native_source_matched_modules": 1229,
+  "errors": [
+    {
+      "required_audit": "LogicLineages.ControlSensitivityCurrent.CurrentDecision.StatementChecks.current_dag_decision_equivalence",
+      "error": "missing named standard-only audit"
+    },
+    {
+      "required_audit": "LogicLineages.ControlSensitivityCurrent.CurrentTreeInputCoverage.StatementChecks.actual_original_tree_input_coverage",
+      "error": "missing named standard-only audit"
+    },
+    {
+      "required_audit": "LogicLineages.ControlSensitivityCurrent.CurrentDecisionTreePresentation.StatementChecks.original_tree_decision_equivalence",
+      "error": "missing named standard-only audit"
+    },
+    {
+      "required_audit": "LogicLineages.ControlSensitivityCurrent.CurrentDecisionOriginalGroundOutput.StatementChecks.exact_original_ground_output_presentation",
+      "error": "missing named standard-only audit"
+    }
+  ],
+  "new_named_standard_axioms": {
+    "LogicLineages.ControlSensitivityCurrent.CurrentDecision.NumberedStatementChecks.exact_current_decision_equivalence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  }
+}

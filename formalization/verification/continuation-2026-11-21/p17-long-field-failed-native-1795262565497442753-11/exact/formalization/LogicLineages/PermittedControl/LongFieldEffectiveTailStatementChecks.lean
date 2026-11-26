@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PermittedControl.LongFieldEffectiveTailTargets
+import LogicLineages.PermittedControl.LongFieldEffectiveTailProof
+import LogicLineages.PermittedControl.LongFieldDistinctBoundProof
+import LogicLineages.PermittedControl.LongFieldSameBoundProof
+
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_longFieldTailEffective : FieldComparison.LongFieldTailEffective :=
+  FieldComparison.longFieldTailEffective
+
+theorem fixed_longFieldDistinctAtBound : FieldComparison.LongFieldDistinctAtBound :=
+  FieldComparison.longFieldDistinctAtBound
+
+theorem fixed_longFieldSameAtBound : FieldComparison.LongFieldSameAtBound :=
+  FieldComparison.longFieldSameAtBound
+
+theorem fixed_fullLongFieldEffectiveTail : FieldComparison.FullLongFieldEffectiveTail :=
+  FieldComparison.fullLongFieldEffectiveTail
+
+#print axioms fixed_longFieldTailEffective
+#print axioms fixed_longFieldDistinctAtBound
+#print axioms fixed_longFieldSameAtBound
+#print axioms fixed_fullLongFieldEffectiveTail
+
+end LogicLineages.PermittedControl.StatementChecks

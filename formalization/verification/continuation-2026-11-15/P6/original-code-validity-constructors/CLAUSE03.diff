@@ -1,0 +1,11 @@
+--- CLAUSE02
++++ CLAUSE03
+@@ -24,7 +24,7 @@
+   pair : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing raw tag payload))
+   firstGraph : Nonempty (Derivation body Delta (graph1 (firstOf (.projection 0)) first raw))
+   secondGraph : Nonempty (Derivation body Delta (graph1 (secondOf (.projection 0)) second raw))
+-  headGraph : Nonempty (Derivation body Delta (graph1 (headOf (.projection 0)) head raw))
++  headGraph : Nonempty (Derivation body Delta (graph1 (OriginalCodeValidityGuard.FieldProof.headOf (.projection 0)) head raw))
+ def Frame.withHyp (f : Frame n body Delta raw) (q : Formula alpha) : Frame n body (q :: Delta) raw where
+   previous := f.previous
+   tag := f.tag

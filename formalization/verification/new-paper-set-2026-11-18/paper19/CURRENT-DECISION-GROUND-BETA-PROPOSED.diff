@@ -1,0 +1,15 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentDecisionGroundProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentDecisionGroundProof.lean
+@@ -44,8 +44,10 @@
+     exact le_rfl
+   rw [and_iff_right hpos]
+   change (if strict then
+-    ParametricSourceSuccessor.denoteWith f _ (av 0) < ParametricSourceSuccessor.denoteWith f _ (bv 0)
+-    else ParametricSourceSuccessor.denoteWith f _ (av 0) ≤ ParametricSourceSuccessor.denoteWith f _ (bv 0)) ↔ _
++    ParametricSourceSuccessor.denoteWith f (fun c => ((inputs ρ c+1 : Nat) : Ordinal)) (av 0) <
++      ParametricSourceSuccessor.denoteWith f (fun c => ((inputs ρ c+1 : Nat) : Ordinal)) (bv 0)
++    else ParametricSourceSuccessor.denoteWith f (fun c => ((inputs ρ c+1 : Nat) : Ordinal)) (av 0) ≤
++      ParametricSourceSuccessor.denoteWith f (fun c => ((inputs ρ c+1 : Nat) : Ordinal)) (bv 0)) ↔ _
+   rw [va,vb,hv,hw]
+   cases strict <;> simp
+ 

@@ -1,0 +1,188 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/AntecedentProof.lean:30:14: error: don't know how to synthesize implicit argument `n`
+  @Derivation (GorbowPRNumeralCalculation.Theory p) ?m.162
+    (Formula.equal
+      (HistoryLookup.consCall ctag (Term.numeral 10) (Term.numeral (RawEqualityInstantiation.templateCode a b)))
+      (Term.numeral code))
+context:
+a b : Term 1
+n ctx : ℕ
+p : Program n
+ftag ctag : ℕ
+hf : (nodes p)[ftag]? = some ⟨2, LiteralSyntaxValidator.formulaValidator⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+phi : Formula 0 := ⋯
+code : ℕ := ⋯
+hv : GorbowSyntaxValidation.validFormula 0 (GorbowFormulaPrefixCode.encode phi) = true
+heval : evaluate LiteralSyntaxValidator.formulaValidator (0 ::ᵥ code ::ᵥ nil) = 1
+hval :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (call ftag (map Term.numeral (0 ::ᵥ code ::ᵥ nil)))
+      (Term.numeral (evaluate LiteralSyntaxValidator.formulaValidator (0 ::ᵥ code ::ᵥ nil))))
+hvalue :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (LiteralSyntaxValidator.formulaCall ftag Term.zero (Term.numeral code)) Term.zero.succ)
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (call ctag (map Term.numeral (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil)))
+      (Term.numeral (evaluate HistoryCodec.cons (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil))))
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/AntecedentProof.lean:31:3: error: don't know how to synthesize implicit argument `n`
+  @Formula.equal ?m.162
+    (HistoryLookup.consCall ctag (Term.numeral 10) (Term.numeral (RawEqualityInstantiation.templateCode a b)))
+    (Term.numeral code)
+context:
+a b : Term 1
+n ctx : ℕ
+p : Program n
+ftag ctag : ℕ
+hf : (nodes p)[ftag]? = some ⟨2, LiteralSyntaxValidator.formulaValidator⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+phi : Formula 0 := ⋯
+code : ℕ := ⋯
+hv : GorbowSyntaxValidation.validFormula 0 (GorbowFormulaPrefixCode.encode phi) = true
+heval : evaluate LiteralSyntaxValidator.formulaValidator (0 ::ᵥ code ::ᵥ nil) = 1
+hval :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (call ftag (map Term.numeral (0 ::ᵥ code ::ᵥ nil)))
+      (Term.numeral (evaluate LiteralSyntaxValidator.formulaValidator (0 ::ᵥ code ::ᵥ nil))))
+hvalue :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (LiteralSyntaxValidator.formulaCall ftag Term.zero (Term.numeral code)) Term.zero.succ)
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (call ctag (map Term.numeral (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil)))
+      (Term.numeral (evaluate HistoryCodec.cons (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil))))
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/AntecedentProof.lean:31:118: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral ?m.162 code
+context:
+a b : Term 1
+n ctx : ℕ
+p : Program n
+ftag ctag : ℕ
+hf : (nodes p)[ftag]? = some ⟨2, LiteralSyntaxValidator.formulaValidator⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+phi : Formula 0 := ⋯
+code : ℕ := ⋯
+hv : GorbowSyntaxValidation.validFormula 0 (GorbowFormulaPrefixCode.encode phi) = true
+heval : evaluate LiteralSyntaxValidator.formulaValidator (0 ::ᵥ code ::ᵥ nil) = 1
+hval :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (call ftag (map Term.numeral (0 ::ᵥ code ::ᵥ nil)))
+      (Term.numeral (evaluate LiteralSyntaxValidator.formulaValidator (0 ::ᵥ code ::ᵥ nil))))
+hvalue :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (LiteralSyntaxValidator.formulaCall ftag Term.zero (Term.numeral code)) Term.zero.succ)
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (call ctag (map Term.numeral (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil)))
+      (Term.numeral (evaluate HistoryCodec.cons (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil))))
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/AntecedentProof.lean:31:11: error: don't know how to synthesize implicit argument `ctx`
+  @HistoryLookup.consCall ?m.162 ctag (Term.numeral 10) (Term.numeral (RawEqualityInstantiation.templateCode a b))
+context:
+a b : Term 1
+n ctx : ℕ
+p : Program n
+ftag ctag : ℕ
+hf : (nodes p)[ftag]? = some ⟨2, LiteralSyntaxValidator.formulaValidator⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+phi : Formula 0 := ⋯
+code : ℕ := ⋯
+hv : GorbowSyntaxValidation.validFormula 0 (GorbowFormulaPrefixCode.encode phi) = true
+heval : evaluate LiteralSyntaxValidator.formulaValidator (0 ::ᵥ code ::ᵥ nil) = 1
+hval :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (call ftag (map Term.numeral (0 ::ᵥ code ::ᵥ nil)))
+      (Term.numeral (evaluate LiteralSyntaxValidator.formulaValidator (0 ::ᵥ code ::ᵥ nil))))
+hvalue :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (LiteralSyntaxValidator.formulaCall ftag Term.zero (Term.numeral code)) Term.zero.succ)
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (call ctag (map Term.numeral (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil)))
+      (Term.numeral (evaluate HistoryCodec.cons (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil))))
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/AntecedentProof.lean:31:58: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral ?m.162 (RawEqualityInstantiation.templateCode a b)
+context:
+a b : Term 1
+n ctx : ℕ
+p : Program n
+ftag ctag : ℕ
+hf : (nodes p)[ftag]? = some ⟨2, LiteralSyntaxValidator.formulaValidator⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+phi : Formula 0 := ⋯
+code : ℕ := ⋯
+hv : GorbowSyntaxValidation.validFormula 0 (GorbowFormulaPrefixCode.encode phi) = true
+heval : evaluate LiteralSyntaxValidator.formulaValidator (0 ::ᵥ code ::ᵥ nil) = 1
+hval :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (call ftag (map Term.numeral (0 ::ᵥ code ::ᵥ nil)))
+      (Term.numeral (evaluate LiteralSyntaxValidator.formulaValidator (0 ::ᵥ code ::ᵥ nil))))
+hvalue :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (LiteralSyntaxValidator.formulaCall ftag Term.zero (Term.numeral code)) Term.zero.succ)
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (call ctag (map Term.numeral (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil)))
+      (Term.numeral (evaluate HistoryCodec.cons (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil))))
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/AntecedentProof.lean:31:40: error: don't know how to synthesize implicit argument `n`
+  @Term.numeral ?m.162 10
+context:
+a b : Term 1
+n ctx : ℕ
+p : Program n
+ftag ctag : ℕ
+hf : (nodes p)[ftag]? = some ⟨2, LiteralSyntaxValidator.formulaValidator⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+phi : Formula 0 := ⋯
+code : ℕ := ⋯
+hv : GorbowSyntaxValidation.validFormula 0 (GorbowFormulaPrefixCode.encode phi) = true
+heval : evaluate LiteralSyntaxValidator.formulaValidator (0 ::ᵥ code ::ᵥ nil) = 1
+hval :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (call ftag (map Term.numeral (0 ::ᵥ code ::ᵥ nil)))
+      (Term.numeral (evaluate LiteralSyntaxValidator.formulaValidator (0 ::ᵥ code ::ᵥ nil))))
+hvalue :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (LiteralSyntaxValidator.formulaCall ftag Term.zero (Term.numeral code)) Term.zero.succ)
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (call ctag (map Term.numeral (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil)))
+      (Term.numeral (evaluate HistoryCodec.cons (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil))))
+⊢ ℕ
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/AntecedentProof.lean:15:129: error: unsolved goals
+a b : Term 1
+n ctx : ℕ
+p : Program n
+ftag ctag : ℕ
+hf : (nodes p)[ftag]? = some ⟨2, LiteralSyntaxValidator.formulaValidator⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+phi : Formula 0 := (RawEqualityInstantiation.template a b).all
+code : ℕ := Encodable.encode (GorbowFormulaPrefixCode.encode phi)
+hv : GorbowSyntaxValidation.validFormula 0 (GorbowFormulaPrefixCode.encode phi) = true
+heval : evaluate LiteralSyntaxValidator.formulaValidator (0 ::ᵥ code ::ᵥ nil) = 1
+hval :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (call ftag (map Term.numeral (0 ::ᵥ code ::ᵥ nil)))
+      (Term.numeral (evaluate LiteralSyntaxValidator.formulaValidator (0 ::ᵥ code ::ᵥ nil))))
+hvalue :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (LiteralSyntaxValidator.formulaCall ftag Term.zero (Term.numeral code)) Term.zero.succ)
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (call ctag (map Term.numeral (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil)))
+      (Term.numeral (evaluate HistoryCodec.cons (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil))))
+⊢ Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      (Formula.equal
+        (LiteralSyntaxValidator.formulaCall ftag Term.zero
+          (HistoryLookup.consCall ctag (Term.numeral 10) (Term.numeral (RawEqualityInstantiation.templateCode a b))))
+        Term.zero.succ))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/AntecedentProof.lean:41:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityInstantiationDispatcher.AntecedentProof.antecedent: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityInstantiationDispatcher.AntecedentProof.antecedent' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

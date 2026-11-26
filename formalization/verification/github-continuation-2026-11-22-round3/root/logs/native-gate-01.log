@@ -1,0 +1,214 @@
+Compiling LogicLineages.PersistentMarking.ActualOmegaTowerDefinitions
+COMPILE_PASS LogicLineages.PersistentMarking.ActualOmegaTowerDefinitions
+Compiling LogicLineages.PersistentMarking.ActualOmegaTowerTargets
+COMPILE_PASS LogicLineages.PersistentMarking.ActualOmegaTowerTargets
+Compiling LogicLineages.PersistentMarking.ActualOmegaTowerProof
+/workspace/scratch/563885c48fd4/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/ActualOmegaTowerProof.lean:13:35: warning: `Ordinal.IsNormal` has been deprecated: Use `Order.IsNormal` instead
+
+Note: The updated constant has a different type:
+  {α : Type u_1} → {β : Type u_2} → [LinearOrder α] → [LinearOrder β] → (α → β) → Prop
+instead of
+  (Ordinal.{u_4} → Ordinal.{u_5}) → Prop
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.IsNormal` to `Order.IsNormal x`).
+/workspace/scratch/563885c48fd4/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/ActualOmegaTowerProof.lean:36:25: warning: `Ordinal.IsNormal.strictMono` has been deprecated: Use `Order.IsNormal.strictMono` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Type u_1} {β : Type u_2} [inst : LinearOrder α] [inst_1 : LinearOrder β] {f : α → β},
+    Order.IsNormal f → StrictMono f
+instead of
+  ∀ {f : Ordinal.{u_4} → Ordinal.{u_5}}, Ordinal.IsNormal f → StrictMono f
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.strictMono` to `Order.IsNormal.strictMono x`).
+/workspace/scratch/563885c48fd4/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/ActualOmegaTowerProof.lean:45:48: warning: `Ordinal.IsNormal.strictMono` has been deprecated: Use `Order.IsNormal.strictMono` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Type u_1} {β : Type u_2} [inst : LinearOrder α] [inst_1 : LinearOrder β] {f : α → β},
+    Order.IsNormal f → StrictMono f
+instead of
+  ∀ {f : Ordinal.{u_4} → Ordinal.{u_5}}, Ordinal.IsNormal f → StrictMono f
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.strictMono` to `Order.IsNormal.strictMono x`).
+/workspace/scratch/563885c48fd4/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/ActualOmegaTowerProof.lean:60:43: warning: `Ordinal.IsNormal.monotone` has been deprecated: Use `Order.IsNormal.strictMono` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Type u_1} {β : Type u_2} [inst : LinearOrder α] [inst_1 : LinearOrder β] {f : α → β},
+    Order.IsNormal f → StrictMono f
+instead of
+  ∀ {f : Ordinal.{u_4} → Ordinal.{u_5}}, Ordinal.IsNormal f → Monotone f
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.monotone` to `Order.IsNormal.strictMono x`).
+'LogicLineages.PersistentMarking.ActualOmegaTower.exact_LiteralRecurrence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.ActualOmegaTower.exact_StrictlyIncreasing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.ActualOmegaTower.exact_BelowEndpoint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.ActualOmegaTower.exact_Cofinal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.ActualOmegaTower.exact_EndpointAsNfp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.ActualOmegaTower.exact_EndpointFixedPoint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.ActualOmegaTower.exact_EndpointLeast' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.ActualOmegaTower.exact_FullActualOmegaTower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+COMPILE_PASS LogicLineages.PersistentMarking.ActualOmegaTowerProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.Syntax
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.SpineSyntax
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.SpineTyping
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.Signature
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NameBridge
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.FreeSubstitution
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.StructuralContext
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.Occurrences
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.SpineMarking
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.Comparison
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.StructuralStabilityTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.StructuralCoverageTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.TypeSupport
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.TypeSupportTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ConfinedPair
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.StablePairTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeReduction
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.DecisionInventory
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeCarrierTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeIndexedCarrierTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeIteratorTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeIteratorStrictTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeOrientationTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ComparisonTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.BridgeTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.SpineTypingTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.SpineShiftProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.SubstitutionTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.InsertionTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.SubstitutionProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.InsertionProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.SpineSubstitutionProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.OpeningFoundationProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.SpineMarkingTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.SpineMarkingProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ElementarySupportProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ElementaryProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.FreeCovarianceTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.FreeShiftProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.FreeCompositionProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.FreeCallProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.TypeSupportFoundationProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeTypingProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeCarrierTypingProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.FreeTypingProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ClosingProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeClosedProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeClosedApplication
+CACHE_HIT LogicLineages.PersistentMarking.OrdinalRealizationTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeOrdinalRealizationTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeIndexedTypingThinProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.AuxiliaryWitnesses
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.Refinement
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ExtendedComparison
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.AuxiliaryTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.PrefixEscapeSupportTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ClosedSyntaxProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeIteratorSyntaxProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.Grafting
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.GraftingTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.TypeSupportSubstitutionProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.StructuralFillProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.TwoEnvironmentTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementMeasure
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementSyntaxTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementRenamingTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementOpeningTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementRenameSupport
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementRenamingProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementOpeningProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.AuxiliaryReflexivityProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementTransitivitySupport
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementTransitivityProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementSubstitutionSupport
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ExtendedEndpointProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ExtendedMeasure
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ExtendedRenamingTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ExtendedOpeningTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ExtendedRenameSupport
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ExtendedRenamingProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ExtendedOpeningProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.TwoEnvironmentSupport
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.TwoEnvironmentBinderProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.TwoEnvironmentCases1
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.TwoEnvironmentCases2
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.TwoEnvironmentCases3
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.TwoEnvironmentCases4
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.TwoEnvironmentCases5
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.TwoEnvironmentStep
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.TwoEnvironmentProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ConservativeTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.OwnerRefinementTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementAppendTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementFreshOpeningProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementSubstitutionProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementAppendProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.OwnerOccurrenceProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.OwnerRefinementProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ComparisonOrdinaryProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ConservativeListSupport
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementFullCallTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementFreeBlockProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementFreeCallProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementCallMapProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.SpineCallTypingProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementFullCallProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ConservativeOwnerSupport
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ConservativeSelectionProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ConservativeResults
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ConservativeBinderProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.RefinementMarkProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ConservativeCases1
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ConservativeCases2
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ConservativeCases3
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ConservativeCases4
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ConservativeCases5
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ConservativeStep
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ConservativeProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.AuxiliaryEmbeddingProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.StructuralSubstitutionProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.StructuralHeadSupport
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.StructuralHeadProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ClosingOpeningProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.StructuralBinderProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.StructuralContextProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.AlphaEncodingProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.ClosingNamedProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.BridgeTypingProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.StructuralCoverageProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.DecodeRoundtripProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.TypeSupportNamedProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.GraftingProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeBetaSupport
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeBetaProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.BoundBlockProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeIteratorBetaProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeIteratorChecks
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeIndexedCarrierSubtype
+CACHE_HIT LogicLineages.PersistentMarking.OrdinalNativeIterationTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeOrdinalIterationTargets
+CACHE_HIT LogicLineages.PersistentMarking.OrdinalRealizationClosureProof
+CACHE_HIT LogicLineages.PersistentMarking.OrdinalNativeOrbitProof
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeTowerTargets
+CACHE_HIT LogicLineages.NativeModule.PersistentMarking.NativeTowerSyntaxProof
+Compiling LogicLineages.NativeModule.PersistentMarking.TypedLambdaRealizationDefinitions
+COMPILE_PASS LogicLineages.NativeModule.PersistentMarking.TypedLambdaRealizationDefinitions
+Compiling LogicLineages.NativeModule.PersistentMarking.TypedLambdaRealizationTargets
+COMPILE_PASS LogicLineages.NativeModule.PersistentMarking.TypedLambdaRealizationTargets
+BUILD_RECEIPT build-reports/1795411144544945494-11.json

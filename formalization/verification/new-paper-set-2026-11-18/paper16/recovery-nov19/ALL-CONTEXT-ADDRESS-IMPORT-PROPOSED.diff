@@ -1,0 +1,12 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowArithmeticClassAddress.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowArithmeticClassAddress.lean
+@@ -1,7 +1,8 @@
+ import LogicLineages.PersistentMarking.NumberedWindowArithmeticBinderCode
++import LogicLineages.PersistentMarking.NumberedWindowArithmeticFields
+ 
+ namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticClassAddress
+-open NumberedWindowSyntax NumberedWindowArithmeticFields
++open NumberedWindowArithmeticFields
+ open NumberedWindowArithmeticTyCode NumberedWindowArithmeticBinderCode
+ 
+ /-- One address records the represented concrete binder stack, the

@@ -1,0 +1,15 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationTerminalProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationTerminalChecks
+open NumberedWindowInternalSparsePositiveIterationTargets
+open NumberedWindowInternalSparsePositiveIterationTerminalProof (extra zeroLoop)
+
+theorem exact_OpenTerminalExtraFuel : OpenTerminalExtraFuel := extra
+theorem exact_OpenTerminalNilLoop : OpenTerminalNilLoop := zeroLoop
+
+#print axioms exact_OpenTerminalExtraFuel
+#print axioms exact_OpenTerminalNilLoop
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveIterationTerminalChecks

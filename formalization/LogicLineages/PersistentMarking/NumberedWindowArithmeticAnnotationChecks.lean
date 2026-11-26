@@ -1,0 +1,10 @@
+import LogicLineages.PersistentMarking.NumberedWindowArithmeticAnnotationProof
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticAnnotationChecks
+open NumberedWindowArithmeticAnnotationTargets NumberedWindowArithmeticAnnotationProof
+theorem exact_HeadDeclaration : HeadDeclaration := headDeclaration
+theorem exact_LiteralAnnotations : LiteralAnnotations := ⟨term,args⟩
+theorem exact_DecodedAnnotations : DecodedAnnotations := decoded
+#print axioms exact_HeadDeclaration
+#print axioms exact_LiteralAnnotations
+#print axioms exact_DecodedAnnotations
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticAnnotationChecks

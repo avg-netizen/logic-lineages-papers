@@ -1,0 +1,11 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentUnaryChainDefinitions.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentUnaryChainDefinitions.lean
+@@ -42,7 +42,7 @@
+ 
+ /-- Genuine shared positive ground coordinates, all functional coordinates
+ observed at the common unit, with no all-one source inhabitant. -/
+-def commonUnits {Γ} (ρ : Variable Γ .ground → Nat) : OrdinalComponent Γ → Ordinal
++noncomputable def commonUnits {Γ} (ρ : Variable Γ .ground → Nat) : OrdinalComponent Γ → Ordinal
+   | ⟨.ground,x,_⟩ => ((ρ x+1 : Nat) : Ordinal)
+   | ⟨.arrow _ _,_,_⟩ => 1
+ 

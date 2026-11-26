@@ -1,0 +1,24 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChosenAuxMeasureAlignProof.lean:81:54: error: Application type mismatch: The argument
+  bounds
+has type
+  Derivation body Δ (parentMeasureAndBounds M dom' cod' fn' arg' p' df' da' bf' ba')
+but is expected to have type
+  Derivation body Δ
+    ((programGraph (selectedMeasure (measureUpdate M chosenCombine)) (Term.relabel j p) fun i =>
+        Term.relabel j (![auxiliaryTerm dom cod fn arg] i)) ⊓
+      Formula.relabel j
+        (SourceComputabilityFormulaSupportProof.existsOne
+          (NumberedWindowInternalChosenAuxMeasureCombineOpenTargets.boundBody p df da bf ba)))
+in the application
+  combine.conjunctionIntroduction bounds
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChosenAuxMeasureAlignProof.lean:57:66: warning: This simp argument is unused:
+  parentReportRename
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵n̵j̵u̵n̵c̵t̵i̵o̵n̵R̵e̵n̵a̵m̵e̵,̵p̵r̵o̵g̵r̵a̵m̵R̵e̵n̵a̵m̵e̵,̵b̵i̵n̵a̵r̵y̵I̵n̵p̵u̵t̵s̵R̵e̵n̵a̵m̵e̵,̵p̵a̵r̵e̵n̵t̵R̵e̵p̵o̵r̵t̵R̵e̵n̵a̵m̵e̵]̵[̲c̲o̲n̲j̲u̲n̲c̲t̲i̲o̲n̲R̲e̲n̲a̲m̲e̲,̲ ̲p̲r̲o̲g̲r̲a̲m̲R̲e̲n̲a̲m̲e̲,̲ ̲b̲i̲n̲a̲r̲y̲I̲n̲p̲u̲t̲s̲R̲e̲n̲a̲m̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'LogicLineages.PersistentMarking.NumberedWindowInternalChosenAuxMeasureAlignProof.exact_OpenChosenAuxMeasureAlign' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

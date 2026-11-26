@@ -1,0 +1,9 @@
+import LogicLineages.PersistentMarking.FreeVariableApplicationProof
+namespace LogicLineages.PersistentMarking.FreeVariableRawChecks
+theorem exact_substitutePreserves : FreeVariableTargets.SubstitutePreservesAbsence := FreeVariableRawSupport.substituteAbsent
+theorem exact_substituteReflects : FreeVariableTargets.SubstituteReflectsAbsence := FreeVariableRawSupport.substituteReflects
+theorem exact_successfulApplication : FreeVariableTargets.SuccessfulApplicationAbsence := FreeVariableApplicationProof.successfulApplicationAbsence
+#print axioms exact_substitutePreserves
+#print axioms exact_substituteReflects
+#print axioms exact_successfulApplication
+end LogicLineages.PersistentMarking.FreeVariableRawChecks

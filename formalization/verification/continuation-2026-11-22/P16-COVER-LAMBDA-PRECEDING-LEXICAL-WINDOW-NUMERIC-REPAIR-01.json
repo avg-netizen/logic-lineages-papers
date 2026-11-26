@@ -1,0 +1,45 @@
+{
+  "status": "proof-only existing guard visibility repair; exact native retry pending",
+  "immutable_previous_verified_remote": "f8a24ffc584a4c5b943890181714b685f70025c9",
+  "previous_source_local": "256965c13f7c64036f37c0c5384953dada67fb4c",
+  "previous_verified_tree": "86745d036247b43dc92d8d0efa4ea933a6d256c5",
+  "receipt": {
+    "path": "formalization/build-reports/1795365933142285609-93.json",
+    "sha256": "a819197c44b54e87fb0c06a9009d16690da3353450a29d6819c1e8ee53b7212b"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795365933142285609-93-LogicLineages-PersistentMarking-NumberedWindowInternalCoverLambdaLexicalWindowNumericProof.log",
+    "sha256": "a3f366fb972f1e97f742d742c8e300c97a385cf65d0a6add636f46fa36e65eb1"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-lambda-preceding-window-numeric-initial-diagnostic.txt",
+    "sha256": "a3f366fb972f1e97f742d742c8e300c97a385cf65d0a6add636f46fa36e65eb1"
+  },
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-COVER-LAMBDA-PRECEDING-LEXICAL-WINDOW-NUMERIC-REPAIR-01.patch",
+    "sha256": "b4054f3862d94dc74c76f741ffb16fb58ac1e785e3b91a10d6fbbc770005cc7d"
+  },
+  "archived_failed_source": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverLambdaLexicalWindowNumericProof-01.lean",
+    "sha256": "80cfdfb044bf91ccdee16964cf5753ef91e3532cca06d1ee018a00373aa49f9e"
+  },
+  "repaired_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLambdaLexicalWindowNumericProof.lean",
+    "sha256": "fa98113f51837d3e2ab91d82c897c79d16ce93c9ea62ee9090854cc725c1938b"
+  },
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLambdaLexicalWindowTargets.lean",
+      "sha256": "ebb42410081b77fe9b8cabbb66732ddcd71a32b8ceba4354136d4b631538774f"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLambdaLexicalPrecedingIntrinsicProof.lean",
+      "sha256": "2d19de43894005b3b34da6f2cdaad1fa1522da7812857f51b208ba20080cf1e4"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-COVER-LAMBDA-PRECEDING-LEXICAL-WINDOW-TARGET-MAP.md",
+      "sha256": "6b4b0171e0aad7e9f34bd4d0fa4f65749baaef52aa1d991222aa468bab8a12b1"
+    }
+  ],
+  "diagnosis": "The only actual compiler error is original leafTypeTest not in the explicit local open list. Add it from same existing module; no dependency, proof, AST, or target changes. Failed sorryAx is not acceptance."
+}

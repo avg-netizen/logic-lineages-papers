@@ -1,0 +1,44 @@
+{
+  "initial_supplier_root": "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalAdoption.Proof",
+  "initial_supplier_closure": 2880,
+  "initial_driver_sha256": "1ccd8bc13855f7eb0e92edb1e295746cfccff3af1c9e8a7fb2074cfd85b1dea6",
+  "portable_driver": "verification/continuation-2026-11-17-application-literal/ordered_check.py",
+  "portable_driver_sha256": "715e254125711878682b8e2bfad0a1f8dc1d6bd23ca8b8eda3652bc1b3bf8714",
+  "original_checker_sha256": "fefa8d645edc1c7bd1e4abc750cfaa6556adfc6cc80d6aecaff952192322a144",
+  "checker_modified": false,
+  "orchestration_only": "Iterative import ordering followed by unchanged checker.main() with dependency-first explicit local roots.",
+  "portable_hardening": "Reject any missing requested local root before traversal; use repository-relative paths and verify original checker/verifier pins.",
+  "read_only_validation": {
+    "small_closures_match_original_verifier_order_and_external_imports": true,
+    "mixed_valid_and_missing_root_rejected": true,
+    "raw_application_gate_modules": 23,
+    "literal_logical_gate_modules": 300,
+    "literal_installed_gate_modules": 2905,
+    "combined_gate_modules": 2927
+  },
+  "initial_focused_closure_record": {
+    "roots": [
+      "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261117.SameSourceOriginalAdoption.Proof"
+    ],
+    "local_modules": 2880,
+    "external_imports": [
+      "Init",
+      "Lean.Elab.Command",
+      "Lean.Util.CollectAxioms",
+      "Mathlib.Computability.PartrecCode",
+      "Mathlib.Computability.Primrec.List",
+      "Mathlib.Data.Finset.Card",
+      "Mathlib.Data.Finset.Union",
+      "Mathlib.Data.Fintype.Fin",
+      "Mathlib.Data.List.Enum",
+      "Mathlib.Data.List.FinRange",
+      "Mathlib.Logic.Function.Iterate",
+      "Mathlib.Logic.Godel.GodelBetaFunction",
+      "Mathlib.ModelTheory.Semantics",
+      "Mathlib.Tactic.FinCases",
+      "Mathlib.Tactic.IntervalCases",
+      "Mathlib.Tactic.Linarith"
+    ],
+    "existing_object_count": 277
+  }
+}

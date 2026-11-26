@@ -1,0 +1,29 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseApplicationOutputCoreReportSyntaxProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseApplicationOutputCoreReportSyntaxProof.lean
+@@ -48,7 +48,7 @@
+     (fun i => ((![a,b,c] : Fin 3 → OTerm α) i).relabel j) =
+       ![a.relabel j,b.relabel j,c.relabel j] := by
+   funext i
+-  refine Fin.cases ?_ (fun x => Fin.cases ?_ (fun y => Fin.cases ?_ Fin.elim0 y) x) i <;> rfl
++  refine Fin.cases ?_ (fun x => Fin.cases ?_ (fun y => Fin.cases ?_ (fun noIndex => Fin.elim0 noIndex) y) x) i <;> rfl
+ 
+ theorem tapeRename {α β : Type} (ctx dom cod fn arg y : OTerm α) (j : α → β) :
+     (fun i => (objectTape ctx dom cod fn arg y i).relabel j) =
+@@ -56,7 +56,7 @@
+         (fn.relabel j) (arg.relabel j) (y.relabel j) := by
+   funext i
+   refine Fin.cases ?_ (fun a => Fin.cases ?_ (fun b => Fin.cases ?_ (fun c =>
+-    Fin.cases ?_ (fun d => Fin.cases ?_ (fun e => Fin.cases ?_ Fin.elim0 e) d) c) b) a) i <;> rfl
++    Fin.cases ?_ (fun d => Fin.cases ?_ (fun e => Fin.cases ?_ (fun noIndex => Fin.elim0 noIndex) e) d) c) b) a) i <;> rfl
+ 
+ private theorem addressRename {α β : Type} (c t k : OTerm α) (j : α → β) :
+     (addressTerm c t k).relabel j = addressTerm (c.relabel j) (t.relabel j) (k.relabel j) := by
+@@ -96,7 +96,7 @@
+   have args : (fun i => ((![ctx,cod,raw] : Fin 3 → OTerm α) i).subst ts) =
+       ![ctx.subst ts,cod.subst ts,raw.subst ts] := by
+     funext i
+-    refine Fin.cases ?_ (fun a => Fin.cases ?_ (fun b => Fin.cases ?_ Fin.elim0 b) a) i <;> rfl
++    refine Fin.cases ?_ (fun a => Fin.cases ?_ (fun b => Fin.cases ?_ (fun noIndex => Fin.elim0 noIndex) b) a) i <;> rfl
+   simp only [reportBody,conjunctionSubst,programSubst,args,sucSubst,eqnSubst,addressSubst]
+ 
+ theorem reportInstance {α : Type} (least : Program 3) (ctx cod raw y k : OTerm α) :

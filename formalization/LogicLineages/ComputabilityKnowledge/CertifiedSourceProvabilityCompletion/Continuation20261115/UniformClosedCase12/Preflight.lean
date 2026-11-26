@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedCase12.Targets
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedCase12.Preflight
+#check Targets.ExactOriginalCase12
+#check Targets.InternalCaseGraph
+#check GorbowLogicalAxiomCode.case12
+#check UniformClosedInstanceRecognizer.StatementChecks.exactOriginalInstance
+#check SixSol20261113.HistoryKernel.CodecTotalProof.listTotal
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.UniformClosedCase12.Preflight

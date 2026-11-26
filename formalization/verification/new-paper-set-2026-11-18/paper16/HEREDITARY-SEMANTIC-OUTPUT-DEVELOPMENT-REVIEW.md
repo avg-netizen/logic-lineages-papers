@@ -1,0 +1,3 @@
+# Semantic output bounded development scope
+
+Read complete decodeOutput draft. Approved bounded scope: actual TupleValues derives successful indices; valuesAfterIndices and canonical adapter give real tupleDecode success; exact prefix coding and outputExists yield actual residual-carrier membership. The semantic getD [] branch is explicitly rewritten through successful original indices/output, so no default membership assumption. Original WF extension/carrier/full-prefix premises are precisely the valid-coordinate domain. This proves output membership only, not full Valid (monotonicity/naturality), semantic roundtrips or lattice laws. No native execution performed.

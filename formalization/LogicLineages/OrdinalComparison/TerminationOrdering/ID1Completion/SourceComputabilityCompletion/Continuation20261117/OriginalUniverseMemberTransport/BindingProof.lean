@@ -1,0 +1,104 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.SyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalClosedProgramsBindingProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalStrongInductionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.BindingProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalApplicationCertificateConstructors
+open SourceComputabilityFormulaSupportProof InternalControlGraphSupportProof
+open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
+open InternalRawListRecursionSyntaxProof InternalGraphCompositionSyntaxProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open InternalBinderTransportProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
+open InternalAdditionLawsProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open OriginalUniverseDecoderTransport (Accepted)
+open OriginalUniverseDecoderTransportSyntaxProof (acceptedSubst acceptedRename)
+open InternalStrongInduction
+open Definitions InductionDefinitions
+
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+open SyntaxProof InternalStrongInductionProof InternalStrongInductionSyntaxProof
+
+theorem memberApply (M N : Program 2) (c typ : OTerm alpha)
+    (hi : Nonempty (Derivation body Delta (MemberIncluded M N c)))
+    (hm : Nonempty (Derivation body Delta (graph2 M (numeral 1) typ c))) :
+    Nonempty (Derivation body Delta (graph2 N (numeral 1) typ c)) := by
+  obtain ⟨hi⟩ := hi
+  obtain ⟨hm⟩ := hm
+  have h := Derivation.universalElimination (emb typ) hi
+  change Derivation body Delta (instantiate _ (emb typ)) at h
+  rw [memberWitness] at h
+  exact ⟨Derivation.implicationElimination h hm⟩
+
+theorem atRawIntro (H : Program 1) (M N W : Program 2) (raw : OTerm alpha)
+    (h : Nonempty (Derivation body (Delta.map (fun q => q.relabel Sum.inl))
+      (transportMatrix H M N W raw))) :
+    Nonempty (Derivation body Delta (AtRaw H M N W raw)) :=
+  InternalClosedProgramsBindingProof.introduction body alpha 3 Delta _ h
+
+theorem atRawApply (H : Program 1) (M N W : Program 2) (arguments : Bool)
+    (raw typ gamma c : OTerm alpha)
+    (h : Nonempty (Derivation body Delta (AtRaw H M N W raw)))
+    (hi : Nonempty (Derivation body Delta (MemberIncluded M N c)))
+    (ha : Nonempty (Derivation body Delta (Accepted H M W arguments typ raw gamma c))) :
+    Nonempty (Derivation body Delta (Accepted H N W arguments typ raw gamma c)) := by
+  obtain ⟨h⟩ := InternalClosedProgramsBindingProof.elimination body alpha 3 Delta
+    (transportMatrix H M N W raw) (fun i => emb (![typ,gamma,c] i)) h
+  rw [transportMatrixWitness] at h
+  obtain ⟨hi⟩ := hi
+  obtain ⟨ha⟩ := ha
+  cases arguments
+  · exact ⟨Derivation.implicationElimination (Derivation.implicationElimination (Derivation.conjunctionLeft h) hi) ha⟩
+  · exact ⟨Derivation.implicationElimination (Derivation.implicationElimination (Derivation.conjunctionRight h) hi) ha⟩
+
+theorem belowRawAt (H : Program 1) (M N W : Program 2) (raw child : OTerm alpha)
+    (h : Nonempty (Derivation body Delta (BelowRaw H M N W raw)))
+    (hl : Nonempty (Derivation body Delta (InternalLessThan.strictLess child raw))) :
+    Nonempty (Derivation body Delta (AtRaw H M N W child)) := by
+  obtain ⟨h⟩ := h
+  obtain ⟨hl⟩ := hl
+  have d := Derivation.universalElimination (emb child) h
+  change Derivation body Delta (instantiate
+    ((InternalOriginalOrderSyntaxProof.ltF (.var (.inr 0)) (raw.relabel Sum.inl)).imp
+      (rawPredicate H M N W)) (emb child)) at d
+  rw [belowElimSyntax,rawPredicateInstantiate] at d
+  exact ⟨Derivation.implicationElimination d hl⟩
+
+theorem belowRawApply (H : Program 1) (M N W : Program 2) (arguments : Bool)
+    (raw child typ gamma c : OTerm alpha)
+    (h : Nonempty (Derivation body Delta (BelowRaw H M N W raw)))
+    (hl : Nonempty (Derivation body Delta (InternalLessThan.strictLess child raw)))
+    (hi : Nonempty (Derivation body Delta (MemberIncluded M N c)))
+    (ha : Nonempty (Derivation body Delta (Accepted H M W arguments typ child gamma c))) :
+    Nonempty (Derivation body Delta (Accepted H N W arguments typ child gamma c)) :=
+  atRawApply H M N W arguments child typ gamma c (belowRawAt H M N W raw child h hl) hi ha
+
+/-- Strong induction is in the ORIGINAL arithmetic raw code. Universally
+bound requested type, Gamma and outer context are re-instantiated for each
+child; member inclusion is paid at that same context. No successful child
+premise escapes this internal induction. -/
+theorem rawInduction (H : Program 1) (M N W : Program 2) (raw : OTerm alpha)
+    (step : ∀ (beta : Type) (Theta : List (Formula beta)) (r : OTerm beta),
+      Nonempty (Derivation body Theta (BelowRaw H M N W r)) →
+      Nonempty (Derivation body Theta (AtRaw H M N W r))) :
+    Nonempty (Derivation body Delta (AtRaw H M N W raw)) := by
+  let theta : Formula (alpha ⊕ Fin 1) := rawPredicate H M N W
+  have hs : Nonempty (Derivation body
+      (InternalStrongInduction.below (lift theta) (.var (.inr 0)) :: Delta.map weaken) theta) := by
+    change Nonempty (Derivation body
+      (InternalStrongInduction.below (lift (rawPredicate H M N W)) (.var (.inr 0)) :: Delta.map weaken)
+      (AtRaw H M N W (.var (.inr 0))))
+    rw [rawPredicateLift]
+    exact step (alpha ⊕ Fin 1) _ (.var (.inr 0)) ⟨Derivation.hypothesis List.mem_cons_self⟩
+  obtain ⟨d⟩ := strongInduction theta hs
+  have e := Derivation.universalElimination (emb raw) d
+  change Derivation body Delta (instantiate (rawPredicate H M N W) (emb raw)) at e
+  rw [rawPredicateInstantiate] at e
+  exact ⟨e⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.BindingProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.BindingProof

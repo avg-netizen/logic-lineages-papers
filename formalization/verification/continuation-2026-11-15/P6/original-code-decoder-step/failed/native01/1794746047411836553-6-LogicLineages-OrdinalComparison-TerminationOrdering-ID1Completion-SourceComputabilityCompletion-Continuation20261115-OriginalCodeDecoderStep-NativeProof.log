@@ -1,0 +1,404 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:34:52: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  evaluate InternalRawListRecursion.lookup (?k ::ᵥ numbersNumber ?xs ::ᵥ nil)
+in the target expression
+  (if
+        evaluate InternalRawListRecursion.lookup
+            (![evaluate child (ofFn ![numbersNumber xs, code]), numbersNumber xs] 0 ::ᵥ
+              ![evaluate child (ofFn ![numbersNumber xs, code]), numbersNumber xs] 1 ::ᵥ nil) =
+          1 then
+      1
+    else 0) =
+    (NumberedCodeParserTable.lookup (List.map (fun v => v == 1) xs)
+        (evaluate child (ofFn ![numbersNumber xs, code]))).toNat
+
+child : Program 2
+xs : List ℕ
+code : ℕ
+⊢ (if
+        evaluate InternalRawListRecursion.lookup
+            (![evaluate child (ofFn ![numbersNumber xs, code]), numbersNumber xs] 0 ::ᵥ
+              ![evaluate child (ofFn ![numbersNumber xs, code]), numbersNumber xs] 1 ::ᵥ nil) =
+          1 then
+      1
+    else 0) =
+    (NumberedCodeParserTable.lookup (List.map (fun v => v == 1) xs)
+        (evaluate child (ofFn ![numbersNumber xs, code]))).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:91:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case zero
+n : ℕ
+xs : List ℕ
+code v : ℕ
+hp : Nat.unpair code = (0, v)
+⊢ evaluate
+      (choose 0 (constant 2 1)
+        (choose 1 firstAccepted
+          (choose 2 bothChildren
+            (choose 3 (constant 2 1)
+              (choose 4 (ordinary n)
+                (choose 5 (numbered n)
+                  (choose 6 (sameOf (InternalApplicationCertificateConstructors.rightOf raw) (constant 2 0))
+                    (choose 7 bothChildren (constant 2 0)))))))))
+      (numbersNumber xs ::ᵥ code ::ᵥ nil) =
+    1
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:91:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case succ.zero
+n : ℕ
+xs : List ℕ
+code v : ℕ
+hp : Nat.unpair code = (0 + 1, v)
+⊢ evaluate
+      (choose 0 (constant 2 1)
+        (choose 1 firstAccepted
+          (choose 2 bothChildren
+            (choose 3 (constant 2 1)
+              (choose 4 (ordinary n)
+                (choose 5 (numbered n)
+                  (choose 6 (sameOf (InternalApplicationCertificateConstructors.rightOf raw) (constant 2 0))
+                    (choose 7 bothChildren (constant 2 0)))))))))
+      (numbersNumber xs ::ᵥ code ::ᵥ nil) =
+    (NumberedCodeParserTable.lookup (List.map (fun v => v == 1) xs) (Nat.unpair v).2).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:91:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case succ.succ.zero
+n : ℕ
+xs : List ℕ
+code v : ℕ
+hp : Nat.unpair code = (0 + 1 + 1, v)
+⊢ evaluate
+      (choose 0 (constant 2 1)
+        (choose 1 firstAccepted
+          (choose 2 bothChildren
+            (choose 3 (constant 2 1)
+              (choose 4 (ordinary n)
+                (choose 5 (numbered n)
+                  (choose 6 (sameOf (InternalApplicationCertificateConstructors.rightOf raw) (constant 2 0))
+                    (choose 7 bothChildren (constant 2 0)))))))))
+      (numbersNumber xs ::ᵥ code ::ᵥ nil) =
+    (NumberedCodeParserTable.lookup (List.map (fun v => v == 1) xs) (Nat.unpair (Nat.unpair v).2).1 &&
+        NumberedCodeParserTable.lookup (List.map (fun v => v == 1) xs) (Nat.unpair (Nat.unpair v).2).2).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:91:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case succ.succ.succ.zero
+n : ℕ
+xs : List ℕ
+code v : ℕ
+hp : Nat.unpair code = (0 + 1 + 1 + 1, v)
+⊢ evaluate
+      (choose 0 (constant 2 1)
+        (choose 1 firstAccepted
+          (choose 2 bothChildren
+            (choose 3 (constant 2 1)
+              (choose 4 (ordinary n)
+                (choose 5 (numbered n)
+                  (choose 6 (sameOf (InternalApplicationCertificateConstructors.rightOf raw) (constant 2 0))
+                    (choose 7 bothChildren (constant 2 0)))))))))
+      (numbersNumber xs ::ᵥ code ::ᵥ nil) =
+    1
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:91:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case succ.succ.succ.succ.zero
+n : ℕ
+xs : List ℕ
+code v : ℕ
+hp : Nat.unpair code = (0 + 1 + 1 + 1 + 1, v)
+⊢ evaluate
+      (choose 0 (constant 2 1)
+        (choose 1 firstAccepted
+          (choose 2 bothChildren
+            (choose 3 (constant 2 1)
+              (choose 4 (ordinary n)
+                (choose 5 (numbered n)
+                  (choose 6 (sameOf (InternalApplicationCertificateConstructors.rightOf raw) (constant 2 0))
+                    (choose 7 bothChildren (constant 2 0)))))))))
+      (numbersNumber xs ::ᵥ code ::ᵥ nil) =
+    ((NumberedNumericDecoding.decodeHeadNumber n (Nat.unpair v).1).isSome &&
+        NumberedCodeParserTable.lookup (List.map (fun v => v == 1) xs) (Nat.unpair v).2).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:91:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case succ.succ.succ.succ.succ.zero
+n : ℕ
+xs : List ℕ
+code v : ℕ
+hp : Nat.unpair code = (0 + 1 + 1 + 1 + 1 + 1, v)
+⊢ evaluate
+      (choose 0 (constant 2 1)
+        (choose 1 firstAccepted
+          (choose 2 bothChildren
+            (choose 3 (constant 2 1)
+              (choose 4 (ordinary n)
+                (choose 5 (numbered n)
+                  (choose 6 (sameOf (InternalApplicationCertificateConstructors.rightOf raw) (constant 2 0))
+                    (choose 7 bothChildren (constant 2 0)))))))))
+      (numbersNumber xs ::ᵥ code ::ᵥ nil) =
+    ((NumberedNumericDecoding.decodeHeadNumber n (Nat.unpair (Nat.unpair v).2).1).isSome &&
+          NumberedCodeParserTable.lookup (List.map (fun v => v == 1) xs)
+            (Nat.unpair (Nat.unpair (Nat.unpair (Nat.unpair v).2).2).2).1 &&
+        NumberedCodeParserTable.lookup (List.map (fun v => v == 1) xs)
+          (Nat.unpair (Nat.unpair (Nat.unpair (Nat.unpair (Nat.unpair v).2).2).2).2).2).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:91:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case succ.succ.succ.succ.succ.succ.zero
+n : ℕ
+xs : List ℕ
+code v : ℕ
+hp : Nat.unpair code = (0 + 1 + 1 + 1 + 1 + 1 + 1, v)
+⊢ evaluate
+      (choose 0 (constant 2 1)
+        (choose 1 firstAccepted
+          (choose 2 bothChildren
+            (choose 3 (constant 2 1)
+              (choose 4 (ordinary n)
+                (choose 5 (numbered n)
+                  (choose 6 (sameOf (InternalApplicationCertificateConstructors.rightOf raw) (constant 2 0))
+                    (choose 7 bothChildren (constant 2 0)))))))))
+      (numbersNumber xs ::ᵥ code ::ᵥ nil) =
+    (decide (v = 0)).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:91:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case succ.succ.succ.succ.succ.succ.succ.zero
+n : ℕ
+xs : List ℕ
+code v : ℕ
+hp : Nat.unpair code = (0 + 1 + 1 + 1 + 1 + 1 + 1 + 1, v)
+⊢ evaluate
+      (choose 0 (constant 2 1)
+        (choose 1 firstAccepted
+          (choose 2 bothChildren
+            (choose 3 (constant 2 1)
+              (choose 4 (ordinary n)
+                (choose 5 (numbered n)
+                  (choose 6 (sameOf (InternalApplicationCertificateConstructors.rightOf raw) (constant 2 0))
+                    (choose 7 bothChildren (constant 2 0)))))))))
+      (numbersNumber xs ::ᵥ code ::ᵥ nil) =
+    (NumberedCodeParserTable.lookup (List.map (fun v => v == 1) xs) (Nat.unpair (Nat.unpair v).2).1 &&
+        NumberedCodeParserTable.lookup (List.map (fun v => v == 1) xs) (Nat.unpair (Nat.unpair v).2).2).toNat
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:91:12: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+case succ.succ.succ.succ.succ.succ.succ.succ
+n : ℕ
+xs : List ℕ
+code v t : ℕ
+hp : Nat.unpair code = (t + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1, v)
+⊢ evaluate
+      (choose 0 (constant 2 1)
+        (choose 1 firstAccepted
+          (choose 2 bothChildren
+            (choose 3 (constant 2 1)
+              (choose 4 (ordinary n)
+                (choose 5 (numbered n)
+                  (choose 6 (sameOf (InternalApplicationCertificateConstructors.rightOf raw) (constant 2 0))
+                    (choose 7 bothChildren (constant 2 0)))))))))
+      (numbersNumber xs ::ᵥ code ::ᵥ nil) =
+    0
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:86:23: warning: This simp argument is unused:
+  chooseValue
+
+Hint: Omit it from the simp argument list.
+  simp [step,c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵ ̲firstValue, ̲secondValue, ̲bothValue, ̲ordinaryValue, ̲numberedValue,
+      constantEvaluation, ̲sameOfEvaluation, ̲payload, ̲rightOfEvaluation, ̲rawValue,
+      NumberedCodeParserTable.codeNext, ̲NumberedTypeCodecPrimrecSupportProof.decodeTypeExact,t̵y̵p̵e̵s̵S̵o̵m̵e̵,̵
+      t̲y̲p̲e̲s̲S̲o̲m̲e̲,̲ ̲OriginalRawSyntaxTransport.firstValue, ̲OriginalRawSyntaxTransport.secondValue,
+  ̲ ̲ ̲ ̲ ̲tagValue, ̲payloadValue,
+  ̵  ̵ ̵ ̵headValue, ̲hp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:86:35: warning: This simp argument is unused:
+  firstValue
+
+Hint: Omit it from the simp argument list.
+  simp [step, ̲chooseValue,f̵i̵r̵ ̲st̵V̵a̵l̵u̵e,̵s̵e̵condValue, ̲bothValue, ̲ordinaryValue, ̲numberedValue,
+      constantEvaluation, ̲sameOfEvaluation, ̲payload, ̲rightOfEvaluation, ̲rawValue,
+      NumberedCodeParserTable.codeNext, ̲NumberedTypeCodecPrimrecSupportProof.decodeTypeExact,t̵y̵p̵e̵s̵S̵o̵m̵e̵,̵
+      t̲y̲p̲e̲s̲S̲o̲m̲e̲,̲ ̲OriginalRawSyntaxTransport.firstValue, ̲OriginalRawSyntaxTransport.secondValue,
+  ̲ ̲ ̲ ̲ ̲tagValue, ̲payloadValue,
+  ̵  ̵ ̵ ̵headValue, ̲hp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:86:46: warning: This simp argument is unused:
+  secondValue
+
+Hint: Omit it from the simp argument list.
+  simp [step, ̲chooseValue, ̲firstValue,s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵ ̲bothValue, ̲ordinaryValue, ̲numberedValue,
+      constantEvaluation, ̲sameOfEvaluation, ̲payload, ̲rightOfEvaluation, ̲rawValue,
+      NumberedCodeParserTable.codeNext, ̲NumberedTypeCodecPrimrecSupportProof.decodeTypeExact,t̵y̵p̵e̵s̵S̵o̵m̵e̵,̵
+      t̲y̲p̲e̲s̲S̲o̲m̲e̲,̲ ̲OriginalRawSyntaxTransport.firstValue, ̲OriginalRawSyntaxTransport.secondValue,
+  ̲ ̲ ̲ ̲ ̲tagValue, ̲payloadValue,
+  ̵  ̵ ̵ ̵headValue, ̲hp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:86:58: warning: This simp argument is unused:
+  bothValue
+
+Hint: Omit it from the simp argument list.
+  simp [step, ̲chooseValue, ̲firstValue, ̲secondValue,b̵ ̲ot̵h̵V̵a̵l̵u̵e̵,̵o̵rdinaryValue, ̲numberedValue,
+      constantEvaluation, ̲sameOfEvaluation, ̲payload, ̲rightOfEvaluation, ̲rawValue,
+      NumberedCodeParserTable.codeNext, ̲NumberedTypeCodecPrimrecSupportProof.decodeTypeExact,t̵y̵p̵e̵s̵S̵o̵m̵e̵,̵
+      t̲y̲p̲e̲s̲S̲o̲m̲e̲,̲ ̲OriginalRawSyntaxTransport.firstValue, ̲OriginalRawSyntaxTransport.secondValue,
+  ̲ ̲ ̲ ̲ ̲tagValue, ̲payloadValue,
+  ̵  ̵ ̵ ̵headValue, ̲hp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:86:68: warning: This simp argument is unused:
+  ordinaryValue
+
+Hint: Omit it from the simp argument list.
+  simp [step, ̲chooseValue, ̲firstValue, ̲secondValue, ̲bothValue,o̵r̵d̵i̵ ̲na̵r̵y̵V̵a̵l̵ue̵,̵n̵u̵mberedValue,
+      constantEvaluation, ̲sameOfEvaluation, ̲payload, ̲rightOfEvaluation, ̲rawValue,
+      NumberedCodeParserTable.codeNext, ̲NumberedTypeCodecPrimrecSupportProof.decodeTypeExact,t̵y̵p̵e̵s̵S̵o̵m̵e̵,̵
+      t̲y̲p̲e̲s̲S̲o̲m̲e̲,̲ ̲OriginalRawSyntaxTransport.firstValue, ̲OriginalRawSyntaxTransport.secondValue,
+  ̲ ̲ ̲ ̲ ̲tagValue, ̲payloadValue,
+  ̵  ̵ ̵ ̵headValue, ̲hp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:86:82: warning: This simp argument is unused:
+  numberedValue
+
+Hint: Omit it from the simp argument list.
+  simp [step, ̲chooseValue, ̲firstValue, ̲secondValue, ̲bothValue, ̲ordinaryValue,n̵u̵m̵b̵e̵r̵e̵d̵V̵a̵l̵u̵e̵,̵
+      constantEvaluation, ̲sameOfEvaluation, ̲payload, ̲rightOfEvaluation, ̲rawValue,
+      NumberedCodeParserTable.codeNext, ̲NumberedTypeCodecPrimrecSupportProof.decodeTypeExact,t̵y̵p̵e̵s̵S̵o̵m̵e̵,̵
+      t̲y̲p̲e̲s̲S̲o̲m̲e̲,̲ ̲OriginalRawSyntaxTransport.firstValue, ̲OriginalRawSyntaxTransport.secondValue,
+  ̲ ̲ ̲ ̲ ̲tagValue, ̲payloadValue,
+  ̵  ̵ ̵ ̵headValue, ̲hp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:87:4: warning: This simp argument is unused:
+  constantEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵t̵e̵p̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵b̵o̵t̵h̵V̵a̵l̵u̵e̵,̵o̵r̵d̵i̵n̵a̵r̵y̵V̵a̵l̵u̵e̵,̵n̵u̵m̵b̵e̵r̵e̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵s̵a̵m̵e̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵a̵y̵l̵o̵a̵d̵,̵r̵i̵g̵h̵t̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵r̵a̵w̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵C̵o̵d̵e̵P̵a̵r̵s̵e̵r̵T̵a̵b̵l̵e̵.̵c̵o̵d̵e̵N̵e̵x̵t̵,̵N̵u̵m̵b̵e̵r̵e̵d̵T̵y̵p̵e̵C̵o̵d̵e̵c̵P̵r̵i̵m̵r̵e̵c̵S̵u̵p̵p̵o̵r̵t̵P̵r̵o̵o̵f̵.̵d̵e̵c̵o̵d̵e̵T̵y̵p̵e̵E̵x̵a̵c̵t̵,̵t̵y̵p̵e̵s̵S̵o̵m̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵t̵a̵g̵V̵a̵l̵u̵e̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵h̵e̵a̵d̵V̵a̵l̵u̵e̵,̵h̵p̵]̵[̲s̲t̲e̲p̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲o̲t̲h̲V̲a̲l̲u̲e̲,̲ ̲o̲r̲d̲i̲n̲a̲r̲y̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲n̲u̲m̲b̲e̲r̲e̲d̲V̲a̲l̲u̲e̲,̲ ̲s̲a̲m̲e̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲,̲ ̲r̲i̲g̲h̲t̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲r̲a̲w̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲C̲o̲d̲e̲P̲a̲r̲s̲e̲r̲T̲a̲b̲l̲e̲.̲c̲o̲d̲e̲N̲e̲x̲t̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲T̲y̲p̲e̲C̲o̲d̲e̲c̲P̲r̲i̲m̲r̲e̲c̲S̲u̲p̲p̲o̲r̲t̲P̲r̲o̲o̲f̲.̲d̲e̲c̲o̲d̲e̲T̲y̲p̲e̲E̲x̲a̲c̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲y̲p̲e̲s̲S̲o̲m̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲R̲a̲w̲S̲y̲n̲t̲a̲x̲T̲r̲a̲n̲s̲p̲o̲r̲t̲.̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲R̲a̲w̲S̲y̲n̲t̲a̲x̲T̲r̲a̲n̲s̲p̲o̲r̲t̲.̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲a̲g̲V̲a̲l̲u̲e̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲h̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:87:23: warning: This simp argument is unused:
+  sameOfEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵t̵e̵p̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵b̵o̵t̵h̵V̵a̵l̵u̵e̵,̵o̵r̵d̵i̵n̵a̵r̵y̵V̵a̵l̵u̵e̵,̵n̵u̵m̵b̵e̵r̵e̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵s̵a̵m̵e̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵a̵y̵l̵o̵a̵d̵,̵r̵i̵g̵h̵t̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵r̵a̵w̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵C̵o̵d̵e̵P̵a̵r̵s̵e̵r̵T̵a̵b̵l̵e̵.̵c̵o̵d̵e̵N̵e̵x̵t̵,̵N̵u̵m̵b̵e̵r̵e̵d̵T̵y̵p̵e̵C̵o̵d̵e̵c̵P̵r̵i̵m̵r̵e̵c̵S̵u̵p̵p̵o̵r̵t̵P̵r̵o̵o̵f̵.̵d̵e̵c̵o̵d̵e̵T̵y̵p̵e̵E̵x̵a̵c̵t̵,̵t̵y̵p̵e̵s̵S̵o̵m̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵t̵a̵g̵V̵a̵l̵u̵e̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵h̵e̵a̵d̵V̵a̵l̵u̵e̵,̵h̵p̵]̵[̲s̲t̲e̲p̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲o̲t̲h̲V̲a̲l̲u̲e̲,̲ ̲o̲r̲d̲i̲n̲a̲r̲y̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲n̲u̲m̲b̲e̲r̲e̲d̲V̲a̲l̲u̲e̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲,̲ ̲r̲i̲g̲h̲t̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲r̲a̲w̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲C̲o̲d̲e̲P̲a̲r̲s̲e̲r̲T̲a̲b̲l̲e̲.̲c̲o̲d̲e̲N̲e̲x̲t̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲T̲y̲p̲e̲C̲o̲d̲e̲c̲P̲r̲i̲m̲r̲e̲c̲S̲u̲p̲p̲o̲r̲t̲P̲r̲o̲o̲f̲.̲d̲e̲c̲o̲d̲e̲T̲y̲p̲e̲E̲x̲a̲c̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲y̲p̲e̲s̲S̲o̲m̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲R̲a̲w̲S̲y̲n̲t̲a̲x̲T̲r̲a̲n̲s̲p̲o̲r̲t̲.̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲R̲a̲w̲S̲y̲n̲t̲a̲x̲T̲r̲a̲n̲s̲p̲o̲r̲t̲.̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲a̲g̲V̲a̲l̲u̲e̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲h̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:87:48: warning: This simp argument is unused:
+  rightOfEvaluation
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵t̵e̵p̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵b̵o̵t̵h̵V̵a̵l̵u̵e̵,̵o̵r̵d̵i̵n̵a̵r̵y̵V̵a̵l̵u̵e̵,̵n̵u̵m̵b̵e̵r̵e̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵s̵a̵m̵e̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵a̵y̵l̵o̵a̵d̵,̵r̵i̵g̵h̵t̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵r̵a̵w̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵C̵o̵d̵e̵P̵a̵r̵s̵e̵r̵T̵a̵b̵l̵e̵.̵c̵o̵d̵e̵N̵e̵x̵t̵,̵N̵u̵m̵b̵e̵r̵e̵d̵T̵y̵p̵e̵C̵o̵d̵e̵c̵P̵r̵i̵m̵r̵e̵c̵S̵u̵p̵p̵o̵r̵t̵P̵r̵o̵o̵f̵.̵d̵e̵c̵o̵d̵e̵T̵y̵p̵e̵E̵x̵a̵c̵t̵,̵t̵y̵p̵e̵s̵S̵o̵m̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵t̵a̵g̵V̵a̵l̵u̵e̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵h̵e̵a̵d̵V̵a̵l̵u̵e̵,̵h̵p̵]̵[̲s̲t̲e̲p̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲o̲t̲h̲V̲a̲l̲u̲e̲,̲ ̲o̲r̲d̲i̲n̲a̲r̲y̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲n̲u̲m̲b̲e̲r̲e̲d̲V̲a̲l̲u̲e̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲s̲a̲m̲e̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲,̲ ̲r̲a̲w̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲C̲o̲d̲e̲P̲a̲r̲s̲e̲r̲T̲a̲b̲l̲e̲.̲c̲o̲d̲e̲N̲e̲x̲t̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲T̲y̲p̲e̲C̲o̲d̲e̲c̲P̲r̲i̲m̲r̲e̲c̲S̲u̲p̲p̲o̲r̲t̲P̲r̲o̲o̲f̲.̲d̲e̲c̲o̲d̲e̲T̲y̲p̲e̲E̲x̲a̲c̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲y̲p̲e̲s̲S̲o̲m̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲R̲a̲w̲S̲y̲n̲t̲a̲x̲T̲r̲a̲n̲s̲p̲o̲r̲t̲.̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲R̲a̲w̲S̲y̲n̲t̲a̲x̲T̲r̲a̲n̲s̲p̲o̲r̲t̲.̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲a̲g̲V̲a̲l̲u̲e̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲h̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:87:66: warning: This simp argument is unused:
+  rawValue
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵t̵e̵p̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵b̵o̵t̵h̵V̵a̵l̵u̵e̵,̵o̵r̵d̵i̵n̵a̵r̵y̵V̵a̵l̵u̵e̵,̵n̵u̵m̵b̵e̵r̵e̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵s̵a̵m̵e̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵a̵y̵l̵o̵a̵d̵,̵r̵i̵g̵h̵t̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵r̵a̵w̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵C̵o̵d̵e̵P̵a̵r̵s̵e̵r̵T̵a̵b̵l̵e̵.̵c̵o̵d̵e̵N̵e̵x̵t̵,̵N̵u̵m̵b̵e̵r̵e̵d̵T̵y̵p̵e̵C̵o̵d̵e̵c̵P̵r̵i̵m̵r̵e̵c̵S̵u̵p̵p̵o̵r̵t̵P̵r̵o̵o̵f̵.̵d̵e̵c̵o̵d̵e̵T̵y̵p̵e̵E̵x̵a̵c̵t̵,̵t̵y̵p̵e̵s̵S̵o̵m̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵t̵a̵g̵V̵a̵l̵u̵e̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵h̵e̵a̵d̵V̵a̵l̵u̵e̵,̵h̵p̵]̵[̲s̲t̲e̲p̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲o̲t̲h̲V̲a̲l̲u̲e̲,̲ ̲o̲r̲d̲i̲n̲a̲r̲y̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲n̲u̲m̲b̲e̲r̲e̲d̲V̲a̲l̲u̲e̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲s̲a̲m̲e̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲,̲ ̲r̲i̲g̲h̲t̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲
+  ̲ ̲ ̲ ̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲C̲o̲d̲e̲P̲a̲r̲s̲e̲r̲T̲a̲b̲l̲e̲.̲c̲o̲d̲e̲N̲e̲x̲t̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲T̲y̲p̲e̲C̲o̲d̲e̲c̲P̲r̲i̲m̲r̲e̲c̲S̲u̲p̲p̲o̲r̲t̲P̲r̲o̲o̲f̲.̲d̲e̲c̲o̲d̲e̲T̲y̲p̲e̲E̲x̲a̲c̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲y̲p̲e̲s̲S̲o̲m̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲R̲a̲w̲S̲y̲n̲t̲a̲x̲T̲r̲a̲n̲s̲p̲o̲r̲t̲.̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲R̲a̲w̲S̲y̲n̲t̲a̲x̲T̲r̲a̲n̲s̲p̲o̲r̲t̲.̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲a̲g̲V̲a̲l̲u̲e̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲h̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:89:4: warning: This simp argument is unused:
+  OriginalRawSyntaxTransport.firstValue
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵t̵e̵p̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵b̵o̵t̵h̵V̵a̵l̵u̵e̵,̵o̵r̵d̵i̵n̵a̵r̵y̵V̵a̵l̵u̵e̵,̵n̵u̵m̵b̵e̵r̵e̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵s̵a̵m̵e̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵a̵y̵l̵o̵a̵d̵,̵r̵i̵g̵h̵t̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵r̵a̵w̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵C̵o̵d̵e̵P̵a̵r̵s̵e̵r̵T̵a̵b̵l̵e̵.̵c̵o̵d̵e̵N̵e̵x̵t̵,̵N̵u̵m̵b̵e̵r̵e̵d̵T̵y̵p̵e̵C̵o̵d̵e̵c̵P̵r̵i̵m̵r̵e̵c̵S̵u̵p̵p̵o̵r̵t̵P̵r̵o̵o̵f̵.̵d̵e̵c̵o̵d̵e̵T̵y̵p̵e̵E̵x̵a̵c̵t̵,̵t̵y̵p̵e̵s̵S̵o̵m̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵t̵a̵g̵V̵a̵l̵u̵e̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵h̵e̵a̵d̵V̵a̵l̵u̵e̵,̵h̵p̵]̵[̲s̲t̲e̲p̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲o̲t̲h̲V̲a̲l̲u̲e̲,̲ ̲o̲r̲d̲i̲n̲a̲r̲y̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲n̲u̲m̲b̲e̲r̲e̲d̲V̲a̲l̲u̲e̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲s̲a̲m̲e̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲,̲ ̲r̲i̲g̲h̲t̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲r̲a̲w̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲C̲o̲d̲e̲P̲a̲r̲s̲e̲r̲T̲a̲b̲l̲e̲.̲c̲o̲d̲e̲N̲e̲x̲t̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲T̲y̲p̲e̲C̲o̲d̲e̲c̲P̲r̲i̲m̲r̲e̲c̲S̲u̲p̲p̲o̲r̲t̲P̲r̲o̲o̲f̲.̲d̲e̲c̲o̲d̲e̲T̲y̲p̲e̲E̲x̲a̲c̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲y̲p̲e̲s̲S̲o̲m̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲R̲a̲w̲S̲y̲n̲t̲a̲x̲T̲r̲a̲n̲s̲p̲o̲r̲t̲.̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲ ̲t̲a̲g̲V̲a̲l̲u̲e̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲h̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:89:42: warning: This simp argument is unused:
+  OriginalRawSyntaxTransport.secondValue
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵t̵e̵p̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵b̵o̵t̵h̵V̵a̵l̵u̵e̵,̵o̵r̵d̵i̵n̵a̵r̵y̵V̵a̵l̵u̵e̵,̵n̵u̵m̵b̵e̵r̵e̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵s̵a̵m̵e̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵a̵y̵l̵o̵a̵d̵,̵r̵i̵g̵h̵t̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵r̵a̵w̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵C̵o̵d̵e̵P̵a̵r̵s̵e̵r̵T̵a̵b̵l̵e̵.̵c̵o̵d̵e̵N̵e̵x̵t̵,̵N̵u̵m̵b̵e̵r̵e̵d̵T̵y̵p̵e̵C̵o̵d̵e̵c̵P̵r̵i̵m̵r̵e̵c̵S̵u̵p̵p̵o̵r̵t̵P̵r̵o̵o̵f̵.̵d̵e̵c̵o̵d̵e̵T̵y̵p̵e̵E̵x̵a̵c̵t̵,̵t̵y̵p̵e̵s̵S̵o̵m̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵t̵a̵g̵V̵a̵l̵u̵e̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵h̵e̵a̵d̵V̵a̵l̵u̵e̵,̵h̵p̵]̵[̲s̲t̲e̲p̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲o̲t̲h̲V̲a̲l̲u̲e̲,̲ ̲o̲r̲d̲i̲n̲a̲r̲y̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲n̲u̲m̲b̲e̲r̲e̲d̲V̲a̲l̲u̲e̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲s̲a̲m̲e̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲,̲ ̲r̲i̲g̲h̲t̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲r̲a̲w̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲C̲o̲d̲e̲P̲a̲r̲s̲e̲r̲T̲a̲b̲l̲e̲.̲c̲o̲d̲e̲N̲e̲x̲t̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲T̲y̲p̲e̲C̲o̲d̲e̲c̲P̲r̲i̲m̲r̲e̲c̲S̲u̲p̲p̲o̲r̲t̲P̲r̲o̲o̲f̲.̲d̲e̲c̲o̲d̲e̲T̲y̲p̲e̲E̲x̲a̲c̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲y̲p̲e̲s̲S̲o̲m̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲R̲a̲w̲S̲y̲n̲t̲a̲x̲T̲r̲a̲n̲s̲p̲o̲r̲t̲.̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲t̲a̲g̲V̲a̲l̲u̲e̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲h̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:89:81: warning: This simp argument is unused:
+  tagValue
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵t̵e̵p̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵b̵o̵t̵h̵V̵a̵l̵u̵e̵,̵o̵r̵d̵i̵n̵a̵r̵y̵V̵a̵l̵u̵e̵,̵n̵u̵m̵b̵e̵r̵e̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵s̵a̵m̵e̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵a̵y̵l̵o̵a̵d̵,̵r̵i̵g̵h̵t̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵r̵a̵w̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵C̵o̵d̵e̵P̵a̵r̵s̵e̵r̵T̵a̵b̵l̵e̵.̵c̵o̵d̵e̵N̵e̵x̵t̵,̵N̵u̵m̵b̵e̵r̵e̵d̵T̵y̵p̵e̵C̵o̵d̵e̵c̵P̵r̵i̵m̵r̵e̵c̵S̵u̵p̵p̵o̵r̵t̵P̵r̵o̵o̵f̵.̵d̵e̵c̵o̵d̵e̵T̵y̵p̵e̵E̵x̵a̵c̵t̵,̵t̵y̵p̵e̵s̵S̵o̵m̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵t̵a̵g̵V̵a̵l̵u̵e̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵h̵e̵a̵d̵V̵a̵l̵u̵e̵,̵h̵p̵]̵[̲s̲t̲e̲p̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲o̲t̲h̲V̲a̲l̲u̲e̲,̲ ̲o̲r̲d̲i̲n̲a̲r̲y̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲n̲u̲m̲b̲e̲r̲e̲d̲V̲a̲l̲u̲e̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲s̲a̲m̲e̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲,̲ ̲r̲i̲g̲h̲t̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲r̲a̲w̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲C̲o̲d̲e̲P̲a̲r̲s̲e̲r̲T̲a̲b̲l̲e̲.̲c̲o̲d̲e̲N̲e̲x̲t̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲T̲y̲p̲e̲C̲o̲d̲e̲c̲P̲r̲i̲m̲r̲e̲c̲S̲u̲p̲p̲o̲r̲t̲P̲r̲o̲o̲f̲.̲d̲e̲c̲o̲d̲e̲T̲y̲p̲e̲E̲x̲a̲c̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲y̲p̲e̲s̲S̲o̲m̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲R̲a̲w̲S̲y̲n̲t̲a̲x̲T̲r̲a̲n̲s̲p̲o̲r̲t̲.̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲R̲a̲w̲S̲y̲n̲t̲a̲x̲T̲r̲a̲n̲s̲p̲o̲r̲t̲.̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲h̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:89:90: warning: This simp argument is unused:
+  payloadValue
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵t̵e̵p̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵b̵o̵t̵h̵V̵a̵l̵u̵e̵,̵o̵r̵d̵i̵n̵a̵r̵y̵V̵a̵l̵u̵e̵,̵n̵u̵m̵b̵e̵r̵e̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵s̵a̵m̵e̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵a̵y̵l̵o̵a̵d̵,̵r̵i̵g̵h̵t̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵r̵a̵w̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵C̵o̵d̵e̵P̵a̵r̵s̵e̵r̵T̵a̵b̵l̵e̵.̵c̵o̵d̵e̵N̵e̵x̵t̵,̵N̵u̵m̵b̵e̵r̵e̵d̵T̵y̵p̵e̵C̵o̵d̵e̵c̵P̵r̵i̵m̵r̵e̵c̵S̵u̵p̵p̵o̵r̵t̵P̵r̵o̵o̵f̵.̵d̵e̵c̵o̵d̵e̵T̵y̵p̵e̵E̵x̵a̵c̵t̵,̵t̵y̵p̵e̵s̵S̵o̵m̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵t̵a̵g̵V̵a̵l̵u̵e̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵h̵e̵a̵d̵V̵a̵l̵u̵e̵,̵h̵p̵]̵[̲s̲t̲e̲p̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲o̲t̲h̲V̲a̲l̲u̲e̲,̲ ̲o̲r̲d̲i̲n̲a̲r̲y̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲n̲u̲m̲b̲e̲r̲e̲d̲V̲a̲l̲u̲e̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲s̲a̲m̲e̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲,̲ ̲r̲i̲g̲h̲t̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲r̲a̲w̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲C̲o̲d̲e̲P̲a̲r̲s̲e̲r̲T̲a̲b̲l̲e̲.̲c̲o̲d̲e̲N̲e̲x̲t̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲T̲y̲p̲e̲C̲o̲d̲e̲c̲P̲r̲i̲m̲r̲e̲c̲S̲u̲p̲p̲o̲r̲t̲P̲r̲o̲o̲f̲.̲d̲e̲c̲o̲d̲e̲T̲y̲p̲e̲E̲x̲a̲c̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲y̲p̲e̲s̲S̲o̲m̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲R̲a̲w̲S̲y̲n̲t̲a̲x̲T̲r̲a̲n̲s̲p̲o̲r̲t̲.̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲R̲a̲w̲S̲y̲n̲t̲a̲x̲T̲r̲a̲n̲s̲p̲o̲r̲t̲.̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲a̲g̲V̲a̲l̲u̲e̲,̲ ̲h̲e̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲h̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:90:4: warning: This simp argument is unused:
+  headValue
+
+Hint: Omit it from the simp argument list.
+  simp [̵s̵t̵e̵p̵,̵c̵h̵o̵o̵s̵e̵V̵a̵l̵u̵e̵,̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵b̵o̵t̵h̵V̵a̵l̵u̵e̵,̵o̵r̵d̵i̵n̵a̵r̵y̵V̵a̵l̵u̵e̵,̵n̵u̵m̵b̵e̵r̵e̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵c̵o̵n̵s̵t̵a̵n̵t̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵s̵a̵m̵e̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵p̵a̵y̵l̵o̵a̵d̵,̵r̵i̵g̵h̵t̵O̵f̵E̵v̵a̵l̵u̵a̵t̵i̵o̵n̵,̵r̵a̵w̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵N̵u̵m̵b̵e̵r̵e̵d̵C̵o̵d̵e̵P̵a̵r̵s̵e̵r̵T̵a̵b̵l̵e̵.̵c̵o̵d̵e̵N̵e̵x̵t̵,̵N̵u̵m̵b̵e̵r̵e̵d̵T̵y̵p̵e̵C̵o̵d̵e̵c̵P̵r̵i̵m̵r̵e̵c̵S̵u̵p̵p̵o̵r̵t̵P̵r̵o̵o̵f̵.̵d̵e̵c̵o̵d̵e̵T̵y̵p̵e̵E̵x̵a̵c̵t̵,̵t̵y̵p̵e̵s̵S̵o̵m̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵f̵i̵r̵s̵t̵V̵a̵l̵u̵e̵,̵O̵r̵i̵g̵i̵n̵a̵l̵R̵a̵w̵S̵y̵n̵t̵a̵x̵T̵r̵a̵n̵s̵p̵o̵r̵t̵.̵s̵e̵c̵o̵n̵d̵V̵a̵l̵u̵e̵,̵t̵a̵g̵V̵a̵l̵u̵e̵,̵p̵a̵y̵l̵o̵a̵d̵V̵a̵l̵u̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵h̵e̵a̵d̵V̵a̵l̵u̵e̵,̵h̵p̵]̵[̲s̲t̲e̲p̲,̲ ̲c̲h̲o̲o̲s̲e̲V̲a̲l̲u̲e̲,̲ ̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲ ̲b̲o̲t̲h̲V̲a̲l̲u̲e̲,̲ ̲o̲r̲d̲i̲n̲a̲r̲y̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲n̲u̲m̲b̲e̲r̲e̲d̲V̲a̲l̲u̲e̲,̲ ̲c̲o̲n̲s̲t̲a̲n̲t̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲s̲a̲m̲e̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲,̲ ̲r̲i̲g̲h̲t̲O̲f̲E̲v̲a̲l̲u̲a̲t̲i̲o̲n̲,̲ ̲r̲a̲w̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲C̲o̲d̲e̲P̲a̲r̲s̲e̲r̲T̲a̲b̲l̲e̲.̲c̲o̲d̲e̲N̲e̲x̲t̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲T̲y̲p̲e̲C̲o̲d̲e̲c̲P̲r̲i̲m̲r̲e̲c̲S̲u̲p̲p̲o̲r̲t̲P̲r̲o̲o̲f̲.̲d̲e̲c̲o̲d̲e̲T̲y̲p̲e̲E̲x̲a̲c̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲y̲p̲e̲s̲S̲o̲m̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲R̲a̲w̲S̲y̲n̲t̲a̲x̲T̲r̲a̲n̲s̲p̲o̲r̲t̲.̲f̲i̲r̲s̲t̲V̲a̲l̲u̲e̲,̲ ̲O̲r̲i̲g̲i̲n̲a̲l̲R̲a̲w̲S̲y̲n̲t̲a̲x̲T̲r̲a̲n̲s̲p̲o̲r̲t̲.̲s̲e̲c̲o̲n̲d̲V̲a̲l̲u̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲a̲g̲V̲a̲l̲u̲e̲,̲ ̲p̲a̲y̲l̲o̲a̲d̲V̲a̲l̲u̲e̲,̲ ̲h̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderStep.NativeProof.rawValue: [propext]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderStep.NativeProof.typesSome: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderStep/NativeProof.lean:100:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderStep.NativeProof.bothValue: forbidden axiom dependency sorryAx

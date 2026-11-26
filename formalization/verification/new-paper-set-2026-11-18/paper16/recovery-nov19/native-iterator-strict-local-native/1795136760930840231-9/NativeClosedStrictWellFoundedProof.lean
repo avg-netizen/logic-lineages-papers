@@ -1,0 +1,11 @@
+import LogicLineages.PersistentMarking.NativeIteratorStrictTargets
+import LogicLineages.PersistentMarking.NumberedWindowExternalWellFoundedChecks
+
+namespace LogicLineages.PersistentMarking.NativeClosedStrictWellFoundedProof
+open NativeIteratorStrictTargets
+
+theorem wf : ClosedNativeStrictWellFounded := by
+  intro S τ
+  exact InvImage.wf Subtype.val (NumberedWindowExternalWellFoundedChecks.exact_ConfinedStrictWellFounded S)
+
+end LogicLineages.PersistentMarking.NativeClosedStrictWellFoundedProof

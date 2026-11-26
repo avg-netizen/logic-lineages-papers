@@ -1,0 +1,14 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.BinaryGeneratorTargets
+public import LogicLineages.OrdinalComparison.SourceBinaryHalvingTraceProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.BinaryGenerator
+theorem exactTerminalTrace : BinaryGeneratorTargets.ExactTerminalTrace :=
+  LogicLineages.OrdinalComparison.Source.SourceBinaryHalvingTrace.Proof.exactTerminalTrace
+theorem exactReconstruction : BinaryGeneratorTargets.ExactReconstruction :=
+  LogicLineages.OrdinalComparison.Source.SourceBinaryHalvingTrace.Proof.exactReconstruction
+theorem uniformPrimitiveRecursive : BinaryGeneratorTargets.UniformPrimitiveRecursive :=
+  LogicLineages.OrdinalComparison.Source.SourceBinaryHalvingTrace.Proof.uniformPrimitiveRecursive
+#audit_namespace LogicLineages.ControlSensitivityCurrent.BinaryGenerator
+end LogicLineages.ControlSensitivityCurrent.BinaryGenerator

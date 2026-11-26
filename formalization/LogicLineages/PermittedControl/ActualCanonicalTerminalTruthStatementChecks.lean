@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.ActualCanonicalTerminalTruthTargets
+import LogicLineages.PermittedControl.ActualCanonicalTerminalTruthLinearProof
+import LogicLineages.PermittedControl.ActualCanonicalTerminalTruthInactiveProof
+import LogicLineages.PermittedControl.ActualCanonicalTerminalTruthSignProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualCanonicalTerminalTruth
+
+theorem fixed_exactCertifiedLinearExit : ExactCertifiedLinearExit := exactCertifiedLinearExit
+theorem fixed_exactCanonicalInactiveTruth : ExactCanonicalInactiveTruth := exactCanonicalInactiveTruth
+theorem fixed_exactCanonicalNonzeroTruth : ExactCanonicalNonzeroTruth := exactCanonicalNonzeroTruth
+
+theorem fixed_fullActualCanonicalTerminalTruth : FullActualCanonicalTerminalTruth :=
+  ⟨fixed_exactCertifiedLinearExit,fixed_exactCanonicalInactiveTruth,fixed_exactCanonicalNonzeroTruth⟩
+
+#print axioms fixed_exactCertifiedLinearExit
+#print axioms fixed_exactCanonicalInactiveTruth
+#print axioms fixed_exactCanonicalNonzeroTruth
+#print axioms fixed_fullActualCanonicalTerminalTruth
+
+end LogicLineages.PermittedControl.ActualCanonicalTerminalTruth

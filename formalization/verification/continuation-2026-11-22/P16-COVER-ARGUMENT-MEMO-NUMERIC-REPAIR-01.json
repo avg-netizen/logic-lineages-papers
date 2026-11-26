@@ -1,0 +1,20 @@
+{
+  "receipt": "1795367891176143848-77",
+  "immutableFailedCheckpoint": {
+    "remote": "cb034637d6ce45e8c53baa20dcc9de9484cd1e41",
+    "local": "8a06d3d0c11710f1bc16f8eb5f6b416e5b75a04b",
+    "tree": "047b3d20d456f8f3d0629f4e4743ac7ab6e295fe"
+  },
+  "source": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentMemoNumericProof.lean",
+  "priorSource": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverArgumentMemoNumericProof.lean.1795367891176143848-77.initial.txt",
+  "priorSha256": "e74f38a42a549addd760539916516b80a05a4e9f85ba351ebdd9a84e287898ee",
+  "repairedSha256": "5c5613800f5c6204a9bd7e2d90e5d0f5855526846541a691ce5294df5c3de2bc",
+  "diagnostic": "formalization/verification/continuation-2026-11-22/native-failed-editions/1795367891176143848-77-LogicLineages-PersistentMarking-NumberedWindowInternalCoverArgumentMemoNumericProof.log.txt",
+  "diagnosticSha256": "ca65fb92af036dcc2bb99b0f717bb89a1293bdc6ca9f264f708cce9e64c24284",
+  "patch": "formalization/verification/continuation-2026-11-22/P16-COVER-ARGUMENT-MEMO-NUMERIC-REPAIR-01.patch",
+  "patchSha256": "326e5b7d0e613be9075811e4ebe655fa429396376da5333222b629db58821d36",
+  "frozenSiblingSha256": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentMemoTargets.lean": "3bfcf33f079bc421ebbfcfc0a14719c909c772d674df21e7e0dcfcc6ceb0ebd7"
+  },
+  "repair": "Expose both disjuncts as the same selected decoder good test on the same actual predecessor tape. Previously only the zero disjunct was changed and the other was still hidden under atPredecessor. Split actual good branch and type the literal one/zero computation explicitly. No statement, program, import, or object source change. Forward/reverse patch precisely replays old and new bytes."
+}

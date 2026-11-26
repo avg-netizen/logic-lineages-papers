@@ -1,0 +1,3 @@
+# Scalar carriers at the complete endpoints of a positive certificate
+
+On every natural address, the selected unary scalar program makes the same decision as the original scalar checker. It validates the full address, lexical context and result type, and calls the same canonical-coordinate program. A genuine accepted positive address certificate supplies both full carrier graphs inside the calculus, with the same lexical context, requested type and certificate. Reselection of this scalar in a concrete source body is a subsequent operation. [Exact target](../../LogicLineages/PersistentMarking/NumberedWindowInternalSparseCanonicalAddressTargets.lean) · [Native gate](P16-CANONICAL-ADDRESS-LOCAL-EVIDENCE.json)

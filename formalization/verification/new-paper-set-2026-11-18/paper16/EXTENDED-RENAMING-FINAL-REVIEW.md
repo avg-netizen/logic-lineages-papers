@@ -1,0 +1,8 @@
+# Independent final: all-judgment injective auxiliary-tree renaming
+Approved supporting endpoint only. Independently reproduced identical 34-module evidence, one exact standard-only alias, zero errors. Independently traversed actual imports and confirmed exact closure. Seven frozen pins match. Native receipt 1794986108425869911-2; original binder-pattern failure retained. No compiler invoked or mathematical source edit.
+
+Read full ExtendedRenamingProof and ExtendedRenameSupport against all 25 constructors and seven judgment tags. Actual dependent tree induction rebuilds every constructor; all recursive premises contribute to equal count, including three Marked2 premises and matching/coverage/whole/ordered companions. Abs/FAbs transport actual opening/freshness under injective names; append, literal free argument and marked annotation identities are explicit. Equality transport is by equality elimination and preserves the actual count.
+
+Select maps exact occurrence indices, owner-copy tuple and actual successful free-image call; PSelect maps actual prefix tuples/call. Strict introduction maps actual mark success. Remove/Split/permutation/nonempty/prefix witnesses are structurally transported with multiplicities and positions preserved. Whole suppliers use actual renameType for the owner's requested annotation. No E covariance or cut is an assumed premise. Successful-call covariance here is specialized to free images with unchanged annotation, not arbitrary associativity.
+
+This proves only injective typed-name equivariance/count preservation. General substitution covariance, synchronization, conservative extension, prefix escape and cut require their own proofs. No numbered promotion.

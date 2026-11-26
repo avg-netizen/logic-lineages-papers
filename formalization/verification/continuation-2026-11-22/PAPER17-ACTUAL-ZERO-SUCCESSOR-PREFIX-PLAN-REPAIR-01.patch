@@ -1,0 +1,6 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualZeroSuccessorPrefixPlanCountProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualZeroSuccessorPrefixPlanCountProof.lean
+@@ -31,0 +32,3 @@
++    change PlanFacts f B ρ rank lam mu i
++      (if shortGapLength lam (prefixTarget mu) = 0 then .survives (prefixTarget mu)
++        else .short (prefixTarget mu) (shortGapLength lam (prefixTarget mu)))

@@ -1,0 +1,50 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "f30bda89dc6f6aa6d31b616ed62653043dd35c33",
+  "failed_source_local_commit": "086a0160366160be667a37266c8ff22946b2fb07",
+  "failed_source_tree": "fc726e5ed27be3b1d73842149deaaab7d330a478",
+  "failed_exact_gate_receipt": "1795368937440344988-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualGreatestCongruenceRouteStatementChecks",
+  "failed_receipt_sha256": "c1fcd8118df9ff2c1f101291206857283cb6e1acf0519b6dd55b5887c70e8d1b",
+  "failed_exact_module_log_sha256": "c358bfefe5e49a5e04e4784dac3e298c19bf4eea76e023071b4acf5abea2fd35",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualGreatestCongruenceRouteLayoutProof.lean:34:88: error: Type mismatch\n  h\nhas type\n  t.2.rank \u2208 low\nbut is expected to have type\n  t.2.rank \u2208 List.map Prod.snd (namedSlots (List.map Prod.snd (namedSlots low)))\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualGreatestCongruenceRouteLayoutProof.lean:83:6: error: Type mismatch\n  read.right\nhas type\n  LowerOperandActual f baseline (LowerOperand.coordinate low[j]) (\u03bd (j + 1))\nbut is expected to have type\n  \u03bd j.succ = Function.update baseline top z (lowerRanks top terms)[j]\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualGreatestCongruenceRouteLayoutProof.lean:82:60: warning: This simp argument is unused:\n  Function.update_of_ne (ne_of_lt hr)\n\nHint: Omit it from the simp argument list.\n  simp only [Function.update_of_ne (Nat.succ_ne_zero j),\u0335F\u0335u\u0335n\u0335c\u0335t\u0335i\u0335o\u0335n\u0335.\u0335u\u0335p\u0335d\u0335a\u0335t\u0335e\u0335_\u0335o\u0335f\u0335_\u0335n\u0335e\u0335 \u0335(\u0335n\u0335e\u0335_\u0335o\u0335f\u0335_\u0335l\u0335t\u0335 \u0335h\u0335r\u0335)\u0335]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n",
+  "failed_original_native_log_sha256": "ff2e5906a52ed2b04e53a7ed455a3d952899b03e08e9c455bc8a2bc4e7231315",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualGreatestCongruenceRouteLayoutProof.lean",
+  "failed_proof_sha256": "a64ba63528e34db38fe3be5e35d89a406aab8ec4d79611c7e266c4fd312e19e7",
+  "repaired_proof_sha256": "b99d934791bfcfae667290c8dbd7e8854a8c3c61d0006b1ba37e3a7107b08499",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-GREATEST-CONGRUENCE-ROUTE-REPAIR-01.patch",
+  "patch_sha256": "565d8f74d99128cdbec2dd48d7a50046446a328383fc40ba8c4f087b15051b05",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-GREATEST-CONGRUENCE-ROUTE-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "b15aabab12b494223d4872c3a9cfa21bb7eea2b4047e9a3d81fe4ede60d79504",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualGreatestCongruenceRouteProof.lean": "164a19ad8f2e8cabbb0ba20dbe6d9047fdf8f1d485c3f0d5d48d3ea56cf0feaf",
+    "formalization/LogicLineages/PermittedControl/ActualGreatestCongruenceRouteStatementChecks.lean": "d227f5b12fdfe1faf8a4a6ee813ce4d534cf2fd41a44906c9fd8ed522ede69a3",
+    "formalization/LogicLineages/PermittedControl/ActualGreatestCongruenceRouteTargets.lean": "cc4833ae8ba6d0215fe32b99311bc931f472283bdd32e5bb193ca7dc06728bf1",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-GREATEST-CONGRUENCE-ROUTE-SOURCE-MAP.md": "7045a82c5a66ad162f0461ac2132f6748bb5abc34c56dd93ea387b09e2392313"
+  },
+  "static_module_closure": {
+    "LayoutProof": {
+      "local": 212,
+      "external": 33,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 370,
+      "external": 41,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 371,
+      "external": 41,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 209,
+      "external": 33,
+      "contains_totient": false
+    }
+  },
+  "scope": "Rewrite the exact original coverage map with namedSlotsExact at the stated target, and expose the current original coordinate address before both Function.update reductions. No target, domain, code, statuses, or imports changed."
+}

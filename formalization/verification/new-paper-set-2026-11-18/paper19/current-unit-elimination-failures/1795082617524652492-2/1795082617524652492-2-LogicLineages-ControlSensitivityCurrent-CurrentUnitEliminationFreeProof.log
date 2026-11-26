@@ -1,0 +1,58 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationFreeProof.lean:45:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ω (reroute q.width (fun {σ} => r) z (shift q.width x.there))
+in the target expression
+  (fun x => ω (reroute q.width (fun {σ} => r) z x)) (shift q.width x.there) = ρ x
+
+case refine_1
+p : AdmissibleSum.Policy
+f : ℕ → ℕ
+Γ Δ : List Ty
+q : OpenGraph Γ
+r : Renaming (WireCtx q.width Γ) Δ
+z : Variable Δ Ty.ground
+ω : Variable Δ Ty.ground → ℕ
+ρ : Variable Γ Ty.ground → ℕ
+h : ∀ (x : Variable Γ Ty.ground), ω (r (shift q.width x)) = ρ x
+hm : SourceAST.Formula.eval p f (fun x => ω (reroute q.width (fun {σ} => r) z x)) q.matrix = true
+x : Variable Γ Ty.ground
+he :
+  ω (reroute q.width (fun {σ} => r) z (shift q.width x.there)) =
+    fillPrefix q.width (fun x => ω (r x)) (extend (fun x => ω (r (shift q.width x))) (ω z)) (shift q.width x.there)
+⊢ (fun x => ω (reroute q.width (fun {σ} => r) z x)) (shift q.width x.there) = ρ x
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationFreeProof.lean:48:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ω (reroute q.width (fun {σ} => r) z (shift q.width Variable.here))
+in the target expression
+  (fun x => ω (reroute q.width (fun {σ} => r) z x)) (shift q.width Variable.here) = ω z
+
+case refine_2
+p : AdmissibleSum.Policy
+f : ℕ → ℕ
+Γ Δ : List Ty
+q : OpenGraph Γ
+r : Renaming (WireCtx q.width Γ) Δ
+z : Variable Δ Ty.ground
+ω : Variable Δ Ty.ground → ℕ
+ρ : Variable Γ Ty.ground → ℕ
+h : ∀ (x : Variable Γ Ty.ground), ω (r (shift q.width x)) = ρ x
+hm : SourceAST.Formula.eval p f (fun x => ω (reroute q.width (fun {σ} => r) z x)) q.matrix = true
+he :
+  ω (reroute q.width (fun {σ} => r) z (shift q.width Variable.here)) =
+    fillPrefix q.width (fun x => ω (r x)) (extend (fun x => ω (r (shift q.width x))) (ω z))
+      (shift q.width Variable.here)
+⊢ (fun x => ω (reroute q.width (fun {σ} => r) z x)) (shift q.width Variable.here) = ω z
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationFreeProof.lean:68:54: error(lean.unknownIdentifier): Unknown identifier `freeBase`
+
+Note: A private declaration `freeBase` (from the current module) exists but would need to be public to access here.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationFreeProof.lean:69:70: error: unsolved goals
+p : AdmissibleSum.Policy
+f : ℕ → ℕ
+Γ : List Ty
+row : LinearCode
+q : OpenGraph Γ
+ω : Variable (Ty.ground :: WireCtx q.width (Ty.ground :: Γ)) Ty.ground → ℕ
+⊢ SourceAST.Formula.eval p f (fun x => ω (reroute q.width (fun {σ} => freeBase Γ q.width) Variable.here x)) q.matrix =
+        true ∧
+      holds row (ω Variable.here + 1) 0 (ω (shift q.width Variable.here).there + 1) ↔
+    SourceAST.Formula.eval p f (fun x => ω (reroute q.width (fun {σ} => sorry) Variable.here x)) q.matrix = true ∧
+      holds row (ω Variable.here + 1) 0 (ω (shift q.width Variable.here).there + 1)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationFreeProof.lean:75:8: warning: declaration uses `sorry`

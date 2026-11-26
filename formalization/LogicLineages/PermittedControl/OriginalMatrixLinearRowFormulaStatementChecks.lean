@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PermittedControl.OriginalMatrixLinearRowFormulaTargets
+import LogicLineages.PermittedControl.OriginalMatrixLinearRowFormulaProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalMatrixLinearRowFormula : OriginalMatrixLinearRowFormula.ExactLinearRowFormula :=
+  OriginalMatrixLinearRowFormula.exactLinearRowFormula
+
+#print axioms fixed_exactOriginalMatrixLinearRowFormula
+
+end LogicLineages.PermittedControl.StatementChecks

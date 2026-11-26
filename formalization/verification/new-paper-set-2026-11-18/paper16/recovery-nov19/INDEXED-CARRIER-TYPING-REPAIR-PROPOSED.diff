@@ -1,0 +1,69 @@
+--- prior/NativeIndexedTypingProof.lean
++++ candidate/NativeIndexedTypingThinProof.lean
+@@ -1,7 +1,7 @@
+ import LogicLineages.PersistentMarking.NativeIndexedCarrierTargets
+ import LogicLineages.PersistentMarking.NativeClosedProof
+ 
+-namespace LogicLineages.PersistentMarking.NativeIndexedTypingProof
++namespace LogicLineages.PersistentMarking.NativeIndexedTypingThinProof
+ open Spine NameBridge TypeSupport NativeReduction NativeTypingProof
+ open NativeCarrierTargets NativeIndexedCarrierTargets
+ 
+@@ -13,7 +13,7 @@
+ 
+ theorem discardClosed (S : Signature) (η : Ty) : ClosedNative S (discard η) (.arrow η (.arrow η η)) :=
+   ⟨⟨⟨.lam (.lam (.bound rfl)),True.intro⟩,True.intro,fun _ => rfl⟩,
+-    by simp [Native,discard,DecisionInventory.heads]⟩
++    by simp [Native,NativeIndexedCarrierTargets.discard,DecisionInventory.heads]⟩
+ 
+ theorem leftClosed (S : Signature) (η : Ty) (P : Expr) (hP : ClosedNative S P η) :
+     ClosedNative S (left η P) (.arrow η η) :=
+@@ -37,4 +37,4 @@
+   exact fun ρ h => leftIncluded η η (left η P) e ρ
+     (rightIncluded η (.arrow η η) (discard η) P ρ h)
+ 
+-end LogicLineages.PersistentMarking.NativeIndexedTypingProof
++end LogicLineages.PersistentMarking.NativeIndexedTypingThinProof
+
+--- prior/NativeIndexedSelectorProof.lean
++++ candidate/NativeIndexedSelectorProof.lean
+@@ -1,8 +1,8 @@
+-import LogicLineages.PersistentMarking.NativeIndexedTypingProof
++import LogicLineages.PersistentMarking.NativeIndexedTypingThinProof
+ 
+ namespace LogicLineages.PersistentMarking.NativeIndexedSelectorProof
+ open Spine NativeReduction NativeTypingProof NativeCarrierTargets
+-open NativeIndexedCarrierTargets NativeIndexedTypingProof
++open NativeIndexedCarrierTargets NativeIndexedTypingThinProof
+ 
+ private def outerBase (A : SemanticType) (P i : Expr) : Args :=
+   let η := Ty.arrow (actualType A) (actualType A)
+
+--- prior/NativeIndexedContextThinProof.lean
++++ candidate/NativeIndexedContextThinProof.lean
+@@ -1,10 +1,10 @@
+-import LogicLineages.PersistentMarking.NativeIndexedTypingProof
++import LogicLineages.PersistentMarking.NativeIndexedTypingThinProof
+ import LogicLineages.PersistentMarking.StructuralContextProof
+ import LogicLineages.PersistentMarking.TypeSupportConfinementProof
+ 
+ namespace LogicLineages.PersistentMarking.NativeIndexedContextThinProof
+ open Spine NativeReduction NativeCarrierTargets NativeIndexedCarrierTargets
+-open NativeIndexedTypingProof StructuralContext
++open NativeIndexedTypingThinProof StructuralContext
+ 
+ def eraseContext : SemanticType → Context
+   | .base => .hole
+
+--- prior/NativeIndexedCarrierChecks.lean
++++ candidate/NativeIndexedCarrierChecks.lean
+@@ -3,7 +3,7 @@
+ import LogicLineages.PersistentMarking.NativeCarrierThinChecks
+ 
+ namespace LogicLineages.PersistentMarking.NativeIndexedCarrierChecks
+-open Spine NativeCarrierTargets NativeIndexedCarrierTargets NativeIndexedTypingProof
++open Spine NativeCarrierTargets NativeIndexedCarrierTargets NativeIndexedTypingThinProof
+ 
+ theorem exact_IndexedCarrier : IndexedCarrier := by
+   intro S A P U i hP hU hi
+

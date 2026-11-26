@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.EqualGapCertificateSourceProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_fullEqualGapCertificate : Targets.FullEqualGapCertificate := fullEqualGapCertificate
+#print axioms fixed_fullEqualGapCertificate
+end LogicLineages.PermittedControl.StatementChecks

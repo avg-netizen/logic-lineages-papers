@@ -1,0 +1,15 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualRawCanonicalZeroPrefixesProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualRawCanonicalZeroPrefixesProof.lean
+@@ -44 +44,5 @@
+-      | snoc _ _ _ => simp only [List.length_append,List.length_cons,List.length_nil] at hlen
++      | @snoc past s t a prev used ok =>
++        change (past++[a]).length = 0 at hlen
++        have impossible : past.length + 1 = 0 := by
++          simpa only [List.length_append,List.length_cons,List.length_nil] using hlen
++        omega
+@@ -65 +69 @@
+-        change (past++[a],t) ∈ (level start n).flatMap children
++        change (past++[a],st) ∈ (level start n).flatMap children
+@@ -67 +71 @@
+-        exact (memChildren (past,s) (past++[a],t)).mpr ⟨a,used,ok,rfl⟩
++        exact (memChildren (past,s) (past++[a],st)).mpr ⟨a,used,ok,rfl⟩

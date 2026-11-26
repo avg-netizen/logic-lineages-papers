@@ -1,0 +1,9 @@
+module
+public import LogicLineages.StandardControlCurrent.StrictMassProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.StrictMassStatementChecks
+theorem full : StrictMassTargets.Full := StrictMassProof.full
+end LogicLineages.StandardControlCurrent.StrictMassStatementChecks
+#audit_namespace LogicLineages.StandardControlCurrent.StrictMassStatementChecks
+#print axioms LogicLineages.StandardControlCurrent.StrictMassStatementChecks.full

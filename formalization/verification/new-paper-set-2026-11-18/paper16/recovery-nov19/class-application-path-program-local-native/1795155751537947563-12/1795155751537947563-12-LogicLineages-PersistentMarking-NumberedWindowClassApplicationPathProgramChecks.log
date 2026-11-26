@@ -1,0 +1,70 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationPathProgramChecks.lean:17:16: error(lean.unknownIdentifier): Unknown identifier `Config`
+
+Note: A public declaration `Config` exists but is imported privately; consider adding `public import LogicLineages.PersistentMarking.NumberedWindowClassApplicationHopProgramChecks`.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationPathProgramChecks.lean:53:26: warning: This simp argument is unused:
+  state
+
+Hint: Omit it from the simp argument list.
+  simp [advance,̵s̵t̵a̵t̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationPathProgramChecks.lean:57:28: warning: This simp argument is unused:
+  state
+
+Hint: Omit it from the simp argument list.
+  simp [̵a̵d̵v̵a̵n̵c̵e̵,̵s̵t̵a̵t̵e̵,̵h̵]̵[̲a̲d̲v̲a̲n̲c̲e̲,̲ ̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationPathProgramChecks.lean:60:20: warning: This simp argument is unused:
+  state
+
+Hint: Omit it from the simp argument list.
+  simp [̵a̵d̵v̵a̵n̵c̵e̵,̵s̵t̵a̵t̵e̵,̵h̵]̵[̲a̲d̲v̲a̲n̲c̲e̲,̲ ̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationPathProgramChecks.lean:63:4: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Primcodable Input
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationPathProgramChecks.lean:65:16: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Primcodable Data
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationPathProgramChecks.lean:67:16: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Primcodable (Data × Option Accumulator × ℕ)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationPathProgramChecks.lean:69:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Primcodable (Input × List ℕ)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationPathProgramChecks.lean:63:83: error: unsolved goals
+least : ℕ → Option ℕ
+hl : Primrec least
+Data : Type (max ?u.30 0) := Input × List ℕ
+source : sorry
+config : sorry
+hops : sorry
+⊢ sorry
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationPathProgramChecks.lean:106:7: error: failed to infer `have` declaration type
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationPathProgramChecks.lean:94:61: error: unsolved goals
+least : ℕ → Option ℕ
+hl : Primrec least
+V : Type := List.Vector ℕ 5
+d : Primrec fun v => head v
+td : Primrec fun v => tail v
+c : Primrec fun a => (tail a).head
+tc : Primrec fun a => (tail a).tail
+a : Primrec fun a => (tail a).tail.head
+ta : Primrec fun a => (tail a).tail.tail
+s : Primrec fun a => (tail a).tail.tail.head
+ts : Primrec fun a => (tail a).tail.tail.tail
+cert : Primrec fun a => (tail a).tail.tail.tail.head
+⊢ ∃ p,
+    ∀ (domain result argument imageSource certificate : ℕ),
+      evaluate p (domain ::ᵥ result ::ᵥ argument ::ᵥ imageSource ::ᵥ certificate ::ᵥ nil) =
+        Encodable.encode (liftPath least domain result argument imageSource certificate)
+'LogicLineages.PersistentMarking.NumberedWindowClassApplicationPathProgramChecks.exact_ClassPathLiftProgram' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

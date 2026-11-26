@@ -1,0 +1,11 @@
+module
+public import LogicLineages.StandardControlCurrent.PrefixCountsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.PrefixCountsStatementChecks
+theorem prefixSplitting : PrefixCountsTargets.FullPrefix := PrefixCountsProof.prefixSplitting
+theorem counts : PrefixCountsTargets.FullCounts := PrefixCountsProof.counts
+end LogicLineages.StandardControlCurrent.PrefixCountsStatementChecks
+#audit_namespace LogicLineages.StandardControlCurrent.PrefixCountsStatementChecks
+#print axioms LogicLineages.StandardControlCurrent.PrefixCountsStatementChecks.prefixSplitting
+#print axioms LogicLineages.StandardControlCurrent.PrefixCountsStatementChecks.counts

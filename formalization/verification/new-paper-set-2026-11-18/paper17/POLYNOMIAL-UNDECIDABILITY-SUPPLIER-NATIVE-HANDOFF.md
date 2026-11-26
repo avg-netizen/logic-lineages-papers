@@ -1,0 +1,11 @@
+# Closed actual polynomial-system undecidability supplier handoff
+
+Full PolynomialUndecidabilitySupplierStatementChecks first-pass1795014812137681673-5, alias StatementChecks.fixed_polynomialUndecidabilitySupplier. Seven unchanged pins/original caps. Recursive evidence498 current-source modules/zeroerrors/standardonly. No source edits/failures. All sessions reaped/released. Staged actual roots: DiophantineCompletion.UndecidabilityProof1795014339413392924-5, H10BridgeProof1795014638549940889-5.
+
+IMPORTANT acceptance is not just the native/axiom audit: independent actual mathematical/domain dependency review required. Preliminary H10-SUPPLIER-STATEMENT-DOMAIN-AUDIT.md is not final. Inspect encodedPolynomialSolvable languages/total map/WellFormed/shared index/N[X] unknowns/zero cases and the actual halting/Partrec→Diophantine/circuit→fixed-coefficient-linear-system chain. No external undecidability hypothesis in full target. Explicit conjunction carries actual total coded H10 bridge as well as closed not-ComputablePred theorem.
+
+Map for review: SystemUndecidabilityProof pulls hypothetical linear-system decider back via H10Export.bridge. H10BridgeProof calibrates actual parsed integer circuit to domain-shift and CircuitFullSemantic system, preserves valid shared dimension; malformed inputs use impossible1=0. H10AdapterProgramsProof supplies actual total program. Narendran square/quotient/constant/simultaneous and CircuitFullForward/Rows/Semantic prove genuine original linear-system semantics, not an oracle.
+
+RootExport references DiophantineCompletion.UndecidabilityProof: actual Nat.Partrec.Code halting at0 is RE and undecidable; ReductionProof produces a computable polynomial specialization from actual Partrec graph Diophantineness. OrdinaryCodeProof pays recursion/minimization through Cipher/RowPacking/BoundedUniversal/PrimitiveRecursion chain. Actual polynomial codes admit zero-allowing Nat roots. Require review of these semantics beyond theorem names and standard axioms.
+
+This closes only a mathematical supplier if accepted. Selected level2 assembly not yet gated, whole Paper17 hardness additionally needs level3 actual seed/compiler/effective query. No parked threshold or unchangedG claim.

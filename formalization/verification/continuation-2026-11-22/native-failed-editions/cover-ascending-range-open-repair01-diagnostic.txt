@@ -1,0 +1,8 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAscendingRangeOpenDataProof.lean:133:2: error: Type mismatch
+  endCase (Term.relabel j bound) (Term.relabel j previous) (Term.relabel j out) one (Term.relabel j i) movedRow actual
+    movedSplit movedIH
+has type
+  Nonempty (Derivation body Δ (rangeReport (Term.relabel j previous) (Term.relabel j bound))) →
+    Nonempty (Derivation body Δ (memberGraph (Term.relabel j out) (Term.relabel j i)))
+but is expected to have type
+  Nonempty (Derivation body Δ (memberGraph (Term.relabel j out) (Term.relabel j i)))

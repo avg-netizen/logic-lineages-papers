@@ -1,0 +1,14 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorPrimitiveProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorPrimitiveProof.lean
+@@ -45,2 +45,9 @@
+-      ms.filter (fun m => decide (m.1.1 ≠ 0) && !m.2)) :=
+-    Primrec.listFilter (Primrec.eq.comp keep (Primrec.const true))
++      ms.filter (fun m => decide (m.1.1 ≠ 0) && !m.2)) := by
++    apply (Primrec.listFilter (Primrec.eq.comp keep (Primrec.const true))).of_eq
++    intro ms
++    apply List.filter_congr
++    intro m _
++    change decide ((decide (m.1.1 ≠ 0) && !m.2) = true) =
++      (decide (m.1.1 ≠ 0) && !m.2)
++    generalize (decide (m.1.1 ≠ 0) && !m.2) = bitValue
++    cases bitValue <;> rfl

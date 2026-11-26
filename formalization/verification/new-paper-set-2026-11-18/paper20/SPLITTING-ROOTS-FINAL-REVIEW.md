@@ -1,0 +1,7 @@
+# Independent SplittingRoots7 final review
+
+Approved seven supporting endpoints only. Independent read-only recursive verifier exactly matches author evidence: 9 current-source local modules, zero errors, all seven required aliases standard-only. Native receipt 1794983650362513411-2, four frozen pins unchanged. No reviewer compiler invoked.
+
+Read actual splitting-field source definitions and proof. Finiteness comes from the genuine source splitting field over finite F2, not a supplied finite carrier. Actual mapped full polynomial splits; constant-one evaluation proves nonzero polynomial and excludes zero roots. roots.toFinset membership is exactly all roots of that polynomial. Coefficient Frobenius fixation is proved from actual source product. Root squaring preserves membership by polynomial evaluation/naturality; injectivity of field Frobenius and finite-surjectivity produce a genuine permutation. Fixed elements satisfy x*(x-1)=0, yielding 0 or1 with unique F2 preimage by algebraMap injectivity; reverse direction checks all F2 elements. Empty d=0 roots are included without fictitious nonempty-root hypothesis.
+
+The preserved initial failure was opaque Root finite-instance elaboration; repair unfolds actual subtype/provides local finite instance without weakening targets. Mathematical finite existence does NOT prove executable splitting-field construction, root enumeration, profile conversion, geometric support equivalence, PF completeness, descent or observer theorem. No numbered promotion/full-root/upstream rebuild/CI claim.

@@ -1,0 +1,7 @@
+# Actual structural field family in the full retained tuple
+
+Exact2 pays constructor-only lambda semantics and installs the concrete StructuralExchangeFields.layer U V as the actual J in the literal graph recursion. LambdaAt has only original source/target lambda constructors, node pairing, V=1 and the first actual answer cons; no field-output premises. ApplicationAt reproduces the already checked constructor-only app/argsCons equation, fixed to the SAME U/V chosen for this tuple.
+
+SelectedTuple retains actual original candidate Q, rank/dependency R/D, guard/window C/K, seeded pool P, literal length(P) cutoff, type-guarded E, list L, candidate and unchanged old representative plus full GlobalSourcePackage calibration and OriginalRankGuardedRepresentative properties. Legacy U is still selected for original all-vector field semantics; concrete fields0–13 replace those ASTs in J, answers0/3 are actual, remaining headMove/head-result suppliers remain explicit and opaque. No old tuple/AST is overwritten.
+
+Native calibration and internal constructor laws are separate conjuncts; no semantic reflection or extraction of arithmetic witnesses. Constructor-only lambda proof will reuse paid finite output existence with fresh-variable continuation, as in accepted application. Full recursive E correctness, guard validity, headMove/head-result and rank/dependency coherence, source stability/class compatibility remain open. No proof before review/preflight.

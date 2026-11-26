@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualReadChargeIterationTargets
+import LogicLineages.PermittedControl.ActualReadChargeIterationProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualReadChargeIteration :
+    ActualReadChargeIteration.FullActualReadChargeIteration :=
+  ActualReadChargeIteration.fullActualReadChargeIteration
+
+#print axioms fixed_actualReadChargeIteration
+
+end LogicLineages.PermittedControl.StatementChecks

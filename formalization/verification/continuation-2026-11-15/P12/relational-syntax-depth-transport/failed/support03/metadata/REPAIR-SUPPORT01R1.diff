@@ -1,0 +1,20 @@
+--- InstallationProof SUPPORT01
++++ InstallationProof SUPPORT01R1
+@@ -9,7 +9,7 @@
+ No extension, retagging assumption, or new program membership is introduced. -/
+ theorem lookupInstalled {n : Nat} (p : Program n) (atag : Nat)
+  (ha : (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩) :
+- ∃ lookupTag, (nodes p)[lookupTag]? = some ⟨2,HistoryLookup.lookup⟩ := by
++ ∃ (lookupTag : Nat), (nodes p)[lookupTag]? = some ⟨2,HistoryLookup.lookup⟩ := by
+  let ttag := HistoryAppend.AppendEquationsProof.tableTag atag
+  have ht := HistoryAppend.AppendEquationsProof.tableInstalled p atag ha
+  let vtag := HistoryAppend.TableEquationsProof.valueTag ttag
+@@ -26,7 +26,7 @@
+ theorem auxiliaryTags {n : Nat} (p : Program n) (stag atag : Nat)
+  (hs : (nodes p)[stag]? = some ⟨2,LiteralSyntaxScan.scanCode⟩)
+  (ha : (nodes p)[atag]? = some ⟨2,HistoryAppend.append⟩) :
+- ∃ lengthTag lookupTag leftTag rightTag,
++ ∃ (lengthTag lookupTag leftTag rightTag : Nat),
+  (nodes p)[lengthTag]? = some ⟨1,HistoryLengthOffset.lengthProgram⟩ ∧
+  (nodes p)[lookupTag]? = some ⟨2,HistoryLookup.lookup⟩ ∧
+  (nodes p)[leftTag]? = some ⟨1,HistoryDecoder.decoder false⟩ ∧

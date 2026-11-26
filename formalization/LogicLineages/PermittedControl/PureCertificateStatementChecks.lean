@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.PureCertificateProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_pureCertificateFoundation : Targets.PureCertificateFoundation := pureCertificateFoundation
+#print axioms fixed_pureCertificateFoundation
+end LogicLineages.PermittedControl.StatementChecks

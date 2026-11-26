@@ -1,0 +1,39 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationHopProof.lean:23:75: error: unexpected token '('; expected command
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationHopProof.lean:90:4: error: 'change' tactic failed, pattern
+  (leastCode S K Γ τ edge.source).bind ?m.350 = ?m.352
+is not definitionally equal to target
+  ((NumberedWindowScalarAlgorithm.least (fixed S K) (List.map encodeTy Γ) (encodeTy τ)
+          (encodeTerm (NTerm.auxApp σ τ e.source U.val))).bind
+      fun sourceCode =>
+      (NumberedWindowScalarAlgorithm.least (fixed S K) (List.map encodeTy Γ) (encodeTy τ)
+            (encodeTerm (NTerm.auxApp σ τ e.target U.val))).bind
+        fun targetCode =>
+        pure
+          (sourceCode, targetCode,
+            NumberedWindowFieldAlgorithm.packNode 2
+              [targetCode,
+                NumberedWindowFieldAlgorithm.packNode 1
+                  [encodeTerm (NTerm.auxApp σ τ e.source U.val), encodeTerm (NTerm.auxApp σ τ e.target U.val),
+                    encodeWitness e.witness.auxFunction]])) =
+    some
+      (x, y,
+        encodeClassHop
+          { targetCode := y,
+            edge :=
+              { source := NTerm.auxApp σ τ e.source U.val, target := NTerm.auxApp σ τ e.target U.val,
+                witness := e.witness.auxFunction } })
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationHopProof.lean:88:60: warning: This simp argument is unused:
+  exact_LeastRepresentative
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵e̵q̵_̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵l̵i̵t̵e̵r̵a̵l̵,̵e̵x̵a̵c̵t̵_̵L̵e̵a̵s̵t̵R̵e̵p̵r̵e̵s̵e̵n̵t̵a̵t̵i̵v̵e̵,̵[̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲e̲q̲_̲b̲i̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲l̲i̲t̲e̲r̲a̲l̲,̲ exact_TermCodec.2.1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationHopProof.lean:89:6: warning: This simp argument is unused:
+  exact_TermCodec.2.1
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵e̵q̵_̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵l̵i̵t̵e̵r̵a̵l̵,̵e̵x̵a̵c̵t̵_̵L̵e̵a̵s̵t̵R̵e̵p̵r̵e̵s̵e̵n̵t̵a̵t̵i̵v̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵e̵x̵a̵c̵t̵_̵T̵e̵r̵m̵C̵o̵d̵e̵c̵.̵2̵.̵1̵]̵[̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲e̲q̲_̲b̲i̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲l̲i̲t̲e̲r̲a̲l̲,̲ ̲e̲x̲a̲c̲t̲_̲L̲e̲a̲s̲t̲R̲e̲p̲r̲e̲s̲e̲n̲t̲a̲t̲i̲v̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

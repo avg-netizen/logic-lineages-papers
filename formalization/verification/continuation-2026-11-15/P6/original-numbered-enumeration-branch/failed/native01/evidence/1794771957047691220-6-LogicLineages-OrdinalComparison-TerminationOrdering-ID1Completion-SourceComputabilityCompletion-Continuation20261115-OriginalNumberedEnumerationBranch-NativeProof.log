@@ -1,0 +1,26 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalNumberedEnumerationBranch/NativeProof.lean:71:4: error: 'change' tactic failed, pattern
+  1 + Nat.pair (typeNumber t) (typesNumber ts) = typesNumber (t :: ts)
+is not definitionally equal to target
+  (Nat.pair (Encodable.encode t) (typesNumber ts)).succ = typesNumber (t :: ts)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalNumberedEnumerationBranch/NativeProof.lean:81:2: error: Tactic `rfl` failed: The left-hand side
+  Encodable.encode (Code.numbered k h t b ts e)
+is not definitionally equal to the right-hand side
+  Nat.pair 5
+    (Nat.pair (Encodable.encode k)
+      (Nat.pair (Encodable.encode h)
+        (Nat.pair (Encodable.encode t)
+          (Nat.pair (Encodable.encode b) (Nat.pair (typesNumber ts) (Encodable.encode e))))))
+
+n k : ℕ
+h : HeadCode (Fin n)
+t : Source.Ty
+b : Code (Fin n)
+ts : List Source.Ty
+e : Code (Fin n)
+⊢ Encodable.encode (Code.numbered k h t b ts e) =
+    Nat.pair 5
+      (Nat.pair (Encodable.encode k)
+        (Nat.pair (Encodable.encode h)
+          (Nat.pair (Encodable.encode t)
+            (Nat.pair (Encodable.encode b) (Nat.pair (typesNumber ts) (Encodable.encode e))))))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalNumberedEnumerationBranch/NativeProof.lean:93:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalNumberedEnumerationBranch.NativeProof.numberedEncoding: forbidden axiom dependency sorryAx

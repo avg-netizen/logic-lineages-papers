@@ -1,0 +1,136 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralRankForwardRuleProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalPullbackChecks
+import LogicLineages.PersistentMarking.NumberedWindowGuardedGraphChecks
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralRankForwardRowsProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralSpineRankProgramProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseAddressPositiveOpenBindingProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathSuccessfulAdvanceGraphSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalPullbackSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionFunctionalityProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralPushedForwardImageProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralForwardCoordinatesProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalRankMeasuredForwardPathProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalOriginalSelectedFormationAtGuardProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralFiniteCodomainProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalRankMeasuredSelectedGuardOrdinaryAddressProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralApplicationInputCoordinatesProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralPairedEdgeCoherenceProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralFormingCoherenceProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseCoveredWindowOpenReportProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralAtomicAddressReportProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalOriginalScalarAddressWindowProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalThinFormationRepresentativeSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSupportProof
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalLiteralRankPullbackProof
+open FirstOrder Language LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalControlGraphSupportProof (headTransport)
+open ID1Completion.InternalTagArithmeticSyntaxProof (eqn)
+open ID1Completion.InternalTagArithmeticSupportProof (refl symm)
+open ID1Completion.InternalAcceptance (conjunction)
+open ID1Completion.SourcePresentation (sourceBody)
+open ID1Completion.InternalGraphCompositionFunctionalityProof (renameInto)
+open ID1Completion.InternalTagArithmeticSyntaxProof (sucRelabel zRelabel)
+open NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof (unaryRename)
+open NumberedWindowInternalSparseAddressPositiveOpenBindingProof (addressReportRename)
+open NumberedWindowInternalSparsePathSuccessfulAdvanceGraphSyntaxProof (graph5Rename)
+open NumberedWindowInternalPullbackTargets (ForwardRule)
+open NumberedWindowInternalPullbackSyntaxProof (acceptsRename)
+open NumberedWindowComputabilityFormulaTargets (accepts)
+open NumberedWindowInternalLiteralGuardedPositiveRowsProof (exact_OpenGuardedPositiveCertificateRows)
+open NumberedWindowInternalLiteralApplicationRowsProof (exact_OpenLiteralApplicationRows)
+open NumberedWindowInternalLiteralRankForwardRowsProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram (Program)
+open NumberedWindowScalarAlgorithm (Settings)
+open NumberedWindowInternalSparsePathEnvelopeTargets (suc z unary rawCons)
+open NumberedWindowInternalSparseApplicationFrontendTargets (parsedApplicationInputs)
+open NumberedWindowInternalSparseApplicationFrontend (applicationGuard)
+open NumberedWindowInternalSparseAddressPositive (addressPositive)
+open NumberedWindowInternalSparseAddressPositiveOpenTargets (addressReport)
+open NumberedWindowInternalSparseCanonicalAddressThinDefinitions (addressScalar)
+open NumberedWindowInternalFreshProbeParsedEmitter (rawResult)
+open NumberedWindowInternalFreshProbeParsedEmitterObjectTargets (addressTerm)
+open NumberedWindowInternalSparseRawFunctionFrameTargets (auxiliaryTerm)
+open NumberedWindowInternalSparsePackedLeast (packedLeastProgram)
+open NumberedWindowInternalSparsePackedLeastOpen (leastGraph)
+open NumberedWindowInternalSparsePackedDomainTargets (hasLeast)
+open NumberedWindowInternalSparsePositiveFold (positive)
+open NumberedWindowInternalSparsePassWindowTargets (windowAt)
+open NumberedWindowInternalRankMeasuredExchange (rankedExchange)
+open NumberedWindowInternalMeasuredExchangeThinDefinitions (measuredExchange)
+open NumberedWindowInternalMeasuredPairedGuardedThinNumericProof (pairedExchange)
+open NumberedWindowInternalSparseCoverGuardedExchangeTargets (guardedExchange)
+open NumberedWindowInternalMeasuredUnrestrictedSelectedFormationInputsProof (selectedWindow selectedBase)
+open NumberedWindowInternalMeasuredUnrestrictedWindowDefinitions (syntaxWindow coveredWindow)
+open NumberedWindowInternalCoverAuxSyntaxTargets (auxSyntax)
+open NumberedWindowInternalFactoredCoverTargets (factoredCover)
+open NumberedWindowInternalCoverSelectedGrammarOptionTargets (selectedGrammarOption)
+open NumberedWindowInternalAuxMeasureMemoTargets (selectedMeasure)
+open NumberedWindowInternalAuxMeasureStepTargets (measureUpdate)
+open NumberedWindowInternalChosenAuxMeasureCombine (chosenCombine)
+open NumberedWindowInternalAuxExchangeMemoTargets (selected)
+open NumberedWindowInternalAuxExchangeMemoStepTargets (step)
+open NumberedWindowInternalSettingsGrammarGuardDefinitions (refitGuard)
+open NumberedWindowInternalTransparentAuxRankTargets (auxRank)
+open NumberedWindowInternalSparseTypedRaw (typedRaw5)
+open NumberedWindowInternalRankMeasuredForwardPathProof (exact_OpenOriginalRankMeasuredForwardPath)
+open NumberedWindowInternalOriginalSelectedFormationAtGuardProof (exact_OpenOriginalSelectedGuardFormation)
+open NumberedWindowInternalThinFormationRepresentativeSyntaxProof (atFunction)
+open NumberedWindowInternalSparseCoveredWindowOpenReportProof (exact_CoveredWindowReport)
+open NumberedWindowInternalPullbackTargets (forwardImage)
+open NumberedWindowInternalDirectTypedUnionLiteralJTargets (literalData)
+open NumberedWindowInternalLiteralPositiveEndpointGuardProof (positiveEndpointGuard)
+open NumberedWindowInternalLiteralFiniteScalarGuardProof (D finiteCodes finiteScalar exact_OpenLiteralFiniteScalar)
+open NumberedWindowInternalLiteralTypeMembershipTargets (literalMembership)
+open NumberedWindowInternalLiteralFiniteCodomainProof (exact_OpenLiteralFiniteCodomain)
+open NumberedWindowInternalFreshProbeDispatchWindowTargets (ProbeTy ChildClosed)
+open NumberedWindowInternalLiteralAtomicAddressReportProof (alignSource)
+open NumberedWindowInternalLiteralApplicationInputCoordinatesProof (exact_OpenLiteralApplicationInputCoordinates)
+open NumberedWindowInternalOriginalScalarAddressWindowProof (exact_OpenOriginalScalarAddressWindow)
+open NumberedWindowInternalLiteralPairedEdgeCoherenceProof (exact_OriginalPairedSelectedMinimum)
+open NumberedWindowInternalLiteralFormingCoherenceProof (exact_OpenCoherenceFromWindowDomain)
+open NumberedWindowInternalLiteralForwardCoordinatesProof
+open NumberedWindowInternalLiteralPushedForwardImageProof
+open NumberedWindowInternalOriginalFirstHopCoreProof (literalAddress)
+
+open NumberedWindowInternalLiteralRankForwardRuleProof (exact_OpenRankGuardedForwardRule)
+open NumberedWindowInternalPullbackChecks (exact_InternalPullback)
+open NumberedWindowInternalPullbackTargets (Pullback)
+open NumberedWindowGuardedGraphChecks (exact_GuardRules)
+open NumberedWindowInternalDirectTypedListTargets (jRaw)
+open NumberedWindowInternalDirectCoreTargets (dCore)
+open NumberedWindowInternalLiteralCount (permutation)
+open NumberedWindowInternalSparseApplicationFrontend (applicationCore)
+
+/-- Pullback for the same exact literal rank-measured tuple, not
+a numerical implication or an assumption of accessibility. -/
+theorem exact_OpenRankGuardedPullback (s : Settings) (P : List ProbeTy) (closed : ChildClosed P)
+    (base intrinsic : Program 2) (V TV T baseM cv tv rank : Program 1) (root other : Program 3) (c : Nat) :
+    let Tg := conjunction (refitGuard s T) TV
+    let Va := auxSyntax V TV
+    let M := selectedMeasure (measureUpdate baseM chosenCombine)
+    let C := factoredCover Va M selectedGrammarOption
+    let W := selectedWindow s intrinsic Tg V TV baseM
+    let D₀ := measuredExchange (auxRank rank) (measuredExchange M (selected (step base Va)))
+    let X := guardedExchange C s (pairedExchange D₀)
+    let raw := typedRaw5 root other W Va
+    let L := packedLeastProgram C X W s
+    let i := finiteScalar (addressScalar cv tv W L) (finiteCodes P)
+    let data := literalData i (positiveEndpointGuard i (addressPositive cv tv raw L))
+    OpenRankTypeGuards P Tg tv → Pullback data (applicationGuard i L) c := by
+  intro Tg Va M C W D₀ X raw L i data typeRules
+  let r := positiveEndpointGuard i (addressPositive cv tv raw L)
+  let d := dCore i r permutation
+  have guards := (exact_GuardRules i (jRaw i) r d (applicationCore L)).1
+  exact exact_InternalPullback i (jRaw i) r d (applicationGuard i L) c guards
+    (exact_OpenRankGuardedForwardRule s P closed base intrinsic V TV T baseM cv tv rank root other c typeRules)
+
+#print axioms exact_OpenRankGuardedPullback
+end LogicLineages.PersistentMarking.NumberedWindowInternalLiteralRankPullbackProof

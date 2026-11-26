@@ -1,0 +1,10 @@
+module
+public import LogicLineages.PermittedControl.EntryEffectivityProof
+public import LogicLineages.PermittedControl.EntryExistenceProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_entryEffectivityFull : Targets.EntryEffectivity := entryEffectivity
+ theorem fixed_entryExistenceOrbit : Targets.EntryExistenceOrbit := entryExistenceOrbit
+#print axioms fixed_entryEffectivityFull
+#print axioms fixed_entryExistenceOrbit
+end LogicLineages.PermittedControl.StatementChecks

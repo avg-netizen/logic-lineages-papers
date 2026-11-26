@@ -1,0 +1,7 @@
+# Installed literal binary producer, proposed
+Comparator only. No proof before review/freeze/preflight.
+Program5 accepts three runtime second-child offsets followed by r,s. It embeds ONLY primitive pF0 and compile(pF0), fixed peel/header/alias compiler programs, never final selected pF or its length. Static tags6/8/10/12 are the proven original augmentation/padding addresses. Offset values are numeric arguments at actual calls, not embedded in the AST.
+Fresh extra wraps original base extra plus program(pF0), built before final source/index selection. Fresh selected keeps the literal two augmentations, hence base12 remains stable. Original frozen selected definitions are unchanged.
+Exact graph identifies actual producer call with explicit accepted literal recipe, deriving all actual child memberships and ordinary evaluation/coherence equations. No output, graph or certificate success assumption.
+OneSource constructs a NEW actual tuple with full original Retained+Packages and installed producer acceptance at the same tuple. Old existential tuples cannot be substituted: retained reconstruction and literal/source-calculation proofs must be generalized to arbitrary finite box using original memberships, without changing old theorems.
+Still not original HB3: checkerEquationCode-versus-quotedSuccess transport and same-source checker compiler/quantifier introduction inventory remain separate unpaid obligations. This packet installs the actual literal calculation producer only.

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.ActualRootBoundsProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.ActualRootBounds.StatementChecks
+theorem fixed_completeActualBounds : Targets.CompleteActualBounds := completeActualBounds
+#audit_namespace LogicLineages.CartierObserverCurrent.ActualRootBounds.StatementChecks
+end LogicLineages.CartierObserverCurrent.ActualRootBounds.StatementChecks

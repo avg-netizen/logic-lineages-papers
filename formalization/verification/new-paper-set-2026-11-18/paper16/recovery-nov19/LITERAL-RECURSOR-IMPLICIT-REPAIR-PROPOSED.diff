@@ -1,0 +1,92 @@
+--- LogicLineages/PersistentMarking/LiteralDerivationCompleteProof.lean
++++ LogicLineages/PersistentMarking/LiteralDerivationCompleteProof.lean
+@@ -14,10 +14,10 @@
+       (motive_4 := fun xs ys _ => Witness S (.multiset xs ys))
+       (motive_5 := fun xs ys _ => Witness S (.coverage xs ys))
+       (motive_6 := fun f bs es ts _ => Witness S (.whole f bs es ts))
+-      (BVar S) (BAbs S) (BFun S) (BPut S)
+-      (BSelect S) (BFAbs S) (BCopy S) (BStat S)
+-      (BStrict S) (BMatchNil S) (BMatchCons S) (BMultiset S)
+-      (BCoverNil S) (BCoverCons S) (BWholeNil S) (BWholeCons S)
++      (@BVar S) (@BAbs S) (@BFun S) (@BPut S)
++      (@BSelect S) (@BFAbs S) (@BCopy S) (@BStat S)
++      (@BStrict S) (@BMatchNil S) (@BMatchCons S) (@BMultiset S)
++      (@BCoverNil S) (@BCoverCons S) (@BWholeNil S) (@BWholeCons S)
+       h
+   | strict q t =>
+     exact Strict.rec
+@@ -27,10 +27,10 @@
+       (motive_4 := fun xs ys _ => Witness S (.multiset xs ys))
+       (motive_5 := fun xs ys _ => Witness S (.coverage xs ys))
+       (motive_6 := fun f bs es ts _ => Witness S (.whole f bs es ts))
+-      (BVar S) (BAbs S) (BFun S) (BPut S)
+-      (BSelect S) (BFAbs S) (BCopy S) (BStat S)
+-      (BStrict S) (BMatchNil S) (BMatchCons S) (BMultiset S)
+-      (BCoverNil S) (BCoverCons S) (BWholeNil S) (BWholeCons S)
++      (@BVar S) (@BAbs S) (@BFun S) (@BPut S)
++      (@BSelect S) (@BFAbs S) (@BCopy S) (@BStat S)
++      (@BStrict S) (@BMatchNil S) (@BMatchCons S) (@BMultiset S)
++      (@BCoverNil S) (@BCoverCons S) (@BWholeNil S) (@BWholeCons S)
+       h
+   | matching xs ys =>
+     exact Matching.rec
+@@ -40,10 +40,10 @@
+       (motive_4 := fun xs ys _ => Witness S (.multiset xs ys))
+       (motive_5 := fun xs ys _ => Witness S (.coverage xs ys))
+       (motive_6 := fun f bs es ts _ => Witness S (.whole f bs es ts))
+-      (BVar S) (BAbs S) (BFun S) (BPut S)
+-      (BSelect S) (BFAbs S) (BCopy S) (BStat S)
+-      (BStrict S) (BMatchNil S) (BMatchCons S) (BMultiset S)
+-      (BCoverNil S) (BCoverCons S) (BWholeNil S) (BWholeCons S)
++      (@BVar S) (@BAbs S) (@BFun S) (@BPut S)
++      (@BSelect S) (@BFAbs S) (@BCopy S) (@BStat S)
++      (@BStrict S) (@BMatchNil S) (@BMatchCons S) (@BMultiset S)
++      (@BCoverNil S) (@BCoverCons S) (@BWholeNil S) (@BWholeCons S)
+       h
+   | multiset xs ys =>
+     exact Multiset.rec
+@@ -53,10 +53,10 @@
+       (motive_4 := fun xs ys _ => Witness S (.multiset xs ys))
+       (motive_5 := fun xs ys _ => Witness S (.coverage xs ys))
+       (motive_6 := fun f bs es ts _ => Witness S (.whole f bs es ts))
+-      (BVar S) (BAbs S) (BFun S) (BPut S)
+-      (BSelect S) (BFAbs S) (BCopy S) (BStat S)
+-      (BStrict S) (BMatchNil S) (BMatchCons S) (BMultiset S)
+-      (BCoverNil S) (BCoverCons S) (BWholeNil S) (BWholeCons S)
++      (@BVar S) (@BAbs S) (@BFun S) (@BPut S)
++      (@BSelect S) (@BFAbs S) (@BCopy S) (@BStat S)
++      (@BStrict S) (@BMatchNil S) (@BMatchCons S) (@BMultiset S)
++      (@BCoverNil S) (@BCoverCons S) (@BWholeNil S) (@BWholeCons S)
+       h
+   | coverage xs ys =>
+     exact Coverage.rec
+@@ -66,10 +66,10 @@
+       (motive_4 := fun xs ys _ => Witness S (.multiset xs ys))
+       (motive_5 := fun xs ys _ => Witness S (.coverage xs ys))
+       (motive_6 := fun f bs es ts _ => Witness S (.whole f bs es ts))
+-      (BVar S) (BAbs S) (BFun S) (BPut S)
+-      (BSelect S) (BFAbs S) (BCopy S) (BStat S)
+-      (BStrict S) (BMatchNil S) (BMatchCons S) (BMultiset S)
+-      (BCoverNil S) (BCoverCons S) (BWholeNil S) (BWholeCons S)
++      (@BVar S) (@BAbs S) (@BFun S) (@BPut S)
++      (@BSelect S) (@BFAbs S) (@BCopy S) (@BStat S)
++      (@BStrict S) (@BMatchNil S) (@BMatchCons S) (@BMultiset S)
++      (@BCoverNil S) (@BCoverCons S) (@BWholeNil S) (@BWholeCons S)
+       h
+   | whole f bs es ts =>
+     exact Whole.rec
+@@ -79,10 +79,10 @@
+       (motive_4 := fun xs ys _ => Witness S (.multiset xs ys))
+       (motive_5 := fun xs ys _ => Witness S (.coverage xs ys))
+       (motive_6 := fun f bs es ts _ => Witness S (.whole f bs es ts))
+-      (BVar S) (BAbs S) (BFun S) (BPut S)
+-      (BSelect S) (BFAbs S) (BCopy S) (BStat S)
+-      (BStrict S) (BMatchNil S) (BMatchCons S) (BMultiset S)
+-      (BCoverNil S) (BCoverCons S) (BWholeNil S) (BWholeCons S)
++      (@BVar S) (@BAbs S) (@BFun S) (@BPut S)
++      (@BSelect S) (@BFAbs S) (@BCopy S) (@BStat S)
++      (@BStrict S) (@BMatchNil S) (@BMatchCons S) (@BMultiset S)
++      (@BCoverNil S) (@BCoverCons S) (@BWholeNil S) (@BWholeCons S)
+       h
+ 
+ end LogicLineages.PersistentMarking.LiteralDerivationCompleteProof

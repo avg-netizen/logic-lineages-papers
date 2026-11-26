@@ -1,0 +1,15 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/SignedCongruenceMatrixCodeProof.lean:64:50: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  List.foldr (conjoinCode (commonLayout rows)) (some 0) (List.map encodeRow rows)
+in the target expression
+  (have layout := commonLayout rows;
+    Option.map (fun code => (List.map (fun s => (s.1, 0, s.2, 0, 0, 0, 0)) layout, code))
+      (List.foldr (conjoinCode layout) (some 0) (List.map encodeRow rows))) =
+    some (List.map encodeRequest (requests (commonLayout rows)), (formulaAtLayout (commonLayout rows) rows).encode)
+
+case refine_2
+rows : List SourceRow
+positive : ∀ r ∈ rows, 0 < r.1
+⊢ (have layout := commonLayout rows;
+    Option.map (fun code => (List.map (fun s => (s.1, 0, s.2, 0, 0, 0, 0)) layout, code))
+      (List.foldr (conjoinCode layout) (some 0) (List.map encodeRow rows))) =
+    some (List.map encodeRequest (requests (commonLayout rows)), (formulaAtLayout (commonLayout rows) rows).encode)

@@ -1,0 +1,14 @@
+--- a/formalization/LogicLineages/PermittedControl/AffineCollapseTopologicalExtensionLocalityProof.lean
++++ b/formalization/LogicLineages/PermittedControl/AffineCollapseTopologicalExtensionLocalityProof.lean
+@@ -70,2 +70,3 @@
+-  simp only [graphAt,AffineCollapseGraphComposition.graph,NaturalAffineGateGraph.signedGraph,
+-    hi,ho,sameAffine]
++  unfold graphAt AffineCollapseGraphComposition.graph
++  rw [NaturalAffineGateGraph.signedGraph (input p) p.2.1 final,
++    NaturalAffineGateGraph.signedGraph (input p) p.2.1 middle,hi,ho,sameAffine]
+@@ -79 +80 @@
+-    exact (putInput _ _ _ diff).symm
++    exact (putInput p base (final (input p),final (output p)) diff).symm
+@@ -82 +83 @@
+-    exact (putOutput _ _ _).symm
++    exact (putOutput p base (final (input p),final (output p))).symm

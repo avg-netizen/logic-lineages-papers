@@ -1,0 +1,11 @@
+# Proposal: complete internal application/ranked signature equations
+
+Exact2 comparator only, awaiting independent review, freezing and preflight. No proof authoring yet.
+
+These are full equations for the fixed original H AST, not branch-factor aliases. For every actual arithmetic output out, the H graph is equivalent to out equaling the exact successor-packed source signature. Original SourceMarkedSyntax.headResult/headArguments specify application result=result and ordered arguments [arrow(domain,result),domain]; ranked result=ground and arguments=replicate(arity(symbol),ground). The existing allraw ConcreteHeadSignature calibration retains that exact source meaning.
+
+Application constructor evidence consists solely of actual pair(raw,tag4,payload), pair(payload,domain,result), cons(domain,nil), cons(arrow(domain,result),tail), and pair(result,args) graphs. These are data construction witnesses, not desired H success or target typed/source acceptance. The application validity guard must be proved internally from tag4 and the original decoder, so no new validity premise is supplied. In particular the domain is retained and no class-only compatibility shortcut is valid.
+
+Ranked constructor evidence consists of actual raw tag5/symbol pairing, the original symbol<n relation, actual lookup of the fixed table, actual ground-list recursion, and packing of ground result with that argument list. Decoder success must be derived internally from the original bound. The argument-list graph is the concrete recursion already calibrated as exactly repeated ground types, not an opaque selected signature. The bound is the exact source head-decoder condition, not a stronger guard chosen to make preservation hold. No valid ranked head exists when n=0; arbitrary arithmetic terms and outputs remain quantified.
+
+These equations supply usable internal source signature metadata for the two nonempty-argument head classes. Builtin signature equations, internal recursion/list invariants, typed argument permutation transport, full calibrated headMove/source preservation, tuple installation and full source checker preservation remain unpaid. These equations do not refute arbitrary-H preservation or claim an original numbered theorem discharge. Existing frozen source and mathematics remain unchanged.

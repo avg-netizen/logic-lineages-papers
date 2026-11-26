@@ -1,0 +1,13 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeIndexedTypingProof.lean:16:20: error: Invalid simp theorem: Expected a proposition, but found
+  Ty → Expr
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeIndexedTypingProof.lean:16:4: error: unsolved goals
+S : Signature
+η : Ty
+⊢ ∀ (name arity : Nat), ¬Head.ranked name arity ∈ DecisionInventory.heads (NativeIndexedCarrierTargets.discard η)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeIndexedTypingProof.lean:16:28: warning: This simp argument is unused:
+  DecisionInventory.heads
+
+Hint: Omit it from the simp argument list.
+  simp [̵N̵a̵t̵i̵v̵e̵,̵d̵i̵s̵c̵a̵r̵d̵,̵D̵e̵c̵i̵s̵i̵o̵n̵I̵n̵v̵e̵n̵t̵o̵r̵y̵.̵h̵e̵a̵d̵s̵]̵[̲N̲a̲t̲i̲v̲e̲,̲ ̲d̲i̲s̲c̲a̲r̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

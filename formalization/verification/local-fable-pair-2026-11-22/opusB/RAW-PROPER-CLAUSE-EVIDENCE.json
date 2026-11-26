@@ -1,0 +1,52 @@
+{
+  "key": "RAW-PROPER-CLAUSE",
+  "lane": "opusB",
+  "serves": "Root Task 3 / S4-SURVEY finding 1: code-level decider for OriginalPrintedLiteralRowBridge.properClauses (#1257), literal list equation through encodeFamily, Primrec/Computable",
+  "source_map": "verification/local-fable-pair-2026-11-22/opusB/RAW-PROPER-CLAUSE-SOURCE-MAP.md",
+  "modules": [
+    {
+      "module": "LogicLineages.PermittedControl.RawProperClauseTargets",
+      "path": "LogicLineages/PermittedControl/RawProperClauseTargets.lean",
+      "sha256": "5b99f183d434d93ad0a14506fb10a550e319b14dec06338bf2160502476b9aab",
+      "frozen": "2026-11-22T21:54Z",
+      "first_receipt": "1795384447638511844-3147665"
+    },
+    {
+      "module": "LogicLineages.PermittedControl.RawProperClauseProof",
+      "path": "LogicLineages/PermittedControl/RawProperClauseProof.lean",
+      "sha256": "227609671226715f525e39cd89745c85dfc585294b61bdb1d91faa50906b77fb"
+    }
+  ],
+  "passing_receipt": "1795384636944616848-3148397",
+  "receipt_path": "build-reports/1795384636944616848-3148397.json",
+  "profile": "mathlib via gate.sh",
+  "peak_rss_kib_proof_module": 963448,
+  "note_on_receipt": "the same gate also compiled the existing accepted, unchanged module ActualBitFamilyRawClosedPrimitiveProof (#1334, sha256 d8ea9c54...), which was not cached",
+  "theorems": [
+    "RawProperClause.exactLimitCode : ExactLimitCode",
+    "RawProperClause.exactProperFieldCode : ExactProperFieldCode",
+    "RawProperClause.exactProperOperandCode : ExactProperOperandCode",
+    "RawProperClause.exactAdmittedTestCode : ExactAdmittedTestCode",
+    "RawProperClause.exactAdmittedRowCode : ExactAdmittedRowCode",
+    "RawProperClause.exactAdmittedClauseCode : ExactAdmittedClauseCode",
+    "RawProperClause.exactRawProperClauses : ExactRawProperClauses",
+    "RawProperClause.exactOperandCodeInjective : ExactOperandCodeInjective",
+    "RawProperClause.exactRawProperClauseEffectivity : ExactRawProperClauseEffectivity",
+    "RawProperClause.fullRawProperClause : FullRawProperClause"
+  ],
+  "print_axioms": [
+    "'LogicLineages.PermittedControl.RawProperClause.exactRawProperClauses' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.RawProperClause.fullRawProperClause' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "log_warnings": "6 linter warnings on unused fallback branches of `first | ...` combinators (lines 95, 100, 113); no errors, no sorry",
+  "reused_suppliers": [
+    "OrdinalComparison.rawComparisonOrdinalCorrect",
+    "OrdinalComparison.rawComparisonPrimitiveRecursive",
+    "OrdinalComparison.OrdinalSuccessorProgram.classification",
+    "OrdinalComparison.OrdinalSuccessorProgram.primitive",
+    "OrdinalComparison.rawNoteDecodeEncode",
+    "ActualBitFamilyRawClosed.exactClosedRawEffectivity (#1334)",
+    "Mathlib ONote.oadd_pos, ONote.lt_def, Order.IsSuccLimit.ne_bot, Ordinal.bot_eq_zero, Primrec.listFilter, Primrec.list_foldr"
+  ],
+  "provenance_caveat": "RawComparison* and OrdinalSuccessorProgram* are older ordinal-round modules (verification/local-resume-2026-10-31/ordinal/PROMOTIONS.json), not records under new-paper-set accepted/; they were CACHE_HIT at their tracked hashes in this receipt"
+}

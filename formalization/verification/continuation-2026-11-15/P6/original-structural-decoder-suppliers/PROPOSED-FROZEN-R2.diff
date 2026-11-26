@@ -1,0 +1,15 @@
+--- Definitions-R1
++++ Definitions-R2
+@@ -8,10 +8,10 @@
+ /-- The existing structural input is [source packed,target packed,parameter]. -/
+ def contextAt (n : Nat) : Program 3 :=
+   .composition (OriginalDecodedContextValidity.contextGuard n)
+-    (fun _ : Fin 1 => InternalApplicationCertificateConstructors.leftOf 2)
++    (fun _ : Fin 1 => InternalApplicationCertificateConstructors.leftOf (.projection 2))
+ def packedAt (n : Nat) (i : Fin 3) : Program 3 :=
+   .composition (OriginalCodeValidityGuard.check n)
+-    (fun _ : Fin 1 => InternalApplicationCertificateConstructors.rightOf i)
++    (fun _ : Fin 1 => InternalApplicationCertificateConstructors.rightOf (.projection i))
+ /-- Literal original Context and RawPacked decoder validity, not typed acceptance. -/
+ def valid (n : Nat) : Program 3 :=
+   InternalAcceptance.conjunction (contextAt n)

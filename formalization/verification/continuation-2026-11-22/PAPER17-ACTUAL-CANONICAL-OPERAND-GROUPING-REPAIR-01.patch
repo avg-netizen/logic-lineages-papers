@@ -1,0 +1,10 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingEncodingProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualCanonicalOperandGroupingEncodingProof.lean
+@@ -12 +12,6 @@
+-  simpa only [rawNoteDecodeEncode] using congrArg rawNoteDecode h
++  have equality := congrArg rawNoteDecode h
++  change rawNoteDecode (rawNoteEncode a.1) = rawNoteDecode (rawNoteEncode b.1) at equality
++  have left : rawNoteDecode (rawNoteEncode a.1) = a.1 := rawNoteDecodeEncode a.1
++  have right : rawNoteDecode (rawNoteEncode b.1) = b.1 := rawNoteDecodeEncode b.1
++  rw [left,right] at equality
++  exact equality

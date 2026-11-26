@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.CurrentGroundEquivalenceExactProof
+public import LogicLineages.ControlSensitivityCurrent.CurrentGroundEquivalenceEffectiveProof
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.CurrentGroundEquivalence.StatementChecks
+
+theorem fixed_complete : CurrentGroundEquivalenceTargets.Complete := ⟨effective,exact_reductions⟩
+
+#print axioms fixed_complete
+
+end LogicLineages.ControlSensitivityCurrent.CurrentGroundEquivalence.StatementChecks

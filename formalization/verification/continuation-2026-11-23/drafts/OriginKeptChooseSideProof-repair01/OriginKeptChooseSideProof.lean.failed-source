@@ -1,0 +1,73 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalOriginKeptRightAdapterProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalOriginKeptInductionProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalOriginKeptSplitCasesProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalOriginCountRouteProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseScratchMembershipOpenMemberConsProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionFunctionalityProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalApplicationValidityStackAppendInductionCoreProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaTotalityProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSupportProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalOriginKeptChooseSideProof
+open FirstOrder Language LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalListCodecSupportProof (consGraph consGraphRename)
+open ID1Completion.InternalGraphCompositionFunctionalityProof (renameInto)
+open ID1Completion.InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open ID1Completion.InternalBetaTotalityProof (disjunctionElimination)
+open ID1Completion.InternalTagArithmeticSupportProof (refl)
+open NumberedWindowInternalSparseScratchMembershipTargets (memberGraph)
+open NumberedWindowInternalSparseScratchMembershipOpenMemberConsProof (headMember)
+open NumberedWindowInternalOriginCountRouteProof (exact_OpenChosenOriginCountRoute)
+open NumberedWindowInternalOriginKeptSplitTargets
+open NumberedWindowInternalOriginKeptSplitCasesProof (exact_OriginalKeptSplitCases)
+open NumberedWindowInternalOriginKeptInductionSyntaxProof (splitRename)
+open NumberedWindowInternalOriginKeptInductionProof (MoveOneKeptSupply)
+open NumberedWindowInternalOriginKeptRightAdapterProof (LeftOpenedSupply exact_OriginalKeptMoveRightOpened)
+
+variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+private theorem choose (leftMethod : LeftOpenedSupply B) (l r k h t d e : OTerm α)
+    (w : Fin 8 → OTerm α)
+    (kc : Nonempty (Derivation B Γ (consGraph k h t)))
+    (dc : Nonempty (Derivation B Γ (consGraph e h d)))
+    (old : Nonempty (Derivation B Γ (evidence l r t e w))) :
+    Nonempty (Derivation B Γ (splitExists l r k d)) := by
+  obtain ⟨p⟩ := old
+  let both := Derivation.conjunctionRight (Derivation.conjunctionRight p)
+  let removal := Derivation.conjunctionRight both
+  have em := headMember e h d h dc ⟨refl h⟩
+  obtain ⟨route⟩ := exact_OpenChosenOriginCountRoute B α Γ e (w 1) (w 3) (w 7) h
+    ⟨Derivation.conjunctionRight removal⟩ ⟨Derivation.conjunctionLeft removal⟩ em
+  let L := memberGraph (w 1) h
+  let R := memberGraph (w 3) h
+  let H := L.not ⊓ R
+  have lm : Nonempty (Derivation B (L :: Γ) L) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+  have rm : Nonempty (Derivation B (H :: Γ) R) :=
+    ⟨Derivation.conjunctionRight (Derivation.hypothesis List.mem_cons_self)⟩
+  obtain ⟨paidL⟩ := leftMethod α (L :: Γ) l r k h t d e w
+    (withHyp kc L) (withHyp dc L) (withHyp old L) lm
+  obtain ⟨paidR⟩ := exact_OriginalKeptMoveRightOpened leftMethod l r k h t d e w
+    (withHyp kc H) (withHyp dc H) (withHyp old H) rm
+  exact ⟨disjunctionElimination route (Derivation.implicationIntroduction paidL)
+    (Derivation.implicationIntroduction paidR)⟩
+
+/-- Route the actual one-occurrence move using real original membership.
+The right side invokes the same left algorithm via exact origin swap.
+Only the approved opened-left eraser/graph reconstruction is supplied. -/
+theorem exact_OriginalMoveOneKeptFromLeft (leftMethod : LeftOpenedSupply B) : MoveOneKeptSupply B := by
+  intro α Γ l r k h t d e kc dc old
+  apply exact_OriginalKeptSplitCases l r t e (splitExists l r k d) old
+  intro β j Δ w keep reports
+  rw [splitRename]
+  have hk := renameInto kc j Δ keep
+  have hd := renameInto dc j Δ keep
+  rw [consGraphRename] at hk hd
+  exact choose leftMethod (l.relabel j) (r.relabel j) (k.relabel j) (h.relabel j) (t.relabel j)
+    (d.relabel j) (e.relabel j) w hk hd reports
+
+#print axioms exact_OriginalMoveOneKeptFromLeft
+end LogicLineages.PersistentMarking.NumberedWindowInternalOriginKeptChooseSideProof

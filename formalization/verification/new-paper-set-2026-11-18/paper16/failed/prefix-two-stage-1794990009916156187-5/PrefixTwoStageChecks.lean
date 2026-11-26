@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.PrefixTwoStageProof
+namespace LogicLineages.PersistentMarking.PrefixTwoStageChecks
+theorem exact_auxiliaryTwoStage : PrefixEscapeSupportTargets.AuxiliaryTwoStage := PrefixTwoStageProof.auxiliaryTwoStage
+#print axioms exact_auxiliaryTwoStage
+end LogicLineages.PersistentMarking.PrefixTwoStageChecks

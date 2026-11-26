@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualBitFamilyRawLayoutProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualBitFamilyRawLayoutProof.lean
+@@ -41 +41,4 @@
+-  | cons head tail ih => simp [appears, ih, eq_comm]
++  | cons head tail ih =>
++      change (decide (head = k) || appears tail k) = true ↔ k ∈ head :: tail
++      rw [Bool.or_eq_true, decide_eq_true_eq, ih, List.mem_cons]
++      exact or_congr eq_comm Iff.rfl

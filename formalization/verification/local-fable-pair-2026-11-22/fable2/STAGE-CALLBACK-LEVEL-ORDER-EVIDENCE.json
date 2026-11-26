@@ -1,0 +1,52 @@
+{
+  "key": "STAGE-CALLBACK-LEVEL-ORDER",
+  "lane": "fable2",
+  "paper": "paper-17",
+  "kind": "supporting only",
+  "scope": "The canonical per-row supplier re-listed in the order of a raw level iteration (frontier entries = guards met so far + current syntax; children only at nodes active at the greatest rank; leaves of levels 0..fuel collected level by level). Its routes are the same set as the #1394 tree, its packets per row the same set as #1395's canonical supplier; shape and exactness transfer because the supplier interface uses membership only; hence the stage contract Emits levelOrder B high -> HighAtStage f B high (stageChildren levelOrder B). No raw program, no claim about order or multiplicity relative to the depth-first supplier, no new semantic content, no numbered promotion.",
+  "statement_scope_check": "verification/local-fable-pair-2026-11-22/fable2/STAGE-CALLBACK-LEVEL-ORDER-SOURCE-MAP.md",
+  "gate": "bash verification/local-fable-pair-2026-11-22/gate.sh mathlib LogicLineages.PermittedControl.StageCallbackLevelOrderStatementChecks",
+  "passing_receipt": "1795385070227028433-3150794",
+  "passing_receipt_path": "build-reports/1795385070227028433-3150794.json",
+  "gate_log": "build-reports/1795385070227028433-3150794-LogicLineages-PermittedControl-StageCallbackLevelOrderStatementChecks.log",
+  "receipt_rows": {
+    "LogicLineages.PermittedControl.StageCallbackLevelOrderTargets": "verified-cache-hit from receipt 1795384974153104577-3150313 (compiled there, as first written)",
+    "LogicLineages.PermittedControl.StageCallbackLevelOrderProof": "COMPILE_PASS in this receipt, first attempt",
+    "LogicLineages.PermittedControl.StageCallbackLevelOrderStatementChecks": "COMPILE_PASS in this receipt"
+  },
+  "failed_gates": [],
+  "modules": [
+    "LogicLineages.PermittedControl.StageCallbackLevelOrderTargets",
+    "LogicLineages.PermittedControl.StageCallbackLevelOrderProof",
+    "LogicLineages.PermittedControl.StageCallbackLevelOrderStatementChecks"
+  ],
+  "depends_on_records": ["1387", "1394", "1395"],
+  "source_sha256": {
+    "formalization/LogicLineages/PermittedControl/StageCallbackLevelOrderTargets.lean": "e2fca85c61f47dddd205599d1ded35ce92cbe283e6cfa72738316b3fd3f3c8d1",
+    "formalization/LogicLineages/PermittedControl/StageCallbackLevelOrderProof.lean": "f83735cfbe8c82196f9d9ce07f799a986610636250eeb15aadcec9ba83996df4",
+    "formalization/LogicLineages/PermittedControl/StageCallbackLevelOrderStatementChecks.lean": "62eff49c4af4b2711d39a77ee9fab889249c9b7872ada2114f567ccba2a962dc",
+    "formalization/verification/local-fable-pair-2026-11-22/fable2/STAGE-CALLBACK-LEVEL-ORDER-SOURCE-MAP.md": "b2893c058a716160fe84a9b720c3b124879c6e0a5cf9c8a03c7ee05e833bb9b0"
+  },
+  "targets_frozen_sha256": "e2fca85c61f47dddd205599d1ded35ce92cbe283e6cfa72738316b3fd3f3c8d1",
+  "targets_unchanged_since_freeze": true,
+  "exact_aliases": [
+    "LogicLineages.PermittedControl.StatementChecks.fixed_exactLevelOrderRoutes",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_exactLevelOrderMembers",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_exactSupplierMemberTransfer",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_exactLevelOrderSupplierShape",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_exactLevelOrderSupplierExact",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_exactLevelOrderStageCallback",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_fullStageCallbackLevelOrder"
+  ],
+  "print_axioms": [
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_exactLevelOrderRoutes' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_exactLevelOrderMembers' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_exactSupplierMemberTransfer' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_exactLevelOrderSupplierShape' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_exactLevelOrderSupplierExact' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_exactLevelOrderStageCallback' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PermittedControl.StatementChecks.fixed_fullStageCallbackLevelOrder' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "print_axioms_note": "Read from the gate log file itself (seven entries, each wrapped over three lines); the lines above are the same text joined with single spaces.",
+  "no_sorry_no_axiom_no_native_decide": true
+}

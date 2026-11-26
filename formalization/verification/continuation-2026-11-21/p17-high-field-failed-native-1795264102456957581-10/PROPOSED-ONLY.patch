@@ -1,0 +1,28 @@
+--- a/formalization/LogicLineages/PermittedControl/HighFieldComparisonCalibrationProof.lean
++++ b/formalization/LogicLineages/PermittedControl/HighFieldComparisonCalibrationProof.lean
+@@ -22,10 +22,10 @@
+ private theorem high_bound_code_calibrated (B : Nat) (F G : ValueField) :
+     highFieldComparisonBoundCode B (longFieldCode F) (longFieldCode G) =
+       highFieldComparisonBound B F G := by
+-  unfold highFieldComparisonBoundCode highFieldComparisonBound
+-  rw [normalize_code_calibrated,normalize_code_calibrated,high_short_code_calibrated,high_short_code_calibrated,
+-    (longFieldTailCodes_calibrated B _ _).1,(longFieldTailCodes_calibrated B _ _).2,
+-    (longFieldTailCodes_calibrated B _ _).1]
++  have hFG := longFieldTailCodes_calibrated B (normalizeShortField F) (normalizeShortField G)
++  have hGF := longFieldTailCodes_calibrated B (normalizeShortField G) (normalizeShortField F)
++  simp only [highFieldComparisonBoundCode,highFieldComparisonBound,
++    normalize_code_calibrated,high_short_code_calibrated,hFG.1,hFG.2,hGF.1]
+ 
+ theorem highFieldComparisonCalibration : HighFieldComparisonCalibration := by
+   refine ⟨normalize_code_calibrated,high_short_code_calibrated,high_bound_code_calibrated,?_⟩
+--- a/formalization/verification/continuation-2026-11-21/PAPER17-HIGH-FIELD-COMPARISON-AUTHOR-MANIFEST.json
++++ b/formalization/verification/continuation-2026-11-21/PAPER17-HIGH-FIELD-COMPARISON-AUTHOR-MANIFEST.json
+@@ -12,7 +12,7 @@
+   },
+   "new_source_hashes": {
+     "formalization/LogicLineages/PermittedControl/HighFieldComparisonPrimitiveProof.lean": "b6633a5219439020f36fe97fe8afb99899413582807b89a3d9baf8adaa3c2f74",
+-    "formalization/LogicLineages/PermittedControl/HighFieldComparisonCalibrationProof.lean": "133e8cd6d5d7a21efa1bdd802f5a71de6d74d72c619383815dafe87a557da711",
++    "formalization/LogicLineages/PermittedControl/HighFieldComparisonCalibrationProof.lean": "cee86a784c7bbd541df623d1c2c7195e56fcb182432b54f19277f6fd0bc02962",
+     "formalization/LogicLineages/PermittedControl/HighFieldComparisonActualProof.lean": "3c72423057398591e71a5acebec932930787b62728a7c286884c14e236003602",
+     "formalization/LogicLineages/PermittedControl/HighFieldComparisonStatementChecks.lean": "196a8f6353df684bd4c169869cca36a490067c53096aedab8fdd0542fa4ace30"
+   },

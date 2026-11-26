@@ -1,0 +1,63 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeEvaluationProof.lean:46:11: error: Tactic `cases` failed with a nested error:
+Dependent elimination failed: Failed to solve equation
+  some out✝ =
+    match unpackNode n, fun __x =>
+      match __x with
+      | (1, [q, r, w]) => pure (q, w, r)
+      | x => none with
+    | none, x => none
+    | some a, f => f a
+at case `Eq.refl`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeEvaluationProof.lean:60:27: error: Tactic `rfl` failed: The left-hand side
+  do
+    let __x ← some (2, [t, e])
+    match __x with
+      | (2, [target, edge]) => do
+        let row ← edgeView edge
+        pure (target, row)
+      | x => none
+is not definitionally equal to the right-hand side
+  Option.map (fun x => (t, x)) none
+
+case none
+n : ℕ
+outer : run (nodeGood two 2) n = 1
+t e : ℕ
+found : unpackNode n = some (2, [t, e])
+ht : run hopTarget n = t
+he : run (field 1) n = e
+⊢ (do
+      let __x ← some (2, [t, e])
+      match __x with
+        | (2, [target, edge]) => do
+          let row ← edgeView edge
+          pure (target, row)
+        | x => none) =
+    Option.map (fun x => (t, x)) none
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeEvaluationProof.lean:60:27: error: Tactic `rfl` failed: The left-hand side
+  do
+    let __x ← some (2, [t, e])
+    match __x with
+      | (2, [target, edge]) => do
+        let row ← edgeView edge
+        pure (target, row)
+      | x => none
+is not definitionally equal to the right-hand side
+  Option.map (fun x => (t, x)) (some val✝)
+
+case some
+n : ℕ
+outer : run (nodeGood two 2) n = 1
+t e : ℕ
+found : unpackNode n = some (2, [t, e])
+ht : run hopTarget n = t
+he : run (field 1) n = e
+val✝ : NumberedWindowPositivePathAlgorithm.RawEdge
+⊢ (do
+      let __x ← some (2, [t, e])
+      match __x with
+        | (2, [target, edge]) => do
+          let row ← edgeView edge
+          pure (target, row)
+        | x => none) =
+    Option.map (fun x => (t, x)) (some val✝)

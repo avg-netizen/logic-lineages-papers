@@ -1,0 +1,3 @@
+# Independent finite-context scalar address authored review
+
+All4 candidate proof leaves fully read;36 combinedpins verified, manifest 8c6b2325b6e094036d2f186318d5eddd6ae9521f80f2e9d9c4937634b253f025. Literal binder/type/least address codec preserves original data. Canonical representative completeness uses actual existing least-code specification and original Primary reflection, not a checker-defined quotient. AddressPositive retains literal common finite context/type and original positive RS with both admitted fibers; domain follows directly without extra premise. Five unchanged exact targets await native/current evidence. No arbitrary functional C, multiset semantics or internal arithmetic/ID1.

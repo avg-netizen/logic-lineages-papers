@@ -1,0 +1,13 @@
+import LogicLineages.PersistentMarking.HereditaryLatticeCompleteProof
+namespace LogicLineages.PersistentMarking.HereditaryLatticeOperationChecks
+theorem exact_Join : HereditaryDomainTargets.Join := HereditaryLatticeInductionProof.join
+theorem exact_Meet : HereditaryDomainTargets.Meet := HereditaryLatticeInductionProof.meet
+theorem exact_RestrictionJoinsMeets : HereditaryDomainTargets.RestrictionJoinsMeets := HereditaryLatticeInductionProof.restriction
+theorem exact_CarrierNonempty : HereditaryDomainTargets.CarrierNonempty := HereditaryLatticeCompleteProof.nonempty
+theorem exact_Complete : HereditaryDomainTargets.Complete := HereditaryLatticeCompleteProof.complete
+#print axioms exact_Join
+#print axioms exact_Meet
+#print axioms exact_RestrictionJoinsMeets
+#print axioms exact_CarrierNonempty
+#print axioms exact_Complete
+end LogicLineages.PersistentMarking.HereditaryLatticeOperationChecks

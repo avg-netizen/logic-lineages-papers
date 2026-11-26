@@ -1,0 +1,60 @@
+{
+  "lane": "fable2",
+  "round": "local-fable-pair-2026-11-22-round4",
+  "gate": "G06",
+  "subject": "Paper 16: does the accepted installation survive the refitted scalar type checker of #1461",
+  "result": "mixed: derivation-level facts are tv-generic and unaffected; the accepted installed-tuple predicate cannot hold at the refitted checker unless every valid type code is windowed; the scalar's numeric calibration holds exactly under AcceptedTypesWindowed",
+  "modules": [
+    "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationRefittedInstallTargets",
+    "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationRefittedInstallProof"
+  ],
+  "sha256": {
+    "LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationRefittedInstallTargets.lean": "2f7a939c10318ad42e109b4a52a7b7cebab8618a476b2b9e75b9a308577c2ba1",
+    "LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationRefittedInstallProof.lean": "f541417b219f45cdd85bea8b6601e8e4dafd8265436fa9cd7b4dbd05c61ed0bc"
+  },
+  "targets_sha256_frozen_before_proof": "2f7a939c10318ad42e109b4a52a7b7cebab8618a476b2b9e75b9a308577c2ba1",
+  "passing_receipt": {
+    "id": "1795404207507881578-3290394",
+    "file": "build-reports/1795404207507881578-3290394.json",
+    "sha256": "da59a0706320f087a990af21fa01c4b7fd8865ce2ca7308875420f1c98275872",
+    "command": "bash verification/local-fable-pair-2026-11-22-round4/gate.sh mathlib LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationRefittedInstallTargets LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationRefittedInstallProof",
+    "outcome": "COMPILE_PASS for both modules"
+  },
+  "other_receipts": [
+    {
+      "id": "1795404007563949015-3288977",
+      "file": "build-reports/1795404007563949015-3288977.json",
+      "sha256": "d1f7f8582ecb748b99605c8dcda2c68debd570aeb635254e50b17c12e5cefb13",
+      "note": "targets module alone, COMPILE_PASS, run before the proof module was drafted"
+    }
+  ],
+  "definitions": [
+    "AllTypesWindowed",
+    "AcceptedTypesWindowed"
+  ],
+  "theorems": [
+    "exact_RefittedScalarTypeCalibrated",
+    "exact_RefittedTypeGuardActualOnlyIf",
+    "exact_RefittedTypeGuardActualIff",
+    "exact_RefittedInstalledTupleOnlyIf",
+    "exact_RefittedAddressScalarCalibrationIff",
+    "exact_RefittedInstalledScalarCalibrationIff"
+  ],
+  "print_axioms": [
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationRefittedInstallProof.exact_RefittedScalarTypeCalibrated' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationRefittedInstallProof.exact_RefittedTypeGuardActualOnlyIf' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationRefittedInstallProof.exact_RefittedTypeGuardActualIff' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationRefittedInstallProof.exact_RefittedInstalledTupleOnlyIf' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationRefittedInstallProof.exact_RefittedAddressScalarCalibrationIff' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationRefittedInstallProof.exact_RefittedInstalledScalarCalibrationIff' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "failed_gates": 0,
+  "not_gated": [
+    "that AllTypesWindowed s is false for every s (argument only: valid type codes are unbounded, the window list is finite)",
+    "that AcceptedTypesWindowed s holds for any particular Settings, or reduces to a finite check",
+    "calibration of the measured route's own window and least programs (hypotheses of exact_RefittedInstalledScalarCalibrationIff)",
+    "the analogous statement for ActualAddressPositiveCalibration and for TupleAt's evaluation component"
+  ],
+  "source_map": "verification/local-fable-pair-2026-11-22-round4/fable2/REFITTED-INSTALL-SOURCE-MAP.md",
+  "ledger": "verification/local-fable-pair-2026-11-22-round4/fable2/LEDGER.md#g06--refitted-installation-guards"
+}

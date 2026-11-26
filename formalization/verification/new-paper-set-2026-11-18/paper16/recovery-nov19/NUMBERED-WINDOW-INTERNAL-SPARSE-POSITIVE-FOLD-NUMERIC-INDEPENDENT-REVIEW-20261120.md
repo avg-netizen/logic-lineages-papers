@@ -1,0 +1,7 @@
+# Independent actual original positive fold numerical review
+
+Read exact2 full frozen targets and all six source leaves. Actual scratch initialization/step/recursor follows original raw certificate head first, with every real sparse tail decreasing. Strong induction proves exact terminal scratch state for all raw codes and every fuel at least raw code. Actual original unpack and ordered fold retained, including malformed tail after earlier successful steps, arbitrary current Option, nil retention and malformed-context failure. Actual positive rejects empty certificate independently of endpoint equality and requires successful target encoding. Genuine original raw/least/advance witnesses supplied.
+
+Three full ordinary failed editions preserved1795171174054860551-6,1795171393958410985-7,1795171560183621597-7. Reviewed inverse-verified repairs isolate dependent conditional equality and normalize literal some/empty parser constructors only. Final1795171726375446608-7 passes original2048heap/1536RSS/free2048MiB,90CPU/180wall/one thread. Independent replay969 current source/input/compiler/dependency/object/receipt/log modules,44pins and exact2 standard-only aliases verified; native closure archived.
+
+Local open step clauses separately accepted638. Full arbitrary-free-fuel arithmetic iteration and sufficient fuel, raw callback semantics/least transport and whole matching remain separate. No numbered promotion, allterms/BH, full-root or CI claim.

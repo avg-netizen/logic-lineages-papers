@@ -1,0 +1,48 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariableProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedAuxiliaryEnumerationSupportProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryNativeBoundDefinitions
+open Source Source.SourceMarkedSyntax NumberedRewriteSyntax NumberedRewriteReduction NumberedPrimaryEquivalence NumberedBottomVariable
+
+structure State (Symbol : Type) (arity : Symbol → Nat) where
+  context : List Ty
+  term : Packed Symbol arity context
+
+def weight {Symbol : Type} {arity : Symbol → Nat} (s : State Symbol arity) : Nat :=
+  s.context.length + 2 * size s.term.2
+
+/-- Actual immediate constructor children, retaining lambda's extended context. -/
+inductive Child {Symbol : Type} {arity : Symbol → Nat} : State Symbol arity → State Symbol arity → Prop where
+  | lam {Gamma sigma tau} (q : AuxTerm Symbol arity (sigma::Gamma) tau) :
+      Child ⟨Gamma,⟨.arrow sigma tau,.lam q⟩⟩ ⟨sigma::Gamma,⟨tau,q⟩⟩
+  | appFunction {Gamma sigma tau} (f : AuxTerm Symbol arity Gamma (.arrow sigma tau))
+      (a : AuxTerm Symbol arity Gamma sigma) : Child ⟨Gamma,⟨tau,.app f a⟩⟩ ⟨Gamma,⟨.arrow sigma tau,f⟩⟩
+  | appArgument {Gamma sigma tau} (f : AuxTerm Symbol arity Gamma (.arrow sigma tau))
+      (a : AuxTerm Symbol arity Gamma sigma) : Child ⟨Gamma,⟨tau,.app f a⟩⟩ ⟨Gamma,⟨sigma,a⟩⟩
+  | ordinary {Gamma} (f : Head Symbol) (args : AuxArguments Symbol arity Gamma (headArguments arity f))
+      (q : Packed Symbol arity Gamma) : q ∈ argumentList args →
+      Child ⟨Gamma,⟨headResult f,.ordinary f args⟩⟩ ⟨Gamma,q⟩
+  | numberedBase {Gamma} (k : Nat) (f : Head Symbol) (tau : Ty)
+      (base : AuxArguments Symbol arity Gamma (headArguments arity f)) (types : List Ty)
+      (extras : AuxArguments Symbol arity Gamma types) (q : Packed Symbol arity Gamma) :
+      q ∈ argumentList base → Child ⟨Gamma,⟨tau,.numbered k f tau base types extras⟩⟩ ⟨Gamma,q⟩
+  | numberedExtra {Gamma} (k : Nat) (f : Head Symbol) (tau : Ty)
+      (base : AuxArguments Symbol arity Gamma (headArguments arity f)) (types : List Ty)
+      (extras : AuxArguments Symbol arity Gamma types) (q : Packed Symbol arity Gamma) :
+      q ∈ argumentList extras → Child ⟨Gamma,⟨tau,.numbered k f tau base types extras⟩⟩ ⟨Gamma,q⟩
+
+/-- Deletion uses an actual typed bottom/variable substitution and loses one
+context entry. No rewritten source semantics or positive reduction is introduced. -/
+inductive Step {Symbol : Type} {arity : Symbol → Nat} : State Symbol arity → State Symbol arity → Prop where
+  | child {s t} : Child s t → Step s t
+  | deletion {Gamma Delta tau} (q : AuxTerm Symbol arity Gamma tau)
+      (theta : Substitution Symbol arity Gamma Delta) :
+      BottomOrVariable theta → Gamma.length = Delta.length + 1 →
+      Step ⟨Gamma,⟨tau,q⟩⟩ ⟨Delta,⟨tau,substitute q theta⟩⟩
+
+inductive Trace {Symbol : Type} {arity : Symbol → Nat} : Nat → State Symbol arity → State Symbol arity → Prop where
+  | refl (s) : Trace 0 s s
+  | cons {n s t u} : Step s t → Trace n t u → Trace (n+1) s u
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryNativeBoundDefinitions

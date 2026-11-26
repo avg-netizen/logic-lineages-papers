@@ -1,0 +1,40 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFuelBudgetInductionProof.lean:30:2: error: Tactic `apply` failed: could not unify the conclusion of `introduction body alpha 8 Delta`
+  Nonempty (Derivation body Delta (ID1Completion.InternalClosedPrograms.allBlock ?phi))
+with the goal
+  Nonempty (Derivation body Delta (AtCount E z))
+
+Note: The full type of `introduction body alpha 8 Delta` is
+  ∀ (phi : ID1Completion.InternalCalculus.Formula (alpha ⊕ Fin 8)),
+    Nonempty (Derivation body (List.map (fun p => Formula.relabel Sum.inl p) Delta) phi) →
+      Nonempty (Derivation body Delta (ID1Completion.InternalClosedPrograms.allBlock phi))
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  AtCount ↦ 22
+
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (ID1Completion.InternalCalculus.Formula alpha)
+E : Program 4
+⊢ Nonempty (Derivation body Delta (AtCount E z))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFuelBudgetInductionProof.lean:50:2: error: Tactic `apply` failed: could not unify the conclusion of `introduction body alpha 8 Delta`
+  Nonempty (Derivation body Delta (ID1Completion.InternalClosedPrograms.allBlock ?phi))
+with the goal
+  Nonempty (Derivation body Delta (AtCount E (suc elapsed)))
+
+Note: The full type of `introduction body alpha 8 Delta` is
+  ∀ (phi : ID1Completion.InternalCalculus.Formula (alpha ⊕ Fin 8)),
+    Nonempty (Derivation body (List.map (fun p => Formula.relabel Sum.inl p) Delta) phi) →
+      Nonempty (Derivation body Delta (ID1Completion.InternalClosedPrograms.allBlock phi))
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  AtCount ↦ 22
+
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (ID1Completion.InternalCalculus.Formula alpha)
+pred : ExactRetainedPredecessor
+strict : PrimaryUncoveredCount.Targets.InternalStrictDecrease
+E : Program 4
+elapsed : OTerm alpha
+row : Nonempty (Derivation body Delta (AtCount E elapsed))
+⊢ Nonempty (Derivation body Delta (AtCount E (suc elapsed)))

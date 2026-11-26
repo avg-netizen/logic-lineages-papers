@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.StructuralExtraInsertionProof
+namespace LogicLineages.PersistentMarking.StructuralExtraInsertionChecks
+ theorem exact_ExtraInsertionValid : StructuralActionTargets.ExtraInsertionValid := StructuralExtraInsertionProof.valid
+ theorem exact_ExtraInsertionNatural : StructuralActionTargets.ExtraInsertionNatural := StructuralExtraInsertionProof.natural
+#print axioms exact_ExtraInsertionValid
+#print axioms exact_ExtraInsertionNatural
+end LogicLineages.PersistentMarking.StructuralExtraInsertionChecks

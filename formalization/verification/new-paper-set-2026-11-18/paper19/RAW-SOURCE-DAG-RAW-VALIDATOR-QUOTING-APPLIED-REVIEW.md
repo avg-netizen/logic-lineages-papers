@@ -1,0 +1,3 @@
+# Independent applied quoting confirmation
+
+Compared current RawValidatorDefinitions and RawValidatorPrimitiveProof byte-for-byte with preserved raw-source-dag-primitive-draft01 (receipt 1795021383951861464-5). Exactly three changed references: declaration `variable` and nodeValid use, plus the expression in variable_primitive's type, now use `«variable»`. The theorem name and every body/type otherwise remain unchanged. All six frozen source pins still match. New proof-local lookup references use the same escaped identifier; no validator rule is weakened. Applied repair approved for a fresh parent-controlled ticket with original caps. No native execution by reviewer.

@@ -1,0 +1,14 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldNumericProof.lean:37:18: error: unsolved goals
+case cons
+k : ℕ
+D : Program (k + 1)
+F : ℕ → List.Vector ℕ k → List ℕ
+calibrated : ∀ (a : ℕ) (params : List.Vector ℕ k), evaluate D (a ::ᵥ params) = numbersNumber (F a params)
+params : List.Vector ℕ k
+a : ℕ
+src : List ℕ
+ih :
+  List.foldr (fun a rest => evaluate (flatStep D) (a ::ᵥ rest ::ᵥ params)) 0 src =
+    numbersNumber (List.flatMap (fun a => F a params) src)
+⊢ numbersNumber ((some (F a params)).getD [] ++ List.flatMap (fun n => F n params) src) =
+    numbersNumber (F a params ++ List.flatMap (fun a => F a params) src)

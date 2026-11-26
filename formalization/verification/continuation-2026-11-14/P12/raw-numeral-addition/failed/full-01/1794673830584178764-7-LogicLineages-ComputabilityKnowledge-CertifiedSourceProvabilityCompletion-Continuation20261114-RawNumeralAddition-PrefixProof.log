@@ -1,0 +1,21 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawNumeralAddition/PrefixProof.lean:28:2: error: Type mismatch: After simplification, term
+  Logic.trans (RawAdditionIteration.binaryCall I.prefixTag Term.zero (LiteralNumeralPrefix.numeralCall I.numeralTag m))
+    (LiteralNumeralPrefix.numeralCall I.numeralTag m)
+    (GorbowPRDefiningEquations.call I.numeralTag (m.add Term.zero ::ᵥ nil)) hpz
+    (Support.equalitySymmetry (GorbowPRDefiningEquations.call I.numeralTag (m.add Term.zero ::ᵥ nil))
+      (LiteralNumeralPrefix.numeralCall I.numeralTag m) hnz)
+ has type
+  @Derivation (GorbowPRNumeralCalculation.Theory p) ctx
+    (Formula.equal
+      (RawAdditionIteration.binaryCall I.prefixTag Term.zero (LiteralNumeralPrefix.numeralCall I.numeralTag m))
+      (GorbowPRDefiningEquations.call I.numeralTag (m.add Term.zero ::ᵥ nil)))
+but is expected to have type
+  @Derivation T ctx
+    (Formula.equal
+      (RawAdditionIteration.binaryCall I.prefixTag Term.zero (LiteralNumeralPrefix.numeralCall I.numeralTag m))
+      (LiteralNumeralPrefix.numeralCall I.numeralTag (m.add Term.zero)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawNumeralAddition/PrefixProof.lean:48:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawNumeralAddition.PrefixProof.internalPrefixNumeral: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawNumeralAddition.PrefixProof.internalPrefixNumeral' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

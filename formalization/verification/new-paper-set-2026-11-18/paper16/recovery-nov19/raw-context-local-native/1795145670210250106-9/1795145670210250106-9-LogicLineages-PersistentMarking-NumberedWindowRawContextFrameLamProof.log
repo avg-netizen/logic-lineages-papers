@@ -1,0 +1,19 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFrameLamProof.lean:25:14: error: unsolved goals
+case some
+S : Spine.Signature
+K : List Ty
+root : RawRoot
+fuel w : Nat
+o : Option RawWitness
+ih :
+  ∀ (Q R : NTerm), run root fuel (encodeTerm Q) w (encodeTerm R) = Option.any (fun witness => rawBit S K witness Q R) o
+Q R : NTerm
+s : Ty
+q : NTerm
+t : Ty
+r : NTerm
+⊢ Option.any (fun x => decide (s = t) && rawBit S K x q r) o =
+    Option.any
+      (fun witness =>
+        Option.any (fun x => decide (x.fst = x.2.2.fst) && rawBit S K witness x.2.fst x.2.2.snd) (some (s, q, t, r)))
+      o

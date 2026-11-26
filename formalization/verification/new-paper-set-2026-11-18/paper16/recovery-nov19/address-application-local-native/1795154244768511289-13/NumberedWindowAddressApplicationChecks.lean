@@ -1,0 +1,16 @@
+import LogicLineages.PersistentMarking.NumberedWindowAddressApplicationDecodeProof
+import LogicLineages.PersistentMarking.NumberedWindowAddressApplicationClassProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowAddressApplicationChecks
+open NumberedWindowAddressApplicationTargets
+
+theorem exact_DecodedApplication : ExactDecodedApplication :=
+  NumberedWindowAddressApplicationDecodeProof.decoded
+
+theorem exact_ClassApplication : ExactClassApplication :=
+  NumberedWindowAddressApplicationClassProof.classExact
+
+#print axioms exact_DecodedApplication
+#print axioms exact_ClassApplication
+
+end LogicLineages.PersistentMarking.NumberedWindowAddressApplicationChecks

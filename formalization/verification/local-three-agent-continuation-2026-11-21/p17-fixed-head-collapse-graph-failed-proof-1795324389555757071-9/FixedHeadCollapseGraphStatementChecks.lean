@@ -1,0 +1,32 @@
+module
+public import LogicLineages.PermittedControl.FixedHeadCollapseGraphTargets
+import LogicLineages.PermittedControl.FixedHeadCollapseGraphCodeProof
+import LogicLineages.PermittedControl.FixedHeadCollapseGraphFieldsProof
+import LogicLineages.PermittedControl.FixedHeadCollapseGraphSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_fixedHeadCollapseGuard : FixedHeadCollapseGraph.GuardExact :=
+  FixedHeadCollapseGraph.guardExact
+
+theorem fixed_fixedHeadCollapseGraphEffective : FixedHeadCollapseGraph.GraphEffective :=
+  FixedHeadCollapseGraph.graphEffective
+
+theorem fixed_fixedHeadCollapseTerminalFields : FixedHeadCollapseGraph.ExactTerminalFields :=
+  FixedHeadCollapseGraph.terminalFields
+
+theorem fixed_actualFixedHeadCollapseGraph : FixedHeadCollapseGraph.ExactSourceGraph :=
+  FixedHeadCollapseGraph.sourceGraph
+
+theorem fixed_fullFixedHeadCollapseGraph : FixedHeadCollapseGraph.FullFixedHeadCollapseGraph :=
+  ⟨fixed_fixedHeadCollapseGuard,fixed_fixedHeadCollapseGraphEffective,
+    fixed_fixedHeadCollapseTerminalFields,fixed_actualFixedHeadCollapseGraph⟩
+
+#print axioms fixed_fixedHeadCollapseGuard
+#print axioms fixed_fixedHeadCollapseGraphEffective
+#print axioms fixed_fixedHeadCollapseTerminalFields
+#print axioms fixed_actualFixedHeadCollapseGraph
+#print axioms fixed_fullFixedHeadCollapseGraph
+
+end LogicLineages.PermittedControl.StatementChecks

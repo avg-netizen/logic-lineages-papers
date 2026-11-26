@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafIntrinsicNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeLeafIntrinsicNumericProof.lean
+@@ -90 +90 @@
+-    have admittedLeaf : (rawBits s.window raw).1 = true := (Bool.and_eq_true.mp goodBits).2
++    have admittedLeaf : (rawBits s.window raw).1 = true := (Bool.and_eq_true_iff.mp goodBits).2
+@@ -92 +92,2 @@
+-    simpa only [rawBits,termNext,read,Option.any_some,termParts] using admittedLeaf
++    have fieldZero : ([ty] : List Nat).getD 0 0 = ty := rfl
++    simpa only [rawBits,termNext,read,Option.any_some,termParts,fieldZero] using admittedLeaf

@@ -1,0 +1,38 @@
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalConstructorShapeFullFoldProof.lean:34:17: error(lean.unknownIdentifier): Unknown identifier `andIntro`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalConstructorShapeFullFoldProof.lean:34:9: error: Tactic `rcases` failed: `x✝ : ?m.29` is not an inductive datatype
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalConstructorShapeFullFoldProof.lean:47:13: error(lean.unknownIdentifier): Unknown identifier `andLeft`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalConstructorShapeFullFoldProof.lean:46:92: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+data : Data
+window : Program 1
+arrow d e fp ap fn arg functionOut argumentOut rebuilt input out parameter value : OTerm alpha
+hw : Nonempty (Derivation body Delta (windowGraph window input parameter))
+hr :
+  Nonempty
+    (Derivation body Delta
+      (OriginalCanonicalApplicationInversionTargets.Recovered (selectedData data window) arrow d e fp ap fn arg
+        functionOut argumentOut rebuilt input out parameter))
+⊢ Nonempty (Derivation body Delta (Formula.iff (markGraph value out) (markGraph value input)))
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalConstructorShapeFullFoldProof.lean:105:13: error(lean.unknownIdentifier): Unknown identifier `andLeft`
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalConstructorShapeFullFoldProof.lean:99:66: error: unsolved goals
+data : Data
+window : Program 1
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+out input typeCode parameter value : OTerm alpha
+selected : InternalOriginalUniformDescentSelection.Data := selectedData data window
+A : InternalCalculus.Formula alpha :=
+  windowGraph window input parameter ⊓
+    (sourcePremises selected input typeCode parameter ⊓ foldGraph selected out input parameter)
+hA : Nonempty (Derivation body (A :: Delta) A)
+⊢ Nonempty
+    (Derivation body Delta
+      (Formula.imp
+        (windowGraph window input parameter ⊓
+          (sourcePremises (selectedData data window) input typeCode parameter ⊓
+            foldGraph (selectedData data window) out input parameter))
+        (Formula.iff (markGraph value out) (markGraph value input))))
+LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalConstructorShapeFullFoldProof.lean:137:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalConstructorShapeFullFoldProof.leafMarkIff: forbidden axiom dependency sorryAx

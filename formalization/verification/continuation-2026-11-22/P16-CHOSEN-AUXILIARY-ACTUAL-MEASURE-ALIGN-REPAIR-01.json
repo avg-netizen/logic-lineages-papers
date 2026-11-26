@@ -1,0 +1,48 @@
+{
+  "status": "reserved-token alpha repair in proof only; native gate pending",
+  "immutable_previous_verified_remote": "7e98094448b1d39742f82d2f0ca163db534805c7",
+  "previous_source_local_prefix": "dc18a001f",
+  "receipt": {
+    "path": "formalization/build-reports/1795356542756582790-88.json",
+    "sha256": "2d98dc48c8ddc1712686fc6b899dcd97d41a525b20cc0fecc63ca9fc597a867c"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795356542756582790-88-LogicLineages-PersistentMarking-NumberedWindowInternalChosenAuxMeasureAlignProof.log",
+    "sha256": "f8740adee4ecd516818a341ec95e969de3b65d8de9abd507088db03d8512c22e"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/chosen-auxiliary-actual-measure-align-initial-diagnostic.txt",
+    "sha256": "f8740adee4ecd516818a341ec95e969de3b65d8de9abd507088db03d8512c22e"
+  },
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-CHOSEN-AUXILIARY-ACTUAL-MEASURE-ALIGN-REPAIR-01.patch",
+    "sha256": "627e91d6cf6d9676261e68039cab1a0d2d287bb46cd7fba246f481cd3a647ec8"
+  },
+  "archived_failed_source": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalChosenAuxMeasureAlignProof-01.lean",
+    "sha256": "297f36b4a0f7846c7741f3e2d71b9882e3641c12a9fd36aad6db350260adb60f"
+  },
+  "repaired_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChosenAuxMeasureAlignProof.lean",
+    "sha256": "bd8dbc22e1e70611c589e3bf0a2eb961b84df02b33e05dfbc3efd40fd390c482"
+  },
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChosenAuxMeasureParentTargets.lean",
+      "sha256": "1cf6be16c7146648fe6e394ae39201c739aadf9c9afd982e58109e46ae42f662"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChosenAuxMeasureChildCasesProof.lean",
+      "sha256": "fccf391e97d753b6c6cff2ced29a8b8676845fd851300f86ada466d9906b35a7"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChosenAuxMeasureParentProof.lean",
+      "sha256": "82d9b3fff7f6b0e7b306f4e1de281ef689ab1e4df6dc8f331988f6346cf192f5"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-CHOSEN-AUXILIARY-ACTUAL-MEASURE-PARENT-SOURCE-MAP.md",
+      "sha256": "5bba259d599a598ca9fd09dfaaf6aa351fb910d1675a30f7bde1c310fd3891c6"
+    }
+  ],
+  "diagnosis": "The local binder token matches is reserved, so the parser stopped before the final output transport proof and Prop assembly. Alpha rename its binder and exactly two uses to sameOutput. No target, code, import, supplier or sibling proof changed. Parent was not attempted in this aborted gate; failed sorryAx is not evidence of acceptance."
+}

@@ -1,0 +1,18 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowPositiveFiberCalibrationTargets
+import LogicLineages.PersistentMarking.NumberedWindowPositiveFiberProjectionProof
+import LogicLineages.PersistentMarking.NumberedWindowPositiveFiberCalibrationProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowPositiveFiberCalibrationChecks
+open NumberedWindowPositiveFiberCalibrationTargets
+
+theorem exact_ProjectionPrograms : ProjectionPrograms :=
+  NumberedWindowPositiveFiberProjectionProof.projectionPrograms
+
+theorem exact_SamePositiveChecker : SamePositiveChecker :=
+  NumberedWindowPositiveFiberCalibrationProof.samePositiveChecker
+
+#print axioms exact_ProjectionPrograms
+#print axioms exact_SamePositiveChecker
+end LogicLineages.PersistentMarking.NumberedWindowPositiveFiberCalibrationChecks

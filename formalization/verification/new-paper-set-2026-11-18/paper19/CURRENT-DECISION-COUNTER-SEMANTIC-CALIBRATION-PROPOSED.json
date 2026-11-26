@@ -1,0 +1,18 @@
+{
+  "status": "proposal only, active frozen and proof source unchanged",
+  "only_file": "LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSemanticProof.lean",
+  "before_sha256": "5ba9d01eb5675c9f272037a1bfd0d3dbd45c501a33b9cc73c5ba0a6df2532e65",
+  "proposed_sha256": "e725280a78b81279bb1b2ada6ef9d3f9d31f2cdea379b0cd39d60bc5a20c11ff",
+  "exact_errors": [
+    "94:14 and 96:14 omega sees let-local inputs \u03bd and its same let-expanded extension as distinct rawScalar atoms",
+    "126:81 e ?m.275 old expects Nat for old because e := @extend did not retain implicit application as positional in the let"
+  ],
+  "proof_only": "give both sides the same definitionally identical actual raw scalars l/r, recover equality using existing .observationCalibration and congrArg +1; opposite direction congrArg -1; arithmetic remains actual omega of the original linear equation. Instantiate the same six lexical ports with explicit nested extend in exactly old\u2192w\u2192v\u2192yr\u2192xr\u2192yl\u2192xl order.",
+  "failure": "build-reports/1795074053834662782-2.json",
+  "preserved": "verification/new-paper-set-2026-11-18/paper19/current-decision-failures/1795074053834662782-2",
+  "unchanged_frozen_pins": {
+    "current": 8,
+    "original_input": 23,
+    "original_output": 23
+  }
+}

@@ -29,7 +29,7 @@ theorem argumentGamma (old : JointGammaComputability.Data) (data : Data) (window
       (GammaGuardedSource.sameGamma Outer.gamma 0 1)) xs hg
   have hd := conjunctionRecover (GammaGuardedSource.atInput Outer.valid 1)
     (GammaGuardedSource.sameGamma Outer.gamma 0 1) xs (andRight hc)
-  have ha := TypingCoreProof.sameLeftRecover
+  have ha := TypingProof.sameLeftRecover
     (GammaGuardedSource.atInput Outer.gamma 0) (GammaGuardedSource.atInput Outer.gamma 1)
     gammaCode xs (andRight hd) (atInputValue Outer.gamma 0 gammaCode xs hf)
   exact atInputRecover Outer.gamma 1 gammaCode xs ha
@@ -51,7 +51,7 @@ theorem targetGamma (oldSrc : SourcePresentation.Data) (oldComp : JointGammaComp
   have hb := GammaGuardedSourceBranchProof.guardedPositiveRecover
     (GammaGuardedSource.basePositive positive Outer.gamma) typed Outer.tag window xs hp
   have hc := conjunctionRecover positive (GammaGuardedSource.sameGamma Outer.gamma 1 2) xs hb
-  have hg := TypingCoreProof.sameLeftRecover
+  have hg := TypingProof.sameLeftRecover
     (GammaGuardedSource.atInput Outer.gamma 1) (GammaGuardedSource.atInput Outer.gamma 2)
     gammaCode xs (andRight hc) (atInputValue Outer.gamma 1 gammaCode xs hf)
   exact atInputRecover Outer.gamma 2 gammaCode xs hg

@@ -1,0 +1,44 @@
+module
+public import LogicLineages.PermittedControl.StageCallbackCanonicalRoutesTargets
+import LogicLineages.PermittedControl.StageCallbackCanonicalRoutesLayoutProof
+import LogicLineages.PermittedControl.StageCallbackCanonicalRoutesNodeProof
+import LogicLineages.PermittedControl.StageCallbackCanonicalRoutesSemanticsProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open StageCallbackCanonicalRoutes
+
+theorem fixed_exactCanonicalRouteLayout : ExactCanonicalRouteLayout := exactCanonicalRouteLayout
+theorem fixed_exactCanonicalRouteShape : ExactCanonicalRouteShape := exactCanonicalRouteShape
+theorem fixed_exactMatchedAnswerUnique : ExactMatchedAnswerUnique := exactMatchedAnswerUnique
+theorem fixed_exactCanonicalReachedLinear : ExactCanonicalReachedLinear :=
+  exactCanonicalReachedLinear
+theorem fixed_exactCanonicalReachedGuards : ExactCanonicalReachedGuards :=
+  exactCanonicalReachedGuards
+theorem fixed_exactCanonicalRouteSoundness : ExactCanonicalRouteSoundness :=
+  exactCanonicalRouteSoundness
+theorem fixed_exactCanonicalRouteCompleteness : ExactCanonicalRouteCompleteness :=
+  exactCanonicalRouteCompleteness
+theorem fixed_exactCanonicalSufficientRoutes : ExactCanonicalSufficientRoutes :=
+  exactCanonicalSufficientRoutes
+theorem fixed_exactCanonicalRoutesAcrossReplay : ExactCanonicalRoutesAcrossReplay :=
+  exactCanonicalRoutesAcrossReplay
+theorem fixed_fullStageCallbackCanonicalRoutes : FullStageCallbackCanonicalRoutes :=
+  ⟨fixed_exactCanonicalRouteLayout,fixed_exactCanonicalRouteShape,
+    fixed_exactMatchedAnswerUnique,fixed_exactCanonicalReachedLinear,
+    fixed_exactCanonicalReachedGuards,fixed_exactCanonicalRouteSoundness,
+    fixed_exactCanonicalRouteCompleteness,fixed_exactCanonicalSufficientRoutes,
+    fixed_exactCanonicalRoutesAcrossReplay⟩
+
+#print axioms fixed_exactCanonicalRouteLayout
+#print axioms fixed_exactCanonicalRouteShape
+#print axioms fixed_exactMatchedAnswerUnique
+#print axioms fixed_exactCanonicalReachedLinear
+#print axioms fixed_exactCanonicalReachedGuards
+#print axioms fixed_exactCanonicalRouteSoundness
+#print axioms fixed_exactCanonicalRouteCompleteness
+#print axioms fixed_exactCanonicalSufficientRoutes
+#print axioms fixed_exactCanonicalRoutesAcrossReplay
+#print axioms fixed_fullStageCallbackCanonicalRoutes
+
+end LogicLineages.PermittedControl.StatementChecks

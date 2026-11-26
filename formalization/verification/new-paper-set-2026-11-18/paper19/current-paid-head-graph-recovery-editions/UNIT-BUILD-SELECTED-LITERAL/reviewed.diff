@@ -1,0 +1,19 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitBuildCodeProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitBuildCodeProof.lean
+@@ -64,8 +64,14 @@
+         rw [countGround,CurrentUnitElimination.groundCtx_remove left right σ hσ]
+       have hL := ih (left++right) (.arrow σ τ) (OneUnit.first b)
+       have hR := ih (left++right) (.arrow σ (.arrow .ground τ)) (OneUnit.second b)
+-      simp only [UnitContextSelectionCode.selectionCode,CurrentUnitElimination.step,hc,hd,bind,
+-        Option.bind_some,pure,literalPacket,hg]
++      have hc' : compileSelected p (left.length,(left++σ::right).map SyntaxCode.typeCode,
++          SyntaxCode.encodeTerm a)=some (literalPacket b d) := hc
++      simp only [UnitContextSelectionCode.selectionCode,CurrentUnitElimination.step,List.length_map,bind]
++      change (compileSelected p (left.length,(left++σ::right).map SyntaxCode.typeCode,
++          SyntaxCode.encodeTerm a)).bind _ =
++        Option.map (Targets.codeUnitRender p f) ((typedCoefficients p b).bind _)
++      rw [hc',hd]
++      simp only [Option.bind_some,pure,literalPacket,hg]
+       simp only [List.map_append,List.map_cons] at hL hR
+       rw [hL]
+       cases hfree : d.2.2 <;> cases hq : CurrentUnitElimination.build p fuel (OneUnit.first b) <;>

@@ -1,0 +1,11 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryIteratorDrain.Targets
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryIteratorDrain.Preflight
+#check Targets.InternalDropExhaustion
+#check Targets.InternalIteratorRemaining
+#check Targets.InternalIteratorDrain
+#check Targets.SameSourceIteratorDrain
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryIteratorDrain.Preflight

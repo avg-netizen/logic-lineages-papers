@@ -1,0 +1,54 @@
+--- NativeProof.lean
++++ NativeProof.lean
+@@ -19,6 +19,7 @@
+       if head < n then 1 else 0 := by
+     change evaluate InternalLessThan.ltTest (ofFn ![head,evaluate (OriginalRawSyntaxTransport.constant 2 n) (head ::ᵥ acc ::ᵥ nil)]) = _
+     rw [constantEvaluation,InternalEqualityTestEvaluationProof.vectorTwo,InternalLessThanEvaluationProof.exactLessThanEvaluation]
++    rfl
+   rw [hh]
+   change (if (if head < n then 1 else 0) = 1 ∧ acc = 1 then 1 else 0) = _
+   by_cases h : head < n <;> simp [h]
+@@ -31,6 +32,7 @@
+   | cons head tail ih =>
+     rw [List.foldr_cons,stepValue,ih]
+     by_cases h : head < n <;> by_cases ht : ∀ x ∈ tail, x < n <;> simp [h,ht]
++    all_goals simp_all
+ 
+ theorem encodedValue (n : Nat) (xs : List Nat) :
+     evaluate (symbols n) (numbersNumber xs ::ᵥ nil) = (decide (∀ x ∈ xs, x < n)).toNat := by
+@@ -41,17 +43,17 @@
+ theorem finListDecode (n : Nat) (xs : List Nat) :
+     (Encodable.decode (α := List (Fin n)) (numbersNumber xs)).isSome = decide (∀ x ∈ xs, x < n) := by
+   induction xs with
+-  | nil => rfl
++  | nil => simp [numbersNumber]
+   | cons head tail ih =>
+     have he : numbersNumber (head :: tail) = Nat.succ (Nat.pair head (numbersNumber tail)) := by simp [numbersNumber,Nat.add_comm]
+     rw [he,Encodable.decode_list_succ,Nat.unpair_pair,NumberedHeadCodecPrimrecSupportProof.finDecode]
+     cases hd : Encodable.decode (α := List (Fin n)) (numbersNumber tail) with
+     | none =>
+       simp only [hd,Option.isSome_none] at ih
+-      by_cases h : head < n <;> simp [h,ih.symm]
++      by_cases h : head < n <;> simp [h,ih.symm] <;> rfl
+     | some ys =>
+       simp only [hd,Option.isSome_some] at ih
+-      by_cases h : head < n <;> simp [h,ih.symm]
++      by_cases h : head < n <;> simp [h,ih.symm] <;> rfl
+ 
+ theorem nativeSymbols : Targets.NativeSymbols := by
+   intro n v
+@@ -81,10 +83,13 @@
+     change evaluate (symbols n) (ofFn fun _ : Fin 1 => evaluate InternalUnpair.left v) = _
+     rw [InternalEqualityTestEvaluationProof.vectorOne]
+     congr 1
+-    exact InternalUnpairEvaluationProof.leftEvaluation (v.get 0)
++    exact InternalApplicationCertificateConstructorsEvaluationProof.leftEvaluation v
+   rw [he,nativeSymbols,Encodable.decode_prod_val]
+   obtain ⟨xs,hxs⟩ := typeListTotal (Nat.unpair (v.get 0)).2
+   rw [hxs]
++  change (Encodable.decode (α := List (Fin n)) (Nat.unpair (v.get 0)).1).isSome.toNat =
++    ((Encodable.decode (α := List (Fin n)) (Nat.unpair (v.get 0)).1).bind
++      (fun a => Option.map (Prod.mk a) (some xs))).isSome.toNat
+   cases Encodable.decode (α := List (Fin n)) (Nat.unpair (v.get 0)).1 <;> rfl
+ end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedWindowValidity.NativeProof
+ #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedWindowValidity.NativeProof

@@ -1,0 +1,46 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:10:2: error: Alternative `hyperInverse` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:9:66: error: unsolved goals
+case multiply
+ν ρ : ℕ → ℕ
+c : ℕ
+a : Term
+ih : (∀ i ∈ a.variables, ν i = ρ i) → Term.value ν a = Term.value ρ a
+h : ∀ i ∈ (Term.multiply c a).variables, ν i = ρ i
+⊢ Term.value ν (Term.multiply c a) = Term.value ρ (Term.multiply c a)
+
+case divide
+ν ρ : ℕ → ℕ
+c : ℕ
+a : Term
+ih : (∀ i ∈ a.variables, ν i = ρ i) → Term.value ν a = Term.value ρ a
+h : ∀ i ∈ (Term.divide c a).variables, ν i = ρ i
+⊢ Term.value ν (Term.divide c a) = Term.value ρ (Term.divide c a)
+
+case phi
+ν ρ : ℕ → ℕ
+a : Term
+ih : (∀ i ∈ a.variables, ν i = ρ i) → Term.value ν a = Term.value ρ a
+h : ∀ i ∈ a.phi.variables, ν i = ρ i
+⊢ Term.value ν a.phi = Term.value ρ a.phi
+
+case hyper
+ν ρ : ℕ → ℕ
+a : Term
+ih : (∀ i ∈ a.variables, ν i = ρ i) → Term.value ν a = Term.value ρ a
+h : ∀ i ∈ a.hyper.variables, ν i = ρ i
+⊢ Term.value ν a.hyper = Term.value ρ a.hyper
+
+case phiInverse
+ν ρ : ℕ → ℕ
+input✝ : Term
+input_ih✝ : (∀ i ∈ input✝.variables, ν i = ρ i) → Term.value ν input✝ = Term.value ρ input✝
+h : ∀ i ∈ input✝.phiInverse.variables, ν i = ρ i
+⊢ Term.value ν input✝.phiInverse = Term.value ρ input✝.phiInverse
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:17:17: error: unexpected identifier; expected command
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:60:14: warning: This simp argument is unused:
+  max_eq_left hl
+
+Hint: Omit it from the simp argument list.
+  simp [hl, m̵a̵x̵_̵e̵q̵_̵l̵e̵f̵t̵ ̵h̵l̵,̵ ̵Nat.not_lt.mpr hl]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

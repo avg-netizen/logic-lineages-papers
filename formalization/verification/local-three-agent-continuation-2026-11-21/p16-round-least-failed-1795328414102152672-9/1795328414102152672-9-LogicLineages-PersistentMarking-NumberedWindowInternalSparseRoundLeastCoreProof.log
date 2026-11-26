@@ -1,0 +1,58 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRoundLeastCoreProof.lean:29:5: error: unknown namespace `NumberedWindowInternalSparseScratchMembershipOpenSyntaxProof`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRoundLeastCoreProof.lean:41:0: error: type of theorem `_private.LogicLineages.PersistentMarking.NumberedWindowInternalSparseRoundLeastCoreProof.0.LogicLineages.PersistentMarking.NumberedWindowInternalSparseRoundLeastCoreProof.moveLeast` is not a proposition
+  {body : Positive (Fin 1)} →
+    {α : Type} →
+      {Γ : List (ID1Completion.InternalCalculus.Formula α)} →
+        (C : Program 3) →
+          (X : Program 2) →
+            (W : Program 3) →
+              (s : Settings) →
+                (ctx ty w k m : OTerm α) →
+                  Derivation body Γ (eqn w k) →
+                    Derivation body Γ (leastGraph C X W s ctx ty w m) →
+                      Derivation body Γ (leastGraph C X W s ctx ty k m)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRoundLeastCoreProof.lean:52:9: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Nonempty.casesOn` can only eliminate into `Prop`
+
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+C : Program 3
+X : Program 2
+W : Program 3
+s : Settings
+vertices ctx ty seed out k m : OTerm α
+h : Derivation body Γ (inputs C X W s z vertices ctx ty seed out k m)
+x✝ :
+  have origin := NumberedWindowInternalSparseScratchMembershipTargets.memberGraph vertices seed ⊓ eqn seed k;
+  have candidate := NumberedWindowInternalSparseScratchMembershipTargets.memberGraph out k;
+  Nonempty
+    (Derivation body Γ
+      (Formula.imp (roundGraph (edge4 X W) out NumberedWindowInternalSparsePathEnvelopeTargets.z vertices ctx ty seed)
+        (Formula.imp candidate origin ⊓ Formula.imp origin candidate)))
+⊢ Derivation body Γ (leastGraph C X W s ctx ty k m)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRoundLeastCoreProof.lean:49:0: error: type of theorem `LogicLineages.PersistentMarking.NumberedWindowInternalSparseRoundLeastCoreProof.baseCore` is not a proposition
+  {body : Positive (Fin 1)} →
+    {α : Type} →
+      {Γ : List (ID1Completion.InternalCalculus.Formula α)} →
+        (C : Program 3) →
+          (X : Program 2) →
+            (W : Program 3) →
+              (s : Settings) →
+                (vertices ctx ty seed out k m : OTerm α) →
+                  Derivation body Γ (inputs C X W s z vertices ctx ty seed out k m) →
+                    Derivation body Γ (leastGraph C X W s ctx ty k m)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRoundLeastCoreProof.lean:58:16: error: (kernel) unknown constant '_private.LogicLineages.PersistentMarking.NumberedWindowInternalSparseRoundLeastCoreProof.0.LogicLineages.PersistentMarking.NumberedWindowInternalSparseRoundLeastCoreProof.moveLeast'
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRoundLeastCoreProof.lean:107:73: error(lean.unknownIdentifier): Unknown identifier `graphRename`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRoundLeastCoreProof.lean:121:33: error: Application type mismatch: The argument
+  r
+has type
+  Derivation body Δ
+    (roundGraph (edge4 X W) (Term.relabel j out) (suc (Term.relabel j i)) (Term.relabel j vertices) (Term.relabel j ctx)
+        (Term.relabel j ty) (Term.relabel j seed) ⊓
+      Formula.relabel j (NumberedWindowInternalSparseScratchMembershipTargets.memberGraph out k))
+but is expected to have type
+  Derivation body Δ
+    (?m.242 ⊓ NumberedWindowInternalSparseScratchMembershipTargets.memberGraph (Term.relabel j out) (Term.relabel j k))
+in the application
+  r.conjunctionRight

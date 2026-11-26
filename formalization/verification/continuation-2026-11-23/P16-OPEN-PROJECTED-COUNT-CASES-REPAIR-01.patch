@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountCasesProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountCasesProof.lean
+@@ -98,2 +98,2 @@
+-    (by simpa only [Term.relabel_relabel] using aL)
+-    (by simpa only [Term.relabel_relabel] using aR)
++    (by simpa only [Term.relabel_relabel] using (show Nonempty _ from ⟨l'⟩))
++    (by simpa only [Term.relabel_relabel] using (show Nonempty _ from ⟨r'⟩))

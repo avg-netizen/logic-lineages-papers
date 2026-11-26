@@ -1,0 +1,81 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.Definitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalUniverseDecoderTransportSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryMonotonicity.InclusionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.SyntaxProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open SourceComputabilityFormulaSupportProof InternalControlGraphSupportProof
+open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
+open InternalRawListRecursionSyntaxProof InternalGraphCompositionSyntaxProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open InternalBinderTransportProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
+open InternalAdditionLawsProof InternalGraphCompositionFunctionalityProof
+open InternalApplicationCertificateConstructorsSupportProof InternalAcceptanceSupportProof
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalClosedPrograms InternalClosedProgramsBindingProof
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalBetaTotalityProof InternalQuotientComparisonProof
+open TwoSol20261113.CalibratedPrimary.Membership (contains)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Continuation20261114
+
+theorem acceptedSubst {alpha beta : Type} (pool carrier seed x : OrdinaryArithmetic.Term alpha) (ts : alpha → OrdinaryArithmetic.Term beta) :
+ (accepted pool carrier seed x).subst (fun a => emb (ts a)) =
+ accepted (pool.subst ts) (carrier.subst ts) (seed.subst ts) (x.subst ts) := by
+ unfold accepted
+ simp only [conjunctionSubst,impSubst,graph2,programSubst,numeral,zSubst,sucSubst,consTermSubst,emptySubst]
+@[simp] theorem acceptedRename {alpha beta : Type} (pool carrier seed x : OrdinaryArithmetic.Term alpha) (j : alpha → beta) :
+ (accepted pool carrier seed x).relabel j = accepted (pool.relabel j) (carrier.relabel j) (seed.relabel j) (x.relabel j) := by
+ rw [formulaRelabelAsSubst]
+ change (accepted pool carrier seed x).subst (fun a => emb (.var (j a))) = _
+ rw [acceptedSubst]
+ simp only [← termRelabelAsSubst]
+theorem allAcceptedSubst {alpha beta : Type} (pool carrier seed reached : OrdinaryArithmetic.Term alpha) (ts : alpha → OrdinaryArithmetic.Term beta) :
+ (allAccepted pool carrier seed reached).subst (fun a => emb (ts a)) =
+ allAccepted (pool.subst ts) (carrier.subst ts) (seed.subst ts) (reached.subst ts) := by
+ unfold allAccepted memberAccepted
+ rw [allBlockSubst,liftedEmbedding]
+ simp only [impSubst,acceptedSubst,graph2,programSubst,numeral,zSubst,sucSubst,consTermSubst,emptySubst,liftSubst,Term.subst,Sum.elim_inr]
+@[simp] theorem allAcceptedRename {alpha beta : Type} (pool carrier seed reached : OrdinaryArithmetic.Term alpha) (j : alpha → beta) :
+ (allAccepted pool carrier seed reached).relabel j = allAccepted (pool.relabel j) (carrier.relabel j) (seed.relabel j) (reached.relabel j) := by
+ rw [formulaRelabelAsSubst]
+ change (allAccepted pool carrier seed reached).subst (fun a => emb (.var (j a))) = _
+ rw [allAcceptedSubst]
+ simp only [← termRelabelAsSubst]
+theorem memberWitness {alpha : Type} (pool carrier seed reached x : OrdinaryArithmetic.Term alpha) :
+ (memberAccepted pool carrier seed reached).subst (Sum.elim Term.var (fun _ : Fin 1 => emb x)) =
+ (graph2 contains (numeral 1) reached x).imp (accepted pool carrier seed x) := by
+ have he : (Sum.elim Term.var (fun _ : Fin 1 => emb x)) = (fun a => emb (Sum.elim Term.var (fun _ : Fin 1 => x) a)) := by
+  funext a; cases a <;> rfl
+ unfold memberAccepted
+ rw [he]
+ simp only [impSubst,acceptedSubst,graph2,programSubst,numeral,zSubst,sucSubst,consTermSubst,emptySubst,witnessLift,Term.subst,Sum.elim_inr]
+theorem backClosedSubst {alpha beta : Type} (E : Program 3) (pool carrier parameter : OrdinaryArithmetic.Term alpha) (ts : alpha → OrdinaryArithmetic.Term beta) :
+ (backClosed E pool carrier parameter).subst (fun a => emb (ts a)) =
+ backClosed E (pool.subst ts) (carrier.subst ts) (parameter.subst ts) := by
+ unfold backClosed backwardMatrix
+ rw [allBlockSubst,liftedEmbedding]
+ simp only [impSubst,conjunctionSubst,graph2,graph3,programSubst,numeral,zSubst,sucSubst,consTermSubst,emptySubst,liftSubst,Term.subst,Sum.elim_inr]
+@[simp] theorem backClosedRename {alpha beta : Type} (E : Program 3) (pool carrier parameter : OrdinaryArithmetic.Term alpha) (j : alpha → beta) :
+ (backClosed E pool carrier parameter).relabel j = backClosed E (pool.relabel j) (carrier.relabel j) (parameter.relabel j) := by
+ rw [formulaRelabelAsSubst]
+ change (backClosed E pool carrier parameter).subst (fun a => emb (.var (j a))) = _
+ rw [backClosedSubst]
+ simp only [← termRelabelAsSubst]
+theorem backwardWitness {alpha : Type} (E : Program 3) (pool carrier parameter x y : OrdinaryArithmetic.Term alpha) :
+ (backwardMatrix E pool carrier parameter).subst (Sum.elim Term.var (fun i => emb (![x,y] i))) =
+ (graph2 contains (numeral 1) pool x ⊓ (graph2 contains (numeral 1) carrier y ⊓ graph3 E (numeral 1) x y parameter)).imp
+ (graph2 contains (numeral 1) carrier x) := by
+ have he : (Sum.elim Term.var (fun i => emb (![x,y] i))) = (fun a => emb (Sum.elim Term.var ![x,y] a)) := by
+  funext a; cases a <;> rfl
+ unfold backwardMatrix
+ rw [he]
+ simp only [impSubst,conjunctionSubst,graph2,graph3,programSubst,numeral,zSubst,sucSubst,consTermSubst,emptySubst,witnessLift,Term.subst,Sum.elim_inr]
+ rfl
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.SyntaxProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.SyntaxProof

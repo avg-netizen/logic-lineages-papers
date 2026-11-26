@@ -1,0 +1,26 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphDirectFiberProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphDirectFiberProof.lean
+@@ -76,15 +76,14 @@
+       (fun i _ => by rw [hlen]; exact directAddress r.width δ i) p f r.matrix]
+   constructor
+   · rintro ⟨ν,he,hm⟩
+-    let w : Nat→Nat := fun i => ν (slot z i)
+-    have h0 : w n=t := by
+-      change ν (slot z n)=t
+-      rw [← hi,slotAt]
+-      exact he .here
+-    have h1 : w (n+1)=y := by
+-      change ν (slot z (n+1))=y
+-      rw [← hi',slotAt]
+-      exact he (.there .here)
++    let read : Variable Ξ .ground → Nat := ν
++    let w : Nat→Nat := fun i => read (slot z i)
++    have e0 : slot z n=z := (congrArg (slot z) hi).symm.trans (slotAt z z)
++    have e1 : slot z (n+1)=z' := (congrArg (slot z) hi').symm.trans (slotAt z z')
++    have ht : read z=t := he .here
++    have hy : read z'=y := he (.there .here)
++    have h0 : w n=t := (congrArg read e0).trans ht
++    have h1 : w (n+1)=y := (congrArg read e1).trans hy
+     exact ⟨w,h0,h1,(hcopy ν w (fun _ _ => rfl)).symm.trans hm⟩
+   · rintro ⟨w,ht,hy,hm⟩
+     let ν : Variable Ξ .ground → Nat := byIndex w

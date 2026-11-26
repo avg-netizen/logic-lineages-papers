@@ -1,0 +1,33 @@
+Compiling LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedGrammarOptionNumericProof
+LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarOptionNumericProof.lean:34:95: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarOptionNumericProof.lean:34:95: warning: 'rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarOptionNumericProof.lean:41:4: error: `simp` made no progress
+LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarOptionNumericProof.lean:47:4: error: Type mismatch: After simplification, term
+  read.left
+ has type
+  @Eq ℕ (evaluate left (Encodable.encode m ::ᵥ nil)) m.1
+but is expected to have type
+  @Eq ℕ (evaluate left (xs.get (![2] 0) ::ᵥ nil)) m.1
+LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarOptionNumericProof.lean:51:4: error: Type mismatch: After simplification, term
+  read.right
+ has type
+  @Eq ℕ (evaluate right (Encodable.encode m ::ᵥ nil)) m.2
+but is expected to have type
+  @Eq ℕ (evaluate right (xs.get (![2] 0) ::ᵥ nil)) m.2
+LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarOptionNumericProof.lean:76:17: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedGrammarOptionNumericProof.exact_SelectedGrammarOption' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedGrammarOptionNumericProof.exact_SelectedGrammarFactoredCover' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+COMPILE_FAILED LogicLineages.PersistentMarking.NumberedWindowInternalCoverSelectedGrammarOptionNumericProof: 1
+BUILD_RECEIPT build-reports/1795349690336688114-8.json

@@ -1,0 +1,156 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationBuildProof.lean:61:15: warning: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  simp only [b̵i̵n̵d̵,̵pure, ̲Option.bind_some, ̲hi.1, ̲hin, ̲↓reduceIte, ̲CurrentGroundBudget.vectorZero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationBuildProof.lean:61:20: warning: This simp argument is unused:
+  pure
+
+Hint: Omit it from the simp argument list.
+  simp only [bind,p̵u̵r̵e̵,̵ ̲Option.bind_some, ̲hi.1, ̲hin, ̲↓reduceIte, ̲CurrentGroundBudget.vectorZero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationBuildProof.lean:174:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  CurrentGroundAnnotationCode.groundPartialCode p (SourceTypedPorts.variableIndex F.there)
+    (SourceAnnotationCode.code db)
+in the target expression
+  (((CurrentGroundAnnotationCode.groundPartialCode p (SourceTypedPorts.variableIndex F + 1)
+              (SourceAnnotationCode.code db)).bind
+          fun pc =>
+          (CurrentGroundAnnotationCode.repeatCode p
+                (2 * (List.map OrdinalSyntax.partialSize (OrdinalSyntax.vectorCode ub)).sum) pc).bind
+            fun rc => some (4 * Nat.pair rc (SourceAnnotationCode.closeCode (SourceAnnotationCode.code db)) + 2)).bind
+      fun dc => some (OrdinalSyntax.vectorCode u, dc)) =
+    some (OrdinalSyntax.vectorCode u, SourceAnnotationCode.code d)
+
+case neg.refine_4
+p : Policy
+k : ℕ
+Γ✝ : List Ty
+F✝ : Variable Γ✝ (Ty.curriedGround (k + 1))
+n✝ : ℕ
+Γ : List Ty
+F : Variable Γ (Ty.curriedGround (k + 1))
+n : ℕ
+body : TrackedSource.Expr k (Ty.ground :: Γ) F.there n
+hin : ¬TrackedSource.active body.lam = false
+ha : TrackedSource.active body.lam = true
+ub : OrdinalVector (Ty.ground :: Γ) (Ty.curriedGround n).level
+db : Tree k (Ty.ground :: Γ) F.there
+hbb : build p body = some (ub, db)
+hub : assignment p (TrackedSource.erase body) = some ub
+hdb : Valid p db
+heb : erase db = ub 0
+hrb :
+  CurrentGroundAnnotationCode.buildCode p (List.map SyntaxCode.typeCode (Ty.ground :: Γ))
+      (SourceTypedPorts.variableIndex F.there) (SyntaxCode.encodeTerm (TrackedSource.erase body)) =
+    some (OrdinalSyntax.vectorCode ub, SourceAnnotationCode.code db)
+u : OrdinalVector Γ (Ty.curriedGround (n + 1)).level
+hu : assignment p (TrackedSource.erase body.lam) = some u
+right✝ : ∀ (j : Fin ((Ty.curriedGround (n + 1)).level + 1)), GeneratedOrdinalGrade Γ (↑j) (u j)
+habs : ((some ub).bind fun w => abstraction p w) = some u
+hAbs : abstraction p ub = some u
+pt : OrdinalPartialVector Γ Ty.ground
+pd : Tree k Γ F
+hpt : AdmissiblePartial.run p 0 (erase db) = some pt
+hpd : groundPartial p db = some pd
+hpe : erase pd = pt 0
+hpv : Valid p pd
+left✝ : Active F (erase pd) ↔ Active F.there (erase db)
+hpr :
+  CurrentGroundAnnotationCode.groundPartialCode p (SourceTypedPorts.variableIndex F.there)
+      (SourceAnnotationCode.code db) =
+    some (SourceAnnotationCode.code pd)
+hRun : AdmissiblePartial.run p 0 (ub 0) = some pt
+factor : ℕ := 2 * (List.map ordinalPartialSize (List.ofFn ub)).sum
+d : Tree k Γ F := (repeatTree p pd factor).add (closeTree db)
+hi :
+  TrackedSourceInspectionCode.occursCode (SourceTypedPorts.variableIndex F)
+        (SyntaxCode.encodeTerm (TrackedSource.erase body.lam)) =
+      TrackedSource.active body.lam ∧
+    SyntaxCode.check (List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm (TrackedSource.erase body.lam)) =
+        some (SyntaxCode.typeCode (Ty.curriedGround (n + 1))) ∧
+      TrackedSourceInspectionCode.arityCode (SyntaxCode.typeCode (Ty.curriedGround (n + 1))) = some (n + 1)
+hrb' :
+  CurrentGroundAnnotationCode.buildCode p (0 :: List.map SyntaxCode.typeCode Γ) (SourceTypedPorts.variableIndex F + 1)
+      (SyntaxCode.code (SyntaxCode.erase (TrackedSource.erase body))) =
+    some (OrdinalSyntax.vectorCode ub, SourceAnnotationCode.code db)
+⊢ (((CurrentGroundAnnotationCode.groundPartialCode p (SourceTypedPorts.variableIndex F + 1)
+              (SourceAnnotationCode.code db)).bind
+          fun pc =>
+          (CurrentGroundAnnotationCode.repeatCode p
+                (2 * (List.map OrdinalSyntax.partialSize (OrdinalSyntax.vectorCode ub)).sum) pc).bind
+            fun rc => some (4 * Nat.pair rc (SourceAnnotationCode.closeCode (SourceAnnotationCode.code db)) + 2)).bind
+      fun dc => some (OrdinalSyntax.vectorCode u, dc)) =
+    some (OrdinalSyntax.vectorCode u, SourceAnnotationCode.code d)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationBuildProof.lean:77:15: warning: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  simp only [b̵i̵n̵d̵,̵pure, ̲Option.bind_some, ̲hi.1, ̲TrackedSource.active, ̲Bool.true_eq_false, ̲↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationBuildProof.lean:77:20: warning: This simp argument is unused:
+  pure
+
+Hint: Omit it from the simp argument list.
+  simp only [bind,p̵u̵r̵e̵,̵ ̲Option.bind_some, ̲hi.1, ̲TrackedSource.active, ̲Bool.true_eq_false, ̲↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationBuildProof.lean:118:17: warning: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  simp only [b̵i̵n̵d̵,̵pure, ̲Option.bind_some, ̲hi.1, ̲ha, ̲Bool.true_eq_false, ̲↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationBuildProof.lean:118:22: warning: This simp argument is unused:
+  pure
+
+Hint: Omit it from the simp argument list.
+  simp only [bind,p̵u̵r̵e̵,̵ ̲Option.bind_some, ̲hi.1, ̲ha, ̲Bool.true_eq_false, ̲↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationBuildProof.lean:122:8: warning: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  simp only [modTag _ 5 (by decide), ̲divTag _ 5 (by decide), ̲Nat.unpair_pair,
+          show ¬(5 ̲: ̲Nat) ̲= ̲0 by decide, ̲true_or, ̲↓reduceIte, ̲↓reduceDIte, ̲harg, ̲SyntaxCode.typeCode,
+          b̵i̵n̵d̵,̵pure, ̲Option.bind_some]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationBuildProof.lean:122:13: warning: This simp argument is unused:
+  pure
+
+Hint: Omit it from the simp argument list.
+  simp only [modTag _ 5 (by decide), ̲divTag _ 5 (by decide), ̲Nat.unpair_pair,
+          show ¬(5 ̲: ̲Nat) ̲= ̲0 by decide, ̲true_or, ̲↓reduceIte, ̲↓reduceDIte, ̲harg, ̲SyntaxCode.typeCode,
+          bind,p̵u̵r̵e̵,̵ ̲Option.bind_some]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationBuildProof.lean:160:17: warning: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  simp only [b̵i̵n̵d̵,̵pure, ̲Option.bind_some, ̲hi.1, ̲ha, ̲Bool.true_eq_false, ̲↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationBuildProof.lean:160:22: warning: This simp argument is unused:
+  pure
+
+Hint: Omit it from the simp argument list.
+  simp only [bind,p̵u̵r̵e̵,̵ ̲Option.bind_some, ̲hi.1, ̲ha, ̲Bool.true_eq_false, ̲↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationBuildProof.lean:163:71: warning: This simp argument is unused:
+  ↓reduceDIte
+
+Hint: Omit it from the simp argument list.
+  simp only [modTag _ 6 (by decide), ̲divTag _ 6 (by decide), ̲Nat.unpair_pair,
+          show ¬(6 ̲: ̲Nat) ̲= ̲0 by decide, ̲show ¬(6 ̲: ̲Nat) ̲= ̲5 by decide, ̲↓reduceIte,↓̵r̵e̵d̵u̵c̵e̵D̵I̵t̵e̵,̵
+          SyntaxCode.typeCode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

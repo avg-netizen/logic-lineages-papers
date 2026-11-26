@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryEdgeInclusion.Proof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryEdgeInclusion.StatementChecks
+theorem anyExact : Targets.AnyIntroduction := AnyProof.anyIntroduction
+theorem filterExact : Targets.FilterIntroduction := FilterProof.filterIntroduction
+theorem appendExact : Targets.AppendRightMembership := AppendRightProof.appendRightMembership
+theorem expansionExact : Targets.ExpansionEdgeInclusion := Proof.expansionEdgeInclusion
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryEdgeInclusion.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.PrimaryEdgeInclusion.StatementChecks

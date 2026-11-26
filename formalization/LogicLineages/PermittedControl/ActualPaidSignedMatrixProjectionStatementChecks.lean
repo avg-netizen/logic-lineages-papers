@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.ActualPaidSignedMatrixProjectionTargets
+import LogicLineages.PermittedControl.ActualPaidSignedMatrixProjectionReplayProof
+import LogicLineages.PermittedControl.ActualPaidSignedMatrixProjectionProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualPaidSignedMatrixProjection
+
+theorem fixed_exactSignedMatrixMinimum : ExactMatrixMinimum := exactMatrixMinimum
+theorem fixed_exactActualSameHighMatrixTuples : ExactActualSameHighMatrixTuples := exactActualSameHighMatrixTuples
+theorem fixed_exactPaidSignedMatrixProjection : ExactPaidSignedMatrixProjection := exactPaidSignedMatrixProjection
+theorem fixed_fullActualPaidSignedMatrixProjection : FullActualPaidSignedMatrixProjection :=
+  ⟨fixed_exactSignedMatrixMinimum,fixed_exactActualSameHighMatrixTuples,fixed_exactPaidSignedMatrixProjection⟩
+
+#print axioms fixed_exactSignedMatrixMinimum
+#print axioms fixed_exactActualSameHighMatrixTuples
+#print axioms fixed_exactPaidSignedMatrixProjection
+#print axioms fixed_fullActualPaidSignedMatrixProjection
+
+end LogicLineages.PermittedControl.StatementChecks

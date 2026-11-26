@@ -1,0 +1,74 @@
+--- a/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean
+@@ -6,14 +6,16 @@
+ namespace LogicLineages.PermittedControl.FieldComparison
+ open OrdinalComparison
+ 
+-local notation "oneNote" => (NONote.ofNat 1).1
+-
+ private theorem encode_injective : Function.Injective rawNoteEncode := by
+   intro a b h
+-  simpa only [rawNoteDecodeEncode] using congrArg rawNoteDecode h
++  have hd := congrArg rawNoteDecode h
++  have ha : rawNoteDecode (rawNoteEncode a) = a := rawNoteDecodeEncode a
++  have hb : rawNoteDecode (rawNoteEncode b) = b := rawNoteDecodeEncode b
++  rw [ha,hb] at hd
++  exact hd
+ 
+ private theorem parse_positive_iff (o : ONote) (k : Nat) (hk : 0 < k) :
+-    rawShortGapLength (rawNoteEncode o) = k ↔ o = ONote.oadd oneNote ⟨k,hk⟩ ONote.zero := by
++    rawShortGapLength (rawNoteEncode o) = k ↔ o = ONote.oadd (NONote.ofNat 1).1 ⟨k,hk⟩ ONote.zero := by
+   constructor
+   · intro h
+     cases o with
+@@ -23,7 +25,7 @@
+       simp only [rawNoteEncode, rawShortGapLength, Nat.unpair_pair] at h
+       split at h
+       · rename_i hs
+-        have he : e = oneNote := encode_injective hs.1
++        have he : e = (NONote.ofNat 1).1 := encode_injective hs.1
+         have ht : t = ONote.zero := encode_injective hs.2
+         have hcoe : c = (⟨k,hk⟩ : {n : Nat // 0 < n}) := Subtype.ext (hc.symm.trans h)
+         rw [he,hcoe,ht]
+@@ -33,7 +35,7 @@
+     simp [rawNoteEncode, rawShortGapLength, Nat.unpair_pair, Nat.sub_add_cancel hk]
+ 
+ private theorem shortMonomial_repr (k : Nat) (hk : 0 < k) :
+-    (ONote.oadd oneNote ⟨k,hk⟩ ONote.zero).repr = Ordinal.omega0 * (k : Ordinal) := by
++    (ONote.oadd (NONote.ofNat 1).1 ⟨k,hk⟩ ONote.zero).repr = Ordinal.omega0 * (k : Ordinal) := by
+   change Ordinal.omega0 ^ (ONote.ofNat 1).repr * (k : Ordinal) + 0 = _
+   rw [ONote.repr_ofNat, Nat.cast_one, Ordinal.opow_one, add_zero]
+ 
+@@ -41,16 +43,16 @@
+   intro lam mu hp k hk
+   have hle : mu.1.repr ≤ lam.1.repr := hp.2.2.le
+   have hsyntax : shortGapLength lam mu = k ↔
+-      (lam-mu).1 = ONote.oadd oneNote ⟨k,hk⟩ ONote.zero := by
++      (lam-mu).1 = ONote.oadd (NONote.ofNat 1).1 ⟨k,hk⟩ ONote.zero := by
+     unfold shortGapLength shortGapLengthCode
+     rw [ordinal_sub_note_code]
+     exact parse_positive_iff _ k hk
+-  have hrepr : (lam-mu).1 = ONote.oadd oneNote ⟨k,hk⟩ ONote.zero ↔
++  have hrepr : (lam-mu).1 = ONote.oadd (NONote.ofNat 1).1 ⟨k,hk⟩ ONote.zero ↔
+       lam.1.repr-mu.1.repr = Ordinal.omega0 * (k : Ordinal) := by
+-    letI : ONote.NF (ONote.oadd oneNote ⟨k,hk⟩ ONote.zero) :=
+-      ONote.NF.oadd (inferInstance : ONote.NF oneNote) ⟨k,hk⟩ ONote.NFBelow.zero
++    letI : ONote.NF (ONote.oadd (NONote.ofNat 1).1 ⟨k,hk⟩ ONote.zero) :=
++      ONote.NF.oadd (inferInstance : ONote.NF (NONote.ofNat 1).1) ⟨k,hk⟩ ONote.NFBelow.zero
+     simpa only [note_sub_repr, shortMonomial_repr] using
+-      (ONote.repr_inj (a := (lam-mu).1) (b := ONote.oadd oneNote ⟨k,hk⟩ ONote.zero)).symm
++      (ONote.repr_inj (a := (lam-mu).1) (b := ONote.oadd (NONote.ofNat 1).1 ⟨k,hk⟩ ONote.zero)).symm
+   have hadd := Ordinal.add_sub_cancel_of_le hle
+   have hends : lam.1.repr-mu.1.repr = Ordinal.omega0 * (k : Ordinal) ↔
+       lam.1.repr = mu.1.repr + Ordinal.omega0 * (k : Ordinal) := by
+--- a/formalization/verification/continuation-2026-11-21/PAPER17-SHORT-FIELD-PREPROCESSING-AUTHOR-MANIFEST.json
++++ b/formalization/verification/continuation-2026-11-21/PAPER17-SHORT-FIELD-PREPROCESSING-AUTHOR-MANIFEST.json
+@@ -11,7 +11,7 @@
+     "pins_rechecked": 9
+   },
+   "new_source_hashes": {
+-    "formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean": "0bd30474519996c738b2ca1dbbc68918666adf1fd276688a646cccc36e033fd2",
++    "formalization/LogicLineages/PermittedControl/ShortFieldGapProof.lean": "1aaa588676d2ebd2f707e810346c74da1f0cc6a0971d21f5179fe58c9be7d7b2",
+     "formalization/LogicLineages/PermittedControl/ShortFieldEffectivityProof.lean": "344f06a041988d48d32c5f1be3e34a11c63dcc11c14280346187155a999fe49a",
+     "formalization/LogicLineages/PermittedControl/ShortFieldNormalizationProof.lean": "03b24b7fabf26122e509aaaa243d5d843a841743b2de3b4f3df1e8a97e36d4fe",
+     "formalization/LogicLineages/PermittedControl/ShortFieldPreprocessingStatementChecks.lean": "063876f43df5a3d897ac42879022b98cf36baa5bef0b08089bdf2b4fe300104d"

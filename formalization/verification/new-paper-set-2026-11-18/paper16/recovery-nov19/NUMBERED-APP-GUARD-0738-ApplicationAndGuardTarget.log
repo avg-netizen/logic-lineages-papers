@@ -1,0 +1,66 @@
+CACHE_HIT LogicLineages.PersistentMarking.Syntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineSyntax
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowSyntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineTyping
+CACHE_HIT LogicLineages.PersistentMarking.Signature
+CACHE_HIT LogicLineages.PersistentMarking.NameBridge
+CACHE_HIT LogicLineages.PersistentMarking.FreeSubstitution
+CACHE_HIT LogicLineages.PersistentMarking.StructuralContext
+CACHE_HIT LogicLineages.PersistentMarking.Occurrences
+CACHE_HIT LogicLineages.PersistentMarking.SpineMarking
+CACHE_HIT LogicLineages.PersistentMarking.Comparison
+CACHE_HIT LogicLineages.PersistentMarking.StructuralStabilityTargets
+CACHE_HIT LogicLineages.PersistentMarking.StructuralCoverageTargets
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupport
+CACHE_HIT LogicLineages.PersistentMarking.DecisionInventory
+CACHE_HIT LogicLineages.PersistentMarking.DecisionPorts
+CACHE_HIT LogicLineages.PersistentMarking.DecisionObservations
+CACHE_HIT LogicLineages.PersistentMarking.DecisionSourceUniverse
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowDomain
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRules
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowTupleTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowBindingTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowApplicationTargets
+Compiling LogicLineages.PersistentMarking.NumberedWindowSourceGuardTargets
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowSourceGuardTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRealizationShapeProof
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRealizationTypingProof
+CACHE_HIT LogicLineages.PersistentMarking.DecisionInventoryTargets
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupportTargets
+CACHE_HIT LogicLineages.PersistentMarking.FreeCovarianceTargets
+CACHE_HIT LogicLineages.PersistentMarking.SubstitutionTargets
+CACHE_HIT LogicLineages.PersistentMarking.SubstitutionProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeShiftProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeCompositionProof
+CACHE_HIT LogicLineages.PersistentMarking.SpineTypingTargets
+CACHE_HIT LogicLineages.PersistentMarking.SpineShiftProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeCallProof
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupportFoundationProof
+CACHE_HIT LogicLineages.PersistentMarking.DecisionInventoryProof
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRealizationWindowProof
+Compiling LogicLineages.PersistentMarking.NumberedWindowApplicationArgsProof
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowApplicationArgsProof
+Compiling LogicLineages.PersistentMarking.NumberedWindowApplicationDomainProof
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowApplicationDomainProof
+Compiling LogicLineages.PersistentMarking.NumberedWindowApplicationShiftProof
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowApplicationShiftProof
+Compiling LogicLineages.PersistentMarking.NumberedWindowNumberedDomainProof
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowNumberedDomainProof.lean:57:8: error: (kernel) application type mismatch
+  x✝ ⟨rest✝, htail⟩
+argument has type
+  (As : NArgs) ×' ExtrasTyped C As
+but function has type
+  ∀ (y : (As : NArgs) ×' ExtrasTyped C✝ As),
+    InvImage (fun x1 x2 => x1 < x2) (fun x => PSigma.casesOn x fun As hA => sizeOf As) y ⟨NArgs.cons a✝ rest✝, ⋯⟩ →
+      ExtrasTyped C✝ (y.1.append Bs)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowNumberedDomainProof.lean:115:22: error: Application type mismatch: The argument
+  hb
+has type
+  ((ρ ∈ declaration f ∨ ρ ∈ subtypes τ) ∨ ρ ∈ argsSupport (shiftArgs 1 0 bs)) ∨
+    ρ ∈ argsSupport ((shiftArgs 1 0 es).append (NArgs.cons (NTerm.bound σ 0) NArgs.nil))
+but is expected to have type
+  ρ ∈ support (openNumbered f σ τ k bs es)
+in the application
+  hBody.right.left ρ hb
+COMPILE_FAILED LogicLineages.PersistentMarking.NumberedWindowNumberedDomainProof: 1
+BUILD_RECEIPT build-reports/1795073865905088254-6.json

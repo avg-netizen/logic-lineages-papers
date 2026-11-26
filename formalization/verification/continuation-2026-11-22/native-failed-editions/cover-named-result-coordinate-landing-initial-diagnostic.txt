@@ -1,0 +1,93 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedResultLandingProof.lean:154:20: error: don't know how to synthesize implicit argument `Γ`
+  @liftReport ?m.89 α ?m.91 (header 1 2) ctx raw z (actual_FreeKeyRejectsBoundHeader ty i)
+context:
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+s : Settings
+B : Program 2
+ctx ty i result : OTerm α
+H : Program 2 := ⋯
+G : Program 2 := ⋯
+actual :
+  Nonempty
+    (Derivation body Γ
+      (programGraph (leafIntrinsicBase s (namedGrammarBase s (lexicalBoundBase (namedResultBase B)))) (suc result)
+        ![ctx, namedTerm false.toNat ty i]))
+raw : OTerm α := ⋯
+xs : Fin 2 → OTerm α := ⋯
+guarded :
+  have callback := if false = true then lexicalBoundBase H else namedGrammarAt true s (lexicalBoundBase H);
+  Nonempty (Derivation body Γ (programGraph (grammarGuard s callback) (suc result) ![ctx, namedTerm false.toNat ty i]))
+⊢ List (ID1Completion.InternalCalculus.Formula α)
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedResultLandingProof.lean:154:20: error: don't know how to synthesize implicit argument `body`
+  @liftReport ?m.89 α ?m.91 (header 1 2) ctx raw z (actual_FreeKeyRejectsBoundHeader ty i)
+context:
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+s : Settings
+B : Program 2
+ctx ty i result : OTerm α
+H : Program 2 := ⋯
+G : Program 2 := ⋯
+actual :
+  Nonempty
+    (Derivation body Γ
+      (programGraph (leafIntrinsicBase s (namedGrammarBase s (lexicalBoundBase (namedResultBase B)))) (suc result)
+        ![ctx, namedTerm false.toNat ty i]))
+raw : OTerm α := ⋯
+xs : Fin 2 → OTerm α := ⋯
+guarded :
+  have callback := if false = true then lexicalBoundBase H else namedGrammarAt true s (lexicalBoundBase H);
+  Nonempty (Derivation body Γ (programGraph (grammarGuard s callback) (suc result) ![ctx, namedTerm false.toNat ty i]))
+⊢ Positive (Fin 1)
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedResultLandingProof.lean:154:55: error: don't know how to synthesize implicit argument `Γ`
+  @actual_FreeKeyRejectsBoundHeader ?m.89 α ?m.91 ty i
+context:
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+s : Settings
+B : Program 2
+ctx ty i result : OTerm α
+H : Program 2 := ⋯
+G : Program 2 := ⋯
+actual :
+  Nonempty
+    (Derivation body Γ
+      (programGraph (leafIntrinsicBase s (namedGrammarBase s (lexicalBoundBase (namedResultBase B)))) (suc result)
+        ![ctx, namedTerm false.toNat ty i]))
+raw : OTerm α := ⋯
+xs : Fin 2 → OTerm α := ⋯
+guarded :
+  have callback := if false = true then lexicalBoundBase H else namedGrammarAt true s (lexicalBoundBase H);
+  Nonempty (Derivation body Γ (programGraph (grammarGuard s callback) (suc result) ![ctx, namedTerm false.toNat ty i]))
+⊢ List (ID1Completion.InternalCalculus.Formula α)
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedResultLandingProof.lean:154:55: error: don't know how to synthesize implicit argument `body`
+  @actual_FreeKeyRejectsBoundHeader ?m.89 α ?m.91 ty i
+context:
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+s : Settings
+B : Program 2
+ctx ty i result : OTerm α
+H : Program 2 := ⋯
+G : Program 2 := ⋯
+actual :
+  Nonempty
+    (Derivation body Γ
+      (programGraph (leafIntrinsicBase s (namedGrammarBase s (lexicalBoundBase (namedResultBase B)))) (suc result)
+        ![ctx, namedTerm false.toNat ty i]))
+raw : OTerm α := ⋯
+xs : Fin 2 → OTerm α := ⋯
+guarded :
+  have callback := if false = true then lexicalBoundBase H else namedGrammarAt true s (lexicalBoundBase H);
+  Nonempty (Derivation body Γ (programGraph (grammarGuard s callback) (suc result) ![ctx, namedTerm false.toNat ty i]))
+⊢ Positive (Fin 1)
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedResultLandingProof.lean:154:9: error: failed to infer `have` declaration type
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverNamedResultLandingProof.exact_OpenNamedResultLanding' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

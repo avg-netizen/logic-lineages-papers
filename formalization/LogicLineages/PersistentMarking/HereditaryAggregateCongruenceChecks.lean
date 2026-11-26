@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.HereditaryAggregateCongruenceProof
+namespace LogicLineages.PersistentMarking.HereditaryAggregateCongruenceChecks
+theorem exact_AggregateCongruence : HereditaryLatticeTargets.AggregateCongruence := HereditaryAggregateCongruenceProof.congruence
+theorem exact_AggregateRestriction : HereditaryLatticeTargets.AggregateRestriction := HereditaryAggregateCongruenceProof.restriction
+#print axioms exact_AggregateCongruence
+#print axioms exact_AggregateRestriction
+end LogicLineages.PersistentMarking.HereditaryAggregateCongruenceChecks

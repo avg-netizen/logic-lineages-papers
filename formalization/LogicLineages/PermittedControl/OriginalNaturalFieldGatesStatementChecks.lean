@@ -1,0 +1,30 @@
+module
+public import LogicLineages.PermittedControl.OriginalNaturalFieldGatesTargets
+import LogicLineages.PermittedControl.OriginalNaturalFieldGatesIdentityProof
+import LogicLineages.PermittedControl.OriginalNaturalFieldGatesProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalNaturalFieldGateReads : OriginalNaturalFieldGates.ExactOrdinaryGateReads :=
+  OriginalNaturalFieldGates.exactOrdinaryGateReads
+
+theorem fixed_exactOriginalNaturalFieldSharedGraph :
+    OriginalNaturalFieldGates.ExactOrdinarySharedGateGraph :=
+  OriginalNaturalFieldGates.exactOrdinarySharedGateGraph
+
+theorem fixed_exactOriginalNaturalFieldIdentityBoundary :
+    OriginalNaturalFieldGates.ExactOrdinaryIdentityBoundary :=
+  OriginalNaturalFieldGates.exactOrdinaryIdentityBoundary
+
+theorem fixed_fullOriginalNaturalFieldGates :
+    OriginalNaturalFieldGates.FullOriginalNaturalFieldGates :=
+  ⟨fixed_exactOriginalNaturalFieldGateReads,fixed_exactOriginalNaturalFieldSharedGraph,
+    fixed_exactOriginalNaturalFieldIdentityBoundary⟩
+
+#print axioms fixed_exactOriginalNaturalFieldGateReads
+#print axioms fixed_exactOriginalNaturalFieldSharedGraph
+#print axioms fixed_exactOriginalNaturalFieldIdentityBoundary
+#print axioms fixed_fullOriginalNaturalFieldGates
+
+end LogicLineages.PermittedControl.StatementChecks

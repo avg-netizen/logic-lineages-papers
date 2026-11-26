@@ -1,0 +1,12 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountTargets.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundAccountTargets.lean
+@@ -7,7 +7,8 @@
+ open LogicLineages.StandardControlCurrent
+ open CurrentGroundAccount
+ open CurrentReserve (Carrier SpawnedAccount Account reserve carrierSum unitValue)
+-open AdmissibleSum ScalarAnnotationData DeterministicAccountData
++open AdmissibleSum ScalarAnnotationData
++open DeterministicAccountData (UnaryRecord)
+ open CurrentUnaryChain (commonUnits)
+ 
+ def CurrentHeadClassification : Prop :=

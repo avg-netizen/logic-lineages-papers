@@ -1,0 +1,3 @@
+# Independent bounded reference scope
+
+Read ReferenceProof; all seven frozen pins match. Approve bounded ReferenceProof root before parent native, no final acceptance. Structural Ref induction pays front preservation/back exact front-length shift/map index preservation. Context/variable induction gives exact finite renaming table length and lookup for every actual typed source variable, without injectivity. Prefix induction preserves local variables and offsets actual free renaming indices; insertGround similarly shifts only free positions. No malformed lookup default is used as a typed witness, no graph/packed semantics or primitive program accepted by this subset. Remaining structural/PR/full gates separate. No native execution by reviewer.

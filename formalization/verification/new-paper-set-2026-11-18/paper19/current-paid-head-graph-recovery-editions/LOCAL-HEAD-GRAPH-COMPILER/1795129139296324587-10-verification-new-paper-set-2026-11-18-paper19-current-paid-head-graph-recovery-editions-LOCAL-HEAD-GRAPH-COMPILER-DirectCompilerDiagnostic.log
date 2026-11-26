@@ -1,0 +1,52 @@
+[diag] Diagnostics
+  [reduction] unfolded declarations (max: 33490, num: 23):
+    [reduction] Bool.decEq ↦ 33490
+    [reduction] dite ↦ 25500
+    [reduction] ite ↦ 13600
+    [reduction] Nat.sqrt ↦ 13396
+    [reduction] Nat.rec ↦ 6698
+    [reduction] Encodable.decode ↦ 714
+    [reduction] Option.rec ↦ 714
+    [reduction] Option.bind ↦ 408
+    [reduction] Add.add ↦ 248
+    [reduction] HAdd.hAdd ↦ 248
+    [reduction] Part.some ↦ 220
+    [reduction] Function.comp ↦ 214
+    [reduction] Equiv.symm ↦ 206
+    [reduction] Encodable.decodeSigma ↦ 204
+    [reduction] Nat.unpair ↦ 204
+    [reduction] Option.map ↦ 204
+    [reduction] Prod.rec ↦ 204
+    [reduction] DFunLike.coe ↦ 136
+    [reduction] EquivLike.coe ↦ 136
+    [reduction] PFun.lift ↦ 118
+    [reduction] Equiv.sigmaEquivProd ↦ 103
+    [reduction] Part.ofOption ↦ 102
+    [reduction] Primrec ↦ 39
+  [reduction] unfolded reducible declarations (max: 40277, num: 14):
+    [reduction] Nat.casesOn ↦ 40277
+    [reduction] Decidable.casesOn ↦ 39100
+    [reduction] Bool.casesOn ↦ 33490
+    [reduction] Prod.fst ↦ 3025
+    [reduction] Option.casesOn ↦ 714
+    [reduction] Prod.snd ↦ 373
+    [reduction] Equiv.toFun ↦ 272
+    [reduction] Prod.casesOn ↦ 204
+    [reduction] Part.get ↦ 168
+    [reduction] Equiv.invFun ↦ 136
+    [reduction] Sigma.snd ↦ 102
+    [reduction] outParam ↦ 39
+    [reduction] Sigma.fst ↦ 34
+    [reduction] Part.Dom ↦ 31
+  [type_class] used instances (max: 36, num: 1):
+    [type_class] Primcodable.finArrow ↦ 36
+  [def_eq] heuristic for solving `f a =?= f b` (max: 122, num: 5):
+    [def_eq] Prod.fst ↦ 122
+    [def_eq] Primrec ↦ 46
+    [def_eq] PFun.lift ↦ 44
+    [def_eq] Part.some ↦ 44
+    [def_eq] Part.get ↦ 38
+  use `set_option diagnostics.threshold <num>` to control threshold for reporting counters
+'_private.verification.«new-paper-set-2026-11-18».paper19.«current-paid-head-graph-recovery-editions».«LOCAL-HEAD-GRAPH-COMPILER».DirectCompilerDiagnostic.0.LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph.directPacketProgram' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

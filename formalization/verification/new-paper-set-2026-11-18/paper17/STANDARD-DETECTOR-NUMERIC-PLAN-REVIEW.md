@@ -1,0 +1,7 @@
+# Independent conceptual review: standard detector numerics
+
+Approved to exact supporting freeze. Read plan and actual tail_two_fourfold, tail_gap_fourfold, head_domination, app_head_domination and app_strict_head statements/proofs. They concern actualCollapse and ordinal heads, not default-policy source valuations. Phi calibration is therefore a legitimate bridge with fresh source-matched closure.
+
+Freeze all low-end cases and actual positive-limit/epsilon domains literally: two-step tail inequality is all n, gap version all q with s+2<=t. Head domination needs the genuine N(a)<=2s (or source-head N(h)<=s via proved omega-product norm), s<=q and 5<=q, and derives the full controlled strictness budget internally. Do not replace this with ordinal norm monotonicity or an eventual threshold. Source-head clauses must derive positivity/epsilon/norm bounds from actual all-policy StandardSourceFacts; only the displayed head/scalar order and q bounds may remain source hypotheses.
+
+Actual appValuePhi uses ordinal addition of the finite tail, and the omega head uses natural product; preserve this distinction in definitions/calibration. Equal-head unequal-scalar branch must retain the gap2 boundary and every q, not introduce an affordability restriction. Explicitly retain that these are numerical calibrated-head inequalities, not actual successful source application/eraser value equations. Those remain the next source-semantic bridge. No selected CountLag, selected=Phi, parked threshold or hardness promotion.

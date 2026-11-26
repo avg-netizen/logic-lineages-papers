@@ -1,0 +1,8 @@
+# Independent conceptual review: actual standard-control source facts
+Approved direction for an exact supporting freeze, not acceptance of proofs or unchanged-G hardness.
+
+Read the plan, OriginalSourceAssignmentBounded target and its actual term induction, and existing source_facts proof. The semantic supplier really quantifies arbitrary context/type/policy and actual OriginalTerm, yielding successful assignment, AmbientGrade and occurring-support SourceBoundedVector. The existing unary source_facts is default-policy only, so do not reuse that endpoint as an all-policy theorem; reproduce its argument from the genuinely all-policy assignment theorem. Generated grammar and literal tree-node bounds alone do not pay ordinal norm admissibility.
+
+The support bridge must explicitly convert occurring-variable bounds to full original substitutions before the proved Phi-domain/value calibration transports them. Derive finite positive scalar, exact scalar card/norm, positive epsilon-bounded every coordinate and norm bounded by scalar from actual grades and original closure/positivity. Preserve arbitrary types and policies and no caller assignment/positivity/domain-membership oracle beyond the literal admitted substitution. Derive unary coordinateFacts and ground results rather than assuming them.
+
+Actual Phi strict monotonicity and double-tower gap can supply SourceGrowth separately; this is not SelectedWithThreshold Phi, CountLag, modular separation or a selected detector transfer. Fresh recursive evidence for original semantic suppliers and later detector/compiler/query chains remains required. No native run.

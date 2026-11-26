@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.SelectedSeededSolvabilityProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_selectedSeededCompiler : SelectedSeededCompilerTargets.SelectedSeededCompiler :=
+  SelectedSeededCompiler.Proof.selectedSeededCompiler
+#print axioms fixed_selectedSeededCompiler
+end LogicLineages.PermittedControl.StatementChecks

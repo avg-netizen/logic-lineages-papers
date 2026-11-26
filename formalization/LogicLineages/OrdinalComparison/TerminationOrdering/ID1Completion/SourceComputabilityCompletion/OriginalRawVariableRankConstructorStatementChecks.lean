@@ -1,0 +1,22 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawVariableRankConstructorProof
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawVariableRankTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawVariableRankConstructorProof
+example : ActualRawVariableRankVariable := actualRawVariableRankVariable
+#print axioms actualRawVariableRankVariable
+example : ActualRawVariableRankBottom := actualRawVariableRankBottom
+#print axioms actualRawVariableRankBottom
+example : ActualRawVariableRankNil := actualRawVariableRankNil
+#print axioms actualRawVariableRankNil
+example : ActualRawVariableRankLambda := actualRawVariableRankLambda
+#print axioms actualRawVariableRankLambda
+example : ActualRawVariableRankOrdinary := actualRawVariableRankOrdinary
+#print axioms actualRawVariableRankOrdinary
+example : ActualRawVariableRankApplication := actualRawVariableRankApplication
+#print axioms actualRawVariableRankApplication
+example : ActualRawVariableRankNumbered := actualRawVariableRankNumbered
+#print axioms actualRawVariableRankNumbered
+example : ActualRawVariableRankCons := actualRawVariableRankCons
+#print axioms actualRawVariableRankCons
+example : ActualRawVariableRankPacked := actualRawVariableRankPacked
+#print axioms actualRawVariableRankPacked

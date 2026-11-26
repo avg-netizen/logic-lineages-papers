@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionAccumulator.Targets
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionAccumulator.Preflight
+theorem comparatorReflexivity : Targets.NativeRawTrace = Targets.NativeRawTrace ∧
+ Targets.NativeOriginalTrace = Targets.NativeOriginalTrace ∧ Targets.InternalEquations = Targets.InternalEquations ∧
+ Targets.InternalNumeralTrace = Targets.InternalNumeralTrace ∧ Targets.InternalAccumulator = Targets.InternalAccumulator :=
+ ⟨rfl,rfl,rfl,rfl,rfl⟩
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionAccumulator.Preflight
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentRecursionAccumulator.Preflight

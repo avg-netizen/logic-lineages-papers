@@ -1,0 +1,11 @@
+module
+public import LogicLineages.StandardControlCurrent.PolynomialGraphTargets
+public import LogicLineages.OrdinalComparison.PolynomialGraphCompletion.FullStatementChecks
+
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent
+
+theorem polynomialCollapseGraphs : PolynomialGraphTargets.PolynomialCollapseGraphs :=
+  OrdinalComparison.PolynomialGraphCompletion.FullStatementChecks.full_polynomial_collapse_graphs
+
+end LogicLineages.StandardControlCurrent

@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.HereditaryRestrictionProof
+namespace LogicLineages.PersistentMarking.HereditaryRestrictionChecks
+theorem exact_Restriction : HereditaryDomainTargets.Restriction := HereditaryRestrictionProof.restriction
+#print axioms exact_Restriction
+end LogicLineages.PersistentMarking.HereditaryRestrictionChecks

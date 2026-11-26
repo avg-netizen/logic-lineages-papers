@@ -1,0 +1,38 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedBooleanGraphSemanticProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedBooleanGraphSupportProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedBooleanGraphZeroShiftProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedBooleanGraphStatementChecks
+
+theorem actualForestSupport : ExpandedBooleanGraphTargets.LiteralForestSupport :=
+  ExpandedBooleanGraphProof.literalForestSupport
+#print axioms actualForestSupport
+
+theorem actualHFreeForest : ExpandedBooleanGraphTargets.HFreeOriginalForest :=
+  ExpandedBooleanGraphProof.hFreeOriginalForest
+#print axioms actualHFreeForest
+
+theorem actualPredicate : ExpandedBooleanGraphTargets.ActualPredicateInterpretation :=
+  ExpandedBooleanGraphProof.actualPredicateInterpretation
+#print axioms actualPredicate
+
+theorem actualFreshNames : ExpandedBooleanGraphTargets.ExactFreshGraphNames :=
+  ExpandedBooleanGraphProof.exactFreshGraphNames
+#print axioms actualFreshNames
+
+theorem actualNameSupport : ExpandedBooleanGraphTargets.OriginalGraphNameSupport :=
+  ExpandedBooleanGraphProof.originalGraphNameSupport
+#print axioms actualNameSupport
+
+theorem actualZeroShiftClass : ExpandedBooleanGraphTargets.LiteralZeroShiftGraphClass :=
+  ExpandedBooleanGraphProof.literalZeroShiftGraphClass
+#print axioms actualZeroShiftClass
+
+theorem actualMatrixGraph : ExpandedBooleanGraphTargets.ActualExpandedMatrixGraph :=
+  ExpandedBooleanGraphProof.actualExpandedMatrixGraph
+#print axioms actualMatrixGraph
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedBooleanGraphStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedBooleanGraphStatementChecks

@@ -1,0 +1,4 @@
+# Independent final
+
+Accepted corrected three-contract supporting packet. Fresh1795014581030212648-9: compiler-free independent evidence exactly equals author JSON, 253 modules/zero errors/three standard aliases/five current pins checked. Actual source renaming and singleton closed-call semantics inspected; arbitrary p/f uses compatible raw coordinates and identical rawScalar-minus-one convention. Structural CPS proof composes all typed embeddings, preserves returned arguments across subsequent evaluation, and derives literal cost/table bounds including unary fresh slot. Continuation semantic and budget specifications remain explicit premises, not full formula coverage. Empty-valuation annotation and genuine parsed-proposition grouping repairs preserved; earlier malformed Semantic is unaccepted and gets no credit. No full Boolean/prefix/encoded/shared-DAG compiler claim.
+No native compiler launched.

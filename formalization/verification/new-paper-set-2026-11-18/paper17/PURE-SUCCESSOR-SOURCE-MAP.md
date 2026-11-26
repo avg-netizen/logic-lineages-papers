@@ -1,0 +1,9 @@
+# Pure-successor actual phase bridge
+
+Source entries.tex prop:equal-gap: reaching the highest nonzero piece with a maximum beta by a drop from beta+1 creates a common thick beta block unless it has already diverged. This packet pays that actual drop and ensuing oriented separation, assuming the actual pure-limit input has been reached. ProfileBandReturn/source endpoint geometry must provide that reachability separately.
+
+ActualPureSuccessorStep uses real arbitrary input A with limit mu+omega^(beta+1) and actual norm t. It derives the literal quotient/remainder relative next-state formula at cost relativeProfile mu beta, next actual norm f(t), quotient q>R+2, remainder bound, actual new leading exponent beta and actual limit decomposition. No old beta+1 scalar is reused and P=0 is explicit.
+
+ActualPureSuccessorSeparation takes two arbitrary actual pure-limit inputs with common norm and strict real beta-profile order. It derives an actual original-clock oriented divergence while both relative limits remain >=omega^beta. It does not assume equal next states, equal q, a visited thick top, or residue data. If next limits agree, quotient/remainder uniqueness derives only equality of q and the LOWER LIMIT suffix. The finite remainders may differ. The full actual-state thick wrapper with P=0 must then apply at updated budget f(t), with unchanged tail paid internally. Candidate inclusion within the retained omega^beta band pays orientation; iteration composition pays the original clock.
+
+Concrete domain: beta>=2, real offset/beta norms <=R, R>=20, t>=unchanged thickBlockTail R B, actual selected control. All necessary affordability and generated coefficient bounds are proof obligations. Both endpoints are conjoined in PureSuccessorFoundation. This is supporting source-phase scope, not full equal-gap, highest-piece geometry, final entry order, or executable certificate.

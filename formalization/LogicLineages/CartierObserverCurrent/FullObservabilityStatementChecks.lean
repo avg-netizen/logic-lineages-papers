@@ -1,0 +1,9 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullObservabilityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+universe u
+namespace LogicLineages.CartierObserverCurrent.FullObservability.StatementChecks
+theorem fixed_completeObservability : Targets.CompleteObservability.{u} := completeObservability
+#audit_namespace LogicLineages.CartierObserverCurrent.FullObservability.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullObservability.StatementChecks

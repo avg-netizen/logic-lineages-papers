@@ -1,0 +1,11 @@
+# Complete Paper17 lem:source-finiteness
+
+Actual source domains: fresh f-valued ClosedGrade, AmbientGrade, HeadGrade and whole-vector admissibility. SourcePartial and SourceDelta quantify actual selected controls, every supplied effective policy and every correctly head-graded actual input. They require unique actual successful trees, exact successful raw-program equations and explicit partial node bounds. Neither output success nor algorithm equivalence is a caller premise. SourceAbstraction separately covers the retained-addend full abstraction, never substituted for naked delta.
+
+Three real algorithm clauses require all-raw Computable partial, naked-delta and abstraction programs, parameterized by the source's effective policy. Actual source success is proved from grade erasure to literal Domain and real finite collection, not from fixed-G admissibility. ScalarCalibration proves actual closed/ambient grade-zero finiteness and finiteValue/card.toNat plus actual norm calibration, including zero as appropriate for arbitrary controls. It does not assert arbitrary-f positivity.
+
+FullLiteralCovariance is stronger than source graded-only covariance: every arbitrary tail component substitution by old-context trees, lifted fixing tracked vector, commutes literally with partial/naked delta/full abstraction on all inputs including failure. Exact occurrence/free/wholefree-first size and S invariance are included. These maps encompass every other-vector substitution by x-free vectors after dropping tracked context. Semantic grade preservation is not claimed; source says whenever operations have their graded domains, and this all-input syntax equality applies in particular there.
+
+DeltaHighRetention pays the source high-coordinate unchanged-tree convention with actual f-grade-derived freeness and weakening/closure reconstruction. Source n=sigma.level+1, partial coordinates Fin(sigma.level+2), output level max(n,m), original S=2^n*sum s_x, macro sites/arity/order all remain literal.
+
+Scope completes finite definition and covariance only. No output positivity/grade/bounded norms, weak-scalar, source-box, generated-source, main arithmetic or parked threshold assertion. Supplied program implementations and all full clauses need fresh native/current recursive evidence/independent final before numbered promotion.

@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.TypeSupportSubstitutionProof
+namespace LogicLineages.PersistentMarking.TypeSupportSubstitutionChecks
+theorem exact_substitution : TypeSupportTargets.ExactSubstitution := TypeSupportSubstitutionProof.exactSubstitution
+#print axioms exact_substitution
+end LogicLineages.PersistentMarking.TypeSupportSubstitutionChecks

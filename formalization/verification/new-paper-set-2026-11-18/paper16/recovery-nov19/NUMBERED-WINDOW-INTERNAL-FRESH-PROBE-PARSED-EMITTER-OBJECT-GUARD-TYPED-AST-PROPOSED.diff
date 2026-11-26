@@ -1,0 +1,105 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterGuardProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeParsedEmitterGuardProof.lean
+@@ -1,5 +1,6 @@
+ module
+ public import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeParsedEmitterObjectTargets
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSyntaxProof
+ import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchControlChecks
+ import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeProof
+ import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeSyntaxProof
+@@ -23,13 +24,14 @@
+ open ID1Completion.InternalTagArithmeticSyntaxProof (z suc eqn zRelabel sucRelabel)
+ open ID1Completion.InternalTagArithmeticSupportProof (sucNeZeroApply)
+ open ID1Completion.InternalPositiveUnfoldingSupportProof (weakenClosed)
+-open ID1Completion.InternalQuotientComparisonProof (disjunctionElimination)
++open ID1Completion.InternalBetaTotalityProof (disjunctionElimination)
+ open LogicLineages.ComputabilityKnowledge GorbowPRProgram GorbowVerifierNormalization
+ open NumberedWindowInternalProbeTargets (OTerm freshAt)
+ open NumberedWindowInternalFreshProbeProof (optionGraphCases)
+ open NumberedWindowInternalFreshProbeSyntaxProof (unaryRename)
+ open NumberedWindowInternalFreshProbeDispatchControlChecks (exact_DispatchControlAST)
+ open NumberedWindowInternalFreshProbeEmitter (chooseFresh emitSelected)
++open NumberedWindowInternalFreshProbeDispatchProgram (bothOne)
+ open NumberedWindowInternalFreshProbeParsedEmitter
+ 
+ variable {body : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+@@ -66,16 +68,33 @@
+ private def positiveArm (scalarProg bound : Program 1) : Program 1 :=
+   .composition .succ (Fin.cons (emitSelected (selected scalarProg bound)) Fin.elim0)
+ 
++private theorem selectedGuardAST (scalarProg : Program 1) :
++    selectedGuard scalarProg = normalize (bothOne scalarProg parserGuard) := rfl
++
++private theorem parsedGuardAST : parserGuard = ID1Completion.InternalAcceptance.conjunction addressGood arrowGood := by
++  unfold parserGuard
++  rw [exact_DispatchControlAST.2.2.2.2.2]
++
++private theorem selectedFreshAST (scalarProg bound : Program 1) :
++    chooseFresh (selected scalarProg bound) =
++      branch (selectedGuard scalarProg) (constantZero 1) (positiveArm scalarProg bound) := by
++  unfold chooseFresh
++  rw [exact_DispatchControlAST.2.2.2.2.1,exact_DispatchControlAST.1] <;> rfl
++
++private theorem gatedAST (g datum : Program 1) :
++    gated g datum = branch g (constantZero 1) datum := by
++  unfold gated
++  rw [exact_DispatchControlAST.2.2.2.2.1,exact_DispatchControlAST.1]
++
++section
++attribute [local irreducible] programGraph
++
+ theorem checkedGuard (scalarProg bound : Program 1) (q u : OTerm α)
+     (h : Nonempty (Derivation body Γ (freshAt (chooseFresh (selected scalarProg bound)) q u))) :
+     Nonempty (Derivation body Γ (programGraph (selectedGuard scalarProg) (suc z) ![q])) := by
+-  change Nonempty (Derivation body Γ
+-    (programGraph (chooseFresh (selected scalarProg bound)) (suc u) ![q])) at h
+-  unfold chooseFresh at h
+-  rw [exact_DispatchControlAST.2.2.2.2.1,exact_DispatchControlAST.1] at h
+-  change Nonempty (Derivation body Γ (programGraph
+-    (branch (selectedGuard scalarProg) (constantZero 1) (positiveArm scalarProg bound)) (suc u) ![q])) at h
+-  apply optionGraphCases (selectedGuard scalarProg) ![q] _
++  rw [freshAt,selectedFreshAST] at h
++  apply optionGraphCases (selectedGuard scalarProg) ![q]
++    (programGraph (selectedGuard scalarProg) (suc z) ![q])
+   · intro β j Δ hj h0
+     have moved := renameInto h j Δ hj
+     rw [programRename,unaryRename,sucRelabel] at moved
+@@ -87,20 +106,20 @@
+     exact ⟨Derivation.explosion (sucNeZeroApply absurdEq)⟩
+   · intro β j Δ t _ ht
+     simp only [programRename,unaryRename,sucRelabel,zRelabel]
+-    rw [unaryRename] at ht
+-    exact normalizedSuccess _ (q.relabel j) t ht
++    rw [unaryRename,selectedGuardAST] at ht
++    rw [selectedGuardAST]
++    exact normalizedSuccess (bothOne scalarProg parserGuard) (q.relabel j) t ht
+ 
+ theorem guardReports (scalarProg : Program 1) (q : OTerm α)
+     (h : Nonempty (Derivation body Γ (programGraph (selectedGuard scalarProg) (suc z) ![q]))) :
+     Nonempty (Derivation body Γ (programGraph addressGood (suc z) ![q])) ∧
+     Nonempty (Derivation body Γ (programGraph arrowGood (suc z) ![q])) := by
+-  unfold selectedGuard at h
+-  obtain ⟨main⟩ := normalizeRecover _ ![q] h
++  rw [selectedGuardAST] at h
++  obtain ⟨main⟩ := normalizeRecover (bothOne scalarProg parserGuard) ![q] h
+   rw [exact_DispatchControlAST.2.2.2.2.2] at main
+   obtain ⟨row⟩ := conjunctionRecover scalarProg parserGuard ![q] ⟨main⟩
+   have hp := Derivation.conjunctionRight row
+-  unfold parserGuard at hp
+-  rw [exact_DispatchControlAST.2.2.2.2.2] at hp
++  rw [parsedGuardAST] at hp
+   obtain ⟨h⟩ := conjunctionRecover addressGood arrowGood ![q] ⟨hp⟩
+   exact ⟨⟨Derivation.conjunctionLeft h⟩,⟨Derivation.conjunctionRight h⟩⟩
+ 
+@@ -108,8 +127,9 @@
+     (guard : Nonempty (Derivation body Γ (programGraph (selectedGuard scalarProg) (suc z) ![q])))
+     (rawValue : Nonempty (Derivation body Γ (programGraph datum x ![q]))) :
+     Nonempty (Derivation body Γ (programGraph (gated (selectedGuard scalarProg) datum) x ![q])) := by
+-  unfold gated
+-  rw [exact_DispatchControlAST.2.2.2.2.1,exact_DispatchControlAST.1]
++  rw [gatedAST]
+   exact successorBranchIntro (selectedGuard scalarProg) (constantZero 1) datum x z ![q] guard rawValue
+ 
++end
++
+ end LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeParsedEmitterGuardProof

@@ -1,0 +1,5 @@
+# Paper 17 positional names and complete residue choices
+
+The paper's modular tables use one residue modulo `2m` at each original raw input. The named layout assigns positive name `i+1` to the original rank at position `i` of the input rank list. Projection recovers the literal rank list in order and the complete consecutive name list. [Arithmetic, lines 231–240](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex#L231) · [Exact comparator](../../LogicLineages/PermittedControl/RankResidueChoicesTargets.lean)
+
+The primitive-recursive enumeration uses the full range below `2m` for every slot. Membership is equivalent to the aligned original slot assignment with every digit in range, including the one empty assignment at empty support. For positive modulus the assignment read from any original raw valuation occurs in the enumeration. [Code proof](../../LogicLineages/PermittedControl/RankResidueChoicesCodeProof.lean) · [Layout and completeness proof](../../LogicLineages/PermittedControl/RankResidueChoicesLayoutProof.lean) · [Author pins](PAPER17-RANK-RESIDUE-CHOICES-AUTHOR-MANIFEST.json)

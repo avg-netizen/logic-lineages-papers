@@ -1,0 +1,45 @@
+--- LogicLineages/PersistentMarking/NumberedWindowNumberedDomainProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowNumberedDomainProof.lean
+@@ -54,11 +54,13 @@
+   rcases NumberedWindowApplicationShiftProof.argsShape As a c with ⟨hs,hh⟩
+   exact ⟨fun ρ hp => h.1 ρ (hs ▸ hp),fun f hp => h.2 f (hh ▸ hp)⟩
+ 
+-theorem extrasAppend {C : Spine.BoundContext} {As Bs : NArgs}
++theorem extrasAppend (C : Spine.BoundContext) (As Bs : NArgs)
+     (hA : ExtrasTyped C As) (hB : ExtrasTyped C Bs) : ExtrasTyped C (As.append Bs) := by
+-  cases hA with
++  cases As with
+   | nil => exact hB
+-  | cons hq htail => exact .cons hq (extrasAppend htail hB)
++  | cons a tail =>
++    cases hA with
++    | cons hq htail => exact .cons hq (extrasAppend C tail Bs htail hB)
+ termination_by sizeOf As
+ 
+ theorem appendOneGuard {S : Spine.Signature} {K : List Ty} {C : Spine.BoundContext}
+@@ -89,7 +91,7 @@
+ theorem appendArg : AppendArgumentInWindow := by
+   intro S K C f σ τ k bs es A hk hOwn hA
+   obtain ⟨hb,he,hf,hbs,hes⟩ := parts hOwn
+-  exact numbered hb (extrasAppend he (.cons hA.1 .nil)) hf
++  exact numbered hb (extrasAppend _ _ _ he (.cons hA.1 .nil)) hf
+     (arrowRight hk (rootInWindow hOwn)) hbs (appendOneGuard hes hA)
+ 
+ theorem openNumberedWindow : OpenNumberedInWindow := by
+@@ -103,7 +105,7 @@
+   have hBound : InWindow S K D σ (.bound σ 0) :=
+     ⟨.bound rfl,arrowLeft hk hroot,fun _ h => False.elim (List.not_mem_nil h)⟩
+   have hBody : InWindow S K D τ (openNumbered f σ τ k bs es) := by
+-    exact numbered hb' (extrasAppend he' (.cons hBound.1 .nil)) hf
++    exact numbered hb' (extrasAppend _ _ _ he' (.cons hBound.1 .nil)) hf
+       (arrowRight hk hroot) (shiftedGuard hbs 1 0)
+       (appendOneGuard (shiftedGuard hes 1 0) hBound)
+   refine ⟨.lam hBody.1,?_,hBody.2.2⟩
+@@ -112,6 +114,6 @@
+   rcases h with (hArrow | hσ) | hb
+   · exact hk _ hroot ρ hArrow
+   · exact arrowLeft hk hroot ρ hσ
+-  · exact hBody.2.1 ρ hb
++  · exact hBody.2.1 ρ (by simpa only [support,openNumbered,List.mem_append] using hb)
+ 
+ end LogicLineages.PersistentMarking.NumberedWindowNumberedDomainProof

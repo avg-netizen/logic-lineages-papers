@@ -1,0 +1,9 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowExchangeProgramProof
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowExchangeProgramChecks
+open NumberedWindowExchangeProgramTargets
+theorem exact_ContextualExchangeProgram : ContextualExchangeProgram := NumberedWindowExchangeProgramProof.program
+#print axioms exact_ContextualExchangeProgram
+end LogicLineages.PersistentMarking.NumberedWindowExchangeProgramChecks

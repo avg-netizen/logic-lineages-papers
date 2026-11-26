@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedProjectionProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedProjectionProof.lean
+@@ -74 +74 @@
+-    obtain ⟨⟨xs,hx,_⟩,ys,hy,_⟩ := packet
++    obtain ⟨⟨xs,hx,tx⟩,ys,hy,accepted⟩ := packet
+@@ -79 +79,2 @@
+-    exact ⟨(fixedPrior z).mp pr,dh.2.2.2 z (xs ++ ys) rankedHit,paid,packet⟩
++    exact ⟨(fixedPrior z).mp pr,dh.2.2.2 z (xs ++ ys) rankedHit,paid,
++      ⟨⟨xs,hx,tx⟩,ys,hy,accepted⟩⟩

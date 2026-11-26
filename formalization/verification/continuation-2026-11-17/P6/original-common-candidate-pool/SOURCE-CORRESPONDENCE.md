@@ -1,0 +1,13 @@
+# Original common candidate pool: proposed source scope
+
+Status: proposed comparator only, awaiting independent scope review. No proof/native/freeze/acceptance claim.
+
+This endpoint is specialized to the actual concrete head signature, context guard, typed decoder, literal OriginalCandidates program, concrete structural edge and SeededPrimaryPool pool/primary. It retains the exact source self-coverage hypotheses: seed pair, parameter context/Gamma pair, original context guard, observed types selector and ArrowClosed(types), original universe seed acceptance. No admission is a public premise; OriginalSourceCandidatesCoverage.AdmissionProof.admitted derives it after original context/Gamma selector observations are derived from the parameter pair.
+
+The observed actual primary output and its member witness identify the candidate. The two Q and two pool graphs identify literal outputs. Probe is arbitrary. Conclusion gives literal Q equality, both roots in the common Q, and each pool's pointwise membership equivalent to common-Q membership. The two pool equivalences compose, but pool code equality is neither stated nor justified.
+
+Proof route: OriginalCandidateSelfCoverage supplies seed membership in its Q; actual internalPrimaryCarrier puts candidate in seedPool; internalPoolCharacterization gives candidate=seed or membership in Q, closed using seed membership. OriginalCandidateRerooting supplies literal Q equality, deriving metadata and target admission internally. Target admission for target pool characterization comes from OriginalPrimaryTypedCarrierV2 applied to actual concrete structural edge. Each pool characterization then collapses its root-equality disjunct using the root's common-Q membership. All equality transports are internal derivations; the outer conjunction/iff packages proof transformations, not an unproved internal truth assertion.
+
+No candidate universe premise, finite-count invariant, reachability symmetry, pool equivalence oracle, global equivalence relation, primary equality, representative equality, well-foundedness or numbered theorem is claimed. Full candidate universe closure is deliberately not a dependency of this minimal endpoint; source self-coverage plus actual primary carrier is sufficient. Code/context/Gamma and the original raw bounds meaning remain unchanged. Source self-coverage internally discharges bounds rather than imposing capacity premises here.
+
+This is one supporting local supplier only. Residual integration requires exact original common-pool edge/reachability/component reasoning before any stronger primary reroot or equivalence theorem. Do not promote numbered Paper 6 status on this endpoint alone.

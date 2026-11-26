@@ -1,0 +1,11 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphIndexProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphIndexProof.lean
+@@ -38,7 +38,7 @@
+ theorem shiftedIndex {Γ σ} (n : Nat) (x : Variable Γ σ) :
+     variableIndex (shift n x) = n+variableIndex x := by
+   induction n with
+-  | zero => simp only [shift,Nat.zero_add]
++  | zero => simp only [shift,Nat.zero_add]; rfl
+   | succ n ih => simp only [shift,variableIndex,ih]; omega
+ 
+ theorem widthLength (n : Nat) (Γ : List Ty) : (WireCtx n Γ).length = n+Γ.length := by

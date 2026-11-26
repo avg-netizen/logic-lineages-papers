@@ -1,0 +1,12 @@
+--- Encoding SUPPORT01
++++ Encoding SUPPORT01R1
+@@ -28,7 +28,8 @@
+  obtain ⟨h⟩ := QuotedVerifierMP.QuotationProof.numeralCalculation p ctag HistoryCodec.cons hc
+   (FiniteRuleFourLeaf.lineCode sigma ::ᵥ 0 ::ᵥ nil) ctx
+  rw [HistoryCodec.NativeProof.nativeConsAllVectors] at h
+- simpa only [HistoryLookup.consCall,certificateCode,FiniteRuleFourLeaf.lineCode,
++ have hnil : Encodable.encode ([] : List GorbowProofChecker.Line) = 0 := rfl
++ simpa only [hnil,HistoryLookup.consCall,certificateCode,FiniteRuleFourLeaf.lineCode,
+   HistoryLookup.NativeProof.encodeCons,List.Vector.map_cons,List.Vector.map_nil,
+   List.Vector.head_cons,List.Vector.tail_cons,Term.numeral] using (show Nonempty _ from ⟨h⟩)
+ theorem pair {n ctx : Nat} (p : Program n) (ptag : Nat)

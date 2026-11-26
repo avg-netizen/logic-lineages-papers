@@ -1,0 +1,92 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionMergeProof.lean:16:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionMergeProof.lean:63:19: error(lean.unknownIdentifier): Unknown identifier `Source.Term.rename`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionMergeProof.lean:63:10: error: unsolved goals
+case var
+Γ : List Ty
+τ : Ty
+count : ℕ
+Γ✝ : List Ty
+σ✝ : Ty
+x : Variable Γ✝ σ✝
+Δ : List Ty
+depth : ℕ
+r : Renaming Γ✝ Δ
+h :
+  ∀ {σ : Ty} (x : Variable Γ✝ σ),
+    SourceTypedPorts.variableIndex (r x) = indexCode depth count (SourceTypedPorts.variableIndex x)
+⊢ erase ((Term.var x).rename fun {σ} => r) = Raw.var (indexCode depth count (SourceTypedPorts.variableIndex x))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionMergeProof.lean:68:34: error(lean.unknownIdentifier): Unknown identifier `Source.Term.rename`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionMergeProof.lean:68:20: error: unsolved goals
+case app
+Γ : List Ty
+τ : Ty
+count : ℕ
+Γ✝ : List Ty
+σ✝ τ✝ : Ty
+f : Term Empty Empty.elim Γ✝ (σ✝.arrow τ✝)
+a : Term Empty Empty.elim Γ✝ σ✝
+ihf :
+  ∀ {Δ : List Ty} (depth : ℕ) (r : Renaming Γ✝ Δ),
+    (∀ {σ : Ty} (x : Variable Γ✝ σ),
+        SourceTypedPorts.variableIndex (r x) = indexCode depth count (SourceTypedPorts.variableIndex x)) →
+      erase (f.rename fun {σ} => r) = mapRaw depth count (erase f)
+iha :
+  ∀ {Δ : List Ty} (depth : ℕ) (r : Renaming Γ✝ Δ),
+    (∀ {σ : Ty} (x : Variable Γ✝ σ),
+        SourceTypedPorts.variableIndex (r x) = indexCode depth count (SourceTypedPorts.variableIndex x)) →
+      erase (a.rename fun {σ} => r) = mapRaw depth count (erase a)
+Δ : List Ty
+depth : ℕ
+r : Renaming Γ✝ Δ
+h :
+  ∀ {σ : Ty} (x : Variable Γ✝ σ),
+    SourceTypedPorts.variableIndex (r x) = indexCode depth count (SourceTypedPorts.variableIndex x)
+⊢ erase ((f.app a).rename fun {σ} => r) = (mapRaw depth count (erase f)).app (mapRaw depth count (erase a))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionMergeProof.lean:70:15: error(lean.unknownIdentifier): Unknown identifier `Source.Term.rename`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionMergeProof.lean:71:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  erase (b.rename fun {σ} => Renaming.lift fun {σ} => r)
+in the target expression
+  erase (b.lam.rename fun {σ} => r) = Raw.lam (typeCode σ✝) (mapRaw (depth + 1) count (erase b))
+
+case lam
+Γ : List Ty
+τ : Ty
+count : ℕ
+Γ✝ : List Ty
+σ✝ τ✝ : Ty
+b : Term Empty Empty.elim (σ✝ :: Γ✝) τ✝
+ih :
+  ∀ {Δ : List Ty} (depth : ℕ) (r : Renaming (σ✝ :: Γ✝) Δ),
+    (∀ {σ : Ty} (x : Variable (σ✝ :: Γ✝) σ),
+        SourceTypedPorts.variableIndex (r x) = indexCode depth count (SourceTypedPorts.variableIndex x)) →
+      erase (b.rename fun {σ} => r) = mapRaw depth count (erase b)
+Δ : List Ty
+depth : ℕ
+r : Renaming Γ✝ Δ
+h :
+  ∀ {σ : Ty} (x : Variable Γ✝ σ),
+    SourceTypedPorts.variableIndex (r x) = indexCode depth count (SourceTypedPorts.variableIndex x)
+⊢ erase (b.lam.rename fun {σ} => r) = Raw.lam (typeCode σ✝) (mapRaw (depth + 1) count (erase b))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionMergeProof.lean:63:51: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [Source.Term.rename, ̲erase, ̲mapRaw,̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionMergeProof.lean:68:66: warning: This simp argument is unused:
+  ihf _ r h
+
+Hint: Omit it from the simp argument list.
+  simp only [Source.Term.rename, ̲erase, ̲mapRaw,i̵h̵f̵ _̵ ̵r̵ ̵h̵,̵iha _ r h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionMergeProof.lean:68:76: warning: This simp argument is unused:
+  iha _ r h
+
+Hint: Omit it from the simp argument list.
+  simp only [̵S̵o̵u̵r̵c̵e̵.̵T̵e̵r̵m̵.̵r̵e̵n̵a̵m̵e̵,̵e̵r̵a̵s̵e̵,̵m̵a̵p̵R̵a̵w̵,̵i̵h̵f̵[̲S̲o̲u̲r̲c̲e̲.̲T̲e̲r̲m̲.̲r̲e̲n̲a̲m̲e̲,̲ ̲e̲r̲a̲s̲e̲,̲ ̲m̲a̲p̲R̲a̲w̲,̲ ̲i̲h̲f̲ _ r h̵,̵i̵h̵a̵ ̵_̵ ̵r̵ ̵h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

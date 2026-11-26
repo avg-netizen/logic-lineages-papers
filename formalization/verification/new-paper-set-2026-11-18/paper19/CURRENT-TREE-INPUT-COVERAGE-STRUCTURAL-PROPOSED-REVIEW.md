@@ -1,0 +1,3 @@
+Independent coordinator proposed-diff review, 2026-11-19 07:23 UTC
+
+Read exact proposed diff. The buildIn helper structurally recurses on genuine changing OriginalTerm indices, transporting only the variable membership along the supplied ambient-context equality. Application retains function-first then argument rows and both keep maps; lambda retains extended prefix and congrArg equality. Public build wraps rfl with unchanged type. Raw rows/compiler and target statements are not edited. Approved exact application and sole Definitions freeze-pin update, pending applied hash verification and fresh target-only native gate. No theorem accepted.

@@ -1,0 +1,50 @@
+CACHE_HIT LogicLineages.PersistentMarking.Syntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineSyntax
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowSyntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineTyping
+CACHE_HIT LogicLineages.PersistentMarking.Signature
+CACHE_HIT LogicLineages.PersistentMarking.NameBridge
+CACHE_HIT LogicLineages.PersistentMarking.FreeSubstitution
+CACHE_HIT LogicLineages.PersistentMarking.StructuralContext
+CACHE_HIT LogicLineages.PersistentMarking.Occurrences
+CACHE_HIT LogicLineages.PersistentMarking.SpineMarking
+CACHE_HIT LogicLineages.PersistentMarking.Comparison
+CACHE_HIT LogicLineages.PersistentMarking.StructuralStabilityTargets
+CACHE_HIT LogicLineages.PersistentMarking.StructuralCoverageTargets
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupport
+CACHE_HIT LogicLineages.PersistentMarking.DecisionInventory
+CACHE_HIT LogicLineages.PersistentMarking.DecisionPorts
+CACHE_HIT LogicLineages.PersistentMarking.DecisionObservations
+CACHE_HIT LogicLineages.PersistentMarking.DecisionSourceUniverse
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowDomain
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRules
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowPrimary
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowPreservationTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowClosing
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowTupleTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowFrameTargets
+Compiling LogicLineages.PersistentMarking.NumberedWindowClosingInventoryProof
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowClosingInventoryProof
+Compiling LogicLineages.PersistentMarking.NumberedWindowClosingOperationsProof
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowClosingOperationsProof
+Compiling LogicLineages.PersistentMarking.NumberedWindowClosingShiftProof
+COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowClosingShiftProof
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowBindingTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowBindingBaseProof
+Compiling LogicLineages.PersistentMarking.NumberedWindowClosingBetaProof
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowClosingBetaProof.lean:28:4: error: unsolved goals
+case neg
+n : Name
+outer c : Nat
+σ : Ty
+i : Nat
+a : NTerm
+hi : ¬i < c
+he : ¬i = c
+hp : i - c ≠ 0
+hq : (NArgs.cons a NArgs.nil).get (i - c) = none
+hr : (NArgs.cons (closeAt n outer a) NArgs.nil).get (i - c) = none
+⊢ NTerm.bound σ (i - (NArgs.cons a NArgs.nil).length) =
+    NTerm.bound σ (i - (NArgs.cons (closeAt n outer a) NArgs.nil).length)
+COMPILE_FAILED LogicLineages.PersistentMarking.NumberedWindowClosingBetaProof: 1
+BUILD_RECEIPT build-reports/1795078946340762012-5.json

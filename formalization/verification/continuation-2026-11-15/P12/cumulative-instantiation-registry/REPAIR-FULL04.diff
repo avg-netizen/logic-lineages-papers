@@ -1,0 +1,14 @@
+--- InstallationProof.lean FULL03
++++ InstallationProof.lean FULL04
+@@ -13,9 +13,9 @@
+   ReflexivityInstalled.BundleProof.bundleInstallation (items lhs rhs t old a x) 6 p 0
+    (GorbowPRRegistry.StatementChecks.rootTag 6 p)
+  obtain ⟨previous⟩ := Items_RawUniversalCongruence.installed old a x p (fun q hq => hall q (by
+-  simp only [items,List.mem_append]; exact Or.inl hq))
++  simp only [items,List.mem_append]; exact Or.inl (Or.inl hq)))
+  obtain ⟨current⟩ := Items_RawEqualityInstantiationCertificate.installed lhs rhs (previousLogical old) (RawMulNewestAddition.arithmetic a) x p (fun q hq => hall q (by
+-  simp only [items,List.mem_append]; exact Or.inr (Or.inl hq)))
++  simp only [items,List.mem_append]; exact Or.inl (Or.inr hq)))
+  obtain ⟨quoteTag,hquote⟩ := hall (⟨k,LiteralTemplateQuote.templateQuote t⟩ : Packed) (by simp [items])
+  obtain ⟨valueTag,hvalue⟩ := hall (⟨k,ArithmeticTemplateEvaluation.valueProgram t⟩ : Packed) (by simp [items])
+  obtain ⟨certificateTag,hcertificate⟩ := hall (⟨k,ArithmeticTemplateEvaluation.certificateProgram t⟩ : Packed) (by simp [items])

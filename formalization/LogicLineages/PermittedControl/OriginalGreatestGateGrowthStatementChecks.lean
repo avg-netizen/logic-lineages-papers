@@ -1,0 +1,36 @@
+module
+public import LogicLineages.PermittedControl.OriginalGreatestGateGrowthTargets
+import LogicLineages.PermittedControl.OriginalGreatestGateGrowthOrdinaryProof
+import LogicLineages.PermittedControl.OriginalGreatestGateGrowthCountProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalGreatestLongCountBound : OriginalGreatestGateGrowth.ExactLongCountBound :=
+  OriginalGreatestGateGrowth.exactLongCountBound
+
+theorem fixed_exactOriginalGreatestOrdinaryStrictGrowth : OriginalGreatestGateGrowth.ExactOrdinaryStrictGrowth :=
+  OriginalGreatestGateGrowth.exactOrdinaryStrictGrowth
+
+theorem fixed_exactOriginalGreatestLimitStrictGrowth : OriginalGreatestGateGrowth.ExactLimitCollapseStrictGrowth :=
+  OriginalGreatestGateGrowth.exactLimitCollapseStrictGrowth
+
+theorem fixed_exactOriginalGreatestLongCountStrictGrowth : OriginalGreatestGateGrowth.ExactLongCountStrictGrowth :=
+  OriginalGreatestGateGrowth.exactLongCountStrictGrowth
+
+theorem fixed_exactOriginalGreatestShortCountGraph : OriginalGreatestGateGrowth.ExactShortCountGraph :=
+  OriginalGreatestGateGrowth.exactShortCountGraph
+
+theorem fixed_fullOriginalGreatestGateGrowth : OriginalGreatestGateGrowth.FullOriginalGreatestGateGrowth :=
+  ⟨fixed_exactOriginalGreatestLongCountBound,fixed_exactOriginalGreatestOrdinaryStrictGrowth,
+    fixed_exactOriginalGreatestLimitStrictGrowth,fixed_exactOriginalGreatestLongCountStrictGrowth,
+    fixed_exactOriginalGreatestShortCountGraph⟩
+
+#print axioms fixed_exactOriginalGreatestLongCountBound
+#print axioms fixed_exactOriginalGreatestOrdinaryStrictGrowth
+#print axioms fixed_exactOriginalGreatestLimitStrictGrowth
+#print axioms fixed_exactOriginalGreatestLongCountStrictGrowth
+#print axioms fixed_exactOriginalGreatestShortCountGraph
+#print axioms fixed_fullOriginalGreatestGateGrowth
+
+end LogicLineages.PermittedControl.StatementChecks

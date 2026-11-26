@@ -1,0 +1,12 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullResidueObserverProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullResidueObserver.StatementChecks
+
+theorem fixed_completeResidueObserver : Targets.CompleteResidueObserver :=
+  LogicLineages.CartierObserverCurrent.FullResidueObserver.completeResidueObserver
+
+#audit_namespace LogicLineages.CartierObserverCurrent.FullResidueObserver.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullResidueObserver.StatementChecks

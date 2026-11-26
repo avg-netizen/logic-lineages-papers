@@ -1,0 +1,49 @@
+{
+  "scope": "One original signed-row unrestricted existential at one selected raw rank, with all other used ranks high. Exact code and actual low/high decomposition at one literal common bound.",
+  "frozen_manifest": {
+    "path": "formalization/verification/local-three-agent-continuation-2026-11-21/PAPER17-SIGNED-ROW-SINGLE-PROJECTION-FROZEN.json",
+    "sha256": "58d948f43a23a2a6ea73a1f5eee1eb2e758a9fde38e5694cf1fce3375eb4b254"
+  },
+  "target_only": {
+    "id": "1795320342143520134-9",
+    "sha256": "b0843ad4b0ac45629dee5fbd3465c16dfeedd1855a417e50b59f1b4760d83199",
+    "local_rows": 152
+  },
+  "native_final": {
+    "id": "1795320680844306911-9",
+    "sha256": "f96ba44496c1c6226424f1f08cad44f9489bed2e82b043456ad802694d1a133b",
+    "local_rows": 347
+  },
+  "previous_failed_editions": [
+    {
+      "id": "1795320439720886877-9",
+      "sha256": "0c556402667bf8283b366c1dcc8a2805cfb33a5ab055adcfcc78cb9aa58bcdcd",
+      "local_rows": 345,
+      "archive": "p17-signed-row-single-projection-failed-proof-1795320439720886877-9",
+      "diagnosis": "Lean deterministic whnf timeout elaborating the concrete high disjunct.",
+      "theorem_max_heartbeats": 200000
+    },
+    {
+      "id": "1795320527383888488-9",
+      "sha256": "17ae47de6e1c91d4afd59d3b81336b07c6576003d05a2d628d764309542da720",
+      "local_rows": 345,
+      "archive": "p17-signed-row-single-projection-failed-proof-1795320527383888488-9",
+      "diagnosis": "Lean deterministic whnf timeout elaborating the concrete high disjunct.",
+      "theorem_max_heartbeats": 400000
+    }
+  ],
+  "repair": "Factor the elementary lt/ge split over arbitrary propositions into a separate proof leaf; instantiate it with the two exact native equivalences. Final source runs at default Lean heartbeats and fixed native caps.",
+  "aliases": [
+    "LogicLineages.PermittedControl.StatementChecks.fixed_signedRowSingleProjectionCodeExact",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_actualSignedRowSingleProjection",
+    "LogicLineages.PermittedControl.StatementChecks.fixed_fullSignedRowSingleProjection"
+  ],
+  "numbered_promotions": [],
+  "current_sources": {
+    "formalization/LogicLineages/PermittedControl/SignedRowSingleProjectionCodeProof.lean": "75c2cf1e70b4904023ae7a9c147b8141d86ed9a3b2edcce7086819b1d7187b8c",
+    "formalization/LogicLineages/PermittedControl/SignedRowSingleProjectionCutoffProof.lean": "31f124cd44a46859734e9403602be9cc27c9e9ae8cdd94f65fc20985feee21db",
+    "formalization/LogicLineages/PermittedControl/SignedRowSingleProjectionSemanticProof.lean": "c318241881ff966495cb0edae6c4036619f27e952a993e36940976a01c03ad72",
+    "formalization/LogicLineages/PermittedControl/SignedRowSingleProjectionStatementChecks.lean": "053e15689448ee885d635d2cedc5fae3c623ad293c09e5d31616b59b9612312d",
+    "formalization/LogicLineages/PermittedControl/SignedRowSingleProjectionTargets.lean": "81cef13786a0d6f574bda319c4749921e7ba781e6f3244ce456b592239d2892d"
+  }
+}

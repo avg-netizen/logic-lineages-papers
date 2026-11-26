@@ -1,0 +1,47 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeRowMemo.SyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionSupportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeRowMemo.TailProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
+open InternalApplicationCertificateConstructorsSyntaxProof
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof InternalGraphCompositionFunctionalityProof
+open InternalRawListRecursionSupportProof InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (z suc)
+open InternalApplicationStepPeelSupportProof (andLeft andRight)
+open SyntaxProof
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+
+theorem tableTail (B : Program 2) (R : Program 4)
+    (old out index : OTerm alpha) (params : Fin 2 → OTerm alpha)
+    (hp : Nonempty (Derivation body Delta (memoGraph B R old index params)))
+    (hs : Nonempty (Derivation body Delta (memoGraph B R out (suc index) params))) :
+    Nonempty (Derivation body Delta (graph1 InternalListCodec.tailCode old out)) := by
+  have ht := recursionRecover (base B) (step R) out old index params hp hs
+  apply programCases R (Fin.cons index (Fin.cons old params)) _
+  intro beta j Theta value hj hv
+  rw [graph1Rename]
+  simp only [consTermRename] at hv
+  have ht' := renameInto ht j Theta hj
+  simp only [programRename,consTermRename] at ht'
+  let xs := Fin.cons (index.relabel j) (Fin.cons (old.relabel j) (fun i => (params i).relabel j))
+  have hc := binaryRecover InternalListCodec.consCode R (.projection 1)
+    (out.relabel j) value (old.relabel j) xs ht' hv (projectionValue 1 xs)
+  exact andLeft (andRight (InternalListCodecSupportProof.consDestruction (out.relabel j) value (old.relabel j) hc))
+
+theorem memoHead (B : Program 2) (R : Program 4)
+    (out code tab : OTerm alpha) (params : Fin 2 → OTerm alpha)
+    (hr : Nonempty (Derivation body Delta (memoRowGraph B R out code params)))
+    (ht : Nonempty (Derivation body Delta (memoGraph B R tab code params))) :
+    Nonempty (Derivation body Delta (graph1 InternalListCodec.headCode out tab)) :=
+  unaryRecover InternalListCodec.headCode (ExchangeRowMemo.table B R) out tab (Fin.cons code params) hr ht
+
+theorem internalTableTail : Targets.InternalTableTail := by
+  intro B R body alpha Delta index window bound old next hp hs
+  exact tableTail B R old next index ![window,bound] hp hs
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeRowMemo.TailProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeRowMemo.TailProof

@@ -1,0 +1,7 @@
+# Independent final: HighestPiece foundation
+
+Approved supporting conjunction only. Independently reproduced recursive native evidence exactly: 86 source-matched modules, zero errors, exact fixed_highestPieceFoundation alias with standard axioms only. Native 1794986733134772142-8; all four frozen pins unchanged. No compiler invocation.
+
+Read GeometryProof, CodeProof and HighestPieceProof. Actual CNF exponent norm bounds give the bounded representative cover, including b+1 and 2. Piece ordering is established from the literal breakpoint equivalence, not ordinal norm monotonicity. The actual encoded normal norm ball is filtered by calibrated comparisons and profiles; the maximum fold is proved maximal by real ordinal comparisons. Primitive recursion is proved for all raw codes via the actual filter and option fold. None is equivalent to agreement throughout the entire ordinal interval, using finite cover and normal representation completeness; some supplies normality, bound, domain, nonzero discrepancy, maximality and highest-piece correctness. Exact source-sign correspondence is obtained from calibrated profiles and piece constancy.
+
+Preserved proof-only failures are not promoted. The selector need not be the manuscript's chosen representative identity: it selects the same highest nonzero piece and sign. No actual trajectory visit, traversal affordability, equal-gap or main comparison claim follows from this packet.

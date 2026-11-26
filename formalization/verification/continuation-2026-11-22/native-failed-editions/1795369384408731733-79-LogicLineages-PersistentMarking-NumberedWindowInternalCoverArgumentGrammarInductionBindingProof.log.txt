@@ -1,0 +1,62 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentGrammarInductionBindingProof.lean:62:71: error: unsolved goals
+α β : Type
+F : Program 1
+s : Settings
+q : OTerm α
+vals : Fin 6 → OTerm α
+ts : α → OTerm β
+⊢ NumberedWindowInternalSparsePathEnvelopeTargets.unary
+        (NumberedWindowInternalCoverArgumentMemoTargets.argumentMeasure F) (Term.subst (vals 0) ts) (Term.subst q ts) ⊓
+      (codePair (Term.subst (vals 0) ts) (Term.subst (vals 1) ts) (Term.subst (vals 2) ts) ⊓
+        ((BoundedFormula.subst
+              (NumberedWindowInternalCoverSelectedGrammarTargets.grammarReport (vals 3) (vals 1)
+                (SourceComputabilityFormulaSupportProof.numeral (Encodable.encode s.window.2))
+                (SourceComputabilityFormulaSupportProof.numeral (Encodable.encode s.types)) (vals 2))
+              fun a => emb (ts a)) ⊓
+            (NumberedWindowInternalSparsePathEnvelopeTargets.unary ID1Completion.InternalUnpair.left
+                (Term.subst (vals 4) ts) (Term.subst (vals 3) ts) ⊓
+              NumberedWindowInternalSparsePathEnvelopeTargets.unary ID1Completion.InternalUnpair.right
+                (Term.subst (vals 5) ts) (Term.subst (vals 3) ts)) ⊓
+          NumberedWindowInternalSparseScratchMembershipTargets.memberGraph (Term.subst (vals 5) ts)
+            (Term.subst q ts))) =
+    NumberedWindowInternalSparsePathEnvelopeTargets.unary
+        (NumberedWindowInternalCoverArgumentMemoTargets.argumentMeasure F) (Term.subst (vals 0) ts) (Term.subst q ts) ⊓
+      (codePair (Term.subst (vals 0) ts) (Term.subst (vals 1) ts) (Term.subst (vals 2) ts) ⊓
+        (NumberedWindowInternalCoverSelectedGrammarWidthTargets.observed (Term.subst (vals 1) ts)
+            (SourceComputabilityFormulaSupportProof.numeral (Encodable.encode s.window.2))
+            (SourceComputabilityFormulaSupportProof.numeral (Encodable.encode s.types)) (Term.subst (vals 2) ts)
+            (Term.subst (vals 3) ts) (Term.subst (vals 4) ts) (Term.subst (vals 5) ts) ⊓
+          NumberedWindowInternalSparseScratchMembershipTargets.memberGraph (Term.subst (vals 5) ts) (Term.subst q ts)))
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentGrammarInductionBindingProof.lean:63:67: warning: This simp argument is unused:
+  observedSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [̵a̵r̵g̵u̵m̵e̵n̵t̵P̵a̵y̵l̵o̵a̵d̵,̵c̵o̵n̵j̵u̵n̵c̵t̵i̵o̵n̵S̵u̵b̵s̵t̵,̵u̵n̵a̵r̵y̵S̵u̵b̵s̵t̵,̵p̵a̵i̵r̵S̵u̵b̵s̵t̵,̵o̵b̵s̵e̵r̵v̵e̵d̵S̵u̵b̵s̵t̵,̵m̵e̵m̵b̵e̵r̵S̵u̵b̵s̵t̵,̵
+  ̵ ̵ ̵ ̵ ̵h̵e̵a̵d̵s̵T̵e̵r̵m̵,̵t̵y̵p̵e̵s̵T̵e̵r̵m̵,̵n̵u̵m̵e̵r̵a̵l̵S̵u̵b̵s̵t̵]̵[̲a̲r̲g̲u̲m̲e̲n̲t̲P̲a̲y̲l̲o̲a̲d̲,̲ ̲c̲o̲n̲j̲u̲n̲c̲t̲i̲o̲n̲S̲u̲b̲s̲t̲,̲ ̲u̲n̲a̲r̲y̲S̲u̲b̲s̲t̲,̲ ̲p̲a̲i̲r̲S̲u̲b̲s̲t̲,̲ ̲m̲e̲m̲b̲e̲r̲S̲u̲b̲s̲t̲,̲ ̲h̲e̲a̲d̲s̲T̲e̲r̲m̲,̲
+  ̲ ̲ ̲ ̲ ̲t̲y̲p̲e̲s̲T̲e̲r̲m̲,̲ ̲n̲u̲m̲e̲r̲a̲l̲S̲u̲b̲s̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentGrammarInductionBindingProof.lean:64:24: warning: This simp argument is unused:
+  numeralSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [argumentPayload, ̲conjunctionSubst, ̲unarySubst, ̲pairSubst, ̲observedSubst, ̲memberSubst,
+      headsTerm, ̲typesTerm,̵n̵u̵m̵e̵r̵a̵l̵S̵u̵b̵s̵t̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverArgumentGrammarInductionBindingProof.argumentExistsSubst' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverArgumentGrammarInductionBindingProof.argumentWitness' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverArgumentGrammarInductionBindingProof.argumentMotiveAt' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverArgumentGrammarInductionBindingProof.argumentMotiveLift' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

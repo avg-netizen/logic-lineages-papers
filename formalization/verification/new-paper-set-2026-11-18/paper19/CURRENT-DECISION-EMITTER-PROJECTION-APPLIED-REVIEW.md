@@ -1,0 +1,1 @@
+Applied SHA dfe7815e... independently verified, original eight frozen source/target pins unchanged. Exact approved nested projection elaboration change only; same Nat equality and proof statement. Preserved owner failure edition/log/receipt retained. Fresh helper gate allowed after explicit queue admission.

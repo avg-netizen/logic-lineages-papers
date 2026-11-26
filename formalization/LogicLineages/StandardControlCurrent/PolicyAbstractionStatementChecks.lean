@@ -1,0 +1,10 @@
+module
+public import LogicLineages.StandardControlCurrent.PolicyAbstractionSyntaxProof
+public import LogicLineages.StandardControlCurrent.PolicyAbstractionProgramsProof
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.PolicyAbstractionStatementChecks
+theorem full : PolicyAbstractionTargets.Full :=
+  ⟨PolicyAbstractionCollectionProof.partials,PolicyAbstractionCollectionProof.factor,
+    PolicyAbstractionSyntaxProof.literal,PolicyAbstractionProgramsProof.programs⟩
+#print axioms full
+end LogicLineages.StandardControlCurrent.PolicyAbstractionStatementChecks

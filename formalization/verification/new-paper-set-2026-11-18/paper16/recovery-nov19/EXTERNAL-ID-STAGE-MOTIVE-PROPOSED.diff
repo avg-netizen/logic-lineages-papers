@@ -1,0 +1,12 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowExternalIDStageProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowExternalIDStageProof.lean
+@@ -14,7 +14,8 @@
+     (F A : Operator) (tag : Nat → Nat)
+     (proj : ∀ P n, F P (tag n) ↔ A (fun d => P (tag d)) n) (a : ι) :
+     ∀ n, stage r wf F a (tag n) ↔ stage r wf A a n := by
+-  refine wf.induction a ?_
++  refine wf.induction (C := fun i => ∀ n,
++    stage r wf F i (tag n) ↔ stage r wf A i n) a ?_
+   intro a ih n
+   rw [stageEq r wf F a,stageEq r wf A a,proj]
+   have hPrior :

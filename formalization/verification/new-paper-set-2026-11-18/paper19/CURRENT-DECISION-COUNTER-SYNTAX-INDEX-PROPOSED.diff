@@ -1,0 +1,14 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSyntaxProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSyntaxProof.lean
+@@ -29,9 +29,9 @@
+         (fun {α : Ty} (x : Variable Γ α) => place right (.there (.there x))) =
+         (fun {α : Ty} (x : Variable Γ α) => shift 6 x) := by
+       funext α x
+-      cases right <;> simp only [place]
++      cases α <;> cases right <;> first | rfl | (cases x <;> rfl)
+     rw [pointwise]
+-    exact prefix_table_code Γ 6
++    exact (prefix_table_code Γ 6).symm
+   rw [renamingCode, renamingCode, tail]
+   cases right <;> rfl
+ 

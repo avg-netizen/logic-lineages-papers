@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidity
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryValidityTargets
+#check Frame
+#check State
+#check transition
+#check validator
+#check normalizedData
+#check guard
+#check refineData
+#check ActualOriginalHereditaryTransitionCalibration
+#check ActualOriginalHereditaryEncodedTransition
+#check ActualOriginalHereditaryBoundedCalibration
+#check ActualOriginalHereditaryPayloadBounds
+#check ActualOriginalHereditaryWorkDecrease
+#check ActualOriginalLambdaPayloadChildFuelBound
+#check ActualOriginalLambdaPayloadParentFuelBound

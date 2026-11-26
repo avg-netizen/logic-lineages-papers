@@ -1,0 +1,28 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowSelectProgramProof.lean:21:39: error: Application type mismatch: The argument
+  Primrec.cond hx he hb
+has type
+  Primrec fun a => bif ex a then e a else b a
+but is expected to have type
+  Primrec fun x => if ex x = true then e x else b x
+in the application
+  Primrec.comp fieldsPrim (Primrec.cond hx he hb)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowSelectProgramProof.lean:52:7: error: unexpected token 'matches'; expected '(', ':=', '|' or term
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowSelectProgramProof.lean:52:7: error: Missing cases:
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowSelectProgramProof.lean:42:92: error: unsolved goals
+ex : Primrec fun p => p.1.1
+idx : Primrec fun p => p.1.2.1
+ds : Primrec fun p => p.1.2.2
+src : Primrec fun p => p.2.1
+dst : Primrec fun p => p.2.2
+P : Type := Input × ℕ × List ℕ
+tag : Primrec fun p => p.2.1
+fs : Primrec fun p => p.2.2
+val : ∀ (n : ℕ), Primrec fun a => a.2.2.getD n 0 := fun n => Primrec₂.comp (Primrec.list_getD 0) fs (Primrec.const n)
+⊢ Primrec fun p => select p.1.1 p.1.2.1 p.1.2.2 p.2.1 p.2.2
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowSelectProgramProof.lean:66:101: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

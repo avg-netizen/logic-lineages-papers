@@ -1,0 +1,15 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaCanonicalProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaCanonicalStatementChecks
+open OriginalLambdaCanonicalTargets OriginalLambdaCanonicalProof
+
+theorem exactRepresentativeFactorization : ActualOriginalLambdaRepresentativeFactorization :=
+  actualOriginalLambdaRepresentativeFactorization
+
+theorem exactCanonicalBodyIff : ActualOriginalLambdaCanonicalBodyIff :=
+  actualOriginalLambdaCanonicalBodyIff
+
+#print axioms exactRepresentativeFactorization
+#print axioms exactCanonicalBodyIff
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaCanonicalStatementChecks

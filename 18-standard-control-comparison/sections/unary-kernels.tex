@@ -1,0 +1,419 @@
+\section{Principal kernels, retained mass, and lower profiles}
+\label{u:sec:kernels}
+The sign algorithm uses auxiliary kernels to expose the terminal peak of
+a fixed source head. Their indices and masses are closed finite data,
+and auxiliary kernels are not new input constructors in $\mathcal P_1$.
+
+\begin{definition}[Principal suffix kernel]\label{u:def:kernel}
+Let $\pi=\omega^\beta\ge\omega$ be a fixed principal, $a\in\N$, and
+$t\ge a+\norm(\pi)$. Start at suffix
+$\pi+(t-a-\norm(\pi))$, with total norm $t$ and permanent numerical mass
+$a$. At a nonfinite suffix $\eta+n$, replace it by
+$M(\eta,f(v)-a)$, where $v$ is the current total norm.
+Let $\EE\pi a(t)$ count steps to the first finite suffix and put
+\begin{equation}
+              \KK\pi a(t)=f^{\EE\pi a(t)}(t).        \label{u:display:4-1}
+\end{equation}
+The finite exit suffix is $\KK\pi a(t)-a$. The value in \eqref{u:display:4-1} is the
+\emph{total} exit norm, and always belongs to $\operatorname{range}(f)$.
+\end{definition}
+The suffix is strictly descending and its next norm budget is always
+genuine. Thus the procedure terminates. A numerical mass need not be the
+norm of any source prefix.
+
+\begin{lemma}[Exact prefix splitting]\label{u:lem:prefix}
+Let $\kappa$ be a fixed Cantor prefix and let $\eta$ be a nonzero limit
+whose leading monomial is at most the least monomial of $\kappa$;
+the zero prefix is also allowed. In particular one may take
+$\kappa=\pi k$ and $\operatorname{lead}(\eta)\le\pi$.
+For $b\ge c=\norm(\kappa)$,
+\begin{equation}
+ M(\kappa+\eta,b)=\kappa+M(\eta,b-c).                \label{u:display:4-2}
+\end{equation}
+A descent above $\kappa$ reaches a state $\kappa+n$ with finite remainder
+before passing below $\kappa$. During that segment the remainder's exact
+norm control is
+\begin{equation}
+                   G_c(v)=f(c+v)-c\ge f(v)>v.         \label{u:display:4-3}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The ordinal $\kappa$ is eligible below $\kappa+\eta$, so the maximum cannot
+have a smaller prefix. Every ordinal in the interval has a unique remainder
+$r<\eta$, and compatible Cantor concatenation gives norm $c+\norm(r)$.
+Maximizing that remainder proves \eqref{u:display:4-2}. Equal leading boundary exponents
+cause coefficients and their norm contributions to add, so they are allowed.
+Budgets increase, keeping the prefix affordable. Equation \eqref{u:display:4-2} forbids
+skipping the finite-remainder cut; ordinal well-foundedness supplies it.
+Norm saturation proves \eqref{u:display:4-3}. An increasing integer map preserves integer
+differences, giving its inequality.
+\end{proof}
+
+\begin{lemma}[Ordered controls and counts]\label{u:lem:counts}
+For increasing integer controls $g\le h$, both strictly exceeding their
+input, let $L_g,L_h$ be the respective norm-maximal descent counts.
+Then
+\begin{equation}
+ \alpha\le\beta,\quad\norm(\alpha)\le\norm(\beta)
+       \quad\Longrightarrow\quad L_g(\alpha)\le L_h(\beta). \label{u:display:4-4}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Induct on $\beta$. Finite $\alpha$ has zero count. Otherwise write the
+limit parts of $\alpha,\beta$ as $\lambda,\mu$. If $\lambda=\mu$, their
+next states $p,q$ are ordered by monotonicity in the budget, and
+$\norm(p)=g(\norm\alpha)\le h(\norm\beta)=\norm(q)$.
+If $\lambda<\mu$, then $\alpha<\mu$ and its norm is less than the next
+$h$-budget. Hence $\alpha$ is eligible below $\mu$, so
+$p<\alpha\le q$; the same norm inequality holds. Apply induction at
+$q<\beta$ and add the first step.
+\end{proof}
+This also proves fixed-head monotonicity: increasing the finite tail of
+$\rho+n$ increases its norm and does not decrease its count, so its full
+$\psi$ value is strictly increasing. Fixed-mass kernels strictly increase
+their genuine input by the same argument. Decreasing their retained mass
+at fixed total input weakly increases the suffix and its budgets, so cannot
+decrease the exit norm.
+
+\begin{lemma}[Exact peak word]\label{u:lem:peakword}
+For each fixed limit $\lambda$, one computes a finite word $W_\lambda$ of
+principal kernels such that the peak of $h_\lambda(A)$ is exactly
+\begin{equation}
+             Z_{\lambda,A}=W_\lambda(\norm(\lambda)+A). \label{u:display:4-5}
+\end{equation}
+The omitted count is positive: $h_\lambda(A)=Z_{\lambda,A}+D_{\lambda,A}$.
+\end{lemma}
+\begin{proof}
+Expand $\lambda$ into coefficient-one principal Cantor blocks. Delete them
+from right to left. For each block $\pi$, the remaining earlier prefix has
+a fixed norm $a$. Lemma~\ref{u:lem:prefix} says that this segment changes the
+current total norm by exactly $\KK\pi a$. The last segment has prefix
+zero. Concatenating the finitely many segments gives the exact word.
+Every removed nonfinite segment contributes its literal count to $D$;
+no count is set to zero in \eqref{u:display:4-5}.
+\end{proof}
+
+\subsection{Paying an entire lower positive profile}
+A lower profile below a principal $L>\omega$ means a fixed expression
+$P(z)$ formed from constants, $z$, addition and heads $h_\rho$ with
+$\rho<L$. Its heads may themselves be nonprincipal limits.
+The following reserve argument is needed to compare unequal kernel inputs
+and to handle a limit exponent. Merely knowing that a larger kernel exceeds
+a fixed number of $f$-iterates would be insufficient.
+
+\begin{lemma}[One-stage reserve consumer]\label{u:lem:stage}
+Let $\rho<\pi m$ be a fixed nonzero limit, $m\ge1$, and begin an ordinary
+descent at $A=\pi(k+m)+n$, of norm $X\ge x\ge\norm(\rho)$.
+At its first cut $\pi k+n'$ with finite remainder,
+\begin{equation}
+        n'>J_\rho(x):=f^{D_\rho(x)}(x)+D_\rho(x),    \label{u:display:5-1}
+\end{equation}
+where $D_\rho(x)$ is the count from
+$\rho+(x-\norm(\rho))$.
+\end{lemma}
+\begin{proof}
+Put $c=k\norm(\pi)$ and $\alpha=\rho+(x-\norm\rho)$.
+The ordinal $\pi k+\alpha$ is below the initial limit part and has norm
+$c+x\le2X<f(X)$, hence is eligible for the first predecessor. Its
+remainder is at least $\alpha$ and has norm $f(X)-c\ge x$.
+Lemmas~\ref{u:lem:prefix} and \ref{u:lem:counts} show that the following
+prefix segment takes at least $d=D_\rho(x)$ further steps. Its exit total
+norm $Y$ is at least $f^{d+1}(X)$. As $c\le X$ and every increasing
+integer iterate preserves differences,
+\[
+ n'=Y-c\ge f^{d+1}(X)-X\ge f^{d+1}(x)-x.
+\]
+Write $W=f^d(x)\ge x+d$. Then
+$f(W)-x>2W-x\ge W+d=J_\rho(x)$, as required.
+Notice that the prefix mass was paid using $c\le X$; it need not be
+bounded by the smaller test input $x$.
+\end{proof}
+
+\begin{lemma}[Effective profile reserve]\label{u:lem:reserve}
+From a lower profile $P$ below $L>\omega$ one computes a nonempty word
+\begin{equation}
+ F=h_{\rho_l}\circ\cdots\circ h_{\rho_1},\quad
+ F(z)>P(z)\ (z\ge z_0),\quad
+ R=\sum_j(\norm(\rho_j)+1),\quad
+ H=\max_j\norm(\operatorname{lead}(\rho_j)),          \label{u:display:5-2}
+\end{equation}
+with every $\rho_j<L$. If $\pi\ge\omega$ is principal and at least every
+displayed leading monomial, a descent from $\pi R+n$, $n\ge z\ge z_0$,
+has terminal norm greater than $P(z)$. The same conclusion holds with any
+additional permanent numerical mass $c$.
+\end{lemma}
+\begin{proof}
+Choose $z_0\ge4$, all constants and every weighted addition fan-in in $P$.
+Process its expression graph in topological order, maintaining a common
+upper bound $u$ on all node values already visited. An addition with fan-in
+$b$ is bounded by $bu\le u^2\le2^u<h_\omega(u)$; append $h_\omega$ to the
+running bound. For a head node append that head, using its monotonicity.
+Every update increases the running bound. Append a final $h_\omega$ to
+make the bound strict and the word nonempty. Since $L>\omega$, all added
+heads are still below $L$.
+
+For a head $\rho_j$ take $m_j=\norm(\rho_j)+1$ blocks. Its leading
+coefficient is at most its norm, so $\rho_j<\pi m_j$. Moreover the
+current norm at $\pi(k+m_j)+n$ is at least $\norm(\rho_j)+n$.
+Lemma~\ref{u:lem:stage}, with $x=\norm(\rho_j)+n$, therefore makes the
+finite tail at the next cut exceed $h_{\rho_j}(n)$. Repeat through the
+word, using exactly $R$ blocks. The final finite norm exceeds $F(z)>P(z)$.
+For permanent mass $c$, the exact suffix control is $G_c\ge f$.
+Lemma~\ref{u:lem:counts} orders the counts and the iterated norms, so the
+terminal suffix norm is at least the unprefixed one; adding $c$ only
+increases the total norm.
+\end{proof}
+
+\begin{lemma}[Direct kernel growth]\label{u:lem:direct}
+For fixed $L>\omega$ principal and fixed lower profile $P$, one computes
+$T$ such that, for $t\ge T$ and every genuine mass $0\le c\le t-\norm(L)$,
+\begin{equation}
+                         \KK Lc(t)>P(t).             \label{u:display:5-3}
+\end{equation}
+Also, $\KK\pi c(t)\le h_\pi(t)$ on its genuine domain.
+\end{lemma}
+\begin{proof}
+Choose one fixed principal $\omega\le\pi<L$ dominating the finite list of
+leading monomials in \eqref{u:display:5-2}. For
+$t\ge\max(z_0,R\norm\pi,4,\norm L)$, the ordinal $S=\pi R+t<L$ has
+\[
+             c+\norm(S)\le R\norm\pi+2t\le3t<f(t).
+\]
+It is eligible below the actual first suffix $M(L,f(t)-c)$. Count
+comparison under the same induced control transfers the reserve bound
+from $S$ to that maximum. This proves \eqref{u:display:5-3} uniformly in the masses.
+For the final assertion first lower the retained mass to zero, then
+increase the seed from $t$ to $\norm\pi+t$. Mass monotonicity and
+fixed-mass input monotonicity bound the kernel peak by the full head value.
+\end{proof}
+
+\subsection{Adjacent inputs and limit-exponent mass separation}
+\begin{theorem}[Cross-mass strict-input separation]\label{u:thm:adjacent}
+For a fixed principal $L>\omega$ and fixed lower profile $P$ with reserve
+data \eqref{u:display:5-2}, put
+\begin{equation}
+              T=\max(4,R+5,z_0,\norm L,H).            \label{u:display:6-1}
+\end{equation}
+For $t\ge T$, $0\le c\le t+1-\norm L$, and
+$0\le e\le t-\norm L$,
+\begin{equation}
+       \KK Lc(t+1)>P(\KK Le(t)+\EE Le(t)).            \label{u:display:6-2}
+\end{equation}
+There is no ordering requirement on $c,e$. More generally the same
+conclusion holds with any $u>t$ and any mass genuine at $u$ on the left.
+\end{theorem}
+\begin{proof}
+Write $B=f(t)$, $B'=f(t+1)$, $b=M(L,B-e)$,
+$\pi=\operatorname{lead}(b)$ and $w=\norm\pi$. Since
+$B-e\ge f(t)-t+\norm L\ge t+\norm L\ge H$, every leading monomial
+needed by \eqref{u:display:5-2} is eligible below $L$ in this budget. Also $B-e\ge2$,
+so $\pi\ge\omega$. Thus $\pi<L$, $w\le B$, and $\pi$ dominates
+every required leading monomial.
+
+Put $p=c+Rw$ and
+\[
+ k=B'-B-(p-e),\qquad A=\pi R+b+k.
+\]
+Here $p-e\le t+1+RB\le(R+1)B$ and
+$B'\ge2^{B+1}>(R+2)B$, so $k\ge0$. The sum is compatible CNF,
+has norm $B'-c$, and lies below the principal $L$. Hence
+$A\le Q=M(L,B'-c)$ and both have the same norm. The latter is the
+upper process's actual first suffix.
+
+Follow the packed suffix $A$ retaining its first $R$ blocks while deleting
+the remainder $b+k$. At the reserve cut it has finite tail
+\begin{equation}
+               n=V-p,\qquad V=f^q(B').              \label{u:display:6-3}
+\end{equation}
+The lower process, after its first step, starts at $b$ with suffix norm $B-e$ and total norm $B$
+and retained mass $e$. Let its remaining count be $\ell$, and set
+$D=1+\ell=\EE Le(t)$ and $Z=f^\ell(B)=\KK Le(t)$.
+The packed remainder initially exceeds $b$. The initial global gap pays
+the mass difference $p-e$ and, as increasing integer iterates preserve
+differences, at every simultaneous later step
+$f^i(B')-p\ge f^i(B)-e$. Monotonicity of $M$ in its limit bound and
+budget keeps the packed remainder above the lower remainder; it cannot
+become finite earlier. Hence $q\ge\ell$.
+
+If $s=f^{D-1}(t)$, then
+\[
+ V\ge f^\ell(B')=f^D(t+1)\ge f(s+1)\ge2^{Z+1}.
+\]
+Furthermore $D<Z$ and $p\le(R+1)Z$. Since $Z\ge t\ge R+5$,
+$p+Z+D<(R+3)Z<Z^2<2^{Z+1}\le V$. Thus $n>Z+D$ after the full
+retained mass has been subtracted. Lemma~\ref{u:lem:reserve} gives terminal
+total norm greater than $P(Z+D)$ for the packed process. Count comparison
+from $A\le Q$ at their equal norms, under their common control $G_c$,
+transfers that bound to the actual upper kernel.
+
+For arbitrary $u>t$, use the worst-mass inequalities
+\begin{equation}
+ \KK Lc(u)\ge \KK L{u-\norm L}(u)
+          \ge \KK L{t+1-\norm L}(t+1).              \label{u:display:6-4}
+\end{equation}
+The first is mass monotonicity. For the second both processes start at
+the identical suffix $L$, while their simultaneous suffix budgets are
+$f^i(u)-u+\norm L\ge f^i(t+1)-(t+1)+\norm L$.
+Their counts and terminal total norms are ordered. Apply the adjacent
+case with the displayed genuine upper mass.
+\end{proof}
+
+At $L=\omega$ the kernel is simply $f(t)$, independently of mass. There
+are no nonzero lower limit heads, so $P(z)=az+b$. Taking
+$T_\omega=\max(4,a+b+2)$ gives
+$P(f(t)+1)<f(t+1)$ by \eqref{u:eq:gaps}. This is the separate base case of
+Theorem~\ref{u:thm:adjacent}.
+
+\begin{theorem}[Limit-exponent mass separation]\label{u:thm:limitmass}
+Let $L=\omega^\beta$ with $\beta$ a nonzero limit. For a fixed lower
+profile $P$ and data \eqref{u:display:5-2}, put
+\begin{equation}
+           T=\max(4,R+4,z_0,\norm L+1,H).            \label{u:display:6-5}
+\end{equation}
+For $t\ge T$ and $0\le c<e\le t-\norm L$,
+\begin{equation}
+                \KK Lc(t)>P(\KK Le(t)+\EE Le(t)).    \label{u:display:6-6}
+\end{equation}
+Consequently the lexicographically larger pair $(\text{input},-\text{mass})$
+gives domination against every fixed lower profile, on an effective
+genuine tail. Equal pairs give equal values.
+\end{theorem}
+\begin{proof}
+Put $B=f(t)$ and $C=f(B)$. Because $\beta$ is a limit, the maximum
+affordable exponent $\delta_a=M(\beta,B-a-1)$ saturates its norm budget.
+Its monomial $\pi_a=\omega^{\delta_a}$ already costs $B-a$, so the first
+suffix below $L$ is exactly $\pi_a$, with coefficient one and no remainder.
+Since $c<e$, saturation gives $\delta_c>\delta_e$ and $\pi_c>\pi_e$.
+Put $w=\norm\pi_e=B-e$. The inequality
+$B-e\ge f(t)-t+\norm L\ge t+\norm L\ge H$ shows that $\pi_e$ is
+infinite and dominates every required leading monomial.
+
+At the second upper step pack
+\[
+       k=C-c-(R+1)w,\qquad A=\pi_e(R+1)+k.
+\]
+Since $C>(R+1)B$ and $c+(R+1)w\le(R+1)B$, the tail $k$ is nonnegative.
+The ordinal $A$ is below $\pi_c$ and has norm $C-c$, hence is below the
+actual second upper suffix $Q=M(\pi_c,C-c)$ at that same norm.
+
+In the packed process hold $R$ blocks while deleting $\pi_e+k$.
+The retained mass is $p=c+Rw$. Compare this remainder with the lower
+process after its first step, namely $\pi_e$ with total norm $B$ and
+retained mass $e$. The global difference $C-B$ exceeds $p-e\le RB$,
+so synchronized budgets keep the packed remainder above the lower one.
+If the latter needs $\ell$ further steps, the reserve cut has norm
+$V\ge f^\ell(C)=f(Z)$, where $Z=\KK Le(t)=f^\ell(B)$ and
+$D=\EE Le(t)=1+\ell<Z$. Since $p\le(R+1)Z$ and $Z\ge R+4$,
+$f(Z)>(R+3)Z>p+Z+D$. Its finite tail after all retained mass is paid
+is therefore greater than $Z+D$.
+
+Consume the reserve by Lemma~\ref{u:lem:reserve}, still with permanent mass
+$c$. Transfer from $A\le Q$ at equal suffix norms using
+Lemma~\ref{u:lem:counts}. This yields \eqref{u:display:6-6}. Every estimate uses only the
+displayed genuine domains, not a fixed bound on $c,e$, so it is uniform
+over the stated numerical masses. Combine with
+Theorem~\ref{u:thm:adjacent} for unequal inputs to obtain the lexicographic
+assertion. A profile-dependent threshold is intended; there is no single
+threshold valid for all profiles at once.
+\end{proof}
+The limit-exponent hypothesis is essential. For example, the successor
+identity proved next gives
+$\KK{\omega^2}0(t)=f(\KK{\omega^2}2(t))$, while the lower profile
+$h_\omega(z)=f(z+2)+1$ exceeds $f(z)$. Thus arbitrary lower-profile
+absorption at the same input is false for successor exponents.
+
+\subsection{Successor cuts and all same-input mass classes}
+\begin{lemma}[Exact successor cut and count cocycle]\label{u:lem:successor}
+Let $\theta=\omega^\gamma\ge\omega$, $L=\theta\omega$, and
+$w=\norm\theta$. On the common genuine domain $t\ge c+w+\norm L$,
+\begin{align}
+ \KK Lc(t)&=\KK\theta c(\KK L{c+w}(t)),              \label{u:eq:cut}\\
+ \EE Lc(t)&=\EE L{c+w}(t)
+        +\EE\theta c(\KK L{c+w}(t)).                \label{u:eq:cocycle}
+\end{align}
+\end{lemma}
+\begin{proof}
+For $b=wq+r$, $0\le r<w$, the literal maximum is
+\begin{equation}
+                   M(L,b)=\theta q+M(\theta,r).      \label{u:display:7-3}
+\end{equation}
+The largest monomial below $L$ is $\theta$, costing $w$; greedily maximize
+its coefficient, then the remainder below $\theta$. This also covers
+$q=0$. Lowering the first budget from $f(t)-c$ to $f(t)-c-w$ removes
+exactly one $\theta$ block and leaves the same remainder. Retaining that
+one block in the $c$-process makes its mass during deletion of the other
+remainder exactly $c+w$. Both processes have total norm $f(t)$ after
+their first step. Prefix splitting therefore gives identical subsequent
+norms until the latter process's finite cut. The remaining block is
+exactly $\KK\theta c$, and the counts add. The stronger common domain
+ensures that the inner shifted-mass kernel exists.
+\end{proof}
+
+\begin{lemma}[Small principal kernels]\label{u:lem:small}
+On their genuine domains,
+\begin{equation}
+ \KK\omega c(t)=f(t),\quad\EE\omega c(t)=1,\qquad
+ \EE{\omega^2}c(t)=f(t)/2-\lceil c/2\rceil+1.         \label{u:display:7-4}
+\end{equation}
+Thus $\omega^2$ kernels at the same input have exactly the mass classes
+$\lceil c/2\rceil$, ordered in reverse. The control has even values.
+\end{lemma}
+\begin{proof}
+Below $\omega$ the first predecessor is finite. Below $\omega^2$ it is
+$\omega q+r$ with $q=\lfloor(f(t)-c)/2\rfloor$ and $0\le r<2$.
+The first step is followed by exactly one step for each $\omega$ block,
+because each such block's deletion uses a finite suffix maximum. Thus
+the count is $q+1$, giving \eqref{u:display:7-4}. The definition of the iterated
+exponential hierarchy makes each $f(t)$ even.
+\end{proof}
+
+\begin{theorem}[Strict mass order above degree two]\label{u:thm:mass}
+For every fixed principal $L\ge\omega^3$, a computable $T_L$ satisfies
+\begin{equation}
+ t\ge T_L,\quad0\le c<e\le t-\norm L
+                 \quad\Longrightarrow\quad\KK Lc(t)>\KK Le(t). \label{u:display:7-5}
+\end{equation}
+For a nonzero limit exponent take $T_L=\max(7,\norm L+1)$.
+For $L=\theta\omega$, $\theta\ge\omega^2$, $w=\norm\theta$, take
+\begin{equation}
+ T_L=\max(4,\norm L,2w,\max(8,w),S_\theta),          \label{u:display:7-6}
+\end{equation}
+where $S_\theta=0$ at $\theta=\omega^2$ and otherwise $S_\theta=T_\theta$.
+\end{theorem}
+\begin{proof}
+The limit case is Theorem~\ref{u:thm:limitmass} with profile $P(z)=z$.
+Its compiler uses just one final $h_\omega$, giving $R=3,H=2,z_0=4$.
+For the successor case let $B=f(t)$, and write the first suffixes from
+\eqref{u:display:7-3} as $\theta q_a+r_a$, $a=c,e$. Here $q_c\ge q_e=q$ and
+$r_a=M(\theta,(B-a)\bmod w)$. The domain and \eqref{u:display:7-6} imply
+$B-e\ge f(t)-t+\norm L\ge2w$, so $q\ge2$.
+
+Hold $q$ common $\theta$ blocks while deleting residuals
+$\theta(q_c-q)+r_c$ and $r_e$. The first residual is at least the
+second. Their permanent masses are $c+wq$ and $e+wq$; at equal global
+norms their suffix budgets preserve this order. The finite-cut entry
+norms therefore satisfy $U_c\ge U_e\ge B$.
+
+With $k$ common blocks remaining, the child masses are
+$a_k=c+w(k-1)<b_k=e+w(k-1)$. They are genuine even at the smaller
+entry norm $V\ge B$, because
+\begin{equation}
+ b_k\le e+w(q-1)=B-((B-e)\bmod w)-w\le B-w\le V-w. \label{u:display:7-7}
+\end{equation}
+If the entry norms are unequal, Theorem~\ref{u:thm:adjacent} with identity
+profile preserves strict order, uniformly over both masses; its threshold
+is $\max(8,w)$. If they agree and $\theta\ge\omega^3$, the inductive
+strict-mass theorem makes the first child outputs strictly ordered, and
+every subsequent block preserves it.
+
+For $\theta=\omega^2$, Lemma~\ref{u:lem:small} gives weak order, with a
+tie precisely when $b_k=a_k+1$ and $a_k$ is odd. If the first block ties,
+the next pair of masses subtracts $w=3$ from both; the smaller mass is
+then even, so their ceilings differ and the second outputs are strictly
+ordered. There are at least two blocks, and \eqref{u:display:7-7} pays their domains.
+All further blocks preserve the strict order. This proves the base and
+the successor induction. Removing the finite terminal successor tail of
+the exponent reaches either this base or a limit exponent, so the
+threshold recursion terminates.
+\end{proof}
+

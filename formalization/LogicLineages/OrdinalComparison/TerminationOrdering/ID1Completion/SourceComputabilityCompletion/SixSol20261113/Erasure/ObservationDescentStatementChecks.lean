@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.ObservationDescentProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.ObservationDescentStatementChecks
+theorem exactSelector : ObservationDescentTargets.ActualSelectorBound := ObservationDescentSelectorProof.actualSelectorBound
+theorem exactLookup : ObservationDescentTargets.ActualTypedLookupDescent := ObservationDescentLookupProof.actualTypedLookupDescent
+theorem exactDirect : ObservationDescentTargets.ActualDirectChildDescent := ObservationDescentDirectProof.actualDirectChildDescent
+theorem exactStored : ObservationDescentTargets.ActualStoredChildDescent := ObservationDescentProof.actualStoredChildDescent
+#print axioms exactSelector
+#print axioms exactLookup
+#print axioms exactDirect
+#print axioms exactStored
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261113.Erasure.ObservationDescentStatementChecks

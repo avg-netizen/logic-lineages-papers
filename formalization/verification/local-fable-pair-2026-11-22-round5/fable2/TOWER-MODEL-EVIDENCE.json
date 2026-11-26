@@ -1,0 +1,56 @@
+{
+  "lane": "fable2",
+  "task": "H01 — model",
+  "purpose": "Non-vacuity of TowerHypotheses (record #1463, Paper 16 lem:tower-cofinality): one concrete CollapseData satisfies the bundle. Toy model, not the paper's collapse.",
+  "gate": "bash verification/local-fable-pair-2026-11-22-round5/gate.sh mathlib LogicLineages.PersistentMarking.ConditionalTowerCofinalityModelTargets LogicLineages.PersistentMarking.ConditionalTowerCofinalityModelProof",
+  "gate_result": "COMPILE_PASS (both modules), first attempt",
+  "receipt": "build-reports/1795405199376168853-3293755.json",
+  "gated_at_utc": "2026-11-23T03:40:05Z",
+  "modules": [
+    {
+      "module": "LogicLineages.PersistentMarking.ConditionalTowerCofinalityModelTargets",
+      "file": "LogicLineages/PersistentMarking/ConditionalTowerCofinalityModelTargets.lean",
+      "sha256": "bbf80361be7baad1196635cf85c427882588d12d32a078689c410acbfb5ec96e",
+      "sha256_unchanged_since_ledger_freeze": true
+    },
+    {
+      "module": "LogicLineages.PersistentMarking.ConditionalTowerCofinalityModelProof",
+      "file": "LogicLineages/PersistentMarking/ConditionalTowerCofinalityModelProof.lean",
+      "sha256": "d530e3aeec1c73a178f696897c28e590c36e7f1be9efc1e9e9137e2278b8deb9"
+    }
+  ],
+  "model": {
+    "I": "ENat",
+    "O": "ENat",
+    "psi": "fun ξ => ξ + 1   (psi ⊤ = ⊤)",
+    "norm": "fun _ => 0",
+    "critical": "fun θ => 0 < θ",
+    "one": "0",
+    "endpoint": "⊤",
+    "a": "fun n => (n : ENat)"
+  },
+  "theorems": {
+    "toyCharacterization": "CharacterizationP toyModel",
+    "toyModelSatisfiesHypotheses": "ToyModelSatisfiesHypotheses  (= TowerHypotheses toyModel)",
+    "towerHypothesesConsistent": "TowerHypothesesConsistent  (= ∃ D : CollapseData ENat ENat, TowerHypotheses D)",
+    "toyModelConclusion": "ToyModelConclusion  (IsLUB (range fun n => psi (a n)) ⊤ ∧ psi endpoint = ⊤, proved directly)",
+    "toyModelConditionalInstance": "ToyModelConditionalInstance  (conditionalTowerSupremum instantiated at toyModel)"
+  },
+  "print_axioms": [
+    "'LogicLineages.PersistentMarking.ConditionalTowerCofinality.toyCharacterization' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.ConditionalTowerCofinality.toyModelSatisfiesHypotheses' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.ConditionalTowerCofinality.towerHypothesesConsistent' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.ConditionalTowerCofinality.toyModelConclusion' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.ConditionalTowerCofinality.toyModelConditionalInstance' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "no_sorry_axiom_native_decide": true,
+  "existing_lean_files_edited": 0,
+  "scope_limits": [
+    "Consistency only: the model is a toy and says nothing about whether the paper's actual collapse satisfies the cited hypotheses.",
+    "The extra hypothesis of ConditionalTowerCofinality (psi endpoint = BH) is not modelled separately; it is satisfiable trivially by BH := psi endpoint."
+  ],
+  "observations": [
+    "In this model the norm is constant, so normBound and the norm premise of (P) are exercised only trivially.",
+    "criticalSup holds for any upward-closed critical class (here via f 0 ≤ θ); strict monotonicity of f is unused in the model."
+  ]
+}

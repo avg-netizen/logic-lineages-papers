@@ -1,0 +1,290 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumberedProof.lean:92:42: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  pointValuesCode f (rawNoteEncode ↑ξn) base
+in the target expression
+  some
+      (directBlock (groundCtx Kctx).length (Targets.blockCode (render p f QK)) δ nξ (actualOrdinalNorm β + c + 1)
+          (smallValues f) (pointValuesCode f (rawNoteEncode ↑ξn) (actualOrdinalNorm β + c + 1)),
+        nξ) =
+    some (presentedCode G, nξ)
+
+p : Policy
+f : ℕ → ℕ
+hc : Computable f
+hf : FullAddition.Targets.SourceGrowth f
+Γ Ξ : List Ty
+σ τ : Ty
+B : OriginalTerm Γ (σ.arrow τ)
+C : OriginalTerm Γ σ
+K : OriginalTerm Ξ (Ty.curriedGround 1)
+b δ : ℕ
+paid : Paid p f B C K b δ
+Kctx : List Ty := FreshCtx Ξ
+β : Ordinal.{0} := paid.baseHead
+ξ : Ordinal.{0} := shiftHead β δ
+nξ : ℕ := actualOrdinalNorm ξ
+hP :
+  paid.baseHead < epsilonZero ∧
+    Order.IsSuccLimit paid.baseHead ∧
+      paid.paidHead = shiftHead paid.baseHead δ ∧
+        ∀ (ρ : Variable Γ Ty.ground → ℕ),
+          ParametricSourceSuccessor.denoteWith f (CurrentUnaryChain.commonUnits ρ)
+                (AdmissibleAssignment.box p paid.Bvector paid.Cvector (boxSecond σ τ ⋯)) =
+              ↑b ∧
+            ParametricSourceSuccessor.denoteWith f (CurrentUnaryChain.commonUnits ρ)
+                  (AdmissibleAssignment.box p paid.Bvector paid.Cvector (sourceFirst σ τ)) =
+                ordinalNaturalProduct (↑(2 ^ b))
+                  (ordinalNaturalSum
+                    (ParametricSourceSuccessor.denoteWith f (CurrentUnaryChain.commonUnits ρ)
+                      (paid.Bvector (sourceFirst σ τ)))
+                    (ParametricSourceSuccessor.denoteWith f (CurrentUnaryChain.commonUnits ρ)
+                      (paid.Cvector (callerFirst σ ⋯)))) ∧
+              ∀ (B₀ C₀ y : ℕ),
+                CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) B B₀ →
+                  CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) C C₀ →
+                    (CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) (Term.app B C) y ↔
+                      y = J f paid.paidHead (actualOrdinalNorm paid.paidHead + B₀ + C₀ + σ.level))
+hPaid : paid.paidHead = shiftHead paid.baseHead δ
+hN : actualOrdinalNorm paid.paidHead = actualOrdinalNorm (shiftHead paid.baseHead δ)
+βn ξn : NONote
+c : ℕ
+hparams :
+  parameterCode p f (List.map SyntaxCode.typeCode Ξ) (SyntaxCode.encodeTerm K) δ =
+    some (rawNoteEncode ↑βn, rawNoteEncode ↑ξn, c)
+hcVal : atUnits f (paid.Kvector 0) = ↑c
+hβv : (↑βn).repr = β
+hξv : (↑ξn).repr = ξ
+hβn : rawNormCode (rawNoteEncode ↑βn) = actualOrdinalNorm β
+hξn : rawNormCode (rawNoteEncode ↑ξn) = nξ
+heval : ∀ (t : ℕ), nξ ≤ t → valueCode f (rawNoteEncode ↑ξn) t = J f ξ t
+wv : OrdinalVector (FreshCtx Ξ) 1
+hassign : AdmissibleAssignment.assignment p (zeroCopy K) = some wv
+hcVal' : atUnits f (paid.Kvector 0) = ↑c
+hclose :
+  ∀ (μ : Variable (FreshCtx Ξ) Ty.ground → ℕ),
+    ParametricSourceSuccessor.denoteWith f (CurrentUnaryChain.commonUnits μ) (wv 1) = atUnits f (paid.Kvector 1) ∧
+      ParametricSourceSuccessor.denoteWith f (CurrentUnaryChain.commonUnits μ) (wv 0) = ↑c
+hRays :
+  ∀ (ρ : Variable (Ty.ground :: FreshCtx Ξ) Ty.ground → ℕ) (v : ℕ),
+    CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) (raySource K) v ↔
+      v =
+        J f (ordinalNaturalProduct Ordinal.omega0 (atUnits f (paid.Kvector 1)))
+          (RayBase (ordinalNaturalProduct Ordinal.omega0 (atUnits f (paid.Kvector 1))) c + ρ Variable.here)
+base : ℕ := RayBase β c
+χ : List Ty := Ty.ground :: Kctx
+ray : OriginalTerm (Ty.ground :: FreshCtx Ξ) Ty.ground := raySource K
+QB : CurrentUnitElimination.Tree Γ
+hQB : build p (Γ.length + 1) B = some QB
+left✝⁸ : CurrentUnitElimination.depth QB ≤ CurrentUnitElimination.functionalCount Γ
+left✝⁷ : CurrentUnitElimination.Conjunctive (render p f QB).matrix
+left✝⁶ : CurrentUnitElimination.EveryScalarUnique p f QB
+obsB :
+  ∀ (ρ : Variable Γ Ty.ground → ℕ),
+    (∀ (r : ℕ), Tree.holds p f QB ρ r ↔ CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) B r) ∧
+      ∃ r, 0 < r ∧ Tree.holds p f QB ρ r
+QC : CurrentUnitElimination.Tree Γ
+hQC : build p (Γ.length + 1) C = some QC
+left✝⁵ : CurrentUnitElimination.depth QC ≤ CurrentUnitElimination.functionalCount Γ
+left✝⁴ : CurrentUnitElimination.Conjunctive (render p f QC).matrix
+left✝³ : CurrentUnitElimination.EveryScalarUnique p f QC
+obsC :
+  ∀ (ρ : Variable Γ Ty.ground → ℕ),
+    (∀ (r : ℕ), Tree.holds p f QC ρ r ↔ CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) C r) ∧
+      ∃ r, 0 < r ∧ Tree.holds p f QC ρ r
+QK : CurrentUnitElimination.Tree χ
+hQK : build p (χ.length + 1) ray = some QK
+left✝² : CurrentUnitElimination.depth QK ≤ CurrentUnitElimination.functionalCount χ
+left✝¹ : CurrentUnitElimination.Conjunctive (render p f QK).matrix
+left✝ : CurrentUnitElimination.EveryScalarUnique p f QK
+obsK :
+  ∀ (ρ : Variable χ Ty.ground → ℕ),
+    (∀ (r : ℕ), Tree.holds p f QK ρ r ↔ CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) ray r) ∧
+      ∃ r, 0 < r ∧ Tree.holds p f QK ρ r
+gB : CurrentUnitElimination.OpenGraph (groundCtx Γ) := render p f QB
+gC : CurrentUnitElimination.OpenGraph (groundCtx Γ) := render p f QC
+gK : CurrentUnitElimination.OpenGraph (groundCtx χ) := render p f QK
+G : Presented DirectCtx := typedDirect ⋯ f β c δ gK
+I : Presented (Ty.ground :: groundCtx Γ) := inserted ⋯ nξ σ.level gB gC G
+hR :
+  ∀ (ρ : Variable (Ty.ground :: groundCtx Kctx) Ty.ground → ℕ) (v : ℕ),
+    HoldsRaw p f gK ρ v ↔ v = J f β (base + ρ Variable.here)
+hGraph : ∀ (t y : ℕ), Presented.holds p f G (endValues t y) ↔ nξ ≤ t ∧ y = J f ξ t
+hcp :
+  UnitCode.block p f (List.map SyntaxCode.typeCode (Ty.ground :: FreshCtx Ξ)) (SyntaxCode.encodeTerm ray) =
+    some (Targets.blockCode (render p f QK))
+hcb :
+  UnitCode.block p f (List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm B) =
+    some (Targets.blockCode (render p f QB))
+hcc :
+  UnitCode.block p f (List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm C) =
+    some (Targets.blockCode (render p f QC))
+k : KInput := (List.map SyntaxCode.typeCode Ξ, SyntaxCode.encodeTerm K, δ)
+data : OriginalInput := (List.map SyntaxCode.typeCode Γ, SyntaxCode.encodeTerm B, SyntaxCode.encodeTerm C, k)
+haux :
+  auxiliaryCode (List.map SyntaxCode.typeCode Ξ) (SyntaxCode.encodeTerm K) =
+    some (List.map SyntaxCode.typeCode (Ty.ground :: FreshCtx Ξ), SyntaxCode.encodeTerm (raySource K))
+hpop : groundCount (List.map SyntaxCode.typeCode χ).tail = (groundCtx Kctx).length
+hpoints : pointValuesCode f (rawNoteEncode ↑ξn) base = exactPoints f ξ base
+⊢ some
+      (directBlock (groundCtx Kctx).length (Targets.blockCode (render p f QK)) δ nξ (actualOrdinalNorm β + c + 1)
+          (smallValues f) (pointValuesCode f (rawNoteEncode ↑ξn) (actualOrdinalNorm β + c + 1)),
+        nξ) =
+    some (presentedCode G, nξ)
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    ξn
+  has type
+    NONote
+  but is expected to have type
+    { o // o.NF }
+  in the application
+    ↑ξn
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumberedProof.lean:102:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  insertedBlock (groundCtx Γ).length nξ σ.level (Targets.blockCode gB) (Targets.blockCode gC) (presentedCode G)
+in the target expression
+  some
+      (insertedBlock (groundCtx Γ).length nξ (SyntaxCode.typeLevel (SyntaxCode.typeCode σ))
+        (Targets.blockCode (render p f QB)) (Targets.blockCode (render p f QC)) (presentedCode G)) =
+    some (presentedCode I)
+
+p : Policy
+f : ℕ → ℕ
+hc : Computable f
+hf : FullAddition.Targets.SourceGrowth f
+Γ Ξ : List Ty
+σ τ : Ty
+B : OriginalTerm Γ (σ.arrow τ)
+C : OriginalTerm Γ σ
+K : OriginalTerm Ξ (Ty.curriedGround 1)
+b δ : ℕ
+paid : Paid p f B C K b δ
+Kctx : List Ty := FreshCtx Ξ
+β : Ordinal.{0} := paid.baseHead
+ξ : Ordinal.{0} := shiftHead β δ
+nξ : ℕ := actualOrdinalNorm ξ
+hP :
+  paid.baseHead < epsilonZero ∧
+    Order.IsSuccLimit paid.baseHead ∧
+      paid.paidHead = shiftHead paid.baseHead δ ∧
+        ∀ (ρ : Variable Γ Ty.ground → ℕ),
+          ParametricSourceSuccessor.denoteWith f (CurrentUnaryChain.commonUnits ρ)
+                (AdmissibleAssignment.box p paid.Bvector paid.Cvector (boxSecond σ τ ⋯)) =
+              ↑b ∧
+            ParametricSourceSuccessor.denoteWith f (CurrentUnaryChain.commonUnits ρ)
+                  (AdmissibleAssignment.box p paid.Bvector paid.Cvector (sourceFirst σ τ)) =
+                ordinalNaturalProduct (↑(2 ^ b))
+                  (ordinalNaturalSum
+                    (ParametricSourceSuccessor.denoteWith f (CurrentUnaryChain.commonUnits ρ)
+                      (paid.Bvector (sourceFirst σ τ)))
+                    (ParametricSourceSuccessor.denoteWith f (CurrentUnaryChain.commonUnits ρ)
+                      (paid.Cvector (callerFirst σ ⋯)))) ∧
+              ∀ (B₀ C₀ y : ℕ),
+                CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) B B₀ →
+                  CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) C C₀ →
+                    (CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) (Term.app B C) y ↔
+                      y = J f paid.paidHead (actualOrdinalNorm paid.paidHead + B₀ + C₀ + σ.level))
+hPaid : paid.paidHead = shiftHead paid.baseHead δ
+hN : actualOrdinalNorm paid.paidHead = actualOrdinalNorm (shiftHead paid.baseHead δ)
+βn ξn : NONote
+c : ℕ
+hparams :
+  parameterCode p f (List.map SyntaxCode.typeCode Ξ) (SyntaxCode.encodeTerm K) δ =
+    some (rawNoteEncode ↑βn, rawNoteEncode ↑ξn, c)
+hcVal : atUnits f (paid.Kvector 0) = ↑c
+hβv : (↑βn).repr = β
+hξv : (↑ξn).repr = ξ
+hβn : rawNormCode (rawNoteEncode ↑βn) = actualOrdinalNorm β
+hξn : rawNormCode (rawNoteEncode ↑ξn) = nξ
+heval : ∀ (t : ℕ), nξ ≤ t → valueCode f (rawNoteEncode ↑ξn) t = J f ξ t
+wv : OrdinalVector (FreshCtx Ξ) 1
+hassign : AdmissibleAssignment.assignment p (zeroCopy K) = some wv
+hcVal' : atUnits f (paid.Kvector 0) = ↑c
+hclose :
+  ∀ (μ : Variable (FreshCtx Ξ) Ty.ground → ℕ),
+    ParametricSourceSuccessor.denoteWith f (CurrentUnaryChain.commonUnits μ) (wv 1) = atUnits f (paid.Kvector 1) ∧
+      ParametricSourceSuccessor.denoteWith f (CurrentUnaryChain.commonUnits μ) (wv 0) = ↑c
+hRays :
+  ∀ (ρ : Variable (Ty.ground :: FreshCtx Ξ) Ty.ground → ℕ) (v : ℕ),
+    CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) (raySource K) v ↔
+      v =
+        J f (ordinalNaturalProduct Ordinal.omega0 (atUnits f (paid.Kvector 1)))
+          (RayBase (ordinalNaturalProduct Ordinal.omega0 (atUnits f (paid.Kvector 1))) c + ρ Variable.here)
+base : ℕ := RayBase β c
+χ : List Ty := Ty.ground :: Kctx
+ray : OriginalTerm (Ty.ground :: FreshCtx Ξ) Ty.ground := raySource K
+QB : CurrentUnitElimination.Tree Γ
+hQB : build p (Γ.length + 1) B = some QB
+left✝⁸ : CurrentUnitElimination.depth QB ≤ CurrentUnitElimination.functionalCount Γ
+left✝⁷ : CurrentUnitElimination.Conjunctive (render p f QB).matrix
+left✝⁶ : CurrentUnitElimination.EveryScalarUnique p f QB
+obsB :
+  ∀ (ρ : Variable Γ Ty.ground → ℕ),
+    (∀ (r : ℕ), Tree.holds p f QB ρ r ↔ CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) B r) ∧
+      ∃ r, 0 < r ∧ Tree.holds p f QB ρ r
+QC : CurrentUnitElimination.Tree Γ
+hQC : build p (Γ.length + 1) C = some QC
+left✝⁵ : CurrentUnitElimination.depth QC ≤ CurrentUnitElimination.functionalCount Γ
+left✝⁴ : CurrentUnitElimination.Conjunctive (render p f QC).matrix
+left✝³ : CurrentUnitElimination.EveryScalarUnique p f QC
+obsC :
+  ∀ (ρ : Variable Γ Ty.ground → ℕ),
+    (∀ (r : ℕ), Tree.holds p f QC ρ r ↔ CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) C r) ∧
+      ∃ r, 0 < r ∧ Tree.holds p f QC ρ r
+QK : CurrentUnitElimination.Tree χ
+hQK : build p (χ.length + 1) ray = some QK
+left✝² : CurrentUnitElimination.depth QK ≤ CurrentUnitElimination.functionalCount χ
+left✝¹ : CurrentUnitElimination.Conjunctive (render p f QK).matrix
+left✝ : CurrentUnitElimination.EveryScalarUnique p f QK
+obsK :
+  ∀ (ρ : Variable χ Ty.ground → ℕ),
+    (∀ (r : ℕ), Tree.holds p f QK ρ r ↔ CurrentAbsolute.Scalar p f (ExistentialPlan.inputs ρ) ray r) ∧
+      ∃ r, 0 < r ∧ Tree.holds p f QK ρ r
+gB : CurrentUnitElimination.OpenGraph (groundCtx Γ) := render p f QB
+gC : CurrentUnitElimination.OpenGraph (groundCtx Γ) := render p f QC
+gK : CurrentUnitElimination.OpenGraph (groundCtx χ) := render p f QK
+G : Presented DirectCtx := typedDirect ⋯ f β c δ gK
+I : Presented (Ty.ground :: groundCtx Γ) := inserted ⋯ nξ σ.level gB gC G
+hR :
+  ∀ (ρ : Variable (Ty.ground :: groundCtx Kctx) Ty.ground → ℕ) (v : ℕ),
+    HoldsRaw p f gK ρ v ↔ v = J f β (base + ρ Variable.here)
+hGraph : ∀ (t y : ℕ), Presented.holds p f G (endValues t y) ↔ nξ ≤ t ∧ y = J f ξ t
+hcp :
+  UnitCode.block p f (List.map SyntaxCode.typeCode (Ty.ground :: FreshCtx Ξ)) (SyntaxCode.encodeTerm ray) =
+    some (Targets.blockCode (render p f QK))
+hcb :
+  UnitCode.block p f (List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm B) =
+    some (Targets.blockCode (render p f QB))
+hcc :
+  UnitCode.block p f (List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm C) =
+    some (Targets.blockCode (render p f QC))
+k : KInput := (List.map SyntaxCode.typeCode Ξ, SyntaxCode.encodeTerm K, δ)
+data : OriginalInput := (List.map SyntaxCode.typeCode Γ, SyntaxCode.encodeTerm B, SyntaxCode.encodeTerm C, k)
+haux :
+  auxiliaryCode (List.map SyntaxCode.typeCode Ξ) (SyntaxCode.encodeTerm K) =
+    some (List.map SyntaxCode.typeCode (Ty.ground :: FreshCtx Ξ), SyntaxCode.encodeTerm (raySource K))
+hpop : groundCount (List.map SyntaxCode.typeCode χ).tail = (groundCtx Kctx).length
+hpoints : pointValuesCode f (rawNoteEncode ↑ξn) base = exactPoints f ξ base
+hG : directPacket p f k = some (presentedCode G, nξ)
+hs : SyntaxCode.check (List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm C) = some (SyntaxCode.typeCode σ)
+hi :
+  insertedBlock (groundCtx Γ).length nξ σ.level (Targets.blockCode gB) (Targets.blockCode gC) (presentedCode G) =
+    presentedCode (inserted ⋯ nξ σ.level gB gC G)
+⊢ some
+      (insertedBlock (groundCtx Γ).length nξ (SyntaxCode.typeLevel (SyntaxCode.typeCode σ))
+        (Targets.blockCode (render p f QB)) (Targets.blockCode (render p f QC)) (presentedCode G)) =
+    some (presentedCode I)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumberedProof.lean:90:55: warning: This simp argument is unused:
+  show ray = raySource K from rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵p̵a̵r̵a̵m̵s̵,̵h̵a̵u̵x̵,̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵p̵u̵r̵e̵,̵s̵h̵o̵w̵ ̵r̵a̵y̵=̵r̵a̵y̵S̵o̵u̵r̵c̵e̵ ̵K̵ ̵f̵r̵o̵m̵ ̵r̵f̵l̵]̵[̲h̲p̲a̲r̲a̲m̲s̲,̲ ̲h̲a̲u̲x̲,̲ ̲b̲i̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲p̲u̲r̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphNumberedProof.lean:100:56: warning: This simp argument is unused:
+  SyntaxCode.Proof.typeLevelExact
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵s̵,̵h̵c̵b̵,̵h̵c̵c̵,̵h̵G̵,̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵p̵u̵r̵e̵,̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵P̵r̵o̵o̵f̵.̵t̵y̵p̵e̵L̵e̵v̵e̵l̵E̵x̵a̵c̵t̵,̵c̵o̵u̵n̵t̵G̵r̵o̵u̵n̵d̵]̵[̲h̲s̲,̲ ̲h̲c̲b̲,̲ ̲h̲c̲c̲,̲ ̲h̲G̲,̲ ̲b̲i̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲p̲u̲r̲e̲,̲ ̲c̲o̲u̲n̲t̲G̲r̲o̲u̲n̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

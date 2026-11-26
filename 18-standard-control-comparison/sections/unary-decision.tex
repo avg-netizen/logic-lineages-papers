@@ -1,0 +1,196 @@
+\section{The complete one-variable comparison algorithm}
+We now supply the order decision that the normal-form proof deliberately
+did not assume. There are two sorts in the auxiliary comparison language.
+The source sort $P$ is $\mathcal P_1$. A range expression $R$ is a
+nonempty finite word of kernels applied to one open $P$ expression.
+Every argument of a kernel is either $P$ or $R$; a sum of range expressions
+is not introduced into a kernel argument. Closed words are evaluated and
+folded into constants. Every open expression of either sort is at least
+$x$ on a computable tail. All generated masses and indices are fixed
+natural or ordinal data on each branch.
+
+\begin{theorem}[Effective eventual signs]\label{u:thm:sign}
+Given two expressions in these sorts, one computes a sign
+$\sigma\in\{-1,0,1\}$ and $N\ge1$ such that their difference has sign
+$\sigma$ for every $x\ge N$. In particular this holds for every pair in
+$\mathcal P_1$.
+\end{theorem}
+The proof is a simultaneous comparison and separation-certificate algorithm.
+We specify its rules before proving their common termination measure.
+Every rule retains the thresholds of all its children and the finitely
+many kernel domains it uses. Since every open argument is at least $x$
+eventually, each fixed genuine-domain obligation is met by increasing
+$N$ to a computable constant.
+
+\subsection{The comparison rules}
+For $P/P$, form the signed normal-form row. An affine row is decided
+directly. If tags remain, replace each relevant tag by its exact peak
+word \eqref{u:display:4-5}, compare those $R$ expressions recursively and choose the
+greatest peak. Distinct tags cannot have equal peaks beyond the bound of
+Theorem~\ref{u:thm:zeros}. Return its coefficient sign, using
+Lemma~\ref{u:lem:cells}. Identical forms return exact equality.
+
+For $R/P$, a constant or nonconstant affine $P$ is eventually smaller:
+the open $R$ is at least $f(x)$, which dominates every fixed affine expression.
+For a nonlinear $P$ compare $R$ with its displayed peaks \eqref{u:display:4-5}, and use
+the exact range-cell test \eqref{u:display:3-2}. The $P/R$ rule is symmetric.
+
+For $R/R$ with equal outer principal, compare the two literal arguments
+recursively. Strictly ordered arguments give the same strict kernel order
+by Theorem~\ref{u:thm:adjacent}, or by monotonicity of $f$ at $\omega$.
+If the arguments agree eventually, use the following same-input key:
+mass is irrelevant at $\omega$; compare $\lceil c/2\rceil$ in reverse at
+$\omega^2$; compare masses in reverse above $\omega^2$ by
+Theorem~\ref{u:thm:mass}. Equal keys give equal outer values.
+
+For different outer principals $H>M$, if $H$ has a successor exponent,
+use the exact cut \eqref{u:eq:cut} on the $H$ side until the new outer
+principal is $M$ or has a limit exponent still above $M$.
+This cannot jump below $M$: every principal below $\theta\omega$ is at
+most $\theta$. It takes only the finite terminal successor part of the
+exponent. Combine these rewrites immediately with the equal-principal
+rule or the following mixed-limit rule; do not recursively call the
+unmodified comparison at an intermediate, larger syntax state.
+
+In the mixed-limit case write
+\begin{equation}
+                  X=\KK Lc(A),\qquad Y=\KK Me(B),\quad M<L,
+                                                               \label{u:display:8-1}
+\end{equation}
+where $L$ has a nonzero limit exponent. Recursively compare $X$ with $B$.
+If $X\le B$, then $Y>B\ge X$. If $X>B$, the separation certificate
+below, with lower profile $h_M$, gives
+$X>h_M(B)\ge Y$, by Lemma~\ref{u:lem:direct}. There is no equality branch
+in this mixed-limit case.
+
+\subsection{The simultaneous limit-cut certificate}
+Whenever one original side of a comparison is a bare limit-exponent
+kernel $X=\KK Lc(A)$ and its result is $X>S$, the algorithm also
+constructs, for every requested fixed lower profile $P$ below $L$, a
+computable modulus $N_{X,S}(P)$ such that
+\begin{equation}
+                   X(x)>P(S(x))\quad(x\ge N_{X,S}(P)). \label{u:display:8-2}
+\end{equation}
+This concerns generated $P/R$ expressions $S$, not arbitrary integers
+below $X$: the assertion for $S=X-1$ would be false, and subtraction
+does not occur in the generated language.
+
+Here is the certificate's complete case analysis, following the same
+strictly smaller children as comparison.
+\begin{enumerate}
+\item If $S=ax+b$, use direct growth \eqref{u:display:5-3} for the fixed profile
+$z\mapsto P(az+b)$ at the actual argument $A\ge x$. Positivity of $P$
+makes this imply \eqref{u:display:8-2}.
+\item If $S$ is nonlinear positive, $S<X$ forces every child peak $Z_i<X$
+by the range-cell rule. Apply each smaller child's certificate to
+$P\circ h_\omega$ and use $S<h_\omega(\max_i Z_i)$. Take the finite
+maximum of their moduli; no permanent choice of maximizing child is needed.
+\item If $S$ has the same outer principal $L$, strict order means either
+a greater input for $X$, or equal inputs and smaller mass. The
+lexicographic conclusion of Theorems~\ref{u:thm:adjacent} and
+\ref{u:thm:limitmass} applies directly to $P$, at the genuine integer inputs.
+\item If $S=\KK Me(B)$ has smaller outer principal, its comparison used
+the smaller child $X>B$. Apply that child's certificate to
+$P\circ h_M$ and use $S\le h_M(B)$. This handles any finite nesting of
+lower contexts by recursive composition, not by an unproved absorption step.
+\item If $S$ has larger limit outer principal $H>L$, its comparison with
+$X$ compares $S$ against $A$. The only branch giving $X>S$ has $S\le A$;
+direct growth for $\KK Lc$ gives $X>P(A)\ge P(S)$. In the other branch
+the larger kernel's child certificate would force
+$S>h_L(A)\ge X$, so cannot yield $X>S$.
+\item A larger successor outer principal on $S$ is unfolded exactly until
+it reaches $L$ or a larger limit exponent; use the corresponding preceding
+case. The rewrites are exact, including their changed masses and domains.
+\end{enumerate}
+Every requested profile remains a fixed positive expression with heads
+below the relevant limit $L$: only affine maps, fixed lower heads and
+$h_\omega$ are composed. Thresholds are profile dependent, and are computed
+by following these finitely many smaller children.
+
+\subsection{A common well-founded measure}
+Expand sharing when counting occurrences. Let $h$ be the number of
+original source $h_\lambda$ nodes across the two compared expressions,
+including their argument nodes. Let $\mathcal Q$ be the finite collection
+of principal indices in the Cantor decompositions of all original source
+heads and initial auxiliary kernels. Close it under finite successor-exponent
+chains, stopping at exponent one or a limit exponent. No rule introduces
+a principal outside this finite set. List it increasingly as
+$\pi_0<\cdots<\pi_{m-1}$ and assign a kernel occurrence of index $\pi_i$
+weight $\omega^{m-1-i}$. Let $W$ be their natural sum across the pair.
+Use the lexicographic measure
+\begin{equation}
+                             (h,W).                 \label{u:display:8-3}
+\end{equation}
+
+Replacing an original tag by its peak removes that displayed $h$ node,
+retaining its argument only once in each child comparison. In $P/P$ and
+$R/P$ children, other siblings are not duplicated. Thus $h$ decreases.
+Equal-principal comparison removes both outer kernels, decreasing $W$.
+Mixed-limit comparison removes the lower outer kernel, also decreasing $W$.
+A combined mixed-successor step removes the opposite lowest-rank $M$
+occurrence and adds only finitely many occurrences of principals strictly
+greater than $M$, retaining the original higher occurrence internally.
+Their total weight is strictly smaller than one $M$ weight. Hence $W$
+decreases. Affine or closed leaves stop.
+
+Since $h$ is natural and $W<\omega^m$, every branch terminates. Branching
+is finite, so the comparison tree is finite. The certificate uses that
+same tree: each invocation in its case analysis belongs to a strictly
+smaller comparison child or is a direct supplier application. Thus no
+unchanged comparison state calls its own certificate. Mutual induction
+on \eqref{u:display:8-3} proves both comparison correctness and \eqref{u:display:8-2}, establishing
+Theorem~\ref{u:thm:sign}.
+
+\subsection{Closure and exact finite exceptions}
+The two sorts are closed under every recursive child. Peak replacement
+introduces a finite kernel word on a positive argument plus its fixed
+norm constant. Successor expansion introduces only a longer kernel word.
+No signed inner offset, exposed count, division, inverse iterate or
+variable ordinal index occurs. Increasing a mass changes fixed domain
+constants without changing the finite rank set or measure.
+
+\begin{example}[A nested comparison with the counts retained]
+Consider $E=h_{2\omega}(x)$ and $F=h_\omega(h_\omega(x))$.
+Deleting the two $\omega$ blocks gives
+\[
+ E=f(f(x+4))+2,\qquad F=f(f(x+2)+3)+1.
+\]
+Thus their peaks are respectively $f(f(x+4))$ and
+$f(f(x+2)+3)$. The equal-outer-$\omega$ rule compares the arguments
+$f(x+4)$ and $f(x+2)+3$. The latter positive nonlinear expression lies
+strictly between its peak $f(x+2)$ and the next range value on the
+computed tail. Comparing $f(x+4)$ with that peak reduces to the affine
+comparison $x+4>x+2$. Hence $f(x+4)>f(x+2)+3$, and the original signed-row
+rule returns $E>F$ on the effective tail. The offset $3$ has been paid
+by a range-cell test, rather than deleted as negligible without proof.
+The final procedure evaluates the finitely many earlier inputs exactly.
+\end{example}
+
+\begin{example}[Why the mass key changes at degree three]
+At the same genuine input, the masses $1$ and $2$ give equal
+$\omega^2$ kernels because their ceilings after division by two agree.
+For a parent $\omega^3$ comparison with mass difference one, the first
+common $\omega^2$ block can likewise tie when its retained child masses
+are an odd $a$ and $a+1$. The next block reduces both child masses by
+three; its ceiling classes are then distinct. The guaranteed two common
+blocks ensure that those reduced masses remain nonnegative.
+This is the two-block mechanism in
+Theorem~\ref{u:thm:mass}, and explains why the algorithm uses neither strict
+mass order at degree two nor a ceiling equivalence at all higher degrees.
+\end{example}
+
+\begin{corollary}[One-input quantified comparison]\label{u:cor:boolean}
+For any finite Boolean combination of equality, weak-order and strict-order
+atoms between expressions of $\mathcal P_1$, each of its existential and
+universal closures over $x\in\NN$ is decidable.
+\end{corollary}
+\begin{proof}
+Apply Theorem~\ref{u:thm:sign} to every atom and take the maximum tail bound.
+The Boolean truth value is constant beyond that bound. Evaluate the
+original positive input expressions exactly at every earlier positive
+integer. For an existential statement, a true prefix instance or a true
+tail suffices; for a universal statement require all prefix instances and
+the tail. Evaluate original expressions, rather than auxiliary kernels
+before their raised genuine domains.
+\end{proof}
+

@@ -1,0 +1,5 @@
+# PolicyMatrix exact supporting pre-scope
+
+Read four targets, actual PolicyPlan.Eval and BooleanPlan gates/bindBlock/block/matrixPlan; all seven frozen source pins verified. Approved for proof. Gates/Bind/Matrix quantify arbitrary policy/control because literal Plan gate semantics is arithmetic, not yet a source-assignment realization. Exact finite fresh prefix9m+1 and shared original ports/Boolean DAG must be preserved, including witness ordering; no independent valuation per gate. ActualSize is the literal Plan LinearOverhead statement, not final source DAG/serialized size. Fresh gate must include true global Boolean flatten witnesses and reverse correctness, not only pure wire status.
+
+Binary literal continuation, generic actual source observation/unary raw-minus-one calibration, complete Program lowering/forest, source-copy bounds, wrappers and encoded global compiler remain separate. No A-normal source coverage shortcut or default-policy/Phi semantic transfer. No native execution or final acceptance by this scope review.

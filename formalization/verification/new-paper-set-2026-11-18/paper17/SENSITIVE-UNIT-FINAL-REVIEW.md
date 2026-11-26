@@ -1,0 +1,11 @@
+# Independent final: SensitiveUnit foundation
+
+Approved supporting conjunction only. Independent read-only recursive evidence reproduces author report exactly:188 source-matched modules, zero errors, exact fixed_sensitiveUnitFoundation standard-only. Native1794987935720694049-8; four frozen pins unchanged. No compilation performed.
+
+Read all seven new proofs against the frozen setup and source map. Setup normalization covers arbitrary actual finite tails and lower limit suffixes, derives actual countInitial forms, target norm affordability, relative limits and retained leading-band bounds. Admission invokes genuine synchronized visits, derives either earlier divergence or equal first-hit clocks with actual norm orbit/reset; no supplied hit or reset premise. Orientation selects the first genuine divergence while both states retain P, obtains exact common next budget from actual nonfinite trajectories, and proves candidate inclusion using the retained band's constant relative cost. It does not assume unrestricted ordinal norm monotonicity or import an unproved sign from thick-block separation.
+
+Quadratic top uses actual omega-squared maxima and exact quotient coincidence; selected control evenness yields precisely adjacent profile charges with odd shifted charge. General quadratic admission preserves the earlier-divergence alternative or derives synchronized continuation with original-clock next norms and common P+omega*k. The Nat/ordinal exponent bridge is explicit opow_natCast, not a target change.
+
+For exponent>2, a limit exponent forces actual leading-exponent separation. A successor exponent yields a genuine new block with q>R+2 by proved budget arithmetic; its lower remainder, norm, prefix divisibility, common limit, next norm and profile sign are all paid before invoking the checked full thick-block theorem. Local and admission indices are lifted back to original clocks. Fixed original prefix norm bounds are not asserted for arbitrary dynamic prefixes.
+
+Six failed proof-only editions remain preserved. Initial peeling/global traversal, source-wide equal-gap certificate and main comparison remain unproved by this support packet; no numbered promotion is authorized here.

@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.PeriodDecompositionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.PeriodDecomposition.StatementChecks
+theorem fixed_actualDecomposition : Targets.ActualRationalSquareRootDecomposition := actualDecomposition
+#audit_namespace LogicLineages.CartierObserverCurrent.PeriodDecomposition.StatementChecks
+end LogicLineages.CartierObserverCurrent.PeriodDecomposition.StatementChecks

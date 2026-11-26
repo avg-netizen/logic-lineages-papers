@@ -1,0 +1,7 @@
+# Reviewed bounded evidence verifier adoption
+
+The continuation coordinator adopts the hardened v2 evidence assembler at SHA256 `04bfb9d21762122b76b65f8eb4600fe925d1c75b6b3b6c5bb82358dba0683bff` for subsequent continuation evidence packets. The original verifier and native checker remain unchanged.
+
+Code review retained the same import closure, source-matched successful receipt selection, artifact and dependency checks, exact aliases, axiom closure, frozen and inherited preservation, and fixed native profile. The new format streams large archival records as JSONL gzip and checks source/log races. Eleven synthetic tests passed. Serial full comparison against the accepted recovery snapshot checked 5,352 modules with zero errors: source/object/log/native rows, axioms, frozen and inherited records, profiles and gates agree exactly. Only 5,211 receipt pointers refer to later successful cache hits. Peak RSS was 74,268 KiB; elapsed time 134.69 seconds. No native compiler overlapped this v2 comparison.
+
+The generated candidate report is retained unchanged; this separate review records adoption. This is evidence-tool adoption, not new mathematics, full-root build, remote CI or a register change. The baseline and full metrics are in V2-VALIDATION-SUMMARY.json. Large reconstructible archives remain local. The workspace-specific compare_snapshot.py and original invocation records are local reproduction notes, not portable tool deliverables.

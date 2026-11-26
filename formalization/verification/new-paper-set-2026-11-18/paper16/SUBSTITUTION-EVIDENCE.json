@@ -1,0 +1,295 @@
+{
+  "status": "verified",
+  "local_modules": 8,
+  "exact_aliases": 10,
+  "profile": {
+    "heap_cap_mib": 1536,
+    "rss_cap_mib": 512,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 768,
+    "core_only_profile": true,
+    "single_thread": true,
+    "threads": 1,
+    "upstream_cache_only": true
+  },
+  "errors": [],
+  "source_pins": {
+    "formalization/LogicLineages/PersistentMarking/Syntax.lean": "e3bbad01fc8790c0c0375c3a78667d27a0ba79e9b005239888c0c1cb18a98d70",
+    "formalization/LogicLineages/PersistentMarking/SpineSyntax.lean": "38b4597e658c431a4fd766599782589943f5d1cc5e63dd438842409cee4086de",
+    "formalization/LogicLineages/PersistentMarking/SubstitutionTargets.lean": "a4b9609bbef9539bb837df7f61e9989ebaa1e05687924e5dae3f54b376107243",
+    "formalization/LogicLineages/PersistentMarking/SubstitutionProof.lean": "652fef1163ded917ac3f887aa16ebaa8fc56971dedf0f40f14a98a19918cc812",
+    "formalization/LogicLineages/PersistentMarking/SubstitutionChecks.lean": "e2560ae8a1a628137b10e40cb5edb93c44c3eeda5b189899bfae73c36f302601",
+    "formalization/LogicLineages/PersistentMarking/InsertionTargets.lean": "e946c29efd00574cc72d0a67bc9bc5a8665c8ae88a85e7decd296c4748ed1af3",
+    "formalization/LogicLineages/PersistentMarking/InsertionProof.lean": "a3fb805b21cedd8ce2c46c2188ec14086914fe2138b8c0f8e66c5097d4d75873",
+    "formalization/LogicLineages/PersistentMarking/InsertionChecks.lean": "6f5bceee92a77250690c72afc1252414b2ac231438e27fe43a45e02173c6ae29"
+  },
+  "axioms": {
+    "LogicLineages.PersistentMarking.SubstitutionChecks.shiftZero": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.SubstitutionChecks.shiftArgsZero": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.SubstitutionChecks.shiftAdd": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.SubstitutionChecks.shiftArgsAdd": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.SubstitutionChecks.emptySubstitution": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.SubstitutionChecks.emptyArgsSubstitution": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.SubstitutionChecks.shiftType": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.InsertionChecks.insertedAtDepth": [
+      "propext"
+    ],
+    "LogicLineages.PersistentMarking.InsertionChecks.retainedLocalIndex": [
+      "propext"
+    ],
+    "LogicLineages.PersistentMarking.InsertionChecks.boundUnderBinder": [
+      "propext",
+      "Quot.sound"
+    ]
+  },
+  "modules": [
+    {
+      "module": "LogicLineages.PersistentMarking.Syntax",
+      "source_sha256": "e3bbad01fc8790c0c0375c3a78667d27a0ba79e9b005239888c0c1cb18a98d70",
+      "native_row": {
+        "discarded_failed_outputs": [],
+        "last_wait_channel": "0",
+        "log": "build-reports/1794975892386948744-2-LogicLineages-PersistentMarking-Syntax.log",
+        "memory_observation_failure": {},
+        "module": "LogicLineages.PersistentMarking.Syntax",
+        "observed_cpu_seconds": 0.64,
+        "peak_process_tree_rss_kib": 499100,
+        "returncode": 0,
+        "seconds": 0.767,
+        "source_sha256": "e3bbad01fc8790c0c0375c3a78667d27a0ba79e9b005239888c0c1cb18a98d70",
+        "stopped_threads": [],
+        "status": "verified-cache-hit",
+        "verified_from": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794975892386948744-2.json"
+      },
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/Syntax.olean": "86f08f12c0aff96293de8310909fd0e13f7912793bc5d4fe23b4ad5428c8cf23",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/Syntax.olean.private": null,
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/Syntax.olean.server": null,
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/Syntax.ir": null
+      }
+    },
+    {
+      "module": "LogicLineages.PersistentMarking.SpineSyntax",
+      "source_sha256": "38b4597e658c431a4fd766599782589943f5d1cc5e63dd438842409cee4086de",
+      "native_row": {
+        "discarded_failed_outputs": [],
+        "last_wait_channel": "0",
+        "log": "build-reports/1794976332347109110-2-LogicLineages-PersistentMarking-SpineSyntax.log",
+        "memory_observation_failure": {},
+        "module": "LogicLineages.PersistentMarking.SpineSyntax",
+        "observed_cpu_seconds": 0.56,
+        "peak_process_tree_rss_kib": 483952,
+        "returncode": 0,
+        "seconds": 0.613,
+        "source_sha256": "38b4597e658c431a4fd766599782589943f5d1cc5e63dd438842409cee4086de",
+        "stopped_threads": [],
+        "status": "verified-cache-hit",
+        "verified_from": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794976332347109110-2.json"
+      },
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/SpineSyntax.olean": "7ac485a7b4af338eb1cc46b6f0483b0996d92fb6ec17fbec5ec04711767f4df1",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/SpineSyntax.olean.private": null,
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/SpineSyntax.olean.server": null,
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/SpineSyntax.ir": null
+      }
+    },
+    {
+      "module": "LogicLineages.PersistentMarking.SubstitutionTargets",
+      "source_sha256": "a4b9609bbef9539bb837df7f61e9989ebaa1e05687924e5dae3f54b376107243",
+      "native_row": {
+        "discarded_failed_outputs": [],
+        "last_wait_channel": "0",
+        "log": "build-reports/1794976605743448950-2-LogicLineages-PersistentMarking-SubstitutionTargets.log",
+        "memory_observation_failure": {},
+        "module": "LogicLineages.PersistentMarking.SubstitutionTargets",
+        "observed_cpu_seconds": 0.28,
+        "peak_process_tree_rss_kib": 446388,
+        "returncode": 0,
+        "seconds": 0.358,
+        "source_sha256": "a4b9609bbef9539bb837df7f61e9989ebaa1e05687924e5dae3f54b376107243",
+        "stopped_threads": [],
+        "status": "verified-cache-hit",
+        "verified_from": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794976605743448950-2.json"
+      },
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionTargets.olean": "9137bd6371206545235f3a234e2d1e9ac63e906e838651e3de65fc2cb240f1ed",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionTargets.olean.private": null,
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionTargets.olean.server": null,
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionTargets.ir": null
+      }
+    },
+    {
+      "module": "LogicLineages.PersistentMarking.SubstitutionProof",
+      "source_sha256": "652fef1163ded917ac3f887aa16ebaa8fc56971dedf0f40f14a98a19918cc812",
+      "native_row": {
+        "discarded_failed_outputs": [],
+        "last_wait_channel": "0",
+        "log": "build-reports/1794976605743448950-2-LogicLineages-PersistentMarking-SubstitutionProof.log",
+        "memory_observation_failure": {},
+        "module": "LogicLineages.PersistentMarking.SubstitutionProof",
+        "observed_cpu_seconds": 1.27,
+        "peak_process_tree_rss_kib": 488664,
+        "returncode": 0,
+        "seconds": 1.328,
+        "source_sha256": "652fef1163ded917ac3f887aa16ebaa8fc56971dedf0f40f14a98a19918cc812",
+        "stopped_threads": [],
+        "status": "verified-cache-hit",
+        "verified_from": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794976605743448950-2.json"
+      },
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionProof.olean": "9efbf1e86b61732bcf55c3ececa478e477a92e3d84dc06ecb260e4aba19f84be",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionProof.olean.private": null,
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionProof.olean.server": null,
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionProof.ir": null
+      }
+    },
+    {
+      "module": "LogicLineages.PersistentMarking.SubstitutionChecks",
+      "source_sha256": "e2560ae8a1a628137b10e40cb5edb93c44c3eeda5b189899bfae73c36f302601",
+      "native_row": {
+        "discarded_failed_outputs": [],
+        "last_wait_channel": "0",
+        "log": "build-reports/1794976605743448950-2-LogicLineages-PersistentMarking-SubstitutionChecks.log",
+        "memory_observation_failure": {},
+        "module": "LogicLineages.PersistentMarking.SubstitutionChecks",
+        "observed_cpu_seconds": 0.2,
+        "peak_process_tree_rss_kib": 468356,
+        "returncode": 0,
+        "seconds": 0.256,
+        "source_sha256": "e2560ae8a1a628137b10e40cb5edb93c44c3eeda5b189899bfae73c36f302601",
+        "stopped_threads": [],
+        "status": "verified-cache-hit",
+        "verified_from": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794976605743448950-2.json"
+      },
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionChecks.olean": "307f1e8ba9acca7daaa470ba77a082c13483d9033bd9fe6cf1ea7ea311f7ae3c",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionChecks.olean.private": null,
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionChecks.olean.server": null,
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/SubstitutionChecks.ir": null
+      }
+    },
+    {
+      "module": "LogicLineages.PersistentMarking.InsertionTargets",
+      "source_sha256": "e946c29efd00574cc72d0a67bc9bc5a8665c8ae88a85e7decd296c4748ed1af3",
+      "native_row": {
+        "discarded_failed_outputs": [],
+        "last_wait_channel": "__futex_wait",
+        "log": "build-reports/1794976605743448950-2-LogicLineages-PersistentMarking-InsertionTargets.log",
+        "memory_observation_failure": {},
+        "module": "LogicLineages.PersistentMarking.InsertionTargets",
+        "observed_cpu_seconds": 0.19,
+        "peak_process_tree_rss_kib": 465400,
+        "returncode": 0,
+        "seconds": 0.256,
+        "source_sha256": "e946c29efd00574cc72d0a67bc9bc5a8665c8ae88a85e7decd296c4748ed1af3",
+        "stopped_threads": [],
+        "status": "verified-cache-hit",
+        "verified_from": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794976605743448950-2.json"
+      },
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionTargets.olean": "ca5ee9850d52acc5ac63c6d11572008d632e5c5a801c268c44f863b8882fb1b5",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionTargets.olean.private": null,
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionTargets.olean.server": null,
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionTargets.ir": null
+      }
+    },
+    {
+      "module": "LogicLineages.PersistentMarking.InsertionProof",
+      "source_sha256": "a3fb805b21cedd8ce2c46c2188ec14086914fe2138b8c0f8e66c5097d4d75873",
+      "native_row": {
+        "discarded_failed_outputs": [],
+        "last_wait_channel": "__futex_wait",
+        "log": "build-reports/1794976605743448950-2-LogicLineages-PersistentMarking-InsertionProof.log",
+        "memory_observation_failure": {},
+        "module": "LogicLineages.PersistentMarking.InsertionProof",
+        "observed_cpu_seconds": 0.3,
+        "peak_process_tree_rss_kib": 473996,
+        "returncode": 0,
+        "seconds": 0.357,
+        "source_sha256": "a3fb805b21cedd8ce2c46c2188ec14086914fe2138b8c0f8e66c5097d4d75873",
+        "stopped_threads": [],
+        "status": "verified-cache-hit",
+        "verified_from": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794976605743448950-2.json"
+      },
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionProof.olean": "74a908f335314ed1dfdd5537f21bb3294a694f5ee4a22cab6cd093bdc46186f1",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionProof.olean.private": null,
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionProof.olean.server": null,
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionProof.ir": null
+      }
+    },
+    {
+      "module": "LogicLineages.PersistentMarking.InsertionChecks",
+      "source_sha256": "6f5bceee92a77250690c72afc1252414b2ac231438e27fe43a45e02173c6ae29",
+      "native_row": {
+        "discarded_failed_outputs": [],
+        "last_wait_channel": "__futex_wait",
+        "log": "build-reports/1794976605743448950-2-LogicLineages-PersistentMarking-InsertionChecks.log",
+        "memory_observation_failure": {},
+        "module": "LogicLineages.PersistentMarking.InsertionChecks",
+        "observed_cpu_seconds": 0.2,
+        "peak_process_tree_rss_kib": 465868,
+        "returncode": 0,
+        "seconds": 0.256,
+        "source_sha256": "6f5bceee92a77250690c72afc1252414b2ac231438e27fe43a45e02173c6ae29",
+        "stopped_threads": [],
+        "status": "verified-cache-hit",
+        "verified_from": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1794976605743448950-2.json"
+      },
+      "outputs": {
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionChecks.olean": "69af0b299fbe31791cb59772f93f73de205cb60bb6e765841202db5d15f8672d",
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionChecks.olean.private": null,
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionChecks.olean.server": null,
+        "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/InsertionChecks.ir": null
+      }
+    }
+  ],
+  "context": {
+    "compiler": "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/bin/lean",
+    "compiler_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "lean_path": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    "pins": {
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lake-manifest.json": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lakefile.toml": "c05684bc8b1905ebc2f1ccaa33f57fd5cb769350165dbd9614c18be7a63227a5",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/lakefile.lean": null,
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lake-manifest.json": "28ee3c8d1f319b5da6b53636261d9f8a3048b057f6e1739824feefbc38968672",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lakefile.toml": "a5ae5498a1a8d2920079ce4e652af4b39c41d87b49a2ec3f80e50f27f348a697",
+      "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/04-pure-r1-calculator/lean/lakefile.lean": null
+    },
+    "external_objects": {
+      "Init": {
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Init.olean": "2184f658899f2aea99a4fecaa6f3192e7b631f2da1b9fe25a34780fd4972c633",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Init.olean.private": "2fd9a702893fdba2d5234fca23978bdee40c9a3016020279f02cc94166c70c25",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Init.olean.server": "92d5525ee307011fab6c0e55fa2c6d67555694dd401d1da99c2542c942f6242e",
+        "/workspace/scratch/d6452c0f74c7/toolchains/lean-4.32.0-rc1-linux/lib/lean/Init.ir": "fc94c27ef6b901c94f633b8cd80a72467cff0b37879f873700683404eeb266a6"
+      }
+    },
+    "selected_compiler": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550"
+  },
+  "full_root_build": false,
+  "CI": false
+}

@@ -1,0 +1,27 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/SyntaxProof.lean:31:92: error: unsolved goals
+alpha beta : Type
+n : ℕ
+raw : OTerm alpha
+ts : alpha → OTerm beta
+⊢ InternalClosedPrograms.allBlock
+      (programGraph contains (suc z)
+          (Fin.cons (Term.relabel Sum.inl (Term.subst raw ts)) (Fin.cons (var (Sum.inr 0)) Fin.elim0)) ⟹
+        ltF (var (Sum.inr 0))
+          (Term.subst (numeral n) (Sum.elim (fun x => Term.relabel Sum.inl (ts x)) fun i => var (Sum.inr i)))) =
+    InternalClosedPrograms.allBlock
+      (Formula.imp
+        (programGraph contains (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+          (Fin.cons (Term.relabel Sum.inl (Term.subst raw ts)) (Fin.cons (var (Sum.inr 0)) Fin.elim0)))
+        (arithmeticEmbedding.onFormula (OrdinaryArithmetic.lessFormula (var (Sum.inr 0)) (numeral n))))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/SyntaxProof.lean:46:97: error: unsolved goals
+alpha : Type
+n : ℕ
+raw key : OTerm alpha
+he : (Sum.elim var fun x => emb key) = fun a => emb (Sum.elim var (fun x => key) a)
+⊢ programGraph contains (suc z) (Fin.cons raw (Fin.cons key Fin.elim0)) ⟹
+      ltF key (Term.subst (numeral n) (Sum.elim var fun x => key)) =
+    Formula.imp
+      (programGraph contains (OrdinaryArithmetic.succTerm OrdinaryArithmetic.zeroTerm)
+        (Fin.cons raw (Fin.cons key Fin.elim0)))
+      (arithmeticEmbedding.onFormula (OrdinaryArithmetic.lessFormula key (numeral n)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedWindowValidity/SyntaxProof.lean:56:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedWindowValidity.SyntaxProof.membersSubst: forbidden axiom dependency sorryAx

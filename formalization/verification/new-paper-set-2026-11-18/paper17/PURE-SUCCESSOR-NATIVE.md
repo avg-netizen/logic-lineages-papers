@@ -1,0 +1,5 @@
+# PureSuccessor paired actual gate
+
+Full exact conjunction `PureSuccessorFoundation`, alias `fixed_pureSuccessorFoundation`, passed native gate `LogicLineages.PermittedControl.PureSuccessorStatementChecks`, receipt `build-reports/1794991028635506371-9.json`. Standard-only alias; unchanged caps. Process reaped and queue released. Failure1 preserved under pure-successor-failures; proof-only repairs normalized the let-bound quotient for arithmetic and projected set membership before rewriting.
+
+All four frozen pins unchanged. Recursive evidence in PURE-SUCCESSOR-EVIDENCE.json. One-state formula derives new beta cost and q>R+2. Paired proof uses actual next-limit equality to represent BOTH next states with the first state's q and lower limit suffix; it never equates the finite remainders. Full P=0 thick separation applies at updated f(t), then real retained-band orientation and original clock composition pay the final supporting divergence endpoint. No source highest-piece geometry/final entry order/full equal-gap claim.

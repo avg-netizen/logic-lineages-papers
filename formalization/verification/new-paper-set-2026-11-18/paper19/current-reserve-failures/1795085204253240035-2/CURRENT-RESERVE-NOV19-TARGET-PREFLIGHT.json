@@ -1,0 +1,57 @@
+{
+  "status": "exact current reserve comparator target-only PASS; no proof authored, checked or accepted",
+  "ticket": "RESERVE-TARGET-1028",
+  "exit_code": 0,
+  "reaped": true,
+  "receipt": "build-reports/1795083978260478110-2.json",
+  "receipt_sha256": "6139d6adc46d64fec98a8f6dff23bbc8db1a1eea86b3e7c77874f3004fa8c278",
+  "profile": {
+    "requested": [
+      "LogicLineages.ControlSensitivityCurrent.CurrentReserveTargets"
+    ],
+    "heap_cap_mib": 2048,
+    "rss_cap_mib": 1536,
+    "wall_seconds": 180,
+    "cpu_seconds": 90,
+    "minimum_free_mib": 2048,
+    "core_only_profile": false,
+    "single_thread": true,
+    "threads": 1,
+    "upstream_cache_only": true,
+    "calculator_objects_borrowed": true
+  },
+  "closure_count": 152,
+  "pin_count": 41,
+  "freeze": "verification/new-paper-set-2026-11-18/paper19/CURRENT-RESERVE-FREEZE.json",
+  "freeze_sha256": "763f11ee40a976b063d5ca59eefade7aa5b14f32dcbb2a1e060252f607dc24d8",
+  "successful_native_rows": [
+    {
+      "discarded_failed_outputs": [],
+      "last_wait_channel": "0",
+      "log": "build-reports/1795083839177702748-2-LogicLineages-ControlSensitivityCurrent-CurrentReserveDefinitions.log",
+      "memory_observation_failure": {},
+      "module": "LogicLineages.ControlSensitivityCurrent.CurrentReserveDefinitions",
+      "observed_cpu_seconds": 1.46,
+      "peak_process_tree_rss_kib": 994492,
+      "returncode": 0,
+      "seconds": 1.532,
+      "source_sha256": "6b9ca706075187812d3ded8ebbdcd4d69572c8c386d20c2fb1e17b51a4db07d2",
+      "stopped_threads": [],
+      "status": "verified-cache-hit",
+      "verified_from": "/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/build-reports/1795083839177702748-2.json"
+    },
+    {
+      "module": "LogicLineages.ControlSensitivityCurrent.CurrentReserveTargets",
+      "returncode": 0,
+      "seconds": 1.627,
+      "observed_cpu_seconds": 1.56,
+      "last_wait_channel": "0",
+      "stopped_threads": [],
+      "peak_process_tree_rss_kib": 986464,
+      "memory_observation_failure": {},
+      "discarded_failed_outputs": [],
+      "source_sha256": "f3b7701ea435b9fcb371c6b771c4fc297faabfc63c37db90c53fb99194e14717",
+      "log": "build-reports/1795083978260478110-2-LogicLineages-ControlSensitivityCurrent-CurrentReserveTargets.log"
+    }
+  ]
+}

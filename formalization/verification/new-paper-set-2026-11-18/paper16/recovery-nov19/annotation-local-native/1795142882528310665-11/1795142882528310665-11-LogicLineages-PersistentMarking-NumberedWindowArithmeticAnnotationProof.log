@@ -1,0 +1,31 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAnnotationProof.lean:88:4: error: Tactic `generalize` failed: result is not type correct
+  ∀ (x : Option NTerm),
+    (if x.isSome = true then some (annotations n).fst else none) = Option.map (fun q => encodeTy q.type) x
+
+case fst
+n : Nat
+⊢ (if (decodeTerm n).isSome = true then some (annotations n).fst else none) =
+    Option.map (fun q => encodeTy q.type) (decodeTerm n)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAnnotationProof.lean:94:4: error: Tactic `generalize` failed: result is not type correct
+  ∀ (x : Option NArgs),
+    (if x.isSome = true then some (annotations n).snd else none) =
+      Option.map (fun qs => List.map encodeTy (annotationList qs)) x
+
+case snd
+n : Nat
+⊢ (if (decodeArgs n).isSome = true then some (annotations n).snd else none) =
+    Option.map (fun qs => List.map encodeTy (annotationList qs)) (decodeArgs n)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAnnotationProof.lean:87:15: warning: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  simp only ̵[̵P̵r̵o̵d̵.̵f̵s̵t̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticAnnotationProof.lean:93:15: warning: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  simp only ̵[̵P̵r̵o̵d̵.̵s̵n̵d̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

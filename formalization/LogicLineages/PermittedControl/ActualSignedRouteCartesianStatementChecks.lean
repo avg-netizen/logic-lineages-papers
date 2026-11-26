@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.ActualSignedRouteCartesianTargets
+import LogicLineages.PermittedControl.ActualSignedRouteCartesianChoiceProof
+import LogicLineages.PermittedControl.ActualSignedRouteCartesianProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualSignedRouteCartesian
+
+theorem fixed_exactTupleChoice : ExactTupleChoice := exactTupleChoice
+theorem fixed_exactCartesianPacketEval : ExactCartesianPacketEval := exactCartesianPacketEval
+theorem fixed_exactActualSignedMatrixTuples : ExactActualSignedMatrixTuples := exactActualSignedMatrixTuples
+theorem fixed_fullActualSignedRouteCartesian : FullActualSignedRouteCartesian :=
+  ⟨fixed_exactTupleChoice,fixed_exactCartesianPacketEval,fixed_exactActualSignedMatrixTuples⟩
+
+#print axioms fixed_exactTupleChoice
+#print axioms fixed_exactCartesianPacketEval
+#print axioms fixed_exactActualSignedMatrixTuples
+#print axioms fixed_fullActualSignedRouteCartesian
+
+end LogicLineages.PermittedControl.StatementChecks

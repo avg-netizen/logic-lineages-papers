@@ -1,0 +1,9 @@
+# Independent full weak-scalar plan review
+
+Direction approved for exact comparator covering all three printed clauses. Require actual grade-derived successful partial, every actual output coordinate at its AmbientGrade, exact tracked-head freeness, and the scalar weak inequality at i=0 under actual selected-f whole-vector admissibility. The delta conclusion must be naked delta, with actual output level max(n,m), genuine success and all coordinate grades/freeness. No semantic success, output validity or guard premise may be added.
+
+The simultaneous induction must retain the active Psi output guard: actual all-one closure transports original guard, weak scalar induction compares finite tails, actual F2 monotonicity yields the new guard. Selected finite-tail collapse monotonicity is needed for the scalar inequality with the same actual closed head. Literal policy expansion may alter association but must preserve these actual values/grades without reassociation of source trees.
+
+Context versus occurring-vector domain: a full-context universal inequality is source-exact only after showing unused whole vectors can be filled by actual admissible all-one vectors and expression values depend only on occurring whole-vector coordinates. Freeze an explicit coverage/evaluation-independence clause or provide an independently reviewed actual generic restriction/extension supplier. Do not merely assert the source convention in prose or reuse fixed-G support semantics.
+
+Syntactic freeness of outputs over Gamma can be expressed by their actual weakening into sigma::Gamma; source high delta retention uses the established grade/freeness bridge. No output norm bound, box, generated-source or threshold credit. Concrete full source target needs independent pre-scope before proofs; no native compilation here.

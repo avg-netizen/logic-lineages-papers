@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixDenseRanksTargets
+import LogicLineages.PermittedControl.OriginalPrintedPlainMatrixDenseRanksProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedDenseRankedMatrix :
+    OriginalPrintedPlainMatrixDenseRanks.ExactPrintedDenseRankedMatrix :=
+  OriginalPrintedPlainMatrixDenseRanks.exactPrintedDenseRankedMatrix
+
+#print axioms fixed_exactOriginalPrintedDenseRankedMatrix
+
+end LogicLineages.PermittedControl.StatementChecks

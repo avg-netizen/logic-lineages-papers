@@ -1,0 +1,11 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentSelectedCarriersSyntaxProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentSelectedCarriersSyntaxProof.lean
+@@ -60,7 +60,7 @@
+   | succ r ih =>
+     change freeOccurrences (UnaryCarrier.saturate r (.app t .zeroC)) = _
+     rw [ih]
+-    simp [freeOccurrences]
++    simp [freeOccurrences] <;> rfl
+ 
+ theorem carrierNoGround {Γ : List Ty} {σ : Ty} (F : Variable Γ σ) (r : Nat)
+     (t : OriginalTerm Γ (Ty.curriedGround (r+1))) (x : Variable (σ :: Γ) .ground) :

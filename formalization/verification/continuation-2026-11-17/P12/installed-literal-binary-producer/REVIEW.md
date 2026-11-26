@@ -1,0 +1,13 @@
+# Independent installed literal-producer comparator review
+
+Approved for fresh freeze/preflight only. Eleven proposed hashes verified. No proof/native acceptance.
+
+Read program/extra/selected/inputs and both targets against prior explicit literal certificate and original CurrentNamedHeaderTransport definitions. Program5 embeds only pF0, compile(pF0), fixed header/alias/peel/codec recipes and static addresses6/8/10/12. The three first inputs are exactly outer, box and CK second-child offsets; last inputs are r/s. Offsets may depend on the completed selected AST but are computed as runtime call arguments, never embedded into that AST. Thus there is no own-size fixed-point construction. Header value is the actual arithmetic template; base output computes pF0(header) and numeral-quotes it, while base certificate invokes compile(pF0) at12.
+
+Nested transitivity mirrors explicit accepted recipe: peel6->8->10->12, base calculation, then original named alias/header transport. Graph must pay equality of actual child-node computations and canonical template/base evaluator calls through original defining equations and registry coherence. No computed-output or certificate equality is an assumption. Runtime peel offsets are supplied as actual original argumentTag values, not unconstrained offsets with success asserted.
+
+Fresh extra wraps the original base-only extra plus this new program; fresh selected still has exactly two augment layers and primitive base12. Old source tuples are not claimed to contain the new producer. OneSource is a fresh existential with full original Retained/Packages, original native leaves/primitive calibration, actual MP/base/inventory/peel/compiler/producer nodes and I on this exact new root. Actual source index is carried inside full Retained. Uniform acceptance refers to this same tuple and a genuine call to its new Program5. No target success premise appears.
+
+Old literal/source-calculation theorems are specialized to the old selected AST; they cannot be instantiated by asserting tuple identity. Generic box proofs/new installer must establish the same underlying derivations for this fresh box without modifying accepted targets. This is an explicit proof obligation, not a comparator weakening. Header/alias helper membership is derivable from real program children and original inventory, not silently postulated.
+
+Scope is the installed literal calculation producer and exact graph plus same-source acceptance. It does not prove checkerEquationCode/quotedSuccess transport, checker compiler/quantifier inventory or HB3. Preflight reflexivity only gates elaboration. Old accepted/frozen sources unchanged.

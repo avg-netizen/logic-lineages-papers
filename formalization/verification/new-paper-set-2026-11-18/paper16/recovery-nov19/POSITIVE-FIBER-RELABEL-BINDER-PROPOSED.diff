@@ -1,0 +1,12 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowPositiveFiberSharedSyntaxProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowPositiveFiberSharedSyntaxProof.lean
+@@ -46,7 +46,8 @@
+ private theorem unaryInstantiate {α : Type} (a : Program 1) (n q : OTerm α) :
+     instantiate (programGraph a (.var (.inr 0)) ![q.relabel Sum.inl]) (emb n) =
+       programGraph a n ![q] := by
+-  have arg : (fun i : Fin 1 => (![q] i).relabel Sum.inl) = ![q.relabel Sum.inl] := by
++  have arg : (fun i : Fin 1 => (![q] i).relabel (Sum.inl : α → α ⊕ Fin 1)) =
++      ![q.relabel Sum.inl] := by
+     funext i
+     obtain rfl := Fin.eq_zero i
+     rfl

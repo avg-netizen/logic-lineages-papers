@@ -1,0 +1,8 @@
+import LogicLineages.PersistentMarking.NumberedWindowFixedGrammarTypeProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowFixedGrammarType
+theorem exact_FixedGrammarTypeInclusion : ExactFixedGrammarTypeInclusion := inclusion
+theorem exact_FixedGuardRunGrammarType : ExactFixedGuardRunGrammarType := guardRun
+#print axioms exact_FixedGrammarTypeInclusion
+#print axioms exact_FixedGuardRunGrammarType
+end LogicLineages.PersistentMarking.NumberedWindowFixedGrammarType

@@ -1,0 +1,11 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariablePrimaryProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariablePrimaryGate
+
+theorem primary : NumberedBottomVariableLiftingTargets.ActualPrimaryInverse :=
+  NumberedBottomVariablePrimaryProof.actualPrimaryInverse
+
+#print axioms primary
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.NumberedBottomVariablePrimaryGate

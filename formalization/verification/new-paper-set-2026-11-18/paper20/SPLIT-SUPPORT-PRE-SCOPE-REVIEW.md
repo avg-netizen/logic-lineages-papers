@@ -1,0 +1,5 @@
+# Independent SplitSupport3 pre-scope
+
+Approved three supporting polynomial targets, four pins matched. ProductRoots is an exact multiset equality, retaining all roots and multiplicity one. SplitDivisibility requires a genuine nonzero SPLIT arbitrary Q and gives iff all source-root support and simple root multiplicities. This explicit splitting premise correctly prevents vacuous finite-field irreducible counterexamples. SourceSimpleDivisor derives the needed splitting from actual divisibility into the literal source polynomial, rather than passing it as a new caller certificate. Constants/empty-root d=0 are included.
+
+No rational geometric equivalence or canonical denominator transport follows from this polynomial-only scope. For actual transient states, denominator-divides-mapped-A_d must still be proved along all mixed steps; source splitting plus checked simple-order bound can then pay independent state inclusion. Algebraic closure/reflected divisibility, F2 descent/maps/output/effectivity remain pending. No proof or numbered acceptance at this pre-scope.

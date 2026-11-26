@@ -1,0 +1,56 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "fef036d2301931461dcc8a092780c6a875a0ccf7",
+  "failed_source_local_commit": "06e31486c9944f438cfd6c586b048ed52b146ba4",
+  "failed_source_tree": "0a9325328ff91fbd7db713a96bc8a304f3028d3f",
+  "failed_exact_gate_receipt": "1795379151471310171-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualCanonicalTerminalTruthStatementChecks",
+  "failed_receipt_sha256": "758091ff52246f2cd273f8a2be2b2cfccf2568be802797f1e72085f4e4299e14",
+  "failed_exact_module_log_sha256": "4c9b61eb5e30166f24d1e9e0050c988b50e9f9b10e77fd57007256384a59749a",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalTerminalTruthTargets.lean:60:116: error: unexpected token '/--'; expected term\n",
+  "failed_original_native_log_sha256": "0cb3c19cf8e15f138b513a875ecbdc0bda9b0aaeed39ba753c20d2f3771923df",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualCanonicalTerminalTruthTargets.lean",
+  "failed_proof_sha256": "4f287fba35c27370cfd7debdf88347ae3de183423cf423ab719ac206bfefc303",
+  "repaired_proof_sha256": "b88cebf69352db6f8ab8c4688a45140dc62d70ef246af8ad14b794bb5b762519",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-TERMINAL-TRUTH-REPAIR-01.patch",
+  "patch_sha256": "d4a26b162c8497b71ab27b6565873b46753ff7bcc380bf6b82ee335744dba677",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-TERMINAL-TRUTH-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "6da4a191cf6c0c68cb45aaa5bf8faaa9114d9b54cd7f376690abe0974d0d6386",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalTerminalTruthInactiveProof.lean": "e8abfccbbce690516644e582123d67f52a8f67139dc269ab8b36819b04c131bb",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalTerminalTruthLinearProof.lean": "14075972dcae833290d9b7f9dc080ee4a72e61bb99f91aa03504d4e097cbf559",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalTerminalTruthSignProof.lean": "7b1112a1c56f9f980396e8887c4cfdf72af6b6536761beb65539e80dbdb6b0cc",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalTerminalTruthStatementChecks.lean": "bf97966a44115f9fb291b283d3ae0f33ae688c39d32e09c4964713400ac12748",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-TERMINAL-TRUTH-SOURCE-MAP.md": "32b87455cec9566a4b7dd97d6d4f696da1454edffb6b91417107730ceef1c07a"
+  },
+  "static_module_closure": {
+    "InactiveProof": {
+      "local": 370,
+      "external": 41,
+      "contains_totient": false
+    },
+    "LinearProof": {
+      "local": 360,
+      "external": 41,
+      "contains_totient": false
+    },
+    "SignProof": {
+      "local": 374,
+      "external": 43,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 381,
+      "external": 43,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 219,
+      "external": 34,
+      "contains_totient": false
+    }
+  },
+  "scope": "Dedent only the actual inactive theorem let-body by two spaces to match its governing let, resolving parser ambiguity. Non-whitespace tokens, intended theorem, code and siblings unchanged."
+}

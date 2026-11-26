@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroClassOutsideRankedColumnsTargets
+import LogicLineages.PermittedControl.ActualZeroClassOutsideRankedColumnsProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualZeroClassOutsideRankedColumns :
+    ActualZeroClassOutsideRankedColumns.ExactOutsideRankedColumns :=
+  ActualZeroClassOutsideRankedColumns.exactOutsideRankedColumns
+
+#print axioms fixed_actualZeroClassOutsideRankedColumns
+
+end LogicLineages.PermittedControl.StatementChecks

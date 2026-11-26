@@ -1,0 +1,5 @@
+# Standard domain calibration authored readiness
+
+Read Targets/Proof/Checks; seven frozen pins checked. Approved fresh full supporting gate. Actual denote_phi supplies closed-expression calibration; both inductive grade directions transport collapse norm tests, and vector-preserving toOriginal/fromOriginal give an onto equivalence, not mere domain inclusion. Expression valuation is pointwise the same actual closed fields. Universal CollapseNormPremise transports using both inverse domain maps, then all AmbientGrade/HeadGrade constructors transport including original freeness condition. Assignment clause maps the same literal Option result through equal evaluation, preserving failures as well as successes, for every policy and type.
+
+Scope only, not final acceptance. No selected-growth/threshold assumption for Phi is smuggled in; this proves calibration, not successful assignments, positivity, norm guarantees, generic growth or unchanged-G hardness. Fresh recursive evidence required, including actual denote_phi supplier.

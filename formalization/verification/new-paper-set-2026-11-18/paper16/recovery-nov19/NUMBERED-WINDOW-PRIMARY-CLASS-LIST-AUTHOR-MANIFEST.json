@@ -1,0 +1,38 @@
+{
+  "status": "author proof candidates only; pending independent authored review/native",
+  "exact_root": "LogicLineages.PersistentMarking.NumberedWindowPrimaryClassListChecks",
+  "static_module_count": 87,
+  "target_freeze": "NUMBERED-WINDOW-PRIMARY-CLASS-LIST-FROZEN.json",
+  "target_preflight_receipt": "1795089344282493779-2",
+  "author_source_sha256": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowFiniteSaturationBasicProof.lean": "e3b01401507875d602f37485593e4315138cc8878e61855a9dadaa9e3957988d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowFiniteSaturationBoundProof.lean": "49675282914dec4e0422be705e6e3b0853755f82de8db5ac1080924b0f982d54",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowFiniteSaturationReachProof.lean": "1531b8377a9b2c4d3171a624313648f08d242d6b2cf7819449fd9469f9e9a0b0",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowPrimaryClassListProof.lean": "502f4aedbfb72333029c846bfc8c2bfd7e9cd9b9ef45d3cdac373b75ee27bc51",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowPrimaryClassListChecks.lean": "c584487712a6173ad2bc2de298d69df42c73125e3a4d04c8abf3fa719cf94461"
+  },
+  "exact_aliases": [
+    "NumberedWindowPrimaryClassListChecks.exact_BoundedFixedPoint",
+    "NumberedWindowPrimaryClassListChecks.exact_BoundedGraphReach",
+    "NumberedWindowPrimaryClassListChecks.exact_AbstractPrimaryClassList",
+    "NumberedWindowPrimaryClassListChecks.exact_FinitePrimaryClassList",
+    "NumberedWindowPrimaryClassListChecks.exact_FinitePrimaryDecision"
+  ],
+  "claim_scope": "Original initial-admitted Primary classes effectively enumerated/decided on concrete finite binder lists; genuine length saturation bound even with duplicates, no least code, arithmetic certificates or ID1.",
+  "native_proof_repairs": [
+    {
+      "failure_receipt": "1795089630181389431-2",
+      "original_manifest_path": "verification/new-paper-set-2026-11-18/paper16/failed/PRIMARY-CLASS-LIST-EXACT-1201-1795089630181389431-2/NUMBERED-WINDOW-PRIMARY-CLASS-LIST-AUTHOR-MANIFEST.json",
+      "original_manifest_sha256": "977f8a8758415307cc114709068055044e13ff2265a47f877ea9b94b589fac30",
+      "proposed_diff_sha256": "b4a7d93e8665d6d9c1b6d45a5d97ad366a2bc1beb2d135372355b68bddac4b0b",
+      "scope": "Basic core sublist notation scope and explicit element/membership binders only."
+    },
+    {
+      "failure_receipt": "1795089783873554370-2",
+      "original_manifest_path": "verification/new-paper-set-2026-11-18/paper16/failed/PRIMARY-CLASS-LIST-EXACT-1203-1795089783873554370-2/NUMBERED-WINDOW-PRIMARY-CLASS-LIST-AUTHOR-MANIFEST.json",
+      "original_manifest_sha256": "7fd681f2b3f1766d61a6a0f9db3daa99113b0cc96e15121a5ba08573becf2116",
+      "proposed_diff_sha256": "c9d828148383b86ab9ba99b126bfb4e44bb1cfc2bb9e5340657d9414360f8e68",
+      "scope": "Remove hle hypothesis from local induction context only after actual gap decomposition, no change to premises."
+    }
+  ]
+}

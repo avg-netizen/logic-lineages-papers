@@ -1,0 +1,43 @@
+{
+  "status": "source-only draft; exact gate pending; no Lean invoked by author",
+  "paper": "17-permitted-control-canonical-comparison",
+  "manuscript_anchor": "sections/arithmetic.tex:164–195,197–230",
+  "target": "LogicLineages.PermittedControl.ActualReadChargeIteration.FullActualReadChargeIteration",
+  "alias": "LogicLineages.PermittedControl.StatementChecks.fixed_actualReadChargeIteration",
+  "gate": "LogicLineages.PermittedControl.ActualReadChargeIterationStatementChecks",
+  "sources_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualReadChargeIterationTargets.lean": "059b87c10d25f07f84a3852829f2a465401f365fcd94e10006ba91c7b61e9702",
+    "formalization/LogicLineages/PermittedControl/ActualReadChargeIterationProgressProof.lean": "3c93f6be127f6334e4d50c565c3d760cc9821f2398d5de36fb72a6c095141545",
+    "formalization/LogicLineages/PermittedControl/ActualReadChargeIterationProof.lean": "04a05876029258539e125f6bba548e0459dc6496a570c0afcf98d9c6e718927d",
+    "formalization/LogicLineages/PermittedControl/ActualReadChargeIterationStatementChecks.lean": "ad81d937607e80c4e4aef0f21f6a9170eaeaaff0c3de556fc0ffa86c09a5e7fb",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-READ-CHARGE-ITERATION-SOURCE-MAP.md": "8bb9ec1e65acb3bf36912110a822ae968c5ff2cd50db1ebfaf228ef05ff8904d"
+  },
+  "inherited_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualShortCountCleanupChargeTargets.lean": "4e90c7c17db69f019c920644338885fa45e472e19e1c3c37ec36690eb9543f7b",
+    "formalization/LogicLineages/PermittedControl/ActualShortCountCleanupChargeProof.lean": "3b82cba60addb5baf62f71d51ccb9743e4478ba3edabddd6c369387868385393",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassGuardedOneStepTargets.lean": "c0c13d6c4b837909fb8196f9657ce1ef7cfed35db2a5abe3e14991c728ba4192",
+    "formalization/LogicLineages/PermittedControl/ActualLinearExitTargets.lean": "da0c5b55836c1cfbbcfd512f636921b1054c480cfe5237e1b449d5151ebc6224",
+    "formalization/LogicLineages/PermittedControl/ActualLinearExitProof.lean": "3c08c10295f9f30ae22a69f631556af19f1af96f6d8df5bdd0ac6e7e9c3073fd",
+    "formalization/LogicLineages/PermittedControl/ActualLinearExitRowProof.lean": "604340fd77aeb88923896f4268c14f1051ba1ed3ff5325fe37e0652c6c9cb86b",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassCommonTailProof.lean": "382a19626b8241f0c8388e4cec7d0197cae998f3e8748d33a9b69d40cac1421b",
+    "formalization/LogicLineages/PermittedControl/ActualWeightedReadNormalizationActualProof.lean": "92c92c3d9915675817c903f43ab3a18bb8f24de173288494bfb31d9456c8c846",
+    "formalization/LogicLineages/PermittedControl/ActualMixedRowLeadingAnnotationsMaximumProof.lean": "63b269081ff7fff8723b13f4032726ab017d157d7fba77986bc77b800dc3cc45",
+    "formalization/LogicLineages/PermittedControl/ActualMixedRowLeadingSumRowProof.lean": "2274f73d39f870bc16cf7fe7b40393eaa4d181d36ee0a7625507c184c25a00ab",
+    "formalization/LogicLineages/PermittedControl/SelectedLeadingSignCutoffActualProof.lean": "7b8a07ad6fd9d976813493ae563cd23138b9a706d138d4ff827c86b94548290f"
+  },
+  "checked_handoff_sha256": {
+    "formalization/verification/continuation-2026-11-22/900-p17-actual-guarded-maximal-class-one-step-native.json": "76bca0c4af573ab86a2abac9e4cf85b359c4670f937d5444c1befd1fe0e20bfa",
+    "formalization/verification/continuation-2026-11-22/903-p17-actual-correlated-linear-exit-native.json": "d7f8c231b31f79ad62ca420cc6bbc3c14f353856b6bcd7a5d62a44775094d50f",
+    "formalization/verification/continuation-2026-11-22/911-p17-actual-strict-long-cleaned-zero-step-native.json": "258d8e36d7d35ba4f27c57b76dfee9df9d06cb714a305c1473e86cefea4c94f4"
+  },
+  "static_closure": {
+    "target_local": 176,
+    "target_external": 33,
+    "progress_local": 467,
+    "progress_external": 41,
+    "gate_local": 469,
+    "gate_external": 41,
+    "new_external_relative_to_long_step_gate": []
+  },
+  "scope": "Fixed original assignment and true concrete zero edges. Derive actual maximal/nonzero or correlated exit, or at most initial-charge many actual #911 cleaned edges preserving signed value and original ranks. Explicit reached-node numerical guard supply (not closure), local nonzero sign cutoff only, no symbolic tree/effectivity/dimension induction."
+}

@@ -1,0 +1,176 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=29mm]{geometry}
+\usepackage{enumitem,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\setlength{\emergencystretch}{2em}
+\setlist[enumerate]{itemsep=3pt,topsep=5pt}
+\setlist[itemize]{itemsep=3pt,topsep=5pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Ftwo}{\mathbb F_2}
+\newcommand{\norm}{\operatorname{N}}
+\newcommand{\headpart}{\operatorname{lim}}
+\newcommand{\ord}{\operatorname{ord}}
+\numberwithin{equation}{section}
+\title{Controlled Ordinal Descents, Restricted Partitions\\
+and Finite Cartier Observers}
+\author{}
+\date{17 November 2026\\Working manuscript}
+\begin{document}
+\maketitle
+\begin{abstract}
+A terminating ordinal descent can retain difficult modular information
+in its accumulated event count. We prove that a polynomial block under
+congruent growing budgets has the same count modulo a fixed modulus as
+a constant-budget restricted-partition problem. For the standard
+finite-hierarchy control in the Wilken--Weiermann setting, a genuine
+retained-prefix block yields a partition coefficient whose cutoff and
+index are fixed by one entry parameter. We give a complete finite
+coefficient observer and prove a closed residue-profile representation
+after the pole-order transient. Both binary transitions and the scalar
+output are explicit. On the linked inputs, a particular primitive-root
+residue tuple has exact period twice one less than the binary logarithm
+of the first block budget. This period grows without bound. It rules out
+a uniformly bounded cycle for the complete rational state, while leaving
+the prescribed scalar observation and unchanged-control canonical
+comparison open. All predecessor, budget-transfer, observer, and period
+arguments needed for these results are included.
+\end{abstract}
+\begingroup
+\small
+\tableofcontents
+\endgroup
+\clearpage
+
+\section{Counting beyond termination}
+
+Norm-controlled ordinal assignments can turn termination proofs into
+numerical complexity bounds. In the assignment for G\"odel's T studied
+by Wilken and Weiermann \cite{ww}, a collapse value can be evaluated by a
+strictly decreasing ordinal descent. Its norm budget grows rapidly, and
+the number of replacement events contributes to the returned natural
+number. Termination of each evaluation does not decide a quantified
+question about those event counts. Rapid growth by itself does not
+determine their small residues.
+
+This article studies that arithmetic for the unchanged control
+\[
+ F_0(n)=2^n,\qquad F_{j+1}(n)=F_j^{\,n+1}(n),\qquad
+ G(n)=F_5(n+100).
+\]
+Superscripts on functions denote iteration. The general transfer theorem
+needs only congruence hypotheses on the budgets; the concrete
+retained-prefix family and its period calculation use this particular
+$G$.
+
+There are three different finite objects in the argument. For a supplied
+cutoff $d$, a restricted-partition generating function has a complete
+finite numerator observer. After enough binary selections, it has an
+equivalent complete vector of simple residues in a finite splitting
+field. A selected family of primitive roots provides a projection of
+that vector, sufficient to prove a period lower bound but insufficient
+to recover the output coefficient. Keeping these objects distinct is
+essential.
+
+\begin{theorem}[Main results]\label{thm:main}
+The constructions below have the following properties.
+\begin{enumerate}
+\item Let $d,m\ge1$, let $p_d(n)$ count partitions of $n$ with parts at most $d$, and
+put $Q_d=d!m^{d-1}$. A complete deletion of one $\omega^d$ suffix
+with retained mass $c\ge0$ and initial total norm at least $c+d+1$
+has event count congruent to $p_d(S-c)$ modulo
+$m$, whenever every operational budget is at least the current norm
+and is congruent to $S\ge c$ modulo $Q_d$.
+\item For each fixed $d$, the binary coefficients of
+$\prod_{i=1}^d(1+z^i)^{-1}$ are computed exactly by two explicit
+linear maps on a space of dimension $d(d+1)/2$ over $\Ftwo$.
+Distinct numerator states have distinguishing continuations of length
+at most $\lceil\log_2(d(d+1)/2)\rceil$.
+\item After an explicit finite transient, the complete residue profile
+is closed under both binary selectors. At a pole $\zeta$ its two
+updates are $b_\zeta\mapsto b_\zeta^{1/2}$ and
+$b_\zeta\mapsto(\zeta b_\zeta)^{1/2}$; the scalar output is
+$\sum_\zeta b_\zeta/\zeta$.
+\item For every $v\ge4$, the descent from
+$\omega^{\omega+1}+(v-4)$ has an explicit first
+$\omega^\omega$-block parity. On its linked partition parameters,
+a primitive-root residue tuple has exact period
+$2(\log_2 B-1)$, where $B=G(G(v))$.
+Every eventual period of the complete differential Cartier state
+is divisible by this number.
+\end{enumerate}
+\end{theorem}
+
+The first item is a statement about complete segment counts. The last
+item is a statement about complete states and a particular residue
+projection. Neither states that the selected scalar has the same period.
+The displayed ordinal input family is actual syntax for the collapse
+defined below. An interpretation of this family inside a particular
+larger typed-term assignment is a separate source question.
+
+\input{sections/descent}
+\input{sections/control}
+\input{sections/partitions}
+\input{sections/boundary}
+\input{sections/observers}
+\input{sections/cartier}
+\input{sections/period}
+
+\section{Consequences and the remaining scalar question}
+
+Theorem~\ref{thm:transfer} proves the count transfer in
+Theorem~\ref{thm:main}. Theorems~\ref{thm:observer}
+and~\ref{thm:residue-observer}, together with
+Lemma~\ref{lem:observable}, supply its two complete observer
+representations. The explicit boundary calculation and
+Theorem~\ref{thm:actual-period} supply its linked-input period claim.
+Every one of these assertions is about the same specified count or
+rational coefficient.
+
+The cutoff-dependent observer is effective for every input. Its size
+grows with $d$, and the actual full-state period is not bounded
+independently of the entry parameter. Thus attaching an arbitrary
+finite automaton to each cutoff is not, by itself, an algorithm for a
+quantified statement over all linked inputs.
+
+A smaller observer might preserve only the scalar outputs allowed by
+the prescribed input family. All-continuation observability does not
+exclude that possibility: its distinguishing words range over every
+binary continuation. Likewise, the primitive-root period theorem
+does not control cancellation in the sum over all poles. It is not a
+proof that $v\mapsto p_d(C-e)\bmod2$ is nonperiodic.
+
+Complete descent counts offer another possible route. The first
+retained-prefix block is one summand in a longer count. Observability
+of that full sum need not define the graph of its first summand.
+The present results therefore provide a precise unchanged-control
+arithmetic problem and an exact finite calculation for each input,
+without asserting that this isolated bit is a necessary intermediate
+for every canonical-comparison algorithm.
+
+Controls chosen to enforce simpler count residues constitute a different
+construction. The general transfer theorem can be applied to them when
+its congruence premise is proved, but the standard-control profile
+theorems here neither transfer automatically to those controls nor
+obstruct their comparison algorithms.
+
+\paragraph{Preparation and verification.}
+This manuscript was prepared with AI assistance and presents hand
+proofs. The finite algebraic checks accompanying the manuscript do not
+constitute a formal verification of the ordinal or quantified results.
+Historical source dependencies and the relationship to the companion
+articles are recorded separately.
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

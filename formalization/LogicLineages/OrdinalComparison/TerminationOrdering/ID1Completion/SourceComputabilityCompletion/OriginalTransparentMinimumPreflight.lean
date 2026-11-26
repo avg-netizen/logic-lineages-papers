@@ -1,0 +1,34 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentMinimumTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion
+open OriginalTransparentMinimum OriginalTransparentMinimumTargets
+#check classValue
+#check ClassTestCalibrated
+#check reflexiveClassTest
+#check scanStep
+#check scan
+#check minimum
+#check graph3
+#check atMost
+#check ScanLaw
+#check ReflexiveLaw
+#check MinimumLaw
+#check minimumInputs
+#check transparentInputs
+#check LiteralFields
+#check NativePreparation
+#check GuardedClassLaw
+#check Retained
+#check Properties
+#check ActualOriginalTransparentMinimumClassSelection
+#check ActualOriginalTransparentMinimumReflexiveCalibration
+#check ActualOriginalTransparentMinimumScanEvaluation
+#check ActualOriginalTransparentMinimumCalibration
+#check ActualOriginalTransparentMinimumInternalScan
+#check ActualOriginalTransparentMinimumInternalReflexive
+#check ActualOriginalTransparentMinimumInternalMinimum
+#check ActualOriginalTransparentMinimumInternalGuardedClass
+#check ActualOriginalTransparentMinimumLiteralFields
+#check ActualOriginalTransparentMinimumNativePreparation
+#check ActualOriginalTransparentMinimumRetention
+#check ActualOriginalTransparentMinimumSelection

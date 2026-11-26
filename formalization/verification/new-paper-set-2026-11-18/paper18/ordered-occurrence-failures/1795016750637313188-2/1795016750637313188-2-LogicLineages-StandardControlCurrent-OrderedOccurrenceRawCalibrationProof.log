@@ -1,0 +1,54 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawCalibrationProof.lean:49:150: error: unsolved goals
+case phi
+xs : List ℕ
+r j : ℕ
+c : ℤ
+i✝ : ℕ
+shift✝ : ℤ
+⊢ (c != 0 && decide (i✝ ∈ xs)) = (c != 0 && decide (i✝ ∈ xs))
+
+case hyperPhi
+xs : List ℕ
+r j : ℕ
+c : ℤ
+i✝ : ℕ
+indexShift✝ outerShift✝ : ℤ
+⊢ (c != 0 && decide (i✝ ∈ xs)) = (c != 0 && decide (i✝ ∈ xs))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawCalibrationProof.lean:55:73: error: unsolved goals
+xs : List ℕ
+p : Formula
+⊢ List.map occurrenceData
+      (List.filter
+        (fun x =>
+          (occurrenceData x).2.2.1 != 0 && (occurrenceData x).2.2.2.1 != 0 && decide (name (occurrenceData x) ∈ xs))
+        (OrderedOccurrence.roster p)) =
+    List.map occurrenceData
+      (List.filter
+        (fun o =>
+          OrderedOccurrence.coefficient o != 0 && OrderedOccurrence.nonlinear (OrderedOccurrence.summand o) &&
+            decide ((OrderedOccurrence.summand o).name ∈ xs))
+        (OrderedOccurrence.roster p))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawCalibrationProof.lean:56:71: warning: This simp argument is unused:
+  live_test
+
+Hint: Omit it from the simp argument list.
+  simp only [live, ̲roster_calibration, ̲List.filter_map, ̲Function.comp_def,l̵i̵v̵e̵_̵t̵e̵s̵t̵,̵
+  ̵  ̵ ̵ ̵OrderedOccurrence.live]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawCalibrationProof.lean:59:117: error: unsolved goals
+xs : List ℕ
+p : Formula
+⊢ List.filter (fun i => !(OrderedOccurrence.live xs p).any ((fun o => name o == i) ∘ occurrenceData)) xs =
+    List.filter (fun i => !(OrderedOccurrence.live xs p).any fun o => (OrderedOccurrence.summand o).name == i) xs
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawCalibrationProof.lean:60:74: warning: This simp argument is unused:
+  name_calibration
+
+Hint: Omit it from the simp argument list.
+  simp [̵i̵n̵a̵c̵t̵i̵v̵e̵,̵O̵r̵d̵e̵r̵e̵d̵O̵c̵c̵u̵r̵r̵e̵n̵c̵e̵.̵i̵n̵a̵c̵t̵i̵v̵e̵,̵l̵i̵v̵e̵_̵c̵a̵l̵i̵b̵r̵a̵t̵i̵o̵n̵,̵L̵i̵s̵t̵.̵a̵n̵y̵_̵m̵a̵p̵,̵n̵a̵m̵e̵_̵c̵a̵l̵i̵b̵r̵a̵t̵i̵o̵n̵]̵[̲i̲n̲a̲c̲t̲i̲v̲e̲,̲ ̲O̲r̲d̲e̲r̲e̲d̲O̲c̲c̲u̲r̲r̲e̲n̲c̲e̲.̲i̲n̲a̲c̲t̲i̲v̲e̲,̲ ̲l̲i̲v̲e̲_̲c̲a̲l̲i̲b̲r̲a̲t̲i̲o̲n̲,̲ ̲L̲i̲s̲t̲.̲a̲n̲y̲_̲m̲a̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawCalibrationProof.lean:85:12: error(lean.unknownIdentifier): Unknown constant `List.flatMap_congr_left`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawCalibrationProof.lean:86:12: error: No goals to be solved
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawCalibrationProof.lean:90:12: error(lean.unknownIdentifier): Unknown constant `List.flatMap_congr_left`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/OrderedOccurrenceRawCalibrationProof.lean:91:12: error: No goals to be solved

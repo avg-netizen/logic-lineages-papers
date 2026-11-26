@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowRawClassSaturationTargets
+import LogicLineages.PersistentMarking.NumberedWindowRawClassSaturationClassProof
+import LogicLineages.PersistentMarking.NumberedWindowRawClassSaturationScalarProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowRawClassSaturationChecks
+open NumberedWindowRawClassSaturationTargets
+open NumberedWindowRawClassSaturationClassProof (exactSaturation exactSamePool)
+open NumberedWindowRawClassSaturationScalarProof (admittedResult closureWithVertices)
+
+theorem exact_LiteralClassSaturation : ExactLiteralClassSaturation := exactSaturation
+theorem exact_SamePoolLeastSelf : ExactSamePoolLeastSelf := exactSamePool
+theorem exact_RawLeastResultAdmitted : ExactRawLeastResultAdmitted := admittedResult
+theorem exact_RawLeastClosureWithVertices : ExactRawLeastClosureWithVertices := closureWithVertices
+
+#print axioms exact_LiteralClassSaturation
+#print axioms exact_SamePoolLeastSelf
+#print axioms exact_RawLeastResultAdmitted
+#print axioms exact_RawLeastClosureWithVertices
+
+end LogicLineages.PersistentMarking.NumberedWindowRawClassSaturationChecks

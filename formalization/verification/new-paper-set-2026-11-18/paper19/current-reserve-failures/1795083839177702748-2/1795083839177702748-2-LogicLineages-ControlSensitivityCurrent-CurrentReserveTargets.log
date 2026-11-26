@@ -1,0 +1,15 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentReserveTargets.lean:82:48: error: Application type mismatch: The argument
+  F
+has type
+  Variable (left ++ σ :: right) σ
+but is expected to have type
+  Variable (left ++ Ty.curriedGround (k + 1) :: right) (Ty.curriedGround n)
+in the application
+  Term.var F
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentReserveTargets.lean:73:42: error: Type mismatch
+  r
+has type
+  Variable (left ++ σ :: right) (?m.163 p f k left right n t e u) →
+    Variable (σ :: (left ++ right)) (?m.163 p f k left right n t e u)
+but is expected to have type
+  Variable (left ++ σ :: right) σ✝ → Variable (σ :: (left ++ right)) σ✝

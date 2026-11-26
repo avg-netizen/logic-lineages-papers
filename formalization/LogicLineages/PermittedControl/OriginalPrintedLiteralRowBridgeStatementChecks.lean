@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedLiteralRowBridgeTargets
+import LogicLineages.PermittedControl.OriginalPrintedLiteralRowBridgeReadProof
+import LogicLineages.PermittedControl.OriginalPrintedLiteralRowBridgeProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedLiteralRowBridge
+
+theorem fixed_exactActualRowReadState : ExactActualRowReadState := exactActualRowReadState
+theorem fixed_exactLiteralRowProper : ExactLiteralRowProper := exactLiteralRowProper
+theorem fixed_exactLiteralProperClauseFilter : ExactLiteralProperClauseFilter :=
+  exactLiteralProperClauseFilter
+theorem fixed_exactLiteralMixedRowBridge : ExactLiteralMixedRowBridge := exactLiteralMixedRowBridge
+theorem fixed_exactLiteralMixedClauseBridge : ExactLiteralMixedClauseBridge := exactLiteralMixedClauseBridge
+theorem fixed_fullOriginalPrintedLiteralRowBridge : FullOriginalPrintedLiteralRowBridge :=
+  ⟨fixed_exactActualRowReadState,fixed_exactLiteralRowProper,fixed_exactLiteralProperClauseFilter,
+    fixed_exactLiteralMixedRowBridge,fixed_exactLiteralMixedClauseBridge⟩
+
+#print axioms fixed_exactActualRowReadState
+#print axioms fixed_exactLiteralRowProper
+#print axioms fixed_exactLiteralProperClauseFilter
+#print axioms fixed_exactLiteralMixedRowBridge
+#print axioms fixed_exactLiteralMixedClauseBridge
+#print axioms fixed_fullOriginalPrintedLiteralRowBridge
+
+end LogicLineages.PermittedControl.StatementChecks

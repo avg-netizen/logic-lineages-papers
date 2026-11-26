@@ -1,0 +1,5 @@
+# InverseCutSyntax exact pre-scope
+
+Approved supporting scope before proofs; five pins independently verified. Read all definitions and six target families. Actual existing Term/Matrix constructors emit four guarded lower-range/max branches without new max/if symbols. Selector h=0 uses Phi and any nonzero h uses actual H consistently in function, syntax and raw code. Fixed literal modulus residue uses natural subtraction/division correctly, preserving below-range/empty/equality boundaries and invalid modulus falsity.
+
+All four arbitrary parameter terms share one valuation and may contain nested functions/repeated names. BoundCut explicitly evaluates under Function.update and target freshness excludes x from every parameter occurrence. OutputSupport and UpdateAndNegation retain syntactic inactive branches. Raw seven-input code is finite constructor composition with exact encoded Matrix target and genuine PR, not semantic evaluation/decoding oracle. This pays one parameter-preserving syntactic cut rule; no arbitrary alternation or general QE follows. No native execution performed.

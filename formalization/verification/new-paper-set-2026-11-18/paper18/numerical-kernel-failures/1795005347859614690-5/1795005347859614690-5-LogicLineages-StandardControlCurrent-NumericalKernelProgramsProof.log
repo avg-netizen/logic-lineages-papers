@@ -1,0 +1,22 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NumericalKernelProgramsProof.lean:19:4: error: Tactic `rfl` failed: The left-hand side
+  encodedNodeCode (rawNoteEncode ↑d) 0 (encodedNatNote 0)
+is not definitionally equal to the right-hand side
+  encodedNodeCode (encodedNatNote d) 0 0
+
+d c t : ℕ
+hd : 1 ≤ d
+eta : NONote := ⟨↑d, ⋯⟩
+hp : 0 < (↑eta).repr
+hi :
+  have code := encodedKernelInitial (rawNoteEncode ↑eta) 0 0;
+  (rawNoteDecode code).NF ∧
+    (rawNoteDecode code).repr = actualSuffixKernelInitial (Ordinal.omega0 ^ (↑eta).repr) 0 0 ∧
+      actualOrdinalNorm (Ordinal.omega0 ^ (↑eta).repr) = 1 + rawNormCode (rawNoteEncode ↑eta)
+⊢ encodedNodeCode (rawNoteEncode ↑d) 0 (encodedNatNote 0) = encodedNodeCode (encodedNatNote d) 0 0
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NumericalKernelProgramsProof.lean:18:49: warning: This simp argument is unused:
+  encodedNatNoteCorrect
+
+Hint: Omit it from the simp argument list.
+  simp only [̵e̵n̵c̵o̵d̵e̵d̵K̵e̵r̵n̵e̵l̵I̵n̵i̵t̵i̵a̵l̵,̵N̵a̵t̵.̵z̵e̵r̵o̵_̵s̵u̵b̵,̵e̵n̵c̵o̵d̵e̵d̵N̵a̵t̵N̵o̵t̵e̵C̵o̵r̵r̵e̵c̵t̵,̵e̵t̵a̵]̵[̲e̲n̲c̲o̲d̲e̲d̲K̲e̲r̲n̲e̲l̲I̲n̲i̲t̲i̲a̲l̲,̲ ̲N̲a̲t̲.̲z̲e̲r̲o̲_̲s̲u̲b̲,̲ ̲e̲t̲a̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

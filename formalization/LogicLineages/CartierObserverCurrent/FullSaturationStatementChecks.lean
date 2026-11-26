@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullSaturationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullSaturation.StatementChecks
+theorem fixed_complete : FullSaturationTargets.FullSaturation := complete
+#audit_namespace LogicLineages.CartierObserverCurrent.FullSaturation.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullSaturation.StatementChecks

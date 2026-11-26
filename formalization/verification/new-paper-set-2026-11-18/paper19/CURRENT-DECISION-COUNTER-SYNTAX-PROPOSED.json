@@ -1,0 +1,15 @@
+{
+  "status": "proposal only; active bytes unchanged",
+  "only_file": "LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSyntaxProof.lean",
+  "owner_failed_sha256": "55062990ffd88d508d4aad57eef8ea4fb42835cdd9b3deab070eba655b56ae7f",
+  "proposed_sha256": "c34d545398494ca43a7d59440136a994dce2f8c85c7db32d30b5e2f47aad2a93",
+  "failure": "build-reports/1795072949300748241-2.json",
+  "preserved": "verification/new-paper-set-2026-11-18/paper19/current-decision-failures/1795072949300748241-2",
+  "change": "three explicit proof-only simplification points; no statement, emitters, runtime definitions or frozen pin changes",
+  "exact_error_lines": {
+    "27,30": "change falsely assumes recursive renamingCode unfolds a known typed two-entry domain; use its equations, prove tail separately from exact shift table, then use the two Boolean/fresh literal computations",
+    "37": "remaining conjunction has same renameCode except the computational but non-simp projection (encode \u27e8\u0393,\u03c4,d\u27e9).1 vs \u0393.map SyntaxCode.typeCode and the local \u0393\u2082; use explicit exact projection fact and unfold local context",
+    "126": "left witness last index is 0 + (AbsoluteObserver.factor \u03c4 + 5) while right is AbsoluteObserver.factor \u03c4 + 5; simp Nat.zero_add proves exact same row program"
+  },
+  "unchanged_frozen_pins": 8
+}

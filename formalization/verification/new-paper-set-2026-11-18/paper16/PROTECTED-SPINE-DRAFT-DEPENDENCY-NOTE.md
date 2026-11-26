@@ -1,0 +1,11 @@
+# Unfrozen interpreter draft: marked-value dependency discovered before freeze
+
+ProtectedSpineEnvironment.lean and ProtectedSpineInterpreter.lean are uncompiled design drafts, not frozen contracts or accepted definitions. They implement finite assignments, actual context restriction, coordinate-local opening, original Expr/Args/nonempty-helper structural recursion, and call-local protection/reset. No native ticket was used.
+
+Do NOT freeze the current direct-M marked-node branch. It is inconsistent with the intended arbitrary-M concrete substituted-call correspondence: take a free variable whose concrete image is a marked owner P. If interpretation(P) simply decodes M(P), its table is the arbitrary retained table stored in M(P). The direct helper on P, however, appends the full tuple and reads M(P+tuple). Existing (C) and input monotonicity do not require those values equal. Reading an assigned variable's whole table therefore cannot equal the direct substituted-source helper by the intended structural proof.
+
+The printed source lines109–131 describes an actual new marked value: availability=true, both observation fields equal the four positive-test weak set, and full tables consult the PREVIOUS M at appended extras. That builder is the needed source term interpretation, not direct decoding M(P). Reading its full table then agrees with the helper's appended-owner lookup without a same-M table equation or fixedpoint assumption. Ordinary-head marked counterpart fields must use that constructed value too.
+
+Consequently the planned separation must be adjusted at the level of implementation dependencies, not by changing source claims/carriers: implement the real four-test marked-value builder before or mutually with the interpreter, prove its validity and (C) before encoded use, and retain previous-M outputs in all tuple fields. The operator subsequently encodes this actual builder over all parameters. Direct M lookups remain appropriate for the tests' previous-approximation premises and appended tuple outputs, not as the entire interpreted marked value.
+
+Independent source-reading confirmation requested. No new premise equating arbitrary M tables with appended-owner lookup, no fixedpoint assumption in the structural lemma, no target weakening, and no semantic freeze made.

@@ -1,0 +1,33 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericParseProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawFunctionFrameNumericParseProof.lean
+@@ -44,7 +44,7 @@
+     run (field 0) w = child := by
+   rw [codeOfNode h]
+   have t := (headTailOfCell (cellAt 5 (pack [child]))).2
+-  have c := (headTailOfCell (cellAt child (pack []))).1
++  have c : run cellHead (pack [child]) = child := (headTailOfCell (cellAt child (pack []))).1
+   change run (field 0) (NumberedWindowPairAlgorithm.pair 5 (pack [child]) + 1) = child
+   simp only [field,cursor,applyValue,t,c]
+ 
+@@ -52,13 +52,16 @@
+     run (field 0) q = d ∧ run (field 1) q = t ∧ run (field 2) q = f ∧ run (field 3) q = a := by
+   rw [codeOfNode h]
+   have outer := (headTailOfCell (cellAt 6 (pack [d,t,f,a]))).2
+-  have first := headTailOfCell (cellAt d (pack [t,f,a]))
+-  have second := headTailOfCell (cellAt t (pack [f,a]))
+-  have third := headTailOfCell (cellAt f (pack [a]))
+-  have last := (headTailOfCell (cellAt a (pack []))).1
++  have first : run cellHead (pack [d,t,f,a]) = d ∧ run cellTail (pack [d,t,f,a]) = pack [t,f,a] :=
++    headTailOfCell (cellAt d (pack [t,f,a]))
++  have second : run cellHead (pack [t,f,a]) = t ∧ run cellTail (pack [t,f,a]) = pack [f,a] :=
++    headTailOfCell (cellAt t (pack [f,a]))
++  have third : run cellHead (pack [f,a]) = f ∧ run cellTail (pack [f,a]) = pack [a] :=
++    headTailOfCell (cellAt f (pack [a]))
++  have last : run cellHead (pack [a]) = a := (headTailOfCell (cellAt a (pack []))).1
+   change run (field 0) (NumberedWindowPairAlgorithm.pair 6 (pack [d,t,f,a]) + 1) = d ∧ _
+   simp only [field,cursor,applyValue,outer,first.1,first.2,second.1,second.2,third.1,third.2,last,
+-    packNode]
++    packNode] <;> exact ⟨rfl,rfl,rfl,rfl⟩
+ 
+ /-- Code-level description of the actual source case, before choosing
+ a scratch output representation. No constraints on the child payload. -/

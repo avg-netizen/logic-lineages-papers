@@ -1,0 +1,51 @@
+{
+  "status": "source-only top pair proof alias repair, no Lean/Git invoked by author",
+  "failed_source_remote_commit": "5314e28f3362779ee6d33010f34d2d94647a9288",
+  "failed_source_local_commit": "576a7ee1ea920ffc3ac660781c74d5def8944252",
+  "failed_source_tree": "10884355c4fbe859a99dd2145d8c1fba5e02517f",
+  "failed_exact_gate_receipt": "1795365081999005352-101",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualFullLabelPairGuardsStatementChecks",
+  "failed_receipt_sha256": "2e968a7ae5fd46c3557695bc01ecc1f08abb4cc6618efc61656ece6de6bb1458",
+  "failed_exact_module_log_sha256": "3967448cf4782ec34fd23efa7fee4994f8e5410fae2d45258b67e2f37d1e54eb",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFullLabelPairGuardsProof.lean:154:4: error: Type mismatch: After simplification, term\n  tie\n has type\n  PreparedTableTied f top \u03c1\n    (ActualSignedOrdinaryPairHigh.orientedPacket p.1.field p.2.field p.1.rank p.2.rank (topRequest a).1 (topRequest a).2\n        true).1\n    \u03bd\nbut is expected to have type\n  PreparedTableTied f top \u03c1 (topPacket p a).1 \u03bd\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFullLabelPairGuardsProof.lean:174:6: error: Type mismatch: After simplification, term\n  check\n has type\n  Iff\n    ((ActualSignedOrdinaryPairHigh.orientedPacket p.1.field p.2.field p.1.rank p.2.rank (topRequest a).1\n            (topRequest a).2 true).2.eval\n      (Function.update \u03bc 0 z))\n    (ActualSignedOrdinaryPairHigh.source f (Function.update \u03c1 top z) p.1.field p.2.field p.1.rank p.2.rank\n      (topRequest a).1 (topRequest a).2 true)\nbut is expected to have type\n  Iff ((topPacket p a).2.eval (Function.update \u03bc 0 z))\n    (ActualSignedOrdinaryPairHigh.source f (Function.update \u03c1 top z) p.1.field p.2.field p.1.rank p.2.rank\n      (topRequest a).1 (topRequest a).2 true)\n",
+  "failed_original_native_log_sha256": "16988bb45a4a929b2163c424a774aa99d2b2014b43ae185e75c95833bd384be2",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualFullLabelPairGuardsProof.lean",
+  "failed_proof_sha256": "36d14a3d2d538165ea35a4d1b5e7006ed9bd9b982c34ea9cbf4a3c00d2f40e7c",
+  "repaired_proof_sha256": "131fbb10c24d890e18d6ee19affa4d6e5bdeb7920390ff7e34722efc23e9c8fc",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FULL-LABEL-PAIR-GUARDS-REPAIR-02.patch",
+  "patch_sha256": "2c4cbdd264b72dfac82eaec0b9852fe7aabc1defed1cf58f245526adc4912521",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FULL-LABEL-PAIR-GUARDS-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "4795d1da7888a07557e6e6ef0d17e626851e984e3e5c586e98d75806844a59ba",
+  "prior_lower_repair_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FULL-LABEL-PAIR-GUARDS-REPAIR-01.json",
+  "prior_lower_repair_manifest_sha256": "0483f2f693f928945b2e186abb994feacd3f8992f1397a37f0c5da1a4ea84325",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualFullLabelPairGuardsTargets.lean": "f3d79091327978cb1c50139c2de82b228c6c6dcf28ef7e60cabf749b2bfc6a8b",
+    "formalization/LogicLineages/PermittedControl/ActualFullLabelPairGuardsLowerProof.lean": "17dba9f2d3c8b90a8700243ed6f2815996e931286a9a1808a727bd6b4da82bae",
+    "formalization/LogicLineages/PermittedControl/ActualFullLabelPairGuardsStatementChecks.lean": "0654870b0979868ccb899073fa498c0c916ca6e8df827b7bda3763a151738f0d",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FULL-LABEL-PAIR-GUARDS-SOURCE-MAP.md": "57f2933ad1b3ec295c1956ed727b083a579ca1380dc698e62f5959318f550c17"
+  },
+  "static_module_closure_unchanged": {
+    "Targets": {
+      "local": 170,
+      "external": 32,
+      "contains_totient": false
+    },
+    "LowerProof": {
+      "local": 173,
+      "external": 32,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 428,
+      "external": 39,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 429,
+      "external": 39,
+      "contains_totient": false
+    }
+  },
+  "scope": "Only unfold exact topPacket synonym to orientedPacket in the two simpa bridges. No term/test, semantic scope, guard, import or other leaf edits."
+}

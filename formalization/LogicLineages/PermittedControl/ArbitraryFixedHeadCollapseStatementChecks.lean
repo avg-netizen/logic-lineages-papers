@@ -1,0 +1,28 @@
+module
+public import LogicLineages.PermittedControl.ArbitraryFixedHeadCollapseTargets
+import LogicLineages.PermittedControl.ArbitraryFixedHeadCollapseNormalizationProof
+import LogicLineages.PermittedControl.ArbitraryFixedHeadCollapseCodeProof
+import LogicLineages.PermittedControl.ArbitraryFixedHeadCollapseSemanticProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_arbitraryFixedHeadActualNormalization : ArbitraryFixedHeadCollapse.ActualNormalization :=
+  ArbitraryFixedHeadCollapse.actualNormalization
+
+theorem fixed_arbitraryFixedHeadCollapseEffective : ArbitraryFixedHeadCollapse.Effectivity :=
+  ArbitraryFixedHeadCollapse.effectivity
+
+theorem fixed_arbitraryFixedHeadActualGraph : ArbitraryFixedHeadCollapse.ActualGraph :=
+  ArbitraryFixedHeadCollapse.actualGraph
+
+theorem fixed_fullArbitraryFixedHeadCollapse : ArbitraryFixedHeadCollapse.FullArbitraryFixedHeadCollapse :=
+  ⟨fixed_arbitraryFixedHeadActualNormalization,fixed_arbitraryFixedHeadCollapseEffective,
+    fixed_arbitraryFixedHeadActualGraph⟩
+
+#print axioms fixed_arbitraryFixedHeadActualNormalization
+#print axioms fixed_arbitraryFixedHeadCollapseEffective
+#print axioms fixed_arbitraryFixedHeadActualGraph
+#print axioms fixed_fullArbitraryFixedHeadCollapse
+
+end LogicLineages.PermittedControl.StatementChecks

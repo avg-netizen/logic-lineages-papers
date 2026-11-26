@@ -1,0 +1,151 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:24:6: error: `simp` made no progress
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:25:4: error: unsolved goals
+case inl.inr
+xs : NumberedWindowCopyAlgorithm.Entries
+s : NumberedWindowScalarAlgorithm.Settings
+i : Program 1
+r : Program 3
+oldScalar :
+  ∀ (y : ℕ), NumberedWindowInternalSparsePathEnvelope.run i y = (NumberedWindowScalarAlgorithm.scalar s y).toNat
+oldPositive : ∀ (x w y : ℕ), evaluate r (x ::ᵥ w ::ᵥ y ::ᵥ nil) = (positive xs s x w y).toNat
+x w y : ℕ
+freeHit : NumberedWindowInternalSparsePathEnvelope.run freeSource x = 1 ↔ ∃ c t n, x = freeAddress c t n
+bottomHit : NumberedWindowInternalSparsePathEnvelope.run bottomSource x = 1 ↔ ∃ c t, x = bottomAddress c t
+freeZero : NumberedWindowInternalSparsePathEnvelope.run freeSource x = 0
+bottomOne : NumberedWindowInternalSparsePathEnvelope.run bottomSource x = 1
+c t : ℕ
+shape : x = bottomAddress c t
+rejected : positive xs s x w y = false
+⊢ evaluate (refined i r) (x ::ᵥ w ::ᵥ y ::ᵥ nil) = 0
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:31:4: error: unsolved goals
+case pos
+xs : NumberedWindowCopyAlgorithm.Entries
+s : NumberedWindowScalarAlgorithm.Settings
+i : Program 1
+r : Program 3
+oldScalar :
+  ∀ (y : ℕ), NumberedWindowInternalSparsePathEnvelope.run i y = (NumberedWindowScalarAlgorithm.scalar s y).toNat
+oldPositive : ∀ (x w y : ℕ), evaluate r (x ::ᵥ w ::ᵥ y ::ᵥ nil) = (positive xs s x w y).toNat
+x w y : ℕ
+freeHit : NumberedWindowInternalSparsePathEnvelope.run freeSource x = 1 ↔ ∃ c t n, x = freeAddress c t n
+bottomHit : NumberedWindowInternalSparsePathEnvelope.run bottomSource x = 1 ↔ ∃ c t, x = bottomAddress c t
+bottomBit :
+  NumberedWindowInternalSparsePathEnvelope.run bottomSource x = 0 ∨
+    NumberedWindowInternalSparsePathEnvelope.run bottomSource x = 1
+freeOne : NumberedWindowInternalSparsePathEnvelope.run freeSource x = 1
+accepted : positive xs s x w y = true
+c t n : ℕ
+shape : x = freeAddress c t n
+actual : y = bottomAddress c t ∧ NumberedWindowScalarAlgorithm.scalar s y = true
+targetOne : evaluate bottomTarget (x ::ᵥ w ::ᵥ y ::ᵥ nil) = 1
+⊢ evaluate (refined i r) (x ::ᵥ w ::ᵥ y ::ᵥ nil) = 1
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:37:14: error: unsolved goals
+case neg.false
+xs : NumberedWindowCopyAlgorithm.Entries
+s : NumberedWindowScalarAlgorithm.Settings
+i : Program 1
+r : Program 3
+oldScalar :
+  ∀ (y : ℕ), NumberedWindowInternalSparsePathEnvelope.run i y = (NumberedWindowScalarAlgorithm.scalar s y).toNat
+oldPositive : ∀ (x w y : ℕ), evaluate r (x ::ᵥ w ::ᵥ y ::ᵥ nil) = (positive xs s x w y).toNat
+x w y : ℕ
+freeHit : NumberedWindowInternalSparsePathEnvelope.run freeSource x = 1 ↔ ∃ c t n, x = freeAddress c t n
+bottomHit : NumberedWindowInternalSparsePathEnvelope.run bottomSource x = 1 ↔ ∃ c t, x = bottomAddress c t
+bottomBit :
+  NumberedWindowInternalSparsePathEnvelope.run bottomSource x = 0 ∨
+    NumberedWindowInternalSparsePathEnvelope.run bottomSource x = 1
+freeOne : NumberedWindowInternalSparsePathEnvelope.run freeSource x = 1
+accepted : ¬positive xs s x w y = true
+old : positive xs s x w y = false
+⊢ evaluate (refined i r) (x ::ᵥ w ::ᵥ y ::ᵥ nil) = 0
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:29:12: warning: This simp argument is unused:
+  exactBranches
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵x̵a̵c̵t̵B̵r̵a̵n̵c̵h̵e̵s̵,̵f̵r̵e̵e̵Z̵e̵r̵o̵,̵b̵o̵t̵t̵o̵m̵O̵n̵e̵,̵r̵e̵j̵e̵c̵t̵e̵d̵]̵[̲f̲r̲e̲e̲Z̲e̲r̲o̲,̲ ̲b̲o̲t̲t̲o̲m̲O̲n̲e̲,̲ ̲r̲e̲j̲e̲c̲t̲e̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:29:26: warning: This simp argument is unused:
+  freeZero
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵x̵a̵c̵t̵B̵r̵a̵n̵c̵h̵e̵s̵,̵f̵r̵e̵e̵Z̵e̵r̵o̵,̵b̵o̵t̵t̵o̵m̵O̵n̵e̵,̵r̵e̵j̵e̵c̵t̵e̵d̵]̵[̲e̲x̲a̲c̲t̲B̲r̲a̲n̲c̲h̲e̲s̲,̲ ̲b̲o̲t̲t̲o̲m̲O̲n̲e̲,̲ ̲r̲e̲j̲e̲c̲t̲e̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:29:35: warning: This simp argument is unused:
+  bottomOne
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵x̵a̵c̵t̵B̵r̵a̵n̵c̵h̵e̵s̵,̵f̵r̵e̵e̵Z̵e̵r̵o̵,̵b̵o̵t̵t̵o̵m̵O̵n̵e̵,̵r̵e̵j̵e̵c̵t̵e̵d̵]̵[̲e̲x̲a̲c̲t̲B̲r̲a̲n̲c̲h̲e̲s̲,̲ ̲f̲r̲e̲e̲Z̲e̲r̲o̲,̲ ̲r̲e̲j̲e̲c̲t̲e̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:35:12: warning: This simp argument is unused:
+  exactBranches
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵x̵a̵c̵t̵B̵r̵a̵n̵c̵h̵e̵s̵,̵f̵r̵e̵e̵O̵n̵e̵,̵o̵l̵d̵P̵o̵s̵i̵t̵i̵v̵e̵,̵a̵c̵c̵e̵p̵t̵e̵d̵,̵t̵a̵r̵g̵e̵t̵O̵n̵e̵,̵o̵l̵d̵S̵c̵a̵l̵a̵r̵,̵a̵c̵t̵u̵a̵l̵.̵2̵]̵[̲f̲r̲e̲e̲O̲n̲e̲,̲ ̲o̲l̲d̲P̲o̲s̲i̲t̲i̲v̲e̲,̲ ̲a̲c̲c̲e̲p̲t̲e̲d̲,̲ ̲t̲a̲r̲g̲e̲t̲O̲n̲e̲,̲ ̲o̲l̲d̲S̲c̲a̲l̲a̲r̲,̲ ̲a̲c̲t̲u̲a̲l̲.̲2̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:35:26: warning: This simp argument is unused:
+  freeOne
+
+Hint: Omit it from the simp argument list.
+  simp [exactBranches,f̵r̵e̵e̵O̵n̵e̵,̵ ̲oldPositive, ̲accepted, ̲targetOne, ̲oldScalar, ̲actual.2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:35:34: warning: This simp argument is unused:
+  oldPositive
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵x̵a̵c̵t̵B̵r̵a̵n̵c̵h̵e̵s̵,̵f̵r̵e̵e̵O̵n̵e̵,̵o̵l̵d̵P̵o̵s̵i̵t̵i̵v̵e̵,̵a̵c̵c̵e̵p̵t̵e̵d̵,̵t̵a̵r̵g̵e̵t̵O̵n̵e̵,̵o̵l̵d̵S̵c̵a̵l̵a̵r̵,̵a̵c̵t̵u̵a̵l̵.̵2̵]̵[̲e̲x̲a̲c̲t̲B̲r̲a̲n̲c̲h̲e̲s̲,̲ ̲f̲r̲e̲e̲O̲n̲e̲,̲ ̲a̲c̲c̲e̲p̲t̲e̲d̲,̲ ̲t̲a̲r̲g̲e̲t̲O̲n̲e̲,̲ ̲o̲l̲d̲S̲c̲a̲l̲a̲r̲,̲ ̲a̲c̲t̲u̲a̲l̲.̲2̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:35:55: warning: This simp argument is unused:
+  targetOne
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵x̵a̵c̵t̵B̵r̵a̵n̵c̵h̵e̵s̵,̵f̵r̵e̵e̵O̵n̵e̵,̵o̵l̵d̵P̵o̵s̵i̵t̵i̵v̵e̵,̵a̵c̵c̵e̵p̵t̵e̵d̵,̵t̵a̵r̵g̵e̵t̵O̵n̵e̵,̵o̵l̵d̵S̵c̵a̵l̵a̵r̵,̵a̵c̵t̵u̵a̵l̵.̵2̵]̵[̲e̲x̲a̲c̲t̲B̲r̲a̲n̲c̲h̲e̲s̲,̲ ̲f̲r̲e̲e̲O̲n̲e̲,̲ ̲o̲l̲d̲P̲o̲s̲i̲t̲i̲v̲e̲,̲ ̲a̲c̲c̲e̲p̲t̲e̲d̲,̲ ̲o̲l̲d̲S̲c̲a̲l̲a̲r̲,̲ ̲a̲c̲t̲u̲a̲l̲.̲2̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:35:65: warning: This simp argument is unused:
+  oldScalar
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵x̵a̵c̵t̵B̵r̵a̵n̵c̵h̵e̵s̵,̵f̵r̵e̵e̵O̵n̵e̵,̵o̵l̵d̵P̵o̵s̵i̵t̵i̵v̵e̵,̵a̵c̵c̵e̵p̵t̵e̵d̵,̵t̵a̵r̵g̵e̵t̵O̵n̵e̵,̵o̵l̵d̵S̵c̵a̵l̵a̵r̵,̵a̵c̵t̵u̵a̵l̵.̵2̵]̵[̲e̲x̲a̲c̲t̲B̲r̲a̲n̲c̲h̲e̲s̲,̲ ̲f̲r̲e̲e̲O̲n̲e̲,̲ ̲o̲l̲d̲P̲o̲s̲i̲t̲i̲v̲e̲,̲ ̲a̲c̲c̲e̲p̲t̲e̲d̲,̲ ̲t̲a̲r̲g̲e̲t̲O̲n̲e̲,̲ ̲a̲c̲t̲u̲a̲l̲.̲2̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:35:75: warning: This simp argument is unused:
+  actual.2
+
+Hint: Omit it from the simp argument list.
+  simp [exactBranches, ̲freeOne, ̲oldPositive, ̲accepted, ̲targetOne, ̲oldScalar,̵a̵c̵t̵u̵a̵l̵.̵2̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:37:23: warning: This simp argument is unused:
+  exactBranches
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵x̵a̵c̵t̵B̵r̵a̵n̵c̵h̵e̵s̵,̵f̵r̵e̵e̵O̵n̵e̵,̵o̵l̵d̵P̵o̵s̵i̵t̵i̵v̵e̵,̵o̵l̵d̵]̵[̲f̲r̲e̲e̲O̲n̲e̲,̲ ̲o̲l̲d̲P̲o̲s̲i̲t̲i̲v̲e̲,̲ ̲o̲l̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:37:37: warning: This simp argument is unused:
+  freeOne
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵x̵a̵c̵t̵B̵r̵a̵n̵c̵h̵e̵s̵,̵f̵r̵e̵e̵O̵n̵e̵,̵o̵l̵d̵P̵o̵s̵i̵t̵i̵v̵e̵,̵o̵l̵d̵]̵[̲e̲x̲a̲c̲t̲B̲r̲a̲n̲c̲h̲e̲s̲,̲ ̲o̲l̲d̲P̲o̲s̲i̲t̲i̲v̲e̲,̲ ̲o̲l̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:37:45: warning: This simp argument is unused:
+  oldPositive
+
+Hint: Omit it from the simp argument list.
+  simp [̵e̵x̵a̵c̵t̵B̵r̵a̵n̵c̵h̵e̵s̵,̵f̵r̵e̵e̵O̵n̵e̵,̵o̵l̵d̵P̵o̵s̵i̵t̵i̵v̵e̵,̵o̵l̵d̵]̵[̲e̲x̲a̲c̲t̲B̲r̲a̲n̲c̲h̲e̲s̲,̲ ̲f̲r̲e̲e̲O̲n̲e̲,̲ ̲o̲l̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAtomicRefinementNumericCalibrationProof.lean:37:57: warning: This simp argument is unused:
+  old
+
+Hint: Omit it from the simp argument list.
+  simp [exactBranches, ̲freeOne, ̲oldPositive,̵o̵l̵d̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

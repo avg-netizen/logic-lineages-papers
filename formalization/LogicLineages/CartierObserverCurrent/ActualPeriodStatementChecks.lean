@@ -1,0 +1,9 @@
+module
+public import LogicLineages.CartierObserverCurrent.ActualPeriodTargets
+import LogicLineages.CartierObserverCurrent.ActualPeriodProof
+public meta import LogicLineages.Audit
+public section
+namespace LogicLineages.CartierObserverCurrent.ActualPeriod.StatementChecks
+theorem fixed_completeActualPeriod : Targets.CompleteActualPeriod := completeActualPeriod
+#audit_namespace LogicLineages.CartierObserverCurrent.ActualPeriod.StatementChecks
+end LogicLineages.CartierObserverCurrent.ActualPeriod.StatementChecks

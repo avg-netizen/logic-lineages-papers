@@ -1,0 +1,45 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentInductionProof.lean:78:11: error: don't know how to synthesize implicit argument `β`
+  @Term.relabel OrdinaryArithmetic.arithmeticLanguage α (α ⊕ ?m.35) Sum.inl ctx
+context:
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+P Q : Program 3
+ctx raw result : OTerm α
+work : PointStep P Q body
+valid : Nonempty (Derivation body Γ (unary fragmentGuard (suc z) raw))
+old : Nonempty (Derivation body Γ (windowAt P ctx result raw))
+θ : ID1Completion.InternalCalculus.Formula (α ⊕ Fin 1) := ⋯
+key : OTerm (α ⊕ Fin 1) := ⋯
+⊢ Type ?u.39
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentInductionProof.lean:78:23: error: don't know how to synthesize implicit argument `β`
+  @Sum.inl α ?m.35
+context:
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+P Q : Program 3
+ctx raw result : OTerm α
+work : PointStep P Q body
+valid : Nonempty (Derivation body Γ (unary fragmentGuard (suc z) raw))
+old : Nonempty (Derivation body Γ (windowAt P ctx result raw))
+θ : ID1Completion.InternalCalculus.Formula (α ⊕ Fin 1) := ⋯
+key : OTerm (α ⊕ Fin 1) := ⋯
+⊢ Type ?u.39
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentInductionProof.lean:78:6: error: failed to infer `let` declaration type
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxFragmentInductionProof.lean:75:64: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+P Q : Program 3
+ctx raw result : OTerm α
+work : PointStep P Q body
+valid : Nonempty (Derivation body Γ (unary fragmentGuard (suc z) raw))
+old : Nonempty (Derivation body Γ (windowAt P ctx result raw))
+θ : ID1Completion.InternalCalculus.Formula (α ⊕ Fin 1) := forwardMotive P Q ctx
+key : OTerm (α ⊕ Fin 1) := var (Sum.inr 0)
+⊢ Nonempty (Derivation body Γ (windowAt Q ctx result raw))
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverAuxFragmentInductionProof.exact_OpenCoverAuxFragmentWindowForward' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

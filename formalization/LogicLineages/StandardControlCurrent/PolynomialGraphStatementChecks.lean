@@ -1,0 +1,11 @@
+module
+public import LogicLineages.StandardControlCurrent.PolynomialGraphProof
+
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.PolynomialGraphStatementChecks
+
+theorem fixed_polynomialCollapseGraphs : PolynomialGraphTargets.PolynomialCollapseGraphs :=
+  polynomialCollapseGraphs
+
+#print axioms fixed_polynomialCollapseGraphs
+end LogicLineages.StandardControlCurrent.PolynomialGraphStatementChecks

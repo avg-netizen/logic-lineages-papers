@@ -1,0 +1,44 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.OriginalSourceEliminationProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.OriginalSourceEliminationStatementChecks
+
+theorem actualEmbedding : OriginalSourceEliminationTargets.LiteralBaseEmbedding :=
+  OriginalSourceEliminationProof.literalBaseEmbedding
+#print axioms actualEmbedding
+
+theorem actualBinderBlock : OriginalSourceEliminationTargets.ExactBinderBlock :=
+  OriginalSourceEliminationProof.exactBinderBlock
+#print axioms actualBinderBlock
+
+theorem actualBinderClass : OriginalSourceEliminationTargets.LiteralBinderInputClass :=
+  OriginalSourceEliminationProof.literalBinderInputClass
+#print axioms actualBinderClass
+
+theorem actualBinder : OriginalSourceEliminationTargets.ActualBinderElimination :=
+  OriginalSourceEliminationProof.actualBinderElimination
+#print axioms actualBinder
+
+theorem actualBinderNames : OriginalSourceEliminationTargets.OriginalBinderNameSupport :=
+  OriginalSourceEliminationProof.originalBinderNameSupport
+#print axioms actualBinderNames
+
+theorem actualBinderHFree : OriginalSourceEliminationTargets.HFreeBinderOutput :=
+  OriginalSourceEliminationProof.hFreeBinderOutput
+#print axioms actualBinderHFree
+
+theorem actualSource : OriginalSourceEliminationTargets.ActualSourceElimination :=
+  OriginalSourceEliminationProof.actualSourceElimination
+#print axioms actualSource
+
+theorem actualSourceNames : OriginalSourceEliminationTargets.OriginalSourceNameSupport :=
+  OriginalSourceEliminationProof.originalSourceNameSupport
+#print axioms actualSourceNames
+
+theorem actualSourceHFree : OriginalSourceEliminationTargets.HFreeSourceOutput :=
+  OriginalSourceEliminationProof.hFreeSourceOutput
+#print axioms actualSourceHFree
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.OriginalSourceEliminationStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.OriginalSourceEliminationStatementChecks

@@ -1,0 +1,44 @@
+@LogicLineages.PersistentMarking.NameBridge.Alpha.rec : ∀
+  {motive_1 :
+    (a a_1 : LogicLineages.PersistentMarking.Term) → LogicLineages.PersistentMarking.NameBridge.Alpha a a_1 → Prop}
+  {motive_2 :
+    (a a_1 : List LogicLineages.PersistentMarking.Term) →
+      LogicLineages.PersistentMarking.NameBridge.AlphaArgs a a_1 → Prop},
+  (∀ {q : LogicLineages.PersistentMarking.Term}, motive_1 q q ⋯) →
+    (∀ {q r : LogicLineages.PersistentMarking.Term} (a : LogicLineages.PersistentMarking.NameBridge.Alpha q r),
+        motive_1 q r a → motive_1 r q ⋯) →
+      (∀ {q r s : LogicLineages.PersistentMarking.Term} (a : LogicLineages.PersistentMarking.NameBridge.Alpha q r)
+          (a_1 : LogicLineages.PersistentMarking.NameBridge.Alpha r s),
+          motive_1 q r a → motive_1 r s a_1 → motive_1 q s ⋯) →
+        (∀ {q r : LogicLineages.PersistentMarking.Term} {σ : LogicLineages.PersistentMarking.Ty} {x : Nat}
+            (a : LogicLineages.PersistentMarking.NameBridge.Alpha q r),
+            motive_1 q r a →
+              motive_1 (LogicLineages.PersistentMarking.Term.lam σ x q) (LogicLineages.PersistentMarking.Term.lam σ x r)
+                ⋯) →
+          (∀ {qs rs : List LogicLineages.PersistentMarking.Term} {f : LogicLineages.PersistentMarking.Head}
+              (a : LogicLineages.PersistentMarking.NameBridge.AlphaArgs qs rs),
+              motive_2 qs rs a →
+                motive_1 (LogicLineages.PersistentMarking.Term.head f qs)
+                  (LogicLineages.PersistentMarking.Term.head f rs) ⋯) →
+            (∀ {qs rs es fs : List LogicLineages.PersistentMarking.Term} {f : LogicLineages.PersistentMarking.Head}
+                {τ : LogicLineages.PersistentMarking.Ty}
+                (a : LogicLineages.PersistentMarking.NameBridge.AlphaArgs qs rs)
+                (a_1 : LogicLineages.PersistentMarking.NameBridge.AlphaArgs es fs),
+                motive_2 qs rs a →
+                  motive_2 es fs a_1 →
+                    motive_1 (LogicLineages.PersistentMarking.Term.marked f τ qs es)
+                      (LogicLineages.PersistentMarking.Term.marked f τ rs fs) ⋯) →
+              (∀ {σ : LogicLineages.PersistentMarking.Ty} {z : Nat} {body : LogicLineages.PersistentMarking.Term}
+                  {x : Nat} (a : LogicLineages.PersistentMarking.NameBridge.nameOccurs (σ, z) body = false)
+                  (a_1 : z ≠ x),
+                  motive_1 (LogicLineages.PersistentMarking.Term.lam σ x body)
+                    (LogicLineages.PersistentMarking.Term.lam σ z
+                      (LogicLineages.PersistentMarking.NameBridge.renameFree (σ, x) (σ, z) body))
+                    ⋯) →
+                motive_2 [] [] LogicLineages.PersistentMarking.NameBridge.AlphaArgs.nil →
+                  (∀ {q r : LogicLineages.PersistentMarking.Term} {qs rs : List LogicLineages.PersistentMarking.Term}
+                      (a : LogicLineages.PersistentMarking.NameBridge.Alpha q r)
+                      (a_1 : LogicLineages.PersistentMarking.NameBridge.AlphaArgs qs rs),
+                      motive_1 q r a → motive_2 qs rs a_1 → motive_2 (q :: qs) (r :: rs) ⋯) →
+                    ∀ {a a_1 : LogicLineages.PersistentMarking.Term}
+                      (t : LogicLineages.PersistentMarking.NameBridge.Alpha a a_1), motive_1 a a_1 t

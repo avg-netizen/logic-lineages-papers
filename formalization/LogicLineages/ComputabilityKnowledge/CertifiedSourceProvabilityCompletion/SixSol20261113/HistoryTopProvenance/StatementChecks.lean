@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.Proof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.StatementChecks
+theorem exactValidityOccurrence : Targets.ActualValidityOccurrence := OccurrenceProof.actualValidityOccurrence
+theorem exactTopProvenance : Targets.InternalTopProvenance := Proof.internalTopProvenance
+theorem exactFullRunProvenance : Targets.InternalFullRunProvenance := Proof.internalFullRunProvenance
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryTopProvenance.StatementChecks

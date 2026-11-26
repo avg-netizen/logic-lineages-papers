@@ -1,0 +1,12 @@
+import LogicLineages.PersistentMarking.NumberedWindowArithmeticExchangeAtomsProof
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticExchangeAtomsChecks
+open NumberedWindowArithmeticExchangeAtomsTargets NumberedWindowArithmeticExchangeAtomsProof
+theorem exact_HeadPairCheck : ExactHeadPairCheck := headPairs
+theorem exact_EncodedArguments : ExactEncodedArguments := encoded
+theorem exact_LiteralPermutation : ExactLiteralPermutation := permutation
+theorem exact_LiteralEquality : ExactLiteralEquality := equality
+#print axioms exact_HeadPairCheck
+#print axioms exact_EncodedArguments
+#print axioms exact_LiteralPermutation
+#print axioms exact_LiteralEquality
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticExchangeAtomsChecks

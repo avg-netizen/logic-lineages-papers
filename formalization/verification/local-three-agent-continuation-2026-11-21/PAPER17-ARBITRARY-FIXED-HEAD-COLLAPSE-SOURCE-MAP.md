@@ -1,0 +1,9 @@
+# Paper 17 arbitrary fixed head
+
+The source includes every fixed ordinal head below epsilon zero. A finite head adds its original natural value to the argument. A nonfinite head splits into a nonzero limit plus a finite summand, which is absorbed into the same natural argument. [Original fixed heads](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex#L14-L27)
+
+The original raw split yields the actual normal nonzero limit notation and finite tail. Its transported argument is the norm of that limit plus the original finite tail plus the original input. This argument satisfies the actual guard, and the resulting ordinal initial state equals the original fixed head plus its input. [Frozen target](../../LogicLineages/PermittedControl/ArbitraryFixedHeadCollapseTargets.lean) [Normalization proof](../../LogicLineages/PermittedControl/ArbitraryFixedHeadCollapseNormalizationProof.lean)
+
+The relative computation checks actual raw normality before either finite or infinite case. The finite case computes the source sum, and the infinite case uses the exact guarded collapse reader on the transported pair. For either selected control this reader returns the actual collapse, and every nonnormal input is rejected. [Code proof](../../LogicLineages/PermittedControl/ArbitraryFixedHeadCollapseCodeProof.lean) [Semantic proof](../../LogicLineages/PermittedControl/ArbitraryFixedHeadCollapseSemanticProof.lean)
+
+This exact result covers individual fixed-head calls. Whole-circuit flattening, the original all-strip induction, and the printed #704 comparison are tracked separately. All four named aliases passed on the first final gate, `1795324700131886287-9`. [Author manifest](PAPER17-ARBITRARY-FIXED-HEAD-COLLAPSE-AUTHOR-MANIFEST.json) [Named checks](../../LogicLineages/PermittedControl/ArbitraryFixedHeadCollapseStatementChecks.lean)

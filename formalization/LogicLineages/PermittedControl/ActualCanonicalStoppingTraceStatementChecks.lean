@@ -1,0 +1,23 @@
+module
+public import LogicLineages.PermittedControl.ActualCanonicalStoppingTraceTargets
+import LogicLineages.PermittedControl.ActualCanonicalStoppingTraceStrictProof
+import LogicLineages.PermittedControl.ActualCanonicalStoppingTraceProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualCanonicalStoppingTrace
+
+theorem fixed_exactCanonicalProgressSplit : ExactCanonicalProgressSplit := exactCanonicalProgressSplit
+theorem fixed_exactCanonicalStrictStopping : ExactCanonicalStrictStopping := exactCanonicalStrictStopping
+theorem fixed_exactFundedCanonicalStoppingTrace : ExactFundedCanonicalStoppingTrace :=
+  exactFundedCanonicalStoppingTrace
+
+theorem fixed_fullActualCanonicalStoppingTrace : FullActualCanonicalStoppingTrace :=
+  ⟨fixed_exactCanonicalProgressSplit,fixed_exactCanonicalStrictStopping,
+    fixed_exactFundedCanonicalStoppingTrace⟩
+
+#print axioms fixed_exactCanonicalProgressSplit
+#print axioms fixed_exactCanonicalStrictStopping
+#print axioms fixed_exactFundedCanonicalStoppingTrace
+#print axioms fixed_fullActualCanonicalStoppingTrace
+
+end LogicLineages.PermittedControl.ActualCanonicalStoppingTrace

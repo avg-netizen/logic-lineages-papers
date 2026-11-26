@@ -1,0 +1,39 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaCompletenessProof.lean:61:77: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  i ≥ 0
+  g ≥ 0
+  g - i ≥ 0
+  f ≥ 0
+  f - g ≤ 0
+  f - i ≤ 0
+  e ≥ 0
+  d ≥ 0
+  d - e ≥ 0
+  c ≥ 0
+  c - g ≤ 0
+where
+ c := ↑(maxNamed body)
+ d := ↑(nodes body)
+ e := ↑(nodes a)
+ f := ↑x
+ g := if ↑(maxNamed body) ≤ ↑(maxNamed other) then ↑(maxNamed other) else ↑(maxNamed body)
+ i := if ↑x ≤ ↑y then ↑y else ↑x
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaCompletenessProof.lean:61:34: error: `simp` made no progress
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaCompletenessProof.lean:61:34: error: `simp` made no progress
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaCompletenessProof.lean:61:34: error: `simp` made no progress
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaCompletenessProof.lean:74:34: error: `simp` made no progress
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaCompletenessProof.lean:74:34: error: `simp` made no progress
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaCompletenessProof.lean:61:58: warning: This simp argument is unused:
+  nodes
+
+Hint: Omit it from the simp argument list.
+  simp only [renameNodes, n̵o̵d̵e̵s̵,̵ ̵argsNodes]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/AlphaCompletenessProof.lean:61:65: warning: This simp argument is unused:
+  argsNodes
+
+Hint: Omit it from the simp argument list.
+  simp only [renameNodes, nodes,̵ ̵a̵r̵g̵s̵N̵o̵d̵e̵s̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

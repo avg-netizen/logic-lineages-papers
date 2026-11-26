@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportProgramsProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportChecks
+
+theorem actual_numeric_programs : OutcomeTransportTargets.ActualNumericPrograms :=
+  OutcomeTransportPrograms.actualNumericPrograms
+
+#print axioms actual_numeric_programs
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportChecks

@@ -1,0 +1,5 @@
+# Semantic prerequisite bounded readiness
+
+Read CleaningProof/CandidateProof/SemanticProof under the approved nine-pin eight-family packet. Approved bounded SemanticProof root. Actual zero-weight numerical cleanup preserves every Boolean position; inactive-to-linearity obtains real row/item roster witnesses and uses nonzero weight plus exact live/inactive facts. Candidate list is literally symbolic rows from cutoffs and full residues, period positivity includes empty product. Candidate completeness depends on the real LinearRows/Cotree unit-elimination theorem, not a supplied successful list or fixed-valuation solver. Normalization/elimination use derived linearity at the same arbitrary parameter valuation; support composes actual output-support and cleanup-support; guardedAtom retains actual domain equivalence.
+
+This is development scope only. Fresh dependency closure must compile and final review must inspect underlying finite-candidate proof. BlockProgress and raw PR/calibration are not part of this bounded root and remain required for full endpoint. No tag1 discharge or QE credit yet.

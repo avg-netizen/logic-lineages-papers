@@ -1,0 +1,27 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarWidthSyntaxProof.lean:108:37: error: unsolved goals
+α β : Type
+d H K m M : OTerm α
+w : Fin 6 → OTerm α
+ts : α → OTerm β
+⊢ (BoundedFormula.subst (grammarReport (w 0) d H K m) fun a => emb (ts a)) ⊓
+          ((BoundedFormula.subst (termProjection (w 1) (w 0)) fun a => emb (ts a)) ⊓
+            BoundedFormula.subst (argsProjection (w 2) (w 0)) fun a => emb (ts a)) ⊓
+        ((BoundedFormula.subst (grammarReport (w 3) d H K M) fun a => emb (ts a)) ⊓
+          ((BoundedFormula.subst (termProjection (w 4) (w 3)) fun a => emb (ts a)) ⊓
+            BoundedFormula.subst (argsProjection (w 5) (w 3)) fun a => emb (ts a))) ⟹
+      axisInclusion (Term.subst (w 1) ts) (Term.subst (w 4) ts) ⊓
+        axisInclusion (Term.subst (w 2) ts) (Term.subst (w 5) ts) =
+    Formula.imp
+      (observed (Term.subst d ts) (Term.subst H ts) (Term.subst K ts) (Term.subst m ts) (Term.subst (w 0) ts)
+          (Term.subst (w 1) ts) (Term.subst (w 2) ts) ⊓
+        observed (Term.subst d ts) (Term.subst H ts) (Term.subst K ts) (Term.subst M ts) (Term.subst (w 3) ts)
+          (Term.subst (w 4) ts) (Term.subst (w 5) ts))
+      (axisInclusion (Term.subst (w 1) ts) (Term.subst (w 4) ts) ⊓
+        axisInclusion (Term.subst (w 2) ts) (Term.subst (w 5) ts))
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSelectedGrammarWidthSyntaxProof.lean:109:48: warning: This simp argument is unused:
+  observedSubst
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵m̵p̵a̵r̵e̵d̵,̵i̵m̵p̵S̵u̵b̵s̵t̵,̵c̵o̵n̵j̵u̵n̵c̵t̵i̵o̵n̵S̵u̵b̵s̵t̵,̵o̵b̵s̵e̵r̵v̵e̵d̵S̵u̵b̵s̵t̵,̵p̵a̵i̵r̵I̵n̵c̵l̵u̵s̵i̵o̵n̵,̵a̵x̵i̵s̵S̵u̵b̵s̵t̵]̵[̲c̲o̲m̲p̲a̲r̲e̲d̲,̲ ̲i̲m̲p̲S̲u̲b̲s̲t̲,̲ ̲c̲o̲n̲j̲u̲n̲c̲t̲i̲o̲n̲S̲u̲b̲s̲t̲,̲ ̲p̲a̲i̲r̲I̲n̲c̲l̲u̲s̲i̲o̲n̲,̲ ̲a̲x̲i̲s̲S̲u̲b̲s̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

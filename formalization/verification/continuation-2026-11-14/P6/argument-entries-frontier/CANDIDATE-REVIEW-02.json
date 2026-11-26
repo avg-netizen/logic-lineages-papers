@@ -1,0 +1,6 @@
+{
+  "status": "static approved for retry; unaccepted",
+  "pins": "all five matched",
+  "diff": "--- \n+++ \n@@ -50,7 +50,7 @@\n   induction depth with\n   | zero => rfl\n   | succ depth ih =>\n-    change (Nat.rec [codeNumber seed] (fun _ nodes => nodes.flatMap rawChildren) depth).flatMap rawChildren = _\n+    change (Nat.rec (motive := fun _ => List Nat) [codeNumber seed] (fun _ nodes => nodes.flatMap rawChildren) depth).flatMap rawChildren = _\n     rw [ih,flattenImage]\n     rfl\n \n",
+  "scope": "Only proof-local recursion motive annotation. Frozen frontier, order, rank and all-raw obligations unchanged."
+}

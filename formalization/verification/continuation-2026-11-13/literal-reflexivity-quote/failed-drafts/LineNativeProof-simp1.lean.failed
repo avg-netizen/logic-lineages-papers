@@ -1,0 +1,39 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralReflexivityQuote.LineTargets
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryDispatcher.Definitions
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralReflexivityQuote.LineNativeProof
+open GorbowSyntax GorbowPRProgram List.Vector HistoryRuleSuffix.NativeProof
+
+theorem nativeCalibration : LineTargets.NativeCalibration := by
+ intro k t values
+ simp only [lineQuote,twoEval,constantEval,
+  LiteralTemplateQuote.NativeProof.nativeCalibration,LiteralEqualityQuote.NativeProof.nativeCalibration,
+  HistoryCodec.NativeProof.nativeConsAllVectors,HistoryCodec.NativeProof.nativePair]
+ rfl
+
+/-- External native acceptance by the ORIGINAL logical rule checker.
+No symbolic equation for an opaque logical leaf is inferred from this theorem. -/
+theorem nativeLogicalAcceptance (k : Nat) (t : Term k) (values : List.Vector Nat k) :
+ HistoryDispatcher.logicalFunction (evaluate (lineQuote t) values ::ᵥ nil) = 1 := by
+ rw [nativeCalibration]
+ let term : Term 0 := GorbowSubstitution.substitute
+  (fun i => (Term.numeral (values.get i) : Term 0)) t
+ have hcompile : GorbowLogicalAxiomCode.compile 0
+   (GorbowLogicalAxiomCode.encode (GorbowPACore.LogicalInstance.reflexive term)) =
+   some (GorbowFormulaPrefixCode.encode (.equal term term)) :=
+  (GorbowLogicalAxiomCodeProof.exactCompilation 0 _ _).mpr ⟨.reflexive term,rfl,rfl⟩
+ change HistoryDispatcher.logicalFunction
+  (Encodable.encode (GorbowProofChecker.logicalLine (.reflexive term)) ::ᵥ nil) = 1
+ simp only [HistoryDispatcher.logicalFunction,HistoryDispatcher.decodedLine,List.Vector.head_cons,
+  Encodable.encodek,Option.getD_some,HistoryDispatcher.withRule,GorbowProofChecker.logicalLine,
+  GorbowProofChecker.context,GorbowProofChecker.conclusion,GorbowProofChecker.ruleCheck,
+  GorbowProofChecker.rule,GorbowProofChecker.payload]
+ simpa [GorbowLogicalAxiomCode.encode,GorbowPACore.logicalFormula,HistoryDispatcher.truth] using
+  congrArg (fun b : Bool => HistoryDispatcher.truth b)
+   (show decide (0 = 0 ∧ 0 = 0 ∧ GorbowLogicalAxiomCode.compile 0
+    (GorbowLogicalAxiomCode.encode (.reflexive term)) =
+      some (GorbowFormulaPrefixCode.encode (.equal term term))) = true from by simp [hcompile])
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralReflexivityQuote.LineNativeProof
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralReflexivityQuote.LineNativeProof

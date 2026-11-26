@@ -1,0 +1,11 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseAddressPositiveOpenFoldProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseAddressPositiveOpenFoldProof.lean
+@@ -20,7 +20,7 @@
+ private abbrev branchInput : Fin 5 → Program 3 := ![atAddress rawContext 0,atAddress rawResult 0,
+   atAddress rawLeast 0,.projection 1,atAddress rawLeast 2]
+ 
+-private abbrev call {α : Type} (xs : Fin 3 → OTerm α) (c t l r : OTerm α) : Fin 5 → OTerm α :=
++abbrev call {α : Type} (xs : Fin 3 → OTerm α) (c t l r : OTerm α) : Fin 5 → OTerm α :=
+   ![c,t,l,xs 1,r]
+ 
+ variable {body : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}

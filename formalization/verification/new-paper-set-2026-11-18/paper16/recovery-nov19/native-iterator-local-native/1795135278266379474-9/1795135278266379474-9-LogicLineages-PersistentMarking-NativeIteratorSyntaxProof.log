@@ -1,0 +1,67 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorSyntaxProof.lean:46:72: error: Invalid simp theorem: Expected a proposition, but found
+  Ty → Expr
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorSyntaxProof.lean:48:45: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `True.intro` does not have explicit fields, but 2 were provided
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorSyntaxProof.lean:49:72: error: Ambiguous term
+  discard
+Possible interpretations:
+  NativeIndexedCarrierTargets.discard : Ty → Expr
+  
+  Functor.discard : ?m.57 ?m.58 → ?m.57 PUnit
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorSyntaxProof.lean:49:2: error: unsolved goals
+case refine_2
+S : Signature
+A : SemanticType
+hValid : Valid S (eraseBound (A.arrow A) 3)
+hOrdinary : Ordinary (eraseBound (A.arrow A) 3)
+hClosed : Closed (eraseBound (A.arrow A) 3)
+hHeads : DecisionInventory.heads (eraseBound (A.arrow A) 3) = []
+⊢ Ordinary (NativeIndexedCarrierTargets.discard (functionType A))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorSyntaxProof.lean:52:72: error: Ambiguous term
+  discard
+Possible interpretations:
+  NativeIndexedCarrierTargets.discard : Ty → Expr
+  
+  Functor.discard : ?m.60 ?m.61 → ?m.60 PUnit
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorSyntaxProof.lean:51:2: error: unsolved goals
+case refine_3
+S : Signature
+A : SemanticType
+hValid : Valid S (eraseBound (A.arrow A) 3)
+hOrdinary : Ordinary (eraseBound (A.arrow A) 3)
+hClosed : Closed (eraseBound (A.arrow A) 3)
+hHeads : DecisionInventory.heads (eraseBound (A.arrow A) 3) = []
+name : Name
+⊢ freeOccurs name (NativeIndexedCarrierTargets.discard (functionType A)) = false
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorSyntaxProof.lean:55:72: error: Ambiguous term
+  discard
+Possible interpretations:
+  NativeIndexedCarrierTargets.discard : Ty → Expr
+  
+  Functor.discard : ?m.65 ?m.66 → ?m.65 PUnit
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorSyntaxProof.lean:54:2: error: unsolved goals
+case refine_4
+S : Signature
+A : SemanticType
+hValid : Valid S (eraseBound (A.arrow A) 3)
+hOrdinary : Ordinary (eraseBound (A.arrow A) 3)
+hClosed : Closed (eraseBound (A.arrow A) 3)
+hHeads : DecisionInventory.heads (eraseBound (A.arrow A) 3) = []
+name arity : Nat
+⊢ ¬Head.ranked name arity ∈ DecisionInventory.heads (NativeIndexedCarrierTargets.discard (functionType A))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NativeIteratorSyntaxProof.lean:71:50: error: unsolved goals
+S : Signature
+A : SemanticType
+i p u : Expr
+hi : ClosedNative S i indexType
+hp : ClosedNative S p (functionType A)
+hu : ClosedNative S u (actualType A)
+B : Ty := actualType A
+η : Ty := functionType A
+values : Args := Args.cons u (Args.cons p (Args.cons i Args.nil))
+hErase : substitute values 1 (eraseBound (A.arrow A) 3) = erase (A.arrow A) i
+hParameter : substitute values 1 (Expr.bound η 2) = p
+hInput : substitute values 0 (Expr.bound B 0) = u
+⊢ recTerm B zero
+      (Expr.lam Ty.ground (app η η (app η (η.arrow η) (NativeIndexedCarrierTargets.discard η) p) (erase (A.arrow A) i)))
+      u =
+    indexedW A p u i

@@ -1,0 +1,11 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowConcretePositiveEndpointsHopProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowConcretePositiveEndpointsHopProof.lean
+@@ -28,7 +28,7 @@
+             q w r = true ∧ admitted s ctx ty q = true ∧ admitted s ctx ty r = true := by
+         simpa only [step,NumberedWindowRawContextAlgorithm.windowStep,Bool.and_eq_true,and_assoc]
+           using guards.1
+-      exact ⟨q,w,r,by rw [same],guards.1,rawGuards.2.1,rawGuards.2.2,
++      exact ⟨q,w,r,by simpa only [same] using seen,guards.1,rawGuards.2.1,rawGuards.2.2,
+         guards.2.1,same ▸ guards.2.2⟩
+     · rw [if_neg guards] at selected
+       cases selected

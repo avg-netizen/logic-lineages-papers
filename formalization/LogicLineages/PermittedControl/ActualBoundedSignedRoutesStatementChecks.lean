@@ -1,0 +1,26 @@
+module
+public import LogicLineages.PermittedControl.ActualBoundedSignedRoutesTargets
+import LogicLineages.PermittedControl.ActualBoundedSignedRoutesProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualBoundedRouteActiveSyntax : ActualBoundedSignedRoutes.ExactActiveSyntax :=
+  ActualBoundedSignedRoutes.exactActiveSyntax
+
+theorem fixed_exactActualTypedBoundedRouteLayout : ActualBoundedSignedRoutes.ExactTypedRouteLayout :=
+  ActualBoundedSignedRoutes.exactTypedRouteLayout
+
+theorem fixed_exactActualBoundedRouteLocalAvailability : ActualBoundedSignedRoutes.ExactPathLocalAvailability :=
+  ActualBoundedSignedRoutes.exactPathLocalAvailability
+
+theorem fixed_fullActualBoundedSignedRoutes : ActualBoundedSignedRoutes.FullActualBoundedSignedRoutes :=
+  ⟨fixed_exactActualBoundedRouteActiveSyntax,fixed_exactActualTypedBoundedRouteLayout,
+    fixed_exactActualBoundedRouteLocalAvailability⟩
+
+#print axioms fixed_exactActualBoundedRouteActiveSyntax
+#print axioms fixed_exactActualTypedBoundedRouteLayout
+#print axioms fixed_exactActualBoundedRouteLocalAvailability
+#print axioms fixed_fullActualBoundedSignedRoutes
+
+end LogicLineages.PermittedControl.StatementChecks

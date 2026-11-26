@@ -1,0 +1,18 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyCodingTargets.lean:5:46: error: Ambiguous term
+  rawCodes
+Possible interpretations:
+  MarkedFamilyCoding.rawCodes E heads : List Code
+  
+  FiniteDomainSchema.rawCodes E heads : List Ty → List Name → Nat → Expr → Context → List Code
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyCodingTargets.lean:5:42: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Membership ?m.3 (List Ty → List Name → Nat → Expr → Context → List Code)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyCodingTargets.lean:5:76: error: Application type mismatch: The argument
+  E
+has type
+  Ty
+but is expected to have type
+  Environment
+in the application
+  FitsFamily E

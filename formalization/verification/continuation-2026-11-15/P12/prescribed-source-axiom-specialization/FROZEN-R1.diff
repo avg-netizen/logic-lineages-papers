@@ -1,0 +1,31 @@
+--- preflight01/Definitions.lean
++++ preflightR1/Definitions.lean
+@@ -5,7 +5,7 @@
+ namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.PrescribedSourceAxiomSpecialization
+ open GorbowSyntax GorbowPRProgram GorbowPublishedDCB
+ abbrev verifier (old arithmetic : Program 1) (x : Program 3) : Program 5 :=
+- UniformClosedRule13Certificate.verifier old arithmetic (SaturatedAxiomLeaf.saturated x)
++ UniformClosedRule13Certificate.verifier old arithmetic (SixSol20261113.SaturatedAxiomLeaf.saturated x)
+ abbrev root (pF pR old arithmetic : Program 1) (x : Program 3) : Program 4 :=
+  FiniteRuleFourCertificate.root pF pR (UniformClosedRule13.logicalLeaf old) arithmetic x
+ /-- Original rule4 singleton, with its original List Line numeric codec. -/
+--- preflight01/Targets.lean
++++ preflightR1/Targets.lean
+@@ -11,7 +11,7 @@
+  Actual pF pR (verifier old arithmetic x) c →
+  (∀ v, evaluate x v = SixSol20261113.HistoryDispatcher.axiomFunction v) →
+  ∀ (I : UniformClosedRule13Certificate.Installation (root pF pR old arithmetic x)
+-  old arithmetic (SaturatedAxiomLeaf.saturated x)) (mtag : Nat),
++  old arithmetic (SixSol20261113.SaturatedAxiomLeaf.saturated x)) (mtag : Nat),
+  (nodes (root pF pR old arithmetic x))[mtag]? = some ⟨4,SixSol20261113.LiteralRawMP.constructor⟩ →
+  ∃ seedFuel : Nat, ∀ n (f : Formula n),
+  GorbowStandardInduction.universalClosure f ∈ GorbowPRDefiningEquations.axioms (root pF pR old arithmetic x) →
+@@ -33,7 +33,7 @@
+  ∀ (old arithmetic : Program 1) (x : Program 3) (pF pR : Program 1) (c : Code),
+  Actual pF pR (verifier old arithmetic x) c →
+  ∀ (I : UniformClosedRule13Certificate.Installation (root pF pR old arithmetic x)
+-  old arithmetic (SaturatedAxiomLeaf.saturated x)) (mtag : Nat),
++  old arithmetic (SixSol20261113.SaturatedAxiomLeaf.saturated x)) (mtag : Nat),
+  (nodes (root pF pR old arithmetic x))[mtag]? = some ⟨4,SixSol20261113.LiteralRawMP.constructor⟩ →
+  ∀ n (f : Formula n) (sigma : Fin n → Term 0) ctx,
+  Nonempty (Derivation (S pF pR (verifier old arithmetic x))

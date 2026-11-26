@@ -1,0 +1,23 @@
+module
+public import LogicLineages.PermittedControl.ActualCanonicalReachedFundingTargets
+import LogicLineages.PermittedControl.ActualCanonicalReachedFundingTraceProof
+import LogicLineages.PermittedControl.ActualCanonicalReachedFundingTransferProof
+import LogicLineages.PermittedControl.ActualCanonicalReachedFundingProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.ActualCanonicalReachedFunding
+
+theorem fixed_exactCanonicalReachFacts : ExactCanonicalReachFacts := exactCanonicalReachFacts
+theorem fixed_exactCanonicalTransferFunding : ExactCanonicalTransferFunding :=
+  exactCanonicalTransferFunding
+theorem fixed_exactCanonicalReachedFunding : ExactCanonicalReachedFunding := exactCanonicalReachedFunding
+
+theorem fixed_fullActualCanonicalReachedFunding : FullActualCanonicalReachedFunding :=
+  ⟨fixed_exactCanonicalReachFacts,fixed_exactCanonicalTransferFunding,fixed_exactCanonicalReachedFunding⟩
+
+#print axioms fixed_exactCanonicalReachFacts
+#print axioms fixed_exactCanonicalTransferFunding
+#print axioms fixed_exactCanonicalReachedFunding
+#print axioms fixed_fullActualCanonicalReachedFunding
+
+end LogicLineages.PermittedControl.ActualCanonicalReachedFunding

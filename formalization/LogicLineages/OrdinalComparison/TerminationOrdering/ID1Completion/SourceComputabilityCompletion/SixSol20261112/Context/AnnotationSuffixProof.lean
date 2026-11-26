@@ -1,0 +1,99 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AnnotationSuffixQueryProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AnnotationSuffixProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open SourceComputabilityFormulaSupportProof InternalClosedPrograms InternalClosedProgramsBindingProof
+open InternalControlGraphSupportProof InternalRecursionGraphStepSyntaxProof
+open InternalGraphCompositionFunctionalityProof (renameInto)
+open InternalTagArithmeticSyntaxProof (z zRelabel)
+open InternalApplicationStepPeelSupportProof (andIntro)
+open InternalListCodecSupportProof (consGraph consGraphRename)
+open InternalListInduction InternalListInductionSyntaxProof InternalListInductionProof
+open AnnotationSuffixSyntaxProof AnnotationSuffixCoreProof AnnotationSuffixQueryProof
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph InternalListMap.map OriginalHereditaryAnnotatedExpansion.scan
+  InternalApplicationValidityStackAppend.append OriginalContextInsertion.length InternalListCodec.consCode
+
+theorem zeroRow (arity : Nat) : Nonempty (Derivation body Delta (row arity (z : OTerm alpha))) := by
+  unfold row
+  apply actualFiniteUniversalIntroduction body alpha 9 Delta
+  let offset : OTerm (alpha ⊕ Fin 9) := .var (.inr 0)
+  let typ : OTerm (alpha ⊕ Fin 9) := .var (.inr 1)
+  let raw : OTerm (alpha ⊕ Fin 9) := .var (.inr 2)
+  let front : OTerm (alpha ⊕ Fin 9) := .var (.inr 3)
+  let jobs : OTerm (alpha ⊕ Fin 9) := .var (.inr 4)
+  let annotatedFront : OTerm (alpha ⊕ Fin 9) := .var (.inr 5)
+  let count : OTerm (alpha ⊕ Fin 9) := .var (.inr 6)
+  let full : OTerm (alpha ⊕ Fin 9) := .var (.inr 7)
+  let mapped : OTerm (alpha ⊕ Fin 9) := .var (.inr 8)
+  let A := fields arity z offset typ raw front jobs annotatedFront count full mapped
+  let Theta := A :: Delta.map (fun p => p.relabel (Sum.inl : alpha → alpha ⊕ Fin 9))
+  obtain ⟨h⟩ := zeroCore arity offset typ raw front jobs annotatedFront count full mapped
+    (body := body) (Delta := Theta) ⟨Derivation.hypothesis List.mem_cons_self⟩
+  simpa only [rowBody,zRelabel] using (Nonempty.intro (Derivation.implicationIntroduction h))
+
+theorem consRow (arity : Nat) (suffix head tail : OTerm alpha)
+    (hc : Nonempty (Derivation body Delta (consGraph suffix head tail)))
+    (hi : Nonempty (Derivation body Delta (row arity tail))) :
+    Nonempty (Derivation body Delta (row arity suffix)) := by
+  unfold row
+  apply actualFiniteUniversalIntroduction body alpha 9 Delta
+  let offset : OTerm (alpha ⊕ Fin 9) := .var (.inr 0)
+  let typ : OTerm (alpha ⊕ Fin 9) := .var (.inr 1)
+  let raw : OTerm (alpha ⊕ Fin 9) := .var (.inr 2)
+  let front : OTerm (alpha ⊕ Fin 9) := .var (.inr 3)
+  let jobs : OTerm (alpha ⊕ Fin 9) := .var (.inr 4)
+  let annotatedFront : OTerm (alpha ⊕ Fin 9) := .var (.inr 5)
+  let count : OTerm (alpha ⊕ Fin 9) := .var (.inr 6)
+  let full : OTerm (alpha ⊕ Fin 9) := .var (.inr 7)
+  let mapped : OTerm (alpha ⊕ Fin 9) := .var (.inr 8)
+  let A := fields arity (suffix.relabel Sum.inl) offset typ raw front jobs annotatedFront count full mapped
+  let Theta := A :: Delta.map (fun p => p.relabel (Sum.inl : alpha → alpha ⊕ Fin 9))
+  have inc : ∀ f ∈ Delta, f.relabel (Sum.inl : alpha → alpha ⊕ Fin 9) ∈ Theta := by
+    intro f hf
+    exact List.mem_cons_of_mem _ (List.mem_map.mpr ⟨f,hf,rfl⟩)
+  have hc' := renameInto hc Sum.inl Theta inc
+  rw [consGraphRename] at hc'
+  have hi' := renameInto hi Sum.inl Theta inc
+  rw [AnnotationSuffixSyntaxProof.rowRename] at hi'
+  obtain ⟨h⟩ := consCore arity (suffix.relabel Sum.inl) (head.relabel Sum.inl) (tail.relabel Sum.inl)
+    offset typ raw front jobs annotatedFront count full mapped hc' hi'
+    (show Nonempty (Derivation body Theta A) from ⟨Derivation.hypothesis List.mem_cons_self⟩)
+  exact ⟨Derivation.implicationIntroduction h⟩
+
+theorem allRows (arity : Nat) (suffix : OTerm alpha) :
+    Nonempty (Derivation body Delta (row arity suffix)) := by
+  let theta : Formula (alpha ⊕ Fin 1) := row arity (.var (.inr 0))
+  have hz : Nonempty (Derivation body Delta (atCode theta z)) := by
+    rw [AnnotationSuffixSyntaxProof.rowAtCode]
+    exact zeroRow arity
+  have hs : Nonempty (Derivation body Delta (constructors theta)) := by
+    unfold constructors
+    apply actualFiniteUniversalIntroduction body alpha 3 Delta
+    simp only [constructorBody,theta,AnnotationSuffixSyntaxProof.rowAtIndex]
+    let code : OTerm (alpha ⊕ Fin 3) := .var (.inr 0)
+    let head : OTerm (alpha ⊕ Fin 3) := .var (.inr 1)
+    let tail : OTerm (alpha ⊕ Fin 3) := .var (.inr 2)
+    let C := consGraph code head tail
+    let IH := row arity tail
+    obtain ⟨h⟩ := consRow arity code head tail
+      (body := body) (Delta := IH :: C :: Delta.map (fun f => f.relabel Sum.inl))
+      ⟨Derivation.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)⟩
+      ⟨Derivation.hypothesis List.mem_cons_self⟩
+    exact ⟨Derivation.implicationIntroduction (Derivation.implicationIntroduction h)⟩
+  have h := actualOriginalListInductionAtCode body alpha Delta theta suffix (andIntro hz hs)
+  rw [AnnotationSuffixSyntaxProof.rowAtCode] at h
+  exact h
+
+theorem actualInheritedScanSplit : AnnotationSuffixWorkingTargets.ActualInheritedScanSplit := by
+  intro arity body alpha Delta offset typ raw front suffix jobs annotatedFront count full mapped ha hl hj hp hc hf hm
+  exact rowApply arity suffix offset typ raw front jobs annotatedFront count full mapped (allRows arity suffix)
+    (andIntro ha (andIntro hl (andIntro hj (andIntro hp (andIntro hc (andIntro hf hm))))))
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AnnotationSuffixProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AnnotationSuffixProof
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AnnotationSuffixProof.actualInheritedScanSplit

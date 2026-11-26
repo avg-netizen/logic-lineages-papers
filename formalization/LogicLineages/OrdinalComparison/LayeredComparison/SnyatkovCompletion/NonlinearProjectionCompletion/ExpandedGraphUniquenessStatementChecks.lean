@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphUniquenessProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphUniquenessStatementChecks
+
+theorem exactResult : ExpandedGraphTargets.AllocatedNodeUniqueness := ExpandedGraphProof.allocatedNodeUniqueness
+#print axioms exactResult
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphUniquenessStatementChecks

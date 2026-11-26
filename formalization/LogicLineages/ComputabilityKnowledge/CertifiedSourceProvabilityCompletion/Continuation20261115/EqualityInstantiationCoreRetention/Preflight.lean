@@ -1,0 +1,4 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.EqualityInstantiationCoreRetention.Targets
+@[expose] public section
+#check LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.EqualityInstantiationCoreRetention.Targets.InternalCoreRetention

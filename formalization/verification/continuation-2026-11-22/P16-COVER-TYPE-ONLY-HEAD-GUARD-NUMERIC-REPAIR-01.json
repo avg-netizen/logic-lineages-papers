@@ -1,0 +1,22 @@
+{
+  "receipt": "1795369725465643766-79",
+  "immutableFailedCheckpoint": {
+    "remote": "fbbae54fa6080bb8e67f68ab889f830fe2189da0",
+    "local": "c2c6c8a9056e660e835c21d31686673311b2294a",
+    "tree": "bf73bd9164fed52805f453c41d73bc60514e08a8"
+  },
+  "source": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeOnlyHeadGuardNumericProof.lean",
+  "priorSource": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverTypeOnlyHeadGuardNumericProof.lean.1795369725465643766-79.initial.txt",
+  "priorSha256": "da5839776c2ea2769063eeb469870f75fc0c4ab73141c6b03639be695e63cba4",
+  "repairedSha256": "fc581331b5452641b1b6e5b35bee46c79021524e2bb005e1a4d242ea5174463e",
+  "diagnostic": "formalization/verification/continuation-2026-11-22/native-failed-editions/1795369725465643766-79-LogicLineages-PersistentMarking-NumberedWindowInternalCoverTypeOnlyHeadGuardNumericProof.log.txt",
+  "diagnosticSha256": "06209843ca89a0d351d5bf5c752d5b6d5c1dfed70de257a6e24db8de3f7f04c3",
+  "patch": "formalization/verification/continuation-2026-11-22/P16-COVER-TYPE-ONLY-HEAD-GUARD-NUMERIC-REPAIR-01.patch",
+  "patchSha256": "9dea7bf64b0ed3f7b36d101a0b4fa2d39bc58a4e33e56ba4ef8019f88005b96b",
+  "frozenSiblingSha256": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeOnlyArgumentListProof.lean": "15f34558e55517ee252e334ec588146f9f65f68c68fd7f130990e7e424cbcc5b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeOnlyArgumentListTargets.lean": "1f32c4ac34dbd2990f789fe9d6bae786590e2c58e0077bac721f4608c6e84a49",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverTypeOnlyHeadProviderProof.lean": "e918a85233fb22f9fc9b3b662cdaabd76758f7fbac7828f08bb1f84f1ad84070"
+  },
+  "repair": "Make both branches of the internal iff use the identical explicit evaluate tape before conjunction splitting, rather than leaving the right side folded under run. No target, AST, imports, or sibling changes. Forward and reverse patch reproduced exact bytes."
+}

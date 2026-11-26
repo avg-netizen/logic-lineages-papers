@@ -1,0 +1,1 @@
+Coordinator read exact literal child-membership simplification correction and independently verified applied EffectiveProof SHA25640434910e220aa94647c8a0d07cf2de48505b484e82f5db1869327a74bd866fc. Same total raw graph algorithm and decreasing child code, no target/Definitions edits. Failed source retained.

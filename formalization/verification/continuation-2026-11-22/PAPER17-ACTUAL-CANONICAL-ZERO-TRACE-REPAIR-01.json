@@ -1,0 +1,50 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "a2b718e622d3a156e8d92eba250ff8a8499f3c34",
+  "failed_source_local_commit": "cbe614f0c0753ad85432254fb0704846d895fbd9",
+  "failed_source_tree": "6b38f239d781027ff7d0d6d6ee94ee61e9adaefd",
+  "failed_exact_gate_receipt": "1795377828023849486-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualCanonicalZeroTraceStatementChecks",
+  "failed_receipt_sha256": "6fbcefdcc8de11767e9e3d39c5ffca81dd131bb22a34308c44d064569b9e3251",
+  "failed_exact_module_log_sha256": "6328e5dfd79b7d0832dd129ffeb680889782e83a85984bdaceab9040c9d1c990",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualCanonicalZeroTraceReplayProof.lean:28:61: error: invalid `\u25b8` notation, expected result type of cast is \n  terms = groupTyped (List.map Prod.fst s.reads)\nhowever, the equality \n  same\nof type \n  out = xs\ndoes not contain the expected result type on either the left or the right hand side\n",
+  "failed_original_native_log_sha256": "d1d729ab54eacb49dac2d2f4cd2d4607f8f47f69022ae260d284f7c26abbac51",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualCanonicalZeroTraceReplayProof.lean",
+  "failed_proof_sha256": "956c7737cf1382325c4e298961c0b73ed2a9f912de432886845a1fd86a865fe8",
+  "repaired_proof_sha256": "a64bfb7f18c75ac573b88c6ef727b16cf5deedce6cf252e5c629c7f209dbd0a3",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-ZERO-TRACE-REPAIR-01.patch",
+  "patch_sha256": "7148b4fa0e5325b030e14893cd74b432fe107202309cb75af4d6b17b3726a26e",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-ZERO-TRACE-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "0716556f4fa2c36bdf802e4739d709162acdf27050b090bf55d2bea879fb2f5d",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalZeroTraceStatementChecks.lean": "b073c68050fe7a378e3c4d045e5622ff0ff47eaa9fede5443c0be743d1f85c88",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalZeroTraceTargets.lean": "54f3ce6de812da7c9d894d5ff5a86c2be97e3cb4e72e4c3b36066a734b44062d",
+    "formalization/LogicLineages/PermittedControl/ActualCanonicalZeroTraceWitnessProof.lean": "fba98835968f5fbbbfe6031a8e6234989ce2f4a73ba7c91aba92d9679a49f3ef",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-CANONICAL-ZERO-TRACE-SOURCE-MAP.md": "f3091e2142af3f5ad98e1c132f9ceaa064f6d4434278550aae91d84c7697eb40"
+  },
+  "static_module_closure": {
+    "ReplayProof": {
+      "local": 440,
+      "external": 42,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 509,
+      "external": 42,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 208,
+      "external": 34,
+      "contains_totient": false
+    },
+    "WitnessProof": {
+      "local": 507,
+      "external": 42,
+      "contains_totient": false
+    }
+  },
+  "scope": "Expose the exact actual tape map and use congrArg on the list equality, followed by ordinary equality transitivity instead of implicit dependent cast. No target, hypotheses, or sibling edit."
+}

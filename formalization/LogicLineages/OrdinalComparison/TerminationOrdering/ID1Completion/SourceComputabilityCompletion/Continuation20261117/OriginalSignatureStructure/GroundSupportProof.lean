@@ -1,0 +1,80 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalSignatureStructure.GroundSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalVariableDecoderDropProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalContextInsertionLengthProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportInternalVariableSupportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalSignatureStructure.GroundSupportProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalApplicationCertificateConstructorsSupportProof InternalControlGraphSupportProof
+open InternalGraphCompositionFunctionalityProof InternalAcceptanceSupportProof
+open InternalTagArithmeticSyntaxProof (z suc eqn emb zRelabel sucRelabel eqnRelabel)
+open InternalTagArithmeticSupportProof InternalPositiveUnfoldingSupportProof
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalRecursionGraphStepSyntaxProof (consTermRename)
+open InternalRawListRecursionSupportProof
+open OriginalRawSyntaxTransport OriginalRawSyntaxTransportInternalVariableSupportProof
+open Continuation20261116.OriginalConcreteHeadSignature
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+theorem zeroValue : Nonempty (Derivation body Delta (graph1 groundList z z)) :=
+  recursionZeroValue (constant 0 0) groundListStep z Fin.elim0 (constantValue 0 Fin.elim0)
+
+theorem successorValue (bound previous out : OTerm alpha)
+    (hp : Nonempty (Derivation body Delta (graph1 groundList previous bound)))
+    (hc : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode out z previous))) :
+    Nonempty (Derivation body Delta (graph1 groundList out (suc bound))) := by
+  have hs := binaryValue InternalListCodec.consCode (constant 2 0) (.projection 1)
+    out z previous ![bound,previous] hc (constantValue 0 ![bound,previous]) (projectionValue 1 ![bound,previous])
+  unfold graph1 groundList programGraph at hp ⊢
+  unfold graph2 programGraph at hs
+  change Nonempty (Derivation body Delta (InternalRecursionGraph.recursion
+    (OrdinaryArithmetic.graphFormula (constant 0 0))
+    (OrdinaryArithmetic.graphFormula groundListStep) previous bound Fin.elim0)) at hp
+  change Nonempty (Derivation body Delta (InternalRecursionGraph.recursion
+    (OrdinaryArithmetic.graphFormula (constant 0 0))
+    (OrdinaryArithmetic.graphFormula groundListStep) out (suc bound) Fin.elim0))
+  exact InternalRecursionGraphSuccessorIntroductionProof.recursionSuccessorIntroduction Delta
+    (OrdinaryArithmetic.graphFormula (constant 0 0))
+    (OrdinaryArithmetic.graphFormula groundListStep) out bound previous Fin.elim0 hp hs
+
+theorem headNil : Nonempty (Derivation body Delta (graph1 InternalListCodec.headCode (z : OTerm alpha) z)) := by
+  obtain ⟨hi⟩ := InternalRecursionClosureLogicProof.closedApply
+    (InternalUnpairProof.actualOriginalGeneratedCodeInverse body alpha z z z)
+    InternalApplicationValidityStackAppendTransitionProof.pairZero
+  exact unaryValue InternalUnpair.left InternalEqualityTest.predecessor z z ![z]
+    ⟨Derivation.conjunctionLeft hi⟩ InternalEqualityTestPredecessorProof.predecessorZero
+
+theorem lookupNil (index : OTerm alpha) :
+    Nonempty (Derivation body Delta (graph2 InternalRawListRecursion.lookup z index z)) :=
+  lookupValue z index z z (OriginalVariableDecoderDropProof.dropNil index) headNil
+
+theorem lookupZero (code tail : OTerm alpha)
+    (hc : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode code z tail))) :
+    Nonempty (Derivation body Delta (graph2 InternalRawListRecursion.lookup z z code)) :=
+  lookupValue z z code code (dropZero code) (consHead code z tail hc)
+
+theorem lookupNext (code tail index : OTerm alpha)
+    (hc : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode code z tail)))
+    (hl : Nonempty (Derivation body Delta (graph2 InternalRawListRecursion.lookup z index tail))) :
+    Nonempty (Derivation body Delta (graph2 InternalRawListRecursion.lookup z (suc index) code)) := by
+  apply programCases InternalRawListRecursion.drop (Fin.cons index (Fin.cons tail Fin.elim0)) _
+  intro beta j Theta rest hj hd
+  simp only [graph2Rename,zRelabel,sucRelabel]
+  simp only [consTermRename,emptyRename] at hd
+  have hc' := renameInto hc j Theta hj
+  simp only [graph2Rename,zRelabel] at hc'
+  have hl' := renameInto hl j Theta hj
+  simp only [graph2Rename,zRelabel] at hl'
+  have hh := unaryRecover InternalListCodec.headCode InternalRawListRecursion.drop z rest
+    (Fin.cons (index.relabel j) (Fin.cons (tail.relabel j) Fin.elim0)) hl' hd
+  exact lookupValue z (suc (index.relabel j)) (code.relabel j) rest
+    (OriginalVariableDecoderDropProof.dropConsForward rest (index.relabel j) (code.relabel j) z (tail.relabel j) hc' hd) hh
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalSignatureStructure.GroundSupportProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalSignatureStructure.GroundSupportProof

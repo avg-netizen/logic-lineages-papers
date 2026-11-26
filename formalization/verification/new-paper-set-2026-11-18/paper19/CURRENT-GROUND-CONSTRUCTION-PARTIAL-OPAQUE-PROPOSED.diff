@@ -1,0 +1,12 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationPartialProgramsProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentGroundAnnotationPartialProgramsProof.lean
+@@ -10,8 +10,7 @@
+ open LogicLineages.OrdinalComparison.Source
+ open LogicLineages.StandardControlCurrent
+ open AdmissibleSum SourceAnnotationCode
+-attribute [local irreducible] Nat.sqrt Nat.unpair PolicyPartial.run
+-  CurrentGroundAnnotationCode.macroCode CurrentGroundAnnotationCode.groundPartialCode
++attribute [local irreducible] Nat.sqrt Nat.unpair CurrentGroundAnnotationCode.macroCode
+   OrdinalSyntax.headFree SourceAnnotationCode.eraseCode
+   SourceAnnotationCode.closeCode SourceAnnotationCode.closeOperatorCode
+ 

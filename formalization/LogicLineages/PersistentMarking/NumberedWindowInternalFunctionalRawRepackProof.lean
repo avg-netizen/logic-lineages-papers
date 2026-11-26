@@ -1,0 +1,224 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceComputabilityFormulaSupportProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalFunctionalRawRepackDefinitions
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePairGraphProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalOriginalRawConsUnionReportThinProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseParsedFoldSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListInductionProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalClosedProgramsBindingProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalComputabilityApplicationSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalDerivationRenamingSyntaxProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalGraphCompositionFunctionalityProof
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalFunctionalRawRepackProof
+open FirstOrder Language LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus
+open SourceComputabilityFormulaSupportProof (existsOne)
+open ID1Completion.InternalGraphComposition (OTerm)
+open ID1Completion.InternalTagArithmeticSyntaxProof (emb bindEmbedding liftBind varBind)
+open ID1Completion.InternalComputabilityApplicationSyntaxProof (existsEmbeddedSubst liftTermSubst programSubst)
+open ID1Completion.InternalDerivationRenamingSyntaxProof (existsRename)
+open ID1Completion.InternalListCodecSupportProof (consGraph consGraphRename)
+open ID1Completion.InternalGraphCompositionFunctionalityProof (renameInto)
+open ID1Completion.InternalListInduction (atCode atIndex constructorBody constructors premises)
+open ID1Completion.InternalListInductionProof (actualOriginalListInductionAtCode)
+open ID1Completion.InternalClosedProgramsBindingProof (actualFiniteUniversalIntroduction)
+open NumberedWindowInternalSparsePathEnvelopeTargets (z rawCons)
+open NumberedWindowInternalSparseParsedFoldSyntaxProof (positiveGraph positiveGraphSubst)
+open NumberedWindowInternalFunctionalRawRepack (repack)
+open NumberedWindowInternalSparseFieldParser (parser)
+open NumberedWindowInternalSparsePair (fieldCons)
+open ID1Completion.InternalControlGraph (programGraph)
+open ID1Completion.InternalControlGraphSupportProof (programRename zeroValue valueUnique headTransport)
+open ID1Completion.InternalTagArithmeticSyntaxProof (suc sucRelabel)
+open ID1Completion.InternalRawListRecursionProof (nilValue consValue)
+open ID1Completion.InternalRecursionGraphStepSyntaxProof (conjunctionRename)
+open NumberedWindowInternalSparseFieldParserThinOpenConsProof (exact_OriginalSparseParserNil)
+open NumberedWindowInternalOriginalRawConsUnionReportThinProof (actualRawConsParser)
+
+attribute [local irreducible] ID1Completion.InternalControlGraph.programGraph
+
+def repackGraph {α : Type} (n s : OTerm α) : Formula α :=
+  programGraph repack n (Fin.cons s Fin.elim0)
+
+def report {α : Type} (n s : OTerm α) : Formula α :=
+  repackGraph n s ⊓ positiveGraph n s
+
+def rawMatrix {α : Type} (scratch : OTerm α) : Formula (α ⊕ Fin 1) :=
+  report (.var (.inr 0)) (scratch.relabel Sum.inl)
+
+private theorem repackGraphSubst {α β : Type} (n s : OTerm α) (ts : α → OTerm β) :
+    (repackGraph n s).subst (fun i => emb (ts i)) = repackGraph (n.subst ts) (s.subst ts) := by
+  unfold repackGraph
+  rw [programSubst]
+  congr 1
+  funext i
+  exact Fin.cases rfl (fun k => Fin.elim0 k) i
+
+private theorem repackGraphRename {α β : Type} (n s : OTerm α) (j : α → β) :
+    (repackGraph n s).relabel j = repackGraph (n.relabel j) (s.relabel j) := by
+  unfold repackGraph
+  rw [programRename]
+  congr 1
+  funext i
+  exact Fin.cases rfl (fun k => Fin.elim0 k) i
+
+private theorem positiveRename {α β : Type} (n s : OTerm α) (j : α → β) :
+    (positiveGraph n s).relabel j = positiveGraph (n.relabel j) (s.relabel j) := by
+  unfold positiveGraph
+  rw [programRename,sucRelabel]
+  congr 1
+  funext i
+  exact Fin.cases rfl (fun k => Fin.elim0 k) i
+
+private theorem reportRename {α β : Type} (n s : OTerm α) (j : α → β) :
+    (report n s).relabel j = report (n.relabel j) (s.relabel j) := by
+  simp only [report,conjunctionRename,repackGraphRename,positiveRename]
+
+private theorem conjunctionSubst {α β : Type} (p q : Formula α)
+    (ts : α → Term β) :
+    (p ⊓ q).subst ts = (p.subst ts ⊓ q.subst ts) := rfl
+
+def canPack {α : Type} (scratch : OTerm α) : Formula α := existsOne (rawMatrix scratch)
+
+def motive {α : Type} : Formula (α ⊕ Fin 1) := canPack (.var (.inr 0))
+
+theorem rawWitness {α : Type} (n s : OTerm α) :
+    instantiate (rawMatrix s) (emb n) = report n s := by
+  simp only [rawMatrix,instantiate,bindEmbedding,report,conjunctionSubst,
+    repackGraphSubst,positiveGraphSubst,liftBind,varBind]
+
+theorem canPackRename {α β : Type} (s : OTerm α) (j : α → β) :
+    (canPack s).relabel j = canPack (s.relabel j) := by
+  unfold canPack
+  rw [existsRename]
+  congr 1
+  unfold rawMatrix
+  rw [reportRename]
+  simp only [Term.relabel_relabel,Term.relabel] <;> rfl
+
+private theorem canPackSubst {α β : Type} (s : OTerm α) (σ : α → OTerm β) :
+    (canPack s).subst (fun i => emb (σ i)) = canPack (s.subst σ) := by
+  simp only [canPack,rawMatrix,existsEmbeddedSubst,report,conjunctionSubst,repackGraphSubst,positiveGraphSubst,liftTermSubst]
+  rfl
+
+private theorem motiveCode {α : Type} (s : OTerm α) :
+    atCode motive s = canPack s := by
+  rw [atCode,instantiate,bindEmbedding]
+  unfold motive
+  rw [canPackSubst]
+  simp only [varBind]
+
+private theorem motiveIndex {α : Type} (i : Fin 3) :
+    (atIndex (motive (α := α)) i) = canPack (.var (.inr i)) := by
+  unfold atIndex motive
+  rw [canPackRename]
+  rfl
+
+variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+theorem packIntro (n s : OTerm α) (p : Nonempty (Derivation B Γ (report n s))) :
+    Nonempty (Derivation B Γ (canPack s)) := by
+  obtain ⟨d⟩ := p
+  apply Nonempty.intro
+  apply Derivation.existentialIntroduction (emb n)
+  rw [rawWitness]
+  exact d
+
+private theorem packCons (s h t : OTerm α)
+    (cell : Nonempty (Derivation B Γ (consGraph s h t)))
+    (tail : Nonempty (Derivation B Γ (canPack t))) :
+    Nonempty (Derivation B Γ (canPack s)) := by
+  obtain ⟨d⟩ := tail
+  let j : α → α ⊕ Fin 1 := Sum.inl
+  let n : OTerm (α ⊕ Fin 1) := .var (.inr 0)
+  let Δ := rawMatrix t :: Γ.map (fun q => q.relabel j)
+  have c' := renameInto cell j Δ (by intro q hq; exact List.mem_cons_of_mem _ (List.mem_map.mpr ⟨q,hq,rfl⟩))
+  rw [consGraphRename] at c'
+  have p : Derivation B Δ (report n (t.relabel j)) :=
+    Derivation.hypothesis List.mem_cons_self
+  have parent := actualRawConsParser (h.relabel j) n (t.relabel j) (s.relabel j)
+    ⟨Derivation.conjunctionRight p⟩ c'
+  have field := NumberedWindowInternalSparsePairGraphProof.consGraph
+    (body := B) (Γ := Δ) (h.relabel j) n
+  have graph : Nonempty (Derivation B Δ
+      (repackGraph (rawCons (h.relabel j) n) (s.relabel j))) :=
+    consValue .zero fieldCons (s.relabel j) (h.relabel j) (t.relabel j) n
+      (rawCons (h.relabel j) n) Fin.elim0 c' ⟨Derivation.conjunctionLeft p⟩ field
+  obtain ⟨dgraph⟩ := graph
+  obtain ⟨dparse⟩ := parent
+  obtain ⟨q⟩ := packIntro (rawCons (h.relabel j) n) (s.relabel j)
+    ⟨Derivation.conjunctionIntroduction dgraph dparse⟩
+  apply Nonempty.intro
+  apply Derivation.existentialElimination d
+  change Derivation B Δ ((canPack s).relabel j)
+  rw [canPackRename]
+  exact q
+
+private theorem constructorLaw : Nonempty (Derivation B Γ (constructors (motive (α := α)))) := by
+  apply actualFiniteUniversalIntroduction B α 3 Γ (constructorBody motive)
+  let j : α → α ⊕ Fin 3 := Sum.inl
+  let S : OTerm (α ⊕ Fin 3) := .var (.inr 0)
+  let H : OTerm (α ⊕ Fin 3) := .var (.inr 1)
+  let T : OTerm (α ⊕ Fin 3) := .var (.inr 2)
+  let C := consGraph S H T
+  let I := canPack T
+  let Δ := I :: C :: Γ.map (fun q => q.relabel j)
+  change Nonempty (Derivation B (Γ.map (fun q => q.relabel j))
+    (C.imp ((atIndex (motive (α := α)) 2).imp (atIndex (motive (α := α)) 0))))
+  simp only [motiveIndex]
+  obtain ⟨d⟩ := packCons (B := B) (Γ := Δ) S H T
+    ⟨Derivation.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)⟩
+    ⟨Derivation.hypothesis List.mem_cons_self⟩
+  exact ⟨Derivation.implicationIntroduction (Derivation.implicationIntroduction d)⟩
+
+/-- The literal repacker graph and the original positive parser graph have
+the same raw witness. The scratch tape is the original one throughout. -/
+theorem exact_FunctionalRawRepackWitness (scratch : OTerm α) :
+    Nonempty (Derivation B Γ (canPack scratch)) := by
+  have h : Nonempty (Derivation B Γ (atCode motive z)) := by
+    rw [motiveCode]
+    obtain ⟨base⟩ := nilValue (body := B) (Gamma := Γ) .zero fieldCons z Fin.elim0 (zeroValue Fin.elim0)
+    have hp : Nonempty (Derivation B Γ (positiveGraph z z)) := exact_OriginalSparseParserNil
+    obtain ⟨parse⟩ := hp
+    exact packIntro z z ⟨Derivation.conjunctionIntroduction base parse⟩
+  obtain ⟨b⟩ := h
+  obtain ⟨c⟩ := constructorLaw (B := B) (Γ := Γ)
+  have prep : Nonempty (Derivation B Γ (premises motive)) :=
+    ⟨Derivation.conjunctionIntroduction b c⟩
+  have done := actualOriginalListInductionAtCode B α Γ motive scratch prep
+  rw [motiveCode] at done
+  exact done
+
+/-- A held graph for the fixed repacker supplies the literal original
+parser report at the same scratch. Functionality identifies the induction
+witness with the held output; no new assumption or reflected evaluation. -/
+theorem exact_FunctionalRawRepackParser (n s : OTerm α)
+    (given : Nonempty (Derivation B Γ (repackGraph n s))) :
+    Nonempty (Derivation B Γ (positiveGraph n s)) := by
+  obtain ⟨e⟩ := exact_FunctionalRawRepackWitness (B := B) (Γ := Γ) s
+  let j : α → α ⊕ Fin 1 := Sum.inl
+  let w : OTerm (α ⊕ Fin 1) := .var (.inr 0)
+  let Δ := rawMatrix s :: Γ.map (fun q => q.relabel j)
+  have p : Derivation B Δ (report w (s.relabel j)) :=
+    Derivation.hypothesis List.mem_cons_self
+  have moved := renameInto given j Δ
+    (fun q hq => List.mem_cons_of_mem _ (List.mem_map.mpr ⟨q,hq,rfl⟩))
+  have g : Nonempty (Derivation B Δ (repackGraph (n.relabel j) (s.relabel j))) := by
+    simpa only [repackGraphRename] using moved
+  have same := valueUnique repack w (n.relabel j) (Fin.cons (s.relabel j) Fin.elim0)
+    ⟨Derivation.conjunctionLeft p⟩ g
+  have target : Nonempty (Derivation B Δ (positiveGraph (n.relabel j) (s.relabel j))) :=
+    headTransport parser (suc (s.relabel j)) w (n.relabel j) Fin.elim0 same
+      ⟨Derivation.conjunctionRight p⟩
+  obtain ⟨d⟩ := target
+  apply Nonempty.intro
+  apply Derivation.existentialElimination e
+  change Derivation B Δ ((positiveGraph n s).relabel j)
+  simpa only [positiveRename] using d
+
+#print axioms exact_FunctionalRawRepackWitness
+#print axioms exact_FunctionalRawRepackParser
+end LogicLineages.PersistentMarking.NumberedWindowInternalFunctionalRawRepackProof

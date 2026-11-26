@@ -1,0 +1,26 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/FixedHeadCollapseGraphFieldsProof.lean:16:55: error: unsolved goals
+f : ℕ → ℕ
+p : Input
+h : domain p
+lam : NONote := ⟨rawNoteDecode p.1, ⋯⟩
+c : ℕ := canonicalInitialCode p.1 p.2
+lamCode : rawNoteEncode ↑lam = p.1
+initial :
+  (rawNoteDecode (canonicalInitialCode p.1 p.2)).NF ∧
+    (rawNoteDecode (canonicalInitialCode p.1 p.2)).repr = countInitial (↑lam).repr p.2
+a : NONote := ⟨rawNoteDecode c, ⋯⟩
+code : rawNoteEncode ↑a = c
+repr : (↑a).repr = countInitial (↑lam).repr p.2
+normal : rawNormalCode p.1 = 1
+admissible : closedProperEntryGuard (p.1, 0, p.2) = true
+scan : closedProperEntryResult f (p.1, 0, p.2) = some (some (terminalWith f (countInitial (↑lam).repr p.2)))
+⊢ terminalWith f (countInitial (↑lam).repr p.2) = terminalWith f (countInitial (rawNoteDecode p.1).repr p.2)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PermittedControl/FixedHeadCollapseGraphFieldsProof.lean:41:29: error: Application type mismatch: The argument
+  Eq.trans (Eq.symm (acceptedFields f p h)) none
+has type
+  Eq.{1} (some (completeEndpoint f (rawNoteDecode p.1).repr p.2, completeCount f (rawNoteDecode p.1).repr p.2))
+    Option.none
+but is expected to have type
+  Eq.{?u.2 + 2} ?m.18 ?m.20
+in the application
+  Option.noConfusion ⋯

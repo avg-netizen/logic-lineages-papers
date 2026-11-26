@@ -1,0 +1,7 @@
+# Independent pre-scope: four actual pole-contraction suppliers
+
+Approved for proof authoring; all six frozen pins match. rootRemoved is the genuine polynomial monic quotient by the actual root multiplicity, and poleOrder is the root multiplicity of the reduced canonical RatFunc denominator. Neither is a supplied factorization or assigned bound.
+
+ActualRootFactorization requires exact equality and nonvanishing evaluation of the quotient for every nonzero polynomial, including root multiplicity zero. FractionPoleContraction covers every numerator, nonzero denominator, both literal selectors and every field coordinate, with the precise natural ceiling (k+1)/2. CanonicalPoleContraction specializes to every actual rational input, including zero, with no properness hypothesis. NoNewPole includes all zero-order coordinates and must follow from actual mathematics, not only a finite observed root list. No partial-fraction decomposition or coefficient-vector representation is assumed.
+
+Scope is four supporting results over arbitrary working perfect characteristic-two fields. No coefficient-extension naturality, all geometric roots over an unsplit field, literal A_d multiplicity budget, all-word contraction, source binary-transient or profile theorem is accepted. Coordinate extension and actual-operation commutation remain future obligations for geometric source specialization. No compiler or proof acceptance performed.

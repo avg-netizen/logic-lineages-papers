@@ -1,0 +1,21 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalCoverSingletonTypeWindowTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverSingletonTypeWindowSelectedProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverSingletonTypeArgumentScratchProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverSingletonTypeWindowScratchProof
+open NumberedWindowInternalCoverSingletonTypeWindowSelectedProof (exact_OpenCoverOrdinarySingletonKWindow)
+open NumberedWindowInternalCoverSingletonTypeArgumentScratchProof (exact_OpenCoverOrdinarySingletonTypeScratch)
+open NumberedWindowInternalCoverSingletonTypeWindowTargets
+
+theorem exact_OpenCoverOrdinarySingletonKScratch : ExactOpenCoverOrdinarySingletonKScratch := by
+  intro V TV M A B T s body α Γ h ty p vertices ctx result actual
+  have stored := exact_OpenCoverOrdinarySingletonKWindow s B T body α Γ ctx h ty result actual.typed
+  exact exact_OpenCoverOrdinarySingletonTypeScratch V TV M A (ordinarySingletonKBase s B) T
+    s body α Γ h ty p vertices ctx result actual stored
+
+#print axioms exact_OpenCoverOrdinarySingletonKScratch
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalCoverSingletonTypeWindowScratchProof

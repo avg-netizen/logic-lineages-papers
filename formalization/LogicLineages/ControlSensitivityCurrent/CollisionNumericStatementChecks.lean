@@ -1,0 +1,8 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.CollisionNumericProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.FullCollision.NumericChecks
+theorem fixed_numericCollision : Targets.NumericCollision := PolicyCollision.numericCollision
+#audit_namespace LogicLineages.ControlSensitivityCurrent.FullCollision.NumericChecks
+end LogicLineages.ControlSensitivityCurrent.FullCollision.NumericChecks

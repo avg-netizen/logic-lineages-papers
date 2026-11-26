@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportMatrixProof
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportChecks
+
+theorem exact_actual_matrix : OutcomeTransportTargets.ExactActualMatrix :=
+  OutcomeTransportProof.exactActualMatrix
+
+#print axioms exact_actual_matrix
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportChecks

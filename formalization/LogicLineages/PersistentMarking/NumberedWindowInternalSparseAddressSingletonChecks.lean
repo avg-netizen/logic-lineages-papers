@@ -1,0 +1,16 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseAddressSingletonTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseAddressSingletonInstalledProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseAddressSingletonChecks
+open NumberedWindowInternalSparseAddressSingletonTargets
+open NumberedWindowInternalSparseAddressSingletonCoreProof (core)
+open NumberedWindowInternalSparseAddressSingletonInstalledProof (installed)
+
+theorem exact_OpenSingletonCore : ExactOpenSingletonCore := core
+theorem exact_OpenInstalledSingleton : ExactOpenInstalledSingleton := installed
+
+#print axioms exact_OpenSingletonCore
+#print axioms exact_OpenInstalledSingleton
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseAddressSingletonChecks

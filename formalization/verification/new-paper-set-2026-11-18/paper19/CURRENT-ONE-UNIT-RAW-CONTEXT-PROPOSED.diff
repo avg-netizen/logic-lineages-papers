@@ -1,0 +1,19 @@
+--- LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean
++++ LogicLineages/ControlSensitivityCurrent/CurrentOneUnitRawProof.lean
+@@ -106,6 +106,7 @@
+   have hU := PolicyAssignmentStatementChecks.full.1 p (σ :: Γ) (.arrow .ground τ) (OneUnit.unused a)
+   rw [ha, Option.map_some] at hA
+   rw [hu, Option.map_some] at hU
++  simp only [List.map_cons] at hτ hD hA hU
+   have hσcode := SyntaxCode.StatementChecks.typeLevelExact σ
+   have hτcode := SyntaxCode.StatementChecks.typeLevelExact τ
+   have hfree := LogicLineages.OrdinalComparison.StatementChecks.fixed_ordinalSyntaxHeadFreeCorrect Γ σ (h 0)
+@@ -126,7 +127,7 @@
+       SyntaxCode.encodeTerm b := by
+     rw [CurrentTreeCode.exactExpansion, (ScopedDAG.StatementChecks.renaming Γ Δ τ r q).1]
+     have hq : q.term = a := ht.1
+-    rw [hq]
++    rw [hq] <;> rfl
+   unfold compileSelected
+   simp only [Option.bind_eq_bind]
+   rw [ht.2.1, Option.bind_some, exactMoveCodes left right σ τ q, Option.bind_some]

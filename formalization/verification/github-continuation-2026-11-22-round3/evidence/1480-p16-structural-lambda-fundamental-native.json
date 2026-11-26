@@ -1,0 +1,112 @@
+{
+  "status": "checked",
+  "base_commit": "9a8fd8f8ffd9c1ab27b91096dc1e52aa196bb413",
+  "scope": "Genuine structural realization fundamental lemma for the full finite-semantic-type variable/constant/application/lambda grammar. Literal current native compilation is typed and commutes with current substitution at arbitrary binder depth. Body realization is derived by induction; only the standard realized-constant and realizing-environment hypotheses occur. Includes a premise-free closed pure-lambda corollary. Does not assign denotations to every raw system-T term at untranslated actual types.",
+  "proof_modules": [
+    {
+      "module": "LogicLineages.NativeModule.PersistentMarking.TypedLambdaRealizationSyntaxProof",
+      "native_receipt": "1795411295477093868-11",
+      "native_receipt_sha256": "59b8e20fd8c6ce3e33bfeb12d055aff2b52c1b64d45d3c147868525a7a855292",
+      "native_row": {
+        "discarded_failed_outputs": [],
+        "last_wait_channel": "0",
+        "log": "build-reports/1795411295477093868-11-LogicLineages-NativeModule-PersistentMarking-TypedLambdaRealizationSyntaxProof.log",
+        "memory_observation_failure": {},
+        "module": "LogicLineages.NativeModule.PersistentMarking.TypedLambdaRealizationSyntaxProof",
+        "observed_cpu_seconds": 1.37,
+        "peak_process_tree_rss_kib": 924480,
+        "returncode": 0,
+        "seconds": 1.426,
+        "source_sha256": "5320c3324008b7fef92d771e28f49fc95d6117de370ff48b6a275061541db8a8",
+        "stopped_threads": []
+      },
+      "native_log_sha256": "2d0c948af0782f3ea28e3f1cec3545519df5344669cacbd1df91dde47c09630a",
+      "profile": {
+        "core_only_profile": false,
+        "cpu_seconds": 90,
+        "heap_cap_mib": 2048,
+        "minimum_free_mib": 2048,
+        "rss_cap_mib": 1536,
+        "single_thread": true,
+        "threads": 1,
+        "upstream_cache_only": true,
+        "wall_seconds": 180
+      }
+    },
+    {
+      "module": "LogicLineages.NativeModule.PersistentMarking.TypedLambdaRealizationProof",
+      "native_receipt": "1795411295477093868-11",
+      "native_receipt_sha256": "59b8e20fd8c6ce3e33bfeb12d055aff2b52c1b64d45d3c147868525a7a855292",
+      "native_row": {
+        "discarded_failed_outputs": [],
+        "last_wait_channel": "0",
+        "log": "build-reports/1795411295477093868-11-LogicLineages-NativeModule-PersistentMarking-TypedLambdaRealizationProof.log",
+        "memory_observation_failure": {},
+        "module": "LogicLineages.NativeModule.PersistentMarking.TypedLambdaRealizationProof",
+        "observed_cpu_seconds": 0.96,
+        "peak_process_tree_rss_kib": 951140,
+        "returncode": 0,
+        "seconds": 1.023,
+        "source_sha256": "c0cf01b6b83d1af0acd7ac8143004cf1e88befd0edcd19e1e28d652cee5cb22e",
+        "stopped_threads": []
+      },
+      "native_log_sha256": "268f9c66927ef0437d5788848ce6463b2f7218bef9f0ebe54083170abea592ec",
+      "profile": {
+        "core_only_profile": false,
+        "cpu_seconds": 90,
+        "heap_cap_mib": 2048,
+        "minimum_free_mib": 2048,
+        "rss_cap_mib": 1536,
+        "single_thread": true,
+        "threads": 1,
+        "upstream_cache_only": true,
+        "wall_seconds": 180
+      }
+    }
+  ],
+  "named_axiom_output": {
+    "LogicLineages.PersistentMarking.TypedLambdaRealization.nativeCompilation": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.TypedLambdaRealization.closedCompilation": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.TypedLambdaRealization.literalSubstitution": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.TypedLambdaRealization.closeUnderBinder": [
+      "propext",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.TypedLambdaRealization.structuralFundamental": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.TypedLambdaRealization.pureClosedFundamental": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.TypedLambdaRealization.fullTypedLambdaFragment": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "completion_gate_receipt": "1795411295477093868-11",
+  "completion_gate_receipt_sha256": "59b8e20fd8c6ce3e33bfeb12d055aff2b52c1b64d45d3c147868525a7a855292",
+  "source_pins": {
+    "formalization/LogicLineages/NativeModule/PersistentMarking/TypedLambdaRealizationDefinitions.lean": "b535593ef9e4fde29674aaa35842f58dc71525e4b105049732b6e4992fde8f94",
+    "formalization/LogicLineages/NativeModule/PersistentMarking/TypedLambdaRealizationTargets.lean": "6403883e03cef129bc1250dbcbbd7962cc4c216248bfb0fab5722856d123290b",
+    "formalization/LogicLineages/NativeModule/PersistentMarking/TypedLambdaRealizationSyntaxProof.lean": "5320c3324008b7fef92d771e28f49fc95d6117de370ff48b6a275061541db8a8",
+    "formalization/LogicLineages/NativeModule/PersistentMarking/TypedLambdaRealizationProof.lean": "c0cf01b6b83d1af0acd7ac8143004cf1e88befd0edcd19e1e28d652cee5cb22e",
+    "formalization/verification/github-continuation-2026-11-22-round3/realization/SOURCE-MAP.md": "2ce4c550b20c695bd6b6ecaccadc3de8ea7334cb6c2555f603d00693f808db7f",
+    "formalization/verification/github-continuation-2026-11-22-round3/ordinal-frontier/TYPED-LAMBDA-SOURCE-REVIEW.md": "8d26f7474a901e5b8e414c8e5d149fc9cbef7bcce0d6b51a91301beea776eb92"
+  },
+  "verification": "Focused statement/source comparison and original fixed-limit native gate, with preserved necessary proof repairs; no duplicate artifact replay.",
+  "portable_evidence": "../root/portable-native-evidence.zip"
+}

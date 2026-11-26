@@ -1,0 +1,4 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceSingleBottomLeastTargets
+
+#check LogicLineages.OrdinalComparison.TerminationOrdering.SourceSingleBottomLeastTargets.ActualScalarLeastSingleBottom

@@ -1,0 +1,11 @@
+# Original enumeration standalone equation (freeze only)
+
+Same literal R/D/G and standalone AST as accepted OriginalEnumerationRecursion. R observes the fuel component of the encoded (variableBound,fuel) node; it is never identified with raw node. D retains original order [same-bound predecessor, opened-bound predecessor]. G retains original getD0/getD1 defaults and the actual eight-block constructor layer. No existing accepted files are edited.
+
+Exact2: (1) actual own-root previous cache at observed rank has exactly the ordered standalone child answers; (2) literal standalone output equals the payload of G on those actual answers. The new answerMap is a raw-list map, retaining order, duplicates and zero values. It does not drop None or identify None with Some0.
+
+Private proof duties: derive own-root frontier singleton at depth0, final cache singleton and Some-definedness from actual domain; extract standalone value at successor observed rank. Use accepted cross-root Option-value transport for child extraction. For positive parent rank, previous cache has depth1 and predecessor index; prove child membership and budget using actual D/R strict decrease. For rank0, derive D empty internally. Build the ordered map equivalence by actual raw-list recursion, not native images. Then recover all graph/rank/old-table/answer witnesses internally for the second endpoint. No supplied validity, child Some, lookup agreement, recursive IH, native reflection or raw=rank premise.
+
+Source correspondence: OriginalEnumerationRecursion Definitions specifies graph and standalone selected recursor. OriginalEnumerationRecursionInterface Definitions supplies literal fuel rank, two ordered dependencies and totalized G. OriginalEnumerationCacheCoherence supplies actual domain and cross-root transport for this tuple only. Generic selected extraction and graph stage support must be instantiated with this tuple; older decoded or bounds cache values are not reusable. Existing OriginalDecodedExchangeEquation gives the rank-observed proof shape, not a theorem about enumeration.
+
+This pays an internal recursive equation, not enumeration completeness, codeBounds sufficiency, classCodes or full Q/source-computability completion. All-raw native calibration is already accepted separately and is not an internal reflection premise.

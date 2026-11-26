@@ -1,0 +1,16 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.HistoryMachine.NativeProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.HistoryMachine.NativeStatementChecks
+
+theorem nativePrograms : Targets.NativePrograms := NativeProgramsProof.nativePrograms
+theorem iteratorCalibration : Targets.IteratorCalibration := NativeProof.iteratorCalibration
+theorem originalHistoryRun : Targets.OriginalHistoryRun := NativeProof.originalHistoryRun
+theorem sameNumericChecker : Targets.SameNumericChecker := NativeProof.sameNumericChecker
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.HistoryMachine.NativeStatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261112.HistoryMachine

@@ -1,0 +1,57 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.SyntaxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.BackwardProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open SourceComputabilityFormulaSupportProof InternalControlGraphSupportProof
+open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
+open InternalRawListRecursionSyntaxProof InternalGraphCompositionSyntaxProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open InternalBinderTransportProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
+open InternalAdditionLawsProof InternalGraphCompositionFunctionalityProof
+open InternalApplicationCertificateConstructorsSupportProof InternalAcceptanceSupportProof
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalClosedPrograms InternalClosedProgramsBindingProof
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalBetaTotalityProof InternalQuotientComparisonProof
+open TwoSol20261113.CalibratedPrimary.Membership (contains)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Continuation20261114
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+open SyntaxProof
+theorem eliminate (E : Program 3) (pool carrier parameter x y : OrdinaryArithmetic.Term alpha)
+ (hback : Nonempty (Derivation body Delta (backClosed E pool carrier parameter)))
+ (hp : Nonempty (Derivation body Delta (graph2 contains (numeral 1) pool x)))
+ (hc : Nonempty (Derivation body Delta (graph2 contains (numeral 1) carrier y)))
+ (he : Nonempty (Derivation body Delta (graph3 E (numeral 1) x y parameter))) :
+ Nonempty (Derivation body Delta (graph2 contains (numeral 1) carrier x)) := by
+ obtain ⟨h⟩ := elimination body alpha 2 Delta _ (fun i => emb (![x,y] i)) hback
+ rw [backwardWitness] at h
+ obtain ⟨ha⟩ := andIntro hp (andIntro hc he)
+ exact ⟨Derivation.implicationElimination h ha⟩
+theorem introduce (E : Program 3) (pool carrier parameter : OrdinaryArithmetic.Term alpha)
+ (next : ∀ (beta : Type) (j : alpha → beta) (Theta : List (Formula beta)) (x y : OrdinaryArithmetic.Term beta),
+  (∀ p ∈ Delta, p.relabel j ∈ Theta) →
+  Nonempty (Derivation body Theta (graph2 contains (numeral 1) (pool.relabel j) x)) →
+  Nonempty (Derivation body Theta (graph2 contains (numeral 1) (carrier.relabel j) y)) →
+  Nonempty (Derivation body Theta (graph3 E (numeral 1) x y (parameter.relabel j))) →
+  Nonempty (Derivation body Theta (graph2 contains (numeral 1) (carrier.relabel j) x))) :
+ Nonempty (Derivation body Delta (backClosed E pool carrier parameter)) := by
+ apply introduction body alpha 2 Delta
+ let x : OrdinaryArithmetic.Term (alpha ⊕ Fin 2) := .var (.inr 0)
+ let y : OrdinaryArithmetic.Term (alpha ⊕ Fin 2) := .var (.inr 1)
+ let A := graph2 contains (numeral 1) (pool.relabel Sum.inl) x ⊓
+   (graph2 contains (numeral 1) (carrier.relabel Sum.inl) y ⊓ graph3 E (numeral 1) x y (parameter.relabel Sum.inl))
+ have ha : Nonempty (Derivation body (A :: Delta.map (fun p => p.relabel Sum.inl)) A) := ⟨Derivation.hypothesis List.mem_cons_self⟩
+ obtain ⟨h⟩ := next (alpha ⊕ Fin 2) Sum.inl (A :: Delta.map (fun p => p.relabel Sum.inl)) x y
+  (fun p hp => List.mem_cons_of_mem _ (List.mem_map.mpr ⟨p,hp,rfl⟩))
+  (andLeft ha) (andLeft (andRight ha)) (andRight (andRight ha))
+ exact ⟨Derivation.implicationIntroduction h⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.BackwardProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.BackwardProof

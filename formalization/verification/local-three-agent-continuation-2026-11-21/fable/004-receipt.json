@@ -1,0 +1,108 @@
+{
+  "status": "completed",
+  "created_utc": "2026-11-22T03:39:40.398252+00:00",
+  "model": "claude-fable-5-2",
+  "effort": "high",
+  "route": "User-authorized API-first claudep wrapper. Subscription fallback only upon exhausted credits.",
+  "resume_session_id": "da2de9c8-b5b9-4018-b4ab-c6ff052db739",
+  "prompt_sha256": "3f4cbe23b214e19792b960fb54318485878d9779c834cb120a2be7c351a4c34b",
+  "target": "ExactRetainedScan and ExactRetainedPredecessor",
+  "freeze": "../FABLE-RETAINED-SCAN-FROZEN.json",
+  "phase": "Actual directed scan acceptance and actual seen predecessor for any filtered member.",
+  "tools": [
+    "Read",
+    "Glob",
+    "Grep"
+  ],
+  "authorization": "The user explicitly answered \u201cYes, fable can send it.\u201d to transmission of the exact 004 prompt and scoped Lean sources to the Anthropic Fable API through claudep on the existing session. Root relayed the approval.",
+  "previous_rejection": "004-blocked-before-approval.json",
+  "started_utc": "2026-11-22T05:26:32.051347+00:00",
+  "argv": [
+    "/home/other/storage/projects/palace2/.claude/tools/claudep/claudep",
+    "--model",
+    "claude-fable-5-2",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "Read,Glob,Grep",
+    "--allowedTools",
+    "Read,Glob,Grep",
+    "--permission-mode",
+    "dontAsk",
+    "--strict-mcp-config",
+    "--mcp-config",
+    "{\"mcpServers\":{}}",
+    "--resume",
+    "da2de9c8-b5b9-4018-b4ab-c6ff052db739"
+  ],
+  "pid": 2980527,
+  "exit_code": 0,
+  "ended_utc": "2026-11-22T05:31:56.138382+00:00",
+  "observed_fallback": false,
+  "assistant_response_count": 14,
+  "init_count": 1,
+  "session_id": "da2de9c8-b5b9-4018-b4ab-c6ff052db739",
+  "init_model": "claude-fable-5-2",
+  "api_key_source": "ANTHROPIC_API_KEY",
+  "result_type": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 10,
+    "cache_creation_input_tokens": 438566,
+    "cache_read_input_tokens": 1271822,
+    "output_tokens": 39522,
+    "output_tokens_details": {
+      "thinking_tokens": 21321
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 438566
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 30457,
+        "cache_read_input_tokens": 431485,
+        "cache_creation_input_tokens": 10304,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 10304,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-fable-5-2": {
+      "inputTokens": 72,
+      "outputTokens": 235576,
+      "thinkingTokens": 165045,
+      "cacheReadInputTokens": 5058034,
+      "cacheCreationInputTokens": 1498945,
+      "cacheCreationEphemeral5mInputTokens": 1498945,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 25.424672800000003,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "canonicalModel": "claude-fable-5-2",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "cost_usd": 25.424672800000003,
+  "resumability": "genuine successful assistant response and result verified",
+  "stream.jsonl_sha256": "45faa2f3189535b39b2ec8c5004c3ceed8760c8f6ade04749bc7ed9075553ec0",
+  "stderr.txt_sha256": "102c9d2f90f67e102799d30f087cfbb7655a656b42fb3fcee8c1a3ed64bc4bde"
+}

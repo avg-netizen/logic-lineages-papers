@@ -1,0 +1,77 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:35:26: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 1
+where
+ a := ↑(basesSize hb)
+ b := ↑(basesSize hb')
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:40:26: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a + b - c - d ≥ 1
+where
+ a := ↑(basesSize hb)
+ b := ↑(extrasSize he)
+ c := ↑(basesSize hb')
+ d := ↑(extrasSize he')
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:52:27: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a + b - c - d ≥ 1
+where
+ a := ↑(treeSize h)
+ b := ↑(basesSize hs)
+ c := ↑(treeSize h')
+ d := ↑(basesSize hs')
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:62:41: error: Application type mismatch: The argument
+  ht0
+has type
+  RefinementTree S (rename π q✝) (rename π q)
+but is expected to have type
+  RefinementTree ?m.639 (rename π (Expr.marked f q.type base es)) ?m.645
+in the application
+  transport hm rfl ht0
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:58:2: error: Alternative `owner` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:77:28: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  b ≥ 0
+  a ≥ 0
+  a + b - c - d ≥ 1
+where
+ a := ↑(extraSize h)
+ b := ↑(extrasSize hs)
+ c := ↑(extraSize h')
+ d := ↑(extrasSize hs')
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:53:1: warning: unused termination hints, function is not recursive
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:66:1: warning: unused termination hints, function is not recursive
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:78:1: warning: unused termination hints, function is not recursive
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:42:44: warning: This simp argument is unused:
+  basesSize
+
+Hint: Omit it from the simp argument list.
+  simp_all [̵t̵r̵e̵e̵S̵i̵z̵e̵,̵b̵a̵s̵e̵s̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵s̵S̵i̵z̵e̵]̵[̲t̲r̲e̲e̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲s̲S̲i̲z̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:42:54: warning: This simp argument is unused:
+  extraSize
+
+Hint: Omit it from the simp argument list.
+  simp_all [̵t̵r̵e̵e̵S̵i̵z̵e̵,̵b̵a̵s̵e̵s̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵s̵S̵i̵z̵e̵]̵[̲t̲r̲e̲e̲S̲i̲z̲e̲,̲ ̲b̲a̲s̲e̲s̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲s̲S̲i̲z̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:42:64: warning: This simp argument is unused:
+  extrasSize
+
+Hint: Omit it from the simp argument list.
+  simp_all [̵t̵r̵e̵e̵S̵i̵z̵e̵,̵b̵a̵s̵e̵s̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵S̵i̵z̵e̵,̵e̵x̵t̵r̵a̵s̵S̵i̵z̵e̵]̵[̲t̲r̲e̲e̲S̲i̲z̲e̲,̲ ̲b̲a̲s̲e̲s̲S̲i̲z̲e̲,̲ ̲e̲x̲t̲r̲a̲S̲i̲z̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

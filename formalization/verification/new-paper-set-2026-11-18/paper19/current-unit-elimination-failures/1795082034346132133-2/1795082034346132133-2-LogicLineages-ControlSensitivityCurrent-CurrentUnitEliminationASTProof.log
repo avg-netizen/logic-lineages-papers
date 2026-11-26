@@ -1,0 +1,46 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationASTProof.lean:25:80: error: unexpected token ',*'; expected ']'
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationASTProof.lean:24:70: error: unsolved goals
+case neg
+p : AdmissibleSum.Policy
+f : ℕ → ℕ
+Γ Δ : List Ty
+r : Renaming Γ Δ
+ν : Variable Δ Ty.ground → ℕ
+a✝ : SourceAST.Formula Γ
+a_ih✝ :
+  SourceAST.Formula.eval p f ν (renameFormula (fun {σ} => r) a✝) = SourceAST.Formula.eval p f (fun x => ν (r x)) a✝
+⊢ (!SourceAST.Formula.eval p f ν (renameFormula (fun {σ} => r) a✝)) = !SourceAST.Formula.eval p f (fun x => ν (r x)) a✝
+
+case conj
+p : AdmissibleSum.Policy
+f : ℕ → ℕ
+Γ Δ : List Ty
+r : Renaming Γ Δ
+ν : Variable Δ Ty.ground → ℕ
+a✝¹ a✝ : SourceAST.Formula Γ
+a_ih✝¹ :
+  SourceAST.Formula.eval p f ν (renameFormula (fun {σ} => r) a✝¹) = SourceAST.Formula.eval p f (fun x => ν (r x)) a✝¹
+a_ih✝ :
+  SourceAST.Formula.eval p f ν (renameFormula (fun {σ} => r) a✝) = SourceAST.Formula.eval p f (fun x => ν (r x)) a✝
+⊢ (SourceAST.Formula.eval p f ν (renameFormula (fun {σ} => r) a✝¹) &&
+      SourceAST.Formula.eval p f ν (renameFormula (fun {σ} => r) a✝)) =
+    (SourceAST.Formula.eval p f (fun x => ν (r x)) a✝¹ && SourceAST.Formula.eval p f (fun x => ν (r x)) a✝)
+
+case disj
+p : AdmissibleSum.Policy
+f : ℕ → ℕ
+Γ Δ : List Ty
+r : Renaming Γ Δ
+ν : Variable Δ Ty.ground → ℕ
+a✝¹ a✝ : SourceAST.Formula Γ
+a_ih✝¹ :
+  SourceAST.Formula.eval p f ν (renameFormula (fun {σ} => r) a✝¹) = SourceAST.Formula.eval p f (fun x => ν (r x)) a✝¹
+a_ih✝ :
+  SourceAST.Formula.eval p f ν (renameFormula (fun {σ} => r) a✝) = SourceAST.Formula.eval p f (fun x => ν (r x)) a✝
+⊢ (SourceAST.Formula.eval p f ν (renameFormula (fun {σ} => r) a✝¹) ||
+      SourceAST.Formula.eval p f ν (renameFormula (fun {σ} => r) a✝)) =
+    (SourceAST.Formula.eval p f (fun x => ν (r x)) a✝¹ || SourceAST.Formula.eval p f (fun x => ν (r x)) a✝)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationASTProof.lean:46:60: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentUnitEliminationASTProof.lean:79:17: error: Insufficient number of fields for `⟨...⟩` constructor: Constructor `Iff.intro` has 2 explicit field, but only 1 was provided

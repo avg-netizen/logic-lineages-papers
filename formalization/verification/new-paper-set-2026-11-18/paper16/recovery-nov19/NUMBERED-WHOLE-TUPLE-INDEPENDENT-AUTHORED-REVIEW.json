@@ -1,0 +1,20 @@
+{
+  "time": "2026-11-19T07:49:06.223345+00:00",
+  "status": "authored scope approved for exact native gate; no acceptance",
+  "sources": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowTupleBridgeProof.lean": "2008fff1349e182d8e291a015dd98a1c47201e655a13410071505eca01656976",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowTupleHeadProof.lean": "37705422f95026f6cf47401b7479f2b2f5908258a61ef43f99154ca65cba47f9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowTupleBetaProof.lean": "6b44560de914066c61af0af3f6f212e055c6e6172955427912eed304cefb24ce",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowTupleAuxProof.lean": "bca5da6639c4322ccd7b018cd720c7b7036003509e6cba55eb5d4eb84ac9d9d9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowTupleChecks.lean": "f46166b780dc3a5c28f1c99decd7976d4575cce3c9a547d5303471560c3ac0f5"
+  },
+  "source": "ordinals.tex235\u2013253 lem:tuple-simulation",
+  "review": [
+    "Actual whole Spine.apply result and uniform n+length+1 threshold retained",
+    "General applyAux induction consumes original lambda spine with actual nearest-binder-first block, no reassociation through substituted images",
+    "Nonempty original free/bound branches are rejected exactly as source even if substituted image is functional",
+    "Ordinary head marks to sufficient finite label; existing marked head spends exact suffix length, retains original base and ordered extras",
+    "Every intermediate remains in same typed finite window by direct proved helpers, rather than assuming still-pending global derivation locality",
+    "Empty tuple source identity and possibly-empty numerical path retained; no strict positivity claim"
+  ]
+}

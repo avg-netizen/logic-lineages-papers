@@ -1,0 +1,11 @@
+--- SUPPORT01/FixedTemplateEncodingSupportProof.lean
++++ SUPPORT02/FixedTemplateEncodingSupportProof.lean
+@@ -19,7 +19,7 @@
+    (Term.numeral (Encodable.encode (xs ++ ys))))) := by
+  obtain ⟨h⟩ := QuotedVerifierMP.QuotationProof.numeralCalculation p atag HistoryAppend.append ha
+   (Encodable.encode xs ::ᵥ Encodable.encode ys ::ᵥ nil) ctx
+- rw [HistoryAppend.NativeProof.nativeHistoryAppend] at h
++ rw [HistoryRuleSuffix.NativeProof.appendList] at h
+  simpa only [HistoryAppend.appendCall,List.Vector.map_cons,List.Vector.map_nil] using (show Nonempty _ from ⟨h⟩)
+ theorem unary {n ctx : Nat} (p : Program n) (ctag : Nat)
+  (hc : (nodes p)[ctag]? = some ⟨2,HistoryCodec.cons⟩) (tag : Nat) (q : Term ctx) (xs : List Nat)

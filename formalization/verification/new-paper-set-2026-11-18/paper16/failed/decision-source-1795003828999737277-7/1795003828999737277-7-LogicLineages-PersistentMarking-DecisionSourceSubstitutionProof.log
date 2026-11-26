@@ -1,0 +1,26 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceSubstitutionProof.lean:31:4: error: Duplicate alternative name `nil`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceSubstitutionProof.lean:32:4: error: Duplicate alternative name `cons`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/DecisionSourceSubstitutionProof.lean:32:4: error: Tactic `introN` failed: There are no additional binders or `let` bindings in the goal to introduce
+
+case cons
+K : List Ty
+V : List Name
+H : List Head
+Γ : Context
+Ξ Ω : BoundContext
+vs : Args
+d : Nat
+q : Expr
+τ : Ty
+ht : Typed Ξ q τ
+hv : ArgsUniverse K V H Γ vs
+⊢ ∀ {Γ_1 : BoundContext} {x : Expr} {σ : Ty} {xs : Args},
+    Typed Γ_1 x σ →
+      ExtrasTyped Γ_1 xs →
+        (∀ (Ω : BoundContext) (d : Nat),
+            SubCompatible vs d Γ_1 Ω → Universe K V H Γ x → Universe K V H Γ (substitute vs d x)) →
+          (∀ (Ω : BoundContext) (d : Nat),
+              SubCompatible vs d Γ_1 Ω → ArgsUniverse K V H Γ xs → ArgsUniverse K V H Γ (substituteArgs vs d xs)) →
+            ∀ (Ω : BoundContext) (d : Nat),
+              SubCompatible vs d Γ_1 Ω →
+                ArgsUniverse K V H Γ (Args.cons x xs) → ArgsUniverse K V H Γ (substituteArgs vs d (Args.cons x xs))

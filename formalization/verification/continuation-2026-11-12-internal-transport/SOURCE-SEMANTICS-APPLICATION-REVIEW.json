@@ -1,0 +1,33 @@
+{
+  "created_at_utc": "2026-11-12T10:07:25.220857+00:00",
+  "kind": "read-only source-semantics review; no new compiled theorem",
+  "findings": [
+    "RawStep permits application reduction only in function position (appFunction); it has no appArgument constructor. Other actual constructors include put/select/copy/mul/abs, ordinaryArguments/numberedBase/numberedExtras, lam/beta/bottom. Follow actual declaration for complete binder details.",
+    "Primary.appArgument transports ZERO-COST primary equivalence in arguments, not a genuine positive reduction. Primary app shape inversion requires equivalence of both children.",
+    "Unrestricted ancestor collapse app(bottom,a) ~ app(bottom,a-prime) is false. Example var versus bottom has differing variable counts. Primary preserves variable counts; representative equality implies primary equivalence. Actual canonical application component coherence likewise forces equal child outputs from equal parent outputs.",
+    "Active class kernels require original representative-key equality AND observer equality. The observer in active inputs is variableRankPackedRaw. Row coherence requires an existing accepted relation and cannot invent an erased-class equality.",
+    "Example in extended context: app(var0,var1) versus app(var0,bottom), erasing var0 produces app(bottom,var0) versus app(bottom,bottom). Output equality, primary equivalence and positive equal-depth bottom-spine step all fail, but the initial pair is NOT an original positive step. It is not a counterexample to genuine erasure transport.",
+    "Native substituteStep and ranked substituteStep already prove the genuine source dichotomy. No target weakening or invented argument reduction case is justified."
+  ],
+  "actual_application_function_plan": [
+    "Use actual source appFunction constructor and one unchanged argument. Under the SAME erasure substitution, both parent arguments are identical transformed values.",
+    "If transformed function step collapses to equality, constructor congruence yields literal transformed parent equality. Original strict variable rank lift is addition of the unchanged original argument count, exactly Nat.add_lt_add_right in ranked native proof.",
+    "If transformed function certificate survives, prefix original appFunction certificate using existing lifted checker law. Pay actual endpoint/source guards and retain same final tuple. Bottom-spine depth increments both source and target by one, preserving strict child decrease.",
+    "A transformed function that is literal bottom cannot have a positive outgoing child certificate; the accepted nonbottom guard excludes that branch. No equal-depth parent-step or absorbing canonicalization is required.",
+    "Internal quotient-level extension still needs independently proved primary-equivalence transport and original class-key/observer coherence across erasure; native truth is not an internal rule."
+  ],
+  "sha256": {
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRewriteReductionDefinitions.lean": "9bc140fb4cc06f91daf400e083f76d7f5f3036746b5e3e819806c39f2458ee2f",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPrimaryEquivalenceDefinitions.lean": "de83b3654dee5eee9b73afa035fb1660fce2e787709c47c13cfe23b587448f50",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedPrimaryShapesProof.lean": "7f643e232d224043e13383edbb02c45ea94a4c588fa1f50f713ea8b22ea381aa",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedVariableCountProof.lean": "138bb9326a639aefc7ba009a6b08b0ca3b5acc423c47d9a48e1327b384fb8315",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedStepSubstitutionProof.lean": "f95534cb43b948f2c64f36ee2249ccb2ccc4641ddcd9171dfdb31aa3667705d6",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedRankedStepSubstitutionProof.lean": "9561b63b5a84ad668ceaf450cec1dbdc229bd87f49b2c01002b2ecc34aa99cab",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedBottomSpineProof.lean": "435978a822c2f19c48b265d369e8c15b3f8b7f4bdfeffa9382ac0c12a117db87",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/NumberedQuotientSubstitutionTargets.lean": "91923bf8cd91bc756331c9f0bd4ee73ebae95ad8c0e8c81aaeb2fd7b8d2bda4d",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalActiveClassKernelDefinitions.lean": "bbc4444b5dce966fe3d26f6a49ec269eeb001609189d640b797669b861ba0205",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalActiveObservedClassDefinitions.lean": "58ff9e533de07771bef020b14c2d0ed2552cb392168a35768aefe666fa067cc3",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalApplicationComponentCoherenceTargets.lean": "0b4bb4e489ea3c2c9a88ed34e5d6a2f13ce7ec75df67fb41e2c7b7822cf31a15",
+    "formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/OriginalApplicationSidecarSpineTargets.lean": "f5cecb8a65e8e88ecc3688d23a6a42031329a48af24c62b9d6aa2f6a443d459e"
+  }
+}

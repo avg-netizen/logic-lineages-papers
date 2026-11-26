@@ -1,0 +1,15 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveTerminalitySufficientProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveTerminalityChecks
+open NumberedWindowInternalSparsePositiveTerminalityTargets
+
+theorem exact_OpenSufficientFuelTerminal : OpenSufficientFuelTerminal :=
+  NumberedWindowInternalSparsePositiveTerminalitySufficientProof.sufficient
+theorem exact_OpenChosenFuelTerminal : OpenChosenFuelTerminal :=
+  NumberedWindowInternalSparsePositiveTerminalitySufficientProof.chosen
+
+#print axioms exact_OpenSufficientFuelTerminal
+#print axioms exact_OpenChosenFuelTerminal
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveTerminalityChecks

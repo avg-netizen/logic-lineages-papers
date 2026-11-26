@@ -1,0 +1,15 @@
+import LogicLineages.PersistentMarking.NumberedWindowArithmeticOccurrencePartitionProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticOccurrencePartitionChecks
+open NumberedWindowArithmeticOccurrencePartitionTargets
+
+theorem exact_KeptRemovedByOrigin : KeptRemovedByOrigin :=
+  NumberedWindowArithmeticKeptRemovedOriginProof.keptRemovedByOrigin
+
+theorem exact_DirectAddressUnionSplit : DirectAddressUnionSplit :=
+  NumberedWindowArithmeticOccurrencePartitionProof.addressDirectUnionSplit
+
+#print axioms exact_KeptRemovedByOrigin
+#print axioms exact_DirectAddressUnionSplit
+
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticOccurrencePartitionChecks

@@ -1,0 +1,7 @@
+# Independent final: complete selected level-two clause
+
+Accepted complete finite-query level-two clause as support to the larger functional-hardness theorem. Receipt1795015319280387761-5. Compiler-free recursive verification reproduces881 modules/zero errors/one exact standard-only alias; independent JSON equals author evidence. Six unchanged frozen pins verified. No native execution.
+
+Read actual SelectedLevelTwo target/assembly and actual finite-query/pullback interfaces. For every printed SelectedWithThreshold control and every structural policy, both real bounded query reductions are supplied by the finalized selected semantics. Each contradiction applies the pullback with that same control/policy and exact strict Boolean. The actual total finite-list reduction, per-query level-two bounds and universal source interpretation satisfy the decider only on its approved domain. Boolean ALL means original-system UNSAT; the pullback takes exactly one complement to yield ComputablePred of original satisfiability. The independently reviewed closed polynomial undecidability supplier then discharges the contradiction, not an external assumption or axiom-only imported claim.
+
+Both weak and strict reductions and both no-decider conclusions are covered. No single-query many-one reduction, level-three seed/compiler/query, whole thm:functional-hardness, unchanged-G or parked threshold credit.

@@ -1,0 +1,74 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatMarkProof.lean:32:13: warning: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  simp only [̵P̵r̵o̵d̵.̵f̵s̵t̵,̵P̵r̵o̵d̵.̵s̵n̵d̵,̵v̵i̵e̵w̵R̵o̵u̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵a̵n̵y̵]̵[̲P̲r̲o̲d̲.̲s̲n̲d̲,̲ ̲v̲i̲e̲w̲R̲o̲u̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲a̲n̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatMarkProof.lean:32:22: warning: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  simp only [̵P̵r̵o̵d̵.̵f̵s̵t̵,̵P̵r̵o̵d̵.̵s̵n̵d̵,̵v̵i̵e̵w̵R̵o̵u̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵a̵n̵y̵]̵[̲P̲r̲o̲d̲.̲f̲s̲t̲,̲ ̲v̲i̲e̲w̲R̲o̲u̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲a̲n̲y̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatMarkProof.lean:40:22: warning: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  simp only [peelStep, ̲Prod.f̵st̵,̵P̵r̵o̵d̵.̵s̵nd, ̲viewRound, ̲Option.bind_eq_bind, ̲Option.bind_some]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatMarkProof.lean:40:31: warning: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  simp only [peelStep, ̲Prod.fst,P̵r̵o̵d̵.̵s̵n̵d̵,̵ ̲viewRound, ̲Option.bind_eq_bind, ̲Option.bind_some]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatMarkProof.lean:83:56: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  lambdas Q R
+in the target expression
+  (match lambdas q r with
+    | some (s, q, t, r) => decide (s = t) && markBit q r
+    | none => Option.any symbolic (atoms q r)) =
+    markBit Q R
+
+case pos
+fuel : Nat
+ih : ∀ (Q R : NTerm), encodeTerm Q ≤ fuel → markHere (peel fuel (encodeTerm Q, encodeTerm R)) = markBit Q R
+Q R : NTerm
+h : encodeTerm Q ≤ fuel + 1
+s : Ty
+q : NTerm
+t : Ty
+r : NTerm
+hl : lambdas Q R = some (s, q, t, r)
+he : s = t
+hp : encodeTerm q < encodeTerm Q
+hs : peelStep (encodeTerm Q, encodeTerm R) = (encodeTerm q, encodeTerm r)
+⊢ (match lambdas q r with
+    | some (s, q, t, r) => decide (s = t) && markBit q r
+    | none => Option.any symbolic (atoms q r)) =
+    markBit Q R
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatMarkProof.lean:96:18: warning: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵q̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatMarkProof.lean:99:20: warning: This simp argument is unused:
+  hq
+
+Hint: Omit it from the simp argument list.
+  simp [hq̵,̵h̵r]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowStatMarkProof.lean:99:23: warning: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  simp [hq,̵h̵r̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

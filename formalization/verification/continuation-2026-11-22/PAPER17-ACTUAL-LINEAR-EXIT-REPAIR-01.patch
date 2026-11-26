@@ -1,0 +1,18 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualLinearExitRowProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualLinearExitRowProof.lean
+@@ -58 +58,2 @@
+-      have head : ν n = rd.2 := by simpa using values 0 (by simp)
++      have head : ν n = rd.2 := by
++        simpa only [Nat.add_zero,List.getElem_cons_zero] using values 0 (by simp)
+@@ -63,2 +64,3 @@
+-      simp only [namedTerms,List.map_cons,List.sum_cons,Summand.term,Term.value,head,ih (n+1) later,
+-        sumCons]
++      simp only [namedTerms,List.map_cons,List.sum_cons,sumCons]
++      rw [ih (n+1) later]
++      simp only [Summand.term,Term.value,head]
+@@ -99,2 +101,3 @@
+-  simp only [exitRow,rowValue,List.map_cons,List.sum_cons,Summand.term,Term.value,
+-    Function.update_self, namedSum _ 1 _ same, replaySum zRank z xs bounded]
++  simp only [exitRow,rowValue,List.map_cons,List.sum_cons]
++  rw [namedSum _ 1 _ same, replaySum zRank z xs bounded] <;>
++    simp only [Summand.term,Term.value,Function.update_self]

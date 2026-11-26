@@ -1,0 +1,37 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/OrdinalNativeOrbitProof.lean:69:4: error: Tactic `apply` failed: could not unify the conclusion of `limitValueSpec`
+  PointwiseSupremum ?A (fun β => ?previous ↑β ⋯ ⋯) (limitValue ?A ?α ?limit ?previous ?count)
+with the goal
+  PointwiseSupremum A
+    (fun β =>
+      Ordinal.limitRecOn (motive := fun β => CountablePrefix β → Value A) (↑(earlierStage lim β)) (fun x_1 => x)
+        (successorValue A f) (limitValue A) ⋯)
+    (limitValue A (↑lim) limit
+      (fun x_1 _h =>
+        Ordinal.limitRecOn (motive := fun β => CountablePrefix β → Value A) x_1 (fun x_2 => x) (successorValue A f)
+          (limitValue A))
+      ⋯)
+
+Note: The full type of `limitValueSpec` is
+  ∀ (A : FiniteType) (α : Ordinal.{0}) (limit : Order.IsSuccLimit α)
+    (previous : (β : Ordinal.{0}) → β < α → CountablePrefix β → Value A) (count : CountablePrefix α),
+    PointwiseSupremum A (fun β => previous ↑β ⋯ ⋯) (limitValue A α limit previous count)
+
+case refine_3
+A : FiniteType
+f : Value A → Value A
+x : Value A
+lim : CountableOrdinal
+limit : Order.IsSuccLimit ↑lim
+⊢ PointwiseSupremum A
+    (fun β =>
+      Ordinal.limitRecOn (motive := fun β => CountablePrefix β → Value A) (↑(earlierStage lim β)) (fun x_1 => x)
+        (successorValue A f) (limitValue A) ⋯)
+    (limitValue A (↑lim) limit
+      (fun x_1 _h =>
+        Ordinal.limitRecOn (motive := fun β => CountablePrefix β → Value A) x_1 (fun x_2 => x) (successorValue A f)
+          (limitValue A))
+      ⋯)
+'LogicLineages.PersistentMarking.OrdinalNativeOrbitProof.exact_FullPrefixOrbitExists' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

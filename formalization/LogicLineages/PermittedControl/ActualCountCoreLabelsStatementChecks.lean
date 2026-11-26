@@ -1,0 +1,28 @@
+module
+public import LogicLineages.PermittedControl.ActualCountCoreLabelsTargets
+import LogicLineages.PermittedControl.ActualCountCoreLabelsSyntaxProof
+import LogicLineages.PermittedControl.ActualCountCoreLabelsShortProof
+import LogicLineages.PermittedControl.ActualCountCoreLabelsLongProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualCountCoreClassifier : ActualCountCoreLabels.ExactCountCoreClassifier :=
+  ActualCountCoreLabels.exactCountCoreClassifier
+
+theorem fixed_exactActualShortCountHasNoCoreLabel : ActualCountCoreLabels.ExactShortCountHasNoCoreLabel :=
+  ActualCountCoreLabels.exactShortCountHasNoCoreLabel
+
+theorem fixed_exactActualPaidLongCountCoreLabel : ActualCountCoreLabels.ExactPaidLongCountCoreLabel :=
+  ActualCountCoreLabels.exactPaidLongCountCoreLabel
+
+theorem fixed_fullActualCountCoreLabels : ActualCountCoreLabels.FullActualCountCoreLabels :=
+  ⟨fixed_exactActualCountCoreClassifier,fixed_exactActualShortCountHasNoCoreLabel,
+    fixed_exactActualPaidLongCountCoreLabel⟩
+
+#print axioms fixed_exactActualCountCoreClassifier
+#print axioms fixed_exactActualShortCountHasNoCoreLabel
+#print axioms fixed_exactActualPaidLongCountCoreLabel
+#print axioms fixed_fullActualCountCoreLabels
+
+end LogicLineages.PermittedControl.StatementChecks

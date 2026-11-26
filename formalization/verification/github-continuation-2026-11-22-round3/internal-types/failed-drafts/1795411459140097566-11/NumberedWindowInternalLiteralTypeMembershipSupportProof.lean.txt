@@ -1,0 +1,213 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralTypeMembershipTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseScratchMembershipOpenMemberConsProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseFieldParserOpenSyntaxProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeProof
+import LogicLineages.PersistentMarking.NumberedWindowNumeralGraphChecks
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalRawListRecursionProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalListCodecEvaluationProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceBranchProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalEqualityTestProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalLessThanSupportProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalLiteralTypeMembershipSupportProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open SourceComputabilityFormulaSupportProof (numeral)
+open ID1Completion.InternalTagArithmeticSyntaxProof (eqn eqnRelabel suc z sucRelabel zRelabel)
+open ID1Completion.InternalTagArithmeticSupportProof (symm sucNeZeroApply)
+open ID1Completion.InternalControlGraphSupportProof
+  (programRename projectionValue outputTransport valueUnique)
+open ID1Completion.InternalGraphCompositionFunctionalityProof (renameInto)
+open ID1Completion.InternalAcceptanceSupportProof (compositionRecover)
+open ID1Completion.InternalAcceptanceBranchProof (zeroBranchElim)
+open ID1Completion.InternalEqualityTest (equalityTest)
+open ID1Completion.InternalEqualityTestCompositionProof (equalityGraph)
+open ID1Completion.InternalEqualityTestProof (rejectForwardOrder rejectBackwardOrder)
+open ID1Completion.InternalOriginalOrderSyntaxProof (ltF)
+open ID1Completion.InternalQuotientComparisonProof (actualOriginalComparison compareView orLeft orRight)
+open ID1Completion.InternalPositiveUnfoldingSupportProof (weakenClosed)
+open ID1Completion.InternalBetaTotalityProof (disjunctionElimination addHyp)
+open ID1Completion.InternalLessThan (constantOne)
+open ID1Completion.InternalLessThanSupportProof (zeroConstantValue)
+open ID1Completion.InternalListCodec (consCode)
+open ID1Completion.InternalListCodecSupportProof (consGraph)
+open ID1Completion.InternalListCodecEvaluationProof (consEvaluation)
+open ID1Completion.InternalRawListRecursionProof (nilRecover consForward stepCases)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram List.Vector
+open NumberedWindowInternalSparseScratchMembership
+open NumberedWindowInternalSparseScratchMembershipTargets (memberGraph)
+open NumberedWindowInternalSparseScratchMembershipOpenSyntaxProof (graphRename)
+open NumberedWindowInternalSparseScratchMembershipOpenMemberConsProof (headMember tailMember)
+open NumberedWindowInternalSparseFieldParserOpenSyntaxProof (tripleInputsRename)
+open NumberedWindowInternalFreshProbeProof (optionGraphCases)
+open NumberedWindowNumeralGraphChecks (exact_NumeralGraph)
+open NumberedWindowInternalLiteralTypeMembershipTargets
+
+attribute [local irreducible] programGraph
+
+variable {body : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+private theorem disjRename {β : Type} (P Q : Formula α) (j : α → β) :
+    (P ⊔ Q).relabel j = P.relabel j ⊔ Q.relabel j := rfl
+
+/-- A successor output of the actual equality test excludes both strict
+order cases in the original calculus. -/
+private theorem equalityOfSuccessor (x y v : OTerm α)
+    (accepted : Nonempty (Derivation body Γ (equalityGraph (suc v) x y))) :
+    Nonempty (Derivation body Γ (eqn x y)) := by
+  obtain ⟨accepted⟩ := accepted
+  obtain ⟨comparison⟩ := actualOriginalComparison body α x y
+  have cases := compareView (weakenClosed comparison Γ)
+  have left : Nonempty (Derivation body (ltF x y :: Γ) (eqn x y)) := by
+    have rejected := rejectForwardOrder (body := body) (Gamma := ltF x y :: Γ) x y
+      ⟨Derivation.hypothesis List.mem_cons_self⟩
+    obtain ⟨impossible⟩ := valueUnique equalityTest (suc v) z ![x,y]
+      ⟨addHyp accepted _⟩ rejected
+    exact ⟨Derivation.explosion (sucNeZeroApply impossible)⟩
+  have right : Nonempty (Derivation body (ltF y x :: Γ) (eqn x y)) := by
+    have rejected := rejectBackwardOrder (body := body) (Gamma := ltF y x :: Γ) x y
+      ⟨Derivation.hypothesis List.mem_cons_self⟩
+    obtain ⟨impossible⟩ := valueUnique equalityTest (suc v) z ![x,y]
+      ⟨addHyp accepted _⟩ rejected
+    exact ⟨Derivation.explosion (sucNeZeroApply impossible)⟩
+  obtain ⟨left⟩ := left
+  obtain ⟨right⟩ := right
+  have same : Derivation body Γ ((eqn x y).imp (eqn x y)) :=
+    Derivation.implicationIntroduction (Derivation.hypothesis List.mem_cons_self)
+  have rest : Derivation body Γ ((eqn x y ⊔ ltF y x).imp (eqn x y)) :=
+    Derivation.implicationIntroduction (disjunctionElimination
+      (Derivation.hypothesis List.mem_cons_self) (addHyp same _)
+      (addHyp (Derivation.implicationIntroduction right) _))
+  exact ⟨disjunctionElimination cases (Derivation.implicationIntroduction left) rest⟩
+
+private theorem stepPick (head previous candidate : OTerm α)
+    (accepted : Nonempty (Derivation body Γ
+      (programGraph memberStep (suc z) ![head,previous,candidate]))) :
+    Nonempty (Derivation body Γ (eqn candidate head ⊔ eqn previous (suc z))) := by
+  apply optionGraphCases headMatches ![head,previous,candidate] _
+  · intro β j Δ keep control
+    simp only [disjRename,eqnRelabel,sucRelabel,zRelabel]
+    rw [tripleInputsRename] at control
+    have actual := renameInto accepted j Δ keep
+    simp only [programRename,tripleInputsRename,sucRelabel,zRelabel] at actual
+    have projection := zeroBranchElim headMatches (.projection 1) (constantOne 3) (suc z)
+      ![head.relabel j,previous.relabel j,candidate.relabel j] control actual
+    obtain ⟨same⟩ := valueUnique (.projection (1 : Fin 3)) (previous.relabel j) (suc z)
+      ![head.relabel j,previous.relabel j,candidate.relabel j]
+      (projectionValue 1 _) projection
+    exact ⟨orRight same⟩
+  · intro β j Δ v _ control
+    simp only [disjRename,eqnRelabel,sucRelabel,zRelabel]
+    rw [tripleInputsRename] at control
+    have comparison : Nonempty (Derivation body Δ
+        (equalityGraph (suc v) (head.relabel j) (candidate.relabel j))) := by
+      apply compositionRecover equalityTest ![.projection 0,.projection 2] (suc v)
+        ![head.relabel j,previous.relabel j,candidate.relabel j]
+        ![head.relabel j,candidate.relabel j] control
+      intro i
+      exact Fin.cases (projectionValue 0 _)
+        (Fin.cases (projectionValue 2 _) (fun u => Fin.elim0 u)) i
+    obtain ⟨same⟩ := equalityOfSuccessor (head.relabel j) (candidate.relabel j) v comparison
+    exact ⟨orLeft (symm same)⟩
+
+private theorem finishCell (head tail candidate previous : OTerm α)
+    (recursive : Nonempty (Derivation body Γ
+      (programGraph scratchMember previous ![tail,candidate])))
+    (offered : Nonempty (Derivation body Γ
+      (programGraph memberStep (suc z) ![head,previous,candidate]))) :
+    Nonempty (Derivation body Γ (eqn candidate head ⊔ memberGraph tail candidate)) := by
+  let P := eqn candidate head
+  let Q := eqn previous (suc z)
+  let R := memberGraph tail candidate
+  obtain ⟨picked⟩ := stepPick head previous candidate offered
+  obtain ⟨recursive⟩ := recursive
+  have atHead : Derivation body Γ (P.imp (P ⊔ R)) :=
+    Derivation.implicationIntroduction (orLeft (Derivation.hypothesis List.mem_cons_self))
+  obtain ⟨kept⟩ := outputTransport (body := body) (Gamma := Q :: Γ)
+    scratchMember previous (suc z) ![tail,candidate]
+    ⟨Derivation.hypothesis List.mem_cons_self⟩ ⟨addHyp recursive Q⟩
+  have atTail : Derivation body Γ (Q.imp (P ⊔ R)) :=
+    Derivation.implicationIntroduction (orRight kept)
+  exact ⟨disjunctionElimination picked atHead atTail⟩
+
+/-- Genuine cons elimination for the unchanged standard-list membership
+program. The tail graph is its own actual recursive call. -/
+theorem consElimination (code head tail candidate : OTerm α)
+    (cell : Nonempty (Derivation body Γ (consGraph code head tail)))
+    (member : Nonempty (Derivation body Γ (memberGraph code candidate))) :
+    Nonempty (Derivation body Γ (eqn candidate head ⊔ memberGraph tail candidate)) := by
+  let result := eqn candidate head ⊔ memberGraph tail candidate
+  have opened := consForward memberBase memberStep code head tail (suc z) ![candidate] cell member
+  apply stepCases memberBase memberStep (suc z) head tail ![candidate] result opened
+  intro β j Δ previous _ recursive offered
+  have oneInput : (fun i : Fin 1 => ((![candidate] : Fin 1 → OTerm α) i).relabel j) =
+      ![candidate.relabel j] := by
+    funext i
+    obtain rfl := Fin.eq_zero i
+    rfl
+  rw [oneInput] at recursive offered
+  simp only [sucRelabel,zRelabel] at offered
+  simp only [result,disjRename,eqnRelabel,graphRename]
+  exact finishCell (head.relabel j) (tail.relabel j) (candidate.relabel j) previous recursive offered
+
+/-- The actual original cons program proves the literal source encoder's
+cons cell, using its concrete numeral evaluation. -/
+theorem literalCons (head : Nat) (tail : List Nat) :
+    Nonempty (Derivation body Γ
+      (consGraph (numeral (Encodable.encode (head :: tail)))
+        (numeral head) (numeral (Encodable.encode tail)))) := by
+  have cell := exact_NumeralGraph 2 consCode (head ::ᵥ Encodable.encode tail ::ᵥ nil) body α Γ
+  have tape : NumberedWindowNumeralGraphTargets.inputs
+      (head ::ᵥ Encodable.encode tail ::ᵥ nil) =
+      (![numeral head,numeral (Encodable.encode tail)] : Fin 2 → OTerm α) := by
+    funext i
+    refine Fin.cases ?_ (fun k => Fin.cases ?_ (fun u => Fin.elim0 u) k) i <;> rfl
+  rw [tape,consEvaluation] at cell
+  simpa only [Encodable.encode_list_cons,Encodable.encode_nat,Nat.add_comm 1] using cell
+
+theorem memberToChoices (codes : List Nat) (candidate : OTerm α)
+    (member : Nonempty (Derivation body Γ (literalMembership codes candidate))) :
+    Nonempty (Derivation body Γ (literalChoices codes candidate)) := by
+  induction codes generalizing Γ with
+  | nil =>
+    have base := nilRecover memberBase memberStep (suc z) ![candidate] member
+    obtain ⟨impossible⟩ := valueUnique memberBase (suc z) z ![candidate] base (zeroConstantValue _)
+    exact ⟨sucNeZeroApply impossible⟩
+  | cons head tail ih =>
+    obtain ⟨split⟩ := consElimination (numeral (Encodable.encode (head :: tail)))
+      (numeral head) (numeral (Encodable.encode tail)) candidate (literalCons head tail) member
+    let P := eqn candidate (numeral head)
+    let Q := literalMembership tail candidate
+    have atHead : Derivation body Γ (P.imp (literalChoices (head :: tail) candidate)) :=
+      Derivation.implicationIntroduction (orLeft (Derivation.hypothesis List.mem_cons_self))
+    obtain ⟨later⟩ := ih (Γ := Q :: Γ) ⟨Derivation.hypothesis List.mem_cons_self⟩
+    have atTail : Derivation body Γ (Q.imp (literalChoices (head :: tail) candidate)) :=
+      Derivation.implicationIntroduction (orRight later)
+    exact ⟨disjunctionElimination split atHead atTail⟩
+
+theorem choicesToMember (codes : List Nat) (candidate : OTerm α)
+    (choices : Nonempty (Derivation body Γ (literalChoices codes candidate))) :
+    Nonempty (Derivation body Γ (literalMembership codes candidate)) := by
+  induction codes generalizing Γ with
+  | nil =>
+    obtain ⟨impossible⟩ := choices
+    exact ⟨Derivation.explosion impossible⟩
+  | cons head tail ih =>
+    obtain ⟨split⟩ := choices
+    let P := eqn candidate (numeral head)
+    let Q := literalChoices tail candidate
+    obtain ⟨atHead⟩ := headMember (body := body) (Γ := P :: Γ)
+      (numeral (Encodable.encode (head :: tail))) (numeral head) (numeral (Encodable.encode tail))
+      candidate (literalCons head tail) ⟨Derivation.hypothesis List.mem_cons_self⟩
+    have member := ih (Γ := Q :: Γ) ⟨Derivation.hypothesis List.mem_cons_self⟩
+    obtain ⟨atTail⟩ := tailMember (numeral (Encodable.encode (head :: tail)))
+      (numeral head) (numeral (Encodable.encode tail)) candidate (literalCons head tail) member
+    exact ⟨disjunctionElimination split (Derivation.implicationIntroduction atHead)
+      (Derivation.implicationIntroduction atTail)⟩
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalLiteralTypeMembershipSupportProof

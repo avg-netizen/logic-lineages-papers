@@ -1,0 +1,12 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityRecognizer.NativeProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityRecognizer.LogicalInternalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityRecognizer.StatementChecks
+theorem exactNativeTerm : Targets.NativeTerm := NativeProof.nativeTerm
+theorem exactNativeRefinement : Targets.NativeRefinement := NativeProof.nativeRefinement
+theorem exactInternalTerm : Targets.InternalTerm := TermInternalProof.internalTerm
+theorem exactInternalLogical : Targets.InternalLogical := LogicalInternalProof.internalLogical
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityRecognizer.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityRecognizer.StatementChecks

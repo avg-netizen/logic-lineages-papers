@@ -1,0 +1,82 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionTypedProof.lean:53:6: error: Type mismatch: After simplification, term
+  ih
+ has type
+  @Eq Bool
+    (aggregateGuard (List.map SyntaxCode.typeCode Γ)
+      (List.map
+        (fun p =>
+          ((List.map SyntaxCode.typeCode Γ, encodeGraph p.1.graph, referenceIndex p.1.root,
+              SyntaxCode.typeCode Ty.ground),
+            List.map SyntaxCode.typeCode Γ, encodeGraph p.2.graph, referenceIndex p.2.root,
+            SyntaxCode.typeCode Ty.ground))
+        es))
+    true
+but is expected to have type
+  @Eq Bool
+    (List.foldr (fun p ok => eraserGuard p.1 p.2 && decide (p.1.1 = List.map SyntaxCode.typeCode Γ) && ok) true
+      (List.map
+        (fun p =>
+          ((List.map SyntaxCode.typeCode Γ, encodeGraph p.1.graph, referenceIndex p.1.root,
+              SyntaxCode.typeCode Ty.ground),
+            List.map SyntaxCode.typeCode Γ, encodeGraph p.2.graph, referenceIndex p.2.root,
+            SyntaxCode.typeCode Ty.ground))
+        es))
+    true
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionTypedProof.lean:64:56: error: Ambiguous term
+  rawNode
+Possible interpretations:
+  CheckedComposition.rawNode : ℕ → ℕ → List ℕ → Node
+  
+  OrdinalComparison.rawNode : ONote → ONote → ℕ → ONote
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionTypedProof.lean:63:77: error: unsolved goals
+Γ : List Ty
+a : Input Γ Ty.ground
+⊢ CheckedComposition.rawNode 0 1 [0, 1, 0] = ([], 0, 1, [0, 1, 0]) ∧
+    CheckedComposition.rawNode 0 3 [] = ([], 0, 3, []) ∧
+      CheckedComposition.rawNode (SyntaxCode.arrowCode 0 0) 2 [0, 0, referenceIndex a.root] =
+        ([], SyntaxCode.arrowCode 0 0, 2, [0, 0, referenceIndex (Ref.map insertSpec a.root)])
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionTypedProof.lean:65:17: warning: This simp argument is unused:
+  map_index
+
+Hint: Omit it from the simp argument list.
+  simp [̵m̵a̵g̵n̵i̵f̵y̵R̵a̵w̵,̵m̵a̵g̵n̵i̵f̵y̵I̵n̵p̵u̵t̵,̵e̵n̵c̵o̵d̵e̵,̵e̵n̵c̵o̵d̵e̵G̵r̵a̵p̵h̵,̵n̵o̵d̵e̵,̵r̵a̵w̵N̵o̵d̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵i̵n̵s̵e̵r̵t̵_̵g̵r̵a̵p̵h̵,̵m̵a̵p̵_̵i̵n̵d̵e̵x̵,̵r̵e̵f̵e̵r̵e̵n̵c̵e̵I̵n̵d̵e̵x̵,̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵t̵y̵p̵e̵C̵o̵d̵e̵]̵[̲m̲a̲g̲n̲i̲f̲y̲R̲a̲w̲,̲ ̲m̲a̲g̲n̲i̲f̲y̲I̲n̲p̲u̲t̲,̲ ̲e̲n̲c̲o̲d̲e̲,̲ ̲e̲n̲c̲o̲d̲e̲G̲r̲a̲p̲h̲,̲ ̲n̲o̲d̲e̲,̲ ̲r̲a̲w̲N̲o̲d̲e̲,̲ ̲i̲n̲s̲e̲r̲t̲_̲g̲r̲a̲p̲h̲,̲ ̲r̲e̲f̲e̲r̲e̲n̲c̲e̲I̲n̲d̲e̲x̲,̲
+  ̲ ̲ ̲ ̲ ̲S̲y̲n̲t̲a̲x̲C̲o̲d̲e̲.̲t̲y̲p̲e̲C̲o̲d̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionTypedProof.lean:69:58: error: Ambiguous term
+  rawNode
+Possible interpretations:
+  CheckedComposition.rawNode : ℕ → ℕ → List ℕ → Node
+  
+  OrdinalComparison.rawNode : ONote → ONote → ℕ → ONote
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionTypedProof.lean:68:79: error: unsolved goals
+Γ : List Ty
+a : Input Γ Ty.ground
+⊢ CheckedComposition.rawNode 0 1 [0, 0, 2 + referenceIndex a.root] =
+      ([], 0, 1, [0, 0, 1 + (1 + referenceIndex a.root)]) ∧
+    CheckedComposition.rawNode (SyntaxCode.arrowCode 0 0) 2 [0, 0, 0] = ([], SyntaxCode.arrowCode 0 0, 2, [0, 0, 0])
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionTypedProof.lean:74:58: error: Ambiguous term
+  rawNode
+Possible interpretations:
+  CheckedComposition.rawNode : ℕ → ℕ → List ℕ → Node
+  
+  OrdinalComparison.rawNode : ONote → ONote → ℕ → ONote
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionTypedProof.lean:73:79: error: unsolved goals
+Γ : List Ty
+a : Input Γ Ty.ground
+⊢ CheckedComposition.rawNode 0 1 [0, 0, 2 + referenceIndex a.root] =
+      ([], 0, 1, [0, 0, 1 + (1 + referenceIndex a.root)]) ∧
+    CheckedComposition.rawNode (SyntaxCode.arrowCode 0 0) 2 [0, 0, 0] = ([], SyntaxCode.arrowCode 0 0, 2, [0, 0, 0])
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionTypedProof.lean:86:58: error: unsolved goals
+Γ : List Ty
+a : Input Γ Ty.ground
+upper : Bool
+⊢ valid (List.map SyntaxCode.typeCode Γ, encodeGraph a.graph, referenceIndex a.root, 0) = true
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionTypedProof.lean:87:23: warning: This simp argument is unused:
+  typedAccepted
+
+Hint: Omit it from the simp argument list.
+  simp [̵w̵r̵a̵p̵p̵e̵r̵G̵u̵a̵r̵d̵,̵t̵y̵p̵e̵d̵A̵c̵c̵e̵p̵t̵e̵d̵,̵e̵n̵c̵o̵d̵e̵,̵S̵y̵n̵t̵a̵x̵C̵o̵d̵e̵.̵t̵y̵p̵e̵C̵o̵d̵e̵]̵[̲w̲r̲a̲p̲p̲e̲r̲G̲u̲a̲r̲d̲,̲ ̲e̲n̲c̲o̲d̲e̲,̲ ̲S̲y̲n̲t̲a̲x̲C̲o̲d̲e̲.̲t̲y̲p̲e̲C̲o̲d̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

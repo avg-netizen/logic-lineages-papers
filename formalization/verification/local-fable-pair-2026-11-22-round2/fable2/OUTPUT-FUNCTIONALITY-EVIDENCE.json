@@ -1,0 +1,78 @@
+{
+  "lane": "fable2",
+  "item": "G03 — output functionality",
+  "paper": 16,
+  "status": "native gate passed",
+  "gate": "bash verification/local-fable-pair-2026-11-22-round2/gate.sh mathlib LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationOutputFunctionalityProof",
+  "gate_attempts": 1,
+  "receipt": {
+    "id": "build-reports/1795398283787789332-3247930.json",
+    "sha256": "b05ebc89aa20c4565d0d984375c1259669e24ea529c200e3593675f027061ddb",
+    "lines": [
+      "COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationOutputFunctionalityTargets",
+      "COMPILE_PASS LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationOutputFunctionalityProof"
+    ]
+  },
+  "modules": [
+    {
+      "module": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationOutputFunctionalityTargets",
+      "file": "LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationOutputFunctionalityTargets.lean",
+      "sha256": "621a1ba4979ed1ff11af16036e1fe916e4db2f6d36f528a7fa4c519d5a52bfc6",
+      "frozen_before_proof": true,
+      "frozen_at": "2026-11-23T01:40Z",
+      "sha256_rechecked_after_pass": "unchanged",
+      "definitions": [
+        "ExactInstalledApplicationOutputFunctionality",
+        "ExactInstalledApplicationOutputFunctionalityContinuation",
+        "ExactInstalledSyntaxGuardedApplicationOutputFunctionalityContinuation"
+      ]
+    },
+    {
+      "module": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationOutputFunctionalityProof",
+      "file": "LogicLineages/PersistentMarking/NumberedWindowInternalCoverMeasuredApplicationOutputFunctionalityProof.lean",
+      "sha256": "ce43d721f982028057feab6823cca73205cac77f7978fee54679c4cbe887ac1a",
+      "theorems": [
+        "exact_InstalledApplicationOutputFunctionality",
+        "exact_InstalledApplicationOutputFunctionalityContinuation",
+        "exact_InstalledSyntaxGuardedApplicationOutputFunctionalityContinuation"
+      ],
+      "private_lemmas": [
+        "addressRename",
+        "consEqual",
+        "auxiliaryEqual",
+        "addressEqual",
+        "ternaryTransport",
+        "outputFromLeast",
+        "operandFields",
+        "rowFunctional"
+      ]
+    }
+  ],
+  "print_axioms": [
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationOutputFunctionalityProof.exact_InstalledApplicationOutputFunctionality' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationOutputFunctionalityProof.exact_InstalledApplicationOutputFunctionalityContinuation' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverMeasuredApplicationOutputFunctionalityProof.exact_InstalledSyntaxGuardedApplicationOutputFunctionalityContinuation' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "forbidden_constructs": {
+    "sorry": false,
+    "axiom": false,
+    "native_decide": false
+  },
+  "existing_files_edited": [],
+  "accepted_suppliers_used": [
+    "NumberedWindowInternalCoverMeasuredApplicationFrontendAcceptanceProof.exact_InstalledApplicationFrontendAcceptance (#1440)",
+    "NumberedWindowInternalCoverCombinedMeasuredInstallProof.exact_InstalledApplicationReport (forward half)",
+    "NumberedWindowInternalSparseApplicationFrontendOpenBindingProof.rowCases",
+    "NumberedWindowInternalSparseApplicationReinstallReportCasesProof.coherent",
+    "NumberedWindowInternalSparseApplicationOutputCoreReportSyntaxProof.{reportUnfold,reportInstance,auxiliaryRename,threeRename}",
+    "NumberedWindowInternalSparsePathEnvelopeOpenCellProof.canonicalCell",
+    "NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof.{makeUnary,unaryRename}",
+    "NumberedWindowInternalSparsePairGraphProof.consGraph",
+    "ID1Completion.InternalControlGraphSupportProof.{valueUnique,programRename}",
+    "ID1Completion.InternalGraphCompositionEqualityProof.graphInputTransport",
+    "ID1Completion.InternalGraphCompositionFunctionalityProof.renameInto"
+  ],
+  "missing_ingredients": "none; uniqueness of operand reports and injectivity of addressTerm were not needed as premises",
+  "source_map": "verification/local-fable-pair-2026-11-22-round2/fable2/OUTPUT-FUNCTIONALITY-SOURCE-MAP.md",
+  "ledger_section": "verification/local-fable-pair-2026-11-22-round2/fable2/LEDGER.md § G03 — output functionality"
+}

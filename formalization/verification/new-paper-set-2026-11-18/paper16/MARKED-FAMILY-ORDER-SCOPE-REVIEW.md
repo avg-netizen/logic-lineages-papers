@@ -1,0 +1,3 @@
+# Independent order subset scope
+
+Read MarkedFamilyOrderProof/Checks; all twenty-three lattice pins match. Approve the exact first two original endpoints OrderExact and PartialOrder for a bounded parent gate. Actual retained membership yields Fits and output carrier membership; outputDecode excludes failed optional outputs in both order directions. Reflexivity/transitivity/antisymmetry use the actual global hereditary carrier poset at each valid context. Antisymmetry gives valid-coordinate FamilyEq, then encoding congruence plus both successful code roundtrips gives literal code equality. No off-coordinate family equality, extra lower law or lattice closure premise is assumed. Remaining six endpoints and full lattice final are separate. No native execution by reviewer.

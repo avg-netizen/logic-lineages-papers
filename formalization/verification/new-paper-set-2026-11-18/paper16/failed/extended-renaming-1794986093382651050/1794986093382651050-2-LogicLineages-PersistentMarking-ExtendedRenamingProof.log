@@ -1,0 +1,93 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ExtendedRenamingProof.lean:60:75: error: Application type mismatch: The argument
+  extras
+has type
+  Expr
+but is expected to have type
+  Args
+in the application
+  renameArgs π extras
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ExtendedRenamingProof.lean:61:102: error: Application type mismatch: The argument
+  extras
+has type
+  Expr
+but is expected to have type
+  Args
+in the application
+  renameArgs π extras
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ExtendedRenamingProof.lean:61:150: error: Application type mismatch: The argument
+  t
+has type
+  Args
+but is expected to have type
+  Expr
+in the application
+  rename π t
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ExtendedRenamingProof.lean:61:205: error(lean.invalidField): Invalid field `append`: The environment does not contain `LogicLineages.PersistentMarking.Spine.Expr.append`, so it is not possible to project the field `append` from an expression
+  extras
+of type `Expr`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ExtendedRenamingProof.lean:61:27: error: unsolved goals
+S : Signature
+π : NameRenaming
+hi : injectiveNames π
+j : ExtendedJudgment
+f : Head
+τ : Ty
+base : Args
+extras : Expr
+added t : Args
+hp : PaperTerm S (Expr.marked f τ base (added.append t)) τ
+ht : PaperTerm S extras τ
+hc : ExtendedTree S (ExtendedJudgment.weak (Expr.marked f τ base added) extras)
+hc' : ExtendedTree S (renameJudgment π (ExtendedJudgment.weak (Expr.marked f τ base added) extras))
+he : treeSize hc' = treeSize hc
+hp' : PaperTerm S (Expr.marked f τ (renameArgs π base) ((renameArgs π sorry).append (renameArgs π added))) τ
+⊢ ExtendedJudgment.weak (Expr.marked f τ (renameArgs π base) ((renameArgs π sorry).append (renameArgs π added)))
+      (rename π sorry) =
+    ExtendedJudgment.weak (Expr.marked f τ (renameArgs π base) (renameArgs π sorry)) (rename π sorry)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ExtendedRenamingProof.lean:94:71: error: Application type mismatch: The argument
+  q
+has type
+  Args
+but is expected to have type
+  Expr
+in the application
+  rename π q
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ExtendedRenamingProof.lean:94:113: error: Application type mismatch: The argument
+  extras
+has type
+  Expr
+but is expected to have type
+  Args
+in the application
+  renameArgs π extras
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ExtendedRenamingProof.lean:94:132: error: Application type mismatch: The argument
+  q
+has type
+  Args
+but is expected to have type
+  Expr
+in the application
+  rename π q
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ExtendedRenamingProof.lean:94:165: error: unsolved goals
+S : Signature
+π : NameRenaming
+hi : injectiveNames π
+j : ExtendedJudgment
+f : Head
+q base : Args
+extras : Expr
+qs : Args
+h : ExtendedTree S (ExtendedJudgment.weak (Expr.marked f extras.type q base) extras)
+hs : ExtendedTree S (ExtendedJudgment.whole f q base qs)
+ih : ∃ h', treeSize h' = treeSize h
+ihs : ∃ h', treeSize h' = treeSize hs
+⊢ ExtendedJudgment.weak (Expr.marked f extras.type (renameArgs π q) (renameArgs π base)) (rename π extras) =
+    ExtendedJudgment.weak (Expr.marked f sorry.type (renameArgs π base) (renameArgs π sorry)) (rename π sorry)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/ExtendedRenamingProof.lean:61:265: warning: This simp argument is unused:
+  append
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵e̵n̵a̵m̵e̵J̵u̵d̵g̵m̵e̵n̵t̵,̵r̵e̵n̵a̵m̵e̵M̵a̵r̵k̵e̵d̵,̵a̵p̵p̵e̵n̵d̵]̵[̲r̲e̲n̲a̲m̲e̲J̲u̲d̲g̲m̲e̲n̲t̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲r̲e̲n̲a̲m̲e̲M̲a̲r̲k̲e̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

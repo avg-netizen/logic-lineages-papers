@@ -1,0 +1,11 @@
+import LogicLineages.PersistentMarking.MarkedExtrasFoundationProof
+namespace LogicLineages.PersistentMarking.MarkedExtrasFoundationChecks
+theorem exact_UniverseExact : MarkedExtrasTargets.UniverseExact := MarkedExtrasFoundationProof.universeExact
+theorem exact_UniverseDistinct : MarkedExtrasTargets.UniverseDistinct := MarkedExtrasFoundationProof.distinct
+theorem exact_TaggedOrder : MarkedExtrasTargets.TaggedOrder := MarkedExtrasFoundationProof.order
+theorem exact_DownExact : MarkedExtrasTargets.DownExact := MarkedExtrasFoundationProof.downExact
+#print axioms exact_UniverseExact
+#print axioms exact_UniverseDistinct
+#print axioms exact_TaggedOrder
+#print axioms exact_DownExact
+end LogicLineages.PersistentMarking.MarkedExtrasFoundationChecks

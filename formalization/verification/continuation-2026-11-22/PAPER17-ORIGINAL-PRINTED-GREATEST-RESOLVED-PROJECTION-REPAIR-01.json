@@ -1,0 +1,66 @@
+{
+  "status": "source-only prepared proof repair, no Lean/Git invoked by author",
+  "failed_source_remote_commit": "a3425f54d1b7648baaeedca914b40ae65860426c",
+  "failed_source_local_commit": "6f3b2071254d9ee804408bc58fb8e40e4cb02370",
+  "failed_exact_gate_receipt": "1795363383511124643-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalPrintedGreatestResolvedProjectionStatementChecks",
+  "failed_receipt_sha256": "12c050a9db3663574c590793c3a03da6f73e5cb152c7701ed84c228abf67d459",
+  "failed_exact_module_log_sha256": "627173700c3b2a27d57659d9be6b15523593ac7fc4830ca5e765f645814d7e86",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedProjectionPreparedProof.lean:53:6: error: Type mismatch: After simplification, term\n  (hRow r hr).left\n has type\n  PreparedInput (OriginalMatrixLinearLowerTable.lowerTable (top branch) rs)\n    (rowFormula (top branch) (OriginalMatrixLinearLowerTable.lowerTable (top branch) rs) (renameRow (rename branch) r))\nbut is expected to have type\n  PreparedInput ops (rowFormula (top branch) ops (renameRow (rename branch) r))\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedProjectionPreparedProof.lean:75:6: error: Type mismatch: After simplification, term\n  transported\n has type\n  Iff\n    ((rowFormula (top branch) (OriginalMatrixLinearLowerTable.lowerTable (top branch) rs)\n          (renameRow (rename branch) r)).eval\n      (Function.update \u03bd 0 z))\n    (\u2203 a, actualRows f (replay \u03b8 known gates p branch z) [r] [(a, true)])\nbut is expected to have type\n  Iff ((rowFormula (top branch) ops (renameRow (rename branch) r)).eval slots)\n    (\u2203 v, actualRows f output [r] [(v, true)])\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedProjectionPreparedProof.lean:86:18: error(lean.unknownIdentifier): Unknown identifier `a`\n",
+  "failed_original_native_log_sha256": "8f086bc652fa34f1af2856015fed8cad3f1d6b256e736aa34f95794ca4b3bf05",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedProjectionPreparedProof.lean",
+  "failed_proof_sha256": "d9c34a60a42f47e4db7fe349eab2e3157078b14b0c23ed6955380d2d71583f14",
+  "repaired_proof_sha256": "85933ec186de7d78fd8a62bc519070debdaba4a1450888ccb980999e7b1d5a46",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-GREATEST-RESOLVED-PROJECTION-REPAIR-01.patch",
+  "patch_sha256": "3289a03f10c26b659a71401155a1cc52094a2e8904dcda9a8648dd8914554c5b",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-GREATEST-RESOLVED-PROJECTION-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "f069b3aeda256cbf12a13419f16da9b72f8e7b2d6be13a1cace63def9cd8069d",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedProjectionTargets.lean": "0cecd970be3d768ababdf3a2c7227b96ba12364647e3db5b918b1dd6c2f42992",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedProjectionTransportProof.lean": "e41f6872e0d60ef18441108cf6c54ed011215a8f8c8b022e6f932f05404cddfe",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedProjectionProof.lean": "d1a73b3be80b752b93422797857c937b8fcaf1e3b8f634d950aa12ff9a7b3f16",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedProjectionDecreaseProof.lean": "abfc5eaa2502eabb75e2a9ed4b9956c6e99e8e61ecf92ae1bad55259d2d0f957",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedProjectionClosureProof.lean": "6bb029394333cd7f6ee6c10e87e00b53eb4ec40c15ed925dd59b6968e1d2e4ad",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedGreatestResolvedProjectionStatementChecks.lean": "27b5368fc84fbe9e09bd32eeac0fd6c2df68b4d28cad6e496cf6b98593c2dc4a",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-GREATEST-RESOLVED-PROJECTION-SOURCE-MAP.md": "40ee0c46fa4e8630d045516c45ec8e09753632ba09da00d103e5c433299739db"
+  },
+  "static_module_closure_unchanged": {
+    "Targets": {
+      "local": 276,
+      "external": 35,
+      "contains_totient": false
+    },
+    "TransportProof": {
+      "local": 438,
+      "external": 42,
+      "contains_totient": false
+    },
+    "PreparedProof": {
+      "local": 446,
+      "external": 42,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 537,
+      "external": 43,
+      "contains_totient": false
+    },
+    "DecreaseProof": {
+      "local": 281,
+      "external": 35,
+      "contains_totient": false
+    },
+    "ClosureProof": {
+      "local": 544,
+      "external": 43,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 545,
+      "external": 43,
+      "contains_totient": false
+    }
+  },
+  "scope": "Only the exact definitional lowerTable/slots/replay aliases are unfolded in two simpa bridges, and singleton equality explicitly substitutes b, retaining actual original atom a. No target, type, guard, formulas, prerequisites, imports or other proof edits."
+}

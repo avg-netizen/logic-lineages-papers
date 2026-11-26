@@ -1,0 +1,57 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSemanticProof.lean:94:14: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  h ≥ 0
+  g ≥ 0
+  g - h ≥ 1
+  e ≥ 0
+  c ≥ 0
+  b ≥ 0
+  b - c - e ≤ 0
+  a ≥ 1
+where
+ a := ↑(PolicyCollision.rawScalar p f (inputs ν) (AbsoluteProbeDAG.closedInput hg d).term)
+ b := ↑(AbsoluteObserver.factor τ) * ↑(ρ (if right = true then fresh 5 else fresh 4))
+ c := ↑(AbsoluteObserver.factor τ) * ↑(CurrentAbsolute.anchor p f (RawSourceDAG.encode ⟨Γ, ⟨τ, d⟩⟩))
+ e := ↑(ρ (if right = true then fresh 3 else fresh 1))
+ g := ↑(PolicyCollision.rawScalar p f
+    (inputs
+      (ExistentialPlan.extend
+        (ExistentialPlan.extend (fun x => ρ (shift 6 x)) (ρ (if right = true then fresh 3 else fresh 1)))
+        (ρ (if right = true then fresh 2 else fresh 0))))
+    (AbsoluteProbeDAG.closedInput hg d).term)
+ h := ↑(PolicyCollision.rawScalar p f
+    (inputs
+      (ExistentialPlan.extend
+        (ExistentialPlan.extend (fun x => ρ (shift 6 x)) (ρ (if right = true then fresh 3 else fresh 1)))
+        (ρ (if right = true then fresh 2 else fresh 0))))
+    (AbsoluteProbeDAG.originalInput d).term)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSemanticProof.lean:96:14: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  h ≥ 0
+  g ≥ 0
+  e ≥ 0
+  e - g - h ≤ 0
+  c ≥ 0
+  b ≥ 1
+  a ≥ 1
+  a - b ≤ -1
+where
+ a := ↑(PolicyCollision.rawScalar p f (inputs ν) (AbsoluteProbeDAG.originalInput d).term)
+ b := ↑(PolicyCollision.rawScalar p f (inputs ν) (AbsoluteProbeDAG.closedInput hg d).term)
+ c := ↑(PolicyCollision.rawScalar p f
+    (inputs
+      (ExistentialPlan.extend
+        (ExistentialPlan.extend (fun x => ρ (shift 6 x)) (ρ (if right = true then fresh 3 else fresh 1)))
+        (ρ (if right = true then fresh 2 else fresh 0))))
+    (AbsoluteProbeDAG.closedInput hg d).term)
+ e := ↑(ρ (if right = true then fresh 2 else fresh 0))
+ g := ↑(AbsoluteObserver.factor τ) * ↑(CurrentAbsolute.anchor p f (RawSourceDAG.encode ⟨Γ, ⟨τ, d⟩⟩))
+ h := ↑(ρ (if right = true then fresh 3 else fresh 1))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSemanticProof.lean:126:81: error: Application type mismatch: The argument
+  old
+has type
+  Variable Γ Ty.ground → ℕ
+but is expected to have type
+  ℕ
+in the application
+  e ?m.275 old

@@ -1,0 +1,3 @@
+# Literal family parameter support
+
+Full five-alias pass receipt `1795018470848959602-2`, original caps and independently revised seventeen pins. Actual full coordinate enumeration, structural dedup exactness/distinctness, actual output bounds and source inventory coverage. All frozen elaboration failures preserved and independently reviewed (comparator then two namespace qualifications). Ordinary proof failure `1795018462694196000-2` preserved: eliminated q reference replaced by remaining p after cases. No other semantic changes. Reaped/released; independent final pending. No family coherence/lattice/operator/adequacy claim.

@@ -1,0 +1,31 @@
+module
+public import LogicLineages.PermittedControl.FixedEntryClosedScanTargets
+import LogicLineages.PermittedControl.FixedEntryClosedScanEffectiveProof
+import LogicLineages.PermittedControl.FixedEntryClosedScanRawProof
+import LogicLineages.PermittedControl.FixedEntryClosedScanActualProof
+
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_fixedEntryClosedEffective : Targets.FixedEntryClosedEffective :=
+  fixedEntryClosedEffective
+
+theorem fixed_fixedEntryClosedRawExact : Targets.FixedEntryClosedRawExact :=
+  fixedEntryClosedRawExact
+
+theorem fixed_fixedEntryClosedActual : Targets.FixedEntryClosedActual :=
+  fixedEntryClosedActual
+
+theorem fixed_fixedEntryClosedOriginalGraph : Targets.FixedEntryClosedOriginalGraph :=
+  fixedEntryClosedOriginalGraph
+
+theorem fixed_fullFixedEntryClosedScan : Targets.FullFixedEntryClosedScan :=
+  ⟨fixedEntryClosedEffective,fixedEntryClosedRawExact,fixedEntryClosedActual,fixedEntryClosedOriginalGraph⟩
+
+#print axioms fixed_fixedEntryClosedEffective
+#print axioms fixed_fixedEntryClosedRawExact
+#print axioms fixed_fixedEntryClosedActual
+#print axioms fixed_fixedEntryClosedOriginalGraph
+#print axioms fixed_fullFixedEntryClosedScan
+
+end LogicLineages.PermittedControl.StatementChecks

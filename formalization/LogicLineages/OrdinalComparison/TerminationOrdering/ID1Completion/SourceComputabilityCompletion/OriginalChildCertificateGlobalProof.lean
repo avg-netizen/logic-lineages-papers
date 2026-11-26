@@ -1,0 +1,27 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalChildCertificateGlobalTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalObjectApplicationSpineGlobalProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFunctionChildCertificateProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalSameCodeSuffixProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalChildCertificateGlobalProof
+open OriginalChildCertificateGlobal OriginalChildCertificateGlobalTargets
+
+theorem certificateProperties (p : UniformCertificateCompletion.GlobalSourcePackage.Inputs) :
+    CertificateProperties p := by
+  exact ⟨OriginalQuotientSpineProof.actualOriginalFinalQuotientSpineGuard p,
+    OriginalFunctionChildCertificateProof.actualOriginalFinalFunctionChildCertificate p,
+    OriginalSameCodeSuffixProof.actualOriginalSameCodeFinalObjectSuffix p⟩
+
+/-- Append internally proved certificate consumers to the SAME earlier
+selection. Every old calibration/package field is retained verbatim. -/
+theorem actualOriginalChildCertificateGlobalSelection :
+    ActualOriginalChildCertificateGlobalSelection := by
+  intro n arity
+  obtain ⟨p,hp⟩ :=
+    OriginalObjectApplicationSpineGlobalProof.actualOriginalObjectApplicationSpineGlobalSelection n arity
+  exact ⟨p,hp,certificateProperties p⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalChildCertificateGlobalProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalChildCertificateGlobalProof

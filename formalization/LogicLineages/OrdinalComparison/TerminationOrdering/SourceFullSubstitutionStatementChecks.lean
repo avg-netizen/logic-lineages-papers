@@ -1,0 +1,33 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceFullSubstitutionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceFullSubstitutionStatementChecks
+
+theorem fixedWindowComputableSubstitution : SourceFullSubstitutionTargets.ActualWindowComputableSubstitution :=
+  SourceFullSubstitutionProof.actualWindowComputableSubstitution
+
+theorem fixedFullComputableSubstitution : SourceFullSubstitutionTargets.ActualFullComputableSubstitution :=
+  SourceFullSubstitutionProof.actualFullComputableSubstitution
+
+theorem fixedArgumentComputableSubstitution : SourceFullSubstitutionTargets.ActualArgumentComputableSubstitution :=
+  SourceFullSubstitutionProof.actualArgumentComputableSubstitution
+
+theorem fixedAllTermComputable : SourceFullSubstitutionTargets.ActualAllTermComputable :=
+  SourceFullSubstitutionProof.actualAllTermComputable
+
+theorem fixedAllTermLeast : SourceFullSubstitutionTargets.ActualAllTermLeast :=
+  SourceFullSubstitutionProof.actualAllTermLeast
+
+theorem fixedAllTermAccessible : SourceFullSubstitutionTargets.ActualAllTermAccessible :=
+  SourceFullSubstitutionProof.actualAllTermAccessible
+
+#print axioms fixedWindowComputableSubstitution
+#print axioms fixedFullComputableSubstitution
+#print axioms fixedArgumentComputableSubstitution
+#print axioms fixedAllTermComputable
+#print axioms fixedAllTermLeast
+#print axioms fixedAllTermAccessible
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceFullSubstitutionStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceFullSubstitutionStatementChecks

@@ -1,0 +1,30 @@
+--- NativeProof01
++++ NativeProof02
+@@ -12,7 +12,7 @@
+ theorem singletonValue (index previous : Nat) :
+     evaluate singleton (index ::ᵥ previous ::ᵥ nil) = numbersNumber [index] := by
+   change evaluate InternalListCodec.consCode (ofFn ![index,0]) = _
+-  rw [vectorTwo,consEvaluation]
++  rw [InternalEqualityTestEvaluationProof.vectorTwo,consEvaluation]
+   rfl
+ 
+ theorem stepValue (index : Nat) (previous : List Nat) :
+@@ -38,6 +38,7 @@
+   | nil => rfl
+   | cons head tail ih =>
+     rw [Encodable.encode_list_cons,ih]
++    simp only [Encodable.encode_nat]
+     rfl
+ 
+ theorem nativeRange : Targets.NativeRange := by
+--- SyntaxProof01
++++ SyntaxProof02
+@@ -33,7 +33,7 @@
+ theorem resultSubst {beta : Type} (bound out index : OTerm alpha) (ts : alpha → OTerm beta) :
+     (result bound out index).subst (fun a => emb (ts a)) =
+       result (bound.subst ts) (out.subst ts) (index.subst ts) := by
+-  simp only [result,InternalRecursionGraphStepSyntaxProof.conjunctionSubst,impSubst,
++  simp only [result,InternalRecursionClosureSyntaxProof.conjunctionSubst,impSubst,
+     graph2,programSubst,consTermSubst,emptySubst,InternalLessThan.strictLess,
+     InternalQuotientComparisonSyntaxProof.orderSubst,numeral,zSubst,sucSubst]
+ 

@@ -1,0 +1,17 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentBasicProducerProgram.SyntaxProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentBasicProducerProgram.NativeProof
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowPRDefiningEquations GorbowTheoryProof SixSol20261113 List.Vector
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115
+open GorbowSubstitution GorbowFormulaSubstitution PrescribedRuntimeEquality
+theorem exactNative : Targets.NativeLeaf := by
+ intro n kind target inputs
+ unfold program
+ rw [CurrentRecursionBaseProgram.SeedNativeProof.seed _ target n _ _ _
+  (CurrentRecursionBaseProgram.NativeInputs.rootArgumentsEval n target inputs),SyntaxProof.root]
+ rfl
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentBasicProducerProgram.NativeProof
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261116.CurrentBasicProducerProgram.NativeProof

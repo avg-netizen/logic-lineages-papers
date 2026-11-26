@@ -1,0 +1,44 @@
+{
+ "lane": "opusA",
+ "key": "ROUND-APPLICATION-COMBINED",
+ "targets_module": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationCombinedTargets",
+ "proof_modules": [
+  "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationCombinedProof",
+  "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationMeasuredProof"
+ ],
+ "statements": {
+  "ExactCombinedApplicationLeastStep": "NumberedWindowInternalCoverCombinedRestrictedRoundApplicationCombinedProof.exact_CombinedApplicationLeastStep",
+  "ExactCombinedApplicationEdgeStepAt": "NumberedWindowInternalCoverCombinedRestrictedRoundApplicationCombinedProof.exact_CombinedApplicationEdgeStepAt",
+  "ExactCombinedRoundApplicationLeast": "NumberedWindowInternalCoverCombinedRestrictedRoundApplicationCombinedProof.exact_CombinedRoundApplicationLeast",
+  "ExactMeasuredExchangePreservesMeasure": "NumberedWindowInternalCoverCombinedRestrictedRoundApplicationMeasuredProof.exact_MeasuredExchangePreservesMeasure"
+ },
+ "extra_public_lemma": "NumberedWindowInternalCoverCombinedRestrictedRoundApplicationCombinedProof.pairedParentEdges (not a target)",
+ "source_sha256": {
+  "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedRoundApplicationCombinedTargets.lean": "af6fb9e5111f70605bb24500f966015feca0fd2c68958ae70303183de11f97e7",
+  "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedRoundApplicationCombinedProof.lean": "7b0e4936d8a8bf3e3ed31831a1052a537ac7866cc96d61a9828cba38673862fb",
+  "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedRoundApplicationMeasuredProof.lean": "bf8d18c59079b66ad3aa6da24837eea9d8012df9c2e128d4d61d824bf84ab94f"
+ },
+ "passing_receipts": {
+  "targets_only": "1795385191995639041-3151452",
+  "combined_proof": "1795385307331069225-3151911",
+  "measured_proof": "1795385340656034329-3152017"
+ },
+ "print_axioms": [
+  "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationCombinedProof.pairedParentEdges' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationCombinedProof.exact_CombinedApplicationLeastStep' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationCombinedProof.exact_CombinedApplicationEdgeStepAt' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationCombinedProof.exact_CombinedRoundApplicationLeast' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationMeasuredProof.exact_MeasuredExchangePreservesMeasure' depends on axioms: [propext, Classical.choice, Quot.sound]"
+ ],
+ "remaining_premise": "MeasurePreservingEdge (edge4 X W) (selectedMeasure P.R) for the unmeasured combined exchange (not true in general)",
+ "accepted_suppliers": [
+  "#1392 exact_OpenCoverCombinedRestrictedPairedSharedMeasureEdge",
+  "#1338",
+  "#818",
+  "exact_OpenPackedScalarEdge",
+  "conjunctionRecover",
+  "compositionRecover",
+  "#862 closure compareCases"
+ ],
+ "source_map": "verification/local-fable-pair-2026-11-22/opusA/ROUND-APPLICATION-SOURCE-MAP.md"
+}

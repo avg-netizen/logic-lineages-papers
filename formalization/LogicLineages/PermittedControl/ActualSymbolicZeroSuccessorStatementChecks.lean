@@ -1,0 +1,29 @@
+module
+public import LogicLineages.PermittedControl.ActualSymbolicZeroSuccessorTargets
+import LogicLineages.PermittedControl.ActualSymbolicZeroSuccessorMovedProof
+import LogicLineages.PermittedControl.ActualSymbolicZeroSuccessorOutsideProof
+import LogicLineages.PermittedControl.ActualSymbolicZeroSuccessorProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualZeroMovedAndCleanupSyntax : ActualSymbolicZeroSuccessor.ExactMovedAndCleanupSyntax :=
+  ActualSymbolicZeroSuccessor.exactMovedAndCleanupSyntax
+
+theorem fixed_exactActualZeroOutsideAndOriginShiftSyntax :
+    ActualSymbolicZeroSuccessor.ExactOutsideAndOriginShiftSyntax :=
+  ActualSymbolicZeroSuccessor.exactOutsideAndOriginShiftSyntax
+
+theorem fixed_exactActualSymbolicZeroSuccessor : ActualSymbolicZeroSuccessor.ExactActualSymbolicZeroSuccessor :=
+  ActualSymbolicZeroSuccessor.exactActualSymbolicZeroSuccessor
+
+theorem fixed_fullActualSymbolicZeroSuccessor : ActualSymbolicZeroSuccessor.FullActualSymbolicZeroSuccessor :=
+  ⟨fixed_exactActualZeroMovedAndCleanupSyntax,fixed_exactActualZeroOutsideAndOriginShiftSyntax,
+    fixed_exactActualSymbolicZeroSuccessor⟩
+
+#print axioms fixed_exactActualZeroMovedAndCleanupSyntax
+#print axioms fixed_exactActualZeroOutsideAndOriginShiftSyntax
+#print axioms fixed_exactActualSymbolicZeroSuccessor
+#print axioms fixed_fullActualSymbolicZeroSuccessor
+
+end LogicLineages.PermittedControl.StatementChecks

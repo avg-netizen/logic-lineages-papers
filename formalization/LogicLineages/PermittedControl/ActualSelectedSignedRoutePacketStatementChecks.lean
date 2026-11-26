@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.ActualSelectedSignedRoutePacketTargets
+import LogicLineages.PermittedControl.ActualSelectedSignedRoutePacketFoldProof
+import LogicLineages.PermittedControl.ActualSelectedSignedRoutePacketShapeProof
+import LogicLineages.PermittedControl.ActualSelectedSignedRoutePacketProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualSelectedSignedRoutePacket
+
+theorem fixed_exactRouteAppend : ExactRouteAppend := exactRouteAppend
+theorem fixed_exactSelectedRoutePacket : ExactSelectedRoutePacket := exactSelectedRoutePacket
+theorem fixed_exactEmittedRouteShape : ExactEmittedRouteShape := exactEmittedRouteShape
+theorem fixed_exactEmittedRouteFamily : ExactEmittedRouteFamily := exactEmittedRouteFamily
+theorem fixed_fullActualSelectedSignedRoutePacket : FullActualSelectedSignedRoutePacket :=
+  ⟨fixed_exactRouteAppend,fixed_exactSelectedRoutePacket,fixed_exactEmittedRouteShape,fixed_exactEmittedRouteFamily⟩
+
+#print axioms fixed_exactRouteAppend
+#print axioms fixed_exactSelectedRoutePacket
+#print axioms fixed_exactEmittedRouteShape
+#print axioms fixed_exactEmittedRouteFamily
+#print axioms fixed_fullActualSelectedSignedRoutePacket
+
+end LogicLineages.PermittedControl.StatementChecks

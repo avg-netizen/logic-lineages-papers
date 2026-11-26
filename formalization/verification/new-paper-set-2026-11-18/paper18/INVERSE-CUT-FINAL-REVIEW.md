@@ -1,0 +1,5 @@
+# Independent final: InverseCut supporting bundle
+
+Accepted supporting full conjunction, receipt 1795010440883460608-9. Compiler-free reconciliation exactly matches author JSON: 20 modules, full standard-only alias, zero errors; all five frozen pins match. Read complete arithmetic and PR proofs. Actual Phi/H FloorGraph and strict monotonicity derive precise lower index including below-range branch. Residue construction internally proves nontruncated modular arithmetic, interval [a,a+m), and leastness. Concrete least candidate proves both directions of the existential cut using actual monotonicity, at every shared six-parameter input. Invalid moduli/residues are rejected, not assumed away in the total program.
+
+All programs are genuine PR compositions of actual inverse and Phi/H suppliers; no solution search or oracle. Exact code projections/guards correspond to Cut. Preserved first proof failure concerns only modulus rewrite. This does not establish syntactic elimination, closure under arbitrary nonlinear combinations/negation, or general QE. No native execution performed.

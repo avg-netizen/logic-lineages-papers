@@ -1,0 +1,8 @@
+import LogicLineages.PersistentMarking.MarkedFamilyCompleteProof
+namespace LogicLineages.PersistentMarking.MarkedFamilyLatticeProof
+theorem full : MarkedFamilyLatticeTargets.FullFamilyLattice :=
+  ⟨MarkedFamilyOrderProof.orderExact,MarkedFamilyOrderProof.partialOrder,
+    MarkedFamilyAggregateProof.aggregateValid,MarkedFamilyCombineProof.combineSuccess,
+    MarkedFamilyBoundsProof.join,MarkedFamilyBoundsProof.meet,
+    MarkedFamilyCompleteProof.finiteNonempty,MarkedFamilyCompleteProof.complete⟩
+end LogicLineages.PersistentMarking.MarkedFamilyLatticeProof

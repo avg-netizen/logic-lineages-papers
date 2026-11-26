@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.AlphaEncodingProof
+namespace LogicLineages.PersistentMarking.AlphaEncodingChecks
+theorem encodeRespectsAlpha : BridgeTargets.EncodeRespectsAlpha := AlphaEncodingProof.encodeRespectsAlpha
+#print axioms encodeRespectsAlpha
+end LogicLineages.PersistentMarking.AlphaEncodingChecks

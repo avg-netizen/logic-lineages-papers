@@ -1,0 +1,13 @@
+# Full independent route review, native pending
+
+Full endpoint semantic route approved at the pinned current draft, not yet native acceptance. Review extends REVIEW-SPINE-PARTIAL through original count constructor/head/entry inverse/nil cases and final PlainTarget, Window, SignatureQuery, CallerAtFields/CallerQuery, Proof and StatementChecks.
+
+Entry count proofs use actual equal/unequal cons count equations: nil nonzero query is contradictory; equal head has successor count; tail membership lifts via equality split. No count-only length surrogate: every exact encoded annotation/term needle is checked. Pair inverse reconstructs its actual annotation and term. Nil canonical extraction proves entries=0; plain nil acceptance reconstructs original universe nil unchanged. Earlier raw induction/Code guards/strict tail descent remain as reviewed.
+
+PlainTarget derives seed admission from ORIGINAL source-universe erasure using original AdmissionProof, then accepted carrierV2 from actual primary output/membership. It unpacks that target admission with actual pair projections and right(parameter) gamma. No target acceptance premise is added at the endpoint. WindowProof reconstructs actual destination W from root-derived head validity, context validity, actual sourceHeads member from headMove, and exact selectors matching context window; no arbitrary W assumption survives the endpoint.
+
+SignatureQuery obtains actual H graph values and actual pair fields via original total query eliminations, preserving renamed contexts. Source and target signatures are queried independently. CallerAtFields recovers source universe arguments, target plain ordered argument typing and target result/recorded checks; transfers heterogeneous annotations with actual permutation; rebuilds destination universe. Original root type/domain guard is retained from source. Numbered extraTypes/extras/label/recorded metadata remain shared and original extra-argument universe acceptance is retained, not permuted or replaced. No false equal-head-signature shortcut or groundList specialization.
+
+Proof supplies concrete original H/G/M/W, root-derived base Code guards and actual headMove permutation/source membership, calls the actual filtered target typing helper, and proves BOTH ordinary/numbered frozen clauses. The fact that some class/source-window conjuncts become unnecessary after stronger typed filtering does not change the frozen full premises.
+
+Scope is root head-move transport between actual filtered endpoints. Descendant typing/filter extraction for enclosing recursive exchange, global universe closure/accessibility and Paper6 completion remain unpaid. Final native rows, all proof hashes and frozen comparator pins must be checked after any repairs.

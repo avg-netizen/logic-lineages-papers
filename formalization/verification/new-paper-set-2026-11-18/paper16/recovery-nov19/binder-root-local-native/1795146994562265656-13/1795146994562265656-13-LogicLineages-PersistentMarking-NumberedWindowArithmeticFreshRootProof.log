@@ -1,0 +1,67 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticFreshRootProof.lean:45:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  NumberedWindowFieldAlgorithm.pack
+    (List.map encodeTerm xs.toList ++ [NumberedWindowFieldAlgorithm.packNode 1 [encodeTy σ, 0]])
+in the target expression
+  (do
+      let shiftedBase ← some (encodeArgs (shiftArgs 1 0 bs))
+      let shiftedExtras ← some (encodeArgs (shiftArgs 1 0 es))
+      let xs ← NumberedWindowFieldAlgorithm.unpack shiftedExtras
+      some
+          (NumberedWindowFieldAlgorithm.packNode 2
+            [encodeTy σ,
+              NumberedWindowFieldAlgorithm.packNode 5
+                [encodeHead f, encodeTy τ, k, shiftedBase,
+                  NumberedWindowFieldAlgorithm.pack
+                    (xs ++ [NumberedWindowFieldAlgorithm.packNode 1 [encodeTy σ, 0]])]])) =
+    some
+      (NumberedWindowFieldAlgorithm.packNode 2
+        [encodeTy σ,
+          NumberedWindowFieldAlgorithm.packNode 5
+            [encodeHead f, encodeTy τ, k, encodeArgs (shiftArgs 1 0 bs),
+              encodeArgs ((shiftArgs 1 0 es).append (NArgs.cons (NTerm.bound σ 0) NArgs.nil))]])
+
+f : Head
+σ τ : Ty
+k : Nat
+bs es : NArgs
+xs : NArgs := shiftArgs 1 0 es
+appendCode :
+  NumberedWindowFieldAlgorithm.pack
+      (List.map encodeTerm xs.toList ++ [NumberedWindowFieldAlgorithm.packNode 1 [encodeTy σ, 0]]) =
+    encodeArgs (xs.append (NArgs.cons (NTerm.bound σ 0) NArgs.nil))
+⊢ (do
+      let shiftedBase ← some (encodeArgs (shiftArgs 1 0 bs))
+      let shiftedExtras ← some (encodeArgs (shiftArgs 1 0 es))
+      let xs ← NumberedWindowFieldAlgorithm.unpack shiftedExtras
+      some
+          (NumberedWindowFieldAlgorithm.packNode 2
+            [encodeTy σ,
+              NumberedWindowFieldAlgorithm.packNode 5
+                [encodeHead f, encodeTy τ, k, shiftedBase,
+                  NumberedWindowFieldAlgorithm.pack
+                    (xs ++ [NumberedWindowFieldAlgorithm.packNode 1 [encodeTy σ, 0]])]])) =
+    some
+      (NumberedWindowFieldAlgorithm.packNode 2
+        [encodeTy σ,
+          NumberedWindowFieldAlgorithm.packNode 5
+            [encodeHead f, encodeTy τ, k, encodeArgs (shiftArgs 1 0 bs),
+              encodeArgs ((shiftArgs 1 0 es).append (NArgs.cons (NTerm.bound σ 0) NArgs.nil))]])
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticFreshRootProof.lean:43:31: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only [freshBody, ̲shifted,O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵
+  ̲ ̲ ̲ ̲ ̲NumberedWindowArithmeticExchangeAtomsChecks.exact_EncodedArguments
+  ̵  ̵ ̵ ̵(shiftArgs 1 0 es),
+  ̲ ̲ ̲ ̲ ̲Option.pure_def, ̲openNumbered, ̲encodeTerm, ̲exact_ExactTaggedNodeCodec.1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowArithmeticFreshRootProof.lean:43:48: warning: This simp argument is unused:
+  NumberedWindowArithmeticExchangeAtomsChecks.exact_EncodedArguments (shiftArgs 1 0 es)
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵r̵e̵s̵h̵B̵o̵d̵y̵,̵s̵h̵i̵f̵t̵e̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵N̵u̵m̵b̵e̵r̵e̵d̵W̵i̵n̵d̵o̵w̵A̵r̵i̵t̵h̵m̵e̵t̵i̵c̵E̵x̵c̵h̵a̵n̵g̵e̵A̵t̵o̵m̵s̵C̵h̵e̵c̵k̵s̵.̵e̵x̵a̵c̵t̵_̵E̵n̵c̵o̵d̵e̵d̵A̵r̵g̵u̵m̵e̵n̵t̵s̵
+  ̵ ̵ ̵ ̵ ̵(̵s̵h̵i̵f̵t̵A̵r̵g̵s̵ ̵1̵ ̵0̵ ̵e̵s̵)̵,̵O̵p̵t̵i̵o̵n̵.̵p̵u̵r̵e̵_̵d̵e̵f̵,̵o̵p̵e̵n̵N̵u̵m̵b̵e̵r̵e̵d̵,̵e̵n̵c̵o̵d̵e̵T̵e̵r̵m̵,̵e̵x̵a̵c̵t̵_̵E̵x̵a̵c̵t̵T̵a̵g̵g̵e̵d̵N̵o̵d̵e̵C̵o̵d̵e̵c̵.̵1̵]̵[̲f̲r̲e̲s̲h̲B̲o̲d̲y̲,̲ ̲s̲h̲i̲f̲t̲e̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲p̲u̲r̲e̲_̲d̲e̲f̲,̲ ̲o̲p̲e̲n̲N̲u̲m̲b̲e̲r̲e̲d̲,̲ ̲e̲n̲c̲o̲d̲e̲T̲e̲r̲m̲,̲
+  ̲ ̲ ̲ ̲ ̲e̲x̲a̲c̲t̲_̲E̲x̲a̲c̲t̲T̲a̲g̲g̲e̲d̲N̲o̲d̲e̲C̲o̲d̲e̲c̲.̲1̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

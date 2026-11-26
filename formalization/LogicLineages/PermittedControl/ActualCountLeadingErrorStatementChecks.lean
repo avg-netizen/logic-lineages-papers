@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PermittedControl.ActualCountLeadingErrorTargets
+import LogicLineages.PermittedControl.ActualCountLeadingErrorProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualCountLeadingError : ActualCountLeadingError.ExactActualCountLeadingError :=
+  ActualCountLeadingError.exactActualCountLeadingError
+
+#print axioms fixed_actualCountLeadingError
+
+end LogicLineages.PermittedControl.StatementChecks

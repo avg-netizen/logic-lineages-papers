@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.ActualBitFamilyRawRankTargets
+import LogicLineages.PermittedControl.ActualBitFamilyRawRankProof
+import LogicLineages.PermittedControl.ActualBitFamilyRawRankPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualBitFamilyRawRank
+
+theorem fixed_exactRawRankCalibration : ExactRawRankCalibration := exactRawRankCalibration
+theorem fixed_exactRawRankLiteralShape : ExactRawRankLiteralShape := exactRawRankLiteralShape
+theorem fixed_exactRawRankEffectivity : ExactRawRankEffectivity := exactRawRankEffectivity
+theorem fixed_fullActualBitFamilyRawRank : FullActualBitFamilyRawRank :=
+  ⟨fixed_exactRawRankCalibration,fixed_exactRawRankLiteralShape,fixed_exactRawRankEffectivity⟩
+
+#print axioms fixed_exactRawRankCalibration
+#print axioms fixed_exactRawRankLiteralShape
+#print axioms fixed_exactRawRankEffectivity
+#print axioms fixed_fullActualBitFamilyRawRank
+
+end LogicLineages.PermittedControl.StatementChecks

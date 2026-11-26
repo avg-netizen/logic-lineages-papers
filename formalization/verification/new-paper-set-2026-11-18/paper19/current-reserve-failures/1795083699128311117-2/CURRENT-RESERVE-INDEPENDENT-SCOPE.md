@@ -1,0 +1,7 @@
+# Independent reserve comparator review
+
+Read actual realization.tex1–137, the complete116-line Definitions and168-line Targets, source map, and literal current carrier Realization. All41frozen source hashes match. Nine contracts retain actual selected policy p, common-unit f, actual source vectors/scalars, exact tracked selected name and literal ground-closed unary source carriers. Source-origin certificates for initial accounts are separated from structurally carried accounts, and transported label list is exactly identical (not merely equal heads). Account is syntactic with nonnegative finite c; reserve uses Int including potentially negative delta−3. No account constructor assumes the desired partial-denotation theorem.
+
+Annotated accounting takes actual annotation plus literal head-tree structure; unconditional source clauses explicitly derive both from actual generated-source grammar/erasure, assignments, and partial runs. Lower bounds1/4/ground-lambda5 are on source grammar only, not arbitrary scalar accounts. Ground-unit closure preserves list/c/d; actual selected-position ground partial preserves list and nondecreases c/d under either admissible association. No false universal+2claim. No default-policy account imported as arbitrary-policy mathematics, and no opaque source-representation certificate in the final unconditional result.
+
+Approved for target-only preflight. Proof authoring, native exact audits and recursive current-source/artifact review remain unpaid. Printed original manuscript unchanged.

@@ -1,0 +1,17 @@
+{
+  "status": "proposal only, active source unchanged",
+  "only_file": "LogicLineages/ControlSensitivityCurrent/CurrentDecisionCounterSyntaxProof.lean",
+  "old_sha256": "2bef8e516f5afedcdd0c1357a15850f2c6236ed044c2d88028362e76a4e87806",
+  "proposed_sha256": "9cd92eb1813f470a146bc07ffddb20f3d15a2ded145afa4a4bf5bde51f097e52",
+  "why": "dependent place.match_1 equation synthesis is not possible for variable result type; case split on that variable index before kernel rfl, optionally also on intrinsic variable constructors, and use the accurately oriented prefix_table_code .symm",
+  "exact_errors": [
+    "line 32:6 failed to generate equality theorems for match expression ...CurrentDecision.place.match_1 (twice; raw diagnostic archived)",
+    "line 34:4 actual prefix_table_code \u0393 6 has type prefixTable \u2026 = renamingCode \u2026, opposite the target"
+  ],
+  "preserved": "verification/new-paper-set-2026-11-18/paper19/current-decision-failures/1795073702958661713-2",
+  "failure": "build-reports/1795073702958661713-2.json",
+  "unchanged_pin_manifests": {
+    "CURRENT-DECISION-FROZEN-PINS.json": 8,
+    "CURRENT-DECISION-ORIGINAL-TREE-PRESENTATION-FREEZE.json": 23
+  }
+}

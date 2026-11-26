@@ -1,0 +1,11 @@
+module
+public import LogicLineages.StandardControlCurrent.OneInputProof
+
+@[expose] public section
+namespace LogicLineages.StandardControlCurrent.OneInputStatementChecks
+
+theorem fixed_oneInputQuantifiedComparison : OneInputTargets.OneInputQuantifiedComparison :=
+  oneInputQuantifiedComparison
+
+#print axioms fixed_oneInputQuantifiedComparison
+end LogicLineages.StandardControlCurrent.OneInputStatementChecks

@@ -1,0 +1,7 @@
+# Material resource repair review
+
+Approved for one fresh parent-controlled bounded PermutationPrograms ticket under unchanged caps after preserved heartbeat stop 1795016932613685252-5. Read preserved original, exact diff, repair plan and current proof. All seven semantic pins match; insertSlices/rank/children/assemble definitions are byte-identical to the failed edition.
+
+This is a material proof elaboration redesign, not an unchanged retry. Named fully typed SliceInput/State/StepInput and head/cons-element/map/step declarations break the nested anonymous list_map composition into independently checked constants. The recursive primitive proof consumes the named step theorem, reducing local unification/typeclass expression size. This plausibly addresses the recorded elaboration hotspot, but is not a guarantee of passing resource limits.
+
+Other edits are proof/import/API corrections: explicit append calibration rfl, typed addition/multiplication for the same square rank, children unfolding, nil disjunction simplification, Nlinarith import, actual function congruence over the same fold, and destructing the assembly input to expose the match. No algorithm/order/rank/assembly-output substitution, no weakened termination obligation and no cap increase. Literal List.permutations order and exact assembly calibration remain mandatory. Fresh native result/evidence required; this review provides no computational or full-dispatcher acceptance.

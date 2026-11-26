@@ -1,0 +1,3 @@
+# lem:absolute
+
+The frozen endpoint compares the actual supplied typed DAG with its literal ground-zero closing. Its computed anchor C is the canonical scalar of the latter. The two observed DAGs retain the original free names and instantiate the two actual unused binders and applications from the proof. The exact probe equivalence is the equality of the positive expressions p v + x_0 and p C + y_0, with p = 2(level + 1) + 1. The existential graph uses those same raw coordinate witnesses and one fixed-coefficient linear equation. Anchor evaluation uses effective parsing and the actual ordinal evaluator.

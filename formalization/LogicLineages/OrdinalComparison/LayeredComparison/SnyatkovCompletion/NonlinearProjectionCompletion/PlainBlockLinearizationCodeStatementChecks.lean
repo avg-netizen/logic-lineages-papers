@@ -1,0 +1,32 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockLinearizationCodeProgramsProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockLinearizationCodeCalibrationProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockLinearizationCodeProof
+open PlainBlockLinearizationCode
+
+theorem checkedLiteralRowCalibration : PlainBlockLinearizationCodeTargets.LiteralRowCalibration :=
+  literalRowCalibration
+#print axioms checkedLiteralRowCalibration
+
+theorem checkedLiteralGuardCalibration : PlainBlockLinearizationCodeTargets.LiteralGuardCalibration :=
+  literalGuardCalibration
+#print axioms checkedLiteralGuardCalibration
+
+theorem checkedLiteralResidueCalibration : PlainBlockLinearizationCodeTargets.LiteralResidueCalibration :=
+  literalResidueCalibration
+#print axioms checkedLiteralResidueCalibration
+
+theorem checkedLiteralFormulaCalibration : PlainBlockLinearizationCodeTargets.LiteralFormulaCalibration :=
+  literalFormulaCalibration
+#print axioms checkedLiteralFormulaCalibration
+
+theorem checkedActualRowPrograms : PlainBlockLinearizationCodeTargets.ActualRowPrograms :=
+  actualRowPrograms
+#print axioms checkedActualRowPrograms
+
+theorem checkedActualFormulaPrograms : PlainBlockLinearizationCodeTargets.ActualFormulaPrograms :=
+  actualFormulaPrograms
+#print axioms checkedActualFormulaPrograms
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.PlainBlockLinearizationCodeProof

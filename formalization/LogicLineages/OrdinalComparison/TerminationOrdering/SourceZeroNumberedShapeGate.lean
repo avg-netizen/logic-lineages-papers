@@ -1,0 +1,12 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceZeroNumberedShapeProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourceZeroNumberedShapeGate
+theorem step : SourceZeroNumberedComputabilityTargets.ActualZeroNumberedStep := SourceZeroNumberedShapeProof.actualZeroNumberedStep
+theorem primary : SourceZeroNumberedComputabilityTargets.ActualPrimaryNumberedMembers := SourceZeroNumberedShapeProof.actualPrimaryNumberedMembers
+#print axioms step
+#print axioms primary
+#print axioms SourceZeroNumberedShapeProof.primaryTypedCode
+#print axioms SourceZeroNumberedShapeProof.argumentCodesPrimary
+#print axioms SourceZeroNumberedShapeProof.primaryMembers
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourceZeroNumberedShapeGate

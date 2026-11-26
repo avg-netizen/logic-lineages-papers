@@ -1,0 +1,14 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualBitFamilyExistentialStepProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualBitFamilyExistentialStepProof.lean
+@@ -34 +34,4 @@
+-    · obtain ⟨p,member,rfl⟩ := List.mem_map.mp large
++    · have src : ∃ p ∈ compile B family, p.2 = out :=
++        List.mem_map.mp (show out ∈ (compile B family).map Prod.snd from large)
++      obtain ⟨p,member,eq⟩ := src
++      subst out
+@@ -42 +45,4 @@
+-  · obtain ⟨p,member,rfl⟩ := List.mem_map.mp high
++  · have src : ∃ p ∈ compile B family, p.2 = out :=
++      List.mem_map.mp (show out ∈ (compile B family).map Prod.snd from high)
++    obtain ⟨p,member,eq⟩ := src
++    subst out

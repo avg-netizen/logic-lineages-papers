@@ -1,0 +1,11 @@
+--- LogicLineages/PersistentMarking/NumberedWindowPreservationRawProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowPreservationRawProof.lean
+@@ -40,7 +40,7 @@
+     exact ⟨rfl,ordinaryGuard hg (NumberedWindowPreservationReplacementProof.replacement hk hb hp)⟩
+   | fabs =>
+     intro C h
+-    exact ⟨rfl,(NumberedWindowNumberedDomainProof.openNumberedWindow _ _ _ _ _ _ _ _ hk h).2⟩
++    exact ⟨rfl,(NumberedWindowNumberedDomainProof.openNumberedWindow S K C _ _ _ _ _ _ hk h).2⟩
+   | beta =>
+     intro C h
+     have hw := NumberedWindowPreservationSubstitutionProof.beta hk h

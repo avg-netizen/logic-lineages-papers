@@ -1,0 +1,9 @@
+import LogicLineages.PersistentMarking.MarkedBaseTupleRestrictionProof
+namespace LogicLineages.PersistentMarking.MarkedBaseTupleRestrictionChecks
+theorem exact_TupleRestriction : MarkedBaseTupleTargets.TupleRestriction := MarkedBaseTupleRestrictionProof.restriction
+theorem exact_TupleRestrictionMonotone : MarkedBaseTupleTargets.TupleRestrictionMonotone := MarkedBaseTupleRestrictionProof.monotone
+theorem exact_TupleRestrictionAlgebra : MarkedBaseTupleTargets.TupleRestrictionAlgebra := MarkedBaseTupleRestrictionProof.algebra
+#print axioms exact_TupleRestriction
+#print axioms exact_TupleRestrictionMonotone
+#print axioms exact_TupleRestrictionAlgebra
+end LogicLineages.PersistentMarking.MarkedBaseTupleRestrictionChecks

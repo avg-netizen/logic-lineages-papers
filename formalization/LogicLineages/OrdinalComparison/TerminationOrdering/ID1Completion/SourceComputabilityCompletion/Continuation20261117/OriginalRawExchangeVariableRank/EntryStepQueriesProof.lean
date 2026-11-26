@@ -1,0 +1,37 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.EntryStepAtProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.EntryStepQueriesProof
+open Continuation20261116 Continuation20261116.OriginalExchangeBoundsPreservation
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
+open InternalControlGraphSupportProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Continuation20261115.OriginalBoundsRecombination (maximum merge)
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+open Continuation20261115
+def entry : Program 3 := pairOf (.projection 0) (.projection 1)
+def listCode : Program 3 := consOf entry (.projection 2)
+def foldedTail (n : Nat) : Program 3 := .composition (Fold.weighted rankWeight) (fun _ : Fin 1 => .projection 2)
+def headBounds (n : Nat) : Program 3 := .composition rawRankCode (fun _ : Fin 1 => .projection 1)
+def queries (n : Nat) : Fin 4 → Program 3 := ![entry,listCode,foldedTail n,headBounds n]
+
+theorem recover (n : Nat) (typ head tailEntries : OTerm alpha) (ys : Fin 4 → OTerm alpha)
+    (hq : ∀ i, Nonempty (Derivation body Delta (programGraph (queries n i) (ys i) ![typ,head,tailEntries]))) :
+    Nonempty (Derivation body Delta (graph2 InternalPairing.pairing (ys 0) typ head)) ∧
+    Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode (ys 1) (ys 0) tailEntries)) ∧
+    Nonempty (Derivation body Delta (graph1 (Fold.weighted rankWeight) (ys 2) tailEntries)) ∧
+    Nonempty (Derivation body Delta (graph1 rawRankCode (ys 3) head)) := by
+  exact ⟨binaryRecover InternalPairing.pairing (.projection 0) (.projection 1) (ys 0) typ head ![typ,head,tailEntries]
+    (hq 0) (projectionValue 0 ![typ,head,tailEntries]) (projectionValue 1 ![typ,head,tailEntries]),
+    binaryRecover InternalListCodec.consCode entry (.projection 2) (ys 1) (ys 0) tailEntries ![typ,head,tailEntries]
+      (hq 1) (hq 0) (projectionValue 2 ![typ,head,tailEntries]),
+    unaryRecover (Fold.weighted rankWeight) (.projection 2) (ys 2) tailEntries ![typ,head,tailEntries]
+      (hq 2) (projectionValue 2 ![typ,head,tailEntries]),
+    unaryRecover rawRankCode (.projection 1) (ys 3) head ![typ,head,tailEntries]
+      (hq 3) (projectionValue 1 ![typ,head,tailEntries])⟩
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.EntryStepQueriesProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.EntryStepQueriesProof

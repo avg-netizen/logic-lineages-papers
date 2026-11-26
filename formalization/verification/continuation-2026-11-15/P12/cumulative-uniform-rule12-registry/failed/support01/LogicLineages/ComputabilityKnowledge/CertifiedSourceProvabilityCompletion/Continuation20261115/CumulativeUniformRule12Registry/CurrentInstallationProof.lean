@@ -1,0 +1,58 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeUniformRule12Registry.Preflight
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeUniformRule12Registry.CurrentInstallationProof
+open GorbowSyntax GorbowPRProgram GorbowPRRegistry GorbowTheoryProof SixSol20261113
+open LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114
+/-- Structural helper at the ACTUAL root. Every witness comes from its nodes;
+no tag chosen in another root, runtime acceptance or image is assumed. -/
+theorem installed (old arithmetic : Program 1) (x : Program 3) {n : Nat} (p : Program n)
+ (hall : ∀ q ∈ currentItems old arithmetic x, ∃ tag : Nat, (nodes p)[tag]? = some q) :
+ Nonempty (UniformClosedRule12Certificate.Installation p old arithmetic x) := by
+ obtain ⟨caseTag,h_caseTag⟩ := hall (⟨1,UniformClosedCase12.caseCode⟩ : Packed) (by simp [currentItems])
+ obtain ⟨predTag,h_predTag⟩ := hall (⟨1,HistoryCodec.predecessor⟩ : Packed) (by simp [currentItems])
+ obtain ⟨itag,h_itag⟩ := hall (⟨2,UniformClosedInstanceRecognizer.instanceCode⟩ : Packed) (by simp [currentItems])
+ obtain ⟨ftag,h_ftag⟩ := hall (⟨3,UniformClosedSubstitutionRawFold.foldCode⟩ : Packed) (by simp [currentItems])
+ obtain ⟨fval,h_fval⟩ := hall (⟨2,LiteralSyntaxValidator.formulaValidator⟩ : Packed) (by simp [currentItems])
+ obtain ⟨vtag,h_vtag⟩ := hall (⟨1,TwoSol20261113.ReflexivityRecognizer.termValidator⟩ : Packed) (by simp [currentItems])
+ obtain ⟨ptag,h_ptag⟩ := hall (⟨2,HistoryCodec.pair⟩ : Packed) (by simp [currentItems])
+ obtain ⟨ctag,h_ctag⟩ := hall (⟨2,HistoryCodec.cons⟩ : Packed) (by simp [currentItems])
+ obtain ⟨rtag,h_rtag⟩ := hall (⟨1,HistoryDecoder.decoder true⟩ : Packed) (by simp [currentItems])
+ obtain ⟨len,h_len⟩ := hall (⟨1,HistoryLengthOffset.lengthProgram⟩ : Packed) (by simp [currentItems])
+ obtain ⟨htag,h_htag⟩ := hall (⟨1,HistoryLookup.head⟩ : Packed) (by simp [currentItems])
+ obtain ⟨ttag,h_ttag⟩ := hall (⟨1,HistoryLookup.tail⟩ : Packed) (by simp [currentItems])
+ obtain ⟨atag,h_atag⟩ := hall (⟨2,HistoryAppend.append⟩ : Packed) (by simp [currentItems])
+ obtain ⟨etag,h_etag⟩ := hall (⟨3,UniformClosedSubstitutionEmit.emitCode⟩ : Packed) (by simp [currentItems])
+ obtain ⟨stepTag,h_stepTag⟩ := hall (⟨2,LiteralSyntaxStep.stepCode⟩ : Packed) (by simp [currentItems])
+ obtain ⟨stag,h_stag⟩ := hall (⟨2,LiteralSyntaxScan.scanCode⟩ : Packed) (by simp [currentItems])
+ obtain ⟨dtag,h_dtag⟩ := hall (⟨2,HistoryCodec.difference⟩ : Packed) (by simp [currentItems])
+ obtain ⟨qtag,h_qtag⟩ := hall (⟨2,HistoryLookup.lookup⟩ : Packed) (by simp [currentItems])
+ obtain ⟨ltag,h_ltag⟩ := hall (⟨1,HistoryDecoder.decoder false⟩ : Packed) (by simp [currentItems])
+ obtain ⟨constructorTag,h_constructor⟩ := hall (⟨3,UniformClosedRule12.lineConstructor⟩ : Packed) (by simp [currentItems])
+ obtain ⟨lineTag,h_line⟩ := hall (⟨1,LiteralSyntaxValidator.lineValidator⟩ : Packed) (by simp [currentItems])
+ obtain ⟨logicalTag,h_logical⟩ := hall (⟨1,UniformClosedRule12.logicalLeaf old⟩ : Packed) (by simp [currentItems])
+ obtain ⟨dispatcherTag,h_dispatcher⟩ := hall (⟨4,UniformClosedRule12Dispatcher.dispatcher old arithmetic x⟩ : Packed) (by simp [currentItems])
+ obtain ⟨iteratorTag,h_iterator⟩ := hall (⟨4,SixSol20261112.HistoryMachine.iterator (UniformClosedRule12Certificate.kernel old arithmetic x)⟩ : Packed) (by simp [currentItems])
+ obtain ⟨coreTag,h_core⟩ := hall (⟨5,UniformClosedRule12Certificate.checker old arithmetic x⟩ : Packed) (by simp [currentItems])
+ obtain ⟨verifierTag,h_verifier⟩ := hall (⟨5,UniformClosedRule12Certificate.verifier old arithmetic x⟩ : Packed) (by simp [currentItems])
+ let graph : UniformClosedRule12Validity.GraphInstallation p :=
+  { caseTag,predTag,itag,ftag,fval,vtag,ptag,ctag,rtag,len,htag,ttag,atag,h_caseTag,h_predTag,h_itag,h_ftag,h_fval,h_vtag,h_ptag,h_ctag,h_rtag,h_len,h_htag,h_ttag,h_atag }
+ let validity : UniformClosedRule12Validity.Installation p :=
+  { toGraphInstallation := graph, etag,stepTag,stag,dtag,qtag,ltag,h_etag,h_stepTag,h_stag,h_dtag,h_qtag,h_ltag }
+ let dispatch : UniformClosedRule12Dispatcher.Installation p old arithmetic x :=
+  { toInstallation := validity, constructorTag,lineTag,logicalTag,dispatcherTag,h_constructor,h_line,h_logical,h_dispatcher }
+ exact ⟨{ toDispatcherInstallation := dispatch, iteratorTag,coreTag,verifierTag,h_iterator,h_core,h_verifier }⟩
+/-- Actual subtree admission with globally recovered tags; reusable beneath a
+future published root, without any Theory(carrier) inclusion assertion. -/
+theorem installedAt (old arithmetic : Program 1) (x : Program 3) {n : Nat} (p : Program n) (tag : Nat)
+ (ht : (nodes p)[tag]? = some ⟨6,carrier old arithmetic x⟩) :
+ Nonempty (UniformClosedRule12Certificate.Installation p old arithmetic x) :=
+ installed old arithmetic x p
+  (ReflexivityInstalled.BundleProof.bundleInstallation (items old arithmetic x) n p tag ht)
+theorem finiteInstallation (old arithmetic : Program 1) (x : Program 3) :
+ Nonempty (UniformClosedRule12Certificate.Installation (carrier old arithmetic x) old arithmetic x) :=
+ installedAt old arithmetic x (carrier old arithmetic x) 0
+  (GorbowPRRegistry.StatementChecks.rootTag 6 (carrier old arithmetic x))
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeUniformRule12Registry.CurrentInstallationProof
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.CumulativeUniformRule12Registry.CurrentInstallationProof

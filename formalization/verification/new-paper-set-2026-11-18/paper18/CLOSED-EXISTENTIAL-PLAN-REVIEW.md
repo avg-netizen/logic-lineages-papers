@@ -1,0 +1,7 @@
+# Independent plan review: closed existential arithmetic
+
+Read current polynomial-arithmetic.tex343–358 and504 onward. The actual total solver route is appropriate, rather than accepting a compiler-only contract. Retain finite arbitrary signed-shift/head composition, all listed finite-degree heads, integer row coefficients/constants, Boolean combinations and fixed-modulus congruences with shared raw names.
+
+Important source-domain calibration: the source declares the whole query domain to be the conjunction of individual raw lower bounds, chosen to ensure every displayed word is defined. Negation does not negate that domain; zero-coefficient and otherwise inactive syntactic occurrences still count. A generalized endpoint for arbitrary bound tables with explicit actual-occurrence domains AND bounds AND matrix is valid and useful, but the source specialization must establish that domain-adequate bounds make those occurrence guards redundant, exactly recovering the printed bound-only domain. Do not silently advertise the generalized conjunction as that equivalence without paying it. A concrete computable bound-conjunction adapter must preserve original matrix/shared valuation and all occurrence domains.
+
+Require a genuine total numeric decision algorithm and both directions of existential correctness, not just formula generation or semantic existence. No parameter-preserving QE or broader source-language decision claim follows. Concrete definitions/targets/freeze still need pre-scope review before proof acceptance.

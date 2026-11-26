@@ -1,0 +1,22 @@
+{
+  "status": "Arithmetic exact2 corrected syntactic freeze R1, preflight pending; no proof",
+  "sources": {
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/BoundArithmeticTargets.lean": "43c6fc0376b21906bedf48cb7788fa6afc9570c37e8af6ceb6b63b6e4e6a429c"
+  },
+  "main_target": "Targets.InternalClosedScanTransport remains unchanged/pending",
+  "dependency_status": "All previous 11 pins unchanged; SUPPORT06 native pending, this arithmetic target independent of ConsProof",
+  "correspondence": "LiteralSyntaxStep.indexBranch uses choose (difference projection1 context) 0 1; context is original right decoder; difference(token,bound)=bound-token. Formula tokens10/11 produce task1 at successor context.",
+  "proof_plan": [
+    "Derive weakBound(b,a) -> difference(a,b)=0 using internal differenceSaturate and existential gap elimination.",
+    "Combine oldBound<=newBound with newBound<=token via existing internal weakTrans; zeroImpliesBound of new difference then forces old difference zero, contradicting given positive old difference.",
+    "Use internal zeroOrSuccessor at new difference: eliminate zero by contradiction, retain original existential successor witness.",
+    "For successor bounds, eliminate old nonnegative gap and retain same gap after succ congruence and internal successor-addition identity."
+  ],
+  "exclusions": [
+    "No native evaluator/reflection",
+    "No extra AST/registry membership assumption",
+    "No step/scanner or source rule4/HB3 acceptance",
+    "No weakening of original main target"
+  ],
+  "repair": "Sole removal of one extra closing parenthesis at line17; original freeze retained. Intended statement unchanged: weakBound old new -> (difference token old = succ positive -> exists w, difference token new = succ w)."
+}

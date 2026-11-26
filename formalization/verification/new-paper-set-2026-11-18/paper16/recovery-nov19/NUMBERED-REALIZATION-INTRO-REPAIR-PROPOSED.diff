@@ -1,0 +1,26 @@
+--- LogicLineages/PersistentMarking/NumberedWindowRealizationShapeProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowRealizationShapeProof.lean
+@@ -80,7 +80,7 @@
+   | ordinary _ ih => intro amount cutoff; exact .ordinary (ih amount cutoff)
+   | marked hk _ _ ihb ihe => intro amount cutoff; exact .marked hk (ihb amount cutoff) (ihe amount cutoff)
+   | nil => intros; exact .nil
+-  | cons _ _ ih iht => intro amount cutoff; exact .cons (ih amount cutoff) (iht amount cutoff)
++  | cons _ _ ih iht => rename_i amount cutoff; exact .cons (ih amount cutoff) (iht amount cutoff)
+ 
+ theorem shiftArgs {n : Nat} {args : Spine.Args} {As : NArgs} (h : RealizesArgs n args As)
+     (amount cutoff : Nat) :
+
+--- LogicLineages/PersistentMarking/NumberedWindowRealizationSubstitutionProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowRealizationSubstitutionProof.lean
+@@ -58,8 +58,8 @@
+   | lam _ ih => intro depth; exact .lam (ih (depth+1))
+   | ordinary _ ih => intro depth; exact .ordinary (ih depth)
+   | marked hk _ _ ihb ihe => intro depth; exact .marked hk (ihb depth) (ihe depth)
+-  | nil => intro depth; exact .nil
+-  | cons _ _ ih iht => intro depth; exact .cons (ih depth) (iht depth)
++  | nil => intros; exact .nil
++  | cons _ _ ih iht => rename_i depth; exact .cons (ih depth) (iht depth)
+ 
+ theorem args {n : Nat} {values : Spine.Args} {Values : NArgs} (hV : RealizesArgs n values Values)
+     {bs : Spine.Args} {Bs : NArgs} (h : RealizesArgs n bs Bs) (depth : Nat) :
+

@@ -1,0 +1,16 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.BlankReductionTargets
+public import LogicLineages.OrdinalComparison.SourceBlankHaltingReductionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.BlankReduction
+theorem exactNormalization : BlankReductionTargets.ExactNormalization :=
+  LogicLineages.OrdinalComparison.SourceBlankHaltingReduction.Proof.exactNormalization
+theorem validatedTerminalBridge : BlankReductionTargets.ValidatedTerminalBridge :=
+  LogicLineages.OrdinalComparison.SourceBlankHaltingReduction.Proof.validatedTerminalBridge
+theorem effectiveBlankReduction : BlankReductionTargets.EffectiveBlankReduction :=
+  LogicLineages.OrdinalComparison.SourceBlankHaltingReduction.Proof.effectiveBlankReduction
+theorem blankHaltingUndecidable : BlankReductionTargets.BlankHaltingUndecidable :=
+  LogicLineages.OrdinalComparison.SourceBlankHaltingReduction.Proof.blankHaltingUndecidable
+#audit_namespace LogicLineages.ControlSensitivityCurrent.BlankReduction
+end LogicLineages.ControlSensitivityCurrent.BlankReduction

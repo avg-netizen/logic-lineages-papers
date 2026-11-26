@@ -1,0 +1,105 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:47:14: error(lean.unknownIdentifier): Unknown identifier `renameInto`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:46:13: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+raw param : OTerm alpha
+s : Side body Delta raw param
+beta : Type
+j : alpha → beta
+Theta : List (InternalCalculus.Formula beta)
+hj : ∀ p ∈ Delta, Formula.relabel j p ∈ Theta
+⊢ Nonempty (Derivation body Theta (PrimaryUncoveredCount.bounded (Term.relabel j s.index) (Term.relabel j s.seed)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:50:14: error(lean.unknownIdentifier): Unknown identifier `renameInto`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:49:17: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+raw param : OTerm alpha
+s : Side body Delta raw param
+beta : Type
+j : alpha → beta
+Theta : List (InternalCalculus.Formula beta)
+hj : ∀ p ∈ Delta, Formula.relabel j p ∈ Theta
+⊢ Nonempty
+    (Derivation body Theta
+      (graph2 InternalEqualityTest.subtract (Term.relabel j s.depth) (Term.relabel j s.index) (Term.relabel j s.seed)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:53:14: error(lean.unknownIdentifier): Unknown identifier `renameInto`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:52:11: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+raw param : OTerm alpha
+s : Side body Delta raw param
+beta : Type
+j : alpha → beta
+Theta : List (InternalCalculus.Formula beta)
+hj : ∀ p ∈ Delta, Formula.relabel j p ∈ Theta
+⊢ Nonempty
+    (Derivation body Theta
+      (graph3 (ExchangeFrontier.bindList ArgumentEntriesRecursor.dependency) (Term.relabel j s.frontier)
+        (Term.relabel j s.depth) (Term.relabel j s.seed) (Term.relabel j param)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:56:14: error(lean.unknownIdentifier): Unknown identifier `renameInto`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:55:12: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+raw param : OTerm alpha
+s : Side body Delta raw param
+beta : Type
+j : alpha → beta
+Theta : List (InternalCalculus.Formula beta)
+hj : ∀ p ∈ Delta, Formula.relabel j p ∈ Theta
+⊢ Nonempty (Derivation body Theta (graph2 contains (numeral 1) (Term.relabel j s.frontier) (Term.relabel j raw)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:59:14: error(lean.unknownIdentifier): Unknown identifier `renameInto`
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:58:16: error: unsolved goals
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+raw param : OTerm alpha
+s : Side body Delta raw param
+beta : Type
+j : alpha → beta
+Theta : List (InternalCalculus.Formula beta)
+hj : ∀ p ∈ Delta, Formula.relabel j p ∈ Theta
+⊢ Nonempty
+    (Derivation body Theta
+      (graph3 ArgumentEntriesRecursor.graph (Term.relabel j s.table) (suc (Term.relabel j s.index))
+        (Term.relabel j s.seed) (Term.relabel j param)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:68:65: error: Application type mismatch: The argument
+  hg
+has type
+  Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph out index seed param))
+but is expected to have type
+  Nonempty
+    (Derivation body Delta
+      (InternalGraphComposition.graph (OrdinaryArithmetic.graphFormula ArgumentEntriesRecursor.graph) out
+        (Fin.cons index (Fin.cons seed (Fin.cons param Fin.elim0)))))
+in the application
+  graphInputTransport body alpha 3 Delta (OrdinaryArithmetic.graphFormula ArgumentEntriesRecursor.graph) out
+    (Fin.cons index (Fin.cons seed (Fin.cons param Fin.elim0)))
+    (Fin.cons next (Fin.cons seed (Fin.cons param Fin.elim0))) ?m.27 hg
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:66:2: error: Tactic `apply` failed: could not unify the type of `graphInputTransport body alpha 3 Delta
+  (OrdinaryArithmetic.graphFormula ArgumentEntriesRecursor.graph) out
+  (Fin.cons index (Fin.cons seed (Fin.cons param Fin.elim0))) (Fin.cons next (Fin.cons seed (Fin.cons param Fin.elim0)))
+  ?m.27 sorry`
+  Nonempty
+    (Derivation body Delta
+      (InternalGraphComposition.graph (OrdinaryArithmetic.graphFormula ArgumentEntriesRecursor.graph) out
+        (Fin.cons next (Fin.cons seed (Fin.cons param Fin.elim0)))))
+with the goal
+  Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph out next seed param))
+
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+out index next seed param : OTerm alpha
+he : Nonempty (Derivation body Delta (eqn index next))
+hg : Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph out index seed param))
+⊢ Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph out next seed param))
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.CrossRootCacheCoherence.SideProof.childMember: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.CrossRootCacheCoherence.SideProof.Side.mk.injEq: [propext,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:119:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.CrossRootCacheCoherence.SideProof.Side.rename._proof_5: forbidden axiom dependency sorryAx

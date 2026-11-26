@@ -1,0 +1,7 @@
+# Actual unchanged G canonical source facts
+
+Supporting prerequisite for cor:standard-functional-hardness. CanonicalFacts requires actual successful arbitrary-policy assignment for every actual context/type/term, Phi AmbientGrade of every output and actual admitted-valuation semantics. It concludes a positive finite scalar with exact value/card/norm and positive epsilon-bounded every coordinate whose norm is<=scalar. No assignment success, output grade/budget or positivity is an input. UnaryFacts and GroundFacts explicitly calibrate the later actual value wrappers, so getD0 cannot prove a vacuous result.
+
+Use genuine original all-policy OriginalSourceAssignmentBounded, not default-policy source_facts and not the generated/node-count supplier. SourceBoundedVector there uses occurring supports; transport to full substitution must be proved via checked restriction/bridge, then StandardDomainCalibration proves actual Phi values/grades. Finite scalar and positivity are actual original-domain theorems transported, not assumed.
+
+NumericalGrowth separately concludes actual Phi strict monotonicity/self growth and FullAddition.Targets.SourceGrowth (reflexive majorization + all-input adjacent double exponential). This does not derive canonical facts by itself. No SelectedWithThreshold Phi, modular/count-residue claim, generic undecidability hypothesis, default-policy restriction or unchanged-G corollary promotion. Source context unrestricted; later detector/query/hardness assembly remains separate.

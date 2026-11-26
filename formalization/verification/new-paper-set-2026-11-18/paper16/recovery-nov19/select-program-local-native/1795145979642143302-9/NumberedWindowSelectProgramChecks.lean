@@ -1,0 +1,10 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowSelectProgramTargets
+import LogicLineages.PersistentMarking.NumberedWindowSelectProgramProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowSelectProgramChecks
+theorem exact_SelectProgram : NumberedWindowSelectProgramTargets.SelectProgram :=
+  NumberedWindowSelectProgramProof.program
+#print axioms exact_SelectProgram
+end LogicLineages.PersistentMarking.NumberedWindowSelectProgramChecks

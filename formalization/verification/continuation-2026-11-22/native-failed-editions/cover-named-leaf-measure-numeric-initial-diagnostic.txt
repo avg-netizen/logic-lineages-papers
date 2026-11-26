@@ -1,0 +1,72 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedLeafMeasureNumericProof.lean:65:61: error: unsolved goals
+case false
+raw ty i : ℕ
+len : True
+coordinate : [ty, i].getD 1 0 = i
+leaf : run (header false.toNat 2) raw = 1
+parse : unpackNode raw = some (false.toNat, [ty, i])
+⊢ (match bif false then 1 else 0 with
+    | 0 => (1, i)
+    | 1 => (1, i)
+    | 2 =>
+      (((NumberedWindowCoverBoundsAlgorithm.table raw).getD i default).1.1 + 1,
+        ((NumberedWindowCoverBoundsAlgorithm.table raw).getD i default).1.2)
+    | 3 => (1, 0)
+    | 4 =>
+      (((NumberedWindowCoverBoundsAlgorithm.table raw).getD i default).2.1 + 1,
+        ((NumberedWindowCoverBoundsAlgorithm.table raw).getD i default).2.2)
+    | 5 =>
+      (((NumberedWindowCoverBoundsAlgorithm.table raw).getD ([ty, i].getD 3 0) default).2.1 +
+            ((NumberedWindowCoverBoundsAlgorithm.table raw).getD ([ty, i].getD 4 0) default).2.1 +
+          1,
+        max ([ty, i].getD 2 0)
+          (max ((NumberedWindowCoverBoundsAlgorithm.table raw).getD ([ty, i].getD 3 0) default).2.2
+            ((NumberedWindowCoverBoundsAlgorithm.table raw).getD ([ty, i].getD 4 0) default).2.2))
+    | 6 =>
+      (((NumberedWindowCoverBoundsAlgorithm.table raw).getD ([ty, i].getD 2 0) default).1.1 +
+            ((NumberedWindowCoverBoundsAlgorithm.table raw).getD ([ty, i].getD 3 0) default).1.1 +
+          1,
+        max ((NumberedWindowCoverBoundsAlgorithm.table raw).getD ([ty, i].getD 2 0) default).1.2
+          ((NumberedWindowCoverBoundsAlgorithm.table raw).getD ([ty, i].getD 3 0) default).1.2)
+    | x => (0, 0)) =
+    (1, i)
+
+case true
+raw ty i : ℕ
+len : True
+coordinate : [ty, i].getD 1 0 = i
+leaf : run (header true.toNat 2) raw = 1
+parse : unpackNode raw = some (true.toNat, [ty, i])
+⊢ (match bif true then 1 else 0 with
+    | 0 => (1, i)
+    | 1 => (1, i)
+    | 2 =>
+      (((NumberedWindowCoverBoundsAlgorithm.table raw).getD i default).1.1 + 1,
+        ((NumberedWindowCoverBoundsAlgorithm.table raw).getD i default).1.2)
+    | 3 => (1, 0)
+    | 4 =>
+      (((NumberedWindowCoverBoundsAlgorithm.table raw).getD i default).2.1 + 1,
+        ((NumberedWindowCoverBoundsAlgorithm.table raw).getD i default).2.2)
+    | 5 =>
+      (((NumberedWindowCoverBoundsAlgorithm.table raw).getD ([ty, i].getD 3 0) default).2.1 +
+            ((NumberedWindowCoverBoundsAlgorithm.table raw).getD ([ty, i].getD 4 0) default).2.1 +
+          1,
+        max ([ty, i].getD 2 0)
+          (max ((NumberedWindowCoverBoundsAlgorithm.table raw).getD ([ty, i].getD 3 0) default).2.2
+            ((NumberedWindowCoverBoundsAlgorithm.table raw).getD ([ty, i].getD 4 0) default).2.2))
+    | 6 =>
+      (((NumberedWindowCoverBoundsAlgorithm.table raw).getD ([ty, i].getD 2 0) default).1.1 +
+            ((NumberedWindowCoverBoundsAlgorithm.table raw).getD ([ty, i].getD 3 0) default).1.1 +
+          1,
+        max ((NumberedWindowCoverBoundsAlgorithm.table raw).getD ([ty, i].getD 2 0) default).1.2
+          ((NumberedWindowCoverBoundsAlgorithm.table raw).getD ([ty, i].getD 3 0) default).1.2)
+    | x => (0, 0)) =
+    (1, i)
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverNamedLeafMeasureNumericProof.exact_CoverNamedLeafMeasureBase' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverNamedLeafMeasureNumericProof.exact_CoverNamedLeafSharedMeasure' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

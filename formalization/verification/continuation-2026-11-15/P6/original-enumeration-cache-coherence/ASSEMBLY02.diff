@@ -1,0 +1,86 @@
+--- ZeroProof.before
++++ ZeroProof.after
+@@ -18,7 +18,7 @@
+ open TwoSol20261113.CalibratedPrimary.Membership (contains)
+ open Continuation20261114 SideProof
+ variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+-variable {n : Nat} {arity : Fin n → Nat} {V : LogicLineages.ComputabilityKnowledge.GorbowPRProgram.Program 3}
++variable {n : Nat}
+ attribute [local irreducible] programGraph
+ theorem noMemberAt {raw param : OTerm alpha} (s : Side n body Delta raw param)
+     (rank deps child childRank : OTerm alpha)
+--- ValuesProof.before
++++ ValuesProof.after
+@@ -1,6 +1,6 @@
+ module
+ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationCacheCoherence.SideProof
+-public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedCacheDomain.LayerProof
++public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalEnumerationRecursion.NonfailureProof
+ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalMapGraphTransport.StatementChecks
+ public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeStageCoverage.Proof
+ public meta import LogicLineages.Audit
+@@ -16,7 +16,7 @@
+ open SourceComputabilityFormulaSupportProof (numeral)
+ open Continuation20261114 SideProof
+ variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+-variable {n : Nat} {arity : Fin n → Nat} {V : LogicLineages.ComputabilityKnowledge.GorbowPRProgram.Program 3}
++variable {n : Nat}
+ attribute [local irreducible] programGraph
+ theorem atSome {raw param : OTerm alpha} (s1 s2 : Side n body Delta raw param)
+     (old1 old2 deps answers value found : OTerm alpha)
+@@ -46,7 +46,7 @@
+     (hl : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup found s1.table raw)))
+     : Nonempty (Derivation body Delta (graph2 ExchangeMapGraph.lookup found s2.table raw)) := by
+   have hn : Nonempty (Derivation body Delta (eqn value z).not) :=
+-    OriginalDecodedCacheDomain.LayerProof.optionalNonzero _ V raw answers param value hv
++    OriginalEnumerationRecursion.NonfailureProof.internalNonfailure body alpha Delta n raw answers param value hv
+   apply zeroSuccessorCases Delta value _
+   · obtain ⟨hn⟩ := hn
+     exact ⟨Derivation.explosion (Derivation.implicationElimination (InternalBetaTotalityProof.addHyp hn _) (Derivation.hypothesis List.mem_cons_self))⟩
+--- AgreementProof.before
++++ AgreementProof.after
+@@ -16,7 +16,7 @@
+ open OriginalMapGraphTransport.Targets OriginalMapGraphTransport.AgreementSyntaxProof
+ open OriginalMapGraphTransport.AgreementBindingProof
+ variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+-variable {n : Nat} {arity : Fin n → Nat} {V : LogicLineages.ComputabilityKnowledge.GorbowPRProgram.Program 3}
++variable {n : Nat}
+ attribute [local irreducible] programGraph
+ theorem childTransport {raw param : OTerm alpha} (f : Frame n body Delta raw param)
+     (budget deps child found : OTerm alpha)
+--- BridgeProof.before
++++ BridgeProof.after
+@@ -16,7 +16,7 @@
+ open Continuation20261114 SideProof FrameProof
+ open OriginalMapGraphTransport.Targets OriginalMapGraphTransport.AgreementSyntaxProof
+ variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+-variable {n : Nat} {arity : Fin n → Nat} {V : LogicLineages.ComputabilityKnowledge.GorbowPRProgram.Program 3}
++variable {n : Nat}
+ attribute [local irreducible] programGraph
+ theorem fromAgreement {raw param : OTerm alpha} (s1 s2 : Side n body Delta raw param)
+     (old1 old2 deps found : OTerm alpha)
+--- CasesProof.before
++++ CasesProof.after
+@@ -14,7 +14,7 @@
+ open SourceComputabilityFormulaSupportProof (numeral)
+ open Continuation20261114 SideProof FrameProof
+ variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+-variable {n : Nat} {arity : Fin n → Nat} {V : LogicLineages.ComputabilityKnowledge.GorbowPRProgram.Program 3}
++variable {n : Nat}
+ attribute [local irreducible] programGraph
+ def weakenSide {raw param : OTerm alpha} (s : Side n body Delta raw param) (A : Formula alpha) :
+     Side n body (A :: Delta) raw param where
+--- Proof.before
++++ Proof.after
+@@ -14,9 +14,9 @@
+ open Continuation20261114 SideProof
+ open InductionDefinitions InductionSyntaxProof BindingProof
+ variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+-variable {n : Nat} {arity : Fin n → Nat} {V : LogicLineages.ComputabilityKnowledge.GorbowPRProgram.Program 3}
++variable {n : Nat}
+ attribute [local irreducible] programGraph
+-theorem rankStep (n : Nat) (arity : Fin n → Nat) (V : LogicLineages.ComputabilityKnowledge.GorbowPRProgram.Program 3)
++theorem rankStep (n : Nat)
+     (budget : OTerm alpha) (ih : Nonempty (Derivation body Delta (BelowRaw n budget))) :
+     Nonempty (Derivation body Delta (AtRaw n budget)) := by
+   apply atRawIntro n budget

@@ -1,0 +1,80 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralApplicationCertificateProof.lean:39:19: error: Application type mismatch: The argument
+  h.right
+has type
+  NTerm.bottom (NTerm.auxApp σ τ Q A).type = R
+but is expected to have type
+  R = NTerm.bottom τ
+in the application
+  Or.inl h.right
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralApplicationCertificateProof.lean:44:17: warning: This simp argument is unused:
+  rawBit
+
+Hint: Omit it from the simp argument list.
+  simp only [r̵a̵w̵Bi̵t̵,̵B̵ool.and_eq_true, ̲decide_eq_true_eq, ̲termEqTrue] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralApplicationCertificateProof.lean:78:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  NumberedWindowScalarAlgorithm.least (fixed S K) (List.map encodeTy Γ) (encodeTy (σ.arrow τ)) (encodeTerm R)
+in the target expression
+  ((NumberedWindowAddressAlgorithm.addressView (encodeAddress { context := Γ, result := σ.arrow τ, least := i })).bind
+      fun __x =>
+      (NumberedWindowScalarAlgorithm.least (fixed S K) __x.fst __x.2.fst (encodeTerm R)).bind fun canonical =>
+        pure
+          (NumberedWindowFieldAlgorithm.packNode 3 [pack __x.fst, __x.2.fst, canonical],
+            NumberedWindowFieldAlgorithm.packNode 1 [encodeTerm Q, encodeTerm R, encodeWitness child])) =
+    some
+      (encodeAddress { context := Γ, result := σ.arrow τ, least := nextCode },
+        encodeClassEdge { source := Q, target := R, witness := child })
+
+S : Signature
+K Γ : List Ty
+σ τ : Ty
+i nextCode : Nat
+Q R A : NTerm
+child : RawWitness
+h : leastCode S K Γ (σ.arrow τ) R = some nextCode
+⊢ ((NumberedWindowAddressAlgorithm.addressView (encodeAddress { context := Γ, result := σ.arrow τ, least := i })).bind
+      fun __x =>
+      (NumberedWindowScalarAlgorithm.least (fixed S K) __x.fst __x.2.fst (encodeTerm R)).bind fun canonical =>
+        pure
+          (NumberedWindowFieldAlgorithm.packNode 3 [pack __x.fst, __x.2.fst, canonical],
+            NumberedWindowFieldAlgorithm.packNode 1 [encodeTerm Q, encodeTerm R, encodeWitness child])) =
+    some
+      (encodeAddress { context := Γ, result := σ.arrow τ, least := nextCode },
+        encodeClassEdge { source := Q, target := R, witness := child })
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralApplicationCertificateProof.lean:76:29: warning: This simp argument is unused:
+  exact_ExactAddressView
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵u̵n̵c̵t̵i̵o̵n̵W̵i̵t̵n̵e̵s̵s̵,̵e̵x̵a̵c̵t̵_̵E̵x̵a̵c̵t̵A̵d̵d̵r̵e̵s̵s̵V̵i̵e̵w̵,̵r̵o̵u̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵e̵q̵_̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵a̵d̵d̵r̵e̵s̵s̵,̵e̵d̵g̵e̵F̵i̵e̵l̵d̵s̵,̵a̵p̵p̵F̵i̵e̵l̵d̵,̵w̵i̵t̵n̵e̵s̵s̵C̵h̵i̵l̵d̵]̵[̲f̲u̲n̲c̲t̲i̲o̲n̲W̲i̲t̲n̲e̲s̲s̲,̲ ̲r̲o̲u̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲m̲a̲p̲_̲s̲o̲m̲e̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲e̲q̲_̲b̲i̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲a̲d̲d̲r̲e̲s̲s̲,̲ ̲e̲d̲g̲e̲F̲i̲e̲l̲d̲s̲,̲ ̲a̲p̲p̲F̲i̲e̲l̲d̲,̲ ̲w̲i̲t̲n̲e̲s̲s̲C̲h̲i̲l̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralApplicationCertificateProof.lean:76:52: warning: This simp argument is unused:
+  round
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵u̵n̵c̵t̵i̵o̵n̵W̵i̵t̵n̵e̵s̵s̵,̵e̵x̵a̵c̵t̵_̵E̵x̵a̵c̵t̵A̵d̵d̵r̵e̵s̵s̵V̵i̵e̵w̵,̵r̵o̵u̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵e̵q̵_̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵a̵d̵d̵r̵e̵s̵s̵,̵e̵d̵g̵e̵F̵i̵e̵l̵d̵s̵,̵a̵p̵p̵F̵i̵e̵l̵d̵,̵w̵i̵t̵n̵e̵s̵s̵C̵h̵i̵l̵d̵]̵[̲f̲u̲n̲c̲t̲i̲o̲n̲W̲i̲t̲n̲e̲s̲s̲,̲ ̲e̲x̲a̲c̲t̲_̲E̲x̲a̲c̲t̲A̲d̲d̲r̲e̲s̲s̲V̲i̲e̲w̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲m̲a̲p̲_̲s̲o̲m̲e̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲e̲q̲_̲b̲i̲n̲d̲,̲
+  ̲ ̲ ̲ ̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲a̲d̲d̲r̲e̲s̲s̲,̲ ̲e̲d̲g̲e̲F̲i̲e̲l̲d̲s̲,̲ ̲a̲p̲p̲F̲i̲e̲l̲d̲,̲ ̲w̲i̲t̲n̲e̲s̲s̲C̲h̲i̲l̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralApplicationCertificateProof.lean:76:58: warning: This simp argument is unused:
+  Option.map_some
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵u̵n̵c̵t̵i̵o̵n̵W̵i̵t̵n̵e̵s̵s̵,̵e̵x̵a̵c̵t̵_̵E̵x̵a̵c̵t̵A̵d̵d̵r̵e̵s̵s̵V̵i̵e̵w̵,̵r̵o̵u̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵e̵q̵_̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵a̵d̵d̵r̵e̵s̵s̵,̵e̵d̵g̵e̵F̵i̵e̵l̵d̵s̵,̵a̵p̵p̵F̵i̵e̵l̵d̵,̵w̵i̵t̵n̵e̵s̵s̵C̵h̵i̵l̵d̵]̵[̲f̲u̲n̲c̲t̲i̲o̲n̲W̲i̲t̲n̲e̲s̲s̲,̲ ̲e̲x̲a̲c̲t̲_̲E̲x̲a̲c̲t̲A̲d̲d̲r̲e̲s̲s̲V̲i̲e̲w̲,̲ ̲r̲o̲u̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲e̲q̲_̲b̲i̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲a̲d̲d̲r̲e̲s̲s̲,̲ ̲e̲d̲g̲e̲F̲i̲e̲l̲d̲s̲,̲ ̲a̲p̲p̲F̲i̲e̲l̲d̲,̲ ̲w̲i̲t̲n̲e̲s̲s̲C̲h̲i̲l̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralApplicationCertificateProof.lean:77:41: warning: This simp argument is unused:
+  address
+
+Hint: Omit it from the simp argument list.
+  simp only [̵f̵u̵n̵c̵t̵i̵o̵n̵W̵i̵t̵n̵e̵s̵s̵,̵e̵x̵a̵c̵t̵_̵E̵x̵a̵c̵t̵A̵d̵d̵r̵e̵s̵s̵V̵i̵e̵w̵,̵r̵o̵u̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵m̵a̵p̵_̵s̵o̵m̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵e̵q̵_̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵a̵d̵d̵r̵e̵s̵s̵,̵e̵d̵g̵e̵F̵i̵e̵l̵d̵s̵,̵a̵p̵p̵F̵i̵e̵l̵d̵,̵w̵i̵t̵n̵e̵s̵s̵C̵h̵i̵l̵d̵]̵[̲f̲u̲n̲c̲t̲i̲o̲n̲W̲i̲t̲n̲e̲s̲s̲,̲ ̲e̲x̲a̲c̲t̲_̲E̲x̲a̲c̲t̲A̲d̲d̲r̲e̲s̲s̲V̲i̲e̲w̲,̲ ̲r̲o̲u̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲m̲a̲p̲_̲s̲o̲m̲e̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲e̲q̲_̲b̲i̲n̲d̲,̲
+  ̲ ̲ ̲ ̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲e̲d̲g̲e̲F̲i̲e̲l̲d̲s̲,̲ ̲a̲p̲p̲F̲i̲e̲l̲d̲,̲ ̲w̲i̲t̲n̲e̲s̲s̲C̲h̲i̲l̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

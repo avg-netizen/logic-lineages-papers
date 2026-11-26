@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourcePrimitiveMultisetQuotientProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.SourcePrimitiveMultisetQuotientGate
+theorem exactTarget : SourceRankedConstructorSuppliersTargets.ActualPrimitiveMultisetQuotientDescent :=
+  SourcePrimitiveMultisetQuotientProof.actualPrimitiveMultisetQuotientDescent
+#print axioms exactTarget
+#print axioms SourcePrimitiveMultisetQuotientProof.primitiveMarkQuotient
+end LogicLineages.OrdinalComparison.TerminationOrdering.SourcePrimitiveMultisetQuotientGate

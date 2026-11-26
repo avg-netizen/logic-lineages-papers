@@ -1,0 +1,101 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAuxExchangeLiftTypingProof.lean:28:57: error: Type mismatch
+  prior
+has type
+  i < n
+but is expected to have type
+  i < (table (table n).length).length
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAuxExchangeLiftTypingProof.lean:31:17: error(lean.unknownIdentifier): Unknown identifier `n`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAuxExchangeLiftTypingProof.lean:57:155: error: unsolved goals
+w : NumberedWindowAdmissionAlgorithm.Window
+dom cod fn arg : Nat
+q : Nat := auxRaw dom cod fn arg
+fnCell :
+  (NumberedWindowAdmissionAlgorithm.table w (auxRaw dom cod fn arg)).getD fn (false, false) =
+    (NumberedWindowAdmissionAlgorithm.termNext w fn (NumberedWindowAdmissionAlgorithm.table w fn),
+      NumberedWindowAdmissionAlgorithm.argsNext fn (NumberedWindowAdmissionAlgorithm.table w fn))
+argCell :
+  (NumberedWindowAdmissionAlgorithm.table w (auxRaw dom cod fn arg)).getD arg (false, false) =
+    (NumberedWindowAdmissionAlgorithm.termNext w arg (NumberedWindowAdmissionAlgorithm.table w arg),
+      NumberedWindowAdmissionAlgorithm.argsNext arg (NumberedWindowAdmissionAlgorithm.table w arg))
+⊢ (w.fst.contains ([dom, cod, fn, arg].getD 1 0) && w.fst.contains ([dom, cod, fn, arg].getD 0 0) &&
+        ((NumberedWindowAdmissionAlgorithm.table w (auxRaw dom cod fn arg)).getD ([dom, cod, fn, arg].getD 2 0)
+            (false, false)).fst &&
+      ((NumberedWindowAdmissionAlgorithm.table w (auxRaw dom cod fn arg)).getD ([dom, cod, fn, arg].getD 3 0)
+          (false, false)).fst) =
+    (w.fst.contains cod && w.fst.contains dom &&
+        Option.any
+          (fun p =>
+            match p.fst with
+            | 0 => w.fst.contains (p.snd.getD 0 0)
+            | 1 => w.fst.contains (p.snd.getD 0 0)
+            | 3 => w.fst.contains (p.snd.getD 0 0)
+            | 2 =>
+              w.fst.contains
+                    (NumberedWindowAnnotationAlgorithm.arrow (p.snd.getD 0 0)
+                      (NumberedWindowAnnotationAlgorithm.annotations (p.snd.getD 1 0)).fst) &&
+                  w.fst.contains (p.snd.getD 0 0) &&
+                ((NumberedWindowAdmissionAlgorithm.table w fn).getD (p.snd.getD 1 0) (false, false)).fst
+            | 4 =>
+              w.snd.contains (p.snd.getD 0 0) &&
+                ((NumberedWindowAdmissionAlgorithm.table w fn).getD (p.snd.getD 1 0) (false, false)).snd
+            | 5 =>
+              w.snd.contains (p.snd.getD 0 0) && w.fst.contains (p.snd.getD 1 0) &&
+                  ((NumberedWindowAdmissionAlgorithm.table w fn).getD (p.snd.getD 3 0) (false, false)).snd &&
+                ((NumberedWindowAdmissionAlgorithm.table w fn).getD (p.snd.getD 4 0) (false, false)).snd
+            | 6 =>
+              w.fst.contains (p.snd.getD 1 0) && w.fst.contains (p.snd.getD 0 0) &&
+                  ((NumberedWindowAdmissionAlgorithm.table w fn).getD (p.snd.getD 2 0) (false, false)).fst &&
+                ((NumberedWindowAdmissionAlgorithm.table w fn).getD (p.snd.getD 3 0) (false, false)).fst
+            | x => false)
+          (NumberedWindowFieldAlgorithm.unpackNode fn) &&
+      Option.any
+        (fun p =>
+          match p.fst with
+          | 0 => w.fst.contains (p.snd.getD 0 0)
+          | 1 => w.fst.contains (p.snd.getD 0 0)
+          | 3 => w.fst.contains (p.snd.getD 0 0)
+          | 2 =>
+            w.fst.contains
+                  (NumberedWindowAnnotationAlgorithm.arrow (p.snd.getD 0 0)
+                    (NumberedWindowAnnotationAlgorithm.annotations (p.snd.getD 1 0)).fst) &&
+                w.fst.contains (p.snd.getD 0 0) &&
+              ((NumberedWindowAdmissionAlgorithm.table w arg).getD (p.snd.getD 1 0) (false, false)).fst
+          | 4 =>
+            w.snd.contains (p.snd.getD 0 0) &&
+              ((NumberedWindowAdmissionAlgorithm.table w arg).getD (p.snd.getD 1 0) (false, false)).snd
+          | 5 =>
+            w.snd.contains (p.snd.getD 0 0) && w.fst.contains (p.snd.getD 1 0) &&
+                ((NumberedWindowAdmissionAlgorithm.table w arg).getD (p.snd.getD 3 0) (false, false)).snd &&
+              ((NumberedWindowAdmissionAlgorithm.table w arg).getD (p.snd.getD 4 0) (false, false)).snd
+          | 6 =>
+            w.fst.contains (p.snd.getD 1 0) && w.fst.contains (p.snd.getD 0 0) &&
+                ((NumberedWindowAdmissionAlgorithm.table w arg).getD (p.snd.getD 2 0) (false, false)).fst &&
+              ((NumberedWindowAdmissionAlgorithm.table w arg).getD (p.snd.getD 3 0) (false, false)).fst
+          | x => false)
+        (NumberedWindowFieldAlgorithm.unpackNode arg))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAuxExchangeLiftTypingProof.lean:65:4: warning: This simp argument is unused:
+  fnCell
+
+Hint: Omit it from the simp argument list.
+  simp [-List.getD_eq_getElem?_getD, ̲-List.contains_eq_mem,
+  ̲ ̲ ̲ ̲ ̲NumberedWindowAdmissionAlgorithm.termNext, ̲NumberedWindowAdmissionAlgorithm.termParts, ̲q,a̵u̵x̵V̵i̵e̵w̵,̵
+      f̵n̵C̵a̲u̲x̲V̲i̲el̵l̵w̲, ̲argCell, ̲NumberedWindowAdmissionAlgorithm.rawBits]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAuxExchangeLiftTypingProof.lean:65:11: warning: This simp argument is unused:
+  argCell
+
+Hint: Omit it from the simp argument list.
+  simp [-List.getD_eq_getElem?_getD, ̲-List.contains_eq_mem,
+  ̲ ̲ ̲ ̲ ̲NumberedWindowAdmissionAlgorithm.termNext, ̲NumberedWindowAdmissionAlgorithm.termParts, ̲q,a̵u̵x̵V̵i̵e̵w̵,̵
+      f̵n̵C̵e̵l̵l̵,̵ar̵g̵u̲x̲V̲i̲e̲w̲,̲ ̲f̲n̲Cell, ̲NumberedWindowAdmissionAlgorithm.rawBits]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowAuxExchangeLiftTypingProof.lean:92:131: warning: This simp argument is unused:
+  Bool.and_comm
+
+Hint: Omit it from the simp argument list.
+  simp [NumberedWindowLexicalAlgorithm.holds, ̲NumberedWindowLexicalAlgorithm.join, ̲List.all_append,
+  ̲ ̲ ̲ ̲ ̲Bool.and_assoc, ̲Bool.and_left_comm,̵B̵o̵o̵l̵.̵a̵n̵d̵_̵c̵o̵m̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,149 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationPathProgramChecks.lean:91:6: error: Tactic `rfl` failed: The left-hand side
+  none
+is not definitionally equal to the right-hand side
+  do
+    let hops ← some hops
+    if hops.isEmpty = true then none
+      else do
+        let __x ← List.foldl (advance least p.1.1 p.1.2.1 p.1.2.2) (some (p.2.1, [])) hops
+        match __x with
+          | (target, done) => pure (target, pack done.reverse)
+
+case some.isTrue
+least : ℕ → Option ℕ
+hl : Primrec least
+Data : Type := Input × List ℕ
+source : Primrec fun p => p.1.2.1
+config : Primrec fun p => p.1.1.1
+hops✝ : Primrec Prod.snd
+folded :
+  Primrec fun a =>
+    List.foldl
+      (fun s b =>
+        advance least ((a, s, b).1.1.1, (a, s, b).2).1.1 ((a, s, b).1.1.1, (a, s, b).2).1.2.1
+          ((a, s, b).1.1.1, (a, s, b).2).1.2.2 ((a, s, b).1.1.1, (a, s, b).2).2.1 ((a, s, b).1.1.1, (a, s, b).2).2.2)
+      (some (a.1.2.1, [])) a.2
+nonempty : Primrec fun p => p.2.isEmpty
+finish : Primrec fun p => (p.1, pack p.2.reverse)
+committed :
+  Primrec fun a =>
+    if a.2.isEmpty = true then none
+    else
+      Option.map (fun p => (p.1, pack p.2.reverse))
+        (List.foldl
+          (fun s b =>
+            advance least ((a, s, b).1.1.1, (a, s, b).2).1.1 ((a, s, b).1.1.1, (a, s, b).2).1.2.1
+              ((a, s, b).1.1.1, (a, s, b).2).1.2.2 ((a, s, b).1.1.1, (a, s, b).2).2.1
+              ((a, s, b).1.1.1, (a, s, b).2).2.2)
+          (some (a.1.2.1, [])) a.2)
+p : Config × ℕ × ℕ
+hops : List ℕ
+h✝ : hops.isEmpty = true
+⊢ none = do
+    let hops ← some hops
+    if hops.isEmpty = true then none
+      else do
+        let __x ← List.foldl (advance least p.1.1 p.1.2.1 p.1.2.2) (some (p.2.1, [])) hops
+        match __x with
+          | (target, done) => pure (target, pack done.reverse)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationPathProgramChecks.lean:92:83: error: Tactic `rfl` failed: The left-hand side
+  Option.map (fun out => (out.1, pack out.2.reverse)) none
+is not definitionally equal to the right-hand side
+  do
+    let hops ← some hops
+    if hops.isEmpty = true then none
+      else do
+        let __x ← List.foldl (advance least p.1.1 p.1.2.1 p.1.2.2) (some (p.2.1, [])) hops
+        match __x with
+          | (target, done) => pure (target, pack done.reverse)
+
+case some.isFalse.none
+least : ℕ → Option ℕ
+hl : Primrec least
+Data : Type := Input × List ℕ
+source : Primrec fun p => p.1.2.1
+config : Primrec fun p => p.1.1.1
+hops✝ : Primrec Prod.snd
+folded :
+  Primrec fun a =>
+    List.foldl
+      (fun s b =>
+        advance least ((a, s, b).1.1.1, (a, s, b).2).1.1 ((a, s, b).1.1.1, (a, s, b).2).1.2.1
+          ((a, s, b).1.1.1, (a, s, b).2).1.2.2 ((a, s, b).1.1.1, (a, s, b).2).2.1 ((a, s, b).1.1.1, (a, s, b).2).2.2)
+      (some (a.1.2.1, [])) a.2
+nonempty : Primrec fun p => p.2.isEmpty
+finish : Primrec fun p => (p.1, pack p.2.reverse)
+committed :
+  Primrec fun a =>
+    if a.2.isEmpty = true then none
+    else
+      Option.map (fun p => (p.1, pack p.2.reverse))
+        (List.foldl
+          (fun s b =>
+            advance least ((a, s, b).1.1.1, (a, s, b).2).1.1 ((a, s, b).1.1.1, (a, s, b).2).1.2.1
+              ((a, s, b).1.1.1, (a, s, b).2).1.2.2 ((a, s, b).1.1.1, (a, s, b).2).2.1
+              ((a, s, b).1.1.1, (a, s, b).2).2.2)
+          (some (a.1.2.1, [])) a.2)
+p : Config × ℕ × ℕ
+hops : List ℕ
+h✝ : ¬hops.isEmpty = true
+⊢ Option.map (fun out => (out.1, pack out.2.reverse)) none = do
+    let hops ← some hops
+    if hops.isEmpty = true then none
+      else do
+        let __x ← List.foldl (advance least p.1.1 p.1.2.1 p.1.2.2) (some (p.2.1, [])) hops
+        match __x with
+          | (target, done) => pure (target, pack done.reverse)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowClassApplicationPathProgramChecks.lean:92:83: error: Tactic `rfl` failed: The left-hand side
+  Option.map (fun out => (out.1, pack out.2.reverse)) (some val✝)
+is not definitionally equal to the right-hand side
+  do
+    let hops ← some hops
+    if hops.isEmpty = true then none
+      else do
+        let __x ← List.foldl (advance least p.1.1 p.1.2.1 p.1.2.2) (some (p.2.1, [])) hops
+        match __x with
+          | (target, done) => pure (target, pack done.reverse)
+
+case some.isFalse.some
+least : ℕ → Option ℕ
+hl : Primrec least
+Data : Type := Input × List ℕ
+source : Primrec fun p => p.1.2.1
+config : Primrec fun p => p.1.1.1
+hops✝ : Primrec Prod.snd
+folded :
+  Primrec fun a =>
+    List.foldl
+      (fun s b =>
+        advance least ((a, s, b).1.1.1, (a, s, b).2).1.1 ((a, s, b).1.1.1, (a, s, b).2).1.2.1
+          ((a, s, b).1.1.1, (a, s, b).2).1.2.2 ((a, s, b).1.1.1, (a, s, b).2).2.1 ((a, s, b).1.1.1, (a, s, b).2).2.2)
+      (some (a.1.2.1, [])) a.2
+nonempty : Primrec fun p => p.2.isEmpty
+finish : Primrec fun p => (p.1, pack p.2.reverse)
+committed :
+  Primrec fun a =>
+    if a.2.isEmpty = true then none
+    else
+      Option.map (fun p => (p.1, pack p.2.reverse))
+        (List.foldl
+          (fun s b =>
+            advance least ((a, s, b).1.1.1, (a, s, b).2).1.1 ((a, s, b).1.1.1, (a, s, b).2).1.2.1
+              ((a, s, b).1.1.1, (a, s, b).2).1.2.2 ((a, s, b).1.1.1, (a, s, b).2).2.1
+              ((a, s, b).1.1.1, (a, s, b).2).2.2)
+          (some (a.1.2.1, [])) a.2)
+p : Config × ℕ × ℕ
+hops : List ℕ
+h✝ : ¬hops.isEmpty = true
+val✝ : Accumulator
+⊢ Option.map (fun out => (out.1, pack out.2.reverse)) (some val✝) = do
+    let hops ← some hops
+    if hops.isEmpty = true then none
+      else do
+        let __x ← List.foldl (advance least p.1.1 p.1.2.1 p.1.2.2) (some (p.2.1, [])) hops
+        match __x with
+          | (target, done) => pure (target, pack done.reverse)
+'LogicLineages.PersistentMarking.NumberedWindowClassApplicationPathProgramChecks.exact_ClassPathLiftProgram' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

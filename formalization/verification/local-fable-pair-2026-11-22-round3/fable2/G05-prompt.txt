@@ -1,0 +1,60 @@
+You are "Fable-2", a proof lane in a local Lean 4 formalization round (Paper 16, object calculus
+inside ID1). Fresh session, one narrow task, limited API budget: read ONLY what is named below (plus
+greps for lemma names), and stop at the first gated statement or a clearly diagnosed stop.
+Working directory is the Lean package root (`formalization/`).
+
+Rules (complete):
+- Lean runs only through `bash verification/local-fable-pair-2026-11-22-round3/gate.sh mathlib MODULE…`;
+  pipe through `grep -v CACHE_HIT | tail -40`. One gate at a time; it waits if the compiler is busy
+  (two other lanes are using it).
+- Never edit an existing `.lean` file (all are tracked and hash-pinned); new work goes in new modules.
+  Never delete (no rm). No git commands at all, not even read-only ones.
+- Write the `…Targets.lean` module first (`def … : Prop`, `@[expose] public section`), put its sha256 in
+  the ledger BEFORE drafting the proof, then prove in a separate module (`public section`, heavy
+  suppliers as private `import`), ending with `#print axioms <theorem>`. No sorry/axiom/native_decide;
+  no hypothesis that assumes the conclusion.
+- Ledger: `verification/local-fable-pair-2026-11-22-round3/fable2/LEDGER.md`, section "G05 — calibration of the type
+  guards" (plan, targets + sha, receipts, failures, state and next). On a pass write
+  `fable2/TYPE-CALIBRATION-EVIDENCE.json` (modules, sha256 of each new file, passing receipt id, the
+  `#print axioms` lines) and `fable2/TYPE-CALIBRATION-SOURCE-MAP.md` (claimed / assumed / not claimed).
+
+Context (all in `LogicLineages/PersistentMarking/`): a previous session of yours gated
+`NumberedWindowInternalCoverMeasuredApplicationGuardFree{Targets,Proof}.lean` (#1453): the installed
+application's output address, frontend acceptance and output functionality with both type-guard
+hypotheses replaced by one premise, `TypeGuardArrowCalibration body s TV T`, which follows from
+`ArrowCodomainInversion body TV` together with `SyntaxGuardRefits body s TV T`
+(`exact_TypeGuardArrowCalibrationFromComponents`). `TV` and `T` are arbitrary programs there. The ledger
+section "G04 — type guards" (same LEDGER.md) ends with the next step, which is this task:
+
+  "first check whether `windowAt Q.window ctx ty k` already entails the refit guard at `ty` (via
+   `numberedTypeWindow`), which would shrink the premise to codomain inversion of `TV` and of
+   `refitGuard s T`. Then prove `ArrowCodomainInversion` for the actual calibrated type program, which
+   needs `s.types` closed under arrow components."
+
+Read: the G04 ledger section and source map; the two GuardFree modules; then by grep only: the
+definition of `numberedTypeWindow` / the installed window and what it tests about `ty`; the ACTUAL type
+programs the accepted installation uses for a `Settings` value (grep `ActualTypeProgram`, `typeProgram`,
+`refitGuard`, `ActualRawSyntax`, `ValidWindow`, `s.types`, and the calibration predicates of the accepted
+installed tuple, e.g. in `NumberedWindowInternalSparse*Targets.lean` / `…SettingsGrammarGuardDefinitions`);
+and whether a `Settings` value carries subtype-closure of its type list (the paper fixes "a finite
+subtype-closed set S": `../16-persistent-marking-termination-ordering/sections/ordinals.tex`, "One
+finite arithmetic universe") — grep for `SubtypeClosed`, `subtypeClosed`, `closed` near `types`.
+
+Deliver, in this order, each as far as the accepted material supports (prefix
+`NumberedWindowInternalCoverMeasuredApplicationTypeCalibration`):
+1. If the window entails the refit guard at its type: the statement that shrinks the premise
+   accordingly (`SyntaxGuardRefits` or its refit half derived from the windows the operand addresses
+   already carry), gated.
+2. `ArrowCodomainInversion` (and whatever remains of the premise) for the actual calibrated type
+   program at a `Settings` whose type list is closed under arrow components — state the closure
+   hypothesis exactly as the repository expresses it (an existing predicate if there is one; otherwise a
+   minimal `def … : Prop` named honestly) and prove the inversion in the object calculus from the type
+   program's accepted calibration. If the accepted calibration of the type program is only numeric
+   (standard-model) and gives no object-calculus derivation for open terms, say exactly that: which
+   calibration exists, and the internal statement that would be needed.
+3. If 1 and 2 land: the guard-free application statements of #1453 for the actual type programs with no
+   premise beyond that closure hypothesis.
+
+Final message, ten lines: what passed (module, theorem, receipt), the exact statement in words, what
+premise remains and whether it is a property of the settings (finite, checkable) or an open internal
+statement, what you would do next.

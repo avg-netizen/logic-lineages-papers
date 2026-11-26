@@ -1,0 +1,9 @@
+import LogicLineages.PersistentMarking.RefinementSubstitutionProof
+namespace LogicLineages.PersistentMarking.RefinementSubstitutionChecks
+theorem exact_freeSubstitution : RefinementSyntaxTargets.FreeSubstitution := RefinementSubstitutionProof.freeSubstitution
+theorem exact_renaming : RefinementSyntaxTargets.Renaming := RefinementSubstitutionProof.arbitraryRenaming
+theorem exact_opening : RefinementSyntaxTargets.Opening := RefinementFreshOpeningProof.opening
+#print axioms exact_freeSubstitution
+#print axioms exact_renaming
+#print axioms exact_opening
+end LogicLineages.PersistentMarking.RefinementSubstitutionChecks

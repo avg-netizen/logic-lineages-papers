@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.StandardApplicationEraserProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_standardApplicationEraser : StandardApplicationEraser.StandardApplicationEraser :=
+  StandardApplicationEraser.Proof.standardApplicationEraser
+#print axioms fixed_standardApplicationEraser
+end LogicLineages.PermittedControl.StatementChecks

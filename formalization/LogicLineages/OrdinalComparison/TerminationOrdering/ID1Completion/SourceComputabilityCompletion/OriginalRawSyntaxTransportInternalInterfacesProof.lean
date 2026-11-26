@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportInternalParametersProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportInternalInterfaceAtProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportInternalInterfacesProof
+open OriginalRawSyntaxTransportInternalTargets
+open OriginalRawSyntaxTransportInternalParametersProof OriginalRawSyntaxTransportInternalInterfaceAtProof
+
+/-- All three public graph interfaces at arbitrary symbolic parameters. -/
+theorem actualRawSyntaxInternalInterfaces : ActualRawSyntaxInternalInterfaces := by
+  intro positive alpha Delta out d k raw
+  exact ⟨shiftInterfaceAt raw out d k (allRawParameters false raw),
+    eraseInterface raw out d k,rankInterfaceAt raw out d k (allRawParameters true raw)⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportInternalInterfacesProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawSyntaxTransportInternalInterfacesProof

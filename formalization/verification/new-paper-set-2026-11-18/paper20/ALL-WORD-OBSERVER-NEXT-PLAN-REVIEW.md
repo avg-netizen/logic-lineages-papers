@@ -1,0 +1,8 @@
+# Independent review: all-word actual observer staging
+Approved supporting scope drafting. Inductive tuple reconstruction/compatibility/base/output intertwiners are useful but do not alone prove the original-series index theorem; the plan correctly separates that obligation.
+
+For canonical expansion of a regular F2 rational function, pay canonical denominator regularity after each selector through actual denominator divisibility. The odd rule needs actual rational/series compatibility plus presentation independence for the canonical output fraction. The even rule is actual C(X*f): prove regularity and genuine series multiplication by X, then its coefficient shift; the odd-index 2n+1 avoids the exceptional coefficient-zero shift case. Inverse Frobenius fixes F2, not arbitrary splitting-field coefficients. Every series coefficient n is needed, not a finite truncation or polynomial-only case.
+
+The index orientation is correct for execute(i::w,f)=execute(w,step(i,f)): after the first selector, a tail index 2^len(w)*n+offset(w) corresponds to 2^(len(w)+1)*n+bit(i)+2*offset(w) in the original series. Include empty words and prove actual list convention rather than rely on naming. For prefix p followed by continuation w, the total offset is offset(p)+2^len(p)*offset(w); source-prefix/profile assembly must use this or the equivalent concatenation law and state the original input coefficient explicitly.
+
+A unique mathematical initial profile after the source transient is not an effective conversion algorithm. Unrestricted geometric-state equivalence, finite cardinality and any printed effectivity obligations remain separate. No full observer promotion until actual source clauses are all assembled; no compiler run or source edits.

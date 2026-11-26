@@ -1,0 +1,36 @@
+{
+  "status": "proof-only one-line direct-import repair; fresh exact native/axiom gate pending",
+  "failed_receipt": "1795342161089612165-27",
+  "failed_receipt_sha256": "a649c2c9fa2f67f979707848cf51a1df66f57e57b7f37ca247a73674f12a8559",
+  "failed_diagnostic": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/scratch-append-repair01-diagnostic.txt": "3b3e142802c5355a426c87e4f39acf3bd1adac2c1cdbc4c566adadb15e3310a4"
+  },
+  "failed_errors": [
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchAppendOpenChecks.lean:32:5: error: unknown namespace `NumberedWindowInternalSparseFieldParserOpenSyntaxProof`",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchAppendOpenChecks.lean:139:15: error(lean.unknownIdentifier): Unknown identifier `binaryInputsRename`",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchAppendOpenChecks.lean:139:4: error: `simp` made no progress"
+  ],
+  "failed_source_archive": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalScratchAppendOpenChecks-02.lean": "815ae08d1c67816dbf0675da28c9087f2adb5b0c3a25beb6ea2c4ade4a7f7214"
+  },
+  "diagnosis": "Checks uses binaryInputsRename from the parser syntax module. It was already in the transitive closure but was not reexported from the direct proof imports. Add the exact direct import; no proof body, definition, proposition or downstream thin-recut source changes.",
+  "changed_source": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchAppendOpenChecks.lean",
+  "old_failed_source_sha256": "815ae08d1c67816dbf0675da28c9087f2adb5b0c3a25beb6ea2c4ade4a7f7214",
+  "new_source_sha256": "86b188df393d6963f4b3ddeca5aa32e78e9358eb1fe46a144035965fc5c61e4c",
+  "zero_context_patch": {
+    "formalization/verification/continuation-2026-11-22/P16-SCRATCH-APPEND-OPEN-REPAIR-02.patch": "7672175c50a5403ad96f5b8f8cd2a0a869a3318ebc86800ebbb20d4214f48091"
+  },
+  "inverse_exact_failed_bytes_verified": true,
+  "static_local_import_modules_before": 1234,
+  "static_local_import_modules_after": 1234,
+  "static_module_set_unchanged": true,
+  "direct_hydra_linarith_dependencies": [],
+  "unchanged_source_pins": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchAppendOpenTargets.lean": "66263ed26180239eb23fa0a36ccaa0818b1b9a19ed33c8c66456fbd093cc5bee",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchAppendOpenSyntaxProof.lean": "15c885a5a140dc39a92d12884d937a582e5e2de24b5659226e1fce7a8f2787e7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFactoredAuxOwnCoverThinChecks.lean": "a6b5509b030a7fc4a8197c6462bcd074ddaecea9d26cae37f5f82205e9706f1f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserOpenSyntaxProof.lean": "caefb5b40171394067d4bb32d4ae222b3feb52e0215d3dac0f4cc891a9e4691c",
+    "formalization/verification/continuation-2026-11-22/P16-SCRATCH-APPEND-OPEN-REPAIR-01.json": "f0a5f45deaf125fc397aaf08d80aca629f19c0067df78a00fd8b329f20b9a565",
+    "formalization/verification/continuation-2026-11-22/P16-SCRATCH-APPEND-OPEN-SOURCE-MAP.md": "095553e714c444fe92b30f8d745743dbea4eea0031fde48096bcecebd30d17ce"
+  }
+}

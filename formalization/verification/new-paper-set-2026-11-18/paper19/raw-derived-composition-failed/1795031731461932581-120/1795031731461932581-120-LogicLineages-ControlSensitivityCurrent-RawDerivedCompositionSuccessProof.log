@@ -1,0 +1,15 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionSuccessProof.lean:70:49: error: unsolved goals
+context : List ℕ
+raw : List (Code × Code)
+out : Code × Code
+h : aggregate context raw = some out
+hg : aggregateGuard context raw = true
+Γ : List Ty := List.map SyntaxCode.decodeType context
+⊢ List.map (SyntaxCode.typeCode ∘ SyntaxCode.decodeType) context = context
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionSuccessProof.lean:71:25: warning: This simp argument is unused:
+  encode_type
+
+Hint: Omit it from the simp argument list.
+  simp [̵Γ̵,̵L̵i̵s̵t̵.̵m̵a̵p̵_̵m̵a̵p̵,̵e̵n̵c̵o̵d̵e̵_̵t̵y̵p̵e̵]̵[̲Γ̲,̲ ̲L̲i̲s̲t̲.̲m̲a̲p̲_̲m̲a̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

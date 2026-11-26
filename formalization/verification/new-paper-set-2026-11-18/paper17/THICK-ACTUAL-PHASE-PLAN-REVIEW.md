@@ -1,0 +1,13 @@
+# Independent actual thick-phase proposal review
+
+The reset-top formulation is a sound supporting direction but alone misses the source's lower-remainder admission. The proposed refinement sigma=rho+r, with r=0 or a nonzero limit and r<omega^a, addresses that gap if encoded as actual initial relative LIMIT part and accompanied by a genuine entry-or-diverge argument. No full target approval before those exact declarations.
+
+For arbitrary lower suffix, start the same selected control/common input s from actual countInitial(mu+sigma,s) and countInitial(nu+sigma,s). Derive existence of entries into mu+rho and nu+rho using actual affordability and coefficient/suffix norm decomposition. If hit indices differ, at their minimum the relative limits differ, one equals rho and the other is above rho; antitonicity and actual first-entry semantics must establish this. Both are then above rho2. If indices agree, prove both actual states equal countInitial of their respective rho heads at the SAME orbit norm f^[h](s), and reset via iterate composition. This is not an assumed common-top witness.
+
+Repeat the visit-or-diverge step at rho1. Dropping one omega^a unit with a>=2 pays at least three norm units, so the long-entry target+3 condition can follow from current top affordability; prove this from exact norm decomposition, not ordinal monotonicity. The initial lower-suffix admission need only use actual existence, not an unjustified long-entry residue there. The rho-to-rho1 interval is genuinely long since omega^a>=omega^2.
+
+Allow P=0 while deriving leading-exponent preservation of rho/rho1/rho2 from q>=3 and ordinary prefix compatibility. Keep R>=20, individual prefix/exponent norm bounds, exact lcm and explicit large-tail/modulus/control threshold. Their sufficiency remains a proof obligation. Costs of huge q/prefix are paid by the actual starting-head norm and growing budgets; do not replace them by a false claim all dynamic norms are <=R.
+
+The proposed conclusion of an actual common-clock divergence with both relative limit parts >=rho2 genuinely occurs before block exhaustion. The local resonant step must derive positive affordable remainders and that retained lower bound. A source-complete full wrapper also needs explicit reset coverage for arbitrary actual source states with these limit parts/common norm, or a checked normalization lemma giving that equality. No visited-top/equal-hit/count/residue oracle may appear as a premise.
+
+Proceed to exact predicate/target design including the lower-suffix wrapper; otherwise label a reset-top-only result supporting. No equal-gap certificate credit.

@@ -1,0 +1,35 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawRunDefinitions.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawRunDefinitions.lean
+@@ -12,7 +12,7 @@
+ 
+ /-- Initial frame option is successor of the actual original ordered
+ raw tape [q,w,r]. The raw witness is not consumed here. -/
+-def initialize : Program 3 :=
++def initialState : Program 3 :=
+   emitState (constantZero 3) (.composition .succ (fun _ : Fin 1 =>
+     consOf (.projection 0) (consOf (.projection 1) (consOf (.projection 2) (constantZero 3)))))
+ 
+@@ -29,7 +29,7 @@
+ /-- Same w is used at fuel input and left unchanged on the actual
+ initial witness slot. Input tape is exactly [q,w,r]. -/
+ def ownState (root other : Program 3) : Program 3 :=
+-  .composition (iterateState root other) ![.projection 1,initialize]
++  .composition (iterateState root other) ![.projection 1,initialState]
+ 
+ def ownRun (root other : Program 3) : Program 3 :=
+   .composition cellHead (fun _ : Fin 1 => ownState root other)
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawRunTargets.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawRunTargets.lean
+@@ -8,10 +8,10 @@
+ open NumberedWindowRawContextAlgorithm (RawRoot State iterate run)
+ open NumberedWindowInternalSparseRawTick (encodeState)
+ open NumberedWindowInternalSparseRawTickTargets (ActualRoot ActualFallback)
+-open NumberedWindowInternalSparseRawRun (initialize iterateState ownRun)
++open NumberedWindowInternalSparseRawRun (initialState iterateState ownRun)
+ 
+ def ExactOriginalRunInitialization : Prop :=
+-  ∀ q w r, evaluate initialize (q ::ᵥ w ::ᵥ r ::ᵥ nil) =
++  ∀ q w r, evaluate initialState (q ::ᵥ w ::ᵥ r ::ᵥ nil) =
+     encodeState (false,some (q,w,r))
+ 
+ /-- All original states and arbitrary genuine numeric fuel. No meaning

@@ -1,0 +1,27 @@
+{
+  "status": "Frozen next exact1 for independent review/preflight only; StepTransport native passed, final acceptance pending; no new proof",
+  "sources": {
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/ScanStateTransportTargets.lean": "27a30f9c30c21354ef07ba52f071a123045a4b82153755e36b925bb0cad7fb07"
+  },
+  "original_ast_provenance": {
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralSyntaxScan/Definitions.lean": "eee07340552ee74eb12fd4ec41d11a4c9bc845c9cf73e6e34b9bf4f4fa00236c",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralSyntaxScan/StateRecursionProof.lean": "ad3e1554425383d10577b2177de916d0539d37f6ce61639ecac53093eff46a7c",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralSyntaxScan/NoneInductionProof.lean": "02437448edce42a088146186208f602457ad70016c2324980c8250e7c9563477",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/SixSol20261113/LiteralSyntaxScan/ScanBindingProof.lean": "5a523978c85da46e80ab3618b3eee8b7cd6ea0c9f4755c61eed3c042e38d215f"
+  },
+  "choice": "Reuse existing internally proved original state recursion rather than duplicate tick semantics. scanState is right(iterator(length(raw),pair(raw,state))) exactly, not a new evaluator. This directly pays iteration transport by internal raw-bound induction.",
+  "proof_plan": [
+    "Define capture-correct property for raw and three changing coordinates oldTasks,newTasks,oldResult. Bounded invariant universally quantifies raw plus all three coordinates internally, restricting raw by original weakBound.",
+    "Base raw0: original StateRecursionProof.nil identifies final stacks. Internal successor injectivity and equality substitution yield related result and introduce new result.",
+    "Positive raw code: original same-p decoder/head/tail extraction from append, internalListReconstruction, and internalPositiveTailBound provide actual token/tail and strict decrease; no native encoded-list premise.",
+    "Use original StateRecursionProof.cons to rewrite old scan into tail scan after actual old step. Internally zeroOrSuccessor splits old step output; original NoneInductionProof rejects zero because final success is successor.",
+    "Positive old step witness invokes exact StepTransport to obtain new step result with related intermediate stacks. Instantiate internally universally generalized bounded IH at actual tail and both intermediate task stacks and desired old final result.",
+    "Eliminate old/new step and final-result witnesses, use original state recursion to reconstruct new full scan; internal PA induction closes bound, then instantiate raw reflexive bound."
+  ],
+  "binder_conventions": "Final witness newResult is index0, raw/newTasks/oldResult lifted once. Bounded invariant must bind raw,oldTasks,newTasks,oldResult internally; no externally fixed stacks under induction.",
+  "limitations": [
+    "No new tick program or registry node; all tags original same p.",
+    "No scanner success claim until scanCode binding and empty-result relation specialization are paid.",
+    "Full formula validity/source rule4/node-axiom/HB3 remain pending."
+  ]
+}

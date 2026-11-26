@@ -1,0 +1,14 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesArgumentsProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowRawExchangeVerticesArgumentsProof.lean
+@@ -54,7 +54,10 @@
+   have headLt : head < n+1 := Nat.lt_succ_of_le (decoded parsed).2.1
+   have tailLt : tail < n+1 := Nat.lt_succ_of_le (decoded parsed).2.2
+   change argsNext (n+1) (table (n+1)) = _
+-  simp [argsNext,parsed,previous headLt,previous tailLt]
++  rw [argsNext,parsed]
++  change (((table (n+1)).getD head default).1.1+1+((table (n+1)).getD tail default).2.1,
++    max ((table (n+1)).getD head default).1.2 ((table (n+1)).getD tail default).2.2) = _
++  rw [previous headLt,previous tailLt]
+ 
+ private theorem foldSteps (fuel rest : Nat) (acc xs : List Nat)
+     (h : finish (steps fuel (some (rest,acc))) = some xs) :

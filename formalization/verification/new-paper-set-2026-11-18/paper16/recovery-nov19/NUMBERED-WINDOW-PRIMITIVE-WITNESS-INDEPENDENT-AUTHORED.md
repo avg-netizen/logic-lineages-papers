@@ -1,0 +1,3 @@
+# Independent authored review
+
+Fully read all three authored proof leaves, with17 frozen and3 author hashes unchanged. Literal MarkDecrease reflection uses genuine original constructor inversion, strict numbered decrease and same binder body induction. Multiplicity-sensitive List.Perm follows literal lawful BEq, not set equality. Supplied replacement reflects actual kept/removed/added matrix, nonempty removal and original per-added existential dominator. Existential calibration packages/unpacks actual witnesses, without asserting a partition search or internal arithmetic. Exact4 aliases target the frozen independent predicates. Admitted for original core native exact gate only; not accepted until current recursive evidence and standard axioms pass.

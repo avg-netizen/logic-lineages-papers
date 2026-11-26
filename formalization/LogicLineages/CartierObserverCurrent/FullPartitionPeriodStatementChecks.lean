@@ -1,0 +1,8 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullPartitionPeriodProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullPartitionPeriod.StatementChecks
+theorem fixed_completePartitionPeriod : Targets.CompletePartitionPeriod := completePartitionPeriod
+#audit_namespace LogicLineages.CartierObserverCurrent.FullPartitionPeriod.StatementChecks
+end LogicLineages.CartierObserverCurrent.FullPartitionPeriod.StatementChecks

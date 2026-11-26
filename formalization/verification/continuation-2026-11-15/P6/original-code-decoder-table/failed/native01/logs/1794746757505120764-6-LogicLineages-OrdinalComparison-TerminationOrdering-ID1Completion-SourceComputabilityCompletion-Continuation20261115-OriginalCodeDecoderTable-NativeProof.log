@@ -1,0 +1,49 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderTable/NativeProof.lean:68:2: error: `simp` made no progress
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderTable/NativeProof.lean:90:4: error: Tactic `rfl` failed: The left-hand side
+  numbersNumber
+    (List.map
+      (fun value =>
+        (NumberedCodeParserTable.codeNext n
+            (List.map ((fun v => v == 1) ∘ Bool.toNat) (NumberedCodeParserTable.codeTable n bound fuel)) value).toNat)
+      (List.range (bound + 1)))
+is not definitionally equal to the right-hand side
+  numbersNumber
+    (List.map (Bool.toNat ∘ NumberedCodeParserTable.codeNext n (NumberedCodeParserTable.codeTable n bound fuel))
+      (List.range (bound + 1)))
+
+case succ
+n bound fuel : ℕ
+ih :
+  evaluate (tableProgram n) (ofFn ![fuel, bound]) =
+    numbersNumber (List.map Bool.toNat (NumberedCodeParserTable.codeTable n bound fuel))
+⊢ numbersNumber
+      (List.map
+        (fun value =>
+          (NumberedCodeParserTable.codeNext n
+              (List.map ((fun v => v == 1) ∘ Bool.toNat) (NumberedCodeParserTable.codeTable n bound fuel)) value).toNat)
+        (List.range (bound + 1))) =
+    numbersNumber
+      (List.map (Bool.toNat ∘ NumberedCodeParserTable.codeNext n (NumberedCodeParserTable.codeTable n bound fuel))
+        (List.range (bound + 1)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderTable/NativeProof.lean:89:32: warning: This simp argument is unused:
+  boolRoundTrip
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵p̵t̵i̵o̵n̵.̵g̵e̵t̵D̵_̵s̵o̵m̵e̵,̵b̵o̵o̵l̵R̵o̵u̵n̵d̵T̵r̵i̵p̵,̵N̵u̵m̵b̵e̵r̵e̵d̵C̵o̵d̵e̵P̵a̵r̵s̵e̵r̵T̵a̵b̵l̵e̵.̵c̵o̵d̵e̵T̵a̵b̵l̵e̵,̵L̵i̵s̵t̵.̵m̵a̵p̵_̵m̵a̵p̵]̵[̲O̲p̲t̲i̲o̲n̲.̲g̲e̲t̲D̲_̲s̲o̲m̲e̲,̲ ̲N̲u̲m̲b̲e̲r̲e̲d̲C̲o̲d̲e̲P̲a̲r̲s̲e̲r̲T̲a̲b̲l̲e̲.̲c̲o̲d̲e̲T̲a̲b̲l̲e̲,̲ ̲L̲i̲s̲t̲.̲m̲a̲p̲_̲m̲a̲p̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderTable.NativeProof.seedValue: [propext,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderTable.NativeProof.singletonValue: [propext,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderTable.NativeProof.zerosValue: [propext,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderTable.NativeProof.rowSuccessor: [propext,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderTable.NativeProof.rowZero: [propext,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderTable.NativeProof.rowEvaluation: [propext,
+ Classical.choice,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderTable.NativeProof.boolRoundTrip: []
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalCodeDecoderTable/NativeProof.lean:92:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderTable.NativeProof.nativeRows: forbidden axiom dependency sorryAx

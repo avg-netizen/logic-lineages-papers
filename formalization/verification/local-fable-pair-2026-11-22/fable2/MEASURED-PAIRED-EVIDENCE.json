@@ -1,0 +1,55 @@
+{
+  "lane": "fable2",
+  "turn": "F01",
+  "date": "2026-11-22",
+  "gate": "bash verification/local-fable-pair-2026-11-22/gate.sh mathlib MODULE...",
+  "failed_gates": 0,
+  "statements": [
+    {
+      "target": "ExactOpenCoverCombinedRestrictedMeasuredPairedEdge",
+      "theorem": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredPairedProof.exact_OpenCoverCombinedRestrictedMeasuredPairedEdge",
+      "modules": {
+        "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredPairedTargets": {
+          "file": "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedMeasuredPairedTargets.lean",
+          "sha256": "2a7b3944c8d0e2341a0844157f98425c37ad8054978010cd498d8861ffe05b71"
+        },
+        "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredPairedProof": {
+          "file": "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedMeasuredPairedProof.lean",
+          "sha256": "8382ea11c02d4aec49bb8432833c734a4c9c4e188b15ddc5aa0847234673951d"
+        }
+      },
+      "gate_result": "COMPILE_PASS (both modules), first attempt",
+      "passing_receipt": "build-reports/1795387172641849865-3159773.json",
+      "print_axioms": [
+        "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredPairedProof.measuredParentEdge' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredPairedProof.measuredUpgrade' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredPairedProof.measuredEdgeOfFunctionMeasure' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredPairedProof.exact_OpenCoverCombinedRestrictedMeasuredPairedEdge' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "target": "ExactOpenCoverCombinedRestrictedMeasuredPairedCommonLeast",
+      "theorem": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredPairedCommonLeastProof.exact_OpenCoverCombinedRestrictedMeasuredPairedCommonLeast",
+      "modules": {
+        "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredPairedCommonLeastTargets": {
+          "file": "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedMeasuredPairedCommonLeastTargets.lean",
+          "sha256": "afd6764568a674c792e84a0539f403896d89aa0573290f0bb370de640f7e1426"
+        },
+        "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredPairedCommonLeastProof": {
+          "file": "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedMeasuredPairedCommonLeastProof.lean",
+          "sha256": "b3273261a2d97f5040e97ad1a77e08e75fd9030394c4b27ab966ecff6e633295"
+        }
+      },
+      "gate_result": "COMPILE_PASS (both modules), first attempt",
+      "passing_receipt": "build-reports/1795387310118722126-3160624.json",
+      "print_axioms": [
+        "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredPairedCommonLeastProof.measuredCommonLeastOfFunctionMeasure' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedMeasuredPairedCommonLeastProof.exact_OpenCoverCombinedRestrictedMeasuredPairedCommonLeast' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    }
+  ],
+  "sorry_axiom_native_decide": "none written in any of the four files; the gate's #print axioms lines above list only propext, Classical.choice, Quot.sound",
+  "existing_lean_files_edited": "none",
+  "other_files_touched": "fable2/LEDGER.md (F01 section appended), this file, fable2/MEASURED-PAIRED-SOURCE-MAP.md",
+  "not_attempted": "the premise-free round theorem"
+}

@@ -1,0 +1,9 @@
+# All-policy/control addition, one, shared binary DAG
+
+Three source-faithful mathematical contracts under every structural parsing policy p and every strictly increasing inflationary control G. StrictMono and n<=G n are a weaker growth domain than source's permitted controls, not a fixed-Phi substitution. No policy computability premise is needed for these finite uniquely shaped gadgets. Full source promotion is separate until domain/algorithm clauses are independently assessed.
+
+Fresh Equation p G uses the actual AdmissibleAssignment.assignment p and actual max-recursive denoteWith G for both literal source terms. AddWitness and AddFormula reuse exactly the typed fresh-ground-binder eraser and shared extension. ExactAddition retains the unique witness and full iff. OneFormula is the actual S v=I0 equation plus actual shared Plus(u,u,v), at the SAME p/G, and ExactOne says precisely natural u=1 (raw2).
+
+Run p G uses the unchanged actual BinaryDAG syntax and generator, substituting only the actual policy-generic AddValues equations. Doubling refers to one previous witness x twice; doubleOne uses two addition gates. ExactBinaryDAG retains all k including zero and explicit <=2(log2 k+1) gate bound, with run iff y=k. Zero/one base values are supplied as the printed clause stipulates, with source one separately paid. This is not an arbitrary numeric oracle relation: each addition expands to the actual source equations proved above.
+
+Fresh proof must use exact PolicyGadget assignment bridge and generic collapse injectivity, not Phi-only one. Generator computability/encoded realization and permitted-control domain discharge will be assessed explicitly before full numbered assembly; no full Boolean compiler, typed-source coRE or hardness credit here. Eight frozen pins; independent pre-scope/native/evidence/final required.

@@ -1,0 +1,15 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSingletonTypeWindowNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSingletonTypeWindowNumericProof.lean
+@@ -135,2 +135,2 @@
+-    change (if (if run (singletonArgumentTypeAt s) raw = 1 then 1 else 0) = 0
+-      then 0 else evaluate B (ctx ::ᵥ raw ::ᵥ nil)) = _
++    change (if (if evaluate (onRaw (singletonArgumentTypeAt s)) (ctx ::ᵥ raw ::ᵥ nil) = 1
++      then 1 else 0) = 0 then 0 else evaluate B (ctx ::ᵥ raw ::ᵥ nil)) = _
+@@ -145 +145,6 @@
+-      rw [finite,if_pos (show (1 : Nat) = 1 from rfl),if_neg (by decide)]
++      have tested : evaluate (onRaw (singletonArgumentTypeAt s)) (ctx ::ᵥ raw ::ᵥ nil) = 1 := finite
++      have nonzero : (if evaluate (onRaw (singletonArgumentTypeAt s)) (ctx ::ᵥ raw ::ᵥ nil) = 1
++          then (1 : Nat) else 0) ≠ 0 := by
++        rw [if_pos tested]
++        exact Nat.one_ne_zero
++      exact if_neg nonzero

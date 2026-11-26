@@ -1,0 +1,23 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/LongFieldDistinctBoundProof.lean:47:2: error: 'change' tactic failed, pattern
+  peelTail B lq mq m ≤ x
+is not definitionally equal to target
+  longFieldDistinctBound B (ValueField.iterate m) (ValueField.entry b lq mq) ≤ x
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/LongFieldDistinctBoundProof.lean:65:2: error: 'change' tactic failed, pattern
+  max (peelTail B lp mp 0) (peelTail B lp mp (n - a)) ≤ x
+is not definitionally equal to target
+  longFieldDistinctBound B (ValueField.entry a lp mp) (ValueField.iterate n) ≤ x
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261121/formalization/LogicLineages/PermittedControl/LongFieldDistinctBoundProof.lean:118:4: error: Type mismatch
+  hbound
+has type
+  longFieldDistinctBound B (ValueField.entry a lp mp) (ValueField.entry b lq mq) ≤ x
+but is expected to have type
+  max (max (peelTail B lp mp (b - a)) (peelTail B lq mq (a - b)))
+      (max
+        (inverseTableTail lp (mp + omegaMultiple (b - a)) (mq + omegaMultiple (a - b))
+          (lq - (mq + omegaMultiple (a - b))) B)
+        (gapInputTail (↑lq).repr (↑(mq + omegaMultiple (a - b))).repr (↑lp).repr (↑(mp + omegaMultiple (b - a))).repr
+          0)) ≤
+    x
+
+Note: The following definitions were not unfolded because their definition is not exposed:
+  peelTail ↦ 80

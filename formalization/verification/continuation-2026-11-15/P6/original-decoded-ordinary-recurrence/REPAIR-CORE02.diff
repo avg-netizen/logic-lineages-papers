@@ -1,0 +1,12 @@
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedOrdinaryRecurrence/CoreProof.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedOrdinaryRecurrence/CoreProof.lean
+@@ -33,7 +33,8 @@
+     funext i
+     fin_cases i <;> rfl
+   simp only [relation,rhs,conjunctionRename,InternalBetaExtensionSyntaxProof.impRename,StructuralExchangeFields.InternalProof.orRename,
+-    graph2Rename,InternalControlGraphSupportProof.programRename,GuardedSourceSyntaxProof.numeralRename,hv]
++    graph2Rename,InternalControlGraphSupportProof.programRename,GuardedSourceSyntaxProof.numeralRename,hv,
++    graph2,InternalRecursionGraphStepSyntaxProof.consTermRename,InternalControlGraphSupportProof.emptyRename]
+ 
+ theorem atWitnesses (source target f g base dest node child param symbols types ef eg rf rg value deps vals : OTerm alpha)
+     (hs : Nonempty (Derivation body Delta (graph2 OriginalRawSyntaxTransport.ordinaryConstructor source f base)))

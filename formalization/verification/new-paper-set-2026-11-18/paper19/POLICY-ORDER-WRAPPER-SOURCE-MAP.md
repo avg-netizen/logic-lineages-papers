@@ -1,0 +1,9 @@
+# Actual generic strict/weak order wrapper supplier
+
+Source: current19 compiler.tex comparison construction; supporting source comparator for subsequent actual Program aggregate strict/weak assembly. Four endpoints retain arbitrary policy, full current SourceGrowth f, arbitrary actual ground argument sources, and the same positive-natural component valuation throughout. No selected17 control restriction or default/Phi substitution.
+
+Identity and Constant require actual application of I=lambda z.z and K=lambda z.zero to any actual ground source, with canonical raw values g_f(raw+3) and g_f(raw+5). These are not licensed by atomic gadget correctness alone: prove the actual argument assignment and application coefficient/shape computation for arbitrary argument vectors, then scalar evaluation using true generic coefficient-one collapse. Magnify uses literal composite eraser and raw zero=1, giving g_f(3raw+3). g_f(n)=f(n+2)+1 is literal current PolicyCollision.g.
+
+OrderConversion states upper(a)<=lower(b) iff raw(a)<raw(b), at each SAME valuation, with upper/lower the actual GroundEquivalence source terms, not numerical surrogate wrappers. Derive strictness and needed integer gap from actual SourceGrowth; no caller-supplied separation. Values are actual total rawScalar, fallback excluded by checked GenericScalar. The domain is positive natural values at each component, not arbitrary functional ordinal valuations. All-ground compiled contexts later specialize this domain.
+
+After this packet, still pay literal primitive-DAG upperInput/lowerInput reconstruction and added table counts, actual all-policy aggregate strictPair orientation and empty equality, and universal Program unsatisfiability via the real shared forest embedding. This packet alone supplies no comparison compiler, encoded algorithm, bit-size bound, or numbered theorem. Original source names remain unchanged within wrappers; no substitution with independently selected inputs.

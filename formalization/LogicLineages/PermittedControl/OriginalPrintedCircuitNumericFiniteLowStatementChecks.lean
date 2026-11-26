@@ -1,0 +1,32 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedCircuitNumericFiniteLowTargets
+import LogicLineages.PermittedControl.OriginalPrintedCircuitNumericFiniteLowUnifiedProof
+import LogicLineages.PermittedControl.OriginalPrintedCircuitNumericFiniteLowLayoutProof
+import LogicLineages.PermittedControl.OriginalPrintedCircuitNumericFiniteLowProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedUnifiedNumericTerminal :
+    OriginalPrintedCircuitNumericFiniteLow.ExactUnifiedNumericTerminal :=
+  OriginalPrintedCircuitNumericFiniteLow.exactUnifiedNumericTerminal
+
+theorem fixed_exactOriginalPrintedNumericFiniteLowLayout :
+    OriginalPrintedCircuitNumericFiniteLow.ExactNumericFiniteLowLayout :=
+  OriginalPrintedCircuitNumericFiniteLow.exactNumericFiniteLowLayout
+
+theorem fixed_exactOriginalPrintedNumericFiniteLow :
+    OriginalPrintedCircuitNumericFiniteLow.ExactNumericPrintedFiniteLow :=
+  OriginalPrintedCircuitNumericFiniteLow.exactNumericPrintedFiniteLow
+
+theorem fixed_fullOriginalPrintedCircuitNumericFiniteLow :
+    OriginalPrintedCircuitNumericFiniteLow.FullOriginalPrintedCircuitNumericFiniteLow :=
+  ⟨fixed_exactOriginalPrintedUnifiedNumericTerminal,fixed_exactOriginalPrintedNumericFiniteLowLayout,
+    fixed_exactOriginalPrintedNumericFiniteLow⟩
+
+#print axioms fixed_exactOriginalPrintedUnifiedNumericTerminal
+#print axioms fixed_exactOriginalPrintedNumericFiniteLowLayout
+#print axioms fixed_exactOriginalPrintedNumericFiniteLow
+#print axioms fixed_fullOriginalPrintedCircuitNumericFiniteLow
+
+end LogicLineages.PermittedControl.StatementChecks

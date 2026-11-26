@@ -1,0 +1,38 @@
+{
+  "status": "Proof-only direct import of already compiled flatRename supplier; native gate pending",
+  "failed_receipt": "1795345560652044507-8",
+  "failed_receipt_sha256": "2aab6ab5c9dc5e31922f4ad847a0f25196029d706e4f9bd4a893b7e53c8a4d13",
+  "immutable_previous_commit": "795ced2ee61902e8f2a66b1ec88776296249358e",
+  "failed_combined_log_sha256": "b307093a951149b1fef79dae0d2905bd597c3c90975e5ffcfdc8847e433e4784",
+  "failed_diagnostic": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-argument-cells-constructor-initial-diagnostic.txt": "372d3076d514fd3d51be23947dd5051abb9e997a560820079c0bb10c90dff9f4"
+  },
+  "failed_errors": [
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsConstructorProof.lean:31:5: error: unknown namespace `NumberedWindowInternalCoverCartesianFoldSyntaxProof`",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsConstructorProof.lean:61:6: error(lean.unknownIdentifier): Unknown identifier `flatRename`",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsConstructorProof.lean:55:68: error: unsolved goals",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsConstructorProof.lean:80:6: error(lean.unknownIdentifier): Unknown identifier `flatRename`",
+    "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsConstructorProof.lean:74:70: error: unsolved goals"
+  ],
+  "diagnosis": "Directly import the module exporting flatRename. It was already in the dependency closure privately through CoverCartesianFoldThinOpenProof but not visible to the ConstructorProof. Both unsolved goals follow absent flatRename. No proof-body, target, program, or downstream changes.",
+  "changed_source": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsConstructorProof.lean",
+  "old_failed_source_sha256": "737279c01735cdf11f7773c3c6d4aabb083b9c1a17d2d63e655067c8947bd706",
+  "new_source_sha256": "6e592b5ae71c00355d51c3c8da6cd8e485801a862cb97182fa1068db1ed31337",
+  "failed_source_archive": {
+    "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverArgumentCellsConstructorProof-01.lean": "737279c01735cdf11f7773c3c6d4aabb083b9c1a17d2d63e655067c8947bd706"
+  },
+  "zero_context_patch": {
+    "formalization/verification/continuation-2026-11-22/P16-COVER-ARGUMENT-CELLS-CONSTRUCTOR-REPAIR-01.patch": "d6213256411bc6731826af2b02b3c97c86c1ec72e524dc8a2bf70dc0514cc675"
+  },
+  "forward_and_inverse_exact_bytes_verified": true,
+  "unchanged_source_pins": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsBindingProof.lean": "9341081f37643403148862cd60f5435b2c3849d157313e69d5305f04bbfeff9f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsNumericProof.lean": "755d44185b4197b948f972b4c7ed666d8e0543849fefdb791036999cbfec05b9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsOpenDataProof.lean": "9aaf5ad402538ce7a22bbb5658aefba57a90c45cee4d907112c103fb2813594d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsOriginProof.lean": "98e69db4f1aefea9acf48f67669e0b3ee8d79d96bf272b023f7b882ea976831c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsTargets.lean": "11086fdd35d247b2cde8bb913895314d87430be045c61cfc15fbaff7c7d33dde",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverArgumentCellsTransportProof.lean": "0f41740ff282b6ef65281d56c68b32ab25f11b5f439637220dfb3545bed51b1c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverCartesianFoldNumericThinProof.lean": "2028ff267db77b740ff2610c416543983a82c79d4078ef4ef23a0156ca7826da",
+    "formalization/verification/continuation-2026-11-22/P16-ORIGINAL-COVER-ARGUMENT-CELLS-SOURCE-MAP.md": "08d1b85db89b132f7fc20b82fce23d4f34f4f06a5451830bb60133b36a025751"
+  }
+}

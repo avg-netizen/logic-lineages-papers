@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.LinearReturnProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_actualLinearReturn : Targets.ActualLinearReturn := actualLinearReturn
+#print axioms fixed_actualLinearReturn
+end LogicLineages.PermittedControl.StatementChecks

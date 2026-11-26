@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.ActualWeightedReadNormalizationTargets
+import LogicLineages.PermittedControl.ActualWeightedReadNormalizationWeightsProof
+import LogicLineages.PermittedControl.ActualWeightedReadNormalizationActualProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualWeightedReadNormalization
+
+theorem fixed_actualWeightedGroupedWeights : ExactGroupedWeights := exactGroupedWeights
+theorem fixed_actualWeightedInputChecks : ExactInputChecks := exactInputChecks
+theorem fixed_actualWeightedNormalizedReads : ExactNormalizedReads := exactNormalizedReads
+
+theorem fixed_fullActualWeightedReadNormalization : FullActualWeightedReadNormalization :=
+  ⟨fixed_actualWeightedGroupedWeights,fixed_actualWeightedInputChecks,fixed_actualWeightedNormalizedReads⟩
+
+#print axioms fixed_actualWeightedGroupedWeights
+#print axioms fixed_actualWeightedInputChecks
+#print axioms fixed_actualWeightedNormalizedReads
+#print axioms fixed_fullActualWeightedReadNormalization
+
+end LogicLineages.PermittedControl.StatementChecks

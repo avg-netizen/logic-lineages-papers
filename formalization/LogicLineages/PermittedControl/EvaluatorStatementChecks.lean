@@ -1,0 +1,10 @@
+module
+public import LogicLineages.PermittedControl.EncodedEvaluatorProof
+
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_computableEvaluation : Targets.ComputableEvaluation := computableEvaluation
+ theorem fixed_selectedClosedEvaluation : Targets.SelectedClosedEvaluation := selectedClosedEvaluation
+#print axioms fixed_computableEvaluation
+#print axioms fixed_selectedClosedEvaluation
+end LogicLineages.PermittedControl.StatementChecks

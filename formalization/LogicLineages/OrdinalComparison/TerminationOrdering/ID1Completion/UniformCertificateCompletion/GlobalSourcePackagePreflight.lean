@@ -1,0 +1,8 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.GlobalSourcePackageTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.GlobalSourcePackagePreflight
+def globalInputComparator : Prop := GlobalSourcePackageTargets.ActualOriginalGlobalInputSelection
+def concretePackageComparator : Prop := GlobalSourcePackageTargets.ActualOriginalGlobalSourcePackageConstruction
+def noPremiseExistentialComparator : Prop := GlobalSourcePackageTargets.ActualOriginalGlobalSourceDownwardPackageExists
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.UniformCertificateCompletion.GlobalSourcePackagePreflight

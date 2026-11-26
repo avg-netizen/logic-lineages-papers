@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroClassGroupedMovedCountTargets
+import LogicLineages.PermittedControl.ActualZeroClassGroupedMovedCountProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualZeroClassGroupedMovedCount :
+    ActualZeroClassGroupedMovedCount.ExactGroupedMovedCount :=
+  ActualZeroClassGroupedMovedCount.exactGroupedMovedCount
+
+#print axioms fixed_actualZeroClassGroupedMovedCount
+
+end LogicLineages.PermittedControl.StatementChecks

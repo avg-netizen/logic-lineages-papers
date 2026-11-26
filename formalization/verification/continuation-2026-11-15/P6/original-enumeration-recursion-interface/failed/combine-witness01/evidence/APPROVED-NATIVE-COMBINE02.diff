@@ -1,0 +1,58 @@
+--- NativeCombineProof.lean (NATIVE-COMBINE01)
++++ NativeCombineProof.lean (NATIVE-COMBINE02)
+@@ -17,7 +17,9 @@
+   simp only [answer,binaryCompositionEvaluation,constantEvaluation,projectionEvaluation,
+     List.Vector.get_ofFn,Matrix.cons_val_zero,Matrix.cons_val_one]
+   rw [OriginalTypeListsEnumeration.CodecProof.listEncoding,
+-    InternalEqualityTestEvaluationProof.vectorTwo,Continuation20261114.ExchangeAnswerSlots.NativeProof.lookupEncoded]
++    InternalEqualityTestEvaluationProof.vectorTwo]
++  simp only [Matrix.cons_val_zero,Matrix.cons_val_one]
++  rw [Continuation20261114.ExchangeAnswerSlots.NativeProof.lookupEncoded]
+   change (answers.map Encodable.encode).getD i (Encodable.encode ([] : List (Code (Fin n)))) = _
+   exact List.getD_map Encodable.encode
+ 
+@@ -35,9 +37,41 @@
+     evaluate labels (inputs ts hs ls tb vb f answers),evaluate tupleBound (inputs ts hs ls tb vb f answers),
+     evaluate variableBound (inputs ts hs ls tb vb f answers),evaluate (answer 0) (inputs ts hs ls tb vb f answers),
+     evaluate (answer 1) (inputs ts hs ls tb vb f answers)]) = _
+-  simp only [types,heads,labels,tupleBound,variableBound,leftOfEvaluation,rightOfEvaluation,projectionEvaluation,
+-    inputs,List.Vector.get_ofFn,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,
+-    Encodable.encode_prod_val,Encodable.encode_nat,Nat.unpair_pair,answerValue]
++  have hxs : ofFn ![
++    evaluate types (inputs ts hs ls tb vb f answers),evaluate heads (inputs ts hs ls tb vb f answers),
++    evaluate labels (inputs ts hs ls tb vb f answers),evaluate tupleBound (inputs ts hs ls tb vb f answers),
++    evaluate variableBound (inputs ts hs ls tb vb f answers),evaluate (answer 0) (inputs ts hs ls tb vb f answers),
++    evaluate (answer 1) (inputs ts hs ls tb vb f answers)] =
++      ofFn ![Encodable.encode ts,Encodable.encode hs,ls,tb,vb,
++        Encodable.encode (answers.getD 0 []),Encodable.encode (answers.getD 1 [])] := by
++    apply congrArg List.Vector.ofFn
++    funext i
++    fin_cases i
++    · change evaluate types (inputs ts hs ls tb vb f answers) = Encodable.encode ts
++      simp only [types,heads,labels,tupleBound,variableBound,leftOfEvaluation,rightOfEvaluation,projectionEvaluation,
++        inputs,List.Vector.get_ofFn,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,
++        Encodable.encode_prod_val,Encodable.encode_nat,Nat.unpair_pair]
++    · change evaluate heads (inputs ts hs ls tb vb f answers) = Encodable.encode hs
++      simp only [types,heads,labels,tupleBound,variableBound,leftOfEvaluation,rightOfEvaluation,projectionEvaluation,
++        inputs,List.Vector.get_ofFn,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,
++        Encodable.encode_prod_val,Encodable.encode_nat,Nat.unpair_pair]
++    · change evaluate labels (inputs ts hs ls tb vb f answers) = ls
++      simp only [types,heads,labels,tupleBound,variableBound,leftOfEvaluation,rightOfEvaluation,projectionEvaluation,
++        inputs,List.Vector.get_ofFn,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,
++        Encodable.encode_prod_val,Encodable.encode_nat,Nat.unpair_pair]
++    · change evaluate tupleBound (inputs ts hs ls tb vb f answers) = tb
++      simp only [types,heads,labels,tupleBound,variableBound,leftOfEvaluation,rightOfEvaluation,projectionEvaluation,
++        inputs,List.Vector.get_ofFn,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,
++        Encodable.encode_prod_val,Encodable.encode_nat,Nat.unpair_pair]
++    · change evaluate variableBound (inputs ts hs ls tb vb f answers) = vb
++      simp only [types,heads,labels,tupleBound,variableBound,leftOfEvaluation,rightOfEvaluation,projectionEvaluation,
++        inputs,List.Vector.get_ofFn,Matrix.cons_val_zero,Matrix.cons_val_one,Matrix.cons_val_two,
++        Encodable.encode_prod_val,Encodable.encode_nat,Nat.unpair_pair]
++    · change evaluate (answer 0) (inputs ts hs ls tb vb f answers) = Encodable.encode (answers.getD 0 [])
++      exact answerValue n _ _ _ answers
++    · change evaluate (answer 1) (inputs ts hs ls tb vb f answers) = Encodable.encode (answers.getD 1 [])
++      exact answerValue n _ _ _ answers
++  rw [hxs]
+   exact OriginalEnumerationConstructorLayer.NativeProof.nativeLayer n ts hs ls tb vb (answers.getD 0 []) (answers.getD 1 [])
+ 
+ theorem fuelValue (n : Nat) (ts : List Source.Ty) (hs : List (HeadCode (Fin n)))

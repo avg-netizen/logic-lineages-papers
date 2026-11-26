@@ -1,0 +1,22 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroClassReplacementTargets
+import LogicLineages.PermittedControl.ActualZeroClassReplacementPrefixProof
+import LogicLineages.PermittedControl.ActualZeroClassReplacementRowProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualZeroClassReplacement
+
+theorem fixed_actualZeroClassPrefixRead : ExactPrefixRead := exactPrefixRead
+theorem fixed_actualZeroClassRetainedRemainder : ExactRetainedRemainder := exactRetainedRemainder
+theorem fixed_actualZeroClassReplacement : ExactZeroClassReplacement := exactZeroClassReplacement
+
+theorem fixed_fullActualZeroClassReplacement : FullActualZeroClassReplacement :=
+  ⟨fixed_actualZeroClassPrefixRead,fixed_actualZeroClassRetainedRemainder,fixed_actualZeroClassReplacement⟩
+
+#print axioms fixed_actualZeroClassPrefixRead
+#print axioms fixed_actualZeroClassRetainedRemainder
+#print axioms fixed_actualZeroClassReplacement
+#print axioms fixed_fullActualZeroClassReplacement
+
+end LogicLineages.PermittedControl.StatementChecks

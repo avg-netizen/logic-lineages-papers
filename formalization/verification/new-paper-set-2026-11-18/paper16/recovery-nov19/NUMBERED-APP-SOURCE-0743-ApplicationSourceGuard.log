@@ -1,0 +1,72 @@
+CACHE_HIT LogicLineages.PersistentMarking.Syntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineSyntax
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowSyntax
+CACHE_HIT LogicLineages.PersistentMarking.SpineTyping
+CACHE_HIT LogicLineages.PersistentMarking.Signature
+CACHE_HIT LogicLineages.PersistentMarking.NameBridge
+CACHE_HIT LogicLineages.PersistentMarking.FreeSubstitution
+CACHE_HIT LogicLineages.PersistentMarking.StructuralContext
+CACHE_HIT LogicLineages.PersistentMarking.Occurrences
+CACHE_HIT LogicLineages.PersistentMarking.SpineMarking
+CACHE_HIT LogicLineages.PersistentMarking.Comparison
+CACHE_HIT LogicLineages.PersistentMarking.StructuralStabilityTargets
+CACHE_HIT LogicLineages.PersistentMarking.StructuralCoverageTargets
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupport
+CACHE_HIT LogicLineages.PersistentMarking.DecisionInventory
+CACHE_HIT LogicLineages.PersistentMarking.DecisionPorts
+CACHE_HIT LogicLineages.PersistentMarking.DecisionObservations
+CACHE_HIT LogicLineages.PersistentMarking.DecisionSourceUniverse
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowDomain
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRules
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowTupleTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowBindingTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowApplicationTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowSourceGuardTargets
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRealizationShapeProof
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRealizationTypingProof
+CACHE_HIT LogicLineages.PersistentMarking.DecisionInventoryTargets
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupportTargets
+CACHE_HIT LogicLineages.PersistentMarking.FreeCovarianceTargets
+CACHE_HIT LogicLineages.PersistentMarking.SubstitutionTargets
+CACHE_HIT LogicLineages.PersistentMarking.SubstitutionProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeShiftProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeCompositionProof
+CACHE_HIT LogicLineages.PersistentMarking.SpineTypingTargets
+CACHE_HIT LogicLineages.PersistentMarking.SpineShiftProof
+CACHE_HIT LogicLineages.PersistentMarking.FreeCallProof
+CACHE_HIT LogicLineages.PersistentMarking.TypeSupportFoundationProof
+CACHE_HIT LogicLineages.PersistentMarking.DecisionInventoryProof
+CACHE_HIT LogicLineages.PersistentMarking.NumberedWindowRealizationWindowProof
+Compiling LogicLineages.PersistentMarking.NumberedWindowSourceInventoryProof
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowSourceInventoryProof.lean:21:88: error: Application type mismatch: The argument
+  h
+has type
+  freeOccurs n a = true
+but is expected to have type
+  n ∈ freeInventory a
+in the application
+  (DecisionInventoryProof.freeExact a n).mp h
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowSourceInventoryProof.lean:38:12: error: Tactic `assumption` failed
+
+case free
+S : Signature
+q : Expr
+type✝ : Ty
+name✝ : Nat
+⊢ TermAdmitted S (Expr.free type✝ name✝)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowSourceInventoryProof.lean:39:12: error: Tactic `assumption` failed
+
+case bound
+S : Signature
+q : Expr
+type✝ : Ty
+index✝ : Nat
+⊢ TermAdmitted S (Expr.bound type✝ index✝)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowSourceInventoryProof.lean:47:12: error: Tactic `assumption` failed
+
+case nil
+S : Signature
+q : Expr
+⊢ ArgsAdmitted S Args.nil
+COMPILE_FAILED LogicLineages.PersistentMarking.NumberedWindowSourceInventoryProof: 1
+BUILD_RECEIPT build-reports/1795074199171128541-6.json

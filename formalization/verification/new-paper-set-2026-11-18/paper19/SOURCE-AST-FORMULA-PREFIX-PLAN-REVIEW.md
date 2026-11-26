@@ -1,0 +1,6 @@
+# Formula/prefix conceptual direction
+Approved to prepare exact supporting contracts. Formula must be literal quantifier-free true/false, relation atoms, negation/and/or over actual Term; sentence uses explicit existential ground prefix. No quantified nodes under arbitrary negation or implicit universal prenexing.
+
+CPS continuation must preserve every original natural input and every old Boolean reference, and return an actual root. In binary Boolean compilation transport the first root across the second operand's full Boolean embedding, as well as natural-name weakening. Arithmetic atom branches must instantiate the now-proved Term continuation premise, not assume it. Actual finish callback must discharge formula CPS premise, including zero-wire true/false cases, before pointwise and prefix equivalence are claimed. Existential valuation semantics must quantify precisely the declared finite ground context with no extra seed or independent source-copy valuations.
+
+Exact actual normalization composition and size/table bounds require fresh aliases/closure. AST occurrence bounds remain distinct from shared input DAG bounds. Raw codec/reconstruction/computation, Program lowering to actual source forest, weak/strict wrappers and final shared-DAG size remain later. No full compiler promotion from this conceptual review.

@@ -1,0 +1,11 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryKernel.EqualProof
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryKernel.EqualityStatementChecks
+theorem internalEqualSound : Targets.InternalEqualSound := EqualProof.internalEqualSound
+theorem internalEqualComplete : Targets.InternalEqualComplete := EqualProof.internalEqualComplete
+#print axioms internalEqualSound
+#print axioms internalEqualComplete
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryKernel.EqualityStatementChecks

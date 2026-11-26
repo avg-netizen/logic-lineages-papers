@@ -1,0 +1,9 @@
+# Paper 17 signed rows on one shared raw-rank layout
+
+The paper uses the same original raw input for all occurrences in a matrix. The common layout takes the actual union of ranks used by the supplied source rows, retains one position for each rank, and assigns consecutive positive names. Both the names and the raw ranks are distinct, and membership reflects exactly the original rows' rank support. [Arithmetic, lines 231–247 and 255–266](../../../17-permitted-control-canonical-comparison/sections/arithmetic.tex#L231) · [Frozen comparator](../../LogicLineages/PermittedControl/SharedRankResidueRowTargets.lean) · [Layout proof](../../LogicLineages/PermittedControl/SharedRankResidueRowLayoutProof.lean)
+
+Each row's emitter uses the supplied common layout directly. It keeps the original operand list and signed constant, ranges over the literal shared slots, and attaches the same encoded coordinate request tape. On canonical operands its output is exactly the original radix-six formula for that row. [Code proof](../../LogicLineages/PermittedControl/SharedRankResidueRowCodeProof.lean) · [Formula support](../../LogicLineages/PermittedControl/SharedRankResidueRowSupportProof.lean)
+
+A layout can contain additional ranks used by other rows. The resulting syntax can mention those positions, and the tied valuation gives their actual raw values. The signed sum consults only the original row's used ranks. Exact lookup agreement at those ranks gives the same actual original ordered reads and divisibility, with proper-field and tail requirements only on that row's original operands. [Cell proof](../../LogicLineages/PermittedControl/SharedRankResidueRowCellProof.lean) · [Semantic proof](../../LogicLineages/PermittedControl/SharedRankResidueRowSemanticProof.lean)
+
+Shared names permit a future simultaneous conjunction before a single existential step. This comparator treats one row at a time and keeps that joint matrix step separate.

@@ -1,0 +1,33 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NumericalKernelBaseProof.lean:14:2: error: Tactic `assumption` failed
+
+c t : ℕ
+hn : ↑(Phi t - c) < epsilonZero
+h : actualControlledCount (compensatedPrefixControl c) ↑(Phi t - c) = 0
+⊢ 1 + actualControlledCount (compensatedPrefixControl c) (actualMaximumPredecessor Ordinal.omega0 (Phi t - c)) = 1
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NumericalKernelBaseProof.lean:34:4: error: Type mismatch: After simplification, term
+  hr
+ has type
+  actualMaximumPredecessor (Ordinal.omega0 ^ 2) 1 = 1 + actualMaximumPredecessor 1 0
+but is expected to have type
+  actualMaximumPredecessor (Ordinal.omega0 ^ 2) 1 = 1
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NumericalKernelBaseProof.lean:32:18: warning: This simp argument is unused:
+  Nat.add_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [hz, ̲Nat.a̵dd̵_̵z̵e̵r̵o̵,̵N̵a̵t̵.̵d̵iv_one, ̲Nat.mod_one, ̲Ordinal.opow_zero, ̲Nat.cast_one,
+  ̵  ̵ ̵ ̵ ̵ ̵one_mul,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲actualOptimizedMaximumBaseCases.2.2 _ (by simpa using he), ̲add_zero] at hr
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NumericalKernelBaseProof.lean:33:14: warning: This simp argument is unused:
+  actualOptimizedMaximumBaseCases.2.2 _ (by simpa using he)
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵z̵,̵N̵a̵t̵.̵a̵d̵d̵_̵z̵e̵r̵o̵,̵N̵a̵t̵.̵d̵i̵v̵_̵o̵n̵e̵,̵N̵a̵t̵.̵m̵o̵d̵_̵o̵n̵e̵,̵O̵r̵d̵i̵n̵a̵l̵.̵o̵p̵o̵w̵_̵z̵e̵r̵o̵,̵N̵a̵t̵.̵c̵a̵s̵t̵_̵o̵n̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵o̵n̵e̵_̵m̵u̵l̵,̵a̵c̵t̵u̵a̵l̵O̵p̵t̵i̵m̵i̵z̵e̵d̵M̵a̵x̵i̵m̵u̵m̵B̵a̵s̵e̵C̵a̵s̵e̵s̵.̵2̵.̵2̵ ̵_̵ ̵(̵b̵y̵ ̵s̵i̵m̵p̵a̵ ̵u̵s̵i̵n̵g̵ ̵h̵e̵)̵,̵a̵d̵d̵_̵z̵e̵r̵o̵]̵[̲h̲z̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲z̲e̲r̲o̲,̲ ̲N̲a̲t̲.̲d̲i̲v̲_̲o̲n̲e̲,̲ ̲N̲a̲t̲.̲m̲o̲d̲_̲o̲n̲e̲,̲ ̲O̲r̲d̲i̲n̲a̲l̲.̲o̲p̲o̲w̲_̲z̲e̲r̲o̲,̲ ̲N̲a̲t̲.̲c̲a̲s̲t̲_̲o̲n̲e̲,̲ ̲o̲n̲e̲_̲m̲u̲l̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲]̲ at hr
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/NumericalKernelBaseProof.lean:72:59: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

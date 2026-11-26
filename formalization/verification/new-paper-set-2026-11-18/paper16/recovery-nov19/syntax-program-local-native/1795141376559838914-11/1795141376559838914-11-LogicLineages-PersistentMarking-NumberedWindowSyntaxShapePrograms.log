@@ -1,0 +1,29 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowSyntaxShapePrograms.lean:19:41: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowSyntaxShapePrograms.lean:29:77: error: unsolved goals
+code : ℕ × ℕ → ℕ := Prod.snd
+x✝ : ℕ × ℕ
+⊢ decide (x✝.2 = 0) = (x✝.2 == 0)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowSyntaxShapePrograms.lean:82:100: error: unsolved goals
+case succ.succ.succ.succ.succ.zero.cons.cons.cons.cons.cons.nil
+test : ∀ (ks : List Slot), Primrec fun a => layout ks a.1 a.2.2 :=
+  fun ks => Primrec₂.comp (layoutPrim ks) Primrec.fst (Primrec.comp Primrec.snd Primrec.snd)
+tag : Primrec fun p => p.2.1
+t : List Row
+a b c d e : ℕ
+⊢ (headBit a && (typeBit b && ((t[d]?.getD (false, false)).2 && (t[e]?.getD (false, false)).2))) =
+    (headBit a && typeBit b && (t[d]?.getD (false, false)).2 && (t[e]?.getD (false, false)).2)
+
+case succ.succ.succ.succ.succ.succ.zero.cons.cons.cons.cons.nil
+test : ∀ (ks : List Slot), Primrec fun a => layout ks a.1 a.2.2 :=
+  fun ks => Primrec₂.comp (layoutPrim ks) Primrec.fst (Primrec.comp Primrec.snd Primrec.snd)
+tag : Primrec fun p => p.2.1
+t : List Row
+a b c d : ℕ
+⊢ (typeBit a && (typeBit b && ((t[c]?.getD (false, false)).1 && (t[d]?.getD (false, false)).1))) =
+    (typeBit a && typeBit b && (t[c]?.getD (false, false)).1 && (t[d]?.getD (false, false)).1)

@@ -1,0 +1,11 @@
+# Independent comparator review
+
+Approved for fresh freeze and native comparator preflight only. No proof or native acceptance is claimed. All ten proposed SHA-256 pins independently match current bytes.
+
+The target and named expanded iff gate retain literal OriginalConcreteStructuralEdge.edge, not an arbitrary edge supplier. The original edge InternalEdge contract yields source/target type equality, context validity, both raw Code guards and atContext acceptance from the three packed pairing observations. atContext composes the original exchange with the source/target raw pair and the actual context window. Thus none of these required facts has been silently added as a target-success premise.
+
+The source is independent of the admitted seed. There is deliberately no source=seed or source-pool premise: source universe acceptance is the step invariant input. Target membership is in the actual SeededPrimaryPool.pool at that admitted seed and unchanged parameter. PoolProof.accepted derives target admission from precisely these inputs; PlainTargetProof.unpack extracts original plain typing using the observed target pair and gamma. OriginalClassCodes.context/gamma/window depend on the parameter rather than the changing reached source. The source/target observed types remain separate in the statement; their equality must be derived from the installed edge and transported internally.
+
+Both antecedent and conclusion use original universe Accepted with the concrete original H, M and W, term mode false, same gamma/context. No target plain, Code or universe acceptance is assumed, no child-pool invariant is assumed, and no native evaluation or calibration substitutes for an object-language derivation. The gate repeats the complete target expression and audits its named Iff.rfl theorem.
+
+This is a single-edge supporting caller, stronger than requiring the source itself to be reached. It does not prove reached-list iteration closure, accessibility, an arbitrary-B preservation theorem or a numbered paper obligation. The actual joint plain-aware exchange endpoint remains a pending proof dependency and must pass its own gates before this caller is accepted. Source correspondence accurately records these exclusions.

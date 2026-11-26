@@ -1,0 +1,42 @@
+{
+  "status": "compiler-and-L4-author-quiescent-stopped",
+  "audit_utc": "2026-11-13T05:23:04.092149+00:00",
+  "last_build": "BUILD-124",
+  "last_owned_exec_session": 35246,
+  "last_exec_reaped": true,
+  "native_processes": [],
+  "owned_native_jobs": 0,
+  "owned_queued_requests": [],
+  "shared_locks": [
+    {
+      "path": "/tmp/logic-lineages-papers-lean.lock",
+      "exists": true,
+      "exclusive_nonblocking_probe": "acquired-and-released-free"
+    },
+    {
+      "path": "/tmp/pure-r1-calculator-lean.lock",
+      "exists": true,
+      "exclusive_nonblocking_probe": "acquired-and-released-free"
+    }
+  ],
+  "checker_sha256": "fefa8d645edc1c7bd1e4abc750cfaa6556adfc6cc80d6aecaff952192322a144",
+  "accepted_L4_sources_unchanged": 32,
+  "accepted_L4_exact_aliases": 12,
+  "new_target_or_round_admission": false,
+  "no_automatic_resume": true,
+  "terminal_metadata": [
+    "COMPILER.json",
+    "ACTIVE-NATIVE-SESSION.json",
+    "QUEUE.json"
+  ],
+  "lane_final_handoffs": {
+    "L1": "L1/FINAL-WIND-DOWN-HANDOFF.json",
+    "L2": "L2/FINAL-WIND-DOWN-HANDOFF.json",
+    "L3": "requested-after-BUILD124-current-packet-complete",
+    "L4": "L4/CHECKED-HANDOFF.json + L4/AUTHOR-STOPPED.json",
+    "L5": "L5/STOPPED.json",
+    "L6": "L6/STOP-HANDOFF.md"
+  },
+  "global_compiler_policy": "root finalizes paused policy after L3 final STOP confirmation; L4 does not change root policy",
+  "git_publication": "none"
+}

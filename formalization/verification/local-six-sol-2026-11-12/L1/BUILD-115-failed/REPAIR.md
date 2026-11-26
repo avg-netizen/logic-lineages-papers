@@ -1,0 +1,1 @@
+Wind-down receipt build-reports/1794546537186401752-9.json. CountedPrefixQuery now passed and is immutable. ONLY Core released. Hide OriginalContextInsertionSyntaxProof.andIntro/andLeft/andRight aliases so existing explicit InternalApplicationStepPeelSupportProof names resolve uniquely; no formula or proof body changes. Target/Syntax/Query and other2 sources unchanged.

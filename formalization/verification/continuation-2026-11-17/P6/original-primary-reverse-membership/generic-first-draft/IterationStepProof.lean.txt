@@ -1,0 +1,55 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.IterationCoreProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.ExpansionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.IterationProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open SourceComputabilityFormulaSupportProof InternalControlGraphSupportProof
+open InternalRecursionGraphStepSyntaxProof InternalTagArithmeticSyntaxProof
+open InternalRawListRecursionSyntaxProof InternalGraphCompositionSyntaxProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open InternalBinderTransportProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
+open InternalAdditionLawsProof InternalGraphCompositionFunctionalityProof
+open InternalApplicationCertificateConstructorsSupportProof InternalAcceptanceSupportProof
+open InternalApplicationStepPeelSupportProof (andIntro andLeft andRight)
+open InternalClosedPrograms InternalClosedProgramsBindingProof
+open InternalApplicationValidityStackAppendInductionCoreProof (withHyp)
+open InternalBetaTotalityProof InternalQuotientComparisonProof
+open TwoSol20261113.CalibratedPrimary.Membership (contains)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Continuation20261114
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+open Iteration IterationSyntaxProof SyntaxProof
+theorem successorCore (E : Program 3) (count pool reached parameter out carrier seed : OTerm alpha)
+ (hback : Nonempty (Derivation body Delta (backClosed E pool carrier parameter)))
+ (hrow : Nonempty (Derivation body Delta (AtCount E count pool reached parameter carrier seed)))
+ (hi : Nonempty (Derivation body Delta (graph4 (PrimaryIteration.iterate E) out (suc count) pool reached parameter)))
+ (hall : Nonempty (Derivation body Delta (allAccepted pool carrier seed reached))) :
+ Nonempty (Derivation body Delta (allAccepted pool carrier seed out)) := by
+ apply programCases (PrimaryIteration.iterate E) (Fin.cons count (Fin.cons pool (Fin.cons reached (Fin.cons parameter Fin.elim0)))) _
+ intro beta j Theta previous hj hr
+ rw [allAcceptedRename]
+ simp only [consTermRename,emptyRename] at hr
+ have hback' := renameInto hback j Theta hj
+ rw [backClosedRename] at hback'
+ have hrow' := renameInto hrow j Theta hj
+ rw [atCountRename] at hrow'
+ have hi' := renameInto hi j Theta hj
+ simp only [graph4Rename,sucRelabel] at hi'
+ have hall' := renameInto hall j Theta hj
+ rw [allAcceptedRename] at hall'
+ have hexpand := PrimaryIteration.RecursionProof.successorRecover E (count.relabel j) previous (out.relabel j)
+   (pool.relabel j) (reached.relabel j) (parameter.relabel j) hr hi'
+ have hprevious := rowApply E (count.relabel j) (pool.relabel j) (reached.relabel j) (parameter.relabel j)
+   previous (carrier.relabel j) (seed.relabel j) hrow' hr hall'
+ exact ExpansionProof.preserved E (pool.relabel j) (carrier.relabel j) (seed.relabel j)
+   previous (parameter.relabel j) (out.relabel j) hexpand hprevious hback'
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.IterationProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalPrimaryReverseMembership.IterationProof

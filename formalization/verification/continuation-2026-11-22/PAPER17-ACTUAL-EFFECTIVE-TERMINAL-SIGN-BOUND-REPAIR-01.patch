@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualEffectiveTerminalSignBoundCalibrationProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualEffectiveTerminalSignBoundCalibrationProof.lean
+@@ -102,2 +102,3 @@
+-  rw [keys,ActualZeroEdgeAlphabetCode.codeCalibration.2.2,
+-    massLiteral,edgeFactorLiteral,correctionMaxLiteral]
++  rw [keys,ActualZeroEdgeAlphabetCode.codeCalibration.2.2,massLiteral]
++  dsimp only
++  rw [edgeFactorLiteral,correctionMaxLiteral]

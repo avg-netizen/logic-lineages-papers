@@ -1,0 +1,11 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.DefaultAdditionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.DefaultAddition.StatementChecks
+theorem fixed_atomicAssignmentValue : DefaultAdditionTargets.AtomicAssignmentValue := atomicAssignmentValue
+theorem fixed_weightedEquality : DefaultAdditionTargets.WeightedEquality := weightedEquality
+theorem fixed_exactAddition : DefaultAdditionTargets.ExactAddition := exactAddition
+theorem fixed_actualGammaAddition : DefaultAdditionTargets.ActualGammaAddition := actualGammaAddition
+#audit_namespace LogicLineages.ControlSensitivityCurrent.DefaultAddition.StatementChecks
+end LogicLineages.ControlSensitivityCurrent.DefaultAddition.StatementChecks

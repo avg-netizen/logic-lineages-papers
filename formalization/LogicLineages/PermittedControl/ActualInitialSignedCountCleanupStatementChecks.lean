@@ -1,0 +1,18 @@
+module
+public import LogicLineages.PermittedControl.ActualInitialSignedCountCleanupTargets
+import LogicLineages.PermittedControl.ActualInitialSignedCountCleanupProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualInitialSignedCountCleanup
+
+theorem fixed_exactOriginalInitialCleanup : ExactOriginalInitialCleanup := exactOriginalInitialCleanup
+theorem fixed_exactOriginalInitialCleanupTest : ExactOriginalInitialCleanupTest := exactOriginalInitialCleanupTest
+theorem fixed_fullActualInitialSignedCountCleanup : FullActualInitialSignedCountCleanup :=
+  ⟨fixed_exactOriginalInitialCleanup,fixed_exactOriginalInitialCleanupTest⟩
+
+#print axioms fixed_exactOriginalInitialCleanup
+#print axioms fixed_exactOriginalInitialCleanupTest
+#print axioms fixed_fullActualInitialSignedCountCleanup
+
+end LogicLineages.PermittedControl.StatementChecks

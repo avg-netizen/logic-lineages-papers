@@ -1,0 +1,93 @@
+{
+  "owner": "/root/sol_hb3",
+  "requests": [
+    {
+      "id": "P12-01-preflight",
+      "gate": "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityRecognizer.Preflight",
+      "state": "passed",
+      "receipt": "build-reports/1794615431854992645-2.json"
+    },
+    {
+      "id": "P6-01-preflight",
+      "gate": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.TwoSol20261113.RetainedCompatibilityObstructionPreflight",
+      "state": "passed",
+      "frozen_sha256": {
+        "Definitions": "adc0120a58119be779516cd247b9720b91c1bb4154074d512509ab7da3dc2553",
+        "Targets": "67addd964b7b62b4bb4d8d68baca41bbd7b9befe7d29657861ad08ff334228b4",
+        "Preflight": "32cd71527ec0c7ef8310c88ace914d776b9a9957cb1478ac22c5507ddb558deb"
+      },
+      "receipt": "build-reports/1794615467081772945-2.json"
+    },
+    {
+      "id": "P6-02-statements",
+      "gate": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.TwoSol20261113.RetainedCompatibilityObstructionStatementChecks",
+      "state": "passed",
+      "author_manifest": "verification/local-two-sol-2026-11-13/P6/GATE-REQUEST.json",
+      "receipt": "build-reports/1794616216713141678-2.json",
+      "log": "build-reports/1794615680185550781-2-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-SourceComputabilityCompletion-TwoSol20261113-RetainedCompatibilityObstructionProof.log"
+    },
+    {
+      "id": "P12-02-statements",
+      "gate": "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityRecognizer.StatementChecks",
+      "state": "passed",
+      "author_manifest": "verification/local-two-sol-2026-11-13/P12/CHECKED-01.json",
+      "receipt": "build-reports/1794616267999070356-2.json",
+      "log": "build-reports/1794616173707151815-2-LogicLineages-ComputabilityKnowledge-CertifiedSourceProvabilityCompletion-TwoSol20261113-ReflexivityRecognizer-TermInternalProof.log"
+    },
+    {
+      "id": "COMMON-01-legacy-local-source-receipts",
+      "state": "passed",
+      "reason": "Read-only P12 closure evidence found7 existing local imported objects without source-bound checked cache records; timestamp presence insufficient",
+      "modules": [
+        "LogicLineages.ComputabilityKnowledge.GorbowPRSubtreeDefinitions",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRChildTagsTargets",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRRegistryTargets",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRRegistryProof",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRChildTagsProof",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRSubtreeTargets",
+        "LogicLineages.ComputabilityKnowledge.GorbowPRSubtreeProof"
+      ],
+      "receipt": "build-reports/1794615627684615354-2.json"
+    },
+    {
+      "id": "P12-R02-preflight",
+      "state": "passed",
+      "gate": "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityCertificate.Preflight",
+      "frozen_manifest": "P12/round02/FROZEN-01.json",
+      "receipt": "build-reports/1794632897758517289-2.json"
+    },
+    {
+      "id": "P12-R02-exact",
+      "state": "passed",
+      "gate": "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityCertificate.StatementChecks",
+      "candidate_manifest": "P12/round02/CANDIDATE-01.json",
+      "receipt": "build-reports/1794633366399862441-2.json"
+    },
+    {
+      "id": "P6-R02-preflight",
+      "state": "passed",
+      "gate": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.TwoSol20261113.CalibratedPrimary.MembershipPreflight",
+      "frozen_sha256": {
+        "MembershipDefinitions": "9b28978d30a76837aca841743da3180201ee35a5b92f5fc1e3f4d73537c5b654",
+        "MembershipTargets": "9d54f3b7e7b2fde934768baee03c7966cd0b53a70ccd5e73e6ed3fd3c4773d62",
+        "MembershipPreflight": "ec2d995f95486367dedce28bbbaa7d5512fe0240a4f7d1f2b458708b7a222754"
+      },
+      "receipt": "build-reports/1794633098868416839-2.json"
+    },
+    {
+      "id": "P6-R02-exact",
+      "state": "passed",
+      "gate": "LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.TwoSol20261113.CalibratedPrimary.MembershipStatementChecks",
+      "author_manifest": "verification/local-two-sol-2026-11-13/P6/round02/AUTHOR-SHA256SUMS",
+      "exact_aliases": 6,
+      "receipt": "build-reports/1794633898619119628-2.json",
+      "log": "build-reports/1794633774061376235-2-LogicLineages-OrdinalComparison-TerminationOrdering-ID1Completion-SourceComputabilityCompletion-TwoSol20261113-CalibratedPrimary-MembershipNativeProof.log"
+    }
+  ],
+  "state": "stopped-user-pause-after-round02",
+  "pending_requests": [],
+  "all_existing_requests_complete": true,
+  "updated_utc": "2026-11-14T10:22:59.616435+00:00",
+  "successor_admission_enabled": false,
+  "new_gate_admission_enabled": false
+}

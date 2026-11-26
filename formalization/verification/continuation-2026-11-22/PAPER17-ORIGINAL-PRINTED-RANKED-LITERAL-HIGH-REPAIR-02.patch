@@ -1,0 +1,16 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedRankedLiteralHighFundingProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedRankedLiteralHighFundingProof.lean
+@@ -100,0 +101,9 @@
++private theorem branchCeiling (B : Nat) (known : List Nat) (gates : List Gate)
++    (p : NormalForm.Formula) (positive : Bool) (branch : Pattern)
++    (member : branch ∈ branches known gates p) :
++    familyNeed B branch.1 (rankedFamily known gates p positive branch) ≤ cutoff B known gates p positive := by
++  let cost : Pattern → Nat := fun q => familyNeed B q.1 (rankedFamily known gates p positive q)
++  change cost branch ≤ (branches known gates p).foldr (fun q n => max (cost q) n) 0
++  exact foldBound cost (branches known gates p) branch member
++
++set_option maxHeartbeats 650000 in
+@@ -111,2 +120 @@
+-    foldBound (fun q => familyNeed B q.1 (rankedFamily known gates p positive q))
+-      (branches known gates p) branch member
++    branchCeiling B known gates p positive branch member

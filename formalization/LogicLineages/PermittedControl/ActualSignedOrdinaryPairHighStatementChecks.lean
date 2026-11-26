@@ -1,0 +1,38 @@
+module
+public import LogicLineages.PermittedControl.ActualSignedOrdinaryPairHighTargets
+import LogicLineages.PermittedControl.ActualSignedOrdinaryPairHighValueProof
+import LogicLineages.PermittedControl.ActualSignedOrdinaryPairHighStrictProof
+import LogicLineages.PermittedControl.ActualSignedOrdinaryPairHighEqualProof
+import LogicLineages.PermittedControl.ActualSignedOrdinaryPairHighOrientationProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualSignedOrdinaryPairValue : ActualSignedOrdinaryPairHigh.ExactSignedPairValue :=
+  ActualSignedOrdinaryPairHigh.exactSignedPairValue
+
+theorem fixed_exactActualStrictSignedOrdinaryPair : ActualSignedOrdinaryPairHigh.ExactStrictSignedPair :=
+  ActualSignedOrdinaryPairHigh.exactStrictSignedPair
+
+theorem fixed_exactActualEqualRankSignedOrdinaryPair : ActualSignedOrdinaryPairHigh.ExactEqualRankSignedPair :=
+  ActualSignedOrdinaryPairHigh.exactEqualRankSignedPair
+
+theorem fixed_exactActualReverseSignedOrdinaryPair : ActualSignedOrdinaryPairHigh.ExactReverseSignedPair :=
+  ActualSignedOrdinaryPairHigh.exactReverseSignedPair
+
+theorem fixed_exactActualOrientedSignedOrdinaryPair : ActualSignedOrdinaryPairHigh.ExactOrientedSignedPair :=
+  ActualSignedOrdinaryPairHigh.exactOrientedSignedPair
+
+theorem fixed_fullActualSignedOrdinaryPairHigh : ActualSignedOrdinaryPairHigh.FullActualSignedOrdinaryPairHigh :=
+  ⟨fixed_exactActualSignedOrdinaryPairValue,fixed_exactActualStrictSignedOrdinaryPair,
+    fixed_exactActualEqualRankSignedOrdinaryPair,fixed_exactActualReverseSignedOrdinaryPair,
+    fixed_exactActualOrientedSignedOrdinaryPair⟩
+
+#print axioms fixed_exactActualSignedOrdinaryPairValue
+#print axioms fixed_exactActualStrictSignedOrdinaryPair
+#print axioms fixed_exactActualEqualRankSignedOrdinaryPair
+#print axioms fixed_exactActualReverseSignedOrdinaryPair
+#print axioms fixed_exactActualOrientedSignedOrdinaryPair
+#print axioms fixed_fullActualSignedOrdinaryPairHigh
+
+end LogicLineages.PermittedControl.StatementChecks

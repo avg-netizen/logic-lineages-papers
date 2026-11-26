@@ -1,0 +1,27 @@
+{
+  "status": "narrow proof-only source repair, not native checked by author",
+  "failed_source_commit": "7215222705890068a3bf6b956379c64db6cb148c",
+  "failed_exact_gate_receipt": "1795348679149416560-9",
+  "failed_original_native_log_sha256": "754edc36123605f4ed4f9238ce9b7a4bb74a116060ac25d7f349639eed4b94cf",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/AffineCollapseGuardRowsProof.lean:21:2: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  c - d \u2265 1\n  b \u2265 0\nwhere\n b := \u2191(\u03b8 input)\n c := (List.map (fun t => t.1 * \u2191(\u03b8 t.2)) e.2).sum\n d := (List.map (fun t => t.1 * \u2191(\u03b8 t.2)) e.2).sum",
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-AFFINE-COLLAPSE-GUARD-ROWS-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "7cfee1f53b8b2c26d885af334765b043df30c33e19f688aa09dc5bf15d0913af",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/AffineCollapseGuardRowsProof.lean",
+  "failed_proof_sha256": "d30ef7ba9aab51e86bf605e62080ccdeb5c1817633888eab9840f19c67cb3577",
+  "repaired_proof_sha256": "665cbb480743c1f66e0070a819633a14f72c088c007a48bc1c06b8afee3b1b46",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-AFFINE-COLLAPSE-GUARD-ROWS-REPAIR-01.patch",
+  "patch_sha256": "1f14d88572a4b742f00a54ae22c68fbf77343f4acee21292daeab674965e747e",
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/AffineCollapseGuardRowsReadProof.lean": "b7e427d381e89cc0d463d59dc5b28c25e290c404de8022440bb5487c5c892c44",
+    "formalization/LogicLineages/PermittedControl/AffineCollapseGuardRowsStatementChecks.lean": "b40972a0011269921c65d3ea43688cd615cb94f81138e4fe474bc1f2d4b9a3ea",
+    "formalization/LogicLineages/PermittedControl/AffineCollapseGuardRowsTargets.lean": "998ec449f2cbf85561f8d7c83cf255589b637cae8d657b640e1c85eaea4a0128",
+    "formalization/verification/continuation-2026-11-22/PAPER17-AFFINE-COLLAPSE-GUARD-ROWS-SOURCE-MAP.md": "53e348c4a00a00a902baa3a2cbb99b7c29cca2708ddae349ebfe2cacff9d0ec0"
+  },
+  "static_closure_unchanged": {
+    "target_local": 152,
+    "target_external": 31,
+    "gate_local": 295,
+    "gate_external": 38
+  },
+  "scope": "Only affine signed sum reassociation and commutation via one shared parenthesized sum; target, original domain, read proof and alias unchanged."
+}

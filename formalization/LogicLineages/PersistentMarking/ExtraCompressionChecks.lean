@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.ExtraCompressionProof
+namespace LogicLineages.PersistentMarking.ExtraCompressionChecks
+theorem exact_extraCompression : ExtraCompressionTargets.ExtraCompression := ExtraCompressionProof.extraCompression
+#print axioms exact_extraCompression
+end LogicLineages.PersistentMarking.ExtraCompressionChecks

@@ -1,0 +1,93 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FreeVariableRawSupport.lean:22:0: error: failed to prove termination, possible solutions:
+  - Use `have`-expressions to prove the remaining goals
+  - Use `termination_by` to specify a different well-founded relation
+  - Use `decreasing_by` to specify your own tactic for discharging this kind of goal
+name✝ : Name
+k✝¹ : (_ : Nat) ×' (_ : Nat) ×' Expr
+a✝² :
+  ∀ (y : (_ : Name) ×' (_ : Nat) ×' (_ : Nat) ×' Expr ⊕' (_ : Name) ×' (_ : Nat) ×' (_ : Nat) ×' Args),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x =>
+          PSum.casesOn x
+            (fun _x => PSigma.casesOn _x fun name k => PSigma.casesOn k fun k d => PSigma.casesOn d fun d q => sizeOf q)
+            fun _x =>
+            PSigma.casesOn _x fun name k => PSigma.casesOn k fun k d => PSigma.casesOn d fun d qs => sizeOf qs)
+        y (PSum.inl ⟨name✝, k✝¹⟩) →
+      PSum.casesOn y (fun _x => freeOccurs _x.1 (shift _x.2.1 _x.2.2.1 _x.2.2.2) = freeOccurs _x.1 _x.2.2.2) fun _x =>
+        freeOccursArgs _x.1 (shiftArgs _x.2.1 _x.2.2.1 _x.2.2.2) = freeOccursArgs _x.1 _x.2.2.2
+k✝ : Nat
+d✝¹ : (_ : Nat) ×' Expr
+a✝¹ :
+  ∀ (y : (_ : Name) ×' (_ : Nat) ×' (_ : Nat) ×' Expr ⊕' (_ : Name) ×' (_ : Nat) ×' (_ : Nat) ×' Args),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x =>
+          PSum.casesOn x
+            (fun _x => PSigma.casesOn _x fun name k => PSigma.casesOn k fun k d => PSigma.casesOn d fun d q => sizeOf q)
+            fun _x =>
+            PSigma.casesOn _x fun name k => PSigma.casesOn k fun k d => PSigma.casesOn d fun d qs => sizeOf qs)
+        y (PSum.inl ⟨name✝, ⟨k✝, d✝¹⟩⟩) →
+      PSum.casesOn y (fun _x => freeOccurs _x.1 (shift _x.2.1 _x.2.2.1 _x.2.2.2) = freeOccurs _x.1 _x.2.2.2) fun _x =>
+        freeOccursArgs _x.1 (shiftArgs _x.2.1 _x.2.2.1 _x.2.2.2) = freeOccursArgs _x.1 _x.2.2.2
+d✝ : Nat
+q : Expr
+a✝ :
+  ∀ (y : (_ : Name) ×' (_ : Nat) ×' (_ : Nat) ×' Expr ⊕' (_ : Name) ×' (_ : Nat) ×' (_ : Nat) ×' Args),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x =>
+          PSum.casesOn x
+            (fun _x => PSigma.casesOn _x fun name k => PSigma.casesOn k fun k d => PSigma.casesOn d fun d q => sizeOf q)
+            fun _x =>
+            PSigma.casesOn _x fun name k => PSigma.casesOn k fun k d => PSigma.casesOn d fun d qs => sizeOf qs)
+        y (PSum.inl ⟨name✝, ⟨k✝, ⟨d✝, q⟩⟩⟩) →
+      PSum.casesOn y (fun _x => freeOccurs _x.1 (shift _x.2.1 _x.2.2.1 _x.2.2.2) = freeOccurs _x.1 _x.2.2.2) fun _x =>
+        freeOccursArgs _x.1 (shiftArgs _x.2.1 _x.2.2.1 _x.2.2.2) = freeOccursArgs _x.1 _x.2.2.2
+f : Head
+τ : Ty
+base extras : Args
+x✝ :
+  ∀ (y : (_ : Name) ×' (_ : Nat) ×' (_ : Nat) ×' Expr ⊕' (_ : Name) ×' (_ : Nat) ×' (_ : Nat) ×' Args),
+    InvImage (fun x1 x2 => x1 < x2)
+        (fun x =>
+          PSum.casesOn x
+            (fun _x => PSigma.casesOn _x fun name k => PSigma.casesOn k fun k d => PSigma.casesOn d fun d q => sizeOf q)
+            fun _x =>
+            PSigma.casesOn _x fun name k => PSigma.casesOn k fun k d => PSigma.casesOn d fun d qs => sizeOf qs)
+        y (PSum.inl ⟨name✝, ⟨k✝, ⟨d✝, Expr.marked f τ base extras⟩⟩⟩) →
+      PSum.casesOn y (fun _x => freeOccurs _x.1 (shift _x.2.1 _x.2.2.1 _x.2.2.2) = freeOccurs _x.1 _x.2.2.2) fun _x =>
+        freeOccursArgs _x.1 (shiftArgs _x.2.1 _x.2.2.1 _x.2.2.2) = freeOccursArgs _x.1 _x.2.2.2
+h✝ : q = Expr.marked f τ base extras
+name : Name
+k d : Nat
+qs : Args
+⊢ sizeOf qs < 1 + sizeOf f + sizeOf τ + sizeOf base + sizeOf extras
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FreeVariableRawSupport.lean:79:92: error: unexpected token '('; expected 'end'
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FreeVariableRawSupport.lean:79:17: error: Type mismatch
+  consAbsent (substituteAbsent name values depth q (consParts hq).left hv)
+has type
+  freeOccursArgs name ?m.203 = false → freeOccursArgs name (Args.cons (substitute values depth q) ?m.203) = false
+but is expected to have type
+  freeOccursArgs name (substituteArgs values depth (Args.cons q qs)) = false
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FreeVariableRawSupport.lean:82:0: error: Missing name after `end`: Expected the current scope name `FreeVariableRawSupport`
+
+Hint: To end the current scope `FreeVariableRawSupport`, specify its name:
+  end ̲F̲r̲e̲e̲V̲a̲r̲i̲a̲b̲l̲e̲R̲a̲w̲S̲u̲p̲p̲o̲r̲t̲
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FreeVariableRawSupport.lean:92:48: error: unexpected token '('; expected 'end'
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FreeVariableRawSupport.lean:91:25: error(lean.unknownIdentifier): Unknown identifier `substituteArgsReflects`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FreeVariableRawSupport.lean:92:30: error: Type mismatch
+  markedAbsent
+has type
+  freeOccursArgs ?m.85 ?m.88 = false →
+    freeOccursArgs ?m.85 ?m.89 = false → freeOccurs ?m.85 (Expr.marked ?m.86 ?m.87 ?m.88 ?m.89) = false
+but is expected to have type
+  freeOccurs name (Expr.marked f τ base extras) = false
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FreeVariableRawSupport.lean:100:17: error: Type mismatch
+  consAbsent (substituteReflects name values depth q (consParts h).left)
+has type
+  freeOccursArgs name ?m.37 = false → freeOccursArgs name (Args.cons q ?m.37) = false
+but is expected to have type
+  freeOccursArgs name (Args.cons q qs) = false
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FreeVariableRawSupport.lean:101:6: error: unexpected token '('; expected command
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/FreeVariableRawSupport.lean:103:0: error: Missing name after `end`: Expected the current scope name `FreeVariableRawSupport`
+
+Hint: To end the current scope `FreeVariableRawSupport`, specify its name:
+  end ̲F̲r̲e̲e̲V̲a̲r̲i̲a̲b̲l̲e̲R̲a̲w̲S̲u̲p̲p̲o̲r̲t̲

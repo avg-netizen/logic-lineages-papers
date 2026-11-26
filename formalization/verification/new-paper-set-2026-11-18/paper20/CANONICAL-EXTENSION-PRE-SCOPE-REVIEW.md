@@ -1,0 +1,6 @@
+# Independent pre-scope: canonical scalar extension
+Approved as three supporting targets, not a geometric/profile theorem. All four frozen pins match independently.
+
+The existing rationalMap is the actual fraction-field lift of the coefficient polynomial map, with field-map injectivity discharged in its definition. Targets assert exact canonical monic denominator and canonical numerator coefficient maps and properness iff, for arbitrary fields in independent universes, including zero. They add neither a nonzero-rational-function premise nor splitness, perfectness or characteristic assumptions. These are the normalization facts required by the prior geometric plan, not merely equality of some presentations.
+
+Mapped Bezout coprimeness and monic normalization must justify exact equality, not equality up to a unit. Zero must retain its actual normalized denominator and numerator; strict degree properness must preserve the zero-polynomial convention. Injective coefficient maps supply degree preservation. No geometric support equivalence, all-word denominator propagation, F2 descent, transition/output, finite observer or effectivity follows from this packet alone. No compiler run or source edit.

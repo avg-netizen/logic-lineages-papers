@@ -1,0 +1,4 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.SourceLambdaApplicativeSubstitutionTargets
+
+#check LogicLineages.OrdinalComparison.TerminationOrdering.SourceLambdaApplicativeSubstitutionTargets.ActualLambdaApplicativeComputableSubstitution

@@ -1,0 +1,11 @@
+--- LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/BoundArithmeticTargets.lean
++++ LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/BoundArithmeticTargets.lean
+@@ -14,7 +14,7 @@
+   (.imp (HistoryBounds.weakBound oldBound newBound)
+    (.imp (.equal (HistoryDifference.differenceCall dtag token oldBound) (.succ positive))
+     (.ex (HistoryOrder.SupportProof.predBody
+-     (HistoryDifference.differenceCall dtag token newBound)))))))
++     (HistoryDifference.differenceCall dtag token newBound))))))
+ /-- Binder expansion increments both task bounds. This is a PA derivation
+ with the same existential nonnegative-gap relation, not a native inequality. -/
+ def SuccessorBounds : Prop := ∀ (T : Sentence → Prop) ctx (oldBound newBound : Term ctx),

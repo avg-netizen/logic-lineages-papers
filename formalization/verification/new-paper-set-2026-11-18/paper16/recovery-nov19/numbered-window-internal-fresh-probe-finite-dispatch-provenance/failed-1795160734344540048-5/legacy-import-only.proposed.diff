@@ -1,0 +1,28 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchDefinitions.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchDefinitions.lean
+@@ -1,9 +1,7 @@
+-module
+-public import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeTargets
+-public import LogicLineages.PersistentMarking.NumberedWindowOriginalProbeTotalTargets
+-public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalEqualityTestDefinitions
+-public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFixedWindowVertexDispatchDefinitions
+-@[expose] public section
++import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeTargets
++import LogicLineages.PersistentMarking.NumberedWindowOriginalProbeTotalTargets
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalEqualityTestDefinitions
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalFixedWindowVertexDispatchDefinitions
+ 
+ namespace LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatch
+ open LogicLineages.OrdinalComparison.TerminationOrdering
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchTargets.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchTargets.lean
+@@ -1,7 +1,5 @@
+-module
+-public import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchDefinitions
+-public import LogicLineages.PersistentMarking.NumberedWindowConcreteGuardedGraphTargets
+-@[expose] public section
++import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchDefinitions
++import LogicLineages.PersistentMarking.NumberedWindowConcreteGuardedGraphTargets
+ 
+ namespace LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeDispatchTargets
+ open FirstOrder Language

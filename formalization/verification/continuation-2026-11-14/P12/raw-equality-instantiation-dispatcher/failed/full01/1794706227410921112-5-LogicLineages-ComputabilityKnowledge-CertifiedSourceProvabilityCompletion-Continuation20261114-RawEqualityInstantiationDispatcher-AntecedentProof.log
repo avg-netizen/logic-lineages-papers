@@ -1,0 +1,41 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/AntecedentProof.lean:27:2: error: Type mismatch: After simplification, term
+  hval
+ has type
+  @Derivation (GorbowPRNumeralCalculation.Theory p) ctx
+    (Formula.equal (call ftag (Term.zero ::ᵥ Term.numeral code ::ᵥ nil)) Term.zero.succ)
+but is expected to have type
+  @Derivation (GorbowPRNumeralCalculation.Theory p) ctx
+    (Formula.equal (LiteralSyntaxValidator.formulaCall ftag Term.zero (Term.numeral code)) Term.zero.succ)
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/AntecedentProof.lean:15:129: error: unsolved goals
+a b : Term 1
+n ctx : ℕ
+p : Program n
+ftag ctag : ℕ
+hf : (nodes p)[ftag]? = some ⟨2, LiteralSyntaxValidator.formulaValidator⟩
+hc : (nodes p)[ctag]? = some ⟨2, HistoryCodec.cons⟩
+phi : Formula 0 := (RawEqualityInstantiation.template a b).all
+code : ℕ := Encodable.encode (GorbowFormulaPrefixCode.encode phi)
+hv : GorbowSyntaxValidation.validFormula 0 (GorbowFormulaPrefixCode.encode phi) = true
+heval : evaluate LiteralSyntaxValidator.formulaValidator (0 ::ᵥ code ::ᵥ nil) = 1
+hval :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (call ftag (map Term.numeral (0 ::ᵥ code ::ᵥ nil)))
+      (Term.numeral (evaluate LiteralSyntaxValidator.formulaValidator (0 ::ᵥ code ::ᵥ nil))))
+hvalue :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (LiteralSyntaxValidator.formulaCall ftag Term.zero (Term.numeral code)) Term.zero.succ)
+hcons :
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal (call ctag (map Term.numeral (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil)))
+      (Term.numeral (evaluate HistoryCodec.cons (10 ::ᵥ RawEqualityInstantiation.templateCode a b ::ᵥ nil))))
+⊢ Nonempty
+    (Derivation (GorbowPRNumeralCalculation.Theory p)
+      (Formula.equal
+        (LiteralSyntaxValidator.formulaCall ftag Term.zero
+          (HistoryLookup.consCall ctag (Term.numeral 10) (Term.numeral (RawEqualityInstantiation.templateCode a b))))
+        Term.zero.succ))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawEqualityInstantiationDispatcher/AntecedentProof.lean:41:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityInstantiationDispatcher.AntecedentProof.antecedent: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawEqualityInstantiationDispatcher.AntecedentProof.antecedent' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

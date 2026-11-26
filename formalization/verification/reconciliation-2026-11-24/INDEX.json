@@ -1,0 +1,977 @@
+{
+  "schema": 1,
+  "main_before_reconciliation": "4028a9e34506f4339af2992749464cf2d4d55eb9",
+  "common_proof_base": "dd4eddff9f8eab0a4532e8df4880f71b8d5dffb9",
+  "newer_inherited_baseline": "a4df2fc9984afa17b6653d90d1c6e669ff97a660",
+  "older_support_source": "ff0f88fefe74f978fc40ed6864f11c1f4786bc69",
+  "current_numbered_counts": {
+    "pending": 7,
+    "checked": 160
+  },
+  "retired_current_adoptions": {
+    "16-persistent-marking-termination-ordering:lem:structural-interpretation": {
+      "original_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1449-p16-lem-structural-interpretation.json",
+      "historical_path": "formalization/verification/new-paper-set-2026-11-18/historical-numbered/1449-p16-lem-structural-interpretation.json",
+      "sha256": "0151c9c89090c43f4f435f5ae5e58220bc7c89f43f4fddb0b0efd67c7eaad25d",
+      "why": "Corrected fixed-point manuscript retained. The original promotion explicitly records no independent comparison of the whole corrected conjunction; the closed fixed-application and free/bound substitution interfaces need an exact comparison with the printed substituted-source clause."
+    },
+    "16-persistent-marking-termination-ordering:lem:realization": {
+      "original_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1483-p16-lem-realization.json",
+      "historical_path": "formalization/verification/new-paper-set-2026-11-18/historical-numbered/1483-p16-lem-realization.json",
+      "sha256": "433a6260c3008465d8c5a0885bdaf8e7f2debf0960dcc646a70e415881e1336f",
+      "why": "The compiled proof transports realization from strict predecessor to original; the unmodified printed statement says replacement by a strict predecessor. Preserve the proof and record without claiming the printed direction."
+    }
+  },
+  "collision_policy": "Newer filenames and IDs remain canonical. Older conflicting IDs are resolvable only with the older pinned commit and exact path. Preserve all original blobs.",
+  "collisions": {
+    "new-set-1430": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1430-p16-combined-measured-install.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1430-p17-policy-indexed-shape.json"
+    },
+    "new-set-1431": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1431-p16-measured-application-existence.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1431-p17-policy-index-specialization.json"
+    },
+    "new-set-1432": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1432-p16-installed-carrier-application-existence.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1432-p17-policy-indexed-ranked-graph.json"
+    },
+    "new-set-1433": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1433-p17-supplied-code-macro.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1433-p17-policy-indexed-merge.json"
+    },
+    "new-set-1434": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1434-p17-supplied-code-realization.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1434-p17-policy-indexed-abstraction-partials.json"
+    },
+    "new-set-1435": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1435-p17-thm-arithmetic.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1435-p17-policy-indexed-ranked-layer.json"
+    },
+    "new-set-1436": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1436-p17-thm-ground.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1436-p16-combined-measured-route.json"
+    },
+    "new-set-1437": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1437-p17-uniform-main-reduction.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1437-p16-measured-application-window-domain.json"
+    },
+    "new-set-1438": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1438-p16-installed-application-output-address.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1438-p17-policy-indexed-partial-node.json"
+    },
+    "new-set-1439": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1439-p17-uniform-ground-assembly.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1439-p16-measured-first-reach.json"
+    },
+    "new-set-1440": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1440-p16-installed-application-frontend-acceptance.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1440-p17-policy-indexed-abstraction-body.json"
+    },
+    "new-set-1441": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1441-p17-joint-near-closed-blocks.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1441-p17-policy-indexed-partial-effectivity.json"
+    },
+    "new-set-1442": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1442-p16-installed-application-output-functionality.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1442-p17-policy-indexed-partial-run.json"
+    },
+    "new-set-1443": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1443-p16-corrected-structural-interpretation.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1443-p16-refined-unit-from-cover.json"
+    },
+    "new-set-1444": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1444-p17-uniform-policy-compiler.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1444-p16-thin-and-parsed-scratch-domain.json"
+    },
+    "new-set-1445": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1445-p17-uniform-main-comparison.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1445-p17-policy-indexed-assignment-node.json"
+    },
+    "new-set-1446": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1446-p16-native-iteration-on-module-copies.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1446-p17-policy-indexed-assignment-run.json"
+    },
+    "new-set-1447": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1447-p16-native-realization-on-module-copies.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1447-p17-policy-indexed-assignment-constructors.json"
+    },
+    "new-set-1448": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1448-p16-native-ranks-on-module-copies.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1448-p16-exact-selected-seed-grammar-and-scopes.json"
+    },
+    "new-set-1449": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1449-p16-lem-structural-interpretation.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1449-p16-measured-domain-from-held-function-least.json"
+    },
+    "new-set-1450": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1450-p16-native-realization-finite-chains.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1450-p17-policy-indexed-assignment-effectivity.json"
+    },
+    "new-set-1451": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1451-p17-thm-main.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1451-p17-policy-indexed-source-compile.json"
+    },
+    "new-set-1452": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1452-p16-native-lambda-along-finite-chains.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1452-p17-policy-indexed-concrete-source-compiler.json"
+    },
+    "new-set-1453": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1453-p16-installed-application-guard-free.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1453-p17-policy-indexed-ground-driver-effectivity.json"
+    },
+    "new-set-1454": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1454-p16-scalar-stage-rank-and-norm.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1454-p16-literal-structural-realization.json"
+    },
+    "new-set-1455": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1455-p16-address-class-rank-equals-stage-norm.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1455-p16-typed-structural-fundamental-induction.json"
+    },
+    "new-set-1456": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1456-p16-native-arithmetic-realizers.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1456-p17-policy-indexed-ground-driver-calibration.json"
+    },
+    "new-set-1457": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1457-p16-pair-and-decode-programs.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1457-p17-policy-indexed-ground-decision-semantics.json"
+    },
+    "new-set-1458": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1458-p16-native-tower-realization.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1458-p17-joint-policy-index-ground-decision.json"
+    },
+    "new-set-1459": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1459-p16-printed-tower-realization.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1459-p17-policy-indexed-original-ground-query.json"
+    },
+    "new-set-1460": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1460-p16-confined-rank-below-tagged-stage-norm.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1460-policy-indexed-original-main-comparison.json"
+    },
+    "new-set-1461": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1461-p16-refitted-installed-application.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1461-p16-measured-domain-from-both-operand-leasts.json"
+    },
+    "new-set-1462": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1462-p16-native-tower-sequence.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1462-p16-raw-function-context-argument-obstruction.json"
+    },
+    "new-set-1463": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1463-p16-conditional-tower-cofinality.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1463-p16-literal-native-simmons-extractor-types.json"
+    },
+    "new-set-1464": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1464-p16-refitted-install-boundary.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1464-p16-literal-native-simmons-extractor-zero-beta.json"
+    },
+    "new-set-1465": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1465-p16-conditional-height.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1465-p16-literal-native-simmons-extractor-one-beta.json"
+    },
+    "new-set-1466": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1466-p16-conditional-upper.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1466-p16-original-atomic-numeral-admission.json"
+    },
+    "new-set-1467": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1467-p16-conditional-main.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1467-p16-closed-argument-original-numeric-bits.json"
+    },
+    "new-set-1468": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1468-p16-conditional-tower-endpoint.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1468-p16-closed-argument-original-object-reports.json"
+    },
+    "new-set-1469": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1469-p16-tower-hypotheses-consistent.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1469-p16-original-empty-multiset-internal-membership.json"
+    },
+    "new-set-1470": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1470-p16-conditional-height-effective.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1470-p16-first-four-native-tower-witnesses.json"
+    },
+    "new-set-1471": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1471-p16-conditional-main-effective.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1471-p16-literal-native-extractor-family.json"
+    },
+    "new-set-1472": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1472-p16-conditional-upper-uniform.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1472-p16-literal-native-tower-witness-family.json"
+    },
+    "new-set-1473": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1473-p16-conditional-main-uniform.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1473-p16-actual-singleton-bottom-direct-frontend.json"
+    },
+    "new-set-1474": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1474-p16-uniform-effective-main.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1474-p16-literal-native-application-code.json"
+    },
+    "new-set-1475": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1475-p16-refitted-type-boundary.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1475-p16-literal-native-tower-numeric-code.json"
+    },
+    "new-set-1476": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1476-p16-primitive-recursive-tower-code.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1476-p16-actual-singleton-bottom-internal-certificate.json"
+    },
+    "new-set-1477": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1477-p16-uniform-coded-effective-main.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1477-p16-literal-native-tower-beta-binders.json"
+    },
+    "new-set-1478": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1478-p16-thm-iteration.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1478-p16-literal-native-tower-strict-beta-path.json"
+    },
+    "new-set-1479": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1479-p16-actual-omega-index-tower.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1479-p16-internal-empty-and-singleton-bottom-same-body.json"
+    },
+    "new-set-1480": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1480-p16-structural-lambda-fundamental.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1480-p16-fixed-free-image-original-whole-application.json"
+    },
+    "new-set-1481": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1481-p16-internal-finite-type-membership.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1481-p16-original-principal-theorem-items-1-through-5.json"
+    },
+    "new-set-1482": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1482-p16-internal-grammar-codomain.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1482-p16-original-direct-witness-envelope.json"
+    },
+    "new-set-1483": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1483-p16-lem-realization.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1483-p16-original-native-tower-type-code-bridge.json"
+    },
+    "new-set-1484": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1484-p16-characterization-determines-collapse.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1484-p16-original-native-tower-type-code-primitive.json"
+    },
+    "new-set-1485": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1485-p16-characterization-exists.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1485-p16-original-native-erase-code-bridge.json"
+    },
+    "new-set-1486": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1486-p16-actual-collapse-tower-hypotheses.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1486-p16-original-native-erase-code-primitive.json"
+    },
+    "new-set-1487": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1487-p16-internal-j-union-closure.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1487-p16-original-free-image-tuple-codes.json"
+    },
+    "new-set-1488": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1488-p16-actual-collapse-main.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1488-p16-original-fixed-simultaneous-head-argument-call.json"
+    },
+    "new-set-1489": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1489-p16-internal-j-singleton-and-members.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1489-p16-original-direct-inserted-occurrence-callback.json"
+    },
+    "new-set-1490": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1490-p16-collapse-base-facts.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1490-p16-original-native-iterator-code-bridge.json"
+    },
+    "new-set-1491": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1491-p16-calibration-at-two.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1491-p16-original-native-iterator-code-primitive.json"
+    },
+    "new-set-1492": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1492-p16-internal-nil-carrier.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1492-p16-original-native-tower-indexed-entry.json"
+    },
+    "new-set-1493": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1493-p16-calibration-level-invariant.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1493-p16-original-native-extractor-code-bridge.json"
+    },
+    "new-set-1494": {
+      "newer_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1494-p16-internal-guarded-nil-no-step.json",
+      "older_path": "formalization/verification/new-paper-set-2026-11-18/accepted/1494-p16-original-native-extractor-code-primitive.json"
+    }
+  },
+  "selected_older_support": {
+    "new-set-1685": {
+      "acceptance": "formalization/verification/new-paper-set-2026-11-18/accepted/1685-original-literal-certified-origin-split.json",
+      "prior_receipt": "1795451573473914456-9",
+      "prior_receipt_sha256": "59994fcff0e55cc366b7bf47f40577ae14a5d22d227e61334e8720623f10f4de",
+      "exact_gate": "LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCertifiedOriginSplitProof",
+      "axioms": {
+        "LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCertifiedOriginSplitProof.exact_OriginalCertifiedFromShared": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCertifiedOriginSplitProof.exact_LiteralCertifiedOriginSplit": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "new-set-1686": {
+      "acceptance": "formalization/verification/new-paper-set-2026-11-18/accepted/1686-original-literal-j-complete.json",
+      "prior_receipt": "1795451581181284122-19",
+      "prior_receipt_sha256": "4573296ec13fc4fc324b75d3ef169be208a8caa4dd3ae79d0bed721ac9a36956",
+      "exact_gate": "LogicLineages.PersistentMarking.NumberedWindowInternalLiteralJCompleteProof",
+      "axioms": {
+        "LogicLineages.PersistentMarking.NumberedWindowInternalLiteralJCompleteProof.exact_LiteralJUnion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.PersistentMarking.NumberedWindowInternalLiteralJCompleteProof.exact_LiteralIToSingletonJ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "LogicLineages.PersistentMarking.NumberedWindowInternalLiteralJCompleteProof.exact_LiteralParsedJ": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "new-set-2012": {
+      "acceptance": "formalization/verification/new-paper-set-2026-11-18/accepted/2012-p16-original-rank-measured-representative-binding.json",
+      "prior_receipt": "1795465422544495945-9",
+      "prior_receipt_sha256": "4e6932c7b8f4e07dfd09da32407a4818a613521a88a1092ee40c67c261bd85cd",
+      "exact_gate": "LogicLineages.PersistentMarking.NumberedWindowInternalRankMeasuredRepresentativeBindingProof",
+      "axioms": {
+        "LogicLineages.PersistentMarking.NumberedWindowInternalRankMeasuredRepresentativeBindingProof.exact_OpenRankMeasuredRepresentativeBinding": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "new-set-2013": {
+      "acceptance": "formalization/verification/new-paper-set-2026-11-18/accepted/2013-p16-original-rank-measured-formation-representative.json",
+      "prior_receipt": "1795465427953253502-19",
+      "prior_receipt_sha256": "15b3d3d9ee42f852426c6c49660b7bfd2f6e50187aa067a14f4f0a1b99464920",
+      "exact_gate": "LogicLineages.PersistentMarking.NumberedWindowInternalRankMeasuredFormationRepresentativeProof",
+      "axioms": {
+        "LogicLineages.PersistentMarking.NumberedWindowInternalRankMeasuredFormationRepresentativeProof.exact_OriginalRankMeasuredFormationRepresentative": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "new-set-2014": {
+      "acceptance": "formalization/verification/new-paper-set-2026-11-18/accepted/2014-p16-original-rank-measured-matched-path.json",
+      "prior_receipt": "1795465433510501324-29",
+      "prior_receipt_sha256": "358db9ed2b699ca56eab298ca509851764ca63d313ca8ad4f8d4d2a6b9466f66",
+      "exact_gate": "LogicLineages.PersistentMarking.NumberedWindowInternalRankMeasuredMatchedPathProof",
+      "axioms": {
+        "LogicLineages.PersistentMarking.NumberedWindowInternalRankMeasuredMatchedPathProof.exact_OriginalRankMeasuredMatchedPath": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "new-set-2015": {
+      "acceptance": "formalization/verification/new-paper-set-2026-11-18/accepted/2015-p16-original-rank-measured-forward-path.json",
+      "prior_receipt": "1795465465703189951-9",
+      "prior_receipt_sha256": "9ff7caf1b31feb0b751ce25da3871c28cf992821c6f7d78d3a05752712afe48b",
+      "exact_gate": "LogicLineages.PersistentMarking.NumberedWindowInternalRankMeasuredForwardPathProof",
+      "axioms": {
+        "LogicLineages.PersistentMarking.NumberedWindowInternalRankMeasuredForwardPathProof.exact_OpenOriginalRankMeasuredForwardPath": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "new-set-2016": {
+      "acceptance": "formalization/verification/new-paper-set-2026-11-18/accepted/2016-p16-original-rank-measured-selected-guard-address-forward.json",
+      "prior_receipt": "1795465498174084399-13",
+      "prior_receipt_sha256": "8f3cfcd5448caf1afd3c9216b69fd991c42b8a55dc51786b7ca7f0aaaa2e75b9",
+      "exact_gate": "LogicLineages.PersistentMarking.NumberedWindowInternalRankMeasuredSelectedGuardAddressForwardProof",
+      "axioms": {
+        "LogicLineages.PersistentMarking.NumberedWindowInternalRankMeasuredSelectedGuardAddressForwardProof.exact_OpenOriginalPositiveRankSelectedGuardAddressForward": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    "new-set-2017": {
+      "acceptance": "formalization/verification/new-paper-set-2026-11-18/accepted/2017-p16-original-rank-measured-selected-guard-address-matching.json",
+      "prior_receipt": "1795465525366725003-9",
+      "prior_receipt_sha256": "f147e3baf40738f341ea2283dbc8ca0595aa3e63041e19a9ec6b61af4a6c2ff1",
+      "exact_gate": "LogicLineages.PersistentMarking.NumberedWindowInternalRankMeasuredSelectedGuardAddressMatchingProof",
+      "axioms": {
+        "LogicLineages.PersistentMarking.NumberedWindowInternalRankMeasuredSelectedGuardAddressMatchingProof.exact_OpenOriginalPositiveRankSelectedGuardAddressMatching": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  },
+  "imported_older_paths_git_blob": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAddressAtKnownFoldProof.lean": "40fae151f00566cc0cd8132c9d79575e97f2dc17",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAppendTwoPairsProof.lean": "d76b5f6558e8811339117bdef031ed8c77133afb",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoThinLiftChecks.lean": "2c0c7ee1169e80937fd2cda3f9b93f619789df4c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoThinLiftGapProof.lean": "8fdaff6b9c705af3b4d2e06a768932f7f0c82a04",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxExchangeMemoThinProjectionProof.lean": "3d83db41e89bef7d228b405f9295f80274c62174",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxMeasureOpenThinEvaluationProof.lean": "2d0b2e813717213143a2a78ec576f5e563f07e8a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxWindowThinOpenChecks.lean": "47d922302ea39f6b1e83599a6ddfbf4aa447d620",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalAuxWindowThinOpenNodeProof.lean": "66bee3331194ab53afcbd9829e9ae9a6b0077aa2",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedKeptToTargetProof.lean": "998916f429eaf4083d126faa22c4d8c24314ba4b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedOriginCasesRenameProof.lean": "a3907008cbfc241933f0a2eb08654eb0a949758a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedOriginFinishProof.lean": "5e23780fd116851eb25c95b91a8d9e84c0a77b54",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedPreparedCasesProof.lean": "6b1150928a30d747c33fb41bda0536723381c662",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedPreparedProof.lean": "1ec32f202b9b28b9eda88051c9515f555caaba20",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedPreparedTargets.lean": "1dd51252756bb489de87a3c1600fbc2dd89fc3e8",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedSharedTypedProof.lean": "3f7c2c014c5aafb3ee0745aba93da1719ee69af1",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedSideOutcomesProof.lean": "54f9f31f5ff05cba6bff50738434fdd90b177ba4",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedSourceBalanceProof.lean": "992e2df9ff858cbbd3e1ab9dca025e66eb03a5c4",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedTwoSideFinishProof.lean": "0ba3356d50b5f5650c821b76a231c87eaa3d4473",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedUnionInnerInductionProof.lean": "c53bbc168190a2a3659363f8ebd3ea25c63bdd42",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedUnionInnerProgressProof.lean": "147ca06af908fa96eae9227ee3a1dcb45e7a3a4d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedUnionInnerSyntaxProof.lean": "f93415d838687da1d4eef9b7d6de85a45d5e7dd5",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedUnionOuterAccessProof.lean": "206c2c7aef743a73a69453573ddb4168c645522a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedUnionOuterInductionProof.lean": "6adbbb3c8221f60af4e17f8d9b47469bc4baacf3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedUnionOuterSyntaxProof.lean": "9a5d4b1a4f4113eef6a86cb1a8d6ff2ec7e1c849",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedUnionProgressSupportProof.lean": "e592079315d20287fab48c3ba24af7f4dd7d7489",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCertifiedUnionStepProof.lean": "ed352ea48313c536007b235fe19ad6e245793f78",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChangedSideCasesProof.lean": "fae1601074cffb9e28682ab63b9b11cd7c841e54",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalChangedSideFromScratchProof.lean": "e566b3c3eeed2e57b9d413d0e5194fa107051f51",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalComplementaryProjectedRowProof.lean": "dbb8c426de8cacaa368afb1522ae73eeb1585e81",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalComplementaryProjectedRowTargets.lean": "21f3285efcd21d0637898acdda4616cc550461d8",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalConsUnionReportBuildProof.lean": "d0811e6583e5a420df49406b79bf1349083ad605",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxSyntaxOpenIntroProof.lean": "6aaa2cf3b9a498651f2c5cf99aba618adb0e15d4",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxSyntaxOpenIntroRowProof.lean": "37d5117493327c82c052ce9f152b26cc41de77cf",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectBoundaryAtSharedTapesProof.lean": "fd24b940f2d634b98054ec9be238e57b76ee8e92",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectBoundaryGuardsTargets.lean": "cc0f91e2f89bba5f8fcfa1cd270f67bf73143a93",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectBoundaryNonemptyProof.lean": "22c5e6e7d832b141c7ad40f371d633932882de28",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectBoundaryOpenProof.lean": "44c978e25fb97652d8f4193e88a546f657bae0e8",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreCutProof.lean": "f5913f1df42bb6075f9f06f9250f5c6169351319",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreEnvelopeProof.lean": "daf3230bdf4acd156f139c0d24cf94db2c06f5cf",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreInstalledCertificateProof.lean": "73d20fb901ac98b33b832efd52bd25195393c818",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreInstalledCertificateTargets.lean": "df8a15b1ea9f60efc417562322f8266f299b6d68",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreIntroProof.lean": "7ccb8856084668b6c0bab50d3466eabe24ad5dff",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreNumericTargets.lean": "2fcec3b9b3d41f787bd5760f2ed749bdc39e46c9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreReinstallTargets.lean": "3321c58e78751e14983098b4f86828d7f59408db",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreSharedTapeChecks.lean": "3994f8b3247616b6d2c1ab8d45fced0f88863d17",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreSharedTapeProof.lean": "797d932460ad74d0d6c3ff8c566bd36bd95e280f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreSharedTapeTargets.lean": "0670ef02d0781fd70021721d2c4c0e4aeb8dec51",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectCoreTargets.lean": "debf188b5b7eface90d08e2370cce98a929ff7a9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedRowCasesProof.lean": "cd49ce54c82b3204b0378982a729afb12c9a9e2e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedRowCasesTargets.lean": "f321f4b0a4692d9d98ea3b8091484cff72ed7455",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedRowOpenProof.lean": "fd78969dca8d891e721a9b61bb90115473bca67d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedRowTargets.lean": "317d8b5c536bd809f6b49b411055fef2873d7754",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedScanMemberProof.lean": "41e17203109aa5ff021c787fd03df0495051e18f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedScanMemberSyntaxProof.lean": "b638552035889284f3670f4cedb720dd649dd71a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedScanMemberTargets.lean": "9d1590360785cf9ca451e240e267438153b1a28c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedScanOpenProof.lean": "afb9a8534078de628d27f132b034dd44c9c347c3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedScanTargets.lean": "6aa5faec9fa48b593ef107d036c0a74eacead7ff",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedTargetsMapCasesProof.lean": "ad6b093a4187ff87421b437ac662bce7728bb77f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedTargetsMapCasesTargets.lean": "df5de3dcdded6e58f12d78ffec0d4c99b1b5e3fc",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInsertedTargetsMapTargets.lean": "1001400b56e3df68827f42f103660440d0293ca9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInstalledCertificateIntroProof.lean": "bf04765ecd16e1c7e036c3be13cf84c2cdee3359",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInstalledOriginChecks.lean": "c4878e1b6cc9564dd5777d1d89c4100783610ca8",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInstalledOriginProof.lean": "3ddb0cbbd288abcfd327ec07ff0d194db367a734",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInstalledOriginSyntaxProof.lean": "2515e72a0037e38c91a9d499940f62cd42594702",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectInstalledOriginTargets.lean": "54d5d5c659295df8c36f5257f5ec8534df5fbd3b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectProjectedCertProof.lean": "f3fb529ef88c131742ef3b405f2361cb5f8cd0eb",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectProjectedCertSyntaxProof.lean": "f25906c96a6971588c1d0d67ba679b6542cd5031",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectProjectedCertTargets.lean": "f6b25d6c3a3697c87a38b70448a399d517bb782c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectRawBoundaryIntroProof.lean": "b4f7d55d53565051728474abf45849f7fbf3f272",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectRawSourceIntroProof.lean": "0e45e7de4ba3cff858d4ce35db6102900fc9dcb6",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectRawTargetIntroProof.lean": "095557a0bdf79c693cb4d7cc87843f98ef7bab55",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectSharedTapeMemberProof.lean": "591bca891b4a6b9ed97d81f72a011b136e176e57",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectSharedTapeMemberTargets.lean": "7929d9e1928a170cfd310b71e91e83e64bc13938",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectSharedTapeProof.lean": "f6b3ee1846508952d7a59c29deae88b9399cf1ac",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectSharedTapeSyntaxProof.lean": "c3d43dc253214a0557ed3023416a12dece1ea17c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectSharedTapeTargets.lean": "bd4b130ce62e7ba1fe3cc53977654d97547fa00a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectSourcePartitionAppendProof.lean": "ad1e80301fec7afa7926e4e86def1738df36322c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectSourcePartitionRawGraphProof.lean": "081b23159c5ff8e2a2c42f980edb17791ba6df02",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectSourcePartitionRawProof.lean": "250919fd31feb916cb1f65fdd67b4610c21bbfe3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectSourcePartitionRawTargets.lean": "a52f2e7d60e7bad84db18dcf59db8f83882cfa1c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectSplitSideIntroProof.lean": "40a7424f1b8e22e8092eef49b53619b949a644d8",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapAcceptedConsProof.lean": "6496625f7b5072724506d6537ecad40662d33e28",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapAcceptedProof.lean": "a8db91010fa4a0c63a4ecc3ef81d874d4f41840f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapConsProof.lean": "ccee3374287801b66cc46444b947455e7184fc93",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapConsTargets.lean": "7891209958fd25dadd523997194a87d5800670af",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapIntroSyntaxProof.lean": "ba9b1b066c468cf779e7c563cc15e6095739c083",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapIntroTargets.lean": "8f3f67080e8ef3ba71f5b53ef4e30bbbf532c6e4",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapLocalIntroProof.lean": "fe7774481fd3a64e6143e03602bc083523a546ff",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapOriginProof.lean": "3cdc584e85c69fc41f746d513b6be31db10f6ea3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapOriginStepProof.lean": "a02ecf3b33bb3ec45e57ee48399ec6ded5f164fc",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapOriginSyntaxProof.lean": "24859363580f6bcfadfc17b756488c89a6e92a44",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapOriginTargets.lean": "599b5f0aeb3cd6bfacc32bb063c1a25861ae1abe",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapStepProof.lean": "36f6c52541a3d8f7c2ea14006273ee318b1fa426",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetMapStepTargets.lean": "a44bdaa9b3c7664364e20f6d5225597f40d41a9d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetPartitionRawGraphProof.lean": "2c959c5539fb91e57662de5a1274839e20df6d00",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetPartitionRawProof.lean": "6d8218e840978668ec7e8ed722d08abb8332c893",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetPartitionRawTargets.lean": "29e36672cb551c216a3c23122d1f7f5172219fbf",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetRecombineProof.lean": "e90fcb0251134e81182f8186f259df9189704d94",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTargetRecombineTotalityProof.lean": "54296dbe17cb23d5574cda079b8a0896ccf58113",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedListInstallTargets.lean": "a20b7a1354e74388878eb8c817c6f93a93b41b80",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedListInstalledCarrierProof.lean": "22cb56999f3160594cf16b6a03b3d5d2a2f1eea5",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedListOpenProof.lean": "11b8b4ee054db989177b88589d403c33def78703",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedListTargets.lean": "ae4ced23e0f73bbe1cc2140da2b5c46e2b7d751a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchAllMembersProof.lean": "fa90131802ec59c03472414e41442cf4384650b3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchAllMembersSyntaxProof.lean": "f9a79955c9cc62ca0d4516bb3b3fe430e560c82b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchAllMembersTargets.lean": "9dc6a91e68fdcfd6697c6e5e048ca9abf8647ef6",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchConsFailureProof.lean": "c54e35f47e4c5ce5514398a484540ac0b831cf19",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchConsProof.lean": "fc64eb856c666154a1513e9f4155543e6ce5cba9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchConsTargets.lean": "0e6038eb24b971f99e09768cab05b57f6afb1c47",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchIntroProof.lean": "90353bf3ac609fd2ba5c06407a8287cbc2b34921",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchIntroTargets.lean": "e943ce7c0d4f9b1306bca567c1e4c5fd685adc5a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchMemberProof.lean": "5f6195d6e84b1912e57fcbfd4cff8fb0ffea320e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchMemberSyntaxProof.lean": "eca59e5b5e0a5279ed5dc0c3bdf1e0639bdac068",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchMemberTargets.lean": "755303a3b5625ee88d75f3499fd6f9e412c90a20",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchReportProof.lean": "1d51730a7548d7062d58ff949b6b93c21f3b3824",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedScratchReportTargets.lean": "108daf154e89492e6899e1be4a2ebdc7b09d2fb1",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedUnionCarrierProof.lean": "564ac27b161288d679e6c23e7b1f2f5b12e90772",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedUnionCarrierTargets.lean": "a2d80167374fee8f10ee135045d332b4e7403cf6",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedUnionLiteralJProof.lean": "c85d5b0d69e09f4019a83306a4a06919c13ebb8a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedUnionLiteralJSpecializedProof.lean": "812b32d322a9f85761363f2bf51d7210aaf8ced0",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedUnionLiteralJTargets.lean": "e684aace47d45f77378973d764948a7b309f4269",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedUnionScratchProof.lean": "b809985959b12b809d7cffd54e8946b2d7abd26c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectTypedUnionScratchTargets.lean": "18b7e30ad0d2edb0952deb821258112583257ad7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectWitnessEnvelopeOpenProof.lean": "79dcc506ad6180472ef746eb62868d55d70edcaf",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalDirectWitnessEnvelopeTargets.lean": "6bdad35da5739c271e33473b7c8755e4e0b8d0d4",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCertifiedOriginSplitProof.lean": "88e326df484fa4b035453a496c6bdb04a6df4ed1",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAbsentChecks.lean": "e9ba2a5b598030210405f2ebd760e602f33a7489",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAbsentConsProof.lean": "b69cddfaf8f1773e19e7249d392c9a7006d8b6dd",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAbsentProof.lean": "862b9a40a48a4d559a5ff30c45e29e5f3b40696d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAbsentSyntaxProof.lean": "5cae9f37f0cc8ef51c7e124fb4f8817143776a83",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAbsentTargets.lean": "843f5ae332aa17d4fbbb9daf88e919123b0c093c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAgreementBindingProof.lean": "9bcd080c876de2af418e3cf126a21e69e02b1cd7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAllQueriesChecks.lean": "d814978b33e60aa03ef65451ca0b921b9eaca37f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAllQueriesProof.lean": "d4a7ddd543877934e81ede9f486cb9ae1197315e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAllQueriesTargets.lean": "3e92a59daa2e9255aad1431cf62f1264ec904743",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAppendAgreementArithmeticProof.lean": "1758ac0bfb95c72b0d6b6092e91fef56dbd524b6",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAppendAgreementProof.lean": "27db5325a42d95222b73a4b1d82b65b90d159245",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAppendAlgebraProof.lean": "ec165ab8ce250935949ea4f04902668290ca1bcf",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAppendCoreProof.lean": "e9d81addd5b4f7d5575afbc6c23da9d9955d650f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAppendProof.lean": "466d63e866d8fac79f038c1d1bde34cc56954850",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAppendSuffixProof.lean": "0ee70b99722503cc14588c4c9ede7ad75cd3b734",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAppendSwapProof.lean": "bb8dece5f51154a9627a2bbcbec9a9e61e55bc80",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountAppendSyntaxProof.lean": "ef97c36be4ee4d16f0d98b0ec5edf8ac048150ef",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountConsAgreementProof.lean": "e1ebc7f4830f103c5d8161bb4476ada80239335c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountConsShiftProof.lean": "13db749385123375feac17f95798c5930f89cc65",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountConverseProof.lean": "7ec93556f0572b5f25395123e31fdaca5df5ccaa",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountDefinitions.lean": "bbbc2e61243c7713fd507715973bc8caf6ad58ef",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountEquivalenceProof.lean": "528f7d01c3a076d1ace7b867639610befc88dcea",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountMembershipChecks.lean": "3932964ffcee912634ce4dd24da3e897dd2791a0",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountNumericChecks.lean": "ce7ab0fb5e725b91379f4d4e0181fffc034fe376",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountNumericProof.lean": "ea6853d1ab70051ead6b106ca93e35ccf0fea252",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountOpenConsProof.lean": "7f2a10e90002755caa3b11888d4a19fdacbb6db3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountReflexiveProof.lean": "c3c5a1f88576c92d7475a3c539a7830479eca322",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountStepProof.lean": "27ee423bad2d29fe805bdc1dcbfaf2b308123b42",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountSupportedChecks.lean": "7c7c308aa1fda929bd6a7b3e701c8cb53f65cea8",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountSupportedConsProof.lean": "fc8f83bb5f02d9511de8319799851f25f49c053c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountSupportedProof.lean": "42db02d6e0ffe7779ebe4c8c32cc0212557b89ea",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountSupportedSyntaxProof.lean": "d32da6a9cbf501889f1a25e95bbfdce9ef46dab6",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountSupportedTargets.lean": "be59b4e89a8f75b146588e6b14834e476168f86e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountTupleProof.lean": "c634973c5f8673b0af6459d61da52a583b9a487d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountZeroChecks.lean": "2b895edea823d7e05f5c9ebb22f7d4ac571ee453",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountZeroProof.lean": "a901db9ba439b4897d6bcae0ec26774dfff210a9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountZeroStepProof.lean": "e5faf09451a9b097f8fde9f9a397aac4469aa95a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountZeroSyntaxProof.lean": "6d199f4b98e5d55567f3647a3bba2158bddfd810",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralCountZeroTargets.lean": "d4355f430af54c340b790020c10aa8bf0d38aa05",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralJBaseCarrierProof.lean": "0df53af7425ca64e4fe1dce1a4d69f0de010d1f2",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralJBaseTargets.lean": "7659233a11406eb6e66d76e66cc76abb26b7289c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralJCompleteProof.lean": "9094d8fb555332a55bf97f9770caf8178660530f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralJEmptyCertificateProof.lean": "5b07e608800fb6b3126e6174d0f2869194df55cc",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralJEmptyProof.lean": "a7b9d9c0af859853be90f3d615e4ec8e994fe8fb",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralJEmptySpecializedProof.lean": "dd09fe4e5001e5e761b31b02a2c0709549db507b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralOriginAndConsProof.lean": "f2814925d624da837b425d390c3a68e991eaa85b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseActualCountEffectProof.lean": "d0b1b34764fe025ac29488a98c9f4145a9149988",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseBranchFlagsProof.lean": "f66c10dcfdd80f9e86521200f3ac227770d14f70",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseBranchResidualProof.lean": "f2e935aa99f36bfbaf54c656a7bb0f3eca862b90",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseChildQueriesProof.lean": "cad831aba2bd8fb15cf47f09f59b33ba5a29bf1b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseConstructQueriesProof.lean": "c2c53437619741cb9b46c886fa77bbe052b3fce3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseCoordinatesProof.lean": "3bf5a0fdeb3af7175dbb20d6f05d2a3cd3625cbf",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseCountEffectProof.lean": "1120ee475b524cf5afc9ae6acc0813876f1c7d15",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseCountTransportProof.lean": "6febdf93f79b358c13217cb37cedf8a0befc4eed",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseDefinitions.lean": "cee81a091502f58a25f5c7888a3e272f1179a7dc",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseEffectInductionBindingProof.lean": "ab5740725e173e58b1386f020e32719cd0c50cc6",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseEffectInductionDefinitions.lean": "3153d7da59492ff07da10ef69e1e9cf3b250e882",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseEffectInductionSyntaxProof.lean": "dc4a576090b033858321b59acb25753a0ac1e38a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseFlagsConsProof.lean": "f3ccc2e3704da7f8d10645d269cbaaf2698f58b1",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseFlagsInductionBindingProof.lean": "343b37c802871b383780fe48bd81b1817b228374",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseFlagsInductionDefinitions.lean": "41a834688ec70d83924d0a7a7e6393b9f22c8faa",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseFlagsInductionSyntaxProof.lean": "350e2266041a030645ce9b77dc4bf04dc268d5ee",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseFoundProof.lean": "e7e69a17c56d0cb3adc4ed705695d3c95309e0a3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseHeadCountProof.lean": "23afbc6c03af69feda71e4848b732a154415761d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseKeepProof.lean": "4e09aa2244df4ade9f8d7b52123fa93a2be8fff7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseMemberConsProof.lean": "6943c47e149b26d3ddc793bcf8598175564ba45b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseReinsertProof.lean": "adbf150c064bd9debe146e15ec95064214547679",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseReportSuppliersProof.lean": "a5d7b900c8d385abaa051788c60796ce8bbbd645",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseSuccessCasesProof.lean": "40fc72ecdc05abb2afc6457d90dd02219629b277",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseValueProof.lean": "88bc41dfaa79b708c306f77c8c02c85676c80024",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseZeroIdentityProof.lean": "334117734bbb51ae050c1a3f786ea49d75b100a4",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseZeroInductionBindingProof.lean": "3c5a4faff8a18193f61d016303f6d04e56fee641",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseZeroInductionDefinitions.lean": "589a7d073f72e5fcf3d309bb7b304434c6010949",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseZeroInductionSyntaxProof.lean": "5a15e210a521d2ea4b0da63a9a99d04d0408fdd8",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralScratchEraseZeroKeepProof.lean": "5d59f64d196a181fcad0da4f5648be2fc0e79022",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonCapacityCountProof.lean": "60dbda7dc5d199f0165c03b1cdaa2dd020bddb25",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonCapacityProof.lean": "68952246126ad35608eb21c38193a4326ff56038",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonCapacityTargets.lean": "810c6cf50b175a8ee6e6832076f213f9e30e11b7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonOriginInstalledProof.lean": "c8d7eb62823236287f5219f2ca10173792b4b200",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonOriginSharedProof.lean": "76b13597ed2f5193a60910d0de1e1a46d7d31dcc",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonOriginTargets.lean": "ac4b544f321753616f5c0af022dcc0d457e62004",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonProgressCarrierProof.lean": "18a6a8341f30c99bba084027a8f47c9e8045b599",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonProgressLowerProof.lean": "218b00ea0846d30174a234857f9f48806345ce4d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonProgressProof.lean": "861680a12e233ae4aa9610a3d56119ebf660e587",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonProgressSpecializedProof.lean": "aad77909e7bad11ee6227fcd39fb46e8bf8663e0",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonProgressSyntaxProof.lean": "9e2c85e34bb99c553893f1946ef5c4855822e920",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonProgressTargets.lean": "b39ca1c26185443d3641b652ae4c57e1e4eddee3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonScratchFactsProof.lean": "e86f5ce3a3004c20ccd7d4dfc9f0b23a5e247a44",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonScratchParserProof.lean": "d67d58edf2dd526f30e2f8b397a867792c431c36",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonScratchTargets.lean": "6963807a20bd3b1a6c888549a8cc008aebb57943",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonTargetFoldProof.lean": "316cc7af6566644642aded7b17206014f924082a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSingletonTargetFoldSyntaxProof.lean": "114b38c9a30dcaba8099272c2f86c39094287895",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSparseJFoldProof.lean": "af7447f17762d58a1edf9480a16311163a3c38aa",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSparseJFoldSupportProof.lean": "6404511a0fd5244895a435369b9879e167c71d8a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSparseJFoldSyntaxProof.lean": "654f060349a26434660d2e8169a53a4b253482ee",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralSparseJFoldWithEmptyProof.lean": "27538d577110f9ad7d6ec87884c28202a54aa961",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalLiteralTypedPartitionProof.lean": "4bcb988d7284ff861010db835a071657cd1c1230",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredExchangeThinDefinitions.lean": "edab30d8b031d460ef01ebd86373257311c04226",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredExchangeThinNumericProof.lean": "c46251d6803cc12a4ea8d69491ea5b51868fe928",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredExchangeThinOpenChecks.lean": "dd5d89a7e80ae5090fa6a9629959836c9f0ad20f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredExchangeThinOpenCompareProof.lean": "b1f41150d772d0b87f6b8393cd522e57a7c6dfb7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredExchangeThinOpenComposeProof.lean": "581381172e39722c45865f61e694287fa6efcfab",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredExchangeThinOpenParentsProof.lean": "c6c515b4aa44935536add9d3c0dd36be969026b7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredExchangeThinOpenTargets.lean": "397d7ffa37372d43fcb6845a07d56a03181506ea",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredFormationRepresentativeProof.lean": "39b2fd04fde725895b535dc05821b03b1e082c54",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredPairedGuardedThinNumericProof.lean": "edce51a8d025ce83610ba5ed3156579bffd8c3bb",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredThinEdgeMeasureProof.lean": "17a2f06019b9cca45ff6d87621b3219e96439d9a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredThinEdgeReversalOptionProof.lean": "8295ea1f87ebd67f323788852abf4ff6609739e3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredThinEdgeReversalProof.lean": "085eb785cce0d9e0efa2d8f3fdf0e1ef375bf870",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredThinEdgeReversalTargets.lean": "67dff4de7b0d3200e78f28d919e16052703c03d1",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredUnrestrictedApplicationLeastStepProof.lean": "7a12dbdae60de96c741768a09f28a5492f13c691",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredUnrestrictedAuxiliaryWindowProof.lean": "893f4ffee868785195b9e4bf1104bdfba8dd4f13",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredUnrestrictedFunctionEdgeProof.lean": "8999f61164edc975efb601c012cf4febe463b648",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredUnrestrictedRepresentativeEqualityProof.lean": "acc79e008164fa568d3835a266cf711b9fe8386e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredUnrestrictedRoundApplicationProof.lean": "fb52336b2ad70b6985ad3748d867fe138febbbb6",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredUnrestrictedSelectedChildProof.lean": "037b36df829e19c231795986459b4efe117551cd",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredUnrestrictedSelectedFormationInputsProof.lean": "67c982edd82ac455024df22bd04c859490d3cfd7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredUnrestrictedSelectedFormationProof.lean": "b96eaeccecdf85bdef45eda9d08198dfc469218e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredUnrestrictedSelectedScratchAuxiliaryWindowProof.lean": "1ad43b22d49a3967bfc4640c5c3718f4cb623407",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredUnrestrictedWindowDefinitions.lean": "af40a6dca8e24256b5f9b7c4ecfd5380db11df30",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredUnrestrictedWindowIntroProof.lean": "99ca17668686d24372cc47ebb76aefb8bfa58431",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMeasuredUnrestrictedWindowReportsProof.lean": "fdd8a1824db028e93bf91e9be025de31d24eb09b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOddProgressiveInductionProof.lean": "93ae5c44d04c1e0113f11c89cd0efdc6b2560fab",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOpenOriginScanBranchesProof.lean": "94f13d44926a48ecc00fbcb98f21d94b24cac5a0",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOpenOriginScanBranchesTargets.lean": "ace1e7aa18dd05c88373648efb5266a32bb324bb",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOpenOriginScanIntroProof.lean": "cb3ca4a617393c4e519b69c02f32d0ed12c7afa9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOpenOriginScanIntroTargets.lean": "6ca0c5e867e7c73bd3ef15ef882d9848d878dc0b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOpenOriginScanRoutedHeadProof.lean": "56fcd996be7b934ab44bc851f9fe89a0d411956e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOpenOriginScanRoutedHeadTargets.lean": "b3a7aae135b52fe938eb9da1f84b6f219973a46c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOpenOriginScanRoutedStepProof.lean": "20591fa482aab00b851c79f80e81769eddaffa2e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOpenOriginScanRoutedStepTargets.lean": "9e9e87e74165bbca48bf36911f9351bd018c3bbb",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginBothRemovedNonemptyProof.lean": "8fbd21664c66a9a838e33bb19ea3e32d3a177782",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginBothRemovedNonemptyTargets.lean": "517f2ed72717a41c2245bdca2d882c16bea7e763",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginCountRouteProof.lean": "b315f7fd2c3e9ca51450a855e7922a3627340b9c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginCountRouteTargets.lean": "4e3b0a5a12ed7455464ce3d4e561cc6d9ccc04c4",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginEmptyRemovedProof.lean": "a7964a17b97a14943b38d3191a1935ed3c914227",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginEmptyRemovedTargets.lean": "98a8321854be39253783f667b59d2f0024c7b96d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginFilterConsCasesProof.lean": "9966c0021cae148f802b01e4cd7fd3852e8c65ae",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginFilterConsCasesTargets.lean": "ac8789363165ca71ad25f08a0087a37eae968dcf",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginInsertionAllocationProof.lean": "a047b6c675235b829117a75abc076fcdf8876614",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginInsertionAllocationTargets.lean": "686607547fbf05262f2139e8f747ad807368997e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginInsertionRepackProof.lean": "bb9dd06e7ddc99a8c8e1859a03215e3d65f815af",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptBinaryChoicesProof.lean": "bbb0eb906c41ac956716e24a98243921ed7095fc",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptChooseSideProof.lean": "301443097318518f0aaf99ac2a345bd8be19dcfd",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptCompleteProof.lean": "b3155210ac2e45ff91c50cba205a6aa6440df273",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptInductionProof.lean": "81a69e917b0af9e06598d49688e993bbde1abf1a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptInductionSyntaxProof.lean": "cc6cd5f9e99bd6cde1729735f649b2f354497382",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptLeftFinishProof.lean": "9b63d0277360e990ea73fe15b639e1c2272e8978",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptLeftRelocationLocalProof.lean": "66b793650b49d674052291287c678f88bb9d4e04",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptLeftRelocationProof.lean": "7e1efc258cf8780ee090f793bacf6b4f9c1fa5b2",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptNilProof.lean": "911bdb3ae758fda10677d0c588159a2c12a5ea44",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptRightAdapterProof.lean": "6868d81f09dc5270edaf6e455688e18c403fb962",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptSplitCasesProof.lean": "d3b32e20c1b4adc459b18444a8f9ff11d4189837",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptSplitTargets.lean": "2ebdad48823444389d930e4849f1fbd6e7ff7431",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptSwapProof.lean": "ff079e0b9ad3c8e76c0833f14d09fa582591c140",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginKeptTailTransferProof.lean": "02bb2462c576567d89e20c590ab45a3d2c9783f1",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginMemberRouteProof.lean": "55818822008e4d04d561446147212208459c7e28",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginMemberRouteTargets.lean": "f29e88c35cf6f20ac2789f8d8ce4904717c518ec",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginRowRecheckProof.lean": "445b667596841a8d54b03dec76a3ede2f5f5193c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginRowRecheckTargets.lean": "8038a2b2d572247df6d28a5c96ce46653c80e979",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginRowsFilterStepProof.lean": "5087c77306e0e769545b2bd40aa4a0965971550f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginRowsFilterTargets.lean": "c13b0bfc772c062c3f5c34c88eb941877071a352",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginScanChooseFiltersProof.lean": "248eb72816b8549ebd0309fee114d229968133b2",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginScanInductionConsProof.lean": "949b183852b5d36866a715529c3a3a9ccb4908f3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginScanInductionConsTargets.lean": "304b3630143a9cd2d3a675e8f62df7d7ab8dfebb",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginScanInductionProof.lean": "bdba3b4fc482ad45aabeec8ad164b14bbf95631a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginScanInductionSyntaxProof.lean": "f0a2dd82dd20c8e43e836f2987a2437c2b9cbfd5",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginScanInductionTargets.lean": "8ab786fe06254717cef74fe930475ff9c11af8d5",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginScanNilProof.lean": "3a8f294662f275b55a62a38ad2a631df2984f620",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginScanNilTargets.lean": "91d1607ff90d9d2edefcf2ac70e8a97f115e7245",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginUnchangedAlignProof.lean": "0d98956c4e0a8cfa7e3ea9421448c2368642ca59",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginUnchangedAlignTargets.lean": "768f4b7a617cf64458b1e7f09501a9ba6ef1c49c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginalApplicationFormationInterfaceProof.lean": "ccf62dd554f7cca1f4591622d8bf728f62a80bf9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginalPairedPackedLeastChecks.lean": "72e48f49fabc542813ff4dc460bd323e9db5bece",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginalRawConsParserReverseProof.lean": "824fd9def164b2b54d608f0775e9358ce6b4fef6",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginalRawConsUnionReportThinProof.lean": "da839a979ee2608d2d008bf4aa58715ef8150bf9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginalScalarAddressWindowProof.lean": "25486f31a0b3aaefd68c6dd0dc8ba791bb56f6f4",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalOriginalSelectedFormationAtGuardProof.lean": "2ce74b679ae87c910b48a05db8f835193e85f085",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalPairedProjectedConsProof.lean": "bbb3104dadba24e3fb924a0c9fe9c079f6d52793",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalPairedProjectedConsTargets.lean": "c692bd0758a188e33fada745db1202dd73d71cbc",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalParameterizedAddressPositive.lean": "9d32ed1c9452e2c61bb8bf5f4f9a553e6992ebda",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalParameterizedAddressPositiveOpenCoreProof.lean": "a837b759d1aa99830b3ab4e726424b329f66475d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalParameterizedPositiveFold.lean": "0dfd4aad68e26dba28ce89da2c135e2c4915f1a7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountBranchProof.lean": "9ea893f2b4437d738b2efec9e2fa0288df4caf04",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountBranchTargets.lean": "7c6145bd89e977aba9a24da9410ea3c40e81d337",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountCasesProof.lean": "f1a6329c2832be2218aa937708e3849c99b1cc78",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountCasesTargets.lean": "bdc2e21422c7ec786ca268bd1a9a117e6d4c6082",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountEitherSideProof.lean": "3d8ddf68169b64fa320f5d6dc7222fe165681a88",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountInductionConsProof.lean": "d44c1e242ccb6dce652a884356ca1a4086e6cbc9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountInductionConsTargets.lean": "1d60b5c59dd4d66798b39b395cbcb34688741774",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountInductionProof.lean": "8e458b1e9f5945834ba33b369fca2f98b2d44e63",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountInductionSyntaxProof.lean": "0d1b08bd8765b81403d3082839e3fb49b8efb249",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountInductionTargets.lean": "a4e7773fbfce7b7e2844e36451c5e54a1bbea4a2",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountLeftProof.lean": "c4cf6c75c5dab2a755b5f981cafee4b85f7a5c66",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountLeftTargets.lean": "2ebfbc05e747450a6e3504f901da16f46f4dba76",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountNilProof.lean": "91dc2caa8b0cf176cecdba5374b3a02bf6e2cd3a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountNilTargets.lean": "d0c8701f3643aad791afaeee7fa579e0efd6a58d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountRowStepProof.lean": "5d5dd4ab14aa8f6c3d841f9b7d5180977ed98f31",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalProjectedCountRowStepTargets.lean": "2677343f71e1122c8712a27de62aee7706f71fc1",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRankCheckedLeastDefinitions.lean": "77af0baaf91c31466365fc0381062d08754d0c13",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRankMeasuredAuxEdgeProof.lean": "9195812a37bb47be45affddb53a9d581f89361b7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRankMeasuredExchangeDefinitions.lean": "27f494bec09a2a8ceb781cf5a459589fdc0eea1b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRankMeasuredExchangeOpenProof.lean": "825c6c6d01d6f5ba3fb8cb564b492e8636e16729",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRankMeasuredFormationRepresentativeProof.lean": "30aa159461ad53e3bcbde2f1d7b736a92e117808",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRankMeasuredForwardPathProof.lean": "f14ef8d9edf765556150315cb435434a9a20ee5a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRankMeasuredMatchedPathProof.lean": "05ea3b9fc881f3cfe1427a4afe71f57a7fc3a63d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRankMeasuredPackedEdgeComparisonProof.lean": "f699dffb702c159dd9adada623e5fb3503a523b9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRankMeasuredRepresentativeBindingProof.lean": "8f9c968702b35165621bcc80e6c53e4e50988781",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRankMeasuredRoundApplicationProof.lean": "eb0c023835ca221f5e139f8e0db8fe4e8b8ba3a8",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRankMeasuredSelectedGuardAddressForwardProof.lean": "9168f30a2aeb3510f3e3dbb9f38c9a3f1a98e3a5",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRankMeasuredSelectedGuardAddressMatchingProof.lean": "5aefd018edb3c5743b306f324a5938760b91b786",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRankPartitionedAddress.lean": "c99db391a37b436ab136dfec89ebfe2bbd844122",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRankPartitionedAddressOpenProof.lean": "61d19bf7656d65d7676908f96d9ad8e5c129c53b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRawRepackCasesProof.lean": "3c66d89870c0882dedf993867a6ae2757b14f202",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRawRepackProof.lean": "bae7b5fb4992eddcea2164fad02f498c52508307",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRawRepackThreeProof.lean": "ffed70109bd2f1acb7fd459e7fbe711d47fe9b71",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalRawUnionFromEquivalentPartsProof.lean": "8f9de96d9536edd9d5f9fd0a5eeeb2de8439ca98",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScalarSingletonInductionProof.lean": "d882f6e4de324f97ff35ac06a16427f97e045c77",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchInclusionThinProof.lean": "a5c0403b518ae4cf5ba4eea01167cb297227a660",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchQueryCasesProof.lean": "1b4319360949c388f8fbb09aa575829af92ca741",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalScratchSideSeedProof.lean": "c7ea784f29e6c5894af27edcaa2d4ee8e63c2bc7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseCanonicalAddressFieldsThinProof.lean": "bc3490e00863edcc25837bec3652574bd5ff2114",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseCanonicalAddressThinDefinitions.lean": "c8600e0a1a5608be68b3c3d85baaf2fc9714eb41",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseCanonicalCoordinatesLiteralThinProof.lean": "a29da44964ecbe38db8c5d197e7cdfa599618062",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseCoveredWindowOpenReportProof.lean": "1f54a8419ae88e3cad054b221ed0b6da05fbcad2",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserThinMalformedProof.lean": "96c08803b842880054dea695acb310b09b205c8b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserThinOpenConsProof.lean": "b83887478f63fbf6aa742c8227f2aa68d64e1085",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldParserThinOpenStepProof.lean": "dbe8ae395c37f0bd1bb04c13de645b16301cc4f6",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseLeastSubstitutionThinProof.lean": "6ad32d6303be2759b17c9b0aaadd46bc4a204138",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParsedFoldProof.lean": "26f22a98a4d0f9096dceda7abcaa8feb1baaf5b6",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParsedFoldSyntaxProof.lean": "faec9eb640a7526777b2135efced7883c360f7c4",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParserDropProof.lean": "f50f3c9eee58361d774e5f37c73accc1a96ec951",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParserDropSyntaxProof.lean": "cabc1a6178392bf9af1e3bdb7e3ded52e9dee218",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParserLookupProof.lean": "b84d93250ea8135eaff017f7b78b24fac89397ba",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParserPositiveCasesProof.lean": "c1321069cd808ad775667533cd8203c1364ce0e3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParserRawCasesProof.lean": "3d0351f61fcc0d77c355e783eb3f9ca7061228e3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseParserTableLocalProof.lean": "05bcd989e31f7445fba158c6879bba1d36c4522a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinActualMembersPrefixedProof.lean": "882a0d73d5c03cda0dc13324761a140b812736a9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinActualMembersSnapshotProof.lean": "333f632a120a22bb99c3b09509e769d7b209bbf8",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinApplicationHopBindingProof.lean": "79cddc3eff7569483d3807a7c3f329490ebbe3ed",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinApplicationHopChecks.lean": "6bb8309637ec4f7c476454baac9f17021da4ebc0",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinApplicationHopTargets.lean": "9a853a58a46a7f20a17035edba454647a8f43723",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinFormationRepresentativeSyntaxProof.lean": "84d28b3edf47021da55372140d48af0d0becc954",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinFormationRepresentativeTargets.lean": "8ef2d246db204e56dfbe7fed5959417e22c3d797",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinFuelBudgetChecks.lean": "79a13d899b7381c2d07157215589c689ccb23d16",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinFuelBudgetCoreProof.lean": "4f37149cf52a9247f2ba95163acc2b7a7a7db109",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinFuelBudgetInductionProof.lean": "19a9c6041b2a9918bf653f30c4794df530799cde",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinFuelBudgetSyntaxProof.lean": "864dd09448a648574df05bbde08e7e4059bc8de0",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinFuelBudgetTargets.lean": "8c53ca74e8974cb42a8eb1c117e45d693ebd0556",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinGuardedEdgeCoverProof.lean": "99424bb833c79e616551cd4ca7f2a89883e01ccb",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinLeastRepresentativeApplicationProof.lean": "651729cfced0aad44d0e3a99a1ad73a863671cfa",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinMatchedAdvanceChecks.lean": "32d2e9ce67b3298bf68faf9c9dbb31b215fc6ca1",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinMatchedAdvanceCompositionProof.lean": "3ccb3d0c72498c9fedc25abb7324708e99d90bdb",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinMatchedAdvanceTargets.lean": "0fb2d6c3bc7934cb5021d0d2687f857b09e74014",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinMatchedCallsBindingProof.lean": "d1f3b112f655179167dc03f087f36e11f5344fad",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinMatchedCallsChecks.lean": "f8be8e2b2db581a6a21ea16a5e9e139a13830383",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinMatchedCallsTargets.lean": "42e048b94348d9f0f870057dd2b82369824d17e8",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinMatchedForwardBindingProof.lean": "3f3c49968f2b352bdc9431b4cdd4fae8009a4f49",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinMatchedPathChecks.lean": "2ae4a262a864bd65c55bef4afb0ae7a1a7abd538",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinMatchedPathConsProof.lean": "d8c034011e88bd25101d0458dda255dcc048a03c",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinMatchedPathInductionProof.lean": "c9d1470541cfe42e28d8b3002047c02b0a960393",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinMatchedPathMotiveProof.lean": "a4e2e29941f249011d123ea3ac0d9613f2bee411",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinMatchedPathTargets.lean": "669047ec4f77c14df1c5e4eb91a3c8e96bab2afe",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinMembersClosureChecks.lean": "f6783e2bf2ff926a1dd4817903c42b3efca83d84",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinMembersClosureTargets.lean": "c94d54d9c137b779b6bb2f9afcc1d20ebb5fdf8d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinPackedEdgeMutualSeedProof.lean": "f3a5a73955f5436c2eb536348430668d2019ada1",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinPackedPairState.lean": "952caa63df7fcd302239c5557ec916087c8c88ca",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinPackedSeedReportProof.lean": "180fef65c7440599b11903951095d0a6766672d0",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinPackedSelectedMinimumProof.lean": "46a9adcdeb65ffe7354e286c8d6b399360c356c1",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinPairedLeastFromCoveredWindowProof.lean": "0ea7338a3db222cab13690890a3934862921aed5",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinPairedPackedLeastAtPoolsProof.lean": "1dfc372b4391fc711f9f9b924ec9d0b954565e53",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinPairedPackedLeastProof.lean": "87a6fa62a3ca5312ab186c1c61d3c9e60dd4ff3e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinPrefixedPackedMinimumProof.lean": "e92d10e8b4438be89b305a8c92b5334ae26054bf",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinPrefixedRoundsChecks.lean": "2c3db3d8e27143ec45985f254accf43f69cf9558",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinPrefixedRoundsMotiveProof.lean": "0cae2799c0e2e476fcd2816bd135e240b01cb26f",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinPrefixedRoundsStepsProof.lean": "5667fa52e81b60123208406cf8e07b04f40d9331",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinPrefixedRoundsTargets.lean": "1704c5fad698b18a4fdae4c7b60274eb739eb77e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinRoundAlternativeChecks.lean": "911b5f820c9e9bf0a00a24bef5a87607c24f08bd",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinRoundAlternativeTargets.lean": "40152aa3df314dfc35041b8f83ce703511526827",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinRoundBudgetChecks.lean": "25502443e6e707ed9203443c3c459bbbc1964c83",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinRoundBudgetTargets.lean": "ae208b80c6910f5a8ec3f346e8b479fd620690c9",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinRoundChargeArithmeticProof.lean": "cf5550b5ff341834366dde550a5918cfb809a075",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinRoundChargeChecks.lean": "a478470ebea3e016bc737cf09fd898ff30d03dc3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinRoundChargeTargets.lean": "a1299513c250fbe669352229279f1a0025037508",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinRoundExhaustionArithmeticProof.lean": "46e85667c9a6272f8eb94b0ae5d4b9af0247a632",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinRoundExhaustionChecks.lean": "bf3698923ef1cc88ce3b0a36b950f86c8ef1e359",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinRoundExhaustionTargets.lean": "0f53baa956aec0306005f86820164974537dd9b7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinRoundStabilityChecks.lean": "1b907f63b25aabb75fac80502262a51465aa537d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinRoundStabilityTargets.lean": "8fdeb4688aa20a5e2545b7208ef7609c05a3bf93",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountBoundBindingProof.lean": "230d3e6f7c0f8d7bfca5e00021161ef6771e1261",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountBoundCoreProof.lean": "78e86bec43ffe67f47fd75990416eeeb478c0d16",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountBoundDefinitions.lean": "9ff6023f466a70b0ff88ef951531d199ec342e5b",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountBoundProof.lean": "c4b473ac1e66cd8d2d56cdce7b99537a77fa537a",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountBoundSyntaxProof.lean": "1436c98794bd43a7a07ac51a8e1f7909fce201a7",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareBindingProof.lean": "ce7fe8d2c03617d2a40a3c620a3828ee089f849e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareCoreProof.lean": "fe1c1e996a31eec3a3ffc131deed9d8a4ff9596e",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareDefinitions.lean": "913ea077b149e7ea04ed9edacdd2421b7c761e6d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareProof.lean": "b4994513dd6b61c2102c45f2ebcdb8b2816353c0",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareStepProof.lean": "695169c52e36a7a0af3656b385d381aa06ffc6f8",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountCompareSyntaxProof.lean": "7741295c61f17624ec3786f749745367e4c1fdb4",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountDefinitions.lean": "3d98fd7242fbdf55c1f5954e314dcab71aca79c5",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountMemberProof.lean": "cb38ca14162120977e3bc6f25ae8136c517a4ca8",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountOrderProof.lean": "a8e146649c2798c101e167b8405ad24957a43fbb",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountStepProof.lean": "55c92c10172b332769d3db7809d9dd269fa5f4f3",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalThinUncoveredCountTargets.lean": "dc106728503fd9d039c1f0bcd64bcb7ce3d41865",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalTransparentAuxRankOpenSuccessorProof.lean": "81c8627d2c56144625fb7ab53ad6915838504802",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalTransparentAuxRankOpenZeroProof.lean": "550db85e682afea136b4ad4cff430c7f71d1a8d5",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalTransparentAuxRankTargets.lean": "77ae0574196f574cc838b594fd47bce97ab28e6d",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalZeroRankAdvanceDefinitions.lean": "707e738606e8e355827623fbfc4ffc68b90696c1",
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowNeutralSpineRankAlgorithm.lean": "2575dceec0bada0aa9ddf8f8353b89406122e1b0",
+    "formalization/verification/continuation-2026-11-23/1685-original-literal-certified-origin-split-native.json": "73458fbeceb0b7bfc2fc7d9db6cc682c4b4c2e54",
+    "formalization/verification/continuation-2026-11-23/1686-original-literal-j-complete-native.json": "0d8dba490947a5c796f576b1fe085f3a60f371c1",
+    "formalization/verification/continuation-2026-11-23/2012-p16-original-rank-measured-representative-binding-native.json": "b1fa1d8f59887dd6ad8f6452ef6684c7d2c9c380",
+    "formalization/verification/continuation-2026-11-23/2013-p16-original-rank-measured-formation-representative-native.json": "3e8f79a10906430829926e4ce0c9f996236ad2bf",
+    "formalization/verification/continuation-2026-11-23/2014-p16-original-rank-measured-matched-path-native.json": "8b17b33b670f31ca41d8c7e04c978e5f7bdb735c",
+    "formalization/verification/continuation-2026-11-23/2015-p16-original-rank-measured-forward-path-native.json": "cef79c3b3a5256c9fd33c2be04b04df0d3b96381",
+    "formalization/verification/continuation-2026-11-23/2016-p16-original-rank-measured-selected-guard-address-forward-native.json": "f492d95e8c8f82bd4c1cabcc3970aacfd95898ce",
+    "formalization/verification/continuation-2026-11-23/2017-p16-original-rank-measured-selected-guard-address-matching-native.json": "23efd46d5e414907335c890811b171bea5f416f3",
+    "formalization/verification/continuation-2026-11-23/P16-LITERAL-SCRATCH-ERASE-SUCCESS-CASES-AUTHOR-MANIFEST.json": "0b7faabaad7c0846c7508e3b6bd3b34ca6ac278a",
+    "formalization/verification/continuation-2026-11-23/P16-LITERAL-SCRATCH-ERASE-SUCCESS-CASES-REPAIR-01.json": "2017fdc71a9a2f3d894d07071790795da1cacf45",
+    "formalization/verification/continuation-2026-11-23/P16-LITERAL-SCRATCH-ERASE-SUCCESS-CASES-REPAIR-01.patch": "6bd68284542615392dac6f55cb0ca149876c370e",
+    "formalization/verification/continuation-2026-11-23/P16-OPEN-ORIGIN-INSERTION-ALLOCATION-SOURCE-MAP.md": "a8b5356dde9e984645f2b460e033790ab8d2a56b",
+    "formalization/verification/continuation-2026-11-23/P16-OPEN-ORIGIN-UNCHANGED-ALIGN-SOURCE-MAP.md": "79bafec70a037297aa1354391542ee5ca15b7056",
+    "formalization/verification/continuation-2026-11-23/P16-OPEN-PROJECTED-COUNT-CASES-REPAIR-01-SOURCE-MAP.md": "a21830aa7e4e28d067e284263d4ce7facc255b12",
+    "formalization/verification/continuation-2026-11-23/P16-OPEN-PROJECTED-COUNT-CASES-REPAIR-01.json": "cacaf246c5452ea4b641d8d4e997e563455b9d57",
+    "formalization/verification/continuation-2026-11-23/P16-OPEN-PROJECTED-COUNT-CASES-REPAIR-01.patch": "f95943efa2bc079d40e6f4919c4c039364dc3b16",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-DIRECT-BOUNDARY-AT-SHARED-TAPES-SOURCE-MAP.md": "7c8c8b9b630e1e9dc4ef09d6f215b0648f40bbed",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-DIRECT-TARGET-RECOMBINE-TOTAL-SOURCE-MAP.md": "57aeef60c695c1fe928ac1283c34e7ef9db3c6f7",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-KEPT-LEFT-FINISH-SOURCE-MAP.md": "8ddc1cbb04571e9ce0540337c597de8969106c76",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-KEPT-RIGHT-ADAPTER-SOURCE-MAP.md": "32fe8694a54a0129760473d0ac18293d9a738062",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-LITERAL-CERTIFIED-ORIGIN-SPLIT-SOURCE-MAP.md": "bd348b995a52a12b280401b73ae000fe9dff42cb",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-LITERAL-J-COMPLETE-SOURCE-MAP.md": "29a8ed4c7f887d4e78a40d7383e0dbe72565f9ad",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-RANK-MEASURED-POSITIVE-PATH-SOURCE-MAP.md": "7f1fb9ee6b053d50f6c11abc106a2a4c9360012b",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-RAW-REPACK-THREE-SOURCE-MAP.md": "dcf003c94d71cd65baf42b1ec0320402181c4221",
+    "formalization/verification/continuation-2026-11-23/P16-ORIGINAL-SCRATCH-SIDE-SEED-SOURCE-MAP.md": "1d409027ae2981a5d348ca3b259edfb8a901f9f0",
+    "formalization/verification/continuation-2026-11-23/drafts/CertifiedPreparedTargets-repair01/CertifiedPreparedTargets.lean.failed-source": "cff8e7ae4bcc633d6f2a3c5387be7ade1eae7adb",
+    "formalization/verification/continuation-2026-11-23/drafts/CertifiedPreparedTargets-repair01/direct-supplier-imports.patch": "fb53b2eddaed6f445c8642a7275721d358104e2f",
+    "formalization/verification/continuation-2026-11-23/drafts/CertifiedSideOutcomesProof-repair01/CertifiedSideOutcomesProof.lean.failed-source": "645fd52c21ab5d202bccb3ca282f537971ac4f93",
+    "formalization/verification/continuation-2026-11-23/drafts/CertifiedSideOutcomesProof-repair01/exact-unary-and-outcome.patch": "e90e02e135e77eb32948dfaca0793dd656b2a1dd",
+    "formalization/verification/continuation-2026-11-23/drafts/CertifiedSideOutcomesProof-repair02/CertifiedSideOutcomesProof.lean.failed-source": "db995bbc518e0c2b4cabf0f0860e24674ed0c69b",
+    "formalization/verification/continuation-2026-11-23/drafts/CertifiedSideOutcomesProof-repair02/exact-certificate-syntax-open.patch": "026dd814f631f51ed66617c88c06ffdb9ad43678",
+    "formalization/verification/continuation-2026-11-23/drafts/ChangedSideCasesProof-repair01/ChangedSideCasesProof.lean.failed-source": "67ffb7971f9447799c8620324061c1f3c4e1840e",
+    "formalization/verification/continuation-2026-11-23/drafts/ChangedSideCasesProof-repair01/leave-physical-graph-folded.patch": "a7719234b1cf286dc3fc010c4a734e42b5081c5b",
+    "formalization/verification/continuation-2026-11-23/drafts/ChangedSideCasesProof-repair02/ChangedSideCasesProof.lean.failed-source": "66519732523433be944709e30e466f402c951189",
+    "formalization/verification/continuation-2026-11-23/drafts/ChangedSideCasesProof-repair02/focused-proof-repair.patch": "a2c177fb5d4a048fa34579da802c3ab8183e994a",
+    "formalization/verification/continuation-2026-11-23/drafts/OriginKeptChooseSideProof-repair01/OriginKeptChooseSideProof.lean.failed-source": "431bbe1950f5d934d1647e90eedada7614f8237f",
+    "formalization/verification/continuation-2026-11-23/drafts/OriginKeptChooseSideProof-repair01/focused-proof-repair.patch": "aadd6638f52b010d4b1ca5b12b83f425314cc6fb",
+    "formalization/verification/continuation-2026-11-23/drafts/OriginScanChooseFiltersProof-repair01/OriginScanChooseFiltersProof.lean.failed-source": "41c4659a55b85fd63c07637173c687b181041e66",
+    "formalization/verification/continuation-2026-11-23/drafts/OriginScanChooseFiltersProof-repair01/direct-original-supplier-imports.patch": "902059af308d2726bf98e9536612ec8f9e49c308",
+    "formalization/verification/continuation-2026-11-23/drafts/RawRepackThreeProof-repair01/RawRepackThreeProof.lean.failed-source": "1560dc5a83b49902acb48a7881cbafb30ffeddf6",
+    "formalization/verification/continuation-2026-11-23/drafts/RawRepackThreeProof-repair01/exact-positive-graph-unfold.patch": "6eaa6b982f077fa00e16de12dae4e65d49fcbb11",
+    "formalization/verification/new-paper-set-2026-11-18/accepted/1685-original-literal-certified-origin-split.json": "d810d498284ca176de39d20c3f0bdf019a4b1ad2",
+    "formalization/verification/new-paper-set-2026-11-18/accepted/1686-original-literal-j-complete.json": "ec96601b4274a6cced53e9e67b632dc4060ddc43",
+    "formalization/verification/new-paper-set-2026-11-18/accepted/2012-p16-original-rank-measured-representative-binding.json": "d96d9119e2cd31a287390064256185fa1d05625e",
+    "formalization/verification/new-paper-set-2026-11-18/accepted/2013-p16-original-rank-measured-formation-representative.json": "56bd1ec854d8dc18ab8ff19adfc0261a8001abcf",
+    "formalization/verification/new-paper-set-2026-11-18/accepted/2014-p16-original-rank-measured-matched-path.json": "3bf8d20e2c68b1336c3b30225cde0cbcfbbd9063",
+    "formalization/verification/new-paper-set-2026-11-18/accepted/2015-p16-original-rank-measured-forward-path.json": "350181fabd8f526280974304dbf70abf9eb6b550",
+    "formalization/verification/new-paper-set-2026-11-18/accepted/2016-p16-original-rank-measured-selected-guard-address-forward.json": "77f8669f1b76bc0e0b95c7a6e3006e5dc791ad14",
+    "formalization/verification/new-paper-set-2026-11-18/accepted/2017-p16-original-rank-measured-selected-guard-address-matching.json": "4669e9eaf7d0435bc90f20d9a022694eda051c84"
+  },
+  "retained_newer_numbered_evidence": {
+    "new-set-1435": {
+      "acceptance": "formalization/verification/new-paper-set-2026-11-18/accepted/1435-p17-thm-arithmetic.json",
+      "native_evidence": "formalization/verification/local-fable-pair-2026-11-22/evidence/1418-p17-closed-block-decision-native.json",
+      "evidence_sha256": "46ac806173bfe82b0e2b0f4345d87e7f6cd21ad929f8422fdcd794de2d604557",
+      "native_receipt": "1795387043908318394-3159191",
+      "native_receipt_sha256": "5d9ca81a3bfbe7d5b56f1bac127ea993924617d4325e43e8d44bc6ac0bcc0f97",
+      "exact_gate": "LogicLineages.PermittedControl.StageCallbackGuardRenderCloseProof",
+      "historical_source_pin_overrides": {}
+    },
+    "new-set-1436": {
+      "acceptance": "formalization/verification/new-paper-set-2026-11-18/accepted/1436-p17-thm-ground.json",
+      "native_evidence": "formalization/verification/local-fable-pair-2026-11-22/evidence/1428-p17-ground-comparison-native.json",
+      "evidence_sha256": "437b04ad5bf74722701a48ceff63cf7ded01661a50db6b2fd4bb8d807d19016a",
+      "native_receipt": "1795388718263284980-3166116",
+      "native_receipt_sha256": "f84225320b4fb0c21cd194048d37111dd964f7d88480e17b905bb181411af5f7",
+      "exact_gate": "LogicLineages.PermittedControl.GroundComparisonProof",
+      "historical_source_pin_overrides": {}
+    },
+    "new-set-1451": {
+      "acceptance": "formalization/verification/new-paper-set-2026-11-18/accepted/1451-p17-thm-main.json",
+      "native_evidence": "formalization/verification/local-fable-pair-2026-11-22-round2/evidence/1445-p17-uniform-main-comparison-native.json",
+      "evidence_sha256": "d269238ad35b2877b6584835e61fb091a8afcb401a1aa77696be46c750aac3a5",
+      "native_receipt": "1795399023916468157-3254750",
+      "native_receipt_sha256": "80275dcfee8d3eac5fa1d78ea63141fe57ebf4900aa18c97576b2db0d909935d",
+      "exact_gate": "LogicLineages.PermittedControl.UniformGroundComparisonProof",
+      "historical_source_pin_overrides": {
+        "formalization/verification/local-fable-pair-2026-11-22-round2/root/UNIFORM-MAIN-SOURCE-MAP.md": {
+          "archived_path": "formalization/verification/reconciliation-2026-11-24/P17-UNIFORM-MAIN-SOURCE-MAP-AT-NATIVE-GATE.md",
+          "prefix_bytes": 2135,
+          "current_sha256": "fa32d2006b5db725122536d3152ef478f471f8e0924fca4f24f0c5f7f4179f46"
+        }
+      }
+    },
+    "new-set-1478": {
+      "acceptance": "formalization/verification/new-paper-set-2026-11-18/accepted/1478-p16-thm-iteration.json",
+      "native_evidence": "formalization/verification/github-continuation-2026-11-22-round3/evidence/1478-p16-native-iteration-numbered.json",
+      "evidence_sha256": "f72427d6fbd1b0543b7439c487d803e38ba8df48b959570a84a2218f9003c243",
+      "native_receipt": "1795406363595178414-12",
+      "native_receipt_sha256": "e066c1de0de814f845842aa87351442e090b975c720003fde1b6e06de5de47ad",
+      "exact_gate": "LogicLineages.NativeModule.PersistentMarking.NativeOrdinalIterationProof",
+      "historical_source_pin_overrides": {}
+    }
+  },
+  "historical_tool_pins": {
+    "formalization/scripts/check.py": {
+      "fefa8d645edc1c7bd1e4abc750cfaa6556adfc6cc80d6aecaff952192322a144": {
+        "historical_path": "formalization/verification/reconciliation-2026-11-24/CHECK-PY-BEFORE-ITERATIVE-TRAVERSAL.txt",
+        "records": [
+          "new-set-634",
+          "new-set-637",
+          "new-set-639",
+          "new-set-640",
+          "new-set-641",
+          "new-set-642",
+          "new-set-644",
+          "new-set-647",
+          "new-set-648",
+          "new-set-649",
+          "new-set-652",
+          "new-set-653",
+          "new-set-656",
+          "new-set-659",
+          "new-set-660",
+          "new-set-662",
+          "new-set-665",
+          "new-set-668",
+          "new-set-671",
+          "new-set-673",
+          "new-set-675",
+          "new-set-677",
+          "new-set-678",
+          "new-set-679",
+          "new-set-682",
+          "new-set-683",
+          "new-set-685",
+          "new-set-687"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentVariableStepCalibrationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalActiveKernelMinimumGlobalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentVariableStepRetentionProof
+open OriginalTransparentVariableStep OriginalTransparentVariableStepTargets
+
+theorem actualOriginalTransparentVariableStepRetention : ActualOriginalTransparentVariableStepRetention := by
+  intro n arity p H G W P hp hH hG hW hP
+  exact OriginalActiveKernelMinimumGlobalProof.actualOriginalActiveKernelMinimumRetention
+    n arity (refineInputs p) H G W P
+    (OriginalTransparentVariableStepCalibrationProof.actualOriginalTransparentVariableStepCalibration n arity p hp)
+    hH hG hW hP
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentVariableStepRetentionProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentVariableStepRetentionProof

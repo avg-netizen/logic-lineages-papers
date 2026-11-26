@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedRawClauseAssemblyTargets
+import LogicLineages.PermittedControl.OriginalPrintedRawClauseAssemblyProof
+import LogicLineages.PermittedControl.OriginalPrintedRawClauseAssemblyPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedRawClauseAssembly
+
+theorem fixed_exactOriginalRawAcceptedChoices : ExactOriginalRawAcceptedChoices := exactOriginalRawAcceptedChoices
+theorem fixed_exactOriginalRawClauseAssembly : ExactOriginalRawClauseAssembly := exactOriginalRawClauseAssembly
+theorem fixed_exactOriginalRawClausePositions : ExactOriginalRawClausePositions := exactOriginalRawClausePositions
+theorem fixed_exactOriginalRawClauseEffectivity : ExactOriginalRawClauseEffectivity := exactOriginalRawClauseEffectivity
+theorem fixed_fullOriginalPrintedRawClauseAssembly : FullOriginalPrintedRawClauseAssembly :=
+  ⟨fixed_exactOriginalRawAcceptedChoices,fixed_exactOriginalRawClauseAssembly,
+    fixed_exactOriginalRawClausePositions,fixed_exactOriginalRawClauseEffectivity⟩
+
+#print axioms fixed_exactOriginalRawAcceptedChoices
+#print axioms fixed_exactOriginalRawClauseAssembly
+#print axioms fixed_exactOriginalRawClausePositions
+#print axioms fixed_exactOriginalRawClauseEffectivity
+#print axioms fixed_fullOriginalPrintedRawClauseAssembly
+
+end LogicLineages.PermittedControl.StatementChecks

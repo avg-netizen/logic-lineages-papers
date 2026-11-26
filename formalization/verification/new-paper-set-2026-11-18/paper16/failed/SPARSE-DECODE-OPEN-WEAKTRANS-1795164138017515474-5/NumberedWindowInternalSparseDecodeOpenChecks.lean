@@ -1,0 +1,15 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeFailureProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeOpenChecks
+open NumberedWindowInternalSparseDecodeTargets
+theorem exact_OpenSuccess : OpenSuccess :=
+  NumberedWindowInternalSparseDecodeSuccessProof.openSuccess
+theorem exact_OpenFailure : OpenFailure :=
+  NumberedWindowInternalSparseDecodeFailureProof.openFailure
+
+#print axioms exact_OpenSuccess
+#print axioms exact_OpenFailure
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseDecodeOpenChecks

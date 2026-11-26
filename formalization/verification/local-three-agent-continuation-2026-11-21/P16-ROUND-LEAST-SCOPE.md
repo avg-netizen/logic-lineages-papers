@@ -1,0 +1,3 @@
+# A successful covered least fixes its selected output
+
+Internal arithmetic induction on the actual round fuel transports the seed value through each retained equality or accepted exchange. The selected minimum occurs in the physical members computed at the length of the same vertices. The covered, paired programs therefore return m on m whenever they return m on a seed, in every body and ordinary context. The generic round lemma names its one-edge premise; the fixed-point law discharges it with the actual covered programs. [Exact target](../../LogicLineages/PersistentMarking/NumberedWindowInternalSparseRoundLeastTargets.lean) · [Native gate](P16-ROUND-LEAST-LOCAL-EVIDENCE.json)

@@ -1,0 +1,5 @@
+# Full current19 sort comparator
+
+Source: compiler.tex, lem:sort and its proof. CompleteSort derives positivity and adjacent strict doubling of literal q(n)=f(n+4), pair-sum iff actual multiset equality (repetitions preserved), actual S graph calibration at every structural policy, and the four-call existential sorting formula iff min/max/nonnegative difference. All graph leaves use the same typed valuation and positive raw encoding n+1. No default-policy or Phi specialization.
+
+SourceGrowth is the already frozen literal lower/adjacent growth domain. Omitting PR and upper hierarchy restrictions strengthens this mathematical result; no computability of arbitrary f is claimed. Numeric addition is permitted in E_src; previous complete lem:addition supplies actual source flattening. This is a fixed finite PP template, not the later arbitrary Boolean serialized-source compiler. Zero and repeated inputs are unrestricted. The proof must derive numeric growth rather than assume it, and must use actual canonical assignment plus actual collapseWith semantics for S. No collision/composite eraser, compiler, coRE, hardness or parked period claim.

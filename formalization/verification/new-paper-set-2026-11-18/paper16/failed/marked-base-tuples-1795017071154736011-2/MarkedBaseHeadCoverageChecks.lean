@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.MarkedBaseHeadCoverageProof
+namespace LogicLineages.PersistentMarking.MarkedBaseHeadCoverageChecks
+theorem exact_HeadDeclaration : MarkedBaseTupleTargets.HeadDeclaration := MarkedBaseHeadCoverageProof.declaration
+theorem exact_SourceHeadCoverage : MarkedBaseTupleTargets.SourceHeadCoverage := MarkedBaseHeadCoverageProof.coverage
+#print axioms exact_HeadDeclaration
+#print axioms exact_SourceHeadCoverage
+end LogicLineages.PersistentMarking.MarkedBaseHeadCoverageChecks

@@ -1,0 +1,65 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanComparisonEffectiveProof.lean:30:12: error: Tactic `rfl` failed: The left-hand side
+  none.bind fun b =>
+    (DerivedComposition.wrap (true, (r, b).2.2).1 (true, (r, b).2.2).2).bind fun b_1 =>
+      (DerivedComposition.wrap (false, ((r, b), b_1).1.2.1).1 (false, ((r, b), b_1).1.2.1).2).bind fun b_2 =>
+        some
+          (((((r, b), b_1), b_2).1.1.2.2, (((r, b), b_1), b_2).1.1.2.1), (((r, b), b_1), b_2).1.2,
+            (((r, b), b_1), b_2).2)
+is not definitionally equal to the right-hand side
+  compareResult r
+
+case none
+A : Type := PlanCompiler.ResultCode
+B : Type := A × Code × Code
+C : Type := B × Code
+D : Type := C × Code
+haggregate : Computable fun a => DerivedComposition.aggregate (a.1, a.2.2).1 (a.1, a.2.2).2
+hp : Computable fun p => p.2
+hwrapRight : Computable fun a => DerivedComposition.wrap (true, a.2.2).1 (true, a.2.2).2
+hwrapLeft : Computable fun a => DerivedComposition.wrap (false, a.1.2.1).1 (false, a.1.2.1).2
+hraw : Computable fun p => p.1.1.2
+hstrict : Computable fun a => (a.1.1.2.2, a.1.1.2.1)
+hweak : Computable fun a => (a.1.2, a.2)
+hfinish : Computable fun a => some ((a.1.1.2.2, a.1.1.2.1), a.1.2, a.2)
+r : List ℕ × List ℕ × PlanCompiler.ForestCode
+h : DerivedComposition.aggregate r.1 r.2.2 = none
+⊢ (none.bind fun b =>
+      (DerivedComposition.wrap (true, (r, b).2.2).1 (true, (r, b).2.2).2).bind fun b_1 =>
+        (DerivedComposition.wrap (false, ((r, b), b_1).1.2.1).1 (false, ((r, b), b_1).1.2.1).2).bind fun b_2 =>
+          some
+            (((((r, b), b_1), b_2).1.1.2.2, (((r, b), b_1), b_2).1.1.2.1), (((r, b), b_1), b_2).1.2,
+              (((r, b), b_1), b_2).2)) =
+    compareResult r
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawPlanComparisonEffectiveProof.lean:31:26: error: Tactic `rfl` failed: The left-hand side
+  (some (fst✝, snd✝)).bind fun b =>
+    (DerivedComposition.wrap (true, (r, b).2.2).1 (true, (r, b).2.2).2).bind fun b_1 =>
+      (DerivedComposition.wrap (false, ((r, b), b_1).1.2.1).1 (false, ((r, b), b_1).1.2.1).2).bind fun b_2 =>
+        some
+          (((((r, b), b_1), b_2).1.1.2.2, (((r, b), b_1), b_2).1.1.2.1), (((r, b), b_1), b_2).1.2,
+            (((r, b), b_1), b_2).2)
+is not definitionally equal to the right-hand side
+  compareResult r
+
+case some.mk
+A : Type := PlanCompiler.ResultCode
+B : Type := A × Code × Code
+C : Type := B × Code
+D : Type := C × Code
+haggregate : Computable fun a => DerivedComposition.aggregate (a.1, a.2.2).1 (a.1, a.2.2).2
+hp : Computable fun p => p.2
+hwrapRight : Computable fun a => DerivedComposition.wrap (true, a.2.2).1 (true, a.2.2).2
+hwrapLeft : Computable fun a => DerivedComposition.wrap (false, a.1.2.1).1 (false, a.1.2.1).2
+hraw : Computable fun p => p.1.1.2
+hstrict : Computable fun a => (a.1.1.2.2, a.1.1.2.1)
+hweak : Computable fun a => (a.1.2, a.2)
+hfinish : Computable fun a => some ((a.1.1.2.2, a.1.1.2.1), a.1.2, a.2)
+r : List ℕ × List ℕ × PlanCompiler.ForestCode
+fst✝ snd✝ : Code
+h : DerivedComposition.aggregate r.1 r.2.2 = some (fst✝, snd✝)
+⊢ ((some (fst✝, snd✝)).bind fun b =>
+      (DerivedComposition.wrap (true, (r, b).2.2).1 (true, (r, b).2.2).2).bind fun b_1 =>
+        (DerivedComposition.wrap (false, ((r, b), b_1).1.2.1).1 (false, ((r, b), b_1).1.2.1).2).bind fun b_2 =>
+          some
+            (((((r, b), b_1), b_2).1.1.2.2, (((r, b), b_1), b_2).1.1.2.1), (((r, b), b_1), b_2).1.2,
+              (((r, b), b_1), b_2).2)) =
+    compareResult r

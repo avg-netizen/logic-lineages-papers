@@ -1,0 +1,1 @@
+Coordinator read exact proposed dependent-function equality/Bool-case repair and independently verified applied CounterSyntax SHA256 2bef8e516f5afedcdd0c1357a15850f2c6236ed044c2d88028362e76a4e87806. Same actual place tail, unchanged runtime/targets. Await fresh helper native gate; old source/error retained.

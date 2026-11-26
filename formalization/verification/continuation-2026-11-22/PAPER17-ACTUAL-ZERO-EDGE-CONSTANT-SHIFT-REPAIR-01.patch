@@ -1,0 +1,13 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualZeroEdgeConstantShiftLedgerProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualZeroEdgeConstantShiftLedgerProof.lean
+@@ -48,2 +48,8 @@
+-      have head := outcome.2
+-      simp only [key] at head
++      have literal : rd = ((rd.1.1,LowerOperand.count rank lam mu),rd.2) :=
++        Prod.ext (Prod.ext rfl key) rfl
++      have literalOutcome : OriginOutcome f ρ anchor
++          (((rd.1.1,LowerOperand.count rank lam mu),rd.2),.count i q κ) d out := by
++        rw [← literal]
++        exact outcome
++      simp only [OriginOutcome] at literalOutcome
++      have head := literalOutcome.2

@@ -1,0 +1,7 @@
+# Independent acceptance: literal trace algebra and reserved mark
+
+All14 exact supporting aliases pass native1795080863224023861-6 under unchanged original core caps. Independent current compiler/source/object/input-key/receipt/log replay verifies52 local modules and56 merged pins including27 own; separate object/axiom review has no errors. Only project-standard propext/Classical.choice/Quot.sound appear. Native max522052 KiB remains below524288 KiB. Frozen source/comparator bytes unchanged.
+
+Actual typed traces concatenate with literal joined vertices and additive raw counts; actual lambda, function-only auxiliary, ordered-list and same ordinary-head contexts preserve vertices/counts. Existing fixed-window raw paths give only-raw traces. Partial ordinary translation is defined exactly on genuine ordinary syntax and uniquely realizes it at every threshold. The original defined mark under the same initial lambdas supplies both an actual raw step and primitive MarkDecrease, with independently established successor typing/window and threshold lowered from n+1 to n. Already-numbered labels take a strict predecessor; symbolic marking need not change the symbol. Zero is never reused.
+
+These are supporting contracts, not arbitrary source-derivation simulation or its full numbered locality/accessibility theorem. Both original Stat premises remain unchanged. No manuscript edit, full-root or CI claim.

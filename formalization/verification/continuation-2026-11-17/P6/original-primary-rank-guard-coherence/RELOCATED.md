@@ -1,0 +1,1 @@
+All generated evidence, verification documents and failure snapshots are consolidated in ../original-primary-rankguard-coherence, the original frozen packet. No proof source or frozen comparison changed.

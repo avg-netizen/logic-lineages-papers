@@ -1,0 +1,32 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalApplicationComponentCoherenceGlobalInputProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalApplicationComponentCoherenceFinalProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFunctionNeutralityFinalPackageProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFunctionNeutralityFinalFieldsProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFunctionNeutralityFinalVariablesProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalApplicationComponentCoherenceGlobalProof
+open OriginalApplicationSidecar UniformCertificateCompletion
+
+/-- One original globally calibrated tuple precedes all internal contexts
+and finite windows. Every retained law concerns its literal final refinement. -/
+theorem actualOriginalApplicationComponentCoherenceGlobalSelection :
+    OriginalApplicationComponentCoherenceGlobalTargets.ActualOriginalApplicationComponentCoherenceGlobalSelection := by
+  intro n arity
+  obtain ⟨p,hp⟩ := GlobalSourcePackageProof.actualOriginalGlobalInputSelection n arity
+  have hq := OriginalApplicationComponentCoherenceGlobalInputProof.refinedInputsCalibrated n arity p hp
+  refine ⟨p,hp,?_,?_,?_,?_,?_,?_,?_⟩
+  · exact OriginalApplicationComponentCoherenceGlobalInputProof.finalInputsCalibrated n arity p hp
+  · exact OriginalFunctionNeutralityFinalPackageProof.finalPackage n arity (refineInputs p) hq
+  · exact OriginalFunctionNeutralityFinalFieldsProof.finalRootFields (refineInputs p)
+  · exact OriginalFunctionNeutralityFinalFieldsProof.finalMarkPreservation (refineInputs p)
+  · exact OriginalFunctionNeutralityFinalFieldsProof.finalNeutralBottom (refineInputs p)
+  · exact OriginalApplicationComponentCoherenceFinalProof.finalPairedComponents p
+  · intro symbols S table hS
+    exact OriginalFunctionNeutralityFinalVariablesProof.finalVariableLaws
+      n arity (refineInputs p) hq symbols S table hS
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalApplicationComponentCoherenceGlobalProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalApplicationComponentCoherenceGlobalProof
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalApplicationComponentCoherenceGlobalProof.actualOriginalApplicationComponentCoherenceGlobalSelection

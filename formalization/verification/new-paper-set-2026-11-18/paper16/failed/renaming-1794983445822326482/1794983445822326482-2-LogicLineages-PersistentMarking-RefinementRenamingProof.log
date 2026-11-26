@@ -1,0 +1,129 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:15:6: error: Type mismatch: After simplification, term
+  tree S π hi (openBody σ x q) (openBody σ x s) hc
+ has type
+  ∃ (h' : RefinementTree S (rename π (openBody σ x q)) (rename π (openBody σ x s))), treeSize h' = treeSize hc
+but is expected to have type
+  ∃ (hc' : RefinementTree S (openBody σ (π σ x) (rename π q)) (openBody σ (π σ x) (rename π s))),
+    treeSize hc' = treeSize hc
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:20:4: error: `simp` made no progress
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:23:27: error: unsolved goals
+case head
+S : Signature
+π : NameRenaming
+hi : injectiveNames π
+f : Head
+qs ss : Args
+hp : PaperTerm S (Expr.head f qs) f.result
+hs : PaperTerm S (Expr.head f ss) f.result
+hb : RefinementBasesTree S qs ss
+hb' : RefinementBasesTree S (renameArgs π qs) (renameArgs π ss)
+he : basesSize hb' = basesSize hb
+⊢ 1 + basesSize hb' = 1 + basesSize hb
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:27:40: error: unsolved goals
+case marked
+S : Signature
+π : NameRenaming
+hi : injectiveNames π
+f : Head
+τ : Ty
+qb qe sb se : Args
+hp : PaperTerm S (Expr.marked f τ qb qe) τ
+hs : PaperTerm S (Expr.marked f τ sb se) τ
+hb : RefinementBasesTree S qb sb
+he : RefinementExtrasTree S f qb qe se
+hb' : RefinementBasesTree S (renameArgs π qb) (renameArgs π sb)
+hbe : basesSize hb' = basesSize hb
+he' : RefinementExtrasTree S f (renameArgs π qb) (renameArgs π qe) (renameArgs π se)
+hee : extrasSize he' = extrasSize he
+⊢ 1 + basesSize hb' + extrasSize he' = 1 + basesSize hb + extrasSize he
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:39:14: error: unsolved goals
+case cons
+S : Signature
+π : NameRenaming
+hi : injectiveNames π
+q✝ s✝ : Expr
+qs✝ ss✝ : Args
+h : RefinementTree S q✝ s✝
+hs : RefinementBasesTree S qs✝ ss✝
+h' : RefinementTree S (rename π q✝) (rename π s✝)
+he : treeSize h' = treeSize h
+hs' : RefinementBasesTree S (renameArgs π qs✝) (renameArgs π ss✝)
+hse : basesSize hs' = basesSize hs
+⊢ 1 + treeSize h' + basesSize hs' = 1 + treeSize h + basesSize hs
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:56:6: error: Type mismatch: After simplification, term
+  tree S π hi (Expr.marked f q.type base es) q ht
+ has type
+  ∃ (h' : RefinementTree S (Expr.marked f q.type (renameArgs π base) (renameArgs π es)) (rename π q)),
+    treeSize h' = treeSize ht
+but is expected to have type
+  ∃ (ht' : RefinementTree S (Expr.marked f (rename π q).type (renameArgs π base) (renameArgs π es)) (rename π q)),
+    treeSize ht' = treeSize ht
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:66:14: error: unsolved goals
+case cons
+S : Signature
+π : NameRenaming
+hi : injectiveNames π
+f : Head
+base es : Args
+q✝ : Expr
+qs✝ : Args
+h : RefinementExtraTree S f base es q✝
+hs : RefinementExtrasTree S f base es qs✝
+h' : RefinementExtraTree S f (renameArgs π base) (renameArgs π es) (rename π q✝)
+he : extraSize h' = extraSize h
+hs' : RefinementExtrasTree S f (renameArgs π base) (renameArgs π es) (renameArgs π qs✝)
+hse : extrasSize hs' = extrasSize hs
+⊢ 1 + extraSize h' + extrasSize hs' = 1 + extraSize h + extrasSize hs
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:32:1: warning: unused termination hints, function is not recursive
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:44:1: warning: unused termination hints, function is not recursive
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:59:1: warning: unused termination hints, function is not recursive
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:71:1: warning: unused termination hints, function is not recursive
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:26:24: warning: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  simp only [treeSize,̵h̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:31:24: warning: This simp argument is unused:
+  hbe
+
+Hint: Omit it from the simp argument list.
+  simp only [treeSize, ̲hb̵e,̵h̵ee̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:31:28: warning: This simp argument is unused:
+  hee
+
+Hint: Omit it from the simp argument list.
+  simp only [treeSize, ̲hbe,̵h̵e̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:43:25: warning: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  simp only [basesSize, ̲he̵,̵h̵se]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:43:28: warning: This simp argument is unused:
+  hse
+
+Hint: Omit it from the simp argument list.
+  simp only [basesSize, ̲he,̵h̵s̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:70:26: warning: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  simp only [extrasSize, ̲he̵,̵h̵se]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementRenamingProof.lean:70:29: warning: This simp argument is unused:
+  hse
+
+Hint: Omit it from the simp argument list.
+  simp only [extrasSize, ̲he,̵h̵s̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

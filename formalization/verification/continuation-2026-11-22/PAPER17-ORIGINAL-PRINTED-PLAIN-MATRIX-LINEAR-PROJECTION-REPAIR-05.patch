@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionReplayProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixLinearProjectionReplayProof.lean
+@@ -58 +58,3 @@
+-    · simpa only [replay,if_neg (fun h => hTop h.2)] using paid name used
++    · have lower : ¬ (name ∈ support (matrix known gates p) ∧ rename branch name = top branch) :=
++        fun h => hTop h.2
++      simpa only [replay,if_neg lower] using paid name used

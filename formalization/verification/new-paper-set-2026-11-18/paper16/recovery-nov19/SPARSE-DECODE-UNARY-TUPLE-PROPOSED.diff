@@ -1,0 +1,61 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalSparseDecodeSyntaxProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalSparseDecodeSyntaxProof.lean
+@@ -23,6 +23,12 @@
+ abbrev binary {α : Type} (p : Program 2) (out x y : OTerm α) : Formula α :=
+   programGraph p out (Fin.cons x (Fin.cons y Fin.elim0))
+ 
++theorem unaryInputsRename {α β : Type} (n : OTerm α) (j : α → β) :
++    (fun i : Fin 1 => (![n] i).relabel j) = Fin.cons (n.relabel j) Fin.elim0 := by
++  funext i
++  obtain rfl := Fin.eq_zero i
++  rfl
++
+ @[simp] theorem unaryRename {α β : Type} (p : Program 1) (out x : OTerm α) (j : α → β) :
+     (unary p out x).relabel j = unary p (out.relabel j) (x.relabel j) := by
+   simp only [unary,programRename,consTermRename,emptyRename]
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalSparseDecodeGuardProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalSparseDecodeGuardProof.lean
+@@ -92,10 +92,11 @@
+   apply programCases root ![n] (guardCases n)
+   intro β j Δ s _ hs
+   rw [guardCasesRename]
+-  change Nonempty (Derivation body Δ (unary root s (n.relabel j))) at hs
++  rw [unaryInputsRename] at hs
+   apply programCases leftCandidate ![n.relabel j] (guardCases (n.relabel j))
+   intro γ k Θ x hk hx
+   rw [guardCasesRename]
++  rw [unaryInputsRename] at hx
+   have rootFound := renameInto hs k Θ hk
+   rw [unaryRename] at rootFound
+   exact guardCasesAt ((n.relabel j).relabel k) (s.relabel k) x rootFound hx
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalSparseDecodeSuccessProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalSparseDecodeSuccessProof.lean
+@@ -74,7 +74,7 @@
+   let nn := n.relabel j
+   let xx := x.relabel j
+   let yy := y.relabel j
+-  change Nonempty (Derivation body Δ (unary root s nn)) at sGraph
++  rw [unaryInputsRename] at sGraph
+   have spec := renameInto h j Δ hJ
+   rw [certifiedRename] at spec
+   obtain ⟨spec⟩ := spec
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalSparseDecodeFailureProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalSparseDecodeFailureProof.lean
+@@ -32,7 +32,7 @@
+   intro β j Δ x hJ hx
+   rw [preimageRename]
+   let nn := n.relabel j
+-  change Nonempty (Derivation body Δ (unary leftCandidate x nn)) at hx
++  rw [unaryInputsRename] at hx
+   have good' := renameInto hg j Δ hJ
+   rw [unaryRename,sucRelabel,zRelabel] at good'
+   apply programCases rightCandidate ![nn] (hasPreimage nn)
+@@ -40,7 +40,7 @@
+   rw [preimageRename]
+   let m := nn.relabel k
+   let a := x.relabel k
+-  change Nonempty (Derivation body Θ (unary rightCandidate y m)) at hy
++  rw [unaryInputsRename] at hy
+   have left' := renameInto hx k Θ hK
+   rw [unaryRename] at left'
+   have accepted := renameInto good' k Θ hK

@@ -1,0 +1,307 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBooleanMatrixLocalProof.lean:54:17: error(lean.unknownIdentifier): Unknown constant `Nat.reduceEq`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBooleanMatrixLocalProof.lean:57:6: error: Tactic `rfl` failed: The left-hand side
+  if 3 = 0 then
+    [(2, shiftPort (oneCode m) (ports.getD (↑c✝) 0), shiftPort (oneCode m) (ports.getD 0 0), auxiliaryCode i 0,
+        auxiliaryCode i 1),
+      (1, auxiliaryCode i 0, auxiliaryCode i 2, auxiliaryCode i 1, 0),
+      (2, auxiliaryCode i 2, oneCode m, auxiliaryCode i 3, auxiliaryCode i 4),
+      (1, bitCode i, auxiliaryCode i 3, oneCode m, 0), (0, auxiliaryCode i 5, 0, 0, 0), (0, auxiliaryCode i 6, 0, 0, 0),
+      (0, auxiliaryCode i 7, 0, 0, 0)]
+  else
+    if 3 = 1 then
+      [(2, shiftPort (oneCode m) (ports.getD (↑c✝) 0), shiftPort (oneCode m) (ports.getD 0 0), auxiliaryCode i 0,
+          auxiliaryCode i 1),
+        (2, auxiliaryCode i 1, shiftPort (oneCode m) (ports.getD 0 0), auxiliaryCode i 2, auxiliaryCode i 3),
+        (1, auxiliaryCode i 2, auxiliaryCode i 4, auxiliaryCode i 3, 0),
+        (2, auxiliaryCode i 4, oneCode m, auxiliaryCode i 5, auxiliaryCode i 6),
+        (1, bitCode i, auxiliaryCode i 5, oneCode m, 0), (0, auxiliaryCode i 7, 0, 0, 0)]
+    else
+      if 3 = 2 then
+        [(2, shiftPort (oneCode m) (ports.getD 0 0), shiftPort (oneCode m) (ports.getD (↑c✝) 0), auxiliaryCode i 0,
+            auxiliaryCode i 1),
+          (2, auxiliaryCode i 1, shiftPort (oneCode m) (ports.getD (↑c✝) 0), auxiliaryCode i 2, auxiliaryCode i 3),
+          (1, auxiliaryCode i 2, auxiliaryCode i 4, auxiliaryCode i 3, 0),
+          (2, auxiliaryCode i 4, oneCode m, auxiliaryCode i 5, auxiliaryCode i 6),
+          (1, auxiliaryCode i 7, auxiliaryCode i 5, oneCode m, 0), (1, bitCode i, auxiliaryCode i 7, oneCode m, 0)]
+      else
+        (1, bitCode i, bitCode (i + ↑c✝ + 1), oneCode m, 0) ::
+          List.map (fun j => (0, auxiliaryCode i j, 0, 0, 0)) [0, 1, 2, 3, 4, 5, 6, 7]
+is not definitionally equal to the right-hand side
+  (1, bitCode i, bitCode (i + ↑c✝ + 1), oneCode m, 0) ::
+    List.map
+      (fun atom =>
+        match
+          match atom with
+          | BooleanWire.Atom.eq x y =>
+            Gate.eq
+              (match x with
+              | BooleanWire.Ref.input i => a i
+              | BooleanWire.Ref.previous i => w i
+              | BooleanWire.Ref.output => out
+              | BooleanWire.Ref.aux i => z i
+              | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+              | BooleanWire.Ref.one => one)
+              (match y with
+              | BooleanWire.Ref.input i => a i
+              | BooleanWire.Ref.previous i => w i
+              | BooleanWire.Ref.output => out
+              | BooleanWire.Ref.aux i => z i
+              | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+              | BooleanWire.Ref.one => one)
+          | BooleanWire.Atom.add x y v =>
+            Gate.add
+              (match x with
+              | BooleanWire.Ref.input i => a i
+              | BooleanWire.Ref.previous i => w i
+              | BooleanWire.Ref.output => out
+              | BooleanWire.Ref.aux i => z i
+              | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+              | BooleanWire.Ref.one => one)
+              (match y with
+              | BooleanWire.Ref.input i => a i
+              | BooleanWire.Ref.previous i => w i
+              | BooleanWire.Ref.output => out
+              | BooleanWire.Ref.aux i => z i
+              | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+              | BooleanWire.Ref.one => one)
+              (match v with
+              | BooleanWire.Ref.input i => a i
+              | BooleanWire.Ref.previous i => w i
+              | BooleanWire.Ref.output => out
+              | BooleanWire.Ref.aux i => z i
+              | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+              | BooleanWire.Ref.one => one)
+          | BooleanWire.Atom.sort x y l h =>
+            Gate.sort
+              (match x with
+              | BooleanWire.Ref.input i => a i
+              | BooleanWire.Ref.previous i => w i
+              | BooleanWire.Ref.output => out
+              | BooleanWire.Ref.aux i => z i
+              | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+              | BooleanWire.Ref.one => one)
+              (match y with
+              | BooleanWire.Ref.input i => a i
+              | BooleanWire.Ref.previous i => w i
+              | BooleanWire.Ref.output => out
+              | BooleanWire.Ref.aux i => z i
+              | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+              | BooleanWire.Ref.one => one)
+              (match l with
+              | BooleanWire.Ref.input i => a i
+              | BooleanWire.Ref.previous i => w i
+              | BooleanWire.Ref.output => out
+              | BooleanWire.Ref.aux i => z i
+              | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+              | BooleanWire.Ref.one => one)
+              (match h with
+              | BooleanWire.Ref.input i => a i
+              | BooleanWire.Ref.previous i => w i
+              | BooleanWire.Ref.output => out
+              | BooleanWire.Ref.aux i => z i
+              | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+              | BooleanWire.Ref.one => one) with
+        | Gate.eq a b => (0, encodePort a, encodePort b, 0, 0)
+        | Gate.add a b c => (1, encodePort a, encodePort b, encodePort c, 0)
+        | Gate.sort a b l h => (2, encodePort a, encodePort b, encodePort l, encodePort h)
+        | Gate.one a => (3, encodePort a, 0, 0, 0))
+      [BooleanWire.Atom.eq (BooleanWire.Ref.aux 0) BooleanWire.Ref.zero,
+        BooleanWire.Atom.eq (BooleanWire.Ref.aux (Fin.succ 0)) BooleanWire.Ref.zero,
+        BooleanWire.Atom.eq (BooleanWire.Ref.aux (Fin.succ 0).succ) BooleanWire.Ref.zero,
+        BooleanWire.Atom.eq (BooleanWire.Ref.aux (Fin.succ 0).succ.succ) BooleanWire.Ref.zero,
+        BooleanWire.Atom.eq (BooleanWire.Ref.aux (Fin.succ 0).succ.succ.succ) BooleanWire.Ref.zero,
+        BooleanWire.Atom.eq (BooleanWire.Ref.aux (Fin.succ 0).succ.succ.succ.succ) BooleanWire.Ref.zero,
+        BooleanWire.Atom.eq (BooleanWire.Ref.aux (Fin.succ 0).succ.succ.succ.succ.succ) BooleanWire.Ref.zero,
+        BooleanWire.Atom.eq (BooleanWire.Ref.aux (Fin.succ 0).succ.succ.succ.succ.succ.succ) BooleanWire.Ref.zero]
+
+case neg
+Θ : List Ty
+n k m i : ℕ
+ports : List ℕ
+a : Fin n → Port Θ
+w : Fin k → Port Θ
+out : Port Θ
+z : Fin 8 → Port Θ
+one : Port Θ
+ha : ∀ (j : Fin n), encodePort (a j) = shiftPort (oneCode m) (ports.getD (↑j) 0)
+hw : ∀ (j : Fin k), encodePort (w j) = bitCode (i + ↑j + 1)
+hout : encodePort out = bitCode i
+hz : ∀ (j : Fin 8), encodePort (z j) = auxiliaryCode i ↑j
+hone : encodePort one = oneCode m
+c✝ : Fin k
+hrange : List.range 8 = [0, 1, 2, 3, 4, 5, 6, 7]
+⊢ (if 3 = 0 then
+      [(2, shiftPort (oneCode m) (ports.getD (↑c✝) 0), shiftPort (oneCode m) (ports.getD 0 0), auxiliaryCode i 0,
+          auxiliaryCode i 1),
+        (1, auxiliaryCode i 0, auxiliaryCode i 2, auxiliaryCode i 1, 0),
+        (2, auxiliaryCode i 2, oneCode m, auxiliaryCode i 3, auxiliaryCode i 4),
+        (1, bitCode i, auxiliaryCode i 3, oneCode m, 0), (0, auxiliaryCode i 5, 0, 0, 0),
+        (0, auxiliaryCode i 6, 0, 0, 0), (0, auxiliaryCode i 7, 0, 0, 0)]
+    else
+      if 3 = 1 then
+        [(2, shiftPort (oneCode m) (ports.getD (↑c✝) 0), shiftPort (oneCode m) (ports.getD 0 0), auxiliaryCode i 0,
+            auxiliaryCode i 1),
+          (2, auxiliaryCode i 1, shiftPort (oneCode m) (ports.getD 0 0), auxiliaryCode i 2, auxiliaryCode i 3),
+          (1, auxiliaryCode i 2, auxiliaryCode i 4, auxiliaryCode i 3, 0),
+          (2, auxiliaryCode i 4, oneCode m, auxiliaryCode i 5, auxiliaryCode i 6),
+          (1, bitCode i, auxiliaryCode i 5, oneCode m, 0), (0, auxiliaryCode i 7, 0, 0, 0)]
+      else
+        if 3 = 2 then
+          [(2, shiftPort (oneCode m) (ports.getD 0 0), shiftPort (oneCode m) (ports.getD (↑c✝) 0), auxiliaryCode i 0,
+              auxiliaryCode i 1),
+            (2, auxiliaryCode i 1, shiftPort (oneCode m) (ports.getD (↑c✝) 0), auxiliaryCode i 2, auxiliaryCode i 3),
+            (1, auxiliaryCode i 2, auxiliaryCode i 4, auxiliaryCode i 3, 0),
+            (2, auxiliaryCode i 4, oneCode m, auxiliaryCode i 5, auxiliaryCode i 6),
+            (1, auxiliaryCode i 7, auxiliaryCode i 5, oneCode m, 0), (1, bitCode i, auxiliaryCode i 7, oneCode m, 0)]
+        else
+          (1, bitCode i, bitCode (i + ↑c✝ + 1), oneCode m, 0) ::
+            List.map (fun j => (0, auxiliaryCode i j, 0, 0, 0)) [0, 1, 2, 3, 4, 5, 6, 7]) =
+    (1, bitCode i, bitCode (i + ↑c✝ + 1), oneCode m, 0) ::
+      List.map
+        (fun atom =>
+          match
+            match atom with
+            | BooleanWire.Atom.eq x y =>
+              Gate.eq
+                (match x with
+                | BooleanWire.Ref.input i => a i
+                | BooleanWire.Ref.previous i => w i
+                | BooleanWire.Ref.output => out
+                | BooleanWire.Ref.aux i => z i
+                | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+                | BooleanWire.Ref.one => one)
+                (match y with
+                | BooleanWire.Ref.input i => a i
+                | BooleanWire.Ref.previous i => w i
+                | BooleanWire.Ref.output => out
+                | BooleanWire.Ref.aux i => z i
+                | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+                | BooleanWire.Ref.one => one)
+            | BooleanWire.Atom.add x y v =>
+              Gate.add
+                (match x with
+                | BooleanWire.Ref.input i => a i
+                | BooleanWire.Ref.previous i => w i
+                | BooleanWire.Ref.output => out
+                | BooleanWire.Ref.aux i => z i
+                | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+                | BooleanWire.Ref.one => one)
+                (match y with
+                | BooleanWire.Ref.input i => a i
+                | BooleanWire.Ref.previous i => w i
+                | BooleanWire.Ref.output => out
+                | BooleanWire.Ref.aux i => z i
+                | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+                | BooleanWire.Ref.one => one)
+                (match v with
+                | BooleanWire.Ref.input i => a i
+                | BooleanWire.Ref.previous i => w i
+                | BooleanWire.Ref.output => out
+                | BooleanWire.Ref.aux i => z i
+                | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+                | BooleanWire.Ref.one => one)
+            | BooleanWire.Atom.sort x y l h =>
+              Gate.sort
+                (match x with
+                | BooleanWire.Ref.input i => a i
+                | BooleanWire.Ref.previous i => w i
+                | BooleanWire.Ref.output => out
+                | BooleanWire.Ref.aux i => z i
+                | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+                | BooleanWire.Ref.one => one)
+                (match y with
+                | BooleanWire.Ref.input i => a i
+                | BooleanWire.Ref.previous i => w i
+                | BooleanWire.Ref.output => out
+                | BooleanWire.Ref.aux i => z i
+                | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+                | BooleanWire.Ref.one => one)
+                (match l with
+                | BooleanWire.Ref.input i => a i
+                | BooleanWire.Ref.previous i => w i
+                | BooleanWire.Ref.output => out
+                | BooleanWire.Ref.aux i => z i
+                | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+                | BooleanWire.Ref.one => one)
+                (match h with
+                | BooleanWire.Ref.input i => a i
+                | BooleanWire.Ref.previous i => w i
+                | BooleanWire.Ref.output => out
+                | BooleanWire.Ref.aux i => z i
+                | BooleanWire.Ref.zero => SourceAdditionCompletion.Atom.zero
+                | BooleanWire.Ref.one => one) with
+          | Gate.eq a b => (0, encodePort a, encodePort b, 0, 0)
+          | Gate.add a b c => (1, encodePort a, encodePort b, encodePort c, 0)
+          | Gate.sort a b l h => (2, encodePort a, encodePort b, encodePort l, encodePort h)
+          | Gate.one a => (3, encodePort a, 0, 0, 0))
+        [BooleanWire.Atom.eq (BooleanWire.Ref.aux 0) BooleanWire.Ref.zero,
+          BooleanWire.Atom.eq (BooleanWire.Ref.aux (Fin.succ 0)) BooleanWire.Ref.zero,
+          BooleanWire.Atom.eq (BooleanWire.Ref.aux (Fin.succ 0).succ) BooleanWire.Ref.zero,
+          BooleanWire.Atom.eq (BooleanWire.Ref.aux (Fin.succ 0).succ.succ) BooleanWire.Ref.zero,
+          BooleanWire.Atom.eq (BooleanWire.Ref.aux (Fin.succ 0).succ.succ.succ) BooleanWire.Ref.zero,
+          BooleanWire.Atom.eq (BooleanWire.Ref.aux (Fin.succ 0).succ.succ.succ.succ) BooleanWire.Ref.zero,
+          BooleanWire.Atom.eq (BooleanWire.Ref.aux (Fin.succ 0).succ.succ.succ.succ.succ) BooleanWire.Ref.zero,
+          BooleanWire.Atom.eq (BooleanWire.Ref.aux (Fin.succ 0).succ.succ.succ.succ.succ.succ) BooleanWire.Ref.zero]
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBooleanMatrixLocalProof.lean:54:40: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.reduceEq, if_true, i̵f̵_̵f̵a̵l̵s̵e̵,̵ ̵BooleanWire.zeroAux, hrange, List.map_ofFn,
+          Function.comp_def, List.ofFn_succ, List.ofFn_zero, BooleanFlatten.atomGate,
+          BooleanFlatten.refPort, encodeGate, hz]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBooleanMatrixLocalProof.lean:54:79: warning: This simp argument is unused:
+  List.map_ofFn
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.reduceEq, if_true, if_false, BooleanWire.zeroAux, hrange, L̵i̵s̵t̵.̵m̵a̵p̵_̵o̵f̵F̵n̵,̵Function.comp_def,
+          List.ofFn_succ, List.ofFn_zero, BooleanFlatten.atomGate, BooleanFlatten.refPort, encodeGate,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲hz]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBooleanMatrixLocalProof.lean:55:8: warning: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.reduceEq, if_true, if_false, BooleanWire.zeroAux, hrange, List.map_ofFn,
+          F̵u̵n̵c̵t̵i̵o̵n̵.̵c̵o̵m̵p̵_̵d̵e̵f̵,̵ ̵List.ofFn_succ, List.ofFn_zero, BooleanFlatten.atomGate, BooleanFlatten.refPort, encodeGate,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲hz]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBooleanMatrixLocalProof.lean:55:59: warning: This simp argument is unused:
+  BooleanFlatten.atomGate
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.reduceEq, if_true, if_false, BooleanWire.zeroAux, hrange, List.map_ofFn,
+          Function.comp_def, List.ofFn_succ, List.ofFn_zero, BooleanFlatten.a̵t̵o̵m̵G̵a̵t̵e̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵B̵o̵o̵l̵e̵a̵n̵F̵l̵a̵t̵t̵e̵n̵.̵refPort, encodeGate, hz]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBooleanMatrixLocalProof.lean:56:8: warning: This simp argument is unused:
+  BooleanFlatten.refPort
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.reduceEq, if_true, if_false, BooleanWire.zeroAux, hrange, List.map_ofFn,
+          Function.comp_def, List.ofFn_succ, List.ofFn_zero, BooleanFlatten.atomGate,
+  ̵  ̵ ̵ ̵ ̵ ̵ ̵ ̵B̵o̵o̵l̵ea̵nF̵l̵a̵t̵t̵e̵n̵.̵r̵e̵f̵P̵o̵r̵t̵,̵ ̵e̵n̵codeGate, hz]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBooleanMatrixLocalProof.lean:56:32: warning: This simp argument is unused:
+  encodeGate
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.reduceEq, if_true, if_false, BooleanWire.zeroAux, hrange, List.map_ofFn,
+          Function.comp_def, List.ofFn_succ, List.ofFn_zero, BooleanFlatten.atomGate,
+          BooleanFlatten.refPort, e̵n̵c̵o̵d̵e̵G̵a̵t̵e̵,̵ ̵hz]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawBooleanMatrixLocalProof.lean:56:44: warning: This simp argument is unused:
+  hz
+
+Hint: Omit it from the simp argument list.
+  simp only [Nat.reduceEq, if_true, if_false, BooleanWire.zeroAux, hrange, List.map_ofFn,
+          Function.comp_def, List.ofFn_succ, List.ofFn_zero, BooleanFlatten.atomGate,
+          BooleanFlatten.refPort, encodeGate,̵ ̵h̵z̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

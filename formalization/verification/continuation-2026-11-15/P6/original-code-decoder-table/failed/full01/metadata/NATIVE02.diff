@@ -1,0 +1,24 @@
+--- NativeProof-NATIVE01
++++ NativeProof-NATIVE02
+@@ -65,7 +65,10 @@
+ theorem nativeRows : Targets.NativeRows := by
+   intro n bound previous
+   rw [rowEvaluation]
+-  simp only [OriginalCodeDecoderStep.NativeProof.nativeCodeNext]
++  apply congrArg numbersNumber
++  apply congrArg (fun f : Nat → Nat => (List.range (bound+1)).map f)
++  funext index
++  exact OriginalCodeDecoderStep.NativeProof.nativeCodeNext n previous index
+ 
+ theorem boolRoundTrip (xs : List Bool) :
+     (xs.map Bool.toNat).map (fun value => value == 1) = xs := by
+@@ -86,7 +89,8 @@
+     change evaluate (nextRow n) (ofFn ![bound,
+       evaluate (tableProgram n) (ofFn ![fuel,bound])]) = _
+     rw [ih,nativeRows,numbersRoundTrip]
+-    simp only [Option.getD_some,boolRoundTrip,NumberedCodeParserTable.codeTable,List.map_map]
++    simp only [Option.getD_some,boolRoundTrip]
++    simp only [NumberedCodeParserTable.codeTable,List.map_map]
+     rfl
+ end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderTable.NativeProof
+ #audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalCodeDecoderTable.NativeProof

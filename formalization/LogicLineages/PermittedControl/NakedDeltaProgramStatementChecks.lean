@@ -1,0 +1,9 @@
+module
+public import LogicLineages.PermittedControl.NakedDeltaSyntaxProof
+public import LogicLineages.PermittedControl.NakedDeltaProgramsProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+theorem fixed_fullNakedDeltaProgram : NakedDeltaProgramTargets.FullNakedDeltaProgram :=
+  ⟨NakedDeltaSyntaxProof.literal,NakedDeltaProgramsProof.programs⟩
+#print axioms fixed_fullNakedDeltaProgram
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,13 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryDecoder.Targets
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryDecoder.Preflight
+#check Targets.NativeLeft
+#check Targets.NativeRight
+#check Targets.LeftPairInstalled
+#check Targets.RightPairInstalled
+#check Targets.InternalLeftInverse
+#check Targets.InternalRightInverse
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryDecoder.Preflight

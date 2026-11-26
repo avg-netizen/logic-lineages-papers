@@ -1,0 +1,11 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseOrderedMinimumNumericStepProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseOrderedMinimumNumericStepProof.lean
+@@ -45,7 +45,7 @@
+   cases tail with
+   | none =>
+     change evaluate minimumStep (tape h 0) = h + 1
+-    simp only [minimumStep,evalBranch,priorValue,if_pos (show (0 : Nat) = 0 from rfl),headValue]
++    simp only [minimumStep,evalBranch,priorValue,if_true,headValue]
+   | some k =>
+     change evaluate minimumStep (tape h (k + 1)) = (min h k) + 1
+     have priorPresent : k + 1 ≠ 0 := Nat.succ_ne_zero k

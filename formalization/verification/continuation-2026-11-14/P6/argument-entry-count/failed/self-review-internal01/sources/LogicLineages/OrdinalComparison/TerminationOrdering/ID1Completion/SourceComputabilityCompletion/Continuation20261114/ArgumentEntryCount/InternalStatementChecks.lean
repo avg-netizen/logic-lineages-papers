@@ -1,0 +1,13 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntryCount.InternalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntryCount.InternalStatementChecks
+theorem exactNil : Targets.InternalNil := InternalProof.internalNil
+#print axioms exactNil
+theorem exactEqualCons : Targets.InternalEqualCons := InternalProof.internalEqualCons
+#print axioms exactEqualCons
+theorem exactUnequalCons : Targets.InternalUnequalCons := InternalProof.internalUnequalCons
+#print axioms exactUnequalCons
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntryCount.InternalStatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ArgumentEntryCount.InternalStatementChecks

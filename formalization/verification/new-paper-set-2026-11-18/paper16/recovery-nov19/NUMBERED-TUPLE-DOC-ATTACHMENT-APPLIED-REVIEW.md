@@ -1,0 +1,1 @@
+Independently compared all3 applied files to preserved failed editions: each equals exactly one approved /-- to /- comment marker change, no other byte change. All13 current pins match; original freeze/failure retained. Target-only retry authorized, no mathematical semantics change.

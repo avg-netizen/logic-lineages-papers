@@ -1,0 +1,20 @@
+module
+public import LogicLineages.PermittedControl.ActualCountOriginDispositionsTargets
+import LogicLineages.PermittedControl.ActualCountOriginDispositionsLedgerProof
+import LogicLineages.PermittedControl.ActualCountOriginDispositionsProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualCountOriginDispositions
+
+theorem fixed_actualCountOrigins : ExactCountOrigins := exactCountOrigins
+theorem fixed_actualCountOriginDispositions : ExactOriginDispositions := exactOriginDispositions
+
+theorem fixed_fullActualCountOriginDispositions : FullActualCountOriginDispositions :=
+  ⟨fixed_actualCountOrigins,fixed_actualCountOriginDispositions⟩
+
+#print axioms fixed_actualCountOrigins
+#print axioms fixed_actualCountOriginDispositions
+#print axioms fixed_fullActualCountOriginDispositions
+
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.MarkedFamilyRetentionProof
+namespace LogicLineages.PersistentMarking.MarkedFamilyRetentionChecks
+theorem exact_RetentionExact : MarkedFamilyCoherenceTargets.RetentionExact := MarkedFamilyRetentionProof.retentionExact
+theorem exact_EncodingComplete : MarkedFamilyCoherenceTargets.EncodingComplete := MarkedFamilyRetentionProof.encodingComplete
+#print axioms exact_RetentionExact
+#print axioms exact_EncodingComplete
+end LogicLineages.PersistentMarking.MarkedFamilyRetentionChecks

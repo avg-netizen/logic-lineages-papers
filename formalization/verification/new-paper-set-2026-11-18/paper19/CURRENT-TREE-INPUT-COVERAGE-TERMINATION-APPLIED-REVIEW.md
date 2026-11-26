@@ -1,0 +1,1 @@
+Applied Definitions SHA f041b946... independently verified against approved proposed edition. Termination witness/tactic changes only, same runtime equations and frozen comparator, one affected source pin refreshed. Original failure and freeze retained. Fresh target-only gate allowed after explicit queue admission.

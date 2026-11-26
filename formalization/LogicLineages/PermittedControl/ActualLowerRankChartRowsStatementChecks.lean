@@ -1,0 +1,13 @@
+module
+public import LogicLineages.PermittedControl.ActualLowerRankChartRowsTargets
+import LogicLineages.PermittedControl.ActualLowerRankChartRowsProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualLowerRankChartRows
+
+theorem fixed_exactLowerRankChartRows : ExactLowerRankChartRows := exactLowerRankChartRows
+
+#print axioms fixed_exactLowerRankChartRows
+
+end LogicLineages.PermittedControl.StatementChecks

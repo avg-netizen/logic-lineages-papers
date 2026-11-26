@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.StructuralFillProof
+namespace LogicLineages.PersistentMarking.StructuralFillChecks
+theorem exact_fillPaper : StructuralStabilityTargets.FillPaper := StructuralFillProof.fillPaper
+theorem exact_fillOrdinary : StructuralStabilityTargets.FillOrdinary := StructuralFillProof.fillOrdinary
+#print axioms exact_fillPaper
+#print axioms exact_fillOrdinary
+end LogicLineages.PersistentMarking.StructuralFillChecks

@@ -1,0 +1,10 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowClassProgramProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowClassProgramChecks
+open NumberedWindowClassProgramTargets
+theorem exact_ClassPrograms : ClassPrograms := NumberedWindowClassProgramProof.programs
+#print axioms exact_ClassPrograms
+end LogicLineages.PersistentMarking.NumberedWindowClassProgramChecks

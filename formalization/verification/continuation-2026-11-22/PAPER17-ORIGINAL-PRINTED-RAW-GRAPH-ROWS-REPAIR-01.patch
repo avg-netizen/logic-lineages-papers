@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedRawGraphRowsProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedRawGraphRowsProof.lean
+@@ -33 +33 @@
+-    simpa only [onGate,fieldTag,if_neg,nextSlot] using
++    simpa only [onGate,fieldTag,if_false,nextSlot] using
+@@ -70 +70 @@
+-    rw [ih,encodedCons,List.append_assoc]
++    rw [ih,encodedCons n g gs,List.append_assoc]

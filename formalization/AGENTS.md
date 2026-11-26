@@ -1,3 +1,922 @@
+# Paused after the current round, 22 November 2026
+
+The user asked to pause, commit and push and explicitly allowed the existing round to finish. All three local formalization lanes and the native queue are paused. Fable turn 004 is complete and the provider lane is idle. The native policy requires explicit user direction to resume. The latest checked supporting entry is 883. [Current handoff](verification/local-three-agent-continuation-2026-11-21/PAUSED-HANDOFF.md)
+
+---
+
+# Current user correction — proof construction and Lean validation
+
+The former review Sol now constructs missing proofs and repairs compiler
+failures. Lean checks proof validity. Read the [current proof workflow](verification/local-three-agent-continuation-2026-11-21/PROOF-WORKFLOW.md).
+Keep focused statement-to-paper/assumption checks, one exact native/axiom gate,
+and existing safeguards. Earlier manual proof-body approval and duplicate full
+artifact replay requirements are superseded for new work. Preserve old evidence.
+
+---
+
+# Additional user-authorized lane — Fable 5.2 High
+
+The user adds one Fable 5.2 High lane through the API-first `claudep` wrapper,
+with `claude -p` fallback permitted on exhausted API credits. Read the
+[additional-lane release](verification/local-three-agent-continuation-2026-11-21/RELEASE.md)
+and current CONTROL. Root owns provider dispatch, Astra the sole native queue,
+and Sol independent review. This supersedes the older no-external-author rule
+only for this lane. Credentials remain in the adjacent ignored local env file.
+
+---
+
+# Current release — three formalization lanes, 21 November 2026
+
+The user explicitly requests fetching the repo and continuing the lanes.
+Read [the current release](verification/local-three-agent-continuation-2026-11-21/RELEASE.md)
+and its CONTROL.json. Work continues from fetched `25a33fd2a` on the existing
+formalization branch with one Astra 6.2 High lead and two Sol 6.2 High lanes.
+There is no new deadline or round ceiling. This supersedes the prior pause
+and expired cutoffs for these formalization lanes only. Preserve exact
+source/evidence safeguards and all newer owner work; C5 remains transferred.
+
+---
+
+# Current release — 20 November 2026 until 19:30 UTC
+
+Owner explicitly renewed fetching the latest work and continuing until 1:30pm UTC−06. Follow [current release and reconciliation](verification/continuation-2026-11-20/RELEASE-AND-RECONCILIATION.md). This finite release supersedes previous pauses only until the cutoff; preserve original safeguards and all newer owner work.
+
+---
+
+# Formalization paused after the 20 November 2026 round
+
+The user paused all three formalization lanes and the serialized compiler. The coordinator is authorized to commit and push the completed checkpoint. Further proof work, builds or scheduled continuation require a fresh explicit user release. This pause supersedes the historical release sections below. [Final evidence and resumption handoff](verification/local-three-agent-continuation-2026-11-19/PAUSED-HANDOFF-2026-11-20.md)
+
+---
+
+# Current release — new comparison set, 18 November 2026
+
+Owner requests archive of superseded editions05–10 and formalization of new
+papers16–20 through 2026-11-19T18:00:00Z (noon UTC-06). Work from
+formalization/new-paper-set-2026-11-18 and verification/new-paper-set-2026-11-18/PLAN.md.
+Preserve old Lean sources/register/counterexamples. CURRENT-COMPARISON-TARGETS.json
+is the separate current-paper statement inventory, initially all pending.
+Maintain original source-exact comparator, native/axiom/evidence/review gates,
+serialized compiler limits, no main merge/force/CI/pin changes, and source-first
+nonforce remote checkpoints at least every30 minutes. Historical ownership and
+pause records below are superseded for this request only.
+
+---
+
+# Current release — 15 November public continuation
+
+The user explicitly requests continuing public formalization until further
+notice, with the same source-first commit/non-force push cadence of at least
+every 30 minutes. This supersedes the earlier 02:00 UTC deadline and pause,
+but does not expand mathematical scope or relax verification standards.
+Fresh remote reconciliation finds main 4028a9e34506f4339af2992749464cf2d4d55eb9
+is an ancestor of latest cumulative bf3d85a5793cadbf798ed62e943ddf36302bb86f.
+Continue from the latter on formalization/cumulative-continuation-2026-11-15.
+Preserve accepted/frozen targets, all failed drafts, exact original source/AST
+correspondence, standard-only axioms and fixed serialized native limits.
+The coordinator owns the sole proof compiler queue and Git publication;
+two disjoint proof lanes cover paper06 and paper12, with independent review
+before acceptance. Official pinned toolchain/cache restoration is setup only.
+No main merge, force push, private research, Fable, CI or pin changes.
+Stop promptly upon the user's next stop instruction and preserve all work.
+Historical pause records below remain provenance, not an automatic restart.
+
+---
+
+# Current release — 14 November public continuation
+
+The user explicitly resumes public formalization until 2026-11-15 02:00 UTC
+(8pm UTC-06), with source-first commits and non-force remote checkpoints at
+least every 30 minutes and sooner at meaningful verified milestones.
+Start from 573ddf98b53875d2e22e699553399dd06e8dc4fb on a new cumulative branch.
+All previous pauses are historical only for this released public continuation.
+Preserve accepted/frozen mathematics, failed drafts, source correspondence,
+exact comparator-first checks, standard-only axioms and fixed serialized native
+limits. The continuation coordinator owns the sole compiler queue and Git.
+Two proof lanes may continue paper06 and paper12; independent review precedes
+acceptance. No main merge, force push, private research, Fable, CI or pin changes.
+Stop new proof work at the deadline, save and distinguish unfinished drafts,
+verify remote publication, and do not automatically resume.
+
+---
+
+# Current state — two-agent rounds checked and paused; publication authorized
+
+Both agents stopped after completed round02, including all necessary Lean
+repairs and exact/source/axiom checks. The queue is empty, all owned native and
+evidence sessions reaped, shared locks free, and the local compiler policy
+paused. Read [the final checkpoint](verification/local-two-sol-2026-11-13/FINAL-HANDOFF.md)
+and [terminal control](verification/local-two-sol-2026-11-13/FINAL-STOPPED.json).
+The checkpoint adds 15 supporting contracts across both rounds; the original
+register remains 175 checked, 2 inherited, 12 pending /189.
+
+Only the user's requested commit/push on the existing
+`formalization/continuation-2026-11-13` branch is authorized. No main merge,
+force push, new proof/compiler round, nested worker or automatic restart.
+Any future proof work requires a new explicit user release. Fable/private
+research remain stopped. Earlier active instructions below are historical
+where they conflict with this pause.
+
+---
+
+# Latest stop instruction — finish current round, pause, commit and push
+
+The user requests "please pause after the current round and commit/push".
+New rounds, targets and successor authoring are disabled now. Only the existing
+round02 packets, necessary Lean repairs, exact checks and evidence/handoff may
+finish: P6 CalibratedPrimary exact6 and P12 ReflexivityCertificate exact3.
+Both gates have passed; no additional proof subject is authorized. Read
+[the stop scope](verification/local-two-sol-2026-11-13/STOP-AFTER-CURRENT-ROUND.json).
+
+After all owned author/native/evidence jobs are reaped, root pauses the shared
+compiler policy and commits/pushes the saved checkpoint to the existing
+`formalization/continuation-2026-11-13` branch. No main merge or force push.
+No Fuel-wrapper/source-installation/HB3, internal decoding/reachability or
+calibrated compatibility successor. Preserve checked/frozen mathematics and
+all failed drafts. No automatic restart without new explicit user release.
+Fable and private research remain stopped. Root alone owns Git publication.
+
+---
+
+# Previous release — two-agent continuation after latest fetch
+
+The user now requests fetching the repo and two subagents continuing work.
+The clean checkout switched to `formalization/continuation-2026-11-13` at
+`2aaae2862e0fecc7dc09a1c48035859ea25e3188`, 289 commits after the last local
+publication. This new explicit release supersedes the earlier pauses and
+13 November 21:40 UTC cutoff for public formalization. Read
+[the two-worker brief](verification/local-two-sol-2026-11-13/BRIEF.md) and
+[current control](verification/local-two-sol-2026-11-13/CONTROL.json).
+
+Only two workers are released: P6 canonical/Object cancellation and P12 genuine
+internal proof-certificate/HB3 infrastructure. P12 owns the sole serialized
+fixed-limit native queue; P6 submits exact-gate requests there. Root retains
+source adoption/register/Git authority. Preserve accepted/frozen mathematics,
+all failed drafts, exact standard-axiom checks, pins and resource limits.
+Fable and private research remain stopped. No nested agents or automatic Git
+publication. Historical pending summaries must be checked against current
+sources/evidence. Register starts at 175 checked, 2 inherited, 12 pending /189.
+
+---
+
+# Previous release — 13 November continuation
+
+The user explicitly resumes public Lean formalization after additional work.
+Start from verified remote checkpoint `0dca825a0540a7608a276e377de7fef66c08bead`.
+Preserve accepted/frozen mathematics and all prior drafts. Publish source-first
+non-force checkpoints frequently, with all current work saved by 17:40 UTC on
+13 November 2026. Save checkpoints at least every 30 minutes throughout the
+continuation, and sooner after substantial checked results. Stop proof work at 21:40 UTC;
+preserve and label unfinished drafts, verify remote publication, and do not
+resume automatically. No main merge, Fable, or private research is authorized.
+
+The continuation coordinator alone runs the serialized fixed-limit native
+checker and Git publication. New workers own disjoint runtime, context, erasure,
+and history-fusion modules. Earlier pause controls below are historical for
+this explicitly released public continuation. Numbered register starts at
+175 checked, 2 inherited, 12 pending /189. No new proof is claimed by this release.
+
+---
+
+# Current instruction — publish the paused six-lane checkpoint
+
+The user explicitly requests "please commit/push" after the completed pause.
+Commit this checkpoint and push it to the existing
+`formalization/cumulative-continuation-2026-11-09` remote branch. This releases
+only Git publication; all six lanes, Fable, private research and the native
+compiler remain paused. No new proof round or main-branch merge is authorized.
+Earlier no-publication instructions are historical for this finite action.
+Read [the publication record](verification/local-six-sol-2026-11-12/PUBLICATION.md).
+
+---
+
+# Current proof state — paused after all six rounds and Lean repairs
+
+The user-requested closeout is complete. All six lanes have stopped, all current
+packets passed their focused exact/standard-axiom gates, and all owned native
+sessions were reaped. The shared compiler queue is empty and its policy is
+paused. Read [the final handoff](verification/local-six-sol-2026-11-12/FINAL-STOPPED-HANDOFF.md)
+and [terminal control](verification/local-six-sol-2026-11-12/FINAL-STOPPED.json).
+No new proof/compiler/research round or automatic restart without a new explicit
+user release. Git publication is covered by the instruction above. The local register is
+175 checked, 2 inherited, 12 pending /189. Full paper06 I/C/accessibility and
+paper12 HB/collapse remain pending. Earlier active instructions below are
+historical wherever they conflict with this pause.
+
+---
+
+# Previous user instruction — finish current rounds and Lean repairs, then pause
+
+The user requests: "please pause after the current rounds and any subsequent
+lean runs/repairs finish". New rounds, successor targets and author admission
+are disabled now. Only proof packets already in progress may finish their
+focused native checks, constructive repairs, exact-type/standard-axiom audits
+and handoff. Preserve accepted/frozen mathematics and all failed drafts.
+Read [the stop control](verification/local-six-sol-2026-11-12/STOP-AFTER-CURRENT-ROUNDS.json).
+Keep the serialized compiler available for this bounded closeout; pause its
+policy only after all owned native/author jobs are reaped. Then no automatic
+restart without explicit user release. No Git publication is authorized.
+
+---
+
+# Previous user release — six Sol 6.1 xhigh formalization agents
+
+The user on 12 November 2026 requests fetching the latest work and six Sol 6.1
+xhigh subagents continuing formalization. The checkout fast-forwarded to 570d4cbb.
+Read [the six-lane brief](verification/local-six-sol-2026-11-12/BRIEF.md) and
+[ownership/control](verification/local-six-sol-2026-11-12/CONTROL.json).
+This explicitly releases public formalization beyond the earlier local pauses
+and cutoffs. Four agents own disjoint paper06 suppliers, one paper08 Snyatkov,
+and one paper12 actual HB/CK. Private research and Fable remain stopped.
+
+Root delegates the single native compiler queue to `sol_integration` (L4);
+other agents send that coordinator focused exact-gate requests. Root retains
+shared adoption/register/Git authority. Only the compiler coordinator launches
+native checks; no other independent compiler launch or nested agents. Existing fixed resource limits, artifact validation, immutable
+accepted/frozen math, exact-type and standard-axiom safeguards remain unchanged.
+No automatic Git publication, manuscript, CI, dependency or toolchain changes.
+The numbered register starts at 171 checked, 2 inherited, 16 pending /189.
+
+---
+
+# Current checkpoint — closed recognizer factor checked
+
+The continuation from `4fea270b5f820b4a2b4bb02add9ccb8200bf8e56` adds four
+checked exact contracts in eleven new Lean modules on the same Nov9 cumulative
+branch. Read [the checkpoint](verification/continuation-2026-11-12-recognizer-factor/STATUS.md).
+
+Acceptance of the explicit closed checker now transfers to its underlying
+leaf through the actual recognizer. Finish acceptance, nonrejecting selected
+steps, accepting original-path runs and final recognition preserve the same
+states, path and four runtime inputs. The application case retains the failed
+earlier lambda test; both actual states are quantified inside the original
+arithmetic path induction. Generic helper suppliers are fully discharged at
+the four public exact endpoints. No native calibration is reflected internally.
+
+The focused native closure contains 1,439 source-matched modules. All four exact
+aliases and new helper audits use only the standard permitted axioms. All 631
+frozen hashes match; inherited mathematical sources, register, manuscripts,
+compiler/dependency pins, CI and the shared checker are unchanged. Compiler and
+evidence jobs for this checkpoint are complete. No full-root or remote-CI
+result is claimed.
+
+General result-stack/root-return semantics, selected-endpoint/final-tuple
+integration, unrestricted original source-edge closure, internal I/C and full
+paper06 accessibility remain pending. Register: 171 checked, 2 inherited,
+16 pending /189. Preserve the fixed serialized native profile and checked
+sources. Historical external-author and private-research sessions remain stopped.
+
+---
+
+# Previous checkpoint — class coherence and concrete transport checked
+
+The user's continuation after `6efe1499` produced twelve checked exact
+supporting contracts in 33 new Lean modules on the same Nov9 branch. Read
+[the release](RESUME-2026-11-12-CLASS-KERNEL.md) and
+[the accepted checkpoint](verification/continuation-2026-11-12-class-kernel/STATUS.md).
+
+An explicit active class kernel is calibrated to the original predicate on
+every vector and has independent internal domain/row-coherence laws. Its
+actual guarded least representative is coherent and idempotent at one runtime
+parameter, retaining the complete prior package and final rank laws at one
+tuple. Original lambda-body Object typing is derived at the SAME final Data.
+The genuine top-variable positive-certificate branch collapses under erasure,
+including through the SAME canonical Object Program, with strict ORIGINAL
+endpoint rank decrease from one to zero.
+
+The focused evidence verifies 3,251 source-matched native modules, all twelve
+exact aliases and standard-only axioms. All 259 frozen hashes are preserved.
+Accepted mathematical sources, register, manuscripts, pins, CI and the shared
+checker are unchanged. All owned compiler/evidence jobs are complete.
+
+Internal transport of the original class key across contexts, general canonical
+cancellation, the full erasure certificate transformer, internal substitution/
+I/C and paper06 closed accessibility remain pending. The register stays
+171 checked, 2 inherited, 16 pending /189. Preserve checked sources and the
+fixed serialized native profile. Historical external-author and private
+research sessions remain stopped. No full-root or remote-CI result is claimed.
+
+---
+
+# Previous checkpoint — active minimum and Object rank transport checked
+
+The user explicitly requested continuing the formalization and committing to
+the recent work branch. Resume from `af61da124919d10934aa8e56a49da7ac848e770f` on
+`formalization/cumulative-continuation-2026-11-09`; read
+[this release](RESUME-2026-11-11-MINIMUM-RANK-TRANSPORT.md).
+
+Seven exact supporting contracts in nineteen new Lean modules are checked.
+The actual active representative now has an internal least-hit law; the full
+previous Package and final rank laws coexist at the same minimum-input tuple.
+Raw Object shift preserves all-variable-occurrence rank, and total raw Object
+erasure cannot increase it. The same rank conclusions now pass through the
+actual unchanged final canonical Object program, retaining the genuine cons
+witness for contextual erasure and assuming no raw transformed fixedness.
+
+The focused native closure has 3,230 source-matched modules, seven exact aliases
+and standard-only axioms. All 247 frozen source hashes are preserved. Read
+[the accepted checkpoint](verification/continuation-2026-11-11-minimum-rank-transport/STATUS.md).
+No accepted mathematical source, register, manuscript, compiler/dependency pin,
+CI or shared checker changed. No full-root or remote-CI result is claimed.
+
+Original class coherence, canonical cancellation, the erasure certificate
+transformer, internal substitution/I/C and paper06 accessibility remain pending.
+The register remains **171 checked, 2 inherited, 16 pending /189**. All owned
+compiler work has finished. Preserve the checked sources and fixed serialized
+native profile in subsequent continuations. Private research and historical
+external author sessions remain stopped.
+
+---
+
+# Previous state — checkpoint repaired; author and proof work paused
+
+The current Fable003 checkpoint has completed its bounded constructive repairs
+and all six exact/standard-axiom gates (33 supporting contracts). The user asked
+to pause Fable and commit/push, then explicitly permitted finishing these repairs.
+Fable has stopped, and the native compiler policy is paused. No author successor,
+new target, compiler run, quota-reset restart or automatic research resumption
+without a new explicit user release. Publication/evidence closeout is authorized
+on `formalization/cumulative-continuation-2026-11-09`; no main merge.
+
+Read [the current checkpoint](verification/fable-collaboration-2026-11-11/STATUS.md).
+Paper06 original internal I/C/accessibility remain pending; register 171 checked,
+2 inherited, 16 pending /189. All earlier active/cutoff instructions below are
+historical where they conflict with this completed pause. Other lanes stay stopped.
+
+---
+
+# Current user instruction — finish checkpoint, pause Fable, commit and push
+
+The user requests: "after the current work finishes, pause fable and commit/push".
+Only the existing round003/current checkpoint may finish native verification,
+constructive repairs, exact-type/axiom checks and handoff. No round004 or new
+proof target. Fable has returned and is stopped; the existing compiler closeout
+remains authorized. Read
+[the bounded closeout](verification/fable-collaboration-2026-11-11/STOP-AFTER-CHECKPOINT.json).
+After all owned jobs finish, pause the compiler policy and publish this checked
+checkpoint on the existing cumulative Nov9 continuation branch. No main merge.
+Paper06 internal I/C and original full accessibility remain pending.
+
+---
+
+# Current user release — Fable 5.2 high collaboration, 11 November 2026
+
+The user requests fetching the papers repository and collaboration with Fable
+5.2 high to finish the current target. Read
+[the current brief](verification/fable-collaboration-2026-11-11/BRIEF.md).
+Continue paper06 original context-uniform internal accessibility from fetched
+13fa60d8, preserving accepted/frozen statements and the original semantics.
+Earlier local pauses and the external 17:30 UTC cutoff are superseded only
+for this work. Root and one Fable author collaborate; other lanes stay stopped.
+Keep exact-type/standard-axiom gates and bounded serialized native checks.
+No automatic Git publication, dependency/toolchain, manuscript or CI changes.
+
+---
+
+# Current checkpoint — canonicalized typed transport complete
+
+Both original typed/source decoder families have checked independent internal
+fuel, paid work/constructor acceptance, and arbitrary-cutoff weakening/erasure.
+Four exact all-output bridges now identify actual hereditary HT/HS and SAME-final
+target/source validity with the transparent original leaves at one initial q,
+one variable refinement r and unchanged final D. The coupled target/source guard
+is retained; no native calibration is used as an internal derivation.
+
+Four SAME-final packed validity shift/erase contracts and four actual rawObject
+corollaries now pass fixed-limit exact and standard-axiom gates. Erasure retains
+its genuine context-cons premise. These statements do not assert rejection
+equivalence, raw selectedTyped transport, canonical fixedness, rank or cancellation.
+See the transparent-decoder-validator-complete and final-transport-complete packets
+under verification/continuation-2026-11-11. Validator collapse is remotely verified
+at cf4cf2da1b2a5d9dcbdbee2560dcd1fdb7c243d3; transport checkpoint follows.
+
+Typedness after the ACTUAL final fold of a shifted/erased input is now checked:
+two packed selectedTyped contracts and two actual Outer Object typed contracts.
+Membership, source validity and outer type are recovered; transition fixedness is
+concluded from the unchanged fold. Object weakening recovers coordinates internally;
+Object erasure retains a genuine cons witness. The Outer contracts retain the original
+active-window premise. No raw shifted fixedness is assumed.
+
+Next: calibrated initial same-rank representative guard, active only when BOTH the
+original window and transparent source accept. Outside that condition it must keep
+the whole old representative. Native all-vector redundancy, independent internal rank,
+and complete prior Package retention at one unchanged final pipeline are separate
+frozen obligations. Raw rank constructor/shift/erasure arithmetic is also pending.
+General OTHER-tag cancellation still needs independent representative coherence;
+rank guarding alone does not establish it. Do not reflect native calibration into
+internal canonical rank or cancellation claims.
+
+Internal I/C and paper06 lem:id1 remain pending. Register unchanged: **171 checked,
+2 inherited, 16 pending /189**. No full-root or remote-CI claim. All accepted and
+frozen mathematical sources are immutable; candidates remain pending until native
+receipts and source-matched evidence verify them. Continue only until **11 November
+2026, 17:30 UTC**, then stop research, save all drafts truthfully, verify the remote
+checkpoint and do not auto-resume. Keep pinned toolchain and serialized fixed limits.
+Private/supervised lanes remain stopped.
+
+---
+
+# Current checkpoint — internal hereditary validator and lambda closure
+
+The cumulative branch now includes original lambda constructor/context/certificate
+laws, beta-result and hereditary SAME-step guards, global final-tuple selection,
+and original all-input-equal transparent lambda source/target calibration.
+The internal hereditary machine has exact transitions, work decrease,
+sufficient-fuel terminality, two-way saturation and SAME-validator lambda-child
+closure. All twelve frozen internal recurrence contracts are checked.
+The latest lambda-child closure has 1,187 source-matched native modules and
+standard-only axioms; this is not a full-root or remote-CI pass.
+
+Read [lambda-child status](verification/continuation-2026-11-11/hereditary-validity-lambda-child/STATUS.md),
+[termination status](verification/continuation-2026-11-11/hereditary-validity-termination/STATUS.md),
+and [transparent native calibration](verification/continuation-2026-11-11/transparent-lambda-validity/STATUS.md).
+Internal work-append acceptance is now checked with a 1,199-module closure.
+General acceptance/output recurrence has a 1,219-module verified closure.
+Independent internal transparent lambda selector/shape/root callbacks are checked
+with a 1,124-module closure. Local lambda laws and bottom normalization are also
+checked, completing all nine local transparent-validator contracts. Final-fold
+absorption and SAME-final lambda validity now complete all eight final contracts
+with a 2,300-module closure. All eight native and eight internal lambda-aware
+traversal runtime contracts are checked; internal closure has 1,266 modules.
+All ten final selection contracts are now checked, including SAME-final body
+canonicality and full global retention. Original internal syntax/I transport
+and subsequent computability integration remain active.
+Native lambda-inclusive applicative substitution and actual label-zero numbered
+computability are now checked. All ten native original raw shift/erasure/rank
+contracts and all fourteen independent internal contracts are checked,
+including recursive constructors, all-raw cancellation and parameter laws.
+All four original raw Object wrapper contracts are checked, including
+independent internal all-raw cancellation. SAME-final native canonical Object
+cancellation, rank invariance and complete global retention are checked.
+Independent internal canonical compatibility and original I/C remain active.
+Actual native ordinary and arbitrary finite-label numbered constructor
+computability are now checked by the joint head/base/label/extra induction.
+Full native substitution, genuine all-term C, least-set membership and
+encodedR accessibility are now checked under the original rank certificate.
+Native context-uniform carrier/Object accessibility and standard-least-model
+truth of the original closed allTermsFormula are now checked at the SAME
+final tuple, retaining the entire previous Package. These native results
+do not discharge the independent internal I/C or Derivation obligations.
+Accepted and frozen mathematical sources stay immutable; pending candidates are
+not accepted merely because they exist locally.
+
+Register remains **171 checked, 2 inherited, 16 pending / 189**. Original internal
+substitution/I transport, constructor
+and multiset cases and closed all-term accessibility remain incomplete.
+Continue only until **11 November 2026, 17:30 UTC**, then stop and save drafts
+with truthful status without automatic resumption. Private/supervised lanes
+remain stopped. Keep the unchanged pinned toolchain and serialized fixed limits.
+
+---
+
+# Current checkpoint — original lambda constructors and certificates
+
+Thirteen exact supporting contracts in 26 new Lean modules are checked:
+original lambda constructor graph laws and raw/typed calibration, actual
+encoded context extension with an independent internal runtime construction,
+and SAME-certificate lambda body inversion retaining replacement/root.
+Focused closures have 1,049 / 1,045 / 712 source-matched native modules;
+standard axioms only. These are not a full-root build or remote-CI pass.
+All previous sources, fixed toolchain and bounded resource limits are retained.
+
+Register remains **171 checked, 2 inherited, 16 pending / 189**. Original
+lambda/substitution computability, canonical-body coherence, constructor and
+multiset cases and closed all-term accessibility are still pending. Next:
+original beta-result supplier and all-input-equal lambda leaf guard, with
+internal graph consequences proved independently of native calibration.
+Continue until **11 November 2026, 17:30 UTC**, then stop without automatic
+resumption. Private/supervised lanes remain stopped. Read
+[lambda constructors](verification/continuation-2026-11-11/lambda-constructors/STATUS.md),
+[context extension](verification/continuation-2026-11-11/context-extension/STATUS.md),
+[lambda certificates](verification/continuation-2026-11-11/lambda-certificates/STATUS.md).
+
+---
+
+# Current checkpoint — original neutral and all-type variable computability
+
+Seven exact supporting contracts in 35 new Lean modules are checked. Original
+finite-type neutral expansion and genuine variable C (including arrow types)
+now hold at the SAME final calibrated tuple, with the entire previous Package
+and child/suffix consumers retained. No tau-in-window premise or substituted
+source relation is added. The gate/preflight union has 2,106 source-matched
+native modules; exact/helper axioms are standard only. All inherited sources
+and fixed resource limits are preserved. Register remains **171 checked,
+2 inherited, 16 pending / 189**; paper06 `lem:id1` remains pending. Read
+[accepted status](verification/continuation-2026-11-11/neutral-computability/STATUS.md).
+
+Next: original lambda/substitution, constructors/multiset and closed all-term
+accessibility. Keep raw packed numbering distinct from Encodable Gamma codes.
+Continue until **11 November 2026, 17:30 UTC**; no private/supervised resumption.
+No full-root or remote-CI pass is claimed.
+
+---
+
+# Current continuation — application bridges checked; neutral induction active
+
+Two additional exact application bridges at the SAME final tuple are checked:
+accepted output non-lambda and computability of the exact accepted output.
+The focused gate has 1,936 source-matched native modules and standard-only
+axioms. Five new neutral/variable/global contracts are frozen and preflighted;
+their proofs remain pending. Read
+[status](verification/continuation-2026-11-11/neutral-computability/STATUS.md).
+Continue until **11 November 2026, 17:30 UTC** under all inherited safeguards.
+No numbered-register, full-root, or remote-CI completion claim is added.
+
+---
+
+# Current checkpoint — original child certificate and same-code suffix
+
+Eight exact supporting contracts in 37 new Lean modules are checked, with
+2,077 source-matched native modules and standard-only exact/namespace axioms.
+The original function-child Object certificate and unchanged-code suffix
+source certificate are now internally constructed. One calibrated final tuple
+retains the complete previous Package and all new consumers. No final-endpoint
+application shape is assumed. All inherited mathematical/frozen sources and
+fixed native limits remain unchanged. Register: **171 checked, 2 inherited,
+16 pending / 189**; paper06 `lem:id1` remains pending. Read
+[accepted status](verification/continuation-2026-11-11/child-certificate/STATUS.md).
+
+Continue the public task until **11 November 2026, 17:30 UTC**. Next is actual
+application computability and finite-type neutral/arrow induction. Private and
+separately paused supervised lanes remain stopped. No full-root/remote-CI claim.
+
+---
+
+# Current public release — original child certificate and same-code suffix
+
+The user requested continuation after the latest additional work until
+**11 November 2026, 17:30 UTC (11:30 a.m. UTC-06)**. Read
+[the active release](RESUME-2026-11-11-CHILD-CERTIFICATE.md).
+Start at cumulative head `6ff98ec9` on the existing Nov9 branch. Preserve
+all inherited mathematical/frozen sources and bounded serialized native rules.
+Private and separately paused supervised lanes remain stopped. New contracts
+and candidates are pending until their exact native/axiom gates pass.
+
+---
+
+# Current checkpoint — original Object applications and spine guards
+
+11 exact supporting contracts in 58 new Lean modules extend `594d0a1a`
+on the existing cumulative branch. The first quotient-edge function case now
+reconstructs the original accepted Object application, binding its target
+function and vertex Objects internally at the SAME Gamma and retaining the
+SAME argument Object. The exact original ordinary suffix remains unchanged.
+
+The SAME full canonical fold preserves the entire bottom-spine flag/depth mark.
+A new all-input-equal old-leaf refinement exposes the original spine guard;
+internal backward transport through the original peel/repeat checker pays it
+at unchanged raw endpoints, certificate and parameter. One calibrated global
+selection retains the complete previous Object/global Package and the raw-step
+guard at that SAME final tuple. No source Program is replaced by a new relation.
+
+All 11 exact aliases and 83 additional audited declarations use only
+standard axioms. The gate/preflight union has 2066 successful source-matched
+native modules. All 20 active frozen files, inherited mathematical sources,
+manuscripts and prior evidence remain unchanged. Checker, toolchain/dependency
+pins, CI and fixed serialized limits are preserved. No full-root or remote-CI
+pass is claimed.
+
+Next: combine raw-step guard progress with full-fold mark preservation to
+construct the original function-child Object source certificate; then prove
+the same-code suffix rule and finite-type neutral/arrow computability. Later
+function reducts may be lambdas, so final H+ endpoint shape is not restricted.
+Lambda/substitution, multiset, constructors and all-term accessibility remain
+pending. Paper06 `lem:id1` is pending; register **171 checked, 2 inherited,
+16 pending / 189**. Read [the accepted checkpoint](verification/continuation-2026-11-11/object-application/STATUS.md) and
+[next steps](verification/continuation-2026-11-11/object-application/NEXT-STEPS.md).
+All owned proof-author/compiler jobs have completed. Publish on the existing
+cumulative branch with a non-force update preserving intervening work.
+
+---
+
+# Public release — original Object applications and full-fold spine marks
+
+The latest user continuation extends accepted `594d0a1a` on the existing
+cumulative branch. Read [the release](RESUME-2026-11-11-OBJECT-APPLICATION.md).
+The next exact targets reconstruct the accepted Object application at the
+first vertex with the SAME argument Object, and preserve the entire bottom-
+spine mark through the SAME full canonical fold. No new cutoff was supplied.
+Private and separately paused supervised lanes remain stopped. Frozen-source,
+standard-axiom and fixed serialized native safeguards remain active.
+
+---
+
+# Current checkpoint — original source neutral applications
+
+Seven exact supporting contracts in 34 new Lean modules extend `cbda2bacd`
+on the existing cumulative branch. The original requested-function non-lambda
+premise now supplies actualJ neutrality. Original Object domain/accepted
+application inputs internally expose one common Gamma, raw inputs/output,
+parameter and all window/member facts. The original source H+ certificate
+consumer classifies only its FIRST quotient-edge vertex and retains its exact
+ordinary suffix to the requested endpoint. One globally calibrated final tuple
+retains the complete Package and every predecessor law with these new rules.
+
+All seven exact aliases and 36 further audited declarations use only standard
+axioms. The gate/preflight union has 2008 successful source-matched native
+modules. All fourteen frozen files, inherited mathematical sources and prior
+verification evidence are unchanged. Checker, pins, manuscripts, CI and fixed
+serialized limits remain unchanged. No full-root or remote-CI pass is claimed.
+
+Next: reconstruct the original function-child Object certificate and accepted
+Object application at the first vertex for the finite-type consumer, then pay
+neutral/arrow computability and suffix closure. Raw child edge, target typing
+and actualJ alignment are already checked. Later function reducts may be lambdas;
+do not impose application shape on the final H+ endpoint. Lambda/substitution,
+multiset, constructors and all-term accessibility remain pending. Paper06
+`lem:id1` is pending; register **171 checked, 2 inherited, 16 pending / 189**.
+Read [the accepted checkpoint](verification/continuation-2026-11-10/source-neutral-application/STATUS.md) and [next steps](verification/continuation-2026-11-10/source-neutral-application/NEXT-STEPS.md).
+All owned proof-author/compiler jobs have completed. Publish to the existing
+cumulative branch with a non-force update preserving intervening work.
+
+---
+
+# Public release for this checkpoint — original source neutral applications
+
+The user requested another public continuation from accepted `cbda2bacd`.
+Read [the current release](RESUME-2026-11-10-SOURCE-NEUTRAL.md). The next
+obligations are the original non-lambda application bridge and Object/shared
+runtime exposure, preserving the first-edge/reflexive-suffix distinction for
+positive paths. No new cutoff was supplied. Private and separately paused
+supervised lanes remain stopped. All inherited exact-source, frozen-target,
+standard-axiom and serialized-resource requirements remain active.
+
+---
+
+# Current checkpoint — original quotient-neutral application inversion
+
+Seven exact supporting contracts in 35 new Lean modules extend `f898851d`
+on the existing cumulative branch. Original accepted raw steps reconstruct the
+SAME uniform quotient checker; neutral quotient edges have literal same-type
+bottom or an accepted function-child quotient edge. The typed actualJ equation
+retains the requested function and internally folds the raw argument. The
+aligned edge consumer retains that requested RAW argument in its target actualJ
+graph and derives the target function's typing. One globally calibrated final
+tuple retains the complete Package and all prior laws with both inversion rules.
+
+All seven exact aliases and 43 additional declarations use standard axioms.
+The gate/preflight union has 1983 source-matched successful native modules;
+all eleven frozen files and all inherited mathematical sources are unchanged.
+Fixed serialized resource limits, checker, pins, manuscripts and CI are retained.
+Register: **171 checked, 2 inherited, 16 pending / 189**. Paper06 `lem:id1`
+remains pending. No full-root or remote-CI pass is claimed.
+
+Next: source/Object application wrappers and the original non-lambda-premise
+neutrality bridge, then path wrappers and finite-type neutral/arrow computability.
+Do not assume that later function reducts remain non-lambdas. Lambda/substitution,
+multiset, constructors and all-term accessibility remain pending. Read the
+[accepted checkpoint](verification/continuation-2026-11-10/quotient-neutral-inversion/STATUS.md) and [next steps](verification/continuation-2026-11-10/quotient-neutral-inversion/NEXT-STEPS.md).
+All owned author/compiler jobs are complete. Publish on the existing cumulative
+branch using a non-force update; preserve any intervening work.
+
+---
+
+# Public release for this checkpoint — original quotient-neutral inversion
+
+The user explicitly requested a new continuation after intervening work.
+Read [the new public release](RESUME-2026-11-10-QUOTIENT-NEUTRAL.md). Start
+from remote cumulative head `f898851d`; the completed 21:00 UTC public cutoff
+below is historical for this newly authorized request. No new cutoff was
+supplied. Preserve all exact-source, frozen-target, standard-axiom and unchanged
+serialized resource rules. Private and separately paused supervised work
+remains stopped. The current target is the original uniform quotient-neutral
+edge consumer after the checked paired application coherence checkpoint.
+
+---
+
+# PAUSED — user cutoff reached, 10 November 2026, 21:00 UTC
+
+This public continuation is stopped. All owned proof authors and native
+compiler jobs have finished, both compiler locks are free, and the local
+run policy is paused. No automatic resume or new proof/compiler round.
+Only final checkpoint publication/preservation remains authorized by this
+closeout. Read [the final handoff](HANDOFF-2026-11-10-21UTC.md).
+
+Three exact supporting contracts are checked; register remains
+**171 checked, 2 inherited, 16 pending / 189**. Paper06 `lem:id1` remains
+pending. Historical releases below do not authorize a new round.
+
+---
+
+# Current checkpoint — paired canonical application components, 10 November 2026
+
+Three exact supporting contracts in sixteen new Lean modules are checked:
+paired whole-child component coherence for original applications sharing the
+SAME canonical output; one final globally calibrated tuple retaining full
+Package and prior root/neutral/variable laws; and paired internal elimination
+without externally supplied constructor or child witnesses. The source-matched
+proof/preflight union has 1,950 modules, fifteen standard-only theorem audits
+and six explicit prints. All three frozen targets are unchanged.
+
+The register remains **171 checked, 2 inherited, 16 pending / 189**. Original
+quotient-neutral edge inversion, arrow computability and paper06 `lem:id1`
+remain pending. Read the [checked recovery checkpoint](verification/continuation-2026-11-10/application-component-coherence-checkpoint/STATUS.md)
+and [concrete next consumer](verification/continuation-2026-11-10/application-component-coherence-checkpoint/NEXT-STEPS.md).
+The user cutoff remains **10 November 2026, 21:00 UTC**. No private or
+separately paused lane is resumed. Earlier checkpoint summaries follow.
+
+---
+
+# Current public continuation release — 10 November 2026
+
+Read [the current release](RESUME-2026-11-10-CUMULATIVE.md). Continue the existing
+Nov9 cumulative branch from `a89b703ffafd70b015aaed43daa3475c7d94b9b2`
+through **10 November 2026, 21:00 UTC**. Historical pauses are superseded only
+for this public continuation; private and separately paused supervised work
+remain stopped. Preserve all source, exact-target, axiom and serialized
+resource safeguards. Install the local cutoff policy before native checks.
+The latest accepted mathematical checkpoint follows unchanged.
+
+---
+
+# Current checkpoint — canonical function neutrality
+
+Six exact supporting contracts in 24 new Lean modules extend `d5803735`
+on `formalization/cumulative-continuation-2026-11-09`. The SAME full canonical
+fold now preserves and reflects the original application's function-neutrality
+test. A common actual canonical output transfers that test between raw sources.
+The original raw-step consumer obtains its neutrality premise from the actual
+canonical output and retains literal same-type bottom or a full accepted
+function-child step, with the original certificate, raw argument and parameter.
+
+One globally calibrated final tuple retains the complete Package, prior root
+fields, the new neutrality law, the original neutral-bottom law and both
+variable Object laws. The six aliases and 86 additional declarations use
+only standard axioms. All 1,871 gate dependencies have source-matched native
+rows; the separate preflight passed. All inherited mathematical sources and
+frozen specifications are unchanged. Register: **171 checked, 2 inherited,
+16 pending / 189**. Paper06 `lem:id1` remains pending.
+
+Next: canonical application-component coherence through the SAME final leaf,
+then quotient neutral inversion and arrow computability. Function neutrality
+and its raw-step consumer are paid. The final leaf graph still does not say
+`out = rebuilt`; transition fixedness does not establish full-fold or child
+fixedness. The handoff proposes a bounded native least-code application
+factorization supplier and identifies the still-unpaid internal connection.
+Lambda/substitution, multiset, constructor and all-term accessibility remain
+pending. Read the [accepted checkpoint](verification/continuation-2026-11-09/function-neutrality/STATUS.md)
+and [next steps](verification/continuation-2026-11-09/function-neutrality/NEXT-STEPS.md).
+All owned compiler jobs are complete. The unchanged serialized limits were
+retained, including the global-proof split after its RSS stop. No full-root
+or remote-CI pass is claimed. Publication stays on the existing cumulative
+branch with no force update.
+
+---
+
+# Previous checkpoint — canonical constructor reflection, 10 November 2026
+
+The user continued the public formalization from
+`531a50683ed1ffb672d74159f776be6bfb3c4ae2` on the existing
+`formalization/cumulative-continuation-2026-11-09` branch. Historical private
+lane pauses and completed Claude R001 records remain preserved; that private
+session was not restarted. Exact targets, source preservation, standard
+axioms and unchanged serialized native resource limits remain active.
+
+Seven exact supporting contracts in 22 new Lean modules are checked. They
+prove an all-input-equal original shape refinement, internal mark preservation
+through the SAME selected bounded descent and full canonical fold, root-tag
+and application-domain reflection, common-canonical-output root comparison,
+generic original application elimination with both certified child outputs
+and the SAME final leaf graph, and one globally calibrated tuple retaining
+the complete Package and prior neutral and variable Object laws.
+
+The gate has 1,842 source-matched native dependencies; its seven aliases and
+92 additional proof declarations use only standard axioms. The separate
+preflight passed. All 10,255 inherited mathematical Lean sources and all
+three frozen specifications are unchanged. Register: **171 checked,
+2 inherited, 16 pending / 189**. Paper06 `lem:id1` remains pending.
+
+Next: function-child lambda-flag reflection and canonical application-component
+coherence through the SAME full canonical fold, then original quotient neutral
+inversion and arrow computability. Root lambda shape is paid. Do not repeat
+the raw neutral leaf/checker or root-shape arguments. The final selected-leaf
+graph does not identify its output with the rebuilt application. Lambda/
+substitution, multiset, constructor and all-term accessibility remain pending.
+Read the [checked checkpoint](verification/continuation-2026-11-09/canonical-constructor-shape/STATUS.md)
+and [concrete next steps](verification/continuation-2026-11-09/canonical-constructor-shape/NEXT-STEPS.md).
+All owned compiler jobs have completed; no full-root or remote-CI pass is claimed.
+Publication stays on the existing cumulative branch with no force update.
+
+---
+
+# Previous checkpoint — original raw neutral inversion, 10 November 2026
+
+The user resumed the public formalization after additional work. This
+continuation extends `2f690cdf8ffc2788b3711e3a788a412df3761cfb` on the existing
+`formalization/cumulative-continuation-2026-11-09` branch. Historical private
+lane pauses and completed Claude R001 records remain preserved; that private
+session was not restarted. Exact targets, source preservation, standard
+axioms and the unchanged serialized native resource limits remain active.
+
+Ten exact supporting contracts in 22 new Lean modules are checked. They
+prove supplied typed/numeric neutral certificate inversion, internal
+application-child validity, full selected-child step acceptance, an
+all-input-equal neutral old-leaf refinement with an internal zero-guard
+bottom law, and one final globally calibrated tuple retaining the full
+Package and existing variable Object laws. The final raw neutral-step rule
+has literal same-type bottom or an accepted original function-child step.
+The original certificate, raw argument, endpoint and parameter remain.
+
+The gate has 1,827 source-matched native dependencies; its ten aliases and
+41 additional proof declarations use only standard axioms. The two preflight
+modules also passed. All inherited mathematical Lean sources and frozen
+specifications are unchanged. Register: **171 checked, 2 inherited,
+16 pending / 189**. Paper06 `lem:id1` is still pending.
+
+Next: internal application-component and lambda-shape reflection through
+the SAME full canonical fold, then original quotient neutral inversion and
+arrow computability. Do not repeat the now-paid raw neutral leaf/checker
+arguments. Lambda/substitution, multiset, constructor and all-term
+accessibility remain pending. Read the [checked checkpoint](verification/continuation-2026-11-10/original-neutral-inversion/STATUS.md)
+and [concrete next steps](verification/continuation-2026-11-10/original-neutral-inversion/NEXT-STEPS.md).
+All owned compiler jobs are complete; no full-root or remote-CI pass is claimed.
+Publication stays on the existing cumulative branch with no force update.
+
+---
+
+# Previous publication — checked Claude R001; its supervised lane remains paused
+
+The user explicitly requested committing and pushing the checked Claude
+checkpoint. Publish it on the existing cumulative continuation branch.
+Read [the checked component](verification/claude-supervised-2026-11-09/STATUS.md).
+Two exact raw guard/checker inversion contracts and eight supporting proof
+theorems passed native/standard-axiom checks. The full context-uniform
+accessibility target remains pending; register171checked/2inherited/16pending.
+Publication does not resume authors, compilers or proof rounds. No R002.
+
+# Completed user instruction — finish ONLY current R001, then pause
+
+Read [the corrected stop](PAUSE-AFTER-CURRENT-ROUND-2026-11-10.md). The user
+clarified "sorry, I meant this round". Finish only current R001 verification,
+native repairs/type/axiom/feedback/handoff and PAUSE. NO R002, another author,
+successor target/comparator or automatic restart. Author admission is disabled
+now; current native closeout remains authorized and undisturbed. All existing
+scope/source/resource/publication bounds persist.
+
+# Previous user release — continue the supervised lane, 10 November 2026 UTC
+
+Read [the latest release](RESUME-2026-11-10-SUPERVISED.md). The user explicitly
+resumes only `/root/private_epistemic` and its SAME Claude Opus5.5 session.
+The old 00:24:36 UTC cutoff is superseded for this subject; no new deadline
+was supplied. First complete the preserved R001 compile/repair/exact-type/axiom
+checkpoint before any successor author. The other five private lanes remain
+stopped. All source, model, resource and Git bounds persist.
+
+# Previous user release — one supervised Claude Opus5.5 lane, 9 November 2026
+
+Read [the new release](RESUME-2026-11-09-CLAUDE-SUPERVISED.md). Latest accepted
+tip7574ecd5 is fetched, register171/2/16. Sole supervisor is
+`/root/private_epistemic`, diverted after its completed private Round030;
+the other five uniquely inherit all private originals. Exactly one fresh
+Claude Opus5.5 read-only author is explicitly authorized in the new guarded
+subject. This supersedes older no-Claude/expired-cutoff allocations only for
+that subject. Current00:24:36UTC10November cutoff and all unchanged exact-source,
+axiom, preservation and serialized resource requirements apply. Root owns
+register/Git/policy; no automatic publication. Earlier checkpoints below keep
+their mathematical scope and historical allocation.
+
+# Previous accepted checkpoint — original variable Objects, 9 November 2026
+
+The active continuation is `formalization/cumulative-continuation-2026-11-09`,
+from `cd648a18`. The user resumed work after the earlier cutoff. Historical
+stop times and allocations do not block this continuation; the unchanged
+exact-target, source-preservation, standard-axiom and serialized compiler
+requirements remain. Publication stays on the existing cumulative branch.
+
+Three exact supporting targets in nine new Lean modules are checked:
+original variable Object certificate inversion to literal same-type,
+same-Gamma bottom; scalar I for typed variable Objects at every finite type;
+and one global selection retaining both laws and the full original package.
+The shared Gamma is bound internally and no tau-in-window premise is added.
+The register remains **171 checked, 2 inherited, 16 pending / 189**.
+
+The newer continuation already completed the earlier Object wrappers,
+unqualified certified lift and original global source package. Next is
+genuine neutral application-spine inversion and all-type variable
+computability. Scalar I at an arrow is not arrow C. Lambda/substitution,
+multiset, constructor and closed all-term accessibility remain pending.
+
+Read the [accepted checkpoint](verification/continuation-2026-11-09/variable-object-lift/STATUS.md)
+and [concrete next steps](verification/continuation-2026-11-09/variable-object-lift/NEXT-STEPS.md).
+All new compiler jobs are finished. No full-root or remote-CI pass is claimed.
+Earlier dated checkpoints below retain their historical scope.
+
+---
+
+# Active user release — cumulative continuation, 9 November 2026
+
+Read [the current release](RESUME-2026-11-09.md) first. The user explicitly
+resumed formalization on `formalization/cumulative-continuation-2026-11-09`
+from reconciled main `4028a9e34506f4339af2992749464cf2d4d55eb9`, through
+**9 November 2026, 21:30 UTC**. Baseline: **170 checked, 2 inherited,
+17 pending / 189**. This release supersedes the historical STOP for this
+continuation only. Exact mathematical targets, source preservation,
+standard-axiom acceptance and bounded serialized compiler controls remain
+unchanged. Publication is non-force on the cumulative branch; no main merge,
+dependency/toolchain, checker, manuscript or CI change is authorized.
+
+---
+
 # Current user instruction — reconcile branches onto main, 9 November 2026
 
 The user requested reconciliation of the external agent's work and the local

@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportSyntaxProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportChecks
+
+theorem exact_correlated_body : OutcomeTransportTargets.ExactCorrelatedBody :=
+  OutcomeTransportProof.exactCorrelatedBody
+
+theorem body_syntax_and_domains : OutcomeTransportTargets.BodySyntaxAndDomains :=
+  OutcomeTransportProof.bodySyntaxAndDomains
+
+#print axioms exact_correlated_body
+#print axioms body_syntax_and_domains
+#audit_namespace LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportProof
+
+end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportChecks

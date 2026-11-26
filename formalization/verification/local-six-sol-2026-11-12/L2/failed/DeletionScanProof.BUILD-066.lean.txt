@@ -1,0 +1,84 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.DeletionScanCoreProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.DeletionScanProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open SourceComputabilityFormulaSupportProof InternalClosedPrograms InternalClosedProgramsBindingProof
+open InternalControlGraphSupportProof InternalRecursionGraphStepSyntaxProof
+open InternalGraphCompositionFunctionalityProof
+open InternalApplicationStepPeelSupportProof (andIntro)
+open InternalTagArithmeticSyntaxProof hiding OTerm row
+open InternalBinderTransportProof InternalTermSubstitutionProof
+open InternalSourceIntroductionSyntaxProof InternalFiniteBlocksSubstitutionProof
+open InternalRecursionClosureSyntaxProof InternalRecursionGraphSyntaxProof
+open DeletionScanSyntaxProof DeletionScanCoreProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph InternalListMap.map OriginalHereditaryDeletionRows.scan
+
+theorem zeroRow (Q : Program 2) : Nonempty (Derivation body Delta (row Q (z : OTerm alpha))) := by
+  unfold row
+  apply actualFiniteUniversalIntroduction body alpha 7 Delta
+  let input : OTerm (alpha ⊕ Fin 7) := .var (.inr 0)
+  let fake : OTerm (alpha ⊕ Fin 7) := .var (.inr 1)
+  let typ : OTerm (alpha ⊕ Fin 7) := .var (.inr 2)
+  let raw : OTerm (alpha ⊕ Fin 7) := .var (.inr 3)
+  let parameter : OTerm (alpha ⊕ Fin 7) := .var (.inr 4)
+  let jobs : OTerm (alpha ⊕ Fin 7) := .var (.inr 5)
+  let out : OTerm (alpha ⊕ Fin 7) := .var (.inr 6)
+  let A := fields Q z input fake typ raw parameter jobs out
+  let Theta := A :: Delta.map (fun p => p.relabel (Sum.inl : alpha → alpha ⊕ Fin 7))
+  obtain ⟨h⟩ := zeroCore Q input fake typ raw parameter jobs out
+    (body := body) (Delta := Theta) ⟨Derivation.hypothesis List.mem_cons_self⟩
+  simpa only [rowBody,zRelabel] using (Nonempty.intro (Derivation.implicationIntroduction h))
+
+theorem successorRow (Q : Program 2) (count : OTerm alpha)
+    (hi : Nonempty (Derivation body Delta (row Q count))) :
+    Nonempty (Derivation body Delta (row Q (suc count))) := by
+  unfold row
+  apply actualFiniteUniversalIntroduction body alpha 7 Delta
+  let input : OTerm (alpha ⊕ Fin 7) := .var (.inr 0)
+  let fake : OTerm (alpha ⊕ Fin 7) := .var (.inr 1)
+  let typ : OTerm (alpha ⊕ Fin 7) := .var (.inr 2)
+  let raw : OTerm (alpha ⊕ Fin 7) := .var (.inr 3)
+  let parameter : OTerm (alpha ⊕ Fin 7) := .var (.inr 4)
+  let jobs : OTerm (alpha ⊕ Fin 7) := .var (.inr 5)
+  let out : OTerm (alpha ⊕ Fin 7) := .var (.inr 6)
+  let c := count.relabel (Sum.inl : alpha → alpha ⊕ Fin 7)
+  let A := fields Q (suc c) input fake typ raw parameter jobs out
+  let Theta := A :: Delta.map (fun p => p.relabel (Sum.inl : alpha → alpha ⊕ Fin 7))
+  have hi := renameInto hi Sum.inl Theta
+    (fun p hp => List.mem_cons_of_mem _ (List.mem_map.mpr ⟨p,hp,rfl⟩))
+  rw [rowRename] at hi
+  obtain ⟨h⟩ := successorCore Q c input fake typ raw parameter jobs out hi
+    (show Nonempty (Derivation body Theta A) from ⟨Derivation.hypothesis List.mem_cons_self⟩)
+  simpa only [rowBody,sucRelabel] using (Nonempty.intro (Derivation.implicationIntroduction h))
+
+theorem allRows (Q : Program 2) (count : OTerm alpha) : Nonempty (Derivation body Delta (row Q count)) := by
+  let theta : Formula (alpha ⊕ Fin 1) := row Q (.var (.inr 0))
+  have hz : Nonempty (Derivation body Delta (instantiate theta (emb z))) := by
+    simpa only [theta,rowInstantiate,varBind] using (zeroRow Q (body := body) (Delta := Delta))
+  have hs : Nonempty (Derivation body (theta :: Delta.map weaken) (successorInstance theta)) := by
+    have h := successorRow Q (body := body) (Delta := theta :: Delta.map weaken)
+      (.var (.inr (0 : Fin 1))) ⟨Derivation.hypothesis List.mem_cons_self⟩
+    simpa only [theta,rowSuccessor,nextTerm,Term.subst,Sum.elim_inr] using h
+  obtain ⟨hz⟩ := hz
+  obtain ⟨hs⟩ := hs
+  have h := Derivation.universalElimination (emb count) (natInduction theta hz hs)
+  simpa only [theta,rowInstantiate,varBind] using (Nonempty.intro h)
+
+theorem actualScanMap (Q : Program 2) (count input fake typ raw parameter jobs out : OTerm alpha)
+    (hi : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing input typ raw)))
+    (hf : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing fake z raw)))
+    (hj : Nonempty (Derivation body Delta (graph3 (OriginalHereditaryDeletionRows.scan OriginalHereditaryExpansion.unpackJob) jobs count fake parameter)))
+    (hm : Nonempty (Derivation body Delta (graph2 (InternalListMap.map (k := 1) (DeletionMapDefinitions.rawScalarFromJob Q)) out jobs typ))) :
+    Nonempty (Derivation body Delta (graph3 (OriginalHereditaryDeletionRows.scan Q) out count input parameter)) := by
+  exact rowApply Q count input fake typ raw parameter jobs out
+    (allRows Q count) (andIntro hi (andIntro hf (andIntro hj hm)))
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.DeletionScanProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.DeletionScanProof
+#print axioms LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.DeletionScanProof.actualScanMap

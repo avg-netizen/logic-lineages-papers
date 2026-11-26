@@ -1,0 +1,121 @@
+{
+  "scope": "Paper 16 supporting functional J union, no numbered promotion",
+  "exact_body": "literalData i r = data i (jRaw i) r (dCore i r permutation)",
+  "receipts": {
+    "1795541639441108182-5": {
+      "path": "build-reports/1795541639441108182-5.json",
+      "sha256": "759d4165766f54968790a7f2725940157a3b6119b703de5940e28eeb8e4bdcd8",
+      "closure_rows": 1318,
+      "failed_rows_in_receipt": 1
+    },
+    "1795541745840912870-7": {
+      "path": "build-reports/1795541745840912870-7.json",
+      "sha256": "cbf59e84f5dc3808e84a31510722f4229b4d09a44fa73c5ca2b2b512602a4f8a",
+      "closure_rows": 1304,
+      "failed_rows_in_receipt": 0
+    },
+    "1795541826770013507-7": {
+      "path": "build-reports/1795541826770013507-7.json",
+      "sha256": "d26394e553bf000aaae57fb230b48e5eee0f17509b1d93f32a43d77bdfd1e961",
+      "closure_rows": 1453,
+      "failed_rows_in_receipt": 1
+    },
+    "1795541894401603208-8": {
+      "path": "build-reports/1795541894401603208-8.json",
+      "sha256": "6c9b7ffdd98c2745464878de7099d563a9f7f6501e424d2407cebccf9a219911",
+      "closure_rows": 1781,
+      "failed_rows_in_receipt": 1
+    },
+    "1795541925125799969-7": {
+      "path": "build-reports/1795541925125799969-7.json",
+      "sha256": "e6b4877e2d9924871689766e288c80e6c577a652059e1a31c2966c689185a05a",
+      "closure_rows": 1781,
+      "failed_rows_in_receipt": 0
+    },
+    "1795541954238456860-5": {
+      "path": "build-reports/1795541954238456860-5.json",
+      "sha256": "f10643d9f3c4a9aa8ebcd558a5a1363fdd4c600fdda7883b5479d131d08f0df6",
+      "closure_rows": 1783,
+      "failed_rows_in_receipt": 0
+    }
+  },
+  "last_exact_gate_receipt": "1795541954238456860-5",
+  "fresh_source_rows": {
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFunctionalRawRepackDefinitions.lean": {
+      "sha256": "f8444c281286aae0fcf17970af3b6a426edaf2e28e7fa09af532f9ae2c17b4b7",
+      "compiled_row_receipt": "1795541639441108182-5",
+      "axioms": {}
+    },
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFunctionalRawRepackNumericProof.lean": {
+      "sha256": "501ab755b8e5a6018cf0ec1b8375f5563e58ef700dbc91c1f85cdc9e6bd7deb3",
+      "compiled_row_receipt": "1795541639441108182-5",
+      "axioms": {
+        "exact_FunctionalRawRepackValue": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "exact_FunctionalRawRepackOnList": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "exact_FunctionalRawRepackTwoCell": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFunctionalRawRepackProof.lean": {
+      "sha256": "a2a16a8539edf79806a3f8b6929a6f712625d5b5aa75e48ac3406c32284b0cb7",
+      "compiled_row_receipt": "1795541745840912870-7",
+      "axioms": {
+        "exact_FunctionalRawRepackWitness": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "exact_FunctionalRawRepackParser": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFunctionalRawUnionDefinitions.lean": {
+      "sha256": "76eab885832d5e33f2b95f93eaaf6685727a0aa8c011c126e01ae644465b37aa",
+      "compiled_row_receipt": "1795541826770013507-7",
+      "axioms": {}
+    },
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFunctionalRawUnionReportProof.lean": {
+      "sha256": "21b40b2330076a25125f3df8a8d9ebbd9ee2b50a267efe2b51c10813005589a8",
+      "compiled_row_receipt": "1795541894401603208-8",
+      "axioms": {
+        "exact_FunctionalRawUnionReport": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFunctionalLiteralJUnionProof.lean": {
+      "sha256": "3caa096b84a110310f30767b71d4c9604dc4fc104964eb5ade515f0b7eadb756",
+      "compiled_row_receipt": "1795541925125799969-7",
+      "axioms": {
+        "exact_FunctionalLiteralJUnion": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  },
+  "bundle_sha256": "f9fb6f471ad2467c8cc05c10e8abff8c4baa84265dd0c4fbbac671bae82a9dbf",
+  "bundle_file": "functional-j-native.tar.xz",
+  "failed_source_evidence": {
+    "failed-drafts/FunctionalRawRepackProof-at-first-failure.lean": "de1b892a919f3449541ffafca87d5f85b958c56addfd7246db40da3e528d6ff9",
+    "failed-drafts/FunctionalLiteralJUnionProof-at-first-failure.lean": "cdfc431f8c2d86d57d3b02a7438afc2332c2955406bced1b6e35020f73a879b7",
+    "failed-drafts/FunctionalRawUnionReportProof-at-first-failure.lean": "590f684697bd6e0f9e3d4ad11cd40d8c7e2b0355681db335aee0da18f74f6dcd"
+  }
+}

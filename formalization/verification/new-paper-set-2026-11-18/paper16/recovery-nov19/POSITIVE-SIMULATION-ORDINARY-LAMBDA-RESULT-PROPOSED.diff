@@ -1,0 +1,22 @@
+--- LogicLineages/PersistentMarking/NumberedWindowSimulationAbsCase.lean
++++ LogicLineages/PersistentMarking/NumberedWindowSimulationAbsCase.lean
+@@ -28,7 +28,7 @@
+   have hBound : budget d ≤ n := hn
+   have hChild : Foot K d := fun ρ hp => h ρ (List.mem_append_right _ hp)
+   have hWin := window hs (weakSource h) hQ
+-  have hOrd : Spine.Ordinary t := ComparisonOrdinaryProof.weakOrdinary S _ _
++  have hOrd : Spine.Ordinary t := ComparisonOrdinaryProof.weakOrdinary S _ (.lam σ t)
+     (.abs hs ht hf hg (LiteralDerivationSoundProof.sound d))
+   cases hQ with
+   | lam hBody =>
+--- LogicLineages/PersistentMarking/NumberedWindowSimulationFAbsCase.lean
++++ LogicLineages/PersistentMarking/NumberedWindowSimulationFAbsCase.lean
+@@ -34,7 +34,7 @@
+   let b := NumberedWindowSimulationData.budget d
+   have hB : b ≤ n := Nat.le_trans (Nat.le_succ _) hn
+   have hChild : Foot K d := fun ρ hp => h ρ (List.mem_append_right _ hp)
+-  have hOrd : Spine.Ordinary body := ComparisonOrdinaryProof.weakOrdinary S _ _
++  have hOrd : Spine.Ordinary body := ComparisonOrdinaryProof.weakOrdinary S _ (.lam σ body)
+     (.fabs hs ht hf hg (LiteralDerivationSoundProof.sound d))
+   cases k with
+   | zero => omega

@@ -1,0 +1,350 @@
+{
+  "gates": [
+    "LogicLineages.PersistentMarking.NumberedWindowProgramKernelChecks"
+  ],
+  "status": "verified",
+  "native_source_matched_modules": 19,
+  "errors": [],
+  "new_named_standard_axioms": {
+    "LogicLineages.PersistentMarking.NumberedWindowProgramKernelChecks.polynomial": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "LogicLineages.PersistentMarking.NumberedWindowProgramKernelChecks.completeDecoding": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "compiler_context": {
+    "compiler": "/home/other/.elan/bin/lean",
+    "compiler_sha256": "840179e70803ef373c2ec53342d6a45ea7d022533e4145489fc1278b4f716385",
+    "lean_path": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization:/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/04-pure-r1-calculator/lean/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/proofwidgets/.lake/build/lib/lean",
+    "pins": {
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/lake-manifest.json": "38ea6ba4be6051b335ab196464a1296bf3e62e396f25b56a9b4b794493be7477",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/lakefile.toml": "c05684bc8b1905ebc2f1ccaa33f57fd5cb769350165dbd9614c18be7a63227a5",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/lakefile.lean": null,
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/04-pure-r1-calculator/lean/lean-toolchain": "72681913b978b3f7c2f48229836771f736f6e97d833917726b2263afbc6108ed",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/04-pure-r1-calculator/lean/lake-manifest.json": "28ee3c8d1f319b5da6b53636261d9f8a3048b057f6e1739824feefbc38968672",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/04-pure-r1-calculator/lean/lakefile.toml": "a5ae5498a1a8d2920079ce4e652af4b39c41d87b49a2ec3f80e50f27f348a697",
+      "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/04-pure-r1-calculator/lean/lakefile.lean": null
+    },
+    "external_objects": {
+      "Init": {
+        "/home/other/.elan/toolchains/leanprover--lean4---v4.32.0-rc1/lib/lean/Init.olean": "2184f658899f2aea99a4fecaa6f3192e7b631f2da1b9fe25a34780fd4972c633",
+        "/home/other/.elan/toolchains/leanprover--lean4---v4.32.0-rc1/lib/lean/Init.olean.private": "2fd9a702893fdba2d5234fca23978bdee40c9a3016020279f02cc94166c70c25",
+        "/home/other/.elan/toolchains/leanprover--lean4---v4.32.0-rc1/lib/lean/Init.olean.server": "92d5525ee307011fab6c0e55fa2c6d67555694dd401d1da99c2542c942f6242e",
+        "/home/other/.elan/toolchains/leanprover--lean4---v4.32.0-rc1/lib/lean/Init.ir": "fc94c27ef6b901c94f633b8cd80a72467cff0b37879f873700683404eeb266a6"
+      },
+      "Mathlib.Computability.Primrec.List": {
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/Primrec/List.olean": "674d407df4643b6d4578c888f3d3ce2cde90441427a27e15ace33aabcf2fb464",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/Primrec/List.olean.private": "a246b2dba80542c1980291b6b02da3e28cd8a86a5828099ae8b20b9a4e5e9c78",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/Primrec/List.olean.server": "225114021d512e7020f2438de92a4a9f6b4995a009ad281659421ad117940ae2",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Computability/Primrec/List.ir": "a006a4a18aedff002b550f265a6c5b15aa85847dcbdf5a199ac7ba644eea878d"
+      },
+      "Mathlib.Logic.Function.Iterate": {
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Logic/Function/Iterate.olean": "a6765b64e379109d5fe6a9f77493d1ed97681c16822f69ee0efca88457c93951",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Logic/Function/Iterate.olean.private": "1b95475f62cc3b16f6aeac590a880a924f6f64e2489b3adc770d2bfb11a6cf95",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Logic/Function/Iterate.olean.server": "558208f6d58bcbedca51a6ed2c506545fa3beb9e3b8056488a4fd99ab485dd72",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Logic/Function/Iterate.ir": "e195f3afeae010fe347fbb5772085f2a705553176b463c2d06c88d3bfdaf0a24"
+      },
+      "Mathlib.Tactic.Linarith": {
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith.olean": "a6ade8e9df92aebd47310c7a20334c15307364c0c108db430fac6c8ccf0f21e9",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith.olean.private": "8d7b4f23eeab86b4a65cbca125bddff040e726092f537e9f147df60a924c66e8",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith.olean.server": "994021891b9166abb6e4120205854b8302b33804d513e9336acc910b15c766f7",
+        "/home/other/storage/projects/palace2/projects/inverse/three-summand-cyclic-carries/lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith.ir": "e7d4b7530f673cf1783a0e4f16285f8a435fe13a95910433debf5e039f1f04eb"
+      }
+    },
+    "selected_compiler": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550"
+  },
+  "modules": {
+    "LogicLineages.ComputabilityKnowledge.GorbowPRProgramDefinitions": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowPRProgramDefinitions.lean",
+      "source_sha256": "a68d8d24d356258e63e1f0f7cd03c1211175c02f1d1fb37edbf75aa92316b51b",
+      "input_key": "373b44760b9d8580e1d234d2da06d1a884ac9030c6f92e49f3e96d3d34473312",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramDefinitions.ir": "191112d1bc5450d37290f7676c7fa50ece7685469432d5a7e44817cc1c01bfd3",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramDefinitions.olean": "8bb28d9f8cd0d611f8089535a33308e96035f8c9527c503df6318dd9be71552e",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramDefinitions.olean.private": "abba757cc89cf8bd0d9d6474de02d9953b0cce934017d819a6f1cfc92dbf8625",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramDefinitions.olean.server": "903c73ae403d859933142e36b096376c3b943a89eccd1727b1ea3e3faaf7225a"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1793480894819006241-2.json",
+      "receipt_sha256": "4e83134aa8f70fd36ce5d23a5e653ebed3c1870a7bee185bb9b18691e1280f3c",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1793480894819006241-2-LogicLineages-ComputabilityKnowledge-GorbowPRProgramDefinitions.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowSyntax": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowSyntax.lean",
+      "source_sha256": "705364787a36bc9c409806260a6c1db762d7d4e47f659b6d588ebab124fad7e5",
+      "input_key": "94071134d1397e3aa4c176335d0ea712e595a8a6965bf553b7261a8dc0bad6bf",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowSyntax.ir": "2c88c78600c899688ffd4d34fd71c26309e3c5ec36cea18844ee6d3eef4b16fc",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowSyntax.olean": "870ad73db364bd7c6559649a2127e38896d522fe2022c9621f7f689021fe5e42",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowSyntax.olean.private": "1cb85ce0bcd641b46b566a1eb256a426a7aeecd2aecc9d269d689ee947d4970a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowSyntax.olean.server": "d901ecd90c918321551a63c7390aca9f52e46aec372594efeabe607a19df7e66"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1794432927456596723-10.json",
+      "receipt_sha256": "d02770f7936cfb1449b8b7dba60e4c12b1f13bf520011d43735dc8002078d1bd",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1794432927456596723-10-LogicLineages-ComputabilityKnowledge-GorbowSyntax.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowSubstitution": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowSubstitution.lean",
+      "source_sha256": "0a95ba2a3f3595c4665feb7a824ad077d5a724f3133503e81657be962c226899",
+      "input_key": "241ecf6cdd8fca763e33e0a83912ff475ac8a2234b26a1e0030bf1d14ba7e951",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowSubstitution.ir": "a04dc45f9f23aa3c800ba928e2cd048f69675536be45d985e5ae1c7e0a0a6368",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowSubstitution.olean": "9b26e744ba994438ad9ec5c3408d40ce70bb51770c78df91808b2920d0ac972f",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowSubstitution.olean.private": "cde4f30411e597581a6cf162b07c57b114b5a6da67677b2beebfd361cc0e104a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowSubstitution.olean.server": "e20f4145ac07fb7900da1c26094ce6223dc43ef0dd15c764070e3d6d9269de2a"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1794432927456596723-10.json",
+      "receipt_sha256": "d02770f7936cfb1449b8b7dba60e4c12b1f13bf520011d43735dc8002078d1bd",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1794432927456596723-10-LogicLineages-ComputabilityKnowledge-GorbowSubstitution.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowFormulaSubstitution": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowFormulaSubstitution.lean",
+      "source_sha256": "d5ca4ab8478a9ed6818d5de25d0aae1b52763e7f98fb7fe49830ab54d1f46915",
+      "input_key": "44b80b7db022eb680035aec74ce3d33ab8785c7f942bb27c19878b5db849c0ea",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowFormulaSubstitution.ir": "0b6f31887c255ab1a778865e88d4823726c64850d693e52febae9be8678a3364",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowFormulaSubstitution.olean": "fd741b054b6054e652e600345021b73147649455230d9c467bd9f9218ec26a3a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowFormulaSubstitution.olean.private": "99784062be22e332102deaa1cd4e8e5c39172056fa26d210eac358f9528c6926",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowFormulaSubstitution.olean.server": "4328d11a0ea3f0e34cc4b2269f176d8862a37a42aa1ee078685c5decd636447c"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1793480894819006241-2.json",
+      "receipt_sha256": "4e83134aa8f70fd36ce5d23a5e653ebed3c1870a7bee185bb9b18691e1280f3c",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1793480894819006241-2-LogicLineages-ComputabilityKnowledge-GorbowFormulaSubstitution.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowStandardInstances": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowStandardInstances.lean",
+      "source_sha256": "c60ff3d22cdfed04aab59922afe461c4f2f379d8b92df49a37e752e580b97706",
+      "input_key": "ae8e704f687b2bb108f0e6e8f157e7ec558d82ee8dc8c78f815986f324bb24bf",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowStandardInstances.ir": "b1ed3e84706d70151b3db53147a9cb03a7404ce5abcff7a0dba4ed6164bde94e",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowStandardInstances.olean": "249610bd264cc19aa2eb4f3a9cd907b61e3431881e833c706bc5740ba31b058a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowStandardInstances.olean.private": "51dd6f940968d724b78c40b8e73548bcd67bdb35e0a695cb28eab0d743674334",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowStandardInstances.olean.server": "4ee1ffcd0b064f61d1a20ead764ec09e1e0a810f747d8457739cac604c7f8213"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1793480894819006241-2.json",
+      "receipt_sha256": "4e83134aa8f70fd36ce5d23a5e653ebed3c1870a7bee185bb9b18691e1280f3c",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1793480894819006241-2-LogicLineages-ComputabilityKnowledge-GorbowStandardInstances.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowRegistryTuple": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowRegistryTuple.lean",
+      "source_sha256": "0fc0fb3c00aebd9a1ea972a687134bfe3ceba76364d4a54ddc0dd272f0bd5ecb",
+      "input_key": "5c206ac2cb4f87b0678fae06a84476a4e227b06b884c204e95a52ed0a1131862",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryTuple.ir": "b4608e4ea94f9bbd537cc20bec3944cbd0eeb76917e813a86456fdba223f24a5",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryTuple.olean": "ebeb676094ab8e1a02f46aafbf79438a190d2dec150852830596bbdc56078a0d",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryTuple.olean.private": "d58317fe097c298ba2cf4e00c4b5b16f7bcf7b701b424b6964326952ec35b8bb",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryTuple.olean.server": "c7bc32284dbf8f9dc5856c2fb8f0310d6e7cc015c9fede02e7846861a3f40ed0"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1793480894819006241-2.json",
+      "receipt_sha256": "4e83134aa8f70fd36ce5d23a5e653ebed3c1870a7bee185bb9b18691e1280f3c",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1793480894819006241-2-LogicLineages-ComputabilityKnowledge-GorbowRegistryTuple.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowRegistryDecoder": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoder.lean",
+      "source_sha256": "66573271da7b228714e97a6e8aa6a412456da79cb5fcb472c842a32e47e41498",
+      "input_key": "a8c64f221ca41162b219296ac2068cfaf713a58e3234fd2f4779ff6663bcdb6f",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoder.ir": "d92616fdd6e82a84e78dbbc5487b7bd20711b4e78d7cda5a3935c59672dd36b2",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoder.olean": "9a247c072c7fb5f43ae3e53c2c43087037af03b5f4719d866d0745721d05fc3c",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoder.olean.private": "845788f429bbbe5564fc6b49ce93cf577c3be95bb295f8cb9ececa951404cdda",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoder.olean.server": "73fe97809ad4159369044b9cdc20265f6a0d5e99b9da2bc8b71e3c4f7ef4b00d"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1793480894819006241-2.json",
+      "receipt_sha256": "4e83134aa8f70fd36ce5d23a5e653ebed3c1870a7bee185bb9b18691e1280f3c",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1793480894819006241-2-LogicLineages-ComputabilityKnowledge-GorbowRegistryDecoder.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowPairAlgorithm": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowPairAlgorithm.lean",
+      "source_sha256": "dacacd26f2bd7e934ffc6615f2d0b03fe495108ad68c573a13e3c9b54e4dbfe3",
+      "input_key": "a53803d9d7404236da2d51e464ac727dcc78af3ca2281279607ef7dd13bf4248",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPairAlgorithm.ir": "9e869d8109f24e1927935bd4984c6442b23ed704d25cbeb4c950630d936a3fb0",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPairAlgorithm.olean": "4193fa2e434c6d32fb33f10bfef5f21b5e5657b2dc720993d8841b7563dfaad7",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPairAlgorithm.olean.private": "fad3fef9035f7f6785077c3a7ed9b5d1f43df1d9aa42f5bd24f32f2e20267bed",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowPairAlgorithm.olean.server": "03ae9928b414b3e3522e8023bafb3aaf951cb883f56df0615a711d2eeb32398e"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1795138252566579463-29.json",
+      "receipt_sha256": "aab15daaf3606a2c79da76090020aa4e92b59a940649a84ce581c1d8b9f5ace7",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1795138252566579463-29-LogicLineages-PersistentMarking-NumberedWindowPairAlgorithm.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowRegistryPairCalibration": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRegistryPairCalibration.lean",
+      "source_sha256": "5b02525f43c233d14ceb96bdfd6e65351551ed2b630cadd58b0b8f45eb881fc1",
+      "input_key": "98a80f93623395fd85bb46b92d9173c1abb87da1282c675d3965ab787c997604",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRegistryPairCalibration.ir": "6f131a30a6a0d38511914fb7b67ff4a1e36711789001da6d95216a4f794f2cb3",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRegistryPairCalibration.olean": "217be270d425aa29bd0a5801ae75759b7f94b05edf9319f1c5ade3c990128b25",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRegistryPairCalibration.olean.private": "9340696cd6c4b763e589ec012791c53de6e60e2f0dab5e8e7302a2cf971a30bd",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRegistryPairCalibration.olean.server": "9a19fcb4916f38ce85a620785fa5a3c32dc4d8a8cfcbe895e4ffcd8deb19ccd7"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1795136851257671985-14.json",
+      "receipt_sha256": "31ced8c0878024677bd39249a002cbbe4bb53cdc9d84f1ba04b66bf35978d23f",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1795136851257671985-14-LogicLineages-PersistentMarking-NumberedWindowRegistryPairCalibration.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowPRProgramTargets": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowPRProgramTargets.lean",
+      "source_sha256": "15977343d18b6b20f066ea4ecee98ce62a833a7256cec638dd3aa79eeb119cfb",
+      "input_key": "290b0484c1acb48fbf18ef8a84322e4f539cb46a0379ef0076bba930feba4a78",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramTargets.ir": "c46ed5fe028d3fb393aadfb4d6651098eaf1c9551836eaf7ce740a1a6cf5c8a6",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramTargets.olean": "69d310ac675025c51eaaef04fa31b8bfcbaa4b06bea43ab1fb945bf951b3d044",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramTargets.olean.private": "cf06105d83412b53b33ea1a7a66cc310e91b21e5708f30ef826c1e94c3d8dab8",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramTargets.olean.server": "240150cd80acd7796206a8b4ee70fd0309475c3e7c5f2487e0113e44a6bb40f6"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1793481891438233790-2.json",
+      "receipt_sha256": "b409d72062aa79706bfadbc03833bef6e63218c3181a5eece542ed97eda969a2",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1793481891438233790-2-LogicLineages-ComputabilityKnowledge-GorbowPRProgramTargets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowPRProgramProof": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowPRProgramProof.lean",
+      "source_sha256": "ded708ca4eac2f8e3013962327cb92cf5769a5dcb3d4d949d6c4e4da0ac9da9a",
+      "input_key": "2497c705641bdd232d1f78672b724e06740a8aa022157b96791880f8e9fb0aab",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramProof.ir": "0b142433de6e2bcd91c397b3effa31924ecddef8fd7666fdc57568560c56f02f",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramProof.olean": "a6f141b76211f02eca6586431fd0c21763957af52e0443b43df21aef3165fa5a",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramProof.olean.private": "2ab4170a26f4201b72514bd6b517bbf6653fdbbd53b5c01ec769839d07791ead",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowPRProgramProof.olean.server": "6fb4ea8b1dfb013000687d2247fcdc1f0c29c2b9a814de4cb525c8e8576008fe"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1793481891438233790-2.json",
+      "receipt_sha256": "b409d72062aa79706bfadbc03833bef6e63218c3181a5eece542ed97eda969a2",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1793481891438233790-2-LogicLineages-ComputabilityKnowledge-GorbowPRProgramProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.Comparators.GorbowRegistryDecoder": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryDecoder.lean",
+      "source_sha256": "d39803c4268a2b0b6a5837023acc4874aabfff70cbfed9b682098fa9e3fef5ad",
+      "input_key": "77d7bc48ee89824b21b98108953f467156cf14bdab412e6829845ee39aaf58ef",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryDecoder.ir": "e5e30703dacb0db8b250e73238ff3e932638621dd8efbcaa56bb8004609fa21e",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryDecoder.olean": "1503c3e56d0dc0d6a9e4cf7ad429ef7b8c2d455fb38c753e90753045da97304c",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryDecoder.olean.private": "9c0be6ad8864bcc3020264316a9c36121bfb0d473fbb905a3a28649bfa07a01e",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryDecoder.olean.server": "3ef3b38decd63c5d7b74e42d6ff5e39141965ebddcabe05289414278e21c5a88"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1794526860377496759-10.json",
+      "receipt_sha256": "ae93bbc42c941a222d3fe51dd7671e3d0f7382efdeec735c5535fc1de5bf487f",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1794526860377496759-10-LogicLineages-ComputabilityKnowledge-Comparators-GorbowRegistryDecoder.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.Comparators.GorbowRegistryTuple": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryTuple.lean",
+      "source_sha256": "eae43b934462003170f111a05c692d19c2d40d5566c1d89f8a7554fa386aa258",
+      "input_key": "ca32806d46a61d3fa99b286b1ca8e3e709bed31d7b4b0036210cf23c0c976d00",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryTuple.ir": "4b0ecb7f9eb12dd39abe978d56db2170c7b132545c50e17a2269bef649e485a5",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryTuple.olean": "113010e998e5a3ce74e3eb6664eba293a9e9aee826ee0a94ae9b0394b481c8b6",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryTuple.olean.private": "f899d75c24de3da5ef69abfa0c658d3d52a9e99d12b64744eabc5b07bbae1f04",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowRegistryTuple.olean.server": "bdeb45e3e4112ac7e6095dbc85df1ffd70125596dbe20911378cd6dc9d5c8092"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1794526860377496759-10.json",
+      "receipt_sha256": "ae93bbc42c941a222d3fe51dd7671e3d0f7382efdeec735c5535fc1de5bf487f",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1794526860377496759-10-LogicLineages-ComputabilityKnowledge-Comparators-GorbowRegistryTuple.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.Comparators.GorbowStandardInstances": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/Comparators/GorbowStandardInstances.lean",
+      "source_sha256": "33fb8b792b885644a93e4fb62ab4bad833da3a17ef5d9327b5ba31cb0b6a9435",
+      "input_key": "bbe550b90f61475baea028f74f144307fa805581fb5542ca0906925184cf903e",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowStandardInstances.ir": "95c08bbc9e0b9e8feed8b94a11ad72d72dc5e6e9cd8d87f1752423da64eac6e2",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowStandardInstances.olean": "d147a0346e2a6e99a675df240d505fa04e205e73f8ff4e9b8783c96e530de493",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowStandardInstances.olean.private": "7855bda5664536971c9ca14a8aab2bfbf4250c091f462567aaa9a41fe5879130",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/Comparators/GorbowStandardInstances.olean.server": "32f40ccf334189450d54ead1b8dce8852042233dcd3fd1cfe07ebb65042f89b1"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1794526860377496759-10.json",
+      "receipt_sha256": "ae93bbc42c941a222d3fe51dd7671e3d0f7382efdeec735c5535fc1de5bf487f",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1794526860377496759-10-LogicLineages-ComputabilityKnowledge-Comparators-GorbowStandardInstances.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowStandardInstancesProof": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowStandardInstancesProof.lean",
+      "source_sha256": "a19290c276086268f9c2835e8ac7f7e19a9d5b7a8f103b678604b1add276c107",
+      "input_key": "841761bb4b69d7b518eac896b70ad70e137cc152f29075915bf315c271a1b189",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowStandardInstancesProof.ir": "6a60a92464f03e62688e4375f8cf98b9af56ced30596f20ca24187ef2078fef8",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowStandardInstancesProof.olean": "d3eff7879a30c04c9bd8e021c8a823ae641982827e502d9380caf4827a909a02",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowStandardInstancesProof.olean.private": "432e8958d29af323d4f44e71c5a52157e676bb164a8e6abaf68459c9790be779",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowStandardInstancesProof.olean.server": "618001b2ce0df5d001e88616ba7431693e234f0791406895d34cec95139bb2f6"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1794526860377496759-10.json",
+      "receipt_sha256": "ae93bbc42c941a222d3fe51dd7671e3d0f7382efdeec735c5535fc1de5bf487f",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1794526860377496759-10-LogicLineages-ComputabilityKnowledge-GorbowStandardInstancesProof.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowRegistryTupleProof": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowRegistryTupleProof.lean",
+      "source_sha256": "7e0183cfd546de64234af44ad8db0127e7c7285b98cdcc317582cc8d3b3df106",
+      "input_key": "184e0771d05a550aaf931aab10afb47d5e16c897f2e92b3a7721c5033dd5ffb5",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryTupleProof.ir": "15b8b445568c121383c3fe6537b417bc0ac8a2f7deac56039beaa1ad5c2f73ff",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryTupleProof.olean": "666401648d2312f51aa8c52e4ec337804c317191a929fd892a7b0bcbdc243874",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryTupleProof.olean.private": "2dfcbcf922ed138332acc8b7b5e4849f0b6a50f5c1f9e7305a2762dbb31557f4",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryTupleProof.olean.server": "ab16dc53c039fc03df3648a4b5f79dbb7abb0e09e7d492e00f8b7613e4900dd5"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1794526860377496759-10.json",
+      "receipt_sha256": "ae93bbc42c941a222d3fe51dd7671e3d0f7382efdeec735c5535fc1de5bf487f",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1794526860377496759-10-LogicLineages-ComputabilityKnowledge-GorbowRegistryTupleProof.log",
+      "log_sha256": "2e67987d03d80c93d544c5155b460381b341cd8ca035bf9162a59fb47b2faf19"
+    },
+    "LogicLineages.ComputabilityKnowledge.GorbowRegistryDecoderProof": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoderProof.lean",
+      "source_sha256": "e0149be79ab3a40b1404498614b4dc12d4335d6bd1d1a4f1d2d823945175bb22",
+      "input_key": "aaa74a83de296371a4b3978c54ae0df30235e7cf3005a8473d9fe1730f96f456",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoderProof.ir": "89ea5c1d1ea216ec5d3f9d15686023254371d89d47bc1075952421cfa547b840",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoderProof.olean": "46fe6db7fbbb914ad72f660cca8256fbbbb1cb2975933005ecc91def6097a274",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoderProof.olean.private": "e8ae48089bf3e8e920c84d32c6e37b5fb3179221585d9a0e5e2b4ab22e687be6",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/ComputabilityKnowledge/GorbowRegistryDecoderProof.olean.server": "e8e562a382722d8e710e06ed5cf6f035e7a6e0171aa4900cdf198c02930db930"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1794526860377496759-10.json",
+      "receipt_sha256": "ae93bbc42c941a222d3fe51dd7671e3d0f7382efdeec735c5535fc1de5bf487f",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1794526860377496759-10-LogicLineages-ComputabilityKnowledge-GorbowRegistryDecoderProof.log",
+      "log_sha256": "216172930b337822569aad6615897af6b15e2244ecc04543e8715353184d4182"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowRegistryPairPrograms": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRegistryPairPrograms.lean",
+      "source_sha256": "0c15a0a276a32cdd2a61d7c34b4dc9ec9452c2d3778f904882a760afc8f0696b",
+      "input_key": "52662a9e4f9d78460504001625a6f49f00210cef9c1be402899ce9495a761a72",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRegistryPairPrograms.ir": "ab2c21f36b81b30bb38b144617f7e1517462d9ac66b53d65c4cf5bff63e69b0b",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRegistryPairPrograms.olean": "6e986e58059aa11027d854220db90c543cf74ee277d9d8503c50eb4629a9874d",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRegistryPairPrograms.olean.private": "5f7dc0f0cd284fd1428ce184dd43ac35ebba5d63e91fd44fe60358ec49c62650",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowRegistryPairPrograms.olean.server": "1e4418ee6db5b1a67a0705c4936070f09e0f5014662efdaf24acba3dcc009776"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1795138172880955685-10.json",
+      "receipt_sha256": "c2655fd3c570cf78f55700a6ad526448e0afdefb7503c66010f6c57891aeb373",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1795138172880955685-10-LogicLineages-PersistentMarking-NumberedWindowRegistryPairPrograms.log",
+      "log_sha256": "7da839830c072d6b4bf6e801c965ce3a617262b901e72e837867f6df00b69001"
+    },
+    "LogicLineages.PersistentMarking.NumberedWindowProgramKernelChecks": {
+      "source": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowProgramKernelChecks.lean",
+      "source_sha256": "af9fcb6e9f04adbe84c0e475a72733a6bd6e34f6e649d94585a2856796b32846",
+      "input_key": "46be3eadd55d9e9a9c2831fe1d98782f0d2252e4ae7561bd8f0b7ebeaf1dc5d4",
+      "outputs": {
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowProgramKernelChecks.ir": "8f9c7aefdd6c2e1576a44765a9dbc75806eaaf8f10062ad3e0535d7511bc79a4",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowProgramKernelChecks.olean": "69cebde17e375e41733aa77ef3da1d39a384bd28c9a010e2c055f8e6b18acb35",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowProgramKernelChecks.olean.private": "57d6e8c7077beccf9ecc8c227322bc1ad131633ddcac7901e0ec54e8c27f506f",
+        "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/build/lib/lean/LogicLineages/PersistentMarking/NumberedWindowProgramKernelChecks.olean.server": "c7eedb5dd08ad5d62128c1421b593ac0f2067dd7a58010cb1dc35f84ac279a7e"
+      },
+      "native_receipt": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1795138252566579463-29.json",
+      "receipt_sha256": "aab15daaf3606a2c79da76090020aa4e92b59a940649a84ce581c1d8b9f5ace7",
+      "log": "/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/build-reports/1795138252566579463-29-LogicLineages-PersistentMarking-NumberedWindowProgramKernelChecks.log",
+      "log_sha256": "bbe42833dbcd6adf41b6c8129e706c45830a50dbfe96c33e29e125cc412d0e3a"
+    }
+  },
+  "limits": "Focused closure only. Does not certify paper correspondence or a full-root build. Imported axioms are certified through actual new named declaration closures."
+}

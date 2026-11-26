@@ -1,0 +1,58 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphRayProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphRayProof.lean
+@@ -6,6 +6,7 @@
+ public import LogicLineages.OrdinalComparison.GroundCaptureClosingCodeStatementChecks
+ public import LogicLineages.OrdinalComparison.ContextInsertionCodeStatementChecks
+ public import LogicLineages.OrdinalComparison.WWUnaryCarrierProof
++public import LogicLineages.OrdinalComparison.WWScopedSourceDAGProof
+ public import LogicLineages.OrdinalComparison.ParametricSourceSuccessorDenotationProof
+ @[expose] public section
+ namespace LogicLineages.ControlSensitivityCurrent.CurrentPaidHeadGraph
+@@ -40,7 +41,7 @@
+     have he : CurrentTreeCode.expand
+         (encode ⟨FreshCtx Γ,Ty.curriedGround 1,ScopedDAG.renameInput (freshRename Γ) d⟩) =
+       SyntaxCode.encodeTerm (freshCopy K) := by
+-      rw [CurrentTreeCode.exactExpansion,(ScopedDAG.StatementChecks.renaming Γ (FreshCtx Γ)
++      rw [CurrentTreeCode.exactExpansion,(ScopedDAG.Proof.«renaming» Γ (FreshCtx Γ)
+         (Ty.curriedGround 1) (freshRename Γ) d).1,h.1]
+       rfl
+     have hc : GroundCaptureClosingCode.sourceCode ((FreshCtx Γ).map SyntaxCode.typeCode) 0
+@@ -50,8 +51,14 @@
+         SyntaxCode.encodeTerm ((zeroCopy K).rename (fun x => .there x)) :=
+       ContextInsertionCode.StatementChecks.exact_source_insertion [] [.ground] (FreshCtx Γ) (Ty.curriedGround 1) _
+     unfold auxiliaryCode
+-    simp only [h.2.1,bind,Option.bind_some,pure,hg,he,freshContextExact,hc,hi]
+-    rfl
++    rw [h.2.1]
++    simp only [bind,Option.bind_some,pure]
++    change some (0 :: freshContext (Γ.map SyntaxCode.typeCode),8*Nat.pair
++      (ContextInsertionCode.sourceCode 0 1 (GroundCaptureClosingCode.sourceCode
++        (freshContext (Γ.map SyntaxCode.typeCode)) 0 (CurrentTreeCode.expand
++          (RawSourceDAG.Operations.renameCode (freshContext (Γ.map SyntaxCode.typeCode))
++            (freshTable (Γ.map SyntaxCode.typeCode)) (encode ⟨Γ,Ty.curriedGround 1,d⟩))))) 0+5) = _
++    rw [hg,he,freshContextExact,hc,hi] <;> rfl
+ 
+ private theorem closedValue (f : Nat → Nat) {Γ} (e : OrdinalExpression Γ)
+     (ρ : Variable Γ .ground → Nat) :
+@@ -85,7 +92,9 @@
+ theorem exactRay : Targets.ExactRay := by
+   intro p f Γ K u hu
+   have hgen := generatedAt p K u hu 0
+-  obtain ⟨c,hc⟩ := (GenericScalar.generatedPositiveFinite f Γ (fun _ => 0) 0 (u 0) hgen).2 rfl
++  obtain ⟨c,hc₀⟩ := (GenericScalar.generatedPositiveFinite f Γ (fun _ => 0) 0 (u 0) hgen).2 rfl
++  have hc : atUnits f (u 0) = (c : Ordinal) := by
++    simpa only [atUnits,Nat.zero_add,Nat.cast_one] using hc₀
+   let X := FreshCtx Γ
+   let w₀ : OrdinalVector X 1 := SourceRenaming.renameVector (freshRename Γ) u
+   let w : OrdinalVector X 1 := GroundClosing.vector (UnaryCarrier.groundMap X) w₀
+@@ -110,7 +119,9 @@
+     have hws : assignment p ((zeroCopy K).rename (fun x => .there x))=some ws := by
+       rw [SourceRenaming.Proof.assignmentNaturality,hw]
+       rfl
+-    simp only [raySource,assignment,hws,Option.bind_some,a,z] <;> rfl
++    change (assignment p ((zeroCopy K).rename (fun x => .there x))).bind
++      (fun v => some (application p v z)) = some a
++    rw [hws] <;> rfl
+   have hh : denoteWith f (commonUnits ρ) (ws 1)=atUnits f (u 1) :=
+     (liftedUnits f (w 1) ρ).trans (hval _ 1)
+   have hs : denoteWith f (commonUnits ρ) (ws 0)=(c : Ordinal) :=

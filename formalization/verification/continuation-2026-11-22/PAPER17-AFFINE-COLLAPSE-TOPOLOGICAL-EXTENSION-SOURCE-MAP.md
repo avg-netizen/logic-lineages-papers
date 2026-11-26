@@ -1,0 +1,8 @@
+# Exact actual original paired-list fresh extension
+
+Paper 17, `17-permitted-control-canonical-comparison/sections/arithmetic.tex`, lines 33–48: one coordinate per named gate, exact natural graph, unique actual extension on the original domain, same shared references. This is the exact semantic extension for the already checked original pair-list graph (#965), not circuit syntax conversion.
+
+- The supplied finite schedule is topological relative to explicitly named external inputs: the two newly produced names at a pair are distinct and not previously available, and each occurrence in the original affine expression refers to an already available name. Repeated and shared dependencies at any number of later gates remain legal.
+- The partial evaluator checks the existing `originalDomain` at the exact current valuation, then installs both real original values via `insertValues` and continues. It fails if that original domain fails. The positive graph uses the original affine natural equation and proper fixed-head collapse at unshifted input, not a numeric substitute.
+- The proof uses exact one-pair extension and an actual support-locality induction: later writes do not alter earlier definitions, read dependencies or externally supplied names. Success is equivalent to the positive graph of every original pair at one final valuation with exact agreement with the external initial valuation outside all produced names. That final valuation is unique on success.
+- No effectivity of the function-valued evaluator, topological sorting, parser, arbitrary or mixed DAG, finite/general head rewriting, valuation-independent full symbolic tree, or full closed decision is asserted. The existing arbitrary-head transport is a separate theorem.

@@ -1,0 +1,25 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedExtrasWeakeningProof.lean:24:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?b ∈ down ?E ?Γ ?xs
+in the target expression
+  b ∈ weaken E Γ Θ xs ↔ b ∈ «universe» E Θ ∧ ∃ a, a ∈ xs ∧ le E Θ b (restricted E Γ Θ a) = true
+
+E : Environment
+Γ Θ : Context
+xs : List Tagged
+b : Tagged
+⊢ b ∈ weaken E Γ Θ xs ↔ b ∈ «universe» E Θ ∧ ∃ a, a ∈ xs ∧ le E Θ b (restricted E Γ Θ a) = true
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedExtrasWeakeningProof.lean:38:6: error: Tactic `apply` failed: could not unify the conclusion of `@List.map_congr_left`
+  List.map ?f ?l = List.map ?g ?l
+with the goal
+  List.map (restricted E Γ Γ) (List.map id xs) = List.map id xs
+
+Note: The full type of `@List.map_congr_left` is
+  ∀ {α : Type ?u.8} {l : List α} {α_1 : Type ?u.7} {f g : α → α_1},
+    (∀ (a : α), a ∈ l → f a = g a) → List.map f l = List.map g l
+
+E : Environment
+Γ : Context
+xs : List Tagged
+hw : WellFormed E.types E.ports Γ
+hx : Extra E Γ xs
+⊢ List.map (restricted E Γ Γ) (List.map id xs) = List.map id xs

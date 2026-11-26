@@ -1,0 +1,7 @@
+# Check the same differentiability consequence using the derivative definitions
+
+The first isolated import repair on candidate 9d1eeb859b3fe4f8282859569939d6a802073f52 passed fresh hosted Targets at 1,204,216 KiB. Aggregate run 45380900232 then stopped the first genuine derivative consumer, PersistentDiscontinuity, with status 77 and 1,577,368 KiB process-tree RSS against the unchanged 1,572,864 KiB cap (artifact 14916370482, receipt 1795518465131968225-2850). It did not report a Lean proof failure. Removing the direct Linarith line does not shrink that import closure.
+
+The exact public differentiability predicate is defined in FDeriv.Defs. Its already imported TVS asymptotic lemmas suffice for the lone real-valued derivative-to-continuity step: the derivative is big-O of its argument, its remainder is little-o, and the displacement tends to zero. The change retains both existing theorem statements and the existing persistent-discontinuity proof, adds a private local derivation for the derivative consequence, and prints the latter's transitive axiom set. Removing FDeriv.Basic from this module eliminates 153 Mathlib source modules from its full syntactic transitive import closure, including private/meta edges.
+
+The local bounded checker stopped before invoking Lean because the pinned FDeriv.Defs upstream object is absent here. No fresh elaboration or RSS claim is made for the new derivative proof until the exact hosted build reports it. Neither the aggregate gate set nor any CI cap was altered by this patch.

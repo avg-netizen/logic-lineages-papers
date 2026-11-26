@@ -1,0 +1,56 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "7c0f1f65f579ff1a8fe6ef70fcdf8e53994ac33c",
+  "failed_source_local_commit": "a63013336ed30aaa0059ef0d4b3f9f9cb0773090",
+  "failed_source_tree": "976c335e7d8d0f2736844aa7bc349857f1abf44d",
+  "failed_exact_gate_receipt": "1795370281566382744-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalPrintedRankedLiteralHighStatementChecks",
+  "failed_receipt_sha256": "8a6de0b783bae2f5c7914e91cff51ce73e0e13a1fff671eb3073a140ee40b73a",
+  "failed_exact_module_log_sha256": "19e553ade51b6e8ac5688771ad72da3865f35e17fbcdfab26cf58274ea4994a5",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedRankedLiteralHighFundingProof.lean:79:6: error: Type mismatch: After simplification, term\n  paid\n has type\n  (if top branch = 0 then 0 else realized \u03b8 branch (top branch - 1) + 1) \u2264 z\nbut is expected to have type\n  baseline (greatest - 1) + 1 \u2264 z\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedRankedLiteralHighFundingProof.lean:100:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached\n\nNote: Use `set_option maxHeartbeats <num>` to set the limit.\n\nHint: Additional diagnostic information may be available using the `set_option diagnostics true` command.\n",
+  "failed_original_native_log_sha256": "f48f589c843a739d5f0de3a26a53938321a4f27ba9b71d2d3592b176a2d83cff",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedRankedLiteralHighFundingProof.lean",
+  "failed_proof_sha256": "d1e0dc9f0e71a5efd7f5eae29442c5f326438f6b4fd58e191a24cf3f8217d737",
+  "repaired_proof_sha256": "e1556ca48abd7e89d6a51f7c1ff7b3fa5980f9114af9d89f2a0689fa57fd4cbf",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-RANKED-LITERAL-HIGH-REPAIR-01.patch",
+  "patch_sha256": "08fd3565aabbeea3eb688e12aff5c3a54c3760e011fcc4cb86bc40e06a29291d",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-RANKED-LITERAL-HIGH-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "977793174978a2ac4718a4e5a8fe191eb47f5dc93f6e99bf618083e814d365b0",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedRankedLiteralHighProjectionProof.lean": "291a9c06c0e375544d9008ee6cfd01835eeb2a21cce7fdc85ee4a8d19f7b53cd",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedRankedLiteralHighSourceProof.lean": "1fa494a462be00f261e5775139a33c51bc31c9efcbf1e5bf4d4715dd8b54b129",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedRankedLiteralHighStatementChecks.lean": "94304ab939ce0322bbc35f227bd4223dfda77809dc20323305d10bf3e9efa24d",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedRankedLiteralHighTargets.lean": "4735f7bab299d2874b90a3330bd7529aeefddc8ab4ac5d5cacf8fe9c2bba3688",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-RANKED-LITERAL-HIGH-SOURCE-MAP.md": "77f7b01425abcdb887579ca52c09e5d6b7bce3b30889aef794de5d5c960037f5"
+  },
+  "static_module_closure": {
+    "FundingProof": {
+      "local": 472,
+      "external": 42,
+      "contains_totient": false
+    },
+    "ProjectionProof": {
+      "local": 737,
+      "external": 44,
+      "contains_totient": false
+    },
+    "SourceProof": {
+      "local": 468,
+      "external": 42,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 738,
+      "external": 44,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 301,
+      "external": 35,
+      "contains_totient": false
+    }
+  },
+  "scope": "Expose same typed predecessor aliases before reducing the paid bound; separate original chart setup and actual replay payment into two typed theorem helpers and abstract exact aggregate to reduce whnf work under unchanged 200k. Original targets and imports unchanged."
+}

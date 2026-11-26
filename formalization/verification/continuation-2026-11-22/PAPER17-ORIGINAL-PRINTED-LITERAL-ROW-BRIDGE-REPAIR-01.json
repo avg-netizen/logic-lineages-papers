@@ -1,0 +1,50 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "6ad812549892e844a76e6d87be8c77a096cff37c",
+  "failed_source_local_commit": "7982a9203a5be284e32feb97dfcf7c9880c85b66",
+  "failed_source_tree": "f2ceb858913ec8ac98d290fc4b7764e7ace4d9f0",
+  "failed_exact_gate_receipt": "1795369801713297572-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalPrintedLiteralRowBridgeStatementChecks",
+  "failed_receipt_sha256": "94a427d05f8370663e1774ce79978b4eb3dec1d0663fe08b2240113ce8e7d115",
+  "failed_exact_module_log_sha256": "5be22d4d4b13c41da494762a55cbe40885c6a6ead8d9999260ee824b41a33035",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedLiteralRowBridgeReadProof.lean:84:12: error(lean.synthInstanceFailed): failed to synthesize instance of type class\n  Decidable (AdmittedLiteralClause c)\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.\n",
+  "failed_original_native_log_sha256": "88ff21e797b84bacb0413557a715bff61e864b4fc212257c87cfc1c396427faa",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedLiteralRowBridgeReadProof.lean",
+  "failed_proof_sha256": "04f3f21df4f2d36582f75640748b0a6c6294a7f8f637da23d2ca14559822ed52",
+  "repaired_proof_sha256": "7a25b867d37a28589baa1f84e4a88fc57274cf9614c9c5b7b8eb1c01396ffe3b",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-LITERAL-ROW-BRIDGE-REPAIR-01.patch",
+  "patch_sha256": "b29af1a3a6488c86e48f5ab7911ea23208f3a00a1b100425204b7e64d58b9ddb",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-LITERAL-ROW-BRIDGE-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "3b0765da8943a4f787f03ff1837242105691af2730db2d9d53be3957ca1f6c25",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedLiteralRowBridgeProof.lean": "362349366dbf693e92049b3e1f03ccbd9faba1af314e3100133d1896b52062d5",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedLiteralRowBridgeStatementChecks.lean": "49e8648f751f052718859a76dddc1ea7e2dcbaaf9965f80f66ab251bc14a4965",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedLiteralRowBridgeTargets.lean": "9b957db83d63f132267860b9328c821bf6f720316bca82b42eb25b8130a5d061",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-LITERAL-ROW-BRIDGE-SOURCE-MAP.md": "56dfad28f7f8b754ba27f0fa112fb41af94db086eea05a1512f7f30c62c52b7e"
+  },
+  "static_module_closure": {
+    "Proof": {
+      "local": 431,
+      "external": 42,
+      "contains_totient": false
+    },
+    "ReadProof": {
+      "local": 288,
+      "external": 35,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 432,
+      "external": 42,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 287,
+      "external": 35,
+      "contains_totient": false
+    }
+  },
+  "scope": "Use local classical Decidable for the exact already-frozen typed shape clause filter. No target, data, read/domain semantics, or imports changed."
+}

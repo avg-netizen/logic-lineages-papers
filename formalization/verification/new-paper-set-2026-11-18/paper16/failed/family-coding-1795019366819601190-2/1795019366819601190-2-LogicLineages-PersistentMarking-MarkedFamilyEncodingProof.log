@@ -1,0 +1,99 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyEncodingProof.lean:11:8: error: unsolved goals
+case nil
+car : Parameter → List Code
+v : Family
+⊢ ∃ c, List.mapM.loop (fun p => indexOf (car p) (v p)) [] [] = some c ∧ Fits [] c
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyEncodingProof.lean:18:19: error: unsolved goals
+car : Parameter → List Code
+v : Family
+p : Parameter
+ps : List Parameter
+ih :
+  (∀ (p : Parameter), p ∈ ps → v p ∈ car p) ↔
+    ∃ c, List.mapM (fun p => indexOf (car p) (v p)) ps = some c ∧ Fits (List.map (fun p => (car p).length) ps) c
+h : ∀ (p_1 : Parameter), p_1 ∈ p :: ps → v p_1 ∈ car p_1
+i : Nat
+hi : indexOf (car p) (v p) = some i
+hb : i < (car p).length
+cs : List Nat
+hcs : List.mapM (fun p => indexOf (car p) (v p)) ps = some cs
+hf : Fits (List.map (fun p => (car p).length) ps) cs
+⊢ List.mapM.loop (fun p => indexOf (car p) (v p)) (p :: ps) [] = some (i :: cs)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyEncodingProof.lean:21:13: error: unsolved goals
+case cons.mpr.none
+car : Parameter → List Code
+v : Family
+p : Parameter
+ps : List Parameter
+ih :
+  (∀ (p : Parameter), p ∈ ps → v p ∈ car p) ↔
+    ∃ c, List.mapM (fun p => indexOf (car p) (v p)) ps = some c ∧ Fits (List.map (fun p => (car p).length) ps) c
+c : List Nat
+hc : List.mapM.loop (fun p => indexOf (car p) (v p)) (p :: ps) [] = some c
+hf : Fits (List.map (fun p => (car p).length) (p :: ps)) c
+hi : indexOf (car p) (v p) = none
+⊢ ∀ (p_1 : Parameter), p_1 ∈ p :: ps → v p_1 ∈ car p_1
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyEncodingProof.lean:24:15: error: unsolved goals
+case cons.mpr.some.none
+car : Parameter → List Code
+v : Family
+p : Parameter
+ps : List Parameter
+ih :
+  (∀ (p : Parameter), p ∈ ps → v p ∈ car p) ↔
+    ∃ c, List.mapM (fun p => indexOf (car p) (v p)) ps = some c ∧ Fits (List.map (fun p => (car p).length) ps) c
+c : List Nat
+hc : List.mapM.loop (fun p => indexOf (car p) (v p)) (p :: ps) [] = some c
+hf : Fits (List.map (fun p => (car p).length) (p :: ps)) c
+i : Nat
+hi : indexOf (car p) (v p) = some i
+ht : List.mapM (fun q => indexOf (car q) (v q)) ps = none
+⊢ ∀ (p_1 : Parameter), p_1 ∈ p :: ps → v p_1 ∈ car p_1
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyEncodingProof.lean:26:34: error: Type mismatch: After simplification, term
+  hc
+ has type
+  List.mapM.loop (fun p => indexOf (car p) (v p)) (p :: ps) [] = some c
+but is expected to have type
+  i :: cs = c
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyEncodingProof.lean:11:27: warning: This simp argument is unused:
+  Fits
+
+Hint: Omit it from the simp argument list.
+  simp [List.mapM,̵F̵i̵t̵s̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyEncodingProof.lean:18:38: warning: This simp argument is unused:
+  hi
+
+Hint: Omit it from the simp argument list.
+  simp [List.mapM, ̲hi̵,̵h̵cs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyEncodingProof.lean:18:41: warning: This simp argument is unused:
+  hcs
+
+Hint: Omit it from the simp argument list.
+  simp [̵L̵i̵s̵t̵.̵m̵a̵p̵M̵,̵h̵i̵,̵h̵c̵s̵]̵[̲L̲i̲s̲t̲.̲m̲a̲p̲M̲,̲ ̲h̲i̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyEncodingProof.lean:21:32: warning: This simp argument is unused:
+  hi
+
+Hint: Omit it from the simp argument list.
+  simp [List.mapM,̵h̵i̵] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyEncodingProof.lean:24:34: warning: This simp argument is unused:
+  hi
+
+Hint: Omit it from the simp argument list.
+  simp [List.mapM, ̲hi̵,̵h̵t] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/MarkedFamilyEncodingProof.lean:24:37: warning: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  simp [List.mapM, ̲hi,̵h̵t̵] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

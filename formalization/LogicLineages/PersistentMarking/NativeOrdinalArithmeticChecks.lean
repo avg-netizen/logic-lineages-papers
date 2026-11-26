@@ -1,0 +1,17 @@
+import LogicLineages.PersistentMarking.NativeOrdinalArithmeticTransportProof
+
+namespace LogicLineages.PersistentMarking.NativeOrdinalArithmeticChecks
+open NativeOrdinalArithmeticTargets NativeOrdinalArithmeticTypingProof NativeOrdinalArithmeticTransportProof
+
+theorem exact_ClosedOrdinalAdditionMultiplication : ClosedOrdinalAdditionMultiplication :=
+  fun S => ⟨additionClosed S, multiplicationClosed S⟩
+
+theorem exact_OrdinalAdditionBeta : OrdinalAdditionBeta := additionBeta
+
+theorem exact_OrdinalMultiplicationBeta : OrdinalMultiplicationBeta := multiplicationBeta
+
+#print axioms exact_ClosedOrdinalAdditionMultiplication
+#print axioms exact_OrdinalAdditionBeta
+#print axioms exact_OrdinalMultiplicationBeta
+
+end LogicLineages.PersistentMarking.NativeOrdinalArithmeticChecks

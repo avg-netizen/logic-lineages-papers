@@ -1,0 +1,27 @@
+module
+public import LogicLineages.PermittedControl.SelectedLeadingSignCutoffTargets
+import LogicLineages.PermittedControl.SelectedLeadingSignCutoffMagnitudeProof
+import LogicLineages.PermittedControl.SelectedLeadingSignCutoffActualProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_selectedLeadingSignCutoffEffective : SelectedLeadingSignCutoff.CutoffEffective :=
+  SelectedLeadingSignCutoff.cutoffEffective
+
+theorem fixed_selectedLeadingAbsoluteErrorBelowHalf : SelectedLeadingSignCutoff.AbsoluteErrorBelowHalf :=
+  SelectedLeadingSignCutoff.absoluteErrorBelowHalf
+
+theorem fixed_actualSelectedLeadingSign : SelectedLeadingSignCutoff.ActualLeadingSign :=
+  SelectedLeadingSignCutoff.actualLeadingSign
+
+theorem fixed_fullSelectedLeadingSignCutoff : SelectedLeadingSignCutoff.FullSelectedLeadingSignCutoff :=
+  ⟨fixed_selectedLeadingSignCutoffEffective,fixed_selectedLeadingAbsoluteErrorBelowHalf,
+    fixed_actualSelectedLeadingSign⟩
+
+#print axioms fixed_selectedLeadingSignCutoffEffective
+#print axioms fixed_selectedLeadingAbsoluteErrorBelowHalf
+#print axioms fixed_actualSelectedLeadingSign
+#print axioms fixed_fullSelectedLeadingSignCutoff
+
+end LogicLineages.PermittedControl.StatementChecks

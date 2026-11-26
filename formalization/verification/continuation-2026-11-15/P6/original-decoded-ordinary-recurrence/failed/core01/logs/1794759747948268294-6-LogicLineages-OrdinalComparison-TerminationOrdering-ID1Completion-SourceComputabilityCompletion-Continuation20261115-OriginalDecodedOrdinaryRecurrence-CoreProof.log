@@ -1,0 +1,68 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedOrdinaryRecurrence/CoreProof.lean:30:179: error: unsolved goals
+alpha : Type
+n : ℕ
+arity : Fin n → ℕ
+beta : Type
+node f g base dest child param symbols types : OTerm alpha
+j : alpha → beta
+hv :
+  (fun i => Term.relabel j (![f, base, g, dest, symbols, types] i)) =
+    ![Term.relabel j f, Term.relabel j base, Term.relabel j g, Term.relabel j dest, Term.relabel j symbols,
+      Term.relabel j types]
+⊢ Formula.imp
+        (programGraph (OriginalDecodedExchangeEquation.exchange n arity) (numeral 1) fun i =>
+          Term.relabel j (Fin.cons node (Fin.cons param Fin.elim0) i))
+        ((programGraph (OriginalHeadMove.headMove n arity) (numeral 1)
+              ![Term.relabel j f, Term.relabel j base, Term.relabel j g, Term.relabel j dest, Term.relabel j symbols,
+                Term.relabel j types] ⊓
+            programGraph resultEqual (numeral 1) fun i => Term.relabel j (Fin.cons g (Fin.cons f Fin.elim0) i)) ⊔
+          (programGraph encodedEqual (numeral 1) fun i => Term.relabel j (Fin.cons f (Fin.cons g Fin.elim0) i)) ⊓
+            programGraph (OriginalDecodedExchangeEquation.exchange n arity) (numeral 1) fun i =>
+              Term.relabel j (Fin.cons child (Fin.cons param Fin.elim0) i)) ⊓
+      ((programGraph (OriginalHeadMove.headMove n arity) (numeral 1)
+                ![Term.relabel j f, Term.relabel j base, Term.relabel j g, Term.relabel j dest, Term.relabel j symbols,
+                  Term.relabel j types] ⊓
+              programGraph resultEqual (numeral 1) fun i => Term.relabel j (Fin.cons g (Fin.cons f Fin.elim0) i)) ⊔
+            (programGraph encodedEqual (numeral 1) fun i => Term.relabel j (Fin.cons f (Fin.cons g Fin.elim0) i)) ⊓
+              programGraph (OriginalDecodedExchangeEquation.exchange n arity) (numeral 1) fun i =>
+                Term.relabel j (Fin.cons child (Fin.cons param Fin.elim0) i)).imp
+        (programGraph (OriginalDecodedExchangeEquation.exchange n arity) (numeral 1) fun i =>
+          Term.relabel j (Fin.cons node (Fin.cons param Fin.elim0) i)) =
+    Formula.imp
+        (graph2 (OriginalDecodedExchangeEquation.exchange n arity) (numeral 1) (Term.relabel j node)
+          (Term.relabel j param))
+        (programGraph (OriginalHeadMove.headMove n arity) (numeral 1)
+              ![Term.relabel j f, Term.relabel j base, Term.relabel j g, Term.relabel j dest, Term.relabel j symbols,
+                Term.relabel j types] ⊓
+            graph2 resultEqual (numeral 1) (Term.relabel j g) (Term.relabel j f) ⊔
+          graph2 encodedEqual (numeral 1) (Term.relabel j f) (Term.relabel j g) ⊓
+            graph2 (OriginalDecodedExchangeEquation.exchange n arity) (numeral 1) (Term.relabel j child)
+              (Term.relabel j param)) ⊓
+      Formula.imp
+        (programGraph (OriginalHeadMove.headMove n arity) (numeral 1)
+              ![Term.relabel j f, Term.relabel j base, Term.relabel j g, Term.relabel j dest, Term.relabel j symbols,
+                Term.relabel j types] ⊓
+            graph2 resultEqual (numeral 1) (Term.relabel j g) (Term.relabel j f) ⊔
+          graph2 encodedEqual (numeral 1) (Term.relabel j f) (Term.relabel j g) ⊓
+            graph2 (OriginalDecodedExchangeEquation.exchange n arity) (numeral 1) (Term.relabel j child)
+              (Term.relabel j param))
+        (graph2 (OriginalDecodedExchangeEquation.exchange n arity) (numeral 1) (Term.relabel j node)
+          (Term.relabel j param))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedOrdinaryRecurrence/CoreProof.lean:36:4: warning: This simp argument is unused:
+  graph2Rename
+
+Hint: Omit it from the simp argument list.
+  simp only [relation, ̲rhs, ̲conjunctionRename, ̲InternalBetaExtensionSyntaxProof.impRename,
+  ̲ ̲ ̲ ̲ ̲StructuralExchangeFields.InternalProof.orRename,
+  ̵  ̵ ̵ ̵g̵r̵a̵p̵h̵2̵R̵e̵n̵a̵m̵e̵,̵InternalControlGraphSupportProof.programRename,
+  ̲ ̲ ̲ ̲ ̲GuardedSourceSyntaxProof.numeralRename, ̲hv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedOrdinaryRecurrence.CoreProof.rhs.eq_1: [propext,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedOrdinaryRecurrence.CoreProof.relation.eq_1: [propext,
+ Quot.sound]
+AXIOMS LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedOrdinaryRecurrence.CoreProof.atWitnesses: [propext,
+ Classical.choice,
+ Quot.sound]
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalDecodedOrdinaryRecurrence/CoreProof.lean:91:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.OriginalDecodedOrdinaryRecurrence.CoreProof.relationRename: forbidden axiom dependency sorryAx

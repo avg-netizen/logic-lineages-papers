@@ -1,0 +1,19 @@
+--- LogicLineages/ControlSensitivityCurrent/CurrentReserveDefinitions.lean
++++ LogicLineages/ControlSensitivityCurrent/CurrentReserveDefinitions.lean
+@@ -6,6 +6,7 @@
+ @[expose] public section
+ namespace LogicLineages.ControlSensitivityCurrent.CurrentReserve
+ 
++open LogicLineages.OrdinalComparison (ordinalNaturalSum)
+ open LogicLineages.OrdinalComparison.Source
+ open LogicLineages.ComputabilityKnowledge.WWOrdinalTermSemantics
+ open CurrentUnaryChain (commonUnits)
+@@ -72,7 +73,7 @@
+       (active : Active (.here : Variable (Ty.curriedGround (k+1) :: Γ) _) (.add a b))
+       (left : AccountWith p f origins a xs c) (right : AccountWith p f origins b ys d) :
+       AccountWith p f origins (.add a b) (xs ++ ys) (c+d+1)
+-  | finite {h t xs c n}
++  | finite {h t xs c} {n : Nat}
+       (active : Active (.here : Variable (Ty.curriedGround (k+1) :: Γ) _) (.collapse h t))
+       (finite : unitValue f h = (n : Ordinal)) (tail : AccountWith p f origins t xs c) :
+       AccountWith p f origins (.collapse h t) xs (c+n+HeadFiniteSurplus.surplus h)

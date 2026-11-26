@@ -1,0 +1,14 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalConstructorLeafTargets
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalConstructorLeafPreflight
+/-- Target-only aliases; there are no candidate proofs in this gate. -/
+def refinementEqualityComparator : Prop :=
+  OriginalConstructorLeafTargets.ActualOriginalConstructorLeafRefinementEquality
+
+def internalCasesComparator : Prop :=
+  OriginalConstructorLeafTargets.ActualOriginalConstructorLeafInternalCases
+
+def globalSelectionComparator : Prop :=
+  OriginalConstructorLeafTargets.ActualOriginalConstructorLeafGlobalSelection
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalConstructorLeafPreflight

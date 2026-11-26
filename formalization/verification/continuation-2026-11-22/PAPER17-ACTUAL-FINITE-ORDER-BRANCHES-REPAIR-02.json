@@ -1,0 +1,64 @@
+{
+  "status": "exact source-only narrow proof repair; native not invoked by author",
+  "failed_source_remote_commit": "7978937f66f5d3267a4540d8e6a9a1288ebc4b2f",
+  "failed_source_local_commit": "a3211256d",
+  "failed_exact_gate_receipt": "1795357721202447147-85",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualFiniteOrderBranchesStatementChecks",
+  "failed_receipt_sha256": "4cc2aff7cf0d79ffe1407cdd868c845098a9bdf70b1d16691abba5e59f80dbfb",
+  "failed_exact_module_log_sha256": "6517767e921f744aec22011808046570fb6ff2bd1579c9bc1c96fe830b905f24",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesCoverageProof.lean:23:28: error: Type mismatch\n  List.length_map\nhas type\n  \u2200 (f : ?m.80 \u2192 ?m.81), (List.map f ?m.82).length = List.length ?m.82\nbut is expected to have type\n  (List.map \u03b8 names).length = names.length",
+  "failed_original_native_log_sha256": "920d129b14bc840aa7495ca21303658da09169062bde981419027a02874d2018",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesCoverageProof.lean",
+  "failed_proof_sha256": "369b60dc03a8dbea6920779f0151f6d0116d1091709cfc94ec95a017009ea6cb",
+  "repaired_proof_sha256": "794d66eabc4eb5011bf9a4347fb252a41fcd033f706e93605f07b5c9a884f886",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FINITE-ORDER-BRANCHES-REPAIR-02.patch",
+  "patch_sha256": "53900bc0bbc639cb54a0ecaad0700502f2c296c791c676c367f96253cb2240db",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FINITE-ORDER-BRANCHES-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "b2bcce068fb82a3b391187823f949452607679c4b1a2ce95263b24c89e67160a",
+  "previous_repair_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FINITE-ORDER-BRANCHES-REPAIR-01.json",
+  "previous_repair_manifest_sha256": "cc6a75857b653f3859773c3dae8fffe0b3514940d489348e35d4da62529473ea",
+  "downstream_manifest_untouched": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-ORDER-BRANCHES-AUTHOR-MANIFEST.json",
+  "downstream_original_manifest_sha256": "d76a8a4b9f388b779f1178bf9970cfbd4456ed54d2cb8e8eb352f485293c58ce",
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesTargets.lean": "98c23d875caf39c0dacd8a35c6a888a10d26eb7b40bc748855ec14c79f9bc891",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesEnumerateProof.lean": "1056adaef322847e08a482db58e93ab1da6a93204441c4feed1f9cab53174ffe",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesGuardProof.lean": "19109ac5217801273cc32ef57d90cd6b993401dfd3ee44494f7b44e8bcdc90ba",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesRealizationProof.lean": "034398b2e0793972cae978df7fca4fb39299073aec97d327613692aa2764a9de",
+    "formalization/LogicLineages/PermittedControl/ActualFiniteOrderBranchesStatementChecks.lean": "0fe5dc687ec74c31f94895c416a384e91dabc39943b2e3eccb22ed4905aacb3d",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FINITE-ORDER-BRANCHES-SOURCE-MAP.md": "b11eb4d3c371864b8b1cc2004898d00b63902637069735b4dca3becad161d592"
+  },
+  "static_closure_unchanged": {
+    "Targets": {
+      "local": 92,
+      "external": 23,
+      "contains_totient": false
+    },
+    "EnumerateProof": {
+      "local": 93,
+      "external": 23,
+      "contains_totient": false
+    },
+    "GuardProof": {
+      "local": 93,
+      "external": 23,
+      "contains_totient": false
+    },
+    "CoverageProof": {
+      "local": 96,
+      "external": 23,
+      "contains_totient": false
+    },
+    "RealizationProof": {
+      "local": 95,
+      "external": 23,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 98,
+      "external": 23,
+      "contains_totient": false
+    }
+  },
+  "scope": "Apply the mandatory explicit map function \u03b8 to List.length_map in the finite cardinality comparison. No target, imports, branch emitter or other proof changes."
+}

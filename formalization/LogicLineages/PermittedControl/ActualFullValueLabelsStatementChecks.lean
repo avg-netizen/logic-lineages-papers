@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.ActualFullValueLabelsTargets
+import LogicLineages.PermittedControl.ActualFullValueLabelsProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualFullValueLabels : ActualFullValueLabels.ExactFullValueLabels :=
+  ActualFullValueLabels.exactFullValueLabels
+
+theorem fixed_exactOriginalReadsHaveFullValueLabels : ActualFullValueLabels.ExactOriginalReadsHaveFullLabels :=
+  ActualFullValueLabels.exactOriginalReadsHaveFullLabels
+
+theorem fixed_fullActualFullValueLabels : ActualFullValueLabels.FullActualFullValueLabels :=
+  ⟨fixed_exactActualFullValueLabels,fixed_exactOriginalReadsHaveFullValueLabels⟩
+
+#print axioms fixed_exactActualFullValueLabels
+#print axioms fixed_exactOriginalReadsHaveFullValueLabels
+#print axioms fixed_fullActualFullValueLabels
+
+end LogicLineages.PermittedControl.StatementChecks

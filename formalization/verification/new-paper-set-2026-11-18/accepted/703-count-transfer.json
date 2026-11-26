@@ -1,0 +1,31 @@
+{
+  "id": "new-set-703",
+  "statement": "17-permitted-control-canonical-comparison:lem:count-transfer",
+  "kind": "current numbered statement",
+  "target": "LogicLineages.PermittedControl.Targets.FullCountTransfer",
+  "exact_alias": "LogicLineages.PermittedControl.StatementChecks.fixed_fullCountTransfer",
+  "native_receipt": "1795238683060030166-2724820",
+  "local_modules": 266,
+  "independent_review": "none. The target was written and frozen in this round by the proof author; its correspondence with the printed lemma is argued in paper17/COUNT-TRANSFER-SOURCE-MAP.md and has not been read by an independent reviewer. Owner instruction of 2026-11-21: review is not necessary as long as the Lean compiles and the targets have not been changed; asked twice whether a new target should be reviewed, the owner replied 'Please continue.' and 'Please continue'.",
+  "source_map": "paper17/COUNT-TRANSFER-SOURCE-MAP.md",
+  "freeze": "paper17/COUNT-TRANSFER-FREEZE.json",
+  "evidence": "paper17/COUNT-TRANSFER-EVIDENCE.json",
+  "evidence_sha256": "fc4283d2ad4be1a7f5321daecfae3d183d2b96e3a303497acc1fa11d072e556b",
+  "final_pins": "paper17/COUNT-TRANSFER-FINAL-PINS.json",
+  "accepted_utc": "2026-11-21T05:25:38.496012+00:00",
+  "supplier_statements": [
+    "prop:entry-residues and entry orbit (EntryExistenceOrbit, IdentityEntry)",
+    "affordable cocycle (ActualAffordableCocycle, supporting)",
+    "lem:gap-input (GapInputComparison)",
+    "inverse table (ActualInverseTable, supporting)",
+    "prop:equal-gap (certificate range)"
+  ],
+  "limitations": [
+    "Five clauses on actual first-entry semantics for both selected controls: equation (count-core) for every long proper interval including the identity prefix; exact zero-class replacement for any finite class; equal-input merge; gap order forced by equal entry norms at distinct inputs; rank transfer on the effective inverse-table tail",
+    "Target frozen before proof (7 pins, unchanged at acceptance); the target is the author's own and is unreviewed. The register's stated acceptance rule asks for a Codex-owned frozen comparator; this one is Claude-authored",
+    "The iteration of transfers over a class and its termination are not restated here; record 702 proves the charge lemma on an abstract row model and the two are not formally linked. The constant count of a short prefix is the accepted prop:entry-residues",
+    "Tails are explicit and effective, not minimal; rank transfer takes the smaller-gap interval in the form (nu+delta, nu) with a normal-form gap, as in the accepted inverse table",
+    "Compiled and verified on the local continuation host; evidence paths are host-specific",
+    "Does not promote paper17 thm:arithmetic, thm:ground, thm:main or lem:field-comparison; no full-root or CI claim"
+  ]
+}

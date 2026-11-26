@@ -1,0 +1,58 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawNewestTransitivity/ReplacementProof.lean:35:87: error: Application type mismatch: The argument
+  I.appendTag
+has type
+  ℕ
+but is expected to have type
+  Term ?m.331
+in the application
+  RawRightReplace.templateValue I.consTag I.appendTag
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawNewestTransitivity/ReplacementProof.lean:40:91: error: Application type mismatch: The argument
+  hleaf
+has type
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal
+      (GorbowPRDefiningEquations.call I.previousTag
+        (RawRightReplace.lineValue I.pairTag I.consTag I.appendTag t u v ::ᵥ nil))
+      Term.zero.succ)
+but is expected to have type
+  Hilbert.Local (GorbowPRNumeralCalculation.Theory p) ctx G
+    (Formula.equal
+      (RawLogicalRetention.leafCall
+        (RawAddLeftCongruence.ReflexivityProof.retentionInstallation p old a x I.toNewest).oldTag
+        (RawAddLeftRetention.line
+          (RawAddLeftCongruence.ReflexivityProof.retentionInstallation p old a x I.toNewest).ptag formula
+          (Term.numeral 12) args))
+      Term.zero.succ)
+in the application
+  ((Hilbert.Local.base hc).mp ((((Hilbert.Local.base hvalid).mp ht).mp hu).mp hv)).mp hleaf
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawNewestTransitivity/ReplacementProof.lean:54:33: error: Application type mismatch: The argument
+  hcert
+has type
+  Derivation (GorbowPRNumeralCalculation.Theory p)
+    (Formula.equal
+      (GorbowPRDefiningEquations.call I.consTag
+        (RawRightReplace.lineCall I.equalityLineTag t u v ::ᵥ Term.zero ::ᵥ nil))
+      (GorbowPRDefiningEquations.call I.consTag
+        (RawRightReplace.lineValue I.pairTag I.consTag I.appendTag t u v ::ᵥ Term.zero ::ᵥ nil)))
+but is expected to have type
+  Derivation T
+    (Formula.equal
+      ((index ::ᵥ
+            fuel ::ᵥ
+              Term.zero ::ᵥ
+                formula.add formula ::ᵥ
+                  RawRightReplaceCertificate.certificate I.consTag I.equalityLineTag t u v ::ᵥ nil).get
+        (Fin.succ 0).succ.succ.succ)
+      ((index ::ᵥ
+            fuel ::ᵥ
+              Term.zero ::ᵥ
+                formula.add formula ::ᵥ
+                  RawAddLeftRetention.certificate I.pairTag I.consTag formula (Term.numeral 12) args ::ᵥ nil).get
+        (Fin.succ 0).succ.succ.succ))
+in the application
+  Hilbert.Local.base hcert
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261114/RawNewestTransitivity/ReplacementProof.lean:58:0: error: LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawNewestTransitivity.ReplacementProof.internalReplacement: forbidden axiom dependency sorryAx
+'LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261114.RawNewestTransitivity.ReplacementProof.internalReplacement' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

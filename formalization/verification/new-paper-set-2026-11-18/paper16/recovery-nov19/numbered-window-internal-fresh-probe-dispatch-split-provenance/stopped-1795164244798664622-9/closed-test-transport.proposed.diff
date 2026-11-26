@@ -1,0 +1,36 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchObjectGraphProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchObjectGraphProof.lean
+@@ -64,15 +64,27 @@
+   · exact projectionValue (0 : Fin 2) ![numeral (code σ),q]
+   · exact literalGraph (code τ) ![numeral (code σ),q]
+ 
++section
++attribute [local irreducible] programGraph
++
++/-- Keep the original graph opaque to elaboration while replacing only
++its two closed numeral arguments by their already-proved equalities. -/
++private theorem testAtOutput (σ τ : ProbeTy) (q : OTerm α) (out : Nat)
++    (hout : (if σ = τ then 1 else 0) = out) :
++    Nonempty (Derivation body Γ
++      (programGraph (typeTest τ) (numeral out) ![numeral (typeCode σ),q])) := by
++  rw [← exact_DispatchObjectTypeCode σ,← hout]
++  exact testValue σ τ q
++
+ private theorem hitValue (τ : ProbeTy) (q : OTerm α) :
+-    Nonempty (Derivation body Γ (programGraph (typeTest τ) (numeral 1) ![numeral (typeCode τ),q])) := by
+-  simpa only [if_pos (rfl : τ = τ),exact_DispatchObjectTypeCode] using
+-    (testValue (body := body) (Γ := Γ) τ τ q)
++    Nonempty (Derivation body Γ (programGraph (typeTest τ) (numeral 1) ![numeral (typeCode τ),q])) :=
++  testAtOutput τ τ q 1 (if_pos rfl)
+ 
+ private theorem missValue (σ τ : ProbeTy) (q : OTerm α) (h : σ ≠ τ) :
+-    Nonempty (Derivation body Γ (programGraph (typeTest τ) z ![numeral (typeCode σ),q])) := by
+-  simpa only [if_neg h,exact_DispatchObjectTypeCode] using
+-    (testValue (body := body) (Γ := Γ) σ τ q)
++    Nonempty (Derivation body Γ (programGraph (typeTest τ) z ![numeral (typeCode σ),q])) :=
++  testAtOutput σ τ q 0 (if_neg h)
++
++end
+ 
+ private theorem liftIntro (l : Leaves) (τ : ProbeTy) (out t q : OTerm α)
+     (h : Nonempty (Derivation body Γ (programGraph (verify l τ) out ![q]))) :

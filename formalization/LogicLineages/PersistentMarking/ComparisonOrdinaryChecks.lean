@@ -1,0 +1,8 @@
+import LogicLineages.PersistentMarking.ComparisonOrdinaryProof
+namespace LogicLineages.PersistentMarking.ComparisonOrdinaryChecks
+
+theorem weakTargetsOrdinary : ComparisonTargets.WeakTargetsOrdinary := ComparisonOrdinaryProof.weakTargetsOrdinary
+theorem strictTargetsOrdinary : ComparisonTargets.StrictTargetsOrdinary := ComparisonOrdinaryProof.strictTargetsOrdinary
+#print axioms weakTargetsOrdinary
+#print axioms strictTargetsOrdinary
+end LogicLineages.PersistentMarking.ComparisonOrdinaryChecks

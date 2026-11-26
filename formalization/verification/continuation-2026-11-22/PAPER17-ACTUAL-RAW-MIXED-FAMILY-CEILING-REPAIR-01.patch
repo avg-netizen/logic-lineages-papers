@@ -1,0 +1,10 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingPrimitiveProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualRawMixedFamilyCeilingPrimitiveProof.lean
+@@ -27,2 +27,2 @@
+-  have syntax : Primrec (fun p : A => p.2.2.1.2) := Primrec.snd.comp row
+-  have terms : Primrec (fun p : A => p.2.2.1.2.2) := Primrec.snd.comp syntax
++  have sourceSyntax : Primrec (fun p : A => p.2.2.1.2) := Primrec.snd.comp row
++  have terms : Primrec (fun p : A => p.2.2.1.2.2) := Primrec.snd.comp sourceSyntax
+@@ -32 +32 @@
+-    staticPrimitive.comp (b.pair (r.pair (cleanupPrimitive.comp syntax)))
++    staticPrimitive.comp (b.pair (r.pair (cleanupPrimitive.comp sourceSyntax)))

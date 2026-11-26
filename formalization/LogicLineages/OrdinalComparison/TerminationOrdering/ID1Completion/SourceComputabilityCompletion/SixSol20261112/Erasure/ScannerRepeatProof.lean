@@ -1,0 +1,149 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.ScannerRepeatSyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalParameterizedApplicationStepCheckerRepeatSupportProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.ScannerRepeatProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalParameterizedApplicationStepChecker
+open InternalParameterizedApplicationStepCheckerRepeatSyntaxProof (repeatRename)
+open InternalParameterizedApplicationStepCheckerRepeatSupportProof
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalListCodec InternalListCodecSupportProof InternalListInduction InternalListInductionProof
+open SourceComputabilityFormulaSupportProof InternalClosedPrograms InternalClosedProgramsBindingProof
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof
+open InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (emb z suc zRelabel sucRelabel)
+open InternalTagArithmeticSupportProof
+open ScannerRepeatDefinitions ScannerRepeatSyntaxProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+
+/-- Generic proof supplier; the public scanner endpoint supplies the actual
+proved scanner preservation theorem and has no such external premise. -/
+def StepPreserves (body : Positive (Fin 1)) (T P : Program 2) : Prop :=
+ ∀ (beta : Type) (Theta : List (Formula beta)) (state next parameter : OTerm beta),
+ Nonempty (Derivation body Theta (graph2 T next state parameter)) →
+ Nonempty (Derivation body Theta (graph2 P (suc z) state parameter)) →
+ Nonempty (Derivation body Theta (graph2 P (suc z) next parameter))
+
+theorem rowApply (T P : Program 2) (code initial out parameter : OTerm alpha)
+ (hrow : Nonempty (Derivation body Delta (row T P code)))
+ (hr : Nonempty (Derivation body Delta (repeatGraph T out code initial parameter)))
+ (hp : Nonempty (Derivation body Delta (graph2 P (suc z) initial parameter))) :
+ Nonempty (Derivation body Delta (graph2 P (suc z) out parameter)) := by
+ have h := actualFiniteUniversalElimination body alpha 3 Delta (matrix T P code)
+  (fun i => emb (![initial,out,parameter] i)) hrow
+ rw [matrixWitness] at h
+ obtain ⟨h⟩ := h
+ obtain ⟨hr⟩ := hr
+ obtain ⟨hp⟩ := hp
+ exact ⟨Derivation.implicationElimination h (Derivation.conjunctionIntroduction hr hp)⟩
+
+theorem zeroCore (T P : Program 2) (initial out parameter : OTerm alpha)
+ (hr : Nonempty (Derivation body Delta (repeatGraph T out z initial parameter)))
+ (hp : Nonempty (Derivation body Delta (graph2 P (suc z) initial parameter))) :
+ Nonempty (Derivation body Delta (graph2 P (suc z) out parameter)) := by
+ obtain ⟨he⟩ := repeatZeroRecover T out initial parameter hr
+ exact headTransport P (suc z) initial out (Fin.cons parameter Fin.elim0) ⟨symm he⟩ hp
+
+theorem zeroRow (T P : Program 2) :
+ Nonempty (Derivation body Delta (row T P z)) := by
+ unfold row
+ apply actualFiniteUniversalIntroduction body alpha 3 Delta
+ let initial : OTerm (alpha ⊕ Fin 3) := .var (.inr 0)
+ let out : OTerm (alpha ⊕ Fin 3) := .var (.inr 1)
+ let parameter : OTerm (alpha ⊕ Fin 3) := .var (.inr 2)
+ let A := repeatGraph T out z initial parameter ⊓ graph2 P (suc z) initial parameter
+ obtain ⟨d⟩ := zeroCore (body := body)
+  (Delta := A :: Delta.map (fun q => q.relabel Sum.inl)) T P initial out parameter
+  ⟨Derivation.conjunctionLeft (Derivation.hypothesis List.mem_cons_self)⟩
+  ⟨Derivation.conjunctionRight (Derivation.hypothesis List.mem_cons_self)⟩
+ simpa only [matrix,zRelabel] using (Nonempty.intro (Derivation.implicationIntroduction d))
+
+theorem consCore (T P : Program 2) (hstep : StepPreserves body T P)
+ (code head tail initial out parameter : OTerm alpha)
+ (hrow : Nonempty (Derivation body Delta (row T P tail)))
+ (hc : Nonempty (Derivation body Delta (consGraph code head tail)))
+ (hr : Nonempty (Derivation body Delta (repeatGraph T out code initial parameter)))
+ (hp : Nonempty (Derivation body Delta (graph2 P (suc z) initial parameter))) :
+ Nonempty (Derivation body Delta (graph2 P (suc z) out parameter)) := by
+ apply programCases (repeatP T) (Fin.cons tail (Fin.cons initial (Fin.cons parameter Fin.elim0))) _
+ intro beta rho Theta middle hrho ht
+ simp only [graph2Rename,sucRelabel,zRelabel]
+ simp only [consTermRename,emptyRename] at ht
+ have hrow' := renameInto hrow rho Theta hrho
+ have hc' := renameInto hc rho Theta hrho
+ have hr' := renameInto hr rho Theta hrho
+ have hp' := renameInto hp rho Theta hrho
+ rw [rowRename] at hrow'
+ rw [consGraphRename] at hc'
+ rw [repeatRename] at hr'
+ simp only [graph2Rename,sucRelabel,zRelabel] at hp'
+ have hnext := repeatConsRecover T (code.relabel rho) (head.relabel rho) (tail.relabel rho)
+  middle (out.relabel rho) (initial.relabel rho) (parameter.relabel rho) hc' ht hr'
+ exact hstep beta Theta middle (out.relabel rho) (parameter.relabel rho) hnext
+  (rowApply T P (tail.relabel rho) (initial.relabel rho) middle (parameter.relabel rho) hrow' ht hp')
+
+theorem consRow (T P : Program 2) (hstep : StepPreserves body T P)
+ (code head tail : OTerm alpha)
+ (hrow : Nonempty (Derivation body Delta (row T P tail)))
+ (hc : Nonempty (Derivation body Delta (consGraph code head tail))) :
+ Nonempty (Derivation body Delta (row T P code)) := by
+ unfold row
+ apply actualFiniteUniversalIntroduction body alpha 3 Delta
+ let initial : OTerm (alpha ⊕ Fin 3) := .var (.inr 0)
+ let out : OTerm (alpha ⊕ Fin 3) := .var (.inr 1)
+ let parameter : OTerm (alpha ⊕ Fin 3) := .var (.inr 2)
+ let c := code.relabel (Sum.inl : alpha → alpha ⊕ Fin 3)
+ let h := head.relabel (Sum.inl : alpha → alpha ⊕ Fin 3)
+ let t := tail.relabel (Sum.inl : alpha → alpha ⊕ Fin 3)
+ let A := repeatGraph T out c initial parameter ⊓ graph2 P (suc z) initial parameter
+ let Xi := A :: Delta.map (fun q => q.relabel (Sum.inl : alpha → alpha ⊕ Fin 3))
+ have hrow' := renameInto hrow Sum.inl Xi
+  (fun q hq => List.mem_cons_of_mem _ (List.mem_map.mpr ⟨q,hq,rfl⟩))
+ rw [rowRename] at hrow'
+ have hc' := renameInto hc Sum.inl Xi
+  (fun q hq => List.mem_cons_of_mem _ (List.mem_map.mpr ⟨q,hq,rfl⟩))
+ rw [consGraphRename] at hc'
+ obtain ⟨d⟩ := consCore T P hstep c h t initial out parameter hrow' hc'
+  ⟨Derivation.conjunctionLeft (Derivation.hypothesis List.mem_cons_self)⟩
+  ⟨Derivation.conjunctionRight (Derivation.hypothesis List.mem_cons_self)⟩
+ exact ⟨Derivation.implicationIntroduction d⟩
+
+theorem allRows (T P : Program 2) (hstep : StepPreserves body T P) (code : OTerm alpha) :
+ Nonempty (Derivation body Delta (row T P code)) := by
+ let theta : Formula (alpha ⊕ Fin 1) := row T P (.var (.inr 0))
+ have hz : Nonempty (Derivation body Delta (atCode theta z)) := by
+  rw [rowAtCode]
+  exact zeroRow T P
+ have hs : Nonempty (Derivation body Delta (constructors theta)) := by
+  unfold constructors
+  apply actualFiniteUniversalIntroduction body alpha 3 Delta
+  simp only [constructorBody,theta,rowAtIndex]
+  let c : OTerm (alpha ⊕ Fin 3) := .var (.inr 0)
+  let h : OTerm (alpha ⊕ Fin 3) := .var (.inr 1)
+  let t : OTerm (alpha ⊕ Fin 3) := .var (.inr 2)
+  let C := consGraph c h t
+  let R := row T P t
+  obtain ⟨d⟩ := consRow (body := body)
+   (Delta := R :: C :: Delta.map (fun q => q.relabel Sum.inl)) T P hstep c h t
+   ⟨Derivation.hypothesis List.mem_cons_self⟩
+   ⟨Derivation.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)⟩
+  exact ⟨Derivation.implicationIntroduction (Derivation.implicationIntroduction d)⟩
+ obtain ⟨hz⟩ := hz
+ obtain ⟨hs⟩ := hs
+ have h := actualOriginalListInductionAtCode body alpha Delta theta code
+  ⟨Derivation.conjunctionIntroduction hz hs⟩
+ rw [rowAtCode] at h
+ exact h
+
+theorem preserves (T P : Program 2) (hstep : StepPreserves body T P)
+ (code initial out parameter : OTerm alpha)
+ (hr : Nonempty (Derivation body Delta (repeatGraph T out code initial parameter)))
+ (hp : Nonempty (Derivation body Delta (graph2 P (suc z) initial parameter))) :
+ Nonempty (Derivation body Delta (graph2 P (suc z) out parameter)) :=
+ rowApply T P code initial out parameter (allRows T P hstep code) hr hp
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.ScannerRepeatProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Erasure.ScannerRepeatProof

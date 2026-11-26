@@ -1,0 +1,11 @@
+--- before
++++ after
+@@ -35,6 +35,8 @@
+     (hc : Nonempty (Derivation body Delta (graph2 InternalListCodec.consCode out z rows))) :
+     Nonempty (Derivation body Delta (graph2 enumeration out (suc count) types)) := by
+   have hs := stepValue count previous types rows out hr hc
++  unfold graph2 enumeration programGraph at hp ⊢
++  unfold graph3 programGraph at hs
+   change Nonempty (Derivation body Delta (InternalRecursionGraph.recursion
+     (OrdinaryArithmetic.graphFormula (InternalLessThan.constantOne 1))
+     (OrdinaryArithmetic.graphFormula step) previous count (Fin.cons types Fin.elim0))) at hp

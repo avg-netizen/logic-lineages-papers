@@ -1,0 +1,9 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNumberedTypeWindowNumericProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNumberedTypeWindowNumericProof.lean
+@@ -76,2 +76,4 @@
+-  have middle := (headTailOfCell (cellAt h (pack (ty::tail)))).2
+-  have last := (headTailOfCell (cellAt ty (pack tail))).1
++  have middle : run cellTail (pack (h::ty::tail)) = pack (ty::tail) :=
++    (headTailOfCell (cellAt h (pack (ty::tail)))).2
++  have last : run cellHead (pack (ty::tail)) = ty :=
++    (headTailOfCell (cellAt ty (pack tail))).1

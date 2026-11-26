@@ -119,4 +119,15 @@ theorem exactCorrelatedBody : OutcomeTransportTargets.ExactCorrelatedBody := by
   · intro p outcomes
     exact rewriteWith_congruences _ p
 
+/- Explicit per-file audit includes private helpers before module export. -/
+#print axioms lookup_correct
+#print axioms outcomeFormula_eval
+#print axioms inequalityRows_conj
+#print axioms inequalityRows_disj
+#print axioms congruences_conj
+#print axioms congruences_disj
+#print axioms rewriteWith_congruences
+#print axioms rewriteWith_eval
+#print axioms exactCorrelatedBody
+
 end LogicLineages.OrdinalComparison.RankedWordDecisionCompletion.OutcomeTransportProof

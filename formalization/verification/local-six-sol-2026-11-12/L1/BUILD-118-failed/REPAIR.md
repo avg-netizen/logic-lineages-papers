@@ -1,0 +1,1 @@
+Wind-down receipt build-reports/1794546711871325246-9.json. CountedPrefixCore3 passed standard-only and is immutable. ONLY final Proof released for existing varBind/nextTerm (InternalTagArithmeticSyntaxProof) and natInduction (InternalTagArithmeticSupportProof) explicit opens. No formula/proof-body change, frozen target and other5 sources unchanged.

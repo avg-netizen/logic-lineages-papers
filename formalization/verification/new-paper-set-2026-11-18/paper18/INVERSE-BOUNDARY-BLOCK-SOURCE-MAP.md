@@ -1,0 +1,9 @@
+# Inverse-selected positive-Phi boundary block elimination
+
+Six supporting families, not a complete source statement or whole tag3 elimination. Implements the distinct noWide dominant-boundary case recommended in NONCANCELLING-MAXIMUM-ELIMINATION-PLAN-REVIEW. Actual existing DominantBoundary uses the real Phi inverse, scaled positive coefficient, signed-shift domain, both endpoint inequalities and explicit noWide guard. Its five candidates include truncated low centers and substitute the entire guard plus arbitrary Matrix.
+
+ActualBand and SingleElimination freshly calibrate this actual supplier; no new numerical discovery is claimed. BlockElimination lifts to an arbitrary Nodup list containing the removed name with the same shared valuation. Only lower and upper boundary terms exclude i; the entire Matrix may contain i repeatedly, nonlinearly, under negation and in domain/equality/order guards. ProgressSupport proves exact one-name length decrease, no remaining i and all free output names originate from original boundaries or Matrix. This is binder decrease, not a false claim that newly introduced guard nodes reduce syntax size.
+
+LiteralCode includes the actual erased bound-name list and actual projected Matrix encoding. Programs requires genuine all-raw Computable descriptor function, not a fixed valuation solver. Invalid raw data behavior is inherited from the total literal code functions, while semantic claims have the explicit valid syntactic parameter hypotheses.
+
+The region is visibly a boundary-case assumption. No original arbitrary row is claimed to imply it. Deriving near/far coverage, mixed Phi/H inverse and residue transformations, same-name residual independence and full all-branch termination remain separate debts. No general QE or arbitrary alternation claim. Freeze before proofs; target preflight recommended.

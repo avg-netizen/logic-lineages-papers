@@ -1,0 +1,22 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalCoverFittedBaseTapeForwardTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverLocalGraphForwardBasicsProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverFittedHeadBaseForwardProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalCoverFittedAtomicBaseForwardProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalCoverFittedBaseTapeForwardProof
+open NumberedWindowInternalCoverLocalGraphForwardBasicsProof (exact_OpenCoverLambdaBaseTapeForward)
+open NumberedWindowInternalCoverFittedHeadBaseForwardProof (numberedBaseForward headBaseForward)
+open NumberedWindowInternalCoverFittedAtomicBaseForwardProof (fittedAtomicForward)
+open NumberedWindowInternalCoverFittedBaseTapeForwardTargets
+
+theorem exact_OpenCoverFittedBaseTapeForward : ExactOpenCoverFittedBaseTapeForward := by
+  intro s B T body α Γ ctx raw reject
+  have basic := exact_OpenCoverLambdaBaseTapeForward s B T body α Γ ctx raw reject
+  exact fittedAtomicForward s _ _ (headBaseForward s _ _ (numberedBaseForward s _ _ basic))
+
+#print axioms exact_OpenCoverFittedBaseTapeForward
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalCoverFittedBaseTapeForwardProof

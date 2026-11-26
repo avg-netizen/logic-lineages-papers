@@ -1,0 +1,22 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLambdaProvenanceProof.lean:45:77: error: unsolved goals
+raw ty q : ℕ
+read : unpackNode raw = some (2, [ty, q])
+smaller : q < raw
+⊢ (typeBit ty && ((table raw)[q]?.getD (false, false)).1) = (typeBit ty && (syntaxBits q).1)
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLambdaProvenanceProof.lean:47:36: warning: This simp argument is unused:
+  readSyntax smaller
+
+Hint: Omit it from the simp argument list.
+  simp [̵t̵e̵r̵m̵N̵e̵x̵t̵,̵r̵e̵a̵d̵,̵t̵e̵r̵m̵P̵a̵r̵t̵s̵,̵r̵e̵a̵d̵S̵y̵n̵t̵a̵x̵ ̵s̵m̵a̵l̵l̵e̵r̵]̵[̲t̲e̲r̲m̲N̲e̲x̲t̲,̲ ̲r̲e̲a̲d̲,̲ ̲t̲e̲r̲m̲P̲a̲r̲t̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLambdaProvenanceProof.lean:61:51: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverLambdaProvenanceProof.exact_CoverLambdaSourceProvenance' depends on axioms: [propext,
+ sorryAx,
+ Quot.sound]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverLambdaProvenanceProof.exact_CoverLambdaSelectedProvenance' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

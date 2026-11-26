@@ -1,0 +1,14 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NativeIteratorStrictProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NativeIteratorStrictChecks
+open NativeIteratorStrictTargets
+
+theorem exact_IteratorNativeStrictChain : IteratorNativeStrictChain := NativeIteratorStrictProof.chain
+
+#print axioms exact_IteratorNativeStrictChain
+
+end LogicLineages.PersistentMarking.NativeIteratorStrictChecks

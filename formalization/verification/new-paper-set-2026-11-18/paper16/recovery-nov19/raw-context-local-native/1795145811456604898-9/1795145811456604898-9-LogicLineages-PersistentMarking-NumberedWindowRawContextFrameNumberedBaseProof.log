@@ -1,0 +1,58 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFrameNumberedBaseProof.lean:25:14: error: unsolved goals
+case some
+S : Spine.Signature
+K : List Ty
+root : RawRoot
+fuel w : Nat
+o : Option RawWitness
+ih :
+  ∀ (Q R : NTerm), run root fuel (encodeTerm Q) w (encodeTerm R) = Option.any (fun witness => rawBit S K witness Q R) o
+i : Nat
+Q R : NTerm
+f : Head
+t : Ty
+k : Nat
+bs es : NArgs
+g : Head
+u : Ty
+l : Nat
+rs ss : NArgs
+⊢ (decide (NumberedWindowArithmeticHeadCode.encodeHead f = NumberedWindowArithmeticHeadCode.encodeHead g) &&
+            decide (NumberedWindowArithmeticTyCode.encodeTy t = NumberedWindowArithmeticTyCode.encodeTy u) &&
+          decide (k = l) &&
+        decide (encodeArgs es = encodeArgs ss) &&
+      argsAtBit (fun Q R => Option.any (fun witness => rawBit S K witness Q R) o) i bs rs) =
+    (decide (f = g) && decide (t = u) && decide (k = l) && NumberedWindowLiteralEquality.argsEq es ss &&
+      argsAtBit (fun Q R => Option.any (fun witness => rawBit S K witness Q R) o) i bs rs)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFrameNumberedBaseProof.lean:27:60: warning: This simp argument is unused:
+  followSome
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵O̵p̵t̵i̵o̵n̵.̵a̵n̵y̵_̵s̵o̵m̵e̵,̵f̵o̵l̵l̵o̵w̵G̵u̵a̵r̵d̵,̵f̵o̵l̵l̵o̵w̵S̵o̵m̵e̵,̵h̵e̵a̵d̵E̵q̵,̵t̵y̵p̵e̵E̵q̵,̵n̵a̵t̵E̵q̵,̵a̵r̵g̵s̵E̵q̵C̵o̵d̵e̵,̵f̵o̵l̵l̵o̵w̵F̵o̵c̵u̵s̵]̵[̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲a̲n̲y̲_̲s̲o̲m̲e̲,̲ ̲f̲o̲l̲l̲o̲w̲G̲u̲a̲r̲d̲,̲ ̲h̲e̲a̲d̲E̲q̲,̲ ̲t̲y̲p̲e̲E̲q̲,̲ ̲n̲a̲t̲E̲q̲,̲ ̲a̲r̲g̲s̲E̲q̲C̲o̲d̲e̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲f̲o̲l̲l̲o̲w̲F̲o̲c̲u̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFrameNumberedBaseProof.lean:27:71: warning: This simp argument is unused:
+  headEq
+
+Hint: Omit it from the simp argument list.
+  simp only [Option.bind_some, ̲Option.any_some, ̲followGuard, ̲followSome,h̵e̵a̵d̵E̵q̵,̵ ̲typeEq, ̲natEq,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲argsEqCode, ̲followFocus]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFrameNumberedBaseProof.lean:27:78: warning: This simp argument is unused:
+  typeEq
+
+Hint: Omit it from the simp argument list.
+  simp only [Option.bind_some, ̲Option.any_some, ̲followGuard, ̲followSome, ̲headEq,t̵y̵p̵e̵E̵q̵,̵ ̲natEq,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲argsEqCode, ̲followFocus]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowRawContextFrameNumberedBaseProof.lean:27:91: warning: This simp argument is unused:
+  argsEqCode
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵O̵p̵t̵i̵o̵n̵.̵a̵n̵y̵_̵s̵o̵m̵e̵,̵f̵o̵l̵l̵o̵w̵G̵u̵a̵r̵d̵,̵f̵o̵l̵l̵o̵w̵S̵o̵m̵e̵,̵h̵e̵a̵d̵E̵q̵,̵t̵y̵p̵e̵E̵q̵,̵n̵a̵t̵E̵q̵,̵a̵r̵g̵s̵E̵q̵C̵o̵d̵e̵,̵f̵o̵l̵l̵o̵w̵F̵o̵c̵u̵s̵]̵[̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲a̲n̲y̲_̲s̲o̲m̲e̲,̲ ̲f̲o̲l̲l̲o̲w̲G̲u̲a̲r̲d̲,̲ ̲f̲o̲l̲l̲o̲w̲S̲o̲m̲e̲,̲ ̲h̲e̲a̲d̲E̲q̲,̲ ̲t̲y̲p̲e̲E̲q̲,̲ ̲n̲a̲t̲E̲q̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲f̲o̲l̲l̲o̲w̲F̲o̲c̲u̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

@@ -1,0 +1,23 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowExternalArgumentSubstitutionProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowExternalArgumentSubstitutionChecks
+open NumberedWindowExternalArgumentSubstitutionTargets
+
+theorem exact_LexicalShiftPreservesPrimary : LexicalShiftPreservesPrimary :=
+  NumberedWindowExternalPrimaryShiftProof.lexical
+
+theorem exact_LiteralArgumentClassSubstitution : LiteralArgumentClassSubstitution :=
+  NumberedWindowExternalArgumentSubstitutionProof.argument
+
+theorem exact_LiteralInstanceClassSubstitution : LiteralInstanceClassSubstitution :=
+  NumberedWindowExternalArgumentSubstitutionProof.instanceCongr
+
+#print axioms exact_LexicalShiftPreservesPrimary
+#print axioms exact_LiteralArgumentClassSubstitution
+#print axioms exact_LiteralInstanceClassSubstitution
+
+end LogicLineages.PersistentMarking.NumberedWindowExternalArgumentSubstitutionChecks

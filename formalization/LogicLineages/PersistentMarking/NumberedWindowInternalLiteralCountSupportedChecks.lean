@@ -1,0 +1,12 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountSupportedProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountSupportedChecks
+open NumberedWindowInternalLiteralCountSupportedTargets
+
+theorem exact_OpenLiteralSupportedCount : ExactOpenSupportedCount :=
+  NumberedWindowInternalLiteralCountSupported.exactOpenSupportedCount
+
+#print axioms exact_OpenLiteralSupportedCount
+end LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCountSupportedChecks

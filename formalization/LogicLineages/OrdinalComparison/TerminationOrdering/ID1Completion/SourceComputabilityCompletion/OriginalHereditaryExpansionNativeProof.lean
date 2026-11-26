@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryExpansionChildrenProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryExpansionDeletionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryExpansionNativeProof
+open OriginalHereditaryExpansion
+
+theorem successorsCalibration : OriginalHereditaryExpansionTargets.SuccessorsCalibration := by
+  intro n c s
+  rw [OriginalHereditaryExpansionEvaluationProof.totalCalibration,
+    OriginalHereditaryExpansionChildrenProof.childrenValues,
+    OriginalHereditaryExpansionDeletionProof.deletionValuesExact]
+  simp only [OriginalHereditaryWorkBound.successors,List.map_append]
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryExpansionNativeProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryExpansionNativeProof

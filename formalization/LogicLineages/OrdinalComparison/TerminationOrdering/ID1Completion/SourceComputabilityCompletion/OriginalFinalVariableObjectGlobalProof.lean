@@ -1,0 +1,29 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableObjectCalibrationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableObjectExposureProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableObjectCancellationProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableObjectRankProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableCanonicalGlobalProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableObjectGlobalProof
+open OriginalFinalVariableObjectCalibrationProof OriginalFinalVariableObjectExposureProof
+open OriginalFinalVariableObjectFixednessProof OriginalFinalVariableObjectCancellationProof
+open OriginalFinalVariableObjectRankProof
+
+/-- The original tuple is selected only once, before runtime contexts and
+windows. Every previous canonical/native conjunct is retained literally. -/
+theorem actualOriginalFinalVariableObjectSelection :
+    OriginalFinalVariableObjectTargets.ActualOriginalFinalVariableObjectSelection := by
+  intro n arity
+  obtain ⟨p,guard,hp⟩ :=
+    OriginalFinalVariableCanonicalGlobalProof.actualOriginalFinalVariableCanonicalSelection n arity
+  exact ⟨p,guard,hp,hp.2.1,
+    actualOriginalFinalVariableObjectCalibration (OriginalVariableLeaves.refineInputs guard p),
+    actualOriginalFinalVariableObjectExposure (OriginalVariableLeaves.refineInputs guard p),
+    actualOriginalFinalVariableObjectFixedness guard p,
+    actualOriginalFinalVariableObjectCancellation guard p,
+    actualOriginalFinalVariableObjectRankPreservation guard p⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableObjectGlobalProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalFinalVariableObjectGlobalProof

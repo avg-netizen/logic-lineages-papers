@@ -1,0 +1,79 @@
+\section{The complete binary coefficient observer}
+\label{sec:observer}
+
+Work over $\Ftwo$ and set
+\[
+ A_d(z)=\prod_{i=1}^d(1+z^i),\qquad D=d(d+1)/2.
+\]
+For $b\in\{0,1\}$ let
+$\Lambda_b(\sum a_nz^n)=\sum a_{2n+b}z^n$.
+The state space of proper numerators is
+$V_d=\{U\in\Ftwo[z]:\deg U<D\}$.
+
+\begin{lemma}[Exact state update]\label{lem:matrix}
+For $U\in V_d$,
+\[
+ \Lambda_b(U/A_d)=\frac{\Lambda_b(UA_d)}{A_d}.
+\]
+The updated numerator is again in $V_d$. In the coefficient basis its
+matrix is
+$T_b[i,j]=[z^{2i+b-j}]A_d$, for $0\le i,j<D$.
+\end{lemma}
+\begin{proof}
+Since $A_d(z)^2=A_d(z^2)$ in characteristic two,
+$U/A_d=(UA_d)/A_d(z^2)$. Coefficient selection commutes with a
+factor in $z^2$, giving the identity. The numerator degree is at
+most $\lfloor(2D-1)/2\rfloor=D-1$. Applying selection to each
+monomial basis vector gives the matrix entries.
+\end{proof}
+
+\begin{theorem}[Complete selected coefficient]\label{thm:observer}
+If $n=\sum_{i<L}b_i2^i$, with bits read least significant first,
+then
+\[
+ p_d(n)\bmod2=e_0^{T}T_{b_{L-1}}\cdots T_{b_0}e_0.
+\]
+\end{theorem}
+\begin{proof}
+The initial numerator is one, represented by $e_0$. Successive
+selections with $b_0,b_1,\ldots$ discard these bits of the
+coefficient index. After all bits, the desired coefficient is the
+constant term. As $A_d(0)=1$, this is the constant numerator
+coordinate selected by $e_0^T$.
+\end{proof}
+
+This formula retains all factors and all cancellations. Boolean
+reachability in its transition graph would be a different observation:
+two paths contributing to one coefficient cancel in $\Ftwo$.
+
+\begin{lemma}[All-continuation observability]\label{lem:observable}
+For any field $K$, polynomial $A$ with $A(0)=1$ and $\deg A=D$,
+the first $D$ coefficients of $U/A$ determine every $U$ of degree
+less than $D$. For the binary observer above, distinct numerator
+states are distinguished by some continuation of length at most
+$\lceil\log_2 D\rceil$.
+\end{lemma}
+\begin{proof}
+Multiplication by $1/A=1+a_1z+\cdots$ sends the coefficient
+vector of $U$ to the first $D$ output coefficients by a lower
+triangular matrix with diagonal one. It is invertible. Equivalently,
+the first nonzero coefficient of a difference $U-V$ remains its
+first nonzero coefficient after division by $A$. Its index $k<D$
+has at most $\lceil\log_2D\rceil$ bits; those bits form a
+distinguishing continuation. Index zero permits the empty word.
+\end{proof}
+
+This is the linear observability viewpoint familiar from weighted
+automata \cite[Sections~1--3]{kiefer}. It does not say that every distinguishing
+continuation is available from the genuine source parameters.
+A quotient preserving only the one prescribed source word remains a
+different question.
+
+\begin{remark}[Linear algebra in characteristic two]
+The proof uses the invertible triangular coefficient map directly.
+A Gram-matrix argument based on positive definiteness would be invalid
+over $\Ftwo$: the nonzero column $v=(1,1)^T$ has rank one but
+$v^Tv=0$. Likewise, a large ambient observer dimension does not by
+itself prove that all of its states are reachable from numerator one.
+\end{remark}
+

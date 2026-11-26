@@ -1,0 +1,11 @@
+# Full canonical-domain proposition
+
+Next prop:canonical-domain (source.tex463–503): every literal original T term, arbitrary finite internal/binder types and recursor instances, has an effectively constructed canonical vector at exactly its type level, actual selected-f AmbientGrade/bounded norm, and every binder body is actual HeadGrade for the delta call.
+
+Keep existing literal original typed syntax/assignment unchanged. Purely structural GeneratedOrdinalGrade and actual policy assignment code programs may be reused after exact correspondence: this grammar has no positive scalar promotion or Psi. It supplies only syntax. Fresh actual f-valued generated+Ambient→Head induction must pay real collapse guards; no old fixed-G semantic result transfers.
+
+Prerequisites: actual atomic vectors/recursor (N omega=2 matches scalar2), selected application box restriction preserving coordinate0, and full abstraction delta+retained closure with actual grade/boundedness. Inner delta boundedness alone is insufficient: prove retained closure bounded via genuine all-one admissible extension; coordinatewise natural addition handles overlap and actual absent-coordinate retention (no inserted Zero). Preserve exact arrow level max(sigma.level+1,tau.level).
+
+Full semantic proof structural on actual OriginalTerm, with generated grammar independently obtained for actual body via successful assignment uniqueness. Full source comparator should explicitly quantify all binder-body assignments, not only top-level result. Effectivity: require all-input Computable actual PolicyAssignment.assignmentCode for effective policies, literal/source-exact code calibration and genuine typed successful code equation together with actual selected grades/bounds. No implicit 'definition executable' claim and no normalization of source terms.
+
+Suggested exact full conjunction: generated ambient→head bridge, actual application/abstraction bounded results, arbitrary-term semantic successful assignment plus binder-body head property, and actual policy code computation/calibration. Support occurring-vector boundedness remains source exact. No reduction-history/decrease, generated-source arithmetic image or parked threshold credit.

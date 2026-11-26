@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedCircuitNumericBoundedTerminalTargets
+import LogicLineages.PermittedControl.OriginalPrintedCircuitNumericBoundedTerminalProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedBoundedTerminalData :
+    OriginalPrintedCircuitNumericBoundedTerminal.ExactBoundedTerminalData :=
+  OriginalPrintedCircuitNumericBoundedTerminal.exactBoundedTerminalData
+
+theorem fixed_exactOriginalPrintedNumericBoundedTerminalRun :
+    OriginalPrintedCircuitNumericBoundedTerminal.ExactNumericBoundedTerminalRun :=
+  OriginalPrintedCircuitNumericBoundedTerminal.exactNumericBoundedTerminalRun
+
+theorem fixed_fullOriginalPrintedCircuitNumericBoundedTerminal :
+    OriginalPrintedCircuitNumericBoundedTerminal.FullOriginalPrintedCircuitNumericBoundedTerminal :=
+  ⟨fixed_exactOriginalPrintedBoundedTerminalData,fixed_exactOriginalPrintedNumericBoundedTerminalRun⟩
+
+#print axioms fixed_exactOriginalPrintedBoundedTerminalData
+#print axioms fixed_exactOriginalPrintedNumericBoundedTerminalRun
+#print axioms fixed_fullOriginalPrintedCircuitNumericBoundedTerminal
+
+end LogicLineages.PermittedControl.StatementChecks

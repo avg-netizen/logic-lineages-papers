@@ -1,0 +1,45 @@
+You are "Fable-2", a proof lane in a local Lean 4 formalization round. Fresh session, one small
+self-contained task, minimal budget: read ONLY the files named below, write two new files, gate, stop.
+Working directory is the Lean package root (`formalization/`).
+
+Rules (complete):
+- Lean runs only through `bash verification/local-fable-pair-2026-11-23-round6/gate.sh mathlib MODULE…`;
+  pipe through `grep -v CACHE_HIT | tail -30`. One gate at a time; it waits if the compiler is busy.
+- Never edit an existing `.lean` file. Never delete. No git commands at all.
+- Targets module first (`module` header, `@[expose] public section`, `def … : Prop`), its sha256 into
+  the ledger before the proof; proof in a second module ending with `#print axioms`. No
+  sorry/axiom/native_decide. If a gate fails, copy the failed file to
+  `verification/local-fable-pair-2026-11-23-round6/drafts/fable2/` with a one-line note before fixing.
+- Ledger: `verification/local-fable-pair-2026-11-23-round6/fable2/LEDGER.md`, section "H02 — existence".
+  On a pass write `fable2/COLLAPSE-EXISTENCE-EVIDENCE.json` (modules, sha256 of the two new files,
+  receipt id, the `#print axioms` lines) and `fable2/COLLAPSE-EXISTENCE-SOURCE-MAP.md` (five lines).
+
+Read: `LogicLineages/PersistentMarking/ConditionalTowerCofinalityTargets.lean` (record #1463:
+`CollapseData I O` with fields `psi norm critical one endpoint a`, and `CharacterizationP D`: for every
+index ξ, `psi ξ` is critical, satisfies `∀ η < ξ, norm η < psi ξ → psi η < psi ξ`, and is ≤ every
+critical θ with `∀ η < ξ, norm η < θ → psi η < θ`) and
+`LogicLineages/PersistentMarking/ConditionalCollapseUniqueness{Targets,Proof}.lean` (record #1484: on
+a well-founded index order, (P) determines `psi` uniquely; note it uses
+`WellFoundedLT.induction (motive := …)`).
+
+Task: the matching EXISTENCE construction, abstractly. For `[LinearOrder I] [WellFoundedLT I]` and a
+value order `O` that is a well-order (`[LinearOrder O] [WellFoundedLT O]`, so every nonempty set has a
+least element — use `WellFounded.min` or `sInf` on a conditionally complete order, whichever is
+simplest in the pinned Mathlib), given `norm : I → O`, `critical : O → Prop` and the solvability
+hypothesis
+
+  `Solvable norm critical : Prop := ∀ (ξ : I) (prev : I → O), ∃ θ, critical θ ∧ ∀ η, η < ξ → norm η < θ → prev η < θ`
+
+prove there is a `psi : I → O` with `CharacterizationP ⟨psi, norm, critical, one, endpoint, a⟩` for any
+`one endpoint a` (they do not occur in (P)). Define `psi` by well-founded recursion on the index as the
+least critical θ satisfying the clause for the previously defined values (`WellFounded.fix` with its
+unfolding lemma `WellFounded.fix_eq`, or `WellFoundedLT.fix`), and prove the three parts of (P) from
+the least-element property. State it as
+`CharacterizationExists : Prop := ∀ I O [..] norm critical one endpoint a, Solvable norm critical → ∃ psi, CharacterizationP ⟨psi, norm, critical, one, endpoint, a⟩`
+(universe-polymorphic like the neighbours). If `prev` ranging over all functions makes `Solvable` too
+strong to be useful, also give the sharper version where `prev` is only required on `η < ξ` (a
+dependent function), but deliver the simple one first. Module names
+`LogicLineages/PersistentMarking/ConditionalCollapseExistence{Targets,Proof}.lean`.
+
+Final message, six lines: what passed (module, theorem, receipt), the recursion device used, and
+whether the sharper dependent version was needed or done.

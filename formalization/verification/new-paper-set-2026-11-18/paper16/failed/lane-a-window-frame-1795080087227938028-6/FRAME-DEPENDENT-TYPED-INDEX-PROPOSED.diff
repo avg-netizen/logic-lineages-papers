@@ -1,0 +1,37 @@
+--- LogicLineages/PersistentMarking/NumberedWindowClosingTypedProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowClosingTypedProof.lean
+@@ -26,10 +26,10 @@
+   cases q with
+   | free σ x =>
+     cases h with
+-    | free => exact freeCase σ x hc
++    | free => exact freeCase _ x hc
+   | bound σ i =>
+     cases h with
+-    | bound hi => exact .bound (hc.2 i σ hi)
++    | bound hi => exact .bound (hc.2 i _ hi)
+   | lam σ q =>
+     cases h with
+     | lam hq => exact .lam (term n (d+1) _ _ q _ hq (push hc σ))
+--- LogicLineages/PersistentMarking/NumberedWindowClosingScopeProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowClosingScopeProof.lean
+@@ -23,7 +23,7 @@
+   | free σ x => rfl
+   | bound σ i =>
+     cases h with
+-    | bound hi => simp only [shift,hc i σ hi,if_true]
++    | bound hi => simp only [shift,hc i _ hi,if_true]
+   | lam σ q =>
+     cases h with
+     | lam hq => simp only [shift,shiftTerm _ q _ amount (d+1) hq (belowPush hc σ)]
+--- LogicLineages/PersistentMarking/NumberedWindowClosingAbsProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowClosingAbsProof.lean
+@@ -38,7 +38,7 @@
+     simp only [substitute,closeAt,hf,if_false]
+   | bound σ i =>
+     cases ht with
+-    | bound hi => exact boundCase n C d i σ hi hs
++    | bound hi => exact boundCase n C d i _ hi hs
+   | lam σ q =>
+     cases ht with
+     | lam hq =>

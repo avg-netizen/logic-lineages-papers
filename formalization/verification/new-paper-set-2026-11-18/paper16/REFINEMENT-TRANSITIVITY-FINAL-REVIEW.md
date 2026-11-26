@@ -1,0 +1,9 @@
+# Independent refinement transitivity final
+
+Approved full frozen Transitive endpoint as supporting constituent of lem:sharp-syntax, not the complete lemma. Native 1794984118748455722-2; independent read-only receipt verification exactly equals author report: 41 modules, one standard-only exact alias, zero errors. Actual import traversal confirms complete 41-module local closure; all verifier-checked source freezes unchanged. No reviewer compiler invocation.
+
+Read complete support and central proof. The central induction is genuinely strong induction on actual right treeSize, universally covering all smaller right witnesses and arbitrary left witnesses. Lambda inversion proves annotation agreement, chooses one name fresh for all three bodies, synchronizes both actual opening trees and uses exact preserved right-child count to discharge strict decrease. No fixed recursor IH is misapplied to a newly renamed witness.
+
+Base-list helpers invoke this same bounded IH for every right component. Extra composition retains actual At occurrence selection; repeated extras/reuse are not replaced by sets. Left existing vs whole-owner alternatives are inverted and composed with the smaller right witness. Actual type equality adjusts the owner annotation, and right whole-owner composition retypes the full left marked tree using unchanged premises. All tree/base/extra/list strict bounds are derived from positive explicit constructor counts. Auxiliary pickExtra/list traversals use structural list size only; they do not replace the central all-subtree count or assume composition. Nonempty witness elimination remains within Prop goals.
+
+The sole repaired auxiliary recursion selector and original failed draft are preserved; central measure/proposition unchanged. No two-environment substitution, full application, full refinement syntax, auxiliary cut or main comparison acceptance. No numbered promotion/full-root/CI claim.

@@ -1,0 +1,7 @@
+# Independent original fresh emitter open review
+
+Read exact2 original open targets and all four authored leaves. Literal seven sparse cons graphs at actual open projections build the exact emitted arithmetic term. Functionality and output transport give both directions. Actual guard graph zero/successor cases exclude zero when output is successor; original PA injectivity removes that successor. Real composition eigenvariables yield the three actual coordinate graphs and original finite block introduction, context/domain/name in that order, with the same q/u and capture-avoiding renaming. No numeral evaluation is used as an internal proof.
+
+Two ordinary module visibility failures are archived with all prior sources/manifests and full actual evidence. Direct existing public eqn syntax imports and one direct unary syntax import changed no body, target or cap; full byte inverses and54 source pins verified. Native gate1795169010924109111-6 passes original2048heap/1536RSS/free2048MiB,90CPU/180wall/one thread. Independent replay1365 current source/input/compiler/dependency/object/receipt/log modules and two standard-only exact aliases passed; complete native closure archived.
+
+This proves actual output shape only for chosen conditional a. Internal equality of selected fields to q lexical context/declared arrow domain, variable typing/neutral computability, allterms/BH and numbered promotion remain separate. No full-root or CI claim.

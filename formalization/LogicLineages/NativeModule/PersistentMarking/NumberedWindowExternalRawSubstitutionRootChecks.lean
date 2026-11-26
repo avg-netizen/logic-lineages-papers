@@ -1,0 +1,28 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowExternalRawSubstitutionMarkedProof
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowExternalRawSubstitutionSelectProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowExternalRawSubstitutionRootChecks
+open NumberedWindowExternalRawSubstitutionTargets
+
+theorem exact_SubstitutionPreservesMarkDecrease : SubstitutionPreservesMarkDecrease :=
+  NumberedWindowExternalRawSubstitutionMarkedProof.mark
+
+theorem exact_SubstitutionPreservesPrimitiveReplacement : SubstitutionPreservesPrimitiveReplacement :=
+  NumberedWindowExternalRawSubstitutionMarkedProof.replacement
+
+theorem exact_TypedSubstitutionApplications : TypedSubstitutionApplications :=
+  NumberedWindowExternalRawSubstitutionSelectProof.applicationsCommute
+
+theorem exact_TypedSubstitutionSelect : TypedSubstitutionSelect :=
+  NumberedWindowExternalRawSubstitutionSelectProof.select
+
+#print axioms exact_SubstitutionPreservesMarkDecrease
+#print axioms exact_SubstitutionPreservesPrimitiveReplacement
+#print axioms exact_TypedSubstitutionApplications
+#print axioms exact_TypedSubstitutionSelect
+
+end LogicLineages.PersistentMarking.NumberedWindowExternalRawSubstitutionRootChecks

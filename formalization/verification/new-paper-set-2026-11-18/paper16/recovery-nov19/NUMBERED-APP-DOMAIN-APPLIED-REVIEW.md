@@ -1,0 +1,1 @@
+Coordinator read exact structural recursion/support-folding proof-only diff and independently verified applied NumberedDomain SHA2563911acb632a677070b750239ef04859f2f8f0eec10672c084e2447a4a8f75b56. Frozen comparators and source semantics unchanged. Failure retained; pending fresh gate.

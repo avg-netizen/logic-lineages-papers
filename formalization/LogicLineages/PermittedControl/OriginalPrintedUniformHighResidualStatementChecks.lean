@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedUniformHighResidualTargets
+import LogicLineages.PermittedControl.OriginalPrintedUniformHighResidualTransportProof
+import LogicLineages.PermittedControl.OriginalPrintedUniformHighResidualProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedUniformHighResidual
+
+theorem fixed_exactUniformHighProjectionTransport : ExactUniformHighProjectionTransport :=
+  exactUniformHighProjectionTransport
+theorem fixed_exactOriginalPrintedUniformHighResidual : ExactOriginalPrintedUniformHighResidual :=
+  exactOriginalPrintedUniformHighResidual
+theorem fixed_fullOriginalPrintedUniformHighResidual : FullOriginalPrintedUniformHighResidual :=
+  ⟨fixed_exactUniformHighProjectionTransport,fixed_exactOriginalPrintedUniformHighResidual⟩
+
+#print axioms fixed_exactUniformHighProjectionTransport
+#print axioms fixed_exactOriginalPrintedUniformHighResidual
+#print axioms fixed_fullOriginalPrintedUniformHighResidual
+
+end LogicLineages.PermittedControl.StatementChecks

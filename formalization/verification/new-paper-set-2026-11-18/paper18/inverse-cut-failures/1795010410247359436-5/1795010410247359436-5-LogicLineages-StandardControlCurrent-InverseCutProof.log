@@ -1,0 +1,11 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutProof.lean:37:49: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  a % m + (r + m - a % m)
+in the target expression
+  (a + (r + m - a % m)) % m = r
+
+a m r : ℕ
+hm : 0 < m
+hr : r < m
+ha : a % m < m
+hsum : a % m + (r + m - a % m) = r + m
+⊢ (a + (r + m - a % m)) % m = r

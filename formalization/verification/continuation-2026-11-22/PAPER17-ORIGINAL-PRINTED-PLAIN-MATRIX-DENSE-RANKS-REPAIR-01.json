@@ -1,0 +1,57 @@
+{
+  "status": "exact source-only narrow proof repair; native not invoked by author",
+  "failed_source_remote_commit": "0fd708c7ad7a2043ed526fc13c52dd3c79f2b999",
+  "failed_source_local_commit": "d43eb9e9c",
+  "failed_exact_gate_receipt": "1795357136456318448-98",
+  "failed_exact_gate": "LogicLineages.PermittedControl.OriginalPrintedPlainMatrixDenseRanksStatementChecks",
+  "failed_receipt_sha256": "3cfc62fd5985fcc51f64ffff9c1c87e393b7fa33adbd1a22c85c849a9f7451f5",
+  "failed_exact_module_log_sha256": "92f213302880d18e9e8d6df86eea1cce9209e072f0df2cecb1afcf13167f89c9",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixDenseRanksProof.lean:32:16: error: omega could not prove the goal:\na possible counterexample may satisfy the constraints\n  d \u2265 1\n  c \u2265 0\n  c - d \u2265 0\n  b \u2265 0\n  b - c \u2265 1\n  a \u2265 0\nwhere\n a := \u2191(List.length (passingList \u03b8 gs))\n b := \u2191(ActualCoordinateRankChart.size \u03b8 (support original))\n c := \u2191t.2.rank\n d := \u2191(ActualCoordinateRankChart.size \u03b8 (support (matrix known gates p)))",
+  "failed_original_native_log_sha256": "34a673b67a8f9e85031244504360e629185fd86f54425d8590a9a56a2d4146be",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixDenseRanksProof.lean",
+  "failed_proof_sha256": "29ddfafb65ac6ac4275786097e777b8a0640509d91abb8ef5c8100e587424cce",
+  "repaired_proof_sha256": "29670ffa214edf1ae6f2bd5b476da9be77e01706879615c4fc3e8290a89923fb",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-DENSE-RANKS-REPAIR-01.patch",
+  "patch_sha256": "f0ec80ba21db6a68f569b0552b7f747713591713c15fd2812bdb95196060eb0d",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-DENSE-RANKS-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "b19e284adb858cc11a22399aeb84ffd9ba0184feeb0652b9378b5d6bcb058302",
+  "prior_general_accepted_receipt": "1795357133583675527-85",
+  "prior_general_repair_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-MATRIX-DENSE-RANKS-REPAIR-01.json",
+  "prior_general_repair_manifest_sha256": "24fa709cfbfed421d83840aeaf7a0d0fe7ae00f98ca45f2e9f187ffd88868bc4",
+  "immediate_actual_inherited_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualCoordinateRankChartProof.lean": "97b947d27005b98add61458d7a92ead5b34e722c3a8b8f0ddfe69de031b2300b",
+    "formalization/LogicLineages/PermittedControl/AffineCollapsePairListLowPrefixProof.lean": "e5efff91712717a0cc4c9b61823453e6620d14f7531b1b7eded56887fe08e483",
+    "formalization/LogicLineages/PermittedControl/OriginalMatrixDenseRanksProof.lean": "7cad7061de70b409e9d4f4bc8646ad383fb6091c14bb4e2a35deec7b24b2cb18",
+    "formalization/LogicLineages/PermittedControl/OriginalMatrixDenseRanksTargets.lean": "7e30197ae05bc02302048c0cce0d8d149829e594ee3f6487ce25ed6d7bf99fb6",
+    "formalization/LogicLineages/PermittedControl/OriginalNormalizedCircuitMatrixProof.lean": "2640f1f0bce2ee01ef5a1a24a0700875762d0112ceb1148b65461ffd03992aea",
+    "formalization/LogicLineages/PermittedControl/OriginalPlainTerminalMatrixProof.lean": "b8771c2e30ebf5a279b4c4146b0855f63b03256abe7ccd8ebe05638f09472c31",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixInfiniteLowTargets.lean": "2f6d16b7fc786329bca0962b6dc1d4943f95ef85c3d7034e8848928c6df55af0"
+  },
+  "unchanged_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixDenseRanksTargets.lean": "8485ae31b0a302ae0fef0fb13b17f81939d9cf78b1b5841d0520089b6aab1e00",
+    "formalization/LogicLineages/PermittedControl/OriginalPrintedPlainMatrixDenseRanksStatementChecks.lean": "a2e354d0bbe703da8d7be2924c43c3a36b034452c752ddb39fa6d995d26fc820",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ORIGINAL-PRINTED-PLAIN-MATRIX-DENSE-RANKS-SOURCE-MAP.md": "692fcb09484e746d2f30284459329e1bb9df4ad1a890ec66defcfe2eb2c6151b"
+  },
+  "static_closure_unchanged": {
+    "Targets": {
+      "local": 239,
+      "external": 35,
+      "contains_totient": false,
+      "has_finset_sort": true
+    },
+    "Proof": {
+      "local": 396,
+      "external": 42,
+      "contains_totient": false,
+      "has_finset_sort": true
+    },
+    "StatementChecks": {
+      "local": 397,
+      "external": 42,
+      "contains_totient": false,
+      "has_finset_sort": true
+    }
+  },
+  "scope": "Make the already definitionally identical source matrix size explicit on both sides before the natural predecessor arithmetic. No change to original finite rank bound, targets, imports or actual emitted matrix."
+}

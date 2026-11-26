@@ -1,0 +1,90 @@
+module
+import LogicLineages.PersistentMarking.NumberedWindowRawExchangeSymmetryChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseSymmetricExchangeChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseAdjacentMinimumChecks
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalAcceptanceCalibrationProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalEqualityTestEvaluationProof
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparseCoveredInstallationTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseCoveredInstallationEdgeProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseCoveredWindowChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseTypedRawChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseTypedRawInstallationChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseSymmetricInstallationChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseCoverInstallationEdgeProof
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseDirectedInstallationChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseRetainedScanChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseInstalledOccurrenceChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseCoverGuardedExchangeChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseLeastInstallationChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePackedLeastNumericChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseApplicationReinstallChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparseMinimumEdgeChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePositiveWindowChecks
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalSparseCoveredInstallationChecks
+open NumberedWindowInternalSparseCoverInstallationTargets
+open NumberedWindowInternalSparseCoverGuardedExchangeTargets (guardedExchange)
+open NumberedWindowInternalSparseCoverGuardedExchangeChecks (exact_GuardedExchangeCalibration)
+open NumberedWindowInternalSparseDirectedInstallationChecks (exact_DirectedInstallation)
+open NumberedWindowInternalSparseRetainedScanChecks (exact_RetainedPredecessor)
+open NumberedWindowInternalSparseInstalledOccurrenceChecks (exact_UnconditionalCoverOccurrence)
+open NumberedWindowInternalSparseLeastInstallationChecks (exact_ReinstallCalibratedLeast)
+open NumberedWindowInternalSparseApplicationReinstallChecks (exact_ReinstallGuardedApplicationTuple)
+open NumberedWindowInternalSparsePackedLeastNumericChecks (exact_PackedLeastComposition)
+open NumberedWindowInternalSparseMinimumEdgeChecks (exact_MinimumEdgeBound)
+open NumberedWindowInternalSparsePositiveWindowChecks (exact_PhysicalPositiveWindowsFromRetained)
+open NumberedWindowInternalSparseTypedRaw (typedRaw5)
+open NumberedWindowInternalSparsePackedLeast (packedLeastProgram)
+
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open ID1Completion.InternalAcceptanceCalibrationProof (actualConjunctionEvaluation)
+open ID1Completion.InternalEqualityTestEvaluationProof (vectorTwo)
+open NumberedWindowInternalSparseSymmetricExchangeTargets (swapExchange pairedExchange)
+open NumberedWindowInternalSparseSymmetricInstallationTargets
+open NumberedWindowInternalSparseScalarEdge (exchangeTape)
+open NumberedWindowExchangeAlgorithm (bits)
+
+open NumberedWindowInternalSparseCoveredInstallationTargets
+open NumberedWindowInternalSparseCoveredWindowTargets (coveredWindow)
+open NumberedWindowInternalSparseSymmetricInstallationChecks (exact_PairedCalibration)
+
+theorem exact_CoveredEdgeValues : ExactCoveredEdgeValues :=
+  NumberedWindowInternalSparseCoveredInstallationEdgeProof.edgeValues
+
+theorem exact_CoveredInstallation : ExactCoveredInstallation := by
+  obtain ⟨C,cover,tuples⟩ := exact_DirectedInstallation
+  refine ⟨C,cover,?_⟩
+  intro entries s W valid symmetric covered
+  obtain ⟨i,j,cv,tv,syntaxProg,baseX,d,oldCore,oldLeast,root,other,baseW,v,hRoot,hOther,
+    hSyntax,hBaseW,hBase,_,typedTuple,_⟩ := tuples entries s W valid
+  let paired := pairedExchange baseX
+  let X := guardedExchange C s paired
+  let windowProg := coveredWindow C s baseW
+  have hWindow := NumberedWindowInternalSparseCoveredWindowChecks.exact_CoveredWindowCalibration C s baseW cover covered hBaseW
+  let raw := typedRaw5 root other windowProg syntaxProg
+  let least := packedLeastProgram C X windowProg s
+  have hPaired := exact_PairedCalibration s baseX symmetric hBase
+  have exchange := exact_GuardedExchangeCalibration C s paired cover hPaired
+  have cal := exact_PackedLeastComposition s C X windowProg cover exchange hWindow
+  have rc := NumberedWindowInternalSparseTypedRawChecks.exact_TypedRaw5Calibration entries s root other windowProg syntaxProg hRoot hOther hSyntax hWindow
+  have newRawTuple := NumberedWindowInternalSparseTypedRawInstallationChecks.exact_ReinstallCalibratedRawTuple entries s W valid
+    i j cv tv d oldCore (typedRaw5 root other baseW syntaxProg) raw oldLeast v typedTuple rc
+  have precise := exact_ReinstallCalibratedLeast entries s W valid i j cv tv d oldCore
+    raw oldLeast least v newRawTuple cal
+  obtain ⟨chosen,updated⟩ := exact_ReinstallGuardedApplicationTuple entries s W valid i j cv tv d oldCore raw least v precise
+  exact ⟨i,j,cv,tv,syntaxProg,baseX,d,oldCore,oldLeast,root,other,baseW,v,hRoot,hOther,
+    hSyntax,hBaseW,hWindow,hBase,exchange,cal,newRawTuple,precise,chosen,updated,
+    exact_UnconditionalCoverOccurrence C X windowProg s,
+    exact_MinimumEdgeBound exact_RetainedPredecessor C X windowProg s,
+    exact_PhysicalPositiveWindowsFromRetained exact_RetainedPredecessor C X windowProg root other syntaxProg s,
+    NumberedWindowInternalSparseCoverInstallationEdgeProof.edgeCover C s paired windowProg,
+    NumberedWindowInternalSparseAdjacentMinimumChecks.exact_EdgeMinimumOrder C s paired windowProg,
+    NumberedWindowInternalSparseAdjacentMinimumChecks.exact_MutualEdgeMinimumEquality C s paired windowProg,
+    NumberedWindowInternalSparseSymmetricExchangeChecks.exact_PairedEdgeMinimumEquality C s baseX windowProg,
+    exact_CoveredEdgeValues C s baseX baseW⟩
+
+#print axioms exact_CoveredEdgeValues
+#print axioms exact_CoveredInstallation
+end LogicLineages.PersistentMarking.NumberedWindowInternalSparseCoveredInstallationChecks

@@ -1,0 +1,68 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphOmegaProof.lean:65:12: error: Tactic `rfl` failed: The left-hand side
+  rawNaturalSum (e.oadd c ONote.zero) ONote.zero
+is not definitionally equal to the right-hand side
+  e.oadd c ONote.zero
+
+case zero
+e : ONote
+c : ℕ+
+he : e.NF
+ht : ONote.zero.NFBelow e.repr
+⊢ rawNaturalSum (e.oadd c ONote.zero) ONote.zero = e.oadd c ONote.zero
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphOmegaProof.lean:96:9: error: unsolved goals
+case zero
+m : ℕ+
+ha : ONote.zero.NF
+⊢ (shiftNote (rawNaturalSum 0 (ONote.oadd 0 m 0))).repr = Ordinal.omega0 * ↑↑m
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphOmegaProof.lean:102:27: error: Function expected at
+  zero_le
+but this term has type
+  0 ≤ ?m.78
+
+Note: Expected a function because this term is being applied to the argument
+  _
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphOmegaProof.lean:103:9: error: unsolved goals
+case oadd.eq
+m c : ℕ+
+ihe :
+  ONote.zero.NF →
+    (shiftNote (rawNaturalSum ONote.zero (ONote.zero.oadd m ONote.zero))).repr =
+      (shiftNote ONote.zero).repr + Ordinal.omega0 * ↑↑m
+hc : (ONote.zero.cmp ONote.zero).Compares ONote.zero ONote.zero
+h : ONote.zero.cmp ONote.zero = Ordering.eq
+iht :
+  ONote.zero.NF →
+    (shiftNote (rawNaturalSum ONote.zero (ONote.zero.oadd m ONote.zero))).repr =
+      (shiftNote ONote.zero).repr + Ordinal.omega0 * ↑↑m
+ha : (ONote.zero.oadd c ONote.zero).NF
+⊢ Ordinal.omega0 ^ (Ordinal.omega0 ^ 0 * ↑↑1) * ↑↑c + Ordinal.omega0 ^ (Ordinal.omega0 ^ 0 * ↑↑1) * ↑↑m =
+    Ordinal.omega0 ^ (Ordinal.omega0 ^ 0 * ↑↑1) * ↑↑c + Ordinal.omega0 * ↑↑m
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphOmegaProof.lean:96:18: warning: This simp argument is unused:
+  rawNaturalSum
+
+Hint: Omit it from the simp argument list.
+  simp [̵r̵a̵w̵N̵a̵t̵u̵r̵a̵l̵S̵u̵m̵,̵s̵h̵i̵f̵t̵N̵o̵t̵e̵,̵O̵N̵o̵t̵e̵.̵r̵e̵p̵r̵]̵[̲s̲h̲i̲f̲t̲N̲o̲t̲e̲,̲ ̲O̲N̲o̲t̲e̲.̲r̲e̲p̲r̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphOmegaProof.lean:96:42: warning: This simp argument is unused:
+  ONote.repr
+
+Hint: Omit it from the simp argument list.
+  simp [̵r̵a̵w̵N̵a̵t̵u̵r̵a̵l̵S̵u̵m̵,̵s̵h̵i̵f̵t̵N̵o̵t̵e̵,̵O̵N̵o̵t̵e̵.̵r̵e̵p̵r̵]̵[̲r̲a̲w̲N̲a̲t̲u̲r̲a̲l̲S̲u̲m̲,̲ ̲s̲h̲i̲f̲t̲N̲o̲t̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphOmegaProof.lean:109:8: warning: This simp argument is unused:
+  Ordinal.opow_one
+
+Hint: Omit it from the simp argument list.
+  simp only [̵r̵a̵w̵N̵a̵t̵u̵r̵a̵l̵S̵u̵m̵,̵h̵,̵s̵h̵i̵f̵t̵N̵o̵t̵e̵,̵O̵N̵o̵t̵e̵.̵r̵e̵p̵r̵,̵P̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵e̵,̵N̵a̵t̵.̵c̵a̵s̵t̵_̵a̵d̵d̵,̵
+  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵O̵r̵d̵i̵n̵a̵l̵.̵o̵p̵o̵w̵_̵o̵n̵e̵,̵a̵d̵d̵_̵z̵e̵r̵o̵,̵m̵u̵l̵_̵a̵d̵d̵]̵[̲r̲a̲w̲N̲a̲t̲u̲r̲a̲l̲S̲u̲m̲,̲ ̲h̲,̲ ̲s̲h̲i̲f̲t̲N̲o̲t̲e̲,̲ ̲O̲N̲o̲t̲e̲.̲r̲e̲p̲r̲,̲ ̲P̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲e̲,̲ ̲N̲a̲t̲.̲c̲a̲s̲t̲_̲a̲d̲d̲,̲ ̲a̲d̲d̲_̲z̲e̲r̲o̲,̲
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲m̲u̲l̲_̲a̲d̲d̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphOmegaProof.lean:130:54: error: Type mismatch
+  ONote.repr_ofNat ?m.100
+has type
+  (↑?m.100).repr = ↑?m.100
+but is expected to have type
+  (↑x).repr = ↑(d + 1)

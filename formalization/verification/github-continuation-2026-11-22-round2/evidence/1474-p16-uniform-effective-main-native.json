@@ -1,0 +1,46 @@
+{
+  "status": "checked",
+  "base_commit": "b28541e6f1682fc41c47a385729df36e9db87b0d",
+  "base_note": "New continuation files; pre-existing Lean source, manuscript and numbered register unchanged.",
+  "native_receipt": "1795406363595178414-12",
+  "native_receipt_sha256": "e066c1de0de814f845842aa87351442e090b975c720003fde1b6e06de5de47ad",
+  "completion_gate_receipts": [
+    {
+      "id": "1795406363595178414-12",
+      "sha256": "e066c1de0de814f845842aa87351442e090b975c720003fde1b6e06de5de47ad"
+    },
+    {
+      "id": "1795407211156632997-11",
+      "sha256": "9cc1a8062f424bb4e33e895eaceb136ee9f2d64cdc2f38aa9c3a61efaebe533e"
+    }
+  ],
+  "exact_gate": "LogicLineages.NativeModule.PersistentMarking.ConditionalMain16UniformEffectiveProof",
+  "gate_seconds": 1.172,
+  "gate_cpu_seconds": 1.11,
+  "peak_process_tree_rss_kib": 1195804,
+  "named_axiom_output": {
+    "LogicLineages.PersistentMarking.ConditionalMain16UniformEffectiveProof.exact_ConditionalMain16UniformEffective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "profile": {
+    "core_only_profile": false,
+    "cpu_seconds": 90,
+    "heap_cap_mib": 2048,
+    "minimum_free_mib": 2048,
+    "rss_cap_mib": 1536,
+    "single_thread": true,
+    "threads": 1,
+    "upstream_cache_only": true,
+    "wall_seconds": 180
+  },
+  "source_pins": {
+    "formalization/LogicLineages/NativeModule/PersistentMarking/ConditionalMain16UniformEffectiveTargets.lean": "c6f17b5143ac67d36ef113ef46aa5e5080fe83ae033219940745c567117562bf",
+    "formalization/LogicLineages/NativeModule/PersistentMarking/ConditionalMain16UniformEffectiveProof.lean": "89ada988d3875699c2ae48654500bb81777a3702f580bbb94b155a1dd47a908f",
+    "formalization/verification/github-continuation-2026-11-22-round2/norm-interface/SOURCE-MAP.md": "379f37f4f3f0561157f1ce56382c37d084fdd13629fe79817d087fa7b0626bcc"
+  },
+  "verification": "Focused source/statement scope check and one serialized exact native/standard-axiom gate, with necessary diagnostic repairs. No duplicate full artifact replay or manual proof-validity acceptance claim.",
+  "portable_evidence": "../root/portable-native-evidence.zip"
+}

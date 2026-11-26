@@ -1,0 +1,9 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRawRunTerminalInductionProof.lean:58:4: error: Type mismatch: After simplification, term
+  atNext
+ has type
+  @Derivation body (α ⊕ Fin 1) [loopGraph p other (Term.relabel Sum.inl st) (var (Sum.inr 0))]
+    (loopGraph p other (Term.relabel Sum.inl st)
+      (NumberedWindowInternalSparsePathEnvelopeTargets.suc (var (Sum.inr 0))))
+but is expected to have type
+  @Derivation body (α ⊕ Fin 1) (loopGraph p other (Term.relabel Sum.inl st) (var (Sum.inr 0)) :: List.map weaken [])
+    (loopGraph p other (Term.relabel Sum.inl st) (ID1Completion.InternalTagArithmeticSyntaxProof.suc (var (Sum.inr 0))))

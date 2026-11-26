@@ -1,0 +1,5 @@
+# Independent ordinary composition final review
+
+Approved complete current thm:composition, all four original ordinary-endpoint relations. Independent read-only verifier exactly reproduces181-module recursive evidence, zero errors, standard-only full conjunction alias; actual import traversal equals evidence closure. Five frozen pins and inherited freezes match. First-pass native1794994168640931182-5.
+
+Read actual proof against approved source scope. Weak-weak embeds both original derivations and applies complete ordinary-final cut. Strict-weak retains actual successful source mark and cuts its original Weak witness, deriving final typing. Weak-strict derives actual source markability across first comparison, transports both real successful marks with checked forward marking, then cuts and reconstructs Strict. Strict-strict uses original strict inclusion plus weak-strict. No Below/LeftBelow or supplied composition oracle remains. Original Ordinary s/t/u hypotheses are explicit; no arbitrary marked-final transitivity is asserted. Structural-context stability/confinement, well-foundedness and decision are separate. No compiler invoked by reviewer.

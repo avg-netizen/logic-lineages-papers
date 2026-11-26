@@ -1,0 +1,11 @@
+--- BINDING01/InductionSyntaxProof.lean
++++ BINDING02/InductionSyntaxProof.lean
+@@ -57,7 +57,7 @@
+ 
+ theorem rawPredicateInstantiate {alpha : Type}  (raw : OTerm alpha) :
+     instantiate (rawPredicate H) (emb raw) = AtRaw H raw := by
+-  rw [rawPredicate H,instantiate,bindEmbedding,atRawSubst H]
++  rw [rawPredicate,instantiate,bindEmbedding,atRawSubst H]
+   simp only [varBind]
+ 
+ @[simp] theorem belowRawRename {alpha beta : Type} 

@@ -1,0 +1,7 @@
+--- a/formalization/LogicLineages/PermittedControl/AffineCollapseGuardRowsProof.lean
++++ b/formalization/LogicLineages/PermittedControl/AffineCollapseGuardRowsProof.lean
+@@ -21 +21,3 @@
+-  omega
++  let s : Int := (e.2.map (fun t => t.1 * (θ t.2 : Int))).sum
++  change e.1 + (-(θ input : Int) + s) = a ↔ (e.1 + s) - (θ input : Int) = a
++  rw [sub_eq_add_neg, add_assoc, add_comm s (-(θ input : Int))]

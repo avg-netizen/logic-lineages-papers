@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.SensitiveHigherProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_sensitiveUnitFoundation : Targets.SensitiveUnitFoundation := sensitiveUnitFoundation
+#print axioms fixed_sensitiveUnitFoundation
+end LogicLineages.PermittedControl.StatementChecks

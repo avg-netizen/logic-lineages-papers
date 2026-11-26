@@ -1,0 +1,30 @@
+{
+  "status": "Step SUPPORT03R1 combined five sources includes approved vector annotations; unchecked",
+  "sources": {
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepSuccessTargets.lean": "a1ff2a045571471bddf38060ab220877d7eb93bacadcc52fdd3d5fe7a8daf0bd",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepInstallationProof.lean": "e2d0d7fb73be38bcd1d1225bbeca9b92c88939c33a26631111ce812402d06d41",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepRejectionProof.lean": "9f2672f7a0c22ea8a1c9831d532ed577614c19addc4a235d48ec0ad45c1c5199",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepWitnessProof.lean": "ad4cc3eae6639332d89588b99f4e1d0567aa444f62cb8116c2f00cc2811476d0",
+    "LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/RelationalSyntaxDepthTransport/StepConsSuccessProof.lean": "4d34cc0cd98101f1701287d52e5ec1a23412691a059c973b73dc8f81e6bd3d6a"
+  },
+  "correspondence": "Original LiteralSyntaxStep.stepCode chooses none0, empty stack0, expansion0, or succ(append(pred expansion,restTasks)). State input is original SOME tasks=succ tasks. Same-p difference structurally resides in expandCode kind2 indexBranch.",
+  "proof_plan": [
+    "Extract original difference membership through nested whenEqual/choose argument children to indexBranch difference, at same p.",
+    "Reject raw tasks=0 using original internalEmpty and successorNotZero.",
+    "For positive tasks, internally recover pair witnesses for its predecessor, prove tasks=original cons(head,tail); no native list decoding.",
+    "For explicit cons state, split actual expansion call by internal zeroOrSuccessor. Zero branch derives actual step0 via original defining equations and contradicts observed success.",
+    "Positive branch uses original internalPrepend; successor injectivity derives result=append(added,tail).",
+    "Introduce three genuine internal witnesses and eliminate stack/expansion decomposition witnesses with exact binder lifting."
+  ],
+  "binder_conventions": "witnesses = exists head exists tail exists added; body indices2/1/0, external tasks/token/result lifted3.",
+  "remaining": [
+    "Relate arbitrary successful old step to new successor step using expansion classification",
+    "Original tick/iteration/scan simulation and main full-formula validity",
+    "Source rule4/node-axiom supplier/HB3"
+  ],
+  "main_relational_target_unchanged": true,
+  "modules": [
+    "LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.Continuation20261115.RelationalSyntaxDepthTransport.StepConsSuccessProof"
+  ],
+  "proof_scope": "Internal empty-state contradiction; actual expansion zero/positive split on genuine cons state; original internalPrepend and successor injectivity derive exact three witnesses. Arbitrary raw-stack existence still pending."
+}

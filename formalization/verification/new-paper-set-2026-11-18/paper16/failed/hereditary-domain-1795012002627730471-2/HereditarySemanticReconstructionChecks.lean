@@ -1,0 +1,8 @@
+import LogicLineages.PersistentMarking.HereditaryEncodingTargets
+import LogicLineages.PersistentMarking.HereditarySemanticReconstructionProof
+namespace LogicLineages.PersistentMarking.HereditarySemanticReconstructionChecks
+
+theorem exact_SemanticRoundtrip : HereditaryEncodingTargets.SemanticRoundtrip :=
+  HereditarySemanticReconstructionProof.reconstruct
+#print axioms exact_SemanticRoundtrip
+end LogicLineages.PersistentMarking.HereditarySemanticReconstructionChecks

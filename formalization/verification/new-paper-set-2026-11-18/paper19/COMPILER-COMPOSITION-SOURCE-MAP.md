@@ -1,0 +1,9 @@
+# CompilerComposition supporting scope
+
+Current19 compiler.tex127ff: computable constructed comparisons, retained shared valuations, ground free names, polynomial actual added source DAG size. This packet pays composition/correctness/actual table bounds only. Joint raw typed/DAG code reconstruction and computability remain separately required for numbered thm:compiler.
+
+ASTCorrect composes the actual complete explicit existential-prefix/QF AST compiler with actual generic Program comparisons. SharedCorrect instead normalizes the actual interleaved DAG directly with explicit previous Boolean and natural references; no expansion through AST and no disjunctive-normal-form conversion. All same-policy/SourceGrowth parameters retained. Retention pays every original ground name at each actual forest valuation, plus all-ground context. OutputBudgets bounds EACH full literal strict/weak output source table, distinguishes AST occurrence cost from shared DAG cost and includes supplied sourceMax multiplicatively; no bit-runtime theorem is asserted or required.
+
+The actual weak construction includes extra magnification. It is a legitimate alternate constructed comparison, not literally printed KR/IL. Existing source graph/table sharing is retained internally; repeated supplied table occurrences are conservatively paid by the polynomial. Values are natural/raw-plus-one consistently through all interfaces. Formula AST contains no nested quantifiers under negation; the explicit existential prefix is exactly declared ground variables.
+
+Fresh composition proof must use actual normalization/prefix, real forest embedding, generic comparisons and source-table count suppliers. No semantics-only effectivity credit; no legacy unsupported-sort/tag5 or unfolded-term-code shortcut. Full raw all-gate algorithm/reconstruction and final numbered assembly remain unpaid.

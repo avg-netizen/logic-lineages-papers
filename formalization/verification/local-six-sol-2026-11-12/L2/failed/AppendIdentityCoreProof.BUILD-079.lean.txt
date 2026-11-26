@@ -1,0 +1,87 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AppendIdentitySyntaxProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalAllPositionContextDeleteDropProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AppendIdentityCoreProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSyntaxProof
+open InternalControlGraphSupportProof InternalAcceptanceSupportProof
+open InternalGraphCompositionFunctionalityProof InternalRecursionGraphStepSyntaxProof
+open InternalTagArithmeticSyntaxProof (z eqn eqnRelabel)
+open InternalTagArithmeticSupportProof
+open InternalApplicationStepPeelSupportProof (andLeft andRight andIntro)
+open InternalListCodecSupportProof (consGraph consGraphRename consDestruction)
+open OriginalLambdaConstructorGraphSyntaxProof (queryCases)
+open AppendIdentitySyntaxProof
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph InternalApplicationValidityStackAppend.append
+  InternalListCodec.consCode InternalListCodec.tailCode
+
+theorem zeroCancel (left right joined : OTerm alpha)
+    (hf : Nonempty (Derivation body Delta (fields z left right joined))) :
+    Nonempty (Derivation body Delta (eqn left right)) := by
+  obtain ⟨hl⟩ := InternalApplicationValidityStackAppendListProof.appendZeroRecover joined left (andLeft hf)
+  obtain ⟨hr⟩ := InternalApplicationValidityStackAppendListProof.appendZeroRecover joined right (andRight hf)
+  exact ⟨trans (symm hl) hr⟩
+
+theorem atCons (front head tail left right joined leftTail rightTail : OTerm alpha)
+    (hc : Nonempty (Derivation body Delta (consGraph front head tail)))
+    (hi : Nonempty (Derivation body Delta (cancels tail)))
+    (hf : Nonempty (Derivation body Delta (fields front left right joined)))
+    (hl : Nonempty (Derivation body Delta
+      (graph2 InternalApplicationValidityStackAppend.append leftTail tail left)))
+    (hr : Nonempty (Derivation body Delta
+      (graph2 InternalApplicationValidityStackAppend.append rightTail tail right))) :
+    Nonempty (Derivation body Delta (eqn left right)) := by
+  have cl := InternalApplicationValidityStackAppendListProof.consForward
+    front head tail left leftTail joined hc hl (andLeft hf)
+  have cr := InternalApplicationValidityStackAppendListProof.consForward
+    front head tail right rightTail joined hc hr (andRight hf)
+  have tl := andLeft (andRight (consDestruction joined head leftTail cl))
+  have tr := andLeft (andRight (consDestruction joined head rightTail cr))
+  obtain ⟨he⟩ := valueUnique InternalListCodec.tailCode leftTail rightTail
+    (Fin.cons joined Fin.elim0) tl tr
+  have hr' := outputTransport InternalApplicationValidityStackAppend.append rightTail leftTail
+    (Fin.cons tail (Fin.cons right Fin.elim0)) ⟨symm he⟩ hr
+  exact cancelApply tail left right leftTail hi (andIntro hl hr')
+
+theorem consCancel (front head tail left right joined : OTerm alpha)
+    (hc : Nonempty (Derivation body Delta (consGraph front head tail)))
+    (hi : Nonempty (Derivation body Delta (cancels tail)))
+    (hf : Nonempty (Derivation body Delta (fields front left right joined))) :
+    Nonempty (Derivation body Delta (eqn left right)) := by
+  let p : Program 3 := .composition InternalApplicationValidityStackAppend.append ![.projection 0,.projection 1]
+  let q : Program 3 := .composition InternalApplicationValidityStackAppend.append ![.projection 0,.projection 2]
+  let qs : Fin 2 → Program 3 := ![p,q]
+  let xs : Fin 3 → OTerm alpha := ![tail,left,right]
+  apply queryCases qs xs _
+  intro beta j ys Theta hj hq
+  simp only [eqnRelabel]
+  let xx : Fin 3 → OTerm beta := ![tail.relabel j,left.relabel j,right.relabel j]
+  have hx : (fun i => (xs i).relabel j) = xx := by
+    funext i
+    refine Fin.cases ?_ (Fin.cases ?_ (Fin.cases ?_ (fun k => Fin.elim0 k))) i
+    · rfl
+    · rfl
+    · rfl
+  rw [hx] at hq
+  have qp : Nonempty (Derivation body Theta (programGraph p (ys 0) xx)) := hq 0
+  have qq : Nonempty (Derivation body Theta (programGraph q (ys 1) xx)) := hq 1
+  have hl := binaryRecover InternalApplicationValidityStackAppend.append (.projection 0) (.projection 1)
+    (ys 0) (tail.relabel j) (left.relabel j) xx qp (projectionValue 0 xx) (projectionValue 1 xx)
+  have hr := binaryRecover InternalApplicationValidityStackAppend.append (.projection 0) (.projection 2)
+    (ys 1) (tail.relabel j) (right.relabel j) xx qq (projectionValue 0 xx) (projectionValue 2 xx)
+  have hc' := renameInto hc j Theta hj
+  rw [consGraphRename] at hc'
+  have hi' := renameInto hi j Theta hj
+  rw [cancelsRename] at hi'
+  have hf' := renameInto hf j Theta hj
+  rw [fieldsRename] at hf'
+  exact atCons (front.relabel j) (head.relabel j) (tail.relabel j) (left.relabel j)
+    (right.relabel j) (joined.relabel j) (ys 0) (ys 1) hc' hi' hf' hl hr
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AppendIdentityCoreProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.SixSol20261112.Context.AppendIdentityCoreProof

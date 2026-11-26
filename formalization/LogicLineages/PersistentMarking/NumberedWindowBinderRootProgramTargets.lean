@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowBinderRootAlgorithm
+public import LogicLineages.PersistentMarking.NumberedWindowMarkRootProgramTargets
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowBinderRootProgramTargets
+open NumberedWindowBinderRootAlgorithm NumberedWindowMarkRootProgramTargets
+def BinderRootPrograms : Prop := BinaryProgram fabs ∧ BinaryProgram beta
+end LogicLineages.PersistentMarking.NumberedWindowBinderRootProgramTargets

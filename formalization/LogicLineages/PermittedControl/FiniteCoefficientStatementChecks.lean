@@ -1,0 +1,11 @@
+module
+public import LogicLineages.PermittedControl.FiniteCoefficientProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_finiteCoefficient : Targets.FiniteCoefficient := finiteCoefficient
+ theorem fixed_finiteCoefficientTerminal : Targets.FiniteCoefficientTerminal := finiteCoefficientTerminal
+ theorem fixed_selectedFiniteCoefficient : Targets.SelectedFiniteCoefficient := selectedFiniteCoefficient
+#print axioms fixed_finiteCoefficient
+#print axioms fixed_finiteCoefficientTerminal
+#print axioms fixed_selectedFiniteCoefficient
+end LogicLineages.PermittedControl.StatementChecks

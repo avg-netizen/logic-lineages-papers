@@ -1,0 +1,107 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryNativeBoundTargets
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryNativeBoundProof
+open Source Source.SourceMarkedSyntax NumberedRewriteSyntax NumberedRewriteReduction NumberedPrimaryEquivalence NumberedBottomVariable
+open OriginalHereditaryNativeBoundDefinitions
+
+theorem substitutionSize {Symbol : Type} {arity : Symbol → Nat} {Gamma : List Ty} {tau : Ty}
+    (q : AuxTerm Symbol arity Gamma tau) :
+    ∀ (Delta : List Ty) (theta : NumberedRewriteSyntax.Substitution Symbol arity Gamma Delta),
+      BottomOrVariable theta → size (substitute q theta) = size q := by
+  induction q using AuxTerm.rec
+    (motive_2 := fun Gamma types args => ∀ (Delta : List Ty)
+      (theta : NumberedRewriteSyntax.Substitution Symbol arity Gamma Delta), BottomOrVariable theta →
+      argumentsSize (substituteArguments args theta) = argumentsSize args)
+  case var v =>
+    intro Delta theta ht
+    rcases ht v with hb | ⟨w,hw⟩
+    · simp only [substitute,hb,size]
+    · simp only [substitute,hw,size]
+  case lam q ih =>
+    intro Delta theta ht
+    simp only [substitute,size,ih _ (liftSubstitution theta)
+      (NumberedBottomVariableProof.actualLiftBottomOrVariable Symbol arity _ _ _ theta ht)]
+  case app f a ihf iha =>
+    intro Delta theta ht
+    simp only [substitute,size,ihf Delta theta ht,iha Delta theta ht]
+  case bottom => intros; rfl
+  case ordinary f args ih =>
+    intro Delta theta ht
+    simp only [substitute,size,ih Delta theta ht]
+  case numbered k f tau base types extras ihb ihe =>
+    intro Delta theta ht
+    simp only [substitute,size,ihb Delta theta ht,ihe Delta theta ht]
+  case nil => intros; rfl
+  case cons Gamma sigma types q rest ihq ihr Delta theta ht =>
+    simp only [substituteArguments,argumentsSize,ihq Delta theta ht,ihr Delta theta ht]
+
+theorem memberSize {Symbol : Type} {arity : Symbol → Nat} {Gamma types : List Ty}
+    (args : AuxArguments Symbol arity Gamma types) (q : Packed Symbol arity Gamma)
+    (hq : q ∈ argumentList args) : size q.2 ≤ argumentsSize args := by
+  induction types with
+  | nil => cases args; simp [argumentList] at hq
+  | cons tau types ih =>
+    cases args with
+    | cons a rest =>
+      simp only [argumentList,List.mem_cons] at hq
+      rcases hq with rfl | hq
+      · simp only [argumentsSize]; omega
+      · have hh := ih rest hq
+        simp only [argumentsSize]
+        omega
+
+theorem childSize {Symbol : Type} {arity : Symbol → Nat} {s t : State Symbol arity}
+    (h : Child s t) : size t.term.2 < size s.term.2 ∧ t.context.length ≤ s.context.length + 1 := by
+  cases h with
+  | lam q => simp only [size,List.length_cons]; omega
+  | appFunction f a => simp only [size]; omega
+  | appArgument f a => simp only [size]; omega
+  | ordinary f args q hq =>
+    have hh := memberSize args q hq
+    simp only [size]
+    omega
+  | numberedBase k f tau base types extras q hq =>
+    have hh := memberSize base q hq
+    simp only [size]
+    omega
+  | numberedExtra k f tau base types extras q hq =>
+    have hh := memberSize extras q hq
+    simp only [size]
+    omega
+
+theorem stepWeight {Symbol : Type} {arity : Symbol → Nat} {s t : State Symbol arity}
+    (h : Step s t) : weight t < weight s := by
+  cases h with
+  | child h =>
+    have hh := childSize h
+    simp only [weight]
+    omega
+  | deletion q theta ht hl =>
+    have hh := substitutionSize q _ theta ht
+    simp only [weight]
+    omega
+
+theorem traceBound {Symbol : Type} {arity : Symbol → Nat} {n : Nat} {s t : State Symbol arity}
+    (h : Trace n s t) : n + weight t ≤ weight s := by
+  induction h with
+  | refl s => omega
+  | cons hs ht ih =>
+    have hh := stepWeight hs
+    omega
+
+theorem actualSubstitutionSize : OriginalHereditaryNativeBoundTargets.ActualSubstitutionSize := by
+  intro Symbol arity Gamma Delta tau q theta ht
+  exact substitutionSize q Delta theta ht
+
+theorem actualChildSize : OriginalHereditaryNativeBoundTargets.ActualChildSize := by
+  intro Symbol arity s t h
+  exact childSize h
+
+theorem actualTraceBound : OriginalHereditaryNativeBoundTargets.ActualTraceBound := by
+  intro Symbol arity n s t h
+  exact traceBound h
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryNativeBoundProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryNativeBoundProof

@@ -1,0 +1,60 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeFullCallProof.lean:6:66: error: unsolved goals
+τ : Ty
+n A B : Expr
+⊢ consumeTypes (Head.app (stepType τ) (τ.arrow τ)).result
+      (Args.cons
+        (Expr.marked (Head.app τ τ) τ
+          (Args.cons
+            (Expr.head (Head.app (stepType τ) (τ.arrow τ)) (Args.cons (rec1 τ (succ n)) (Args.cons A Args.nil)))
+            (Args.cons B Args.nil))
+          Args.nil)
+        Args.nil) =
+    some τ
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeFullCallProof.lean:8:32: warning: This simp argument is unused:
+  consumeTypes
+
+Hint: Omit it from the simp argument list.
+  simp [̵r̵e̵c̵2̵,̵a̵p̵p̵,̵a̵p̵p̵l̵y̵,̵a̵p̵p̵l̵y̵A̵u̵x̵,̵c̵o̵n̵s̵u̵m̵e̵T̵y̵p̵e̵s̵,̵P̵,̵C̵2̵,̵E̵x̵p̵r̵.̵t̵y̵p̵e̵,̵S̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵P̵r̵o̵o̵f̵.̵e̵m̵p̵t̵y̵A̵r̵g̵s̵S̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵]̵[̲r̲e̲c̲2̲,̲ ̲a̲p̲p̲,̲ ̲a̲p̲p̲l̲y̲,̲ ̲a̲p̲p̲l̲y̲A̲u̲x̲,̲ ̲P̲,̲ ̲C̲2̲,̲ ̲E̲x̲p̲r̲.̲t̲y̲p̲e̲,̲ ̲S̲u̲b̲s̲t̲i̲t̲u̲t̲i̲o̲n̲P̲r̲o̲o̲f̲.̲e̲m̲p̲t̲y̲A̲r̲g̲s̲S̲u̲b̲s̲t̲i̲t̲u̲t̲i̲o̲n̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeFullCallProof.lean:8:50: warning: This simp argument is unused:
+  Expr.type
+
+Hint: Omit it from the simp argument list.
+  simp [rec2, ̲app, ̲apply, ̲applyAux, ̲consumeTypes, ̲P, ̲C2,E̵x̵p̵r̵.̵t̵y̵p̵e̵,̵ ̲SubstitutionProof.emptyArgsSubstitution]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeFullCallProof.lean:10:68: error: unsolved goals
+τ : Ty
+n A B : Expr
+⊢ consumeTypes (Head.app Ty.ground ((stepType τ).arrow (τ.arrow τ))).result
+      (Args.cons
+        (Expr.marked (Head.app (stepType τ) (τ.arrow τ)) (stepType τ)
+          (Args.cons
+            (Expr.head (Head.app Ty.ground ((stepType τ).arrow (τ.arrow τ)))
+              (Args.cons (Expr.head (Head.recursor τ) Args.nil) (Args.cons (succ n) Args.nil)))
+            (Args.cons A Args.nil))
+          (Args.cons (P τ n A B τ) Args.nil))
+        (Args.cons
+          (Expr.marked (Head.app (stepType τ) (τ.arrow τ)) τ
+            (Args.cons
+              (Expr.head (Head.app Ty.ground ((stepType τ).arrow (τ.arrow τ)))
+                (Args.cons (Expr.head (Head.recursor τ) Args.nil) (Args.cons (succ n) Args.nil)))
+              (Args.cons A Args.nil))
+            (Args.cons (P τ n A B τ) Args.nil))
+          Args.nil)) =
+    some τ
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeFullCallProof.lean:12:32: warning: This simp argument is unused:
+  consumeTypes
+
+Hint: Omit it from the simp argument list.
+  simp [̵r̵e̵c̵1̵,̵a̵p̵p̵,̵a̵p̵p̵l̵y̵,̵a̵p̵p̵l̵y̵A̵u̵x̵,̵c̵o̵n̵s̵u̵m̵e̵T̵y̵p̵e̵s̵,̵C̵2̵,̵C̵1̵,̵E̵x̵p̵r̵.̵t̵y̵p̵e̵,̵S̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵P̵r̵o̵o̵f̵.̵e̵m̵p̵t̵y̵A̵r̵g̵s̵S̵u̵b̵s̵t̵i̵t̵u̵t̵i̵o̵n̵]̵[̲r̲e̲c̲1̲,̲ ̲a̲p̲p̲,̲ ̲a̲p̲p̲l̲y̲,̲ ̲a̲p̲p̲l̲y̲A̲u̲x̲,̲ ̲C̲2̲,̲ ̲C̲1̲,̲ ̲E̲x̲p̲r̲.̲t̲y̲p̲e̲,̲ ̲S̲u̲b̲s̲t̲i̲t̲u̲t̲i̲o̲n̲P̲r̲o̲o̲f̲.̲e̲m̲p̲t̲y̲A̲r̲g̲s̲S̲u̲b̲s̲t̲i̲t̲u̲t̲i̲o̲n̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NativeFullCallProof.lean:12:51: warning: This simp argument is unused:
+  Expr.type
+
+Hint: Omit it from the simp argument list.
+  simp [rec1, ̲app, ̲apply, ̲applyAux, ̲consumeTypes, ̲C2, ̲C1,E̵x̵p̵r̵.̵t̵y̵p̵e̵,̵ ̲SubstitutionProof.emptyArgsSubstitution]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

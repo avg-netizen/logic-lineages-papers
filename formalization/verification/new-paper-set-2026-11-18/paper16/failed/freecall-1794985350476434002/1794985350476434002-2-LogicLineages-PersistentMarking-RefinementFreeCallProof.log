@@ -1,0 +1,88 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementFreeCallProof.lean:8:36: error: Application type mismatch: The argument
+  rfl
+has type
+  ?m.32 = ?m.32
+but is expected to have type
+  applyAux q Args.nil ws = some (substitute ws 0 q)
+in the application
+  Exists.intro (substitute ws 0 q) rfl
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementFreeCallProof.lean:36:18: error: Tactic `rfl` failed: The left-hand side
+  applyAux (substitute (Args.cons (Expr.free σ x) Args.nil) vs.length (Expr.free τ y)) (Args.cons a rest) vs
+is not definitionally equal to the right-hand side
+  applyAux (Expr.free τ y) (Args.cons a rest) (vs.append (Args.cons (Expr.free σ x) Args.nil))
+
+case cons.free
+σ : Ty
+x : Nat
+vs : Args
+a : Expr
+rest : Args
+τ : Ty
+y : Nat
+⊢ applyAux (substitute (Args.cons (Expr.free σ x) Args.nil) vs.length (Expr.free τ y)) (Args.cons a rest) vs =
+    applyAux (Expr.free τ y) (Args.cons a rest) (vs.append (Args.cons (Expr.free σ x) Args.nil))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementFreeCallProof.lean:45:33: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.cons` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `BitVec.cons`
+  [apply] `List.cons`
+  [apply] `List.Lex.cons`
+  [apply] `List.Pairwise.cons`
+  [apply] `List.Perm.cons`
+  [apply] `List.Sublist.cons`
+  [apply] `List.Lex.below.cons`
+  [apply] `List.Pairwise.below.cons`
+  [apply] `List.Perm.below.cons`
+  [apply] `List.Sublist.below.cons`
+  [apply] `Lean.Grind.AC.Seq.cons`
+  [apply] `AlphaArgs.cons`
+  [apply] `NamedBase.cons`
+  [apply] `NamedExtras.cons`
+  [apply] `Args.cons`
+  [apply] `BaseTyped.cons`
+  [apply] `CallTyped.cons`
+  [apply] `Coverage.cons`
+  [apply] `ExtrasTyped.cons`
+  [apply] `Matching.cons`
+  [apply] `Permutation.cons`
+  [apply] `Prefix.cons`
+  [apply] `PrefixCopies.cons`
+  [apply] `PrefixTuple.cons`
+  [apply] `RefinementBasesTree.cons`
+  [apply] `RefinementExtrasTree.cons`
+  [apply] `Whole.cons`
+  [apply] `AlphaArgs.below.cons`
+  [apply] `NamedBase.below.cons`
+  [apply] `NamedExtras.below.cons`
+  [apply] `BaseTyped.below.cons`
+  [apply] `CallTyped.below.cons`
+  [apply] `Coverage.below.cons`
+  [apply] `ExtrasTyped.below.cons`
+  [apply] `Matching.below.cons`
+  [apply] `Permutation.below.cons`
+  [apply] `Prefix.below.cons`
+  [apply] `PrefixCopies.below.cons`
+  [apply] `PrefixTuple.below.cons`
+  [apply] `Whole.below.cons`
+  [apply] `String.Slice.Pattern.Model.IsLongestMatchAtChain.cons`
+  [apply] `String.Slice.Pattern.Model.IsLongestRevMatchAtChain.cons`
+  [apply] `String.Slice.Pattern.Model.IsLongestMatchAtChain.below.cons`
+  [apply] `String.Slice.Pattern.Model.IsLongestRevMatchAtChain.below.cons`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementFreeCallProof.lean:45:55: error: unsolved goals
+σ : Ty
+x : Nat
+vs : Args
+a : Expr
+rest : Args
+τ : Ty
+q : Expr
+ht : a.type = τ
+⊢ 1 + vs.length = sorry ()
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementFreeCallProof.lean:60:0: warning: unused `termination_by`, function is not recursive
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/RefinementFreeCallProof.lean:45:64: warning: This simp argument is unused:
+  Args.length
+
+Hint: Omit it from the simp argument list.
+  simp [A̵r̵g̵s̵.̵l̵e̵n̵g̵t̵h̵,̵Nat.add_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

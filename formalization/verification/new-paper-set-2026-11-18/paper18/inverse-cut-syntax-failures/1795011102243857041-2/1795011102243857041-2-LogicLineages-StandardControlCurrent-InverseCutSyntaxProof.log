@@ -1,0 +1,56 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:12:3: error: unexpected token 'variable'; expected '_' or identifier
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:12:2: error: Missing alternative name: Expected `variable`, `add`, `subtract`, `multiply`, `divide`, `phi`, `hyper`, `phiInverse`, or `hyperInverse`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:10:2: error: Alternative `variable` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:10:2: error: Alternative `add` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:10:2: error: Alternative `subtract` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:10:2: error: Alternative `multiply` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:10:2: error: Alternative `divide` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:10:2: error: Alternative `phi` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:10:2: error: Alternative `hyper` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:10:2: error: Alternative `phiInverse` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:10:2: error: Alternative `hyperInverse` has not been provided
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:12:12: error: unexpected identifier; expected '(', '[', '{' or '⦃'
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:60:14: warning: This simp argument is unused:
+  max_eq_left hl
+
+Hint: Omit it from the simp argument list.
+  simp [hl, m̵a̵x̵_̵e̵q̵_̵l̵e̵f̵t̵ ̵h̵l̵,̵ ̵Nat.not_lt.mpr hl]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:85:2: error: unsolved goals
+case neg
+h m r : ℕ
+a b lo hi : Term
+ν : ℕ → ℕ
+hv : ¬(0 < m ∧ r < m)
+⊢ 0 < m →
+    r < m →
+      InverseCut.candidate (function h) (inverseFunction h)
+            (Term.value ν a, Term.value ν b, Term.value ν lo, Term.value ν hi, m, r) ≤
+          Term.value ν b →
+        Term.value ν hi <
+          function h
+            (InverseCut.candidate (function h) (inverseFunction h)
+              (Term.value ν a, Term.value ν b, Term.value ν lo, Term.value ν hi, m, r))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:106:54: error(lean.unknownIdentifier): Unknown identifier `Function.update_same`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/StandardControlCurrent/InverseCutSyntaxProof.lean:98:79: error: unsolved goals
+h m r x : ℕ
+a b lo hi : Term
+ν : ℕ → ℕ
+hx : x ∉ support a b lo hi
+ha : x ∉ a.variables
+hb : x ∉ b.variables
+hl : x ∉ lo.variables
+hh : x ∉ hi.variables
+⊢ (0 < m ∧
+      r < m ∧
+        ∃ x,
+          Term.value ν a ≤ x ∧
+            x ≤ Term.value ν b ∧ Term.value ν lo ≤ function h x ∧ function h x ≤ Term.value ν hi ∧ x % m = r) ↔
+    0 < m ∧
+      r < m ∧
+        ∃ n,
+          Term.value ν a ≤ Function.update ν x n x ∧
+            Function.update ν x n x ≤ Term.value ν b ∧
+              Term.value ν lo ≤ function h (Function.update ν x n x) ∧
+                function h (Function.update ν x n x) ≤ Term.value ν hi ∧ Function.update ν x n x % m = r

@@ -1,0 +1,1 @@
+Proof-only schema factoring of EraseAbsenceSyntaxProof. Eight original public theorem headers are byte-identical. Original definitions unchanged. Generic programs C/S stand for original occurrence count and erase state; actual wrappers instantiate the original programs. Native checks not yet run; fixed resource caps unchanged. Original failure receipt: 1794929012521102720-5.

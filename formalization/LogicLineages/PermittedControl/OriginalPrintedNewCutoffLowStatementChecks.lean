@@ -1,0 +1,18 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedNewCutoffLowTargets
+import LogicLineages.PermittedControl.OriginalPrintedNewCutoffLowProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedNewCutoffLow
+
+theorem fixed_exactPrintedNewCutoffLowAt : ExactPrintedNewCutoffLowAt := exactPrintedNewCutoffLowAt
+theorem fixed_exactPrintedNewCutoffLowStrips : ExactPrintedNewCutoffLowStrips := exactPrintedNewCutoffLowStrips
+theorem fixed_fullOriginalPrintedNewCutoffLow : FullOriginalPrintedNewCutoffLow :=
+  ⟨fixed_exactPrintedNewCutoffLowAt,fixed_exactPrintedNewCutoffLowStrips⟩
+
+#print axioms fixed_exactPrintedNewCutoffLowAt
+#print axioms fixed_exactPrintedNewCutoffLowStrips
+#print axioms fixed_fullOriginalPrintedNewCutoffLow
+
+end LogicLineages.PermittedControl.StatementChecks

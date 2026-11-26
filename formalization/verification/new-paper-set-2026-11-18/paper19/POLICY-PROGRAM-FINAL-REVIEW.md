@@ -1,0 +1,7 @@
+# Independent PolicyProgram supporting final
+
+Accepted four exact supporting endpoints, receipt 1795017207170339248-5: 340 source-matched modules, zero errors, four named standard-only aliases. Compiler-free independent evidence reproduces author JSON exactly; all eight frozen pins match.
+
+Read targets, ObservationProof, LowerProof, Proof and checks. Actual observation calibration supplies successful policy assignment and positive finite value, not a fallback-only scalar. Unary call is the literal renamed closed source applied to the original variable, with actual source table length. Fresh-variable raw coordinate equals n+1; actual equation calibration and source naturality, together with positivity, derive the rawScalar-minus-one observation binder without truncation. Structural lowering covers every Program constructor (matrix/add/literal/observation/unary) at the same arbitrary p/f and shared valuation, using freshly established PolicyMatrix/PolicyBinary semantics. Forest combines lowering with the actual PolicyPlan shared-extension iff under exactly SourceGrowth; output ground-context preservation follows actual syntax bounds.
+
+No default/Phi semantics transfer. This is the complete supporting Program-to-actual-forest bridge, not the full source compiler theorem: AST/input coverage composition, serialized reconstruction, global source sharing/complexity and subsequent hardness remain separate. No stronger source-domain or output bound is inferred.

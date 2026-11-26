@@ -1,0 +1,32 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedGreatestResolvedMatrixTargets
+import LogicLineages.PermittedControl.OriginalPrintedGreatestResolvedMatrixGateProof
+import LogicLineages.PermittedControl.OriginalPrintedGreatestResolvedMatrixProof
+import LogicLineages.PermittedControl.OriginalPrintedGreatestResolvedMatrixRankProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalGreatestResolvedModeMatrix :
+    OriginalPrintedGreatestResolvedMatrix.ExactModeMatrix :=
+  OriginalPrintedGreatestResolvedMatrix.exactModeMatrix
+
+theorem fixed_exactOriginalPrintedGreatestResolvedMatrix :
+    OriginalPrintedGreatestResolvedMatrix.ExactUniformResolvedMatrix :=
+  OriginalPrintedGreatestResolvedMatrix.exactUniformResolvedMatrix
+
+theorem fixed_exactOriginalPrintedGreatestResolvedMatrixTopLinear :
+    OriginalPrintedGreatestResolvedMatrix.ExactResolvedMatrixTopLinear :=
+  OriginalPrintedGreatestResolvedMatrix.exactResolvedMatrixTopLinear
+
+theorem fixed_fullOriginalPrintedGreatestResolvedMatrix :
+    OriginalPrintedGreatestResolvedMatrix.FullOriginalPrintedGreatestResolvedMatrix :=
+  ⟨fixed_exactOriginalGreatestResolvedModeMatrix,fixed_exactOriginalPrintedGreatestResolvedMatrix,
+    fixed_exactOriginalPrintedGreatestResolvedMatrixTopLinear⟩
+
+#print axioms fixed_exactOriginalGreatestResolvedModeMatrix
+#print axioms fixed_exactOriginalPrintedGreatestResolvedMatrix
+#print axioms fixed_exactOriginalPrintedGreatestResolvedMatrixTopLinear
+#print axioms fixed_fullOriginalPrintedGreatestResolvedMatrix
+
+end LogicLineages.PermittedControl.StatementChecks

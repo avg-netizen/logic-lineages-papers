@@ -1,0 +1,78 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "c2dab1a3cb9765154b6c90c8ade3d8b87a1c3673",
+  "failed_source_local_commit": "bfbd464a1778c2805d845c117c58cadb9ad454b9",
+  "failed_source_tree": "c456bc91ae73d492b3787330ffb73d291863a060",
+  "failed_exact_gate_receipt": "1795377233356969192-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualRawMarkedZeroSuccessorStatementChecks",
+  "failed_receipt_sha256": "f6113bf6b5bb64450d2f25a57353843b7b739f59d7aa4ca1d0450be116c0b387",
+  "failed_exact_module_log_sha256": "1a274e6a712df436979ff7e3980b6581dd911dbd4aab4db44c021e889112f99a",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorPrimitiveProof.lean:46:4: error: Type mismatch\n  Primrec.listFilter (PrimrecRel.comp Primrec.eq keep (Primrec.const true))\nhas type\n  Primrec fun L => List.filter (fun x => decide ((decide (x.1.1 \u2260 0) && !x.2) = true)) L\nbut is expected to have type\n  Primrec fun ms => List.filter (fun m => decide (m.1.1 \u2260 0) && !m.2) ms\n",
+  "failed_original_native_log_sha256": "fd56bec3419fc35a52c255eac327595deb93295d13a450a0aad308c129b12296",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorPrimitiveProof.lean",
+  "failed_proof_sha256": "3f5e04e644719be33a09adb12e827b37276511a0a6ac5a7e303aaa02f38f920b",
+  "repaired_proof_sha256": "829654557f5edbac6e33f4182292d2e26318a597f77f4fab5f2f488960602203",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MARKED-ZERO-SUCCESSOR-REPAIR-04.patch",
+  "patch_sha256": "5492dc5cc48f63ac29644a8229e2f05c5b2c2cb275d1749af2451dc846badd16",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MARKED-ZERO-SUCCESSOR-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "dce21ba40a8b8227dea6f8d81ab98875896507e92a4bb14d3869d4e58b3b221a",
+  "prior_repairs_sha256": {
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MARKED-ZERO-SUCCESSOR-REPAIR-02.json": "d25065eedba2dd9bfe668e856fd555517ddebe902f44a82d2d82e8676fdd3bae",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MARKED-ZERO-SUCCESSOR-REPAIR-01.json": "f8a230cd430f8bf925137fde8fa9873ce266da08981cb5e0a43f10304e3a96a3",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MARKED-ZERO-SUCCESSOR-REPAIR-03.json": "79666b0ed9bf7262fb4dc7e754811625c25e63f0ea37972405c541c08458d7c0"
+  },
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorMovePrimitiveProof.lean": "eed7e29e4f09d23863afb719653758c370c836a971a3b822705d3442303dd2e8",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorMoveProof.lean": "9bab678c8d45d685ad23c94108466b8eac67307042c75c62d3de9c0a5e6a417f",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorPlanPrimitiveProof.lean": "136b1cc97e65bf384308a4a5231e6839e3ce40c8b6a4228de9f9c31465d06712",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorPlanProof.lean": "b7344fb1eb90da7568f3d08ab86ae89442951c1a4763886ecf834b37c9fb417c",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorProof.lean": "e29c0278edb4b5d1ad88c096cd4ef05457a059024f1cf10bd346cca622ef75d0",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorStatementChecks.lean": "16f07952f2329956167965e7e3fb95dc5f2051b3acbaa92876b7ad371444cf9c",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorTargets.lean": "d4358749791f9359ffbbf9b344e5507fe41ba64ecfc4f9e2d91d405bf04ba6c8",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MARKED-ZERO-SUCCESSOR-SOURCE-MAP.md": "44adc71d4614a2d1b83d6ed15148ae63b24028ba96f4c81261a33a835761b890"
+  },
+  "static_module_closure": {
+    "MovePrimitiveProof": {
+      "local": 528,
+      "external": 43,
+      "contains_totient": false
+    },
+    "MoveProof": {
+      "local": 526,
+      "external": 41,
+      "contains_totient": false
+    },
+    "PlanPrimitiveProof": {
+      "local": 397,
+      "external": 41,
+      "contains_totient": false
+    },
+    "PlanProof": {
+      "local": 329,
+      "external": 35,
+      "contains_totient": false
+    },
+    "PrimitiveProof": {
+      "local": 532,
+      "external": 43,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 529,
+      "external": 41,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 537,
+      "external": 43,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 317,
+      "external": 35,
+      "contains_totient": false
+    }
+  },
+  "scope": "Calibrate the Primrec list filter proposition wrapper to the identical original Bool predicate pointwise by its two literal cases. Preserve exact executable code, target and siblings."
+}

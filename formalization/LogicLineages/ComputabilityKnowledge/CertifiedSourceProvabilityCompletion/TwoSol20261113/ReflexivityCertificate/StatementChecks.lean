@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityCertificate.CoreProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityCertificate.StatementChecks
+theorem exactDispatcher : Targets.InternalDispatcher := DispatcherProof.internalDispatcher
+theorem exactSingletonRun : Targets.InternalSingletonRun := RunProof.internalSingletonRun
+theorem exactCertificate : Targets.InternalCertificate := CoreProof.internalCertificate
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityCertificate.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.TwoSol20261113.ReflexivityCertificate.StatementChecks

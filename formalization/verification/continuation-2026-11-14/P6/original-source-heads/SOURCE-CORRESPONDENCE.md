@@ -1,0 +1,7 @@
+# Literal original sourceHeads enumeration and membership
+
+Sources: NumberedFiniteUniverseDefinitions.rawHeadWindow/headWindow and NumberedAuxiliaryEnumerationDefinitions.sourceHeads. The AST preserves the exact ordered expression [zero,succ] ++ S.flatMap([cases tau,recursor tau]) ++ S.flatMap(sigma => S.map(application sigma tau)) ++ symbols.map ranked, then filters by the concrete original HeadInWindow checker. Duplicate symbols/types/heads are retained. No set replacement, sorting, rank surrogate, or extra completeness hypothesis.
+
+Numeric list entries use raw headNumber, not generic Encodable HeadCode. NativeRawWindow states exact raw sequence equality; NativeSourceHeads states exact filtered sequence and membership via headNumber injectivity, including every valid queried head and empty symbol/type lists. Raw headCode/decodeHead correspondence must be paid from original inverses. The native member operation is actual contains over the actual enumeration, not a separately selected predicate.
+
+InternalFilterNil/Cons use the literal list-recursion and exact original window graph zero/one. They do not reflect native membership/window correctness into arithmetic. Original internal full enumeration adequacy and semantic extraction/permutation correctness, global recursive E and source stability remain open; no complete headMove or tuple replacement claimed. No proofs before review/preflight.

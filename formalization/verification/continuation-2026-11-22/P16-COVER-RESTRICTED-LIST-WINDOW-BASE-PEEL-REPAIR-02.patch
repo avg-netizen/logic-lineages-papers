@@ -1,0 +1,10 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRestrictedListWindowBasePeelProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRestrictedListWindowBasePeelProof.lean
+@@ -108,2 +108,2 @@
+-  have tag5 := liftRawReport (header 5 5) ctx raw z (numberedRejectOrdinaryKey h a)
+-  have tag2 := liftRawReport (header 2 2) ctx raw z (lambdaRejectHeadKey false h [a])
++  have tag5 := liftRawReport (header 5 5) ctx raw z (numberedRejectOrdinaryKey (body := body) (Γ := Γ) h a)
++  have tag2 := liftRawReport (header 2 2) ctx raw z (lambdaRejectHeadKey (body := body) (Γ := Γ) false h [a])
+@@ -131 +131 @@
+-  have tag2 := liftRawReport (header 2 2) ctx raw z (lambdaRejectHeadKey true h [ty,k,l,r])
++  have tag2 := liftRawReport (header 2 2) ctx raw z (lambdaRejectHeadKey (body := body) (Γ := Γ) true h [ty,k,l,r])

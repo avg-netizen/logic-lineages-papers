@@ -1,0 +1,13 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldCellCasesProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalSparseFieldCellCasesProof.lean
+@@ -33,8 +33,8 @@
+     let a := unary good z k
+     let b := unary good (suc z) k
+     obtain ⟨states⟩ := guardBinary (body := body) (Γ := Δ) k
+-    have no := setFlag (Γ := a :: Δ) k z ⟨Derivation.hypothesis List.mem_cons_self⟩
+-    have yes := setFlag (Γ := b :: Δ) k (suc z) ⟨Derivation.hypothesis List.mem_cons_self⟩
++    have no := setFlag (body := body) (Γ := a :: Δ) k z ⟨Derivation.hypothesis List.mem_cons_self⟩
++    have yes := setFlag (body := body) (Γ := b :: Δ) k (suc z) ⟨Derivation.hypothesis List.mem_cons_self⟩
+     obtain ⟨no⟩ := moveUnary cellGood z (suc k) nn ⟨symm (addHyp e a)⟩ no
+     obtain ⟨yes⟩ := moveUnary cellGood (suc z) (suc k) nn ⟨symm (addHyp e b)⟩ yes
+     exact ⟨disjunctionElimination states

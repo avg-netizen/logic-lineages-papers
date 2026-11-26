@@ -1,0 +1,14 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullBudgetTransferTargets
+public import LogicLineages.OrdinalComparison.GrowingBudgetPrefixProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullBudgetTransfer
+
+theorem completeTransfer : Targets.CompleteTransfer :=
+  ⟨LogicLineages.OrdinalComparison.actualScheduledFirstFinite,
+    LogicLineages.OrdinalComparison.actualNumericalCongruentBudgetTransfer,
+    LogicLineages.OrdinalComparison.actualRetainedPrefixCongruentBudgetTransfer⟩
+
+#audit_namespace LogicLineages.CartierObserverCurrent.FullBudgetTransfer
+end LogicLineages.CartierObserverCurrent.FullBudgetTransfer

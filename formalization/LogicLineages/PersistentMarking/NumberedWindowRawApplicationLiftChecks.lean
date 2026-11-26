@@ -1,0 +1,15 @@
+import LogicLineages.PersistentMarking.NumberedWindowRawApplicationLiftProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowRawApplicationLiftChecks
+open NumberedWindowRawApplicationLiftTargets
+
+theorem exact_LiteralLift : ExactLiteralLift :=
+  NumberedWindowRawApplicationLiftProof.literal
+
+theorem exact_LiftedWindowStep : ExactLiftedWindowStep :=
+  NumberedWindowRawApplicationLiftProof.accepted
+
+#print axioms exact_LiteralLift
+#print axioms exact_LiftedWindowStep
+
+end LogicLineages.PersistentMarking.NumberedWindowRawApplicationLiftChecks

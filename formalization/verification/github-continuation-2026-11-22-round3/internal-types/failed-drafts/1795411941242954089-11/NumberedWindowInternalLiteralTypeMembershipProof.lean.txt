@@ -1,0 +1,152 @@
+module
+
+public import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralTypeMembershipTargets
+import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralTypeMembershipSupportProof
+import LogicLineages.PersistentMarking.NumberedWindowNumeralGraphChecks
+import LogicLineages.PersistentMarking.NumberedWindowInternalSettingsGrammarGuardNumericProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalControlGraphSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalTagArithmeticSupportProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalBetaTotalityProof
+import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalQuotientComparisonProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalLiteralTypeMembershipProof
+open FirstOrder Language
+open LogicLineages.OrdinalComparison.TerminationOrdering
+open PositiveArithmeticOperators ID1Completion.InternalCalculus ID1Completion.InternalControlGraph
+open ID1Completion.InternalGraphComposition (OTerm)
+open SourceComputabilityFormulaSupportProof (numeral)
+open ID1Completion.InternalTagArithmeticSyntaxProof (eqn suc z)
+open ID1Completion.InternalTagArithmeticSupportProof (symm)
+open ID1Completion.InternalControlGraphSupportProof (headTransport valueUnique)
+open ID1Completion.InternalBetaTotalityProof (disjunctionElimination addHyp)
+open ID1Completion.InternalQuotientComparisonProof (orLeft orRight)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram List.Vector
+open NumberedWindowInternalSparsePathEnvelopeTargets (unary)
+open NumberedWindowInternalAuxWindowMemoTargets (typeGuard)
+open NumberedWindowInternalSettingsGrammarGuardDefinitions (refitGuard)
+open NumberedWindowInternalSettingsGrammarGuardNumericProof (exact_SettingsRefitGuardCalibration)
+open NumberedWindowNumeralGraphChecks (exact_NumeralGraph)
+open NumberedWindowInternalLiteralTypeMembershipTargets
+open NumberedWindowInternalLiteralTypeMembershipSupportProof (memberToChoices choicesToMember)
+
+attribute [local irreducible] programGraph
+
+variable {body : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
+
+private theorem finiteCases (codes : List Nat) (candidate : OTerm α) (goal : Formula α)
+    (branches : ∀ code ∈ codes,
+      Nonempty (Derivation body Γ ((eqn candidate (numeral code)).imp goal))) :
+    Nonempty (Derivation body Γ ((literalChoices codes candidate).imp goal)) := by
+  revert branches
+  induction codes with
+  | nil =>
+    intro _
+    exact ⟨Derivation.implicationIntroduction
+      (Derivation.explosion (Derivation.hypothesis List.mem_cons_self))⟩
+  | cons head tail ih =>
+    intro branches
+    obtain ⟨headRule⟩ := branches head List.mem_cons_self
+    obtain ⟨tailRule⟩ := ih (fun code listed => branches code (List.mem_cons_of_mem head listed))
+    exact ⟨Derivation.implicationIntroduction (disjunctionElimination
+      (Derivation.hypothesis List.mem_cons_self) (addHyp headRule _) (addHyp tailRule _))⟩
+
+private theorem listedChoice (codes : List Nat) (code : Nat) (listed : code ∈ codes)
+    (candidate : OTerm α) (same : Nonempty (Derivation body Γ (eqn candidate (numeral code)))) :
+    Nonempty (Derivation body Γ (literalChoices codes candidate)) := by
+  revert listed
+  induction codes with
+  | nil => intro impossible; cases impossible
+  | cons head tail ih =>
+    intro listed
+    rcases List.mem_cons.mp listed with equal | later
+    · subst head
+      obtain ⟨same⟩ := same
+      exact ⟨orLeft same⟩
+    · obtain ⟨tailChoice⟩ := ih later
+      exact ⟨orRight tailChoice⟩
+
+private theorem unaryNumeral (p : Program 1) (code : Nat) :
+    Nonempty (Derivation body Γ (unary p (numeral (evaluate p (code ::ᵥ nil))) (numeral code))) := by
+  have literal := exact_NumeralGraph 1 p (code ::ᵥ nil) body α Γ
+  have tape : NumberedWindowNumeralGraphTargets.inputs (code ::ᵥ nil) =
+      (![numeral code] : Fin 1 → OTerm α) := by
+    funext i
+    obtain rfl := Fin.eq_zero i
+    rfl
+  rw [tape] at literal
+  exact literal
+
+theorem exact_LiteralTypeMembership : ExactLiteralTypeMembership := by
+  intro body α Γ codes candidate
+  obtain ⟨forward⟩ := memberToChoices (body := body)
+    (Γ := literalMembership codes candidate :: Γ) codes candidate
+    ⟨Derivation.hypothesis List.mem_cons_self⟩
+  obtain ⟨backward⟩ := choicesToMember (body := body)
+    (Γ := literalChoices codes candidate :: Γ) codes candidate
+    ⟨Derivation.hypothesis List.mem_cons_self⟩
+  exact ⟨Derivation.conjunctionIntroduction (Derivation.implicationIntroduction forward)
+    (Derivation.implicationIntroduction backward)⟩
+
+theorem exact_FiniteProgramGuardTransfer : ExactFiniteProgramGuardTransfer := by
+  intro p codes numeric body α Γ candidate member
+  obtain ⟨choices⟩ := memberToChoices codes candidate member
+  have branches (code : Nat) (listed : code ∈ codes) :
+      Nonempty (Derivation body Γ ((eqn candidate (numeral code)).imp
+        (unary p (suc z) candidate))) := by
+    let premise := eqn candidate (numeral code)
+    have literal := unaryNumeral (body := body) (Γ := premise :: Γ) p code
+    rw [numeric code listed] at literal
+    have same : Derivation body (premise :: Γ) (eqn candidate (numeral code)) :=
+      Derivation.hypothesis List.mem_cons_self
+    obtain ⟨accepted⟩ := headTransport p (suc z) (numeral code) candidate Fin.elim0
+      ⟨symm same⟩ literal
+    exact ⟨Derivation.implicationIntroduction accepted⟩
+  obtain ⟨rule⟩ := finiteCases codes candidate (unary p (suc z) candidate) branches
+  exact ⟨Derivation.implicationElimination rule choices⟩
+
+theorem exact_FiniteProgramImageTransfer : ExactFiniteProgramImageTransfer := by
+  intro p inputs outputs numeric body α Γ candidate result member observed
+  obtain ⟨choices⟩ := memberToChoices inputs candidate member
+  obtain ⟨observed⟩ := observed
+  have branches (code : Nat) (listed : code ∈ inputs) :
+      Nonempty (Derivation body Γ ((eqn candidate (numeral code)).imp
+        (literalMembership outputs result))) := by
+    let premise := eqn candidate (numeral code)
+    have actual := headTransport (body := body) (Gamma := premise :: Γ)
+      p result candidate (numeral code) Fin.elim0
+      ⟨Derivation.hypothesis List.mem_cons_self⟩ ⟨addHyp observed premise⟩
+    have literal := unaryNumeral (body := body) (Γ := premise :: Γ) p code
+    have same := valueUnique p result (numeral (evaluate p (code ::ᵥ nil))) ![numeral code]
+      actual literal
+    have outputChoice := listedChoice outputs (evaluate p (code ::ᵥ nil))
+      (numeric code listed) result same
+    obtain ⟨outputMember⟩ := choicesToMember outputs result outputChoice
+    exact ⟨Derivation.implicationIntroduction outputMember⟩
+  obtain ⟨rule⟩ := finiteCases inputs candidate (literalMembership outputs result) branches
+  exact ⟨Derivation.implicationElimination rule choices⟩
+
+theorem exact_FiniteActualTypeGuard : ExactFiniteActualTypeGuard := by
+  intro TV codes calibrated valid
+  apply exact_FiniteProgramGuardTransfer TV codes
+  intro code listed
+  rw [calibrated code,valid code listed]
+  rfl
+
+theorem exact_FiniteWindowRefitGuard : ExactFiniteWindowRefitGuard := by
+  intro s T included original valid
+  have calibrated := exact_SettingsRefitGuardCalibration s T included original
+  apply exact_FiniteProgramGuardTransfer (refitGuard s T) s.window.1
+  intro code listed
+  rw [calibrated code]
+  have present : s.window.1.contains code = true := List.contains_iff_mem.mpr listed
+  simp only [typeGuard,valid code listed,present]
+  rfl
+
+#print axioms exact_LiteralTypeMembership
+#print axioms exact_FiniteProgramGuardTransfer
+#print axioms exact_FiniteProgramImageTransfer
+#print axioms exact_FiniteActualTypeGuard
+#print axioms exact_FiniteWindowRefitGuard
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalLiteralTypeMembershipProof

@@ -1,0 +1,15 @@
+--- LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalValidHeadEncodingInjectivity/ArithmeticProof.lean
++++ LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/OriginalValidHeadEncodingInjectivity/ArithmeticProof.lean
+@@ -80,8 +80,10 @@
+ theorem payloadCancel (i : Fin 6) (s t : OTerm alpha) (hi : 2 ≤ i.val)
+     (h : Derivation body Delta (eqn (code i s) (code i t))) : Nonempty (Derivation body Delta (eqn s t)) := by
+   fin_cases i
+-  · exact False.elim (by omega)
+-  · exact False.elim (by omega)
++  · change 2 ≤ 0 at hi
++    exact False.elim (by omega)
++  · change 2 ≤ 1 at hi
++    exact False.elim (by omega)
+   · exact ⟨(evenCancel (oddCancel h))⟩
+   · exact ⟨(evenCancel (oddCancel (oddCancel h)))⟩
+   · exact ⟨(evenCancel (oddCancel (oddCancel (oddCancel h))))⟩

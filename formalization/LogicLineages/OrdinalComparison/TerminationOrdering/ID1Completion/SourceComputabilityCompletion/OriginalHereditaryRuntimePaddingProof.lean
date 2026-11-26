@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryRuntimePaddingTargets
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryPotentialCompletionEmptyProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalNumericIterationFusionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryRuntimePaddingProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalControlGraphSupportProof
+open InternalNumericIterationFixedPointProof InternalNumericIterationFusionProof
+open InternalAdditionLawsProof (add)
+theorem actualPadding : OriginalHereditaryRuntimePaddingTargets.ActualPadding := by
+ intro R body alpha Delta fuel extra input completed output hr he ho
+ have hf := fixedValue (OriginalHereditaryCombinedStep.step R) extra completed
+  (OriginalHereditaryPotentialCompletionEmptyProof.fixedEmpty R completed he)
+ have hall := fusionValue (OriginalHereditaryCombinedStep.step R) fuel extra input completed completed hr hf
+ exact valueUnique (OriginalHereditaryRuntimeIterationDefinitions.run R) output completed
+  (Fin.cons (add fuel extra) (Fin.cons input Fin.elim0)) ho hall
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryRuntimePaddingProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalHereditaryRuntimePaddingProof

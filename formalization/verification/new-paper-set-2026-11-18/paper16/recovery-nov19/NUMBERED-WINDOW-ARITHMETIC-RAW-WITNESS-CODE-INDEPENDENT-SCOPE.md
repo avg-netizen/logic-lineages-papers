@@ -1,0 +1,5 @@
+# Independent literal supplied witness numeric-code scope review
+
+Fully read4 comparator modules and source map against actual raw witness constructors/partitions and existing strict numeric node/field/term/binder codecs. All27 frozen pins match. Ordered literal term occurrences retain duplicates; exact replacement triple retains kept/removed/added without normalization; Bool side uses exactly0/1, not arbitrary nonzero. Eight root cases preserve their actual labels, side/index/domain fields and supplied Stat partition; five recursive context cases preserve exact indices. Fuel decoder uses actual numeric code and every child-code bound must be proved. Six exact contracts require both some iff actual encoding and exact malformed none plus roundtrip, not merely injection or a typeclass surrogate.
+
+This codes structured raw witnesses only; no actual checker on coded paths, path-list codec, global search or arithmetic-language/internal ID1 proof. Supporting target-only preflight admitted under original core profile; no proof before independent clean target check.

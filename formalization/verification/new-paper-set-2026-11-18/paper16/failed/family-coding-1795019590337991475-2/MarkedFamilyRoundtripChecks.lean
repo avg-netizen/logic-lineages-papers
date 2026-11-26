@@ -1,0 +1,7 @@
+import LogicLineages.PersistentMarking.MarkedFamilyRoundtripProof
+namespace LogicLineages.PersistentMarking.MarkedFamilyRoundtripChecks
+theorem exact_CodeRoundtrip : MarkedFamilyCodingTargets.CodeRoundtrip := MarkedFamilyRoundtripProof.codeRoundtrip
+theorem exact_SemanticRoundtrip : MarkedFamilyCodingTargets.SemanticRoundtrip := MarkedFamilyRoundtripProof.semanticRoundtrip
+#print axioms exact_CodeRoundtrip
+#print axioms exact_SemanticRoundtrip
+end LogicLineages.PersistentMarking.MarkedFamilyRoundtripChecks

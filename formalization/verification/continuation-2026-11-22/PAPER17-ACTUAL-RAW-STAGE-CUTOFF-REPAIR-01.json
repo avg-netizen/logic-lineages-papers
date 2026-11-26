@@ -1,0 +1,28 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "1ab03caa9a5a6f16b146ebc6fb70466582ce1297",
+  "failed_source_local_commit": "e2530a23ecedcac26a89befbf577eb5c96067848",
+  "failed_source_tree": "35bdcdea9d02edadbc590882242dac0dd9a25516",
+  "failed_exact_gate_receipt": "1795375239898726878-8",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualRawStageCutoffStatementChecks",
+  "failed_receipt_sha256": "3b38fbc946fe0a8e0715f026c947aab2edf1154d0ffd43ba86ff94f610ed4d90",
+  "failed_exact_module_log_sha256": "a989b67241b8a070ddfa94ef7ebd565248205eccbc169d73de7481254edf5556",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualRawStageCutoffPrimitiveProof.lean:36:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualRawStageCutoffPrimitiveProof.lean:48:16: error: (kernel) unknown constant '_private.LogicLineages.PermittedControl.ActualRawStageCutoffPrimitiveProof.0.LogicLineages.PermittedControl.ActualRawStageCutoff.chartCostCurried'",
+  "failed_original_native_log_sha256": "1938a14e3cea7fa4a25be4703dcb1151586907878491d60f6770990d6972f392",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualRawStageCutoffPrimitiveProof.lean",
+  "failed_proof_sha256": "5f7776982a68bd4e18dd292949cbd603d65ea1ece12aa985454a11f47c91935d",
+  "repaired_proof_sha256": "9288fa3e6ca2c2ccac8e2776fb6888fe384daf91d28af15d8edb882b1d05881d",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-STAGE-CUTOFF-REPAIR-01.patch",
+  "patch_sha256": "5c544b0b89fd594e245cf16637012f02f912e05a83296f7be82b73ba7a8e3064",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-STAGE-CUTOFF-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "065471ff74b63c6d754b81862fa4332f9a84d8a1a8569341e38aee7b21160567",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualRawStageCutoffProof.lean": "87a50ccbb439d46f174556226b5315267ee3b2d569fd616b47fe04be5fac8742",
+    "formalization/LogicLineages/PermittedControl/ActualRawStageCutoffStatementChecks.lean": "6b6780aeccd276136cf09595d156898c91b72a7539124bf9aa5eee7ac8f97bcf",
+    "formalization/LogicLineages/PermittedControl/ActualRawStageCutoffTargets.lean": "f781139e08337395eb0088c6a8964ca9d39c8885be5efc5f88cde960e4f24c74",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-STAGE-CUTOFF-SOURCE-MAP.md": "eae6111c17a33c968290493373cefc0a027afc6a176b8b9132511bb7324cc9dc"
+  },
+  "scope": "Isolate the literal product reassociation into a named PR map and independent rfl calibration before composing with the existing chart cost. Same compiled chart/rank/width cutoff, program, target, imports and native profile."
+}

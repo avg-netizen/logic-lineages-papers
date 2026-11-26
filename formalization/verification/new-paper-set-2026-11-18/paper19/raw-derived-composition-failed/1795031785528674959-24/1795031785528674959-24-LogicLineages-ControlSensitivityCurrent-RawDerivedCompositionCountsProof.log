@@ -1,0 +1,32 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionCountsProof.lean:20:17: error: unsolved goals
+case cons
+context : List ℕ
+es : List (Code × Code)
+ih : (aggregateRaw context es).1.2.1.length = rawWeight es ∧ (aggregateRaw context es).2.2.1.length = rawWeight es
+a b : Code
+h :
+  (detectorLeftRaw a b).2.1.length = 2 * (a.2.1.length + b.2.1.length) + 6 ∧
+    (detectorRightRaw a b).2.1.length = 2 * (a.2.1.length + b.2.1.length) + 6
+⊢ 6 + ((List.map (fun i => 2 * (i.1.2.1.length + i.2.2.1.length)) es).sum + (es.length * 8 + 3)) =
+    8 + ((List.map (fun i => 2 * (i.1.2.1.length + i.2.2.1.length)) es).sum + (es.length * 8 + 1))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionCountsProof.lean:27:62: warning: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [̵m̵a̵g̵n̵i̵f̵y̵R̵a̵w̵,̵i̵n̵s̵e̵r̵t̵T̵a̵b̵l̵e̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵]̵[̲m̲a̲g̲n̲i̲f̲y̲R̲a̲w̲,̲ ̲i̲n̲s̲e̲r̲t̲T̲a̲b̲l̲e̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionCountsProof.lean:29:51: warning: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [̵i̵d̵e̵n̵t̵i̵t̵y̵R̵a̵w̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵]̵[̲i̲d̲e̲n̲t̲i̲t̲y̲R̲a̲w̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionCountsProof.lean:31:51: warning: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  simp [̵c̵o̵n̵s̵t̵a̵n̵t̵R̵a̵w̵,̵N̵a̵t̵.̵a̵d̵d̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵l̵e̵f̵t̵_̵c̵o̵m̵m̵,̵N̵a̵t̵.̵a̵d̵d̵_̵a̵s̵s̵o̵c̵]̵[̲c̲o̲n̲s̲t̲a̲n̲t̲R̲a̲w̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲c̲o̲m̲m̲,̲ ̲N̲a̲t̲.̲a̲d̲d̲_̲l̲e̲f̲t̲_̲c̲o̲m̲m̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

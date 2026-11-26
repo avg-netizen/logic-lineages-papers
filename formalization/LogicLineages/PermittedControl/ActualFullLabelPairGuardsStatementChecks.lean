@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.ActualFullLabelPairGuardsTargets
+import LogicLineages.PermittedControl.ActualFullLabelPairGuardsProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactActualFullLabelPairGuard : ActualFullLabelPairGuards.ExactFullLabelPairGuard :=
+  ActualFullLabelPairGuards.exactFullLabelPairGuard
+
+theorem fixed_exactActualFullLabelPairHasOutcome : ActualFullLabelPairGuards.ExactActualPairHasOutcome :=
+  ActualFullLabelPairGuards.exactActualPairHasOutcome
+
+theorem fixed_fullActualFullLabelPairGuards : ActualFullLabelPairGuards.FullActualFullLabelPairGuards :=
+  ⟨fixed_exactActualFullLabelPairGuard,fixed_exactActualFullLabelPairHasOutcome⟩
+
+#print axioms fixed_exactActualFullLabelPairGuard
+#print axioms fixed_exactActualFullLabelPairHasOutcome
+#print axioms fixed_fullActualFullLabelPairGuards
+
+end LogicLineages.PermittedControl.StatementChecks

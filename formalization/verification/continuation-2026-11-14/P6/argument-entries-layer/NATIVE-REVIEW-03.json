@@ -1,0 +1,6 @@
+{
+  "status": "static approved for retry; unaccepted",
+  "pins": "all native03 matched",
+  "diff": "--- \n+++ \n@@ -27,6 +27,8 @@\n theorem projectionEvaluation {n : Nat} (i : Fin n) (v : List.Vector Nat n) :\n     evaluate (.projection i) v = v.get i := rfl\n \n+theorem getOne (x t : Nat) : (x ::\u1d65 t ::\u1d65 List.Vector.nil).get (1 : Fin 2) = t := rfl\n+\n theorem prependValue (x t : Nat) :\n     evaluate prepend (List.Vector.ofFn ![x,t]) =\n       1 + Nat.pair (Nat.pair (Nat.unpair (Nat.unpair x).2).1\n@@ -48,7 +50,7 @@\n     constantEvaluation,succOfEvaluation,prependValue]\n   change (if (if (Nat.unpair x).1 = 6 then 1 else 0) = 0 then _ else _) = _\n   by_cases h6 : (Nat.unpair x).1 = 6 <;> by_cases h7 : (Nat.unpair x).1 = 7 <;>\n-    by_cases ht : t = 0 <;> simp [h6,h7,ht,raw,tailOption,projectionEvaluation]\n+    by_cases ht : t = 0 <;> simp [h6,h7,ht,raw,tailOption,projectionEvaluation,getOne]\n \n theorem nativeStep (n : Nat) (c : Code (Fin n))\n     (tail : Option (List (Ty \u00d7 Code (Fin n)))) :\n",
+  "scope": "Explicit Fin2 get1 equation and controlled simplification only; frozen encoding and target obligations unchanged."
+}

@@ -1,0 +1,11 @@
+import LogicLineages.PersistentMarking.NumberedWindowApplicationMatchProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowApplicationMatchChecks
+open NumberedWindowApplicationMatchTargets
+
+theorem exact_BackwardAddressMatching : ExactBackwardAddressMatching :=
+  NumberedWindowApplicationMatchProof.matching
+
+#print axioms exact_BackwardAddressMatching
+
+end LogicLineages.PersistentMarking.NumberedWindowApplicationMatchChecks

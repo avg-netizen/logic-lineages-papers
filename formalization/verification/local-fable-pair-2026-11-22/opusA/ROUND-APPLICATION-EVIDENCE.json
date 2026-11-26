@@ -1,0 +1,38 @@
+{
+ "lane": "opusA",
+ "key": "ROUND-APPLICATION",
+ "targets_module": "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationTargets",
+ "proof_modules": [
+  "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationSyntaxProof",
+  "LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationProof"
+ ],
+ "statements": {
+  "ExactRoundApplicationLeastAt": "NumberedWindowInternalCoverCombinedRestrictedRoundApplicationProof.exact_RoundApplicationLeastAt",
+  "ExactRoundApplicationLeast": "NumberedWindowInternalCoverCombinedRestrictedRoundApplicationProof.exact_RoundApplicationLeast"
+ },
+ "source_sha256": {
+  "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedRoundApplicationTargets.lean": "983d7a76af722947fd75492a2e261afe71ba969be45b0aa728155174fbe79da5",
+  "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedRoundApplicationSyntaxProof.lean": "a4f1d4fbc6b0f72585fbee9cd1b67ea2895a7da69136025f0c3705ace528d05b",
+  "LogicLineages/PersistentMarking/NumberedWindowInternalCoverCombinedRestrictedRoundApplicationProof.lean": "d274a1b43d9c88ba3ab49a388d8e7afa4575b76a99da39e5226a6d833ba740d2"
+ },
+ "passing_receipts": {
+  "targets_only": "1795384549289587332-3148056",
+  "syntax_proof": "1795384701261812025-3148639",
+  "proof": "1795384984519409430-3150389"
+ },
+ "print_axioms": [
+  "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationProof.exact_RoundApplicationLeastAt' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PersistentMarking.NumberedWindowInternalCoverCombinedRestrictedRoundApplicationProof.exact_RoundApplicationLeast' depends on axioms: [propext, Classical.choice, Quot.sound]"
+ ],
+ "accepted_suppliers": [
+  "#835 pattern; exact_ZeroRoundOrigin",
+  "exact_SuccessorRoundOrigin",
+  "exact_RetainedPredecessor",
+  "witnessUnfold/witnessBinder",
+  "roundRename/roundSubst",
+  "natInduction",
+  "InternalClosedProgramsBindingProof.introduction/elimination"
+ ],
+ "inputs": "relative one-edge premise ApplicationEdgeStepAt (or global ApplicationEdgeStep); seed motive; round; membership",
+ "source_map": "verification/local-fable-pair-2026-11-22/opusA/ROUND-APPLICATION-SOURCE-MAP.md"
+}

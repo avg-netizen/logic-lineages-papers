@@ -61,4 +61,9 @@ theorem literalInverse : ExpandedGraphTargets.LiteralInverse := by
     have hh := hf.mp hz.symm
     exact ⟨hu, hh.1, by simpa only [hu] using hh.2⟩
 
+#print axioms equation_eval
+#print axioms literalSubtraction
+#print axioms literalDivision
+#print axioms literalInverse
+
 end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.ExpandedGraphProof

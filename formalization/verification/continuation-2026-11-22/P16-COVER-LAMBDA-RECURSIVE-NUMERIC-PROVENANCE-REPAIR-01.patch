@@ -1,0 +1,5 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLambdaProvenanceProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverLambdaProvenanceProof.lean
+@@ -47 +47 @@
+-      simp [termNext,read,termParts,readSyntax smaller]
++      simp only [termNext,read,Option.any_some,termParts,readSyntax smaller]

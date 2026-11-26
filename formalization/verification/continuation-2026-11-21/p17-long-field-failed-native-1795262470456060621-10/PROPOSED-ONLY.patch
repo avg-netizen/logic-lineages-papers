@@ -1,0 +1,23 @@
+--- a/formalization/LogicLineages/PermittedControl/LongFieldTailCalibrationProof.lean
++++ b/formalization/LogicLineages/PermittedControl/LongFieldTailCalibrationProof.lean
+@@ -11,7 +11,8 @@
+ theorem omegaMultipleTailCode_calibrated (c : Nat) :
+     omegaMultipleTailCode c = rawNoteEncode (omegaMultiple c).1 := by
+   rcases Nat.eq_zero_or_pos c with rfl | hc
+-  · have hz : (omegaMultiple 0).1 = ONote.zero := by
++  · letI : ONote.NF ONote.zero := ONote.NF.zero
++    have hz : (omegaMultiple 0).1 = ONote.zero := by
+       apply ONote.repr_inj.mp
+       rw [omegaMultiple_repr, Nat.cast_zero, mul_zero] <;> rfl
+     rw [hz] <;> rfl
+--- a/formalization/verification/continuation-2026-11-21/PAPER17-LONG-FIELD-EFFECTIVE-TAIL-AUTHOR-MANIFEST.json
++++ b/formalization/verification/continuation-2026-11-21/PAPER17-LONG-FIELD-EFFECTIVE-TAIL-AUTHOR-MANIFEST.json
+@@ -13,7 +13,7 @@
+   "new_source_hashes": {
+     "formalization/LogicLineages/PermittedControl/LongFieldDistinctBoundProof.lean": "6e09dde3a499f3de8d5ab9bdd61cc3f33fb26e9cd6432b308c1811de3e0f30b1",
+     "formalization/LogicLineages/PermittedControl/LongFieldSameBoundProof.lean": "50992897b6e55221195ff227fb33f4d5915069920437fb8bec8de12ebcbfb77a",
+-    "formalization/LogicLineages/PermittedControl/LongFieldTailCalibrationProof.lean": "5ccefc7f16c634d600d64534b6cca0bc051dbe4c59edf81029dff270478dd33f",
++    "formalization/LogicLineages/PermittedControl/LongFieldTailCalibrationProof.lean": "8a33d719e724bd2772a4de9e729a0e3dacd67153f59af018e30f54cea49e03ad",
+     "formalization/LogicLineages/PermittedControl/LongFieldTailPrimitiveProof.lean": "722c42fc38afdb6e4e2460db27453c4ea03a857ecf0ba50fd1e7343b94241362",
+     "formalization/LogicLineages/PermittedControl/LongFieldEffectiveTailProof.lean": "33539ed2604d34311ef044e367cfad6ea1345e4cf004c89ca555742849604551",
+     "formalization/LogicLineages/PermittedControl/LongFieldEffectiveTailStatementChecks.lean": "a18f210a3ed8bfea5152fed667a518057ae117759d333523fe75cf915cb5294f"

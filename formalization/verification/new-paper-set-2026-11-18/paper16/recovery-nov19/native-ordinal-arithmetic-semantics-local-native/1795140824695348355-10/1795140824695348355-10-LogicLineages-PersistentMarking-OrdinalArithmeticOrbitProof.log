@@ -1,0 +1,33 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/OrdinalArithmeticOrbitProof.lean:63:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ↑(additionValue a ⟨p, ⋯⟩)
+in the target expression
+  ↑(additionValue a previous) + 1 = ↑a + (p + 1)
+
+case add_one
+a b : CountableOrdinal
+equations : OrbitEquations FiniteType.base successorValue a (orbit FiniteType.base successorValue a)
+p : Ordinal.{0}
+ih : ∀ (count : Countable { β // β < p }), ↑(additionValue a ⟨p, count⟩) = ↑a + p
+count : Countable { β // β < p + 1 }
+stage : CountableOrdinal := ⟨p + 1, count⟩
+previous : CountableOrdinal := earlierStage stage ⟨p, ⋯⟩
+⊢ ↑(additionValue a previous) + 1 = ↑a + (p + 1)
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/OrdinalArithmeticOrbitProof.lean:99:25: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ↑(multiplicationValue a ⟨p, ⋯⟩)
+in the target expression
+  ↑(multiplicationValue a previous) + ↑a = ↑a * (p + 1)
+
+case add_one
+a b : CountableOrdinal
+step : CountableOrdinal → CountableOrdinal := fun x => additionValue x a
+equations : OrbitEquations FiniteType.base step zeroValue (orbit FiniteType.base step zeroValue)
+p : Ordinal.{0}
+ih : ∀ (count : Countable { β // β < p }), ↑(multiplicationValue a ⟨p, count⟩) = ↑a * p
+count : Countable { β // β < p + 1 }
+stage : CountableOrdinal := ⟨p + 1, count⟩
+previous : CountableOrdinal := earlierStage stage ⟨p, ⋯⟩
+⊢ ↑(multiplicationValue a previous) + ↑a = ↑a * (p + 1)
+'LogicLineages.PersistentMarking.OrdinalArithmeticOrbitProof.exact_OrdinalArithmeticOrbits' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

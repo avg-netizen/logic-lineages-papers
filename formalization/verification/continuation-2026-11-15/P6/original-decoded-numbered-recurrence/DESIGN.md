@@ -1,0 +1,13 @@
+# Exact numbered-head standalone recurrence: frozen design
+
+Source: `LogicLineages/OrdinalComparison/TerminationOrdering/NumberedExchangeCodeDefinitions.lean`, numbered branch of `codeExchange` (lines48–56). Concrete AST bridge: `Continuation20261114/ConcreteHeadMoveLayer/Targets.lean`, `InternalNumbered` lines28–50, and its checked implementation. Reuse actual `OriginalDecodedLayerCalibration.layer` and `OriginalDecodedExchangeEquation.exchange`, not a replacement interpreter.
+
+Only six public observations: two literal six-input numbered constructors; parent pair; base/destination diagonal pair; extras diagonal pair; actual parameter pair. All malformed inputs remain included. Guard acceptance appears in the conclusion, never as an extra premise. Metadata has exactly `k=l AND (tau=upsilon AND ts=us)`; alternatives retain `(A OR B) OR C` and their original unchanged annotations.
+
+The actual encoded-head equality program is reused unchanged from OrdinaryRecurrence.Definitions. This does not establish arbitrary raw-head injectivity. The numbered source branch has no separate head-result equality test; no result computation is removed or invented. The actual concrete six-input headMove retains its own original operations.
+
+Duplicate search: no InternalNumbered/exactNumbered/numberedRecurrence endpoint in Continuation20261115. Existing ConcreteHeadMoveLayer.InternalNumbered is conditional on guard, outputs and four answer-list observations; it is not this unconditional standalone endpoint. Binary recurrence pays app/argumentsCons only, not tag3 numbered metadata and its three alternatives.
+
+Constructive plan: recover actual children `[base,extras]` and `[dest,otherExtras]` from the original numbered constructors; build literal row-major D `[pair(base,dest),pair(base,otherExtras),pair(extras,dest),pair(extras,otherExtras)]`. Query both middle pairs and every standalone child output internally, keeping all four ordered answers including duplicates and zeros. Use the paid recursive answer equation and concrete layer identity, derive guard rejection false internally, and consume the original numbered layer clause. Equality-output and value-success bridges remove all queried head and answer witnesses from the public endpoint. Answer positions0/3 correspond to first/last, with Some1=2 distinct from standalone1.
+
+This is one literal constructor recurrence, not full supplier installation, typed/raw semantic injectivity, packed/context calibration or E-completeness. Ordinary proof acceptance is not required by the frozen target; only its immutable equality-program definition is reused. No proof authored before independent target review and preflight pass.

@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.CutOccurrenceProof
+namespace LogicLineages.PersistentMarking.CutOccurrenceChecks
+theorem exact_fullOccurrences : CutOccurrenceTargets.FullOccurrences := CutOccurrenceProof.fullOccurrences
+#print axioms exact_fullOccurrences
+end LogicLineages.PersistentMarking.CutOccurrenceChecks

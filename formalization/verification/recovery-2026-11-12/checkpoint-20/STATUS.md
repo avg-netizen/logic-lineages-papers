@@ -1,0 +1,5 @@
+# Checked actual bounded-context deletion and insertion geometry
+
+Three exact aliases establish deletion geometry, observer opening and local application congruence. The first derives the existing Insert relation from the actual internal length, bounded cutoff, deleteAt and lookup graphs. The forward prefix and deletion programs are literal; no decoded list, native calibration, source, class-hit or insertion premise is supplied. Opening derives actual erased source/window and pre-minimum activation at the deleted context from original source/window/range and paired observations, with no supplied Insert. Application is local typed/source constructor observer congruence with explicit six source and four type premises; it is not actual-fold ApplicationLaw integration. No full-fold or erasure-transformer completion is claimed.
+
+319 recovery freeze hashes validate. Original aggregate and historical recovery limitations remain unchanged. No full-root or remote CI claim; register remains 171 checked, 2 inherited, 16 pending /189.

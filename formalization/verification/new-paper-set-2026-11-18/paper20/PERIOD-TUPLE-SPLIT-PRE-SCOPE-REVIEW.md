@@ -1,0 +1,7 @@
+# Independent dynamics/actual tuple frozen pre-scope
+
+Approved exact supporting seven-target staging. All eight new pins and original full-period fourteen pins independently match. Generic ExactPeriodFromExclusions quantifies arbitrary universe/function/state, positive r, genuine iterate2r return, midpoint nonreturn and ALL positive small s with3s<=2r nonreturn. Minimal-period divisor argument has no missing parity or finite-state premise; generic theorem alone grants no source theorem credit.
+
+Concrete RootExists derives inhabitance of the actual all-primitive-root index for every u>=5. ActualIterate is true pointwise Frobenius for arbitrary tuples and all exponents, while Upper/Midpoint/Small/Exact concern the original actual linked initial residue tuple. Midpoint/small nonfixedness cannot be supplied externally to ActualExact: all root-count, derivative/residue support, arithmetic and Frobenius premises must be checked internally. Every positive small exponent is retained, not a chosen exponent or finite-vector substitute.
+
+Current full source theorem remains literal v>=4 linked u=G(v), actual rational orbit coincidence and eventual divisibility; this helper scope does not establish it. Independent accepted initial Laurent bridge identifies the tuple with actual rational residues, and final assembly must retain that bridge. Separate helper gates and full exact theorem gate required; no import/cap/legacy changes authorized. If revised union hits cap, park as planned. No compiler invoked.

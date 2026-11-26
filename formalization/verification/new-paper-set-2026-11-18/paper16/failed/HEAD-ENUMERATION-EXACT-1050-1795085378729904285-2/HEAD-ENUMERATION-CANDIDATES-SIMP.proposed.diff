@@ -1,0 +1,11 @@
+--- LogicLineages/PersistentMarking/NumberedWindowHeadEnumerationCandidatesProof.lean
++++ LogicLineages/PersistentMarking/NumberedWindowHeadEnumerationCandidatesProof.lean
+@@ -24,7 +24,7 @@
+     by_cases e : name = x
+     · subst x
+       have p : (b,0) = (arity,i) :=
+-        Option.some.inj (by simpa only [Spine.lookupRank,if_pos rfl] using h)
++        Option.some.inj (by simpa only [Spine.lookupRank,if_pos rfl,if_true] using h)
+       have hb : b = arity := congrArg Prod.fst p
+       subst arity
+       exact List.mem_cons_self

@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.HereditaryDecodedValidityProof
+namespace LogicLineages.PersistentMarking.HereditaryDecodedValidityChecks
+theorem exact_DecodedValid : HereditaryNaturalityBridgeTargets.DecodedValid := HereditaryDecodedValidityProof.valid
+#print axioms exact_DecodedValid
+end LogicLineages.PersistentMarking.HereditaryDecodedValidityChecks

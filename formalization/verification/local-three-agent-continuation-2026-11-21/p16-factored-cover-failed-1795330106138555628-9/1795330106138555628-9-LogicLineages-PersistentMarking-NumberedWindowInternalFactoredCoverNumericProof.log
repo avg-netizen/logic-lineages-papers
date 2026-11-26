@@ -1,0 +1,22 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFactoredCoverNumericProof.lean:32:17: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFactoredCoverNumericProof.lean:76:11: error: Application type mismatch: The argument
+  (fun H K m => ?m.324) (Encodable.encode ?m.333 ::ᵥ Encodable.encode ?m.338 ::ᵥ Encodable.encode ?m.343 ::ᵥ nil)
+has type
+  (K : ?m.325 (Encodable.encode ?m.333 ::ᵥ Encodable.encode ?m.338 ::ᵥ Encodable.encode ?m.343 ::ᵥ nil)) →
+    (m : ?m.326 (Encodable.encode ?m.333 ::ᵥ Encodable.encode ?m.338 ::ᵥ Encodable.encode ?m.343 ::ᵥ nil) K) →
+      ?m.327 (Encodable.encode ?m.333 ::ᵥ Encodable.encode ?m.338 ::ᵥ Encodable.encode ?m.343 ::ᵥ nil) K m
+but is expected to have type
+  GrammarOptionCalibrated G
+in the application
+  Exists.intro G
+    ((fun H K m => ?m.324) (Encodable.encode ?m.333 ::ᵥ Encodable.encode ?m.338 ::ᵥ Encodable.encode ?m.343 ::ᵥ nil))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalFactoredCoverNumericProof.lean:77:75: error: Application type mismatch: The argument
+  m
+has type
+  Primrec fun a => readBounds (tail a).tail.head
+of sort `Prop` but is expected to have type
+  ?m.341
+of sort `Type ?u.165` in the application
+  Encodable.encode m

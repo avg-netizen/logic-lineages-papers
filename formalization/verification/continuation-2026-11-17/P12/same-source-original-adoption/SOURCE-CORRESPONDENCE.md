@@ -1,0 +1,7 @@
+# Original source projection/adoption comparator, no proof yet
+
+The target aliases the unchanged pre-existing SourceBaseCompletion.SelectedVerifierTargets.SelectedCertifiedPresentation and CertifiedSourceProvabilityCompletion.CollapseTargets.SourceCollapse. ComparatorGate independently restates each complete original existential contract. No original source or frozen comparator is edited.
+
+Planned projection takes one SameSourceLobCollapse source witness (fixing arbitrary harmless logical-template parameters before its existential), then reuses exactly its pF/pR/q/c/tagCK/pCK for BOTH original endpoints. This is not another selection procedure or substitution of a separately obtained existential. Actual, SyntaxAdequate, CodeProgram, RegistryInstall, FixedPointFor, both D HB schemata and selector-uniform chosen-CK collapse already coexist in that tuple. No proof oracle or extra assumption.
+
+Paper12 thm:collapse is the literal formula sourceC(tagCK,A) iff everyone A code(falseEquality), where sourceC is the installed original retained-parameter chosen common-knowledge constructor at selectorTheta(A). The selected tuple precedes every allowed full-language selector. This gate is a projection toward exact numbered-source adoption, not authority to modify TARGETS.json/REGISTER/TARGETS.md or to promote corollary-3/selector/full paper. The coordinator and independent adoption review own those decisions.

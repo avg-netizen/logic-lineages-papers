@@ -1,0 +1,16 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.DefaultAdditionTargets
+public import LogicLineages.OrdinalComparison.ParametricSourceAdditionProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.DefaultAddition
+theorem atomicAssignmentValue : DefaultAdditionTargets.AtomicAssignmentValue :=
+  LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.Proof.atomicAssignmentValue
+theorem weightedEquality : DefaultAdditionTargets.WeightedEquality :=
+  LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.Proof.weightedEquality
+theorem exactAddition : DefaultAdditionTargets.ExactAddition :=
+  LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.Proof.exactAddition
+theorem actualGammaAddition : DefaultAdditionTargets.ActualGammaAddition :=
+  LogicLineages.OrdinalComparison.Source.ParametricSourceAddition.Proof.actualGammaAddition
+#audit_namespace LogicLineages.ControlSensitivityCurrent.DefaultAddition
+end LogicLineages.ControlSensitivityCurrent.DefaultAddition

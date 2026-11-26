@@ -1,0 +1,78 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/OriginalCallShape.lean:42:15: error: unsolved goals
+case cons.free
+values : Args
+τ : Ty
+a : Expr
+rest : Args
+σ : Ty
+x : Nat
+ht : CallTyped EmptyContext (Expr.free σ x).type (Args.cons a rest) τ
+⊢ Blocked (Expr.free σ x) (1 + rest.length)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/OriginalCallShape.lean:43:16: error: unsolved goals
+case cons.bound
+values : Args
+τ : Ty
+a : Expr
+rest : Args
+σ : Ty
+i : Nat
+ht : CallTyped EmptyContext (Expr.bound σ i).type (Args.cons a rest) τ
+⊢ Blocked (Expr.bound σ i) (1 + rest.length)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/OriginalCallShape.lean:49:8: error: Type mismatch: After simplification, term
+  hi
+ has type
+  (∃ r, applyAux body rest (Args.cons a values) = some r) ↔ ¬Blocked body rest.length
+but is expected to have type
+  (∃ r, applyAux body rest (Args.cons a values) = some r) ↔ ¬Blocked (Expr.lam σ body) (1 + rest.length)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/OriginalCallShape.lean:50:18: error: unsolved goals
+case cons.head
+values : Args
+τ : Ty
+a : Expr
+rest : Args
+f : Head
+base : Args
+ht : CallTyped EmptyContext (Expr.head f base).type (Args.cons a rest) τ
+hc : consumeTypes f.result (Args.cons a rest) = some τ
+⊢ ¬Blocked (Expr.head f base) (1 + rest.length)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/OriginalCallShape.lean:54:29: error: unsolved goals
+case cons.marked
+values : Args
+τ : Ty
+a : Expr
+rest : Args
+f : Head
+σ : Ty
+base extras : Args
+ht : CallTyped EmptyContext (Expr.marked f σ base extras).type (Args.cons a rest) τ
+hc : consumeTypes σ (Args.cons a rest) = some τ
+⊢ ¬Blocked (Expr.marked f σ base extras) (1 + rest.length)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/OriginalCallShape.lean:58:0: warning: unused `termination_by`, function is not recursive
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/OriginalCallShape.lean:42:45: warning: This simp argument is unused:
+  Blocked
+
+Hint: Omit it from the simp argument list.
+  simp [̵a̵p̵p̵l̵y̵A̵u̵x̵,̵A̵r̵g̵s̵.̵l̵e̵n̵g̵t̵h̵,̵B̵l̵o̵c̵k̵e̵d̵]̵[̲a̲p̲p̲l̲y̲A̲u̲x̲,̲ ̲A̲r̲g̲s̲.̲l̲e̲n̲g̲t̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/OriginalCallShape.lean:43:46: warning: This simp argument is unused:
+  Blocked
+
+Hint: Omit it from the simp argument list.
+  simp [̵a̵p̵p̵l̵y̵A̵u̵x̵,̵A̵r̵g̵s̵.̵l̵e̵n̵g̵t̵h̵,̵B̵l̵o̵c̵k̵e̵d̵]̵[̲a̲p̲p̲l̲y̲A̲u̲x̲,̲ ̲A̲r̲g̲s̲.̲l̲e̲n̲g̲t̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/OriginalCallShape.lean:53:36: warning: This simp argument is unused:
+  Blocked
+
+Hint: Omit it from the simp argument list.
+  simp [̵a̵p̵p̵l̵y̵A̵u̵x̵,̵h̵c̵,̵A̵r̵g̵s̵.̵l̵e̵n̵g̵t̵h̵,̵B̵l̵o̵c̵k̵e̵d̵]̵[̲a̲p̲p̲l̲y̲A̲u̲x̲,̲ ̲h̲c̲,̲ ̲A̲r̲g̲s̲.̲l̲e̲n̲g̲t̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/OriginalCallShape.lean:57:36: warning: This simp argument is unused:
+  Blocked
+
+Hint: Omit it from the simp argument list.
+  simp [̵a̵p̵p̵l̵y̵A̵u̵x̵,̵h̵c̵,̵A̵r̵g̵s̵.̵l̵e̵n̵g̵t̵h̵,̵B̵l̵o̵c̵k̵e̵d̵]̵[̲a̲p̲p̲l̲y̲A̲u̲x̲,̲ ̲h̲c̲,̲ ̲A̲r̲g̲s̲.̲l̲e̲n̲g̲t̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

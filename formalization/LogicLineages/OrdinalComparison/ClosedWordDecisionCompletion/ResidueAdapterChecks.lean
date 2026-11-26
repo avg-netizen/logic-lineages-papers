@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.ResidueAdapterProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.ResidueAdapterChecks
+
+theorem exact_residue_syntax : BranchTargets.ExactResidueSyntax :=
+  ResidueAdapterProof.exactResidueSyntax
+
+theorem exact_residue_semantics : BranchTargets.ExactResidueSemantics :=
+  ResidueAdapterProof.exactResidueSemantics
+
+#print axioms exact_residue_syntax
+#print axioms exact_residue_semantics
+
+end LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.ResidueAdapterChecks
+
+#audit_namespace LogicLineages.OrdinalComparison.ClosedWordDecisionCompletion.ResidueAdapterChecks

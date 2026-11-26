@@ -1,0 +1,232 @@
+module
+public import LogicLineages.PermittedControl.UniformPolicyCompilerTargets
+public import LogicLineages.PermittedControl.UniformPolicyCompilerPiecesProof
+public import LogicLineages.StandardControlCurrent.PolicyAssignmentDefinitions
+import LogicLineages.OrdinalComparison.WWSourceSyntaxCodeCheckStatementChecks
+import LogicLineages.OrdinalComparison.WWSourceSyntaxCodeTypesStatementChecks
+import LogicLineages.OrdinalComparison.WWOrdinalSyntaxVectorCompilerComputability
+import Mathlib.Computability.Primrec.List
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.UniformPolicyCompiler
+open OrdinalComparison Source Source.AdmissibleSum Source.SyntaxCode Source.OrdinalSyntax Source.ForwardTranslation
+open PolicySuppliedCodeMacro (RealizesPolicy)
+open StandardControlCurrent
+
+/-! ## Base codes -/
+
+noncomputable def primeP (e : Code) (tag payload resultLevel : Nat) : Part (Option (List Nat)) :=
+  if tag = 0 then Part.some (some ((List.range (resultLevel+1)).map (fun i => 8*Nat.pair payload i+3)))
+  else if tag = 4 then recursorP e (typeLevel payload) resultLevel
+  else Part.some (some (List.replicate (resultLevel+1) 1))
+
+theorem primePartrec : Partrec (fun x : Code × Nat × Nat × Nat => primeP x.1 x.2.1 x.2.2.1 x.2.2.2) := by
+  let A := Code × Nat × Nat × Nat
+  have ht : Primrec (fun x : A => x.2.1) := Primrec.fst.comp Primrec.snd
+  have hp : Primrec (fun x : A => x.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
+  have hr : Primrec (fun x : A => x.2.2.2) := Primrec.snd.comp (Primrec.snd.comp Primrec.snd)
+  have hvars : Primrec (fun x : A => (List.range (x.2.2.2+1)).map (fun i => 8*Nat.pair x.2.2.1 i+3)) := by
+    apply Primrec.list_map (Primrec.list_range.comp (Primrec.succ.comp hr))
+    exact (Primrec.nat_add.comp (Primrec.nat_mul.comp (Primrec.const 8)
+      (Primrec₂.natPair.comp (hp.comp Primrec.fst) Primrec.snd)) (Primrec.const 3)).to₂
+  have hones : Primrec (fun x : A => List.replicate (x.2.2.2+1) 1) := by
+    have h := Primrec.list_map (Primrec.list_range.comp (Primrec.succ.comp hr)) (Primrec.const 1).to₂
+    exact h.of_eq (fun x => by simp)
+  have hrec : Partrec (fun x : A => recursorP x.1 (typeLevel x.2.2.1) x.2.2.2) := by
+    have h := recursorPartrec.comp (Computable.fst.pair
+      ((SyntaxCode.StatementChecks.typeLevelPrimitiveRecursive.comp hp).to_comp.pair hr.to_comp))
+    exact h
+  have h0 : Computable (fun x : A => decide (x.2.1 = 0)) := (Primrec.eq.comp ht (Primrec.const 0)).decide.to_comp
+  have h4 : Computable (fun x : A => decide (x.2.1 = 4)) := (Primrec.eq.comp ht (Primrec.const 4)).decide.to_comp
+  have h := pite (P := fun x : A => x.2.1 = 0) h0 (Primrec.option_some.comp hvars).to_comp.partrec
+    (pite (P := fun x : A => x.2.1 = 4) h4 hrec (Primrec.option_some.comp hones).to_comp.partrec)
+  exact h
+
+theorem primeCal {e : Code} {p : Policy} (he : RealizesPolicy e p) (tag payload resultLevel : Nat) :
+    primeP e tag payload resultLevel = Part.some (PolicyAssignment.primeCode p tag payload resultLevel) := by
+  unfold primeP PolicyAssignment.primeCode
+  by_cases h0 : tag = 0
+  · simp [h0]
+  · rw [if_neg h0,if_neg h0]
+    by_cases h4 : tag = 4
+    · rw [if_pos h4,if_pos h4]
+      exact recursorCal he _ _
+    · simp [h4]
+
+/-! ## The assignment recursion through the fixed-point theorem -/
+
+abbrev AArgs := Code × List Nat × Nat
+
+noncomputable def assignStep (G : AArgs →. Option (List Nat)) (x : AArgs) : Part (Option (List Nat)) :=
+  pbind (Part.some (check x.2.1 x.2.2)) (fun resultType =>
+    if x.2.2 % 8 < 5 then primeP x.1 (x.2.2 % 8) (x.2.2/8) (typeLevel resultType)
+    else if x.2.2 % 8 = 5 then
+      pbind (Part.some (check x.2.1 (x.2.2/8).unpair.2)) (fun argType =>
+        pbind (G (x.1,x.2.1,(x.2.2/8).unpair.1)) (fun f =>
+          pbind (G (x.1,x.2.1,(x.2.2/8).unpair.2)) (fun a =>
+            applicationP x.1 (typeLevel resultType) (typeLevel argType) f a)))
+    else if x.2.2 % 8 = 6 then
+      pbind (Part.some (check ((x.2.2/8).unpair.1 :: x.2.1) (x.2.2/8).unpair.2)) (fun bodyType =>
+        pbind (G (x.1,(x.2.2/8).unpair.1 :: x.2.1,(x.2.2/8).unpair.2)) (fun b =>
+          abstractionP x.1 (typeLevel (x.2.2/8).unpair.1) (typeLevel bodyType) b))
+    else Part.some none)
+
+theorem assignStepPartrec : Partrec (fun y : Code × AArgs => assignStep (decodeEval y.1) y.2) := by
+  let Y := Code × AArgs
+  have hcheck : Primrec (fun p : List Nat × Nat => check p.1 p.2) :=
+    SyntaxCode.StatementChecks.checkPrimitiveRecursive
+  have hlevel : Primrec typeLevel := SyntaxCode.StatementChecks.typeLevelPrimitiveRecursive
+  have hc : Computable (fun y : Y => y.1) := Computable.fst
+  have he : Computable (fun y : Y => y.2.1) := Computable.fst.comp Computable.snd
+  have hΓ : Primrec (fun y : Y => y.2.2.1) := Primrec.fst.comp (Primrec.snd.comp Primrec.snd)
+  have hn : Primrec (fun y : Y => y.2.2.2) := Primrec.snd.comp (Primrec.snd.comp Primrec.snd)
+  have hq : Primrec (fun y : Y => (y.2.2.2/8).unpair) := Primrec.unpair.comp (Primrec.nat_div.comp hn (Primrec.const 8))
+  have hq1 : Primrec (fun y : Y => (y.2.2.2/8).unpair.1) := Primrec.fst.comp hq
+  have hq2 : Primrec (fun y : Y => (y.2.2.2/8).unpair.2) := Primrec.snd.comp hq
+  have hm : Primrec (fun y : Y => y.2.2.2 % 8) := Primrec.nat_mod.comp hn (Primrec.const 8)
+  have hfirst : Partrec (fun y : Y => (Part.some (check y.2.2.1 y.2.2.2) : Part (Option Nat))) :=
+    (hcheck.comp (hΓ.pair hn)).to_comp.partrec
+  let Z := Y × Nat
+  have zc : Computable (fun z : Z => z.1.1) := hc.comp Computable.fst
+  have ze : Computable (fun z : Z => z.1.2.1) := he.comp Computable.fst
+  have zΓ : Primrec (fun z : Z => z.1.2.2.1) := hΓ.comp Primrec.fst
+  have zn : Primrec (fun z : Z => z.1.2.2.2) := hn.comp Primrec.fst
+  have zq1 : Primrec (fun z : Z => (z.1.2.2.2/8).unpair.1) := hq1.comp Primrec.fst
+  have zq2 : Primrec (fun z : Z => (z.1.2.2.2/8).unpair.2) := hq2.comp Primrec.fst
+  have zm : Primrec (fun z : Z => z.1.2.2.2 % 8) := hm.comp Primrec.fst
+  have zr : Primrec (fun z : Z => typeLevel z.2) := hlevel.comp Primrec.snd
+  have hprime : Partrec (fun z : Z => primeP z.1.2.1 (z.1.2.2.2 % 8) (z.1.2.2.2/8) (typeLevel z.2)) := by
+    have h := primePartrec.comp (ze.pair (zm.to_comp.pair
+      ((Primrec.nat_div.comp zn (Primrec.const 8)).to_comp.pair zr.to_comp)))
+    exact h
+  -- application branch
+  have happCheck : Partrec (fun z : Z => (Part.some (check z.1.2.2.1 (z.1.2.2.2/8).unpair.2) : Part (Option Nat))) :=
+    (hcheck.comp (zΓ.pair zq2)).to_comp.partrec
+  let W := Z × Nat
+  have wc : Computable (fun w : W => w.1.1.1) := zc.comp Computable.fst
+  have we : Computable (fun w : W => w.1.1.2.1) := ze.comp Computable.fst
+  have wΓ : Computable (fun w : W => w.1.1.2.2.1) := zΓ.to_comp.comp Computable.fst
+  have wq1 : Computable (fun w : W => (w.1.1.2.2.2/8).unpair.1) := zq1.to_comp.comp Computable.fst
+  have wq2 : Computable (fun w : W => (w.1.1.2.2.2/8).unpair.2) := zq2.to_comp.comp Computable.fst
+  have wr : Computable (fun w : W => typeLevel w.1.2) := zr.to_comp.comp Computable.fst
+  have wa : Computable (fun w : W => typeLevel w.2) := hlevel.to_comp.comp Computable.snd
+  have hf1 : Partrec (fun w : W => (decodeEval w.1.1.1 (w.1.1.2.1,w.1.1.2.2.1,(w.1.1.2.2.2/8).unpair.1) :
+      Part (Option (List Nat)))) :=
+    decodeEvalPartrec.comp (wc.pair (we.pair (wΓ.pair wq1)))
+  let V := W × List Nat
+  have hf2 : Partrec (fun v : V => (decodeEval v.1.1.1.1 (v.1.1.1.2.1,v.1.1.1.2.2.1,(v.1.1.1.2.2.2/8).unpair.2) :
+      Part (Option (List Nat)))) :=
+    decodeEvalPartrec.comp ((wc.comp Computable.fst).pair ((we.comp Computable.fst).pair
+      ((wΓ.comp Computable.fst).pair (wq2.comp Computable.fst))))
+  have happ : Partrec (fun u : V × List Nat => applicationP u.1.1.1.1.2.1 (typeLevel u.1.1.1.2)
+      (typeLevel u.1.1.2) u.1.2 u.2) := by
+    have h := applicationPartrec.comp ((we.comp (Computable.fst.comp Computable.fst)).pair
+      ((wr.comp (Computable.fst.comp Computable.fst)).pair ((wa.comp (Computable.fst.comp Computable.fst)).pair
+        ((Computable.snd.comp Computable.fst).pair Computable.snd))))
+    exact h
+  have happInner := pbindPartrec hf2 happ.to₂
+  have happOuter := pbindPartrec hf1 happInner.to₂
+  have happBranch := pbindPartrec happCheck happOuter.to₂
+  -- abstraction branch
+  have hlamCheck : Partrec (fun z : Z => (Part.some (check ((z.1.2.2.2/8).unpair.1 :: z.1.2.2.1)
+      (z.1.2.2.2/8).unpair.2) : Part (Option Nat))) :=
+    (hcheck.comp ((Primrec.list_cons.comp zq1 zΓ).pair zq2)).to_comp.partrec
+  have hb : Partrec (fun w : W => (decodeEval w.1.1.1 (w.1.1.2.1,(w.1.1.2.2.2/8).unpair.1 :: w.1.1.2.2.1,
+      (w.1.1.2.2.2/8).unpair.2) : Part (Option (List Nat)))) :=
+    decodeEvalPartrec.comp (wc.pair (we.pair ((Primrec.list_cons.to_comp.comp wq1 wΓ).pair wq2)))
+  have habs : Partrec (fun v : V => abstractionP v.1.1.1.2.1 (typeLevel (v.1.1.1.2.2.2/8).unpair.1)
+      (typeLevel v.1.2) v.2) := by
+    have h := abstractionPartrec.comp ((we.comp Computable.fst).pair
+      (((hlevel.to_comp.comp wq1).comp Computable.fst).pair ((wa.comp Computable.fst).pair Computable.snd)))
+    exact h
+  have hlamInner := pbindPartrec hb habs.to₂
+  have hlamBranch := pbindPartrec hlamCheck hlamInner.to₂
+  have hlt : Computable (fun z : Z => decide (z.1.2.2.2 % 8 < 5)) := (Primrec.nat_lt.comp zm (Primrec.const 5)).decide.to_comp
+  have h5 : Computable (fun z : Z => decide (z.1.2.2.2 % 8 = 5)) := (Primrec.eq.comp zm (Primrec.const 5)).decide.to_comp
+  have h6 : Computable (fun z : Z => decide (z.1.2.2.2 % 8 = 6)) := (Primrec.eq.comp zm (Primrec.const 6)).decide.to_comp
+  have hnone : Partrec (fun _ : Z => (Part.some none : Part (Option (List Nat)))) :=
+    (Computable.const (none : Option (List Nat))).partrec
+  have hcont := pite (P := fun z : Z => z.1.2.2.2 % 8 < 5) hlt hprime
+    (pite (P := fun z : Z => z.1.2.2.2 % 8 = 5) h5 happBranch
+      (pite (P := fun z : Z => z.1.2.2.2 % 8 = 6) h6 hlamBranch hnone))
+  have h := pbindPartrec hfirst hcont.to₂
+  exact h
+
+/-- The uniform literal assignment, a fixed point of the step. -/
+noncomputable def assignU : AArgs →. Option (List Nat) :=
+  Classical.choose (exists_fix assignStep assignStepPartrec)
+
+theorem assignUPartrec : Partrec assignU := (Classical.choose_spec (exists_fix assignStep assignStepPartrec)).1
+
+theorem assignUFix (x : AArgs) : assignU x = assignStep assignU x :=
+  (Classical.choose_spec (exists_fix assignStep assignStepPartrec)).2 x
+
+theorem assignUCal {e : Code} {p : Policy} (he : RealizesPolicy e p) (Γ : List Nat) (n : Nat) :
+    assignU (e,Γ,n) = Part.some (PolicyAssignment.assignmentCode p Γ n) := by
+  induction n using Nat.strong_induction_on generalizing Γ with
+  | _ n ih =>
+    rw [assignUFix,PolicyAssignment.assignmentCode]
+    unfold assignStep
+    apply pbind_calibrated
+    intro resultType
+    by_cases hlt : n % 8 < 5
+    · rw [if_pos hlt,if_pos hlt]
+      exact primeCal he _ _ _
+    · rw [if_neg hlt,if_neg hlt]
+      have hpos : 0 < n := by omega
+      have hd : n/8 < n := Nat.div_lt_self hpos (by decide)
+      have hl : (n/8).unpair.1 < n := (Nat.unpair_left_le _).trans_lt hd
+      have hr : (n/8).unpair.2 < n := (Nat.unpair_right_le _).trans_lt hd
+      by_cases h5 : n % 8 = 5
+      · have hb : n % 8 = 5 ∨ n % 8 = 6 := Or.inl h5
+        rw [if_pos h5,dif_pos hb,if_pos h5]
+        apply pbind_calibrated
+        intro argType
+        rw [ih _ hl]
+        apply pbind_calibrated
+        intro f
+        rw [ih _ hr]
+        exact pbind_calibrated _ _ _ (fun a => applicationCal he _ _ _ _)
+      · rw [if_neg h5]
+        by_cases h6 : n % 8 = 6
+        · have hb : n % 8 = 5 ∨ n % 8 = 6 := Or.inr h6
+          rw [if_pos h6,dif_pos hb,if_neg h5]
+          apply pbind_calibrated
+          intro bodyType
+          rw [ih _ hr]
+          exact pbind_calibrated _ _ _ (fun b => abstractionCal he _ _ _)
+        · have hb : ¬ (n % 8 = 5 ∨ n % 8 = 6) := by omega
+          rw [if_neg h6,dif_neg hb]
+
+/-! ## The uniform source compiler -/
+
+noncomputable def compilePolicy (x : Code × Nat × Nat) : Part (Option EncodedVector) :=
+  pbind (assignU (x.1,List.replicate x.2.1 0,x.2.2)) (fun v => Part.some (compileVectorCode v))
+
+theorem compilePolicyPartrec : Partrec compilePolicy := by
+  let A := Code × Nat × Nat
+  have hctx : Computable (fun x : A => List.replicate x.2.1 0) :=
+    replicateC.comp ((Computable.fst.comp Computable.snd).pair (Computable.const 0))
+  have ha : Partrec (fun x : A => assignU (x.1,List.replicate x.2.1 0,x.2.2)) :=
+    assignUPartrec.comp (Computable.fst.pair (hctx.pair (Computable.snd.comp Computable.snd)))
+  have hv : Partrec₂ (fun (_ : A) (v : List Nat) => (Part.some (compileVectorCode v) : Part (Option EncodedVector))) :=
+    (ordinalSyntaxVectorCompilerPrimitiveRecursive.to_comp.comp Computable.snd).partrec.to₂
+  have h := pbindPartrec ha hv
+  exact h
+
+theorem compilePolicyCalibrated : Calibrated compilePolicy := by
+  intro e p he d c
+  change pbind (assignU (e,List.replicate d 0,c)) (fun v => Part.some (compileVectorCode v)) =
+    Part.some (PolicySourceInterface.compile p d c)
+  rw [assignUCal he]
+  exact pbind_calibrated _ _ _ (fun v => rfl)
+
+/-- The uniform source compiler: one partial recursive function of the supplied
+policy program, calibrated to `PolicySourceInterface.compile`. -/
+theorem exactUniformCompiler : ExactUniformCompiler :=
+  ⟨compilePolicy,compilePolicyPartrec,compilePolicyCalibrated⟩
+
+#print axioms compilePolicyPartrec
+#print axioms compilePolicyCalibrated
+#print axioms exactUniformCompiler
+end LogicLineages.PermittedControl.UniformPolicyCompiler

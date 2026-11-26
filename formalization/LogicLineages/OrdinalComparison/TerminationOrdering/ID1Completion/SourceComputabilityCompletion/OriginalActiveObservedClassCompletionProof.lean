@@ -1,0 +1,17 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalActiveObservedClassProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentMinimumInternalMinimumProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalTransparentMinimumInternalScanProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalActiveObservedClassCompletionProof
+
+theorem actualOriginalActiveObservedGuardCollapse :
+    OriginalActiveObservedClassTargets.ActualOriginalActiveObservedGuardCollapse := by
+  intro p H G W P
+  exact OriginalActiveObservedClassProof.guardCollapseOfMinimum p H G W P
+    (OriginalTransparentMinimumInternalMinimumProof.minimumOfScan _ _
+      (OriginalTransparentMinimumInternalScanProof.actualOriginalTransparentMinimumInternalScan _))
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalActiveObservedClassCompletionProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalActiveObservedClassCompletionProof

@@ -1,0 +1,126 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMatchReductionChecks.lean:51:13: error: don't know how to synthesize implicit argument `b`
+  @Iff.mpr
+    (Nonempty
+      (Derivation body
+        (accepts (if false = true then d else r) (Term.relabel Sum.inl x) (var (Sum.inr 0)) (Term.relabel Sum.inl y) ::
+          ?m.79)
+        (certificate (data i j r d) false c (Term.relabel Sum.inl x) (Term.relabel Sum.inl y) (var (Sum.inr 0)))))
+    (Nonempty
+      (Derivation body
+        (accepts (if false = true then d else r) (Term.relabel Sum.inl x) (var (Sum.inr 0)) (Term.relabel Sum.inl y) ::
+          ?m.79)
+        (accepts (if false = true then d else r) (Term.relabel Sum.inl x) (var (Sum.inr 0)) (Term.relabel Sum.inl y))))
+    (NumberedWindowInternalCoordinateChecks.exact_CertificateRules i j r d false c body (α ⊕ ℕ)
+      (accepts (if false = true then d else r) (Term.relabel Sum.inl x) (var (Sum.inr 0)) (Term.relabel Sum.inl y) ::
+        ?m.79)
+      (Term.relabel Sum.inl x) (Term.relabel Sum.inl y) (var (Sum.inr 0)))
+    (Nonempty.intro (Derivation.hypothesis List.mem_cons_self))
+context:
+i j : Program 1
+r d : Program 3
+c : ℕ
+body : PositiveArithmeticOperators.Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+x y : OTerm α
+src : Derivation body Γ (suppliedEdge r x y)
+⊢ Prop
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMatchReductionChecks.lean:51:13: error: don't know how to synthesize implicit argument `a`
+  @Iff.mpr
+    (Nonempty
+      (Derivation body
+        (accepts (if false = true then d else r) (Term.relabel Sum.inl x) (var (Sum.inr 0)) (Term.relabel Sum.inl y) ::
+          ?m.79)
+        (certificate (data i j r d) false c (Term.relabel Sum.inl x) (Term.relabel Sum.inl y) (var (Sum.inr 0)))))
+    (Nonempty
+      (Derivation body
+        (accepts (if false = true then d else r) (Term.relabel Sum.inl x) (var (Sum.inr 0)) (Term.relabel Sum.inl y) ::
+          ?m.79)
+        (accepts (if false = true then d else r) (Term.relabel Sum.inl x) (var (Sum.inr 0)) (Term.relabel Sum.inl y))))
+    (NumberedWindowInternalCoordinateChecks.exact_CertificateRules i j r d false c body (α ⊕ ℕ)
+      (accepts (if false = true then d else r) (Term.relabel Sum.inl x) (var (Sum.inr 0)) (Term.relabel Sum.inl y) ::
+        ?m.79)
+      (Term.relabel Sum.inl x) (Term.relabel Sum.inl y) (var (Sum.inr 0)))
+    (Nonempty.intro (Derivation.hypothesis List.mem_cons_self))
+context:
+i j : Program 1
+r d : Program 3
+c : ℕ
+body : PositiveArithmeticOperators.Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+x y : OTerm α
+src : Derivation body Γ (suppliedEdge r x y)
+⊢ Prop
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMatchReductionChecks.lean:53:4: error: don't know how to synthesize implicit argument `α`
+  @Nonempty.intro
+    (Derivation body
+      (accepts (if false = true then d else r) (Term.relabel Sum.inl x) (var (Sum.inr 0)) (Term.relabel Sum.inl y) ::
+        ?m.79)
+      (accepts (if false = true then d else r) (Term.relabel Sum.inl x) (var (Sum.inr 0)) (Term.relabel Sum.inl y)))
+    (Derivation.hypothesis List.mem_cons_self)
+context:
+i j : Program 1
+r d : Program 3
+c : ℕ
+body : PositiveArithmeticOperators.Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+x y : OTerm α
+src : Derivation body Γ (suppliedEdge r x y)
+⊢ Type 1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMatchReductionChecks.lean:53:5: error: don't know how to synthesize implicit argument `Gamma`
+  @Derivation.hypothesis body (α ⊕ ℕ)
+    (accepts (if false = true then d else r) (Term.relabel Sum.inl x) (var (Sum.inr 0)) (Term.relabel Sum.inl y) ::
+      ?m.79)
+    (accepts (if false = true then d else r) (Term.relabel Sum.inl x) (var (Sum.inr 0)) (Term.relabel Sum.inl y)) ⋯
+context:
+i j : Program 1
+r d : Program 3
+c : ℕ
+body : PositiveArithmeticOperators.Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+x y : OTerm α
+src : Derivation body Γ (suppliedEdge r x y)
+⊢ List (ID1Completion.InternalCalculus.Formula (α ⊕ ℕ))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMatchReductionChecks.lean:53:27: error: don't know how to synthesize implicit argument `l`
+  @List.mem_cons_self (ID1Completion.InternalCalculus.Formula (α ⊕ ℕ))
+    (accepts (if false = true then d else r) (Term.relabel Sum.inl x) (var (Sum.inr 0)) (Term.relabel Sum.inl y)) ?m.79
+context:
+i j : Program 1
+r d : Program 3
+c : ℕ
+body : PositiveArithmeticOperators.Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+x y : OTerm α
+src : Derivation body Γ (suppliedEdge r x y)
+⊢ List (ID1Completion.InternalCalculus.Formula (α ⊕ ℕ))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMatchReductionChecks.lean:52:11: error: don't know how to synthesize placeholder for argument `Γ`
+context:
+i j : Program 1
+r d : Program 3
+c : ℕ
+body : PositiveArithmeticOperators.Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+x y : OTerm α
+src : Derivation body Γ (suppliedEdge r x y)
+⊢ List (ID1Completion.InternalCalculus.Formula (α ⊕ ℕ))
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMatchReductionChecks.lean:51:7: error: failed to infer `have` declaration type
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalMatchReductionChecks.lean:45:70: error: unsolved goals
+i j : Program 1
+r d : Program 3
+c : ℕ
+body : PositiveArithmeticOperators.Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+x y : OTerm α
+src : Derivation body Γ (suppliedEdge r x y)
+⊢ Derivation body (accepts r (Term.relabel Sum.inl x) (var (Sum.inr 0)) (Term.relabel Sum.inl y) :: List.map weaken Γ)
+    (edge (data i j r d) false c (Term.relabel Sum.inl x) (Term.relabel Sum.inl y))
+'LogicLineages.PersistentMarking.NumberedWindowInternalMatchReductionChecks.exact_MatchingReduction' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

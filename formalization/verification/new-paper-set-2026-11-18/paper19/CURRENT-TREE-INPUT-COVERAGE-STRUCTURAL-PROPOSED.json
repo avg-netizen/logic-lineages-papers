@@ -1,0 +1,21 @@
+{
+  "status": "proposal only; active frozen source untouched",
+  "scope": "typed builder termination and context equality only; all observable constructors, row order, retained reference indices, raw rows and compile formulas, public input/build types, and theorem targets unchanged",
+  "only_affected_pin": "LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageDefinitions.lean",
+  "old_sha256": "f041b946669ce7fae2b7de5842edd45bfd639b02189ab9c488f5a78e99cb1780",
+  "proposed_sha256": "1b05d7086bbc156544d886909adaef56abb9c816bfb9de3309a940b273f90976",
+  "failure": "build-reports/1795072508536538943-2.json",
+  "exact_error": {
+    "line": 44,
+    "column": 50,
+    "text": "omega could not prove the goal: a possible counterexample may satisfy the constraints c \u2265 0, a \u2265 0, a - c \u2265 1 where a := \u2191(treeNodes b), c := \u2191(treeNodes b)"
+  },
+  "actual_diagnosis": "the only error follows the numeric raw termination fix; typed lambda recursive call compares the same body across elaborated dependent contexts, so the identical printed atoms are not definitionally recognized by omega",
+  "approved_if_preserved": [
+    "structural recursion on the constructor child of t, with ambient context \u039e/result \u03c4 as free term indices rather than a compound fixed context",
+    "proof-erased equation \u0394 ++ \u0393 = \u039e; only variable transport, reflexive at public build and propagated by congrArg under a binder",
+    "function graph then argument graph then application; ad.keep .here and .here, with old embedding .there \u2218 ad.keep \u2218 fd.keep unchanged",
+    "lambda body context \u03b1 :: \u0394 then lambda with .here; old embedding .there \u2218 bd.keep unchanged",
+    "fixed source constructors unchanged; unrestricted raw numeric rows and guarded compile byte-identical; public targets and eight separate decision pins unchanged"
+  ]
+}

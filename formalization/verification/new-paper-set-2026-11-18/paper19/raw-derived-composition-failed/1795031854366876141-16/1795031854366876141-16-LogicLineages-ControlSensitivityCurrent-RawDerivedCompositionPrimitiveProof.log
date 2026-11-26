@@ -1,0 +1,48 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionPrimitiveProof.lean:114:34: error: Tactic `rfl` failed: The left-hand side
+  bif false then some (detectorLeftRaw p.1 p.2, detectorRightRaw p.1 p.2) else none
+is not definitionally equal to the right-hand side
+  detectors p.1 p.2
+
+case refine_1.false
+p : Code × Code
+⊢ (bif false then some (detectorLeftRaw p.1 p.2, detectorRightRaw p.1 p.2) else none) = detectors p.1 p.2
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionPrimitiveProof.lean:114:34: error: Tactic `rfl` failed: The left-hand side
+  bif true then some (detectorLeftRaw p.1 p.2, detectorRightRaw p.1 p.2) else none
+is not definitionally equal to the right-hand side
+  detectors p.1 p.2
+
+case refine_1.true
+p : Code × Code
+⊢ (bif true then some (detectorLeftRaw p.1 p.2, detectorRightRaw p.1 p.2) else none) = detectors p.1 p.2
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionPrimitiveProof.lean:118:37: error: Tactic `rfl` failed: The left-hand side
+  bif false then some (aggregateRaw p.1 p.2) else none
+is not definitionally equal to the right-hand side
+  aggregate p.1 p.2
+
+case refine_2.false
+p : List ℕ × List (Code × Code)
+⊢ (bif false then some (aggregateRaw p.1 p.2) else none) = aggregate p.1 p.2
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionPrimitiveProof.lean:118:37: error: Tactic `rfl` failed: The left-hand side
+  bif true then some (aggregateRaw p.1 p.2) else none
+is not definitionally equal to the right-hand side
+  aggregate p.1 p.2
+
+case refine_2.true
+p : List ℕ × List (Code × Code)
+⊢ (bif true then some (aggregateRaw p.1 p.2) else none) = aggregate p.1 p.2
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionPrimitiveProof.lean:122:31: error: Tactic `rfl` failed: The left-hand side
+  bif false then some (wrapperRaw p.1 p.2) else none
+is not definitionally equal to the right-hand side
+  wrap p.1 p.2
+
+case refine_3.false
+p : Bool × Code
+⊢ (bif false then some (wrapperRaw p.1 p.2) else none) = wrap p.1 p.2
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/RawDerivedCompositionPrimitiveProof.lean:122:31: error: Tactic `rfl` failed: The left-hand side
+  bif true then some (wrapperRaw p.1 p.2) else none
+is not definitionally equal to the right-hand side
+  wrap p.1 p.2
+
+case refine_3.true
+p : Bool × Code
+⊢ (bif true then some (wrapperRaw p.1 p.2) else none) = wrap p.1 p.2

@@ -1,0 +1,6 @@
+{
+  "status": "static approved for retry; unaccepted",
+  "pins": "all matched",
+  "diff": "--- \n+++ \n@@ -10,6 +10,8 @@\n open LogicLineages.ComputabilityKnowledge.GorbowPRProgram\n open InternalAcceptanceCalibrationProof\n \n+theorem rawValue (x : Nat) : evaluate raw (x ::\u1d65 List.Vector.nil) = x := rfl\n+\n theorem childrenValue (x : Nat) : evaluate children (List.Vector.ofFn ![x]) =\n     if arityValue x = 0 then 0 else if arityValue x = 2 then\n       1 + Nat.pair (firstValue x) (1 + Nat.pair (secondValue x) 0)\n@@ -18,7 +20,7 @@\n     arityOfEvaluation,consOfEvaluation,firstOfEvaluation,secondOfEvaluation]\n   change (if arityValue x = 0 then 0 else\n     if (if arityValue x = 2 then 1 else 0) = 0 then _ else _) = _\n-  by_cases h0 : arityValue x = 0 <;> by_cases h2 : arityValue x = 2 <;> simp [h0,h2]\n+  by_cases h0 : arityValue x = 0 <;> by_cases h2 : arityValue x = 2 <;> simp [h0,h2,rawValue]\n \n theorem nativeChildren (n : Nat) (c : Code (Fin n)) :\n     evaluate children (List.Vector.ofFn ![codeNumber c]) =\n",
+  "scope": "Projection evaluation only; frozen AST/targets/limits unchanged."
+}

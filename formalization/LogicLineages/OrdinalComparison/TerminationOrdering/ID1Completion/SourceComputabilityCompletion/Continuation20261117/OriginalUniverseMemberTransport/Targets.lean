@@ -1,0 +1,20 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.Definitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.Targets
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors
+open SourceComputabilityFormulaSupportProof (numeral)
+open OriginalUniverseDecoderInternalAcceptance
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+
+/-- Generic internal supplier-success inclusion only; concrete source claims must discharge it. -/
+def InternalMemberTransport : Prop := ∀ (H : Program 1) (M N W : Program 2)
+    (body : Positive (Fin 1)) (alpha : Type) (Delta : List (Formula alpha))
+    (typ raw gamma c : OTerm alpha),
+  Nonempty (Derivation body Delta
+    ((Definitions.MemberIncluded M N c).imp
+      (((TermAccepted H M W typ raw gamma c).imp (TermAccepted H N W typ raw gamma c)) ⊓
+       ((ArgumentsAccepted H M W typ raw gamma c).imp (ArgumentsAccepted H N W typ raw gamma c)))))
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalUniverseMemberTransport.Targets

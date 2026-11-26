@@ -1,0 +1,24 @@
+--- a/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageRowsProof.lean
++++ b/LogicLineages/ControlSensitivityCurrent/CurrentTreeInputCoverageRowsProof.lean
+@@ -116,8 +116,8 @@
+       exact congrArg (fun u => ((Δ.map SyntaxCode.typeCode,u,5,[SyntaxCode.typeCode σ]) : Node) ::
+         encodeGraph d) hc.symm
+     · intro s ref
+-      simp [buildIn,referenceIndex,rowsOf,SyntaxCode.encodeTerm,SyntaxCode.erase,SyntaxCode.code,
+-        rowCase,Nat.add_comm]
++      simp only [buildIn,referenceIndex,rowsOf,SyntaxCode.encodeTerm,SyntaxCode.erase,SyntaxCode.code,
++        rowCase,List.length_cons,List.length_nil] <;> omega
+   | recC σ =>
+     have hc := typedCheck (Term.recC σ : OriginalTerm _ σ.recType) Γ Δ h
+     constructor
+@@ -126,8 +126,8 @@
+       exact congrArg (fun u => ((Δ.map SyntaxCode.typeCode,u,6,[SyntaxCode.typeCode σ]) : Node) ::
+         encodeGraph d) hc.symm
+     · intro s ref
+-      simp [buildIn,referenceIndex,rowsOf,SyntaxCode.encodeTerm,SyntaxCode.erase,SyntaxCode.code,
+-        rowRec,Nat.add_comm]
++      simp only [buildIn,referenceIndex,rowsOf,SyntaxCode.encodeTerm,SyntaxCode.erase,SyntaxCode.code,
++        rowRec,List.length_cons,List.length_nil] <;> omega
+   | @app Ξ σ τ f a ihf iha =>
+     let F := buildIn f Γ Δ h d
+     let A := buildIn a Γ Δ h F.graph

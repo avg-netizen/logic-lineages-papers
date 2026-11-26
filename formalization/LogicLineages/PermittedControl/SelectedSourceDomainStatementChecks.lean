@@ -1,0 +1,8 @@
+module
+public import LogicLineages.PermittedControl.SelectedSourceDomainProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+theorem fixed_fullSelectedSourceDomain : SelectedSourceDomainTargets.FullSelectedSourceDomain :=
+  SelectedSourceDomainProof.fullSelectedSourceDomain
+#print axioms fixed_fullSelectedSourceDomain
+end LogicLineages.PermittedControl.StatementChecks

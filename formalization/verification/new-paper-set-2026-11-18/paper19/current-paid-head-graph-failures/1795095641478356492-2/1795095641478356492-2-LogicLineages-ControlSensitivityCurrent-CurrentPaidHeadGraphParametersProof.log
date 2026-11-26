@@ -1,0 +1,207 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphParametersProof.lean:33:36: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  CurrentOrdinalEvaluation.evaluate f []
+    (OrdinalSyntax.code OrdinalSyntax.componentCode (UnitHeadEvaluation.unitSyntax q))
+in the target expression
+  encodedFiniteValue
+      (CurrentOrdinalEvaluation.evaluate f [] (OrdinalSyntax.typedCode (UnitHeadEvaluation.unitSyntax q))) =
+    c
+
+f : ℕ → ℕ
+hf : FullAddition.Targets.SourceGrowth f
+Γ : List Ty
+q : OrdinalExpression Γ
+c : ℕ
+hc : atUnits f q = ↑c
+a : NONote
+ha :
+  CurrentOrdinalEvaluation.evaluate f []
+      (OrdinalSyntax.code OrdinalSyntax.componentCode (UnitHeadEvaluation.unitSyntax q)) =
+    rawNoteEncode ↑a
+hr : (↑a).repr = ↑c
+⊢ encodedFiniteValue
+      (CurrentOrdinalEvaluation.evaluate f [] (OrdinalSyntax.typedCode (UnitHeadEvaluation.unitSyntax q))) =
+    c
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphParametersProof.lean:48:4: error: 'change' tactic failed, pattern
+  ordinalNaturalProduct Ordinal.omega0 (↑δ).repr = ?m.41
+is not definitionally equal to target
+  ordinalNaturalProduct (↑w).repr (↑n).repr = Ordinal.omega0 * ↑δ
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphParametersProof.lean:55:30: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  encodedNaturalProduct (rawNoteEncode ↑w) (rawNoteEncode ↑n)
+in the target expression
+  encodedNaturalSum (rawNoteEncode ↑a)
+      (encodedNaturalProduct (rawNoteEncode ↑ClosedPositive.omega.evaluate) (rawNoteEncode ↑δ)) =
+    rawNoteEncode ↑b
+
+a : NONote
+ha : Order.IsSuccLimit (↑a).repr
+δ : ℕ
+w : NONote := ClosedPositive.omega.evaluate
+n : NONote := NONote.ofNat δ
+p : NONote := naturalProduct w n
+b : NONote := naturalSum a p
+hp : (↑p).repr = Ordinal.omega0 * ↑δ
+hb : (↑b).repr = shiftHead (↑a).repr δ
+⊢ encodedNaturalSum (rawNoteEncode ↑a)
+      (encodedNaturalProduct (rawNoteEncode ↑ClosedPositive.omega.evaluate) (rawNoteEncode ↑δ)) =
+    rawNoteEncode ↑b
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    a
+  has type
+    NONote
+  but is expected to have type
+    { o // o.NF }
+  in the application
+    ↑a
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphParametersProof.lean:91:55: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Option.map ?f (some ?a)
+in the target expression
+  Option.map OrdinalSyntax.vectorCode (some u) = some (OrdinalSyntax.vectorCode u)
+
+p : Policy
+f : ℕ → ℕ
+hc : Computable f
+hf : FullAddition.Targets.SourceGrowth f
+Γ : List Ty
+K : OriginalTerm Γ (Ty.curriedGround 1)
+u : OrdinalVector Γ 1
+hu : assignment p K = some u
+δ : ℕ
+hg : ∀ (j : Fin ((Ty.curriedGround 1).level + 1)), GeneratedOrdinalGrade Γ (↑j) (u j)
+a : ClosedPositive
+w✝¹ : Bool
+w✝ : ℕ
+hcode : UnitHeadCode.positiveCode (OrdinalSyntax.typedCode (u 1)) = some (closedPositiveCode a)
+left✝² : UnitHeadCode.classify (OrdinalSyntax.typedCode (u 1)) = some (rawNoteEncode ↑a.evaluate, w✝¹, w✝)
+hval : (↑a.evaluate).repr = denote (fun x => 1) (u 1)
+left✝¹ : w✝¹ = true ↔ denote (fun x => 1) (u 1) < Ordinal.omega0
+left✝ : w✝¹ = false ↔ Ordinal.omega0 ≤ denote (fun x => 1) (u 1)
+right✝ : w✝¹ = true → ↑w✝ = denote (fun x => 1) (u 1)
+c : ℕ
+hcval : denoteWith f (fun c => ↑(0 + 1)) (u 0) = ↑c
+hv : denoteWith f (fun x => 1) (u 1) = denote (fun x => 1) (u 1)
+hK : (↑a.evaluate).repr = atUnits f (u 1)
+β : NONote := scalarHeadNote a
+hβ :
+  (↑(scalarHeadNote a)).repr = fixedHead a ∧
+    encodedClosedHead (closedPositiveCode a) = rawNoteEncode ↑(scalarHeadNote a) ∧
+      0 < fixedHead a ∧ Order.IsSuccLimit (fixedHead a) ∧ fixedHead a < epsilonZero
+hβv : (↑β).repr = ordinalNaturalProduct Ordinal.omega0 (atUnits f (u 1))
+hβl : Order.IsSuccLimit (↑β).repr
+ξ : NONote
+hshift : shiftCode (rawNoteEncode ↑β) δ = rawNoteEncode ↑ξ
+hξv : (↑ξ).repr = shiftHead (↑β).repr δ
+hξ : (↑ξ).repr = shiftHead (ordinalNaturalProduct Ordinal.omega0 (atUnits f (u 1))) δ
+hsyntax :
+  SyntaxCode.check (List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm K) =
+    some (SyntaxCode.typeCode (Ty.curriedGround 1))
+⊢ Option.map OrdinalSyntax.vectorCode (some u) = some (OrdinalSyntax.vectorCode u)
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    some u
+  has type
+    Option (OrdinalVector Γ 1)
+  but is expected to have type
+    Option (OrdinalVector Γ (Ty.curriedGround 1).level)
+  in the application
+    Option.map OrdinalSyntax.vectorCode (some u)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphParametersProof.lean:92:44: error: Application type mismatch: The argument
+  hcval
+has type
+  denoteWith f (fun c => ↑(0 + 1)) (u 0) = ↑c
+but is expected to have type
+  atUnits f (u 0) = ↑c
+in the application
+  unitScalarCode f hf (u 0) c hcval
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphParametersProof.lean:93:26: error: Application type mismatch: The argument
+  hcval
+has type
+  denoteWith f (fun c => ↑(0 + 1)) (u 0) = ↑c
+but is expected to have type
+  atUnits f (u 0) = ↑c
+in the application
+  And.intro hcval
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphParametersProof.lean:96:107: error: Tactic `rfl` failed: The left-hand side
+  (UnitHeadCode.positiveCode (OrdinalSyntax.typedCode (u (Fin.succ 0)))).bind fun a =>
+    some (encodedClosedHead a, shiftCode (encodedClosedHead a) δ, c)
+is not definitionally equal to the right-hand side
+  some (rawNoteEncode ↑(scalarHeadNote a), rawNoteEncode ↑ξ, c)
+
+case refine_1
+p : Policy
+f : ℕ → ℕ
+hc : Computable f
+hf : FullAddition.Targets.SourceGrowth f
+Γ : List Ty
+K : OriginalTerm Γ (Ty.curriedGround 1)
+u : OrdinalVector Γ 1
+hu : assignment p K = some u
+δ : ℕ
+hg : ∀ (j : Fin ((Ty.curriedGround 1).level + 1)), GeneratedOrdinalGrade Γ (↑j) (u j)
+a : ClosedPositive
+w✝¹ : Bool
+w✝ : ℕ
+hcode : UnitHeadCode.positiveCode (OrdinalSyntax.typedCode (u 1)) = some (closedPositiveCode a)
+left✝² : UnitHeadCode.classify (OrdinalSyntax.typedCode (u 1)) = some (rawNoteEncode ↑a.evaluate, w✝¹, w✝)
+hval : (↑a.evaluate).repr = denote (fun x => 1) (u 1)
+left✝¹ : w✝¹ = true ↔ denote (fun x => 1) (u 1) < Ordinal.omega0
+left✝ : w✝¹ = false ↔ Ordinal.omega0 ≤ denote (fun x => 1) (u 1)
+right✝ : w✝¹ = true → ↑w✝ = denote (fun x => 1) (u 1)
+c : ℕ
+hcval : denoteWith f (fun c => ↑(0 + 1)) (u 0) = ↑c
+hv : denoteWith f (fun x => 1) (u 1) = denote (fun x => 1) (u 1)
+hK : (↑a.evaluate).repr = atUnits f (u 1)
+β : NONote := scalarHeadNote a
+hβ :
+  (↑(scalarHeadNote a)).repr = fixedHead a ∧
+    encodedClosedHead (closedPositiveCode a) = rawNoteEncode ↑(scalarHeadNote a) ∧
+      0 < fixedHead a ∧ Order.IsSuccLimit (fixedHead a) ∧ fixedHead a < epsilonZero
+hβv : (↑β).repr = ordinalNaturalProduct Ordinal.omega0 (atUnits f (u 1))
+hβl : Order.IsSuccLimit (↑β).repr
+ξ : NONote
+hshift : shiftCode (rawNoteEncode ↑β) δ = rawNoteEncode ↑ξ
+hξv : (↑ξ).repr = shiftHead (↑β).repr δ
+hξ : (↑ξ).repr = shiftHead (ordinalNaturalProduct Ordinal.omega0 (atUnits f (u 1))) δ
+hsyntax :
+  SyntaxCode.check (List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm K) =
+    some (SyntaxCode.typeCode (Ty.curriedGround 1))
+hassign :
+  PolicyAssignment.assignmentCode p (List.map SyntaxCode.typeCode Γ) (SyntaxCode.encodeTerm K) =
+    some (OrdinalSyntax.vectorCode u)
+hunit :
+  encodedFiniteValue (CurrentOrdinalEvaluation.evaluate f [] (UnitHeadCode.unitCode (OrdinalSyntax.typedCode (u 0)))) =
+    c
+⊢ ((UnitHeadCode.positiveCode (OrdinalSyntax.typedCode (u (Fin.succ 0)))).bind fun a =>
+      some (encodedClosedHead a, shiftCode (encodedClosedHead a) δ, c)) =
+    some (rawNoteEncode ↑(scalarHeadNote a), rawNoteEncode ↑ξ, c)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphParametersProof.lean:96:69: warning: This simp argument is unused:
+  hcode
+
+Hint: Omit it from the simp argument list.
+  simp only [hsyntax, ̲↓reduceIte, ̲hassign, ̲bind, ̲Option.bind_some, ̲OrdinalSyntax.vectorCode,
+        List.ofFn_succ, ̲List.getElem?_cons_zero, ̲List.getElem?_cons_succ,h̵c̵o̵d̵e̵,̵ ̲pure, ̲hunit, ̲hβ.2.1, ̲hshift,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲β]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphParametersProof.lean:96:86: warning: This simp argument is unused:
+  hβ.2.1
+
+Hint: Omit it from the simp argument list.
+  simp only [hsyntax, ̲↓reduceIte, ̲hassign, ̲bind, ̲Option.bind_some, ̲OrdinalSyntax.vectorCode,
+        List.ofFn_succ, ̲List.getElem?_cons_zero, ̲List.getElem?_cons_succ, ̲hcode, ̲pure, ̲hunit, ̲hβ̵.̵2̵.̵1̵,̵h̵shift,
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲β]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphParametersProof.lean:96:93: warning: This simp argument is unused:
+  hshift
+
+Hint: Omit it from the simp argument list.
+  simp only [hsyntax, ̲↓reduceIte, ̲hassign, ̲bind, ̲Option.bind_some, ̲OrdinalSyntax.vectorCode,
+        List.ofFn_succ, ̲List.getElem?_cons_zero, ̲List.getElem?_cons_succ, ̲hcode, ̲pure, ̲hunit, ̲hβ.2.1,h̵s̵h̵i̵f̵t̵,̵
+  ̲ ̲ ̲ ̲ ̲ ̲ ̲β]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

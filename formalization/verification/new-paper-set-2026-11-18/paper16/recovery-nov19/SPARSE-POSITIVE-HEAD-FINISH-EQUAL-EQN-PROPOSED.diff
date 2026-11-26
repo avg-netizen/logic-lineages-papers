@@ -1,0 +1,18 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveHeadDecompositionFinishProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePositiveHeadDecompositionFinishProof.lean
+@@ -47,6 +47,7 @@
+   apply targetCases raw least ctx ty source cert target (finishedNonempty raw least ctx ty source cert target) state
+   intro β j Δ out hJ loop done
+   rw [finishedRename]
++  simp only [finishedNonempty,equalEqn]
+   have n := renameInto nz j Δ hJ
+   change Nonempty (Derivation body Δ ((eqn cert z).relabel j).not) at n
+   rw [eqnRelabel,zRelabel] at n
+@@ -59,6 +60,7 @@
+     (known : Nonempty (Derivation body Γ (finishedNonempty raw least ctx ty source cert target))) :
+     Nonempty (Derivation body Γ (positiveAt raw least ctx ty source cert target)) := by
+   obtain ⟨known⟩ := known
++  simp only [finishedNonempty,equalEqn] at known
+   have nonzero : Nonempty (Derivation body Γ (eqn cert z).not) := ⟨Derivation.conjunctionLeft known⟩
+   have walked := walkOfFinish raw least (suc target) ctx ty source cert target
+     ⟨Derivation.conjunctionRight known⟩

@@ -1,0 +1,55 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardNumericProof.lean:16:44: error(lean.unknownIdentifier): Unknown constant `LogicLineages.OrdinalComparison.TerminationOrdering.NumberedMultisetNumeric.numbersRoundTrip`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardNumericProof.lean:25:65: error: Function expected at
+  numbersNumber
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  xs
+
+Hint: The identifier `numbersNumber` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardNumericProof.lean:44:68: error(lean.unknownIdentifier): Unknown identifier `numbersRoundTrip`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardNumericProof.lean:33:51: error: unsolved goals
+s : Settings
+ty : ℕ
+member : ty ∈ s.types
+T : List ℕ := s.types
+xs : List.Vector ℕ (Nat.succ 0) := ty ::ᵥ nil
+calls : Fin 2 → Program 1 :=
+  ![NumberedWindowInternalFreshProbeDispatchProgram.literal 1 (Encodable.encode T), Program.projection 0]
+⊢ (Option.any (fun pool => pool.any fun head => head == ty) (NumberedMultisetNumeric.decodeNumbers sorry)).toNat = 1
+
+s : Settings
+ty : ℕ
+member : ty ∈ s.types
+T : List ℕ := ⋯
+xs : List.Vector ℕ (Nat.succ 0) := ⋯
+calls : Fin 2 → Program 1 := ⋯
+⊢ Sort ?u.40
+
+s : Settings
+ty : ℕ
+member : ty ∈ s.types
+T : List ℕ := ⋯
+xs : List.Vector ℕ (Nat.succ 0) := ⋯
+calls : Fin 2 → Program 1 := ⋯
+⊢ ?m.72
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardNumericProof.lean:57:52: error(lean.unknownIdentifier): Unknown constant `Bool.and_eq_true.mp`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardNumericProof.lean:56:10: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵h̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSettingsGrammarGuardNumericProof.lean:59:10: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [h̵,̵memberOne s ty present]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'LogicLineages.PersistentMarking.NumberedWindowInternalSettingsGrammarGuardNumericProof.exact_SettingsRefitGuardCalibration' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

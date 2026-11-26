@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.SourceSuccessProof
+namespace LogicLineages.PersistentMarking.SourceSuccessChecks
+theorem exact_sourceSuccess : ApplicationCovarianceTargets.SourceSuccess := SourceSuccessProof.sourceSuccess
+#print axioms exact_sourceSuccess
+end LogicLineages.PersistentMarking.SourceSuccessChecks

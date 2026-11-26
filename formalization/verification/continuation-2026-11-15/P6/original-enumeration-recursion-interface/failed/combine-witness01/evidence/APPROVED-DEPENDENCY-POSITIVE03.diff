@@ -1,0 +1,14 @@
+--- Positive02
++++ Positive03
+@@ -59,7 +59,10 @@
+   let qs : Fin 4 → Program 2 := ![bound,priorNode,openedNode,tailProgram]
+   apply OriginalLambdaConstructorGraphSyntaxProof.queryCases qs ![node,param] _
+   intro beta j ys Theta hj hq
+-  simp only [InternalRecursionGraphStepSyntaxProof.consTermRename,InternalControlGraphSupportProof.emptyRename] at hq
++  have hxs : (fun i : Fin 2 => (![node,param] i).relabel j) = ![node.relabel j,param.relabel j] := by
++    funext i
++    fin_cases i <;> rfl
++  rw [hxs] at hq
+   simp only [InternalLessThan.strictLess,InternalOriginalOrderSyntaxProof.orderRename,sucRelabel]
+   have hrj := InternalGraphCompositionFunctionalityProof.renameInto hr j Theta hj
+   have hdj := InternalGraphCompositionFunctionalityProof.renameInto hd j Theta hj

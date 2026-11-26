@@ -1,0 +1,58 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowSimulationSelectCore.lean:34:18: error: don't know how to synthesize implicit argument `f`
+  @ownerRealized (budget b (Spine.ownerCopies f bs es ds)) ?m.169 k bs es Bs Es hLabel (weakensArgs hInput hb)
+    (weakensArgs hInput he) ds
+context:
+S : Spine.Signature
+K : List Ty
+f : Head
+τ : Ty
+bs es : Spine.Args
+Bs Es : NArgs
+q r : Spine.Expr
+ds : List Ty
+i n k b : Nat
+hk : DecisionSourceUniverse.Closed K
+ho : Spine.PaperTerm S (Spine.Expr.marked f τ bs es) τ
+ha : At bs i q ∨ At es i q
+hq : Spine.Typed E q (ArrowPrefix ds τ)
+hs : SymbolicAdmissible K q
+hc : SymbolicArgsAdmissible K (Spine.ownerCopies f bs es ds)
+hCall : Spine.apply q (Spine.ownerCopies f bs es ds) = some r
+hb : RealizesArgs n bs Bs
+he : RealizesArgs n es Es
+hInput : budget b (Spine.ownerCopies f bs es ds) ≤ n
+hLabel : budget b (Spine.ownerCopies f bs es ds) ≤ k
+hVal : Spine.Valid S q
+Q : NTerm
+hGet : Bs.get i = some Q ∨ Es.get i = some Q
+hQ : Realizes n q Q
+hArrow : Q.type = ArrowPrefix ds τ
+⊢ Head
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowSimulationSelectCore.lean:34:7: error: failed to infer `have` declaration type
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowSimulationSelectCore.lean:22:57: error: unsolved goals
+S : Spine.Signature
+K : List Ty
+f : Head
+τ : Ty
+bs es : Spine.Args
+Bs Es : NArgs
+q r : Spine.Expr
+ds : List Ty
+i n k b : Nat
+hk : DecisionSourceUniverse.Closed K
+ho : Spine.PaperTerm S (Spine.Expr.marked f τ bs es) τ
+ha : At bs i q ∨ At es i q
+hq : Spine.Typed E q (ArrowPrefix ds τ)
+hs : SymbolicAdmissible K q
+hc : SymbolicArgsAdmissible K (Spine.ownerCopies f bs es ds)
+hCall : Spine.apply q (Spine.ownerCopies f bs es ds) = some r
+hb : RealizesArgs n bs Bs
+he : RealizesArgs n es Es
+hInput : budget b (Spine.ownerCopies f bs es ds) ≤ n
+hLabel : budget b (Spine.ownerCopies f bs es ds) ≤ k
+hVal : Spine.Valid S q
+Q : NTerm
+hGet : Bs.get i = some Q ∨ Es.get i = some Q
+hQ : Realizes n q Q
+hArrow : Q.type = ArrowPrefix ds τ
+⊢ ∃ start out, RawStep S K (NTerm.numbered f τ (k + 1) Bs Es) start ∧ WindowPath S K E τ start out ∧ Realizes b r out

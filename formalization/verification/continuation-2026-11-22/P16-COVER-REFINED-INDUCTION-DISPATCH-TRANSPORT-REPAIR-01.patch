@@ -1,0 +1,9 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRefinedInductionDispatchTransportProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverRefinedInductionDispatchTransportProof.lean
+@@ -61 +61 @@
+-private theorem moveBelow (V : Program 1) (W C : Program 3) (s : Settings)
++private def moveBelow (V : Program 1) (W C : Program 3) (s : Settings)
+@@ -116 +116,2 @@
+-  obtain ⟨e⟩ := same
++  have equality := same
++  obtain ⟨e⟩ := equality

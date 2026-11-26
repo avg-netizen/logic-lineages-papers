@@ -1,3 +1,95 @@
+# Current programme — new five-paper comparison set, 18 November 2026
+
+The owner requested archiving the superseded comparison editions and continuing
+formalization against papers 16–20. The [migration plan](formalization/verification/new-paper-set-2026-11-18/PLAN.md)
+and [current comparison register](formalization/CURRENT-COMPARISON-TARGETS.json)
+control this work. All 167 new-paper statements initially remain pending exact
+verification; historical source matches must be demonstrated, not assumed.
+Old proof sources and the 178/2/9 earlier register remain intact.
+The numbered results for unaffected papers are not revoked.
+
+The historical checkpoint summaries below do not describe the new set.
+
+---
+
+# Current checkpoint — two-agent continuation paused
+
+Fifteen exact supporting contracts in 29 new source files are checked across
+the two-agent continuation. These cover retained compatibility diagnostics,
+explicit primary membership, reflexivity recognition and actual singleton
+CORE proof certificates. Root verified 4,173 distinct local native modules;
+all exact audits use standard axioms only. See
+[the final handoff](formalization/verification/local-two-sol-2026-11-13/FINAL-HANDOFF.md)
+for precise scope and remaining integration gaps. Both workers and the compiler
+are paused; only the user-requested commit/push is authorized. The numbered
+register remains **175 checked, 2 inherited, 12 pending /189**. Full paper06
+I/C/accessibility and paper12 HB3 remain open; no full-root or CI claim.
+
+---
+
+# Previous source reconciliation — internal level two
+
+**175 checked, 2 inherited, 12 pending /189.** The existing complete source08
+internal-level-two comparison proof has been natively revalidated and adopted
+at its unchanged original source scope. See
+[the adoption record](formalization/verification/local-six-sol-2026-11-12/ROOT-LEVELTWO-ADOPTION.json).
+All numbered paper08 statements are checked. Remaining: paper02=1, paper06=8,
+paper12=3. All six lanes and the compiler are paused after their current rounds
+and required Lean repairs completed; see the
+[final handoff](formalization/verification/local-six-sol-2026-11-12/FINAL-STOPPED-HANDOFF.md).
+Earlier counts below are historical; no full-root or CI claim.
+
+---
+
+# Previous source completions — common-head and balanced comparison
+
+**174 checked, 2 inherited, 13 pending /189 at this checkpoint.** The original paper08
+`thm:common` and `thm:balanced` are now checked at both their complete pointwise
+compiler/exact-variable/effectivity and arbitrary quantified-decision clauses,
+using the previously completed Snyatkov arithmetic supplier. Read
+[the adoption record](formalization/verification/local-six-sol-2026-11-12/ROOT-COMMON-BALANCED-ADOPTION.json).
+Pending counts: paper02=1, paper06=8, paper08=1, paper12=3. Earlier counts below
+are historical. No full-root or remote-CI result is claimed.
+
+---
+
+# Previous source completion — full Snyatkov arithmetic decision
+
+**172 checked, 2 inherited, 15 pending /189 at this checkpoint.** The original paper08
+`thm:snyatkov` is checked at its complete first-order scope, with the exact
+f(n)=F5(n+100), an explicit computable decision procedure and standard axioms.
+Read [the root adoption record](formalization/verification/local-six-sol-2026-11-12/ROOT-SNYATKOV-ADOPTION.json).
+Six Sol lanes continue. Paper06 full internal accessibility, source12 HB/collapse
+and the other pending numbered statements remain separate. No full-root or
+remote-CI result is claimed. Earlier checkpoint counts below are historical.
+
+---
+
+# Current checkpoint — original variable Objects, 9 November 2026
+
+The active continuation is `formalization/cumulative-continuation-2026-11-09`,
+from `cd648a18`. The new exact gate preserves the original source and all frozen specifications.
+
+Three exact supporting targets in nine new Lean modules are checked:
+original variable Object certificate inversion to literal same-type,
+same-Gamma bottom; scalar I for typed variable Objects at every finite type;
+and one global selection retaining both laws and the full original package.
+The shared Gamma is bound internally and no tau-in-window premise is added.
+The register remains **171 checked, 2 inherited, 16 pending / 189**.
+
+The newer continuation already completed the earlier Object wrappers,
+unqualified certified lift and original global source package. Next is
+genuine neutral application-spine inversion and all-type variable
+computability. Scalar I at an arrow is not arrow C. Lambda/substitution,
+multiset, constructor and closed all-term accessibility remain pending.
+
+Read the [accepted checkpoint](formalization/verification/continuation-2026-11-09/variable-object-lift/STATUS.md)
+and [concrete next steps](formalization/verification/continuation-2026-11-09/variable-object-lift/NEXT-STEPS.md).
+All new compiler jobs are finished. No full-root or remote-CI pass is claimed.
+Earlier dated checkpoints below retain their historical scope.
+
+---
+
 # Current checkpoint — reconciled main, 9 November 2026
 
 **170 checked, 2 inherited, 17 pending / 189.** The local six-Codex work,

@@ -1,0 +1,30 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/SpineProof.lean:7:69: error: Tactic `rfl` failed: The left-hand side
+  apply (Expr.free σ x) (Args.cons a rest)
+is not definitionally equal to the right-hand side
+  none
+
+σ : Ty
+x : Nat
+a : Expr
+rest : Args
+⊢ apply (Expr.free σ x) (Args.cons a rest) = none
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/SpineProof.lean:8:71: error: Tactic `rfl` failed: The left-hand side
+  apply (Expr.bound σ i) (Args.cons a rest)
+is not definitionally equal to the right-hand side
+  none
+
+σ : Ty
+i : Nat
+a : Expr
+rest : Args
+⊢ apply (Expr.bound σ i) (Args.cons a rest) = none
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/SpineProof.lean:15:53: error: Tactic `rfl` failed: Expected the goal to be a binary relation
+
+Hint: Reflexivity tactics can only be used on goals of the form `x ~ x` or `R x x`
+
+⊢ SpineTargets.FullBlocked
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/SpineProof.lean:16:59: error: Tactic `rfl` failed: Expected the goal to be a binary relation
+
+Hint: Reflexivity tactics can only be used on goals of the form `x ~ x` or `R x x`
+
+⊢ SpineTargets.StagedSucceeds

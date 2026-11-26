@@ -1,0 +1,35 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftStepPrograms.lean:42:6: error: unexpected token 'variable'; expected '(', ':=', '|' or term
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftStepPrograms.lean:42:6: error: Missing cases:
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftStepPrograms.lean:24:64: error: unsolved goals
+P : Type := Env × Node
+fs : Primrec fun p => p.2.2
+tag : Primrec fun p => p.2.1
+value : ∀ (i : ℕ), Primrec fun a => a.2.2.getD i 0 := fun i => Primrec₂.comp (Primrec.list_getD 0) fs (Primrec.const i)
+tab : Primrec fun p => p.1.2.2.2
+amount : Primrec fun p => p.1.1
+cutoff : Primrec fun p => p.1.2.1
+offset : Primrec fun p => p.1.2.2.1
+row : ∀ (i : ℕ),
+  Primrec fun a =>
+    earlier (a.1.2.2.2, a.2.2.getD i 0, a.1.2.2.1).1 (a.1.2.2.2, a.2.2.getD i 0, a.1.2.2.1).2.1
+      (a.1.2.2.2, a.2.2.getD i 0, a.1.2.2.1).2.2 :=
+  fun i => Primrec.comp earlierPrim (Primrec.pair tab (Primrec.pair (value i) offset))
+tm : ∀ (i : ℕ),
+  Primrec fun a =>
+    (earlier (a.1.2.2.2, a.2.2.getD i 0, a.1.2.2.1).1 (a.1.2.2.2, a.2.2.getD i 0, a.1.2.2.1).2.1
+        (a.1.2.2.2, a.2.2.getD i 0, a.1.2.2.1).2.2).1 :=
+  fun i => Primrec.comp Primrec.fst (row i)
+ar : ∀ (i : ℕ),
+  Primrec fun a =>
+    (earlier (a.1.2.2.2, a.2.2.getD i 0, a.1.2.2.1).1 (a.1.2.2.2, a.2.2.getD i 0, a.1.2.2.1).2.1
+        (a.1.2.2.2, a.2.2.getD i 0, a.1.2.2.1).2.2).2 :=
+  fun i => Primrec.comp Primrec.snd (row i)
+nil : Primrec fun x => [] := Primrec.const []
+mk : ∀ (k : ℕ) {f : P → List ℕ}, Primrec f → Primrec fun a => NumberedWindowFieldAlgorithm.packNode k (f a) :=
+  fun k {f} h => Primrec₂.comp nodePrim (Primrec.const k) h
+boundValue : Primrec fun a => if a.2.2.getD 1 0 < a.1.2.1 + a.1.2.2.1 then a.2.2.getD 1 0 else a.2.2.getD 1 0 + a.1.1 :=
+  Primrec.ite (PrimrecRel.comp Primrec.nat_lt (value 1) (Primrec₂.comp Primrec.nat_add cutoff offset)) (value 1)
+    (Primrec₂.comp Primrec.nat_add (value 1) amount)
+⊢ Primrec fun p => termParts p.1.2.2.2 p.1.1 p.1.2.1 p.1.2.2.1 p.2.1 p.2.2
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftStepPrograms.lean:42:14: error: unexpected token ':='; expected '(', '[', '{' or '⦃'
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/.lake/isolated-fixed-mathlib-2026-11-19/formalization/LogicLineages/PersistentMarking/NumberedWindowShiftStepPrograms.lean:50:66: error: unexpected token; expected ')'

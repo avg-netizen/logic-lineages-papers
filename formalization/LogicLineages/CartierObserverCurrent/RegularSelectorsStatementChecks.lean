@@ -1,0 +1,15 @@
+module
+public import LogicLineages.CartierObserverCurrent.RegularSelectorsProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.RegularSelectors.StatementChecks
+
+theorem fixed_regularPreservation : Targets.RegularPreservation :=
+  LogicLineages.CartierObserverCurrent.RegularSelectors.regularPreservation
+
+theorem fixed_actualCoefficientSelector : Targets.ActualCoefficientSelector :=
+  LogicLineages.CartierObserverCurrent.RegularSelectors.actualCoefficientSelector
+
+#audit_namespace LogicLineages.CartierObserverCurrent.RegularSelectors.StatementChecks
+end LogicLineages.CartierObserverCurrent.RegularSelectors.StatementChecks

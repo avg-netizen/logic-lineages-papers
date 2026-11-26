@@ -1,0 +1,11 @@
+--- preserved target
++++ current target
+@@ -32,7 +32,7 @@
+ def LiteralCode : Prop := ∀ xs i a shift lower upper p,
+   program (xs,i,a,shift,lower.encode,upper.encode,p.encode) =
+     ((branch xs i a shift lower upper p).1,(branch xs i a shift lower upper p).2.encode)
+-def Programs : Prop := Computable program
++def Programs : Prop := Computable InverseBoundaryBlock.program
+ 
+ def Full : Prop := ActualBand ∧ SingleElimination ∧ BlockElimination ∧ ProgressSupport ∧ LiteralCode ∧ Programs
+ end LogicLineages.StandardControlCurrent.InverseBoundaryBlockTargets

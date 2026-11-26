@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.NumberedWindowArithmeticCopyProof
+
+@[expose] public section
+
+namespace LogicLineages.PersistentMarking.NumberedWindowArithmeticCopyChecks
+open NumberedWindowArithmeticCopyTargets
+theorem exact_ExactClassRank : ExactClassRank := NumberedWindowArithmeticCopyRankProof.rankExact
+theorem exact_ExactRootRankComparisons : ExactRootRankComparisons := NumberedWindowArithmeticCopyRankProof.compareExact
+theorem exact_ExactCopyRoot : ExactCopyRoot := NumberedWindowArithmeticCopyProof.copyExact
+#print axioms exact_ExactClassRank
+#print axioms exact_ExactRootRankComparisons
+#print axioms exact_ExactCopyRoot
+end LogicLineages.PersistentMarking.NumberedWindowArithmeticCopyChecks

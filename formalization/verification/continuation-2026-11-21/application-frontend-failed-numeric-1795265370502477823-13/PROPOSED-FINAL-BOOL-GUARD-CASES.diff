@@ -1,0 +1,38 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseApplicationFrontendNumericSourceProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseApplicationFrontendNumericSourceProof.lean
+@@ -93,19 +93,28 @@
+     · have scb : (g == d) = true := by simp [sc]
+       by_cases td : dom = ut
+       · have tdb : (dom == ut) = true := by simp [td]
+-        rw [scb,tdb]
+-        change (1 = 1 ∧ (1 = 1 ∧ (1 = 1 ∧ (pack g = pack d ∧
++        have pass : (true && true) = true := rfl
++        rw [scb,tdb,if_pos pass]
++        change (True ∧ (True ∧ (True ∧ (pack g = pack d ∧
+           (dom = ut ∧ (selected == some y) = true))))) ↔ (selected == some y) = true
+-        exact ⟨fun ⟨_,_,_,_,_,h⟩ => h, fun h => ⟨rfl,rfl,rfl,packed.mpr sc,td,h⟩⟩
++        exact ⟨fun ⟨_,_,_,_,_,h⟩ => h, fun h => ⟨True.intro,True.intro,True.intro,packed.mpr sc,td,h⟩⟩
+       · have tdb : (dom == ut) = false :=
+           Bool.eq_false_iff.mpr (fun h => td (eq_of_beq h))
+-        rw [scb,tdb]
+-        change (1 = 1 ∧ (1 = 1 ∧ (1 = 1 ∧ (pack g = pack d ∧
++        have reject : (true && false) ≠ true := by
++          intro impossible
++          change false = true at impossible
++          cases impossible
++        rw [scb,tdb,if_neg reject]
++        change (True ∧ (True ∧ (True ∧ (pack g = pack d ∧
+           (dom = ut ∧ (selected == some y) = true))))) ↔ (false : Bool) = true
+         exact ⟨fun ⟨_,_,_,_,h,_⟩ => False.elim (td h),fun h => nomatch h⟩
+     · have scb : (g == d) = false := Bool.eq_false_iff.mpr (fun h => sc (eq_of_beq h))
+-      rw [scb]
+-      change (1 = 1 ∧ (1 = 1 ∧ (1 = 1 ∧ (pack g = pack d ∧
++      have reject : (false && (dom == ut)) ≠ true := by
++        intro impossible
++        change false = true at impossible
++        cases impossible
++      rw [scb,if_neg reject]
++      change (True ∧ (True ∧ (True ∧ (pack g = pack d ∧
+         (dom = ut ∧ (selected == some y) = true))))) ↔ (false : Bool) = true
+       exact ⟨fun ⟨_,_,_,h,_,_⟩ => False.elim (sc (packed.mp h)),fun h => nomatch h⟩
+ 

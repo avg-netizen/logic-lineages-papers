@@ -1,0 +1,18 @@
+--- a/formalization/LogicLineages/PermittedControl/ActualBitFamilyExistentialStepProof.lean
++++ b/formalization/LogicLineages/PermittedControl/ActualBitFamilyExistentialStepProof.lean
+@@ -36,3 +36,4 @@
+-      obtain ⟨p,member,eq⟩ := src
+-      subst out
+-      obtain ⟨ρ,_,source⟩ := high.mpr ⟨p,member,truth⟩
++      obtain ⟨p,listedHigh,eq⟩ := src
++      have keep : p ∈ compile B family := listedHigh
++      rw [← eq] at truth
++      obtain ⟨ρ,_,source⟩ := high.mpr ⟨p,keep,truth⟩
+@@ -47,3 +48,4 @@
+-    obtain ⟨p,member,eq⟩ := src
+-    subst out
+-    exact (exactGenericHighDimension B family p member).2
++    obtain ⟨p,listedHigh,eq⟩ := src
++    have keep : p ∈ compile B family := listedHigh
++    rw [← eq]
++    exact (exactGenericHighDimension B family p keep).2

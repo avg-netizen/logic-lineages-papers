@@ -1,0 +1,25 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowAtomicApplicationTargets
+import LogicLineages.PersistentMarking.NumberedWindowAtomicApplicationExchangeProof
+import LogicLineages.PersistentMarking.NumberedWindowAtomicApplicationRoundsProof
+import LogicLineages.PersistentMarking.NumberedWindowAtomicApplicationAddressProof
+
+public section
+namespace LogicLineages.PersistentMarking.NumberedWindowAtomicApplicationChecks
+open NumberedWindowAtomicApplicationTargets
+open NumberedWindowAtomicApplicationExchangeProof (rawExchange scalarExchange)
+open NumberedWindowAtomicApplicationRoundsProof (finiteRounds atomicLeast)
+open NumberedWindowAtomicApplicationAddressProof (actualApplication)
+
+theorem exact_AtomicAuxExchange : ExactAtomicAuxExchange := rawExchange
+theorem exact_AtomicAuxScalarEdges : ExactAtomicAuxScalarEdges := scalarExchange
+theorem exact_AtomicAuxFiniteRounds : ExactAtomicAuxFiniteRounds := finiteRounds
+theorem exact_AtomicAuxLeast : ExactAtomicAuxLeast := atomicLeast
+theorem exact_AtomicAuxOriginalApplication : ExactAtomicAuxOriginalApplication := actualApplication
+
+#print axioms exact_AtomicAuxExchange
+#print axioms exact_AtomicAuxScalarEdges
+#print axioms exact_AtomicAuxFiniteRounds
+#print axioms exact_AtomicAuxLeast
+#print axioms exact_AtomicAuxOriginalApplication
+end LogicLineages.PersistentMarking.NumberedWindowAtomicApplicationChecks

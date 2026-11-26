@@ -1,0 +1,18 @@
+module
+public import LogicLineages.PermittedControl.PreparedStripReconstructionTargets
+import LogicLineages.PermittedControl.PreparedStripReconstructionHitProof
+import LogicLineages.PermittedControl.PreparedStripReconstructionClosedProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_preparedStripHitReconstruction : PreparedStripReconstruction.HitReconstruction :=
+  PreparedStripReconstruction.hitReconstruction
+
+theorem fixed_preparedStripClosedHitDecision : PreparedStripReconstruction.ClosedHitDecision :=
+  PreparedStripReconstruction.closedHitDecision
+
+#print axioms fixed_preparedStripHitReconstruction
+#print axioms fixed_preparedStripClosedHitDecision
+
+end LogicLineages.PermittedControl.StatementChecks

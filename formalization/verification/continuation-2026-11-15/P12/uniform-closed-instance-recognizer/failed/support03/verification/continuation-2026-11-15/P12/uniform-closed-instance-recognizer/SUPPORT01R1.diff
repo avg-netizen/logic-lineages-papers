@@ -1,0 +1,26 @@
+--- failed/NativeFoldProof.lean
++++ R1/NativeFoldProof.lean
+@@ -16,11 +16,18 @@
+  let v := Encodable.encode tokens ::ᵥ Encodable.encode s ::ᵥ Encodable.encode raw ::ᵥ nil
+  have hp : evaluate UniformClosedSubstitutionRawFold.finalPacked v =
+   Nat.pair 0 (Encodable.encode (tokens.foldl (GorbowSubstitutionCode.subStep 1 0 [raw]) s)) := by
+-  change evaluate UniformClosedSubstitutionFold.iterator _ = _
+-  convert UniformClosedSubstitutionFold.NativeProof.exactOriginalFold s tokens raw hr using 1
+-  ext i
+-  fin_cases i <;> simp only [v,List.Vector.get_ofFn,get3_0,get3_1,get3_2,oneEval,projectionEval,
+-   UniformClosedSubstitutionRawFold.initial,twoEval,HistoryLengthOffset.NativeProof.lengthList,pairEval]
++  let g : Fin 3 → Program 3 := fun i =>
++   (HistoryRuleSuffix.applyOne HistoryLengthOffset.lengthProgram (.projection 0) ::ᵥ
++    UniformClosedSubstitutionRawFold.initial ::ᵥ (.projection 2) ::ᵥ nil).get i
++  have hargs : List.Vector.ofFn (fun i => evaluate (g i) v) =
++   (tokens.length ::ᵥ Nat.pair (Encodable.encode tokens) (Encodable.encode s) ::ᵥ Encodable.encode raw ::ᵥ nil) := by
++   ext i
++   fin_cases i <;> simp only [g,v,List.Vector.get_ofFn,List.Vector.get_cons_zero,List.Vector.get_cons_succ,
++    get3_0,get3_1,get3_2,oneEval,projectionEval,UniformClosedSubstitutionRawFold.initial,
++    twoEval,HistoryLengthOffset.NativeProof.lengthList,pairEval]
++  change evaluate UniformClosedSubstitutionFold.iterator (List.Vector.ofFn (fun i => evaluate (g i) v)) = _
++  rw [hargs]
++  exact UniformClosedSubstitutionFold.NativeProof.exactOriginalFold s tokens raw hr
+  change evaluate (HistoryRuleSuffix.applyOne (HistoryDecoder.decoder true)
+   UniformClosedSubstitutionRawFold.finalPacked) v = _
+  rw [oneEval,hp,HistoryDecoder.NativeProof.evaluateDecoder]

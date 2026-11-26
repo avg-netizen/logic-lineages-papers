@@ -1,0 +1,11 @@
+--- LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ClosedTermDepthProof.lean FULL01
++++ LogicLineages/ComputabilityKnowledge/CertifiedSourceProvabilityCompletion/Continuation20261115/FullFormulaInstantiationValidity/ClosedTermDepthProof.lean FULL02
+@@ -25,7 +25,7 @@
+  have hout := Hilbert.Local.explosion Q hbad (.base (.arithmetic (.succNotZero t)))
+  have hall : Derivation T (.all (entryRelation q l r (.zero : Term (ctx+1)) .zero (.var 0))) := by
+   simpa only [entryRelation,RelationLogicProof.witness,RelationLogicProof.witnessBody,
+-   H,Q,i,t,liftTerm,renameTerm,substitute] using
++   H,Q,i,t,liftTerm,renameTerm,substitute,Fin.succ_zero_eq_one,Fin.succ_one_eq_two] using
+    (Derivation.generalize (Derivation.generalize hout.discharge.finish))
+  exact ⟨.mp (.mp (.logical (.andIntro _ _)) (.logical (.reflexive _))) hall⟩
+ /-- Closed term runtime validity transports to arbitrary internal binder bounds. -/

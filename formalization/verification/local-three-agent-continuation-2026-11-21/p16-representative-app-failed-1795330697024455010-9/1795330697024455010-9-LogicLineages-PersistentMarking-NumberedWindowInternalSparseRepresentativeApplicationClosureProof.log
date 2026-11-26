@@ -1,0 +1,59 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRepresentativeApplicationClosureProof.lean:35:5: error: unknown namespace `NumberedWindowInternalSparsePathEnvelopeOpenSyntaxProof`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRepresentativeApplicationClosureProof.lean:63:84: error(lean.unknownIdentifier): Unknown identifier `rawConsRename`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRepresentativeApplicationClosureProof.lean:74:90: error: Application type mismatch: The argument
+  child
+has type
+  Derivation body Δ
+    (programGraph (edge4 X W)
+      (ID1Completion.InternalTagArithmeticSyntaxProof.suc ID1Completion.InternalTagArithmeticSyntaxProof.z)
+      ![Term.relabel j ctx, Term.relabel j (rawCons dom cod), Term.relabel j f, Term.relabel j g])
+but is expected to have type
+  Derivation body Δ
+    (acceptEdge (edge4 X W) (Term.relabel j ctx) (rawCons (Term.relabel j dom) (Term.relabel j cod)) (Term.relabel j f)
+      (Term.relabel j g))
+in the application
+  child.conjunctionIntroduction
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRepresentativeApplicationClosureProof.lean:104:6: error(lean.unknownIdentifier): Unknown identifier `rawConsRename`
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparseRepresentativeApplicationClosureProof.lean:86:57: error: unsolved goals
+body : Positive (Fin 1)
+α : Type
+Γ : List (ID1Completion.InternalCalculus.Formula α)
+C : Program 3
+s : Settings
+X : Program 2
+W : Program 3
+law : FunctionEdgeAt C s X W
+ctx dom cod arg value : OTerm α
+support : Nonempty (Derivation body Γ (supports C X W s ctx dom cod arg value))
+j : α → α ⊕ Fin 2 := Sum.inl
+f : OTerm (α ⊕ Fin 2) := var (Sum.inr 0)
+g : OTerm (α ⊕ Fin 2) := var (Sum.inr 1)
+M : Program 5 := applicationObserver (packedLeastProgram C X W s)
+A : ID1Completion.InternalCalculus.Formula (α ⊕ Fin 2) :=
+  acceptEdge (edge4 X W) (Term.relabel j ctx) (Term.relabel j (rawCons dom cod)) f g ⊓
+    observed M (Term.relabel j ctx) (Term.relabel j dom) (Term.relabel j cod) (Term.relabel j arg) f
+      (Term.relabel j (suc value))
+Δ : List (ID1Completion.InternalCalculus.Formula (α ⊕ Fin 2)) := A :: List.map (fun p => Formula.relabel j p) Γ
+h : Derivation body Δ A
+ready : Derivation body (List.map (fun q => Formula.relabel Sum.inl q) Γ) (supportRow C X W s ctx dom cod arg value)
+val :
+  Derivation body Δ
+    (observed M (Term.relabel j ctx) (Term.relabel j dom) (Term.relabel j cod) (Term.relabel j arg) f
+      (ID1Completion.InternalTagArithmeticSyntaxProof.suc (Term.relabel j value)))
+start :
+  Derivation body Δ
+    (programGraph (packedLeastProgram C X W s)
+      (ID1Completion.InternalTagArithmeticSyntaxProof.suc (Term.relabel j value))
+      ![Term.relabel j ctx, Term.relabel j cod,
+        auxiliaryTerm (Term.relabel j dom) (Term.relabel j cod) f (Term.relabel j arg)])
+req :
+  Derivation body (A :: List.map (fun q => Formula.relabel Sum.inl q) Γ)
+    (guards C s W (Term.relabel Sum.inl ctx) (Term.relabel Sum.inl cod)
+      (auxiliaryTerm (Term.relabel Sum.inl dom) (Term.relabel Sum.inl cod) (var (Sum.inr 0)) (Term.relabel Sum.inl arg))
+      (auxiliaryTerm (Term.relabel Sum.inl dom) (Term.relabel Sum.inl cod) (var (Sum.inr 1))
+        (Term.relabel Sum.inl arg)))
+accepted : Derivation body Δ (acceptEdge (edge4 X W) (Term.relabel j ctx) (Term.relabel j (rawCons dom cod)) f g)
+⊢ Nonempty
+    (Derivation body (List.map (fun p => Formula.relabel Sum.inl p) Γ)
+      (edgeRow (edge4 X W) (applicationObserver (packedLeastProgram C X W s)) ctx (rawCons dom cod) dom cod arg
+        (suc value)))

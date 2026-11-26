@@ -1,0 +1,19 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryKernel.SuffixProof
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryKernel.NativeStatementChecks
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryKernel.EqualityStatementChecks
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryKernel.StatementChecks
+theorem stateCodecTotal : Targets.StateCodecTotal := CodecTotalProof.stateCodecTotal
+#print axioms stateCodecTotal
+theorem nativeKernel : Targets.NativeKernel := NativeProof.nativeKernel
+#print axioms nativeKernel
+theorem internalEqualSound : Targets.InternalEqualSound := EqualProof.internalEqualSound
+#print axioms internalEqualSound
+theorem internalEqualComplete : Targets.InternalEqualComplete := EqualProof.internalEqualComplete
+#print axioms internalEqualComplete
+theorem internalStepSuffix : Targets.InternalStepSuffix := SuffixProof.internalStepSuffix
+#print axioms internalStepSuffix
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryKernel.StatementChecks

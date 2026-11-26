@@ -1,0 +1,13 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullOmegaBlockTargets
+public import LogicLineages.OrdinalComparison.OmegaBlockPrefixProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullOmegaBlock
+open LogicLineages.OrdinalComparison
+
+theorem completeOmegaBlock : Targets.CompleteOmegaBlock :=
+  ⟨actualOmegaBlockFirstStep, actualNumericalOmegaBlock, actualRetainedPrefixOmegaBlock⟩
+
+#audit_namespace LogicLineages.CartierObserverCurrent.FullOmegaBlock
+end LogicLineages.CartierObserverCurrent.FullOmegaBlock

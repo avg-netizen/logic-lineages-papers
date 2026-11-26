@@ -1,0 +1,21 @@
+module
+public import LogicLineages.PermittedControl.StageCallbackGuardRenderTargets
+import LogicLineages.PermittedControl.StageCallbackGuardRenderCalibrationProof
+import LogicLineages.PermittedControl.StageCallbackGuardRenderEffectivityProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open StageCallbackGuardRender
+
+theorem fixed_exactPairCode : ExactPairCode := exactPairCode
+theorem fixed_exactCompileCode : ExactCompileCode := exactCompileCode
+theorem fixed_exactGuardCode : ExactGuardCode := exactGuardCode
+theorem fixed_guardCodeEffectivity : GuardCodeEffectivity := guardCodeEffectivity
+theorem fixed_fullStageCallbackGuardRender : FullStageCallbackGuardRender :=
+  ⟨fixed_exactPairCode,fixed_exactCompileCode,fixed_exactGuardCode,fixed_guardCodeEffectivity⟩
+
+#print axioms fixed_exactGuardCode
+#print axioms fixed_guardCodeEffectivity
+#print axioms fixed_fullStageCallbackGuardRender
+
+end LogicLineages.PermittedControl.StatementChecks

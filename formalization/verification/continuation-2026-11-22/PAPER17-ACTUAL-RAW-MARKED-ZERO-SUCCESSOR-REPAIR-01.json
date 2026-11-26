@@ -1,0 +1,78 @@
+{
+  "status": "narrow source-only proof repair; no Lean or Git invoked by author",
+  "failed_source_remote_commit": "b2c861ab1581ba9cf68f387e176bea660a8f2ef9",
+  "failed_source_local_commit": "03336761c49720a196bb23da35478ffc93243494",
+  "failed_source_tree": "1ea3a16f3cf965c6b09cfb1a9ec65852251f8c7e",
+  "failed_exact_gate_receipt": "1795376757577276765-149",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualRawMarkedZeroSuccessorStatementChecks",
+  "failed_receipt_sha256": "afa1a52f804a6b269e19cd5daa2c9aa14d2cfa0d027ea82fe86e7d3c56cfb544",
+  "failed_exact_module_log_sha256": "51574e0bab0cb54b9760c63849a55873fad9958cecab77325a18f1cff93ec1db",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorPlanProof.lean:40:10: error: unsolved goals\ncase pos\nlam mu : NONote\nzero : shortGapLength lam (prefixTarget mu) = 0\n\u22a2 some (1, rawNoteEncode \u2191(prefixTarget mu), 0) =\n    match if True then CountPlan.survives (prefixTarget mu) else CountPlan.short (prefixTarget mu) 0 with\n    | CountPlan.invalid => none\n    | CountPlan.identity => some (0, 0, 0)\n    | CountPlan.short eta k => some (1, rawNoteEncode \u2191eta, k)\n    | CountPlan.survives eta => some (1, rawNoteEncode \u2191eta, 0)\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorPlanProof.lean:40:23: warning: This simp argument is unused:\n  if_pos zero\n\nHint: Omit it from the simp argument list.\n  simp only [\u0335i\u0335f\u0335_\u0335p\u0335o\u0335s\u0335 \u0335z\u0335e\u0335r\u0335o\u0335,\u0335e\u0335n\u0335c\u0335o\u0335d\u0335e\u0335P\u0335l\u0335a\u0335n\u0335,\u0335z\u0335e\u0335r\u0335o\u0335]\u0335[\u0332e\u0332n\u0332c\u0332o\u0332d\u0332e\u0332P\u0332l\u0332a\u0332n\u0332,\u0332 \u0332z\u0332e\u0332r\u0332o\u0332]\u0332\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorPlanProof.lean:92:34: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  if shortGapLength lam endpoint = 0 then ?m.316 else ?m.317\nin the target expression\n  (match ActualCountCoreLabels.Shape.properPrefix endpoint with\n    | ActualCountCoreLabels.Shape.identityPrefix => CountPlan.identity\n    | ActualCountCoreLabels.Shape.properPrefix eta =>\n      have k := shortGapLength lam eta;\n      if k = 0 then CountPlan.survives eta else CountPlan.short eta k\n    | x => CountPlan.invalid) =\n    CountPlan.short eta k\n\ncase neg\nw : \u2124\nn : \u2115\nlam mu eta : NONote\nk : \u2115\nendpoint : NONote\nverdict :\n  (match ActualCountCoreLabels.Shape.properPrefix endpoint with\n    | ActualCountCoreLabels.Shape.identityPrefix => CountPlan.identity\n    | ActualCountCoreLabels.Shape.properPrefix eta =>\n      have k := shortGapLength lam eta;\n      if k = 0 then CountPlan.survives eta else CountPlan.short eta k\n    | x => CountPlan.invalid) =\n    CountPlan.short eta k\nshape : classify lam mu = ActualCountCoreLabels.Shape.properPrefix endpoint\nabsent : \u00acshortGapLength lam endpoint = 0\n\u22a2 k \u2260 0\n",
+  "failed_original_native_log_sha256": "210bf5176ff1aff6b0cb2b962af1fe8e4faa34d2b011bf1344b54b6bb8ca1cd0",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorPlanProof.lean",
+  "failed_proof_sha256": "8da74932286c397553d4b04d456c832b6911bebb5a4c2aec10ff7dc93e9d1b5b",
+  "repaired_proof_sha256": "b7344fb1eb90da7568f3d08ab86ae89442951c1a4763886ecf834b37c9fb417c",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MARKED-ZERO-SUCCESSOR-REPAIR-01.patch",
+  "patch_sha256": "efe3f166802176f14d5ca9da422387b09063aa6894bf94fc53ca410392f830fc",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MARKED-ZERO-SUCCESSOR-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "dce21ba40a8b8227dea6f8d81ab98875896507e92a4bb14d3869d4e58b3b221a",
+  "prior_repairs_sha256": {},
+  "unchanged_current_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorMovePrimitiveProof.lean": "753469b08fa73767e3ea1d08836a6e1afbcea22dae3544b62b8aa428c04dabc4",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorMoveProof.lean": "9bab678c8d45d685ad23c94108466b8eac67307042c75c62d3de9c0a5e6a417f",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorPlanPrimitiveProof.lean": "136b1cc97e65bf384308a4a5231e6839e3ce40c8b6a4228de9f9c31465d06712",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorPrimitiveProof.lean": "3f5e04e644719be33a09adb12e827b37276511a0a6ac5a7e303aaa02f38f920b",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorProof.lean": "4ddce600babf5e705162cd6ce3b6aa78acd2551dc43b7c77e20166449559dc8b",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorStatementChecks.lean": "16f07952f2329956167965e7e3fb95dc5f2051b3acbaa92876b7ad371444cf9c",
+    "formalization/LogicLineages/PermittedControl/ActualRawMarkedZeroSuccessorTargets.lean": "d4358749791f9359ffbbf9b344e5507fe41ba64ecfc4f9e2d91d405bf04ba6c8",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MARKED-ZERO-SUCCESSOR-SOURCE-MAP.md": "44adc71d4614a2d1b83d6ed15148ae63b24028ba96f4c81261a33a835761b890"
+  },
+  "static_module_closure": {
+    "MovePrimitiveProof": {
+      "local": 528,
+      "external": 43,
+      "contains_totient": false
+    },
+    "MoveProof": {
+      "local": 526,
+      "external": 41,
+      "contains_totient": false
+    },
+    "PlanPrimitiveProof": {
+      "local": 397,
+      "external": 41,
+      "contains_totient": false
+    },
+    "PlanProof": {
+      "local": 329,
+      "external": 35,
+      "contains_totient": false
+    },
+    "PrimitiveProof": {
+      "local": 532,
+      "external": 43,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 529,
+      "external": 41,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 537,
+      "external": 43,
+      "contains_totient": false
+    },
+    "Targets": {
+      "local": 317,
+      "external": 35,
+      "contains_totient": false
+    }
+  },
+  "scope": "Expose the exact typed proper-prefix conditional before rewriting its selected zero-length branch. Expose the same matching conditional in the positive-short verdict, use the short constructor projection, and derive the actual nonzero length. Keeps target/codec, exact cache recut and other sources unchanged.",
+  "prior_exact_preflight_recut_manifest": {
+    "path": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-RAW-MARKED-ZERO-SUCCESSOR-RECUT-01.json",
+    "sha256": "82007f1cd65550bd5054fc8f68f6e3aebe28d841a27ee731595e455500080a50"
+  }
+}

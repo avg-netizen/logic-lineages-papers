@@ -1,0 +1,10 @@
+module
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralMPRun.CoreProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralMPRun.StatementChecks
+theorem trailingStep : Targets.InternalTrailingStep := TrailingProof.internalTrailingStep
+theorem constructedRun : Targets.InternalConstructedRun := ConstructedProof.internalConstructedRun
+theorem coreAcceptance : Targets.InternalCoreAcceptance := CoreProof.internalCoreAcceptance
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralMPRun.StatementChecks
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.LiteralMPRun.StatementChecks

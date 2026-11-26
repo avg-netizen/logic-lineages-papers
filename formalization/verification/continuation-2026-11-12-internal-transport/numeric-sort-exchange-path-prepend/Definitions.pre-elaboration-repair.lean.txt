@@ -1,0 +1,19 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNumericListSortExchangePathDefinitions
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNumericListSortExchangePathPrepend
+open InternalApplicationCertificateConstructors
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+/-- Inputs [old paired entry, common new head]. Every selector is total. -/
+def vertex : Program 2 := leftOf (.projection 0)
+def certificate : Program 2 := rightOf (.projection 0)
+def oldFront : Program 2 := leftOf certificate
+def payload : Program 2 := rightOf certificate
+def newFront : Program 2 := consOf (.projection 1) oldFront
+def newCertificate : Program 2 := pairOf newFront payload
+def newVertex : Program 2 := consOf (.projection 1) vertex
+def entryLift : Program 2 := pairOf newVertex newCertificate
+/-- Original numeric list recursion, preserving order and the same head. -/
+def mapStep : Program 3 := consOf (.composition entryLift ![.projection 0,.projection 2]) (.projection 1)
+def mapPath : Program 2 := InternalRawListRecursion.listRec (.zero 1) mapStep
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalNumericListSortExchangePathPrepend

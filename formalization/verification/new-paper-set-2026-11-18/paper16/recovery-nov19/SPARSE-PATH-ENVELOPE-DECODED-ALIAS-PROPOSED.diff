@@ -1,0 +1,17 @@
+--- formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean
++++ formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean
+@@ -108,12 +108,12 @@
+     | none => simp only [decoded,Option.bind_eq_bind,Option.bind_none]
+     | some pair =>
+       obtain ⟨tag,body⟩ := pair
+-      simp only [decoded,Option.bind_eq_bind,Option.bind_some,run,exact_ActualDecodedOutput]
++      simp only [decoded,Option.bind_eq_bind,Option.bind_some,run,exact_ActualDecodedOutput body]
+ 
+ theorem nodeOfCell {n h t : Nat} (found : chosenCell n = some (h,t)) :
+     unpackNode n = (unpack t).map (fun xs => (h,xs)) := by
+   rw [← node n, selectedNode, found]
+-  simp only [Option.bind_eq_bind,Option.bind_some,run,exact_ActualDecodedOutput]
++  simp only [Option.bind_eq_bind,Option.bind_some,run,exact_ActualDecodedOutput t]
+   cases unpack t <;> rfl
+ 
+ theorem noNode {n : Nat} (found : chosenCell n = none) : unpackNode n = none := by

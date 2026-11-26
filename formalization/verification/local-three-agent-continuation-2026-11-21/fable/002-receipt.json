@@ -1,0 +1,106 @@
+{
+  "status": "completed",
+  "created_utc": "2026-11-22T03:03:54.294063+00:00",
+  "model": "claude-fable-5-2",
+  "effort": "high",
+  "route": "User-authorized API-first claudep wrapper. Subscription fallback only upon exhausted credits.",
+  "resume_session_id": "da2de9c8-b5b9-4018-b4ab-c6ff052db739",
+  "prompt_sha256": "fc882a63bb9ec77764d39bc143474231b5ee955fb3f1696cc752a4651981f944",
+  "target": "ExactOpenPackedLeastPoolOccurrence",
+  "phase": "Implement independently frozen original packed-least occurrence proof.",
+  "tools": [
+    "Read",
+    "Glob",
+    "Grep"
+  ],
+  "freeze": "../FABLE-PACKED-LEAST-OPEN-FROZEN.json",
+  "started_utc": "2026-11-22T03:09:24.384511+00:00",
+  "argv": [
+    "/home/other/storage/projects/palace2/.claude/tools/claudep/claudep",
+    "--model",
+    "claude-fable-5-2",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "Read,Glob,Grep",
+    "--allowedTools",
+    "Read,Glob,Grep",
+    "--permission-mode",
+    "dontAsk",
+    "--strict-mcp-config",
+    "--mcp-config",
+    "{\"mcpServers\":{}}",
+    "--resume",
+    "da2de9c8-b5b9-4018-b4ab-c6ff052db739"
+  ],
+  "pid": 2920606,
+  "exit_code": 0,
+  "ended_utc": "2026-11-22T03:17:51.869607+00:00",
+  "observed_fallback": false,
+  "assistant_response_count": 7,
+  "init_count": 1,
+  "session_id": "da2de9c8-b5b9-4018-b4ab-c6ff052db739",
+  "init_model": "claude-fable-5-2",
+  "api_key_source": "ANTHROPIC_API_KEY",
+  "result_type": "success",
+  "is_error": false,
+  "usage": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 207591,
+    "cache_read_input_tokens": 177711,
+    "output_tokens": 59266,
+    "output_tokens_details": {
+      "thinking_tokens": 48710
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 207591
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 30440,
+        "cache_read_input_tokens": 174488,
+        "cache_creation_input_tokens": 36326,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 36326,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-fable-5-2": {
+      "inputTokens": 42,
+      "outputTokens": 91355,
+      "thinkingTokens": 64818,
+      "cacheReadInputTokens": 1791038,
+      "cacheCreationInputTokens": 370652,
+      "cacheCreationEphemeral5mInputTokens": 370652,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 7.719263600000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "canonicalModel": "claude-fable-5-2",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "cost_usd": 7.719263600000001,
+  "resumability": "genuine successful assistant response and result verified",
+  "stream.jsonl_sha256": "39a0f2540b932eac11273cfadb7ebb3cab7f2a3871b2079c6b86eda08626fcba",
+  "stderr.txt_sha256": "102c9d2f90f67e102799d30f087cfbb7655a656b42fb3fcee8c1a3ed64bc4bde"
+}

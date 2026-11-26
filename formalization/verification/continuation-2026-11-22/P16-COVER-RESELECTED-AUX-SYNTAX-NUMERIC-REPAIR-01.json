@@ -1,0 +1,48 @@
+{
+  "status": "numeric proof-only instantiated conjunction rewrite and closing namespace repair; native gate pending",
+  "immutable_previous_verified_remote": "584d2c364ebbd10cb9ce18d159aaaa026b957319",
+  "previous_source_local_prefix": "f850dca19",
+  "receipt": {
+    "path": "formalization/build-reports/1795356257519532654-74.json",
+    "sha256": "e1aa4ff3909a418c9aca9583ca6eccb8b2088ded9d931661009104dd39694b2f"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795356257519532654-74-LogicLineages-PersistentMarking-NumberedWindowInternalCoverAuxSyntaxNumericProof.log",
+    "sha256": "c245c3a5a1749fe32b5670907900c14eb756a9fdf56df77ff2c88ced0eff26c8"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-reselected-aux-syntax-initial-numeric-diagnostic.txt",
+    "sha256": "c245c3a5a1749fe32b5670907900c14eb756a9fdf56df77ff2c88ced0eff26c8"
+  },
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-COVER-RESELECTED-AUX-SYNTAX-NUMERIC-REPAIR-01.patch",
+    "sha256": "caf31a68964557cd679f1b1e7fd91bc2acf95602cbc023d6f45cfca248be4238"
+  },
+  "archived_failed_source": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverAuxSyntaxNumericProof-01.lean",
+    "sha256": "22948682d4f7a3cd1a5bdb20a2be56af0ff70dceba9496a23051a17d19c37433"
+  },
+  "repaired_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxSyntaxNumericProof.lean",
+    "sha256": "9f677e3c792e18abca184faf68f71321d0db76b2892f53d9e091417967d6d7a8"
+  },
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxSyntaxTargets.lean",
+      "sha256": "5a4a626bce7b7b75997ce1487d07980acf515dfb2b7b9c88ff7eb698f6933e69"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxSyntaxOpenRowProof.lean",
+      "sha256": "9a123541add95cd506fc1b14eafd18d82f45c4563a15a11a2ac38f104072fe95"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverAuxSyntaxOpenParentProof.lean",
+      "sha256": "753758e2c00bff628f9c732b79357f9521da9046599f72ef85f71fa14b7d5f66"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-COVER-RESELECTED-AUX-SYNTAX-SOURCE-MAP.md",
+      "sha256": "4e9b2dbd2a7cab97560c6745368ccd04b24654c7e57de3cda58c135d281f6a95"
+    }
+  ],
+  "diagnosis": "Compiler marked generic actualConjunctionEvaluation unused in simp, leaving the complete actual Program evaluation undecomposed at the leaf. Rewrite explicit outer, middle and inner conjunction evaluations by their concrete program arguments; feed separately proved literal type evaluations and exact earlier-memo lookup values. Named Boolean equations aid closed finite case reduction only after these source equalities. Correct the closing namespace token. Original targets/programs/imports and both open proof files unchanged; these open files were not native attempted by the stopped numeric chain. Failed sorryAx lines do not constitute acceptance."
+}

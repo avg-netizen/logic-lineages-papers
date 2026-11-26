@@ -1,0 +1,31 @@
+module
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.BlockFormulaSubstitutionCodeFormulaCalibrationProof
+public import LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.BlockFormulaSubstitutionCodeProgramsProof
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.BlockFormulaSubstitutionCodeStatementChecks
+
+theorem literalAtomCalibration : BlockFormulaSubstitutionCodeTargets.LiteralAtomCalibration :=
+  BlockFormulaSubstitutionCodeProof.literalAtomCalibration
+#print axioms literalAtomCalibration
+
+theorem actualAtomProgram : BlockFormulaSubstitutionCodeTargets.ActualAtomProgram :=
+  BlockFormulaSubstitutionCodeProof.actualAtomProgram
+#print axioms actualAtomProgram
+
+theorem literalEncodedAtomCalibration : BlockFormulaSubstitutionCodeTargets.LiteralEncodedAtomCalibration :=
+  BlockFormulaSubstitutionCodeProof.literalEncodedAtomCalibration
+#print axioms literalEncodedAtomCalibration
+
+theorem actualEncodedAtomProgram : BlockFormulaSubstitutionCodeTargets.ActualEncodedAtomProgram :=
+  BlockFormulaSubstitutionCodeProof.actualEncodedAtomProgram
+#print axioms actualEncodedAtomProgram
+
+theorem literalFormulaCalibration : BlockFormulaSubstitutionCodeTargets.LiteralFormulaCalibration :=
+  BlockFormulaSubstitutionCodeProof.literalFormulaCalibration
+#print axioms literalFormulaCalibration
+
+theorem actualFormulaProgram : BlockFormulaSubstitutionCodeTargets.ActualFormulaProgram :=
+  BlockFormulaSubstitutionCodeProof.actualFormulaProgram
+#print axioms actualFormulaProgram
+
+end LogicLineages.OrdinalComparison.LayeredComparison.SnyatkovCompletion.NonlinearProjectionCompletion.BlockFormulaSubstitutionCodeStatementChecks

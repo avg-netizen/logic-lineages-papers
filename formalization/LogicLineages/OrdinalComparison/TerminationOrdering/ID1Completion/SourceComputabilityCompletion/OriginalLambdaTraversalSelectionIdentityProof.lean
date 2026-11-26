@@ -1,0 +1,16 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalSelectionFieldProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalSelectionIdentityProof
+open OriginalLambdaTraversalSelectionFieldProof
+
+/-- These are literal Program equalities. The representative wrappers do
+not change source/target/member fields or the original window Program. -/
+theorem actualOriginalLambdaTraversalSelectionIdentity :
+    OriginalLambdaTraversalSelectionTargets.ActualOriginalLambdaTraversalSelectionIdentity := by
+  intro p
+  exact ⟨finalWindow p, finalIdentity p, sameValidity p, sameMember p⟩
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalSelectionIdentityProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaTraversalSelectionIdentityProof

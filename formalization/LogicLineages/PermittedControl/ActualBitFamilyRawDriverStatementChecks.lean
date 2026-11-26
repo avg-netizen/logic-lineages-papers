@@ -1,0 +1,24 @@
+module
+public import LogicLineages.PermittedControl.ActualBitFamilyRawDriverTargets
+import LogicLineages.PermittedControl.ActualBitFamilyRawDriverCalibrationProof
+import LogicLineages.PermittedControl.ActualBitFamilyRawDriverSemanticsProof
+import LogicLineages.PermittedControl.ActualBitFamilyRawDriverComputableProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open ActualBitFamilyRawDriver
+
+theorem fixed_exactDriverTransport : ExactDriverTransport := exactDriverTransport
+theorem fixed_exactDriverDepth : ExactDriverDepth := exactDriverDepth
+theorem fixed_exactDriverSolve : ExactDriverSolve := exactDriverSolve
+theorem fixed_exactDriverEffectivity : ExactDriverEffectivity := exactDriverEffectivity
+theorem fixed_fullActualBitFamilyRawDriver : FullActualBitFamilyRawDriver :=
+  ⟨fixed_exactDriverTransport,fixed_exactDriverDepth,fixed_exactDriverSolve,fixed_exactDriverEffectivity⟩
+
+#print axioms fixed_exactDriverTransport
+#print axioms fixed_exactDriverDepth
+#print axioms fixed_exactDriverSolve
+#print axioms fixed_exactDriverEffectivity
+#print axioms fixed_fullActualBitFamilyRawDriver
+
+end LogicLineages.PermittedControl.StatementChecks

@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCodec.Targets
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCodec.Preflight
+#check Targets.NativePair
+#check Targets.NativeCons
+#check Targets.NativeConsAllVectors
+#check Targets.InternalAdd
+#check Targets.InternalMultiply
+#check Targets.InternalPairZero
+#check Targets.InternalPairPositive
+#check Targets.InternalCons
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryCodec.Preflight

@@ -1,0 +1,25 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedRawBaseGateRowsTargets
+import LogicLineages.PermittedControl.OriginalPrintedRawBaseGateRowsProof
+import LogicLineages.PermittedControl.OriginalPrintedRawBaseGateRowsPrimitiveProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+open OriginalPrintedRawBaseGateRows
+
+theorem fixed_exactBaseRawAffine : ExactBaseRawAffine := exactBaseRawAffine
+theorem fixed_exactBaseRawNormLimit : ExactBaseRawNormLimit := exactBaseRawNormLimit
+theorem fixed_exactOriginalRawBaseGateStep : ExactOriginalRawBaseGateStep := exactOriginalRawBaseGateStep
+theorem fixed_exactOriginalRawBaseGateEffectivity : ExactOriginalRawBaseGateEffectivity :=
+  exactOriginalRawBaseGateEffectivity
+theorem fixed_fullOriginalPrintedRawBaseGateRows : FullOriginalPrintedRawBaseGateRows :=
+  ⟨fixed_exactBaseRawAffine,fixed_exactBaseRawNormLimit,
+    fixed_exactOriginalRawBaseGateStep,fixed_exactOriginalRawBaseGateEffectivity⟩
+
+#print axioms fixed_exactBaseRawAffine
+#print axioms fixed_exactBaseRawNormLimit
+#print axioms fixed_exactOriginalRawBaseGateStep
+#print axioms fixed_exactOriginalRawBaseGateEffectivity
+#print axioms fixed_fullOriginalPrintedRawBaseGateRows
+
+end LogicLineages.PermittedControl.StatementChecks

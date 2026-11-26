@@ -1,0 +1,44 @@
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSingletonTypeArgumentNumericProof.lean:43:35: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverSingletonTypeArgumentNumericProof.lean:56:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  decode n
+in the target expression
+  (match n + 1, table (n + 1) with
+    | 0, x => (0, 0)
+    | n.succ, table =>
+      (Option.map
+            (fun p =>
+              have q := (table.getD p.1 default).1;
+              have r := (table.getD p.2 default).2;
+              (q.1 + 1 + r.1, max q.2 r.2))
+            (decode n)).getD
+        default) =
+    (2, 0)
+
+q : ℕ
+head : run (header 3 1) q = 1
+fields : List ℕ
+read : NumberedWindowFieldAlgorithm.unpackNode q = some (3, fields)
+right✝ : fields.length = 1
+leaf : (bounds q).1 = (1, 0)
+n : ℕ := pair q 0
+split : decode n = some (q, 0)
+left✝ : pair q 0 = n
+hq : q ≤ n
+hz : 0 ≤ n
+⊢ (match n + 1, table (n + 1) with
+    | 0, x => (0, 0)
+    | n.succ, table =>
+      (Option.map
+            (fun p =>
+              have q := (table.getD p.1 default).1;
+              have r := (table.getD p.2 default).2;
+              (q.1 + 1 + r.1, max q.2 r.2))
+            (decode n)).getD
+        default) =
+    (2, 0)
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverSingletonTypeArgumentNumericProof.exact_CoverSingletonTypeArgs' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,52 @@
+{
+  "status": "narrow proof-only first repair; exact native retry pending",
+  "immutable_previous_verified_remote": "27f48b8f8e946e748c1d8caf1d1600c57a2cd0ab",
+  "previous_source_local": "6d335509090d36e56f22008a8a23692f9aa60e82",
+  "receipt": {
+    "path": "formalization/build-reports/1795361480653707640-75.json",
+    "sha256": "0e93ebee5bc3423a88dd71786a24d19d0227bc00af030a7cec5f09857201c757"
+  },
+  "original_module_diagnostic": {
+    "path": "formalization/build-reports/1795361480653707640-75-LogicLineages-PersistentMarking-NumberedWindowInternalCoverNamedLeafMeasureNumericProof.log",
+    "sha256": "940615666164bd51e22c4ba1af24cb254458e0cdc0bca4fac6fe84c6689d189e"
+  },
+  "archived_exact_module_diagnostic": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/cover-named-leaf-measure-numeric-initial-diagnostic.txt",
+    "sha256": "940615666164bd51e22c4ba1af24cb254458e0cdc0bca4fac6fe84c6689d189e"
+  },
+  "reversible_patch": {
+    "path": "formalization/verification/continuation-2026-11-22/P16-COVER-NAMED-LEAF-MEASURE-NUMERIC-REPAIR-01.patch",
+    "sha256": "92f8198c98cb1ba50f4451304159408f8feaee0597dedcf441f206bfd4a936ca"
+  },
+  "archived_failed_source": {
+    "path": "formalization/verification/continuation-2026-11-22/native-failed-editions/NumberedWindowInternalCoverNamedLeafMeasureNumericProof-01.lean",
+    "sha256": "4b70d5e4fa40247da65b005be4538b76701a4cb81733ba6b0e81cb206cccd634"
+  },
+  "repaired_source": {
+    "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedLeafMeasureNumericProof.lean",
+    "sha256": "7c214232f3d0ba59d9fce0c5adae800eada143d3b9431a3b127cb9cf10db2d85"
+  },
+  "unchanged_pins": [
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedLeafMeasureTargets.lean",
+      "sha256": "d56619123b0a98adbc433edf6d0a4c926bb5967054634eef1ebf7883612a4979"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedLeafMeasureDispatchProof.lean",
+      "sha256": "1abc8154095705829b652707d245bdf5f3822e9a4bb7b6f43f40edde1814218e"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedLeafSharedMeasureProof.lean",
+      "sha256": "1faabeb91c2b2e99595c29e4871d89d8c2d04a65d6d6b59f87969b5ca2752452"
+    },
+    {
+      "path": "formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverNamedLeafMeasuredScratchProof.lean",
+      "sha256": "2832aa4dfbcf016dcdb5f3084716a429a428d58cea2028564293f13dace8cce7"
+    },
+    {
+      "path": "formalization/verification/continuation-2026-11-22/P16-COVER-NAMED-LEAF-MEASURED-SUCCESSOR-SOURCE-MAP.md",
+      "sha256": "59558e2876c81ef7f8f88b241bfaf9c53d589f58b4869674d07c1b344fca1cb1"
+    }
+  ],
+  "diagnosis": "Avoid unfolding Bool.toNat under the match: reduce the actual bounds and unpack, then use the definitionally equal concrete tag 0/1 in the unchanged source termMeasure and reflexivity. This is only the original numeric leaf; the target and all physical open statements/programs stand byte-for-byte. Failed sorryAx is not acceptance."
+}

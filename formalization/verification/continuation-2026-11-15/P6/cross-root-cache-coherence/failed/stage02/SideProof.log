@@ -1,0 +1,115 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:28:75: error: Application type mismatch: The argument
+  index
+has type
+  (seed : ?m.5) → (depth : ?m.9 seed) → (frontier : ?m.10 seed depth) → ?m.11 seed depth frontier → OTerm alpha
+but is expected to have type
+  OTerm alpha
+in the application
+  PrimaryUncoveredCount.bounded index
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:29:92: error: Application type mismatch: The argument
+  index
+has type
+  (seed : ?m.5) → (depth : ?m.9 seed) → (frontier : ?m.10 seed depth) → ?m.11 seed depth frontier → OTerm alpha
+but is expected to have type
+  OTerm alpha
+in the application
+  graph2 InternalEqualityTest.subtract depth index
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:32:96: error: Application type mismatch: The argument
+  index
+has type
+  (seed : ?m.5) → (depth : ?m.9 seed) → (frontier : ?m.10 seed depth) → ?m.11 seed depth frontier → OTerm alpha
+but is expected to have type
+  InternalTagArithmeticSyntaxProof.OTerm alpha
+in the application
+  suc index
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:34:47: error: Function expected at
+  Side
+but this term has type
+  ?m.3
+
+Note: Expected a function because this term is being applied to the argument
+  body
+
+Hint: The identifier `Side` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:36:46: error: Function expected at
+  Side
+but this term has type
+  ?m.3
+
+Note: Expected a function because this term is being applied to the argument
+  body
+
+Hint: The identifier `Side` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:64:65: error: Application type mismatch: The argument
+  hg
+has type
+  Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph out index seed param))
+but is expected to have type
+  Nonempty
+    (Derivation body Delta
+      (InternalGraphComposition.graph ?m.12 out (Fin.cons index (Fin.cons seed (Fin.cons param Fin.elim0)))))
+in the application
+  graphInputTransport body alpha 3 Delta ?m.12 out (Fin.cons index (Fin.cons seed (Fin.cons param Fin.elim0)))
+    (Fin.cons next (Fin.cons seed (Fin.cons param Fin.elim0))) ?m.27 hg
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:62:2: error: Tactic `apply` failed: could not unify the type of `graphInputTransport body alpha 3 Delta ?m.12 out
+  (Fin.cons index (Fin.cons seed (Fin.cons param Fin.elim0))) (Fin.cons next (Fin.cons seed (Fin.cons param Fin.elim0)))
+  ?m.27 sorry`
+  Nonempty
+    (Derivation body Delta
+      (InternalGraphComposition.graph ?m.12 out (Fin.cons next (Fin.cons seed (Fin.cons param Fin.elim0)))))
+with the goal
+  Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph out next seed param))
+
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+out index next seed param : OTerm alpha
+he : Nonempty (Derivation body Delta (eqn index next))
+hg : Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph out index seed param))
+⊢ Nonempty (Derivation body Delta (graph3 ArgumentEntriesRecursor.graph out next seed param))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:71:48: error: Function expected at
+  Side
+but this term has type
+  ?m.3
+
+Note: Expected a function because this term is being applied to the argument
+  body
+
+Hint: The identifier `Side` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:76:87: error: Function expected at
+  Side
+but this term has type
+  ?m.3
+
+Note: Expected a function because this term is being applied to the argument
+  body
+
+Hint: The identifier `Side` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:94:51: error: Function expected at
+  Side
+but this term has type
+  ?m.3
+
+Note: Expected a function because this term is being applied to the argument
+  body
+
+Hint: The identifier `Side` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:103:53: error: Function expected at
+  Side
+but this term has type
+  ?m.3
+
+Note: Expected a function because this term is being applied to the argument
+  body
+
+Hint: The identifier `Side` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:109:49: error: Function expected at
+  Side
+but this term has type
+  ?m.3
+
+Note: Expected a function because this term is being applied to the argument
+  body
+
+Hint: The identifier `Side` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261115/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261115/CrossRootCacheCoherence/SideProof.lean:115:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261115.CrossRootCacheCoherence.SideProof.childMember: forbidden axiom dependency sorryAx

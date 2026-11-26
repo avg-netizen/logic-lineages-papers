@@ -1,0 +1,49 @@
+module
+public import LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeEmitterDefinitions
+public import LogicLineages.PersistentMarking.NumberedWindowInternalSparsePathEnvelope
+
+@[expose] public section
+namespace LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeParsedEmitter
+open LogicLineages.ComputabilityKnowledge GorbowPRProgram List.Vector
+open NumberedWindowInternalFreshProbeEmitter (Selectors)
+open NumberedWindowInternalFreshProbeDispatchProgram (zeroAt literal chooseBranch bothOne)
+open NumberedWindowInternalSparsePathEnvelope (applyUnary nodeGood field)
+open NumberedWindowInternalSparseFieldCell (cellGood cellHead cellTail)
+open NumberedWindowScalarAlgorithm (Settings scalar)
+open NumberedWindowFreeAddress (freshName)
+
+/-- The literal outer address has tag 3 and exactly three raw fields. -/
+def addressTag : Program 1 := literal 1 3
+def addressGood : Program 1 := nodeGood addressTag 3
+def rawContext : Program 1 := field 0
+def rawResult : Program 1 := field 1
+def rawLeast : Program 1 := field 2
+
+/-- The raw result is a nonzero sparse pair. Its head and tail are the
+same domain/codomain fields, not a decode/re-encode of another type. -/
+def arrowGood : Program 1 := applyUnary cellGood rawResult
+def rawDomain : Program 1 := applyUnary cellHead rawResult
+def rawCodomain : Program 1 := applyUnary cellTail rawResult
+
+def parserGuard : Program 1 := bothOne addressGood arrowGood
+
+/-- The arbitrary source leaf controls scalar admission only. The
+actual sparse envelope and arrow tests are additional explicit code. -/
+def selectedGuard (scalarProg : Program 1) : Program 1 :=
+  GorbowVerifierNormalization.normalize (bothOne scalarProg parserGuard)
+
+def gated (g datum : Program 1) : Program 1 := chooseBranch g (zeroAt 1) datum
+
+/-- The same guard zeros all missing fields. A present zero coordinate
+is still distinguished from failure by the separate indicator. -/
+def selected (scalarProg bound : Program 1) : Selectors :=
+  let g := selectedGuard scalarProg
+  ⟨g, gated g rawContext, gated g rawDomain, gated g (applyUnary bound rawLeast)⟩
+
+/-- Numerical correspondence to the exact original two source leaves.
+No object formula transport or proof is assumed in this predicate. -/
+def InputCalibrated (s : Settings) (scalarProg bound : Program 1) : Prop :=
+  (∀ q, evaluate scalarProg (q ::ᵥ nil) = (scalar s q).toNat) ∧
+  (∀ q, evaluate bound (q ::ᵥ nil) = freshName q)
+
+end LogicLineages.PersistentMarking.NumberedWindowInternalFreshProbeParsedEmitter

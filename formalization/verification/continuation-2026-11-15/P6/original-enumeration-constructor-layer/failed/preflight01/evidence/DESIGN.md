@@ -1,0 +1,15 @@
+# Faithful original eight-block constructor layer (exact2)
+
+Original source: NumberedCodeEnumerationPrimrecSupportProof.layer. Program7 inputs [types, original encoded heads, labels, tupleBound, variableBound, prior, opened]. Exactly eight left-associated append blocks: variable range mapped to tag0; type/opened cross mapped tag1; type/(prior/prior) cross mapped tag2; types mapped bottom tag3; converted-head/prior cross mapped tag4; accepted corrected six-field numbered branch tag5 with range(labels+1) and original typeLists; singleton argumentsNil (tag6,payload0); same typed prior pairs mapped tag7.
+
+Both ordinary and numbered use concrete accepted Encodable-head conversion before raw constructor payload assembly. The ordinary branch explicitly maps conversion before cross, while numbered delegates to the accepted corrected wrapper that does the same. Original encoded head input is never silently replaced by raw head numbers. Default0 conversion retains every malformed head occurrence, not filterMap omission. Original raw map/cross/append semantics remain total on arbitrary numeric lists; native target calibrates original typed lists only, not an unjustified malformed-Code list decoder image.
+
+All native codecs must be paid: original Code encoding equals codeNumber, Ty encoding follows original typeNumber, HeadCode encoding differs from headNumber, nested cross payload pairs are exact original pairing. Range is ascending and typeLists order is literal. Duplicates and original row-major order remain in all blocks. No sorting/deduplication or added symbol-validity premise.
+
+Internal target recovers all eight actual component outputs via genuine object-language existential witnesses and characterizes layer membership by the right-associated eight-way branch disjunction. Only actual layer graph is a premise, and every input/output/code is arbitrary. The componentGraphs conjunction is intentionally left-associated in source order. Branch graph and membership witnesses must be introduced/eliminated internally; no native image or caller-supplied field list hides this duty.
+
+Duplicate check: original layer previously only has Primrec existence; accepted packets supply ranges, typeLists, concrete six-field numbered, and generic actual cross/map/append membership, not this entire faithful Program7 with native original layer calibration and internally recovered eight-block membership. This assembly does not identify branch membership with typed acceptance.
+
+Remaining: outer enumerate fuel recursion with distinct prior at variableBound and opened at variableBound+1, full bounded-code enumeration completeness, Q and whole supplier/E completeness. This layer has independent prior/opened lists. Old false OriginalNumberedEnumerationBranch NativeBranch stays blocked unchanged; only its checked raw helpers and corrected wrapper may be used.
+
+Freeze only. No proof authored; no compiler/Git run. Proof plan: separately native branch calibrations and append order; internally actual component queries, append-chain forward/backward membership, seven/eight finite-block witnesses and substitution transport with programs opaque.

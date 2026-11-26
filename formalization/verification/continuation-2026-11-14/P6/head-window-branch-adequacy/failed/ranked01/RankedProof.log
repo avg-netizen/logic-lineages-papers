@@ -1,0 +1,23 @@
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/HeadWindowBranchAdequacy/RankedProof.lean:31:34: error: Invalid argument name `Gamma` for function `constantValue`
+
+Hint: Perhaps you meant one of the following parameter names:
+  • `alpha`: G̵a̵m̵m̵a̵a̲l̲p̲h̲a̲
+  • `Delta`: G̵a̵m̵m̵a̵D̲e̲l̲t̲a̲
+  • `n`: G̵a̵m̵m̵a̵n̲
+  • `value`: G̵a̵m̵m̵a̵v̲a̲l̲u̲e̲
+  • `xs`: G̵a̵m̵m̵a̵x̲s̲
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/HeadWindowBranchAdequacy/RankedProof.lean:26:43: error: unsolved goals
+n : ℕ
+arity : Fin n → ℕ
+body : Positive (Fin 1)
+alpha : Type
+Delta : List (InternalCalculus.Formula alpha)
+raw symbol symbols types : OTerm alpha
+hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing raw (numeral 5) symbol))
+hd :
+  Nonempty (Derivation body Delta (graph3 (window n arity) (numeral 1) raw symbols types)) ↔
+    Nonempty (Derivation body Delta (graph3 (branchWindow n arity ↑5) (numeral 1) symbol symbols types))
+xs : Fin 3 → OTerm alpha := Fin.cons symbol (Fin.cons symbols (Fin.cons types Fin.elim0))
+⊢ Nonempty (Derivation body Delta (graph3 (window n arity) (numeral 1) raw symbols types)) ↔
+    Nonempty (Derivation body Delta (member symbols symbol ⊓ member types (numeral 0)))
+/workspace/scratch/d6452c0f74c7/formalization-continuation-20261114/formalization/LogicLineages/OrdinalComparison/TerminationOrdering/ID1Completion/SourceComputabilityCompletion/Continuation20261114/HeadWindowBranchAdequacy/RankedProof.lean:55:0: error: LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.HeadWindowBranchAdequacy.RankedProof.ranked: forbidden axiom dependency sorryAx

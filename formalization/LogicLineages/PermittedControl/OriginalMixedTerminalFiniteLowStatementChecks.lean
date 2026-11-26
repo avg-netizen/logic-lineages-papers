@@ -1,0 +1,31 @@
+module
+public import LogicLineages.PermittedControl.OriginalMixedTerminalFiniteLowTargets
+import LogicLineages.PermittedControl.OriginalMixedTerminalFiniteLowReadProof
+import LogicLineages.PermittedControl.OriginalMixedTerminalFiniteLowProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalMixedFiniteTableLayout :
+    OriginalMixedTerminalFiniteLow.ExactFiniteTableLayout :=
+  OriginalMixedTerminalFiniteLow.exactFiniteTableLayout
+
+theorem fixed_exactOriginalMixedTerminalFiniteLowRows :
+    OriginalMixedTerminalFiniteLow.ExactOriginalFiniteLowRows :=
+  OriginalMixedTerminalFiniteLow.exactOriginalFiniteLowRows
+
+theorem fixed_exactOriginalMixedTerminalFiniteLowPolarity :
+    OriginalMixedTerminalFiniteLow.ExactOriginalFiniteLowPolarity :=
+  OriginalMixedTerminalFiniteLow.exactOriginalFiniteLowPolarity
+
+theorem fixed_fullOriginalMixedTerminalFiniteLow :
+    OriginalMixedTerminalFiniteLow.FullOriginalMixedTerminalFiniteLow :=
+  ⟨fixed_exactOriginalMixedFiniteTableLayout,fixed_exactOriginalMixedTerminalFiniteLowRows,
+    fixed_exactOriginalMixedTerminalFiniteLowPolarity⟩
+
+#print axioms fixed_exactOriginalMixedFiniteTableLayout
+#print axioms fixed_exactOriginalMixedTerminalFiniteLowRows
+#print axioms fixed_exactOriginalMixedTerminalFiniteLowPolarity
+#print axioms fixed_fullOriginalMixedTerminalFiniteLow
+
+end LogicLineages.PermittedControl.StatementChecks

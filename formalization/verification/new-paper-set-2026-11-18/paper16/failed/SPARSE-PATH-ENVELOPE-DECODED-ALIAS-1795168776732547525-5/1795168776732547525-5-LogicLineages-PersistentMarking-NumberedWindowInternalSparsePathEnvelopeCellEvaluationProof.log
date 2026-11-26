@@ -1,0 +1,56 @@
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean:109:16: error: unsolved goals
+case succ.some
+n tag body : ℕ
+decoded : decode n = some (tag, body)
+⊢ ((decodeResult (evaluate parser (body ::ᵥ nil))).bind fun a => pure (tag, a)) =
+    (unpack body).bind fun a => pure (tag, a)
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean:108:25: warning: This simp argument is unused:
+  decoded
+
+Hint: Omit it from the simp argument list.
+  simp only [d̵e̵c̵o̵d̵e̵d̵,̵Option.bind_eq_bind, ̲Option.bind_none]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean:111:17: warning: This simp argument is unused:
+  decoded
+
+Hint: Omit it from the simp argument list.
+  simp only [d̵e̵c̵o̵d̵e̵d̵,̵Option.bind_eq_bind, ̲Option.bind_some, ̲run, ̲exact_ActualDecodedOutput]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean:111:66: warning: This simp argument is unused:
+  exact_ActualDecodedOutput
+
+Hint: Omit it from the simp argument list.
+  simp only [̵d̵e̵c̵o̵d̵e̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵e̵q̵_̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵r̵u̵n̵,̵e̵x̵a̵c̵t̵_̵A̵c̵t̵u̵a̵l̵D̵e̵c̵o̵d̵e̵d̵O̵u̵t̵p̵u̵t̵]̵[̲d̲e̲c̲o̲d̲e̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲e̲q̲_̲b̲i̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲r̲u̲n̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean:117:21: error: Tactic `rfl` failed: The left-hand side
+  (decodeResult (evaluate parser (t ::ᵥ nil))).bind fun a => pure (h, a)
+is not definitionally equal to the right-hand side
+  Option.map (fun xs => (h, xs)) none
+
+case none
+n h t : ℕ
+found : chosenCell n = some (h, t)
+⊢ ((decodeResult (evaluate parser (t ::ᵥ nil))).bind fun a => pure (h, a)) = Option.map (fun xs => (h, xs)) none
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean:117:21: error: Tactic `rfl` failed: The left-hand side
+  (decodeResult (evaluate parser (t ::ᵥ nil))).bind fun a => pure (h, a)
+is not definitionally equal to the right-hand side
+  Option.map (fun xs => (h, xs)) (some val✝)
+
+case some
+n h t : ℕ
+found : chosenCell n = some (h, t)
+val✝ : List ℕ
+⊢ ((decodeResult (evaluate parser (t ::ᵥ nil))).bind fun a => pure (h, a)) = Option.map (fun xs => (h, xs)) (some val✝)
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean:116:54: warning: This simp argument is unused:
+  exact_ActualDecodedOutput
+
+Hint: Omit it from the simp argument list.
+  simp only [̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵e̵q̵_̵b̵i̵n̵d̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵r̵u̵n̵,̵e̵x̵a̵c̵t̵_̵A̵c̵t̵u̵a̵l̵D̵e̵c̵o̵d̵e̵d̵O̵u̵t̵p̵u̵t̵]̵[̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲e̲q̲_̲b̲i̲n̲d̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲,̲ ̲r̲u̲n̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-resume-20261120/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalSparsePathEnvelopeCellEvaluationProof.lean:120:37: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

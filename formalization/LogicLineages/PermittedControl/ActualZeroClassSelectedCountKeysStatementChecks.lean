@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroClassSelectedCountKeysTargets
+import LogicLineages.PermittedControl.ActualZeroClassSelectedCountKeysProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualZeroClassSelectedCountKeys :
+    ActualZeroClassSelectedCountKeys.ExactSelectedCountKeyLedger :=
+  ActualZeroClassSelectedCountKeys.exactSelectedCountKeyLedger
+
+#print axioms fixed_actualZeroClassSelectedCountKeys
+
+end LogicLineages.PermittedControl.StatementChecks

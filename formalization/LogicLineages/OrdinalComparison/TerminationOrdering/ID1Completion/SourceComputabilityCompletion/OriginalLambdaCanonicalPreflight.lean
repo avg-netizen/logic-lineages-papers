@@ -1,0 +1,9 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaCanonicalTargets
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaCanonical
+open LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalLambdaCanonicalTargets
+#check lambdaPacked
+#check (ActualOriginalLambdaPrimaryClassImage : Prop)
+#check (ActualOriginalLambdaRepresentativeFactorization : Prop)
+#check (ActualOriginalLambdaCanonicalBodyIff : Prop)
+#check (ActualOriginalLambdaCanonicalBodySelection : Prop)

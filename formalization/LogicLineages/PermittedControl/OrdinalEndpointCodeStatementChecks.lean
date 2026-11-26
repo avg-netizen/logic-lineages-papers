@@ -1,0 +1,7 @@
+module
+public import LogicLineages.PermittedControl.OrdinalEndpointCodeProof
+public section
+namespace LogicLineages.PermittedControl.StatementChecks
+ theorem fixed_ordinalEndpointCodeFoundation : Targets.OrdinalEndpointCodeFoundation := ordinalEndpointCodeFoundation
+#print axioms fixed_ordinalEndpointCodeFoundation
+end LogicLineages.PermittedControl.StatementChecks

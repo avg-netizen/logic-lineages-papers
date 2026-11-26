@@ -1,0 +1,7 @@
+# Nonlinear close-pair conceptual review
+
+Approved supporting direction before exact freeze. Read plan, actual Phi_linear_gap/four_le_Phi suppliers and visually inspected local primary-source printed page50, which explicitly replaces a bounded neighborhood for a comparable nonlinear argument by a disjunction. This review does not certify all six published cases or full QE.
+
+The proposed concrete width C+1 is credible: derive actual uniform shift domination from genuine Phi adjacent growth and positivity; do not assume it as a caller premise. Strict monotonicity then converts the close guard into v<=x+k<v+C+1. For each j<C+1 retain k<=v+j and substitute the literal natural candidate (v+j)-k into the whole original guard AND arbitrary Matrix. Retaining the guard prevents spurious branch solutions; the low-end guard prevents subtraction artifacts. C=0 and C=1 are exact false cases, not omitted domains.
+
+Full structural substitution semantics must use the same valuation across all nonlinear occurrences and Boolean subformulas. Only v is x-free, while M is unrestricted; no independent-variable solver or termwise truth approximation is permissible. Require actual output support/no x and encoded all-input computation with exact valid-code calibration. Matrix has no binders; later first-order substitution/capture and full branch coverage remain separate. This is one oriented comparable-Phi branch, not all mixed cases, complete row normalization or arbitrary-alternation elimination. No native execution performed.

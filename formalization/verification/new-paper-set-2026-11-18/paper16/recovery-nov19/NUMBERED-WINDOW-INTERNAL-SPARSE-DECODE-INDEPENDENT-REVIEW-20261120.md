@@ -1,0 +1,9 @@
+# Independent actual sparse decoder review
+
+Read both exact comparator modules/map and all11 current thin proof/check leaves. The literal original pair is (x+y)^2+x. Floor-root residuals yield candidate coordinates only when residual<=root; the proof independently checks both bounded-search coordinates and all missed sparse inputs. Actual selected Program candidate/guard values establish complete optional equality with the unchanged original bounded find operation, not merely successful-input agreement.
+
+In the original object calculus, actual subtraction functionhood plus nontruncation witnesses reconstruct additive equations. Graph composition builds the same candidate programs; root intervals and exact guard branches yield the two-way original pair graph. Rejection is equivalent to absence of two genuine existential preimage coordinates, including all sparse gaps, not an externally assumed model-theoretic fact. Arbitrary free terms and proof contexts are retained.
+
+The original mixed/nonmodule numeric root's RSS stop and all ordinary local syntax failures are preserved. The additive module-only split pays the identical frozen exact5, not a weaker replacement. Approved repairs only orient floor equality, normalize unary tuple/let expressions, and directly import the existing weak-order theorem. Independently replayed1037 current source/input/compiler/dependency/object/receipt/log identities,42 frozen/authored pins and exact5 standard-only aliases. Clean gate1795164357052630580-6 passed original2048heap/1536RSS/free2048MiB,90CPU/180wall/one thread. Complete native closure archived, no full-root/CI claim.
+
+A later source presentation must select this decoder AST consistently; numerical equality does not transport prior object derivations. No full unpack, path fold, open matching, all-terms derivability or BH bound follows yet. No numbered promotion.

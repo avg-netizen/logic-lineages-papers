@@ -1,0 +1,35 @@
+{
+  "status": "source-only narrow proof repair; native retry not run by author",
+  "immutable_failed_source_commit": "bf1d7c7590dc5aefc0a2b3d23543ff7a883cd6f3",
+  "receipt": "1795346206618764882-10",
+  "exact_gate": "LogicLineages.PermittedControl.ActualSyntaxChargeBudgetStatementChecks",
+  "failed_receipt_sha256": "28e2ae9e9e49ea704da7c9b892ee532c2a05ad781ecd5a18adb14b1370184a30",
+  "failed_log_sha256": "1d38afdd85ecd2a0265d520aaa33d7d69e7089c9f23d8d5333fd9f9bffe1f362",
+  "failed_module_record": {
+    "module": "LogicLineages.PermittedControl.ActualSyntaxChargeBudgetProof",
+    "returncode": 1,
+    "seconds": 1.085,
+    "observed_cpu_seconds": 1.02,
+    "last_wait_channel": "0",
+    "stopped_threads": [],
+    "peak_process_tree_rss_kib": 989552,
+    "memory_observation_failure": {},
+    "discarded_failed_outputs": [],
+    "source_sha256": "2f44df9880ffa566fdf88f8f71740366d901d709bb44e009a22db1a479e5bcd3",
+    "log": "build-reports/1795346206618764882-10-LogicLineages-PermittedControl-ActualSyntaxChargeBudgetProof.log"
+  },
+  "diagnostics": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualSyntaxChargeBudgetProof.lean:21:23: error: Type mismatch\n  List.toFinset_card_le\nhas type\n  ∀ (l : List ?m.91), l.toFinset.card ≤ l.length\nbut is expected to have type\n  keys.toFinset.card ≤ keys.length",
+  "original_author_manifest_sha256": "b3917be35abc5146703f1d1eecf52a380821b1e06e8f59f4b6209c1129746c4e",
+  "changed_source": "formalization/LogicLineages/PermittedControl/ActualSyntaxChargeBudgetProof.lean",
+  "failed_source_sha256": "2f44df9880ffa566fdf88f8f71740366d901d709bb44e009a22db1a479e5bcd3",
+  "repair_source_sha256": "8d79c8f6aa3bcd2aa0ae03dc3afd1d44236cf7a8d3fc95e66b98d4eb054aefa0",
+  "preserved_sources_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualSyntaxChargeBudgetTargets.lean": "38a0ea8303394f2fc99fa30af02c89f053e06d3e0777eef58aa963af95236647",
+    "formalization/LogicLineages/PermittedControl/ActualSyntaxChargeBudgetCodeProof.lean": "795abd94ab205a25003549f884ed5d6b2db219feada554095aa8c1300b5387ee",
+    "formalization/LogicLineages/PermittedControl/ActualSyntaxChargeBudgetStatementChecks.lean": "742d7a1e4adae3a5e2fff2b01928d4e8fcac0e5f3d37a200d9b689b3841d8add"
+  },
+  "zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-SYNTAX-CHARGE-BUDGET-REPAIR-01.patch",
+  "patch_sha256": "bde05345eb2c67f6ab1ad5131dc381b53288ec27c3bec526d87a0f49cdfd4b19",
+  "inverse": "Reverse exact patch with fuzz zero to recover exact failed initial Proof bytes.",
+  "change": "Supply the already defined original key list as the explicit List.toFinset_card_le argument. No other proof, definition, target, import or static 185-local/34-external closure changed."
+}

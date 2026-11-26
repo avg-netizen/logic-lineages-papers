@@ -1,0 +1,53 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowConcreteGuardedGraphChecks.lean:28:12: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  arrowView F.2.1
+in the target expression
+  (do
+      let q ← some F
+      let u ← some U
+      let __x ← arrowView q.2.1
+      match __x with
+        | (domain, result) =>
+          if (canonical s q && canonical s u && q.1 == u.1 && domain == u.2.1) = true then
+            have term := NumberedWindowFieldAlgorithm.packNode 6 [domain, result, q.2.2, u.2.2];
+            Option.map
+              (fun k => NumberedWindowFieldAlgorithm.packNode 3 [NumberedWindowFieldAlgorithm.pack q.1, result, k])
+              (NumberedWindowScalarAlgorithm.least s q.1 result term)
+          else none) =
+    some v
+
+case some.some.some
+s : Settings
+f u v : ℕ
+h : graph s f u v = true
+F : Address
+hf : addressView f = some F
+U : Address
+hu : addressView u = some U
+value :
+  (do
+      let q ← some F
+      let u ← some U
+      let __x ← arrowView q.2.1
+      match __x with
+        | (domain, result) =>
+          if (canonical s q && canonical s u && q.1 == u.1 && domain == u.2.1) = true then
+            have term := NumberedWindowFieldAlgorithm.packNode 6 [domain, result, q.2.2, u.2.2];
+            Option.map
+              (fun k => NumberedWindowFieldAlgorithm.packNode 3 [NumberedWindowFieldAlgorithm.pack q.1, result, k])
+              (NumberedWindowScalarAlgorithm.least s q.1 result term)
+          else none) =
+    some v
+pair : ℕ × ℕ
+ht : arrowView F.2.1 = some pair
+⊢ scalar s f = true ∧ scalar s u = true
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowConcreteGuardedGraphChecks.lean:23:35: warning: This simp argument is unused:
+  Option.bind_some
+
+Hint: Omit it from the simp argument list.
+  simp only [̵a̵p̵p̵l̵i̵c̵a̵t̵i̵o̵n̵,̵h̵f̵,̵h̵u̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵]̵[̲a̲p̲p̲l̲i̲c̲a̲t̲i̲o̲n̲,̲ ̲h̲f̲,̲ ̲h̲u̲]̲ at value
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'LogicLineages.PersistentMarking.NumberedWindowConcreteGuardedGraphChecks.exact_ConcreteGuardedApplication' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

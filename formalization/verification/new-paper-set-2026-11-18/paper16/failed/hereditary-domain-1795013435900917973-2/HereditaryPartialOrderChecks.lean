@@ -1,0 +1,5 @@
+import LogicLineages.PersistentMarking.HereditaryPartialOrderProof
+namespace LogicLineages.PersistentMarking.HereditaryPartialOrderChecks
+theorem exact_PartialOrder : HereditaryDomainTargets.PartialOrder := HereditaryPartialOrderProof.partialOrder
+#print axioms exact_PartialOrder
+end LogicLineages.PersistentMarking.HereditaryPartialOrderChecks

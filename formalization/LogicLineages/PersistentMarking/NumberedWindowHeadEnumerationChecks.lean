@@ -1,0 +1,19 @@
+import LogicLineages.PersistentMarking.NumberedWindowHeadEnumerationProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowHeadEnumerationChecks
+open NumberedWindowHeadEnumerationTargets
+
+theorem exact_HeadBit : HeadBitExact :=
+  NumberedWindowHeadEnumerationProof.bit
+
+theorem exact_AdmittedHeadEnumeration : AdmittedHeadEnumeration :=
+  NumberedWindowHeadEnumerationProof.admitted
+
+theorem exact_EquivalentHeadEnumeration : EquivalentHeadEnumeration :=
+  NumberedWindowHeadEnumerationProof.equivalent
+
+#print axioms exact_HeadBit
+#print axioms exact_AdmittedHeadEnumeration
+#print axioms exact_EquivalentHeadEnumeration
+
+end LogicLineages.PersistentMarking.NumberedWindowHeadEnumerationChecks

@@ -1,0 +1,5 @@
+# Checked literal history kernel and successful-step suffix closure
+
+Five exact targets pass: constructive totality of the actual State codec; all-vector calibration of the new literal kernel to the original kernelFunction, including decodedState/default behavior; internal correctness of the actual equality-to-one guard; and internal successful-step suffix closure. The internal step law has only the old successful step as its logical premise, not native leaf calibration, valid references, state reconstruction, or desired appended output. Actual installed AST addresses, Option failure, empty-line stutter, and cons/append equations are retained. This is a newly constructed literal kernel, not an AST identity with the prior opaque selected witness. Explicit new SAME-source installation and full iterator/certificate HB remain separate pending work.
+
+Exact native evidence verifies 481 source-matched modules, standard axioms and zero errors. Register unchanged:175 checked,2 inherited,12 pending. No full-root or remote CI claim. Sources and compact evidence are published; reconstructible native snapshots remain local.

@@ -1,0 +1,46 @@
+{
+  "status": "source-only full-value list proof visibility repair, no Lean/Git invoked by author",
+  "failed_source_remote_commit": "019006607e389bdc5f8b18636b2a9697b6c19156",
+  "failed_source_local_commit": "45ac74169c2bcf4dcbcd7477cfacc1871b8b0646",
+  "failed_source_tree": "9e3f3f29b8c415d6deddd7e28bbbd0d6ec62dba6",
+  "failed_exact_gate_receipt": "1795364697428049580-76",
+  "failed_exact_gate": "LogicLineages.PermittedControl.ActualFullValueLabelsStatementChecks",
+  "failed_receipt_sha256": "c202053aa3e89e468faf0dc4c25083f56da99ab61dd25db6cf1a07beffd59f33",
+  "failed_exact_module_log_sha256": "51f8d46f493129cb02ace492a97889adbb2b2eca360930c11c1805ae5447605f",
+  "failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualFullValueLabelsProof.lean:83:24: error(lean.unknownIdentifier): Unknown identifier `firstEntry_unique`\n",
+  "failed_original_native_log_sha256": "cc882db0690400750321812fba5f5d775758a4e11d3c3e8470f39aeab7621da4",
+  "failed_proof_path": "formalization/LogicLineages/PermittedControl/ActualFullValueLabelsProof.lean",
+  "failed_proof_sha256": "3e6f57be0c948dba3195f0f7d88bb52b6aabca535c06a8f9b2a7f155c4a7c6b9",
+  "repaired_proof_sha256": "c42f9cefe8270583522b11545968f2b442dfc7893a947ecbc5bafcd0328d597a",
+  "reversible_zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FULL-VALUE-LABELS-REPAIR-01.patch",
+  "patch_sha256": "5ffbec96b4cfd9efe72236de18b7a1670dadcf82422e33cf5f8ad079f7d4c435",
+  "reverse_reconstructs_exact_failed_source": true,
+  "author_manifest": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FULL-VALUE-LABELS-AUTHOR-MANIFEST.json",
+  "author_manifest_sha256": "72a63f6088073455d4c6b6da671d0e0767cff1c67bcca61201fb04ce823387d5",
+  "direct_already_transitive_import_sha256": {
+    "formalization/LogicLineages/PermittedControl/EntryLinearProof.lean": "330e531a903a2e4f178c8f027b550a20030999fd3c6fd76af15b785dc5fe306f"
+  },
+  "unchanged_edition_source_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualFullValueLabelsTargets.lean": "9d34a0355c6218868ad44157940e71760bab8beec2614640f86b6cd597572bc7",
+    "formalization/LogicLineages/PermittedControl/ActualFullValueLabelsStatementChecks.lean": "ad652b0199fe9805c8ca5aa15c1b68399aceb5ae783f6c47ddf712383474f1c0",
+    "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-FULL-VALUE-LABELS-SOURCE-MAP.md": "43f30be48622164ff5cb9258bad59e170241afcbb92f78b193ad31624fadb307"
+  },
+  "static_module_closure_unchanged": {
+    "Targets": {
+      "local": 155,
+      "external": 32,
+      "contains_totient": false
+    },
+    "Proof": {
+      "local": 372,
+      "external": 40,
+      "contains_totient": false
+    },
+    "StatementChecks": {
+      "local": 373,
+      "external": 40,
+      "contains_totient": false
+    }
+  },
+  "scope": "Only directly import exact existing already-transitive EntryLinearProof to expose firstEntry_unique. No target, original read semantics or other leaf changes."
+}

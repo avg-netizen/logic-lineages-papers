@@ -1,0 +1,38 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitChildProgramsProof.lean:37:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitChildProgramsProof.lean:56:0: error: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitChildProgramsProof.lean:77:10: error: Tactic `subst` failed: did not find equation for eliminating 'r'
+
+case h_2.some.mk
+p : Policy
+q r : FuelState
+hp : ¬q.1 = 0
+x✝ : Option UnitContextSelectionCode.Split
+s : UnitContextSelectionCode.Split
+hs : UnitContextSelectionCode.selectCode q.2.1 = some s
+k : Packet
+hq : selectedChild p (q, s) = some k
+fst✝ : ℕ
+snd✝ : ℕ × Bool
+hk : k.2.2.1 = (fst✝, snd✝)
+h :
+  r ∈
+    match k.2.1 with
+    | none => [(q.1 - 1, s.1 ++ s.2.2, k.1)]
+    | some b => [(q.1 - 1, s.1 ++ s.2.2, k.1), (q.1 - 1, s.1 ++ s.2.2, b)]
+⊢ r.1 < q.1
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitChildProgramsProof.lean:78:8: error: No goals to be solved
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitChildProgramsProof.lean:76:46: warning: This simp argument is unused:
+  hk
+
+Hint: Omit it from the simp argument list.
+  simp [hq, ̲tasks,̵h̵k̵] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

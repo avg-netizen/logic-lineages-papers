@@ -1,0 +1,12 @@
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowConstructorRepresentationProof.lean:60:47: error: Invalid projection: Projections extract constructor fields for one-constructor inductive types. The expression
+  Exists.choose_spec hc
+has type
+  NumberedWindowExternalComputability.ComputableClass S K Γ hk q.type (NumberedWindowSimulationData.classOf ⟨q, ⋯⟩)
+which is not a one-constructor inductive type.
+/home/other/storage/projects/palace2/projects/inverse/logic-lineages-papers/formalization/LogicLineages/PersistentMarking/NumberedWindowConstructorRepresentationProof.lean:68:22: error: invalid `▸` notation, expected result type of cast is 
+  (List.map (slot S K Γ) o.extras.toList).Perm (List.map (slot S K Γ) p.extras.toList)
+however, the equality 
+  congrArg HeadProfile.extras e
+of type 
+  (Frame S K Γ o).extras = (Frame S K Γ p).extras
+does not contain the expected result type on either the left or the right hand side

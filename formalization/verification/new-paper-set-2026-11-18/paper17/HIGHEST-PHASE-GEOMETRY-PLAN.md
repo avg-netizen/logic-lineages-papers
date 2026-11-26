@@ -1,0 +1,11 @@
+# Highest selected piece to genuine phase endpoint: proposed next geometry
+
+The existing total primitive-recursive highestPieceCode selects a bounded representative, not necessarily a visited point. Use its proved highest-piece contract to construct the actual source phase endpoint/witness, preserving the selected piece's exact sign.
+
+For a selected normal representative z in [2,E): inspect the finite actual joint breakpoint set. The least breakpoint b>=z, if b<E, is the true right-closed maximum beta=b of z's piece. If no such breakpoint lies below E and E is a successor, beta=pred(E) is the clipped piece maximum. Prove beta>=2, beta<E, SameProfilePiece z beta, and actual profile agreement on (beta,E). Bounds must come from actual breakpoint weights or N(pred E)<=N(E), not ordinal norm monotonicity. This supplies the real pure target omega^(beta+1) to ProfileBandReturn, including beta+1=E clock-zero.
+
+If no upper breakpoint lies below E and E is a limit, take the greatest breakpoint a<z if there is one, and zeta=max(2,a+1) (or2 when none). Prove zeta<E and the ENTIRE [zeta,E) lies in the selected piece. Its actual profile constants and sign therefore equal the code-selected piece's values. Derive the witness norm bound using real CNF weights/finite successor norm facts, including the a=0 edge. This supplies the admitted witness to PureLimit; it does not assert that zeta or the norm-ball representative is visited.
+
+Proposed exact supporting contract is tied to actual normal input codes and highestPieceCode=some n, not an arbitrary assumed highest-piece oracle. It concludes a maximum-endpoint or clipped-limit-witness disjunction, exact SameProfilePiece/sign correspondence, full above-endpoint agreement/whole-band constancy, and explicit bound 3+N(mu)+N(nu)+N(E) for endpoint-successor/witness norms. The existing none branch already supplies complete agreement. Source delta calls must derive N(E)<=N(delta), already proved in InitialNorm, so the existing R=20+N(delta)+N(mu)+N(nu) pays these bounds.
+
+This semantic geometry is a bridge from the existing executable selector to actual checked dynamics. It is not yet a full executable equal-gap certificate: initial pass-code compilation, terminal ceil coefficient comparison, divergence-to-final-entry-order and complete algorithm assembly remain separate.

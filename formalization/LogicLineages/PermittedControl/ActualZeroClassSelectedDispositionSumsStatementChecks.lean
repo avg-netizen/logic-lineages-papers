@@ -1,0 +1,14 @@
+module
+public import LogicLineages.PermittedControl.ActualZeroClassSelectedDispositionSumsTargets
+import LogicLineages.PermittedControl.ActualZeroClassSelectedDispositionSumsProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_actualZeroClassSelectedDispositionSums :
+    ActualZeroClassSelectedDispositionSums.ExactSelectedDispositionSums :=
+  ActualZeroClassSelectedDispositionSums.exactSelectedDispositionSums
+
+#print axioms fixed_actualZeroClassSelectedDispositionSums
+
+end LogicLineages.PermittedControl.StatementChecks

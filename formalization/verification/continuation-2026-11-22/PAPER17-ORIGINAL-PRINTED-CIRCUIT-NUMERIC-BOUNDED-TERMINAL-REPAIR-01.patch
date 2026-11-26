@@ -1,0 +1,8 @@
+--- a/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericBoundedTerminalProof.lean
++++ b/formalization/LogicLineages/PermittedControl/OriginalPrintedCircuitNumericBoundedTerminalProof.lean
+@@ -22 +22 @@
+-  have admit : Computable (fun p : TestArgs => BoundedSourcePrograms.Code.test p.2) :=
++  have admissionCheck : Computable (fun p : TestArgs => BoundedSourcePrograms.Code.test p.2) :=
+@@ -26 +26 @@
+-  have checked : Computable boundedGuard := Primrec.and.to_comp.comp admit availability
++  have checked : Computable boundedGuard := Primrec.and.to_comp.comp admissionCheck availability

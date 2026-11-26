@@ -1,0 +1,25 @@
+module
+public import LogicLineages.PermittedControl.OriginalPrintedCircuitNumericPlainTerminalTargets
+import LogicLineages.PermittedControl.OriginalPrintedCircuitNumericPlainTerminalCalibrationProof
+import LogicLineages.PermittedControl.OriginalPrintedCircuitNumericPlainTerminalRunProof
+
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_exactOriginalPrintedPlainTerminalData :
+    OriginalPrintedCircuitNumericPlainTerminal.ExactPlainTerminalData :=
+  OriginalPrintedCircuitNumericPlainTerminal.exactPlainTerminalData
+
+theorem fixed_exactOriginalPrintedNumericPlainTerminalRun :
+    OriginalPrintedCircuitNumericPlainTerminal.ExactNumericPlainTerminalRun :=
+  OriginalPrintedCircuitNumericPlainTerminal.exactNumericPlainTerminalRun
+
+theorem fixed_fullOriginalPrintedCircuitNumericPlainTerminal :
+    OriginalPrintedCircuitNumericPlainTerminal.FullOriginalPrintedCircuitNumericPlainTerminal :=
+  ⟨fixed_exactOriginalPrintedPlainTerminalData,fixed_exactOriginalPrintedNumericPlainTerminalRun⟩
+
+#print axioms fixed_exactOriginalPrintedPlainTerminalData
+#print axioms fixed_exactOriginalPrintedNumericPlainTerminalRun
+#print axioms fixed_fullOriginalPrintedCircuitNumericPlainTerminal
+
+end LogicLineages.PermittedControl.StatementChecks

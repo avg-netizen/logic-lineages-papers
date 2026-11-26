@@ -1,0 +1,13 @@
+module
+public import LogicLineages.CartierObserverCurrent.FullFixedBudgetTargets
+public import LogicLineages.OrdinalComparison.PrefixTraceSourceProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.CartierObserverCurrent.FullFixedBudget
+
+theorem completeFixedBudget : Targets.CompleteFixedBudget :=
+  ⟨LogicLineages.OrdinalComparison.actualNumericalFixedBudgetPartitionCount,
+    LogicLineages.OrdinalComparison.actualRetainedPrefixFixedBudgetCount⟩
+
+#audit_namespace LogicLineages.CartierObserverCurrent.FullFixedBudget
+end LogicLineages.CartierObserverCurrent.FullFixedBudget

@@ -1,0 +1,17 @@
+Compiling LogicLineages.PersistentMarking.NumberedWindowInternalCoverObjectInclusionTransitivityProof
+LogicLineages/PersistentMarking/NumberedWindowInternalCoverObjectInclusionTransitivityProof.lean:25:0: error: type of theorem `_private.LogicLineages.PersistentMarking.NumberedWindowInternalCoverObjectInclusionTransitivityProof.0.LogicLineages.PersistentMarking.NumberedWindowInternalCoverObjectInclusionTransitivityProof.applyAxis` is not a proposition
+  {body : Positive (Fin 1)} →
+    {α : Type} →
+      {Γ : List (ID1Completion.InternalCalculus.Formula α)} →
+        (a b v : OTerm α) →
+          Derivation body Γ (axisInclusion a b) →
+            Derivation body Γ (memberGraph a v) → Derivation body Γ (memberGraph b v)
+LogicLineages/PersistentMarking/NumberedWindowInternalCoverObjectInclusionTransitivityProof.lean:35:8: error: (kernel) unknown constant '_private.LogicLineages.PersistentMarking.NumberedWindowInternalCoverObjectInclusionTransitivityProof.0.LogicLineages.PersistentMarking.NumberedWindowInternalCoverObjectInclusionTransitivityProof.applyAxis'
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverObjectInclusionTransitivityProof.composeAxis' depends on axioms: [propext,
+ Quot.sound,
+ composeAxis]
+'LogicLineages.PersistentMarking.NumberedWindowInternalCoverObjectInclusionTransitivityProof.composePair' depends on axioms: [propext,
+ Quot.sound,
+ composeAxis]
+COMPILE_FAILED LogicLineages.PersistentMarking.NumberedWindowInternalCoverObjectInclusionTransitivityProof: 1
+BUILD_RECEIPT build-reports/1795349293022467152-8.json

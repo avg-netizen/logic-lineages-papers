@@ -1,0 +1,183 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:15:47: error: Application type mismatch: The argument
+  ih
+has type
+  (∀ τ ∈ Γ✝, τ = Ty.ground) → σ✝ ∈ Γ✝
+but is expected to have type
+  σ✝ ∈ Γ✝
+in the application
+  List.mem_cons_of_mem τ✝ ih
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:17:50: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.ground` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `Lean.Meta.Simp.Config.ground`
+  [apply] `Lean.Parser.Sym.DSimp.ground`
+  [apply] `Lean.Parser.Sym.Simp.ground`
+  [apply] `Ty.ground`
+  [apply] `TrackedSource.Expr.ground`
+  [apply] `TrackedSource.Generated.ground`
+  [apply] `UnitElimination.Selection.ground`
+  [apply] `TrackedSource.Generated.below.ground`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:18:10: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.ground` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `Lean.Meta.Simp.Config.ground`
+  [apply] `Lean.Parser.Sym.DSimp.ground`
+  [apply] `Lean.Parser.Sym.Simp.ground`
+  [apply] `Ty.ground`
+  [apply] `TrackedSource.Expr.ground`
+  [apply] `TrackedSource.Generated.ground`
+  [apply] `UnitElimination.Selection.ground`
+  [apply] `TrackedSource.Generated.below.ground`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:18:28: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.ground` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `Lean.Meta.Simp.Config.ground`
+  [apply] `Lean.Parser.Sym.DSimp.ground`
+  [apply] `Lean.Parser.Sym.Simp.ground`
+  [apply] `Ty.ground`
+  [apply] `TrackedSource.Expr.ground`
+  [apply] `TrackedSource.Generated.ground`
+  [apply] `UnitElimination.Selection.ground`
+  [apply] `TrackedSource.Generated.below.ground`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:20:2: error: Tactic `generalize` failed: result is not type correct
+  τ = ?m.17 ∨ τ ∈ Γ → τ = ?m.20
+
+Γ : List ?m.22
+hg : ∀ τ ∈ Γ, τ = ?m.7
+τ : ?m.22
+h : τ ∈ ?m.17 :: Γ
+⊢ τ = ?m.20
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:66:11: error: don't know how to synthesize implicit argument `σ`
+  @reroute Γ Δ w (fun {σ} => r₀) Variable.here ?m.40
+context:
+Γ : List Ty
+hg : ∀ τ ∈ Γ, τ = Ty.ground
+row : LinearCode
+q : OpenGraph Γ
+w : ℕ := ⋯
+Δ : List Ty := ⋯
+r₀ : Renaming (WireCtx w Γ) Δ := ⋯
+⊢ Ty
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:66:6: error: failed to infer `let` declaration type
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:62:76: error: unsolved goals
+Γ : List Ty
+hg : ∀ τ ∈ Γ, τ = Ty.ground
+row : LinearCode
+q : OpenGraph Γ
+w : ℕ := q.width
+Δ : List Ty := Ty.ground :: WireCtx w (Ty.ground :: Γ)
+r₀ : Renaming (WireCtx w Γ) Δ := fun {σ} x => (under (fun {σ} => Renaming.weaken Γ Ty.ground) w x).there
+⊢ freeBlock Γ.length row (typedBlock q) = typedBlock (freeGraph row q)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:114:43: error: Type mismatch
+  hL τ✝ x
+has type
+  variableIndex (l x) = if variableIndex x < b then variableIndex x + 2 else variableIndex x + c + 3
+but is expected to have type
+  variableIndex (l x) = ?m.429 (variableIndex x)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:127:52: error: Type mismatch
+  hR τ✝ x
+has type
+  variableIndex (r x) = if variableIndex x < c then variableIndex x + b + 2 else variableIndex x + b + 3
+but is expected to have type
+  variableIndex (r x) = ?m.459 (variableIndex x)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentPaidHeadGraphUnitComposeCodeProof.lean:160:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  MatrixCode.formula (renameFormula (fun {τ} x => cast ⋯ x) ?a)
+in the target expression
+  (q.width + s.width + 2,
+      MatrixCode.both
+        (MatrixCode.both
+          (MatrixCode.renameFormula (bitCtx (q.width + s.width + 2 + 1 + Γ.length))
+            (List.map (fun i => if i < q.width then i + 2 else if i = q.width then 0 else i + s.width + 2)
+              (List.range (q.width + 1 + Γ.length)))
+            (MatrixCode.formula q.matrix))
+          (MatrixCode.renameFormula (bitCtx (q.width + s.width + 2 + 1 + Γ.length))
+            (List.map (fun i => if i = s.width then 1 else i + q.width + 2) (List.range (s.width + 1 + Γ.length)))
+            (MatrixCode.formula s.matrix)))
+        (rawRow row (MatrixCode.raw 0) (MatrixCode.raw 1) (MatrixCode.raw (q.width + s.width + 2)))) =
+    (q.width + s.width + 2,
+      MatrixCode.formula
+        (renameFormula (fun {τ} x => cast ⋯ x)
+          (((renameFormula
+                    (fun {σ} =>
+                      reroute q.width (fun {σ} x => (under (fun {σ} x => shift s.width x.there) q.width x).there.there)
+                        Variable.here)
+                    q.matrix).conj
+                (renameFormula
+                  (fun {σ} =>
+                    reroute s.width
+                      (fun {σ} x =>
+                        (shift q.width (under (fun {σ} => Renaming.weaken Γ Ty.ground) s.width x)).there.there)
+                      Variable.here.there)
+                  s.matrix)).conj
+            (rowFormula row (raw Variable.here) (raw Variable.here.there)
+              (raw (shift q.width (shift s.width Variable.here)).there.there)))))
+
+Γ : List Ty
+hg : ∀ τ ∈ Γ, τ = Ty.ground
+row : LinearCode
+q s : OpenGraph Γ
+b : ℕ := q.width
+c : ℕ := s.width
+Δ : List Ty := Ty.ground :: Ty.ground :: WireCtx b (WireCtx c (Ty.ground :: Γ))
+l : Renaming (WireCtx b Γ) Δ := fun {σ} x => (under (fun {σ} x => shift c x.there) b x).there.there
+r : Renaming (WireCtx c Γ) Δ := fun {σ} x => (shift b (under (fun {σ} => Renaming.weaken Γ Ty.ground) c x)).there.there
+hctx : List.map SyntaxCode.typeCode Δ = bitCtx (b + c + 2 + 1 + Γ.length)
+hl :
+  MatrixCode.renameFormula (bitCtx (b + c + 2 + 1 + Γ.length))
+      (List.map (fun i => if i < b then i + 2 else if i = b then 0 else i + c + 2) (List.range (b + 1 + Γ.length)))
+      (MatrixCode.formula q.matrix) =
+    MatrixCode.formula (renameFormula (fun {σ} => reroute b (fun {σ} => l) Variable.here) q.matrix)
+hr :
+  MatrixCode.renameFormula (bitCtx (b + c + 2 + 1 + Γ.length))
+      (List.map (fun i => if i = c then 1 else i + b + 2) (List.range (c + 1 + Γ.length)))
+      (MatrixCode.formula s.matrix) =
+    MatrixCode.formula (renameFormula (fun {σ} => reroute c (fun {σ} => r) Variable.here.there) s.matrix)
+ht :
+  let Δ := Ty.ground :: Ty.ground :: WireCtx b (WireCtx c (Ty.ground :: Γ));
+  have l := fun {σ} x => (under (fun {σ} x => shift c x.there) b x).there.there;
+  have r := fun {σ} x => (shift b (under (fun {σ} => Renaming.weaken Γ Ty.ground) c x)).there.there;
+  (List.map (fun i => if i < b then i + 2 else if i = b then 0 else i + c + 2) (List.range (b + 1 + Γ.length)) =
+      RawSourceDAG.Operations.renamingCode fun {σ} => reroute b (fun {σ} => l) Variable.here) ∧
+    List.map (fun i => if i = c then 1 else i + b + 2) (List.range (c + 1 + Γ.length)) =
+      RawSourceDAG.Operations.renamingCode fun {σ} => reroute c (fun {σ} => r) Variable.here.there
+⊢ (q.width + s.width + 2,
+      MatrixCode.both
+        (MatrixCode.both
+          (MatrixCode.renameFormula (bitCtx (q.width + s.width + 2 + 1 + Γ.length))
+            (List.map (fun i => if i < q.width then i + 2 else if i = q.width then 0 else i + s.width + 2)
+              (List.range (q.width + 1 + Γ.length)))
+            (MatrixCode.formula q.matrix))
+          (MatrixCode.renameFormula (bitCtx (q.width + s.width + 2 + 1 + Γ.length))
+            (List.map (fun i => if i = s.width then 1 else i + q.width + 2) (List.range (s.width + 1 + Γ.length)))
+            (MatrixCode.formula s.matrix)))
+        (rawRow row (MatrixCode.raw 0) (MatrixCode.raw 1) (MatrixCode.raw (q.width + s.width + 2)))) =
+    (q.width + s.width + 2,
+      MatrixCode.formula
+        (renameFormula (fun {τ} x => cast ⋯ x)
+          (((renameFormula
+                    (fun {σ} =>
+                      reroute q.width (fun {σ} x => (under (fun {σ} x => shift s.width x.there) q.width x).there.there)
+                        Variable.here)
+                    q.matrix).conj
+                (renameFormula
+                  (fun {σ} =>
+                    reroute s.width
+                      (fun {σ} x =>
+                        (shift q.width (under (fun {σ} => Renaming.weaken Γ Ty.ground) s.width x)).there.there)
+                      Variable.here.there)
+                  s.matrix)).conj
+            (rowFormula row (raw Variable.here) (raw Variable.here.there)
+              (raw (shift q.width (shift s.width Variable.here)).there.there)))))
+
+Note: The target expression is not type-correct under the `instances` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    activeGraph._proof_1 q s
+  has type
+    @Eq Type (Variable (Ty.ground :: Ty.ground :: WireCtx q.width (WireCtx s.width (Ty.ground :: Γ))) τ)
+      (Variable (Ty.ground :: Ty.ground :: WireCtx (q.width + s.width) (Ty.ground :: Γ)) τ)
+  but is expected to have type
+    @Eq Type (Variable (Ty.ground :: Ty.ground :: WireCtx q.width (WireCtx s.width (Ty.ground :: Γ))) τ)
+      (Variable (WireCtx (q.width + s.width + 2) (Ty.ground :: Γ)) τ)
+  in the application
+    cast ⋯

@@ -1,0 +1,13 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLookup.Targets
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLookup.Preflight
+#check Targets.NativeHistoryLookup
+#check Targets.InternalHeadCons
+#check Targets.InternalTailCons
+#check Targets.InternalLookupZeroCons
+#check Targets.InternalLookupSuccessorCons
+#check Targets.InternalLookupNil
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryLookup.Preflight

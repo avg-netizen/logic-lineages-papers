@@ -1,0 +1,9 @@
+# Independent final: InitialPrincipalParts5
+
+Approved supporting initial higher-principal-parts packet. Independent read-only recursive verifier exactly reproduces author evidence:30 source-matched modules, five exact standard-only aliases, zero errors. Native1794988682565227152-2; six frozen pins unchanged. No compiler invocation.
+
+Read all actual proof obligations. Source divisibility uses genuine source splitting, all-root multiset equality and the actual multiplicity bound to prove A|T^mu. BoundedPresentation multiplies canonical numerator/denominator by the real quotient, with explicit zero case and genuine degree comparison. Linear root factors are proved monic, pairwise coprime and invertible after actual RatFunc embedding. Mathlib full uniqueness is applied to literal constant coefficient polynomials, proving both arbitrary polynomial part and every higher coefficient equal.
+
+Existence uses genuine partial-fraction decomposition with degree<1 remainders, proves these remainders constant, and identifies the actual product of inverses with 1/T^M. The constructed common numerator of every principal family has degree<T^M, including empty sums/M0. Clearing the nonzero denominator gives U=q*T^M+commonNumerator; both remaining numerators have smaller degree, forcing q=0 by the nonzero product degree contradiction. Thus proper coverage is actual existence/uniqueness without a polynomial-part assumption, and reverse coverage proves properness/divisibility. Initial source coverage derives actual mapped properness and canonical denominator divisibility, before any Cartier operation.
+
+Zero, absent-pole zero coefficients and empty/M0 cases remain covered by the generic proofs. Two proof-only failed drafts are preserved. This is mathematical initial coefficient coverage, not executable PF conversion, repeated-C vanishing or the scalar-profile corollary; those require separate exact gates.

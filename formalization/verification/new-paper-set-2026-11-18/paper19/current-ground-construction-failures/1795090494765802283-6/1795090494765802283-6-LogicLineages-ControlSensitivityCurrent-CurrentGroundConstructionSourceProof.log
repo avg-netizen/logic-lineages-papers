@@ -1,0 +1,129 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionSourceProof.lean:86:2: error: unsolved goals
+case refine_1
+p : Policy
+f : ℕ → ℕ
+k : ℕ
+Γ : List Ty
+P : TrackedSource.Expr k (Ty.curriedGround (k + 1) :: Γ) Variable.here 0
+C : OriginalTerm Γ (Ty.curriedGround (k + 1))
+hAct : TrackedSource.active P = true
+u : OrdinalVector (Ty.curriedGround (k + 1) :: Γ) (Ty.curriedGround 0).level
+rs : List (UnaryRecord (Ty.curriedGround (k + 1) :: Ty.curriedGround (k + 1) :: Γ))
+xs : List (Carrier p)
+c : ℕ
+v : OrdinalPartialVector Γ (Ty.curriedGround (k + 1))
+left✝³ : CurrentGroundAccount.sourceData p P = some (u, rs, c)
+hRaw :
+  CurrentGroundAccount.sourceCode p (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ))
+      (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+    some (OrdinalSyntax.vectorCode u, List.map recordCode rs, c)
+hu : AdmissibleAssignment.assignment p (TrackedSource.erase P) = some u
+hm : List.Forall₂ Matches rs xs
+hSpawn : CurrentReserve.SpawnedAccount p f (u 0) xs c
+left✝² : CurrentReserve.Account p f (u 0) xs c
+hFloor : CurrentReserve.sourceFloor P ≤ reserve xs c
+hv : AdmissiblePartial.run p 0 (u 0) = some v
+hVal :
+  ∀ (μ : Variable Γ Ty.ground → ℕ),
+    ParametricSourceSuccessor.denoteWith f (commonUnits μ) (v (HeadFiniteSurplus.outputOne k)) = carrierSum f xs + ↑c
+B : OrdinalVector Γ ((Ty.curriedGround (k + 1)).arrow Ty.ground).level
+caller : OrdinalVector Γ (Ty.curriedGround (k + 1)).level
+b : ℕ
+hB : AdmissibleAssignment.assignment p (Term.lam (TrackedSource.erase P)) = some B
+hC : AdmissibleAssignment.assignment p C = some caller
+hb4 : 4 ≤ b
+hbox : AdmissibleAssignment.box p B caller (OriginalSecondBudget.boxSecond k) = B (OriginalSecondBudget.boxSecond k)
+hFin :
+  ∀ (f : ℕ → ℕ) (ν : OrdinalComponent Γ → Ordinal.{0}),
+    ParametricSourceSuccessor.denoteWith f ν (B (OriginalSecondBudget.boxSecond k)) = ↑b
+hBudget :
+  budgetCode p (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ))
+      (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+    some b
+hu' : AdmissibleAssignment.assignment p (TrackedSource.erase P) = some u
+hb : b = OriginalSecondBudget.scalarSecond (u 0)
+hB1 : B (boxFirst k) = v (HeadFiniteSurplus.outputOne k)
+hB2 : B (OriginalSecondBudget.boxSecond k) = v (HeadFiniteSurplus.outputTwo k)
+hv' : AdmissiblePartial.run p 0 (u 0) = some v
+hRecords :
+  rs.length = xs.length ∧
+    (∀ op ∈ List.map carrierOp rs, Operator.Assigned p op) ∧
+      List.foldr ordinalNaturalSum 0 (List.map (fun op => unitValue f (op.vector 1)) (List.map carrierOp rs)) =
+        carrierSum f xs
+h4 : 4 ≤ reserve xs c
+cs : List (Operator Γ) := List.map carrierOp rs
+hCLen : cs.length = rs.length
+hPaid : 3 * cs.length + 4 ≤ c
+vC : OrdinalVector Γ 1
+hUC : AdmissibleAssignment.assignment p (UnaryCarrier.saturate k C) = some vC
+hCC : vC 1 = caller (UnaryCarrier.headIndex k)
+hCallerRaw :
+  callerCode p (List.map SyntaxCode.typeCode Γ) (SyntaxCode.typeCode (Ty.curriedGround (k + 1)))
+      (SyntaxCode.encodeTerm C) =
+    some (operatorCode (callerOp (UnaryCarrier.saturate k C) vC))
+opC : Operator Γ := callerOp (UnaryCarrier.saturate k C) vC
+hOpC : Operator.Assigned p opC
+ops : List (Operator Γ) := paidList b cs opC
+K : OriginalTerm (context ops) (Ty.ground.arrow Ty.ground) := SourceUnaryChain.chainSource (terms ops)
+hAssigned : ∀ o ∈ ops, Operator.Assigned p o
+left✝¹ : CurrentUnaryChain.Assigned p (terms ops) (vectors ops)
+w : OrdinalVector (context ops) 1
+hK : AdmissibleAssignment.assignment p (SourceUnaryChain.chainSource (terms ops)) = some w
+hKRaw :
+  chainCode p (List.map SyntaxCode.typeCode Γ) (List.map operatorCode ops) =
+    some
+      (List.map SyntaxCode.typeCode (context ops), SyntaxCode.encodeTerm (SourceUnaryChain.chainSource (terms ops)),
+        OrdinalSyntax.vectorCode w)
+hHead :
+  ∀ (μ : Variable (context ops) Ty.ground → ℕ),
+    ParametricSourceSuccessor.denoteWith f (commonUnits μ) (w 1) = chargedSum f ops
+hGap : 0 < gap b cs.length c
+left✝ : gap b cs.length c + 1 = scale b * (c - 3 * cs.length - 3)
+hBalance :
+  ordinalNaturalProduct (↑(scale b))
+      (ordinalNaturalSum (List.foldr ordinalNaturalSum 0 (List.map (fun op => unitValue f (op.vector 1)) cs) + ↑c)
+        (unitValue f (opC.vector 1))) =
+    chargedSum f (paidList b cs opC) + ↑(gap b cs.length c)
+Δ : ℕ := gap b rs.length c
+hΔ : 0 < Δ
+body : ℕ := SyntaxCode.encodeTerm (TrackedSource.erase P)
+hInspect :
+  TrackedSourceInspectionCode.occursCode (SourceTypedPorts.variableIndex Variable.here)
+        (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+      TrackedSource.active P ∧
+    SyntaxCode.check (List.map SyntaxCode.typeCode (Ty.curriedGround (k + 1) :: Γ))
+          (SyntaxCode.encodeTerm (TrackedSource.erase P)) =
+        some (SyntaxCode.typeCode (Ty.curriedGround 0)) ∧
+      TrackedSourceInspectionCode.arityCode (SyntaxCode.typeCode (Ty.curriedGround 0)) = some 0
+hc : SyntaxCode.check (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ) body = some 0
+ho : TrackedSourceInspectionCode.occursCode 0 body = true
+hR : List.map recordCode rs = List.map operatorCode cs
+hPay :
+  OriginalScaleCompilerCode.paidCode b (List.map operatorCode cs) (operatorCode opC) =
+    List.map operatorCode (paidList b cs opC)
+hR0 :
+  CurrentGroundAccount.sourceCode p (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ)
+      body =
+    some (OrdinalSyntax.vectorCode u, List.map recordCode rs, c)
+hB0 : budgetCode p (SyntaxCode.typeCode (Ty.curriedGround (k + 1)) :: List.map SyntaxCode.typeCode Γ) body = some b
+⊢ List.map SyntaxCode.typeCode (context (paidList b (List.map carrierOp rs) opC)) =
+      List.map SyntaxCode.typeCode
+        (context (paidList b (List.map carrierOp rs) (callerOp (UnaryCarrier.saturate k C) vC))) ∧
+    SyntaxCode.encodeTerm (SourceUnaryChain.chainSource (terms (paidList b (List.map carrierOp rs) opC))) =
+      SyntaxCode.encodeTerm
+        (SourceUnaryChain.chainSource
+          (terms (paidList b (List.map carrierOp rs) (callerOp (UnaryCarrier.saturate k C) vC))))
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionSourceProof.lean:102:87: warning: This simp argument is unused:
+  Prod.mk.injEq
+
+Hint: Omit it from the simp argument list.
+  simp only [̵c̵o̵m̵p̵i̵l̵e̵C̵o̵d̵e̵,̵h̵c̵,̵h̵o̵,̵i̵f̵_̵t̵r̵u̵e̵,̵h̵R̵0̵,̵h̵B̵0̵,̵h̵C̵a̵l̵l̵e̵r̵R̵a̵w̵,̵b̵i̵n̵d̵,̵p̵u̵r̵e̵,̵O̵p̵t̵i̵o̵n̵.̵b̵i̵n̵d̵_̵s̵o̵m̵e̵,̵P̵r̵o̵d̵.̵m̵k̵.̵i̵n̵j̵E̵q̵]̵[̲c̲o̲m̲p̲i̲l̲e̲C̲o̲d̲e̲,̲ ̲h̲c̲,̲ ̲h̲o̲,̲ ̲i̲f̲_̲t̲r̲u̲e̲,̲ ̲h̲R̲0̲,̲ ̲h̲B̲0̲,̲ ̲h̲C̲a̲l̲l̲e̲r̲R̲a̲w̲,̲ ̲b̲i̲n̲d̲,̲ ̲p̲u̲r̲e̲,̲ ̲O̲p̲t̲i̲o̲n̲.̲b̲i̲n̲d̲_̲s̲o̲m̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/ControlSensitivityCurrent/CurrentGroundConstructionSourceProof.lean:104:12: warning: This simp argument is unused:
+  K
+
+Hint: Omit it from the simp argument list.
+  simp [̵Δ̵,̵K̵,̵o̵p̵s̵,̵c̵s̵]̵[̲Δ̲,̲ ̲o̲p̲s̲,̲ ̲c̲s̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

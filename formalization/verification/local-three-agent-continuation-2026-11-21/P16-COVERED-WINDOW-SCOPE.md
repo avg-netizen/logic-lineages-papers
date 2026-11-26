@@ -1,0 +1,3 @@
+# Window acceptance supplies the seed and a least representative
+
+The guarded window program checks the actual input window, a successful parse of the packed context, and membership of the seed in its own cover. On all raw inputs its calibration only uses the stated admission coverage, supplied on original settings by the separate source theorem. At open terms its acceptance yields the original window graph, actual seed occurrence and existence of a packed least using the identical window callback. [Exact target](../../LogicLineages/PersistentMarking/NumberedWindowInternalSparseCoveredWindowTargets.lean) · [Native gate](P16-COVERED-WINDOW-LOCAL-EVIDENCE.json)

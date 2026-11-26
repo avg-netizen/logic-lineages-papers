@@ -1,0 +1,11 @@
+import LogicLineages.PersistentMarking.NumberedWindowClassApplicationPathProof
+
+namespace LogicLineages.PersistentMarking.NumberedWindowClassApplicationPathChecks
+open NumberedWindowClassApplicationPathTargets
+
+theorem exact_PositiveClassPathLift : ExactPositiveClassPathLift :=
+  NumberedWindowClassApplicationPathProof.exactPath
+
+#print axioms exact_PositiveClassPathLift
+
+end LogicLineages.PersistentMarking.NumberedWindowClassApplicationPathChecks

@@ -1,0 +1,166 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=30mm]{geometry}
+\usepackage{enumitem,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\setlist[enumerate]{itemsep=3pt,topsep=5pt}
+\setlist[itemize]{itemsep=3pt,topsep=5pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Ty}{Ty}
+\DeclareMathOperator{\lv}{lv}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\FV}{FV}
+\DeclareMathOperator{\Sub}{Sub}
+\DeclareMathOperator{\Fix}{Fix}
+\newcommand{\BH}{\mathrm{BH}}
+\newcommand{\ID}{\mathrm{ID}_1}
+\newcommand{\N}{\mathbb N}
+\newcommand{\W}[2]{#1\succeq_\star #2}
+\newcommand{\St}[2]{#1\succ_\star #2}
+\newcommand{\EW}[2]{#1\succeq_e #2}
+\newcommand{\ES}[2]{#1\succ_e #2}
+\newcommand{\cw}{\succeq_c}
+\newcommand{\cs}{\succ_c}
+\newcommand{\mk}{\mathsf m}
+\newcommand{\headmark}{\mathsf m^\circ}
+\newcommand{\ap}[2]{#1\langle #2\rangle}
+\newcommand{\sharpens}{\mathrel{\#}}
+\newcommand{\DM}{\mathsf{DM}}
+\newcommand{\Acc}{\mathsf{Acc}}
+\newcommand{\It}{\mathsf I}
+\newcommand{\tr}{\operatorname{tr}}
+\title{A Decidable Path Ordering for G\"odel's T\\
+with Bachmann--Howard Descending Height}
+\author{}
+\date{17 November 2026\\Working manuscript}
+\begin{document}
+\maketitle
+\begin{abstract}
+We define a context- and substitution-stable termination ordering for the
+literal lambda formulation of G\"odel's T. The comparison uses persistent
+marking, simultaneous application along the original lambda spine, and
+inclusion of the finite type support of the target in that of the source.
+Both weak and strict comparison are decidable, every original beta, case
+and recursor reduction is strict, and a disjoint ranked ground sublanguage
+has exactly multiset recursive path ordering. The descending height of the
+same relation is the Bachmann--Howard ordinal. A finite observation model
+proves decidability without bounding generated terms. A numbered simulation
+with strictly decreasing finite marks supplies an individual upper bound
+through a positive arithmetic accessibility proof in $\ID$. Explicit native
+terms realize finite-type ordinal iteration and a cofinal sequence of lower
+ranks. The proof distinguishes the structural ordering from comparison of
+the numerical ordinal assignments associated with G\"odel's T.
+\end{abstract}
+\tableofcontents
+
+\section{Introduction and principal theorem}
+Termination of G\"odel's T is compatible with several substantially
+different ways of measuring terms. Wilken and Weiermann ask for a
+higher-order extension of recursive path ordering and anticipate
+Bachmann--Howard strength; they also ask about effective comparison of
+their ordinal assignments \cite[Introduction]{ww}. This article addresses
+the structural ordering question. Its objects are literal typed terms,
+including open terms with functional variables.
+
+The ordering is inspired by the marked recursive comparisons and numbered
+computability argument developed by Kop \cite[Chapter~5]{kop}. We specify
+the mutual rules completely and prove their properties for the relation
+defined here. In particular, a mark persists when the strict rule is used
+at an already-marked source. This local choice matters in composition:
+selected arguments may themselves contain copies of a marked owner.
+The well-foundedness proof pays each reuse by a strict decrease of a
+finite numerical label.
+
+There are three independent proof obligations. A recursive inference
+system need not give a terminating comparison algorithm. A well-founded
+relation need not be stable under contexts and substitutions. Finally,
+an ordinal lower bound is relevant only when its terms and comparisons
+belong to the relation whose upper bound has been proved. The construction
+below meets these obligations for one explicitly defined pair.
+
+Fix a finite ranked ground signature $\mathcal F$ with a strict total
+precedence. Extend literal T by its actual ranked constructors. All statuses
+are multiset statuses. The mixed precedence and literal support $\Ty$
+are defined in Section~\ref{sec:syntax}. Sections~\ref{sec:comparison}
+and~\ref{sec:stability} define $\cw,\cs$.
+
+\begin{theorem}[Principal theorem]\label{thm:main}
+The confined pair $(\cw,\cs)$ has the following properties.
+\begin{enumerate}
+\item Both comparisons are decidable on all finite ordinary typed inputs.
+\item The weak part is reflexive and transitive. The strict part is
+transitive and well founded, is included in the weak part, and satisfies
+$\cw\,;\,\cs\subseteq\cs$ and $\cs\,;\,\cw\subseteq\cs$.
+\item Both parts are preserved by every original well-typed context and
+every type-preserving capture-avoiding substitution by ordinary terms.
+\item Every original beta, case and recursor reduction is strict.
+\item On the first-order $\mathcal F$-algebra, $\cs$ is exactly multiset
+recursive path ordering for the chosen precedence.
+\item Every individual descending strict rank is below $\BH$, and
+\[
+ \sup_s\bigl(\rk_{\cs}(s)+1\bigr)=\BH.
+\]
+An effective family of closed native T terms of outer type $o\to o$
+already has cofinal ranks; $\mathcal F$ is unnecessary for this lower bound.
+\end{enumerate}
+\end{theorem}
+
+Here descending rank means
+$\rk_R(s)=\sup_{sRt}(\rk_R(t)+1)$ for a well-founded relation $R$.
+The theorem concerns the height of a partial ordering. It does not assert
+that the terms form a linear well-order or that every linear extension
+has the same order type. No efficiency estimate for the decision procedure
+is part of the theorem.
+
+\input{sections/foundations}
+\input{sections/ordering}
+\input{sections/decision}
+\input{sections/ordinals}
+
+\section{Conclusion and scope}
+The preceding results prove Theorem~\ref{thm:main}: structural stability
+and composition are established in Theorem~\ref{thm:stable};
+Theorem~\ref{thm:decide} decides the same pair;
+Theorems~\ref{thm:rpo} and~\ref{thm:orient} give its two rewriting
+interfaces; and Theorems~\ref{thm:upper} and~\ref{thm:height} establish
+the matching ordinal bounds.
+
+The type-support condition is local to each source. It permits arbitrary
+finite types in the input language, while keeping every descendant of one
+source inside one arithmetic accessibility universe. The native family
+used for cofinality ranges over unbounded finite type instances, which is
+consistent with every individual rank being strictly below $\BH$.
+
+The exact first-order restriction concerns actual ranked constructors.
+It is not an uncurrying theorem for native $D$ or $R$. The proof also fixes
+multiset status throughout. Other status policies require their own
+composition and ordinal analyses.
+
+The numerical comparison problem for Wilken--Weiermann assignments has
+different inputs and a different algorithm. No collapse-control choice,
+residue-table theorem or arithmetic quantifier-elimination procedure is
+used in the construction of $\cw,\cs$. Those results can therefore be
+developed independently without changing this ordering.
+
+\paragraph{Preparation and verification.}
+This manuscript was prepared with AI assistance and presents hand proofs
+for the explicitly defined persistent-mark relation. A complete formal
+verification of this relation and its ordinal calibration is not claimed.
+The motivating marked-source obstruction concerns a particular earlier
+formalized presentation; it is not a claim that Kop's published theorem
+is false.
+
+\appendix
+\input{sections/composition}
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

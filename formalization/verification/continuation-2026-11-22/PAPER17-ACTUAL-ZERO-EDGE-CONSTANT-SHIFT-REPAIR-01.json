@@ -1,0 +1,36 @@
+{
+  "status": "source-only narrow proof repair; native retry not run by author",
+  "immutable_failed_source_commit": "b3df41f50c76f918ab11cd002aa5d9b11ba8eb22",
+  "receipt": "1795347161458900976-8",
+  "exact_gate": "LogicLineages.PermittedControl.ActualZeroEdgeConstantShiftStatementChecks",
+  "failed_receipt_sha256": "8acbdbc4016cc9d0534f681a431446267fe8e225c3b1175472e66c39a29eb2d4",
+  "failed_log_sha256": "471b0d1c4420a2402f7458d6d53f275ffed59a67aa157e5b6a811ca918254371",
+  "failed_module_record": {
+    "module": "LogicLineages.PermittedControl.ActualZeroEdgeConstantShiftLedgerProof",
+    "returncode": 1,
+    "seconds": 1.018,
+    "observed_cpu_seconds": 0.96,
+    "last_wait_channel": "__futex_wait",
+    "stopped_threads": [],
+    "peak_process_tree_rss_kib": 985224,
+    "memory_observation_failure": {},
+    "discarded_failed_outputs": [],
+    "source_sha256": "dd3d3e1169cd2dfe61c0b406ce9e5320fdc28371b9fecdd3351ce2db8beece8c",
+    "log": "build-reports/1795347161458900976-8-LogicLineages-PermittedControl-ActualZeroEdgeConstantShiftLedgerProof.log"
+  },
+  "diagnostics": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroEdgeConstantShiftLedgerProof.lean:51:8: error: `simp` made no progress\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroEdgeConstantShiftLedgerProof.lean:55:10: error: `simp` made no progress\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroEdgeConstantShiftLedgerProof.lean:64:10: error: `simp` made no progress\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroEdgeConstantShiftLedgerProof.lean:49:17: warning: This simp argument is unused:\n  key\n\nHint: Omit it from the simp argument list.\n  simp only [̵k̵e̵y̵]̵ ̵at head\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+  "original_author_manifest_sha256": "ef4c3f78dd50f223bd1594ffbe0d4bd17ff2375cb102d197ae64c05d84aa6385",
+  "changed_source": "formalization/LogicLineages/PermittedControl/ActualZeroEdgeConstantShiftLedgerProof.lean",
+  "failed_source_sha256": "dd3d3e1169cd2dfe61c0b406ce9e5320fdc28371b9fecdd3351ce2db8beece8c",
+  "repair_source_sha256": "663fca3c57094bed74ea075a28b44d18934412f2dfa9a3d017085a837fd2b182",
+  "preserved_sources_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualZeroEdgeConstantShiftTargets.lean": "6575a1a376d19a8c4ca1a0272cf4ac559577faef49addfa23725c84cd86711d3",
+    "formalization/LogicLineages/PermittedControl/ActualZeroEdgeConstantShiftAlphabetProof.lean": "79061a3e7da2bb0db97c90cef3d2a8002432bbf2b87a33078fae906987945d09",
+    "formalization/LogicLineages/PermittedControl/ActualZeroEdgeConstantShiftProof.lean": "9dabd999d76ac4c4e7590dd05b763cc026e1aa39b4665a6cbb6ec33e3f346576",
+    "formalization/LogicLineages/PermittedControl/ActualZeroEdgeConstantShiftStatementChecks.lean": "9b72ed7cae315f74ee4311c0b5de1df831f69ba4046bc033f255872f9046aa4f"
+  },
+  "zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-ZERO-EDGE-CONSTANT-SHIFT-REPAIR-01.patch",
+  "patch_sha256": "9fff8bf423827fbfb64f39144f46a5a55b1204d010dad078cd4fcca1e8ebb9bb",
+  "inverse": "Reverse exact patch with fuzz zero to recover exact failed initial LedgerProof bytes.",
+  "change": "Use paid original operand shape to transport the same actual OriginOutcome to its literal count/read constructor before the existing original count branches. Target, arithmetic branch proofs, other leaves, imports and exact 331-local/40-external closure unchanged."
+}

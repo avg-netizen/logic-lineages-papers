@@ -1,0 +1,5 @@
+# Independent exact pre-scope: retained prefix at theta entry
+
+Approved for fresh complete gate; all eight pins match. Read actual witness and explicit family targets against lem:entry and preceding source context. Genuine actual states with limit part theta derive v>=4, real Phi(v) residue modulo three, q>=1, true greedy predecessor, retained prefix norm u-4 and total entry norm u. Explicit theta+(v-4) realizes every v>=4 with actual norm/limit part, preventing a vacuous conditional entry statement. Ordinary ordinal sums/products and zero-prefix-compatible least-exponent condition remain literal.
+
+Final proof must pay theta norm four, actual greedy maximum under the derived residue, nontruncated q-1/u-4, original state total norm and prefix decomposition. No independent entry norm oracle, modified control, typed source grammar reachability, global-count summand extraction or parked tuple-period assertion is authorized. The following parity equation is not a separate accepted result here.

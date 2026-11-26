@@ -1,0 +1,1 @@
+Exact current HereditaryDecodeEncodeChecks read: it concludes the unchanged HereditaryDomainTargets.DecodeEncode by pairing checked DecodedValid with checked code reconstruction at the same E, type, context and code. No added premise or semantic expansion. Fresh bounded union gate scope approved; no full finite-lattice credit.

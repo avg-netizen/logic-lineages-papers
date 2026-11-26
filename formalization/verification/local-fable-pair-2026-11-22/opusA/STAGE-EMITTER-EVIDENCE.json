@@ -1,0 +1,61 @@
+{
+ "lane": "opusA",
+ "key": "STAGE-EMITTER",
+ "modules": [
+  "LogicLineages.PermittedControl.StageEmitterRowTargets",
+  "LogicLineages.PermittedControl.StageEmitterRowProof",
+  "LogicLineages.PermittedControl.StageEmitterHighTargets",
+  "LogicLineages.PermittedControl.StageEmitterEmissionProof",
+  "LogicLineages.PermittedControl.StageEmitterEffectivityProof",
+  "LogicLineages.PermittedControl.StageEmitterHighProof",
+  "LogicLineages.PermittedControl.StageEmitterGuardTargets",
+  "LogicLineages.PermittedControl.StageEmitterGuardProof"
+ ],
+ "source_sha256": {
+  "LogicLineages/PermittedControl/StageEmitterRowTargets.lean": "db7fd82678e96a78bd3b29c9474cdd8a4f97bfcffc03c81e5f5b5184f314d290",
+  "LogicLineages/PermittedControl/StageEmitterRowProof.lean": "630f3f87780da0a6528b7a970633ad6ffa84bdbf3a0b57dae6b8991c65c0f081",
+  "LogicLineages/PermittedControl/StageEmitterHighTargets.lean": "4bd3ab76cb81f64ec75f9ec1e7895bd6730afda81a9897c3d908cf051c507fd7",
+  "LogicLineages/PermittedControl/StageEmitterEmissionProof.lean": "1b963444813938fc201152f35bbead2c14c95833a9a865e5f615634e00b3ee0f",
+  "LogicLineages/PermittedControl/StageEmitterEffectivityProof.lean": "0b6f90af190cc1dfa3e746dfee90ace12f2fd44d4750d1a42bf202bdb24dc64e",
+  "LogicLineages/PermittedControl/StageEmitterHighProof.lean": "dd2459f53508fe3ec35e2db8ce2c8c5fc8e1c1f4a8e9df5fff7f762b9cdea25a",
+  "LogicLineages/PermittedControl/StageEmitterGuardTargets.lean": "268d81c12fe6f217712fe22510c796ca041f2fefc24436b7d54ea54f6712cfc8",
+  "LogicLineages/PermittedControl/StageEmitterGuardProof.lean": "a43a49cc6a69404e989749847b6f0e7b12508092e2260c64867463216e68d6ef"
+ },
+ "statements": {
+  "ExactLevelCodeEffectivity/ExactSignedCodeEffectivity/ExactRowCodeEffectivity": "StageEmitterRowProof (exactRowCodeEffectivity, fullStageEmitterRow)",
+  "ExactStageEmission": "StageEmitterEmissionProof.exactStageEmission",
+  "ExactHighCodeEffectivity": "StageEmitterEffectivityProof.exactHighCodeEffectivity",
+  "ExactConditionalEmitter / ExactConditionalClosedBlockDecision": "StageEmitterHighProof",
+  "ExactRenderingFromGuard / ExactClosedBlockDecisionFromGuard": "StageEmitterGuardProof"
+ },
+ "passing_receipts": {
+  "row_targets": "1795386236385299359-3156047",
+  "row_proof": "1795386686366038761-3157556",
+  "high_targets": "1795386753170203185-3157818",
+  "emission_proof": "1795386811723965461-3158006",
+  "effectivity_proof": "1795386843288402976-3158147",
+  "high_proof": "1795386857356274355-3158225",
+  "guard_targets": "1795386905417092047-3158425",
+  "guard_proof": "1795386914033320087-3158455"
+ },
+ "failed_receipts": [
+  "1795386373221221170-3156433",
+  "1795386456638012616-3156813",
+  "1795386587909931500-3157199",
+  "1795386665328558569-3157448"
+ ],
+ "print_axioms": [
+  "'LogicLineages.PermittedControl.StageEmitter.exactRowCodeEffectivity' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PermittedControl.StageEmitter.fullStageEmitterRow' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PermittedControl.StageEmitter.exactStageEmission' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PermittedControl.StageEmitter.exactHighCodeEffectivity' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PermittedControl.StageEmitter.exactConditionalEmitter' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PermittedControl.StageEmitter.exactConditionalClosedBlockDecision' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PermittedControl.StageEmitter.fullStageEmitterHigh' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PermittedControl.StageEmitter.exactRenderingFromGuard' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PermittedControl.StageEmitter.exactClosedBlockDecisionFromGuard' depends on axioms: [propext, Classical.choice, Quot.sound]",
+  "'LogicLineages.PermittedControl.StageEmitter.fullStageEmitterGuard' depends on axioms: [propext, Classical.choice, Quot.sound]"
+ ],
+ "residual_hypotheses": "exactly one program g : Nat \u2192 List LabelCode \u2192 List Nat \u2192 PreparedPacketCode with GuardExact g (the guard field of Rendering.Exact, verbatim) and GuardEffective g (Primrec uncurried)",
+ "source_map": "verification/local-fable-pair-2026-11-22/opusA/STAGE-EMITTER-SOURCE-MAP.md"
+}

@@ -1,0 +1,150 @@
+--- a/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverHeadWindowSelectedProof.lean
++++ b/formalization/LogicLineages/PersistentMarking/NumberedWindowInternalCoverHeadWindowSelectedProof.lean
+@@ -18,0 +19 @@
++import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.InternalPositiveUnfoldingSupportProof
+@@ -34,0 +36 @@
++open ID1Completion.InternalPositiveUnfoldingSupportProof (formulaRelabelComposition)
+@@ -75,4 +76,0 @@
+-private theorem keyRename {β : Type} (b : Bool) (h : OTerm α) (tail : List (OTerm α)) (j : α → β) :
+-    (headKey b h tail).relabel j = headKey b (h.relabel j) (tail.map (fun t => t.relabel j)) := by
+-  simp only [headKey,rawConsRename,packedBodyRename,numeralRename,List.map_cons]
+-
+@@ -106,18 +104,7 @@
+-/-- Abstract the whole updater and final branch consumer while moving the
+-actual memo reports through their existential binders. -/
+-private def StepConsumer (b : Bool) (s : Settings) (A : Program 2) (T : Program 1)
+-    (body : Positive (Fin 1)) : Prop :=
+-  ∀ (γ : Type) (Ξ : List (Formula γ)) (ctx h result old : OTerm γ)
+-    (tail : List (OTerm γ)), (h::tail).length = headArity b →
+-    Nonempty (Derivation body Ξ (contextStep (strictAuxUpdate A T) (suc result) (headPrior b h tail) old ctx)) →
+-    Nonempty (Derivation body Ξ (memberGraph (headsTerm s γ) h))
+-
+-private theorem atUpdate (b : Bool) (s : Settings) (A : Program 2) (T : Program 1)
+-    (consume : StepConsumer b s A T body)
+-    (ctx h result old value : OTerm α) (tail : List (OTerm α)) (len : (h::tail).length = headArity b)
+-    (parent : Nonempty (Derivation body Γ (windowGraph (strictAuxWindow A T) ctx result (headKey b h tail))))
+-    (table : Nonempty (Derivation body Γ (contextTable
+-      (strictAuxUpdate A T) old (headPrior b h tail) ctx)))
+-    (update : Nonempty (Derivation body Γ (contextStep
+-      (strictAuxUpdate A T) value (headPrior b h tail) old ctx))) :
+-    Nonempty (Derivation body Γ (memberGraph (headsTerm s α) h)) := by
++/-- Functionality aligns the selected successor at the given predecessor,
++without opening the shape of that predecessor or of the requested goal. -/
++private theorem alignStep (A : Program 2) (T : Program 1) (prior ctx result old value : OTerm α)
++    (parent : Nonempty (Derivation body Γ (windowGraph (strictAuxWindow A T) ctx result (suc prior))))
++    (table : Nonempty (Derivation body Γ (contextTable (strictAuxUpdate A T) old prior ctx)))
++    (update : Nonempty (Derivation body Γ (contextStep (strictAuxUpdate A T) value prior old ctx))) :
++    Nonempty (Derivation body Γ (contextStep (strictAuxUpdate A T) (suc result) prior old ctx)) := by
+@@ -126,2 +113 @@
+-  let key := headKey b h tail
+-  let prior := headPrior b h tail
++  let key := suc prior
+@@ -132,2 +118 @@
+-  have sameOutput := outputTransport R value (suc result) ![prior,old,ctx,z] agree update
+-  exact consume α Γ ctx h result old tail len sameOutput
++  exact outputTransport R value (suc result) ![prior,old,ctx,z] agree update
+@@ -135,8 +120,21 @@
+-set_option maxHeartbeats 650000 in
+-private theorem withTable (b : Bool) (s : Settings) (A : Program 2) (T : Program 1)
+-    (consume : StepConsumer b s A T body)
+-    (ctx h result old : OTerm α) (tail : List (OTerm α)) (len : (h::tail).length = headArity b)
+-    (parent : Nonempty (Derivation body Γ (windowGraph (strictAuxWindow A T) ctx result (headKey b h tail))))
+-    (table : Nonempty (Derivation body Γ (contextTable
+-      (strictAuxUpdate A T) old (headPrior b h tail) ctx))) :
+-    Nonempty (Derivation body Γ (memberGraph (headsTerm s α) h)) := by
++private theorem moveParent (A : Program 2) (T : Program 1) (prior ctx result : OTerm α)
++    {β : Type} (j : α → β) (Δ : List (Formula β)) (keep : ∀ f ∈ Γ, f.relabel j ∈ Δ)
++    (parent : Nonempty (Derivation body Γ (windowGraph (strictAuxWindow A T) ctx result (suc prior)))) :
++    Nonempty (Derivation body Δ
++      (windowGraph (strictAuxWindow A T) (ctx.relabel j) (result.relabel j) (suc (prior.relabel j)))) := by
++  have lifted := renameInto parent j Δ keep
++  simpa only [windowGraph,programRename,tripleInputsRename,sucRelabel,zRelabel] using lifted
++
++/-- The two object binders work with an arbitrary predecessor term and an
++arbitrary object goal. Thus no packed-list or head-formula normalization
++occurs during program totality or graph renaming. -/
++private theorem withStep (A : Program 2) (T : Program 1) (prior ctx result old : OTerm α)
++    (Q : Formula α)
++    (parent : Nonempty (Derivation body Γ (windowGraph (strictAuxWindow A T) ctx result (suc prior))))
++    (table : Nonempty (Derivation body Γ (contextTable (strictAuxUpdate A T) old prior ctx)))
++    (next : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)),
++      (∀ f ∈ Γ, f.relabel j ∈ Δ) →
++      Nonempty (Derivation body Δ (contextStep (strictAuxUpdate A T) (suc (result.relabel j))
++        (prior.relabel j) (old.relabel j) (ctx.relabel j))) →
++      Nonempty (Derivation body Δ (Q.relabel j))) :
++    Nonempty (Derivation body Γ Q) := by
+@@ -144 +142 @@
+-  apply programCases R ![headPrior b h tail,old,ctx,z] _
++  refine programCases R ![prior,old,ctx,z] Q ?_
+@@ -146,8 +144,6 @@
+-  simp only [quadInputsRename,priorRename,zRelabel] at update
+-  simp only [graphRename,headsTerm,numeralRename]
+-  have parent' := renameInto parent j Δ keep
+-  have table' := renameInto table j Δ keep
+-  simp only [windowGraph,programRename,tripleInputsRename,sucRelabel,zRelabel,keyRename] at parent'
+-  simp only [contextTable,programRename,tripleInputsRename,priorRename,zRelabel] at table'
+-  exact atUpdate b s A T consume (ctx.relabel j) (h.relabel j) (result.relabel j) (old.relabel j)
+-    value (tail.map (fun t => t.relabel j)) (lengthRename b h tail j len) parent' table' update
++  simp only [quadInputsRename,zRelabel] at update
++  have liftTable := renameInto table j Δ keep
++  simp only [contextTable,programRename,tripleInputsRename,zRelabel] at liftTable
++  have liftParent := moveParent A T prior ctx result j Δ keep parent
++  exact next β j Δ keep (alignStep A T (prior.relabel j) (ctx.relabel j) (result.relabel j)
++    (old.relabel j) value liftParent liftTable update)
+@@ -155,6 +151,9 @@
+-set_option maxHeartbeats 650000 in
+-private theorem fromWindow (b : Bool) (s : Settings) (A : Program 2) (T : Program 1)
+-    (consume : StepConsumer b s A T body)
+-    (ctx h result : OTerm α) (tail : List (OTerm α)) (len : (h::tail).length = headArity b)
+-    (parent : Nonempty (Derivation body Γ (windowGraph (strictAuxWindow A T) ctx result (headKey b h tail)))) :
+-    Nonempty (Derivation body Γ (memberGraph (headsTerm s α) h)) := by
++private theorem selectedStepCases (A : Program 2) (T : Program 1) (prior ctx result : OTerm α)
++    (Q : Formula α)
++    (parent : Nonempty (Derivation body Γ (windowGraph (strictAuxWindow A T) ctx result (suc prior))))
++    (next : ∀ (β : Type) (j : α → β) (Δ : List (Formula β)) (old : OTerm β),
++      (∀ f ∈ Γ, f.relabel j ∈ Δ) →
++      Nonempty (Derivation body Δ (contextStep (strictAuxUpdate A T) (suc (result.relabel j))
++        (prior.relabel j) old (ctx.relabel j))) →
++      Nonempty (Derivation body Δ (Q.relabel j))) :
++    Nonempty (Derivation body Γ Q) := by
+@@ -162 +161 @@
+-  apply programCases (scratchTable (constantZero 2) R) ![headPrior b h tail,ctx,z] _
++  refine programCases (scratchTable (constantZero 2) R) ![prior,ctx,z] Q ?_
+@@ -164,6 +163,11 @@
+-  simp only [tripleInputsRename,priorRename,zRelabel] at table
+-  simp only [graphRename,headsTerm,numeralRename]
+-  have parent' := renameInto parent j Δ keep
+-  simp only [windowGraph,programRename,tripleInputsRename,sucRelabel,zRelabel,keyRename] at parent'
+-  exact withTable b s A T consume (ctx.relabel j) (h.relabel j) (result.relabel j) old
+-    (tail.map (fun t => t.relabel j)) (lengthRename b h tail j len) parent' table
++  simp only [tripleInputsRename,zRelabel] at table
++  have liftParent := moveParent A T prior ctx result j Δ keep parent
++  refine withStep A T (prior.relabel j) (ctx.relabel j) (result.relabel j) old (Q.relabel j) liftParent table ?_
++  intro γ k Ξ retain step
++  have preserved : ∀ f ∈ Γ, f.relabel (k ∘ j) ∈ Ξ := by
++    intro f hf
++    rw [← formulaRelabelComposition j k f]
++    exact retain (f.relabel j) (keep f hf)
++  simp only [Term.relabel_relabel] at step
++  rw [formulaRelabelComposition j k Q]
++  exact next γ (k ∘ j) Ξ (old.relabel k) preserved step
+@@ -175,4 +179,15 @@
+-  have finish : StepConsumer b s A S body := by
+-    intro γ Ξ c x r old fs size row
+-    exact atStep b s B T c x r old fs size row
+-  exact fromWindow b s A S finish ctx h result tail len parent
++  let prior := headPrior b h tail
++  let Q := memberGraph (headsTerm s α) h
++  refine selectedStepCases A S prior ctx result Q parent ?_
++  intro β j Δ old keep row
++  have step : Nonempty (Derivation body Δ (contextStep (strictAuxUpdate A S) (suc (result.relabel j))
++      (headPrior b (h.relabel j) (tail.map (fun t => t.relabel j))) old (ctx.relabel j))) := by
++    change Nonempty (Derivation body Δ (contextStep (strictAuxUpdate A S) (suc (result.relabel j))
++      ((headPrior b h tail).relabel j) old (ctx.relabel j))) at row
++    rw [priorRename b h tail j] at row
++    exact row
++  have hit := atStep b s B T (ctx.relabel j) (h.relabel j) (result.relabel j) old
++    (tail.map (fun t => t.relabel j)) (lengthRename b h tail j len) step
++  change Nonempty (Derivation body Δ ((memberGraph (headsTerm s α) h).relabel j))
++  rw [graphRename,headsTerm,numeralRename]
++  exact hit

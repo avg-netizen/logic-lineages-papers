@@ -1,0 +1,30 @@
+--- a/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchProgramControlProof.lean
++++ b/LogicLineages/PersistentMarking/NumberedWindowInternalFreshProbeDispatchProgramControlProof.lean
+@@ -33,21 +33,22 @@
+ theorem compositeOne {n : Nat} (p : Program 1) (a : Program n) (xs : List.Vector Nat n) :
+     evaluate (.composition p (Fin.cons a Fin.elim0)) xs =
+       evaluate p (evaluate a xs ::ᵥ nil) := by
+-  change evaluate p (List.Vector.ofFn fun i => evaluate ((Fin.cons a Fin.elim0) i) xs) = _
++  change evaluate p (List.Vector.ofFn fun i : Fin 1 =>
++    evaluate ((Fin.cons a Fin.elim0 : Fin 1 → Program n) i) xs) = _
+   rw [vectorOne] <;> rfl
+ 
+ theorem compositeTwo {n : Nat} (p : Program 2) (a b : Program n) (xs : List.Vector Nat n) :
+     evaluate (.composition p (Fin.cons a (Fin.cons b Fin.elim0))) xs =
+       evaluate p (evaluate a xs ::ᵥ evaluate b xs ::ᵥ nil) := by
+-  change evaluate p (List.Vector.ofFn fun i =>
+-    evaluate ((Fin.cons a (Fin.cons b Fin.elim0)) i) xs) = _
++  change evaluate p (List.Vector.ofFn fun i : Fin 2 =>
++    evaluate ((Fin.cons a (Fin.cons b Fin.elim0) : Fin 2 → Program n) i) xs) = _
+   rw [vectorTwo] <;> rfl
+ 
+ theorem compositeThree {n : Nat} (p : Program 3) (a b c : Program n) (xs : List.Vector Nat n) :
+     evaluate (.composition p (Fin.cons a (Fin.cons b (Fin.cons c Fin.elim0)))) xs =
+       evaluate p (evaluate a xs ::ᵥ evaluate b xs ::ᵥ evaluate c xs ::ᵥ nil) := by
+-  change evaluate p (List.Vector.ofFn fun i =>
+-    evaluate ((Fin.cons a (Fin.cons b (Fin.cons c Fin.elim0))) i) xs) = _
++  change evaluate p (List.Vector.ofFn fun i : Fin 3 =>
++    evaluate ((Fin.cons a (Fin.cons b (Fin.cons c Fin.elim0)) : Fin 3 → Program n) i) xs) = _
+   rw [vectorThree] <;> rfl
+ 
+ theorem zeroEvaluation {n : Nat} (xs : List.Vector Nat n) : evaluate (zeroAt n) xs = 0 := rfl

@@ -1,0 +1,13 @@
+module
+public import LogicLineages.ControlSensitivityCurrent.ActualParityTargets
+public import LogicLineages.OrdinalComparison.SourceMachineControlNonperiodicityProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.ControlSensitivityCurrent.ActualParity
+open LogicLineages.OrdinalComparison
+theorem exactControlParity : ActualParityTargets.ExactControlParity :=
+  SourceMachineControlNonperiodicity.Proof.exactControlParity
+theorem nonEventualPeriodicity : ActualParityTargets.NonEventualPeriodicity :=
+  SourceMachineControlNonperiodicity.Proof.nonEventualPeriodicity
+#audit_namespace LogicLineages.ControlSensitivityCurrent.ActualParity
+end LogicLineages.ControlSensitivityCurrent.ActualParity

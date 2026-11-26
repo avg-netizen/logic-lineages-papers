@@ -1,0 +1,15 @@
+module
+
+public import LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryMachine.SourceProof
+public meta import LogicLineages.Audit
+
+@[expose] public section
+namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryMachine.StatementChecks
+
+theorem openFusion : SixSol20261112.HistoryMachine.Targets.OpenFusion := FusionProof.openFusion
+theorem sameSourceHistoryFusion : SixSol20261112.HistoryMachine.Targets.SameSourceHistoryFusion :=
+  SourceProof.sameSourceHistoryFusion
+
+end LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryMachine.StatementChecks
+
+#audit_namespace LogicLineages.ComputabilityKnowledge.CertifiedSourceProvabilityCompletion.SixSol20261113.HistoryMachine

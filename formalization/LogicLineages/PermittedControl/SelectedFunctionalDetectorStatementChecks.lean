@@ -1,0 +1,9 @@
+module
+public import LogicLineages.PermittedControl.SelectedFunctionalDetectorProof
+@[expose] public section
+namespace LogicLineages.PermittedControl.StatementChecks
+
+theorem fixed_fullSelectedFunctionalDetector : SelectedFunctionalDetectorTargets.FullSelectedFunctionalDetector :=
+  SelectedFunctionalDetector.Proof.fullSelectedFunctionalDetector
+#print axioms fixed_fullSelectedFunctionalDetector
+end LogicLineages.PermittedControl.StatementChecks

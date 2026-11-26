@@ -1,0 +1,38 @@
+{
+  "status": "source-only proof repair after ordinary native failure in recut01; retry not run by author",
+  "receipt": "1795342438111426289-14",
+  "exact_gate": "LogicLineages.PermittedControl.ActualZeroClassConcreteAssemblyStatementChecks",
+  "failed_receipt_sha256": "1fdefc3c4786647c928fdde5f6b895308bfdecfff2f6b309c40ebe3bd4a9d2cc",
+  "failed_gate_log_sha256": "a9304e67d12aca9e662d1f3ff7df408b98371a7adeb917983ebf986b83c609ef",
+  "failed_module_record": {
+    "module": "LogicLineages.PermittedControl.ActualZeroClassConcreteAssemblyCohortProof",
+    "returncode": 1,
+    "seconds": 1.073,
+    "observed_cpu_seconds": 1.02,
+    "last_wait_channel": "0",
+    "stopped_threads": [],
+    "peak_process_tree_rss_kib": 1015088,
+    "memory_observation_failure": {},
+    "discarded_failed_outputs": [],
+    "source_sha256": "995d2f9b5e0bf244577ceb4d5d3dd1dfce7d9e17ccc8d110cb8fca11df72b19d",
+    "log": "build-reports/1795342438111426289-14-LogicLineages-PermittedControl-ActualZeroClassConcreteAssemblyCohortProof.log"
+  },
+  "exact_failed_diagnostic": "/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroClassConcreteAssemblyCohortProof.lean:32:51: error(lean.unknownIdentifier): Unknown constant `Option.none_ne_some`\n/workspace/scratch/d6452c0f74c7/ii5-nov21-third-recovery/formalization/LogicLineages/PermittedControl/ActualZeroClassConcreteAssemblyCohortProof.lean:32:10: error: unsolved goals\ncase neg\nf : ℕ → ℕ\nC : ℕ\np : SurvivingPrefix\nweight : ℤ\ni q : ℕ\nκ : ℤ\nrank : ℕ\nlam mu : NONote\nkeep : ¬(f q = C ∧ i ≠ 0 ∧ shortGapLength lam (prefixTarget mu) = 0)\nfound : none = some p\n⊢ p.rank = (weight, LowerOperand.count rank lam mu).2.rank",
+  "failed_edition_import_recut_manifest_sha256": "32b4cc60dc7f34e99001c224624ee56bbd2507d5edf88dc7d3f9d8a015f6e023",
+  "changed_source": "formalization/LogicLineages/PermittedControl/ActualZeroClassConcreteAssemblyCohortProof.lean",
+  "exact_failed_source_sha256": "995d2f9b5e0bf244577ceb4d5d3dd1dfce7d9e17ccc8d110cb8fca11df72b19d",
+  "repair_source_sha256": "13b9fa67aa1e8d41688afdeda28e839d476100502b6f7343a67ca497826151e5",
+  "preserved_sha256": {
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassConcreteAssemblyTargets.lean": "d862dfb6b6488118513007b967b4ce0df12b13f55f36f8cfe5fbe5ae5999f8a3",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassConcreteAssemblyColumnProof.lean": "902d2aa95f2182ddab2c28879dd392c22ad6c1531a6a9b67b0a8bc054251a971",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassConcreteAssemblyProof.lean": "2e031514e993fe8ac05fce89b38f9fb8565f9a7b63118ce2a6f846181d6c885b",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassConcreteAssemblyStatementChecks.lean": "78ad8659eca6b0a4836a8a0c7d3a7ae1fe6f39e78fa7839e16efe3cd7233697a",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassConcreteAssemblyPairNarrowProof.lean": "e6f98e4669e44e85696be3f290752458a45be40a3f8ff4c94c465c050ec46469",
+    "formalization/LogicLineages/PermittedControl/ActualZeroClassConcreteAssemblyTransferNarrowProof.lean": "2492d1a6038a034a3cfbfe065b839eb3a2a9f15b70cfe459fe4bd4b7167bfe07"
+  },
+  "zero_context_patch": "formalization/verification/continuation-2026-11-22/PAPER17-ACTUAL-ZERO-CLASS-CONCRETE-ASSEMBLY-REPAIR-01.patch",
+  "patch_sha256": "aa880c0b645ca8e3cb2149fa8b7f47605e7b6b0e72d0bc4b6be3d620f1954038",
+  "inverse": "Reverse exact zero-context patch with fuzz 0; reconstructs the failed recut01 CohortProof bytes at the recorded hash.",
+  "change": "Replace nonexistent Option.none_ne_some with cases on the same impossible none = some p equality after the existing simplification. Nothing else changes; the imports and static 433-local/41-external exact gate closure are unchanged.",
+  "dependency_status": "Native log shows both source-exact narrow semantic pair and transfer leaves compiled before this first failure; not an exact assembly acceptance."
+}

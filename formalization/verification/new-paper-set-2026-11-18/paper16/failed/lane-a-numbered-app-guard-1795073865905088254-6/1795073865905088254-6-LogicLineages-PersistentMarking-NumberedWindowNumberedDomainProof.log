@@ -1,0 +1,17 @@
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowNumberedDomainProof.lean:57:8: error: (kernel) application type mismatch
+  x✝ ⟨rest✝, htail⟩
+argument has type
+  (As : NArgs) ×' ExtrasTyped C As
+but function has type
+  ∀ (y : (As : NArgs) ×' ExtrasTyped C✝ As),
+    InvImage (fun x1 x2 => x1 < x2) (fun x => PSigma.casesOn x fun As hA => sizeOf As) y ⟨NArgs.cons a✝ rest✝, ⋯⟩ →
+      ExtrasTyped C✝ (y.1.append Bs)
+/workspace/scratch/d6452c0f74c7/formalization-new-set-20261118/formalization/LogicLineages/PersistentMarking/NumberedWindowNumberedDomainProof.lean:115:22: error: Application type mismatch: The argument
+  hb
+has type
+  ((ρ ∈ declaration f ∨ ρ ∈ subtypes τ) ∨ ρ ∈ argsSupport (shiftArgs 1 0 bs)) ∨
+    ρ ∈ argsSupport ((shiftArgs 1 0 es).append (NArgs.cons (NTerm.bound σ 0) NArgs.nil))
+but is expected to have type
+  ρ ∈ support (openNumbered f σ τ k bs es)
+in the application
+  hBody.right.left ρ hb

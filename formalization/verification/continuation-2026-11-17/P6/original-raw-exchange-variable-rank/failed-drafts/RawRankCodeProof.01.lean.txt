@@ -1,0 +1,48 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.Definitions
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.OriginalRawVariableRankLeafProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalExchangeBoundsPreservation.FoldValueProof
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261116.OriginalCodeBoundsConstructors.ZeroMaximumProof
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.RawRankCodeProof
+open FirstOrder Language PositiveArithmeticOperators InternalCalculus InternalControlGraph
+open InternalGraphComposition (OTerm)
+open InternalApplicationCertificateConstructors InternalApplicationCertificateConstructorsSupportProof
+open InternalControlGraphSupportProof InternalGraphCompositionFunctionalityProof
+open InternalApplicationCertificateConstructorsSyntaxProof InternalAcceptanceSupportProof
+open InternalTagArithmeticSyntaxProof (z suc zRelabel sucRelabel)
+open InternalTagArithmeticSupportProof (refl symm)
+open SourceComputabilityFormulaSupportProof (numeral)
+open LogicLineages.ComputabilityKnowledge.GorbowPRProgram
+open Continuation20261114 Continuation20261115 Continuation20261116
+open OriginalRawSyntaxTransport (variableRankRaw)
+open InternalAcceptanceConjunctionProof (constantZeroValue)
+variable {body : Positive (Fin 1)} {alpha : Type} {Delta : List (Formula alpha)}
+attribute [local irreducible] programGraph
+
+theorem value (raw rank code : OTerm alpha)
+    (hr : Nonempty (Derivation body Delta (graph1 variableRankRaw rank raw)))
+    (hp : Nonempty (Derivation body Delta (graph2 InternalPairing.pairing code rank z))) :
+    Nonempty (Derivation body Delta (graph1 rawRankCode code raw)) :=
+  binaryValue InternalPairing.pairing variableRankRaw (InternalAcceptance.constantZero 1)
+    code rank z ![raw] hp hr (constantZeroValue ![raw])
+
+theorem recover (raw rank code : OTerm alpha)
+    (hr : Nonempty (Derivation body Delta (graph1 variableRankRaw rank raw)))
+    (hc : Nonempty (Derivation body Delta (graph1 rawRankCode code raw))) :
+    Nonempty (Derivation body Delta (graph2 InternalPairing.pairing code rank z)) :=
+  binaryRecover InternalPairing.pairing variableRankRaw (InternalAcceptance.constantZero 1)
+    code rank z ![raw] hc hr (constantZeroValue ![raw])
+
+theorem nil (raw : OTerm alpha)
+    (hc : Nonempty (Derivation body Delta (programGraph OriginalRawSyntaxTransport.nilConstructor raw Fin.elim0))) :
+    Nonempty (Derivation body Delta (graph1 rawRankCode z raw)) := by
+  have he : Nonempty (Derivation body Delta (equal z (numeral 0))) := by
+    rw [equalEqn]
+    exact ⟨refl _⟩
+  exact value raw z z (OriginalRawVariableRankLeafProof.rankNilBackward raw z hc he)
+    InternalApplicationValidityStackAppendTransitionProof.pairZero
+
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.RawRankCodeProof
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261117.OriginalRawExchangeVariableRank.RawRankCodeProof

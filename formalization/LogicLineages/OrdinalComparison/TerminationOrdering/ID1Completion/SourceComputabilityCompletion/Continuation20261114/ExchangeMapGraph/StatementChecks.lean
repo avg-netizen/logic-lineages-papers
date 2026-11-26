@@ -1,0 +1,18 @@
+module
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeMapGraph.NativeStatementChecks
+public import LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeMapGraph.InternalStatementChecks
+public meta import LogicLineages.Audit
+@[expose] public section
+namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeMapGraph.StatementChecks
+theorem exactLookup : Targets.NativeLookup := NativeStatementChecks.exactLookup
+#print axioms exactLookup
+theorem exactMap : Targets.NativeMapGraph := NativeStatementChecks.exactMap
+#print axioms exactMap
+theorem exactHit : Targets.InternalFirstHit := InternalStatementChecks.exactHit
+#print axioms exactHit
+theorem exactMiss : Targets.InternalMissTail := InternalStatementChecks.exactMiss
+#print axioms exactMiss
+theorem exactMissing : Targets.InternalMapMissing := InternalStatementChecks.exactMissing
+#print axioms exactMissing
+end LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeMapGraph.StatementChecks
+#audit_namespace LogicLineages.OrdinalComparison.TerminationOrdering.ID1Completion.SourceComputabilityCompletion.Continuation20261114.ExchangeMapGraph.StatementChecks
