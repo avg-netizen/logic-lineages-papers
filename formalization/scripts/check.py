@@ -502,8 +502,8 @@ def main() -> int:
             available=int(re.search(r'MemAvailable:\s+(\d+)',Path('/proc/meminfo').read_text()).group(1))//1024
             if available<args.min_free_mib:
                 print(f'MEMORY_GATE: {available} MiB available; require {args.min_free_mib}. No compiler launched.')
-                receipt={'requested':requested, 'outcome':'memory-gate',
-                         'available_mib':available, 'minimum_free_mib':args.min_free_mib,
+                receipt={'requested':requested, **profile, 'outcome':'memory-gate',
+                         'available_mib':available, 'calculator_objects_borrowed':not args.fresh,
                          'modules':rows}
                 (reports/'latest.json').write_text(json.dumps(receipt,indent=2)+'\n')
                 receipt_path.write_text(json.dumps(receipt,indent=2)+'\n')

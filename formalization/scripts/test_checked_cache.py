@@ -84,6 +84,26 @@ print('checked fixture ' + source.stem)
         self.assertEqual(self.run_check()[0], [])
         self.assertGreaterEqual(self.object().stat().st_mtime_ns, future)
 
+    def test_memory_gate_preserves_previously_checked_dependencies(self):
+        check = self.root / 'scripts/check.py'
+        check.write_text(check.read_text().replace(
+            "Path('/proc/meminfo').read_text()", "Path('meminfo').read_text()"))
+        meminfo = self.root / 'meminfo'
+        ample = 'MemAvailable: 3145728 kB\n'
+        meminfo.write_text(ample)
+        with (self.root / 'bin/lean').open('a') as compiler:
+            compiler.write("\nif source.stem == 'A':\n"
+                           "    Path('meminfo').write_text('MemAvailable: 1572864 kB\\n')\n")
+
+        calls, first = self.run_check('--min-free-mib', '2048', success=False)
+        self.assertEqual(first.returncode, 76, first.stdout + first.stderr)
+        self.assertEqual(calls, ['A'])
+
+        meminfo.write_text(ample)
+        calls, retry = self.run_check('--min-free-mib', '2048')
+        self.assertEqual(calls, ['B'])
+        self.assertIn('CACHE_HIT A', retry.stdout)
+
     def test_changed_source_with_preserved_timestamp_rebuilds_dependents(self):
         self.warm()
         path = self.root / 'A.lean'
