@@ -47,7 +47,7 @@ variable {B : Positive (Fin 1)} {α : Type} {Γ : List (Formula α)}
 theorem exact_OpenReplacementTape (P : Program 3) (a d out : OTerm α)
     (h : D B Γ (programGraph P out ![a,d,a])) :
     D B Γ (programGraph
-      (Program.composition P (![.projection 0,.projection 1,.projection 0] : Fin 3 → Program 2))
+      (.composition P (![.projection 0,.projection 1,.projection 0] : Fin 3 → Program 2) : Program 2)
       out ![a,d]) := by
   apply compositionValue P (![.projection 0,.projection 1,.projection 0] : Fin 3 → Program 2)
     out ![a,d] ![a,d,a] h

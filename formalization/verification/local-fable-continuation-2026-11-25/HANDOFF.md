@@ -59,22 +59,21 @@ The current register on this branch has 160 checked and 7 pending.
 ## Three Fable lanes resumed from the target plan
 
 The three retained Fable 5.2 High sessions resumed from `fba138f3c`.
-Two rounds supplied Lean drafts for the lambda case of Paper 16 arithmetic
-accessibility. Each lane started its next assignment after its return.
+Successive rounds supplied Lean drafts for the lambda case of Paper 16
+arithmetic accessibility. Each lane started its next assignment after its return.
 
 | Lane | Draft proof destination | Current proof obligation |
 | --- | --- | --- |
-| Above-depth lowering | `NumberedWindowInternalLiteralSingletonBoundOpenAboveSentenceProof` | Use the object-language existential output theorem at the existing downstream graph consumer. |
-| Lambda child | `NumberedWindowInternalLiteralSingletonLambdaOpenCasesProof` and `NumberedWindowInternalLiteralSingletonGuardedCalibrationProof` | Prove the typed numeric lambda row for the same child program at incremented depth. |
-| Positive-depth hit | `NumberedWindowInternalLiteralSingletonShiftHitAtomsOpenProof` | Install the guard-preserving free, bottom and bound replacement rows in the exact singleton beta interface. |
+| Above-depth lowering | `NumberedWindowInternalLiteralSingletonLambdaBoundAboveBetaProof` | Supply the open raw beta preservation premise for the same installed child program. |
+| Lambda child | `NumberedWindowInternalLiteralSingletonLambdaRowsNumericProof` | Compare the course-of-values table lookup with the same child program at incremented depth. |
+| Positive-depth hit | `NumberedWindowInternalLiteralSingletonShiftHitInstallationProof` | Prove the open fallback boundary when the actual syntax program rejects the replacement. |
 
-The coordinator drafted `Paper16RealizationDirectionProof`, with a closed
-beta edge and a countable rank that separates its endpoints, and
-`Paper16StructuralScopeProof`, which packages the structural laws under
-their stated hypotheses. The new proof declarations await native results.
+The coordinator's `Paper16RealizationDirectionProof` and
+`Paper16StructuralScopeProof` passed native checking with standard axioms.
+The [target plan](../paper16-remaining-targets-2026-11-25/TARGETS.md#validation)
+records the statements and receipts. The accessibility batch awaits its
+native checks under the existing free-memory floor.
 
 The serialized checker now retains completed dependency receipts across a
 low-memory stop (`a74a82d7d`). All 50 checker tests passed with the sparse
-worktree's omitted fixtures supplied from that same Git tree. The first
-direct check of the realization proof stopped after 180 seconds during
-the cached import load, with 3.45 seconds of observed compiler CPU.
+worktree's omitted fixtures supplied from that same Git tree.

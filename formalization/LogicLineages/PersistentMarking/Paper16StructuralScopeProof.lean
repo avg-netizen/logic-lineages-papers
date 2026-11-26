@@ -7,13 +7,13 @@ namespace LogicLineages.PersistentMarking.Paper16StructuralScopeProof
 open Spine NameBridge TypeSupport Grafting Paper16StructuralScopeTargets
 
 theorem exact_NamedValueSubstitution : NamedValueSubstitution := by
-  intro S E H M η q σ names prefix retained _support ordinary images typed covered
+  intro S E H M η q σ names hPrefix retained _support ordinary images typed covered
   have mapTyped : NamedMapTyped η := fun τ x => (ordinary τ x).1
   have encoded : Typed EmptyContext (encode [] q) σ :=
     BridgeTypingProof.encodeTyped [] q σ typed
   rw [GraftingProof.typedNamedSubstitutionEncoding η q σ mapTyped typed]
   exact ProtectedSpineFreeSubstitutionProof.exact_FreeSubstitution
-    S E H M (encodeMap η) EmptyContext (encode [] q) σ 0 prefix retained images encoded covered
+    S E H M (encodeMap η) EmptyContext (encode [] q) σ 0 hPrefix retained images encoded covered
 
 /-- The manuscript's structural interpretation with the fixed-point
 hypothesis and the bottom-family obstruction. -/

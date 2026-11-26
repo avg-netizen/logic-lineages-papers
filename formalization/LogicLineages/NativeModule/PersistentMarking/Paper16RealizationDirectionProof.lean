@@ -61,4 +61,6 @@ theorem exact_NotPrintedRealization : ¬ PrintedRealization := by
 #print axioms exact_PrintedDirectionCounterexample
 #print axioms exact_NotPrintedRealization
 
+end
+
 end LogicLineages.PersistentMarking.Paper16RealizationDirectionProof

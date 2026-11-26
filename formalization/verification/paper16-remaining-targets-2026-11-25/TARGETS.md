@@ -148,6 +148,23 @@ The current comparison register stays at **160 checked / 7 pending**.
 `formalization/build-reports/`). The run used the new target file and
 148 byte-identical dependency sources at the path of the existing
 checked cache, with the same Lean toolchain and package manifest.
-The other new modules still require their native declaration checks.
-The printed realization direction and the independently defined cited
-ordinal require source decisions before numbered adoption.
+The other new target modules still require their native declaration checks.
+
+- `Paper16StructuralScopeProof.exact_StructuralInterpretationWithBoundary`
+  passed native checking. It assembles the named and bound substitution
+  interfaces, all three fixed applications and the bottom-family witness.
+  Receipt `1795672039102686067-2` records the exact proof source hash.
+  Comparing the finite covered syntax hypotheses to the printed paragraph
+  remains the scope check for numbered adoption.
+- `Paper16RealizationDirectionProof.exact_PrintedDirectionCounterexample`
+  and `exact_NotPrintedRealization` passed native checking in receipt
+  `1795671863201769769-10`. The countable rank of the closed beta source
+  realizes a value that its strict reduct fails to realize. The printed
+  closure row remains pending a wording decision. `BackwardRealization`
+  is the direction used by the manuscript's beta argument.
+
+The two new proof modules were checked with a source-matched import cache
+and the pinned toolchain. Their axiom audits report `propext`,
+`Classical.choice` and `Quot.sound`. The receipts and logs are in
+`formalization/build-reports/`. The cited ordinal still requires an
+independent source identification.
