@@ -1,0 +1,32 @@
+# Root ledger — local Fable-trio round, 27 November 2026 (times UTC−6)
+
+- 03:40 Fetched in the older checkout; found the newer worktree `logic-lineages-papers-formalization-2026-11-25`
+  (`formalization/paper16-continuation-2026-11-25` at `7c416c4be`, 67 commits past round 6, plus the Codex
+  coordinator's uncommitted work of 26 November). Register there 161 checked / 6 pending. Round home created
+  here; no Git operation, coordinator files untouched.
+- 04:05 Build cache of this worktree had no objects for the round-6 ordinal modules. Warm gate started on
+  `ActualCalibrationThreeLevelProof`, `ActualCalibrationChecks`, `ActualCollapseMainProof`,
+  `Paper16RemainingOrdinalTargets` (log `logs/warm-ordinal-1.txt`).
+- 04:10 Fable A (ordinal calibration: T4 `PsiPowerLevel`, T5 `CalibrationThree`) and Fable B (internal
+  accessibility: one of the three `CloseAllTerms` premises) launched as Fable 5.2 high subagents.
+- 04:20 Root lane target frozen: `Paper16OrdinalAssemblyTargets`
+  (sha256 `9ff0897575dc18d555322f4cfd562f41bb9f77bda5fd6d2ec45750423acf7818`), source map
+  `root/P16-ORDINAL-ASSEMBLY-SOURCE-MAP.md`. Proof drafted in `Paper16OrdinalAssemblyProof` (ten theorems,
+  two of them existing targets of `Paper16RemainingOrdinalTargets`: `OrdinalSemanticsExistence`,
+  `CofinalityAtActualEndpoint`). Not yet gated.
+- 04:50 Second root target frozen: `Paper16LeastNormBoundTargets`
+  (sha256 `7b0b5703d61a604556627e04250f14d867c6c4a5de48d6b060e2e75e3c70a411`), source map
+  `root/P16-LEAST-NORM-BOUND-SOURCE-MAP.md`. Proofs drafted in `Paper16LeastNormBoundProof` (stage
+  exhaustion along countable ordinals, soundness in stage form, `NormTheorem ω₁`, existence and uniqueness of
+  the least norm bound) and `Paper16LeastNormBoundHeightProof` (upper bound at it; heights between the
+  collapse endpoint and it). Not yet gated. First draft of existence took a supremum over all positive
+  bodies; that type lives in `Type 1`, so the bound is taken at `ω₁` uniformly instead.
+- 07:22 Warm gate done: rc 0, 697 modules compiled, receipt `1795773062111927905-914623`. It includes the first
+  native check of `Paper16RemainingOrdinalTargets` (TARGETS.md listed it as still requiring one).
+- 07:33 Gate `1795773740486897347-921184`: `Paper16OrdinalAssemblyTargets` and `Paper16OrdinalAssemblyProof`
+  **PASS** (ten theorems, standard axioms), `Paper16LeastNormBoundTargets` PASS; `Paper16LeastNormBoundProof`
+  failed on one name (`Ordinal.isSuccLimit_omega`; the lemma is `Cardinal.isSuccLimit_omega`). Failed draft
+  kept in `drafts/root/`.
+- 07:34 Gate `1795773771088627501-921381`: `Paper16LeastNormBoundProof` (seven theorems) and
+  `Paper16LeastNormBoundHeightProof` (three theorems) **PASS**, standard axioms. Evidence:
+  `evidence/P16-ORDINAL-ASSEMBLY-EVIDENCE.json`, `evidence/P16-LEAST-NORM-BOUND-EVIDENCE.json`.

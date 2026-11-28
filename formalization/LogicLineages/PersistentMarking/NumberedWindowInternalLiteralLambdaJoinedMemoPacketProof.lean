@@ -146,19 +146,20 @@ open NumberedWindowInternalLiteralBiAuxBaseWindowLiftProof (joinedBiAuxBase)
 open NumberedWindowInternalLiteralJoinedAuxiliaryWindowProof
 open NumberedWindowInternalLiteralStrictMeasuredMemoTransportProof (exact_OpenBiAuxTypeEvidence)
 
+open NumberedWindowInternalSparseTypedRawTargets (ActualRawSyntax)
 open NumberedWindowInternalLiteralBetaLeafProof (InstanceFit withBetaLeaf exact_LiteralSingletonInstance)
 open NumberedWindowInternalLiteralBetaLeafNumericProof (exact_LiteralBetaLeafFit)
 open NumberedWindowInternalLiteralAuxRootLeafFitProof (exact_AuxiliaryLeafFit)
 open NumberedWindowInternalLiteralLambdaFrameProof (lambdaFallback)
 open NumberedWindowInternalLiteralLambdaFrameNumericProof (exact_LiteralLambdaFallback)
 
-/-- The original beta root and contextual lambda callback are now
-both literal, with all originating numeric answers recalibrated.
-Neither descends under a binder at a fabricated context. -/
-theorem exact_ConcreteLambdaJoinedMemoPacket (xs : Entries) (s : Settings) (P : List ProbeTy)
+/-- Install a beta instance built from the calibrated syntax program selected for the packet. -/
+theorem exact_ConcreteLambdaJoinedMemoPacketAt (xs : Entries) (s : Settings) (P : List ProbeTy)
     (valid : ValidWindow s P) (seeds : WindowSeedsCovered s)
     (symmetric : HeadPairsSymmetric s.equivalentHeads) (grammar : GrammarTypeInclusion s)
-    (included : ∀ ty ∈ finiteCodes P, ty ∈ s.window.1) :
+    (included : ∀ ty ∈ finiteCodes P, ty ∈ s.window.1)
+    (mk : Program 1 → Program 2)
+    (mkFit : ∀ Vs : Program 1, ActualRawSyntax Vs → InstanceFit (mk Vs)) :
     ∃ (cv tv : Program 1) (U : Program 2) (leaves : Nat → Program 3) (other : Program 3)
       (baseX base : Program 2) (T V baseM : Program 1) (placed : Inputs),
       let Tg := selectedBiAuxType s T tv
@@ -171,6 +172,7 @@ theorem exact_ConcreteLambdaJoinedMemoPacket (xs : Entries) (s : Settings) (P : 
       let E := recursiveTypedMemo Base
       let L := guardedLeast (headerLeast (fullAuxiliaryDecorator (packedLeastOn C E s)))
       let i := finiteScalar (addressScalar cv tv W L) (finiteCodes P)
+      ActualRawSyntax Va ∧ U = mk Va ∧
       InstanceFit U ∧ Packet xs s P i cv tv (guardedRaw raw) L (applicationCore L) placed ∧
       placed.applicationGuard = applicationGuard i L ∧
       CanReverse Base ∧ WindowEndpoints W E ∧ Preserves E (packedLeastOn C E s) ∧
@@ -188,10 +190,10 @@ theorem exact_ConcreteLambdaJoinedMemoPacket (xs : Entries) (s : Settings) (P : 
   obtain ⟨oldOtherLeaf,oldOtherFit⟩ := exact_ConcreteFallback
   let other := lambdaFallback oldOtherLeaf
   have otherFit := exact_LiteralLambdaFallback oldOtherLeaf oldOtherFit
-  obtain ⟨U,uFit⟩ := exact_LiteralSingletonInstance
   have calls := orig.physical.2.2.1
   let Tg := selectedBiAuxType s T tv
   let Va := unitAuxSyntax V tv
+  let U := mk Va
   let leaves := leafAtAuxiliary oldLeaf
   let leaf := withBetaLeaf Va U leaves
   let M := chosenMeasure baseM
@@ -211,6 +213,8 @@ theorem exact_ConcreteLambdaJoinedMemoPacket (xs : Entries) (s : Settings) (P : 
   let d := dCore oldI r permutation
   have typeFit := exact_PhysicalRankTypeGuard s T tv grammar TFit calls.2.1
   have rawSyntaxFit := exact_LiteralUnitAuxSyntax V tv vFit calls.2.1
+  have vaFit : ActualRawSyntax Va := rawSyntaxFit
+  have uFit : InstanceFit U := mkFit Va vaFit
   have selectedMeasureFit := exact_PhysicalAuxMeasure baseM chosenCombine mFit exact_ChosenAuxMeasureCombine
   have coverFit := exact_FactoredCoverCalibration Va M selectedGrammarOption rawSyntaxFit selectedMeasureFit
     exact_SelectedGrammarOption
@@ -265,7 +269,7 @@ theorem exact_ConcreteLambdaJoinedMemoPacket (xs : Entries) (s : Settings) (P : 
     exact_OpenTypedMemoLeastLaws exact_OriginalPhysicalCountLength exact_OriginalPhysicalCountStrict
       C W s Base baseGuards baseReverse baseSame baseCovered baseEnds
   have guards := exact_OpenRankTypeGuards s P T tv tv grammar TFit calls.2.1 calls.2.1 included
-  refine ⟨cv,tv,U,leaves,oldOtherLeaf,baseX,base,T,V,baseM,frontendInputs i L v₀,uFit,
+  refine ⟨cv,tv,U,leaves,oldOtherLeaf,baseX,base,T,V,baseM,frontendInputs i L v₀,vaFit,rfl,uFit,
     exact_ReinstallLiteralAtomicRawPacket xs s P valid i (jRaw oldI) cv tv d (applicationCore L)
       raw L (frontendInputs i L v₀) rebuilt,rfl,baseReverse,ends,coherent,selected,guards,?_⟩
   intro c α Γ f u y data B accepted
@@ -276,5 +280,40 @@ theorem exact_ConcreteLambdaJoinedMemoPacket (xs : Entries) (s : Settings) (P : 
   exact exact_OpenEnrichedApplicationClosure s P valid.2.1 cv tv Tg C W E forms
     fullAuxiliaryDecorator exact_FullAuxiliaryDecoratorOpen calls.2.1 typeFit included ends coherent raw c f u y accepted
 
+/-- The original beta root and contextual lambda callback are now
+both literal, with all originating numeric answers recalibrated.
+Neither descends under a binder at a fabricated context. -/
+theorem exact_ConcreteLambdaJoinedMemoPacket (xs : Entries) (s : Settings) (P : List ProbeTy)
+    (valid : ValidWindow s P) (seeds : WindowSeedsCovered s)
+    (symmetric : HeadPairsSymmetric s.equivalentHeads) (grammar : GrammarTypeInclusion s)
+    (included : ∀ ty ∈ finiteCodes P, ty ∈ s.window.1) :
+    ∃ (cv tv : Program 1) (U : Program 2) (leaves : Nat → Program 3) (other : Program 3)
+      (baseX base : Program 2) (T V baseM : Program 1) (placed : Inputs),
+      let Tg := selectedBiAuxType s T tv
+      let Va := unitAuxSyntax V tv
+      let leaf := withBetaLeaf Va U leaves
+      let C := measuredStrictCover V tv baseM
+      let W := joinedAuxiliaryWindow s base Tg V tv baseM
+      let raw := strictDualRaw C s leaf (lambdaFallback other) base base Tg Va Tg
+      let Base := joinedBiAuxBase s baseX base Tg V tv baseM
+      let E := recursiveTypedMemo Base
+      let L := guardedLeast (headerLeast (fullAuxiliaryDecorator (packedLeastOn C E s)))
+      let i := finiteScalar (addressScalar cv tv W L) (finiteCodes P)
+      InstanceFit U ∧ Packet xs s P i cv tv (guardedRaw raw) L (applicationCore L) placed ∧
+      placed.applicationGuard = applicationGuard i L ∧
+      CanReverse Base ∧ WindowEndpoints W E ∧ Preserves E (packedLeastOn C E s) ∧
+      MemoSelectedReports C s Base ∧ OpenRankTypeGuards P Tg tv ∧
+      (∀ (c : Nat) (α : Type) (Γ : List (Formula α)) (f u y : OTerm α),
+        let data := S i cv tv (rawWithTarget i cv tv (guardedRaw raw) L) L
+        let B := sourceBody data c
+        D B Γ (programGraph (applicationGuard i L) (suc z) ![f,u,y]) →
+        D B Γ (carrier data false c y) ∧ D B Γ (atom neutralSource y)) := by
+  obtain ⟨U₀,uFit⟩ := exact_LiteralSingletonInstance
+  obtain ⟨cv,tv,U,leaves,other,baseX,base,T,V,baseM,placed,_,_,rest⟩ :=
+    exact_ConcreteLambdaJoinedMemoPacketAt xs s P valid seeds symmetric grammar included
+      (fun _ => U₀) (fun _ _ => uFit)
+  exact ⟨cv,tv,U,leaves,other,baseX,base,T,V,baseM,placed,rest⟩
+
+#print axioms exact_ConcreteLambdaJoinedMemoPacketAt
 #print axioms exact_ConcreteLambdaJoinedMemoPacket
 end LogicLineages.PersistentMarking.NumberedWindowInternalLiteralLambdaJoinedMemoPacketProof

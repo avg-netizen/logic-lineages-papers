@@ -1,0 +1,37 @@
+# Paper 16 lambda prefix handoff
+
+The staged joined packet and rules carry the actual syntax program and the identity `U = mk Va` of the installed beta instance. The original exported theorem signatures are preserved. The closed literal constructor calibrates the depth program and its zero-depth instance over the same `Va`.
+
+## Exact bounded descent
+
+The new descent proof starts with a literal lambda on `joinedAuxiliaryWindow s (precedingBase s (lambdaLexicalBase s seed T)) G V TV baseM`. It works with the outer guard `G` chosen by the packet. The strict row on the lambda delegates to the decorated base, which returns a child report in `numberedTypeWindow s seed T` and the parent arrow equation. When the lambda and auxiliary selectors reject the child, its earlier window and the actual coverage and unit syntax reports construct both halves of the **same** joined window on the pushed context. The proof keeps the child raw code and type from the earlier report.
+
+With both pushed window reports at a contextual raw step, `LambdaParts` and the parent arrow equation construct the first tick of the exact prefix program. When the child's prefix selector is zero, its own tape accepts at any remaining fuel and the original parent witness gives an accepting `prefixOwn` graph. The one-hop projection also preserves the actual endpoints, hop certificate, target gate and least calls from the prefixed checker to the unprefixed checker in the same derivation body.
+
+## Observed lambda callback
+
+`NumberedWindowInternalLiteralLambdaObservedBaseDefinitions` adds a guard to the lambda branch of the final base callback. It evaluates `conjunction contextPresent (ownSeed C s)` on the tape `[rawCons dom ctx, 0, q]` and evaluates the installed `Va` on `q`. On successful literal lambda input, `exact_OpenObservedLambdaBase` extracts both graph reports and the original decorated base graph at the same result. `exact_OpenObservedBaseOfNonLambda` introduces the wrapped graph from the original base result and the zero header graph. Both theorems are in `NumberedWindowInternalLiteralLambdaObservedBaseOpenProof`.
+
+`NumberedWindowInternalLiteralLambdaObservedBaseNumericProof.exact_MeasuredObservedLambdaBaseFit` constructs the calibrated callback using the original `GrammarTypeInclusion s` and `WindowSeedsCovered s` and the packet's calibrated `V`, `TV`, and `baseM`. Its programs are `Va = unitAuxSyntax V TV` and `C = selectedCover Va (chosenMeasure baseM)`, the expansion of the packet's `measuredStrictCover V TV baseM`. A positive literal lambda supplies the original packed child's admission through `exact_CoverLambdaPackedLexicalProvenance`. Admission pays the coverage check at that child and its actual syntax bit. The original result at every input is preserved. The numeric proof reuses `exact_LambdaLexicalFieldReads` and `exact_CoveredMemoCoverageAtPacked`. The existing enclosing proofs keep their statements.
+
+The open and numeric roots ran separately in the serialized Lean gate. The numeric root passed in receipt `1795738062396655005-10`, and both numeric theorems list only `propext`, `Classical.choice`, and `Quot.sound`. After repairing a `Nonempty` elimination into a derivation type, the open root passed in receipt `1795740860915232051-10` (1,374 dependency rows). Both open theorems list the same three standard axioms. This validates the observed callback and its reports; packet selection and same-window child composition remain below.
+
+## Open dependencies
+
+- The current packet selects an opaque `base` through `exact_WindowPrimitiveLeaves`. Both halves of its joined window ultimately call that base at a literal lambda. The supplied-base seam is the `base`, `T` and calibration selection in `exact_ConcreteLambdaJoinedMemoPacketAt`. A decorated packet must thread the selected base through the raw checker, joined window, memo, least and scalar from the start. The open joined rules already quantify over that concrete base.
+- The observed callback can be selected in `exact_ConcreteLambdaJoinedMemoPacketAt` after binding `tv`, `V` and `baseM`, before constructing the joined window, raw checker, memo, least or scalar. Keep the chosen `seed` and the exact callback identity in the selected packet witness. At the parent strict row, `baseValueAtNonAuxWindow` exposes the observed base graph. `exact_OpenObservedLambdaBase` supplies the two child reports and the original decorated graph needed for lexical descent. For a child with both selectors zero, forward the original child graph, wrap it with `exact_OpenObservedBaseOfNonLambda`, and use `joinedNonAux` to construct the child window on the same selected `Q`. The packet selection and this same-window composition are pending.
+- Promotion for auxiliary or nested lambda children and recurrence beyond a stopped prefix child remain open. An unconditional child-window step on the current packet requires new physical evidence. Its numeric window calibration alone supplies no open graph at the pushed context.
+
+The cover and syntax audit found two nearby contracts with different inputs or outputs. `exact_OpenCoverLambdaNonRecursiveOwnScratch` consumes the `ParentRow` of `lexicalFittedPrograms` and concludes membership of the **parent lambda** in the supplied scratch vertices. The child premise of the joined descent asks for `coverageReport C s (rawCons dom ctx) child`. It requires the actual cover calculation at the child's own seed, with `C = selectedCover (unitAuxSyntax V TV) (chosenMeasure baseM)`. `exact_OpenCoveredMemoObservations` gives that report and the syntax hit once the covered child window is already available. The selected syntax program `normalize (auxSyntax V TV)` has literal auxiliary descent. The saved lambda syntax descent uses `refinedSyntax V TV`. `exact_OpenAcceptedBetaSingletonLambdaChildGuards` gives a hit for the installed syntax program when the actual beta graph succeeds on the lambda body. A raw contextual witness supplies the body `ownRun` and carries no such beta graph. This is the exact boundary for the manuscript's function-side body reduct and substitution transport. [Paper 16 ordinal proof](../../../../16-persistent-marking-termination-ordering/sections/ordinals.tex#L129)
+
+The child-window promotion uses rejection of `header 2 2`, which checks both tag and arity. Prefix stopping uses the zero graph of `isLambdaPrefix`, which checks the source head and witness tag. A proved non-lambda head supplies prefix stopping through `exact_OpenPrefixNoLambdaHead`. Keep the stopping premise when only `header 2 2` has been rejected.
+
+## Native gate roots
+
+The following modules are under `LogicLineages.PersistentMarking`. Source-level import and placeholder checks passed. Native elaboration and axiom checks for these drafts remain pending.
+
+- `NumberedWindowInternalLiteralJoinedLambdaBaseFitProof` exports `exact_JoinedLambdaDecoratedBaseFit`.
+- `NumberedWindowInternalLiteralJoinedLambdaChildWindowProof` exports `exact_OpenJoinedLambdaChildEarlier` and `exact_OpenJoinedLambdaNonRecursiveDescent`.
+- `NumberedWindowInternalLiteralLambdaPrefixParentStopProof` exports `exact_OpenContextualLambdaPrefixAfterStop`.
+- `NumberedWindowInternalLiteralLambdaPrefixContextIntroProof` exports `exact_OpenContextualLambdaPrefixTick` and `exact_OpenContextualLambdaPrefixAtStoppedChild`.
+- `NumberedWindowInternalLiteralLambdaPrefixHopProjectionProof` exports `exact_OpenLambdaPrefixOneHopProjection` and the forward and backward report lemmas. The backward lemma uses the actual non-lambda header.

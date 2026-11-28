@@ -1,0 +1,16 @@
+{
+  "key": "WINDOW-WITH-LEAST (continuation item B)",
+  "module_prefix": "LogicLineages.NativeModule.PersistentMarking.Paper16AccessibilityMilestone",
+  "receipt": "1795778392935152296-943657",
+  "frozen_targets": [{"module": "WindowWithLeastTargetsV2", "source_sha256": "72907401da4f9c54309bd2683bc965634c2daa35bf4a13e0fd2dc28f624caac7", "defs": ["LambdaWindowWithLeast", "LiteralWindowWithLeast"]}],
+  "proof_modules": [
+    {"module": "LambdaRulesWithLeastV2", "source_sha256": "d9816a4af060f960bdeed0c330fabe630775c971df2d9800ea4a8368ab20b41d", "theorems": ["exact_ConcreteLambdaJoinedRulesWithLeastAt"], "note": "coordinator's exact_ConcreteLambdaJoinedRulesAt with the extra conjunct MemoSelectedReports C s Base; text generated from the original module, which is untouched"},
+    {"module": "WindowWithLeastProofV2", "source_sha256": "3e4dce77834612db6298dcdb45069f87053eab3609db0ffdff60b0f5acd121a5", "theorems": ["exact_LambdaWindowWithLeast : LambdaWindowWithLeast", "exact_LiteralWindowWithLeast : LiteralWindowWithLeast"]}
+  ],
+  "print_axioms": [
+    "'…LambdaRulesWithLeastV2.exact_ConcreteLambdaJoinedRulesWithLeastAt' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'…WindowWithLeastProofV2.exact_LambdaWindowWithLeast' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'…WindowWithLeastProofV2.exact_LiteralWindowWithLeast' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "not_claimed": "K1, K2, SeedMemberLeast, TypedCarrierComputability. These are restatements that additionally export the least program's code and MemoSelectedReports."
+}

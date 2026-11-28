@@ -1,0 +1,32 @@
+{
+  "key": "ARROW-TYPING",
+  "paper_statement": "Paper 16 lem:arithmetic-accessibility (ordinals.tex:79); TARGETS.md internal accessibility checkpoint 5 (CarrierTypingCases at arrow types) and the CloseAllTerms assembly",
+  "source_map": "ARROW-TYPING-SOURCE-MAP.md",
+  "module_prefix": "LogicLineages.NativeModule.PersistentMarking.",
+  "frozen_targets": [
+    {"module": "Paper16AccessibilityMilestoneArrowTypingTargetsV2", "source_sha256": "dfd27747d4e736c0e3c310f8bc7b3d6a1a750cbea04a62325de1890070569037", "receipt": "1795774234561241622-924414"},
+    {"module": "Paper16AccessibilityMilestoneArrowTypingInstallTargetsV2", "source_sha256": "465712db58cb67def3e277bec4a39bec5a1413c88c890124e1e22fbbedfc26c0", "receipt": "1795774440893838995-925628 (this module's row passed; the receipt as a whole failed on the proof module) and cache-hit in 1795774692720129882-927148"},
+    {"module": "Paper16AccessibilityMilestoneArrowTypingAssemblyTargetsV2", "source_sha256": "2891fda3ce1bba9cb808cf26ccfea9f7781383dd99ed9256fe5be4663d9067eb", "receipt": "1795774692720129882-927148"}
+  ],
+  "proof_modules": [
+    {"module": "Paper16AccessibilityMilestoneArrowTypingProofV2", "source_sha256": "0c34b154302378d54e3f0f8133de573c59a521c337478c2150be3866b2507208", "receipt": "1795774234561241622-924414",
+     "theorems": {"exact_StoredTypingFromReports": "StoredTypingFromReports A c", "exact_TypingCasesFromReports": "TypingCasesFromReports A c"}},
+    {"module": "Paper16AccessibilityMilestoneArrowTypingInstallProofV2", "source_sha256": "31752c63434e89e56784c4b11c989753caeec6753750079c7651e3a7a06f765f", "receipt": "1795774692720129882-927148",
+     "theorems": {"exact_StackedLiteralProbeReports": "StackedLiteralProbeReports"}},
+    {"module": "Paper16AccessibilityMilestoneArrowTypingAssemblyProofV2", "source_sha256": "68a8cd09cb0065b95847a0479c997e1e943871b98f92392a73a68a7e795dd868", "receipt": "1795774692720129882-927148",
+     "theorems": {"exact_WindowReductionFromJoinedFacts": "WindowReductionFromJoinedFacts"}}
+  ],
+  "print_axioms": [
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingProofV2.exact_StoredTypingFromReports' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingProofV2.exact_TypingCasesFromReports' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingInstallProofV2.exact_StackedLiteralProbeReports' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingAssemblyProofV2.exact_WindowReductionFromJoinedFacts' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "dependencies_gated_this_round_by_root": [
+    "Paper16AccessibilityMilestoneArrowTypedIntroductionV2 (receipt 1795773831011891982-921759)"
+  ],
+  "failed_attempts": [
+    {"receipt": "1795774440893838995-925628", "module": "Paper16AccessibilityMilestoneArrowTypingInstallProofV2", "reason": "Nonempty eliminated inside a Type-valued have; repaired by moving the elimination to the Prop-valued goal", "kept": "../drafts/fableB/Paper16AccessibilityMilestoneArrowTypingInstallProofV2.attempt1.lean.txt"}
+  ],
+  "not_claimed": "FreshApplicationTotal (the accepted application at the selected fresh address with a codomain-typed result) for any window; TypedCarrierComputability; ApplicationArithmetic.matchEdge; InstalledArithmeticAccessibility. See FRESH-APPLICATION-REPORT.md."
+}

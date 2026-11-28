@@ -1,0 +1,342 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.ActualCalibrationUniformFamilyProof
+public import LogicLineages.NativeModule.PersistentMarking.ActualCalibrationLevelsProof
+
+@[expose] public section
+
+/-! Good objects at every type: environment calculus for `appDown`, closure under application,
+orbits (`orbitGood`), the unfolding `appDown (m+1) B_m xs = fix (spineValue m xs)`, and
+`towerGood`: every `B_m` is good. -/
+
+namespace LogicLineages.PersistentMarking.ActualCalibrationUniform
+open Ordinal Cardinal ActualOmegaTower ConditionalTowerCofinality OrdinalRealizationTargets OrdinalNativeOrbitProof
+open OrdinalNativeIterationTargets OrdinalArithmeticOrbitTargets OrdinalOmegaOrbitTargets
+open NativeTowerTargets NativeTowerSequenceTargets ActualCollapse ActualCalibration ActualCalibrationThree
+open ActualCalibrationStep
+open scoped Ordinal
+
+/-! Environments. -/
+
+theorem appDown_congr : ∀ (k : Nat) (v : Value (tier (k + 1))) (xs ys : Env),
+    (∀ j, 1 ≤ j → j ≤ k → xs j = ys j) → appDown k v xs = appDown k v ys := by
+  intro k
+  induction k with
+  | zero =>
+    intro v xs ys _
+    rfl
+  | succ k ih =>
+    intro v xs ys h
+    show appDown k (v (xs (k + 1))) xs = appDown k (v (ys (k + 1))) ys
+    rw [h (k + 1) (by omega) le_rfl]
+    exact ih _ xs ys (fun j h1 hj => h j h1 (by omega))
+
+theorem appDown_update (k : Nat) (F : Value (tier (k + 2))) (G : Value (tier (k + 1))) (xs : Env) :
+    appDown (k + 1) F (Function.update xs (k + 1) G) = appDown k (F G) xs := by
+  show appDown k (F (Function.update xs (k + 1) G (k + 1))) (Function.update xs (k + 1) G) =
+    appDown k (F G) xs
+  rw [Function.update_self]
+  exact appDown_congr k (F G) (Function.update xs (k + 1) G) xs
+    (fun j _ hj => Function.update_of_ne (by omega) G xs)
+
+theorem semDown_appDown : ∀ (m : Nat) (v : Value (tier (m + 1))) (xs : Env),
+    semDown m v xs = appDown m v xs zeroValue := by
+  intro m
+  induction m with
+  | zero =>
+    intro v xs
+    rfl
+  | succ m ih =>
+    intro v xs
+    exact ih (v (xs (m + 1))) xs
+
+/-- A pointwise supremum at type `A_{k+1}` is a pointwise supremum after applying down. -/
+theorem appDown_sup {ι : Type 1} : ∀ (k : Nat) (F : ι → Value (tier (k + 1)))
+    (v : Value (tier (k + 1))) (xs : Env), PointwiseSupremum (tier (k + 1)) F v →
+      ∀ x : CountableOrdinal, (appDown k v xs x).val = ⨆ i, (appDown k (F i) xs x).val := by
+  intro k
+  induction k with
+  | zero =>
+    intro F v xs h x
+    have h' : ∀ x : Value (tier 0), PointwiseSupremum (tier 0) (fun i => F i x) (v x) := h
+    exact h' x
+  | succ k ih =>
+    intro F v xs h
+    have h' : ∀ y : Value (tier (k + 1)),
+        PointwiseSupremum (tier (k + 1)) (fun i => F i y) (v y) := h
+    exact ih (fun i => F i (xs (k + 1))) (v (xs (k + 1))) xs (h' (xs (k + 1)))
+
+section
+variable {Z : CountableOrdinal} {s : CountableOrdinal → CountableOrdinal}
+  {add mul : CountableOrdinal → CountableOrdinal → CountableOrdinal}
+  {w one : CountableOrdinal} {pow : CountableOrdinal → CountableOrdinal}
+  {fix : (CountableOrdinal → CountableOrdinal) → CountableOrdinal → CountableOrdinal}
+
+theorem goodEnv_congr : ∀ (k : Nat) (xs ys : Env), (∀ j, 1 ≤ j → j ≤ k → xs j = ys j) →
+    GoodEnv fix pow w k xs → GoodEnv fix pow w k ys := by
+  intro k
+  induction k with
+  | zero =>
+    intro xs ys _ _
+    exact trivial
+  | succ k ih =>
+    intro xs ys h hx
+    have hx' : GoodEnv fix pow w k xs ∧ GoodAt fix pow w k (GoodEnv fix pow w k) (xs (k + 1)) := hx
+    have e := h (k + 1) (by omega) le_rfl
+    rw [e] at hx'
+    show GoodEnv fix pow w k ys ∧ GoodAt fix pow w k (GoodEnv fix pow w k) (ys (k + 1))
+    exact ⟨ih xs ys (fun j h1 hj => h j h1 (by omega)) hx'.1, hx'.2⟩
+
+theorem goodEnv_update (k : Nat) (xs : Env) (G : Value (tier (k + 1)))
+    (hxs : GoodEnv fix pow w k xs) (hG : GoodF fix pow w k G) :
+    GoodEnv fix pow w (k + 1) (Function.update xs (k + 1) G) := by
+  show GoodEnv fix pow w k (Function.update xs (k + 1) G) ∧
+    GoodAt fix pow w k (GoodEnv fix pow w k) (Function.update xs (k + 1) G (k + 1))
+  rw [Function.update_self]
+  exact ⟨goodEnv_congr k xs (Function.update xs (k + 1) G)
+    (fun j _ hj => (Function.update_of_ne (by omega) G xs).symm) hxs, hG⟩
+
+theorem goodEnv_le : ∀ (k j : Nat) (xs : Env), j ≤ k → GoodEnv fix pow w k xs →
+    GoodEnv fix pow w j xs := by
+  intro k
+  induction k with
+  | zero =>
+    intro j xs hj h
+    have hj0 : j = 0 := by omega
+    rw [hj0]
+    exact h
+  | succ k ih =>
+    intro j xs hj h
+    have h' : GoodEnv fix pow w k xs ∧ GoodAt fix pow w k (GoodEnv fix pow w k) (xs (k + 1)) := h
+    by_cases hjk : j = k + 1
+    · rw [hjk]
+      exact h
+    · exact ih j xs (by omega) h'.1
+
+/-- Applying a good `Ψ : A_{k+2}` to a good `G : A_{k+1}` and then down a good environment. -/
+theorem good_app (k : Nat) (Ψ : Value (tier (k + 2))) (G : Value (tier (k + 1))) (xs : Env)
+    (hΨ : GoodF fix pow w (k + 1) Ψ) (hG : GoodF fix pow w k G)
+    (hxs : GoodEnv fix pow w k xs) :
+    GoodFn fix pow w (appDown k (Ψ G) xs) ∧
+    ∀ x : CountableOrdinal,
+      (towerValue fix 0 (appDown k G xs) x).val ≤ (appDown k (Ψ G) xs x).val := by
+  obtain ⟨g, d⟩ := hΨ (Function.update xs (k + 1) G) (goodEnv_update k xs G hxs hG)
+  have d' : ∀ x : CountableOrdinal,
+      (towerValue fix 0 (appDown k (Function.update xs (k + 1) G (k + 1))
+        (Function.update xs (k + 1) G)) x).val ≤
+        (appDown (k + 1) Ψ (Function.update xs (k + 1) G) x).val := d
+  rw [Function.update_self, appDown_update,
+    appDown_congr k G (Function.update xs (k + 1) G) xs
+      (fun j _ hj => Function.update_of_ne (by omega) G xs)] at d'
+  rw [appDown_update] at g
+  exact ⟨g, d'⟩
+
+theorem domClause_mono (k : Nat) (F F' : Value (tier (k + 1))) (xs : Env)
+    (h : ∀ x : CountableOrdinal, (appDown k F xs x).val ≤ (appDown k F' xs x).val)
+    (d : domClause fix k F xs) : domClause fix k F' xs := by
+  cases k with
+  | zero => exact trivial
+  | succ k =>
+    have d' : ∀ x : CountableOrdinal,
+        (towerValue fix 0 (appDown k (xs (k + 1)) xs) x).val ≤ (appDown (k + 1) F xs x).val := d
+    show ∀ x : CountableOrdinal,
+      (towerValue fix 0 (appDown k (xs (k + 1)) xs) x).val ≤ (appDown (k + 1) F' xs x).val
+    exact fun x => (d' x).trans (h x)
+
+/-- Good objects are closed under application. -/
+theorem goodF_app (h1 : OrdinalArithmeticEquations Z s add mul)
+    (h2 : OmegaArithmeticEquations Z s mul w one pow fix)
+    (k : Nat) (F : Value (tier (k + 2))) (G : Value (tier (k + 1)))
+    (hF : GoodF fix pow w (k + 1) F) (hG : GoodF fix pow w k G) : GoodF fix pow w k (F G) := by
+  show ∀ xs : Env, GoodEnv fix pow w k xs →
+    GoodFn fix pow w (appDown k (F G) xs) ∧ domClause fix k (F G) xs
+  intro xs hxs
+  obtain ⟨g, d⟩ := good_app k F G xs hF hG hxs
+  obtain ⟨gG, dG⟩ := hG xs hxs
+  refine ⟨g, domClause_mono k G (F G) xs (fun x => ?_) dG⟩
+  exact ((b0_monoInfl h1 h2 (appDown k G xs) gG.1).2 x).trans (d x)
+
+/-- A pointwise supremum of good functions is good. -/
+theorem goodFn_sup (h1 : OrdinalArithmeticEquations Z s add mul)
+    (h2 : OmegaArithmeticEquations Z s mul w one pow fix) {ι : Type 1} [Nonempty ι]
+    (Ks : ι → CountableOrdinal → CountableOrdinal) (Kl : CountableOrdinal → CountableOrdinal)
+    (hK : ∀ i, GoodFn fix pow w (Ks i))
+    (hsup : ∀ x : CountableOrdinal, (Kl x).val = ⨆ i, (Ks i x).val) : GoodFn fix pow w Kl := by
+  have bdd : ∀ x : CountableOrdinal, BddAbove (Set.range (fun i : ι => (Ks i x).val)) :=
+    fun x => bddAbove_orbit .base id (fun i : ι => Ks i x)
+  have stage : ∀ (i : ι) (x : CountableOrdinal), (Ks i x).val ≤ (Kl x).val := by
+    intro i x
+    rw [hsup x]
+    exact le_ciSup (bdd x) i
+  let i0 : ι := Classical.arbitrary ι
+  have mono : ∀ x y : CountableOrdinal, x.val ≤ y.val → (Kl x).val ≤ (Kl y).val := by
+    intro x y hxy
+    rw [hsup x]
+    exact ciSup_le' (fun i => ((hK i).1.1 x y hxy).trans (stage i y))
+  have infl : ∀ x : CountableOrdinal, x.val < (Kl x).val :=
+    fun x => lt_of_lt_of_le ((hK i0).1.2 x) (stage i0 x)
+  refine ⟨⟨mono, infl⟩, fun y => ((hK i0).2.1 y).trans (stage i0 y), fun x hx => ?_⟩
+  refine critLim h1 h2 (Kl x) (lt_of_le_of_lt (ozl _) (infl x)) (fun y hy => ?_)
+  have hy' := hy
+  rw [hsup x] at hy'
+  obtain ⟨i, hi⟩ := (lt_ciSup_iff (bdd x)).1 hy'
+  exact ⟨Ks i x, (hK i).2.2 x hx, hi, stage i x⟩
+
+end
+
+theorem orbitGood : OrbitGood := by
+  intro Z s add mul w one pow fix h1 h2 k Ψ Φ hΨ hΦ
+  have eqs := orbitEquations (tier (k + 1)) Ψ Φ
+  refine countable_induction _ ?_ ?_ ?_
+  · intro a h0
+    rw [eqs.1 a h0]
+    exact hΦ
+  · intro a' a ha ih
+    rw [eqs.2.1 a' a ha]
+    exact goodF_app h1 h2 k Ψ (orbit (tier (k + 1)) Ψ Φ a') hΨ ih
+  · intro l hl ih
+    show ∀ xs : Env, GoodEnv fix pow w k xs →
+      GoodFn fix pow w (appDown k (orbit (tier (k + 1)) Ψ Φ l) xs) ∧
+        domClause fix k (orbit (tier (k + 1)) Ψ Φ l) xs
+    intro xs hxs
+    haveI : Nonempty (EarlierStages l) := ⟨⟨0, hl.bot_lt⟩⟩
+    have sup : ∀ x : CountableOrdinal, (appDown k (orbit (tier (k + 1)) Ψ Φ l) xs x).val =
+        ⨆ e : EarlierStages l, (appDown k (orbit (tier (k + 1)) Ψ Φ (earlierStage l e)) xs x).val :=
+      appDown_sup k (fun e : EarlierStages l => orbit (tier (k + 1)) Ψ Φ (earlierStage l e))
+        (orbit (tier (k + 1)) Ψ Φ l) xs (eqs.2.2 l hl)
+    have stageGood : ∀ e : EarlierStages l,
+        GoodFn fix pow w (appDown k (orbit (tier (k + 1)) Ψ Φ (earlierStage l e)) xs) ∧
+          domClause fix k (orbit (tier (k + 1)) Ψ Φ (earlierStage l e)) xs :=
+      fun e => ih (earlierStage l e) e.property xs hxs
+    refine ⟨goodFn_sup h1 h2
+      (fun e : EarlierStages l => appDown k (orbit (tier (k + 1)) Ψ Φ (earlierStage l e)) xs)
+      (appDown k (orbit (tier (k + 1)) Ψ Φ l) xs) (fun e => (stageGood e).1) sup, ?_⟩
+    let e0 : EarlierStages l := ⟨0, hl.bot_lt⟩
+    refine domClause_mono k (orbit (tier (k + 1)) Ψ Φ (earlierStage l e0))
+      (orbit (tier (k + 1)) Ψ Φ l) xs (fun x => ?_) (stageGood e0).2
+    rw [sup x]
+    exact le_ciSup (bddAbove_orbit .base id (fun e : EarlierStages l =>
+      appDown k (orbit (tier (k + 1)) Ψ Φ (earlierStage l e)) xs x)) e0
+
+section
+variable {Z : CountableOrdinal} {s : CountableOrdinal → CountableOrdinal}
+  {add mul : CountableOrdinal → CountableOrdinal → CountableOrdinal}
+  {w one : CountableOrdinal} {pow : CountableOrdinal → CountableOrdinal}
+  {fix : (CountableOrdinal → CountableOrdinal) → CountableOrdinal → CountableOrdinal}
+
+/-- The applied-down orbit of a good object from a good object is a good family. -/
+theorem orbit_family (h1 : OrdinalArithmeticEquations Z s add mul)
+    (h2 : OmegaArithmeticEquations Z s mul w one pow fix)
+    (k : Nat) (Ψ : Value (tier (k + 2))) (Φ : Value (tier (k + 1)))
+    (hΨ : GoodF fix pow w (k + 1) Ψ) (hΦ : GoodF fix pow w k Φ) (xs : Env)
+    (hxs : GoodEnv fix pow w k xs) :
+    GoodFamily fix pow w (fun a => appDown k (orbit (tier (k + 1)) Ψ Φ a) xs) := by
+  have og := orbitGood Z s add mul w one pow fix h1 h2 k Ψ Φ hΨ hΦ
+  have eqs := orbitEquations (tier (k + 1)) Ψ Φ
+  refine ⟨fun a => (og a xs hxs).1, fun a a' ha x => ?_, fun l hl x => ?_⟩
+  · show (towerValue fix 0 (appDown k (orbit (tier (k + 1)) Ψ Φ a) xs) x).val ≤
+      (appDown k (orbit (tier (k + 1)) Ψ Φ a') xs x).val
+    rw [eqs.2.1 a a' ha]
+    exact (good_app k Ψ (orbit (tier (k + 1)) Ψ Φ a) xs hΨ (og a) hxs).2 x
+  · exact appDown_sup k (fun e : EarlierStages l => orbit (tier (k + 1)) Ψ Φ (earlierStage l e))
+      (orbit (tier (k + 1)) Ψ Φ l) xs (eqs.2.2 l hl) x
+
+/-- `B_0 (K 1) x < fix (a ↦ K a 0) x`. -/
+theorem fam_one_b0_lt (h1 : OrdinalArithmeticEquations Z s add mul)
+    (h2 : OmegaArithmeticEquations Z s mul w one pow fix)
+    (K : CountableOrdinal → CountableOrdinal → CountableOrdinal) (hK : GoodFamily fix pow w K)
+    (o1 : CountableOrdinal) (ho1 : o1.val = 1) (x : CountableOrdinal) :
+    (towerValue fix 0 (K o1) x).val < (fix (fun a => K a zeroValue) x).val := by
+  obtain ⟨hfix, hx, -⟩ := fam_spec h1 h2 K hK x
+  have hl := fam_fix_limit h1 h2 K hK _ hfix (lt_of_le_of_lt (ozl _) hx)
+  exact fam_b0_lt h1 h2 K hK o1 x (by rw [ho1]; exact Ordinal.one_lt_of_isSuccLimit hl)
+
+end
+
+/-- `B_m` applied down an environment is `fix` of the spine. -/
+theorem appDown_curry (n : Nat) (G : Env → Value (tier 1))
+    (hG : ∀ ys zs : Env, (∀ j, 1 ≤ j → j ≤ n → ys j = zs j) → G ys = G zs) (xs : Env) :
+    ∀ (k : Nat) (ys : Env), (∀ j, k < j → j ≤ n → ys j = xs j) →
+      appDown k (curryEnv k G ys) xs = G xs := by
+  intro k
+  induction k with
+  | zero =>
+    intro ys h
+    show G ys = G xs
+    exact hG ys xs (fun j h1 hj => h j (by omega) hj)
+  | succ k ih =>
+    intro ys h
+    show appDown k (curryEnv k G (Function.update ys (k + 1) (xs (k + 1)))) xs = G xs
+    refine ih _ (fun j hk hj => ?_)
+    by_cases hjk : j = k + 1
+    · subst hjk
+      exact Function.update_self (k + 1) (xs (k + 1)) ys
+    · exact (Function.update_of_ne hjk _ ys).trans (h j (by omega) hj)
+
+theorem appDown_tower (fix : (CountableOrdinal → CountableOrdinal) → CountableOrdinal → CountableOrdinal)
+    (m : Nat) (xs : Env) :
+    appDown (m + 1) (towerValue fix m) xs = fix (fun α => spineValue m xs α) := by
+  have hG : ∀ ys zs : Env, (∀ j, 1 ≤ j → j ≤ m + 1 → ys j = zs j) →
+      fix (fun α => spineValue m ys α) = fix (fun α => spineValue m zs α) := by
+    intro ys zs h
+    exact congrArg (fun g : CountableOrdinal → CountableOrdinal => fix g)
+      (funext (ActualCalibrationLevelsProof.spineValue_congr m ys zs h))
+  exact appDown_curry (m + 1) (fun xs => fix (fun α => spineValue m xs α)) hG xs (m + 1)
+    (fun j => valueDefault (tier j)) (fun j h1 h2 => absurd h2 (by omega))
+
+/-- For `m = n+1`: `B_{n+1}` applied down is `fix` of the zero-diagonal of the applied-down orbit. -/
+theorem appDown_tower_succ (fix : (CountableOrdinal → CountableOrdinal) → CountableOrdinal → CountableOrdinal)
+    (n : Nat) (xs : Env) :
+    appDown (n + 2) (towerValue fix (n + 1)) xs =
+      fix (fun a => appDown n (orbit (tier (n + 1)) (xs (n + 2)) (xs (n + 1)) a) xs zeroValue) :=
+  (appDown_tower fix (n + 1) xs).trans
+    (congrArg (fun g : CountableOrdinal → CountableOrdinal => fix g)
+      (funext (fun α => semDown_appDown n (orbit (tier (n + 1)) (xs (n + 2)) (xs (n + 1)) α) xs)))
+
+theorem towerGood : TowerGood := by
+  intro Z s add mul w one pow fix h1 h2 m
+  cases m with
+  | zero =>
+    show ∀ xs : Env, GoodEnv fix pow w 1 xs →
+      GoodFn fix pow w (appDown 1 (towerValue fix 0) xs) ∧ domClause fix 1 (towerValue fix 0) xs
+    intro xs hxs
+    have hxs' : GoodEnv fix pow w 0 xs ∧ GoodAt fix pow w 0 (GoodEnv fix pow w 0) (xs 1) := hxs
+    have hx1 : GoodFn fix pow w (xs 1) := (hxs'.2 xs trivial).1
+    refine ⟨(good_b0 h1 h2 (xs 1) hx1).1, ?_⟩
+    show ∀ x : CountableOrdinal, (towerValue fix 0 (appDown 0 (xs 1) xs) x).val ≤
+      (appDown 1 (towerValue fix 0) xs x).val
+    exact fun x => le_rfl
+  | succ n =>
+    show ∀ xs : Env, GoodEnv fix pow w (n + 2) xs →
+      GoodFn fix pow w (appDown (n + 2) (towerValue fix (n + 1)) xs) ∧
+        domClause fix (n + 2) (towerValue fix (n + 1)) xs
+    intro xs hxs
+    have hxs' : (GoodEnv fix pow w n xs ∧ GoodAt fix pow w n (GoodEnv fix pow w n) (xs (n + 1))) ∧
+        GoodAt fix pow w (n + 1) (GoodEnv fix pow w (n + 1)) (xs (n + 2)) := hxs
+    obtain ⟨⟨hn, hΦ⟩, hΨ⟩ := hxs'
+    have fam := orbit_family h1 h2 n (xs (n + 2)) (xs (n + 1)) hΨ hΦ xs hn
+    have eqs := orbitEquations (tier (n + 1)) (xs (n + 2)) (xs (n + 1))
+    have eD := appDown_tower_succ fix n xs
+    have gD : GoodFn fix pow w
+        (fix (fun a => appDown n (orbit (tier (n + 1)) (xs (n + 2)) (xs (n + 1)) a) xs zeroValue)) :=
+      fam_fix_good h1 h2 (fun a => appDown n (orbit (tier (n + 1)) (xs (n + 2)) (xs (n + 1)) a) xs) fam
+    refine ⟨by rw [eD]; exact gD, ?_⟩
+    show ∀ x : CountableOrdinal, (towerValue fix 0 (appDown (n + 1) (xs (n + 2)) xs) x).val ≤
+      (appDown (n + 2) (towerValue fix (n + 1)) xs x).val
+    intro x
+    rw [eD]
+    obtain ⟨o1, ho1⟩ := countable_mk 1 one_lt_index
+    have e1 : orbit (tier (n + 1)) (xs (n + 2)) (xs (n + 1)) o1 = xs (n + 2) (xs (n + 1)) := by
+      rw [eqs.2.1 zeroValue o1 (ho1.trans (zero_add (1 : Ordinal.{0})).symm), eqs.1 zeroValue rfl]
+    have hlt : (towerValue fix 0
+        (appDown n (orbit (tier (n + 1)) (xs (n + 2)) (xs (n + 1)) o1) xs) x).val <
+        (fix (fun a => appDown n (orbit (tier (n + 1)) (xs (n + 2)) (xs (n + 1)) a) xs zeroValue) x).val :=
+      fam_one_b0_lt h1 h2 (fun a => appDown n (orbit (tier (n + 1)) (xs (n + 2)) (xs (n + 1)) a) xs)
+        fam o1 ho1 x
+    rw [e1] at hlt
+    exact hlt.le
+
+#print axioms orbitGood
+#print axioms towerGood
+
+end LogicLineages.PersistentMarking.ActualCalibrationUniform

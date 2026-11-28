@@ -81,8 +81,8 @@ low-memory stop (`a74a82d7d`). All 50 checker tests passed with the sparse
 worktree's omitted fixtures supplied from that same Git tree.
 
 Each Fable lane returned four rounds. As two lanes began round five,
-`claudep` reported exhausted API credits and the subscription reported its
-monthly spend limit. The lambda-child lane had already started round four
+`claudep` reported exhausted API credits and the subscription reported a usage limit, which the owner clarified was the
+five-hour limit. The lambda-child lane had already started round four
 and returned its course-of-values proof. Its source is saved with the other
 pending accessibility drafts. The retained sessions can resume when the
 provider permits new turns.

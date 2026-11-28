@@ -61,7 +61,7 @@ private theorem ownValue (C : Program 3) (s : Settings) (hC : ActualSelectedCove
   rw [v,NumberedWindowInternalSparseScratchMembershipNumericChecks.exact_AllInputScratchMembership,numbersRoundTrip]
   rfl
 
-private theorem coverageTrue (C : Program 3) (s : Settings) (cover : ActualSelectedCoverOutput C)
+theorem exact_CoveredMemoCoverageAtPacked (C : Program 3) (s : Settings) (cover : ActualSelectedCoverOutput C)
     (seeds : WindowSeedsCovered s) (ctx ty used seed : Nat)
     (held : packedWindow s ctx ty seed = true) :
     evaluate (conjunction contextPresent (ownSeed C s)) (ctx ::ᵥ used ::ᵥ seed ::ᵥ nil) = 1 := by
@@ -115,7 +115,7 @@ theorem coveredStep (C : Program 3) (s : Settings) (base : Program 2) (T V : Pro
     unfold intrinsicWindow
     change 0 = if packedWindow s ctx t q then t+1 else 0
     by_cases hp : packedWindow s ctx t q = true
-    · exact False.elim (h (coverageTrue C s cover seeds ctx t 0 q hp))
+    · exact False.elim (h (exact_CoveredMemoCoverageAtPacked C s cover seeds ctx t 0 q hp))
     · have no : packedWindow s ctx t q = false := Bool.eq_false_iff.mpr hp
       rw [no]
       rfl
@@ -166,6 +166,7 @@ theorem exact_CoveredMemoWindow (C : Program 3) (s : Settings) (base : Program 2
     have no : (intrinsicWindow s ctx raw == ty+1) = false := Bool.eq_false_iff.mpr (fun h => ne (beq_iff_eq.mp h))
     simp [no]
 
+#print axioms exact_CoveredMemoCoverageAtPacked
 #print axioms exact_CoveredMemoIntrinsic
 #print axioms exact_CoveredMemoWindow
 end LogicLineages.PersistentMarking.NumberedWindowInternalLiteralCoveredMemoNumericProof

@@ -1,0 +1,216 @@
+{
+ "key": "K1-CONTINUATION (root order after the hand-back: steps 1-4 toward FreshAddressCarrier)",
+ "module_prefix": "LogicLineages.NativeModule.PersistentMarking.Paper16AccessibilityMilestone",
+ "gates": [
+  {
+   "receipt": "1795814537907221097-1094660",
+   "rows": 1476,
+   "nonzero_rows": [],
+   "gate_log": "verification/local-fable-trio-2026-11-27/fableB2/gate-5-domain-closure.log",
+   "modules": [
+    {
+     "module": "DomainClosureTargetsV2",
+     "source_sha256": "a5050a734332176b28d9d245c8dd26d9c45b6009bd7c35267fb2f4cd36523806",
+     "receipt_sha256_matches_disk": true,
+     "returncode": 0
+    },
+    {
+     "module": "DomainClosureProofV2",
+     "source_sha256": "214269888bea904e0e1069559bc0c61c8d97e8a2ea6a10725f4b5e2750a4eef5",
+     "receipt_sha256_matches_disk": true,
+     "returncode": 0
+    }
+   ],
+   "sorryAx_in_log": 0,
+   "print_axioms": [
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneDomainClosureProofV2.exact_OriginalWindowDomain' depends on axioms: [propext, Quot.sound]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneDomainClosureProofV2.exact_OpenLiteralFiniteDomain' depends on axioms: [propext, Classical.choice, Quot.sound]"
+   ]
+  },
+  {
+   "receipt": "1795814936169268139-1096771",
+   "rows": 1415,
+   "nonzero_rows": [],
+   "gate_log": "verification/local-fable-trio-2026-11-27/fableB2/gate-6-window-front-payload.log",
+   "modules": [
+    {
+     "module": "FreshPayloadTargetsV2",
+     "source_sha256": "edfa9207700bac86d0e8e5da75a14c51b95e0dcbf555e0c11a51918fb8833e27",
+     "receipt_sha256_matches_disk": true,
+     "returncode": 0
+    },
+    {
+     "module": "VariableFrontWindowTargetsV2",
+     "source_sha256": "5c6b5e2b0e0f5af6357f9a52ccc88872021078a3f9bedc5491ce9f822de8c941",
+     "receipt_sha256_matches_disk": true,
+     "returncode": 0
+    },
+    {
+     "module": "FreshPayloadProofV2",
+     "source_sha256": "cd34a9d4d92b1d519cdb3e77615ee7eb8ee03a2d5ca6fe49d6df16becaad98b8",
+     "receipt_sha256_matches_disk": true,
+     "returncode": 0
+    },
+    {
+     "module": "VariableFrontWindowOpenProofV2",
+     "source_sha256": "b2f141b953575bdd9a08897bfaf47684122b210c97605d94917aaeadb0b4a8c7",
+     "receipt_sha256_matches_disk": true,
+     "returncode": 0
+    },
+    {
+     "module": "VariableFrontWindowNumericProofV2",
+     "source_sha256": "6ff55e989ead8be19270b79147defbe173ce74ffb92bec811361d9adb5a6eb52",
+     "receipt_sha256_matches_disk": true,
+     "returncode": 0
+    }
+   ],
+   "sorryAx_in_log": 0,
+   "print_axioms": [
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneFreshPayloadProofV2.exact_FreshPayloadIsNamedLeaf' depends on axioms: [propext]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneFreshPayloadProofV2.exact_FreeSeedSelfLeast' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneVariableFrontWindowOpenProofV2.exact_OpenVariableFrontWindow' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneVariableFrontWindowNumericProofV2.exact_VariableFrontWindowCalibrated' depends on axioms: [propext, Classical.choice, Quot.sound]"
+   ]
+  },
+  {
+   "receipt": "1795815242127512412-1098323",
+   "rows": 3980,
+   "nonzero_rows": [],
+   "gate_log": "verification/local-fable-trio-2026-11-27/fableB2/gate-7-front-window.log",
+   "modules": [
+    {
+     "module": "FrontWindowTargetsV2",
+     "source_sha256": "d44be49d3cee962e4d188e425598838194307d98a7b0448ad1dd17032c990920",
+     "receipt_sha256_matches_disk": true,
+     "returncode": 0
+    },
+    {
+     "module": "FrontPacketV2",
+     "source_sha256": "d216dcf3ef7f584f16a0673f0900a0549b118bcd91679168f126881ba1d18b6e",
+     "receipt_sha256_matches_disk": true,
+     "returncode": 0
+    },
+    {
+     "module": "FrontRulesV2",
+     "source_sha256": "a6ab141c9a4059b3e4a3ed128af5aa5ca006a7f07acf68d4b66b0de75fdb6be1",
+     "receipt_sha256_matches_disk": true,
+     "returncode": 0
+    },
+    {
+     "module": "FrontWindowProofV2",
+     "source_sha256": "b914f1d6605f541ff7f4ca769a72fbabc165cf4d64f2e9ca497d500ec57bfff5",
+     "receipt_sha256_matches_disk": true,
+     "returncode": 0
+    }
+   ],
+   "sorryAx_in_log": 0,
+   "print_axioms": [
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneFrontPacketV2.exact_FrontLambdaJoinedMemoPacketAt' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneFrontRulesV2.exact_FrontLambdaJoinedRulesAt' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneFrontWindowProofV2.exact_FrontLambdaWindow' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneFrontWindowProofV2.exact_FrontLiteralWindowWithSeedLeast' depends on axioms: [propext, Classical.choice, Quot.sound]"
+   ]
+  },
+  {
+   "receipt": "1795815595272564203-1100281",
+   "rows": 1906,
+   "nonzero_rows": [],
+   "gate_log": "verification/local-fable-trio-2026-11-27/fableB2/gate-9-named-leaf-memo.log",
+   "modules": [
+    {
+     "module": "NamedLeafMemoTargetsV2",
+     "source_sha256": "0924842a1ed6df1931eeb55249030108b5518ca2be91c1c2197e3af666b61220",
+     "receipt_sha256_matches_disk": true,
+     "returncode": 0
+    },
+    {
+     "module": "NamedLeafMemoProofV2",
+     "source_sha256": "6ec57660b63451536d76d0948de0eddbfa958472d1e9a9bcfc05c676b2d8a0b8",
+     "receipt_sha256_matches_disk": true,
+     "returncode": 0
+    }
+   ],
+   "sorryAx_in_log": 0,
+   "print_axioms": [
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneNamedLeafMemoProofV2.exact_NamedLeafUnitSyntax' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneNamedLeafMemoProofV2.exact_NamedLeafChosenMeasure' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneNamedLeafMemoProofV2.exact_NamedLeafOwnCover' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneNamedLeafMemoProofV2.exact_NonAuxCoveredWindow' depends on axioms: [propext, Classical.choice, Quot.sound]"
+   ]
+  },
+  {
+   "receipt": "1795815925311427086-1102198",
+   "rows": 3999,
+   "nonzero_rows": [],
+   "gate_log": "verification/local-fable-trio-2026-11-27/fableB2/gate-10-fresh-carrier.log",
+   "modules": [
+    {
+     "module": "FreshCarrierTargetsV2",
+     "source_sha256": "2b3b82dee399e4e7d9ce691aa58d17bd7a67f5423d26bb6fb7c390a6bac7b9b8",
+     "receipt_sha256_matches_disk": true,
+     "returncode": 0
+    },
+    {
+     "module": "FreshCarrierProofV2",
+     "source_sha256": "f42c8cbe74b748bcbfeb26e1d6ee7f3240a7c26472dce059d9996b0ee2c077e9",
+     "receipt_sha256_matches_disk": true,
+     "returncode": 0
+    },
+    {
+     "module": "FrontTypingProofV2",
+     "source_sha256": "4229e5f9d6ba7ff348f0fe39f838d617bb92dc72442585a0106cc68ca892775d",
+     "receipt_sha256_matches_disk": true,
+     "returncode": 0
+    }
+   ],
+   "sorryAx_in_log": 0,
+   "print_axioms": [
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneFreshCarrierProofV2.exact_FreshCarrierOnFrontWindow' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneFrontTypingProofV2.exact_FrontLiteralWindowTyping' depends on axioms: [propext, Classical.choice, Quot.sound]"
+   ]
+  }
+ ],
+ "theorems": {
+  "DomainClosureProofV2": [
+   "exact_OriginalWindowDomain : OriginalWindowDomain",
+   "exact_OpenLiteralFiniteDomain : OpenLiteralFiniteDomain"
+  ],
+  "VariableFrontWindowNumericProofV2": [
+   "exact_VariableFrontWindowCalibrated : VariableFrontWindowCalibrated"
+  ],
+  "VariableFrontWindowOpenProofV2": [
+   "exact_OpenVariableFrontWindow : OpenVariableFrontWindow"
+  ],
+  "FreshPayloadProofV2": [
+   "exact_FreshPayloadIsNamedLeaf : FreshPayloadIsNamedLeaf",
+   "exact_FreeSeedSelfLeast : FreeSeedSelfLeast"
+  ],
+  "FrontPacketV2": [
+   "exact_FrontLambdaJoinedMemoPacketAt"
+  ],
+  "FrontRulesV2": [
+   "exact_FrontLambdaJoinedRulesAt"
+  ],
+  "FrontWindowProofV2": [
+   "exact_FrontLambdaWindow : FrontLambdaWindow",
+   "exact_FrontLiteralWindowWithSeedLeast : FrontLiteralWindowWithSeedLeast"
+  ],
+  "NamedLeafMemoProofV2": [
+   "exact_NamedLeafUnitSyntax : NamedLeafUnitSyntax",
+   "exact_NamedLeafChosenMeasure : NamedLeafChosenMeasure",
+   "exact_NamedLeafOwnCover : NamedLeafOwnCover",
+   "exact_NonAuxCoveredWindow : NonAuxCoveredWindow"
+  ],
+  "FreshCarrierProofV2": [
+   "exact_FreshCarrierOnFrontWindow : FreshCarrierOnFrontWindow"
+  ],
+  "FrontTypingProofV2": [
+   "exact_FrontLiteralWindowTyping : FrontLiteralWindowTyping"
+  ]
+ },
+ "refused_gate": {
+  "log": "verification/local-fable-trio-2026-11-27/fableB2/gate-8-named-leaf-memo.log",
+  "reason": "public import of a module name that is not a file; no receipt; fixed in gate 9 with statements unchanged"
+ },
+ "not_claimed": "TypedCarrierComputability; AllTerms; lem:arithmetic-accessibility. FrontLiteralWindowTyping is a new existential selection (window at front-tested leaves); it supersedes the earlier selections and is not a statement about windows chosen inside earlier proofs."
+}

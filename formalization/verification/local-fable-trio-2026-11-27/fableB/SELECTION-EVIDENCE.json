@@ -1,0 +1,42 @@
+{
+  "key": "INSTALLED-ACCESSIBILITY-REDUCTION",
+  "paper_statement": "Paper 16 lem:arithmetic-accessibility (ordinals.tex:79); Lean target Paper16AccessibilityMilestoneTargetsV2.InstalledArithmeticAccessibility (not proved here)",
+  "frozen_target": {
+    "name": "LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingInstallTargetsV2.InstalledAccessibilityReduction",
+    "module": "LogicLineages.NativeModule.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingInstallTargetsV2",
+    "source_sha256": "465712db58cb67def3e277bec4a39bec5a1413c88c890124e1e22fbbedfc26c0",
+    "statement": "forall S K, DecisionSourceUniverse.Closed K -> exists A : InstalledWindow S K (sourceWindow K), forall c, (FreshApplicationTotal A c -> CarrierTypingCases A c) /\\ (CarrierTypingCases A c -> TypedCarrierComputability A c -> AllTerms A c)"
+  },
+  "proof_modules": [
+    {
+      "module": "LogicLineages.NativeModule.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingSelectionProofV2",
+      "source_sha256": "ae2b92e51d1745bd2bbd926042e249b6fd2ba50500127dc8fc263a006731f9c8"
+    }
+  ],
+  "receipt": "1795774776803253954-927590",
+  "receipt_rows": 3961,
+  "print_axioms": [
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingSelectionProofV2.exact_InstalledAccessibilityReduction' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "depends_on_coordinator_uncommitted_work": [
+    "LogicLineages.NativeModule.PersistentMarking.Paper16AccessibilityMilestoneInstalledLambdaWindowV2 (exact_InstalledLambdaWindowWithScalarAtOriginalWindow)",
+    "LogicLineages.PersistentMarking.NumberedWindowInternalLiteralJoinedBetaOutcomeProof, with root's one-token repair of 27 November (root ledger 04:18; pre-edit copy in drafts/root)"
+  ],
+  "not_claimed": "FreshApplicationTotal or TypedCarrierComputability on the selected window; hence not AllTerms and not InstalledArithmeticAccessibility. ApplicationArithmetic.matchEdge is not used and not proved.",
+  "corollary": {
+    "frozen_target": {
+      "name": "LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingGroundTargetsV2.GroundUniverseReduction",
+      "module": "LogicLineages.NativeModule.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingGroundTargetsV2",
+      "source_sha256": "ef3a3740553bcbf52cc6e33325b39e4b09319ce5b1978b19b655316161d39865",
+      "statement": "forall S K, DecisionSourceUniverse.Closed K -> (forall t in K, t = Ty.ground) -> exists A : InstalledWindow S K (sourceWindow K), forall c, CarrierTypingCases A c /\\ (TypedCarrierComputability A c -> AllTerms A c)"
+    },
+    "proof_module": {
+      "module": "LogicLineages.NativeModule.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingGroundProofV2",
+      "source_sha256": "1ef5d7b15e42ea8660f783ebe09170691c7a54f2b7b5df9179b1a791a7f856e9"
+    },
+    "receipt": "1795774915562672368-928420",
+    "print_axioms": [
+      "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingGroundProofV2.exact_GroundUniverseReduction' depends on axioms: [propext, Classical.choice, Quot.sound]"
+    ]
+  }
+}

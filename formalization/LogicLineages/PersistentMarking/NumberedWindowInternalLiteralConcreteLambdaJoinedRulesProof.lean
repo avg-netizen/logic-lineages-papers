@@ -46,7 +46,7 @@ open NumberedWindowInternalLiteralAtomicRawGuardProof (guardedRaw)
 open NumberedWindowInternalLiteralStrictDualChildProof (strictDualRaw)
 open NumberedWindowInternalLiteralHopCarrier (rawWithTarget)
 open NumberedWindowInternalLiteralAddressedChildReportsProof (S hop)
-open NumberedWindowInternalLiteralLambdaJoinedMemoPacketProof (exact_ConcreteLambdaJoinedMemoPacket)
+open NumberedWindowInternalLiteralLambdaJoinedMemoPacketProof (exact_ConcreteLambdaJoinedMemoPacketAt)
 open NumberedWindowInternalLiteralJoinedMemoInversionProof (exact_OpenJoinedMemoInversion)
 open NumberedWindowInternalLiteralStrictMeasuredMemoTransportProof (selectedBiAuxType)
 open NumberedWindowInternalLiteralStrictMeasuredScratchProof (measuredStrictCover)
@@ -73,7 +73,8 @@ open NumberedWindowInternalLiteralCount (permutation)
 
 open LogicLineages.OrdinalComparison.Source (Ty)
 open ID1Completion.InternalAccessibilityRules (membership)
-open NumberedWindowInternalLiteralBetaLeafProof (InstanceFit withBetaLeaf)
+open NumberedWindowInternalSparseTypedRawTargets (ActualRawSyntax)
+open NumberedWindowInternalLiteralBetaLeafProof (InstanceFit withBetaLeaf exact_LiteralSingletonInstance)
 open NumberedWindowInternalLiteralJoinedBetaOutcomeProof (exact_OpenJoinedBetaOutcome)
 open NumberedWindowInternalLiteralBetaApplicationComputabilityProof (BetaApplicationCases ApplicationOutput)
 open NumberedWindowInternalLiteralFreshNeutralBridgeProof
@@ -87,13 +88,12 @@ open NumberedWindowInternalLiteralConcreteBetaJoinedRulesProof (BetaJoinedRulesA
 open NumberedWindowInternalLiteralLambdaFrameProof (lambdaFallback)
 open NumberedWindowInternalLiteralLambdaTypedRawCasesProof (exact_OpenLambdaTypedRawCases)
 
-/-- All previously checked application and computability laws coexist
-with the literal contextual lambda fallback on the original checker.
-The raw contextual case step and the addressed lambda source can be
-opened on these exact programs. This is not yet full lambda closure. -/
-theorem exact_ConcreteLambdaJoinedRules (xs : Entries) (s : Settings) (P : List ProbeTy)
+/-- Joined rules for the beta instance built from the packet's selected syntax program. -/
+theorem exact_ConcreteLambdaJoinedRulesAt (xs : Entries) (s : Settings) (P : List ProbeTy)
     (valid : ValidWindow s P) (seeds : WindowSeedsCovered s) (symmetric : HeadPairsSymmetric s.equivalentHeads)
-    (grammar : GrammarTypeInclusion s) (included : ∀ t ∈ finiteCodes P, t ∈ s.window.1) :
+    (grammar : GrammarTypeInclusion s) (included : ∀ t ∈ finiteCodes P, t ∈ s.window.1)
+    (mk : Program 1 → Program 2)
+    (mkFit : ∀ Vs : Program 1, ActualRawSyntax Vs → InstanceFit (mk Vs)) :
     ∃ (cv tv : Program 1) (U X base : Program 2) (T V baseM : Program 1)
       (leaves : Nat → Program 3) (other₀ : Program 3) (placed : Inputs),
       let Tg := selectedBiAuxType s T tv
@@ -106,13 +106,15 @@ theorem exact_ConcreteLambdaJoinedRules (xs : Entries) (s : Settings) (P : List 
       let Va := unitAuxSyntax V tv
       let leaf := withBetaLeaf Va U leaves
       let raw := guardedRaw (strictDualRaw C s leaf (lambdaFallback other₀) base base Tg Va Tg)
+      ActualRawSyntax Va ∧ U = mk Va ∧
       InstanceFit U ∧ Packet xs s P i cv tv raw L (applicationCore L) placed ∧
       placed.applicationGuard = applicationGuard i L ∧
       (∀ c : Nat, let R := rawWithTarget i cv tv raw L
         let data := S i cv tv R L
         BetaJoinedRulesAt data i (applicationGuard i L) (hop cv tv R L) L₀ L U P placed c) := by
-  obtain ⟨cv,tv,U,leaves,other₀,X,base,T,V,baseM,placed,fit,packet,placedApp,reverse,ends,stable,selected,guards,closed⟩ :=
-    exact_ConcreteLambdaJoinedMemoPacket xs s P valid seeds symmetric grammar included
+  obtain ⟨cv,tv,U,leaves,other₀,X,base,T,V,baseM,placed,vaFit,same,fit,packet,placedApp,
+      reverse,ends,stable,selected,guards,closed⟩ :=
+    exact_ConcreteLambdaJoinedMemoPacketAt xs s P valid seeds symmetric grammar included mk mkFit
   let Tg := selectedBiAuxType s T tv
   let C := measuredStrictCover V tv baseM
   let W := joinedAuxiliaryWindow s base Tg V tv baseM
@@ -124,7 +126,7 @@ theorem exact_ConcreteLambdaJoinedRules (xs : Entries) (s : Settings) (P : List 
   let leaf := withBetaLeaf Va U leaves
   let other := lambdaFallback other₀
   let raw := guardedRaw (strictDualRaw C s leaf other base base Tg Va Tg)
-  refine ⟨cv,tv,U,X,base,T,V,baseM,leaves,other₀,placed,fit,packet,placedApp,?_⟩
+  refine ⟨cv,tv,U,X,base,T,V,baseM,leaves,other₀,placed,vaFit,same,fit,packet,placedApp,?_⟩
   intro c R data
   have f := exact_OpenJoinedForwardRule s P valid.2.1 X base T V baseM cv tv leaf other c
     reverse ends stable selected guards
@@ -165,5 +167,36 @@ theorem exact_ConcreteLambdaJoinedRules (xs : Entries) (s : Settings) (P : List 
     exact exact_TupleComputabilityToIFromArithmetic xs s P i (jRaw i) r d placed c
       (hop cv tv R L) neutralSource bottomSource packet.physical.1 arithAt forwardAt τ α Γ q typed computed
 
+/-- All previously checked application and computability laws coexist
+with the literal contextual lambda fallback on the original checker.
+The raw contextual case step and the addressed lambda source can be
+opened on these exact programs. This is not yet full lambda closure. -/
+theorem exact_ConcreteLambdaJoinedRules (xs : Entries) (s : Settings) (P : List ProbeTy)
+    (valid : ValidWindow s P) (seeds : WindowSeedsCovered s) (symmetric : HeadPairsSymmetric s.equivalentHeads)
+    (grammar : GrammarTypeInclusion s) (included : ∀ t ∈ finiteCodes P, t ∈ s.window.1) :
+    ∃ (cv tv : Program 1) (U X base : Program 2) (T V baseM : Program 1)
+      (leaves : Nat → Program 3) (other₀ : Program 3) (placed : Inputs),
+      let Tg := selectedBiAuxType s T tv
+      let C := measuredStrictCover V tv baseM
+      let W := joinedAuxiliaryWindow s base Tg V tv baseM
+      let Base := joinedBiAuxBase s X base Tg V tv baseM
+      let L₀ := packedLeastOn C (recursiveTypedMemo Base) s
+      let L := memoFilteredLeast C Base s
+      let i := finiteScalar (addressScalar cv tv W L) (finiteCodes P)
+      let Va := unitAuxSyntax V tv
+      let leaf := withBetaLeaf Va U leaves
+      let raw := guardedRaw (strictDualRaw C s leaf (lambdaFallback other₀) base base Tg Va Tg)
+      InstanceFit U ∧ Packet xs s P i cv tv raw L (applicationCore L) placed ∧
+      placed.applicationGuard = applicationGuard i L ∧
+      (∀ c : Nat, let R := rawWithTarget i cv tv raw L
+        let data := S i cv tv R L
+        BetaJoinedRulesAt data i (applicationGuard i L) (hop cv tv R L) L₀ L U P placed c) := by
+  obtain ⟨U₀,uFit⟩ := exact_LiteralSingletonInstance
+  obtain ⟨cv,tv,U,X,base,T,V,baseM,leaves,other₀,placed,_,_,rest⟩ :=
+    exact_ConcreteLambdaJoinedRulesAt xs s P valid seeds symmetric grammar included
+      (fun _ => U₀) (fun _ _ => uFit)
+  exact ⟨cv,tv,U,X,base,T,V,baseM,leaves,other₀,placed,rest⟩
+
+#print axioms exact_ConcreteLambdaJoinedRulesAt
 #print axioms exact_ConcreteLambdaJoinedRules
 end LogicLineages.PersistentMarking.NumberedWindowInternalLiteralConcreteLambdaJoinedRulesProof

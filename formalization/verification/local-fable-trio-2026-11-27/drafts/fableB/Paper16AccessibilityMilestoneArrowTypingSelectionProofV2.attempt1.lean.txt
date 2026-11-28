@@ -1,0 +1,93 @@
+module
+
+public import LogicLineages.NativeModule.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingInstallTargetsV2
+import LogicLineages.NativeModule.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingProofV2
+import LogicLineages.NativeModule.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingInstallProofV2
+import LogicLineages.NativeModule.PersistentMarking.Paper16AccessibilityMilestoneInstalledLambdaWindowV2
+import LogicLineages.PersistentMarking.NumberedWindowInternalLiteralFreshNeutralBridgeProof
+
+/-! Proof of the frozen
+`Paper16AccessibilityMilestoneArrowTypingInstallTargetsV2.InstalledAccessibilityReduction`
+(Fable B, 27 November 2026).
+
+The window is the joined lambda window of
+`exact_InstalledLambdaWindowWithScalarAtOriginalWindow` with the three literal probe leaves
+installed. Its finite scalar shape, application core and application-output rule give the five
+probe reports; the type split then follows from the fresh application. For the all-terms
+sentence, the neutral arithmetic and the forward rule of the joined rules do not mention the
+probe leaves, so typed computability gives membership on the reinstalled tuple, and no
+`ApplicationArithmetic` premise is used. -/
+
+public section
+
+namespace LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingSelectionProofV2
+
+open FirstOrder Language LogicLineages.OrdinalComparison.TerminationOrdering
+open ID1Completion.InternalCalculus ID1Completion.SourcePresentation
+open ID1Completion.InternalAccessibilityRules (carrier membership)
+open NumberedWindowArithmeticScalarTargets (fixed)
+open NumberedWindowInternalAtomicRefinement (bottomSource)
+open NumberedWindowInternalDirectCoreTargets (dCore)
+open NumberedWindowInternalDirectTypedListTargets (jRaw)
+open NumberedWindowInternalFreshProbeDispatchOriginalWindowTargets (sourceWindow)
+open NumberedWindowInternalFreshProbeParsedTyped (chosenH)
+open NumberedWindowInternalLiteralAddressedChildReportsProof (hop)
+open NumberedWindowInternalLiteralCount (permutation)
+open NumberedWindowInternalLiteralFreshNeutralBridgeProof (exact_TupleComputabilityToIFromArithmetic)
+open NumberedWindowInternalLiteralHopCarrier (rawWithTarget)
+open NumberedWindowInternalLiteralNeutralAtomProof (neutralSource)
+open NumberedWindowInternalProbeTargets (OTerm typedAt)
+open NumberedWindowOriginalComputabilityFormulaTargets (formulaType)
+open Paper16AccessibilityMilestoneInstalledLambdaWindowV2
+  (exact_InstalledLambdaWindowWithScalarAtOriginalWindow)
+open Paper16AccessibilityMilestoneArrowTypingTargetsV2 (ApplicationResultCarrier)
+open Paper16AccessibilityMilestoneArrowTypingInstallTargetsV2
+open Paper16AccessibilityMilestoneArrowTypingProofV2 (exact_TypingCasesFromReports)
+open Paper16AccessibilityMilestoneArrowTypingInstallProofV2 (exact_StackedLiteralProbeReports)
+
+/-- One installed window per closed source universe on which the type split reduces to the
+fresh application and the all-terms sentence to the type split and typed computability. -/
+theorem exact_InstalledAccessibilityReduction : InstalledAccessibilityReduction := by
+  intro S K closed
+  obtain ⟨A, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, scalar, core, guard, rules⟩ :=
+    exact_InstalledLambdaWindowWithScalarAtOriginalWindow S K closed
+  refine ⟨literalProbeWindow A, fun c => ⟨?_, ?_⟩⟩
+  · intro total
+    have output : ApplicationResultCarrier A c := by
+      intro α Γ x u t app
+      rw [guard] at app
+      exact ((rules c).applicationOutput α Γ x u t app).1
+    exact exact_TypingCasesFromReports (literalProbeWindow A) c
+      (exact_StackedLiteralProbeReports S K A _ scalar core c output) total
+  · intro typing computed
+    let B := literalProbeWindow A
+    have arithmetic := (rules c).arithmetic
+    have forward := (rules c).forward
+    rw [← guard] at arithmetic forward
+    let step := hop A.contextGuard A.typeGuard
+      (rawWithTarget A.scalar A.contextGuard A.typeGuard A.raw A.least) A.least
+    let q : OTerm (Empty ⊕ Fin 1) := .var (.inr 0)
+    let body := sourceBody B.presentation c
+    let domain := carrier B.presentation false c q
+    let goal := membership false q
+    have domainHyp : Nonempty (Derivation body [domain] domain) :=
+      ⟨Derivation.hypothesis List.mem_cons_self⟩
+    have result : Nonempty (Derivation body [domain] goal) := by
+      apply typing (Empty ⊕ Fin 1) [domain] q goal domainHyp
+      intro τ hτ
+      let typed := typedAt (chosenH B.probes (sourceWindow K)) (formulaType τ) q
+      let Γ := [typed, domain]
+      have typedHyp : Nonempty (Derivation body Γ typed) :=
+        ⟨Derivation.hypothesis List.mem_cons_self⟩
+      have heldDomain : Nonempty (Derivation body Γ domain) :=
+        ⟨Derivation.hypothesis (List.mem_cons_of_mem _ List.mem_cons_self)⟩
+      exact exact_TupleComputabilityToIFromArithmetic S.entries (fixed S K) (sourceWindow K)
+        B.scalar (jRaw B.scalar) B.path (dCore B.scalar B.path permutation) B.probes c
+        step neutralSource bottomSource B.installed.1 arithmetic forward
+        (formulaType τ) (Empty ⊕ Fin 1) Γ q typedHyp (computed τ hτ _ Γ q heldDomain typedHyp)
+    obtain ⟨proof⟩ := result
+    exact ⟨Derivation.universalIntroduction (Derivation.implicationIntroduction proof)⟩
+
+#print axioms exact_InstalledAccessibilityReduction
+
+end LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneArrowTypingSelectionProofV2

@@ -1,0 +1,26 @@
+{
+  "key": "FRESH-APPLICATION-FROM-LEAST and LITERAL-WINDOW-SELECTION",
+  "paper_statement": "Paper 16 lem:arithmetic-accessibility (ordinals.tex:79); type split at arrow types and the all-terms assembly",
+  "module_prefix": "LogicLineages.NativeModule.PersistentMarking.Paper16AccessibilityMilestone",
+  "frozen_targets": [
+    {"module": "FreshApplicationTargetsV2", "source_sha256": "d9a8c926d90d427b254c77c230fbcb0e05784a996656f5922a112e0e2a7a60fe", "receipt": "1795775517562288460-931660", "defs": ["leastSelectedAt", "FreshAddressCarrier (K1)", "FreshSeedLeast (K2)", "FreshApplicationFromLeast", "InstalledAccessibilityFromLeast"]},
+    {"module": "SeedMemberLeastTargetsV2", "source_sha256": "4e4eb17c5f9ea79a4750f81651093ab3087b80ae6b4096f4c0465a9a8b21ff2b", "receipt": "1795778103135904967-942357 (this row passed; the receipt as a whole failed on another module)", "defs": ["SeedMemberLeast"], "status": "statement only, NOT proved"},
+    {"module": "LiteralWindowTargetsV2", "source_sha256": "11f9619166fba4084a264eb2513d22c58a7efcc4280d4437bd46d02e5808663c", "receipt": "1795778103135904967-942357 (row passed) and cache-hit in 1795778131763821298-942489", "defs": ["LiteralWindowSelection"]}
+  ],
+  "proof_modules": [
+    {"module": "FreshApplicationProofV2", "source_sha256": "4ae11367dd2de11822161fe56e6c89c558ead25fc20c0cb84747551816a2d678", "receipt": "1795775517562288460-931660", "theorems": {"exact_FreshApplicationFromLeast": "FreshApplicationFromLeast"}},
+    {"module": "FreshApplicationSelectionProofV2", "source_sha256": "f17f5ce26a85179ed20ef87d3d36eb2f259de5213ea90053b0aba3ed718e2dae", "receipt": "1795775689371914965-932255", "theorems": {"exact_InstalledAccessibilityFromLeast": "InstalledAccessibilityFromLeast"}},
+    {"module": "LiteralWindowProofV2", "source_sha256": "f5163846889bec45aedd92d74f6b09128783618270f1df7ab35543c437d0a926", "receipt": "1795778131763821298-942489", "theorems": {"exact_BetaJoinedRulesOnLiteralWindow": "BetaJoinedRulesAt on literalProbeWindow A from the guard equation and BetaJoinedRulesAt on A", "exact_LiteralWindowSelection": "LiteralWindowSelection"}}
+  ],
+  "print_axioms": [
+    "'…FreshApplicationProofV2.exact_FreshApplicationFromLeast' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'…FreshApplicationSelectionProofV2.exact_InstalledAccessibilityFromLeast' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'…LiteralWindowProofV2.exact_BetaJoinedRulesOnLiteralWindow' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'…LiteralWindowProofV2.exact_LiteralWindowSelection' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "failed_attempts": [
+    {"receipt": "1795778103135904967-942357", "module": "LiteralWindowProofV2", "reason": "missing open of exact_InstalledLambdaWindowWithScalarAtOriginalWindow", "kept": "../drafts/fableB/Paper16AccessibilityMilestoneLiteralWindowProofV2.attempt1.lean.txt"}
+  ],
+  "depends_on_coordinator_uncommitted_work": "Paper16AccessibilityMilestoneInstalledLambdaWindowV2 and its closure, including NumberedWindowInternalLiteralJoinedBetaOutcomeProof with root's one-token repair",
+  "not_claimed": "FreshAddressCarrier (K1), FreshSeedLeast (K2), SeedMemberLeast, TypedCarrierComputability, AllTerms, InstalledArithmeticAccessibility. See SEED-MEMBER-REPORT.md."
+}

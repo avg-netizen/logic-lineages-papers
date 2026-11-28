@@ -1,0 +1,30 @@
+{
+  "key": "FINISH-MULTISETS",
+  "paper_statement": "Paper 16 lem:arithmetic-accessibility (ordinals.tex:79), proof lines 152-156; TARGETS.md internal accessibility checkpoint 3",
+  "frozen_target": {
+    "name": "LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneTargetsV2.FinishMultisets",
+    "module": "LogicLineages.NativeModule.PersistentMarking.Paper16AccessibilityMilestoneTargetsV2",
+    "source_sha256": "23f666331005a2037ed6e1ca8ba1ea16d5da5665ed207b26540b6d25ca2b41de"
+  },
+  "proof_modules": [
+    {
+      "module": "LogicLineages.NativeModule.PersistentMarking.Paper16AccessibilityMilestoneFinishMultisetsV2",
+      "source_sha256": "2d60871966644eb8c513d59f8192b8c32c576f3a876e7227c102e4943a64b108"
+    }
+  ],
+  "receipt": "1795773714932362718-921018",
+  "receipt_rows": 1637,
+  "theorems": {
+    "exact_FinishMultisets": "forall (A : InstalledWindow S K W) (c : Nat) (u mem : Program 2) (sg : Program 1), FinishMultisets A c u mem sg",
+    "exact_UnionClosureFromCertified": "CertifiedMultisetUnion A c -> UnionFeedsCountedReport A c u -> ConditionalJUnionTargets.UnionClosure A.presentation c u",
+    "exact_SingletonFromUnionClosure": "UnionClosure d c u -> SingletonCarrier d c sg -> NilCarrier d c -> NilNoStep d c -> DescendantGeneration d c u sg -> SingletonAccessibility d c sg",
+    "exact_MembersFromUnionClosure": "the same premises and MemberGeneration d c u mem sg -> MembersAccessibility d c mem"
+  },
+  "print_axioms": [
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneFinishMultisetsV2.exact_SingletonFromUnionClosure' depends on axioms: [propext, Quot.sound]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneFinishMultisetsV2.exact_MembersFromUnionClosure' depends on axioms: [propext, Quot.sound]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneFinishMultisetsV2.exact_UnionClosureFromCertified' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'LogicLineages.PersistentMarking.Paper16AccessibilityMilestoneFinishMultisetsV2.exact_FinishMultisets' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "not_claimed": "The premises CertifiedMultisetUnion and MultisetGeneration themselves (certified origin split, literal J-union, singleton/nil carriers, descendant and member generation) remain open arithmetic on the installed presentation."
+}

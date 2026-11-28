@@ -1,0 +1,26 @@
+{
+ "key": "UNIFORM-GOOD",
+ "lane": "fableA2",
+ "round": "local-fable-trio-2026-11-27",
+ "serves": "Function side at every type level: orbits of good objects are good (OrbitGood), every B_m is good (TowerGood)",
+ "notes": [
+  "verification/local-fable-trio-2026-11-27/fableA2/UNIFORM-INDUCTION-PLAN.md",
+  "verification/local-fable-trio-2026-11-27/fableA2/UNIFORM-SOURCE-MAP.md",
+  "verification/local-fable-trio-2026-11-27/fableA2/LEDGER.md"
+ ],
+ "modules": [
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationUniformGoodProof",
+   "sha256": "c52996bc1bc65158b87d3b81575d1433971836a467fb176f6c161df3f306af01",
+   "receipt": "1795815845408612238-1101794",
+   "returncode": 0,
+   "peak_rss_kib": 1098212,
+   "seconds": 3.456
+  }
+ ],
+ "print_axioms": {
+  "orbitGood": "[propext, Classical.choice, Quot.sound]",
+  "towerGood": "[propext, Classical.choice, Quot.sound]"
+ },
+ "checks": "each module row rc 0; source sha256 on disk equals the receipt's source_sha256 at the time this file was written"
+}

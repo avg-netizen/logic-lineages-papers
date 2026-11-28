@@ -81,7 +81,7 @@ private theorem memberOne (s : Settings) (ty : Nat) (member : ty ∈ s.types) : 
   change (T.any (fun head => head == ty)).toNat = 1
   rw [hit] <;> rfl
 
-private theorem fields {raw dom q : Nat} (parse : unpackNode raw = some (2,[dom,q])) :
+theorem exact_LambdaLexicalFieldReads {raw dom q : Nat} (parse : unpackNode raw = some (2,[dom,q])) :
     run (field 0) raw = dom ∧ run (field 1) raw = q := by
   rw [codeOfNode parse]
   have outer := (headTailOfCell (cellAt 2 (pack [dom,q]))).2
@@ -120,7 +120,7 @@ theorem exact_CoverLambdaLexicalBase : ExactCoverLambdaLexicalBase := by
     by_cases zero : intrinsicWindow s ctx raw = 0
     · rw [if_pos zero,zero] <;> rfl
     · obtain ⟨g,unpackCtx,mem,child,parentOut⟩ := exact_CoverLambdaPackedLexicalProvenance s ctx raw dom q parse zero
-      obtain ⟨first,second⟩ := fields parse
+      obtain ⟨first,second⟩ := exact_LambdaLexicalFieldReads parse
       have push : evaluate lambdaLexicalPush xs = pack (dom::g) := by
         rw [lambdaLexicalPush,binaryValue]
         change evaluate fieldCons (run (field 0) raw ::ᵥ ctx ::ᵥ nil) = _
@@ -153,6 +153,7 @@ theorem exact_CoverLambdaLexicalWindow : ExactCoverLambdaLexicalWindow := by
   exact exact_CoverNumberedTypeWindowCalibrated s (lambdaLexicalBase s B T) T fit
     (exact_CoverLambdaLexicalBase s B T fit base scalar) scalar
 
+#print axioms exact_LambdaLexicalFieldReads
 #print axioms exact_CoverLambdaLexicalBase
 #print axioms exact_CoverLambdaLexicalWindow
 

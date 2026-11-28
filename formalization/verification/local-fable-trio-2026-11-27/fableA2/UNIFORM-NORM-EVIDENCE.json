@@ -1,0 +1,35 @@
+{
+ "key": "UNIFORM-NORM",
+ "lane": "fableA2",
+ "round": "local-fable-trio-2026-11-27",
+ "serves": "Norm side at every type level: weight targets frozen; family lifting along expDown (FamilyLifting) and the base families",
+ "notes": [
+  "verification/local-fable-trio-2026-11-27/fableA2/UNIFORM-INDUCTION-PLAN.md",
+  "verification/local-fable-trio-2026-11-27/fableA2/UNIFORM-SOURCE-MAP.md",
+  "verification/local-fable-trio-2026-11-27/fableA2/LEDGER.md"
+ ],
+ "modules": [
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationUniformWeightTargets",
+   "sha256": "d9009214487c4a8b4bea6fdff505f5c4d56a6a0c080338ff4bbfeb7956c88159",
+   "receipt": "1795816095108793665-1103069",
+   "returncode": 0,
+   "peak_rss_kib": 1080280,
+   "seconds": 1.783
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationUniformNormProof",
+   "sha256": "0bc1e7c5befd1ff158a195722bd4c1b479744c017a487bcce31dbfa19815e830",
+   "receipt": "1795816095108793665-1103069",
+   "returncode": 0,
+   "peak_rss_kib": 1102972,
+   "seconds": 3.258
+  }
+ ],
+ "print_axioms": {
+  "familyLifting": "[propext, Classical.choice, Quot.sound]",
+  "diagFam_base": "[propext, Classical.choice, Quot.sound]",
+  "limFam_base": "[propext, Classical.choice, Quot.sound]"
+ },
+ "checks": "each module row rc 0; source sha256 on disk equals the receipt's source_sha256 at the time this file was written"
+}

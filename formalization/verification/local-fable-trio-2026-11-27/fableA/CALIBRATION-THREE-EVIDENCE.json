@@ -1,0 +1,174 @@
+{
+ "key": "CALIBRATION-THREE",
+ "lane": "fableA",
+ "round": "local-fable-trio-2026-11-27",
+ "serves": "Paper 16 calibration, instance n = 3: T4 PsiPowerLevel and T5 CalibrationThree (Delta_3' = psi(a_3)); checkpoint toward Paper16RemainingOrdinalTargets.AllTowerCalibration",
+ "plan": "verification/local-fable-trio-2026-11-27/fableA/T4-PROOF-PLAN.md",
+ "source_map": "verification/local-fable-trio-2026-11-27/fableA/CALIBRATION-THREE-PSI-SOURCE-MAP.md",
+ "modules": [
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationThreePsiTargets",
+   "sha256": "0817507591f2b257b06358724322eedc4b90bf57e2b67b3c01ad8cf001ed4c32",
+   "receipt": "1795775348133540559-930683",
+   "peak_rss_kib": 1085612,
+   "seconds": 1.84
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationThreeHierarchyProof",
+   "sha256": "0466ac78685278a27153664bd8ba5c94e38f45d9c3d11aa6f4324ee4ddd48655",
+   "receipt": "1795775348133540559-930683",
+   "peak_rss_kib": 1118936,
+   "seconds": 4.16
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationThreeCriticalProof",
+   "sha256": "135b32cb6e263ac8927e19e0b147478f95dbff9221ab47158866310c5cd82299",
+   "receipt": "1795775348133540559-930683",
+   "peak_rss_kib": 1100204,
+   "seconds": 2.505
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationThreeNormProof",
+   "sha256": "c5964c001f626c4e7967881fce3ce42b9cabfcdc9c65b2d57be2f0a4b90b25fa",
+   "receipt": "1795777920173523546-941350",
+   "peak_rss_kib": 1103236,
+   "seconds": 2.545
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationThreeLevelFactsProof",
+   "sha256": "6df6306ada83052cf14b075fe049aeca9ab9b10cb2102086c4b73abf35929af3",
+   "receipt": "1795777920173523546-941350",
+   "peak_rss_kib": 1086808,
+   "seconds": 1.675
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationThreePsiProof",
+   "sha256": "7853af54b8c99141d7e62c929be0fd3d7319b0fb39df4ce0e2c5ac691fe25c63",
+   "receipt": "1795777928703118203-941400",
+   "peak_rss_kib": 1121568,
+   "seconds": 3.653
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationThreePowerProof",
+   "sha256": "d660f905537b8cfac6dcdfb6673feef12ef2b68d5b3fce2f07d1712888ffd75e",
+   "receipt": "1795777954162083312-941567",
+   "peak_rss_kib": 1094832,
+   "seconds": 1.985
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationThreeProof",
+   "sha256": "9bf71f786cc219231b35c2cf28cfb624c552c386069a2d0d3fc7ca770c0c87e5",
+   "receipt": "1795777959277796293-941615",
+   "peak_rss_kib": 1087836,
+   "seconds": 1.629
+  }
+ ],
+ "theorems": {
+  "psiPowerLevel": "ActualCalibrationThree.PsiPowerLevel (frozen T4, unchanged)",
+  "calibrationThree": "ActualCalibrationThree.CalibrationThree (frozen T5), via root's ActualCalibrationThreeReductionProof.exact_ThreeFromPower (receipt 1795775278159634077-930287)",
+  "upperStep": "UpperStep",
+  "lowerStep": "LowerStep",
+  "exact_LevelFacts": "ActualCalibrationThreeReduction.LevelFacts",
+  "veblenDoubling": "VeblenDoubling",
+  "levelStrict": "LevelStrict",
+  "levelBaseRestart": "LevelBaseRestart",
+  "levelCritical": "LevelCritical"
+ },
+ "named_axiom_output": {
+  "veblenDoubling": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "levelStrict": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "levelBaseRestart": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "levelZero_closed_fix": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "enumFix_orbit_closed": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "levelCritical": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "crit_step": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "critLim": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "norm_leading": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "norm_div_le": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "norm_ge_of_mul_le": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "norm_ge_exponent": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "nsep_step": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "exact_LevelFacts": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "upperStep": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "lowerStep": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "psiPowerLevel": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "calibrationThree": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ]
+ },
+ "gate_logs": "verification/local-fable-trio-2026-11-27/fableA/gatelogs/gate1.txt .. gate5.txt",
+ "failed_gates": 0,
+ "open": [
+  "AllTowerCalibration for n >= 4 (see LEVEL-INVARIANT-NEXT.md)"
+ ]
+}

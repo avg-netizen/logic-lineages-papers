@@ -1,0 +1,45 @@
+{
+ "receipt": "1795842164430545753-2237658",
+ "compiled_on": "ThinkPad t14 via verification/remote-thinkpad/tp.sh (log verification/remote-thinkpad/logs/test2-uniform.out)",
+ "local_cache_roundtrip_receipt": "1795842191159139612-1260377",
+ "modules": {
+  "ActualCalibrationUniformWeightProof": "2d358f57e016f9a0b483855feced8ede52afde475b1cf433e0e886ba5c2e5975",
+  "ActualCalibrationUniformLevelProof": "57cdecc6493a19a39980ac5f88502819380df5496b4b6e237ea55038e028a1a2",
+  "ActualCalibrationAllProof": "702a8e7664fc3ebade38e939b9d6cdd772c7e2d035dfe4b08284eac699aa2d15"
+ },
+ "axioms": {
+  "ActualCalibrationUniformWeightProof": {
+   "orbitWeight": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "towerWeight": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  "ActualCalibrationUniformLevelProof": {
+   "allLevels": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  "ActualCalibrationAllProof": {
+   "allTowerCalibration": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "calibrationAt_five": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  }
+ },
+ "statement": "ActualCalibrationAll.allTowerCalibration : Paper16RemainingOrdinalTargets.AllTowerCalibration",
+ "authored_by": "Fable A2 (sources unchanged since its hand-back; sha256 in fableA2/LEDGER.md Entry 6)"
+}

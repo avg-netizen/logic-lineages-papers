@@ -1,0 +1,33 @@
+{
+ "key": "UNIFORM-FAMILY",
+ "lane": "fableA2",
+ "round": "local-fable-trio-2026-11-27",
+ "serves": "Function side of a good family of type-A_1 functions (FamilyDiagonal); intermediate layer for AllTowerCalibration",
+ "notes": [
+  "verification/local-fable-trio-2026-11-27/fableA2/UNIFORM-INDUCTION-PLAN.md",
+  "verification/local-fable-trio-2026-11-27/fableA2/UNIFORM-SOURCE-MAP.md",
+  "verification/local-fable-trio-2026-11-27/fableA2/LEDGER.md"
+ ],
+ "modules": [
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationUniformTargets",
+   "sha256": "6112be372146d4fbea819ab14f3eb11ab2fdbb8ec88e1e6b351090c4e5cf7848",
+   "receipt": "1795815470684857486-1099377",
+   "returncode": 0,
+   "peak_rss_kib": 1076136,
+   "seconds": 1.795
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationUniformFamilyProof",
+   "sha256": "7598dfba2dfd164ac55220161d688a9aa8f2d04278d4cbc5df626ad1e145bb9f",
+   "receipt": "1795815470684857486-1099377",
+   "returncode": 0,
+   "peak_rss_kib": 1095748,
+   "seconds": 2.595
+  }
+ ],
+ "print_axioms": {
+  "familyDiagonal": "[propext, Classical.choice, Quot.sound]"
+ },
+ "checks": "each module row rc 0; source sha256 on disk equals the receipt's source_sha256 at the time this file was written"
+}

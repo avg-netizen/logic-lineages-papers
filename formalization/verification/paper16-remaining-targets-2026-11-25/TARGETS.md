@@ -12,7 +12,7 @@ premise or supplies a named bridge.
 
 - [Paper 16 structural scope](../../LogicLineages/PersistentMarking/Paper16StructuralScopeTargets.lean)
 - [Paper 16 realization direction](../../LogicLineages/NativeModule/PersistentMarking/Paper16RealizationDirectionTargets.lean)
-- [Paper 16 arithmetic accessibility](../../LogicLineages/NativeModule/PersistentMarking/Paper16AccessibilityMilestoneTargets.lean)
+- [Paper 16 arithmetic accessibility V2](../../LogicLineages/NativeModule/PersistentMarking/Paper16AccessibilityMilestoneTargetsV2.lean)
 - [Paper 16 ordinal calibration and assembly](../../LogicLineages/NativeModule/PersistentMarking/Paper16RemainingOrdinalTargets.lean)
 - [Paper 02 further consumers](../../LogicLineages/ComputabilityKnowledge/Paper02FiniteVectorConsumerTargets.lean)
 
@@ -21,7 +21,7 @@ premise or supplies a named bridge.
 | Manuscript claim | Lean target | Work needed for adoption |
 | --- | --- | --- |
 | `lem:structural-interpretation`, `decision.tex:149` | `Paper16StructuralScopeTargets.StructuralInterpretationWithBoundary` | Package the retained-stage laws, named substitution, valid concrete frame, canonical finite frame, and consumed prefix. Compare the finite covered syntax to the manuscript and attach the existing availability-gap witness for the bottom-family sentence. |
-| `lem:arithmetic-accessibility`, `ordinals.tex:79` | `Paper16AccessibilityMilestoneTargets.InstalledArithmeticAccessibility` and `ConditionalUpperUniformTargets.UniformAccessibility` | Select one legal installed window for every closed source window. Derive all-terms internally there, and carry the same programs and calibration to the uniform numbered interface. |
+| `lem:arithmetic-accessibility`, `ordinals.tex:79` | `Paper16AccessibilityMilestoneTargetsV2.InstalledArithmeticAccessibility` and `ConditionalUpperUniformTargets.UniformAccessibility` | Select one legal installed window for every closed source window. Derive all-terms internally there, and carry the same programs and calibration to the uniform numbered interface. |
 | `thm:upper`, `ordinals.tex:315` | `Paper16RemainingOrdinalTargets.UpperAtCitedOrdinal citedBH` and `ConditionalUpperTargets.UpperStatement citedBH` | Discharge uniform accessibility for the conditional upper bound. The printed result also needs the cited inductive-norm theorem at that ordinal. |
 | `lem:realization`, `ordinals.tex:434` | `Paper16RealizationDirectionTargets.PrintedDirectionCounterexample`, a diagnostic for `PrintedRealization` | Refute the literal direction at a closed native edge. The existing backward closure matches the beta argument at `ordinals.tex:447–448` and supplies the candidate for explicit wording. |
 | `lem:tower-cofinality`, `ordinals.tex:612` | `Paper16RemainingOrdinalTargets.CofinalityAtCitedOrdinal citedBH` | Reuse the checked supremum-to-endpoint equality. Supply an independent source definition of the cited ordinal and prove its agreement with the endpoint. |
@@ -55,8 +55,20 @@ premise or supplies a named bridge.
 
 ### Internal accessibility
 
-All these checkpoints use `InstalledWindow` at the same closed `S, K`,
-selected probes, and outer-context numeral.
+The active target is `Paper16AccessibilityMilestoneTargetsV2`. It uses
+the existing `formulaType` conversion from the source types in `K` to
+the types accepted by object-language typing and computability formulas.
+The [original target](../../LogicLineages/NativeModule/PersistentMarking/Paper16AccessibilityMilestoneTargets.lean)
+is retained. The V2 declaration and conditional `CloseAllTerms` and
+`InstalledToUniform` bridges passed native checks. Their source
+correspondence and receipts are recorded in
+[the V2 handoff](../local-fable-continuation-2026-11-25/2026-11-26/native-window-v2-rebase.md).
+
+All these checkpoints use the V2 `InstalledWindow` at the same closed
+`S, K`, selected probes, and outer-context numeral. The current
+[three-lane handoff](../local-fable-continuation-2026-11-25/2026-11-26/HANDOFF.md)
+records the checked concrete program replacements and the exact
+remaining arrow, beta, and lambda obligations.
 
 1. Discharge `SelectInstalledWindows`. Install the actual
    `rawWithTarget` and `addressPositive` over the same

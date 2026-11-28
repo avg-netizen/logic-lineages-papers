@@ -1,0 +1,178 @@
+{
+ "key": "STEP-CALCULUS-LEVEL-TWO",
+ "lane": "fableA",
+ "round": "local-fable-trio-2026-11-27",
+ "serves": "Paper 16 calibration: instance n = 4 (Delta_4' = psi(a_4), CalibrationAt A 4), root's per-level interface at l = 1 and l = 2 (LevelFactsAt, PsiTowerLevelAt), and the type-A_1 step calculus used at every level",
+ "notes": [
+  "verification/local-fable-trio-2026-11-27/fableA/LEVEL-L-NOTE.md",
+  "verification/local-fable-trio-2026-11-27/fableA/STEP-CALCULUS-SOURCE-MAP.md"
+ ],
+ "modules": [
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationLevelOneProof",
+   "sha256": "384649342ed6b023ca0d7ec570f25b1bc2ce1166c1c191d79edbd4ffc584d04a",
+   "receipt": "1795778199692925204-942837",
+   "peak_rss_kib": 1088868,
+   "seconds": 1.746
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationStepTargets",
+   "sha256": "21778a9d5fb95ff11b0e17737ae331272c2546871700892adc1a6769ae26aa19",
+   "receipt": "1795813154779391068-1086911",
+   "peak_rss_kib": 1079876,
+   "seconds": 1.883
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationStepDiagonalProof",
+   "sha256": "cc837b99a1c183d5944c0f6f07001fe2bf72666484a0e1733b9c1404d44c5994",
+   "receipt": "1795813154779391068-1086911",
+   "peak_rss_kib": 1086376,
+   "seconds": 2.34
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationStepSuccessorProof",
+   "sha256": "655d253dd21b798d915db967bb332d7e3c8344b9110713e338ef5ccf7cec2190",
+   "receipt": "1795813329715669451-1087857",
+   "peak_rss_kib": 1109736,
+   "seconds": 3.611
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationStepOrbitTargets",
+   "sha256": "7577abeca72a815242f52c9aa57d3dc3c0b5b4d2d849c48fc3e41ab35b6329ee",
+   "receipt": "1795813662649156533-1089665",
+   "peak_rss_kib": 1070232,
+   "seconds": 1.579
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationStepOrbitProof",
+   "sha256": "105792f2153114d6202cc4a98fc3f2300ab25efd9a29b10055f809fe6165a5aa",
+   "receipt": "1795813662649156533-1089665",
+   "peak_rss_kib": 1098328,
+   "seconds": 2.892
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationLevelTwoTargets",
+   "sha256": "b95a575b8f2e640bcd524296aeb128410f0c7cb724512279b501eb10d9ffdfbe",
+   "receipt": "1795814001440580672-1091742",
+   "peak_rss_kib": 1070992,
+   "seconds": 1.675
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationLevelTwoFunctionProof",
+   "sha256": "f28de7653d23ccf49b7cdedad04faab21daceb6a3e1522cb58b77c6f384f9302",
+   "receipt": "1795814001440580672-1091742",
+   "peak_rss_kib": 1109344,
+   "seconds": 3.194
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationLevelTwoWeightProof",
+   "sha256": "e51ecaac46085c76e6dbfcf46b5e8571984bed72b4a16caa4253f278c8d05c25",
+   "receipt": "1795814259105500337-1093087",
+   "peak_rss_kib": 1108424,
+   "seconds": 3.308
+  },
+  {
+   "module": "LogicLineages.NativeModule.PersistentMarking.ActualCalibrationLevelTwoProof",
+   "sha256": "b934d920ad3a48c949cbfae149bf2a28250fd2c4cdb3ae7618032d22e0726027",
+   "receipt": "1795814433033321726-1094148",
+   "peak_rss_kib": 1098264,
+   "seconds": 2.867
+  }
+ ],
+ "theorems": {
+  "levelFactsAt_one / psiTowerLevelAt_one": "ActualCalibrationLevels.LevelFactsAt/PsiTowerLevelAt at l = 1, every solution",
+  "stepBase": "StepBase",
+  "stepDiagonal": "StepDiagonal",
+  "stepSuccessor": "StepSuccessor",
+  "stepLimit": "StepLimit",
+  "stepB0Orbit": "StepB0Orbit",
+  "opSuccessor": "OpSuccessor",
+  "levelTwoGood": "LevelTwoGood",
+  "opWeightSuccessor": "OpWeightSuccessor",
+  "levelTwoWeight": "LevelTwoWeight",
+  "levelFactsAt_two / psiTowerLevelAt_two": "ActualCalibrationLevels.LevelFactsAt/PsiTowerLevelAt at l = 2, every solution",
+  "calibrationAt_four": "forall A : OrdinalSemantics, Paper16RemainingOrdinalTargets.CalibrationAt A 4 (via root's ActualCalibrationLevelsProof.exact_CalibrationStep)"
+ },
+ "named_axiom_output": {
+  "levelFactsAt_one": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "psiTowerLevelAt_one": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "stepBase": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "stepDiagonal": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "stepSuccessor": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "norm_leading_gen": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "stepLimit": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "stepB0Orbit": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "opSuccessor": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "levelTwoGood": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "opWeightSuccessor": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "levelTwoWeight": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "levelFactsAt_two": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "psiTowerLevelAt_two": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "calibrationAt_four": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ]
+ },
+ "gate_logs": "verification/local-fable-trio-2026-11-27/fableA/gatelogs/gate6.txt .. gate12.txt",
+ "failed_gates": 0,
+ "open": [
+  "LevelFactsAt l and PsiTowerLevelAt l for l >= 3 (uniform induction over the type level; LEVEL-L-NOTE.md section 5)"
+ ]
+}
